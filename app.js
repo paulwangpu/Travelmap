@@ -12,18 +12,18 @@ const depthColors = {
 const storageKey = "travel-map-state-v1";
 const worldCountryTotal = 195;
 const boundarySources = {
-  country: "data/countries.geojson",
+  country: "data/countries-lite.geojson",
   china: "data/china-provinces.geojson",
   us: "data/us-states.geojson",
   japan: "",
-  admin1: "data/admin1.geojson",
+  admin1: "data/admin1-lite.geojson",
 };
 const boundaryFallbackSources = {
-  country: "https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson",
+  country: "data/countries.geojson",
   china: "https://geo.datav.aliyun.com/areas_v3/bound/100000_full.json",
   us: "https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json",
   japan: "",
-  admin1: "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_admin_1_states_provinces.geojson",
+  admin1: "data/admin1.geojson",
 };
 const catalogSources = {
   china5a: "https://zh.wikipedia.org/api/rest_v1/page/html/%E5%9B%BD%E5%AE%B65A%E7%BA%A7%E6%97%85%E6%B8%B8%E6%99%AF%E5%8C%BA",
