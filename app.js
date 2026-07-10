@@ -166,6 +166,7 @@ let places = [
   { id: "kyoto", name: "京都", country: "jp", unit: "京都府", city: "京都", type: "世界遗产城市", lat: 35.0116, lng: 135.7681, tags: ["文化"], checklist: ["世界遗产"] },
   { id: "yosemite", name: "Yosemite", country: "us", unit: "California", city: "Yosemite", type: "国家公园 / 世界遗产", lat: 37.8651, lng: -119.5383, tags: ["国家公园"], checklist: ["世界遗产", "美国国家公园"] },
   { id: "nyc", name: "纽约", country: "us", unit: "New York", city: "New York City", type: "城市", lat: 40.7128, lng: -74.006, tags: ["城市"], checklist: ["著名城市"] },
+  { id: "washington-dc", name: "Washington, D.C.", country: "us", unit: "District of Columbia", city: "Washington, D.C.", type: "Capital city", lat: 38.9072, lng: -77.0369, tags: ["city", "capital"], checklist: ["首都城市"] },
   { id: "paris", name: "巴黎", country: "fr", unit: "Ile-de-France", city: "Paris", type: "首都城市", lat: 48.8566, lng: 2.3522, tags: ["艺术"], checklist: ["首都城市", "世界遗产"] },
   { id: "rome", name: "罗马", country: "it", unit: "Lazio", city: "Rome", type: "首都城市 / 世界遗产", lat: 41.9028, lng: 12.4964, tags: ["古城"], checklist: ["首都城市", "世界遗产"] },
   { id: "singapore", name: "新加坡", country: "sg", unit: "Singapore", city: "Singapore", type: "国家 / 城市", lat: 1.3521, lng: 103.8198, tags: ["城市"], checklist: ["首都城市"] },
@@ -446,6 +447,19 @@ function adminNameFromFeature(feature) {
   ).trim();
 }
 
+function canonicalAdminNameFromFeature(feature) {
+  const props = feature.properties || {};
+  return String(
+    props.name
+    || props.NAME
+    || props.NAME_1
+    || props.name_en
+    || props.adm1_name
+    || adminNameFromFeature(feature)
+    || ""
+  ).trim();
+}
+
 function admin1DisplayCollection() {
   if (!boundaryData.admin1) return { type: "FeatureCollection", features: [] };
   if (admin1DisplayCache.source === boundaryData.admin1 && admin1DisplayCache.collection) return admin1DisplayCache.collection;
@@ -555,11 +569,12 @@ function sameAdminName(left, right) {
 
 function adminUnitForFeature(regionKey, feature) {
   const name = adminNameFromFeature(feature);
+  const canonicalName = canonicalAdminNameFromFeature(feature);
   const units = regionSets[regionKey]?.units || [];
-  const direct = units.find((item) => sameAdminName(item.name, name));
+  const direct = units.find((item) => sameAdminName(item.name, name) || sameAdminName(item.name, canonicalName));
   if (direct) return direct;
-  const alias = adminNameAlias(regionKey, name);
-  if (!alias) return null;
+  const alias = adminNameAlias(regionKey, name) || adminNameAlias(regionKey, canonicalName);
+  if (!alias) return regionKey === "us" && canonicalName ? { name: canonicalName } : null;
   return units.find((item) => sameAdminName(item.name, alias)) || { name: alias };
 }
 
@@ -690,7 +705,7 @@ function inferRegion(countryId, lng, lat) {
   if (key && boundaryData[key]) {
     const feature = findFeatureAtPoint(boundaryData[key], lng, lat);
     const name = feature ? adminNameFromFeature(feature) : "";
-    if (name) return regionSets[key].units.find((unit) => sameAdminName(unit.name, name));
+    if (name) return regionSets[key].units.find((unit) => sameAdminName(unit.name, name)) || { name };
   }
   if (boundaryData.admin1) {
     const feature = findFeatureAtPoint(admin1DisplayCollection(), lng, lat);
