@@ -741,7 +741,7 @@ function visitedPlaces() {
 }
 
 function locatedVisitedPlaces() {
-  return visitedPlaces().filter((visit) => Number.isFinite(visit.place.lat) && Number.isFinite(visit.place.lng));
+  return visitedPlaces().filter((visit) => !visit.place.shapeOnly && Number.isFinite(visit.place.lat) && Number.isFinite(visit.place.lng));
 }
 
 function bestVisitForPlace(placeId) {
@@ -830,9 +830,21 @@ function loadState() {
       openChecklistGroups: saved.state.openChecklistGroups || [],
     };
     state.visits = state.visits.map((visit) => ({ ...visit, depth: visit.depth > 0 ? 1 : 0 })).filter((visit) => visit.depth > 0);
+    migrateImportedShapes();
   } catch (error) {
     console.warn("读取保存数据失败", error);
   }
+}
+
+function migrateImportedShapes() {
+  const shapeIds = new Set();
+  places.forEach((place) => {
+    if (place.importedGeometry && place.importedGeometry.type !== "Point" && place.importedGeometry.type !== "MultiPoint") {
+      place.shapeOnly = true;
+      shapeIds.add(place.id);
+    }
+  });
+  if (shapeIds.size) state.visits = state.visits.filter((visit) => !shapeIds.has(visit.placeId));
 }
 
 function refreshInferredLocations() {
@@ -1013,17 +1025,17 @@ function areaCenterGeoJson() {
 function importedShapeGeoJson() {
   return {
     type: "FeatureCollection",
-    features: visitedPlaces()
-      .filter((visit) => visit.place.importedGeometry && visit.place.importedGeometry.type !== "Point")
-      .map((visit) => ({
+    features: places
+      .filter((place) => place.importedGeometry && !["Point", "MultiPoint"].includes(place.importedGeometry.type))
+      .map((place) => ({
         type: "Feature",
         properties: {
-          id: visit.place.id,
-          name: visit.place.name,
+          id: place.id,
+          name: place.name,
           depth: 1,
-          type: visit.place.type,
+          type: place.type,
         },
-        geometry: visit.place.importedGeometry,
+        geometry: place.importedGeometry,
       })),
   };
 }
@@ -1311,7 +1323,7 @@ function renderMapLibreLayers() {
   mapLibreMarkers.forEach((marker) => marker.remove());
   mapLibreMarkers = [];
   visitedPlaces()
-    .filter((visit) => Number.isFinite(visit.place.lng) && Number.isFinite(visit.place.lat))
+    .filter((visit) => !visit.place.shapeOnly && Number.isFinite(visit.place.lng) && Number.isFinite(visit.place.lat))
     .forEach((visit) => {
       const el = document.createElement("button");
       el.className = "maplibre-marker";
@@ -1428,7 +1440,7 @@ function renderLeafletLayers() {
   }
 
   visitedPlaces()
-    .filter((visit) => Number.isFinite(visit.place.lng) && Number.isFinite(visit.place.lat))
+    .filter((visit) => !visit.place.shapeOnly && Number.isFinite(visit.place.lng) && Number.isFinite(visit.place.lat))
     .forEach((visit) => {
       const marker = L.circleMarker([visit.place.lat, visit.place.lng], {
         radius: 4,
@@ -1815,9 +1827,12 @@ function importPlacesFromText(text, extension, fileName = `import.${extension}`,
     createdIds.push(id);
   });
   if (depth > 0) {
-    createdIds.forEach((id) => upsertVisit(id, depth, { tripId: `import-${slugify(fileName)}` }));
+    createdIds
+      .filter((id) => !getPlace(id)?.shapeOnly)
+      .forEach((id) => upsertVisit(id, depth, { tripId: `import-${slugify(fileName)}` }));
   }
-  if (createdIds.length) state.focusPlaceId = createdIds[0];
+  const firstPointId = createdIds.find((id) => !getPlace(id)?.shapeOnly);
+  if (firstPointId) state.focusPlaceId = firstPointId;
   state.importedFiles.unshift({ name: fileName, count: imported.length, format: extension.toUpperCase(), marked: depth > 0 });
   saveState();
   renderAll();
@@ -1855,6 +1870,7 @@ function parseGeoJson(text) {
       boundaryLevel: detectBoundaryLevel(props, feature.geometry),
       geometryType: feature.geometry?.type || "Feature",
       importedGeometry: feature.geometry,
+      shapeOnly: feature.geometry?.type !== "Point" && feature.geometry?.type !== "MultiPoint",
     });
   });
 }
@@ -1862,9 +1878,10 @@ function parseGeoJson(text) {
 function parseKml(text) {
   const doc = new DOMParser().parseFromString(text, "application/xml");
   return Array.from(doc.querySelectorAll("Placemark")).map((node, index) => {
-    const coordText = node.querySelector("coordinates")?.textContent?.trim();
-    const [lng, lat] = coordText ? coordText.split(/\s+/)[0].split(",").map(Number) : [null, null];
-    const geometryType = ["Point", "Polygon", "LineString", "MultiGeometry"].find((tag) => node.querySelector(tag)) || "Placemark";
+    const importedGeometry = kmlGeometry(node);
+    const center = geometryCenter(importedGeometry);
+    const [lng, lat] = center || [null, null];
+    const geometryType = importedGeometry?.type || "Placemark";
     return normalizeImportedPlace({
       name: node.querySelector("name")?.textContent?.trim() || `KML Placemark ${index + 1}`,
       country: "",
@@ -1876,8 +1893,36 @@ function parseKml(text) {
       tags: "KML",
       checklist: "",
       geometryType,
+      importedGeometry,
+      shapeOnly: geometryType !== "Point",
     });
   });
+}
+
+function kmlGeometry(node) {
+  const polygon = node.querySelector("Polygon");
+  if (polygon) {
+    const outer = parseKmlCoordinates(polygon.querySelector("outerBoundaryIs coordinates")?.textContent);
+    const inners = Array.from(polygon.querySelectorAll("innerBoundaryIs coordinates")).map((item) => parseKmlCoordinates(item.textContent)).filter((ring) => ring.length);
+    return outer.length ? { type: "Polygon", coordinates: [outer, ...inners] } : null;
+  }
+  const line = node.querySelector("LineString coordinates");
+  if (line) {
+    const coords = parseKmlCoordinates(line.textContent);
+    return coords.length ? { type: "LineString", coordinates: coords } : null;
+  }
+  const point = node.querySelector("Point coordinates") || node.querySelector("coordinates");
+  const coords = parseKmlCoordinates(point?.textContent);
+  return coords[0] ? { type: "Point", coordinates: coords[0] } : null;
+}
+
+function parseKmlCoordinates(text) {
+  return String(text || "")
+    .trim()
+    .split(/\s+/)
+    .map((item) => item.split(",").map(Number))
+    .filter((coord) => Number.isFinite(coord[0]) && Number.isFinite(coord[1]))
+    .map((coord) => [coord[0], coord[1]]);
 }
 
 function parseCsv(text) {
@@ -1956,6 +2001,7 @@ function normalizeImportedPlace(raw) {
     geometryType: raw.geometryType || "Imported",
     importedGeometry: raw.importedGeometry || null,
     boundaryLevel: raw.boundaryLevel || "",
+    shapeOnly: Boolean(raw.shapeOnly),
   };
 }
 
