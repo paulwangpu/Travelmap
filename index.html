@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>我的全球旅行地图</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIINfQv8h8Lk4A7QXQfM8kH4U8pEnJ2n20I="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell map-first-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">TM</div>
+          <div>
+            <h1>Travel Map</h1>
+            <p>个人地理数据库</p>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="#world" class="active">地图</a>
+          <a href="#dashboard">总览</a>
+          <a href="#imports">导入</a>
+          <a href="#china">行政区</a>
+          <a href="#achievements">成就</a>
+        </nav>
+        <div class="privacy-note">
+          <span>隐私默认</span>
+          <strong>公开到城市级</strong>
+          <p>导入地点后，系统按经纬度自动点亮国家和地区。</p>
+        </div>
+      </aside>
+
+      <main class="map-first-main">
+        <section class="map-app app-page active" id="world" data-page="world">
+          <header class="map-toolbar">
+            <div>
+              <p class="eyebrow">OpenStreetMap + MapLibre + GeoJSON</p>
+              <h2>我的全球旅行地图</h2>
+            </div>
+
+            <form class="quick-add compact-add" id="quickAddForm">
+              <label>
+                地点
+                <select name="placeId" id="placeSelect"></select>
+              </label>
+              <label>
+                状态
+                <select name="depth">
+                  <option value="1" selected>去过</option>
+                </select>
+              </label>
+              <label>
+                日期
+                <input name="tripDate" type="date" />
+              </label>
+              <input name="tripName" type="hidden" />
+              <button type="submit">点亮</button>
+            </form>
+          </header>
+
+          <section class="map-canvas-row">
+            <div class="map-surface">
+              <div class="map-surface-head">
+                <label class="map-level-control">
+                  显示层级
+                  <select id="boundaryLevel">
+                    <option value="country">国家/地区边界</option>
+                    <option value="admin">一级行政区边界</option>
+                    <option value="imported">导入 Shape</option>
+                    <option value="points">仅地点</option>
+                  </select>
+                </label>
+                <button class="map-refresh-button" id="refreshBoundaries" type="button">重新加载边界</button>
+                <div class="legend" id="legend"></div>
+              </div>
+              <div class="leaflet-map" id="leafletMap"></div>
+            </div>
+
+            <aside class="map-drawer hidden" id="mapDetail">
+              <p class="eyebrow">Selection</p>
+              <h3>地图详情</h3>
+              <p class="muted">点击地图上的点、国家或行政区查看证据。</p>
+            </aside>
+          </section>
+        </section>
+
+        <section class="app-page content-page" id="dashboard" data-page="dashboard">
+          <header class="page-head">
+            <p class="eyebrow">Dashboard</p>
+            <h2>旅行统计总览</h2>
+          </header>
+          <section class="metrics-grid compact-metrics" aria-label="核心统计" id="metrics"></section>
+          <div class="panel">
+            <p class="eyebrow">Next Stops</p>
+            <h3>下一步</h3>
+            <div class="next-list" id="nextStops"></div>
+          </div>
+        </section>
+
+        <section class="app-page content-page" id="imports" data-page="imports">
+          <div class="panel">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Import</p>
+                <h3>导入地图或地点文件</h3>
+              </div>
+              <span class="tag">GeoJSON / KML / CSV</span>
+            </div>
+            <div class="import-box">
+              <label>
+                选择文件
+                <input id="importFile" type="file" accept=".geojson,.json,.kml,.csv,text/csv,application/json" />
+              </label>
+              <label>
+                导入后标记为
+                <select id="importDepth">
+                  <option value="0">仅导入</option>
+                  <option value="1" selected>去过</option>
+                </select>
+              </label>
+            </div>
+            <p class="muted small">CSV 推荐列名：name,country,unit,city,type,lat,lng,tags。没有 country/unit 时会用经纬度自动推断。</p>
+            <div id="importSummary" class="bars"></div>
+          </div>
+        </section>
+
+        <section class="app-page content-page" id="china" data-page="china">
+          <div class="panel" id="chinaPanel">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Administrative Units</p>
+                <h3>行政区覆盖</h3>
+              </div>
+              <div class="segmented" role="tablist" aria-label="行政区层级">
+                <button class="active" data-region-view="china">中国</button>
+                <button data-region-view="us">美国</button>
+              </div>
+            </div>
+            <div class="region-map" id="regionMap"></div>
+            <div id="coverageBars" class="bars coverage-compact"></div>
+          </div>
+        </section>
+
+        <section class="app-page content-page" id="achievements" data-page="achievements">
+          <div class="panel" id="achievementsPanel">
+            <p class="eyebrow">Achievements</p>
+            <h3>成就</h3>
+            <div class="achievement-list" id="achievementList"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+    <script src="app.js?v=15"></script>
+  </body>
+</html>
