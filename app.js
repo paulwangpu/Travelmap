@@ -38,6 +38,7 @@ let leafletDidInitialFit = false;
 let catalogDataRequested = false;
 let boundaryData = { country: null, china: null, us: null, japan: null, admin1: null };
 let boundaryLoading = { country: false, china: false, us: false, japan: false, admin1: false };
+let boundaryPromises = {};
 let admin1DisplayCache = { source: null, collection: null };
 const admin1RegionGroupCountries = new Set(["fr", "it"]);
 
@@ -52,6 +53,9 @@ const countries = [
   { id: "ca", name: "加拿大", continent: "北美洲", bbox: [-141, 42, -52, 84], x: 11, y: 18, w: 24, h: 14 },
   { id: "sg", name: "新加坡", continent: "亚洲", bbox: [103.5, 1, 104.2, 1.6], x: 75, y: 57, w: 2, h: 2 },
   { id: "th", name: "泰国", continent: "亚洲", bbox: [97, 5, 106, 21], x: 72, y: 53, w: 5, h: 7 },
+  { id: "my", name: "Malaysia", continent: "Asia", bbox: [99, 0, 120, 8], x: 74, y: 58, w: 6, h: 4 },
+  { id: "vn", name: "Vietnam", continent: "Asia", bbox: [102, 8, 110, 24], x: 75, y: 52, w: 4, h: 8 },
+  { id: "id", name: "Indonesia", continent: "Asia", bbox: [95, -11, 141, 6], x: 75, y: 63, w: 14, h: 7 },
   { id: "de", name: "德国", continent: "欧洲", bbox: [5, 47, 16, 55], x: 53, y: 33, w: 5, h: 5 },
   { id: "es", name: "西班牙", continent: "欧洲", bbox: [-10, 35, 4, 44], x: 47, y: 42, w: 6, h: 5 },
   { id: "nz", name: "新西兰", continent: "大洋洲", bbox: [166, -48, 179, -34], x: 91, y: 82, w: 5, h: 7 },
@@ -337,14 +341,16 @@ function inBbox(lng, lat, bbox) {
 }
 
 function loadBoundaryData(key) {
-  if (boundaryData[key] || boundaryLoading[key] || !boundarySources[key]) return;
+  if (boundaryData[key] || !boundarySources[key]) return Promise.resolve(boundaryData[key] || null);
+  if (boundaryPromises[key]) return boundaryPromises[key];
   boundaryLoading[key] = true;
-  fetchBoundaryJson(boundarySources[key], boundaryFallbackSources[key])
+  boundaryPromises[key] = fetchBoundaryJson(boundarySources[key], boundaryFallbackSources[key])
     .then((data) => {
       boundaryData[key] = normalizeFeatureCollection(data);
+      if (key === "admin1") admin1DisplayCache = { source: null, collection: null };
       refreshInferredLocations();
       saveState();
-      renderAll();
+      return boundaryData[key];
     })
     .catch((error) => {
       console.warn(`${key} 边界数据加载失败`, error);
@@ -352,7 +358,10 @@ function loadBoundaryData(key) {
     })
     .finally(() => {
       boundaryLoading[key] = false;
+      boundaryPromises[key] = null;
+      renderAll();
     });
+  return boundaryPromises[key];
 }
 
 function fetchBoundaryJson(primaryUrl, fallbackUrl = "") {
@@ -373,10 +382,10 @@ function fetchJson(url) {
 }
 
 function preloadBoundaryData(force = false, keys = ["country", "china", "us", "japan", "admin1"]) {
-  keys.forEach((key) => {
+  return Promise.all(keys.map((key) => {
     if (force) boundaryData[key] = null;
-    loadBoundaryData(key);
-  });
+    return loadBoundaryData(key);
+  }));
 }
 
 function boundaryLabel(key) {
@@ -1771,6 +1780,11 @@ function importPlacesFromText(text, extension, fileName = `import.${extension}`,
   state.importedFiles.unshift({ name: fileName, count: imported.length, format: extension.toUpperCase(), marked: depth > 0 });
   saveState();
   renderAll();
+  preloadBoundaryData(false, ["country", "admin1"]).then(() => {
+    refreshInferredLocations();
+    saveState();
+    renderAll();
+  });
   return imported;
 }
 
@@ -1956,6 +1970,13 @@ function normalizeCountry(value) {
     thailand: "th",
     tha: "th",
     泰国: "th",
+    malaysia: "my",
+    mys: "my",
+    vietnam: "vn",
+    "viet nam": "vn",
+    vnm: "vn",
+    indonesia: "id",
+    idn: "id",
     spain: "es",
     esp: "es",
     西班牙: "es",
@@ -2057,6 +2078,8 @@ function showPage(pageId) {
 
 loadState();
 renderLegend();
+preloadBoundaryData(false, ["country", "china", "us"]);
+if (state.boundaryLevel === "admin") loadBoundaryData("admin1");
 renderAll();
 showPage(location.hash.replace("#", "") || "world");
 
@@ -2093,12 +2116,12 @@ $("#refreshBoundaries").addEventListener("click", () => {
   const button = $("#refreshBoundaries");
   button.disabled = true;
   button.textContent = "加载中";
-  preloadBoundaryData(true);
-  showToast("正在重新加载边界数据");
-  setTimeout(() => {
+  preloadBoundaryData(true).finally(() => {
     button.disabled = false;
     button.textContent = "重新加载边界";
-  }, 1800);
+    renderAll();
+  });
+  showToast("正在重新加载边界数据");
 });
 document.querySelectorAll(".nav a").forEach((link) => {
   link.addEventListener("click", (event) => {
