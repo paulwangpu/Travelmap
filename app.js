@@ -38,6 +38,8 @@ let leafletDidInitialFit = false;
 let catalogDataRequested = false;
 let boundaryData = { country: null, china: null, us: null, japan: null, admin1: null };
 let boundaryLoading = { country: false, china: false, us: false, japan: false, admin1: false };
+let admin1DisplayCache = { source: null, collection: null };
+const admin1RegionGroupCountries = new Set(["fr", "it"]);
 
 const countries = [
   { id: "cn", name: "中国", continent: "亚洲", bbox: [73, 18, 135, 54], x: 74, y: 43, w: 10, h: 10 },
@@ -435,6 +437,55 @@ function adminNameFromFeature(feature) {
   ).trim();
 }
 
+function admin1DisplayCollection() {
+  if (!boundaryData.admin1) return { type: "FeatureCollection", features: [] };
+  if (admin1DisplayCache.source === boundaryData.admin1 && admin1DisplayCache.collection) return admin1DisplayCache.collection;
+
+  const grouped = new Map();
+  const passthrough = [];
+  boundaryData.admin1.features.forEach((feature) => {
+    const countryId = countryIdFromFeature(feature);
+    const props = feature.properties || {};
+    const regionName = String(props.region || props.region_name || "").trim();
+    const regionCode = String(props.region_cod || props.region_code || "").trim();
+    if (!admin1RegionGroupCountries.has(countryId) || !regionName) {
+      passthrough.push(feature);
+      return;
+    }
+
+    const key = `${countryId}-${regionCode || cleanAdminName(regionName)}`;
+    if (!grouped.has(key)) {
+      grouped.set(key, {
+        type: "Feature",
+        properties: {
+          ...props,
+          name: regionName,
+          name_en: regionName,
+          adm1_name: regionName,
+          iso_3166_2: regionCode || props.iso_3166_2,
+          type_en: "Region",
+          grouped_from: props.type_en || "admin subdivision",
+        },
+        geometry: { type: "MultiPolygon", coordinates: [] },
+      });
+    }
+    grouped.get(key).geometry.coordinates.push(...geometryToPolygons(feature.geometry));
+  });
+
+  admin1DisplayCache = {
+    source: boundaryData.admin1,
+    collection: { type: "FeatureCollection", features: [...passthrough, ...grouped.values()] },
+  };
+  return admin1DisplayCache.collection;
+}
+
+function geometryToPolygons(geometry) {
+  if (!geometry) return [];
+  if (geometry.type === "Polygon") return [geometry.coordinates];
+  if (geometry.type === "MultiPolygon") return geometry.coordinates || [];
+  return [];
+}
+
 function sameAdminName(left, right) {
   return cleanAdminName(left) === cleanAdminName(right);
 }
@@ -579,7 +630,7 @@ function inferRegion(countryId, lng, lat) {
     if (name) return regionSets[key].units.find((unit) => sameAdminName(unit.name, name));
   }
   if (boundaryData.admin1) {
-    const feature = findFeatureAtPoint(boundaryData.admin1, lng, lat);
+    const feature = findFeatureAtPoint(admin1DisplayCollection(), lng, lat);
     const name = feature ? adminNameFromFeature(feature) : "";
     if (name) return { name };
   }
@@ -934,7 +985,7 @@ function adminFeaturesForRegion(regionKey) {
   const countryId = countryIdForRegionKey(regionKey);
   const sourceFeatures = [
     ...(boundaryData[regionKey]?.features || []),
-    ...(boundaryData.admin1?.features || []).filter((feature) => countryIdFromFeature(feature) === countryId),
+    ...admin1DisplayCollection().features.filter((feature) => countryIdFromFeature(feature) === countryId),
   ];
   const seen = new Set();
   return sourceFeatures.map((feature) => {
@@ -963,7 +1014,7 @@ function globalAdmin1GeoJson() {
   if (!boundaryData.admin1) return { type: "FeatureCollection", features: [] };
   const specialCountries = new Set(["cn", "us", "jp"]);
   const visits = locatedVisitedPlaces().filter((visit) => !specialCountries.has(normalizeCountry(visit.place.country)));
-  const features = boundaryData.admin1.features.map((feature) => {
+  const features = admin1DisplayCollection().features.map((feature) => {
     const matches = visits.filter((visit) => geometryContainsPoint(feature.geometry, visit.place.lng, visit.place.lat));
     if (!matches.length) return null;
     const countryId = countryIdFromFeature(feature) || matches[0].place.country;
