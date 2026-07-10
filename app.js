@@ -465,6 +465,7 @@ function admin1DisplayCollection() {
           iso_3166_2: regionCode || props.iso_3166_2,
           type_en: "Region",
           grouped_from: props.type_en || "admin subdivision",
+          is_region_group: true,
         },
         geometry: { type: "MultiPolygon", coordinates: [] },
       });
@@ -484,6 +485,59 @@ function geometryToPolygons(geometry) {
   if (geometry.type === "Polygon") return [geometry.coordinates];
   if (geometry.type === "MultiPolygon") return geometry.coordinates || [];
   return [];
+}
+
+function groupedRegionOutlineGeoJson() {
+  return {
+    type: "FeatureCollection",
+    features: regionGeoJson().features
+      .filter((feature) => feature.properties?.is_region_group)
+      .map((feature) => ({
+        type: "Feature",
+        properties: {
+          id: `${feature.properties.id}-outline`,
+          name: feature.properties.name,
+          depth: feature.properties.depth,
+          kind: "region-outline",
+        },
+        geometry: exteriorLineGeometryForFeature(feature),
+      }))
+      .filter((feature) => feature.geometry.coordinates.length),
+  };
+}
+
+function exteriorLineGeometryForFeature(feature) {
+  const edges = new Map();
+  geometryToPolygons(feature.geometry).forEach((polygon) => {
+    polygon.forEach((ring) => {
+      for (let index = 0; index < ring.length - 1; index += 1) {
+        const start = ring[index];
+        const end = ring[index + 1];
+        if (!validCoordinate(start) || !validCoordinate(end)) continue;
+        const forward = coordinateKey(start);
+        const backward = coordinateKey(end);
+        const key = forward < backward ? `${forward}|${backward}` : `${backward}|${forward}`;
+        const current = edges.get(key) || { count: 0, segment: [start, end] };
+        current.count += 1;
+        edges.set(key, current);
+      }
+    });
+  });
+
+  return {
+    type: "MultiLineString",
+    coordinates: Array.from(edges.values())
+      .filter((edge) => edge.count === 1)
+      .map((edge) => edge.segment),
+  };
+}
+
+function validCoordinate(point) {
+  return Array.isArray(point) && Number.isFinite(point[0]) && Number.isFinite(point[1]);
+}
+
+function coordinateKey(point) {
+  return `${Number(point[0]).toFixed(6)},${Number(point[1]).toFixed(6)}`;
 }
 
 function sameAdminName(left, right) {
@@ -1196,6 +1250,7 @@ function renderMapLibreLayers() {
   removeMapLibreLayer("imported-shapes-fill");
   removeMapLibreLayer("visited-regions-line");
   removeMapLibreLayer("visited-regions-fill");
+  removeMapLibreLayer("visited-region-group-outlines-line");
   removeMapLibreLayer("admin-country-context-line");
   removeMapLibreLayer("admin-country-context-fill");
   removeMapLibreLayer("visited-countries-line");
@@ -1203,6 +1258,7 @@ function renderMapLibreLayers() {
   removeMapLibreSource("visited-area-centers");
   removeMapLibreSource("imported-shapes");
   removeMapLibreSource("visited-regions");
+  removeMapLibreSource("visited-region-group-outlines");
   removeMapLibreSource("admin-country-context");
   removeMapLibreSource("visited-countries");
 
@@ -1215,6 +1271,8 @@ function renderMapLibreLayers() {
     loadBoundaryData("country");
     setMapLibreSource("visited-regions", regionGeoJson());
     addMapLibreFillLayer("visited-regions", "visited-regions-fill", "visited-regions-line", 0.24, 1.4);
+    setMapLibreSource("visited-region-group-outlines", groupedRegionOutlineGeoJson());
+    addMapLibreLineLayer("visited-region-group-outlines", "visited-region-group-outlines-line", 1.55);
     setMapLibreSource("admin-country-context", adminCountryContextGeoJson());
     addMapLibreFillLayer("admin-country-context", "admin-country-context-fill", "admin-country-context-line", 0.18, 1);
   }
@@ -1247,7 +1305,7 @@ function addMapLibreFillLayer(sourceId, fillId, lineId, opacity, lineWidth, geom
   const paintColor = ["case", [">", ["get", "depth"], 0], depthColors[1], depthColors[0]];
   const paintOpacity = ["case", [">", ["get", "depth"], 0], opacity, Math.min(opacity, 0.18)];
   const lineColor = ["case", [">", ["get", "depth"], 0], depthColors[1], "#b43d16"];
-  const lineOpacity = ["case", [">", ["get", "depth"], 0], 0.82, 0.7];
+  const lineOpacity = ["case", ["==", ["get", "is_region_group"], true], 0, [">", ["get", "depth"], 0], 0.82, 0.7];
   mapLibreMap.addLayer({
     id: fillId,
     type: "fill",
@@ -1266,6 +1324,20 @@ function addMapLibreFillLayer(sourceId, fillId, lineId, opacity, lineWidth, geom
       "line-color": lineColor,
       "line-width": lineWidth,
       "line-opacity": lineOpacity,
+    },
+  });
+}
+
+function addMapLibreLineLayer(sourceId, lineId, lineWidth) {
+  const lineColor = ["case", [">", ["get", "depth"], 0], depthColors[1], "#b43d16"];
+  mapLibreMap.addLayer({
+    id: lineId,
+    type: "line",
+    source: sourceId,
+    paint: {
+      "line-color": lineColor,
+      "line-width": lineWidth,
+      "line-opacity": 0.86,
     },
   });
 }
@@ -1306,6 +1378,12 @@ function renderLeafletLayers() {
         layer.bindTooltip(`${feature.properties.name} · ${feature.properties.count} 个地点`, { sticky: true });
       },
     }).addTo(leafletLayers);
+    L.geoJSON(groupedRegionOutlineGeoJson(), {
+      style: leafletOutlineStyle,
+      onEachFeature: (feature, layer) => {
+        layer.bindTooltip(feature.properties.name, { sticky: true });
+      },
+    }).addTo(leafletLayers);
     L.geoJSON(adminCountryContextGeoJson(), {
       style: (feature) => ({ ...leafletBoundaryStyle(feature), fillOpacity: 0.18, weight: 1 }),
       onEachFeature: (feature, layer) => {
@@ -1344,9 +1422,19 @@ function leafletBoundaryStyle(feature) {
   const depth = feature.properties.depth || 0;
   return {
     color: depth ? depthColors[1] : "#b43d16",
-    weight: 1.2,
+    weight: feature.properties.is_region_group ? 0 : 1.2,
     fillColor: depth ? depthColors[1] : depthColors[0],
     fillOpacity: depth ? 0.22 : 0.18,
+  };
+}
+
+function leafletOutlineStyle(feature) {
+  const depth = feature.properties.depth || 0;
+  return {
+    color: depth ? depthColors[1] : "#b43d16",
+    weight: 1.55,
+    opacity: 0.86,
+    fillOpacity: 0,
   };
 }
 
