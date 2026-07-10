@@ -328,6 +328,7 @@ let state = {
   ],
   importedFiles: [],
   checklistMarks: [],
+  openChecklistGroups: [],
   worldHeritageStats: [],
   selectedRegionView: "china",
   boundaryLevel: "country",
@@ -826,6 +827,7 @@ function loadState() {
       boundaryLevel: saved.state.boundaryLevel || "country",
       selectedRegionView: saved.state.selectedRegionView || "china",
       checklistMarks: saved.state.checklistMarks || [],
+      openChecklistGroups: saved.state.openChecklistGroups || [],
     };
     state.visits = state.visits.map((visit) => ({ ...visit, depth: visit.depth > 0 ? 1 : 0 })).filter((visit) => visit.depth > 0);
   } catch (error) {
@@ -1584,7 +1586,8 @@ function renderChecklistSection(key, list) {
 function renderRegionChecklistSection(key, list) {
   const blocks = Object.entries(list.byRegion).map(([region, items]) => {
     const done = items.filter((item) => isChecklistItemDone(key, item)).length;
-    return `<details class="country-checklist" ${done ? "open" : ""}>
+    const groupId = checklistGroupId(key, region);
+    return `<details class="country-checklist" data-checklist-group="${groupId}" ${done || isChecklistGroupOpen(groupId) ? "open" : ""}>
       <summary><strong>${region}</strong><span>${done}/${items.length}</span></summary>
       <div class="check-chip-grid">
         ${items.map((item) => {
@@ -1603,7 +1606,8 @@ function renderRegionChecklistSection(key, list) {
 function renderCountryChecklistSection(key, list) {
   const countryBlocks = Object.entries(list.byCountry).map(([country, items]) => {
     const done = items.filter((item) => isChecklistItemDone(key, item)).length;
-    return `<details class="country-checklist" ${country === "中国" ? "open" : ""}>
+    const groupId = checklistGroupId(key, country);
+    return `<details class="country-checklist" data-checklist-group="${groupId}" ${country === "中国" || isChecklistGroupOpen(groupId) ? "open" : ""}>
       <summary><strong>${country}</strong><span>${done}/${items.length}</span></summary>
       <div class="check-chip-grid">
         ${items.map((item) => {
@@ -1641,6 +1645,28 @@ function isChecklistItemDone(key, item) {
 
 function checklistId(key, item) {
   return `${key}:${canonicalPlaceKey(item)}`;
+}
+
+function checklistGroupId(key, group) {
+  return `${key}:${canonicalPlaceKey(group)}`;
+}
+
+function isChecklistGroupOpen(groupId) {
+  return (state.openChecklistGroups || []).includes(groupId);
+}
+
+function setChecklistGroupOpen(groupId, open) {
+  if (!groupId) return;
+  const groups = new Set(state.openChecklistGroups || []);
+  if (open) groups.add(groupId);
+  else groups.delete(groupId);
+  state.openChecklistGroups = Array.from(groups);
+  saveState();
+}
+
+function rememberChecklistGroupForElement(element) {
+  const details = element?.closest?.("[data-checklist-group]");
+  if (details) setChecklistGroupOpen(details.dataset.checklistGroup, true);
 }
 
 function toggleChecklistItem(key, item) {
@@ -2115,8 +2141,14 @@ $("#boundaryLevel").addEventListener("change", (event) => {
 $("#achievementList").addEventListener("click", (event) => {
   const button = event.target.closest("[data-checklist]");
   if (!button) return;
+  rememberChecklistGroupForElement(button);
   toggleChecklistItem(button.dataset.checklist, button.dataset.item);
 });
+$("#achievementList").addEventListener("toggle", (event) => {
+  const details = event.target.closest?.("[data-checklist-group]");
+  if (!details) return;
+  setChecklistGroupOpen(details.dataset.checklistGroup, details.open);
+}, true);
 $("#leafletMap").addEventListener("click", (event) => {
   const button = event.target.closest("[data-unvisit]");
   if (!button) return;
