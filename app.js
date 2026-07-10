@@ -816,6 +816,56 @@ function saveState() {
   }
 }
 
+function currentArchivePayload() {
+  return {
+    version: 1,
+    exportedAt: new Date().toISOString(),
+    places,
+    state,
+  };
+}
+
+function exportArchive() {
+  const blob = new Blob([JSON.stringify(currentArchivePayload(), null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `travel-map-backup-${new Date().toISOString().slice(0, 10)}.json`;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+  showToast("已导出旅行地图存档");
+}
+
+async function importArchiveFile(event) {
+  const file = event.target.files?.[0];
+  if (!file) return;
+  try {
+    const payload = JSON.parse(await file.text());
+    if (!Array.isArray(payload.places) || !payload.state || !Array.isArray(payload.state.visits)) {
+      throw new Error("存档结构不正确");
+    }
+    places = payload.places;
+    state = {
+      ...state,
+      ...payload.state,
+      visits: payload.state.visits || [],
+      importedFiles: payload.state.importedFiles || [],
+      checklistMarks: payload.state.checklistMarks || [],
+      openChecklistGroups: payload.state.openChecklistGroups || [],
+    };
+    migrateImportedShapes();
+    saveState();
+    renderAll();
+    showToast(`已恢复存档：${file.name}`);
+  } catch (error) {
+    showToast(`存档导入失败：${error.message}`);
+  } finally {
+    event.target.value = "";
+  }
+}
+
 function loadState() {
   try {
     const saved = JSON.parse(localStorage.getItem(storageKey) || "null");
@@ -2179,6 +2229,8 @@ window.travelMapApp = {
 
 $("#quickAddForm").addEventListener("submit", addVisit);
 $("#importFile").addEventListener("change", handleImport);
+$("#exportArchive").addEventListener("click", exportArchive);
+$("#archiveFile").addEventListener("change", importArchiveFile);
 $("#boundaryLevel").addEventListener("change", (event) => {
   state.boundaryLevel = event.target.value;
   saveState();

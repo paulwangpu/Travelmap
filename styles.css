@@ -648,6 +648,19 @@ button:hover {
   margin-bottom: 10px;
 }
 
+.archive-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.archive-import {
+  display: inline-grid;
+  gap: 6px;
+  min-width: 220px;
+}
+
 .small {
   font-size: 13px;
   line-height: 1.6;

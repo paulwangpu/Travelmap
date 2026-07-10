@@ -129,6 +129,23 @@
             <p class="muted small">CSV 推荐列名：name,country,unit,city,type,lat,lng,tags。没有 country/unit 时会用经纬度自动推断。</p>
             <div id="importSummary" class="bars"></div>
           </div>
+          <div class="panel">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Archive</p>
+                <h3>数据存档</h3>
+              </div>
+              <span class="tag">JSON</span>
+            </div>
+            <div class="archive-actions">
+              <button id="exportArchive" type="button">导出存档</button>
+              <label class="archive-import">
+                导入存档
+                <input id="archiveFile" type="file" accept=".json,application/json" />
+              </label>
+            </div>
+            <p class="muted small">点亮地点、导入对象、成就勾选和展开状态都会保存到存档文件。恢复存档会覆盖当前浏览器里的旅行数据。</p>
+          </div>
         </section>
 
         <section class="app-page content-page" id="china" data-page="china">
@@ -165,6 +182,6 @@
       crossorigin=""
     ></script>
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-    <script src="app.js?v=21"></script>
+    <script src="app.js?v=22"></script>
   </body>
 </html>
