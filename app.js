@@ -1153,6 +1153,22 @@ function importedShapeGeoJson() {
   };
 }
 
+function importedPathGeoJson() {
+  return {
+    type: "FeatureCollection",
+    features: importedShapeGeoJson().features
+      .filter((feature) => ["LineString", "MultiLineString"].includes(feature.geometry?.type)),
+  };
+}
+
+function importedPolygonGeoJson() {
+  return {
+    type: "FeatureCollection",
+    features: importedShapeGeoJson().features
+      .filter((feature) => ["Polygon", "MultiPolygon"].includes(feature.geometry?.type)),
+  };
+}
+
 function bboxCenter(bbox) {
   return [(bbox[0] + bbox[2]) / 2, (bbox[1] + bbox[3]) / 2];
 }
@@ -1459,6 +1475,7 @@ function renderMapLibreLayers() {
   removeMapLibreLayer("visited-countries-fill");
   removeMapLibreSource("visited-area-centers");
   removeMapLibreSource("imported-shapes");
+  removeMapLibreSource("imported-paths");
   removeMapLibreSource("visited-regions");
   removeMapLibreSource("visited-region-group-outlines");
   removeMapLibreSource("visited-subadmin");
@@ -1485,9 +1502,10 @@ function renderMapLibreLayers() {
     addMapLibreFillLayer("visited-subadmin", "visited-subadmin-fill", "visited-subadmin-line", 0.24, 1.2);
   }
 
-  setMapLibreSource("imported-shapes", importedShapeGeoJson());
+  setMapLibreSource("imported-shapes", importedPolygonGeoJson());
   addMapLibreFillLayer("imported-shapes", "imported-shapes-fill", "imported-shapes-line", 0.24, 1.5, true);
-  addMapLibreImportedPathLayer("imported-shapes", "imported-shapes-path-line", 2.4);
+  setMapLibreSource("imported-paths", importedPathGeoJson());
+  addMapLibreImportedPathLayer("imported-paths", "imported-shapes-path-line", 3);
   bindMapLibreLayerHandlers();
 
   mapLibreMarkers.forEach((marker) => marker.remove());
@@ -1585,10 +1603,14 @@ function addMapLibreImportedPathLayer(sourceId, lineId, lineWidth) {
     type: "line",
     source: sourceId,
     filter: ["any", ["==", ["geometry-type"], "LineString"], ["==", ["geometry-type"], "MultiLineString"]],
+    layout: {
+      "line-cap": "round",
+      "line-join": "round",
+    },
     paint: {
       "line-color": depthColors[1],
       "line-width": lineWidth,
-      "line-opacity": 0.9,
+      "line-opacity": 0.95,
     },
   });
 }
@@ -1778,6 +1800,87 @@ function renderAdminRegionDetail(countryId, regionName, visits) {
       <div><dt>证据</dt><dd>${visits.length} 个地点</dd></div>
     </dl>
     <div class="tag-row">${visits.map((visit) => `<span class="tag">${visit.place.name}</span>`).join("")}</div>`;
+}
+
+function handleAdminRegionClick(feature) {
+  const props = feature.properties || {};
+  const regionName = props.name;
+  const countryId = adminRegionCountryId(props.regionKey);
+  const isSubadmin = props.kind === "subadmin" || Boolean(subadminConfigs[props.regionKey]);
+  if (!regionName || !countryId || countryId === "imported") return;
+  const visits = adminRegionEvidenceVisits(countryId, regionName, isSubadmin);
+  renderAdminRegionDetail(countryId, regionName, visits, {
+    center: geometryCenter(feature.geometry),
+    isSubadmin,
+    manual: Boolean(manualAdminPlaceFor(countryId, regionName)),
+  });
+}
+
+function adminRegionEvidenceVisits(countryId, regionName, isSubadmin) {
+  return locatedVisitedPlaces().filter((visit) =>
+    !visit.place.manualAdmin
+    && normalizeCountry(visit.place.country) === countryId
+    && (isSubadmin ? sameAdminName(visit.place.subunit || visit.place.unit, regionName) : sameAdminName(visit.place.unit, regionName))
+  );
+}
+
+function toggleManualAdminRegion(countryId, regionName, isSubadmin, center) {
+  const manual = manualAdminPlaceFor(countryId, regionName);
+  if (manual) {
+    state.visits = state.visits.filter((visit) => visit.placeId !== manual.id);
+    places = places.filter((place) => place.id !== manual.id);
+    closeMapPopupsAndDetail();
+    saveState();
+    renderAll();
+    showToast(`${regionName} unmarked`);
+    return;
+  }
+
+  const realVisits = adminRegionEvidenceVisits(countryId, regionName, isSubadmin);
+  if (realVisits.length) {
+    renderAdminRegionDetail(countryId, regionName, realVisits, { center, isSubadmin, manual: false });
+    return;
+  }
+
+  const id = manualAdminPlaceId(countryId, regionName);
+  places.push({
+    id,
+    name: `${getCountry(countryId).name} - ${regionName}`,
+    country: countryId,
+    unit: isSubadmin ? "" : regionName,
+    subunit: isSubadmin ? regionName : "",
+    city: "",
+    type: "Manual admin region",
+    lat: center?.[1] ?? null,
+    lng: center?.[0] ?? null,
+    tags: ["admin region"],
+    checklist: [],
+    manualAdmin: true,
+  });
+  state.focusPlaceId = id;
+  upsertVisit(id, 1, { tripId: "manual-admin" });
+  renderAll();
+  showToast(`${regionName} marked`);
+}
+
+function renderAdminRegionDetail(countryId, regionName, visits, options = {}) {
+  const center = Array.isArray(options.center) ? options.center : [];
+  const canToggle = options.manual || visits.length === 0;
+  const action = canToggle ? `
+    <button class="detail-action" data-admin-toggle="1" data-country="${countryId}" data-region="${encodeURIComponent(regionName)}" data-subadmin="${options.isSubadmin ? "1" : "0"}" data-lng="${center[0] ?? ""}" data-lat="${center[1] ?? ""}" type="button">
+      ${options.manual ? "Unmark visited" : "Mark visited"}
+    </button>` : "";
+  $("#mapDetail").classList.remove("hidden");
+  $("#mapDetail").innerHTML = `
+    <p class="eyebrow">Administrative Region</p>
+    <h3>${regionName}</h3>
+    <dl>
+      <div><dt>Country</dt><dd>${getCountry(countryId).name}</dd></div>
+      <div><dt>Status</dt><dd>${options.manual || visits.length ? "Visited" : "Not visited"}</dd></div>
+      <div><dt>Evidence</dt><dd>${visits.length}</dd></div>
+    </dl>
+    <div class="tag-row">${visits.map((visit) => `<span class="tag">${visit.place.name}</span>`).join("") || `<span class="tag">No place evidence</span>`}</div>
+    ${action}`;
 }
 
 function adminRegionCountryId(regionKey) {
@@ -2514,6 +2617,20 @@ $("#leafletMap").addEventListener("click", (event) => {
   unvisitPlace(button.dataset.unvisit);
 });
 $("#mapDetail").addEventListener("click", (event) => {
+  const adminButton = event.target.closest("[data-admin-toggle]");
+  if (adminButton) {
+    const center = [
+      Number(adminButton.dataset.lng),
+      Number(adminButton.dataset.lat),
+    ];
+    toggleManualAdminRegion(
+      adminButton.dataset.country,
+      decodeURIComponent(adminButton.dataset.region || ""),
+      adminButton.dataset.subadmin === "1",
+      center.every(Number.isFinite) ? center : null
+    );
+    return;
+  }
   const button = event.target.closest("[data-unvisit]");
   if (!button) return;
   unvisitPlace(button.dataset.unvisit);
