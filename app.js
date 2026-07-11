@@ -34,6 +34,7 @@ let leafletMap = null;
 let leafletLayers = null;
 let mapLibreMap = null;
 let mapLibreMarkers = [];
+let mapLibreLayerHandlersBound = false;
 let leafletDidInitialFit = false;
 let catalogDataRequested = false;
 let boundaryData = { country: null, china: null, us: null, japan: null, admin1: null };
@@ -1382,11 +1383,12 @@ function renderMapLibreLayers() {
 
   setMapLibreSource("imported-shapes", importedShapeGeoJson());
   addMapLibreFillLayer("imported-shapes", "imported-shapes-fill", "imported-shapes-line", 0.24, 1.5, true);
+  bindMapLibreLayerHandlers();
 
   mapLibreMarkers.forEach((marker) => marker.remove());
   mapLibreMarkers = [];
   visitedPlaces()
-    .filter((visit) => !visit.place.shapeOnly && Number.isFinite(visit.place.lng) && Number.isFinite(visit.place.lat))
+    .filter((visit) => !visit.place.shapeOnly && !visit.place.manualAdmin && Number.isFinite(visit.place.lng) && Number.isFinite(visit.place.lat))
     .forEach((visit) => {
       const el = document.createElement("button");
       el.className = "maplibre-marker";
@@ -1399,6 +1401,21 @@ function renderMapLibreLayers() {
         .addTo(mapLibreMap);
       mapLibreMarkers.push(marker);
     });
+}
+
+function bindMapLibreLayerHandlers() {
+  if (mapLibreLayerHandlersBound || !mapLibreMap.getLayer("visited-regions-fill")) return;
+  mapLibreLayerHandlersBound = true;
+  mapLibreMap.on("click", "visited-regions-fill", (event) => {
+    const feature = event.features?.[0];
+    if (feature) handleAdminRegionClick(feature);
+  });
+  mapLibreMap.on("mouseenter", "visited-regions-fill", () => {
+    mapLibreMap.getCanvas().style.cursor = "pointer";
+  });
+  mapLibreMap.on("mouseleave", "visited-regions-fill", () => {
+    mapLibreMap.getCanvas().style.cursor = "";
+  });
 }
 
 function addMapLibreFillLayer(sourceId, fillId, lineId, opacity, lineWidth, geometryFilter = false) {
@@ -1476,6 +1493,7 @@ function renderLeafletLayers() {
     L.geoJSON(regionGeoJson(), {
       style: leafletBoundaryStyle,
       onEachFeature: (feature, layer) => {
+        layer.on("click", () => handleAdminRegionClick(feature));
         layer.bindTooltip(`${feature.properties.name} · ${feature.properties.count} 个地点`, { sticky: true });
       },
     }).addTo(leafletLayers);
@@ -1501,7 +1519,7 @@ function renderLeafletLayers() {
   }).addTo(leafletLayers);
 
   visitedPlaces()
-    .filter((visit) => !visit.place.shapeOnly && Number.isFinite(visit.place.lng) && Number.isFinite(visit.place.lat))
+    .filter((visit) => !visit.place.shapeOnly && !visit.place.manualAdmin && Number.isFinite(visit.place.lng) && Number.isFinite(visit.place.lat))
     .forEach((visit) => {
       const marker = L.circleMarker([visit.place.lat, visit.place.lng], {
         radius: 4,
@@ -1551,6 +1569,81 @@ function renderCountryDetail(countryId) {
       <div><dt>世界遗产</dt><dd>${visits.filter((v) => v.place.checklist.includes("世界遗产")).length}</dd></div>
     </dl>
     <div class="tag-row">${visits.map((visit) => `<span class="tag">${visit.place.name}</span>`).join("") || `<span class="tag">未去清单</span>`}</div>`;
+}
+
+function handleAdminRegionClick(feature) {
+  const props = feature.properties || {};
+  const regionName = props.name;
+  const countryId = adminRegionCountryId(props.regionKey);
+  if (!regionName || !countryId || countryId === "imported") return;
+
+  const manual = manualAdminPlaceFor(countryId, regionName);
+  if (manual) {
+    state.visits = state.visits.filter((visit) => visit.placeId !== manual.id);
+    places = places.filter((place) => place.id !== manual.id);
+    closeMapPopupsAndDetail();
+    saveState();
+    renderAll();
+    showToast(`${regionName} 已取消手动点亮`);
+    return;
+  }
+
+  const realVisits = locatedVisitedPlaces().filter((visit) =>
+    !visit.place.manualAdmin
+    && normalizeCountry(visit.place.country) === countryId
+    && sameAdminName(visit.place.unit, regionName)
+  );
+  if (realVisits.length) {
+    renderAdminRegionDetail(countryId, regionName, realVisits);
+    return;
+  }
+
+  const center = geometryCenter(feature.geometry);
+  const id = manualAdminPlaceId(countryId, regionName);
+  places.push({
+    id,
+    name: `${getCountry(countryId).name} - ${regionName}`,
+    country: countryId,
+    unit: regionName,
+    city: "",
+    type: "手动点亮行政区",
+    lat: center?.[1] ?? null,
+    lng: center?.[0] ?? null,
+    tags: ["行政区"],
+    checklist: [],
+    manualAdmin: true,
+  });
+  state.focusPlaceId = id;
+  upsertVisit(id, 1, { tripId: "manual-admin" });
+  renderAll();
+  showToast(`${regionName} 已手动点亮`);
+}
+
+function renderAdminRegionDetail(countryId, regionName, visits) {
+  $("#mapDetail").classList.remove("hidden");
+  $("#mapDetail").innerHTML = `
+    <p class="eyebrow">Administrative Region</p>
+    <h3>${regionName}</h3>
+    <dl>
+      <div><dt>国家/地区</dt><dd>${getCountry(countryId).name}</dd></div>
+      <div><dt>状态</dt><dd>已点亮</dd></div>
+      <div><dt>证据</dt><dd>${visits.length} 个地点</dd></div>
+    </dl>
+    <div class="tag-row">${visits.map((visit) => `<span class="tag">${visit.place.name}</span>`).join("")}</div>`;
+}
+
+function adminRegionCountryId(regionKey) {
+  const countryId = countryIdForRegionKey(regionKey) || normalizeCountry(regionKey);
+  return countryId || "";
+}
+
+function manualAdminPlaceId(countryId, regionName) {
+  return `manual-admin-${slugify(countryId)}-${slugify(regionName)}`;
+}
+
+function manualAdminPlaceFor(countryId, regionName) {
+  const id = manualAdminPlaceId(countryId, regionName);
+  return places.find((place) => place.id === id || (place.manualAdmin && normalizeCountry(place.country) === countryId && sameAdminName(place.unit, regionName)));
 }
 
 function renderPlaceDetail(placeId) {
