@@ -803,9 +803,23 @@ function unvisitPlace(placeId) {
   state.visits = state.visits.filter((visit) => !ids.includes(visit.placeId));
   state.checklistMarks = (state.checklistMarks || []).filter((mark) => canonicalPlaceKey(mark.split(":").slice(1).join(":")) !== key);
   places = places.filter((candidate) => !(candidate.checklistOnly && canonicalPlaceKey(candidate.name) === key));
+  closeMapPopupsAndDetail();
   saveState();
   renderAll();
   showToast(`${place.name} 已取消去过`);
+}
+
+function closeMapPopupsAndDetail() {
+  if (leafletMap) leafletMap.closePopup();
+  document.querySelectorAll(".maplibregl-popup").forEach((popup) => popup.remove());
+  const detail = $("#mapDetail");
+  if (detail) {
+    detail.classList.add("hidden");
+    detail.innerHTML = `
+      <p class="eyebrow">Selection</p>
+      <h3>地图详情</h3>
+      <p class="muted">点击地图上的点、国家或行政区查看证据。</p>`;
+  }
 }
 
 function saveState() {
@@ -871,10 +885,11 @@ function loadState() {
     const saved = JSON.parse(localStorage.getItem(storageKey) || "null");
     if (!saved?.state || !Array.isArray(saved?.places)) return;
     places = saved.places;
+    const savedBoundaryLevel = ["country", "admin"].includes(saved.state.boundaryLevel) ? saved.state.boundaryLevel : "country";
     state = {
       ...state,
       ...saved.state,
-      boundaryLevel: saved.state.boundaryLevel || "country",
+      boundaryLevel: savedBoundaryLevel,
       selectedRegionView: saved.state.selectedRegionView || "china",
       checklistMarks: saved.state.checklistMarks || [],
       openChecklistGroups: saved.state.openChecklistGroups || [],
@@ -1365,10 +1380,8 @@ function renderMapLibreLayers() {
     addMapLibreFillLayer("admin-country-context", "admin-country-context-fill", "admin-country-context-line", 0.18, 1);
   }
 
-  if (state.boundaryLevel === "imported") {
-    setMapLibreSource("imported-shapes", importedShapeGeoJson());
-    addMapLibreFillLayer("imported-shapes", "imported-shapes-fill", "imported-shapes-line", 0.24, 1.5, true);
-  }
+  setMapLibreSource("imported-shapes", importedShapeGeoJson());
+  addMapLibreFillLayer("imported-shapes", "imported-shapes-fill", "imported-shapes-line", 0.24, 1.5, true);
 
   mapLibreMarkers.forEach((marker) => marker.remove());
   mapLibreMarkers = [];
@@ -1480,14 +1493,12 @@ function renderLeafletLayers() {
     }).addTo(leafletLayers);
   }
 
-  if (state.boundaryLevel === "imported") {
-    L.geoJSON(importedShapeGeoJson(), {
-      style: leafletBoundaryStyle,
-      onEachFeature: (feature, layer) => {
-        layer.bindTooltip(feature.properties.name, { sticky: true });
-      },
-    }).addTo(leafletLayers);
-  }
+  L.geoJSON(importedShapeGeoJson(), {
+    style: leafletBoundaryStyle,
+    onEachFeature: (feature, layer) => {
+      layer.bindTooltip(feature.properties.name, { sticky: true });
+    },
+  }).addTo(leafletLayers);
 
   visitedPlaces()
     .filter((visit) => !visit.place.shapeOnly && Number.isFinite(visit.place.lng) && Number.isFinite(visit.place.lat))
@@ -2257,7 +2268,7 @@ $("#mapDetail").addEventListener("click", (event) => {
   if (!button) return;
   unvisitPlace(button.dataset.unvisit);
 });
-$("#refreshBoundaries").addEventListener("click", () => {
+$("#refreshBoundaries")?.addEventListener("click", () => {
   const button = $("#refreshBoundaries");
   button.disabled = true;
   button.textContent = "加载中";
