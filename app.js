@@ -53,6 +53,7 @@ let admin1DisplayCache = { source: null, collection: null };
 let mapDataVersion = 0;
 const mapGeoJsonCache = new Map();
 const mapLibreSourceDataRefs = new Map();
+let pendingUiStateSave = null;
 const admin1RegionGroupCountries = new Set(["fr", "it"]);
 const subadminConfigs = {
   china2: { countryId: "cn", label: "China prefecture-level units" },
@@ -1071,8 +1072,8 @@ function ensureMapDetailCloseButton() {
   detail.prepend(button);
 }
 
-function saveState() {
-  mapDataVersion += 1;
+function saveState(options = {}) {
+  if (options.invalidateMapData !== false) mapDataVersion += 1;
   const payload = { places, state, savedAt: new Date().toISOString() };
   try {
     localStorage.setItem(storageKey, JSON.stringify(payload));
@@ -1080,6 +1081,14 @@ function saveState() {
     console.warn("保存失败", error);
   }
   saveStateToIndexedDb(payload);
+}
+
+function saveUiStateSoon() {
+  if (pendingUiStateSave) clearTimeout(pendingUiStateSave);
+  pendingUiStateSave = setTimeout(() => {
+    pendingUiStateSave = null;
+    saveState({ invalidateMapData: false });
+  }, 80);
 }
 
 function openTravelMapDb() {
@@ -3202,8 +3211,8 @@ $("#importSummary").addEventListener("click", (event) => {
 });
 $("#boundaryLevel").addEventListener("change", (event) => {
   state.boundaryLevel = event.target.value;
-  saveState();
   renderAll();
+  saveUiStateSoon();
 });
 $("#achievementList").addEventListener("click", (event) => {
   const button = event.target.closest("[data-checklist]");
