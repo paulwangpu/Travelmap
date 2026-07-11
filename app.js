@@ -1352,6 +1352,7 @@ function renderMapLibreLayers() {
   removeMapLibreLayer("visited-area-centers");
   removeMapLibreLayer("imported-shapes-line");
   removeMapLibreLayer("imported-shapes-fill");
+  removeMapLibreLayer("imported-shapes-path-line");
   removeMapLibreLayer("visited-regions-line");
   removeMapLibreLayer("visited-regions-fill");
   removeMapLibreLayer("visited-region-group-outlines-line");
@@ -1383,6 +1384,7 @@ function renderMapLibreLayers() {
 
   setMapLibreSource("imported-shapes", importedShapeGeoJson());
   addMapLibreFillLayer("imported-shapes", "imported-shapes-fill", "imported-shapes-line", 0.24, 1.5, true);
+  addMapLibreImportedPathLayer("imported-shapes", "imported-shapes-path-line", 2.4);
   bindMapLibreLayerHandlers();
 
   mapLibreMarkers.forEach((marker) => marker.remove());
@@ -1456,6 +1458,20 @@ function addMapLibreLineLayer(sourceId, lineId, lineWidth) {
       "line-color": lineColor,
       "line-width": lineWidth,
       "line-opacity": 0.86,
+    },
+  });
+}
+
+function addMapLibreImportedPathLayer(sourceId, lineId, lineWidth) {
+  mapLibreMap.addLayer({
+    id: lineId,
+    type: "line",
+    source: sourceId,
+    filter: ["any", ["==", ["geometry-type"], "LineString"], ["==", ["geometry-type"], "MultiLineString"]],
+    paint: {
+      "line-color": depthColors[1],
+      "line-width": lineWidth,
+      "line-opacity": 0.9,
     },
   });
 }
