@@ -20,7 +20,7 @@ const boundarySources = {
   us: "data/us-states.geojson",
   japan: "",
   admin1: "data/admin1.geojson",
-  china2: "data/china-prefectures.geojson",
+  china2: "data/china-prefectures-lite.geojson",
   us2: "data/us-counties.geojson",
   ru2: "data/russia-subregions.geojson",
 };
@@ -53,8 +53,6 @@ let admin1DisplayCache = { source: null, collection: null };
 const admin1RegionGroupCountries = new Set(["fr", "it"]);
 const subadminConfigs = {
   china2: { countryId: "cn", label: "China prefecture-level units" },
-  us2: { countryId: "us", label: "US counties and county equivalents" },
-  ru2: { countryId: "ru", label: "Russia comparable travel regions" },
 };
 
 const countries = [
@@ -344,6 +342,7 @@ let state = {
   importedFiles: [],
   checklistMarks: [],
   openChecklistGroups: [],
+  coverage: { countries: [], regions: {}, subregions: {} },
   worldHeritageStats: [],
   selectedRegionView: "china",
   boundaryLevel: "country",
@@ -365,8 +364,6 @@ function loadBoundaryData(key) {
     .then((data) => {
       boundaryData[key] = normalizeFeatureCollection(data);
       if (key === "admin1") admin1DisplayCache = { source: null, collection: null };
-      refreshInferredLocations();
-      saveState();
       return boundaryData[key];
     })
     .catch((error) => {
@@ -795,12 +792,86 @@ function bestVisitForPlace(placeId) {
 }
 
 function bestDepthForCountry(countryId) {
-  const normalized = normalizeCountry(countryId);
-  return locatedVisitedPlaces().some((visit) => normalizeCountry(visit.place.country) === normalized) ? 1 : 0;
+  return coverageHasCountry(countryId) ? 1 : 0;
 }
 
 function uniqueVisitedCountries() {
-  return new Set(locatedVisitedPlaces().map((visit) => normalizeCountry(visit.place.country)).filter((country) => country && country !== "imported"));
+  return new Set((state.coverage?.countries || []).filter((country) => country && country !== "imported"));
+}
+
+function ensureCoverage() {
+  if (!state.coverage) state.coverage = { countries: [], regions: {}, subregions: {} };
+  state.coverage.countries ||= [];
+  state.coverage.regions ||= {};
+  state.coverage.subregions ||= {};
+  return state.coverage;
+}
+
+function coverageHasCountry(countryId) {
+  return ensureCoverage().countries.includes(normalizeCountry(countryId));
+}
+
+function coverageRegionNames(regionKey) {
+  return ensureCoverage().regions[regionKey] || [];
+}
+
+function coverageHasRegion(regionKey, name) {
+  return coverageRegionNames(regionKey).some((item) => sameAdminName(item, name));
+}
+
+function coverageSubregionNames(subadminKey) {
+  return ensureCoverage().subregions[subadminKey] || [];
+}
+
+function coverageHasSubregion(subadminKey, name) {
+  return coverageSubregionNames(subadminKey).some((item) => sameAdminName(item, name));
+}
+
+function recomputeCoverage() {
+  const countriesSeen = new Set();
+  const regions = {};
+  const subregions = {};
+  locatedVisitedPlaces().forEach((visit) => {
+    const countryId = normalizeCountry(visit.place.country);
+    if (countryId && countryId !== "imported") countriesSeen.add(countryId);
+
+    const regionKey = regionKeyForCountry(countryId) || countryId;
+    if (regionKey && visit.place.unit) {
+      regions[regionKey] ||= [];
+      if (!regions[regionKey].some((name) => sameAdminName(name, visit.place.unit))) regions[regionKey].push(visit.place.unit);
+    }
+
+    const subadminKey = subadminKeyForCountry(countryId);
+    const subunit = visit.place.subunit || "";
+    if (subadminKey && subunit) {
+      subregions[subadminKey] ||= [];
+      if (!subregions[subadminKey].some((name) => sameAdminName(name, subunit))) subregions[subadminKey].push(subunit);
+    }
+  });
+  state.coverage = {
+    countries: Array.from(countriesSeen),
+    regions,
+    subregions,
+    updatedAt: new Date().toISOString(),
+  };
+}
+
+function addCoverageForPlace(place) {
+  if (!place || place.shapeOnly) return;
+  const coverage = ensureCoverage();
+  const countryId = normalizeCountry(place.country);
+  if (countryId && countryId !== "imported" && !coverage.countries.includes(countryId)) coverage.countries.push(countryId);
+  const regionKey = regionKeyForCountry(countryId) || countryId;
+  if (regionKey && place.unit) {
+    coverage.regions[regionKey] ||= [];
+    if (!coverage.regions[regionKey].some((name) => sameAdminName(name, place.unit))) coverage.regions[regionKey].push(place.unit);
+  }
+  const subadminKey = subadminKeyForCountry(countryId);
+  if (subadminKey && place.subunit) {
+    coverage.subregions[subadminKey] ||= [];
+    if (!coverage.subregions[subadminKey].some((name) => sameAdminName(name, place.subunit))) coverage.subregions[subadminKey].push(place.subunit);
+  }
+  coverage.updatedAt = new Date().toISOString();
 }
 
 function upsertVisit(placeId, depth = 1, options = {}) {
@@ -816,6 +887,7 @@ function upsertVisit(placeId, depth = 1, options = {}) {
   } else {
     state.visits.push({ placeId, tripId, date, depth: 1 });
   }
+  addCoverageForPlace(place);
   saveState();
 }
 
@@ -849,6 +921,7 @@ function unvisitPlace(placeId) {
   state.checklistMarks = (state.checklistMarks || []).filter((mark) => canonicalPlaceKey(mark.split(":").slice(1).join(":")) !== key);
   places = places.filter((candidate) => !(candidate.checklistOnly && canonicalPlaceKey(candidate.name) === key));
   closeMapPopupsAndDetail();
+  recomputeCoverage();
   saveState();
   renderAll();
   showToast(`${place.name} 已取消去过`);
@@ -946,11 +1019,12 @@ function applySavedPayload(saved) {
     ...state,
     ...saved.state,
     boundaryLevel: savedBoundaryLevel,
-    selectedRegionView: saved.state.selectedRegionView || "china",
-    importedFiles: saved.state.importedFiles || [],
-    checklistMarks: saved.state.checklistMarks || [],
-    openChecklistGroups: saved.state.openChecklistGroups || [],
-  };
+      selectedRegionView: saved.state.selectedRegionView || "china",
+      importedFiles: saved.state.importedFiles || [],
+      checklistMarks: saved.state.checklistMarks || [],
+      openChecklistGroups: saved.state.openChecklistGroups || [],
+      coverage: saved.state.coverage || { countries: [], regions: {}, subregions: {} },
+    };
   state.visits = (state.visits || []).map((visit) => ({ ...visit, depth: visit.depth > 0 ? 1 : 0 })).filter((visit) => visit.depth > 0);
   migrateImportedShapes();
   return true;
@@ -1256,14 +1330,13 @@ function regionGeoJson() {
   adminBoundaryKeysToShow().forEach((regionKey) => {
     const set = regionSets[regionKey];
     set.units.forEach((unit) => {
-      const matches = locatedVisitedPlaces().filter((visit) => regionKeyForCountry(visit.place.country) === regionKey && sameAdminName(visit.place.unit, unit.name));
-      const depth = matches.length ? 1 : 0;
+      const depth = coverageHasRegion(regionKey, unit.name) ? 1 : 0;
       if (!depth) return;
       const properties = {
         depth,
         kind: "region",
         regionKey,
-        count: matches.length,
+        count: depth,
       };
       const custom = customBoundaryFor("admin", regionKey, unit.name);
       if (custom) {
@@ -1275,16 +1348,12 @@ function regionGeoJson() {
 }
 
 function subadminGeoJson() {
-  const countriesWithSubadmin = new Set(
-    Object.keys(subadminConfigs)
-      .filter((key) => boundaryData[key]?.features?.length)
-      .map(countryIdForSubadminKey)
-  );
+  const configuredSubadminCountries = new Set(Object.keys(subadminConfigs).map(countryIdForSubadminKey));
   return {
     type: "FeatureCollection",
     features: [
       ...subadminBoundaryKeysToShow().flatMap((key) => subadminFeaturesForKey(key)),
-      ...regionGeoJson().features.filter((feature) => !countriesWithSubadmin.has(adminRegionCountryId(feature.properties?.regionKey))),
+      ...regionGeoJson().features.filter((feature) => !configuredSubadminCountries.has(adminRegionCountryId(feature.properties?.regionKey))),
     ],
   };
 }
@@ -1296,22 +1365,18 @@ function subadminFeaturesForKey(key) {
   return collection.features.map((feature) => {
     const name = subadminNameFromFeature(feature);
     if (!name) return null;
-    const matches = locatedVisitedPlaces().filter((visit) => {
-      if (normalizeCountry(visit.place.country) !== config.countryId) return false;
-      if (sameAdminName(visit.place.subunit, name) || sameAdminName(visit.place.unit, name)) return true;
-      return geometryContainsPoint(feature.geometry, visit.place.lng, visit.place.lat);
-    });
+    const depth = coverageHasSubregion(key, name) ? 1 : 0;
     return {
       ...feature,
       properties: {
         ...feature.properties,
         id: `${key}-${slugify(name)}`,
         name,
-        depth: matches.length ? 1 : 0,
+        depth,
         kind: "subadmin",
         regionKey: key,
         countryId: config.countryId,
-        count: matches.length,
+        count: depth,
       },
     };
   }).filter(Boolean);
@@ -1330,17 +1395,17 @@ function adminFeaturesForRegion(regionKey) {
     const dedupeKey = `${regionKey}-${cleanAdminName(unit.name)}`;
     if (seen.has(dedupeKey)) return null;
     seen.add(dedupeKey);
-    const matches = locatedVisitedPlaces().filter((visit) => regionKeyForCountry(visit.place.country) === regionKey && sameAdminName(visit.place.unit, unit.name));
+    const depth = coverageHasRegion(regionKey, unit.name) ? 1 : 0;
     return {
       ...feature,
       properties: {
         ...feature.properties,
         id: `${regionKey}-${slugify(unit.name)}`,
         name: unit.name,
-        depth: matches.length ? 1 : 0,
+        depth,
         kind: "region",
         regionKey,
-        count: matches.length,
+        count: depth,
       },
     };
   }).filter(Boolean);
@@ -1349,21 +1414,22 @@ function adminFeaturesForRegion(regionKey) {
 function globalAdmin1GeoJson() {
   if (!boundaryData.admin1) return { type: "FeatureCollection", features: [] };
   const specialCountries = new Set(["cn", "us", "jp"]);
-  const visits = locatedVisitedPlaces().filter((visit) => !specialCountries.has(normalizeCountry(visit.place.country)));
   const features = admin1DisplayCollection().features.map((feature) => {
-    const matches = visits.filter((visit) => geometryContainsPoint(feature.geometry, visit.place.lng, visit.place.lat));
-    if (!matches.length) return null;
-    const countryId = countryIdFromFeature(feature) || matches[0].place.country;
+    const countryId = countryIdFromFeature(feature);
+    if (!countryId || specialCountries.has(countryId)) return null;
+    const name = adminNameFromFeature(feature);
+    const depth = coverageHasRegion(countryId, name) ? 1 : 0;
+    if (!depth) return null;
     return {
       ...feature,
       properties: {
         ...feature.properties,
-        id: `${countryId}-${slugify(adminNameFromFeature(feature))}`,
-        name: adminNameFromFeature(feature),
+        id: `${countryId}-${slugify(name)}`,
+        name,
         depth: 1,
         kind: "region",
         regionKey: countryId,
-        count: matches.length,
+        count: depth,
       },
     };
   }).filter(Boolean);
@@ -1372,13 +1438,13 @@ function globalAdmin1GeoJson() {
 
 function adminBoundaryKeysToShow() {
   const supportedKeys = ["china", "us"];
-  const visitedKeys = locatedVisitedPlaces().map((visit) => regionKeyForCountry(visit.place.country)).filter(Boolean);
+  const visitedKeys = Array.from(uniqueVisitedCountries()).map(regionKeyForCountry).filter(Boolean);
   const selectedKey = supportedKeys.includes(state.selectedRegionView) ? state.selectedRegionView : "china";
   return Array.from(new Set([...supportedKeys, selectedKey, ...visitedKeys].filter(Boolean)));
 }
 
 function subadminBoundaryKeysToShow() {
-  const visitedKeys = locatedVisitedPlaces().map((visit) => subadminKeyForCountry(visit.place.country)).filter(Boolean);
+  const visitedKeys = Array.from(uniqueVisitedCountries()).map(subadminKeyForCountry).filter(Boolean);
   return Array.from(new Set([...visitedKeys, ...Object.keys(subadminConfigs)].filter(Boolean)));
 }
 
@@ -1830,6 +1896,7 @@ function handleAdminRegionClick(feature) {
     state.visits = state.visits.filter((visit) => visit.placeId !== manual.id);
     places = places.filter((place) => place.id !== manual.id);
     closeMapPopupsAndDetail();
+    recomputeCoverage();
     saveState();
     renderAll();
     showToast(`${regionName} 已取消手动点亮`);
@@ -1909,6 +1976,7 @@ function toggleManualAdminRegion(countryId, regionName, isSubadmin, center) {
     state.visits = state.visits.filter((visit) => visit.placeId !== manual.id);
     places = places.filter((place) => place.id !== manual.id);
     closeMapPopupsAndDetail();
+    recomputeCoverage();
     saveState();
     renderAll();
     showToast(`${regionName} unmarked`);
@@ -1995,15 +2063,7 @@ function renderPlaceDetail(placeId) {
 
 function countVisitedRegions(regionKey) {
   const units = regionSets[regionKey].units;
-  const visits = locatedVisitedPlaces().filter((visit) =>
-    regionKeyForCountry(visit.place.country) === regionKey
-    || units.some((unit) => sameAdminName(visit.place.unit, unit.name))
-  );
-  const visitedUnitNames = visits.map((visit) => visit.place.unit).filter(Boolean);
-  return units.filter((unit) =>
-    visitedUnitNames.some((name) => sameAdminName(name, unit.name))
-    || visits.some((visit) => visitInRegionBoundary(visit, regionKey, unit.name))
-  ).length;
+  return units.filter((unit) => coverageHasRegion(regionKey, unit.name)).length;
 }
 
 function visitInRegionBoundary(visit, regionKey, unitName) {
@@ -2364,6 +2424,7 @@ function deleteImportedBatch(importId, index) {
   places = places.filter((place) => !ids.has(place.id));
   state.importedFiles = state.importedFiles.filter((file, fileIndex) => file !== record && fileIndex !== index);
   closeMapPopupsAndDetail();
+  recomputeCoverage();
   saveState();
   renderAll();
   showToast(`${record.name} 已删除`);
@@ -2375,6 +2436,7 @@ function deleteAllImportedData() {
   places = places.filter((place) => !ids.has(place.id));
   state.importedFiles = [];
   closeMapPopupsAndDetail();
+  recomputeCoverage();
   saveState();
   renderAll();
   showToast("导入数据已全部删除");
@@ -2653,6 +2715,27 @@ function showToast(message) {
   setTimeout(() => toast.classList.remove("show"), 2400);
 }
 
+async function recalculateCoverage() {
+  const button = $("#recalculateCoverage");
+  if (button) {
+    button.disabled = true;
+    button.textContent = "计算中...";
+  }
+  try {
+    await preloadBoundaryData(false, ["country", "china", "us", "admin1", "china2"]);
+    refreshInferredLocations();
+    recomputeCoverage();
+    saveState();
+    renderAll();
+    showToast("点亮结果已重新计算");
+  } finally {
+    if (button) {
+      button.disabled = false;
+      button.textContent = "重新计算点亮";
+    }
+  }
+}
+
 function renderAll() {
   renderMapControls();
   renderPlaceSelect();
@@ -2681,12 +2764,23 @@ function moveMapLevelControlToToolbar() {
   const toolbar = document.querySelector(".map-toolbar");
   const firstBlock = toolbar?.firstElementChild;
   const control = document.querySelector(".map-level-control");
-  if (!toolbar || !firstBlock || !control || control.closest(".map-toolbar")) return;
-  const row = document.createElement("div");
-  row.className = "map-title-row";
-  toolbar.insertBefore(row, firstBlock);
-  row.appendChild(firstBlock);
-  row.appendChild(control);
+  if (!toolbar || !firstBlock || !control) return;
+  let row = toolbar.querySelector(".map-title-row");
+  if (!row) {
+    row = document.createElement("div");
+    row.className = "map-title-row";
+    toolbar.insertBefore(row, firstBlock);
+    row.appendChild(firstBlock);
+  }
+  if (!control.closest(".map-toolbar")) row.appendChild(control);
+  if (!row.querySelector("#recalculateCoverage")) {
+    const button = document.createElement("button");
+    button.id = "recalculateCoverage";
+    button.className = "map-refresh-button";
+    button.type = "button";
+    button.textContent = "重新计算点亮";
+    row.appendChild(button);
+  }
 }
 
 function showPage(pageId) {
@@ -2735,6 +2829,7 @@ $("#quickAddForm").addEventListener("submit", addVisit);
 $("#importFile").addEventListener("change", handleImport);
 $("#exportArchive").addEventListener("click", exportArchive);
 $("#archiveFile").addEventListener("change", importArchiveFile);
+$("#recalculateCoverage")?.addEventListener("click", recalculateCoverage);
 $("#importSummary").addEventListener("click", (event) => {
   if (event.target.closest("[data-delete-all-imports]")) {
     deleteAllImportedData();
