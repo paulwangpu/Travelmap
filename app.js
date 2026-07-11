@@ -2247,7 +2247,7 @@ function importPlacesFromText(text, extension, fileName = `import.${extension}`,
   state.importedFiles.unshift({ name: fileName, count: imported.length, format: extension.toUpperCase(), marked: depth > 0 });
   saveState();
   renderAll();
-  preloadBoundaryData(false, ["country", "admin1"]).then(() => {
+  preloadBoundaryData(false, ["country", "admin1", "china2"]).then(() => {
     refreshInferredLocations();
     saveState();
     renderAll();
