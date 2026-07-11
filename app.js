@@ -20,7 +20,7 @@ const boundarySources = {
   us: "data/us-states.geojson",
   japan: "",
   admin1: "data/admin1.geojson",
-  china2: "data/china-prefectures-lite.geojson",
+  china2: "data/china-prefectures.geojson",
   us2: "data/us-counties.geojson",
   ru2: "data/russia-subregions.geojson",
 };
@@ -367,6 +367,10 @@ function loadBoundaryData(key) {
     .then((data) => {
       boundaryData[key] = normalizeFeatureCollection(data);
       if (key === "admin1") admin1DisplayCache = { source: null, collection: null };
+      if (key === "china2" && refreshInferredSubregionsForVisitedPlaces()) {
+        recomputeCoverage();
+        saveState();
+      }
       mapDataVersion += 1;
       return boundaryData[key];
     })
@@ -554,6 +558,24 @@ function groupedRegionOutlineGeoJson() {
     type: "FeatureCollection",
     features: regionGeoJson().features
       .filter((feature) => feature.properties?.is_region_group)
+      .map((feature) => ({
+        type: "Feature",
+        properties: {
+          id: `${feature.properties.id}-outline`,
+          name: feature.properties.name,
+          depth: feature.properties.depth,
+          kind: "region-outline",
+        },
+        geometry: exteriorLineGeometryForFeature(feature),
+      }))
+      .filter((feature) => feature.geometry.coordinates.length),
+  };
+}
+
+function adminOutlineGeoJsonForKeys(regionKeys) {
+  return {
+    type: "FeatureCollection",
+    features: regionKeys.flatMap((regionKey) => adminFeaturesForRegion(regionKey))
       .map((feature) => ({
         type: "Feature",
         properties: {
@@ -1226,6 +1248,22 @@ function refreshInferredLocations() {
   });
 }
 
+function refreshInferredSubregionsForVisitedPlaces() {
+  if (!boundaryData.china2) return false;
+  let changed = false;
+  visitedPlaces().forEach((visit) => {
+    const place = visit.place;
+    if (place.shapeOnly || normalizeCountry(place.country) !== "cn") return;
+    if (!Number.isFinite(place.lat) || !Number.isFinite(place.lng)) return;
+    const subregion = inferSubregion("cn", place.lng, place.lat);
+    if (subregion?.name && !sameAdminName(place.subunit, subregion.name)) {
+      place.subunit = subregion.name;
+      changed = true;
+    }
+  });
+  return changed;
+}
+
 function loadCatalogData() {
   if (catalogDataRequested) return;
   catalogDataRequested = true;
@@ -1783,7 +1821,9 @@ function renderMapLibreLayers() {
     setMapLibreSource("admin-country-context", cachedMapGeoJson("subadmin-country-context", () => adminCountryContextGeoJson(countriesWithSubadmin)));
     addMapLibreFillLayer("admin-country-context", "admin-country-context-fill", "admin-country-context-line", 0.18, 1);
     setMapLibreSource("visited-subadmin", cachedMapGeoJson("subadmin", subadminGeoJson));
-    addMapLibreFillLayer("visited-subadmin", "visited-subadmin-fill", "visited-subadmin-line", 0.24, 1.2);
+    addMapLibreFillLayer("visited-subadmin", "visited-subadmin-fill", "visited-subadmin-line", 0.24, 0.55);
+    setMapLibreSource("visited-region-group-outlines", cachedMapGeoJson("subadmin-province-outlines", () => adminOutlineGeoJsonForKeys(["china"])));
+    addMapLibreLineLayer("visited-region-group-outlines", "visited-region-group-outlines-line", 1.55);
   }
 
   setMapLibreSource("imported-shapes", cachedMapGeoJson("imported-polygons", importedPolygonGeoJson));
@@ -1964,10 +2004,16 @@ function renderLeafletLayers() {
       },
     }).addTo(leafletLayers);
     L.geoJSON(subadminGeoJson(), {
-      style: leafletBoundaryStyle,
+      style: (feature) => ({ ...leafletBoundaryStyle(feature), weight: 0.55 }),
       onEachFeature: (feature, layer) => {
         layer.on("click", () => handleAdminRegionClick(feature));
         layer.bindTooltip(String(feature.properties.name || ""), { sticky: true });
+      },
+    }).addTo(leafletLayers);
+    L.geoJSON(adminOutlineGeoJsonForKeys(["china"]), {
+      style: leafletOutlineStyle,
+      onEachFeature: (feature, layer) => {
+        layer.bindTooltip(feature.properties.name, { sticky: true });
       },
     }).addTo(leafletLayers);
   }
