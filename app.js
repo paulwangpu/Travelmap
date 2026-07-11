@@ -10,6 +10,9 @@ const depthColors = {
 };
 
 const storageKey = "travel-map-state-v1";
+const idbName = "travel-map-db";
+const idbStore = "archives";
+const idbStateKey = "state";
 const worldCountryTotal = 195;
 const boundarySources = {
   country: "data/countries.geojson",
@@ -864,12 +867,93 @@ function closeMapPopupsAndDetail() {
   }
 }
 
+function ensureMapDetailCloseButton() {
+  const detail = $("#mapDetail");
+  if (!detail || detail.classList.contains("hidden") || detail.querySelector("[data-close-detail]")) return;
+  const button = document.createElement("button");
+  button.className = "map-detail-close";
+  button.type = "button";
+  button.dataset.closeDetail = "1";
+  button.setAttribute("aria-label", "Close map detail");
+  button.textContent = "x";
+  detail.prepend(button);
+}
+
 function saveState() {
+  const payload = { places, state, savedAt: new Date().toISOString() };
   try {
-    localStorage.setItem(storageKey, JSON.stringify({ places, state }));
+    localStorage.setItem(storageKey, JSON.stringify(payload));
   } catch (error) {
     console.warn("保存失败", error);
   }
+  saveStateToIndexedDb(payload);
+}
+
+function openTravelMapDb() {
+  return new Promise((resolve, reject) => {
+    if (!window.indexedDB) {
+      reject(new Error("IndexedDB unavailable"));
+      return;
+    }
+    const request = indexedDB.open(idbName, 1);
+    request.onupgradeneeded = () => {
+      request.result.createObjectStore(idbStore);
+    };
+    request.onsuccess = () => resolve(request.result);
+    request.onerror = () => reject(request.error);
+  });
+}
+
+async function saveStateToIndexedDb(payload) {
+  try {
+    const db = await openTravelMapDb();
+    await new Promise((resolve, reject) => {
+      const tx = db.transaction(idbStore, "readwrite");
+      tx.objectStore(idbStore).put(payload, idbStateKey);
+      tx.oncomplete = resolve;
+      tx.onerror = () => reject(tx.error);
+    });
+    db.close();
+  } catch (error) {
+    console.warn("IndexedDB save failed", error);
+  }
+}
+
+async function loadStateFromIndexedDb() {
+  try {
+    const db = await openTravelMapDb();
+    const payload = await new Promise((resolve, reject) => {
+      const tx = db.transaction(idbStore, "readonly");
+      const request = tx.objectStore(idbStore).get(idbStateKey);
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => reject(request.error);
+    });
+    db.close();
+    if (!payload) return false;
+    applySavedPayload(payload);
+    return true;
+  } catch (error) {
+    console.warn("IndexedDB load failed", error);
+    return false;
+  }
+}
+
+function applySavedPayload(saved) {
+  if (!saved?.state || !Array.isArray(saved?.places)) return false;
+  places = saved.places;
+  const savedBoundaryLevel = ["country", "admin", "subadmin"].includes(saved.state.boundaryLevel) ? saved.state.boundaryLevel : "country";
+  state = {
+    ...state,
+    ...saved.state,
+    boundaryLevel: savedBoundaryLevel,
+    selectedRegionView: saved.state.selectedRegionView || "china",
+    importedFiles: saved.state.importedFiles || [],
+    checklistMarks: saved.state.checklistMarks || [],
+    openChecklistGroups: saved.state.openChecklistGroups || [],
+  };
+  state.visits = (state.visits || []).map((visit) => ({ ...visit, depth: visit.depth > 0 ? 1 : 0 })).filter((visit) => visit.depth > 0);
+  migrateImportedShapes();
+  return true;
 }
 
 function currentArchivePayload() {
@@ -925,19 +1009,7 @@ async function importArchiveFile(event) {
 function loadState() {
   try {
     const saved = JSON.parse(localStorage.getItem(storageKey) || "null");
-    if (!saved?.state || !Array.isArray(saved?.places)) return;
-    places = saved.places;
-    const savedBoundaryLevel = ["country", "admin", "subadmin"].includes(saved.state.boundaryLevel) ? saved.state.boundaryLevel : "country";
-    state = {
-      ...state,
-      ...saved.state,
-      boundaryLevel: savedBoundaryLevel,
-      selectedRegionView: saved.state.selectedRegionView || "china",
-      checklistMarks: saved.state.checklistMarks || [],
-      openChecklistGroups: saved.state.openChecklistGroups || [],
-    };
-    state.visits = state.visits.map((visit) => ({ ...visit, depth: visit.depth > 0 ? 1 : 0 })).filter((visit) => visit.depth > 0);
-    migrateImportedShapes();
+    applySavedPayload(saved);
   } catch (error) {
     console.warn("读取保存数据失败", error);
   }
@@ -1203,9 +1275,17 @@ function regionGeoJson() {
 }
 
 function subadminGeoJson() {
+  const countriesWithSubadmin = new Set(
+    Object.keys(subadminConfigs)
+      .filter((key) => boundaryData[key]?.features?.length)
+      .map(countryIdForSubadminKey)
+  );
   return {
     type: "FeatureCollection",
-    features: subadminBoundaryKeysToShow().flatMap((key) => subadminFeaturesForKey(key)),
+    features: [
+      ...subadminBoundaryKeysToShow().flatMap((key) => subadminFeaturesForKey(key)),
+      ...regionGeoJson().features.filter((feature) => !countriesWithSubadmin.has(adminRegionCountryId(feature.properties?.regionKey))),
+    ],
   };
 }
 
@@ -1332,9 +1412,8 @@ function renderPlaceSelect() {
 }
 
 function renderLegend() {
-  $("#legend").innerHTML = [0, 1]
-    .map((depth) => `<span class="legend-item"><i class="swatch" style="background:${depthColors[depth]}"></i>${depthLabels[depth]}</span>`)
-    .join("");
+  const legend = $("#legend");
+  if (legend) legend.remove();
 }
 
 function renderMetrics() {
@@ -1916,8 +1995,26 @@ function renderPlaceDetail(placeId) {
 
 function countVisitedRegions(regionKey) {
   const units = regionSets[regionKey].units;
-  const visitedUnitNames = locatedVisitedPlaces().map((visit) => visit.place.unit).filter(Boolean);
-  return units.filter((unit) => visitedUnitNames.some((name) => sameAdminName(name, unit.name))).length;
+  const visits = locatedVisitedPlaces().filter((visit) =>
+    regionKeyForCountry(visit.place.country) === regionKey
+    || units.some((unit) => sameAdminName(visit.place.unit, unit.name))
+  );
+  const visitedUnitNames = visits.map((visit) => visit.place.unit).filter(Boolean);
+  return units.filter((unit) =>
+    visitedUnitNames.some((name) => sameAdminName(name, unit.name))
+    || visits.some((visit) => visitInRegionBoundary(visit, regionKey, unit.name))
+  ).length;
+}
+
+function visitInRegionBoundary(visit, regionKey, unitName) {
+  const features = [
+    ...(boundaryData[regionKey]?.features || []),
+    ...admin1DisplayCollection().features.filter((feature) => countryIdFromFeature(feature) === countryIdForRegionKey(regionKey)),
+  ];
+  return features.some((feature) => {
+    const name = adminNameFromFeature(feature);
+    return sameAdminName(name, unitName) && geometryContainsPoint(feature.geometry, visit.place.lng, visit.place.lat);
+  });
 }
 
 function renderRegionMap() {
@@ -1948,7 +2045,7 @@ function renderCoverage() {
 function renderImportSummary() {
   const files = state.importedFiles;
   $("#importSummary").innerHTML = files.length
-    ? files.map((file) => `<article class="check-item"><header><strong>${file.name}</strong><span>${file.count} 条</span></header><p class="muted">${file.format} · ${file.marked ? "已点亮地图" : "仅导入"}</p></article>`).join("")
+    ? `<article class="check-item"><header><strong>全部导入数据</strong><span>${places.filter((place) => place.imported).length} 个对象</span></header><button class="text-action" data-delete-all-imports="1" type="button">删除全部导入</button></article>${files.map((file, index) => `<article class="check-item"><header><strong>${file.name}</strong><span>${file.count} 条</span></header><p class="muted">${file.format} · ${file.marked ? "已点亮地图" : "仅导入"}</p><button class="text-action" data-delete-import="${file.id || ""}" data-import-index="${index}" type="button">删除导入</button></article>`).join("")}`
     : `<p class="muted">还没有导入文件。导入后，地图点、国家/地区覆盖率、行政区覆盖率会自动刷新。</p>`;
 }
 
@@ -2226,6 +2323,7 @@ async function handleImport(event) {
 function importPlacesFromText(text, extension, fileName = `import.${extension}`, depth = 2) {
   const imported = parseImportFile(text, extension);
   const createdIds = [];
+  const importId = `import-${slugify(fileName)}-${Date.now()}`;
   imported.forEach((place) => {
     const idBase = slugify(`${place.country}-${place.unit}-${place.name}`);
     let id = `import-${idBase}`;
@@ -2234,7 +2332,7 @@ function importPlacesFromText(text, extension, fileName = `import.${extension}`,
       id = `import-${idBase}-${suffix}`;
       suffix += 1;
     }
-    places.push({ ...place, id, imported: true });
+    places.push({ ...place, id, imported: true, importId, sourceFile: fileName });
     createdIds.push(id);
   });
   if (depth > 0) {
@@ -2244,7 +2342,7 @@ function importPlacesFromText(text, extension, fileName = `import.${extension}`,
   }
   const firstPointId = createdIds.find((id) => !getPlace(id)?.shapeOnly);
   if (firstPointId) state.focusPlaceId = firstPointId;
-  state.importedFiles.unshift({ name: fileName, count: imported.length, format: extension.toUpperCase(), marked: depth > 0 });
+  state.importedFiles.unshift({ id: importId, name: fileName, count: imported.length, format: extension.toUpperCase(), marked: depth > 0, ids: createdIds });
   saveState();
   renderAll();
   preloadBoundaryData(false, ["country", "admin1", "china2"]).then(() => {
@@ -2253,6 +2351,33 @@ function importPlacesFromText(text, extension, fileName = `import.${extension}`,
     renderAll();
   });
   return imported;
+}
+
+function deleteImportedBatch(importId, index) {
+  const record = state.importedFiles.find((file, fileIndex) => (importId && file.id === importId) || fileIndex === index);
+  if (!record) return;
+  const ids = new Set(record.ids || []);
+  places.forEach((place) => {
+    if (place.importId === record.id || (!record.id && place.sourceFile === record.name)) ids.add(place.id);
+  });
+  state.visits = state.visits.filter((visit) => !ids.has(visit.placeId));
+  places = places.filter((place) => !ids.has(place.id));
+  state.importedFiles = state.importedFiles.filter((file, fileIndex) => file !== record && fileIndex !== index);
+  closeMapPopupsAndDetail();
+  saveState();
+  renderAll();
+  showToast(`${record.name} 已删除`);
+}
+
+function deleteAllImportedData() {
+  const ids = new Set(places.filter((place) => place.imported).map((place) => place.id));
+  state.visits = state.visits.filter((visit) => !ids.has(visit.placeId));
+  places = places.filter((place) => !ids.has(place.id));
+  state.importedFiles = [];
+  closeMapPopupsAndDetail();
+  saveState();
+  renderAll();
+  showToast("导入数据已全部删除");
 }
 
 function parseImportFile(text, extension) {
@@ -2552,6 +2677,18 @@ function renderMapControls() {
   });
 }
 
+function moveMapLevelControlToToolbar() {
+  const toolbar = document.querySelector(".map-toolbar");
+  const firstBlock = toolbar?.firstElementChild;
+  const control = document.querySelector(".map-level-control");
+  if (!toolbar || !firstBlock || !control || control.closest(".map-toolbar")) return;
+  const row = document.createElement("div");
+  row.className = "map-title-row";
+  toolbar.insertBefore(row, firstBlock);
+  row.appendChild(firstBlock);
+  row.appendChild(control);
+}
+
 function showPage(pageId) {
   const target = document.querySelector(`[data-page="${pageId}"]`) ? pageId : "world";
   document.querySelectorAll("[data-page]").forEach((page) => {
@@ -2577,12 +2714,15 @@ function showPage(pageId) {
 }
 
 loadState();
-renderLegend();
-preloadBoundaryData(false, ["country", "china", "us"]);
-if (state.boundaryLevel === "admin") loadBoundaryData("admin1");
-if (state.boundaryLevel === "subadmin") subadminBoundaryKeysToShow().forEach(loadBoundaryData);
-renderAll();
-showPage(location.hash.replace("#", "") || "world");
+moveMapLevelControlToToolbar();
+loadStateFromIndexedDb().finally(() => {
+  renderLegend();
+  preloadBoundaryData(false, ["country", "china", "us"]);
+  if (state.boundaryLevel === "admin") loadBoundaryData("admin1");
+  if (state.boundaryLevel === "subadmin") subadminBoundaryKeysToShow().forEach(loadBoundaryData);
+  renderAll();
+  showPage(location.hash.replace("#", "") || "world");
+});
 
 window.travelMapApp = {
   importPlacesFromText,
@@ -2595,6 +2735,15 @@ $("#quickAddForm").addEventListener("submit", addVisit);
 $("#importFile").addEventListener("change", handleImport);
 $("#exportArchive").addEventListener("click", exportArchive);
 $("#archiveFile").addEventListener("change", importArchiveFile);
+$("#importSummary").addEventListener("click", (event) => {
+  if (event.target.closest("[data-delete-all-imports]")) {
+    deleteAllImportedData();
+    return;
+  }
+  const button = event.target.closest("[data-delete-import]");
+  if (!button) return;
+  deleteImportedBatch(button.dataset.deleteImport, Number(button.dataset.importIndex));
+});
 $("#boundaryLevel").addEventListener("change", (event) => {
   state.boundaryLevel = event.target.value;
   saveState();
@@ -2617,6 +2766,10 @@ $("#leafletMap").addEventListener("click", (event) => {
   unvisitPlace(button.dataset.unvisit);
 });
 $("#mapDetail").addEventListener("click", (event) => {
+  if (event.target.closest("[data-close-detail]")) {
+    closeMapPopupsAndDetail();
+    return;
+  }
   const adminButton = event.target.closest("[data-admin-toggle]");
   if (adminButton) {
     const center = [
@@ -2634,6 +2787,12 @@ $("#mapDetail").addEventListener("click", (event) => {
   const button = event.target.closest("[data-unvisit]");
   if (!button) return;
   unvisitPlace(button.dataset.unvisit);
+});
+new MutationObserver(ensureMapDetailCloseButton).observe($("#mapDetail"), {
+  childList: true,
+  subtree: false,
+  attributes: true,
+  attributeFilter: ["class"],
 });
 $("#refreshBoundaries")?.addEventListener("click", () => {
   const button = $("#refreshBoundaries");

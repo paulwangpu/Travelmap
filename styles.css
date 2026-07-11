@@ -603,6 +603,20 @@ button:hover {
   cursor: pointer;
 }
 
+.text-action {
+  margin-top: 10px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #d9480f;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.text-action:hover {
+  text-decoration: underline;
+}
+
 .place-card header p {
   margin: 5px 0 0;
   color: var(--muted);
@@ -1008,6 +1022,19 @@ button:hover {
   letter-spacing: 0;
 }
 
+.map-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-width: 0;
+}
+
+.map-title-row .map-level-control {
+  flex: 0 0 240px;
+  box-shadow: none;
+}
+
 .compact-add {
   box-shadow: none;
   border: 0;
@@ -1064,6 +1091,10 @@ button:hover {
   align-items: flex-start;
   justify-content: flex-end;
   pointer-events: none;
+}
+
+.map-surface-head:empty {
+  display: none;
 }
 
 .map-surface-head .legend {
@@ -1127,6 +1158,27 @@ button:hover {
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 12px 28px rgba(24, 32, 28, 0.16);
+}
+
+.map-detail-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(23, 35, 31, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #26352f;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.map-detail-close:hover {
+  background: #fff4ed;
+  border-color: rgba(217, 72, 15, 0.3);
+  color: #d9480f;
 }
 
 .map-drawer.hidden {
