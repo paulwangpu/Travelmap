@@ -816,7 +816,7 @@ function inferCountry(lng, lat) {
 }
 
 function inferRegion(countryId, lng, lat) {
-  const key = countryId === "cn" ? "china" : countryId === "us" ? "us" : countryId === "jp" ? "japan" : "";
+  const key = regionKeyForCountry(countryId);
   if (key && boundaryData[key]) {
     const feature = findFeatureAtPoint(boundaryData[key], lng, lat);
     const name = feature ? adminNameFromFeature(feature) : "";
@@ -923,9 +923,10 @@ function rebuildCoverageFromSavedVisits() {
     if (countryId && countryId !== "imported") countriesSeen.add(countryId);
 
     const regionKey = regionKeyForCountry(countryId) || countryId;
-    if (regionKey && visit.place.unit) {
+    const regionName = visit.place.unit || chinaRegionNameForCountryId(countryId);
+    if (regionKey && regionName) {
       regions[regionKey] ||= [];
-      addUniqueAdminName(regions[regionKey], visit.place.unit, (left, right) => sameRegionName(regionKey, left, right));
+      addUniqueAdminName(regions[regionKey], regionName, (left, right) => sameRegionName(regionKey, left, right));
     }
 
     const subadminKey = subadminKeyForCountry(countryId);
@@ -952,9 +953,10 @@ function recomputeCoverage() {
     if (countryId && countryId !== "imported") countriesSeen.add(countryId);
 
     const regionKey = regionKeyForCountry(countryId) || countryId;
-    if (regionKey && visit.place.unit) {
+    const regionName = visit.place.unit || chinaRegionNameForCountryId(countryId);
+    if (regionKey && regionName) {
       regions[regionKey] ||= [];
-      addUniqueAdminName(regions[regionKey], visit.place.unit, (left, right) => sameRegionName(regionKey, left, right));
+      addUniqueAdminName(regions[regionKey], regionName, (left, right) => sameRegionName(regionKey, left, right));
     }
 
     const subadminKey = subadminKeyForCountry(countryId);
@@ -978,9 +980,10 @@ function addCoverageForPlace(place) {
   const countryId = normalizeCountry(place.country);
   if (countryId && countryId !== "imported" && !coverage.countries.includes(countryId)) coverage.countries.push(countryId);
   const regionKey = regionKeyForCountry(countryId) || countryId;
-  if (regionKey && place.unit) {
+  const regionName = place.unit || chinaRegionNameForCountryId(countryId);
+  if (regionKey && regionName) {
     coverage.regions[regionKey] ||= [];
-    addUniqueAdminName(coverage.regions[regionKey], place.unit, (left, right) => sameRegionName(regionKey, left, right));
+    addUniqueAdminName(coverage.regions[regionKey], regionName, (left, right) => sameRegionName(regionKey, left, right));
   }
   const subadminKey = subadminKeyForCountry(countryId);
   if (subadminKey && place.subunit) {
@@ -1615,7 +1618,12 @@ function customBoundaryFor(level, countryOrRegion, unitName = "") {
 
 function regionKeyForCountry(countryId) {
   const normalized = normalizeCountry(countryId);
-  return normalized === "cn" ? "china" : normalized === "us" ? "us" : normalized === "jp" ? "japan" : "";
+  return ["cn", "hk", "mo", "tw"].includes(normalized) ? "china" : normalized === "us" ? "us" : normalized === "jp" ? "japan" : "";
+}
+
+function chinaRegionNameForCountryId(countryId) {
+  const normalized = normalizeCountry(countryId);
+  return { hk: "香港", mo: "澳门", tw: "台湾" }[normalized] || "";
 }
 
 function subadminKeyForCountry(countryId) {
@@ -2260,6 +2268,12 @@ function countVisitedRegions(regionKey) {
   return units.filter((unit) => coverageHasRegion(regionKey, unit.name)).length;
 }
 
+function missingVisitedRegions(regionKey) {
+  return regionSets[regionKey].units
+    .filter((unit) => !coverageHasRegion(regionKey, unit.name))
+    .map((unit) => unit.name);
+}
+
 function countVisitedSubregions(subadminKey) {
   return coverageSubregionNames(subadminKey).length;
 }
@@ -2327,6 +2341,7 @@ function renderDataInventory() {
     ["中国一级行政区", `${counts.chinaRegions}/34`],
     ["中国二级行政区", `${counts.chinaSubregions}/${chinaPrefectureTotal()}`],
   ];
+  const missingChina = missingVisitedRegions("china");
   const importRows = imported.slice(0, 80).map((place) => `
     <tr>
       <td>${place.name}</td>
@@ -2345,6 +2360,7 @@ function renderDataInventory() {
     </tr>`).join("");
   target.innerHTML = `
     <div class="inventory-metrics">${rows.map(([label, value]) => `<span><strong>${value}</strong><em>${label}</em></span>`).join("")}</div>
+    <p class="muted small">中国省级未点亮：${missingChina.length ? missingChina.join("、") : "无"}</p>
     <details class="data-table-block" open>
       <summary>已点亮数据（最多显示 80 条）</summary>
       <table><thead><tr><th>名称</th><th>国家</th><th>行政区</th><th>来源</th><th>类型</th></tr></thead><tbody>${visitRows || `<tr><td colspan="5">暂无点亮数据</td></tr>`}</tbody></table>
@@ -2953,6 +2969,19 @@ function normalizeCountry(value) {
     chn: "cn",
     中国: "cn",
     "people's republic of china": "cn",
+    hongkong: "hk",
+    "hong kong": "hk",
+    hkg: "hk",
+    hk: "hk",
+    香港: "hk",
+    macao: "mo",
+    macau: "mo",
+    mo: "mo",
+    澳门: "mo",
+    taiwan: "tw",
+    tw: "tw",
+    twn: "tw",
+    台湾: "tw",
     usa: "us",
     us: "us",
     "united states": "us",
