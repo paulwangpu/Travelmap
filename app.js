@@ -17,6 +17,9 @@ const boundarySources = {
   us: "data/us-states.geojson",
   japan: "",
   admin1: "data/admin1.geojson",
+  china2: "data/china-prefectures.geojson",
+  us2: "data/us-counties.geojson",
+  ru2: "data/russia-subregions.geojson",
 };
 const boundaryFallbackSources = {
   country: "https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson",
@@ -24,6 +27,9 @@ const boundaryFallbackSources = {
   us: "https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json",
   japan: "",
   admin1: "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_admin_1_states_provinces.geojson",
+  china2: "",
+  us2: "",
+  ru2: "",
 };
 const catalogSources = {
   china5a: "https://zh.wikipedia.org/api/rest_v1/page/html/%E5%9B%BD%E5%AE%B65A%E7%BA%A7%E6%97%85%E6%B8%B8%E6%99%AF%E5%8C%BA",
@@ -34,14 +40,19 @@ let leafletMap = null;
 let leafletLayers = null;
 let mapLibreMap = null;
 let mapLibreMarkers = [];
-let mapLibreLayerHandlersBound = false;
+let mapLibreLayerHandlersBound = { admin: false, subadmin: false };
 let leafletDidInitialFit = false;
 let catalogDataRequested = false;
-let boundaryData = { country: null, china: null, us: null, japan: null, admin1: null };
-let boundaryLoading = { country: false, china: false, us: false, japan: false, admin1: false };
+let boundaryData = { country: null, china: null, us: null, japan: null, admin1: null, china2: null, us2: null, ru2: null };
+let boundaryLoading = { country: false, china: false, us: false, japan: false, admin1: false, china2: false, us2: false, ru2: false };
 let boundaryPromises = {};
 let admin1DisplayCache = { source: null, collection: null };
 const admin1RegionGroupCountries = new Set(["fr", "it"]);
+const subadminConfigs = {
+  china2: { countryId: "cn", label: "China prefecture-level units" },
+  us2: { countryId: "us", label: "US counties and county equivalents" },
+  ru2: { countryId: "ru", label: "Russia comparable travel regions" },
+};
 
 const countries = [
   { id: "cn", name: "中国", continent: "亚洲", bbox: [73, 18, 135, 54], x: 74, y: 43, w: 10, h: 10 },
@@ -462,6 +473,28 @@ function canonicalAdminNameFromFeature(feature) {
   ).trim();
 }
 
+function subadminNameFromFeature(feature) {
+  const props = feature.properties || {};
+  return String(
+    props.name_zh
+    || props.name_local
+    || props.NAME_2
+    || props.name_2
+    || props.NAME_3
+    || props.name_3
+    || props.county
+    || props.COUNTY
+    || props.district
+    || props.DISTRICT
+    || props.city
+    || props.CITY
+    || props.name
+    || props.NAME
+    || adminNameFromFeature(feature)
+    || ""
+  ).trim();
+}
+
 function admin1DisplayCollection() {
   if (!boundaryData.admin1) return { type: "FeatureCollection", features: [] };
   if (admin1DisplayCache.source === boundaryData.admin1 && admin1DisplayCache.collection) return admin1DisplayCache.collection;
@@ -717,6 +750,14 @@ function inferRegion(countryId, lng, lat) {
   return key ? regionSets[key].units.find((unit) => inBbox(lng, lat, unit.bbox)) : null;
 }
 
+function inferSubregion(countryId, lng, lat) {
+  const key = subadminKeyForCountry(countryId);
+  if (!key || !boundaryData[key]) return null;
+  const feature = findFeatureAtPoint(boundaryData[key], lng, lat);
+  const name = feature ? subadminNameFromFeature(feature) : "";
+  return name ? { name } : null;
+}
+
 function slugify(value) {
   return String(value || "place").trim().toLowerCase().replace(/[^a-z0-9\u4e00-\u9fa5]+/g, "-").replace(/^-|-$/g, "");
 }
@@ -886,7 +927,7 @@ function loadState() {
     const saved = JSON.parse(localStorage.getItem(storageKey) || "null");
     if (!saved?.state || !Array.isArray(saved?.places)) return;
     places = saved.places;
-    const savedBoundaryLevel = ["country", "admin"].includes(saved.state.boundaryLevel) ? saved.state.boundaryLevel : "country";
+    const savedBoundaryLevel = ["country", "admin", "subadmin"].includes(saved.state.boundaryLevel) ? saved.state.boundaryLevel : "country";
     state = {
       ...state,
       ...saved.state,
@@ -920,6 +961,8 @@ function refreshInferredLocations() {
     if (country?.id && country.id !== "imported") place.country = country.id;
     const region = inferRegion(place.country, place.lng, place.lat);
     if (region?.name) place.unit = region.name;
+    const subregion = inferSubregion(place.country, place.lng, place.lat);
+    if (subregion?.name) place.subunit = subregion.name;
   });
 }
 
@@ -1053,6 +1096,10 @@ function countryIdForRegionKey(key) {
   return { china: "cn", us: "us", japan: "jp" }[key] || "";
 }
 
+function countryIdForSubadminKey(key) {
+  return subadminConfigs[key]?.countryId || "";
+}
+
 function areaCenterGeoJson() {
   const features = [];
   getMapCountries()
@@ -1139,6 +1186,41 @@ function regionGeoJson() {
   return { type: "FeatureCollection", features: fallbackFeatures };
 }
 
+function subadminGeoJson() {
+  return {
+    type: "FeatureCollection",
+    features: subadminBoundaryKeysToShow().flatMap((key) => subadminFeaturesForKey(key)),
+  };
+}
+
+function subadminFeaturesForKey(key) {
+  const config = subadminConfigs[key];
+  const collection = boundaryData[key];
+  if (!config || !collection?.features?.length) return [];
+  return collection.features.map((feature) => {
+    const name = subadminNameFromFeature(feature);
+    if (!name) return null;
+    const matches = locatedVisitedPlaces().filter((visit) => {
+      if (normalizeCountry(visit.place.country) !== config.countryId) return false;
+      if (sameAdminName(visit.place.subunit, name) || sameAdminName(visit.place.unit, name)) return true;
+      return geometryContainsPoint(feature.geometry, visit.place.lng, visit.place.lat);
+    });
+    return {
+      ...feature,
+      properties: {
+        ...feature.properties,
+        id: `${key}-${slugify(name)}`,
+        name,
+        depth: matches.length ? 1 : 0,
+        kind: "subadmin",
+        regionKey: key,
+        countryId: config.countryId,
+        count: matches.length,
+      },
+    };
+  }).filter(Boolean);
+}
+
 function adminFeaturesForRegion(regionKey) {
   const countryId = countryIdForRegionKey(regionKey);
   const sourceFeatures = [
@@ -1199,6 +1281,11 @@ function adminBoundaryKeysToShow() {
   return Array.from(new Set([...supportedKeys, selectedKey, ...visitedKeys].filter(Boolean)));
 }
 
+function subadminBoundaryKeysToShow() {
+  const visitedKeys = locatedVisitedPlaces().map((visit) => subadminKeyForCountry(visit.place.country)).filter(Boolean);
+  return Array.from(new Set([...visitedKeys, ...Object.keys(subadminConfigs)].filter(Boolean)));
+}
+
 function customBoundaryFor(level, countryOrRegion, unitName = "") {
   const match = places.find((place) => {
     if (!place.importedGeometry || place.importedGeometry.type === "Point") return false;
@@ -1215,6 +1302,11 @@ function customBoundaryFor(level, countryOrRegion, unitName = "") {
 function regionKeyForCountry(countryId) {
   const normalized = normalizeCountry(countryId);
   return normalized === "cn" ? "china" : normalized === "us" ? "us" : normalized === "jp" ? "japan" : "";
+}
+
+function subadminKeyForCountry(countryId) {
+  const normalized = normalizeCountry(countryId);
+  return Object.keys(subadminConfigs).find((key) => subadminConfigs[key].countryId === normalized) || "";
 }
 
 function renderPlaceSelect() {
@@ -1347,6 +1439,9 @@ function renderMapLibreLayers() {
     adminBoundaryKeysToShow().forEach(loadBoundaryData);
     loadBoundaryData("admin1");
   }
+  if (state.boundaryLevel === "subadmin") {
+    subadminBoundaryKeysToShow().forEach(loadBoundaryData);
+  }
 
   removeMapLibreLayer("visited-area-labels");
   removeMapLibreLayer("visited-area-centers");
@@ -1356,6 +1451,8 @@ function renderMapLibreLayers() {
   removeMapLibreLayer("visited-regions-line");
   removeMapLibreLayer("visited-regions-fill");
   removeMapLibreLayer("visited-region-group-outlines-line");
+  removeMapLibreLayer("visited-subadmin-line");
+  removeMapLibreLayer("visited-subadmin-fill");
   removeMapLibreLayer("admin-country-context-line");
   removeMapLibreLayer("admin-country-context-fill");
   removeMapLibreLayer("visited-countries-line");
@@ -1364,6 +1461,7 @@ function renderMapLibreLayers() {
   removeMapLibreSource("imported-shapes");
   removeMapLibreSource("visited-regions");
   removeMapLibreSource("visited-region-group-outlines");
+  removeMapLibreSource("visited-subadmin");
   removeMapLibreSource("admin-country-context");
   removeMapLibreSource("visited-countries");
 
@@ -1380,6 +1478,11 @@ function renderMapLibreLayers() {
     addMapLibreLineLayer("visited-region-group-outlines", "visited-region-group-outlines-line", 1.55);
     setMapLibreSource("admin-country-context", adminCountryContextGeoJson());
     addMapLibreFillLayer("admin-country-context", "admin-country-context-fill", "admin-country-context-line", 0.18, 1);
+  }
+
+  if (state.boundaryLevel === "subadmin") {
+    setMapLibreSource("visited-subadmin", subadminGeoJson());
+    addMapLibreFillLayer("visited-subadmin", "visited-subadmin-fill", "visited-subadmin-line", 0.24, 1.2);
   }
 
   setMapLibreSource("imported-shapes", importedShapeGeoJson());
@@ -1406,18 +1509,32 @@ function renderMapLibreLayers() {
 }
 
 function bindMapLibreLayerHandlers() {
-  if (mapLibreLayerHandlersBound || !mapLibreMap.getLayer("visited-regions-fill")) return;
-  mapLibreLayerHandlersBound = true;
-  mapLibreMap.on("click", "visited-regions-fill", (event) => {
-    const feature = event.features?.[0];
-    if (feature) handleAdminRegionClick(feature);
-  });
-  mapLibreMap.on("mouseenter", "visited-regions-fill", () => {
-    mapLibreMap.getCanvas().style.cursor = "pointer";
-  });
-  mapLibreMap.on("mouseleave", "visited-regions-fill", () => {
-    mapLibreMap.getCanvas().style.cursor = "";
-  });
+  if (!mapLibreLayerHandlersBound.admin && mapLibreMap.getLayer("visited-regions-fill")) {
+    mapLibreLayerHandlersBound.admin = true;
+    mapLibreMap.on("click", "visited-regions-fill", (event) => {
+      const feature = event.features?.[0];
+      if (feature) handleAdminRegionClick(feature);
+    });
+    mapLibreMap.on("mouseenter", "visited-regions-fill", () => {
+      mapLibreMap.getCanvas().style.cursor = "pointer";
+    });
+    mapLibreMap.on("mouseleave", "visited-regions-fill", () => {
+      mapLibreMap.getCanvas().style.cursor = "";
+    });
+  }
+  if (!mapLibreLayerHandlersBound.subadmin && mapLibreMap.getLayer("visited-subadmin-fill")) {
+    mapLibreLayerHandlersBound.subadmin = true;
+    mapLibreMap.on("click", "visited-subadmin-fill", (event) => {
+      const feature = event.features?.[0];
+      if (feature) handleAdminRegionClick(feature);
+    });
+    mapLibreMap.on("mouseenter", "visited-subadmin-fill", () => {
+      mapLibreMap.getCanvas().style.cursor = "pointer";
+    });
+    mapLibreMap.on("mouseleave", "visited-subadmin-fill", () => {
+      mapLibreMap.getCanvas().style.cursor = "";
+    });
+  }
 }
 
 function addMapLibreFillLayer(sourceId, fillId, lineId, opacity, lineWidth, geometryFilter = false) {
@@ -1491,6 +1608,9 @@ function renderLeafletLayers() {
     adminBoundaryKeysToShow().forEach(loadBoundaryData);
     loadBoundaryData("admin1");
   }
+  if (state.boundaryLevel === "subadmin") {
+    subadminBoundaryKeysToShow().forEach(loadBoundaryData);
+  }
   if (leafletLayers) leafletLayers.remove();
   leafletLayers = L.layerGroup().addTo(leafletMap);
 
@@ -1523,6 +1643,16 @@ function renderLeafletLayers() {
       style: (feature) => ({ ...leafletBoundaryStyle(feature), fillOpacity: 0.18, weight: 1 }),
       onEachFeature: (feature, layer) => {
         layer.bindTooltip(feature.properties.name, { sticky: true });
+      },
+    }).addTo(leafletLayers);
+  }
+
+  if (state.boundaryLevel === "subadmin") {
+    L.geoJSON(subadminGeoJson(), {
+      style: leafletBoundaryStyle,
+      onEachFeature: (feature, layer) => {
+        layer.on("click", () => handleAdminRegionClick(feature));
+        layer.bindTooltip(String(feature.properties.name || ""), { sticky: true });
       },
     }).addTo(leafletLayers);
   }
@@ -1591,6 +1721,7 @@ function handleAdminRegionClick(feature) {
   const props = feature.properties || {};
   const regionName = props.name;
   const countryId = adminRegionCountryId(props.regionKey);
+  const isSubadmin = props.kind === "subadmin" || Boolean(subadminConfigs[props.regionKey]);
   if (!regionName || !countryId || countryId === "imported") return;
 
   const manual = manualAdminPlaceFor(countryId, regionName);
@@ -1607,7 +1738,7 @@ function handleAdminRegionClick(feature) {
   const realVisits = locatedVisitedPlaces().filter((visit) =>
     !visit.place.manualAdmin
     && normalizeCountry(visit.place.country) === countryId
-    && sameAdminName(visit.place.unit, regionName)
+    && (isSubadmin ? sameAdminName(visit.place.subunit || visit.place.unit, regionName) : sameAdminName(visit.place.unit, regionName))
   );
   if (realVisits.length) {
     renderAdminRegionDetail(countryId, regionName, realVisits);
@@ -1620,7 +1751,8 @@ function handleAdminRegionClick(feature) {
     id,
     name: `${getCountry(countryId).name} - ${regionName}`,
     country: countryId,
-    unit: regionName,
+    unit: isSubadmin ? "" : regionName,
+    subunit: isSubadmin ? regionName : "",
     city: "",
     type: "手动点亮行政区",
     lat: center?.[1] ?? null,
@@ -1649,7 +1781,7 @@ function renderAdminRegionDetail(countryId, regionName, visits) {
 }
 
 function adminRegionCountryId(regionKey) {
-  const countryId = countryIdForRegionKey(regionKey) || normalizeCountry(regionKey);
+  const countryId = countryIdForRegionKey(regionKey) || countryIdForSubadminKey(regionKey) || normalizeCountry(regionKey);
   return countryId || "";
 }
 
@@ -1659,7 +1791,7 @@ function manualAdminPlaceId(countryId, regionName) {
 
 function manualAdminPlaceFor(countryId, regionName) {
   const id = manualAdminPlaceId(countryId, regionName);
-  return places.find((place) => place.id === id || (place.manualAdmin && normalizeCountry(place.country) === countryId && sameAdminName(place.unit, regionName)));
+  return places.find((place) => place.id === id || (place.manualAdmin && normalizeCountry(place.country) === countryId && (sameAdminName(place.unit, regionName) || sameAdminName(place.subunit, regionName))));
 }
 
 function renderPlaceDetail(placeId) {
@@ -1899,6 +2031,8 @@ function ensureChecklistPlace(key, item) {
     if (country?.id) place.country = country.id;
     const region = inferRegion(place.country, place.lng, place.lat);
     if (region?.name) place.unit = region.name;
+    const subregion = inferSubregion(place.country, place.lng, place.lat);
+    if (subregion?.name) place.subunit = subregion.name;
   }
   places.push(place);
   upsertVisit(id, 1, { tripId: "checklist" });
@@ -1915,6 +2049,8 @@ function applyChecklistCoordinates(place, coords) {
   if (country?.id) place.country = country.id;
   const region = inferRegion(place.country, place.lng, place.lat);
   if (region?.name) place.unit = region.name;
+  const subregion = inferSubregion(place.country, place.lng, place.lat);
+  if (subregion?.name) place.subunit = subregion.name;
 }
 
 function cleanChecklistName(value) {
@@ -1936,6 +2072,8 @@ function geocodeChecklistPlace(placeId, item) {
       if (country?.id) place.country = country.id;
       const region = inferRegion(place.country, place.lng, place.lat);
       if (region?.name) place.unit = region.name;
+      const subregion = inferSubregion(place.country, place.lng, place.lat);
+      if (subregion?.name) place.subunit = subregion.name;
       saveState();
       renderAll();
     })
@@ -2157,10 +2295,12 @@ function normalizeImportedPlace(raw) {
   const inferredCountry = Number.isFinite(lat) && Number.isFinite(lng) ? inferCountry(lng, lat) : null;
   const countryId = normalizeCountry(raw.country || inferredCountry?.id || "");
   const inferredRegion = Number.isFinite(lat) && Number.isFinite(lng) ? inferRegion(countryId, lng, lat) : null;
+  const inferredSubregion = Number.isFinite(lat) && Number.isFinite(lng) ? inferSubregion(countryId, lng, lat) : null;
   return {
     id: "",
     name: String(raw.name || "未命名地点").trim(),
     country: countryId,
+    subunit: String(raw.subunit || raw.county || raw.district || inferredSubregion?.name || "").trim(),
     unit: String(raw.unit || inferredRegion?.name || "导入图层").trim(),
     city: String(raw.city || "").trim(),
     type: String(raw.type || "导入地点").trim(),
@@ -2337,6 +2477,7 @@ loadState();
 renderLegend();
 preloadBoundaryData(false, ["country", "china", "us"]);
 if (state.boundaryLevel === "admin") loadBoundaryData("admin1");
+if (state.boundaryLevel === "subadmin") subadminBoundaryKeysToShow().forEach(loadBoundaryData);
 renderAll();
 showPage(location.hash.replace("#", "") || "world");
 
