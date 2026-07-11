@@ -15,21 +15,21 @@ const idbStore = "archives";
 const idbStateKey = "state";
 const worldCountryTotal = 195;
 const boundarySources = {
-  country: "data/countries.geojson",
+  country: "",
   china: "data/china-provinces.geojson",
   us: "data/us-states.geojson",
   japan: "",
-  admin1: "data/admin1.geojson",
+  admin1: "",
   china2: "data/china-prefectures.geojson",
   us2: "data/us-counties.geojson",
   ru2: "data/russia-subregions.geojson",
 };
 const boundaryFallbackSources = {
-  country: "https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson",
+  country: "",
   china: "https://geo.datav.aliyun.com/areas_v3/bound/100000_full.json",
   us: "https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json",
   japan: "",
-  admin1: "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_admin_1_states_provinces.geojson",
+  admin1: "",
   china2: "",
   us2: "",
   ru2: "",
@@ -50,6 +50,10 @@ let boundaryData = { country: null, china: null, us: null, japan: null, admin1: 
 let boundaryLoading = { country: false, china: false, us: false, japan: false, admin1: false, china2: false, us2: false, ru2: false };
 let boundaryPromises = {};
 let admin1DisplayCache = { source: null, collection: null };
+const countryBoundaryData = {};
+const countryBoundaryPromises = {};
+const admin1CountryData = {};
+const admin1CountryPromises = {};
 let mapDataVersion = 0;
 const mapGeoJsonCache = new Map();
 const mapLibreSourceDataRefs = new Map();
@@ -387,6 +391,77 @@ function loadBoundaryData(key) {
   return boundaryPromises[key];
 }
 
+function loadCountryBoundaryData(countryId) {
+  const id = normalizeCountry(countryId);
+  if (!id || id === "imported" || countryBoundaryData[id]) return Promise.resolve(countryBoundaryData[id] || null);
+  if (countryBoundaryPromises[id]) return countryBoundaryPromises[id];
+  countryBoundaryPromises[id] = fetchJson(`data/countries-by-id/${id}.geojson`)
+    .then((data) => {
+      countryBoundaryData[id] = normalizeFeatureCollection(data);
+      mapDataVersion += 1;
+      return countryBoundaryData[id];
+    })
+    .catch((error) => {
+      console.warn(`${id} 国家边界加载失败`, error);
+      countryBoundaryData[id] = { type: "FeatureCollection", features: [] };
+      return countryBoundaryData[id];
+    })
+    .finally(() => {
+      countryBoundaryPromises[id] = null;
+      renderAll();
+    });
+  return countryBoundaryPromises[id];
+}
+
+function loadAdmin1CountryData(countryId) {
+  const id = normalizeCountry(countryId);
+  if (!id || id === "imported" || admin1CountryData[id]) return Promise.resolve(admin1CountryData[id] || null);
+  if (admin1CountryPromises[id]) return admin1CountryPromises[id];
+  admin1CountryPromises[id] = fetchJson(`data/admin1-by-country/${id}.geojson`)
+    .then((data) => {
+      admin1CountryData[id] = normalizeFeatureCollection(data);
+      mapDataVersion += 1;
+      return admin1CountryData[id];
+    })
+    .catch((error) => {
+      console.warn(`${id} 一级行政区边界加载失败`, error);
+      admin1CountryData[id] = { type: "FeatureCollection", features: [] };
+      return admin1CountryData[id];
+    })
+    .finally(() => {
+      admin1CountryPromises[id] = null;
+      renderAll();
+    });
+  return admin1CountryPromises[id];
+}
+
+function preloadCountryBoundaries(countryIds) {
+  return Promise.all(Array.from(new Set(countryIds.map(normalizeCountry).filter((id) => id && id !== "imported"))).map(loadCountryBoundaryData));
+}
+
+function preloadAdmin1CountryBoundaries(countryIds) {
+  const specialCountries = new Set(["cn", "hk", "mo", "tw", "us", "jp"]);
+  return Promise.all(Array.from(new Set(countryIds.map(normalizeCountry).filter((id) => id && !specialCountries.has(id) && id !== "imported"))).map(loadAdmin1CountryData));
+}
+
+function refreshVisibleBoundaryData() {
+  const visitedCountryIds = Array.from(uniqueVisitedCountries());
+  visitedCountryIds.forEach((countryId) => {
+    delete countryBoundaryData[normalizeCountry(countryId)];
+    delete admin1CountryData[normalizeCountry(countryId)];
+  });
+  ["china", "us", "china2"].forEach((key) => {
+    boundaryData[key] = null;
+  });
+  admin1DisplayCache = { source: null, collection: null };
+  mapDataVersion += 1;
+  return Promise.all([
+    preloadBoundaryData(false, ["china", "us", "china2"]),
+    preloadCountryBoundaries(visitedCountryIds),
+    preloadAdmin1CountryBoundaries(visitedCountryIds),
+  ]);
+}
+
 function fetchBoundaryJson(primaryUrl, fallbackUrl = "") {
   return fetchJson(primaryUrl)
     .catch((primaryError) => {
@@ -505,12 +580,17 @@ function subadminNameFromFeature(feature) {
 }
 
 function admin1DisplayCollection() {
-  if (!boundaryData.admin1) return { type: "FeatureCollection", features: [] };
-  if (admin1DisplayCache.source === boundaryData.admin1 && admin1DisplayCache.collection) return admin1DisplayCache.collection;
+  const source = Object.entries(admin1CountryData)
+    .filter(([, collection]) => collection?.features?.length)
+    .map(([countryId, collection]) => `${countryId}:${collection.features.length}`)
+    .sort()
+    .join("|");
+  if (!source) return { type: "FeatureCollection", features: [] };
+  if (admin1DisplayCache.source === source && admin1DisplayCache.collection) return admin1DisplayCache.collection;
 
   const grouped = new Map();
   const passthrough = [];
-  boundaryData.admin1.features.forEach((feature) => {
+  Object.values(admin1CountryData).flatMap((collection) => collection.features || []).forEach((feature) => {
     const countryId = countryIdFromFeature(feature);
     const props = feature.properties || {};
     const regionName = String(props.region || props.region_name || "").trim();
@@ -541,7 +621,7 @@ function admin1DisplayCollection() {
   });
 
   admin1DisplayCache = {
-    source: boundaryData.admin1,
+    source,
     collection: { type: "FeatureCollection", features: [...passthrough, ...grouped.values()] },
   };
   return admin1DisplayCache.collection;
@@ -808,10 +888,8 @@ function ringContainsPoint(ring, lng, lat) {
 }
 
 function inferCountry(lng, lat) {
-  const feature = findFeatureAtPoint(boundaryData.country, lng, lat);
-  if (feature) {
-    const id = countryIdFromFeature(feature);
-    return id ? getCountry(id) : null;
+  for (const [countryId, collection] of Object.entries(countryBoundaryData)) {
+    if (findFeatureAtPoint(collection, lng, lat)) return getCountry(countryId);
   }
   return countries.find((country) => inBbox(lng, lat, country.bbox));
 }
@@ -1352,54 +1430,41 @@ function bboxToFeature(item, properties = {}) {
 }
 
 function countryGeoJson() {
-  if (boundaryData.country) {
-    const visited = uniqueVisitedCountries();
-    return {
-      type: "FeatureCollection",
-      features: boundaryData.country.features
-        .map((feature) => ({ feature, countryId: countryIdFromFeature(feature) }))
-        .filter(({ countryId }) => countryId && visited.has(countryId))
-        .map(({ feature, countryId }) => {
-          const country = getCountry(countryId);
-          return {
-            ...feature,
-            properties: { ...feature.properties, id: countryId, name: country.name, depth: bestDepthForCountry(countryId), kind: "country" },
-          };
-        }),
-    };
-  }
-
   return {
     type: "FeatureCollection",
-    features: getMapCountries()
-      .filter((country) => country.bbox && bestDepthForCountry(country.id) > 0)
-      .map((country) => {
-        const depth = bestDepthForCountry(country.id);
-        const custom = customBoundaryFor("country", country.id);
-        return custom ? { ...custom, properties: { ...custom.properties, id: country.id, name: country.name, depth, kind: "country" } } : null;
-      })
+    features: Array.from(uniqueVisitedCountries())
+      .map((countryId) => countryFeatureForId(countryId, { depth: bestDepthForCountry(countryId), kind: "country" }))
       .filter(Boolean),
   };
 }
 
 function adminCountryContextGeoJson(countriesWithDetail = null) {
-  if (!boundaryData.country) return { type: "FeatureCollection", features: [] };
   const adminKeys = new Set(adminBoundaryKeysToShow());
   const countriesWithAdmin = countriesWithDetail || new Set(Array.from(adminKeys).map(countryIdForRegionKey).filter(Boolean));
   const visited = uniqueVisitedCountries();
   return {
     type: "FeatureCollection",
-    features: boundaryData.country.features
-      .map((feature) => ({ feature, countryId: countryIdFromFeature(feature) }))
-      .filter(({ countryId }) => countryId && visited.has(countryId) && !countriesWithAdmin.has(countryId))
-      .map(({ feature, countryId }) => {
-        const country = getCountry(countryId);
-        return {
-          ...feature,
-          properties: { ...feature.properties, id: countryId, name: country.name, depth: 0, kind: "country-context" },
-        };
-      }),
+    features: Array.from(visited)
+      .filter((countryId) => countryId && !countriesWithAdmin.has(countryId))
+      .map((countryId) => countryFeatureForId(countryId, { depth: 0, kind: "country-context" }))
+      .filter(Boolean),
   };
+}
+
+function countryFeatureForId(countryId, properties = {}) {
+  const id = normalizeCountry(countryId);
+  const loaded = countryBoundaryData[id]?.features?.[0];
+  const country = getCountry(id);
+  if (loaded) {
+    return {
+      ...loaded,
+      properties: { ...loaded.properties, id, name: country.name, ...properties },
+    };
+  }
+  const custom = customBoundaryFor("country", id);
+  if (custom) return { ...custom, properties: { ...custom.properties, id, name: country.name, ...properties } };
+  if (country.bbox) return bboxToFeature(country, { id, name: country.name, ...properties });
+  return null;
 }
 
 function countryIdForRegionKey(key) {
@@ -1576,7 +1641,6 @@ function adminFeaturesForRegion(regionKey) {
 }
 
 function globalAdmin1GeoJson() {
-  if (!boundaryData.admin1) return { type: "FeatureCollection", features: [] };
   const specialCountries = new Set(["cn", "us", "jp"]);
   const features = admin1DisplayCollection().features.map((feature) => {
     const countryId = countryIdFromFeature(feature);
@@ -1785,13 +1849,17 @@ function cachedMapGeoJson(key, builder) {
 function renderMapLibreLayers() {
   if (!mapLibreMap || !mapLibreMap.isStyleLoaded()) return;
 
-  if (state.boundaryLevel === "country") loadBoundaryData("country");
+  const visitedCountryIds = Array.from(uniqueVisitedCountries());
+  if (state.boundaryLevel === "country") preloadCountryBoundaries(visitedCountryIds);
   if (state.boundaryLevel === "admin") {
     adminBoundaryKeysToShow().forEach(loadBoundaryData);
-    loadBoundaryData("admin1");
+    preloadCountryBoundaries(visitedCountryIds);
+    preloadAdmin1CountryBoundaries(visitedCountryIds);
   }
   if (state.boundaryLevel === "subadmin") {
     subadminBoundaryKeysToShow().forEach(loadBoundaryData);
+    preloadCountryBoundaries(visitedCountryIds);
+    preloadAdmin1CountryBoundaries(visitedCountryIds);
   }
 
   removeMapLibreLayer("visited-area-labels");
@@ -1823,7 +1891,6 @@ function renderMapLibreLayers() {
   }
 
   if (state.boundaryLevel === "admin") {
-    loadBoundaryData("country");
     setMapLibreSource("visited-regions", cachedMapGeoJson("regions", regionGeoJson));
     addMapLibreFillLayer("visited-regions", "visited-regions-fill", "visited-regions-line", 0.24, 1.4);
     setMapLibreSource("visited-region-group-outlines", cachedMapGeoJson("region-outlines", groupedRegionOutlineGeoJson));
@@ -1833,7 +1900,6 @@ function renderMapLibreLayers() {
   }
 
   if (state.boundaryLevel === "subadmin") {
-    loadBoundaryData("country");
     const countriesWithSubadmin = new Set(Object.keys(subadminConfigs).map(countryIdForSubadminKey));
     setMapLibreSource("admin-country-context", cachedMapGeoJson("subadmin-country-context", () => adminCountryContextGeoJson(countriesWithSubadmin)));
     addMapLibreFillLayer("admin-country-context", "admin-country-context-fill", "admin-country-context-line", 0.18, 1);
@@ -1967,13 +2033,17 @@ function removeMapLibreSource(id) {
 
 function renderLeafletLayers() {
   if (!leafletMap || !window.L) return;
-  if (state.boundaryLevel === "country") loadBoundaryData("country");
+  const visitedCountryIds = Array.from(uniqueVisitedCountries());
+  if (state.boundaryLevel === "country") preloadCountryBoundaries(visitedCountryIds);
   if (state.boundaryLevel === "admin") {
     adminBoundaryKeysToShow().forEach(loadBoundaryData);
-    loadBoundaryData("admin1");
+    preloadCountryBoundaries(visitedCountryIds);
+    preloadAdmin1CountryBoundaries(visitedCountryIds);
   }
   if (state.boundaryLevel === "subadmin") {
     subadminBoundaryKeysToShow().forEach(loadBoundaryData);
+    preloadCountryBoundaries(visitedCountryIds);
+    preloadAdmin1CountryBoundaries(visitedCountryIds);
   }
   if (leafletLayers) leafletLayers.remove();
   leafletLayers = L.layerGroup().addTo(leafletMap);
@@ -1989,7 +2059,6 @@ function renderLeafletLayers() {
   }
 
   if (state.boundaryLevel === "admin") {
-    loadBoundaryData("country");
     L.geoJSON(regionGeoJson(), {
       style: leafletBoundaryStyle,
       onEachFeature: (feature, layer) => {
@@ -2012,7 +2081,6 @@ function renderLeafletLayers() {
   }
 
   if (state.boundaryLevel === "subadmin") {
-    loadBoundaryData("country");
     const countriesWithSubadmin = new Set(Object.keys(subadminConfigs).map(countryIdForSubadminKey));
     L.geoJSON(adminCountryContextGeoJson(countriesWithSubadmin), {
       style: (feature) => ({ ...leafletBoundaryStyle(feature), fillOpacity: 0.18, weight: 1 }),
@@ -2720,7 +2788,7 @@ function importPlacesFromText(text, extension, fileName = `import.${extension}`,
   state.importedFiles.unshift({ id: importId, name: fileName, count: imported.length, format: extension.toUpperCase(), marked: depth > 0, ids: createdIds });
   saveState();
   renderAll();
-  preloadBoundaryData(false, ["country", "admin1", "china2"]).then(() => {
+  preloadBoundaryData(false, ["china2"]).then(() => {
     refreshInferredLocations();
     saveState();
     renderAll();
@@ -3089,7 +3157,7 @@ async function recalculateCoverage() {
     button.textContent = "计算中...";
   }
   try {
-    await preloadBoundaryData(false, ["country", "china", "us", "admin1", "china2"]);
+    await preloadBoundaryData(false, ["china", "us", "china2"]);
     refreshInferredLocations();
     recomputeCoverage();
     saveState();
@@ -3178,8 +3246,9 @@ moveMapLevelControlToToolbar();
 loadStateFromIndexedDb().finally(() => {
   renderLegend();
   rebuildCoverageFromSavedVisits();
-  preloadBoundaryData(false, ["country", "china", "us", "admin1", "china2"]);
-  if (state.boundaryLevel === "admin") loadBoundaryData("admin1");
+  preloadBoundaryData(false, ["china", "us", "china2"]);
+  preloadCountryBoundaries(Array.from(uniqueVisitedCountries()));
+  if (state.boundaryLevel === "admin") preloadAdmin1CountryBoundaries(Array.from(uniqueVisitedCountries()));
   if (state.boundaryLevel === "subadmin") subadminBoundaryKeysToShow().forEach(loadBoundaryData);
   renderAll();
   showPage(location.hash.replace("#", "") || "world");
@@ -3263,7 +3332,7 @@ $("#refreshBoundaries")?.addEventListener("click", () => {
   const button = $("#refreshBoundaries");
   button.disabled = true;
   button.textContent = "加载中";
-  preloadBoundaryData(true).finally(() => {
+  refreshVisibleBoundaryData().finally(() => {
     button.disabled = false;
     button.textContent = "重新加载边界";
     renderAll();
