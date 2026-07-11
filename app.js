@@ -606,6 +606,17 @@ function sameAdminName(left, right) {
   return cleanAdminName(left) === cleanAdminName(right);
 }
 
+function sameRegionName(regionKey, left, right) {
+  if (sameAdminName(left, right)) return true;
+  const leftAlias = adminNameAlias(regionKey, left);
+  const rightAlias = adminNameAlias(regionKey, right);
+  return Boolean(
+    (leftAlias && sameAdminName(leftAlias, right))
+    || (rightAlias && sameAdminName(left, rightAlias))
+    || (leftAlias && rightAlias && sameAdminName(leftAlias, rightAlias))
+  );
+}
+
 function adminUnitForFeature(regionKey, feature) {
   const name = adminNameFromFeature(feature);
   const canonicalName = canonicalAdminNameFromFeature(feature);
@@ -620,6 +631,49 @@ function adminUnitForFeature(regionKey, feature) {
 function adminNameAlias(regionKey, name) {
   const key = cleanAdminName(name);
   const aliases = {
+    china: {
+      beijing: "北京",
+      peking: "北京",
+      shanghai: "上海",
+      tianjin: "天津",
+      chongqing: "重庆",
+      hebei: "河北",
+      shanxi: "山西",
+      innermongolia: "内蒙古",
+      neimenggu: "内蒙古",
+      liaoning: "辽宁",
+      jilin: "吉林",
+      heilongjiang: "黑龙江",
+      shandong: "山东",
+      henan: "河南",
+      hubei: "湖北",
+      hunan: "湖南",
+      guangdong: "广东",
+      guangxi: "广西",
+      hainan: "海南",
+      shaanxi: "陕西",
+      shensi: "陕西",
+      gansu: "甘肃",
+      qinghai: "青海",
+      ningxia: "宁夏",
+      xinjiang: "新疆",
+      yunnan: "云南",
+      guizhou: "贵州",
+      sichuan: "四川",
+      anhui: "安徽",
+      fujian: "福建",
+      jiangxi: "江西",
+      zhejiang: "浙江",
+      jiangsu: "江苏",
+      tibet: "西藏",
+      xizang: "西藏",
+      taiwan: "台湾",
+      hongkong: "香港",
+      hongkongsar: "香港",
+      hk: "香港",
+      macao: "澳门",
+      macau: "澳门",
+    },
     japan: {
       hokkaido: "北海道",
       aomori: "青森县",
@@ -820,7 +874,7 @@ function coverageRegionNames(regionKey) {
 }
 
 function coverageHasRegion(regionKey, name) {
-  return coverageRegionNames(regionKey).some((item) => sameAdminName(item, name));
+  return coverageRegionNames(regionKey).some((item) => sameRegionName(regionKey, item, name));
 }
 
 function coverageSubregionNames(subadminKey) {
@@ -831,25 +885,61 @@ function coverageHasSubregion(subadminKey, name) {
   return coverageSubregionNames(subadminKey).some((item) => sameAdminName(item, name));
 }
 
-function recomputeCoverage() {
-  const countriesSeen = new Set();
-  const regions = {};
-  const subregions = {};
-  locatedVisitedPlaces().forEach((visit) => {
+function addUniqueAdminName(list, name, matcher = sameAdminName) {
+  if (!name) return;
+  if (!list.some((item) => matcher(item, name))) list.push(name);
+}
+
+function rebuildCoverageFromSavedVisits() {
+  const current = ensureCoverage();
+  const countriesSeen = new Set(current.countries || []);
+  const regions = Object.fromEntries(Object.entries(current.regions || {}).map(([key, names]) => [key, [...names]]));
+  const subregions = Object.fromEntries(Object.entries(current.subregions || {}).map(([key, names]) => [key, [...names]]));
+  visitedPlaces().forEach((visit) => {
+    if (visit.place.shapeOnly) return;
     const countryId = normalizeCountry(visit.place.country);
     if (countryId && countryId !== "imported") countriesSeen.add(countryId);
 
     const regionKey = regionKeyForCountry(countryId) || countryId;
     if (regionKey && visit.place.unit) {
       regions[regionKey] ||= [];
-      if (!regions[regionKey].some((name) => sameAdminName(name, visit.place.unit))) regions[regionKey].push(visit.place.unit);
+      addUniqueAdminName(regions[regionKey], visit.place.unit, (left, right) => sameRegionName(regionKey, left, right));
+    }
+
+    const subadminKey = subadminKeyForCountry(countryId);
+    if (subadminKey && visit.place.subunit) {
+      subregions[subadminKey] ||= [];
+      addUniqueAdminName(subregions[subadminKey], visit.place.subunit);
+    }
+  });
+  state.coverage = {
+    countries: Array.from(countriesSeen),
+    regions,
+    subregions,
+    updatedAt: new Date().toISOString(),
+  };
+}
+
+function recomputeCoverage() {
+  const countriesSeen = new Set();
+  const regions = {};
+  const subregions = {};
+  visitedPlaces().forEach((visit) => {
+    if (visit.place.shapeOnly) return;
+    const countryId = normalizeCountry(visit.place.country);
+    if (countryId && countryId !== "imported") countriesSeen.add(countryId);
+
+    const regionKey = regionKeyForCountry(countryId) || countryId;
+    if (regionKey && visit.place.unit) {
+      regions[regionKey] ||= [];
+      addUniqueAdminName(regions[regionKey], visit.place.unit, (left, right) => sameRegionName(regionKey, left, right));
     }
 
     const subadminKey = subadminKeyForCountry(countryId);
     const subunit = visit.place.subunit || "";
     if (subadminKey && subunit) {
       subregions[subadminKey] ||= [];
-      if (!subregions[subadminKey].some((name) => sameAdminName(name, subunit))) subregions[subadminKey].push(subunit);
+      addUniqueAdminName(subregions[subadminKey], subunit);
     }
   });
   state.coverage = {
@@ -868,12 +958,12 @@ function addCoverageForPlace(place) {
   const regionKey = regionKeyForCountry(countryId) || countryId;
   if (regionKey && place.unit) {
     coverage.regions[regionKey] ||= [];
-    if (!coverage.regions[regionKey].some((name) => sameAdminName(name, place.unit))) coverage.regions[regionKey].push(place.unit);
+    addUniqueAdminName(coverage.regions[regionKey], place.unit, (left, right) => sameRegionName(regionKey, left, right));
   }
   const subadminKey = subadminKeyForCountry(countryId);
   if (subadminKey && place.subunit) {
     coverage.subregions[subadminKey] ||= [];
-    if (!coverage.subregions[subadminKey].some((name) => sameAdminName(name, place.subunit))) coverage.subregions[subadminKey].push(place.subunit);
+    addUniqueAdminName(coverage.subregions[subadminKey], place.subunit);
   }
   coverage.updatedAt = new Date().toISOString();
 }
@@ -1032,13 +1122,35 @@ function applySavedPayload(saved) {
     };
   state.visits = (state.visits || []).map((visit) => ({ ...visit, depth: visit.depth > 0 ? 1 : 0 })).filter((visit) => visit.depth > 0);
   migrateImportedShapes();
+  sanitizeDataStore();
   return true;
 }
 
+function sanitizeDataStore() {
+  const knownPlaceIds = new Set(places.map((place) => place.id));
+  const visitMap = new Map();
+  (state.visits || []).forEach((visit) => {
+    if (!knownPlaceIds.has(visit.placeId) || visit.depth <= 0) return;
+    const key = `${visit.placeId}:${visit.tripId || "default"}`;
+    const current = visitMap.get(key);
+    if (!current || (visit.date || "") > (current.date || "")) {
+      visitMap.set(key, { ...visit, depth: 1, tripId: visit.tripId || "default", date: visit.date || "" });
+    }
+  });
+  state.visits = Array.from(visitMap.values());
+  state.importedFiles ||= [];
+  state.checklistMarks ||= [];
+  state.openChecklistGroups ||= [];
+  ensureCoverage();
+}
+
 function currentArchivePayload() {
+  sanitizeDataStore();
+  recomputeCoverage();
   return {
-    version: 1,
+    version: 2,
     exportedAt: new Date().toISOString(),
+    counts: dataCounts(),
     places,
     state,
   };
@@ -1061,20 +1173,7 @@ async function importArchiveFile(event) {
   const file = event.target.files?.[0];
   if (!file) return;
   try {
-    const payload = JSON.parse(await file.text());
-    if (!Array.isArray(payload.places) || !payload.state || !Array.isArray(payload.state.visits)) {
-      throw new Error("存档结构不正确");
-    }
-    places = payload.places;
-    state = {
-      ...state,
-      ...payload.state,
-      visits: payload.state.visits || [],
-      importedFiles: payload.state.importedFiles || [],
-      checklistMarks: payload.state.checklistMarks || [],
-      openChecklistGroups: payload.state.openChecklistGroups || [],
-    };
-    migrateImportedShapes();
+    restoreArchivePayload(JSON.parse(await file.text()));
     saveState();
     renderAll();
     showToast(`已恢复存档：${file.name}`);
@@ -1083,6 +1182,16 @@ async function importArchiveFile(event) {
   } finally {
     event.target.value = "";
   }
+}
+
+function isArchivePayload(payload) {
+  return Array.isArray(payload?.places) && payload?.state && Array.isArray(payload.state.visits);
+}
+
+function restoreArchivePayload(payload) {
+  if (!isArchivePayload(payload)) throw new Error("存档结构不正确");
+  applySavedPayload(payload);
+  recomputeCoverage();
 }
 
 function loadState() {
@@ -1489,9 +1598,12 @@ function renderLegend() {
 
 function renderMetrics() {
   const visited = visitedPlaces();
+  const chinaProvinceCount = countVisitedRegions("china");
+  const chinaPrefectureCount = countVisitedSubregions("china2");
   const metrics = [
     ["去过国家/地区", uniqueVisitedCountries().size],
-    ["中国省级行政区", `${countVisitedRegions("china")}/34`],
+    ["中国省级行政区", `${chinaProvinceCount}/34`],
+    ["中国地级尺度", `${chinaPrefectureCount}/${chinaPrefectureTotal()}`],
     ["美国州", `${countVisitedRegions("us")}/50`],
     ["世界遗产", visited.filter((v) => v.place.checklist.includes("世界遗产")).length],
     ["导入地点/Shape", places.filter((place) => place.imported).length],
@@ -1500,6 +1612,10 @@ function renderMetrics() {
 }
 
 function renderGeoMap() {
+  if (location.protocol === "file:") {
+    $("#leafletMap").innerHTML = `<div class="map-empty"><strong>请通过本地 HTTP 打开 Travel Map</strong><br>浏览器会拦截 file:// 页面读取 data/*.geojson，所以二级行政区和本地边界不会显示。请在项目目录运行本地服务后访问 http://localhost 对应地址。</div>`;
+    return;
+  }
   if (window.maplibregl) {
     renderMapLibreMap();
     return;
@@ -1675,7 +1791,6 @@ function renderMapLibreLayers() {
   setMapLibreSource("imported-paths", cachedMapGeoJson("imported-paths", importedPathGeoJson));
   addMapLibreImportedPathLayer("imported-paths", "imported-shapes-path-line", 3);
   bindMapLibreLayerHandlers();
-
   mapLibreMarkers.forEach((marker) => marker.remove());
   mapLibreMarkers = [];
   visitedPlaces()
@@ -2099,6 +2214,14 @@ function countVisitedRegions(regionKey) {
   return units.filter((unit) => coverageHasRegion(regionKey, unit.name)).length;
 }
 
+function countVisitedSubregions(subadminKey) {
+  return coverageSubregionNames(subadminKey).length;
+}
+
+function chinaPrefectureTotal() {
+  return boundaryData.china2?.features?.length || 337;
+}
+
 function visitInRegionBoundary(visit, regionKey, unitName) {
   const features = [
     ...(boundaryData[regionKey]?.features || []),
@@ -2126,6 +2249,7 @@ function renderRegionMap() {
 function renderCoverage() {
   const rows = [
     [regionSets.china.label, countVisitedRegions("china"), regionSets.china.total],
+    ["中国地级尺度", countVisitedSubregions("china2"), chinaPrefectureTotal()],
     [regionSets.us.label, countVisitedRegions("us"), regionSets.us.total],
     ["世界国家/地区", uniqueVisitedCountries().size, worldCountryTotal],
   ];
@@ -2142,26 +2266,103 @@ function renderImportSummary() {
     : `<p class="muted">还没有导入文件。导入后，地图点、国家/地区覆盖率、行政区覆盖率会自动刷新。</p>`;
 }
 
+function renderDataInventory() {
+  const target = $("#dataInventory");
+  if (!target) return;
+  const counts = dataCounts();
+  const imported = places.filter((place) => place.imported || place.importId || place.sourceFile);
+  const visited = visitedPlaces();
+  const rows = [
+    ["点亮记录 visits", counts.visits],
+    ["已点亮地点", counts.visitedPlaces],
+    ["导入点", counts.importedPoints],
+    ["导入路径/Shape", counts.importedShapes],
+    ["国家/地区", counts.countries],
+    ["中国一级行政区", `${counts.chinaRegions}/34`],
+    ["中国二级行政区", `${counts.chinaSubregions}/${chinaPrefectureTotal()}`],
+  ];
+  const importRows = imported.slice(0, 80).map((place) => `
+    <tr>
+      <td>${place.name}</td>
+      <td>${place.shapeOnly ? "路径/Shape" : "点"}</td>
+      <td>${getCountry(place.country).name}</td>
+      <td>${place.unit || ""}${place.subunit ? ` / ${place.subunit}` : ""}</td>
+      <td>${place.sourceFile || ""}</td>
+    </tr>`).join("");
+  const visitRows = visited.slice(0, 80).map((visit) => `
+    <tr>
+      <td>${visit.place.name}</td>
+      <td>${getCountry(visit.place.country).name}</td>
+      <td>${visit.place.unit || ""}${visit.place.subunit ? ` / ${visit.place.subunit}` : ""}</td>
+      <td>${visit.tripId || ""}</td>
+      <td>${visit.place.imported ? "导入" : visit.place.checklistOnly ? "成就" : visit.place.manualAdmin ? "手动行政区" : "内置"}</td>
+    </tr>`).join("");
+  target.innerHTML = `
+    <div class="inventory-metrics">${rows.map(([label, value]) => `<span><strong>${value}</strong><em>${label}</em></span>`).join("")}</div>
+    <details class="data-table-block" open>
+      <summary>已点亮数据（最多显示 80 条）</summary>
+      <table><thead><tr><th>名称</th><th>国家</th><th>行政区</th><th>来源</th><th>类型</th></tr></thead><tbody>${visitRows || `<tr><td colspan="5">暂无点亮数据</td></tr>`}</tbody></table>
+    </details>
+    <details class="data-table-block">
+      <summary>导入对象（最多显示 80 条）</summary>
+      <table><thead><tr><th>名称</th><th>类型</th><th>国家</th><th>行政区</th><th>文件</th></tr></thead><tbody>${importRows || `<tr><td colspan="5">暂无导入对象</td></tr>`}</tbody></table>
+    </details>`;
+}
+
 function renderAchievements() {
   const checklistHtml = Object.entries(checklistCatalog).map(([key, list]) => renderChecklistSection(key, list)).join("");
   const heritageStatsHtml = renderWorldHeritageCountryStats();
   const chinaCount = countVisitedRegions("china");
-  const chinaPercent = Math.round((chinaCount / regionSets.china.total) * 100);
+  const chinaTotal = regionSets.china.total;
+  const chinaPrefectureCount = countVisitedSubregions("china2");
+  const chinaPrefectureTotalValue = chinaPrefectureTotal();
+  const countryCount = uniqueVisitedCountries().size;
+  const heritageDone = checklistDoneCount("worldHeritage");
+  const china5aDone = checklistDoneCount("china5a");
+  const fiveMountainsDone = checklistDoneCount("fiveMountains");
   const achievements = [
-    [`中国省级 ${chinaPercent}%`, chinaCount >= 17, `${chinaCount}/${regionSets.china.total}`],
-    ["中国省级全收集", chinaCount >= regionSets.china.total, `${chinaCount}/${regionSets.china.total}`],
-    ["跨越多个国家/地区", uniqueVisitedCountries().size >= 3, `${uniqueVisitedCountries().size} 个国家/地区`],
-    ["世界遗产收藏家 Lv.1", checklistDoneCount("worldHeritage") >= 3, `${checklistDoneCount("worldHeritage")}/${checklistTotalCount("worldHeritage")}`],
-    ["五岳进度", checklistDoneCount("fiveMountains") >= 1, `${checklistDoneCount("fiveMountains")}/5`],
-    ["外部地图数据已接入", places.some((place) => place.imported), `${places.filter((place) => place.imported).length} 个导入对象`],
+    achievementModel("中国省级", chinaCount, chinaTotal, "行政区覆盖", chinaCount >= chinaTotal ? "全收集" : chinaCount >= 17 ? "超过半数" : "进行中"),
+    achievementModel("中国地级尺度", chinaPrefectureCount, chinaPrefectureTotalValue, "城市覆盖", chinaPrefectureCount >= 100 ? "百城达成" : "继续点亮"),
+    achievementModel("跨越国家/地区", countryCount, 20, "全球足迹", countryCount >= 20 ? "世界旅行者" : `${countryCount} 个国家/地区`),
+    achievementModel("世界遗产收藏家", heritageDone, checklistTotalCount("worldHeritage"), "主题清单", heritageDone >= 10 ? "Lv.2" : heritageDone >= 3 ? "Lv.1" : "未解锁"),
+    achievementModel("中国 5A 收藏家", china5aDone, checklistTotalCount("china5a"), "主题清单", china5aDone >= 50 ? "Lv.2" : china5aDone >= 10 ? "Lv.1" : "进行中"),
+    achievementModel("五岳进度", fiveMountainsDone, 5, "山岳主题", fiveMountainsDone >= 5 ? "五岳完成" : "进行中"),
   ];
-  const achievementHtml = achievements.map(([name, done, progress]) => `
-    <article class="achievement ${done ? "done" : "locked"}">
-      <header><strong>${name}</strong><span>${done ? "已解锁" : "进行中"}</span></header>
-      <strong class="achievement-value">${progress}</strong>
-      <div class="bar"><i style="width:${done ? 100 : 38}%"></i></div>
+  const achievementHtml = achievements.map((item) => `
+    <article class="achievement ${item.done ? "done" : "locked"}">
+      <div class="achievement-ring" style="--progress:${item.percent}">
+        <strong>${item.percent}%</strong>
+      </div>
+      <div class="achievement-body">
+        <header><strong>${item.name}</strong><span>${item.done ? "已解锁" : item.level}</span></header>
+        <p>${item.category}</p>
+        <strong class="achievement-value">${item.doneCount}/${item.total}</strong>
+        <div class="bar"><i style="width:${item.percent}%"></i></div>
+      </div>
     </article>`).join("");
-  $("#achievementList").innerHTML = `${achievementHtml}<div class="theme-checklists">${checklistHtml}${heritageStatsHtml}</div>`;
+  $("#achievementList").innerHTML = `
+    <details class="achievement-group" open>
+      <summary>核心成就</summary>
+      <div class="achievement-card-grid">${achievementHtml}</div>
+    </details>
+    <details class="achievement-group">
+      <summary>主题清单</summary>
+      <div class="theme-checklists">${checklistHtml}${heritageStatsHtml}</div>
+    </details>`;
+}
+
+function achievementModel(name, doneCount, total, category, level) {
+  const safeTotal = Math.max(Number(total) || 1, 1);
+  const percent = Math.min(100, Math.round((doneCount / safeTotal) * 100));
+  return {
+    name,
+    doneCount,
+    total: safeTotal,
+    category,
+    level,
+    percent,
+    done: doneCount >= safeTotal,
+  };
 }
 
 function renderWorldHeritageCountryStats() {
@@ -2404,6 +2605,16 @@ async function handleImport(event) {
   try {
     const text = await file.text();
     const extension = file.name.split(".").pop().toLowerCase();
+    if (extension === "json") {
+      const maybeArchive = JSON.parse(text);
+      if (isArchivePayload(maybeArchive)) {
+        restoreArchivePayload(maybeArchive);
+        saveState();
+        renderAll();
+        showToast(`已恢复存档：${file.name}`);
+        return;
+      }
+    }
     const imported = importPlacesFromText(text, extension, file.name, Number($("#importDepth").value));
     showToast(`已导入 ${imported.length} 个地点/shape，并自动点亮相应地区`);
   } catch (error) {
@@ -2464,15 +2675,52 @@ function deleteImportedBatch(importId, index) {
 }
 
 function deleteAllImportedData() {
-  const ids = new Set(places.filter((place) => place.imported).map((place) => place.id));
+  const ids = new Set();
+  places.forEach((place) => {
+    if (place.imported || place.importId || place.sourceFile) ids.add(place.id);
+  });
+  state.importedFiles.forEach((file) => (file.ids || []).forEach((id) => ids.add(id)));
   state.visits = state.visits.filter((visit) => !ids.has(visit.placeId));
   places = places.filter((place) => !ids.has(place.id));
   state.importedFiles = [];
+  sanitizeDataStore();
   closeMapPopupsAndDetail();
   recomputeCoverage();
   saveState();
   renderAll();
   showToast("导入数据已全部删除");
+}
+
+function clearAllUserData() {
+  places = places.filter((place) => !place.imported && !place.checklistOnly && !place.manualAdmin);
+  state.visits = [];
+  state.importedFiles = [];
+  state.checklistMarks = [];
+  state.openChecklistGroups = [];
+  state.coverage = { countries: [], regions: {}, subregions: {}, updatedAt: new Date().toISOString() };
+  state.focusPlaceId = places[0]?.id || "";
+  closeMapPopupsAndDetail();
+  saveState();
+  renderAll();
+  showToast("所有点亮、导入和成就勾选已清空");
+}
+
+function dataCounts() {
+  const imported = places.filter((place) => place.imported || place.importId || place.sourceFile);
+  const importedShapes = imported.filter((place) => place.shapeOnly);
+  const importedPoints = imported.filter((place) => !place.shapeOnly);
+  const visitedIds = new Set(state.visits.map((visit) => visit.placeId));
+  return {
+    places: places.length,
+    visits: state.visits.length,
+    visitedPlaces: visitedIds.size,
+    importedObjects: imported.length,
+    importedPoints: importedPoints.length,
+    importedShapes: importedShapes.length,
+    countries: uniqueVisitedCountries().size,
+    chinaRegions: countVisitedRegions("china"),
+    chinaSubregions: countVisitedSubregions("china2"),
+  };
 }
 
 function parseImportFile(text, extension) {
@@ -2484,7 +2732,9 @@ function parseImportFile(text, extension) {
 
 function parseGeoJson(text) {
   const data = JSON.parse(text);
-  const features = data.type === "FeatureCollection" ? data.features : [data];
+  if (isArchivePayload(data)) throw new Error("这是 Travel Map 存档，请使用“导入存档”或直接在导入入口恢复");
+  const features = data.type === "FeatureCollection" ? data.features : data.type === "Feature" ? [data] : [];
+  if (!features.length) throw new Error("JSON 不是 GeoJSON FeatureCollection/Feature");
   return features.map((feature, index) => {
     const props = feature.properties || {};
     const coordinate = geometryCenter(feature.geometry);
@@ -2774,9 +3024,8 @@ function renderAll() {
   renderPlaceSelect();
   renderMetrics();
   if (isMapPageActive()) renderGeoMap();
-  renderRegionMap();
-  renderCoverage();
   renderImportSummary();
+  renderDataInventory();
   renderAchievements();
   renderNextStops();
 }
@@ -2844,6 +3093,7 @@ loadState();
 moveMapLevelControlToToolbar();
 loadStateFromIndexedDb().finally(() => {
   renderLegend();
+  rebuildCoverageFromSavedVisits();
   preloadBoundaryData(false, ["country", "china", "us", "admin1", "china2"]);
   if (state.boundaryLevel === "admin") loadBoundaryData("admin1");
   if (state.boundaryLevel === "subadmin") subadminBoundaryKeysToShow().forEach(loadBoundaryData);
@@ -2862,6 +3112,9 @@ $("#quickAddForm").addEventListener("submit", addVisit);
 $("#importFile").addEventListener("change", handleImport);
 $("#exportArchive").addEventListener("click", exportArchive);
 $("#archiveFile").addEventListener("change", importArchiveFile);
+$("#clearAllData")?.addEventListener("click", () => {
+  if (window.confirm("确认清空所有点亮、导入、手动行政区和成就勾选？内置清单会保留。")) clearAllUserData();
+});
 $("#recalculateCoverage")?.addEventListener("click", recalculateCoverage);
 $("#importSummary").addEventListener("click", (event) => {
   if (event.target.closest("[data-delete-all-imports]")) {
@@ -2875,7 +3128,7 @@ $("#importSummary").addEventListener("click", (event) => {
 $("#boundaryLevel").addEventListener("change", (event) => {
   state.boundaryLevel = event.target.value;
   saveState();
-  renderGeoMap();
+  renderAll();
 });
 $("#achievementList").addEventListener("click", (event) => {
   const button = event.target.closest("[data-checklist]");

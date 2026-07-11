@@ -543,8 +543,35 @@ button:hover {
 }
 
 .achievement-list {
+  grid-template-columns: 1fr;
+  align-items: stretch;
+}
+
+.achievement-card-grid {
+  display: grid;
+  gap: 12px;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   align-items: start;
+}
+
+.achievement-group {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.achievement-group summary {
+  padding: 13px 14px;
+  cursor: pointer;
+  font-weight: 900;
+  background: #f8fbf9;
+  border-bottom: 1px solid var(--line);
+}
+
+.achievement-group > .achievement-card-grid,
+.achievement-group > .theme-checklists {
+  padding: 12px;
 }
 
 .bar-row {
@@ -585,6 +612,10 @@ button:hover {
 
 .achievement {
   min-height: 128px;
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
   background: linear-gradient(180deg, #ffffff, #f2f7f4);
 }
 
@@ -675,6 +706,70 @@ button:hover {
   min-width: 220px;
 }
 
+.danger-action {
+  background: #8f2f20;
+}
+
+.data-inventory {
+  display: grid;
+  gap: 14px;
+}
+
+.inventory-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px;
+}
+
+.inventory-metrics span {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8fbf9;
+}
+
+.inventory-metrics strong {
+  font-size: 22px;
+  color: var(--deep);
+}
+
+.inventory-metrics em {
+  font-style: normal;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.data-table-block {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  overflow: auto;
+}
+
+.data-table-block summary {
+  padding: 11px 12px;
+  cursor: pointer;
+  font-weight: 900;
+  background: #f8fbf9;
+}
+
+.data-table-block table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+}
+
+.data-table-block th,
+.data-table-block td {
+  padding: 9px 10px;
+  border-top: 1px solid var(--line);
+  text-align: left;
+  font-size: 13px;
+}
+
 .small {
   font-size: 13px;
   line-height: 1.6;
@@ -752,6 +847,35 @@ button:hover {
   color: var(--deep);
   font-size: 24px;
   line-height: 1;
+}
+
+.achievement-ring {
+  --progress: 0;
+  width: 70px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at center, #ffffff 0 55%, transparent 57%),
+    conic-gradient(var(--green) calc(var(--progress) * 1%), #e1e7e2 0);
+  border: 1px solid var(--line);
+}
+
+.achievement-ring strong {
+  font-size: 16px;
+  color: var(--deep);
+}
+
+.achievement-body {
+  min-width: 0;
+}
+
+.achievement-body p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
 }
 
 .theme-checklists {
