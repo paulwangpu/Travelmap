@@ -50,6 +50,9 @@ let boundaryData = { country: null, china: null, us: null, japan: null, admin1: 
 let boundaryLoading = { country: false, china: false, us: false, japan: false, admin1: false, china2: false, us2: false, ru2: false };
 let boundaryPromises = {};
 let admin1DisplayCache = { source: null, collection: null };
+let mapDataVersion = 0;
+const mapGeoJsonCache = new Map();
+const mapLibreSourceDataRefs = new Map();
 const admin1RegionGroupCountries = new Set(["fr", "it"]);
 const subadminConfigs = {
   china2: { countryId: "cn", label: "China prefecture-level units" },
@@ -364,6 +367,7 @@ function loadBoundaryData(key) {
     .then((data) => {
       boundaryData[key] = normalizeFeatureCollection(data);
       if (key === "admin1") admin1DisplayCache = { source: null, collection: null };
+      mapDataVersion += 1;
       return boundaryData[key];
     })
     .catch((error) => {
@@ -953,6 +957,7 @@ function ensureMapDetailCloseButton() {
 }
 
 function saveState() {
+  mapDataVersion += 1;
   const payload = { places, state, savedAt: new Date().toISOString() };
   try {
     localStorage.setItem(storageKey, JSON.stringify(payload));
@@ -1218,10 +1223,10 @@ function countryGeoJson() {
   };
 }
 
-function adminCountryContextGeoJson() {
+function adminCountryContextGeoJson(countriesWithDetail = null) {
   if (!boundaryData.country) return { type: "FeatureCollection", features: [] };
   const adminKeys = new Set(adminBoundaryKeysToShow());
-  const countriesWithAdmin = new Set(Array.from(adminKeys).map(countryIdForRegionKey).filter(Boolean));
+  const countriesWithAdmin = countriesWithDetail || new Set(Array.from(adminKeys).map(countryIdForRegionKey).filter(Boolean));
   const visited = uniqueVisitedCountries();
   return {
     type: "FeatureCollection",
@@ -1588,8 +1593,22 @@ function renderMapLibreMap() {
 
 function setMapLibreSource(id, data) {
   const source = mapLibreMap.getSource(id);
-  if (source) source.setData(data);
-  else mapLibreMap.addSource(id, { type: "geojson", data });
+  if (source) {
+    if (mapLibreSourceDataRefs.get(id) !== data) source.setData(data);
+  } else {
+    mapLibreMap.addSource(id, { type: "geojson", data });
+  }
+  mapLibreSourceDataRefs.set(id, data);
+}
+
+function cachedMapGeoJson(key, builder) {
+  const cacheKey = `${key}:${mapDataVersion}`;
+  const cached = mapGeoJsonCache.get(cacheKey);
+  if (cached) return cached;
+  const data = builder();
+  mapGeoJsonCache.set(cacheKey, data);
+  if (mapGeoJsonCache.size > 24) mapGeoJsonCache.clear();
+  return data;
 }
 
 function renderMapLibreLayers() {
@@ -1628,28 +1647,32 @@ function renderMapLibreLayers() {
   removeMapLibreSource("visited-countries");
 
   if (state.boundaryLevel === "country") {
-    setMapLibreSource("visited-countries", countryGeoJson());
+    setMapLibreSource("visited-countries", cachedMapGeoJson("countries", countryGeoJson));
     addMapLibreFillLayer("visited-countries", "visited-countries-fill", "visited-countries-line", 0.2, 1.15);
   }
 
   if (state.boundaryLevel === "admin") {
     loadBoundaryData("country");
-    setMapLibreSource("visited-regions", regionGeoJson());
+    setMapLibreSource("visited-regions", cachedMapGeoJson("regions", regionGeoJson));
     addMapLibreFillLayer("visited-regions", "visited-regions-fill", "visited-regions-line", 0.24, 1.4);
-    setMapLibreSource("visited-region-group-outlines", groupedRegionOutlineGeoJson());
+    setMapLibreSource("visited-region-group-outlines", cachedMapGeoJson("region-outlines", groupedRegionOutlineGeoJson));
     addMapLibreLineLayer("visited-region-group-outlines", "visited-region-group-outlines-line", 1.55);
-    setMapLibreSource("admin-country-context", adminCountryContextGeoJson());
+    setMapLibreSource("admin-country-context", cachedMapGeoJson("admin-country-context", adminCountryContextGeoJson));
     addMapLibreFillLayer("admin-country-context", "admin-country-context-fill", "admin-country-context-line", 0.18, 1);
   }
 
   if (state.boundaryLevel === "subadmin") {
-    setMapLibreSource("visited-subadmin", subadminGeoJson());
+    loadBoundaryData("country");
+    const countriesWithSubadmin = new Set(Object.keys(subadminConfigs).map(countryIdForSubadminKey));
+    setMapLibreSource("admin-country-context", cachedMapGeoJson("subadmin-country-context", () => adminCountryContextGeoJson(countriesWithSubadmin)));
+    addMapLibreFillLayer("admin-country-context", "admin-country-context-fill", "admin-country-context-line", 0.18, 1);
+    setMapLibreSource("visited-subadmin", cachedMapGeoJson("subadmin", subadminGeoJson));
     addMapLibreFillLayer("visited-subadmin", "visited-subadmin-fill", "visited-subadmin-line", 0.24, 1.2);
   }
 
-  setMapLibreSource("imported-shapes", importedPolygonGeoJson());
+  setMapLibreSource("imported-shapes", cachedMapGeoJson("imported-polygons", importedPolygonGeoJson));
   addMapLibreFillLayer("imported-shapes", "imported-shapes-fill", "imported-shapes-line", 0.24, 1.5, true);
-  setMapLibreSource("imported-paths", importedPathGeoJson());
+  setMapLibreSource("imported-paths", cachedMapGeoJson("imported-paths", importedPathGeoJson));
   addMapLibreImportedPathLayer("imported-paths", "imported-shapes-path-line", 3);
   bindMapLibreLayerHandlers();
 
@@ -1765,7 +1788,9 @@ function removeMapLibreLayer(id) {
 }
 
 function removeMapLibreSource(id) {
-  if (mapLibreMap.getSource(id)) mapLibreMap.removeSource(id);
+  // Keep parsed GeoJSON sources around so level switching does not force MapLibre
+  // to re-ingest large local files such as the global admin1 boundary set.
+  void id;
 }
 
 function renderLeafletLayers() {
@@ -1815,6 +1840,14 @@ function renderLeafletLayers() {
   }
 
   if (state.boundaryLevel === "subadmin") {
+    loadBoundaryData("country");
+    const countriesWithSubadmin = new Set(Object.keys(subadminConfigs).map(countryIdForSubadminKey));
+    L.geoJSON(adminCountryContextGeoJson(countriesWithSubadmin), {
+      style: (feature) => ({ ...leafletBoundaryStyle(feature), fillOpacity: 0.18, weight: 1 }),
+      onEachFeature: (feature, layer) => {
+        layer.bindTooltip(feature.properties.name, { sticky: true });
+      },
+    }).addTo(leafletLayers);
     L.geoJSON(subadminGeoJson(), {
       style: leafletBoundaryStyle,
       onEachFeature: (feature, layer) => {
@@ -2811,7 +2844,7 @@ loadState();
 moveMapLevelControlToToolbar();
 loadStateFromIndexedDb().finally(() => {
   renderLegend();
-  preloadBoundaryData(false, ["country", "china", "us"]);
+  preloadBoundaryData(false, ["country", "china", "us", "admin1", "china2"]);
   if (state.boundaryLevel === "admin") loadBoundaryData("admin1");
   if (state.boundaryLevel === "subadmin") subadminBoundaryKeysToShow().forEach(loadBoundaryData);
   renderAll();
