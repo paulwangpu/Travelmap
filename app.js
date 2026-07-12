@@ -36,11 +36,6 @@ const boundaryFallbackSources = {
   us2: "",
   ru2: "",
 };
-const catalogSources = {
-  china5a: "https://zh.wikipedia.org/w/api.php?action=parse&page=%E5%9B%BD%E5%AE%B65A%E7%BA%A7%E6%97%85%E6%B8%B8%E6%99%AF%E5%8C%BA&prop=text&format=json&origin=*",
-  worldHeritageCountries: "https://en.wikipedia.org/api/rest_v1/page/html/World_Heritage_Sites_by_country",
-};
-
 let leafletMap = null;
 let leafletLayers = null;
 let mapLibreMap = null;
@@ -48,7 +43,7 @@ let mapLibreMarkers = [];
 let mapLibreLayerHandlersBound = { admin: false, subadmin: false };
 let leafletDidInitialFit = false;
 let catalogDataRequested = false;
-let china5aCatalogStatus = { source: "内置清单", detail: "本地固定版本", total: 0 };
+let china5aCatalogStatus = { source: "本地清单", detail: "不会联网检查更新", total: 0 };
 let boundaryData = { country: null, china: null, us: null, japan: null, admin1: null, china2: null, tw2: null, us2: null, ru2: null };
 let boundaryLoading = { country: false, china: false, us: false, japan: false, admin1: false, china2: false, tw2: false, us2: false, ru2: false };
 let boundaryPromises = {};
@@ -455,7 +450,6 @@ let state = {
   checklistMarks: [],
   openChecklistGroups: [],
   coverage: { countries: [], regions: {}, subregions: {} },
-  worldHeritageStats: [],
   selectedRegionView: "china",
   boundaryLevel: "country",
   mapOverlays: { china5a: false, worldHeritage: false },
@@ -1554,117 +1548,6 @@ function loadCatalogData() {
   renderAchievements();
 }
 
-function updateChina5aCatalog() {
-  setLoadingDebug("更新中国5A清单", "pending");
-  china5aCatalogStatus = { source: "在线更新中", detail: "正在读取 Wikipedia 5A 页面", total: checklistTotalCount("china5a") };
-  renderAchievements();
-  fetch(catalogSources.china5a)
-    .then((response) => response.ok ? response.json() : Promise.reject(new Error(`${response.status}`)))
-    .then((payload) => {
-      const html = payload?.parse?.text?.["*"] || "";
-      const byRegion = parseChina5aByRegionFromHtml(html);
-      const total = Object.values(byRegion).flat().length;
-      if (total >= 250) {
-        checklistCatalog.china5a.byRegion = byRegion;
-        checklistCatalog.china5a.items = Object.values(byRegion).flat();
-        china5aCatalogStatus = { source: "在线更新", detail: "已通过严格表格解析更新", total };
-        setLoadingDebug(`更新中国5A清单 ${total}条`, "done");
-        renderAchievements();
-      } else {
-        china5aCatalogStatus = { source: "本地候选目录", detail: `在线解析不足 250 条，已保留本地候选目录`, total: checklistTotalCount("china5a") };
-        setLoadingDebug("更新中国5A清单", "error");
-        renderAchievements();
-      }
-      clearLoadingDebugSoon();
-    })
-    .catch((error) => {
-      console.warn("5A catalog update failed; keeping built-in catalog", error);
-      china5aCatalogStatus = { source: "本地候选目录", detail: `在线更新失败：${error.message}`, total: checklistTotalCount("china5a") };
-      setLoadingDebug("更新中国5A清单", "error");
-      renderAchievements();
-      clearLoadingDebugSoon();
-    });
-}
-
-function parseChina5aFromHtml(html) {
-  const doc = new DOMParser().parseFromString(html, "text/html");
-  const names = new Set(checklistCatalog.china5a.items);
-  doc.querySelectorAll("table tr").forEach((row) => {
-    const cells = Array.from(row.querySelectorAll("td, th")).map((cell) => cell.textContent.trim().replace(/\[[^\]]+\]/g, ""));
-    cells.forEach((cell) => {
-      const cleaned = cell.replace(/\s+/g, "").replace(/（.*?）|\(.*?\)/g, "");
-      if (cleaned.length >= 2 && cleaned.length <= 28 && /景区|旅游区|风景区|度假区|古城|故居|公园|山|湖|寺|陵|窟|宫|园|城|岛|瀑布|草原|遗址/.test(cleaned)) {
-        names.add(cleaned);
-      }
-    });
-  });
-  return Array.from(names).sort((a, b) => a.localeCompare(b, "zh-Hans-CN"));
-}
-
-function parseChina5aByRegionFromHtml(html) {
-  const doc = new DOMParser().parseFromString(html, "text/html");
-  const byRegion = {};
-  let currentRegion = "";
-  doc.querySelectorAll("table tr").forEach((row) => {
-    const cells = Array.from(row.querySelectorAll("td, th")).map((cell) => cleanChina5aCell(cell.textContent));
-    if (!cells.length || cells.some((cell) => /景区名称|景點名稱|省级行政区|批次/.test(cell))) return;
-    const region = cells.map(normalizeChinaProvinceName).find(Boolean);
-    if (region) currentRegion = region;
-    if (!currentRegion) return;
-    const candidates = cells
-      .map(cleanChina5aName)
-      .filter((cell) => isLikelyChina5aName(cell) && !normalizeChinaProvinceName(cell));
-    const name = candidates[candidates.length - 1];
-    if (!name) return;
-    byRegion[currentRegion] ||= [];
-    if (!byRegion[currentRegion].some((item) => canonicalPlaceKey(item) === canonicalPlaceKey(name))) byRegion[currentRegion].push(name);
-  });
-  Object.keys(byRegion).forEach((region) => byRegion[region].sort((a, b) => a.localeCompare(b, "zh-Hans-CN")));
-  return Object.fromEntries(Object.entries(byRegion).sort(([left], [right]) => left.localeCompare(right, "zh-Hans-CN")));
-}
-
-function cleanChina5aCell(value) {
-  return String(value || "")
-    .replace(/\[[^\]]+\]/g, "")
-    .replace(/\s+/g, "")
-    .trim();
-}
-
-function cleanChina5aName(value) {
-  return cleanChina5aCell(value)
-    .replace(/（.*?）/g, "")
-    .replace(/\(.*?\)/g, "")
-    .replace(/国家5A级旅游景区/g, "")
-    .replace(/国家级旅游景区/g, "");
-}
-
-function normalizeChinaProvinceName(value) {
-  const text = cleanChina5aCell(value);
-  if (chinaProvinceAliases[text]) return chinaProvinceAliases[text];
-  const direct = Object.values(chinaProvinceAliases).find((name) => name === text);
-  return direct || "";
-}
-
-function isLikelyChina5aName(value) {
-  const text = cleanChina5aName(value);
-  if (text.length < 2 || text.length > 32) return false;
-  if (/^\d+$|第.+批|20\d{2}年|取消|摘牌|恢复|复核|备注|名单|数量|合计|总计/.test(text)) return false;
-  if (/省|市|区|县|自治州|地区|盟|特别行政区$/.test(text) && text.length <= 8) return false;
-  return /景区|旅游区|风景区|度假区|公园|博物|古城|古镇|古村|故居|纪念|山|湖|河|江|峡|谷|洞|寺|庙|宫|院|陵|园|湾|岛|滩|瀑布|草原|遗址|长城|石窟|大佛|土楼|丹霞|湿地|温泉|森林|乐园|街|城|楼|阁|塔|祠|府|泉|潭|关|寨|村/.test(text);
-}
-
-function parseWorldHeritageStatsFromHtml(html) {
-  const doc = new DOMParser().parseFromString(html, "text/html");
-  const rows = [];
-  doc.querySelectorAll("table tr").forEach((row) => {
-    const cells = Array.from(row.querySelectorAll("td, th")).map((cell) => cell.textContent.trim().replace(/\[[^\]]+\]/g, ""));
-    const country = cells[0];
-    const total = cells.map((cell) => Number(cell.replace(/[^\d]/g, ""))).find((num) => Number.isFinite(num) && num > 0);
-    if (country && total && country.length < 40 && !/country|state party/i.test(country)) rows.push({ country, total });
-  });
-  return rows.slice(0, 220);
-}
-
 function getMapCountries() {
   const dynamicCountries = Array.from(new Set(places.map((place) => place.country)))
     .filter((countryId) => countryId && !countries.some((country) => country.id === countryId))
@@ -1860,6 +1743,40 @@ function importedPolygonGeoJson() {
     features: importedShapeGeoJson().features
       .filter((feature) => ["Polygon", "MultiPolygon"].includes(feature.geometry?.type)),
   };
+}
+
+function totalImportedPathLengthKm() {
+  return importedPathGeoJson().features.reduce((total, feature) => total + geometryLineLengthKm(feature.geometry), 0);
+}
+
+function geometryLineLengthKm(geometry) {
+  if (!geometry) return 0;
+  if (geometry.type === "LineString") return lineLengthKm(geometry.coordinates);
+  if (geometry.type === "MultiLineString") return geometry.coordinates.reduce((total, line) => total + lineLengthKm(line), 0);
+  return 0;
+}
+
+function lineLengthKm(coordinates) {
+  if (!Array.isArray(coordinates) || coordinates.length < 2) return 0;
+  let total = 0;
+  for (let index = 1; index < coordinates.length; index += 1) {
+    total += haversineKm(coordinates[index - 1], coordinates[index]);
+  }
+  return total;
+}
+
+function haversineKm(left, right) {
+  if (!Array.isArray(left) || !Array.isArray(right)) return 0;
+  const [lng1, lat1] = left.map(Number);
+  const [lng2, lat2] = right.map(Number);
+  if (![lng1, lat1, lng2, lat2].every(Number.isFinite)) return 0;
+  const radiusKm = 6371;
+  const toRad = (value) => value * Math.PI / 180;
+  const dLat = toRad(lat2 - lat1);
+  const dLng = toRad(lng2 - lng1);
+  const a = Math.sin(dLat / 2) ** 2
+    + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLng / 2) ** 2;
+  return radiusKm * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
 function bboxCenter(bbox) {
@@ -2086,16 +2003,15 @@ function renderLegend() {
 }
 
 function renderMetrics() {
-  const visited = visitedPlaces();
-  const chinaProvinceCount = countVisitedRegions("china");
-  const chinaPrefectureCount = countVisitedSubregions("china2");
+  const visitedPointCount = visitedPlaces().filter((visit) => !visit.place.shapeOnly && !visit.place.manualAdmin).length;
+  const importedPointCount = places.filter((place) => place.imported && !place.shapeOnly).length;
+  const importedShapeCount = places.filter((place) => place.shapeOnly).length;
+  const pathLength = totalImportedPathLengthKm();
   const metrics = [
-    ["去过国家/地区", uniqueVisitedCountries().size],
-    ["中国省级行政区", `${chinaProvinceCount}/34`],
-    ["中国地级尺度", `${chinaPrefectureCount}/${chinaPrefectureTotal()}`],
-    ["美国州", `${countVisitedRegions("us")}/50`],
-    ["世界遗产", visited.filter((v) => v.place.checklist.includes("世界遗产")).length],
-    ["导入地点/Shape", places.filter((place) => place.imported).length],
+    ["总打卡地点", visitedPointCount],
+    ["导入地点", importedPointCount],
+    ["导入路径/Shape", importedShapeCount],
+    ["路径长度", pathLength ? `${Math.round(pathLength).toLocaleString("zh-CN")} km` : "0 km"],
   ];
   $("#metrics").innerHTML = metrics.map(([label, value]) => `<article class="metric"><strong>${value}</strong><span>${label}</span></article>`).join("");
 }
@@ -3041,8 +2957,8 @@ function renderImportSummary() {
   $("#importSummary").insertAdjacentHTML("beforeend", `
     <article class="check-item">
       <header><strong>非导入点亮</strong><span>${nonImportedVisits.length} 个点</span></header>
-      <p class="muted">这些通常来自手动点亮行政区、点击 5A/国家公园等成就清单，不会被“删除导入”清掉。</p>
-      <button class="text-action" data-clear-checkins="1" type="button">清除点亮/成就点</button>
+      <p class="muted">这些通常来自手动点亮行政区、点击 5A/国家公园等打卡清单，不会被“删除导入”清掉。</p>
+      <button class="text-action" data-clear-checkins="1" type="button">清除点亮/打卡点</button>
     </article>`);
 }
 
@@ -3076,7 +2992,7 @@ function renderDataInventory() {
       <td>${getCountry(visit.place.country).name}</td>
       <td>${visit.place.unit || ""}${visit.place.subunit ? ` / ${visit.place.subunit}` : ""}</td>
       <td>${visit.tripId || ""}</td>
-      <td>${visit.place.imported ? "导入" : visit.place.checklistOnly ? "成就" : visit.place.manualAdmin ? "手动行政区" : "候选地点"}</td>
+      <td>${visit.place.imported ? "导入" : visit.place.checklistOnly ? "打卡" : visit.place.manualAdmin ? "手动行政区" : "候选地点"}</td>
     </tr>`).join("");
   target.innerHTML = `
     <div class="inventory-metrics">${rows.map(([label, value]) => `<span><strong>${value}</strong><em>${label}</em></span>`).join("")}</div>
@@ -3098,21 +3014,86 @@ function renderAchievements() {
     .filter(([key]) => !["china5a", "worldHeritage", "fiveMountains"].includes(key))
     .map(([key, list]) => renderChecklistSection(key, list))
     .join("");
+  $("#achievementList").innerHTML = `
+    <details class="achievement-group" open>
+      <summary>中国 5A 景区</summary>
+      ${china5aHtml}
+    </details>
+    <details class="achievement-group" open>
+      <summary>世界遗产（按国家）</summary>
+      ${worldHeritageHtml}
+    </details>
+    <details class="achievement-group">
+      <summary>其他参考清单</summary>
+      <div class="theme-checklists">${checklistHtml}</div>
+    </details>`;
+}
+
+function renderDashboardAchievements() {
+  const target = $("#dashboardAchievements");
+  if (!target) return;
+  const achievements = coreAchievementModels();
+  target.innerHTML = `
+    <div class="section-head dashboard-achievement-head">
+      <div>
+        <p class="eyebrow">Core Check-ins</p>
+        <h3>核心打卡等级</h3>
+      </div>
+      <a class="tag" href="#achievements">查看清单</a>
+    </div>
+    <div class="achievement-card-grid">${achievements.map(renderAchievementCard).join("")}</div>`;
+}
+
+function coreAchievementModels() {
   const chinaCount = countVisitedRegions("china");
   const chinaTotal = regionSets.china.total;
   const chinaPrefectureCount = countVisitedSubregions("china2");
   const chinaPrefectureTotalValue = chinaPrefectureTotal();
   const countryCount = uniqueVisitedCountries().size;
   const china5aDone = checklistDoneCount("china5a");
-  const heritageDone = checklistDoneCount("worldHeritage");
-  const achievements = [
-    achievementModel("世界国家探索", countryCount, worldCountryTotal, "全球足迹", countryCount >= 50 ? "Lv.3" : countryCount >= 20 ? "Lv.2" : countryCount >= 5 ? "Lv.1" : "进行中"),
-    achievementModel("中国省级覆盖", chinaCount, chinaTotal, "行政区覆盖", chinaCount >= chinaTotal ? "全收集" : chinaCount >= 17 ? "超过半数" : "进行中"),
-    achievementModel("中国地级尺度覆盖", chinaPrefectureCount, chinaPrefectureTotalValue, "城市覆盖", chinaPrefectureCount >= 100 ? "百城达成" : "继续点亮"),
-    achievementModel("中国 5A 景区收藏", china5aDone, 100, "阶段目标", china5aDone >= 100 ? "满级" : china5aDone >= 50 ? "Lv.2" : china5aDone >= 10 ? "Lv.1" : "进行中"),
-    achievementModel("世界遗产收藏", heritageDone, 50, "阶段目标", heritageDone >= 50 ? "满级" : heritageDone >= 20 ? "Lv.2" : heritageDone >= 5 ? "Lv.1" : "进行中"),
+  const chinaHeritageItems = chinaWorldHeritageItems();
+  const chinaHeritageDone = checklistDoneCountForItems("worldHeritage", chinaHeritageItems);
+  return [
+    achievementModel("世界足迹", countryCount, worldCountryTotal, "去过的国家/地区", [
+      ["世界初见", 2],
+      ["跨境旅人", 5],
+      ["十国足迹", 10],
+      ["世界行者", 20],
+      ["全球探索家", 50],
+    ]),
+    achievementModel("中国版图", chinaCount, chinaTotal, "中国省/自治区/直辖市/港澳台", [
+      ["山河初见", 1],
+      ["四方初识", 4],
+      ["十省初成", 10],
+      ["二十省纵横", 20],
+      ["华夏遍行", 34],
+    ]),
+    achievementModel("城市足迹", chinaPrefectureCount, chinaPrefectureTotalValue, "中国地级市/自治州/地区等", [
+      ["一城启程", 1],
+      ["十城足迹", 10],
+      ["五十城行者", 50],
+      ["百城行者", 100],
+      ["三百城纵横", 300],
+    ]),
+    achievementModel("5A 景区", china5aDone, checklistTotalCount("china5a"), "打卡景区", [
+      ["5A 初见", 1],
+      ["5A 入门", 5],
+      ["名胜巡礼", 20],
+      ["百景行者", 100],
+      ["山河典藏家", 200],
+    ]),
+    achievementModel("世界遗产", chinaHeritageDone, chinaHeritageItems.length, "只统计中国世界遗产", [
+      ["遗产初见", 1],
+      ["遗产收藏家", 5],
+      ["遗产巡礼者", 15],
+      ["遗产深游者", 30],
+      ["华夏遗产大师", 50],
+      ]),
   ];
-  const achievementHtml = achievements.map((item) => `
+}
+
+function renderAchievementCard(item) {
+  return `
     <article class="achievement ${item.done ? "done" : "locked"}">
       <div class="achievement-ring" style="--progress:${item.percent}">
         <strong>${item.percent}%</strong>
@@ -3122,25 +3103,17 @@ function renderAchievements() {
         <p>${item.category}</p>
         <strong class="achievement-value">${item.doneCount}/${item.total}</strong>
         <div class="bar"><i style="width:${item.percent}%"></i></div>
+        ${renderAchievementLevels(item)}
       </div>
-    </article>`).join("");
-  $("#achievementList").innerHTML = `
-    <details class="achievement-group" open>
-      <summary>核心成就</summary>
-      <div class="achievement-card-grid">${achievementHtml}</div>
-    </details>
-    <details class="achievement-group" open>
-      <summary>中国 5A 景区</summary>
-      ${china5aHtml}
-    </details>
-    <details class="achievement-group" open>
-      <summary>世界遗产</summary>
-      ${worldHeritageHtml}
-    </details>
-    <details class="achievement-group">
-      <summary>其他参考清单</summary>
-      <div class="theme-checklists">${checklistHtml}</div>
-    </details>`;
+    </article>`;
+}
+
+function renderAchievementLevels(item) {
+  return `<ol class="achievement-levels">
+    ${item.levels.map((level) => `<li class="${level.active ? "active" : ""} ${level.reached ? "reached" : ""}">
+      <strong>${level.name}</strong><span>${level.targetText}</span>
+    </li>`).join("")}
+  </ol>`;
 }
 
 function renderChina5aSection() {
@@ -3191,29 +3164,37 @@ function chinaCapitalDoneCount() {
   return chinaProvincialCapitals.filter((capital) => coverageHasSubregion("china2", capital)).length;
 }
 
-function achievementModel(name, doneCount, total, category, level) {
+function achievementModel(name, doneCount, total, category, levels) {
   const safeTotal = Math.max(Number(total) || 1, 1);
   const percent = Math.min(100, Math.round((doneCount / safeTotal) * 100));
+  const normalizedLevels = levels.map(([levelName, target]) => ({
+    name: levelName,
+    target,
+    targetText: `去过 ${target} 个`,
+    reached: doneCount >= target,
+    active: false,
+  }));
+  const reachedLevels = normalizedLevels.filter((item) => item.reached);
+  const activeLevel = reachedLevels.at(-1) || normalizedLevels.find((item) => !item.reached) || normalizedLevels.at(-1);
+  if (activeLevel) activeLevel.active = true;
   return {
     name,
     doneCount,
     total: safeTotal,
     category,
-    level,
+    level: reachedLevels.at(-1)?.name || "进行中",
+    levels: normalizedLevels,
     percent,
     done: doneCount >= safeTotal,
   };
 }
 
-function renderWorldHeritageCountryStats() {
-  const stats = state.worldHeritageStats || [];
-  if (!stats.length) return "";
-  return `<section class="theme-checklist">
-    <header><strong>全球世界遗产按国家统计</strong><span>${stats.length} 个国家/地区</span></header>
-    <div class="country-stat-grid">
-      ${stats.map((row) => `<span class="country-stat"><strong>${row.country}</strong><em>${row.total}</em></span>`).join("")}
-    </div>
-  </section>`;
+function chinaWorldHeritageItems() {
+  return checklistCatalog.worldHeritage.byCountry?.中国 || [];
+}
+
+function checklistDoneCountForItems(key, items) {
+  return items.filter((item) => isChecklistItemDone(key, item)).length;
 }
 
 function renderChecklistSection(key, list) {
@@ -3320,7 +3301,8 @@ function rememberChecklistGroupForElement(element) {
 function toggleChecklistItem(key, item) {
   const id = checklistId(key, item);
   const marks = new Set(state.checklistMarks || []);
-  if (isChecklistItemDone(key, item)) {
+  const wasDone = isChecklistItemDone(key, item);
+  if (wasDone) {
     Array.from(marks).forEach((mark) => {
       if (mark.endsWith(`:${canonicalPlaceKey(item)}`)) marks.delete(mark);
     });
@@ -3330,9 +3312,31 @@ function toggleChecklistItem(key, item) {
     const place = ensureChecklistPlace(key, item);
   }
   state.checklistMarks = Array.from(marks);
+  rebuildCoverageFromSavedVisits();
   saveState();
-  renderAfterCheckinChange();
+  renderAfterChecklistChange(key, item);
   if (document.querySelector('[data-page="imports"]')?.classList.contains("active")) renderDataInventory();
+}
+
+function renderAfterChecklistChange(key, item) {
+  updateChecklistButtonsForItem(key, item);
+  renderMetrics();
+  renderDashboardAchievements();
+  renderNextStops();
+  if (document.querySelector('[data-page="checkins"]')?.classList.contains("active")) renderCheckinsPage();
+  if (isMapPageActive()) scheduleGeoMapRender();
+}
+
+function updateChecklistButtonsForItem(key, item) {
+  const done = isChecklistItemDone(key, item);
+  const canonical = canonicalPlaceKey(item);
+  document.querySelectorAll(`[data-checklist="${key}"], [data-checklist-map="${key}"]`).forEach((button) => {
+    const buttonItem = button.dataset.item || "";
+    if (canonicalPlaceKey(buttonItem) !== canonical) return;
+    button.classList.toggle("done", done);
+    button.textContent = done ? `已去 · ${buttonItem}` : buttonItem;
+    if (button.dataset.checklistMap) button.textContent = done ? "取消去过" : "标记去过";
+  });
 }
 
 function ensureChecklistPlace(key, item) {
@@ -3392,29 +3396,6 @@ function cleanChecklistName(value) {
   return String(value || "").replace(/景区|旅游区|风景区|国家公园|历史城区/g, "").trim();
 }
 
-function geocodeChecklistPlace(placeId, item) {
-  if (!placeId) return;
-  const url = `https://nominatim.openstreetmap.org/search?format=json&limit=1&q=${encodeURIComponent(`${item} 中国`)}`;
-  fetch(url)
-    .then((response) => response.ok ? response.json() : Promise.reject(new Error(`${response.status}`)))
-    .then((results) => {
-      const first = results?.[0];
-      const place = getPlace(placeId);
-      if (!first || !place) return;
-      place.lat = Number(first.lat);
-      place.lng = Number(first.lon);
-      const country = inferCountry(place.lng, place.lat);
-      if (country?.id) place.country = country.id;
-      const region = inferRegion(place.country, place.lng, place.lat);
-      if (region?.name) place.unit = region.name;
-      const subregion = inferSubregion(place.country, place.lng, place.lat);
-      if (subregion?.name) place.subunit = subregion.name;
-      saveState();
-      renderAll();
-    })
-    .catch((error) => console.warn(`${item} 坐标查询失败`, error));
-}
-
 function removeChecklistOnlyPlace(key, item) {
   const listLabel = checklistCatalog[key].label;
   const place = places.find((candidate) => candidate.checklistOnly && sameAdminName(candidate.name, item) && candidate.checklist?.includes(listLabel));
@@ -3438,6 +3419,7 @@ function renderNextStops() {
     ["手动点亮国家/地区", `还有 ${countryMissing} 个国家/地区未点亮。可以先从常去国家开始补。`, "点亮", "#checkins"],
     ["补中国省级", missingChina.length ? `中国省级还差：${missingChina.slice(0, 6).join("、")}${missingChina.length > 6 ? "…" : ""}` : "中国省级已完成。", "点亮", "#checkins"],
     ["补中国地级市", `中国地级尺度还差约 ${cityMissing} 个。适合按省逐步补。`, "点亮", "#checkins"],
+    ["打卡 5A / 中国遗产", "在清单里勾选后，会同步到地图点和核心打卡等级。", "打卡", "#achievements"],
     ["导入地点/路径文件", "已有 GeoJSON、KML 或 CSV 时，可以导入并自动更新点亮结果。", "导入", "#imports"],
   ];
   $("#nextStops").innerHTML = recommendations.map(([title, body, goal, href]) => `
@@ -3549,7 +3531,7 @@ function clearAllUserData() {
   invalidateMapCaches();
   saveState();
   renderAll();
-  showToast("所有点亮、导入和成就勾选已清空");
+  showToast("所有点亮、导入和打卡勾选已清空");
 }
 
 function clearCheckinsAndAchievementPoints() {
@@ -3564,7 +3546,7 @@ function clearCheckinsAndAchievementPoints() {
   invalidateMapCaches();
   saveState();
   renderAll();
-  showToast("点亮和成就点已清除，导入文件保留");
+  showToast("点亮和打卡点已清除，导入文件保留");
 }
 
 function dataCounts() {
@@ -3899,6 +3881,7 @@ function renderAll() {
   renderMapControls();
   renderPlaceSelect();
   renderMetrics();
+  renderDashboardAchievements();
   if (isMapPageActive()) renderGeoMap();
   renderImportSummary();
   renderCheckinsPage();
@@ -3912,6 +3895,7 @@ function renderAfterCheckinChange() {
   pendingCheckinRender = window.requestAnimationFrame(() => {
     pendingCheckinRender = null;
     renderMetrics();
+    renderDashboardAchievements();
     renderNextStops();
     if (document.querySelector('[data-page="checkins"]')?.classList.contains("active")) renderCheckinsPage();
     if (document.querySelector('[data-page="achievements"]')?.classList.contains("active")) renderAchievements();
@@ -3993,6 +3977,7 @@ moveMapLevelControlToToolbar();
 renderMapControls();
 renderLegend();
 renderMetrics();
+renderDashboardAchievements();
 renderNextStops();
 showPage(location.hash.replace("#", "") || "world");
 ensureBoundaryDataForLevel(state.boundaryLevel || "country");
@@ -4019,12 +4004,12 @@ $("#importFile").addEventListener("change", handleImport);
 $("#exportArchive").addEventListener("click", exportArchive);
 $("#archiveFile").addEventListener("change", importArchiveFile);
 $("#clearAllData")?.addEventListener("click", () => {
-  if (window.confirm("确认清空所有点亮、导入、手动行政区和成就勾选？")) clearAllUserData();
+  if (window.confirm("确认清空所有点亮、导入、手动行政区和打卡勾选？")) clearAllUserData();
 });
 $("#recalculateCoverage")?.addEventListener("click", recalculateCoverage);
 $("#importSummary").addEventListener("click", (event) => {
   if (event.target.closest("[data-clear-checkins]")) {
-    if (window.confirm("确认清除所有点亮、成就勾选和手动行政区？导入文件和路径会保留。")) clearCheckinsAndAchievementPoints();
+    if (window.confirm("确认清除所有点亮、打卡勾选和手动行政区？导入文件和路径会保留。")) clearCheckinsAndAchievementPoints();
     return;
   }
   if (event.target.closest("[data-delete-all-imports]")) {

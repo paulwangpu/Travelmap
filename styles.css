@@ -609,6 +609,14 @@ button:hover {
   align-items: stretch;
 }
 
+.dashboard-achievements {
+  margin-bottom: 16px;
+}
+
+.dashboard-achievement-head {
+  margin-bottom: 10px;
+}
+
 .achievement-card-grid {
   display: grid;
   gap: 12px;
@@ -672,13 +680,76 @@ button:hover {
   background: var(--soft);
 }
 
+.next-list {
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 8px;
+}
+
+.next-card {
+  padding: 10px;
+}
+
+.next-card header {
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.next-card p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
 .achievement {
   min-height: 128px;
   display: grid;
   grid-template-columns: 76px minmax(0, 1fr);
   gap: 14px;
-  align-items: center;
+  align-items: start;
   background: linear-gradient(180deg, #ffffff, #f2f7f4);
+}
+
+.achievement-body {
+  min-width: 0;
+}
+
+.achievement-levels {
+  display: grid;
+  gap: 6px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.achievement-levels li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 6px 8px;
+  border: 1px solid #dbe7de;
+  border-radius: 8px;
+  background: #f8fbf9;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.achievement-levels li.reached {
+  color: var(--deep);
+  background: #eef7f0;
+}
+
+.achievement-levels li.active {
+  border-color: #d9480f;
+  box-shadow: inset 3px 0 0 #d9480f;
+}
+
+.achievement-levels strong {
+  color: inherit;
+}
+
+.achievement-levels span {
+  white-space: nowrap;
 }
 
 .trip-card header,

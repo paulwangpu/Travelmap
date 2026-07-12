@@ -6,7 +6,7 @@
     <title>我的全球旅行地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
-    <link rel="stylesheet" href="styles.css?v=10" />
+    <link rel="stylesheet" href="styles.css?v=11" />
   </head>
   <body>
     <div class="app-shell map-first-shell">
@@ -22,8 +22,8 @@
           <a href="#world" class="active">地图</a>
           <a href="#dashboard">总览</a>
           <a href="#checkins">点亮</a>
+          <a href="#achievements">打卡</a>
           <a href="#imports">导入</a>
-          <a href="#achievements">成就</a>
         </nav>
         <div class="privacy-note">
           <span>隐私</span>
@@ -95,9 +95,10 @@
             <h2>旅行统计总览</h2>
           </header>
           <section class="metrics-grid compact-metrics" aria-label="核心统计" id="metrics"></section>
+          <section class="achievement-list dashboard-achievements" id="dashboardAchievements" aria-label="核心打卡"></section>
           <div class="panel">
             <p class="eyebrow">Next Stops</p>
-            <h3>下一步</h3>
+            <h3>下一步打卡导航</h3>
             <div class="next-list" id="nextStops"></div>
           </div>
         </section>
@@ -180,7 +181,7 @@
                 <input id="archiveFile" type="file" accept=".json,application/json" />
               </label>
             </div>
-            <p class="muted small">点亮地点、导入对象、成就勾选和展开状态都会保存到存档文件。恢复存档会覆盖当前浏览器里的旅行数据。</p>
+            <p class="muted small">点亮地点、导入对象、打卡勾选和展开状态都会保存到存档文件。恢复存档会覆盖当前浏览器里的旅行数据。</p>
           </div>
           <div class="panel">
             <div class="section-head">
@@ -195,8 +196,8 @@
 
         <section class="app-page content-page" id="achievements" data-page="achievements">
           <div class="panel" id="achievementsPanel">
-            <p class="eyebrow">Achievements</p>
-            <h3>成就</h3>
+            <p class="eyebrow">Checklists</p>
+            <h3>打卡</h3>
             <div class="achievement-list" id="achievementList"></div>
           </div>
         </section>
@@ -206,6 +207,6 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-    <script src="app.js?v=66"></script>
+    <script src="app.js?v=67"></script>
   </body>
 </html>
