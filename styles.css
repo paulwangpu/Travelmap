@@ -112,6 +112,34 @@ select {
   background: rgba(255, 255, 255, 0.12);
 }
 
+.map-overlay-toggles {
+  pointer-events: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.map-overlay-toggles label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.map-overlay-toggles input {
+  margin: 0;
+}
+
 .privacy-note {
   margin-top: auto;
   border: 1px solid rgba(255, 255, 255, 0.16);
@@ -331,6 +359,40 @@ button:hover {
   appearance: none;
   box-shadow: 0 0 0 2px #ffffff, 0 4px 12px rgba(0, 0, 0, 0.38);
   cursor: pointer;
+}
+
+.maplibre-marker.checklist-marker {
+  width: 7px;
+  height: 7px;
+  border: 1px solid rgba(17, 24, 39, 0.45);
+  box-shadow: 0 1px 4px rgba(17, 24, 39, 0.28);
+  opacity: 0.86;
+}
+
+.maplibre-marker.checklist-china5a {
+  background: #218a78 !important;
+  border-color: rgba(11, 83, 72, 0.58);
+}
+
+.maplibre-marker.checklist-worldHeritage {
+  background: #276db6 !important;
+  border-color: rgba(22, 73, 128, 0.62);
+}
+
+.maplibre-marker.checklist-china5a.done {
+  background: #0f5f51 !important;
+}
+
+.maplibre-marker.checklist-worldHeritage.done {
+  background: #164f91 !important;
+}
+
+.maplibre-marker.checklist-marker.done {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #111827;
+  box-shadow: 0 0 0 2px #ffffff, 0 4px 12px rgba(0, 0, 0, 0.38);
+  opacity: 1;
 }
 
 .geo-map svg {
@@ -884,6 +946,56 @@ button:hover {
   grid-column: 1 / -1;
 }
 
+.checklist-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.checklist-nav a {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 7px 10px;
+  background: #f7faf8;
+  color: var(--deep);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.checklist-health {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.checklist-health span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px 8px;
+  background: #f8faf8;
+}
+
+.china5a-checklist {
+  gap: 12px;
+}
+
+.china5a-refresh {
+  width: fit-content;
+}
+
+.china5a-province summary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #fff;
+}
+
 .theme-checklist {
   display: grid;
   gap: 10px;
@@ -891,6 +1003,105 @@ button:hover {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #ffffff;
+}
+
+.manual-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 8px;
+}
+
+.manual-grid.dense {
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+}
+
+.manual-country-groups,
+#manualChinaCityList {
+  display: grid;
+  gap: 10px;
+}
+
+.manual-group {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 10px;
+}
+
+.manual-group summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.manual-group summary span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.manual-group .manual-grid {
+  margin-top: 10px;
+}
+
+.manual-list {
+  display: grid;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.manual-list .manual-chip {
+  width: 100%;
+  min-height: 34px;
+  padding: 7px 9px;
+  border-radius: 6px;
+}
+
+.manual-city-group {
+  padding: 8px 10px;
+}
+
+.manual-chip {
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 42px;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--ink);
+}
+
+.manual-chip strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.manual-chip span {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.manual-chip.done {
+  border-color: #8cb69a;
+  background: #f1fbf4;
+}
+
+.manual-chip:disabled {
+  cursor: default;
+  opacity: 0.82;
+}
+
+.theme-checklist summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  font-weight: 900;
 }
 
 .featured-checklist {
@@ -1016,15 +1227,43 @@ button:hover {
 @media (max-width: 1100px) {
   .app-shell {
     grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(0, 1fr);
   }
 
   .sidebar {
-    position: static;
+    position: sticky;
+    top: 0;
+    z-index: 20;
     height: auto;
+    max-height: 42vh;
+    padding: 12px 14px;
+    gap: 12px;
   }
 
   .nav {
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+
+  .nav a {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding: 9px 11px;
+  }
+
+  .privacy-note {
+    display: none;
+  }
+
+  .brand-mark {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brand h1 {
+    font-size: 17px;
   }
 
   .hero,
@@ -1039,6 +1278,11 @@ button:hover {
 }
 
 @media (max-width: 680px) {
+  html,
+  body {
+    overflow: hidden;
+  }
+
   main {
     padding: 14px;
   }
@@ -1048,9 +1292,21 @@ button:hover {
   }
 
   .form-row.two,
-  .metrics-grid,
-  .nav {
+  .metrics-grid {
     grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    max-height: none;
+  }
+
+  .map-first-main {
+    height: calc(100vh - 86px);
+  }
+
+  .map-toolbar {
+    align-items: flex-start;
+    gap: 10px;
   }
 
   .world-map {
@@ -1084,23 +1340,24 @@ button:hover {
   padding: 0;
   gap: 0;
   background: #f4f7f4;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .app-page {
-  display: none;
+  display: none !important;
   height: 0;
   overflow: hidden;
 }
 
 .app-page.active {
-  display: block;
+  display: block !important;
+  height: 100%;
   min-height: 100%;
-  overflow: visible;
+  overflow: auto;
 }
 
 .map-app.app-page.active {
-  display: grid;
+  display: grid !important;
   height: 100%;
   min-height: 100%;
 }
@@ -1215,6 +1472,39 @@ button:hover {
   align-items: flex-start;
   justify-content: flex-end;
   pointer-events: none;
+}
+
+.loading-debug {
+  position: absolute;
+  z-index: 8;
+  left: 14px;
+  bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: min(720px, calc(100% - 28px));
+  padding: 9px 11px;
+  border: 1px solid rgba(17, 24, 39, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--ink);
+  box-shadow: 0 10px 28px rgba(17, 24, 39, 0.12);
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.loading-debug strong {
+  font-weight: 900;
+}
+
+.loading-debug span {
+  color: var(--muted);
+}
+
+.loading-debug em {
+  margin-left: auto;
+  color: var(--muted);
+  font-style: normal;
 }
 
 .map-surface-head:empty {
