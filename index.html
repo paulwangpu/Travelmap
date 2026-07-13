@@ -6,29 +6,33 @@
     <title>我的全球旅行地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
-    <link rel="stylesheet" href="styles.css?v=11" />
+    <link rel="stylesheet" href="styles.css?v=14" />
   </head>
   <body>
     <div class="app-shell map-first-shell">
       <aside class="sidebar">
         <div class="brand">
-          <div class="brand-mark">TM</div>
+          <div class="brand-mark"><img src="logo/apple.png" alt="拓界足迹" /></div>
           <div>
-            <h1>Travel Map</h1>
-            <p>个人地理数据库</p>
+            <h1 data-i18n="appName">拓界足迹</h1>
+            <p data-i18n="appSubtitle">个人地理数据库</p>
           </div>
         </div>
         <nav class="nav">
-          <a href="#world" class="active">地图</a>
-          <a href="#dashboard">总览</a>
-          <a href="#checkins">点亮</a>
-          <a href="#achievements">打卡</a>
-          <a href="#imports">导入</a>
+          <a href="#world" class="active" data-i18n="navMap">地图</a>
+          <a href="#dashboard" data-i18n="navDashboard">总览</a>
+          <a href="#checkins" data-i18n="navLight">点亮</a>
+          <a href="#achievements" data-i18n="navChecklist">打卡</a>
+          <a href="#imports" data-i18n="navImport">导入</a>
         </nav>
+        <div class="language-switch" aria-label="语言">
+          <button type="button" data-language="zh" class="active">中文</button>
+          <button type="button" data-language="en">English</button>
+        </div>
         <div class="privacy-note">
-          <span>隐私</span>
-          <strong>本地保存</strong>
-          <p>不会自动公开精确地点；分享导出时再选择展示范围。</p>
+          <span data-i18n="privacyEyebrow">隐私</span>
+          <strong data-i18n="privacyTitle">本地保存</strong>
+          <p data-i18n="privacyText">不会自动公开精确地点；分享导出时再选择展示范围。</p>
         </div>
       </aside>
 
@@ -36,83 +40,88 @@
         <section class="map-app app-page active" id="world" data-page="world">
           <header class="map-toolbar">
             <div>
-              <p class="eyebrow">OpenStreetMap + MapLibre + GeoJSON</p>
-              <h2>我的全球旅行地图</h2>
+              <p class="eyebrow" data-i18n="mapEyebrow">开源底图 + MapLibre + 本地边界</p>
+              <h2 data-i18n="mapTitle">我的全球旅行地图</h2>
             </div>
+
+            <section class="map-control-panel" aria-label="地图显示">
+              <label class="map-level-control">
+                <span data-i18n="mapLevel">显示层级</span>
+                <select id="boundaryLevel">
+                  <option value="country" data-i18n="levelCountry">国家</option>
+                  <option value="admin" data-i18n="levelAdmin">省级</option>
+                  <option value="subadmin" data-i18n="levelCity">市级（仅中国）</option>
+                </select>
+              </label>
+              <div class="map-overlay-toggles">
+                <label><input id="showCheckinsOnMap" type="checkbox" checked /> <span data-i18n="overlayCheckins">我的打卡</span></label>
+                <label><input id="showTracksOnMap" type="checkbox" checked /> <span data-i18n="overlayTracks">我的足迹</span></label>
+                <label><input id="showChina5aOnMap" type="checkbox" /> <span data-i18n="overlay5a">5A 景区</span></label>
+                <label><input id="showWorldHeritageOnMap" type="checkbox" /> <span data-i18n="overlayHeritage">世界遗产</span></label>
+              </div>
+            </section>
 
             <form class="quick-add compact-add" id="quickAddForm">
               <label>
-                地点
+                <span data-i18n="fieldPlace">地点</span>
                 <select name="placeId" id="placeSelect"></select>
               </label>
               <label>
-                状态
+                <span data-i18n="fieldStatus">状态</span>
                 <select name="depth">
-                  <option value="1" selected>去过</option>
+                  <option value="1" selected data-i18n="visited">去过</option>
                 </select>
               </label>
               <label>
-                日期
+                <span data-i18n="fieldDate">日期</span>
                 <input name="tripDate" type="date" />
               </label>
               <input name="tripName" type="hidden" />
-              <button type="submit">点亮</button>
+              <button type="submit" data-i18n="lightUp">点亮</button>
             </form>
           </header>
 
           <section class="map-canvas-row">
             <div class="map-surface">
               <div class="map-surface-head">
-                <label class="map-level-control">
-                  显示层级
-                  <select id="boundaryLevel">
-                    <option value="country">国家</option>
-                    <option value="admin">省级</option>
-                    <option value="subadmin">市级（仅中国）</option>
-                  </select>
-                </label>
                 <div class="legend" id="legend"></div>
-                <div class="map-overlay-toggles">
-                  <label><input id="showChina5aOnMap" type="checkbox" /> 5A</label>
-                  <label><input id="showWorldHeritageOnMap" type="checkbox" /> 中国遗产</label>
-                </div>
               </div>
               <div class="loading-debug" id="loadingDebug" hidden></div>
               <div class="leaflet-map" id="leafletMap"></div>
             </div>
 
             <aside class="map-drawer hidden" id="mapDetail">
-              <p class="eyebrow">Selection</p>
-              <h3>地图详情</h3>
-              <p class="muted">点击地图上的点、国家或行政区查看证据。</p>
+              <p class="eyebrow" data-i18n="selectionEyebrow">选择对象</p>
+              <h3 data-i18n="mapDetailTitle">地图详情</h3>
+              <p class="muted" data-i18n="mapDetailHelp">点击地图上的点、国家或行政区查看证据。</p>
             </aside>
           </section>
         </section>
 
         <section class="app-page content-page" id="dashboard" data-page="dashboard">
           <header class="page-head">
-            <p class="eyebrow">Dashboard</p>
-            <h2>旅行统计总览</h2>
+            <p class="eyebrow" data-i18n="dashboardEyebrow">总览</p>
+            <h2 data-i18n="dashboardTitle">旅行统计总览</h2>
           </header>
           <section class="metrics-grid compact-metrics" aria-label="核心统计" id="metrics"></section>
           <section class="achievement-list dashboard-achievements" id="dashboardAchievements" aria-label="核心打卡"></section>
           <div class="panel">
-            <p class="eyebrow">Next Stops</p>
-            <h3>下一步打卡导航</h3>
+            <p class="eyebrow" data-i18n="nextEyebrow">下一步</p>
+            <h3 data-i18n="nextTitle">下一步打卡导航</h3>
             <div class="next-list" id="nextStops"></div>
           </div>
         </section>
 
         <section class="app-page content-page" id="checkins" data-page="checkins">
           <header class="page-head">
-            <p class="eyebrow">Manual Check-in</p>
-            <h2>手动点亮</h2>
+            <p class="eyebrow" data-i18n="manualEyebrow">手动点亮</p>
+            <h2 data-i18n="manualTitle">手动点亮</h2>
           </header>
           <div class="panel">
             <div class="section-head">
               <div>
-                <p class="eyebrow">China Admin 1</p>
-                <h3>中国省级</h3>
+                <p class="eyebrow" data-i18n="chinaAdmin1">中国一级行政区</p>
+                <h3 data-i18n="chinaProvince">中国省级</h3>
               </div>
               <span class="tag" id="manualChinaProvinceCount"></span>
             </div>
@@ -121,8 +130,8 @@
           <div class="panel">
             <div class="section-head">
               <div>
-                <p class="eyebrow">China Admin 2</p>
-                <h3>中国地级市</h3>
+                <p class="eyebrow" data-i18n="chinaAdmin2">中国二级行政区</p>
+                <h3 data-i18n="chinaCity">中国地级市</h3>
               </div>
               <span class="tag" id="manualChinaCityCount"></span>
             </div>
@@ -131,8 +140,8 @@
           <div class="panel">
             <div class="section-head">
               <div>
-                <p class="eyebrow">Countries</p>
-                <h3>国家/地区</h3>
+                <p class="eyebrow" data-i18n="countriesEyebrow">国家地区</p>
+                <h3 data-i18n="countriesTitle">国家/地区</h3>
               </div>
               <span class="tag" id="manualCountryCount"></span>
             </div>
@@ -144,50 +153,50 @@
           <div class="panel">
             <div class="section-head">
               <div>
-                <p class="eyebrow">Import</p>
-                <h3>导入地图或地点文件</h3>
+                <p class="eyebrow" data-i18n="importEyebrow">导入</p>
+                <h3 data-i18n="importTitle">导入地图或地点文件</h3>
               </div>
               <span class="tag">GeoJSON / KML / CSV</span>
             </div>
             <div class="import-box">
               <label>
-                选择文件
+                <span data-i18n="chooseFile">选择文件</span>
                 <input id="importFile" type="file" accept=".geojson,.json,.kml,.csv,text/csv,application/json" />
               </label>
               <label>
-                导入后标记为
+                <span data-i18n="importDepth">导入后标记为</span>
                 <select id="importDepth">
-                  <option value="0">仅导入</option>
-                  <option value="1" selected>去过</option>
+                  <option value="0" data-i18n="importOnly">仅导入</option>
+                  <option value="1" selected data-i18n="visited">去过</option>
                 </select>
               </label>
             </div>
-            <p class="muted small">CSV 推荐列名：name,country,unit,city,type,lat,lng,tags。没有 country/unit 时会用经纬度自动推断。</p>
+            <p class="muted small" data-i18n="csvHelp">CSV 推荐列名：name,country,unit,city,type,lat,lng,tags。没有 country/unit 时会用经纬度自动推断。</p>
             <div id="importSummary" class="bars"></div>
           </div>
           <div class="panel">
             <div class="section-head">
               <div>
-                <p class="eyebrow">Archive</p>
-                <h3>数据存档</h3>
+                <p class="eyebrow" data-i18n="archiveEyebrow">存档</p>
+                <h3 data-i18n="archiveTitle">数据存档</h3>
               </div>
               <span class="tag">JSON</span>
             </div>
             <div class="archive-actions">
-              <button id="exportArchive" type="button">导出存档</button>
-              <button id="clearAllData" class="danger-action" type="button">清空全部数据</button>
+              <button id="exportArchive" type="button" data-i18n="exportArchive">导出存档</button>
+              <button id="clearAllData" class="danger-action" type="button" data-i18n="clearAllData">清空全部数据</button>
               <label class="archive-import">
-                导入存档
+                <span data-i18n="importArchive">导入存档</span>
                 <input id="archiveFile" type="file" accept=".json,application/json" />
               </label>
             </div>
-            <p class="muted small">点亮地点、导入对象、打卡勾选和展开状态都会保存到存档文件。恢复存档会覆盖当前浏览器里的旅行数据。</p>
+            <p class="muted small" data-i18n="archiveHelp">点亮地点、导入对象、打卡勾选和展开状态都会保存到存档文件。恢复存档会覆盖当前浏览器里的旅行数据。</p>
           </div>
           <div class="panel">
             <div class="section-head">
               <div>
-                <p class="eyebrow">Data Inspector</p>
-                <h3>数据检查</h3>
+                <p class="eyebrow" data-i18n="dataEyebrow">数据检查</p>
+                <h3 data-i18n="dataTitle">数据检查</h3>
               </div>
             </div>
             <div id="dataInventory" class="data-inventory"></div>
@@ -196,8 +205,8 @@
 
         <section class="app-page content-page" id="achievements" data-page="achievements">
           <div class="panel" id="achievementsPanel">
-            <p class="eyebrow">Checklists</p>
-            <h3>打卡</h3>
+            <p class="eyebrow" data-i18n="checklistEyebrow">打卡清单</p>
+            <h3 data-i18n="checklistTitle">打卡</h3>
             <div class="achievement-list" id="achievementList"></div>
           </div>
         </section>
@@ -207,6 +216,6 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-    <script src="app.js?v=67"></script>
+    <script src="app.js?v=75"></script>
   </body>
 </html>

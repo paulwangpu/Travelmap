@@ -1,17 +1,20 @@
 @echo off
 setlocal
 cd /d "%~dp0"
-where py >nul 2>nul
-if %errorlevel%==0 (
-  start "" http://localhost:4173/index.html
-  py -m http.server 4173 --bind 127.0.0.1
+
+set "BUNDLED_NODE=%USERPROFILE%\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe"
+
+if exist "%BUNDLED_NODE%" (
+  "%BUNDLED_NODE%" travel-map-server.js
   exit /b
 )
-where python >nul 2>nul
+
+where node >nul 2>nul
 if %errorlevel%==0 (
-  start "" http://localhost:4173/index.html
-  python -m http.server 4173 --bind 127.0.0.1
+  node travel-map-server.js
   exit /b
 )
-echo Python was not found. Please install Python or run another local HTTP server in this folder.
+
+echo Node.js was not found.
+echo Please install Node.js, or ask Codex to start the local server for you.
 pause

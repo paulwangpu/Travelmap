@@ -67,13 +67,20 @@ select {
 .brand-mark {
   width: 48px;
   height: 48px;
+  flex: 0 0 48px;
+  aspect-ratio: 1 / 1;
   border-radius: 8px;
-  background: #e7c263;
-  color: #17231f;
+  background: #ffffff;
   display: grid;
   place-items: center;
-  font-weight: 900;
-  letter-spacing: 0;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .brand h1,
@@ -112,12 +119,50 @@ select {
   background: rgba(255, 255, 255, 0.12);
 }
 
+.language-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.language-switch button {
+  min-width: 0;
+  padding: 8px 6px;
+  border-radius: 6px;
+  background: transparent;
+  color: #dce7df;
+  font-size: 12px;
+}
+
+.language-switch button.active {
+  background: #ffffff;
+  color: #17231f;
+}
+
+.map-control-panel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  min-width: min(650px, 100%);
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f7faf8;
+  box-shadow: none;
+}
+
 .map-overlay-toggles {
   pointer-events: auto;
   display: flex;
-  flex-wrap: nowrap;
-  gap: 6px;
+  flex-wrap: wrap;
+  gap: 8px;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .map-overlay-toggles label {
@@ -125,10 +170,10 @@ select {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  min-height: 32px;
-  padding: 6px 8px;
+  min-height: 39px;
+  padding: 7px 10px;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 999px;
   background: #fff;
   color: var(--ink);
   font-size: 13px;
@@ -1027,7 +1072,7 @@ button:hover {
   background: #ffffff;
 }
 
-.checklist-nav a {
+.checklist-nav button {
   border: 1px solid var(--line);
   border-radius: 999px;
   padding: 7px 10px;
@@ -1035,6 +1080,7 @@ button:hover {
   color: var(--deep);
   font-weight: 900;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .checklist-health {
@@ -1331,6 +1377,7 @@ button:hover {
   .brand-mark {
     width: 36px;
     height: 36px;
+    flex-basis: 36px;
   }
 
   .brand h1 {
@@ -1452,16 +1499,16 @@ button:hover {
 }
 
 .map-app {
-  min-height: 100vh;
+  height: 100vh;
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
 }
 
 .map-toolbar {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 12px;
-  align-items: start;
+  grid-template-columns: minmax(240px, 1fr) minmax(520px, auto);
+  gap: 16px;
+  align-items: center;
   padding: 18px 20px;
   background: #ffffff;
   border-bottom: 1px solid var(--line);
@@ -1485,6 +1532,25 @@ button:hover {
 .map-title-row .map-level-control {
   flex: 0 0 240px;
   box-shadow: none;
+}
+
+.map-toolbar > .map-control-panel {
+  justify-self: end;
+}
+
+.map-control-panel .map-level-control {
+  flex: 0 0 168px;
+  margin: 0;
+  padding: 8px 10px;
+  border: 0;
+  border-right: 1px solid var(--line);
+  border-radius: 8px 0 0 8px;
+  background: transparent;
+  box-shadow: none;
+}
+
+.map-control-panel .map-level-control select {
+  padding: 8px 28px 8px 10px;
 }
 
 .compact-add {
@@ -1524,8 +1590,8 @@ button:hover {
 }
 
 .map-surface {
-  height: calc(100vh - 98px);
-  min-height: 620px;
+  height: 100%;
+  min-height: 0;
   position: relative;
   background: #dfe9e7;
   min-width: 0;
@@ -1708,6 +1774,23 @@ button:hover {
   .compact-add,
   .utility-grid {
     grid-template-columns: 1fr;
+  }
+
+  .map-control-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .map-control-panel .map-level-control {
+    flex: 0 0 auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    border-radius: 8px 8px 0 0;
+  }
+
+  .map-overlay-toggles {
+    justify-content: flex-start;
+    padding: 0 10px 10px;
   }
 
   .map-surface {
