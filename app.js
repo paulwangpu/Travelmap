@@ -42,10 +42,12 @@ const boundaryFallbackSources = {
 };
 let leafletMap = null;
 let leafletLayers = null;
+let leafletBaseLayer = null;
 let mapLibreMap = null;
 let mapLibreMarkers = [];
 let mapLibreMarkerSignature = "";
-let mapLibreLayerHandlersBound = { admin: false, subadmin: false };
+let mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false };
+let bingMapLibreProtocolRegistered = false;
 let leafletDidInitialFit = false;
 let catalogDataRequested = false;
 let catalogDataPromise = null;
@@ -81,7 +83,7 @@ const translations = {
     navImport: "导入",
     privacyEyebrow: "隐私",
     privacyTitle: "本地保存",
-    privacyText: "不会自动公开精确地点；分享导出时再选择展示范围。",
+    privacyText: "数据只保存在本机浏览器里，不会自动上传或公开。如需备份请导出。",
     mapEyebrow: "开源底图 + MapLibre + 本地边界",
     mapTitle: "我的全球旅行地图",
     fieldPlace: "地点",
@@ -89,6 +91,17 @@ const translations = {
     fieldDate: "日期",
     visited: "去过",
     lightUp: "点亮",
+    mapProvider: "底图",
+    providerAuto: "自动",
+    providerOsm: "OpenStreetMap",
+    providerGaode: "高德",
+    providerGaodeSatellite: "高德卫星",
+    providerGoogle: "Google 街道",
+    providerGoogleSatellite: "Google 卫星",
+    providerGoogleTerrain: "Google 地形",
+    providerEsriSatellite: "Esri 卫星",
+    providerBingRoad: "Bing 地图",
+    providerBingAerial: "Bing 卫星",
     mapLevel: "显示层级",
     levelCountry: "国家",
     levelAdmin: "省级",
@@ -167,7 +180,7 @@ const translations = {
     navImport: "Import",
     privacyEyebrow: "Privacy",
     privacyTitle: "Saved locally",
-    privacyText: "Exact places are not published automatically; choose visibility only when exporting or sharing.",
+    privacyText: "Your data stays in this browser. It is not uploaded or published automatically. Export when you need a backup.",
     mapEyebrow: "Open basemap + MapLibre + local boundaries",
     mapTitle: "Tuojie Footprints",
     fieldPlace: "Place",
@@ -175,6 +188,17 @@ const translations = {
     fieldDate: "Date",
     visited: "Visited",
     lightUp: "Light up",
+    mapProvider: "Basemap",
+    providerAuto: "Auto",
+    providerOsm: "OpenStreetMap",
+    providerGaode: "Gaode",
+    providerGaodeSatellite: "Gaode Satellite",
+    providerGoogle: "Google Road",
+    providerGoogleSatellite: "Google Satellite",
+    providerGoogleTerrain: "Google Terrain",
+    providerEsriSatellite: "Esri Satellite",
+    providerBingRoad: "Bing Road",
+    providerBingAerial: "Bing Aerial",
     mapLevel: "Boundary level",
     levelCountry: "Country",
     levelAdmin: "Province / State",
@@ -255,6 +279,163 @@ function defaultMapOverlays() {
   return { checkins: true, paths: true, china5a: false, worldHeritage: false };
 }
 
+const mapProviders = {
+  osm: {
+    label: "OpenStreetMap",
+    tiles: [
+      "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      "https://b.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      "https://c.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    ],
+    attribution: "© OpenStreetMap contributors",
+  },
+  gaode: {
+    label: "高德",
+    tiles: [
+      "https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}",
+      "https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}",
+      "https://webrd03.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}",
+      "https://webrd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}",
+    ],
+    attribution: "© 高德地图",
+  },
+  gaodeSatellite: {
+    label: "高德卫星",
+    tiles: [
+      "https://webst01.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}",
+      "https://webst02.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}",
+      "https://webst03.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}",
+      "https://webst04.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}",
+    ],
+    attribution: "© 高德地图",
+  },
+  google: {
+    label: "Google 街道",
+    tiles: [
+      "https://mt0.google.com/vt/lyrs=m&x={x}&y={y}&z={z}",
+      "https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}",
+      "https://mt2.google.com/vt/lyrs=m&x={x}&y={y}&z={z}",
+      "https://mt3.google.com/vt/lyrs=m&x={x}&y={y}&z={z}",
+    ],
+    attribution: "© Google",
+  },
+  googleSatellite: {
+    label: "Google 卫星",
+    tiles: [
+      "https://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}",
+      "https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}",
+      "https://mt2.google.com/vt/lyrs=s&x={x}&y={y}&z={z}",
+      "https://mt3.google.com/vt/lyrs=s&x={x}&y={y}&z={z}",
+    ],
+    attribution: "© Google",
+  },
+  googleTerrain: {
+    label: "Google 地形",
+    tiles: [
+      "https://mt0.google.com/vt/lyrs=p&x={x}&y={y}&z={z}",
+      "https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}",
+      "https://mt2.google.com/vt/lyrs=p&x={x}&y={y}&z={z}",
+      "https://mt3.google.com/vt/lyrs=p&x={x}&y={y}&z={z}",
+    ],
+    attribution: "© Google",
+  },
+  esriSatellite: {
+    label: "Esri 卫星",
+    tiles: [
+      "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+    ],
+    attribution: "Tiles © Esri",
+  },
+  bingRoad: {
+    label: "Bing 地图",
+    tiles: ["bing://road/{z}/{x}/{y}"],
+    attribution: "© Microsoft Bing",
+  },
+  bingAerial: {
+    label: "Bing 卫星",
+    tiles: ["bing://aerial/{z}/{x}/{y}"],
+    attribution: "© Microsoft Bing",
+  },
+};
+
+function normalizeMapProviderMode(value) {
+  return ["auto", ...Object.keys(mapProviders)].includes(value) ? value : "auto";
+}
+
+function normalizeDetectedMapProvider(value) {
+  return ["gaode", "google"].includes(value) ? value : "";
+}
+
+function activeMapProvider() {
+  const mode = normalizeMapProviderMode(state.mapProviderMode);
+  if (mode !== "auto") return mode;
+  return normalizeDetectedMapProvider(state.detectedMapProvider) || fallbackMapProviderFromLocale();
+}
+
+function fallbackMapProviderFromLocale() {
+  const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+  const language = navigator.language || "";
+  return timezone === "Asia/Shanghai" || /^zh-CN/i.test(language) ? "gaode" : "google";
+}
+
+function tileQuadKey(z, x, y) {
+  let quadKey = "";
+  for (let level = z; level > 0; level -= 1) {
+    let digit = 0;
+    const mask = 1 << (level - 1);
+    if ((x & mask) !== 0) digit += 1;
+    if ((y & mask) !== 0) digit += 2;
+    quadKey += digit;
+  }
+  return quadKey;
+}
+
+function bingTileUrl(kind, z, x, y) {
+  const quadKey = tileQuadKey(z, x, y);
+  const subdomain = Math.abs(x + y) % 4;
+  const prefix = kind === "aerial" ? "a" : "r";
+  const extension = kind === "aerial" ? "jpeg" : "png";
+  const culture = currentLanguage === "en" ? "en-US" : "zh-CN";
+  return `https://ecn.t${subdomain}.tiles.virtualearth.net/tiles/${prefix}${quadKey}.${extension}?g=1391&mkt=${culture}`;
+}
+
+function registerBingMapLibreProtocol() {
+  if (bingMapLibreProtocolRegistered || !window.maplibregl?.addProtocol) return;
+  window.maplibregl.addProtocol("bing", async (params) => {
+    const match = String(params.url || "").match(/^bing:\/\/(road|aerial)\/(\d+)\/(\d+)\/(\d+)/);
+    if (!match) throw new Error("Invalid Bing tile URL");
+    const [, kind, zText, xText, yText] = match;
+    const response = await fetch(bingTileUrl(kind, Number(zText), Number(xText), Number(yText)));
+    if (!response.ok) throw new Error(`Bing tile ${response.status}`);
+    return { data: await response.arrayBuffer() };
+  });
+  bingMapLibreProtocolRegistered = true;
+}
+
+async function detectMapProviderByIp() {
+  if (normalizeMapProviderMode(state.mapProviderMode) !== "auto") return;
+  let timeout = null;
+  try {
+    const controller = new AbortController();
+    timeout = setTimeout(() => controller.abort(), 2500);
+    const response = await fetch("https://ipapi.co/json/", { signal: controller.signal, cache: "no-store" });
+    clearTimeout(timeout);
+    if (!response.ok) throw new Error(`${response.status}`);
+    const data = await response.json();
+    const detected = String(data.country_code || data.country || "").toUpperCase() === "CN" ? "gaode" : "google";
+    if (state.detectedMapProvider === detected) return;
+    state.detectedMapProvider = detected;
+    saveUiStateSoon();
+    renderMapControls();
+    if (isMapPageActive()) renderGeoMap();
+  } catch (error) {
+    state.detectedMapProvider = state.detectedMapProvider || fallbackMapProviderFromLocale();
+    renderMapControls();
+  } finally {
+    if (timeout) clearTimeout(timeout);
+  }
+}
+
 const chinaProvincialCapitals = [
   "北京", "天津", "上海", "重庆", "石家庄", "太原", "呼和浩特", "沈阳", "长春", "哈尔滨",
   "南京", "杭州", "合肥", "福州", "南昌", "济南", "郑州", "武汉", "长沙", "广州",
@@ -296,6 +477,54 @@ const chinaProvinceAliases = {
   台湾省: "台湾",
   香港特别行政区: "香港",
   澳门特别行政区: "澳门",
+};
+
+const chinaProvinceEnglishNames = {
+  北京: "Beijing",
+  天津: "Tianjin",
+  上海: "Shanghai",
+  重庆: "Chongqing",
+  河北: "Hebei",
+  山西: "Shanxi",
+  内蒙古: "Inner Mongolia",
+  辽宁: "Liaoning",
+  吉林: "Jilin",
+  黑龙江: "Heilongjiang",
+  江苏: "Jiangsu",
+  浙江: "Zhejiang",
+  安徽: "Anhui",
+  福建: "Fujian",
+  江西: "Jiangxi",
+  山东: "Shandong",
+  河南: "Henan",
+  湖北: "Hubei",
+  湖南: "Hunan",
+  广东: "Guangdong",
+  广西: "Guangxi",
+  海南: "Hainan",
+  四川: "Sichuan",
+  贵州: "Guizhou",
+  云南: "Yunnan",
+  西藏: "Tibet",
+  陕西: "Shaanxi",
+  甘肃: "Gansu",
+  青海: "Qinghai",
+  宁夏: "Ningxia",
+  新疆: "Xinjiang",
+  台湾: "Taiwan",
+  香港: "Hong Kong",
+  澳门: "Macau",
+};
+
+const continentEnglishNames = {
+  亚洲: "Asia",
+  欧洲: "Europe",
+  北美洲: "North America",
+  南美洲: "South America",
+  非洲: "Africa",
+  大洋洲: "Oceania",
+  其他: "Other",
+  "亚洲/欧洲": "Asia / Europe",
 };
 
 const countries = [
@@ -403,6 +632,9 @@ function normalizeWorldHeritageCountryName(name) {
 const regionNameFormatter = typeof Intl !== "undefined" && Intl.DisplayNames
   ? new Intl.DisplayNames(["zh-CN"], { type: "region" })
   : null;
+const englishRegionNameFormatter = typeof Intl !== "undefined" && Intl.DisplayNames
+  ? new Intl.DisplayNames(["en"], { type: "region" })
+  : null;
 
 const continentCountryIds = {
   亚洲: "cn jp kr kp mn sg my th vn id ph bn kh la mm tl in pk bd lk np bt mv af ir iq sy lb jo il ps sa ae qa kw bh om ye tr ge am az kz uz tm kg tj".split(" "),
@@ -415,6 +647,13 @@ const continentCountryIds = {
 
 function countryDisplayName(countryId) {
   const normalized = normalizeCountry(countryId);
+  if (currentLanguage === "en" && /^[a-z]{2}$/.test(normalized) && englishRegionNameFormatter) {
+    try {
+      return englishRegionNameFormatter.of(normalized.toUpperCase()) || normalized.toUpperCase();
+    } catch {
+      return normalized.toUpperCase();
+    }
+  }
   if (countryChineseNames[normalized]) return countryChineseNames[normalized];
   if (/^[a-z]{2}$/.test(normalized) && regionNameFormatter) {
     try {
@@ -433,6 +672,109 @@ function continentForCountryId(countryId) {
   const known = countries.find((country) => countryCoverageId(country.id) === normalized);
   if (known?.continent) return known.continent;
   return Object.entries(continentCountryIds).find(([, ids]) => ids.includes(normalized))?.[0] || "其他";
+}
+
+function continentDisplayName(continent) {
+  return currentLanguage === "en" ? continentEnglishNames[continent] || continent : continent;
+}
+
+function chinaProvinceDisplayName(name) {
+  const normalized = chinaProvinceAliases[name] || name;
+  return currentLanguage === "en" ? chinaProvinceEnglishNames[normalized] || normalized : normalized;
+}
+
+const chinesePinyinMap = {
+  阿: "a", 哀: "ai", 安: "an", 鞍: "an", 巴: "ba", 白: "bai", 百: "bai", 蚌: "beng", 包: "bao", 宝: "bao", 保: "bao", 北: "bei", 本: "ben", 毕: "bi", 滨: "bin", 亳: "bo", 博: "bo", 沧: "cang", 昌: "chang", 常: "chang", 长: "chang", 朝: "chao", 承: "cheng", 城: "cheng", 成: "cheng", 池: "chi", 赤: "chi", 充: "chong", 崇: "chong", 滁: "chu", 楚: "chu", 川: "chuan", 达: "da", 大: "da", 丹: "dan", 儋: "dan", 德: "de", 迪: "di", 定: "ding", 东: "dong", 都: "du", 鄂: "e", 恩: "en", 防: "fang", 肥: "fei", 佛: "fo", 福: "fu", 抚: "fu", 阜: "fu", 赣: "gan", 甘: "gan", 冈: "gang", 港: "gang", 高: "gao", 固: "gu", 广: "guang", 贵: "gui", 桂: "gui", 果: "guo", 哈: "ha", 海: "hai", 邯: "han", 汉: "han", 杭: "hang", 浩: "hao", 合: "he", 和: "he", 河: "he", 鹤: "he", 黑: "hei", 衡: "heng", 红: "hong", 呼: "hu", 葫: "hu", 湖: "hu", 华: "hua", 淮: "huai", 怀: "huai", 黄: "huang", 惠: "hui", 鸡: "ji", 吉: "ji", 济: "ji", 佳: "jia", 嘉: "jia", 江: "jiang", 焦: "jiao", 揭: "jie", 金: "jin", 晋: "jin", 锦: "jin", 京: "jing", 景: "jing", 靖: "jing", 九: "jiu", 酒: "jiu", 喀: "ka", 开: "kai", 康: "kang", 可: "ke", 昆: "kun", 拉: "la", 来: "lai", 兰: "lan", 廊: "lang", 乐: "le", 勒: "le", 丽: "li", 连: "lian", 辽: "liao", 聊: "liao", 林: "lin", 临: "lin", 柳: "liu", 六: "liu", 龙: "long", 陇: "long", 娄: "lou", 泸: "lu", 鲁: "lu", 洛: "luo", 漯: "luo", 马: "ma", 茂: "mao", 眉: "mei", 梅: "mei", 门: "men", 牡: "mu", 南: "nan", 内: "nei", 宁: "ning", 怒: "nu", 攀: "pan", 盘: "pan", 平: "ping", 莆: "pu", 普: "pu", 七: "qi", 齐: "qi", 迁: "qian", 钦: "qin", 秦: "qin", 青: "qing", 清: "qing", 庆: "qing", 曲: "qu", 衢: "qu", 泉: "quan", 日: "ri", 三: "san", 厦: "xia", 商: "shang", 上: "shang", 韶: "shao", 邵: "shao", 绍: "shao", 沈: "shen", 深: "shen", 神: "shen", 什: "shi", 石: "shi", 十: "shi", 双: "shuang", 朔: "shuo", 四: "si", 松: "song", 苏: "su", 宿: "su", 绥: "sui", 随: "sui", 遂: "sui", 台: "tai", 泰: "tai", 太: "tai", 唐: "tang", 桃: "tao", 天: "tian", 铁: "tie", 通: "tong", 铜: "tong", 吐: "tu", 万: "wan", 威: "wei", 渭: "wei", 乌: "wu", 吴: "wu", 无: "wu", 武: "wu", 五: "wu", 西: "xi", 咸: "xian", 仙: "xian", 孝: "xiao", 忻: "xin", 新: "xin", 信: "xin", 邢: "xing", 兴: "xing", 雄: "xiong", 徐: "xu", 宣: "xuan", 雅: "ya", 烟: "yan", 延: "yan", 盐: "yan", 扬: "yang", 阳: "yang", 鸭: "ya", 宜: "yi", 伊: "yi", 义: "yi", 益: "yi", 鹰: "ying", 营: "ying", 永: "yong", 榆: "yu", 玉: "yu", 岳: "yue", 云: "yun", 运: "yun", 枣: "zao", 泽: "ze", 湛: "zhan", 张: "zhang", 彰: "zhang", 漳: "zhang", 昭: "zhao", 肇: "zhao", 郑: "zheng", 镇: "zhen", 芝: "zhi", 舟: "zhou", 株: "zhu", 驻: "zhu", 珠: "zhu", 淄: "zi", 资: "zi", 遵: "zun", 乡: "xiang", 亚: "ya", 仁: "ren", 伦: "lun", 依: "yi", 克: "ke", 区: "qu", 古: "gu", 塔: "ta", 孜: "zi", 家: "jia", 尔: "er", 山: "shan", 州: "zhou", 投: "tou", 春: "chun", 柯: "ke", 水: "shui", 治: "zhi", 津: "jin", 温: "wen", 特: "te", 自: "zi", 苗: "miao", 萨: "sa", 蒙: "meng", 那: "na", 锡: "xi",
+  亳: "bo", 亭: "ting", 丘: "qiu", 中: "zhong", 义: "yi", 余: "yu", 作: "zuo", 元: "yuan", 关: "guan", 兴: "xing", 农: "nong", 凉: "liang", 则: "ze", 化: "hua", 卫: "wei", 原: "yuan", 口: "kou", 可: "ke", 同: "tong", 名: "ming", 吕: "lv", 周: "zhou", 善: "shan", 嘴: "zui", 园: "yuan", 图: "tu", 圳: "zhen", 坊: "fang", 坝: "ba", 埠: "bu", 基: "ji", 堰: "yan", 壁: "bi", 夏: "xia", 多: "duo", 头: "tou", 子: "zi", 宏: "hong", 宝: "bao", 宾: "bin", 密: "mi", 察: "cha", 封: "feng", 尾: "wei", 屏: "ping", 屯: "tun", 岗: "gang", 岛: "dao", 岩: "yan", 岭: "ling", 峡: "xia", 峪: "yu", 峰: "feng", 左: "zuo", 布: "bu", 常: "chang", 庄: "zhuang", 底: "di", 店: "dian", 康: "kang", 开: "kai", 彦: "yan", 忠: "zhong", 惠: "hui", 感: "gan", 指: "zhi", 掖: "ye", 文: "wen", 斯: "si", 方: "fang", 施: "shi", 明: "ming", 普: "pu", 木: "mu", 杨: "yang", 杭: "hang", 果: "guo", 枝: "zhi", 架: "jia", 树: "shu", 栗: "li", 梁: "liang", 梧: "wu", 楞: "leng", 榆: "yu", 毕: "bi", 汕: "shan", 汾: "fen", 沂: "yi", 沙: "sha", 河: "he", 波: "bo", 洱: "er", 洲: "zhou", 浮: "fu", 淖: "nao", 渠: "qu", 湘: "xiang", 源: "yuan", 溪: "xi", 滨: "bin", 潍: "wei", 潜: "qian", 潭: "tan", 潮: "chao", 澄: "cheng", 澎: "peng", 濮: "pu", 照: "zhao", 版: "ban", 犁: "li", 玛: "ma", 理: "li", 琼: "qiong", 田: "tian", 界: "jie", 番: "fan", 皇: "huang", 盐: "yan", 盘: "pan", 眉: "mei", 竹: "zhu", 纳: "na", 绵: "mian", 胡: "hu", 舒: "shu", 色: "se", 节: "jie", 芜: "wu", 芦: "lu", 花: "hua", 荆: "jing", 莞: "guan", 莲: "lian", 菏: "he", 萍: "ping", 衡: "heng", 襄: "xiang", 许: "xu", 贝: "bei", 贡: "gong", 贺: "he", 边: "bian", 迈: "mai", 远: "yuan", 邯: "han", 邵: "shao", 郭: "guo", 郴: "chen", 郸: "dan", 里: "li", 重: "chong", 银: "yin", 门: "men", 陵: "ling", 隆: "long", 音: "yin", 顶: "ding", 顺: "shun", 饶: "rao", 黔: "qian"
+};
+
+const chineseEthnicPhrases = [
+  ["蒙古族", "Mongolian"],
+  ["回族", "Hui"],
+  ["藏族", "Tibetan"],
+  ["维吾尔族", "Uyghur"],
+  ["壮族", "Zhuang"],
+  ["朝鲜族", "Korean"],
+  ["哈萨克族", "Kazakh"],
+  ["柯尔克孜族", "Kyrgyz"],
+  ["傣族", "Dai"],
+  ["彝族", "Yi"],
+  ["白族", "Bai"],
+  ["苗族", "Miao"],
+  ["侗族", "Dong"],
+  ["瑶族", "Yao"],
+  ["土家族", "Tujia"],
+  ["布依族", "Bouyei"],
+  ["哈尼族", "Hani"],
+  ["黎族", "Li"],
+  ["傈僳族", "Lisu"],
+  ["佤族", "Wa"],
+  ["拉祜族", "Lahu"],
+  ["水族", "Shui"],
+  ["羌族", "Qiang"],
+  ["景颇族", "Jingpo"],
+  ["东乡族", "Dongxiang"],
+  ["撒拉族", "Salar"],
+  ["保安族", "Bonan"],
+  ["裕固族", "Yugur"],
+  ["锡伯族", "Xibe"],
+  ["塔吉克族", "Tajik"],
+  ["达斡尔族", "Daur"],
+  ["鄂温克族", "Ewenki"],
+  ["鄂伦春族", "Oroqen"],
+  ["赫哲族", "Hezhen"],
+  ["满族", "Manchu"],
+  ["畲族", "She"],
+  ["高山族", "Gaoshan"],
+  ["仡佬族", "Gelao"],
+  ["毛南族", "Maonan"],
+  ["仫佬族", "Mulao"],
+  ["柯尔克孜", "Kyrgyz"],
+  ["哈萨克", "Kazakh"],
+  ["蒙古", "Mongolian"],
+  ["维吾尔", "Uyghur"],
+  ["朝鲜", "Korean"],
+  ["黎", "Li"],
+  ["苗", "Miao"],
+];
+
+function chinaSubadminDisplayName(name) {
+  if (currentLanguage !== "en") return name;
+  const raw = String(name || "");
+  if (!/\p{Script=Han}/u.test(raw)) return raw;
+  const suffixRules = [
+    [/特别行政区$/u, " SAR"],
+    [/自治县$/u, " Autonomous County"],
+    [/自治州$/u, " Autonomous Prefecture"],
+    [/林区$/u, " Forestry District"],
+    [/地区$/u, " Prefecture"],
+    [/盟$/u, " League"],
+    [/县$/u, " County"],
+    [/市$/u, " City"],
+  ];
+  const matched = suffixRules.find(([pattern]) => pattern.test(raw));
+  const suffix = matched?.[1] || "";
+  let base = matched ? raw.replace(matched[0], "") : raw;
+  let descriptor = "";
+  chineseEthnicPhrases.forEach(([phrase, label]) => {
+    if (base.includes(phrase)) {
+      base = base.replace(phrase, "");
+      descriptor = descriptor ? `${descriptor} ${label}` : label;
+    }
+  });
+  return [chineseToPinyinTitle(base), descriptor, suffix.trim()].filter(Boolean).join(" ");
+}
+
+function chineseToPinyinTitle(value) {
+  return String(value || "")
+    .split("")
+    .map((char) => /\p{Script=Han}/u.test(char) ? (chinesePinyinMap[char] || char) : char)
+    .join(" ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .split(" ")
+    .map((part) => part ? part.charAt(0).toUpperCase() + part.slice(1) : "")
+    .join(" ");
 }
 
 const chinaProvinceByAdcode = {
@@ -838,6 +1180,8 @@ let state = {
   coverage: { countries: [], regions: {}, subregions: {} },
   selectedRegionView: "china",
   boundaryLevel: "country",
+  mapProviderMode: "auto",
+  detectedMapProvider: "",
   mapOverlays: { checkins: true, paths: true, china5a: false, worldHeritage: false },
   focusPlaceId: "",
 };
@@ -964,7 +1308,7 @@ function boundaryKeysForLevel(level = state.boundaryLevel) {
   if (level === "subadmin") {
     const subadminKeys = subadminBoundaryKeysToShow();
     if (subadminKeys.includes("china2")) subadminKeys.push("chinaDirect", "tw2");
-    return ["country", ...adminBoundaryKeysToShow(), ...subadminKeys];
+    return ["country", "china", "china2", "chinaDirect", "tw2", ...adminBoundaryKeysToShow(), ...subadminKeys];
   }
   return ["country"];
 }
@@ -1776,6 +2120,8 @@ function localStorageSnapshot(payload) {
       selectedRegionView: savedState.selectedRegionView,
       focusPlaceId: savedState.focusPlaceId,
       openChecklistGroups: savedState.openChecklistGroups || [],
+      mapProviderMode: savedState.mapProviderMode || "auto",
+      detectedMapProvider: savedState.detectedMapProvider || "",
       mapOverlays: { ...defaultMapOverlays(), ...(savedState.mapOverlays || {}) },
       coverage: savedState.coverage || { countries: [], regions: {}, subregions: {} },
     },
@@ -1848,6 +2194,8 @@ function applySavedPayload(saved) {
       importedFiles: saved.state.importedFiles || [],
       checklistMarks: saved.state.checklistMarks || [],
       openChecklistGroups: saved.state.openChecklistGroups || [],
+      mapProviderMode: normalizeMapProviderMode(saved.state.mapProviderMode || state.mapProviderMode),
+      detectedMapProvider: normalizeDetectedMapProvider(saved.state.detectedMapProvider || state.detectedMapProvider),
       mapOverlays: { ...defaultMapOverlays(), ...(saved.state.mapOverlays || {}) },
       coverage: saved.state.coverage || { countries: [], regions: {}, subregions: {} },
     };
@@ -1866,6 +2214,8 @@ function applyLocalStorageSnapshot(saved) {
     selectedRegionView: saved.state.selectedRegionView || state.selectedRegionView || "china",
     focusPlaceId: saved.state.focusPlaceId || state.focusPlaceId,
     openChecklistGroups: saved.state.openChecklistGroups || state.openChecklistGroups || [],
+    mapProviderMode: normalizeMapProviderMode(saved.state.mapProviderMode || state.mapProviderMode),
+    detectedMapProvider: normalizeDetectedMapProvider(saved.state.detectedMapProvider || state.detectedMapProvider),
     mapOverlays: { ...defaultMapOverlays(), ...(saved.state.mapOverlays || state.mapOverlays || {}) },
     coverage: saved.state.coverage || state.coverage || { countries: [], regions: {}, subregions: {} },
   };
@@ -2056,28 +2406,7 @@ function getMapCountries() {
 function countryGeoJson() {
   if (boundaryData.country) {
     const visited = uniqueVisitedCountries();
-    const grouped = new Map();
-    boundaryData.country.features
-      .map((feature) => ({ feature, countryId: countryIdFromFeature(feature) }))
-      .filter(({ countryId }) => countryId && countryHasSyncedBackground(countryId, visited))
-      .forEach(({ feature, countryId }) => {
-        const displayCountryId = countryCoverageId(countryId);
-        if (!grouped.has(displayCountryId)) grouped.set(displayCountryId, { sourceIds: [], polygons: [] });
-        const group = grouped.get(displayCountryId);
-        group.sourceIds.push(countryId);
-        group.polygons.push(...geometryToPolygons(feature.geometry));
-      });
-    return {
-      type: "FeatureCollection",
-      features: Array.from(grouped.entries()).map(([displayCountryId, group]) => {
-        const country = getCountry(displayCountryId);
-        return {
-          type: "Feature",
-          properties: { id: displayCountryId, sourceCountryIds: group.sourceIds.join(","), name: country.name, depth: bestDepthForCountry(displayCountryId), kind: "country" },
-          geometry: { type: "MultiPolygon", coordinates: group.polygons },
-        };
-      }),
-    };
+    return groupedCountryGeoJson(({ countryId }) => countryId && countryHasSyncedBackground(countryId, visited), "country", (countryId) => bestDepthForCountry(countryId));
   }
 
   return {
@@ -2091,6 +2420,37 @@ function countryGeoJson() {
         return custom ? { ...custom, properties: { ...custom.properties, id: displayCountryId, sourceCountryId: country.id, name: getCountry(displayCountryId).name, depth, kind: "country" } } : null;
       })
       .filter(Boolean),
+  };
+}
+
+function allCountryClickGeoJson() {
+  if (!boundaryData.country) return { type: "FeatureCollection", features: [] };
+  return groupedCountryGeoJson(({ countryId }) => countryId, "country-click", (countryId) => bestDepthForCountry(countryId));
+}
+
+function groupedCountryGeoJson(filterFn, kind, depthFn) {
+  const grouped = new Map();
+  boundaryData.country.features
+    .map((feature) => ({ feature, countryId: countryIdFromFeature(feature) }))
+    .filter(filterFn)
+    .forEach(({ feature, countryId }) => {
+      const displayCountryId = countryCoverageId(countryId);
+      if (!displayCountryId || displayCountryId === "imported") return;
+      if (!grouped.has(displayCountryId)) grouped.set(displayCountryId, { sourceIds: [], polygons: [] });
+      const group = grouped.get(displayCountryId);
+      group.sourceIds.push(countryId);
+      group.polygons.push(...geometryToPolygons(feature.geometry));
+    });
+  return {
+    type: "FeatureCollection",
+    features: Array.from(grouped.entries()).map(([displayCountryId, group]) => {
+      const country = getCountry(displayCountryId);
+      return {
+        type: "Feature",
+        properties: { id: displayCountryId, sourceCountryIds: group.sourceIds.join(","), name: country.name, depth: depthFn(displayCountryId), kind },
+        geometry: { type: "MultiPolygon", coordinates: group.polygons },
+      };
+    }),
   };
 }
 
@@ -2401,7 +2761,7 @@ function adminBoundaryKeysToShow() {
 
 function subadminBoundaryKeysToShow() {
   const visitedKeys = Array.from(uniqueVisitedCountries()).map(subadminKeyForCountry).filter(Boolean);
-  return Array.from(new Set(visitedKeys.filter(Boolean)));
+  return Array.from(new Set(["china2", ...visitedKeys.filter(Boolean)]));
 }
 
 function customBoundaryFor(level, countryOrRegion, unitName = "") {
@@ -2482,11 +2842,9 @@ function renderGeoMap() {
       markerZoomAnimation: false,
     }).setView([25, 20], 2);
 
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 18,
-      updateWhenZooming: false,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    }).addTo(leafletMap);
+    applyLeafletProvider();
+  } else {
+    applyLeafletProvider();
   }
 
   renderLeafletLayers();
@@ -2497,6 +2855,27 @@ function renderGeoMap() {
       leafletDidInitialFit = true;
     }
   }, 80);
+}
+
+function applyLeafletProvider() {
+  if (!leafletMap || !window.L) return;
+  const providerId = activeMapProvider();
+  if (leafletBaseLayer?._travelMapProvider === providerId) return;
+  if (leafletBaseLayer) leafletMap.removeLayer(leafletBaseLayer);
+  const provider = mapProviders[providerId] || mapProviders.osm;
+  leafletBaseLayer = providerId.startsWith("bing")
+    ? new (L.TileLayer.extend({
+      getTileUrl(coords) {
+        return bingTileUrl(providerId === "bingAerial" ? "aerial" : "road", coords.z, coords.x, coords.y);
+      },
+    }))("", { maxZoom: 18, updateWhenZooming: false, attribution: provider.attribution })
+    : L.tileLayer(provider.tiles[0], {
+      maxZoom: 18,
+      updateWhenZooming: false,
+      attribution: provider.attribution,
+    });
+  leafletBaseLayer._travelMapProvider = providerId;
+  leafletBaseLayer.addTo(leafletMap);
 }
 
 function fitMapToVisitedPlaces() {
@@ -2529,6 +2908,7 @@ function renderMapLibreMap() {
   const center = focusPlace && Number.isFinite(focusPlace.lng) && Number.isFinite(focusPlace.lat)
     ? [focusPlace.lng, focusPlace.lat]
     : [105, 35];
+  const provider = activeMapProvider();
 
   if (!mapLibreMap) {
     setLoadingDebug("使用 MapLibre 显示底图", "pending");
@@ -2537,23 +2917,9 @@ function renderMapLibreMap() {
       center,
       zoom: 4.6,
       attributionControl: true,
-      style: {
-        version: 8,
-        sources: {
-          osm: {
-            type: "raster",
-            tiles: [
-              "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png",
-              "https://b.tile.openstreetmap.org/{z}/{x}/{y}.png",
-              "https://c.tile.openstreetmap.org/{z}/{x}/{y}.png",
-            ],
-            tileSize: 256,
-            attribution: "© OpenStreetMap contributors",
-          },
-        },
-        layers: [{ id: "osm", type: "raster", source: "osm" }],
-      },
+      style: mapLibreBaseStyle(provider),
     });
+    mapLibreMap._travelMapProvider = provider;
     mapLibreMap.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-left");
     mapLibreMap.on("load", () => {
       setLoadingDebug("使用 MapLibre 显示底图", "done");
@@ -2567,8 +2933,38 @@ function renderMapLibreMap() {
     return;
   }
 
+  applyMapLibreProvider(provider);
   mapLibreMap.resize();
   if (mapLibreMap.isStyleLoaded()) renderMapLibreLayers();
+}
+
+function mapLibreBaseStyle(providerId) {
+  if (providerId.startsWith("bing")) registerBingMapLibreProtocol();
+  const provider = mapProviders[providerId] || mapProviders.osm;
+  return {
+    version: 8,
+    sources: {
+      basemap: {
+        type: "raster",
+        tiles: provider.tiles,
+        tileSize: 256,
+        attribution: provider.attribution,
+      },
+    },
+    layers: [{ id: "basemap", type: "raster", source: "basemap" }],
+  };
+}
+
+function applyMapLibreProvider(provider) {
+  if (!mapLibreMap || mapLibreMap._travelMapProvider === provider) return;
+  mapLibreMap._travelMapProvider = provider;
+  mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false };
+  mapLibreSourceDataRefs.clear();
+  mapLibreMarkerSignature = "";
+  mapLibreMap.setStyle(mapLibreBaseStyle(provider));
+  mapLibreMap.once("styledata", () => {
+    if (mapLibreMap?.isStyleLoaded()) renderMapLibreLayers();
+  });
 }
 
 function setMapLibreSource(id, data) {
@@ -2620,6 +3016,7 @@ function renderMapLibreLayers() {
   removeMapLibreLayer("map-background-context-fill");
   removeMapLibreLayer("visited-countries-line");
   removeMapLibreLayer("visited-countries-fill");
+  removeMapLibreLayer("country-click-fill");
   removeMapLibreSource("visited-area-centers");
   removeMapLibreSource("imported-shapes");
   removeMapLibreSource("imported-paths");
@@ -2629,11 +3026,14 @@ function renderMapLibreLayers() {
   removeMapLibreSource("admin-country-context");
   removeMapLibreSource("map-background-context");
   removeMapLibreSource("visited-countries");
+  removeMapLibreSource("country-click");
 
   setMapLibreSource("map-background-context", cachedMapGeoJson("map-background-context", mapBackgroundContextGeoJson));
   addMapLibreFillLayer("map-background-context", "map-background-context-fill", "map-background-context-line", 0.18, 1);
 
   if (state.boundaryLevel === "country") {
+    setMapLibreSource("country-click", cachedMapGeoJson("country-click", allCountryClickGeoJson));
+    addMapLibreClickFillLayer("country-click", "country-click-fill");
     setMapLibreSource("visited-countries", cachedMapGeoJson("countries", countryGeoJson));
     addMapLibreFillLayer("visited-countries", "visited-countries-fill", "visited-countries-line", 0.2, 1.15);
   }
@@ -2789,6 +3189,19 @@ function renderChecklistMapDetail(key, item) {
 }
 
 function bindMapLibreLayerHandlers() {
+  if (!mapLibreLayerHandlersBound.country && mapLibreMap.getLayer("country-click-fill")) {
+    mapLibreLayerHandlersBound.country = true;
+    mapLibreMap.on("click", "country-click-fill", (event) => {
+      const feature = event.features?.[0];
+      if (feature) handleCountryClick(feature);
+    });
+    mapLibreMap.on("mouseenter", "country-click-fill", () => {
+      mapLibreMap.getCanvas().style.cursor = "pointer";
+    });
+    mapLibreMap.on("mouseleave", "country-click-fill", () => {
+      mapLibreMap.getCanvas().style.cursor = "";
+    });
+  }
   if (!mapLibreLayerHandlersBound.admin && mapLibreMap.getLayer("visited-regions-fill")) {
     mapLibreLayerHandlersBound.admin = true;
     mapLibreMap.on("click", "visited-regions-fill", (event) => {
@@ -2841,6 +3254,18 @@ function addMapLibreFillLayer(sourceId, fillId, lineId, opacity, lineWidth, geom
       "line-color": lineColor,
       "line-width": lineWidth,
       "line-opacity": lineOpacity,
+    },
+  });
+}
+
+function addMapLibreClickFillLayer(sourceId, fillId) {
+  mapLibreMap.addLayer({
+    id: fillId,
+    type: "fill",
+    source: sourceId,
+    paint: {
+      "fill-color": "#ffffff",
+      "fill-opacity": 0.01,
     },
   });
 }
@@ -2902,6 +3327,13 @@ function renderLeafletLayers() {
   }).addTo(leafletLayers);
 
   if (state.boundaryLevel === "country") {
+    L.geoJSON(allCountryClickGeoJson(), {
+      style: () => ({ color: "transparent", weight: 0, fillColor: "#ffffff", fillOpacity: 0.01 }),
+      onEachFeature: (feature, layer) => {
+        layer.on("click", () => renderCountryDetail(feature.properties.id));
+        layer.bindTooltip(feature.properties.name, { sticky: true });
+      },
+    }).addTo(leafletLayers);
     L.geoJSON(countryGeoJson(), {
       style: leafletBoundaryStyle,
       onEachFeature: (feature, layer) => {
@@ -3013,7 +3445,11 @@ function leafletOutlineStyle(feature) {
 
 function renderCountryDetail(countryId) {
   const country = getCountry(countryId);
-  const visits = visitedPlaces().filter((visit) => visit.place.country === countryId);
+  const normalizedCountryId = countryCoverageId(countryId);
+  const visits = visitedPlaces().filter((visit) => countryCoverageId(visit.place.country) === normalizedCountryId);
+  const manual = Boolean(manualCountryPlaceFor(countryId));
+  const canToggle = !bestDepthForCountry(countryId) || manual;
+  const action = canToggle ? `<button class="detail-action" data-country-toggle="${countryId}" type="button">${manual ? t("unvisit") : t("markVisited")}</button>` : "";
   $("#mapDetail").classList.remove("hidden");
   $("#mapDetail").innerHTML = `
     <p class="eyebrow">${t("countryDetail")}</p>
@@ -3024,7 +3460,14 @@ function renderCountryDetail(countryId) {
       <div><dt>${t("region")}</dt><dd>${new Set(visits.map((v) => v.place.unit).filter(Boolean)).size}</dd></div>
       <div><dt>${t("worldHeritage")}</dt><dd>${visits.filter((v) => v.place.checklist.includes("世界遗产")).length}</dd></div>
     </dl>
-    <div class="tag-row">${visits.map((visit) => `<span class="tag">${visit.place.name}</span>`).join("") || `<span class="tag">${t("noVisitList")}</span>`}</div>`;
+    <div class="tag-row">${visits.map((visit) => `<span class="tag">${visit.place.name}</span>`).join("") || `<span class="tag">${t("noVisitList")}</span>`}</div>
+    ${action}`;
+}
+
+function handleCountryClick(feature) {
+  const countryId = countryCoverageId(feature.properties?.id || countryIdFromFeature(feature));
+  if (!countryId || countryId === "imported") return;
+  renderCountryDetail(countryId);
 }
 
 function handleAdminRegionClick(feature) {
@@ -3156,6 +3599,7 @@ function toggleManualAdminRegion(countryId, regionName, isSubadmin, center) {
 function renderAdminRegionDetail(countryId, regionName, visits, options = {}) {
   const center = Array.isArray(options.center) ? options.center : [];
   const canToggle = options.manual || visits.length === 0;
+  const displayRegionName = options.isSubadmin ? chinaSubadminDisplayName(regionName) : chinaProvinceDisplayName(regionName);
   const action = canToggle ? `
     <button class="detail-action" data-admin-toggle="1" data-country="${countryId}" data-region="${encodeURIComponent(regionName)}" data-subadmin="${options.isSubadmin ? "1" : "0"}" data-lng="${center[0] ?? ""}" data-lat="${center[1] ?? ""}" type="button">
       ${options.manual ? t("unvisit") : t("markVisited")}
@@ -3163,7 +3607,7 @@ function renderAdminRegionDetail(countryId, regionName, visits, options = {}) {
   $("#mapDetail").classList.remove("hidden");
   $("#mapDetail").innerHTML = `
     <p class="eyebrow">${t("adminRegion")}</p>
-    <h3>${regionName}</h3>
+    <h3>${displayRegionName}</h3>
     <dl>
       <div><dt>${t("countryRegion")}</dt><dd>${getCountry(countryId).name}</dd></div>
       <div><dt>${t("status")}</dt><dd>${options.manual || visits.length ? t("checked") : t("unvisited")}</dd></div>
@@ -3249,7 +3693,7 @@ function renderCheckinsPage() {
   $("#manualChinaProvinceList").innerHTML = provinceRows.map((unit) => {
     const visited = coverageHasRegion("china", unit.name);
     const manual = Boolean(manualAdminPlaceFor("cn", unit.name));
-    return manualButtonHtml({ label: unit.name, visited, manual, action: `admin:cn:${encodeURIComponent(unit.name)}:0`, disabled: visited && !manual });
+    return manualButtonHtml({ label: chinaProvinceDisplayName(unit.name), visited, manual, action: `admin:cn:${encodeURIComponent(unit.name)}:0`, disabled: visited && !manual });
   }).join("");
 
   const cityRows = chinaSubadminUnitsForManualList();
@@ -3336,12 +3780,12 @@ function renderChinaSubadminGroups(rows) {
   return Object.entries(grouped).map(([province, units]) => {
     const done = units.filter((unit) => coverageHasSubregion("china2", unit.name)).length;
     return `<details class="manual-group manual-city-group" open>
-      <summary><strong>${province}</strong><span>${done}/${units.length}</span></summary>
+      <summary><strong>${chinaProvinceDisplayName(province)}</strong><span>${done}/${units.length}</span></summary>
       <div class="manual-list">
         ${units.map((unit) => {
           const visited = coverageHasSubregion("china2", unit.name);
           const manual = Boolean(manualAdminPlaceFor("cn", unit.name));
-          return manualButtonHtml({ label: unit.name, visited, manual, action: `admin:cn:${encodeURIComponent(unit.name)}:1`, disabled: visited && !manual });
+          return manualButtonHtml({ label: chinaSubadminDisplayName(unit.name), visited, manual, action: `admin:cn:${encodeURIComponent(unit.name)}:1`, disabled: visited && !manual });
         }).join("")}
       </div>
     </details>`;
@@ -3353,7 +3797,7 @@ function renderCountryGroups(rows) {
   return Object.entries(grouped).map(([continent, countriesInContinent]) => {
     const done = countriesInContinent.filter((country) => coverageHasCountry(country.id)).length;
     return `<details class="manual-group" ${done ? "open" : ""}>
-      <summary><strong>${continent}</strong><span>${done}/${countriesInContinent.length}</span></summary>
+      <summary><strong>${continentDisplayName(continent)}</strong><span>${done}/${countriesInContinent.length}</span></summary>
       <div class="manual-grid">
         ${countriesInContinent.map((country) => {
           const visited = coverageHasCountry(country.id);
@@ -3377,13 +3821,16 @@ function groupBy(items, keyFn) {
 function renderPlaceDetail(placeId) {
   const place = getPlace(placeId);
   const visit = bestVisitForPlace(placeId);
+  const regionLabel = countryCoverageId(place.country) === "cn"
+    ? (place.subunit ? chinaSubadminDisplayName(place.subunit) : chinaProvinceDisplayName(place.unit))
+    : place.unit;
   $("#mapDetail").classList.remove("hidden");
   $("#mapDetail").innerHTML = `
     <p class="eyebrow">${t("mapPoint")}</p>
     <h3>${place.name}</h3>
     <dl>
       <div><dt>${t("countryRegion")}</dt><dd>${getCountry(place.country).name}</dd></div>
-      <div><dt>${t("region")}</dt><dd>${place.unit || t("unassigned")}</dd></div>
+      <div><dt>${t("region")}</dt><dd>${regionLabel || t("unassigned")}</dd></div>
       <div><dt>${t("status")}</dt><dd>${visit ? t("checked") : t("unvisited")}</dd></div>
       <div><dt>${t("coordinates")}</dt><dd>${Number.isFinite(place.lat) ? `${place.lat.toFixed(2)}, ${place.lng.toFixed(2)}` : t("none")}</dd></div>
     </dl>
@@ -4623,6 +5070,8 @@ function isMapPageActive() {
 function renderMapControls() {
   const level = $("#boundaryLevel");
   if (level) level.value = state.boundaryLevel || "country";
+  const provider = $("#mapProvider");
+  if (provider) provider.value = normalizeMapProviderMode(state.mapProviderMode);
   const overlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
   state.mapOverlays = overlays;
   const showCheckins = $("#showCheckinsOnMap");
@@ -4702,6 +5151,7 @@ renderMetrics();
 renderDashboardAchievements();
 renderNextStops();
 showPage(location.hash.replace("#", "") || "world");
+detectMapProviderByIp();
 ensureBoundaryDataForLevel(state.boundaryLevel || "country");
 setLoadingDebug("读取完整旅行数据", "pending");
 loadStateFromIndexedDb().finally(() => {
@@ -4711,6 +5161,7 @@ loadStateFromIndexedDb().finally(() => {
   ensureBoundaryDataForLevel(state.boundaryLevel || "country");
   renderAll();
   showPage(location.hash.replace("#", "") || "world");
+  detectMapProviderByIp();
   clearLoadingDebugSoon();
 });
 
@@ -4760,6 +5211,12 @@ $("#checkins")?.addEventListener("click", (event) => {
 });
 $("#boundaryLevel").addEventListener("change", (event) => {
   state.boundaryLevel = event.target.value;
+  renderMapControls();
+  renderGeoMap();
+  saveUiStateSoon();
+});
+$("#mapProvider")?.addEventListener("change", (event) => {
+  state.mapProviderMode = normalizeMapProviderMode(event.target.value);
   renderMapControls();
   renderGeoMap();
   saveUiStateSoon();
@@ -4846,6 +5303,11 @@ $("#mapDetail").addEventListener("click", (event) => {
       adminButton.dataset.subadmin === "1",
       center.every(Number.isFinite) ? center : null
     );
+    return;
+  }
+  const countryButton = event.target.closest("[data-country-toggle]");
+  if (countryButton) {
+    toggleManualCountry(countryButton.dataset.countryToggle);
     return;
   }
   const button = event.target.closest("[data-unvisit]");

@@ -32,7 +32,7 @@
         <div class="privacy-note">
           <span data-i18n="privacyEyebrow">隐私</span>
           <strong data-i18n="privacyTitle">本地保存</strong>
-          <p data-i18n="privacyText">不会自动公开精确地点；分享导出时再选择展示范围。</p>
+          <p data-i18n="privacyText">数据只保存在本机浏览器里，不会自动上传或公开。如需备份请导出。</p>
         </div>
       </aside>
 
@@ -45,6 +45,21 @@
             </div>
 
             <section class="map-control-panel" aria-label="地图显示">
+              <label class="map-provider-control">
+                <span data-i18n="mapProvider">底图</span>
+                <select id="mapProvider">
+                  <option value="auto" data-i18n="providerAuto">自动</option>
+                  <option value="osm" data-i18n="providerOsm">OpenStreetMap</option>
+                  <option value="gaode" data-i18n="providerGaode">高德</option>
+                  <option value="gaodeSatellite" data-i18n="providerGaodeSatellite">高德卫星</option>
+                  <option value="google" data-i18n="providerGoogle">Google 街道</option>
+                  <option value="googleSatellite" data-i18n="providerGoogleSatellite">Google 卫星</option>
+                  <option value="googleTerrain" data-i18n="providerGoogleTerrain">Google 地形</option>
+                  <option value="esriSatellite" data-i18n="providerEsriSatellite">Esri 卫星</option>
+                  <option value="bingRoad" data-i18n="providerBingRoad">Bing 地图</option>
+                  <option value="bingAerial" data-i18n="providerBingAerial">Bing 卫星</option>
+                </select>
+              </label>
               <label class="map-level-control">
                 <span data-i18n="mapLevel">显示层级</span>
                 <select id="boundaryLevel">
@@ -216,6 +231,6 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-    <script src="app.js?v=78"></script>
+    <script src="app.js?v=86"></script>
   </body>
 </html>

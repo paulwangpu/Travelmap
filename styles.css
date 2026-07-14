@@ -1538,17 +1538,22 @@ button:hover {
   justify-self: end;
 }
 
+.map-control-panel .map-provider-control,
 .map-control-panel .map-level-control {
   flex: 0 0 168px;
   margin: 0;
   padding: 8px 10px;
   border: 0;
   border-right: 1px solid var(--line);
-  border-radius: 8px 0 0 8px;
   background: transparent;
   box-shadow: none;
 }
 
+.map-control-panel .map-provider-control {
+  border-radius: 8px 0 0 8px;
+}
+
+.map-control-panel .map-provider-control select,
 .map-control-panel .map-level-control select {
   padding: 8px 28px 8px 10px;
 }
@@ -1781,10 +1786,15 @@ button:hover {
     align-items: stretch;
   }
 
+  .map-control-panel .map-provider-control,
   .map-control-panel .map-level-control {
     flex: 0 0 auto;
     border-right: 0;
     border-bottom: 1px solid var(--line);
+    border-radius: 0;
+  }
+
+  .map-control-panel .map-provider-control {
     border-radius: 8px 8px 0 0;
   }
 
