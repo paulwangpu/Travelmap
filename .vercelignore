@@ -1,0 +1,11 @@
+.git
+.agents
+.codex
+.vercel
+node_modules
+release
+*.zip
+*.cmd
+tools
+travel-map-server.js
+travel-map-backup-*.json
