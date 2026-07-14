@@ -15,6 +15,12 @@ const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
 const worldCountryTotal = 195;
+const china5aOfficialTotal = 359;
+const worldHeritageCatalogTotal = 1520;
+const fixedChecklistTotals = {
+  china5a: china5aOfficialTotal,
+  worldHeritage: worldHeritageCatalogTotal,
+};
 const maxImportVisiblePoints = 1000;
 const boundarySources = {
   country: "data/countries.geojson",
@@ -51,8 +57,11 @@ let bingMapLibreProtocolRegistered = false;
 let leafletDidInitialFit = false;
 let catalogDataRequested = false;
 let catalogDataPromise = null;
-let china5aCatalogStatus = { source: "本地清单", detail: "不会联网检查更新", total: 0 };
-let worldHeritageCatalogStatus = { source: "本地清单", detail: "备用小清单", total: 0 };
+let china5aCatalogPromise = null;
+let china5aCoordinatesPromise = null;
+let china5aCatalogStatus = { source: "本地清单", detail: `${china5aOfficialTotal} 个 5A 景区`, total: china5aOfficialTotal };
+let china5aCoordinates = {};
+let worldHeritageCatalogStatus = { source: "本地清单", detail: `${worldHeritageCatalogTotal} 条记录`, total: worldHeritageCatalogTotal };
 let worldHeritageCoordinates = {};
 let boundaryData = { country: null, china: null, us: null, japan: null, admin1: null, china2: null, chinaDirect: null, tw2: null, us2: null, ru2: null };
 let boundaryLoading = { country: false, china: false, us: false, japan: false, admin1: false, china2: false, chinaDirect: false, tw2: false, us2: false, ru2: false };
@@ -622,11 +631,37 @@ const worldHeritageCountryNameAliases = {
   法兰西共和国: "法国",
   大不列颠及北爱尔兰联合王国: "英国",
   俄罗斯帝国: "俄罗斯",
+  中华人民共和国: "中国",
+  中華人民共和國: "中国",
+  中华民国: "中国",
+  中華民國: "中国",
+  中华民国大陆时期: "中国",
+  中華民國大陸時期: "中国",
+  清朝: "中国",
 };
 
 function normalizeWorldHeritageCountryName(name) {
   const value = String(name || "").trim();
   return worldHeritageCountryNameAliases[value] || value || "未分国家";
+}
+
+function worldHeritageCountryCoverageId(countryName) {
+  const normalized = normalizeWorldHeritageCountryName(countryName);
+  const namedCountry = Object.entries(countryChineseNames).find(([, name]) => name === normalized);
+  if (namedCountry) return countryCoverageId(namedCountry[0]);
+  const knownCountry = countries.find((country) => country.name === normalized || countryDisplayName(country.id) === normalized);
+  if (knownCountry) return countryCoverageId(knownCountry.id);
+  const catalogCountry = worldCountryCatalog.find((country) => country.name === normalized || countryDisplayName(country.id) === normalized);
+  if (catalogCountry) return countryCoverageId(catalogCountry.id);
+  return "";
+}
+
+function visitedWorldHeritageCountryNames(byCountry = {}) {
+  const visited = uniqueVisitedCountries();
+  return new Set(Object.keys(byCountry).filter((country) => {
+    const coverageId = worldHeritageCountryCoverageId(country);
+    return coverageId && visited.has(coverageId);
+  }));
 }
 
 const regionNameFormatter = typeof Intl !== "undefined" && Intl.DisplayNames
@@ -2371,7 +2406,7 @@ function loadCatalogData() {
       checklistCatalog.worldHeritage.byCountry = byCountry;
       worldHeritageCoordinates = coordinates;
       const countryCount = Object.keys(byCountry).length;
-      const total = data.total || checklistTotalCount("worldHeritage");
+      const total = worldHeritageCatalogTotal;
       worldHeritageCatalogStatus = {
         source: currentLanguage === "en" ? "Local Wikidata catalog" : "本地 Wikidata 清单",
         detail: currentLanguage === "en"
@@ -2385,7 +2420,7 @@ function loadCatalogData() {
       worldHeritageCatalogStatus = {
         source: currentLanguage === "en" ? "Built-in fallback catalog" : "内置备用清单",
         detail: currentLanguage === "en" ? "data/world-heritage.json was not loaded" : "未能加载 data/world-heritage.json",
-        total: checklistTotalCount("worldHeritage"),
+        total: worldHeritageCatalogTotal,
       };
     })
     .finally(() => {
@@ -2394,6 +2429,60 @@ function loadCatalogData() {
       if (isMapPageActive() && state.mapOverlays?.worldHeritage) scheduleGeoMapRender();
     });
   return catalogDataPromise;
+}
+
+function loadChina5aCatalog() {
+  if (china5aCatalogPromise) return china5aCatalogPromise;
+  china5aCatalogPromise = fetchJson("data/china-5a.json")
+    .then((data) => {
+      if (!data?.byRegion) throw new Error("invalid 5A catalog");
+      checklistCatalog.china5a.byRegion = data.byRegion;
+      const total = Number(data.total) || Object.values(data.byRegion).flat().length;
+      china5aCatalogStatus = {
+        source: currentLanguage === "en" ? "Local official catalog" : "本地完整清单",
+        detail: currentLanguage === "en" ? `${total} 5A scenic areas` : `${total} 个 5A 景区`,
+        total,
+      };
+    })
+    .catch((error) => {
+      console.warn("中国 5A 清单加载失败，使用内置备用清单", error);
+      const total = checklistItemsFor("china5a").length;
+      china5aCatalogStatus = {
+        source: currentLanguage === "en" ? "Built-in fallback catalog" : "内置备用清单",
+        detail: currentLanguage === "en" ? `${total} fallback records` : `${total} 条备用记录`,
+        total,
+      };
+    })
+    .finally(() => {
+      renderMetrics();
+      renderDashboardAchievements();
+      renderNextStops();
+      if (document.querySelector('[data-page="achievements"]')?.classList.contains("active")) renderAchievements();
+      if (isMapPageActive() && state.mapOverlays?.china5a) scheduleGeoMapRender();
+    });
+  return china5aCatalogPromise;
+}
+
+function loadChina5aCoordinates() {
+  if (china5aCoordinatesPromise) return china5aCoordinatesPromise;
+  china5aCoordinatesPromise = fetchJson("data/china-5a-coordinates.json")
+    .then((data) => {
+      china5aCoordinates = data?.coordinates || {};
+      china5aCatalogStatus = {
+        ...china5aCatalogStatus,
+        detail: currentLanguage === "en"
+          ? `${china5aOfficialTotal} 5A scenic areas, ${Object.keys(china5aCoordinates).length} local coordinates`
+          : `${china5aOfficialTotal} 个 5A 景区，${Object.keys(china5aCoordinates).length} 条本地坐标`,
+      };
+    })
+    .catch(() => {
+      china5aCoordinates = {};
+    })
+    .finally(() => {
+      if (document.querySelector('[data-page="achievements"]')?.classList.contains("active")) renderAchievements();
+      if (isMapPageActive() && state.mapOverlays?.china5a) scheduleGeoMapRender();
+    });
+  return china5aCoordinatesPromise;
 }
 
 function getMapCountries() {
@@ -3126,6 +3215,7 @@ function mapLibreMarkerRenderSignature(overlays) {
     (state.checklistMarks || []).slice().sort().join("|"),
     checklistTotalCount("china5a"),
     checklistTotalCount("worldHeritage"),
+    Object.keys(china5aCoordinates || {}).length,
     Object.keys(worldHeritageCoordinates || {}).length,
   ].join("#");
   return JSON.stringify({
@@ -3968,11 +4058,11 @@ function renderAchievements() {
     .map(([key, list]) => renderChecklistSection(key, list))
     .join("");
   $("#achievementList").innerHTML = `
-    <details class="achievement-group" open>
+    <details class="achievement-group">
       <summary>${currentLanguage === "en" ? "China 5A scenic areas" : "中国 5A 景区"}</summary>
       ${china5aHtml}
     </details>
-    <details class="achievement-group" open>
+    <details class="achievement-group">
       <summary>${currentLanguage === "en" ? "World Heritage by country" : "世界遗产（按国家）"}</summary>
       ${worldHeritageHtml}
     </details>
@@ -4084,7 +4174,7 @@ function renderChina5aSection() {
   const blocks = groups.map(([region, items]) => {
     const groupDone = items.filter((item) => isChecklistItemDone("china5a", item)).length;
     const groupId = checklistGroupId("china5a", region);
-    return `<details id="${checklistDomId("china5a", region)}" class="country-checklist china5a-province" data-checklist-group="${groupId}" ${groupDone || isChecklistGroupOpen(groupId) ? "open" : ""}>
+    return `<details id="${checklistDomId("china5a", region)}" class="country-checklist china5a-province" data-checklist-group="${groupId}">
       <summary><strong>${region}</strong><span>${groupDone}/${items.length}</span></summary>
       <div class="check-chip-grid">
         ${items.map((item) => {
@@ -4095,7 +4185,7 @@ function renderChina5aSection() {
     </details>`;
   }).join("");
   return `<section class="theme-checklist featured-checklist china5a-checklist">
-    <header><strong>${list.label}</strong><span>${done}/${allItems.length}</span></header>
+    <header><strong>${list.label}</strong><span>${done}/${checklistTotalCount("china5a")}</span></header>
     <div class="checklist-health">
       <span>${china5aCatalogStatus.source}</span>
       <span>${china5aCatalogStatus.detail}</span>
@@ -4162,7 +4252,7 @@ function renderRegionChecklistSection(key, list) {
   const blocks = Object.entries(list.byRegion).map(([region, items]) => {
     const done = items.filter((item) => isChecklistItemDone(key, item)).length;
     const groupId = checklistGroupId(key, region);
-    return `<details class="country-checklist" data-checklist-group="${groupId}" ${done || isChecklistGroupOpen(groupId) ? "open" : ""}>
+    return `<details class="country-checklist" data-checklist-group="${groupId}">
       <summary><strong>${region}</strong><span>${done}/${items.length}</span></summary>
       <div class="check-chip-grid">
         ${items.map((item) => {
@@ -4181,23 +4271,37 @@ function renderRegionChecklistSection(key, list) {
 function renderCountryChecklistSection(key, list) {
   const heritageCountryCount = Object.keys(checklistCatalog.worldHeritage.byCountry || {}).length;
   const heritageLoaded = Object.keys(worldHeritageCoordinates || {}).length > 0;
+  const visitedHeritageCountries = key === "worldHeritage" ? visitedWorldHeritageCountryNames(list.byCountry) : null;
   const heritageHealth = currentLanguage === "en"
     ? [
       heritageLoaded ? "Local Wikidata catalog" : "Built-in fallback catalog",
-      `${worldHeritageCatalogStatus.total || checklistTotalCount("worldHeritage")} records, ${heritageCountryCount} countries/regions`,
+      `${worldHeritageCatalogStatus.total || checklistTotalCount("worldHeritage")} records, showing ${visitedHeritageCountries?.size || 0}/${heritageCountryCount} visited countries/regions`,
     ]
     : [
       heritageLoaded ? "本地 Wikidata 清单" : "内置备用清单",
-      `${worldHeritageCatalogStatus.total || checklistTotalCount("worldHeritage")} 条记录，${heritageCountryCount} 个国家/地区`,
+      `${worldHeritageCatalogStatus.total || checklistTotalCount("worldHeritage")} 条记录，仅显示已点亮国家/地区：${visitedHeritageCountries?.size || 0}/${heritageCountryCount}`,
     ];
   const health = key === "worldHeritage" ? `<div class="checklist-health">
       <span>${heritageHealth[0]}</span>
       <span>${heritageHealth[1]}</span>
+      <span>${currentLanguage === "en" ? "Light up a country first to show its World Heritage list here." : "需要先在点亮页或地图点亮国家/地区，才会显示对应世界遗产清单。"}</span>
     </div>` : "";
-  const countryBlocks = Object.entries(list.byCountry).map(([country, items]) => {
+  const countryEntries = Object.entries(list.byCountry)
+    .filter(([country]) => key !== "worldHeritage" || visitedHeritageCountries.has(country))
+    .sort(([leftCountry, leftItems], [rightCountry, rightItems]) => {
+      const leftIsChina = leftCountry === "中国" ? 1 : 0;
+      const rightIsChina = rightCountry === "中国" ? 1 : 0;
+      if (leftIsChina !== rightIsChina) return rightIsChina - leftIsChina;
+      const leftDone = leftItems.filter((item) => isChecklistItemDone(key, item)).length;
+      const rightDone = rightItems.filter((item) => isChecklistItemDone(key, item)).length;
+      if (leftDone !== rightDone) return rightDone - leftDone;
+      if (leftItems.length !== rightItems.length) return rightItems.length - leftItems.length;
+      return leftCountry.localeCompare(rightCountry, "zh-Hans-CN");
+    });
+  const countryBlocks = countryEntries.map(([country, items]) => {
     const done = items.filter((item) => isChecklistItemDone(key, item)).length;
     const groupId = checklistGroupId(key, country);
-    return `<details class="country-checklist" data-checklist-group="${groupId}" ${country === "中国" || isChecklistGroupOpen(groupId) ? "open" : ""}>
+    return `<details class="country-checklist" data-checklist-group="${groupId}">
       <summary><strong>${country}</strong><span>${done}/${items.length}</span></summary>
       <div class="check-chip-grid">
         ${items.map((item) => {
@@ -4207,9 +4311,13 @@ function renderCountryChecklistSection(key, list) {
       </div>
     </details>`;
   }).join("");
+  const emptyWorldHeritage = key === "worldHeritage" && !countryBlocks
+    ? `<p class="muted small">${currentLanguage === "en" ? "No country is lit yet. Go to Light Up or click a country on the map first." : "还没有可显示的世界遗产国家清单。请先到“点亮”页面，或在地图上点亮国家/地区。"}</p>`
+    : "";
   return `<section class="theme-checklist">
     <header><strong>${list.label}</strong><span>${checklistDoneCount(key)}/${checklistTotalCount(key)}</span></header>
     ${health}
+    ${emptyWorldHeritage}
     <div class="country-checklist-list">${countryBlocks}</div>
   </section>`;
 }
@@ -4223,6 +4331,7 @@ function checklistDoneCount(key) {
 }
 
 function checklistTotalCount(key) {
+  if (Object.prototype.hasOwnProperty.call(fixedChecklistTotals, key)) return fixedChecklistTotals[key];
   return checklistItemsFor(key).length;
 }
 
@@ -4370,7 +4479,7 @@ function checklistCoordinateFor(item) {
     englishNameInParentheses(item),
     cleanEnglishParkName(englishNameInParentheses(item)),
   ].filter(Boolean);
-  return candidates.map((name) => checklistPlaceCoordinates[name] || worldHeritageCoordinates[name]).find(Boolean);
+  return candidates.map((name) => china5aCoordinates[name] || checklistPlaceCoordinates[name] || worldHeritageCoordinates[name]).find(Boolean);
 }
 
 function englishNameInParentheses(value) {
@@ -5118,6 +5227,7 @@ function showPage(pageId) {
   }
   document.querySelector(`[data-page="${target}"]`)?.scrollIntoView({ block: "start", inline: "nearest" });
   if (target === "world") {
+    if (state.mapOverlays?.china5a) Promise.all([loadChina5aCatalog(), loadChina5aCoordinates()]).finally(renderGeoMap);
     if (state.mapOverlays?.worldHeritage) loadCatalogData();
     setTimeout(() => {
       if (mapLibreMap) mapLibreMap.resize();
@@ -5133,7 +5243,10 @@ function showPage(pageId) {
   if (target === "checkins") {
     preloadBoundaryData(false, ["country", "china", "admin1", "china2", "chinaDirect", "tw2"]).finally(renderCheckinsPage);
   }
-  if (target === "achievements") loadCatalogData();
+  if (target === "achievements") {
+    loadCatalogData();
+    Promise.all([loadChina5aCatalog(), loadChina5aCoordinates()]);
+  }
   if (target === "imports") {
     renderImportSummary();
     renderDataInventory();
@@ -5145,6 +5258,7 @@ loadState();
 setLoadingDebug("读取本地快速状态", "done");
 moveMapLevelControlToToolbar();
 applyLanguage();
+loadChina5aCatalog();
 renderMapControls();
 renderLegend();
 renderMetrics();
@@ -5237,7 +5351,8 @@ $("#showChina5aOnMap")?.addEventListener("change", (event) => {
   state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
   state.mapOverlays.china5a = event.target.checked;
   saveUiStateSoon();
-  renderGeoMap();
+  if (event.target.checked) Promise.all([loadChina5aCatalog(), loadChina5aCoordinates()]).finally(renderGeoMap);
+  else renderGeoMap();
 });
 $("#showWorldHeritageOnMap")?.addEventListener("change", (event) => {
   state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
