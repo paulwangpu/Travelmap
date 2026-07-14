@@ -156,12 +156,12 @@
                 <p class="eyebrow" data-i18n="importEyebrow">导入</p>
                 <h3 data-i18n="importTitle">导入地图或地点文件</h3>
               </div>
-              <span class="tag">GeoJSON / KML / CSV</span>
+              <span class="tag">GeoJSON / KML / CSV / Photo</span>
             </div>
             <div class="import-box">
               <label>
                 <span data-i18n="chooseFile">选择文件</span>
-                <input id="importFile" type="file" accept=".geojson,.json,.kml,.csv,text/csv,application/json" />
+                <input id="importFile" type="file" multiple accept=".geojson,.json,.kml,.csv,.jpg,.jpeg,.tif,.tiff,.heic,.heif,text/csv,application/json,image/jpeg,image/tiff,image/heic,image/heif" />
               </label>
               <label>
                 <span data-i18n="importDepth">导入后标记为</span>
@@ -171,7 +171,7 @@
                 </select>
               </label>
             </div>
-            <p class="muted small" data-i18n="csvHelp">CSV 推荐列名：name,country,unit,city,type,lat,lng,tags。没有 country/unit 时会用经纬度自动推断。</p>
+            <p class="muted small" data-i18n="csvHelp">CSV 只需要三列：名称、纬度、经度。一次最多导入 1000 个可显示点。照片导入只读取本地文件名和 EXIF GPS，不上传照片。</p>
             <div id="importSummary" class="bars"></div>
           </div>
           <div class="panel">
@@ -216,6 +216,6 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-    <script src="app.js?v=75"></script>
+    <script src="app.js?v=78"></script>
   </body>
 </html>

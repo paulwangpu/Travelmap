@@ -15,6 +15,7 @@ const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
 const worldCountryTotal = 195;
+const maxImportVisiblePoints = 1000;
 const boundarySources = {
   country: "data/countries.geojson",
   china: "data/china-provinces.geojson",
@@ -63,6 +64,7 @@ let pendingGeoMapRender = null;
 let pendingIndexedDbSave = null;
 let pendingIndexedDbPayload = null;
 let pendingCheckinRender = null;
+let checklistStatusCache = { signature: "", marked: new Set(), visited: new Set() };
 const admin1RegionGroupCountries = new Set(["fr", "it"]);
 const subadminConfigs = {
   china2: { countryId: "cn", label: "China prefecture-level units" },
@@ -115,7 +117,7 @@ const translations = {
     chooseFile: "选择文件",
     importDepth: "导入后标记为",
     importOnly: "仅导入",
-    csvHelp: "CSV 推荐列名：name,country,unit,city,type,lat,lng,tags。没有 country/unit 时会用经纬度自动推断。",
+    csvHelp: "CSV 只需要三列：名称、纬度、经度。也支持 name,lat,lng / longitude；其他列会忽略。一次最多导入 1000 个可显示点。照片导入只读取本地文件名和 EXIF GPS，不上传照片。",
     archiveEyebrow: "存档",
     archiveTitle: "数据存档",
     exportArchive: "导出存档",
@@ -201,7 +203,7 @@ const translations = {
     chooseFile: "Choose file",
     importDepth: "After import",
     importOnly: "Import only",
-    csvHelp: "Recommended CSV columns: name,country,unit,city,type,lat,lng,tags. Missing country/unit will be inferred from coordinates.",
+    csvHelp: "CSV only needs three columns: name, latitude, longitude. Chinese headers 名称、纬度、经度 are supported; extra columns are ignored. Up to 1000 visible points per import. Photo import reads local filename and EXIF GPS only, without uploading photos.",
     archiveEyebrow: "Archive",
     archiveTitle: "Data archive",
     exportArchive: "Export archive",
@@ -1616,6 +1618,39 @@ function canonicalPlaceKey(value) {
 function placeMatchesName(place, name) {
   const target = canonicalPlaceKey(name);
   return canonicalPlaceKey(place.name) === target || canonicalPlaceKey(place.type) === target || place.checklist?.some((item) => canonicalPlaceKey(item) === target);
+}
+
+function visitedChecklistKeys() {
+  const keys = new Set();
+  const visitedIds = new Set((state.visits || []).map((visit) => visit.placeId));
+  places.forEach((place) => {
+    if (!visitedIds.has(place.id)) return;
+    [place.name, place.type, ...(place.checklist || [])].forEach((value) => {
+      const key = canonicalPlaceKey(value);
+      if (key) keys.add(key);
+    });
+  });
+  return keys;
+}
+
+function checklistMarkKeys() {
+  return new Set((state.checklistMarks || []).map((mark) => canonicalPlaceKey(mark.split(":").slice(1).join(":"))).filter(Boolean));
+}
+
+function checklistStatusKeys() {
+  const signature = [
+    (state.visits || []).map((visit) => `${visit.placeId}:${visit.depth || 0}`).sort().join("|"),
+    (state.checklistMarks || []).slice().sort().join("|"),
+    places.map((place) => `${place.id}:${place.name}:${place.type || ""}:${(place.checklist || []).join(",")}`).sort().join("|"),
+  ].join("##");
+  if (checklistStatusCache.signature !== signature) {
+    checklistStatusCache = {
+      signature,
+      marked: checklistMarkKeys(),
+      visited: visitedChecklistKeys(),
+    };
+  }
+  return checklistStatusCache;
 }
 
 function unvisitPlace(placeId) {
@@ -3733,7 +3768,11 @@ function renderCountryChecklistSection(key, list) {
 }
 
 function checklistDoneCount(key) {
-  return checklistItemsFor(key).filter((item) => isChecklistItemDone(key, item)).length;
+  const { marked, visited } = checklistStatusKeys();
+  return checklistItemsFor(key).filter((item) => {
+    const itemKey = canonicalPlaceKey(item);
+    return marked.has(itemKey) || visited.has(itemKey);
+  }).length;
 }
 
 function checklistTotalCount(key) {
@@ -3748,8 +3787,9 @@ function checklistItemsFor(key) {
 }
 
 function isChecklistItemDone(key, item) {
-  return state.checklistMarks.includes(checklistId(key, item))
-    || visitedPlaces().some((visit) => placeMatchesName(visit.place, item));
+  const itemKey = canonicalPlaceKey(item);
+  const { marked, visited } = checklistStatusKeys();
+  return marked.has(itemKey) || visited.has(itemKey);
 }
 
 function checklistId(key, item) {
@@ -3931,23 +3971,52 @@ function renderNextStops() {
 }
 
 async function handleImport(event) {
-  const file = event.target.files?.[0];
-  if (!file) return;
+  const files = Array.from(event.target.files || []);
+  if (!files.length) return;
   try {
-    const text = await file.text();
-    const extension = file.name.split(".").pop().toLowerCase();
-    if (extension === "json") {
-      const maybeArchive = JSON.parse(text);
-      if (isArchivePayload(maybeArchive)) {
-        restoreArchivePayload(maybeArchive);
-        saveState();
-        renderAll();
-        showToast(`已恢复存档：${file.name}`);
-        return;
+    const jobs = [];
+    const photoPlaces = [];
+    let skippedPhotos = 0;
+    let restoredArchives = 0;
+    for (const file of files) {
+      const extension = file.name.split(".").pop().toLowerCase();
+      if (isPhotoFile(file, extension)) {
+        const photoPlace = await parsePhotoFile(file);
+        if (!photoPlace) {
+          skippedPhotos += 1;
+          continue;
+        }
+        photoPlaces.push(photoPlace);
+        continue;
       }
+      const text = await file.text();
+      if (extension === "json") {
+        const maybeArchive = JSON.parse(text);
+        if (isArchivePayload(maybeArchive)) {
+          restoreArchivePayload(maybeArchive);
+          saveState();
+          renderAll();
+          restoredArchives += 1;
+          continue;
+        }
+      }
+      jobs.push({ places: parseImportFile(text, extension), extension, fileName: file.name });
     }
-    const imported = importPlacesFromText(text, extension, file.name, Number($("#importDepth").value));
-    showToast(`已导入 ${imported.length} 个地点/shape，并自动点亮相应地区`);
+    if (photoPlaces.length) {
+      jobs.push({ places: photoPlaces, extension: "photo", fileName: photoImportBatchName(photoPlaces.length) });
+    }
+    const visiblePointCount = jobs.flatMap((job) => job.places).filter((place) => !place.shapeOnly).length;
+    if (visiblePointCount > maxImportVisiblePoints) {
+      throw new Error(`一次导入包含 ${visiblePointCount} 个可显示点，超过上限 ${maxImportVisiblePoints}。请只导入需要显示的点，或分批导入。`);
+    }
+    let totalImported = 0;
+    jobs.forEach((job) => {
+      const imported = importPlaces(job.places, job.extension, job.fileName, Number($("#importDepth").value));
+      totalImported += imported.length;
+    });
+    const skippedText = skippedPhotos ? `，${skippedPhotos} 张照片没有 GPS 已跳过` : "";
+    const archiveText = restoredArchives ? `，已恢复 ${restoredArchives} 个存档` : "";
+    showToast(`已导入 ${totalImported} 个地点/shape${skippedText}${archiveText}，并自动点亮相应地区`);
   } catch (error) {
     showToast(`导入失败：${error.message}`);
   } finally {
@@ -3955,8 +4024,18 @@ async function handleImport(event) {
   }
 }
 
+function photoImportBatchName(count) {
+  const date = new Date().toISOString().slice(0, 10);
+  return `照片导入 ${date}（${count} 张有 GPS）`;
+}
+
 function importPlacesFromText(text, extension, fileName = `import.${extension}`, depth = 2) {
   const imported = parseImportFile(text, extension);
+  return importPlaces(imported, extension, fileName, depth);
+}
+
+function importPlaces(imported, extension, fileName, depth = 2) {
+  if (!imported.length) return imported;
   const createdIds = [];
   const importId = `import-${slugify(fileName)}-${Date.now()}`;
   imported.forEach((place) => {
@@ -4078,6 +4157,122 @@ function parseImportFile(text, extension) {
   throw new Error("暂不支持该格式");
 }
 
+function isPhotoFile(file, extension = "") {
+  return file.type?.startsWith("image/")
+    || ["jpg", "jpeg", "tif", "tiff", "heic", "heif"].includes(String(extension || "").toLowerCase());
+}
+
+async function parsePhotoFile(file) {
+  const buffer = await file.arrayBuffer();
+  const gps = readExifGps(buffer);
+  if (!gps) return null;
+  return normalizeImportedPlace({
+    name: file.name.replace(/\.[^.]+$/, "") || "照片地点",
+    country: "",
+    unit: "",
+    city: "",
+    type: "照片",
+    lat: gps.lat,
+    lng: gps.lng,
+    tags: "照片",
+    checklist: "",
+    geometryType: "Photo EXIF GPS",
+  });
+}
+
+function readExifGps(buffer) {
+  const view = new DataView(buffer);
+  if (view.byteLength < 12) return null;
+  if (view.getUint16(0, false) === 0xffd8) return readJpegExifGps(view);
+  const tiffGps = readTiffGps(view, 0);
+  return tiffGps;
+}
+
+function readJpegExifGps(view) {
+  let offset = 2;
+  while (offset + 4 < view.byteLength) {
+    if (view.getUint8(offset) !== 0xff) return null;
+    const marker = view.getUint8(offset + 1);
+    const size = view.getUint16(offset + 2, false);
+    if (marker === 0xe1 && offset + 4 + size <= view.byteLength) {
+      const exifHeader = asciiFromView(view, offset + 4, 6);
+      if (exifHeader === "Exif\0\0") {
+        return readTiffGps(view, offset + 10);
+      }
+    }
+    offset += 2 + size;
+  }
+  return null;
+}
+
+function readTiffGps(view, tiffOffset) {
+  if (tiffOffset + 8 > view.byteLength) return null;
+  const endian = asciiFromView(view, tiffOffset, 2);
+  const littleEndian = endian === "II";
+  if (!littleEndian && endian !== "MM") return null;
+  if (view.getUint16(tiffOffset + 2, littleEndian) !== 42) return null;
+  const ifd0Offset = view.getUint32(tiffOffset + 4, littleEndian);
+  const gpsIfdOffset = readIfdValue(view, tiffOffset, tiffOffset + ifd0Offset, 0x8825, littleEndian)?.valueOffset;
+  if (!gpsIfdOffset) return null;
+  const gpsIfd = tiffOffset + gpsIfdOffset;
+  const latRef = readExifAsciiValue(view, tiffOffset, gpsIfd, 1, littleEndian);
+  const lat = readExifRationalTriplet(view, tiffOffset, gpsIfd, 2, littleEndian);
+  const lngRef = readExifAsciiValue(view, tiffOffset, gpsIfd, 3, littleEndian);
+  const lng = readExifRationalTriplet(view, tiffOffset, gpsIfd, 4, littleEndian);
+  if (!lat || !lng) return null;
+  const latitude = dmsToDecimal(lat) * (latRef === "S" ? -1 : 1);
+  const longitude = dmsToDecimal(lng) * (lngRef === "W" ? -1 : 1);
+  if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) return null;
+  return { lat: latitude, lng: longitude };
+}
+
+function readIfdValue(view, tiffOffset, ifdOffset, targetTag, littleEndian) {
+  if (ifdOffset + 2 > view.byteLength) return null;
+  const count = view.getUint16(ifdOffset, littleEndian);
+  for (let index = 0; index < count; index += 1) {
+    const entry = ifdOffset + 2 + index * 12;
+    if (entry + 12 > view.byteLength) return null;
+    const tag = view.getUint16(entry, littleEndian);
+    if (tag !== targetTag) continue;
+    const type = view.getUint16(entry + 2, littleEndian);
+    const itemCount = view.getUint32(entry + 4, littleEndian);
+    const valueOffset = view.getUint32(entry + 8, littleEndian);
+    return { type, itemCount, valueOffset, entryValueOffset: entry + 8 };
+  }
+  return null;
+}
+
+function readExifAsciiValue(view, tiffOffset, ifdOffset, tag, littleEndian) {
+  const entry = readIfdValue(view, tiffOffset, ifdOffset, tag, littleEndian);
+  if (!entry) return "";
+  const offset = entry.itemCount <= 4 ? entry.entryValueOffset : tiffOffset + entry.valueOffset;
+  return asciiFromView(view, offset, entry.itemCount).replace(/\0/g, "").trim();
+}
+
+function readExifRationalTriplet(view, tiffOffset, ifdOffset, tag, littleEndian) {
+  const entry = readIfdValue(view, tiffOffset, ifdOffset, tag, littleEndian);
+  if (!entry || entry.type !== 5 || entry.itemCount < 3) return null;
+  const offset = tiffOffset + entry.valueOffset;
+  if (offset + 24 > view.byteLength) return null;
+  return [0, 1, 2].map((index) => {
+    const base = offset + index * 8;
+    const numerator = view.getUint32(base, littleEndian);
+    const denominator = view.getUint32(base + 4, littleEndian);
+    return denominator ? numerator / denominator : 0;
+  });
+}
+
+function dmsToDecimal(values) {
+  return values[0] + values[1] / 60 + values[2] / 3600;
+}
+
+function asciiFromView(view, offset, length) {
+  if (offset < 0 || offset + length > view.byteLength) return "";
+  let output = "";
+  for (let index = 0; index < length; index += 1) output += String.fromCharCode(view.getUint8(offset + index));
+  return output;
+}
+
 function parseGeoJson(text) {
   const data = JSON.parse(text);
   if (isArchivePayload(data)) throw new Error("这是拓界足迹存档，请使用“导入存档”或直接在导入入口恢复");
@@ -4157,22 +4352,51 @@ function parseKmlCoordinates(text) {
 function parseCsv(text) {
   const rows = text.trim().split(/\r?\n/).filter(Boolean).map(parseCsvLine);
   if (rows.length < 2) return [];
-  const headers = rows[0].map((header) => header.trim().toLowerCase());
+  const headers = rows[0].map((header) => normalizeCsvHeader(header));
   return rows.slice(1).map((row, index) => {
     const record = Object.fromEntries(headers.map((header, cellIndex) => [header, row[cellIndex] || ""]));
+    const lat = csvNumber(record.lat);
+    const lng = csvNumber(record.lng);
     return normalizeImportedPlace({
-      name: record.name || record["名称"] || `CSV Place ${index + 1}`,
-      country: record.country || record["国家"] || "",
-      unit: record.unit || record.province || record.state || record["省"] || "",
-      city: record.city || record["城市"] || "",
-      type: record.type || record["类型"] || "CSV",
-      lat: Number(record.lat || record.latitude || record["纬度"]) || null,
-      lng: Number(record.lng || record.lon || record.longitude || record["经度"]) || null,
-      tags: record.tags || record["标签"],
-      checklist: record.checklist || record["清单"],
+      name: record.name || `CSV Place ${index + 1}`,
+      country: "",
+      unit: "",
+      city: "",
+      type: "CSV",
+      lat,
+      lng,
+      tags: "",
+      checklist: "",
       geometryType: "CSV Row",
     });
-  });
+  }).filter((place) => Number.isFinite(place.lat) && Number.isFinite(place.lng));
+}
+
+function normalizeCsvHeader(header) {
+  const value = String(header || "").trim().toLowerCase().replace(/\s+/g, "");
+  const aliases = {
+    name: "name",
+    名称: "name",
+    名字: "name",
+    地点: "name",
+    地名: "name",
+    place: "name",
+    title: "name",
+    lat: "lat",
+    latitude: "lat",
+    纬度: "lat",
+    lng: "lng",
+    lon: "lng",
+    long: "lng",
+    longitude: "lng",
+    经度: "lng",
+  };
+  return aliases[value] || value;
+}
+
+function csvNumber(value) {
+  const number = Number(String(value || "").trim());
+  return Number.isFinite(number) ? number : null;
 }
 
 function parseCsvLine(line) {
@@ -4211,8 +4435,8 @@ function flattenCoordinates(coordinates) {
 }
 
 function normalizeImportedPlace(raw) {
-  const lat = Number(raw.lat);
-  const lng = Number(raw.lng);
+  const lat = coordinateNumber(raw.lat);
+  const lng = coordinateNumber(raw.lng);
   const inferredCountry = Number.isFinite(lat) && Number.isFinite(lng) ? inferCountry(lng, lat) : null;
   const countryId = normalizeCountry(raw.country || inferredCountry?.id || "");
   const inferredRegion = Number.isFinite(lat) && Number.isFinite(lng) ? inferRegion(countryId, lng, lat) : null;
@@ -4234,6 +4458,12 @@ function normalizeImportedPlace(raw) {
     boundaryLevel: raw.boundaryLevel || "",
     shapeOnly: Boolean(raw.shapeOnly),
   };
+}
+
+function coordinateNumber(value) {
+  if (value === null || value === undefined || String(value).trim() === "") return NaN;
+  const number = Number(value);
+  return Number.isFinite(number) ? number : NaN;
 }
 
 function detectBoundaryLevel(props, geometry) {
