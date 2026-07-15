@@ -14,6 +14,7 @@ const languageStorageKey = "travel-map-language";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
+const appVersion = "1.1";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const worldHeritageCatalogTotal = 1520;
@@ -76,6 +77,8 @@ let pendingIndexedDbSave = null;
 let pendingIndexedDbPayload = null;
 let pendingCheckinRender = null;
 let checklistStatusCache = { signature: "", marked: new Set(), visited: new Set() };
+let mapAddMode = false;
+let pendingMapClickPoint = null;
 const admin1RegionGroupCountries = new Set(["fr", "it"]);
 const subadminConfigs = {
   china2: { countryId: "cn", label: "China prefecture-level units" },
@@ -137,8 +140,6 @@ const translations = {
     importEyebrow: "导入",
     importTitle: "导入地图或地点文件",
     chooseFile: "选择文件",
-    importDepth: "导入后标记为",
-    importOnly: "仅导入",
     csvHelp: "CSV 只需要三列：名称、纬度、经度。也支持 name,lat,lng / longitude；其他列会忽略。一次最多导入 1000 个可显示点。照片导入只读取本地文件名和 EXIF GPS，不上传照片。",
     archiveEyebrow: "存档",
     archiveTitle: "数据存档",
@@ -178,6 +179,14 @@ const translations = {
     unassigned: "未分区",
     markedToast: "已标记为去过",
     unmarkedToast: "已取消去过",
+    addMapPoint: "添加打卡点",
+    addingMapPoint: "点击地图空白处添加打卡点",
+    mapPointName: "打卡点名称",
+    saveMapPoint: "保存打卡点",
+    cancelMapPoint: "取消",
+    mapPointAdded: "打卡点已添加",
+    mapClickPoint: "地图打卡点",
+    detectedArea: "自动识别区域",
   },
   en: {
     appName: "Tuojie Footprints",
@@ -234,8 +243,6 @@ const translations = {
     importEyebrow: "Import",
     importTitle: "Import map or place files",
     chooseFile: "Choose file",
-    importDepth: "After import",
-    importOnly: "Import only",
     csvHelp: "CSV only needs three columns: name, latitude, longitude. Chinese headers 名称、纬度、经度 are supported; extra columns are ignored. Up to 1000 visible points per import. Photo import reads local filename and EXIF GPS only, without uploading photos.",
     archiveEyebrow: "Archive",
     archiveTitle: "Data archive",
@@ -275,6 +282,14 @@ const translations = {
     unassigned: "Unassigned",
     markedToast: "marked visited",
     unmarkedToast: "unmarked",
+    addMapPoint: "Add Check-in Point",
+    addingMapPoint: "Click an empty spot on the map to add a check-in point",
+    mapPointName: "Check-in point name",
+    saveMapPoint: "Save point",
+    cancelMapPoint: "Cancel",
+    mapPointAdded: "Check-in point added",
+    mapClickPoint: "Map check-in point",
+    detectedArea: "Detected area",
   },
 };
 
@@ -286,6 +301,15 @@ function t(key) {
 
 function defaultMapOverlays() {
   return { checkins: true, paths: true, china5a: false, worldHeritage: false };
+}
+
+function normalizeMapOverlays(overlays = {}) {
+  return {
+    ...defaultMapOverlays(),
+    ...overlays,
+    china5a: false,
+    worldHeritage: false,
+  };
 }
 
 const mapProviders = {
@@ -812,6 +836,73 @@ function chineseToPinyinTitle(value) {
     .join(" ");
 }
 
+const checklistEnglishLabels = {
+  china5a: "China 5A Scenic Areas",
+  worldHeritage: "World Heritage",
+  fiveMountains: "Five Great Mountains of China",
+  threeMountains: "Three Famous Mountains of China",
+  buddhistMountains: "Four Sacred Buddhist Mountains",
+  grottoes: "Four Great Grottoes",
+  usNationalParks: "U.S. National Parks",
+};
+
+const checklistItemEnglishNames = {
+  泰山: "Mount Tai",
+  华山: "Mount Hua",
+  衡山: "Mount Heng (Hunan)",
+  恒山: "Mount Heng (Shanxi)",
+  嵩山: "Mount Song",
+  黄山: "Mount Huangshan",
+  庐山: "Mount Lu",
+  雁荡山: "Yandang Mountains",
+  五台山: "Mount Wutai",
+  峨眉山: "Mount Emei",
+  普陀山: "Mount Putuo",
+  九华山: "Mount Jiuhua",
+  莫高窟: "Mogao Caves",
+  云冈石窟: "Yungang Grottoes",
+  龙门石窟: "Longmen Grottoes",
+  麦积山石窟: "Maijishan Grottoes",
+};
+
+function checklistLabel(key, list) {
+  return currentLanguage === "en" ? checklistEnglishLabels[key] || list.label : list.label;
+}
+
+function checklistGroupDisplayName(key, group) {
+  if (currentLanguage !== "en") return group;
+  if (key === "china5a") return chinaProvinceDisplayName(group);
+  if (key === "worldHeritage") return worldHeritageCountryDisplayName(group);
+  return group;
+}
+
+function worldHeritageCountryDisplayName(countryName) {
+  const coverageId = worldHeritageCountryCoverageId(countryName);
+  if (coverageId) return countryDisplayName(coverageId);
+  return countryName;
+}
+
+function checklistItemDisplayName(key, item) {
+  if (currentLanguage !== "en") return item;
+  const parenthetical = englishNameInParentheses(item);
+  if (parenthetical) return parenthetical;
+  if (checklistItemEnglishNames[item]) return checklistItemEnglishNames[item];
+  return item;
+}
+
+function china5aStatusSourceText() {
+  if (currentLanguage !== "en") return china5aCatalogStatus.source;
+  return china5aCatalogStatus.source.includes("备用") ? "Built-in fallback catalog" : "Local complete catalog";
+}
+
+function china5aStatusDetailText() {
+  if (currentLanguage !== "en") return china5aCatalogStatus.detail;
+  const coordinateCount = Object.keys(china5aCoordinates || {}).length;
+  return coordinateCount
+    ? `${china5aOfficialTotal} 5A scenic areas, ${coordinateCount} local coordinates`
+    : `${china5aOfficialTotal} 5A scenic areas`;
+}
+
 const chinaProvinceByAdcode = {
   110000: "北京", 120000: "天津", 130000: "河北", 140000: "山西", 150000: "内蒙古", 210000: "辽宁", 220000: "吉林", 230000: "黑龙江",
   310000: "上海", 320000: "江苏", 330000: "浙江", 340000: "安徽", 350000: "福建", 360000: "江西", 370000: "山东", 410000: "河南",
@@ -1174,7 +1265,7 @@ const checklistCatalog = {
 
 const checklistPlaceCoordinates = {
   故宫: [39.9163, 116.3972, "北京"], "八达岭-慕田峪长城": [40.4319, 116.5704, "北京"], 颐和园: [39.9999, 116.2755, "北京"], 天坛: [39.8822, 116.4066, "北京"], 恭王府: [39.9366, 116.3868, "北京"], 圆明园: [40.0086, 116.2983, "北京"], 明十三陵: [40.2552, 116.2273, "北京"],
-  "秦始皇帝陵博物院": [34.3844, 109.2783, "陕西"], 华山: [34.4833, 110.0833, "陕西"], "大雁塔-大唐芙蓉园": [34.218, 108.964, "陕西"], 黄帝陵: [35.5856, 109.2608, "陕西"], 法门寺: [34.4377, 107.8971, "陕西"],
+  "秦始皇帝陵博物院": [34.3844, 109.2783, "陕西"], 华山: [34.4833, 110.0833, "陕西"], 恒山: [39.6739, 113.7336, "山西"], "大雁塔-大唐芙蓉园": [34.218, 108.964, "陕西"], 黄帝陵: [35.5856, 109.2608, "陕西"], 法门寺: [34.4377, 107.8971, "陕西"],
   泰山: [36.255, 117.106, "山东"], 曲阜三孔: [35.5966, 116.9865, "山东"], 崂山: [36.19, 120.59, "山东"], 蓬莱阁: [37.8267, 120.7586, "山东"], 刘公岛: [37.501, 122.188, "山东"],
   黄山: [30.1302, 118.1689, "安徽"], 九华山: [30.478, 117.807, "安徽"], 天柱山: [30.733, 116.45, "安徽"], 皖南古村落: [29.904, 117.987, "安徽"],
   西湖: [30.2431, 120.1489, "浙江"], 普陀山: [30.0007, 122.3864, "浙江"], 雁荡山: [28.37, 121.06, "浙江"], 乌镇: [30.746, 120.49, "浙江"], 千岛湖: [29.608, 119.044, "浙江"],
@@ -1342,8 +1433,9 @@ function boundaryKeysForLevel(level = state.boundaryLevel) {
   if (level === "admin") return ["country", ...adminBoundaryKeysToShow(), "admin1"];
   if (level === "subadmin") {
     const subadminKeys = subadminBoundaryKeysToShow();
-    if (subadminKeys.includes("china2")) subadminKeys.push("chinaDirect", "tw2");
-    return ["country", "china", "china2", "chinaDirect", "tw2", ...adminBoundaryKeysToShow(), ...subadminKeys];
+    const keys = ["country", ...adminBoundaryKeysToShow(), ...subadminKeys];
+    if (subadminKeys.includes("china2")) keys.push("china", "chinaDirect", "tw2");
+    return keys;
   }
   return ["country"];
 }
@@ -1364,6 +1456,10 @@ function boundaryLabel(key) {
 function normalizeFeatureCollection(data) {
   if (data?.type === "FeatureCollection") return data;
   if (data?.type === "Feature") return { type: "FeatureCollection", features: [data] };
+  return { type: "FeatureCollection", features: [] };
+}
+
+function emptyFeatureCollection() {
   return { type: "FeatureCollection", features: [] };
 }
 
@@ -1967,22 +2063,28 @@ function upsertVisit(placeId, depth = 1, options = {}) {
   const tripName = options.tripName?.trim();
   const date = options.date || "";
   const tripId = options.tripId || (tripName ? slugify(tripName) : "quick-checkins");
+  const updatedAt = options.updatedAt || new Date().toISOString();
   const existing = state.visits.find((visit) => visit.placeId === placeId && visit.tripId === tripId);
   if (existing) {
     existing.depth = 1;
     if (date) existing.date = date;
+    existing.updatedAt = updatedAt;
   } else {
-    state.visits.push({ placeId, tripId, date, depth: 1 });
+    state.visits.push({ placeId, tripId, date, depth: 1, updatedAt });
   }
   addCoverageForPlace(place);
-  saveState();
+  if (options.save !== false) saveState();
 }
 
 function markVisited(placeId, depth = 1, options = {}) {
   const place = getPlace(placeId);
+  if (!place) return;
   state.focusPlaceId = placeId;
-  upsertVisit(placeId, 1, options);
-  renderAll();
+  upsertVisit(placeId, 1, { ...options, save: false });
+  invalidateMapGeoJsonCacheOnly();
+  saveState();
+  if (!$("#mapDetail")?.classList.contains("hidden")) renderPlaceDetail(placeId);
+  renderAfterCheckinChange();
   showToast(`${place.name} ${t("markedToast")}`);
 }
 
@@ -2036,15 +2138,15 @@ function unvisitPlace(placeId) {
   const place = getPlace(placeId);
   if (!place) return;
   const key = canonicalPlaceKey(place.name);
-  const ids = places.filter((candidate) => canonicalPlaceKey(candidate.name) === key).map((candidate) => candidate.id);
-  state.visits = state.visits.filter((visit) => !ids.includes(visit.placeId));
+  const ids = new Set(places.filter((candidate) => canonicalPlaceKey(candidate.name) === key).map((candidate) => candidate.id));
+  state.visits = state.visits.filter((visit) => !ids.has(visit.placeId));
   state.checklistMarks = (state.checklistMarks || []).filter((mark) => canonicalPlaceKey(mark.split(":").slice(1).join(":")) !== key);
   places = places.filter((candidate) => !(candidate.checklistOnly && canonicalPlaceKey(candidate.name) === key));
   closeMapPopupsAndDetail();
   recomputeCoverage();
-  invalidateMapCaches();
+  invalidateMapGeoJsonCacheOnly();
   saveState();
-  renderAll();
+  renderAfterCheckinChange();
   showToast(`${place.name} ${t("unmarkedToast")}`);
 }
 
@@ -2059,6 +2161,119 @@ function closeMapPopupsAndDetail() {
       <h3>${t("mapDetailTitle")}</h3>
       <p class="muted">${t("mapDetailHelp")}</p>`;
   }
+}
+
+function setMapAddMode(enabled) {
+  mapAddMode = Boolean(enabled);
+  pendingMapClickPoint = null;
+  $("#addMapPoint")?.classList.toggle("active", mapAddMode);
+  $("#leafletMap")?.classList.toggle("adding-map-point", mapAddMode);
+  if (mapLibreMap) mapLibreMap.getCanvas().style.cursor = mapAddMode ? "crosshair" : "";
+  if (mapAddMode) showToast(t("addingMapPoint"));
+}
+
+function mapClickPointName() {
+  const now = new Date();
+  const pad = (value) => String(value).padStart(2, "0");
+  const stamp = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}`;
+  return currentLanguage === "en" ? `Map check-in ${stamp}` : `地图打卡点 ${stamp}`;
+}
+
+function mapClickPointType() {
+  return currentLanguage === "en" ? "Map check-in point" : "地图打卡点";
+}
+
+function mapClickPointTag() {
+  return currentLanguage === "en" ? "Map check-in" : "地图打卡";
+}
+
+function inferMapClickPoint(lng, lat) {
+  const country = inferCountry(lng, lat);
+  const countryId = country?.id || "imported";
+  const region = inferRegion(countryId, lng, lat);
+  const subregion = inferSubregion(countryId, lng, lat);
+  return {
+    lng,
+    lat,
+    countryId,
+    countryName: getCountry(countryId).name,
+    regionName: region?.name || "",
+    subregionName: subregion?.name || "",
+  };
+}
+
+function mapClickAreaText(point) {
+  return [point.countryName, point.regionName, point.subregionName].filter(Boolean).join(" / ") || t("unassigned");
+}
+
+function escapeHtml(value) {
+  return String(value || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function openMapClickCheckinForm(lng, lat) {
+  const point = inferMapClickPoint(lng, lat);
+  pendingMapClickPoint = { ...point, defaultName: mapClickPointName() };
+  $("#mapDetail").classList.remove("hidden");
+  $("#mapDetail").innerHTML = `
+    <p class="eyebrow">${t("mapClickPoint")}</p>
+    <h3>${t("addMapPoint")}</h3>
+    <form class="map-point-form" id="mapPointForm">
+      <label>
+        <span>${t("mapPointName")}</span>
+        <input name="name" type="text" value="${escapeHtml(pendingMapClickPoint.defaultName)}" />
+      </label>
+      <dl>
+        <div><dt>${t("coordinates")}</dt><dd>${lat.toFixed(5)}, ${lng.toFixed(5)}</dd></div>
+        <div><dt>${t("detectedArea")}</dt><dd>${mapClickAreaText(point)}</dd></div>
+      </dl>
+      <div class="map-point-actions">
+        <button class="detail-action" type="submit">${t("saveMapPoint")}</button>
+        <button class="detail-action secondary-action" data-cancel-map-point="1" type="button">${t("cancelMapPoint")}</button>
+      </div>
+    </form>`;
+  $("#mapPointForm")?.querySelector("input[name='name']")?.select();
+}
+
+function createMapClickCheckin({ name, lng, lat }) {
+  const point = inferMapClickPoint(lng, lat);
+  const id = `map-click-${Date.now()}`;
+  const finalName = String(name || "").trim() || mapClickPointName();
+  places.push({
+    id,
+    name: finalName,
+    country: point.countryId,
+    unit: point.regionName,
+    subunit: point.subregionName,
+    city: "",
+    type: mapClickPointType(),
+    lat,
+    lng,
+    tags: [mapClickPointTag()],
+    checklist: [],
+    imported: false,
+    shapeOnly: false,
+  });
+  state.focusPlaceId = id;
+  ensureCheckinOverlayVisible();
+  upsertVisit(id, 1, { tripId: "map-click", save: false });
+  recomputeCoverage();
+  invalidateMapGeoJsonCacheOnly();
+  saveState();
+  setMapAddMode(false);
+  closeMapPopupsAndDetail();
+  renderPlaceDetail(id);
+  renderAfterCheckinChange();
+  showToast(`${finalName} ${t("mapPointAdded")}`);
+}
+
+function handleMapCanvasClick(lng, lat, originalEvent = null) {
+  if (!mapAddMode) return;
+  if (originalEvent?._travelMapHandled) return;
+  openMapClickCheckinForm(lng, lat);
 }
 
 function ensureMapDetailCloseButton() {
@@ -2079,6 +2294,8 @@ function applyLanguage() {
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     element.textContent = t(element.dataset.i18n);
   });
+  const version = $("#appVersion");
+  if (version) version.textContent = `v${appVersion}`;
   document.querySelectorAll("[data-language]").forEach((button) => {
     button.classList.toggle("active", button.dataset.language === currentLanguage);
   });
@@ -2157,7 +2374,7 @@ function localStorageSnapshot(payload) {
       openChecklistGroups: savedState.openChecklistGroups || [],
       mapProviderMode: savedState.mapProviderMode || "auto",
       detectedMapProvider: savedState.detectedMapProvider || "",
-      mapOverlays: { ...defaultMapOverlays(), ...(savedState.mapOverlays || {}) },
+      mapOverlays: normalizeMapOverlays(savedState.mapOverlays || {}),
       coverage: savedState.coverage || { countries: [], regions: {}, subregions: {} },
     },
   };
@@ -2231,7 +2448,7 @@ function applySavedPayload(saved) {
       openChecklistGroups: saved.state.openChecklistGroups || [],
       mapProviderMode: normalizeMapProviderMode(saved.state.mapProviderMode || state.mapProviderMode),
       detectedMapProvider: normalizeDetectedMapProvider(saved.state.detectedMapProvider || state.detectedMapProvider),
-      mapOverlays: { ...defaultMapOverlays(), ...(saved.state.mapOverlays || {}) },
+      mapOverlays: normalizeMapOverlays(saved.state.mapOverlays || {}),
       coverage: saved.state.coverage || { countries: [], regions: {}, subregions: {} },
     };
   state.visits = (state.visits || []).map((visit) => ({ ...visit, depth: visit.depth > 0 ? 1 : 0 })).filter((visit) => visit.depth > 0);
@@ -2251,7 +2468,7 @@ function applyLocalStorageSnapshot(saved) {
     openChecklistGroups: saved.state.openChecklistGroups || state.openChecklistGroups || [],
     mapProviderMode: normalizeMapProviderMode(saved.state.mapProviderMode || state.mapProviderMode),
     detectedMapProvider: normalizeDetectedMapProvider(saved.state.detectedMapProvider || state.detectedMapProvider),
-    mapOverlays: { ...defaultMapOverlays(), ...(saved.state.mapOverlays || state.mapOverlays || {}) },
+    mapOverlays: normalizeMapOverlays(saved.state.mapOverlays || state.mapOverlays || {}),
     coverage: saved.state.coverage || state.coverage || { countries: [], regions: {}, subregions: {} },
   };
   return true;
@@ -2850,7 +3067,7 @@ function adminBoundaryKeysToShow() {
 
 function subadminBoundaryKeysToShow() {
   const visitedKeys = Array.from(uniqueVisitedCountries()).map(subadminKeyForCountry).filter(Boolean);
-  return Array.from(new Set(["china2", ...visitedKeys.filter(Boolean)]));
+  return Array.from(new Set(visitedKeys.filter(Boolean)));
 }
 
 function customBoundaryFor(level, countryOrRegion, unitName = "") {
@@ -2931,6 +3148,9 @@ function renderGeoMap() {
       markerZoomAnimation: false,
     }).setView([25, 20], 2);
 
+    leafletMap.on("click", (event) => {
+      handleMapCanvasClick(event.latlng.lng, event.latlng.lat, event.originalEvent);
+    });
     applyLeafletProvider();
   } else {
     applyLeafletProvider();
@@ -3010,6 +3230,9 @@ function renderMapLibreMap() {
     });
     mapLibreMap._travelMapProvider = provider;
     mapLibreMap.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-left");
+    mapLibreMap.on("click", (event) => {
+      handleMapCanvasClick(event.lngLat.lng, event.lngLat.lat, event.originalEvent);
+    });
     mapLibreMap.on("load", () => {
       setLoadingDebug("使用 MapLibre 显示底图", "done");
       clearLoadingDebugSoon();
@@ -3082,6 +3305,11 @@ function invalidateMapCaches() {
   mapLibreSourceDataRefs.clear();
 }
 
+function invalidateMapGeoJsonCacheOnly() {
+  mapDataVersion += 1;
+  mapGeoJsonCache.clear();
+}
+
 function renderMapLibreLayers() {
   if (!mapLibreMap || !mapLibreMap.isStyleLoaded()) return;
   const overlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
@@ -3137,13 +3365,20 @@ function renderMapLibreLayers() {
   }
 
   if (state.boundaryLevel === "subadmin") {
-    const countriesWithSubadmin = new Set(Object.keys(subadminConfigs).map(countryIdForSubadminKey));
-    setMapLibreSource("admin-country-context", cachedMapGeoJson("subadmin-country-context", () => adminCountryContextGeoJson(countriesWithSubadmin)));
-    addMapLibreFillLayer("admin-country-context", "admin-country-context-fill", "admin-country-context-line", 0.18, 1);
-    setMapLibreSource("visited-subadmin", cachedMapGeoJson("subadmin", subadminGeoJson));
-    addMapLibreFillLayer("visited-subadmin", "visited-subadmin-fill", "visited-subadmin-line", 0.24, 0.55);
-    setMapLibreSource("visited-region-group-outlines", cachedMapGeoJson("subadmin-province-outlines", () => adminOutlineGeoJsonForKeys(["china"])));
-    addMapLibreLineLayer("visited-region-group-outlines", "visited-region-group-outlines-line", 1.55);
+    const subadminKeys = subadminBoundaryKeysToShow();
+    const countriesWithSubadmin = new Set(subadminKeys.map(countryIdForSubadminKey).filter(Boolean));
+    if (countriesWithSubadmin.size) {
+      setMapLibreSource("admin-country-context", cachedMapGeoJson("subadmin-country-context", () => adminCountryContextGeoJson(countriesWithSubadmin)));
+      addMapLibreFillLayer("admin-country-context", "admin-country-context-fill", "admin-country-context-line", 0.18, 1);
+    }
+    if (subadminKeys.length) {
+      setMapLibreSource("visited-subadmin", cachedMapGeoJson("subadmin", subadminGeoJson));
+      addMapLibreFillLayer("visited-subadmin", "visited-subadmin-fill", "visited-subadmin-line", 0.24, 0.55);
+    }
+    if (subadminKeys.includes("china2")) {
+      setMapLibreSource("visited-region-group-outlines", cachedMapGeoJson("subadmin-province-outlines", () => adminOutlineGeoJsonForKeys(["china"])));
+      addMapLibreLineLayer("visited-region-group-outlines", "visited-region-group-outlines-line", 1.55);
+    }
   }
 
   setMapLibreSource("imported-shapes", cachedMapGeoJson("imported-polygons", importedPolygonGeoJson));
@@ -3156,6 +3391,61 @@ function renderMapLibreLayers() {
   renderMapLibreMarkers(overlays);
   setLoadingDebug("渲染地图图层", "done");
   clearLoadingDebugSoon();
+}
+
+function refreshMapLibreDataOnly() {
+  if (!mapLibreMap || !mapLibreMap.isStyleLoaded()) return false;
+  const overlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
+  const needs = ["map-background-context"];
+  if (state.boundaryLevel === "country") needs.push("country-click", "visited-countries");
+  if (state.boundaryLevel === "admin") needs.push("visited-regions", "visited-region-group-outlines", "admin-country-context");
+  if (needs.some((id) => !mapLibreMap.getSource(id))) return false;
+
+  setMapLibreSource("map-background-context", cachedMapGeoJson("map-background-context", mapBackgroundContextGeoJson));
+
+  if (state.boundaryLevel === "country") {
+    setMapLibreSource("country-click", cachedMapGeoJson("country-click", allCountryClickGeoJson));
+    setMapLibreSource("visited-countries", cachedMapGeoJson("countries", countryGeoJson));
+  }
+
+  if (state.boundaryLevel === "admin") {
+    setMapLibreSource("visited-regions", cachedMapGeoJson("regions", regionGeoJson));
+    setMapLibreSource("visited-region-group-outlines", cachedMapGeoJson("region-outlines", groupedRegionOutlineGeoJson));
+    setMapLibreSource("admin-country-context", cachedMapGeoJson("admin-country-context", adminCountryContextGeoJson));
+  }
+
+  if (state.boundaryLevel === "subadmin") {
+    const subadminKeys = subadminBoundaryKeysToShow();
+    const countriesWithSubadmin = new Set(subadminKeys.map(countryIdForSubadminKey).filter(Boolean));
+    if (mapLibreMap.getSource("admin-country-context")) {
+      setMapLibreSource(
+        "admin-country-context",
+        countriesWithSubadmin.size
+          ? cachedMapGeoJson("subadmin-country-context", () => adminCountryContextGeoJson(countriesWithSubadmin))
+          : emptyFeatureCollection(),
+      );
+    }
+    if (mapLibreMap.getSource("visited-subadmin")) {
+      setMapLibreSource("visited-subadmin", subadminKeys.length ? cachedMapGeoJson("subadmin", subadminGeoJson) : emptyFeatureCollection());
+    }
+    if (mapLibreMap.getSource("visited-region-group-outlines")) {
+      setMapLibreSource(
+        "visited-region-group-outlines",
+        subadminKeys.includes("china2")
+          ? cachedMapGeoJson("subadmin-province-outlines", () => adminOutlineGeoJsonForKeys(["china"]))
+          : emptyFeatureCollection(),
+      );
+    }
+  }
+
+  if (mapLibreMap.getSource("imported-shapes")) {
+    setMapLibreSource("imported-shapes", cachedMapGeoJson("imported-polygons", importedPolygonGeoJson));
+  }
+  if (overlays.paths && mapLibreMap.getSource("imported-paths")) {
+    setMapLibreSource("imported-paths", cachedMapGeoJson("imported-paths", importedPathGeoJson));
+  }
+  renderMapLibreMarkers(overlays);
+  return true;
 }
 
 function renderMapLibreMarkers(overlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) }) {
@@ -3178,7 +3468,11 @@ function renderMapLibreMarkers(overlays = { ...defaultMapOverlays(), ...(state.m
         el.className = "maplibre-marker";
         el.style.background = depthColors[1];
         el.title = visit.place.name;
-        el.addEventListener("click", () => renderPlaceDetail(visit.place.id));
+        el.addEventListener("click", (event) => {
+          event.stopPropagation();
+          event._travelMapHandled = true;
+          renderPlaceDetail(visit.place.id);
+        });
         const marker = new maplibregl.Marker({ element: el })
           .setLngLat([visit.place.lng, visit.place.lat])
           .setPopup(new maplibregl.Popup({ offset: 16 }).setHTML(`<strong>${visit.place.name}</strong><br>${getCountry(visit.place.country).name} · ${visit.place.unit || "未分区"}<br><button class="popup-action" data-unvisit="${visit.place.id}" type="button">${t("unvisit")}</button>`))
@@ -3190,7 +3484,11 @@ function renderMapLibreMarkers(overlays = { ...defaultMapOverlays(), ...(state.m
     const el = document.createElement("button");
     el.className = `maplibre-marker checklist-marker checklist-${entry.key} ${entry.done ? "done" : ""}`;
     el.title = entry.item;
-    el.addEventListener("click", () => renderChecklistMapDetail(entry.key, entry.item));
+    el.addEventListener("click", (event) => {
+      event.stopPropagation();
+      event._travelMapHandled = true;
+      renderChecklistMapDetail(entry.key, entry.item);
+    });
     const marker = new maplibregl.Marker({ element: el })
       .setLngLat([entry.lng, entry.lat])
       .setPopup(new maplibregl.Popup({ offset: 16 }).setHTML(`<strong>${entry.item}</strong><br>${checklistCatalog[entry.key].label}<br><button class="popup-action" data-checklist-map="${entry.key}" data-item="${entry.item}" type="button">${entry.done ? t("unvisit") : t("markVisited")}</button>`))
@@ -3282,6 +3580,8 @@ function bindMapLibreLayerHandlers() {
   if (!mapLibreLayerHandlersBound.country && mapLibreMap.getLayer("country-click-fill")) {
     mapLibreLayerHandlersBound.country = true;
     mapLibreMap.on("click", "country-click-fill", (event) => {
+      if (mapAddMode) return;
+      if (event.originalEvent) event.originalEvent._travelMapHandled = true;
       const feature = event.features?.[0];
       if (feature) handleCountryClick(feature);
     });
@@ -3295,6 +3595,8 @@ function bindMapLibreLayerHandlers() {
   if (!mapLibreLayerHandlersBound.admin && mapLibreMap.getLayer("visited-regions-fill")) {
     mapLibreLayerHandlersBound.admin = true;
     mapLibreMap.on("click", "visited-regions-fill", (event) => {
+      if (mapAddMode) return;
+      if (event.originalEvent) event.originalEvent._travelMapHandled = true;
       const feature = event.features?.[0];
       if (feature) handleAdminRegionClick(feature);
     });
@@ -3308,6 +3610,8 @@ function bindMapLibreLayerHandlers() {
   if (!mapLibreLayerHandlersBound.subadmin && mapLibreMap.getLayer("visited-subadmin-fill")) {
     mapLibreLayerHandlersBound.subadmin = true;
     mapLibreMap.on("click", "visited-subadmin-fill", (event) => {
+      if (mapAddMode) return;
+      if (event.originalEvent) event.originalEvent._travelMapHandled = true;
       const feature = event.features?.[0];
       if (feature) handleAdminRegionClick(feature);
     });
@@ -3420,14 +3724,22 @@ function renderLeafletLayers() {
     L.geoJSON(allCountryClickGeoJson(), {
       style: () => ({ color: "transparent", weight: 0, fillColor: "#ffffff", fillOpacity: 0.01 }),
       onEachFeature: (feature, layer) => {
-        layer.on("click", () => renderCountryDetail(feature.properties.id));
+        layer.on("click", (event) => {
+          if (mapAddMode) return;
+          if (event.originalEvent) event.originalEvent._travelMapHandled = true;
+          renderCountryDetail(feature.properties.id);
+        });
         layer.bindTooltip(feature.properties.name, { sticky: true });
       },
     }).addTo(leafletLayers);
     L.geoJSON(countryGeoJson(), {
       style: leafletBoundaryStyle,
       onEachFeature: (feature, layer) => {
-        layer.on("click", () => renderCountryDetail(feature.properties.id));
+        layer.on("click", (event) => {
+          if (mapAddMode) return;
+          if (event.originalEvent) event.originalEvent._travelMapHandled = true;
+          renderCountryDetail(feature.properties.id);
+        });
         layer.bindTooltip(feature.properties.name, { sticky: true });
       },
     }).addTo(leafletLayers);
@@ -3437,7 +3749,11 @@ function renderLeafletLayers() {
     L.geoJSON(regionGeoJson(), {
       style: leafletBoundaryStyle,
       onEachFeature: (feature, layer) => {
-        layer.on("click", () => handleAdminRegionClick(feature));
+        layer.on("click", (event) => {
+          if (mapAddMode) return;
+          if (event.originalEvent) event.originalEvent._travelMapHandled = true;
+          handleAdminRegionClick(feature);
+        });
         layer.bindTooltip(`${feature.properties.name} · ${feature.properties.count} 个地点`, { sticky: true });
       },
     }).addTo(leafletLayers);
@@ -3456,26 +3772,37 @@ function renderLeafletLayers() {
   }
 
   if (state.boundaryLevel === "subadmin") {
-    const countriesWithSubadmin = new Set(Object.keys(subadminConfigs).map(countryIdForSubadminKey));
-    L.geoJSON(adminCountryContextGeoJson(countriesWithSubadmin), {
-      style: (feature) => ({ ...leafletBoundaryStyle(feature), fillOpacity: 0.18, weight: 1 }),
-      onEachFeature: (feature, layer) => {
-        layer.bindTooltip(feature.properties.name, { sticky: true });
-      },
-    }).addTo(leafletLayers);
-    L.geoJSON(subadminGeoJson(), {
-      style: (feature) => ({ ...leafletBoundaryStyle(feature), weight: 0.55 }),
-      onEachFeature: (feature, layer) => {
-        layer.on("click", () => handleAdminRegionClick(feature));
-        layer.bindTooltip(String(feature.properties.name || ""), { sticky: true });
-      },
-    }).addTo(leafletLayers);
-    L.geoJSON(adminOutlineGeoJsonForKeys(["china"]), {
-      style: leafletOutlineStyle,
-      onEachFeature: (feature, layer) => {
-        layer.bindTooltip(feature.properties.name, { sticky: true });
-      },
-    }).addTo(leafletLayers);
+    const subadminKeys = subadminBoundaryKeysToShow();
+    const countriesWithSubadmin = new Set(subadminKeys.map(countryIdForSubadminKey).filter(Boolean));
+    if (countriesWithSubadmin.size) {
+      L.geoJSON(adminCountryContextGeoJson(countriesWithSubadmin), {
+        style: (feature) => ({ ...leafletBoundaryStyle(feature), fillOpacity: 0.18, weight: 1 }),
+        onEachFeature: (feature, layer) => {
+          layer.bindTooltip(feature.properties.name, { sticky: true });
+        },
+      }).addTo(leafletLayers);
+    }
+    if (subadminKeys.length) {
+      L.geoJSON(subadminGeoJson(), {
+        style: (feature) => ({ ...leafletBoundaryStyle(feature), weight: 0.55 }),
+        onEachFeature: (feature, layer) => {
+          layer.on("click", (event) => {
+            if (mapAddMode) return;
+            if (event.originalEvent) event.originalEvent._travelMapHandled = true;
+            handleAdminRegionClick(feature);
+          });
+          layer.bindTooltip(String(feature.properties.name || ""), { sticky: true });
+        },
+      }).addTo(leafletLayers);
+    }
+    if (subadminKeys.includes("china2")) {
+      L.geoJSON(adminOutlineGeoJsonForKeys(["china"]), {
+        style: leafletOutlineStyle,
+        onEachFeature: (feature, layer) => {
+          layer.bindTooltip(feature.properties.name, { sticky: true });
+        },
+      }).addTo(leafletLayers);
+    }
   }
 
   L.geoJSON(importedPolygonGeoJson(), {
@@ -3506,7 +3833,10 @@ function renderLeafletLayers() {
           fillOpacity: 0.95,
         });
         marker.bindPopup(`<strong>${visit.place.name}</strong><br>${getCountry(visit.place.country).name} · ${visit.place.unit || "未分区"}<br><button class="popup-action" data-unvisit="${visit.place.id}" type="button">${t("unvisit")}</button>`);
-        marker.on("click", () => renderPlaceDetail(visit.place.id));
+        marker.on("click", (event) => {
+          if (event.originalEvent) event.originalEvent._travelMapHandled = true;
+          renderPlaceDetail(visit.place.id);
+        });
         marker.addTo(leafletLayers);
       });
   }
@@ -3651,10 +3981,15 @@ function toggleManualAdminRegion(countryId, regionName, isSubadmin, center) {
   if (manual) {
     state.visits = state.visits.filter((visit) => visit.placeId !== manual.id);
     places = places.filter((place) => place.id !== manual.id);
-    closeMapPopupsAndDetail();
     recomputeCoverage();
+    invalidateMapGeoJsonCacheOnly();
     saveState();
     renderAfterCheckinChange();
+    renderAdminRegionDetail(countryId, regionName, adminRegionEvidenceVisits(countryId, regionName, isSubadmin), {
+      center,
+      isSubadmin,
+      manual: false,
+    });
     showToast(`${regionName} 已取消点亮`);
     return;
   }
@@ -3681,8 +4016,16 @@ function toggleManualAdminRegion(countryId, regionName, isSubadmin, center) {
     manualAdmin: true,
   });
   state.focusPlaceId = id;
-  upsertVisit(id, 1, { tripId: "manual-admin" });
+  upsertVisit(id, 1, { tripId: "manual-admin", save: false });
+  recomputeCoverage();
+  invalidateMapGeoJsonCacheOnly();
+  saveState();
   renderAfterCheckinChange();
+  renderAdminRegionDetail(countryId, regionName, adminRegionEvidenceVisits(countryId, regionName, isSubadmin), {
+    center,
+    isSubadmin,
+    manual: true,
+  });
   showToast(`${regionName} 已点亮`);
 }
 
@@ -3992,69 +4335,141 @@ function renderCoverage() {
 function renderImportSummary() {
   const files = state.importedFiles;
   const nonImportedVisits = visitedPlaces().filter((visit) => !visit.place.imported && !visit.place.importId && !visit.place.sourceFile);
+  const en = currentLanguage === "en";
   $("#importSummary").innerHTML = files.length
-    ? `<article class="check-item"><header><strong>全部导入数据</strong><span>${places.filter((place) => place.imported).length} 个对象</span></header><button class="text-action" data-delete-all-imports="1" type="button">删除全部导入</button></article>${files.map((file, index) => `<article class="check-item"><header><strong>${file.name}</strong><span>${file.count} 条</span></header><p class="muted">${file.format} · ${file.marked ? "已点亮地图" : "仅导入"}</p><button class="text-action" data-delete-import="${file.id || ""}" data-import-index="${index}" type="button">删除导入</button></article>`).join("")}`
-    : `<p class="muted">还没有导入文件。导入后，地图点、国家/地区覆盖率、行政区覆盖率会自动刷新。</p>`;
+    ? `<article class="check-item"><header><strong>${en ? "All imported data" : "全部导入数据"}</strong><span>${places.filter((place) => place.imported).length} ${en ? "objects" : "个对象"}</span></header><button class="text-action" data-delete-all-imports="1" type="button">${en ? "Delete all imports" : "删除全部导入"}</button></article>${files.map((file, index) => `<article class="check-item"><header><strong>${file.name}</strong><span>${file.count} ${en ? "items" : "条"}</span></header><p class="muted">${file.format} · ${en ? "Imported and lit" : "已导入并点亮"}</p><button class="text-action" data-delete-import="${file.id || ""}" data-import-index="${index}" type="button">${en ? "Delete import" : "删除导入"}</button></article>`).join("")}`
+    : `<p class="muted">${en ? "No imported files yet. Imported points, countries/regions, and administrative coverage will update automatically." : "还没有导入文件。导入后，地图点、国家/地区覆盖率、行政区覆盖率会自动刷新。"}</p>`;
   $("#importSummary").insertAdjacentHTML("beforeend", `
     <article class="check-item">
-      <header><strong>非导入点亮</strong><span>${nonImportedVisits.length} 个点</span></header>
-      <p class="muted">这些通常来自手动点亮行政区、点击 5A/国家公园等打卡清单，不会被“删除导入”清掉。</p>
-      <button class="text-action" data-clear-checkins="1" type="button">清除点亮/打卡点</button>
+      <header><strong>${en ? "Non-imported lit data" : "非导入点亮"}</strong><span>${nonImportedVisits.length} ${en ? "points" : "个点"}</span></header>
+      <p class="muted">${en ? "These usually come from manual administrative units, map-click points, or checklist items, and are not removed by deleting imports." : "这些通常来自手动点亮行政区、地图点击打卡、5A/国家公园等打卡清单，不会被“删除导入”清掉。"}</p>
+      <button class="text-action" data-clear-checkins="1" type="button">${en ? "Clear light-up / checklist points" : "清除点亮/打卡点"}</button>
     </article>`);
+}
+
+function inventorySourceLabel(visit) {
+  const raw = String(visit?.tripId || "");
+  const place = visit?.place || {};
+  if (place.imported || place.importId || place.sourceFile || raw.startsWith("import-")) {
+    return place.sourceFile
+      ? currentLanguage === "en" ? `Import: ${place.sourceFile}` : `导入：${place.sourceFile}`
+      : currentLanguage === "en" ? "Import" : "导入";
+  }
+  if (raw === "map-click") return currentLanguage === "en" ? "Map click" : "地图点击";
+  if (raw === "manual-country") return currentLanguage === "en" ? "Manual country" : "手动点亮国家";
+  if (raw === "manual-admin") return currentLanguage === "en" ? "Manual administrative unit" : "手动点亮行政区";
+  if (raw === "checklist") return currentLanguage === "en" ? "Checklist" : "清单打卡";
+  if (place.checklistOnly) return currentLanguage === "en" ? "Checklist" : "清单打卡";
+  if (place.manualCountry) return currentLanguage === "en" ? "Manual country" : "手动点亮国家";
+  if (place.manualAdmin) return currentLanguage === "en" ? "Manual administrative unit" : "手动点亮行政区";
+  return raw || (currentLanguage === "en" ? "Check-in" : "打卡");
+}
+
+function inventoryTypeLabel(place) {
+  if (place.shapeOnly) return currentLanguage === "en" ? "Path / Shape" : "路径/形状";
+  if (place.imported || place.importId || place.sourceFile) return currentLanguage === "en" ? "Imported point" : "导入点";
+  if (place.checklistOnly) return currentLanguage === "en" ? "Checklist point" : "清单打卡";
+  if (place.manualCountry) return currentLanguage === "en" ? "Manual country" : "手动国家";
+  if (place.manualAdmin) return currentLanguage === "en" ? "Manual administrative unit" : "手动行政区";
+  if (place.id?.startsWith("map-click-")) return currentLanguage === "en" ? "Map click" : "地图点击";
+  return currentLanguage === "en" ? "Check-in point" : "打卡点";
+}
+
+function deleteInventoryObject(placeId) {
+  const place = getPlace(placeId);
+  if (!place) return;
+  const wasImported = place.imported || place.importId || place.sourceFile;
+  state.visits = state.visits.filter((visit) => visit.placeId !== placeId);
+  places = places.filter((candidate) => candidate.id !== placeId);
+  if (wasImported) {
+    state.importedFiles = (state.importedFiles || []).map((record) => {
+      const ids = (record.ids || []).filter((id) => id !== placeId);
+      const count = places.filter((candidate) =>
+        candidate.importId === record.id || (!record.id && candidate.sourceFile === record.name)
+      ).length;
+      return { ...record, ids, count: count || ids.length };
+    }).filter((record) => record.count > 0 || (record.ids || []).length > 0);
+  }
+  closeMapPopupsAndDetail();
+  recomputeCoverage();
+  invalidateMapGeoJsonCacheOnly();
+  saveState();
+  renderMetrics();
+  renderDashboardAchievements();
+  renderNextStops();
+  renderImportSummary();
+  renderDataInventory();
+  if (document.querySelector('[data-page="checkins"]')?.classList.contains("active")) renderCheckinsPage();
+  if (document.querySelector('[data-page="achievements"]')?.classList.contains("active")) renderAchievements();
+  if (isMapPageActive() && !refreshMapLibreDataOnly()) scheduleGeoMapRender();
+  showToast(`${place.name} ${currentLanguage === "en" ? "deleted" : "已删除"}`);
 }
 
 function renderDataInventory() {
   const target = $("#dataInventory");
   if (!target) return;
+  const en = currentLanguage === "en";
   const counts = dataCounts();
-  const imported = places.filter((place) => place.imported || place.importId || place.sourceFile);
-  const visited = visitedPlaces();
+  const imported = places
+    .map((place, index) => ({ place, index }))
+    .filter(({ place }) => place.imported || place.importId || place.sourceFile)
+    .sort((left, right) => (right.place.importedAt || "").localeCompare(left.place.importedAt || "") || right.index - left.index)
+    .map(({ place }) => place);
+  const visited = visitedPlaces()
+    .map((visit, index) => ({ visit, index }))
+    .sort((left, right) => (right.visit.updatedAt || right.visit.date || "").localeCompare(left.visit.updatedAt || left.visit.date || "") || right.index - left.index)
+    .map(({ visit }) => visit);
   const rows = [
-    ["点亮记录 visits", counts.visits],
-    ["已点亮地点", counts.visitedPlaces],
-    ["导入点", counts.importedPoints],
-    ["导入路径/Shape", counts.importedShapes],
-    ["国家/地区", counts.countries],
-    ["中国一级行政区", `${counts.chinaRegions}/34`],
-    ["中国二级行政区", `${counts.chinaSubregions}/${chinaPrefectureTotal()}`],
+    [en ? "Light-up records" : "点亮记录", counts.visits],
+    [en ? "Lit places" : "已点亮地点", counts.visitedPlaces],
+    [en ? "Imported points" : "导入点", counts.importedPoints],
+    [en ? "Imported paths / shapes" : "导入路径/形状", counts.importedShapes],
+    [en ? "Countries / Regions" : "国家/地区", counts.countries],
+    [en ? "China province-level units" : "中国一级行政区", `${counts.chinaRegions}/34`],
+    [en ? "China prefecture-level units" : "中国二级行政区", `${counts.chinaSubregions}/${chinaPrefectureTotal()}`],
   ];
   const missingChina = missingVisitedRegions("china");
   const missingDirectBoundaries = missingChinaDirectBoundaryUnits();
+  const deleteLabel = en ? "Delete" : "删除";
   const importRows = imported.slice(0, 80).map((place) => `
     <tr>
       <td>${place.name}</td>
-      <td>${place.shapeOnly ? "路径/Shape" : "点"}</td>
+      <td>${inventoryTypeLabel(place)}</td>
       <td>${getCountry(place.country).name}</td>
       <td>${place.unit || ""}${place.subunit ? ` / ${place.subunit}` : ""}</td>
       <td>${place.sourceFile || ""}</td>
+      <td><button class="table-action danger" data-delete-inventory-object="${escapeHtml(place.id)}" type="button">${deleteLabel}</button></td>
     </tr>`).join("");
   const visitRows = visited.slice(0, 80).map((visit) => `
     <tr>
       <td>${visit.place.name}</td>
       <td>${getCountry(visit.place.country).name}</td>
       <td>${visit.place.unit || ""}${visit.place.subunit ? ` / ${visit.place.subunit}` : ""}</td>
-      <td>${visit.tripId || ""}</td>
-      <td>${visit.place.imported ? "导入" : visit.place.checklistOnly ? "打卡" : visit.place.manualAdmin ? "手动行政区" : "候选地点"}</td>
+      <td>${inventorySourceLabel(visit)}</td>
+      <td>${inventoryTypeLabel(visit.place)}</td>
+      <td><button class="table-action danger" data-delete-inventory-visit="${escapeHtml(visit.place.id)}" type="button">${deleteLabel}</button></td>
     </tr>`).join("");
   target.innerHTML = `
     <div class="inventory-metrics">${rows.map(([label, value]) => `<span><strong>${value}</strong><em>${label}</em></span>`).join("")}</div>
-    <p class="muted small">中国省级未点亮：${missingChina.length ? missingChina.join("、") : "无"}</p>
-    ${missingDirectBoundaries.length ? `<p class="muted small">缺少真实边界，未显示为可点亮地级尺度单元：${missingDirectBoundaries.map((unit) => unit.name).join("、")}</p>` : ""}
+    <p class="muted small">${en ? "Unlit China province-level units" : "中国省级未点亮"}：${missingChina.length ? missingChina.join(en ? ", " : "、") : (en ? "None" : "无")}</p>
+    ${missingDirectBoundaries.length ? `<p class="muted small">${en ? "Missing true boundaries, not shown as clickable prefecture-level units" : "缺少真实边界，未显示为可点亮地级尺度单元"}：${missingDirectBoundaries.map((unit) => unit.name).join(en ? ", " : "、")}</p>` : ""}
     <details class="data-table-block" open>
-      <summary>已点亮数据（最多显示 80 条）</summary>
-      <table><thead><tr><th>名称</th><th>国家</th><th>行政区</th><th>来源</th><th>类型</th></tr></thead><tbody>${visitRows || `<tr><td colspan="5">暂无点亮数据</td></tr>`}</tbody></table>
+      <summary>${en ? "Lit data (showing up to 80)" : "已点亮数据（最多显示 80 条）"}</summary>
+      <table><thead><tr><th>${en ? "Name" : "名称"}</th><th>${en ? "Country" : "国家"}</th><th>${en ? "Administrative unit" : "行政区"}</th><th>${en ? "Source" : "来源"}</th><th>${en ? "Type" : "类型"}</th><th>${en ? "Action" : "操作"}</th></tr></thead><tbody>${visitRows || `<tr><td colspan="6">${en ? "No lit data" : "暂无点亮数据"}</td></tr>`}</tbody></table>
     </details>
     <details class="data-table-block">
-      <summary>导入对象（最多显示 80 条）</summary>
-      <table><thead><tr><th>名称</th><th>类型</th><th>国家</th><th>行政区</th><th>文件</th></tr></thead><tbody>${importRows || `<tr><td colspan="5">暂无导入对象</td></tr>`}</tbody></table>
+      <summary>${en ? "Imported objects (showing up to 80)" : "导入对象（最多显示 80 条）"}</summary>
+      <table><thead><tr><th>${en ? "Name" : "名称"}</th><th>${en ? "Type" : "类型"}</th><th>${en ? "Country" : "国家"}</th><th>${en ? "Administrative unit" : "行政区"}</th><th>${en ? "File" : "文件"}</th><th>${en ? "Action" : "操作"}</th></tr></thead><tbody>${importRows || `<tr><td colspan="6">${en ? "No imported objects" : "暂无导入对象"}</td></tr>`}</tbody></table>
     </details>`;
 }
 
 function renderAchievements() {
   const china5aHtml = renderChina5aSection();
   const worldHeritageHtml = renderChecklistSection("worldHeritage", checklistCatalog.worldHeritage);
-  const checklistHtml = Object.entries(checklistCatalog)
-    .filter(([key]) => !["china5a", "worldHeritage", "fiveMountains"].includes(key))
+  const referenceOrder = ["threeMountains", "fiveMountains", "buddhistMountains", "grottoes", "usNationalParks"];
+  const checklistHtml = referenceOrder
+    .filter((key) => checklistCatalog[key])
+    .map((key) => [key, checklistCatalog[key]])
     .map(([key, list]) => renderChecklistSection(key, list))
     .join("");
   $("#achievementList").innerHTML = `
@@ -4169,31 +4584,31 @@ function renderChina5aSection() {
   const done = checklistDoneCount("china5a");
   const nav = groups.map(([region, items]) => {
     const groupDone = items.filter((item) => isChecklistItemDone("china5a", item)).length;
-    return `<button type="button" data-checklist-jump="${checklistDomId("china5a", region)}">${region} ${groupDone}/${items.length}</button>`;
+    return `<button type="button" data-checklist-jump="${checklistDomId("china5a", region)}">${checklistGroupDisplayName("china5a", region)} ${groupDone}/${items.length}</button>`;
   }).join("");
   const blocks = groups.map(([region, items]) => {
     const groupDone = items.filter((item) => isChecklistItemDone("china5a", item)).length;
     const groupId = checklistGroupId("china5a", region);
     return `<details id="${checklistDomId("china5a", region)}" class="country-checklist china5a-province" data-checklist-group="${groupId}">
-      <summary><strong>${region}</strong><span>${groupDone}/${items.length}</span></summary>
+      <summary><strong>${checklistGroupDisplayName("china5a", region)}</strong><span>${groupDone}/${items.length}</span></summary>
       <div class="check-chip-grid">
         ${items.map((item) => {
           const checked = isChecklistItemDone("china5a", item);
-          return `<button class="check-chip ${checked ? "done" : ""}" data-checklist="china5a" data-item="${item}" type="button">${checked ? `${t("checked")} · ` : ""}${item}</button>`;
+          return `<button class="check-chip ${checked ? "done" : ""}" data-checklist="china5a" data-item="${item}" type="button">${checked ? `${t("checked")} · ` : ""}${checklistItemDisplayName("china5a", item)}</button>`;
         }).join("")}
       </div>
     </details>`;
   }).join("");
   return `<section class="theme-checklist featured-checklist china5a-checklist">
-    <header><strong>${list.label}</strong><span>${done}/${checklistTotalCount("china5a")}</span></header>
+    <header><strong>${checklistLabel("china5a", list)}</strong><span>${done}/${checklistTotalCount("china5a")}</span></header>
     <div class="checklist-health">
-      <span>${china5aCatalogStatus.source}</span>
-      <span>${china5aCatalogStatus.detail}</span>
-      <span>按省份显示</span>
-      <span>${groups.length} 个分组</span>
-      <span>${allItems.length} 条内置记录</span>
-      <span>${duplicateCount} 个重复名</span>
-      <span>${missingCoordinateCount} 条缺少坐标</span>
+      <span>${china5aStatusSourceText()}</span>
+      <span>${china5aStatusDetailText()}</span>
+      <span>${currentLanguage === "en" ? "Grouped by province" : "按省份显示"}</span>
+      <span>${currentLanguage === "en" ? `${groups.length} groups` : `${groups.length} 个分组`}</span>
+      <span>${currentLanguage === "en" ? `${allItems.length} local records` : `${allItems.length} 条内置记录`}</span>
+      <span>${currentLanguage === "en" ? `${duplicateCount} duplicate names` : `${duplicateCount} 个重复名`}</span>
+      <span>${currentLanguage === "en" ? `${missingCoordinateCount} without coordinates` : `${missingCoordinateCount} 条缺少坐标`}</span>
     </div>
     <nav class="checklist-nav">${nav}</nav>
     <div class="country-checklist-list">${blocks}</div>
@@ -4238,11 +4653,11 @@ function renderChecklistSection(key, list) {
   if (list.byCountry) return renderCountryChecklistSection(key, list);
   const done = checklistDoneCount(key);
   return `<section class="theme-checklist">
-    <header><strong>${list.label}</strong><span>${done}/${list.items.length}</span></header>
+    <header><strong>${checklistLabel(key, list)}</strong><span>${done}/${list.items.length}</span></header>
     <div class="check-chip-grid">
       ${list.items.map((item) => {
         const checked = isChecklistItemDone(key, item);
-        return `<button class="check-chip ${checked ? "done" : ""}" data-checklist="${key}" data-item="${item}" type="button">${checked ? `${t("checked")} · ` : ""}${item}</button>`;
+        return `<button class="check-chip ${checked ? "done" : ""}" data-checklist="${key}" data-item="${item}" type="button">${checked ? `${t("checked")} · ` : ""}${checklistItemDisplayName(key, item)}</button>`;
       }).join("")}
     </div>
   </section>`;
@@ -4253,17 +4668,17 @@ function renderRegionChecklistSection(key, list) {
     const done = items.filter((item) => isChecklistItemDone(key, item)).length;
     const groupId = checklistGroupId(key, region);
     return `<details class="country-checklist" data-checklist-group="${groupId}">
-      <summary><strong>${region}</strong><span>${done}/${items.length}</span></summary>
+      <summary><strong>${checklistGroupDisplayName(key, region)}</strong><span>${done}/${items.length}</span></summary>
       <div class="check-chip-grid">
         ${items.map((item) => {
           const checked = isChecklistItemDone(key, item);
-          return `<button class="check-chip ${checked ? "done" : ""}" data-checklist="${key}" data-item="${item}" type="button">${checked ? `${t("checked")} · ` : ""}${item}</button>`;
+          return `<button class="check-chip ${checked ? "done" : ""}" data-checklist="${key}" data-item="${item}" type="button">${checked ? `${t("checked")} · ` : ""}${checklistItemDisplayName(key, item)}</button>`;
         }).join("")}
       </div>
     </details>`;
   }).join("");
   return `<section class="theme-checklist featured-checklist">
-    <header><strong>${list.label}</strong><span>${checklistDoneCount(key)}/${checklistTotalCount(key)}</span></header>
+    <header><strong>${checklistLabel(key, list)}</strong><span>${checklistDoneCount(key)}/${checklistTotalCount(key)}</span></header>
     <div class="country-checklist-list">${blocks}</div>
   </section>`;
 }
@@ -4302,11 +4717,11 @@ function renderCountryChecklistSection(key, list) {
     const done = items.filter((item) => isChecklistItemDone(key, item)).length;
     const groupId = checklistGroupId(key, country);
     return `<details class="country-checklist" data-checklist-group="${groupId}">
-      <summary><strong>${country}</strong><span>${done}/${items.length}</span></summary>
+      <summary><strong>${checklistGroupDisplayName(key, country)}</strong><span>${done}/${items.length}</span></summary>
       <div class="check-chip-grid">
         ${items.map((item) => {
           const checked = isChecklistItemDone(key, item);
-          return `<button class="check-chip ${checked ? "done" : ""}" data-checklist="${key}" data-item="${item}" type="button">${checked ? `${t("checked")} · ` : ""}${item}</button>`;
+          return `<button class="check-chip ${checked ? "done" : ""}" data-checklist="${key}" data-item="${item}" type="button">${checked ? `${t("checked")} · ` : ""}${checklistItemDisplayName(key, item)}</button>`;
         }).join("")}
       </div>
     </details>`;
@@ -4315,7 +4730,7 @@ function renderCountryChecklistSection(key, list) {
     ? `<p class="muted small">${currentLanguage === "en" ? "No country is lit yet. Go to Light Up or click a country on the map first." : "还没有可显示的世界遗产国家清单。请先到“点亮”页面，或在地图上点亮国家/地区。"}</p>`
     : "";
   return `<section class="theme-checklist">
-    <header><strong>${list.label}</strong><span>${checklistDoneCount(key)}/${checklistTotalCount(key)}</span></header>
+    <header><strong>${checklistLabel(key, list)}</strong><span>${checklistDoneCount(key)}/${checklistTotalCount(key)}</span></header>
     ${health}
     ${emptyWorldHeritage}
     <div class="country-checklist-list">${countryBlocks}</div>
@@ -4400,7 +4815,9 @@ function renderAfterChecklistChange(key, item) {
   renderDashboardAchievements();
   renderNextStops();
   if (document.querySelector('[data-page="checkins"]')?.classList.contains("active")) renderCheckinsPage();
-  if (isMapPageActive()) scheduleGeoMapRender();
+  if (!$("#mapDetail")?.classList.contains("hidden")) renderChecklistMapDetail(key, item);
+  if (document.querySelector('[data-page="imports"]')?.classList.contains("active")) renderDataInventory();
+  if (isMapPageActive() && !refreshMapLibreDataOnly()) scheduleGeoMapRender();
 }
 
 function updateChecklistButtonsForItem(key, item) {
@@ -4422,7 +4839,7 @@ function ensureChecklistPlace(key, item) {
   if (existing) {
     existing.checklist = Array.from(new Set([...(existing.checklist || []), listLabel]));
     applyChecklistCoordinates(existing, coords);
-    upsertVisit(existing.id, 1, { tripId: "checklist" });
+    upsertVisit(existing.id, 1, { tripId: "checklist", save: false });
     state.focusPlaceId = existing.id;
     return existing;
   }
@@ -4450,7 +4867,7 @@ function ensureChecklistPlace(key, item) {
     if (subregion?.name) place.subunit = subregion.name;
   }
   places.push(place);
-  upsertVisit(id, 1, { tripId: "checklist" });
+  upsertVisit(id, 1, { tripId: "checklist", save: false });
   state.focusPlaceId = id;
   return place;
 }
@@ -4567,7 +4984,7 @@ async function handleImport(event) {
     }
     let totalImported = 0;
     jobs.forEach((job) => {
-      const imported = importPlaces(job.places, job.extension, job.fileName, Number($("#importDepth").value));
+      const imported = importPlaces(job.places, job.extension, job.fileName, 1);
       totalImported += imported.length;
     });
     const skippedText = skippedPhotos ? `，${skippedPhotos} 张照片没有 GPS 已跳过` : "";
@@ -4585,15 +5002,16 @@ function photoImportBatchName(count) {
   return `照片导入 ${date}（${count} 张有 GPS）`;
 }
 
-function importPlacesFromText(text, extension, fileName = `import.${extension}`, depth = 2) {
+function importPlacesFromText(text, extension, fileName = `import.${extension}`, depth = 1) {
   const imported = parseImportFile(text, extension);
   return importPlaces(imported, extension, fileName, depth);
 }
 
-function importPlaces(imported, extension, fileName, depth = 2) {
+function importPlaces(imported, extension, fileName, depth = 1) {
   if (!imported.length) return imported;
   const createdIds = [];
   const importId = `import-${slugify(fileName)}-${Date.now()}`;
+  const importedAt = new Date().toISOString();
   imported.forEach((place) => {
     const idBase = slugify(`${place.country}-${place.unit}-${place.name}`);
     let id = `import-${idBase}`;
@@ -4602,7 +5020,7 @@ function importPlaces(imported, extension, fileName, depth = 2) {
       id = `import-${idBase}-${suffix}`;
       suffix += 1;
     }
-    places.push({ ...place, id, imported: true, importId, sourceFile: fileName });
+    places.push({ ...place, id, imported: true, importId, sourceFile: fileName, importedAt });
     createdIds.push(id);
   });
   if (depth > 0) {
@@ -4612,7 +5030,7 @@ function importPlaces(imported, extension, fileName, depth = 2) {
   }
   const firstPointId = createdIds.find((id) => !getPlace(id)?.shapeOnly);
   if (firstPointId) state.focusPlaceId = firstPointId;
-  state.importedFiles.unshift({ id: importId, name: fileName, count: imported.length, format: extension.toUpperCase(), marked: depth > 0, ids: createdIds });
+  state.importedFiles.unshift({ id: importId, name: fileName, count: imported.length, format: extension.toUpperCase(), marked: depth > 0, ids: createdIds, importedAt });
   saveState();
   renderAll();
   preloadBoundaryData(false, ["country", "admin1", "china2", "tw2"]).then(() => {
@@ -4659,7 +5077,16 @@ function deleteAllImportedData() {
 }
 
 function clearAllUserData() {
-  places = places.filter((place) => !place.imported && !place.checklistOnly && !place.manualAdmin);
+  places = places.filter((place) =>
+    !place.imported
+    && !place.importId
+    && !place.sourceFile
+    && !place.checklistOnly
+    && !place.manualAdmin
+    && !place.manualCountry
+    && !place.id?.startsWith("map-click-")
+    && !place.id?.startsWith("import-")
+  );
   state.visits = [];
   state.importedFiles = [];
   state.checklistMarks = [];
@@ -5168,7 +5595,8 @@ function renderAfterCheckinChange() {
     renderNextStops();
     if (document.querySelector('[data-page="checkins"]')?.classList.contains("active")) renderCheckinsPage();
     if (document.querySelector('[data-page="achievements"]')?.classList.contains("active")) renderAchievements();
-    if (isMapPageActive()) scheduleGeoMapRender();
+    if (document.querySelector('[data-page="imports"]')?.classList.contains("active")) renderDataInventory();
+    if (isMapPageActive() && !refreshMapLibreDataOnly()) scheduleGeoMapRender();
   });
 }
 
@@ -5191,9 +5619,16 @@ function renderMapControls() {
   if (showTracks) showTracks.checked = Boolean(overlays.paths);
   if (showChina5a) showChina5a.checked = Boolean(overlays.china5a);
   if (showWorldHeritage) showWorldHeritage.checked = Boolean(overlays.worldHeritage);
+  $("#addMapPoint")?.classList.toggle("active", mapAddMode);
   document.querySelectorAll("[data-region-view]").forEach((button) => {
     button.classList.toggle("active", button.dataset.regionView === state.selectedRegionView);
   });
+}
+
+function ensureCheckinOverlayVisible() {
+  state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}), checkins: true };
+  const showCheckins = $("#showCheckinsOnMap");
+  if (showCheckins) showCheckins.checked = true;
 }
 
 function moveMapLevelControlToToolbar() {
@@ -5306,6 +5741,15 @@ $("#importSummary").addEventListener("click", (event) => {
   if (!button) return;
   deleteImportedBatch(button.dataset.deleteImport, Number(button.dataset.importIndex));
 });
+$("#dataInventory")?.addEventListener("click", (event) => {
+  const visitButton = event.target.closest("[data-delete-inventory-visit]");
+  if (visitButton) {
+    unvisitPlace(visitButton.dataset.deleteInventoryVisit);
+    return;
+  }
+  const objectButton = event.target.closest("[data-delete-inventory-object]");
+  if (objectButton) deleteInventoryObject(objectButton.dataset.deleteInventoryObject);
+});
 $("#checkins")?.addEventListener("click", (event) => {
   const button = event.target.closest("[data-manual-action]");
   if (!button || button.disabled) return;
@@ -5361,6 +5805,14 @@ $("#showWorldHeritageOnMap")?.addEventListener("change", (event) => {
   if (event.target.checked) loadCatalogData().finally(renderGeoMap);
   else renderGeoMap();
 });
+$("#addMapPoint")?.addEventListener("click", () => {
+  if (mapAddMode) {
+    setMapAddMode(false);
+    closeMapPopupsAndDetail();
+  } else {
+    setMapAddMode(true);
+  }
+});
 document.querySelectorAll("[data-language]").forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.language));
 });
@@ -5398,6 +5850,12 @@ $("#leafletMap").addEventListener("click", (event) => {
 });
 $("#mapDetail").addEventListener("click", (event) => {
   if (event.target.closest("[data-close-detail]")) {
+    setMapAddMode(false);
+    closeMapPopupsAndDetail();
+    return;
+  }
+  if (event.target.closest("[data-cancel-map-point]")) {
+    setMapAddMode(false);
     closeMapPopupsAndDetail();
     return;
   }
@@ -5428,6 +5886,17 @@ $("#mapDetail").addEventListener("click", (event) => {
   const button = event.target.closest("[data-unvisit]");
   if (!button) return;
   unvisitPlace(button.dataset.unvisit);
+});
+$("#mapDetail").addEventListener("submit", (event) => {
+  if (!event.target.closest("#mapPointForm")) return;
+  event.preventDefault();
+  if (!pendingMapClickPoint) return;
+  const data = new FormData(event.target);
+  createMapClickCheckin({
+    name: data.get("name"),
+    lng: pendingMapClickPoint.lng,
+    lat: pendingMapClickPoint.lat,
+  });
 });
 new MutationObserver(ensureMapDetailCloseButton).observe($("#mapDetail"), {
   childList: true,

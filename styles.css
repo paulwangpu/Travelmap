@@ -102,6 +102,21 @@ select {
   margin-top: 4px;
 }
 
+.sidebar-footer {
+  margin-top: auto;
+  display: grid;
+  gap: 10px;
+}
+
+.app-version {
+  padding: 0 4px;
+  color: rgba(220, 231, 223, 0.52);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: right;
+}
+
 .nav {
   display: grid;
   gap: 8px;
@@ -185,8 +200,28 @@ select {
   margin: 0;
 }
 
+.map-add-point-button {
+  min-height: 39px;
+  padding: 7px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #17231f;
+  color: #fff;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.map-add-point-button.active {
+  background: var(--accent);
+  color: #17231f;
+}
+
+.adding-map-point,
+.adding-map-point canvas {
+  cursor: crosshair !important;
+}
+
 .privacy-note {
-  margin-top: auto;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;
   padding: 16px;
@@ -948,6 +983,24 @@ button:hover {
   font-size: 13px;
 }
 
+.table-action {
+  min-height: 0;
+  padding: 5px 9px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #eef4f1;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.table-action.danger {
+  border-color: rgba(143, 47, 32, 0.24);
+  background: #fff1ee;
+  color: #8f2f20;
+}
+
 .small {
   font-size: 13px;
   line-height: 1.6;
@@ -1324,6 +1377,48 @@ button:hover {
   width: 100%;
 }
 
+.secondary-action {
+  background: #eef4f1;
+  color: var(--ink);
+}
+
+.map-point-form {
+  display: grid;
+  gap: 12px;
+}
+
+.map-point-form dl {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.map-point-form dl div {
+  display: grid;
+  gap: 3px;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8fbf9;
+}
+
+.map-point-form dt {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.map-point-form dd {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.map-point-actions {
+  display: grid;
+  gap: 8px;
+}
+
 .toast {
   position: fixed;
   right: 22px;
@@ -1370,6 +1465,7 @@ button:hover {
     padding: 9px 11px;
   }
 
+  .sidebar-footer,
   .privacy-note {
     display: none;
   }

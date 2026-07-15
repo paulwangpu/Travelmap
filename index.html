@@ -6,7 +6,7 @@
     <title>我的全球旅行地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
-    <link rel="stylesheet" href="styles.css?v=14" />
+    <link rel="stylesheet" href="styles.css?v=18" />
   </head>
   <body>
     <div class="app-shell map-first-shell">
@@ -29,10 +29,13 @@
           <button type="button" data-language="zh" class="active">中文</button>
           <button type="button" data-language="en">English</button>
         </div>
-        <div class="privacy-note">
-          <span data-i18n="privacyEyebrow">隐私</span>
-          <strong data-i18n="privacyTitle">本地保存</strong>
-          <p data-i18n="privacyText">数据只保存在本机浏览器里，不会自动上传或公开。如需备份请导出。</p>
+        <div class="sidebar-footer">
+          <div class="privacy-note">
+            <span data-i18n="privacyEyebrow">隐私</span>
+            <strong data-i18n="privacyTitle">本地保存</strong>
+            <p data-i18n="privacyText">数据只保存在本机浏览器里，不会自动上传或公开。如需备份请导出。</p>
+          </div>
+          <div class="app-version" id="appVersion">v1.1</div>
         </div>
       </aside>
 
@@ -69,6 +72,7 @@
                 </select>
               </label>
               <div class="map-overlay-toggles">
+                <button id="addMapPoint" class="map-add-point-button" type="button" data-i18n="addMapPoint">添加打卡点</button>
                 <label><input id="showCheckinsOnMap" type="checkbox" checked /> <span data-i18n="overlayCheckins">我的打卡</span></label>
                 <label><input id="showTracksOnMap" type="checkbox" checked /> <span data-i18n="overlayTracks">我的足迹</span></label>
                 <label><input id="showChina5aOnMap" type="checkbox" /> <span data-i18n="overlay5a">5A 景区</span></label>
@@ -178,13 +182,7 @@
                 <span data-i18n="chooseFile">选择文件</span>
                 <input id="importFile" type="file" multiple accept=".geojson,.json,.kml,.csv,.jpg,.jpeg,.tif,.tiff,.heic,.heif,text/csv,application/json,image/jpeg,image/tiff,image/heic,image/heif" />
               </label>
-              <label>
-                <span data-i18n="importDepth">导入后标记为</span>
-                <select id="importDepth">
-                  <option value="0" data-i18n="importOnly">仅导入</option>
-                  <option value="1" selected data-i18n="visited">去过</option>
-                </select>
-              </label>
+
             </div>
             <p class="muted small" data-i18n="csvHelp">CSV 只需要三列：名称、纬度、经度。一次最多导入 1000 个可显示点。照片导入只读取本地文件名和 EXIF GPS，不上传照片。</p>
             <div id="importSummary" class="bars"></div>
@@ -231,6 +229,6 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-    <script src="app.js?v=90"></script>
+    <script src="app.js?v=107"></script>
   </body>
 </html>
