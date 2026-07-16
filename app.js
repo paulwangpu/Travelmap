@@ -3272,11 +3272,29 @@ function applyMapLibreProvider(provider) {
   mapLibreMap._travelMapProvider = provider;
   mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false };
   mapLibreSourceDataRefs.clear();
-  mapLibreMarkerSignature = "";
+  clearMapLibreMarkers();
   mapLibreMap.setStyle(mapLibreBaseStyle(provider));
-  mapLibreMap.once("styledata", () => {
-    if (mapLibreMap?.isStyleLoaded()) renderMapLibreLayers();
-  });
+  const rerender = () => renderMapLibreLayersWhenReady();
+  mapLibreMap.once("style.load", rerender);
+  mapLibreMap.once("styledata", rerender);
+  mapLibreMap.once("idle", rerender);
+  renderMapLibreLayersWhenReady();
+}
+
+function clearMapLibreMarkers() {
+  mapLibreMarkers.forEach((marker) => marker.remove());
+  mapLibreMarkers = [];
+  mapLibreMarkerSignature = "";
+}
+
+function renderMapLibreLayersWhenReady(attempt = 0) {
+  if (!mapLibreMap) return;
+  if (mapLibreMap.isStyleLoaded()) {
+    renderMapLibreLayers();
+    return;
+  }
+  if (attempt >= 12) return;
+  window.setTimeout(() => renderMapLibreLayersWhenReady(attempt + 1), 120);
 }
 
 function setMapLibreSource(id, data) {
