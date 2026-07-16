@@ -4614,26 +4614,18 @@ function renderDataInventory() {
 }
 
 function renderAchievements() {
-  const china5aHtml = renderChina5aSection();
-  const worldHeritageHtml = renderChecklistSection("worldHeritage", checklistCatalog.worldHeritage);
-  const referenceOrder = ["threeMountains", "fiveMountains", "buddhistMountains", "grottoes", "usNationalParks"];
-  const checklistHtml = referenceOrder
-    .filter((key) => checklistCatalog[key])
-    .map((key) => [key, checklistCatalog[key]])
-    .map(([key, list]) => renderChecklistSection(key, list))
-    .join("");
   $("#achievementList").innerHTML = `
-    <details class="achievement-group">
+    <details class="achievement-group" data-achievement-section="china5a">
       <summary>${currentLanguage === "en" ? "China 5A scenic areas" : "中国 5A 景区"}</summary>
-      ${china5aHtml}
+      <div class="achievement-section-placeholder"><p class="muted small">${currentLanguage === "en" ? "Expand to load this checklist." : "展开后加载该清单。"}</p></div>
     </details>
-    <details class="achievement-group">
+    <details class="achievement-group" data-achievement-section="worldHeritage">
       <summary>${currentLanguage === "en" ? "World Heritage by country" : "世界遗产（按国家）"}</summary>
-      ${worldHeritageHtml}
+      <div class="achievement-section-placeholder"><p class="muted small">${currentLanguage === "en" ? "Expand to load this checklist." : "展开后加载该清单。"}</p></div>
     </details>
-    <details class="achievement-group">
+    <details class="achievement-group" data-achievement-section="referenceLists">
       <summary>${currentLanguage === "en" ? "Other reference lists" : "其他参考清单"}</summary>
-      <div class="theme-checklists">${checklistHtml}</div>
+      <div class="achievement-section-placeholder"><p class="muted small">${currentLanguage === "en" ? "Expand to load this checklist." : "展开后加载该清单。"}</p></div>
     </details>`;
 }
 
@@ -4650,6 +4642,39 @@ function renderDashboardAchievements() {
       <a class="tag" href="#achievements">${t("viewChecklist")}</a>
     </div>
     <div class="achievement-card-grid">${achievements.map(renderAchievementCard).join("")}</div>`;
+}
+
+function fillAchievementSection(details) {
+  const placeholder = details?.querySelector?.(".achievement-section-placeholder");
+  if (!placeholder) return;
+  const section = details.dataset.achievementSection;
+  if (section === "china5a") {
+    placeholder.outerHTML = renderChina5aSection();
+    return;
+  }
+  if (section === "worldHeritage") {
+    placeholder.outerHTML = renderChecklistSection("worldHeritage", checklistCatalog.worldHeritage);
+    return;
+  }
+  if (section === "referenceLists") {
+    const referenceOrder = ["threeMountains", "fiveMountains", "buddhistMountains", "grottoes", "usNationalParks"];
+    const checklistHtml = referenceOrder
+      .filter((key) => checklistCatalog[key])
+      .map((key) => [key, checklistCatalog[key]])
+      .map(([key, list]) => renderChecklistSection(key, list))
+      .join("");
+    placeholder.outerHTML = `<div class="theme-checklists">${checklistHtml}</div>`;
+  }
+}
+
+function scheduleFillAchievementSection(details) {
+  const placeholder = details?.querySelector?.(".achievement-section-placeholder");
+  if (!placeholder || placeholder.dataset.loading === "1") return;
+  placeholder.dataset.loading = "1";
+  placeholder.innerHTML = `<p class="muted small">${currentLanguage === "en" ? "Loading..." : "正在加载..."}</p>`;
+  requestAnimationFrame(() => {
+    window.setTimeout(() => fillAchievementSection(details), 0);
+  });
 }
 
 function coreAchievementModels() {
@@ -4728,20 +4753,26 @@ function renderAchievementLevels(item) {
 function renderChina5aSection() {
   const list = checklistCatalog.china5a;
   const groups = Object.entries(list.byRegion || {});
-  const allItems = groups.flatMap(([, items]) => items);
-  const duplicateCount = allItems.length - new Set(allItems.map(canonicalPlaceKey)).size;
-  const missingCoordinateCount = allItems.filter((item) => !checklistCoordinateFor(item)).length;
+  const localRecordCount = groups.reduce((total, [, items]) => total + items.length, 0);
+  const duplicateCount = localRecordCount - new Set(groups.flatMap(([, items]) => items.map(canonicalPlaceKey))).size;
   const done = checklistDoneCount("china5a");
+  const groupStats = new Map(groups.map(([region, items]) => [
+    region,
+    {
+      total: items.length,
+      done: items.filter((item) => isChecklistItemDone("china5a", item)).length,
+    },
+  ]));
   const nav = groups.map(([region, items]) => {
-    const groupDone = items.filter((item) => isChecklistItemDone("china5a", item)).length;
-    return `<button type="button" data-checklist-jump="${checklistDomId("china5a", region)}">${checklistGroupDisplayName("china5a", region)} ${groupDone}/${items.length}</button>`;
+    const stats = groupStats.get(region) || { done: 0, total: items.length };
+    return `<button type="button" data-checklist-jump="${checklistDomId("china5a", region)}">${checklistGroupDisplayName("china5a", region)} ${stats.done}/${stats.total}</button>`;
   }).join("");
   const blocks = groups.map(([region, items]) => {
     const displayItems = displayChecklistItems("china5a", items);
-    const groupDone = displayItems.filter((item) => isChecklistItemDone("china5a", item)).length;
+    const stats = groupStats.get(region) || { done: 0, total: displayItems.length };
     const groupId = checklistGroupId("china5a", region);
     return `<details id="${checklistDomId("china5a", region)}" class="country-checklist china5a-province" data-checklist-group="${groupId}">
-      <summary><strong>${checklistGroupDisplayName("china5a", region)}</strong><span>${groupDone}/${displayItems.length}</span></summary>
+      <summary><strong>${checklistGroupDisplayName("china5a", region)}</strong><span>${stats.done}/${displayItems.length}</span></summary>
       <div class="check-chip-grid checklist-lazy-placeholder" data-lazy-checklist="china5a" data-lazy-group="${escapeHtml(region)}"><p class="muted small">${currentLanguage === "en" ? "Expand to load this province." : "展开后加载该省份。"}</p></div>
     </details>`;
   }).join("");
@@ -4752,9 +4783,8 @@ function renderChina5aSection() {
       <span>${china5aStatusDetailText()}</span>
       <span>${currentLanguage === "en" ? "Grouped by province" : "按省份显示"}</span>
       <span>${currentLanguage === "en" ? `${groups.length} groups` : `${groups.length} 个分组`}</span>
-      <span>${currentLanguage === "en" ? `${allItems.length} local records` : `${allItems.length} 条内置记录`}</span>
+      <span>${currentLanguage === "en" ? `${localRecordCount} local records` : `${localRecordCount} 条内置记录`}</span>
       <span>${currentLanguage === "en" ? `${duplicateCount} duplicate names` : `${duplicateCount} 个重复名`}</span>
-      <span>${currentLanguage === "en" ? `${missingCoordinateCount} without coordinates` : `${missingCoordinateCount} 条缺少坐标`}</span>
     </div>
     <nav class="checklist-nav">${nav}</nav>
     <div class="country-checklist-list">${blocks}</div>
@@ -4860,6 +4890,12 @@ function renderCountryChecklistSection(key, list) {
       const leftIsChina = leftCountry === "中国" ? 1 : 0;
       const rightIsChina = rightCountry === "中国" ? 1 : 0;
       if (leftIsChina !== rightIsChina) return rightIsChina - leftIsChina;
+      if (key === "worldHeritage") {
+        const leftSpecial = ["澳门", "香港", "台湾"].includes(leftCountry) ? 1 : 0;
+        const rightSpecial = ["澳门", "香港", "台湾"].includes(rightCountry) ? 1 : 0;
+        if (leftSpecial !== rightSpecial) return rightSpecial - leftSpecial;
+        return leftCountry.localeCompare(rightCountry, "zh-Hans-CN");
+      }
       const leftDone = leftItems.filter((item) => isChecklistItemDone(key, item)).length;
       const rightDone = rightItems.filter((item) => isChecklistItemDone(key, item)).length;
       if (leftDone !== rightDone) return rightDone - leftDone;
@@ -4869,14 +4905,15 @@ function renderCountryChecklistSection(key, list) {
   const countryBlocks = countryEntries.map(([country, items]) => {
     const displayItems = displayChecklistItems(key, items);
     if (!displayItems.length && key === "worldHeritage") return "";
-    const done = displayItems.filter((item) => isChecklistItemDone(key, item)).length;
+    const done = key === "worldHeritage" ? null : displayItems.filter((item) => isChecklistItemDone(key, item)).length;
     const groupId = checklistGroupId(key, country);
     const isOpen = key !== "worldHeritage" && isChecklistGroupOpen(groupId);
+    const summaryCount = key === "worldHeritage" ? `…/${displayItems.length}` : `${done}/${displayItems.length}`;
     const itemButtons = isOpen
       ? renderChecklistChipGrid(key, displayItems)
       : `<div class="check-chip-grid checklist-lazy-placeholder" data-lazy-checklist="${escapeHtml(key)}" data-lazy-country="${escapeHtml(country)}"><p class="muted small">${currentLanguage === "en" ? "Expand to load this list." : "展开后加载该分组。"}</p></div>`;
     return `<details class="country-checklist" data-checklist-group="${groupId}" ${isOpen ? "open" : ""}>
-      <summary><strong>${checklistGroupDisplayName(key, country)}</strong><span>${done}/${displayItems.length}</span></summary>
+      <summary><strong>${checklistGroupDisplayName(key, country)}</strong><span data-checklist-summary-count>${summaryCount}</span></summary>
       ${itemButtons}
     </details>`;
   }).join("");
@@ -4950,6 +4987,11 @@ function fillLazyChecklistGroup(details) {
   const group = placeholder.dataset.lazyCountry || placeholder.dataset.lazyGroup || "";
   const catalog = checklistCatalog[key] || {};
   const items = displayChecklistItems(key, catalog.byCountry?.[group] || catalog.byRegion?.[group] || []);
+  const summaryCount = details.querySelector?.("[data-checklist-summary-count]");
+  if (summaryCount) {
+    const done = items.filter((item) => isChecklistItemDone(key, item)).length;
+    summaryCount.textContent = `${done}/${items.length}`;
+  }
   placeholder.outerHTML = renderChecklistChipGrid(key, items);
 }
 
@@ -6020,6 +6062,10 @@ $("#achievementList").addEventListener("click", (event) => {
   toggleChecklistItem(button.dataset.checklist, button.dataset.item);
 });
 $("#achievementList").addEventListener("toggle", (event) => {
+  if (event.target?.matches?.("[data-achievement-section]")) {
+    if (event.target.open) scheduleFillAchievementSection(event.target);
+    return;
+  }
   const details = event.target.closest?.("[data-checklist-group]");
   if (!details) return;
   if (details.dataset.checklistGroup?.startsWith("worldHeritage:") || details.dataset.checklistGroup?.startsWith("china5a:")) {
