@@ -4737,16 +4737,12 @@ function renderChina5aSection() {
     return `<button type="button" data-checklist-jump="${checklistDomId("china5a", region)}">${checklistGroupDisplayName("china5a", region)} ${groupDone}/${items.length}</button>`;
   }).join("");
   const blocks = groups.map(([region, items]) => {
-    const groupDone = items.filter((item) => isChecklistItemDone("china5a", item)).length;
+    const displayItems = displayChecklistItems("china5a", items);
+    const groupDone = displayItems.filter((item) => isChecklistItemDone("china5a", item)).length;
     const groupId = checklistGroupId("china5a", region);
     return `<details id="${checklistDomId("china5a", region)}" class="country-checklist china5a-province" data-checklist-group="${groupId}">
-      <summary><strong>${checklistGroupDisplayName("china5a", region)}</strong><span>${groupDone}/${items.length}</span></summary>
-      <div class="check-chip-grid">
-        ${items.map((item) => {
-          const checked = isChecklistItemDone("china5a", item);
-          return `<button class="check-chip ${checked ? "done" : ""}" data-checklist="china5a" data-item="${item}" type="button">${checked ? `${t("checked")} · ` : ""}${checklistItemDisplayName("china5a", item)}</button>`;
-        }).join("")}
-      </div>
+      <summary><strong>${checklistGroupDisplayName("china5a", region)}</strong><span>${groupDone}/${displayItems.length}</span></summary>
+      <div class="check-chip-grid checklist-lazy-placeholder" data-lazy-checklist="china5a" data-lazy-group="${escapeHtml(region)}"><p class="muted small">${currentLanguage === "en" ? "Expand to load this province." : "展开后加载该省份。"}</p></div>
     </details>`;
   }).join("");
   return `<section class="theme-checklist featured-checklist china5a-checklist">
@@ -4948,21 +4944,32 @@ function rememberChecklistGroupForElement(element) {
 }
 
 function fillLazyChecklistGroup(details) {
-  const placeholder = details?.querySelector?.("[data-lazy-checklist][data-lazy-country]");
+  const placeholder = details?.querySelector?.("[data-lazy-checklist]");
   if (!placeholder) return;
   const key = placeholder.dataset.lazyChecklist;
-  const country = placeholder.dataset.lazyCountry;
-  const items = displayChecklistItems(key, checklistCatalog[key]?.byCountry?.[country] || []);
+  const group = placeholder.dataset.lazyCountry || placeholder.dataset.lazyGroup || "";
+  const catalog = checklistCatalog[key] || {};
+  const items = displayChecklistItems(key, catalog.byCountry?.[group] || catalog.byRegion?.[group] || []);
   placeholder.outerHTML = renderChecklistChipGrid(key, items);
 }
 
-function scheduleFillLazyChecklistGroup(details) {
-  const placeholder = details?.querySelector?.("[data-lazy-checklist][data-lazy-country]");
-  if (!placeholder || placeholder.dataset.loading === "1") return;
+function scheduleFillLazyChecklistGroup(details, afterFill) {
+  const placeholder = details?.querySelector?.("[data-lazy-checklist]");
+  if (!placeholder) {
+    if (typeof afterFill === "function") afterFill();
+    return;
+  }
+  if (placeholder.dataset.loading === "1") {
+    if (typeof afterFill === "function") window.setTimeout(afterFill, 80);
+    return;
+  }
   placeholder.dataset.loading = "1";
-  placeholder.innerHTML = `<p class="muted small">${currentLanguage === "en" ? "Loading this country..." : "正在加载该国家/地区..."}</p>`;
+  placeholder.innerHTML = `<p class="muted small">${currentLanguage === "en" ? "Loading this group..." : "正在加载该分组..."}</p>`;
   requestAnimationFrame(() => {
-    window.setTimeout(() => fillLazyChecklistGroup(details), 0);
+    window.setTimeout(() => {
+      fillLazyChecklistGroup(details);
+      if (typeof afterFill === "function") afterFill();
+    }, 0);
   });
 }
 
@@ -6001,7 +6008,9 @@ $("#achievementList").addEventListener("click", (event) => {
     const target = document.getElementById(jump.dataset.checklistJump);
     if (target) {
       target.open = true;
-      target.scrollIntoView({ block: "start", inline: "nearest", behavior: "smooth" });
+      scheduleFillLazyChecklistGroup(target, () => {
+        target.scrollIntoView({ block: "start", inline: "nearest", behavior: "smooth" });
+      });
     }
     return;
   }
@@ -6013,7 +6022,7 @@ $("#achievementList").addEventListener("click", (event) => {
 $("#achievementList").addEventListener("toggle", (event) => {
   const details = event.target.closest?.("[data-checklist-group]");
   if (!details) return;
-  if (details.dataset.checklistGroup?.startsWith("worldHeritage:")) {
+  if (details.dataset.checklistGroup?.startsWith("worldHeritage:") || details.dataset.checklistGroup?.startsWith("china5a:")) {
     if (details.open) scheduleFillLazyChecklistGroup(details);
     return;
   }
