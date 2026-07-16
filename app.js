@@ -628,6 +628,7 @@ const worldHeritageCountryNameAliases = {
   馬來西亞: "马来西亚",
   泰國: "泰国",
   芬蘭: "芬兰",
+  奧地利: "奥地利",
   馬爾他: "马耳他",
   馬耳他: "马耳他",
   馬達加斯加: "马达加斯加",
@@ -664,9 +665,106 @@ const worldHeritageCountryNameAliases = {
   清朝: "中国",
 };
 
+const traditionalToSimplifiedPhrases = [
+  ["澳門", "澳门"],
+  ["臺灣", "台湾"],
+  ["台灣", "台湾"],
+  ["香港特別行政區", "香港"],
+  ["澳門特別行政區", "澳门"],
+  ["中華人民共和國", "中华人民共和国"],
+  ["中華民國大陸時期", "中华民国大陆时期"],
+  ["中華民國", "中华民国"],
+  ["蘇聯", "苏联"],
+];
+
+const traditionalToSimplifiedChars = {
+  國: "国", 亞: "亚", 門: "门", 區: "区", 臺: "台", 灣: "湾", 華: "华", 義: "义",
+  韓國: "韩国", 韓: "韩", 俄: "俄", 德: "德", 法: "法", 馬: "马", 羅: "罗", 蘭: "兰",
+  貝: "贝", 蘇: "苏", 烏: "乌", 愛: "爱", 爾: "尔", 脫: "脱", 維: "维", 敘: "叙",
+  突: "突", 芬: "芬", 達: "达", 紹: "绍", 尼: "尼", 爾: "尔", 厄: "厄", 玻: "玻",
+  薩: "萨", 贊: "赞", 岡: "冈", 剛: "刚", 納: "纳", 梵: "梵", 蒙: "蒙", 聖: "圣",
+  繁: "繁", 體: "体", 歷: "历", 遺: "遗", 產: "产", 園: "园", 觀: "观", 築: "筑",
+  宮: "宫", 殿: "殿", 館: "馆", 峽: "峡", 濕: "湿", 熱: "热", 護: "护", 麗: "丽",
+  廣: "广", 舊: "旧", 與: "与", 對: "对", 濟: "济", 鹽: "盐", 礦: "矿", 廠: "厂",
+  鐘: "钟", 樓: "楼", 島: "岛", 橋: "桥", 鐵: "铁", 農: "农", 莊: "庄", 陵: "陵",
+  塢: "坞", 灣: "湾", 櫸: "榉", 樹: "树", 線: "线", 縣: "县", 鄉: "乡", 鎮: "镇",
+  畫: "画", 點: "点", 聯: "联", 雙: "双", 龍: "龙", 黃: "黄", 黑: "黑", 萊: "莱",
+  魯: "鲁", 錫: "锡", 斯: "斯", 齊: "齐", 齒: "齿", 齋: "斋", 藝: "艺", 術: "术",
+  寶: "宝", 溪: "溪", 濱: "滨", 邊: "边", 葉: "叶", 壇: "坛", 壘: "垒", 蘆: "芦",
+  沖: "冲", 關: "关", 財: "财", 製: "制", 絲: "丝", 綢: "绸", 業: "业", 紀: "纪",
+  靈: "灵", 參: "参", 長: "长", 脈: "脉", 萬: "万", 奧: "奥", 時: "时", 戰: "战",
+  禮: "礼", 場: "场", 亞: "亚", 寫: "写", 賽: "赛", 鬥: "斗", 陽: "阳", 陰: "阴",
+  階: "阶", 讀: "读", 賓: "宾", 彎: "弯", 圍: "围", 牆: "墙", 衛: "卫", 類: "类",
+  鋪: "铺", 廟: "庙", 鑄: "铸", 塔: "塔", 語: "语", 聲: "声", 蹟: "迹", 跡: "迹",
+  遜: "逊", 祿: "禄", 東: "东", 燈: "灯", 劇: "剧", 盧: "卢", 鄭: "郑",
+};
+
+const worldHeritageItemNameAliases = {
+  "Historic Centre of Macau": "澳门历史城区",
+  "Historic Centre of Macao": "澳门历史城区",
+  "Imperial Palaces of the Ming and Qing Dynasties in Beijing and Shenyang": "北京及沈阳的明清皇家宫殿",
+  "The Great Wall": "长城",
+  "Mogao Caves": "莫高窟",
+  "Mausoleum of the First Qin Emperor": "秦始皇陵及兵马俑",
+  "Peking Man Site at Zhoukoudian": "周口店北京人遗址",
+  "Mount Taishan": "泰山",
+  "Mount Huangshan": "黄山",
+  "Wulingyuan Scenic and Historic Interest Area": "武陵源",
+  "Mount Emei Scenic Area, including Leshan Giant Buddha Scenic Area": "峨眉山-乐山大佛",
+  "Xinjiang Tianshan": "新疆天山",
+  "Central Axis of Beijing": "北京中轴线",
+};
+
+function toSimplifiedChineseText(value) {
+  let text = String(value || "").trim();
+  traditionalToSimplifiedPhrases.forEach(([from, to]) => {
+    text = text.split(from).join(to);
+  });
+  return Array.from(text).map((char) => traditionalToSimplifiedChars[char] || char).join("");
+}
+
+function normalizeWorldHeritageItemName(name, aliases = {}) {
+  const raw = String(name || "").trim();
+  if (!raw || /^Q\d+$/.test(raw)) return "";
+  const aliased = aliases[raw] || worldHeritageItemNameAliases[raw] || raw;
+  let normalized = toSimplifiedChineseText(aliased).replace(/\s+/g, " ").trim();
+  const chinesePrefix = normalized.match(/^([^（(]*[\u4e00-\u9fff][^（(]*)(?:（|\()/);
+  if (chinesePrefix?.[1]) normalized = chinesePrefix[1].trim();
+  if (!normalized || /^Q\d+$/.test(normalized)) return "";
+  return normalized;
+}
+
+function isMacauWorldHeritageItem(itemName) {
+  return /澳门|澳門|Macau|Macao|伯多祿五世劇院|伯多禄五世剧院|大炮台|大三巴|馬禮遜教堂|马礼逊教堂|马礼遜教堂|聖安多尼教堂|圣安多尼教堂|媽閣|妈阁|盧家大屋|卢家大屋|東望洋|东望洋|鄭家大屋|郑家大屋/i.test(itemName || "");
+}
+
+function collectWorldHeritageNameAliases(byCountry = {}) {
+  const aliases = {};
+  Object.values(byCountry).flat().forEach((item) => {
+    const normalized = toSimplifiedChineseText(item).replace(/\s+/g, " ").trim();
+    const match = normalized.match(/^([^（(]*[\u4e00-\u9fff][^（(]*)(?:（|\()([^）)]+)(?:）|\))/);
+    if (!match?.[1] || !match?.[2]) return;
+    const chineseName = match[1].trim();
+    const englishName = match[2].trim();
+    if (!/^Q\d+$/.test(englishName)) aliases[englishName] = chineseName;
+    aliases[String(item).trim()] = chineseName;
+  });
+  return aliases;
+}
+
+function worldHeritageDisplayCountryForItem(itemName, fallbackCountry) {
+  const text = `${itemName || ""} ${fallbackCountry || ""}`;
+  if (isMacauWorldHeritageItem(text)) return "澳门";
+  if (/香港|Hong Kong/i.test(text)) return "香港";
+  if (/台湾|臺灣|台灣|Taiwan/i.test(text)) return "台湾";
+  return normalizeWorldHeritageCountryName(fallbackCountry);
+}
+
 function normalizeWorldHeritageCountryName(name) {
   const value = String(name || "").trim();
-  return worldHeritageCountryNameAliases[value] || value || "未分国家";
+  const aliased = worldHeritageCountryNameAliases[value] || value;
+  const simplified = toSimplifiedChineseText(aliased);
+  return worldHeritageCountryNameAliases[simplified] || simplified || "未分国家";
 }
 
 function worldHeritageCountryCoverageId(countryName) {
@@ -683,6 +781,7 @@ function worldHeritageCountryCoverageId(countryName) {
 function visitedWorldHeritageCountryNames(byCountry = {}) {
   const visited = uniqueVisitedCountries();
   return new Set(Object.keys(byCountry).filter((country) => {
+    if (["香港", "澳门", "台湾"].includes(country) && visited.has(countryCoverageId("cn"))) return true;
     const coverageId = worldHeritageCountryCoverageId(country);
     return coverageId && visited.has(coverageId);
   }));
@@ -1170,7 +1269,8 @@ const checklistCatalog = {
   worldHeritage: {
     label: "世界遗产",
     byCountry: {
-      中国: ["长城", "故宫", "秦始皇陵及兵马俑", "莫高窟", "周口店北京人遗址", "泰山", "黄山", "九寨沟", "黄龙", "武陵源", "承德避暑山庄", "曲阜三孔", "武当山古建筑群", "布达拉宫历史建筑群", "庐山国家公园", "峨眉山-乐山大佛", "丽江古城", "平遥古城", "苏州古典园林", "颐和园", "天坛", "大足石刻", "武夷山", "青城山-都江堰", "皖南古村落", "龙门石窟", "明清皇家陵寝", "云冈石窟", "云南三江并流", "高句丽王城王陵及贵族墓葬", "澳门历史城区", "四川大熊猫栖息地", "殷墟", "中国南方喀斯特", "开平碉楼与村落", "福建土楼", "三清山", "五台山", "登封天地之中古建筑群", "杭州西湖", "元上都遗址", "澄江化石地", "新疆天山", "红河哈尼梯田", "大运河", "丝绸之路", "土司遗址", "湖北神农架", "青海可可西里", "鼓浪屿", "梵净山", "良渚古城遗址", "黄渤海候鸟栖息地", "泉州", "普洱景迈山古茶林"],
+      中国: ["长城", "故宫", "秦始皇陵及兵马俑", "莫高窟", "周口店北京人遗址", "泰山", "黄山", "九寨沟", "黄龙", "武陵源", "承德避暑山庄", "曲阜三孔", "武当山古建筑群", "布达拉宫历史建筑群", "庐山国家公园", "峨眉山-乐山大佛", "丽江古城", "平遥古城", "苏州古典园林", "颐和园", "天坛", "大足石刻", "武夷山", "青城山-都江堰", "皖南古村落", "龙门石窟", "明清皇家陵寝", "云冈石窟", "云南三江并流", "高句丽王城王陵及贵族墓葬", "四川大熊猫栖息地", "殷墟", "中国南方喀斯特", "开平碉楼与村落", "福建土楼", "三清山", "五台山", "登封天地之中古建筑群", "杭州西湖", "元上都遗址", "澄江化石地", "新疆天山", "红河哈尼梯田", "大运河", "丝绸之路", "土司遗址", "湖北神农架", "青海可可西里", "鼓浪屿", "梵净山", "良渚古城遗址", "黄渤海候鸟栖息地", "泉州", "普洱景迈山古茶林"],
+      澳门: ["澳门历史城区"],
       美国: ["梅萨维德国家公园", "黄石国家公园", "大沼泽地国家公园", "大峡谷国家公园", "独立厅", "克卢恩/兰格尔-圣伊莱亚斯/冰川湾/塔琴希尼-阿尔塞克", "红木国家和州立公园", "猛犸洞国家公园", "奥林匹克国家公园", "卡霍基亚土丘", "大烟山国家公园", "自由女神像", "优胜美地国家公园", "查科文化", "夏洛茨维尔蒙蒂塞洛和弗吉尼亚大学", "夏威夷火山国家公园", "陶斯印第安村", "卡尔斯巴德洞窟国家公园", "沃特顿-冰川国际和平公园", "帕帕哈瑙莫夸基亚", "波弗蒂角", "圣安东尼奥传教区", "弗兰克·劳埃德·赖特建筑作品", "希望之井礼仪土方"],
       日本: ["法隆寺地区佛教古迹", "姬路城", "屋久岛", "白神山地", "古京都历史遗迹", "白川乡与五箇山合掌造村落", "广岛和平纪念碑", "严岛神社", "古奈良历史遗迹", "日光神社与寺院", "琉球王国城堡及相关遗产群", "纪伊山地圣地及参拜道", "知床", "石见银山", "平泉", "小笠原群岛", "富士山", "富冈制丝厂", "明治日本工业革命遗产", "国立西洋美术馆", "宗像和冲之岛", "长崎与天草地方潜伏基督徒相关遗产", "百舌鸟古市古坟群", "奄美大岛、德之岛、冲绳岛北部及西表岛", "北海道北东北绳文遗址群", "佐渡岛金山"],
       法国: ["巴黎塞纳河岸", "凡尔赛宫", "圣米歇尔山及其海湾", "沙特尔大教堂", "枫丹白露宫", "卢瓦尔河谷", "阿维尼翁历史中心", "卡尔卡松历史城塞"],
@@ -2607,18 +2707,50 @@ function loadCatalogData() {
     .then((data) => {
       if (!data?.byCountry || !data?.coordinates) throw new Error("invalid world heritage catalog");
       const byCountry = {};
-      Object.entries(data.byCountry || {}).forEach(([country, items]) => {
-        const normalizedCountry = normalizeWorldHeritageCountryName(country);
-        byCountry[normalizedCountry] ||= [];
-        byCountry[normalizedCountry].push(...items);
-      });
+      const coordinates = {};
+      const nameAliases = collectWorldHeritageNameAliases(data.byCountry);
+      if (Array.isArray(data.items) && data.items.length) {
+        data.items.forEach((item) => {
+          const sourceName = item.zhName || (/^Q\d+$/.test(item.name || "") ? item.enName : item.name) || item.enName;
+          const normalizedItem = normalizeWorldHeritageItemName(sourceName, nameAliases);
+          if (!normalizedItem) return;
+          const itemCountries = Array.isArray(item.countries) && item.countries.length ? item.countries : [item.country];
+          itemCountries.forEach((country) => {
+            const itemCountry = worldHeritageDisplayCountryForItem(normalizedItem, country);
+            byCountry[itemCountry] ||= [];
+            byCountry[itemCountry].push(normalizedItem);
+          });
+          if (Number.isFinite(item.lat) && Number.isFinite(item.lng)) {
+            const coordinateCountry = worldHeritageDisplayCountryForItem(normalizedItem, itemCountries[0]);
+            coordinates[normalizedItem] = [item.lat, item.lng, coordinateCountry];
+          }
+        });
+      } else {
+        const coordinateCountryByName = new Map();
+        Object.entries(data.coordinates || {}).forEach(([name, coords]) => {
+          if (!Array.isArray(coords)) return;
+          const normalizedName = normalizeWorldHeritageItemName(name, nameAliases);
+          if (!normalizedName) return;
+          const normalizedCountry = worldHeritageDisplayCountryForItem(normalizedName, coords[2]);
+          coordinates[normalizedName] = [coords[0], coords[1], normalizedCountry];
+          coordinateCountryByName.set(normalizedName, normalizedCountry);
+        });
+        Object.entries(data.byCountry || {}).forEach(([country, items]) => {
+          const normalizedCountry = normalizeWorldHeritageCountryName(country);
+          (items || []).forEach((item) => {
+            const normalizedItem = normalizeWorldHeritageItemName(item, nameAliases);
+            if (!normalizedItem) return;
+            const itemCountry = worldHeritageDisplayCountryForItem(
+              normalizedItem,
+              coordinateCountryByName.get(normalizedItem) || normalizedCountry
+            );
+            byCountry[itemCountry] ||= [];
+            byCountry[itemCountry].push(normalizedItem);
+          });
+        });
+      }
       Object.keys(byCountry).forEach((country) => {
         byCountry[country] = Array.from(new Set(byCountry[country])).sort((a, b) => a.localeCompare(b, "zh-Hans-CN"));
-      });
-      const coordinates = {};
-      Object.entries(data.coordinates || {}).forEach(([name, coords]) => {
-        if (!Array.isArray(coords)) return;
-        coordinates[name] = [coords[0], coords[1], normalizeWorldHeritageCountryName(coords[2])];
       });
       checklistCatalog.worldHeritage.byCountry = byCountry;
       worldHeritageCoordinates = coordinates;
@@ -4672,27 +4804,34 @@ function renderChecklistSection(key, list) {
   const done = checklistDoneCount(key);
   return `<section class="theme-checklist">
     <header><strong>${checklistLabel(key, list)}</strong><span>${done}/${list.items.length}</span></header>
-    <div class="check-chip-grid">
-      ${list.items.map((item) => {
-        const checked = isChecklistItemDone(key, item);
-        return `<button class="check-chip ${checked ? "done" : ""}" data-checklist="${key}" data-item="${item}" type="button">${checked ? `${t("checked")} · ` : ""}${checklistItemDisplayName(key, item)}</button>`;
-      }).join("")}
-    </div>
+    ${renderChecklistChipGrid(key, list.items)}
   </section>`;
+}
+
+function displayChecklistItems(key, items) {
+  return items || [];
+}
+
+function renderChecklistChipGrid(key, items) {
+  return `<div class="check-chip-grid">
+    ${(items || []).map((item) => renderChecklistChipButton(key, item)).join("")}
+  </div>`;
+}
+
+function renderChecklistChipButton(key, item) {
+  const checked = isChecklistItemDone(key, item);
+  const label = `${checked ? `${t("checked")} · ` : ""}${checklistItemDisplayName(key, item)}`;
+  return `<button class="check-chip ${checked ? "done" : ""}" data-checklist="${escapeHtml(key)}" data-item="${escapeHtml(item)}" type="button">${escapeHtml(label)}</button>`;
 }
 
 function renderRegionChecklistSection(key, list) {
   const blocks = Object.entries(list.byRegion).map(([region, items]) => {
-    const done = items.filter((item) => isChecklistItemDone(key, item)).length;
+    const displayItems = displayChecklistItems(key, items);
+    const done = displayItems.filter((item) => isChecklistItemDone(key, item)).length;
     const groupId = checklistGroupId(key, region);
     return `<details class="country-checklist" data-checklist-group="${groupId}">
-      <summary><strong>${checklistGroupDisplayName(key, region)}</strong><span>${done}/${items.length}</span></summary>
-      <div class="check-chip-grid">
-        ${items.map((item) => {
-          const checked = isChecklistItemDone(key, item);
-          return `<button class="check-chip ${checked ? "done" : ""}" data-checklist="${key}" data-item="${item}" type="button">${checked ? `${t("checked")} · ` : ""}${checklistItemDisplayName(key, item)}</button>`;
-        }).join("")}
-      </div>
+      <summary><strong>${checklistGroupDisplayName(key, region)}</strong><span>${done}/${displayItems.length}</span></summary>
+      ${renderChecklistChipGrid(key, displayItems)}
     </details>`;
   }).join("");
   return `<section class="theme-checklist featured-checklist">
@@ -4732,16 +4871,17 @@ function renderCountryChecklistSection(key, list) {
       return leftCountry.localeCompare(rightCountry, "zh-Hans-CN");
     });
   const countryBlocks = countryEntries.map(([country, items]) => {
-    const done = items.filter((item) => isChecklistItemDone(key, item)).length;
+    const displayItems = displayChecklistItems(key, items);
+    if (!displayItems.length && key === "worldHeritage") return "";
+    const done = displayItems.filter((item) => isChecklistItemDone(key, item)).length;
     const groupId = checklistGroupId(key, country);
-    return `<details class="country-checklist" data-checklist-group="${groupId}">
-      <summary><strong>${checklistGroupDisplayName(key, country)}</strong><span>${done}/${items.length}</span></summary>
-      <div class="check-chip-grid">
-        ${items.map((item) => {
-          const checked = isChecklistItemDone(key, item);
-          return `<button class="check-chip ${checked ? "done" : ""}" data-checklist="${key}" data-item="${item}" type="button">${checked ? `${t("checked")} · ` : ""}${checklistItemDisplayName(key, item)}</button>`;
-        }).join("")}
-      </div>
+    const isOpen = key !== "worldHeritage" && isChecklistGroupOpen(groupId);
+    const itemButtons = isOpen
+      ? renderChecklistChipGrid(key, displayItems)
+      : `<div class="check-chip-grid checklist-lazy-placeholder" data-lazy-checklist="${escapeHtml(key)}" data-lazy-country="${escapeHtml(country)}"><p class="muted small">${currentLanguage === "en" ? "Expand to load this list." : "展开后加载该分组。"}</p></div>`;
+    return `<details class="country-checklist" data-checklist-group="${groupId}" ${isOpen ? "open" : ""}>
+      <summary><strong>${checklistGroupDisplayName(key, country)}</strong><span>${done}/${displayItems.length}</span></summary>
+      ${itemButtons}
     </details>`;
   }).join("");
   const emptyWorldHeritage = key === "worldHeritage" && !countryBlocks
@@ -4805,6 +4945,15 @@ function setChecklistGroupOpen(groupId, open) {
 function rememberChecklistGroupForElement(element) {
   const details = element?.closest?.("[data-checklist-group]");
   if (details) setChecklistGroupOpen(details.dataset.checklistGroup, true);
+}
+
+function fillLazyChecklistGroup(details) {
+  const placeholder = details?.querySelector?.("[data-lazy-checklist][data-lazy-country]");
+  if (!placeholder) return;
+  const key = placeholder.dataset.lazyChecklist;
+  const country = placeholder.dataset.lazyCountry;
+  const items = displayChecklistItems(key, checklistCatalog[key]?.byCountry?.[country] || []);
+  placeholder.outerHTML = renderChecklistChipGrid(key, items);
 }
 
 function toggleChecklistItem(key, item) {
@@ -5854,7 +6003,12 @@ $("#achievementList").addEventListener("click", (event) => {
 $("#achievementList").addEventListener("toggle", (event) => {
   const details = event.target.closest?.("[data-checklist-group]");
   if (!details) return;
+  if (details.dataset.checklistGroup?.startsWith("worldHeritage:")) {
+    if (details.open) fillLazyChecklistGroup(details);
+    return;
+  }
   setChecklistGroupOpen(details.dataset.checklistGroup, details.open);
+  if (details.open) fillLazyChecklistGroup(details);
 }, true);
 $("#leafletMap").addEventListener("click", (event) => {
   const checklistButton = event.target.closest("[data-checklist-map]");
