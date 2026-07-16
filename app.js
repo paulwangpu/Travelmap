@@ -697,6 +697,8 @@ const traditionalToSimplifiedChars = {
   階: "阶", 讀: "读", 賓: "宾", 彎: "弯", 圍: "围", 牆: "墙", 衛: "卫", 類: "类",
   鋪: "铺", 廟: "庙", 鑄: "铸", 塔: "塔", 語: "语", 聲: "声", 蹟: "迹", 跡: "迹",
   遜: "逊", 祿: "禄", 東: "东", 燈: "灯", 劇: "剧", 盧: "卢", 鄭: "郑",
+  會: "会", 圖: "图", 書: "书", 總: "总", 署: "署", 樓: "楼", 議: "议", 玫: "玫",
+  瀋: "沈", 雲: "云", 墳: "坟", 誕: "诞", 詩: "诗",
 };
 
 const worldHeritageItemNameAliases = {
@@ -713,6 +715,18 @@ const worldHeritageItemNameAliases = {
   "Mount Emei Scenic Area, including Leshan Giant Buddha Scenic Area": "峨眉山-乐山大佛",
   "Xinjiang Tianshan": "新疆天山",
   "Central Axis of Beijing": "北京中轴线",
+  Fanjingshan: "梵净山",
+  "Migratory Bird Sanctuaries along the Coast of Yellow Sea-Bohai Gulf of China (Phase I)": "中国黄（渤）海候鸟栖息地（第一期）",
+  "北京及瀋陽的明清皇家宮殿": "北京及沈阳的明清皇家宫殿",
+  "庐山第四纪冰川国家地质公园": "庐山国家公园",
+  "秦始皇陵": "秦始皇陵及兵马俑",
+  "良渚遗址": "良渚古城遗址",
+  "可可西里": "青海可可西里",
+  "苏州园林": "苏州古典园林",
+  "花山岩画": "左江花山岩画文化景观",
+  "红河哈尼梯田": "红河哈尼梯田文化景观",
+  "曲阜的孔庙、孔林、孔府": "曲阜孔庙、孔林和孔府",
+  "周口店遗址": "周口店北京人遗址",
 };
 
 function toSimplifiedChineseText(value) {
@@ -728,14 +742,48 @@ function normalizeWorldHeritageItemName(name, aliases = {}) {
   if (!raw || /^Q\d+$/.test(raw)) return "";
   const aliased = aliases[raw] || worldHeritageItemNameAliases[raw] || raw;
   let normalized = toSimplifiedChineseText(aliased).replace(/\s+/g, " ").trim();
-  const chinesePrefix = normalized.match(/^([^（(]*[\u4e00-\u9fff][^（(]*)(?:（|\()/);
+  const chinesePrefix = normalized.match(/^([^（(]*[\u4e00-\u9fff][^（(]*)(?:（|\()([A-Za-z][^）)]*)(?:）|\))/);
   if (chinesePrefix?.[1]) normalized = chinesePrefix[1].trim();
-  if (!normalized || /^Q\d+$/.test(normalized)) return "";
+  if (isMacauWorldHeritageItem(normalized)) normalized = "澳门历史城区";
+  if (!normalized || /^Q\d+$/.test(normalized) || isWorldHeritageComponentOnlyName(normalized)) return "";
   return normalized;
 }
 
+function isWorldHeritageComponentOnlyName(name) {
+  return new Set([
+    "登封市",
+    "角抵塚",
+    "莫角山遗址",
+    "通济渠郑州段",
+  ]).has(name);
+}
+
+const macauWorldHeritageNamePatterns = [
+  /澳门|澳門|Macau|Macao/i,
+  /伯多祿五世劇院|伯多禄五世剧院/,
+  /大炮台|大三巴/,
+  /東方基金會會址|东方基金会会址|Casa Garden/i,
+  /東望洋|东望洋/,
+  /何東圖書館|何东图书馆|Sir Robert Ho Tung Library/i,
+  /馬禮遜教堂|马礼逊教堂|马礼遜教堂|Macau Protestant Chapel/i,
+  /玫瑰聖母堂|玫瑰圣母堂|St\.?\s*Dominic/i,
+  /民政總署大樓|民政总署大楼|Leal Senado/i,
+  /仁慈堂大樓|仁慈堂大楼|Santa Casa da Miseric[oó]rdia/i,
+  /聖安多尼教堂|圣安多尼教堂|St\.?\s*Anthony/i,
+  /議事亭前地|议事亭前地|Senado Square/i,
+  /基督教墳场|基督教坟场|Protestant Cemetery/i,
+  /三街会馆|三街會館|Sam Kai Vui Kun/i,
+  /聖奧斯定教堂|圣奥斯定教堂|St\.?\s*Augustine/i,
+  /聖老楞佐堂|圣老楞佐堂|St\.?\s*Lawrence/i,
+  /聖母聖誕主教座堂|圣母圣诞主教座堂/,
+  /聖母雪地殿教堂|圣母雪地殿教堂|Guia Chapel/i,
+  /聖若瑟修院及聖堂|圣若瑟修院及圣堂/,
+  /媽閣|妈阁|盧家大屋|卢家大屋|鄭家大屋|郑家大屋/,
+];
+
 function isMacauWorldHeritageItem(itemName) {
-  return /澳门|澳門|Macau|Macao|伯多祿五世劇院|伯多禄五世剧院|大炮台|大三巴|馬禮遜教堂|马礼逊教堂|马礼遜教堂|聖安多尼教堂|圣安多尼教堂|媽閣|妈阁|盧家大屋|卢家大屋|東望洋|东望洋|鄭家大屋|郑家大屋/i.test(itemName || "");
+  const text = String(itemName || "");
+  return macauWorldHeritageNamePatterns.some((pattern) => pattern.test(text));
 }
 
 function collectWorldHeritageNameAliases(byCountry = {}) {
@@ -754,9 +802,13 @@ function collectWorldHeritageNameAliases(byCountry = {}) {
 
 function worldHeritageDisplayCountryForItem(itemName, fallbackCountry) {
   const text = `${itemName || ""} ${fallbackCountry || ""}`;
-  if (isMacauWorldHeritageItem(text)) return "澳门";
   if (/香港|Hong Kong/i.test(text)) return "香港";
   if (/台湾|臺灣|台灣|Taiwan/i.test(text)) return "台湾";
+  if (/苏联|蘇聯/.test(text)) {
+    if (/圣彼得堡|Saint Petersburg/i.test(text)) return "俄罗斯";
+    if (/诗歌塔|Burana/i.test(text)) return "吉尔吉斯斯坦";
+    if (/Bukhara|布哈拉/i.test(text)) return "乌兹别克斯坦";
+  }
   return normalizeWorldHeritageCountryName(fallbackCountry);
 }
 
@@ -1269,8 +1321,7 @@ const checklistCatalog = {
   worldHeritage: {
     label: "世界遗产",
     byCountry: {
-      中国: ["长城", "故宫", "秦始皇陵及兵马俑", "莫高窟", "周口店北京人遗址", "泰山", "黄山", "九寨沟", "黄龙", "武陵源", "承德避暑山庄", "曲阜三孔", "武当山古建筑群", "布达拉宫历史建筑群", "庐山国家公园", "峨眉山-乐山大佛", "丽江古城", "平遥古城", "苏州古典园林", "颐和园", "天坛", "大足石刻", "武夷山", "青城山-都江堰", "皖南古村落", "龙门石窟", "明清皇家陵寝", "云冈石窟", "云南三江并流", "高句丽王城王陵及贵族墓葬", "四川大熊猫栖息地", "殷墟", "中国南方喀斯特", "开平碉楼与村落", "福建土楼", "三清山", "五台山", "登封天地之中古建筑群", "杭州西湖", "元上都遗址", "澄江化石地", "新疆天山", "红河哈尼梯田", "大运河", "丝绸之路", "土司遗址", "湖北神农架", "青海可可西里", "鼓浪屿", "梵净山", "良渚古城遗址", "黄渤海候鸟栖息地", "泉州", "普洱景迈山古茶林"],
-      澳门: ["澳门历史城区"],
+      中国: ["长城", "故宫", "秦始皇陵及兵马俑", "莫高窟", "周口店北京人遗址", "泰山", "黄山", "九寨沟", "黄龙", "武陵源", "承德避暑山庄", "曲阜三孔", "武当山古建筑群", "布达拉宫历史建筑群", "庐山国家公园", "峨眉山-乐山大佛", "丽江古城", "平遥古城", "苏州古典园林", "颐和园", "天坛", "大足石刻", "武夷山", "青城山-都江堰", "皖南古村落", "龙门石窟", "明清皇家陵寝", "云冈石窟", "云南三江并流", "高句丽王城王陵及贵族墓葬", "澳门历史城区", "四川大熊猫栖息地", "殷墟", "中国南方喀斯特", "开平碉楼与村落", "福建土楼", "三清山", "五台山", "登封天地之中古建筑群", "杭州西湖", "元上都遗址", "澄江化石地", "新疆天山", "红河哈尼梯田", "大运河", "丝绸之路", "土司遗址", "湖北神农架", "青海可可西里", "鼓浪屿", "梵净山", "良渚古城遗址", "黄渤海候鸟栖息地", "泉州", "普洱景迈山古茶林"],
       美国: ["梅萨维德国家公园", "黄石国家公园", "大沼泽地国家公园", "大峡谷国家公园", "独立厅", "克卢恩/兰格尔-圣伊莱亚斯/冰川湾/塔琴希尼-阿尔塞克", "红木国家和州立公园", "猛犸洞国家公园", "奥林匹克国家公园", "卡霍基亚土丘", "大烟山国家公园", "自由女神像", "优胜美地国家公园", "查科文化", "夏洛茨维尔蒙蒂塞洛和弗吉尼亚大学", "夏威夷火山国家公园", "陶斯印第安村", "卡尔斯巴德洞窟国家公园", "沃特顿-冰川国际和平公园", "帕帕哈瑙莫夸基亚", "波弗蒂角", "圣安东尼奥传教区", "弗兰克·劳埃德·赖特建筑作品", "希望之井礼仪土方"],
       日本: ["法隆寺地区佛教古迹", "姬路城", "屋久岛", "白神山地", "古京都历史遗迹", "白川乡与五箇山合掌造村落", "广岛和平纪念碑", "严岛神社", "古奈良历史遗迹", "日光神社与寺院", "琉球王国城堡及相关遗产群", "纪伊山地圣地及参拜道", "知床", "石见银山", "平泉", "小笠原群岛", "富士山", "富冈制丝厂", "明治日本工业革命遗产", "国立西洋美术馆", "宗像和冲之岛", "长崎与天草地方潜伏基督徒相关遗产", "百舌鸟古市古坟群", "奄美大岛、德之岛、冲绳岛北部及西表岛", "北海道北东北绳文遗址群", "佐渡岛金山"],
       法国: ["巴黎塞纳河岸", "凡尔赛宫", "圣米歇尔山及其海湾", "沙特尔大教堂", "枫丹白露宫", "卢瓦尔河谷", "阿维尼翁历史中心", "卡尔卡松历史城塞"],
