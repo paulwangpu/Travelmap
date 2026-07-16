@@ -14,7 +14,7 @@ const languageStorageKey = "travel-map-language";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "1.2";
+const appVersion = "1.3";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const worldHeritageCatalogTotal = 1520;
@@ -4956,6 +4956,16 @@ function fillLazyChecklistGroup(details) {
   placeholder.outerHTML = renderChecklistChipGrid(key, items);
 }
 
+function scheduleFillLazyChecklistGroup(details) {
+  const placeholder = details?.querySelector?.("[data-lazy-checklist][data-lazy-country]");
+  if (!placeholder || placeholder.dataset.loading === "1") return;
+  placeholder.dataset.loading = "1";
+  placeholder.innerHTML = `<p class="muted small">${currentLanguage === "en" ? "Loading this country..." : "正在加载该国家/地区..."}</p>`;
+  requestAnimationFrame(() => {
+    window.setTimeout(() => fillLazyChecklistGroup(details), 0);
+  });
+}
+
 function toggleChecklistItem(key, item) {
   const id = checklistId(key, item);
   const marks = new Set(state.checklistMarks || []);
@@ -6004,11 +6014,11 @@ $("#achievementList").addEventListener("toggle", (event) => {
   const details = event.target.closest?.("[data-checklist-group]");
   if (!details) return;
   if (details.dataset.checklistGroup?.startsWith("worldHeritage:")) {
-    if (details.open) fillLazyChecklistGroup(details);
+    if (details.open) scheduleFillLazyChecklistGroup(details);
     return;
   }
   setChecklistGroupOpen(details.dataset.checklistGroup, details.open);
-  if (details.open) fillLazyChecklistGroup(details);
+  if (details.open) scheduleFillLazyChecklistGroup(details);
 }, true);
 $("#leafletMap").addEventListener("click", (event) => {
   const checklistButton = event.target.closest("[data-checklist-map]");
