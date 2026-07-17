@@ -2118,6 +2118,16 @@ function uniqueVisitedCountries() {
   return new Set((state.coverage?.countries || []).map(countryCoverageId).filter((country) => country && country !== "imported"));
 }
 
+function placeCountsForCoverage(place) {
+  if (!place || place.shapeOnly) return false;
+  if (!place.checklistOnly) return true;
+  const isWorldHeritageChecklist =
+    place.checklistKey === "worldHeritage" ||
+    String(place.id || "").startsWith("checklist-worldheritage-") ||
+    (place.checklist || []).includes(checklistCatalog.worldHeritage.label);
+  return !isWorldHeritageChecklist;
+}
+
 function ensureCoverage() {
   if (!state.coverage) state.coverage = { countries: [], regions: {}, subregions: {} };
   state.coverage.countries ||= [];
@@ -2161,7 +2171,7 @@ function rebuildCoverageFromSavedVisits() {
   const regions = {};
   const subregions = {};
   visitedPlaces().forEach((visit) => {
-    if (visit.place.shapeOnly) return;
+    if (!placeCountsForCoverage(visit.place)) return;
     const countryId = normalizeCountry(visit.place.country);
     const coverageCountryId = countryCoverageId(countryId);
     if (coverageCountryId && coverageCountryId !== "imported") countriesSeen.add(coverageCountryId);
@@ -2192,7 +2202,7 @@ function recomputeCoverage() {
   const regions = {};
   const subregions = {};
   visitedPlaces().forEach((visit) => {
-    if (visit.place.shapeOnly) return;
+    if (!placeCountsForCoverage(visit.place)) return;
     const countryId = normalizeCountry(visit.place.country);
     const coverageCountryId = countryCoverageId(countryId);
     if (coverageCountryId && coverageCountryId !== "imported") countriesSeen.add(coverageCountryId);
@@ -2220,7 +2230,7 @@ function recomputeCoverage() {
 }
 
 function addCoverageForPlace(place) {
-  if (!place || place.shapeOnly) return;
+  if (!placeCountsForCoverage(place)) return;
   const coverage = ensureCoverage();
   const countryId = normalizeCountry(place.country);
   const coverageCountryId = countryCoverageId(countryId);
@@ -5163,6 +5173,7 @@ function ensureChecklistPlace(key, item) {
   const existing = places.find((place) => placeMatchesName(place, item));
   if (existing) {
     existing.checklist = Array.from(new Set([...(existing.checklist || []), listLabel]));
+    existing.checklistKey ||= key;
     applyChecklistCoordinates(existing, coords);
     upsertVisit(existing.id, 1, { tripId: "checklist", save: false });
     state.focusPlaceId = existing.id;
@@ -5181,6 +5192,7 @@ function ensureChecklistPlace(key, item) {
     lng: coords?.[1] ?? null,
     tags: [listLabel],
     checklist: [listLabel],
+    checklistKey: key,
     checklistOnly: true,
   };
   if (Number.isFinite(place.lat) && Number.isFinite(place.lng)) {
