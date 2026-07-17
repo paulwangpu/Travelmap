@@ -2406,6 +2406,10 @@ function escapeHtml(value) {
     .replace(/"/g, "&quot;");
 }
 
+function stripHtmlTags(value) {
+  return String(value || "").replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
+}
+
 function openMapClickCheckinForm(lng, lat) {
   const point = inferMapClickPoint(lng, lat);
   pendingMapClickPoint = { ...point, defaultName: mapClickPointName() };
@@ -2805,12 +2809,12 @@ function loadCatalogData() {
       const nameAliases = collectWorldHeritageNameAliases(data.byCountry);
       if (Array.isArray(data.items) && data.items.length) {
         data.items.forEach((item) => {
-          const sourceName = item.zhName || (/^Q\d+$/.test(item.name || "") ? item.enName : item.name) || item.enName;
+          const sourceName = stripHtmlTags(item.zhName || (/^Q\d+$/.test(item.name || "") ? item.enName : item.name) || item.enName);
           const normalizedItem = normalizeWorldHeritageItemName(sourceName, nameAliases);
           if (!normalizedItem) return;
-          const itemCountries = Array.isArray(item.countries) && item.countries.length ? item.countries : [item.country];
+          const itemCountries = (Array.isArray(item.countries) && item.countries.length ? item.countries : [item.country]).map(stripHtmlTags);
           const itemCountryIds = Array.isArray(item.countryIds) ? item.countryIds : [];
-          if (item.enName) englishNames[normalizedItem] = item.enName;
+          if (item.enName) englishNames[normalizedItem] = stripHtmlTags(item.enName);
           itemCountries.forEach((country, index) => {
             const itemCountry = worldHeritageDisplayCountryForItem(normalizedItem, country);
             if (itemCountryIds[index]) countryIds[itemCountry] = String(itemCountryIds[index]).toLowerCase();
@@ -2826,16 +2830,16 @@ function loadCatalogData() {
         const coordinateCountryByName = new Map();
         Object.entries(data.coordinates || {}).forEach(([name, coords]) => {
           if (!Array.isArray(coords)) return;
-          const normalizedName = normalizeWorldHeritageItemName(name, nameAliases);
+          const normalizedName = normalizeWorldHeritageItemName(stripHtmlTags(name), nameAliases);
           if (!normalizedName) return;
-          const normalizedCountry = worldHeritageDisplayCountryForItem(normalizedName, coords[2]);
+          const normalizedCountry = worldHeritageDisplayCountryForItem(normalizedName, stripHtmlTags(coords[2]));
           coordinates[normalizedName] = [coords[0], coords[1], normalizedCountry];
           coordinateCountryByName.set(normalizedName, normalizedCountry);
         });
         Object.entries(data.byCountry || {}).forEach(([country, items]) => {
-          const normalizedCountry = normalizeWorldHeritageCountryName(country);
+          const normalizedCountry = normalizeWorldHeritageCountryName(stripHtmlTags(country));
           (items || []).forEach((item) => {
-            const normalizedItem = normalizeWorldHeritageItemName(item, nameAliases);
+            const normalizedItem = normalizeWorldHeritageItemName(stripHtmlTags(item), nameAliases);
             if (!normalizedItem) return;
             const itemCountry = worldHeritageDisplayCountryForItem(
               normalizedItem,
@@ -2847,8 +2851,8 @@ function loadCatalogData() {
         });
       }
       Object.entries(data.englishNames || {}).forEach(([name, englishName]) => {
-        const normalizedName = normalizeWorldHeritageItemName(name, nameAliases);
-        if (normalizedName && englishName) englishNames[normalizedName] = englishName;
+        const normalizedName = normalizeWorldHeritageItemName(stripHtmlTags(name), nameAliases);
+        if (normalizedName && englishName) englishNames[normalizedName] = stripHtmlTags(englishName);
       });
       Object.entries(data.countryIds || {}).forEach(([country, id]) => {
         const normalizedCountry = normalizeWorldHeritageCountryName(country);
@@ -4995,7 +4999,18 @@ function renderCountryChecklistSection(key, list) {
     </div>` : "";
   const countryEntries = Object.entries(list.byCountry)
     .filter(([country]) => key !== "worldHeritage" || visitedHeritageCountries.has(country))
-    .sort(([leftCountry, leftItems], [rightCountry, rightItems]) => {
+    .map(([country, items]) => {
+      const displayItems = displayChecklistItems(key, items);
+      return {
+        country,
+        displayItems,
+        done: displayItems.filter((item) => isChecklistItemDone(key, item)).length,
+      };
+    })
+    .filter(({ displayItems }) => key !== "worldHeritage" || displayItems.length)
+    .sort((left, right) => {
+      const leftCountry = left.country;
+      const rightCountry = right.country;
       const leftIsChina = leftCountry === "中国" ? 1 : 0;
       const rightIsChina = rightCountry === "中国" ? 1 : 0;
       if (leftIsChina !== rightIsChina) return rightIsChina - leftIsChina;
@@ -5003,21 +5018,17 @@ function renderCountryChecklistSection(key, list) {
         const leftSpecial = ["澳门", "香港", "台湾"].includes(leftCountry) ? 1 : 0;
         const rightSpecial = ["澳门", "香港", "台湾"].includes(rightCountry) ? 1 : 0;
         if (leftSpecial !== rightSpecial) return rightSpecial - leftSpecial;
+        if (left.done !== right.done) return right.done - left.done;
         return leftCountry.localeCompare(rightCountry, "zh-Hans-CN");
       }
-      const leftDone = leftItems.filter((item) => isChecklistItemDone(key, item)).length;
-      const rightDone = rightItems.filter((item) => isChecklistItemDone(key, item)).length;
-      if (leftDone !== rightDone) return rightDone - leftDone;
-      if (leftItems.length !== rightItems.length) return rightItems.length - leftItems.length;
+      if (left.done !== right.done) return right.done - left.done;
+      if (left.displayItems.length !== right.displayItems.length) return right.displayItems.length - left.displayItems.length;
       return leftCountry.localeCompare(rightCountry, "zh-Hans-CN");
     });
-  const countryBlocks = countryEntries.map(([country, items]) => {
-    const displayItems = displayChecklistItems(key, items);
-    if (!displayItems.length && key === "worldHeritage") return "";
-    const done = key === "worldHeritage" ? null : displayItems.filter((item) => isChecklistItemDone(key, item)).length;
+  const countryBlocks = countryEntries.map(({ country, displayItems, done }) => {
     const groupId = checklistGroupId(key, country);
     const isOpen = key !== "worldHeritage" && isChecklistGroupOpen(groupId);
-    const summaryCount = key === "worldHeritage" ? `…/${displayItems.length}` : `${done}/${displayItems.length}`;
+    const summaryCount = `${done}/${displayItems.length}`;
     const itemButtons = isOpen
       ? renderChecklistChipGrid(key, displayItems)
       : `<div class="check-chip-grid checklist-lazy-placeholder" data-lazy-checklist="${escapeHtml(key)}" data-lazy-country="${escapeHtml(country)}"><p class="muted small">${currentLanguage === "en" ? "Expand to load this list." : "展开后加载该分组。"}</p></div>`;
