@@ -2672,6 +2672,7 @@ function applyLocalStorageSnapshot(saved) {
 
 function sanitizeDataStore() {
   const seedPlaceIds = new Set(["forbidden-city", "shenzhen", "xian", "tokyo", "kyoto", "yosemite", "nyc", "paris", "singapore"]);
+  const coverageNeedsRebuild = normalizeSavedChecklistGeography();
   state.visits = (state.visits || []).filter((visit) => !(visit.tripId === "seed" && seedPlaceIds.has(visit.placeId)));
   state.trips = (state.trips || []).filter((trip) => trip.id !== "seed");
   if (seedPlaceIds.has(state.focusPlaceId)) state.focusPlaceId = "";
@@ -2689,8 +2690,25 @@ function sanitizeDataStore() {
   state.importedFiles ||= [];
   state.checklistMarks ||= [];
   state.openChecklistGroups ||= [];
-  ensureCoverage();
+  if (coverageNeedsRebuild) rebuildCoverageFromSavedVisits();
+  else ensureCoverage();
   state.coverage.countries = Array.from(new Set((state.coverage.countries || []).map(countryCoverageId).filter((country) => country && country !== "imported")));
+}
+
+function normalizeSavedChecklistGeography() {
+  let changed = false;
+  const hasNorthKoreaCoverage = (state.coverage?.countries || []).map(countryCoverageId).includes("kp");
+  places.forEach((place) => {
+    const isChina5a =
+      place.checklistKey === "china5a" ||
+      String(place.id || "").startsWith("checklist-china5a-");
+    if (!isChina5a) return;
+    const beforeCountry = place.country;
+    applyChecklistGeography(place, "china5a", checklistCoordinateFor(place.name));
+    if (beforeCountry !== place.country) changed = true;
+    if (hasNorthKoreaCoverage) changed = true;
+  });
+  return changed;
 }
 
 function currentArchivePayload() {
@@ -5185,7 +5203,7 @@ function ensureChecklistPlace(key, item) {
   if (existing) {
     existing.checklist = Array.from(new Set([...(existing.checklist || []), listLabel]));
     existing.checklistKey ||= key;
-    applyChecklistCoordinates(existing, coords);
+    applyChecklistCoordinates(existing, coords, key);
     upsertVisit(existing.id, 1, { tripId: "checklist", save: false });
     state.focusPlaceId = existing.id;
     return existing;
@@ -5206,27 +5224,32 @@ function ensureChecklistPlace(key, item) {
     checklistKey: key,
     checklistOnly: true,
   };
-  if (Number.isFinite(place.lat) && Number.isFinite(place.lng)) {
-    const country = inferCountry(place.lng, place.lat);
-    if (country?.id) place.country = country.id;
-    const region = inferRegion(place.country, place.lng, place.lat);
-    if (region?.name) place.unit = region.name;
-    const subregion = inferSubregion(place.country, place.lng, place.lat);
-    if (subregion?.name) place.subunit = subregion.name;
-  }
+  applyChecklistGeography(place, key, coords);
   places.push(place);
   upsertVisit(id, 1, { tripId: "checklist", save: false });
   state.focusPlaceId = id;
   return place;
 }
 
-function applyChecklistCoordinates(place, coords) {
-  if (!coords || Number.isFinite(place.lat) && Number.isFinite(place.lng)) return;
-  place.lat = coords[0];
-  place.lng = coords[1];
-  place.unit = place.unit || coords[2] || "";
-  const country = inferCountry(place.lng, place.lat);
-  if (country?.id) place.country = country.id;
+function applyChecklistCoordinates(place, coords, key) {
+  if (coords && !(Number.isFinite(place.lat) && Number.isFinite(place.lng))) {
+    place.lat = coords[0];
+    place.lng = coords[1];
+    place.unit = place.unit || coords[2] || "";
+  }
+  applyChecklistGeography(place, key, coords);
+}
+
+function applyChecklistGeography(place, key, coords) {
+  if (key === "china5a") {
+    place.country = "cn";
+    if (coords?.[2]) place.unit = coords[2];
+  }
+  if (!(Number.isFinite(place.lat) && Number.isFinite(place.lng))) return;
+  if (key !== "china5a") {
+    const country = inferCountry(place.lng, place.lat);
+    if (country?.id) place.country = country.id;
+  }
   const region = inferRegion(place.country, place.lng, place.lat);
   if (region?.name) place.unit = region.name;
   const subregion = inferSubregion(place.country, place.lng, place.lat);
