@@ -652,6 +652,9 @@ const worldHeritageCountryNameAliases = {
   蒙古國: "蒙古",
   孟加拉國: "孟加拉国",
   朝鮮民主主義人民共和國: "朝鲜",
+  土庫曼: "土库曼斯坦",
+  土库曼: "土库曼斯坦",
+  邁赫拉蘇丹國: "也门",
   德意志联邦共和国: "德国",
   法兰西共和国: "法国",
   大不列颠及北爱尔兰联合王国: "英国",
@@ -699,6 +702,8 @@ const traditionalToSimplifiedChars = {
   遜: "逊", 祿: "禄", 東: "东", 燈: "灯", 劇: "剧", 盧: "卢", 鄭: "郑",
   會: "会", 圖: "图", 書: "书", 總: "总", 署: "署", 樓: "楼", 議: "议", 玫: "玫",
   瀋: "沈", 雲: "云", 墳: "坟", 誕: "诞", 詩: "诗",
+  庫: "库", 鯨: "鲸", 魚: "鱼", 貼: "贴", 邁: "迈", 廳: "厅", 貧: "贫",
+  賈: "贾", 喬: "乔", 遺: "遗", 灣: "湾",
 };
 
 const worldHeritageItemNameAliases = {
@@ -727,6 +732,22 @@ const worldHeritageItemNameAliases = {
   "红河哈尼梯田": "红河哈尼梯田文化景观",
   "曲阜的孔庙、孔林、孔府": "曲阜孔庙、孔林和孔府",
   "周口店遗址": "周口店北京人遗址",
+  "Historic City of Ayutthaya": "阿瑜陀耶古城",
+  "Ayutthaya Historical Park": "阿瑜陀耶古城",
+  Shiretoko: "知床",
+  "Shiretoko Peninsula": "知床",
+  "知床半島": "知床",
+  "知床半岛": "知床",
+  "Sado Island Gold Mines": "佐渡岛金山",
+  "佐渡金山": "佐渡岛金山",
+  "Kaeng Krachan Forest Complex": "岗卡章森林保护区",
+  "Phu Phrabat, a testimony to the Sīma stone tradition of the Dvaravati period": "普帕巴历史公园",
+  "Poverty Point": "波弗蒂角",
+  "貧点": "波弗蒂角",
+  "Centennial Hall": "百年厅",
+  "百年廳": "百年厅",
+  Bam: "巴姆古城",
+  "巴姆": "巴姆古城",
 };
 
 function toSimplifiedChineseText(value) {
@@ -744,6 +765,7 @@ function normalizeWorldHeritageItemName(name, aliases = {}) {
   let normalized = toSimplifiedChineseText(aliased).replace(/\s+/g, " ").trim();
   const chinesePrefix = normalized.match(/^([^（(]*[\u4e00-\u9fff][^（(]*)(?:（|\()([A-Za-z][^）)]*)(?:）|\))/);
   if (chinesePrefix?.[1]) normalized = chinesePrefix[1].trim();
+  normalized = worldHeritageItemNameAliases[normalized] || normalized;
   if (isMacauWorldHeritageItem(normalized)) normalized = "澳门历史城区";
   if (!normalized || /^Q\d+$/.test(normalized) || isWorldHeritageComponentOnlyName(normalized)) return "";
   return normalized;
