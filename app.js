@@ -17,7 +17,7 @@ const idbStateKey = "state";
 const appVersion = "1.3";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
-const worldHeritageCatalogTotal = 1520;
+const worldHeritageCatalogTotal = 1248;
 const fixedChecklistTotals = {
   china5a: china5aOfficialTotal,
   worldHeritage: worldHeritageCatalogTotal,
@@ -64,6 +64,8 @@ let china5aCatalogStatus = { source: "本地清单", detail: `${china5aOfficialT
 let china5aCoordinates = {};
 let worldHeritageCatalogStatus = { source: "本地清单", detail: `${worldHeritageCatalogTotal} 条记录`, total: worldHeritageCatalogTotal };
 let worldHeritageCoordinates = {};
+let worldHeritageEnglishNames = {};
+let worldHeritageCountryIds = {};
 let boundaryData = { country: null, china: null, us: null, japan: null, admin1: null, china2: null, chinaDirect: null, tw2: null, us2: null, ru2: null };
 let boundaryLoading = { country: false, china: false, us: false, japan: false, admin1: false, china2: false, chinaDirect: false, tw2: false, us2: false, ru2: false };
 let boundaryPromises = {};
@@ -721,7 +723,10 @@ const worldHeritageItemNameAliases = {
   "Xinjiang Tianshan": "新疆天山",
   "Central Axis of Beijing": "北京中轴线",
   Fanjingshan: "梵净山",
-  "Migratory Bird Sanctuaries along the Coast of Yellow Sea-Bohai Gulf of China (Phase I)": "中国黄（渤）海候鸟栖息地（第一期）",
+  "Migratory Bird Sanctuaries along the Coast of Yellow Sea-Bohai Gulf of China": "中国黄（渤）海候鸟栖息地（第二期）",
+  "Migratory Bird Sanctuaries along the Coast of Yellow Sea-Bohai Gulf of China (Phase I)": "中国黄（渤）海候鸟栖息地（第二期）",
+  "中国黄（渤）海候鸟栖息地（第一期）": "中国黄（渤）海候鸟栖息地（第二期）",
+  "中国黄（渤）海候鸟栖息地（第一期、第二期）": "中国黄（渤）海候鸟栖息地（第二期）",
   "北京及瀋陽的明清皇家宮殿": "北京及沈阳的明清皇家宫殿",
   "庐山第四纪冰川国家地质公园": "庐山国家公园",
   "秦始皇陵": "秦始皇陵及兵马俑",
@@ -816,7 +821,8 @@ function collectWorldHeritageNameAliases(byCountry = {}) {
     if (!match?.[1] || !match?.[2]) return;
     const chineseName = match[1].trim();
     const englishName = match[2].trim();
-    if (!/^Q\d+$/.test(englishName)) aliases[englishName] = chineseName;
+    if (!/^[A-Za-z]/.test(englishName) || /^Q\d+$/.test(englishName)) return;
+    aliases[englishName] = chineseName;
     aliases[String(item).trim()] = chineseName;
   });
   return aliases;
@@ -843,6 +849,8 @@ function normalizeWorldHeritageCountryName(name) {
 
 function worldHeritageCountryCoverageId(countryName) {
   const normalized = normalizeWorldHeritageCountryName(countryName);
+  const mappedId = worldHeritageCountryIds[countryName] || worldHeritageCountryIds[normalized];
+  if (mappedId) return countryCoverageId(mappedId);
   const namedCountry = Object.entries(countryChineseNames).find(([, name]) => name === normalized);
   if (namedCountry) return countryCoverageId(namedCountry[0]);
   const knownCountry = countries.find((country) => country.name === normalized || countryDisplayName(country.id) === normalized);
@@ -1057,6 +1065,7 @@ function worldHeritageCountryDisplayName(countryName) {
 
 function checklistItemDisplayName(key, item) {
   if (currentLanguage !== "en") return item;
+  if (key === "worldHeritage" && worldHeritageEnglishNames[item]) return worldHeritageEnglishNames[item];
   const parenthetical = englishNameInParentheses(item);
   if (parenthetical) return parenthetical;
   if (checklistItemEnglishNames[item]) return checklistItemEnglishNames[item];
@@ -2781,6 +2790,8 @@ function loadCatalogData() {
       if (!data?.byCountry || !data?.coordinates) throw new Error("invalid world heritage catalog");
       const byCountry = {};
       const coordinates = {};
+      const englishNames = {};
+      const countryIds = {};
       const nameAliases = collectWorldHeritageNameAliases(data.byCountry);
       if (Array.isArray(data.items) && data.items.length) {
         data.items.forEach((item) => {
@@ -2788,8 +2799,11 @@ function loadCatalogData() {
           const normalizedItem = normalizeWorldHeritageItemName(sourceName, nameAliases);
           if (!normalizedItem) return;
           const itemCountries = Array.isArray(item.countries) && item.countries.length ? item.countries : [item.country];
-          itemCountries.forEach((country) => {
+          const itemCountryIds = Array.isArray(item.countryIds) ? item.countryIds : [];
+          if (item.enName) englishNames[normalizedItem] = item.enName;
+          itemCountries.forEach((country, index) => {
             const itemCountry = worldHeritageDisplayCountryForItem(normalizedItem, country);
+            if (itemCountryIds[index]) countryIds[itemCountry] = String(itemCountryIds[index]).toLowerCase();
             byCountry[itemCountry] ||= [];
             byCountry[itemCountry].push(normalizedItem);
           });
@@ -2822,15 +2836,25 @@ function loadCatalogData() {
           });
         });
       }
+      Object.entries(data.englishNames || {}).forEach(([name, englishName]) => {
+        const normalizedName = normalizeWorldHeritageItemName(name, nameAliases);
+        if (normalizedName && englishName) englishNames[normalizedName] = englishName;
+      });
+      Object.entries(data.countryIds || {}).forEach(([country, id]) => {
+        const normalizedCountry = normalizeWorldHeritageCountryName(country);
+        if (normalizedCountry && id) countryIds[normalizedCountry] = String(id).toLowerCase();
+      });
       Object.keys(byCountry).forEach((country) => {
         byCountry[country] = Array.from(new Set(byCountry[country])).sort((a, b) => a.localeCompare(b, "zh-Hans-CN"));
       });
       checklistCatalog.worldHeritage.byCountry = byCountry;
       worldHeritageCoordinates = coordinates;
+      worldHeritageEnglishNames = englishNames;
+      worldHeritageCountryIds = countryIds;
       const countryCount = Object.keys(byCountry).length;
-      const total = worldHeritageCatalogTotal;
+      const total = Number(data.total) || worldHeritageCatalogTotal;
       worldHeritageCatalogStatus = {
-        source: currentLanguage === "en" ? "Local Wikidata catalog" : "本地 Wikidata 清单",
+        source: currentLanguage === "en" ? "Local UNESCO 2025 catalog" : "本地 UNESCO 2025 清单",
         detail: currentLanguage === "en"
           ? `${total} records, ${countryCount} countries/regions`
           : `${total} 条记录，${countryCount} 个国家/地区`,
@@ -2839,6 +2863,8 @@ function loadCatalogData() {
     })
     .catch((error) => {
       console.warn("世界遗产清单加载失败，使用内置备用清单", error);
+      worldHeritageEnglishNames = {};
+      worldHeritageCountryIds = {};
       worldHeritageCatalogStatus = {
         source: currentLanguage === "en" ? "Built-in fallback catalog" : "内置备用清单",
         detail: currentLanguage === "en" ? "data/world-heritage.json was not loaded" : "未能加载 data/world-heritage.json",
