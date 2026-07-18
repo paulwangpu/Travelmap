@@ -2883,15 +2883,15 @@ button:hover {
   }
 
   .map-overlay-toggles label {
-    min-height: 22px;
-    padding: 2px 3px;
+    min-height: 26px;
+    padding: 3px 4px;
     border-radius: 6px;
-    font-size: 9px;
+    font-size: 11px;
   }
 
   .map-overlay-toggles input {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
   }
 
   .maplibregl-ctrl-top-left,
