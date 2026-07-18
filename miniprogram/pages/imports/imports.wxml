@@ -1,0 +1,50 @@
+<view class="page imports-page">
+  <view>
+    <text class="eyebrow">导入</text>
+    <view class="page-title">旅行数据导入</view>
+    <text class="muted">支持 GeoJSON、KML 和含经纬度的 CSV</text>
+  </view>
+
+  <view class="import-panel">
+    <button class="primary-button choose-button" bindtap="chooseFiles">选择文件</button>
+    <view class="format-row">
+      <text>GeoJSON</text>
+      <text>KML</text>
+      <text>CSV</text>
+    </view>
+    <text class="privacy-note">文件仅在本机解析，不会自动上传。</text>
+  </view>
+
+  <view class="metrics">
+    <view><text class="metric-value">{{pointCount}}</text><text class="metric-label">导入地点</text></view>
+    <view><text class="metric-value">{{lineCount}}</text><text class="metric-label">路径/形状</text></view>
+    <view><text class="metric-value">{{fileCount}}</text><text class="metric-label">文件</text></view>
+  </view>
+
+  <view class="section-row">
+    <text class="section-title">已导入文件</text>
+    <button wx:if="{{fileCount}}" class="clear-button" bindtap="clearImports">清空</button>
+  </view>
+  <view wx:if="{{files.length}}" class="file-list">
+    <view wx:for="{{files}}" wx:key="id" class="file-item">
+      <view class="file-icon">{{item.type}}</view>
+      <view class="file-copy">
+        <text class="file-name">{{item.name}}</text>
+        <text class="file-meta">{{item.points}} 个地点 · {{item.lines}} 条路径</text>
+      </view>
+      <button class="delete-button" data-id="{{item.id}}" bindtap="deleteFile">删除</button>
+    </view>
+  </view>
+  <view wx:else class="empty">还没有导入文件</view>
+
+  <view class="data-actions panel">
+    <view>
+      <text class="section-title">备份与恢复</text>
+      <text class="muted small">包含点亮、打卡、清单和导入数据</text>
+    </view>
+    <view class="action-row">
+      <button class="secondary-button" bindtap="exportBackup">导出备份</button>
+      <button class="secondary-button" bindtap="importBackup">恢复备份</button>
+    </view>
+  </view>
+</view>

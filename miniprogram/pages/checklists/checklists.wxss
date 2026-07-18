@@ -1,0 +1,140 @@
+.checklist-page {
+  min-height: 100%;
+  padding: 20rpx;
+  background: #f4f7f4;
+}
+
+.checklist-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding-bottom: 16rpx;
+  background: #f4f7f4;
+}
+
+.segments {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8rpx;
+  padding: 6rpx;
+  border-radius: 11rpx;
+  background: #e5ebe7;
+}
+
+.segment {
+  background: transparent;
+  color: #5f6c65;
+  font-size: 25rpx;
+  line-height: 64rpx;
+}
+
+.segment.active {
+  background: #ffffff;
+  color: #16735b;
+}
+
+.search-input {
+  height: 72rpx;
+  margin-top: 12rpx;
+  padding: 0 20rpx;
+  border: 1rpx solid #d8e0da;
+  border-radius: 10rpx;
+  background: #ffffff;
+}
+
+.progress-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 22rpx;
+  border-radius: 12rpx;
+  background: #17231f;
+  color: #ffffff;
+}
+
+.progress-value,
+.progress-label,
+.item-name,
+.item-area {
+  display: block;
+}
+
+.progress-value {
+  font-size: 32rpx;
+  font-weight: 900;
+}
+
+.progress-label {
+  margin-top: 5rpx;
+  color: #c5d3cb;
+  font-size: 22rpx;
+}
+
+.progress-percent {
+  font-size: 38rpx;
+  font-weight: 900;
+}
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 9rpx;
+  margin-top: 16rpx;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  min-height: 92rpx;
+  padding: 14rpx 18rpx;
+  border: 1rpx solid #dce3de;
+  border-radius: 10rpx;
+  background: #ffffff;
+}
+
+.check-item.done {
+  border-color: #78ad9e;
+  background: #f0f8f4;
+}
+
+.check-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38rpx;
+  height: 38rpx;
+  margin-right: 16rpx;
+  border: 2rpx solid #9aa79f;
+  border-radius: 7rpx;
+  color: #ffffff;
+  font-size: 24rpx;
+  font-weight: 900;
+}
+
+.done .check-box {
+  border-color: #16735b;
+  background: #16735b;
+}
+
+.item-copy {
+  min-width: 0;
+}
+
+.item-name {
+  font-size: 25rpx;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.item-area {
+  margin-top: 6rpx;
+  color: #6c7871;
+  font-size: 21rpx;
+}
+
+.load-more {
+  margin-top: 16rpx;
+  background: #e8f0ec;
+  color: #17604e;
+  line-height: 72rpx;
+}

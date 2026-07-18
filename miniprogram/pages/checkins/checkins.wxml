@@ -1,0 +1,37 @@
+<view class="page checkin-page">
+  <view class="checkin-head">
+    <view>
+      <view class="page-title">我的打卡</view>
+      <text class="muted">{{count}} 个地点</text>
+    </view>
+  </view>
+
+  <view class="panel form-panel">
+    <input
+      class="place-input"
+      value="{{draftName}}"
+      placeholder="地点名称"
+      maxlength="40"
+      bindinput="updateName"
+    />
+    <picker mode="date" value="{{draftDate}}" bindchange="updateDate">
+      <view class="date-picker">{{draftDate || '选择日期'}}</view>
+    </picker>
+    <view class="form-actions">
+      <button class="secondary-button location-button" bindtap="useLocation">使用当前位置</button>
+      <button class="primary-button add-button" bindtap="addCheckin">添加打卡</button>
+    </view>
+  </view>
+
+  <view wx:if="{{checkins.length}}" class="checkin-list">
+    <view wx:for="{{checkins}}" wx:key="id" class="checkin-item">
+      <view class="pin"></view>
+      <view class="checkin-copy">
+        <text class="checkin-name">{{item.name}}</text>
+        <text class="checkin-meta">{{item.date || '未填写日期'}}{{item.hasLocation ? ' · 已记录坐标' : ''}}</text>
+      </view>
+      <button class="delete-button" data-id="{{item.id}}" bindtap="deleteCheckin">删除</button>
+    </view>
+  </view>
+  <view wx:else class="empty">添加第一个旅行打卡，地图会在这里开始生长。</view>
+</view>

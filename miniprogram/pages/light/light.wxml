@@ -1,0 +1,49 @@
+<view class="page light-page">
+  <view>
+    <text class="eyebrow">手动点亮</text>
+    <view class="page-title">行政区点亮</view>
+  </view>
+
+  <view class="segments">
+    <button
+      wx:for="{{tabs}}"
+      wx:key="key"
+      class="segment {{activeTab === item.key ? 'active' : ''}}"
+      data-tab="{{item.key}}"
+      bindtap="changeTab"
+    >{{item.label}}</button>
+  </view>
+
+  <picker
+    wx:if="{{activeTab === 'city'}}"
+    range="{{provinceNames}}"
+    value="{{provinceIndex}}"
+    bindchange="changeProvince"
+  >
+    <view class="province-picker">{{provinceNames[provinceIndex]}}⌄</view>
+  </picker>
+
+  <view class="list-head">
+    <text class="section-title">{{activeLabel}}</text>
+    <text class="count-tag">{{visitedCount}} / {{totalCount}}</text>
+  </view>
+
+  <input
+    class="search-input"
+    value="{{keyword}}"
+    placeholder="搜索地区"
+    bindinput="search"
+  />
+
+  <view class="region-grid">
+    <button
+      wx:for="{{visibleItems}}"
+      wx:key="id"
+      class="region-button {{item.visited ? 'visited' : ''}}"
+      data-id="{{item.id}}"
+      bindtap="toggleRegion"
+    >{{item.name}}</button>
+  </view>
+
+  <view wx:if="{{!visibleItems.length}}" class="empty">{{emptyText}}</view>
+</view>

@@ -1,0 +1,92 @@
+.light-page {
+  display: flex;
+  flex-direction: column;
+  gap: 18rpx;
+  padding-bottom: 40rpx;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 5rpx;
+  color: #64716a;
+  font-size: 22rpx;
+  font-weight: 800;
+}
+
+.segments {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7rpx;
+  padding: 6rpx;
+  border-radius: 11rpx;
+  background: #e4ebe7;
+}
+
+.segment {
+  min-width: 0;
+  padding: 0 4rpx;
+  background: transparent;
+  color: #64716a;
+  font-size: 23rpx;
+  line-height: 64rpx;
+}
+
+.segment.active {
+  background: #ffffff;
+  color: #16735b;
+}
+
+.province-picker,
+.search-input {
+  height: 72rpx;
+  padding: 0 20rpx;
+  border: 1rpx solid #d8e0da;
+  border-radius: 10rpx;
+  background: #ffffff;
+  line-height: 72rpx;
+}
+
+.province-picker {
+  font-weight: 800;
+}
+
+.list-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.count-tag {
+  padding: 6rpx 12rpx;
+  border-radius: 7rpx;
+  background: #e8f1ec;
+  color: #17604e;
+  font-size: 22rpx;
+  font-weight: 800;
+}
+
+.region-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10rpx;
+}
+
+.region-button {
+  min-width: 0;
+  min-height: 70rpx;
+  padding: 8rpx 6rpx;
+  overflow: hidden;
+  border: 1rpx solid #d8e0da;
+  border-radius: 9rpx;
+  background: #ffffff;
+  color: #34423b;
+  font-size: 23rpx;
+  line-height: 1.2;
+  word-break: break-all;
+}
+
+.region-button.visited {
+  border-color: #16735b;
+  background: #16735b;
+  color: #ffffff;
+}

@@ -1,0 +1,102 @@
+.checkin-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+  padding-bottom: 40rpx;
+}
+
+.checkin-head,
+.form-actions,
+.checkin-item {
+  display: flex;
+  align-items: center;
+}
+
+.checkin-head {
+  justify-content: space-between;
+}
+
+.checkin-head .page-title {
+  margin-bottom: 5rpx;
+}
+
+.form-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14rpx;
+}
+
+.place-input,
+.date-picker {
+  min-height: 76rpx;
+  padding: 0 20rpx;
+  border: 1rpx solid #d7dfda;
+  border-radius: 10rpx;
+  background: #f9fbfa;
+  line-height: 76rpx;
+}
+
+.form-actions {
+  gap: 12rpx;
+}
+
+.location-button,
+.add-button {
+  flex: 1;
+  padding: 0 10rpx;
+  font-size: 25rpx;
+  line-height: 70rpx;
+}
+
+.checkin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10rpx;
+}
+
+.checkin-item {
+  min-height: 104rpx;
+  padding: 16rpx 18rpx;
+  border: 1rpx solid #dce3de;
+  border-radius: 12rpx;
+  background: #ffffff;
+}
+
+.pin {
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 16rpx;
+  border-radius: 50%;
+  background: #d95733;
+}
+
+.checkin-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.checkin-name,
+.checkin-meta {
+  display: block;
+}
+
+.checkin-name {
+  overflow: hidden;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.checkin-meta {
+  margin-top: 7rpx;
+  color: #6d7972;
+  font-size: 22rpx;
+}
+
+.delete-button {
+  padding: 0 10rpx;
+  background: transparent;
+  color: #a84336;
+  font-size: 23rpx;
+  line-height: 56rpx;
+}

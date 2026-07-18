@@ -1,0 +1,185 @@
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.dashboard-head,
+.section-row,
+.achievement-head,
+.upgrade-band {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 5rpx;
+  color: #64716a;
+  font-size: 22rpx;
+  font-weight: 800;
+}
+
+.dashboard-head .page-title {
+  margin: 0;
+}
+
+.data-button {
+  min-width: 108rpx;
+  padding: 0 18rpx;
+  background: #e7efeb;
+  color: #17604e;
+  font-size: 24rpx;
+  line-height: 60rpx;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14rpx;
+}
+
+.metric {
+  min-height: 126rpx;
+  padding: 18rpx 12rpx;
+  border: 1rpx solid #dce3de;
+  border-radius: 12rpx;
+  background: #ffffff;
+}
+
+.metric-value,
+.metric-label {
+  display: block;
+}
+
+.metric-value {
+  font-size: 34rpx;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.metric-label {
+  margin-top: 12rpx;
+  color: #68766f;
+  font-size: 24rpx;
+}
+
+.next-section,
+.next-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+}
+
+.next-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16rpx;
+  min-height: 100rpx;
+  padding: 16rpx 18rpx;
+  border: 1rpx solid #dce3de;
+  border-radius: 10rpx;
+  background: #ffffff;
+}
+
+.next-title,
+.next-note {
+  display: block;
+}
+
+.next-title {
+  font-weight: 800;
+}
+
+.next-note {
+  margin-top: 6rpx;
+  color: #6d7972;
+  font-size: 21rpx;
+}
+
+.next-button {
+  min-width: 96rpx;
+  padding: 0 12rpx;
+  background: #e7efeb;
+  color: #17604e;
+  font-size: 23rpx;
+  line-height: 58rpx;
+}
+
+.achievement-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14rpx;
+}
+
+.text-button {
+  padding: 0 12rpx;
+  background: transparent;
+  color: #16735b;
+  font-size: 24rpx;
+  line-height: 54rpx;
+}
+
+.achievement-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10rpx;
+}
+
+.achievement {
+  display: grid;
+  grid-template-columns: 78rpx minmax(0, 1fr);
+  gap: 18rpx;
+  align-items: center;
+  min-height: 112rpx;
+  padding: 17rpx 20rpx;
+  border: 1rpx solid #dce3de;
+  border-radius: 12rpx;
+  background: #ffffff;
+}
+
+.achievement-percent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 78rpx;
+  height: 78rpx;
+  border: 7rpx solid #78ad9e;
+  border-radius: 50%;
+  font-size: 22rpx;
+  font-weight: 900;
+}
+
+.achievement-content {
+  min-width: 0;
+}
+
+.achievement-name {
+  font-weight: 800;
+}
+
+.achievement-value {
+  color: #16735b;
+  font-size: 24rpx;
+  font-weight: 800;
+}
+
+.progress-track {
+  height: 7rpx;
+  margin: 9rpx 0;
+  overflow: hidden;
+  border-radius: 4rpx;
+  background: #e6ece8;
+}
+
+.progress-value {
+  height: 100%;
+  background: #208765;
+}
+
+.achievement-note {
+  color: #6d7972;
+  font-size: 21rpx;
+}

@@ -1,0 +1,46 @@
+<view class="checklist-page">
+  <view class="checklist-toolbar">
+    <view class="segments">
+      <button
+        wx:for="{{tabs}}"
+        wx:key="key"
+        class="segment {{activeType === item.key ? 'active' : ''}}"
+        data-type="{{item.key}}"
+        bindtap="changeType"
+      >{{item.label}}</button>
+    </view>
+    <input
+      class="search-input"
+      value="{{keyword}}"
+      placeholder="搜索名称或地区"
+      bindinput="search"
+    />
+  </view>
+
+  <view class="progress-panel">
+    <view>
+      <text class="progress-value">{{doneCount}} / {{totalCount}}</text>
+      <text class="progress-label">{{activeLabel}}已打卡</text>
+    </view>
+    <text class="progress-percent">{{percent}}%</text>
+  </view>
+
+  <view class="checklist">
+    <view
+      wx:for="{{visibleItems}}"
+      wx:key="id"
+      class="check-item {{item.done ? 'done' : ''}}"
+      data-id="{{item.id}}"
+      bindtap="toggleItem"
+    >
+      <view class="check-box">{{item.done ? '✓' : ''}}</view>
+      <view class="item-copy">
+        <text class="item-name">{{item.name}}</text>
+        <text class="item-area">{{item.area}}</text>
+      </view>
+    </view>
+  </view>
+
+  <button wx:if="{{hasMore}}" class="load-more" bindtap="loadMore">加载更多</button>
+  <view wx:if="{{!visibleItems.length}}" class="empty">没有匹配的清单项目</view>
+</view>
