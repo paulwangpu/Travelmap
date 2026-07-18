@@ -2,11 +2,11 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>我的全球旅行地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
-    <link rel="stylesheet" href="styles.css?v=18" />
+    <link rel="stylesheet" href="styles.css?v=33" />
   </head>
   <body>
     <div class="app-shell map-first-shell">
@@ -35,7 +35,7 @@
             <strong data-i18n="privacyTitle">本地保存</strong>
             <p data-i18n="privacyText">数据只保存在本机浏览器里，不会自动上传或公开。如需备份请导出。</p>
           </div>
-          <div class="app-version" id="appVersion">v1.3</div>
+          <div class="app-version" id="appVersion">v1.4</div>
         </div>
       </aside>
 
@@ -71,8 +71,8 @@
                   <option value="subadmin" data-i18n="levelCity">市级（仅中国）</option>
                 </select>
               </label>
+              <button id="addMapPoint" class="map-add-point-button" type="button" data-i18n="addMapPoint">添加打卡点</button>
               <div class="map-overlay-toggles">
-                <button id="addMapPoint" class="map-add-point-button" type="button" data-i18n="addMapPoint">添加打卡点</button>
                 <label><input id="showCheckinsOnMap" type="checkbox" checked /> <span data-i18n="overlayCheckins">我的打卡</span></label>
                 <label><input id="showTracksOnMap" type="checkbox" checked /> <span data-i18n="overlayTracks">我的足迹</span></label>
                 <label><input id="showChina5aOnMap" type="checkbox" /> <span data-i18n="overlay5a">5A 景区</span></label>
@@ -229,6 +229,6 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-    <script src="app.js?v=123"></script>
+    <script src="app.js?v=127"></script>
   </body>
 </html>

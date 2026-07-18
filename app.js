@@ -14,7 +14,7 @@ const languageStorageKey = "travel-map-language";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "1.3";
+const appVersion = "1.4";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const worldHeritageCatalogTotal = 1248;
@@ -106,7 +106,7 @@ const translations = {
     visited: "去过",
     lightUp: "点亮",
     mapProvider: "底图",
-    providerAuto: "自动",
+    providerAuto: "自动底图",
     providerOsm: "OpenStreetMap",
     providerGaode: "高德",
     providerGaodeSatellite: "高德卫星",
@@ -117,7 +117,7 @@ const translations = {
     providerBingRoad: "Bing 地图",
     providerBingAerial: "Bing 卫星",
     mapLevel: "显示层级",
-    levelCountry: "国家",
+    levelCountry: "国家级",
     levelAdmin: "省级",
     levelCity: "市级（仅中国）",
     overlayCheckins: "我的打卡",
@@ -209,7 +209,7 @@ const translations = {
     visited: "Visited",
     lightUp: "Light up",
     mapProvider: "Basemap",
-    providerAuto: "Auto",
+    providerAuto: "Auto map",
     providerOsm: "OpenStreetMap",
     providerGaode: "Gaode",
     providerGaodeSatellite: "Gaode Satellite",
@@ -220,7 +220,7 @@ const translations = {
     providerBingRoad: "Bing Road",
     providerBingAerial: "Bing Aerial",
     mapLevel: "Boundary level",
-    levelCountry: "Country",
+    levelCountry: "Country level",
     levelAdmin: "Province / State",
     levelCity: "City level (China)",
     overlayCheckins: "My check-ins",
@@ -2494,6 +2494,7 @@ function applyLanguage() {
   if (version) version.textContent = `v${appVersion}`;
   document.querySelectorAll("[data-language]").forEach((button) => {
     button.classList.toggle("active", button.dataset.language === currentLanguage);
+    button.classList.toggle("language-target", button.dataset.language !== currentLanguage);
   });
   renderMapControls();
 }
@@ -6305,6 +6306,19 @@ document.querySelectorAll(".nav a").forEach((link) => {
     showPage(pageId);
   });
 });
+let mapViewportResizeTimer = null;
+function scheduleActiveMapResize() {
+  if (!isMapPageActive()) return;
+  if (mapViewportResizeTimer) clearTimeout(mapViewportResizeTimer);
+  mapViewportResizeTimer = setTimeout(() => {
+    mapViewportResizeTimer = null;
+    if (mapLibreMap) mapLibreMap.resize();
+    if (leafletMap) leafletMap.invalidateSize();
+  }, 120);
+}
+window.addEventListener("resize", scheduleActiveMapResize);
+window.addEventListener("orientationchange", scheduleActiveMapResize);
+window.visualViewport?.addEventListener("resize", scheduleActiveMapResize);
 window.addEventListener("hashchange", () => {
   const pageId = location.hash.replace("#", "") || "world";
   if (document.querySelector(`[data-page="${pageId}"]`)) showPage(pageId);
