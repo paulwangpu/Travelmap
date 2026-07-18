@@ -2753,4 +2753,149 @@ button:hover {
   .map-overlay-toggles input {
     flex: 0 0 auto;
   }
+
+  /* WeChat iOS webview can inflate inline text metrics; lock nav to one row. */
+  .map-first-shell .sidebar {
+    height: calc(54px + env(safe-area-inset-bottom));
+    grid-template-columns: 30px minmax(0, 1fr) 46px;
+    grid-template-rows: 44px;
+    align-items: center;
+    padding: 5px 5px calc(5px + env(safe-area-inset-bottom));
+    gap: 4px;
+  }
+
+  .map-first-shell .brand-mark {
+    width: 26px;
+    height: 26px;
+    flex-basis: 26px;
+  }
+
+  .map-first-shell .nav {
+    height: 44px;
+    min-height: 44px;
+    max-height: 44px;
+    align-items: stretch;
+  }
+
+  .map-first-shell .nav a {
+    height: 44px;
+    min-height: 44px;
+    max-height: 44px;
+    padding: 0 1px;
+    font-size: 13px;
+    line-height: 44px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    word-break: keep-all;
+  }
+
+  .map-first-shell .language-switch {
+    width: 46px;
+    height: 44px;
+    padding: 2px;
+  }
+
+  .map-first-shell .language-switch button {
+    height: 40px;
+    min-height: 40px;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 1;
+    white-space: nowrap;
+    display: none;
+    place-items: center;
+    overflow: hidden;
+  }
+
+  .map-first-shell .language-switch button.language-target {
+    display: grid;
+  }
+
+  .map-first-shell .app-version {
+    display: none;
+  }
+
+  .map-first-shell .sidebar > * {
+    min-height: 0;
+    max-height: 40px;
+    overflow: hidden;
+  }
+
+  .map-first-shell .sidebar {
+    height: 52px;
+    min-height: 52px;
+    max-height: 52px;
+    padding: 4px 5px;
+    padding-bottom: max(4px, env(safe-area-inset-bottom));
+  }
+
+  .map-first-shell .nav,
+  .map-first-shell .brand,
+  .map-first-shell .language-switch {
+    height: 40px;
+    min-height: 40px;
+    max-height: 40px;
+  }
+
+  .map-toolbar {
+    top: max(54px, calc(env(safe-area-inset-top) + 46px));
+    right: 5px;
+    left: 5px;
+    gap: 3px;
+    padding: 3px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.74);
+    box-shadow: 0 4px 12px rgba(24, 32, 28, 0.1);
+  }
+
+  .map-control-panel {
+    gap: 3px;
+  }
+
+  .map-control-panel .map-provider-control,
+  .map-control-panel .map-level-control {
+    grid-template-rows: 30px;
+    min-height: 30px;
+  }
+
+  .map-control-panel .map-provider-control select,
+  .map-control-panel .map-level-control select {
+    height: 30px;
+    min-height: 30px;
+    padding: 4px 20px 4px 7px;
+    border-radius: 5px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .map-control-panel > .map-add-point-button {
+    height: 30px;
+    min-height: 30px;
+    padding: 4px 7px;
+    border-radius: 5px;
+    font-size: 11px;
+  }
+
+  .map-overlay-toggles {
+    gap: 3px;
+  }
+
+  .map-overlay-toggles label {
+    min-height: 22px;
+    padding: 2px 3px;
+    border-radius: 6px;
+    font-size: 9px;
+  }
+
+  .map-overlay-toggles input {
+    width: 10px;
+    height: 10px;
+  }
+
+  .maplibregl-ctrl-top-left,
+  .leaflet-top.leaflet-left {
+    top: 118px;
+  }
 }

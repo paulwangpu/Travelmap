@@ -14,7 +14,7 @@ const languageStorageKey = "travel-map-language";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "1.4";
+const appVersion = "1.31";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const worldHeritageCatalogTotal = 1248;
@@ -2495,6 +2495,7 @@ function applyLanguage() {
   document.querySelectorAll("[data-language]").forEach((button) => {
     button.classList.toggle("active", button.dataset.language === currentLanguage);
     button.classList.toggle("language-target", button.dataset.language !== currentLanguage);
+    button.textContent = button.dataset.language === "en" ? "EN" : "中";
   });
   renderMapControls();
 }
