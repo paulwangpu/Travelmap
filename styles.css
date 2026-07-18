@@ -2234,7 +2234,7 @@ button:hover {
   }
 
   .content-page {
-    padding: 12px;
+    padding: calc(12px + env(safe-area-inset-top)) 12px 12px;
     padding-bottom: calc(74px + env(safe-area-inset-bottom));
   }
 
@@ -2261,7 +2261,8 @@ button:hover {
     display: grid !important;
     align-content: start;
     gap: 10px;
-    padding: 10px 10px calc(76px + env(safe-area-inset-bottom));
+    padding: calc(10px + env(safe-area-inset-top)) 10px
+      calc(76px + env(safe-area-inset-bottom));
     background: #f4f7f4;
   }
 
@@ -2320,39 +2321,33 @@ button:hover {
   }
 
   #dashboard .achievement-card-grid {
-    display: flex;
-    gap: 8px;
-    margin: 0 -10px;
-    padding: 0 10px 2px;
-    overflow-x: auto;
-    scroll-snap-type: x proximity;
-    scrollbar-width: none;
-  }
-
-  #dashboard .achievement-card-grid::-webkit-scrollbar {
-    display: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
   }
 
   #dashboard .achievement {
-    flex: 0 0 82%;
+    width: 100%;
     min-height: 0;
-    grid-template-columns: 50px minmax(0, 1fr);
-    gap: 10px;
-    padding: 12px;
-    scroll-snap-align: start;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 8px;
+    padding: 8px 10px;
   }
 
   #dashboard .achievement-ring {
-    width: 50px;
+    width: 42px;
   }
 
   #dashboard .achievement-ring strong {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   #dashboard .achievement header {
-    margin-bottom: 4px;
-    gap: 8px;
+    margin-bottom: 2px;
+    gap: 6px;
   }
 
   #dashboard .achievement header strong {
@@ -2361,13 +2356,13 @@ button:hover {
   }
 
   #dashboard .achievement-value {
-    margin: 4px 0 6px;
-    font-size: 18px;
+    margin: 2px 0 3px;
+    font-size: 16px;
   }
 
   #dashboard .achievement-body p {
-    font-size: 11px;
-    line-height: 1.25;
+    font-size: 10px;
+    line-height: 1.2;
   }
 
   #dashboard .achievement-levels {
@@ -2824,6 +2819,7 @@ button:hover {
   }
 
   .map-first-shell .sidebar {
+    top: auto;
     height: 52px;
     min-height: 52px;
     max-height: 52px;
@@ -2840,7 +2836,7 @@ button:hover {
   }
 
   .map-toolbar {
-    top: max(54px, calc(env(safe-area-inset-top) + 46px));
+    top: max(5px, env(safe-area-inset-top));
     right: 5px;
     left: 5px;
     gap: 3px;
@@ -2896,6 +2892,6 @@ button:hover {
 
   .maplibregl-ctrl-top-left,
   .leaflet-top.leaflet-left {
-    top: 118px;
+    top: calc(max(5px, env(safe-area-inset-top)) + 77px);
   }
 }
