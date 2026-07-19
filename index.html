@@ -6,7 +6,7 @@
     <title>我的全球旅行地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
-    <link rel="stylesheet" href="styles.css?v=38" />
+    <link rel="stylesheet" href="styles.css?v=40" />
   </head>
   <body>
     <div class="app-shell map-first-shell">
@@ -35,7 +35,7 @@
             <strong data-i18n="privacyTitle">本地保存</strong>
             <p data-i18n="privacyText">数据只保存在本机浏览器里，不会自动上传或公开。如需备份请导出。</p>
           </div>
-          <div class="app-version" id="appVersion">v1.31</div>
+          <div class="app-version" id="appVersion">v1.6</div>
         </div>
       </aside>
 
@@ -68,7 +68,7 @@
                 <select id="boundaryLevel">
                   <option value="country" data-i18n="levelCountry">国家</option>
                   <option value="admin" data-i18n="levelAdmin">省级</option>
-                  <option value="subadmin" data-i18n="levelCity">市级（仅中国）</option>
+                  <option value="subadmin" data-i18n="levelCity">市级</option>
                 </select>
               </label>
               <button id="addMapPoint" class="map-add-point-button" type="button" data-i18n="addMapPoint">添加打卡点</button>
@@ -159,6 +159,26 @@
           <div class="panel">
             <div class="section-head">
               <div>
+                <p class="eyebrow" data-i18n="japanAdmin1">日本一级地理区</p>
+                <h3 data-i18n="japanRegion">日本大区</h3>
+              </div>
+              <span class="tag" id="manualJapanRegionCount"></span>
+            </div>
+            <div class="manual-grid" id="manualJapanRegionList"></div>
+          </div>
+          <div class="panel">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow" data-i18n="japanAdmin2">日本二级地理区</p>
+                <h3 data-i18n="japanPrefecture">日本都道府县</h3>
+              </div>
+              <span class="tag" id="manualJapanPrefectureCount"></span>
+            </div>
+            <div class="manual-grid dense" id="manualJapanPrefectureList"></div>
+          </div>
+          <div class="panel">
+            <div class="section-head">
+              <div>
                 <p class="eyebrow" data-i18n="countriesEyebrow">国家地区</p>
                 <h3 data-i18n="countriesTitle">国家/地区</h3>
               </div>
@@ -229,6 +249,6 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-    <script src="app.js?v=130"></script>
+    <script src="app.js?v=160"></script>
   </body>
 </html>

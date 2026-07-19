@@ -14,7 +14,7 @@ const languageStorageKey = "travel-map-language";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "1.31";
+const appVersion = "1.6";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const worldHeritageCatalogTotal = 1248;
@@ -22,9 +22,10 @@ const fixedChecklistTotals = {
   china5a: china5aOfficialTotal,
   worldHeritage: worldHeritageCatalogTotal,
 };
-const maxImportVisiblePoints = 1000;
+const maxImportVisiblePoints = Infinity;
+const boundaryIndexUrl = "data/boundaries/index.json";
 const boundarySources = {
-  country: "data/countries.geojson",
+  country: "data/boundaries/country/world.geojson",
   china: "data/china-provinces.geojson",
   us: "data/us-states.geojson",
   japan: "",
@@ -36,7 +37,7 @@ const boundarySources = {
   ru2: "data/russia-subregions.geojson",
 };
 const boundaryFallbackSources = {
-  country: "https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson",
+  country: "data/countries.geojson",
   china: "https://geo.datav.aliyun.com/areas_v3/bound/100000_full.json",
   us: "https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json",
   japan: "",
@@ -53,8 +54,10 @@ let leafletBaseLayer = null;
 let mapLibreMap = null;
 let mapLibreMarkers = [];
 let mapLibreMarkerSignature = "";
-let mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false };
+let mapPointRenderRevision = 0;
+let mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false, points: false };
 let bingMapLibreProtocolRegistered = false;
+let mapProviderDetectionPromise = null;
 let leafletDidInitialFit = false;
 let catalogDataRequested = false;
 let catalogDataPromise = null;
@@ -69,21 +72,33 @@ let worldHeritageCountryIds = {};
 let boundaryData = { country: null, china: null, us: null, japan: null, admin1: null, china2: null, chinaDirect: null, tw2: null, us2: null, ru2: null };
 let boundaryLoading = { country: false, china: false, us: false, japan: false, admin1: false, china2: false, chinaDirect: false, tw2: false, us2: false, ru2: false };
 let boundaryPromises = {};
+let boundaryIndex = null;
+let boundaryIndexPromise = null;
+let boundaryLayerData = { province: {}, city: {} };
+let boundaryLayerPromises = { province: {}, city: {} };
+let boundaryLayerFailures = { province: {}, city: {} };
 let admin1DisplayCache = { source: null, collection: null };
 let mapDataVersion = 0;
 const mapGeoJsonCache = new Map();
 const mapLibreSourceDataRefs = new Map();
+const preparedBboxCollections = new WeakSet();
 let pendingUiStateSave = null;
+let pendingFullStateSave = null;
 let pendingGeoMapRender = null;
 let pendingIndexedDbSave = null;
 let pendingIndexedDbPayload = null;
 let pendingCheckinRender = null;
+let pendingCoverageMapRefresh = null;
+let restoringMapViewport = false;
 let checklistStatusCache = { signature: "", marked: new Set(), visited: new Set() };
+let checklistOverlayCache = { signature: "", items: [], keySet: new Set() };
+let checklistCoordinateLookupCache = { china5a: null, worldHeritage: null, englishNames: null, map: new Map() };
 let mapAddMode = false;
 let pendingMapClickPoint = null;
-const admin1RegionGroupCountries = new Set(["fr", "it"]);
+const admin1RegionGroupCountries = new Set(["fr", "it", "jp"]);
 const subadminConfigs = {
   china2: { countryId: "cn", label: "China prefecture-level units" },
+  japanPref: { countryId: "jp", label: "Japan prefectures" },
 };
 
 const translations = {
@@ -119,7 +134,7 @@ const translations = {
     mapLevel: "显示层级",
     levelCountry: "国家级",
     levelAdmin: "省级",
-    levelCity: "市级（仅中国）",
+    levelCity: "市级",
     overlayCheckins: "我的打卡",
     overlayTracks: "我的足迹",
     overlay5a: "5A 景区",
@@ -137,6 +152,10 @@ const translations = {
     chinaProvince: "中国省级",
     chinaAdmin2: "中国二级行政区",
     chinaCity: "中国地级市",
+    japanAdmin1: "日本一级地理区",
+    japanRegion: "日本大区",
+    japanAdmin2: "日本二级地理区",
+    japanPrefecture: "日本都道府县",
     countriesEyebrow: "国家地区",
     countriesTitle: "国家/地区",
     importEyebrow: "导入",
@@ -222,7 +241,7 @@ const translations = {
     mapLevel: "Boundary level",
     levelCountry: "Country level",
     levelAdmin: "Province / State",
-    levelCity: "City level (China)",
+    levelCity: "City level",
     overlayCheckins: "My check-ins",
     overlayTracks: "My tracks",
     overlay5a: "5A scenic areas",
@@ -240,6 +259,10 @@ const translations = {
     chinaProvince: "China province level",
     chinaAdmin2: "China Admin 2",
     chinaCity: "China prefecture level",
+    japanAdmin1: "Japan Admin 1",
+    japanRegion: "Japan regions",
+    japanAdmin2: "Japan Admin 2",
+    japanPrefecture: "Japan prefectures",
     countriesEyebrow: "Countries",
     countriesTitle: "Countries / Regions",
     importEyebrow: "Import",
@@ -449,26 +472,32 @@ function registerBingMapLibreProtocol() {
 
 async function detectMapProviderByIp() {
   if (normalizeMapProviderMode(state.mapProviderMode) !== "auto") return;
+  if (normalizeDetectedMapProvider(state.detectedMapProvider)) return;
+  if (mapProviderDetectionPromise) return mapProviderDetectionPromise;
   let timeout = null;
-  try {
-    const controller = new AbortController();
-    timeout = setTimeout(() => controller.abort(), 2500);
-    const response = await fetch("https://ipapi.co/json/", { signal: controller.signal, cache: "no-store" });
-    clearTimeout(timeout);
-    if (!response.ok) throw new Error(`${response.status}`);
-    const data = await response.json();
-    const detected = String(data.country_code || data.country || "").toUpperCase() === "CN" ? "gaode" : "google";
-    if (state.detectedMapProvider === detected) return;
-    state.detectedMapProvider = detected;
-    saveUiStateSoon();
-    renderMapControls();
-    if (isMapPageActive()) renderGeoMap();
-  } catch (error) {
-    state.detectedMapProvider = state.detectedMapProvider || fallbackMapProviderFromLocale();
-    renderMapControls();
-  } finally {
-    if (timeout) clearTimeout(timeout);
-  }
+  mapProviderDetectionPromise = (async () => {
+    try {
+      const controller = new AbortController();
+      timeout = setTimeout(() => controller.abort(), 2500);
+      const response = await fetch("https://ipapi.co/json/", { signal: controller.signal, cache: "no-store" });
+      clearTimeout(timeout);
+      if (!response.ok) throw new Error(`${response.status}`);
+      const data = await response.json();
+      const detected = String(data.country_code || data.country || "").toUpperCase() === "CN" ? "gaode" : "google";
+      if (state.detectedMapProvider === detected) return;
+      state.detectedMapProvider = detected;
+      saveUiStateSoon();
+      renderMapControls();
+      if (isMapPageActive()) renderGeoMap();
+    } catch (error) {
+      state.detectedMapProvider = state.detectedMapProvider || fallbackMapProviderFromLocale();
+      renderMapControls();
+    } finally {
+      if (timeout) clearTimeout(timeout);
+      mapProviderDetectionPromise = null;
+    }
+  })();
+  return mapProviderDetectionPromise;
 }
 
 const chinaProvincialCapitals = [
@@ -1146,7 +1175,7 @@ function chinaDirectSubadminUnitsFromBoundary() {
     const key = cleanAdminName(name);
     if (!name || seen.has(key)) return null;
     seen.add(key);
-    const props = feature.properties || {};
+    const props = feature.properties && typeof feature.properties === "object" ? feature.properties : {};
     const center = Array.isArray(props.center) && props.center.length >= 2 ? props.center : geometryCenter(feature.geometry);
     return {
       province: props.province || provinceNameForChinaSubadminFeature(feature),
@@ -1225,19 +1254,174 @@ const regionSets = {
     ].map((name) => ({ name })),
   },
   japan: {
-    label: "日本都道府县",
-    total: 47,
-    units: [
-      "北海道", "青森县", "岩手县", "宫城县", "秋田县", "山形县", "福岛县", "茨城县", "栃木县", "群马县",
-      "埼玉县", "千叶县", "东京都", "神奈川县", "新潟县", "富山县", "石川县", "福井县", "山梨县", "长野县",
-      "岐阜县", "静冈县", "爱知县", "三重县", "滋贺县", "京都府", "大阪府", "兵库县", "奈良县", "和歌山县",
-      "鸟取县", "岛根县", "冈山县", "广岛县", "山口县", "德岛县", "香川县", "爱媛县", "高知县", "福冈县",
-      "佐贺县", "长崎县", "熊本县", "大分县", "宫崎县", "鹿儿岛县", "冲绳县",
-    ],
+    label: "日本大区",
+    total: 8,
+    units: ["北海道", "东北", "关东", "中部", "近畿", "中国", "四国", "九州冲绳"].map((name) => ({ name })),
   },
 };
 
-regionSets.japan.units = regionSets.japan.units.map((name) => ({ name }));
+const japanPrefectures = ["北海道", "青森县", "岩手县", "宫城县", "秋田县", "山形县", "福岛县", "茨城县", "栃木县", "群马县", "埼玉县", "千叶县", "东京都", "神奈川县", "新潟县", "富山县", "石川县", "福井县", "山梨县", "长野县", "岐阜县", "静冈县", "爱知县", "三重县", "滋贺县", "京都府", "大阪府", "兵库县", "奈良县", "和歌山县", "鸟取县", "岛根县", "冈山县", "广岛县", "山口县", "德岛县", "香川县", "爱媛县", "高知县", "福冈县", "佐贺县", "长崎县", "熊本县", "大分县", "宫崎县", "鹿儿岛县", "冲绳县"].map((name) => ({ name }));
+const japanPrefectureRegionMap = {
+  "北海道": "北海道",
+  "青森县": "东北",
+  "岩手县": "东北",
+  "宫城县": "东北",
+  "秋田县": "东北",
+  "山形县": "东北",
+  "福岛县": "东北",
+  "茨城县": "关东",
+  "栃木县": "关东",
+  "群马县": "关东",
+  "埼玉县": "关东",
+  "千叶县": "关东",
+  "东京都": "关东",
+  "神奈川县": "关东",
+  "新潟县": "中部",
+  "富山县": "中部",
+  "石川县": "中部",
+  "福井县": "中部",
+  "山梨县": "中部",
+  "长野县": "中部",
+  "岐阜县": "中部",
+  "静冈县": "中部",
+  "爱知县": "中部",
+  "三重县": "近畿",
+  "滋贺县": "近畿",
+  "京都府": "近畿",
+  "大阪府": "近畿",
+  "兵库县": "近畿",
+  "奈良县": "近畿",
+  "和歌山县": "近畿",
+  "鸟取县": "中国",
+  "岛根县": "中国",
+  "冈山县": "中国",
+  "广岛县": "中国",
+  "山口县": "中国",
+  "德岛县": "四国",
+  "香川县": "四国",
+  "爱媛县": "四国",
+  "高知县": "四国",
+  "福冈县": "九州冲绳",
+  "佐贺县": "九州冲绳",
+  "长崎县": "九州冲绳",
+  "熊本县": "九州冲绳",
+  "大分县": "九州冲绳",
+  "宫崎县": "九州冲绳",
+  "鹿儿岛县": "九州冲绳",
+  "冲绳县": "九州冲绳",
+};
+
+const japanRegionNameAliases = {
+  Hokkaido: "北海道",
+  Tohoku: "东北",
+  Tōhoku: "东北",
+  Kanto: "关东",
+  Kantō: "关东",
+  Chubu: "中部",
+  Chūbu: "中部",
+  Kinki: "近畿",
+  Kansai: "近畿",
+  Chugoku: "中国",
+  Chūgoku: "中国",
+  Shikoku: "四国",
+  Kyushu: "九州冲绳",
+  Kyūshū: "九州冲绳",
+  Okinawa: "九州冲绳",
+};
+
+const japanPrefectureNameAliases = {
+  Hokkaido: "北海道",
+  Aomori: "青森县",
+  Iwate: "岩手县",
+  Miyagi: "宫城县",
+  Akita: "秋田县",
+  Yamagata: "山形县",
+  Fukushima: "福岛县",
+  Ibaraki: "茨城县",
+  Tochigi: "栃木县",
+  Gunma: "群马县",
+  Saitama: "埼玉县",
+  Chiba: "千叶县",
+  Tokyo: "东京都",
+  Kanagawa: "神奈川县",
+  Niigata: "新潟县",
+  Toyama: "富山县",
+  Ishikawa: "石川县",
+  Fukui: "福井县",
+  Yamanashi: "山梨县",
+  Nagano: "长野县",
+  Gifu: "岐阜县",
+  Shizuoka: "静冈县",
+  Aichi: "爱知县",
+  Mie: "三重县",
+  Shiga: "滋贺县",
+  Kyoto: "京都府",
+  Osaka: "大阪府",
+  Hyogo: "兵库县",
+  Hyōgo: "兵库县",
+  Nara: "奈良县",
+  Wakayama: "和歌山县",
+  Tottori: "鸟取县",
+  Shimane: "岛根县",
+  Okayama: "冈山县",
+  Hiroshima: "广岛县",
+  Yamaguchi: "山口县",
+  Tokushima: "德岛县",
+  Kagawa: "香川县",
+  Ehime: "爱媛县",
+  Kochi: "高知县",
+  Kōchi: "高知县",
+  Fukuoka: "福冈县",
+  Saga: "佐贺县",
+  Nagasaki: "长崎县",
+  Kumamoto: "熊本县",
+  Oita: "大分县",
+  Ōita: "大分县",
+  Miyazaki: "宫崎县",
+  Kagoshima: "鹿儿岛县",
+  Okinawa: "冲绳县",
+};
+
+function japanRegionName(value) {
+  const raw = String(value || "").trim();
+  return japanRegionNameAliases[raw] || raw;
+}
+
+function japanPrefectureName(value) {
+  const raw = String(value || "").replace(/\s+Prefecture$/i, "").trim();
+  return japanPrefectureNameAliases[raw] || raw;
+}
+
+function japanRegionForPrefecture(prefecture) {
+  const match = Object.keys(japanPrefectureRegionMap).find((name) => sameAdminName(name, prefecture));
+  return match ? japanPrefectureRegionMap[match] : "";
+}
+
+function japanPrefectureUnits() {
+  return japanPrefectures;
+}
+
+function normalizeJapanPlaceHierarchy(place) {
+  if (!place || normalizeCountry(place.country) !== "jp") return false;
+  const beforeUnit = place.unit || "";
+  const beforeSubunit = place.subunit || "";
+  const prefectureName = beforeSubunit || beforeUnit;
+  const prefecture = japanPrefectureUnits().find((unit) => sameAdminName(unit.name, prefectureName))?.name || prefectureName;
+  const region = japanRegionForPrefecture(prefecture);
+  if (!region) return false;
+  place.unit = region;
+  place.subunit = prefecture;
+  return beforeUnit !== place.unit || beforeSubunit !== place.subunit;
+}
+
+function normalizeJapanPlacesHierarchy() {
+  let changed = false;
+  places.forEach((place) => {
+    if (normalizeJapanPlaceHierarchy(place)) changed = true;
+  });
+  return changed;
+}
+
 
 const usStateBboxes = {
   California: [-124.6, 32.4, -114, 42.1],
@@ -1258,7 +1442,7 @@ const japanPrefBboxes = {
   大阪府: [135.1, 34.2, 135.8, 35],
   北海道: [139.3, 41.3, 145.9, 45.7],
 };
-regionSets.japan.units.forEach((unit) => {
+japanPrefectures.forEach((unit) => {
   if (japanPrefBboxes[unit.name]) unit.bbox = japanPrefBboxes[unit.name];
 });
 
@@ -1275,6 +1459,8 @@ let places = [
   { id: "rome", name: "罗马", country: "it", unit: "Lazio", city: "Rome", type: "首都城市 / 世界遗产", lat: 41.9028, lng: 12.4964, tags: ["古城"], checklist: ["首都城市", "世界遗产"] },
   { id: "singapore", name: "新加坡", country: "sg", unit: "Singapore", city: "Singapore", type: "国家 / 城市", lat: 1.3521, lng: 103.8198, tags: ["城市"], checklist: ["首都城市"] },
 ];
+
+let placeIndexCache = { source: null, size: 0, index: new Map() };
 
 const checklistCatalog = {
   china5a: {
@@ -1491,6 +1677,7 @@ let state = {
   mapProviderMode: "auto",
   detectedMapProvider: "",
   mapOverlays: { checkins: true, paths: true, china5a: false, worldHeritage: false },
+  mapViewport: null,
   focusPlaceId: "",
 };
 
@@ -1498,6 +1685,22 @@ const $ = (selector) => document.querySelector(selector);
 const loadingDebugState = new Map();
 const loadingDebugStartedAt = new Map();
 const slowLoadingThresholdMs = 1200;
+const maxLoadingDebugItems = 3;
+const perfLogThresholdMs = 250;
+
+function perfNow() {
+  return typeof performance === "undefined" ? Date.now() : performance.now();
+}
+
+function logSlowStep(label, startedAt, threshold = perfLogThresholdMs) {
+  const elapsed = Math.round(perfNow() - startedAt);
+  if (elapsed >= threshold) console.info(`[Travel Map perf] ${label}: ${elapsed}ms`);
+}
+
+function logRenderStage(label, startedAt) {
+  logSlowStep(`renderMapLibreLayers:${label}`, startedAt, 120);
+  return perfNow();
+}
 
 function setLoadingDebug(label, status = "pending") {
   const panel = $("#loadingDebug");
@@ -1527,7 +1730,11 @@ function setLoadingDebug(label, status = "pending") {
   }
 
   const items = Array.from(loadingDebugState.values())
-    .sort((a, b) => a.at - b.at)
+    .sort((a, b) => {
+      const rank = (item) => item.status === "pending" ? 0 : item.status === "error" ? 1 : 2;
+      return rank(a) - rank(b) || b.at - a.at;
+    })
+    .slice(0, maxLoadingDebugItems)
     .map((item) => {
       const text = item.status === "done" ? "完成" : item.status === "slow" ? "慢" : item.status === "error" ? "失败" : "进行中";
       const time = item.elapsed ? ` ${item.elapsed}ms` : "";
@@ -1553,6 +1760,154 @@ function inBbox(lng, lat, bbox) {
   return Number.isFinite(lng) && Number.isFinite(lat) && lng >= bbox[0] && lat >= bbox[1] && lng <= bbox[2] && lat <= bbox[3];
 }
 
+function loadBoundaryIndex() {
+  if (boundaryIndex) return Promise.resolve(boundaryIndex);
+  if (boundaryIndexPromise) return boundaryIndexPromise;
+  setLoadingDebug("加载统一边界索引", "pending");
+  boundaryIndexPromise = fetchJson(boundaryIndexUrl)
+    .then((data) => {
+      boundaryIndex = data?.countries ? data : { countries: {} };
+      setLoadingDebug("加载统一边界索引", "done");
+      clearLoadingDebugSoon();
+      return boundaryIndex;
+    })
+    .catch((error) => {
+      console.warn("统一边界索引加载失败", error);
+      boundaryIndex = { countries: {} };
+      setLoadingDebug("加载统一边界索引", "error");
+      clearLoadingDebugSoon();
+      return boundaryIndex;
+    })
+    .finally(() => {
+      boundaryIndexPromise = null;
+    });
+  return boundaryIndexPromise;
+}
+
+function boundaryLayerUrl(countryId, layer) {
+  const normalized = countryCoverageId(countryId);
+  return boundaryIndex?.countries?.[normalized]?.[layer]?.url || "";
+}
+
+function hasBoundaryLayer(countryId, layer) {
+  return Boolean(boundaryIndex?.countries?.[countryCoverageId(countryId)]?.[layer]?.count > 0);
+}
+
+function hasDrawableProvinceBoundary(countryId) {
+  return hasBoundaryLayer(countryId, "province");
+}
+
+function loadBoundaryLayer(countryId, layer, options = {}) {
+  const perfStartedAt = perfNow();
+  const { renderOnLoad = true } = options;
+  const normalized = countryCoverageId(countryId);
+  if (!normalized || normalized === "imported") return Promise.resolve(null);
+  if (boundaryLayerData[layer]?.[normalized]) return Promise.resolve(boundaryLayerData[layer][normalized]);
+  if (boundaryLayerPromises[layer]?.[normalized]) return boundaryLayerPromises[layer][normalized];
+  if (boundaryLayerFailures[layer]?.[normalized]) return Promise.resolve(null);
+  boundaryLayerPromises[layer] ||= {};
+  boundaryLayerData[layer] ||= {};
+  boundaryLayerFailures[layer] ||= {};
+  const promise = loadBoundaryIndex()
+    .then(() => {
+      const url = boundaryLayerUrl(normalized, layer);
+      if (!url) return null;
+      setLoadingDebug(`加载${getCountry(normalized).name}${layer === "province" ? "省级" : "市级"}边界`, "pending");
+      return fetchJson(url).then((data) => {
+        boundaryLayerData[layer][normalized] = normalizeFeatureCollection(data);
+        delete boundaryLayerFailures[layer][normalized];
+        try {
+          if (refreshInferredLocationsForCountry(normalized)) {
+            recomputeCoverage();
+            saveState();
+          }
+        } catch (refreshError) {
+          console.warn(`${normalized} ${layer} inferred location refresh failed`, refreshError);
+        }
+        mapDataVersion += 1;
+        logSlowStep(`loadBoundaryLayer:${normalized}:${layer}`, perfStartedAt);
+        setLoadingDebug(`加载${getCountry(normalized).name}${layer === "province" ? "省级" : "市级"}边界`, "done");
+        clearLoadingDebugSoon();
+        return boundaryLayerData[layer][normalized];
+      });
+    })
+    .catch((error) => {
+      console.warn(`${normalized} ${layer} 边界加载失败`, error);
+      setLoadingDebug(`加载${getCountry(normalized).name}${layer === "province" ? "省级" : "市级"}边界`, "error");
+      clearLoadingDebugSoon();
+      return null;
+    })
+    .finally(() => {
+      boundaryLayerPromises[layer][normalized] = null;
+      if (renderOnLoad) scheduleGeoMapRender();
+    });
+  boundaryLayerPromises[layer][normalized] = promise;
+  return promise;
+}
+
+function boundaryDetailCountries() {
+  const countriesToShow = new Set(uniqueVisitedCountries());
+  locatedCoverageVisits().forEach((visit) => {
+    const countryId = countryCoverageId(visit.place.country);
+    if (countryId && countryId !== "imported") countriesToShow.add(countryId);
+  });
+  return Array.from(countriesToShow)
+    .map(countryCoverageId)
+    .filter((countryId) => countryId && countryId !== "imported");
+}
+
+function loadBoundaryLayersForLevel(countries, level) {
+  const tasks = boundaryLayerTasksForLevel(countries, level);
+  return runBoundaryLayerTasks(tasks);
+}
+
+function runBoundaryLayerTasks(tasks) {
+  const concurrency = 4;
+  let cursor = 0;
+  const workers = Array.from({ length: Math.min(concurrency, tasks.length) }, async () => {
+    while (cursor < tasks.length) {
+      const task = tasks[cursor];
+      cursor += 1;
+      await task();
+    }
+  });
+  return Promise.all(workers);
+}
+
+function boundaryLayerNeedsLoad(countryId, layer) {
+  const normalized = countryCoverageId(countryId);
+  return Boolean(
+    normalized
+    && normalized !== "imported"
+    && hasBoundaryLayer(normalized, layer)
+    && !boundaryLayerData[layer]?.[normalized]
+    && !boundaryLayerPromises[layer]?.[normalized]
+    && !boundaryLayerFailures[layer]?.[normalized]
+  );
+}
+
+function boundaryLayerIsLoading(countryId, layer) {
+  const normalized = countryCoverageId(countryId);
+  return Boolean(normalized && boundaryLayerPromises[layer]?.[normalized]);
+}
+
+function boundaryLayerTasksForLevel(countries, level) {
+  return countries.flatMap((countryId) => [
+    boundaryLayerNeedsLoad(countryId, "province") ? () => loadBoundaryLayer(countryId, "province", { renderOnLoad: false }) : null,
+    level === "subadmin" && boundaryLayerNeedsLoad(countryId, "city") ? () => loadBoundaryLayer(countryId, "city", { renderOnLoad: false }) : null,
+  ].filter(Boolean));
+}
+
+function boundaryLevelHasPendingDetailLoads(level = state.boundaryLevel) {
+  if (level !== "admin" && level !== "subadmin") return false;
+  const countries = boundaryDetailCountries();
+  return countries.some((countryId) =>
+    boundaryLayerNeedsLoad(countryId, "province")
+    || boundaryLayerIsLoading(countryId, "province")
+    || (level === "subadmin" && (boundaryLayerNeedsLoad(countryId, "city") || boundaryLayerIsLoading(countryId, "city")))
+  );
+}
+
 function loadBoundaryData(key, options = {}) {
   const { renderOnLoad = true } = options;
   if (boundaryData[key] || !boundarySources[key]) return Promise.resolve(boundaryData[key] || null);
@@ -1563,7 +1918,9 @@ function loadBoundaryData(key, options = {}) {
     .then((data) => {
       boundaryData[key] = normalizeFeatureCollection(data);
       if (key === "admin1") admin1DisplayCache = { source: null, collection: null };
-      if ((key === "china2" || key === "chinaDirect" || key === "tw2") && refreshInferredSubregionsForVisitedPlaces()) {
+      const refreshedChina = (key === "china2" || key === "chinaDirect" || key === "tw2") && refreshInferredSubregionsForVisitedPlaces();
+      const refreshedJapan = key === "admin1" && refreshInferredJapanForVisitedPlaces();
+      if (refreshedChina || refreshedJapan) {
         recomputeCoverage();
         saveState();
       }
@@ -1612,13 +1969,8 @@ function preloadBoundaryData(force = false, keys = ["country", "china", "us", "j
 
 function boundaryKeysForLevel(level = state.boundaryLevel) {
   if (level === "country") return ["country"];
-  if (level === "admin") return ["country", ...adminBoundaryKeysToShow(), "admin1"];
-  if (level === "subadmin") {
-    const subadminKeys = subadminBoundaryKeysToShow();
-    const keys = ["country", ...adminBoundaryKeysToShow(), ...subadminKeys];
-    if (subadminKeys.includes("china2")) keys.push("china", "chinaDirect", "tw2");
-    return keys;
-  }
+  if (level === "admin") return ["country"];
+  if (level === "subadmin") return ["country"];
   return ["country"];
 }
 
@@ -1627,12 +1979,28 @@ function ensureBoundaryDataForLevel(level = state.boundaryLevel) {
   const pending = keys
     .filter((key) => !boundaryData[key])
     .map((key) => loadBoundaryData(key, { renderOnLoad: false }));
+  if (level === "admin" || level === "subadmin") {
+    const loadDetailBoundaries = () => {
+      if (normalizeSavedChecklistGeography()) {
+        recomputeCoverage();
+        saveState();
+      }
+      const tasks = boundaryLayerTasksForLevel(boundaryDetailCountries(), level);
+      return tasks.length ? runBoundaryLayerTasks(tasks) : null;
+    };
+    if (boundaryIndex) {
+      const detailBoundaryPromise = loadDetailBoundaries();
+      if (detailBoundaryPromise) pending.push(detailBoundaryPromise);
+    } else {
+      pending.push(loadBoundaryIndex().then(loadDetailBoundaries));
+    }
+  }
   if (pending.length) Promise.all(pending).finally(scheduleGeoMapRender);
   return pending;
 }
 
 function boundaryLabel(key) {
-  return { country: "国家", china: "中国省级", us: "美国州", japan: "日本都道府县", china2: "中国地级市", chinaDirect: "省直辖县级行政区", tw2: "台湾县市" }[key] || key;
+  return { country: "国家", china: "中国省级", us: "美国州", japan: "日本大区", japanPref: "日本都道府县", china2: "中国地级市", chinaDirect: "省直辖县级行政区", tw2: "台湾县市" }[key] || key;
 }
 
 function normalizeFeatureCollection(data) {
@@ -1707,9 +2075,29 @@ function canonicalAdminNameFromFeature(feature) {
   ).trim();
 }
 
+function adminNameCandidatesFromFeature(feature) {
+  const props = feature?.properties || {};
+  const aliases = Array.isArray(props.aliases) ? props.aliases : [];
+  return Array.from(new Set([
+    props.name,
+    props.name_zh,
+    props.name_zht,
+    props.name_en,
+    props.name_local,
+    props.NAME,
+    props.NAME_1,
+    props.NAME_2,
+    props.NAMELSAD,
+    props.adm1_name,
+    adminNameFromFeature(feature),
+    canonicalAdminNameFromFeature(feature),
+    ...aliases,
+  ].map((name) => String(name || "").trim()).filter(Boolean)));
+}
+
 function subadminNameFromFeature(feature) {
   const props = feature.properties || {};
-  return String(
+  const name = String(
     props.name_zh
     || props.name_local
     || props.NAME_2
@@ -1727,6 +2115,7 @@ function subadminNameFromFeature(feature) {
     || adminNameFromFeature(feature)
     || ""
   ).trim();
+  return countryIdFromFeature(feature) === "jp" ? japanPrefectureName(props.name || props.name_en || name) : name;
 }
 
 function admin1DisplayCollection() {
@@ -1737,8 +2126,9 @@ function admin1DisplayCollection() {
   const passthrough = [];
   boundaryData.admin1.features.forEach((feature) => {
     const countryId = countryIdFromFeature(feature);
-    const props = feature.properties || {};
-    const regionName = String(props.region || props.region_name || "").trim();
+    const props = feature.properties && typeof feature.properties === "object" ? feature.properties : {};
+    const rawRegionName = String(props.region || props.region_name || "").trim();
+    const regionName = countryId === "jp" ? japanRegionName(rawRegionName) : rawRegionName;
     const regionCode = String(props.region_cod || props.region_code || "").trim();
     if (!admin1RegionGroupCountries.has(countryId) || !regionName) {
       passthrough.push(feature);
@@ -2028,6 +2418,17 @@ function cleanAdminName(value) {
   };
   const raw = String(value || "").trim();
   if (usAliases[raw.toLowerCase()]) return usAliases[raw.toLowerCase()];
+  const cleaned = raw
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\u81fa\u7063|\u53f0\u7063/g, "\u53f0\u6e7e")
+    .replace(/(\u58ee\u65cf|\u56de\u65cf|\u7ef4\u543e\u5c14)?\u81ea\u6cbb\u533a$/g, "")
+    .replace(/\u7279\u522b\u884c\u653f\u533a$/g, "")
+    .replace(/(\u7701|\u5e02|\u53bf|\u5e9c|\u90fd)$/g, "")
+    .replace(/\b(state of|prefecture|province|county|city)\b/gi, "")
+    .replace(/[\s·・.'’`-]+/g, "")
+    .toLowerCase();
+  if (cleaned) return cleaned;
   return String(value || "")
     .trim()
     .normalize("NFD")
@@ -2048,7 +2449,59 @@ function cleanAdminName(value) {
 
 function findFeatureAtPoint(collection, lng, lat) {
   if (!collection?.features || !Number.isFinite(lng) || !Number.isFinite(lat)) return null;
-  return collection.features.find((feature) => geometryContainsPoint(feature.geometry, lng, lat));
+  ensureFeatureBboxes(collection);
+  return collection.features.find((feature) => {
+    const bbox = featureBbox(feature);
+    return bboxContainsPoint(bbox, lng, lat) && geometryContainsPoint(feature.geometry, lng, lat);
+  });
+}
+
+function ensureFeatureBboxes(collection) {
+  if (!collection?.features || preparedBboxCollections.has(collection)) return;
+  collection.features.forEach((feature) => {
+    if (!feature?.geometry || Array.isArray(feature.bbox) || Array.isArray(feature.properties?.bbox)) return;
+    const bbox = bboxForGeometry(feature.geometry);
+    if (!bbox) return;
+    feature.properties ||= {};
+    feature.properties.bbox = bbox;
+  });
+  preparedBboxCollections.add(collection);
+}
+
+function featureBbox(feature) {
+  return feature?.bbox || feature?.properties?.bbox || null;
+}
+
+function bboxContainsPoint(bbox, lng, lat) {
+  if (!Array.isArray(bbox) || bbox.length < 4) return true;
+  return lng >= bbox[0] && lat >= bbox[1] && lng <= bbox[2] && lat <= bbox[3];
+}
+
+function bboxForGeometry(geometry) {
+  if (!geometry) return null;
+  if (geometry.type === "GeometryCollection") {
+    const boxes = (geometry.geometries || []).map(bboxForGeometry).filter(Boolean);
+    if (!boxes.length) return null;
+    return boxes.reduce((merged, bbox) => [
+      Math.min(merged[0], bbox[0]),
+      Math.min(merged[1], bbox[1]),
+      Math.max(merged[2], bbox[2]),
+      Math.max(merged[3], bbox[3]),
+    ]);
+  }
+  if (geometry.type === "Point" && Array.isArray(geometry.coordinates)) {
+    const [lng, lat] = geometry.coordinates;
+    return Number.isFinite(lng) && Number.isFinite(lat) ? [lng, lat, lng, lat] : null;
+  }
+  if (!geometry.coordinates) return null;
+  const points = flattenCoordinates(geometry.coordinates).filter((point) => Number.isFinite(point?.[0]) && Number.isFinite(point?.[1]));
+  if (!points.length) return null;
+  return points.reduce((bbox, point) => [
+    Math.min(bbox[0], point[0]),
+    Math.min(bbox[1], point[1]),
+    Math.max(bbox[2], point[0]),
+    Math.max(bbox[3], point[1]),
+  ], [points[0][0], points[0][1], points[0][0], points[0][1]]);
 }
 
 function geometryContainsPoint(geometry, lng, lat) {
@@ -2085,26 +2538,43 @@ function inferCountry(lng, lat) {
 }
 
 function inferRegion(countryId, lng, lat) {
+  const normalizedCountry = countryCoverageId(countryId);
+  const provinceCollection = boundaryLayerData.province?.[normalizedCountry];
+  if (provinceCollection) {
+    const feature = findFeatureAtPoint(provinceCollection, lng, lat);
+    const name = feature ? String(feature.properties?.name || adminNameFromFeature(feature) || "").trim() : "";
+    if (name) return { name };
+  }
   const key = regionKeyForCountry(countryId);
   if (key && boundaryData[key]) {
     const feature = findFeatureAtPoint(boundaryData[key], lng, lat);
     const name = feature ? adminNameFromFeature(feature) : "";
-    if (name) return regionSets[key].units.find((unit) => sameAdminName(unit.name, name)) || { name };
+    if (name) return regionSets[key]?.units?.find((unit) => sameAdminName(unit.name, name)) || { name };
   }
   if (boundaryData.admin1) {
     const feature = findFeatureAtPoint(admin1DisplayCollection(), lng, lat);
     const name = feature ? adminNameFromFeature(feature) : "";
     if (name) return { name };
   }
-  return key ? regionSets[key].units.find((unit) => inBbox(lng, lat, unit.bbox)) : null;
+  return key && regionSets[key]?.units ? regionSets[key].units.find((unit) => inBbox(lng, lat, unit.bbox)) : null;
 }
 
 function inferSubregion(countryId, lng, lat) {
+  const normalizedCountry = countryCoverageId(countryId);
+  const cityCollection = boundaryLayerData.city?.[normalizedCountry];
+  if (cityCollection) {
+    const feature = findFeatureAtPoint(cityCollection, lng, lat);
+    const name = feature ? String(feature.properties?.name || subadminNameFromFeature(feature) || "").trim() : "";
+    if (name) return { name };
+  }
   const key = subadminKeyForCountry(countryId);
-  if (!key || !boundaryData[key]) return null;
+  if (!key) return null;
   const collection = key === "china2"
     ? { type: "FeatureCollection", features: [...(boundaryData[key]?.features || []), ...(boundaryData.chinaDirect?.features || []), ...(boundaryData.tw2?.features || [])] }
-    : boundaryData[key];
+    : key === "japanPref"
+      ? { type: "FeatureCollection", features: (boundaryData.admin1?.features || []).filter((feature) => countryIdFromFeature(feature) === "jp") }
+      : boundaryData[key];
+  if (!collection) return null;
   const feature = findFeatureAtPoint(collection, lng, lat);
   const name = feature ? subadminNameFromFeature(feature) : "";
   return name ? { name } : null;
@@ -2132,15 +2602,27 @@ function getCountry(countryId) {
 }
 
 function getPlace(placeId) {
-  return places.find((place) => place.id === placeId);
+  return placeIndex().get(placeId);
+}
+
+function placeIndex() {
+  if (placeIndexCache.source !== places || placeIndexCache.size !== places.length) {
+    placeIndexCache = { source: places, size: places.length, index: new Map(places.map((place) => [place.id, place])) };
+  }
+  return placeIndexCache.index;
 }
 
 function visitedPlaces() {
-  return state.visits.map((visit) => ({ ...visit, place: getPlace(visit.placeId) })).filter((visit) => visit.place);
+  const index = placeIndex();
+  return state.visits.map((visit) => ({ ...visit, place: index.get(visit.placeId) })).filter((visit) => visit.place);
 }
 
 function locatedVisitedPlaces() {
   return visitedPlaces().filter((visit) => !visit.place.shapeOnly && Number.isFinite(visit.place.lat) && Number.isFinite(visit.place.lng));
+}
+
+function locatedCoverageVisits() {
+  return locatedVisitedPlaces().filter((visit) => placeCountsForCoverage(visit.place));
 }
 
 function bestVisitForPlace(placeId) {
@@ -2168,7 +2650,7 @@ function placeCountsForCoverage(place) {
     place.checklistKey === "worldHeritage" ||
     String(place.id || "").startsWith("checklist-worldheritage-") ||
     (place.checklist || []).includes(checklistCatalog.worldHeritage.label);
-  return !isWorldHeritageChecklist;
+  return !isWorldHeritageChecklist || (Number.isFinite(place.lat) && Number.isFinite(place.lng));
 }
 
 function ensureCoverage() {
@@ -2192,12 +2674,32 @@ function coverageHasRegion(regionKey, name) {
   return coverageRegionNames(regionKey).some((item) => sameRegionName(regionKey, item, name));
 }
 
+function coverageHasRegionForFeature(regionKey, feature, fallbackName = "") {
+  return adminNameCandidatesFromFeature(feature)
+    .concat(fallbackName ? [fallbackName] : [])
+    .some((name) => coverageHasRegion(regionKey, name));
+}
+
 function coverageSubregionNames(subadminKey) {
   return ensureCoverage().subregions[subadminKey] || [];
 }
 
 function coverageHasSubregion(subadminKey, name) {
-  return coverageSubregionNames(subadminKey).some((item) => sameAdminName(item, name));
+  const alternateKeys = {
+    cn: ["china2"],
+    china2: ["cn"],
+    jp: ["japanPref"],
+    japanPref: ["jp"],
+  }[subadminKey] || [];
+  return [subadminKey, ...alternateKeys].some((key) =>
+    coverageSubregionNames(key).some((item) => sameAdminName(item, name))
+  );
+}
+
+function coverageHasSubregionForFeature(subadminKey, feature, fallbackName = "") {
+  return adminNameCandidatesFromFeature(feature)
+    .concat(fallbackName ? [fallbackName] : [])
+    .some((name) => coverageHasSubregion(subadminKey, name));
 }
 
 function chinaRegionNameForPlace(place, countryId) {
@@ -2227,9 +2729,10 @@ function rebuildCoverageFromSavedVisits() {
     }
 
     const subadminKey = subadminKeyForCountry(countryId);
-    if (subadminKey && visit.place.subunit) {
+    const subunit = visit.place.subunit || (sameAdminName(regionName, visit.place.unit) ? "" : visit.place.unit) || "";
+    if (subadminKey && subunit) {
       subregions[subadminKey] ||= [];
-      addUniqueAdminName(subregions[subadminKey], visit.place.subunit);
+      addUniqueAdminName(subregions[subadminKey], subunit);
     }
   });
   state.coverage = {
@@ -2241,6 +2744,7 @@ function rebuildCoverageFromSavedVisits() {
 }
 
 function recomputeCoverage() {
+  const perfStartedAt = perfNow();
   const countriesSeen = new Set();
   const regions = {};
   const subregions = {};
@@ -2258,7 +2762,7 @@ function recomputeCoverage() {
     }
 
     const subadminKey = subadminKeyForCountry(countryId);
-    const subunit = visit.place.subunit || "";
+    const subunit = visit.place.subunit || (sameAdminName(regionName, visit.place.unit) ? "" : visit.place.unit) || "";
     if (subadminKey && subunit) {
       subregions[subadminKey] ||= [];
       addUniqueAdminName(subregions[subadminKey], subunit);
@@ -2270,6 +2774,7 @@ function recomputeCoverage() {
     subregions,
     updatedAt: new Date().toISOString(),
   };
+  logSlowStep("recomputeCoverage", perfStartedAt);
 }
 
 function addCoverageForPlace(place) {
@@ -2285,9 +2790,10 @@ function addCoverageForPlace(place) {
     addUniqueAdminName(coverage.regions[regionKey], regionName, (left, right) => sameRegionName(regionKey, left, right));
   }
   const subadminKey = subadminKeyForCountry(countryId);
-  if (subadminKey && place.subunit) {
+  const subunit = place.subunit || (sameAdminName(regionName, place.unit) ? "" : place.unit) || "";
+  if (subadminKey && subunit) {
     coverage.subregions[subadminKey] ||= [];
-    addUniqueAdminName(coverage.subregions[subadminKey], place.subunit);
+    addUniqueAdminName(coverage.subregions[subadminKey], subunit);
   }
   coverage.updatedAt = new Date().toISOString();
 }
@@ -2295,6 +2801,7 @@ function addCoverageForPlace(place) {
 function upsertVisit(placeId, depth = 1, options = {}) {
   const place = getPlace(placeId);
   if (!place) return;
+  normalizeJapanPlaceHierarchy(place);
   const tripName = options.tripName?.trim();
   const date = options.date || "";
   const tripId = options.tripId || (tripName ? slugify(tripName) : "quick-checkins");
@@ -2377,10 +2884,11 @@ function unvisitPlace(placeId) {
   state.visits = state.visits.filter((visit) => !ids.has(visit.placeId));
   state.checklistMarks = (state.checklistMarks || []).filter((mark) => canonicalPlaceKey(mark.split(":").slice(1).join(":")) !== key);
   places = places.filter((candidate) => !(candidate.checklistOnly && canonicalPlaceKey(candidate.name) === key));
+  checklistStatusCache.signature = "";
   closeMapPopupsAndDetail();
   recomputeCoverage();
   invalidateMapGeoJsonCacheOnly();
-  saveState();
+  saveStateSoon();
   renderAfterCheckinChange();
   showToast(`${place.name} ${t("unmarkedToast")}`);
 }
@@ -2602,6 +3110,57 @@ function saveUiStateSoon() {
   }, 80);
 }
 
+function saveStateSoon(options = {}) {
+  if (pendingFullStateSave) clearTimeout(pendingFullStateSave);
+  pendingFullStateSave = setTimeout(() => {
+    pendingFullStateSave = null;
+    saveState(options);
+  }, 160);
+}
+
+function normalizeMapViewport(viewport) {
+  if (!viewport || !Array.isArray(viewport.center)) return null;
+  const [lng, lat] = viewport.center.map(Number);
+  const zoom = Number(viewport.zoom);
+  if (!Number.isFinite(lng) || !Number.isFinite(lat) || !Number.isFinite(zoom)) return null;
+  return {
+    center: [Math.max(-180, Math.min(180, lng)), Math.max(-85, Math.min(85, lat))],
+    zoom: Math.max(1, Math.min(18, zoom)),
+  };
+}
+
+function rememberMapViewportSoon() {
+  if (restoringMapViewport) return;
+  let viewport = null;
+  if (mapLibreMap) {
+    const center = mapLibreMap.getCenter();
+    viewport = normalizeMapViewport({ center: [center.lng, center.lat], zoom: mapLibreMap.getZoom() });
+  } else if (leafletMap) {
+    const center = leafletMap.getCenter();
+    viewport = normalizeMapViewport({ center: [center.lng, center.lat], zoom: leafletMap.getZoom() });
+  }
+  if (!viewport) return;
+  state.mapViewport = viewport;
+  saveUiStateSoon();
+}
+
+function restoreStoredMapViewport() {
+  const viewport = normalizeMapViewport(state.mapViewport);
+  if (!viewport) return;
+  restoringMapViewport = true;
+  try {
+    if (mapLibreMap) {
+      mapLibreMap.jumpTo({ center: viewport.center, zoom: viewport.zoom });
+    } else if (leafletMap) {
+      leafletMap.setView([viewport.center[1], viewport.center[0]], viewport.zoom, { animate: false });
+    }
+  } finally {
+    setTimeout(() => {
+      restoringMapViewport = false;
+    }, 0);
+  }
+}
+
 function localStorageSnapshot(payload) {
   const savedState = payload.state || {};
   return {
@@ -2616,6 +3175,7 @@ function localStorageSnapshot(payload) {
       mapProviderMode: savedState.mapProviderMode || "auto",
       detectedMapProvider: savedState.detectedMapProvider || "",
       mapOverlays: normalizeMapOverlays(savedState.mapOverlays || {}),
+      mapViewport: normalizeMapViewport(savedState.mapViewport),
       coverage: savedState.coverage || { countries: [], regions: {}, subregions: {} },
     },
   };
@@ -2690,6 +3250,7 @@ function applySavedPayload(saved) {
       mapProviderMode: normalizeMapProviderMode(saved.state.mapProviderMode || state.mapProviderMode),
       detectedMapProvider: normalizeDetectedMapProvider(saved.state.detectedMapProvider || state.detectedMapProvider),
       mapOverlays: normalizeMapOverlays(saved.state.mapOverlays || {}),
+      mapViewport: normalizeMapViewport(saved.state.mapViewport) || state.mapViewport || null,
       coverage: saved.state.coverage || { countries: [], regions: {}, subregions: {} },
     };
   state.visits = (state.visits || []).map((visit) => ({ ...visit, depth: visit.depth > 0 ? 1 : 0 })).filter((visit) => visit.depth > 0);
@@ -2710,6 +3271,7 @@ function applyLocalStorageSnapshot(saved) {
     mapProviderMode: normalizeMapProviderMode(saved.state.mapProviderMode || state.mapProviderMode),
     detectedMapProvider: normalizeDetectedMapProvider(saved.state.detectedMapProvider || state.detectedMapProvider),
     mapOverlays: normalizeMapOverlays(saved.state.mapOverlays || state.mapOverlays || {}),
+    mapViewport: normalizeMapViewport(saved.state.mapViewport) || state.mapViewport || null,
     coverage: saved.state.coverage || state.coverage || { countries: [], regions: {}, subregions: {} },
   };
   return true;
@@ -2717,7 +3279,9 @@ function applyLocalStorageSnapshot(saved) {
 
 function sanitizeDataStore() {
   const seedPlaceIds = new Set(["forbidden-city", "shenzhen", "xian", "tokyo", "kyoto", "yosemite", "nyc", "paris", "singapore"]);
-  const coverageNeedsRebuild = normalizeSavedChecklistGeography();
+  const checklistChanged = normalizeSavedChecklistGeography();
+  const japanHierarchyChanged = normalizeJapanPlacesHierarchy();
+  const coverageNeedsRebuild = checklistChanged || japanHierarchyChanged;
   state.visits = (state.visits || []).filter((visit) => !(visit.tripId === "seed" && seedPlaceIds.has(visit.placeId)));
   state.trips = (state.trips || []).filter((trip) => trip.id !== "seed");
   if (seedPlaceIds.has(state.focusPlaceId)) state.focusPlaceId = "";
@@ -2747,10 +3311,15 @@ function normalizeSavedChecklistGeography() {
     const isChina5a =
       place.checklistKey === "china5a" ||
       String(place.id || "").startsWith("checklist-china5a-");
-    if (!isChina5a) return;
-    const beforeCountry = place.country;
-    applyChecklistGeography(place, "china5a", checklistCoordinateFor(place.name));
-    if (beforeCountry !== place.country) changed = true;
+    const isWorldHeritage =
+      place.checklistKey === "worldHeritage" ||
+      String(place.id || "").startsWith("checklist-worldheritage-") ||
+      (place.checklist || []).includes(checklistCatalog.worldHeritage.label);
+    if (!isChina5a && !isWorldHeritage) return;
+    const before = `${place.country || ""}|${place.unit || ""}|${place.subunit || ""}|${place.lat || ""}|${place.lng || ""}`;
+    applyChecklistGeography(place, isChina5a ? "china5a" : "worldHeritage", checklistCoordinateFor(place.name));
+    const after = `${place.country || ""}|${place.unit || ""}|${place.subunit || ""}|${place.lat || ""}|${place.lng || ""}`;
+    if (before !== after) changed = true;
     if (hasNorthKoreaCoverage) changed = true;
   });
   return changed;
@@ -2840,6 +3409,7 @@ function refreshInferredLocations() {
     if (region?.name) place.unit = region.name;
     const subregion = inferSubregion(place.country, place.lng, place.lat);
     if (subregion?.name) place.subunit = subregion.name;
+    normalizeJapanPlaceHierarchy(place);
   });
 }
 
@@ -2855,6 +3425,51 @@ function refreshInferredSubregionsForVisitedPlaces() {
       place.subunit = subregion.name;
       changed = true;
     }
+  });
+  return changed;
+}
+
+function refreshInferredJapanForVisitedPlaces() {
+  if (!boundaryData.admin1) return false;
+  let changed = false;
+  visitedPlaces().forEach((visit) => {
+    const place = visit.place;
+    if (place.shapeOnly || normalizeCountry(place.country) !== "jp") return;
+    if (Number.isFinite(place.lat) && Number.isFinite(place.lng)) {
+      const region = inferRegion("jp", place.lng, place.lat);
+      const subregion = inferSubregion("jp", place.lng, place.lat);
+      if (region?.name && !sameAdminName(place.unit, region.name)) {
+        place.unit = region.name;
+        changed = true;
+      }
+      if (subregion?.name && !sameAdminName(place.subunit, subregion.name)) {
+        place.subunit = subregion.name;
+        changed = true;
+      }
+    }
+    if (normalizeJapanPlaceHierarchy(place)) changed = true;
+  });
+  return changed;
+}
+
+function refreshInferredLocationsForCountry(countryId) {
+  const normalized = countryCoverageId(countryId);
+  if (!normalized || normalized === "imported") return false;
+  let changed = false;
+  places.forEach((place) => {
+    if (place.shapeOnly || countryCoverageId(place.country) !== normalized) return;
+    if (!Number.isFinite(place.lat) || !Number.isFinite(place.lng)) return;
+    const region = inferRegion(normalized, place.lng, place.lat);
+    const subregion = inferSubregion(normalized, place.lng, place.lat);
+    if (region?.name && !sameAdminName(place.unit, region.name)) {
+      place.unit = region.name;
+      changed = true;
+    }
+    if (subregion?.name && !sameAdminName(place.subunit, subregion.name)) {
+      place.subunit = subregion.name;
+      changed = true;
+    }
+    if (normalizeJapanPlaceHierarchy(place)) changed = true;
   });
   return changed;
 }
@@ -2937,6 +3552,12 @@ function loadCatalogData() {
           : `${total} 条记录，${countryCount} 个国家/地区`,
         total,
       };
+      if (normalizeSavedChecklistGeography()) {
+        recomputeCoverage();
+        saveState();
+        ensureBoundaryDataForLevel(state.boundaryLevel || "country");
+        if (isMapPageActive()) scheduleGeoMapRender();
+      }
     })
     .catch((error) => {
       console.warn("世界遗产清单加载失败，使用内置备用清单", error);
@@ -3123,11 +3744,25 @@ function countryHasSyncedBackground(countryId, visitedCountries) {
 }
 
 function countryIdForRegionKey(key) {
-  return { china: "cn", us: "us", japan: "jp" }[key] || "";
+  if (boundaryIndex) {
+    const normalized = countryCoverageId(key);
+    return hasBoundaryLayer(normalized, "province") ? normalized : "";
+  }
+  const mapped = { china: "cn", us: "us", japan: "jp" }[key] || "";
+  if (mapped) return mapped;
+  const normalized = countryCoverageId(key);
+  return hasDrawableProvinceBoundary(normalized) ? normalized : "";
 }
 
 function countryIdForSubadminKey(key) {
-  return subadminConfigs[key]?.countryId || "";
+  if (boundaryIndex) {
+    const normalized = countryCoverageId(key);
+    return hasBoundaryLayer(normalized, "city") ? normalized : "";
+  }
+  const mapped = subadminConfigs[key]?.countryId || "";
+  if (mapped) return mapped;
+  const normalized = countryCoverageId(key);
+  return boundaryIndex?.countries?.[normalized]?.city ? normalized : "";
 }
 
 function areaCenterGeoJson() {
@@ -3238,7 +3873,65 @@ function bboxCenter(bbox) {
   return [(bbox[0] + bbox[2]) / 2, (bbox[1] + bbox[3]) / 2];
 }
 
+function unifiedBoundaryFeatures(layer, kind) {
+  const countriesToShow = boundaryDetailCountries();
+  return countriesToShow.flatMap((countryId) => {
+    if (!hasBoundaryLayer(countryId, layer)) return [];
+    const collection = boundaryLayerData[layer]?.[countryId];
+    if (!collection?.features?.length) return [];
+    return collection.features.map((feature) => {
+      const name = String(feature.properties?.name || adminNameFromFeature(feature) || "").trim();
+      if (!name) return null;
+      const depth = layer === "province"
+        ? (coverageHasRegionForFeature(countryId, feature, name) ? 1 : 0)
+        : (coverageHasSubregionForFeature(countryId, feature, name) ? 1 : 0);
+      return {
+        ...feature,
+        properties: {
+          ...feature.properties,
+          id: `${countryId}-${layer}-${slugify(name)}`,
+          name,
+          depth,
+          kind,
+          is_region_group: layer === "province" && Boolean(feature.properties?.grouped_from || feature.properties?.group_field),
+          regionKey: countryId,
+          countryId,
+          count: depth,
+        },
+      };
+    }).filter(Boolean);
+  });
+}
+
+function unifiedBoundaryGeoJson(layer, kind) {
+  return { type: "FeatureCollection", features: unifiedBoundaryFeatures(layer, kind) };
+}
+
+function unifiedProvinceOutlineGeoJson() {
+  return {
+    type: "FeatureCollection",
+    features: unifiedBoundaryFeatures("province", "region")
+      .map((feature) => ({
+        type: "Feature",
+        properties: {
+          id: `${feature.properties.id}-outline`,
+          name: feature.properties.name,
+          depth: feature.properties.depth,
+          kind: "region-outline",
+          countryId: feature.properties.countryId,
+        },
+        geometry: exteriorLineGeometryForFeature(feature),
+      }))
+      .filter((feature) => feature.geometry.coordinates.length),
+  };
+}
+
+function provinceOutlineGeoJson() {
+  return boundaryIndex ? unifiedProvinceOutlineGeoJson() : groupedRegionOutlineGeoJson();
+}
+
 function regionGeoJson() {
+  if (boundaryIndex) return unifiedBoundaryGeoJson("province", "region");
   const features = [
     ...adminBoundaryKeysToShow().flatMap((regionKey) => adminFeaturesForRegion(regionKey)),
     ...globalAdmin1GeoJson().features,
@@ -3267,6 +3960,7 @@ function regionGeoJson() {
 }
 
 function subadminGeoJson() {
+  if (boundaryIndex) return unifiedBoundaryGeoJson("city", "subadmin");
   const configuredSubadminCountries = new Set(Object.keys(subadminConfigs).map(countryIdForSubadminKey));
   return {
     type: "FeatureCollection",
@@ -3280,15 +3974,17 @@ function subadminGeoJson() {
 function subadminFeaturesForKey(key) {
   const config = subadminConfigs[key];
   if (!config) return [];
-  const sourceFeatures = [
-    ...(boundaryData[key]?.features || []),
-    ...(key === "china2" ? (boundaryData.chinaDirect?.features || []) : []),
-    ...(key === "china2" ? (boundaryData.tw2?.features || []) : []),
-  ];
+  const sourceFeatures = key === "japanPref"
+    ? (boundaryData.admin1?.features || []).filter((feature) => countryIdFromFeature(feature) === "jp")
+    : [
+      ...(boundaryData[key]?.features || []),
+      ...(key === "china2" ? (boundaryData.chinaDirect?.features || []) : []),
+      ...(key === "china2" ? (boundaryData.tw2?.features || []) : []),
+    ];
   const boundaryFeatures = sourceFeatures.map((feature) => {
     const name = subadminNameFromFeature(feature);
     if (!name) return null;
-    const depth = coverageHasSubregion(key, name) ? 1 : 0;
+    const depth = coverageHasSubregionForFeature(key, feature, name) ? 1 : 0;
     return {
       ...feature,
       properties: {
@@ -3351,7 +4047,7 @@ function globalAdmin1GeoJson() {
     const displayCountryId = countryCoverageId(countryId);
     if (!countryId || specialCountries.has(displayCountryId) || !visited.has(displayCountryId)) return null;
     const name = adminNameFromFeature(feature);
-    const depth = coverageHasRegion(countryId, name) ? 1 : 0;
+    const depth = coverageHasRegionForFeature(countryId, feature, name) ? 1 : 0;
     return {
       ...feature,
       properties: {
@@ -3369,11 +4065,13 @@ function globalAdmin1GeoJson() {
 }
 
 function adminBoundaryKeysToShow() {
+  if (boundaryIndex) return boundaryDetailCountries().filter((countryId) => hasBoundaryLayer(countryId, "province"));
   const visitedKeys = Array.from(uniqueVisitedCountries()).map(regionKeyForCountry).filter(Boolean);
   return Array.from(new Set(visitedKeys));
 }
 
 function subadminBoundaryKeysToShow() {
+  if (boundaryIndex) return boundaryDetailCountries().filter((countryId) => hasBoundaryLayer(countryId, "city"));
   const visitedKeys = Array.from(uniqueVisitedCountries()).map(subadminKeyForCountry).filter(Boolean);
   return Array.from(new Set(visitedKeys.filter(Boolean)));
 }
@@ -3393,6 +4091,8 @@ function customBoundaryFor(level, countryOrRegion, unitName = "") {
 
 function regionKeyForCountry(countryId) {
   const normalized = normalizeCountry(countryId);
+  const coverageId = countryCoverageId(normalized);
+  if (boundaryIndex) return hasBoundaryLayer(coverageId, "province") ? coverageId : "";
   return ["cn", "hk", "mo", "tw"].includes(normalized) ? "china" : normalized === "us" ? "us" : normalized === "jp" ? "japan" : "";
 }
 
@@ -3403,7 +4103,9 @@ function chinaRegionNameForCountryId(countryId) {
 
 function subadminKeyForCountry(countryId) {
   const normalized = normalizeCountry(countryId);
-  if (["cn", "tw"].includes(normalized)) return "china2";
+  const coverageId = countryCoverageId(normalized);
+  if (boundaryIndex) return hasBoundaryLayer(coverageId, "city") ? coverageId : "";
+  if (coverageId && coverageId !== "imported") return coverageId;
   return Object.keys(subadminConfigs).find((key) => subadminConfigs[key].countryId === normalized) || "";
 }
 
@@ -3448,14 +4150,16 @@ function renderGeoMap() {
   }
 
   if (!leafletMap) {
+    const savedViewport = normalizeMapViewport(state.mapViewport);
     leafletMap = L.map("leafletMap", {
       worldCopyJump: true,
       minZoom: 1,
       zoomAnimation: false,
       fadeAnimation: false,
       markerZoomAnimation: false,
-    }).setView([25, 20], 2);
+    }).setView([savedViewport?.center?.[1] ?? 25, savedViewport?.center?.[0] ?? 20], savedViewport?.zoom ?? 2);
 
+    leafletMap.on("moveend zoomend", rememberMapViewportSoon);
     leafletMap.on("click", (event) => {
       handleMapCanvasClick(event.latlng.lng, event.latlng.lat, event.originalEvent);
     });
@@ -3467,10 +4171,7 @@ function renderGeoMap() {
   renderLeafletLayers();
   setTimeout(() => {
     leafletMap.invalidateSize();
-    if (!leafletDidInitialFit) {
-      fitMapToVisitedPlaces();
-      leafletDidInitialFit = true;
-    }
+    leafletDidInitialFit = true;
   }, 80);
 }
 
@@ -3521,10 +4222,8 @@ function scheduleGeoMapRender() {
 }
 
 function renderMapLibreMap() {
-  const focusPlace = getPlace(state.focusPlaceId) || visitedPlaces()[0]?.place;
-  const center = focusPlace && Number.isFinite(focusPlace.lng) && Number.isFinite(focusPlace.lat)
-    ? [focusPlace.lng, focusPlace.lat]
-    : [105, 35];
+  const savedViewport = normalizeMapViewport(state.mapViewport);
+  const center = savedViewport?.center || [20, 25];
   const provider = activeMapProvider();
 
   if (!mapLibreMap) {
@@ -3532,7 +4231,7 @@ function renderMapLibreMap() {
     mapLibreMap = new maplibregl.Map({
       container: "leafletMap",
       center,
-      zoom: 4.6,
+      zoom: savedViewport?.zoom ?? 2,
       attributionControl: true,
       style: mapLibreBaseStyle(provider),
     });
@@ -3541,6 +4240,8 @@ function renderMapLibreMap() {
     mapLibreMap.on("click", (event) => {
       handleMapCanvasClick(event.lngLat.lng, event.lngLat.lat, event.originalEvent);
     });
+    mapLibreMap.on("moveend", rememberMapViewportSoon);
+    mapLibreMap.on("zoomend", rememberMapViewportSoon);
     mapLibreMap.on("load", () => {
       setLoadingDebug("使用 MapLibre 显示底图", "done");
       clearLoadingDebugSoon();
@@ -3578,7 +4279,7 @@ function mapLibreBaseStyle(providerId) {
 function applyMapLibreProvider(provider) {
   if (!mapLibreMap || mapLibreMap._travelMapProvider === provider) return;
   mapLibreMap._travelMapProvider = provider;
-  mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false };
+  mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false, points: false };
   mapLibreSourceDataRefs.clear();
   clearMapLibreMarkers();
   mapLibreMap.setStyle(mapLibreBaseStyle(provider));
@@ -3636,12 +4337,26 @@ function invalidateMapGeoJsonCacheOnly() {
   mapGeoJsonCache.clear();
 }
 
+function invalidateMapPointRenderCache() {
+  mapPointRenderRevision += 1;
+  mapLibreMarkerSignature = "";
+  checklistOverlayCache.signature = "";
+}
+
 function renderMapLibreLayers() {
+  const perfStartedAt = perfNow();
   if (!mapLibreMap || !mapLibreMap.isStyleLoaded()) return;
+  let perfStageStartedAt = perfStartedAt;
   const overlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
 
   setLoadingDebug("渲染地图图层", "pending");
   ensureBoundaryDataForLevel(state.boundaryLevel);
+  perfStageStartedAt = logRenderStage("ensure", perfStageStartedAt);
+  if (boundaryLevelHasPendingDetailLoads(state.boundaryLevel)) {
+    setLoadingDebug("娓叉煋鍦板浘鍥惧眰", "done");
+    clearLoadingDebugSoon();
+    return;
+  }
 
   removeMapLibreLayer("visited-area-labels");
   removeMapLibreLayer("visited-area-centers");
@@ -3653,6 +4368,9 @@ function renderMapLibreLayers() {
   removeMapLibreLayer("visited-region-group-outlines-line");
   removeMapLibreLayer("visited-subadmin-line");
   removeMapLibreLayer("visited-subadmin-fill");
+  removeMapLibreLayer("map-points-shadow");
+  removeMapLibreLayer("map-points-stroke");
+  removeMapLibreLayer("map-points-circle");
   removeMapLibreLayer("admin-country-context-line");
   removeMapLibreLayer("admin-country-context-fill");
   removeMapLibreLayer("map-background-context-line");
@@ -3666,45 +4384,63 @@ function renderMapLibreLayers() {
   removeMapLibreSource("visited-regions");
   removeMapLibreSource("visited-region-group-outlines");
   removeMapLibreSource("visited-subadmin");
+  removeMapLibreSource("map-points");
   removeMapLibreSource("admin-country-context");
   removeMapLibreSource("map-background-context");
   removeMapLibreSource("visited-countries");
   removeMapLibreSource("country-click");
+  perfStageStartedAt = logRenderStage("remove", perfStageStartedAt);
 
   setMapLibreSource("map-background-context", cachedMapGeoJson("map-background-context", mapBackgroundContextGeoJson));
   addMapLibreFillLayer("map-background-context", "map-background-context-fill", "map-background-context-line", 0.18, 1);
+  perfStageStartedAt = logRenderStage("background", perfStageStartedAt);
 
   if (state.boundaryLevel === "country") {
     setMapLibreSource("country-click", cachedMapGeoJson("country-click", allCountryClickGeoJson));
     addMapLibreClickFillLayer("country-click", "country-click-fill");
     setMapLibreSource("visited-countries", cachedMapGeoJson("countries", countryGeoJson));
     addMapLibreFillLayer("visited-countries", "visited-countries-fill", "visited-countries-line", 0.2, 1.15);
+    perfStageStartedAt = logRenderStage("country", perfStageStartedAt);
   }
 
   if (state.boundaryLevel === "admin") {
+    const adminStageStartedAt = perfNow();
+    let adminSubstageStartedAt = adminStageStartedAt;
     setMapLibreSource("visited-regions", cachedMapGeoJson("regions", regionGeoJson));
-    addMapLibreFillLayer("visited-regions", "visited-regions-fill", "visited-regions-line", 0.24, 1.4);
-    setMapLibreSource("visited-region-group-outlines", cachedMapGeoJson("region-outlines", groupedRegionOutlineGeoJson));
+    addMapLibreFillLayer("visited-regions", "visited-regions-fill", "visited-regions-line", 0.24, boundaryIndex ? 0 : 1.4);
+    adminSubstageStartedAt = logRenderStage("admin-regions", adminSubstageStartedAt);
+    setMapLibreSource("visited-region-group-outlines", cachedMapGeoJson("region-outlines", provinceOutlineGeoJson));
     addMapLibreLineLayer("visited-region-group-outlines", "visited-region-group-outlines-line", 1.55);
+    adminSubstageStartedAt = logRenderStage("admin-outlines", adminSubstageStartedAt);
     setMapLibreSource("admin-country-context", cachedMapGeoJson("admin-country-context", adminCountryContextGeoJson));
     addMapLibreFillLayer("admin-country-context", "admin-country-context-fill", "admin-country-context-line", 0.18, 1);
+    logRenderStage("admin-context", adminSubstageStartedAt);
+    logSlowStep("renderMapLibreLayers:admin-total", adminStageStartedAt, 120);
+    perfStageStartedAt = logRenderStage("admin", perfStageStartedAt);
   }
 
   if (state.boundaryLevel === "subadmin") {
+    const subadminStageStartedAt = perfNow();
+    let subadminSubstageStartedAt = subadminStageStartedAt;
     const subadminKeys = subadminBoundaryKeysToShow();
     const countriesWithSubadmin = new Set(subadminKeys.map(countryIdForSubadminKey).filter(Boolean));
     if (countriesWithSubadmin.size) {
       setMapLibreSource("admin-country-context", cachedMapGeoJson("subadmin-country-context", () => adminCountryContextGeoJson(countriesWithSubadmin)));
       addMapLibreFillLayer("admin-country-context", "admin-country-context-fill", "admin-country-context-line", 0.18, 1);
     }
+    subadminSubstageStartedAt = logRenderStage("subadmin-context", subadminSubstageStartedAt);
     if (subadminKeys.length) {
       setMapLibreSource("visited-subadmin", cachedMapGeoJson("subadmin", subadminGeoJson));
       addMapLibreFillLayer("visited-subadmin", "visited-subadmin-fill", "visited-subadmin-line", 0.24, 0.55);
     }
-    if (subadminKeys.includes("china2")) {
-      setMapLibreSource("visited-region-group-outlines", cachedMapGeoJson("subadmin-province-outlines", () => adminOutlineGeoJsonForKeys(["china"])));
+    subadminSubstageStartedAt = logRenderStage("subadmin-city", subadminSubstageStartedAt);
+    if (boundaryIndex || subadminKeys.includes("china2")) {
+      setMapLibreSource("visited-region-group-outlines", cachedMapGeoJson("subadmin-province-outlines", () => boundaryIndex ? provinceOutlineGeoJson() : adminOutlineGeoJsonForKeys(["china"])));
       addMapLibreLineLayer("visited-region-group-outlines", "visited-region-group-outlines-line", 1.55);
     }
+    logRenderStage("subadmin-outlines", subadminSubstageStartedAt);
+    logSlowStep("renderMapLibreLayers:subadmin-total", subadminStageStartedAt, 120);
+    perfStageStartedAt = logRenderStage("subadmin", perfStageStartedAt);
   }
 
   setMapLibreSource("imported-shapes", cachedMapGeoJson("imported-polygons", importedPolygonGeoJson));
@@ -3713,18 +4449,24 @@ function renderMapLibreLayers() {
     setMapLibreSource("imported-paths", cachedMapGeoJson("imported-paths", importedPathGeoJson));
     addMapLibreImportedPathLayer("imported-paths", "imported-shapes-path-line", 3);
   }
+  perfStageStartedAt = logRenderStage("imports", perfStageStartedAt);
   bindMapLibreLayerHandlers();
   renderMapLibreMarkers(overlays);
+  perfStageStartedAt = logRenderStage("bind-points", perfStageStartedAt);
+  logSlowStep("renderMapLibreLayers", perfStartedAt);
   setLoadingDebug("渲染地图图层", "done");
   clearLoadingDebugSoon();
 }
 
-function refreshMapLibreDataOnly() {
+function refreshMapLibreDataOnly(options = {}) {
+  const perfStartedAt = perfNow();
   if (!mapLibreMap || !mapLibreMap.isStyleLoaded()) return false;
+  const { updateImports = true, updateMarkers = true } = options;
   const overlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
   const needs = ["map-background-context"];
   if (state.boundaryLevel === "country") needs.push("country-click", "visited-countries");
   if (state.boundaryLevel === "admin") needs.push("visited-regions", "visited-region-group-outlines", "admin-country-context");
+  if (state.boundaryLevel === "subadmin") needs.push("admin-country-context", "visited-subadmin", "visited-region-group-outlines");
   if (needs.some((id) => !mapLibreMap.getSource(id))) return false;
 
   setMapLibreSource("map-background-context", cachedMapGeoJson("map-background-context", mapBackgroundContextGeoJson));
@@ -3736,7 +4478,7 @@ function refreshMapLibreDataOnly() {
 
   if (state.boundaryLevel === "admin") {
     setMapLibreSource("visited-regions", cachedMapGeoJson("regions", regionGeoJson));
-    setMapLibreSource("visited-region-group-outlines", cachedMapGeoJson("region-outlines", groupedRegionOutlineGeoJson));
+    setMapLibreSource("visited-region-group-outlines", cachedMapGeoJson("region-outlines", provinceOutlineGeoJson));
     setMapLibreSource("admin-country-context", cachedMapGeoJson("admin-country-context", adminCountryContextGeoJson));
   }
 
@@ -3757,29 +4499,34 @@ function refreshMapLibreDataOnly() {
     if (mapLibreMap.getSource("visited-region-group-outlines")) {
       setMapLibreSource(
         "visited-region-group-outlines",
-        subadminKeys.includes("china2")
-          ? cachedMapGeoJson("subadmin-province-outlines", () => adminOutlineGeoJsonForKeys(["china"]))
+        boundaryIndex || subadminKeys.includes("china2")
+          ? cachedMapGeoJson("subadmin-province-outlines", () => boundaryIndex ? provinceOutlineGeoJson() : adminOutlineGeoJsonForKeys(["china"]))
           : emptyFeatureCollection(),
       );
     }
   }
 
-  if (mapLibreMap.getSource("imported-shapes")) {
+  if (updateImports && mapLibreMap.getSource("imported-shapes")) {
     setMapLibreSource("imported-shapes", cachedMapGeoJson("imported-polygons", importedPolygonGeoJson));
   }
-  if (overlays.paths && mapLibreMap.getSource("imported-paths")) {
+  if (updateImports && overlays.paths && mapLibreMap.getSource("imported-paths")) {
     setMapLibreSource("imported-paths", cachedMapGeoJson("imported-paths", importedPathGeoJson));
   }
-  renderMapLibreMarkers(overlays);
+  if (updateMarkers) renderMapLibreMarkers(overlays);
+  logSlowStep("refreshMapLibreDataOnly", perfStartedAt);
   return true;
 }
 
 function renderMapLibreMarkers(overlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) }) {
+  const perfStartedAt = perfNow();
   const signature = mapLibreMarkerRenderSignature(overlays);
-  if (mapLibreMarkerSignature === signature) return;
+  if (mapLibreMarkerSignature === signature && mapLibreMap.getLayer("map-points-circle")) return;
   mapLibreMarkerSignature = signature;
   mapLibreMarkers.forEach((marker) => marker.remove());
   mapLibreMarkers = [];
+  renderMapLibrePointLayers(overlays);
+  logSlowStep("renderMapLibreMarkers", perfStartedAt);
+  return;
   if (overlays.checkins) {
     visitedPlaces()
       .filter((visit) =>
@@ -3821,22 +4568,14 @@ function renderMapLibreMarkers(overlays = { ...defaultMapOverlays(), ...(state.m
       .addTo(mapLibreMap);
     mapLibreMarkers.push(marker);
   });
+  logSlowStep("renderMapLibreMarkers", perfStartedAt);
 }
 
 function mapLibreMarkerRenderSignature(overlays) {
   const activeKeys = activeChecklistOverlayKeys();
-  const visitsSignature = (state.visits || [])
-    .map((visit) => `${visit.placeId}:${visit.depth || 0}:${visit.tripId || ""}`)
-    .sort()
-    .join("|");
-  const placesSignature = places
-    .filter((place) => !place.shapeOnly && Number.isFinite(place.lng) && Number.isFinite(place.lat))
-    .map((place) => `${place.id}:${place.name}:${place.country || ""}:${place.unit || ""}:${place.lat}:${place.lng}:${place.manualAdmin ? 1 : 0}`)
-    .sort()
-    .join("|");
   const checklistSignature = [
     activeKeys.join(","),
-    (state.checklistMarks || []).slice().sort().join("|"),
+    (state.checklistMarks || []).length,
     checklistTotalCount("china5a"),
     checklistTotalCount("worldHeritage"),
     Object.keys(china5aCoordinates || {}).length,
@@ -3847,25 +4586,184 @@ function mapLibreMarkerRenderSignature(overlays) {
     checkins: Boolean(overlays.checkins),
     china5a: Boolean(overlays.china5a),
     worldHeritage: Boolean(overlays.worldHeritage),
-    visitsSignature,
-    placesSignature,
+    revision: mapPointRenderRevision,
+    visits: (state.visits || []).length,
+    places: places.length,
     checklistSignature,
   });
 }
 
+function renderMapLibrePointLayers(overlays) {
+  setMapLibreSource("map-points", mapLibrePointGeoJson(overlays));
+  addMapLibrePointLayers("map-points");
+  bindMapLibrePointHandlers();
+}
+
+function mapLibrePointGeoJson(overlays) {
+  const features = [];
+  if (overlays.checkins) {
+    visitedPlaces()
+      .filter((visit) =>
+        !visit.place.shapeOnly
+        && !visit.place.manualAdmin
+        && !placeBelongsToActiveChecklistOverlay(visit.place)
+        && Number.isFinite(visit.place.lng)
+        && Number.isFinite(visit.place.lat)
+      )
+      .forEach((visit) => {
+        features.push({
+          type: "Feature",
+          geometry: { type: "Point", coordinates: [visit.place.lng, visit.place.lat] },
+          properties: {
+            kind: "checkin",
+            placeId: visit.place.id,
+            title: visit.place.name,
+            subtitle: `${getCountry(visit.place.country).name} · ${visit.place.unit || t("unassigned")}`,
+            color: depthColors[1],
+            stroke: "#111827",
+            radius: 4,
+            haloOpacity: 0.98,
+            shadowOpacity: 0.26,
+          },
+        });
+      });
+  }
+  checklistOverlayPlaces().forEach((entry) => {
+    features.push({
+      type: "Feature",
+      geometry: { type: "Point", coordinates: [entry.lng, entry.lat] },
+      properties: {
+        kind: "checklist",
+        checklistKey: entry.key,
+        item: entry.item,
+        title: entry.item,
+        subtitle: checklistCatalog[entry.key]?.label || t("checklistFallback"),
+        done: Boolean(entry.done),
+        color: entry.key === "worldHeritage" ? "#276db6" : "#218a78",
+        stroke: entry.done ? "#111827" : "rgba(17, 24, 39, 0.5)",
+        radius: entry.done ? 4 : 3,
+        haloOpacity: entry.done ? 0.98 : 0,
+        shadowOpacity: entry.done ? 0.18 : 0.1,
+      },
+    });
+  });
+  return { type: "FeatureCollection", features };
+}
+
+function addMapLibrePointLayers(sourceId) {
+  if (!mapLibreMap.getLayer("map-points-shadow")) {
+    mapLibreMap.addLayer({
+      id: "map-points-shadow",
+      type: "circle",
+      source: sourceId,
+      paint: {
+        "circle-radius": ["+", ["get", "radius"], 4.6],
+        "circle-color": "#0f172a",
+        "circle-opacity": ["get", "shadowOpacity"],
+        "circle-blur": 0.85,
+        "circle-translate": [0, 1.2],
+      },
+    });
+  }
+  if (!mapLibreMap.getLayer("map-points-stroke")) {
+    mapLibreMap.addLayer({
+      id: "map-points-stroke",
+      type: "circle",
+      source: sourceId,
+      paint: {
+        "circle-radius": ["+", ["get", "radius"], 3.6],
+        "circle-color": "#ffffff",
+        "circle-opacity": ["get", "haloOpacity"],
+      },
+    });
+  }
+  if (!mapLibreMap.getLayer("map-points-circle")) {
+    mapLibreMap.addLayer({
+      id: "map-points-circle",
+      type: "circle",
+      source: sourceId,
+      paint: {
+        "circle-radius": ["get", "radius"],
+        "circle-color": ["get", "color"],
+        "circle-stroke-color": "#111827",
+        "circle-stroke-width": ["case", ["==", ["get", "done"], false], 0.9, 1.6],
+        "circle-opacity": ["case", ["==", ["get", "done"], false], 0.82, 0.96],
+      },
+    });
+  }
+}
+
+function bindMapLibrePointHandlers() {
+  if (mapLibreLayerHandlersBound.points || !mapLibreMap.getLayer("map-points-circle")) return;
+  mapLibreLayerHandlersBound.points = true;
+  mapLibreMap.on("click", "map-points-circle", (event) => {
+    if (event.originalEvent) event.originalEvent._travelMapHandled = true;
+    const feature = event.features?.[0];
+    if (!feature) return;
+    renderMapLibrePointDetail(feature);
+    showMapLibrePointPopup(feature, event.lngLat);
+  });
+  mapLibreMap.on("mouseenter", "map-points-circle", () => {
+    mapLibreMap.getCanvas().style.cursor = "pointer";
+  });
+  mapLibreMap.on("mouseleave", "map-points-circle", () => {
+    mapLibreMap.getCanvas().style.cursor = "";
+  });
+}
+
+function renderMapLibrePointDetail(feature) {
+  const props = feature.properties || {};
+  if (props.kind === "checkin" && props.placeId) renderPlaceDetail(props.placeId);
+  if (props.kind === "checklist" && props.checklistKey && props.item) renderChecklistMapDetail(props.checklistKey, props.item);
+}
+
+function showMapLibrePointPopup(feature, lngLat) {
+  const props = feature.properties || {};
+  const title = escapeHtml(props.title || "");
+  const subtitle = escapeHtml(props.subtitle || "");
+  const button = props.kind === "checkin"
+    ? `<button class="popup-action" data-unvisit="${escapeHtml(props.placeId)}" type="button">${t("unvisit")}</button>`
+    : `<button class="popup-action" data-checklist-map="${escapeHtml(props.checklistKey)}" data-item="${escapeHtml(props.item)}" type="button">${props.done ? t("unvisit") : t("markVisited")}</button>`;
+  new maplibregl.Popup({ offset: 12 })
+    .setLngLat(lngLat)
+    .setHTML(`<strong>${title}</strong><br>${subtitle}<br>${button}`)
+    .addTo(mapLibreMap);
+}
+
 function checklistOverlayPlaces() {
+  const perfStartedAt = perfNow();
   const keys = activeChecklistOverlayKeys();
+  const signature = [
+    keys.join(","),
+    currentLanguage,
+    mapPointRenderRevision,
+    (state.checklistMarks || []).length,
+    (state.visits || []).length,
+    places.length,
+    Object.keys(china5aCoordinates || {}).length,
+    Object.keys(worldHeritageCoordinates || {}).length,
+  ].join("#");
+  if (checklistOverlayCache.signature === signature) return checklistOverlayCache.items;
+  const marked = checklistMarkKeys();
+  const visited = visitedChecklistKeys();
   const seen = new Set(visitedPlaces()
     .filter((visit) => Number.isFinite(visit.place.lat) && Number.isFinite(visit.place.lng))
     .map((visit) => canonicalPlaceKey(visit.place.name)));
-  return keys.flatMap((key) => checklistMapItemsFor(key).map((item) => {
+  const allOverlayItems = keys.flatMap((key) => checklistMapItemsFor(key).map((item) => ({ key, item, itemKey: canonicalPlaceKey(item) })));
+  const items = allOverlayItems.map(({ key, item, itemKey }) => {
     const coords = checklistCoordinateFor(item);
     if (!coords || !Number.isFinite(coords[0]) || !Number.isFinite(coords[1])) return null;
-    const done = isChecklistItemDone(key, item);
-    const itemKey = canonicalPlaceKey(item);
+    const done = marked.has(itemKey) || visited.has(itemKey);
     if (seen.has(itemKey) && !done) return null;
     return { key, item, lat: coords[0], lng: coords[1], done };
-  }).filter(Boolean));
+  }).filter(Boolean);
+  checklistOverlayCache = {
+    signature,
+    items,
+    keySet: new Set(allOverlayItems.map((entry) => entry.itemKey)),
+  };
+  logSlowStep("checklistOverlayPlaces", perfStartedAt);
+  return items;
 }
 
 function activeChecklistOverlayKeys() {
@@ -3878,10 +4776,10 @@ function activeChecklistOverlayKeys() {
 
 function placeBelongsToActiveChecklistOverlay(place) {
   if (!place) return false;
+  if (!activeChecklistOverlayKeys().length) return false;
+  checklistOverlayPlaces();
   const placeKey = canonicalPlaceKey(place.name);
-  return activeChecklistOverlayKeys().some((key) =>
-    checklistMapItemsFor(key).some((item) => item && canonicalPlaceKey(item) === placeKey)
-  );
+  return checklistOverlayCache.keySet.has(placeKey);
 }
 
 function checklistMapItemsFor(key) {
@@ -4077,7 +4975,7 @@ function renderLeafletLayers() {
 
   if (state.boundaryLevel === "admin") {
     L.geoJSON(regionGeoJson(), {
-      style: leafletBoundaryStyle,
+      style: (feature) => boundaryIndex ? { ...leafletBoundaryStyle(feature), weight: 0, opacity: 0 } : leafletBoundaryStyle(feature),
       onEachFeature: (feature, layer) => {
         layer.on("click", (event) => {
           if (mapAddMode) return;
@@ -4087,7 +4985,7 @@ function renderLeafletLayers() {
         layer.bindTooltip(`${feature.properties.name} · ${feature.properties.count} 个地点`, { sticky: true });
       },
     }).addTo(leafletLayers);
-    L.geoJSON(groupedRegionOutlineGeoJson(), {
+    L.geoJSON(provinceOutlineGeoJson(), {
       style: leafletOutlineStyle,
       onEachFeature: (feature, layer) => {
         layer.bindTooltip(feature.properties.name, { sticky: true });
@@ -4125,8 +5023,8 @@ function renderLeafletLayers() {
         },
       }).addTo(leafletLayers);
     }
-    if (subadminKeys.includes("china2")) {
-      L.geoJSON(adminOutlineGeoJsonForKeys(["china"]), {
+    if (boundaryIndex || subadminKeys.includes("china2")) {
+      L.geoJSON(boundaryIndex ? provinceOutlineGeoJson() : adminOutlineGeoJsonForKeys(["china"]), {
         style: leafletOutlineStyle,
         onEachFeature: (feature, layer) => {
           layer.bindTooltip(feature.properties.name, { sticky: true });
@@ -4331,11 +5229,15 @@ function toggleManualAdminRegion(countryId, regionName, isSubadmin, center) {
   }
 
   const id = manualAdminPlaceId(countryId, regionName);
+  const normalizedCountry = normalizeCountry(countryId);
+  const manualUnit = isSubadmin
+    ? (normalizedCountry === "jp" ? japanRegionForPrefecture(regionName) : "")
+    : regionName;
   places.push({
     id,
     name: `${getCountry(countryId).name} - ${regionName}`,
     country: countryId,
-    unit: isSubadmin ? "" : regionName,
+    unit: manualUnit,
     subunit: isSubadmin ? regionName : "",
     city: "",
     type: "手动点亮行政区",
@@ -4392,6 +5294,28 @@ function manualAdminPlaceId(countryId, regionName) {
 function manualAdminPlaceFor(countryId, regionName) {
   const id = manualAdminPlaceId(countryId, regionName);
   return places.find((place) => place.id === id || (place.manualAdmin && normalizeCountry(place.country) === countryId && (sameAdminName(place.unit, regionName) || sameAdminName(place.subunit, regionName))));
+}
+
+function manualAdminCenter(countryId, regionName, isSubadmin) {
+  const normalizedCountry = normalizeCountry(countryId);
+  if (normalizedCountry === "cn") {
+    return isSubadmin
+      ? chinaSubadminUnitsForManualList().find((unit) => sameAdminName(unit.name, regionName))?.center
+      : bboxCenter(regionSets.china.units.find((unit) => sameAdminName(unit.name, regionName))?.bbox || []);
+  }
+  if (normalizedCountry === "jp") {
+    if (isSubadmin) {
+      const feature = (boundaryData.admin1?.features || []).find((item) =>
+        countryIdFromFeature(item) === "jp" && sameAdminName(subadminNameFromFeature(item), regionName)
+      );
+      return feature ? geometryCenter(feature.geometry) : bboxCenter(japanPrefBboxes[regionName] || []);
+    }
+    const feature = admin1DisplayCollection().features.find((item) =>
+      countryIdFromFeature(item) === "jp" && sameAdminName(adminNameFromFeature(item), regionName)
+    );
+    return feature ? geometryCenter(feature.geometry) : null;
+  }
+  return null;
 }
 
 function manualCountryPlaceId(countryId) {
@@ -4464,6 +5388,18 @@ function renderCheckinsPage() {
   $("#manualChinaCityList").innerHTML = cityRows.length
     ? renderChinaSubadminGroups(cityRows)
     : `<p class="muted">中国地级市边界加载后显示。</p>`;
+
+  const japanRegionRows = regionSets.japan.units;
+  $("#manualJapanRegionCount").textContent = `${countVisitedRegions("japan")}/${japanRegionRows.length}`;
+  $("#manualJapanRegionList").innerHTML = japanRegionRows.map((unit) => {
+    const visited = coverageHasRegion("japan", unit.name);
+    const manual = Boolean(manualAdminPlaceFor("jp", unit.name));
+    return manualButtonHtml({ label: unit.name, visited, manual, action: `admin:jp:${encodeURIComponent(unit.name)}:0`, disabled: visited && !manual });
+  }).join("");
+
+  const japanPrefRows = japanPrefectureUnits();
+  $("#manualJapanPrefectureCount").textContent = `${countVisitedSubregions("japanPref")}/${japanPrefRows.length}`;
+  $("#manualJapanPrefectureList").innerHTML = renderJapanPrefectureGroups(japanPrefRows);
 
   const countryRows = manualCountryRows();
   $("#manualCountryCount").textContent = `${uniqueVisitedCountries().size}/${countryRows.length}`;
@@ -4555,6 +5491,23 @@ function renderChinaSubadminGroups(rows) {
   }).join("");
 }
 
+function renderJapanPrefectureGroups(rows) {
+  const grouped = groupBy(rows, (row) => japanRegionForPrefecture(row.name) || "未分区");
+  return Object.entries(grouped).map(([region, units]) => {
+    const done = units.filter((unit) => coverageHasSubregion("japanPref", unit.name)).length;
+    return `<details class="manual-group manual-city-group" open>
+      <summary><strong>${region}</strong><span>${done}/${units.length}</span></summary>
+      <div class="manual-list">
+        ${units.map((unit) => {
+          const visited = coverageHasSubregion("japanPref", unit.name);
+          const manual = Boolean(manualAdminPlaceFor("jp", unit.name));
+          return manualButtonHtml({ label: unit.name, visited, manual, action: `admin:jp:${encodeURIComponent(unit.name)}:1`, disabled: visited && !manual });
+        }).join("")}
+      </div>
+    </details>`;
+  }).join("");
+}
+
 function renderCountryGroups(rows) {
   const grouped = groupBy(rows, (row) => row.continent || "其他");
   return Object.entries(grouped).map(([continent, countriesInContinent]) => {
@@ -4617,6 +5570,9 @@ function countVisitedSubregions(subadminKey) {
     const units = chinaSubadminUnitsForManualList();
     if (units.length) return units.filter((unit) => coverageHasSubregion("china2", unit.name)).length;
   }
+  if (subadminKey === "japanPref") {
+    return japanPrefectureUnits().filter((unit) => coverageHasSubregion("japanPref", unit.name)).length;
+  }
   return coverageSubregionNames(subadminKey).length;
 }
 
@@ -4654,6 +5610,8 @@ function renderCoverage() {
     [regionSets.china.label, countVisitedRegions("china"), regionSets.china.total],
     ["中国地级尺度", countVisitedSubregions("china2"), chinaPrefectureTotal()],
     [regionSets.us.label, countVisitedRegions("us"), regionSets.us.total],
+    [regionSets.japan.label, countVisitedRegions("japan"), regionSets.japan.total],
+    ["日本都道府县", countVisitedSubregions("japanPref"), japanPrefectureUnits().length],
     ["世界国家/地区", uniqueVisitedCountries().size, worldCountryTotal],
   ];
   $("#coverageBars").innerHTML = rows.map(([name, done, total]) => {
@@ -5217,12 +6175,13 @@ function toggleChecklistItem(key, item) {
   }
   state.checklistMarks = Array.from(marks);
   rebuildCoverageFromSavedVisits();
-  saveState();
+  saveStateSoon();
   renderAfterChecklistChange(key, item);
   if (document.querySelector('[data-page="imports"]')?.classList.contains("active")) renderDataInventory();
 }
 
 function renderAfterChecklistChange(key, item) {
+  invalidateMapPointRenderCache();
   updateChecklistButtonsForItem(key, item);
   renderMetrics();
   renderDashboardAchievements();
@@ -5230,7 +6189,10 @@ function renderAfterChecklistChange(key, item) {
   if (document.querySelector('[data-page="checkins"]')?.classList.contains("active")) renderCheckinsPage();
   if (!$("#mapDetail")?.classList.contains("hidden")) renderChecklistMapDetail(key, item);
   if (document.querySelector('[data-page="imports"]')?.classList.contains("active")) renderDataInventory();
-  if (isMapPageActive() && !refreshMapLibreDataOnly()) scheduleGeoMapRender();
+  if (isMapPageActive()) {
+    if (mapLibreMap && mapLibreMap.isStyleLoaded()) renderMapLibreMarkers();
+    scheduleCoverageMapRefresh();
+  }
 }
 
 function updateChecklistButtonsForItem(key, item) {
@@ -5263,7 +6225,7 @@ function ensureChecklistPlace(key, item) {
     id,
     name: item,
     country: defaultCountry,
-    unit: coords?.[2] || "",
+    unit: key === "worldHeritage" ? "" : (coords?.[2] || ""),
     city: "",
     type: listLabel,
     lat: coords?.[0] ?? null,
@@ -5281,10 +6243,10 @@ function ensureChecklistPlace(key, item) {
 }
 
 function applyChecklistCoordinates(place, coords, key) {
-  if (coords && !(Number.isFinite(place.lat) && Number.isFinite(place.lng))) {
+  if (coords && (key === "worldHeritage" || !(Number.isFinite(place.lat) && Number.isFinite(place.lng)))) {
     place.lat = coords[0];
     place.lng = coords[1];
-    place.unit = place.unit || coords[2] || "";
+    if (key !== "worldHeritage") place.unit = place.unit || coords[2] || "";
   }
   applyChecklistGeography(place, key, coords);
 }
@@ -5293,6 +6255,11 @@ function applyChecklistGeography(place, key, coords) {
   if (key === "china5a") {
     place.country = "cn";
     if (coords?.[2]) place.unit = coords[2];
+  }
+  if (key === "worldHeritage") {
+    const countryId = coords?.[2] ? worldHeritageCountryCoverageId(coords[2]) : "";
+    if (countryId) place.country = countryId;
+    if (coords?.[2] && sameAdminName(place.unit, coords[2])) place.unit = "";
   }
   if (!(Number.isFinite(place.lat) && Number.isFinite(place.lng))) return;
   if (key !== "china5a") {
@@ -5310,13 +6277,47 @@ function cleanChecklistName(value) {
 }
 
 function checklistCoordinateFor(item) {
+  const lookup = checklistCoordinateLookup();
   const candidates = [
     item,
     cleanChecklistName(item),
     englishNameInParentheses(item),
     cleanEnglishParkName(englishNameInParentheses(item)),
   ].filter(Boolean);
-  return candidates.map((name) => china5aCoordinates[name] || checklistPlaceCoordinates[name] || worldHeritageCoordinates[name]).find(Boolean);
+  return candidates.map((name) => lookup.get(canonicalPlaceKey(name))).find(Boolean);
+}
+
+function checklistCoordinateLookup() {
+  if (
+    checklistCoordinateLookupCache.china5a === china5aCoordinates
+    && checklistCoordinateLookupCache.worldHeritage === worldHeritageCoordinates
+    && checklistCoordinateLookupCache.englishNames === worldHeritageEnglishNames
+  ) {
+    return checklistCoordinateLookupCache.map;
+  }
+  const map = new Map();
+  const add = (name, coords) => {
+    if (!name || !Array.isArray(coords)) return;
+    const key = canonicalPlaceKey(name);
+    if (key && !map.has(key)) map.set(key, coords);
+  };
+  Object.entries(checklistPlaceCoordinates || {}).forEach(([name, coords]) => add(name, coords));
+  Object.entries(china5aCoordinates || {}).forEach(([name, coords]) => {
+    add(name, coords);
+    add(cleanChecklistName(name), coords);
+  });
+  Object.entries(worldHeritageCoordinates || {}).forEach(([name, coords]) => {
+    add(name, coords);
+    add(cleanChecklistName(name), coords);
+    add(worldHeritageEnglishNames[name], coords);
+  });
+  checklistCoordinateLookupCache = {
+    china5a: china5aCoordinates,
+    worldHeritage: worldHeritageCoordinates,
+    englishNames: worldHeritageEnglishNames,
+    map,
+  };
+  return map;
 }
 
 function englishNameInParentheses(value) {
@@ -5337,9 +6338,10 @@ function removeChecklistOnlyPlace(key, item) {
 
 function unvisitPlaceByName(item) {
   const key = canonicalPlaceKey(item);
-  const ids = places.filter((place) => canonicalPlaceKey(place.name) === key || placeMatchesName(place, item)).map((place) => place.id);
-  state.visits = state.visits.filter((visit) => !ids.includes(visit.placeId));
-  places = places.filter((place) => !(place.checklistOnly && ids.includes(place.id)));
+  const ids = new Set(places.filter((place) => canonicalPlaceKey(place.name) === key || placeMatchesName(place, item)).map((place) => place.id));
+  state.visits = state.visits.filter((visit) => !ids.has(visit.placeId));
+  places = places.filter((place) => !(place.checklistOnly && ids.has(place.id)));
+  checklistStatusCache.signature = "";
 }
 
 function renderNextStops() {
@@ -5398,8 +6400,8 @@ async function handleImport(event) {
     if (photoPlaces.length) {
       jobs.push({ places: photoPlaces, extension: "photo", fileName: photoImportBatchName(photoPlaces.length) });
     }
-    const visiblePointCount = jobs.flatMap((job) => job.places).filter((place) => !place.shapeOnly).length;
-    if (visiblePointCount > maxImportVisiblePoints) {
+    const visiblePointCount = jobs.flatMap((job) => sanitizeImportedPlaces(job.places)).filter((place) => !place.shapeOnly).length;
+    if (Number.isFinite(maxImportVisiblePoints) && visiblePointCount > maxImportVisiblePoints) {
       throw new Error(`一次导入包含 ${visiblePointCount} 个可显示点，超过上限 ${maxImportVisiblePoints}。请只导入需要显示的点，或分批导入。`);
     }
     let totalImported = 0;
@@ -5428,11 +6430,12 @@ function importPlacesFromText(text, extension, fileName = `import.${extension}`,
 }
 
 function importPlaces(imported, extension, fileName, depth = 1) {
-  if (!imported.length) return imported;
+  const normalizedImported = sanitizeImportedPlaces(imported);
+  if (!normalizedImported.length) return normalizedImported;
   const createdIds = [];
   const importId = `import-${slugify(fileName)}-${Date.now()}`;
   const importedAt = new Date().toISOString();
-  imported.forEach((place) => {
+  normalizedImported.forEach((place) => {
     const idBase = slugify(`${place.country}-${place.unit}-${place.name}`);
     let id = `import-${idBase}`;
     let suffix = 2;
@@ -5450,7 +6453,7 @@ function importPlaces(imported, extension, fileName, depth = 1) {
   }
   const firstPointId = createdIds.find((id) => !getPlace(id)?.shapeOnly);
   if (firstPointId) state.focusPlaceId = firstPointId;
-  state.importedFiles.unshift({ id: importId, name: fileName, count: imported.length, format: extension.toUpperCase(), marked: depth > 0, ids: createdIds, importedAt });
+  state.importedFiles.unshift({ id: importId, name: fileName, count: normalizedImported.length, format: extension.toUpperCase(), marked: depth > 0, ids: createdIds, importedAt });
   saveState();
   renderAll();
   preloadBoundaryData(false, ["country", "admin1", "china2", "tw2"]).then(() => {
@@ -5458,7 +6461,24 @@ function importPlaces(imported, extension, fileName, depth = 1) {
     saveState();
     renderAll();
   });
-  return imported;
+  return normalizedImported;
+}
+
+function sanitizeImportedPlaces(imported) {
+  return (Array.isArray(imported) ? imported : [])
+    .filter((place) => place && typeof place === "object")
+    .map((place, index) => ({
+      ...place,
+      name: String(place.name || `Imported ${index + 1}`).trim(),
+      country: normalizeCountry(place.country || ""),
+      unit: String(place.unit || "").trim(),
+      subunit: String(place.subunit || "").trim(),
+      city: String(place.city || "").trim(),
+      type: String(place.type || place.geometryType || "Imported").trim(),
+      tags: Array.isArray(place.tags) ? place.tags : normalizeTags(place.tags),
+      checklist: Array.isArray(place.checklist) ? place.checklist : normalizeChecklist(place),
+      shapeOnly: Boolean(place.shapeOnly),
+    }));
 }
 
 function deleteImportedBatch(importId, index) {
@@ -5550,6 +6570,8 @@ function dataCounts() {
     countries: uniqueVisitedCountries().size,
     chinaRegions: countVisitedRegions("china"),
     chinaSubregions: countVisitedSubregions("china2"),
+    japanRegions: countVisitedRegions("japan"),
+    japanPrefectures: countVisitedSubregions("japanPref"),
   };
 }
 
@@ -5679,11 +6701,11 @@ function asciiFromView(view, offset, length) {
 function parseGeoJson(text) {
   const data = JSON.parse(text);
   if (isArchivePayload(data)) throw new Error("这是拓界足迹存档，请使用“导入存档”或直接在导入入口恢复");
-  const features = data.type === "FeatureCollection" ? data.features : data.type === "Feature" ? [data] : [];
-  if (!features.length) throw new Error("JSON 不是 GeoJSON FeatureCollection/Feature");
-  return features.map((feature, index) => {
-    const props = feature.properties || {};
-    const coordinate = geometryCenter(feature.geometry);
+  const features = geoJsonImportFeatures(data);
+  if (!features.length) throw new Error("JSON 不是可导入的 GeoJSON");
+  const places = features.map((feature, index) => {
+    const props = feature.properties && typeof feature.properties === "object" ? feature.properties : {};
+    const coordinate = geoJsonGeometryCenter(feature.geometry);
     return normalizeImportedPlace({
       name: props.name || props.NAME || props.title || `GeoJSON Feature ${index + 1}`,
       country: props.country || props.Country || "",
@@ -5699,7 +6721,37 @@ function parseGeoJson(text) {
       importedGeometry: feature.geometry,
       shapeOnly: feature.geometry?.type !== "Point" && feature.geometry?.type !== "MultiPoint",
     });
-  });
+  }).filter((place) => place.importedGeometry || Number.isFinite(place.lat) || Number.isFinite(place.lng));
+  if (!places.length) throw new Error("GeoJSON 没有可导入的 geometry");
+  return places;
+}
+
+function geoJsonImportFeatures(data) {
+  if (Array.isArray(data)) return data.flatMap(geoJsonImportFeatures);
+  if (!data || typeof data !== "object") return [];
+  if (Array.isArray(data.features)) return data.features.flatMap(geoJsonImportFeatures);
+  if (data.type === "Feature") {
+    const props = data.properties || {};
+    if (data.geometry?.type === "GeometryCollection") {
+      return (data.geometry.geometries || []).map((geometry, index) => ({
+        type: "Feature",
+        properties: { ...props, name: props.name || props.NAME || props.title || `GeoJSON Geometry ${index + 1}` },
+        geometry,
+      })).filter((feature) => feature.geometry);
+    }
+    return data.geometry ? [data] : [];
+  }
+  if (data.type === "GeometryCollection") {
+    return (data.geometries || []).map((geometry, index) => ({
+      type: "Feature",
+      properties: { name: `GeoJSON Geometry ${index + 1}` },
+      geometry,
+    })).filter((feature) => feature.geometry);
+  }
+  if (data.type && data.coordinates) {
+    return [{ type: "Feature", properties: data.properties || {}, geometry: data }];
+  }
+  return [];
 }
 
 function parseKml(text) {
@@ -5831,6 +6883,16 @@ function geometryCenter(geometry) {
   return [totals[0] / points.length, totals[1] / points.length];
 }
 
+function geoJsonGeometryCenter(geometry) {
+  if (!geometry) return null;
+  if (geometry.type === "GeometryCollection") {
+    const centers = (geometry.geometries || []).map(geoJsonGeometryCenter).filter(Boolean);
+    return centers.length ? geometryCenter({ type: "MultiPoint", coordinates: centers }) : null;
+  }
+  if (geometry.type === "Point") return Array.isArray(geometry.coordinates) ? geometry.coordinates : null;
+  return geometryCenter(geometry);
+}
+
 function flattenCoordinates(coordinates) {
   if (!Array.isArray(coordinates)) return [];
   if (typeof coordinates[0] === "number" && typeof coordinates[1] === "number") return [coordinates];
@@ -5844,7 +6906,7 @@ function normalizeImportedPlace(raw) {
   const countryId = normalizeCountry(raw.country || inferredCountry?.id || "");
   const inferredRegion = Number.isFinite(lat) && Number.isFinite(lng) ? inferRegion(countryId, lng, lat) : null;
   const inferredSubregion = Number.isFinite(lat) && Number.isFinite(lng) ? inferSubregion(countryId, lng, lat) : null;
-  return {
+  const place = {
     id: "",
     name: String(raw.name || "未命名地点").trim(),
     country: countryId,
@@ -5861,6 +6923,8 @@ function normalizeImportedPlace(raw) {
     boundaryLevel: raw.boundaryLevel || "",
     shapeOnly: Boolean(raw.shapeOnly),
   };
+  normalizeJapanPlaceHierarchy(place);
+  return place;
 }
 
 function coordinateNumber(value) {
@@ -5994,19 +7058,23 @@ function showToast(message) {
 }
 
 function renderAll() {
+  const activePage = document.querySelector("[data-page].active")?.dataset.page || "world";
   renderMapControls();
   renderPlaceSelect();
   renderMetrics();
   renderDashboardAchievements();
   if (isMapPageActive()) renderGeoMap();
-  renderImportSummary();
-  renderCheckinsPage();
-  renderDataInventory();
-  renderAchievements();
+  if (activePage === "imports") {
+    renderImportSummary();
+    renderDataInventory();
+  }
+  if (activePage === "checkins") renderCheckinsPage();
+  if (activePage === "achievements") renderAchievements();
   renderNextStops();
 }
 
 function renderAfterCheckinChange() {
+  invalidateMapPointRenderCache();
   if (pendingCheckinRender) return;
   pendingCheckinRender = window.requestAnimationFrame(() => {
     pendingCheckinRender = null;
@@ -6016,8 +7084,20 @@ function renderAfterCheckinChange() {
     if (document.querySelector('[data-page="checkins"]')?.classList.contains("active")) renderCheckinsPage();
     if (document.querySelector('[data-page="achievements"]')?.classList.contains("active")) renderAchievements();
     if (document.querySelector('[data-page="imports"]')?.classList.contains("active")) renderDataInventory();
-    if (isMapPageActive() && !refreshMapLibreDataOnly()) scheduleGeoMapRender();
+    if (isMapPageActive()) {
+      if (mapLibreMap && mapLibreMap.isStyleLoaded()) renderMapLibreMarkers();
+      scheduleCoverageMapRefresh();
+    }
   });
+}
+
+function scheduleCoverageMapRefresh() {
+  if (pendingCoverageMapRefresh) return;
+  pendingCoverageMapRefresh = window.setTimeout(() => {
+    pendingCoverageMapRefresh = null;
+    if (!isMapPageActive()) return;
+    if (!refreshMapLibreDataOnly({ updateImports: false, updateMarkers: false })) scheduleGeoMapRender();
+  }, 180);
 }
 
 function isMapPageActive() {
@@ -6113,7 +7193,6 @@ loadState();
 setLoadingDebug("读取本地快速状态", "done");
 moveMapLevelControlToToolbar();
 applyLanguage();
-loadChina5aCatalog();
 renderMapControls();
 renderLegend();
 renderMetrics();
@@ -6127,6 +7206,7 @@ loadStateFromIndexedDb().finally(() => {
   setLoadingDebug("读取完整旅行数据", "done");
   renderLegend();
   rebuildCoverageFromSavedVisits();
+  restoreStoredMapViewport();
   ensureBoundaryDataForLevel(state.boundaryLevel || "country");
   renderAll();
   showPage(location.hash.replace("#", "") || "world");
@@ -6181,16 +7261,15 @@ $("#checkins")?.addEventListener("click", (event) => {
   if (type === "admin") {
     const regionName = decodeURIComponent(encodedName || "");
     const isSubadmin = subadminFlag === "1";
-    const center = isSubadmin
-      ? chinaSubadminUnitsForManualList().find((unit) => sameAdminName(unit.name, regionName))?.center
-      : bboxCenter(regionSets.china.units.find((unit) => sameAdminName(unit.name, regionName))?.bbox || []);
+    const center = manualAdminCenter(countryId, regionName, isSubadmin);
     toggleManualAdminRegion(countryId, regionName, isSubadmin, center || null);
   }
 });
 $("#boundaryLevel").addEventListener("change", (event) => {
   state.boundaryLevel = event.target.value;
   renderMapControls();
-  renderGeoMap();
+  const pending = ensureBoundaryDataForLevel(state.boundaryLevel || "country");
+  if (!pending.length) renderGeoMap();
   saveUiStateSoon();
 });
 $("#mapProvider")?.addEventListener("change", (event) => {
@@ -6215,15 +7294,25 @@ $("#showChina5aOnMap")?.addEventListener("change", (event) => {
   state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
   state.mapOverlays.china5a = event.target.checked;
   saveUiStateSoon();
-  if (event.target.checked) Promise.all([loadChina5aCatalog(), loadChina5aCoordinates()]).finally(renderGeoMap);
-  else renderGeoMap();
+  const refresh = () => {
+    checklistOverlayCache.signature = "";
+    if (mapLibreMap) renderMapLibreMarkers();
+    else renderGeoMap();
+  };
+  if (event.target.checked) Promise.all([loadChina5aCatalog(), loadChina5aCoordinates()]).finally(refresh);
+  else refresh();
 });
 $("#showWorldHeritageOnMap")?.addEventListener("change", (event) => {
   state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
   state.mapOverlays.worldHeritage = event.target.checked;
   saveUiStateSoon();
-  if (event.target.checked) loadCatalogData().finally(renderGeoMap);
-  else renderGeoMap();
+  const refresh = () => {
+    checklistOverlayCache.signature = "";
+    if (mapLibreMap) renderMapLibreMarkers();
+    else renderGeoMap();
+  };
+  if (event.target.checked) loadCatalogData().finally(refresh);
+  else refresh();
 });
 $("#addMapPoint")?.addEventListener("click", () => {
   if (mapAddMode) {
