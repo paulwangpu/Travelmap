@@ -2667,11 +2667,31 @@ function coverageHasCountry(countryId) {
 }
 
 function coverageRegionNames(regionKey) {
-  return ensureCoverage().regions[regionKey] || [];
+  const coverage = ensureCoverage();
+  const names = regionCoverageKeys(regionKey).flatMap((key) => coverage.regions[key] || []);
+  return Array.from(new Set(names));
 }
 
 function coverageHasRegion(regionKey, name) {
-  return coverageRegionNames(regionKey).some((item) => sameRegionName(regionKey, item, name));
+  const compareKey = regionCompareKey(regionKey);
+  return coverageRegionNames(regionKey).some((item) => sameRegionName(compareKey, item, name));
+}
+
+function regionCoverageKeys(regionKey) {
+  const key = countryCoverageId(regionKey) || regionKey;
+  const aliases = {
+    cn: ["cn", "china"],
+    china: ["china", "cn"],
+    jp: ["jp", "japan"],
+    japan: ["japan", "jp"],
+    us: ["us"],
+  };
+  return aliases[key] || aliases[regionKey] || [regionKey];
+}
+
+function regionCompareKey(regionKey) {
+  const key = countryCoverageId(regionKey) || regionKey;
+  return { cn: "china", jp: "japan" }[key] || regionKey;
 }
 
 function coverageHasRegionForFeature(regionKey, feature, fallbackName = "") {
@@ -2724,8 +2744,10 @@ function rebuildCoverageFromSavedVisits() {
     const regionKey = regionKeyForCountry(countryId) || countryId;
     const regionName = chinaRegionNameForPlace(visit.place, countryId);
     if (regionKey && regionName) {
-      regions[regionKey] ||= [];
-      addUniqueAdminName(regions[regionKey], regionName, (left, right) => sameRegionName(regionKey, left, right));
+      regionCoverageKeys(regionKey).forEach((key) => {
+        regions[key] ||= [];
+        addUniqueAdminName(regions[key], regionName, (left, right) => sameRegionName(regionCompareKey(key), left, right));
+      });
     }
 
     const subadminKey = subadminKeyForCountry(countryId);
@@ -2757,8 +2779,10 @@ function recomputeCoverage() {
     const regionKey = regionKeyForCountry(countryId) || countryId;
     const regionName = chinaRegionNameForPlace(visit.place, countryId);
     if (regionKey && regionName) {
-      regions[regionKey] ||= [];
-      addUniqueAdminName(regions[regionKey], regionName, (left, right) => sameRegionName(regionKey, left, right));
+      regionCoverageKeys(regionKey).forEach((key) => {
+        regions[key] ||= [];
+        addUniqueAdminName(regions[key], regionName, (left, right) => sameRegionName(regionCompareKey(key), left, right));
+      });
     }
 
     const subadminKey = subadminKeyForCountry(countryId);
@@ -2786,8 +2810,10 @@ function addCoverageForPlace(place) {
   const regionKey = regionKeyForCountry(countryId) || countryId;
   const regionName = chinaRegionNameForPlace(place, countryId);
   if (regionKey && regionName) {
-    coverage.regions[regionKey] ||= [];
-    addUniqueAdminName(coverage.regions[regionKey], regionName, (left, right) => sameRegionName(regionKey, left, right));
+    regionCoverageKeys(regionKey).forEach((key) => {
+      coverage.regions[key] ||= [];
+      addUniqueAdminName(coverage.regions[key], regionName, (left, right) => sameRegionName(regionCompareKey(key), left, right));
+    });
   }
   const subadminKey = subadminKeyForCountry(countryId);
   const subunit = place.subunit || (sameAdminName(regionName, place.unit) ? "" : place.unit) || "";
