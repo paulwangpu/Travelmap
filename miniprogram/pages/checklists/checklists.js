@@ -1,96 +1,110 @@
 const checklists = require("../../data/checklists");
+const coverage = require("../../utils/coverage");
 
-const PAGE_SIZE = 80;
+const sections = [
+  { key: "china5a", label: "中国 5A 景区" },
+  { key: "worldHeritage", label: "世界遗产（按国家）" },
+  { key: "referenceLists", label: "其他参考清单" }
+];
 
 Page({
   data: {
-    activeLabel: "5A 景区",
-    activeType: "china5a",
-    doneCount: 0,
-    hasMore: false,
-    keyword: "",
-    limit: PAGE_SIZE,
-    percent: 0,
-    tabs: [
-      { key: "china5a", label: "5A 景区" },
-      { key: "worldHeritage", label: "世界遗产" },
-      { key: "referenceLists", label: "其他清单" }
-    ],
-    totalCount: 0,
-    visibleItems: []
-  },
-
-  onLoad() {
-    this.refresh();
+    sections: sections.map((item) => ({ ...item, open: false, groups: [] }))
   },
 
   onShow() {
-    this.refresh();
-  },
-
-  changeType(event) {
-    const activeType = event.currentTarget.dataset.type;
-    const labels = {
-      china5a: "5A 景区",
-      worldHeritage: "世界遗产",
-      referenceLists: "其他参考清单"
-    };
-    this.setData({
-      activeType,
-      activeLabel: labels[activeType],
-      keyword: "",
-      limit: PAGE_SIZE
-    }, () => this.refresh());
-  },
-
-  search(event) {
-    this.setData({
-      keyword: event.detail.value,
-      limit: PAGE_SIZE
-    }, () => this.refresh());
-  },
-
-  loadMore() {
-    this.setData({ limit: this.data.limit + PAGE_SIZE }, () => this.refresh());
-  },
-
-  toggleItem(event) {
-    const id = event.currentTarget.dataset.id;
-    const state = getApp().getState();
-    const marks = new Set(state.checklistMarks[this.data.activeType] || []);
-    if (marks.has(id)) marks.delete(id);
-    else marks.add(id);
-    getApp().updateState({
-      checklistMarks: {
-        ...state.checklistMarks,
-        [this.data.activeType]: Array.from(marks)
-      }
-    });
+    this.getTabBar()?.setSelected?.(3);
     this.refresh();
   },
 
   refresh() {
-    const type = this.data.activeType;
-    const source = checklists[type] || [];
-    const keyword = this.data.keyword.trim().toLowerCase();
-    const filtered = keyword
-      ? source.filter((item) => `${item.name} ${item.area}`.toLowerCase().includes(keyword))
-      : source;
-    const validIds = new Set(source.map((item) => item.id));
-    const marks = new Set(
-      (getApp().getState().checklistMarks[type] || []).filter((id) => validIds.has(id))
-    );
-    const visibleItems = filtered.slice(0, this.data.limit).map((item) => ({
-      ...item,
-      done: marks.has(item.id)
-    }));
-
+    const state = getApp().getState();
+    const openMap = new Map(this.data.sections.map((section) => [section.key, section]));
     this.setData({
-      doneCount: marks.size,
-      totalCount: source.length,
-      percent: source.length ? Math.round((marks.size / source.length) * 100) : 0,
-      visibleItems,
-      hasMore: filtered.length > visibleItems.length
+      sections: sections.map((section) => {
+        const previous = openMap.get(section.key);
+        const open = previous?.open || false;
+        return {
+          ...section,
+          open,
+          groups: open ? this.groupsFor(section.key, state, previous?.groups || []) : [],
+          done: state.checklistMarks[section.key].length,
+          total: checklists[section.key].length
+        };
+      })
     });
+  },
+
+  groupsFor(key, state, previousGroups) {
+    const openMap = new Map(previousGroups.map((group) => [group.name, group.open]));
+    const marks = new Set(state.checklistMarks[key]);
+    const grouped = checklists[key].reduce((groups, item) => {
+      const name = item.area || "其他";
+      groups[name] ||= [];
+      groups[name].push({
+        ...item,
+        done: marks.has(item.id)
+      });
+      return groups;
+    }, {});
+    return Object.entries(grouped).map(([name, items]) => ({
+      name,
+      items,
+      done: items.filter((item) => item.done).length,
+      open: openMap.get(name) || false
+    }));
+  },
+
+  toggleSection(event) {
+    const key = event.currentTarget.dataset.key;
+    const state = getApp().getState();
+    this.setData({
+      sections: this.data.sections.map((section) => {
+        if (section.key !== key) return section;
+        const open = !section.open;
+        return {
+          ...section,
+          open,
+          groups: open ? this.groupsFor(key, state, section.groups) : []
+        };
+      })
+    });
+  },
+
+  toggleGroup(event) {
+    const sectionKey = event.currentTarget.dataset.section;
+    const groupName = event.currentTarget.dataset.group;
+    this.setData({
+      sections: this.data.sections.map((section) => ({
+        ...section,
+        groups: section.key === sectionKey
+          ? section.groups.map((group) => ({
+              ...group,
+              open: group.name === groupName ? !group.open : group.open
+            }))
+          : section.groups
+      }))
+    });
+  },
+
+  toggleItem(event) {
+    const key = event.currentTarget.dataset.section;
+    const id = event.currentTarget.dataset.id;
+    const state = getApp().getState();
+    const marks = new Set(state.checklistMarks[key]);
+    if (marks.has(id)) marks.delete(id);
+    else marks.add(id);
+    const nextState = {
+      ...state,
+      checklistMarks: {
+        ...state.checklistMarks,
+        [key]: Array.from(marks)
+      }
+    };
+    getApp().updateState({
+      checklistMarks: nextState.checklistMarks,
+      ...coverage.recomputeCoverage(nextState)
+    });
+    this.refresh();
   }
 });

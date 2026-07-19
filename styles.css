@@ -1181,6 +1181,76 @@ button:hover {
   gap: 8px;
 }
 
+.manual-view-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 12;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 3px;
+  margin-bottom: 12px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(244, 247, 244, 0.96);
+}
+
+#checkins.content-page {
+  padding-top: 0;
+}
+
+#checkins .page-head {
+  padding-top: 22px;
+}
+
+[data-manual-view-panel].hidden {
+  display: none;
+}
+
+.manual-view-tabs button {
+  min-width: 0;
+  min-height: 38px;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.manual-view-tabs button.active {
+  background: #17231f;
+  color: #ffffff;
+}
+
+.manual-view-tabs span {
+  margin-left: 4px;
+  font-size: 10px;
+  opacity: 0.72;
+}
+
+.manual-city-tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: -2px 0 10px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.manual-city-tools button {
+  min-height: 30px;
+  padding: 5px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #ffffff;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 800;
+}
+
 .manual-grid.dense {
   grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
 }
@@ -1220,6 +1290,23 @@ button:hover {
   display: grid;
   gap: 6px;
   margin-top: 10px;
+}
+
+@media (max-width: 680px) {
+  .manual-view-tabs {
+    top: 0;
+  }
+
+  #checkins .page-head {
+    padding-top: calc(12px + env(safe-area-inset-top));
+  }
+
+  .manual-view-tabs button {
+    min-height: 36px;
+    padding: 5px 3px;
+    font-size: 12px;
+  }
+
 }
 
 .manual-list .manual-chip {

@@ -1,185 +1,192 @@
-.dashboard-page {
-  display: flex;
-  flex-direction: column;
-  gap: 20rpx;
+.content-page {
+  min-height: 100%;
+  padding: calc(env(safe-area-inset-top) + 72rpx) 20rpx 20rpx;
+  background: #f4f7f4;
 }
 
-.dashboard-head,
-.section-row,
-.achievement-head,
-.upgrade-band {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.page-head {
+  margin-bottom: 16rpx;
+}
+
+.eyebrow,
+.page-title,
+.metric-value,
+.metric-label,
+.achievement-category,
+.achievement-value,
+.next-body {
+  display: block;
 }
 
 .eyebrow {
-  display: block;
   margin-bottom: 5rpx;
-  color: #64716a;
-  font-size: 22rpx;
+  color: #208765;
+  font-size: 20rpx;
   font-weight: 800;
 }
 
-.dashboard-head .page-title {
-  margin: 0;
+.page-title {
+  font-size: 38rpx;
+  font-weight: 800;
+  line-height: 1.15;
 }
 
-.data-button {
-  min-width: 108rpx;
-  padding: 0 18rpx;
-  background: #e7efeb;
-  color: #17604e;
-  font-size: 24rpx;
-  line-height: 60rpx;
-}
-
-.metric-grid {
+.metrics-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14rpx;
 }
 
 .metric {
-  min-height: 126rpx;
-  padding: 18rpx 12rpx;
-  border: 1rpx solid #dce3de;
-  border-radius: 12rpx;
+  min-height: 134rpx;
+  padding: 20rpx;
+  border: 1rpx solid #d7ded8;
+  border-radius: 8rpx;
   background: #ffffff;
 }
 
-.metric-value,
-.metric-label {
-  display: block;
-}
-
 .metric-value {
-  font-size: 34rpx;
+  margin-bottom: 10rpx;
+  font-size: 42rpx;
   font-weight: 900;
   line-height: 1;
 }
 
 .metric-label {
-  margin-top: 12rpx;
-  color: #68766f;
-  font-size: 24rpx;
-}
-
-.next-section,
-.next-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12rpx;
-}
-
-.next-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16rpx;
-  min-height: 100rpx;
-  padding: 16rpx 18rpx;
-  border: 1rpx solid #dce3de;
-  border-radius: 10rpx;
-  background: #ffffff;
-}
-
-.next-title,
-.next-note {
-  display: block;
-}
-
-.next-title {
-  font-weight: 800;
-}
-
-.next-note {
-  margin-top: 6rpx;
-  color: #6d7972;
+  color: #64716a;
   font-size: 21rpx;
 }
 
-.next-button {
-  min-width: 96rpx;
-  padding: 0 12rpx;
-  background: #e7efeb;
-  color: #17604e;
-  font-size: 23rpx;
-  line-height: 58rpx;
-}
-
 .achievement-section {
-  display: flex;
-  flex-direction: column;
-  gap: 14rpx;
+  margin-top: 18rpx;
 }
 
-.text-button {
-  padding: 0 12rpx;
-  background: transparent;
-  color: #16735b;
-  font-size: 24rpx;
-  line-height: 54rpx;
+.section-head,
+.achievement-title-row,
+.next-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12rpx;
+}
+
+.achievement-head {
+  margin-bottom: 12rpx;
+}
+
+.section-title {
+  font-size: 30rpx;
+  font-weight: 800;
+}
+
+.tag {
+  flex: 0 0 auto;
+  padding: 7rpx 11rpx;
+  border-radius: 999rpx;
+  background: #e4ece7;
+  color: #163f38;
+  font-size: 20rpx;
+  font-weight: 800;
 }
 
 .achievement-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 10rpx;
 }
 
 .achievement {
   display: grid;
-  grid-template-columns: 78rpx minmax(0, 1fr);
-  gap: 18rpx;
-  align-items: center;
-  min-height: 112rpx;
-  padding: 17rpx 20rpx;
-  border: 1rpx solid #dce3de;
-  border-radius: 12rpx;
-  background: #ffffff;
+  grid-template-columns: 76rpx minmax(0, 1fr);
+  gap: 14rpx;
+  padding: 14rpx 16rpx;
+  border: 1rpx solid #d7ded8;
+  border-radius: 8rpx;
+  background: linear-gradient(180deg, #ffffff, #f2f7f4);
 }
 
-.achievement-percent {
+.achievement-ring {
   display: flex;
+  width: 76rpx;
+  height: 76rpx;
   align-items: center;
   justify-content: center;
-  width: 78rpx;
-  height: 78rpx;
-  border: 7rpx solid #78ad9e;
+  border: 1rpx solid #d7ded8;
   border-radius: 50%;
-  font-size: 22rpx;
+  color: #163f38;
+  font-size: 20rpx;
   font-weight: 900;
 }
 
-.achievement-content {
+.achievement-body {
   min-width: 0;
 }
 
 .achievement-name {
+  font-size: 25rpx;
+  font-weight: 900;
+}
+
+.achievement-status,
+.achievement-category {
+  color: #64716a;
+  font-size: 19rpx;
   font-weight: 800;
+}
+
+.achievement-category {
+  margin-top: 3rpx;
 }
 
 .achievement-value {
-  color: #16735b;
-  font-size: 24rpx;
-  font-weight: 800;
+  margin: 5rpx 0;
+  color: #163f38;
+  font-size: 28rpx;
+  font-weight: 900;
+  line-height: 1;
 }
 
-.progress-track {
-  height: 7rpx;
-  margin: 9rpx 0;
+.bar {
+  height: 8rpx;
   overflow: hidden;
-  border-radius: 4rpx;
-  background: #e6ece8;
+  border-radius: 999rpx;
+  background: #e1e7e2;
 }
 
-.progress-value {
+.bar-value {
   height: 100%;
   background: #208765;
 }
 
-.achievement-note {
-  color: #6d7972;
-  font-size: 21rpx;
+.panel {
+  margin-top: 18rpx;
+  padding: 20rpx;
+  border: 1rpx solid #d7ded8;
+  border-radius: 8rpx;
+  background: #ffffff;
+}
+
+.next-list {
+  display: grid;
+  gap: 12rpx;
+  margin-top: 14rpx;
+}
+
+.next-card {
+  padding: 16rpx;
+  border: 1rpx solid #d7ded8;
+  border-radius: 8rpx;
+  background: #f7f8f5;
+}
+
+.next-title {
+  font-size: 24rpx;
+  font-weight: 900;
+}
+
+.next-body {
+  margin-top: 6rpx;
+  overflow: hidden;
+  color: #64716a;
+  font-size: 20rpx;
+  line-height: 1.4;
 }

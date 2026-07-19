@@ -1,4 +1,6 @@
 const boundaries = require("../data/boundaries");
+const webCatalog = require("../data/web-catalog");
+const checklists = require("../data/checklists");
 const catalog = require("./catalog");
 
 function pointInRing(longitude, latitude, points) {
@@ -50,7 +52,9 @@ function inferPoint(longitude, latitude) {
 }
 
 function provinceIdForCity(cityId) {
-  return boundaries.cityBoundaries.find((item) => item.regionId === cityId)?.provinceId || "";
+  return boundaries.cityBoundaries.find((item) => item.regionId === cityId)?.provinceId
+    || webCatalog.cityRegions.find((item) => item.id === cityId)?.provinceId
+    || "";
 }
 
 function toggleRegion(state, level, id) {
@@ -96,6 +100,14 @@ function recomputeCoverage(state, extraPoints = []) {
     .concat(state.checkins || [])
     .concat(state.importedPoints || [])
     .concat(linePoints)
+    .concat(["china5a", "worldHeritage", "referenceLists"].flatMap((key) => {
+      const marks = new Set(state.checklistMarks?.[key] || []);
+      return (checklists[key] || []).filter((item) =>
+        marks.has(item.id)
+        && Number.isFinite(Number(item.longitude))
+        && Number.isFinite(Number(item.latitude))
+      );
+    }))
     .concat(extraPoints || []);
   points.forEach((point) => {
     const longitude = Number(point.longitude);

@@ -1,46 +1,44 @@
-<view class="checklist-page">
-  <view class="checklist-toolbar">
-    <view class="segments">
-      <button
-        wx:for="{{tabs}}"
-        wx:key="key"
-        class="segment {{activeType === item.key ? 'active' : ''}}"
-        data-type="{{item.key}}"
-        bindtap="changeType"
-      >{{item.label}}</button>
-    </view>
-    <input
-      class="search-input"
-      value="{{keyword}}"
-      placeholder="搜索名称或地区"
-      bindinput="search"
-    />
-  </view>
-
-  <view class="progress-panel">
-    <view>
-      <text class="progress-value">{{doneCount}} / {{totalCount}}</text>
-      <text class="progress-label">{{activeLabel}}已打卡</text>
-    </view>
-    <text class="progress-percent">{{percent}}%</text>
-  </view>
-
-  <view class="checklist">
-    <view
-      wx:for="{{visibleItems}}"
-      wx:key="id"
-      class="check-item {{item.done ? 'done' : ''}}"
-      data-id="{{item.id}}"
-      bindtap="toggleItem"
-    >
-      <view class="check-box">{{item.done ? '✓' : ''}}</view>
-      <view class="item-copy">
-        <text class="item-name">{{item.name}}</text>
-        <text class="item-area">{{item.area}}</text>
+<view class="content-page">
+  <view class="panel">
+    <text class="eyebrow">打卡清单</text>
+    <text class="page-title">打卡</text>
+    <view class="achievement-list">
+      <view wx:for="{{sections}}" wx:key="key" wx:for-item="section" class="achievement-group">
+        <view class="section-summary" data-key="{{section.key}}" bindtap="toggleSection">
+          <text>{{section.label}}</text>
+          <text>{{section.done}}/{{section.total}} {{section.open ? '⌃' : '⌄'}}</text>
+        </view>
+        <view wx:if="{{section.open}}" class="section-content">
+          <view class="checklist-health" wx:if="{{section.key === 'china5a'}}">
+            <text>本地完整清单</text>
+            <text>359 个 5A 景区</text>
+            <text>按省份显示</text>
+          </view>
+          <view class="group-list">
+            <view wx:for="{{section.groups}}" wx:key="name" wx:for-item="group" class="checklist-group">
+              <view
+                class="group-summary"
+                data-section="{{section.key}}"
+                data-group="{{group.name}}"
+                bindtap="toggleGroup"
+              >
+                <text>{{group.name}}</text>
+                <text>{{group.done}}/{{group.items.length}} {{group.open ? '⌃' : '⌄'}}</text>
+              </view>
+              <view wx:if="{{group.open}}" class="check-chip-grid">
+                <button
+                  wx:for="{{group.items}}"
+                  wx:key="id"
+                  class="check-chip {{item.done ? 'done' : ''}}"
+                  data-section="{{section.key}}"
+                  data-id="{{item.id}}"
+                  bindtap="toggleItem"
+                >{{item.done ? '✓ ' : ''}}{{item.name}}</button>
+              </view>
+            </view>
+          </view>
+        </view>
       </view>
     </view>
   </view>
-
-  <button wx:if="{{hasMore}}" class="load-more" bindtap="loadMore">加载更多</button>
-  <view wx:if="{{!visibleItems.length}}" class="empty">没有匹配的清单项目</view>
 </view>

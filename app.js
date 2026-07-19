@@ -1836,10 +1836,53 @@ function exteriorLineGeometryForFeature(feature) {
 
   return {
     type: "MultiLineString",
-    coordinates: Array.from(edges.values())
+    coordinates: stitchLineSegments(Array.from(edges.values())
       .filter((edge) => edge.count === 1)
-      .map((edge) => edge.segment),
+      .map((edge) => edge.segment)),
   };
+}
+
+function stitchLineSegments(segments) {
+  const unused = new Set(segments.map((_, index) => index));
+  const pointToSegments = new Map();
+  segments.forEach((segment, index) => {
+    segment.forEach((point) => {
+      const key = coordinateKey(point);
+      const list = pointToSegments.get(key) || [];
+      list.push(index);
+      pointToSegments.set(key, list);
+    });
+  });
+
+  const samePoint = (left, right) => coordinateKey(left) === coordinateKey(right);
+  const takeNextSegment = (point) => {
+    const candidates = pointToSegments.get(coordinateKey(point)) || [];
+    return candidates.find((index) => unused.has(index));
+  };
+  const extendChain = (chain, forward = true) => {
+    while (true) {
+      const point = forward ? chain[chain.length - 1] : chain[0];
+      const nextIndex = takeNextSegment(point);
+      if (nextIndex === undefined) return;
+      unused.delete(nextIndex);
+      const [start, end] = segments[nextIndex];
+      const nextPoint = samePoint(point, start) ? end : start;
+      if (forward) chain.push(nextPoint);
+      else chain.unshift(nextPoint);
+      if (samePoint(chain[0], chain[chain.length - 1])) return;
+    }
+  };
+
+  const lines = [];
+  while (unused.size) {
+    const index = unused.values().next().value;
+    unused.delete(index);
+    const chain = [segments[index][0], segments[index][1]];
+    extendChain(chain, true);
+    if (!samePoint(chain[0], chain[chain.length - 1])) extendChain(chain, false);
+    if (chain.length > 1) lines.push(chain);
+  }
+  return lines;
 }
 
 function validCoordinate(point) {
@@ -3927,6 +3970,10 @@ function addMapLibreFillLayer(sourceId, fillId, lineId, opacity, lineWidth, geom
     id: lineId,
     type: "line",
     source: sourceId,
+    layout: {
+      "line-cap": "round",
+      "line-join": "round",
+    },
     paint: {
       "line-color": lineColor,
       "line-width": lineWidth,

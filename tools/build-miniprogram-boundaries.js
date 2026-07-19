@@ -4,6 +4,8 @@ const path = require("path");
 const root = path.resolve(__dirname, "..");
 const provinceSource = path.join(root, "data", "china-provinces.geojson");
 const citySource = path.join(root, "data", "china-prefectures-lite.geojson");
+const directCitySource = path.join(root, "data", "china-direct-admin.geojson");
+const taiwanCitySource = path.join(root, "data", "admin1-by-country", "tw.geojson");
 const countrySource = path.join(root, "data", "countries.geojson");
 const usSource = path.join(root, "data", "us-states.geojson");
 const japanSource = path.join(root, "data", "admin1-by-country", "jp.geojson");
@@ -137,8 +139,42 @@ function convertFile(filename, tolerance, type) {
   return collection.features.flatMap((feature, index) => convertFeature(feature, index, tolerance, type));
 }
 
+function convertSupplementalCities(filename, tolerance, idForFeature, provinceId, nameForFeature) {
+  const collection = JSON.parse(fs.readFileSync(filename, "utf8"));
+  return collection.features.flatMap((feature, index) => {
+    const regionId = idForFeature(feature, index);
+    return outerRings(feature.geometry)
+      .map((ring, ringIndex) => ({
+        id: `${regionId}-${ringIndex}`,
+        regionId,
+        provinceId: provinceId(feature),
+        name: nameForFeature(feature),
+        points: simplifyRing(ring, tolerance)
+      }))
+      .filter((item) => item.points.length >= 3)
+      .sort((left, right) => ringArea(right.points) - ringArea(left.points))
+      .filter((item, ringIndex) => ringIndex === 0 || ringArea(item.points) >= 0.003)
+      .slice(0, 20);
+  });
+}
+
 const provinceBoundaries = convertFile(provinceSource, 0.045, "province");
-const cityBoundaries = convertFile(citySource, 0.06, "city");
+const directCityBoundaries = convertSupplementalCities(
+  directCitySource,
+  0.025,
+  (feature) => `city-${feature.properties.adcode}`,
+  (feature) => provinceIds[feature.properties.parent?.adcode] || "",
+  (feature) => feature.properties.name
+);
+const taiwanCityBoundaries = convertSupplementalCities(
+  taiwanCitySource,
+  0.025,
+  (feature, index) => `tw-${String(feature.properties.iso_3166_2 || feature.properties.adm1_code || index).toLowerCase()}`,
+  () => "taiwan",
+  (feature) => feature.properties.name_zh || feature.properties.name_zht || feature.properties.name
+);
+const cityBoundaries = convertFile(citySource, 0.06, "city")
+  .concat(directCityBoundaries, taiwanCityBoundaries);
 const countryBoundaries = convertFile(countrySource, 0.16, "country");
 const countryRegions = Array.from(
   countryBoundaries.reduce((regions, item) => {

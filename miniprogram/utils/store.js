@@ -11,6 +11,7 @@ const defaultState = {
   manualVisitedCities: [],
   manualVisitedUsStates: [],
   manualVisitedJapanRegions: [],
+  language: "zh",
   checkins: [],
   importedPoints: [],
   importedLines: [],
@@ -47,6 +48,7 @@ function normalizeState(value) {
     manualVisitedJapanRegions: Array.isArray(source.manualVisitedJapanRegions)
       ? source.manualVisitedJapanRegions
       : (Array.isArray(source.visitedJapanRegions) ? source.visitedJapanRegions : []),
+    language: source.language === "en" ? "en" : "zh",
     checkins: Array.isArray(source.checkins) ? source.checkins : [],
     importedPoints: Array.isArray(source.importedPoints) ? source.importedPoints : [],
     importedLines: Array.isArray(source.importedLines) ? source.importedLines : [],

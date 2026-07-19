@@ -1,4 +1,4 @@
-<view class="map-page">
+<view class="map-app">
   <map
     class="travel-map"
     latitude="{{mapCenter.latitude}}"
@@ -10,102 +10,83 @@
     show-location
     enable-zoom
     enable-scroll
-    bindmarkertap="toggleMarkerRegion"
+    enable-satellite="{{enableSatellite}}"
+    bindmarkertap="showMarkerDetail"
     bindtap="handleMapTap"
   ></map>
 
-  <view class="map-panel">
-    <view class="map-panel-row">
-      <view class="map-controls">
-        <picker range="{{levelLabels}}" value="{{levelIndex}}" bindchange="changeLevel">
-          <view class="control-picker">{{levelLabels[levelIndex]}}⌄</view>
-        </picker>
-        <picker
-          wx:if="{{levelIndex === 2}}"
-          range="{{provinceNames}}"
-          value="{{provinceIndex}}"
-          bindchange="changeProvince"
-        >
-          <view class="control-picker">{{provinceNames[provinceIndex]}}⌄</view>
-        </picker>
-      </view>
-      <button class="light-button {{addMode ? 'cancel' : ''}}" bindtap="toggleAddMode">
+  <view class="map-toolbar">
+    <text class="map-title">我的全球旅行地图</text>
+    <view class="map-control-panel">
+      <picker range="{{providerLabels}}" value="{{providerIndex}}" bindchange="changeProvider">
+        <view class="map-select">
+          <text class="control-label">底图</text>
+          <text class="control-value">{{providerLabels[providerIndex]}}⌄</text>
+        </view>
+      </picker>
+      <picker range="{{levelLabels}}" value="{{levelIndex}}" bindchange="changeLevel">
+        <view class="map-select">
+          <text class="control-label">显示层级</text>
+          <text class="control-value">{{levelLabels[levelIndex]}}⌄</text>
+        </view>
+      </picker>
+      <button class="map-add-point {{addMode ? 'active' : ''}}" bindtap="toggleAddMode">
         {{addMode ? '取消添加' : '添加打卡点'}}
       </button>
-    </view>
-
-    <view class="map-summary">
-      <view class="summary-item">
-        <text class="summary-value">{{visitedCount}}</text>
-        <text class="summary-label">{{levelSummary}}</text>
+      <view class="map-overlay-toggles">
+        <view
+          wx:for="{{overlayOptions}}"
+          wx:key="key"
+          class="overlay-toggle"
+          data-key="{{item.key}}"
+          bindtap="toggleOverlay"
+        >
+          <view class="checkbox {{item.checked ? 'checked' : ''}}">{{item.checked ? '✓' : ''}}</view>
+          <text>{{item.label}}</text>
+        </view>
       </view>
-      <view class="summary-item">
-        <text class="summary-value">{{checkinCount}}</text>
-        <text class="summary-label" bindtap="openCheckins">我的打卡 ›</text>
-      </view>
-    </view>
-    <view class="overlay-toggles">
-      <view
-        wx:for="{{overlayOptions}}"
-        wx:key="key"
-        class="overlay-toggle {{item.checked ? 'active' : ''}}"
-        data-key="{{item.key}}"
-        bindtap="toggleOverlay"
-      >{{item.label}}</view>
     </view>
   </view>
 
-  <scroll-view wx:if="{{!addMode && !selectedCheckin}}" class="province-strip" scroll-x enhanced show-scrollbar="{{false}}">
-    <view class="province-strip-inner">
-      <view
-        wx:for="{{stripItems}}"
-        wx:key="id"
-        class="province-chip {{item.visited ? 'visited' : ''}}"
-        data-id="{{item.id}}"
-        bindtap="toggleStripRegion"
-      >{{item.name}}</view>
-    </view>
-  </scroll-view>
+  <view wx:if="{{addMode && !pendingPoint}}" class="map-mode-tip">请点击地图选择打卡位置</view>
 
-  <view wx:if="{{addMode && !pendingPoint}}" class="map-mode-tip">请在地图上点击要打卡的位置</view>
-
-  <view wx:if="{{pendingPoint}}" class="point-sheet">
-    <view class="sheet-head">
-      <view>
-        <text class="sheet-title">添加地图打卡</text>
-        <text class="sheet-area">{{pendingPoint.area}}</text>
-      </view>
-      <text class="sheet-close" bindtap="cancelPoint">×</text>
+  <view wx:if="{{pendingPoint}}" class="map-drawer">
+    <text class="drawer-close" bindtap="cancelPoint">×</text>
+    <text class="eyebrow">地图点击</text>
+    <text class="drawer-title">添加打卡点</text>
+    <input class="drawer-input" value="{{draftName}}" bindinput="updateDraftName" placeholder="地点名称" />
+    <view class="detail-row">
+      <text>坐标</text>
+      <text>{{pendingPoint.coordinateText}}</text>
     </view>
-    <input
-      class="sheet-input"
-      value="{{draftName}}"
-      placeholder="地点名称"
-      maxlength="40"
-      bindinput="updateDraftName"
-    />
+    <view class="detail-row">
+      <text>识别地区</text>
+      <text>{{pendingPoint.area}}</text>
+    </view>
     <picker mode="date" value="{{draftDate}}" bindchange="updateDraftDate">
-      <view class="sheet-input">{{draftDate || '选择日期（可选）'}}</view>
+      <view class="drawer-input">{{draftDate || '选择日期（可选）'}}</view>
     </picker>
-    <view class="sheet-actions">
-      <button class="secondary-button" bindtap="cancelPoint">取消</button>
-      <button class="primary-button" bindtap="saveMapCheckin">保存打卡</button>
+    <view class="drawer-actions">
+      <button class="detail-action" bindtap="saveMapCheckin">保存打卡</button>
+      <button class="secondary-action" bindtap="cancelPoint">取消</button>
     </view>
   </view>
 
-  <view wx:if="{{selectedCheckin && !pendingPoint}}" class="point-sheet compact-sheet">
-    <view class="sheet-head">
-      <view>
-        <text class="sheet-title">{{selectedCheckin.name}}</text>
-        <text class="sheet-area">
-          {{selectedCheckin.date || '未填写日期'}} · {{selectedCheckin.latitude}}, {{selectedCheckin.longitude}}
-        </text>
-      </view>
-      <text class="sheet-close" bindtap="closeCheckinDetail">×</text>
+  <view wx:if="{{selectedDetail && !pendingPoint}}" class="map-drawer">
+    <text class="drawer-close" bindtap="closeDetail">×</text>
+    <text class="eyebrow">{{selectedDetail.eyebrow}}</text>
+    <text class="drawer-title">{{selectedDetail.name}}</text>
+    <view wx:for="{{selectedDetail.rows}}" wx:key="label" class="detail-row">
+      <text>{{item.label}}</text>
+      <text>{{item.value}}</text>
     </view>
-    <view class="sheet-actions">
-      <button class="danger-button" bindtap="deleteSelectedCheckin">删除打卡点</button>
-      <button class="secondary-button" bindtap="openCheckins">查看全部</button>
+    <view wx:if="{{selectedDetail.tags.length}}" class="tag-row">
+      <text wx:for="{{selectedDetail.tags}}" wx:key="*this" class="tag">{{item}}</text>
     </view>
+    <button
+      wx:if="{{selectedDetail.action}}"
+      class="detail-action"
+      bindtap="toggleSelectedDetail"
+    >{{selectedDetail.action}}</button>
   </view>
 </view>

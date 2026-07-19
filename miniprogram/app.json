@@ -3,14 +3,11 @@
     "pages/map/map",
     "pages/dashboard/dashboard",
     "pages/light/light",
-    "pages/checkins/checkins",
     "pages/checklists/checklists",
     "pages/imports/imports"
   ],
   "window": {
-    "navigationBarTitleText": "拓界足迹",
-    "navigationBarBackgroundColor": "#17231f",
-    "navigationBarTextStyle": "white",
+    "navigationStyle": "custom",
     "backgroundColor": "#f4f7f4",
     "backgroundTextStyle": "light"
   },
@@ -19,35 +16,19 @@
       "desc": "用于在旅行地图上记录用户主动添加的打卡位置"
     }
   },
-  "requiredPrivateInfos": [
-    "getLocation"
-  ],
+  "requiredPrivateInfos": ["getLocation"],
   "tabBar": {
+    "custom": true,
     "color": "#c6d2ca",
     "selectedColor": "#ffffff",
     "backgroundColor": "#17231f",
     "borderStyle": "black",
     "list": [
-      {
-        "pagePath": "pages/map/map",
-        "text": "地图"
-      },
-      {
-        "pagePath": "pages/dashboard/dashboard",
-        "text": "总览"
-      },
-      {
-        "pagePath": "pages/light/light",
-        "text": "点亮"
-      },
-      {
-        "pagePath": "pages/checklists/checklists",
-        "text": "打卡"
-      },
-      {
-        "pagePath": "pages/imports/imports",
-        "text": "导入"
-      }
+      { "pagePath": "pages/map/map", "text": "地图" },
+      { "pagePath": "pages/dashboard/dashboard", "text": "总览" },
+      { "pagePath": "pages/light/light", "text": "点亮" },
+      { "pagePath": "pages/checklists/checklists", "text": "打卡" },
+      { "pagePath": "pages/imports/imports", "text": "导入" }
     ]
   },
   "sitemapLocation": "sitemap.json"

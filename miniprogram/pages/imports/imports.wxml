@@ -1,50 +1,38 @@
-<view class="page imports-page">
-  <view>
-    <text class="eyebrow">导入</text>
-    <view class="page-title">旅行数据导入</view>
-    <text class="muted">支持 GeoJSON、KML 和含经纬度的 CSV</text>
-  </view>
-
-  <view class="import-panel">
-    <button class="primary-button choose-button" bindtap="chooseFiles">选择文件</button>
-    <view class="format-row">
-      <text>GeoJSON</text>
-      <text>KML</text>
-      <text>CSV</text>
+<view class="imports-page">
+  <view class="panel">
+    <view class="section-head">
+      <view><text class="eyebrow">导入</text><text class="title">导入地图或地点文件</text></view>
+      <text class="tag">GeoJSON / KML / CSV / Photo</text>
     </view>
-    <text class="privacy-note">文件仅在本机解析，不会自动上传。</text>
-  </view>
-
-  <view class="metrics">
-    <view><text class="metric-value">{{pointCount}}</text><text class="metric-label">导入地点</text></view>
-    <view><text class="metric-value">{{lineCount}}</text><text class="metric-label">路径/形状</text></view>
-    <view><text class="metric-value">{{fileCount}}</text><text class="metric-label">文件</text></view>
-  </view>
-
-  <view class="section-row">
-    <text class="section-title">已导入文件</text>
-    <button wx:if="{{fileCount}}" class="clear-button" bindtap="clearImports">清空</button>
-  </view>
-  <view wx:if="{{files.length}}" class="file-list">
-    <view wx:for="{{files}}" wx:key="id" class="file-item">
-      <view class="file-icon">{{item.type}}</view>
-      <view class="file-copy">
-        <text class="file-name">{{item.name}}</text>
-        <text class="file-meta">{{item.points}} 个地点 · {{item.lines}} 条路径</text>
+    <button class="primary-action" bindtap="chooseFiles">选择文件</button>
+    <text class="help">CSV 只需要三列：名称、纬度、经度。一次最多导入 1000 个可显示点。照片导入只读取本地文件名和 EXIF GPS，不上传照片。</text>
+    <view wx:if="{{files.length}}" class="file-list">
+      <view wx:for="{{files}}" wx:key="id" class="file-row">
+        <view class="file-copy"><text class="file-name">{{item.name}}</text><text class="file-meta">{{item.points}} 个地点 · {{item.lines}} 条路径/形状</text></view>
+        <button class="text-danger" data-id="{{item.id}}" bindtap="deleteFile">删除</button>
       </view>
-      <button class="delete-button" data-id="{{item.id}}" bindtap="deleteFile">删除</button>
     </view>
   </view>
-  <view wx:else class="empty">还没有导入文件</view>
-
-  <view class="data-actions panel">
-    <view>
-      <text class="section-title">备份与恢复</text>
-      <text class="muted small">包含点亮、打卡、清单和导入数据</text>
+  <view class="panel">
+    <view class="section-head">
+      <view><text class="eyebrow">存档</text><text class="title">数据存档</text></view>
+      <text class="tag">JSON</text>
     </view>
-    <view class="action-row">
-      <button class="secondary-button" bindtap="exportBackup">导出备份</button>
-      <button class="secondary-button" bindtap="importBackup">恢复备份</button>
+    <view class="archive-actions">
+      <button bindtap="exportArchive">导出存档</button>
+      <button class="danger-action" bindtap="clearAllData">清空全部数据</button>
+      <button bindtap="chooseArchive">导入存档</button>
     </view>
+    <text class="help">点亮地点、导入对象和打卡勾选都会保存到存档文件。恢复存档会覆盖当前小程序里的旅行数据。</text>
+  </view>
+  <view class="panel">
+    <view class="section-head"><view><text class="eyebrow">数据检查</text><text class="title">数据检查</text></view></view>
+    <view class="inventory">
+      <view><text class="value">{{checkinCount}}</text><text class="label">地图打卡</text></view>
+      <view><text class="value">{{pointCount}}</text><text class="label">导入地点</text></view>
+      <view><text class="value">{{lineCount}}</text><text class="label">路径/形状</text></view>
+      <view><text class="value">{{fileCount}}</text><text class="label">导入文件</text></view>
+    </view>
+    <view wx:if="{{!checkinCount && !pointCount && !lineCount}}" class="empty">暂无可检查的数据</view>
   </view>
 </view>

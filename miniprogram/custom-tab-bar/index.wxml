@@ -1,0 +1,16 @@
+<view class="tab-shell">
+  <view class="brand">
+    <image src="/assets/brand.png" mode="aspectFill"></image>
+  </view>
+  <view class="nav">
+    <view
+      wx:for="{{items}}"
+      wx:key="pagePath"
+      class="nav-item {{selected === index ? 'active' : ''}}"
+      data-index="{{index}}"
+      bindtap="switchPage"
+    >{{item.text}}</view>
+  </view>
+  <view class="language" bindtap="switchLanguage">{{languageTarget}}</view>
+  <text class="version">{{version}}</text>
+</view>

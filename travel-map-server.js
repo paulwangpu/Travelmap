@@ -3,10 +3,11 @@ const fs = require("fs");
 const path = require("path");
 const { exec } = require("child_process");
 
-const host = "127.0.0.1";
+const host = "0.0.0.0";
 const port = 4173;
 const root = __dirname;
 const url = `http://localhost:${port}/index.html`;
+const shouldOpenBrowser = process.argv.includes("--open");
 const contentTypes = {
   ".html": "text/html; charset=utf-8",
   ".js": "text/javascript; charset=utf-8",
@@ -53,7 +54,7 @@ const server = http.createServer((request, response) => {
 server.on("error", (error) => {
   if (error.code === "EADDRINUSE") {
     console.log(`Port ${port} is already in use. Opening existing server: ${url}`);
-    openBrowser();
+    if (shouldOpenBrowser) openBrowser();
     return;
   }
   console.error(error);
@@ -63,5 +64,5 @@ server.on("error", (error) => {
 server.listen(port, host, () => {
   console.log(`Travel Map server running: ${url}`);
   console.log("Keep this window open while using Travel Map.");
-  openBrowser();
+  if (shouldOpenBrowser) openBrowser();
 });

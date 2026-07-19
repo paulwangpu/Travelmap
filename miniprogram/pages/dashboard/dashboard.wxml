@@ -1,13 +1,10 @@
-<view class="page dashboard-page">
-  <view class="dashboard-head">
-    <view>
-      <text class="eyebrow">总览</text>
-      <view class="page-title">旅行统计总览</view>
-    </view>
-    <button class="data-button" bindtap="openImports">导入</button>
+<view class="content-page">
+  <view class="page-head">
+    <text class="eyebrow">总览</text>
+    <text class="page-title">旅行统计总览</text>
   </view>
 
-  <view class="metric-grid">
+  <view class="metrics-grid">
     <view wx:for="{{metrics}}" wx:key="key" class="metric">
       <text class="metric-value">{{item.value}}</text>
       <text class="metric-label">{{item.label}}</text>
@@ -15,36 +12,40 @@
   </view>
 
   <view class="achievement-section">
-    <view class="section-row">
-      <view class="section-title">核心打卡等级</view>
-      <button class="text-button" bindtap="openChecklists">查看清单</button>
+    <view class="section-head achievement-head">
+      <text class="section-title">核心打卡</text>
+      <text class="tag" bindtap="openChecklist">查看清单</text>
     </view>
     <view class="achievement-list">
       <view wx:for="{{achievements}}" wx:key="key" class="achievement">
-        <view class="achievement-percent">{{item.percent}}%</view>
-        <view class="achievement-content">
-          <view class="achievement-head">
+        <view
+          class="achievement-ring"
+          style="background: radial-gradient(circle at center, #fff 0 55%, transparent 57%), conic-gradient(#208765 {{item.percent}}%, #e1e7e2 0)"
+        >
+          <text>{{item.percent}}%</text>
+        </view>
+        <view class="achievement-body">
+          <view class="achievement-title-row">
             <text class="achievement-name">{{item.name}}</text>
-            <text class="achievement-value">{{item.value}}</text>
+            <text class="achievement-status">{{item.status}}</text>
           </view>
-          <view class="progress-track">
-            <view class="progress-value" style="width: {{item.percent}}%"></view>
-          </view>
-          <text class="achievement-note">{{item.note}}</text>
+          <text class="achievement-category">{{item.category}}</text>
+          <text class="achievement-value">{{item.doneCount}}/{{item.total}}</text>
+          <view class="bar"><view class="bar-value" style="width: {{item.percent}}%"></view></view>
         </view>
       </view>
     </view>
   </view>
 
-  <view class="next-section">
-    <view class="section-title">下一步打卡导航</view>
+  <view class="panel next-panel">
+    <text class="section-title">下一步打卡导航</text>
     <view class="next-list">
-      <view wx:for="{{nextStops}}" wx:key="key" class="next-item">
-        <view>
+      <view wx:for="{{nextStops}}" wx:key="key" class="next-card">
+        <view class="next-title-row">
           <text class="next-title">{{item.title}}</text>
-          <text class="next-note">{{item.note}}</text>
+          <text class="tag" data-page="{{item.page}}" bindtap="openPage">{{item.action}}</text>
         </view>
-        <button class="next-button" data-page="{{item.page}}" bindtap="openPage">{{item.action}}</button>
+        <text class="next-body">{{item.body}}</text>
       </view>
     </view>
   </view>

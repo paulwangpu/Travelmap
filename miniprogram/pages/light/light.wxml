@@ -1,49 +1,108 @@
-<view class="page light-page">
-  <view>
+<view class="content-page">
+  <view class="page-head">
     <text class="eyebrow">手动点亮</text>
-    <view class="page-title">行政区点亮</view>
+    <text class="page-title">手动点亮</text>
   </view>
 
-  <view class="segments">
-    <button
-      wx:for="{{tabs}}"
+  <view class="view-tabs">
+    <view
+      wx:for="{{viewTabs}}"
       wx:key="key"
-      class="segment {{activeTab === item.key ? 'active' : ''}}"
-      data-tab="{{item.key}}"
-      bindtap="changeTab"
-    >{{item.label}}</button>
+      class="view-tab {{activeView === item.key ? 'active' : ''}}"
+      data-view="{{item.key}}"
+      bindtap="switchView"
+    >
+      <text>{{item.label}}</text>
+      <text class="view-count">{{item.count}}</text>
+    </view>
   </view>
 
-  <picker
-    wx:if="{{activeTab === 'city'}}"
-    range="{{provinceNames}}"
-    value="{{provinceIndex}}"
-    bindchange="changeProvince"
-  >
-    <view class="province-picker">{{provinceNames[provinceIndex]}}⌄</view>
-  </picker>
-
-  <view class="list-head">
-    <text class="section-title">{{activeLabel}}</text>
-    <text class="count-tag">{{visitedCount}} / {{totalCount}}</text>
+  <view wx:if="{{activeView === 'province'}}" class="panel">
+    <view class="section-head">
+      <view>
+        <text class="eyebrow">中国一级行政区</text>
+        <text class="section-title">中国省级</text>
+      </view>
+      <text class="tag">{{provinceCount}}</text>
+    </view>
+    <view class="manual-grid">
+      <button
+        wx:for="{{provinces}}"
+        wx:key="id"
+        class="manual-chip {{item.visited ? 'done' : ''}}"
+        disabled="{{item.disabled}}"
+        data-id="{{item.id}}"
+        bindtap="toggleProvince"
+      >
+        <text class="chip-name">{{item.name}}</text>
+        <text class="chip-status">{{item.status}}</text>
+      </button>
+    </view>
   </view>
 
-  <input
-    class="search-input"
-    value="{{keyword}}"
-    placeholder="搜索地区"
-    bindinput="search"
-  />
-
-  <view class="region-grid">
-    <button
-      wx:for="{{visibleItems}}"
-      wx:key="id"
-      class="region-button {{item.visited ? 'visited' : ''}}"
-      data-id="{{item.id}}"
-      bindtap="toggleRegion"
-    >{{item.name}}</button>
+  <view wx:if="{{activeView === 'city'}}" class="panel">
+    <view class="section-head">
+      <view>
+        <text class="eyebrow">中国二级行政区</text>
+        <text class="section-title">中国地级市</text>
+      </view>
+      <text class="tag">{{cityCount}}</text>
+    </view>
+    <view class="city-tools">
+      <text>按省份展开查看，共 {{cityGroups.length}} 组</text>
+      <button bindtap="toggleAllCities">{{allCitiesOpen ? '全部收起' : '全部展开'}}</button>
+    </view>
+    <view class="manual-groups">
+      <view wx:for="{{cityGroups}}" wx:key="province" wx:for-item="group" class="manual-group">
+        <view class="group-summary" data-type="city" data-key="{{group.province}}" bindtap="toggleGroup">
+          <text class="group-name">{{group.province}}</text>
+          <text class="group-count">{{group.done}}/{{group.items.length}} {{group.open ? '⌃' : '⌄'}}</text>
+        </view>
+        <view wx:if="{{group.open}}" class="manual-list">
+          <button
+            wx:for="{{group.items}}"
+            wx:key="id"
+            class="manual-chip list-chip {{item.visited ? 'done' : ''}}"
+            disabled="{{item.disabled}}"
+            data-id="{{item.id}}"
+            bindtap="toggleCity"
+          >
+            <text class="chip-name">{{item.name}}</text>
+            <text class="chip-status">{{item.status}}</text>
+          </button>
+        </view>
+      </view>
+    </view>
   </view>
 
-  <view wx:if="{{!visibleItems.length}}" class="empty">{{emptyText}}</view>
+  <view wx:if="{{activeView === 'country'}}" class="panel">
+    <view class="section-head">
+      <view>
+        <text class="eyebrow">国家地区</text>
+        <text class="section-title">国家/地区</text>
+      </view>
+      <text class="tag">{{countryCount}}</text>
+    </view>
+    <view class="manual-groups">
+      <view wx:for="{{countryGroups}}" wx:key="continent" wx:for-item="group" class="manual-group">
+        <view class="group-summary" data-type="country" data-key="{{group.continent}}" bindtap="toggleGroup">
+          <text class="group-name">{{group.continent}}</text>
+          <text class="group-count">{{group.done}}/{{group.items.length}} {{group.open ? '⌃' : '⌄'}}</text>
+        </view>
+        <view wx:if="{{group.open}}" class="manual-grid group-grid">
+          <button
+            wx:for="{{group.items}}"
+            wx:key="id"
+            class="manual-chip {{item.visited ? 'done' : ''}}"
+            disabled="{{item.disabled}}"
+            data-id="{{item.id}}"
+            bindtap="toggleCountry"
+          >
+            <text class="chip-name">{{item.name}}</text>
+            <text class="chip-status">{{item.status}}</text>
+          </button>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>
