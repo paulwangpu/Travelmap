@@ -5779,15 +5779,20 @@ function renderDataInventory() {
 
 function renderAchievements() {
   $("#achievementList").innerHTML = `
-    <details class="achievement-group" data-achievement-section="china5a">
+    <nav class="checklist-nav checklist-page-nav">
+      <button type="button" data-checklist-jump="achievement-section-china5a">${currentLanguage === "en" ? "5A scenic areas" : "5A 景区"}</button>
+      <button type="button" data-checklist-jump="achievement-section-worldHeritage">${currentLanguage === "en" ? "World Heritage" : "世界遗产"}</button>
+      <button type="button" data-checklist-jump="achievement-section-referenceLists">${currentLanguage === "en" ? "Reference lists" : "参考清单"}</button>
+    </nav>
+    <details id="achievement-section-china5a" class="achievement-group" data-achievement-section="china5a">
       <summary>${currentLanguage === "en" ? "China 5A scenic areas" : "中国 5A 景区"}</summary>
       <div class="achievement-section-placeholder"><p class="muted small">${currentLanguage === "en" ? "Expand to load this checklist." : "展开后加载该清单。"}</p></div>
     </details>
-    <details class="achievement-group" data-achievement-section="worldHeritage">
+    <details id="achievement-section-worldHeritage" class="achievement-group" data-achievement-section="worldHeritage">
       <summary>${currentLanguage === "en" ? "World Heritage by country" : "世界遗产（按国家）"}</summary>
       <div class="achievement-section-placeholder"><p class="muted small">${currentLanguage === "en" ? "Expand to load this checklist." : "展开后加载该清单。"}</p></div>
     </details>
-    <details class="achievement-group" data-achievement-section="referenceLists">
+    <details id="achievement-section-referenceLists" class="achievement-group" data-achievement-section="referenceLists">
       <summary>${currentLanguage === "en" ? "Other reference lists" : "其他参考清单"}</summary>
       <div class="achievement-section-placeholder"><p class="muted small">${currentLanguage === "en" ? "Expand to load this checklist." : "展开后加载该清单。"}</p></div>
     </details>`;
@@ -7099,6 +7104,23 @@ function renderAll() {
   renderNextStops();
 }
 
+function preloadDashboardStats() {
+  Promise.allSettled([
+    loadChina5aCatalog(),
+    loadCatalogData(),
+    loadBoundaryData("china2", { renderOnLoad: false }),
+    loadBoundaryData("chinaDirect", { renderOnLoad: false }),
+    loadBoundaryData("tw2", { renderOnLoad: false }),
+  ]).then(() => {
+    rebuildCoverageFromSavedVisits();
+    renderMetrics();
+    renderDashboardAchievements();
+    renderNextStops();
+    if (document.querySelector('[data-page="checkins"]')?.classList.contains("active")) renderCheckinsPage();
+    if (document.querySelector('[data-page="achievements"]')?.classList.contains("active")) renderAchievements();
+  });
+}
+
 function renderAfterCheckinChange() {
   invalidateMapPointRenderCache();
   if (pendingCheckinRender) return;
@@ -7234,6 +7256,7 @@ loadStateFromIndexedDb().finally(() => {
   rebuildCoverageFromSavedVisits();
   restoreStoredMapViewport();
   ensureBoundaryDataForLevel(state.boundaryLevel || "country");
+  preloadDashboardStats();
   renderAll();
   showPage(location.hash.replace("#", "") || "world");
   detectMapProviderByIp();
@@ -7359,9 +7382,14 @@ $("#achievementList").addEventListener("click", (event) => {
     const target = document.getElementById(jump.dataset.checklistJump);
     if (target) {
       target.open = true;
-      scheduleFillLazyChecklistGroup(target, () => {
+      if (target.matches("[data-achievement-section]")) {
+        scheduleFillAchievementSection(target);
         target.scrollIntoView({ block: "start", inline: "nearest", behavior: "smooth" });
-      });
+      } else {
+        scheduleFillLazyChecklistGroup(target, () => {
+          target.scrollIntoView({ block: "start", inline: "nearest", behavior: "smooth" });
+        });
+      }
     }
     return;
   }
