@@ -89,10 +89,14 @@ let pendingIndexedDbSave = null;
 let pendingIndexedDbPayload = null;
 let pendingCheckinRender = null;
 let pendingCoverageMapRefresh = null;
+let pendingManualNavSpy = null;
+let pendingChecklistNavSpy = null;
 let restoringMapViewport = false;
 let checklistStatusCache = { signature: "", marked: new Set(), visited: new Set() };
 let checklistOverlayCache = { signature: "", items: [], keySet: new Set() };
 let checklistCoordinateLookupCache = { china5a: null, worldHeritage: null, englishNames: null, map: new Map() };
+let derivedStatsRevision = 0;
+let dashboardStatsCache = { signature: "", stats: null };
 let mapAddMode = false;
 let pendingMapClickPoint = null;
 const admin1RegionGroupCountries = new Set(["fr", "it", "jp"]);
@@ -2763,6 +2767,7 @@ function rebuildCoverageFromSavedVisits() {
     subregions,
     updatedAt: new Date().toISOString(),
   };
+  invalidateDerivedStatsCache();
 }
 
 function recomputeCoverage() {
@@ -2798,6 +2803,7 @@ function recomputeCoverage() {
     subregions,
     updatedAt: new Date().toISOString(),
   };
+  invalidateDerivedStatsCache();
   logSlowStep("recomputeCoverage", perfStartedAt);
 }
 
@@ -2822,6 +2828,7 @@ function addCoverageForPlace(place) {
     addUniqueAdminName(coverage.subregions[subadminKey], subunit);
   }
   coverage.updatedAt = new Date().toISOString();
+  invalidateDerivedStatsCache();
 }
 
 function upsertVisit(placeId, depth = 1, options = {}) {
@@ -3864,6 +3871,57 @@ function totalImportedPathLengthKm() {
   return importedPathGeoJson().features.reduce((total, feature) => total + geometryLineLengthKm(feature.geometry), 0);
 }
 
+function invalidateDerivedStatsCache() {
+  derivedStatsRevision += 1;
+  dashboardStatsCache.signature = "";
+  dashboardStatsCache.stats = null;
+}
+
+function dashboardStatsSignature() {
+  const coverage = state.coverage || {};
+  return [
+    derivedStatsRevision,
+    places.length,
+    state.visits.length,
+    (state.checklistMarks || []).length,
+    coverage.updatedAt || "",
+    china5aCatalogStatus.total || "",
+    worldHeritageCatalogStatus.total || "",
+  ].join("|");
+}
+
+function dashboardStats() {
+  const signature = dashboardStatsSignature();
+  if (dashboardStatsCache.signature === signature && dashboardStatsCache.stats) return dashboardStatsCache.stats;
+  const visited = visitedPlaces();
+  const imported = places.filter((place) => place.imported || place.importId || place.sourceFile);
+  const importedShapes = imported.filter((place) => place.shapeOnly);
+  const importedPoints = imported.filter((place) => !place.shapeOnly);
+  const visitedIds = new Set(state.visits.map((visit) => visit.placeId));
+  const stats = {
+    places: places.length,
+    visits: state.visits.length,
+    visitedPlaces: visitedIds.size,
+    visitedPointCount: visited.filter((visit) => !visit.place.shapeOnly && !visit.place.manualAdmin).length,
+    importedObjects: imported.length,
+    importedPoints: importedPoints.length,
+    importedShapes: importedShapes.length,
+    pathLengthKm: totalImportedPathLengthKm(),
+    countries: uniqueVisitedCountries().size,
+    chinaRegions: countVisitedRegions("china"),
+    chinaSubregions: countVisitedSubregions("china2"),
+    chinaSubregionTotal: chinaPrefectureTotal(),
+    japanRegions: countVisitedRegions("japan"),
+    japanPrefectures: countVisitedSubregions("japanPref"),
+    china5aDone: checklistDoneCount("china5a"),
+    china5aTotal: checklistTotalCount("china5a"),
+    worldHeritageDone: checklistDoneCount("worldHeritage"),
+    worldHeritageTotal: checklistTotalCount("worldHeritage"),
+  };
+  dashboardStatsCache = { signature, stats };
+  return stats;
+}
+
 function geometryLineLengthKm(geometry) {
   if (!geometry) return 0;
   if (geometry.type === "LineString") return lineLengthKm(geometry.coordinates);
@@ -4147,15 +4205,12 @@ function renderLegend() {
 }
 
 function renderMetrics() {
-  const visitedPointCount = visitedPlaces().filter((visit) => !visit.place.shapeOnly && !visit.place.manualAdmin).length;
-  const importedPointCount = places.filter((place) => place.imported && !place.shapeOnly).length;
-  const importedShapeCount = places.filter((place) => place.shapeOnly).length;
-  const pathLength = totalImportedPathLengthKm();
+  const stats = dashboardStats();
   const metrics = [
-    [t("totalCheckins"), visitedPointCount],
-    [t("importedPoints"), importedPointCount],
-    [t("importedTracks"), importedShapeCount],
-    [t("trackLength"), pathLength ? `${Math.round(pathLength).toLocaleString(currentLanguage === "en" ? "en-US" : "zh-CN")} km` : "0 km"],
+    [t("totalCheckins"), stats.visitedPointCount],
+    [t("importedPoints"), stats.importedPoints],
+    [t("importedTracks"), stats.importedShapes],
+    [t("trackLength"), stats.pathLengthKm ? `${Math.round(stats.pathLengthKm).toLocaleString(currentLanguage === "en" ? "en-US" : "zh-CN")} km` : "0 km"],
   ];
   $("#metrics").innerHTML = metrics.map(([label, value]) => `<article class="metric"><strong>${value}</strong><span>${label}</span></article>`).join("");
 }
@@ -4367,6 +4422,7 @@ function invalidateMapPointRenderCache() {
   mapPointRenderRevision += 1;
   mapLibreMarkerSignature = "";
   checklistOverlayCache.signature = "";
+  invalidateDerivedStatsCache();
 }
 
 function renderMapLibreLayers() {
@@ -5400,36 +5456,135 @@ function manualButtonHtml({ label, visited, manual, action, disabled = false }) 
 function renderCheckinsPage() {
   const countryTarget = $("#manualCountryList");
   if (!countryTarget) return;
+  const stats = dashboardStats();
+  const en = currentLanguage === "en";
 
   const provinceRows = regionSets.china.units;
-  $("#manualChinaProvinceCount").textContent = `${countVisitedRegions("china")}/${provinceRows.length}`;
-  $("#manualChinaProvinceList").innerHTML = provinceRows.map((unit) => {
-    const visited = coverageHasRegion("china", unit.name);
-    const manual = Boolean(manualAdminPlaceFor("cn", unit.name));
-    return manualButtonHtml({ label: chinaProvinceDisplayName(unit.name), visited, manual, action: `admin:cn:${encodeURIComponent(unit.name)}:0`, disabled: visited && !manual });
-  }).join("");
+  const chinaProvinceText = `${stats.chinaRegions}/${provinceRows.length}`;
+  $("#manualChinaProvinceCount").textContent = chinaProvinceText;
+  setManualNavButtonLabel("manual-section-china-province", en ? "China provinces" : "中国省级");
 
-  const cityRows = chinaSubadminUnitsForManualList();
-  $("#manualChinaCityCount").textContent = `${countVisitedSubregions("china2")}/${chinaPrefectureTotal()}`;
-  $("#manualChinaCityList").innerHTML = cityRows.length
-    ? renderChinaSubadminGroups(cityRows)
-    : `<p class="muted">中国地级市边界加载后显示。</p>`;
+  const chinaCityText = `${stats.chinaSubregions}/${stats.chinaSubregionTotal}`;
+  $("#manualChinaCityCount").textContent = chinaCityText;
+  setManualNavButtonLabel("manual-section-china-city", en ? "China cities" : "中国市级");
 
   const japanRegionRows = regionSets.japan.units;
-  $("#manualJapanRegionCount").textContent = `${countVisitedRegions("japan")}/${japanRegionRows.length}`;
-  $("#manualJapanRegionList").innerHTML = japanRegionRows.map((unit) => {
-    const visited = coverageHasRegion("japan", unit.name);
-    const manual = Boolean(manualAdminPlaceFor("jp", unit.name));
-    return manualButtonHtml({ label: unit.name, visited, manual, action: `admin:jp:${encodeURIComponent(unit.name)}:0`, disabled: visited && !manual });
-  }).join("");
+  $("#manualJapanRegionCount").textContent = `${stats.japanRegions}/${japanRegionRows.length}`;
 
   const japanPrefRows = japanPrefectureUnits();
-  $("#manualJapanPrefectureCount").textContent = `${countVisitedSubregions("japanPref")}/${japanPrefRows.length}`;
-  $("#manualJapanPrefectureList").innerHTML = renderJapanPrefectureGroups(japanPrefRows);
+  const japanPrefText = `${stats.japanPrefectures}/${japanPrefRows.length}`;
+  $("#manualJapanPrefectureCount").textContent = japanPrefText;
+  setManualNavButtonLabel("manual-section-japan", en ? "Japan" : "日本");
 
-  const countryRows = manualCountryRows();
-  $("#manualCountryCount").textContent = `${uniqueVisitedCountries().size}/${countryRows.length}`;
-  countryTarget.innerHTML = renderCountryGroups(countryRows);
+  const countryText = `${stats.countries}/${worldCountryTotal}`;
+  $("#manualCountryCount").textContent = countryText;
+  setManualNavButtonLabel("manual-section-country", en ? "Countries/regions" : "国家/地区");
+  clearClosedManualSections();
+  renderOpenManualSections();
+  scheduleManualNavSpy();
+}
+
+function setManualNavButtonLabel(targetId, label) {
+  const button = document.querySelector(`[data-manual-jump="${targetId}"]`);
+  if (button) button.textContent = label;
+}
+
+function scheduleManualNavSpy() {
+  if (pendingManualNavSpy) return;
+  pendingManualNavSpy = window.requestAnimationFrame(() => {
+    pendingManualNavSpy = null;
+    updateManualNavActiveByScroll();
+  });
+}
+
+function updateManualNavActiveByScroll() {
+  const page = $("#checkins");
+  if (!page?.classList.contains("active")) return;
+  const nav = page.querySelector(".manual-view-tabs");
+  const sections = Array.from(page.querySelectorAll("[data-manual-jump]"))
+    .map((button) => ({ button, target: document.getElementById(button.dataset.manualJump) }))
+    .filter((item) => item.target);
+  if (!nav || !sections.length) return;
+  const navBottom = nav.getBoundingClientRect().bottom + 10;
+  let active = sections[0];
+  sections.forEach((item) => {
+    const rect = item.target.getBoundingClientRect();
+    if (rect.top <= navBottom && rect.bottom > navBottom) active = item;
+    else if (rect.top <= navBottom) active = item;
+  });
+  sections.forEach((item) => item.button.classList.toggle("active", item === active));
+}
+
+function scheduleChecklistNavSpy() {
+  if (pendingChecklistNavSpy) return;
+  pendingChecklistNavSpy = window.requestAnimationFrame(() => {
+    pendingChecklistNavSpy = null;
+    updateChecklistNavActiveByScroll();
+  });
+}
+
+function updateChecklistNavActiveByScroll() {
+  const page = $("#achievements");
+  if (!page?.classList.contains("active")) return;
+  const nav = page.querySelector(".checklist-page-nav");
+  const sections = Array.from(page.querySelectorAll("[data-checklist-jump]"))
+    .map((button) => ({ button, target: document.getElementById(button.dataset.checklistJump) }))
+    .filter((item) => item.target);
+  if (!nav || !sections.length) return;
+  const navBottom = nav.getBoundingClientRect().bottom + 10;
+  let active = sections[0];
+  sections.forEach((item) => {
+    const rect = item.target.getBoundingClientRect();
+    if (rect.top <= navBottom && rect.bottom > navBottom) active = item;
+    else if (rect.top <= navBottom) active = item;
+  });
+  sections.forEach((item) => item.button.classList.toggle("active", item === active));
+}
+
+function renderOpenManualSections() {
+  document.querySelectorAll("#checkins .manual-section-details[open]").forEach((details) => renderManualSection(details.dataset.manualSection));
+}
+
+function clearClosedManualSections() {
+  document.querySelectorAll("#checkins .manual-section-details:not([open])").forEach((details) => {
+    const target = details.querySelector(".manual-grid, .manual-country-groups");
+    if (target) target.innerHTML = "";
+  });
+}
+
+function renderManualSection(section) {
+  if (section === "chinaProvince") {
+    $("#manualChinaProvinceList").innerHTML = regionSets.china.units.map((unit) => {
+      const visited = coverageHasRegion("china", unit.name);
+      const manual = Boolean(manualAdminPlaceFor("cn", unit.name));
+      return manualButtonHtml({ label: chinaProvinceDisplayName(unit.name), visited, manual, action: `admin:cn:${encodeURIComponent(unit.name)}:0`, disabled: visited && !manual });
+    }).join("");
+    return;
+  }
+  if (section === "chinaCity") {
+    const cityRows = chinaSubadminUnitsForManualList();
+    $("#manualChinaCityList").innerHTML = cityRows.length
+      ? renderChinaSubadminGroups(cityRows)
+      : `<p class="muted">${currentLanguage === "en" ? "China city boundaries will appear after loading." : "中国地级市边界加载后显示。"}</p>`;
+    return;
+  }
+  if (section === "japanRegion") {
+    $("#manualJapanRegionList").innerHTML = regionSets.japan.units.map((unit) => {
+      const visited = coverageHasRegion("japan", unit.name);
+      const manual = Boolean(manualAdminPlaceFor("jp", unit.name));
+      return manualButtonHtml({ label: unit.name, visited, manual, action: `admin:jp:${encodeURIComponent(unit.name)}:0`, disabled: visited && !manual });
+    }).join("");
+    return;
+  }
+  if (section === "japanPrefecture") {
+    $("#manualJapanPrefectureList").innerHTML = renderJapanPrefectureGroups(japanPrefectureUnits());
+    return;
+  }
+  if (section === "country") {
+    const countryRows = manualCountryRows();
+    $("#manualCountryCount").textContent = `${dashboardStats().countries}/${countryRows.length}`;
+    $("#manualCountryList").innerHTML = renderCountryGroups(countryRows);
+  }
 }
 
 function manualCountryRows() {
@@ -5779,7 +5934,7 @@ function renderDataInventory() {
 
 function renderAchievements() {
   $("#achievementList").innerHTML = `
-    <nav class="checklist-nav checklist-page-nav">
+    <nav class="checklist-nav checklist-page-nav manual-view-tabs">
       <button type="button" data-checklist-jump="achievement-section-china5a">${currentLanguage === "en" ? "5A scenic areas" : "5A 景区"}</button>
       <button type="button" data-checklist-jump="achievement-section-worldHeritage">${currentLanguage === "en" ? "World Heritage" : "世界遗产"}</button>
       <button type="button" data-checklist-jump="achievement-section-referenceLists">${currentLanguage === "en" ? "Reference lists" : "参考清单"}</button>
@@ -5796,6 +5951,7 @@ function renderAchievements() {
       <summary>${currentLanguage === "en" ? "Other reference lists" : "其他参考清单"}</summary>
       <div class="achievement-section-placeholder"><p class="muted small">${currentLanguage === "en" ? "Expand to load this checklist." : "展开后加载该清单。"}</p></div>
     </details>`;
+  scheduleChecklistNavSpy();
 }
 
 function renderDashboardAchievements() {
@@ -5847,14 +6003,15 @@ function scheduleFillAchievementSection(details) {
 }
 
 function coreAchievementModels() {
-  const chinaCount = countVisitedRegions("china");
+  const stats = dashboardStats();
+  const chinaCount = stats.chinaRegions;
   const chinaTotal = regionSets.china.total;
-  const chinaPrefectureCount = countVisitedSubregions("china2");
-  const chinaPrefectureTotalValue = chinaPrefectureTotal();
-  const countryCount = uniqueVisitedCountries().size;
-  const china5aDone = checklistDoneCount("china5a");
-  const worldHeritageDone = checklistDoneCount("worldHeritage");
-  const worldHeritageTotal = checklistTotalCount("worldHeritage");
+  const chinaPrefectureCount = stats.chinaSubregions;
+  const chinaPrefectureTotalValue = stats.chinaSubregionTotal;
+  const countryCount = stats.countries;
+  const china5aDone = stats.china5aDone;
+  const worldHeritageDone = stats.worldHeritageDone;
+  const worldHeritageTotal = stats.worldHeritageTotal;
   const en = currentLanguage === "en";
   return [
     achievementModel(en ? "World footprint" : "世界足迹", countryCount, worldCountryTotal, en ? "Countries and regions visited" : "去过的国家/地区", [
@@ -5878,7 +6035,7 @@ function coreAchievementModels() {
       [en ? "Hundred-city traveler" : "百城行者", 100],
       [en ? "Three-hundred-city journey" : "三百城纵横", 300],
     ]),
-    achievementModel(en ? "5A scenic areas" : "5A 景区", china5aDone, checklistTotalCount("china5a"), en ? "Scenic area check-ins" : "打卡景区", [
+    achievementModel(en ? "5A scenic areas" : "5A 景区", china5aDone, stats.china5aTotal, en ? "Scenic area check-ins" : "打卡景区", [
       [en ? "First 5A" : "5A 初见", 1],
       [en ? "5A starter" : "5A 入门", 5],
       [en ? "Scenic pilgrim" : "名胜巡礼", 20],
@@ -6563,6 +6720,7 @@ function clearAllUserData() {
   state.checklistMarks = [];
   state.openChecklistGroups = [];
   state.coverage = { countries: [], regions: {}, subregions: {}, updatedAt: new Date().toISOString() };
+  invalidateDerivedStatsCache();
   state.focusPlaceId = "";
   closeMapPopupsAndDetail();
   invalidateMapCaches();
@@ -6577,6 +6735,7 @@ function clearCheckinsAndAchievementPoints() {
   state.visits = state.visits.filter((visit) => importedIds.has(visit.placeId));
   state.checklistMarks = [];
   state.coverage = { countries: [], regions: {}, subregions: {}, updatedAt: new Date().toISOString() };
+  invalidateDerivedStatsCache();
   recomputeCoverage();
   state.focusPlaceId = state.visits[0]?.placeId || "";
   closeMapPopupsAndDetail();
@@ -6587,22 +6746,19 @@ function clearCheckinsAndAchievementPoints() {
 }
 
 function dataCounts() {
-  const imported = places.filter((place) => place.imported || place.importId || place.sourceFile);
-  const importedShapes = imported.filter((place) => place.shapeOnly);
-  const importedPoints = imported.filter((place) => !place.shapeOnly);
-  const visitedIds = new Set(state.visits.map((visit) => visit.placeId));
+  const stats = dashboardStats();
   return {
-    places: places.length,
-    visits: state.visits.length,
-    visitedPlaces: visitedIds.size,
-    importedObjects: imported.length,
-    importedPoints: importedPoints.length,
-    importedShapes: importedShapes.length,
-    countries: uniqueVisitedCountries().size,
-    chinaRegions: countVisitedRegions("china"),
-    chinaSubregions: countVisitedSubregions("china2"),
-    japanRegions: countVisitedRegions("japan"),
-    japanPrefectures: countVisitedSubregions("japanPref"),
+    places: stats.places,
+    visits: stats.visits,
+    visitedPlaces: stats.visitedPlaces,
+    importedObjects: stats.importedObjects,
+    importedPoints: stats.importedPoints,
+    importedShapes: stats.importedShapes,
+    countries: stats.countries,
+    chinaRegions: stats.chinaRegions,
+    chinaSubregions: stats.chinaSubregions,
+    japanRegions: stats.japanRegions,
+    japanPrefectures: stats.japanPrefectures,
   };
 }
 
@@ -7229,6 +7385,7 @@ function showPage(pageId) {
   if (target === "achievements") {
     loadCatalogData();
     Promise.all([loadChina5aCatalog(), loadChina5aCoordinates()]);
+    scheduleChecklistNavSpy();
   }
   if (target === "imports") {
     renderImportSummary();
@@ -7300,6 +7457,14 @@ $("#dataInventory")?.addEventListener("click", (event) => {
   if (objectButton) deleteInventoryObject(objectButton.dataset.deleteInventoryObject);
 });
 $("#checkins")?.addEventListener("click", (event) => {
+  const jumpButton = event.target.closest("[data-manual-jump]");
+  if (jumpButton) {
+    const target = document.getElementById(jumpButton.dataset.manualJump);
+    if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+    document.querySelectorAll("[data-manual-jump]").forEach((button) => button.classList.toggle("active", button === jumpButton));
+    window.setTimeout(updateManualNavActiveByScroll, 260);
+    return;
+  }
   const button = event.target.closest("[data-manual-action]");
   if (!button || button.disabled) return;
   const [type, countryId, encodedName, subadminFlag] = button.dataset.manualAction.split(":");
@@ -7314,6 +7479,17 @@ $("#checkins")?.addEventListener("click", (event) => {
     toggleManualAdminRegion(countryId, regionName, isSubadmin, center || null);
   }
 });
+$("#checkins")?.addEventListener("toggle", (event) => {
+  const details = event.target.closest?.(".manual-section-details");
+  if (!details) return;
+  if (details.open) {
+    renderManualSection(details.dataset.manualSection);
+    return;
+  }
+  const target = details.querySelector(".manual-grid, .manual-country-groups");
+  if (target) target.innerHTML = "";
+}, true);
+$("#checkins")?.addEventListener("scroll", scheduleManualNavSpy, { passive: true });
 $("#boundaryLevel").addEventListener("change", (event) => {
   state.boundaryLevel = event.target.value;
   renderMapControls();
@@ -7379,15 +7555,18 @@ $("#achievementList").addEventListener("click", (event) => {
   if (jump) {
     event.preventDefault();
     event.stopPropagation();
+    document.querySelectorAll("[data-checklist-jump]").forEach((button) => button.classList.toggle("active", button === jump));
     const target = document.getElementById(jump.dataset.checklistJump);
     if (target) {
       target.open = true;
       if (target.matches("[data-achievement-section]")) {
         scheduleFillAchievementSection(target);
         target.scrollIntoView({ block: "start", inline: "nearest", behavior: "smooth" });
+        window.setTimeout(updateChecklistNavActiveByScroll, 260);
       } else {
         scheduleFillLazyChecklistGroup(target, () => {
           target.scrollIntoView({ block: "start", inline: "nearest", behavior: "smooth" });
+          window.setTimeout(updateChecklistNavActiveByScroll, 260);
         });
       }
     }
@@ -7412,6 +7591,7 @@ $("#achievementList").addEventListener("toggle", (event) => {
   setChecklistGroupOpen(details.dataset.checklistGroup, details.open);
   if (details.open) scheduleFillLazyChecklistGroup(details);
 }, true);
+$("#achievements")?.addEventListener("scroll", scheduleChecklistNavSpy, { passive: true });
 $("#leafletMap").addEventListener("click", (event) => {
   const checklistButton = event.target.closest("[data-checklist-map]");
   if (checklistButton) {

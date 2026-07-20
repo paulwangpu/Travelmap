@@ -1185,9 +1185,10 @@ button:hover {
   position: sticky;
   top: 0;
   z-index: 12;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: nowrap;
   gap: 3px;
+  overflow-x: auto;
   margin-bottom: 12px;
   padding: 4px;
   border: 1px solid var(--line);
@@ -1195,12 +1196,99 @@ button:hover {
   background: rgba(244, 247, 244, 0.96);
 }
 
+.floating-page-nav,
+.checklist-page-nav {
+  position: sticky;
+  top: 0;
+  z-index: 12;
+  box-shadow: 0 10px 22px rgba(23, 35, 31, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+#achievementList {
+  display: grid;
+  gap: 12px;
+}
+
+#achievementList > .achievement-group {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#achievementList > .checklist-page-nav {
+  margin-bottom: 0;
+}
+
 #checkins.content-page {
   padding-top: 0;
 }
 
-#checkins .page-head {
+#achievements.content-page {
+  padding-top: 0;
+}
+
+#checkins .page-head,
+#achievements .page-head {
   padding-top: 22px;
+}
+
+.manual-section-panel {
+  padding: 0;
+  overflow: hidden;
+}
+
+.manual-section-details {
+  padding: 14px;
+}
+
+.manual-section-details summary {
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  cursor: pointer;
+  gap: 8px;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.manual-section-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.manual-section-details summary::before {
+  content: "▶";
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.manual-section-details[open] summary::before {
+  content: "▼";
+}
+
+.manual-section-details[open] summary {
+  margin-bottom: 12px;
+}
+
+.manual-section-details summary h3,
+.manual-section-details summary .tag {
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.manual-section-details summary h3 {
+  margin: 0;
+}
+
+.manual-section-details summary .tag {
+  margin-left: 2px;
+  border: 0;
+  background: transparent;
+  color: var(--deep);
+  padding: 0;
 }
 
 [data-manual-view-panel].hidden {
@@ -1208,14 +1296,15 @@ button:hover {
 }
 
 .manual-view-tabs button {
-  min-width: 0;
+  flex: 1 0 auto;
+  min-width: 92px;
   min-height: 38px;
   padding: 6px 8px;
   border: 0;
   border-radius: 6px;
   background: transparent;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 900;
 }
 
@@ -1225,9 +1314,21 @@ button:hover {
 }
 
 .manual-view-tabs span {
-  margin-left: 4px;
-  font-size: 10px;
-  opacity: 0.72;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 6px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: rgba(23, 35, 31, 0.08);
+  color: var(--deep);
+  font-size: 11px;
+  font-weight: 900;
+  opacity: 1;
+}
+
+.manual-view-tabs button.active span {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
 }
 
 .manual-city-tools {
@@ -1303,8 +1404,8 @@ button:hover {
 
   .manual-view-tabs button {
     min-height: 36px;
-    padding: 5px 3px;
-    font-size: 12px;
+    padding: 5px 8px;
+    font-size: 14px;
   }
 
 }

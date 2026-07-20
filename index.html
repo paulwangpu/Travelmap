@@ -6,7 +6,7 @@
     <title>我的全球旅行地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
-    <link rel="stylesheet" href="styles.css?v=40" />
+    <link rel="stylesheet" href="styles.css?v=41" />
   </head>
   <body>
     <div class="app-shell map-first-shell">
@@ -136,55 +136,66 @@
             <p class="eyebrow" data-i18n="manualEyebrow">手动点亮</p>
             <h2 data-i18n="manualTitle">手动点亮</h2>
           </header>
-          <div class="panel">
-            <div class="section-head">
+          <nav class="manual-view-tabs floating-page-nav" aria-label="Check-in sections">
+            <button class="active" type="button" data-manual-jump="manual-section-china-province">中国省级</button>
+            <button type="button" data-manual-jump="manual-section-china-city">中国市级</button>
+            <button type="button" data-manual-jump="manual-section-japan">日本</button>
+            <button type="button" data-manual-jump="manual-section-country">国家/地区</button>
+          </nav>
+          <div class="panel manual-section-panel" id="manual-section-china-province">
+            <details class="manual-section-details" data-manual-section="chinaProvince">
+            <summary class="section-head">
               <div>
-                <p class="eyebrow" data-i18n="chinaAdmin1">中国一级行政区</p>
                 <h3 data-i18n="chinaProvince">中国省级</h3>
               </div>
               <span class="tag" id="manualChinaProvinceCount"></span>
-            </div>
+            </summary>
             <div class="manual-grid" id="manualChinaProvinceList"></div>
+            </details>
           </div>
-          <div class="panel">
-            <div class="section-head">
+          <div class="panel manual-section-panel" id="manual-section-china-city">
+            <details class="manual-section-details" data-manual-section="chinaCity">
+            <summary class="section-head">
               <div>
-                <p class="eyebrow" data-i18n="chinaAdmin2">中国二级行政区</p>
                 <h3 data-i18n="chinaCity">中国地级市</h3>
               </div>
               <span class="tag" id="manualChinaCityCount"></span>
-            </div>
+            </summary>
             <div class="manual-grid dense" id="manualChinaCityList"></div>
+            </details>
           </div>
-          <div class="panel">
-            <div class="section-head">
+          <div class="panel manual-section-panel" id="manual-section-japan">
+            <details class="manual-section-details" data-manual-section="japanRegion">
+            <summary class="section-head">
               <div>
-                <p class="eyebrow" data-i18n="japanAdmin1">日本一级地理区</p>
                 <h3 data-i18n="japanRegion">日本大区</h3>
               </div>
               <span class="tag" id="manualJapanRegionCount"></span>
-            </div>
+            </summary>
             <div class="manual-grid" id="manualJapanRegionList"></div>
+            </details>
           </div>
-          <div class="panel">
-            <div class="section-head">
+          <div class="panel manual-section-panel">
+            <details class="manual-section-details" data-manual-section="japanPrefecture">
+            <summary class="section-head">
               <div>
-                <p class="eyebrow" data-i18n="japanAdmin2">日本二级地理区</p>
                 <h3 data-i18n="japanPrefecture">日本都道府县</h3>
               </div>
               <span class="tag" id="manualJapanPrefectureCount"></span>
-            </div>
+            </summary>
             <div class="manual-grid dense" id="manualJapanPrefectureList"></div>
+            </details>
           </div>
-          <div class="panel">
-            <div class="section-head">
+          <div class="panel manual-section-panel" id="manual-section-country">
+            <details class="manual-section-details" data-manual-section="country">
+            <summary class="section-head">
               <div>
-                <p class="eyebrow" data-i18n="countriesEyebrow">国家地区</p>
                 <h3 data-i18n="countriesTitle">国家/地区</h3>
               </div>
               <span class="tag" id="manualCountryCount"></span>
-            </div>
+            </summary>
             <div class="manual-country-groups" id="manualCountryList"></div>
+            </details>
           </div>
         </section>
 
@@ -237,11 +248,11 @@
         </section>
 
         <section class="app-page content-page" id="achievements" data-page="achievements">
-          <div class="panel" id="achievementsPanel">
+          <header class="page-head">
             <p class="eyebrow" data-i18n="checklistEyebrow">打卡清单</p>
-            <h3 data-i18n="checklistTitle">打卡</h3>
-            <div class="achievement-list" id="achievementList"></div>
-          </div>
+            <h2 data-i18n="checklistTitle">打卡</h2>
+          </header>
+          <div class="achievement-list" id="achievementList"></div>
         </section>
       </main>
     </div>
@@ -249,6 +260,6 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-    <script src="app.js?v=162"></script>
+    <script src="app.js?v=163"></script>
   </body>
 </html>
