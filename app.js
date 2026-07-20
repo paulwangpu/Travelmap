@@ -18,6 +18,7 @@ const appVersion = "1.6";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const worldHeritageCatalogTotal = 1248;
+const dataCacheVersion = "20260720-gr1";
 const fixedChecklistTotals = {
   china5a: china5aOfficialTotal,
   worldHeritage: worldHeritageCatalogTotal,
@@ -1958,10 +1959,16 @@ function fetchBoundaryJson(primaryUrl, fallbackUrl = "") {
 }
 
 function fetchJson(url) {
-  return fetch(url).then((response) => {
+  return fetch(versionedLocalDataUrl(url)).then((response) => {
     if (!response.ok) throw new Error(`${response.status}`);
     return response.json();
   });
+}
+
+function versionedLocalDataUrl(url) {
+  if (!/^data\//.test(String(url || ""))) return url;
+  const separator = url.includes("?") ? "&" : "?";
+  return `${url}${separator}v=${encodeURIComponent(dataCacheVersion)}`;
 }
 
 function preloadBoundaryData(force = false, keys = ["country", "china", "us", "japan", "admin1"]) {

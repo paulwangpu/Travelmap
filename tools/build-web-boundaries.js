@@ -159,9 +159,11 @@ function provinceFallbackFromCityFeatures(cityFeatures) {
 
 function groupedCollection(features, countryId, groupField, source) {
   const groups = new Map();
+  let groupedFeatureCount = 0;
   features.forEach((feature) => {
     const groupName = String(feature.properties?.[groupField] || "").trim();
     if (!groupName) return;
+    groupedFeatureCount += 1;
     const key = `${countryId}:${groupField}:${groupName}`;
     if (!groups.has(key)) {
       groups.set(key, {
@@ -188,18 +190,25 @@ function groupedCollection(features, countryId, groupField, source) {
     });
     groups.get(key).geometry.coordinates.push(...geometryToPolygons(feature.geometry));
   });
-  return Array.from(groups.values()).map((feature) => ({
-    ...feature,
-    properties: { ...feature.properties, bbox: bboxForGeometry(feature.geometry) },
-  }));
+  return {
+    groupedFeatureCount,
+    features: Array.from(groups.values()).map((feature) => ({
+      ...feature,
+      properties: { ...feature.properties, bbox: bboxForGeometry(feature.geometry) },
+    })),
+  };
 }
 
 function provinceFromCityFeatures(cityFeatures, countryId) {
   const usableFields = ["region", "region_sub"].map((field) => {
     const grouped = groupedCollection(cityFeatures, countryId, field, "admin1-by-country");
-    return { field, grouped };
-  }).filter((entry) => entry.grouped.length >= 2 && entry.grouped.length < cityFeatures.length);
-  if (usableFields.length) return { features: usableFields[0].grouped, source: usableFields[0].field, fallbackToCity: false };
+    return { field, ...grouped };
+  }).filter((entry) => (
+    entry.groupedFeatureCount === cityFeatures.length
+    && entry.features.length >= 2
+    && entry.features.length < cityFeatures.length
+  ));
+  if (usableFields.length) return { features: usableFields[0].features, source: usableFields[0].field, fallbackToCity: false };
   return { features: provinceFallbackFromCityFeatures(cityFeatures), source: "city-as-province", fallbackToCity: false };
 }
 
@@ -241,7 +250,7 @@ function japanProvinceFeatures(cityFeatures) {
       region: japanRegionAliases[feature.properties.region] || feature.properties.region,
     },
   }));
-  return groupedCollection(normalized, "jp", "region", "japan-prefecture-regions");
+  return groupedCollection(normalized, "jp", "region", "japan-prefecture-regions").features;
 }
 
 function downloadFile(url, file) {
