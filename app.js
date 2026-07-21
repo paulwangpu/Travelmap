@@ -14,11 +14,11 @@ const languageStorageKey = "travel-map-language";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "1.6";
+const appVersion = "1.7";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const worldHeritageCatalogTotal = 1248;
-const dataCacheVersion = "20260720-gr1";
+const dataCacheVersion = "20260721-us-cd2";
 const fixedChecklistTotals = {
   china5a: china5aOfficialTotal,
   worldHeritage: worldHeritageCatalogTotal,
@@ -78,6 +78,9 @@ let boundaryIndexPromise = null;
 let boundaryLayerData = { province: {}, city: {} };
 let boundaryLayerPromises = { province: {}, city: {} };
 let boundaryLayerFailures = { province: {}, city: {} };
+let boundaryReferenceData = {};
+let boundaryReferencePromises = {};
+let boundaryReferenceFailures = {};
 let admin1DisplayCache = { source: null, collection: null };
 let mapDataVersion = 0;
 const mapGeoJsonCache = new Map();
@@ -1798,6 +1801,16 @@ function hasBoundaryLayer(countryId, layer) {
   return Boolean(boundaryIndex?.countries?.[countryCoverageId(countryId)]?.[layer]?.count > 0);
 }
 
+function boundaryReferenceUrl(countryId, referenceKey) {
+  const normalized = countryCoverageId(countryId);
+  return boundaryIndex?.countries?.[normalized]?.reference?.[referenceKey]?.url || "";
+}
+
+function hasBoundaryReference(countryId, referenceKey) {
+  const normalized = countryCoverageId(countryId);
+  return Boolean(boundaryIndex?.countries?.[normalized]?.reference?.[referenceKey]?.count > 0);
+}
+
 function hasDrawableProvinceBoundary(countryId) {
   return hasBoundaryLayer(countryId, "province");
 }
@@ -1896,10 +1909,69 @@ function boundaryLayerIsLoading(countryId, layer) {
   return Boolean(normalized && boundaryLayerPromises[layer]?.[normalized]);
 }
 
+function loadBoundaryReference(countryId, referenceKey, options = {}) {
+  const perfStartedAt = perfNow();
+  const { renderOnLoad = true } = options;
+  const normalized = countryCoverageId(countryId);
+  if (!normalized || normalized === "imported") return Promise.resolve(null);
+  const cacheKey = `${normalized}:${referenceKey}`;
+  const loadingLabel = `Loading ${getCountry(normalized).name} reference boundaries`;
+  if (boundaryReferenceData[cacheKey]) return Promise.resolve(boundaryReferenceData[cacheKey]);
+  if (boundaryReferencePromises[cacheKey]) return boundaryReferencePromises[cacheKey];
+  if (boundaryReferenceFailures[cacheKey]) return Promise.resolve(null);
+  const promise = loadBoundaryIndex()
+    .then(() => {
+      const url = boundaryReferenceUrl(normalized, referenceKey);
+      if (!url) return null;
+      setLoadingDebug(loadingLabel, "pending");
+      return fetchJson(url).then((data) => {
+        boundaryReferenceData[cacheKey] = normalizeFeatureCollection(data);
+        delete boundaryReferenceFailures[cacheKey];
+        mapDataVersion += 1;
+        logSlowStep(`loadBoundaryReference:${normalized}:${referenceKey}`, perfStartedAt);
+        setLoadingDebug(loadingLabel, "done");
+        clearLoadingDebugSoon();
+        return boundaryReferenceData[cacheKey];
+      });
+    })
+    .catch((error) => {
+      console.warn(`${normalized} ${referenceKey} reference boundary load failed`, error);
+      boundaryReferenceFailures[cacheKey] = true;
+      setLoadingDebug(loadingLabel, "error");
+      clearLoadingDebugSoon();
+      return null;
+    })
+    .finally(() => {
+      boundaryReferencePromises[cacheKey] = null;
+      if (renderOnLoad) scheduleGeoMapRender();
+    });
+  boundaryReferencePromises[cacheKey] = promise;
+  return promise;
+}
+
+function boundaryReferenceNeedsLoad(countryId, referenceKey) {
+  const normalized = countryCoverageId(countryId);
+  const cacheKey = `${normalized}:${referenceKey}`;
+  return Boolean(
+    normalized
+    && normalized !== "imported"
+    && hasBoundaryReference(normalized, referenceKey)
+    && !boundaryReferenceData[cacheKey]
+    && !boundaryReferencePromises[cacheKey]
+    && !boundaryReferenceFailures[cacheKey]
+  );
+}
+
+function boundaryReferenceIsLoading(countryId, referenceKey) {
+  const normalized = countryCoverageId(countryId);
+  return Boolean(normalized && boundaryReferencePromises[`${normalized}:${referenceKey}`]);
+}
+
 function boundaryLayerTasksForLevel(countries, level) {
   return countries.flatMap((countryId) => [
     boundaryLayerNeedsLoad(countryId, "province") ? () => loadBoundaryLayer(countryId, "province", { renderOnLoad: false }) : null,
     level === "subadmin" && boundaryLayerNeedsLoad(countryId, "city") ? () => loadBoundaryLayer(countryId, "city", { renderOnLoad: false }) : null,
+    level === "subadmin" && boundaryReferenceNeedsLoad(countryId, "counties") ? () => loadBoundaryReference(countryId, "counties", { renderOnLoad: false }) : null,
   ].filter(Boolean));
 }
 
@@ -1910,6 +1982,7 @@ function boundaryLevelHasPendingDetailLoads(level = state.boundaryLevel) {
     boundaryLayerNeedsLoad(countryId, "province")
     || boundaryLayerIsLoading(countryId, "province")
     || (level === "subadmin" && (boundaryLayerNeedsLoad(countryId, "city") || boundaryLayerIsLoading(countryId, "city")))
+    || (level === "subadmin" && (boundaryReferenceNeedsLoad(countryId, "counties") || boundaryReferenceIsLoading(countryId, "counties")))
   );
 }
 
@@ -2071,6 +2144,14 @@ function adminNameFromFeature(feature) {
     || props.adm1_name
     || ""
   ).trim();
+}
+
+function localizedBoundaryName(feature, fallbackName = "") {
+  const props = feature?.properties || {};
+  const localized = currentLanguage === "en"
+    ? (props.name_en || props.NAME_EN || props.NAMELSAD || props.NAME || props.name)
+    : (props.name_zh || props.name_zht || props.name || props.NAME || props.name_en);
+  return String(localized || fallbackName || adminNameFromFeature(feature) || "").trim();
 }
 
 function canonicalAdminNameFromFeature(feature) {
@@ -3971,7 +4052,7 @@ function unifiedBoundaryFeatures(layer, kind) {
     const collection = boundaryLayerData[layer]?.[countryId];
     if (!collection?.features?.length) return [];
     return collection.features.map((feature) => {
-      const name = String(feature.properties?.name || adminNameFromFeature(feature) || "").trim();
+      const name = localizedBoundaryName(feature);
       if (!name) return null;
       const depth = layer === "province"
         ? (coverageHasRegionForFeature(countryId, feature, name) ? 1 : 0)
@@ -3996,6 +4077,39 @@ function unifiedBoundaryFeatures(layer, kind) {
 
 function unifiedBoundaryGeoJson(layer, kind) {
   return { type: "FeatureCollection", features: unifiedBoundaryFeatures(layer, kind) };
+}
+
+function boundaryReferenceGeoJson(countryId, referenceKey, kind) {
+  const normalized = countryCoverageId(countryId);
+  const collection = boundaryReferenceData[`${normalized}:${referenceKey}`];
+  if (!collection?.features?.length) return emptyFeatureCollection();
+  return {
+    type: "FeatureCollection",
+    features: collection.features.map((feature) => {
+      const name = localizedBoundaryName(feature);
+      return {
+        ...feature,
+        properties: {
+          ...feature.properties,
+          id: `${normalized}-${referenceKey}-${slugify(feature.properties?.id || name)}`,
+          name,
+          depth: 0,
+          kind,
+          countryId: normalized,
+        },
+      };
+    }),
+  };
+}
+
+function usCountyReferenceGeoJson() {
+  return boundaryReferenceGeoJson("us", "counties", "county-reference");
+}
+
+function shouldShowUsCountyReference() {
+  return state.boundaryLevel === "subadmin"
+    && hasBoundaryReference("us", "counties")
+    && subadminBoundaryKeysToShow().includes("us");
 }
 
 function unifiedProvinceOutlineGeoJson() {
@@ -4455,6 +4569,7 @@ function renderMapLibreLayers() {
   removeMapLibreLayer("visited-regions-line");
   removeMapLibreLayer("visited-regions-fill");
   removeMapLibreLayer("visited-region-group-outlines-line");
+  removeMapLibreLayer("us-county-reference-line");
   removeMapLibreLayer("visited-subadmin-line");
   removeMapLibreLayer("visited-subadmin-fill");
   removeMapLibreLayer("map-points-shadow");
@@ -4472,6 +4587,7 @@ function renderMapLibreLayers() {
   removeMapLibreSource("imported-paths");
   removeMapLibreSource("visited-regions");
   removeMapLibreSource("visited-region-group-outlines");
+  removeMapLibreSource("us-county-reference");
   removeMapLibreSource("visited-subadmin");
   removeMapLibreSource("map-points");
   removeMapLibreSource("admin-country-context");
@@ -4523,6 +4639,11 @@ function renderMapLibreLayers() {
       addMapLibreFillLayer("visited-subadmin", "visited-subadmin-fill", "visited-subadmin-line", 0.24, 0.55);
     }
     subadminSubstageStartedAt = logRenderStage("subadmin-city", subadminSubstageStartedAt);
+    if (shouldShowUsCountyReference()) {
+      setMapLibreSource("us-county-reference", cachedMapGeoJson("us-county-reference", usCountyReferenceGeoJson));
+      addMapLibreReferenceLineLayer("us-county-reference", "us-county-reference-line", 0.32);
+    }
+    subadminSubstageStartedAt = logRenderStage("subadmin-reference", subadminSubstageStartedAt);
     if (boundaryIndex || subadminKeys.includes("china2")) {
       setMapLibreSource("visited-region-group-outlines", cachedMapGeoJson("subadmin-province-outlines", () => boundaryIndex ? provinceOutlineGeoJson() : adminOutlineGeoJsonForKeys(["china"])));
       addMapLibreLineLayer("visited-region-group-outlines", "visited-region-group-outlines-line", 1.55);
@@ -4555,7 +4676,10 @@ function refreshMapLibreDataOnly(options = {}) {
   const needs = ["map-background-context"];
   if (state.boundaryLevel === "country") needs.push("country-click", "visited-countries");
   if (state.boundaryLevel === "admin") needs.push("visited-regions", "visited-region-group-outlines", "admin-country-context");
-  if (state.boundaryLevel === "subadmin") needs.push("admin-country-context", "visited-subadmin", "visited-region-group-outlines");
+  if (state.boundaryLevel === "subadmin") {
+    needs.push("admin-country-context", "visited-subadmin", "visited-region-group-outlines");
+    if (shouldShowUsCountyReference()) needs.push("us-county-reference");
+  }
   if (needs.some((id) => !mapLibreMap.getSource(id))) return false;
 
   setMapLibreSource("map-background-context", cachedMapGeoJson("map-background-context", mapBackgroundContextGeoJson));
@@ -4584,6 +4708,12 @@ function refreshMapLibreDataOnly(options = {}) {
     }
     if (mapLibreMap.getSource("visited-subadmin")) {
       setMapLibreSource("visited-subadmin", subadminKeys.length ? cachedMapGeoJson("subadmin", subadminGeoJson) : emptyFeatureCollection());
+    }
+    if (mapLibreMap.getSource("us-county-reference")) {
+      setMapLibreSource(
+        "us-county-reference",
+        shouldShowUsCountyReference() ? cachedMapGeoJson("us-county-reference", usCountyReferenceGeoJson) : emptyFeatureCollection(),
+      );
     }
     if (mapLibreMap.getSource("visited-region-group-outlines")) {
       setMapLibreSource(
@@ -4995,6 +5125,19 @@ function addMapLibreLineLayer(sourceId, lineId, lineWidth) {
   });
 }
 
+function addMapLibreReferenceLineLayer(sourceId, lineId, lineWidth) {
+  mapLibreMap.addLayer({
+    id: lineId,
+    type: "line",
+    source: sourceId,
+    paint: {
+      "line-color": "#b45309",
+      "line-width": lineWidth,
+      "line-opacity": 0.34,
+    },
+  });
+}
+
 function addMapLibreImportedPathLayer(sourceId, lineId, lineWidth) {
   mapLibreMap.addLayer({
     id: lineId,
@@ -5108,6 +5251,14 @@ function renderLeafletLayers() {
             if (event.originalEvent) event.originalEvent._travelMapHandled = true;
             handleAdminRegionClick(feature);
           });
+          layer.bindTooltip(String(feature.properties.name || ""), { sticky: true });
+        },
+      }).addTo(leafletLayers);
+    }
+    if (shouldShowUsCountyReference()) {
+      L.geoJSON(usCountyReferenceGeoJson(), {
+        style: () => ({ color: "#b45309", weight: 0.35, opacity: 0.34, fillOpacity: 0 }),
+        onEachFeature: (feature, layer) => {
           layer.bindTooltip(String(feature.properties.name || ""), { sticky: true });
         },
       }).addTo(leafletLayers);

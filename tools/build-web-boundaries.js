@@ -11,10 +11,20 @@ const outDir = path.join(dataDir, "boundaries");
 const boundaryCountryDir = path.join(outDir, "country");
 const provinceDir = path.join(outDir, "province");
 const cityDir = path.join(outDir, "city");
+const referenceDir = path.join(outDir, "reference");
 const sourceDir = path.join(dataDir, "sources");
 const censusCountyUrl = "https://www2.census.gov/geo/tiger/GENZ2025/kml/cb_2025_us_county_5m.zip";
 const censusCountyZip = path.join(sourceDir, "cb_2025_us_county_5m.zip");
 const censusCountyExtractDir = path.join(sourceDir, "cb_2025_us_county_5m");
+const censusCongressionalDistrictUrl = "https://www2.census.gov/geo/tiger/GENZ2025/kml/cb_2025_us_cd119_5m.zip";
+const censusCongressionalDistrictZip = path.join(sourceDir, "cb_2025_us_cd119_5m.zip");
+const censusCongressionalDistrictExtractDir = path.join(sourceDir, "cb_2025_us_cd119_5m");
+const giscoNuts3Url = "https://gisco-services.ec.europa.eu/distribution/v2/nuts/geojson/NUTS_RG_01M_2024_4326_LEVL_3.geojson";
+const giscoNuts3File = path.join(sourceDir, "NUTS_RG_01M_2024_4326_LEVL_3.geojson");
+const giscoNuts2Url = "https://gisco-services.ec.europa.eu/distribution/v2/nuts/geojson/NUTS_RG_01M_2024_4326_LEVL_2.geojson";
+const giscoNuts2File = path.join(sourceDir, "NUTS_RG_01M_2024_4326_LEVL_2.geojson");
+const moroccoAdm2Url = "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MAR/ADM2/geoBoundaries-MAR-ADM2_simplified.geojson";
+const moroccoAdm2File = path.join(sourceDir, "geoBoundaries-MAR-ADM2_simplified.geojson");
 
 const chinaSpecialNames = {
   tw: "\u53f0\u6e7e",
@@ -48,6 +58,66 @@ const usStateAbbrByFips = {
   "50": "VT", "51": "VA", "53": "WA", "54": "WV", "55": "WI", "56": "WY", "60": "AS", "66": "GU", "69": "MP",
   "72": "PR", "78": "VI",
 };
+const vietnamRegionByProvinceEn = new Map([
+  ["dien bien", "Tây Bắc"], ["lai chau", "Tây Bắc"], ["son la", "Tây Bắc"], ["hoa binh", "Tây Bắc"], ["lao cai", "Tây Bắc"], ["yen bai", "Tây Bắc"],
+  ["ha giang", "Đông Bắc"], ["cao bang", "Đông Bắc"], ["bac kan", "Đông Bắc"], ["lang son", "Đông Bắc"], ["tuyen quang", "Đông Bắc"], ["thai nguyen", "Đông Bắc"], ["phu tho", "Đông Bắc"], ["bac giang", "Đông Bắc"], ["quang ninh", "Đông Bắc"],
+  ["hanoi", "Đồng bằng sông Hồng"], ["ha noi", "Đồng bằng sông Hồng"], ["haiphong", "Đồng bằng sông Hồng"], ["hai phong", "Đồng bằng sông Hồng"], ["vinh phuc", "Đồng bằng sông Hồng"], ["bac ninh", "Đồng bằng sông Hồng"], ["hai duong", "Đồng bằng sông Hồng"], ["hung yen", "Đồng bằng sông Hồng"], ["thai binh", "Đồng bằng sông Hồng"], ["ha nam", "Đồng bằng sông Hồng"], ["nam dinh", "Đồng bằng sông Hồng"], ["ninh binh", "Đồng bằng sông Hồng"],
+  ["thanh hoa", "Bắc Trung Bộ"], ["nghe an", "Bắc Trung Bộ"], ["ha tinh", "Bắc Trung Bộ"], ["quang binh", "Bắc Trung Bộ"], ["quang tri", "Bắc Trung Bộ"], ["thua thien hue", "Bắc Trung Bộ"],
+  ["da nang", "Duyên hải Nam Trung Bộ"], ["quang nam", "Duyên hải Nam Trung Bộ"], ["quang ngai", "Duyên hải Nam Trung Bộ"], ["binh dinh", "Duyên hải Nam Trung Bộ"], ["phu yen", "Duyên hải Nam Trung Bộ"], ["khanh hoa", "Duyên hải Nam Trung Bộ"], ["ninh thuan", "Duyên hải Nam Trung Bộ"], ["binh thuan", "Duyên hải Nam Trung Bộ"],
+  ["kon tum", "Tây Nguyên"], ["gia lai", "Tây Nguyên"], ["dak lak", "Tây Nguyên"], ["dak nong", "Tây Nguyên"], ["lam dong", "Tây Nguyên"],
+  ["binh phuoc", "Đông Nam Bộ"], ["tay ninh", "Đông Nam Bộ"], ["binh duong", "Đông Nam Bộ"], ["dong nai", "Đông Nam Bộ"], ["ba ria-vung tau", "Đông Nam Bộ"], ["ho chi minh", "Đông Nam Bộ"],
+  ["long an", "Đồng bằng sông Cửu Long"], ["tien giang", "Đồng bằng sông Cửu Long"], ["ben tre", "Đồng bằng sông Cửu Long"], ["tra vinh", "Đồng bằng sông Cửu Long"], ["vinh long", "Đồng bằng sông Cửu Long"], ["dong thap", "Đồng bằng sông Cửu Long"], ["an giang", "Đồng bằng sông Cửu Long"], ["kien giang", "Đồng bằng sông Cửu Long"], ["can tho", "Đồng bằng sông Cửu Long"], ["hau giang", "Đồng bằng sông Cửu Long"], ["soc trang", "Đồng bằng sông Cửu Long"], ["bac lieu", "Đồng bằng sông Cửu Long"], ["ca mau", "Đồng bằng sông Cửu Long"],
+]);
+const vietnamRegionLabels = {
+  "Tây Bắc": { zh: "西北部", en: "Northwest" },
+  "Đông Bắc": { zh: "东北部", en: "Northeast" },
+  "Đồng bằng sông Hồng": { zh: "红河三角洲", en: "Red River Delta" },
+  "Bắc Trung Bộ": { zh: "北中部", en: "North Central Coast" },
+  "Duyên hải Nam Trung Bộ": { zh: "南中部沿海", en: "South Central Coast" },
+  "Tây Nguyên": { zh: "中部高原", en: "Central Highlands" },
+  "Đông Nam Bộ": { zh: "东南部", en: "Southeast" },
+  "Đồng bằng sông Cửu Long": { zh: "湄公河三角洲", en: "Mekong Delta" },
+};
+
+const turkeyRegionByProvinceEn = new Map([
+  ["istanbul", "marmara"], ["edirne", "marmara"], ["kirklareli", "marmara"], ["tekirdag", "marmara"], ["kocaeli", "marmara"], ["yalova", "marmara"], ["sakarya", "marmara"], ["bilecik", "marmara"], ["bursa", "marmara"], ["balikesir", "marmara"], ["canakkale", "marmara"],
+  ["izmir", "aegean"], ["aydin", "aegean"], ["denizli", "aegean"], ["mugla", "aegean"], ["manisa", "aegean"], ["afyonkarahisar", "aegean"], ["kutahya", "aegean"], ["usak", "aegean"],
+  ["antalya", "mediterranean"], ["burdur", "mediterranean"], ["isparta", "mediterranean"], ["mersin", "mediterranean"], ["adana", "mediterranean"], ["osmaniye", "mediterranean"], ["hatay", "mediterranean"], ["kahramanmaras", "mediterranean"],
+  ["ankara", "central-anatolia"], ["eskisehir", "central-anatolia"], ["konya", "central-anatolia"], ["karaman", "central-anatolia"], ["aksaray", "central-anatolia"], ["nigde", "central-anatolia"], ["nevsehir", "central-anatolia"], ["kirikkale", "central-anatolia"], ["kirsehir", "central-anatolia"], ["yozgat", "central-anatolia"], ["kayseri", "central-anatolia"], ["sivas", "central-anatolia"], ["cankiri", "central-anatolia"],
+  ["bolu", "black-sea"], ["duzce", "black-sea"], ["zonguldak", "black-sea"], ["karabuk", "black-sea"], ["bartin", "black-sea"], ["kastamonu", "black-sea"], ["sinop", "black-sea"], ["corum", "black-sea"], ["amasya", "black-sea"], ["tokat", "black-sea"], ["samsun", "black-sea"], ["ordu", "black-sea"], ["giresun", "black-sea"], ["gumushane", "black-sea"], ["trabzon", "black-sea"], ["bayburt", "black-sea"], ["rize", "black-sea"], ["artvin", "black-sea"],
+  ["erzurum", "eastern-anatolia"], ["erzincan", "eastern-anatolia"], ["agri", "eastern-anatolia"], ["kars", "eastern-anatolia"], ["igdir", "eastern-anatolia"], ["ardahan", "eastern-anatolia"], ["malatya", "eastern-anatolia"], ["elazig", "eastern-anatolia"], ["bingol", "eastern-anatolia"], ["tunceli", "eastern-anatolia"], ["van", "eastern-anatolia"], ["mus", "eastern-anatolia"], ["bitlis", "eastern-anatolia"], ["hakkari", "eastern-anatolia"],
+  ["gaziantep", "southeastern-anatolia"], ["kilis", "southeastern-anatolia"], ["adiyaman", "southeastern-anatolia"], ["sanliurfa", "southeastern-anatolia"], ["diyarbakir", "southeastern-anatolia"], ["mardin", "southeastern-anatolia"], ["batman", "southeastern-anatolia"], ["siirt", "southeastern-anatolia"], ["sirnak", "southeastern-anatolia"],
+]);
+const turkeyRegionLabels = {
+  marmara: { zh: "\u9a6c\u5c14\u9a6c\u62c9\u5730\u533a", en: "Marmara Region" },
+  aegean: { zh: "\u7231\u7434\u6d77\u5730\u533a", en: "Aegean Region" },
+  mediterranean: { zh: "\u5730\u4e2d\u6d77\u5730\u533a", en: "Mediterranean Region" },
+  "central-anatolia": { zh: "\u4e2d\u5b89\u7eb3\u6258\u5229\u4e9a\u5730\u533a", en: "Central Anatolia Region" },
+  "black-sea": { zh: "\u9ed1\u6d77\u5730\u533a", en: "Black Sea Region" },
+  "eastern-anatolia": { zh: "\u4e1c\u5b89\u7eb3\u6258\u5229\u4e9a\u5730\u533a", en: "Eastern Anatolia Region" },
+  "southeastern-anatolia": { zh: "\u4e1c\u5357\u5b89\u7eb3\u6258\u5229\u4e9a\u5730\u533a", en: "Southeastern Anatolia Region" },
+};
+function normalizeLatinKey(value) {
+  return String(value || "")
+    .replace(/İ/g, "I")
+    .replace(/ı/g, "i")
+    .replace(/ğ/g, "g")
+    .replace(/Ğ/g, "G")
+    .replace(/ş/g, "s")
+    .replace(/Ş/g, "S")
+    .replace(/ç/g, "c")
+    .replace(/Ç/g, "C")
+    .replace(/ö/g, "o")
+    .replace(/Ö/g, "O")
+    .replace(/ü/g, "u")
+    .replace(/Ü/g, "U")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s*,.*$/, "")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+}
 
 function ensureDir(dir) {
   fs.mkdirSync(dir, { recursive: true });
@@ -133,6 +203,16 @@ function cleanFeature(feature, countryId, layer, fallbackName = "") {
   };
 }
 
+function latinBoundaryName(value) {
+  return String(value || "")
+    .replace(/[^\u0000-\u024f\s'’.,/-]/g, " ")
+    .replace(/\b(Province|Prefecture|Préfecture)\s+(de|d'|of)?\s*/gi, "")
+    .replace(/\b(Province|Prefecture|Préfecture)\b/gi, "")
+    .replace(/[-,./\s]+$/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function validBoundaryFeatures(features) {
   return features.filter((feature) => feature.geometry && String(feature.properties?.name || "").trim());
 }
@@ -210,6 +290,126 @@ function provinceFromCityFeatures(cityFeatures, countryId) {
   ));
   if (usableFields.length) return { features: usableFields[0].features, source: usableFields[0].field, fallbackToCity: false };
   return { features: provinceFallbackFromCityFeatures(cityFeatures), source: "city-as-province", fallbackToCity: false };
+}
+
+function vietnamProvinceKey(feature) {
+  const properties = feature.properties || {};
+  const candidates = [
+    properties.name_en,
+    properties.name,
+    properties.gn_name,
+    properties.gns_name,
+    properties.woe_label,
+  ];
+  for (const candidate of candidates) {
+    const normalized = String(candidate || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/^tinh\s+/i, "")
+      .replace(/^thanh pho\s+/i, "")
+      .replace(/\s*,.*$/, "")
+      .replace(/\s+/g, " ")
+      .trim()
+      .toLowerCase();
+    if (vietnamRegionByProvinceEn.has(normalized)) return vietnamRegionByProvinceEn.get(normalized);
+  }
+  return "";
+}
+
+function vietnamProvinceFeatures(cityFeatures) {
+  const groups = new Map();
+  cityFeatures.forEach((feature) => {
+    const regionKey = vietnamProvinceKey(feature);
+    if (!regionKey) return;
+    const label = vietnamRegionLabels[regionKey] || { zh: regionKey, en: regionKey };
+    if (!groups.has(regionKey)) {
+      groups.set(regionKey, {
+        type: "Feature",
+        properties: {
+          id: `vn-region-${slug(regionKey)}`,
+          countryId: "vn",
+          name: label.zh,
+          name_en: label.en,
+          aliases: [regionKey],
+          grouped_from: "admin1-by-country",
+          group_field: "vietnam-standard-region",
+          source_layer: "province",
+        },
+        geometry: { type: "MultiPolygon", coordinates: [] },
+      });
+    }
+    const group = groups.get(regionKey);
+    const childNames = [feature.properties?.name, feature.properties?.name_en, preferredName(feature.properties)]
+      .map((name) => String(name || "").trim())
+      .filter(Boolean);
+    childNames.forEach((name) => {
+      if (!group.properties.aliases.includes(name)) group.properties.aliases.push(name);
+    });
+    group.geometry.coordinates.push(...geometryToPolygons(feature.geometry));
+  });
+  return Array.from(groups.values()).map((feature) => ({
+    ...feature,
+    properties: { ...feature.properties, bbox: bboxForGeometry(feature.geometry) },
+  }));
+}
+
+function turkeyProvinceKey(feature) {
+  const properties = feature.properties || {};
+  const candidates = [
+    properties.name_en,
+    properties.name,
+    properties.gn_name,
+    properties.gns_name,
+    properties.woe_label,
+  ];
+  for (const candidate of candidates) {
+    const normalized = normalizeLatinKey(candidate);
+    if (turkeyRegionByProvinceEn.has(normalized)) return turkeyRegionByProvinceEn.get(normalized);
+  }
+  return "";
+}
+
+function turkeyProvinceFeatures(cityFeatures) {
+  const groups = new Map();
+  cityFeatures.forEach((feature) => {
+    const regionKey = turkeyProvinceKey(feature);
+    if (!regionKey) return;
+    const label = turkeyRegionLabels[regionKey] || { zh: regionKey, en: regionKey };
+    if (!groups.has(regionKey)) {
+      groups.set(regionKey, {
+        type: "Feature",
+        properties: {
+          id: `tr-region-${slug(regionKey)}`,
+          countryId: "tr",
+          name: label.zh,
+          name_en: label.en,
+          aliases: [regionKey],
+          grouped_from: "admin1-by-country",
+          group_field: "turkey-geographic-region",
+          source_layer: "province",
+        },
+        geometry: { type: "MultiPolygon", coordinates: [] },
+      });
+    }
+    const group = groups.get(regionKey);
+    const childNames = [feature.properties?.name, feature.properties?.name_en, preferredName(feature.properties)]
+      .map((name) => String(name || "").trim())
+      .filter(Boolean);
+    childNames.forEach((name) => {
+      if (!group.properties.aliases.includes(name)) group.properties.aliases.push(name);
+    });
+    group.geometry.coordinates.push(...geometryToPolygons(feature.geometry));
+  });
+  if (groups.size !== 7) {
+    const missed = cityFeatures
+      .map((feature) => feature.properties?.name_en || feature.properties?.name || "")
+      .filter((name) => name && !turkeyProvinceKey({ properties: { name_en: name } }));
+    throw new Error(`Turkey geographic regions incomplete: ${groups.size}/7 groups, missed ${missed.join(", ")}`);
+  }
+  return Array.from(groups.values()).map((feature) => ({
+    ...feature,
+    properties: { ...feature.properties, bbox: bboxForGeometry(feature.geometry) },
+  }));
 }
 
 function chinaProvinceFeatures() {
@@ -362,24 +562,147 @@ async function usCountyFeatures() {
   return features;
 }
 
-function buildCountryCityFeatures(countryId) {
+function parseCongressionalDistrictKml(file) {
+  const text = fs.readFileSync(file, "utf8");
+  const features = [];
+  for (const match of text.matchAll(/<Placemark\b[\s\S]*?<\/Placemark>/gi)) {
+    const block = match[0];
+    const geoid = simpleData(block, "GEOID");
+    const statefp = simpleData(block, "STATEFP");
+    const cd119fp = simpleData(block, "CD119FP");
+    const displayName = simpleData(block, "NAMELSAD") || decodeXml(block.match(/<name>([\s\S]*?)<\/name>/i)?.[1] || "");
+    const stateAbbr = usStateAbbrByFips[statefp] || statefp || "";
+    const shortName = cd119fp === "00" ? `${stateAbbr} At-Large District` : `${stateAbbr}-${cd119fp}`;
+    const polygons = [];
+    for (const polygonMatch of block.matchAll(/<Polygon\b[\s\S]*?<\/Polygon>/gi)) {
+      const polygon = polygonFromKml(polygonMatch[0]);
+      if (polygon) polygons.push(polygon);
+    }
+    if (!polygons.length) continue;
+    const geometry = polygons.length === 1 ? { type: "Polygon", coordinates: polygons[0] } : { type: "MultiPolygon", coordinates: polygons };
+    features.push({
+      type: "Feature",
+      properties: {
+        id: `us-cd119-${geoid || slug(shortName)}`,
+        countryId: "us",
+        name: shortName,
+        name_en: shortName,
+        display_name: displayName,
+        state_abbr: stateAbbr,
+        statefp,
+        cd119fp,
+        geoid,
+        source_layer: "city",
+        bbox: bboxForGeometry(geometry),
+      },
+      geometry,
+    });
+  }
+  return features;
+}
+
+async function usCongressionalDistrictFeatures() {
+  await downloadFile(censusCongressionalDistrictUrl, censusCongressionalDistrictZip);
+  extractZip(censusCongressionalDistrictZip, censusCongressionalDistrictExtractDir);
+  const kml = fs.readdirSync(censusCongressionalDistrictExtractDir).find((name) => name.toLowerCase().endsWith(".kml"));
+  if (!kml) throw new Error("Census congressional district KML not found after extraction");
+  const features = parseCongressionalDistrictKml(path.join(censusCongressionalDistrictExtractDir, kml));
+  if (features.length < 430 || features.length > 460) throw new Error(`Unexpected congressional district feature count: ${features.length}`);
+  return features;
+}
+
+async function giscoNutsFeatures(countryId, level, minCount) {
+  const upperCountryId = String(countryId || "").toUpperCase();
+  const sourceUrl = level === 2 ? giscoNuts2Url : giscoNuts3Url;
+  const sourceFile = level === 2 ? giscoNuts2File : giscoNuts3File;
+  await downloadFile(sourceUrl, sourceFile);
+  const collection = readFeatureCollection(sourceFile);
+  const features = collection.features
+    .filter((feature) => String(feature.properties?.CNTR_CODE || "").toUpperCase() === upperCountryId)
+    .map((feature) => {
+      const properties = feature.properties || {};
+      const name = String(properties.NUTS_NAME || properties.NAME_LATN || properties.NUTS_ID || "").trim();
+      const geometry = feature.geometry || null;
+      return {
+        type: "Feature",
+        properties: {
+          id: `${countryId}-nuts${level}-${properties.NUTS_ID || slug(name)}`,
+          countryId,
+          name,
+          name_en: name,
+          nuts_id: properties.NUTS_ID || "",
+          nuts_level: properties.LEVL_CODE ?? level,
+          source_layer: "city",
+          bbox: bboxForGeometry(geometry),
+        },
+        geometry,
+      };
+    });
+  if (features.length < minCount) throw new Error(`Unexpectedly small ${upperCountryId} NUTS${level} feature count: ${features.length}`);
+  return features;
+}
+
+async function moroccoAdm2Features() {
+  await downloadFile(moroccoAdm2Url, moroccoAdm2File);
+  const collection = readFeatureCollection(moroccoAdm2File);
+  const features = collection.features.map((feature) => {
+    const properties = feature.properties || {};
+    const rawName = properties.shapeName || properties.name || properties.NAME || properties.shapeID || "";
+    const name = latinBoundaryName(rawName) || String(rawName || properties.shapeID || "").trim();
+    const geometry = feature.geometry || null;
+    return {
+      type: "Feature",
+      properties: {
+        id: `ma-adm2-${properties.shapeID || slug(name)}`,
+        countryId: "ma",
+        name,
+        name_en: name,
+        adm_level: 2,
+        shape_id: properties.shapeID || "",
+        source_layer: "city",
+        bbox: bboxForGeometry(geometry),
+      },
+      geometry,
+    };
+  });
+  if (features.length < 70) throw new Error(`Unexpectedly small Morocco ADM2 feature count: ${features.length}`);
+  return features;
+}
+
+async function buildCountryCityFeatures(countryId) {
   if (countryId === "cn") return chinaCityFeatures();
+  if (countryId === "at") return giscoNutsFeatures("at", 3, 30);
+  if (countryId === "de") return giscoNutsFeatures("de", 2, 35);
+  if (countryId === "ma") return moroccoAdm2Features();
   const file = path.join(admin1Dir, `${countryId}.geojson`);
   if (!fs.existsSync(file)) return [];
   return readFeatureCollection(file).features.map((feature) => cleanFeature(feature, countryId, "city"));
 }
 
 async function main() {
-  const cachedUsCountyFeatures = fs.existsSync(path.join(cityDir, "us.geojson"))
-    ? readFeatureCollection(path.join(cityDir, "us.geojson")).features
+  const cachedUsCityFile = path.join(cityDir, "us.geojson");
+  const cachedUsReferenceFile = path.join(referenceDir, "us-counties.geojson");
+  const cachedUsCityFeatures = fs.existsSync(cachedUsCityFile)
+    ? readFeatureCollection(cachedUsCityFile).features
     : [];
+  const cachedUsDistrictFeatures = cachedUsCityFeatures.length >= 430 && cachedUsCityFeatures.length <= 460 && cachedUsCityFeatures.some((feature) => feature.properties?.cd119fp)
+    ? cachedUsCityFeatures
+    : [];
+  const legacyUsCountyFeatures = cachedUsCityFeatures.length >= 3000 && cachedUsCityFeatures.some((feature) => feature.properties?.county_name)
+    ? cachedUsCityFeatures
+    : [];
+  const cachedUsCountyFeatures = fs.existsSync(cachedUsReferenceFile)
+    ? readFeatureCollection(cachedUsReferenceFile).features
+    : legacyUsCountyFeatures;
   ensureDir(outDir);
   fs.rmSync(boundaryCountryDir, { recursive: true, force: true });
   fs.rmSync(provinceDir, { recursive: true, force: true });
   fs.rmSync(cityDir, { recursive: true, force: true });
+  fs.rmSync(referenceDir, { recursive: true, force: true });
   ensureDir(boundaryCountryDir);
   ensureDir(provinceDir);
   ensureDir(cityDir);
+  ensureDir(referenceDir);
 
   const countryBoundaryFile = path.join(boundaryCountryDir, "world.geojson");
   const countryFeatures = readFeatureCollection(path.join(dataDir, "countries.geojson")).features
@@ -401,6 +724,10 @@ async function main() {
       country: "data/countries.geojson",
       globalCity: "data/admin1-by-country/*.geojson",
       usCounty: censusCountyUrl,
+      usCongressionalDistricts: censusCongressionalDistrictUrl,
+      giscoNuts2: giscoNuts2Url,
+      giscoNuts3: giscoNuts3Url,
+      moroccoAdm2: moroccoAdm2Url,
     },
     layers: {
       country: {
@@ -412,11 +739,11 @@ async function main() {
   };
 
   for (const countryId of Array.from(new Set(countryIds)).sort()) {
-    const cityFeatures = countryId === "us" && cachedUsCountyFeatures.length >= 3000
-      ? cachedUsCountyFeatures
+    const cityFeatures = countryId === "us" && cachedUsDistrictFeatures.length
+      ? cachedUsDistrictFeatures
       : countryId === "us"
-        ? await usCountyFeatures()
-        : buildCountryCityFeatures(countryId);
+        ? await usCongressionalDistrictFeatures()
+        : await buildCountryCityFeatures(countryId);
     if (!cityFeatures.length) continue;
 
     let provinceFeatures;
@@ -425,12 +752,21 @@ async function main() {
     if (countryId === "cn") {
       provinceFeatures = chinaProvinceFeatures();
       provinceSource = "china-provinces";
+    } else if (countryId === "at" || countryId === "de") {
+      provinceFeatures = readFeatureCollection(path.join(admin1Dir, `${countryId}.geojson`)).features.map((feature) => cleanFeature(feature, countryId, "province"));
+      provinceSource = countryId === "at" ? "austria-states" : "germany-states";
     } else if (countryId === "us") {
       provinceFeatures = readFeatureCollection(path.join(dataDir, "us-states.geojson")).features.map((feature) => cleanFeature(feature, "us", "province"));
       provinceSource = "us-states";
     } else if (countryId === "jp") {
       provinceFeatures = japanProvinceFeatures(cityFeatures);
       provinceSource = "japan-regions";
+    } else if (countryId === "vn") {
+      provinceFeatures = vietnamProvinceFeatures(cityFeatures);
+      provinceSource = "vietnam-standard-regions";
+    } else if (countryId === "tr") {
+      provinceFeatures = turkeyProvinceFeatures(cityFeatures);
+      provinceSource = "turkey-geographic-regions";
     } else {
       const province = provinceFromCityFeatures(cityFeatures, countryId);
       provinceFeatures = province.features;
@@ -456,11 +792,25 @@ async function main() {
         count: validCityFeatures.length,
       },
     };
+    if (countryId === "us") {
+      const countyFeatures = cachedUsCountyFeatures.length >= 3000 ? cachedUsCountyFeatures : await usCountyFeatures();
+      const countyFile = path.join(referenceDir, "us-counties.geojson");
+      writeCollection(countyFile, countyFeatures);
+      index.countries.us.city.source = "us-congressional-districts-119";
+      index.countries.us.reference = {
+        counties: {
+          url: relDataPath(countyFile),
+          count: validBoundaryFeatures(countyFeatures).length,
+          source: "us-counties-reference",
+        },
+      };
+    }
   }
 
   writeJson(path.join(outDir, "index.json"), index);
   console.log(`Built ${Object.keys(index.countries).length} country boundary entries`);
-  console.log(`US county count: ${index.countries.us?.city.count || 0}`);
+  console.log(`US congressional district count: ${index.countries.us?.city.count || 0}`);
+  console.log(`US county reference count: ${index.countries.us?.reference?.counties?.count || 0}`);
 }
 
 main().catch((error) => {
