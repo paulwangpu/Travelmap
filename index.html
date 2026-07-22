@@ -73,6 +73,7 @@
               </label>
               <button id="addMapPoint" class="map-add-point-button" type="button" data-i18n="addMapPoint">添加打卡点</button>
               <div class="map-overlay-toggles">
+                <label><input id="showLightOnMap" type="checkbox" checked /> <span data-i18n="overlayLight">我的点亮</span></label>
                 <label><input id="showCheckinsOnMap" type="checkbox" checked /> <span data-i18n="overlayCheckins">我的打卡</span></label>
                 <label><input id="showTracksOnMap" type="checkbox" checked /> <span data-i18n="overlayTracks">我的足迹</span></label>
                 <label><input id="showChina5aOnMap" type="checkbox" /> <span data-i18n="overlay5a">5A 景区</span></label>
@@ -140,6 +141,7 @@
             <button class="active" type="button" data-manual-jump="manual-section-china-province">中国省级</button>
             <button type="button" data-manual-jump="manual-section-china-city">中国市级</button>
             <button type="button" data-manual-jump="manual-section-japan">日本</button>
+            <button type="button" data-manual-jump="manual-section-us-states">美国 50 州</button>
             <button type="button" data-manual-jump="manual-section-country">国家/地区</button>
           </nav>
           <div class="panel manual-section-panel" id="manual-section-china-province">
@@ -184,6 +186,17 @@
               <span class="tag" id="manualJapanPrefectureCount"></span>
             </summary>
             <div class="manual-grid dense" id="manualJapanPrefectureList"></div>
+            </details>
+          </div>
+          <div class="panel manual-section-panel" id="manual-section-us-states">
+            <details class="manual-section-details" data-manual-section="usStates">
+            <summary class="section-head">
+              <div>
+                <h3 data-i18n="usStatesPlate">美国 50 州</h3>
+              </div>
+              <span class="tag" id="manualUsStateCount"></span>
+            </summary>
+            <div class="license-plate-grid" id="manualUsStateList"></div>
             </details>
           </div>
           <div class="panel manual-section-panel" id="manual-section-country">
@@ -260,6 +273,6 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-    <script src="app.js?v=172"></script>
+    <script src="app.js?v=181"></script>
   </body>
 </html>

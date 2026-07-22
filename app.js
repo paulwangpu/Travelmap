@@ -143,6 +143,7 @@ const translations = {
     levelCountry: "国家级",
     levelAdmin: "省级",
     levelCity: "市级",
+    overlayLight: "我的点亮",
     overlayCheckins: "我的打卡",
     overlayTracks: "我的足迹",
     overlay5a: "5A 景区",
@@ -164,6 +165,7 @@ const translations = {
     japanRegion: "日本大区",
     japanAdmin2: "日本二级地理区",
     japanPrefecture: "日本都道府县",
+    usStatesPlate: "美国 50 州",
     countriesEyebrow: "国家地区",
     countriesTitle: "国家/地区",
     importEyebrow: "导入",
@@ -250,6 +252,7 @@ const translations = {
     levelCountry: "Country level",
     levelAdmin: "Province / State",
     levelCity: "City level",
+    overlayLight: "My lit areas",
     overlayCheckins: "My check-ins",
     overlayTracks: "My tracks",
     overlay5a: "5A scenic areas",
@@ -271,6 +274,7 @@ const translations = {
     japanRegion: "Japan regions",
     japanAdmin2: "Japan Admin 2",
     japanPrefecture: "Japan prefectures",
+    usStatesPlate: "U.S. 50 states",
     countriesEyebrow: "Countries",
     countriesTitle: "Countries / Regions",
     importEyebrow: "Import",
@@ -333,7 +337,7 @@ function t(key) {
 }
 
 function defaultMapOverlays() {
-  return { checkins: true, paths: true, china5a: false, worldHeritage: false };
+  return { light: true, checkins: true, paths: true, china5a: false, worldHeritage: false };
 }
 
 function normalizeMapOverlays(overlays = {}) {
@@ -343,6 +347,10 @@ function normalizeMapOverlays(overlays = {}) {
     china5a: false,
     worldHeritage: false,
   };
+}
+
+function isLightOverlayEnabled() {
+  return Boolean(({ ...defaultMapOverlays(), ...(state.mapOverlays || {}) }).light);
 }
 
 const mapProviders = {
@@ -1431,6 +1439,61 @@ function normalizeJapanPlacesHierarchy() {
 }
 
 
+const usStatePlateCatalog = [
+  ["Alabama", "AL", "阿拉巴马州", "Heart of Dixie", "南方腹地"],
+  ["Alaska", "AK", "阿拉斯加州", "The Last Frontier", "最后的边疆"],
+  ["Arizona", "AZ", "亚利桑那州", "Grand Canyon State", "大峡谷之州"],
+  ["Arkansas", "AR", "阿肯色州", "The Natural State", "自然之州"],
+  ["California", "CA", "加利福尼亚州", "Golden State", "金州"],
+  ["Colorado", "CO", "科罗拉多州", "Centennial State", "百年之州"],
+  ["Connecticut", "CT", "康涅狄格州", "Constitution State", "宪法之州"],
+  ["Delaware", "DE", "特拉华州", "First State", "第一州"],
+  ["Florida", "FL", "佛罗里达州", "Sunshine State", "阳光之州"],
+  ["Georgia", "GA", "佐治亚州", "Peach State", "桃州"],
+  ["Hawaii", "HI", "夏威夷州", "Aloha State", "阿罗哈之州"],
+  ["Idaho", "ID", "爱达荷州", "Famous Potatoes", "土豆之乡"],
+  ["Illinois", "IL", "伊利诺伊州", "Land of Lincoln", "林肯之地"],
+  ["Indiana", "IN", "印第安纳州", "Crossroads of America", "美国十字路口"],
+  ["Iowa", "IA", "艾奥瓦州", "Hawkeye State", "鹰眼之州"],
+  ["Kansas", "KS", "堪萨斯州", "Sunflower State", "向日葵之州"],
+  ["Kentucky", "KY", "肯塔基州", "Bluegrass State", "蓝草之州"],
+  ["Louisiana", "LA", "路易斯安那州", "Sportsman's Paradise", "户外运动天堂"],
+  ["Maine", "ME", "缅因州", "Vacationland", "度假胜地"],
+  ["Maryland", "MD", "马里兰州", "Old Line State", "老防线之州"],
+  ["Massachusetts", "MA", "马萨诸塞州", "Bay State", "海湾之州"],
+  ["Michigan", "MI", "密歇根州", "Great Lakes State", "五大湖之州"],
+  ["Minnesota", "MN", "明尼苏达州", "10,000 Lakes", "万湖之州"],
+  ["Mississippi", "MS", "密西西比州", "Magnolia State", "木兰之州"],
+  ["Missouri", "MO", "密苏里州", "Show-Me State", "求证之州"],
+  ["Montana", "MT", "蒙大拿州", "Big Sky Country", "大天空之乡"],
+  ["Nebraska", "NE", "内布拉斯加州", "Cornhusker State", "玉米剥壳者之州"],
+  ["Nevada", "NV", "内华达州", "Silver State", "白银之州"],
+  ["New Hampshire", "NH", "新罕布什尔州", "Live Free or Die", "不自由，毋宁死"],
+  ["New Jersey", "NJ", "新泽西州", "Garden State", "花园之州"],
+  ["New Mexico", "NM", "新墨西哥州", "Land of Enchantment", "魔力之地"],
+  ["New York", "NY", "纽约州", "Empire State", "帝国之州"],
+  ["North Carolina", "NC", "北卡罗来纳州", "First in Flight", "首飞之地"],
+  ["North Dakota", "ND", "北达科他州", "Peace Garden State", "和平花园之州"],
+  ["Ohio", "OH", "俄亥俄州", "Buckeye State", "七叶树之州"],
+  ["Oklahoma", "OK", "俄克拉荷马州", "Sooner State", "捷足者之州"],
+  ["Oregon", "OR", "俄勒冈州", "Beaver State", "海狸之州"],
+  ["Pennsylvania", "PA", "宾夕法尼亚州", "Keystone State", "拱心石之州"],
+  ["Rhode Island", "RI", "罗得岛州", "Ocean State", "海洋之州"],
+  ["South Carolina", "SC", "南卡罗来纳州", "Palmetto State", "棕榈之州"],
+  ["South Dakota", "SD", "南达科他州", "Mount Rushmore State", "拉什莫尔山之州"],
+  ["Tennessee", "TN", "田纳西州", "Volunteer State", "志愿者之州"],
+  ["Texas", "TX", "得克萨斯州", "Lone Star State", "孤星之州"],
+  ["Utah", "UT", "犹他州", "Beehive State", "蜂巢之州"],
+  ["Vermont", "VT", "佛蒙特州", "Green Mountain State", "绿山之州"],
+  ["Virginia", "VA", "弗吉尼亚州", "Virginia Is For Lovers", "爱在弗吉尼亚"],
+  ["Washington", "WA", "华盛顿州", "Evergreen State", "常青之州"],
+  ["West Virginia", "WV", "西弗吉尼亚州", "Mountain State", "山地之州"],
+  ["Wisconsin", "WI", "威斯康星州", "America's Dairyland", "美国乳业之乡"],
+  ["Wyoming", "WY", "怀俄明州", "Equality State", "平等之州"],
+].map(([name, abbr, nameZh, nicknameEn, nicknameZh]) => ({ name, abbr, nameZh, nicknameEn, nicknameZh }));
+
+const usStatePlateByName = new Map(usStatePlateCatalog.map((item) => [item.name, item]));
+
 const usStateBboxes = {
   California: [-124.6, 32.4, -114, 42.1],
   "New York": [-80, 40.4, -71.8, 45.1],
@@ -1684,7 +1747,7 @@ let state = {
   boundaryLevel: "country",
   mapProviderMode: "auto",
   detectedMapProvider: "",
-  mapOverlays: { checkins: true, paths: true, china5a: false, worldHeritage: false },
+  mapOverlays: { light: true, checkins: true, paths: true, china5a: false, worldHeritage: false },
   mapViewport: null,
   focusPlaceId: "",
 };
@@ -1976,6 +2039,7 @@ function boundaryLayerTasksForLevel(countries, level) {
 }
 
 function boundaryLevelHasPendingDetailLoads(level = state.boundaryLevel) {
+  if (!isLightOverlayEnabled()) return false;
   if (level !== "admin" && level !== "subadmin") return false;
   const countries = boundaryDetailCountries();
   return countries.some((countryId) =>
@@ -2059,6 +2123,7 @@ function boundaryKeysForLevel(level = state.boundaryLevel) {
 }
 
 function ensureBoundaryDataForLevel(level = state.boundaryLevel) {
+  if (!isLightOverlayEnabled()) return [];
   const keys = Array.from(new Set(boundaryKeysForLevel(level))).filter((key) => boundarySources[key]);
   const pending = keys
     .filter((key) => !boundaryData[key])
@@ -3999,6 +4064,7 @@ function dashboardStats() {
     chinaRegions: countVisitedRegions("china"),
     chinaSubregions: countVisitedSubregions("china2"),
     chinaSubregionTotal: chinaPrefectureTotal(),
+    usRegions: countVisitedRegions("us"),
     japanRegions: countVisitedRegions("japan"),
     japanPrefectures: countVisitedSubregions("japanPref"),
     china5aDone: checklistDoneCount("china5a"),
@@ -4596,11 +4662,11 @@ function renderMapLibreLayers() {
   removeMapLibreSource("country-click");
   perfStageStartedAt = logRenderStage("remove", perfStageStartedAt);
 
-  setMapLibreSource("map-background-context", cachedMapGeoJson("map-background-context", mapBackgroundContextGeoJson));
+  setMapLibreSource("map-background-context", overlays.light ? cachedMapGeoJson("map-background-context", mapBackgroundContextGeoJson) : emptyFeatureCollection());
   addMapLibreFillLayer("map-background-context", "map-background-context-fill", "map-background-context-line", 0.18, 1);
   perfStageStartedAt = logRenderStage("background", perfStageStartedAt);
 
-  if (state.boundaryLevel === "country") {
+  if (overlays.light && state.boundaryLevel === "country") {
     setMapLibreSource("country-click", cachedMapGeoJson("country-click", allCountryClickGeoJson));
     addMapLibreClickFillLayer("country-click", "country-click-fill");
     setMapLibreSource("visited-countries", cachedMapGeoJson("countries", countryGeoJson));
@@ -4608,7 +4674,7 @@ function renderMapLibreLayers() {
     perfStageStartedAt = logRenderStage("country", perfStageStartedAt);
   }
 
-  if (state.boundaryLevel === "admin") {
+  if (overlays.light && state.boundaryLevel === "admin") {
     const adminStageStartedAt = perfNow();
     let adminSubstageStartedAt = adminStageStartedAt;
     setMapLibreSource("visited-regions", cachedMapGeoJson("regions", regionGeoJson));
@@ -4624,7 +4690,7 @@ function renderMapLibreLayers() {
     perfStageStartedAt = logRenderStage("admin", perfStageStartedAt);
   }
 
-  if (state.boundaryLevel === "subadmin") {
+  if (overlays.light && state.boundaryLevel === "subadmin") {
     const subadminStageStartedAt = perfNow();
     let subadminSubstageStartedAt = subadminStageStartedAt;
     const subadminKeys = subadminBoundaryKeysToShow();
@@ -4674,28 +4740,28 @@ function refreshMapLibreDataOnly(options = {}) {
   const { updateImports = true, updateMarkers = true } = options;
   const overlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
   const needs = ["map-background-context"];
-  if (state.boundaryLevel === "country") needs.push("country-click", "visited-countries");
-  if (state.boundaryLevel === "admin") needs.push("visited-regions", "visited-region-group-outlines", "admin-country-context");
-  if (state.boundaryLevel === "subadmin") {
+  if (overlays.light && state.boundaryLevel === "country") needs.push("country-click", "visited-countries");
+  if (overlays.light && state.boundaryLevel === "admin") needs.push("visited-regions", "visited-region-group-outlines", "admin-country-context");
+  if (overlays.light && state.boundaryLevel === "subadmin") {
     needs.push("admin-country-context", "visited-subadmin", "visited-region-group-outlines");
     if (shouldShowUsCountyReference()) needs.push("us-county-reference");
   }
   if (needs.some((id) => !mapLibreMap.getSource(id))) return false;
 
-  setMapLibreSource("map-background-context", cachedMapGeoJson("map-background-context", mapBackgroundContextGeoJson));
+  setMapLibreSource("map-background-context", overlays.light ? cachedMapGeoJson("map-background-context", mapBackgroundContextGeoJson) : emptyFeatureCollection());
 
-  if (state.boundaryLevel === "country") {
+  if (overlays.light && state.boundaryLevel === "country") {
     setMapLibreSource("country-click", cachedMapGeoJson("country-click", allCountryClickGeoJson));
     setMapLibreSource("visited-countries", cachedMapGeoJson("countries", countryGeoJson));
   }
 
-  if (state.boundaryLevel === "admin") {
+  if (overlays.light && state.boundaryLevel === "admin") {
     setMapLibreSource("visited-regions", cachedMapGeoJson("regions", regionGeoJson));
     setMapLibreSource("visited-region-group-outlines", cachedMapGeoJson("region-outlines", provinceOutlineGeoJson));
     setMapLibreSource("admin-country-context", cachedMapGeoJson("admin-country-context", adminCountryContextGeoJson));
   }
 
-  if (state.boundaryLevel === "subadmin") {
+  if (overlays.light && state.boundaryLevel === "subadmin") {
     const subadminKeys = subadminBoundaryKeysToShow();
     const countriesWithSubadmin = new Set(subadminKeys.map(countryIdForSubadminKey).filter(Boolean));
     if (mapLibreMap.getSource("admin-country-context")) {
@@ -5173,14 +5239,16 @@ function renderLeafletLayers() {
   if (leafletLayers) leafletLayers.remove();
   leafletLayers = L.layerGroup().addTo(leafletMap);
 
-  L.geoJSON(mapBackgroundContextGeoJson(), {
-    style: (feature) => ({ ...leafletBoundaryStyle(feature), fillOpacity: 0.18, weight: 1 }),
-    onEachFeature: (feature, layer) => {
-      layer.bindTooltip(feature.properties.name, { sticky: true });
-    },
-  }).addTo(leafletLayers);
+  if (overlays.light) {
+    L.geoJSON(mapBackgroundContextGeoJson(), {
+      style: (feature) => ({ ...leafletBoundaryStyle(feature), fillOpacity: 0.18, weight: 1 }),
+      onEachFeature: (feature, layer) => {
+        layer.bindTooltip(feature.properties.name, { sticky: true });
+      },
+    }).addTo(leafletLayers);
+  }
 
-  if (state.boundaryLevel === "country") {
+  if (overlays.light && state.boundaryLevel === "country") {
     L.geoJSON(allCountryClickGeoJson(), {
       style: () => ({ color: "transparent", weight: 0, fillColor: "#ffffff", fillOpacity: 0.01 }),
       onEachFeature: (feature, layer) => {
@@ -5205,7 +5273,7 @@ function renderLeafletLayers() {
     }).addTo(leafletLayers);
   }
 
-  if (state.boundaryLevel === "admin") {
+  if (overlays.light && state.boundaryLevel === "admin") {
     L.geoJSON(regionGeoJson(), {
       style: (feature) => boundaryIndex ? { ...leafletBoundaryStyle(feature), weight: 0, opacity: 0 } : leafletBoundaryStyle(feature),
       onEachFeature: (feature, layer) => {
@@ -5231,7 +5299,7 @@ function renderLeafletLayers() {
     }).addTo(leafletLayers);
   }
 
-  if (state.boundaryLevel === "subadmin") {
+  if (overlays.light && state.boundaryLevel === "subadmin") {
     const subadminKeys = subadminBoundaryKeysToShow();
     const countriesWithSubadmin = new Set(subadminKeys.map(countryIdForSubadminKey).filter(Boolean));
     if (countriesWithSubadmin.size) {
@@ -5634,6 +5702,10 @@ function renderCheckinsPage() {
   $("#manualJapanPrefectureCount").textContent = japanPrefText;
   setManualNavButtonLabel("manual-section-japan", en ? "Japan" : "日本");
 
+  const usStateText = `${stats.usRegions}/${regionSets.us.total}`;
+  $("#manualUsStateCount").textContent = usStateText;
+  setManualNavButtonLabel("manual-section-us-states", en ? "U.S. states" : "美国 50 州");
+
   const countryText = `${stats.countries}/${worldCountryTotal}`;
   $("#manualCountryCount").textContent = countryText;
   setManualNavButtonLabel("manual-section-country", en ? "Countries/regions" : "国家/地区");
@@ -5705,7 +5777,7 @@ function renderOpenManualSections() {
 
 function clearClosedManualSections() {
   document.querySelectorAll("#checkins .manual-section-details:not([open])").forEach((details) => {
-    const target = details.querySelector(".manual-grid, .manual-country-groups");
+    const target = details.querySelector(".manual-grid, .manual-country-groups, .license-plate-grid");
     if (target) target.innerHTML = "";
   });
 }
@@ -5738,11 +5810,33 @@ function renderManualSection(section) {
     $("#manualJapanPrefectureList").innerHTML = renderJapanPrefectureGroups(japanPrefectureUnits());
     return;
   }
+  if (section === "usStates") {
+    $("#manualUsStateList").innerHTML = renderUsStateLicensePlates();
+    return;
+  }
   if (section === "country") {
     const countryRows = manualCountryRows();
     $("#manualCountryCount").textContent = `${dashboardStats().countries}/${countryRows.length}`;
     $("#manualCountryList").innerHTML = renderCountryGroups(countryRows);
   }
+}
+
+function renderUsStateLicensePlates() {
+  const en = currentLanguage === "en";
+  return regionSets.us.units.map((unit) => {
+    const plate = usStatePlateByName.get(unit.name) || { name: unit.name, abbr: unit.name.slice(0, 2).toUpperCase(), nameZh: unit.name, nicknameEn: "", nicknameZh: "" };
+    const visited = coverageHasRegion("us", unit.name);
+    const manual = Boolean(manualAdminPlaceFor("us", unit.name));
+    const disabled = visited && !manual;
+    const stateName = en ? plate.name : plate.nameZh;
+    const slogan = en ? plate.nicknameEn : plate.nicknameZh;
+    const status = visited ? manual ? (en ? "Manual" : "手动点亮") : t("lit") : (en ? "Unlit" : "未点亮");
+    return `<button class="license-plate-card ${visited ? "done" : ""}" ${disabled ? "disabled" : ""} data-manual-action="admin:us:${encodeURIComponent(unit.name)}:0" type="button">
+      <span class="license-plate-top"><b>${escapeHtml(plate.abbr)}</b><i>${escapeHtml(status)}</i></span>
+      <strong>${escapeHtml(stateName)}</strong>
+      <span class="license-plate-slogan">${escapeHtml(slogan)}</span>
+    </button>`;
+  }).join("");
 }
 
 function manualCountryRows() {
@@ -6202,10 +6296,10 @@ function coreAchievementModels() {
     ]),
     achievementModel(en ? "World Heritage" : "世界遗产", worldHeritageDone, worldHeritageTotal, en ? "World Heritage checklist" : "世界遗产清单", [
       [en ? "First heritage site" : "遗产初见", 1],
-      [en ? "Heritage collector" : "遗产收藏家", 5],
-      [en ? "Heritage pilgrim" : "遗产巡礼者", 20],
-      [en ? "Heritage deep traveler" : "遗产深游者", 50],
-      [en ? "World heritage master" : "世界遗产大师", 100],
+      [en ? "Heritage collector" : "遗产收藏家", 10],
+      [en ? "Heritage pilgrim" : "遗产巡礼者", 40],
+      [en ? "Heritage deep traveler" : "遗产深游者", 100],
+      [en ? "World heritage master" : "世界遗产大师", 200],
     ]),
   ];
 }
@@ -7473,10 +7567,12 @@ function renderMapControls() {
   if (provider) provider.value = normalizeMapProviderMode(state.mapProviderMode);
   const overlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
   state.mapOverlays = overlays;
+  const showLight = $("#showLightOnMap");
   const showCheckins = $("#showCheckinsOnMap");
   const showTracks = $("#showTracksOnMap");
   const showChina5a = $("#showChina5aOnMap");
   const showWorldHeritage = $("#showWorldHeritageOnMap");
+  if (showLight) showLight.checked = Boolean(overlays.light);
   if (showCheckins) showCheckins.checked = Boolean(overlays.checkins);
   if (showTracks) showTracks.checked = Boolean(overlays.paths);
   if (showChina5a) showChina5a.checked = Boolean(overlays.china5a);
@@ -7644,14 +7740,14 @@ $("#checkins")?.addEventListener("toggle", (event) => {
     renderManualSection(details.dataset.manualSection);
     return;
   }
-  const target = details.querySelector(".manual-grid, .manual-country-groups");
+  const target = details.querySelector(".manual-grid, .manual-country-groups, .license-plate-grid");
   if (target) target.innerHTML = "";
 }, true);
 $("#checkins")?.addEventListener("scroll", scheduleManualNavSpy, { passive: true });
 $("#boundaryLevel").addEventListener("change", (event) => {
   state.boundaryLevel = event.target.value;
   renderMapControls();
-  const pending = ensureBoundaryDataForLevel(state.boundaryLevel || "country");
+  const pending = isLightOverlayEnabled() ? ensureBoundaryDataForLevel(state.boundaryLevel || "country") : [];
   if (!pending.length) renderGeoMap();
   saveUiStateSoon();
 });
@@ -7660,6 +7756,17 @@ $("#mapProvider")?.addEventListener("change", (event) => {
   renderMapControls();
   renderGeoMap();
   saveUiStateSoon();
+});
+$("#showLightOnMap")?.addEventListener("change", (event) => {
+  state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
+  state.mapOverlays.light = event.target.checked;
+  saveUiStateSoon();
+  if (event.target.checked) {
+    const pending = ensureBoundaryDataForLevel(state.boundaryLevel || "country");
+    if (!pending.length) renderGeoMap();
+  } else {
+    renderGeoMap();
+  }
 });
 $("#showCheckinsOnMap")?.addEventListener("change", (event) => {
   state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
