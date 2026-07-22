@@ -18,7 +18,7 @@ const appVersion = "1.7";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const worldHeritageCatalogTotal = 1248;
-const dataCacheVersion = "20260721-us-cd2";
+const dataCacheVersion = "20260722-ca-census-divisions-unique";
 const fixedChecklistTotals = {
   china5a: china5aOfficialTotal,
   worldHeritage: worldHeritageCatalogTotal,
@@ -7668,6 +7668,14 @@ function scheduleCoverageMapRefresh() {
   pendingCoverageMapRefresh = window.setTimeout(() => {
     pendingCoverageMapRefresh = null;
     if (!isMapPageActive()) return;
+    const pending = isLightOverlayEnabled() ? ensureBoundaryDataForLevel(state.boundaryLevel || "country") : [];
+    if (pending.length) {
+      Promise.all(pending).finally(() => {
+        if (!isMapPageActive()) return;
+        if (!refreshMapLibreDataOnly({ updateImports: false, updateMarkers: false })) scheduleGeoMapRender();
+      });
+      return;
+    }
     if (!refreshMapLibreDataOnly({ updateImports: false, updateMarkers: false })) scheduleGeoMapRender();
   }, 180);
 }
