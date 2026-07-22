@@ -18,7 +18,7 @@ const appVersion = "1.7.3";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const worldHeritageCatalogTotal = 1248;
-const dataCacheVersion = "20260722-cn-hk-mo-city";
+const dataCacheVersion = "20260722-detian-cn-city";
 const fixedChecklistTotals = {
   china5a: china5aOfficialTotal,
   worldHeritage: worldHeritageCatalogTotal,
@@ -1775,7 +1775,7 @@ const checklistPlaceCoordinates = {
   庐山: [29.55, 115.994, "江西"], 井冈山: [26.571, 114.166, "江西"], 三清山: [28.914, 118.064, "江西"], 龙虎山: [28.1205, 116.998, "江西"],
   张家界武陵源: [29.345, 110.55, "湖南"], 武陵源: [29.345, 110.55, "湖南"], 岳阳楼: [29.357, 113.094, "湖南"], 韶山: [27.915, 112.527, "湖南"], 衡山: [27.254, 112.655, "湖南"], 凤凰古城: [27.948, 109.599, "湖南"],
   长隆旅游度假区: [23.005, 113.324, "广东"], 丹霞山: [25.04, 113.75, "广东"], 罗浮山: [23.279, 114.047, "广东"], 西樵山: [22.933, 112.985, "广东"],
-  桂林漓江: [25.235, 110.427, "广西"], 青秀山: [22.791, 108.396, "广西"], 德天跨国瀑布: [22.853, 106.722, "广西"], 涠洲岛: [21.033, 109.106, "广西"],
+  桂林漓江: [25.235, 110.427, "广西"], 青秀山: [22.791, 108.396, "广西"], 德天跨国瀑布: [22.8565, 106.7235, "广西"], 涠洲岛: [21.033, 109.106, "广西"],
   三亚南山: [18.299, 109.207, "海南"], 蜈支洲岛: [18.311, 109.764, "海南"], 分界洲岛: [18.575, 110.194, "海南"], 呀诺达雨林: [18.459, 109.682, "海南"],
   九寨沟: [33.257, 103.918, "四川"], 黄龙: [32.745, 103.833, "四川"], "峨眉山-乐山大佛": [29.55, 103.77, "四川"], 峨眉山: [29.52, 103.336, "四川"], 青城山: [30.907, 103.568, "四川"], "青城山-都江堰": [30.994, 103.613, "四川"], 阆中古城: [31.575, 105.974, "四川"], 稻城亚丁: [28.455, 100.347, "四川"],
   大足石刻: [29.706, 105.802, "重庆"], 武隆喀斯特: [29.421, 107.756, "重庆"], 巫山小三峡: [31.074, 109.878, "重庆"], 金佛山: [29.052, 107.187, "重庆"],
@@ -5900,8 +5900,8 @@ function renderChinaProvinceImageryBadge(unit, en = currentLanguage === "en") {
     const imagery = en ? badge.imageryEn : badge.imageryZh;
     const status = visited ? manual ? (en ? "Manual" : "手动点亮") : t("lit") : (en ? "Unlit" : "未点亮");
     return `<button class="province-badge-card ${visited ? "done" : ""}" ${disabled ? "disabled" : ""} data-manual-action="admin:cn:${encodeURIComponent(unit.name)}:0" type="button">
-      <span class="province-badge-top"><b>${escapeHtml(badge.abbr)}</b><i>${escapeHtml(status)}</i></span>
-      <strong>${escapeHtml(name)}</strong>
+      <span class="province-badge-top"><b>${escapeHtml(badge.abbr)}</b></span>
+      <span class="badge-name-row"><strong>${escapeHtml(name)}</strong><i>${escapeHtml(status)}</i></span>
       <span class="province-badge-imagery">${escapeHtml(imagery)}</span>
     </button>`;
 }
@@ -5917,8 +5917,7 @@ function renderJapanRegionImageryBadges() {
     const imagery = en ? badge.imageryEn : badge.imageryZh;
     const status = visited ? manual ? (en ? "Manual" : "手动点亮") : t("lit") : (en ? "Unlit" : "未点亮");
     return `<button class="province-badge-card japan-region-badge ${visited ? "done" : ""}" ${disabled ? "disabled" : ""} data-manual-action="admin:jp:${encodeURIComponent(unit.name)}:0" type="button">
-      <span class="province-badge-top japan-region-top"><i>${escapeHtml(status)}</i></span>
-      <strong>${escapeHtml(name)}</strong>
+      <span class="badge-name-row"><strong>${escapeHtml(name)}</strong><i>${escapeHtml(status)}</i></span>
       <span class="province-badge-imagery">${escapeHtml(imagery)}</span>
     </button>`;
   }).join("");
@@ -5948,8 +5947,8 @@ function renderUsStateLicensePlates() {
     const slogan = en ? plate.nicknameEn : plate.nicknameZh;
     const status = visited ? manual ? (en ? "Manual" : "手动点亮") : t("lit") : (en ? "Unlit" : "未点亮");
     return `<button class="license-plate-card ${visited ? "done" : ""}" ${disabled ? "disabled" : ""} data-manual-action="admin:us:${encodeURIComponent(unit.name)}:0" type="button">
-      <span class="license-plate-top"><b>${escapeHtml(plate.abbr)}</b><i>${escapeHtml(status)}</i></span>
-      <strong>${escapeHtml(stateName)}</strong>
+      <span class="license-plate-top"><b>${escapeHtml(plate.abbr)}</b></span>
+      <span class="badge-name-row"><strong>${escapeHtml(stateName)}</strong><i>${escapeHtml(status)}</i></span>
       <span class="license-plate-slogan">${escapeHtml(slogan)}</span>
     </button>`;
   }).join("");

@@ -1500,7 +1500,27 @@ button:hover {
   font-weight: 900;
 }
 
+.badge-name-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+}
+
+.badge-name-row i {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+}
+
 .province-badge-card strong {
+  flex: 1 1 auto;
+  min-width: 0;
   color: var(--deep);
   font-size: 17px;
   font-weight: 900;
@@ -1523,23 +1543,6 @@ button:hover {
 
 .province-badge-card.done .province-badge-top b {
   background: #315345;
-}
-
-.japan-region-badge {
-  background:
-    radial-gradient(circle at 100% 0, rgba(39, 109, 182, 0.13), transparent 34%),
-    linear-gradient(180deg, #ffffff, #f5f8f8);
-}
-
-.japan-region-top {
-  justify-content: flex-end;
-}
-
-.japan-region-badge.done {
-  border-color: #5b8295;
-  background:
-    radial-gradient(circle at 100% 0, rgba(39, 109, 182, 0.17), transparent 34%),
-    linear-gradient(180deg, #f7fcff, #e4f0f4);
 }
 
 .province-badge-card:disabled {
@@ -1612,9 +1615,21 @@ button:hover {
   text-transform: none;
 }
 
+.license-plate-card .badge-name-row {
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.license-plate-card .badge-name-row i {
+  padding-top: 1px;
+  font-size: 11px;
+  text-transform: none;
+}
+
 .license-plate-card strong {
   display: -webkit-box;
   overflow: hidden;
+  min-width: 0;
   color: var(--deep);
   font-size: 14px;
   font-weight: 900;
