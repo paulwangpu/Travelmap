@@ -138,13 +138,12 @@
             <h2 data-i18n="manualTitle">手动点亮</h2>
           </header>
           <nav class="manual-view-tabs floating-page-nav" aria-label="Check-in sections">
-            <button class="active" type="button" data-manual-jump="manual-section-china-province">中国省级</button>
-            <button type="button" data-manual-jump="manual-section-china-city">中国市级</button>
-            <button type="button" data-manual-jump="manual-section-japan">日本</button>
-            <button type="button" data-manual-jump="manual-section-us-states">美国 50 州</button>
-            <button type="button" data-manual-jump="manual-section-country">国家/地区</button>
+            <button class="active" type="button" data-manual-jump="manual-section-china">中国省市</button>
+            <button type="button" data-manual-jump="manual-section-us-states">美国50州</button>
+            <button type="button" data-manual-jump="manual-section-japan">日本区县</button>
+            <button type="button" data-manual-jump="manual-section-country">全球国家</button>
           </nav>
-          <div class="panel manual-section-panel" id="manual-section-china-province">
+          <div class="panel manual-section-panel" id="manual-section-china">
             <details class="manual-section-details" data-manual-section="chinaProvince">
             <summary class="section-head">
               <div>
@@ -152,7 +151,7 @@
               </div>
               <span class="tag" id="manualChinaProvinceCount"></span>
             </summary>
-            <div class="manual-grid" id="manualChinaProvinceList"></div>
+            <div class="manual-country-groups" id="manualChinaProvinceList"></div>
             </details>
           </div>
           <div class="panel manual-section-panel" id="manual-section-china-city">
@@ -164,6 +163,17 @@
               <span class="tag" id="manualChinaCityCount"></span>
             </summary>
             <div class="manual-grid dense" id="manualChinaCityList"></div>
+            </details>
+          </div>
+          <div class="panel manual-section-panel" id="manual-section-us-states">
+            <details class="manual-section-details" data-manual-section="usStates">
+            <summary class="section-head">
+              <div>
+                <h3 data-i18n="usStatesPlate">美国 50 州</h3>
+              </div>
+              <span class="tag" id="manualUsStateCount"></span>
+            </summary>
+            <div class="license-plate-grid" id="manualUsStateList"></div>
             </details>
           </div>
           <div class="panel manual-section-panel" id="manual-section-japan">
@@ -186,17 +196,6 @@
               <span class="tag" id="manualJapanPrefectureCount"></span>
             </summary>
             <div class="manual-grid dense" id="manualJapanPrefectureList"></div>
-            </details>
-          </div>
-          <div class="panel manual-section-panel" id="manual-section-us-states">
-            <details class="manual-section-details" data-manual-section="usStates">
-            <summary class="section-head">
-              <div>
-                <h3 data-i18n="usStatesPlate">美国 50 州</h3>
-              </div>
-              <span class="tag" id="manualUsStateCount"></span>
-            </summary>
-            <div class="license-plate-grid" id="manualUsStateList"></div>
             </details>
           </div>
           <div class="panel manual-section-panel" id="manual-section-country">
@@ -273,6 +272,6 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-    <script src="app.js?v=181"></script>
+    <script src="app.js?v=186"></script>
   </body>
 </html>

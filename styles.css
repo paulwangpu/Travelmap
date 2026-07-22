@@ -162,8 +162,8 @@ select {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 12px;
-  min-width: min(650px, 100%);
+  gap: 8px;
+  min-width: min(560px, 100%);
   padding: 0;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -175,7 +175,7 @@ select {
   pointer-events: auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 5px;
   align-items: center;
   justify-content: flex-end;
 }
@@ -184,20 +184,22 @@ select {
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  min-height: 39px;
-  padding: 7px 10px;
+  gap: 4px;
+  min-height: 34px;
+  padding: 5px 8px;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: #fff;
   color: var(--ink);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
   white-space: nowrap;
 }
 
 .map-overlay-toggles input {
   margin: 0;
+  width: 12px;
+  height: 12px;
 }
 
 .map-add-point-button {
@@ -1187,10 +1189,10 @@ button:hover {
   z-index: 12;
   display: flex;
   flex-wrap: nowrap;
-  gap: 3px;
+  gap: 2px;
   overflow-x: auto;
   margin-bottom: 12px;
-  padding: 4px;
+  padding: 3px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(244, 247, 244, 0.96);
@@ -1297,14 +1299,14 @@ button:hover {
 
 .manual-view-tabs button {
   flex: 1 0 auto;
-  min-width: 92px;
-  min-height: 38px;
-  padding: 6px 8px;
+  min-width: 72px;
+  min-height: 34px;
+  padding: 5px 7px;
   border: 0;
   border-radius: 6px;
   background: transparent;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 900;
 }
 
@@ -1372,13 +1374,14 @@ button:hover {
 .manual-group summary {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 12px;
   cursor: pointer;
   font-weight: 900;
 }
 
 .manual-group summary span {
+  margin-left: auto;
   color: var(--muted);
   font-size: 12px;
 }
@@ -1452,6 +1455,99 @@ button:hover {
 .manual-chip:disabled {
   cursor: default;
   opacity: 0.82;
+}
+
+.province-badge-card {
+  position: relative;
+  display: grid;
+  gap: 5px;
+  min-height: 88px;
+  padding: 10px;
+  border: 1px solid #c8d7cd;
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 100% 0, rgba(214, 87, 44, 0.13), transparent 34%),
+    linear-gradient(180deg, #ffffff, #f5f8f4);
+  color: var(--ink);
+  text-align: left;
+  box-shadow: 0 1px 0 rgba(23, 35, 31, 0.04);
+}
+
+.province-badge-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.province-badge-top b {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: #17231f;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.province-badge-top i {
+  color: var(--muted);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.province-badge-card strong {
+  color: var(--deep);
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.province-badge-imagery {
+  color: #7a4732;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.province-badge-card.done {
+  border-color: #648b6e;
+  background:
+    radial-gradient(circle at 100% 0, rgba(214, 87, 44, 0.16), transparent 34%),
+    linear-gradient(180deg, #f7fff8, #e6f4e9);
+}
+
+.province-badge-card.done .province-badge-top b {
+  background: #315345;
+}
+
+.japan-region-badge {
+  background:
+    radial-gradient(circle at 100% 0, rgba(39, 109, 182, 0.13), transparent 34%),
+    linear-gradient(180deg, #ffffff, #f5f8f8);
+}
+
+.japan-region-badge .province-badge-top b {
+  background: #244760;
+}
+
+.japan-region-badge.done {
+  border-color: #5b8295;
+  background:
+    radial-gradient(circle at 100% 0, rgba(39, 109, 182, 0.17), transparent 34%),
+    linear-gradient(180deg, #f7fcff, #e4f0f4);
+}
+
+.japan-region-badge.done .province-badge-top b {
+  background: #315c72;
+}
+
+.province-badge-card:disabled {
+  cursor: default;
 }
 
 .license-plate-grid {

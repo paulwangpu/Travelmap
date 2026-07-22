@@ -1276,6 +1276,68 @@ const regionSets = {
   },
 };
 
+const chinaProvinceImageryCatalog = [
+  ["北京", "京", "皇城中轴", "Imperial Axis"],
+  ["上海", "沪", "海派都会", "Haipai Metropolis"],
+  ["天津", "津", "海河津门", "Haihe Gateway"],
+  ["重庆", "渝", "山城雾都", "Mountain City"],
+  ["河北", "冀", "燕赵大地", "Yan-Zhao Heartland"],
+  ["山西", "晋", "表里山河", "Mountains and Rivers"],
+  ["内蒙古", "蒙", "草原故乡", "Grassland Homeland"],
+  ["辽宁", "辽", "辽海门户", "Liaohai Gateway"],
+  ["吉林", "吉", "长白林海", "Changbai Forests"],
+  ["黑龙江", "黑", "北国边疆", "Northern Frontier"],
+  ["山东", "鲁", "齐鲁大地", "Qilu Heartland"],
+  ["河南", "豫", "中原腹地", "Central Plains"],
+  ["湖北", "鄂", "荆楚水乡", "Jingchu Lakes"],
+  ["湖南", "湘", "潇湘大地", "Xiaoxiang Land"],
+  ["广东", "粤", "岭南大地", "Lingnan South"],
+  ["广西", "桂", "八桂山水", "Bagui Landscapes"],
+  ["海南", "琼", "椰风海韵", "Tropical Island"],
+  ["陕西", "秦", "三秦大地", "Three Qin Lands"],
+  ["甘肃", "陇", "丝路走廊", "Silk Road Corridor"],
+  ["青海", "青", "三江之源", "Source of Three Rivers"],
+  ["宁夏", "宁", "塞上江南", "Oasis Beyond the Wall"],
+  ["新疆", "新", "丝路天山", "Tianshan Silk Road"],
+  ["云南", "滇", "彩云之南", "South of Colorful Clouds"],
+  ["贵州", "黔", "山地公园", "Mountain Parkland"],
+  ["四川", "川", "天府之国", "Land of Abundance"],
+  ["安徽", "皖", "江淮山水", "Jianghuai Landscapes"],
+  ["福建", "闽", "八闽山海", "Fujian Mountains and Sea"],
+  ["江西", "赣", "赣鄱山水", "Ganpo Landscapes"],
+  ["浙江", "浙", "诗画江南", "Poetic Jiangnan"],
+  ["江苏", "苏", "吴韵水乡", "Wu Water Towns"],
+  ["西藏", "藏", "雪域高原", "Snowy Plateau"],
+  ["台湾", "台", "宝岛山海", "Island Mountains and Sea"],
+  ["香港", "港", "东方之珠", "Pearl of the Orient"],
+  ["澳门", "澳", "海上花园", "Garden by the Sea"],
+].map(([name, abbr, imageryZh, imageryEn]) => ({ name, abbr, imageryZh, imageryEn }));
+
+const chinaProvinceImageryByName = new Map(chinaProvinceImageryCatalog.map((item) => [item.name, item]));
+
+const chinaProvinceTravelGroups = [
+  ["华北", "North China", ["北京", "天津", "河北", "山西", "内蒙古"]],
+  ["东北", "Northeast China", ["辽宁", "吉林", "黑龙江"]],
+  ["华东", "East China", ["上海", "江苏", "浙江", "安徽", "福建", "江西", "山东"]],
+  ["中南", "Central South China", ["河南", "湖北", "湖南", "广东", "广西", "海南"]],
+  ["西南", "Southwest China", ["重庆", "四川", "贵州", "云南", "西藏"]],
+  ["西北", "Northwest China", ["陕西", "甘肃", "青海", "宁夏", "新疆"]],
+  ["港澳台", "Hong Kong, Macau and Taiwan", ["香港", "澳门", "台湾"]],
+].map(([name, nameEn, provinces]) => ({ name, nameEn, provinces }));
+
+const japanRegionImageryCatalog = [
+  ["北海道", "北", "雪原花海", "Snowfields and Wildflowers"],
+  ["东北", "奥", "雪国温泉", "Snow Country Onsen"],
+  ["关东", "関", "都会海湾", "Metropolitan Bay"],
+  ["中部", "中", "山岳北陆", "Alps and Hokuriku"],
+  ["近畿", "近", "古都巡礼", "Ancient Capitals"],
+  ["中国", "瀬", "濑户内海", "Seto Inland Sea"],
+  ["四国", "遍", "遍路之路", "Pilgrimage Island"],
+  ["九州冲绳", "九", "火山海岛", "Volcanoes and Islands"],
+].map(([name, abbr, imageryZh, imageryEn]) => ({ name, abbr, imageryZh, imageryEn }));
+
+const japanRegionImageryByName = new Map(japanRegionImageryCatalog.map((item) => [item.name, item]));
+
 const japanPrefectures = ["北海道", "青森县", "岩手县", "宫城县", "秋田县", "山形县", "福岛县", "茨城县", "栃木县", "群马县", "埼玉县", "千叶县", "东京都", "神奈川县", "新潟县", "富山县", "石川县", "福井县", "山梨县", "长野县", "岐阜县", "静冈县", "爱知县", "三重县", "滋贺县", "京都府", "大阪府", "兵库县", "奈良县", "和歌山县", "鸟取县", "岛根县", "冈山县", "广岛县", "山口县", "德岛县", "香川县", "爱媛县", "高知县", "福冈县", "佐贺县", "长崎县", "熊本县", "大分县", "宫崎县", "鹿儿岛县", "冲绳县"].map((name) => ({ name }));
 const japanPrefectureRegionMap = {
   "北海道": "北海道",
@@ -5688,11 +5750,10 @@ function renderCheckinsPage() {
   const provinceRows = regionSets.china.units;
   const chinaProvinceText = `${stats.chinaRegions}/${provinceRows.length}`;
   $("#manualChinaProvinceCount").textContent = chinaProvinceText;
-  setManualNavButtonLabel("manual-section-china-province", en ? "China provinces" : "中国省级");
+  setManualNavButtonLabel("manual-section-china", en ? "China units" : "中国省市");
 
   const chinaCityText = `${stats.chinaSubregions}/${stats.chinaSubregionTotal}`;
   $("#manualChinaCityCount").textContent = chinaCityText;
-  setManualNavButtonLabel("manual-section-china-city", en ? "China cities" : "中国市级");
 
   const japanRegionRows = regionSets.japan.units;
   $("#manualJapanRegionCount").textContent = `${stats.japanRegions}/${japanRegionRows.length}`;
@@ -5700,15 +5761,15 @@ function renderCheckinsPage() {
   const japanPrefRows = japanPrefectureUnits();
   const japanPrefText = `${stats.japanPrefectures}/${japanPrefRows.length}`;
   $("#manualJapanPrefectureCount").textContent = japanPrefText;
-  setManualNavButtonLabel("manual-section-japan", en ? "Japan" : "日本");
+  setManualNavButtonLabel("manual-section-japan", en ? "Japan areas" : "日本区县");
 
   const usStateText = `${stats.usRegions}/${regionSets.us.total}`;
   $("#manualUsStateCount").textContent = usStateText;
-  setManualNavButtonLabel("manual-section-us-states", en ? "U.S. states" : "美国 50 州");
+  setManualNavButtonLabel("manual-section-us-states", en ? "U.S. 50 states" : "美国50州");
 
   const countryText = `${stats.countries}/${worldCountryTotal}`;
   $("#manualCountryCount").textContent = countryText;
-  setManualNavButtonLabel("manual-section-country", en ? "Countries/regions" : "国家/地区");
+  setManualNavButtonLabel("manual-section-country", en ? "Global countries" : "全球国家");
   clearClosedManualSections();
   renderOpenManualSections();
   scheduleManualNavSpy();
@@ -5784,11 +5845,7 @@ function clearClosedManualSections() {
 
 function renderManualSection(section) {
   if (section === "chinaProvince") {
-    $("#manualChinaProvinceList").innerHTML = regionSets.china.units.map((unit) => {
-      const visited = coverageHasRegion("china", unit.name);
-      const manual = Boolean(manualAdminPlaceFor("cn", unit.name));
-      return manualButtonHtml({ label: chinaProvinceDisplayName(unit.name), visited, manual, action: `admin:cn:${encodeURIComponent(unit.name)}:0`, disabled: visited && !manual });
-    }).join("");
+    $("#manualChinaProvinceList").innerHTML = renderChinaProvinceImageryBadges();
     return;
   }
   if (section === "chinaCity") {
@@ -5799,11 +5856,7 @@ function renderManualSection(section) {
     return;
   }
   if (section === "japanRegion") {
-    $("#manualJapanRegionList").innerHTML = regionSets.japan.units.map((unit) => {
-      const visited = coverageHasRegion("japan", unit.name);
-      const manual = Boolean(manualAdminPlaceFor("jp", unit.name));
-      return manualButtonHtml({ label: unit.name, visited, manual, action: `admin:jp:${encodeURIComponent(unit.name)}:0`, disabled: visited && !manual });
-    }).join("");
+    $("#manualJapanRegionList").innerHTML = renderJapanRegionImageryBadges();
     return;
   }
   if (section === "japanPrefecture") {
@@ -5819,6 +5872,69 @@ function renderManualSection(section) {
     $("#manualCountryCount").textContent = `${dashboardStats().countries}/${countryRows.length}`;
     $("#manualCountryList").innerHTML = renderCountryGroups(countryRows);
   }
+}
+
+function renderChinaProvinceImageryBadges() {
+  const en = currentLanguage === "en";
+  const unitsByName = new Map(regionSets.china.units.map((unit) => [unit.name, unit]));
+  return chinaProvinceTravelGroups.map((group) => {
+    const cards = group.provinces
+      .map((name) => unitsByName.get(name))
+      .filter(Boolean)
+      .map((unit) => renderChinaProvinceImageryBadge(unit, en))
+      .join("");
+    const done = group.provinces.filter((name) => coverageHasRegion("china", name)).length;
+    return `<details class="manual-group manual-province-group" open>
+      <summary><strong>${escapeHtml(en ? group.nameEn : group.name)}</strong><span>${done}/${group.provinces.length}</span></summary>
+      <div class="manual-grid province-badge-grid">${cards}</div>
+    </details>`;
+  }).join("");
+}
+
+function renderChinaProvinceImageryBadge(unit, en = currentLanguage === "en") {
+  const badge = chinaProvinceImageryByName.get(unit.name) || { name: unit.name, abbr: unit.name.slice(0, 1), imageryZh: "", imageryEn: "" };
+    const visited = coverageHasRegion("china", unit.name);
+    const manual = Boolean(manualAdminPlaceFor("cn", unit.name));
+    const disabled = visited && !manual;
+    const name = chinaProvinceDisplayName(unit.name);
+    const imagery = en ? badge.imageryEn : badge.imageryZh;
+    const status = visited ? manual ? (en ? "Manual" : "手动点亮") : t("lit") : (en ? "Unlit" : "未点亮");
+    return `<button class="province-badge-card ${visited ? "done" : ""}" ${disabled ? "disabled" : ""} data-manual-action="admin:cn:${encodeURIComponent(unit.name)}:0" type="button">
+      <span class="province-badge-top"><b>${escapeHtml(badge.abbr)}</b><i>${escapeHtml(status)}</i></span>
+      <strong>${escapeHtml(name)}</strong>
+      <span class="province-badge-imagery">${escapeHtml(imagery)}</span>
+    </button>`;
+}
+
+function renderJapanRegionImageryBadges() {
+  const en = currentLanguage === "en";
+  return regionSets.japan.units.map((unit) => {
+    const badge = japanRegionImageryByName.get(unit.name) || { name: unit.name, abbr: unit.name.slice(0, 1), imageryZh: "", imageryEn: "" };
+    const visited = coverageHasRegion("japan", unit.name);
+    const manual = Boolean(manualAdminPlaceFor("jp", unit.name));
+    const disabled = visited && !manual;
+    const name = en ? japanRegionEnglishName(unit.name) : unit.name;
+    const imagery = en ? badge.imageryEn : badge.imageryZh;
+    const status = visited ? manual ? (en ? "Manual" : "手动点亮") : t("lit") : (en ? "Unlit" : "未点亮");
+    return `<button class="province-badge-card japan-region-badge ${visited ? "done" : ""}" ${disabled ? "disabled" : ""} data-manual-action="admin:jp:${encodeURIComponent(unit.name)}:0" type="button">
+      <span class="province-badge-top"><b>${escapeHtml(badge.abbr)}</b><i>${escapeHtml(status)}</i></span>
+      <strong>${escapeHtml(name)}</strong>
+      <span class="province-badge-imagery">${escapeHtml(imagery)}</span>
+    </button>`;
+  }).join("");
+}
+
+function japanRegionEnglishName(name) {
+  return {
+    北海道: "Hokkaido",
+    东北: "Tohoku",
+    关东: "Kanto",
+    中部: "Chubu",
+    近畿: "Kinki",
+    中国: "Chugoku",
+    四国: "Shikoku",
+    九州冲绳: "Kyushu and Okinawa",
+  }[name] || name;
 }
 
 function renderUsStateLicensePlates() {
@@ -7734,7 +7850,8 @@ $("#checkins")?.addEventListener("click", (event) => {
   }
 });
 $("#checkins")?.addEventListener("toggle", (event) => {
-  const details = event.target.closest?.(".manual-section-details");
+  const details = event.target;
+  if (!details?.classList?.contains("manual-section-details")) return;
   if (!details) return;
   if (details.open) {
     renderManualSection(details.dataset.manualSection);
