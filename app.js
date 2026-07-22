@@ -18,7 +18,7 @@ const appVersion = "1.7.3";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const worldHeritageCatalogTotal = 1248;
-const dataCacheVersion = "20260722-ca-census-divisions-unique";
+const dataCacheVersion = "20260722-cn-hk-mo-city";
 const fixedChecklistTotals = {
   china5a: china5aOfficialTotal,
   worldHeritage: worldHeritageCatalogTotal,
@@ -5909,7 +5909,7 @@ function renderChinaProvinceImageryBadge(unit, en = currentLanguage === "en") {
 function renderJapanRegionImageryBadges() {
   const en = currentLanguage === "en";
   return regionSets.japan.units.map((unit) => {
-    const badge = japanRegionImageryByName.get(unit.name) || { name: unit.name, abbr: unit.name.slice(0, 1), imageryZh: "", imageryEn: "" };
+    const badge = japanRegionImageryByName.get(unit.name) || { name: unit.name, imageryZh: "", imageryEn: "" };
     const visited = coverageHasRegion("japan", unit.name);
     const manual = Boolean(manualAdminPlaceFor("jp", unit.name));
     const disabled = visited && !manual;
@@ -5917,7 +5917,7 @@ function renderJapanRegionImageryBadges() {
     const imagery = en ? badge.imageryEn : badge.imageryZh;
     const status = visited ? manual ? (en ? "Manual" : "手动点亮") : t("lit") : (en ? "Unlit" : "未点亮");
     return `<button class="province-badge-card japan-region-badge ${visited ? "done" : ""}" ${disabled ? "disabled" : ""} data-manual-action="admin:jp:${encodeURIComponent(unit.name)}:0" type="button">
-      <span class="province-badge-top"><b>${escapeHtml(badge.abbr)}</b><i>${escapeHtml(status)}</i></span>
+      <span class="province-badge-top japan-region-top"><i>${escapeHtml(status)}</i></span>
       <strong>${escapeHtml(name)}</strong>
       <span class="province-badge-imagery">${escapeHtml(imagery)}</span>
     </button>`;
