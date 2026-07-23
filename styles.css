@@ -477,6 +477,95 @@ button:hover {
   opacity: 1;
 }
 
+.maplibregl-popup-close-button,
+.leaflet-popup-close-button {
+  position: absolute;
+  top: 6px !important;
+  right: 6px !important;
+  width: 24px !important;
+  height: 24px !important;
+  padding: 0 !important;
+  border: 1px solid rgba(23, 35, 31, 0.12) !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  color: #26352f !important;
+  line-height: 1 !important;
+  font-size: 0 !important;
+  text-align: center;
+  opacity: 1 !important;
+  z-index: 2;
+}
+
+.maplibregl-popup-close-button::before,
+.maplibregl-popup-close-button::after,
+.leaflet-popup-close-button::before,
+.leaflet-popup-close-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transform-origin: center;
+}
+
+.maplibregl-popup-close-button::before,
+.leaflet-popup-close-button::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.maplibregl-popup-close-button::after,
+.leaflet-popup-close-button::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.popup-body {
+  padding-right: 28px;
+}
+
+.popup-close-button {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid rgba(23, 35, 31, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #26352f;
+  cursor: pointer;
+}
+
+.popup-close-button::before,
+.popup-close-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 11px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transform-origin: center;
+}
+
+.popup-close-button::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.popup-close-button::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.popup-close-button:hover {
+  background: #fff4ed;
+  border-color: rgba(217, 72, 15, 0.3);
+  color: #d9480f;
+}
+
 .geo-map svg {
   display: block;
   width: 100%;
@@ -1478,33 +1567,6 @@ button:hover {
   box-shadow: 0 1px 0 rgba(23, 35, 31, 0.04);
 }
 
-.province-badge-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-}
-
-.province-badge-top b {
-  display: inline-grid;
-  place-items: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 999px;
-  background: #17231f;
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 900;
-  line-height: 1;
-}
-
-.province-badge-top i {
-  color: var(--muted);
-  font-size: 11px;
-  font-style: normal;
-  font-weight: 900;
-}
-
 .badge-name-row {
   display: flex;
   align-items: baseline;
@@ -1544,10 +1606,6 @@ button:hover {
   background:
     radial-gradient(circle at 100% 0, rgba(214, 87, 44, 0.16), transparent 34%),
     linear-gradient(180deg, #f7fff8, #e6f4e9);
-}
-
-.province-badge-card.done .province-badge-top b {
-  background: #315345;
 }
 
 .province-badge-card:disabled {
@@ -2226,13 +2284,35 @@ button:hover {
   right: 8px;
   width: 28px;
   height: 28px;
+  padding: 0;
   border: 1px solid rgba(23, 35, 31, 0.12);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.9);
   color: #26352f;
-  font-size: 16px;
+  font-size: 0;
   line-height: 1;
   cursor: pointer;
+}
+
+.map-detail-close::before,
+.map-detail-close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transform-origin: center;
+}
+
+.map-detail-close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.map-detail-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .map-detail-close:hover {
@@ -3309,5 +3389,11 @@ button:hover {
   .maplibregl-ctrl-top-left,
   .leaflet-top.leaflet-left {
     top: calc(max(5px, env(safe-area-inset-top)) + 77px);
+  }
+
+  .map-drawer {
+    bottom: calc(52px + env(safe-area-inset-bottom));
+    max-height: min(44dvh, calc(100dvh - 150px - 52px - env(safe-area-inset-bottom)));
+    padding-bottom: 18px;
   }
 }

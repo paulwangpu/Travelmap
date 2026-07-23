@@ -4895,7 +4895,7 @@ function renderMapLibreMarkers(overlays = { ...defaultMapOverlays(), ...(state.m
         });
         const marker = new maplibregl.Marker({ element: el })
           .setLngLat([visit.place.lng, visit.place.lat])
-          .setPopup(new maplibregl.Popup({ offset: 16 }).setHTML(`<strong>${visit.place.name}</strong><br>${getCountry(visit.place.country).name} · ${visit.place.unit || "未分区"}<br><button class="popup-action" data-unvisit="${visit.place.id}" type="button">${t("unvisit")}</button>`))
+          .setPopup(new maplibregl.Popup({ offset: 16, closeButton: false }).setHTML(mapPopupHtml(`<strong>${escapeHtml(visit.place.name)}</strong><br>${escapeHtml(getCountry(visit.place.country).name)} · ${escapeHtml(visit.place.unit || "未分区")}<br><button class="popup-action" data-unvisit="${escapeHtml(visit.place.id)}" type="button">${t("unvisit")}</button>`)))
           .addTo(mapLibreMap);
         mapLibreMarkers.push(marker);
       });
@@ -4911,7 +4911,7 @@ function renderMapLibreMarkers(overlays = { ...defaultMapOverlays(), ...(state.m
     });
     const marker = new maplibregl.Marker({ element: el })
       .setLngLat([entry.lng, entry.lat])
-      .setPopup(new maplibregl.Popup({ offset: 16 }).setHTML(`<strong>${entry.item}</strong><br>${checklistCatalog[entry.key].label}<br><button class="popup-action" data-checklist-map="${entry.key}" data-item="${entry.item}" type="button">${entry.done ? t("unvisit") : t("markVisited")}</button>`))
+      .setPopup(new maplibregl.Popup({ offset: 16, closeButton: false }).setHTML(mapPopupHtml(`<strong>${escapeHtml(entry.item)}</strong><br>${escapeHtml(checklistCatalog[entry.key].label)}<br><button class="popup-action" data-checklist-map="${escapeHtml(entry.key)}" data-item="${escapeHtml(entry.item)}" type="button">${entry.done ? t("unvisit") : t("markVisited")}</button>`)))
       .addTo(mapLibreMap);
     mapLibreMarkers.push(marker);
   });
@@ -5071,10 +5071,14 @@ function showMapLibrePointPopup(feature, lngLat) {
   const button = props.kind === "checkin"
     ? `<button class="popup-action" data-unvisit="${escapeHtml(props.placeId)}" type="button">${t("unvisit")}</button>`
     : `<button class="popup-action" data-checklist-map="${escapeHtml(props.checklistKey)}" data-item="${escapeHtml(props.item)}" type="button">${props.done ? t("unvisit") : t("markVisited")}</button>`;
-  new maplibregl.Popup({ offset: 12 })
+  new maplibregl.Popup({ offset: 12, closeButton: false })
     .setLngLat(lngLat)
-    .setHTML(`<strong>${title}</strong><br>${subtitle}<br>${button}`)
+    .setHTML(mapPopupHtml(`<strong>${title}</strong><br>${subtitle}<br>${button}`))
     .addTo(mapLibreMap);
+}
+
+function mapPopupHtml(content) {
+  return `<button class="popup-close-button" data-close-popup="1" type="button" aria-label="${currentLanguage === "en" ? "Close popup" : "关闭弹窗"}"></button><div class="popup-body">${content}</div>`;
 }
 
 function checklistOverlayPlaces() {
@@ -5430,7 +5434,7 @@ function renderLeafletLayers() {
           fillColor: depthColors[1],
           fillOpacity: 0.95,
         });
-        marker.bindPopup(`<strong>${visit.place.name}</strong><br>${getCountry(visit.place.country).name} · ${visit.place.unit || "未分区"}<br><button class="popup-action" data-unvisit="${visit.place.id}" type="button">${t("unvisit")}</button>`);
+        marker.bindPopup(mapPopupHtml(`<strong>${escapeHtml(visit.place.name)}</strong><br>${escapeHtml(getCountry(visit.place.country).name)} · ${escapeHtml(visit.place.unit || "未分区")}<br><button class="popup-action" data-unvisit="${escapeHtml(visit.place.id)}" type="button">${t("unvisit")}</button>`), { closeButton: false });
         marker.on("click", (event) => {
           if (event.originalEvent) event.originalEvent._travelMapHandled = true;
           renderPlaceDetail(visit.place.id);
@@ -5892,7 +5896,7 @@ function renderChinaProvinceImageryBadges() {
 }
 
 function renderChinaProvinceImageryBadge(unit, en = currentLanguage === "en") {
-  const badge = chinaProvinceImageryByName.get(unit.name) || { name: unit.name, abbr: unit.name.slice(0, 1), imageryZh: "", imageryEn: "" };
+  const badge = chinaProvinceImageryByName.get(unit.name) || { name: unit.name, imageryZh: "", imageryEn: "" };
     const visited = coverageHasRegion("china", unit.name);
     const manual = Boolean(manualAdminPlaceFor("cn", unit.name));
     const disabled = visited && !manual;
@@ -5900,7 +5904,6 @@ function renderChinaProvinceImageryBadge(unit, en = currentLanguage === "en") {
     const imagery = en ? badge.imageryEn : badge.imageryZh;
     const status = visited ? manual ? (en ? "Manual" : "手动点亮") : t("lit") : (en ? "Unlit" : "未点亮");
     return `<button class="province-badge-card ${visited ? "done" : ""}" ${disabled ? "disabled" : ""} data-manual-action="admin:cn:${encodeURIComponent(unit.name)}:0" type="button">
-      <span class="province-badge-top"><b>${escapeHtml(badge.abbr)}</b></span>
       <span class="badge-name-row"><strong>${escapeHtml(name)}</strong><i>${escapeHtml(status)}</i></span>
       <span class="province-badge-imagery">${escapeHtml(imagery)}</span>
     </button>`;
@@ -7982,6 +7985,10 @@ $("#achievementList").addEventListener("toggle", (event) => {
 }, true);
 $("#achievements")?.addEventListener("scroll", scheduleChecklistNavSpy, { passive: true });
 $("#leafletMap").addEventListener("click", (event) => {
+  if (event.target.closest("[data-close-popup]")) {
+    closeMapPopupsAndDetail();
+    return;
+  }
   const checklistButton = event.target.closest("[data-checklist-map]");
   if (checklistButton) {
     toggleChecklistItem(checklistButton.dataset.checklistMap, checklistButton.dataset.item);
