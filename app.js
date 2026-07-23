@@ -14,13 +14,15 @@ const languageStorageKey = "travel-map-language";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "1.7.3";
+const appVersion = "1.8";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
+const chinaAncientCapitalTotal = 146;
 const worldHeritageCatalogTotal = 1248;
-const dataCacheVersion = "20260722-detian-cn-city";
+const dataCacheVersion = "20260723-ancient-capitals";
 const fixedChecklistTotals = {
   china5a: china5aOfficialTotal,
+  chinaAncientCapitals: chinaAncientCapitalTotal,
   worldHeritage: worldHeritageCatalogTotal,
 };
 const maxImportVisiblePoints = Infinity;
@@ -64,8 +66,12 @@ let catalogDataRequested = false;
 let catalogDataPromise = null;
 let china5aCatalogPromise = null;
 let china5aCoordinatesPromise = null;
+let chinaAncientCapitalsPromise = null;
 let china5aCatalogStatus = { source: "本地清单", detail: `${china5aOfficialTotal} 个 5A 景区`, total: china5aOfficialTotal };
 let china5aCoordinates = {};
+let chinaAncientCapitals = {};
+let chinaAncientCapitalCoordinates = {};
+let chinaAncientCapitalMeta = {};
 let worldHeritageCatalogStatus = { source: "本地清单", detail: `${worldHeritageCatalogTotal} 条记录`, total: worldHeritageCatalogTotal };
 let worldHeritageCoordinates = {};
 let worldHeritageEnglishNames = {};
@@ -98,7 +104,7 @@ let pendingChecklistNavSpy = null;
 let restoringMapViewport = false;
 let checklistStatusCache = { signature: "", marked: new Set(), visited: new Set() };
 let checklistOverlayCache = { signature: "", items: [], keySet: new Set() };
-let checklistCoordinateLookupCache = { china5a: null, worldHeritage: null, englishNames: null, map: new Map() };
+let checklistCoordinateLookupCache = { china5a: null, ancientCapitals: null, worldHeritage: null, englishNames: null, map: new Map() };
 let derivedStatsRevision = 0;
 let dashboardStatsCache = { signature: "", stats: null };
 let mapAddMode = false;
@@ -147,6 +153,7 @@ const translations = {
     overlayCheckins: "我的打卡",
     overlayTracks: "我的足迹",
     overlay5a: "5A 景区",
+    overlayAncientCapitals: "中国古都",
     overlayHeritage: "世界遗产",
     selectionEyebrow: "选择对象",
     mapDetailTitle: "地图详情",
@@ -256,6 +263,7 @@ const translations = {
     overlayCheckins: "My check-ins",
     overlayTracks: "My tracks",
     overlay5a: "5A scenic areas",
+    overlayAncientCapitals: "Ancient Chinese Capitals",
     overlayHeritage: "World Heritage",
     selectionEyebrow: "Selection",
     mapDetailTitle: "Map details",
@@ -337,7 +345,7 @@ function t(key) {
 }
 
 function defaultMapOverlays() {
-  return { light: true, checkins: true, paths: true, china5a: false, worldHeritage: false };
+  return { light: true, checkins: true, paths: true, china5a: false, chinaAncientCapitals: false, worldHeritage: false };
 }
 
 function normalizeMapOverlays(overlays = {}) {
@@ -345,6 +353,7 @@ function normalizeMapOverlays(overlays = {}) {
     ...defaultMapOverlays(),
     ...overlays,
     china5a: false,
+    chinaAncientCapitals: false,
     worldHeritage: false,
   };
 }
@@ -1064,6 +1073,7 @@ function chineseToPinyinTitle(value) {
 
 const checklistEnglishLabels = {
   china5a: "China 5A Scenic Areas",
+  chinaAncientCapitals: "Ancient Chinese Capitals",
   worldHeritage: "World Heritage",
   fiveMountains: "Five Great Mountains of China",
   threeMountains: "Three Famous Mountains of China",
@@ -1668,6 +1678,10 @@ const checklistCatalog = {
       "香港迪士尼", "香港海洋公园", "澳门历史城区", "澳门威尼斯人",
     ],
   },
+  chinaAncientCapitals: {
+    label: "中国古都",
+    items: [],
+  },
   worldHeritage: {
     label: "世界遗产",
     byCountry: {
@@ -1809,7 +1823,7 @@ let state = {
   boundaryLevel: "country",
   mapProviderMode: "auto",
   detectedMapProvider: "",
-  mapOverlays: { light: true, checkins: true, paths: true, china5a: false, worldHeritage: false },
+  mapOverlays: { light: true, checkins: true, paths: true, china5a: false, chinaAncientCapitals: false, worldHeritage: false },
   mapViewport: null,
   focusPlaceId: "",
 };
@@ -3151,11 +3165,16 @@ function closeMapPopupsAndDetail() {
   const detail = $("#mapDetail");
   if (detail) {
     detail.classList.add("hidden");
+    detail.classList.remove("ancient-capital-detail");
     detail.innerHTML = `
       <p class="eyebrow">${t("selectionEyebrow")}</p>
       <h3>${t("mapDetailTitle")}</h3>
       <p class="muted">${t("mapDetailHelp")}</p>`;
   }
+}
+
+function resetMapDetailClass() {
+  $("#mapDetail")?.classList.remove("ancient-capital-detail");
 }
 
 function setMapAddMode(enabled) {
@@ -3217,6 +3236,7 @@ function openMapClickCheckinForm(lng, lat) {
   const point = inferMapClickPoint(lng, lat);
   pendingMapClickPoint = { ...point, defaultName: mapClickPointName() };
   $("#mapDetail").classList.remove("hidden");
+  resetMapDetailClass();
   $("#mapDetail").innerHTML = `
     <p class="eyebrow">${t("mapClickPoint")}</p>
     <h3>${t("addMapPoint")}</h3>
@@ -3570,9 +3590,13 @@ function normalizeSavedChecklistGeography() {
       place.checklistKey === "worldHeritage" ||
       String(place.id || "").startsWith("checklist-worldheritage-") ||
       (place.checklist || []).includes(checklistCatalog.worldHeritage.label);
-    if (!isChina5a && !isWorldHeritage) return;
+    const isAncientCapital =
+      place.checklistKey === "chinaAncientCapitals" ||
+      String(place.id || "").startsWith("checklist-chinaancientcapitals-");
+    if (!isChina5a && !isWorldHeritage && !isAncientCapital) return;
     const before = `${place.country || ""}|${place.unit || ""}|${place.subunit || ""}|${place.lat || ""}|${place.lng || ""}`;
-    applyChecklistGeography(place, isChina5a ? "china5a" : "worldHeritage", checklistCoordinateFor(place.name));
+    const checklistKey = isChina5a ? "china5a" : isAncientCapital ? "chinaAncientCapitals" : "worldHeritage";
+    applyChecklistGeography(place, checklistKey, checklistCoordinateFor(place.name));
     const after = `${place.country || ""}|${place.unit || ""}|${place.subunit || ""}|${place.lat || ""}|${place.lng || ""}`;
     if (before !== after) changed = true;
     if (hasNorthKoreaCoverage) changed = true;
@@ -3884,6 +3908,37 @@ function loadChina5aCoordinates() {
       if (isMapPageActive() && state.mapOverlays?.china5a) scheduleGeoMapRender();
     });
   return china5aCoordinatesPromise;
+}
+
+function loadChinaAncientCapitals() {
+  if (chinaAncientCapitalsPromise) return chinaAncientCapitalsPromise;
+  chinaAncientCapitalsPromise = fetchJson("data/china-ancient-capitals.json")
+    .then((data) => {
+      const items = Array.isArray(data?.items) ? data.items : [];
+      if (!items.length) throw new Error("invalid ancient capitals catalog");
+      chinaAncientCapitals = data;
+      chinaAncientCapitalCoordinates = {};
+      chinaAncientCapitalMeta = {};
+      checklistCatalog.chinaAncientCapitals.items = items.map((item) => item.name);
+      items.forEach((item) => {
+        if (!item?.name || !Number.isFinite(item.lat) || !Number.isFinite(item.lng)) return;
+        const coords = [item.lat, item.lng, "中国"];
+        chinaAncientCapitalCoordinates[item.name] = coords;
+        chinaAncientCapitalMeta[canonicalPlaceKey(item.name)] = item;
+      });
+    })
+    .catch((error) => {
+      console.warn("中国古都清单加载失败", error);
+      chinaAncientCapitals = {};
+      chinaAncientCapitalCoordinates = {};
+      chinaAncientCapitalMeta = {};
+      checklistCatalog.chinaAncientCapitals.items = [];
+    })
+    .finally(() => {
+      checklistOverlayCache.signature = "";
+      if (isMapPageActive() && state.mapOverlays?.chinaAncientCapitals) scheduleGeoMapRender();
+    });
+  return chinaAncientCapitalsPromise;
 }
 
 function getMapCountries() {
@@ -4931,14 +4986,17 @@ function mapLibreMarkerRenderSignature(overlays) {
     activeKeys.join(","),
     (state.checklistMarks || []).length,
     checklistTotalCount("china5a"),
+    checklistTotalCount("chinaAncientCapitals"),
     checklistTotalCount("worldHeritage"),
     Object.keys(china5aCoordinates || {}).length,
+    Object.keys(chinaAncientCapitalCoordinates || {}).length,
     Object.keys(worldHeritageCoordinates || {}).length,
   ].join("#");
   return JSON.stringify({
     language: currentLanguage,
     checkins: Boolean(overlays.checkins),
     china5a: Boolean(overlays.china5a),
+    chinaAncientCapitals: Boolean(overlays.chinaAncientCapitals),
     worldHeritage: Boolean(overlays.worldHeritage),
     revision: mapPointRenderRevision,
     visits: (state.visits || []).length,
@@ -4993,7 +5051,7 @@ function mapLibrePointGeoJson(overlays) {
         title: entry.item,
         subtitle: checklistCatalog[entry.key]?.label || t("checklistFallback"),
         done: Boolean(entry.done),
-        color: entry.key === "worldHeritage" ? "#276db6" : "#218a78",
+        color: checklistOverlayColor(entry.key, Boolean(entry.done)),
         stroke: entry.done ? "#111827" : "rgba(17, 24, 39, 0.5)",
         radius: entry.done ? 4 : 3,
         haloOpacity: entry.done ? 0.98 : 0,
@@ -5002,6 +5060,12 @@ function mapLibrePointGeoJson(overlays) {
     });
   });
   return { type: "FeatureCollection", features };
+}
+
+function checklistOverlayColor(key, done = false) {
+  if (key === "worldHeritage") return done ? "#3b82f6" : "#60a5fa";
+  if (key === "chinaAncientCapitals") return done ? "#a855f7" : "#c084fc";
+  return done ? "#0f5f51" : "#218a78";
 }
 
 function addMapLibrePointLayers(sourceId) {
@@ -5099,6 +5163,7 @@ function checklistOverlayPlaces() {
     (state.visits || []).length,
     places.length,
     Object.keys(china5aCoordinates || {}).length,
+    Object.keys(chinaAncientCapitalCoordinates || {}).length,
     Object.keys(worldHeritageCoordinates || {}).length,
   ].join("#");
   if (checklistOverlayCache.signature === signature) return checklistOverlayCache.items;
@@ -5131,6 +5196,7 @@ function activeChecklistOverlayKeys() {
   const overlays = state.mapOverlays || {};
   return [
     overlays.china5a ? "china5a" : "",
+    overlays.chinaAncientCapitals ? "chinaAncientCapitals" : "",
     overlays.worldHeritage ? "worldHeritage" : "",
   ].filter(Boolean);
 }
@@ -5150,16 +5216,56 @@ function checklistMapItemsFor(key) {
 
 function renderChecklistMapDetail(key, item) {
   const done = isChecklistItemDone(key, item);
-  const coords = checklistCoordinateFor(item);
+  const capitalMeta = key === "chinaAncientCapitals" ? chinaAncientCapitalMeta[canonicalPlaceKey(item)] : null;
+  if (capitalMeta) {
+    renderAncientCapitalDetail(key, item, capitalMeta, done);
+    return;
+  }
   $("#mapDetail").classList.remove("hidden");
+  resetMapDetailClass();
   $("#mapDetail").innerHTML = `
     <p class="eyebrow">${checklistCatalog[key]?.label || t("checklistFallback")}</p>
     <h3>${item}</h3>
     <dl>
       <div><dt>${t("status")}</dt><dd>${done ? t("checked") : t("unvisited")}</dd></div>
-      <div><dt>${t("coordinates")}</dt><dd>${coords ? `${coords[0].toFixed(2)}, ${coords[1].toFixed(2)}` : t("none")}</dd></div>
     </dl>
     <button class="detail-action" data-checklist-map="${key}" data-item="${item}" type="button">${done ? t("unvisit") : t("markVisited")}</button>`;
+}
+
+function renderAncientCapitalDetail(key, item, capitalMeta, done) {
+  $("#mapDetail").classList.remove("hidden");
+  $("#mapDetail").classList.add("ancient-capital-detail");
+  const dynastyCount = capitalMeta.dynasties?.length || 0;
+  const dynastyCountLabel = currentLanguage === "en" ? `${dynastyCount} linked` : `${dynastyCount} 个`;
+  $("#mapDetail").innerHTML = `
+    <p class="eyebrow">${checklistCatalog[key]?.label || t("checklistFallback")}</p>
+    <h3>${item}</h3>
+    <div class="capital-facts">
+      <section>
+        <header><strong>${currentLanguage === "en" ? "Ancient names" : "古称"}</strong></header>
+        ${renderCompactValueList(capitalMeta.ancientNames)}
+      </section>
+      <section>
+        <header><strong>${currentLanguage === "en" ? "Dynasties" : "关联政权"}</strong><em>${dynastyCountLabel}</em></header>
+        ${renderCompactValueList(capitalMeta.dynasties)}
+      </section>
+      <section>
+        <header><strong>${currentLanguage === "en" ? "Eras" : "时代"}</strong></header>
+        ${renderCompactValueList(capitalMeta.eras)}
+      </section>
+      <section class="capital-meta-line">
+        <span>${escapeHtml(capitalMeta.admin || t("none"))}</span>
+        <span>${currentLanguage === "en" ? "Confidence" : "置信度"} ${escapeHtml(capitalMeta.confidence || t("none"))}</span>
+        <span>${done ? t("checked") : t("unvisited")}</span>
+      </section>
+    </div>
+    <button class="detail-action" data-checklist-map="${key}" data-item="${item}" type="button">${done ? t("unvisit") : t("markVisited")}</button>`;
+}
+
+function renderCompactValueList(values) {
+  const list = (values || []).filter(Boolean);
+  if (!list.length) return escapeHtml(t("none"));
+  return `<span class="compact-value-list">${list.map((value) => `<span>${escapeHtml(value)}</span>`).join("")}</span>`;
 }
 
 function bindMapLibreLayerHandlers() {
@@ -5484,6 +5590,7 @@ function renderCountryDetail(countryId) {
   const canToggle = !bestDepthForCountry(countryId) || manual;
   const action = canToggle ? `<button class="detail-action" data-country-toggle="${countryId}" type="button">${manual ? t("unvisit") : t("markVisited")}</button>` : "";
   $("#mapDetail").classList.remove("hidden");
+  resetMapDetailClass();
   $("#mapDetail").innerHTML = `
     <p class="eyebrow">${t("countryDetail")}</p>
     <h3>${country.name}</h3>
@@ -5556,6 +5663,7 @@ function handleAdminRegionClick(feature) {
 
 function renderAdminRegionDetail(countryId, regionName, visits) {
   $("#mapDetail").classList.remove("hidden");
+  resetMapDetailClass();
   $("#mapDetail").innerHTML = `
     <p class="eyebrow">${t("adminRegion")}</p>
     <h3>${regionName}</h3>
@@ -5655,6 +5763,7 @@ function renderAdminRegionDetail(countryId, regionName, visits, options = {}) {
       ${options.manual ? t("unvisit") : t("markVisited")}
     </button>` : "";
   $("#mapDetail").classList.remove("hidden");
+  resetMapDetailClass();
   $("#mapDetail").innerHTML = `
     <p class="eyebrow">${t("adminRegion")}</p>
     <h3>${displayRegionName}</h3>
@@ -6103,6 +6212,7 @@ function renderPlaceDetail(placeId) {
     ? (place.subunit ? chinaSubadminDisplayName(place.subunit) : chinaProvinceDisplayName(place.unit))
     : place.unit;
   $("#mapDetail").classList.remove("hidden");
+  $("#mapDetail").classList.remove("ancient-capital-detail");
   $("#mapDetail").innerHTML = `
     <p class="eyebrow">${t("mapPoint")}</p>
     <h3>${place.name}</h3>
@@ -6110,7 +6220,6 @@ function renderPlaceDetail(placeId) {
       <div><dt>${t("countryRegion")}</dt><dd>${getCountry(place.country).name}</dd></div>
       <div><dt>${t("region")}</dt><dd>${regionLabel || t("unassigned")}</dd></div>
       <div><dt>${t("status")}</dt><dd>${visit ? t("checked") : t("unvisited")}</dd></div>
-      <div><dt>${t("coordinates")}</dt><dd>${Number.isFinite(place.lat) ? `${place.lat.toFixed(2)}, ${place.lng.toFixed(2)}` : t("none")}</dd></div>
     </dl>
     <div class="tag-row">${place.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}</div>
     ${visit ? `<button class="detail-action" data-unvisit="${place.id}" type="button">${t("unvisit")}</button>` : ""}`;
@@ -6917,13 +7026,16 @@ function applyChecklistGeography(place, key, coords) {
     place.country = "cn";
     if (coords?.[2]) place.unit = coords[2];
   }
+  if (key === "chinaAncientCapitals") {
+    place.country = "cn";
+  }
   if (key === "worldHeritage") {
     const countryId = coords?.[2] ? worldHeritageCountryCoverageId(coords[2]) : "";
     if (countryId) place.country = countryId;
     if (coords?.[2] && sameAdminName(place.unit, coords[2])) place.unit = "";
   }
   if (!(Number.isFinite(place.lat) && Number.isFinite(place.lng))) return;
-  if (key !== "china5a") {
+  if (key !== "china5a" && key !== "chinaAncientCapitals") {
     const country = inferCountry(place.lng, place.lat);
     if (country?.id) place.country = country.id;
   }
@@ -6953,6 +7065,7 @@ function checklistCoordinateFor(item, group = "") {
 function checklistCoordinateLookup() {
   if (
     checklistCoordinateLookupCache.china5a === china5aCoordinates
+    && checklistCoordinateLookupCache.ancientCapitals === chinaAncientCapitalCoordinates
     && checklistCoordinateLookupCache.worldHeritage === worldHeritageCoordinates
     && checklistCoordinateLookupCache.englishNames === worldHeritageEnglishNames
   ) {
@@ -6969,6 +7082,10 @@ function checklistCoordinateLookup() {
     add(name, coords);
     add(cleanChecklistName(name), coords);
   });
+  Object.entries(chinaAncientCapitalCoordinates || {}).forEach(([name, coords]) => {
+    add(name, coords);
+    add(cleanChecklistName(name), coords);
+  });
   Object.entries(worldHeritageCoordinates || {}).forEach(([name, coords]) => {
     add(name, coords);
     add(cleanChecklistName(name), coords);
@@ -6976,6 +7093,7 @@ function checklistCoordinateLookup() {
   });
   checklistCoordinateLookupCache = {
     china5a: china5aCoordinates,
+    ancientCapitals: chinaAncientCapitalCoordinates,
     worldHeritage: worldHeritageCoordinates,
     englishNames: worldHeritageEnglishNames,
     map,
@@ -7802,11 +7920,13 @@ function renderMapControls() {
   const showCheckins = $("#showCheckinsOnMap");
   const showTracks = $("#showTracksOnMap");
   const showChina5a = $("#showChina5aOnMap");
+  const showAncientCapitals = $("#showAncientCapitalsOnMap");
   const showWorldHeritage = $("#showWorldHeritageOnMap");
   if (showLight) showLight.checked = Boolean(overlays.light);
   if (showCheckins) showCheckins.checked = Boolean(overlays.checkins);
   if (showTracks) showTracks.checked = Boolean(overlays.paths);
   if (showChina5a) showChina5a.checked = Boolean(overlays.china5a);
+  if (showAncientCapitals) showAncientCapitals.checked = Boolean(overlays.chinaAncientCapitals);
   if (showWorldHeritage) showWorldHeritage.checked = Boolean(overlays.worldHeritage);
   $("#addMapPoint")?.classList.toggle("active", mapAddMode);
   document.querySelectorAll("[data-region-view]").forEach((button) => {
@@ -7852,6 +7972,7 @@ function showPage(pageId) {
   document.querySelector(`[data-page="${target}"]`)?.scrollIntoView({ block: "start", inline: "nearest" });
   if (target === "world") {
     if (state.mapOverlays?.china5a) Promise.all([loadChina5aCatalog(), loadChina5aCoordinates()]).finally(renderGeoMap);
+    if (state.mapOverlays?.chinaAncientCapitals) loadChinaAncientCapitals().finally(renderGeoMap);
     if (state.mapOverlays?.worldHeritage) loadCatalogData();
     setTimeout(() => {
       if (mapLibreMap) mapLibreMap.resize();
@@ -8022,6 +8143,18 @@ $("#showChina5aOnMap")?.addEventListener("change", (event) => {
     else renderGeoMap();
   };
   if (event.target.checked) Promise.all([loadChina5aCatalog(), loadChina5aCoordinates()]).finally(refresh);
+  else refresh();
+});
+$("#showAncientCapitalsOnMap")?.addEventListener("change", (event) => {
+  state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
+  state.mapOverlays.chinaAncientCapitals = event.target.checked;
+  saveUiStateSoon();
+  const refresh = () => {
+    checklistOverlayCache.signature = "";
+    if (mapLibreMap) renderMapLibreMarkers();
+    else renderGeoMap();
+  };
+  if (event.target.checked) loadChinaAncientCapitals().finally(refresh);
   else refresh();
 });
 $("#showWorldHeritageOnMap")?.addEventListener("change", (event) => {

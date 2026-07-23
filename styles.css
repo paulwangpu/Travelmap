@@ -457,8 +457,13 @@ button:hover {
 }
 
 .maplibre-marker.checklist-worldHeritage {
-  background: #276db6 !important;
-  border-color: rgba(22, 73, 128, 0.62);
+  background: #60a5fa !important;
+  border-color: rgba(37, 99, 235, 0.7);
+}
+
+.maplibre-marker.checklist-chinaAncientCapitals {
+  background: #c084fc !important;
+  border-color: rgba(126, 34, 206, 0.7);
 }
 
 .maplibre-marker.checklist-china5a.done {
@@ -466,7 +471,11 @@ button:hover {
 }
 
 .maplibre-marker.checklist-worldHeritage.done {
-  background: #164f91 !important;
+  background: #3b82f6 !important;
+}
+
+.maplibre-marker.checklist-chinaAncientCapitals.done {
+  background: #a855f7 !important;
 }
 
 .maplibre-marker.checklist-marker.done {
@@ -709,6 +718,82 @@ button:hover {
 .detail-panel dd {
   margin: 4px 0 0;
   font-weight: 800;
+}
+
+.detail-panel.ancient-capital-detail h3 {
+  margin-bottom: 8px;
+}
+
+.capital-facts {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.capital-facts section {
+  padding: 9px 10px;
+  border: 1px solid rgba(126, 34, 206, 0.08);
+  border-radius: 8px;
+  background: rgba(250, 245, 255, 0.56);
+}
+
+.capital-facts header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 7px;
+  color: rgba(17, 24, 39, 0.8);
+  font-size: 13px;
+  font-weight: 950;
+}
+
+.capital-facts header strong {
+  font: inherit;
+}
+
+.capital-facts header em {
+  flex: 0 0 auto;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: #f3e8ff;
+  color: #7e22ce;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 950;
+}
+
+.capital-meta-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+.capital-meta-line span {
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: rgba(17, 24, 39, 0.055);
+  color: rgba(17, 24, 39, 0.68);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.compact-value-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.compact-value-list span {
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: #f6f2fb;
+  color: #31243f;
+  font-size: 12px;
+  font-weight: 850;
 }
 
 .china-map {
