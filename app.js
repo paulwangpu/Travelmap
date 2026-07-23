@@ -3298,6 +3298,20 @@ function handleMapCanvasClick(lng, lat, originalEvent = null) {
   openMapClickCheckinForm(lng, lat);
 }
 
+function markMapEventHandled(event) {
+  event?.preventDefault?.();
+  if (event?.originalEvent) {
+    event.originalEvent._travelMapHandled = true;
+    event.originalEvent.stopPropagation?.();
+    event.originalEvent.stopImmediatePropagation?.();
+  }
+}
+
+function mapEventHitsPoint(event) {
+  if (!mapLibreMap || !event?.point || !mapLibreMap.getLayer("map-points-circle")) return false;
+  return mapLibreMap.queryRenderedFeatures(event.point, { layers: ["map-points-circle"] }).length > 0;
+}
+
 function ensureMapDetailCloseButton() {
   const detail = $("#mapDetail");
   if (!detail || detail.classList.contains("hidden") || detail.querySelector("[data-close-detail]")) return;
@@ -4624,9 +4638,16 @@ function renderMapLibreMap() {
       container: "leafletMap",
       center,
       zoom: savedViewport?.zoom ?? 2,
+      bearing: 0,
+      pitch: 0,
+      dragRotate: false,
+      pitchWithRotate: false,
+      touchPitch: false,
       attributionControl: true,
       style: mapLibreBaseStyle(provider),
     });
+    mapLibreMap.dragRotate?.disable();
+    mapLibreMap.touchZoomRotate?.disableRotation();
     mapLibreMap._travelMapProvider = provider;
     mapLibreMap.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-left");
     mapLibreMap.on("click", (event) => {
@@ -4646,6 +4667,10 @@ function renderMapLibreMap() {
     return;
   }
 
+  mapLibreMap.dragRotate?.disable();
+  mapLibreMap.touchZoomRotate?.disableRotation();
+  if (mapLibreMap.getBearing?.() !== 0) mapLibreMap.setBearing(0);
+  if (mapLibreMap.getPitch?.() !== 0) mapLibreMap.setPitch(0);
   applyMapLibreProvider(provider);
   mapLibreMap.resize();
   if (mapLibreMap.isStyleLoaded()) renderMapLibreLayers();
@@ -5115,7 +5140,7 @@ function bindMapLibrePointHandlers() {
   if (mapLibreLayerHandlersBound.points || !mapLibreMap.getLayer("map-points-circle")) return;
   mapLibreLayerHandlersBound.points = true;
   mapLibreMap.on("click", "map-points-circle", (event) => {
-    if (event.originalEvent) event.originalEvent._travelMapHandled = true;
+    markMapEventHandled(event);
     const feature = event.features?.[0];
     if (!feature) return;
     renderMapLibrePointDetail(feature);
@@ -5169,27 +5194,74 @@ function checklistOverlayPlaces() {
   if (checklistOverlayCache.signature === signature) return checklistOverlayCache.items;
   const marked = checklistMarkKeys();
   const visited = visitedChecklistKeys();
+  const ambiguous5a = keys.includes("china5a") ? ambiguousChecklistItemKeys("china5a") : new Set();
   const seen = new Set(visitedPlaces()
     .filter((visit) => Number.isFinite(visit.place.lat) && Number.isFinite(visit.place.lng))
     .flatMap((visit) => [
       canonicalPlaceKey(visit.place.name),
       visit.place.checklistKey ? checklistItemKey(visit.place.checklistKey, visit.place.name, visit.place) : "",
     ].filter(Boolean)));
-  const allOverlayItems = keys.flatMap((key) => checklistMapItemsFor(key).map((item) => ({ key, item, itemKey: checklistItemKey(key, item) })));
-  const items = allOverlayItems.map(({ key, item, itemKey }) => {
-    const coords = checklistCoordinateFor(item);
+  const allOverlayItems = keys.flatMap(checklistOverlayEntriesFor);
+  const items = allOverlayItems.map(({ key, item, group, itemKey, legacyKey }) => {
+    const coords = checklistCoordinateFor(item, key === "china5a" ? group : "");
     if (!coords || !Number.isFinite(coords[0]) || !Number.isFinite(coords[1])) return null;
-    const done = marked.has(itemKey) || visited.has(itemKey);
+    const done = marked.has(itemKey)
+      || visited.has(itemKey)
+      || (!ambiguous5a.has(legacyKey) && (marked.has(legacyKey) || visited.has(legacyKey)));
     if (seen.has(itemKey) && !done) return null;
+    if (seen.has(legacyKey) && !done) return null;
     return { key, item, lat: coords[0], lng: coords[1], done };
   }).filter(Boolean);
   checklistOverlayCache = {
     signature,
     items,
-    keySet: new Set(allOverlayItems.map((entry) => entry.itemKey)),
+    keySet: new Set(allOverlayItems.flatMap((entry) => [entry.itemKey, entry.legacyKey]).filter(Boolean)),
   };
   logSlowStep("checklistOverlayPlaces", perfStartedAt);
   return items;
+}
+
+function ambiguousChecklistItemKeys(key) {
+  if (key !== "china5a") return new Set();
+  const counts = new Map();
+  Object.values(checklistCatalog.china5a?.byRegion || {}).forEach((items) => {
+    items.forEach((item) => {
+      const itemKey = canonicalPlaceKey(item);
+      if (itemKey) counts.set(itemKey, (counts.get(itemKey) || 0) + 1);
+    });
+  });
+  return new Set(Array.from(counts.entries()).filter(([, count]) => count > 1).map(([itemKey]) => itemKey));
+}
+
+function checklistOverlayEntriesFor(key) {
+  const list = checklistCatalog[key] || {};
+  if (list.byRegion) {
+    return Object.entries(list.byRegion).flatMap(([group, items]) =>
+      items.map((item) => ({
+        key,
+        group,
+        item,
+        itemKey: checklistItemKey(key, item, group),
+        legacyKey: canonicalPlaceKey(item),
+      })));
+  }
+  if (list.byCountry) {
+    return Object.entries(list.byCountry).flatMap(([group, items]) =>
+      items.map((item) => ({
+        key,
+        group,
+        item,
+        itemKey: checklistItemKey(key, item),
+        legacyKey: canonicalPlaceKey(item),
+      })));
+  }
+  return (list.items || []).map((item) => ({
+    key,
+    group: "",
+    item,
+    itemKey: checklistItemKey(key, item),
+    legacyKey: canonicalPlaceKey(item),
+  }));
 }
 
 function activeChecklistOverlayKeys() {
@@ -5273,7 +5345,8 @@ function bindMapLibreLayerHandlers() {
     mapLibreLayerHandlersBound.country = true;
     mapLibreMap.on("click", "country-click-fill", (event) => {
       if (mapAddMode) return;
-      if (event.originalEvent) event.originalEvent._travelMapHandled = true;
+      if (event.originalEvent?._travelMapHandled || mapEventHitsPoint(event)) return;
+      markMapEventHandled(event);
       const feature = event.features?.[0];
       if (feature) handleCountryClick(feature);
     });
@@ -5288,7 +5361,8 @@ function bindMapLibreLayerHandlers() {
     mapLibreLayerHandlersBound.admin = true;
     mapLibreMap.on("click", "visited-regions-fill", (event) => {
       if (mapAddMode) return;
-      if (event.originalEvent) event.originalEvent._travelMapHandled = true;
+      if (event.originalEvent?._travelMapHandled || mapEventHitsPoint(event)) return;
+      markMapEventHandled(event);
       const feature = event.features?.[0];
       if (feature) handleAdminRegionClick(feature);
     });
@@ -5303,7 +5377,8 @@ function bindMapLibreLayerHandlers() {
     mapLibreLayerHandlersBound.subadmin = true;
     mapLibreMap.on("click", "visited-subadmin-fill", (event) => {
       if (mapAddMode) return;
-      if (event.originalEvent) event.originalEvent._travelMapHandled = true;
+      if (event.originalEvent?._travelMapHandled || mapEventHitsPoint(event)) return;
+      markMapEventHandled(event);
       const feature = event.features?.[0];
       if (feature) handleAdminRegionClick(feature);
     });
