@@ -3266,8 +3266,11 @@ function createMapClickCheckin({ name, lng, lat }) {
 }
 
 function handleMapCanvasClick(lng, lat, originalEvent = null) {
-  if (!mapAddMode) return;
   if (originalEvent?._travelMapHandled) return;
+  if (!mapAddMode) {
+    closeMapPopupsAndDetail();
+    return;
+  }
   openMapClickCheckinForm(lng, lat);
 }
 
