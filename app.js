@@ -3096,6 +3096,10 @@ function visitedChecklistKeys() {
   const visitedIds = new Set((state.visits || []).map((visit) => visit.placeId));
   places.forEach((place) => {
     if (!visitedIds.has(place.id)) return;
+    if (place.checklistKey) {
+      const checklistKey = checklistItemKey(place.checklistKey, place.name, place);
+      if (checklistKey) keys.add(checklistKey);
+    }
     [place.name, place.type, ...(place.checklist || [])].forEach((value) => {
       const key = canonicalPlaceKey(value);
       if (key) keys.add(key);
@@ -5102,8 +5106,11 @@ function checklistOverlayPlaces() {
   const visited = visitedChecklistKeys();
   const seen = new Set(visitedPlaces()
     .filter((visit) => Number.isFinite(visit.place.lat) && Number.isFinite(visit.place.lng))
-    .map((visit) => canonicalPlaceKey(visit.place.name)));
-  const allOverlayItems = keys.flatMap((key) => checklistMapItemsFor(key).map((item) => ({ key, item, itemKey: canonicalPlaceKey(item) })));
+    .flatMap((visit) => [
+      canonicalPlaceKey(visit.place.name),
+      visit.place.checklistKey ? checklistItemKey(visit.place.checklistKey, visit.place.name, visit.place) : "",
+    ].filter(Boolean)));
+  const allOverlayItems = keys.flatMap((key) => checklistMapItemsFor(key).map((item) => ({ key, item, itemKey: checklistItemKey(key, item) })));
   const items = allOverlayItems.map(({ key, item, itemKey }) => {
     const coords = checklistCoordinateFor(item);
     if (!coords || !Number.isFinite(coords[0]) || !Number.isFinite(coords[1])) return null;
@@ -5133,7 +5140,8 @@ function placeBelongsToActiveChecklistOverlay(place) {
   if (!activeChecklistOverlayKeys().length) return false;
   checklistOverlayPlaces();
   const placeKey = canonicalPlaceKey(place.name);
-  return checklistOverlayCache.keySet.has(placeKey);
+  const exactKey = place.checklistKey ? checklistItemKey(place.checklistKey, place.name, place) : "";
+  return checklistOverlayCache.keySet.has(exactKey) || checklistOverlayCache.keySet.has(placeKey);
 }
 
 function checklistMapItemsFor(key) {
@@ -6309,11 +6317,16 @@ function renderAchievements() {
   $("#achievementList").innerHTML = `
     <nav class="checklist-nav checklist-page-nav manual-view-tabs">
       <button type="button" data-checklist-jump="achievement-section-china5a">${currentLanguage === "en" ? "5A scenic areas" : "5A 景区"}</button>
+      <button type="button" data-checklist-jump="achievement-section-usNationalParks">${currentLanguage === "en" ? "U.S. National Parks" : "美国国家公园"}</button>
       <button type="button" data-checklist-jump="achievement-section-worldHeritage">${currentLanguage === "en" ? "World Heritage" : "世界遗产"}</button>
       <button type="button" data-checklist-jump="achievement-section-referenceLists">${currentLanguage === "en" ? "Reference lists" : "参考清单"}</button>
     </nav>
     <details id="achievement-section-china5a" class="achievement-group" data-achievement-section="china5a">
       <summary>${currentLanguage === "en" ? "China 5A scenic areas" : "中国 5A 景区"}</summary>
+      <div class="achievement-section-placeholder"><p class="muted small">${currentLanguage === "en" ? "Expand to load this checklist." : "展开后加载该清单。"}</p></div>
+    </details>
+    <details id="achievement-section-usNationalParks" class="achievement-group" data-achievement-section="usNationalParks">
+      <summary>${currentLanguage === "en" ? "U.S. National Parks" : "美国国家公园"}</summary>
       <div class="achievement-section-placeholder"><p class="muted small">${currentLanguage === "en" ? "Expand to load this checklist." : "展开后加载该清单。"}</p></div>
     </details>
     <details id="achievement-section-worldHeritage" class="achievement-group" data-achievement-section="worldHeritage">
@@ -6354,8 +6367,12 @@ function fillAchievementSection(details) {
     placeholder.outerHTML = renderChecklistSection("worldHeritage", checklistCatalog.worldHeritage);
     return;
   }
+  if (section === "usNationalParks") {
+    placeholder.outerHTML = renderChecklistSection("usNationalParks", checklistCatalog.usNationalParks);
+    return;
+  }
   if (section === "referenceLists") {
-    const referenceOrder = ["threeMountains", "fiveMountains", "buddhistMountains", "grottoes", "usNationalParks"];
+    const referenceOrder = ["threeMountains", "fiveMountains", "buddhistMountains", "grottoes"];
     const checklistHtml = referenceOrder
       .filter((key) => checklistCatalog[key])
       .map((key) => [key, checklistCatalog[key]])
@@ -6453,13 +6470,12 @@ function renderChina5aSection() {
   const list = checklistCatalog.china5a;
   const groups = Object.entries(list.byRegion || {});
   const localRecordCount = groups.reduce((total, [, items]) => total + items.length, 0);
-  const duplicateCount = localRecordCount - new Set(groups.flatMap(([, items]) => items.map(canonicalPlaceKey))).size;
   const done = checklistDoneCount("china5a");
   const groupStats = new Map(groups.map(([region, items]) => [
     region,
     {
       total: items.length,
-      done: items.filter((item) => isChecklistItemDone("china5a", item)).length,
+      done: items.filter((item) => isChecklistItemDone("china5a", item, region)).length,
     },
   ]));
   const nav = groups.map(([region, items]) => {
@@ -6478,12 +6494,8 @@ function renderChina5aSection() {
   return `<section class="theme-checklist featured-checklist china5a-checklist">
     <header><strong>${checklistLabel("china5a", list)}</strong><span>${done}/${checklistTotalCount("china5a")}</span></header>
     <div class="checklist-health">
-      <span>${china5aStatusSourceText()}</span>
-      <span>${china5aStatusDetailText()}</span>
-      <span>${currentLanguage === "en" ? "Grouped by province" : "按省份显示"}</span>
-      <span>${currentLanguage === "en" ? `${groups.length} groups` : `${groups.length} 个分组`}</span>
-      <span>${currentLanguage === "en" ? `${localRecordCount} local records` : `${localRecordCount} 条内置记录`}</span>
-      <span>${currentLanguage === "en" ? `${duplicateCount} duplicate names` : `${duplicateCount} 个重复名`}</span>
+      <span>${currentLanguage === "en" ? `${localRecordCount} 5A scenic areas` : `${localRecordCount} 个 5A 景区`}</span>
+      <span>${currentLanguage === "en" ? `${Object.keys(china5aCoordinates || {}).length} mapped coordinates` : `${Object.keys(china5aCoordinates || {}).length} 个有地图坐标`}</span>
     </div>
     <nav class="checklist-nav">${nav}</nav>
     <div class="country-checklist-list">${blocks}</div>
@@ -6524,6 +6536,7 @@ function achievementModel(name, doneCount, total, category, levels) {
 }
 
 function renderChecklistSection(key, list) {
+  if (key === "usNationalParks") return renderUsNationalParksSection(key, list);
   if (list.byRegion) return renderRegionChecklistSection(key, list);
   if (list.byCountry) return renderCountryChecklistSection(key, list);
   const done = checklistDoneCount(key);
@@ -6537,26 +6550,55 @@ function displayChecklistItems(key, items) {
   return items || [];
 }
 
-function renderChecklistChipGrid(key, items) {
+function renderChecklistChipGrid(key, items, group = "") {
   return `<div class="check-chip-grid">
-    ${(items || []).map((item) => renderChecklistChipButton(key, item)).join("")}
+    ${(items || []).map((item) => renderChecklistChipButton(key, item, group)).join("")}
   </div>`;
 }
 
-function renderChecklistChipButton(key, item) {
-  const checked = isChecklistItemDone(key, item);
+function renderChecklistChipButton(key, item, group = "") {
+  const checked = isChecklistItemDone(key, item, group);
   const label = `${checked ? `${t("checked")} · ` : ""}${checklistItemDisplayName(key, item)}`;
-  return `<button class="check-chip ${checked ? "done" : ""}" data-checklist="${escapeHtml(key)}" data-item="${escapeHtml(item)}" type="button">${escapeHtml(label)}</button>`;
+  return `<button class="check-chip ${checked ? "done" : ""}" data-checklist="${escapeHtml(key)}" data-item="${escapeHtml(item)}" data-group="${escapeHtml(group)}" type="button">${escapeHtml(label)}</button>`;
+}
+
+function renderUsNationalParksSection(key, list) {
+  const done = checklistDoneCount(key);
+  const items = list.items || [];
+  return `<section class="theme-checklist us-parks-checklist">
+    <header><strong>${checklistLabel(key, list)}</strong><span>${done}/${items.length}</span></header>
+    <div class="us-park-grid">
+      ${items.map((item) => renderUsParkCard(key, item)).join("")}
+    </div>
+  </section>`;
+}
+
+function splitBilingualParkName(item) {
+  const match = String(item || "").match(/^(.*?)（([^（）]+)）$/);
+  if (!match) return { primary: item, secondary: "" };
+  return currentLanguage === "en"
+    ? { primary: match[2], secondary: match[1] }
+    : { primary: match[1], secondary: match[2] };
+}
+
+function renderUsParkCard(key, item) {
+  const checked = isChecklistItemDone(key, item);
+  const name = splitBilingualParkName(item);
+  return `<button class="us-park-card ${checked ? "done" : ""}" data-checklist="${escapeHtml(key)}" data-item="${escapeHtml(item)}" type="button">
+    <span class="us-park-card-main">${escapeHtml(name.primary)}</span>
+    ${name.secondary ? `<span class="us-park-card-sub">${escapeHtml(name.secondary)}</span>` : ""}
+    <span class="us-park-card-status">${checked ? t("checked") : t("unvisited")}</span>
+  </button>`;
 }
 
 function renderRegionChecklistSection(key, list) {
   const blocks = Object.entries(list.byRegion).map(([region, items]) => {
     const displayItems = displayChecklistItems(key, items);
-    const done = displayItems.filter((item) => isChecklistItemDone(key, item)).length;
+    const done = displayItems.filter((item) => isChecklistItemDone(key, item, region)).length;
     const groupId = checklistGroupId(key, region);
     return `<details class="country-checklist" data-checklist-group="${groupId}">
       <summary><strong>${checklistGroupDisplayName(key, region)}</strong><span>${done}/${displayItems.length}</span></summary>
-      ${renderChecklistChipGrid(key, displayItems)}
+      ${renderChecklistChipGrid(key, displayItems, region)}
     </details>`;
   }).join("");
   return `<section class="theme-checklist featured-checklist">
@@ -6636,9 +6678,14 @@ function renderCountryChecklistSection(key, list) {
 
 function checklistDoneCount(key) {
   const { marked, visited } = checklistStatusKeys();
-  return checklistItemsFor(key).filter((item) => {
-    const itemKey = canonicalPlaceKey(item);
-    return marked.has(itemKey) || visited.has(itemKey);
+  const list = checklistCatalog[key] || {};
+  const entries = list.byRegion
+    ? Object.entries(list.byRegion).flatMap(([group, items]) => items.map((item) => ({ item, group })))
+    : checklistItemsFor(key).map((item) => ({ item, group: "" }));
+  return entries.filter(({ item, group }) => {
+    const itemKey = checklistItemKey(key, item, group);
+    const legacyKey = canonicalPlaceKey(item);
+    return marked.has(itemKey) || visited.has(itemKey) || (!isAmbiguousChecklistItem(key, item) && (marked.has(legacyKey) || visited.has(legacyKey)));
   }).length;
 }
 
@@ -6654,14 +6701,42 @@ function checklistItemsFor(key) {
   return list.items;
 }
 
-function isChecklistItemDone(key, item) {
-  const itemKey = canonicalPlaceKey(item);
+function isChecklistItemDone(key, item, group = "") {
+  const itemKey = checklistItemKey(key, item, group);
+  const legacyKey = canonicalPlaceKey(item);
   const { marked, visited } = checklistStatusKeys();
-  return marked.has(itemKey) || visited.has(itemKey);
+  return marked.has(itemKey) || visited.has(itemKey) || (!isAmbiguousChecklistItem(key, item) && (marked.has(legacyKey) || visited.has(legacyKey)));
 }
 
-function checklistId(key, item) {
-  return `${key}:${canonicalPlaceKey(item)}`;
+function checklistId(key, item, group = "") {
+  return `${key}:${checklistItemKey(key, item, group)}`;
+}
+
+function checklistItemKey(key, item, context = null) {
+  const itemKey = canonicalPlaceKey(item);
+  if (key !== "china5a") return itemKey;
+  const region = typeof context === "string" ? context : (context?.unit || checklistCoordinateFor(item)?.[2] || china5aRegionForItem(item));
+  const regionKey = canonicalPlaceKey(region);
+  return regionKey ? `${regionKey}:${itemKey}` : itemKey;
+}
+
+function china5aRegionForItem(item) {
+  const itemKey = canonicalPlaceKey(item);
+  for (const [region, items] of Object.entries(checklistCatalog.china5a?.byRegion || {})) {
+    if (items.some((candidate) => canonicalPlaceKey(candidate) === itemKey)) return region;
+  }
+  return "";
+}
+
+function isAmbiguousChecklistItem(key, item) {
+  if (key !== "china5a") return false;
+  const itemKey = canonicalPlaceKey(item);
+  let count = 0;
+  for (const items of Object.values(checklistCatalog.china5a?.byRegion || {})) {
+    count += items.filter((candidate) => canonicalPlaceKey(candidate) === itemKey).length;
+    if (count > 1) return true;
+  }
+  return false;
 }
 
 function checklistGroupId(key, group) {
@@ -6695,10 +6770,10 @@ function fillLazyChecklistGroup(details) {
   const items = displayChecklistItems(key, catalog.byCountry?.[group] || catalog.byRegion?.[group] || []);
   const summaryCount = details.querySelector?.("[data-checklist-summary-count]");
   if (summaryCount) {
-    const done = items.filter((item) => isChecklistItemDone(key, item)).length;
+    const done = items.filter((item) => isChecklistItemDone(key, item, group)).length;
     summaryCount.textContent = `${done}/${items.length}`;
   }
-  placeholder.outerHTML = renderChecklistChipGrid(key, items);
+  placeholder.outerHTML = renderChecklistChipGrid(key, items, group);
 }
 
 function scheduleFillLazyChecklistGroup(details, afterFill) {
@@ -6721,29 +6796,32 @@ function scheduleFillLazyChecklistGroup(details, afterFill) {
   });
 }
 
-function toggleChecklistItem(key, item) {
-  const id = checklistId(key, item);
+function toggleChecklistItem(key, item, group = "") {
+  const id = checklistId(key, item, group);
+  const itemKey = checklistItemKey(key, item, group);
+  const legacyKey = canonicalPlaceKey(item);
   const marks = new Set(state.checklistMarks || []);
-  const wasDone = isChecklistItemDone(key, item);
+  const wasDone = isChecklistItemDone(key, item, group);
   if (wasDone) {
     Array.from(marks).forEach((mark) => {
-      if (mark.endsWith(`:${canonicalPlaceKey(item)}`)) marks.delete(mark);
+      const markKey = canonicalPlaceKey(mark.split(":").slice(1).join(":"));
+      if (markKey === itemKey || (!isAmbiguousChecklistItem(key, item) && markKey === legacyKey)) marks.delete(mark);
     });
-    unvisitPlaceByName(item);
+    unvisitChecklistItem(key, item, group);
   } else {
     marks.add(id);
-    const place = ensureChecklistPlace(key, item);
+    const place = ensureChecklistPlace(key, item, group);
   }
   state.checklistMarks = Array.from(marks);
   rebuildCoverageFromSavedVisits();
   saveStateSoon();
-  renderAfterChecklistChange(key, item);
+  renderAfterChecklistChange(key, item, group);
   if (document.querySelector('[data-page="imports"]')?.classList.contains("active")) renderDataInventory();
 }
 
-function renderAfterChecklistChange(key, item) {
+function renderAfterChecklistChange(key, item, group = "") {
   invalidateMapPointRenderCache();
-  updateChecklistButtonsForItem(key, item);
+  updateChecklistButtonsForItem(key, item, group);
   renderMetrics();
   renderDashboardAchievements();
   renderNextStops();
@@ -6756,22 +6834,44 @@ function renderAfterChecklistChange(key, item) {
   }
 }
 
-function updateChecklistButtonsForItem(key, item) {
-  const done = isChecklistItemDone(key, item);
-  const canonical = canonicalPlaceKey(item);
+function updateChecklistButtonsForItem(key, item, group = "") {
+  const done = isChecklistItemDone(key, item, group);
+  const itemKey = checklistItemKey(key, item, group);
+  const legacyKey = canonicalPlaceKey(item);
   document.querySelectorAll(`[data-checklist="${key}"], [data-checklist-map="${key}"]`).forEach((button) => {
     const buttonItem = button.dataset.item || "";
-    if (canonicalPlaceKey(buttonItem) !== canonical) return;
+    const buttonKey = checklistItemKey(key, buttonItem, button.dataset.group || "");
+    if (buttonKey !== itemKey && (!isAmbiguousChecklistItem(key, item) || canonicalPlaceKey(buttonItem) !== legacyKey)) return;
     button.classList.toggle("done", done);
     button.textContent = done ? `${t("checked")} · ${buttonItem}` : buttonItem;
     if (button.dataset.checklistMap) button.textContent = done ? t("unvisit") : t("markVisited");
   });
 }
 
-function ensureChecklistPlace(key, item) {
+function checklistPlaceMatchesItem(key, item, place, group = "") {
+  if (!place) return false;
+  const itemKey = checklistItemKey(key, item, group);
+  if (place.checklistKey === key && checklistItemKey(key, place.name, place) === itemKey) return true;
+  if (isAmbiguousChecklistItem(key, item)) return false;
+  return placeMatchesName(place, item);
+}
+
+function findChecklistPlace(key, item, group = "") {
+  return places.find((place) => checklistPlaceMatchesItem(key, item, place, group));
+}
+
+function unvisitChecklistItem(key, item, group = "") {
+  const ids = new Set(places.filter((place) => checklistPlaceMatchesItem(key, item, place, group)).map((place) => place.id));
+  if (!ids.size) return;
+  state.visits = state.visits.filter((visit) => !ids.has(visit.placeId));
+  places = places.filter((place) => !(place.checklistOnly && ids.has(place.id)));
+  checklistStatusCache.signature = "";
+}
+
+function ensureChecklistPlace(key, item, group = "") {
   const listLabel = checklistCatalog[key].label;
-  const coords = checklistCoordinateFor(item);
-  const existing = places.find((place) => placeMatchesName(place, item));
+  const coords = checklistCoordinateFor(item, group);
+  const existing = findChecklistPlace(key, item, group);
   if (existing) {
     existing.checklist = Array.from(new Set([...(existing.checklist || []), listLabel]));
     existing.checklistKey ||= key;
@@ -6780,13 +6880,13 @@ function ensureChecklistPlace(key, item) {
     state.focusPlaceId = existing.id;
     return existing;
   }
-  const id = `checklist-${slugify(key)}-${slugify(item)}`;
+  const id = `checklist-${slugify(key)}-${slugify(checklistItemKey(key, item, group))}`;
   const defaultCountry = key === "usNationalParks" ? "us" : key === "worldHeritage" ? "imported" : "cn";
   const place = {
     id,
     name: item,
     country: defaultCountry,
-    unit: key === "worldHeritage" ? "" : (coords?.[2] || ""),
+    unit: key === "worldHeritage" ? "" : (coords?.[2] || group || ""),
     city: "",
     type: listLabel,
     lat: coords?.[0] ?? null,
@@ -6837,7 +6937,7 @@ function cleanChecklistName(value) {
   return String(value || "").replace(/景区|旅游区|风景区|国家公园|历史城区/g, "").trim();
 }
 
-function checklistCoordinateFor(item) {
+function checklistCoordinateFor(item, group = "") {
   const lookup = checklistCoordinateLookup();
   const candidates = [
     item,
@@ -6845,7 +6945,9 @@ function checklistCoordinateFor(item) {
     englishNameInParentheses(item),
     cleanEnglishParkName(englishNameInParentheses(item)),
   ].filter(Boolean);
-  return candidates.map((name) => lookup.get(canonicalPlaceKey(name))).find(Boolean);
+  const coords = candidates.map((name) => lookup.get(canonicalPlaceKey(name))).find(Boolean);
+  if (group && coords?.[2] && !sameAdminName(group, coords[2])) return null;
+  return coords;
 }
 
 function checklistCoordinateLookup() {
@@ -7970,7 +8072,7 @@ $("#achievementList").addEventListener("click", (event) => {
   const button = event.target.closest("[data-checklist]");
   if (!button) return;
   rememberChecklistGroupForElement(button);
-  toggleChecklistItem(button.dataset.checklist, button.dataset.item);
+  toggleChecklistItem(button.dataset.checklist, button.dataset.item, button.dataset.group || "");
 });
 $("#achievementList").addEventListener("toggle", (event) => {
   if (event.target?.matches?.("[data-achievement-section]")) {

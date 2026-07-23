@@ -1768,6 +1768,91 @@ button:hover {
   color: var(--deep);
 }
 
+.us-parks-checklist {
+  border-color: #d9e8df;
+}
+
+.us-park-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 8px;
+}
+
+.us-park-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 3px 10px;
+  min-height: 64px;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f7faf8;
+  color: var(--ink);
+  cursor: pointer;
+  text-align: left;
+}
+
+.us-park-card:hover {
+  border-color: #a8cdb9;
+  background: #fbfefc;
+}
+
+.us-park-card.done {
+  border-color: #86c7a8;
+  background: #e8f6ed;
+  color: var(--deep);
+}
+
+.us-park-card-main {
+  min-width: 0;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.us-park-card-sub {
+  grid-column: 1;
+  min-width: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+
+.us-park-card-status {
+  grid-row: 1 / span 2;
+  grid-column: 2;
+  align-self: center;
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: #edf3ef;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.us-park-card.done .us-park-card-status {
+  background: #123026;
+  color: #fff;
+}
+
+@media (max-width: 520px) {
+  .us-park-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .us-park-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .us-park-card-status {
+    grid-row: auto;
+    grid-column: 1;
+    justify-self: start;
+    margin-top: 2px;
+  }
+}
+
 .country-checklist-list {
   display: grid;
   gap: 10px;
