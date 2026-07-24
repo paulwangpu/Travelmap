@@ -6,7 +6,7 @@
     <title>我的全球旅行地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
-    <link rel="stylesheet" href="styles.css?v=59" />
+    <link rel="stylesheet" href="styles.css?v=61" />
   </head>
   <body>
     <div class="app-shell map-first-shell">
@@ -35,7 +35,7 @@
             <strong data-i18n="privacyTitle">本地保存</strong>
             <p data-i18n="privacyText">数据只保存在本机浏览器里，不会自动上传或公开。如需备份请导出。</p>
           </div>
-          <div class="app-version" id="appVersion">v1.8.2</div>
+          <div class="app-version" id="appVersion">v1.8.3</div>
         </div>
       </aside>
 
@@ -228,7 +228,7 @@
               </label>
 
             </div>
-            <p class="muted small" data-i18n="csvHelp">支持 GeoJSON/JSON、KML、CSV 和照片。GeoJSON/KML 的点会作为导入地点，线和面会作为轨迹/Shape 显示，不会自动变成地点；CSV 建议只保留名称、纬度、经度三列，也支持英文列名：name、lat/latitude、lng/lon/longitude。其他列会忽略。照片只读取本地文件名和 EXIF GPS，不上传照片。当前不限制导入点数，但点太多会影响浏览器渲染。</p>
+            <p class="muted small" data-i18n="csvHelp">支持 GeoJSON/JSON、KML、CSV 和照片。GeoJSON/KML 的点会作为已导入地点，线和面会作为已导入轨迹显示，不会自动变成地点；CSV 建议只保留名称、纬度、经度三列，也支持英文列名：name、lat/latitude、lng/lon/longitude。其他列会忽略。照片只读取本地文件名和 EXIF GPS，不上传照片。当前不限制导入点数，但点太多会影响浏览器渲染。</p>
             <div id="importSummary" class="bars"></div>
           </div>
           <div class="panel">
@@ -273,6 +273,6 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-    <script src="app.js?v=203"></script>
+    <script src="app.js?v=206"></script>
   </body>
 </html>
