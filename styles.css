@@ -1135,12 +1135,13 @@ button:hover {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #ffffff;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .data-table-block summary {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 14px;
   padding: 11px 12px;
   cursor: pointer;
@@ -1148,10 +1149,38 @@ button:hover {
   background: #f8fbf9;
 }
 
+.data-table-block summary em {
+  min-width: 34px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #eef4f1;
+  color: var(--muted);
+  font-style: normal;
+  font-size: 12px;
+  text-align: center;
+}
+
 .data-table-block table {
   width: 100%;
-  min-width: 720px;
+  min-width: 520px;
   border-collapse: collapse;
+}
+
+.data-table-block[open] {
+  overflow: hidden;
+}
+
+.data-table-block[open] table {
+  display: table;
+  max-height: min(58vh, 620px);
+  overflow: auto;
+}
+
+.data-table-block thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #ffffff;
 }
 
 .data-table-block th,
@@ -1160,16 +1189,31 @@ button:hover {
   border-top: 1px solid var(--line);
   text-align: left;
   font-size: 13px;
+  vertical-align: top;
+}
+
+.data-table-block td span {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.data-table-block td strong {
+  font-weight: 800;
+  overflow-wrap: anywhere;
 }
 
 .table-action {
   min-height: 0;
-  padding: 5px 9px;
+  padding: 4px 8px;
   border: 1px solid var(--line);
   border-radius: 7px;
   background: #eef4f1;
   color: var(--ink);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   white-space: nowrap;
 }
@@ -4665,5 +4709,98 @@ button:hover {
   .map-toolbar > .map-control-panel {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto !important;
     max-width: none !important;
+  }
+
+  .data-table-block table,
+  .data-table-block thead,
+  .data-table-block tbody,
+  .data-table-block tr,
+  .data-table-block th,
+  .data-table-block td {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .data-table-block[open] table {
+    display: block;
+    max-height: min(56vh, 520px);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .data-table-block thead {
+    display: none;
+  }
+
+  .data-table-block tr {
+    position: relative;
+    padding: 10px 12px 11px;
+    border-top: 1px solid var(--line);
+  }
+
+  .data-table-block td {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 2px 72px 2px 0;
+    border-top: 0;
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .data-table-block td:first-child {
+    display: block;
+    padding: 0 72px 6px 0;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 1.35;
+  }
+
+  .data-table-block td:first-child::before {
+    content: none;
+  }
+
+  .data-table-block td::before {
+    content: attr(data-label);
+    flex: 0 0 76px;
+    color: var(--muted);
+    font-weight: 900;
+  }
+
+  .data-table-block td strong,
+  .data-table-block td span {
+    min-width: 0;
+  }
+
+  .data-table-block td strong {
+    display: inline;
+    flex: 0 1 auto;
+  }
+
+  .data-table-block td span {
+    display: inline;
+    margin-top: 0;
+    margin-left: 2px;
+    overflow-wrap: break-word;
+  }
+
+  .data-table-block td:last-child {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: auto;
+    padding: 0;
+  }
+
+  .data-table-block td:last-child::before {
+    content: none;
+  }
+
+  .data-table-block .table-action {
+    width: auto;
+    min-width: 58px;
   }
 }

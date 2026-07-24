@@ -14,7 +14,7 @@ const languageStorageKey = "travel-map-language";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "1.8";
+const appVersion = "1.8.2";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 146;
@@ -151,7 +151,7 @@ const translations = {
     levelCity: "市级",
     overlayLight: "我的点亮",
     overlayCheckins: "我的打卡",
-    overlayTracks: "我的足迹",
+    overlayTracks: "我的轨迹",
     overlay5a: "5A 景区",
     overlayAncientCapitals: "中国古都",
     overlayHeritage: "世界遗产",
@@ -178,7 +178,7 @@ const translations = {
     importEyebrow: "导入",
     importTitle: "导入地图或地点文件",
     chooseFile: "选择文件",
-    csvHelp: "CSV 只需要三列：名称、纬度、经度。也支持 name,lat,lng / longitude；其他列会忽略。一次最多导入 1000 个可显示点。照片导入只读取本地文件名和 EXIF GPS，不上传照片。",
+    csvHelp: "支持 GeoJSON/JSON、KML、CSV 和照片。GeoJSON/KML 的点会作为导入地点，线和面会作为轨迹/Shape 显示，不会自动变成地点；CSV 建议只保留名称、纬度、经度三列，也支持英文列名：name、lat/latitude、lng/lon/longitude。其他列会忽略。照片只读取本地文件名和 EXIF GPS，不上传照片。当前不限制导入点数，但点太多会影响浏览器渲染，建议只导入确实需要显示的点。",
     archiveEyebrow: "存档",
     archiveTitle: "数据存档",
     exportArchive: "导出存档",
@@ -195,8 +195,8 @@ const translations = {
     coreCheckinsEyebrow: "核心打卡",
     totalCheckins: "总打卡地点",
     importedPoints: "导入地点",
-    importedTracks: "导入路径/Shape",
-    trackLength: "路径长度",
+    importedTracks: "导入轨迹/Shape",
+    trackLength: "轨迹长度",
     checked: "已去",
     unvisited: "未去过",
     markVisited: "标记去过",
@@ -288,7 +288,7 @@ const translations = {
     importEyebrow: "Import",
     importTitle: "Import map or place files",
     chooseFile: "Choose file",
-    csvHelp: "CSV only needs three columns: name, latitude, longitude. Chinese headers 名称、纬度、经度 are supported; extra columns are ignored. Up to 1000 visible points per import. Photo import reads local filename and EXIF GPS only, without uploading photos.",
+    csvHelp: "GeoJSON/JSON, KML, CSV, and photos are supported. GeoJSON/KML points become imported places; lines and polygons become tracks/shapes and do not create extra points. CSV works best with only name, latitude, and longitude. Supported headers are 名称/name, 纬度/lat/latitude, and 经度/lng/lon/longitude; extra columns are ignored. Photos only read local filename and EXIF GPS without uploading files. There is no hard import limit now, but very large point sets can slow browser rendering.",
     archiveEyebrow: "Archive",
     archiveTitle: "Data archive",
     exportArchive: "Export archive",
@@ -3220,6 +3220,15 @@ function mapClickAreaText(point) {
   return [point.countryName, point.regionName, point.subregionName].filter(Boolean).join(" / ") || t("unassigned");
 }
 
+function ensureBoundaryLayersForPoint(countryId, lng, lat) {
+  const normalized = countryCoverageId(countryId || inferCountry(lng, lat)?.id);
+  if (!normalized || normalized === "imported") return Promise.resolve();
+  return loadBoundaryIndex().then(() => Promise.all([
+    hasBoundaryLayer(normalized, "province") ? loadBoundaryLayer(normalized, "province", { renderOnLoad: false }) : null,
+    hasBoundaryLayer(normalized, "city") ? loadBoundaryLayer(normalized, "city", { renderOnLoad: false }) : null,
+  ]));
+}
+
 function escapeHtml(value) {
   return String(value || "")
     .replace(/&/g, "&amp;")
@@ -3257,7 +3266,8 @@ function openMapClickCheckinForm(lng, lat) {
   $("#mapPointForm")?.querySelector("input[name='name']")?.select();
 }
 
-function createMapClickCheckin({ name, lng, lat }) {
+async function createMapClickCheckin({ name, lng, lat }) {
+  await ensureBoundaryLayersForPoint(null, lng, lat);
   const point = inferMapClickPoint(lng, lat);
   const id = `map-click-${Date.now()}`;
   const finalName = String(name || "").trim() || mapClickPointName();
@@ -6371,12 +6381,12 @@ function renderImportSummary() {
   const nonImportedVisits = visitedPlaces().filter((visit) => !visit.place.imported && !visit.place.importId && !visit.place.sourceFile);
   const en = currentLanguage === "en";
   $("#importSummary").innerHTML = files.length
-    ? `<article class="check-item"><header><strong>${en ? "All imported data" : "全部导入数据"}</strong><span>${places.filter((place) => place.imported).length} ${en ? "objects" : "个对象"}</span></header><button class="text-action" data-delete-all-imports="1" type="button">${en ? "Delete all imports" : "删除全部导入"}</button></article>${files.map((file, index) => `<article class="check-item"><header><strong>${file.name}</strong><span>${file.count} ${en ? "items" : "条"}</span></header><p class="muted">${file.format} · ${en ? "Imported and lit" : "已导入并点亮"}</p><button class="text-action" data-delete-import="${file.id || ""}" data-import-index="${index}" type="button">${en ? "Delete import" : "删除导入"}</button></article>`).join("")}`
+    ? `<article class="check-item import-management-card"><header><strong>${en ? "All imported data" : "全部导入数据"}</strong><span>${places.filter((place) => place.imported).length} ${en ? "objects" : "个对象"}</span></header><p class="muted">${en ? "Deletes imported points, tracks, and shapes. Checklist and manual light-up data are kept." : "删除所有导入地点、轨迹和 Shape；打卡清单与手动点亮会保留。"}</p><button class="text-action" data-delete-all-imports="1" type="button">${en ? "Delete all imports" : "删除全部导入"}</button></article>${files.map((file, index) => `<article class="check-item import-batch-card"><header><strong>${file.name}</strong><span>${file.count} ${en ? "items" : "条"}</span></header><p class="muted">${file.format} · ${file.importedAt ? new Date(file.importedAt).toLocaleString(en ? "en-US" : "zh-CN") : (en ? "Imported" : "已导入")}</p><button class="text-action" data-delete-import="${file.id || ""}" data-import-index="${index}" type="button">${en ? "Delete this import" : "删除这批导入"}</button></article>`).join("")}`
     : `<p class="muted">${en ? "No imported files yet. Imported points, countries/regions, and administrative coverage will update automatically." : "还没有导入文件。导入后，地图点、国家/地区覆盖率、行政区覆盖率会自动刷新。"}</p>`;
   $("#importSummary").insertAdjacentHTML("beforeend", `
-    <article class="check-item">
-      <header><strong>${en ? "Non-imported lit data" : "非导入点亮"}</strong><span>${nonImportedVisits.length} ${en ? "points" : "个点"}</span></header>
-      <p class="muted">${en ? "These usually come from manual administrative units, map-click points, or checklist items, and are not removed by deleting imports." : "这些通常来自手动点亮行政区、地图点击打卡、5A/国家公园等打卡清单，不会被“删除导入”清掉。"}</p>
+    <article class="check-item import-management-card">
+      <header><strong>${en ? "Light-up / checklist data" : "点亮/打卡数据"}</strong><span>${nonImportedVisits.length} ${en ? "records" : "条"}</span></header>
+      <p class="muted">${en ? "Clears manual countries, manual administrative units, map-click points, and checklist marks. Imported files and tracks are kept." : "清除手动国家、手动行政区、地图点击点和打卡清单；导入文件和轨迹会保留。"}</p>
       <button class="text-action" data-clear-checkins="1" type="button">${en ? "Clear light-up / checklist points" : "清除点亮/打卡点"}</button>
     </article>`);
 }
@@ -6400,7 +6410,7 @@ function inventorySourceLabel(visit) {
 }
 
 function inventoryTypeLabel(place) {
-  if (place.shapeOnly) return currentLanguage === "en" ? "Path / Shape" : "路径/形状";
+  if (place.shapeOnly) return currentLanguage === "en" ? "Track / Shape" : "轨迹/形状";
   if (place.imported || place.importId || place.sourceFile) return currentLanguage === "en" ? "Imported point" : "导入点";
   if (place.checklistOnly) return currentLanguage === "en" ? "Checklist point" : "清单打卡";
   if (place.manualCountry) return currentLanguage === "en" ? "Manual country" : "手动国家";
@@ -6449,6 +6459,8 @@ function renderDataInventory() {
     .filter(({ place }) => place.imported || place.importId || place.sourceFile)
     .sort((left, right) => (right.place.importedAt || "").localeCompare(left.place.importedAt || "") || right.index - left.index)
     .map(({ place }) => place);
+  const importedPoints = imported.filter((place) => !place.shapeOnly);
+  const importedShapes = imported.filter((place) => place.shapeOnly);
   const visited = visitedPlaces()
     .map((visit, index) => ({ visit, index }))
     .sort((left, right) => (right.visit.updatedAt || right.visit.date || "").localeCompare(left.visit.updatedAt || left.visit.date || "") || right.index - left.index)
@@ -6457,43 +6469,47 @@ function renderDataInventory() {
     [en ? "Light-up records" : "点亮记录", counts.visits],
     [en ? "Lit places" : "已点亮地点", counts.visitedPlaces],
     [en ? "Imported points" : "导入点", counts.importedPoints],
-    [en ? "Imported paths / shapes" : "导入路径/形状", counts.importedShapes],
+    [en ? "Imported tracks / shapes" : "导入轨迹/形状", counts.importedShapes],
     [en ? "Countries / Regions" : "国家/地区", counts.countries],
     [en ? "China province-level units" : "中国一级行政区", `${counts.chinaRegions}/34`],
     [en ? "China prefecture-level units" : "中国二级行政区", `${counts.chinaSubregions}/${chinaPrefectureTotal()}`],
   ];
-  const missingChina = missingVisitedRegions("china");
-  const missingDirectBoundaries = missingChinaDirectBoundaryUnits();
   const deleteLabel = en ? "Delete" : "删除";
-  const importRows = imported.slice(0, 80).map((place) => `
+  const placeLocationText = (place) => [
+    getCountry(place.country).name,
+    [place.unit, place.subunit].filter(Boolean).join(" / "),
+  ].filter(Boolean).join(" · ");
+  const importedPointRows = importedPoints.map((place) => `
     <tr>
-      <td>${place.name}</td>
-      <td>${inventoryTypeLabel(place)}</td>
-      <td>${getCountry(place.country).name}</td>
-      <td>${place.unit || ""}${place.subunit ? ` / ${place.subunit}` : ""}</td>
-      <td>${place.sourceFile || ""}</td>
+      <td data-label="${en ? "Name" : "名称"}">${escapeHtml(place.name)}</td>
+      <td data-label="${en ? "Location / File" : "位置/文件"}"><strong>${escapeHtml(placeLocationText(place))}</strong><span>${escapeHtml(place.sourceFile || "")}</span></td>
       <td><button class="table-action danger" data-delete-inventory-object="${escapeHtml(place.id)}" type="button">${deleteLabel}</button></td>
     </tr>`).join("");
-  const visitRows = visited.slice(0, 80).map((visit) => `
+  const importedShapeRows = importedShapes.map((place) => `
     <tr>
-      <td>${visit.place.name}</td>
-      <td>${getCountry(visit.place.country).name}</td>
-      <td>${visit.place.unit || ""}${visit.place.subunit ? ` / ${visit.place.subunit}` : ""}</td>
-      <td>${inventorySourceLabel(visit)}</td>
-      <td>${inventoryTypeLabel(visit.place)}</td>
+      <td data-label="${en ? "Name" : "名称"}">${escapeHtml(place.name)}</td>
+      <td data-label="${en ? "Geometry / File" : "几何/文件"}"><strong>${escapeHtml(place.importedGeometry?.type || place.type || "")}</strong><span>${escapeHtml(place.sourceFile || "")}</span></td>
+      <td><button class="table-action danger" data-delete-inventory-object="${escapeHtml(place.id)}" type="button">${deleteLabel}</button></td>
+    </tr>`).join("");
+  const visitRows = visited.map((visit) => `
+    <tr>
+      <td data-label="${en ? "Name" : "名称"}">${escapeHtml(visit.place.name)}</td>
+      <td data-label="${en ? "Location / Source" : "位置/来源"}"><strong>${escapeHtml(placeLocationText(visit.place))}</strong><span>${escapeHtml(inventorySourceLabel(visit))}</span></td>
       <td><button class="table-action danger" data-delete-inventory-visit="${escapeHtml(visit.place.id)}" type="button">${deleteLabel}</button></td>
     </tr>`).join("");
   target.innerHTML = `
     <div class="inventory-metrics">${rows.map(([label, value]) => `<span><strong>${value}</strong><em>${label}</em></span>`).join("")}</div>
-    <p class="muted small">${en ? "Unlit China province-level units" : "中国省级未点亮"}：${missingChina.length ? missingChina.join(en ? ", " : "、") : (en ? "None" : "无")}</p>
-    ${missingDirectBoundaries.length ? `<p class="muted small">${en ? "Missing true boundaries, not shown as clickable prefecture-level units" : "缺少真实边界，未显示为可点亮地级尺度单元"}：${missingDirectBoundaries.map((unit) => unit.name).join(en ? ", " : "、")}</p>` : ""}
-    <details class="data-table-block" open>
-      <summary>${en ? "Lit data (showing up to 80)" : "已点亮数据（最多显示 80 条）"}</summary>
-      <table><thead><tr><th>${en ? "Name" : "名称"}</th><th>${en ? "Country" : "国家"}</th><th>${en ? "Administrative unit" : "行政区"}</th><th>${en ? "Source" : "来源"}</th><th>${en ? "Type" : "类型"}</th><th>${en ? "Action" : "操作"}</th></tr></thead><tbody>${visitRows || `<tr><td colspan="6">${en ? "No lit data" : "暂无点亮数据"}</td></tr>`}</tbody></table>
+    <details class="data-table-block">
+      <summary><span>${en ? "Lit records" : "已点亮记录"}</span><em>${visited.length}</em></summary>
+      <table><thead><tr><th>${en ? "Name" : "名称"}</th><th>${en ? "Location / Source" : "位置/来源"}</th><th>${en ? "Action" : "操作"}</th></tr></thead><tbody>${visitRows || `<tr><td colspan="3">${en ? "No lit data" : "暂无点亮数据"}</td></tr>`}</tbody></table>
     </details>
     <details class="data-table-block">
-      <summary>${en ? "Imported objects (showing up to 80)" : "导入对象（最多显示 80 条）"}</summary>
-      <table><thead><tr><th>${en ? "Name" : "名称"}</th><th>${en ? "Type" : "类型"}</th><th>${en ? "Country" : "国家"}</th><th>${en ? "Administrative unit" : "行政区"}</th><th>${en ? "File" : "文件"}</th><th>${en ? "Action" : "操作"}</th></tr></thead><tbody>${importRows || `<tr><td colspan="6">${en ? "No imported objects" : "暂无导入对象"}</td></tr>`}</tbody></table>
+      <summary><span>${en ? "Imported points" : "已导入地点"}</span><em>${importedPoints.length}</em></summary>
+      <table><thead><tr><th>${en ? "Name" : "名称"}</th><th>${en ? "Location / File" : "位置/文件"}</th><th>${en ? "Action" : "操作"}</th></tr></thead><tbody>${importedPointRows || `<tr><td colspan="3">${en ? "No imported points" : "暂无导入地点"}</td></tr>`}</tbody></table>
+    </details>
+    <details class="data-table-block">
+      <summary><span>${en ? "Imported tracks / shapes" : "已导入轨迹/Shape"}</span><em>${importedShapes.length}</em></summary>
+      <table><thead><tr><th>${en ? "Name" : "名称"}</th><th>${en ? "Geometry / File" : "几何/文件"}</th><th>${en ? "Action" : "操作"}</th></tr></thead><tbody>${importedShapeRows || `<tr><td colspan="3">${en ? "No imported tracks or shapes" : "暂无导入轨迹或 Shape"}</td></tr>`}</tbody></table>
     </details>`;
 }
 
@@ -6980,7 +6996,7 @@ function scheduleFillLazyChecklistGroup(details, afterFill) {
   });
 }
 
-function toggleChecklistItem(key, item, group = "") {
+async function toggleChecklistItem(key, item, group = "") {
   const id = checklistId(key, item, group);
   const itemKey = checklistItemKey(key, item, group);
   const legacyKey = canonicalPlaceKey(item);
@@ -6995,6 +7011,10 @@ function toggleChecklistItem(key, item, group = "") {
   } else {
     marks.add(id);
     const place = ensureChecklistPlace(key, item, group);
+    if (Number.isFinite(place?.lng) && Number.isFinite(place?.lat)) {
+      await ensureBoundaryLayersForPoint(place.country, place.lng, place.lat);
+      applyChecklistGeography(place, key, checklistCoordinateFor(item, group));
+    }
   }
   state.checklistMarks = Array.from(marks);
   rebuildCoverageFromSavedVisits();
@@ -7215,7 +7235,7 @@ function renderNextStops() {
     ["补中国省级", missingChina.length ? `中国省级还差：${missingChina.slice(0, 6).join("、")}${missingChina.length > 6 ? "…" : ""}` : "中国省级已完成。", "点亮", "#checkins"],
     ["补中国地级市", `中国地级尺度还差约 ${cityMissing} 个。适合按省逐步补。`, "点亮", "#checkins"],
     ["打卡 5A / 世界遗产", "在清单里勾选后，会同步到地图点和核心打卡等级。", "打卡", "#achievements"],
-    ["导入地点/路径文件", "已有 GeoJSON、KML 或 CSV 时，可以导入并自动更新点亮结果。", "导入", "#imports"],
+    ["导入地点/轨迹文件", "已有 GeoJSON、KML 或 CSV 时，可以导入并自动更新点亮结果。", "导入", "#imports"],
   ];
   $("#nextStops").innerHTML = recommendations.map(([title, body, goal, href]) => `
     <article class="next-card"><header><strong>${title}</strong><a class="tag" href="${href}">${goal}</a></header><p class="muted">${body}</p></article>`).join("");
@@ -8117,7 +8137,7 @@ $("#clearAllData")?.addEventListener("click", () => {
 });
 $("#importSummary").addEventListener("click", (event) => {
   if (event.target.closest("[data-clear-checkins]")) {
-    if (window.confirm("确认清除所有点亮、打卡勾选和手动行政区？导入文件和路径会保留。")) clearCheckinsAndAchievementPoints();
+    if (window.confirm("确认清除所有点亮、打卡勾选和手动行政区？导入文件和轨迹会保留。")) clearCheckinsAndAchievementPoints();
     return;
   }
   if (event.target.closest("[data-delete-all-imports]")) {
