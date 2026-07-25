@@ -7303,16 +7303,16 @@ function renderNextStops() {
   const cityMissing = Math.max(chinaPrefectureTotal() - countVisitedSubregions("china2"), 0);
   const countryMissing = Math.max(worldCountryTotal - uniqueVisitedCountries().size, 0);
   const recommendations = currentLanguage === "en" ? [
-    ["Light up countries", `${countryMissing} countries/regions are still unlit. Start with places you know well.`, "Light up", "#checkins"],
-    ["Complete China provinces", missingChina.length ? `Remaining province-level units: ${missingChina.slice(0, 6).join(", ")}${missingChina.length > 6 ? "..." : ""}` : "China province level is complete.", "Light up", "#checkins"],
-    ["Complete China cities", `About ${cityMissing} prefecture-level units remain. Work province by province.`, "Light up", "#checkins"],
-    ["Check in 5A / World Heritage", "Checklist marks sync to map points and core check-in levels.", "Check in", "#achievements"],
+    ["Light up countries", `${countryMissing} countries/regions are still unlit. Start with places you know well.`, "Light up", "#checkins:manual-section-country"],
+    ["Complete China provinces", missingChina.length ? `Remaining province-level units: ${missingChina.slice(0, 6).join(", ")}${missingChina.length > 6 ? "..." : ""}` : "China province level is complete.", "Light up", "#checkins:manual-section-china"],
+    ["Complete China cities", `About ${cityMissing} prefecture-level units remain. Work province by province.`, "Light up", "#checkins:manual-section-china-city"],
+    ["Check in 5A / World Heritage", "Checklist marks sync to map points and core check-in levels.", "Check in", "#achievements:achievement-section-china5a"],
     ["Import places or tracks", "GeoJSON, KML, and CSV imports can update light-up results automatically.", "Import", "#imports"],
   ] : [
-    ["手动点亮国家/地区", `还有 ${countryMissing} 个国家/地区未点亮。可以先从常去国家开始补。`, "点亮", "#checkins"],
-    ["补中国省级", missingChina.length ? `中国省级还差：${missingChina.slice(0, 6).join("、")}${missingChina.length > 6 ? "…" : ""}` : "中国省级已完成。", "点亮", "#checkins"],
-    ["补中国地级市", `中国地级尺度还差约 ${cityMissing} 个。适合按省逐步补。`, "点亮", "#checkins"],
-    ["打卡 5A / 世界遗产", "在清单里勾选后，会同步到地图点和核心打卡等级。", "打卡", "#achievements"],
+    ["手动点亮国家/地区", `还有 ${countryMissing} 个国家/地区未点亮。可以先从常去国家开始补。`, "点亮", "#checkins:manual-section-country"],
+    ["补中国省级", missingChina.length ? `中国省级还差：${missingChina.slice(0, 6).join("、")}${missingChina.length > 6 ? "…" : ""}` : "中国省级已完成。", "点亮", "#checkins:manual-section-china"],
+    ["补中国地级市", `中国地级尺度还差约 ${cityMissing} 个。适合按省逐步补。`, "点亮", "#checkins:manual-section-china-city"],
+    ["打卡 5A / 世界遗产", "在清单里勾选后，会同步到地图点和核心打卡等级。", "打卡", "#achievements:achievement-section-china5a"],
     ["导入地点/轨迹文件", "已有 GeoJSON、KML 或 CSV 时，可以导入并自动更新点亮结果。", "导入", "#imports"],
   ];
   $("#nextStops").innerHTML = recommendations.map(([title, body, goal, href]) => `
@@ -8131,7 +8131,49 @@ function moveMapLevelControlToToolbar() {
   if (!control.closest(".map-toolbar")) row.appendChild(control);
 }
 
-function showPage(pageId) {
+function parsePageHash(hash = location.hash) {
+  const raw = String(hash || "").replace(/^#/, "") || "world";
+  const [pageId, targetId = ""] = raw.split(":");
+  return { pageId: pageId || "world", targetId };
+}
+
+function scrollToPageTarget(pageId, targetId) {
+  if (!targetId) return;
+  const target = document.getElementById(targetId);
+  if (!target) return;
+  if (pageId === "checkins") {
+    const details = target.querySelector?.(".manual-section-details");
+    if (details && !details.open) {
+      details.open = true;
+      renderManualSection(details.dataset.manualSection);
+    }
+    document.querySelectorAll("[data-manual-jump]").forEach((button) => button.classList.toggle("active", button.dataset.manualJump === targetId));
+    target.scrollIntoView({ block: "start", inline: "nearest", behavior: "smooth" });
+    window.setTimeout(updateManualNavActiveByScroll, 260);
+    return;
+  }
+  if (pageId === "achievements") {
+    if (target.matches("[data-achievement-section]")) {
+      target.open = true;
+      scheduleFillAchievementSection(target);
+      document.querySelectorAll("[data-checklist-jump]").forEach((button) => button.classList.toggle("active", button.dataset.checklistJump === targetId));
+      target.scrollIntoView({ block: "start", inline: "nearest", behavior: "smooth" });
+      window.setTimeout(updateChecklistNavActiveByScroll, 260);
+      return;
+    }
+    if (target.matches("details")) {
+      target.open = true;
+      scheduleFillLazyChecklistGroup(target, () => {
+        target.scrollIntoView({ block: "start", inline: "nearest", behavior: "smooth" });
+        window.setTimeout(updateChecklistNavActiveByScroll, 260);
+      });
+      return;
+    }
+  }
+  target.scrollIntoView({ block: "start", inline: "nearest", behavior: "smooth" });
+}
+
+function showPage(pageId, targetId = "") {
   const target = document.querySelector(`[data-page="${pageId}"]`) ? pageId : "world";
   document.querySelectorAll("[data-page]").forEach((page) => {
     page.classList.toggle("active", page.dataset.page === target);
@@ -8161,16 +8203,22 @@ function showPage(pageId) {
     renderNextStops();
   }
   if (target === "checkins") {
-    preloadBoundaryData(false, ["country", "china", "admin1", "china2", "chinaDirect", "tw2"]).finally(renderCheckinsPage);
+    preloadBoundaryData(false, ["country", "china", "admin1", "china2", "chinaDirect", "tw2"]).finally(() => {
+      renderCheckinsPage();
+      scrollToPageTarget(target, targetId);
+    });
   }
   if (target === "achievements") {
+    renderAchievements();
     loadCatalogData();
     Promise.all([loadChina5aCatalog(), loadChina5aCoordinates()]);
     scheduleChecklistNavSpy();
+    window.setTimeout(() => scrollToPageTarget(target, targetId), 80);
   }
   if (target === "imports") {
     renderImportSummary();
     renderDataInventory();
+    scrollToPageTarget(target, targetId);
   }
 }
 
@@ -8184,7 +8232,10 @@ renderLegend();
 renderMetrics();
 renderDashboardAchievements();
 renderNextStops();
-showPage(location.hash.replace("#", "") || "world");
+{
+  const { pageId, targetId } = parsePageHash();
+  showPage(pageId, targetId);
+}
 detectMapProviderByIp();
 ensureBoundaryDataForLevel(state.boundaryLevel || "country");
 setLoadingDebug("读取完整旅行数据", "pending");
@@ -8483,7 +8534,7 @@ document.querySelectorAll(".nav a").forEach((link) => {
     event.preventDefault();
     const pageId = link.getAttribute("href").replace("#", "");
     history.replaceState(null, "", `#${pageId}`);
-    showPage(pageId);
+    showPage(pageId, "");
   });
 });
 let mapViewportResizeTimer = null;
@@ -8500,8 +8551,8 @@ window.addEventListener("resize", scheduleActiveMapResize);
 window.addEventListener("orientationchange", scheduleActiveMapResize);
 window.visualViewport?.addEventListener("resize", scheduleActiveMapResize);
 window.addEventListener("hashchange", () => {
-  const pageId = location.hash.replace("#", "") || "world";
-  if (document.querySelector(`[data-page="${pageId}"]`)) showPage(pageId);
+  const { pageId, targetId } = parsePageHash();
+  if (document.querySelector(`[data-page="${pageId}"]`)) showPage(pageId, targetId);
 });
 document.querySelectorAll("[data-region-view]").forEach((button) => {
   button.addEventListener("click", () => {
