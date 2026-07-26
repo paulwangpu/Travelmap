@@ -19,7 +19,7 @@ const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
 const worldHeritageCatalogTotal = 1248;
-const dataCacheVersion = "20260726-ancient-capitals-record-order";
+const dataCacheVersion = "20260726-ancient-capitals-current-place";
 const fixedChecklistTotals = {
   china5a: china5aOfficialTotal,
   chinaAncientCapitals: chinaAncientCapitalTotal,
@@ -7310,9 +7310,15 @@ function ancientCapitalSourceOrder(item) {
 function ancientCapitalSiteKeyForItem(item) {
   if (!item) return "";
   if (typeof item === "object") {
+    if (item.currentKey) return item.currentKey;
+    const current = ancientCapitalCurrentDisplayName(item);
+    if (current) return `ancient-current:${canonicalPlaceKey(current)}`;
     return item.siteKey || (item.siteName ? `ancient-site:${canonicalPlaceKey(item.siteName)}` : "");
   }
   const meta = chinaAncientCapitalMeta[canonicalPlaceKey(item)];
+  if (meta?.currentKey) return meta.currentKey;
+  const current = ancientCapitalCurrentDisplayName(meta);
+  if (current) return `ancient-current:${canonicalPlaceKey(current)}`;
   return meta?.siteKey || (meta?.siteName ? `ancient-site:${canonicalPlaceKey(meta.siteName)}` : "");
 }
 
@@ -7414,6 +7420,7 @@ function renderAncientCapitalSiteNote(item, label) {
 }
 
 function ancientCapitalCurrentDisplayName(item) {
+  if (item?.currentPlace) return item.currentPlace;
   const site = item?.siteName || item?.parentName || item?.name || "";
   const admin = item?.admin || "";
   const overrides = {
@@ -7670,7 +7677,11 @@ async function toggleChecklistItem(key, item, group = "") {
   if (wasDone) {
     Array.from(marks).forEach((mark) => {
       const markKey = canonicalPlaceKey(mark.split(":").slice(1).join(":"));
-      if (markKey === itemKey || (!isAmbiguousChecklistItem(key, item) && markKey === legacyKey) || (highAltitudeBaseKey && markKey === highAltitudeBaseKey)) marks.delete(mark);
+      if (
+        markKey === itemKey
+        || (!isAmbiguousChecklistItem(key, item) && markKey === legacyKey)
+        || (highAltitudeBaseKey && markKey === highAltitudeBaseKey)
+      ) marks.delete(mark);
     });
     unvisitChecklistItem(key, item, group);
     if (highAltitudeBaseKey) {
