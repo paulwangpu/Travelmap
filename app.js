@@ -6799,6 +6799,9 @@ function deleteInventoryObject(placeId) {
 function renderDataInventory() {
   const target = $("#dataInventory");
   if (!target) return;
+  const openSections = new Set(Array.from(target.querySelectorAll(".data-table-block[data-inventory-section]"))
+    .filter((details) => details.open)
+    .map((details) => details.dataset.inventorySection));
   const en = currentLanguage === "en";
   const counts = dataCounts();
   const visitedIdSet = new Set((state.visits || []).map((visit) => visit.placeId));
@@ -6857,21 +6860,22 @@ function renderDataInventory() {
       <td data-label="${en ? "File" : "文件"}">${escapeHtml(place.sourceFile || "")}</td>
       <td><button class="table-action danger" data-delete-inventory-object="${escapeHtml(place.id)}" type="button">${deleteLabel}</button></td>
     </tr>`).join("");
+  const isOpen = (section) => openSections.has(section) ? "open" : "";
   target.innerHTML = `
     <div class="inventory-metrics">${rows.map(([label, value]) => `<span><strong>${value}</strong><em>${label}</em></span>`).join("")}</div>
-    <details class="data-table-block">
+    <details class="data-table-block" data-inventory-section="litPlaces" ${isOpen("litPlaces")}>
       <summary><span>${en ? "Lit places" : "已点亮地点"}</span><em>${litPlaceVisits.length}</em></summary>
       <table><thead><tr><th>${en ? "Name" : "名称"}</th><th>${en ? "Location" : "位置"}</th><th>${en ? "Source" : "来源"}</th><th>${en ? "Action" : "操作"}</th></tr></thead><tbody>${litPlaceRows || emptyRow(en ? "No lit places" : "暂无已点亮地点", 4)}</tbody></table>
     </details>
-    <details class="data-table-block">
+    <details class="data-table-block" data-inventory-section="litAdministrativeUnits" ${isOpen("litAdministrativeUnits")}>
       <summary><span>${en ? "Lit administrative units" : "已点亮行政区"}</span><em>${litAdministrativeVisits.length}</em></summary>
       <table><thead><tr><th>${en ? "Name" : "名称"}</th><th>${en ? "Level" : "级别"}</th><th>${en ? "Country / region" : "国家/地区"}</th><th>${en ? "Source" : "来源"}</th><th>${en ? "Action" : "操作"}</th></tr></thead><tbody>${litAdministrativeRows || emptyRow(en ? "No manually lit administrative units" : "暂无已点亮行政区", 5)}</tbody></table>
     </details>
-    <details class="data-table-block">
+    <details class="data-table-block" data-inventory-section="importedPlaces" ${isOpen("importedPlaces")}>
       <summary><span>${en ? "Imported places" : "已导入地点"}</span><em>${importedPoints.length}</em></summary>
       <table><thead><tr><th>${en ? "Name" : "名称"}</th><th>${en ? "Location" : "位置"}</th><th>${en ? "File" : "文件"}</th><th>${en ? "Light-up" : "点亮"}</th><th>${en ? "Action" : "操作"}</th></tr></thead><tbody>${importedPointRows || emptyRow(en ? "No imported places" : "暂无已导入地点", 5)}</tbody></table>
     </details>
-    <details class="data-table-block">
+    <details class="data-table-block" data-inventory-section="importedTracks" ${isOpen("importedTracks")}>
       <summary><span>${en ? "Imported tracks" : "已导入轨迹"}</span><em>${importedTracks.length}</em></summary>
       <table><thead><tr><th>${en ? "Name" : "名称"}</th><th>${en ? "Geometry" : "几何类型"}</th><th>${en ? "File" : "文件"}</th><th>${en ? "Action" : "操作"}</th></tr></thead><tbody>${importedTrackRows || emptyRow(en ? "No imported tracks" : "暂无已导入轨迹", 4)}</tbody></table>
     </details>`;
@@ -7358,7 +7362,7 @@ function renderAncientCapitalsSection() {
     const groupDone = groupItems.filter((item) => isChecklistItemDone(key, item.name)).length;
     const groupId = checklistGroupId(key, era);
     const isOpen = isChecklistGroupOpen(groupId);
-    return `<details class="country-checklist ancient-capital-era" data-checklist-group="${groupId}" ${isOpen ? "open" : ""}>
+    return `<details class="country-checklist ancient-capital-era" data-checklist-group="${groupId}" data-ancient-era="${escapeHtml(era)}" ${isOpen ? "open" : ""}>
       <summary><strong>${escapeHtml(ancientCapitalDisplayEra(era))}</strong><span>${groupDone}/${groupItems.length}</span></summary>
       <div class="ancient-capital-grid">${groupItems.map((item) => renderAncientCapitalCard(key, item)).join("")}</div>
     </details>`;
@@ -7375,9 +7379,10 @@ function renderAncientCapitalsSection() {
 function renderAncientCapitalCard(key, item) {
   const checked = isChecklistItemDone(key, item.name);
   const labels = currentLanguage === "en"
-    ? { dynasty: "Dynasty", capitalYears: "Capital years", regimeYears: "Regime years", admin: "Current area", type: "Capital type", confidence: "Confidence" }
-    : { dynasty: "政权", capitalYears: "都城年代", regimeYears: "政权年代", admin: "今属", type: "都城类型", confidence: "置信度" };
+    ? { dynasty: "Dynasty", capitalYears: "Capital years", regimeYears: "Regime years", site: "Source place", admin: "Current area", type: "Capital type", confidence: "Confidence" }
+    : { dynasty: "政权", capitalYears: "都城年代", regimeYears: "政权年代", site: "口径", admin: "今属", type: "都城类型", confidence: "置信度" };
   const dynasty = item.dynasty || compactInlineValues(item.dynasties, 4);
+  const siteNote = renderAncientCapitalSiteNote(item, labels.site);
   return `<button class="ancient-capital-card ${checked ? "done" : ""}" data-checklist="${escapeHtml(key)}" data-item="${escapeHtml(item.name)}" type="button">
     <span class="ancient-capital-card-head">
       <strong>${renderAncientCapitalTitle(item)}</strong>
@@ -7386,6 +7391,7 @@ function renderAncientCapitalCard(key, item) {
     <span class="ancient-capital-card-row"><b>${labels.dynasty}</b><em>${escapeHtml(dynasty || t("none"))}</em></span>
     <span class="ancient-capital-card-row wide"><b>${labels.capitalYears}</b><em>${ancientCapitalYearText(item, "都城年代（原文）")}</em></span>
     <span class="ancient-capital-card-row wide"><b>${labels.regimeYears}</b><em>${ancientCapitalYearText(item, "政权年代（原文）")}</em></span>
+    ${siteNote}
     <span class="ancient-capital-card-row wide"><b>${labels.admin}</b><em>${escapeHtml(item.admin || t("none"))}</em></span>
     <span class="ancient-capital-card-row wide"><b>${labels.type}</b><em>${escapeHtml(item.capitalType || compactInlineValues(item.capitalTypes) || t("none"))}</em></span>
     <span class="ancient-capital-card-row"><b>${labels.confidence}</b><em>${escapeHtml(item.confidence || t("none"))}</em></span>
@@ -7394,11 +7400,48 @@ function renderAncientCapitalCard(key, item) {
 
 function renderAncientCapitalTitle(item) {
   const ancient = item?.ancientName || item?.name || "";
-  const current = item?.siteName || item?.parentName || item?.name || "";
+  const current = ancientCapitalCurrentDisplayName(item);
   const labels = currentLanguage === "en"
-    ? ["Ancient", "Current"]
-    : ["古称", "今称"];
+    ? ["Ancient", "Current place"]
+    : ["古称", "今址"];
   return `<span class="ancient-capital-title-pair"><span><em>${labels[0]}</em>${escapeHtml(ancient)}</span><span><em>${labels[1]}</em>${escapeHtml(current)}</span></span>`;
+}
+
+function renderAncientCapitalSiteNote(item, label) {
+  const site = item?.siteName || item?.parentName || "";
+  if (!site || sameAdminName(site, ancientCapitalCurrentDisplayName(item))) return "";
+  return `<span class="ancient-capital-card-row wide"><b>${label}</b><em>${escapeHtml(site)}</em></span>`;
+}
+
+function ancientCapitalCurrentDisplayName(item) {
+  const site = item?.siteName || item?.parentName || item?.name || "";
+  const admin = item?.admin || "";
+  const overrides = {
+    南京析津: "北京",
+    天京: "南京",
+    汴州: "开封",
+    幽州: "北京",
+    兴庆府: "银川",
+    毫州: "亳州",
+    平江: "苏州",
+  };
+  if (overrides[site]) return overrides[site];
+  if (site === item?.ancientName) {
+    const adminCity = ancientCapitalAdminCity(admin);
+    if (adminCity) return adminCity;
+  }
+  return site;
+}
+
+function ancientCapitalAdminCity(admin) {
+  const text = String(admin || "");
+  const direct = text.match(/^(北京|上海|天津|重庆)市/);
+  if (direct) return direct[1];
+  const city = text.match(/([^省自治区特别行政区]+市)/);
+  if (city) return city[1].replace(/市$/, "");
+  const county = text.match(/([^省自治区特别行政区]+县)/);
+  if (county) return county[1].replace(/县$/, "");
+  return "";
 }
 
 function compactInlineValues(values, limit = 6) {
@@ -7695,11 +7738,7 @@ function refreshRenderedChecklistSectionMarkup(key) {
   const list = checklistCatalog[key];
   if (!section || !list) return false;
   if (key === "chinaAncientCapitals") {
-    section.querySelectorAll("[data-checklist-group]").forEach((details) => {
-      setChecklistGroupOpen(details.dataset.checklistGroup, details.open);
-    });
-    section.outerHTML = renderAncientCapitalsSection();
-    return true;
+    return false;
   }
   if (key === "chinaHighAltitude") {
     section.querySelectorAll("[data-checklist-group]").forEach((details) => {
@@ -7719,6 +7758,7 @@ function refreshRenderedChecklistStats(key, group = "") {
   const list = checklistCatalog[key];
   if (!list) return;
   refreshAchievementChecklistCount(key);
+  if (key === "chinaAncientCapitals") refreshAncientCapitalEraStats();
   document.querySelectorAll(`.theme-checklist [data-checklist="${key}"]`).forEach((button) => {
     const section = button.closest(".theme-checklist");
     const total = checklistTotalCount(key);
@@ -7736,6 +7776,18 @@ function refreshRenderedChecklistStats(key, group = "") {
     const done = displayChecklistItems(key, items).filter((entry) => isChecklistItemDone(key, entry, group)).length;
     summaryCount.textContent = `${done}/${displayChecklistItems(key, items).length}`;
   }
+}
+
+function refreshAncientCapitalEraStats() {
+  document.querySelectorAll(".ancient-capital-era[data-ancient-era]").forEach((details) => {
+    const era = details.dataset.ancientEra || "";
+    const items = (chinaAncientCapitals.recordItems || []).filter((item) => ancientCapitalPrimaryEra(item) === era);
+    const summaryCount = details.querySelector(":scope > summary span");
+    if (summaryCount && items.length) {
+      const done = items.filter((item) => isChecklistItemDone("chinaAncientCapitals", item.name)).length;
+      summaryCount.textContent = `${done}/${items.length}`;
+    }
+  });
 }
 
 function refreshAchievementChecklistCount(key) {
