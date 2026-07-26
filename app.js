@@ -19,7 +19,7 @@ const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
 const worldHeritageCatalogTotal = 1248;
-const dataCacheVersion = "20260726-ancient-capitals-site-place";
+const dataCacheVersion = "20260727-ancient-capitals-fast-toggle";
 const fixedChecklistTotals = {
   china5a: china5aOfficialTotal,
   chinaAncientCapitals: chinaAncientCapitalTotal,
@@ -7695,7 +7695,7 @@ async function toggleChecklistItem(key, item, group = "") {
     marks.add(id);
     const place = ensureChecklistPlace(key, item, group);
     if (Number.isFinite(place?.lng) && Number.isFinite(place?.lat)) {
-      await ensureBoundaryLayersForPoint(place.country, place.lng, place.lat);
+      if (!canUseChecklistCatalogGeography(key, item)) await ensureBoundaryLayersForPoint(place.country, place.lng, place.lat);
       applyChecklistGeography(place, key, checklistCoordinateFor(item, group));
     }
   }
@@ -7713,13 +7713,24 @@ function renderAfterChecklistChange(key, item, group = "") {
   renderMetrics();
   renderDashboardAchievements();
   renderNextStops();
-  if (document.querySelector('[data-page="checkins"]')?.classList.contains("active")) renderCheckinsPage();
+  if (document.querySelector('[data-page="checkins"]')?.classList.contains("active") && !canRefreshChecklistChangeLocally(key)) renderCheckinsPage();
   if (!$("#mapDetail")?.classList.contains("hidden")) renderChecklistMapDetail(key, item);
   if (document.querySelector('[data-page="imports"]')?.classList.contains("active")) renderDataInventory();
   if (isMapPageActive()) {
-    if (mapLibreMap && mapLibreMap.isStyleLoaded()) renderMapLibreMarkers();
+    if (mapLibreMap && mapLibreMap.isStyleLoaded() && shouldRefreshMapMarkersForChecklist(key)) renderMapLibreMarkers();
     scheduleCoverageMapRefresh();
   }
+}
+
+function canRefreshChecklistChangeLocally(key) {
+  return key === "chinaAncientCapitals" || key === "chinaHighAltitude" || key === "usNationalParks";
+}
+
+function shouldRefreshMapMarkersForChecklist(key) {
+  if (key === "chinaAncientCapitals") return Boolean(state.mapOverlays?.chinaAncientCapitals || state.mapOverlays?.checkins);
+  if (key === "china5a") return Boolean(state.mapOverlays?.china5a || state.mapOverlays?.checkins);
+  if (key === "worldHeritage") return Boolean(state.mapOverlays?.worldHeritage || state.mapOverlays?.checkins);
+  return true;
 }
 
 function updateChecklistButtonsForItem(key, item, group = "") {
@@ -7880,6 +7891,7 @@ function applyChecklistGeography(place, key, coords) {
   }
   if (key === "chinaAncientCapitals") {
     place.country = "cn";
+    applyAncientCapitalAdminGeography(place);
   }
   if (key === "chinaHighAltitude") {
     place.country = "cn";
@@ -7895,10 +7907,44 @@ function applyChecklistGeography(place, key, coords) {
     const country = inferCountry(place.lng, place.lat);
     if (country?.id) place.country = country.id;
   }
+  if (key === "chinaAncientCapitals" && place.unit && place.subunit) return;
   const region = inferRegion(place.country, place.lng, place.lat);
   if (region?.name) place.unit = region.name;
   const subregion = inferSubregion(place.country, place.lng, place.lat);
   if (subregion?.name) place.subunit = subregion.name;
+}
+
+function canUseChecklistCatalogGeography(key, item) {
+  if (key !== "chinaAncientCapitals") return false;
+  const meta = typeof item === "object" ? item : chinaAncientCapitalMeta[canonicalPlaceKey(item)];
+  return Boolean(parseChinaAdminText(meta?.admin).province);
+}
+
+function applyAncientCapitalAdminGeography(place) {
+  const meta = chinaAncientCapitalMeta[canonicalPlaceKey(place.name)];
+  const parsed = parseChinaAdminText(meta?.admin || place.admin || "");
+  if (parsed.province) place.unit = parsed.province;
+  if (parsed.city) place.subunit = parsed.city;
+}
+
+function parseChinaAdminText(value) {
+  const text = String(value || "").trim();
+  if (!text) return { province: "", city: "" };
+  if (/^(北京市|上海市|天津市|重庆市)/.test(text)) {
+    const city = RegExp.$1.replace(/市$/, "");
+    return { province: city, city };
+  }
+  if (/^(香港|澳门|台湾)/.test(text)) {
+    return { province: RegExp.$1, city: RegExp.$1 };
+  }
+  const provinceMatch = text.match(/^(.+?(?:省|自治区|特别行政区))/);
+  const province = provinceMatch ? provinceMatch[1]
+    .replace(/省$|自治区$|特别行政区$/g, "")
+    .replace(/壮族|回族|维吾尔/g, "") : "";
+  const rest = provinceMatch ? text.slice(provinceMatch[1].length) : text;
+  const cityMatch = rest.match(/^(.+?(?:市|地区|自治州|盟))/);
+  const city = cityMatch ? cityMatch[1] : province;
+  return { province, city };
 }
 
 function cleanChecklistName(value) {
