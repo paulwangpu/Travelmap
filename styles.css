@@ -1965,20 +1965,120 @@ button:hover {
   color: #fff;
 }
 
+.high-altitude-checklist {
+  border-color: #d8ddcf;
+}
+
+.high-altitude-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  background: #fbfaf4;
+  align-items: start;
+}
+
+.high-altitude-card:hover {
+  border-color: #c9b979;
+  background: #fffdf3;
+}
+
+.high-altitude-card.done {
+  border-color: #b8c891;
+  background: #edf6df;
+}
+
+.high-altitude-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
+}
+
+.high-altitude-badges {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+}
+
+.high-altitude-meter {
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #f3e8b2;
+  color: #4a3f12;
+  font-size: 0.78rem;
+  font-weight: 950;
+  white-space: nowrap;
+}
+
+.high-altitude-card .us-park-card-status {
+  grid-row: auto;
+  grid-column: auto;
+  align-self: center;
+}
+
+.high-altitude-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 7px 14px;
+  margin-top: 8px;
+  min-width: 0;
+}
+
+.high-altitude-facts span {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 6px;
+  min-width: 0;
+  align-items: baseline;
+  font-size: 0.8rem;
+  line-height: 1.25;
+}
+
+.high-altitude-facts b {
+  color: var(--muted);
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.high-altitude-facts em {
+  min-width: 0;
+  color: var(--ink);
+  font-style: normal;
+  font-weight: 800;
+}
+
+.high-altitude-facts .wide {
+  grid-column: 1 / -1;
+}
+
 @media (max-width: 520px) {
   .us-park-grid {
     grid-template-columns: 1fr;
   }
 
-  .us-park-card {
+  .us-park-card,
+  .high-altitude-card {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .us-park-card-status {
-    grid-row: auto;
-    grid-column: 1;
-    justify-self: start;
+  .us-park-card-status,
+  .high-altitude-meter {
     margin-top: 2px;
+  }
+
+  .high-altitude-head {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+
+  .high-altitude-badges {
+    justify-content: flex-start;
+  }
+
+  .high-altitude-facts {
+    grid-template-columns: 1fr;
   }
 }
 

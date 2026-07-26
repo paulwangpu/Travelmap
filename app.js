@@ -14,7 +14,7 @@ const languageStorageKey = "travel-map-language";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "1.8.3";
+const appVersion = "1.8.4";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 146;
@@ -1077,7 +1077,9 @@ const checklistEnglishLabels = {
   worldHeritage: "World Heritage",
   fiveMountains: "Five Great Mountains of China",
   threeMountains: "Three Famous Mountains of China",
+  chinaHighAltitude: "China High-Altitude Travel Challenge",
   buddhistMountains: "Four Sacred Buddhist Mountains",
+  taoistMountains: "Four Sacred Taoist Mountains",
   grottoes: "Four Great Grottoes",
   usNationalParks: "U.S. National Parks",
 };
@@ -1095,10 +1097,87 @@ const checklistItemEnglishNames = {
   峨眉山: "Mount Emei",
   普陀山: "Mount Putuo",
   九华山: "Mount Jiuhua",
+  "泰山 · 玉皇顶 · 1545m": "Mount Tai · Jade Emperor Peak · 1545m",
+  "华山 · 南峰 · 2155m": "Mount Hua · South Peak · 2155m",
+  "黄山 · 莲花峰 · 1864m": "Mount Huangshan · Lotus Peak · 1864m",
+  "庐山 · 汉阳峰 · 1474m": "Mount Lu · Hanyang Peak · 1474m",
+  "武夷山 · 黄岗山 · 2160m": "Wuyi Mountains · Huanggangshan · 2160m",
+  "三清山 · 玉京峰 · 1819m": "Mount Sanqing · Yujing Peak · 1819m",
+  "雁荡山 · 百岗尖 · 1108m": "Yandang Mountains · Baigangjian · 1108m",
+  "普陀山 · 佛顶山 · 291m": "Mount Putuo · Foding Mountain · 291m",
+  "九华山 · 十王峰 · 1342m": "Mount Jiuhua · Shiwang Peak · 1342m",
+  "嵩山 · 峻极峰 · 1492m": "Mount Song · Junji Peak · 1492m",
+  "衡山 · 祝融峰 · 1300m": "Mount Heng (Hunan) · Zhurong Peak · 1300m",
+  "恒山 · 天峰岭 · 2016m": "Mount Heng (Shanxi) · Tianfengling · 2016m",
+  "峨眉山 · 金顶 · 3079m": "Mount Emei · Golden Summit · 3079m",
+  "五台山 · 北台叶斗峰 · 3061m": "Mount Wutai · North Terrace Yedou Peak · 3061m",
+  "黄龙 · 五彩池 · 3576m": "Huanglong · Five-Color Pond · 3576m",
+  "四姑娘山双桥沟 · 红杉林 · 3840m": "Mount Siguniang Shuangqiaogou · Redwood Forest · 3840m",
+  "达古冰川 · 冰川观景区 · 4860m": "Dagu Glacier · Glacier Viewing Area · 4860m",
+  "稻城亚丁 · 牛奶海 · 4600m": "Daocheng Yading · Milk Lake · 4600m",
+  "稻城亚丁 · 五色海 · 4700m": "Daocheng Yading · Five-Color Lake · 4700m",
+  "折多山 · 垭口 · 4298m": "Zheduo Mountain · Pass · 4298m",
+  "雅哈垭口 · 观景点 · 4568m": "Yaha Pass · Viewpoint · 4568m",
+  "子梅垭口 · 观景点 · 4550m": "Zimei Pass · Viewpoint · 4550m",
+  "鱼子西 · 观景平台 · 4200m": "Yuzixi · Viewing Platform · 4200m",
+  "冷嘎措 · 湖边观景点 · 4530m": "Lenggacuo · Lakeside Viewpoint · 4530m",
+  "玉龙雪山 · 冰川公园平台 · 4680m": "Jade Dragon Snow Mountain · Glacier Park Platform · 4680m",
+  "梅里雪山 · 飞来寺观景台 · 3400m": "Meili Snow Mountain · Feilai Temple Viewpoint · 3400m",
+  "白马雪山 · 垭口 · 4292m": "Baima Snow Mountain · Pass · 4292m",
+  "石卡雪山 · 索道高点 · 4449m": "Shika Snow Mountain · Cableway High Point · 4449m",
+  "青海湖 · 湖区游览点 · 3196m": "Qinghai Lake · Lakeside Area · 3196m",
+  "茶卡盐湖 · 景区湖区 · 3059m": "Chaka Salt Lake · Scenic Area · 3059m",
+  "昆仑山口 · 公路垭口 · 4768m": "Kunlun Pass · Road Pass · 4768m",
+  "可可西里 · 索南达杰保护站 · 4479m": "Hoh Xil · Sonam Dargye Protection Station · 4479m",
+  "唐古拉山口 · 公路山口 · 5231m": "Tanggula Pass · Road Pass · 5231m",
+  "白沙湖/白沙山 · 湖边观景点 · 3300m": "Baisha Lake / Baisha Mountain · Lakeside Viewpoint · 3300m",
+  "喀拉库勒湖 · 湖边观景点 · 3600m": "Karakul Lake · Lakeside Viewpoint · 3600m",
+  "慕士塔格峰景区 · 4688米石碑 · 4688m": "Muztagh Ata Scenic Area · 4688m Marker · 4688m",
+  "盘龙古道 · 最高观景垭口 · 4216m": "Panlong Ancient Road · Highest View Pass · 4216m",
+  "红其拉甫国门 · 国门附近 · 5100m": "Khunjerab Gate · Border Gate Area · 5100m",
+  "纳木错 · 扎西半岛 · 4718m": "Namtso · Tashi Peninsula · 4718m",
+  "羊卓雍措 · 湖区观景点 · 4441m": "Yamdrok Lake · Lakeside Viewpoint · 4441m",
+  "普莫雍措 · 湖边游览点 · 5010m": "Pumoyongcuo · Lakeside Area · 5010m",
+  "卡若拉冰川 · 公路观景区 · 5036m": "Karola Glacier · Roadside Viewpoint · 5036m",
+  "珠峰景区 · 珠峰大本营 · 5200m": "Everest Scenic Area · Everest Base Camp · 5200m",
+  "加吾拉山口 · 珠峰观景山口 · 5200m": "Gyawu La Pass · Everest View Pass · 5200m",
+  "绒布寺 · 寺院观景区 · 4900m": "Rongbuk Monastery · Viewing Area · 4900m",
+  "玛旁雍错 · 湖区游览点 · 4588m": "Lake Manasarovar · Lakeside Area · 4588m",
+  "冈仁波齐 · 塔尔钦周边 · 4670m": "Mount Kailash · Darchen Area · 4670m",
+  "南迦巴瓦 · 色季拉山口观景台 · 4728m": "Namcha Barwa · Sejila Pass Viewpoint · 4728m",
+  "巴松措 · 湖区游览点 · 3480m": "Basum Lake · Lakeside Area · 3480m",
+  "玉山 · 主峰步道终点 · 3952m": "Yushan · Main Peak Trail End · 3952m",
   莫高窟: "Mogao Caves",
   云冈石窟: "Yungang Grottoes",
   龙门石窟: "Longmen Grottoes",
   麦积山石窟: "Maijishan Grottoes",
+};
+
+const checklistItemDetailLabels = {
+  threeMountains: {
+    黄山: { zh: "黄山 · 莲花峰 · 1864m", en: "Mount Huangshan · Lotus Peak · 1864m" },
+    庐山: { zh: "庐山 · 汉阳峰 · 1474m", en: "Mount Lu · Hanyang Peak · 1474m" },
+    雁荡山: { zh: "雁荡山 · 百岗尖 · 1108m", en: "Yandang Mountains · Baigangjian · 1108m" },
+  },
+  fiveMountains: {
+    泰山: { zh: "泰山 · 玉皇顶 · 1545m", en: "Mount Tai · Jade Emperor Peak · 1545m" },
+    华山: { zh: "华山 · 南峰 · 2155m", en: "Mount Hua · South Peak · 2155m" },
+    衡山: { zh: "衡山 · 祝融峰 · 1300m", en: "Mount Heng (Hunan) · Zhurong Peak · 1300m" },
+    恒山: { zh: "恒山 · 天峰岭 · 2016m", en: "Mount Heng (Shanxi) · Tianfengling · 2016m" },
+    嵩山: { zh: "嵩山 · 峻极峰 · 1492m", en: "Mount Song · Junji Peak · 1492m" },
+  },
+  buddhistMountains: {
+    五台山: { zh: "五台山 · 北台叶斗峰 · 3061m", en: "Mount Wutai · North Terrace Yedou Peak · 3061m" },
+    峨眉山: { zh: "峨眉山 · 金顶 · 3079m", en: "Mount Emei · Golden Summit · 3079m" },
+    普陀山: { zh: "普陀山 · 佛顶山 · 291m", en: "Mount Putuo · Foding Mountain · 291m" },
+    九华山: { zh: "九华山 · 十王峰 · 1342m", en: "Mount Jiuhua · Shiwang Peak · 1342m" },
+  },
+  taoistMountains: {
+    武当山: { zh: "武当山 · 天柱峰 · 1612m", en: "Wudang Mountains · Tianzhu Peak · 1612m" },
+    龙虎山: { zh: "龙虎山 · 天门山 · 1300m", en: "Longhu Mountain · Tianmen Mountain · 1300m" },
+    齐云山: { zh: "齐云山 · 廊崖 · 585m", en: "Qiyun Mountain · Langya · 585m" },
+    青城山: { zh: "青城山 · 老君阁/彭祖峰 · 1260m", en: "Mount Qingcheng · Laojun Pavilion / Pengzu Peak · 1260m" },
+  },
 };
 
 function checklistLabel(key, list) {
@@ -1119,6 +1198,8 @@ function worldHeritageCountryDisplayName(countryName) {
 }
 
 function checklistItemDisplayName(key, item) {
+  const detailed = checklistItemDetailLabels[key]?.[item];
+  if (detailed) return currentLanguage === "en" ? detailed.en : detailed.zh;
   if (currentLanguage !== "en") return item;
   if (key === "worldHeritage" && worldHeritageEnglishNames[item]) return worldHeritageEnglishNames[item];
   const parenthetical = englishNameInParentheses(item);
@@ -1700,9 +1781,96 @@ const checklistCatalog = {
     label: "三山",
     items: ["黄山", "庐山", "雁荡山"],
   },
+  chinaHighAltitude: {
+    label: "中国高海拔旅行挑战",
+    items: [
+      "唐古拉山口 · 公路山口 · 5231m",
+      "珠峰景区 · 珠峰大本营 · 5200m",
+      "加吾拉山口 · 珠峰观景山口 · 5200m",
+      "红其拉甫国门 · 国门附近 · 5100m",
+      "普莫雍措 · 湖边游览点 · 5010m",
+      "卡若拉冰川 · 公路观景区 · 5036m",
+      "绒布寺 · 寺院观景区 · 4900m",
+      "达古冰川 · 冰川观景区 · 4860m",
+      "昆仑山口 · 公路垭口 · 4768m",
+      "南迦巴瓦 · 色季拉山口观景台 · 4728m",
+      "纳木错 · 扎西半岛 · 4718m",
+      "稻城亚丁 · 五色海 · 4700m",
+      "玉龙雪山 · 冰川公园平台 · 4680m",
+      "慕士塔格峰景区 · 4688米石碑 · 4688m",
+      "冈仁波齐 · 塔尔钦周边 · 4670m",
+      "稻城亚丁 · 牛奶海 · 4600m",
+      "玛旁雍错 · 湖区游览点 · 4588m",
+      "雅哈垭口 · 观景点 · 4568m",
+      "子梅垭口 · 观景点 · 4550m",
+      "冷嘎措 · 湖边观景点 · 4530m",
+      "羊卓雍措 · 湖区观景点 · 4441m",
+      "石卡雪山 · 索道高点 · 4449m",
+      "可可西里 · 索南达杰保护站 · 4479m",
+      "白马雪山 · 垭口 · 4292m",
+      "折多山 · 垭口 · 4298m",
+      "鱼子西 · 观景平台 · 4200m",
+      "盘龙古道 · 最高观景垭口 · 4216m",
+      "玉山 · 主峰步道终点 · 3952m",
+      "四姑娘山双桥沟 · 红杉林 · 3840m",
+      "喀拉库勒湖 · 湖边观景点 · 3600m",
+      "黄龙 · 五彩池 · 3576m",
+      "巴松措 · 湖区游览点 · 3480m",
+      "梅里雪山 · 飞来寺观景台 · 3400m",
+      "白沙湖/白沙山 · 湖边观景点 · 3300m",
+      "青海湖 · 湖区游览点 · 3196m",
+      "茶卡盐湖 · 景区湖区 · 3059m",
+      "武夷山 · 黄岗山 · 2160m",
+      "三清山 · 玉京峰 · 1819m",
+    ],
+    meta: {
+      "唐古拉山口 · 公路山口 · 5231m": { province: "青海/西藏", geoUnit: "唐古拉山", point: "公路山口", altitude: 5231, type: "垭口" },
+      "珠峰景区 · 珠峰大本营 · 5200m": { province: "西藏", geoUnit: "珠穆朗玛峰", point: "珠峰大本营", altitude: 5200, type: "雪山观景" },
+      "加吾拉山口 · 珠峰观景山口 · 5200m": { province: "西藏", geoUnit: "喜马拉雅山", point: "珠峰观景山口", altitude: 5200, type: "垭口" },
+      "红其拉甫国门 · 国门附近 · 5100m": { province: "新疆", geoUnit: "帕米尔高原", point: "国门附近", altitude: 5100, type: "国门/口岸" },
+      "普莫雍措 · 湖边游览点 · 5010m": { province: "西藏", geoUnit: "喜马拉雅山北麓湖群", point: "湖边游览点", altitude: 5010, type: "高原湖泊" },
+      "卡若拉冰川 · 公路观景区 · 5036m": { province: "西藏", geoUnit: "宁金抗沙峰", point: "公路观景区", altitude: 5036, type: "冰川景区" },
+      "绒布寺 · 寺院观景区 · 4900m": { province: "西藏", geoUnit: "珠穆朗玛峰", point: "寺院观景区", altitude: 4900, type: "雪山观景" },
+      "达古冰川 · 冰川观景区 · 4860m": { province: "四川", geoUnit: "达古雪山", point: "冰川观景区", altitude: 4860, type: "冰川景区" },
+      "昆仑山口 · 公路垭口 · 4768m": { province: "青海", geoUnit: "昆仑山", point: "公路垭口", altitude: 4768, type: "垭口" },
+      "南迦巴瓦 · 色季拉山口观景台 · 4728m": { province: "西藏", geoUnit: "南迦巴瓦峰", point: "色季拉山口观景台", altitude: 4728, type: "雪山观景" },
+      "纳木错 · 扎西半岛 · 4718m": { province: "西藏", geoUnit: "念青唐古拉山湖区", point: "扎西半岛", altitude: 4718, type: "高原湖泊" },
+      "稻城亚丁 · 五色海 · 4700m": { province: "四川", geoUnit: "三怙主雪山", point: "五色海", altitude: 4700, type: "高原湖泊" },
+      "玉龙雪山 · 冰川公园平台 · 4680m": { province: "云南", geoUnit: "玉龙雪山", point: "冰川公园平台", altitude: 4680, type: "雪山景区" },
+      "慕士塔格峰景区 · 4688米石碑 · 4688m": { province: "新疆", geoUnit: "慕士塔格峰", point: "4688米石碑", altitude: 4688, type: "雪山观景" },
+      "冈仁波齐 · 塔尔钦周边 · 4670m": { province: "西藏", geoUnit: "冈仁波齐", point: "塔尔钦周边", altitude: 4670, type: "神山" },
+      "稻城亚丁 · 牛奶海 · 4600m": { province: "四川", geoUnit: "三怙主雪山", point: "牛奶海", altitude: 4600, type: "高原湖泊" },
+      "玛旁雍错 · 湖区游览点 · 4588m": { province: "西藏", geoUnit: "冈仁波齐-玛旁雍错", point: "湖区游览点", altitude: 4588, type: "高原湖泊" },
+      "雅哈垭口 · 观景点 · 4568m": { province: "四川", geoUnit: "贡嘎山", point: "观景点", altitude: 4568, type: "雪山观景" },
+      "子梅垭口 · 观景点 · 4550m": { province: "四川", geoUnit: "贡嘎山", point: "观景点", altitude: 4550, type: "雪山观景" },
+      "冷嘎措 · 湖边观景点 · 4530m": { province: "四川", geoUnit: "贡嘎山", point: "湖边观景点", altitude: 4530, type: "高原湖泊" },
+      "羊卓雍措 · 湖区观景点 · 4441m": { province: "西藏", geoUnit: "喜马拉雅山北麓湖群", point: "湖区观景点", altitude: 4441, type: "高原湖泊" },
+      "石卡雪山 · 索道高点 · 4449m": { province: "云南", geoUnit: "石卡雪山", point: "索道高点", altitude: 4449, type: "雪山景区" },
+      "可可西里 · 索南达杰保护站 · 4479m": { province: "青海", geoUnit: "可可西里", point: "索南达杰保护站", altitude: 4479, type: "高原保护地" },
+      "白马雪山 · 垭口 · 4292m": { province: "云南", geoUnit: "白马雪山", point: "公路垭口", altitude: 4292, type: "垭口" },
+      "折多山 · 垭口 · 4298m": { province: "四川", geoUnit: "折多山", point: "公路垭口", altitude: 4298, type: "垭口" },
+      "鱼子西 · 观景平台 · 4200m": { province: "四川", geoUnit: "贡嘎山/雅拉雪山观景带", point: "观景平台", altitude: 4200, type: "雪山观景" },
+      "盘龙古道 · 最高观景垭口 · 4216m": { province: "新疆", geoUnit: "帕米尔高原", point: "最高观景垭口", altitude: 4216, type: "垭口" },
+      "玉山 · 主峰步道终点 · 3952m": { province: "台湾", geoUnit: "玉山山脉", point: "主峰步道终点", altitude: 3952, type: "名山/高山" },
+      "四姑娘山双桥沟 · 红杉林 · 3840m": { province: "四川", geoUnit: "四姑娘山", point: "红杉林", altitude: 3840, type: "雪山观景" },
+      "喀拉库勒湖 · 湖边观景点 · 3600m": { province: "新疆", geoUnit: "慕士塔格峰/帕米尔高原", point: "湖边观景点", altitude: 3600, type: "高原湖泊" },
+      "黄龙 · 五彩池 · 3576m": { province: "四川", geoUnit: "岷山", point: "五彩池", altitude: 3576, type: "高山景区" },
+      "巴松措 · 湖区游览点 · 3480m": { province: "西藏", geoUnit: "念青唐古拉山东段", point: "湖区游览点", altitude: 3480, type: "高原湖泊" },
+      "梅里雪山 · 飞来寺观景台 · 3400m": { province: "云南", geoUnit: "梅里雪山", point: "飞来寺观景台", altitude: 3400, type: "雪山观景" },
+      "白沙湖/白沙山 · 湖边观景点 · 3300m": { province: "新疆", geoUnit: "帕米尔高原", point: "湖边观景点", altitude: 3300, type: "高原湖泊" },
+      "青海湖 · 湖区游览点 · 3196m": { province: "青海", geoUnit: "青海湖盆地", point: "湖区游览点", altitude: 3196, type: "高原湖泊" },
+      "茶卡盐湖 · 景区湖区 · 3059m": { province: "青海", geoUnit: "柴达木盆地边缘", point: "景区湖区", altitude: 3059, type: "高原湖泊" },
+      "武夷山 · 黄岗山 · 2160m": { province: "福建/江西", geoUnit: "武夷山脉", point: "黄岗山", altitude: 2160, type: "名山" },
+      "三清山 · 玉京峰 · 1819m": { province: "江西", geoUnit: "怀玉山脉", point: "玉京峰", altitude: 1819, type: "名山" },
+    },
+  },
   buddhistMountains: {
     label: "四大佛教名山",
     items: ["五台山", "峨眉山", "普陀山", "九华山"],
+  },
+  taoistMountains: {
+    label: "四大道教名山",
+    items: ["武当山", "龙虎山", "齐云山", "青城山"],
   },
   grottoes: {
     label: "四大石窟",
@@ -6650,7 +6818,7 @@ function fillAchievementSection(details) {
     return;
   }
   if (section === "referenceLists") {
-    const referenceOrder = ["threeMountains", "fiveMountains", "buddhistMountains", "grottoes"];
+    const referenceOrder = ["threeMountains", "fiveMountains", "buddhistMountains", "taoistMountains", "chinaHighAltitude", "grottoes"];
     const checklistHtml = referenceOrder
       .filter((key) => checklistCatalog[key])
       .map((key) => [key, checklistCatalog[key]])
@@ -6815,6 +6983,7 @@ function achievementModel(name, doneCount, total, category, levels) {
 
 function renderChecklistSection(key, list) {
   if (key === "usNationalParks") return renderUsNationalParksSection(key, list);
+  if (key === "chinaHighAltitude") return renderHighAltitudeSection(key, list);
   if (list.byRegion) return renderRegionChecklistSection(key, list);
   if (list.byCountry) return renderCountryChecklistSection(key, list);
   const done = checklistDoneCount(key);
@@ -6866,6 +7035,69 @@ function renderUsParkCard(key, item) {
     <span class="us-park-card-main">${escapeHtml(name.primary)}</span>
     ${name.secondary ? `<span class="us-park-card-sub">${escapeHtml(name.secondary)}</span>` : ""}
     <span class="us-park-card-status">${checked ? t("checked") : t("unvisited")}</span>
+  </button>`;
+}
+
+function renderHighAltitudeSection(key, list) {
+  const done = checklistDoneCount(key);
+  const items = (list.items || []).slice().sort((a, b) => highAltitudeMetaFor(b).altitude - highAltitudeMetaFor(a).altitude);
+  return `<section class="theme-checklist high-altitude-checklist">
+    <header><strong>${checklistLabel(key, list)}</strong><span>${done}/${items.length}</span></header>
+    <div class="us-park-grid high-altitude-grid">
+      ${items.map((item) => renderHighAltitudeCard(key, item)).join("")}
+    </div>
+  </section>`;
+}
+
+function parseHighAltitudeItem(item) {
+  const parts = String(item || "").split("·").map((part) => part.trim()).filter(Boolean);
+  const altitudeText = parts.at(-1) || "";
+  const altitude = Number((altitudeText.match(/\d+/) || [""])[0]) || 0;
+  return {
+    name: parts[0] || item,
+    point: parts.slice(1, -1).join(" · "),
+    altitude,
+    altitudeText,
+  };
+}
+
+function highAltitudeMetaFor(item) {
+  const parsed = parseHighAltitudeItem(item);
+  return {
+    province: "",
+    geoUnit: "",
+    point: parsed.point,
+    altitude: parsed.altitude,
+    type: "",
+    ...(checklistCatalog.chinaHighAltitude?.meta?.[item] || {}),
+  };
+}
+
+function renderHighAltitudeCard(key, item) {
+  const checked = isChecklistItemDone(key, item);
+  const meta = highAltitudeMetaFor(item);
+  const localized = currentLanguage === "en"
+    ? parseHighAltitudeItem(checklistItemDisplayName(key, item))
+    : parseHighAltitudeItem(item);
+  const labelProvince = currentLanguage === "en" ? "Province" : "省区";
+  const labelGeo = currentLanguage === "en" ? "Geo unit" : "关联山体/地理单元";
+  const labelPoint = currentLanguage === "en" ? "Reachable point" : "可达点";
+  const labelType = currentLanguage === "en" ? "Type" : "类型";
+  const altitudeText = `${meta.altitude || localized.altitude}m`;
+  return `<button class="us-park-card high-altitude-card ${checked ? "done" : ""}" data-checklist="${escapeHtml(key)}" data-item="${escapeHtml(item)}" type="button">
+    <span class="high-altitude-head">
+      <span class="us-park-card-main">${escapeHtml(localized.name)}</span>
+      <span class="high-altitude-badges">
+        <span class="high-altitude-meter">${escapeHtml(altitudeText)}</span>
+        <span class="us-park-card-status">${checked ? t("checked") : t("unvisited")}</span>
+      </span>
+    </span>
+    <span class="high-altitude-facts">
+      <span><b>${labelProvince}</b><em>${escapeHtml(meta.province || "-")}</em></span>
+      <span class="wide"><b>${labelGeo}</b><em>${escapeHtml(meta.geoUnit || "-")}</em></span>
+      <span><b>${labelPoint}</b><em>${escapeHtml(meta.point || localized.point || "-")}</em></span>
+      <span><b>${labelType}</b><em>${escapeHtml(meta.type || "-")}</em></span>
+    </span>
   </button>`;
 }
 
