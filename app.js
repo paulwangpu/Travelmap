@@ -7335,7 +7335,8 @@ async function toggleChecklistItem(key, item, group = "") {
 
 function renderAfterChecklistChange(key, item, group = "") {
   invalidateMapPointRenderCache();
-  updateChecklistButtonsForItem(key, item, group);
+  if (!refreshRenderedChecklistSectionMarkup(key)) updateChecklistButtonsForItem(key, item, group);
+  refreshRenderedChecklistStats(key, group);
   renderMetrics();
   renderDashboardAchievements();
   renderNextStops();
@@ -7357,9 +7358,56 @@ function updateChecklistButtonsForItem(key, item, group = "") {
     const buttonKey = checklistItemKey(key, buttonItem, button.dataset.group || "");
     if (buttonKey !== itemKey && (!isAmbiguousChecklistItem(key, item) || canonicalPlaceKey(buttonItem) !== legacyKey)) return;
     button.classList.toggle("done", done);
-    button.textContent = done ? `${t("checked")} · ${buttonItem}` : buttonItem;
-    if (button.dataset.checklistMap) button.textContent = done ? t("unvisit") : t("markVisited");
+    const status = button.querySelector(".us-park-card-status");
+    if (status) {
+      status.textContent = done ? t("checked") : t("unvisited");
+      return;
+    }
+    if (button.dataset.checklistMap) {
+      button.textContent = done ? t("unvisit") : t("markVisited");
+      return;
+    }
+    button.textContent = done ? `${t("checked")} · ${checklistItemDisplayName(key, buttonItem)}` : checklistItemDisplayName(key, buttonItem);
   });
+}
+
+function refreshRenderedChecklistSectionMarkup(key) {
+  if (key !== "chinaHighAltitude" && key !== "usNationalParks") return false;
+  const button = document.querySelector(`.theme-checklist [data-checklist="${key}"]`);
+  const section = button?.closest(".theme-checklist");
+  const list = checklistCatalog[key];
+  if (!section || !list) return false;
+  if (key === "chinaHighAltitude") {
+    section.outerHTML = renderHighAltitudeSection(key, list);
+    return true;
+  }
+  if (key === "usNationalParks") {
+    section.outerHTML = renderUsNationalParksSection(key, list);
+    return true;
+  }
+  return false;
+}
+
+function refreshRenderedChecklistStats(key, group = "") {
+  const list = checklistCatalog[key];
+  if (!list) return;
+  document.querySelectorAll(`.theme-checklist [data-checklist="${key}"]`).forEach((button) => {
+    const section = button.closest(".theme-checklist");
+    const total = checklistTotalCount(key);
+    const count = checklistDoneCount(key);
+    const countNode = section?.querySelector(":scope > header span");
+    if (countNode) countNode.textContent = `${count}/${total}`;
+  });
+  if (!group) return;
+  const groupId = checklistGroupId(key, group);
+  const details = Array.from(document.querySelectorAll("[data-checklist-group]"))
+    .find((candidate) => candidate.dataset.checklistGroup === groupId);
+  const summaryCount = details?.querySelector(":scope > summary span");
+  const items = list.byRegion?.[group] || list.byCountry?.[group] || [];
+  if (summaryCount && items.length) {
+    const done = displayChecklistItems(key, items).filter((entry) => isChecklistItemDone(key, entry, group)).length;
+    summaryCount.textContent = `${done}/${displayChecklistItems(key, items).length}`;
+  }
 }
 
 function checklistPlaceMatchesItem(key, item, place, group = "") {
