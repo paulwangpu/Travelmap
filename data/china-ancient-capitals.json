@@ -55,9 +55,9 @@
       "sourceEra": "上古与夏商周",
       "sourceSite": "登封王城岗",
       "sourceAncientName": "阳城",
-      "currentPlace": "郑州",
-      "currentKey": "ancient-current:郑州",
-      "siteKey": "ancient-current:郑州"
+      "currentPlace": "登封王城岗",
+      "currentKey": "ancient-site:登封王城岗:34.44600,113.04900",
+      "siteKey": "ancient-site:登封王城岗:34.44600,113.04900"
     },
     {
       "lat": 34.0875,
@@ -109,9 +109,9 @@
       "sourceEra": "上古与夏商周",
       "sourceSite": "禹州瓦店",
       "sourceAncientName": "阳翟",
-      "currentPlace": "许昌",
-      "currentKey": "ancient-current:许昌",
-      "siteKey": "ancient-current:许昌"
+      "currentPlace": "禹州瓦店",
+      "currentKey": "ancient-site:禹州瓦店:34.08750,113.48880",
+      "siteKey": "ancient-site:禹州瓦店:34.08750,113.48880"
     },
     {
       "lat": 34.473,
@@ -163,9 +163,9 @@
       "sourceEra": "上古与夏商周",
       "sourceSite": "新密新砦",
       "sourceAncientName": "新砦",
-      "currentPlace": "郑州",
-      "currentKey": "ancient-current:郑州",
-      "siteKey": "ancient-current:郑州"
+      "currentPlace": "新密新砦",
+      "currentKey": "ancient-site:新密新砦:34.47300,113.39500",
+      "siteKey": "ancient-site:新密新砦:34.47300,113.39500"
     },
     {
       "lat": 34.6958,
@@ -217,9 +217,9 @@
       "sourceEra": "上古与夏商周",
       "sourceSite": "二里头遗址",
       "sourceAncientName": "斟鄩",
-      "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳",
-      "siteKey": "ancient-current:洛阳"
+      "currentPlace": "二里头遗址",
+      "currentKey": "ancient-site:二里头遗址:34.69580,112.69080",
+      "siteKey": "ancient-site:二里头遗址:34.69580,112.69080"
     },
     {
       "lat": 35.067,
@@ -272,8 +272,8 @@
       "sourceSite": "济源",
       "sourceAncientName": "原",
       "currentPlace": "济源",
-      "currentKey": "ancient-current:济源",
-      "siteKey": "ancient-current:济源"
+      "currentKey": "ancient-site:济源:35.06700,112.60200",
+      "siteKey": "ancient-site:济源:35.06700,112.60200"
     },
     {
       "lat": 34.7973,
@@ -489,8 +489,8 @@
       "sourceSite": "开封",
       "sourceAncientName": "老丘",
       "currentPlace": "开封",
-      "currentKey": "ancient-current:开封",
-      "siteKey": "ancient-current:开封"
+      "currentKey": "ancient-site:开封:34.79730,114.30760",
+      "siteKey": "ancient-site:开封:34.79730,114.30760"
     },
     {
       "lat": 34.7465,
@@ -560,9 +560,9 @@
       "sourceEra": "上古与夏商周",
       "sourceSite": "郑州商城",
       "sourceAncientName": "亳",
-      "currentPlace": "郑州",
-      "currentKey": "ancient-current:郑州",
-      "siteKey": "ancient-current:郑州"
+      "currentPlace": "郑州商城",
+      "currentKey": "ancient-site:郑州商城:34.74650,113.68300",
+      "siteKey": "ancient-site:郑州商城:34.74650,113.68300"
     },
     {
       "lat": 34.7275,
@@ -614,9 +614,9 @@
       "sourceEra": "上古与夏商周",
       "sourceSite": "偃师商城",
       "sourceAncientName": "西亳",
-      "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳",
-      "siteKey": "ancient-current:洛阳"
+      "currentPlace": "偃师商城",
+      "currentKey": "ancient-site:偃师商城:34.72750,112.78500",
+      "siteKey": "ancient-site:偃师商城:34.72750,112.78500"
     },
     {
       "lat": 36.13,
@@ -686,9 +686,9 @@
       "sourceEra": "上古与夏商周",
       "sourceSite": "安阳殷墟",
       "sourceAncientName": "相",
-      "currentPlace": "安阳",
-      "currentKey": "ancient-current:安阳",
-      "siteKey": "ancient-current:安阳"
+      "currentPlace": "安阳殷墟",
+      "currentKey": "ancient-site:安阳殷墟:36.13000,114.31000",
+      "siteKey": "ancient-site:安阳殷墟:36.13000,114.31000"
     },
     {
       "lat": 37.0706,
@@ -761,8 +761,8 @@
       "sourceSite": "邢台",
       "sourceAncientName": "邢",
       "currentPlace": "邢台",
-      "currentKey": "ancient-current:邢台",
-      "siteKey": "ancient-current:邢台"
+      "currentKey": "ancient-site:邢台:37.07060,114.50480",
+      "siteKey": "ancient-site:邢台:37.07060,114.50480"
     },
     {
       "lat": 34.614,
@@ -814,9 +814,9 @@
       "sourceEra": "上古与夏商周",
       "sourceSite": "郯城",
       "sourceAncientName": "庇",
-      "currentPlace": "临沂",
-      "currentKey": "ancient-current:临沂",
-      "siteKey": "ancient-current:临沂"
+      "currentPlace": "郯城",
+      "currentKey": "ancient-site:郯城:34.61400,118.36700",
+      "siteKey": "ancient-site:郯城:34.61400,118.36700"
     },
     {
       "lat": 35.581,
@@ -868,9 +868,9 @@
       "sourceEra": "上古与夏商周",
       "sourceSite": "曲阜",
       "sourceAncientName": "奄",
-      "currentPlace": "济宁",
-      "currentKey": "ancient-current:济宁",
-      "siteKey": "ancient-current:济宁"
+      "currentPlace": "曲阜",
+      "currentKey": "ancient-site:曲阜:35.58100,116.98600",
+      "siteKey": "ancient-site:曲阜:35.58100,116.98600"
     },
     {
       "lat": 34.24,
@@ -922,9 +922,9 @@
       "sourceEra": "上古与夏商周",
       "sourceSite": "丰镐遗址",
       "sourceAncientName": "宗周·镐京",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安",
-      "siteKey": "ancient-current:西安"
+      "currentPlace": "丰镐遗址",
+      "currentKey": "ancient-site:丰镐遗址:34.24000,108.73000",
+      "siteKey": "ancient-site:丰镐遗址:34.24000,108.73000"
     },
     {
       "lat": 34.705,
@@ -976,9 +976,9 @@
       "sourceEra": "上古与夏商周",
       "sourceSite": "洛邑遗址",
       "sourceAncientName": "成周·洛邑",
-      "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳",
-      "siteKey": "ancient-current:洛阳"
+      "currentPlace": "洛邑遗址",
+      "currentKey": "ancient-site:洛邑遗址:34.70500,112.60000",
+      "siteKey": "ancient-site:洛邑遗址:34.70500,112.60000"
     },
     {
       "lat": 34.6197,
@@ -1341,8 +1341,8 @@
       "sourceSite": "洛阳",
       "sourceAncientName": "雒邑·王城",
       "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳",
-      "siteKey": "ancient-current:洛阳"
+      "currentKey": "ancient-site:洛阳:34.61970,112.45400",
+      "siteKey": "ancient-site:洛阳:34.61970,112.45400"
     },
     {
       "lat": 36.826,
@@ -1411,9 +1411,9 @@
       "sourceEra": "春秋战国",
       "sourceSite": "临淄",
       "sourceAncientName": "营丘",
-      "currentPlace": "淄博",
-      "currentKey": "ancient-current:淄博",
-      "siteKey": "ancient-current:淄博"
+      "currentPlace": "临淄",
+      "currentKey": "ancient-site:临淄:36.82600,118.30900",
+      "siteKey": "ancient-site:临淄:36.82600,118.30900"
     },
     {
       "lat": 35.595,
@@ -1465,9 +1465,9 @@
       "sourceEra": "春秋战国",
       "sourceSite": "曲阜鲁故城",
       "sourceAncientName": "曲阜",
-      "currentPlace": "济宁",
-      "currentKey": "ancient-current:济宁",
-      "siteKey": "ancient-current:济宁"
+      "currentPlace": "曲阜鲁故城",
+      "currentKey": "ancient-site:曲阜鲁故城:35.59500,116.99500",
+      "siteKey": "ancient-site:曲阜鲁故城:35.59500,116.99500"
     },
     {
       "lat": 39.9042,
@@ -1683,8 +1683,8 @@
       "sourceSite": "北京",
       "sourceAncientName": "蓟",
       "currentPlace": "北京",
-      "currentKey": "ancient-current:北京",
-      "siteKey": "ancient-current:北京"
+      "currentKey": "ancient-site:北京:39.90420,116.40740",
+      "siteKey": "ancient-site:北京:39.90420,116.40740"
     },
     {
       "lat": 39.346,
@@ -1736,9 +1736,9 @@
       "sourceEra": "春秋战国",
       "sourceSite": "燕下都",
       "sourceAncientName": "武阳·燕下都",
-      "currentPlace": "保定",
-      "currentKey": "ancient-current:保定",
-      "siteKey": "ancient-current:保定"
+      "currentPlace": "燕下都",
+      "currentKey": "ancient-site:燕下都:39.34600,115.53000",
+      "siteKey": "ancient-site:燕下都:39.34600,115.53000"
     },
     {
       "lat": 41.2694,
@@ -1869,8 +1869,8 @@
       "sourceSite": "辽阳",
       "sourceAncientName": "襄平",
       "currentPlace": "辽阳",
-      "currentKey": "ancient-current:辽阳",
-      "siteKey": "ancient-current:辽阳"
+      "currentKey": "ancient-site:辽阳:41.26940,123.17280",
+      "siteKey": "ancient-site:辽阳:41.26940,123.17280"
     },
     {
       "lat": 35.739,
@@ -1922,9 +1922,9 @@
       "sourceEra": "春秋战国",
       "sourceSite": "翼城",
       "sourceAncientName": "唐/翼",
-      "currentPlace": "临汾",
-      "currentKey": "ancient-current:临汾",
-      "siteKey": "ancient-current:临汾"
+      "currentPlace": "翼城",
+      "currentKey": "ancient-site:翼城:35.73900,111.71900",
+      "siteKey": "ancient-site:翼城:35.73900,111.71900"
     },
     {
       "lat": 35.356,
@@ -1976,9 +1976,9 @@
       "sourceEra": "春秋战国",
       "sourceSite": "闻喜",
       "sourceAncientName": "绛",
-      "currentPlace": "运城",
-      "currentKey": "ancient-current:运城",
-      "siteKey": "ancient-current:运城"
+      "currentPlace": "闻喜",
+      "currentKey": "ancient-site:闻喜:35.35600,111.22400",
+      "siteKey": "ancient-site:闻喜:35.35600,111.22400"
     },
     {
       "lat": 35.619,
@@ -2030,9 +2030,9 @@
       "sourceEra": "春秋战国",
       "sourceSite": "侯马",
       "sourceAncientName": "新田",
-      "currentPlace": "临汾",
-      "currentKey": "ancient-current:临汾",
-      "siteKey": "ancient-current:临汾"
+      "currentPlace": "侯马",
+      "currentKey": "ancient-site:侯马:35.61900,111.37200",
+      "siteKey": "ancient-site:侯马:35.61900,111.37200"
     },
     {
       "lat": 34.3619,
@@ -2085,8 +2085,8 @@
       "sourceSite": "宝鸡",
       "sourceAncientName": "平阳",
       "currentPlace": "宝鸡",
-      "currentKey": "ancient-current:宝鸡",
-      "siteKey": "ancient-current:宝鸡"
+      "currentKey": "ancient-site:宝鸡:34.36190,107.23730",
+      "siteKey": "ancient-site:宝鸡:34.36190,107.23730"
     },
     {
       "lat": 34.521,
@@ -2157,9 +2157,9 @@
       "sourceEra": "春秋战国",
       "sourceSite": "雍城",
       "sourceAncientName": "雍",
-      "currentPlace": "宝鸡",
-      "currentKey": "ancient-current:宝鸡",
-      "siteKey": "ancient-current:宝鸡"
+      "currentPlace": "雍城",
+      "currentKey": "ancient-site:雍城:34.52100,107.40000",
+      "siteKey": "ancient-site:雍城:34.52100,107.40000"
     },
     {
       "lat": 34.654,
@@ -2211,9 +2211,9 @@
       "sourceEra": "春秋战国",
       "sourceSite": "栎阳",
       "sourceAncientName": "栎阳",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安",
-      "siteKey": "ancient-current:西安"
+      "currentPlace": "栎阳",
+      "currentKey": "ancient-site:栎阳:34.65400,109.22600",
+      "siteKey": "ancient-site:栎阳:34.65400,109.22600"
     },
     {
       "lat": 34.3296,
@@ -2284,8 +2284,8 @@
       "sourceSite": "咸阳",
       "sourceAncientName": "咸阳",
       "currentPlace": "咸阳",
-      "currentKey": "ancient-current:咸阳",
-      "siteKey": "ancient-current:咸阳"
+      "currentKey": "ancient-site:咸阳:34.32960,108.70930",
+      "siteKey": "ancient-site:咸阳:34.32960,108.70930"
     },
     {
       "lat": 34.512,
@@ -2337,9 +2337,9 @@
       "sourceEra": "春秋战国",
       "sourceSite": "华县",
       "sourceAncientName": "棫林",
-      "currentPlace": "渭南",
-      "currentKey": "ancient-current:渭南",
-      "siteKey": "ancient-current:渭南"
+      "currentPlace": "华县",
+      "currentKey": "ancient-site:华县:34.51200,109.77100",
+      "siteKey": "ancient-site:华县:34.51200,109.77100"
     },
     {
       "lat": 34.396,
@@ -2408,9 +2408,9 @@
       "sourceEra": "春秋战国",
       "sourceSite": "新郑",
       "sourceAncientName": "新郑",
-      "currentPlace": "郑州",
-      "currentKey": "ancient-current:郑州",
-      "siteKey": "ancient-current:郑州"
+      "currentPlace": "新郑",
+      "currentKey": "ancient-site:新郑:34.39600,113.74100",
+      "siteKey": "ancient-site:新郑:34.39600,113.74100"
     },
     {
       "lat": 35.607,
@@ -2462,9 +2462,9 @@
       "sourceEra": "春秋战国",
       "sourceSite": "淇县",
       "sourceAncientName": "朝歌",
-      "currentPlace": "鹤壁",
-      "currentKey": "ancient-current:鹤壁",
-      "siteKey": "ancient-current:鹤壁"
+      "currentPlace": "淇县",
+      "currentKey": "ancient-site:淇县:35.60700,114.19700",
+      "siteKey": "ancient-site:淇县:35.60700,114.19700"
     },
     {
       "lat": 35.7627,
@@ -2517,8 +2517,8 @@
       "sourceSite": "濮阳",
       "sourceAncientName": "帝丘",
       "currentPlace": "濮阳",
-      "currentKey": "ancient-current:濮阳",
-      "siteKey": "ancient-current:濮阳"
+      "currentKey": "ancient-site:濮阳:35.76270,115.02930",
+      "siteKey": "ancient-site:濮阳:35.76270,115.02930"
     },
     {
       "lat": 34.381,
@@ -2570,9 +2570,9 @@
       "sourceEra": "春秋战国",
       "sourceSite": "商丘宋国故城",
       "sourceAncientName": "商丘",
-      "currentPlace": "商丘",
-      "currentKey": "ancient-current:商丘",
-      "siteKey": "ancient-current:商丘"
+      "currentPlace": "商丘宋国故城",
+      "currentKey": "ancient-site:商丘宋国故城:34.38100,115.65400",
+      "siteKey": "ancient-site:商丘宋国故城:34.38100,115.65400"
     },
     {
       "lat": 33.733,
@@ -2662,9 +2662,9 @@
       "sourceEra": "春秋战国",
       "sourceSite": "淮阳",
       "sourceAncientName": "宛丘",
-      "currentPlace": "周口",
-      "currentKey": "ancient-current:周口",
-      "siteKey": "ancient-current:周口"
+      "currentPlace": "淮阳",
+      "currentKey": "ancient-site:淮阳:33.73300,114.88600",
+      "siteKey": "ancient-site:淮阳:33.73300,114.88600"
     },
     {
       "lat": 33.263,
@@ -2716,9 +2716,9 @@
       "sourceEra": "春秋战国",
       "sourceSite": "上蔡",
       "sourceAncientName": "上蔡",
-      "currentPlace": "驻马店",
-      "currentKey": "ancient-current:驻马店",
-      "siteKey": "ancient-current:驻马店"
+      "currentPlace": "上蔡",
+      "currentKey": "ancient-site:上蔡:33.26300,114.26400",
+      "siteKey": "ancient-site:上蔡:33.26300,114.26400"
     },
     {
       "lat": 32.709,
@@ -2770,9 +2770,9 @@
       "sourceEra": "春秋战国",
       "sourceSite": "凤台",
       "sourceAncientName": "州来",
-      "currentPlace": "淮南",
-      "currentKey": "ancient-current:淮南",
-      "siteKey": "ancient-current:淮南"
+      "currentPlace": "凤台",
+      "currentKey": "ancient-site:凤台:32.70900,116.71100",
+      "siteKey": "ancient-site:凤台:32.70900,116.71100"
     },
     {
       "lat": 30.42,
@@ -2824,9 +2824,9 @@
       "sourceEra": "春秋战国",
       "sourceSite": "郢都纪南城",
       "sourceAncientName": "郢·纪南城",
-      "currentPlace": "荆州",
-      "currentKey": "ancient-current:荆州",
-      "siteKey": "ancient-current:荆州"
+      "currentPlace": "郢都纪南城",
+      "currentKey": "ancient-site:郢都纪南城:30.42000,112.19000",
+      "siteKey": "ancient-site:郢都纪南城:30.42000,112.19000"
     },
     {
       "lat": 32.573,
@@ -2878,9 +2878,9 @@
       "sourceEra": "春秋战国",
       "sourceSite": "寿春",
       "sourceAncientName": "寿春",
-      "currentPlace": "淮南",
-      "currentKey": "ancient-current:淮南",
-      "siteKey": "ancient-current:淮南"
+      "currentPlace": "寿春",
+      "currentKey": "ancient-site:寿春:32.57300,116.78600",
+      "siteKey": "ancient-site:寿春:32.57300,116.78600"
     },
     {
       "lat": 31.2989,
@@ -2953,8 +2953,8 @@
       "sourceSite": "苏州",
       "sourceAncientName": "姑苏",
       "currentPlace": "苏州",
-      "currentKey": "ancient-current:苏州",
-      "siteKey": "ancient-current:苏州"
+      "currentKey": "ancient-site:苏州:31.29890,120.58530",
+      "siteKey": "ancient-site:苏州:31.29890,120.58530"
     },
     {
       "lat": 29.7136,
@@ -3006,9 +3006,9 @@
       "sourceEra": "春秋战国",
       "sourceSite": "诸暨",
       "sourceAncientName": "埤中",
-      "currentPlace": "绍兴",
-      "currentKey": "ancient-current:绍兴",
-      "siteKey": "ancient-current:绍兴"
+      "currentPlace": "诸暨",
+      "currentKey": "ancient-site:诸暨:29.71360,120.23600",
+      "siteKey": "ancient-site:诸暨:29.71360,120.23600"
     },
     {
       "lat": 30.0303,
@@ -3104,8 +3104,8 @@
       "sourceSite": "绍兴",
       "sourceAncientName": "会稽",
       "currentPlace": "绍兴",
-      "currentKey": "ancient-current:绍兴",
-      "siteKey": "ancient-current:绍兴"
+      "currentKey": "ancient-site:绍兴:30.03030,120.58020",
+      "siteKey": "ancient-site:绍兴:30.03030,120.58020"
     },
     {
       "lat": 36.088,
@@ -3176,8 +3176,8 @@
       "sourceSite": "临汾",
       "sourceAncientName": "平阳",
       "currentPlace": "临汾",
-      "currentKey": "ancient-current:临汾",
-      "siteKey": "ancient-current:临汾"
+      "currentKey": "ancient-site:临汾:36.08800,111.51900",
+      "siteKey": "ancient-site:临汾:36.08800,111.51900"
     },
     {
       "lat": 37.705,
@@ -3340,9 +3340,9 @@
       "sourceEra": "春秋战国",
       "sourceSite": "晋阳",
       "sourceAncientName": "晋阳",
-      "currentPlace": "太原",
-      "currentKey": "ancient-current:太原",
-      "siteKey": "ancient-current:太原"
+      "currentPlace": "晋阳",
+      "currentKey": "ancient-site:晋阳:37.70500,112.44000",
+      "siteKey": "ancient-site:晋阳:37.70500,112.44000"
     },
     {
       "lat": 36.6256,
@@ -3395,8 +3395,8 @@
       "sourceSite": "邯郸",
       "sourceAncientName": "邯郸",
       "currentPlace": "邯郸",
-      "currentKey": "ancient-current:邯郸",
-      "siteKey": "ancient-current:邯郸"
+      "currentKey": "ancient-site:邯郸:36.62560,114.53910",
+      "siteKey": "ancient-site:邯郸:36.62560,114.53910"
     },
     {
       "lat": 35.026,
@@ -3448,9 +3448,9 @@
       "sourceEra": "春秋战国",
       "sourceSite": "安邑",
       "sourceAncientName": "安邑",
-      "currentPlace": "运城",
-      "currentKey": "ancient-current:运城",
-      "siteKey": "ancient-current:运城"
+      "currentPlace": "安邑",
+      "currentKey": "ancient-site:安邑:35.02600,111.05400",
+      "siteKey": "ancient-site:安邑:35.02600,111.05400"
     },
     {
       "lat": 34.797,
@@ -3502,9 +3502,9 @@
       "sourceEra": "春秋战国",
       "sourceSite": "大梁",
       "sourceAncientName": "大梁",
-      "currentPlace": "开封",
-      "currentKey": "ancient-current:开封",
-      "siteKey": "ancient-current:开封"
+      "currentPlace": "大梁",
+      "currentKey": "ancient-site:大梁:34.79700,114.30700",
+      "siteKey": "ancient-site:大梁:34.79700,114.30700"
     },
     {
       "lat": 34.2058,
@@ -3557,8 +3557,8 @@
       "sourceSite": "徐州",
       "sourceAncientName": "彭城",
       "currentPlace": "徐州",
-      "currentKey": "ancient-current:徐州",
-      "siteKey": "ancient-current:徐州"
+      "currentKey": "ancient-site:徐州:34.20580,117.28410",
+      "siteKey": "ancient-site:徐州:34.20580,117.28410"
     },
     {
       "lat": 33.004,
@@ -3610,9 +3610,9 @@
       "sourceEra": "秦汉及同期",
       "sourceSite": "南郑",
       "sourceAncientName": "南郑",
-      "currentPlace": "汉中",
-      "currentKey": "ancient-current:汉中",
-      "siteKey": "ancient-current:汉中"
+      "currentPlace": "南郑",
+      "currentKey": "ancient-site:南郑:33.00400,106.94200",
+      "siteKey": "ancient-site:南郑:33.00400,106.94200"
     },
     {
       "lat": 34.36,
@@ -3893,9 +3893,9 @@
       "sourceEra": "秦汉及同期",
       "sourceSite": "汉长安城",
       "sourceAncientName": "长安",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安",
-      "siteKey": "ancient-current:西安"
+      "currentPlace": "汉长安城",
+      "currentKey": "ancient-site:汉长安城:34.36000,108.86000",
+      "siteKey": "ancient-site:汉长安城:34.36000,108.86000"
     },
     {
       "lat": 32.99,
@@ -3947,9 +3947,9 @@
       "sourceEra": "秦汉及同期",
       "sourceSite": "宛城",
       "sourceAncientName": "宛",
-      "currentPlace": "南阳",
-      "currentKey": "ancient-current:南阳",
-      "siteKey": "ancient-current:南阳"
+      "currentPlace": "宛城",
+      "currentKey": "ancient-site:宛城:32.99000,112.52800",
+      "siteKey": "ancient-site:宛城:32.99000,112.52800"
     },
     {
       "lat": 30.5728,
@@ -4109,8 +4109,8 @@
       "sourceSite": "成都",
       "sourceAncientName": "成都",
       "currentPlace": "成都",
-      "currentKey": "ancient-current:成都",
-      "siteKey": "ancient-current:成都"
+      "currentKey": "ancient-site:成都:30.57280,104.06680",
+      "siteKey": "ancient-site:成都:30.57280,104.06680"
     },
     {
       "lat": 34.08,
@@ -4184,9 +4184,9 @@
       "sourceEra": "秦汉及同期",
       "sourceSite": "许都",
       "sourceAncientName": "许",
-      "currentPlace": "许昌",
-      "currentKey": "ancient-current:许昌",
-      "siteKey": "ancient-current:许昌"
+      "currentPlace": "许都",
+      "currentKey": "ancient-site:许都:34.08000,113.82000",
+      "siteKey": "ancient-site:许都:34.08000,113.82000"
     },
     {
       "lat": 36.34,
@@ -4328,9 +4328,9 @@
       "sourceEra": "三国两晋",
       "sourceSite": "邺城",
       "sourceAncientName": "邺",
-      "currentPlace": "邯郸",
-      "currentKey": "ancient-current:邯郸",
-      "siteKey": "ancient-current:邯郸"
+      "currentPlace": "邺城",
+      "currentKey": "ancient-site:邺城:36.34000,114.10000",
+      "siteKey": "ancient-site:邺城:36.34000,114.10000"
     },
     {
       "lat": 33.8446,
@@ -4406,8 +4406,8 @@
       "sourceSite": "亳州",
       "sourceAncientName": "谯",
       "currentPlace": "亳州",
-      "currentKey": "ancient-current:亳州",
-      "siteKey": "ancient-current:亳州"
+      "currentKey": "ancient-site:亳州:33.84460,115.77930",
+      "siteKey": "ancient-site:亳州:33.84460,115.77930"
     },
     {
       "lat": 32.0603,
@@ -4799,8 +4799,8 @@
       "sourceSite": "南京",
       "sourceAncientName": "建业",
       "currentPlace": "南京",
-      "currentKey": "ancient-current:南京",
-      "siteKey": "ancient-current:南京"
+      "currentKey": "ancient-site:南京:32.06030,118.79690",
+      "siteKey": "ancient-site:南京:32.06030,118.79690"
     },
     {
       "lat": 30.553,
@@ -4870,9 +4870,9 @@
       "sourceEra": "三国两晋",
       "sourceSite": "武昌",
       "sourceAncientName": "武昌",
-      "currentPlace": "武汉",
-      "currentKey": "ancient-current:武汉",
-      "siteKey": "ancient-current:武汉"
+      "currentPlace": "武昌",
+      "currentKey": "ancient-site:武昌:30.55300,114.31600",
+      "siteKey": "ancient-site:武昌:30.55300,114.31600"
     },
     {
       "lat": 37.517,
@@ -4924,9 +4924,9 @@
       "sourceEra": "十六国",
       "sourceSite": "离石",
       "sourceAncientName": "左国城",
-      "currentPlace": "吕梁",
-      "currentKey": "ancient-current:吕梁",
-      "siteKey": "ancient-current:吕梁"
+      "currentPlace": "离石",
+      "currentKey": "ancient-site:离石:37.51700,111.15100",
+      "siteKey": "ancient-site:离石:37.51700,111.15100"
     },
     {
       "lat": 37.9283,
@@ -5013,8 +5013,8 @@
       "sourceSite": "武威",
       "sourceAncientName": "姑臧",
       "currentPlace": "武威",
-      "currentKey": "ancient-current:武威",
-      "siteKey": "ancient-current:武威"
+      "currentKey": "ancient-site:武威:37.92830,102.63780",
+      "siteKey": "ancient-site:武威:37.92830,102.63780"
     },
     {
       "lat": 41.5737,
@@ -5101,8 +5101,8 @@
       "sourceSite": "朝阳",
       "sourceAncientName": "龙城",
       "currentPlace": "朝阳",
-      "currentKey": "ancient-current:朝阳",
-      "siteKey": "ancient-current:朝阳"
+      "currentKey": "ancient-site:朝阳:41.57370,120.45040",
+      "siteKey": "ancient-site:朝阳:41.57370,120.45040"
     },
     {
       "lat": 38.516,
@@ -5154,9 +5154,9 @@
       "sourceEra": "十六国",
       "sourceSite": "定州",
       "sourceAncientName": "中山",
-      "currentPlace": "保定",
-      "currentKey": "ancient-current:保定",
-      "siteKey": "ancient-current:保定"
+      "currentPlace": "定州",
+      "currentKey": "ancient-site:定州:38.51600,114.99000",
+      "siteKey": "ancient-site:定州:38.51600,114.99000"
     },
     {
       "lat": 36.122,
@@ -5208,9 +5208,9 @@
       "sourceEra": "十六国",
       "sourceSite": "长子",
       "sourceAncientName": "长子",
-      "currentPlace": "长治",
-      "currentKey": "ancient-current:长治",
-      "siteKey": "ancient-current:长治"
+      "currentPlace": "长子",
+      "currentKey": "ancient-site:长子:36.12200,112.87700",
+      "siteKey": "ancient-site:长子:36.12200,112.87700"
     },
     {
       "lat": 35.575,
@@ -5279,9 +5279,9 @@
       "sourceEra": "十六国",
       "sourceSite": "滑县",
       "sourceAncientName": "滑台",
-      "currentPlace": "安阳",
-      "currentKey": "ancient-current:安阳",
-      "siteKey": "ancient-current:安阳"
+      "currentPlace": "滑县",
+      "currentKey": "ancient-site:滑县:35.57500,114.51900",
+      "siteKey": "ancient-site:滑县:35.57500,114.51900"
     },
     {
       "lat": 35.843,
@@ -5350,9 +5350,9 @@
       "sourceEra": "十六国",
       "sourceSite": "榆中",
       "sourceAncientName": "勇士川",
-      "currentPlace": "兰州",
-      "currentKey": "ancient-current:兰州",
-      "siteKey": "ancient-current:兰州"
+      "currentPlace": "榆中",
+      "currentKey": "ancient-site:榆中:35.84300,104.11200",
+      "siteKey": "ancient-site:榆中:35.84300,104.11200"
     },
     {
       "lat": 36.0611,
@@ -5423,8 +5423,8 @@
       "sourceSite": "兰州",
       "sourceAncientName": "金城",
       "currentPlace": "兰州",
-      "currentKey": "ancient-current:兰州",
-      "siteKey": "ancient-current:兰州"
+      "currentKey": "ancient-site:兰州:36.06110,103.83430",
+      "siteKey": "ancient-site:兰州:36.06110,103.83430"
     },
     {
       "lat": 36.571,
@@ -5476,9 +5476,9 @@
       "sourceEra": "十六国",
       "sourceSite": "靖远",
       "sourceAncientName": "西城",
-      "currentPlace": "白银",
-      "currentKey": "ancient-current:白银",
-      "siteKey": "ancient-current:白银"
+      "currentPlace": "靖远",
+      "currentKey": "ancient-site:靖远:36.57100,104.68600",
+      "siteKey": "ancient-site:靖远:36.57100,104.68600"
     },
     {
       "lat": 35.601,
@@ -5530,9 +5530,9 @@
       "sourceEra": "十六国",
       "sourceSite": "临夏",
       "sourceAncientName": "枹罕",
-      "currentPlace": "临夏回族自治州临夏",
-      "currentKey": "ancient-current:临夏回族自治州临夏",
-      "siteKey": "ancient-current:临夏回族自治州临夏"
+      "currentPlace": "临夏",
+      "currentKey": "ancient-site:临夏:35.60100,103.21100",
+      "siteKey": "ancient-site:临夏:35.60100,103.21100"
     },
     {
       "lat": 36.482,
@@ -5600,9 +5600,9 @@
       "sourceEra": "十六国",
       "sourceSite": "乐都",
       "sourceAncientName": "乐都",
-      "currentPlace": "海东",
-      "currentKey": "ancient-current:海东",
-      "siteKey": "ancient-current:海东"
+      "currentPlace": "乐都",
+      "currentKey": "ancient-site:乐都:36.48200,102.40100",
+      "siteKey": "ancient-site:乐都:36.48200,102.40100"
     },
     {
       "lat": 36.6171,
@@ -5655,8 +5655,8 @@
       "sourceSite": "西宁",
       "sourceAncientName": "西平",
       "currentPlace": "西宁",
-      "currentKey": "ancient-current:西宁",
-      "siteKey": "ancient-current:西宁"
+      "currentKey": "ancient-site:西宁:36.61710,101.77820",
+      "siteKey": "ancient-site:西宁:36.61710,101.77820"
     },
     {
       "lat": 40.1421,
@@ -5708,9 +5708,9 @@
       "sourceEra": "十六国",
       "sourceSite": "敦煌",
       "sourceAncientName": "敦煌",
-      "currentPlace": "酒泉",
-      "currentKey": "ancient-current:酒泉",
-      "siteKey": "ancient-current:酒泉"
+      "currentPlace": "敦煌",
+      "currentKey": "ancient-site:敦煌:40.14210,94.66190",
+      "siteKey": "ancient-site:敦煌:40.14210,94.66190"
     },
     {
       "lat": 39.732,
@@ -5763,8 +5763,8 @@
       "sourceSite": "酒泉",
       "sourceAncientName": "酒泉",
       "currentPlace": "酒泉",
-      "currentKey": "ancient-current:酒泉",
-      "siteKey": "ancient-current:酒泉"
+      "currentKey": "ancient-site:酒泉:39.73200,98.49400",
+      "siteKey": "ancient-site:酒泉:39.73200,98.49400"
     },
     {
       "lat": 36.727,
@@ -5816,9 +5816,9 @@
       "sourceEra": "十六国",
       "sourceSite": "广固",
       "sourceAncientName": "广固",
-      "currentPlace": "潍坊",
-      "currentKey": "ancient-current:潍坊",
-      "siteKey": "ancient-current:潍坊"
+      "currentPlace": "广固",
+      "currentKey": "ancient-site:广固:36.72700,118.57400",
+      "siteKey": "ancient-site:广固:36.72700,118.57400"
     },
     {
       "lat": 37.99,
@@ -5870,9 +5870,9 @@
       "sourceEra": "十六国",
       "sourceSite": "统万城",
       "sourceAncientName": "统万城",
-      "currentPlace": "榆林",
-      "currentKey": "ancient-current:榆林",
-      "siteKey": "ancient-current:榆林"
+      "currentPlace": "统万城",
+      "currentKey": "ancient-site:统万城:37.99000,108.85000",
+      "siteKey": "ancient-site:统万城:37.99000,108.85000"
     },
     {
       "lat": 40.477,
@@ -5943,9 +5943,9 @@
       "sourceEra": "十六国",
       "sourceSite": "盛乐",
       "sourceAncientName": "盛乐",
-      "currentPlace": "呼和浩特",
-      "currentKey": "ancient-current:呼和浩特",
-      "siteKey": "ancient-current:呼和浩特"
+      "currentPlace": "盛乐",
+      "currentKey": "ancient-site:盛乐:40.47700,111.77900",
+      "siteKey": "ancient-site:盛乐:40.47700,111.77900"
     },
     {
       "lat": 40.09,
@@ -6016,9 +6016,9 @@
       "sourceEra": "十六国",
       "sourceSite": "平城遗址",
       "sourceAncientName": "平城",
-      "currentPlace": "大同",
-      "currentKey": "ancient-current:大同",
-      "siteKey": "ancient-current:大同"
+      "currentPlace": "平城遗址",
+      "currentKey": "ancient-site:平城遗址:40.09000,113.30000",
+      "siteKey": "ancient-site:平城遗址:40.09000,113.30000"
     },
     {
       "lat": 30.35,
@@ -6108,9 +6108,9 @@
       "sourceEra": "南北朝",
       "sourceSite": "江陵",
       "sourceAncientName": "江陵",
-      "currentPlace": "荆州",
-      "currentKey": "ancient-current:荆州",
-      "siteKey": "ancient-current:荆州"
+      "currentPlace": "江陵",
+      "currentKey": "ancient-site:江陵:30.35000,112.19000",
+      "siteKey": "ancient-site:江陵:30.35000,112.19000"
     },
     {
       "lat": 34.26,
@@ -6251,9 +6251,9 @@
       "sourceEra": "隋唐及同期",
       "sourceSite": "大兴城",
       "sourceAncientName": "大兴",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安",
-      "siteKey": "ancient-current:西安"
+      "currentPlace": "大兴城",
+      "currentKey": "ancient-site:大兴城:34.26000,108.95000",
+      "siteKey": "ancient-site:大兴城:34.26000,108.95000"
     },
     {
       "lat": 32.3942,
@@ -6365,8 +6365,8 @@
       "sourceSite": "扬州",
       "sourceAncientName": "江都",
       "currentPlace": "扬州",
-      "currentKey": "ancient-current:扬州",
-      "siteKey": "ancient-current:扬州"
+      "currentKey": "ancient-site:扬州:32.39420,119.41290",
+      "siteKey": "ancient-site:扬州:32.39420,119.41290"
     },
     {
       "lat": 39.3316,
@@ -6419,8 +6419,8 @@
       "sourceSite": "朔州",
       "sourceAncientName": "马邑",
       "currentPlace": "朔州",
-      "currentKey": "ancient-current:朔州",
-      "siteKey": "ancient-current:朔州"
+      "currentKey": "ancient-site:朔州:39.33160,112.43290",
+      "siteKey": "ancient-site:朔州:39.33160,112.43290"
     },
     {
       "lat": 38.28,
@@ -6472,9 +6472,9 @@
       "sourceEra": "隋唐及同期",
       "sourceSite": "朔方",
       "sourceAncientName": "朔方",
-      "currentPlace": "榆林",
-      "currentKey": "ancient-current:榆林",
-      "siteKey": "ancient-current:榆林"
+      "currentPlace": "朔方",
+      "currentKey": "ancient-site:朔方:38.28000,109.74000",
+      "siteKey": "ancient-site:朔方:38.28000,109.74000"
     },
     {
       "lat": 38.19,
@@ -6526,9 +6526,9 @@
       "sourceEra": "隋唐及同期",
       "sourceSite": "乐寿",
       "sourceAncientName": "乐寿",
-      "currentPlace": "沧州",
-      "currentKey": "ancient-current:沧州",
-      "siteKey": "ancient-current:沧州"
+      "currentPlace": "乐寿",
+      "currentKey": "ancient-site:乐寿:38.19000,116.12000",
+      "siteKey": "ancient-site:乐寿:38.19000,116.12000"
     },
     {
       "lat": 34.749,
@@ -6580,9 +6580,9 @@
       "sourceEra": "隋唐及同期",
       "sourceSite": "巩义",
       "sourceAncientName": "洛口/巩县",
-      "currentPlace": "郑州",
-      "currentKey": "ancient-current:郑州",
-      "siteKey": "ancient-current:郑州"
+      "currentPlace": "巩义",
+      "currentKey": "ancient-site:巩义:34.74900,112.98200",
+      "siteKey": "ancient-site:巩义:34.74900,112.98200"
     },
     {
       "lat": 28.682,
@@ -6657,9 +6657,9 @@
       "sourceEra": "隋唐及同期",
       "sourceSite": "豫章",
       "sourceAncientName": "豫章",
-      "currentPlace": "南昌",
-      "currentKey": "ancient-current:南昌",
-      "siteKey": "ancient-current:南昌"
+      "currentPlace": "豫章",
+      "currentKey": "ancient-site:豫章:28.68200,115.85790",
+      "siteKey": "ancient-site:豫章:28.68200,115.85790"
     },
     {
       "lat": 31.8107,
@@ -6711,9 +6711,9 @@
       "sourceEra": "隋唐及同期",
       "sourceSite": "毗陵",
       "sourceAncientName": "毗陵",
-      "currentPlace": "常州",
-      "currentKey": "ancient-current:常州",
-      "siteKey": "ancient-current:常州"
+      "currentPlace": "毗陵",
+      "currentKey": "ancient-site:毗陵:31.81070,119.97410",
+      "siteKey": "ancient-site:毗陵:31.81070,119.97410"
     },
     {
       "lat": 39.895,
@@ -6808,9 +6808,9 @@
       "sourceEra": "隋唐及同期",
       "sourceSite": "幽州",
       "sourceAncientName": "范阳",
-      "currentPlace": "北京",
-      "currentKey": "ancient-current:北京",
-      "siteKey": "ancient-current:北京"
+      "currentPlace": "幽州",
+      "currentKey": "ancient-site:幽州:39.89500,116.35000",
+      "siteKey": "ancient-site:幽州:39.89500,116.35000"
     },
     {
       "lat": 41.323,
@@ -6862,9 +6862,9 @@
       "sourceEra": "边疆与并立政权",
       "sourceSite": "五女山城",
       "sourceAncientName": "卒本/纥升骨",
-      "currentPlace": "本溪",
-      "currentKey": "ancient-current:本溪",
-      "siteKey": "ancient-current:本溪"
+      "currentPlace": "五女山城",
+      "currentKey": "ancient-site:五女山城:41.32300,125.42100",
+      "siteKey": "ancient-site:五女山城:41.32300,125.42100"
     },
     {
       "lat": 41.125,
@@ -6916,9 +6916,9 @@
       "sourceEra": "边疆与并立政权",
       "sourceSite": "集安国内城",
       "sourceAncientName": "国内城",
-      "currentPlace": "通化",
-      "currentKey": "ancient-current:通化",
-      "siteKey": "ancient-current:通化"
+      "currentPlace": "集安国内城",
+      "currentKey": "ancient-site:集安国内城:41.12500,126.19500",
+      "siteKey": "ancient-site:集安国内城:41.12500,126.19500"
     },
     {
       "lat": 41.158,
@@ -6970,9 +6970,9 @@
       "sourceEra": "边疆与并立政权",
       "sourceSite": "集安丸都山城",
       "sourceAncientName": "丸都山城",
-      "currentPlace": "通化",
-      "currentKey": "ancient-current:通化",
-      "siteKey": "ancient-current:通化"
+      "currentPlace": "集安丸都山城",
+      "currentKey": "ancient-site:集安丸都山城:41.15800,126.15000",
+      "siteKey": "ancient-site:集安丸都山城:41.15800,126.15000"
     },
     {
       "lat": 39.0392,
@@ -7024,9 +7024,9 @@
       "sourceEra": "边疆与并立政权",
       "sourceSite": "平壤",
       "sourceAncientName": "平壤",
-      "currentPlace": "朝鲜民主主义人民共和国平壤",
-      "currentKey": "ancient-current:朝鲜民主主义人民共和国平壤",
-      "siteKey": "ancient-current:朝鲜民主主义人民共和国平壤"
+      "currentPlace": "平壤",
+      "currentKey": "ancient-site:平壤:39.03920,125.76250",
+      "siteKey": "ancient-site:平壤:39.03920,125.76250"
     },
     {
       "lat": 42.9513,
@@ -7097,8 +7097,8 @@
       "sourceSite": "吐鲁番",
       "sourceAncientName": "高昌",
       "currentPlace": "吐鲁番",
-      "currentKey": "ancient-current:吐鲁番",
-      "siteKey": "ancient-current:吐鲁番"
+      "currentKey": "ancient-site:吐鲁番:42.95130,89.18950",
+      "siteKey": "ancient-site:吐鲁番:42.95130,89.18950"
     },
     {
       "lat": 41.717,
@@ -7150,9 +7150,9 @@
       "sourceEra": "边疆与并立政权",
       "sourceSite": "龟兹",
       "sourceAncientName": "延城",
-      "currentPlace": "阿克苏地区库车",
-      "currentKey": "ancient-current:阿克苏地区库车",
-      "siteKey": "ancient-current:阿克苏地区库车"
+      "currentPlace": "龟兹",
+      "currentKey": "ancient-site:龟兹:41.71700,82.96200",
+      "siteKey": "ancient-site:龟兹:41.71700,82.96200"
     },
     {
       "lat": 37.112,
@@ -7204,9 +7204,9 @@
       "sourceEra": "边疆与并立政权",
       "sourceSite": "于阗",
       "sourceAncientName": "西城",
-      "currentPlace": "和田地区和田",
-      "currentKey": "ancient-current:和田地区和田",
-      "siteKey": "ancient-current:和田地区和田"
+      "currentPlace": "于阗",
+      "currentKey": "ancient-site:于阗:37.11200,79.91300",
+      "siteKey": "ancient-site:于阗:37.11200,79.91300"
     },
     {
       "lat": 42.059,
@@ -7258,9 +7258,9 @@
       "sourceEra": "边疆与并立政权",
       "sourceSite": "焉耆",
       "sourceAncientName": "员渠城",
-      "currentPlace": "巴",
-      "currentKey": "ancient-current:巴",
-      "siteKey": "ancient-current:巴"
+      "currentPlace": "焉耆",
+      "currentKey": "ancient-site:焉耆:42.05900,86.57400",
+      "siteKey": "ancient-site:焉耆:42.05900,86.57400"
     },
     {
       "lat": 39.4704,
@@ -7332,8 +7332,8 @@
       "sourceSite": "喀什",
       "sourceAncientName": "疏勒城",
       "currentPlace": "喀什",
-      "currentKey": "ancient-current:喀什",
-      "siteKey": "ancient-current:喀什"
+      "currentKey": "ancient-site:喀什:39.47040,75.98980",
+      "siteKey": "ancient-site:喀什:39.47040,75.98980"
     },
     {
       "lat": 29.652,
@@ -7386,8 +7386,8 @@
       "sourceSite": "拉萨",
       "sourceAncientName": "逻些",
       "currentPlace": "拉萨",
-      "currentKey": "ancient-current:拉萨",
-      "siteKey": "ancient-current:拉萨"
+      "currentKey": "ancient-site:拉萨:29.65200,91.17210",
+      "siteKey": "ancient-site:拉萨:29.65200,91.17210"
     },
     {
       "lat": 25.227,
@@ -7439,9 +7439,9 @@
       "sourceEra": "边疆与并立政权",
       "sourceSite": "巍山",
       "sourceAncientName": "蒙舍",
-      "currentPlace": "大理",
-      "currentKey": "ancient-current:大理",
-      "siteKey": "ancient-current:大理"
+      "currentPlace": "巍山",
+      "currentKey": "ancient-site:巍山:25.22700,100.30700",
+      "siteKey": "ancient-site:巍山:25.22700,100.30700"
     },
     {
       "lat": 25.64,
@@ -7493,9 +7493,9 @@
       "sourceEra": "边疆与并立政权",
       "sourceSite": "太和城",
       "sourceAncientName": "太和城",
-      "currentPlace": "大理",
-      "currentKey": "ancient-current:大理",
-      "siteKey": "ancient-current:大理"
+      "currentPlace": "太和城",
+      "currentKey": "ancient-site:太和城:25.64000,100.22000",
+      "siteKey": "ancient-site:太和城:25.64000,100.22000"
     },
     {
       "lat": 25.7,
@@ -7565,9 +7565,9 @@
       "sourceEra": "边疆与并立政权",
       "sourceSite": "羊苴咩城",
       "sourceAncientName": "羊苴咩城",
-      "currentPlace": "大理",
-      "currentKey": "ancient-current:大理",
-      "siteKey": "ancient-current:大理"
+      "currentPlace": "羊苴咩城",
+      "currentKey": "ancient-site:羊苴咩城:25.70000,100.16000",
+      "siteKey": "ancient-site:羊苴咩城:25.70000,100.16000"
     },
     {
       "lat": 43.3727,
@@ -7619,9 +7619,9 @@
       "sourceEra": "边疆与并立政权",
       "sourceSite": "敦化",
       "sourceAncientName": "旧国",
-      "currentPlace": "延边州敦化",
-      "currentKey": "ancient-current:延边州敦化",
-      "siteKey": "ancient-current:延边州敦化"
+      "currentPlace": "敦化",
+      "currentKey": "ancient-site:敦化:43.37270,128.23200",
+      "siteKey": "ancient-site:敦化:43.37270,128.23200"
     },
     {
       "lat": 42.5467,
@@ -7673,9 +7673,9 @@
       "sourceEra": "边疆与并立政权",
       "sourceSite": "和龙",
       "sourceAncientName": "中京显德府",
-      "currentPlace": "延边州和龙",
-      "currentKey": "ancient-current:延边州和龙",
-      "siteKey": "ancient-current:延边州和龙"
+      "currentPlace": "和龙",
+      "currentKey": "ancient-site:和龙:42.54670,129.01000",
+      "siteKey": "ancient-site:和龙:42.54670,129.01000"
     },
     {
       "lat": 44.115,
@@ -7762,9 +7762,9 @@
       "sourceEra": "边疆与并立政权",
       "sourceSite": "宁安上京",
       "sourceAncientName": "上京龙泉府",
-      "currentPlace": "牡丹江",
-      "currentKey": "ancient-current:牡丹江",
-      "siteKey": "ancient-current:牡丹江"
+      "currentPlace": "宁安上京",
+      "currentKey": "ancient-site:宁安上京:44.11500,129.21000",
+      "siteKey": "ancient-site:宁安上京:44.11500,129.21000"
     },
     {
       "lat": 42.8625,
@@ -7816,9 +7816,9 @@
       "sourceEra": "边疆与并立政权",
       "sourceSite": "珲春",
       "sourceAncientName": "东京龙原府",
-      "currentPlace": "延边州珲春",
-      "currentKey": "ancient-current:延边州珲春",
-      "siteKey": "ancient-current:延边州珲春"
+      "currentPlace": "珲春",
+      "currentKey": "ancient-site:珲春:42.86250,130.36500",
+      "siteKey": "ancient-site:珲春:42.86250,130.36500"
     },
     {
       "lat": 47.2,
@@ -7888,8 +7888,8 @@
       "sourceSite": "鄂尔浑河谷",
       "sourceAncientName": "于都斤山",
       "currentPlace": "鄂尔浑河谷",
-      "currentKey": "ancient-current:鄂尔浑河谷",
-      "siteKey": "ancient-current:鄂尔浑河谷"
+      "currentKey": "ancient-site:鄂尔浑河谷:47.20000,102.85000",
+      "siteKey": "ancient-site:鄂尔浑河谷:47.20000,102.85000"
     },
     {
       "lat": 47.198,
@@ -7942,8 +7942,8 @@
       "sourceSite": "斡耳朵八里",
       "sourceAncientName": "斡耳朵八里",
       "currentPlace": "斡耳朵八里",
-      "currentKey": "ancient-current:斡耳朵八里",
-      "siteKey": "ancient-current:斡耳朵八里"
+      "currentKey": "ancient-site:斡耳朵八里:47.19800,102.83300",
+      "siteKey": "ancient-site:斡耳朵八里:47.19800,102.83300"
     },
     {
       "lat": 30.2741,
@@ -8016,8 +8016,8 @@
       "sourceSite": "杭州",
       "sourceAncientName": "西府·钱塘",
       "currentPlace": "杭州",
-      "currentKey": "ancient-current:杭州",
-      "siteKey": "ancient-current:杭州"
+      "currentKey": "ancient-site:杭州:30.27410,120.15510",
+      "siteKey": "ancient-site:杭州:30.27410,120.15510"
     },
     {
       "lat": 26.0745,
@@ -8130,8 +8130,8 @@
       "sourceSite": "福州",
       "sourceAncientName": "长乐府",
       "currentPlace": "福州",
-      "currentKey": "ancient-current:福州",
-      "siteKey": "ancient-current:福州"
+      "currentKey": "ancient-site:福州:26.07450,119.29650",
+      "siteKey": "ancient-site:福州:26.07450,119.29650"
     },
     {
       "lat": 27.0227,
@@ -8183,9 +8183,9 @@
       "sourceEra": "五代十国",
       "sourceSite": "建瓯",
       "sourceAncientName": "建州",
-      "currentPlace": "南平",
-      "currentKey": "ancient-current:南平",
-      "siteKey": "ancient-current:南平"
+      "currentPlace": "建瓯",
+      "currentKey": "ancient-site:建瓯:27.02270,118.30490",
+      "siteKey": "ancient-site:建瓯:27.02270,118.30490"
     },
     {
       "lat": 28.2282,
@@ -8238,8 +8238,8 @@
       "sourceSite": "长沙",
       "sourceAncientName": "长沙府",
       "currentPlace": "长沙",
-      "currentKey": "ancient-current:长沙",
-      "siteKey": "ancient-current:长沙"
+      "currentKey": "ancient-site:长沙:28.22820,112.93880",
+      "siteKey": "ancient-site:长沙:28.22820,112.93880"
     },
     {
       "lat": 23.1291,
@@ -8369,8 +8369,8 @@
       "sourceSite": "广州",
       "sourceAncientName": "兴王府",
       "currentPlace": "广州",
-      "currentKey": "ancient-current:广州",
-      "siteKey": "ancient-current:广州"
+      "currentKey": "ancient-site:广州:23.12910,113.26440",
+      "siteKey": "ancient-site:广州:23.12910,113.26440"
     },
     {
       "lat": 34.414,
@@ -8444,8 +8444,8 @@
       "sourceSite": "商丘",
       "sourceAncientName": "应天府",
       "currentPlace": "商丘",
-      "currentKey": "ancient-current:商丘",
-      "siteKey": "ancient-current:商丘"
+      "currentKey": "ancient-site:商丘:34.41400,115.65600",
+      "siteKey": "ancient-site:商丘:34.41400,115.65600"
     },
     {
       "lat": 36.285,
@@ -8497,9 +8497,9 @@
       "sourceEra": "宋辽夏金及同期",
       "sourceSite": "大名",
       "sourceAncientName": "大名府",
-      "currentPlace": "邯郸",
-      "currentKey": "ancient-current:邯郸",
-      "siteKey": "ancient-current:邯郸"
+      "currentPlace": "大名",
+      "currentKey": "ancient-site:大名:36.28500,115.14700",
+      "siteKey": "ancient-site:大名:36.28500,115.14700"
     },
     {
       "lat": 43.557,
@@ -8551,9 +8551,9 @@
       "sourceEra": "宋辽夏金及同期",
       "sourceSite": "上京临潢",
       "sourceAncientName": "临潢府",
-      "currentPlace": "赤峰",
-      "currentKey": "ancient-current:赤峰",
-      "siteKey": "ancient-current:赤峰"
+      "currentPlace": "上京临潢",
+      "currentKey": "ancient-site:上京临潢:43.55700,119.34300",
+      "siteKey": "ancient-site:上京临潢:43.55700,119.34300"
     },
     {
       "lat": 41.6,
@@ -8623,9 +8623,9 @@
       "sourceEra": "宋辽夏金及同期",
       "sourceSite": "中京大定",
       "sourceAncientName": "大定府",
-      "currentPlace": "赤峰",
-      "currentKey": "ancient-current:赤峰",
-      "siteKey": "ancient-current:赤峰"
+      "currentPlace": "中京大定",
+      "currentKey": "ancient-site:中京大定:41.60000,119.33000",
+      "siteKey": "ancient-site:中京大定:41.60000,119.33000"
     },
     {
       "lat": 40.0768,
@@ -8677,9 +8677,9 @@
       "sourceEra": "宋辽夏金及同期",
       "sourceSite": "西京大同",
       "sourceAncientName": "大同府",
-      "currentPlace": "大同",
-      "currentKey": "ancient-current:大同",
-      "siteKey": "ancient-current:大同"
+      "currentPlace": "西京大同",
+      "currentKey": "ancient-site:西京大同:40.07680,113.30010",
+      "siteKey": "ancient-site:西京大同:40.07680,113.30010"
     },
     {
       "lat": 38.4872,
@@ -8731,9 +8731,9 @@
       "sourceEra": "宋辽夏金及同期",
       "sourceSite": "兴庆府",
       "sourceAncientName": "兴庆府",
-      "currentPlace": "银川",
-      "currentKey": "ancient-current:银川",
-      "siteKey": "ancient-current:银川"
+      "currentPlace": "兴庆府",
+      "currentKey": "ancient-site:兴庆府:38.48720,106.23090",
+      "siteKey": "ancient-site:兴庆府:38.48720,106.23090"
     },
     {
       "lat": 45.54,
@@ -8785,9 +8785,9 @@
       "sourceEra": "宋辽夏金及同期",
       "sourceSite": "会宁府",
       "sourceAncientName": "上京会宁府",
-      "currentPlace": "哈尔滨",
-      "currentKey": "ancient-current:哈尔滨",
-      "siteKey": "ancient-current:哈尔滨"
+      "currentPlace": "会宁府",
+      "currentKey": "ancient-site:会宁府:45.54000,126.97000",
+      "siteKey": "ancient-site:会宁府:45.54000,126.97000"
     },
     {
       "lat": 33.006,
@@ -8839,9 +8839,9 @@
       "sourceEra": "宋辽夏金及同期",
       "sourceSite": "汝南",
       "sourceAncientName": "蔡州",
-      "currentPlace": "驻马店",
-      "currentKey": "ancient-current:驻马店",
-      "siteKey": "ancient-current:驻马店"
+      "currentPlace": "汝南",
+      "currentKey": "ancient-site:汝南:33.00600,114.36200",
+      "siteKey": "ancient-site:汝南:33.00600,114.36200"
     },
     {
       "lat": 47.1975,
@@ -8916,8 +8916,8 @@
       "sourceSite": "哈拉和林",
       "sourceAncientName": "哈拉和林",
       "currentPlace": "哈拉和林",
-      "currentKey": "ancient-current:哈拉和林",
-      "siteKey": "ancient-current:哈拉和林"
+      "currentKey": "ancient-site:哈拉和林:47.19750,102.82380",
+      "siteKey": "ancient-site:哈拉和林:47.19750,102.82380"
     },
     {
       "lat": 42.357,
@@ -8991,9 +8991,9 @@
       "sourceEra": "元及元末",
       "sourceSite": "上都",
       "sourceAncientName": "开平府·上都",
-      "currentPlace": "锡林郭勒",
-      "currentKey": "ancient-current:锡林郭勒",
-      "siteKey": "ancient-current:锡林郭勒"
+      "currentPlace": "上都",
+      "currentKey": "ancient-site:上都:42.35700,116.18400",
+      "siteKey": "ancient-site:上都:42.35700,116.18400"
     },
     {
       "lat": 39.94,
@@ -9045,9 +9045,9 @@
       "sourceEra": "元及元末",
       "sourceSite": "元大都",
       "sourceAncientName": "大都",
-      "currentPlace": "北京",
-      "currentKey": "ancient-current:北京",
-      "siteKey": "ancient-current:北京"
+      "currentPlace": "元大都",
+      "currentKey": "ancient-site:元大都:39.94000,116.41000",
+      "siteKey": "ancient-site:元大都:39.94000,116.41000"
     },
     {
       "lat": 41.159,
@@ -9121,9 +9121,9 @@
       "sourceEra": "元及元末",
       "sourceSite": "张北",
       "sourceAncientName": "中都",
-      "currentPlace": "张家口",
-      "currentKey": "ancient-current:张家口",
-      "siteKey": "ancient-current:张家口"
+      "currentPlace": "张北",
+      "currentKey": "ancient-site:张北:41.15900,114.72000",
+      "siteKey": "ancient-site:张北:41.15900,114.72000"
     },
     {
       "lat": 30.451,
@@ -9175,9 +9175,9 @@
       "sourceEra": "元及元末",
       "sourceSite": "蕲水",
       "sourceAncientName": "蕲水",
-      "currentPlace": "黄冈",
-      "currentKey": "ancient-current:黄冈",
-      "siteKey": "ancient-current:黄冈"
+      "currentPlace": "蕲水",
+      "currentKey": "ancient-site:蕲水:30.45100,115.26500",
+      "siteKey": "ancient-site:蕲水:30.45100,115.26500"
     },
     {
       "lat": 30.55,
@@ -9229,9 +9229,9 @@
       "sourceEra": "元及元末",
       "sourceSite": "汉阳",
       "sourceAncientName": "汉阳",
-      "currentPlace": "武汉",
-      "currentKey": "ancient-current:武汉",
-      "siteKey": "ancient-current:武汉"
+      "currentPlace": "汉阳",
+      "currentKey": "ancient-site:汉阳:30.55000,114.22000",
+      "siteKey": "ancient-site:汉阳:30.55000,114.22000"
     },
     {
       "lat": 29.705,
@@ -9284,8 +9284,8 @@
       "sourceSite": "九江",
       "sourceAncientName": "江州",
       "currentPlace": "九江",
-      "currentKey": "ancient-current:九江",
-      "siteKey": "ancient-current:九江"
+      "currentKey": "ancient-site:九江:29.70500,116.00190",
+      "siteKey": "ancient-site:九江:29.70500,116.00190"
     },
     {
       "lat": 32.781,
@@ -9337,9 +9337,9 @@
       "sourceEra": "元及元末",
       "sourceSite": "高邮",
       "sourceAncientName": "高邮",
-      "currentPlace": "扬州",
-      "currentKey": "ancient-current:扬州",
-      "siteKey": "ancient-current:扬州"
+      "currentPlace": "高邮",
+      "currentKey": "ancient-site:高邮:32.78100,119.45500",
+      "siteKey": "ancient-site:高邮:32.78100,119.45500"
     },
     {
       "lat": 29.563,
@@ -9411,8 +9411,8 @@
       "sourceSite": "重庆",
       "sourceAncientName": "重庆",
       "currentPlace": "重庆",
-      "currentKey": "ancient-current:重庆",
-      "siteKey": "ancient-current:重庆"
+      "currentKey": "ancient-site:重庆:29.56300,106.55160",
+      "siteKey": "ancient-site:重庆:29.56300,106.55160"
     },
     {
       "lat": 32.875,
@@ -9464,9 +9464,9 @@
       "sourceEra": "明清及同期",
       "sourceSite": "凤阳",
       "sourceAncientName": "中都凤阳府",
-      "currentPlace": "滁州",
-      "currentKey": "ancient-current:滁州",
-      "siteKey": "ancient-current:滁州"
+      "currentPlace": "凤阳",
+      "currentKey": "ancient-site:凤阳:32.87500,117.56100",
+      "siteKey": "ancient-site:凤阳:32.87500,117.56100"
     },
     {
       "lat": 43.35,
@@ -9518,9 +9518,9 @@
       "sourceEra": "明清及同期",
       "sourceSite": "应昌",
       "sourceAncientName": "应昌",
-      "currentPlace": "赤峰",
-      "currentKey": "ancient-current:赤峰",
-      "siteKey": "ancient-current:赤峰"
+      "currentPlace": "应昌",
+      "currentKey": "ancient-site:应昌:43.35000,117.52000",
+      "siteKey": "ancient-site:应昌:43.35000,117.52000"
     },
     {
       "lat": 34.3416,
@@ -9573,8 +9573,8 @@
       "sourceSite": "西安",
       "sourceAncientName": "西京长安",
       "currentPlace": "西安",
-      "currentKey": "ancient-current:西安",
-      "siteKey": "ancient-current:西安"
+      "currentKey": "ancient-site:西安:34.34160,108.93980",
+      "siteKey": "ancient-site:西安:34.34160,108.93980"
     },
     {
       "lat": 23.047,
@@ -9644,8 +9644,8 @@
       "sourceSite": "肇庆",
       "sourceAncientName": "肇庆",
       "currentPlace": "肇庆",
-      "currentKey": "ancient-current:肇庆",
-      "siteKey": "ancient-current:肇庆"
+      "currentKey": "ancient-site:肇庆:23.04700,112.46500",
+      "siteKey": "ancient-site:肇庆:23.04700,112.46500"
     },
     {
       "lat": 25.2742,
@@ -9698,8 +9698,8 @@
       "sourceSite": "桂林",
       "sourceAncientName": "桂林",
       "currentPlace": "桂林",
-      "currentKey": "ancient-current:桂林",
-      "siteKey": "ancient-current:桂林"
+      "currentKey": "ancient-site:桂林:25.27420,110.29910",
+      "siteKey": "ancient-site:桂林:25.27420,110.29910"
     },
     {
       "lat": 25.099,
@@ -9751,9 +9751,9 @@
       "sourceEra": "明清及同期",
       "sourceSite": "安龙",
       "sourceAncientName": "安龙",
-      "currentPlace": "黔西南",
-      "currentKey": "ancient-current:黔西南",
-      "siteKey": "ancient-current:黔西南"
+      "currentPlace": "安龙",
+      "currentKey": "ancient-site:安龙:25.09900,105.44300",
+      "siteKey": "ancient-site:安龙:25.09900,105.44300"
     },
     {
       "lat": 25.0389,
@@ -9806,8 +9806,8 @@
       "sourceSite": "昆明",
       "sourceAncientName": "昆明",
       "currentPlace": "昆明",
-      "currentKey": "ancient-current:昆明",
-      "siteKey": "ancient-current:昆明"
+      "currentKey": "ancient-site:昆明:25.03890,102.71830",
+      "siteKey": "ancient-site:昆明:25.03890,102.71830"
     },
     {
       "lat": 24.4798,
@@ -9860,8 +9860,8 @@
       "sourceSite": "厦门",
       "sourceAncientName": "厦门",
       "currentPlace": "厦门",
-      "currentKey": "ancient-current:厦门",
-      "siteKey": "ancient-current:厦门"
+      "currentKey": "ancient-site:厦门:24.47980,118.08940",
+      "siteKey": "ancient-site:厦门:24.47980,118.08940"
     },
     {
       "lat": 41.875,
@@ -9913,9 +9913,9 @@
       "sourceEra": "明清及同期",
       "sourceSite": "赫图阿拉",
       "sourceAncientName": "赫图阿拉",
-      "currentPlace": "抚顺",
-      "currentKey": "ancient-current:抚顺",
-      "siteKey": "ancient-current:抚顺"
+      "currentPlace": "赫图阿拉",
+      "currentKey": "ancient-site:赫图阿拉:41.87500,124.82900",
+      "siteKey": "ancient-site:赫图阿拉:41.87500,124.82900"
     },
     {
       "lat": 41.8057,
@@ -10004,8 +10004,8 @@
       "sourceSite": "沈阳",
       "sourceAncientName": "盛京",
       "currentPlace": "沈阳",
-      "currentKey": "ancient-current:沈阳",
-      "siteKey": "ancient-current:沈阳"
+      "currentKey": "ancient-site:沈阳:41.80570,123.43150",
+      "siteKey": "ancient-site:沈阳:41.80570,123.43150"
     },
     {
       "lat": 26.893,
@@ -10058,8 +10058,8 @@
       "sourceSite": "衡阳",
       "sourceAncientName": "衡州",
       "currentPlace": "衡阳",
-      "currentKey": "ancient-current:衡阳",
-      "siteKey": "ancient-current:衡阳"
+      "currentKey": "ancient-site:衡阳:26.89300,112.57200",
+      "siteKey": "ancient-site:衡阳:26.89300,112.57200"
     },
     {
       "lat": 23.391,
@@ -10111,9 +10111,9 @@
       "sourceEra": "明清及同期",
       "sourceSite": "金田",
       "sourceAncientName": "金田",
-      "currentPlace": "贵港",
-      "currentKey": "ancient-current:贵港",
-      "siteKey": "ancient-current:贵港"
+      "currentPlace": "金田",
+      "currentKey": "ancient-site:金田:23.39100,110.10900",
+      "siteKey": "ancient-site:金田:23.39100,110.10900"
     },
     {
       "lat": 23.19,
@@ -10165,9 +10165,9 @@
       "sourceEra": "明清及同期",
       "sourceSite": "永安",
       "sourceAncientName": "永安州",
-      "currentPlace": "梧州",
-      "currentKey": "ancient-current:梧州",
-      "siteKey": "ancient-current:梧州"
+      "currentPlace": "永安",
+      "currentKey": "ancient-site:永安:23.19000,110.07000",
+      "siteKey": "ancient-site:永安:23.19000,110.07000"
     },
     {
       "lat": 23.3941,
@@ -10219,9 +10219,9 @@
       "sourceEra": "明清及同期",
       "sourceSite": "桂平",
       "sourceAncientName": "秀京",
-      "currentPlace": "贵港",
-      "currentKey": "ancient-current:贵港",
-      "siteKey": "ancient-current:贵港"
+      "currentPlace": "桂平",
+      "currentKey": "ancient-site:桂平:23.39410,110.07940",
+      "siteKey": "ancient-site:桂平:23.39410,110.07940"
     },
     {
       "lat": 25.6065,
@@ -10273,9 +10273,9 @@
       "sourceEra": "明清及同期",
       "sourceSite": "大理杜文秀",
       "sourceAncientName": "大理",
-      "currentPlace": "大理",
-      "currentKey": "ancient-current:大理",
-      "siteKey": "ancient-current:大理"
+      "currentPlace": "大理杜文秀",
+      "currentKey": "ancient-site:大理杜文秀:25.60650,100.26760",
+      "siteKey": "ancient-site:大理杜文秀:25.60650,100.26760"
     },
     {
       "lat": 30.5928,
@@ -10328,8 +10328,8 @@
       "sourceSite": "武汉",
       "sourceAncientName": "武汉",
       "currentPlace": "武汉",
-      "currentKey": "ancient-current:武汉",
-      "siteKey": "ancient-current:武汉"
+      "currentKey": "ancient-site:武汉:30.59280,114.30550",
+      "siteKey": "ancient-site:武汉:30.59280,114.30550"
     },
     {
       "lat": 25.033,
@@ -10382,8 +10382,8 @@
       "sourceSite": "台北",
       "sourceAncientName": "台北",
       "currentPlace": "台北",
-      "currentKey": "ancient-current:台北",
-      "siteKey": "ancient-current:台北"
+      "currentKey": "ancient-site:台北:25.03300,121.56540",
+      "siteKey": "ancient-site:台北:25.03300,121.56540"
     },
     {
       "lat": 25.885,
@@ -10435,9 +10435,9 @@
       "sourceEra": "近现代",
       "sourceSite": "瑞金",
       "sourceAncientName": "瑞京",
-      "currentPlace": "赣州",
-      "currentKey": "ancient-current:赣州",
-      "siteKey": "ancient-current:赣州"
+      "currentPlace": "瑞金",
+      "currentKey": "ancient-site:瑞金:25.88500,116.02700",
+      "siteKey": "ancient-site:瑞金:25.88500,116.02700"
     },
     {
       "lat": 36.5853,
@@ -10490,8 +10490,8 @@
       "sourceSite": "延安",
       "sourceAncientName": "延安",
       "currentPlace": "延安",
-      "currentKey": "ancient-current:延安",
-      "siteKey": "ancient-current:延安"
+      "currentKey": "ancient-site:延安:36.58530,109.48980",
+      "siteKey": "ancient-site:延安:36.58530,109.48980"
     },
     {
       "lat": 43.8171,
@@ -10544,8 +10544,8 @@
       "sourceSite": "长春",
       "sourceAncientName": "新京",
       "currentPlace": "长春",
-      "currentKey": "ancient-current:长春",
-      "siteKey": "ancient-current:长春"
+      "currentKey": "ancient-site:长春:43.81710,125.32350",
+      "siteKey": "ancient-site:长春:43.81710,125.32350"
     },
     {
       "lat": 40.7675,
@@ -10598,8 +10598,8 @@
       "sourceSite": "张家口",
       "sourceAncientName": "张家口",
       "currentPlace": "张家口",
-      "currentKey": "ancient-current:张家口",
-      "siteKey": "ancient-current:张家口"
+      "currentKey": "ancient-site:张家口:40.76750,114.88630",
+      "siteKey": "ancient-site:张家口:40.76750,114.88630"
     },
     {
       "lat": 39.909,
@@ -10651,9 +10651,9 @@
       "sourceEra": "近现代",
       "sourceSite": "通州",
       "sourceAncientName": "通州",
-      "currentPlace": "北京",
-      "currentKey": "ancient-current:北京",
-      "siteKey": "ancient-current:北京"
+      "currentPlace": "通州",
+      "currentKey": "ancient-site:通州:39.90900,116.65700",
+      "siteKey": "ancient-site:通州:39.90900,116.65700"
     }
   ],
   "skipped": [],
@@ -10672,12 +10672,12 @@
       "confidence": "低",
       "categoryCode": "P",
       "sourceOrder": 1,
-      "siteKey": "ancient-current:郑州",
+      "siteKey": "ancient-site:登封王城岗:34.44600,113.04900",
       "lat": 34.446,
       "lng": 113.049,
       "parentName": "登封王城岗",
-      "currentPlace": "郑州",
-      "currentKey": "ancient-current:郑州"
+      "currentPlace": "登封王城岗",
+      "currentKey": "ancient-site:登封王城岗:34.44600,113.04900"
     },
     {
       "name": "阳翟 · 禹州瓦店",
@@ -10692,12 +10692,12 @@
       "confidence": "低",
       "categoryCode": "P",
       "sourceOrder": 2,
-      "siteKey": "ancient-current:许昌",
+      "siteKey": "ancient-site:禹州瓦店:34.08750,113.48880",
       "lat": 34.0875,
       "lng": 113.4888,
       "parentName": "禹州瓦店",
-      "currentPlace": "许昌",
-      "currentKey": "ancient-current:许昌"
+      "currentPlace": "禹州瓦店",
+      "currentKey": "ancient-site:禹州瓦店:34.08750,113.48880"
     },
     {
       "name": "新砦 · 新密新砦",
@@ -10712,12 +10712,12 @@
       "confidence": "低",
       "categoryCode": "P",
       "sourceOrder": 3,
-      "siteKey": "ancient-current:郑州",
+      "siteKey": "ancient-site:新密新砦:34.47300,113.39500",
       "lat": 34.473,
       "lng": 113.395,
       "parentName": "新密新砦",
-      "currentPlace": "郑州",
-      "currentKey": "ancient-current:郑州"
+      "currentPlace": "新密新砦",
+      "currentKey": "ancient-site:新密新砦:34.47300,113.39500"
     },
     {
       "name": "斟鄩 · 二里头遗址",
@@ -10732,12 +10732,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 4,
-      "siteKey": "ancient-current:洛阳",
+      "siteKey": "ancient-site:二里头遗址:34.69580,112.69080",
       "lat": 34.6958,
       "lng": 112.6908,
       "parentName": "二里头遗址",
-      "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳"
+      "currentPlace": "二里头遗址",
+      "currentKey": "ancient-site:二里头遗址:34.69580,112.69080"
     },
     {
       "name": "原 · 济源",
@@ -10752,12 +10752,12 @@
       "confidence": "低",
       "categoryCode": "P",
       "sourceOrder": 5,
-      "siteKey": "ancient-current:济源",
+      "siteKey": "ancient-site:济源:35.06700,112.60200",
       "lat": 35.067,
       "lng": 112.602,
       "parentName": "济源",
       "currentPlace": "济源",
-      "currentKey": "ancient-current:济源"
+      "currentKey": "ancient-site:济源:35.06700,112.60200"
     },
     {
       "name": "老丘 · 开封",
@@ -10772,12 +10772,12 @@
       "confidence": "低",
       "categoryCode": "P",
       "sourceOrder": 6,
-      "siteKey": "ancient-current:开封",
+      "siteKey": "ancient-site:开封:34.79730,114.30760",
       "lat": 34.7973,
       "lng": 114.3076,
       "parentName": "开封",
       "currentPlace": "开封",
-      "currentKey": "ancient-current:开封"
+      "currentKey": "ancient-site:开封:34.79730,114.30760"
     },
     {
       "name": "亳 · 郑州商城",
@@ -10792,12 +10792,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 7,
-      "siteKey": "ancient-current:郑州",
+      "siteKey": "ancient-site:郑州商城:34.74650,113.68300",
       "lat": 34.7465,
       "lng": 113.683,
       "parentName": "郑州商城",
-      "currentPlace": "郑州",
-      "currentKey": "ancient-current:郑州"
+      "currentPlace": "郑州商城",
+      "currentKey": "ancient-site:郑州商城:34.74650,113.68300"
     },
     {
       "name": "西亳 · 偃师商城",
@@ -10812,12 +10812,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 8,
-      "siteKey": "ancient-current:洛阳",
+      "siteKey": "ancient-site:偃师商城:34.72750,112.78500",
       "lat": 34.7275,
       "lng": 112.785,
       "parentName": "偃师商城",
-      "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳"
+      "currentPlace": "偃师商城",
+      "currentKey": "ancient-site:偃师商城:34.72750,112.78500"
     },
     {
       "name": "嚣 · 郑州商城",
@@ -10832,12 +10832,12 @@
       "confidence": "低",
       "categoryCode": "P",
       "sourceOrder": 9,
-      "siteKey": "ancient-current:郑州",
+      "siteKey": "ancient-site:郑州商城:34.74650,113.68300",
       "lat": 34.7465,
       "lng": 113.683,
       "parentName": "郑州商城",
-      "currentPlace": "郑州",
-      "currentKey": "ancient-current:郑州"
+      "currentPlace": "郑州商城",
+      "currentKey": "ancient-site:郑州商城:34.74650,113.68300"
     },
     {
       "name": "相 · 安阳殷墟",
@@ -10852,12 +10852,12 @@
       "confidence": "低",
       "categoryCode": "P",
       "sourceOrder": 10,
-      "siteKey": "ancient-current:安阳",
+      "siteKey": "ancient-site:安阳殷墟:36.13000,114.31000",
       "lat": 36.13,
       "lng": 114.31,
       "parentName": "安阳殷墟",
-      "currentPlace": "安阳",
-      "currentKey": "ancient-current:安阳"
+      "currentPlace": "安阳殷墟",
+      "currentKey": "ancient-site:安阳殷墟:36.13000,114.31000"
     },
     {
       "name": "邢 · 邢台",
@@ -10872,12 +10872,12 @@
       "confidence": "低",
       "categoryCode": "P",
       "sourceOrder": 11,
-      "siteKey": "ancient-current:邢台",
+      "siteKey": "ancient-site:邢台:37.07060,114.50480",
       "lat": 37.0706,
       "lng": 114.5048,
       "parentName": "邢台",
       "currentPlace": "邢台",
-      "currentKey": "ancient-current:邢台"
+      "currentKey": "ancient-site:邢台:37.07060,114.50480"
     },
     {
       "name": "庇 · 郯城",
@@ -10892,12 +10892,12 @@
       "confidence": "低",
       "categoryCode": "P",
       "sourceOrder": 12,
-      "siteKey": "ancient-current:临沂",
+      "siteKey": "ancient-site:郯城:34.61400,118.36700",
       "lat": 34.614,
       "lng": 118.367,
       "parentName": "郯城",
-      "currentPlace": "临沂",
-      "currentKey": "ancient-current:临沂"
+      "currentPlace": "郯城",
+      "currentKey": "ancient-site:郯城:34.61400,118.36700"
     },
     {
       "name": "奄 · 曲阜",
@@ -10912,12 +10912,12 @@
       "confidence": "低",
       "categoryCode": "P",
       "sourceOrder": 13,
-      "siteKey": "ancient-current:济宁",
+      "siteKey": "ancient-site:曲阜:35.58100,116.98600",
       "lat": 35.581,
       "lng": 116.986,
       "parentName": "曲阜",
-      "currentPlace": "济宁",
-      "currentKey": "ancient-current:济宁"
+      "currentPlace": "曲阜",
+      "currentKey": "ancient-site:曲阜:35.58100,116.98600"
     },
     {
       "name": "殷 · 安阳殷墟",
@@ -10932,12 +10932,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 14,
-      "siteKey": "ancient-current:安阳",
+      "siteKey": "ancient-site:安阳殷墟:36.13000,114.31000",
       "lat": 36.13,
       "lng": 114.31,
       "parentName": "安阳殷墟",
-      "currentPlace": "安阳",
-      "currentKey": "ancient-current:安阳"
+      "currentPlace": "安阳殷墟",
+      "currentKey": "ancient-site:安阳殷墟:36.13000,114.31000"
     },
     {
       "name": "宗周·镐京 · 丰镐遗址",
@@ -10952,12 +10952,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 15,
-      "siteKey": "ancient-current:西安",
+      "siteKey": "ancient-site:丰镐遗址:34.24000,108.73000",
       "lat": 34.24,
       "lng": 108.73,
       "parentName": "丰镐遗址",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安"
+      "currentPlace": "丰镐遗址",
+      "currentKey": "ancient-site:丰镐遗址:34.24000,108.73000"
     },
     {
       "name": "成周·洛邑 · 洛邑遗址",
@@ -10972,12 +10972,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 16,
-      "siteKey": "ancient-current:洛阳",
+      "siteKey": "ancient-site:洛邑遗址:34.70500,112.60000",
       "lat": 34.705,
       "lng": 112.6,
       "parentName": "洛邑遗址",
-      "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳"
+      "currentPlace": "洛邑遗址",
+      "currentKey": "ancient-site:洛邑遗址:34.70500,112.60000"
     },
     {
       "name": "雒邑·王城 · 洛阳",
@@ -10992,12 +10992,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 17,
-      "siteKey": "ancient-current:洛阳",
+      "siteKey": "ancient-site:洛阳:34.61970,112.45400",
       "lat": 34.6197,
       "lng": 112.454,
       "parentName": "洛阳",
       "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳"
+      "currentKey": "ancient-site:洛阳:34.61970,112.45400"
     },
     {
       "name": "营丘 · 临淄",
@@ -11012,12 +11012,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 18,
-      "siteKey": "ancient-current:淄博",
+      "siteKey": "ancient-site:临淄:36.82600,118.30900",
       "lat": 36.826,
       "lng": 118.309,
       "parentName": "临淄",
-      "currentPlace": "淄博",
-      "currentKey": "ancient-current:淄博"
+      "currentPlace": "临淄",
+      "currentKey": "ancient-site:临淄:36.82600,118.30900"
     },
     {
       "name": "临淄",
@@ -11032,12 +11032,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 19,
-      "siteKey": "ancient-current:淄博",
+      "siteKey": "ancient-site:临淄:36.82600,118.30900",
       "lat": 36.826,
       "lng": 118.309,
       "parentName": "临淄",
-      "currentPlace": "淄博",
-      "currentKey": "ancient-current:淄博"
+      "currentPlace": "临淄",
+      "currentKey": "ancient-site:临淄:36.82600,118.30900"
     },
     {
       "name": "曲阜 · 曲阜鲁故城",
@@ -11052,12 +11052,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 20,
-      "siteKey": "ancient-current:济宁",
+      "siteKey": "ancient-site:曲阜鲁故城:35.59500,116.99500",
       "lat": 35.595,
       "lng": 116.995,
       "parentName": "曲阜鲁故城",
-      "currentPlace": "济宁",
-      "currentKey": "ancient-current:济宁"
+      "currentPlace": "曲阜鲁故城",
+      "currentKey": "ancient-site:曲阜鲁故城:35.59500,116.99500"
     },
     {
       "name": "蓟 · 北京 · 燕",
@@ -11072,12 +11072,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 21,
-      "siteKey": "ancient-current:北京",
+      "siteKey": "ancient-site:北京:39.90420,116.40740",
       "lat": 39.9042,
       "lng": 116.4074,
       "parentName": "北京",
       "currentPlace": "北京",
-      "currentKey": "ancient-current:北京"
+      "currentKey": "ancient-site:北京:39.90420,116.40740"
     },
     {
       "name": "武阳·燕下都 · 燕下都",
@@ -11092,12 +11092,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 22,
-      "siteKey": "ancient-current:保定",
+      "siteKey": "ancient-site:燕下都:39.34600,115.53000",
       "lat": 39.346,
       "lng": 115.53,
       "parentName": "燕下都",
-      "currentPlace": "保定",
-      "currentKey": "ancient-current:保定"
+      "currentPlace": "燕下都",
+      "currentKey": "ancient-site:燕下都:39.34600,115.53000"
     },
     {
       "name": "襄平 · 辽阳",
@@ -11112,12 +11112,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 23,
-      "siteKey": "ancient-current:辽阳",
+      "siteKey": "ancient-site:辽阳:41.26940,123.17280",
       "lat": 41.2694,
       "lng": 123.1728,
       "parentName": "辽阳",
       "currentPlace": "辽阳",
-      "currentKey": "ancient-current:辽阳"
+      "currentKey": "ancient-site:辽阳:41.26940,123.17280"
     },
     {
       "name": "唐/翼 · 翼城",
@@ -11132,12 +11132,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 24,
-      "siteKey": "ancient-current:临汾",
+      "siteKey": "ancient-site:翼城:35.73900,111.71900",
       "lat": 35.739,
       "lng": 111.719,
       "parentName": "翼城",
-      "currentPlace": "临汾",
-      "currentKey": "ancient-current:临汾"
+      "currentPlace": "翼城",
+      "currentKey": "ancient-site:翼城:35.73900,111.71900"
     },
     {
       "name": "绛 · 闻喜",
@@ -11152,12 +11152,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 25,
-      "siteKey": "ancient-current:运城",
+      "siteKey": "ancient-site:闻喜:35.35600,111.22400",
       "lat": 35.356,
       "lng": 111.224,
       "parentName": "闻喜",
-      "currentPlace": "运城",
-      "currentKey": "ancient-current:运城"
+      "currentPlace": "闻喜",
+      "currentKey": "ancient-site:闻喜:35.35600,111.22400"
     },
     {
       "name": "新田 · 侯马",
@@ -11172,12 +11172,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 26,
-      "siteKey": "ancient-current:临汾",
+      "siteKey": "ancient-site:侯马:35.61900,111.37200",
       "lat": 35.619,
       "lng": 111.372,
       "parentName": "侯马",
-      "currentPlace": "临汾",
-      "currentKey": "ancient-current:临汾"
+      "currentPlace": "侯马",
+      "currentKey": "ancient-site:侯马:35.61900,111.37200"
     },
     {
       "name": "平阳 · 宝鸡",
@@ -11192,12 +11192,12 @@
       "confidence": "低",
       "categoryCode": "P",
       "sourceOrder": 27,
-      "siteKey": "ancient-current:宝鸡",
+      "siteKey": "ancient-site:宝鸡:34.36190,107.23730",
       "lat": 34.3619,
       "lng": 107.2373,
       "parentName": "宝鸡",
       "currentPlace": "宝鸡",
-      "currentKey": "ancient-current:宝鸡"
+      "currentKey": "ancient-site:宝鸡:34.36190,107.23730"
     },
     {
       "name": "雍 · 雍城",
@@ -11212,12 +11212,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 28,
-      "siteKey": "ancient-current:宝鸡",
+      "siteKey": "ancient-site:雍城:34.52100,107.40000",
       "lat": 34.521,
       "lng": 107.4,
       "parentName": "雍城",
-      "currentPlace": "宝鸡",
-      "currentKey": "ancient-current:宝鸡"
+      "currentPlace": "雍城",
+      "currentKey": "ancient-site:雍城:34.52100,107.40000"
     },
     {
       "name": "栎阳",
@@ -11232,12 +11232,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 29,
-      "siteKey": "ancient-current:西安",
+      "siteKey": "ancient-site:栎阳:34.65400,109.22600",
       "lat": 34.654,
       "lng": 109.226,
       "parentName": "栎阳",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安"
+      "currentPlace": "栎阳",
+      "currentKey": "ancient-site:栎阳:34.65400,109.22600"
     },
     {
       "name": "咸阳 · 咸阳 · 秦",
@@ -11252,12 +11252,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 30,
-      "siteKey": "ancient-current:咸阳",
+      "siteKey": "ancient-site:咸阳:34.32960,108.70930",
       "lat": 34.3296,
       "lng": 108.7093,
       "parentName": "咸阳",
       "currentPlace": "咸阳",
-      "currentKey": "ancient-current:咸阳"
+      "currentKey": "ancient-site:咸阳:34.32960,108.70930"
     },
     {
       "name": "棫林 · 华县",
@@ -11272,12 +11272,12 @@
       "confidence": "低",
       "categoryCode": "P",
       "sourceOrder": 31,
-      "siteKey": "ancient-current:渭南",
+      "siteKey": "ancient-site:华县:34.51200,109.77100",
       "lat": 34.512,
       "lng": 109.771,
       "parentName": "华县",
-      "currentPlace": "渭南",
-      "currentKey": "ancient-current:渭南"
+      "currentPlace": "华县",
+      "currentKey": "ancient-site:华县:34.51200,109.77100"
     },
     {
       "name": "新郑 · 新郑 · 郑",
@@ -11292,12 +11292,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 32,
-      "siteKey": "ancient-current:郑州",
+      "siteKey": "ancient-site:新郑:34.39600,113.74100",
       "lat": 34.396,
       "lng": 113.741,
       "parentName": "新郑",
-      "currentPlace": "郑州",
-      "currentKey": "ancient-current:郑州"
+      "currentPlace": "新郑",
+      "currentKey": "ancient-site:新郑:34.39600,113.74100"
     },
     {
       "name": "朝歌 · 淇县",
@@ -11312,12 +11312,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 33,
-      "siteKey": "ancient-current:鹤壁",
+      "siteKey": "ancient-site:淇县:35.60700,114.19700",
       "lat": 35.607,
       "lng": 114.197,
       "parentName": "淇县",
-      "currentPlace": "鹤壁",
-      "currentKey": "ancient-current:鹤壁"
+      "currentPlace": "淇县",
+      "currentKey": "ancient-site:淇县:35.60700,114.19700"
     },
     {
       "name": "帝丘 · 濮阳",
@@ -11332,12 +11332,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 34,
-      "siteKey": "ancient-current:濮阳",
+      "siteKey": "ancient-site:濮阳:35.76270,115.02930",
       "lat": 35.7627,
       "lng": 115.0293,
       "parentName": "濮阳",
       "currentPlace": "濮阳",
-      "currentKey": "ancient-current:濮阳"
+      "currentKey": "ancient-site:濮阳:35.76270,115.02930"
     },
     {
       "name": "商丘 · 商丘宋国故城",
@@ -11352,12 +11352,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 35,
-      "siteKey": "ancient-current:商丘",
+      "siteKey": "ancient-site:商丘宋国故城:34.38100,115.65400",
       "lat": 34.381,
       "lng": 115.654,
       "parentName": "商丘宋国故城",
-      "currentPlace": "商丘",
-      "currentKey": "ancient-current:商丘"
+      "currentPlace": "商丘宋国故城",
+      "currentKey": "ancient-site:商丘宋国故城:34.38100,115.65400"
     },
     {
       "name": "宛丘 · 淮阳",
@@ -11372,12 +11372,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 36,
-      "siteKey": "ancient-current:周口",
+      "siteKey": "ancient-site:淮阳:33.73300,114.88600",
       "lat": 33.733,
       "lng": 114.886,
       "parentName": "淮阳",
-      "currentPlace": "周口",
-      "currentKey": "ancient-current:周口"
+      "currentPlace": "淮阳",
+      "currentKey": "ancient-site:淮阳:33.73300,114.88600"
     },
     {
       "name": "上蔡",
@@ -11392,12 +11392,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 37,
-      "siteKey": "ancient-current:驻马店",
+      "siteKey": "ancient-site:上蔡:33.26300,114.26400",
       "lat": 33.263,
       "lng": 114.264,
       "parentName": "上蔡",
-      "currentPlace": "驻马店",
-      "currentKey": "ancient-current:驻马店"
+      "currentPlace": "上蔡",
+      "currentKey": "ancient-site:上蔡:33.26300,114.26400"
     },
     {
       "name": "州来 · 凤台",
@@ -11412,12 +11412,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 38,
-      "siteKey": "ancient-current:淮南",
+      "siteKey": "ancient-site:凤台:32.70900,116.71100",
       "lat": 32.709,
       "lng": 116.711,
       "parentName": "凤台",
-      "currentPlace": "淮南",
-      "currentKey": "ancient-current:淮南"
+      "currentPlace": "凤台",
+      "currentKey": "ancient-site:凤台:32.70900,116.71100"
     },
     {
       "name": "郢·纪南城 · 郢都纪南城",
@@ -11432,12 +11432,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 39,
-      "siteKey": "ancient-current:荆州",
+      "siteKey": "ancient-site:郢都纪南城:30.42000,112.19000",
       "lat": 30.42,
       "lng": 112.19,
       "parentName": "郢都纪南城",
-      "currentPlace": "荆州",
-      "currentKey": "ancient-current:荆州"
+      "currentPlace": "郢都纪南城",
+      "currentKey": "ancient-site:郢都纪南城:30.42000,112.19000"
     },
     {
       "name": "陈郢",
@@ -11452,12 +11452,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 40,
-      "siteKey": "ancient-current:周口",
+      "siteKey": "ancient-site:陈郢:33.73300,114.88600",
       "lat": 33.733,
       "lng": 114.886,
       "parentName": "淮阳",
-      "currentPlace": "周口",
-      "currentKey": "ancient-current:周口"
+      "currentPlace": "陈郢",
+      "currentKey": "ancient-site:陈郢:33.73300,114.88600"
     },
     {
       "name": "寿春",
@@ -11472,12 +11472,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 41,
-      "siteKey": "ancient-current:淮南",
+      "siteKey": "ancient-site:寿春:32.57300,116.78600",
       "lat": 32.573,
       "lng": 116.786,
       "parentName": "寿春",
-      "currentPlace": "淮南",
-      "currentKey": "ancient-current:淮南"
+      "currentPlace": "寿春",
+      "currentKey": "ancient-site:寿春:32.57300,116.78600"
     },
     {
       "name": "姑苏 · 苏州",
@@ -11492,12 +11492,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 42,
-      "siteKey": "ancient-current:苏州",
+      "siteKey": "ancient-site:苏州:31.29890,120.58530",
       "lat": 31.2989,
       "lng": 120.5853,
       "parentName": "苏州",
       "currentPlace": "苏州",
-      "currentKey": "ancient-current:苏州"
+      "currentKey": "ancient-site:苏州:31.29890,120.58530"
     },
     {
       "name": "埤中 · 诸暨",
@@ -11512,12 +11512,12 @@
       "confidence": "低",
       "categoryCode": "P",
       "sourceOrder": 43,
-      "siteKey": "ancient-current:绍兴",
+      "siteKey": "ancient-site:诸暨:29.71360,120.23600",
       "lat": 29.7136,
       "lng": 120.236,
       "parentName": "诸暨",
-      "currentPlace": "绍兴",
-      "currentKey": "ancient-current:绍兴"
+      "currentPlace": "诸暨",
+      "currentKey": "ancient-site:诸暨:29.71360,120.23600"
     },
     {
       "name": "会稽 · 绍兴",
@@ -11532,12 +11532,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 44,
-      "siteKey": "ancient-current:绍兴",
+      "siteKey": "ancient-site:绍兴:30.03030,120.58020",
       "lat": 30.0303,
       "lng": 120.5802,
       "parentName": "绍兴",
       "currentPlace": "绍兴",
-      "currentKey": "ancient-current:绍兴"
+      "currentKey": "ancient-site:绍兴:30.03030,120.58020"
     },
     {
       "name": "平阳 · 临汾 · 韩",
@@ -11552,12 +11552,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 45,
-      "siteKey": "ancient-current:临汾",
+      "siteKey": "ancient-site:临汾:36.08800,111.51900",
       "lat": 36.088,
       "lng": 111.519,
       "parentName": "临汾",
       "currentPlace": "临汾",
-      "currentKey": "ancient-current:临汾"
+      "currentKey": "ancient-site:临汾:36.08800,111.51900"
     },
     {
       "name": "新郑 · 新郑 · 韩",
@@ -11572,12 +11572,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 46,
-      "siteKey": "ancient-current:郑州",
+      "siteKey": "ancient-site:新郑:34.39600,113.74100",
       "lat": 34.396,
       "lng": 113.741,
       "parentName": "新郑",
-      "currentPlace": "郑州",
-      "currentKey": "ancient-current:郑州"
+      "currentPlace": "新郑",
+      "currentKey": "ancient-site:新郑:34.39600,113.74100"
     },
     {
       "name": "晋阳 · 晋阳 · 赵",
@@ -11592,12 +11592,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 47,
-      "siteKey": "ancient-current:太原",
+      "siteKey": "ancient-site:晋阳:37.70500,112.44000",
       "lat": 37.705,
       "lng": 112.44,
       "parentName": "晋阳",
-      "currentPlace": "太原",
-      "currentKey": "ancient-current:太原"
+      "currentPlace": "晋阳",
+      "currentKey": "ancient-site:晋阳:37.70500,112.44000"
     },
     {
       "name": "邯郸",
@@ -11612,12 +11612,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 48,
-      "siteKey": "ancient-current:邯郸",
+      "siteKey": "ancient-site:邯郸:36.62560,114.53910",
       "lat": 36.6256,
       "lng": 114.5391,
       "parentName": "邯郸",
       "currentPlace": "邯郸",
-      "currentKey": "ancient-current:邯郸"
+      "currentKey": "ancient-site:邯郸:36.62560,114.53910"
     },
     {
       "name": "安邑",
@@ -11632,12 +11632,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 49,
-      "siteKey": "ancient-current:运城",
+      "siteKey": "ancient-site:安邑:35.02600,111.05400",
       "lat": 35.026,
       "lng": 111.054,
       "parentName": "安邑",
-      "currentPlace": "运城",
-      "currentKey": "ancient-current:运城"
+      "currentPlace": "安邑",
+      "currentKey": "ancient-site:安邑:35.02600,111.05400"
     },
     {
       "name": "大梁",
@@ -11652,12 +11652,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 50,
-      "siteKey": "ancient-current:开封",
+      "siteKey": "ancient-site:大梁:34.79700,114.30700",
       "lat": 34.797,
       "lng": 114.307,
       "parentName": "大梁",
-      "currentPlace": "开封",
-      "currentKey": "ancient-current:开封"
+      "currentPlace": "大梁",
+      "currentKey": "ancient-site:大梁:34.79700,114.30700"
     },
     {
       "name": "咸阳 · 咸阳 · 秦帝国",
@@ -11672,12 +11672,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 51,
-      "siteKey": "ancient-current:咸阳",
+      "siteKey": "ancient-site:咸阳:34.32960,108.70930",
       "lat": 34.3296,
       "lng": 108.7093,
       "parentName": "咸阳",
       "currentPlace": "咸阳",
-      "currentKey": "ancient-current:咸阳"
+      "currentKey": "ancient-site:咸阳:34.32960,108.70930"
     },
     {
       "name": "陈 · 淮阳",
@@ -11692,12 +11692,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 52,
-      "siteKey": "ancient-current:周口",
+      "siteKey": "ancient-site:淮阳:33.73300,114.88600",
       "lat": 33.733,
       "lng": 114.886,
       "parentName": "淮阳",
-      "currentPlace": "周口",
-      "currentKey": "ancient-current:周口"
+      "currentPlace": "淮阳",
+      "currentKey": "ancient-site:淮阳:33.73300,114.88600"
     },
     {
       "name": "彭城 · 徐州",
@@ -11712,12 +11712,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 53,
-      "siteKey": "ancient-current:徐州",
+      "siteKey": "ancient-site:徐州:34.20580,117.28410",
       "lat": 34.2058,
       "lng": 117.2841,
       "parentName": "徐州",
       "currentPlace": "徐州",
-      "currentKey": "ancient-current:徐州"
+      "currentKey": "ancient-site:徐州:34.20580,117.28410"
     },
     {
       "name": "南郑",
@@ -11732,12 +11732,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 54,
-      "siteKey": "ancient-current:汉中",
+      "siteKey": "ancient-site:南郑:33.00400,106.94200",
       "lat": 33.004,
       "lng": 106.942,
       "parentName": "南郑",
-      "currentPlace": "汉中",
-      "currentKey": "ancient-current:汉中"
+      "currentPlace": "南郑",
+      "currentKey": "ancient-site:南郑:33.00400,106.94200"
     },
     {
       "name": "长安 · 汉长安城 · 西汉",
@@ -11752,12 +11752,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 55,
-      "siteKey": "ancient-current:西安",
+      "siteKey": "ancient-site:汉长安城:34.36000,108.86000",
       "lat": 34.36,
       "lng": 108.86,
       "parentName": "汉长安城",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安"
+      "currentPlace": "汉长安城",
+      "currentKey": "ancient-site:汉长安城:34.36000,108.86000"
     },
     {
       "name": "雒阳 · 洛阳 · 西汉",
@@ -11772,12 +11772,12 @@
       "confidence": "中",
       "categoryCode": "S",
       "sourceOrder": 56,
-      "siteKey": "ancient-current:洛阳",
+      "siteKey": "ancient-site:洛阳:34.61970,112.45400",
       "lat": 34.6197,
       "lng": 112.454,
       "parentName": "洛阳",
       "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳"
+      "currentKey": "ancient-site:洛阳:34.61970,112.45400"
     },
     {
       "name": "常安 · 汉长安城",
@@ -11792,12 +11792,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 57,
-      "siteKey": "ancient-current:西安",
+      "siteKey": "ancient-site:汉长安城:34.36000,108.86000",
       "lat": 34.36,
       "lng": 108.86,
       "parentName": "汉长安城",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安"
+      "currentPlace": "汉长安城",
+      "currentKey": "ancient-site:汉长安城:34.36000,108.86000"
     },
     {
       "name": "宛 · 宛城",
@@ -11812,12 +11812,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 58,
-      "siteKey": "ancient-current:南阳",
+      "siteKey": "ancient-site:宛城:32.99000,112.52800",
       "lat": 32.99,
       "lng": 112.528,
       "parentName": "宛城",
-      "currentPlace": "南阳",
-      "currentKey": "ancient-current:南阳"
+      "currentPlace": "宛城",
+      "currentKey": "ancient-site:宛城:32.99000,112.52800"
     },
     {
       "name": "雒阳 · 洛阳 · 玄汉",
@@ -11832,12 +11832,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 59,
-      "siteKey": "ancient-current:洛阳",
+      "siteKey": "ancient-site:洛阳:34.61970,112.45400",
       "lat": 34.6197,
       "lng": 112.454,
       "parentName": "洛阳",
       "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳"
+      "currentKey": "ancient-site:洛阳:34.61970,112.45400"
     },
     {
       "name": "长安 · 汉长安城 · 玄汉",
@@ -11852,12 +11852,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 60,
-      "siteKey": "ancient-current:西安",
+      "siteKey": "ancient-site:汉长安城:34.36000,108.86000",
       "lat": 34.36,
       "lng": 108.86,
       "parentName": "汉长安城",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安"
+      "currentPlace": "汉长安城",
+      "currentKey": "ancient-site:汉长安城:34.36000,108.86000"
     },
     {
       "name": "长安 · 汉长安城 · 赤眉汉",
@@ -11872,12 +11872,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 61,
-      "siteKey": "ancient-current:西安",
+      "siteKey": "ancient-site:汉长安城:34.36000,108.86000",
       "lat": 34.36,
       "lng": 108.86,
       "parentName": "汉长安城",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安"
+      "currentPlace": "汉长安城",
+      "currentKey": "ancient-site:汉长安城:34.36000,108.86000"
     },
     {
       "name": "成都 · 成都 · 成家",
@@ -11892,12 +11892,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 62,
-      "siteKey": "ancient-current:成都",
+      "siteKey": "ancient-site:成都:30.57280,104.06680",
       "lat": 30.5728,
       "lng": 104.0668,
       "parentName": "成都",
       "currentPlace": "成都",
-      "currentKey": "ancient-current:成都"
+      "currentKey": "ancient-site:成都:30.57280,104.06680"
     },
     {
       "name": "雒阳 · 洛阳 · 东汉",
@@ -11912,12 +11912,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 63,
-      "siteKey": "ancient-current:洛阳",
+      "siteKey": "ancient-site:洛阳:34.61970,112.45400",
       "lat": 34.6197,
       "lng": 112.454,
       "parentName": "洛阳",
       "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳"
+      "currentKey": "ancient-site:洛阳:34.61970,112.45400"
     },
     {
       "name": "长安 · 汉长安城 · 东汉",
@@ -11932,12 +11932,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 64,
-      "siteKey": "ancient-current:西安",
+      "siteKey": "ancient-site:汉长安城:34.36000,108.86000",
       "lat": 34.36,
       "lng": 108.86,
       "parentName": "汉长安城",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安"
+      "currentPlace": "汉长安城",
+      "currentKey": "ancient-site:汉长安城:34.36000,108.86000"
     },
     {
       "name": "长安 · 汉长安城 · 东汉",
@@ -11952,12 +11952,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 65,
-      "siteKey": "ancient-current:西安",
+      "siteKey": "ancient-site:汉长安城:34.36000,108.86000",
       "lat": 34.36,
       "lng": 108.86,
       "parentName": "汉长安城",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安"
+      "currentPlace": "汉长安城",
+      "currentKey": "ancient-site:汉长安城:34.36000,108.86000"
     },
     {
       "name": "许 · 许都",
@@ -11972,12 +11972,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 66,
-      "siteKey": "ancient-current:许昌",
+      "siteKey": "ancient-site:许都:34.08000,113.82000",
       "lat": 34.08,
       "lng": 113.82,
       "parentName": "许都",
-      "currentPlace": "许昌",
-      "currentKey": "ancient-current:许昌"
+      "currentPlace": "许都",
+      "currentKey": "ancient-site:许都:34.08000,113.82000"
     },
     {
       "name": "洛阳 · 洛阳 · 曹魏",
@@ -11992,12 +11992,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 67,
-      "siteKey": "ancient-current:洛阳",
+      "siteKey": "ancient-site:洛阳:34.61970,112.45400",
       "lat": 34.6197,
       "lng": 112.454,
       "parentName": "洛阳",
       "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳"
+      "currentKey": "ancient-site:洛阳:34.61970,112.45400"
     },
     {
       "name": "邺 · 邺城 · 曹魏",
@@ -12012,12 +12012,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 68,
-      "siteKey": "ancient-current:邯郸",
+      "siteKey": "ancient-site:邺城:36.34000,114.10000",
       "lat": 36.34,
       "lng": 114.1,
       "parentName": "邺城",
-      "currentPlace": "邯郸",
-      "currentKey": "ancient-current:邯郸"
+      "currentPlace": "邺城",
+      "currentKey": "ancient-site:邺城:36.34000,114.10000"
     },
     {
       "name": "许昌 · 许都",
@@ -12032,12 +12032,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 69,
-      "siteKey": "ancient-current:许昌",
+      "siteKey": "ancient-site:许都:34.08000,113.82000",
       "lat": 34.08,
       "lng": 113.82,
       "parentName": "许都",
-      "currentPlace": "许昌",
-      "currentKey": "ancient-current:许昌"
+      "currentPlace": "许都",
+      "currentKey": "ancient-site:许都:34.08000,113.82000"
     },
     {
       "name": "长安 · 汉长安城 · 曹魏",
@@ -12052,12 +12052,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 70,
-      "siteKey": "ancient-current:西安",
+      "siteKey": "ancient-site:汉长安城:34.36000,108.86000",
       "lat": 34.36,
       "lng": 108.86,
       "parentName": "汉长安城",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安"
+      "currentPlace": "汉长安城",
+      "currentKey": "ancient-site:汉长安城:34.36000,108.86000"
     },
     {
       "name": "谯 · 亳州",
@@ -12072,12 +12072,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 71,
-      "siteKey": "ancient-current:亳州",
+      "siteKey": "ancient-site:亳州:33.84460,115.77930",
       "lat": 33.8446,
       "lng": 115.7793,
       "parentName": "亳州",
       "currentPlace": "亳州",
-      "currentKey": "ancient-current:亳州"
+      "currentKey": "ancient-site:亳州:33.84460,115.77930"
     },
     {
       "name": "成都 · 成都 · 蜀汉",
@@ -12092,12 +12092,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 72,
-      "siteKey": "ancient-current:成都",
+      "siteKey": "ancient-site:成都:30.57280,104.06680",
       "lat": 30.5728,
       "lng": 104.0668,
       "parentName": "成都",
       "currentPlace": "成都",
-      "currentKey": "ancient-current:成都"
+      "currentKey": "ancient-site:成都:30.57280,104.06680"
     },
     {
       "name": "建业 · 南京 · 孙吴",
@@ -12112,12 +12112,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 73,
-      "siteKey": "ancient-current:南京",
+      "siteKey": "ancient-site:南京:32.06030,118.79690",
       "lat": 32.0603,
       "lng": 118.7969,
       "parentName": "南京",
       "currentPlace": "南京",
-      "currentKey": "ancient-current:南京"
+      "currentKey": "ancient-site:南京:32.06030,118.79690"
     },
     {
       "name": "武昌 · 武昌 · 孙吴",
@@ -12132,12 +12132,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 74,
-      "siteKey": "ancient-current:武汉",
+      "siteKey": "ancient-site:武昌:30.55300,114.31600",
       "lat": 30.553,
       "lng": 114.316,
       "parentName": "武昌",
-      "currentPlace": "武汉",
-      "currentKey": "ancient-current:武汉"
+      "currentPlace": "武昌",
+      "currentKey": "ancient-site:武昌:30.55300,114.31600"
     },
     {
       "name": "建业 · 南京 · 孙吴",
@@ -12152,12 +12152,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 75,
-      "siteKey": "ancient-current:南京",
+      "siteKey": "ancient-site:南京:32.06030,118.79690",
       "lat": 32.0603,
       "lng": 118.7969,
       "parentName": "南京",
       "currentPlace": "南京",
-      "currentKey": "ancient-current:南京"
+      "currentKey": "ancient-site:南京:32.06030,118.79690"
     },
     {
       "name": "洛阳 · 洛阳 · 西晋",
@@ -12172,12 +12172,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 76,
-      "siteKey": "ancient-current:洛阳",
+      "siteKey": "ancient-site:洛阳:34.61970,112.45400",
       "lat": 34.6197,
       "lng": 112.454,
       "parentName": "洛阳",
       "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳"
+      "currentKey": "ancient-site:洛阳:34.61970,112.45400"
     },
     {
       "name": "长安 · 汉长安城 · 西晋",
@@ -12192,12 +12192,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 77,
-      "siteKey": "ancient-current:西安",
+      "siteKey": "ancient-site:汉长安城:34.36000,108.86000",
       "lat": 34.36,
       "lng": 108.86,
       "parentName": "汉长安城",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安"
+      "currentPlace": "汉长安城",
+      "currentKey": "ancient-site:汉长安城:34.36000,108.86000"
     },
     {
       "name": "建康 · 南京 · 东晋",
@@ -12212,12 +12212,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 78,
-      "siteKey": "ancient-current:南京",
+      "siteKey": "ancient-site:南京:32.06030,118.79690",
       "lat": 32.0603,
       "lng": 118.7969,
       "parentName": "南京",
       "currentPlace": "南京",
-      "currentKey": "ancient-current:南京"
+      "currentKey": "ancient-site:南京:32.06030,118.79690"
     },
     {
       "name": "成都 · 成都 · 谯蜀",
@@ -12232,12 +12232,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 79,
-      "siteKey": "ancient-current:成都",
+      "siteKey": "ancient-site:成都:30.57280,104.06680",
       "lat": 30.5728,
       "lng": 104.0668,
       "parentName": "成都",
       "currentPlace": "成都",
-      "currentKey": "ancient-current:成都"
+      "currentKey": "ancient-site:成都:30.57280,104.06680"
     },
     {
       "name": "成都 · 成都 · 成汉",
@@ -12252,12 +12252,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 80,
-      "siteKey": "ancient-current:成都",
+      "siteKey": "ancient-site:成都:30.57280,104.06680",
       "lat": 30.5728,
       "lng": 104.0668,
       "parentName": "成都",
       "currentPlace": "成都",
-      "currentKey": "ancient-current:成都"
+      "currentKey": "ancient-site:成都:30.57280,104.06680"
     },
     {
       "name": "左国城 · 离石",
@@ -12272,12 +12272,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 81,
-      "siteKey": "ancient-current:吕梁",
+      "siteKey": "ancient-site:离石:37.51700,111.15100",
       "lat": 37.517,
       "lng": 111.151,
       "parentName": "离石",
-      "currentPlace": "吕梁",
-      "currentKey": "ancient-current:吕梁"
+      "currentPlace": "离石",
+      "currentKey": "ancient-site:离石:37.51700,111.15100"
     },
     {
       "name": "平阳 · 临汾 · 汉赵/前赵",
@@ -12292,12 +12292,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 82,
-      "siteKey": "ancient-current:临汾",
+      "siteKey": "ancient-site:临汾:36.08800,111.51900",
       "lat": 36.088,
       "lng": 111.519,
       "parentName": "临汾",
       "currentPlace": "临汾",
-      "currentKey": "ancient-current:临汾"
+      "currentKey": "ancient-site:临汾:36.08800,111.51900"
     },
     {
       "name": "长安 · 汉长安城 · 汉赵/前赵",
@@ -12312,12 +12312,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 83,
-      "siteKey": "ancient-current:西安",
+      "siteKey": "ancient-site:汉长安城:34.36000,108.86000",
       "lat": 34.36,
       "lng": 108.86,
       "parentName": "汉长安城",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安"
+      "currentPlace": "汉长安城",
+      "currentKey": "ancient-site:汉长安城:34.36000,108.86000"
     },
     {
       "name": "襄国 · 邢台",
@@ -12332,12 +12332,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 84,
-      "siteKey": "ancient-current:邢台",
+      "siteKey": "ancient-site:邢台:37.07060,114.50480",
       "lat": 37.0706,
       "lng": 114.5048,
       "parentName": "邢台",
       "currentPlace": "邢台",
-      "currentKey": "ancient-current:邢台"
+      "currentKey": "ancient-site:邢台:37.07060,114.50480"
     },
     {
       "name": "邺 · 邺城 · 后赵",
@@ -12352,12 +12352,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 85,
-      "siteKey": "ancient-current:邯郸",
+      "siteKey": "ancient-site:邺城:36.34000,114.10000",
       "lat": 36.34,
       "lng": 114.1,
       "parentName": "邺城",
-      "currentPlace": "邯郸",
-      "currentKey": "ancient-current:邯郸"
+      "currentPlace": "邺城",
+      "currentKey": "ancient-site:邺城:36.34000,114.10000"
     },
     {
       "name": "姑臧 · 武威 · 前凉",
@@ -12372,12 +12372,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 86,
-      "siteKey": "ancient-current:武威",
+      "siteKey": "ancient-site:武威:37.92830,102.63780",
       "lat": 37.9283,
       "lng": 102.6378,
       "parentName": "武威",
       "currentPlace": "武威",
-      "currentKey": "ancient-current:武威"
+      "currentKey": "ancient-site:武威:37.92830,102.63780"
     },
     {
       "name": "龙城 · 朝阳 · 前燕",
@@ -12392,12 +12392,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 87,
-      "siteKey": "ancient-current:朝阳",
+      "siteKey": "ancient-site:朝阳:41.57370,120.45040",
       "lat": 41.5737,
       "lng": 120.4504,
       "parentName": "朝阳",
       "currentPlace": "朝阳",
-      "currentKey": "ancient-current:朝阳"
+      "currentKey": "ancient-site:朝阳:41.57370,120.45040"
     },
     {
       "name": "蓟 · 北京 · 前燕",
@@ -12412,12 +12412,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 88,
-      "siteKey": "ancient-current:北京",
+      "siteKey": "ancient-site:北京:39.90420,116.40740",
       "lat": 39.9042,
       "lng": 116.4074,
       "parentName": "北京",
       "currentPlace": "北京",
-      "currentKey": "ancient-current:北京"
+      "currentKey": "ancient-site:北京:39.90420,116.40740"
     },
     {
       "name": "邺 · 邺城 · 前燕",
@@ -12432,12 +12432,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 89,
-      "siteKey": "ancient-current:邯郸",
+      "siteKey": "ancient-site:邺城:36.34000,114.10000",
       "lat": 36.34,
       "lng": 114.1,
       "parentName": "邺城",
-      "currentPlace": "邯郸",
-      "currentKey": "ancient-current:邯郸"
+      "currentPlace": "邺城",
+      "currentKey": "ancient-site:邺城:36.34000,114.10000"
     },
     {
       "name": "邺 · 邺城 · 冉魏",
@@ -12452,12 +12452,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 90,
-      "siteKey": "ancient-current:邯郸",
+      "siteKey": "ancient-site:邺城:36.34000,114.10000",
       "lat": 36.34,
       "lng": 114.1,
       "parentName": "邺城",
-      "currentPlace": "邯郸",
-      "currentKey": "ancient-current:邯郸"
+      "currentPlace": "邺城",
+      "currentKey": "ancient-site:邺城:36.34000,114.10000"
     },
     {
       "name": "长安 · 汉长安城 · 前秦",
@@ -12472,12 +12472,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 91,
-      "siteKey": "ancient-current:西安",
+      "siteKey": "ancient-site:汉长安城:34.36000,108.86000",
       "lat": 34.36,
       "lng": 108.86,
       "parentName": "汉长安城",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安"
+      "currentPlace": "汉长安城",
+      "currentKey": "ancient-site:汉长安城:34.36000,108.86000"
     },
     {
       "name": "中山 · 定州",
@@ -12492,12 +12492,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 92,
-      "siteKey": "ancient-current:保定",
+      "siteKey": "ancient-site:定州:38.51600,114.99000",
       "lat": 38.516,
       "lng": 114.99,
       "parentName": "定州",
-      "currentPlace": "保定",
-      "currentKey": "ancient-current:保定"
+      "currentPlace": "定州",
+      "currentKey": "ancient-site:定州:38.51600,114.99000"
     },
     {
       "name": "龙城 · 朝阳 · 后燕",
@@ -12512,12 +12512,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 93,
-      "siteKey": "ancient-current:朝阳",
+      "siteKey": "ancient-site:朝阳:41.57370,120.45040",
       "lat": 41.5737,
       "lng": 120.4504,
       "parentName": "朝阳",
       "currentPlace": "朝阳",
-      "currentKey": "ancient-current:朝阳"
+      "currentKey": "ancient-site:朝阳:41.57370,120.45040"
     },
     {
       "name": "长子",
@@ -12532,12 +12532,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 94,
-      "siteKey": "ancient-current:长治",
+      "siteKey": "ancient-site:长子:36.12200,112.87700",
       "lat": 36.122,
       "lng": 112.877,
       "parentName": "长子",
-      "currentPlace": "长治",
-      "currentKey": "ancient-current:长治"
+      "currentPlace": "长子",
+      "currentKey": "ancient-site:长子:36.12200,112.87700"
     },
     {
       "name": "长安 · 汉长安城 · 后秦",
@@ -12552,12 +12552,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 95,
-      "siteKey": "ancient-current:西安",
+      "siteKey": "ancient-site:汉长安城:34.36000,108.86000",
       "lat": 34.36,
       "lng": 108.86,
       "parentName": "汉长安城",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安"
+      "currentPlace": "汉长安城",
+      "currentKey": "ancient-site:汉长安城:34.36000,108.86000"
     },
     {
       "name": "滑台 · 滑县 · 翟魏",
@@ -12572,12 +12572,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 96,
-      "siteKey": "ancient-current:安阳",
+      "siteKey": "ancient-site:滑县:35.57500,114.51900",
       "lat": 35.575,
       "lng": 114.519,
       "parentName": "滑县",
-      "currentPlace": "安阳",
-      "currentKey": "ancient-current:安阳"
+      "currentPlace": "滑县",
+      "currentKey": "ancient-site:滑县:35.57500,114.51900"
     },
     {
       "name": "勇士川 · 榆中",
@@ -12592,12 +12592,12 @@
       "confidence": "低",
       "categoryCode": "P",
       "sourceOrder": 97,
-      "siteKey": "ancient-current:兰州",
+      "siteKey": "ancient-site:榆中:35.84300,104.11200",
       "lat": 35.843,
       "lng": 104.112,
       "parentName": "榆中",
-      "currentPlace": "兰州",
-      "currentKey": "ancient-current:兰州"
+      "currentPlace": "榆中",
+      "currentKey": "ancient-site:榆中:35.84300,104.11200"
     },
     {
       "name": "金城 · 兰州 · 西秦",
@@ -12612,12 +12612,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 98,
-      "siteKey": "ancient-current:兰州",
+      "siteKey": "ancient-site:兰州:36.06110,103.83430",
       "lat": 36.0611,
       "lng": 103.8343,
       "parentName": "兰州",
       "currentPlace": "兰州",
-      "currentKey": "ancient-current:兰州"
+      "currentKey": "ancient-site:兰州:36.06110,103.83430"
     },
     {
       "name": "西城 · 靖远",
@@ -12632,12 +12632,12 @@
       "confidence": "低",
       "categoryCode": "P",
       "sourceOrder": 99,
-      "siteKey": "ancient-current:白银",
+      "siteKey": "ancient-site:靖远:36.57100,104.68600",
       "lat": 36.571,
       "lng": 104.686,
       "parentName": "靖远",
-      "currentPlace": "白银",
-      "currentKey": "ancient-current:白银"
+      "currentPlace": "靖远",
+      "currentKey": "ancient-site:靖远:36.57100,104.68600"
     },
     {
       "name": "苑川 · 榆中",
@@ -12652,12 +12652,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 100,
-      "siteKey": "ancient-current:兰州",
+      "siteKey": "ancient-site:榆中:35.84300,104.11200",
       "lat": 35.843,
       "lng": 104.112,
       "parentName": "榆中",
-      "currentPlace": "兰州",
-      "currentKey": "ancient-current:兰州"
+      "currentPlace": "榆中",
+      "currentKey": "ancient-site:榆中:35.84300,104.11200"
     },
     {
       "name": "枹罕 · 临夏",
@@ -12672,12 +12672,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 101,
-      "siteKey": "ancient-current:临夏回族自治州临夏",
+      "siteKey": "ancient-site:临夏:35.60100,103.21100",
       "lat": 35.601,
       "lng": 103.211,
       "parentName": "临夏",
-      "currentPlace": "临夏回族自治州临夏",
-      "currentKey": "ancient-current:临夏回族自治州临夏"
+      "currentPlace": "临夏",
+      "currentKey": "ancient-site:临夏:35.60100,103.21100"
     },
     {
       "name": "姑臧 · 武威 · 后凉",
@@ -12692,12 +12692,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 102,
-      "siteKey": "ancient-current:武威",
+      "siteKey": "ancient-site:武威:37.92830,102.63780",
       "lat": 37.9283,
       "lng": 102.6378,
       "parentName": "武威",
       "currentPlace": "武威",
-      "currentKey": "ancient-current:武威"
+      "currentKey": "ancient-site:武威:37.92830,102.63780"
     },
     {
       "name": "乐都 · 乐都 · 南凉",
@@ -12712,12 +12712,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 103,
-      "siteKey": "ancient-current:海东",
+      "siteKey": "ancient-site:乐都:36.48200,102.40100",
       "lat": 36.482,
       "lng": 102.401,
       "parentName": "乐都",
-      "currentPlace": "海东",
-      "currentKey": "ancient-current:海东"
+      "currentPlace": "乐都",
+      "currentKey": "ancient-site:乐都:36.48200,102.40100"
     },
     {
       "name": "西平 · 西宁",
@@ -12732,12 +12732,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 104,
-      "siteKey": "ancient-current:西宁",
+      "siteKey": "ancient-site:西宁:36.61710,101.77820",
       "lat": 36.6171,
       "lng": 101.7782,
       "parentName": "西宁",
       "currentPlace": "西宁",
-      "currentKey": "ancient-current:西宁"
+      "currentKey": "ancient-site:西宁:36.61710,101.77820"
     },
     {
       "name": "乐都 · 乐都 · 南凉",
@@ -12752,12 +12752,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 105,
-      "siteKey": "ancient-current:海东",
+      "siteKey": "ancient-site:乐都:36.48200,102.40100",
       "lat": 36.482,
       "lng": 102.401,
       "parentName": "乐都",
-      "currentPlace": "海东",
-      "currentKey": "ancient-current:海东"
+      "currentPlace": "乐都",
+      "currentKey": "ancient-site:乐都:36.48200,102.40100"
     },
     {
       "name": "敦煌",
@@ -12772,12 +12772,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 106,
-      "siteKey": "ancient-current:酒泉",
+      "siteKey": "ancient-site:敦煌:40.14210,94.66190",
       "lat": 40.1421,
       "lng": 94.6619,
       "parentName": "敦煌",
-      "currentPlace": "酒泉",
-      "currentKey": "ancient-current:酒泉"
+      "currentPlace": "敦煌",
+      "currentKey": "ancient-site:敦煌:40.14210,94.66190"
     },
     {
       "name": "酒泉",
@@ -12792,12 +12792,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 107,
-      "siteKey": "ancient-current:酒泉",
+      "siteKey": "ancient-site:酒泉:39.73200,98.49400",
       "lat": 39.732,
       "lng": 98.494,
       "parentName": "酒泉",
       "currentPlace": "酒泉",
-      "currentKey": "ancient-current:酒泉"
+      "currentKey": "ancient-site:酒泉:39.73200,98.49400"
     },
     {
       "name": "姑臧 · 武威 · 北凉",
@@ -12812,12 +12812,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 108,
-      "siteKey": "ancient-current:武威",
+      "siteKey": "ancient-site:武威:37.92830,102.63780",
       "lat": 37.9283,
       "lng": 102.6378,
       "parentName": "武威",
       "currentPlace": "武威",
-      "currentKey": "ancient-current:武威"
+      "currentKey": "ancient-site:武威:37.92830,102.63780"
     },
     {
       "name": "滑台 · 滑县 · 南燕",
@@ -12832,12 +12832,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 109,
-      "siteKey": "ancient-current:安阳",
+      "siteKey": "ancient-site:滑县:35.57500,114.51900",
       "lat": 35.575,
       "lng": 114.519,
       "parentName": "滑县",
-      "currentPlace": "安阳",
-      "currentKey": "ancient-current:安阳"
+      "currentPlace": "滑县",
+      "currentKey": "ancient-site:滑县:35.57500,114.51900"
     },
     {
       "name": "广固",
@@ -12852,12 +12852,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 110,
-      "siteKey": "ancient-current:潍坊",
+      "siteKey": "ancient-site:广固:36.72700,118.57400",
       "lat": 36.727,
       "lng": 118.574,
       "parentName": "广固",
-      "currentPlace": "潍坊",
-      "currentKey": "ancient-current:潍坊"
+      "currentPlace": "广固",
+      "currentKey": "ancient-site:广固:36.72700,118.57400"
     },
     {
       "name": "龙城 · 朝阳 · 北燕",
@@ -12872,12 +12872,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 111,
-      "siteKey": "ancient-current:朝阳",
+      "siteKey": "ancient-site:朝阳:41.57370,120.45040",
       "lat": 41.5737,
       "lng": 120.4504,
       "parentName": "朝阳",
       "currentPlace": "朝阳",
-      "currentKey": "ancient-current:朝阳"
+      "currentKey": "ancient-site:朝阳:41.57370,120.45040"
     },
     {
       "name": "统万城",
@@ -12892,12 +12892,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 112,
-      "siteKey": "ancient-current:榆林",
+      "siteKey": "ancient-site:统万城:37.99000,108.85000",
       "lat": 37.99,
       "lng": 108.85,
       "parentName": "统万城",
-      "currentPlace": "榆林",
-      "currentKey": "ancient-current:榆林"
+      "currentPlace": "统万城",
+      "currentKey": "ancient-site:统万城:37.99000,108.85000"
     },
     {
       "name": "长安 · 汉长安城 · 胡夏",
@@ -12912,12 +12912,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 113,
-      "siteKey": "ancient-current:西安",
+      "siteKey": "ancient-site:汉长安城:34.36000,108.86000",
       "lat": 34.36,
       "lng": 108.86,
       "parentName": "汉长安城",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安"
+      "currentPlace": "汉长安城",
+      "currentKey": "ancient-site:汉长安城:34.36000,108.86000"
     },
     {
       "name": "盛乐 · 盛乐 · 代",
@@ -12932,12 +12932,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 114,
-      "siteKey": "ancient-current:呼和浩特",
+      "siteKey": "ancient-site:盛乐:40.47700,111.77900",
       "lat": 40.477,
       "lng": 111.779,
       "parentName": "盛乐",
-      "currentPlace": "呼和浩特",
-      "currentKey": "ancient-current:呼和浩特"
+      "currentPlace": "盛乐",
+      "currentKey": "ancient-site:盛乐:40.47700,111.77900"
     },
     {
       "name": "平城 · 平城遗址 · 代",
@@ -12952,12 +12952,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 115,
-      "siteKey": "ancient-current:大同",
+      "siteKey": "ancient-site:平城遗址:40.09000,113.30000",
       "lat": 40.09,
       "lng": 113.3,
       "parentName": "平城遗址",
-      "currentPlace": "大同",
-      "currentKey": "ancient-current:大同"
+      "currentPlace": "平城遗址",
+      "currentKey": "ancient-site:平城遗址:40.09000,113.30000"
     },
     {
       "name": "盛乐 · 盛乐 · 北魏",
@@ -12972,12 +12972,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 116,
-      "siteKey": "ancient-current:呼和浩特",
+      "siteKey": "ancient-site:盛乐:40.47700,111.77900",
       "lat": 40.477,
       "lng": 111.779,
       "parentName": "盛乐",
-      "currentPlace": "呼和浩特",
-      "currentKey": "ancient-current:呼和浩特"
+      "currentPlace": "盛乐",
+      "currentKey": "ancient-site:盛乐:40.47700,111.77900"
     },
     {
       "name": "平城 · 平城遗址 · 北魏",
@@ -12992,12 +12992,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 117,
-      "siteKey": "ancient-current:大同",
+      "siteKey": "ancient-site:平城遗址:40.09000,113.30000",
       "lat": 40.09,
       "lng": 113.3,
       "parentName": "平城遗址",
-      "currentPlace": "大同",
-      "currentKey": "ancient-current:大同"
+      "currentPlace": "平城遗址",
+      "currentKey": "ancient-site:平城遗址:40.09000,113.30000"
     },
     {
       "name": "洛阳 · 洛阳 · 北魏",
@@ -13012,12 +13012,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 118,
-      "siteKey": "ancient-current:洛阳",
+      "siteKey": "ancient-site:洛阳:34.61970,112.45400",
       "lat": 34.6197,
       "lng": 112.454,
       "parentName": "洛阳",
       "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳"
+      "currentKey": "ancient-site:洛阳:34.61970,112.45400"
     },
     {
       "name": "建康 · 南京 · 刘宋",
@@ -13032,12 +13032,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 119,
-      "siteKey": "ancient-current:南京",
+      "siteKey": "ancient-site:南京:32.06030,118.79690",
       "lat": 32.0603,
       "lng": 118.7969,
       "parentName": "南京",
       "currentPlace": "南京",
-      "currentKey": "ancient-current:南京"
+      "currentKey": "ancient-site:南京:32.06030,118.79690"
     },
     {
       "name": "建康 · 南京 · 南齐",
@@ -13052,12 +13052,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 120,
-      "siteKey": "ancient-current:南京",
+      "siteKey": "ancient-site:南京:32.06030,118.79690",
       "lat": 32.0603,
       "lng": 118.7969,
       "parentName": "南京",
       "currentPlace": "南京",
-      "currentKey": "ancient-current:南京"
+      "currentKey": "ancient-site:南京:32.06030,118.79690"
     },
     {
       "name": "建康 · 南京 · 南梁",
@@ -13072,12 +13072,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 121,
-      "siteKey": "ancient-current:南京",
+      "siteKey": "ancient-site:南京:32.06030,118.79690",
       "lat": 32.0603,
       "lng": 118.7969,
       "parentName": "南京",
       "currentPlace": "南京",
-      "currentKey": "ancient-current:南京"
+      "currentKey": "ancient-site:南京:32.06030,118.79690"
     },
     {
       "name": "建康 · 南京 · 侯汉",
@@ -13092,12 +13092,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 122,
-      "siteKey": "ancient-current:南京",
+      "siteKey": "ancient-site:南京:32.06030,118.79690",
       "lat": 32.0603,
       "lng": 118.7969,
       "parentName": "南京",
       "currentPlace": "南京",
-      "currentKey": "ancient-current:南京"
+      "currentKey": "ancient-site:南京:32.06030,118.79690"
     },
     {
       "name": "江陵 · 江陵 · 西梁/后梁",
@@ -13112,12 +13112,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 123,
-      "siteKey": "ancient-current:荆州",
+      "siteKey": "ancient-site:江陵:30.35000,112.19000",
       "lat": 30.35,
       "lng": 112.19,
       "parentName": "江陵",
-      "currentPlace": "荆州",
-      "currentKey": "ancient-current:荆州"
+      "currentPlace": "江陵",
+      "currentKey": "ancient-site:江陵:30.35000,112.19000"
     },
     {
       "name": "建康 · 南京 · 陈",
@@ -13132,12 +13132,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 124,
-      "siteKey": "ancient-current:南京",
+      "siteKey": "ancient-site:南京:32.06030,118.79690",
       "lat": 32.0603,
       "lng": 118.7969,
       "parentName": "南京",
       "currentPlace": "南京",
-      "currentKey": "ancient-current:南京"
+      "currentKey": "ancient-site:南京:32.06030,118.79690"
     },
     {
       "name": "邺 · 邺城 · 东魏",
@@ -13152,12 +13152,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 125,
-      "siteKey": "ancient-current:邯郸",
+      "siteKey": "ancient-site:邺城:36.34000,114.10000",
       "lat": 36.34,
       "lng": 114.1,
       "parentName": "邺城",
-      "currentPlace": "邯郸",
-      "currentKey": "ancient-current:邯郸"
+      "currentPlace": "邺城",
+      "currentKey": "ancient-site:邺城:36.34000,114.10000"
     },
     {
       "name": "晋阳 · 晋阳 · 东魏",
@@ -13172,12 +13172,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 126,
-      "siteKey": "ancient-current:太原",
+      "siteKey": "ancient-site:晋阳:37.70500,112.44000",
       "lat": 37.705,
       "lng": 112.44,
       "parentName": "晋阳",
-      "currentPlace": "太原",
-      "currentKey": "ancient-current:太原"
+      "currentPlace": "晋阳",
+      "currentKey": "ancient-site:晋阳:37.70500,112.44000"
     },
     {
       "name": "长安 · 汉长安城 · 西魏",
@@ -13192,12 +13192,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 127,
-      "siteKey": "ancient-current:西安",
+      "siteKey": "ancient-site:汉长安城:34.36000,108.86000",
       "lat": 34.36,
       "lng": 108.86,
       "parentName": "汉长安城",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安"
+      "currentPlace": "汉长安城",
+      "currentKey": "ancient-site:汉长安城:34.36000,108.86000"
     },
     {
       "name": "邺 · 邺城 · 北齐",
@@ -13212,12 +13212,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 128,
-      "siteKey": "ancient-current:邯郸",
+      "siteKey": "ancient-site:邺城:36.34000,114.10000",
       "lat": 36.34,
       "lng": 114.1,
       "parentName": "邺城",
-      "currentPlace": "邯郸",
-      "currentKey": "ancient-current:邯郸"
+      "currentPlace": "邺城",
+      "currentKey": "ancient-site:邺城:36.34000,114.10000"
     },
     {
       "name": "晋阳 · 晋阳 · 北齐",
@@ -13232,12 +13232,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 129,
-      "siteKey": "ancient-current:太原",
+      "siteKey": "ancient-site:晋阳:37.70500,112.44000",
       "lat": 37.705,
       "lng": 112.44,
       "parentName": "晋阳",
-      "currentPlace": "太原",
-      "currentKey": "ancient-current:太原"
+      "currentPlace": "晋阳",
+      "currentKey": "ancient-site:晋阳:37.70500,112.44000"
     },
     {
       "name": "长安 · 汉长安城 · 北周",
@@ -13252,12 +13252,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 130,
-      "siteKey": "ancient-current:西安",
+      "siteKey": "ancient-site:汉长安城:34.36000,108.86000",
       "lat": 34.36,
       "lng": 108.86,
       "parentName": "汉长安城",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安"
+      "currentPlace": "汉长安城",
+      "currentKey": "ancient-site:汉长安城:34.36000,108.86000"
     },
     {
       "name": "大兴 · 大兴城",
@@ -13272,12 +13272,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 131,
-      "siteKey": "ancient-current:西安",
+      "siteKey": "ancient-site:大兴城:34.26000,108.95000",
       "lat": 34.26,
       "lng": 108.95,
       "parentName": "大兴城",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安"
+      "currentPlace": "大兴城",
+      "currentKey": "ancient-site:大兴城:34.26000,108.95000"
     },
     {
       "name": "洛阳 · 洛阳 · 隋",
@@ -13292,12 +13292,12 @@
       "confidence": "高",
       "categoryCode": "O",
       "sourceOrder": 132,
-      "siteKey": "ancient-current:洛阳",
+      "siteKey": "ancient-site:洛阳:34.61970,112.45400",
       "lat": 34.6197,
       "lng": 112.454,
       "parentName": "洛阳",
       "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳"
+      "currentKey": "ancient-site:洛阳:34.61970,112.45400"
     },
     {
       "name": "江都 · 扬州 · 隋",
@@ -13312,12 +13312,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 133,
-      "siteKey": "ancient-current:扬州",
+      "siteKey": "ancient-site:扬州:32.39420,119.41290",
       "lat": 32.3942,
       "lng": 119.4129,
       "parentName": "扬州",
       "currentPlace": "扬州",
-      "currentKey": "ancient-current:扬州"
+      "currentKey": "ancient-site:扬州:32.39420,119.41290"
     },
     {
       "name": "金城 · 兰州 · 西秦（薛举）",
@@ -13332,12 +13332,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 134,
-      "siteKey": "ancient-current:兰州",
+      "siteKey": "ancient-site:兰州:36.06110,103.83430",
       "lat": 36.0611,
       "lng": 103.8343,
       "parentName": "兰州",
       "currentPlace": "兰州",
-      "currentKey": "ancient-current:兰州"
+      "currentKey": "ancient-site:兰州:36.06110,103.83430"
     },
     {
       "name": "马邑 · 朔州",
@@ -13352,12 +13352,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 135,
-      "siteKey": "ancient-current:朔州",
+      "siteKey": "ancient-site:朔州:39.33160,112.43290",
       "lat": 39.3316,
       "lng": 112.4329,
       "parentName": "朔州",
       "currentPlace": "朔州",
-      "currentKey": "ancient-current:朔州"
+      "currentKey": "ancient-site:朔州:39.33160,112.43290"
     },
     {
       "name": "朔方",
@@ -13372,12 +13372,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 136,
-      "siteKey": "ancient-current:榆林",
+      "siteKey": "ancient-site:朔方:38.28000,109.74000",
       "lat": 38.28,
       "lng": 109.74,
       "parentName": "朔方",
-      "currentPlace": "榆林",
-      "currentKey": "ancient-current:榆林"
+      "currentPlace": "朔方",
+      "currentKey": "ancient-site:朔方:38.28000,109.74000"
     },
     {
       "name": "江陵 · 江陵 · 梁（萧铣）",
@@ -13392,12 +13392,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 137,
-      "siteKey": "ancient-current:荆州",
+      "siteKey": "ancient-site:江陵:30.35000,112.19000",
       "lat": 30.35,
       "lng": 112.19,
       "parentName": "江陵",
-      "currentPlace": "荆州",
-      "currentKey": "ancient-current:荆州"
+      "currentPlace": "江陵",
+      "currentKey": "ancient-site:江陵:30.35000,112.19000"
     },
     {
       "name": "乐寿",
@@ -13412,12 +13412,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 138,
-      "siteKey": "ancient-current:沧州",
+      "siteKey": "ancient-site:乐寿:38.19000,116.12000",
       "lat": 38.19,
       "lng": 116.12,
       "parentName": "乐寿",
-      "currentPlace": "沧州",
-      "currentKey": "ancient-current:沧州"
+      "currentPlace": "乐寿",
+      "currentKey": "ancient-site:乐寿:38.19000,116.12000"
     },
     {
       "name": "洛口/巩县 · 巩义",
@@ -13432,12 +13432,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 139,
-      "siteKey": "ancient-current:郑州",
+      "siteKey": "ancient-site:巩义:34.74900,112.98200",
       "lat": 34.749,
       "lng": 112.982,
       "parentName": "巩义",
-      "currentPlace": "郑州",
-      "currentKey": "ancient-current:郑州"
+      "currentPlace": "巩义",
+      "currentKey": "ancient-site:巩义:34.74900,112.98200"
     },
     {
       "name": "洛阳 · 洛阳 · 郑（王世充）",
@@ -13452,12 +13452,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 140,
-      "siteKey": "ancient-current:洛阳",
+      "siteKey": "ancient-site:洛阳:34.61970,112.45400",
       "lat": 34.6197,
       "lng": 112.454,
       "parentName": "洛阳",
       "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳"
+      "currentKey": "ancient-site:洛阳:34.61970,112.45400"
     },
     {
       "name": "豫章",
@@ -13472,12 +13472,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 141,
-      "siteKey": "ancient-current:南昌",
+      "siteKey": "ancient-site:豫章:28.68200,115.85790",
       "lat": 28.682,
       "lng": 115.8579,
       "parentName": "豫章",
-      "currentPlace": "南昌",
-      "currentKey": "ancient-current:南昌"
+      "currentPlace": "豫章",
+      "currentKey": "ancient-site:豫章:28.68200,115.85790"
     },
     {
       "name": "毗陵",
@@ -13492,12 +13492,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 142,
-      "siteKey": "ancient-current:常州",
+      "siteKey": "ancient-site:毗陵:31.81070,119.97410",
       "lat": 31.8107,
       "lng": 119.9741,
       "parentName": "毗陵",
-      "currentPlace": "常州",
-      "currentKey": "ancient-current:常州"
+      "currentPlace": "毗陵",
+      "currentKey": "ancient-site:毗陵:31.81070,119.97410"
     },
     {
       "name": "江都 · 扬州 · 吴（李子通）",
@@ -13512,12 +13512,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 143,
-      "siteKey": "ancient-current:扬州",
+      "siteKey": "ancient-site:扬州:32.39420,119.41290",
       "lat": 32.3942,
       "lng": 119.4129,
       "parentName": "扬州",
       "currentPlace": "扬州",
-      "currentKey": "ancient-current:扬州"
+      "currentKey": "ancient-site:扬州:32.39420,119.41290"
     },
     {
       "name": "长安 · 大兴城 · 唐",
@@ -13532,12 +13532,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 144,
-      "siteKey": "ancient-current:西安",
+      "siteKey": "ancient-site:大兴城:34.26000,108.95000",
       "lat": 34.26,
       "lng": 108.95,
       "parentName": "大兴城",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安"
+      "currentPlace": "大兴城",
+      "currentKey": "ancient-site:大兴城:34.26000,108.95000"
     },
     {
       "name": "洛阳 · 洛阳 · 唐",
@@ -13552,12 +13552,12 @@
       "confidence": "高",
       "categoryCode": "O",
       "sourceOrder": 145,
-      "siteKey": "ancient-current:洛阳",
+      "siteKey": "ancient-site:洛阳:34.61970,112.45400",
       "lat": 34.6197,
       "lng": 112.454,
       "parentName": "洛阳",
       "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳"
+      "currentKey": "ancient-site:洛阳:34.61970,112.45400"
     },
     {
       "name": "神都 · 洛阳",
@@ -13572,12 +13572,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 146,
-      "siteKey": "ancient-current:洛阳",
+      "siteKey": "ancient-site:洛阳:34.61970,112.45400",
       "lat": 34.6197,
       "lng": 112.454,
       "parentName": "洛阳",
       "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳"
+      "currentKey": "ancient-site:洛阳:34.61970,112.45400"
     },
     {
       "name": "长安 · 大兴城 · 武周",
@@ -13592,12 +13592,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 147,
-      "siteKey": "ancient-current:西安",
+      "siteKey": "ancient-site:大兴城:34.26000,108.95000",
       "lat": 34.26,
       "lng": 108.95,
       "parentName": "大兴城",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安"
+      "currentPlace": "大兴城",
+      "currentKey": "ancient-site:大兴城:34.26000,108.95000"
     },
     {
       "name": "长安 · 大兴城 · 唐（复辟）",
@@ -13612,12 +13612,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 148,
-      "siteKey": "ancient-current:西安",
+      "siteKey": "ancient-site:大兴城:34.26000,108.95000",
       "lat": 34.26,
       "lng": 108.95,
       "parentName": "大兴城",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安"
+      "currentPlace": "大兴城",
+      "currentKey": "ancient-site:大兴城:34.26000,108.95000"
     },
     {
       "name": "洛阳 · 洛阳 · 唐（复辟）",
@@ -13632,12 +13632,12 @@
       "confidence": "高",
       "categoryCode": "O",
       "sourceOrder": 149,
-      "siteKey": "ancient-current:洛阳",
+      "siteKey": "ancient-site:洛阳:34.61970,112.45400",
       "lat": 34.6197,
       "lng": 112.454,
       "parentName": "洛阳",
       "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳"
+      "currentKey": "ancient-site:洛阳:34.61970,112.45400"
     },
     {
       "name": "洛阳 · 洛阳 · 唐（复辟）",
@@ -13652,12 +13652,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 150,
-      "siteKey": "ancient-current:洛阳",
+      "siteKey": "ancient-site:洛阳:34.61970,112.45400",
       "lat": 34.6197,
       "lng": 112.454,
       "parentName": "洛阳",
       "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳"
+      "currentKey": "ancient-site:洛阳:34.61970,112.45400"
     },
     {
       "name": "洛阳 · 洛阳 · 大燕（安史）",
@@ -13672,12 +13672,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 151,
-      "siteKey": "ancient-current:洛阳",
+      "siteKey": "ancient-site:洛阳:34.61970,112.45400",
       "lat": 34.6197,
       "lng": 112.454,
       "parentName": "洛阳",
       "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳"
+      "currentKey": "ancient-site:洛阳:34.61970,112.45400"
     },
     {
       "name": "范阳 · 幽州",
@@ -13692,12 +13692,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 152,
-      "siteKey": "ancient-current:北京",
+      "siteKey": "ancient-site:幽州:39.89500,116.35000",
       "lat": 39.895,
       "lng": 116.35,
       "parentName": "幽州",
-      "currentPlace": "北京",
-      "currentKey": "ancient-current:北京"
+      "currentPlace": "幽州",
+      "currentKey": "ancient-site:幽州:39.89500,116.35000"
     },
     {
       "name": "长安 · 大兴城 · 秦（朱泚）",
@@ -13712,12 +13712,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 153,
-      "siteKey": "ancient-current:西安",
+      "siteKey": "ancient-site:大兴城:34.26000,108.95000",
       "lat": 34.26,
       "lng": 108.95,
       "parentName": "大兴城",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安"
+      "currentPlace": "大兴城",
+      "currentKey": "ancient-site:大兴城:34.26000,108.95000"
     },
     {
       "name": "汴州",
@@ -13732,12 +13732,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 154,
-      "siteKey": "ancient-current:开封",
+      "siteKey": "ancient-site:汴州:34.79730,114.30760",
       "lat": 34.7973,
       "lng": 114.3076,
       "parentName": "开封",
-      "currentPlace": "开封",
-      "currentKey": "ancient-current:开封"
+      "currentPlace": "汴州",
+      "currentKey": "ancient-site:汴州:34.79730,114.30760"
     },
     {
       "name": "长安 · 大兴城 · 大齐（黄巢）",
@@ -13752,12 +13752,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 155,
-      "siteKey": "ancient-current:西安",
+      "siteKey": "ancient-site:大兴城:34.26000,108.95000",
       "lat": 34.26,
       "lng": 108.95,
       "parentName": "大兴城",
-      "currentPlace": "西安",
-      "currentKey": "ancient-current:西安"
+      "currentPlace": "大兴城",
+      "currentKey": "ancient-site:大兴城:34.26000,108.95000"
     },
     {
       "name": "卒本/纥升骨 · 五女山城",
@@ -13772,12 +13772,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 156,
-      "siteKey": "ancient-current:本溪",
+      "siteKey": "ancient-site:五女山城:41.32300,125.42100",
       "lat": 41.323,
       "lng": 125.421,
       "parentName": "五女山城",
-      "currentPlace": "本溪",
-      "currentKey": "ancient-current:本溪"
+      "currentPlace": "五女山城",
+      "currentKey": "ancient-site:五女山城:41.32300,125.42100"
     },
     {
       "name": "国内城 · 集安国内城",
@@ -13792,12 +13792,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 157,
-      "siteKey": "ancient-current:通化",
+      "siteKey": "ancient-site:集安国内城:41.12500,126.19500",
       "lat": 41.125,
       "lng": 126.195,
       "parentName": "集安国内城",
-      "currentPlace": "通化",
-      "currentKey": "ancient-current:通化"
+      "currentPlace": "集安国内城",
+      "currentKey": "ancient-site:集安国内城:41.12500,126.19500"
     },
     {
       "name": "丸都山城 · 集安丸都山城",
@@ -13812,12 +13812,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 158,
-      "siteKey": "ancient-current:通化",
+      "siteKey": "ancient-site:集安丸都山城:41.15800,126.15000",
       "lat": 41.158,
       "lng": 126.15,
       "parentName": "集安丸都山城",
-      "currentPlace": "通化",
-      "currentKey": "ancient-current:通化"
+      "currentPlace": "集安丸都山城",
+      "currentKey": "ancient-site:集安丸都山城:41.15800,126.15000"
     },
     {
       "name": "平壤",
@@ -13832,12 +13832,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 159,
-      "siteKey": "ancient-current:朝鲜民主主义人民共和国平壤",
+      "siteKey": "ancient-site:平壤:39.03920,125.76250",
       "lat": 39.0392,
       "lng": 125.7625,
       "parentName": "平壤",
-      "currentPlace": "朝鲜民主主义人民共和国平壤",
-      "currentKey": "ancient-current:朝鲜民主主义人民共和国平壤"
+      "currentPlace": "平壤",
+      "currentKey": "ancient-site:平壤:39.03920,125.76250"
     },
     {
       "name": "高昌 · 吐鲁番",
@@ -13852,12 +13852,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 160,
-      "siteKey": "ancient-current:吐鲁番",
+      "siteKey": "ancient-site:吐鲁番:42.95130,89.18950",
       "lat": 42.9513,
       "lng": 89.1895,
       "parentName": "吐鲁番",
       "currentPlace": "吐鲁番",
-      "currentKey": "ancient-current:吐鲁番"
+      "currentKey": "ancient-site:吐鲁番:42.95130,89.18950"
     },
     {
       "name": "高昌/西州 · 吐鲁番",
@@ -13872,12 +13872,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 161,
-      "siteKey": "ancient-current:吐鲁番",
+      "siteKey": "ancient-site:吐鲁番:42.95130,89.18950",
       "lat": 42.9513,
       "lng": 89.1895,
       "parentName": "吐鲁番",
       "currentPlace": "吐鲁番",
-      "currentKey": "ancient-current:吐鲁番"
+      "currentKey": "ancient-site:吐鲁番:42.95130,89.18950"
     },
     {
       "name": "延城 · 龟兹",
@@ -13892,12 +13892,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 162,
-      "siteKey": "ancient-current:阿克苏地区库车",
+      "siteKey": "ancient-site:龟兹:41.71700,82.96200",
       "lat": 41.717,
       "lng": 82.962,
       "parentName": "龟兹",
-      "currentPlace": "阿克苏地区库车",
-      "currentKey": "ancient-current:阿克苏地区库车"
+      "currentPlace": "龟兹",
+      "currentKey": "ancient-site:龟兹:41.71700,82.96200"
     },
     {
       "name": "西城 · 于阗",
@@ -13912,12 +13912,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 163,
-      "siteKey": "ancient-current:和田地区和田",
+      "siteKey": "ancient-site:于阗:37.11200,79.91300",
       "lat": 37.112,
       "lng": 79.913,
       "parentName": "于阗",
-      "currentPlace": "和田地区和田",
-      "currentKey": "ancient-current:和田地区和田"
+      "currentPlace": "于阗",
+      "currentKey": "ancient-site:于阗:37.11200,79.91300"
     },
     {
       "name": "员渠城 · 焉耆",
@@ -13932,12 +13932,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 164,
-      "siteKey": "ancient-current:巴",
+      "siteKey": "ancient-site:焉耆:42.05900,86.57400",
       "lat": 42.059,
       "lng": 86.574,
       "parentName": "焉耆",
-      "currentPlace": "巴",
-      "currentKey": "ancient-current:巴"
+      "currentPlace": "焉耆",
+      "currentKey": "ancient-site:焉耆:42.05900,86.57400"
     },
     {
       "name": "疏勒城 · 喀什",
@@ -13952,12 +13952,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 165,
-      "siteKey": "ancient-current:喀什",
+      "siteKey": "ancient-site:喀什:39.47040,75.98980",
       "lat": 39.4704,
       "lng": 75.9898,
       "parentName": "喀什",
       "currentPlace": "喀什",
-      "currentKey": "ancient-current:喀什"
+      "currentKey": "ancient-site:喀什:39.47040,75.98980"
     },
     {
       "name": "逻些 · 拉萨",
@@ -13972,12 +13972,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 166,
-      "siteKey": "ancient-current:拉萨",
+      "siteKey": "ancient-site:拉萨:29.65200,91.17210",
       "lat": 29.652,
       "lng": 91.1721,
       "parentName": "拉萨",
       "currentPlace": "拉萨",
-      "currentKey": "ancient-current:拉萨"
+      "currentKey": "ancient-site:拉萨:29.65200,91.17210"
     },
     {
       "name": "蒙舍 · 巍山",
@@ -13992,12 +13992,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 167,
-      "siteKey": "ancient-current:大理",
+      "siteKey": "ancient-site:巍山:25.22700,100.30700",
       "lat": 25.227,
       "lng": 100.307,
       "parentName": "巍山",
-      "currentPlace": "大理",
-      "currentKey": "ancient-current:大理"
+      "currentPlace": "巍山",
+      "currentKey": "ancient-site:巍山:25.22700,100.30700"
     },
     {
       "name": "太和城",
@@ -14012,12 +14012,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 168,
-      "siteKey": "ancient-current:大理",
+      "siteKey": "ancient-site:太和城:25.64000,100.22000",
       "lat": 25.64,
       "lng": 100.22,
       "parentName": "太和城",
-      "currentPlace": "大理",
-      "currentKey": "ancient-current:大理"
+      "currentPlace": "太和城",
+      "currentKey": "ancient-site:太和城:25.64000,100.22000"
     },
     {
       "name": "羊苴咩城 · 羊苴咩城 · 南诏",
@@ -14032,12 +14032,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 169,
-      "siteKey": "ancient-current:大理",
+      "siteKey": "ancient-site:羊苴咩城:25.70000,100.16000",
       "lat": 25.7,
       "lng": 100.16,
       "parentName": "羊苴咩城",
-      "currentPlace": "大理",
-      "currentKey": "ancient-current:大理"
+      "currentPlace": "羊苴咩城",
+      "currentKey": "ancient-site:羊苴咩城:25.70000,100.16000"
     },
     {
       "name": "旧国 · 敦化",
@@ -14052,12 +14052,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 170,
-      "siteKey": "ancient-current:延边州敦化",
+      "siteKey": "ancient-site:敦化:43.37270,128.23200",
       "lat": 43.3727,
       "lng": 128.232,
       "parentName": "敦化",
-      "currentPlace": "延边州敦化",
-      "currentKey": "ancient-current:延边州敦化"
+      "currentPlace": "敦化",
+      "currentKey": "ancient-site:敦化:43.37270,128.23200"
     },
     {
       "name": "中京显德府 · 和龙",
@@ -14072,12 +14072,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 171,
-      "siteKey": "ancient-current:延边州和龙",
+      "siteKey": "ancient-site:和龙:42.54670,129.01000",
       "lat": 42.5467,
       "lng": 129.01,
       "parentName": "和龙",
-      "currentPlace": "延边州和龙",
-      "currentKey": "ancient-current:延边州和龙"
+      "currentPlace": "和龙",
+      "currentKey": "ancient-site:和龙:42.54670,129.01000"
     },
     {
       "name": "上京龙泉府 · 宁安上京 · 渤海国",
@@ -14092,12 +14092,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 172,
-      "siteKey": "ancient-current:牡丹江",
+      "siteKey": "ancient-site:宁安上京:44.11500,129.21000",
       "lat": 44.115,
       "lng": 129.21,
       "parentName": "宁安上京",
-      "currentPlace": "牡丹江",
-      "currentKey": "ancient-current:牡丹江"
+      "currentPlace": "宁安上京",
+      "currentKey": "ancient-site:宁安上京:44.11500,129.21000"
     },
     {
       "name": "东京龙原府 · 珲春",
@@ -14112,12 +14112,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 173,
-      "siteKey": "ancient-current:延边州珲春",
+      "siteKey": "ancient-site:珲春:42.86250,130.36500",
       "lat": 42.8625,
       "lng": 130.365,
       "parentName": "珲春",
-      "currentPlace": "延边州珲春",
-      "currentKey": "ancient-current:延边州珲春"
+      "currentPlace": "珲春",
+      "currentKey": "ancient-site:珲春:42.86250,130.36500"
     },
     {
       "name": "上京龙泉府 · 宁安上京 · 渤海国",
@@ -14132,12 +14132,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 174,
-      "siteKey": "ancient-current:牡丹江",
+      "siteKey": "ancient-site:宁安上京:44.11500,129.21000",
       "lat": 44.115,
       "lng": 129.21,
       "parentName": "宁安上京",
-      "currentPlace": "牡丹江",
-      "currentKey": "ancient-current:牡丹江"
+      "currentPlace": "宁安上京",
+      "currentKey": "ancient-site:宁安上京:44.11500,129.21000"
     },
     {
       "name": "于都斤山 · 鄂尔浑河谷 · 东突厥",
@@ -14152,12 +14152,12 @@
       "confidence": "低",
       "categoryCode": "O",
       "sourceOrder": 175,
-      "siteKey": "ancient-current:鄂尔浑河谷",
+      "siteKey": "ancient-site:鄂尔浑河谷:47.20000,102.85000",
       "lat": 47.2,
       "lng": 102.85,
       "parentName": "鄂尔浑河谷",
       "currentPlace": "鄂尔浑河谷",
-      "currentKey": "ancient-current:鄂尔浑河谷"
+      "currentKey": "ancient-site:鄂尔浑河谷:47.20000,102.85000"
     },
     {
       "name": "于都斤山 · 鄂尔浑河谷 · 后突厥",
@@ -14172,12 +14172,12 @@
       "confidence": "低",
       "categoryCode": "O",
       "sourceOrder": 176,
-      "siteKey": "ancient-current:鄂尔浑河谷",
+      "siteKey": "ancient-site:鄂尔浑河谷:47.20000,102.85000",
       "lat": 47.2,
       "lng": 102.85,
       "parentName": "鄂尔浑河谷",
       "currentPlace": "鄂尔浑河谷",
-      "currentKey": "ancient-current:鄂尔浑河谷"
+      "currentKey": "ancient-site:鄂尔浑河谷:47.20000,102.85000"
     },
     {
       "name": "斡耳朵八里",
@@ -14192,12 +14192,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 177,
-      "siteKey": "ancient-current:斡耳朵八里",
+      "siteKey": "ancient-site:斡耳朵八里:47.19800,102.83300",
       "lat": 47.198,
       "lng": 102.833,
       "parentName": "斡耳朵八里",
       "currentPlace": "斡耳朵八里",
-      "currentKey": "ancient-current:斡耳朵八里"
+      "currentKey": "ancient-site:斡耳朵八里:47.19800,102.83300"
     },
     {
       "name": "东都开封府 · 开封 · 后梁",
@@ -14212,12 +14212,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 178,
-      "siteKey": "ancient-current:开封",
+      "siteKey": "ancient-site:开封:34.79730,114.30760",
       "lat": 34.7973,
       "lng": 114.3076,
       "parentName": "开封",
       "currentPlace": "开封",
-      "currentKey": "ancient-current:开封"
+      "currentKey": "ancient-site:开封:34.79730,114.30760"
     },
     {
       "name": "西都河南府 · 洛阳",
@@ -14232,12 +14232,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 179,
-      "siteKey": "ancient-current:洛阳",
+      "siteKey": "ancient-site:洛阳:34.61970,112.45400",
       "lat": 34.6197,
       "lng": 112.454,
       "parentName": "洛阳",
       "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳"
+      "currentKey": "ancient-site:洛阳:34.61970,112.45400"
     },
     {
       "name": "东都开封府 · 开封 · 后梁",
@@ -14252,12 +14252,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 180,
-      "siteKey": "ancient-current:开封",
+      "siteKey": "ancient-site:开封:34.79730,114.30760",
       "lat": 34.7973,
       "lng": 114.3076,
       "parentName": "开封",
       "currentPlace": "开封",
-      "currentKey": "ancient-current:开封"
+      "currentKey": "ancient-site:开封:34.79730,114.30760"
     },
     {
       "name": "洛京/东都 · 洛阳",
@@ -14272,12 +14272,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 181,
-      "siteKey": "ancient-current:洛阳",
+      "siteKey": "ancient-site:洛阳:34.61970,112.45400",
       "lat": 34.6197,
       "lng": 112.454,
       "parentName": "洛阳",
       "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳"
+      "currentKey": "ancient-site:洛阳:34.61970,112.45400"
     },
     {
       "name": "太原府 · 晋阳 · 后唐",
@@ -14292,12 +14292,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 182,
-      "siteKey": "ancient-current:太原",
+      "siteKey": "ancient-site:晋阳:37.70500,112.44000",
       "lat": 37.705,
       "lng": 112.44,
       "parentName": "晋阳",
-      "currentPlace": "太原",
-      "currentKey": "ancient-current:太原"
+      "currentPlace": "晋阳",
+      "currentKey": "ancient-site:晋阳:37.70500,112.44000"
     },
     {
       "name": "西京洛阳府 · 洛阳",
@@ -14312,12 +14312,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 183,
-      "siteKey": "ancient-current:洛阳",
+      "siteKey": "ancient-site:洛阳:34.61970,112.45400",
       "lat": 34.6197,
       "lng": 112.454,
       "parentName": "洛阳",
       "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳"
+      "currentKey": "ancient-site:洛阳:34.61970,112.45400"
     },
     {
       "name": "东京开封府 · 开封 · 后晋",
@@ -14332,12 +14332,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 184,
-      "siteKey": "ancient-current:开封",
+      "siteKey": "ancient-site:开封:34.79730,114.30760",
       "lat": 34.7973,
       "lng": 114.3076,
       "parentName": "开封",
       "currentPlace": "开封",
-      "currentKey": "ancient-current:开封"
+      "currentKey": "ancient-site:开封:34.79730,114.30760"
     },
     {
       "name": "太原府 · 晋阳 · 后晋",
@@ -14352,12 +14352,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 185,
-      "siteKey": "ancient-current:太原",
+      "siteKey": "ancient-site:晋阳:37.70500,112.44000",
       "lat": 37.705,
       "lng": 112.44,
       "parentName": "晋阳",
-      "currentPlace": "太原",
-      "currentKey": "ancient-current:太原"
+      "currentPlace": "晋阳",
+      "currentKey": "ancient-site:晋阳:37.70500,112.44000"
     },
     {
       "name": "东京开封府 · 开封 · 后汉",
@@ -14372,12 +14372,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 186,
-      "siteKey": "ancient-current:开封",
+      "siteKey": "ancient-site:开封:34.79730,114.30760",
       "lat": 34.7973,
       "lng": 114.3076,
       "parentName": "开封",
       "currentPlace": "开封",
-      "currentKey": "ancient-current:开封"
+      "currentKey": "ancient-site:开封:34.79730,114.30760"
     },
     {
       "name": "太原府 · 晋阳 · 后汉",
@@ -14392,12 +14392,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 187,
-      "siteKey": "ancient-current:太原",
+      "siteKey": "ancient-site:晋阳:37.70500,112.44000",
       "lat": 37.705,
       "lng": 112.44,
       "parentName": "晋阳",
-      "currentPlace": "太原",
-      "currentKey": "ancient-current:太原"
+      "currentPlace": "晋阳",
+      "currentKey": "ancient-site:晋阳:37.70500,112.44000"
     },
     {
       "name": "东京开封府 · 开封 · 后周",
@@ -14412,12 +14412,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 188,
-      "siteKey": "ancient-current:开封",
+      "siteKey": "ancient-site:开封:34.79730,114.30760",
       "lat": 34.7973,
       "lng": 114.3076,
       "parentName": "开封",
       "currentPlace": "开封",
-      "currentKey": "ancient-current:开封"
+      "currentKey": "ancient-site:开封:34.79730,114.30760"
     },
     {
       "name": "广陵 · 扬州",
@@ -14432,12 +14432,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 189,
-      "siteKey": "ancient-current:扬州",
+      "siteKey": "ancient-site:扬州:32.39420,119.41290",
       "lat": 32.3942,
       "lng": 119.4129,
       "parentName": "扬州",
       "currentPlace": "扬州",
-      "currentKey": "ancient-current:扬州"
+      "currentKey": "ancient-site:扬州:32.39420,119.41290"
     },
     {
       "name": "金陵 · 南京",
@@ -14452,12 +14452,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 190,
-      "siteKey": "ancient-current:南京",
+      "siteKey": "ancient-site:南京:32.06030,118.79690",
       "lat": 32.0603,
       "lng": 118.7969,
       "parentName": "南京",
       "currentPlace": "南京",
-      "currentKey": "ancient-current:南京"
+      "currentKey": "ancient-site:南京:32.06030,118.79690"
     },
     {
       "name": "江宁府·金陵 · 南京",
@@ -14472,12 +14472,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 191,
-      "siteKey": "ancient-current:南京",
+      "siteKey": "ancient-site:南京:32.06030,118.79690",
       "lat": 32.0603,
       "lng": 118.7969,
       "parentName": "南京",
       "currentPlace": "南京",
-      "currentKey": "ancient-current:南京"
+      "currentKey": "ancient-site:南京:32.06030,118.79690"
     },
     {
       "name": "南昌府 · 南昌",
@@ -14492,12 +14492,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 192,
-      "siteKey": "ancient-current:南昌",
+      "siteKey": "ancient-site:南昌:28.68200,115.85790",
       "lat": 28.682,
       "lng": 115.8579,
       "parentName": "豫章",
       "currentPlace": "南昌",
-      "currentKey": "ancient-current:南昌"
+      "currentKey": "ancient-site:南昌:28.68200,115.85790"
     },
     {
       "name": "西府·钱塘 · 杭州",
@@ -14512,12 +14512,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 193,
-      "siteKey": "ancient-current:杭州",
+      "siteKey": "ancient-site:杭州:30.27410,120.15510",
       "lat": 30.2741,
       "lng": 120.1551,
       "parentName": "杭州",
       "currentPlace": "杭州",
-      "currentKey": "ancient-current:杭州"
+      "currentKey": "ancient-site:杭州:30.27410,120.15510"
     },
     {
       "name": "越州 · 绍兴",
@@ -14532,12 +14532,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 194,
-      "siteKey": "ancient-current:绍兴",
+      "siteKey": "ancient-site:绍兴:30.03030,120.58020",
       "lat": 30.0303,
       "lng": 120.5802,
       "parentName": "绍兴",
       "currentPlace": "绍兴",
-      "currentKey": "ancient-current:绍兴"
+      "currentKey": "ancient-site:绍兴:30.03030,120.58020"
     },
     {
       "name": "长乐府 · 福州",
@@ -14552,12 +14552,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 195,
-      "siteKey": "ancient-current:福州",
+      "siteKey": "ancient-site:福州:26.07450,119.29650",
       "lat": 26.0745,
       "lng": 119.2965,
       "parentName": "福州",
       "currentPlace": "福州",
-      "currentKey": "ancient-current:福州"
+      "currentKey": "ancient-site:福州:26.07450,119.29650"
     },
     {
       "name": "建州 · 建瓯",
@@ -14572,12 +14572,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 196,
-      "siteKey": "ancient-current:南平",
+      "siteKey": "ancient-site:建瓯:27.02270,118.30490",
       "lat": 27.0227,
       "lng": 118.3049,
       "parentName": "建瓯",
-      "currentPlace": "南平",
-      "currentKey": "ancient-current:南平"
+      "currentPlace": "建瓯",
+      "currentKey": "ancient-site:建瓯:27.02270,118.30490"
     },
     {
       "name": "江陵府 · 荆南江陵",
@@ -14592,12 +14592,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 197,
-      "siteKey": "ancient-current:荆州",
+      "siteKey": "ancient-site:荆南江陵:30.35000,112.19000",
       "lat": 30.35,
       "lng": 112.19,
       "parentName": "江陵",
-      "currentPlace": "荆州",
-      "currentKey": "ancient-current:荆州"
+      "currentPlace": "荆南江陵",
+      "currentKey": "ancient-site:荆南江陵:30.35000,112.19000"
     },
     {
       "name": "长沙府 · 长沙",
@@ -14612,12 +14612,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 198,
-      "siteKey": "ancient-current:长沙",
+      "siteKey": "ancient-site:长沙:28.22820,112.93880",
       "lat": 28.2282,
       "lng": 112.9388,
       "parentName": "长沙",
       "currentPlace": "长沙",
-      "currentKey": "ancient-current:长沙"
+      "currentKey": "ancient-site:长沙:28.22820,112.93880"
     },
     {
       "name": "兴王府 · 广州",
@@ -14632,12 +14632,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 199,
-      "siteKey": "ancient-current:广州",
+      "siteKey": "ancient-site:广州:23.12910,113.26440",
       "lat": 23.1291,
       "lng": 113.2644,
       "parentName": "广州",
       "currentPlace": "广州",
-      "currentKey": "ancient-current:广州"
+      "currentKey": "ancient-site:广州:23.12910,113.26440"
     },
     {
       "name": "成都府 · 成都 · 前蜀",
@@ -14652,12 +14652,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 200,
-      "siteKey": "ancient-current:成都",
+      "siteKey": "ancient-site:成都:30.57280,104.06680",
       "lat": 30.5728,
       "lng": 104.0668,
       "parentName": "成都",
       "currentPlace": "成都",
-      "currentKey": "ancient-current:成都"
+      "currentKey": "ancient-site:成都:30.57280,104.06680"
     },
     {
       "name": "成都府 · 成都 · 后蜀",
@@ -14672,12 +14672,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 201,
-      "siteKey": "ancient-current:成都",
+      "siteKey": "ancient-site:成都:30.57280,104.06680",
       "lat": 30.5728,
       "lng": 104.0668,
       "parentName": "成都",
       "currentPlace": "成都",
-      "currentKey": "ancient-current:成都"
+      "currentKey": "ancient-site:成都:30.57280,104.06680"
     },
     {
       "name": "太原府 · 晋阳 · 北汉",
@@ -14692,12 +14692,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 202,
-      "siteKey": "ancient-current:太原",
+      "siteKey": "ancient-site:晋阳:37.70500,112.44000",
       "lat": 37.705,
       "lng": 112.44,
       "parentName": "晋阳",
-      "currentPlace": "太原",
-      "currentKey": "ancient-current:太原"
+      "currentPlace": "晋阳",
+      "currentKey": "ancient-site:晋阳:37.70500,112.44000"
     },
     {
       "name": "幽州",
@@ -14712,12 +14712,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 203,
-      "siteKey": "ancient-current:北京",
+      "siteKey": "ancient-site:幽州:39.89500,116.35000",
       "lat": 39.895,
       "lng": 116.35,
       "parentName": "幽州",
-      "currentPlace": "北京",
-      "currentKey": "ancient-current:北京"
+      "currentPlace": "幽州",
+      "currentKey": "ancient-site:幽州:39.89500,116.35000"
     },
     {
       "name": "凤翔 · 雍城",
@@ -14732,12 +14732,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 204,
-      "siteKey": "ancient-current:宝鸡",
+      "siteKey": "ancient-site:雍城:34.52100,107.40000",
       "lat": 34.521,
       "lng": 107.4,
       "parentName": "雍城",
-      "currentPlace": "宝鸡",
-      "currentKey": "ancient-current:宝鸡"
+      "currentPlace": "雍城",
+      "currentKey": "ancient-site:雍城:34.52100,107.40000"
     },
     {
       "name": "东京开封府 · 开封 · 北宋",
@@ -14752,12 +14752,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 205,
-      "siteKey": "ancient-current:开封",
+      "siteKey": "ancient-site:开封:34.79730,114.30760",
       "lat": 34.7973,
       "lng": 114.3076,
       "parentName": "开封",
       "currentPlace": "开封",
-      "currentKey": "ancient-current:开封"
+      "currentKey": "ancient-site:开封:34.79730,114.30760"
     },
     {
       "name": "河南府 · 洛阳",
@@ -14772,12 +14772,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 206,
-      "siteKey": "ancient-current:洛阳",
+      "siteKey": "ancient-site:洛阳:34.61970,112.45400",
       "lat": 34.6197,
       "lng": 112.454,
       "parentName": "洛阳",
       "currentPlace": "洛阳",
-      "currentKey": "ancient-current:洛阳"
+      "currentKey": "ancient-site:洛阳:34.61970,112.45400"
     },
     {
       "name": "应天府 · 商丘",
@@ -14792,12 +14792,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 207,
-      "siteKey": "ancient-current:商丘",
+      "siteKey": "ancient-site:商丘:34.41400,115.65600",
       "lat": 34.414,
       "lng": 115.656,
       "parentName": "商丘",
       "currentPlace": "商丘",
-      "currentKey": "ancient-current:商丘"
+      "currentKey": "ancient-site:商丘:34.41400,115.65600"
     },
     {
       "name": "大名府 · 大名",
@@ -14812,12 +14812,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 208,
-      "siteKey": "ancient-current:邯郸",
+      "siteKey": "ancient-site:大名:36.28500,115.14700",
       "lat": 36.285,
       "lng": 115.147,
       "parentName": "大名",
-      "currentPlace": "邯郸",
-      "currentKey": "ancient-current:邯郸"
+      "currentPlace": "大名",
+      "currentKey": "ancient-site:大名:36.28500,115.14700"
     },
     {
       "name": "南京应天府 · 商丘",
@@ -14832,12 +14832,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 209,
-      "siteKey": "ancient-current:商丘",
+      "siteKey": "ancient-site:商丘:34.41400,115.65600",
       "lat": 34.414,
       "lng": 115.656,
       "parentName": "商丘",
       "currentPlace": "商丘",
-      "currentKey": "ancient-current:商丘"
+      "currentKey": "ancient-site:商丘:34.41400,115.65600"
     },
     {
       "name": "扬州",
@@ -14852,12 +14852,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 210,
-      "siteKey": "ancient-current:扬州",
+      "siteKey": "ancient-site:扬州:32.39420,119.41290",
       "lat": 32.3942,
       "lng": 119.4129,
       "parentName": "扬州",
       "currentPlace": "扬州",
-      "currentKey": "ancient-current:扬州"
+      "currentKey": "ancient-site:扬州:32.39420,119.41290"
     },
     {
       "name": "建康 · 南京 · 南宋",
@@ -14872,12 +14872,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 211,
-      "siteKey": "ancient-current:南京",
+      "siteKey": "ancient-site:南京:32.06030,118.79690",
       "lat": 32.0603,
       "lng": 118.7969,
       "parentName": "南京",
       "currentPlace": "南京",
-      "currentKey": "ancient-current:南京"
+      "currentKey": "ancient-site:南京:32.06030,118.79690"
     },
     {
       "name": "临安府 · 杭州",
@@ -14892,12 +14892,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 212,
-      "siteKey": "ancient-current:杭州",
+      "siteKey": "ancient-site:杭州:30.27410,120.15510",
       "lat": 30.2741,
       "lng": 120.1551,
       "parentName": "杭州",
       "currentPlace": "杭州",
-      "currentKey": "ancient-current:杭州"
+      "currentKey": "ancient-site:杭州:30.27410,120.15510"
     },
     {
       "name": "福州 · 福州 · 南宋",
@@ -14912,12 +14912,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 213,
-      "siteKey": "ancient-current:福州",
+      "siteKey": "ancient-site:福州:26.07450,119.29650",
       "lat": 26.0745,
       "lng": 119.2965,
       "parentName": "福州",
       "currentPlace": "福州",
-      "currentKey": "ancient-current:福州"
+      "currentKey": "ancient-site:福州:26.07450,119.29650"
     },
     {
       "name": "广州 · 广州 · 南宋",
@@ -14932,12 +14932,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 214,
-      "siteKey": "ancient-current:广州",
+      "siteKey": "ancient-site:广州:23.12910,113.26440",
       "lat": 23.1291,
       "lng": 113.2644,
       "parentName": "广州",
       "currentPlace": "广州",
-      "currentKey": "ancient-current:广州"
+      "currentKey": "ancient-site:广州:23.12910,113.26440"
     },
     {
       "name": "临潢府 · 上京临潢",
@@ -14952,12 +14952,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 215,
-      "siteKey": "ancient-current:赤峰",
+      "siteKey": "ancient-site:上京临潢:43.55700,119.34300",
       "lat": 43.557,
       "lng": 119.343,
       "parentName": "上京临潢",
-      "currentPlace": "赤峰",
-      "currentKey": "ancient-current:赤峰"
+      "currentPlace": "上京临潢",
+      "currentKey": "ancient-site:上京临潢:43.55700,119.34300"
     },
     {
       "name": "大定府 · 中京大定 · 辽",
@@ -14972,12 +14972,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 216,
-      "siteKey": "ancient-current:赤峰",
+      "siteKey": "ancient-site:中京大定:41.60000,119.33000",
       "lat": 41.6,
       "lng": 119.33,
       "parentName": "中京大定",
-      "currentPlace": "赤峰",
-      "currentKey": "ancient-current:赤峰"
+      "currentPlace": "中京大定",
+      "currentKey": "ancient-site:中京大定:41.60000,119.33000"
     },
     {
       "name": "析津府 · 南京析津",
@@ -14992,12 +14992,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 217,
-      "siteKey": "ancient-current:北京",
+      "siteKey": "ancient-site:南京析津:39.89500,116.35000",
       "lat": 39.895,
       "lng": 116.35,
       "parentName": "幽州",
-      "currentPlace": "北京",
-      "currentKey": "ancient-current:北京"
+      "currentPlace": "南京析津",
+      "currentKey": "ancient-site:南京析津:39.89500,116.35000"
     },
     {
       "name": "辽阳府 · 东京辽阳",
@@ -15012,12 +15012,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 218,
-      "siteKey": "ancient-current:辽阳",
+      "siteKey": "ancient-site:东京辽阳:41.26940,123.17280",
       "lat": 41.2694,
       "lng": 123.1728,
       "parentName": "辽阳",
-      "currentPlace": "辽阳",
-      "currentKey": "ancient-current:辽阳"
+      "currentPlace": "东京辽阳",
+      "currentKey": "ancient-site:东京辽阳:41.26940,123.17280"
     },
     {
       "name": "大同府 · 西京大同",
@@ -15032,12 +15032,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 219,
-      "siteKey": "ancient-current:大同",
+      "siteKey": "ancient-site:西京大同:40.07680,113.30010",
       "lat": 40.0768,
       "lng": 113.3001,
       "parentName": "西京大同",
-      "currentPlace": "大同",
-      "currentKey": "ancient-current:大同"
+      "currentPlace": "西京大同",
+      "currentKey": "ancient-site:西京大同:40.07680,113.30010"
     },
     {
       "name": "天福城 · 宁安上京",
@@ -15052,12 +15052,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 220,
-      "siteKey": "ancient-current:牡丹江",
+      "siteKey": "ancient-site:宁安上京:44.11500,129.21000",
       "lat": 44.115,
       "lng": 129.21,
       "parentName": "宁安上京",
-      "currentPlace": "牡丹江",
-      "currentKey": "ancient-current:牡丹江"
+      "currentPlace": "宁安上京",
+      "currentKey": "ancient-site:宁安上京:44.11500,129.21000"
     },
     {
       "name": "辽阳",
@@ -15072,12 +15072,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 221,
-      "siteKey": "ancient-current:辽阳",
+      "siteKey": "ancient-site:辽阳:41.26940,123.17280",
       "lat": 41.2694,
       "lng": 123.1728,
       "parentName": "辽阳",
       "currentPlace": "辽阳",
-      "currentKey": "ancient-current:辽阳"
+      "currentKey": "ancient-site:辽阳:41.26940,123.17280"
     },
     {
       "name": "兴庆府",
@@ -15092,12 +15092,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 222,
-      "siteKey": "ancient-current:银川",
+      "siteKey": "ancient-site:兴庆府:38.48720,106.23090",
       "lat": 38.4872,
       "lng": 106.2309,
       "parentName": "兴庆府",
-      "currentPlace": "银川",
-      "currentKey": "ancient-current:银川"
+      "currentPlace": "兴庆府",
+      "currentKey": "ancient-site:兴庆府:38.48720,106.23090"
     },
     {
       "name": "羊苴咩城 · 羊苴咩城 · 大理国",
@@ -15112,12 +15112,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 223,
-      "siteKey": "ancient-current:大理",
+      "siteKey": "ancient-site:羊苴咩城:25.70000,100.16000",
       "lat": 25.7,
       "lng": 100.16,
       "parentName": "羊苴咩城",
-      "currentPlace": "大理",
-      "currentKey": "ancient-current:大理"
+      "currentPlace": "羊苴咩城",
+      "currentKey": "ancient-site:羊苴咩城:25.70000,100.16000"
     },
     {
       "name": "上京会宁府 · 会宁府",
@@ -15132,12 +15132,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 224,
-      "siteKey": "ancient-current:哈尔滨",
+      "siteKey": "ancient-site:会宁府:45.54000,126.97000",
       "lat": 45.54,
       "lng": 126.97,
       "parentName": "会宁府",
-      "currentPlace": "哈尔滨",
-      "currentKey": "ancient-current:哈尔滨"
+      "currentPlace": "会宁府",
+      "currentKey": "ancient-site:会宁府:45.54000,126.97000"
     },
     {
       "name": "中都大兴府 · 北京",
@@ -15152,12 +15152,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 225,
-      "siteKey": "ancient-current:北京",
+      "siteKey": "ancient-site:北京:39.90420,116.40740",
       "lat": 39.9042,
       "lng": 116.4074,
       "parentName": "北京",
       "currentPlace": "北京",
-      "currentKey": "ancient-current:北京"
+      "currentKey": "ancient-site:北京:39.90420,116.40740"
     },
     {
       "name": "南京开封府 · 开封",
@@ -15172,12 +15172,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 226,
-      "siteKey": "ancient-current:开封",
+      "siteKey": "ancient-site:开封:34.79730,114.30760",
       "lat": 34.7973,
       "lng": 114.3076,
       "parentName": "开封",
       "currentPlace": "开封",
-      "currentKey": "ancient-current:开封"
+      "currentKey": "ancient-site:开封:34.79730,114.30760"
     },
     {
       "name": "蔡州 · 汝南",
@@ -15192,12 +15192,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 227,
-      "siteKey": "ancient-current:驻马店",
+      "siteKey": "ancient-site:汝南:33.00600,114.36200",
       "lat": 33.006,
       "lng": 114.362,
       "parentName": "汝南",
-      "currentPlace": "驻马店",
-      "currentKey": "ancient-current:驻马店"
+      "currentPlace": "汝南",
+      "currentKey": "ancient-site:汝南:33.00600,114.36200"
     },
     {
       "name": "辽阳府 · 辽阳",
@@ -15212,12 +15212,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 228,
-      "siteKey": "ancient-current:辽阳",
+      "siteKey": "ancient-site:辽阳:41.26940,123.17280",
       "lat": 41.2694,
       "lng": 123.1728,
       "parentName": "辽阳",
       "currentPlace": "辽阳",
-      "currentKey": "ancient-current:辽阳"
+      "currentKey": "ancient-site:辽阳:41.26940,123.17280"
     },
     {
       "name": "大定府 · 中京大定 · 金",
@@ -15232,12 +15232,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 229,
-      "siteKey": "ancient-current:赤峰",
+      "siteKey": "ancient-site:中京大定:41.60000,119.33000",
       "lat": 41.6,
       "lng": 119.33,
       "parentName": "中京大定",
-      "currentPlace": "赤峰",
-      "currentKey": "ancient-current:赤峰"
+      "currentPlace": "中京大定",
+      "currentKey": "ancient-site:中京大定:41.60000,119.33000"
     },
     {
       "name": "哈拉和林",
@@ -15252,12 +15252,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 230,
-      "siteKey": "ancient-current:哈拉和林",
+      "siteKey": "ancient-site:哈拉和林:47.19750,102.82380",
       "lat": 47.1975,
       "lng": 102.8238,
       "parentName": "哈拉和林",
       "currentPlace": "哈拉和林",
-      "currentKey": "ancient-current:哈拉和林"
+      "currentKey": "ancient-site:哈拉和林:47.19750,102.82380"
     },
     {
       "name": "开平府·上都 · 上都",
@@ -15272,12 +15272,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 231,
-      "siteKey": "ancient-current:锡林郭勒",
+      "siteKey": "ancient-site:上都:42.35700,116.18400",
       "lat": 42.357,
       "lng": 116.184,
       "parentName": "上都",
-      "currentPlace": "锡林郭勒",
-      "currentKey": "ancient-current:锡林郭勒"
+      "currentPlace": "上都",
+      "currentKey": "ancient-site:上都:42.35700,116.18400"
     },
     {
       "name": "大都 · 元大都",
@@ -15292,12 +15292,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 232,
-      "siteKey": "ancient-current:北京",
+      "siteKey": "ancient-site:元大都:39.94000,116.41000",
       "lat": 39.94,
       "lng": 116.41,
       "parentName": "元大都",
-      "currentPlace": "北京",
-      "currentKey": "ancient-current:北京"
+      "currentPlace": "元大都",
+      "currentKey": "ancient-site:元大都:39.94000,116.41000"
     },
     {
       "name": "中都 · 张北",
@@ -15312,12 +15312,12 @@
       "confidence": "中",
       "categoryCode": "S",
       "sourceOrder": 233,
-      "siteKey": "ancient-current:张家口",
+      "siteKey": "ancient-site:张北:41.15900,114.72000",
       "lat": 41.159,
       "lng": 114.72,
       "parentName": "张北",
-      "currentPlace": "张家口",
-      "currentKey": "ancient-current:张家口"
+      "currentPlace": "张北",
+      "currentKey": "ancient-site:张北:41.15900,114.72000"
     },
     {
       "name": "亳州 · 毫州",
@@ -15332,12 +15332,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 234,
-      "siteKey": "ancient-current:亳州",
+      "siteKey": "ancient-site:毫州:33.84460,115.77930",
       "lat": 33.8446,
       "lng": 115.7793,
       "parentName": "亳州",
-      "currentPlace": "亳州",
-      "currentKey": "ancient-current:亳州"
+      "currentPlace": "毫州",
+      "currentKey": "ancient-site:毫州:33.84460,115.77930"
     },
     {
       "name": "汴梁 · 开封",
@@ -15352,12 +15352,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 235,
-      "siteKey": "ancient-current:开封",
+      "siteKey": "ancient-site:开封:34.79730,114.30760",
       "lat": 34.7973,
       "lng": 114.3076,
       "parentName": "开封",
       "currentPlace": "开封",
-      "currentKey": "ancient-current:开封"
+      "currentKey": "ancient-site:开封:34.79730,114.30760"
     },
     {
       "name": "蕲水",
@@ -15372,12 +15372,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 236,
-      "siteKey": "ancient-current:黄冈",
+      "siteKey": "ancient-site:蕲水:30.45100,115.26500",
       "lat": 30.451,
       "lng": 115.265,
       "parentName": "蕲水",
-      "currentPlace": "黄冈",
-      "currentKey": "ancient-current:黄冈"
+      "currentPlace": "蕲水",
+      "currentKey": "ancient-site:蕲水:30.45100,115.26500"
     },
     {
       "name": "汉阳",
@@ -15392,12 +15392,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 237,
-      "siteKey": "ancient-current:武汉",
+      "siteKey": "ancient-site:汉阳:30.55000,114.22000",
       "lat": 30.55,
       "lng": 114.22,
       "parentName": "汉阳",
-      "currentPlace": "武汉",
-      "currentKey": "ancient-current:武汉"
+      "currentPlace": "汉阳",
+      "currentKey": "ancient-site:汉阳:30.55000,114.22000"
     },
     {
       "name": "江州 · 九江",
@@ -15412,12 +15412,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 238,
-      "siteKey": "ancient-current:九江",
+      "siteKey": "ancient-site:九江:29.70500,116.00190",
       "lat": 29.705,
       "lng": 116.0019,
       "parentName": "九江",
       "currentPlace": "九江",
-      "currentKey": "ancient-current:九江"
+      "currentKey": "ancient-site:九江:29.70500,116.00190"
     },
     {
       "name": "武昌 · 武昌 · 陈汉",
@@ -15432,12 +15432,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 239,
-      "siteKey": "ancient-current:武汉",
+      "siteKey": "ancient-site:武昌:30.55300,114.31600",
       "lat": 30.553,
       "lng": 114.316,
       "parentName": "武昌",
-      "currentPlace": "武汉",
-      "currentKey": "ancient-current:武汉"
+      "currentPlace": "武昌",
+      "currentKey": "ancient-site:武昌:30.55300,114.31600"
     },
     {
       "name": "平江",
@@ -15452,12 +15452,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 240,
-      "siteKey": "ancient-current:苏州",
+      "siteKey": "ancient-site:平江:31.29890,120.58530",
       "lat": 31.2989,
       "lng": 120.5853,
       "parentName": "苏州",
-      "currentPlace": "苏州",
-      "currentKey": "ancient-current:苏州"
+      "currentPlace": "平江",
+      "currentKey": "ancient-site:平江:31.29890,120.58530"
     },
     {
       "name": "高邮",
@@ -15472,12 +15472,12 @@
       "confidence": "中",
       "categoryCode": "O",
       "sourceOrder": 241,
-      "siteKey": "ancient-current:扬州",
+      "siteKey": "ancient-site:高邮:32.78100,119.45500",
       "lat": 32.781,
       "lng": 119.455,
       "parentName": "高邮",
-      "currentPlace": "扬州",
-      "currentKey": "ancient-current:扬州"
+      "currentPlace": "高邮",
+      "currentKey": "ancient-site:高邮:32.78100,119.45500"
     },
     {
       "name": "重庆 · 重庆 · 明夏",
@@ -15492,12 +15492,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 242,
-      "siteKey": "ancient-current:重庆",
+      "siteKey": "ancient-site:重庆:29.56300,106.55160",
       "lat": 29.563,
       "lng": 106.5516,
       "parentName": "重庆",
       "currentPlace": "重庆",
-      "currentKey": "ancient-current:重庆"
+      "currentKey": "ancient-site:重庆:29.56300,106.55160"
     },
     {
       "name": "应天府 · 南京",
@@ -15512,12 +15512,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 243,
-      "siteKey": "ancient-current:南京",
+      "siteKey": "ancient-site:南京:32.06030,118.79690",
       "lat": 32.0603,
       "lng": 118.7969,
       "parentName": "南京",
       "currentPlace": "南京",
-      "currentKey": "ancient-current:南京"
+      "currentKey": "ancient-site:南京:32.06030,118.79690"
     },
     {
       "name": "中都凤阳府 · 凤阳",
@@ -15532,12 +15532,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 244,
-      "siteKey": "ancient-current:滁州",
+      "siteKey": "ancient-site:凤阳:32.87500,117.56100",
       "lat": 32.875,
       "lng": 117.561,
       "parentName": "凤阳",
-      "currentPlace": "滁州",
-      "currentKey": "ancient-current:滁州"
+      "currentPlace": "凤阳",
+      "currentKey": "ancient-site:凤阳:32.87500,117.56100"
     },
     {
       "name": "顺天府·北京 · 北京",
@@ -15552,12 +15552,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 245,
-      "siteKey": "ancient-current:北京",
+      "siteKey": "ancient-site:北京:39.90420,116.40740",
       "lat": 39.9042,
       "lng": 116.4074,
       "parentName": "北京",
       "currentPlace": "北京",
-      "currentKey": "ancient-current:北京"
+      "currentKey": "ancient-site:北京:39.90420,116.40740"
     },
     {
       "name": "应天府·南京 · 南京",
@@ -15572,12 +15572,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 246,
-      "siteKey": "ancient-current:南京",
+      "siteKey": "ancient-site:南京:32.06030,118.79690",
       "lat": 32.0603,
       "lng": 118.7969,
       "parentName": "南京",
       "currentPlace": "南京",
-      "currentKey": "ancient-current:南京"
+      "currentKey": "ancient-site:南京:32.06030,118.79690"
     },
     {
       "name": "上都",
@@ -15592,12 +15592,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 247,
-      "siteKey": "ancient-current:锡林郭勒",
+      "siteKey": "ancient-site:上都:42.35700,116.18400",
       "lat": 42.357,
       "lng": 116.184,
       "parentName": "上都",
-      "currentPlace": "锡林郭勒",
-      "currentKey": "ancient-current:锡林郭勒"
+      "currentPlace": "上都",
+      "currentKey": "ancient-site:上都:42.35700,116.18400"
     },
     {
       "name": "应昌",
@@ -15612,12 +15612,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 248,
-      "siteKey": "ancient-current:赤峰",
+      "siteKey": "ancient-site:应昌:43.35000,117.52000",
       "lat": 43.35,
       "lng": 117.52,
       "parentName": "应昌",
-      "currentPlace": "赤峰",
-      "currentKey": "ancient-current:赤峰"
+      "currentPlace": "应昌",
+      "currentKey": "ancient-site:应昌:43.35000,117.52000"
     },
     {
       "name": "和林一带 · 哈拉和林",
@@ -15632,12 +15632,12 @@
       "confidence": "中",
       "categoryCode": "O",
       "sourceOrder": 249,
-      "siteKey": "ancient-current:哈拉和林",
+      "siteKey": "ancient-site:哈拉和林:47.19750,102.82380",
       "lat": 47.1975,
       "lng": 102.8238,
       "parentName": "哈拉和林",
       "currentPlace": "哈拉和林",
-      "currentKey": "ancient-current:哈拉和林"
+      "currentKey": "ancient-site:哈拉和林:47.19750,102.82380"
     },
     {
       "name": "西京长安 · 西安",
@@ -15652,12 +15652,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 250,
-      "siteKey": "ancient-current:西安",
+      "siteKey": "ancient-site:西安:34.34160,108.93980",
       "lat": 34.3416,
       "lng": 108.9398,
       "parentName": "西安",
       "currentPlace": "西安",
-      "currentKey": "ancient-current:西安"
+      "currentKey": "ancient-site:西安:34.34160,108.93980"
     },
     {
       "name": "北京 · 北京 · 大顺",
@@ -15672,12 +15672,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 251,
-      "siteKey": "ancient-current:北京",
+      "siteKey": "ancient-site:北京:39.90420,116.40740",
       "lat": 39.9042,
       "lng": 116.4074,
       "parentName": "北京",
       "currentPlace": "北京",
-      "currentKey": "ancient-current:北京"
+      "currentKey": "ancient-site:北京:39.90420,116.40740"
     },
     {
       "name": "成都 · 成都 · 大西",
@@ -15692,12 +15692,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 252,
-      "siteKey": "ancient-current:成都",
+      "siteKey": "ancient-site:成都:30.57280,104.06680",
       "lat": 30.5728,
       "lng": 104.0668,
       "parentName": "成都",
       "currentPlace": "成都",
-      "currentKey": "ancient-current:成都"
+      "currentKey": "ancient-site:成都:30.57280,104.06680"
     },
     {
       "name": "南京 · 南京 · 南明弘光",
@@ -15712,12 +15712,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 253,
-      "siteKey": "ancient-current:南京",
+      "siteKey": "ancient-site:南京:32.06030,118.79690",
       "lat": 32.0603,
       "lng": 118.7969,
       "parentName": "南京",
       "currentPlace": "南京",
-      "currentKey": "ancient-current:南京"
+      "currentKey": "ancient-site:南京:32.06030,118.79690"
     },
     {
       "name": "福京 · 福州",
@@ -15732,12 +15732,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 254,
-      "siteKey": "ancient-current:福州",
+      "siteKey": "ancient-site:福州:26.07450,119.29650",
       "lat": 26.0745,
       "lng": 119.2965,
       "parentName": "福州",
       "currentPlace": "福州",
-      "currentKey": "ancient-current:福州"
+      "currentKey": "ancient-site:福州:26.07450,119.29650"
     },
     {
       "name": "广州 · 广州 · 南明绍武",
@@ -15752,12 +15752,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 255,
-      "siteKey": "ancient-current:广州",
+      "siteKey": "ancient-site:广州:23.12910,113.26440",
       "lat": 23.1291,
       "lng": 113.2644,
       "parentName": "广州",
       "currentPlace": "广州",
-      "currentKey": "ancient-current:广州"
+      "currentKey": "ancient-site:广州:23.12910,113.26440"
     },
     {
       "name": "肇庆 · 肇庆 · 南明永历",
@@ -15772,12 +15772,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 256,
-      "siteKey": "ancient-current:肇庆",
+      "siteKey": "ancient-site:肇庆:23.04700,112.46500",
       "lat": 23.047,
       "lng": 112.465,
       "parentName": "肇庆",
       "currentPlace": "肇庆",
-      "currentKey": "ancient-current:肇庆"
+      "currentKey": "ancient-site:肇庆:23.04700,112.46500"
     },
     {
       "name": "桂林",
@@ -15792,12 +15792,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 257,
-      "siteKey": "ancient-current:桂林",
+      "siteKey": "ancient-site:桂林:25.27420,110.29910",
       "lat": 25.2742,
       "lng": 110.2991,
       "parentName": "桂林",
       "currentPlace": "桂林",
-      "currentKey": "ancient-current:桂林"
+      "currentKey": "ancient-site:桂林:25.27420,110.29910"
     },
     {
       "name": "肇庆 · 肇庆 · 南明永历",
@@ -15812,12 +15812,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 258,
-      "siteKey": "ancient-current:肇庆",
+      "siteKey": "ancient-site:肇庆:23.04700,112.46500",
       "lat": 23.047,
       "lng": 112.465,
       "parentName": "肇庆",
       "currentPlace": "肇庆",
-      "currentKey": "ancient-current:肇庆"
+      "currentKey": "ancient-site:肇庆:23.04700,112.46500"
     },
     {
       "name": "安龙",
@@ -15832,12 +15832,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 259,
-      "siteKey": "ancient-current:黔西南",
+      "siteKey": "ancient-site:安龙:25.09900,105.44300",
       "lat": 25.099,
       "lng": 105.443,
       "parentName": "安龙",
-      "currentPlace": "黔西南",
-      "currentKey": "ancient-current:黔西南"
+      "currentPlace": "安龙",
+      "currentKey": "ancient-site:安龙:25.09900,105.44300"
     },
     {
       "name": "昆明",
@@ -15852,12 +15852,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 260,
-      "siteKey": "ancient-current:昆明",
+      "siteKey": "ancient-site:昆明:25.03890,102.71830",
       "lat": 25.0389,
       "lng": 102.7183,
       "parentName": "昆明",
       "currentPlace": "昆明",
-      "currentKey": "ancient-current:昆明"
+      "currentKey": "ancient-site:昆明:25.03890,102.71830"
     },
     {
       "name": "绍兴 · 绍兴监国",
@@ -15872,12 +15872,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 261,
-      "siteKey": "ancient-current:绍兴",
+      "siteKey": "ancient-site:绍兴监国:30.03030,120.58020",
       "lat": 30.0303,
       "lng": 120.5802,
       "parentName": "绍兴",
-      "currentPlace": "绍兴",
-      "currentKey": "ancient-current:绍兴"
+      "currentPlace": "绍兴监国",
+      "currentKey": "ancient-site:绍兴监国:30.03030,120.58020"
     },
     {
       "name": "厦门",
@@ -15892,12 +15892,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 262,
-      "siteKey": "ancient-current:厦门",
+      "siteKey": "ancient-site:厦门:24.47980,118.08940",
       "lat": 24.4798,
       "lng": 118.0894,
       "parentName": "厦门",
       "currentPlace": "厦门",
-      "currentKey": "ancient-current:厦门"
+      "currentKey": "ancient-site:厦门:24.47980,118.08940"
     },
     {
       "name": "赫图阿拉",
@@ -15912,12 +15912,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 263,
-      "siteKey": "ancient-current:抚顺",
+      "siteKey": "ancient-site:赫图阿拉:41.87500,124.82900",
       "lat": 41.875,
       "lng": 124.829,
       "parentName": "赫图阿拉",
-      "currentPlace": "抚顺",
-      "currentKey": "ancient-current:抚顺"
+      "currentPlace": "赫图阿拉",
+      "currentKey": "ancient-site:赫图阿拉:41.87500,124.82900"
     },
     {
       "name": "东京辽阳 · 辽阳",
@@ -15932,12 +15932,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 264,
-      "siteKey": "ancient-current:辽阳",
+      "siteKey": "ancient-site:辽阳:41.26940,123.17280",
       "lat": 41.2694,
       "lng": 123.1728,
       "parentName": "辽阳",
       "currentPlace": "辽阳",
-      "currentKey": "ancient-current:辽阳"
+      "currentKey": "ancient-site:辽阳:41.26940,123.17280"
     },
     {
       "name": "盛京 · 沈阳 · 后金",
@@ -15952,12 +15952,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 265,
-      "siteKey": "ancient-current:沈阳",
+      "siteKey": "ancient-site:沈阳:41.80570,123.43150",
       "lat": 41.8057,
       "lng": 123.4315,
       "parentName": "沈阳",
       "currentPlace": "沈阳",
-      "currentKey": "ancient-current:沈阳"
+      "currentKey": "ancient-site:沈阳:41.80570,123.43150"
     },
     {
       "name": "盛京 · 沈阳 · 清",
@@ -15972,12 +15972,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 266,
-      "siteKey": "ancient-current:沈阳",
+      "siteKey": "ancient-site:沈阳:41.80570,123.43150",
       "lat": 41.8057,
       "lng": 123.4315,
       "parentName": "沈阳",
       "currentPlace": "沈阳",
-      "currentKey": "ancient-current:沈阳"
+      "currentKey": "ancient-site:沈阳:41.80570,123.43150"
     },
     {
       "name": "京师 · 北京",
@@ -15992,12 +15992,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 267,
-      "siteKey": "ancient-current:北京",
+      "siteKey": "ancient-site:北京:39.90420,116.40740",
       "lat": 39.9042,
       "lng": 116.4074,
       "parentName": "北京",
       "currentPlace": "北京",
-      "currentKey": "ancient-current:北京"
+      "currentKey": "ancient-site:北京:39.90420,116.40740"
     },
     {
       "name": "盛京 · 沈阳 · 清",
@@ -16012,12 +16012,12 @@
       "confidence": "高",
       "categoryCode": "S",
       "sourceOrder": 268,
-      "siteKey": "ancient-current:沈阳",
+      "siteKey": "ancient-site:沈阳:41.80570,123.43150",
       "lat": 41.8057,
       "lng": 123.4315,
       "parentName": "沈阳",
       "currentPlace": "沈阳",
-      "currentKey": "ancient-current:沈阳"
+      "currentKey": "ancient-site:沈阳:41.80570,123.43150"
     },
     {
       "name": "衡州 · 衡阳",
@@ -16032,12 +16032,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 269,
-      "siteKey": "ancient-current:衡阳",
+      "siteKey": "ancient-site:衡阳:26.89300,112.57200",
       "lat": 26.893,
       "lng": 112.572,
       "parentName": "衡阳",
       "currentPlace": "衡阳",
-      "currentKey": "ancient-current:衡阳"
+      "currentKey": "ancient-site:衡阳:26.89300,112.57200"
     },
     {
       "name": "金田",
@@ -16052,12 +16052,12 @@
       "confidence": "高",
       "categoryCode": "O",
       "sourceOrder": 270,
-      "siteKey": "ancient-current:贵港",
+      "siteKey": "ancient-site:金田:23.39100,110.10900",
       "lat": 23.391,
       "lng": 110.109,
       "parentName": "金田",
-      "currentPlace": "贵港",
-      "currentKey": "ancient-current:贵港"
+      "currentPlace": "金田",
+      "currentKey": "ancient-site:金田:23.39100,110.10900"
     },
     {
       "name": "永安州 · 永安",
@@ -16072,12 +16072,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 271,
-      "siteKey": "ancient-current:梧州",
+      "siteKey": "ancient-site:永安:23.19000,110.07000",
       "lat": 23.19,
       "lng": 110.07,
       "parentName": "永安",
-      "currentPlace": "梧州",
-      "currentKey": "ancient-current:梧州"
+      "currentPlace": "永安",
+      "currentKey": "ancient-site:永安:23.19000,110.07000"
     },
     {
       "name": "天京",
@@ -16092,12 +16092,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 272,
-      "siteKey": "ancient-current:南京",
+      "siteKey": "ancient-site:天京:32.06030,118.79690",
       "lat": 32.0603,
       "lng": 118.7969,
       "parentName": "南京",
-      "currentPlace": "南京",
-      "currentKey": "ancient-current:南京"
+      "currentPlace": "天京",
+      "currentKey": "ancient-site:天京:32.06030,118.79690"
     },
     {
       "name": "秀京 · 桂平",
@@ -16112,12 +16112,12 @@
       "confidence": "中",
       "categoryCode": "P",
       "sourceOrder": 273,
-      "siteKey": "ancient-current:贵港",
+      "siteKey": "ancient-site:桂平:23.39410,110.07940",
       "lat": 23.3941,
       "lng": 110.0794,
       "parentName": "桂平",
-      "currentPlace": "贵港",
-      "currentKey": "ancient-current:贵港"
+      "currentPlace": "桂平",
+      "currentKey": "ancient-site:桂平:23.39410,110.07940"
     },
     {
       "name": "大理 · 大理杜文秀",
@@ -16132,12 +16132,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 274,
-      "siteKey": "ancient-current:大理",
+      "siteKey": "ancient-site:大理杜文秀:25.60650,100.26760",
       "lat": 25.6065,
       "lng": 100.2676,
       "parentName": "大理杜文秀",
-      "currentPlace": "大理",
-      "currentKey": "ancient-current:大理"
+      "currentPlace": "大理杜文秀",
+      "currentKey": "ancient-site:大理杜文秀:25.60650,100.26760"
     },
     {
       "name": "喀什噶尔 · 喀什",
@@ -16152,12 +16152,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 275,
-      "siteKey": "ancient-current:喀什",
+      "siteKey": "ancient-site:喀什:39.47040,75.98980",
       "lat": 39.4704,
       "lng": 75.9898,
       "parentName": "喀什",
       "currentPlace": "喀什",
-      "currentKey": "ancient-current:喀什"
+      "currentKey": "ancient-site:喀什:39.47040,75.98980"
     },
     {
       "name": "南京 · 南京 · 中华民国临时政府",
@@ -16172,12 +16172,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 276,
-      "siteKey": "ancient-current:南京",
+      "siteKey": "ancient-site:南京:32.06030,118.79690",
       "lat": 32.0603,
       "lng": 118.7969,
       "parentName": "南京",
       "currentPlace": "南京",
-      "currentKey": "ancient-current:南京"
+      "currentKey": "ancient-site:南京:32.06030,118.79690"
     },
     {
       "name": "北京 · 北京 · 中华民国北洋政府",
@@ -16192,12 +16192,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 277,
-      "siteKey": "ancient-current:北京",
+      "siteKey": "ancient-site:北京:39.90420,116.40740",
       "lat": 39.9042,
       "lng": 116.4074,
       "parentName": "北京",
       "currentPlace": "北京",
-      "currentKey": "ancient-current:北京"
+      "currentKey": "ancient-site:北京:39.90420,116.40740"
     },
     {
       "name": "广州 · 广州 · 中华民国护法军政府",
@@ -16212,12 +16212,12 @@
       "confidence": "高",
       "categoryCode": "O",
       "sourceOrder": 278,
-      "siteKey": "ancient-current:广州",
+      "siteKey": "ancient-site:广州:23.12910,113.26440",
       "lat": 23.1291,
       "lng": 113.2644,
       "parentName": "广州",
       "currentPlace": "广州",
-      "currentKey": "ancient-current:广州"
+      "currentKey": "ancient-site:广州:23.12910,113.26440"
     },
     {
       "name": "广州 · 广州 · 中华民国国民政府",
@@ -16232,12 +16232,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 279,
-      "siteKey": "ancient-current:广州",
+      "siteKey": "ancient-site:广州:23.12910,113.26440",
       "lat": 23.1291,
       "lng": 113.2644,
       "parentName": "广州",
       "currentPlace": "广州",
-      "currentKey": "ancient-current:广州"
+      "currentKey": "ancient-site:广州:23.12910,113.26440"
     },
     {
       "name": "武汉",
@@ -16252,12 +16252,12 @@
       "confidence": "高",
       "categoryCode": "O",
       "sourceOrder": 280,
-      "siteKey": "ancient-current:武汉",
+      "siteKey": "ancient-site:武汉:30.59280,114.30550",
       "lat": 30.5928,
       "lng": 114.3055,
       "parentName": "武汉",
       "currentPlace": "武汉",
-      "currentKey": "ancient-current:武汉"
+      "currentKey": "ancient-site:武汉:30.59280,114.30550"
     },
     {
       "name": "南京 · 南京 · 中华民国国民政府",
@@ -16272,12 +16272,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 281,
-      "siteKey": "ancient-current:南京",
+      "siteKey": "ancient-site:南京:32.06030,118.79690",
       "lat": 32.0603,
       "lng": 118.7969,
       "parentName": "南京",
       "currentPlace": "南京",
-      "currentKey": "ancient-current:南京"
+      "currentKey": "ancient-site:南京:32.06030,118.79690"
     },
     {
       "name": "重庆 · 重庆 · 中华民国国民政府",
@@ -16292,12 +16292,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 282,
-      "siteKey": "ancient-current:重庆",
+      "siteKey": "ancient-site:重庆:29.56300,106.55160",
       "lat": 29.563,
       "lng": 106.5516,
       "parentName": "重庆",
       "currentPlace": "重庆",
-      "currentKey": "ancient-current:重庆"
+      "currentKey": "ancient-site:重庆:29.56300,106.55160"
     },
     {
       "name": "南京 · 南京 · 中华民国政府",
@@ -16312,12 +16312,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 283,
-      "siteKey": "ancient-current:南京",
+      "siteKey": "ancient-site:南京:32.06030,118.79690",
       "lat": 32.0603,
       "lng": 118.7969,
       "parentName": "南京",
       "currentPlace": "南京",
-      "currentKey": "ancient-current:南京"
+      "currentKey": "ancient-site:南京:32.06030,118.79690"
     },
     {
       "name": "台北",
@@ -16332,12 +16332,12 @@
       "confidence": "高",
       "categoryCode": "O",
       "sourceOrder": 284,
-      "siteKey": "ancient-current:台北",
+      "siteKey": "ancient-site:台北:25.03300,121.56540",
       "lat": 25.033,
       "lng": 121.5654,
       "parentName": "台北",
       "currentPlace": "台北",
-      "currentKey": "ancient-current:台北"
+      "currentKey": "ancient-site:台北:25.03300,121.56540"
     },
     {
       "name": "瑞京 · 瑞金",
@@ -16352,12 +16352,12 @@
       "confidence": "高",
       "categoryCode": "O",
       "sourceOrder": 285,
-      "siteKey": "ancient-current:赣州",
+      "siteKey": "ancient-site:瑞金:25.88500,116.02700",
       "lat": 25.885,
       "lng": 116.027,
       "parentName": "瑞金",
-      "currentPlace": "赣州",
-      "currentKey": "ancient-current:赣州"
+      "currentPlace": "瑞金",
+      "currentKey": "ancient-site:瑞金:25.88500,116.02700"
     },
     {
       "name": "延安",
@@ -16372,12 +16372,12 @@
       "confidence": "中",
       "categoryCode": "O",
       "sourceOrder": 286,
-      "siteKey": "ancient-current:延安",
+      "siteKey": "ancient-site:延安:36.58530,109.48980",
       "lat": 36.5853,
       "lng": 109.4898,
       "parentName": "延安",
       "currentPlace": "延安",
-      "currentKey": "ancient-current:延安"
+      "currentKey": "ancient-site:延安:36.58530,109.48980"
     },
     {
       "name": "福州 · 福州 · 中华共和国人民革命政府",
@@ -16392,12 +16392,12 @@
       "confidence": "高",
       "categoryCode": "O",
       "sourceOrder": 287,
-      "siteKey": "ancient-current:福州",
+      "siteKey": "ancient-site:福州:26.07450,119.29650",
       "lat": 26.0745,
       "lng": 119.2965,
       "parentName": "福州",
       "currentPlace": "福州",
-      "currentKey": "ancient-current:福州"
+      "currentKey": "ancient-site:福州:26.07450,119.29650"
     },
     {
       "name": "北京 · 北京 · 中华帝国",
@@ -16412,12 +16412,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 288,
-      "siteKey": "ancient-current:北京",
+      "siteKey": "ancient-site:北京:39.90420,116.40740",
       "lat": 39.9042,
       "lng": 116.4074,
       "parentName": "北京",
       "currentPlace": "北京",
-      "currentKey": "ancient-current:北京"
+      "currentKey": "ancient-site:北京:39.90420,116.40740"
     },
     {
       "name": "新京 · 长春",
@@ -16432,12 +16432,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 289,
-      "siteKey": "ancient-current:长春",
+      "siteKey": "ancient-site:长春:43.81710,125.32350",
       "lat": 43.8171,
       "lng": 125.3235,
       "parentName": "长春",
       "currentPlace": "长春",
-      "currentKey": "ancient-current:长春"
+      "currentKey": "ancient-site:长春:43.81710,125.32350"
     },
     {
       "name": "北京 · 北京 · 中华民国临时政府（北京）",
@@ -16452,12 +16452,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 290,
-      "siteKey": "ancient-current:北京",
+      "siteKey": "ancient-site:北京:39.90420,116.40740",
       "lat": 39.9042,
       "lng": 116.4074,
       "parentName": "北京",
       "currentPlace": "北京",
-      "currentKey": "ancient-current:北京"
+      "currentKey": "ancient-site:北京:39.90420,116.40740"
     },
     {
       "name": "南京 · 南京 · 中华民国维新政府",
@@ -16472,12 +16472,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 291,
-      "siteKey": "ancient-current:南京",
+      "siteKey": "ancient-site:南京:32.06030,118.79690",
       "lat": 32.0603,
       "lng": 118.7969,
       "parentName": "南京",
       "currentPlace": "南京",
-      "currentKey": "ancient-current:南京"
+      "currentKey": "ancient-site:南京:32.06030,118.79690"
     },
     {
       "name": "南京 · 南京 · 汪精卫国民政府",
@@ -16492,12 +16492,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 292,
-      "siteKey": "ancient-current:南京",
+      "siteKey": "ancient-site:南京:32.06030,118.79690",
       "lat": 32.0603,
       "lng": 118.7969,
       "parentName": "南京",
       "currentPlace": "南京",
-      "currentKey": "ancient-current:南京"
+      "currentKey": "ancient-site:南京:32.06030,118.79690"
     },
     {
       "name": "张家口",
@@ -16512,12 +16512,12 @@
       "confidence": "高",
       "categoryCode": "O",
       "sourceOrder": 293,
-      "siteKey": "ancient-current:张家口",
+      "siteKey": "ancient-site:张家口:40.76750,114.88630",
       "lat": 40.7675,
       "lng": 114.8863,
       "parentName": "张家口",
       "currentPlace": "张家口",
-      "currentKey": "ancient-current:张家口"
+      "currentKey": "ancient-site:张家口:40.76750,114.88630"
     },
     {
       "name": "通州",
@@ -16532,12 +16532,12 @@
       "confidence": "高",
       "categoryCode": "O",
       "sourceOrder": 294,
-      "siteKey": "ancient-current:北京",
+      "siteKey": "ancient-site:通州:39.90900,116.65700",
       "lat": 39.909,
       "lng": 116.657,
       "parentName": "通州",
-      "currentPlace": "北京",
-      "currentKey": "ancient-current:北京"
+      "currentPlace": "通州",
+      "currentKey": "ancient-site:通州:39.90900,116.65700"
     },
     {
       "name": "桑根达来 · 张北",
@@ -16552,12 +16552,12 @@
       "confidence": "低",
       "categoryCode": "O",
       "sourceOrder": 295,
-      "siteKey": "ancient-current:张家口",
+      "siteKey": "ancient-site:张北:41.15900,114.72000",
       "lat": 41.159,
       "lng": 114.72,
       "parentName": "张北",
-      "currentPlace": "张家口",
-      "currentKey": "ancient-current:张家口"
+      "currentPlace": "张北",
+      "currentKey": "ancient-site:张北:41.15900,114.72000"
     },
     {
       "name": "北京 · 北京 · 中华人民共和国",
@@ -16572,12 +16572,12 @@
       "confidence": "高",
       "categoryCode": "P",
       "sourceOrder": 296,
-      "siteKey": "ancient-current:北京",
+      "siteKey": "ancient-site:北京:39.90420,116.40740",
       "lat": 39.9042,
       "lng": 116.4074,
       "parentName": "北京",
       "currentPlace": "北京",
-      "currentKey": "ancient-current:北京"
+      "currentKey": "ancient-site:北京:39.90420,116.40740"
     }
   ],
   "recordItemCount": 296

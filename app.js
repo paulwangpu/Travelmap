@@ -19,7 +19,7 @@ const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
 const worldHeritageCatalogTotal = 1248;
-const dataCacheVersion = "20260726-ancient-capitals-current-place";
+const dataCacheVersion = "20260726-ancient-capitals-site-place";
 const fixedChecklistTotals = {
   china5a: china5aOfficialTotal,
   chinaAncientCapitals: chinaAncientCapitalTotal,
@@ -7310,16 +7310,18 @@ function ancientCapitalSourceOrder(item) {
 function ancientCapitalSiteKeyForItem(item) {
   if (!item) return "";
   if (typeof item === "object") {
+    if (item.siteKey) return item.siteKey;
     if (item.currentKey) return item.currentKey;
     const current = ancientCapitalCurrentDisplayName(item);
     if (current) return `ancient-current:${canonicalPlaceKey(current)}`;
-    return item.siteKey || (item.siteName ? `ancient-site:${canonicalPlaceKey(item.siteName)}` : "");
+    return item.siteName ? `ancient-site:${canonicalPlaceKey(item.siteName)}` : "";
   }
   const meta = chinaAncientCapitalMeta[canonicalPlaceKey(item)];
+  if (meta?.siteKey) return meta.siteKey;
   if (meta?.currentKey) return meta.currentKey;
   const current = ancientCapitalCurrentDisplayName(meta);
   if (current) return `ancient-current:${canonicalPlaceKey(current)}`;
-  return meta?.siteKey || (meta?.siteName ? `ancient-site:${canonicalPlaceKey(meta.siteName)}` : "");
+  return meta?.siteName ? `ancient-site:${canonicalPlaceKey(meta.siteName)}` : "";
 }
 
 function ancientCapitalStartYear(item) {
