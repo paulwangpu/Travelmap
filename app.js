@@ -1,6 +1,6 @@
 const visitDepths = [1, 2, 3, 4];
 const depthLabels = {
-  0: "未去过",
+  0: "未去",
   1: "去过",
 };
 
@@ -14,12 +14,12 @@ const languageStorageKey = "travel-map-language";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "1.8.4";
+const appVersion = "1.8.5";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
-const chinaAncientCapitalTotal = 146;
+const chinaAncientCapitalTotal = 296;
 const worldHeritageCatalogTotal = 1248;
-const dataCacheVersion = "20260723-ancient-capitals";
+const dataCacheVersion = "20260726-ancient-capitals-record-order";
 const fixedChecklistTotals = {
   china5a: china5aOfficialTotal,
   chinaAncientCapitals: chinaAncientCapitalTotal,
@@ -109,6 +109,7 @@ let derivedStatsRevision = 0;
 let dashboardStatsCache = { signature: "", stats: null };
 let mapAddMode = false;
 let pendingMapClickPoint = null;
+let highAltitudeFilters = { threeMountains: true, fiveMountains: true, buddhistMountains: true, taoistMountains: true, other: true };
 const admin1RegionGroupCountries = new Set(["fr", "it", "jp"]);
 const subadminConfigs = {
   china2: { countryId: "cn", label: "China prefecture-level units" },
@@ -198,7 +199,7 @@ const translations = {
     importedTracks: "已导入轨迹",
     trackLength: "轨迹长度",
     checked: "已去",
-    unvisited: "未去过",
+    unvisited: "未去",
     markVisited: "标记去过",
     unvisit: "取消去过",
     countryDetail: "国家详情",
@@ -1147,6 +1148,10 @@ const checklistItemEnglishNames = {
   "南迦巴瓦 · 色季拉山口观景台 · 4728m": "Namcha Barwa · Sejila Pass Viewpoint · 4728m",
   "巴松措 · 湖区游览点 · 3480m": "Basum Lake · Lakeside Area · 3480m",
   "玉山 · 主峰步道终点 · 3952m": "Yushan · Main Peak Trail End · 3952m",
+  "武当山 · 天柱峰 · 1612m": "Wudang Mountains · Tianzhu Peak · 1612m",
+  "龙虎山 · 天门山 · 1300m": "Longhu Mountain · Tianmen Mountain · 1300m",
+  "齐云山 · 廊崖 · 585m": "Qiyun Mountain · Langya · 585m",
+  "青城山 · 老君阁/彭祖峰 · 1260m": "Mount Qingcheng · Laojun Pavilion / Pengzu Peak · 1260m",
   莫高窟: "Mogao Caves",
   云冈石窟: "Yungang Grottoes",
   龙门石窟: "Longmen Grottoes",
@@ -1819,9 +1824,25 @@ const checklistCatalog = {
       "梅里雪山 · 飞来寺观景台 · 3400m",
       "白沙湖/白沙山 · 湖边观景点 · 3300m",
       "青海湖 · 湖区游览点 · 3196m",
+      "峨眉山 · 金顶 · 3079m",
+      "五台山 · 北台叶斗峰 · 3061m",
       "茶卡盐湖 · 景区湖区 · 3059m",
       "武夷山 · 黄岗山 · 2160m",
+      "华山 · 南峰 · 2155m",
+      "恒山 · 天峰岭 · 2016m",
+      "黄山 · 莲花峰 · 1864m",
       "三清山 · 玉京峰 · 1819m",
+      "武当山 · 天柱峰 · 1612m",
+      "泰山 · 玉皇顶 · 1545m",
+      "嵩山 · 峻极峰 · 1492m",
+      "庐山 · 汉阳峰 · 1474m",
+      "九华山 · 十王峰 · 1342m",
+      "龙虎山 · 天门山 · 1300m",
+      "衡山 · 祝融峰 · 1300m",
+      "青城山 · 老君阁/彭祖峰 · 1260m",
+      "雁荡山 · 百岗尖 · 1108m",
+      "齐云山 · 廊崖 · 585m",
+      "普陀山 · 佛顶山 · 291m",
     ],
     meta: {
       "唐古拉山口 · 公路山口 · 5231m": { province: "青海/西藏", geoUnit: "唐古拉山", point: "公路山口", altitude: 5231, type: "垭口" },
@@ -1859,9 +1880,25 @@ const checklistCatalog = {
       "梅里雪山 · 飞来寺观景台 · 3400m": { province: "云南", geoUnit: "梅里雪山", point: "飞来寺观景台", altitude: 3400, type: "雪山观景" },
       "白沙湖/白沙山 · 湖边观景点 · 3300m": { province: "新疆", geoUnit: "帕米尔高原", point: "湖边观景点", altitude: 3300, type: "高原湖泊" },
       "青海湖 · 湖区游览点 · 3196m": { province: "青海", geoUnit: "青海湖盆地", point: "湖区游览点", altitude: 3196, type: "高原湖泊" },
+      "峨眉山 · 金顶 · 3079m": { province: "四川", geoUnit: "峨眉山", point: "金顶", altitude: 3079, type: "佛教名山" },
+      "五台山 · 北台叶斗峰 · 3061m": { province: "山西", geoUnit: "五台山", point: "北台叶斗峰", altitude: 3061, type: "佛教名山" },
       "茶卡盐湖 · 景区湖区 · 3059m": { province: "青海", geoUnit: "柴达木盆地边缘", point: "景区湖区", altitude: 3059, type: "高原湖泊" },
       "武夷山 · 黄岗山 · 2160m": { province: "福建/江西", geoUnit: "武夷山脉", point: "黄岗山", altitude: 2160, type: "名山" },
+      "华山 · 南峰 · 2155m": { province: "陕西", geoUnit: "秦岭", point: "南峰", altitude: 2155, type: "五岳" },
+      "恒山 · 天峰岭 · 2016m": { province: "山西", geoUnit: "恒山山脉", point: "天峰岭", altitude: 2016, type: "五岳" },
+      "黄山 · 莲花峰 · 1864m": { province: "安徽", geoUnit: "黄山山脉", point: "莲花峰", altitude: 1864, type: "三山" },
       "三清山 · 玉京峰 · 1819m": { province: "江西", geoUnit: "怀玉山脉", point: "玉京峰", altitude: 1819, type: "名山" },
+      "武当山 · 天柱峰 · 1612m": { province: "湖北", geoUnit: "武当山", point: "天柱峰", altitude: 1612, type: "道教名山" },
+      "泰山 · 玉皇顶 · 1545m": { province: "山东", geoUnit: "泰山", point: "玉皇顶", altitude: 1545, type: "五岳" },
+      "嵩山 · 峻极峰 · 1492m": { province: "河南", geoUnit: "嵩山", point: "峻极峰", altitude: 1492, type: "五岳" },
+      "庐山 · 汉阳峰 · 1474m": { province: "江西", geoUnit: "庐山", point: "汉阳峰", altitude: 1474, type: "三山" },
+      "九华山 · 十王峰 · 1342m": { province: "安徽", geoUnit: "九华山", point: "十王峰", altitude: 1342, type: "佛教名山" },
+      "龙虎山 · 天门山 · 1300m": { province: "江西", geoUnit: "龙虎山", point: "天门山", altitude: 1300, type: "道教名山" },
+      "衡山 · 祝融峰 · 1300m": { province: "湖南", geoUnit: "南岳衡山", point: "祝融峰", altitude: 1300, type: "五岳" },
+      "青城山 · 老君阁/彭祖峰 · 1260m": { province: "四川", geoUnit: "青城山", point: "老君阁/彭祖峰", altitude: 1260, type: "道教名山" },
+      "雁荡山 · 百岗尖 · 1108m": { province: "浙江", geoUnit: "雁荡山", point: "百岗尖", altitude: 1108, type: "三山" },
+      "齐云山 · 廊崖 · 585m": { province: "安徽", geoUnit: "齐云山", point: "廊崖", altitude: 585, type: "道教名山" },
+      "普陀山 · 佛顶山 · 291m": { province: "浙江", geoUnit: "普陀山", point: "佛顶山", altitude: 291, type: "佛教名山" },
     },
   },
   buddhistMountains: {
@@ -1944,6 +1981,63 @@ const checklistCatalog = {
       "锡安国家公园（Zion National Park）",
     ],
   },
+};
+
+const chinaHighAltitudeCoordinates = {
+  "唐古拉山口 · 公路山口 · 5231m": [32.981, 91.919, "西藏"],
+  "珠峰景区 · 珠峰大本营 · 5200m": [28.141, 86.853, "西藏"],
+  "加吾拉山口 · 珠峰观景山口 · 5200m": [28.306, 87.004, "西藏"],
+  "红其拉甫国门 · 国门附近 · 5100m": [36.849, 75.431, "新疆"],
+  "普莫雍措 · 湖边游览点 · 5010m": [28.533, 90.395, "西藏"],
+  "卡若拉冰川 · 公路观景区 · 5036m": [28.911, 90.209, "西藏"],
+  "绒布寺 · 寺院观景区 · 4900m": [28.191, 86.832, "西藏"],
+  "达古冰川 · 冰川观景区 · 4860m": [32.217, 102.95, "四川"],
+  "昆仑山口 · 公路垭口 · 4768m": [35.648, 94.04, "青海"],
+  "南迦巴瓦 · 色季拉山口观景台 · 4728m": [29.606, 94.636, "西藏"],
+  "纳木错 · 扎西半岛 · 4718m": [30.762, 90.991, "西藏"],
+  "稻城亚丁 · 五色海 · 4700m": [28.393, 100.322, "四川"],
+  "玉龙雪山 · 冰川公园平台 · 4680m": [27.101, 100.177, "云南"],
+  "慕士塔格峰景区 · 4688米石碑 · 4688m": [38.285, 75.087, "新疆"],
+  "冈仁波齐 · 塔尔钦周边 · 4670m": [31.104, 81.31, "西藏"],
+  "稻城亚丁 · 牛奶海 · 4600m": [28.386, 100.322, "四川"],
+  "玛旁雍错 · 湖区游览点 · 4588m": [30.69, 81.49, "西藏"],
+  "雅哈垭口 · 观景点 · 4568m": [29.785, 101.764, "四川"],
+  "子梅垭口 · 观景点 · 4550m": [29.725, 101.698, "四川"],
+  "冷嘎措 · 湖边观景点 · 4530m": [29.65, 101.692, "四川"],
+  "羊卓雍措 · 湖区观景点 · 4441m": [29.195, 90.646, "西藏"],
+  "石卡雪山 · 索道高点 · 4449m": [27.889, 99.672, "云南"],
+  "可可西里 · 索南达杰保护站 · 4479m": [35.221, 93.088, "青海"],
+  "白马雪山 · 垭口 · 4292m": [28.223, 99.099, "云南"],
+  "折多山 · 垭口 · 4298m": [30.052, 101.798, "四川"],
+  "鱼子西 · 观景平台 · 4200m": [30.096, 101.62, "四川"],
+  "盘龙古道 · 最高观景垭口 · 4216m": [37.728, 75.191, "新疆"],
+  "玉山 · 主峰步道终点 · 3952m": [23.47, 120.957, "台湾"],
+  "四姑娘山双桥沟 · 红杉林 · 3840m": [31.105, 102.85, "四川"],
+  "喀拉库勒湖 · 湖边观景点 · 3600m": [38.44, 75.056, "新疆"],
+  "黄龙 · 五彩池 · 3576m": [32.745, 103.833, "四川"],
+  "巴松措 · 湖区游览点 · 3480m": [30.022, 93.943, "西藏"],
+  "梅里雪山 · 飞来寺观景台 · 3400m": [28.442, 98.86, "云南"],
+  "白沙湖/白沙山 · 湖边观景点 · 3300m": [37.762, 75.035, "新疆"],
+  "青海湖 · 湖区游览点 · 3196m": [36.895, 100.175, "青海"],
+  "峨眉山 · 金顶 · 3079m": [29.52, 103.336, "四川"],
+  "五台山 · 北台叶斗峰 · 3061m": [39.009, 113.594, "山西"],
+  "茶卡盐湖 · 景区湖区 · 3059m": [36.791, 99.078, "青海"],
+  "武夷山 · 黄岗山 · 2160m": [27.861, 117.775, "福建"],
+  "华山 · 南峰 · 2155m": [34.4833, 110.0833, "陕西"],
+  "恒山 · 天峰岭 · 2016m": [39.6739, 113.7336, "山西"],
+  "黄山 · 莲花峰 · 1864m": [30.1302, 118.1689, "安徽"],
+  "三清山 · 玉京峰 · 1819m": [28.914, 118.064, "江西"],
+  "武当山 · 天柱峰 · 1612m": [32.397, 111.004, "湖北"],
+  "泰山 · 玉皇顶 · 1545m": [36.255, 117.106, "山东"],
+  "嵩山 · 峻极峰 · 1492m": [34.507, 112.935, "河南"],
+  "庐山 · 汉阳峰 · 1474m": [29.55, 115.994, "江西"],
+  "九华山 · 十王峰 · 1342m": [30.478, 117.807, "安徽"],
+  "龙虎山 · 天门山 · 1300m": [28.1205, 116.998, "江西"],
+  "衡山 · 祝融峰 · 1300m": [27.254, 112.655, "湖南"],
+  "青城山 · 老君阁/彭祖峰 · 1260m": [30.907, 103.568, "四川"],
+  "雁荡山 · 百岗尖 · 1108m": [28.37, 121.06, "浙江"],
+  "齐云山 · 廊崖 · 585m": [29.817, 118.037, "安徽"],
+  "普陀山 · 佛顶山 · 291m": [30.0007, 122.3864, "浙江"],
 };
 
 const checklistPlaceCoordinates = {
@@ -4111,11 +4205,23 @@ function loadChinaAncientCapitals() {
       chinaAncientCapitals = data;
       chinaAncientCapitalCoordinates = {};
       chinaAncientCapitalMeta = {};
-      checklistCatalog.chinaAncientCapitals.items = items.map((item) => item.name);
+      const recordItems = Array.isArray(data.recordItems) && data.recordItems.length ? data.recordItems : [];
+      checklistCatalog.chinaAncientCapitals.items = (recordItems.length ? recordItems : items).map((item) => item.name);
       items.forEach((item) => {
         if (!item?.name || !Number.isFinite(item.lat) || !Number.isFinite(item.lng)) return;
         const coords = [item.lat, item.lng, "中国"];
         chinaAncientCapitalCoordinates[item.name] = coords;
+        chinaAncientCapitalMeta[canonicalPlaceKey(item.name)] = {
+          ...item,
+          siteKey: item.siteKey || `ancient-site:${canonicalPlaceKey(item.sourceSite || item.name)}`,
+          isMergedSite: true,
+        };
+      });
+      recordItems.forEach((item) => {
+        if (!item?.name) return;
+        if (Number.isFinite(item.lat) && Number.isFinite(item.lng)) {
+          chinaAncientCapitalCoordinates[item.name] = [item.lat, item.lng, "中国"];
+        }
         chinaAncientCapitalMeta[canonicalPlaceKey(item.name)] = item;
       });
     })
@@ -5417,6 +5523,15 @@ function ambiguousChecklistItemKeys(key) {
 
 function checklistOverlayEntriesFor(key) {
   const list = checklistCatalog[key] || {};
+  if (key === "chinaAncientCapitals" && Array.isArray(chinaAncientCapitals?.items) && chinaAncientCapitals.items.length) {
+    return chinaAncientCapitals.items.map((item) => ({
+      key,
+      group: "",
+      item: item.name,
+      itemKey: checklistItemKey(key, item.name),
+      legacyKey: canonicalPlaceKey(item.name),
+    }));
+  }
   if (list.byRegion) {
     return Object.entries(list.byRegion).flatMap(([group, items]) =>
       items.map((item) => ({
@@ -5489,7 +5604,10 @@ function renderChecklistMapDetail(key, item) {
 function renderAncientCapitalDetail(key, item, capitalMeta, done) {
   $("#mapDetail").classList.remove("hidden");
   $("#mapDetail").classList.add("ancient-capital-detail");
-  const dynastyCount = capitalMeta.dynasties?.length || 0;
+  const dynasties = capitalMeta.dynasty ? [capitalMeta.dynasty] : (capitalMeta.dynasties || []);
+  const ancientNames = capitalMeta.ancientName ? [capitalMeta.ancientName] : (capitalMeta.ancientNames || []);
+  const eras = capitalMeta.era ? [ancientCapitalDisplayEra(capitalMeta.era)] : (capitalMeta.eras || []).map(ancientCapitalDisplayEra);
+  const dynastyCount = dynasties.length;
   const dynastyCountLabel = currentLanguage === "en" ? `${dynastyCount} linked` : `${dynastyCount} 个`;
   $("#mapDetail").innerHTML = `
     <p class="eyebrow">${checklistCatalog[key]?.label || t("checklistFallback")}</p>
@@ -5497,15 +5615,15 @@ function renderAncientCapitalDetail(key, item, capitalMeta, done) {
     <div class="capital-facts">
       <section>
         <header><strong>${currentLanguage === "en" ? "Ancient names" : "古称"}</strong></header>
-        ${renderCompactValueList(capitalMeta.ancientNames)}
+        ${renderCompactValueList(ancientNames)}
       </section>
       <section>
         <header><strong>${currentLanguage === "en" ? "Dynasties" : "关联政权"}</strong><em>${dynastyCountLabel}</em></header>
-        ${renderCompactValueList(capitalMeta.dynasties)}
+        ${renderCompactValueList(dynasties)}
       </section>
       <section>
         <header><strong>${currentLanguage === "en" ? "Eras" : "时代"}</strong></header>
-        ${renderCompactValueList(capitalMeta.eras)}
+        ${renderCompactValueList(eras)}
       </section>
       <section class="capital-meta-line">
         <span>${escapeHtml(capitalMeta.admin || t("none"))}</span>
@@ -6763,20 +6881,25 @@ function renderAchievements() {
   $("#achievementList").innerHTML = `
     <nav class="checklist-nav checklist-page-nav manual-view-tabs">
       <button type="button" data-checklist-jump="achievement-section-china5a">${currentLanguage === "en" ? "5A scenic areas" : "5A 景区"}</button>
+      <button type="button" data-checklist-jump="achievement-section-ancientCapitals">${currentLanguage === "en" ? "Ancient capitals" : "中国古都"}</button>
       <button type="button" data-checklist-jump="achievement-section-usNationalParks">${currentLanguage === "en" ? "U.S. National Parks" : "美国国家公园"}</button>
       <button type="button" data-checklist-jump="achievement-section-worldHeritage">${currentLanguage === "en" ? "World Heritage" : "世界遗产"}</button>
       <button type="button" data-checklist-jump="achievement-section-referenceLists">${currentLanguage === "en" ? "Reference lists" : "参考清单"}</button>
     </nav>
     <details id="achievement-section-china5a" class="achievement-group" data-achievement-section="china5a">
-      <summary>${currentLanguage === "en" ? "China 5A scenic areas" : "中国 5A 景区"}</summary>
+      <summary><strong>${currentLanguage === "en" ? "China 5A scenic areas" : "中国 5A 景区"}</strong><span data-achievement-count="china5a">${checklistDoneCount("china5a")}/${checklistTotalCount("china5a")}</span></summary>
+      <div class="achievement-section-placeholder"><p class="muted small">${currentLanguage === "en" ? "Expand to load this checklist." : "展开后加载该清单。"}</p></div>
+    </details>
+    <details id="achievement-section-ancientCapitals" class="achievement-group" data-achievement-section="ancientCapitals">
+      <summary><strong>${currentLanguage === "en" ? "Ancient Chinese capitals" : "中国古都"}</strong><span data-achievement-count="chinaAncientCapitals">${checklistDoneCount("chinaAncientCapitals")}/${checklistTotalCount("chinaAncientCapitals")}</span></summary>
       <div class="achievement-section-placeholder"><p class="muted small">${currentLanguage === "en" ? "Expand to load this checklist." : "展开后加载该清单。"}</p></div>
     </details>
     <details id="achievement-section-usNationalParks" class="achievement-group" data-achievement-section="usNationalParks">
-      <summary>${currentLanguage === "en" ? "U.S. National Parks" : "美国国家公园"}</summary>
+      <summary><strong>${currentLanguage === "en" ? "U.S. National Parks" : "美国国家公园"}</strong><span data-achievement-count="usNationalParks">${checklistDoneCount("usNationalParks")}/${checklistTotalCount("usNationalParks")}</span></summary>
       <div class="achievement-section-placeholder"><p class="muted small">${currentLanguage === "en" ? "Expand to load this checklist." : "展开后加载该清单。"}</p></div>
     </details>
     <details id="achievement-section-worldHeritage" class="achievement-group" data-achievement-section="worldHeritage">
-      <summary>${currentLanguage === "en" ? "World Heritage by country" : "世界遗产（按国家）"}</summary>
+      <summary><strong>${currentLanguage === "en" ? "World Heritage" : "世界遗产"}</strong><span data-achievement-count="worldHeritage">${checklistDoneCount("worldHeritage")}/${checklistTotalCount("worldHeritage")}</span></summary>
       <div class="achievement-section-placeholder"><p class="muted small">${currentLanguage === "en" ? "Expand to load this checklist." : "展开后加载该清单。"}</p></div>
     </details>
     <details id="achievement-section-referenceLists" class="achievement-group" data-achievement-section="referenceLists">
@@ -6809,6 +6932,12 @@ function fillAchievementSection(details) {
     placeholder.outerHTML = renderChina5aSection();
     return;
   }
+  if (section === "ancientCapitals") {
+    loadChinaAncientCapitals().then(() => {
+      if (placeholder.isConnected) placeholder.outerHTML = renderAncientCapitalsSection();
+    });
+    return;
+  }
   if (section === "worldHeritage") {
     placeholder.outerHTML = renderChecklistSection("worldHeritage", checklistCatalog.worldHeritage);
     return;
@@ -6818,7 +6947,7 @@ function fillAchievementSection(details) {
     return;
   }
   if (section === "referenceLists") {
-    const referenceOrder = ["threeMountains", "fiveMountains", "buddhistMountains", "taoistMountains", "chinaHighAltitude", "grottoes"];
+    const referenceOrder = ["chinaHighAltitude", "grottoes"];
     const checklistHtml = referenceOrder
       .filter((key) => checklistCatalog[key])
       .map((key) => [key, checklistCatalog[key]])
@@ -6938,7 +7067,6 @@ function renderChina5aSection() {
     </details>`;
   }).join("");
   return `<section class="theme-checklist featured-checklist china5a-checklist">
-    <header><strong>${checklistLabel("china5a", list)}</strong><span>${done}/${checklistTotalCount("china5a")}</span></header>
     <div class="checklist-health">
       <span>${currentLanguage === "en" ? `${localRecordCount} 5A scenic areas` : `${localRecordCount} 个 5A 景区`}</span>
       <span>${currentLanguage === "en" ? `${Object.keys(china5aCoordinates || {}).length} mapped coordinates` : `${Object.keys(china5aCoordinates || {}).length} 个有地图坐标`}</span>
@@ -7013,7 +7141,6 @@ function renderUsNationalParksSection(key, list) {
   const done = checklistDoneCount(key);
   const items = list.items || [];
   return `<section class="theme-checklist us-parks-checklist">
-    <header><strong>${checklistLabel(key, list)}</strong><span>${done}/${items.length}</span></header>
     <div class="us-park-grid">
       ${items.map((item) => renderUsParkCard(key, item)).join("")}
     </div>
@@ -7039,14 +7166,44 @@ function renderUsParkCard(key, item) {
 }
 
 function renderHighAltitudeSection(key, list) {
-  const done = checklistDoneCount(key);
-  const items = (list.items || []).slice().sort((a, b) => highAltitudeMetaFor(b).altitude - highAltitudeMetaFor(a).altitude);
+  const items = (list.items || [])
+    .filter((item) => highAltitudeFilters[highAltitudeFilterKeyFor(item)] !== false)
+    .slice()
+    .sort((a, b) => highAltitudeMetaFor(b).altitude - highAltitudeMetaFor(a).altitude);
+  const done = items.filter((item) => isChecklistItemDone(key, item)).length;
+  const groupId = checklistGroupId(key, "all");
+  const isOpen = isChecklistGroupOpen(groupId);
   return `<section class="theme-checklist high-altitude-checklist">
-    <header><strong>${checklistLabel(key, list)}</strong><span>${done}/${items.length}</span></header>
-    <div class="us-park-grid high-altitude-grid">
-      ${items.map((item) => renderHighAltitudeCard(key, item)).join("")}
-    </div>
+    <details class="high-altitude-details" data-checklist-group="${groupId}" ${isOpen ? "open" : ""}>
+      <summary><strong>${checklistLabel(key, list)}</strong><span>${done}/${items.length}</span></summary>
+      ${renderHighAltitudeFilterBar()}
+      <div class="us-park-grid high-altitude-grid">
+        ${items.map((item) => renderHighAltitudeCard(key, item)).join("")}
+      </div>
+    </details>
   </section>`;
+}
+
+function renderHighAltitudeFilterBar() {
+  const options = [
+    ["threeMountains", currentLanguage === "en" ? "Three Mountains" : "三山"],
+    ["fiveMountains", currentLanguage === "en" ? "Five Great Mountains" : "五岳"],
+    ["buddhistMountains", currentLanguage === "en" ? "Buddhist Mountains" : "佛教名山"],
+    ["taoistMountains", currentLanguage === "en" ? "Taoist Mountains" : "道教名山"],
+    ["other", currentLanguage === "en" ? "Other high-altitude places" : "其他"],
+  ];
+  return `<div class="high-altitude-filter-bar">
+    ${options.map(([key, label]) => `<label><input type="checkbox" data-high-altitude-filter="${key}" ${highAltitudeFilters[key] === false ? "" : "checked"}>${escapeHtml(label)}</label>`).join("")}
+  </div>`;
+}
+
+function highAltitudeFilterKeyFor(item) {
+  const type = highAltitudeMetaFor(item).type;
+  if (type === "三山") return "threeMountains";
+  if (type === "五岳") return "fiveMountains";
+  if (type === "佛教名山") return "buddhistMountains";
+  if (type === "道教名山") return "taoistMountains";
+  return "other";
 }
 
 function parseHighAltitudeItem(item) {
@@ -7099,6 +7256,155 @@ function renderHighAltitudeCard(key, item) {
       <span><b>${labelType}</b><em>${escapeHtml(meta.type || "-")}</em></span>
     </span>
   </button>`;
+}
+
+const ancientCapitalEraOrder = [
+  "上古与夏商周",
+  "春秋战国",
+  "秦汉及同期",
+  "三国两晋",
+  "十六国",
+  "南北朝",
+  "隋唐及同期",
+  "五代十国",
+  "宋辽夏金及同期",
+  "元及元末",
+  "明清及同期",
+  "边疆与并立政权",
+  "近现代",
+];
+
+function ancientCapitalDisplayEra(era) {
+  if (era === "上古与夏商周") return currentLanguage === "en" ? "Xia, Shang and Zhou" : "夏商周";
+  return era || (currentLanguage === "en" ? "Unassigned" : "未分时代");
+}
+
+function ancientCapitalPrimaryEra(item) {
+  if (item?.era) return item.era;
+  if (item?.sourceEra) return item.sourceEra;
+  const eras = item?.eras || [];
+  return eras.slice().sort((left, right) => ancientCapitalEraIndex(left) - ancientCapitalEraIndex(right))[0] || (currentLanguage === "en" ? "Unassigned" : "未分时代");
+}
+
+function ancientCapitalEraIndex(era) {
+  const index = ancientCapitalEraOrder.indexOf(era);
+  return index === -1 ? ancientCapitalEraOrder.length : index;
+}
+
+function ancientCapitalYearText(item, field) {
+  if (field === "都城年代（原文）" && item?.capitalYears) return escapeHtml(item.capitalYears);
+  if (field === "政权年代（原文）" && item?.regimeYears) return escapeHtml(item.regimeYears);
+  const values = (item?.records || []).map((record) => record?.[field]).filter(Boolean);
+  return compactInlineValues(Array.from(new Set(values)), 4);
+}
+
+function ancientCapitalSourceOrder(item) {
+  const order = Number(item?.sourceOrder);
+  return Number.isFinite(order) ? order : Number.POSITIVE_INFINITY;
+}
+
+function ancientCapitalSiteKeyForItem(item) {
+  if (!item) return "";
+  if (typeof item === "object") {
+    return item.siteKey || (item.siteName ? `ancient-site:${canonicalPlaceKey(item.siteName)}` : "");
+  }
+  const meta = chinaAncientCapitalMeta[canonicalPlaceKey(item)];
+  return meta?.siteKey || (meta?.siteName ? `ancient-site:${canonicalPlaceKey(meta.siteName)}` : "");
+}
+
+function ancientCapitalStartYear(item) {
+  const candidates = (item?.records || [])
+    .flatMap((record) => [record?.["都城年代（原文）"], record?.["政权年代（原文）"]])
+    .map(extractAncientYear)
+    .filter(Number.isFinite);
+  return candidates.length ? Math.min(...candidates) : Number.POSITIVE_INFINITY;
+}
+
+function extractAncientYear(value) {
+  const text = String(value || "").trim();
+  if (!text) return Number.NaN;
+  const match = text.match(/(?:公元前|前|BC|BCE)?\s*(\d{1,4})/i);
+  if (!match) return Number.NaN;
+  const year = Number(match[1]);
+  return /公元前|前|BC|BCE/i.test(match[0]) || /公元前|前/.test(text.slice(0, match.index + match[0].length))
+    ? -year
+    : year;
+}
+
+function renderAncientCapitalsSection() {
+  const key = "chinaAncientCapitals";
+  const items = Array.isArray(chinaAncientCapitals?.recordItems) && chinaAncientCapitals.recordItems.length
+    ? chinaAncientCapitals.recordItems
+    : (Array.isArray(chinaAncientCapitals?.items) ? chinaAncientCapitals.items : []);
+  const done = checklistDoneCount(key);
+  const groups = new Map();
+  items
+    .slice()
+    .sort((left, right) => {
+      const eraDiff = ancientCapitalEraIndex(ancientCapitalPrimaryEra(left)) - ancientCapitalEraIndex(ancientCapitalPrimaryEra(right));
+      if (eraDiff) return eraDiff;
+      const orderDiff = ancientCapitalSourceOrder(left) - ancientCapitalSourceOrder(right);
+      if (Number.isFinite(orderDiff) && orderDiff) return orderDiff;
+      const yearDiff = ancientCapitalStartYear(left) - ancientCapitalStartYear(right);
+      if (Number.isFinite(yearDiff) && yearDiff) return yearDiff;
+      return left.name.localeCompare(right.name, "zh-Hans-CN");
+    })
+    .forEach((item) => {
+      const era = ancientCapitalPrimaryEra(item);
+      if (!groups.has(era)) groups.set(era, []);
+      groups.get(era).push(item);
+    });
+  const blocks = Array.from(groups.entries()).map(([era, groupItems]) => {
+    const groupDone = groupItems.filter((item) => isChecklistItemDone(key, item.name)).length;
+    const groupId = checklistGroupId(key, era);
+    const isOpen = isChecklistGroupOpen(groupId);
+    return `<details class="country-checklist ancient-capital-era" data-checklist-group="${groupId}" ${isOpen ? "open" : ""}>
+      <summary><strong>${escapeHtml(ancientCapitalDisplayEra(era))}</strong><span>${groupDone}/${groupItems.length}</span></summary>
+      <div class="ancient-capital-grid">${groupItems.map((item) => renderAncientCapitalCard(key, item)).join("")}</div>
+    </details>`;
+  }).join("");
+  const sourceText = currentLanguage === "en"
+    ? `${items.length} source records, ${chinaAncientCapitals?.siteCount || 0} map places`
+    : `${items.length} 条原表记录，${chinaAncientCapitals?.siteCount || 0} 个地图地点`;
+  return `<section class="theme-checklist ancient-capitals-checklist">
+    <div class="checklist-health"><span>${sourceText}</span><span>${currentLanguage === "en" ? "Grouped by era" : "按时代排列"}</span></div>
+    <div class="country-checklist-list">${blocks}</div>
+  </section>`;
+}
+
+function renderAncientCapitalCard(key, item) {
+  const checked = isChecklistItemDone(key, item.name);
+  const labels = currentLanguage === "en"
+    ? { dynasty: "Dynasty", capitalYears: "Capital years", regimeYears: "Regime years", admin: "Current area", type: "Capital type", confidence: "Confidence" }
+    : { dynasty: "政权", capitalYears: "都城年代", regimeYears: "政权年代", admin: "今属", type: "都城类型", confidence: "置信度" };
+  const dynasty = item.dynasty || compactInlineValues(item.dynasties, 4);
+  return `<button class="ancient-capital-card ${checked ? "done" : ""}" data-checklist="${escapeHtml(key)}" data-item="${escapeHtml(item.name)}" type="button">
+    <span class="ancient-capital-card-head">
+      <strong>${renderAncientCapitalTitle(item)}</strong>
+      <span class="us-park-card-status">${checked ? t("checked") : t("unvisited")}</span>
+    </span>
+    <span class="ancient-capital-card-row"><b>${labels.dynasty}</b><em>${escapeHtml(dynasty || t("none"))}</em></span>
+    <span class="ancient-capital-card-row wide"><b>${labels.capitalYears}</b><em>${ancientCapitalYearText(item, "都城年代（原文）")}</em></span>
+    <span class="ancient-capital-card-row wide"><b>${labels.regimeYears}</b><em>${ancientCapitalYearText(item, "政权年代（原文）")}</em></span>
+    <span class="ancient-capital-card-row wide"><b>${labels.admin}</b><em>${escapeHtml(item.admin || t("none"))}</em></span>
+    <span class="ancient-capital-card-row wide"><b>${labels.type}</b><em>${escapeHtml(item.capitalType || compactInlineValues(item.capitalTypes) || t("none"))}</em></span>
+    <span class="ancient-capital-card-row"><b>${labels.confidence}</b><em>${escapeHtml(item.confidence || t("none"))}</em></span>
+  </button>`;
+}
+
+function renderAncientCapitalTitle(item) {
+  const ancient = item?.ancientName || item?.name || "";
+  const current = item?.siteName || item?.parentName || item?.name || "";
+  const labels = currentLanguage === "en"
+    ? ["Ancient", "Current"]
+    : ["古称", "今称"];
+  return `<span class="ancient-capital-title-pair"><span><em>${labels[0]}</em>${escapeHtml(ancient)}</span><span><em>${labels[1]}</em>${escapeHtml(current)}</span></span>`;
+}
+
+function compactInlineValues(values, limit = 6) {
+  const list = (values || []).filter(Boolean).slice(0, limit);
+  if (!list.length) return escapeHtml(t("none"));
+  return list.map((value) => escapeHtml(value)).join("、");
 }
 
 function renderRegionChecklistSection(key, list) {
@@ -7179,7 +7485,6 @@ function renderCountryChecklistSection(key, list) {
     ? `<p class="muted small">${currentLanguage === "en" ? "No country is lit yet. Go to Light Up or click a country on the map first." : "还没有可显示的世界遗产国家清单。请先到“点亮”页面，或在地图上点亮国家/地区。"}</p>`
     : "";
   return `<section class="theme-checklist">
-    <header><strong>${checklistLabel(key, list)}</strong><span>${checklistDoneCount(key)}/${checklistTotalCount(key)}</span></header>
     ${health}
     ${emptyWorldHeritage}
     <div class="country-checklist-list">${countryBlocks}</div>
@@ -7215,7 +7520,12 @@ function isChecklistItemDone(key, item, group = "") {
   const itemKey = checklistItemKey(key, item, group);
   const legacyKey = canonicalPlaceKey(item);
   const { marked, visited } = checklistStatusKeys();
-  return marked.has(itemKey) || visited.has(itemKey) || (!isAmbiguousChecklistItem(key, item) && (marked.has(legacyKey) || visited.has(legacyKey)));
+  if (marked.has(itemKey) || visited.has(itemKey) || (!isAmbiguousChecklistItem(key, item) && (marked.has(legacyKey) || visited.has(legacyKey)))) return true;
+  if (key === "chinaHighAltitude") {
+    const baseKey = canonicalPlaceKey(parseHighAltitudeItem(item).name);
+    if (baseKey && (marked.has(baseKey) || visited.has(baseKey))) return true;
+  }
+  return false;
 }
 
 function checklistId(key, item, group = "") {
@@ -7224,6 +7534,7 @@ function checklistId(key, item, group = "") {
 
 function checklistItemKey(key, item, context = null) {
   const itemKey = canonicalPlaceKey(item);
+  if (key === "chinaAncientCapitals") return ancientCapitalSiteKeyForItem(item) || itemKey;
   if (key !== "china5a") return itemKey;
   const region = typeof context === "string" ? context : (context?.unit || checklistCoordinateFor(item)?.[2] || china5aRegionForItem(item));
   const regionKey = canonicalPlaceKey(region);
@@ -7310,14 +7621,20 @@ async function toggleChecklistItem(key, item, group = "") {
   const id = checklistId(key, item, group);
   const itemKey = checklistItemKey(key, item, group);
   const legacyKey = canonicalPlaceKey(item);
+  const highAltitudeBaseKey = key === "chinaHighAltitude" ? canonicalPlaceKey(parseHighAltitudeItem(item).name) : "";
   const marks = new Set(state.checklistMarks || []);
   const wasDone = isChecklistItemDone(key, item, group);
   if (wasDone) {
     Array.from(marks).forEach((mark) => {
       const markKey = canonicalPlaceKey(mark.split(":").slice(1).join(":"));
-      if (markKey === itemKey || (!isAmbiguousChecklistItem(key, item) && markKey === legacyKey)) marks.delete(mark);
+      if (markKey === itemKey || (!isAmbiguousChecklistItem(key, item) && markKey === legacyKey) || (highAltitudeBaseKey && markKey === highAltitudeBaseKey)) marks.delete(mark);
     });
     unvisitChecklistItem(key, item, group);
+    if (highAltitudeBaseKey) {
+      const ids = new Set(places.filter((place) => canonicalPlaceKey(place.name) === highAltitudeBaseKey).map((place) => place.id));
+      state.visits = state.visits.filter((visit) => !ids.has(visit.placeId));
+      places = places.filter((place) => !(place.checklistOnly && ids.has(place.id)));
+    }
   } else {
     marks.add(id);
     const place = ensureChecklistPlace(key, item, group);
@@ -7372,12 +7689,22 @@ function updateChecklistButtonsForItem(key, item, group = "") {
 }
 
 function refreshRenderedChecklistSectionMarkup(key) {
-  if (key !== "chinaHighAltitude" && key !== "usNationalParks") return false;
+  if (key !== "chinaHighAltitude" && key !== "usNationalParks" && key !== "chinaAncientCapitals") return false;
   const button = document.querySelector(`.theme-checklist [data-checklist="${key}"]`);
   const section = button?.closest(".theme-checklist");
   const list = checklistCatalog[key];
   if (!section || !list) return false;
+  if (key === "chinaAncientCapitals") {
+    section.querySelectorAll("[data-checklist-group]").forEach((details) => {
+      setChecklistGroupOpen(details.dataset.checklistGroup, details.open);
+    });
+    section.outerHTML = renderAncientCapitalsSection();
+    return true;
+  }
   if (key === "chinaHighAltitude") {
+    section.querySelectorAll("[data-checklist-group]").forEach((details) => {
+      setChecklistGroupOpen(details.dataset.checklistGroup, details.open);
+    });
     section.outerHTML = renderHighAltitudeSection(key, list);
     return true;
   }
@@ -7391,6 +7718,7 @@ function refreshRenderedChecklistSectionMarkup(key) {
 function refreshRenderedChecklistStats(key, group = "") {
   const list = checklistCatalog[key];
   if (!list) return;
+  refreshAchievementChecklistCount(key);
   document.querySelectorAll(`.theme-checklist [data-checklist="${key}"]`).forEach((button) => {
     const section = button.closest(".theme-checklist");
     const total = checklistTotalCount(key);
@@ -7408,6 +7736,12 @@ function refreshRenderedChecklistStats(key, group = "") {
     const done = displayChecklistItems(key, items).filter((entry) => isChecklistItemDone(key, entry, group)).length;
     summaryCount.textContent = `${done}/${displayChecklistItems(key, items).length}`;
   }
+}
+
+function refreshAchievementChecklistCount(key) {
+  const countNode = document.querySelector(`[data-achievement-count="${key}"]`);
+  if (!countNode) return;
+  countNode.textContent = `${checklistDoneCount(key)}/${checklistTotalCount(key)}`;
 }
 
 function checklistPlaceMatchesItem(key, item, place, group = "") {
@@ -7482,13 +7816,17 @@ function applyChecklistGeography(place, key, coords) {
   if (key === "chinaAncientCapitals") {
     place.country = "cn";
   }
+  if (key === "chinaHighAltitude") {
+    place.country = "cn";
+    if (coords?.[2]) place.unit = coords[2];
+  }
   if (key === "worldHeritage") {
     const countryId = coords?.[2] ? worldHeritageCountryCoverageId(coords[2]) : "";
     if (countryId) place.country = countryId;
     if (coords?.[2] && sameAdminName(place.unit, coords[2])) place.unit = "";
   }
   if (!(Number.isFinite(place.lat) && Number.isFinite(place.lng))) return;
-  if (key !== "china5a" && key !== "chinaAncientCapitals") {
+  if (key !== "china5a" && key !== "chinaAncientCapitals" && key !== "chinaHighAltitude") {
     const country = inferCountry(place.lng, place.lat);
     if (country?.id) place.country = country.id;
   }
@@ -7538,6 +7876,10 @@ function checklistCoordinateLookup() {
   Object.entries(chinaAncientCapitalCoordinates || {}).forEach(([name, coords]) => {
     add(name, coords);
     add(cleanChecklistName(name), coords);
+  });
+  Object.entries(chinaHighAltitudeCoordinates || {}).forEach(([name, coords]) => {
+    add(name, coords);
+    add(parseHighAltitudeItem(name).name, coords);
   });
   Object.entries(worldHeritageCoordinates || {}).forEach(([name, coords]) => {
     add(name, coords);
@@ -8706,6 +9048,13 @@ $("#achievementList").addEventListener("click", (event) => {
         });
       }
     }
+    return;
+  }
+  const highAltitudeFilter = event.target.closest("[data-high-altitude-filter]");
+  if (highAltitudeFilter) {
+    highAltitudeFilters[highAltitudeFilter.dataset.highAltitudeFilter] = highAltitudeFilter.checked;
+    const section = highAltitudeFilter.closest(".theme-checklist");
+    if (section) section.outerHTML = renderHighAltitudeSection("chinaHighAltitude", checklistCatalog.chinaHighAltitude);
     return;
   }
   const button = event.target.closest("[data-checklist]");
