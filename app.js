@@ -14,12 +14,12 @@ const languageStorageKey = "travel-map-language";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "1.8.5";
+const appVersion = "1.8.6";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
 const worldHeritageCatalogTotal = 1248;
-const dataCacheVersion = "20260727-ancient-capitals-fast-toggle";
+const dataCacheVersion = "20260804-v186";
 const fixedChecklistTotals = {
   china5a: china5aOfficialTotal,
   chinaAncientCapitals: chinaAncientCapitalTotal,
@@ -76,6 +76,8 @@ let worldHeritageCatalogStatus = { source: "本地清单", detail: `${worldHerit
 let worldHeritageCoordinates = {};
 let worldHeritageEnglishNames = {};
 let worldHeritageCountryIds = {};
+let worldHeritageParentKeys = {};
+let worldHeritageParentNames = {};
 let boundaryData = { country: null, china: null, us: null, japan: null, admin1: null, china2: null, chinaDirect: null, tw2: null, us2: null, ru2: null };
 let boundaryLoading = { country: false, china: false, us: false, japan: false, admin1: false, china2: false, chinaDirect: false, tw2: false, us2: false, ru2: false };
 let boundaryPromises = {};
@@ -1205,6 +1207,12 @@ function worldHeritageCountryDisplayName(countryName) {
 function checklistItemDisplayName(key, item) {
   const detailed = checklistItemDetailLabels[key]?.[item];
   if (detailed) return currentLanguage === "en" ? detailed.en : detailed.zh;
+  if (key === "worldHeritage" && worldHeritageParentNames[canonicalPlaceKey(item)]) {
+    const parent = worldHeritageParentNames[canonicalPlaceKey(item)];
+    const primary = currentLanguage === "en" && worldHeritageEnglishNames[item] ? worldHeritageEnglishNames[item] : item;
+    const parentName = currentLanguage === "en" ? parent.en : parent.zh;
+    return `${primary} · ${parentName}`;
+  }
   if (currentLanguage !== "en") return item;
   if (key === "worldHeritage" && worldHeritageEnglishNames[item]) return worldHeritageEnglishNames[item];
   const parenthetical = englishNameInParentheses(item);
@@ -1373,40 +1381,40 @@ const regionSets = {
 };
 
 const chinaProvinceImageryCatalog = [
-  ["北京", "京", "皇城中轴", "Imperial Axis"],
-  ["上海", "沪", "海派都会", "Haipai Metropolis"],
-  ["天津", "津", "海河津门", "Haihe Gateway"],
-  ["重庆", "渝", "山城雾都", "Mountain City"],
-  ["河北", "冀", "燕赵大地", "Yan-Zhao Heartland"],
-  ["山西", "晋", "表里山河", "Mountains and Rivers"],
-  ["内蒙古", "蒙", "草原故乡", "Grassland Homeland"],
-  ["辽宁", "辽", "辽海门户", "Liaohai Gateway"],
-  ["吉林", "吉", "长白林海", "Changbai Forests"],
-  ["黑龙江", "黑", "北国边疆", "Northern Frontier"],
-  ["山东", "鲁", "齐鲁大地", "Qilu Heartland"],
-  ["河南", "豫", "中原腹地", "Central Plains"],
-  ["湖北", "鄂", "荆楚水乡", "Jingchu Lakes"],
-  ["湖南", "湘", "潇湘大地", "Xiaoxiang Land"],
-  ["广东", "粤", "岭南大地", "Lingnan South"],
-  ["广西", "桂", "八桂山水", "Bagui Landscapes"],
-  ["海南", "琼", "椰风海韵", "Tropical Island"],
-  ["陕西", "秦", "三秦大地", "Three Qin Lands"],
-  ["甘肃", "陇", "丝路走廊", "Silk Road Corridor"],
-  ["青海", "青", "三江之源", "Source of Three Rivers"],
-  ["宁夏", "宁", "塞上江南", "Oasis Beyond the Wall"],
-  ["新疆", "新", "丝路天山", "Tianshan Silk Road"],
-  ["云南", "滇", "彩云之南", "South of Colorful Clouds"],
-  ["贵州", "黔", "山地公园", "Mountain Parkland"],
-  ["四川", "川", "天府之国", "Land of Abundance"],
-  ["安徽", "皖", "江淮山水", "Jianghuai Landscapes"],
-  ["福建", "闽", "八闽山海", "Fujian Mountains and Sea"],
-  ["江西", "赣", "赣鄱山水", "Ganpo Landscapes"],
-  ["浙江", "浙", "诗画江南", "Poetic Jiangnan"],
-  ["江苏", "苏", "吴韵水乡", "Wu Water Towns"],
-  ["西藏", "藏", "雪域高原", "Snowy Plateau"],
-  ["台湾", "台", "宝岛山海", "Island Mountains and Sea"],
-  ["香港", "港", "东方之珠", "Pearl of the Orient"],
-  ["澳门", "澳", "海上花园", "Garden by the Sea"],
+  ["北京", "京", "北京欢迎你", "Beijing Welcomes You"],
+  ["天津", "津", "天天乐道 津津有味", "Tianjin: daily delight, endless flavor"],
+  ["河北", "冀", "这么近，那么美，周末到河北", "So close, so beautiful: weekend in Hebei"],
+  ["山西", "晋", "华夏古文明 山西好风光", "Ancient Chinese civilization, beautiful Shanxi"],
+  ["内蒙古", "蒙", "亮丽内蒙古", "Beautiful Inner Mongolia"],
+  ["辽宁", "辽", "山海有情 天辽地宁", "Mountains, sea, and boundless Liaoning"],
+  ["吉林", "吉", "清爽吉林·22℃的夏天", "Refreshing Jilin, a 22°C summer"],
+  ["黑龙江", "黑", "北国好风光 美在黑龙江", "Northern beauty in Heilongjiang"],
+  ["上海", "沪", "这里是上海", "This is Shanghai"],
+  ["江苏", "苏", "水韵江苏 有你会更美", "Water charm Jiangsu, better with you"],
+  ["浙江", "浙", "诗画江南 活力浙江", "Poetic Jiangnan, vibrant Zhejiang"],
+  ["安徽", "皖", "美好安徽 迎客天下", "Beautiful Anhui welcomes the world"],
+  ["福建", "闽", "清新福建", "Fresh Fujian"],
+  ["江西", "赣", "江西风景独好", "Jiangxi: uniquely beautiful scenery"],
+  ["山东", "鲁", "好客山东 好品山东", "Hospitable Shandong, quality Shandong"],
+  ["河南", "豫", "行走河南·读懂中国", "Walk Henan, understand China"],
+  ["湖北", "鄂", "知音湖北 遇见无处不在", "Hubei, where encounters are everywhere"],
+  ["湖南", "湘", "三湘四水 相约湖南", "Meet Hunan among rivers and landscapes"],
+  ["广东", "粤", "活力广东", "Vibrant Guangdong"],
+  ["广西", "桂", "秀甲天下 壮美广西", "Magnificent Guangxi, beauty beyond compare"],
+  ["海南", "琼", "活力自贸港 魅力海南岛", "Vibrant free trade port, charming Hainan Island"],
+  ["重庆", "渝", "雄奇山水 新韵重庆", "Majestic landscapes, new Chongqing charm"],
+  ["四川", "川", "锦绣天府 安逸四川", "Splendid Tianfu, easygoing Sichuan"],
+  ["贵州", "黔", "山地公园省 多彩贵州", "Mountain park province, colorful Guizhou"],
+  ["云南", "滇", "有一种叫云南的生活", "A lifestyle called Yunnan"],
+  ["西藏", "藏", "圣洁西藏", "Sacred Tibet"],
+  ["陕西", "秦", "三秦四季 畅旅欢歌", "Four seasons in Shaanxi, joyful journeys"],
+  ["甘肃", "陇", "交响丝路 如意甘肃", "Symphonic Silk Road, auspicious Gansu"],
+  ["青海", "青", "大美青海 生态旅游净地", "Great beauty Qinghai, pure eco-travel land"],
+  ["宁夏", "宁", "星星故乡 神奇宁夏", "Home of the stars, magical Ningxia"],
+  ["新疆", "新", "新疆是个好地方", "Xinjiang is a wonderful place"],
+  ["台湾", "台", "宝岛山海", "Island mountains and sea"],
+  ["香港", "港", "Hello Hong Kong（你好，香港）", "Hello Hong Kong"],
+  ["澳门", "澳", "感受澳门 无限式", "Experience Macao Unlimited"],
 ].map(([name, abbr, imageryZh, imageryEn]) => ({ name, abbr, imageryZh, imageryEn }));
 
 const chinaProvinceImageryByName = new Map(chinaProvinceImageryCatalog.map((item) => [item.name, item]));
@@ -1997,7 +2005,7 @@ const chinaHighAltitudeCoordinates = {
   "纳木错 · 扎西半岛 · 4718m": [30.762, 90.991, "西藏"],
   "稻城亚丁 · 五色海 · 4700m": [28.393, 100.322, "四川"],
   "玉龙雪山 · 冰川公园平台 · 4680m": [27.101, 100.177, "云南"],
-  "慕士塔格峰景区 · 4688米石碑 · 4688m": [38.285, 75.087, "新疆"],
+  "慕士塔格峰景区 · 4688米石碑 · 4688m": [38.22676, 75.02572, "新疆"],
   "冈仁波齐 · 塔尔钦周边 · 4670m": [31.104, 81.31, "西藏"],
   "稻城亚丁 · 牛奶海 · 4600m": [28.386, 100.322, "四川"],
   "玛旁雍错 · 湖区游览点 · 4588m": [30.69, 81.49, "西藏"],
@@ -2010,14 +2018,14 @@ const chinaHighAltitudeCoordinates = {
   "白马雪山 · 垭口 · 4292m": [28.223, 99.099, "云南"],
   "折多山 · 垭口 · 4298m": [30.052, 101.798, "四川"],
   "鱼子西 · 观景平台 · 4200m": [30.096, 101.62, "四川"],
-  "盘龙古道 · 最高观景垭口 · 4216m": [37.728, 75.191, "新疆"],
+  "盘龙古道 · 最高观景垭口 · 4216m": [37.63607, 75.51116, "新疆"],
   "玉山 · 主峰步道终点 · 3952m": [23.47, 120.957, "台湾"],
   "四姑娘山双桥沟 · 红杉林 · 3840m": [31.105, 102.85, "四川"],
   "喀拉库勒湖 · 湖边观景点 · 3600m": [38.44, 75.056, "新疆"],
   "黄龙 · 五彩池 · 3576m": [32.745, 103.833, "四川"],
   "巴松措 · 湖区游览点 · 3480m": [30.022, 93.943, "西藏"],
   "梅里雪山 · 飞来寺观景台 · 3400m": [28.442, 98.86, "云南"],
-  "白沙湖/白沙山 · 湖边观景点 · 3300m": [37.762, 75.035, "新疆"],
+  "白沙湖/白沙山 · 湖边观景点 · 3300m": [38.72971, 75.01629, "新疆"],
   "青海湖 · 湖区游览点 · 3196m": [36.895, 100.175, "青海"],
   "峨眉山 · 金顶 · 3079m": [29.52, 103.336, "四川"],
   "五台山 · 北台叶斗峰 · 3061m": [39.009, 113.594, "山西"],
@@ -4049,6 +4057,8 @@ function loadCatalogData() {
       const coordinates = {};
       const englishNames = {};
       const countryIds = {};
+      const parentKeys = {};
+      const parentNames = {};
       const nameAliases = collectWorldHeritageNameAliases(data.byCountry);
       if (Array.isArray(data.items) && data.items.length) {
         data.items.forEach((item) => {
@@ -4058,6 +4068,26 @@ function loadCatalogData() {
           const itemCountries = (Array.isArray(item.countries) && item.countries.length ? item.countries : [item.country]).map(stripHtmlTags);
           const itemCountryIds = Array.isArray(item.countryIds) ? item.countryIds : [];
           if (item.enName) englishNames[normalizedItem] = stripHtmlTags(item.enName);
+          if (Array.isArray(item.components) && item.components.length) {
+            item.components.forEach((component) => {
+              const componentName = normalizeWorldHeritageItemName(stripHtmlTags(component.zhName || component.name || component.enName), nameAliases);
+              if (!componentName) return;
+              const componentCountry = worldHeritageDisplayCountryForItem(componentName, stripHtmlTags(component.country || itemCountries[0]));
+              if (component.countryId) countryIds[componentCountry] = String(component.countryId).toLowerCase();
+              byCountry[componentCountry] ||= [];
+              byCountry[componentCountry].push(componentName);
+              parentKeys[canonicalPlaceKey(componentName)] = canonicalPlaceKey(normalizedItem);
+              parentNames[canonicalPlaceKey(componentName)] = {
+                zh: normalizedItem,
+                en: stripHtmlTags(item.enName || normalizedItem),
+              };
+              if (component.enName) englishNames[componentName] = stripHtmlTags(component.enName);
+              if (Number.isFinite(component.lat) && Number.isFinite(component.lng)) {
+                coordinates[componentName] = [component.lat, component.lng, componentCountry];
+              }
+            });
+            return;
+          }
           itemCountries.forEach((country, index) => {
             const itemCountry = worldHeritageDisplayCountryForItem(normalizedItem, country);
             if (itemCountryIds[index]) countryIds[itemCountry] = String(itemCountryIds[index]).toLowerCase();
@@ -4108,6 +4138,8 @@ function loadCatalogData() {
       worldHeritageCoordinates = coordinates;
       worldHeritageEnglishNames = englishNames;
       worldHeritageCountryIds = countryIds;
+      worldHeritageParentKeys = parentKeys;
+      worldHeritageParentNames = parentNames;
       const countryCount = Object.keys(byCountry).length;
       const total = Number(data.total) || worldHeritageCatalogTotal;
       worldHeritageCatalogStatus = {
@@ -4126,8 +4158,11 @@ function loadCatalogData() {
     })
     .catch((error) => {
       console.warn("世界遗产清单加载失败，使用内置备用清单", error);
+      worldHeritageCoordinates = {};
       worldHeritageEnglishNames = {};
       worldHeritageCountryIds = {};
+      worldHeritageParentKeys = {};
+      worldHeritageParentNames = {};
       worldHeritageCatalogStatus = {
         source: currentLanguage === "en" ? "Built-in fallback catalog" : "内置备用清单",
         detail: currentLanguage === "en" ? "data/world-heritage.json was not loaded" : "未能加载 data/world-heritage.json",
@@ -7544,6 +7579,7 @@ function renderCountryChecklistSection(key, list) {
 }
 
 function checklistDoneCount(key) {
+  if (key === "worldHeritage") return worldHeritageDoneCount();
   const { marked, visited } = checklistStatusKeys();
   const list = checklistCatalog[key] || {};
   const entries = list.byRegion
@@ -7554,6 +7590,25 @@ function checklistDoneCount(key) {
     const legacyKey = canonicalPlaceKey(item);
     return marked.has(itemKey) || visited.has(itemKey) || (!isAmbiguousChecklistItem(key, item) && (marked.has(legacyKey) || visited.has(legacyKey)));
   }).length;
+}
+
+function worldHeritageMainKey(item) {
+  const itemKey = canonicalPlaceKey(item);
+  return worldHeritageParentKeys[itemKey] || itemKey;
+}
+
+function worldHeritageDoneCount() {
+  const { marked, visited } = checklistStatusKeys();
+  const doneMainKeys = new Set();
+  checklistItemsFor("worldHeritage").forEach((item) => {
+    const itemKey = checklistItemKey("worldHeritage", item);
+    const legacyKey = canonicalPlaceKey(item);
+    const mainKey = worldHeritageMainKey(item);
+    if (marked.has(itemKey) || visited.has(itemKey) || marked.has(legacyKey) || visited.has(legacyKey) || marked.has(mainKey) || visited.has(mainKey)) {
+      doneMainKeys.add(mainKey);
+    }
+  });
+  return doneMainKeys.size;
 }
 
 function checklistTotalCount(key) {
