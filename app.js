@@ -5808,7 +5808,7 @@ function addMapLibreImportedPathLayer(sourceId, lineId, lineWidth) {
       "line-join": "round",
     },
     paint: {
-      "line-color": depthColors[1],
+      "line-color": "#0000FF",
       "line-width": lineWidth,
       "line-opacity": 0.95,
     },
@@ -5943,7 +5943,7 @@ function renderLeafletLayers() {
 
   if (overlays.paths) {
     L.geoJSON(importedPathGeoJson(), {
-      style: () => ({ color: depthColors[1], weight: 3, opacity: 0.95 }),
+      style: () => ({ color: "#0000FF", weight: 3, opacity: 0.95 }),
       onEachFeature: (feature, layer) => {
         layer.bindTooltip(feature.properties.name, { sticky: true });
       },
