@@ -14,7 +14,7 @@ const languageStorageKey = "travel-map-language";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "1.8.6";
+const appVersion = "1.8.7";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
@@ -1383,7 +1383,7 @@ const regionSets = {
 const chinaProvinceImageryCatalog = [
   ["北京", "京", "北京欢迎你", "Beijing Welcomes You"],
   ["天津", "津", "天天乐道 津津有味", "Tianjin: daily delight, endless flavor"],
-  ["河北", "冀", "这么近，那么美，周末到河北", "So close, so beautiful: weekend in Hebei"],
+  ["河北", "冀", "这么近那么美，周末到河北", "So close, so beautiful: weekend in Hebei"],
   ["山西", "晋", "华夏古文明 山西好风光", "Ancient Chinese civilization, beautiful Shanxi"],
   ["内蒙古", "蒙", "亮丽内蒙古", "Beautiful Inner Mongolia"],
   ["辽宁", "辽", "山海有情 天辽地宁", "Mountains, sea, and boundless Liaoning"],
@@ -1404,7 +1404,7 @@ const chinaProvinceImageryCatalog = [
   ["海南", "琼", "活力自贸港 魅力海南岛", "Vibrant free trade port, charming Hainan Island"],
   ["重庆", "渝", "雄奇山水 新韵重庆", "Majestic landscapes, new Chongqing charm"],
   ["四川", "川", "锦绣天府 安逸四川", "Splendid Tianfu, easygoing Sichuan"],
-  ["贵州", "黔", "山地公园省 多彩贵州", "Mountain park province, colorful Guizhou"],
+  ["贵州", "黔", "山地公园省，多彩贵州风", "Mountain park province, colorful Guizhou style"],
   ["云南", "滇", "有一种叫云南的生活", "A lifestyle called Yunnan"],
   ["西藏", "藏", "圣洁西藏", "Sacred Tibet"],
   ["陕西", "秦", "三秦四季 畅旅欢歌", "Four seasons in Shaanxi, joyful journeys"],
@@ -5462,19 +5462,22 @@ function addMapLibrePointLayers(sourceId) {
 function bindMapLibrePointHandlers() {
   if (mapLibreLayerHandlersBound.points || !mapLibreMap.getLayer("map-points-circle")) return;
   mapLibreLayerHandlersBound.points = true;
-  mapLibreMap.on("click", "map-points-circle", (event) => {
+  const handlePointClick = (event) => {
     markMapEventHandled(event);
     const feature = event.features?.[0];
     if (!feature) return;
     renderMapLibrePointDetail(feature);
     showMapLibrePointPopup(feature, event.lngLat);
-  });
-  mapLibreMap.on("mouseenter", "map-points-circle", () => {
+  };
+  const setPointer = () => {
     mapLibreMap.getCanvas().style.cursor = "pointer";
-  });
-  mapLibreMap.on("mouseleave", "map-points-circle", () => {
+  };
+  const clearPointer = () => {
     mapLibreMap.getCanvas().style.cursor = "";
-  });
+  };
+  mapLibreMap.on("click", "map-points-circle", handlePointClick);
+  mapLibreMap.on("mouseenter", "map-points-circle", setPointer);
+  mapLibreMap.on("mouseleave", "map-points-circle", clearPointer);
 }
 
 function renderMapLibrePointDetail(feature) {
