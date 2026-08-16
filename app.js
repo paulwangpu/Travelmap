@@ -3589,7 +3589,9 @@ function markMapEventHandled(event) {
 
 function mapEventHitsPoint(event) {
   if (!mapLibreMap || !event?.point || !mapLibreMap.getLayer("map-points-circle")) return false;
-  return mapLibreMap.queryRenderedFeatures(event.point, { layers: ["map-points-circle"] }).length > 0;
+  const pointLayers = ["map-points-circle", "map-points-label", "map-points-label-full"]
+    .filter((layerId) => mapLibreMap.getLayer(layerId));
+  return mapLibreMap.queryRenderedFeatures(event.point, { layers: pointLayers }).length > 0;
 }
 
 function ensureMapDetailCloseButton() {
@@ -4966,6 +4968,7 @@ function renderMapLibreMap() {
       dragRotate: false,
       pitchWithRotate: false,
       touchPitch: false,
+      localIdeographFontFamily: '"Microsoft YaHei", SimHei, "Noto Sans CJK SC", sans-serif',
       attributionControl: true,
       style: mapLibreBaseStyle(provider),
     });
@@ -5004,6 +5007,7 @@ function mapLibreBaseStyle(providerId) {
   const provider = mapProviders[providerId] || mapProviders.osm;
   return {
     version: 8,
+    glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
     sources: {
       basemap: {
         type: "raster",
@@ -5051,9 +5055,18 @@ function setMapLibreSource(id, data) {
   if (source) {
     if (mapLibreSourceDataRefs.get(id) !== data) source.setData(data);
   } else {
-    mapLibreMap.addSource(id, { type: "geojson", data });
+    mapLibreMap.addSource(id, { type: "geojson", data, ...mapLibreSourceOptions(id) });
   }
   mapLibreSourceDataRefs.set(id, data);
+}
+
+function mapLibreSourceOptions(id) {
+  if (id !== "map-points") return {};
+  return {
+    maxzoom: 22,
+    buffer: 512,
+    tolerance: 0,
+  };
 }
 
 function cachedMapGeoJson(key, builder) {
@@ -5113,6 +5126,8 @@ function renderMapLibreLayers() {
   removeMapLibreLayer("map-points-shadow");
   removeMapLibreLayer("map-points-stroke");
   removeMapLibreLayer("map-points-circle");
+  removeMapLibreLayer("map-points-label");
+  removeMapLibreLayer("map-points-label-full");
   removeMapLibreLayer("admin-country-context-line");
   removeMapLibreLayer("admin-country-context-fill");
   removeMapLibreLayer("map-background-context-line");
@@ -5457,6 +5472,58 @@ function addMapLibrePointLayers(sourceId) {
       },
     });
   }
+  if (!mapLibreMap.getLayer("map-points-label")) {
+    mapLibreMap.addLayer({
+      id: "map-points-label",
+      type: "symbol",
+      source: sourceId,
+      minzoom: 7,
+      maxzoom: 10.5,
+      layout: {
+        "text-field": ["get", "title"],
+        "text-font": ["Open Sans Regular", "Arial Unicode MS Regular"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 7, 12, 10.5, 14],
+        "text-variable-anchor": ["top", "bottom", "left", "right"],
+        "text-radial-offset": 0.75,
+        "text-max-width": 12,
+        "text-padding": 1,
+        "text-optional": true,
+      },
+      paint: {
+        "text-color": "#111827",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1.05,
+        "text-halo-blur": 0.05,
+        "text-opacity": ["interpolate", ["linear"], ["zoom"], 6.8, 0, 7, 1],
+      },
+    });
+  }
+  if (!mapLibreMap.getLayer("map-points-label-full")) {
+    mapLibreMap.addLayer({
+      id: "map-points-label-full",
+      type: "symbol",
+      source: sourceId,
+      minzoom: 10.5,
+      layout: {
+        "text-field": ["get", "title"],
+        "text-font": ["Open Sans Regular", "Arial Unicode MS Regular"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 10.5, 14, 13, 16],
+        "text-offset": [0, 1.15],
+        "text-anchor": "top",
+        "text-max-width": 12,
+        "text-padding": 1,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "text-optional": true,
+      },
+      paint: {
+        "text-color": "#111827",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1.05,
+        "text-halo-blur": 0.05,
+      },
+    });
+  }
 }
 
 function bindMapLibrePointHandlers() {
@@ -5475,9 +5542,12 @@ function bindMapLibrePointHandlers() {
   const clearPointer = () => {
     mapLibreMap.getCanvas().style.cursor = "";
   };
-  mapLibreMap.on("click", "map-points-circle", handlePointClick);
-  mapLibreMap.on("mouseenter", "map-points-circle", setPointer);
-  mapLibreMap.on("mouseleave", "map-points-circle", clearPointer);
+  ["map-points-circle", "map-points-label", "map-points-label-full"].forEach((layerId) => {
+    if (!mapLibreMap.getLayer(layerId)) return;
+    mapLibreMap.on("click", layerId, handlePointClick);
+    mapLibreMap.on("mouseenter", layerId, setPointer);
+    mapLibreMap.on("mouseleave", layerId, clearPointer);
+  });
 }
 
 function renderMapLibrePointDetail(feature) {
