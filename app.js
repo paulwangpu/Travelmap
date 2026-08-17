@@ -553,14 +553,33 @@ function flightRouteKey(flight) {
   const from = findAirport(flight.fromAirport);
   const to = findAirport(flight.toAirport);
   if (!from || !to) return "";
-  return [from.iata, to.iata].sort().join("-");
+  return [flightRouteEndpointKey(from), flightRouteEndpointKey(to)].sort().join("-");
+}
+
+function flightRouteEndpointKey(airport) {
+  return `${airport.country}:${airport.city || airport.name}`;
+}
+
+function flightRouteEndpointName(airport) {
+  return airport.city || airport.name;
 }
 
 function flightRouteWidth(count) {
-  if (count >= 8) return 5.5;
-  if (count >= 4) return 4;
-  if (count >= 2) return 2.5;
-  return 1.5;
+  if (count >= 30) return 8.5;
+  if (count >= 15) return 6.8;
+  if (count >= 8) return 5.2;
+  if (count >= 4) return 3.6;
+  if (count >= 2) return 2.3;
+  return 1.35;
+}
+
+function flightRouteOpacity(count) {
+  if (count >= 30) return 0.9;
+  if (count >= 15) return 0.84;
+  if (count >= 8) return 0.78;
+  if (count >= 4) return 0.7;
+  if (count >= 2) return 0.62;
+  return 0.52;
 }
 
 function greatCircleLine(from, to, steps = 96) {
@@ -4757,10 +4776,7 @@ function flightRouteGeoJson() {
     type: "FeatureCollection",
     features: Array.from(groups.values()).map((group) => {
       const count = group.flights.length;
-      const sortedFlights = group.flights
-        .slice()
-        .sort((left, right) => `${right.date} ${right.fromTime}`.localeCompare(`${left.date} ${left.fromTime}`));
-      const title = `${group.from.name} ⇄ ${group.to.name}`;
+      const title = `${flightRouteEndpointName(group.from)} ⇄ ${flightRouteEndpointName(group.to)}`;
       return {
         type: "Feature",
         properties: {
@@ -4768,7 +4784,7 @@ function flightRouteGeoJson() {
           name: title,
           count,
           width: flightRouteWidth(count),
-          summary: sortedFlights.slice(0, 6).map((flight) => `${flight.date} ${flight.flightNo}`).join(" · "),
+          opacity: flightRouteOpacity(count),
         },
         geometry: splitAntimeridian(greatCircleLine(group.from, group.to)),
       };
@@ -6323,7 +6339,7 @@ function addMapLibreFlightRouteLayer(sourceId, lineId) {
     paint: {
       "line-color": "#7c3aed",
       "line-width": ["get", "width"],
-      "line-opacity": 0.72,
+      "line-opacity": ["get", "opacity"],
     },
   });
 }
@@ -6337,7 +6353,7 @@ function bindMapLibreFlightRouteHandlers() {
     const countText = currentLanguage === "en" ? `${props.count || 0} flights` : `${props.count || 0} 次航班`;
     new maplibregl.Popup({ offset: 12, closeButton: false })
       .setLngLat(event.lngLat)
-      .setHTML(mapPopupHtml(`<strong>${escapeHtml(props.name || "")}</strong><br>${escapeHtml(countText)}<br><span>${escapeHtml(props.summary || "")}</span>`))
+      .setHTML(mapPopupHtml(`<strong>${escapeHtml(props.name || "")}</strong><br>${escapeHtml(countText)}`))
       .addTo(mapLibreMap);
   });
   mapLibreMap.on("mouseenter", "flight-routes-line", () => {
@@ -6485,7 +6501,7 @@ function renderLeafletLayers() {
 
   if (overlays.flights) {
     L.geoJSON(flightRouteGeoJson(), {
-      style: (feature) => ({ color: "#7c3aed", weight: feature.properties.width || 2, opacity: 0.72 }),
+      style: (feature) => ({ color: "#7c3aed", weight: feature.properties.width || 2, opacity: feature.properties.opacity || 0.72 }),
       onEachFeature: (feature, layer) => {
         layer.bindTooltip(`${feature.properties.name} · ${feature.properties.count} ${currentLanguage === "en" ? "flights" : "次"}`, { sticky: true });
       },
