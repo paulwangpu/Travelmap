@@ -14,18 +14,19 @@ const languageStorageKey = "travel-map-language";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "1.8.8";
+const appVersion = "1.8.9";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
 const worldHeritageCatalogTotal = 1248;
-const dataCacheVersion = "20260804-v186";
+const dataCacheVersion = "20260816-airports";
 const fixedChecklistTotals = {
   china5a: china5aOfficialTotal,
   chinaAncientCapitals: chinaAncientCapitalTotal,
   worldHeritage: worldHeritageCatalogTotal,
 };
 const maxImportVisiblePoints = Infinity;
+const airportDataUrl = "data/airports.json";
 const boundaryIndexUrl = "data/boundaries/index.json";
 const boundarySources = {
   country: "data/boundaries/country/world.geojson",
@@ -112,7 +113,7 @@ let dashboardStatsCache = { signature: "", stats: null };
 let mapAddMode = false;
 let pendingMapClickPoint = null;
 let highAltitudeFilters = { threeMountains: true, fiveMountains: true, buddhistMountains: true, taoistMountains: true, other: true };
-const airportCatalog = [
+const manualAirportCatalog = [
   ["北京首都", "PEK", "北京", "cn", 40.0799, 116.6031, ["北京首都国际"]],
   ["北京大兴", "PKX", "北京", "cn", 39.5098, 116.4105, ["北京大兴国际"]],
   ["上海浦东", "PVG", "上海", "cn", 31.1443, 121.8083, ["上海浦东国际"]],
@@ -156,6 +157,12 @@ const airportCatalog = [
   ["宜昌三峡", "YIH", "宜昌", "cn", 30.5566, 111.4799, ["宜昌三峡机场"]],
   ["白山长白山", "NBS", "白山", "cn", 42.0669, 127.602, ["长白山机场"]],
   ["张家界荷花", "DYG", "张家界", "cn", 29.1028, 110.443, ["张家界荷花国际"]],
+  ["大连周水子", "DLC", "大连", "cn", 38.9657, 121.5386, ["大连", "大连周水子国际"]],
+  ["敦煌莫高", "DNH", "敦煌", "cn", 40.1611, 94.8092, ["敦煌", "敦煌莫高国际"]],
+  ["乌鲁木齐地窝堡", "URC", "乌鲁木齐", "cn", 43.9071, 87.4742, ["乌鲁木齐", "乌鲁木齐地窝堡国际"]],
+  ["丽江三义", "LJG", "丽江", "cn", 26.68, 100.246, ["丽江", "丽江三义国际"]],
+  ["西双版纳嘎洒", "JHG", "西双版纳", "cn", 21.9739, 100.7596, ["西双版纳", "景洪", "西双版纳嘎洒国际"]],
+  ["牡丹江海浪", "MDG", "牡丹江", "cn", 44.5241, 129.5689, ["牡丹江", "牡丹江海浪国际"]],
   ["青岛胶东", "TAO", "青岛", "cn", 36.3619, 120.088, ["青岛胶东国际"]],
   ["中国澳门", "MFM", "澳门", "cn", 22.1496, 113.5916, ["澳门国际", "澳门"]],
   ["香港国际", "HKG", "香港", "cn", 22.308, 113.9185, ["香港"]],
@@ -218,6 +225,9 @@ const airportCatalog = [
   ["伦敦希思罗", "LHR", "伦敦", "gb", 51.47, -0.4543, ["希思罗"]],
   ["巴黎戴高乐", "CDG", "巴黎", "fr", 49.0097, 2.5479, ["巴黎"]],
 ];
+let airportCatalog = [...manualAirportCatalog];
+let airportDataPromise = null;
+let airportDataLoaded = false;
 let airportLookupCache = null;
 const admin1RegionGroupCountries = new Set(["fr", "it", "jp"]);
 const subadminConfigs = {
@@ -289,7 +299,7 @@ const translations = {
     importEyebrow: "导入",
     importTitle: "导入地图或地点文件",
     chooseFile: "选择文件",
-    csvHelp: "地图/地点文件：支持 GeoJSON/JSON、KML、CSV 和照片。GeoJSON/KML 的点会作为已导入地点，线和面会作为已导入轨迹显示；CSV 建议只保留名称、纬度、经度三列，也支持英文列名：name、lat/latitude、lng/lon/longitude；照片只读取本地文件名和 EXIF GPS，不上传照片。航旅纵横：使用“导出航班行程（Pro 专享）”导出的 Excel（.xls）可以直接导入，系统会提取航班并绘制独立“我的航线”，不会自动点亮城市或国家。当前不限制导入点数，但点太多会影响浏览器渲染，建议只导入确实需要显示的数据。",
+    csvHelp: "地图/地点文件：支持 GeoJSON/JSON、KML、CSV 和照片。GeoJSON/KML 的点会作为已导入地点，线和面会作为已导入轨迹显示；CSV 建议只保留名称、纬度、经度三列，也支持英文列名：name、lat/latitude、lng/lon/longitude；照片只读取本地文件名和 EXIF GPS，不上传照片。航旅纵横：使用“导出航班行程（Pro 专享）”导出的 Excel（.xls）可以直接导入，系统会提取航班并绘制独立“我的航线”，不会自动点亮城市或国家。航班起降地可填城市、机场或 IATA，使用本地全球机场库匹配。当前不限制导入点数，但点太多会影响浏览器渲染，建议只导入确实需要显示的数据。",
     archiveEyebrow: "存档",
     archiveTitle: "数据存档",
     exportArchive: "导出存档",
@@ -401,7 +411,7 @@ const translations = {
     importEyebrow: "Import",
     importTitle: "Import map or place files",
     chooseFile: "Choose file",
-    csvHelp: "Map/place files: GeoJSON/JSON, KML, CSV, and photos are supported. GeoJSON/KML points become imported places; lines and polygons become imported tracks. CSV works best with only name, latitude, and longitude; supported headers are 名称/name, 纬度/lat/latitude, and 经度/lng/lon/longitude. Photos only read local filename and EXIF GPS without uploading files. TravelSky/CAPA: Excel (.xls) exported from “Export flight itinerary (Pro)” can be imported directly; flights are drawn as a separate My flights layer and do not light up cities or countries. There is no hard import limit now, but very large datasets can slow browser rendering.",
+    csvHelp: "Map/place files: GeoJSON/JSON, KML, CSV, and photos are supported. GeoJSON/KML points become imported places; lines and polygons become imported tracks. CSV works best with only name, latitude, and longitude; supported headers are 名称/name, 纬度/lat/latitude, and 经度/lng/lon/longitude. Photos only read local filename and EXIF GPS without uploading files. TravelSky/CAPA: Excel (.xls) exported from “Export flight itinerary (Pro)” can be imported directly; flights are drawn as a separate My flights layer and do not light up cities or countries. Flight endpoints can be cities, airports, or IATA codes, matched against a local global airport database. There is no hard import limit now, but very large datasets can slow browser rendering.",
     archiveEyebrow: "Archive",
     archiveTitle: "Data archive",
     exportArchive: "Export archive",
@@ -490,12 +500,77 @@ function airportLookup() {
   airportLookupCache = new Map();
   airportCatalog.forEach(([name, iata, city, country, lat, lng, aliases = []]) => {
     const airport = { name, iata, city, country, lat, lng, aliases };
-    [name, iata, ...aliases].filter(Boolean).forEach((alias) => {
-      airportLookupCache.set(normalizeAirportName(alias), airport);
-      airportLookupCache.set(String(alias).toUpperCase(), airport);
-    });
+    const setLookup = (key, value = airport, overwrite = true) => {
+      if (!key) return;
+      const normalized = normalizeAirportName(key);
+      if (overwrite || !airportLookupCache.has(normalized)) airportLookupCache.set(normalized, value);
+      const upper = String(key).toUpperCase();
+      if (overwrite || !airportLookupCache.has(upper)) airportLookupCache.set(upper, value);
+    };
+    setLookup(city, airport, false);
+    setLookup(name);
+    setLookup(iata);
+    aliases.filter(Boolean).forEach((alias) => setLookup(alias, airport, false));
   });
   return airportLookupCache;
+}
+
+function normalizeAirportCatalogEntry(entry) {
+  if (!Array.isArray(entry)) return null;
+  const [name, iata, city, country, lat, lng, aliases = []] = entry;
+  const latitude = Number(lat);
+  const longitude = Number(lng);
+  if (!name || !iata || !country || !Number.isFinite(latitude) || !Number.isFinite(longitude)) return null;
+  return [
+    String(name).trim(),
+    String(iata).trim().toUpperCase(),
+    String(city || name).trim(),
+    String(country).trim().toLowerCase(),
+    latitude,
+    longitude,
+    Array.isArray(aliases) ? aliases.map((alias) => String(alias || "").trim()).filter(Boolean) : [],
+  ];
+}
+
+function loadAirportData() {
+  if (airportDataLoaded) return Promise.resolve(airportCatalog);
+  if (airportDataPromise) return airportDataPromise;
+  airportDataPromise = fetch(`${airportDataUrl}?v=${dataCacheVersion}`)
+    .then((response) => {
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return response.json();
+    })
+    .then((records) => {
+      const generated = (Array.isArray(records) ? records : []).map(normalizeAirportCatalogEntry).filter(Boolean);
+      const byIata = new Map();
+      [...manualAirportCatalog, ...generated].forEach((entry) => {
+        const key = String(entry[1] || "").toUpperCase();
+        if (!key) return;
+        if (!byIata.has(key)) {
+          byIata.set(key, [...entry.slice(0, 6), [...(entry[6] || [])]]);
+          return;
+        }
+        const existing = byIata.get(key);
+        existing[6] = Array.from(new Set([
+          ...(existing[6] || []),
+          entry[0],
+          entry[2],
+          ...(entry[6] || []),
+        ].filter(Boolean)));
+      });
+      airportCatalog = Array.from(byIata.values());
+      airportLookupCache = null;
+      airportDataLoaded = true;
+      return airportCatalog;
+    })
+    .catch((error) => {
+      console.warn("机场数据加载失败，使用内置机场字典", error);
+      airportCatalog = [...manualAirportCatalog];
+      airportLookupCache = null;
+      airportDataLoaded = true;
+      return airportCatalog;
+    });
+  return airportDataPromise;
 }
 
 function findAirport(value) {
@@ -518,9 +593,9 @@ function normalizeFlightRecord(raw = {}) {
     airline: String(raw.airline || "").trim(),
     flightNo: String(raw.flightNo || "").trim().toUpperCase(),
     fromAirport: String(raw.fromAirport || "").trim(),
-    fromTime: String(raw.fromTime || "").trim(),
+    fromTime: normalizeFlightTime(raw.fromTime),
     toAirport: String(raw.toAirport || "").trim(),
-    toTime: String(raw.toTime || "").trim(),
+    toTime: normalizeFlightTime(raw.toTime),
     distanceKm: Number(raw.distanceKm) || 0,
     ticketNo: String(raw.ticketNo || "").trim(),
     ticketStatus: String(raw.ticketStatus || "").trim(),
@@ -8713,6 +8788,9 @@ async function handleImport(event) {
   const files = Array.from(event.target.files || []);
   if (!files.length) return;
   try {
+    if (files.some((file) => file.name.split(".").pop().toLowerCase() === "xls")) {
+      await loadAirportData();
+    }
     const jobs = [];
     const flightJobs = [];
     const photoPlaces = [];
@@ -9131,6 +9209,19 @@ function normalizeFlightDate(value) {
 }
 
 function normalizeFlightTime(value) {
+  if (value instanceof Date) {
+    return `${String(value.getHours()).padStart(2, "0")}:${String(value.getMinutes()).padStart(2, "0")}`;
+  }
+  const numeric = Number(value);
+  if (Number.isFinite(numeric) && numeric > 0) {
+    const fraction = ((numeric % 1) + 1) % 1;
+    if (numeric < 1 || fraction > 0) {
+      const totalMinutes = Math.round(fraction * 24 * 60) % (24 * 60);
+      const hours = Math.floor(totalMinutes / 60);
+      const minutes = totalMinutes % 60;
+      return `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}`;
+    }
+  }
   const text = String(value || "").trim();
   const match = text.match(/^(\d{1,2}):(\d{2})/);
   return match ? `${match[1].padStart(2, "0")}:${match[2]}` : text;
@@ -10014,6 +10105,11 @@ renderNextStops();
 }
 detectMapProviderByIp();
 ensureBoundaryDataForLevel(state.boundaryLevel || "country");
+loadAirportData().then(() => {
+  invalidateDerivedStatsCache();
+  renderMetrics();
+  refreshFlightRoutesOnMap();
+});
 setLoadingDebug("读取完整旅行数据", "pending");
 loadStateFromIndexedDb().finally(() => {
   setLoadingDebug("读取完整旅行数据", "done");
