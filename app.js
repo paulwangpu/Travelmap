@@ -4780,6 +4780,45 @@ function totalImportedPathLengthKm() {
   return importedPathGeoJson().features.reduce((total, feature) => total + geometryLineLengthKm(feature.geometry), 0);
 }
 
+function flightStatsSummary() {
+  const flights = sanitizeFlights(state.flights || []);
+  const routeKeys = new Set();
+  let totalDistanceKm = 0;
+  let totalDurationMinutes = 0;
+  flights.forEach((flight) => {
+    const from = findAirport(flight.fromAirport);
+    const to = findAirport(flight.toAirport);
+    totalDurationMinutes += flightDurationMinutes(flight);
+    if (from && to) {
+      routeKeys.add(flightRouteKey(flight));
+      const distance = flight.distanceKm || haversineKm([from.lng, from.lat], [to.lng, to.lat]);
+      totalDistanceKm += distance;
+    } else if (flight.distanceKm) {
+      totalDistanceKm += flight.distanceKm;
+    }
+  });
+  return {
+    flights: flights.length,
+    routes: routeKeys.size,
+    distanceKm: totalDistanceKm,
+    durationMinutes: totalDurationMinutes,
+  };
+}
+
+function flightDurationMinutes(flight) {
+  const parseTime = (value) => {
+    const match = String(value || "").match(/^(\d{1,2}):(\d{2})/);
+    if (!match) return null;
+    return Number(match[1]) * 60 + Number(match[2]);
+  };
+  const from = parseTime(flight.fromTime);
+  const to = parseTime(flight.toTime);
+  if (from === null || to === null) return 0;
+  let duration = to - from;
+  if (duration < 0) duration += 24 * 60;
+  return duration;
+}
+
 function invalidateDerivedStatsCache() {
   derivedStatsRevision += 1;
   dashboardStatsCache.signature = "";
@@ -4792,6 +4831,8 @@ function dashboardStatsSignature() {
     derivedStatsRevision,
     places.length,
     state.visits.length,
+    (state.flights || []).length,
+    (state.flightImports || []).length,
     (state.checklistMarks || []).length,
     coverage.updatedAt || "",
     china5aCatalogStatus.total || "",
@@ -4809,6 +4850,7 @@ function dashboardStats() {
   const visitedIds = new Set(state.visits.map((visit) => visit.placeId));
   const litAdministrativeUnits = visited.filter((visit) => visit.place.manualCountry || visit.place.manualAdmin);
   const litPlaces = visited.filter((visit) => !visit.place.shapeOnly && !visit.place.manualCountry && !visit.place.manualAdmin);
+  const flightStats = flightStatsSummary();
   const stats = {
     places: places.length,
     visits: state.visits.length,
@@ -4820,6 +4862,10 @@ function dashboardStats() {
     importedPoints: importedPoints.length,
     importedShapes: importedShapes.length,
     pathLengthKm: totalImportedPathLengthKm(),
+    flights: flightStats.flights,
+    flightRoutes: flightStats.routes,
+    flightDistanceKm: flightStats.distanceKm,
+    flightDurationMinutes: flightStats.durationMinutes,
     countries: uniqueVisitedCountries().size,
     chinaRegions: countVisitedRegions("china"),
     chinaSubregions: countVisitedSubregions("china2"),
@@ -5153,13 +5199,29 @@ function renderLegend() {
 
 function renderMetrics() {
   const stats = dashboardStats();
-  const metrics = [
+  const locale = currentLanguage === "en" ? "en-US" : "zh-CN";
+  const formatKm = (value) => value ? `${Math.round(value).toLocaleString(locale)} km` : "0 km";
+  const formatDuration = (minutes) => {
+    const total = Math.round(minutes || 0);
+    const hours = Math.floor(total / 60);
+    const mins = total % 60;
+    if (currentLanguage === "en") return hours ? `${hours.toLocaleString(locale)} h ${mins} m` : `${mins} m`;
+    return hours ? `${hours.toLocaleString(locale)} 小时 ${mins} 分` : `${mins} 分`;
+  };
+  const regularMetrics = [
     [t("totalCheckins"), stats.visitedPointCount],
     [t("importedPoints"), stats.importedPoints],
     [t("importedTracks"), stats.importedShapes],
-    [t("trackLength"), stats.pathLengthKm ? `${Math.round(stats.pathLengthKm).toLocaleString(currentLanguage === "en" ? "en-US" : "zh-CN")} km` : "0 km"],
+    [t("trackLength"), formatKm(stats.pathLengthKm)],
   ];
-  $("#metrics").innerHTML = metrics.map(([label, value]) => `<article class="metric"><strong>${value}</strong><span>${label}</span></article>`).join("");
+  const flightMetrics = [
+    [currentLanguage === "en" ? "Imported flights" : "已导入航班", stats.flights],
+    [currentLanguage === "en" ? "Flight routes" : "航线数量", stats.flightRoutes],
+    [currentLanguage === "en" ? "Flight time" : "累计时长", formatDuration(stats.flightDurationMinutes)],
+    [currentLanguage === "en" ? "Flight distance" : "飞行里程", formatKm(stats.flightDistanceKm)],
+  ];
+  const rowHtml = (metrics, className = "") => `<div class="metric-row ${className}">${metrics.map(([label, value]) => `<article class="metric"><strong>${value}</strong><span>${label}</span></article>`).join("")}</div>`;
+  $("#metrics").innerHTML = `${rowHtml(regularMetrics)}${rowHtml(flightMetrics, "flight-metric-row")}`;
 }
 
 function renderGeoMap() {
@@ -5358,11 +5420,45 @@ function setMapLibreSource(id, data) {
 }
 
 function mapLibreSourceOptions(id) {
-  if (id !== "map-points") return {};
+  if (id === "map-points") {
+    return {
+      maxzoom: 18,
+      buffer: 128,
+      tolerance: 0.25,
+    };
+  }
+  if (id === "visited-subadmin" || id === "us-county-reference") {
+    return {
+      maxzoom: 9,
+      buffer: 64,
+      tolerance: 1.25,
+    };
+  }
+  if (id === "visited-regions" || id === "visited-region-group-outlines" || id === "admin-country-context") {
+    return {
+      maxzoom: 8,
+      buffer: 96,
+      tolerance: 0.8,
+    };
+  }
+  if (id === "visited-countries" || id === "country-click" || id === "map-background-context") {
+    return {
+      maxzoom: 7,
+      buffer: 96,
+      tolerance: 0.9,
+    };
+  }
+  if (id === "imported-shapes" || id === "imported-paths" || id === "flight-routes") {
+    return {
+      maxzoom: 12,
+      buffer: 128,
+      tolerance: 0.35,
+    };
+  }
   return {
-    maxzoom: 22,
-    buffer: 512,
-    tolerance: 0,
+    maxzoom: 10,
+    buffer: 128,
+    tolerance: 0.5,
   };
 }
 
@@ -5594,6 +5690,25 @@ function refreshMapLibreDataOnly(options = {}) {
   if (updateMarkers) renderMapLibreMarkers(overlays);
   logSlowStep("refreshMapLibreDataOnly", perfStartedAt);
   return true;
+}
+
+function refreshFlightRoutesOnMap() {
+  const overlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
+  if (mapLibreMap && mapLibreMap.isStyleLoaded()) {
+    if (!overlays.flights && !mapLibreMap.getSource("flight-routes")) return true;
+    const data = overlays.flights ? cachedMapGeoJson("flight-routes", flightRouteGeoJson) : emptyFeatureCollection();
+    setMapLibreSource("flight-routes", data);
+    if (overlays.flights && !mapLibreMap.getLayer("flight-routes-line")) {
+      addMapLibreFlightRouteLayer("flight-routes", "flight-routes-line");
+      bindMapLibreFlightRouteHandlers();
+    }
+    return true;
+  }
+  if (leafletMap && window.L) {
+    renderLeafletLayers();
+    return true;
+  }
+  return false;
 }
 
 function renderMapLibreMarkers(overlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) }) {
@@ -7272,9 +7387,11 @@ function deleteFlightRecord(flightKey) {
     return { ...record, count };
   }).filter((record) => record.count > 0);
   invalidateMapCaches();
+  invalidateDerivedStatsCache();
   saveState();
   renderImportSummary();
   renderDataInventory();
+  refreshFlightRoutesOnMap();
   if (isMapPageActive()) renderGeoMap();
   showToast(`${flight.flightNo || flight.key} ${currentLanguage === "en" ? "deleted" : "已删除"}`);
 }
@@ -8685,8 +8802,13 @@ function importFlights(importedFlights, fileName) {
     format: "XLS",
     importedAt,
   });
+  if (addedFlights.length) {
+    invalidateMapCaches();
+    invalidateDerivedStatsCache();
+  }
   saveState();
   renderAll();
+  refreshFlightRoutesOnMap();
   return { added: addedFlights.length, duplicates, unrecognized };
 }
 
@@ -9074,8 +9196,10 @@ function deleteFlightImportBatch(importId) {
   state.flights = (state.flights || []).filter((flight) => flight.importId !== record.id);
   state.flightImports = (state.flightImports || []).filter((file) => file !== record);
   invalidateMapCaches();
+  invalidateDerivedStatsCache();
   saveState();
   renderAll();
+  refreshFlightRoutesOnMap();
   showToast(`${record.name} 已删除`);
 }
 
@@ -9093,8 +9217,11 @@ function deleteAllImportedData() {
   sanitizeDataStore();
   closeMapPopupsAndDetail();
   recomputeCoverage();
+  invalidateMapCaches();
+  invalidateDerivedStatsCache();
   saveState();
   renderAll();
+  refreshFlightRoutesOnMap();
   showToast("导入数据已全部删除");
 }
 
