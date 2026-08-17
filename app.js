@@ -14,7 +14,7 @@ const languageStorageKey = "travel-map-language";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "1.8.7";
+const appVersion = "1.8.8";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
@@ -58,7 +58,7 @@ let mapLibreMap = null;
 let mapLibreMarkers = [];
 let mapLibreMarkerSignature = "";
 let mapPointRenderRevision = 0;
-let mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false, points: false };
+let mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false, points: false, flights: false };
 let bingMapLibreProtocolRegistered = false;
 let mapProviderDetectionPromise = null;
 let leafletDidInitialFit = false;
@@ -112,6 +112,113 @@ let dashboardStatsCache = { signature: "", stats: null };
 let mapAddMode = false;
 let pendingMapClickPoint = null;
 let highAltitudeFilters = { threeMountains: true, fiveMountains: true, buddhistMountains: true, taoistMountains: true, other: true };
+const airportCatalog = [
+  ["北京首都", "PEK", "北京", "cn", 40.0799, 116.6031, ["北京首都国际"]],
+  ["北京大兴", "PKX", "北京", "cn", 39.5098, 116.4105, ["北京大兴国际"]],
+  ["上海浦东", "PVG", "上海", "cn", 31.1443, 121.8083, ["上海浦东国际"]],
+  ["上海虹桥", "SHA", "上海", "cn", 31.1979, 121.3363, ["上海虹桥国际"]],
+  ["深圳宝安", "SZX", "深圳", "cn", 22.6393, 113.8107, ["深圳宝安国际"]],
+  ["广州白云", "CAN", "广州", "cn", 23.3924, 113.2988, ["广州白云国际"]],
+  ["南京禄口", "NKG", "南京", "cn", 31.742, 118.862, ["南京禄口国际"]],
+  ["杭州萧山", "HGH", "杭州", "cn", 30.2295, 120.4345, ["杭州萧山国际"]],
+  ["厦门高崎", "XMN", "厦门", "cn", 24.544, 118.127, ["厦门高崎国际"]],
+  ["福州长乐", "FOC", "福州", "cn", 25.9351, 119.6633, ["福州长乐国际"]],
+  ["南昌昌北", "KHN", "南昌", "cn", 28.8648, 115.9, ["南昌昌北国际"]],
+  ["武汉天河", "WUH", "武汉", "cn", 30.7838, 114.2081, ["武汉天河国际"]],
+  ["长沙黄花", "CSX", "长沙", "cn", 28.1892, 113.2196, ["长沙黄花国际"]],
+  ["合肥新桥", "HFE", "合肥", "cn", 31.9878, 116.9769, ["合肥新桥国际"]],
+  ["郑州新郑", "CGO", "郑州", "cn", 34.5197, 113.8409, ["郑州新郑国际"]],
+  ["西安咸阳", "XIY", "西安", "cn", 34.4471, 108.7516, ["西安咸阳国际"]],
+  ["太原武宿", "TYN", "太原", "cn", 37.7469, 112.6284, ["太原武宿国际"]],
+  ["成都双流", "CTU", "成都", "cn", 30.5785, 103.9471, ["成都双流国际"]],
+  ["成都天府", "TFU", "成都", "cn", 30.3125, 104.4414, ["成都天府国际"]],
+  ["重庆江北", "CKG", "重庆", "cn", 29.7192, 106.6417, ["重庆江北国际"]],
+  ["昆明长水", "KMG", "昆明", "cn", 25.1019, 102.9292, ["昆明长水国际"]],
+  ["贵阳龙洞堡", "KWE", "贵阳", "cn", 26.5385, 106.8007, ["贵阳龙洞堡国际"]],
+  ["南宁吴圩", "NNG", "南宁", "cn", 22.6083, 108.1725, ["南宁吴圩国际"]],
+  ["桂林两江", "KWL", "桂林", "cn", 25.2181, 110.0392, ["桂林两江国际"]],
+  ["海口美兰", "HAK", "海口", "cn", 19.9349, 110.4589, ["海口美兰国际"]],
+  ["三亚凤凰", "SYX", "三亚", "cn", 18.3029, 109.4123, ["三亚凤凰国际"]],
+  ["北京南苑", "NAY", "北京", "cn", 39.7825, 116.3878, ["北京南苑机场"]],
+  ["珠海金湾", "ZUH", "珠海", "cn", 22.0064, 113.376, ["珠海金湾机场"]],
+  ["湛江吴川", "ZHA", "湛江", "cn", 21.2144, 110.358, ["湛江吴川机场", "湛江"]],
+  ["喀什徕宁", "KHG", "喀什", "cn", 39.5429, 76.0199, ["喀什机场"]],
+  ["拉萨贡嘎", "LXA", "拉萨", "cn", 29.2978, 90.9119, ["拉萨贡嘎国际"]],
+  ["西宁曹家堡", "XNN", "西宁", "cn", 36.5275, 102.043, ["西宁曹家堡国际"]],
+  ["银川河东", "INC", "银川", "cn", 38.3228, 106.393, ["银川河东国际"]],
+  ["哈尔滨太平", "HRB", "哈尔滨", "cn", 45.6234, 126.2503, ["哈尔滨太平国际"]],
+  ["大庆萨尔图", "DQA", "大庆", "cn", 46.7464, 125.1406, ["大庆萨尔图机场"]],
+  ["东营胜利", "DOY", "东营", "cn", 37.5086, 118.788, ["东营胜利机场"]],
+  ["南阳姜营", "NNY", "南阳", "cn", 32.9808, 112.615, ["南阳姜营机场"]],
+  ["扬州泰州", "YTY", "扬州", "cn", 32.5634, 119.7198, ["扬州泰州国际"]],
+  ["无锡硕放", "WUX", "无锡", "cn", 31.4944, 120.429, ["苏南硕放", "无锡硕放国际"]],
+  ["南通兴东", "NTG", "南通", "cn", 32.0708, 120.9756, ["南通兴东国际"]],
+  ["宜昌三峡", "YIH", "宜昌", "cn", 30.5566, 111.4799, ["宜昌三峡机场"]],
+  ["白山长白山", "NBS", "白山", "cn", 42.0669, 127.602, ["长白山机场"]],
+  ["张家界荷花", "DYG", "张家界", "cn", 29.1028, 110.443, ["张家界荷花国际"]],
+  ["青岛胶东", "TAO", "青岛", "cn", 36.3619, 120.088, ["青岛胶东国际"]],
+  ["中国澳门", "MFM", "澳门", "cn", 22.1496, 113.5916, ["澳门国际", "澳门"]],
+  ["香港国际", "HKG", "香港", "cn", 22.308, 113.9185, ["香港"]],
+  ["东京成田", "NRT", "东京", "jp", 35.772, 140.3929, ["东京成田国际", "成田"]],
+  ["首尔仁川", "ICN", "首尔", "kr", 37.4602, 126.4407, ["仁川国际", "首尔仁川国际"]],
+  ["新加坡樟宜", "SIN", "新加坡", "sg", 1.3644, 103.9915, ["新加坡"]],
+  ["吉隆坡国际", "KUL", "吉隆坡", "my", 2.7456, 101.7072, ["吉隆坡"]],
+  ["巴厘岛努拉莱伊", "DPS", "巴厘岛", "id", -8.7482, 115.167, ["巴厘岛", "登巴萨"]],
+  ["日惹国际", "YIA", "日惹", "id", -7.9053, 110.0573, ["日惹"]],
+  ["曼谷素万那普", "BKK", "曼谷", "th", 13.69, 100.7501, ["曼谷"]],
+  ["曼谷廊曼", "DMK", "曼谷", "th", 13.9126, 100.6068, ["廊曼国际"]],
+  ["清迈国际", "CNX", "清迈", "th", 18.7668, 98.9626, ["清迈"]],
+  ["河内内排国际", "HAN", "河内", "vn", 21.2187, 105.8042, ["河内内排", "河内"]],
+  ["胡志明市新山一国际", "SGN", "胡志明市", "vn", 10.8188, 106.652, ["胡志明市新山一", "胡志明市"]],
+  ["岘港国际", "DAD", "岘港", "vn", 16.0439, 108.1994, ["岘港"]],
+  ["金兰国际", "CXR", "芽庄", "vn", 11.9982, 109.2194, ["金兰", "芽庄"]],
+  ["大叻莲姜", "DLI", "大叻", "vn", 11.75, 108.3736, ["莲姜"]],
+  ["槟城国际", "PEN", "槟城", "my", 5.2971, 100.2769, ["槟城"]],
+  ["暹粒国际", "SAI", "暹粒", "kh", 13.3692, 104.223, ["暹粒"]],
+  ["特里布万国际", "KTM", "加德满都", "np", 27.6966, 85.3591, ["加德满都"]],
+  ["博卡拉", "PKR", "博卡拉", "np", 28.2009, 83.9821, ["博卡拉机场"]],
+  ["旧金山国际", "SFO", "旧金山", "us", 37.6213, -122.379, ["旧金山"]],
+  ["休斯敦乔治布什洲际", "IAH", "休斯敦", "us", 29.9902, -95.3368, ["休斯敦布什", "休斯敦"]],
+  ["洛杉矶国际", "LAX", "洛杉矶", "us", 33.9416, -118.4085, ["洛杉矶"]],
+  ["凤凰城天港国际", "PHX", "凤凰城", "us", 33.4352, -112.0101, ["凤凰城"]],
+  ["弗雷斯诺优胜美地国际", "FAT", "弗雷斯诺", "us", 36.7762, -119.7181, ["弗雷斯诺"]],
+  ["查尔斯顿国际", "CHS", "查尔斯顿", "us", 32.8986, -80.0405, ["查尔斯顿"]],
+  ["奥兰多国际", "MCO", "奥兰多", "us", 28.4312, -81.3081, ["奥兰多"]],
+  ["丹佛国际", "DEN", "丹佛", "us", 39.8561, -104.6737, ["丹佛"]],
+  ["劳德代尔国际", "FLL", "劳德代尔堡", "us", 26.0742, -80.1506, ["劳德代尔堡"]],
+  ["基韦斯特国际", "EYW", "基韦斯特", "us", 24.5561, -81.7596, ["基韦斯特"]],
+  ["巴尔的摩", "BWI", "巴尔的摩", "us", 39.1754, -76.6684, ["巴尔的摩华盛顿国际"]],
+  ["拉皮德城", "RAP", "拉皮德城", "us", 44.0453, -103.0574, ["拉皮德城地区"]],
+  ["杰克逊霍勒", "JAC", "杰克逊", "us", 43.6073, -110.7377, ["杰克逊霍尔"]],
+  ["波士顿洛干国际", "BOS", "波士顿", "us", 42.3656, -71.0096, ["波士顿洛根", "波士顿"]],
+  ["纽约纽瓦克国际", "EWR", "纽约", "us", 40.6895, -74.1745, ["纽瓦克国际", "纽约纽瓦克"]],
+  ["纽约肯尼迪国际", "JFK", "纽约", "us", 40.6413, -73.7781, ["纽约肯尼迪"]],
+  ["芝加哥奥黑尔", "ORD", "芝加哥", "us", 41.9742, -87.9073, ["芝加哥奥黑尔国际"]],
+  ["华盛顿杜勒斯国际", "IAD", "华盛顿", "us", 38.9531, -77.4565, ["华盛顿杜勒斯"]],
+  ["西雅图塔科马", "SEA", "西雅图", "us", 47.4502, -122.3088, ["西雅图"]],
+  ["拉斯维加斯", "LAS", "拉斯维加斯", "us", 36.084, -115.1537, ["拉斯维加斯哈里里德", "哈里里德国际"]],
+  ["圣地亚哥国际", "SAN", "圣地亚哥", "us", 32.7338, -117.1933, ["圣地亚哥"]],
+  ["维也纳国际", "VIE", "维也纳", "at", 48.1103, 16.5697, ["维也纳"]],
+  ["哥本哈根", "CPH", "哥本哈根", "dk", 55.618, 12.6561, ["哥本哈根凯斯楚普"]],
+  ["斯德哥尔摩阿兰达", "ARN", "斯德哥尔摩", "se", 59.6498, 17.9238, ["斯德哥尔摩"]],
+  ["阿姆斯特丹史基浦", "AMS", "阿姆斯特丹", "nl", 52.3105, 4.7683, ["阿姆斯特丹"]],
+  ["雅典国际", "ATH", "雅典", "gr", 37.9364, 23.9475, ["雅典"]],
+  ["大阪关西", "KIX", "大阪", "jp", 34.4347, 135.2441, ["关西国际"]],
+  ["卡萨布兰卡", "CMN", "卡萨布兰卡", "ma", 33.3675, -7.59, ["卡萨布兰卡穆罕默德五世"]],
+  ["马拉喀什", "RAK", "马拉喀什", "ma", 31.6069, -8.0363, ["马拉喀什梅纳拉"]],
+  ["马德里巴拉哈斯", "MAD", "马德里", "es", 40.4983, -3.5676, ["马德里"]],
+  ["巴塞罗那埃尔普拉特", "BCN", "巴塞罗那", "es", 41.2974, 2.0833, ["巴塞罗那"]],
+  ["毕尔巴鄂", "BIO", "毕尔巴鄂", "es", 43.3011, -2.9106, ["毕尔巴鄂机场"]],
+  ["法兰克福", "FRA", "法兰克福", "de", 50.0379, 8.5622, ["法兰克福国际"]],
+  ["米兰利纳特", "LIN", "米兰", "it", 45.4451, 9.2767, ["米兰利纳特机场"]],
+  ["罗马菲乌米奇诺", "FCO", "罗马", "it", 41.8003, 12.2389, ["罗马菲乌米奇诺机场"]],
+  ["那不勒斯", "NAP", "那不勒斯", "it", 40.886, 14.2908, ["那不勒斯国际"]],
+  ["伊斯坦布尔", "IST", "伊斯坦布尔", "tr", 41.2753, 28.7519, ["伊斯坦布尔机场"]],
+  ["莫斯科谢列梅捷沃", "SVO", "莫斯科", "ru", 55.9726, 37.4146, ["莫斯科"]],
+  ["伦敦希思罗", "LHR", "伦敦", "gb", 51.47, -0.4543, ["希思罗"]],
+  ["巴黎戴高乐", "CDG", "巴黎", "fr", 49.0097, 2.5479, ["巴黎"]],
+];
+let airportLookupCache = null;
 const admin1RegionGroupCountries = new Set(["fr", "it", "jp"]);
 const subadminConfigs = {
   china2: { countryId: "cn", label: "China prefecture-level units" },
@@ -155,6 +262,7 @@ const translations = {
     overlayLight: "我的点亮",
     overlayCheckins: "我的打卡",
     overlayTracks: "我的轨迹",
+    overlayFlights: "我的航线",
     overlay5a: "5A 景区",
     overlayAncientCapitals: "中国古都",
     overlayHeritage: "世界遗产",
@@ -181,7 +289,7 @@ const translations = {
     importEyebrow: "导入",
     importTitle: "导入地图或地点文件",
     chooseFile: "选择文件",
-    csvHelp: "支持 GeoJSON/JSON、KML、CSV 和照片。GeoJSON/KML 的点会作为已导入地点，线和面会作为已导入轨迹显示，不会自动变成地点；CSV 建议只保留名称、纬度、经度三列，也支持英文列名：name、lat/latitude、lng/lon/longitude。其他列会忽略。照片只读取本地文件名和 EXIF GPS，不上传照片。当前不限制导入点数，但点太多会影响浏览器渲染，建议只导入确实需要显示的点。",
+    csvHelp: "地图/地点文件：支持 GeoJSON/JSON、KML、CSV 和照片。GeoJSON/KML 的点会作为已导入地点，线和面会作为已导入轨迹显示；CSV 建议只保留名称、纬度、经度三列，也支持英文列名：name、lat/latitude、lng/lon/longitude；照片只读取本地文件名和 EXIF GPS，不上传照片。航旅纵横：使用“导出航班行程（Pro 专享）”导出的 Excel（.xls）可以直接导入，系统会提取航班并绘制独立“我的航线”，不会自动点亮城市或国家。当前不限制导入点数，但点太多会影响浏览器渲染，建议只导入确实需要显示的数据。",
     archiveEyebrow: "存档",
     archiveTitle: "数据存档",
     exportArchive: "导出存档",
@@ -199,6 +307,7 @@ const translations = {
     totalCheckins: "总打卡地点",
     importedPoints: "已导入地点",
     importedTracks: "已导入轨迹",
+    importedFlights: "已导入航班",
     trackLength: "轨迹长度",
     checked: "已去",
     unvisited: "未去",
@@ -265,6 +374,7 @@ const translations = {
     overlayLight: "My lit areas",
     overlayCheckins: "My check-ins",
     overlayTracks: "My tracks",
+    overlayFlights: "My flights",
     overlay5a: "5A scenic areas",
     overlayAncientCapitals: "Ancient Chinese Capitals",
     overlayHeritage: "World Heritage",
@@ -291,7 +401,7 @@ const translations = {
     importEyebrow: "Import",
     importTitle: "Import map or place files",
     chooseFile: "Choose file",
-    csvHelp: "GeoJSON/JSON, KML, CSV, and photos are supported. GeoJSON/KML points become imported places; lines and polygons become imported tracks and do not create extra points. CSV works best with only name, latitude, and longitude. Supported headers are 名称/name, 纬度/lat/latitude, and 经度/lng/lon/longitude; extra columns are ignored. Photos only read local filename and EXIF GPS without uploading files. There is no hard import limit now, but very large point sets can slow browser rendering.",
+    csvHelp: "Map/place files: GeoJSON/JSON, KML, CSV, and photos are supported. GeoJSON/KML points become imported places; lines and polygons become imported tracks. CSV works best with only name, latitude, and longitude; supported headers are 名称/name, 纬度/lat/latitude, and 经度/lng/lon/longitude. Photos only read local filename and EXIF GPS without uploading files. TravelSky/CAPA: Excel (.xls) exported from “Export flight itinerary (Pro)” can be imported directly; flights are drawn as a separate My flights layer and do not light up cities or countries. There is no hard import limit now, but very large datasets can slow browser rendering.",
     archiveEyebrow: "Archive",
     archiveTitle: "Data archive",
     exportArchive: "Export archive",
@@ -309,6 +419,7 @@ const translations = {
     totalCheckins: "Total check-ins",
     importedPoints: "Imported places",
     importedTracks: "Imported tracks",
+    importedFlights: "Imported flights",
     trackLength: "Track length",
     checked: "Visited",
     unvisited: "Unvisited",
@@ -348,7 +459,7 @@ function t(key) {
 }
 
 function defaultMapOverlays() {
-  return { light: true, checkins: true, paths: true, china5a: false, chinaAncientCapitals: false, worldHeritage: false };
+  return { light: true, checkins: true, paths: true, flights: true, china5a: false, chinaAncientCapitals: false, worldHeritage: false };
 }
 
 function normalizeMapOverlays(overlays = {}) {
@@ -363,6 +474,153 @@ function normalizeMapOverlays(overlays = {}) {
 
 function isLightOverlayEnabled() {
   return Boolean(({ ...defaultMapOverlays(), ...(state.mapOverlays || {}) }).light);
+}
+
+function normalizeAirportName(value = "") {
+  return String(value || "")
+    .replace(/\s+/g, "")
+    .replace(/[（）()·,，。]/g, "")
+    .replace(/机场$/g, "")
+    .replace(/国际机场$/g, "国际")
+    .trim();
+}
+
+function airportLookup() {
+  if (airportLookupCache) return airportLookupCache;
+  airportLookupCache = new Map();
+  airportCatalog.forEach(([name, iata, city, country, lat, lng, aliases = []]) => {
+    const airport = { name, iata, city, country, lat, lng, aliases };
+    [name, iata, ...aliases].filter(Boolean).forEach((alias) => {
+      airportLookupCache.set(normalizeAirportName(alias), airport);
+      airportLookupCache.set(String(alias).toUpperCase(), airport);
+    });
+  });
+  return airportLookupCache;
+}
+
+function findAirport(value) {
+  const raw = String(value || "").trim();
+  if (!raw) return null;
+  const lookup = airportLookup();
+  return lookup.get(normalizeAirportName(raw)) || lookup.get(raw.toUpperCase()) || null;
+}
+
+function sanitizeFlights(flights = []) {
+  return (Array.isArray(flights) ? flights : [])
+    .map((flight) => normalizeFlightRecord(flight))
+    .filter((flight) => flight.key);
+}
+
+function normalizeFlightRecord(raw = {}) {
+  const flight = {
+    key: String(raw.key || "").trim(),
+    date: String(raw.date || "").trim(),
+    airline: String(raw.airline || "").trim(),
+    flightNo: String(raw.flightNo || "").trim().toUpperCase(),
+    fromAirport: String(raw.fromAirport || "").trim(),
+    fromTime: String(raw.fromTime || "").trim(),
+    toAirport: String(raw.toAirport || "").trim(),
+    toTime: String(raw.toTime || "").trim(),
+    distanceKm: Number(raw.distanceKm) || 0,
+    ticketNo: String(raw.ticketNo || "").trim(),
+    ticketStatus: String(raw.ticketStatus || "").trim(),
+    sourceFile: String(raw.sourceFile || "").trim(),
+    importId: String(raw.importId || "").trim(),
+    importedAt: String(raw.importedAt || "").trim(),
+  };
+  flight.key ||= flightDedupKey(flight);
+  const from = findAirport(flight.fromAirport);
+  const to = findAirport(flight.toAirport);
+  flight.fromIata = raw.fromIata || from?.iata || "";
+  flight.toIata = raw.toIata || to?.iata || "";
+  return flight;
+}
+
+function flightDedupKey(flight) {
+  const parts = [
+    flight.date,
+    flight.flightNo,
+    normalizeAirportName(flight.fromAirport),
+    flight.fromTime,
+    normalizeAirportName(flight.toAirport),
+    flight.toTime,
+  ];
+  if (flight.ticketNo && flight.ticketNo !== "--") parts.push(flight.ticketNo);
+  return slugify(parts.join("-"));
+}
+
+function flightRouteKey(flight) {
+  const from = findAirport(flight.fromAirport);
+  const to = findAirport(flight.toAirport);
+  if (!from || !to) return "";
+  return [from.iata, to.iata].sort().join("-");
+}
+
+function flightRouteWidth(count) {
+  if (count >= 8) return 5.5;
+  if (count >= 4) return 4;
+  if (count >= 2) return 2.5;
+  return 1.5;
+}
+
+function greatCircleLine(from, to, steps = 96) {
+  const toRad = (value) => (value * Math.PI) / 180;
+  const toDeg = (value) => (value * 180) / Math.PI;
+  const lat1 = toRad(from.lat);
+  const lon1 = toRad(from.lng);
+  const lat2 = toRad(to.lat);
+  const lon2 = toRad(to.lng);
+  const delta = 2 * Math.asin(Math.sqrt(
+    Math.sin((lat2 - lat1) / 2) ** 2
+    + Math.cos(lat1) * Math.cos(lat2) * Math.sin((lon2 - lon1) / 2) ** 2
+  ));
+  if (!Number.isFinite(delta) || delta === 0) return [[from.lng, from.lat], [to.lng, to.lat]];
+  const points = [];
+  for (let index = 0; index <= steps; index += 1) {
+    const fraction = index / steps;
+    const a = Math.sin((1 - fraction) * delta) / Math.sin(delta);
+    const b = Math.sin(fraction * delta) / Math.sin(delta);
+    const x = a * Math.cos(lat1) * Math.cos(lon1) + b * Math.cos(lat2) * Math.cos(lon2);
+    const y = a * Math.cos(lat1) * Math.sin(lon1) + b * Math.cos(lat2) * Math.sin(lon2);
+    const z = a * Math.sin(lat1) + b * Math.sin(lat2);
+    const lat = Math.atan2(z, Math.sqrt(x * x + y * y));
+    const lon = Math.atan2(y, x);
+    points.push([toDeg(lon), toDeg(lat)]);
+  }
+  return points;
+}
+
+function splitAntimeridian(points) {
+  const lines = [];
+  let current = [];
+  points.forEach((point) => {
+    if (current.length) {
+      const previous = current[current.length - 1];
+      if (Math.abs(point[0] - previous[0]) > 180) {
+        if (previous[0] > 0 && point[0] < 0) {
+          const adjustedLng = point[0] + 360;
+          const ratio = (180 - previous[0]) / (adjustedLng - previous[0]);
+          const lat = previous[1] + ratio * (point[1] - previous[1]);
+          current.push([180, lat]);
+          if (current.length > 1) lines.push(current);
+          current = [[-180, lat]];
+        } else if (previous[0] < 0 && point[0] > 0) {
+          const adjustedLng = point[0] - 360;
+          const ratio = (-180 - previous[0]) / (adjustedLng - previous[0]);
+          const lat = previous[1] + ratio * (point[1] - previous[1]);
+          current.push([-180, lat]);
+          if (current.length > 1) lines.push(current);
+          current = [[180, lat]];
+        } else {
+          if (current.length > 1) lines.push(current);
+          current = [];
+        }
+      }
+    }
+    current.push(point);
+  });
+  if (current.length > 1) lines.push(current);
+  return lines.length > 1 ? { type: "MultiLineString", coordinates: lines } : { type: "LineString", coordinates: points };
 }
 
 const mapProviders = {
@@ -2086,6 +2344,8 @@ let state = {
   visits: [],
   trips: [],
   importedFiles: [],
+  flights: [],
+  flightImports: [],
   checklistMarks: [],
   openChecklistGroups: [],
   coverage: { countries: [], regions: {}, subregions: {} },
@@ -2093,7 +2353,7 @@ let state = {
   boundaryLevel: "country",
   mapProviderMode: "auto",
   detectedMapProvider: "",
-  mapOverlays: { light: true, checkins: true, paths: true, china5a: false, chinaAncientCapitals: false, worldHeritage: false },
+  mapOverlays: { light: true, checkins: true, paths: true, flights: true, china5a: false, chinaAncientCapitals: false, worldHeritage: false },
   mapViewport: null,
   focusPlaceId: "",
 };
@@ -3816,6 +4076,8 @@ function applySavedPayload(saved) {
     boundaryLevel: savedBoundaryLevel,
       selectedRegionView: saved.state.selectedRegionView || "china",
       importedFiles: saved.state.importedFiles || [],
+      flights: saved.state.flights || [],
+      flightImports: saved.state.flightImports || [],
       checklistMarks: saved.state.checklistMarks || [],
       openChecklistGroups: saved.state.openChecklistGroups || [],
       mapProviderMode: normalizeMapProviderMode(saved.state.mapProviderMode || state.mapProviderMode),
@@ -3868,6 +4130,8 @@ function sanitizeDataStore() {
   });
   state.visits = Array.from(visitMap.values());
   state.importedFiles ||= [];
+  state.flights = sanitizeFlights(state.flights || []);
+  state.flightImports = Array.isArray(state.flightImports) ? state.flightImports : [];
   state.checklistMarks ||= [];
   state.openChecklistGroups ||= [];
   if (coverageNeedsRebuild) rebuildCoverageFromSavedVisits();
@@ -4479,6 +4743,39 @@ function importedPolygonGeoJson() {
   };
 }
 
+function flightRouteGeoJson() {
+  const groups = new Map();
+  sanitizeFlights(state.flights || []).forEach((flight) => {
+    const from = findAirport(flight.fromAirport);
+    const to = findAirport(flight.toAirport);
+    if (!from || !to) return;
+    const key = flightRouteKey(flight);
+    if (!groups.has(key)) groups.set(key, { key, from, to, flights: [] });
+    groups.get(key).flights.push(flight);
+  });
+  return {
+    type: "FeatureCollection",
+    features: Array.from(groups.values()).map((group) => {
+      const count = group.flights.length;
+      const sortedFlights = group.flights
+        .slice()
+        .sort((left, right) => `${right.date} ${right.fromTime}`.localeCompare(`${left.date} ${left.fromTime}`));
+      const title = `${group.from.name} ⇄ ${group.to.name}`;
+      return {
+        type: "Feature",
+        properties: {
+          id: group.key,
+          name: title,
+          count,
+          width: flightRouteWidth(count),
+          summary: sortedFlights.slice(0, 6).map((flight) => `${flight.date} ${flight.flightNo}`).join(" · "),
+        },
+        geometry: splitAntimeridian(greatCircleLine(group.from, group.to)),
+      };
+    }),
+  };
+}
+
 function totalImportedPathLengthKm() {
   return importedPathGeoJson().features.reduce((total, feature) => total + geometryLineLengthKm(feature.geometry), 0);
 }
@@ -5023,7 +5320,7 @@ function mapLibreBaseStyle(providerId) {
 function applyMapLibreProvider(provider) {
   if (!mapLibreMap || mapLibreMap._travelMapProvider === provider) return;
   mapLibreMap._travelMapProvider = provider;
-  mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false, points: false };
+  mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false, points: false, flights: false };
   mapLibreSourceDataRefs.clear();
   clearMapLibreMarkers();
   mapLibreMap.setStyle(mapLibreBaseStyle(provider));
@@ -5117,6 +5414,7 @@ function renderMapLibreLayers() {
   removeMapLibreLayer("imported-shapes-line");
   removeMapLibreLayer("imported-shapes-fill");
   removeMapLibreLayer("imported-shapes-path-line");
+  removeMapLibreLayer("flight-routes-line");
   removeMapLibreLayer("visited-regions-line");
   removeMapLibreLayer("visited-regions-fill");
   removeMapLibreLayer("visited-region-group-outlines-line");
@@ -5138,6 +5436,7 @@ function renderMapLibreLayers() {
   removeMapLibreSource("visited-area-centers");
   removeMapLibreSource("imported-shapes");
   removeMapLibreSource("imported-paths");
+  removeMapLibreSource("flight-routes");
   removeMapLibreSource("visited-regions");
   removeMapLibreSource("visited-region-group-outlines");
   removeMapLibreSource("us-county-reference");
@@ -5212,6 +5511,11 @@ function renderMapLibreLayers() {
     setMapLibreSource("imported-paths", cachedMapGeoJson("imported-paths", importedPathGeoJson));
     addMapLibreImportedPathLayer("imported-paths", "imported-shapes-path-line", 3);
   }
+  if (overlays.flights) {
+    setMapLibreSource("flight-routes", cachedMapGeoJson("flight-routes", flightRouteGeoJson));
+    addMapLibreFlightRouteLayer("flight-routes", "flight-routes-line");
+    bindMapLibreFlightRouteHandlers();
+  }
   perfStageStartedAt = logRenderStage("imports", perfStageStartedAt);
   bindMapLibreLayerHandlers();
   renderMapLibreMarkers(overlays);
@@ -5283,6 +5587,9 @@ function refreshMapLibreDataOnly(options = {}) {
   }
   if (updateImports && overlays.paths && mapLibreMap.getSource("imported-paths")) {
     setMapLibreSource("imported-paths", cachedMapGeoJson("imported-paths", importedPathGeoJson));
+  }
+  if (updateImports && overlays.flights && mapLibreMap.getSource("flight-routes")) {
+    setMapLibreSource("flight-routes", cachedMapGeoJson("flight-routes", flightRouteGeoJson));
   }
   if (updateMarkers) renderMapLibreMarkers(overlays);
   logSlowStep("refreshMapLibreDataOnly", perfStartedAt);
@@ -5888,6 +6195,44 @@ function addMapLibreImportedPathLayer(sourceId, lineId, lineWidth) {
   });
 }
 
+function addMapLibreFlightRouteLayer(sourceId, lineId) {
+  mapLibreMap.addLayer({
+    id: lineId,
+    type: "line",
+    source: sourceId,
+    filter: ["any", ["==", ["geometry-type"], "LineString"], ["==", ["geometry-type"], "MultiLineString"]],
+    layout: {
+      "line-cap": "round",
+      "line-join": "round",
+    },
+    paint: {
+      "line-color": "#7c3aed",
+      "line-width": ["get", "width"],
+      "line-opacity": 0.72,
+    },
+  });
+}
+
+function bindMapLibreFlightRouteHandlers() {
+  if (mapLibreLayerHandlersBound.flights || !mapLibreMap.getLayer("flight-routes-line")) return;
+  mapLibreLayerHandlersBound.flights = true;
+  mapLibreMap.on("click", "flight-routes-line", (event) => {
+    markMapEventHandled(event);
+    const props = event.features?.[0]?.properties || {};
+    const countText = currentLanguage === "en" ? `${props.count || 0} flights` : `${props.count || 0} 次航班`;
+    new maplibregl.Popup({ offset: 12, closeButton: false })
+      .setLngLat(event.lngLat)
+      .setHTML(mapPopupHtml(`<strong>${escapeHtml(props.name || "")}</strong><br>${escapeHtml(countText)}<br><span>${escapeHtml(props.summary || "")}</span>`))
+      .addTo(mapLibreMap);
+  });
+  mapLibreMap.on("mouseenter", "flight-routes-line", () => {
+    mapLibreMap.getCanvas().style.cursor = "pointer";
+  });
+  mapLibreMap.on("mouseleave", "flight-routes-line", () => {
+    mapLibreMap.getCanvas().style.cursor = "";
+  });
+}
+
 function removeMapLibreLayer(id) {
   if (mapLibreMap.getLayer(id)) mapLibreMap.removeLayer(id);
 }
@@ -6019,6 +6364,15 @@ function renderLeafletLayers() {
       style: () => ({ color: "#0000FF", weight: 3, opacity: 0.95 }),
       onEachFeature: (feature, layer) => {
         layer.bindTooltip(feature.properties.name, { sticky: true });
+      },
+    }).addTo(leafletLayers);
+  }
+
+  if (overlays.flights) {
+    L.geoJSON(flightRouteGeoJson(), {
+      style: (feature) => ({ color: "#7c3aed", weight: feature.properties.width || 2, opacity: 0.72 }),
+      onEachFeature: (feature, layer) => {
+        layer.bindTooltip(`${feature.properties.name} · ${feature.properties.count} ${currentLanguage === "en" ? "flights" : "次"}`, { sticky: true });
       },
     }).addTo(leafletLayers);
   }
@@ -6775,12 +7129,16 @@ function renderCoverage() {
 }
 
 function renderImportSummary() {
-  const files = state.importedFiles;
+  const files = state.importedFiles || [];
+  const flightFiles = state.flightImports || [];
   const nonImportedVisits = visitedPlaces().filter((visit) => !visit.place.imported && !visit.place.importId && !visit.place.sourceFile);
   const en = currentLanguage === "en";
-  $("#importSummary").innerHTML = files.length
-    ? `<article class="check-item import-management-card"><header><strong>${en ? "All imported data" : "全部导入数据"}</strong><span>${places.filter(isImportedObject).length} ${en ? "objects" : "个对象"}</span></header><p class="muted">${en ? "Deletes imported places and imported tracks. Checklist and manual light-up data are kept." : "删除所有已导入地点和已导入轨迹；打卡清单与手动点亮会保留。"}</p><button class="text-action" data-delete-all-imports="1" type="button">${en ? "Delete all imports" : "删除全部导入"}</button></article>${files.map((file, index) => `<article class="check-item import-batch-card"><header><strong>${file.name}</strong><span>${file.count} ${en ? "items" : "条"}</span></header><p class="muted">${file.format} · ${file.importedAt ? new Date(file.importedAt).toLocaleString(en ? "en-US" : "zh-CN") : (en ? "Imported" : "已导入")}</p><button class="text-action" data-delete-import="${file.id || ""}" data-import-index="${index}" type="button">${en ? "Delete this import" : "删除这批导入"}</button></article>`).join("")}`
-    : `<p class="muted">${en ? "No imported files yet. Imported places and imported tracks will appear here." : "还没有导入文件。已导入地点和已导入轨迹会显示在这里。"}</p>`;
+  const importedObjectCount = places.filter(isImportedObject).length + (state.flights || []).length;
+  const fileCards = files.map((file, index) => `<article class="check-item import-batch-card"><header><strong>${file.name}</strong><span>${file.count} ${en ? "items" : "条"}</span></header><p class="muted">${file.format} · ${file.importedAt ? new Date(file.importedAt).toLocaleString(en ? "en-US" : "zh-CN") : (en ? "Imported" : "已导入")}</p><button class="text-action" data-delete-import="${file.id || ""}" data-import-index="${index}" type="button">${en ? "Delete this import" : "删除这批导入"}</button></article>`).join("");
+  const flightCards = flightFiles.map((file) => `<article class="check-item import-batch-card"><header><strong>${file.name}</strong><span>${file.count} ${en ? "new flights" : "条新增航班"}</span></header><p class="muted">${file.format || "XLS"} · ${file.total || file.count} ${en ? "parsed" : "条解析"} · ${file.duplicates || 0} ${en ? "duplicates" : "条重复"} · ${file.unrecognized || 0} ${en ? "unmapped airports" : "条机场未识别"} · ${file.importedAt ? new Date(file.importedAt).toLocaleString(en ? "en-US" : "zh-CN") : (en ? "Imported" : "已导入")}</p><button class="text-action" data-delete-flight-import="${file.id || ""}" type="button">${en ? "Delete this flight import" : "删除这批航班"}</button></article>`).join("");
+  $("#importSummary").innerHTML = files.length || flightFiles.length
+    ? `<article class="check-item import-management-card"><header><strong>${en ? "All imported data" : "全部导入数据"}</strong><span>${importedObjectCount} ${en ? "objects" : "个对象"}</span></header><p class="muted">${en ? "Deletes imported places, imported tracks, and imported flights. Checklist and manual light-up data are kept." : "删除所有已导入地点、已导入轨迹和已导入航班；打卡清单与手动点亮会保留。"}</p><button class="text-action" data-delete-all-imports="1" type="button">${en ? "Delete all imports" : "删除全部导入"}</button></article>${fileCards}${flightCards}`
+    : `<p class="muted">${en ? "No imported files yet. Imported places, tracks, and flights will appear here." : "还没有导入文件。已导入地点、轨迹和航班会显示在这里。"}</p>`;
   $("#importSummary").insertAdjacentHTML("beforeend", `
     <article class="check-item import-management-card">
       <header><strong>${en ? "Light-up / checklist data" : "点亮/打卡数据"}</strong><span>${nonImportedVisits.length} ${en ? "records" : "条"}</span></header>
@@ -6904,6 +7262,23 @@ function deleteInventoryObject(placeId) {
   showToast(`${place.name} ${currentLanguage === "en" ? "deleted" : "已删除"}`);
 }
 
+function deleteFlightRecord(flightKey) {
+  const flight = (state.flights || []).find((candidate) => candidate.key === flightKey);
+  if (!flight) return;
+  state.flights = (state.flights || []).filter((candidate) => candidate.key !== flightKey);
+  state.flightImports = (state.flightImports || []).map((record) => {
+    if (record.id !== flight.importId) return record;
+    const count = state.flights.filter((candidate) => candidate.importId === record.id).length;
+    return { ...record, count };
+  }).filter((record) => record.count > 0);
+  invalidateMapCaches();
+  saveState();
+  renderImportSummary();
+  renderDataInventory();
+  if (isMapPageActive()) renderGeoMap();
+  showToast(`${flight.flightNo || flight.key} ${currentLanguage === "en" ? "deleted" : "已删除"}`);
+}
+
 function renderDataInventory() {
   const target = $("#dataInventory");
   if (!target) return;
@@ -6920,6 +7295,8 @@ function renderDataInventory() {
     .map(({ place }) => place);
   const importedPoints = imported.filter(isImportedPoint);
   const importedTracks = imported.filter(isImportedTrack);
+  const flights = sanitizeFlights(state.flights || [])
+    .sort((left, right) => (right.importedAt || right.date || "").localeCompare(left.importedAt || left.date || ""));
   const visited = visitedPlaces()
     .map((visit, index) => ({ visit, index }))
     .sort((left, right) => (right.visit.updatedAt || right.visit.date || "").localeCompare(left.visit.updatedAt || left.visit.date || "") || right.index - left.index)
@@ -6931,6 +7308,7 @@ function renderDataInventory() {
     [en ? "Lit administrative units" : "已点亮行政区", counts.litAdministrativeUnits],
     [en ? "Imported places" : "已导入地点", counts.importedPoints],
     [en ? "Imported tracks" : "已导入轨迹", counts.importedTracks],
+    [en ? "Imported flights" : "已导入航班", counts.importedFlights],
   ];
   const deleteLabel = en ? "Delete" : "删除";
   const placeLocationText = (place) => [
@@ -6968,6 +7346,20 @@ function renderDataInventory() {
       <td data-label="${en ? "File" : "文件"}">${escapeHtml(place.sourceFile || "")}</td>
       <td><button class="table-action danger" data-delete-inventory-object="${escapeHtml(place.id)}" type="button">${deleteLabel}</button></td>
     </tr>`).join("");
+  const flightRows = flights.map((flight) => {
+    const from = findAirport(flight.fromAirport);
+    const to = findAirport(flight.toAirport);
+    const route = `${flight.fromAirport}${from?.iata ? ` (${from.iata})` : ""} → ${flight.toAirport}${to?.iata ? ` (${to.iata})` : ""}`;
+    return `
+    <tr>
+      <td data-label="${en ? "Date" : "日期"}">${escapeHtml(flight.date)}</td>
+      <td data-label="${en ? "Flight" : "航班"}"><strong>${escapeHtml([flight.airline, flight.flightNo].filter(Boolean).join(" "))}</strong></td>
+      <td data-label="${en ? "Route" : "航线"}">${escapeHtml(route)}</td>
+      <td data-label="${en ? "Status" : "状态"}">${escapeHtml(flight.ticketStatus || "")}</td>
+      <td data-label="${en ? "File" : "文件"}">${escapeHtml(flight.sourceFile || "")}</td>
+      <td><button class="table-action danger" data-delete-inventory-flight="${escapeHtml(flight.key)}" type="button">${deleteLabel}</button></td>
+    </tr>`;
+  }).join("");
   const isOpen = (section) => openSections.has(section) ? "open" : "";
   target.innerHTML = `
     <div class="inventory-metrics">${rows.map(([label, value]) => `<span><strong>${value}</strong><em>${label}</em></span>`).join("")}</div>
@@ -6986,6 +7378,10 @@ function renderDataInventory() {
     <details class="data-table-block" data-inventory-section="importedTracks" ${isOpen("importedTracks")}>
       <summary><span>${en ? "Imported tracks" : "已导入轨迹"}</span><em>${importedTracks.length}</em></summary>
       <table><thead><tr><th>${en ? "Name" : "名称"}</th><th>${en ? "Geometry" : "几何类型"}</th><th>${en ? "File" : "文件"}</th><th>${en ? "Action" : "操作"}</th></tr></thead><tbody>${importedTrackRows || emptyRow(en ? "No imported tracks" : "暂无已导入轨迹", 4)}</tbody></table>
+    </details>
+    <details class="data-table-block" data-inventory-section="importedFlights" ${isOpen("importedFlights")}>
+      <summary><span>${en ? "Imported flights" : "已导入航班"}</span><em>${flights.length}</em></summary>
+      <table><thead><tr><th>${en ? "Date" : "日期"}</th><th>${en ? "Flight" : "航班"}</th><th>${en ? "Route" : "航线"}</th><th>${en ? "Status" : "状态"}</th><th>${en ? "File" : "文件"}</th><th>${en ? "Action" : "操作"}</th></tr></thead><tbody>${flightRows || emptyRow(en ? "No imported flights" : "暂无已导入航班", 6)}</tbody></table>
     </details>`;
 }
 
@@ -8185,11 +8581,16 @@ async function handleImport(event) {
   if (!files.length) return;
   try {
     const jobs = [];
+    const flightJobs = [];
     const photoPlaces = [];
     let skippedPhotos = 0;
     let restoredArchives = 0;
     for (const file of files) {
       const extension = file.name.split(".").pop().toLowerCase();
+      if (extension === "xls") {
+        flightJobs.push({ fileName: file.name, flights: parseHanglvXls(await file.arrayBuffer()) });
+        continue;
+      }
       if (isPhotoFile(file, extension)) {
         const photoPlace = await parsePhotoFile(file);
         if (!photoPlace) {
@@ -8224,9 +8625,19 @@ async function handleImport(event) {
       const imported = importPlaces(job.places, job.extension, job.fileName, 1);
       totalImported += imported.length;
     });
+    let flightStats = { added: 0, duplicates: 0, unrecognized: 0 };
+    flightJobs.forEach((job) => {
+      const result = importFlights(job.flights, job.fileName);
+      flightStats = {
+        added: flightStats.added + result.added,
+        duplicates: flightStats.duplicates + result.duplicates,
+        unrecognized: flightStats.unrecognized + result.unrecognized,
+      };
+    });
     const skippedText = skippedPhotos ? `，${skippedPhotos} 张照片没有 GPS 已跳过` : "";
     const archiveText = restoredArchives ? `，已恢复 ${restoredArchives} 个存档` : "";
-    showToast(`已导入 ${totalImported} 个地点/轨迹${skippedText}${archiveText}，并自动点亮相应地区`);
+    const flightText = flightJobs.length ? `；航班新增 ${flightStats.added} 条，重复跳过 ${flightStats.duplicates} 条，机场未识别 ${flightStats.unrecognized} 条` : "";
+    showToast(`已导入 ${totalImported} 个地点/轨迹${skippedText}${archiveText}${flightText}，地点会自动点亮相应地区`);
   } catch (error) {
     showToast(`导入失败：${error.message}`);
   } finally {
@@ -8242,6 +8653,349 @@ function photoImportBatchName(count) {
 function importPlacesFromText(text, extension, fileName = `import.${extension}`, depth = 1) {
   const imported = parseImportFile(text, extension);
   return importPlaces(imported, extension, fileName, depth);
+}
+
+function importFlights(importedFlights, fileName) {
+  const parsedFlights = sanitizeFlights(importedFlights);
+  if (!parsedFlights.length) return { added: 0, duplicates: 0, unrecognized: 0 };
+  state.flights = sanitizeFlights(state.flights || []);
+  state.flightImports = Array.isArray(state.flightImports) ? state.flightImports : [];
+  const existingKeys = new Set(state.flights.map((flight) => flight.key));
+  const importId = `flight-import-${slugify(fileName)}-${Date.now()}`;
+  const importedAt = new Date().toISOString();
+  const addedFlights = [];
+  let duplicates = 0;
+  parsedFlights.forEach((flight) => {
+    if (existingKeys.has(flight.key)) {
+      duplicates += 1;
+      return;
+    }
+    existingKeys.add(flight.key);
+    addedFlights.push({ ...flight, sourceFile: fileName, importId, importedAt });
+  });
+  state.flights.push(...addedFlights);
+  const unrecognized = parsedFlights.filter((flight) => !findAirport(flight.fromAirport) || !findAirport(flight.toAirport)).length;
+  state.flightImports.unshift({
+    id: importId,
+    name: fileName,
+    count: addedFlights.length,
+    total: parsedFlights.length,
+    duplicates,
+    unrecognized,
+    format: "XLS",
+    importedAt,
+  });
+  saveState();
+  renderAll();
+  return { added: addedFlights.length, duplicates, unrecognized };
+}
+
+function parseHanglvXls(arrayBuffer) {
+  const bytes = new Uint8Array(arrayBuffer);
+  if (bytes.length < 512 || bytes[0] !== 0xd0 || bytes[1] !== 0xcf) throw new Error("航旅纵横文件需要是老式 .xls 格式");
+  const workbookStream = extractOleWorkbookStream(bytes);
+  const sheets = parseBiffSheets(workbookStream).filter((sheet) => !/无效|invalid/i.test(sheet.name || ""));
+  const flights = sheets.flatMap((sheet) => parseHanglvRows(sheet.rows));
+  if (!flights.length) throw new Error("未找到航旅纵横表头");
+  return flights;
+}
+
+function parseHanglvRows(rows) {
+  const headerRow = rows.find((row) => row.some((cell) => String(cell || "").includes("航班号")));
+  if (!headerRow) return [];
+  const headerIndex = rows.indexOf(headerRow);
+  const headers = headerRow.map((cell) => String(cell || "").trim());
+  const col = (name) => headers.findIndex((header) => header === name || header.includes(name));
+  const columns = {
+    date: col("日期"),
+    airline: col("航空公司"),
+    flightNo: col("航班号"),
+    fromAirport: col("出发城市"),
+    fromTime: col("出发时间"),
+    toAirport: col("到达城市"),
+    toTime: col("到达时间"),
+    distanceKm: col("里程数"),
+    ticketNo: col("客票号"),
+    ticketStatus: col("客票状态"),
+  };
+  if (Object.values(columns).some((index) => index < 0)) return [];
+  return rows.slice(headerIndex + 1)
+    .map((row) => {
+      const text = (key) => String(row[columns[key]] ?? "").trim();
+      const distanceText = text("distanceKm");
+      return normalizeFlightRecord({
+        date: normalizeFlightDate(row[columns.date]),
+        airline: text("airline"),
+        flightNo: text("flightNo"),
+        fromAirport: text("fromAirport"),
+        fromTime: normalizeFlightTime(row[columns.fromTime]),
+        toAirport: text("toAirport"),
+        toTime: normalizeFlightTime(row[columns.toTime]),
+        distanceKm: Number(String(distanceText).replace(/[^\d.]/g, "")) || 0,
+        ticketNo: text("ticketNo"),
+        ticketStatus: text("ticketStatus"),
+      });
+    })
+    .filter((flight) => flight.date && flight.flightNo && flight.fromAirport && flight.toAirport);
+}
+
+function extractOleWorkbookStream(bytes) {
+  const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+  const sectorSize = 1 << view.getUint16(30, true);
+  const firstDirSector = view.getInt32(48, true);
+  const sectorOffset = (sector) => 512 + sector * sectorSize;
+  const fatSectors = [];
+  for (let index = 0; index < 109; index += 1) {
+    const sector = view.getUint32(76 + index * 4, true);
+    if (sector < 0xfffffff0) fatSectors.push(sector);
+  }
+  const fat = [];
+  fatSectors.forEach((sector) => {
+    const offset = sectorOffset(sector);
+    for (let cursor = 0; cursor < sectorSize; cursor += 4) fat.push(view.getUint32(offset + cursor, true));
+  });
+  const readChain = (startSector, size = Infinity) => {
+    const chunks = [];
+    const seen = new Set();
+    let sector = startSector;
+    let remaining = size;
+    while (sector >= 0 && sector < 0xfffffff0 && !seen.has(sector) && remaining > 0) {
+      seen.add(sector);
+      const offset = sectorOffset(sector);
+      const take = Math.min(sectorSize, remaining);
+      chunks.push(bytes.slice(offset, offset + take));
+      remaining -= take;
+      sector = fat[sector] ?? 0xfffffffe;
+    }
+    const length = chunks.reduce((total, chunk) => total + chunk.length, 0);
+    const output = new Uint8Array(length);
+    let offset = 0;
+    chunks.forEach((chunk) => {
+      output.set(chunk, offset);
+      offset += chunk.length;
+    });
+    return output;
+  };
+  const directory = readChain(firstDirSector);
+  for (let offset = 0; offset + 128 <= directory.length; offset += 128) {
+    const entry = new DataView(directory.buffer, directory.byteOffset + offset, 128);
+    const nameLength = entry.getUint16(64, true);
+    if (nameLength < 2) continue;
+    const nameBytes = directory.slice(offset, offset + nameLength - 2);
+    const name = new TextDecoder("utf-16le").decode(nameBytes);
+    if (name !== "Workbook" && name !== "Book") continue;
+    const start = entry.getUint32(116, true);
+    const size = Number(entry.getBigUint64(120, true));
+    return readChain(start, size);
+  }
+  throw new Error("未找到 .xls Workbook 数据流");
+}
+
+function parseBiffRecords(stream) {
+  const view = new DataView(stream.buffer, stream.byteOffset, stream.byteLength);
+  const records = [];
+  for (let offset = 0; offset + 4 <= stream.length;) {
+    const id = view.getUint16(offset, true);
+    const length = view.getUint16(offset + 2, true);
+    records.push({ id, offset, body: stream.slice(offset + 4, offset + 4 + length) });
+    offset += 4 + length;
+  }
+  return records;
+}
+
+function parseBiffSheets(stream) {
+  const records = parseBiffRecords(stream);
+  const strings = parseBiffSharedStrings(records);
+  const sheetRecords = records.filter((record) => record.id === 0x0085).map((record) => {
+    const view = new DataView(record.body.buffer, record.body.byteOffset, record.body.byteLength);
+    const offset = view.getUint32(0, true);
+    const nameLength = record.body[6] || 0;
+    const flags = record.body[7] || 0;
+    const raw = record.body.slice(8, 8 + nameLength * (flags & 0x01 ? 2 : 1));
+    return {
+      name: decodeBiffStringBytes(raw, Boolean(flags & 0x01)),
+      offset,
+    };
+  }).sort((left, right) => left.offset - right.offset);
+  if (!sheetRecords.length) return [{ name: "", rows: parseBiffRowsFromRecords(records, strings) }];
+  return sheetRecords.map((sheet, index) => ({
+    name: sheet.name,
+    rows: parseBiffRowsFromRecords(
+      records.filter((record) => record.offset >= sheet.offset && record.offset < (sheetRecords[index + 1]?.offset ?? Infinity)),
+      strings,
+    ),
+  }));
+}
+
+function parseBiffRows(stream) {
+  return parseBiffSheets(stream).flatMap((sheet) => sheet.rows);
+}
+
+function parseBiffRowsFromRecords(records, strings) {
+  const rows = [];
+  const setCell = (row, col, value) => {
+    rows[row] ||= [];
+    rows[row][col] = value;
+  };
+  records.forEach(({ id, body }) => {
+    const data = new DataView(body.buffer, body.byteOffset, body.byteLength);
+    if (id === 0x00fd && body.length >= 10) {
+      setCell(data.getUint16(0, true), data.getUint16(2, true), strings[data.getUint32(6, true)] || "");
+    } else if (id === 0x0203 && body.length >= 14) {
+      setCell(data.getUint16(0, true), data.getUint16(2, true), data.getFloat64(6, true));
+    } else if (id === 0x027e && body.length >= 10) {
+      setCell(data.getUint16(0, true), data.getUint16(2, true), decodeBiffRk(data.getUint32(6, true)));
+    } else if (id === 0x00bd && body.length >= 8) {
+      const row = data.getUint16(0, true);
+      let col = data.getUint16(2, true);
+      for (let offset = 4; offset + 6 <= body.length - 2; offset += 6) {
+        setCell(row, col, decodeBiffRk(data.getUint32(offset + 2, true)));
+        col += 1;
+      }
+    }
+  });
+  return rows;
+}
+
+function parseBiffSharedStrings(records) {
+  const strings = [];
+  const sstIndex = records.findIndex((record) => record.id === 0x00fc);
+  if (sstIndex < 0) return strings;
+  const parts = [records[sstIndex].body];
+  for (let index = sstIndex + 1; index < records.length && records[index].id === 0x003c; index += 1) parts.push(records[index].body);
+  const reader = makeBiffPartReader(parts, 8);
+  const unique = new DataView(parts[0].buffer, parts[0].byteOffset, parts[0].byteLength).getUint32(4, true);
+  for (let index = 0; index < unique && !reader.done(); index += 1) strings.push(readBiffSstString(reader));
+  return strings;
+}
+
+function makeBiffPartReader(parts, initialOffset = 0) {
+  let partIndex = 0;
+  let offset = initialOffset;
+  const advance = () => {
+    while (partIndex < parts.length && offset >= parts[partIndex].length) {
+      partIndex += 1;
+      offset = 0;
+    }
+  };
+  const readBytes = (length) => {
+    const output = new Uint8Array(length);
+    let written = 0;
+    while (written < length && partIndex < parts.length) {
+      advance();
+      if (partIndex >= parts.length) break;
+      const available = Math.min(length - written, parts[partIndex].length - offset);
+      output.set(parts[partIndex].slice(offset, offset + available), written);
+      offset += available;
+      written += available;
+    }
+    return written === length ? output : output.slice(0, written);
+  };
+  return {
+    done() {
+      advance();
+      return partIndex >= parts.length;
+    },
+    remainingInPart() {
+      return partIndex < parts.length ? parts[partIndex].length - offset : 0;
+    },
+    readByte() {
+      const bytes = readBytes(1);
+      return bytes.length ? bytes[0] : 0;
+    },
+    readUInt16() {
+      const bytes = readBytes(2);
+      return bytes.length === 2 ? new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength).getUint16(0, true) : 0;
+    },
+    readUInt32() {
+      const bytes = readBytes(4);
+      return bytes.length === 4 ? new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength).getUint32(0, true) : 0;
+    },
+    readBytes,
+    skip(length) {
+      readBytes(length);
+    },
+  };
+}
+
+function decodeBiffStringBytes(bytes, isUtf16) {
+  if (!bytes.length) return "";
+  const decoderName = isUtf16 ? "utf-16le" : "gbk";
+  try {
+    return new TextDecoder(decoderName).decode(bytes).replace(/\0+$/g, "");
+  } catch {
+    return new TextDecoder(isUtf16 ? "utf-16le" : "latin1").decode(bytes).replace(/\0+$/g, "");
+  }
+}
+
+function readBiffSstString(reader) {
+  const charCount = reader.readUInt16();
+  let flags = reader.readByte();
+  let isUtf16 = Boolean(flags & 0x01);
+  const hasRichText = Boolean(flags & 0x08);
+  const hasPhonetic = Boolean(flags & 0x04);
+  const richTextRuns = hasRichText ? reader.readUInt16() : 0;
+  const phoneticBytes = hasPhonetic ? reader.readUInt32() : 0;
+  let remainingChars = charCount;
+  let output = "";
+  while (remainingChars > 0 && !reader.done()) {
+    if (reader.remainingInPart() === 0) {
+      flags = reader.readByte();
+      isUtf16 = Boolean(flags & 0x01);
+    }
+    const bytesPerChar = isUtf16 ? 2 : 1;
+    const charsAvailable = Math.floor(reader.remainingInPart() / bytesPerChar);
+    if (!charsAvailable) {
+      flags = reader.readByte();
+      isUtf16 = Boolean(flags & 0x01);
+      continue;
+    }
+    const takeChars = Math.min(remainingChars, charsAvailable);
+    output += decodeBiffStringBytes(reader.readBytes(takeChars * bytesPerChar), isUtf16);
+    remainingChars -= takeChars;
+  }
+  if (richTextRuns) reader.skip(richTextRuns * 4);
+  if (phoneticBytes) reader.skip(phoneticBytes);
+  return output;
+}
+
+function decodeBiffRk(value) {
+  const multiplied = Boolean(value & 0x01);
+  const isInteger = Boolean(value & 0x02);
+  const raw = value & 0xfffffffc;
+  let result;
+  if (isInteger) {
+    result = (raw & 0x80000000 ? raw - 0x100000000 : raw) >> 2;
+  } else {
+    const buffer = new ArrayBuffer(8);
+    const view = new DataView(buffer);
+    view.setUint32(0, 0, true);
+    view.setUint32(4, raw, true);
+    result = view.getFloat64(0, true);
+  }
+  return multiplied ? result / 100 : result;
+}
+
+function normalizeFlightDate(value) {
+  if (value instanceof Date) return value.toISOString().slice(0, 10);
+  const text = String(value || "").trim();
+  const match = text.match(/(\d{4})年(\d{1,2})月(\d{1,2})日/);
+  if (match) return `${match[1]}-${match[2].padStart(2, "0")}-${match[3].padStart(2, "0")}`;
+  if (/^\d{4}-\d{1,2}-\d{1,2}$/.test(text)) {
+    const [year, month, day] = text.split("-");
+    return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
+  }
+  if (Number.isFinite(Number(value)) && Number(value) > 20000) {
+    const date = new Date(Math.round((Number(value) - 25569) * 86400 * 1000));
+    return date.toISOString().slice(0, 10);
+  }
+  return text;
+}
+
+function normalizeFlightTime(value) {
+  const text = String(value || "").trim();
+  const match = text.match(/^(\d{1,2}):(\d{2})/);
+  return match ? `${match[1].padStart(2, "0")}:${match[2]}` : text;
 }
 
 function importPlaces(imported, extension, fileName, depth = 1) {
@@ -8314,6 +9068,17 @@ function deleteImportedBatch(importId, index) {
   showToast(`${record.name} 已删除`);
 }
 
+function deleteFlightImportBatch(importId) {
+  const record = (state.flightImports || []).find((file) => file.id === importId);
+  if (!record) return;
+  state.flights = (state.flights || []).filter((flight) => flight.importId !== record.id);
+  state.flightImports = (state.flightImports || []).filter((file) => file !== record);
+  invalidateMapCaches();
+  saveState();
+  renderAll();
+  showToast(`${record.name} 已删除`);
+}
+
 function deleteAllImportedData() {
   const ids = new Set();
   places.forEach((place) => {
@@ -8323,6 +9088,8 @@ function deleteAllImportedData() {
   state.visits = state.visits.filter((visit) => !ids.has(visit.placeId));
   places = places.filter((place) => !ids.has(place.id));
   state.importedFiles = [];
+  state.flights = [];
+  state.flightImports = [];
   sanitizeDataStore();
   closeMapPopupsAndDetail();
   recomputeCoverage();
@@ -8344,6 +9111,8 @@ function clearAllUserData() {
   );
   state.visits = [];
   state.importedFiles = [];
+  state.flights = [];
+  state.flightImports = [];
   state.checklistMarks = [];
   state.openChecklistGroups = [];
   state.coverage = { countries: [], regions: {}, subregions: {}, updatedAt: new Date().toISOString() };
@@ -8383,6 +9152,7 @@ function dataCounts() {
     importedObjects: stats.importedObjects,
     importedPoints: stats.importedPoints,
     importedTracks: stats.importedShapes,
+    importedFlights: (state.flights || []).length,
     countries: stats.countries,
     chinaRegions: stats.chinaRegions,
     chinaSubregions: stats.chinaSubregions,
@@ -8955,12 +9725,14 @@ function renderMapControls() {
   const showLight = $("#showLightOnMap");
   const showCheckins = $("#showCheckinsOnMap");
   const showTracks = $("#showTracksOnMap");
+  const showFlights = $("#showFlightsOnMap");
   const showChina5a = $("#showChina5aOnMap");
   const showAncientCapitals = $("#showAncientCapitalsOnMap");
   const showWorldHeritage = $("#showWorldHeritageOnMap");
   if (showLight) showLight.checked = Boolean(overlays.light);
   if (showCheckins) showCheckins.checked = Boolean(overlays.checkins);
   if (showTracks) showTracks.checked = Boolean(overlays.paths);
+  if (showFlights) showFlights.checked = Boolean(overlays.flights);
   if (showChina5a) showChina5a.checked = Boolean(overlays.china5a);
   if (showAncientCapitals) showAncientCapitals.checked = Boolean(overlays.chinaAncientCapitals);
   if (showWorldHeritage) showWorldHeritage.checked = Boolean(overlays.worldHeritage);
@@ -9116,8 +9888,12 @@ loadStateFromIndexedDb().finally(() => {
 window.travelMapApp = {
   importPlacesFromText,
   parseImportFile,
+  parseHanglvXls,
   places: () => places,
   visits: () => state.visits,
+  flights: () => state.flights,
+  flightImports: () => state.flightImports,
+  flightRoutes: () => flightRouteGeoJson(),
 };
 
 $("#quickAddForm").addEventListener("submit", addVisit);
@@ -9137,8 +9913,12 @@ $("#importSummary").addEventListener("click", (event) => {
     return;
   }
   const button = event.target.closest("[data-delete-import]");
-  if (!button) return;
-  deleteImportedBatch(button.dataset.deleteImport, Number(button.dataset.importIndex));
+  if (button) {
+    deleteImportedBatch(button.dataset.deleteImport, Number(button.dataset.importIndex));
+    return;
+  }
+  const flightButton = event.target.closest("[data-delete-flight-import]");
+  if (flightButton) deleteFlightImportBatch(flightButton.dataset.deleteFlightImport);
 });
 $("#dataInventory")?.addEventListener("click", (event) => {
   const visitButton = event.target.closest("[data-delete-inventory-visit]");
@@ -9147,7 +9927,12 @@ $("#dataInventory")?.addEventListener("click", (event) => {
     return;
   }
   const objectButton = event.target.closest("[data-delete-inventory-object]");
-  if (objectButton) deleteInventoryObject(objectButton.dataset.deleteInventoryObject);
+  if (objectButton) {
+    deleteInventoryObject(objectButton.dataset.deleteInventoryObject);
+    return;
+  }
+  const flightButton = event.target.closest("[data-delete-inventory-flight]");
+  if (flightButton) deleteFlightRecord(flightButton.dataset.deleteInventoryFlight);
 });
 $("#checkins")?.addEventListener("click", (event) => {
   const jumpButton = event.target.closest("[data-manual-jump]");
@@ -9217,6 +10002,12 @@ $("#showCheckinsOnMap")?.addEventListener("change", (event) => {
 $("#showTracksOnMap")?.addEventListener("change", (event) => {
   state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
   state.mapOverlays.paths = event.target.checked;
+  saveUiStateSoon();
+  renderGeoMap();
+});
+$("#showFlightsOnMap")?.addEventListener("change", (event) => {
+  state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
+  state.mapOverlays.flights = event.target.checked;
   saveUiStateSoon();
   renderGeoMap();
 });

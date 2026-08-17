@@ -35,7 +35,7 @@
             <strong data-i18n="privacyTitle">本地保存</strong>
             <p data-i18n="privacyText">数据只保存在本机浏览器里，不会自动上传或公开。如需备份请导出。</p>
           </div>
-          <div class="app-version" id="appVersion">v1.8.7</div>
+          <div class="app-version" id="appVersion">v1.8.8</div>
         </div>
       </aside>
 
@@ -76,6 +76,7 @@
                 <label><input id="showLightOnMap" type="checkbox" checked /> <span data-i18n="overlayLight">我的点亮</span></label>
                 <label><input id="showCheckinsOnMap" type="checkbox" checked /> <span data-i18n="overlayCheckins">我的打卡</span></label>
                 <label><input id="showTracksOnMap" type="checkbox" checked /> <span data-i18n="overlayTracks">我的轨迹</span></label>
+                <label><input id="showFlightsOnMap" type="checkbox" checked /> <span data-i18n="overlayFlights">我的航线</span></label>
                 <label><input id="showChina5aOnMap" type="checkbox" /> <span data-i18n="overlay5a">5A 景区</span></label>
                 <label><input id="showAncientCapitalsOnMap" type="checkbox" /> <span data-i18n="overlayAncientCapitals">中国古都</span></label>
                 <label><input id="showWorldHeritageOnMap" type="checkbox" /> <span data-i18n="overlayHeritage">世界遗产</span></label>
@@ -219,12 +220,12 @@
                 <p class="eyebrow" data-i18n="importEyebrow">导入</p>
                 <h3 data-i18n="importTitle">导入地图或地点文件</h3>
               </div>
-              <span class="tag">GeoJSON / KML / CSV / Photo</span>
+              <span class="tag">GeoJSON / KML / CSV / XLS / Photo</span>
             </div>
             <div class="import-box">
               <label>
                 <span data-i18n="chooseFile">选择文件</span>
-                <input id="importFile" type="file" multiple accept=".geojson,.json,.kml,.csv,.jpg,.jpeg,.tif,.tiff,.heic,.heif,text/csv,application/json,image/jpeg,image/tiff,image/heic,image/heif" />
+                <input id="importFile" type="file" multiple accept=".geojson,.json,.kml,.csv,.xls,.jpg,.jpeg,.tif,.tiff,.heic,.heif,text/csv,application/json,image/jpeg,image/tiff,image/heic,image/heif" />
               </label>
 
             </div>
@@ -273,6 +274,6 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-    <script src="app.js?v=250"></script>
+    <script src="app.js?v=252"></script>
   </body>
 </html>
