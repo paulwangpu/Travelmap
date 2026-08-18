@@ -5636,14 +5636,14 @@ function renderMapLibreLayers() {
   perfStageStartedAt = logRenderStage("remove", perfStageStartedAt);
 
   setMapLibreSource("map-background-context", overlays.light ? cachedMapGeoJson("map-background-context", mapBackgroundContextGeoJson) : emptyFeatureCollection());
-  addMapLibreFillLayer("map-background-context", "map-background-context-fill", "map-background-context-line", 0.18, 1);
+  addMapLibreFillLayer("map-background-context", "map-background-context-fill", "map-background-context-line", 0.1, 1);
   perfStageStartedAt = logRenderStage("background", perfStageStartedAt);
 
   if (overlays.light && state.boundaryLevel === "country") {
     setMapLibreSource("country-click", cachedMapGeoJson("country-click", allCountryClickGeoJson));
     addMapLibreClickFillLayer("country-click", "country-click-fill");
     setMapLibreSource("visited-countries", cachedMapGeoJson("countries", countryGeoJson));
-    addMapLibreFillLayer("visited-countries", "visited-countries-fill", "visited-countries-line", 0.2, 1.15);
+    addMapLibreFillLayer("visited-countries", "visited-countries-fill", "visited-countries-line", 0.4, 1.15);
     perfStageStartedAt = logRenderStage("country", perfStageStartedAt);
   }
 
@@ -5651,13 +5651,13 @@ function renderMapLibreLayers() {
     const adminStageStartedAt = perfNow();
     let adminSubstageStartedAt = adminStageStartedAt;
     setMapLibreSource("visited-regions", cachedMapGeoJson("regions", regionGeoJson));
-    addMapLibreFillLayer("visited-regions", "visited-regions-fill", "visited-regions-line", 0.24, boundaryIndex ? 0 : 1.4);
+    addMapLibreFillLayer("visited-regions", "visited-regions-fill", "visited-regions-line", 0.4, boundaryIndex ? 0 : 1.4);
     adminSubstageStartedAt = logRenderStage("admin-regions", adminSubstageStartedAt);
     setMapLibreSource("visited-region-group-outlines", cachedMapGeoJson("region-outlines", provinceOutlineGeoJson));
     addMapLibreLineLayer("visited-region-group-outlines", "visited-region-group-outlines-line", 1.55);
     adminSubstageStartedAt = logRenderStage("admin-outlines", adminSubstageStartedAt);
     setMapLibreSource("admin-country-context", cachedMapGeoJson("admin-country-context", adminCountryContextGeoJson));
-    addMapLibreFillLayer("admin-country-context", "admin-country-context-fill", "admin-country-context-line", 0.18, 1);
+    addMapLibreFillLayer("admin-country-context", "admin-country-context-fill", "admin-country-context-line", 0.1, 1);
     logRenderStage("admin-context", adminSubstageStartedAt);
     logSlowStep("renderMapLibreLayers:admin-total", adminStageStartedAt, 120);
     perfStageStartedAt = logRenderStage("admin", perfStageStartedAt);
@@ -5670,12 +5670,12 @@ function renderMapLibreLayers() {
     const countriesWithSubadmin = new Set(subadminKeys.map(countryIdForSubadminKey).filter(Boolean));
     if (countriesWithSubadmin.size) {
       setMapLibreSource("admin-country-context", cachedMapGeoJson("subadmin-country-context", () => adminCountryContextGeoJson(countriesWithSubadmin)));
-      addMapLibreFillLayer("admin-country-context", "admin-country-context-fill", "admin-country-context-line", 0.18, 1);
+      addMapLibreFillLayer("admin-country-context", "admin-country-context-fill", "admin-country-context-line", 0.1, 1);
     }
     subadminSubstageStartedAt = logRenderStage("subadmin-context", subadminSubstageStartedAt);
     if (subadminKeys.length) {
       setMapLibreSource("visited-subadmin", cachedMapGeoJson("subadmin", subadminGeoJson));
-      addMapLibreFillLayer("visited-subadmin", "visited-subadmin-fill", "visited-subadmin-line", 0.24, 0.55);
+      addMapLibreFillLayer("visited-subadmin", "visited-subadmin-fill", "visited-subadmin-line", 0.4, 0.55);
     }
     subadminSubstageStartedAt = logRenderStage("subadmin-city", subadminSubstageStartedAt);
     if (shouldShowUsCountyReference()) {
@@ -6315,7 +6315,7 @@ function bindMapLibreLayerHandlers() {
 function addMapLibreFillLayer(sourceId, fillId, lineId, opacity, lineWidth, geometryFilter = false) {
   const polygonFilter = ["any", ["==", ["geometry-type"], "Polygon"], ["==", ["geometry-type"], "MultiPolygon"]];
   const paintColor = ["case", [">", ["get", "depth"], 0], depthColors[1], depthColors[0]];
-  const paintOpacity = ["case", [">", ["get", "depth"], 0], opacity, Math.min(opacity, 0.18)];
+  const paintOpacity = ["case", [">", ["get", "depth"], 0], opacity, Math.min(opacity, 0.1)];
   const lineColor = ["case", [">", ["get", "depth"], 0], depthColors[1], "#b43d16"];
   const lineOpacity = ["case", ["==", ["get", "is_region_group"], true], 0, [">", ["get", "depth"], 0], 0.82, 0.7];
   mapLibreMap.addLayer({
@@ -6611,7 +6611,7 @@ function leafletBoundaryStyle(feature) {
     color: depth ? depthColors[1] : "#b43d16",
     weight: feature.properties.is_region_group ? 0 : 1.2,
     fillColor: depth ? depthColors[1] : depthColors[0],
-    fillOpacity: depth ? 0.22 : 0.18,
+    fillOpacity: depth ? 0.4 : 0.1,
   };
 }
 
