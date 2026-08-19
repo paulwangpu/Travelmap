@@ -4305,7 +4305,7 @@ function normalizeSavedChecklistGeography() {
     if (!isChina5a && !isWorldHeritage && !isAncientCapital) return;
     const before = `${place.country || ""}|${place.unit || ""}|${place.subunit || ""}|${place.lat || ""}|${place.lng || ""}`;
     const checklistKey = isChina5a ? "china5a" : isAncientCapital ? "chinaAncientCapitals" : "worldHeritage";
-    applyChecklistGeography(place, checklistKey, checklistCoordinateFor(place.name));
+    applyChecklistCoordinates(place, checklistCoordinateFor(place.name), checklistKey);
     const after = `${place.country || ""}|${place.unit || ""}|${place.subunit || ""}|${place.lat || ""}|${place.lng || ""}`;
     if (before !== after) changed = true;
     if (hasNorthKoreaCoverage) changed = true;
@@ -8667,7 +8667,13 @@ function ensureChecklistPlace(key, item, group = "") {
 }
 
 function applyChecklistCoordinates(place, coords, key) {
-  if (coords && (key === "worldHeritage" || !(Number.isFinite(place.lat) && Number.isFinite(place.lng)))) {
+  const shouldUseCatalogCoordinates =
+    key === "worldHeritage"
+    || place.checklistOnly
+    || place.checklistKey === key
+    || String(place.id || "").startsWith(`checklist-${slugify(key)}-`)
+    || !(Number.isFinite(place.lat) && Number.isFinite(place.lng));
+  if (coords && shouldUseCatalogCoordinates) {
     place.lat = coords[0];
     place.lng = coords[1];
     if (key !== "worldHeritage") place.unit = place.unit || coords[2] || "";
