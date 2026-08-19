@@ -810,6 +810,59 @@ function activeMapProvider() {
   return normalizeDetectedMapProvider(state.detectedMapProvider) || fallbackMapProviderFromLocale();
 }
 
+function isGaodeProvider(provider = activeMapProvider()) {
+  return provider === "gaode" || provider === "gaodeSatellite";
+}
+
+function isCoordinateInChina(lng, lat) {
+  return Number.isFinite(lng) && Number.isFinite(lat) && lng >= 72.004 && lng <= 137.8347 && lat >= 0.8293 && lat <= 55.8271;
+}
+
+function transformLatForChina(lng, lat) {
+  let ret = -100 + 2 * lng + 3 * lat + 0.2 * lat * lat + 0.1 * lng * lat + 0.2 * Math.sqrt(Math.abs(lng));
+  ret += ((20 * Math.sin(6 * lng * Math.PI) + 20 * Math.sin(2 * lng * Math.PI)) * 2) / 3;
+  ret += ((20 * Math.sin(lat * Math.PI) + 40 * Math.sin((lat / 3) * Math.PI)) * 2) / 3;
+  ret += ((160 * Math.sin((lat / 12) * Math.PI) + 320 * Math.sin((lat * Math.PI) / 30)) * 2) / 3;
+  return ret;
+}
+
+function transformLngForChina(lng, lat) {
+  let ret = 300 + lng + 2 * lat + 0.1 * lng * lng + 0.1 * lng * lat + 0.1 * Math.sqrt(Math.abs(lng));
+  ret += ((20 * Math.sin(6 * lng * Math.PI) + 20 * Math.sin(2 * lng * Math.PI)) * 2) / 3;
+  ret += ((20 * Math.sin(lng * Math.PI) + 40 * Math.sin((lng / 3) * Math.PI)) * 2) / 3;
+  ret += ((150 * Math.sin((lng / 12) * Math.PI) + 300 * Math.sin((lng / 30) * Math.PI)) * 2) / 3;
+  return ret;
+}
+
+function wgsToGcj(lng, lat) {
+  if (!isCoordinateInChina(lng, lat)) return [lng, lat];
+  const a = 6378245;
+  const ee = 0.006693421622965943;
+  let dLat = transformLatForChina(lng - 105, lat - 35);
+  let dLng = transformLngForChina(lng - 105, lat - 35);
+  const radLat = (lat / 180) * Math.PI;
+  let magic = Math.sin(radLat);
+  magic = 1 - ee * magic * magic;
+  const sqrtMagic = Math.sqrt(magic);
+  dLat = (dLat * 180) / (((a * (1 - ee)) / (magic * sqrtMagic)) * Math.PI);
+  dLng = (dLng * 180) / ((a / sqrtMagic) * Math.cos(radLat) * Math.PI);
+  return [lng + dLng, lat + dLat];
+}
+
+function gcjToWgs(lng, lat) {
+  if (!isCoordinateInChina(lng, lat)) return [lng, lat];
+  const [gcjLng, gcjLat] = wgsToGcj(lng, lat);
+  return [lng * 2 - gcjLng, lat * 2 - gcjLat];
+}
+
+function mapDisplayCoordinate(lng, lat) {
+  return isGaodeProvider() ? wgsToGcj(lng, lat) : [lng, lat];
+}
+
+function mapStorageCoordinateFromClick(lng, lat) {
+  return isGaodeProvider() ? gcjToWgs(lng, lat) : [lng, lat];
+}
+
 function fallbackMapProviderFromLocale() {
   const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
   const language = navigator.language || "";
@@ -3915,6 +3968,7 @@ async function createMapClickCheckin({ name, lng, lat }) {
   upsertVisit(id, 1, { tripId: "map-click", save: false });
   recomputeCoverage();
   invalidateMapGeoJsonCacheOnly();
+  invalidateMapPointRenderCache();
   saveState();
   setMapAddMode(false);
   closeMapPopupsAndDetail();
@@ -3929,7 +3983,8 @@ function handleMapCanvasClick(lng, lat, originalEvent = null) {
     closeMapPopupsAndDetail();
     return;
   }
-  openMapClickCheckinForm(lng, lat);
+  const [storageLng, storageLat] = mapStorageCoordinateFromClick(lng, lat);
+  openMapClickCheckinForm(storageLng, storageLat);
 }
 
 function markMapEventHandled(event) {
@@ -5870,6 +5925,7 @@ function mapLibreMarkerRenderSignature(overlays) {
   ].join("#");
   return JSON.stringify({
     language: currentLanguage,
+    provider: activeMapProvider(),
     checkins: Boolean(overlays.checkins),
     china5a: Boolean(overlays.china5a),
     chinaAncientCapitals: Boolean(overlays.chinaAncientCapitals),
@@ -5899,9 +5955,10 @@ function mapLibrePointGeoJson(overlays) {
         && Number.isFinite(visit.place.lat)
       )
       .forEach((visit) => {
+        const [displayLng, displayLat] = mapDisplayCoordinate(visit.place.lng, visit.place.lat);
         features.push({
           type: "Feature",
-          geometry: { type: "Point", coordinates: [visit.place.lng, visit.place.lat] },
+          geometry: { type: "Point", coordinates: [displayLng, displayLat] },
           properties: {
             kind: "checkin",
             placeId: visit.place.id,
@@ -5917,9 +5974,10 @@ function mapLibrePointGeoJson(overlays) {
       });
   }
   checklistOverlayPlaces().forEach((entry) => {
+    const [displayLng, displayLat] = mapDisplayCoordinate(entry.lng, entry.lat);
     features.push({
       type: "Feature",
-      geometry: { type: "Point", coordinates: [entry.lng, entry.lat] },
+      geometry: { type: "Point", coordinates: [displayLng, displayLat] },
       properties: {
         kind: "checklist",
         checklistKey: entry.key,
@@ -6587,7 +6645,8 @@ function renderLeafletLayers() {
     visitedPlaces()
       .filter((visit) => !visit.place.shapeOnly && !visit.place.manualAdmin && Number.isFinite(visit.place.lng) && Number.isFinite(visit.place.lat))
       .forEach((visit) => {
-        const marker = L.circleMarker([visit.place.lat, visit.place.lng], {
+        const [displayLng, displayLat] = mapDisplayCoordinate(visit.place.lng, visit.place.lat);
+        const marker = L.circleMarker([displayLat, displayLng], {
           radius: 4,
           color: "#111827",
           weight: 2,
