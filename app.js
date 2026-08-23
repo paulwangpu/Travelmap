@@ -4655,24 +4655,36 @@ function loadChinaAncientCapitals() {
       chinaAncientCapitals = data;
       chinaAncientCapitalCoordinates = {};
       chinaAncientCapitalMeta = {};
+      const mergedSiteByCoordinate = new Map();
       const recordItems = Array.isArray(data.recordItems) && data.recordItems.length ? data.recordItems : [];
       checklistCatalog.chinaAncientCapitals.items = (recordItems.length ? recordItems : items).map((item) => item.name);
       items.forEach((item) => {
         if (!item?.name || !Number.isFinite(item.lat) || !Number.isFinite(item.lng)) return;
         const coords = [item.lat, item.lng, "中国"];
         chinaAncientCapitalCoordinates[item.name] = coords;
-        chinaAncientCapitalMeta[canonicalPlaceKey(item.name)] = {
+        const mergedMeta = {
           ...item,
           siteKey: item.siteKey || `ancient-site:${canonicalPlaceKey(item.sourceSite || item.name)}`,
           isMergedSite: true,
         };
+        chinaAncientCapitalMeta[canonicalPlaceKey(item.name)] = mergedMeta;
+        mergedSiteByCoordinate.set(ancientCapitalCoordinateKey(item.lng, item.lat), mergedMeta);
       });
       recordItems.forEach((item) => {
         if (!item?.name) return;
+        const mergedSite = Number.isFinite(item.lng) && Number.isFinite(item.lat)
+          ? mergedSiteByCoordinate.get(ancientCapitalCoordinateKey(item.lng, item.lat))
+          : null;
+        const normalizedItem = mergedSite ? {
+          ...item,
+          siteKey: mergedSite.siteKey,
+          currentKey: mergedSite.currentKey || mergedSite.siteKey,
+          currentPlace: ancientCapitalCurrentDisplayName(mergedSite),
+        } : item;
         if (Number.isFinite(item.lat) && Number.isFinite(item.lng)) {
           chinaAncientCapitalCoordinates[item.name] = [item.lat, item.lng, "中国"];
         }
-        chinaAncientCapitalMeta[canonicalPlaceKey(item.name)] = item;
+        chinaAncientCapitalMeta[canonicalPlaceKey(item.name)] = normalizedItem;
       });
     })
     .catch((error) => {
@@ -5877,10 +5889,12 @@ function renderMapLibreMarkers(overlays = { ...defaultMapOverlays(), ...(state.m
         && Number.isFinite(visit.place.lat)
       )
       .forEach((visit) => {
+        const title = mapCheckinTitle(visit.place);
+        const subtitle = mapCheckinSubtitle(visit.place);
         const el = document.createElement("button");
         el.className = "maplibre-marker";
         el.style.background = depthColors[1];
-        el.title = visit.place.name;
+        el.title = title;
         el.addEventListener("click", (event) => {
           event.stopPropagation();
           event._travelMapHandled = true;
@@ -5888,7 +5902,7 @@ function renderMapLibreMarkers(overlays = { ...defaultMapOverlays(), ...(state.m
         });
         const marker = new maplibregl.Marker({ element: el })
           .setLngLat([visit.place.lng, visit.place.lat])
-          .setPopup(new maplibregl.Popup({ offset: 16, closeButton: false }).setHTML(mapPopupHtml(`<strong>${escapeHtml(visit.place.name)}</strong><br>${escapeHtml(getCountry(visit.place.country).name)} · ${escapeHtml(visit.place.unit || "未分区")}<br><button class="popup-action" data-unvisit="${escapeHtml(visit.place.id)}" type="button">${t("unvisit")}</button>`)))
+          .setPopup(new maplibregl.Popup({ offset: 16, closeButton: false }).setHTML(mapPopupHtml(`<strong>${escapeHtml(title)}</strong><br>${escapeHtml(subtitle)}<br><button class="popup-action" data-unvisit="${escapeHtml(visit.place.id)}" type="button">${t("unvisit")}</button>`)))
           .addTo(mapLibreMap);
         mapLibreMarkers.push(marker);
       });
@@ -5896,7 +5910,7 @@ function renderMapLibreMarkers(overlays = { ...defaultMapOverlays(), ...(state.m
   checklistOverlayPlaces().forEach((entry) => {
     const el = document.createElement("button");
     el.className = `maplibre-marker checklist-marker checklist-${entry.key} ${entry.done ? "done" : ""}`;
-    el.title = entry.item;
+    el.title = entry.title || entry.item;
     el.addEventListener("click", (event) => {
       event.stopPropagation();
       event._travelMapHandled = true;
@@ -5904,7 +5918,7 @@ function renderMapLibreMarkers(overlays = { ...defaultMapOverlays(), ...(state.m
     });
     const marker = new maplibregl.Marker({ element: el })
       .setLngLat([entry.lng, entry.lat])
-      .setPopup(new maplibregl.Popup({ offset: 16, closeButton: false }).setHTML(mapPopupHtml(`<strong>${escapeHtml(entry.item)}</strong><br>${escapeHtml(checklistCatalog[entry.key].label)}<br><button class="popup-action" data-checklist-map="${escapeHtml(entry.key)}" data-item="${escapeHtml(entry.item)}" type="button">${entry.done ? t("unvisit") : t("markVisited")}</button>`)))
+      .setPopup(new maplibregl.Popup({ offset: 16, closeButton: false }).setHTML(mapPopupHtml(`<strong>${escapeHtml(entry.title || entry.item)}</strong><br>${escapeHtml(entry.subtitle || checklistCatalog[entry.key].label)}<br><button class="popup-action" data-checklist-map="${escapeHtml(entry.key)}" data-item="${escapeHtml(entry.item)}" type="button">${entry.done ? t("unvisit") : t("markVisited")}</button>`)))
       .addTo(mapLibreMap);
     mapLibreMarkers.push(marker);
   });
@@ -5956,14 +5970,16 @@ function mapLibrePointGeoJson(overlays) {
       )
       .forEach((visit) => {
         const [displayLng, displayLat] = mapDisplayCoordinate(visit.place.lng, visit.place.lat);
+        const title = mapCheckinTitle(visit.place);
+        const subtitle = mapCheckinSubtitle(visit.place);
         features.push({
           type: "Feature",
           geometry: { type: "Point", coordinates: [displayLng, displayLat] },
           properties: {
             kind: "checkin",
             placeId: visit.place.id,
-            title: visit.place.name,
-            subtitle: `${getCountry(visit.place.country).name} · ${visit.place.unit || t("unassigned")}`,
+            title,
+            subtitle,
             color: depthColors[1],
             stroke: "#111827",
             radius: 4,
@@ -5982,8 +5998,8 @@ function mapLibrePointGeoJson(overlays) {
         kind: "checklist",
         checklistKey: entry.key,
         item: entry.item,
-        title: entry.item,
-        subtitle: checklistCatalog[entry.key]?.label || t("checklistFallback"),
+        title: entry.title || entry.item,
+        subtitle: entry.subtitle || checklistCatalog[entry.key]?.label || t("checklistFallback"),
         done: Boolean(entry.done),
         color: checklistOverlayColor(entry.key, Boolean(entry.done)),
         stroke: entry.done ? "#111827" : "rgba(17, 24, 39, 0.5)",
@@ -6169,7 +6185,7 @@ function checklistOverlayPlaces() {
       visit.place.checklistKey ? checklistItemKey(visit.place.checklistKey, visit.place.name, visit.place) : "",
     ].filter(Boolean)));
   const allOverlayItems = keys.flatMap(checklistOverlayEntriesFor);
-  const items = allOverlayItems.map(({ key, item, group, itemKey, legacyKey }) => {
+  const items = allOverlayItems.map(({ key, item, group, itemKey, legacyKey, title, subtitle }) => {
     const coords = checklistCoordinateFor(item, key === "china5a" ? group : "");
     if (!coords || !Number.isFinite(coords[0]) || !Number.isFinite(coords[1])) return null;
     const done = marked.has(itemKey)
@@ -6177,7 +6193,7 @@ function checklistOverlayPlaces() {
       || (!ambiguous5a.has(legacyKey) && (marked.has(legacyKey) || visited.has(legacyKey)));
     if (seen.has(itemKey) && !done) return null;
     if (seen.has(legacyKey) && !done) return null;
-    return { key, item, lat: coords[0], lng: coords[1], done };
+    return { key, item, lat: coords[0], lng: coords[1], done, title, subtitle };
   }).filter(Boolean);
   checklistOverlayCache = {
     signature,
@@ -6209,6 +6225,8 @@ function checklistOverlayEntriesFor(key) {
       item: item.name,
       itemKey: checklistItemKey(key, item.name),
       legacyKey: canonicalPlaceKey(item.name),
+      title: ancientCapitalMapTitle(item),
+      subtitle: ancientCapitalMapSubtitle(item),
     }));
   }
   if (list.byRegion) {
@@ -6249,6 +6267,10 @@ function activeChecklistOverlayKeys() {
   ].filter(Boolean);
 }
 
+function hasAncientCapitalCheckins() {
+  return places.some((place) => place.checklistKey === "chinaAncientCapitals");
+}
+
 function placeBelongsToActiveChecklistOverlay(place) {
   if (!place) return false;
   if (!activeChecklistOverlayKeys().length) return false;
@@ -6283,34 +6305,84 @@ function renderChecklistMapDetail(key, item) {
 function renderAncientCapitalDetail(key, item, capitalMeta, done) {
   $("#mapDetail").classList.remove("hidden");
   $("#mapDetail").classList.add("ancient-capital-detail");
-  const dynasties = capitalMeta.dynasty ? [capitalMeta.dynasty] : (capitalMeta.dynasties || []);
-  const ancientNames = capitalMeta.ancientName ? [capitalMeta.ancientName] : (capitalMeta.ancientNames || []);
-  const eras = capitalMeta.era ? [ancientCapitalDisplayEra(capitalMeta.era)] : (capitalMeta.eras || []).map(ancientCapitalDisplayEra);
-  const dynastyCount = dynasties.length;
-  const dynastyCountLabel = currentLanguage === "en" ? `${dynastyCount} linked` : `${dynastyCount} 个`;
+  const currentPlace = ancientCapitalCurrentDisplayName(capitalMeta) || item;
+  const records = ancientCapitalDetailRecords(capitalMeta);
+  const recordsLabel = currentLanguage === "en" ? `${records.length} records` : `${records.length} 条`;
   $("#mapDetail").innerHTML = `
     <p class="eyebrow">${checklistCatalog[key]?.label || t("checklistFallback")}</p>
-    <h3>${item}</h3>
+    <h3>${escapeHtml(currentPlace)}</h3>
     <div class="capital-facts">
       <section>
-        <header><strong>${currentLanguage === "en" ? "Ancient names" : "古称"}</strong></header>
-        ${renderCompactValueList(ancientNames)}
-      </section>
-      <section>
-        <header><strong>${currentLanguage === "en" ? "Dynasties" : "关联政权"}</strong><em>${dynastyCountLabel}</em></header>
-        ${renderCompactValueList(dynasties)}
-      </section>
-      <section>
-        <header><strong>${currentLanguage === "en" ? "Eras" : "时代"}</strong></header>
-        ${renderCompactValueList(eras)}
+        <header><strong>${currentLanguage === "en" ? "Capital records" : "都城记录"}</strong><em>${recordsLabel}</em></header>
+        ${renderAncientCapitalRecordList(records)}
       </section>
       <section class="capital-meta-line">
         <span>${escapeHtml(capitalMeta.admin || t("none"))}</span>
-        <span>${currentLanguage === "en" ? "Confidence" : "置信度"} ${escapeHtml(capitalMeta.confidence || t("none"))}</span>
         <span>${done ? t("checked") : t("unvisited")}</span>
       </section>
     </div>
     <button class="detail-action" data-checklist-map="${key}" data-item="${item}" type="button">${done ? t("unvisit") : t("markVisited")}</button>`;
+}
+
+function ancientCapitalDetailRecords(capitalMeta) {
+  if (Array.isArray(capitalMeta?.records) && capitalMeta.records.length) {
+    return capitalMeta.records.map((record) => ({
+      era: ancientCapitalDisplayEra(record["时代"] || capitalMeta.sourceEra || capitalMeta.era),
+      ancientName: record["古称"] || capitalMeta.ancientName || capitalMeta.name,
+      dynasty: record["政权/国号"] || capitalMeta.dynasty,
+      years: ancientCapitalRecordYears(record),
+      capitalType: record["都城性质"] || capitalMeta.capitalType,
+      confidence: record["置信度"] || capitalMeta.confidence,
+    }));
+  }
+  return [{
+    era: ancientCapitalDisplayEra(capitalMeta?.era || capitalMeta?.sourceEra || ancientCapitalPrimaryEra(capitalMeta)),
+    ancientName: capitalMeta?.ancientName || capitalMeta?.name,
+    dynasty: capitalMeta?.dynasty || compactMapLabelValues(capitalMeta?.dynasties, 2, "、"),
+    years: ancientCapitalRecordYears(capitalMeta),
+    capitalType: capitalMeta?.capitalType || compactMapLabelValues(capitalMeta?.capitalTypes, 2, "、"),
+    confidence: capitalMeta?.confidence,
+  }];
+}
+
+function ancientCapitalRecordYears(record) {
+  const capitalYears = record?.["都城年代（原文）"] || record?.capitalYears || "";
+  const regimeYears = record?.["政权年代（原文）"] || record?.regimeYears || "";
+  if (capitalYears && regimeYears && capitalYears !== regimeYears) {
+    return currentLanguage === "en"
+      ? `Capital ${capitalYears}; regime ${regimeYears}`
+      : `都城 ${capitalYears}；政权 ${regimeYears}`;
+  }
+  return capitalYears || regimeYears || "";
+}
+
+function renderAncientCapitalRecordList(records) {
+  const labels = currentLanguage === "en"
+    ? {
+      era: "Era",
+      ancientName: "Ancient name",
+      dynasty: "Regime",
+      years: "Years",
+      capitalType: "Capital type",
+      confidence: "Confidence",
+    }
+    : {
+      era: "朝代",
+      ancientName: "古称",
+      dynasty: "政权",
+      years: "年代",
+      capitalType: "都城类型",
+      confidence: "置信度",
+    };
+  return `<div class="ancient-capital-record-list">${records.map((record) => `
+    <article class="ancient-capital-record">
+      <span><b>${labels.era}</b><em>${escapeHtml(record.era || t("none"))}</em></span>
+      <span><b>${labels.ancientName}</b><em>${escapeHtml(record.ancientName || t("none"))}</em></span>
+      <span><b>${labels.dynasty}</b><em>${escapeHtml(record.dynasty || t("none"))}</em></span>
+      <span class="wide"><b>${labels.years}</b><em>${escapeHtml(record.years || t("none"))}</em></span>
+      <span><b>${labels.capitalType}</b><em>${escapeHtml(record.capitalType || t("none"))}</em></span>
+      <span><b>${labels.confidence}</b><em>${escapeHtml(record.confidence || t("none"))}</em></span>
+    </article>`).join("")}</div>`;
 }
 
 function renderCompactValueList(values) {
@@ -6646,6 +6718,8 @@ function renderLeafletLayers() {
       .filter((visit) => !visit.place.shapeOnly && !visit.place.manualAdmin && Number.isFinite(visit.place.lng) && Number.isFinite(visit.place.lat))
       .forEach((visit) => {
         const [displayLng, displayLat] = mapDisplayCoordinate(visit.place.lng, visit.place.lat);
+        const title = mapCheckinTitle(visit.place);
+        const subtitle = mapCheckinSubtitle(visit.place);
         const marker = L.circleMarker([displayLat, displayLng], {
           radius: 4,
           color: "#111827",
@@ -6653,7 +6727,7 @@ function renderLeafletLayers() {
           fillColor: depthColors[1],
           fillOpacity: 0.95,
         });
-        marker.bindPopup(mapPopupHtml(`<strong>${escapeHtml(visit.place.name)}</strong><br>${escapeHtml(getCountry(visit.place.country).name)} · ${escapeHtml(visit.place.unit || "未分区")}<br><button class="popup-action" data-unvisit="${escapeHtml(visit.place.id)}" type="button">${t("unvisit")}</button>`), { closeButton: false });
+        marker.bindPopup(mapPopupHtml(`<strong>${escapeHtml(title)}</strong><br>${escapeHtml(subtitle)}<br><button class="popup-action" data-unvisit="${escapeHtml(visit.place.id)}" type="button">${t("unvisit")}</button>`), { closeButton: false });
         marker.on("click", (event) => {
           if (event.originalEvent) event.originalEvent._travelMapHandled = true;
           renderPlaceDetail(visit.place.id);
@@ -7310,6 +7384,11 @@ function groupBy(items, keyFn) {
 function renderPlaceDetail(placeId) {
   const place = getPlace(placeId);
   const visit = bestVisitForPlace(placeId);
+  const ancientCapitalMeta = ancientCapitalMetaForPlace(place);
+  if (ancientCapitalMeta) {
+    renderAncientCapitalDetail("chinaAncientCapitals", place.name, ancientCapitalMeta, Boolean(visit));
+    return;
+  }
   const regionLabel = countryCoverageId(place.country) === "cn"
     ? (place.subunit ? chinaSubadminDisplayName(place.subunit) : chinaProvinceDisplayName(place.unit))
     : place.unit;
@@ -8071,6 +8150,64 @@ function ancientCapitalYearText(item, field) {
   if (field === "政权年代（原文）" && item?.regimeYears) return escapeHtml(item.regimeYears);
   const values = (item?.records || []).map((record) => record?.[field]).filter(Boolean);
   return compactInlineValues(Array.from(new Set(values)), 4);
+}
+
+function ancientCapitalCoordinateKey(lng, lat) {
+  const safeLng = Number(lng);
+  const safeLat = Number(lat);
+  if (!Number.isFinite(safeLng) || !Number.isFinite(safeLat)) return "";
+  return `${safeLng.toFixed(5)},${safeLat.toFixed(5)}`;
+}
+
+function uniqueTextValues(values) {
+  const seen = new Set();
+  return (values || [])
+    .flatMap((value) => Array.isArray(value) ? value : [value])
+    .map((value) => String(value || "").trim())
+    .filter((value) => {
+      const key = canonicalPlaceKey(value);
+      if (!key || seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+}
+
+function compactMapLabelValues(values, limit = 3, separator = " · ") {
+  const list = uniqueTextValues(values);
+  const shown = list.slice(0, limit);
+  const suffix = list.length > shown.length ? ` +${list.length - shown.length}` : "";
+  return `${shown.join(separator)}${suffix}`;
+}
+
+function ancientCapitalMapTitle(item) {
+  return ancientCapitalCurrentDisplayName(item) || item?.name || "";
+}
+
+function ancientCapitalMapSubtitle(item) {
+  const eras = compactMapLabelValues((item?.eras || []).map(ancientCapitalDisplayEra), 2, "、");
+  const recordCount = Number(item?.recordCount) || (Array.isArray(item?.records) ? item.records.length : 0);
+  const count = recordCount > 1
+    ? (currentLanguage === "en" ? `${recordCount} records` : `${recordCount} 条记录`)
+    : "";
+  return [eras, count].filter(Boolean).join(" · ");
+}
+
+function ancientCapitalMetaForPlace(place) {
+  if (!place) return null;
+  if (place.checklistKey !== "chinaAncientCapitals" && !chinaAncientCapitalMeta[canonicalPlaceKey(place.name)]) return null;
+  return chinaAncientCapitalMeta[canonicalPlaceKey(place.name)] || null;
+}
+
+function mapCheckinTitle(place) {
+  const capitalMeta = ancientCapitalMetaForPlace(place);
+  if (capitalMeta) return ancientCapitalMapTitle(capitalMeta);
+  return place?.name || "";
+}
+
+function mapCheckinSubtitle(place) {
+  const capitalMeta = ancientCapitalMetaForPlace(place);
+  if (capitalMeta) return ancientCapitalMapSubtitle(capitalMeta) || checklistCatalog.chinaAncientCapitals.label;
+  return `${getCountry(place?.country).name} · ${place?.unit || t("unassigned")}`;
 }
 
 function ancientCapitalSourceOrder(item) {
@@ -10121,7 +10258,7 @@ function showPage(pageId, targetId = "") {
   document.querySelector(`[data-page="${target}"]`)?.scrollIntoView({ block: "start", inline: "nearest" });
   if (target === "world") {
     if (state.mapOverlays?.china5a) Promise.all([loadChina5aCatalog(), loadChina5aCoordinates()]).finally(renderGeoMap);
-    if (state.mapOverlays?.chinaAncientCapitals) loadChinaAncientCapitals().finally(renderGeoMap);
+    if (state.mapOverlays?.chinaAncientCapitals || hasAncientCapitalCheckins()) loadChinaAncientCapitals().finally(renderGeoMap);
     if (state.mapOverlays?.worldHeritage) loadCatalogData();
     setTimeout(() => {
       if (mapLibreMap) mapLibreMap.resize();
