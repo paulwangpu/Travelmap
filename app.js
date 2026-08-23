@@ -8195,7 +8195,14 @@ function ancientCapitalMapSubtitle(item) {
 function ancientCapitalMetaForPlace(place) {
   if (!place) return null;
   if (place.checklistKey !== "chinaAncientCapitals" && !chinaAncientCapitalMeta[canonicalPlaceKey(place.name)]) return null;
-  return chinaAncientCapitalMeta[canonicalPlaceKey(place.name)] || null;
+  const meta = chinaAncientCapitalMeta[canonicalPlaceKey(place.name)] || null;
+  return ancientCapitalMergedMeta(meta) || meta;
+}
+
+function ancientCapitalMergedMeta(meta) {
+  if (!meta?.siteKey || meta.isMergedSite) return meta || null;
+  return Object.values(chinaAncientCapitalMeta)
+    .find((candidate) => candidate?.isMergedSite && candidate.siteKey === meta.siteKey) || meta;
 }
 
 function mapCheckinTitle(place) {
