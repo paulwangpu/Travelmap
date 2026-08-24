@@ -202,9 +202,46 @@ select {
   height: 12px;
 }
 
+.map-mode-toggle {
+  flex: 0 0 auto;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 39px;
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.map-mode-toggle input {
+  margin: 0;
+  width: 13px;
+  height: 13px;
+}
+
+.map-mode-toggle:has(input:checked) {
+  border-color: rgba(39, 109, 182, 0.42);
+  background: #e8f2ff;
+  color: #17416d;
+}
+
+.map-action-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
 .map-add-point-button {
   min-height: 39px;
-  padding: 7px 12px;
+  padding: 7px 10px;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: #17231f;
@@ -2463,7 +2500,7 @@ button:hover {
 
   .map-control-panel {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 58px 74px;
     gap: 6px;
     align-items: stretch;
     min-width: 0;
@@ -2502,11 +2539,25 @@ button:hover {
   .map-control-panel > .map-add-point-button {
     height: 36px;
     min-height: 36px;
-    padding: 0 10px;
+    padding: 0 9px;
     border: 0;
     border-radius: 8px;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 900;
+    white-space: nowrap;
+  }
+
+  .map-mode-toggle {
+    justify-content: center;
+    height: 36px;
+    min-height: 36px;
+    padding: 0 8px;
+    border-radius: 8px;
+    font-size: 11px;
+  }
+
+  .map-mode-toggle input {
+    display: none;
   }
 
   .map-overlay-toggles {
@@ -2929,9 +2980,9 @@ button:hover {
 
 .map-control-panel .map-provider-control,
 .map-control-panel .map-level-control {
-  flex: 0 0 168px;
+  flex: 0 0 154px;
   margin: 0;
-  padding: 8px 10px;
+  padding: 7px 9px;
   border: 0;
   border-right: 1px solid var(--line);
   background: transparent;
@@ -4019,7 +4070,7 @@ button:hover {
   }
 
   .map-control-panel {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 52px 70px;
     gap: 5px;
     align-items: end;
   }
@@ -4051,23 +4102,40 @@ button:hover {
     align-self: end;
     height: 32px;
     min-height: 32px;
-    padding: 5px 9px;
+    padding: 5px 7px;
     border: 0;
     border-radius: 6px;
-    font-size: 12px;
+    font-size: 11px;
     white-space: nowrap;
   }
 
+  .map-mode-toggle {
+    align-self: end;
+    justify-content: center;
+    height: 32px;
+    min-height: 32px;
+    padding: 5px 6px;
+    border: 0;
+    border-radius: 6px;
+    font-size: 11px;
+  }
+
+  .map-mode-toggle input {
+    display: none;
+  }
+
   .map-overlay-toggles {
-    display: grid;
+    display: flex;
     grid-column: 1 / -1;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    flex-wrap: nowrap;
     gap: 5px;
-    overflow: visible;
+    overflow-x: auto;
+    scrollbar-width: none;
   }
 
   .map-overlay-toggles label {
     justify-content: center;
+    flex: 0 0 auto;
     min-width: 0;
     min-height: 25px;
     padding: 3px 4px;
@@ -4732,13 +4800,17 @@ button:hover {
 
 .map-toolbar > .map-control-panel {
   display: grid !important;
-  grid-template-columns: minmax(150px, 220px) minmax(120px, 180px) auto !important;
-  gap: 8px !important;
+  grid-template-columns: minmax(108px, 1fr) minmax(108px, 1fr) auto auto !important;
+  grid-template-areas:
+    "provider level actions actions"
+    "primary primary primary primary"
+    "features features features features" !important;
+  gap: 6px !important;
   align-items: end !important;
   width: auto !important;
   min-width: 0 !important;
-  max-width: min(760px, calc(100vw - 32px)) !important;
-  padding: 9px !important;
+  max-width: min(470px, calc(100vw - 16px)) !important;
+  padding: 8px !important;
   border: 1px solid rgba(23, 35, 31, 0.08) !important;
   border-radius: 8px !important;
   background: rgba(247, 250, 248, 0.94) !important;
@@ -4759,6 +4831,29 @@ button:hover {
   background: transparent !important;
 }
 
+.map-control-panel .map-provider-control {
+  grid-area: provider !important;
+}
+
+.map-control-panel .map-level-control {
+  grid-area: level !important;
+}
+
+.map-action-group {
+  grid-area: actions !important;
+  display: grid !important;
+  grid-template-columns: auto auto !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 6px !important;
+  min-width: 0 !important;
+  overflow: visible !important;
+}
+
+.map-action-group .map-add-point-button {
+  min-width: 100px !important;
+}
+
 .map-control-panel .map-provider-control span,
 .map-control-panel .map-level-control span {
   display: block !important;
@@ -4773,33 +4868,65 @@ button:hover {
   width: 100% !important;
   height: 34px !important;
   min-height: 34px !important;
-  padding: 6px 26px 6px 9px !important;
+  padding: 6px 22px 6px 8px !important;
   border: 1px solid var(--line) !important;
   border-radius: 7px !important;
   background-color: #fff !important;
-  font-size: 12px !important;
+  font-size: 11px !important;
+  font-weight: 900 !important;
+  text-overflow: ellipsis !important;
 }
 
-.map-control-panel > .map-add-point-button {
+.map-control-panel .map-add-point-button {
   align-self: end !important;
   height: 34px !important;
   min-height: 34px !important;
-  padding: 6px 12px !important;
+  padding: 6px 14px !important;
   border: 0 !important;
   border-radius: 999px !important;
   font-size: 12px !important;
+  white-space: nowrap !important;
+}
+
+.map-control-panel .map-mode-toggle {
+  height: 34px !important;
+  min-height: 34px !important;
+  min-width: 72px !important;
+  padding: 6px 10px !important;
+  font-size: 11px !important;
+  flex-shrink: 0 !important;
+  overflow: visible !important;
+}
+
+.map-control-panel .map-mode-toggle span {
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+.map-primary-overlays {
+  grid-area: primary !important;
+}
+
+.map-feature-overlays {
+  grid-area: features !important;
 }
 
 .map-overlay-toggles {
-  grid-column: 1 / -1 !important;
-  display: flex !important;
-  flex-wrap: nowrap !important;
+  display: grid !important;
   gap: 6px !important;
-  justify-content: flex-start !important;
+  justify-content: stretch !important;
   margin: 0 !important;
   padding: 0 !important;
-  overflow-x: auto !important;
+  overflow: hidden !important;
   scrollbar-width: none !important;
+}
+
+.map-primary-overlays {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+
+.map-feature-overlays {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
 }
 
 .map-overlay-toggles::-webkit-scrollbar {
@@ -4808,18 +4935,27 @@ button:hover {
 
 .map-overlay-toggles label {
   position: static !important;
-  flex: 0 0 auto !important;
+  min-width: 0 !important;
   display: inline-flex !important;
-  min-height: 27px !important;
+  min-height: 28px !important;
   gap: 4px !important;
   align-items: center !important;
-  padding: 4px 8px !important;
+  justify-content: flex-start !important;
+  padding: 4px 7px !important;
   border: 1px solid var(--line) !important;
   border-radius: 999px !important;
   background: #fff !important;
   color: var(--ink) !important;
   font-size: 11px !important;
   font-weight: 800 !important;
+}
+
+.map-overlay-toggles label span,
+.map-mode-toggle span {
+  min-width: 0 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
 }
 
 .map-overlay-toggles label::before {
@@ -4833,15 +4969,25 @@ button:hover {
   box-shadow: none !important;
 }
 
-.map-overlay-toggles input {
+.map-overlay-toggles input,
+.map-mode-toggle input {
   appearance: auto !important;
+  display: inline-block !important;
   position: static !important;
   flex: 0 0 auto !important;
   width: 12px !important;
   height: 12px !important;
   margin: 0 !important;
+  border: initial !important;
+  border-radius: initial !important;
+  background: initial !important;
   opacity: 1 !important;
   pointer-events: auto !important;
+}
+
+.map-overlay-toggles input:checked,
+.map-mode-toggle input:checked {
+  box-shadow: none !important;
 }
 
 @media (min-width: 1101px) {
@@ -5146,5 +5292,123 @@ button:hover {
   .data-table-block .table-action {
     width: auto;
     min-width: 58px;
+  }
+}
+
+@media (max-width: 680px) {
+  .map-toolbar > .map-control-panel {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto auto !important;
+    grid-template-areas:
+      "provider level actions actions"
+      "primary primary primary primary"
+      "features features features features" !important;
+    grid-auto-rows: auto !important;
+    gap: 5px !important;
+    max-width: min(470px, calc(100vw - 12px)) !important;
+    padding: 8px !important;
+  }
+
+  .map-control-panel .map-provider-control {
+    grid-area: provider !important;
+    min-width: 0 !important;
+  }
+
+  .map-control-panel .map-level-control {
+    grid-area: level !important;
+    min-width: 0 !important;
+  }
+
+  .map-action-group {
+    grid-area: actions !important;
+    display: grid !important;
+    grid-template-columns: auto auto !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 6px !important;
+    min-width: 0 !important;
+    overflow: visible !important;
+  }
+
+  .map-mode-toggle,
+  .map-control-panel .map-add-point-button {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+  }
+
+  .map-mode-toggle {
+    width: auto !important;
+    min-width: 72px !important;
+    height: 32px !important;
+    min-height: 32px !important;
+    padding: 5px 9px !important;
+    border-radius: 999px !important;
+    font-size: 11px !important;
+  }
+
+  .map-control-panel .map-add-point-button {
+    width: auto !important;
+    min-width: 100px !important;
+    height: 32px !important;
+    min-height: 32px !important;
+    padding: 5px 13px !important;
+    border-radius: 999px !important;
+    font-size: 11px !important;
+  }
+
+  .map-primary-overlays {
+    grid-area: primary !important;
+  }
+
+  .map-feature-overlays {
+    grid-area: features !important;
+  }
+
+  .map-overlay-toggles {
+    display: grid !important;
+    overflow: hidden !important;
+    scrollbar-width: none !important;
+  }
+
+  .map-overlay-toggles label {
+    min-width: 0 !important;
+    white-space: nowrap !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .map-toolbar > .map-control-panel {
+    grid-template-columns: 124px 124px !important;
+    grid-template-areas:
+      "provider level"
+      "actions actions"
+      "primary primary"
+      "features features" !important;
+    width: max-content !important;
+    max-width: calc(100vw - 12px) !important;
+  }
+
+  .map-action-group {
+    grid-template-columns: max-content max-content !important;
+    justify-content: start !important;
+    overflow: visible !important;
+  }
+
+  .map-primary-overlays,
+  .map-feature-overlays {
+    grid-template-columns: repeat(2, max-content) !important;
+    justify-content: start !important;
+    overflow: visible !important;
+  }
+
+  .map-overlay-toggles label {
+    width: auto !important;
+    min-width: 70px !important;
+  }
+
+  .map-overlay-toggles label span,
+  .map-mode-toggle span {
+    overflow: visible !important;
+    text-overflow: clip !important;
   }
 }

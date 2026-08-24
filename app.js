@@ -14,7 +14,7 @@ const languageStorageKey = "travel-map-language";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "1.8.9";
+const appVersion = "1.9.0";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
@@ -273,6 +273,7 @@ const translations = {
     overlayCheckins: "我的打卡",
     overlayTracks: "我的轨迹",
     overlayFlights: "我的航线",
+    overlay3d: "3D 地球",
     overlay5a: "5A 景区",
     overlayAncientCapitals: "中国古都",
     overlayHeritage: "世界遗产",
@@ -385,6 +386,7 @@ const translations = {
     overlayCheckins: "My check-ins",
     overlayTracks: "My tracks",
     overlayFlights: "My flights",
+    overlay3d: "3D globe",
     overlay5a: "5A scenic areas",
     overlayAncientCapitals: "Ancient Chinese Capitals",
     overlayHeritage: "World Heritage",
@@ -2499,6 +2501,7 @@ let state = {
   selectedRegionView: "china",
   boundaryLevel: "country",
   mapProviderMode: "auto",
+  map3d: false,
   detectedMapProvider: "",
   mapOverlays: { light: true, checkins: true, paths: true, flights: true, china5a: false, chinaAncientCapitals: false, worldHeritage: false },
   mapViewport: null,
@@ -4098,14 +4101,15 @@ function saveStateSoon(options = {}) {
   }, 160);
 }
 
-function normalizeMapViewport(viewport) {
+function normalizeMapViewport(viewport, options = {}) {
   if (!viewport || !Array.isArray(viewport.center)) return null;
   const [lng, lat] = viewport.center.map(Number);
   const zoom = Number(viewport.zoom);
   if (!Number.isFinite(lng) || !Number.isFinite(lat) || !Number.isFinite(zoom)) return null;
+  const minZoom = Number.isFinite(options.minZoom) ? options.minZoom : 1;
   return {
     center: [Math.max(-180, Math.min(180, lng)), Math.max(-85, Math.min(85, lat))],
-    zoom: Math.max(1, Math.min(18, zoom)),
+    zoom: Math.max(minZoom, Math.min(18, zoom)),
   };
 }
 
@@ -4114,7 +4118,7 @@ function rememberMapViewportSoon() {
   let viewport = null;
   if (mapLibreMap) {
     const center = mapLibreMap.getCenter();
-    viewport = normalizeMapViewport({ center: [center.lng, center.lat], zoom: mapLibreMap.getZoom() });
+    viewport = normalizeMapViewport({ center: [center.lng, center.lat], zoom: mapLibreMap.getZoom() }, { minZoom: state.map3d ? 0 : 1 });
   } else if (leafletMap) {
     const center = leafletMap.getCenter();
     viewport = normalizeMapViewport({ center: [center.lng, center.lat], zoom: leafletMap.getZoom() });
@@ -4153,6 +4157,7 @@ function localStorageSnapshot(payload) {
       focusPlaceId: savedState.focusPlaceId,
       openChecklistGroups: savedState.openChecklistGroups || [],
       mapProviderMode: savedState.mapProviderMode || "auto",
+      map3d: Boolean(savedState.map3d),
       detectedMapProvider: savedState.detectedMapProvider || "",
       mapOverlays: normalizeMapOverlays(savedState.mapOverlays || {}),
       mapViewport: normalizeMapViewport(savedState.mapViewport),
@@ -4230,6 +4235,7 @@ function applySavedPayload(saved) {
       checklistMarks: saved.state.checklistMarks || [],
       openChecklistGroups: saved.state.openChecklistGroups || [],
       mapProviderMode: normalizeMapProviderMode(saved.state.mapProviderMode || state.mapProviderMode),
+      map3d: Boolean(saved.state.map3d),
       detectedMapProvider: normalizeDetectedMapProvider(saved.state.detectedMapProvider || state.detectedMapProvider),
       mapOverlays: normalizeMapOverlays(saved.state.mapOverlays || {}),
       mapViewport: normalizeMapViewport(saved.state.mapViewport) || state.mapViewport || null,
@@ -4251,6 +4257,7 @@ function applyLocalStorageSnapshot(saved) {
     focusPlaceId: saved.state.focusPlaceId || state.focusPlaceId,
     openChecklistGroups: saved.state.openChecklistGroups || state.openChecklistGroups || [],
     mapProviderMode: normalizeMapProviderMode(saved.state.mapProviderMode || state.mapProviderMode),
+    map3d: Boolean(saved.state.map3d),
     detectedMapProvider: normalizeDetectedMapProvider(saved.state.detectedMapProvider || state.detectedMapProvider),
     mapOverlays: normalizeMapOverlays(saved.state.mapOverlays || state.mapOverlays || {}),
     mapViewport: normalizeMapViewport(saved.state.mapViewport) || state.mapViewport || null,
@@ -5482,6 +5489,7 @@ function renderMapLibreMap() {
       zoom: savedViewport?.zoom ?? 2,
       bearing: 0,
       pitch: 0,
+      projection: mapLibreProjection(),
       dragRotate: false,
       pitchWithRotate: false,
       touchPitch: false,
@@ -5512,18 +5520,48 @@ function renderMapLibreMap() {
 
   mapLibreMap.dragRotate?.disable();
   mapLibreMap.touchZoomRotate?.disableRotation();
-  if (mapLibreMap.getBearing?.() !== 0) mapLibreMap.setBearing(0);
-  if (mapLibreMap.getPitch?.() !== 0) mapLibreMap.setPitch(0);
+  applyMapLibreProjectionMode();
   applyMapLibreProvider(provider);
   mapLibreMap.resize();
   if (mapLibreMap.isStyleLoaded()) renderMapLibreLayers();
 }
 
+function mapLibreProjection() {
+  return { type: state.map3d ? "globe" : "mercator" };
+}
+
+function currentMapLibreViewport() {
+  if (!mapLibreMap) return null;
+  const center = mapLibreMap.getCenter();
+  return normalizeMapViewport({ center: [center.lng, center.lat], zoom: mapLibreMap.getZoom() });
+}
+
+function applyMapLibreProjectionMode() {
+  if (!mapLibreMap) return;
+  mapLibreMap.dragRotate?.disable();
+  mapLibreMap.touchZoomRotate?.disableRotation();
+  try {
+    mapLibreMap.setProjection?.(mapLibreProjection());
+  } catch (error) {
+    console.warn("3D globe projection unavailable", error);
+  }
+  if (mapLibreMap.getBearing?.() !== 0) mapLibreMap.setBearing(0);
+  if (mapLibreMap.getPitch?.() !== 0) mapLibreMap.setPitch(0);
+}
+
+function applyMap3dToggle(enabled) {
+  if (enabled === Boolean(state.map3d)) return;
+  state.mapViewport = currentMapLibreViewport() || normalizeMapViewport(state.mapViewport);
+  state.map3d = enabled;
+  applyMapLibreProjectionMode();
+}
+
 function mapLibreBaseStyle(providerId) {
   if (providerId.startsWith("bing")) registerBingMapLibreProtocol();
   const provider = mapProviders[providerId] || mapProviders.osm;
-  return {
+  const style = {
     version: 8,
+    projection: mapLibreProjection(),
     glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
     sources: {
       basemap: {
@@ -5535,6 +5573,17 @@ function mapLibreBaseStyle(providerId) {
     },
     layers: [{ id: "basemap", type: "raster", source: "basemap" }],
   };
+  if (state.map3d) {
+    style.sky = {
+      "sky-color": "#0f172a",
+      "sky-horizon-blend": 0.08,
+      "horizon-color": "#dbeafe",
+      "horizon-fog-blend": 0.5,
+      "fog-color": "#eff6ff",
+      "fog-ground-blend": 0.08,
+    };
+  }
+  return style;
 }
 
 function applyMapLibreProvider(provider) {
@@ -5544,7 +5593,10 @@ function applyMapLibreProvider(provider) {
   mapLibreSourceDataRefs.clear();
   clearMapLibreMarkers();
   mapLibreMap.setStyle(mapLibreBaseStyle(provider));
-  const rerender = () => renderMapLibreLayersWhenReady();
+  const rerender = () => {
+    applyMapLibreProjectionMode();
+    renderMapLibreLayersWhenReady();
+  };
   mapLibreMap.once("style.load", rerender);
   mapLibreMap.once("styledata", rerender);
   mapLibreMap.once("idle", rerender);
@@ -10169,6 +10221,7 @@ function renderMapControls() {
   const showCheckins = $("#showCheckinsOnMap");
   const showTracks = $("#showTracksOnMap");
   const showFlights = $("#showFlightsOnMap");
+  const show3d = $("#show3dMap");
   const showChina5a = $("#showChina5aOnMap");
   const showAncientCapitals = $("#showAncientCapitalsOnMap");
   const showWorldHeritage = $("#showWorldHeritageOnMap");
@@ -10176,6 +10229,7 @@ function renderMapControls() {
   if (showCheckins) showCheckins.checked = Boolean(overlays.checkins);
   if (showTracks) showTracks.checked = Boolean(overlays.paths);
   if (showFlights) showFlights.checked = Boolean(overlays.flights);
+  if (show3d) show3d.checked = Boolean(state.map3d);
   if (showChina5a) showChina5a.checked = Boolean(overlays.china5a);
   if (showAncientCapitals) showAncientCapitals.checked = Boolean(overlays.chinaAncientCapitals);
   if (showWorldHeritage) showWorldHeritage.checked = Boolean(overlays.worldHeritage);
@@ -10458,6 +10512,11 @@ $("#showFlightsOnMap")?.addEventListener("change", (event) => {
   state.mapOverlays.flights = event.target.checked;
   saveUiStateSoon();
   renderGeoMap();
+});
+$("#show3dMap")?.addEventListener("change", (event) => {
+  applyMap3dToggle(event.target.checked);
+  renderMapControls();
+  saveUiStateSoon();
 });
 $("#showChina5aOnMap")?.addEventListener("change", (event) => {
   state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };

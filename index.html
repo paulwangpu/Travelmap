@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>我的全球旅行地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
-    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
-    <link rel="stylesheet" href="styles.css?v=73" />
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" />
+    <link rel="stylesheet" href="styles.css?v=94" />
   </head>
   <body>
     <div class="app-shell map-first-shell">
@@ -35,7 +35,7 @@
             <strong data-i18n="privacyTitle">本地保存</strong>
             <p data-i18n="privacyText">数据只保存在本机浏览器里，不会自动上传或公开。如需备份请导出。</p>
           </div>
-          <div class="app-version" id="appVersion">v1.8.9</div>
+          <div class="app-version" id="appVersion">v1.9.0</div>
         </div>
       </aside>
 
@@ -71,12 +71,20 @@
                   <option value="subadmin" data-i18n="levelCity">市级</option>
                 </select>
               </label>
-              <button id="addMapPoint" class="map-add-point-button" type="button" data-i18n="addMapPoint">添加打卡点</button>
-              <div class="map-overlay-toggles">
+              <div class="map-action-group">
+                <label class="map-mode-toggle">
+                  <input id="show3dMap" type="checkbox" />
+                  <span data-i18n="overlay3d">3D 地球</span>
+                </label>
+                <button id="addMapPoint" class="map-add-point-button" type="button" data-i18n="addMapPoint">添加打卡点</button>
+              </div>
+              <div class="map-overlay-toggles map-primary-overlays">
                 <label><input id="showLightOnMap" type="checkbox" checked /> <span data-i18n="overlayLight">我的点亮</span></label>
                 <label><input id="showCheckinsOnMap" type="checkbox" checked /> <span data-i18n="overlayCheckins">我的打卡</span></label>
                 <label><input id="showTracksOnMap" type="checkbox" checked /> <span data-i18n="overlayTracks">我的轨迹</span></label>
                 <label><input id="showFlightsOnMap" type="checkbox" checked /> <span data-i18n="overlayFlights">我的航线</span></label>
+              </div>
+              <div class="map-overlay-toggles map-feature-overlays">
                 <label><input id="showChina5aOnMap" type="checkbox" /> <span data-i18n="overlay5a">5A 景区</span></label>
                 <label><input id="showAncientCapitalsOnMap" type="checkbox" /> <span data-i18n="overlayAncientCapitals">中国古都</span></label>
                 <label><input id="showWorldHeritageOnMap" type="checkbox" /> <span data-i18n="overlayHeritage">世界遗产</span></label>
@@ -273,7 +281,7 @@
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-    <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-    <script src="app.js?v=260"></script>
+    <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
+    <script src="app.js?v=267"></script>
   </body>
 </html>
