@@ -102,6 +102,7 @@ let pendingFullStateSave = null;
 let pendingGeoMapRender = null;
 let pendingIndexedDbSave = null;
 let pendingIndexedDbPayload = null;
+let fullStateLoaded = false;
 let pendingCheckinRender = null;
 let pendingCoverageMapRefresh = null;
 let pendingManualNavSpy = null;
@@ -4103,6 +4104,10 @@ function saveState(options = {}) {
     localStorage.setItem(storageKey, JSON.stringify(localStorageSnapshot(payload)));
   } catch (error) {
     console.warn("保存失败", error);
+  }
+  if (!fullStateLoaded && !options.allowBeforeFullLoad) {
+    console.warn("Skipped IndexedDB save before full state load");
+    return;
   }
   if (options.immediateIndexedDb) {
     saveStateToIndexedDb(payload);
@@ -10412,6 +10417,7 @@ loadAirportData().then(() => {
 });
 setLoadingDebug("读取完整旅行数据", "pending");
 loadStateFromIndexedDb().finally(() => {
+  fullStateLoaded = true;
   setLoadingDebug("读取完整旅行数据", "done");
   renderLegend();
   rebuildCoverageFromSavedVisits();
