@@ -6,7 +6,7 @@
     <title>我的全球旅行地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" />
-    <link rel="stylesheet" href="styles.css?v=94" />
+    <link rel="stylesheet" href="styles.css?v=96" />
   </head>
   <body>
     <div class="app-shell map-first-shell">
@@ -222,22 +222,51 @@
         </section>
 
         <section class="app-page content-page" id="imports" data-page="imports">
-          <div class="panel">
-            <div class="section-head">
-              <div>
-                <p class="eyebrow" data-i18n="importEyebrow">导入</p>
-                <h3 data-i18n="importTitle">导入地图或地点文件</h3>
+          <div class="panel import-panel">
+            <div class="import-layout">
+              <div class="import-main">
+                <div class="section-head">
+                  <div>
+                    <p class="eyebrow" data-i18n="importEyebrow">导入</p>
+                    <h3 data-i18n="importTitle">导入地图或地点文件</h3>
+                  </div>
+                  <span class="tag">GeoJSON / KML / CSV / XLS / Photo</span>
+                </div>
+                <div class="import-box">
+                  <label>
+                    <span data-i18n="chooseFile">选择文件</span>
+                    <input id="importFile" type="file" multiple accept=".geojson,.json,.kml,.csv,.xls,.jpg,.jpeg,.tif,.tiff,.heic,.heif,text/csv,application/json,image/jpeg,image/tiff,image/heic,image/heif" />
+                  </label>
+                </div>
               </div>
-              <span class="tag">GeoJSON / KML / CSV / XLS / Photo</span>
+              <details class="import-guide" open>
+                <summary>
+                  <span data-i18n="importGuideTitle">导入说明</span>
+                  <em data-i18n="importGuideSummary">查看导入说明</em>
+                </summary>
+                <div class="import-help muted small">
+                  <section>
+                    <h4 data-i18n="importHelpCheckinsTitle">打卡与轨迹导入</h4>
+                    <p data-i18n="importHelpCheckinsIntro">支持导入 GeoJSON/JSON、KML、CSV 和照片。</p>
+                    <ul>
+                      <li data-i18n="importHelpGeoJson">GeoJSON/KML：点数据将作为“我的打卡”显示；线和面数据将作为“我的轨迹”显示。</li>
+                      <li data-i18n="importHelpCsv">CSV：建议仅保留名称、纬度和经度三列。也支持英文列名：name、lat/latitude、lng/lon/longitude。</li>
+                      <li data-i18n="importHelpPhoto">照片：仅在本地读取文件名和 EXIF GPS 信息，不会上传照片。</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4 data-i18n="importHelpFlightsTitle">航线导入</h4>
+                    <p data-i18n="importHelpFlightsIntro">支持直接导入航旅纵横通过“导出航班行程（Pro 专享）”生成的 Excel（.xls）文件。</p>
+                    <p data-i18n="importHelpFlightsLayer">系统会自动提取航班信息，并在独立的“我的航线”图层中绘制航线，但不会自动点亮途经城市或国家。</p>
+                    <p data-i18n="importHelpFlightEndpoints">航班起降地可以填写城市名称、机场名称或 IATA 机场代码；系统将使用本地全球机场数据库进行匹配。</p>
+                  </section>
+                  <section>
+                    <h4 data-i18n="importHelpLimitTitle">导入数量</h4>
+                    <p data-i18n="importHelpLimitText">目前不限制导入点数。但数据量过大可能影响浏览器渲染性能，建议只导入确实需要展示的数据。</p>
+                  </section>
+                </div>
+              </details>
             </div>
-            <div class="import-box">
-              <label>
-                <span data-i18n="chooseFile">选择文件</span>
-                <input id="importFile" type="file" multiple accept=".geojson,.json,.kml,.csv,.xls,.jpg,.jpeg,.tif,.tiff,.heic,.heif,text/csv,application/json,image/jpeg,image/tiff,image/heic,image/heif" />
-              </label>
-
-            </div>
-            <p class="muted small" data-i18n="csvHelp">支持 GeoJSON/JSON、KML、CSV 和照片。GeoJSON/KML 的点会作为已导入地点，线和面会作为已导入轨迹显示，不会自动变成地点；CSV 建议只保留名称、纬度、经度三列，也支持英文列名：name、lat/latitude、lng/lon/longitude。其他列会忽略。照片只读取本地文件名和 EXIF GPS，不上传照片。当前不限制导入点数，但点太多会影响浏览器渲染。</p>
             <div id="importSummary" class="bars"></div>
           </div>
           <div class="panel">
@@ -282,6 +311,6 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
-    <script src="app.js?v=267"></script>
+    <script src="app.js?v=271"></script>
   </body>
 </html>

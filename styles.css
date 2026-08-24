@@ -1181,11 +1181,103 @@ button:hover {
 .depth-border-3 { border-left: 5px solid #63aa93; }
 .depth-border-4 { border-left: 5px solid #17624f; }
 
+.import-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.import-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) minmax(280px, 0.92fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.import-main {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
 .import-box {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(180px, 0.7fr);
   gap: 12px;
-  margin-bottom: 10px;
+}
+
+.import-guide {
+  padding: 14px;
+  border: 1px solid rgba(23, 35, 31, 0.1);
+  border-radius: 8px;
+  background: #f7faf8;
+}
+
+.import-guide summary {
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--deep);
+  font-weight: 900;
+  list-style: none;
+}
+
+.import-guide summary::-webkit-details-marker {
+  display: none;
+}
+
+.import-guide summary::before {
+  content: "▾";
+  flex: 0 0 auto;
+  color: var(--muted);
+}
+
+.import-guide:not([open]) summary::before {
+  content: "▸";
+}
+
+.import-guide summary span {
+  flex: 1 1 auto;
+}
+
+.import-guide summary em {
+  display: none;
+  color: var(--muted);
+  font-style: normal;
+  font-size: 12px;
+}
+
+.import-help {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.import-help section {
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.import-help section:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.import-help h4 {
+  margin: 0 0 5px;
+  color: var(--deep);
+  font-size: 14px;
+}
+
+.import-help p {
+  margin: 0 0 5px;
+}
+
+.import-help ul {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding-left: 18px;
 }
 
 .archive-actions {
@@ -5296,6 +5388,23 @@ button:hover {
 }
 
 @media (max-width: 680px) {
+  .import-layout {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .import-guide {
+    padding: 12px;
+  }
+
+  .import-guide summary em {
+    display: inline;
+  }
+
+  .import-guide .import-help {
+    margin-top: 10px;
+  }
+
   .map-toolbar > .map-control-panel {
     display: grid !important;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto auto !important;
