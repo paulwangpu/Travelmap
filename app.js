@@ -19,7 +19,7 @@ const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
 const worldHeritageCatalogTotal = 1248;
-const dataCacheVersion = "20260816-airports";
+const dataCacheVersion = "20260825-5a-nanhu";
 let importGuideUserToggled = false;
 let syncingImportGuideOpenState = false;
 const fixedChecklistTotals = {
@@ -507,9 +507,9 @@ function normalizeMapOverlays(overlays = {}) {
   return {
     ...defaultMapOverlays(),
     ...overlays,
-    china5a: false,
-    chinaAncientCapitals: false,
-    worldHeritage: false,
+    china5a: Boolean(overlays.china5a),
+    chinaAncientCapitals: Boolean(overlays.chinaAncientCapitals),
+    worldHeritage: Boolean(overlays.worldHeritage),
     highAltitude: Boolean(overlays.highAltitude),
   };
 }
@@ -1760,7 +1760,10 @@ function checklistItemDisplayName(key, item) {
     const parentName = currentLanguage === "en" ? parent.en : parent.zh;
     return `${primary} · ${parentName}`;
   }
-  if (currentLanguage !== "en") return item;
+  if (currentLanguage !== "en") {
+    if (key === "usNationalParks") return String(item || "").replace(/（[^（）]+）|\([^()]+\)/g, "").trim();
+    return item;
+  }
   if (key === "worldHeritage" && worldHeritageEnglishNames[item]) return worldHeritageEnglishNames[item];
   const parenthetical = englishNameInParentheses(item);
   if (parenthetical) return parenthetical;
@@ -2942,6 +2945,43 @@ const checklistPlaceCoordinates = {
   东方明珠: [31.2397, 121.4998, "上海"], 上海科技馆: [31.218, 121.544, "上海"], 上海野生动物园: [31.057, 121.728, "上海"], 上海迪士尼: [31.144, 121.657, "上海"],
   古文化街: [39.143, 117.19, "天津"], 盘山: [40.085, 117.271, "天津"],
   Yellowstone: [44.6, -110.5, "Wyoming"], Yosemite: [37.8651, -119.5383, "California"], "Grand Canyon": [36.1069, -112.1129, "Arizona"], "Zion": [37.2982, -113.0263, "Utah"], "Rocky Mountain": [40.3428, -105.6836, "Colorado"], "Acadia": [44.35, -68.21, "Maine"], "Arches": [38.7331, -109.5925, "Utah"], "Bryce Canyon": [37.593, -112.1871, "Utah"], "Death Valley": [36.5054, -117.0794, "California"], "Everglades": [25.2866, -80.8987, "Florida"], "Glacier": [48.7596, -113.787, "Montana"], "Grand Teton": [43.7904, -110.6818, "Wyoming"], "Great Smoky Mountains": [35.6118, -83.4895, "Tennessee"], "Joshua Tree": [33.8734, -115.901, "California"], "Olympic": [47.8021, -123.6044, "Washington"], "Sequoia": [36.4864, -118.5658, "California"], "Mount Rainier": [46.8797, -121.7269, "Washington"], "Hawaii Volcanoes": [19.4194, -155.2885, "Hawaii"], "Denali": [63.1148, -151.1926, "Alaska"], "Mesa Verde": [37.2309, -108.4618, "Colorado"], "Carlsbad Caverns": [32.1479, -104.5567, "New Mexico"], "Saguaro": [32.2967, -111.1666, "Arizona"], "Canyonlands": [38.3269, -109.8783, "Utah"], "Capitol Reef": [38.0877, -111.1355, "Utah"], "Crater Lake": [42.9446, -122.109, "Oregon"], "Redwood": [41.2132, -124.0046, "California"],
+  "National Park of American Samoa": [-14.2583, -170.6833, "American Samoa"],
+  "Badlands National Park": [43.8554, -102.3397, "South Dakota"],
+  "Big Bend National Park": [29.1275, -103.2425, "Texas"],
+  "Biscayne National Park": [25.4824, -80.2083, "Florida"],
+  "Black Canyon of the Gunnison National Park": [38.5754, -107.7416, "Colorado"],
+  "Channel Islands National Park": [34.0069, -119.7785, "California"],
+  "Congaree National Park": [33.7919, -80.7487, "South Carolina"],
+  "Cuyahoga Valley National Park": [41.2808, -81.5678, "Ohio"],
+  "Dry Tortugas National Park": [24.6285, -82.8732, "Florida"],
+  "Gates of the Arctic National Park": [67.78, -153.3, "Alaska"],
+  "Gateway Arch National Park": [38.6247, -90.1848, "Missouri"],
+  "Glacier Bay National Park": [58.6658, -136.9002, "Alaska"],
+  "Great Basin National Park": [38.9833, -114.3, "Nevada"],
+  "Great Sand Dunes National Park": [37.7916, -105.5943, "Colorado"],
+  "Guadalupe Mountains National Park": [31.923, -104.885, "Texas"],
+  "Haleakala National Park": [20.7204, -156.1552, "Hawaii"],
+  "Hot Springs National Park": [34.5215, -93.0423, "Arkansas"],
+  "Indiana Dunes National Park": [41.6533, -87.0524, "Indiana"],
+  "Isle Royale National Park": [48.0115, -88.8278, "Michigan"],
+  "Katmai National Park": [58.6126, -155.0631, "Alaska"],
+  "Kenai Fjords National Park": [59.8487, -150.1879, "Alaska"],
+  "Kings Canyon National Park": [36.8879, -118.5551, "California"],
+  "Kobuk Valley National Park": [67.55, -159.28, "Alaska"],
+  "Lake Clark National Park": [60.4127, -154.3235, "Alaska"],
+  "Lassen Volcanic National Park": [40.4977, -121.4207, "California"],
+  "Mammoth Cave National Park": [37.1869, -86.1005, "Kentucky"],
+  "New River Gorge National Park and Preserve": [37.875, -81.0181, "West Virginia"],
+  "North Cascades National Park": [48.7718, -121.2985, "Washington"],
+  "Petrified Forest National Park": [35.0659, -109.78, "Arizona"],
+  "Pinnacles National Park": [36.4906, -121.1825, "California"],
+  "Shenandoah National Park": [38.533, -78.35, "Virginia"],
+  "Theodore Roosevelt National Park": [46.979, -103.538, "North Dakota"],
+  "Virgin Islands National Park": [18.3424, -64.741, "U.S. Virgin Islands"],
+  "Voyageurs National Park": [48.4839, -92.8389, "Minnesota"],
+  "White Sands National Park": [32.7797, -106.1717, "New Mexico"],
+  "Wind Cave National Park": [43.5724, -103.4416, "South Dakota"],
+  "Wrangell-St. Elias National Park": [61.7104, -142.9857, "Alaska"],
 };
 
 let state = {
@@ -6805,10 +6845,11 @@ function checklistOverlayEntriesFor(key) {
     return (list.items || []).map((item) => {
       const meta = highAltitudeMetaFor(item);
       const parsed = parseHighAltitudeItem(checklistItemDisplayName(key, item));
-      const title = parsed.point ? `${parsed.name} · ${parsed.point}` : parsed.name;
+      const titleParts = [parsed.name, parsed.point, parsed.altitudeText].filter(Boolean);
+      const title = titleParts.join(" · ");
       const subtitle = currentLanguage === "en"
-        ? `${meta.altitude}m · ${countryDisplayName(meta.countryId || "cn")}`
-        : `${meta.altitude}m · ${meta.country || "中国"}`;
+        ? countryDisplayName(meta.countryId || "cn")
+        : (meta.country || "中国");
       return {
         key,
         group: "",
@@ -6839,6 +6880,8 @@ function checklistOverlayEntriesFor(key) {
         item,
         itemKey: checklistItemKey(key, item, group),
         legacyKey: canonicalPlaceKey(item),
+        title: checklistItemDisplayName(key, item),
+        subtitle: checklistGroupDisplayName(key, group),
       })));
   }
   if (list.byCountry) {
@@ -6849,6 +6892,8 @@ function checklistOverlayEntriesFor(key) {
         item,
         itemKey: checklistItemKey(key, item),
         legacyKey: canonicalPlaceKey(item),
+        title: checklistItemDisplayName(key, item),
+        subtitle: checklistGroupDisplayName(key, group),
       })));
   }
   return (list.items || []).map((item) => ({
@@ -6857,6 +6902,8 @@ function checklistOverlayEntriesFor(key) {
     item,
     itemKey: checklistItemKey(key, item),
     legacyKey: canonicalPlaceKey(item),
+    title: checklistItemDisplayName(key, item),
+    subtitle: checklistLabel(key, list),
   }));
 }
 
