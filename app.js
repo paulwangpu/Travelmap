@@ -6596,7 +6596,7 @@ function mapLibrePointGeoJson(overlays) {
 function checklistOverlayColor(key, done = false) {
   if (key === "worldHeritage") return done ? "#3b82f6" : "#60a5fa";
   if (key === "chinaAncientCapitals") return done ? "#a855f7" : "#c084fc";
-  if (key === "chinaHighAltitude") return done ? "#b45309" : "#f59e0b";
+  if (key === "chinaHighAltitude") return "#f59e0b";
   return done ? "#0f5f51" : "#218a78";
 }
 
