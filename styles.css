@@ -3298,10 +3298,10 @@ button:hover {
 .map-drawer {
   position: absolute;
   z-index: 500;
-  top: 12px;
+  top: var(--map-detail-top, 12px);
   right: 12px;
   width: 300px;
-  max-height: calc(100% - 24px);
+  max-height: calc(100% - var(--map-detail-top, 12px) - 12px);
   overflow: auto;
   padding: 16px;
   border: 1px solid rgba(23, 35, 31, 0.12);
@@ -5170,8 +5170,8 @@ button:hover {
   }
 
   .map-drawer {
-    top: 142px !important;
-    max-height: calc(100% - 154px) !important;
+    top: var(--map-detail-top, 142px) !important;
+    max-height: calc(100% - var(--map-detail-top, 142px) - 12px) !important;
   }
 }
 

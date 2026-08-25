@@ -6767,13 +6767,19 @@ function renderMapLibrePointDetail(feature) {
 
 function showMapLibrePointPopup(feature, lngLat) {
   const props = feature.properties || {};
+  const coordinates = feature.geometry?.type === "Point" ? feature.geometry.coordinates : null;
+  const popupLngLat = Array.isArray(coordinates)
+    && Number.isFinite(coordinates[0])
+    && Number.isFinite(coordinates[1])
+    ? coordinates
+    : lngLat;
   const title = escapeHtml(props.title || "");
   const subtitle = escapeHtml(props.subtitle || "");
   const button = props.kind === "checkin"
     ? `<button class="popup-action" data-unvisit="${escapeHtml(props.placeId)}" type="button">${t("unvisit")}</button>`
     : `<button class="popup-action" data-checklist-map="${escapeHtml(props.checklistKey)}" data-item="${escapeHtml(props.item)}" type="button">${props.done ? t("unvisit") : t("markVisited")}</button>`;
   new maplibregl.Popup({ offset: 12, closeButton: false })
-    .setLngLat(lngLat)
+    .setLngLat(popupLngLat)
     .setHTML(mapPopupHtml(`<strong>${title}</strong><br>${subtitle}<br>${button}`))
     .addTo(mapLibreMap);
 }
@@ -10920,6 +10926,30 @@ function renderMapControls() {
   document.querySelectorAll("[data-region-view]").forEach((button) => {
     button.classList.toggle("active", button.dataset.regionView === state.selectedRegionView);
   });
+  scheduleMapOverlayInsets();
+}
+
+let mapOverlayInsetFrame = 0;
+function scheduleMapOverlayInsets() {
+  if (mapOverlayInsetFrame) cancelAnimationFrame(mapOverlayInsetFrame);
+  mapOverlayInsetFrame = requestAnimationFrame(() => {
+    mapOverlayInsetFrame = 0;
+    updateMapOverlayInsets();
+  });
+}
+
+function updateMapOverlayInsets() {
+  const mapSurface = document.querySelector(".map-surface");
+  const controlPanel = document.querySelector(".map-toolbar > .map-control-panel");
+  if (!mapSurface || !controlPanel || window.matchMedia("(max-width: 1100px)").matches) {
+    document.documentElement.style.removeProperty("--map-detail-top");
+    return;
+  }
+  const surfaceRect = mapSurface.getBoundingClientRect();
+  const panelRect = controlPanel.getBoundingClientRect();
+  const panelOverlapsMap = panelRect.bottom > surfaceRect.top && panelRect.top < surfaceRect.bottom;
+  const top = panelOverlapsMap ? Math.max(12, Math.ceil(panelRect.bottom - surfaceRect.top + 12)) : 12;
+  document.documentElement.style.setProperty("--map-detail-top", `${top}px`);
 }
 
 function ensureCheckinOverlayVisible() {
@@ -11408,6 +11438,7 @@ function scheduleActiveMapResize() {
     mapViewportResizeTimer = null;
     if (mapLibreMap) mapLibreMap.resize();
     if (leafletMap) leafletMap.invalidateSize();
+    updateMapOverlayInsets();
   }, 120);
 }
 $(".import-guide")?.addEventListener("toggle", () => {
@@ -11416,10 +11447,17 @@ $(".import-guide")?.addEventListener("toggle", () => {
 });
 window.addEventListener("resize", () => {
   scheduleActiveMapResize();
+  scheduleMapOverlayInsets();
   syncImportGuideOpenState();
 });
-window.addEventListener("orientationchange", scheduleActiveMapResize);
-window.visualViewport?.addEventListener("resize", scheduleActiveMapResize);
+window.addEventListener("orientationchange", () => {
+  scheduleActiveMapResize();
+  scheduleMapOverlayInsets();
+});
+window.visualViewport?.addEventListener("resize", () => {
+  scheduleActiveMapResize();
+  scheduleMapOverlayInsets();
+});
 window.addEventListener("hashchange", () => {
   const { pageId, targetId } = parsePageHash();
   if (document.querySelector(`[data-page="${pageId}"]`)) showPage(pageId, targetId);
