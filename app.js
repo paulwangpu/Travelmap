@@ -510,7 +510,7 @@ function normalizeMapOverlays(overlays = {}) {
     china5a: false,
     chinaAncientCapitals: false,
     worldHeritage: false,
-    highAltitude: false,
+    highAltitude: Boolean(overlays.highAltitude),
   };
 }
 
