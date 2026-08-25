@@ -14,7 +14,7 @@ const languageStorageKey = "travel-map-language";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "1.9.0";
+const appVersion = "1.9.1";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
@@ -110,7 +110,7 @@ let pendingChecklistNavSpy = null;
 let restoringMapViewport = false;
 let checklistStatusCache = { signature: "", marked: new Set(), visited: new Set() };
 let checklistOverlayCache = { signature: "", items: [], keySet: new Set() };
-let checklistCoordinateLookupCache = { china5a: null, ancientCapitals: null, worldHeritage: null, englishNames: null, map: new Map() };
+let checklistCoordinateLookupCache = { china5a: null, ancientCapitals: null, highAltitude: null, worldHeritage: null, englishNames: null, map: new Map() };
 let derivedStatsRevision = 0;
 let dashboardStatsCache = { signature: "", stats: null };
 let mapAddMode = false;
@@ -277,9 +277,10 @@ const translations = {
     overlayTracks: "我的轨迹",
     overlayFlights: "我的航线",
     overlay3d: "3D 地球",
-    overlay5a: "5A 景区",
+    overlay5a: "5A/国家公园",
     overlayAncientCapitals: "中国古都",
     overlayHeritage: "世界遗产",
+    overlayHighAltitude: "高海拔挑战",
     selectionEyebrow: "选择对象",
     mapDetailTitle: "地图详情",
     mapDetailHelp: "点击地图上的点、国家或行政区查看证据。",
@@ -402,9 +403,10 @@ const translations = {
     overlayTracks: "My tracks",
     overlayFlights: "My flights",
     overlay3d: "3D globe",
-    overlay5a: "5A scenic areas",
+    overlay5a: "5A / National Parks",
     overlayAncientCapitals: "Ancient Chinese Capitals",
     overlayHeritage: "World Heritage",
+    overlayHighAltitude: "High-altitude challenge",
     selectionEyebrow: "Selection",
     mapDetailTitle: "Map details",
     mapDetailHelp: "Click a place, country, or administrative unit on the map to view evidence.",
@@ -498,7 +500,7 @@ function t(key) {
 }
 
 function defaultMapOverlays() {
-  return { light: true, checkins: true, paths: true, flights: true, china5a: false, chinaAncientCapitals: false, worldHeritage: false };
+  return { light: true, checkins: true, paths: true, flights: true, china5a: false, chinaAncientCapitals: false, worldHeritage: false, highAltitude: false };
 }
 
 function normalizeMapOverlays(overlays = {}) {
@@ -508,6 +510,7 @@ function normalizeMapOverlays(overlays = {}) {
     china5a: false,
     chinaAncientCapitals: false,
     worldHeritage: false,
+    highAltitude: false,
   };
 }
 
@@ -1514,7 +1517,7 @@ const checklistEnglishLabels = {
   worldHeritage: "World Heritage",
   fiveMountains: "Five Great Mountains of China",
   threeMountains: "Three Famous Mountains of China",
-  chinaHighAltitude: "China High-Altitude Travel Challenge",
+  chinaHighAltitude: "Global High-Altitude Travel Challenge",
   buddhistMountains: "Four Sacred Buddhist Mountains",
   taoistMountains: "Four Sacred Taoist Mountains",
   grottoes: "Four Great Grottoes",
@@ -1588,6 +1591,116 @@ const checklistItemEnglishNames = {
   "龙虎山 · 天门山 · 1300m": "Longhu Mountain · Tianmen Mountain · 1300m",
   "齐云山 · 廊崖 · 585m": "Qiyun Mountain · Langya · 585m",
   "青城山 · 老君阁/彭祖峰 · 1260m": "Mount Qingcheng · Laojun Pavilion / Pengzu Peak · 1260m",
+  "珠峰南坡 · 尼泊尔大本营 · 5364m": "Everest South Side · Nepal Base Camp · 5364m",
+  "安纳普尔纳环线 · Thorong La山口 · 5416m": "Annapurna Circuit · Thorong La Pass · 5416m",
+  "列城公路 · Khardung La山口 · 5359m": "Leh Road · Khardung La Pass · 5359m",
+  "班公湖 · 湖边观景点 · 4250m": "Pangong Tso · Lakeside Viewpoint · 4250m",
+  "亚拉腊山 · 常规登山终点 · 5137m": "Mount Ararat · Standard Trek Summit · 5137m",
+  "富士山 · 五合目 · 2305m": "Mount Fuji · 5th Station · 2305m",
+  "基纳巴卢山 · Low's Peak步道终点 · 4095m": "Mount Kinabalu · Low's Peak Trail End · 4095m",
+  "汉拿山 · 白鹿潭步道终点 · 1950m": "Hallasan · Baengnokdam Trail End · 1950m",
+  "南针峰 · 缆车观景台 · 3842m": "Aiguille du Midi · Cable Car Viewpoint · 3842m",
+  "小马特洪峰 · 缆车高点 · 3883m": "Klein Matterhorn · Cable Car High Point · 3883m",
+  "戈尔内格拉特 · 登山铁路观景台 · 3135m": "Gornergrat · Mountain Railway Viewpoint · 3135m",
+  "少女峰火车站 · 欧洲屋脊 · 3454m": "Jungfraujoch · Top of Europe Railway Station · 3454m",
+  "楚格峰 · 缆车/齿轨铁路高点 · 2962m": "Zugspitze · Cable Car / Cog Railway High Point · 2962m",
+  "大钟山高山公路 · Edelweissspitze观景点 · 2571m": "Grossglockner High Alpine Road · Edelweissspitze Viewpoint · 2571m",
+  "埃特纳火山 · 缆车上站区域 · 2500m": "Mount Etna · Upper Cable Car Area · 2500m",
+  "泰德峰 · 缆车上站 · 3555m": "Mount Teide · Upper Cable Car Station · 3555m",
+  "莫纳克亚山 · 公路可达峰顶 · 4207m": "Mauna Kea · Road-Accessible Summit · 4207m",
+  "派克峰 · 公路/齿轨铁路峰顶 · 4302m": "Pikes Peak · Road / Cog Railway Summit · 4302m",
+  "蓝天山 · 峰顶公路高点 · 4350m": "Mount Blue Sky · Summit Road High Point · 4350m",
+  "落基山国家公园 · Trail Ridge Road高点 · 3713m": "Rocky Mountain National Park · Trail Ridge Road High Point · 3713m",
+  "哈莱阿卡拉 · 火山口观景台 · 3055m": "Haleakala · Crater Viewpoint · 3055m",
+  "奥里萨巴峰 · Piedra Grande营地 · 4260m": "Pico de Orizaba · Piedra Grande Hut · 4260m",
+  "惠斯勒山 · Peak Chair区域 · 2182m": "Whistler Mountain · Peak Chair Area · 2182m",
+  "阿空加瓜省立公园 · Plaza de Mulas营地 · 4300m": "Aconcagua Provincial Park · Plaza de Mulas Camp · 4300m",
+  "彩虹山 · 观景点 · 5036m": "Rainbow Mountain · Viewpoint · 5036m",
+  "马丘比丘山 · 步道终点 · 3082m": "Machu Picchu Mountain · Trail End · 3082m",
+  "拉巴斯/埃尔阿尔托 · 城市高点 · 4060m": "La Paz / El Alto · City High Point · 4060m",
+  "乌尤尼盐沼 · 盐沼游览点 · 3656m": "Salar de Uyuni · Salt Flat Viewpoint · 3656m",
+  "科托帕希国家公园 · Jose Rivas山屋 · 4864m": "Cotopaxi National Park · Jose Rivas Refuge · 4864m",
+  "钦博拉索 · Carrel山屋 · 4850m": "Chimborazo · Carrel Refuge · 4850m",
+  "乞力马扎罗 · Uhuru Peak步道终点 · 5895m": "Kilimanjaro · Uhuru Peak Trail End · 5895m",
+  "肯尼亚山 · Point Lenana步道终点 · 4985m": "Mount Kenya · Point Lenana Trail End · 4985m",
+  "图卜卡勒峰 · 常规登山终点 · 4167m": "Mount Toubkal · Standard Trek Summit · 4167m",
+  "西门山国家公园 · Bwahit Pass观景点 · 4200m": "Simien Mountains National Park · Bwahit Pass Viewpoint · 4200m",
+  "萨尼山口 · 公路山口 · 2876m": "Sani Pass · Road Pass · 2876m",
+  "科修斯科山 · 步道终点 · 2228m": "Mount Kosciuszko · Trail End · 2228m",
+  "卡拉帕塔 · 珠峰观景徒步点 · 5644m": "Kala Patthar · Everest View Trek Point · 5644m",
+  "戈京日 · 湖区徒步观景点 · 5357m": "Gokyo Ri · Lakes Trek Viewpoint · 5357m",
+  "昌拉山口 · 公路山口 · 5360m": "Chang La · Road Pass · 5360m",
+  "塔格朗拉山口 · 公路山口 · 5328m": "Taglang La · Road Pass · 5328m",
+  "古鲁东玛湖 · 湖边游览点 · 5150m": "Gurudongmar Lake · Lakeside Viewpoint · 5150m",
+  "锡金零点 · 公路高点 · 4663m": "Yumthang Zero Point · Road High Point · 4663m",
+  "阿克拜塔尔山口 · 帕米尔公路山口 · 4655m": "Ak-Baital Pass · Pamir Highway Pass · 4655m",
+  "阿拉湖山口 · 徒步山口 · 3860m": "Ala-Kul Pass · Trekking Pass · 3860m",
+  "巴尔斯孔山口 · 公路山口 · 3754m": "Barskoon Pass · Road Pass · 3754m",
+  "林贾尼火山 · 常规登山终点 · 3726m": "Mount Rinjani · Standard Trek Summit · 3726m",
+  "番西邦峰 · 缆车/步道终点 · 3143m": "Fansipan · Cable Car / Trail End · 3143m",
+  "琼布拉克 · Talgar Pass滑雪区高点 · 3180m": "Shymbulak · Talgar Pass Ski Area High Point · 3180m",
+  "布恩山 · 徒步观景点 · 3210m": "Poon Hill · Trekking Viewpoint · 3210m",
+  "宋库尔湖 · 湖边游览点 · 3016m": "Song Kul Lake · Lakeside Area · 3016m",
+  "立山室堂 · 阿尔卑斯路线高点 · 2450m": "Tateyama Murodo · Alpine Route High Point · 2450m",
+  "因他暖山 · 泰国最高点 · 2565m": "Doi Inthanon · Thailand High Point · 2565m",
+  "普拉格山 · 步道终点 · 2922m": "Mount Pulag · Trail End · 2922m",
+  "亚当峰 · 朝圣步道终点 · 2243m": "Adam's Peak · Pilgrimage Trail End · 2243m",
+  "杰贝勒杰斯山 · 公路观景点 · 1934m": "Jebel Jais · Road Viewpoint · 1934m",
+  "布罗莫火山 · King Kong Hill观景点 · 2600m": "Mount Bromo · King Kong Hill Viewpoint · 2600m",
+  "铁力士山 · 缆车观景台 · 3020m": "Titlis · Cable Car Viewpoint · 3020m",
+  "雪朗峰 · Piz Gloria观景台 · 2970m": "Schilthorn · Piz Gloria Viewpoint · 2970m",
+  "冰川3000 · Scex Rouge观景点 · 2971m": "Glacier 3000 · Scex Rouge Viewpoint · 2971m",
+  "迪亚沃勒扎 · 缆车观景台 · 2978m": "Diavolezza · Cable Car Viewpoint · 2978m",
+  "科尔瓦奇峰 · 缆车高点 · 3303m": "Corvatsch · Cable Car High Point · 3303m",
+  "鹰巢站 · 勃朗峰有轨电车终点 · 2372m": "Nid d'Aigle · Mont Blanc Tramway Terminus · 2372m",
+  "南比戈尔峰 · 缆车观景台 · 2877m": "Pic du Midi de Bigorre · Cable Car Viewpoint · 2877m",
+  "马尔莫拉达 · Punta Rocca缆车站 · 3265m": "Marmolada · Punta Rocca Cable Car Station · 3265m",
+  "塞切达山 · 缆车观景点 · 2519m": "Seceda · Cable Car Viewpoint · 2519m",
+  "斯泰尔维奥山口 · 公路山口 · 2758m": "Stelvio Pass · Road Pass · 2758m",
+  "弗朗茨约瑟夫高地 · 大钟山观景点 · 2369m": "Kaiser-Franz-Josefs-Hoehe · Grossglockner Viewpoint · 2369m",
+  "厄尔布鲁士山 · Garabashi缆车站 · 3847m": "Mount Elbrus · Garabashi Cable Car Station · 3847m",
+  "卡兹别克 · 圣三一教堂观景点 · 2170m": "Kazbegi · Gergeti Trinity Church Viewpoint · 2170m",
+  "穆萨拉峰 · 步道终点 · 2925m": "Musala · Trail End · 2925m",
+  "特里格拉夫峰 · 常规徒步终点 · 2864m": "Triglav · Standard Trek Summit · 2864m",
+  "奥林匹斯山 · 米蒂卡斯峰 · 2918m": "Mount Olympus · Mytikas Summit · 2918m",
+  "惠特尼山 · 步道终点 · 4421m": "Mount Whitney · Trail End · 4421m",
+  "格雷斯峰 · 步道终点 · 4352m": "Grays Peak · Trail End · 4352m",
+  "惠勒峰 · 新墨西哥步道终点 · 4013m": "Wheeler Peak · New Mexico Trail End · 4013m",
+  "洛夫兰山口 · 公路山口 · 3655m": "Loveland Pass · Road Pass · 3655m",
+  "独立山口 · 公路山口 · 3687m": "Independence Pass · Road Pass · 3687m",
+  "汉弗莱斯峰 · 步道终点 · 3852m": "Humphreys Peak · Trail End · 3852m",
+  "拉森峰 · 火山步道终点 · 3187m": "Lassen Peak · Volcano Trail End · 3187m",
+  "猛犸山 · 缆车高点 · 3369m": "Mammoth Mountain · Gondola High Point · 3369m",
+  "华盛顿山 · 公路/齿轨铁路峰顶 · 1917m": "Mount Washington · Road / Cog Railway Summit · 1917m",
+  "克灵曼圆顶 · 观景塔 · 2025m": "Clingmans Dome · Observation Tower · 2025m",
+  "硫磺山 · 班夫缆车上站 · 2281m": "Sulphur Mountain · Banff Gondola Upper Station · 2281m",
+  "惠斯勒斯山 · 贾斯珀缆车高点 · 2463m": "The Whistlers · Jasper SkyTram High Point · 2463m",
+  "内瓦多德托卢卡 · 火山口游览点 · 4200m": "Nevado de Toluca · Crater Viewpoint · 4200m",
+  "伊斯塔西瓦特尔 · La Joya登山口 · 3970m": "Iztaccihuatl · La Joya Trailhead · 3970m",
+  "奇里波峰 · 步道终点 · 3820m": "Cerro Chirripo · Trail End · 3820m",
+  "基多缆车 · Cruz Loma观景点 · 4050m": "Quito Teleferico · Cruz Loma Viewpoint · 4050m",
+  "基洛托阿火山湖 · 环湖观景点 · 3914m": "Quilotoa Crater Lake · Rim Viewpoint · 3914m",
+  "安蒂萨纳 · 火山观景点 · 4000m": "Antisana · Volcano Viewpoint · 4000m",
+  "内瓦多德鲁伊斯 · 游客区 · 4050m": "Nevado del Ruiz · Visitor Area · 4050m",
+  "蒙塞拉特山 · 缆车山顶 · 3152m": "Monserrate · Cable Car Summit · 3152m",
+  "科尔卡峡谷 · 秃鹰十字观景台 · 3287m": "Colca Canyon · Cruz del Condor Viewpoint · 3287m",
+  "查卡尔塔亚 · 公路高点 · 5300m": "Chacaltaya · Road High Point · 5300m",
+  "红湖 · 湖边观景点 · 4278m": "Laguna Colorada · Lakeside Viewpoint · 4278m",
+  "塔蒂奥间歇泉 · 游览区 · 4320m": "El Tatio Geysers · Visitor Area · 4320m",
+  "解放者山口 · 国际公路山口 · 3200m": "Los Libertadores Pass · International Road Pass · 3200m",
+  "帕斯托鲁里冰川 · 游览步道高点 · 5000m": "Pastoruri Glacier · Visitor Trail High Point · 5000m",
+  "马拉加山口 · 公路山口 · 4316m": "Abra Malaga · Road Pass · 4316m",
+  "瓦斯卡兰国家公园 · 扬加努科湖区 · 3850m": "Huascaran National Park · Llanganuco Lakes Area · 3850m",
+  "内瓦多谷 · 滑雪区高点 · 3025m": "Valle Nevado · Ski Area High Point · 3025m",
+  "梅鲁山 · 步道终点 · 4566m": "Mount Meru · Trail End · 4566m",
+  "萨内蒂高原 · 公路高点 · 4377m": "Sanetti Plateau · Road High Point · 4377m",
+  "拉斯达申峰 · 常规徒步终点 · 4550m": "Ras Dashen · Standard Trek Summit · 4550m",
+  "喀麦隆山 · 常规登山终点 · 4040m": "Mount Cameroon · Standard Trek Summit · 4040m",
+  "图盖拉瀑布顶端 · 德拉肯斯堡步道点 · 3000m": "Tugela Falls Top · Drakensberg Trail Point · 3000m",
+  "内日峰 · 留尼汪步道终点 · 3070m": "Piton des Neiges · Reunion Trail End · 3070m",
+  "塔拉纳基山 · 步道终点 · 2518m": "Mount Taranaki · Trail End · 2518m",
+  "鲁阿佩胡山 · 火山口湖观景点 · 2672m": "Mount Ruapehu · Crater Lake Viewpoint · 2672m",
+  "汤加里罗红火山口 · 穿越步道高点 · 1886m": "Tongariro Red Crater · Alpine Crossing High Point · 1886m",
   莫高窟: "Mogao Caves",
   云冈石窟: "Yungang Grottoes",
   龙门石窟: "Longmen Grottoes",
@@ -2229,7 +2342,7 @@ const checklistCatalog = {
     items: ["黄山", "庐山", "雁荡山"],
   },
   chinaHighAltitude: {
-    label: "中国高海拔旅行挑战",
+    label: "全球高海拔旅行挑战",
     items: [
       "唐古拉山口 · 公路山口 · 5231m",
       "珠峰景区 · 珠峰大本营 · 5200m",
@@ -2285,7 +2398,112 @@ const checklistCatalog = {
       "雁荡山 · 百岗尖 · 1108m",
       "齐云山 · 廊崖 · 585m",
       "普陀山 · 佛顶山 · 291m",
-    ],
+      "乞力马扎罗 · Uhuru Peak步道终点 · 5895m",
+      "安纳普尔纳环线 · Thorong La山口 · 5416m",
+      "珠峰南坡 · 尼泊尔大本营 · 5364m",
+      "列城公路 · Khardung La山口 · 5359m",
+      "亚拉腊山 · 常规登山终点 · 5137m",
+      "彩虹山 · 观景点 · 5036m",
+      "肯尼亚山 · Point Lenana步道终点 · 4985m",
+      "科托帕希国家公园 · Jose Rivas山屋 · 4864m",
+      "钦博拉索 · Carrel山屋 · 4850m",
+      "蓝天山 · 峰顶公路高点 · 4350m",
+      "派克峰 · 公路/齿轨铁路峰顶 · 4302m",
+      "阿空加瓜省立公园 · Plaza de Mulas营地 · 4300m",
+      "奥里萨巴峰 · Piedra Grande营地 · 4260m",
+      "班公湖 · 湖边观景点 · 4250m",
+      "西门山国家公园 · Bwahit Pass观景点 · 4200m",
+      "莫纳克亚山 · 公路可达峰顶 · 4207m",
+      "图卜卡勒峰 · 常规登山终点 · 4167m",
+      "基纳巴卢山 · Low's Peak步道终点 · 4095m",
+      "拉巴斯/埃尔阿尔托 · 城市高点 · 4060m",
+      "小马特洪峰 · 缆车高点 · 3883m",
+      "南针峰 · 缆车观景台 · 3842m",
+      "落基山国家公园 · Trail Ridge Road高点 · 3713m",
+      "乌尤尼盐沼 · 盐沼游览点 · 3656m",
+      "泰德峰 · 缆车上站 · 3555m",
+      "少女峰火车站 · 欧洲屋脊 · 3454m",
+      "戈尔内格拉特 · 登山铁路观景台 · 3135m",
+      "哈莱阿卡拉 · 火山口观景台 · 3055m",
+      "马丘比丘山 · 步道终点 · 3082m",
+      "楚格峰 · 缆车/齿轨铁路高点 · 2962m",
+      "萨尼山口 · 公路山口 · 2876m",
+      "大钟山高山公路 · Edelweissspitze观景点 · 2571m",
+      "埃特纳火山 · 缆车上站区域 · 2500m",
+      "富士山 · 五合目 · 2305m",
+      "科修斯科山 · 步道终点 · 2228m",
+      "惠斯勒山 · Peak Chair区域 · 2182m",
+      "汉拿山 · 白鹿潭步道终点 · 1950m",
+      "卡拉帕塔 · 珠峰观景徒步点 · 5644m",
+      "昌拉山口 · 公路山口 · 5360m",
+      "戈京日 · 湖区徒步观景点 · 5357m",
+      "塔格朗拉山口 · 公路山口 · 5328m",
+      "查卡尔塔亚 · 公路高点 · 5300m",
+      "古鲁东玛湖 · 湖边游览点 · 5150m",
+      "帕斯托鲁里冰川 · 游览步道高点 · 5000m",
+      "锡金零点 · 公路高点 · 4663m",
+      "阿克拜塔尔山口 · 帕米尔公路山口 · 4655m",
+      "梅鲁山 · 步道终点 · 4566m",
+      "拉斯达申峰 · 常规徒步终点 · 4550m",
+      "萨内蒂高原 · 公路高点 · 4377m",
+      "格雷斯峰 · 步道终点 · 4352m",
+      "马拉加山口 · 公路山口 · 4316m",
+      "内瓦多德托卢卡 · 火山口游览点 · 4200m",
+      "红湖 · 湖边观景点 · 4278m",
+      "喀麦隆山 · 常规登山终点 · 4040m",
+      "基多缆车 · Cruz Loma观景点 · 4050m",
+      "内瓦多德鲁伊斯 · 游客区 · 4050m",
+      "惠特尼山 · 步道终点 · 4421m",
+      "惠勒峰 · 新墨西哥步道终点 · 4013m",
+      "安蒂萨纳 · 火山观景点 · 4000m",
+      "伊斯塔西瓦特尔 · La Joya登山口 · 3970m",
+      "基洛托阿火山湖 · 环湖观景点 · 3914m",
+      "阿拉湖山口 · 徒步山口 · 3860m",
+      "奇里波峰 · 步道终点 · 3820m",
+      "汉弗莱斯峰 · 步道终点 · 3852m",
+      "厄尔布鲁士山 · Garabashi缆车站 · 3847m",
+      "巴尔斯孔山口 · 公路山口 · 3754m",
+      "独立山口 · 公路山口 · 3687m",
+      "洛夫兰山口 · 公路山口 · 3655m",
+      "林贾尼火山 · 常规登山终点 · 3726m",
+      "猛犸山 · 缆车高点 · 3369m",
+      "科尔卡峡谷 · 秃鹰十字观景台 · 3287m",
+      "马尔莫拉达 · Punta Rocca缆车站 · 3265m",
+      "布恩山 · 徒步观景点 · 3210m",
+      "解放者山口 · 国际公路山口 · 3200m",
+      "琼布拉克 · Talgar Pass滑雪区高点 · 3180m",
+      "蒙塞拉特山 · 缆车山顶 · 3152m",
+      "番西邦峰 · 缆车/步道终点 · 3143m",
+      "内日峰 · 留尼汪步道终点 · 3070m",
+      "内瓦多谷 · 滑雪区高点 · 3025m",
+      "宋库尔湖 · 湖边游览点 · 3016m",
+      "图盖拉瀑布顶端 · 德拉肯斯堡步道点 · 3000m",
+      "铁力士山 · 缆车观景台 · 3020m",
+      "冰川3000 · Scex Rouge观景点 · 2971m",
+      "雪朗峰 · Piz Gloria观景台 · 2970m",
+      "迪亚沃勒扎 · 缆车观景台 · 2978m",
+      "穆萨拉峰 · 步道终点 · 2925m",
+      "奥林匹斯山 · 米蒂卡斯峰 · 2918m",
+      "普拉格山 · 步道终点 · 2922m",
+      "特里格拉夫峰 · 常规徒步终点 · 2864m",
+      "斯泰尔维奥山口 · 公路山口 · 2758m",
+      "鲁阿佩胡山 · 火山口湖观景点 · 2672m",
+      "布罗莫火山 · King Kong Hill观景点 · 2600m",
+      "因他暖山 · 泰国最高点 · 2565m",
+      "塞切达山 · 缆车观景点 · 2519m",
+      "塔拉纳基山 · 步道终点 · 2518m",
+      "惠斯勒斯山 · 贾斯珀缆车高点 · 2463m",
+      "立山室堂 · 阿尔卑斯路线高点 · 2450m",
+      "鹰巢站 · 勃朗峰有轨电车终点 · 2372m",
+      "弗朗茨约瑟夫高地 · 大钟山观景点 · 2369m",
+      "硫磺山 · 班夫缆车上站 · 2281m",
+      "亚当峰 · 朝圣步道终点 · 2243m",
+      "卡兹别克 · 圣三一教堂观景点 · 2170m",
+      "华盛顿山 · 公路/齿轨铁路峰顶 · 1917m",
+      "杰贝勒杰斯山 · 公路观景点 · 1934m",
+      "克灵曼圆顶 · 观景塔 · 2025m",
+      "汤加里罗红火山口 · 穿越步道高点 · 1886m",
+      ],
     meta: {
       "唐古拉山口 · 公路山口 · 5231m": { province: "青海/西藏", geoUnit: "唐古拉山", point: "公路山口", altitude: 5231, type: "垭口" },
       "珠峰景区 · 珠峰大本营 · 5200m": { province: "西藏", geoUnit: "珠穆朗玛峰", point: "珠峰大本营", altitude: 5200, type: "雪山观景" },
@@ -2341,6 +2559,111 @@ const checklistCatalog = {
       "雁荡山 · 百岗尖 · 1108m": { province: "浙江", geoUnit: "雁荡山", point: "百岗尖", altitude: 1108, type: "三山" },
       "齐云山 · 廊崖 · 585m": { province: "安徽", geoUnit: "齐云山", point: "廊崖", altitude: 585, type: "道教名山" },
       "普陀山 · 佛顶山 · 291m": { province: "浙江", geoUnit: "普陀山", point: "佛顶山", altitude: 291, type: "佛教名山" },
+      "乞力马扎罗 · Uhuru Peak步道终点 · 5895m": { country: "坦桑尼亚", countryId: "tz", province: "乞力马扎罗区", geoUnit: "乞力马扎罗山", point: "Uhuru Peak步道终点", altitude: 5895, type: "徒步高点", continent: "非洲" },
+      "安纳普尔纳环线 · Thorong La山口 · 5416m": { country: "尼泊尔", countryId: "np", province: "甘达基/马南", geoUnit: "安纳普尔纳山群", point: "Thorong La山口", altitude: 5416, type: "徒步山口", continent: "亚洲" },
+      "珠峰南坡 · 尼泊尔大本营 · 5364m": { country: "尼泊尔", countryId: "np", province: "科希/索卢昆布", geoUnit: "珠穆朗玛峰", point: "尼泊尔大本营", altitude: 5364, type: "徒步营地", continent: "亚洲" },
+      "列城公路 · Khardung La山口 · 5359m": { country: "印度", countryId: "in", province: "拉达克", geoUnit: "喀喇昆仑山南缘", point: "Khardung La山口", altitude: 5359, type: "公路山口", continent: "亚洲" },
+      "亚拉腊山 · 常规登山终点 · 5137m": { country: "土耳其", countryId: "tr", province: "东安纳托利亚地区", geoUnit: "亚拉腊山", point: "常规登山终点", altitude: 5137, type: "名山/徒步", continent: "亚洲" },
+      "彩虹山 · 观景点 · 5036m": { country: "秘鲁", countryId: "pe", province: "库斯科大区", geoUnit: "安第斯山脉", point: "观景点", altitude: 5036, type: "高山观景", continent: "南美" },
+      "肯尼亚山 · Point Lenana步道终点 · 4985m": { country: "肯尼亚", countryId: "ke", province: "肯尼亚山国家公园", geoUnit: "肯尼亚山", point: "Point Lenana步道终点", altitude: 4985, type: "徒步高点", continent: "非洲" },
+      "科托帕希国家公园 · Jose Rivas山屋 · 4864m": { country: "厄瓜多尔", countryId: "ec", province: "科托帕希省", geoUnit: "科托帕希火山", point: "Jose Rivas山屋", altitude: 4864, type: "火山/山屋", continent: "南美" },
+      "钦博拉索 · Carrel山屋 · 4850m": { country: "厄瓜多尔", countryId: "ec", province: "钦博拉索省", geoUnit: "钦博拉索火山", point: "Carrel山屋", altitude: 4850, type: "火山/山屋", continent: "南美" },
+      "蓝天山 · 峰顶公路高点 · 4350m": { country: "美国", countryId: "us", province: "科罗拉多州", geoUnit: "落基山脉", point: "峰顶公路高点", altitude: 4350, type: "公路高点", continent: "北美" },
+      "派克峰 · 公路/齿轨铁路峰顶 · 4302m": { country: "美国", countryId: "us", province: "科罗拉多州", geoUnit: "落基山脉", point: "公路/齿轨铁路峰顶", altitude: 4302, type: "名山/公路", continent: "北美" },
+      "阿空加瓜省立公园 · Plaza de Mulas营地 · 4300m": { country: "阿根廷", countryId: "ar", province: "门多萨省", geoUnit: "阿空加瓜", point: "Plaza de Mulas营地", altitude: 4300, type: "高山营地", continent: "南美" },
+      "奥里萨巴峰 · Piedra Grande营地 · 4260m": { country: "墨西哥", countryId: "mx", province: "普埃布拉/韦拉克鲁斯", geoUnit: "奥里萨巴峰", point: "Piedra Grande营地", altitude: 4260, type: "火山/营地", continent: "北美" },
+      "班公湖 · 湖边观景点 · 4250m": { country: "印度", countryId: "in", province: "拉达克", geoUnit: "班公湖", point: "湖边观景点", altitude: 4250, type: "高原湖泊", continent: "亚洲" },
+      "西门山国家公园 · Bwahit Pass观景点 · 4200m": { country: "埃塞俄比亚", countryId: "et", province: "阿姆哈拉州", geoUnit: "西门山", point: "Bwahit Pass观景点", altitude: 4200, type: "高山观景", continent: "非洲" },
+      "莫纳克亚山 · 公路可达峰顶 · 4207m": { country: "美国", countryId: "us", province: "夏威夷州", geoUnit: "莫纳克亚火山", point: "公路可达峰顶", altitude: 4207, type: "火山/公路", continent: "北美" },
+      "图卜卡勒峰 · 常规登山终点 · 4167m": { country: "摩洛哥", countryId: "ma", province: "马拉喀什-萨菲", geoUnit: "阿特拉斯山脉", point: "常规登山终点", altitude: 4167, type: "名山/徒步", continent: "非洲" },
+      "基纳巴卢山 · Low's Peak步道终点 · 4095m": { country: "马来西亚", countryId: "my", province: "沙巴", geoUnit: "基纳巴卢山", point: "Low's Peak步道终点", altitude: 4095, type: "名山/徒步", continent: "亚洲" },
+      "拉巴斯/埃尔阿尔托 · 城市高点 · 4060m": { country: "玻利维亚", countryId: "bo", province: "拉巴斯省", geoUnit: "安第斯高原", point: "城市高点", altitude: 4060, type: "高原城市", continent: "南美" },
+      "小马特洪峰 · 缆车高点 · 3883m": { country: "瑞士", countryId: "ch", province: "瓦莱州", geoUnit: "阿尔卑斯山", point: "缆车高点", altitude: 3883, type: "缆车高点", continent: "欧洲" },
+      "南针峰 · 缆车观景台 · 3842m": { country: "法国", countryId: "fr", province: "奥弗涅-罗讷-阿尔卑斯", geoUnit: "勃朗峰山群", point: "缆车观景台", altitude: 3842, type: "缆车高点", continent: "欧洲" },
+      "落基山国家公园 · Trail Ridge Road高点 · 3713m": { country: "美国", countryId: "us", province: "科罗拉多州", geoUnit: "落基山国家公园", point: "Trail Ridge Road高点", altitude: 3713, type: "公路高点", continent: "北美" },
+      "乌尤尼盐沼 · 盐沼游览点 · 3656m": { country: "玻利维亚", countryId: "bo", province: "波托西省", geoUnit: "乌尤尼盐沼", point: "盐沼游览点", altitude: 3656, type: "高原盐湖", continent: "南美" },
+      "泰德峰 · 缆车上站 · 3555m": { country: "西班牙", countryId: "es", province: "加那利群岛", geoUnit: "泰德火山", point: "缆车上站", altitude: 3555, type: "火山/缆车", continent: "欧洲" },
+      "少女峰火车站 · 欧洲屋脊 · 3454m": { country: "瑞士", countryId: "ch", province: "伯尔尼州", geoUnit: "伯尔尼阿尔卑斯", point: "欧洲屋脊火车站", altitude: 3454, type: "登山铁路", continent: "欧洲" },
+      "戈尔内格拉特 · 登山铁路观景台 · 3135m": { country: "瑞士", countryId: "ch", province: "瓦莱州", geoUnit: "马特洪峰观景带", point: "登山铁路观景台", altitude: 3135, type: "登山铁路", continent: "欧洲" },
+      "哈莱阿卡拉 · 火山口观景台 · 3055m": { country: "美国", countryId: "us", province: "夏威夷州", geoUnit: "哈莱阿卡拉火山", point: "火山口观景台", altitude: 3055, type: "火山/公路", continent: "北美" },
+      "马丘比丘山 · 步道终点 · 3082m": { country: "秘鲁", countryId: "pe", province: "库斯科大区", geoUnit: "马丘比丘山", point: "步道终点", altitude: 3082, type: "名山/徒步", continent: "南美" },
+      "楚格峰 · 缆车/齿轨铁路高点 · 2962m": { country: "德国", countryId: "de", province: "巴伐利亚州", geoUnit: "阿尔卑斯山", point: "缆车/齿轨铁路高点", altitude: 2962, type: "名山/缆车", continent: "欧洲" },
+      "萨尼山口 · 公路山口 · 2876m": { country: "南非/莱索托", countryId: "za", province: "夸祖鲁-纳塔尔/莱索托", geoUnit: "德拉肯斯堡山脉", point: "公路山口", altitude: 2876, type: "公路山口", continent: "非洲" },
+      "大钟山高山公路 · Edelweissspitze观景点 · 2571m": { country: "奥地利", countryId: "at", province: "萨尔茨堡/克恩顿", geoUnit: "大钟山高山公路", point: "Edelweissspitze观景点", altitude: 2571, type: "公路观景", continent: "欧洲" },
+      "埃特纳火山 · 缆车上站区域 · 2500m": { country: "意大利", countryId: "it", province: "西西里", geoUnit: "埃特纳火山", point: "缆车上站区域", altitude: 2500, type: "火山/缆车", continent: "欧洲" },
+      "富士山 · 五合目 · 2305m": { country: "日本", countryId: "jp", province: "山梨/静冈", geoUnit: "富士山", point: "五合目", altitude: 2305, type: "名山/公路", continent: "亚洲" },
+      "科修斯科山 · 步道终点 · 2228m": { country: "澳大利亚", countryId: "au", province: "新南威尔士州", geoUnit: "澳大利亚阿尔卑斯山", point: "步道终点", altitude: 2228, type: "名山/徒步", continent: "大洋洲" },
+      "惠斯勒山 · Peak Chair区域 · 2182m": { country: "加拿大", countryId: "ca", province: "不列颠哥伦比亚省", geoUnit: "海岸山脉", point: "Peak Chair区域", altitude: 2182, type: "滑雪/缆车", continent: "北美" },
+      "汉拿山 · 白鹿潭步道终点 · 1950m": { country: "韩国", countryId: "kr", province: "济州", geoUnit: "汉拿山", point: "白鹿潭步道终点", altitude: 1950, type: "名山/徒步", continent: "亚洲" },
+      "卡拉帕塔 · 珠峰观景徒步点 · 5644m": { country: "尼泊尔", countryId: "np", province: "科希/索卢昆布", geoUnit: "珠穆朗玛峰", point: "珠峰观景徒步点", altitude: 5644, type: "徒步高点", continent: "亚洲" },
+      "昌拉山口 · 公路山口 · 5360m": { country: "印度", countryId: "in", province: "拉达克", geoUnit: "拉达克山脉", point: "公路山口", altitude: 5360, type: "公路山口", continent: "亚洲" },
+      "戈京日 · 湖区徒步观景点 · 5357m": { country: "尼泊尔", countryId: "np", province: "科希/索卢昆布", geoUnit: "戈京湖群", point: "湖区徒步观景点", altitude: 5357, type: "徒步高点", continent: "亚洲" },
+      "塔格朗拉山口 · 公路山口 · 5328m": { country: "印度", countryId: "in", province: "拉达克", geoUnit: "喜马拉雅公路", point: "公路山口", altitude: 5328, type: "公路山口", continent: "亚洲" },
+      "查卡尔塔亚 · 公路高点 · 5300m": { country: "玻利维亚", countryId: "bo", province: "拉巴斯省", geoUnit: "安第斯山脉", point: "公路高点", altitude: 5300, type: "公路高点", continent: "南美" },
+      "古鲁东玛湖 · 湖边游览点 · 5150m": { country: "印度", countryId: "in", province: "锡金", geoUnit: "喜马拉雅山", point: "湖边游览点", altitude: 5150, type: "高原湖泊", continent: "亚洲" },
+      "帕斯托鲁里冰川 · 游览步道高点 · 5000m": { country: "秘鲁", countryId: "pe", province: "安卡什大区", geoUnit: "科迪勒拉布兰卡", point: "游览步道高点", altitude: 5000, type: "冰川景区", continent: "南美" },
+      "锡金零点 · 公路高点 · 4663m": { country: "印度", countryId: "in", province: "锡金", geoUnit: "喜马拉雅山", point: "公路高点", altitude: 4663, type: "公路高点", continent: "亚洲" },
+      "阿克拜塔尔山口 · 帕米尔公路山口 · 4655m": { country: "塔吉克斯坦", countryId: "tj", province: "戈尔诺-巴达赫尚", geoUnit: "帕米尔高原", point: "帕米尔公路山口", altitude: 4655, type: "公路山口", continent: "亚洲" },
+      "梅鲁山 · 步道终点 · 4566m": { country: "坦桑尼亚", countryId: "tz", province: "阿鲁沙区", geoUnit: "梅鲁山", point: "步道终点", altitude: 4566, type: "名山/徒步", continent: "非洲" },
+      "拉斯达申峰 · 常规徒步终点 · 4550m": { country: "埃塞俄比亚", countryId: "et", province: "阿姆哈拉州", geoUnit: "西门山", point: "常规徒步终点", altitude: 4550, type: "名山/徒步", continent: "非洲" },
+      "萨内蒂高原 · 公路高点 · 4377m": { country: "埃塞俄比亚", countryId: "et", province: "奥罗米亚州", geoUnit: "贝尔山", point: "公路高点", altitude: 4377, type: "公路高点", continent: "非洲" },
+      "格雷斯峰 · 步道终点 · 4352m": { country: "美国", countryId: "us", province: "科罗拉多州", geoUnit: "落基山脉", point: "步道终点", altitude: 4352, type: "名山/徒步", continent: "北美" },
+      "马拉加山口 · 公路山口 · 4316m": { country: "秘鲁", countryId: "pe", province: "库斯科大区", geoUnit: "安第斯山脉", point: "公路山口", altitude: 4316, type: "公路山口", continent: "南美" },
+      "内瓦多德托卢卡 · 火山口游览点 · 4200m": { country: "墨西哥", countryId: "mx", province: "墨西哥州", geoUnit: "内瓦多德托卢卡火山", point: "火山口游览点", altitude: 4200, type: "火山景区", continent: "北美" },
+      "红湖 · 湖边观景点 · 4278m": { country: "玻利维亚", countryId: "bo", province: "波托西省", geoUnit: "安第斯高原", point: "湖边观景点", altitude: 4278, type: "高原湖泊", continent: "南美" },
+      "喀麦隆山 · 常规登山终点 · 4040m": { country: "喀麦隆", countryId: "cm", province: "西南区", geoUnit: "喀麦隆山", point: "常规登山终点", altitude: 4040, type: "火山/徒步", continent: "非洲" },
+      "基多缆车 · Cruz Loma观景点 · 4050m": { country: "厄瓜多尔", countryId: "ec", province: "皮钦查省", geoUnit: "皮钦查火山", point: "Cruz Loma观景点", altitude: 4050, type: "缆车高点", continent: "南美" },
+      "内瓦多德鲁伊斯 · 游客区 · 4050m": { country: "哥伦比亚", countryId: "co", province: "卡尔达斯/托利马", geoUnit: "鲁伊斯火山", point: "游客区", altitude: 4050, type: "火山景区", continent: "南美" },
+      "惠特尼山 · 步道终点 · 4421m": { country: "美国", countryId: "us", province: "加利福尼亚州", geoUnit: "内华达山脉", point: "步道终点", altitude: 4421, type: "名山/徒步", continent: "北美" },
+      "惠勒峰 · 新墨西哥步道终点 · 4013m": { country: "美国", countryId: "us", province: "新墨西哥州", geoUnit: "桑格雷德克里斯托山脉", point: "步道终点", altitude: 4013, type: "名山/徒步", continent: "北美" },
+      "安蒂萨纳 · 火山观景点 · 4000m": { country: "厄瓜多尔", countryId: "ec", province: "纳波省", geoUnit: "安蒂萨纳火山", point: "火山观景点", altitude: 4000, type: "火山观景", continent: "南美" },
+      "伊斯塔西瓦特尔 · La Joya登山口 · 3970m": { country: "墨西哥", countryId: "mx", province: "墨西哥州/普埃布拉", geoUnit: "伊斯塔西瓦特尔火山", point: "La Joya登山口", altitude: 3970, type: "登山口", continent: "北美" },
+      "基洛托阿火山湖 · 环湖观景点 · 3914m": { country: "厄瓜多尔", countryId: "ec", province: "科托帕希省", geoUnit: "基洛托阿火山湖", point: "环湖观景点", altitude: 3914, type: "火山湖", continent: "南美" },
+      "阿拉湖山口 · 徒步山口 · 3860m": { country: "吉尔吉斯斯坦", countryId: "kg", province: "伊塞克湖州", geoUnit: "天山", point: "徒步山口", altitude: 3860, type: "徒步山口", continent: "亚洲" },
+      "奇里波峰 · 步道终点 · 3820m": { country: "哥斯达黎加", countryId: "cr", province: "圣何塞/利蒙", geoUnit: "奇里波山", point: "步道终点", altitude: 3820, type: "名山/徒步", continent: "北美" },
+      "汉弗莱斯峰 · 步道终点 · 3852m": { country: "美国", countryId: "us", province: "亚利桑那州", geoUnit: "圣弗朗西斯科峰", point: "步道终点", altitude: 3852, type: "名山/徒步", continent: "北美" },
+      "厄尔布鲁士山 · Garabashi缆车站 · 3847m": { country: "俄罗斯", countryId: "ru", province: "北高加索", geoUnit: "高加索山脉", point: "Garabashi缆车站", altitude: 3847, type: "缆车高点", continent: "欧洲" },
+      "巴尔斯孔山口 · 公路山口 · 3754m": { country: "吉尔吉斯斯坦", countryId: "kg", province: "伊塞克湖州", geoUnit: "天山", point: "公路山口", altitude: 3754, type: "公路山口", continent: "亚洲" },
+      "独立山口 · 公路山口 · 3687m": { country: "美国", countryId: "us", province: "科罗拉多州", geoUnit: "落基山脉", point: "公路山口", altitude: 3687, type: "公路山口", continent: "北美" },
+      "洛夫兰山口 · 公路山口 · 3655m": { country: "美国", countryId: "us", province: "科罗拉多州", geoUnit: "落基山脉", point: "公路山口", altitude: 3655, type: "公路山口", continent: "北美" },
+      "林贾尼火山 · 常规登山终点 · 3726m": { country: "印度尼西亚", countryId: "id", province: "西努沙登加拉", geoUnit: "林贾尼火山", point: "常规登山终点", altitude: 3726, type: "火山/徒步", continent: "亚洲" },
+      "猛犸山 · 缆车高点 · 3369m": { country: "美国", countryId: "us", province: "加利福尼亚州", geoUnit: "内华达山脉", point: "缆车高点", altitude: 3369, type: "缆车高点", continent: "北美" },
+      "科尔卡峡谷 · 秃鹰十字观景台 · 3287m": { country: "秘鲁", countryId: "pe", province: "阿雷基帕大区", geoUnit: "科尔卡峡谷", point: "秃鹰十字观景台", altitude: 3287, type: "峡谷观景", continent: "南美" },
+      "马尔莫拉达 · Punta Rocca缆车站 · 3265m": { country: "意大利", countryId: "it", province: "威尼托/特伦蒂诺", geoUnit: "多洛米蒂", point: "Punta Rocca缆车站", altitude: 3265, type: "缆车高点", continent: "欧洲" },
+      "布恩山 · 徒步观景点 · 3210m": { country: "尼泊尔", countryId: "np", province: "甘达基", geoUnit: "安纳普尔纳山群", point: "徒步观景点", altitude: 3210, type: "徒步观景", continent: "亚洲" },
+      "解放者山口 · 国际公路山口 · 3200m": { country: "智利/阿根廷", countryId: "cl", province: "瓦尔帕莱索/门多萨", geoUnit: "安第斯山脉", point: "国际公路山口", altitude: 3200, type: "公路山口", continent: "南美" },
+      "琼布拉克 · Talgar Pass滑雪区高点 · 3180m": { country: "哈萨克斯坦", countryId: "kz", province: "阿拉木图", geoUnit: "天山", point: "Talgar Pass滑雪区高点", altitude: 3180, type: "滑雪/缆车", continent: "亚洲" },
+      "蒙塞拉特山 · 缆车山顶 · 3152m": { country: "哥伦比亚", countryId: "co", province: "波哥大", geoUnit: "东科迪勒拉山脉", point: "缆车山顶", altitude: 3152, type: "城市山顶/缆车", continent: "南美" },
+      "番西邦峰 · 缆车/步道终点 · 3143m": { country: "越南", countryId: "vn", province: "老街省", geoUnit: "黄连山脉", point: "缆车/步道终点", altitude: 3143, type: "名山/缆车", continent: "亚洲" },
+      "内日峰 · 留尼汪步道终点 · 3070m": { country: "法国", countryId: "fr", province: "留尼汪", geoUnit: "内日峰", point: "步道终点", altitude: 3070, type: "火山/徒步", continent: "非洲" },
+      "内瓦多谷 · 滑雪区高点 · 3025m": { country: "智利", countryId: "cl", province: "圣地亚哥首都大区", geoUnit: "安第斯山脉", point: "滑雪区高点", altitude: 3025, type: "滑雪区", continent: "南美" },
+      "宋库尔湖 · 湖边游览点 · 3016m": { country: "吉尔吉斯斯坦", countryId: "kg", province: "纳伦州", geoUnit: "天山", point: "湖边游览点", altitude: 3016, type: "高原湖泊", continent: "亚洲" },
+      "图盖拉瀑布顶端 · 德拉肯斯堡步道点 · 3000m": { country: "南非/莱索托", countryId: "za", province: "夸祖鲁-纳塔尔/莱索托", geoUnit: "德拉肯斯堡山脉", point: "瀑布顶端步道点", altitude: 3000, type: "峡谷/徒步", continent: "非洲" },
+      "铁力士山 · 缆车观景台 · 3020m": { country: "瑞士", countryId: "ch", province: "上瓦尔登/乌里", geoUnit: "阿尔卑斯山", point: "缆车观景台", altitude: 3020, type: "缆车高点", continent: "欧洲" },
+      "冰川3000 · Scex Rouge观景点 · 2971m": { country: "瑞士", countryId: "ch", province: "沃州/伯尔尼州", geoUnit: "阿尔卑斯山", point: "Scex Rouge观景点", altitude: 2971, type: "缆车高点", continent: "欧洲" },
+      "雪朗峰 · Piz Gloria观景台 · 2970m": { country: "瑞士", countryId: "ch", province: "伯尔尼州", geoUnit: "阿尔卑斯山", point: "Piz Gloria观景台", altitude: 2970, type: "缆车高点", continent: "欧洲" },
+      "迪亚沃勒扎 · 缆车观景台 · 2978m": { country: "瑞士", countryId: "ch", province: "格劳宾登州", geoUnit: "伯尔尼纳山群", point: "缆车观景台", altitude: 2978, type: "缆车高点", continent: "欧洲" },
+      "穆萨拉峰 · 步道终点 · 2925m": { country: "保加利亚", countryId: "bg", province: "索菲亚州", geoUnit: "里拉山", point: "步道终点", altitude: 2925, type: "名山/徒步", continent: "欧洲" },
+      "奥林匹斯山 · 米蒂卡斯峰 · 2918m": { country: "希腊", countryId: "gr", province: "中马其顿", geoUnit: "奥林匹斯山", point: "米蒂卡斯峰", altitude: 2918, type: "名山/徒步", continent: "欧洲" },
+      "普拉格山 · 步道终点 · 2922m": { country: "菲律宾", countryId: "ph", province: "科迪勒拉行政区", geoUnit: "普拉格山", point: "步道终点", altitude: 2922, type: "名山/徒步", continent: "亚洲" },
+      "特里格拉夫峰 · 常规徒步终点 · 2864m": { country: "斯洛文尼亚", countryId: "si", province: "上卡尼奥拉", geoUnit: "朱利安阿尔卑斯", point: "常规徒步终点", altitude: 2864, type: "名山/徒步", continent: "欧洲" },
+      "斯泰尔维奥山口 · 公路山口 · 2758m": { country: "意大利", countryId: "it", province: "伦巴第/特伦蒂诺-上阿迪杰", geoUnit: "阿尔卑斯山", point: "公路山口", altitude: 2758, type: "公路山口", continent: "欧洲" },
+      "鲁阿佩胡山 · 火山口湖观景点 · 2672m": { country: "新西兰", countryId: "nz", province: "马纳瓦图-旺加努伊", geoUnit: "鲁阿佩胡火山", point: "火山口湖观景点", altitude: 2672, type: "火山/徒步", continent: "大洋洲" },
+      "布罗莫火山 · King Kong Hill观景点 · 2600m": { country: "印度尼西亚", countryId: "id", province: "东爪哇", geoUnit: "布罗莫-腾格尔火山群", point: "King Kong Hill观景点", altitude: 2600, type: "火山观景", continent: "亚洲" },
+      "因他暖山 · 泰国最高点 · 2565m": { country: "泰国", countryId: "th", province: "清迈府", geoUnit: "因他暖山", point: "泰国最高点", altitude: 2565, type: "名山/公路", continent: "亚洲" },
+      "塞切达山 · 缆车观景点 · 2519m": { country: "意大利", countryId: "it", province: "特伦蒂诺-上阿迪杰", geoUnit: "多洛米蒂", point: "缆车观景点", altitude: 2519, type: "缆车观景", continent: "欧洲" },
+      "塔拉纳基山 · 步道终点 · 2518m": { country: "新西兰", countryId: "nz", province: "塔拉纳基", geoUnit: "塔拉纳基山", point: "步道终点", altitude: 2518, type: "名山/徒步", continent: "大洋洲" },
+      "惠斯勒斯山 · 贾斯珀缆车高点 · 2463m": { country: "加拿大", countryId: "ca", province: "艾伯塔省", geoUnit: "加拿大落基山", point: "贾斯珀缆车高点", altitude: 2463, type: "缆车高点", continent: "北美" },
+      "立山室堂 · 阿尔卑斯路线高点 · 2450m": { country: "日本", countryId: "jp", province: "中部", geoUnit: "立山连峰", point: "阿尔卑斯路线高点", altitude: 2450, type: "山岳路线", continent: "亚洲" },
+      "鹰巢站 · 勃朗峰有轨电车终点 · 2372m": { country: "法国", countryId: "fr", province: "奥弗涅-罗讷-阿尔卑斯", geoUnit: "勃朗峰山群", point: "有轨电车终点", altitude: 2372, type: "登山铁路", continent: "欧洲" },
+      "弗朗茨约瑟夫高地 · 大钟山观景点 · 2369m": { country: "奥地利", countryId: "at", province: "克恩顿", geoUnit: "大钟山", point: "观景点", altitude: 2369, type: "公路观景", continent: "欧洲" },
+      "硫磺山 · 班夫缆车上站 · 2281m": { country: "加拿大", countryId: "ca", province: "艾伯塔省", geoUnit: "加拿大落基山", point: "班夫缆车上站", altitude: 2281, type: "缆车高点", continent: "北美" },
+      "亚当峰 · 朝圣步道终点 · 2243m": { country: "斯里兰卡", countryId: "lk", province: "萨伯勒格穆沃省", geoUnit: "亚当峰", point: "朝圣步道终点", altitude: 2243, type: "名山/朝圣", continent: "亚洲" },
+      "卡兹别克 · 圣三一教堂观景点 · 2170m": { country: "格鲁吉亚", countryId: "ge", province: "姆茨赫塔-姆季阿涅季", geoUnit: "高加索山脉", point: "圣三一教堂观景点", altitude: 2170, type: "雪山观景", continent: "亚洲" },
+      "华盛顿山 · 公路/齿轨铁路峰顶 · 1917m": { country: "美国", countryId: "us", province: "新罕布什尔州", geoUnit: "白山山脉", point: "公路/齿轨铁路峰顶", altitude: 1917, type: "名山/公路", continent: "北美" },
+      "杰贝勒杰斯山 · 公路观景点 · 1934m": { country: "阿拉伯联合酋长国", countryId: "ae", province: "哈伊马角", geoUnit: "哈杰尔山脉", point: "公路观景点", altitude: 1934, type: "公路观景", continent: "亚洲" },
+      "克灵曼圆顶 · 观景塔 · 2025m": { country: "美国", countryId: "us", province: "田纳西/北卡罗来纳", geoUnit: "大烟山", point: "观景塔", altitude: 2025, type: "名山/公路", continent: "北美" },
+      "汤加里罗红火山口 · 穿越步道高点 · 1886m": { country: "新西兰", countryId: "nz", province: "马纳瓦图-旺加努伊", geoUnit: "汤加里罗火山", point: "穿越步道高点", altitude: 1886, type: "火山/徒步", continent: "大洋洲" },
     },
   },
   buddhistMountains: {
@@ -2480,6 +2803,111 @@ const chinaHighAltitudeCoordinates = {
   "雁荡山 · 百岗尖 · 1108m": [28.37, 121.06, "浙江"],
   "齐云山 · 廊崖 · 585m": [29.817, 118.037, "安徽"],
   "普陀山 · 佛顶山 · 291m": [30.0007, 122.3864, "浙江"],
+  "乞力马扎罗 · Uhuru Peak步道终点 · 5895m": [-3.0758, 37.3533, "坦桑尼亚"],
+  "安纳普尔纳环线 · Thorong La山口 · 5416m": [28.7936, 83.9371, "尼泊尔"],
+  "珠峰南坡 · 尼泊尔大本营 · 5364m": [28.0026, 86.8528, "尼泊尔"],
+  "列城公路 · Khardung La山口 · 5359m": [34.278, 77.604, "印度"],
+  "亚拉腊山 · 常规登山终点 · 5137m": [39.702, 44.299, "土耳其"],
+  "彩虹山 · 观景点 · 5036m": [-13.869, -71.303, "秘鲁"],
+  "肯尼亚山 · Point Lenana步道终点 · 4985m": [-0.151, 37.316, "肯尼亚"],
+  "科托帕希国家公园 · Jose Rivas山屋 · 4864m": [-0.677, -78.438, "厄瓜多尔"],
+  "钦博拉索 · Carrel山屋 · 4850m": [-1.469, -78.817, "厄瓜多尔"],
+  "蓝天山 · 峰顶公路高点 · 4350m": [39.5883, -105.6438, "美国"],
+  "派克峰 · 公路/齿轨铁路峰顶 · 4302m": [38.8409, -105.0423, "美国"],
+  "阿空加瓜省立公园 · Plaza de Mulas营地 · 4300m": [-32.648, -70.058, "阿根廷"],
+  "奥里萨巴峰 · Piedra Grande营地 · 4260m": [19.032, -97.269, "墨西哥"],
+  "班公湖 · 湖边观景点 · 4250m": [33.758, 78.667, "印度"],
+  "西门山国家公园 · Bwahit Pass观景点 · 4200m": [13.235, 38.213, "埃塞俄比亚"],
+  "莫纳克亚山 · 公路可达峰顶 · 4207m": [19.8207, -155.4681, "美国"],
+  "图卜卡勒峰 · 常规登山终点 · 4167m": [31.061, -7.916, "摩洛哥"],
+  "基纳巴卢山 · Low's Peak步道终点 · 4095m": [6.075, 116.558, "马来西亚"],
+  "拉巴斯/埃尔阿尔托 · 城市高点 · 4060m": [-16.513, -68.192, "玻利维亚"],
+  "小马特洪峰 · 缆车高点 · 3883m": [45.9386, 7.7293, "瑞士"],
+  "南针峰 · 缆车观景台 · 3842m": [45.8789, 6.887, "法国"],
+  "落基山国家公园 · Trail Ridge Road高点 · 3713m": [40.396, -105.751, "美国"],
+  "乌尤尼盐沼 · 盐沼游览点 · 3656m": [-20.133, -67.489, "玻利维亚"],
+  "泰德峰 · 缆车上站 · 3555m": [28.272, -16.642, "西班牙"],
+  "少女峰火车站 · 欧洲屋脊 · 3454m": [46.5475, 7.9823, "瑞士"],
+  "戈尔内格拉特 · 登山铁路观景台 · 3135m": [45.9839, 7.7844, "瑞士"],
+  "哈莱阿卡拉 · 火山口观景台 · 3055m": [20.7097, -156.2533, "美国"],
+  "马丘比丘山 · 步道终点 · 3082m": [-13.163, -72.545, "秘鲁"],
+  "楚格峰 · 缆车/齿轨铁路高点 · 2962m": [47.421, 10.986, "德国"],
+  "萨尼山口 · 公路山口 · 2876m": [-29.584, 29.287, "南非"],
+  "大钟山高山公路 · Edelweissspitze观景点 · 2571m": [47.123, 12.83, "奥地利"],
+  "埃特纳火山 · 缆车上站区域 · 2500m": [37.753, 14.995, "意大利"],
+  "富士山 · 五合目 · 2305m": [35.3949, 138.7328, "日本"],
+  "科修斯科山 · 步道终点 · 2228m": [-36.455, 148.263, "澳大利亚"],
+  "惠斯勒山 · Peak Chair区域 · 2182m": [50.059, -122.957, "加拿大"],
+  "汉拿山 · 白鹿潭步道终点 · 1950m": [33.3617, 126.5292, "韩国"],
+  "卡拉帕塔 · 珠峰观景徒步点 · 5644m": [27.995, 86.829, "尼泊尔"],
+  "昌拉山口 · 公路山口 · 5360m": [34.032, 77.929, "印度"],
+  "戈京日 · 湖区徒步观景点 · 5357m": [27.954, 86.695, "尼泊尔"],
+  "塔格朗拉山口 · 公路山口 · 5328m": [33.506, 77.765, "印度"],
+  "查卡尔塔亚 · 公路高点 · 5300m": [-16.35, -68.13, "玻利维亚"],
+  "古鲁东玛湖 · 湖边游览点 · 5150m": [28.024, 88.709, "印度"],
+  "帕斯托鲁里冰川 · 游览步道高点 · 5000m": [-9.916, -77.188, "秘鲁"],
+  "锡金零点 · 公路高点 · 4663m": [27.966, 88.754, "印度"],
+  "阿克拜塔尔山口 · 帕米尔公路山口 · 4655m": [38.537, 73.596, "塔吉克斯坦"],
+  "梅鲁山 · 步道终点 · 4566m": [-3.243, 36.749, "坦桑尼亚"],
+  "拉斯达申峰 · 常规徒步终点 · 4550m": [13.236, 38.372, "埃塞俄比亚"],
+  "萨内蒂高原 · 公路高点 · 4377m": [6.864, 39.829, "埃塞俄比亚"],
+  "格雷斯峰 · 步道终点 · 4352m": [39.633, -105.817, "美国"],
+  "马拉加山口 · 公路山口 · 4316m": [-13.133, -72.317, "秘鲁"],
+  "内瓦多德托卢卡 · 火山口游览点 · 4200m": [19.108, -99.758, "墨西哥"],
+  "红湖 · 湖边观景点 · 4278m": [-22.207, -67.773, "玻利维亚"],
+  "喀麦隆山 · 常规登山终点 · 4040m": [4.217, 9.17, "喀麦隆"],
+  "基多缆车 · Cruz Loma观景点 · 4050m": [-0.183, -78.532, "厄瓜多尔"],
+  "内瓦多德鲁伊斯 · 游客区 · 4050m": [4.895, -75.321, "哥伦比亚"],
+  "惠特尼山 · 步道终点 · 4421m": [36.578, -118.292, "美国"],
+  "惠勒峰 · 新墨西哥步道终点 · 4013m": [36.556, -105.416, "美国"],
+  "安蒂萨纳 · 火山观景点 · 4000m": [-0.545, -78.157, "厄瓜多尔"],
+  "伊斯塔西瓦特尔 · La Joya登山口 · 3970m": [19.137, -98.654, "墨西哥"],
+  "基洛托阿火山湖 · 环湖观景点 · 3914m": [-0.858, -78.902, "厄瓜多尔"],
+  "阿拉湖山口 · 徒步山口 · 3860m": [42.35, 78.54, "吉尔吉斯斯坦"],
+  "奇里波峰 · 步道终点 · 3820m": [9.484, -83.489, "哥斯达黎加"],
+  "汉弗莱斯峰 · 步道终点 · 3852m": [35.346, -111.678, "美国"],
+  "厄尔布鲁士山 · Garabashi缆车站 · 3847m": [43.299, 42.459, "俄罗斯"],
+  "巴尔斯孔山口 · 公路山口 · 3754m": [41.92, 77.66, "吉尔吉斯斯坦"],
+  "独立山口 · 公路山口 · 3687m": [39.108, -106.564, "美国"],
+  "洛夫兰山口 · 公路山口 · 3655m": [39.664, -105.879, "美国"],
+  "林贾尼火山 · 常规登山终点 · 3726m": [-8.411, 116.457, "印度尼西亚"],
+  "猛犸山 · 缆车高点 · 3369m": [37.63, -119.032, "美国"],
+  "科尔卡峡谷 · 秃鹰十字观景台 · 3287m": [-15.611, -71.905, "秘鲁"],
+  "马尔莫拉达 · Punta Rocca缆车站 · 3265m": [46.435, 11.86, "意大利"],
+  "布恩山 · 徒步观景点 · 3210m": [28.4, 83.692, "尼泊尔"],
+  "解放者山口 · 国际公路山口 · 3200m": [-32.823, -70.07, "智利"],
+  "琼布拉克 · Talgar Pass滑雪区高点 · 3180m": [43.129, 77.08, "哈萨克斯坦"],
+  "蒙塞拉特山 · 缆车山顶 · 3152m": [4.605, -74.056, "哥伦比亚"],
+  "番西邦峰 · 缆车/步道终点 · 3143m": [22.303, 103.775, "越南"],
+  "内日峰 · 留尼汪步道终点 · 3070m": [-21.099, 55.48, "法国"],
+  "内瓦多谷 · 滑雪区高点 · 3025m": [-33.35, -70.25, "智利"],
+  "宋库尔湖 · 湖边游览点 · 3016m": [41.84, 75.14, "吉尔吉斯斯坦"],
+  "图盖拉瀑布顶端 · 德拉肯斯堡步道点 · 3000m": [-28.754, 28.892, "南非"],
+  "铁力士山 · 缆车观景台 · 3020m": [46.772, 8.437, "瑞士"],
+  "冰川3000 · Scex Rouge观景点 · 2971m": [46.326, 7.206, "瑞士"],
+  "雪朗峰 · Piz Gloria观景台 · 2970m": [46.557, 7.835, "瑞士"],
+  "迪亚沃勒扎 · 缆车观景台 · 2978m": [46.412, 9.966, "瑞士"],
+  "穆萨拉峰 · 步道终点 · 2925m": [42.179, 23.585, "保加利亚"],
+  "奥林匹斯山 · 米蒂卡斯峰 · 2918m": [40.088, 22.358, "希腊"],
+  "普拉格山 · 步道终点 · 2922m": [16.599, 120.883, "菲律宾"],
+  "特里格拉夫峰 · 常规徒步终点 · 2864m": [46.378, 13.836, "斯洛文尼亚"],
+  "斯泰尔维奥山口 · 公路山口 · 2758m": [46.529, 10.453, "意大利"],
+  "鲁阿佩胡山 · 火山口湖观景点 · 2672m": [-39.281, 175.568, "新西兰"],
+  "布罗莫火山 · King Kong Hill观景点 · 2600m": [-7.902, 112.953, "印度尼西亚"],
+  "因他暖山 · 泰国最高点 · 2565m": [18.588, 98.486, "泰国"],
+  "塞切达山 · 缆车观景点 · 2519m": [46.6, 11.724, "意大利"],
+  "塔拉纳基山 · 步道终点 · 2518m": [-39.296, 174.064, "新西兰"],
+  "惠斯勒斯山 · 贾斯珀缆车高点 · 2463m": [52.803, -118.124, "加拿大"],
+  "立山室堂 · 阿尔卑斯路线高点 · 2450m": [36.577, 137.596, "日本"],
+  "鹰巢站 · 勃朗峰有轨电车终点 · 2372m": [45.858, 6.797, "法国"],
+  "弗朗茨约瑟夫高地 · 大钟山观景点 · 2369m": [47.074, 12.751, "奥地利"],
+  "硫磺山 · 班夫缆车上站 · 2281m": [51.113, -115.555, "加拿大"],
+  "亚当峰 · 朝圣步道终点 · 2243m": [6.809, 80.499, "斯里兰卡"],
+  "卡兹别克 · 圣三一教堂观景点 · 2170m": [42.662, 44.62, "格鲁吉亚"],
+  "华盛顿山 · 公路/齿轨铁路峰顶 · 1917m": [44.27, -71.303, "美国"],
+  "杰贝勒杰斯山 · 公路观景点 · 1934m": [25.953, 56.183, "阿联酋"],
+  "克灵曼圆顶 · 观景塔 · 2025m": [35.562, -83.498, "美国"],
+  "汤加里罗红火山口 · 穿越步道高点 · 1886m": [-39.132, 175.648, "新西兰"],
 };
 
 const checklistPlaceCoordinates = {
@@ -2530,7 +2958,7 @@ let state = {
   mapProviderMode: "auto",
   map3d: false,
   detectedMapProvider: "",
-  mapOverlays: { light: true, checkins: true, paths: true, flights: true, china5a: false, chinaAncientCapitals: false, worldHeritage: false },
+  mapOverlays: { light: true, checkins: true, paths: true, flights: true, china5a: false, chinaAncientCapitals: false, worldHeritage: false, highAltitude: false },
   mapViewport: null,
   focusPlaceId: "",
 };
@@ -4073,10 +4501,65 @@ function applyLanguage() {
 }
 
 function setLanguage(language) {
+  const viewState = captureLanguageSwitchViewState();
   currentLanguage = language === "en" ? "en" : "zh";
   localStorage.setItem(languageStorageKey, currentLanguage);
   applyLanguage();
   renderLanguageSensitiveViews();
+  refreshMapLabelsForLanguage();
+  restoreLanguageSwitchViewState(viewState);
+}
+
+function refreshMapLabelsForLanguage() {
+  checklistOverlayCache.signature = "";
+  mapLibreMarkerSignature = "";
+  if (mapLibreMap && mapLibreMap.isStyleLoaded() && mapLibreMap.getSource("map-points")) {
+    renderMapLibreMarkers();
+  } else if (leafletMap && window.L) {
+    renderLeafletLayers();
+  }
+}
+
+function captureLanguageSwitchViewState() {
+  const activePage = document.querySelector("[data-page].active");
+  const pageId = activePage?.id || "";
+  const openAchievementSections = [];
+  if (pageId === "achievements") {
+    activePage.querySelectorAll("[data-achievement-section]").forEach((details) => {
+      if (details.open && details.id) openAchievementSections.push(details.id);
+    });
+    activePage.querySelectorAll("[data-checklist-group]").forEach((details) => {
+      setChecklistGroupOpen(details.dataset.checklistGroup, details.open);
+    });
+  }
+  return {
+    pageId,
+    openAchievementSections,
+    scrollTop: activePage?.scrollTop || 0,
+  };
+}
+
+function restoreLanguageSwitchViewState(viewState) {
+  if (!viewState?.pageId) return;
+  requestAnimationFrame(() => {
+    const page = document.getElementById(viewState.pageId);
+    if (!page?.classList.contains("active")) return;
+    if (viewState.pageId === "achievements") {
+      (viewState.openAchievementSections || []).forEach((id) => {
+        const details = document.getElementById(id);
+        if (!details?.matches("[data-achievement-section]")) return;
+        details.open = true;
+        scheduleFillAchievementSection(details);
+      });
+    }
+    page.scrollTop = viewState.scrollTop || 0;
+    window.setTimeout(() => {
+      const latestPage = document.getElementById(viewState.pageId);
+      if (latestPage?.classList.contains("active")) latestPage.scrollTop = viewState.scrollTop || 0;
+    }, 80);
+    if (viewState.pageId === "checkins") scheduleManualNavSpy();
+    if (viewState.pageId === "achievements") scheduleChecklistNavSpy();
+  });
 }
 
 function renderLanguageSensitiveViews() {
@@ -6025,10 +6508,13 @@ function mapLibreMarkerRenderSignature(overlays) {
     activeKeys.join(","),
     (state.checklistMarks || []).length,
     checklistTotalCount("china5a"),
+    checklistTotalCount("usNationalParks"),
     checklistTotalCount("chinaAncientCapitals"),
+    checklistTotalCount("chinaHighAltitude"),
     checklistTotalCount("worldHeritage"),
     Object.keys(china5aCoordinates || {}).length,
     Object.keys(chinaAncientCapitalCoordinates || {}).length,
+    Object.keys(chinaHighAltitudeCoordinates || {}).length,
     Object.keys(worldHeritageCoordinates || {}).length,
   ].join("#");
   return JSON.stringify({
@@ -6038,6 +6524,7 @@ function mapLibreMarkerRenderSignature(overlays) {
     china5a: Boolean(overlays.china5a),
     chinaAncientCapitals: Boolean(overlays.chinaAncientCapitals),
     worldHeritage: Boolean(overlays.worldHeritage),
+    highAltitude: Boolean(overlays.highAltitude),
     revision: mapPointRenderRevision,
     visits: (state.visits || []).length,
     places: places.length,
@@ -6109,6 +6596,7 @@ function mapLibrePointGeoJson(overlays) {
 function checklistOverlayColor(key, done = false) {
   if (key === "worldHeritage") return done ? "#3b82f6" : "#60a5fa";
   if (key === "chinaAncientCapitals") return done ? "#a855f7" : "#c084fc";
+  if (key === "chinaHighAltitude") return done ? "#b45309" : "#f59e0b";
   return done ? "#0f5f51" : "#218a78";
 }
 
@@ -6158,12 +6646,12 @@ function addMapLibrePointLayers(sourceId) {
       id: "map-points-label",
       type: "symbol",
       source: sourceId,
-      minzoom: 7,
-      maxzoom: 10.5,
+      minzoom: 5,
+      maxzoom: 8.5,
       layout: {
         "text-field": ["get", "title"],
         "text-font": ["Open Sans Regular", "Arial Unicode MS Regular"],
-        "text-size": ["interpolate", ["linear"], ["zoom"], 7, 12, 10.5, 14],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 5, 12, 8.5, 14],
         "text-variable-anchor": ["top", "bottom", "left", "right"],
         "text-radial-offset": 0.75,
         "text-max-width": 12,
@@ -6175,7 +6663,7 @@ function addMapLibrePointLayers(sourceId) {
         "text-halo-color": "#ffffff",
         "text-halo-width": 1.05,
         "text-halo-blur": 0.05,
-        "text-opacity": ["interpolate", ["linear"], ["zoom"], 6.8, 0, 7, 1],
+        "text-opacity": ["interpolate", ["linear"], ["zoom"], 4.8, 0, 5, 1],
       },
     });
   }
@@ -6184,11 +6672,11 @@ function addMapLibrePointLayers(sourceId) {
       id: "map-points-label-full",
       type: "symbol",
       source: sourceId,
-      minzoom: 10.5,
+      minzoom: 8.5,
       layout: {
         "text-field": ["get", "title"],
         "text-font": ["Open Sans Regular", "Arial Unicode MS Regular"],
-        "text-size": ["interpolate", ["linear"], ["zoom"], 10.5, 14, 13, 16],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 8.5, 14, 11, 16],
         "text-offset": [0, 1.15],
         "text-anchor": "top",
         "text-max-width": 12,
@@ -6266,6 +6754,7 @@ function checklistOverlayPlaces() {
     places.length,
     Object.keys(china5aCoordinates || {}).length,
     Object.keys(chinaAncientCapitalCoordinates || {}).length,
+    Object.keys(chinaHighAltitudeCoordinates || {}).length,
     Object.keys(worldHeritageCoordinates || {}).length,
   ].join("#");
   if (checklistOverlayCache.signature === signature) return checklistOverlayCache.items;
@@ -6312,6 +6801,24 @@ function ambiguousChecklistItemKeys(key) {
 
 function checklistOverlayEntriesFor(key) {
   const list = checklistCatalog[key] || {};
+  if (key === "chinaHighAltitude") {
+    return (list.items || []).map((item) => {
+      const meta = highAltitudeMetaFor(item);
+      const title = parseHighAltitudeItem(checklistItemDisplayName(key, item)).name;
+      const subtitle = currentLanguage === "en"
+        ? `${meta.altitude}m · ${countryDisplayName(meta.countryId || "cn")}`
+        : `${meta.altitude}m · ${meta.country || "中国"}`;
+      return {
+        key,
+        group: "",
+        item,
+        itemKey: checklistItemKey(key, item),
+        legacyKey: canonicalPlaceKey(item),
+        title,
+        subtitle,
+      };
+    });
+  }
   if (key === "chinaAncientCapitals" && Array.isArray(chinaAncientCapitals?.items) && chinaAncientCapitals.items.length) {
     return chinaAncientCapitals.items.map((item) => ({
       key,
@@ -6356,8 +6863,10 @@ function activeChecklistOverlayKeys() {
   const overlays = state.mapOverlays || {};
   return [
     overlays.china5a ? "china5a" : "",
+    overlays.china5a ? "usNationalParks" : "",
     overlays.chinaAncientCapitals ? "chinaAncientCapitals" : "",
     overlays.worldHeritage ? "worldHeritage" : "",
+    overlays.highAltitude ? "chinaHighAltitude" : "",
   ].filter(Boolean);
 }
 
@@ -6829,6 +7338,24 @@ function renderLeafletLayers() {
         marker.addTo(leafletLayers);
       });
   }
+
+  checklistOverlayPlaces().forEach((entry) => {
+    const [displayLng, displayLat] = mapDisplayCoordinate(entry.lng, entry.lat);
+    const marker = L.circleMarker([displayLat, displayLng], {
+      radius: entry.done ? 4 : 3,
+      color: entry.done ? "#111827" : "rgba(17, 24, 39, 0.5)",
+      weight: entry.done ? 2 : 1,
+      fillColor: checklistOverlayColor(entry.key, entry.done),
+      fillOpacity: entry.done ? 0.96 : 0.82,
+    });
+    marker.bindTooltip(entry.title || entry.item, { sticky: true });
+    marker.bindPopup(mapPopupHtml(`<strong>${escapeHtml(entry.title || entry.item)}</strong><br>${escapeHtml(entry.subtitle || checklistCatalog[entry.key]?.label || t("checklistFallback"))}<br><button class="popup-action" data-checklist-map="${escapeHtml(entry.key)}" data-item="${escapeHtml(entry.item)}" type="button">${entry.done ? t("unvisit") : t("markVisited")}</button>`), { closeButton: false });
+    marker.on("click", (event) => {
+      if (event.originalEvent) event.originalEvent._travelMapHandled = true;
+      renderChecklistMapDetail(entry.key, entry.item);
+    });
+    marker.addTo(leafletLayers);
+  });
 
 }
 
@@ -7832,7 +8359,7 @@ function renderAchievements() {
       <button type="button" data-checklist-jump="achievement-section-ancientCapitals">${currentLanguage === "en" ? "Ancient capitals" : "中国古都"}</button>
       <button type="button" data-checklist-jump="achievement-section-usNationalParks">${currentLanguage === "en" ? "U.S. National Parks" : "美国国家公园"}</button>
       <button type="button" data-checklist-jump="achievement-section-worldHeritage">${currentLanguage === "en" ? "World Heritage" : "世界遗产"}</button>
-      <button type="button" data-checklist-jump="achievement-section-referenceLists">${currentLanguage === "en" ? "Reference lists" : "参考清单"}</button>
+      <button type="button" data-checklist-jump="achievement-section-highAltitude">${currentLanguage === "en" ? "High altitude" : "高海拔挑战"}</button>
     </nav>
     <details id="achievement-section-china5a" class="achievement-group" data-achievement-section="china5a">
       <summary><strong>${currentLanguage === "en" ? "China 5A scenic areas" : "中国 5A 景区"}</strong><span data-achievement-count="china5a">${checklistDoneCount("china5a")}/${checklistTotalCount("china5a")}</span></summary>
@@ -7850,8 +8377,8 @@ function renderAchievements() {
       <summary><strong>${currentLanguage === "en" ? "World Heritage" : "世界遗产"}</strong><span data-achievement-count="worldHeritage">${checklistDoneCount("worldHeritage")}/${checklistTotalCount("worldHeritage")}</span></summary>
       <div class="achievement-section-placeholder"><p class="muted small">${currentLanguage === "en" ? "Expand to load this checklist." : "展开后加载该清单。"}</p></div>
     </details>
-    <details id="achievement-section-referenceLists" class="achievement-group" data-achievement-section="referenceLists">
-      <summary>${currentLanguage === "en" ? "Other reference lists" : "其他参考清单"}</summary>
+    <details id="achievement-section-highAltitude" class="achievement-group" data-achievement-section="highAltitude">
+      <summary><strong>${currentLanguage === "en" ? "Global High-Altitude Travel Challenge" : "全球高海拔旅行挑战"}</strong><span data-achievement-count="chinaHighAltitude">${checklistDoneCount("chinaHighAltitude")}/${checklistTotalCount("chinaHighAltitude")}</span></summary>
       <div class="achievement-section-placeholder"><p class="muted small">${currentLanguage === "en" ? "Expand to load this checklist." : "展开后加载该清单。"}</p></div>
     </details>`;
   scheduleChecklistNavSpy();
@@ -7894,14 +8421,8 @@ function fillAchievementSection(details) {
     placeholder.outerHTML = renderChecklistSection("usNationalParks", checklistCatalog.usNationalParks);
     return;
   }
-  if (section === "referenceLists") {
-    const referenceOrder = ["chinaHighAltitude", "grottoes"];
-    const checklistHtml = referenceOrder
-      .filter((key) => checklistCatalog[key])
-      .map((key) => [key, checklistCatalog[key]])
-      .map(([key, list]) => renderChecklistSection(key, list))
-      .join("");
-    placeholder.outerHTML = `<div class="theme-checklists">${checklistHtml}</div>`;
+  if (section === "highAltitude") {
+    placeholder.outerHTML = renderHighAltitudeInlineSection("chinaHighAltitude", checklistCatalog.chinaHighAltitude);
   }
 }
 
@@ -8114,22 +8635,77 @@ function renderUsParkCard(key, item) {
 }
 
 function renderHighAltitudeSection(key, list) {
-  const items = (list.items || [])
+  const body = renderHighAltitudeBody(key, list);
+  return `<section class="theme-checklist high-altitude-checklist">${body}</section>`;
+}
+
+function highAltitudeVisibleItems(list) {
+  return (list.items || [])
     .filter((item) => highAltitudeFilters[highAltitudeFilterKeyFor(item)] !== false)
     .slice()
     .sort((a, b) => highAltitudeMetaFor(b).altitude - highAltitudeMetaFor(a).altitude);
+}
+
+function renderHighAltitudeBody(key, list) {
+  const items = highAltitudeVisibleItems(list);
   const done = items.filter((item) => isChecklistItemDone(key, item)).length;
   const groupId = checklistGroupId(key, "all");
   const isOpen = isChecklistGroupOpen(groupId);
-  return `<section class="theme-checklist high-altitude-checklist">
-    <details class="high-altitude-details" data-checklist-group="${groupId}" ${isOpen ? "open" : ""}>
+  const grouped = highAltitudeContinentGroups(items);
+  return `<details class="high-altitude-details" data-checklist-group="${groupId}" ${isOpen ? "open" : ""}>
       <summary><strong>${checklistLabel(key, list)}</strong><span>${done}/${items.length}</span></summary>
       ${renderHighAltitudeFilterBar()}
-      <div class="us-park-grid high-altitude-grid">
-        ${items.map((item) => renderHighAltitudeCard(key, item)).join("")}
+      <div class="high-altitude-region-list">
+        ${grouped.map(([continent, groupItems]) => renderHighAltitudeContinentGroup(key, continent, groupItems)).join("")}
       </div>
-    </details>
-  </section>`;
+    </details>`;
+}
+
+function renderHighAltitudeInlineSection(key, list) {
+  const items = highAltitudeVisibleItems(list);
+  return `<div class="theme-checklist high-altitude-checklist high-altitude-inline">
+    ${renderHighAltitudeFilterBar()}
+    <div class="high-altitude-region-list">
+      ${highAltitudeContinentGroups(items).map(([continent, groupItems]) => renderHighAltitudeContinentGroup(key, continent, groupItems)).join("")}
+    </div>
+  </div>`;
+}
+
+function highAltitudeContinentGroups(items) {
+  const order = ["中国", "亚洲", "欧洲", "北美", "南美", "非洲", "大洋洲"];
+  const groups = new Map(order.map((name) => [name, []]));
+  (items || []).forEach((item) => {
+    const continent = highAltitudeMetaFor(item).continent || "中国";
+    if (!groups.has(continent)) groups.set(continent, []);
+    groups.get(continent).push(item);
+  });
+  return Array.from(groups.entries()).filter(([, groupItems]) => groupItems.length);
+}
+
+function renderHighAltitudeContinentGroup(key, continent, items) {
+  const groupId = checklistGroupId(key, `continent:${continent}`);
+  const isOpen = isChecklistGroupOpen(groupId);
+  const done = items.filter((item) => isChecklistItemDone(key, item)).length;
+  const label = highAltitudeContinentLabel(continent);
+  return `<details class="high-altitude-continent" data-checklist-group="${groupId}" ${isOpen ? "open" : ""}>
+    <summary><strong>${escapeHtml(label)}</strong><span>${done}/${items.length}</span></summary>
+    <div class="us-park-grid high-altitude-grid">
+      ${items.map((item) => renderHighAltitudeCard(key, item)).join("")}
+    </div>
+  </details>`;
+}
+
+function highAltitudeContinentLabel(continent) {
+  if (currentLanguage !== "en") return continent;
+  return {
+    中国: "China",
+    亚洲: "Asia",
+    欧洲: "Europe",
+    北美: "North America",
+    南美: "South America",
+    非洲: "Africa",
+    大洋洲: "Oceania",
+  }[continent] || continent;
 }
 
 function renderHighAltitudeFilterBar() {
@@ -8168,13 +8744,17 @@ function parseHighAltitudeItem(item) {
 
 function highAltitudeMetaFor(item) {
   const parsed = parseHighAltitudeItem(item);
+  const meta = checklistCatalog.chinaHighAltitude?.meta?.[item] || {};
   return {
+    country: "中国",
+    countryId: "cn",
     province: "",
     geoUnit: "",
     point: parsed.point,
     altitude: parsed.altitude,
     type: "",
-    ...(checklistCatalog.chinaHighAltitude?.meta?.[item] || {}),
+    continent: "中国",
+    ...meta,
   };
 }
 
@@ -8184,11 +8764,13 @@ function renderHighAltitudeCard(key, item) {
   const localized = currentLanguage === "en"
     ? parseHighAltitudeItem(checklistItemDisplayName(key, item))
     : parseHighAltitudeItem(item);
-  const labelProvince = currentLanguage === "en" ? "Province" : "省区";
+  const labelCountry = currentLanguage === "en" ? "Country/region" : "国家/地区";
+  const labelProvince = currentLanguage === "en" ? "Area" : "省区";
   const labelGeo = currentLanguage === "en" ? "Geo unit" : "关联山体/地理单元";
   const labelPoint = currentLanguage === "en" ? "Reachable point" : "可达点";
   const labelType = currentLanguage === "en" ? "Type" : "类型";
   const altitudeText = `${meta.altitude || localized.altitude}m`;
+  const countryText = currentLanguage === "en" && meta.countryId ? countryDisplayName(meta.countryId) : meta.country;
   return `<button class="us-park-card high-altitude-card ${checked ? "done" : ""}" data-checklist="${escapeHtml(key)}" data-item="${escapeHtml(item)}" type="button">
     <span class="high-altitude-head">
       <span class="us-park-card-main">${escapeHtml(localized.name)}</span>
@@ -8198,6 +8780,7 @@ function renderHighAltitudeCard(key, item) {
       </span>
     </span>
     <span class="high-altitude-facts">
+      <span><b>${labelCountry}</b><em>${escapeHtml(countryText || "-")}</em></span>
       <span><b>${labelProvince}</b><em>${escapeHtml(meta.province || "-")}</em></span>
       <span class="wide"><b>${labelGeo}</b><em>${escapeHtml(meta.geoUnit || "-")}</em></span>
       <span><b>${labelPoint}</b><em>${escapeHtml(meta.point || localized.point || "-")}</em></span>
@@ -8758,6 +9341,8 @@ function canRefreshChecklistChangeLocally(key) {
 function shouldRefreshMapMarkersForChecklist(key) {
   if (key === "chinaAncientCapitals") return Boolean(state.mapOverlays?.chinaAncientCapitals || state.mapOverlays?.checkins);
   if (key === "china5a") return Boolean(state.mapOverlays?.china5a || state.mapOverlays?.checkins);
+  if (key === "usNationalParks") return Boolean(state.mapOverlays?.china5a || state.mapOverlays?.checkins);
+  if (key === "chinaHighAltitude") return Boolean(state.mapOverlays?.highAltitude || state.mapOverlays?.checkins);
   if (key === "worldHeritage") return Boolean(state.mapOverlays?.worldHeritage || state.mapOverlays?.checkins);
   return true;
 }
@@ -8797,7 +9382,9 @@ function refreshRenderedChecklistSectionMarkup(key) {
     section.querySelectorAll("[data-checklist-group]").forEach((details) => {
       setChecklistGroupOpen(details.dataset.checklistGroup, details.open);
     });
-    section.outerHTML = renderHighAltitudeSection(key, list);
+    section.outerHTML = section.classList.contains("high-altitude-inline")
+      ? renderHighAltitudeInlineSection(key, list)
+      : renderHighAltitudeSection(key, list);
     return true;
   }
   if (key === "usNationalParks") {
@@ -8929,8 +9516,10 @@ function applyChecklistGeography(place, key, coords) {
     applyAncientCapitalAdminGeography(place);
   }
   if (key === "chinaHighAltitude") {
-    place.country = "cn";
+    const meta = highAltitudeMetaFor(place.name);
+    place.country = meta.countryId || place.country || "cn";
     if (coords?.[2]) place.unit = coords[2];
+    if (meta.province) place.unit = meta.province;
   }
   if (key === "worldHeritage") {
     const countryId = coords?.[2] ? worldHeritageCountryCoverageId(coords[2]) : "";
@@ -8938,7 +9527,7 @@ function applyChecklistGeography(place, key, coords) {
     if (coords?.[2] && sameAdminName(place.unit, coords[2])) place.unit = "";
   }
   if (!(Number.isFinite(place.lat) && Number.isFinite(place.lng))) return;
-  if (key !== "china5a" && key !== "chinaAncientCapitals" && key !== "chinaHighAltitude") {
+  if (key !== "china5a" && key !== "chinaAncientCapitals") {
     const country = inferCountry(place.lng, place.lat);
     if (country?.id) place.country = country.id;
   }
@@ -9003,6 +9592,7 @@ function checklistCoordinateLookup() {
   if (
     checklistCoordinateLookupCache.china5a === china5aCoordinates
     && checklistCoordinateLookupCache.ancientCapitals === chinaAncientCapitalCoordinates
+    && checklistCoordinateLookupCache.highAltitude === chinaHighAltitudeCoordinates
     && checklistCoordinateLookupCache.worldHeritage === worldHeritageCoordinates
     && checklistCoordinateLookupCache.englishNames === worldHeritageEnglishNames
   ) {
@@ -9035,6 +9625,7 @@ function checklistCoordinateLookup() {
   checklistCoordinateLookupCache = {
     china5a: china5aCoordinates,
     ancientCapitals: chinaAncientCapitalCoordinates,
+    highAltitude: chinaHighAltitudeCoordinates,
     worldHeritage: worldHeritageCoordinates,
     englishNames: worldHeritageEnglishNames,
     map,
@@ -10267,6 +10858,7 @@ function renderMapControls() {
   const showChina5a = $("#showChina5aOnMap");
   const showAncientCapitals = $("#showAncientCapitalsOnMap");
   const showWorldHeritage = $("#showWorldHeritageOnMap");
+  const showHighAltitude = $("#showHighAltitudeOnMap");
   if (showLight) showLight.checked = Boolean(overlays.light);
   if (showCheckins) showCheckins.checked = Boolean(overlays.checkins);
   if (showTracks) showTracks.checked = Boolean(overlays.paths);
@@ -10275,6 +10867,7 @@ function renderMapControls() {
   if (showChina5a) showChina5a.checked = Boolean(overlays.china5a);
   if (showAncientCapitals) showAncientCapitals.checked = Boolean(overlays.chinaAncientCapitals);
   if (showWorldHeritage) showWorldHeritage.checked = Boolean(overlays.worldHeritage);
+  if (showHighAltitude) showHighAltitude.checked = Boolean(overlays.highAltitude);
   $("#addMapPoint")?.classList.toggle("active", mapAddMode);
   document.querySelectorAll("[data-region-view]").forEach((button) => {
     button.classList.toggle("active", button.dataset.regionView === state.selectedRegionView);
@@ -10363,6 +10956,7 @@ function showPage(pageId, targetId = "") {
     if (state.mapOverlays?.china5a) Promise.all([loadChina5aCatalog(), loadChina5aCoordinates()]).finally(renderGeoMap);
     if (state.mapOverlays?.chinaAncientCapitals || hasAncientCapitalCheckins()) loadChinaAncientCapitals().finally(renderGeoMap);
     if (state.mapOverlays?.worldHeritage) loadCatalogData();
+    if (state.mapOverlays?.highAltitude) renderGeoMap();
     setTimeout(() => {
       if (mapLibreMap) mapLibreMap.resize();
       if (leafletMap) leafletMap.invalidateSize();
@@ -10597,6 +11191,14 @@ $("#showWorldHeritageOnMap")?.addEventListener("change", (event) => {
   if (event.target.checked) loadCatalogData().finally(refresh);
   else refresh();
 });
+$("#showHighAltitudeOnMap")?.addEventListener("change", (event) => {
+  state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
+  state.mapOverlays.highAltitude = event.target.checked;
+  saveUiStateSoon();
+  checklistOverlayCache.signature = "";
+  if (mapLibreMap) renderMapLibreMarkers();
+  else renderGeoMap();
+});
 $("#addMapPoint")?.addEventListener("click", () => {
   if (mapAddMode) {
     setMapAddMode(false);
@@ -10634,7 +11236,11 @@ $("#achievementList").addEventListener("click", (event) => {
   if (highAltitudeFilter) {
     highAltitudeFilters[highAltitudeFilter.dataset.highAltitudeFilter] = highAltitudeFilter.checked;
     const section = highAltitudeFilter.closest(".theme-checklist");
-    if (section) section.outerHTML = renderHighAltitudeSection("chinaHighAltitude", checklistCatalog.chinaHighAltitude);
+    if (section) {
+      section.outerHTML = section.classList.contains("high-altitude-inline")
+        ? renderHighAltitudeInlineSection("chinaHighAltitude", checklistCatalog.chinaHighAltitude)
+        : renderHighAltitudeSection("chinaHighAltitude", checklistCatalog.chinaHighAltitude);
+    }
     return;
   }
   const button = event.target.closest("[data-checklist]");

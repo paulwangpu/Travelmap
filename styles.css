@@ -2211,6 +2211,62 @@ button:hover {
   accent-color: var(--green);
 }
 
+.high-altitude-region-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.high-altitude-continent {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.54);
+  overflow: hidden;
+}
+
+.high-altitude-continent > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 10px;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 950;
+}
+
+.high-altitude-continent > summary::before {
+  content: "▶";
+  color: var(--green);
+  font-size: 0.78rem;
+}
+
+.high-altitude-continent[open] > summary::before {
+  content: "▼";
+}
+
+.high-altitude-continent > summary::-webkit-details-marker {
+  display: none;
+}
+
+.high-altitude-continent > summary strong {
+  flex: 1;
+  min-width: 0;
+}
+
+.high-altitude-continent > summary span {
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--muted);
+  font-weight: 900;
+  padding: 3px 8px;
+  white-space: nowrap;
+}
+
+.high-altitude-continent .high-altitude-grid {
+  padding: 0 10px 10px;
+}
+
 .high-altitude-head {
   display: flex;
   align-items: flex-start;
