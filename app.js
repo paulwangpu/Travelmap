@@ -5983,6 +5983,7 @@ function renderGeoMap() {
     leafletMap.on("click", (event) => {
       handleMapCanvasClick(event.latlng.lng, event.latlng.lat, event.originalEvent);
     });
+    L.control.scale({ imperial: false, metric: true, maxWidth: 120, position: "bottomright" }).addTo(leafletMap);
     applyLeafletProvider();
   } else {
     applyLeafletProvider();
@@ -6066,6 +6067,7 @@ function renderMapLibreMap() {
     mapLibreMap.touchZoomRotate?.disableRotation();
     mapLibreMap._travelMapProvider = provider;
     mapLibreMap.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-left");
+    mapLibreMap.addControl(new maplibregl.ScaleControl({ maxWidth: 120, unit: "metric" }), "bottom-right");
     mapLibreMap.on("click", (event) => {
       handleMapCanvasClick(event.lngLat.lng, event.lngLat.lat, event.originalEvent);
     });

@@ -574,6 +574,17 @@ button:hover {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+.maplibregl-ctrl-scale,
+.leaflet-control-scale-line {
+  border: 1px solid rgba(17, 24, 39, 0.65) !important;
+  border-top: 0 !important;
+  background: rgba(255, 255, 255, 0.82) !important;
+  color: #111827 !important;
+  box-shadow: 0 2px 8px rgba(17, 24, 39, 0.14);
+  font-family: inherit;
+  font-weight: 800;
+}
+
 .popup-body {
   padding-right: 28px;
 }
@@ -5320,6 +5331,11 @@ button:hover {
   .maplibregl-ctrl-top-left,
   .leaflet-top.leaflet-left {
     display: none !important;
+  }
+
+  .maplibregl-ctrl-bottom-right,
+  .leaflet-bottom.leaflet-right {
+    bottom: calc(58px + env(safe-area-inset-bottom)) !important;
   }
 
   .map-drawer {
