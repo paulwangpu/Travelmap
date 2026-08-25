@@ -6804,7 +6804,8 @@ function checklistOverlayEntriesFor(key) {
   if (key === "chinaHighAltitude") {
     return (list.items || []).map((item) => {
       const meta = highAltitudeMetaFor(item);
-      const title = parseHighAltitudeItem(checklistItemDisplayName(key, item)).name;
+      const parsed = parseHighAltitudeItem(checklistItemDisplayName(key, item));
+      const title = parsed.point ? `${parsed.name} · ${parsed.point}` : parsed.name;
       const subtitle = currentLanguage === "en"
         ? `${meta.altitude}m · ${countryDisplayName(meta.countryId || "cn")}`
         : `${meta.altitude}m · ${meta.country || "中国"}`;
