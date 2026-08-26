@@ -4300,7 +4300,7 @@ const checklistCanonicalPlaces = [
   { id: "cn-yungang-grottoes", aliases: ["云冈石窟", "云岗石窟", "云冈石窟景区", "Yungang Grottoes"] },
   { id: "cn-sanqingshan", aliases: ["三清山", "三清山国家公园", "三清山风景名胜区", "三清山 · 玉京峰 · 1819m", "Mount Sanqingshan National Park"] },
   { id: "cn-wutaishan", aliases: ["五台山", "五台山景区", "五台山 · 北台叶斗峰 · 3061m"] },
-  { id: "cn-dengfeng", aliases: ["登封天地之中古建筑群", "登封“天地之中”历史建筑群", "登封天地之中", "嵩山少林景区"] },
+  { id: "cn-dengfeng", aliases: ["登封天地之中古建筑群", "登封“天地之中”历史建筑群", "登封天地之中", "嵩山少林", "嵩山少林景区", "嵩山", "嵩山 · 峻极峰 · 1492m", "Mount Song"] },
   { id: "cn-west-lake", aliases: ["杭州西湖", "杭州西湖文化景观", "西湖", "西湖风景名胜区", "West Lake Cultural Landscape of Hangzhou"] },
   { id: "cn-honghe-hani", aliases: ["红河哈尼梯田", "红河哈尼梯田景区"] },
   { id: "cn-gulangyu", aliases: ["鼓浪屿", "鼓浪屿景区", "鼓浪屿风景名胜区", "Kulangsu, a Historic International Settlement"] },
@@ -6971,7 +6971,7 @@ function mergeCanonicalChecklistOverlayItems(items) {
 }
 
 function checklistMergeKeyForEntry(entry) {
-  return checklistCanonicalKey(entry.item) || checklistCoordinateKeyForItem(entry.key, entry.item, entry.group || "") || "";
+  return checklistCoordinateKeyForItem(entry.key, entry.item, entry.group || "") || checklistCanonicalKey(entry.item) || "";
 }
 
 function relatedChecklistEntriesForItem(key, item, group = "") {
