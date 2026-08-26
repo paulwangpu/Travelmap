@@ -4313,18 +4313,18 @@ const checklistCanonicalPlaces = [
   { id: "cn-yinxu", aliases: ["殷墟", "殷墟景区", "Yin Xu"] },
   { id: "es-teide", aliases: ["泰德国家公园", "Teide National Park", "泰德峰 · 缆车上站 · 3555m"] },
   { id: "fr-reunion-pitons", aliases: ["留尼汪岛的山峰，冰斗和峭壁", "Pitons, cirques and remparts of Reunion Island", "内日峰 · 留尼汪步道终点 · 3070m"] },
-  { id: "us-yellowstone", aliases: ["黄石国家公园", "Yellowstone National Park"] },
-  { id: "us-grand-canyon", aliases: ["大峡谷国家公园", "Grand Canyon National Park"] },
-  { id: "us-yosemite", aliases: ["优胜美地国家公园", "Yosemite National Park"] },
-  { id: "us-redwood", aliases: ["红木国家公园", "红木国家和州立公园", "Redwood National Park", "Redwood National and State Parks"] },
-  { id: "us-everglades", aliases: ["大沼泽地国家公园", "Everglades National Park"] },
+  { id: "us-yellowstone", aliases: ["黄石国家公园", "Yellowstone National Park", "Yellowstone"] },
+  { id: "us-grand-canyon", aliases: ["大峡谷国家公园", "Grand Canyon National Park", "Grand Canyon"] },
+  { id: "us-yosemite", aliases: ["优胜美地国家公园", "Yosemite National Park", "Yosemite"] },
+  { id: "us-redwood", aliases: ["红木国家公园", "红木国家和州立公园", "Redwood National Park", "Redwood National and State Parks", "Redwood"] },
+  { id: "us-everglades", aliases: ["大沼泽地国家公园", "Everglades National Park", "Everglades"] },
   { id: "us-great-smoky-mountains", aliases: ["大烟山国家公园", "大烟雾山国家公园", "大烟雾山", "Great Smoky Mountains National Park", "Great Smoky Mountains"] },
-  { id: "us-mesa-verde", aliases: ["梅萨维德国家公园", "Mesa Verde National Park"] },
-  { id: "us-olympic", aliases: ["奥林匹克国家公园", "Olympic National Park"] },
-  { id: "us-mammoth-cave", aliases: ["猛犸洞国家公园", "猛玛洞穴国家公园", "Mammoth Cave National Park"] },
-  { id: "us-hawaii-volcanoes", aliases: ["夏威夷火山国家公园", "Hawaii Volcanoes National Park"] },
-  { id: "us-carlsbad-caverns", aliases: ["卡尔斯巴德洞窟国家公园", "Carlsbad Caverns National Park"] },
-  { id: "us-waterton-glacier", aliases: ["沃特顿-冰川国际和平公园", "冰川国家公园", "Glacier National Park", "Waterton-Glacier International Peace Park"] },
+  { id: "us-mesa-verde", aliases: ["梅萨维德国家公园", "Mesa Verde National Park", "Mesa Verde"] },
+  { id: "us-olympic", aliases: ["奥林匹克国家公园", "Olympic National Park", "Olympic"] },
+  { id: "us-mammoth-cave", aliases: ["猛犸洞国家公园", "猛玛洞穴国家公园", "Mammoth Cave National Park", "Mammoth Cave"] },
+  { id: "us-hawaii-volcanoes", aliases: ["夏威夷火山国家公园", "Hawaii Volcanoes National Park", "Hawaii Volcanoes"] },
+  { id: "us-carlsbad-caverns", aliases: ["卡尔斯巴德洞窟国家公园", "Carlsbad Caverns National Park", "Carlsbad Caverns"] },
+  { id: "us-waterton-glacier", aliases: ["沃特顿-冰川国际和平公园", "冰川国家公园", "Glacier National Park", "Waterton-Glacier International Peace Park", "Glacier"] },
 ];
 
 const checklistCanonicalAliasMap = new Map();
@@ -4405,6 +4405,7 @@ function checklistMarkKeys() {
   const keys = new Set();
   (state.checklistMarks || []).forEach((mark) => {
     const raw = mark.split(":").slice(1).join(":");
+    if (raw.startsWith("coord:")) keys.add(raw);
     const key = canonicalPlaceKey(raw);
     if (key) keys.add(key);
     const canonical = raw.startsWith("place:") ? raw : checklistCanonicalKey(raw);
@@ -6927,6 +6928,7 @@ function checklistOverlayPlaces() {
       canonicalPlaceKey(visit.place.name),
       visit.place.checklistKey ? checklistItemKey(visit.place.checklistKey, visit.place.name, visit.place) : "",
       checklistCanonicalKey(visit.place.name),
+      checklistCoordinateKeyForPlace(visit.place),
     ].filter(Boolean)));
   const allOverlayItems = keys.flatMap(checklistOverlayEntriesFor);
   const rawItems = allOverlayItems.map(({ key, item, group, itemKey, legacyKey, title, subtitle }) => {
@@ -6935,6 +6937,7 @@ function checklistOverlayPlaces() {
     const done = marked.has(itemKey)
       || visited.has(itemKey)
       || (checklistCanonicalKey(item) && (marked.has(checklistCanonicalKey(item)) || visited.has(checklistCanonicalKey(item))))
+      || (checklistCoordinateKeyForItem(key, item, group) && (marked.has(checklistCoordinateKeyForItem(key, item, group)) || visited.has(checklistCoordinateKeyForItem(key, item, group))))
       || (!ambiguous5a.has(legacyKey) && (marked.has(legacyKey) || visited.has(legacyKey)));
     if (seen.has(itemKey) && !done) return null;
     if (seen.has(legacyKey) && !done) return null;
@@ -6944,7 +6947,7 @@ function checklistOverlayPlaces() {
   checklistOverlayCache = {
     signature,
     items,
-    keySet: new Set(allOverlayItems.flatMap((entry) => [entry.itemKey, entry.legacyKey]).filter(Boolean)),
+    keySet: new Set(allOverlayItems.flatMap((entry) => [entry.itemKey, entry.legacyKey, checklistCanonicalKey(entry.item), checklistCoordinateKeyForItem(entry.key, entry.item, entry.group || "")]).filter(Boolean)),
   };
   logSlowStep("checklistOverlayPlaces", perfStartedAt);
   return items;
@@ -6999,6 +7002,30 @@ function checklistRelatedDetailRows(key, item, group = "") {
   const chips = (values) => `<span class="tag-row map-detail-tags">${values.map((value) => `<span class="tag">${escapeHtml(value)}</span>`).join("")}</span>`;
   return `
       <div><dt>${rowLabel("关联条目", "Linked items")}</dt><dd>${chips(pairs)}</dd></div>`;
+}
+
+function relatedChecklistRemovalKeys(key, item, group = "") {
+  const entries = [
+    { key, item, group, itemKey: checklistItemKey(key, item, group), legacyKey: canonicalPlaceKey(item) },
+    ...relatedChecklistEntriesForItem(key, item, group),
+  ];
+  const raw = new Set();
+  const normalized = new Set();
+  const addKey = (value) => {
+    if (!value) return;
+    raw.add(value);
+    normalized.add(canonicalPlaceKey(value));
+  };
+  entries.forEach((entry) => {
+    [
+      entry.itemKey,
+      entry.legacyKey,
+      checklistCanonicalKey(entry.item),
+      checklistCoordinateKeyForItem(entry.key, entry.item, entry.group || ""),
+    ].filter(Boolean).forEach(addKey);
+    checklistCanonicalPlaceForItem(entry.item)?.aliases?.forEach(addKey);
+  });
+  return { raw, normalized };
 }
 
 function ambiguousChecklistItemKeys(key) {
@@ -9408,8 +9435,15 @@ function isChecklistItemDone(key, item, group = "") {
   const itemKey = checklistItemKey(key, item, group);
   const legacyKey = canonicalPlaceKey(item);
   const canonicalKey = checklistCanonicalKey(item);
+  const coordinateKey = checklistCoordinateKeyForItem(key, item, group);
   const { marked, visited } = checklistStatusKeys();
-  if (marked.has(itemKey) || visited.has(itemKey) || (canonicalKey && (marked.has(canonicalKey) || visited.has(canonicalKey))) || (!isAmbiguousChecklistItem(key, item) && (marked.has(legacyKey) || visited.has(legacyKey)))) return true;
+  if (
+    marked.has(itemKey)
+    || visited.has(itemKey)
+    || (canonicalKey && (marked.has(canonicalKey) || visited.has(canonicalKey)))
+    || (coordinateKey && (marked.has(coordinateKey) || visited.has(coordinateKey)))
+    || (!isAmbiguousChecklistItem(key, item) && (marked.has(legacyKey) || visited.has(legacyKey)))
+  ) return true;
   if (key === "chinaHighAltitude") {
     const baseKey = canonicalPlaceKey(parseHighAltitudeItem(item).name);
     if (baseKey && (marked.has(baseKey) || visited.has(baseKey))) return true;
@@ -9426,8 +9460,6 @@ function checklistItemKey(key, item, context = null) {
   if (key === "chinaAncientCapitals") return ancientCapitalSiteKeyForItem(item) || itemKey;
   const canonical = checklistCanonicalKey(item);
   if (canonical) return canonical;
-  const coordinateKey = checklistCoordinateKeyForItem(key, item, context);
-  if (coordinateKey) return coordinateKey;
   if (key !== "china5a") return itemKey;
   const region = typeof context === "string" ? context : (context?.unit || checklistCoordinateFor(item)?.[2] || china5aRegionForItem(item));
   const regionKey = canonicalPlaceKey(region);
@@ -9515,6 +9547,8 @@ async function toggleChecklistItem(key, item, group = "") {
   const itemKey = checklistItemKey(key, item, group);
   const legacyKey = canonicalPlaceKey(item);
   const canonicalKey = checklistCanonicalKey(item);
+  const coordinateKey = checklistCoordinateKeyForItem(key, item, group);
+  const removalKeys = relatedChecklistRemovalKeys(key, item, group);
   const highAltitudeBaseKey = key === "chinaHighAltitude" ? canonicalPlaceKey(parseHighAltitudeItem(item).name) : "";
   const marks = new Set(state.checklistMarks || []);
   const wasDone = isChecklistItemDone(key, item, group);
@@ -9527,6 +9561,9 @@ async function toggleChecklistItem(key, item, group = "") {
         || markKey === itemKey
         || (canonicalKey && markRawKey === canonicalKey)
         || (canonicalKey && markKey === canonicalKey)
+        || (coordinateKey && markRawKey === coordinateKey)
+        || removalKeys.raw.has(markRawKey)
+        || removalKeys.normalized.has(markKey)
         || (!isAmbiguousChecklistItem(key, item) && markKey === legacyKey)
         || (highAltitudeBaseKey && markKey === highAltitudeBaseKey)
       ) marks.delete(mark);
