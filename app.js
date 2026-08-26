@@ -14,7 +14,7 @@ const languageStorageKey = "travel-map-language";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "1.9.1";
+const appVersion = "1.9.2";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
@@ -4275,9 +4275,109 @@ function canonicalPlaceKey(value) {
     .replace(/[·\-—–()（）]/g, "");
 }
 
+const checklistCanonicalPlaces = [
+  { id: "cn-huangshan", aliases: ["黄山", "黄山风景区", "黄山 · 莲花峰 · 1864m"] },
+  { id: "cn-taishan", aliases: ["泰山", "泰山景区", "泰山 · 玉皇顶 · 1545m", "Mount Taishan"] },
+  { id: "cn-jiuzhaigou", aliases: ["九寨沟", "九寨沟风景名胜区", "九寨沟景区"] },
+  { id: "cn-huanglong", aliases: ["黄龙", "黄龙风景名胜区", "黄龙景区", "黄龙 · 五彩池 · 3576m"] },
+  { id: "cn-wulingyuan", aliases: ["武陵源", "武陵源风景名胜区", "张家界武陵源—天门山旅游区"] },
+  { id: "cn-chengde-mountain-resort", aliases: ["承德避暑山庄", "承德避暑山庄及周围寺庙", "承德避暑山庄及其周围寺庙", "承德避暑山庄及周围寺庙景区", "Mountain Resort and its Outlying Temples, Chengde"] },
+  { id: "cn-qufu-san-kong", aliases: ["曲阜三孔", "曲阜孔庙、孔林和孔府", "曲阜明故城（三孔）旅游区"] },
+  { id: "cn-wudangshan", aliases: ["武当山", "武当山古建筑群", "武当山风景区", "武当山 · 天柱峰 · 1612m"] },
+  { id: "cn-potala-palace", aliases: ["布达拉宫", "布达拉宫历史建筑群", "拉萨布达拉宫历史建筑群", "布达拉宫景区", "Historic Ensemble of the Potala Palace, Lhasa"] },
+  { id: "cn-lushan", aliases: ["庐山", "庐山国家公园", "庐山风景名胜区", "庐山 · 汉阳峰 · 1474m"] },
+  { id: "cn-emeishan-leshan", aliases: ["峨眉山-乐山大佛", "峨眉山—乐山大佛", "峨眉山乐山大佛", "峨眉山景区", "乐山大佛景区", "峨眉山 · 金顶 · 3079m", "Mount Emei Scenic Area, including Leshan Giant Buddha Scenic Area"] },
+  { id: "cn-lijiang-old-town", aliases: ["丽江古城", "丽江古城景区", "Old Town of Lijiang"] },
+  { id: "cn-pingyao", aliases: ["平遥古城", "平遥古城景区"] },
+  { id: "cn-suzhou-gardens", aliases: ["苏州古典园林", "苏州市园林", "Classical Gardens of Suzhou"] },
+  { id: "cn-summer-palace", aliases: ["颐和园", "颐和园景区"] },
+  { id: "cn-temple-of-heaven", aliases: ["天坛", "天坛公园"] },
+  { id: "cn-dazu-rock-carvings", aliases: ["大足石刻", "大足石刻景区"] },
+  { id: "cn-wuyishan", aliases: ["武夷山", "武夷山景区", "武夷山 · 黄岗山 · 2160m"] },
+  { id: "cn-qingcheng-dujiangyan", aliases: ["青城山-都江堰", "青城山—都江堰", "青城山都江堰", "青城山—都江堰旅游景区", "青城山都江堰旅游", "青城山", "都江堰景区", "青城山 · 老君阁/彭祖峰 · 1260m", "Mount Qingcheng and the Dujiangyan Irrigation System"] },
+  { id: "cn-wannan-villages", aliases: ["皖南古村落", "皖南古村落-西递、宏村", "皖南古村落西递宏村", "西递", "宏村"] },
+  { id: "cn-longmen-grottoes", aliases: ["龙门石窟", "龙门石窟景区"] },
+  { id: "cn-yungang-grottoes", aliases: ["云冈石窟", "云岗石窟", "云冈石窟景区", "Yungang Grottoes"] },
+  { id: "cn-sanqingshan", aliases: ["三清山", "三清山国家公园", "三清山风景名胜区", "三清山 · 玉京峰 · 1819m", "Mount Sanqingshan National Park"] },
+  { id: "cn-wutaishan", aliases: ["五台山", "五台山景区", "五台山 · 北台叶斗峰 · 3061m"] },
+  { id: "cn-dengfeng", aliases: ["登封天地之中古建筑群", "登封“天地之中”历史建筑群", "登封天地之中", "嵩山少林景区"] },
+  { id: "cn-west-lake", aliases: ["杭州西湖", "杭州西湖文化景观", "西湖", "西湖风景名胜区", "West Lake Cultural Landscape of Hangzhou"] },
+  { id: "cn-honghe-hani", aliases: ["红河哈尼梯田", "红河哈尼梯田景区"] },
+  { id: "cn-gulangyu", aliases: ["鼓浪屿", "鼓浪屿景区", "鼓浪屿风景名胜区", "Kulangsu, a Historic International Settlement"] },
+  { id: "cn-fanjingshan", aliases: ["梵净山", "梵净山景区", "Fanjingshan"] },
+  { id: "cn-danxiashan", aliases: ["丹霞山", "中国丹霞", "丹霞山景区"] },
+  { id: "cn-yandangshan", aliases: ["雁荡山", "雁荡山风景名胜区", "雁荡山 · 百岗尖 · 1108m"] },
+  { id: "cn-huashan", aliases: ["华山", "华山景区", "华山 · 南峰 · 2155m"] },
+  { id: "cn-yulong-snow-mountain", aliases: ["玉龙雪山", "玉龙雪山景区", "玉龙雪山 · 冰川公园平台 · 4680m"] },
+  { id: "cn-jiuhuashan", aliases: ["九华山", "九华山风景区", "九华山 · 十王峰 · 1342m"] },
+  { id: "cn-yinxu", aliases: ["殷墟", "殷墟景区", "Yin Xu"] },
+  { id: "es-teide", aliases: ["泰德国家公园", "Teide National Park", "泰德峰 · 缆车上站 · 3555m"] },
+  { id: "fr-reunion-pitons", aliases: ["留尼汪岛的山峰，冰斗和峭壁", "Pitons, cirques and remparts of Reunion Island", "内日峰 · 留尼汪步道终点 · 3070m"] },
+  { id: "us-yellowstone", aliases: ["黄石国家公园", "Yellowstone National Park"] },
+  { id: "us-grand-canyon", aliases: ["大峡谷国家公园", "Grand Canyon National Park"] },
+  { id: "us-yosemite", aliases: ["优胜美地国家公园", "Yosemite National Park"] },
+  { id: "us-redwood", aliases: ["红木国家公园", "红木国家和州立公园", "Redwood National Park", "Redwood National and State Parks"] },
+  { id: "us-everglades", aliases: ["大沼泽地国家公园", "Everglades National Park"] },
+  { id: "us-great-smoky-mountains", aliases: ["大烟山国家公园", "大烟雾山国家公园", "大烟雾山", "Great Smoky Mountains National Park", "Great Smoky Mountains"] },
+  { id: "us-mesa-verde", aliases: ["梅萨维德国家公园", "Mesa Verde National Park"] },
+  { id: "us-olympic", aliases: ["奥林匹克国家公园", "Olympic National Park"] },
+  { id: "us-mammoth-cave", aliases: ["猛犸洞国家公园", "猛玛洞穴国家公园", "Mammoth Cave National Park"] },
+  { id: "us-hawaii-volcanoes", aliases: ["夏威夷火山国家公园", "Hawaii Volcanoes National Park"] },
+  { id: "us-carlsbad-caverns", aliases: ["卡尔斯巴德洞窟国家公园", "Carlsbad Caverns National Park"] },
+  { id: "us-waterton-glacier", aliases: ["沃特顿-冰川国际和平公园", "冰川国家公园", "Glacier National Park", "Waterton-Glacier International Peace Park"] },
+];
+
+const checklistCanonicalAliasMap = new Map();
+checklistCanonicalPlaces.forEach((place) => {
+  place.aliases.forEach((alias) => {
+    const key = canonicalPlaceKey(alias);
+    if (key) checklistCanonicalAliasMap.set(key, place);
+  });
+});
+
+function checklistCanonicalPlaceForItem(item) {
+  const candidates = [
+    item,
+    cleanChecklistName(item),
+    englishNameInParentheses(item),
+    cleanEnglishParkName(englishNameInParentheses(item)),
+  ].filter(Boolean);
+  for (const candidate of candidates) {
+    const place = checklistCanonicalAliasMap.get(canonicalPlaceKey(candidate));
+    if (place) return place;
+  }
+  return null;
+}
+
+function checklistCanonicalKey(item) {
+  const place = checklistCanonicalPlaceForItem(item);
+  return place ? `place:${place.id}` : "";
+}
+
+function checklistCoordinateKeyFromCoords(coords) {
+  if (!coords || !Number.isFinite(coords[0]) || !Number.isFinite(coords[1])) return "";
+  return `coord:${Number(coords[0]).toFixed(5)},${Number(coords[1]).toFixed(5)}`;
+}
+
+function checklistCoordinateKeyForItem(key, item, context = null) {
+  if (key === "chinaAncientCapitals") return "";
+  const group = key === "china5a" ? (typeof context === "string" ? context : context?.unit || "") : "";
+  return checklistCoordinateKeyFromCoords(checklistCoordinateFor(item, group));
+}
+
+function checklistCoordinateKeyForPlace(place) {
+  return checklistCoordinateKeyFromCoords([place?.lat, place?.lng]);
+}
+
 function placeMatchesName(place, name) {
   const target = canonicalPlaceKey(name);
-  return canonicalPlaceKey(place.name) === target || canonicalPlaceKey(place.type) === target || place.checklist?.some((item) => canonicalPlaceKey(item) === target);
+  const sourceCanonical = checklistCanonicalKey(name);
+  const sourceCoordinate = checklistCoordinateKeyForItem("", name);
+  const placeCoordinate = checklistCoordinateKeyForPlace(place);
+  const placeKeys = [place.name, place.type, ...(place.checklist || [])].map(canonicalPlaceKey);
+  return placeKeys.includes(target)
+    || (sourceCanonical && [place.name, place.type, ...(place.checklist || [])].some((value) => checklistCanonicalKey(value) === sourceCanonical))
+    || (sourceCoordinate && placeCoordinate === sourceCoordinate);
 }
 
 function visitedChecklistKeys() {
@@ -4292,13 +4392,25 @@ function visitedChecklistKeys() {
     [place.name, place.type, ...(place.checklist || [])].forEach((value) => {
       const key = canonicalPlaceKey(value);
       if (key) keys.add(key);
+      const canonical = checklistCanonicalKey(value);
+      if (canonical) keys.add(canonical);
     });
+    const coordinateKey = checklistCoordinateKeyForPlace(place);
+    if (coordinateKey) keys.add(coordinateKey);
   });
   return keys;
 }
 
 function checklistMarkKeys() {
-  return new Set((state.checklistMarks || []).map((mark) => canonicalPlaceKey(mark.split(":").slice(1).join(":"))).filter(Boolean));
+  const keys = new Set();
+  (state.checklistMarks || []).forEach((mark) => {
+    const raw = mark.split(":").slice(1).join(":");
+    const key = canonicalPlaceKey(raw);
+    if (key) keys.add(key);
+    const canonical = raw.startsWith("place:") ? raw : checklistCanonicalKey(raw);
+    if (canonical) keys.add(canonical);
+  });
+  return keys;
 }
 
 function checklistStatusKeys() {
@@ -6814,18 +6926,21 @@ function checklistOverlayPlaces() {
     .flatMap((visit) => [
       canonicalPlaceKey(visit.place.name),
       visit.place.checklistKey ? checklistItemKey(visit.place.checklistKey, visit.place.name, visit.place) : "",
+      checklistCanonicalKey(visit.place.name),
     ].filter(Boolean)));
   const allOverlayItems = keys.flatMap(checklistOverlayEntriesFor);
-  const items = allOverlayItems.map(({ key, item, group, itemKey, legacyKey, title, subtitle }) => {
+  const rawItems = allOverlayItems.map(({ key, item, group, itemKey, legacyKey, title, subtitle }) => {
     const coords = checklistCoordinateFor(item, key === "china5a" ? group : "");
     if (!coords || !Number.isFinite(coords[0]) || !Number.isFinite(coords[1])) return null;
     const done = marked.has(itemKey)
       || visited.has(itemKey)
+      || (checklistCanonicalKey(item) && (marked.has(checklistCanonicalKey(item)) || visited.has(checklistCanonicalKey(item))))
       || (!ambiguous5a.has(legacyKey) && (marked.has(legacyKey) || visited.has(legacyKey)));
     if (seen.has(itemKey) && !done) return null;
     if (seen.has(legacyKey) && !done) return null;
     return { key, item, lat: coords[0], lng: coords[1], done, title, subtitle };
   }).filter(Boolean);
+  const items = mergeCanonicalChecklistOverlayItems(rawItems);
   checklistOverlayCache = {
     signature,
     items,
@@ -6833,6 +6948,57 @@ function checklistOverlayPlaces() {
   };
   logSlowStep("checklistOverlayPlaces", perfStartedAt);
   return items;
+}
+
+function mergeCanonicalChecklistOverlayItems(items) {
+  const merged = new Map();
+  items.forEach((entry) => {
+    const mergeKey = checklistMergeKeyForEntry(entry) || `${entry.key}:${canonicalPlaceKey(entry.item)}:${entry.lat.toFixed(5)},${entry.lng.toFixed(5)}`;
+    const categoryLabel = checklistLabel(entry.key, checklistCatalog[entry.key] || {});
+    if (!merged.has(mergeKey)) {
+      merged.set(mergeKey, { ...entry, categoryLabels: [categoryLabel] });
+      return;
+    }
+    const existing = merged.get(mergeKey);
+    existing.done = existing.done || entry.done;
+    existing.categoryLabels = Array.from(new Set([...(existing.categoryLabels || []), categoryLabel].filter(Boolean)));
+    existing.subtitle = existing.categoryLabels.join(" · ");
+  });
+  return Array.from(merged.values()).map(({ categoryLabels, ...entry }) => entry);
+}
+
+function checklistMergeKeyForEntry(entry) {
+  return checklistCanonicalKey(entry.item) || checklistCoordinateKeyForItem(entry.key, entry.item, entry.group || "") || "";
+}
+
+function relatedChecklistEntriesForItem(key, item, group = "") {
+  if (key === "chinaAncientCapitals") return [];
+  const targetKey = checklistMergeKeyForEntry({ key, item, group });
+  if (!targetKey) return [];
+  const keys = ["china5a", "usNationalParks", "worldHeritage", "chinaHighAltitude"];
+  const seen = new Set();
+  return keys.flatMap((catalogKey) => checklistOverlayEntriesFor(catalogKey))
+    .filter((entry) => checklistMergeKeyForEntry(entry) === targetKey)
+    .filter((entry) => {
+      const id = `${entry.key}:${entry.item}`;
+      if (seen.has(id)) return false;
+      seen.add(id);
+      return true;
+    });
+}
+
+function checklistRelatedDetailRows(key, item, group = "") {
+  const related = relatedChecklistEntriesForItem(key, item, group);
+  if (related.length < 2) return "";
+  const rowLabel = (zh, en) => currentLanguage === "en" ? en : zh;
+  const pairs = Array.from(new Set(related.map((entry) => {
+    const listLabel = checklistLabel(entry.key, checklistCatalog[entry.key] || {});
+    const itemLabel = entry.title || checklistItemDisplayName(entry.key, entry.item);
+    return [listLabel, itemLabel].filter(Boolean).join(" - ");
+  }).filter(Boolean)));
+  const chips = (values) => `<span class="tag-row map-detail-tags">${values.map((value) => `<span class="tag">${escapeHtml(value)}</span>`).join("")}</span>`;
+  return `
+      <div><dt>${rowLabel("关联条目", "Linked items")}</dt><dd>${chips(pairs)}</dd></div>`;
 }
 
 function ambiguousChecklistItemKeys(key) {
@@ -6954,11 +7120,12 @@ function renderChecklistMapDetail(key, item) {
   resetMapDetailClass();
   $("#mapDetail").innerHTML = `
     <p class="eyebrow">${checklistCatalog[key]?.label || t("checklistFallback")}</p>
-    <h3>${item}</h3>
+    <h3>${escapeHtml(checklistItemDisplayName(key, item))}</h3>
     <dl>
+      ${checklistRelatedDetailRows(key, item)}
       <div><dt>${t("status")}</dt><dd>${done ? t("checked") : t("unvisited")}</dd></div>
     </dl>
-    <button class="detail-action" data-checklist-map="${key}" data-item="${item}" type="button">${done ? t("unvisit") : t("markVisited")}</button>`;
+    <button class="detail-action" data-checklist-map="${escapeHtml(key)}" data-item="${escapeHtml(item)}" type="button">${done ? t("unvisit") : t("markVisited")}</button>`;
 }
 
 function renderAncientCapitalDetail(key, item, capitalMeta, done) {
@@ -9240,8 +9407,9 @@ function checklistItemsFor(key) {
 function isChecklistItemDone(key, item, group = "") {
   const itemKey = checklistItemKey(key, item, group);
   const legacyKey = canonicalPlaceKey(item);
+  const canonicalKey = checklistCanonicalKey(item);
   const { marked, visited } = checklistStatusKeys();
-  if (marked.has(itemKey) || visited.has(itemKey) || (!isAmbiguousChecklistItem(key, item) && (marked.has(legacyKey) || visited.has(legacyKey)))) return true;
+  if (marked.has(itemKey) || visited.has(itemKey) || (canonicalKey && (marked.has(canonicalKey) || visited.has(canonicalKey))) || (!isAmbiguousChecklistItem(key, item) && (marked.has(legacyKey) || visited.has(legacyKey)))) return true;
   if (key === "chinaHighAltitude") {
     const baseKey = canonicalPlaceKey(parseHighAltitudeItem(item).name);
     if (baseKey && (marked.has(baseKey) || visited.has(baseKey))) return true;
@@ -9256,6 +9424,10 @@ function checklistId(key, item, group = "") {
 function checklistItemKey(key, item, context = null) {
   const itemKey = canonicalPlaceKey(item);
   if (key === "chinaAncientCapitals") return ancientCapitalSiteKeyForItem(item) || itemKey;
+  const canonical = checklistCanonicalKey(item);
+  if (canonical) return canonical;
+  const coordinateKey = checklistCoordinateKeyForItem(key, item, context);
+  if (coordinateKey) return coordinateKey;
   if (key !== "china5a") return itemKey;
   const region = typeof context === "string" ? context : (context?.unit || checklistCoordinateFor(item)?.[2] || china5aRegionForItem(item));
   const regionKey = canonicalPlaceKey(region);
@@ -9342,14 +9514,19 @@ async function toggleChecklistItem(key, item, group = "") {
   const id = checklistId(key, item, group);
   const itemKey = checklistItemKey(key, item, group);
   const legacyKey = canonicalPlaceKey(item);
+  const canonicalKey = checklistCanonicalKey(item);
   const highAltitudeBaseKey = key === "chinaHighAltitude" ? canonicalPlaceKey(parseHighAltitudeItem(item).name) : "";
   const marks = new Set(state.checklistMarks || []);
   const wasDone = isChecklistItemDone(key, item, group);
   if (wasDone) {
     Array.from(marks).forEach((mark) => {
-      const markKey = canonicalPlaceKey(mark.split(":").slice(1).join(":"));
+      const markRawKey = mark.split(":").slice(1).join(":");
+      const markKey = canonicalPlaceKey(markRawKey);
       if (
-        markKey === itemKey
+        markRawKey === itemKey
+        || markKey === itemKey
+        || (canonicalKey && markRawKey === canonicalKey)
+        || (canonicalKey && markKey === canonicalKey)
         || (!isAmbiguousChecklistItem(key, item) && markKey === legacyKey)
         || (highAltitudeBaseKey && markKey === highAltitudeBaseKey)
       ) marks.delete(mark);
@@ -9377,8 +9554,10 @@ async function toggleChecklistItem(key, item, group = "") {
 
 function renderAfterChecklistChange(key, item, group = "") {
   invalidateMapPointRenderCache();
-  if (!refreshRenderedChecklistSectionMarkup(key)) updateChecklistButtonsForItem(key, item, group);
+  const refreshedSection = refreshRenderedChecklistSectionMarkup(key);
+  if (!refreshedSection || checklistCanonicalKey(item)) updateChecklistButtonsForItem(key, item, group);
   refreshRenderedChecklistStats(key, group);
+  refreshCanonicalChecklistStats(item);
   renderMetrics();
   renderDashboardAchievements();
   renderNextStops();
@@ -9408,21 +9587,26 @@ function updateChecklistButtonsForItem(key, item, group = "") {
   const done = isChecklistItemDone(key, item, group);
   const itemKey = checklistItemKey(key, item, group);
   const legacyKey = canonicalPlaceKey(item);
-  document.querySelectorAll(`[data-checklist="${key}"], [data-checklist-map="${key}"]`).forEach((button) => {
+  const canonicalKey = checklistCanonicalKey(item);
+  const selector = canonicalKey ? "[data-checklist], [data-checklist-map]" : `[data-checklist="${key}"], [data-checklist-map="${key}"]`;
+  document.querySelectorAll(selector).forEach((button) => {
+    const buttonChecklistKey = button.dataset.checklist || button.dataset.checklistMap || key;
     const buttonItem = button.dataset.item || "";
-    const buttonKey = checklistItemKey(key, buttonItem, button.dataset.group || "");
-    if (buttonKey !== itemKey && (!isAmbiguousChecklistItem(key, item) || canonicalPlaceKey(buttonItem) !== legacyKey)) return;
-    button.classList.toggle("done", done);
+    const buttonKey = checklistItemKey(buttonChecklistKey, buttonItem, button.dataset.group || "");
+    const linked = canonicalKey && buttonKey === canonicalKey;
+    if (buttonKey !== itemKey && !linked && (!isAmbiguousChecklistItem(key, item) || canonicalPlaceKey(buttonItem) !== legacyKey)) return;
+    const buttonDone = linked ? isChecklistItemDone(buttonChecklistKey, buttonItem, button.dataset.group || "") : done;
+    button.classList.toggle("done", buttonDone);
     const status = button.querySelector(".us-park-card-status");
     if (status) {
-      status.textContent = done ? t("checked") : t("unvisited");
+      status.textContent = buttonDone ? t("checked") : t("unvisited");
       return;
     }
     if (button.dataset.checklistMap) {
-      button.textContent = done ? t("unvisit") : t("markVisited");
+      button.textContent = buttonDone ? t("unvisit") : t("markVisited");
       return;
     }
-    button.textContent = done ? `${t("checked")} · ${checklistItemDisplayName(key, buttonItem)}` : checklistItemDisplayName(key, buttonItem);
+    button.textContent = buttonDone ? `${t("checked")} · ${checklistItemDisplayName(buttonChecklistKey, buttonItem)}` : checklistItemDisplayName(buttonChecklistKey, buttonItem);
   });
 }
 
@@ -9473,6 +9657,13 @@ function refreshRenderedChecklistStats(key, group = "") {
     const done = displayChecklistItems(key, items).filter((entry) => isChecklistItemDone(key, entry, group)).length;
     summaryCount.textContent = `${done}/${displayChecklistItems(key, items).length}`;
   }
+}
+
+function refreshCanonicalChecklistStats(item) {
+  if (!checklistCanonicalKey(item)) return;
+  ["china5a", "usNationalParks", "worldHeritage", "chinaHighAltitude"].forEach((linkedKey) => {
+    if (checklistCatalog[linkedKey]) refreshRenderedChecklistStats(linkedKey);
+  });
 }
 
 function refreshAncientCapitalEraStats() {
@@ -9634,14 +9825,16 @@ function cleanChecklistName(value) {
 
 function checklistCoordinateFor(item, group = "") {
   const lookup = checklistCoordinateLookup();
+  const canonical = checklistCanonicalPlaceForItem(item);
   const candidates = [
     item,
     cleanChecklistName(item),
     englishNameInParentheses(item),
     cleanEnglishParkName(englishNameInParentheses(item)),
+    ...(canonical?.aliases || []),
   ].filter(Boolean);
   const coords = candidates.map((name) => lookup.get(canonicalPlaceKey(name))).find(Boolean);
-  if (group && coords?.[2] && !sameAdminName(group, coords[2])) return null;
+  if (group && checklistCatalog.china5a?.byRegion?.[group] && coords?.[2] && !sameAdminName(group, coords[2])) return null;
   return coords;
 }
 
@@ -9660,6 +9853,15 @@ function checklistCoordinateLookup() {
     if (!name || !Array.isArray(coords)) return;
     const key = canonicalPlaceKey(name);
     if (key && !map.has(key)) map.set(key, coords);
+    const canonical = checklistCanonicalPlaceForItem(name);
+    canonical?.aliases?.forEach((alias) => {
+      const aliasKey = canonicalPlaceKey(alias);
+      if (aliasKey && !map.has(aliasKey)) map.set(aliasKey, coords);
+    });
+    if (canonical?.id) {
+      const canonicalKey = canonicalPlaceKey(`place:${canonical.id}`);
+      if (canonicalKey && !map.has(canonicalKey)) map.set(canonicalKey, coords);
+    }
   };
   Object.entries(checklistPlaceCoordinates || {}).forEach(([name, coords]) => add(name, coords));
   Object.entries(china5aCoordinates || {}).forEach(([name, coords]) => {
