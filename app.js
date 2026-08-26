@@ -6959,15 +6959,32 @@ function mergeCanonicalChecklistOverlayItems(items) {
     const mergeKey = checklistMergeKeyForEntry(entry) || `${entry.key}:${canonicalPlaceKey(entry.item)}:${entry.lat.toFixed(5)},${entry.lng.toFixed(5)}`;
     const categoryLabel = checklistLabel(entry.key, checklistCatalog[entry.key] || {});
     if (!merged.has(mergeKey)) {
-      merged.set(mergeKey, { ...entry, categoryLabels: [categoryLabel] });
+      merged.set(mergeKey, { ...entry, categoryLabels: [categoryLabel], displayPriority: checklistOverlayDisplayPriority(entry.key) });
       return;
     }
     const existing = merged.get(mergeKey);
     existing.done = existing.done || entry.done;
     existing.categoryLabels = Array.from(new Set([...(existing.categoryLabels || []), categoryLabel].filter(Boolean)));
     existing.subtitle = existing.categoryLabels.join(" · ");
+    const priority = checklistOverlayDisplayPriority(entry.key);
+    if (priority < (existing.displayPriority ?? 99)) {
+      existing.key = entry.key;
+      existing.item = entry.item;
+      existing.title = entry.title;
+      existing.displayPriority = priority;
+    }
   });
-  return Array.from(merged.values()).map(({ categoryLabels, ...entry }) => entry);
+  return Array.from(merged.values()).map(({ categoryLabels, displayPriority, ...entry }) => entry);
+}
+
+function checklistOverlayDisplayPriority(key) {
+  return {
+    china5a: 1,
+    usNationalParks: 1,
+    worldHeritage: 2,
+    chinaAncientCapitals: 3,
+    chinaHighAltitude: 4,
+  }[key] || 9;
 }
 
 function checklistMergeKeyForEntry(entry) {
