@@ -8941,6 +8941,7 @@ function ancientCapitalMergedMeta(meta) {
 function mapCheckinTitle(place) {
   const capitalMeta = ancientCapitalMetaForPlace(place);
   if (capitalMeta) return ancientCapitalMapTitle(capitalMeta);
+  if (place?.checklistKey) return checklistItemDisplayName(place.checklistKey, place.name);
   return place?.name || "";
 }
 
