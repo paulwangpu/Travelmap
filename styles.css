@@ -2146,6 +2146,7 @@ button:hover {
   min-width: 0;
   font-weight: 900;
   line-height: 1.25;
+  overflow-wrap: anywhere;
 }
 
 .us-park-card-sub {
@@ -2183,6 +2184,7 @@ button:hover {
   grid-template-columns: 1fr;
   background: #fbfaf4;
   align-items: start;
+  overflow: hidden;
 }
 
 .high-altitude-card:hover {
@@ -2276,6 +2278,7 @@ button:hover {
 
 .high-altitude-continent .high-altitude-grid {
   padding: 0 10px 10px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
 }
 
 .high-altitude-head {
@@ -2283,6 +2286,7 @@ button:hover {
   align-items: flex-start;
   justify-content: space-between;
   gap: 10px;
+  width: 100%;
   min-width: 0;
 }
 
@@ -2311,17 +2315,21 @@ button:hover {
 
 .high-altitude-facts {
   display: grid;
-  grid-template-columns: repeat(2, minmax(180px, 1fr));
-  gap: 7px 14px;
+  grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+  gap: 7px 10px;
   margin-top: 8px;
+  width: 100%;
   min-width: 0;
+  max-width: 100%;
 }
 
 .high-altitude-facts span {
   display: grid;
-  grid-template-columns: max-content minmax(0, 1fr);
-  gap: 6px;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 5px;
   min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
   align-items: baseline;
   font-size: 0.8rem;
   line-height: 1.25;
@@ -2338,6 +2346,7 @@ button:hover {
   color: var(--ink);
   font-style: normal;
   font-weight: 800;
+  overflow-wrap: anywhere;
 }
 
 .high-altitude-facts .wide {
