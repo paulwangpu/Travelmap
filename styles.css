@@ -14,6 +14,34 @@
   --shadow: 0 18px 45px rgba(26, 35, 31, 0.12);
 }
 
+/* Keep the compact first-row actions inside their assigned grid columns. */
+.map-control-panel .map-action-group .map-mode-toggle {
+  width: 100% !important;
+  min-width: 0 !important;
+  padding-inline: 6px !important;
+}
+
+/* Native selects otherwise keep an intrinsic width and spill into the 3D control. */
+.map-toolbar > .map-control-panel .map-provider-control,
+.map-toolbar > .map-control-panel .map-level-control,
+.map-toolbar > .map-control-panel .map-provider-control select,
+.map-toolbar > .map-control-panel .map-level-control select {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.map-toolbar > .map-control-panel .map-provider-control span,
+.map-toolbar > .map-control-panel .map-level-control span {
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -237,6 +265,10 @@ select {
   gap: 6px;
   flex: 0 0 auto;
   min-width: 0;
+}
+
+.map-action-group:has(#addMapPath) {
+  flex-wrap: wrap;
 }
 
 .map-add-point-button {
@@ -4968,22 +5000,266 @@ button:hover {
 
 .map-toolbar > .map-control-panel {
   display: grid !important;
-  grid-template-columns: minmax(108px, 1fr) minmax(108px, 1fr) auto auto !important;
+  position: relative;
+  grid-template-columns: 120px 100px minmax(224px, 1fr) !important;
   grid-template-areas:
-    "provider level actions actions"
-    "primary primary primary primary"
-    "features features features features" !important;
+    "provider level actions"
+    "primary primary primary"
+    "features features features" !important;
   gap: 6px !important;
   align-items: end !important;
   width: auto !important;
   min-width: 0 !important;
   max-width: min(470px, calc(100vw - 16px)) !important;
-  padding: 8px !important;
+  padding: 8px 32px 8px 8px !important;
   border: 1px solid rgba(23, 35, 31, 0.08) !important;
   border-radius: 8px !important;
   background: rgba(247, 250, 248, 0.94) !important;
   box-shadow: 0 8px 22px rgba(24, 32, 28, 0.12) !important;
   backdrop-filter: blur(12px);
+}
+
+.map-controls-toggle {
+  grid-area: toggle !important;
+  position: absolute;
+  top: 50%;
+  right: -1px;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 24px;
+  min-width: 24px;
+  height: 44px;
+  min-height: 44px;
+  padding: 0;
+  border: 1px solid rgba(23, 35, 31, 0.12);
+  border-radius: 8px 0 0 8px;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1.2;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+.map-controls-toggle::before {
+  content: "›";
+  display: block;
+  margin: 0;
+  font-size: 20px;
+  line-height: 42px;
+  text-indent: 0;
+}
+
+.map-control-panel.collapsed {
+  display: grid !important;
+  grid-template-columns: auto !important;
+  grid-template-areas: "toggle" !important;
+  width: auto !important;
+  padding: 6px !important;
+}
+
+.map-control-panel.collapsed > :not(.map-controls-toggle) {
+  display: none !important;
+}
+
+.map-control-panel.collapsed .map-controls-toggle::before {
+  content: "⌄";
+}
+
+.import-manager-toolbar {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) auto;
+  gap: 8px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+}
+
+.import-manager-toolbar input,
+.import-manager-toolbar select {
+  width: 100%;
+  min-height: 36px;
+  margin: 0;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #fff;
+  color: var(--ink);
+}
+
+.import-manager-group {
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #f8faf8;
+  overflow: clip;
+}
+
+.import-manager-group > summary {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px 12px;
+  list-style: none;
+}
+
+.import-manager-group > summary::-webkit-details-marker {
+  display: none;
+}
+
+.import-manager-group > summary::after {
+  content: "⌄";
+  color: var(--muted);
+  font-weight: 900;
+}
+
+.import-manager-group[open] > summary::after {
+  content: "⌃";
+}
+
+.import-manager-group > summary span {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.import-compact-list {
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+
+.import-compact-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(23, 35, 31, 0.08);
+  background: #fff;
+}
+
+.import-compact-row:last-child {
+  border-bottom: 0;
+}
+
+.import-compact-row > div:first-of-type {
+  min-width: 0;
+}
+
+.import-compact-row strong,
+.import-compact-row span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.import-compact-row span,
+.import-compact-row em {
+  color: var(--muted);
+  font-size: 11px;
+  font-style: normal;
+}
+
+.manual-path-row {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+}
+
+.manual-path-select {
+  display: flex;
+  align-items: center;
+}
+
+.compact-row-actions,
+.manual-path-bulk {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.manual-path-bulk {
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-top: 1px solid var(--line);
+  background: #f3f7f4;
+}
+
+.load-more-action {
+  width: 100%;
+  min-height: 38px;
+  border: 0;
+  border-top: 1px solid var(--line);
+  background: #fff;
+  color: var(--accent-dark);
+  font-weight: 900;
+}
+
+.import-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 7px 12px;
+  border-top: 1px solid var(--line);
+  background: #f7faf8;
+}
+
+.import-pagination span {
+  min-width: 90px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.import-group-note {
+  padding: 10px 12px 12px;
+  border-top: 1px solid var(--line);
+  background: #fff;
+}
+
+@media (max-width: 720px) {
+  .import-manager-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .manual-path-row {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .manual-path-row .compact-row-actions {
+    grid-column: 2;
+    flex-wrap: wrap;
+  }
+}
+
+.map-control-panel.collapsed .map-controls-toggle {
+  position: static;
+  transform: none;
+  width: auto;
+  height: auto;
+  min-height: 24px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  text-indent: 0;
+}
+
+.map-control-panel.collapsed .map-controls-toggle::before {
+  content: "⌄";
+  display: inline;
+  margin-right: 4px;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .map-control-panel .map-provider-control,
@@ -5010,16 +5286,24 @@ button:hover {
 .map-action-group {
   grid-area: actions !important;
   display: grid !important;
-  grid-template-columns: auto auto !important;
+  grid-template-columns: 48px 82px 82px !important;
   align-items: center !important;
-  justify-content: flex-start !important;
+  justify-content: flex-end !important;
   gap: 6px !important;
   min-width: 0 !important;
   overflow: visible !important;
 }
 
 .map-action-group .map-add-point-button {
-  min-width: 100px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  padding-inline: 8px !important;
+}
+
+.map-action-group .map-mode-toggle {
+  width: 100% !important;
+  min-width: 0 !important;
+  padding-inline: 6px !important;
 }
 
 .map-control-panel .map-provider-control span,
@@ -5029,6 +5313,9 @@ button:hover {
   font-size: 11px !important;
   font-weight: 900 !important;
   line-height: 1 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
 }
 
 .map-control-panel .map-provider-control select,
@@ -5488,11 +5775,11 @@ button:hover {
 
   .map-toolbar > .map-control-panel {
     display: grid !important;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto auto !important;
+    grid-template-columns: 120px 100px minmax(0, 1fr) !important;
     grid-template-areas:
-      "provider level actions actions"
-      "primary primary primary primary"
-      "features features features features" !important;
+      "provider level actions"
+      "primary primary primary"
+      "features features features" !important;
     grid-auto-rows: auto !important;
     gap: 5px !important;
     max-width: min(470px, calc(100vw - 12px)) !important;
@@ -5512,9 +5799,9 @@ button:hover {
   .map-action-group {
     grid-area: actions !important;
     display: grid !important;
-    grid-template-columns: auto auto !important;
+    grid-template-columns: 48px 82px 82px !important;
     align-items: stretch !important;
-    justify-content: flex-start !important;
+    justify-content: flex-end !important;
     gap: 6px !important;
     min-width: 0 !important;
     overflow: visible !important;
@@ -5528,7 +5815,7 @@ button:hover {
 
   .map-mode-toggle {
     width: auto !important;
-    min-width: 72px !important;
+    min-width: 0 !important;
     height: 32px !important;
     min-height: 32px !important;
     padding: 5px 9px !important;
@@ -5537,8 +5824,8 @@ button:hover {
   }
 
   .map-control-panel .map-add-point-button {
-    width: auto !important;
-    min-width: 100px !important;
+    width: 100% !important;
+    min-width: 0 !important;
     height: 32px !important;
     min-height: 32px !important;
     padding: 5px 13px !important;
@@ -5568,19 +5855,19 @@ button:hover {
 
 @media (max-width: 520px) {
   .map-toolbar > .map-control-panel {
-    grid-template-columns: 124px 124px !important;
+    grid-template-columns: 120px 100px minmax(0, 1fr) !important;
     grid-template-areas:
-      "provider level"
-      "actions actions"
-      "primary primary"
-      "features features" !important;
-    width: max-content !important;
+      "provider level actions"
+      "primary primary primary"
+      "features features features" !important;
+    width: min(470px, calc(100vw - 12px)) !important;
     max-width: calc(100vw - 12px) !important;
   }
 
   .map-action-group {
-    grid-template-columns: max-content max-content !important;
-    justify-content: start !important;
+    grid-template-columns: 48px 82px 82px !important;
+    width: 100% !important;
+    justify-content: end !important;
     overflow: visible !important;
   }
 
@@ -5601,4 +5888,45 @@ button:hover {
     overflow: visible !important;
     text-overflow: clip !important;
   }
+}
+
+/* Final map-control layout: keep the collapse action in the main control row. */
+.map-toolbar > .map-control-panel:not(.collapsed) {
+  grid-template-columns: 120px 100px minmax(224px, 1fr) !important;
+  grid-template-areas:
+    "provider level actions"
+    "primary primary primary"
+    "features features features" !important;
+  max-width: min(530px, calc(100vw - 16px)) !important;
+  padding: 8px !important;
+}
+
+.map-control-panel:not(.collapsed) .map-controls-toggle {
+  position: absolute;
+  top: 2px;
+  right: 8px;
+  transform: none;
+  width: auto;
+  min-width: 0;
+  height: 20px;
+  min-height: 20px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  line-height: 14px;
+  text-indent: 0;
+}
+
+.map-control-panel:not(.collapsed) .map-action-group {
+  grid-template-columns: 48px minmax(0, 1fr) minmax(0, 1fr) !important;
+  width: 100% !important;
+  justify-content: stretch !important;
+}
+
+.map-control-panel:not(.collapsed) .map-controls-toggle::before {
+  content: none;
+}
+
+.map-toolbar > .map-control-panel.collapsed {
+  padding: 6px !important;
 }

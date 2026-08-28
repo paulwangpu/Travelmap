@@ -35,7 +35,7 @@
             <strong data-i18n="privacyTitle">本地保存</strong>
             <p data-i18n="privacyText">数据只保存在本机浏览器里，不会自动上传或公开。如需备份请导出。</p>
           </div>
-          <div class="app-version" id="appVersion">v1.9.3</div>
+          <div class="app-version" id="appVersion">v1.9.4</div>
         </div>
       </aside>
 
@@ -48,6 +48,7 @@
             </div>
 
             <section class="map-control-panel" aria-label="地图显示">
+              <button id="toggleMapControls" class="map-controls-toggle" type="button" aria-expanded="true" data-i18n="hideMapControls">收起</button>
               <label class="map-provider-control">
                 <span data-i18n="mapProvider">底图</span>
                 <select id="mapProvider">
@@ -74,9 +75,10 @@
               <div class="map-action-group">
                 <label class="map-mode-toggle">
                   <input id="show3dMap" type="checkbox" />
-                  <span data-i18n="overlay3d">3D 地球</span>
+                  <span data-i18n="overlay3d">3D</span>
                 </label>
-                <button id="addMapPoint" class="map-add-point-button" type="button" data-i18n="addMapPoint">添加打卡点</button>
+                <button id="addMapPoint" class="map-add-point-button" type="button" data-i18n="addMapPointCompact">添加打卡</button>
+                <button id="addMapPath" class="map-add-point-button" type="button" data-i18n="addMapPathCompact">添加路径</button>
               </div>
               <div class="map-overlay-toggles map-primary-overlays">
                 <label><input id="showLightOnMap" type="checkbox" checked /> <span data-i18n="overlayLight">我的点亮</span></label>

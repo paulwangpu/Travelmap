@@ -11,10 +11,11 @@ const depthColors = {
 
 const storageKey = "travel-map-state-v1";
 const languageStorageKey = "travel-map-language";
+const mapControlsStorageKey = "travel-map-controls-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "1.9.3";
+const appVersion = "1.9.4";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
@@ -114,7 +115,18 @@ let checklistCoordinateLookupCache = { china5a: null, ancientCapitals: null, hig
 let derivedStatsRevision = 0;
 let dashboardStatsCache = { signature: "", stats: null };
 let mapAddMode = false;
+let mapPathMode = false;
 let pendingMapClickPoint = null;
+let pendingMapPath = [];
+let mapControlsCollapsed = localStorage.getItem(mapControlsStorageKey) === "1";
+let importManagerQuery = "";
+let importManagerSort = "newest";
+let manualCheckinPage = 0;
+let manualPathPage = 0;
+const importManagerPageSize = 20;
+let importManagerSearchTimer = null;
+const selectedManualCheckinIds = new Set();
+const selectedManualPathIds = new Set();
 let highAltitudeFilters = { threeMountains: true, fiveMountains: true, buddhistMountains: true, taoistMountains: true, other: true };
 const manualAirportCatalog = [
   ["北京首都", "PEK", "北京", "cn", 40.0799, 116.6031, ["北京首都国际"]],
@@ -276,11 +288,13 @@ const translations = {
     overlayCheckins: "我的打卡",
     overlayTracks: "我的轨迹",
     overlayFlights: "我的航线",
-    overlay3d: "3D 地球",
+    overlay3d: "3D",
     overlay5a: "5A/国家公园",
     overlayAncientCapitals: "中国古都",
     overlayHeritage: "世界遗产",
     overlayHighAltitude: "高海拔挑战",
+    hideMapControls: "收起",
+    showMapControls: "地图设置",
     selectionEyebrow: "选择对象",
     mapDetailTitle: "地图详情",
     mapDetailHelp: "点击地图上的点、国家或行政区查看证据。",
@@ -357,7 +371,18 @@ const translations = {
     markedToast: "已标记为去过",
     unmarkedToast: "已取消去过",
     addMapPoint: "添加打卡点",
+    addMapPointCompact: "添加打卡",
     addingMapPoint: "点击地图空白处添加打卡点",
+    addMapPath: "添加路径",
+    addMapPathCompact: "添加路径",
+    addingMapPath: "依次点击地图添加路径节点",
+    mapPathName: "路径名称",
+    mapPathHint: "继续点击地图添加节点（至少 2 个）",
+    mapPathPoints: "节点数",
+    undoMapPathPoint: "撤销上一点",
+    saveMapPath: "保存路径",
+    cancelMapPath: "取消",
+    mapPathAdded: "路径已添加",
     mapPointName: "打卡点名称",
     saveMapPoint: "保存打卡点",
     cancelMapPoint: "取消",
@@ -402,11 +427,13 @@ const translations = {
     overlayCheckins: "My check-ins",
     overlayTracks: "My tracks",
     overlayFlights: "My flights",
-    overlay3d: "3D globe",
+    overlay3d: "3D",
     overlay5a: "5A / National Parks",
     overlayAncientCapitals: "Ancient Chinese Capitals",
     overlayHeritage: "World Heritage",
     overlayHighAltitude: "High-altitude challenge",
+    hideMapControls: "Collapse",
+    showMapControls: "Map controls",
     selectionEyebrow: "Selection",
     mapDetailTitle: "Map details",
     mapDetailHelp: "Click a place, country, or administrative unit on the map to view evidence.",
@@ -483,7 +510,18 @@ const translations = {
     markedToast: "marked visited",
     unmarkedToast: "unmarked",
     addMapPoint: "Add Check-in Point",
+    addMapPointCompact: "Add check-in",
     addingMapPoint: "Click an empty spot on the map to add a check-in point",
+    addMapPath: "Add Path",
+    addMapPathCompact: "Add path",
+    addingMapPath: "Click the map to add path vertices in order",
+    mapPathName: "Path name",
+    mapPathHint: "Keep clicking the map to add vertices (at least 2)",
+    mapPathPoints: "Vertices",
+    undoMapPathPoint: "Undo last vertex",
+    saveMapPath: "Save path",
+    cancelMapPath: "Cancel",
+    mapPathAdded: "Path added",
     mapPointName: "Check-in point name",
     saveMapPoint: "Save point",
     cancelMapPoint: "Cancel",
@@ -2080,7 +2118,7 @@ const chinaProvinceImageryCatalog = [
   ["海南", "琼", "活力自贸港 魅力海南岛", "Vibrant free trade port, charming Hainan Island"],
   ["重庆", "渝", "雄奇山水 新韵重庆", "Majestic landscapes, new Chongqing charm"],
   ["四川", "川", "锦绣天府 安逸四川", "Splendid Tianfu, easygoing Sichuan"],
-  ["贵州", "黔", "山地公园省，多彩贵州风", "Mountain park province, colorful Guizhou style"],
+  ["贵州", "黔", "走遍大地神州，醉美多彩贵州", "Travel across China, discover enchanting Colorful Guizhou"],
   ["云南", "滇", "有一种叫云南的生活", "A lifestyle called Yunnan"],
   ["西藏", "藏", "圣洁西藏", "Sacred Tibet"],
   ["陕西", "秦", "三秦四季 畅旅欢歌", "Four seasons in Shaanxi, joyful journeys"],
@@ -4986,11 +5024,82 @@ function resetMapDetailClass() {
 
 function setMapAddMode(enabled) {
   mapAddMode = Boolean(enabled);
+  if (mapAddMode) setMapPathMode(false, false);
   pendingMapClickPoint = null;
   $("#addMapPoint")?.classList.toggle("active", mapAddMode);
   $("#leafletMap")?.classList.toggle("adding-map-point", mapAddMode);
   if (mapLibreMap) mapLibreMap.getCanvas().style.cursor = mapAddMode ? "crosshair" : "";
   if (mapAddMode) showToast(t("addingMapPoint"));
+}
+
+function setMapPathMode(enabled, announce = true) {
+  mapPathMode = Boolean(enabled);
+  if (!mapPathMode) pendingMapPath = [];
+  if (mapPathMode) {
+    mapAddMode = false;
+    pendingMapClickPoint = null;
+  }
+  $("#addMapPoint")?.classList.toggle("active", mapAddMode);
+  $("#addMapPath")?.classList.toggle("active", mapPathMode);
+  $("#leafletMap")?.classList.toggle("adding-map-point", mapAddMode || mapPathMode);
+  if (mapLibreMap) mapLibreMap.getCanvas().style.cursor = mapAddMode || mapPathMode ? "crosshair" : "";
+  if (mapPathMode && announce) showToast(t("addingMapPath"));
+}
+
+function mapPathDefaultName() {
+  const date = new Date().toISOString().slice(0, 10);
+  return currentLanguage === "en" ? `Map path ${date}` : `地图路径 ${date}`;
+}
+
+function openMapPathForm() {
+  $("#mapDetail").classList.remove("hidden");
+  resetMapDetailClass();
+  const existingName = $("#mapPathForm input[name='name']")?.value || mapPathDefaultName();
+  $("#mapDetail").innerHTML = `
+    <p class="eyebrow">${t("addMapPath")}</p>
+    <h3>${t("mapPathHint")}</h3>
+    <form class="map-point-form" id="mapPathForm">
+      <label><span>${t("mapPathName")}</span><input name="name" type="text" value="${escapeHtml(existingName)}" /></label>
+      <dl><div><dt>${t("mapPathPoints")}</dt><dd>${pendingMapPath.length}</dd></div></dl>
+      <div class="map-point-actions">
+        <button class="detail-action secondary-action" data-undo-map-path="1" type="button" ${pendingMapPath.length ? "" : "disabled"}>${t("undoMapPathPoint")}</button>
+        <button class="detail-action" type="submit" ${pendingMapPath.length >= 2 ? "" : "disabled"}>${t("saveMapPath")}</button>
+        <button class="detail-action secondary-action" data-cancel-map-path="1" type="button">${t("cancelMapPath")}</button>
+      </div>
+    </form>`;
+}
+
+function refreshMapPathPreview() {
+  invalidateMapGeoJsonCacheOnly();
+  if (mapLibreMap?.getSource("imported-paths")) mapLibreMap.getSource("imported-paths").setData(importedPathGeoJson());
+  else if (!mapLibreMap && leafletMap) renderGeoMap();
+}
+
+function addMapPathVertex(lng, lat) {
+  pendingMapPath.push(mapStorageCoordinateFromClick(lng, lat));
+  ensureTrackOverlayVisible();
+  openMapPathForm();
+  refreshMapPathPreview();
+}
+
+function saveMapPath(name) {
+  if (pendingMapPath.length < 2) return;
+  const finalName = String(name || "").trim() || mapPathDefaultName();
+  const geometry = { type: "LineString", coordinates: pendingMapPath.map((point) => [...point]) };
+  setMapPathMode(false, false);
+  importPlaces([normalizeImportedPlace({
+    name: finalName,
+    country: "imported",
+    unit: currentLanguage === "en" ? "Drawn paths" : "手绘路径",
+    type: currentLanguage === "en" ? "Drawn path" : "手绘路径",
+    geometryType: "LineString",
+    importedGeometry: geometry,
+    shapeOnly: true,
+    sourceType: "manual-path",
+    tags: [currentLanguage === "en" ? "Map drawing" : "地图绘制"],
+  })], "drawn", finalName, 0);
+  closeMapPopupsAndDetail();
+  showToast(`${finalName} ${t("mapPathAdded")}`);
 }
 
 function mapClickPointName() {
@@ -5109,6 +5218,10 @@ async function createMapClickCheckin({ name, lng, lat }) {
 
 function handleMapCanvasClick(lng, lat, originalEvent = null) {
   if (originalEvent?._travelMapHandled) return;
+  if (mapPathMode) {
+    addMapPathVertex(lng, lat);
+    return;
+  }
   if (!mapAddMode) {
     closeMapPopupsAndDetail();
     return;
@@ -6093,10 +6206,14 @@ function importedShapeGeoJson() {
 }
 
 function importedPathGeoJson() {
+  const features = importedShapeGeoJson().features
+    .filter((feature) => ["LineString", "MultiLineString"].includes(feature.geometry?.type));
+  if (mapPathMode && pendingMapPath.length >= 2) {
+    features.push({ type: "Feature", properties: { name: t("addMapPath"), draft: true }, geometry: { type: "LineString", coordinates: pendingMapPath.map((point) => [...point]) } });
+  }
   return {
     type: "FeatureCollection",
-    features: importedShapeGeoJson().features
-      .filter((feature) => ["LineString", "MultiLineString"].includes(feature.geometry?.type)),
+    features,
   };
 }
 
@@ -7784,7 +7901,7 @@ function bindMapLibreLayerHandlers() {
   if (!mapLibreLayerHandlersBound.country && mapLibreMap.getLayer("country-click-fill")) {
     mapLibreLayerHandlersBound.country = true;
     mapLibreMap.on("click", "country-click-fill", (event) => {
-      if (mapAddMode) return;
+      if (mapAddMode || mapPathMode) return;
       if (event.originalEvent?._travelMapHandled || mapEventHitsPoint(event)) return;
       markMapEventHandled(event);
       const feature = event.features?.[0];
@@ -7800,7 +7917,7 @@ function bindMapLibreLayerHandlers() {
   if (!mapLibreLayerHandlersBound.admin && mapLibreMap.getLayer("visited-regions-fill")) {
     mapLibreLayerHandlersBound.admin = true;
     mapLibreMap.on("click", "visited-regions-fill", (event) => {
-      if (mapAddMode) return;
+      if (mapAddMode || mapPathMode) return;
       if (event.originalEvent?._travelMapHandled || mapEventHitsPoint(event)) return;
       markMapEventHandled(event);
       const feature = event.features?.[0];
@@ -7816,7 +7933,7 @@ function bindMapLibreLayerHandlers() {
   if (!mapLibreLayerHandlersBound.subadmin && mapLibreMap.getLayer("visited-subadmin-fill")) {
     mapLibreLayerHandlersBound.subadmin = true;
     mapLibreMap.on("click", "visited-subadmin-fill", (event) => {
-      if (mapAddMode) return;
+      if (mapAddMode || mapPathMode) return;
       if (event.originalEvent?._travelMapHandled || mapEventHitsPoint(event)) return;
       markMapEventHandled(event);
       const feature = event.features?.[0];
@@ -7989,7 +8106,7 @@ function renderLeafletLayers() {
       style: () => ({ color: "transparent", weight: 0, fillColor: "#ffffff", fillOpacity: 0.01 }),
       onEachFeature: (feature, layer) => {
         layer.on("click", (event) => {
-          if (mapAddMode) return;
+          if (mapAddMode || mapPathMode) return;
           if (event.originalEvent) event.originalEvent._travelMapHandled = true;
           renderCountryDetail(feature.properties.id);
         });
@@ -8000,7 +8117,7 @@ function renderLeafletLayers() {
       style: leafletBoundaryStyle,
       onEachFeature: (feature, layer) => {
         layer.on("click", (event) => {
-          if (mapAddMode) return;
+          if (mapAddMode || mapPathMode) return;
           if (event.originalEvent) event.originalEvent._travelMapHandled = true;
           renderCountryDetail(feature.properties.id);
         });
@@ -8014,7 +8131,7 @@ function renderLeafletLayers() {
       style: (feature) => boundaryIndex ? { ...leafletBoundaryStyle(feature), weight: 0, opacity: 0 } : leafletBoundaryStyle(feature),
       onEachFeature: (feature, layer) => {
         layer.on("click", (event) => {
-          if (mapAddMode) return;
+          if (mapAddMode || mapPathMode) return;
           if (event.originalEvent) event.originalEvent._travelMapHandled = true;
           handleAdminRegionClick(feature);
         });
@@ -8051,7 +8168,7 @@ function renderLeafletLayers() {
         style: (feature) => ({ ...leafletBoundaryStyle(feature), weight: 0.55 }),
         onEachFeature: (feature, layer) => {
           layer.on("click", (event) => {
-            if (mapAddMode) return;
+            if (mapAddMode || mapPathMode) return;
             if (event.originalEvent) event.originalEvent._travelMapHandled = true;
             handleAdminRegionClick(feature);
           });
@@ -8879,23 +8996,89 @@ function renderCoverage() {
   }).join("");
 }
 
+function isManualDrawnPath(place, fileById = null) {
+  if (!place?.shapeOnly) return false;
+  if (place.sourceType === "manual-path") return true;
+  const record = fileById?.get(place.importId);
+  if (String(record?.format || "").toUpperCase() === "DRAWN") return true;
+  const text = [place.type, place.unit, ...(place.tags || [])].join(" ").toLowerCase();
+  return /手绘路径|地图绘制|drawn path|map drawing/.test(text);
+}
+
+function importManagerDate(value, en) {
+  return value ? new Date(value).toLocaleString(en ? "en-US" : "zh-CN") : (en ? "Imported" : "已导入");
+}
+
+function renderImportPagination(type, page, pageCount, en) {
+  return `<nav class="import-pagination" aria-label="${en ? "Pagination" : "分页"}">
+    <button class="table-action" data-import-page="${type}" data-page-delta="-1" type="button" ${page <= 0 ? "disabled" : ""}>${en ? "Previous" : "上一页"}</button>
+    <span>${en ? `Page ${page + 1} of ${pageCount}` : `第 ${page + 1} / ${pageCount} 页`}</span>
+    <button class="table-action" data-import-page="${type}" data-page-delta="1" type="button" ${page >= pageCount - 1 ? "disabled" : ""}>${en ? "Next" : "下一页"}</button>
+  </nav>`;
+}
+
 function renderImportSummary() {
-  const files = state.importedFiles || [];
-  const flightFiles = state.flightImports || [];
-  const nonImportedVisits = visitedPlaces().filter((visit) => !visit.place.imported && !visit.place.importId && !visit.place.sourceFile);
+  const target = $("#importSummary");
+  if (!target) return;
+  const openGroups = new Set(Array.from(target.querySelectorAll("[data-import-group]"))
+    .filter((details) => details.open).map((details) => details.dataset.importGroup));
   const en = currentLanguage === "en";
+  const files = state.importedFiles || [];
+  const fileById = new Map(files.map((file) => [file.id, file]));
+  const manualPaths = places.filter((place) => isManualDrawnPath(place, fileById));
+  const manualImportIds = new Set(manualPaths.map((place) => place.importId).filter(Boolean));
+  const regularFiles = files.filter((file) => String(file.format || "").toUpperCase() !== "DRAWN" && !manualImportIds.has(file.id));
+  const flightFiles = state.flightImports || [];
+  const manualCheckinVisits = visitedPlaces().filter((visit) => visit.tripId === "map-click" || visit.place.id?.startsWith("map-click-"));
+  const manualCheckinIds = new Set(manualCheckinVisits.map((visit) => visit.place.id));
+  const manualCheckins = manualCheckinVisits.map((visit) => ({ ...visit.place, manualUpdatedAt: visit.updatedAt || visit.date || "" }));
+  const nonImportedVisits = visitedPlaces().filter((visit) => !manualCheckinIds.has(visit.place.id) && !visit.place.imported && !visit.place.importId && !visit.place.sourceFile);
   const importedObjectCount = places.filter(isImportedObject).length + (state.flights || []).length;
-  const fileCards = files.map((file, index) => `<article class="check-item import-batch-card"><header><strong>${file.name}</strong><span>${file.count} ${en ? "items" : "条"}</span></header><p class="muted">${file.format} · ${file.importedAt ? new Date(file.importedAt).toLocaleString(en ? "en-US" : "zh-CN") : (en ? "Imported" : "已导入")}</p><button class="text-action" data-delete-import="${file.id || ""}" data-import-index="${index}" type="button">${en ? "Delete this import" : "删除这批导入"}</button></article>`).join("");
-  const flightCards = flightFiles.map((file) => `<article class="check-item import-batch-card"><header><strong>${file.name}</strong><span>${file.count} ${en ? "new flights" : "条新增航班"}</span></header><p class="muted">${file.format || "XLS"} · ${file.total || file.count} ${en ? "parsed" : "条解析"} · ${file.duplicates || 0} ${en ? "duplicates" : "条重复"} · ${file.unrecognized || 0} ${en ? "unmapped airports" : "条机场未识别"} · ${file.importedAt ? new Date(file.importedAt).toLocaleString(en ? "en-US" : "zh-CN") : (en ? "Imported" : "已导入")}</p><button class="text-action" data-delete-flight-import="${file.id || ""}" type="button">${en ? "Delete this flight import" : "删除这批航班"}</button></article>`).join("");
-  $("#importSummary").innerHTML = files.length || flightFiles.length
-    ? `<article class="check-item import-management-card"><header><strong>${en ? "All imported data" : "全部导入数据"}</strong><span>${importedObjectCount} ${en ? "objects" : "个对象"}</span></header><p class="muted">${en ? "Deletes imported places, imported tracks, and imported flights. Checklist and manual light-up data are kept." : "删除所有已导入地点、已导入轨迹和已导入航班；打卡清单与手动点亮会保留。"}</p><button class="text-action" data-delete-all-imports="1" type="button">${en ? "Delete all imports" : "删除全部导入"}</button></article>${fileCards}${flightCards}`
-    : `<p class="muted">${en ? "No imported files yet. Imported places, tracks, and flights will appear here." : "还没有导入文件。已导入地点、轨迹和航班会显示在这里。"}</p>`;
-  $("#importSummary").insertAdjacentHTML("beforeend", `
-    <article class="check-item import-management-card">
-      <header><strong>${en ? "Light-up / checklist data" : "点亮/打卡数据"}</strong><span>${nonImportedVisits.length} ${en ? "records" : "条"}</span></header>
-      <p class="muted">${en ? "Clears manual countries, manual administrative units, map-click points, and checklist marks. Imported files and tracks are kept." : "清除手动国家、手动行政区、地图点击点和打卡清单；导入文件和轨迹会保留。"}</p>
-      <button class="text-action" data-clear-checkins="1" type="button">${en ? "Clear light-up / checklist points" : "清除点亮/打卡点"}</button>
-    </article>`);
+  const query = importManagerQuery.trim().toLocaleLowerCase();
+  const matches = (...values) => !query || values.some((value) => String(value || "").toLocaleLowerCase().includes(query));
+  const dateValue = (item) => item.importedAt || "";
+  const sortItems = (items, nameFn = (item) => item.name) => [...items].sort((left, right) => {
+    if (importManagerSort === "oldest") return dateValue(left).localeCompare(dateValue(right));
+    if (importManagerSort === "name") return String(nameFn(left) || "").localeCompare(String(nameFn(right) || ""), currentLanguage === "en" ? "en" : "zh-CN");
+    return dateValue(right).localeCompare(dateValue(left));
+  });
+  const filteredFiles = sortItems(regularFiles.filter((file) => matches(file.name, file.format)));
+  const filteredFlights = sortItems(flightFiles.filter((file) => matches(file.name, file.format)));
+  const filteredCheckins = sortItems(manualCheckins.filter((place) => matches(place.name, place.type)), (place) => place.name)
+    .sort((left, right) => importManagerSort === "name" ? left.name.localeCompare(right.name, en ? "en" : "zh-CN") : importManagerSort === "oldest" ? (left.manualUpdatedAt || "").localeCompare(right.manualUpdatedAt || "") : (right.manualUpdatedAt || "").localeCompare(left.manualUpdatedAt || ""));
+  const filteredPaths = sortItems(manualPaths.filter((place) => matches(place.name, place.type)));
+  const checkinPageCount = Math.max(1, Math.ceil(filteredCheckins.length / importManagerPageSize));
+  const pathPageCount = Math.max(1, Math.ceil(filteredPaths.length / importManagerPageSize));
+  manualCheckinPage = Math.min(manualCheckinPage, checkinPageCount - 1);
+  manualPathPage = Math.min(manualPathPage, pathPageCount - 1);
+  const visibleCheckins = filteredCheckins.slice(manualCheckinPage * importManagerPageSize, (manualCheckinPage + 1) * importManagerPageSize);
+  const visiblePaths = filteredPaths.slice(manualPathPage * importManagerPageSize, (manualPathPage + 1) * importManagerPageSize);
+  const allVisibleCheckinsSelected = visibleCheckins.length > 0 && visibleCheckins.every((place) => selectedManualCheckinIds.has(place.id));
+  const allVisiblePathsSelected = visiblePaths.length > 0 && visiblePaths.every((place) => selectedManualPathIds.has(place.id));
+  const fileRows = filteredFiles.map((file) => {
+    const index = files.indexOf(file);
+    return `<div class="import-compact-row"><div><strong>${escapeHtml(file.name)}</strong><span>${escapeHtml(file.format || "")} · ${escapeHtml(importManagerDate(file.importedAt, en))}</span></div><em>${file.count || 0} ${en ? "items" : "条"}</em><button class="table-action danger" data-delete-import="${escapeHtml(file.id || "")}" data-import-index="${index}" type="button">${en ? "Delete" : "删除"}</button></div>`;
+  }).join("");
+  const pathRows = visiblePaths.map((place) => `<div class="import-compact-row manual-path-row">
+    <label class="manual-path-select"><input type="checkbox" data-select-manual-path="${escapeHtml(place.id)}" ${selectedManualPathIds.has(place.id) ? "checked" : ""} /><span></span></label>
+    <div><strong>${escapeHtml(place.name)}</strong><span>${escapeHtml(importManagerDate(place.importedAt, en))} · ${escapeHtml(place.importedGeometry?.type || "LineString")}</span></div>
+    <div class="compact-row-actions"><button class="table-action" data-locate-manual-path="${escapeHtml(place.id)}" type="button">${en ? "Locate" : "定位"}</button><button class="table-action" data-rename-manual-path="${escapeHtml(place.id)}" type="button">${en ? "Rename" : "重命名"}</button><button class="table-action danger" data-delete-inventory-object="${escapeHtml(place.id)}" type="button">${en ? "Delete" : "删除"}</button></div>
+  </div>`).join("");
+  const checkinRows = visibleCheckins.map((place) => `<div class="import-compact-row manual-path-row">
+    <label class="manual-path-select"><input type="checkbox" data-select-manual-checkin="${escapeHtml(place.id)}" ${selectedManualCheckinIds.has(place.id) ? "checked" : ""} /><span></span></label>
+    <div><strong>${escapeHtml(place.name)}</strong><span>${escapeHtml(importManagerDate(place.manualUpdatedAt, en))} · ${Number(place.lat).toFixed(5)}, ${Number(place.lng).toFixed(5)}</span></div>
+    <div class="compact-row-actions"><button class="table-action" data-locate-manual-checkin="${escapeHtml(place.id)}" type="button">${en ? "Locate" : "定位"}</button><button class="table-action" data-rename-manual-checkin="${escapeHtml(place.id)}" type="button">${en ? "Rename" : "重命名"}</button><button class="table-action danger" data-delete-manual-checkin="${escapeHtml(place.id)}" type="button">${en ? "Delete" : "删除"}</button></div>
+  </div>`).join("");
+  const flightRows = filteredFlights.map((file) => `<div class="import-compact-row"><div><strong>${escapeHtml(file.name)}</strong><span>${escapeHtml(file.format || "XLS")} · ${escapeHtml(importManagerDate(file.importedAt, en))}</span></div><em>${file.count || 0} ${en ? "flights" : "条航班"}</em><button class="table-action danger" data-delete-flight-import="${escapeHtml(file.id || "")}" type="button">${en ? "Delete" : "删除"}</button></div>`).join("");
+  const open = (name) => openGroups.has(name) ? "open" : "";
+  target.innerHTML = `
+    <article class="check-item import-management-card"><header><strong>${en ? "All imported data" : "全部导入数据"}</strong><span>${importedObjectCount} ${en ? "objects" : "个对象"}</span></header><p class="muted">${en ? "Imported files and manually drawn paths are managed separately below." : "导入文件与手绘路径已分开管理。"}</p><button class="text-action" data-delete-all-imports="1" type="button">${en ? "Delete all imports" : "删除全部导入"}</button></article>
+    <div class="import-manager-toolbar"><input data-import-search type="search" value="${escapeHtml(importManagerQuery)}" placeholder="${en ? "Search files, check-ins, or paths" : "搜索文件、打卡或路径"}" /><select data-import-sort><option value="newest" ${importManagerSort === "newest" ? "selected" : ""}>${en ? "Newest" : "最新优先"}</option><option value="oldest" ${importManagerSort === "oldest" ? "selected" : ""}>${en ? "Oldest" : "最早优先"}</option><option value="name" ${importManagerSort === "name" ? "selected" : ""}>${en ? "Name" : "名称排序"}</option></select></div>
+    <details class="import-manager-group" data-import-group="files" ${open("files")}><summary><strong>${en ? "Imported files" : "导入文件"}</strong><span>${regularFiles.length}</span></summary><div class="import-compact-list">${fileRows || `<p class="muted small">${en ? "No matching imported files" : "没有匹配的导入文件"}</p>`}</div></details>
+    <details class="import-manager-group" data-import-group="manualCheckins" ${open("manualCheckins")}><summary><strong>${en ? "Manual check-ins" : "手动打卡"}</strong><span>${manualCheckins.length}</span></summary><div class="manual-path-bulk"><label><input type="checkbox" data-select-visible-checkins ${allVisibleCheckinsSelected ? "checked" : ""} /> ${checkinPageCount > 1 ? (en ? "Select this page" : "选择本页") : (en ? "Select all" : "全选")}</label><button class="table-action danger" data-delete-selected-checkins type="button" ${selectedManualCheckinIds.size ? "" : "disabled"}>${en ? `Delete selected (${selectedManualCheckinIds.size})` : `删除所选（${selectedManualCheckinIds.size}）`}</button></div><div class="import-compact-list">${checkinRows || `<p class="muted small">${en ? "No matching manual check-ins" : "没有匹配的手动打卡"}</p>`}</div>${checkinPageCount > 1 ? renderImportPagination("checkins", manualCheckinPage, checkinPageCount, en) : ""}</details>
+    <details class="import-manager-group" data-import-group="paths" ${open("paths")}><summary><strong>${en ? "Manual paths" : "手动路径"}</strong><span>${manualPaths.length}</span></summary><div class="manual-path-bulk"><label><input type="checkbox" data-select-visible-paths ${allVisiblePathsSelected ? "checked" : ""} /> ${pathPageCount > 1 ? (en ? "Select this page" : "选择本页") : (en ? "Select all" : "全选")}</label><button class="table-action danger" data-delete-selected-paths type="button" ${selectedManualPathIds.size ? "" : "disabled"}>${en ? `Delete selected (${selectedManualPathIds.size})` : `删除所选（${selectedManualPathIds.size}）`}</button></div><div class="import-compact-list">${pathRows || `<p class="muted small">${en ? "No matching manual paths" : "没有匹配的手动路径"}</p>`}</div>${pathPageCount > 1 ? renderImportPagination("paths", manualPathPage, pathPageCount, en) : ""}</details>
+    <details class="import-manager-group" data-import-group="flights" ${open("flights")}><summary><strong>${en ? "Flight imports" : "航班导入"}</strong><span>${flightFiles.length}</span></summary><div class="import-compact-list">${flightRows || `<p class="muted small">${en ? "No matching flight imports" : "没有匹配的航班导入"}</p>`}</div></details>
+    <details class="import-manager-group" data-import-group="checkins" ${open("checkins")}><summary><strong>${en ? "Light-up / checklist data" : "点亮/打卡数据"}</strong><span>${nonImportedVisits.length}</span></summary><div class="import-group-note"><p class="muted">${en ? "Clears manual countries, administrative units, map-click points, and checklist marks. Imports are kept." : "清除手动国家、行政区、地图点击点和打卡清单；导入文件与轨迹会保留。"}</p><button class="text-action" data-clear-checkins="1" type="button">${en ? "Clear light-up / checklist points" : "清除点亮/打卡点"}</button></div></details>`;
 }
 
 function inventorySourceLabel(visit) {
@@ -9011,6 +9194,135 @@ function deleteInventoryObject(placeId) {
   if (document.querySelector('[data-page="achievements"]')?.classList.contains("active")) renderAchievements();
   if (isMapPageActive() && !refreshMapLibreDataOnly()) scheduleGeoMapRender();
   showToast(`${place.name} ${currentLanguage === "en" ? "deleted" : "已删除"}`);
+}
+
+function deleteImportedObjects(placeIds) {
+  const ids = new Set(placeIds || []);
+  if (!ids.size) return;
+  state.visits = state.visits.filter((visit) => !ids.has(visit.placeId));
+  places = places.filter((place) => !ids.has(place.id));
+  state.importedFiles = (state.importedFiles || []).map((record) => {
+    const recordIds = (record.ids || []).filter((id) => !ids.has(id));
+    const count = places.filter((place) => place.importId === record.id || (!record.id && place.sourceFile === record.name)).length;
+    return { ...record, ids: recordIds, count: count || recordIds.length };
+  }).filter((record) => record.count > 0 || (record.ids || []).length > 0);
+  ids.forEach((id) => selectedManualPathIds.delete(id));
+  closeMapPopupsAndDetail();
+  recomputeCoverage();
+  invalidateMapCaches();
+  invalidateDerivedStatsCache();
+  saveState();
+  renderMetrics();
+  renderImportSummary();
+  renderDataInventory();
+  if (isMapPageActive() && !refreshMapLibreDataOnly()) scheduleGeoMapRender();
+  showToast(currentLanguage === "en" ? `${ids.size} paths deleted` : `已删除 ${ids.size} 条路径`);
+}
+
+function locateManualPath(placeId) {
+  const place = getPlace(placeId);
+  const center = geometryCenter(place?.importedGeometry);
+  if (!place || !center?.every(Number.isFinite)) return;
+  state.mapViewport = { center: [center[0], center[1]], zoom: Math.max(5, normalizeMapViewport(state.mapViewport)?.zoom || 5) };
+  history.replaceState(null, "", "#world");
+  showPage("world", "");
+  window.setTimeout(() => {
+    if (mapLibreMap) mapLibreMap.jumpTo({ center, zoom: state.mapViewport.zoom });
+    if (leafletMap) leafletMap.setView([center[1], center[0]], state.mapViewport.zoom, { animate: false });
+  }, 120);
+}
+
+function renameManualPath(placeId) {
+  const place = getPlace(placeId);
+  if (!place) return;
+  const name = window.prompt(currentLanguage === "en" ? "New path name" : "新的路径名称", place.name);
+  if (!String(name || "").trim()) return;
+  const oldSourceFile = place.sourceFile;
+  place.name = String(name).trim();
+  place.sourceFile = place.name;
+  state.importedFiles = (state.importedFiles || []).map((record) => record.id === place.importId
+    ? { ...record, name: place.name }
+    : record);
+  places.forEach((candidate) => {
+    if (candidate !== place && candidate.importId === place.importId && candidate.sourceFile === oldSourceFile) candidate.sourceFile = place.name;
+  });
+  invalidateMapCaches();
+  saveState();
+  renderImportSummary();
+  renderDataInventory();
+  if (isMapPageActive() && !refreshMapLibreDataOnly()) scheduleGeoMapRender();
+  showToast(currentLanguage === "en" ? "Path renamed" : "路径已重命名");
+}
+
+function locateManualCheckin(placeId) {
+  const place = getPlace(placeId);
+  if (!place || !Number.isFinite(place.lng) || !Number.isFinite(place.lat)) return;
+  const zoom = Math.max(7, normalizeMapViewport(state.mapViewport)?.zoom || 7);
+  state.mapViewport = { center: [place.lng, place.lat], zoom };
+  state.focusPlaceId = place.id;
+  history.replaceState(null, "", "#world");
+  showPage("world", "");
+  window.setTimeout(() => {
+    if (mapLibreMap) mapLibreMap.jumpTo({ center: [place.lng, place.lat], zoom });
+    if (leafletMap) leafletMap.setView([place.lat, place.lng], zoom, { animate: false });
+    renderPlaceDetail(place.id);
+  }, 120);
+}
+
+function renameManualCheckin(placeId) {
+  const place = getPlace(placeId);
+  if (!place) return;
+  const name = window.prompt(currentLanguage === "en" ? "New check-in name" : "新的打卡名称", place.name);
+  if (!String(name || "").trim()) return;
+  place.name = String(name).trim();
+  invalidateMapPointRenderCache();
+  saveState();
+  renderImportSummary();
+  renderDataInventory();
+  if (isMapPageActive() && !refreshMapLibreDataOnly()) scheduleGeoMapRender();
+  showToast(currentLanguage === "en" ? "Check-in renamed" : "打卡已重命名");
+}
+
+function deleteManualCheckin(placeId) {
+  const place = getPlace(placeId);
+  if (!place) return;
+  state.visits = state.visits.filter((visit) => visit.placeId !== placeId);
+  places = places.filter((candidate) => candidate.id !== placeId);
+  selectedManualCheckinIds.delete(placeId);
+  if (state.focusPlaceId === placeId) state.focusPlaceId = "";
+  closeMapPopupsAndDetail();
+  recomputeCoverage();
+  invalidateMapCaches();
+  invalidateDerivedStatsCache();
+  saveState();
+  renderMetrics();
+  renderDashboardAchievements();
+  renderImportSummary();
+  renderDataInventory();
+  if (document.querySelector('[data-page="checkins"]')?.classList.contains("active")) renderCheckinsPage();
+  if (isMapPageActive() && !refreshMapLibreDataOnly()) scheduleGeoMapRender();
+  showToast(`${place.name} ${currentLanguage === "en" ? "deleted" : "已删除"}`);
+}
+
+function deleteManualCheckins(placeIds) {
+  const ids = new Set(placeIds || []);
+  if (!ids.size) return;
+  state.visits = state.visits.filter((visit) => !ids.has(visit.placeId));
+  places = places.filter((place) => !ids.has(place.id));
+  if (ids.has(state.focusPlaceId)) state.focusPlaceId = "";
+  ids.forEach((id) => selectedManualCheckinIds.delete(id));
+  closeMapPopupsAndDetail();
+  recomputeCoverage();
+  invalidateMapCaches();
+  invalidateDerivedStatsCache();
+  saveState();
+  renderMetrics();
+  renderDashboardAchievements();
+  renderImportSummary();
+  renderDataInventory();
+  if (document.querySelector('[data-page="checkins"]')?.classList.contains("active")) renderCheckinsPage();
+  if (isMapPageActive() && !refreshMapLibreDataOnly()) scheduleGeoMapRender();
+  showToast(currentLanguage === "en" ? `${ids.size} check-ins deleted` : `已删除 ${ids.size} 个手动打卡`);
 }
 
 function deleteFlightRecord(flightKey) {
@@ -11552,6 +11864,7 @@ function normalizeImportedPlace(raw) {
     importedGeometry: raw.importedGeometry || null,
     boundaryLevel: raw.boundaryLevel || "",
     shapeOnly: Boolean(raw.shapeOnly),
+    sourceType: String(raw.sourceType || "").trim(),
   };
   normalizeJapanPlaceHierarchy(place);
   return place;
@@ -11760,6 +12073,15 @@ function isMapPageActive() {
 }
 
 function renderMapControls() {
+  const panel = document.querySelector(".map-control-panel");
+  const toggle = $("#toggleMapControls");
+  panel?.classList.toggle("collapsed", mapControlsCollapsed);
+  if (toggle) {
+    toggle.setAttribute("aria-expanded", String(!mapControlsCollapsed));
+    toggle.dataset.i18n = mapControlsCollapsed ? "showMapControls" : "hideMapControls";
+    toggle.textContent = t(toggle.dataset.i18n);
+    toggle.setAttribute("aria-label", t(toggle.dataset.i18n));
+  }
   const level = $("#boundaryLevel");
   if (level) level.value = state.boundaryLevel || "country";
   const provider = $("#mapProvider");
@@ -11785,6 +12107,7 @@ function renderMapControls() {
   if (showWorldHeritage) showWorldHeritage.checked = Boolean(overlays.worldHeritage);
   if (showHighAltitude) showHighAltitude.checked = Boolean(overlays.highAltitude);
   $("#addMapPoint")?.classList.toggle("active", mapAddMode);
+  $("#addMapPath")?.classList.toggle("active", mapPathMode);
   document.querySelectorAll("[data-region-view]").forEach((button) => {
     button.classList.toggle("active", button.dataset.regionView === state.selectedRegionView);
   });
@@ -11818,6 +12141,12 @@ function ensureCheckinOverlayVisible() {
   state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}), checkins: true };
   const showCheckins = $("#showCheckinsOnMap");
   if (showCheckins) showCheckins.checked = true;
+}
+
+function ensureTrackOverlayVisible() {
+  state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}), paths: true };
+  const showTracks = $("#showTracksOnMap");
+  if (showTracks) showTracks.checked = true;
 }
 
 function moveMapLevelControlToToolbar() {
@@ -11991,6 +12320,56 @@ $("#importSummary").addEventListener("click", (event) => {
     deleteAllImportedData();
     return;
   }
+  const locateCheckinButton = event.target.closest("[data-locate-manual-checkin]");
+  if (locateCheckinButton) {
+    locateManualCheckin(locateCheckinButton.dataset.locateManualCheckin);
+    return;
+  }
+  const renameCheckinButton = event.target.closest("[data-rename-manual-checkin]");
+  if (renameCheckinButton) {
+    renameManualCheckin(renameCheckinButton.dataset.renameManualCheckin);
+    return;
+  }
+  const deleteCheckinButton = event.target.closest("[data-delete-manual-checkin]");
+  if (deleteCheckinButton) {
+    deleteManualCheckin(deleteCheckinButton.dataset.deleteManualCheckin);
+    return;
+  }
+  if (event.target.closest("[data-delete-selected-checkins]")) {
+    if (selectedManualCheckinIds.size && window.confirm(currentLanguage === "en" ? `Delete ${selectedManualCheckinIds.size} selected check-ins?` : `确认删除所选的 ${selectedManualCheckinIds.size} 个手动打卡？`)) {
+      deleteManualCheckins([...selectedManualCheckinIds]);
+    }
+    return;
+  }
+  const locatePathButton = event.target.closest("[data-locate-manual-path]");
+  if (locatePathButton) {
+    locateManualPath(locatePathButton.dataset.locateManualPath);
+    return;
+  }
+  const renamePathButton = event.target.closest("[data-rename-manual-path]");
+  if (renamePathButton) {
+    renameManualPath(renamePathButton.dataset.renameManualPath);
+    return;
+  }
+  const deletePathButton = event.target.closest("[data-delete-inventory-object]");
+  if (deletePathButton) {
+    deleteInventoryObject(deletePathButton.dataset.deleteInventoryObject);
+    return;
+  }
+  if (event.target.closest("[data-delete-selected-paths]")) {
+    if (selectedManualPathIds.size && window.confirm(currentLanguage === "en" ? `Delete ${selectedManualPathIds.size} selected paths?` : `确认删除所选的 ${selectedManualPathIds.size} 条路径？`)) {
+      deleteImportedObjects([...selectedManualPathIds]);
+    }
+    return;
+  }
+  const pageButton = event.target.closest("[data-import-page]");
+  if (pageButton && !pageButton.disabled) {
+    const delta = Number(pageButton.dataset.pageDelta) || 0;
+    if (pageButton.dataset.importPage === "checkins") manualCheckinPage += delta;
+    if (pageButton.dataset.importPage === "paths") manualPathPage += delta;
+    renderImportSummary();
+    return;
+  }
   const button = event.target.closest("[data-delete-import]");
   if (button) {
     deleteImportedBatch(button.dataset.deleteImport, Number(button.dataset.importIndex));
@@ -11998,6 +12377,62 @@ $("#importSummary").addEventListener("click", (event) => {
   }
   const flightButton = event.target.closest("[data-delete-flight-import]");
   if (flightButton) deleteFlightImportBatch(flightButton.dataset.deleteFlightImport);
+});
+$("#importSummary").addEventListener("input", (event) => {
+  if (!event.target.matches("[data-import-search]")) return;
+  importManagerQuery = event.target.value;
+  manualCheckinPage = 0;
+  manualPathPage = 0;
+  if (importManagerSearchTimer) clearTimeout(importManagerSearchTimer);
+  importManagerSearchTimer = window.setTimeout(() => {
+    importManagerSearchTimer = null;
+    const input = $("#importSummary [data-import-search]");
+    const selectionStart = input?.selectionStart ?? importManagerQuery.length;
+    renderImportSummary();
+    const nextInput = $("#importSummary [data-import-search]");
+    nextInput?.focus();
+    nextInput?.setSelectionRange(selectionStart, selectionStart);
+  }, 180);
+});
+$("#importSummary").addEventListener("change", (event) => {
+  if (event.target.matches("[data-import-sort]")) {
+    importManagerSort = event.target.value;
+    manualCheckinPage = 0;
+    manualPathPage = 0;
+    renderImportSummary();
+    return;
+  }
+  if (event.target.matches("[data-select-manual-path]")) {
+    const id = event.target.dataset.selectManualPath;
+    if (event.target.checked) selectedManualPathIds.add(id);
+    else selectedManualPathIds.delete(id);
+    renderImportSummary();
+    return;
+  }
+  if (event.target.matches("[data-select-manual-checkin]")) {
+    const id = event.target.dataset.selectManualCheckin;
+    if (event.target.checked) selectedManualCheckinIds.add(id);
+    else selectedManualCheckinIds.delete(id);
+    renderImportSummary();
+    return;
+  }
+  if (event.target.matches("[data-select-visible-checkins]")) {
+    document.querySelectorAll("#importSummary [data-select-manual-checkin]").forEach((checkbox) => {
+      checkbox.checked = event.target.checked;
+      if (event.target.checked) selectedManualCheckinIds.add(checkbox.dataset.selectManualCheckin);
+      else selectedManualCheckinIds.delete(checkbox.dataset.selectManualCheckin);
+    });
+    renderImportSummary();
+    return;
+  }
+  if (event.target.matches("[data-select-visible-paths]")) {
+    document.querySelectorAll("#importSummary [data-select-manual-path]").forEach((checkbox) => {
+      checkbox.checked = event.target.checked;
+      if (event.target.checked) selectedManualPathIds.add(checkbox.dataset.selectManualPath);
+      else selectedManualPathIds.delete(checkbox.dataset.selectManualPath);
+    });
+    renderImportSummary();
+  }
 });
 $("#dataInventory")?.addEventListener("click", (event) => {
   const visitButton = event.target.closest("[data-delete-inventory-visit]");
@@ -12147,6 +12582,22 @@ $("#addMapPoint")?.addEventListener("click", () => {
     setMapAddMode(true);
   }
 });
+$("#toggleMapControls")?.addEventListener("click", () => {
+  mapControlsCollapsed = !mapControlsCollapsed;
+  localStorage.setItem(mapControlsStorageKey, mapControlsCollapsed ? "1" : "0");
+  renderMapControls();
+  scheduleActiveMapResize();
+});
+$("#addMapPath")?.addEventListener("click", () => {
+  if (mapPathMode) {
+    setMapPathMode(false, false);
+    closeMapPopupsAndDetail();
+    refreshMapPathPreview();
+  } else {
+    setMapPathMode(true);
+    openMapPathForm();
+  }
+});
 document.querySelectorAll("[data-language]").forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.language));
 });
@@ -12257,6 +12708,11 @@ $("#mapDetail").addEventListener("click", (event) => {
   unvisitPlace(button.dataset.unvisit);
 });
 $("#mapDetail").addEventListener("submit", (event) => {
+  if (event.target.closest("#mapPathForm")) {
+    event.preventDefault();
+    saveMapPath(new FormData(event.target).get("name"));
+    return;
+  }
   if (!event.target.closest("#mapPointForm")) return;
   event.preventDefault();
   if (!pendingMapClickPoint) return;
@@ -12266,6 +12722,18 @@ $("#mapDetail").addEventListener("submit", (event) => {
     lng: pendingMapClickPoint.lng,
     lat: pendingMapClickPoint.lat,
   });
+});
+$("#mapDetail").addEventListener("click", (event) => {
+  if (event.target.closest("[data-undo-map-path]")) {
+    pendingMapPath.pop();
+    openMapPathForm();
+    refreshMapPathPreview();
+  }
+  if (event.target.closest("[data-cancel-map-path]")) {
+    setMapPathMode(false, false);
+    closeMapPopupsAndDetail();
+    refreshMapPathPreview();
+  }
 });
 new MutationObserver(ensureMapDetailCloseButton).observe($("#mapDetail"), {
   childList: true,
