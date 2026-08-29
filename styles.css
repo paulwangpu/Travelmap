@@ -5891,15 +5891,23 @@ button:hover {
 }
 
 /* Final map-control layout: keep the collapse action in the main control row. */
+.map-app .map-toolbar {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
 .map-toolbar > .map-control-panel:not(.collapsed) {
-  grid-template-columns: 120px 100px minmax(222px, 1fr) !important;
+  grid-template-columns: 120px 80px minmax(202px, 1fr) !important;
   grid-template-areas:
     "provider level actions"
     "primary primary primary"
     "features features features" !important;
-  width: min(470px, calc(100vw - 16px)) !important;
+  width: min(430px, calc(100vw - 16px)) !important;
   min-width: 0 !important;
-  max-width: min(470px, calc(100vw - 16px)) !important;
+  max-width: min(430px, calc(100vw - 16px)) !important;
   box-sizing: border-box !important;
   padding: 8px !important;
 }
@@ -5921,11 +5929,45 @@ button:hover {
 }
 
 .map-control-panel:not(.collapsed) .map-action-group {
-  grid-template-columns: 48px minmax(0, 1fr) minmax(0, 1fr) !important;
+  grid-template-columns: 60px minmax(0, 1fr) minmax(0, 1fr) !important;
   width: 100% !important;
   min-width: 0 !important;
   max-width: 100% !important;
   justify-content: stretch !important;
+}
+
+.map-control-panel:not(.collapsed) .map-action-group .map-mode-toggle {
+  width: 60px !important;
+  min-width: 60px !important;
+  max-width: 60px !important;
+}
+
+.map-control-panel:not(.collapsed) .map-action-group .map-add-point-button {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  padding-inline: 6px !important;
+}
+
+.map-control-panel:not(.collapsed) .map-primary-overlays,
+.map-control-panel:not(.collapsed) .map-feature-overlays {
+  grid-template-columns: repeat(4, minmax(0, 98px)) !important;
+  justify-content: start !important;
+}
+
+.map-control-panel:not(.collapsed) .map-overlay-toggles label {
+  width: 98px !important;
+  min-width: 0 !important;
+  padding-inline: 5px !important;
+  gap: 3px !important;
+  overflow: hidden !important;
+}
+
+.map-control-panel:not(.collapsed) .map-overlay-toggles label span {
+  min-width: 0 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
 }
 
 .map-control-panel:not(.collapsed) .map-controls-toggle::before {
@@ -5933,7 +5975,25 @@ button:hover {
 }
 
 .map-toolbar > .map-control-panel.collapsed {
-  padding: 6px !important;
+  display: block !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  height: 28px !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.map-control-panel.collapsed .map-controls-toggle {
+  height: 28px !important;
+  min-height: 28px !important;
+  padding: 3px 9px !important;
+  border: 1px solid var(--line) !important;
+  background: rgba(255, 255, 255, 0.94) !important;
+  font-size: 10px !important;
 }
 
 /* Use the free title line above the map actions for basemap opacity. */
@@ -5951,7 +6011,7 @@ button:hover {
   gap: 5px;
   height: 11px;
   min-height: 11px;
-  width: auto;
+  width: 100%;
   min-width: 0;
   max-width: 100%;
   padding-right: 50px;
@@ -6039,37 +6099,4 @@ button:hover {
   border-radius: 50%;
   background: #12362d;
   box-shadow: 0 0 0 1px #12362d;
-}
-
-/* On phones, avoid squeezing all controls into three rigid columns. */
-@media (max-width: 520px) {
-  .map-toolbar > .map-control-panel:not(.collapsed) {
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) !important;
-    grid-template-areas:
-      "provider level"
-      "actions actions"
-      "primary primary"
-      "features features" !important;
-    width: min(470px, calc(100vw - 12px)) !important;
-    max-width: min(470px, calc(100vw - 12px)) !important;
-  }
-
-  .map-control-panel:not(.collapsed) .map-action-group {
-    grid-template-columns: 48px minmax(0, 1fr) minmax(0, 1fr) !important;
-    min-width: 0 !important;
-    width: 100% !important;
-  }
-
-  .map-opacity-control {
-    width: min(190px, calc(100% - 50px));
-    max-width: calc(100% - 50px);
-    padding-right: 0;
-  }
-
-  #mapBaseOpacity {
-    flex-basis: 48px;
-    width: 48px !important;
-    min-width: 48px !important;
-    max-width: 48px !important;
-  }
 }
