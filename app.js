@@ -8805,14 +8805,17 @@ function continentSortValue(continent) {
 
 function chinaSubadminUnitsForManualList() {
   const taiwanUnits = taiwanSubadminUnitsForManualList();
+  const municipalities = new Set(["北京", "上海", "天津", "重庆"]);
   const seen = new Set();
   const mainland = (boundaryData.china2?.features || []).map((feature) => {
     const name = subadminNameFromFeature(feature);
     if (!name) return null;
+    const province = provinceNameForChinaSubadminFeature(feature);
+    if (municipalities.has(cleanAdminName(province)) || municipalities.has(cleanAdminName(name))) return null;
     const key = cleanAdminName(name);
     if (seen.has(key)) return null;
     seen.add(key);
-    return { province: provinceNameForChinaSubadminFeature(feature), name, center: geometryCenter(feature.geometry) };
+    return { province, name, center: geometryCenter(feature.geometry) };
   }).filter(Boolean);
   const supplemental = chinaDirectSubadminUnitsFromBoundary().filter((unit) => {
     const key = cleanAdminName(unit.name);
@@ -8954,7 +8957,7 @@ function countVisitedSubregions(subadminKey) {
 
 function chinaPrefectureTotal() {
   const total = chinaSubadminUnitsForManualList().length;
-  return total || (337 + 30 + taiwanSubadminUnits.length);
+  return total || (333 + 30 + taiwanSubadminUnits.length);
 }
 
 function visitInRegionBoundary(visit, regionKey, unitName) {
