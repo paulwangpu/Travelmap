@@ -1920,12 +1920,20 @@ function worldHeritageCountryDisplayName(countryName) {
   return countryName;
 }
 
+function worldHeritageItemEnglishName(item) {
+  const raw = String(item || "").trim();
+  if (!raw) return "";
+  return worldHeritageEnglishNames[raw]
+    || worldHeritageEnglishNames[canonicalPlaceKey(raw)]
+    || "";
+}
+
 function checklistItemDisplayName(key, item) {
   const detailed = checklistItemDetailLabels[key]?.[item];
   if (detailed) return currentLanguage === "en" ? detailed.en : detailed.zh;
   if (key === "worldHeritage" && worldHeritageParentNames[canonicalPlaceKey(item)]) {
     const parent = worldHeritageParentNames[canonicalPlaceKey(item)];
-    const primary = currentLanguage === "en" && worldHeritageEnglishNames[item] ? worldHeritageEnglishNames[item] : item;
+    const primary = currentLanguage === "en" ? worldHeritageItemEnglishName(item) || item : item;
     const parentName = currentLanguage === "en" ? parent.en : parent.zh;
     return `${primary} · ${parentName}`;
   }
@@ -1933,7 +1941,7 @@ function checklistItemDisplayName(key, item) {
     if (key === "usNationalParks") return String(item || "").replace(/（[^（）]+）|\([^()]+\)/g, "").trim();
     return item;
   }
-  if (key === "worldHeritage" && worldHeritageEnglishNames[item]) return worldHeritageEnglishNames[item];
+  if (key === "worldHeritage" && worldHeritageItemEnglishName(item)) return worldHeritageItemEnglishName(item);
   const parenthetical = englishNameInParentheses(item);
   if (parenthetical) return parenthetical;
   if (checklistItemEnglishNames[item]) return checklistItemEnglishNames[item];
@@ -5808,7 +5816,11 @@ function loadCatalogData() {
           if (!normalizedItem) return;
           const itemCountries = (Array.isArray(item.countries) && item.countries.length ? item.countries : [item.country]).map(stripHtmlTags);
           const itemCountryIds = Array.isArray(item.countryIds) ? item.countryIds : [];
-          if (item.enName) englishNames[normalizedItem] = stripHtmlTags(item.enName);
+          if (item.enName) {
+            const englishName = stripHtmlTags(item.enName);
+            englishNames[normalizedItem] = englishName;
+            englishNames[canonicalPlaceKey(normalizedItem)] = englishName;
+          }
           if (Array.isArray(item.components) && item.components.length) {
             item.components.forEach((component) => {
               const componentName = normalizeWorldHeritageItemName(stripHtmlTags(component.zhName || component.name || component.enName), nameAliases);
@@ -5822,7 +5834,11 @@ function loadCatalogData() {
                 zh: normalizedItem,
                 en: stripHtmlTags(item.enName || normalizedItem),
               };
-              if (component.enName) englishNames[componentName] = stripHtmlTags(component.enName);
+              if (component.enName) {
+                const englishName = stripHtmlTags(component.enName);
+                englishNames[componentName] = englishName;
+                englishNames[canonicalPlaceKey(componentName)] = englishName;
+              }
               if (Number.isFinite(component.lat) && Number.isFinite(component.lng)) {
                 coordinates[componentName] = [component.lat, component.lng, componentCountry];
               }
@@ -7302,7 +7318,7 @@ function renderMapLibreMarkers(overlays = { ...defaultMapOverlays(), ...(state.m
     });
     const marker = new maplibregl.Marker({ element: el })
       .setLngLat([entry.lng, entry.lat])
-      .setPopup(new maplibregl.Popup({ offset: 16, closeButton: false }).setHTML(mapPopupHtml(`<strong>${escapeHtml(entry.title || entry.item)}</strong><br>${escapeHtml(entry.subtitle || checklistCatalog[entry.key].label)}<br><button class="popup-action" data-checklist-map="${escapeHtml(entry.key)}" data-item="${escapeHtml(entry.item)}" type="button">${entry.done ? t("unvisit") : t("markVisited")}</button>`)))
+      .setPopup(new maplibregl.Popup({ offset: 16, closeButton: false }).setHTML(mapPopupHtml(`<strong>${escapeHtml(entry.title || entry.item)}</strong><br>${escapeHtml(entry.subtitle || checklistLabel(entry.key, checklistCatalog[entry.key]))}<br><button class="popup-action" data-checklist-map="${escapeHtml(entry.key)}" data-item="${escapeHtml(entry.item)}" type="button">${entry.done ? t("unvisit") : t("markVisited")}</button>`)))
       .addTo(mapLibreMap);
     mapLibreMarkers.push(marker);
   });
@@ -8268,7 +8284,7 @@ function renderLeafletLayers() {
       fillOpacity: entry.done ? 0.96 : 0.82,
     });
     marker.bindTooltip(entry.title || entry.item, { sticky: true });
-    marker.bindPopup(mapPopupHtml(`<strong>${escapeHtml(entry.title || entry.item)}</strong><br>${escapeHtml(entry.subtitle || checklistCatalog[entry.key]?.label || t("checklistFallback"))}<br><button class="popup-action" data-checklist-map="${escapeHtml(entry.key)}" data-item="${escapeHtml(entry.item)}" type="button">${entry.done ? t("unvisit") : t("markVisited")}</button>`), { closeButton: false });
+    marker.bindPopup(mapPopupHtml(`<strong>${escapeHtml(entry.title || entry.item)}</strong><br>${escapeHtml(entry.subtitle || checklistLabel(entry.key, checklistCatalog[entry.key] || {}) || t("checklistFallback"))}<br><button class="popup-action" data-checklist-map="${escapeHtml(entry.key)}" data-item="${escapeHtml(entry.item)}" type="button">${entry.done ? t("unvisit") : t("markVisited")}</button>`), { closeButton: false });
     marker.on("click", (event) => {
       if (event.originalEvent) event.originalEvent._travelMapHandled = true;
       renderChecklistMapDetail(entry.key, entry.item);
