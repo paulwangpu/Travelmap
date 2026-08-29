@@ -281,7 +281,7 @@ const translations = {
     providerBingRoad: "Bing 地图",
     providerBingAerial: "Bing 卫星",
     mapLevel: "显示层级",
-    levelCountry: "国家级",
+    levelCountry: "国家",
     levelAdmin: "省级",
     levelCity: "市级",
     overlayLight: "我的点亮",

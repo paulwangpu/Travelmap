@@ -5900,7 +5900,7 @@ button:hover {
 }
 
 .map-toolbar > .map-control-panel:not(.collapsed) {
-  grid-template-columns: 120px 80px minmax(202px, 1fr) !important;
+  grid-template-columns: minmax(78px, 1.2fr) minmax(56px, 0.75fr) minmax(176px, 2.5fr) !important;
   grid-template-areas:
     "provider level actions"
     "primary primary primary"
@@ -5910,6 +5910,12 @@ button:hover {
   max-width: min(430px, calc(100vw - 16px)) !important;
   box-sizing: border-box !important;
   padding: 8px !important;
+}
+
+.map-control-panel:not(.collapsed) .map-provider-control select,
+.map-control-panel:not(.collapsed) .map-level-control select {
+  padding-right: 16px !important;
+  padding-left: 6px !important;
 }
 
 .map-control-panel:not(.collapsed) .map-controls-toggle {
@@ -5946,17 +5952,19 @@ button:hover {
   width: 100% !important;
   min-width: 0 !important;
   max-width: none !important;
-  padding-inline: 6px !important;
+  padding-inline: 4px !important;
+  font-size: 11px !important;
 }
 
 .map-control-panel:not(.collapsed) .map-primary-overlays,
 .map-control-panel:not(.collapsed) .map-feature-overlays {
-  grid-template-columns: repeat(4, minmax(0, 98px)) !important;
-  justify-content: start !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  justify-content: stretch !important;
+  width: 100% !important;
 }
 
 .map-control-panel:not(.collapsed) .map-overlay-toggles label {
-  width: 98px !important;
+  width: 100% !important;
   min-width: 0 !important;
   padding-inline: 5px !important;
   gap: 3px !important;
@@ -6053,9 +6061,9 @@ button:hover {
 #mapBaseOpacity {
   appearance: none;
   -webkit-appearance: none;
-  flex: 0 0 58px;
-  width: 58px !important;
-  min-width: 58px !important;
+  flex: 1 1 58px;
+  width: auto !important;
+  min-width: 24px !important;
   max-width: 58px !important;
   height: 12px !important;
   min-height: 12px !important;

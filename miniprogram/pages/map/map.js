@@ -5,7 +5,7 @@ const coverage = require("../../utils/coverage");
 const catalog = require("../../utils/catalog");
 
 const LEVELS = ["country", "province", "city"];
-const LEVEL_LABELS = ["国家级", "省级", "市级（仅中国）"];
+const LEVEL_LABELS = ["国家", "省级", "市级（仅中国）"];
 const PROVIDERS = [
   "自动底图", "OpenStreetMap", "高德", "高德卫星", "Google 街道",
   "Google 卫星", "Google 地形", "Esri 卫星", "Bing 地图", "Bing 卫星"
