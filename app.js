@@ -15,7 +15,7 @@ const mapControlsStorageKey = "travel-map-controls-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "1.9.5";
+const appVersion = "1.9.4";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
@@ -868,11 +868,6 @@ const mapProviders = {
 
 function normalizeMapProviderMode(value) {
   return ["auto", ...Object.keys(mapProviders)].includes(value) ? value : "auto";
-}
-
-function normalizeMapBaseOpacity(value) {
-  const number = Number(value);
-  return Number.isFinite(number) ? Math.max(0, Math.min(100, Math.round(number))) : 100;
 }
 
 function normalizeDetectedMapProvider(value) {
@@ -3558,7 +3553,6 @@ let state = {
   selectedRegionView: "china",
   boundaryLevel: "country",
   mapProviderMode: "auto",
-  mapBaseOpacity: 100,
   map3d: false,
   detectedMapProvider: "",
   mapOverlays: { light: true, checkins: true, paths: true, flights: true, china5a: false, chinaAncientCapitals: false, worldHeritage: false, highAltitude: false },
@@ -5473,7 +5467,6 @@ function localStorageSnapshot(payload) {
       focusPlaceId: savedState.focusPlaceId,
       openChecklistGroups: savedState.openChecklistGroups || [],
       mapProviderMode: savedState.mapProviderMode || "auto",
-      mapBaseOpacity: normalizeMapBaseOpacity(savedState.mapBaseOpacity),
       map3d: Boolean(savedState.map3d),
       detectedMapProvider: savedState.detectedMapProvider || "",
       mapOverlays: normalizeMapOverlays(savedState.mapOverlays || {}),
@@ -5552,7 +5545,6 @@ function applySavedPayload(saved) {
       checklistMarks: saved.state.checklistMarks || [],
       openChecklistGroups: saved.state.openChecklistGroups || [],
       mapProviderMode: normalizeMapProviderMode(saved.state.mapProviderMode || state.mapProviderMode),
-      mapBaseOpacity: normalizeMapBaseOpacity(saved.state.mapBaseOpacity),
       map3d: Boolean(saved.state.map3d),
       detectedMapProvider: normalizeDetectedMapProvider(saved.state.detectedMapProvider || state.detectedMapProvider),
       mapOverlays: normalizeMapOverlays(saved.state.mapOverlays || {}),
@@ -5575,7 +5567,6 @@ function applyLocalStorageSnapshot(saved) {
     focusPlaceId: saved.state.focusPlaceId || state.focusPlaceId,
     openChecklistGroups: saved.state.openChecklistGroups || state.openChecklistGroups || [],
     mapProviderMode: normalizeMapProviderMode(saved.state.mapProviderMode || state.mapProviderMode),
-    mapBaseOpacity: normalizeMapBaseOpacity(saved.state.mapBaseOpacity),
     map3d: Boolean(saved.state.map3d),
     detectedMapProvider: normalizeDetectedMapProvider(saved.state.detectedMapProvider || state.detectedMapProvider),
     mapOverlays: normalizeMapOverlays(saved.state.mapOverlays || state.mapOverlays || {}),
@@ -6765,12 +6756,11 @@ function applyLeafletProvider() {
       getTileUrl(coords) {
         return bingTileUrl(providerId === "bingAerial" ? "aerial" : "road", coords.z, coords.x, coords.y);
       },
-    }))("", { maxZoom: 18, updateWhenZooming: false, attribution: provider.attribution, opacity: normalizeMapBaseOpacity(state.mapBaseOpacity) / 100 })
+    }))("", { maxZoom: 18, updateWhenZooming: false, attribution: provider.attribution })
     : L.tileLayer(provider.tiles[0], {
       maxZoom: 18,
       updateWhenZooming: false,
       attribution: provider.attribution,
-      opacity: normalizeMapBaseOpacity(state.mapBaseOpacity) / 100,
     });
   leafletBaseLayer._travelMapProvider = providerId;
   leafletBaseLayer.addTo(leafletMap);
@@ -6897,7 +6887,7 @@ function mapLibreBaseStyle(providerId) {
         attribution: provider.attribution,
       },
     },
-    layers: [{ id: "basemap", type: "raster", source: "basemap", paint: { "raster-opacity": normalizeMapBaseOpacity(state.mapBaseOpacity) / 100 } }],
+    layers: [{ id: "basemap", type: "raster", source: "basemap" }],
   };
   if (state.map3d) {
     style.sky = {
@@ -6910,12 +6900,6 @@ function mapLibreBaseStyle(providerId) {
     };
   }
   return style;
-}
-
-function applyMapBaseOpacity() {
-  const opacity = normalizeMapBaseOpacity(state.mapBaseOpacity) / 100;
-  if (leafletBaseLayer?.setOpacity) leafletBaseLayer.setOpacity(opacity);
-  if (mapLibreMap?.getLayer("basemap")) mapLibreMap.setPaintProperty("basemap", "raster-opacity", opacity);
 }
 
 function applyMapLibreProvider(provider) {
@@ -12105,20 +12089,6 @@ function renderMapControls() {
   if (level) level.value = state.boundaryLevel || "country";
   const provider = $("#mapProvider");
   if (provider) provider.value = normalizeMapProviderMode(state.mapProviderMode);
-  const baseOpacity = $("#mapBaseOpacity");
-  if (baseOpacity) {
-    const value = normalizeMapBaseOpacity(state.mapBaseOpacity);
-    baseOpacity.value = String(value);
-    baseOpacity.style.setProperty("--opacity-progress", `${value}%`);
-    baseOpacity.title = `${currentLanguage === "en" ? "Basemap opacity" : "底图透明度"}：${value}%`;
-    baseOpacity.setAttribute("aria-label", currentLanguage === "en" ? "Basemap opacity" : "底图透明度");
-    baseOpacity.setAttribute("aria-valuetext", `${value}%`);
-    const opacityLabel = $("#mapBaseOpacityLabel");
-    const opacityValue = $("#mapBaseOpacityValue");
-    if (opacityLabel) opacityLabel.textContent = currentLanguage === "en" ? "Basemap opacity" : "底图透明度";
-    if (opacityValue) opacityValue.textContent = `${value}%`;
-  }
-  applyMapBaseOpacity();
   const overlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
   state.mapOverlays = overlays;
   const showLight = $("#showLightOnMap");
@@ -12527,16 +12497,6 @@ $("#mapProvider")?.addEventListener("change", (event) => {
   state.mapProviderMode = normalizeMapProviderMode(event.target.value);
   renderMapControls();
   renderGeoMap();
-  saveUiStateSoon();
-});
-$("#mapBaseOpacity")?.addEventListener("input", (event) => {
-  state.mapBaseOpacity = normalizeMapBaseOpacity(event.target.value);
-  event.target.style.setProperty("--opacity-progress", `${state.mapBaseOpacity}%`);
-  event.target.title = `${currentLanguage === "en" ? "Basemap opacity" : "底图透明度"}：${state.mapBaseOpacity}%`;
-  event.target.setAttribute("aria-valuetext", `${state.mapBaseOpacity}%`);
-  const opacityValue = $("#mapBaseOpacityValue");
-  if (opacityValue) opacityValue.textContent = `${state.mapBaseOpacity}%`;
-  applyMapBaseOpacity();
   saveUiStateSoon();
 });
 $("#showLightOnMap")?.addEventListener("change", (event) => {
