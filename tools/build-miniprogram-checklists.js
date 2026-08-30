@@ -9,7 +9,8 @@ const output = path.join(root, "miniprogram", "data", "checklists.js");
 const appSource = fs.readFileSync(path.join(root, "app.js"), "utf8");
 
 const worldHeritageNameAliases = {
-  "梅萨维德印第安遗址": "梅萨维德国家公园"
+  "梅萨维德印第安遗址": "梅萨维德国家公园",
+  "红杉国家公园": "红木国家和州立公园"
 };
 
 function extractStringArray(source, marker) {
