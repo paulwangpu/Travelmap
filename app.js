@@ -15,18 +15,20 @@ const mapControlsStorageKey = "travel-map-controls-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "1.9.5";
+const appVersion = "2.0.0";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
 const worldHeritageCatalogTotal = 1248;
-const dataCacheVersion = "20260825-5a-nanhu";
+const usNpsUnitTotal = 433;
+const dataCacheVersion = "20260830-us-nps-zh1";
 let importGuideUserToggled = false;
 let syncingImportGuideOpenState = false;
 const fixedChecklistTotals = {
   china5a: china5aOfficialTotal,
   chinaAncientCapitals: chinaAncientCapitalTotal,
   worldHeritage: worldHeritageCatalogTotal,
+  usNationalParks: usNpsUnitTotal,
 };
 const maxImportVisiblePoints = Infinity;
 const airportDataUrl = "data/airports.json";
@@ -62,7 +64,7 @@ let mapLibreMap = null;
 let mapLibreMarkers = [];
 let mapLibreMarkerSignature = "";
 let mapPointRenderRevision = 0;
-let mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false, points: false, flights: false };
+let mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false, points: false, flights: false, nps: false };
 let bingMapLibreProtocolRegistered = false;
 let mapProviderDetectionPromise = null;
 let leafletDidInitialFit = false;
@@ -71,6 +73,14 @@ let catalogDataPromise = null;
 let china5aCatalogPromise = null;
 let china5aCoordinatesPromise = null;
 let chinaAncientCapitalsPromise = null;
+let usNpsCatalogPromise = null;
+let usNpsBoundaryPromise = null;
+let usNpsUnits = [];
+let usNpsGroups = [];
+let usNpsUnitById = new Map();
+let usNpsUnitsByCode = new Map();
+let usNpsBoundaries = null;
+let legacyUsNationalParkItems = [];
 let china5aCatalogStatus = { source: "本地清单", detail: `${china5aOfficialTotal} 个 5A 景区`, total: china5aOfficialTotal };
 let china5aCoordinates = {};
 let chinaAncientCapitals = {};
@@ -289,7 +299,7 @@ const translations = {
     overlayTracks: "我的轨迹",
     overlayFlights: "我的航线",
     overlay3d: "3D",
-    overlay5a: "5A/国家公园",
+    overlay5a: "5A / NPS 园区边界",
     overlayAncientCapitals: "中国古都",
     overlayHeritage: "世界遗产",
     overlayHighAltitude: "高海拔挑战",
@@ -428,7 +438,7 @@ const translations = {
     overlayTracks: "My tracks",
     overlayFlights: "My flights",
     overlay3d: "3D",
-    overlay5a: "5A / National Parks",
+    overlay5a: "5A / NPS unit boundaries",
     overlayAncientCapitals: "Ancient Chinese Capitals",
     overlayHeritage: "World Heritage",
     overlayHighAltitude: "High-altitude challenge",
@@ -1931,6 +1941,10 @@ function worldHeritageItemEnglishName(item) {
 }
 
 function checklistItemDisplayName(key, item) {
+  if (key === "usNationalParks" && usNpsUnitById.has(String(item || ""))) {
+    const unit = usNpsUnitById.get(String(item || ""));
+    return currentLanguage === "en" ? unit.name : unit.zhName || unit.name;
+  }
   const detailed = checklistItemDetailLabels[key]?.[item];
   if (detailed) return currentLanguage === "en" ? detailed.en : detailed.zh;
   if (key === "worldHeritage" && worldHeritageParentNames[canonicalPlaceKey(item)]) {
@@ -5990,6 +6004,73 @@ function loadChina5aCoordinates() {
   return china5aCoordinatesPromise;
 }
 
+function loadUsNpsCatalog() {
+  if (usNpsCatalogPromise) return usNpsCatalogPromise;
+  usNpsCatalogPromise = fetchJson("data/us-nps-units.json")
+    .then((data) => {
+      if (!Array.isArray(data?.units) || Number(data.total) !== usNpsUnitTotal) throw new Error("invalid NPS catalog");
+      usNpsUnits = data.units;
+      usNpsGroups = Array.isArray(data.groups) ? data.groups : [];
+      usNpsUnitById = new Map(usNpsUnits.map((unit) => [unit.id, unit]));
+      usNpsUnitsByCode = new Map();
+      usNpsUnits.forEach((unit) => [unit.code, ...(unit.alternateCodes || [])].forEach((code) => {
+        const normalizedCode = String(code || "").toUpperCase();
+        if (!normalizedCode) return;
+        const list = usNpsUnitsByCode.get(normalizedCode) || [];
+        list.push(unit);
+        usNpsUnitsByCode.set(normalizedCode, list);
+      }));
+      if (!legacyUsNationalParkItems.length) legacyUsNationalParkItems = [...(checklistCatalog.usNationalParks.items || [])];
+      checklistCatalog.usNationalParks.items = usNpsUnits.map((unit) => unit.id);
+      let migrated = false;
+      state.checklistMarks = Array.from(new Set((state.checklistMarks || []).map((mark) => {
+        if (!String(mark).startsWith("usNpsUnits:")) return mark;
+        migrated = true;
+        return `usNationalParks:${String(mark).slice("usNpsUnits:".length)}`;
+      })));
+      places.forEach((place) => {
+        if (place.checklistKey !== "usNpsUnits") return;
+        place.checklistKey = "usNationalParks";
+        migrated = true;
+      });
+      if (migrated) {
+        checklistStatusCache.signature = "";
+        if (fullStateLoaded) saveStateSoon();
+      }
+    })
+    .catch((error) => {
+      console.warn("NPS 园区清单加载失败", error);
+      usNpsUnits = [];
+      usNpsGroups = [];
+      usNpsUnitById = new Map();
+      usNpsUnitsByCode = new Map();
+      if (legacyUsNationalParkItems.length) checklistCatalog.usNationalParks.items = [...legacyUsNationalParkItems];
+    })
+    .finally(() => {
+      if (document.querySelector('[data-page="achievements"]')?.classList.contains("active")) renderAchievements();
+      if (isMapPageActive() && state.mapOverlays?.china5a) scheduleGeoMapRender();
+    });
+  return usNpsCatalogPromise;
+}
+
+function loadUsNpsBoundaries() {
+  if (usNpsBoundaryPromise) return usNpsBoundaryPromise;
+  usNpsBoundaryPromise = fetchJson("data/us-nps-boundaries.geojson")
+    .then((data) => {
+      if (data?.type !== "FeatureCollection" || !Array.isArray(data.features)) throw new Error("invalid NPS boundaries");
+      usNpsBoundaries = data;
+      invalidateMapGeoJsonCacheOnly();
+    })
+    .catch((error) => {
+      console.warn("NPS 园区边界加载失败", error);
+      usNpsBoundaries = null;
+    })
+    .finally(() => {
+      if (isMapPageActive() && state.mapOverlays?.china5a) scheduleGeoMapRender();
+    });
+  return usNpsBoundaryPromise;
+}
+
 function loadChinaAncientCapitals() {
   if (chinaAncientCapitalsPromise) return chinaAncientCapitalsPromise;
   chinaAncientCapitalsPromise = fetchJson("data/china-ancient-capitals.json")
@@ -6939,7 +7020,7 @@ function applyMapBaseOpacity() {
 function applyMapLibreProvider(provider) {
   if (!mapLibreMap || mapLibreMap._travelMapProvider === provider) return;
   mapLibreMap._travelMapProvider = provider;
-  mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false, points: false, flights: false };
+  mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false, points: false, flights: false, nps: false };
   mapLibreSourceDataRefs.clear();
   clearMapLibreMarkers();
   mapLibreMap.setStyle(mapLibreBaseStyle(provider));
@@ -7032,6 +7113,83 @@ function cachedMapGeoJson(key, builder) {
   return data;
 }
 
+function usNpsUnitDone(unit) {
+  if (!unit) return false;
+  return isChecklistItemDone("usNationalParks", unit.id);
+}
+
+function usNpsBoundaryGeoJson() {
+  if (!usNpsBoundaries?.features || !usNpsUnits.length) return emptyFeatureCollection();
+  const doneCodes = new Set();
+  usNpsUnits.forEach((unit) => {
+    if (usNpsUnitDone(unit)) [unit.code, ...(unit.alternateCodes || [])].forEach((code) => doneCodes.add(String(code).toUpperCase()));
+  });
+  return {
+    type: "FeatureCollection",
+    features: usNpsBoundaries.features.map((feature) => {
+      const code = String(feature.properties?.code || "").toUpperCase();
+      const units = usNpsUnitsByCode.get(code) || [];
+      const primary = units.find((unit) => unit.designation === "National Parks") || units[0];
+      return {
+        ...feature,
+        properties: {
+          ...(feature.properties || {}),
+          code,
+          itemId: primary?.id || "",
+          name: primary?.name || feature.properties?.name || code,
+          location: primary?.location || feature.properties?.location || "",
+          done: doneCodes.has(code),
+        },
+      };
+    }),
+  };
+}
+
+function addMapLibreUsNpsLayers() {
+  if (!mapLibreMap.getLayer("us-nps-fill")) {
+    mapLibreMap.addLayer({
+      id: "us-nps-fill",
+      type: "fill",
+      source: "us-nps-boundaries",
+      paint: {
+        "fill-color": ["case", ["==", ["get", "done"], true], "#d9480f", "#315b46"],
+        "fill-opacity": ["case", ["==", ["get", "done"], true], 0.28, 0.08],
+      },
+    });
+  }
+  if (!mapLibreMap.getLayer("us-nps-line")) {
+    mapLibreMap.addLayer({
+      id: "us-nps-line",
+      type: "line",
+      source: "us-nps-boundaries",
+      paint: {
+        "line-color": ["case", ["==", ["get", "done"], true], "#111111", "#315b46"],
+        "line-width": 0.9,
+        "line-opacity": ["case", ["==", ["get", "done"], true], 0.95, 0.62],
+      },
+    });
+  }
+}
+
+function bindMapLibreUsNpsHandlers() {
+  if (mapLibreLayerHandlersBound.nps || !mapLibreMap.getLayer("us-nps-fill")) return;
+  mapLibreLayerHandlersBound.nps = true;
+  mapLibreMap.on("click", "us-nps-fill", (event) => {
+    if (mapAddMode || mapPathMode) return;
+    const feature = event.features?.[0];
+    const itemId = feature?.properties?.itemId;
+    if (!itemId) return;
+    markMapEventHandled(event);
+    renderChecklistMapDetail("usNationalParks", itemId);
+    new maplibregl.Popup({ offset: 10, closeButton: false })
+      .setLngLat(event.lngLat)
+      .setHTML(mapPopupHtml(`<strong>${escapeHtml(feature.properties.name || "")}</strong><br>${escapeHtml(feature.properties.location || "")}<br><button class="popup-action" data-checklist-map="usNationalParks" data-item="${escapeHtml(itemId)}" type="button">${isChecklistItemDone("usNationalParks", itemId) ? t("unvisit") : t("markVisited")}</button>`))
+      .addTo(mapLibreMap);
+  });
+  mapLibreMap.on("mouseenter", "us-nps-fill", () => { mapLibreMap.getCanvas().style.cursor = "pointer"; });
+  mapLibreMap.on("mouseleave", "us-nps-fill", () => { mapLibreMap.getCanvas().style.cursor = ""; });
+}
+
 function invalidateMapCaches() {
   mapDataVersion += 1;
   mapGeoJsonCache.clear();
@@ -7089,6 +7247,8 @@ function renderMapLibreLayers() {
   removeMapLibreLayer("visited-countries-line");
   removeMapLibreLayer("visited-countries-fill");
   removeMapLibreLayer("country-click-fill");
+  removeMapLibreLayer("us-nps-line");
+  removeMapLibreLayer("us-nps-fill");
   removeMapLibreSource("visited-area-centers");
   removeMapLibreSource("imported-shapes");
   removeMapLibreSource("imported-paths");
@@ -7102,6 +7262,7 @@ function renderMapLibreLayers() {
   removeMapLibreSource("map-background-context");
   removeMapLibreSource("visited-countries");
   removeMapLibreSource("country-click");
+  removeMapLibreSource("us-nps-boundaries");
   perfStageStartedAt = logRenderStage("remove", perfStageStartedAt);
 
   setMapLibreSource("map-background-context", overlays.light ? cachedMapGeoJson("map-background-context", mapBackgroundContextGeoJson) : emptyFeatureCollection());
@@ -7171,6 +7332,11 @@ function renderMapLibreLayers() {
     setMapLibreSource("flight-routes", cachedMapGeoJson("flight-routes", flightRouteGeoJson));
     addMapLibreFlightRouteLayer("flight-routes", "flight-routes-line");
     bindMapLibreFlightRouteHandlers();
+  }
+  if (overlays.china5a && usNpsBoundaries && usNpsUnits.length) {
+    setMapLibreSource("us-nps-boundaries", usNpsBoundaryGeoJson());
+    addMapLibreUsNpsLayers();
+    bindMapLibreUsNpsHandlers();
   }
   perfStageStartedAt = logRenderStage("imports", perfStageStartedAt);
   bindMapLibreLayerHandlers();
@@ -7825,6 +7991,7 @@ function checklistMapItemsFor(key) {
 
 function renderChecklistMapDetail(key, item) {
   const done = isChecklistItemDone(key, item);
+  const npsUnit = key === "usNationalParks" ? usNpsUnitById.get(item) : null;
   const capitalMeta = key === "chinaAncientCapitals" ? chinaAncientCapitalMeta[canonicalPlaceKey(item)] : null;
   if (capitalMeta) {
     renderAncientCapitalDetail(key, item, capitalMeta, done);
@@ -7837,6 +8004,10 @@ function renderChecklistMapDetail(key, item) {
     <h3>${escapeHtml(checklistItemDisplayName(key, item))}</h3>
     <dl>
       ${checklistRelatedDetailRows(key, item)}
+      ${npsUnit ? `<div><dt>${currentLanguage === "en" ? "Designation" : "类型"}</dt><dd>${escapeHtml(npsUnit.designation)}</dd></div>
+      <div><dt>${currentLanguage === "en" ? "Location" : "所在地"}</dt><dd>${escapeHtml(npsUnit.location || t("none"))}</dd></div>
+      <div><dt>${currentLanguage === "en" ? "Chinese name" : "中文名来源"}</dt><dd>${escapeHtml(usNpsTranslationSourceLabel(npsUnit.zhNameSource))}</dd></div>
+      <div><dt>${currentLanguage === "en" ? "Boundary" : "边界"}</dt><dd>${npsUnit.hasBoundary ? (currentLanguage === "en" ? "Available" : "可显示") : (currentLanguage === "en" ? "Not available" : "暂无")}</dd></div>` : ""}
       <div><dt>${t("status")}</dt><dd>${done ? t("checked") : t("unvisited")}</dd></div>
     </dl>
     <button class="detail-action" data-checklist-map="${escapeHtml(key)}" data-item="${escapeHtml(item)}" type="button">${done ? t("unvisit") : t("markVisited")}</button>`;
@@ -8226,6 +8397,28 @@ function renderLeafletLayers() {
         },
       }).addTo(leafletLayers);
     }
+  }
+
+  if (overlays.china5a && usNpsBoundaries && usNpsUnits.length) {
+    L.geoJSON(usNpsBoundaryGeoJson(), {
+      style: (feature) => ({
+        color: feature.properties.done ? "#111111" : "#315b46",
+        weight: 0.9,
+        opacity: feature.properties.done ? 0.95 : 0.62,
+        fillColor: feature.properties.done ? "#d9480f" : "#315b46",
+        fillOpacity: feature.properties.done ? 0.28 : 0.08,
+      }),
+      onEachFeature: (feature, layer) => {
+        const itemId = feature.properties.itemId;
+        layer.bindTooltip(feature.properties.name || feature.properties.code, { sticky: true });
+        if (!itemId) return;
+        layer.on("click", (event) => {
+          if (event.originalEvent) event.originalEvent._travelMapHandled = true;
+          renderChecklistMapDetail("usNationalParks", itemId);
+        });
+        layer.bindPopup(mapPopupHtml(`<strong>${escapeHtml(feature.properties.name || "")}</strong><br>${escapeHtml(feature.properties.location || "")}<br><button class="popup-action" data-checklist-map="usNationalParks" data-item="${escapeHtml(itemId)}" type="button">${isChecklistItemDone("usNationalParks", itemId) ? t("unvisit") : t("markVisited")}</button>`), { closeButton: false });
+      },
+    }).addTo(leafletLayers);
   }
 
   L.geoJSON(importedPolygonGeoJson(), {
@@ -9553,7 +9746,9 @@ function fillAchievementSection(details) {
     return;
   }
   if (section === "usNationalParks") {
-    placeholder.outerHTML = renderChecklistSection("usNationalParks", checklistCatalog.usNationalParks);
+    loadUsNpsCatalog().then(() => {
+      if (placeholder.isConnected) placeholder.outerHTML = renderChecklistSection("usNationalParks", checklistCatalog.usNationalParks);
+    });
     return;
   }
   if (section === "highAltitude") {
@@ -9742,6 +9937,7 @@ function renderChecklistChipButton(key, item, group = "") {
 }
 
 function renderUsNationalParksSection(key, list) {
+  if (usNpsUnits.length) return renderUsNpsUnitsSection(key, list);
   const done = checklistDoneCount(key);
   const items = list.items || [];
   return `<section class="theme-checklist us-parks-checklist">
@@ -9749,6 +9945,86 @@ function renderUsNationalParksSection(key, list) {
       ${items.map((item) => renderUsParkCard(key, item)).join("")}
     </div>
   </section>`;
+}
+
+function renderUsNpsUnitsSection(key, list) {
+  if (!usNpsUnits.length) {
+    return `<section class="theme-checklist"><p class="muted small">${currentLanguage === "en" ? "Loading the complete NPS catalog..." : "正在加载完整 NPS 园区清单…"}</p></section>`;
+  }
+  const boundaryCount = usNpsUnits.filter((unit) => unit.hasBoundary).length;
+  const groups = [...usNpsGroups].sort((left, right) => {
+    if (left.id === "parks") return -1;
+    if (right.id === "parks") return 1;
+    return 0;
+  }).map((group) => {
+    const items = (group.items || []).filter((id) => usNpsUnitById.has(id));
+    const done = items.filter((id) => isChecklistItemDone(key, id)).length;
+    const groupId = checklistGroupId(key, group.id);
+    const isOpen = isChecklistGroupOpen(groupId);
+    return `<details class="country-checklist nps-unit-group" data-checklist-group="${escapeHtml(groupId)}" ${isOpen ? "open" : ""}>
+      <summary><strong>${escapeHtml(currentLanguage === "en" ? group.label : usNpsDesignationChinese(group.label))}</strong><span>${done}/${items.length}</span></summary>
+      <div class="us-park-grid nps-unit-grid">${items.map((id) => renderUsNpsUnitCard(key, id)).join("")}</div>
+    </details>`;
+  }).join("");
+  return `<section class="theme-checklist us-nps-checklist">
+    <div class="checklist-health">
+      <span>${currentLanguage === "en" ? "Official NPS system catalog" : "NPS 官方完整系统清单"}</span>
+      <span>${usNpsUnitTotal} ${currentLanguage === "en" ? "units" : "个园区"} · ${boundaryCount} ${currentLanguage === "en" ? "with map boundaries" : "个含地图边界"}</span>
+      <span>${currentLanguage === "en" ? "Checking a unit lights every polygon sharing its park code." : "勾选园区后，同一园区代码下的所有 polygon 会同时点亮。"}</span>
+    </div>
+    <div class="country-checklist-list">${groups}</div>
+  </section>`;
+}
+
+function renderUsNpsUnitCard(key, itemId) {
+  const unit = usNpsUnitById.get(itemId);
+  if (!unit) return "";
+  const checked = isChecklistItemDone(key, itemId);
+  const primary = currentLanguage === "en" ? unit.name : unit.zhName || unit.name;
+  const secondary = currentLanguage === "en" ? unit.zhName || usNpsDesignationChinese(unit.designation) : unit.name;
+  const sourceLabel = usNpsTranslationSourceLabel(unit.zhNameSource);
+  return `<button class="us-park-card nps-unit-card ${checked ? "done" : ""}" data-checklist="${escapeHtml(key)}" data-item="${escapeHtml(itemId)}" title="${escapeHtml(sourceLabel)}" type="button">
+    <span class="us-park-card-main">${escapeHtml(primary)}</span>
+    <span class="us-park-card-sub">${escapeHtml(secondary)}</span>
+    <span class="us-park-card-status">${checked ? t("checked") : unit.hasBoundary ? t("unvisited") : (currentLanguage === "en" ? "No boundary" : "暂无边界")}</span>
+  </button>`;
+}
+
+function usNpsTranslationSourceLabel(source) {
+  const labels = currentLanguage === "en"
+    ? { "nps-official": "NPS Chinese", common: "Common Chinese name", "project-rule": "Project translation" }
+    : { "nps-official": "NPS 官方中文", common: "通行中文译名", "project-rule": "项目统一译名" };
+  return labels[source] || (currentLanguage === "en" ? "Chinese translation" : "中文译名");
+}
+
+function legacyUsNationalParkItemForUnit(unit) {
+  if (!unit || unit.designation !== "National Parks") return "";
+  return legacyUsNationalParkItems.find((item) => canonicalPlaceKey(englishNameInParentheses(item) || item) === canonicalPlaceKey(unit.name)) || "";
+}
+
+function usNpsDesignationChinese(designation) {
+  return ({
+    "National Parks": "国家公园",
+    "National Monuments": "国家纪念地",
+    "National Historic Sites": "国家历史遗址",
+    "National Historical Parks": "国家历史公园",
+    "National Memorials": "国家纪念园",
+    "National Recreation Areas": "国家休闲区",
+    "National Preserves": "国家保护区",
+    "National Seashores": "国家海岸",
+    "National Lakeshores": "国家湖岸",
+    "National Battlefields": "国家战场",
+    "National Battlefield Parks": "国家战场公园",
+    "National Battlefield Sites": "国家战场遗址",
+    "National Military Parks": "国家军事公园",
+    "National Rivers": "国家河流",
+    "National Wild and Scenic Rivers": "国家野生与风景河流",
+    "National Parkways": "国家公园大道",
+    "National Scenic Trails": "国家风景步道",
+    "National Historic Trails": "国家历史步道",
+    "National Reserves": "国家保留地",
+    "International Historic Sites": "国际历史遗址",
+  })[designation] || designation;
 }
 
 function splitBilingualParkName(item) {
@@ -10417,6 +10693,12 @@ function isChecklistItemDone(key, item, group = "") {
     const baseKey = canonicalPlaceKey(parseHighAltitudeItem(item).name);
     if (baseKey && (marked.has(baseKey) || visited.has(baseKey))) return true;
   }
+  if (key === "usNationalParks" && usNpsUnitById.has(String(item || ""))) {
+    const legacyItem = legacyUsNationalParkItemForUnit(usNpsUnitById.get(item));
+    const legacyItemKey = legacyItem ? checklistItemKey(key, legacyItem) : "";
+    const legacyNameKey = legacyItem ? canonicalPlaceKey(legacyItem) : "";
+    if ((legacyItemKey && (marked.has(legacyItemKey) || visited.has(legacyItemKey))) || (legacyNameKey && (marked.has(legacyNameKey) || visited.has(legacyNameKey)))) return true;
+  }
   return false;
 }
 
@@ -10425,6 +10707,7 @@ function checklistId(key, item, group = "") {
 }
 
 function checklistItemKey(key, item, context = null) {
+  if (key === "usNationalParks" && usNpsUnitById.has(String(item || ""))) return canonicalPlaceKey(String(item || ""));
   const itemKey = canonicalPlaceKey(item);
   if (key === "chinaAncientCapitals") return ancientCapitalSiteKeyForItem(item) || itemKey;
   const canonical = checklistCanonicalKey(item);
@@ -10519,6 +10802,11 @@ async function toggleChecklistItem(key, item, group = "") {
   const coordinateKey = checklistCoordinateKeyForItem(key, item, group);
   const removalKeys = relatedChecklistRemovalKeys(key, item, group);
   const highAltitudeBaseKey = key === "chinaHighAltitude" ? canonicalPlaceKey(parseHighAltitudeItem(item).name) : "";
+  const legacyUsParkItem = key === "usNationalParks" ? legacyUsNationalParkItemForUnit(usNpsUnitById.get(item)) : "";
+  const legacyUsParkKeys = new Set([
+    legacyUsParkItem ? checklistItemKey(key, legacyUsParkItem) : "",
+    legacyUsParkItem ? canonicalPlaceKey(legacyUsParkItem) : "",
+  ].filter(Boolean));
   const marks = new Set(state.checklistMarks || []);
   const wasDone = isChecklistItemDone(key, item, group);
   if (wasDone) {
@@ -10535,6 +10823,8 @@ async function toggleChecklistItem(key, item, group = "") {
         || removalKeys.normalized.has(markKey)
         || (!isAmbiguousChecklistItem(key, item) && markKey === legacyKey)
         || (highAltitudeBaseKey && markKey === highAltitudeBaseKey)
+        || legacyUsParkKeys.has(markRawKey)
+        || legacyUsParkKeys.has(markKey)
       ) marks.delete(mark);
     });
     unvisitChecklistItem(key, item, group);
@@ -10572,7 +10862,8 @@ function renderAfterChecklistChange(key, item, group = "") {
   if (document.querySelector('[data-page="imports"]')?.classList.contains("active")) renderDataInventory();
   if (isMapPageActive()) {
     if (mapLibreMap && mapLibreMap.isStyleLoaded() && shouldRefreshMapMarkersForChecklist(key)) renderMapLibreMarkers();
-    scheduleCoverageMapRefresh();
+    if (key === "usNationalParks") scheduleGeoMapRender();
+    else scheduleCoverageMapRefresh();
   }
 }
 
@@ -10635,6 +10926,7 @@ function refreshRenderedChecklistSectionMarkup(key) {
     return true;
   }
   if (key === "usNationalParks") {
+    section.querySelectorAll("[data-checklist-group]").forEach((details) => setChecklistGroupOpen(details.dataset.checklistGroup, details.open));
     section.outerHTML = renderUsNationalParksSection(key, list);
     return true;
   }
@@ -10693,6 +10985,12 @@ function refreshAchievementChecklistCount(key) {
 function checklistPlaceMatchesItem(key, item, place, group = "") {
   if (!place) return false;
   const itemKey = checklistItemKey(key, item, group);
+  if (key === "usNationalParks" && usNpsUnitById.has(String(item || "")) && place.checklistKey === key) {
+    if (checklistItemKey(key, place.checklistItemId || "") === itemKey) return true;
+    const unit = usNpsUnitById.get(item);
+    const legacyItem = legacyUsNationalParkItemForUnit(unit);
+    return placeMatchesName(place, legacyItem || unit.name);
+  }
   if (place.checklistKey === key && checklistItemKey(key, place.name, place) === itemKey) return true;
   if (isAmbiguousChecklistItem(key, item)) return false;
   return placeMatchesName(place, item);
@@ -10717,6 +11015,7 @@ function ensureChecklistPlace(key, item, group = "") {
   if (existing) {
     existing.checklist = Array.from(new Set([...(existing.checklist || []), listLabel]));
     existing.checklistKey ||= key;
+    if (key === "usNationalParks" && usNpsUnitById.has(String(item || ""))) existing.checklistItemId = item;
     applyChecklistCoordinates(existing, coords, key);
     upsertVisit(existing.id, 1, { tripId: "checklist", save: false });
     state.focusPlaceId = existing.id;
@@ -10724,11 +11023,12 @@ function ensureChecklistPlace(key, item, group = "") {
   }
   const id = `checklist-${slugify(key)}-${slugify(checklistItemKey(key, item, group))}`;
   const defaultCountry = key === "usNationalParks" ? "us" : key === "worldHeritage" ? "imported" : "cn";
+  const npsUnit = key === "usNationalParks" ? usNpsUnitById.get(item) : null;
   const place = {
     id,
-    name: item,
+    name: npsUnit?.name || item,
     country: defaultCountry,
-    unit: key === "worldHeritage" ? "" : (coords?.[2] || group || ""),
+    unit: key === "worldHeritage" ? "" : (npsUnit?.location || coords?.[2] || group || ""),
     city: "",
     type: listLabel,
     lat: coords?.[0] ?? null,
@@ -10736,6 +11036,7 @@ function ensureChecklistPlace(key, item, group = "") {
     tags: [listLabel],
     checklist: [listLabel],
     checklistKey: key,
+    checklistItemId: npsUnit?.id || "",
     checklistOnly: true,
   };
   applyChecklistGeography(place, key, coords);
@@ -10832,11 +11133,18 @@ function cleanChecklistName(value) {
 function checklistCoordinateFor(item, group = "") {
   const lookup = checklistCoordinateLookup();
   const canonical = checklistCanonicalPlaceForItem(item);
+  const npsUnit = usNpsUnitById.get(String(item || ""));
+  const legacyUsParkItem = legacyUsNationalParkItemForUnit(npsUnit);
   const candidates = [
     item,
+    npsUnit?.name,
+    legacyUsParkItem,
     cleanChecklistName(item),
+    cleanChecklistName(npsUnit?.name),
     englishNameInParentheses(item),
+    englishNameInParentheses(legacyUsParkItem),
     cleanEnglishParkName(englishNameInParentheses(item)),
+    cleanEnglishParkName(npsUnit?.name),
     ...(canonical?.aliases || []),
   ].filter(Boolean);
   const coords = candidates.map((name) => lookup.get(canonicalPlaceKey(name))).find(Boolean);
@@ -12056,6 +12364,7 @@ function renderAll() {
 function preloadDashboardStats() {
   Promise.allSettled([
     loadChina5aCatalog(),
+    loadUsNpsCatalog(),
     loadCatalogData(),
     loadBoundaryData("china2", { renderOnLoad: false }),
     loadBoundaryData("chinaDirect", { renderOnLoad: false }),
@@ -12273,7 +12582,7 @@ function showPage(pageId, targetId = "") {
   }
   document.querySelector(`[data-page="${target}"]`)?.scrollIntoView({ block: "start", inline: "nearest" });
   if (target === "world") {
-    if (state.mapOverlays?.china5a) Promise.all([loadChina5aCatalog(), loadChina5aCoordinates()]).finally(renderGeoMap);
+    if (state.mapOverlays?.china5a) Promise.all([loadChina5aCatalog(), loadChina5aCoordinates(), loadUsNpsCatalog(), loadUsNpsBoundaries()]).finally(renderGeoMap);
     if (state.mapOverlays?.chinaAncientCapitals || hasAncientCapitalCheckins()) loadChinaAncientCapitals().finally(renderGeoMap);
     if (state.mapOverlays?.worldHeritage) loadCatalogData();
     if (state.mapOverlays?.highAltitude) renderGeoMap();
@@ -12298,6 +12607,7 @@ function showPage(pageId, targetId = "") {
     renderAchievements();
     loadCatalogData();
     Promise.all([loadChina5aCatalog(), loadChina5aCoordinates()]);
+    loadUsNpsCatalog();
     scheduleChecklistNavSpy();
     window.setTimeout(() => scrollToPageTarget(target, targetId), 80);
   }
@@ -12597,10 +12907,9 @@ $("#showChina5aOnMap")?.addEventListener("change", (event) => {
   saveUiStateSoon();
   const refresh = () => {
     checklistOverlayCache.signature = "";
-    if (mapLibreMap) renderMapLibreMarkers();
-    else renderGeoMap();
+    renderGeoMap();
   };
-  if (event.target.checked) Promise.all([loadChina5aCatalog(), loadChina5aCoordinates()]).finally(refresh);
+  if (event.target.checked) Promise.all([loadChina5aCatalog(), loadChina5aCoordinates(), loadUsNpsCatalog(), loadUsNpsBoundaries()]).finally(refresh);
   else refresh();
 });
 $("#showAncientCapitalsOnMap")?.addEventListener("change", (event) => {
