@@ -64,6 +64,7 @@ let mapLibreMap = null;
 let mapLibreMarkers = [];
 let mapLibreMarkerSignature = "";
 let mapPointRenderRevision = 0;
+let pendingUsNpsBoundaryRefresh = null;
 let mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false, points: false, flights: false, nps: false };
 let bingMapLibreProtocolRegistered = false;
 let mapProviderDetectionPromise = null;
@@ -79,6 +80,7 @@ let usNpsUnits = [];
 let usNpsGroups = [];
 let usNpsUnitById = new Map();
 let usNpsUnitsByCode = new Map();
+let usNpsUnitByMergeName = new Map();
 let usNpsBoundaries = null;
 let legacyUsNationalParkItems = [];
 let china5aCatalogStatus = { source: "本地清单", detail: `${china5aOfficialTotal} 个 5A 景区`, total: china5aOfficialTotal };
@@ -6010,9 +6012,34 @@ function loadUsNpsCatalog() {
     .then((data) => {
       if (!Array.isArray(data?.units) || Number(data.total) !== usNpsUnitTotal) throw new Error("invalid NPS catalog");
       usNpsUnits = data.units;
-      usNpsGroups = Array.isArray(data.groups) ? data.groups : [];
+      const broadGroups = [
+        { id: "parks", label: "National Parks", items: [] },
+        { id: "battlefields", label: "Battlefields and Military Parks", items: [] },
+        { id: "historic", label: "Historic Sites and Memorials", items: [] },
+        { id: "nature-recreation", label: "Nature and Recreation Areas", items: [] },
+        { id: "other-nps-units", label: "Other NPS Units", items: [] },
+      ];
+      usNpsUnits.forEach((unit) => {
+        const designation = String(unit.designation || "");
+        const groupId = designation === "National Parks"
+          ? "parks"
+          : /Battlefield|Military/i.test(designation)
+            ? "battlefields"
+            : /Historic|Historical|Memorial/i.test(designation)
+              ? "historic"
+              : /Recreation|Preserve|Seashore|Lakeshore|River|Scenic Trail/i.test(designation)
+                ? "nature-recreation"
+                : "other-nps-units";
+        unit.designationId = groupId;
+        broadGroups.find((group) => group.id === groupId)?.items.push(unit.id);
+      });
+      usNpsGroups = broadGroups.map((group) => ({ ...group, count: group.items.length })).filter((group) => group.items.length);
       usNpsUnitById = new Map(usNpsUnits.map((unit) => [unit.id, unit]));
       usNpsUnitsByCode = new Map();
+      usNpsUnitByMergeName = new Map();
+      usNpsUnits.forEach((unit) => {
+        usNpsUnitByMergeName.set(canonicalPlaceKey(unit.name), unit);
+      });
       usNpsUnits.forEach((unit) => [unit.code, ...(unit.alternateCodes || [])].forEach((code) => {
         const normalizedCode = String(code || "").toUpperCase();
         if (!normalizedCode) return;
@@ -6044,6 +6071,7 @@ function loadUsNpsCatalog() {
       usNpsGroups = [];
       usNpsUnitById = new Map();
       usNpsUnitsByCode = new Map();
+      usNpsUnitByMergeName = new Map();
       if (legacyUsNationalParkItems.length) checklistCatalog.usNationalParks.items = [...legacyUsNationalParkItems];
     })
     .finally(() => {
@@ -7118,12 +7146,21 @@ function usNpsUnitDone(unit) {
   return isChecklistItemDone("usNationalParks", unit.id);
 }
 
-function usNpsBoundaryGeoJson() {
-  if (!usNpsBoundaries?.features || !usNpsUnits.length) return emptyFeatureCollection();
+function usNpsDoneCodes() {
   const doneCodes = new Set();
   usNpsUnits.forEach((unit) => {
     if (usNpsUnitDone(unit)) [unit.code, ...(unit.alternateCodes || [])].forEach((code) => doneCodes.add(String(code).toUpperCase()));
   });
+  return doneCodes;
+}
+
+function usNpsDoneExpression() {
+  return ["in", ["get", "code"], ["literal", Array.from(usNpsDoneCodes())]];
+}
+
+function usNpsBoundaryGeoJson() {
+  if (!usNpsBoundaries?.features || !usNpsUnits.length) return emptyFeatureCollection();
+  const doneCodes = usNpsDoneCodes();
   return {
     type: "FeatureCollection",
     features: usNpsBoundaries.features.map((feature) => {
@@ -7146,14 +7183,27 @@ function usNpsBoundaryGeoJson() {
 }
 
 function addMapLibreUsNpsLayers() {
+  const doneExpression = usNpsDoneExpression();
   if (!mapLibreMap.getLayer("us-nps-fill")) {
     mapLibreMap.addLayer({
       id: "us-nps-fill",
       type: "fill",
       source: "us-nps-boundaries",
       paint: {
-        "fill-color": ["case", ["==", ["get", "done"], true], "#d9480f", "#315b46"],
-        "fill-opacity": ["case", ["==", ["get", "done"], true], 0.28, 0.08],
+        "fill-color": "#315b46",
+        "fill-opacity": 0.08,
+      },
+    });
+  }
+  if (!mapLibreMap.getLayer("us-nps-done-fill")) {
+    mapLibreMap.addLayer({
+      id: "us-nps-done-fill",
+      type: "fill",
+      source: "us-nps-boundaries",
+      filter: doneExpression,
+      paint: {
+        "fill-color": "#176b4b",
+        "fill-opacity": 0.38,
       },
     });
   }
@@ -7163,9 +7213,9 @@ function addMapLibreUsNpsLayers() {
       type: "line",
       source: "us-nps-boundaries",
       paint: {
-        "line-color": ["case", ["==", ["get", "done"], true], "#111111", "#315b46"],
+        "line-color": ["case", doneExpression, "#111111", "#315b46"],
         "line-width": 0.9,
-        "line-opacity": ["case", ["==", ["get", "done"], true], 0.95, 0.62],
+        "line-opacity": ["case", doneExpression, 0.95, 0.62],
       },
     });
   }
@@ -7176,12 +7226,14 @@ function bindMapLibreUsNpsHandlers() {
   mapLibreLayerHandlersBound.nps = true;
   mapLibreMap.on("click", "us-nps-fill", (event) => {
     if (mapAddMode || mapPathMode) return;
+    if (event.originalEvent?._travelMapHandled) return;
     const feature = event.features?.[0];
     const itemId = feature?.properties?.itemId;
     if (!itemId) return;
     markMapEventHandled(event);
     renderChecklistMapDetail("usNationalParks", itemId);
     const displayName = checklistItemDisplayName("usNationalParks", itemId);
+    document.querySelectorAll(".maplibregl-popup").forEach((popup) => popup.remove());
     new maplibregl.Popup({ offset: 10, closeButton: false })
       .setLngLat(event.lngLat)
       .setHTML(mapPopupHtml(`<strong>${escapeHtml(displayName)}</strong><br>${escapeHtml(feature.properties.location || "")}<br><button class="popup-action" data-checklist-map="usNationalParks" data-item="${escapeHtml(itemId)}" type="button">${isChecklistItemDone("usNationalParks", itemId) ? t("unvisit") : t("markVisited")}</button>`))
@@ -7249,6 +7301,7 @@ function renderMapLibreLayers() {
   removeMapLibreLayer("visited-countries-fill");
   removeMapLibreLayer("country-click-fill");
   removeMapLibreLayer("us-nps-line");
+  removeMapLibreLayer("us-nps-done-fill");
   removeMapLibreLayer("us-nps-fill");
   removeMapLibreSource("visited-area-centers");
   removeMapLibreSource("imported-shapes");
@@ -7691,6 +7744,7 @@ function bindMapLibrePointHandlers() {
   if (mapLibreLayerHandlersBound.points || !mapLibreMap.getLayer("map-points-circle")) return;
   mapLibreLayerHandlersBound.points = true;
   const handlePointClick = (event) => {
+    if (event.originalEvent?._travelMapHandled) return;
     markMapEventHandled(event);
     const feature = event.features?.[0];
     if (!feature) return;
@@ -7730,6 +7784,7 @@ function showMapLibrePointPopup(feature, lngLat) {
   const button = props.kind === "checkin"
     ? `<button class="popup-action" data-unvisit="${escapeHtml(props.placeId)}" type="button">${t("unvisit")}</button>`
     : `<button class="popup-action" data-checklist-map="${escapeHtml(props.checklistKey)}" data-item="${escapeHtml(props.item)}" type="button">${props.done ? t("unvisit") : t("markVisited")}</button>`;
+  document.querySelectorAll(".maplibregl-popup").forEach((popup) => popup.remove());
   new maplibregl.Popup({ offset: 12, closeButton: false })
     .setLngLat(popupLngLat)
     .setHTML(mapPopupHtml(`<strong>${title}</strong><br>${subtitle}<br>${button}`))
@@ -7784,7 +7839,13 @@ function checklistOverlayPlaces() {
   checklistOverlayCache = {
     signature,
     items,
-    keySet: new Set(allOverlayItems.flatMap((entry) => [entry.itemKey, entry.legacyKey, checklistCanonicalKey(entry.item), checklistCoordinateKeyForItem(entry.key, entry.item, entry.group || "")]).filter(Boolean)),
+    keySet: new Set(allOverlayItems.flatMap((entry) => [
+      entry.itemKey,
+      entry.legacyKey,
+      checklistCanonicalKey(entry.item),
+      checklistMergeKeyForEntry(entry),
+      checklistCoordinateKeyForItem(entry.key, entry.item, entry.group || ""),
+    ]).filter(Boolean)),
   };
   logSlowStep("checklistOverlayPlaces", perfStartedAt);
   return items;
@@ -7800,7 +7861,6 @@ function mergeCanonicalChecklistOverlayItems(items) {
       return;
     }
     const existing = merged.get(mergeKey);
-    existing.done = existing.done || entry.done;
     existing.categoryLabels = Array.from(new Set([...(existing.categoryLabels || []), categoryLabel].filter(Boolean)));
     existing.subtitle = existing.categoryLabels.join(" · ");
     const priority = checklistOverlayDisplayPriority(entry.key);
@@ -7808,7 +7868,10 @@ function mergeCanonicalChecklistOverlayItems(items) {
       existing.key = entry.key;
       existing.item = entry.item;
       existing.title = entry.title;
+      existing.done = entry.done;
       existing.displayPriority = priority;
+    } else if (priority === (existing.displayPriority ?? 99)) {
+      existing.done = existing.done || entry.done;
     }
   });
   return Array.from(merged.values()).map(({ categoryLabels, displayPriority, ...entry }) => entry);
@@ -7825,7 +7888,20 @@ function checklistOverlayDisplayPriority(key) {
 }
 
 function checklistMergeKeyForEntry(entry) {
-  return checklistCanonicalKey(entry.item) || checklistCoordinateKeyForItem(entry.key, entry.item, entry.group || "") || "";
+  const npsUnit = entry.key === "usNationalParks"
+    ? usNpsUnitById.get(entry.item)
+    : entry.key === "worldHeritage"
+      ? [worldHeritageItemEnglishName(entry.item)]
+      .filter(Boolean)
+      .map((name) => usNpsUnitByMergeName.get(canonicalPlaceKey(name)))
+      .find(Boolean)
+      : null;
+  const canonicalKey = checklistCanonicalKey(entry.item)
+    || (npsUnit ? checklistCanonicalKey(npsUnit.name) : "");
+  return canonicalKey
+    || (npsUnit ? `nps:${String(npsUnit.code || npsUnit.id).toUpperCase()}` : "")
+    || checklistCoordinateKeyForItem(entry.key, entry.item, entry.group || "")
+    || "";
 }
 
 function relatedChecklistEntriesForItem(key, item, group = "") {
@@ -7979,11 +8055,25 @@ function hasAncientCapitalCheckins() {
 
 function placeBelongsToActiveChecklistOverlay(place) {
   if (!place) return false;
-  if (!activeChecklistOverlayKeys().length) return false;
+  const activeKeys = activeChecklistOverlayKeys();
+  if (!activeKeys.length) return false;
+  if (place.checklistOnly && activeKeys.includes(place.checklistKey)) return true;
+  if (place.checklistOnly && place.checklistItemId && usNpsUnitById.has(place.checklistItemId) && activeKeys.includes("usNationalParks")) return true;
   checklistOverlayPlaces();
   const placeKey = canonicalPlaceKey(place.name);
   const exactKey = place.checklistKey ? checklistItemKey(place.checklistKey, place.name, place) : "";
-  return checklistOverlayCache.keySet.has(exactKey) || checklistOverlayCache.keySet.has(placeKey);
+  const npsMergeKey = place.checklistItemId && usNpsUnitById.has(place.checklistItemId)
+    ? checklistMergeKeyForEntry({ key: "usNationalParks", item: place.checklistItemId })
+    : "";
+  const placeMergeKey = place.checklistKey
+    ? checklistMergeKeyForEntry({ key: place.checklistKey, item: place.name })
+    : "";
+  const coordinateKey = checklistCoordinateKeyForPlace(place);
+  return checklistOverlayCache.keySet.has(exactKey)
+    || checklistOverlayCache.keySet.has(placeKey)
+    || (npsMergeKey && checklistOverlayCache.keySet.has(npsMergeKey))
+    || (placeMergeKey && checklistOverlayCache.keySet.has(placeMergeKey))
+    || (coordinateKey && checklistOverlayCache.keySet.has(coordinateKey));
 }
 
 function checklistMapItemsFor(key) {
@@ -10008,6 +10098,10 @@ function legacyUsNationalParkItemForUnit(unit) {
 
 function usNpsDesignationChinese(designation) {
   return ({
+    "Battlefields and Military Parks": "战场与军事园区",
+    "Historic Sites and Memorials": "历史遗址与纪念园区",
+    "Nature and Recreation Areas": "自然保护与休闲园区",
+    "Other NPS Units": "其他 NPS 园区",
     "National Parks": "国家公园",
     "National Monuments": "国家纪念地",
     "National Historic Sites": "国家历史遗址",
@@ -10846,6 +10940,7 @@ async function toggleChecklistItem(key, item, group = "") {
     }
   }
   state.checklistMarks = Array.from(marks);
+  checklistStatusCache.signature = "";
   rebuildCoverageFromSavedVisits();
   saveStateSoon();
   renderAfterChecklistChange(key, item, group);
@@ -10856,7 +10951,10 @@ function renderAfterChecklistChange(key, item, group = "") {
   invalidateMapPointRenderCache();
   const refreshedSection = refreshRenderedChecklistSectionMarkup(key);
   if (!refreshedSection || checklistCanonicalKey(item)) updateChecklistButtonsForItem(key, item, group);
-  refreshRenderedChecklistStats(key, group);
+  const statsGroup = key === "usNationalParks"
+    ? (usNpsUnitById.get(item)?.designationId || group)
+    : group;
+  refreshRenderedChecklistStats(key, statsGroup);
   refreshCanonicalChecklistStats(item);
   renderMetrics();
   renderDashboardAchievements();
@@ -10864,11 +10962,46 @@ function renderAfterChecklistChange(key, item, group = "") {
   if (document.querySelector('[data-page="checkins"]')?.classList.contains("active") && !canRefreshChecklistChangeLocally(key)) renderCheckinsPage();
   if (!$("#mapDetail")?.classList.contains("hidden")) renderChecklistMapDetail(key, item);
   if (document.querySelector('[data-page="imports"]')?.classList.contains("active")) renderDataInventory();
+  const linkedToUsNationalPark = key === "usNationalParks"
+    || relatedChecklistEntriesForItem(key, item, group).some((entry) => entry.key === "usNationalParks");
+  if (linkedToUsNationalPark) scheduleUsNpsBoundaryStateRefresh();
   if (isMapPageActive()) {
     if (mapLibreMap && mapLibreMap.isStyleLoaded() && shouldRefreshMapMarkersForChecklist(key)) renderMapLibreMarkers();
-    if (key === "usNationalParks") scheduleGeoMapRender();
-    else scheduleCoverageMapRefresh();
+    if (!linkedToUsNationalPark) scheduleCoverageMapRefresh();
   }
+}
+
+function scheduleUsNpsBoundaryStateRefresh() {
+  refreshUsNpsBoundaryState();
+  window.requestAnimationFrame(() => refreshUsNpsBoundaryState());
+  if (pendingUsNpsBoundaryRefresh) window.clearTimeout(pendingUsNpsBoundaryRefresh);
+  pendingUsNpsBoundaryRefresh = window.setTimeout(() => {
+    pendingUsNpsBoundaryRefresh = null;
+    refreshUsNpsBoundaryState();
+  }, 300);
+}
+
+function refreshUsNpsBoundaryState() {
+  if (mapLibreMap && mapLibreMap.isStyleLoaded() && mapLibreMap.getSource("us-nps-boundaries")) {
+    addMapLibreUsNpsLayers();
+    const doneExpression = usNpsDoneExpression();
+    if (mapLibreMap.getLayer("us-nps-done-fill")) {
+      mapLibreMap.setFilter("us-nps-done-fill", doneExpression);
+      mapLibreMap.moveLayer("us-nps-done-fill");
+    }
+    if (mapLibreMap.getLayer("us-nps-line")) {
+      mapLibreMap.setPaintProperty("us-nps-line", "line-color", ["case", doneExpression, "#111111", "#315b46"]);
+      mapLibreMap.setPaintProperty("us-nps-line", "line-opacity", ["case", doneExpression, 0.95, 0.62]);
+      mapLibreMap.moveLayer("us-nps-line");
+    }
+    mapLibreMap.triggerRepaint();
+    return;
+  }
+  if (leafletMap && window.L) {
+    renderLeafletLayers();
+    return;
+  }
+  scheduleGeoMapRender();
 }
 
 function canRefreshChecklistChangeLocally(key) {
@@ -10889,18 +11022,25 @@ function updateChecklistButtonsForItem(key, item, group = "") {
   const itemKey = checklistItemKey(key, item, group);
   const legacyKey = canonicalPlaceKey(item);
   const canonicalKey = checklistCanonicalKey(item);
-  const selector = canonicalKey ? "[data-checklist], [data-checklist-map]" : `[data-checklist="${key}"], [data-checklist-map="${key}"]`;
+  const mergeKey = checklistMergeKeyForEntry({ key, item, group });
+  const selector = mergeKey ? "[data-checklist], [data-checklist-map]" : `[data-checklist="${key}"], [data-checklist-map="${key}"]`;
   document.querySelectorAll(selector).forEach((button) => {
     const buttonChecklistKey = button.dataset.checklist || button.dataset.checklistMap || key;
     const buttonItem = button.dataset.item || "";
     const buttonKey = checklistItemKey(buttonChecklistKey, buttonItem, button.dataset.group || "");
-    const linked = canonicalKey && buttonKey === canonicalKey;
+    const buttonMergeKey = checklistMergeKeyForEntry({ key: buttonChecklistKey, item: buttonItem, group: button.dataset.group || "" });
+    const linked = Boolean(mergeKey && buttonMergeKey === mergeKey);
     if (buttonKey !== itemKey && !linked && (!isAmbiguousChecklistItem(key, item) || canonicalPlaceKey(buttonItem) !== legacyKey)) return;
     const buttonDone = linked ? isChecklistItemDone(buttonChecklistKey, buttonItem, button.dataset.group || "") : done;
     button.classList.toggle("done", buttonDone);
     const status = button.querySelector(".us-park-card-status");
     if (status) {
-      status.textContent = buttonDone ? t("checked") : t("unvisited");
+      const npsUnit = buttonChecklistKey === "usNationalParks" ? usNpsUnitById.get(buttonItem) : null;
+      status.textContent = buttonDone
+        ? t("checked")
+        : npsUnit && !npsUnit.hasBoundary
+          ? (currentLanguage === "en" ? "No boundary" : "暂无边界")
+          : t("unvisited");
       return;
     }
     if (button.dataset.checklistMap) {
@@ -10912,7 +11052,7 @@ function updateChecklistButtonsForItem(key, item, group = "") {
 }
 
 function refreshRenderedChecklistSectionMarkup(key) {
-  if (key !== "chinaHighAltitude" && key !== "usNationalParks" && key !== "chinaAncientCapitals") return false;
+  if (key !== "chinaHighAltitude" && key !== "chinaAncientCapitals") return false;
   const button = document.querySelector(`.theme-checklist [data-checklist="${key}"]`);
   const section = button?.closest(".theme-checklist");
   const list = checklistCatalog[key];
@@ -10927,11 +11067,6 @@ function refreshRenderedChecklistSectionMarkup(key) {
     section.outerHTML = section.classList.contains("high-altitude-inline")
       ? renderHighAltitudeInlineSection(key, list)
       : renderHighAltitudeSection(key, list);
-    return true;
-  }
-  if (key === "usNationalParks") {
-    section.querySelectorAll("[data-checklist-group]").forEach((details) => setChecklistGroupOpen(details.dataset.checklistGroup, details.open));
-    section.outerHTML = renderUsNationalParksSection(key, list);
     return true;
   }
   return false;
@@ -10954,7 +11089,9 @@ function refreshRenderedChecklistStats(key, group = "") {
   const details = Array.from(document.querySelectorAll("[data-checklist-group]"))
     .find((candidate) => candidate.dataset.checklistGroup === groupId);
   const summaryCount = details?.querySelector(":scope > summary span");
-  const items = list.byRegion?.[group] || list.byCountry?.[group] || [];
+  const items = key === "usNationalParks"
+    ? (usNpsGroups.find((entry) => entry.id === group)?.items || [])
+    : (list.byRegion?.[group] || list.byCountry?.[group] || []);
   if (summaryCount && items.length) {
     const done = displayChecklistItems(key, items).filter((entry) => isChecklistItemDone(key, entry, group)).length;
     summaryCount.textContent = `${done}/${displayChecklistItems(key, items).length}`;
@@ -11019,7 +11156,12 @@ function ensureChecklistPlace(key, item, group = "") {
   if (existing) {
     existing.checklist = Array.from(new Set([...(existing.checklist || []), listLabel]));
     existing.checklistKey ||= key;
-    if (key === "usNationalParks" && usNpsUnitById.has(String(item || ""))) existing.checklistItemId = item;
+    if (key === "usNationalParks" && usNpsUnitById.has(String(item || ""))) {
+      const npsUnit = usNpsUnitById.get(item);
+      existing.checklistKey = key;
+      existing.checklistItemId = item;
+      existing.name = npsUnit.name;
+    }
     applyChecklistCoordinates(existing, coords, key);
     upsertVisit(existing.id, 1, { tripId: "checklist", save: false });
     state.focusPlaceId = existing.id;
