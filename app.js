@@ -7177,7 +7177,7 @@ function usNpsBoundaryGeoJson() {
       const primary = units.find((unit) => unit.designation === "National Parks") || units[0];
       return {
         ...feature,
-        geometry: filterTinyUsNpsPolygonParts(feature.geometry),
+        geometry: filterTinyUsNpsPolygonParts(restoreUsNpsPolygonHoles(feature.geometry)),
         properties: {
           ...(feature.properties || {}),
           code,
@@ -7202,6 +7202,40 @@ function usNpsRingAreaSquareKm(ring) {
   }
   const meanLatitude = latitudeTotal / ring.length;
   return Math.abs(area / 2) * 111.32 * 111.32 * Math.cos(meanLatitude * Math.PI / 180);
+}
+
+function usNpsPointInRing(point, ring) {
+  if (!Array.isArray(point) || !Array.isArray(ring)) return false;
+  let inside = false;
+  for (let index = 0, previous = ring.length - 1; index < ring.length; previous = index, index += 1) {
+    const [x1, y1] = ring[index] || [];
+    const [x2, y2] = ring[previous] || [];
+    if (![x1, y1, x2, y2].every(Number.isFinite)) continue;
+    if ((y1 > point[1]) !== (y2 > point[1]) && point[0] < ((x2 - x1) * (point[1] - y1)) / (y2 - y1) + x1) inside = !inside;
+  }
+  return inside;
+}
+
+function restoreUsNpsPolygonHoles(geometry) {
+  if (geometry?.type !== "MultiPolygon" || !Array.isArray(geometry.coordinates) || geometry.coordinates.length < 2) return geometry;
+  const polygons = geometry.coordinates.map((coordinates, index) => ({
+    coordinates,
+    index,
+    area: usNpsRingAreaSquareKm(coordinates?.[0]),
+    parent: null,
+  }));
+  polygons.forEach((candidate) => {
+    const point = candidate.coordinates?.[0]?.[0];
+    if (!point) return;
+    candidate.parent = polygons
+      .filter((container) => container.area > candidate.area && usNpsPointInRing(point, container.coordinates?.[0]))
+      .sort((left, right) => left.area - right.area)[0] || null;
+  });
+  const coordinates = polygons.filter((polygon) => !polygon.parent).map((polygon) => [
+    ...polygon.coordinates,
+    ...polygons.filter((candidate) => candidate.parent === polygon).map((candidate) => candidate.coordinates[0]),
+  ]);
+  return { ...geometry, coordinates };
 }
 
 function filterTinyUsNpsPolygonParts(geometry) {
