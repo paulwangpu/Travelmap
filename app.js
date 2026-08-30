@@ -4914,6 +4914,7 @@ const checklistCanonicalPlaces = [
   { id: "us-hawaii-volcanoes", aliases: ["夏威夷火山国家公园", "Hawaii Volcanoes National Park", "Hawaii Volcanoes"] },
   { id: "us-carlsbad-caverns", aliases: ["卡尔斯巴德洞穴国家公园", "卡尔斯巴德洞窟国家公园", "Carlsbad Caverns National Park", "Carlsbad Caverns"] },
   { id: "us-waterton-glacier", aliases: ["沃特顿-冰川国际和平公园", "冰川国家公园", "Glacier National Park", "Waterton-Glacier International Peace Park", "Glacier"] },
+  { id: "us-statue-of-liberty", aliases: ["自由女神像", "自由女神像国家名胜", "自由女神像國家名勝", "Statue of Liberty", "Statue of Liberty National Monument"] },
 ];
 
 const checklistCanonicalAliasMap = new Map();
@@ -7096,6 +7097,13 @@ function mapLibreSourceOptions(id) {
       tolerance: 0.25,
     };
   }
+  if (id === "us-nps-boundaries") {
+    return {
+      maxzoom: 16,
+      buffer: 128,
+      tolerance: 0.05,
+    };
+  }
   if (id === "visited-subadmin" || id === "us-county-reference") {
     return {
       maxzoom: 9,
@@ -7169,6 +7177,7 @@ function usNpsBoundaryGeoJson() {
       const primary = units.find((unit) => unit.designation === "National Parks") || units[0];
       return {
         ...feature,
+        geometry: filterTinyUsNpsPolygonParts(feature.geometry),
         properties: {
           ...(feature.properties || {}),
           code,
@@ -7180,6 +7189,27 @@ function usNpsBoundaryGeoJson() {
       };
     }),
   };
+}
+
+function usNpsRingAreaSquareKm(ring) {
+  if (!Array.isArray(ring) || ring.length < 4) return 0;
+  let area = 0;
+  let latitudeTotal = 0;
+  for (let index = 0, previous = ring.length - 1; index < ring.length; previous = index, index += 1) {
+    area += Number(ring[previous]?.[0] || 0) * Number(ring[index]?.[1] || 0)
+      - Number(ring[index]?.[0] || 0) * Number(ring[previous]?.[1] || 0);
+    latitudeTotal += Number(ring[index]?.[1] || 0);
+  }
+  const meanLatitude = latitudeTotal / ring.length;
+  return Math.abs(area / 2) * 111.32 * 111.32 * Math.cos(meanLatitude * Math.PI / 180);
+}
+
+function filterTinyUsNpsPolygonParts(geometry) {
+  if (geometry?.type !== "MultiPolygon" || !Array.isArray(geometry.coordinates) || geometry.coordinates.length < 2) return geometry;
+  const areas = geometry.coordinates.map((polygon) => usNpsRingAreaSquareKm(polygon?.[0]));
+  const largestIndex = areas.indexOf(Math.max(...areas));
+  const coordinates = geometry.coordinates.filter((polygon, index) => index === largestIndex || areas[index] >= 0.1);
+  return { ...geometry, coordinates };
 }
 
 function addMapLibreUsNpsLayers() {
@@ -7811,9 +7841,6 @@ function checklistOverlayPlaces() {
     Object.keys(worldHeritageCoordinates || {}).length,
   ].join("#");
   if (checklistOverlayCache.signature === signature) return checklistOverlayCache.items;
-  const marked = checklistMarkKeys();
-  const visited = visitedChecklistKeys();
-  const ambiguous5a = keys.includes("china5a") ? ambiguousChecklistItemKeys("china5a") : new Set();
   const seen = new Set(visitedPlaces()
     .filter((visit) => Number.isFinite(visit.place.lat) && Number.isFinite(visit.place.lng))
     .flatMap((visit) => [
@@ -7826,11 +7853,7 @@ function checklistOverlayPlaces() {
   const rawItems = allOverlayItems.map(({ key, item, group, itemKey, legacyKey, title, subtitle }) => {
     const coords = checklistCoordinateFor(item, key === "china5a" ? group : "");
     if (!coords || !Number.isFinite(coords[0]) || !Number.isFinite(coords[1])) return null;
-    const done = marked.has(itemKey)
-      || visited.has(itemKey)
-      || (checklistCanonicalKey(item) && (marked.has(checklistCanonicalKey(item)) || visited.has(checklistCanonicalKey(item))))
-      || (checklistCoordinateKeyForItem(key, item, group) && (marked.has(checklistCoordinateKeyForItem(key, item, group)) || visited.has(checklistCoordinateKeyForItem(key, item, group))))
-      || (!ambiguous5a.has(legacyKey) && (marked.has(legacyKey) || visited.has(legacyKey)));
+    const done = isChecklistItemDone(key, item, group);
     if (seen.has(itemKey) && !done) return null;
     if (seen.has(legacyKey) && !done) return null;
     return { key, item, lat: coords[0], lng: coords[1], done, title, subtitle };
@@ -10964,11 +10987,11 @@ function renderAfterChecklistChange(key, item, group = "") {
   if (document.querySelector('[data-page="imports"]')?.classList.contains("active")) renderDataInventory();
   const linkedToUsNationalPark = key === "usNationalParks"
     || relatedChecklistEntriesForItem(key, item, group).some((entry) => entry.key === "usNationalParks");
-  if (linkedToUsNationalPark) scheduleUsNpsBoundaryStateRefresh();
   if (isMapPageActive()) {
-    if (mapLibreMap && mapLibreMap.isStyleLoaded() && shouldRefreshMapMarkersForChecklist(key)) renderMapLibreMarkers();
+    if (mapLibreMap && mapLibreMap.isStyleLoaded()) renderMapLibreMarkers();
     if (!linkedToUsNationalPark) scheduleCoverageMapRefresh();
   }
+  if (linkedToUsNationalPark) scheduleUsNpsBoundaryStateRefresh();
 }
 
 function scheduleUsNpsBoundaryStateRefresh() {
@@ -10985,14 +11008,16 @@ function refreshUsNpsBoundaryState() {
   if (mapLibreMap && mapLibreMap.isStyleLoaded() && mapLibreMap.getSource("us-nps-boundaries")) {
     addMapLibreUsNpsLayers();
     const doneExpression = usNpsDoneExpression();
+    const firstPointLayer = ["map-points-shadow", "map-points-stroke", "map-points-circle", "map-points-label", "map-points-label-full"]
+      .find((layerId) => mapLibreMap.getLayer(layerId));
     if (mapLibreMap.getLayer("us-nps-done-fill")) {
       mapLibreMap.setFilter("us-nps-done-fill", doneExpression);
-      mapLibreMap.moveLayer("us-nps-done-fill");
+      if (firstPointLayer) mapLibreMap.moveLayer("us-nps-done-fill", firstPointLayer);
     }
     if (mapLibreMap.getLayer("us-nps-line")) {
       mapLibreMap.setPaintProperty("us-nps-line", "line-color", ["case", doneExpression, "#111111", "#315b46"]);
       mapLibreMap.setPaintProperty("us-nps-line", "line-opacity", ["case", doneExpression, 0.95, 0.62]);
-      mapLibreMap.moveLayer("us-nps-line");
+      if (firstPointLayer) mapLibreMap.moveLayer("us-nps-line", firstPointLayer);
     }
     mapLibreMap.triggerRepaint();
     return;
