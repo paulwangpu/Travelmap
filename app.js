@@ -7181,9 +7181,10 @@ function bindMapLibreUsNpsHandlers() {
     if (!itemId) return;
     markMapEventHandled(event);
     renderChecklistMapDetail("usNationalParks", itemId);
+    const displayName = checklistItemDisplayName("usNationalParks", itemId);
     new maplibregl.Popup({ offset: 10, closeButton: false })
       .setLngLat(event.lngLat)
-      .setHTML(mapPopupHtml(`<strong>${escapeHtml(feature.properties.name || "")}</strong><br>${escapeHtml(feature.properties.location || "")}<br><button class="popup-action" data-checklist-map="usNationalParks" data-item="${escapeHtml(itemId)}" type="button">${isChecklistItemDone("usNationalParks", itemId) ? t("unvisit") : t("markVisited")}</button>`))
+      .setHTML(mapPopupHtml(`<strong>${escapeHtml(displayName)}</strong><br>${escapeHtml(feature.properties.location || "")}<br><button class="popup-action" data-checklist-map="usNationalParks" data-item="${escapeHtml(itemId)}" type="button">${isChecklistItemDone("usNationalParks", itemId) ? t("unvisit") : t("markVisited")}</button>`))
       .addTo(mapLibreMap);
   });
   mapLibreMap.on("mouseenter", "us-nps-fill", () => { mapLibreMap.getCanvas().style.cursor = "pointer"; });
@@ -7824,7 +7825,7 @@ function checklistOverlayDisplayPriority(key) {
 }
 
 function checklistMergeKeyForEntry(entry) {
-  return checklistCoordinateKeyForItem(entry.key, entry.item, entry.group || "") || checklistCanonicalKey(entry.item) || "";
+  return checklistCanonicalKey(entry.item) || checklistCoordinateKeyForItem(entry.key, entry.item, entry.group || "") || "";
 }
 
 function relatedChecklistEntriesForItem(key, item, group = "") {
@@ -8410,13 +8411,16 @@ function renderLeafletLayers() {
       }),
       onEachFeature: (feature, layer) => {
         const itemId = feature.properties.itemId;
-        layer.bindTooltip(feature.properties.name || feature.properties.code, { sticky: true });
+        const displayName = itemId
+          ? checklistItemDisplayName("usNationalParks", itemId)
+          : (feature.properties.name || feature.properties.code);
+        layer.bindTooltip(displayName, { sticky: true });
         if (!itemId) return;
         layer.on("click", (event) => {
           if (event.originalEvent) event.originalEvent._travelMapHandled = true;
           renderChecklistMapDetail("usNationalParks", itemId);
         });
-        layer.bindPopup(mapPopupHtml(`<strong>${escapeHtml(feature.properties.name || "")}</strong><br>${escapeHtml(feature.properties.location || "")}<br><button class="popup-action" data-checklist-map="usNationalParks" data-item="${escapeHtml(itemId)}" type="button">${isChecklistItemDone("usNationalParks", itemId) ? t("unvisit") : t("markVisited")}</button>`), { closeButton: false });
+        layer.bindPopup(mapPopupHtml(`<strong>${escapeHtml(displayName)}</strong><br>${escapeHtml(feature.properties.location || "")}<br><button class="popup-action" data-checklist-map="usNationalParks" data-item="${escapeHtml(itemId)}" type="button">${isChecklistItemDone("usNationalParks", itemId) ? t("unvisit") : t("markVisited")}</button>`), { closeButton: false });
       },
     }).addTo(leafletLayers);
   }
