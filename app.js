@@ -1246,6 +1246,7 @@ const traditionalToSimplifiedChars = {
 };
 
 const worldHeritageItemNameAliases = {
+  "梅萨维德印第安遗址": "梅萨维德国家公园",
   "Historic Centre of Macau": "澳门历史城区",
   "Historic Centre of Macao": "澳门历史城区",
   "Imperial Palaces of the Ming and Qing Dynasties in Beijing and Shenyang": "北京及沈阳的明清皇家宫殿",
@@ -4890,7 +4891,7 @@ const checklistCanonicalPlaces = [
   { id: "us-redwood", aliases: ["红木国家公园", "红木国家和州立公园", "Redwood National Park", "Redwood National and State Parks", "Redwood"] },
   { id: "us-everglades", aliases: ["大沼泽国家公园", "大沼泽地国家公园", "Everglades National Park", "Everglades"] },
   { id: "us-great-smoky-mountains", aliases: ["大烟山国家公园", "大烟雾山国家公园", "大烟雾山", "Great Smoky Mountains National Park", "Great Smoky Mountains"] },
-  { id: "us-mesa-verde", aliases: ["梅萨维德国家公园", "Mesa Verde National Park", "Mesa Verde"] },
+  { id: "us-mesa-verde", aliases: ["梅萨维德国家公园", "梅萨维德印第安遗址", "Mesa Verde National Park", "Mesa Verde"] },
   { id: "us-olympic", aliases: ["奥林匹克国家公园", "Olympic National Park", "Olympic"] },
   { id: "us-mammoth-cave", aliases: ["猛犸洞国家公园", "猛玛洞穴国家公园", "Mammoth Cave National Park", "Mammoth Cave"] },
   { id: "us-hawaii-volcanoes", aliases: ["夏威夷火山国家公园", "Hawaii Volcanoes National Park", "Hawaii Volcanoes"] },

@@ -8,6 +8,10 @@ const china5aCoordinates = JSON.parse(fs.readFileSync(path.join(root, "data", "c
 const output = path.join(root, "miniprogram", "data", "checklists.js");
 const appSource = fs.readFileSync(path.join(root, "app.js"), "utf8");
 
+const worldHeritageNameAliases = {
+  "梅萨维德印第安遗址": "梅萨维德国家公园"
+};
+
 function extractStringArray(source, marker) {
   const markerIndex = source.indexOf(marker);
   const arrayStart = source.indexOf("[", markerIndex);
@@ -53,7 +57,7 @@ const china5a = Object.entries(china5aSource.byRegion).flatMap(([region, names])
 
 const worldHeritage = heritageSource.items.map((item) => ({
   id: item.id,
-  name: item.zhName || item.name || item.enName,
+  name: worldHeritageNameAliases[item.zhName || item.name || item.enName] || item.zhName || item.name || item.enName,
   area: Array.isArray(item.countries) ? item.countries.join("、") : "",
   latitude: item.lat,
   longitude: item.lng
