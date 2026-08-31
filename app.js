@@ -5007,17 +5007,18 @@ function checklistMarkKeys() {
 }
 
 function checklistStatusKeys() {
-  if (checklistStatusCache.signature) return checklistStatusCache;
   const signature = [
     (state.visits || []).map((visit) => `${visit.placeId}:${visit.depth || 0}`).sort().join("|"),
     (state.checklistMarks || []).slice().sort().join("|"),
     places.map((place) => `${place.id}:${place.name}:${place.type || ""}:${(place.checklist || []).join(",")}`).sort().join("|"),
   ].join("##");
-  checklistStatusCache = {
-    signature,
-    marked: checklistMarkKeys(),
-    visited: visitedChecklistKeys(),
-  };
+  if (checklistStatusCache.signature !== signature) {
+    checklistStatusCache = {
+      signature,
+      marked: checklistMarkKeys(),
+      visited: visitedChecklistKeys(),
+    };
+  }
   return checklistStatusCache;
 }
 
@@ -5402,14 +5403,14 @@ function renderLanguageSensitiveViews() {
 function saveState(options = {}) {
   if (options.invalidateMapData !== false) mapDataVersion += 1;
   const payload = { places, state, savedAt: new Date().toISOString() };
+  if (!fullStateLoaded && !options.allowBeforeFullLoad) {
+    console.warn("Skipped state save before full state load");
+    return;
+  }
   try {
     localStorage.setItem(storageKey, JSON.stringify(localStorageSnapshot(payload)));
   } catch (error) {
     console.warn("保存失败", error);
-  }
-  if (!fullStateLoaded && !options.allowBeforeFullLoad) {
-    console.warn("Skipped IndexedDB save before full state load");
-    return;
   }
   if (options.immediateIndexedDb) {
     saveStateToIndexedDb(payload);
@@ -6091,7 +6092,7 @@ function loadUsNpsCatalog() {
 
 function loadUsNpsBoundaries() {
   if (usNpsBoundaryPromise) return usNpsBoundaryPromise;
-  usNpsBoundaryPromise = fetchJson("data/us-nps-boundaries.geojson?v=446")
+  usNpsBoundaryPromise = fetchJson("data/us-nps-boundaries.geojson?v=449")
     .then((data) => {
       if (data?.type !== "FeatureCollection" || !Array.isArray(data.features)) throw new Error("invalid NPS boundaries");
       usNpsBoundaries = data;
@@ -6450,14 +6451,21 @@ function invalidateDerivedStatsCache() {
 
 function dashboardStatsSignature() {
   const coverage = state.coverage || {};
+  const coverageSignature = [
+    ...(coverage.countries || []).map(countryCoverageId).sort(),
+    ...Object.entries(coverage.regions || {}).sort(([left], [right]) => left.localeCompare(right))
+      .map(([key, values]) => `${key}:${(values || []).slice().sort().join(",")}`),
+    ...Object.entries(coverage.subregions || {}).sort(([left], [right]) => left.localeCompare(right))
+      .map(([key, values]) => `${key}:${(values || []).slice().sort().join(",")}`),
+  ].join("|");
   return [
     derivedStatsRevision,
     places.length,
-    state.visits.length,
+    (state.visits || []).map((visit) => `${visit.placeId}:${visit.depth || 0}`).sort().join("|"),
     (state.flights || []).length,
     (state.flightImports || []).length,
-    (state.checklistMarks || []).length,
-    coverage.updatedAt || "",
+    (state.checklistMarks || []).slice().sort().join("|"),
+    coverageSignature,
     china5aCatalogStatus.total || "",
     worldHeritageCatalogStatus.total || "",
   ].join("|");
@@ -12704,6 +12712,25 @@ function renderAfterCheckinChange() {
   });
 }
 
+function preloadDashboardStats() {
+  Promise.allSettled([
+    loadChina5aCatalog(),
+    loadUsNpsCatalog(),
+    loadCatalogData(),
+    loadBoundaryData("china2", { renderOnLoad: false }),
+    loadBoundaryData("chinaDirect", { renderOnLoad: false }),
+    loadBoundaryData("tw2", { renderOnLoad: false }),
+  ]).then(() => {
+    refreshInferredSubregionsForVisitedPlaces();
+    rebuildCoverageFromSavedVisits();
+    renderMetrics();
+    renderDashboardAchievements();
+    renderNextStops();
+    if (document.querySelector('[data-page="checkins"]')?.classList.contains("active")) renderCheckinsPage();
+    if (document.querySelector('[data-page="achievements"]')?.classList.contains("active")) renderAchievements();
+  });
+}
+
 function scheduleCoverageMapRefresh(delay = 180) {
   if (pendingCoverageMapRefresh) {
     if (delay >= 180) return;
@@ -12959,10 +12986,14 @@ setLoadingDebug("读取完整旅行数据", "pending");
 loadStateFromIndexedDb().finally(() => {
   fullStateLoaded = true;
   setLoadingDebug("读取完整旅行数据", "done");
+  checklistStatusCache.signature = "";
+  unifiedParkHeritageDoneCache = { signature: "", values: new Map() };
+  invalidateMapPointRenderCache();
   renderLegend();
   rebuildCoverageFromSavedVisits();
   restoreStoredMapViewport();
   ensureBoundaryDataForLevel(state.boundaryLevel || "country");
+  preloadDashboardStats();
   renderAll();
   showPage(location.hash.replace("#", "") || "world");
   detectMapProviderByIp();
@@ -13475,7 +13506,7 @@ window.visualViewport?.addEventListener("resize", () => {
 });
 if ("serviceWorker" in navigator && location.protocol !== "file:") {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=446").catch((error) => console.warn("Service Worker registration failed", error));
+    navigator.serviceWorker.register("./sw.js?v=449").catch((error) => console.warn("Service Worker registration failed", error));
   });
 }
 window.addEventListener("hashchange", () => {
