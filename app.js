@@ -402,7 +402,6 @@ const translations = {
     mapPathName: "路径名称",
     mapPathHint: "继续点击地图添加节点（至少 2 个）",
     mapPathPoints: "节点数",
-    undoMapPathPoint: "撤销上一点",
     saveMapPath: "保存路径",
     cancelMapPath: "取消",
     mapPathAdded: "路径已添加",
@@ -559,7 +558,6 @@ const translations = {
     mapPathName: "Path name",
     mapPathHint: "Keep clicking the map to add vertices (at least 2)",
     mapPathPoints: "Vertices",
-    undoMapPathPoint: "Undo last vertex",
     saveMapPath: "Save path",
     cancelMapPath: "Cancel",
     mapPathAdded: "Path added",
@@ -5169,7 +5167,6 @@ function openMapPathForm() {
       <div class="map-point-actions">
         <button class="detail-action secondary-action" data-undo-map-path-edit="1" type="button" ${mapPathUndoStack.length ? "" : "disabled"}>${t("undoMapPathEdit")}</button>
         <button class="detail-action secondary-action" data-redo-map-path-edit="1" type="button" ${mapPathRedoStack.length ? "" : "disabled"}>${t("redoMapPathEdit")}</button>
-        <button class="detail-action secondary-action" data-undo-map-path="1" type="button" ${pendingMapPath.length ? "" : "disabled"}>${t("undoMapPathPoint")}</button>
         <button class="detail-action secondary-action" data-simplify-map-path="1" type="button" ${pendingMapPath.length > 2 ? "" : "disabled"}>${t("simplifyMapPath")}</button>
         <button class="detail-action secondary-action" data-delete-selected-map-path="1" type="button" ${selectedMapPathVertexIndices.size && pendingMapPath.length - selectedMapPathVertexIndices.size >= 2 ? "" : "disabled"}>${t("deleteSelectedMapPathPoints")}</button>
         <button class="detail-action" type="submit" ${pendingMapPath.length >= 2 ? "" : "disabled"}>${t("saveMapPath")}</button>
@@ -6530,7 +6527,7 @@ function loadUsNpsCatalog() {
 
 function loadUsNpsBoundaries() {
   if (usNpsBoundaryPromise) return usNpsBoundaryPromise;
-  usNpsBoundaryPromise = fetchJson("data/us-nps-boundaries.geojson?v=464")
+  usNpsBoundaryPromise = fetchJson("data/us-nps-boundaries.geojson?v=466")
     .then((data) => {
       if (data?.type !== "FeatureCollection" || !Array.isArray(data.features)) throw new Error("invalid NPS boundaries");
       usNpsBoundaries = data;
@@ -7417,6 +7414,10 @@ function renderMapLibreMap() {
     mapLibreMap.addControl(new maplibregl.ScaleControl({ maxWidth: 120, unit: "metric" }), "bottom-right");
     mapLibreMap.on("click", (event) => {
       if (event.originalEvent?._travelMapHandled) return;
+      if (mapAddMode || mapPathMode) {
+        handleMapCanvasClick(event.lngLat.lng, event.lngLat.lat, event.originalEvent);
+        return;
+      }
       const npsLayers = ["us-nps-hit-line", "us-nps-fill"].filter((layerId) => mapLibreMap.getLayer(layerId));
       const selectableNpsFeature = npsLayers.length
         && mapLibreMap.queryRenderedFeatures(event.point, { layers: npsLayers })
@@ -7839,8 +7840,8 @@ function bindMapLibreUsNpsHandlers() {
   };
   ["us-nps-fill", "us-nps-hit-line"].forEach((layerId) => {
     mapLibreMap.on("click", layerId, handleClick);
-    mapLibreMap.on("mouseenter", layerId, () => { mapLibreMap.getCanvas().style.cursor = "pointer"; });
-    mapLibreMap.on("mouseleave", layerId, () => { mapLibreMap.getCanvas().style.cursor = ""; });
+    mapLibreMap.on("mouseenter", layerId, () => { mapLibreMap.getCanvas().style.cursor = mapAddMode || mapPathMode ? "crosshair" : "pointer"; });
+    mapLibreMap.on("mouseleave", layerId, () => { mapLibreMap.getCanvas().style.cursor = mapAddMode || mapPathMode ? "crosshair" : ""; });
   });
 }
 
@@ -9197,6 +9198,7 @@ function renderLeafletLayers() {
         layer.bindTooltip(displayName, { sticky: true });
         if (!itemId) return;
         layer.on("click", (event) => {
+          if (mapAddMode || mapPathMode) return;
           if (event.originalEvent) event.originalEvent._travelMapHandled = true;
           renderChecklistMapDetail("usNationalParks", itemId);
         });
@@ -14095,16 +14097,6 @@ $("#mapDetail").addEventListener("click", (event) => {
   }
   if (event.target.closest("[data-redo-map-path-edit]")) {
     redoMapPathEdit();
-    return;
-  }
-  if (event.target.closest("[data-undo-map-path]")) {
-    recordMapPathEdit();
-    pendingMapPath.pop();
-    mapPathSimplifyLevel = 0;
-    selectedMapPathVertexIndices.clear();
-    movingMapPathVertexIndex = null;
-    openMapPathForm();
-    refreshMapPathPreview();
     return;
   }
   if (event.target.closest("[data-simplify-map-path]")) {
