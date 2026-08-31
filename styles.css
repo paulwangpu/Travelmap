@@ -2922,6 +2922,24 @@ button:hover {
   color: var(--ink);
 }
 
+.detail-action.secondary-action.active {
+  background: #315b46;
+  color: #ffffff;
+}
+
+.detail-action.danger {
+  background: #b42318;
+  color: #ffffff;
+}
+
+.map-path-selection-box {
+  position: absolute;
+  z-index: 900;
+  border: 1px solid #2563eb;
+  background: rgba(37, 99, 235, 0.14);
+  pointer-events: none;
+}
+
 .map-point-form {
   display: grid;
   gap: 12px;

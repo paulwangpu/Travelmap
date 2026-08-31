@@ -15,7 +15,7 @@ const mapControlsStorageKey = "travel-map-controls-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "2.0.1";
+const appVersion = "2.0.2";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
@@ -64,7 +64,7 @@ let mapLibreMap = null;
 let mapLibreMarkers = [];
 let mapLibreMarkerSignature = "";
 let mapPointRenderRevision = 0;
-let mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false, points: false, flights: false, nps: false };
+let mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false, points: false, paths: false, pathVertices: false, flights: false, nps: false };
 let bingMapLibreProtocolRegistered = false;
 let mapProviderDetectionPromise = null;
 let leafletDidInitialFit = false;
@@ -130,8 +130,17 @@ let derivedStatsRevision = 0;
 let dashboardStatsCache = { signature: "", stats: null };
 let mapAddMode = false;
 let mapPathMode = false;
+let editingMapPathId = null;
 let pendingMapClickPoint = null;
 let pendingMapPath = [];
+let mapPathEditTool = "append";
+let movingMapPathVertexIndex = null;
+const selectedMapPathVertexIndices = new Set();
+let mapPathSimplifyLevel = 0;
+let mapPathUndoStack = [];
+let mapPathRedoStack = [];
+let mapPathBoxSelection = null;
+let mapPathBoxSelectionBound = false;
 let mapControlsCollapsed = localStorage.getItem(mapControlsStorageKey) === "1";
 let importManagerQuery = "";
 let importManagerSort = "newest";
@@ -397,6 +406,24 @@ const translations = {
     saveMapPath: "保存路径",
     cancelMapPath: "取消",
     mapPathAdded: "路径已添加",
+    editMapPath: "编辑路径",
+    editingMapPath: "编辑已有路径",
+    mapPathUpdated: "路径已更新",
+    appendMapPathPoints: "追加节点",
+    insertMapPathPoint: "插入节点",
+    selectMapPathPoints: "选择节点",
+    moveMapPathPoint: "移动节点",
+    simplifyMapPath: "简化路径",
+    deleteSelectedMapPathPoints: "删除所选节点",
+    deleteMapPath: "删除路径",
+    selectedMapPathPoints: "已选择",
+    moveMapPathHint: "先点击一个节点，再点击地图上的新位置",
+    selectMapPathHint: "拖动矩形框选节点；Shift/Ctrl 可追加选择",
+    mapPathSimplified: "路径已简化",
+    mapPathPointMoved: "节点已移动",
+    mapPathPointInserted: "节点已插入",
+    undoMapPathEdit: "撤销",
+    redoMapPathEdit: "重新应用",
     mapPointName: "打卡点名称",
     saveMapPoint: "保存打卡点",
     cancelMapPoint: "取消",
@@ -536,6 +563,24 @@ const translations = {
     saveMapPath: "Save path",
     cancelMapPath: "Cancel",
     mapPathAdded: "Path added",
+    editMapPath: "Edit path",
+    editingMapPath: "Edit existing path",
+    mapPathUpdated: "Path updated",
+    appendMapPathPoints: "Add vertices",
+    insertMapPathPoint: "Insert vertex",
+    selectMapPathPoints: "Select vertices",
+    moveMapPathPoint: "Move vertex",
+    simplifyMapPath: "Simplify path",
+    deleteSelectedMapPathPoints: "Delete selected",
+    deleteMapPath: "Delete path",
+    selectedMapPathPoints: "Selected",
+    moveMapPathHint: "Select a vertex, then click its new map position",
+    selectMapPathHint: "Drag a rectangle around vertices; hold Shift/Ctrl to add",
+    mapPathSimplified: "Path simplified",
+    mapPathPointMoved: "Vertex moved",
+    mapPathPointInserted: "Vertex inserted",
+    undoMapPathEdit: "Undo",
+    redoMapPathEdit: "Redo",
     mapPointName: "Check-in point name",
     saveMapPoint: "Save point",
     cancelMapPoint: "Cancel",
@@ -5068,8 +5113,25 @@ function setMapAddMode(enabled) {
 }
 
 function setMapPathMode(enabled, announce = true) {
+  const wasEnabled = mapPathMode;
   mapPathMode = Boolean(enabled);
-  if (!mapPathMode) pendingMapPath = [];
+  if (mapPathMode && !wasEnabled) {
+    mapPathSimplifyLevel = 0;
+    mapPathUndoStack = [];
+    mapPathRedoStack = [];
+    selectedMapPathVertexIndices.clear();
+    movingMapPathVertexIndex = null;
+  }
+  if (!mapPathMode) {
+    pendingMapPath = [];
+    editingMapPathId = null;
+    mapPathEditTool = "append";
+    movingMapPathVertexIndex = null;
+    selectedMapPathVertexIndices.clear();
+    mapPathSimplifyLevel = 0;
+    mapPathUndoStack = [];
+    mapPathRedoStack = [];
+  }
   if (mapPathMode) {
     mapAddMode = false;
     pendingMapClickPoint = null;
@@ -5089,16 +5151,29 @@ function mapPathDefaultName() {
 function openMapPathForm() {
   $("#mapDetail").classList.remove("hidden");
   resetMapDetailClass();
-  const existingName = $("#mapPathForm input[name='name']")?.value || mapPathDefaultName();
+  const editedPath = editingMapPathId ? getPlace(editingMapPathId) : null;
+  const existingName = $("#mapPathForm input[name='name']")?.value || editedPath?.name || mapPathDefaultName();
+  const toolHint = mapPathEditTool === "move" ? t("moveMapPathHint") : mapPathEditTool === "select" ? t("selectMapPathHint") : t("mapPathHint");
   $("#mapDetail").innerHTML = `
-    <p class="eyebrow">${t("addMapPath")}</p>
-    <h3>${t("mapPathHint")}</h3>
+    <p class="eyebrow">${t(editingMapPathId ? "editingMapPath" : "addMapPath")}</p>
+    <h3>${toolHint}</h3>
     <form class="map-point-form" id="mapPathForm">
       <label><span>${t("mapPathName")}</span><input name="name" type="text" value="${escapeHtml(existingName)}" /></label>
-      <dl><div><dt>${t("mapPathPoints")}</dt><dd>${pendingMapPath.length}</dd></div></dl>
+      <dl><div><dt>${t("mapPathPoints")}</dt><dd>${pendingMapPath.length}</dd></div><div><dt>${t("selectedMapPathPoints")}</dt><dd>${selectedMapPathVertexIndices.size}</dd></div></dl>
       <div class="map-point-actions">
+        <button class="detail-action secondary-action ${mapPathEditTool === "append" ? "active" : ""}" data-map-path-tool="append" type="button">${t("appendMapPathPoints")}</button>
+        <button class="detail-action secondary-action ${mapPathEditTool === "insert" ? "active" : ""}" data-map-path-tool="insert" type="button">${t("insertMapPathPoint")}</button>
+        <button class="detail-action secondary-action ${mapPathEditTool === "select" ? "active" : ""}" data-map-path-tool="select" type="button">${t("selectMapPathPoints")}</button>
+        <button class="detail-action secondary-action ${mapPathEditTool === "move" ? "active" : ""}" data-map-path-tool="move" type="button">${t("moveMapPathPoint")}</button>
+      </div>
+      <div class="map-point-actions">
+        <button class="detail-action secondary-action" data-undo-map-path-edit="1" type="button" ${mapPathUndoStack.length ? "" : "disabled"}>${t("undoMapPathEdit")}</button>
+        <button class="detail-action secondary-action" data-redo-map-path-edit="1" type="button" ${mapPathRedoStack.length ? "" : "disabled"}>${t("redoMapPathEdit")}</button>
         <button class="detail-action secondary-action" data-undo-map-path="1" type="button" ${pendingMapPath.length ? "" : "disabled"}>${t("undoMapPathPoint")}</button>
+        <button class="detail-action secondary-action" data-simplify-map-path="1" type="button" ${pendingMapPath.length > 2 ? "" : "disabled"}>${t("simplifyMapPath")}</button>
+        <button class="detail-action secondary-action" data-delete-selected-map-path="1" type="button" ${selectedMapPathVertexIndices.size && pendingMapPath.length - selectedMapPathVertexIndices.size >= 2 ? "" : "disabled"}>${t("deleteSelectedMapPathPoints")}</button>
         <button class="detail-action" type="submit" ${pendingMapPath.length >= 2 ? "" : "disabled"}>${t("saveMapPath")}</button>
+        ${editingMapPathId ? `<button class="detail-action danger" data-delete-map-path="1" type="button">${t("deleteMapPath")}</button>` : ""}
         <button class="detail-action secondary-action" data-cancel-map-path="1" type="button">${t("cancelMapPath")}</button>
       </div>
     </form>`;
@@ -5110,18 +5185,341 @@ function refreshMapPathPreview() {
   else if (!mapLibreMap && leafletMap) renderGeoMap();
 }
 
+function mapPathEditSnapshot() {
+  return {
+    points: pendingMapPath.map((point) => [...point]),
+    simplifyLevel: mapPathSimplifyLevel,
+    selectedIndices: [...selectedMapPathVertexIndices],
+  };
+}
+
+function restoreMapPathEditSnapshot(snapshot) {
+  if (!snapshot) return;
+  pendingMapPath = snapshot.points.map((point) => [...point]);
+  mapPathSimplifyLevel = Number(snapshot.simplifyLevel) || 0;
+  selectedMapPathVertexIndices.clear();
+  (snapshot.selectedIndices || []).forEach((index) => {
+    if (index >= 0 && index < pendingMapPath.length) selectedMapPathVertexIndices.add(index);
+  });
+  movingMapPathVertexIndex = null;
+  openMapPathForm();
+  refreshMapPathPreview();
+}
+
+function recordMapPathEdit() {
+  mapPathUndoStack.push(mapPathEditSnapshot());
+  if (mapPathUndoStack.length > 100) mapPathUndoStack.shift();
+  mapPathRedoStack = [];
+}
+
+function undoMapPathEdit() {
+  if (!mapPathUndoStack.length) return;
+  mapPathRedoStack.push(mapPathEditSnapshot());
+  restoreMapPathEditSnapshot(mapPathUndoStack.pop());
+}
+
+function redoMapPathEdit() {
+  if (!mapPathRedoStack.length) return;
+  mapPathUndoStack.push(mapPathEditSnapshot());
+  restoreMapPathEditSnapshot(mapPathRedoStack.pop());
+}
+
 function addMapPathVertex(lng, lat) {
+  recordMapPathEdit();
   pendingMapPath.push(mapStorageCoordinateFromClick(lng, lat));
+  mapPathSimplifyLevel = 0;
   ensureTrackOverlayVisible();
   openMapPathForm();
   refreshMapPathPreview();
+}
+
+function insertMapPathVertex(lng, lat) {
+  if (pendingMapPath.length < 2) {
+    addMapPathVertex(lng, lat);
+    return;
+  }
+  const point = mapStorageCoordinateFromClick(lng, lat);
+  let nearestSegment = 0;
+  let nearestDistance = Number.POSITIVE_INFINITY;
+  for (let index = 0; index < pendingMapPath.length - 1; index += 1) {
+    const distance = pointSegmentDistance(point, pendingMapPath[index], pendingMapPath[index + 1]);
+    if (distance < nearestDistance) {
+      nearestDistance = distance;
+      nearestSegment = index;
+    }
+  }
+  recordMapPathEdit();
+  pendingMapPath.splice(nearestSegment + 1, 0, point);
+  mapPathSimplifyLevel = 0;
+  selectedMapPathVertexIndices.clear();
+  selectedMapPathVertexIndices.add(nearestSegment + 1);
+  openMapPathForm();
+  refreshMapPathPreview();
+  showToast(t("mapPathPointInserted"));
+}
+
+function setMapPathEditTool(tool) {
+  if (!["append", "insert", "select", "move"].includes(tool)) return;
+  mapPathEditTool = tool;
+  movingMapPathVertexIndex = null;
+  if (tool !== "select") selectedMapPathVertexIndices.clear();
+  openMapPathForm();
+  refreshMapPathPreview();
+}
+
+function toggleMapPathVertexSelection(index) {
+  if (!Number.isInteger(index) || index < 0 || index >= pendingMapPath.length) return;
+  if (selectedMapPathVertexIndices.has(index)) selectedMapPathVertexIndices.delete(index);
+  else selectedMapPathVertexIndices.add(index);
+  openMapPathForm();
+  refreshMapPathPreview();
+}
+
+function mapPathVertexScreenPoint(index) {
+  const coordinate = pendingMapPath[index];
+  if (!coordinate) return null;
+  const [displayLng, displayLat] = mapDisplayCoordinate(coordinate[0], coordinate[1]);
+  if (mapLibreMap) {
+    const point = mapLibreMap.project([displayLng, displayLat]);
+    return { x: point.x, y: point.y };
+  }
+  if (leafletMap) {
+    const point = leafletMap.latLngToContainerPoint([displayLat, displayLng]);
+    return { x: point.x, y: point.y };
+  }
+  return null;
+}
+
+function setMapPathSelectionBox(start, end) {
+  const container = $("#leafletMap");
+  if (!container) return;
+  let box = container.querySelector(".map-path-selection-box");
+  if (!box) {
+    box = document.createElement("div");
+    box.className = "map-path-selection-box";
+    container.appendChild(box);
+  }
+  const left = Math.min(start.x, end.x);
+  const top = Math.min(start.y, end.y);
+  box.style.left = `${left}px`;
+  box.style.top = `${top}px`;
+  box.style.width = `${Math.abs(end.x - start.x)}px`;
+  box.style.height = `${Math.abs(end.y - start.y)}px`;
+}
+
+function clearMapPathSelectionBox() {
+  $("#leafletMap .map-path-selection-box")?.remove();
+}
+
+function bindMapPathBoxSelection() {
+  if (mapPathBoxSelectionBound) return;
+  const container = $("#leafletMap");
+  if (!container) return;
+  mapPathBoxSelectionBound = true;
+  container.addEventListener("pointerdown", (event) => {
+    if (!mapPathMode || mapPathEditTool !== "select" || event.button !== 0) return;
+    const rect = container.getBoundingClientRect();
+    const point = { x: event.clientX - rect.left, y: event.clientY - rect.top };
+    mapPathBoxSelection = {
+      pointerId: event.pointerId,
+      start: point,
+      end: point,
+      additive: event.shiftKey || event.ctrlKey || event.metaKey,
+      mapLibreDragEnabled: Boolean(mapLibreMap?.dragPan?.isEnabled?.()),
+      leafletDragEnabled: Boolean(leafletMap?.dragging?.enabled?.()),
+    };
+    mapLibreMap?.dragPan?.disable?.();
+    leafletMap?.dragging?.disable?.();
+    container.setPointerCapture?.(event.pointerId);
+    event.preventDefault();
+    event.stopPropagation();
+  }, true);
+  container.addEventListener("pointermove", (event) => {
+    if (!mapPathBoxSelection || event.pointerId !== mapPathBoxSelection.pointerId) return;
+    const rect = container.getBoundingClientRect();
+    mapPathBoxSelection.end = { x: event.clientX - rect.left, y: event.clientY - rect.top };
+    if (Math.hypot(mapPathBoxSelection.end.x - mapPathBoxSelection.start.x, mapPathBoxSelection.end.y - mapPathBoxSelection.start.y) > 4) {
+      setMapPathSelectionBox(mapPathBoxSelection.start, mapPathBoxSelection.end);
+    }
+    event.preventDefault();
+    event.stopPropagation();
+  }, true);
+  const finishSelection = (event) => {
+    if (!mapPathBoxSelection || event.pointerId !== mapPathBoxSelection.pointerId) return;
+    const selection = mapPathBoxSelection;
+    mapPathBoxSelection = null;
+    clearMapPathSelectionBox();
+    if (selection.mapLibreDragEnabled) mapLibreMap?.dragPan?.enable?.();
+    if (selection.leafletDragEnabled) leafletMap?.dragging?.enable?.();
+    const distance = Math.hypot(selection.end.x - selection.start.x, selection.end.y - selection.start.y);
+    const projected = pendingMapPath.map((_, index) => ({ index, point: mapPathVertexScreenPoint(index) })).filter((item) => item.point);
+    if (!selection.additive) selectedMapPathVertexIndices.clear();
+    if (distance <= 4) {
+      const nearest = projected.map((item) => ({ ...item, distance: Math.hypot(item.point.x - selection.end.x, item.point.y - selection.end.y) }))
+        .filter((item) => item.distance <= 12).sort((left, right) => left.distance - right.distance)[0];
+      if (nearest) {
+        if (selection.additive && selectedMapPathVertexIndices.has(nearest.index)) selectedMapPathVertexIndices.delete(nearest.index);
+        else selectedMapPathVertexIndices.add(nearest.index);
+      }
+    } else {
+      const left = Math.min(selection.start.x, selection.end.x);
+      const right = Math.max(selection.start.x, selection.end.x);
+      const top = Math.min(selection.start.y, selection.end.y);
+      const bottom = Math.max(selection.start.y, selection.end.y);
+      projected.forEach(({ index, point }) => {
+        if (point.x >= left && point.x <= right && point.y >= top && point.y <= bottom) selectedMapPathVertexIndices.add(index);
+      });
+    }
+    openMapPathForm();
+    refreshMapPathPreview();
+    event.preventDefault();
+    event.stopPropagation();
+  };
+  container.addEventListener("pointerup", finishSelection, true);
+  container.addEventListener("pointercancel", finishSelection, true);
+}
+
+function activateMapPathVertex(index) {
+  if (!mapPathMode || !Number.isInteger(index) || index < 0 || index >= pendingMapPath.length) return;
+  if (mapPathEditTool === "select") {
+    toggleMapPathVertexSelection(index);
+    return;
+  }
+  if (mapPathEditTool === "move") {
+    movingMapPathVertexIndex = index;
+    selectedMapPathVertexIndices.clear();
+    selectedMapPathVertexIndices.add(index);
+    openMapPathForm();
+    refreshMapPathPreview();
+    showToast(t("moveMapPathHint"));
+  }
+}
+
+function deleteSelectedMapPathVertices() {
+  if (!selectedMapPathVertexIndices.size || pendingMapPath.length - selectedMapPathVertexIndices.size < 2) return;
+  recordMapPathEdit();
+  pendingMapPath = pendingMapPath.filter((_, index) => !selectedMapPathVertexIndices.has(index));
+  mapPathSimplifyLevel = 0;
+  selectedMapPathVertexIndices.clear();
+  movingMapPathVertexIndex = null;
+  openMapPathForm();
+  refreshMapPathPreview();
+}
+
+function pointSegmentDistance(point, start, end) {
+  const latitudeScale = Math.cos((((point[1] + start[1] + end[1]) / 3) * Math.PI) / 180);
+  const px = point[0] * latitudeScale;
+  const py = point[1];
+  const sx = start[0] * latitudeScale;
+  const sy = start[1];
+  const ex = end[0] * latitudeScale;
+  const ey = end[1];
+  const dx = ex - sx;
+  const dy = ey - sy;
+  if (!dx && !dy) return Math.hypot(px - sx, py - sy);
+  const ratio = Math.max(0, Math.min(1, ((px - sx) * dx + (py - sy) * dy) / (dx * dx + dy * dy)));
+  return Math.hypot(px - (sx + ratio * dx), py - (sy + ratio * dy));
+}
+
+function simplifyMapPathSection(points, first, last, tolerance, kept) {
+  const sections = [[first, last]];
+  while (sections.length) {
+    const [sectionFirst, sectionLast] = sections.pop();
+    let farthestDistance = 0;
+    let farthestIndex = -1;
+    for (let index = sectionFirst + 1; index < sectionLast; index += 1) {
+      const distance = pointSegmentDistance(points[index], points[sectionFirst], points[sectionLast]);
+      if (distance > farthestDistance) {
+        farthestDistance = distance;
+        farthestIndex = index;
+      }
+    }
+    if (farthestIndex < 0 || farthestDistance <= tolerance) continue;
+    kept.add(farthestIndex);
+    sections.push([sectionFirst, farthestIndex], [farthestIndex, sectionLast]);
+  }
+}
+
+function simplifyPendingMapPath() {
+  if (pendingMapPath.length <= 2) return;
+  const zoom = mapLibreMap?.getZoom?.() ?? leafletMap?.getZoom?.() ?? 6;
+  recordMapPathEdit();
+  mapPathSimplifyLevel += 1;
+  const tolerancePixels = 0.3 * (1.7 ** (mapPathSimplifyLevel - 1));
+  const tolerance = Math.max(0.000001, 360 / (256 * (2 ** zoom)) * tolerancePixels);
+  const selectedBefore = new Set(selectedMapPathVertexIndices);
+  const selectedOnly = selectedBefore.size > 0;
+  const kept = new Set([0, pendingMapPath.length - 1]);
+  if (selectedOnly) {
+    pendingMapPath.forEach((_, index) => {
+      if (!selectedBefore.has(index)) kept.add(index);
+    });
+  }
+  const anchors = [...kept].sort((left, right) => left - right);
+  for (let index = 1; index < anchors.length; index += 1) {
+    simplifyMapPathSection(pendingMapPath, anchors[index - 1], anchors[index], tolerance, kept);
+  }
+  const simplifiedEntries = pendingMapPath.map((point, index) => ({ point, index })).filter((entry) => kept.has(entry.index));
+  const simplified = simplifiedEntries.map((entry) => entry.point);
+  if (simplified.length >= pendingMapPath.length) {
+    showToast(currentLanguage === "en"
+      ? `Simplification level ${mapPathSimplifyLevel}: no vertices removed; click again for a stronger pass`
+      : `简化等级 ${mapPathSimplifyLevel}：本次未减少节点，可再次点击提高强度`);
+    openMapPathForm();
+    return;
+  }
+  const removed = pendingMapPath.length - simplified.length;
+  pendingMapPath = simplified;
+  selectedMapPathVertexIndices.clear();
+  simplifiedEntries.forEach((entry, index) => {
+    if (selectedBefore.has(entry.index)) selectedMapPathVertexIndices.add(index);
+  });
+  movingMapPathVertexIndex = null;
+  openMapPathForm();
+  refreshMapPathPreview();
+  const scope = selectedOnly ? (currentLanguage === "en" ? "selected vertices" : "选中节点") : (currentLanguage === "en" ? "whole path" : "整条路径");
+  showToast(`${t("mapPathSimplified")} ${mapPathSimplifyLevel} · ${scope} · ${currentLanguage === "en" ? `${removed} removed` : `减少 ${removed} 个节点`}`);
+}
+
+function deleteEditingMapPath() {
+  const placeId = editingMapPathId;
+  if (!placeId) return;
+  const message = currentLanguage === "en" ? "Delete this path?" : "确认删除这条路径？";
+  if (!window.confirm(message)) return;
+  setMapPathMode(false, false);
+  deleteInventoryObject(placeId);
 }
 
 function saveMapPath(name) {
   if (pendingMapPath.length < 2) return;
   const finalName = String(name || "").trim() || mapPathDefaultName();
   const geometry = { type: "LineString", coordinates: pendingMapPath.map((point) => [...point]) };
+  const editedPathId = editingMapPathId;
   setMapPathMode(false, false);
+  if (editedPathId) {
+    const place = getPlace(editedPathId);
+    if (!place) return;
+    const manualPath = isManualDrawnPath(place);
+    const oldSourceFile = place.sourceFile;
+    place.name = finalName;
+    place.geometryType = "LineString";
+    place.importedGeometry = geometry;
+    if (manualPath) {
+      place.sourceFile = finalName;
+      state.importedFiles = (state.importedFiles || []).map((record) => record.id === place.importId
+        ? { ...record, name: finalName }
+        : record);
+      places.forEach((candidate) => {
+        if (candidate !== place && candidate.importId === place.importId && candidate.sourceFile === oldSourceFile) candidate.sourceFile = finalName;
+      });
+    }
+    invalidateMapCaches();
+    saveState();
+    closeMapPopupsAndDetail();
+    if (isMapPageActive() && !refreshMapLibreDataOnly()) scheduleGeoMapRender();
+    showToast(`${finalName} ${t("mapPathUpdated")}`);
+    return;
+  }
   importPlaces([normalizeImportedPlace({
     name: finalName,
     country: "imported",
@@ -5135,6 +5533,23 @@ function saveMapPath(name) {
   })], "drawn", finalName, 0);
   closeMapPopupsAndDetail();
   showToast(`${finalName} ${t("mapPathAdded")}`);
+}
+
+function editManualPath(placeId) {
+  const place = getPlace(placeId);
+  const coordinates = place?.importedGeometry?.type === "LineString" ? place.importedGeometry.coordinates : null;
+  if (!isEditablePath(place) || !Array.isArray(coordinates) || coordinates.length < 2) return;
+  setMapPathMode(true, false);
+  editingMapPathId = place.id;
+  pendingMapPath = coordinates.map((point) => [Number(point[0]), Number(point[1])]).filter((point) => point.every(Number.isFinite));
+  if (pendingMapPath.length < 2) {
+    setMapPathMode(false, false);
+    return;
+  }
+  ensureTrackOverlayVisible();
+  openMapPathForm();
+  refreshMapPathPreview();
+  showToast(t("editingMapPath"));
 }
 
 function mapClickPointName() {
@@ -5254,6 +5669,29 @@ async function createMapClickCheckin({ name, lng, lat }) {
 function handleMapCanvasClick(lng, lat, originalEvent = null) {
   if (originalEvent?._travelMapHandled) return;
   if (mapPathMode) {
+    if (mapPathEditTool === "insert") {
+      insertMapPathVertex(lng, lat);
+      return;
+    }
+    if (mapPathEditTool === "move") {
+      if (Number.isInteger(movingMapPathVertexIndex)) {
+        recordMapPathEdit();
+        pendingMapPath[movingMapPathVertexIndex] = mapStorageCoordinateFromClick(lng, lat);
+        mapPathSimplifyLevel = 0;
+        movingMapPathVertexIndex = null;
+        selectedMapPathVertexIndices.clear();
+        openMapPathForm();
+        refreshMapPathPreview();
+        showToast(t("mapPathPointMoved"));
+      } else {
+        showToast(t("moveMapPathHint"));
+      }
+      return;
+    }
+    if (mapPathEditTool === "select") {
+      showToast(t("selectMapPathHint"));
+      return;
+    }
     addMapPathVertex(lng, lat);
     return;
   }
@@ -6092,7 +6530,7 @@ function loadUsNpsCatalog() {
 
 function loadUsNpsBoundaries() {
   if (usNpsBoundaryPromise) return usNpsBoundaryPromise;
-  usNpsBoundaryPromise = fetchJson("data/us-nps-boundaries.geojson?v=455")
+  usNpsBoundaryPromise = fetchJson("data/us-nps-boundaries.geojson?v=464")
     .then((data) => {
       if (data?.type !== "FeatureCollection" || !Array.isArray(data.features)) throw new Error("invalid NPS boundaries");
       usNpsBoundaries = data;
@@ -6352,9 +6790,16 @@ function importedShapeGeoJson() {
 
 function importedPathGeoJson() {
   const features = importedShapeGeoJson().features
-    .filter((feature) => ["LineString", "MultiLineString"].includes(feature.geometry?.type));
+    .filter((feature) => ["LineString", "MultiLineString"].includes(feature.geometry?.type) && feature.properties.id !== editingMapPathId);
   if (mapPathMode && pendingMapPath.length >= 2) {
     features.push({ type: "Feature", properties: { name: t("addMapPath"), draft: true }, geometry: { type: "LineString", coordinates: pendingMapPath.map((point) => [...point]) } });
+  }
+  if (mapPathMode) {
+    pendingMapPath.forEach((point, index) => features.push({
+      type: "Feature",
+      properties: { name: `${t("mapPathPoints")} ${index + 1}`, draftVertex: true, vertexIndex: index, selected: selectedMapPathVertexIndices.has(index) },
+      geometry: { type: "Point", coordinates: [...point] },
+    }));
   }
   return {
     type: "FeatureCollection",
@@ -7070,7 +7515,7 @@ function applyMapBaseOpacity() {
 function applyMapLibreProvider(provider) {
   if (!mapLibreMap || mapLibreMap._travelMapProvider === provider) return;
   mapLibreMap._travelMapProvider = provider;
-  mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false, points: false, flights: false, nps: false };
+  mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false, points: false, paths: false, pathVertices: false, flights: false, nps: false };
   mapLibreSourceDataRefs.clear();
   clearMapLibreMarkers();
   mapLibreMap.setStyle(mapLibreBaseStyle(provider));
@@ -7448,6 +7893,7 @@ function renderMapLibreLayers() {
   removeMapLibreLayer("imported-shapes-line");
   removeMapLibreLayer("imported-shapes-fill");
   removeMapLibreLayer("imported-shapes-path-line");
+  removeMapLibreLayer("imported-shapes-path-line-vertices");
   removeMapLibreLayer("flight-routes-line");
   removeMapLibreLayer("visited-regions-line");
   removeMapLibreLayer("visited-regions-fill");
@@ -8394,6 +8840,38 @@ function renderCompactValueList(values) {
 }
 
 function bindMapLibreLayerHandlers() {
+  if (!mapLibreLayerHandlersBound.pathVertices && mapLibreMap.getLayer("imported-shapes-path-line-vertices")) {
+    mapLibreLayerHandlersBound.pathVertices = true;
+    mapLibreMap.on("click", "imported-shapes-path-line-vertices", (event) => {
+      if (!mapPathMode) return;
+      markMapEventHandled(event);
+      activateMapPathVertex(Number(event.features?.[0]?.properties?.vertexIndex));
+    });
+    mapLibreMap.on("mouseenter", "imported-shapes-path-line-vertices", () => {
+      if (mapPathMode) mapLibreMap.getCanvas().style.cursor = "pointer";
+    });
+    mapLibreMap.on("mouseleave", "imported-shapes-path-line-vertices", () => {
+      if (mapPathMode) mapLibreMap.getCanvas().style.cursor = "crosshair";
+    });
+  }
+  if (!mapLibreLayerHandlersBound.paths && mapLibreMap.getLayer("imported-shapes-path-line")) {
+    mapLibreLayerHandlersBound.paths = true;
+    mapLibreMap.on("click", "imported-shapes-path-line", (event) => {
+      if (mapAddMode || mapPathMode) return;
+      if (event.originalEvent?._travelMapHandled) return;
+      const placeId = event.features?.[0]?.properties?.id;
+      if (!isEditablePath(getPlace(placeId))) return;
+      markMapEventHandled(event);
+      editManualPath(placeId);
+    });
+    mapLibreMap.on("mouseenter", "imported-shapes-path-line", (event) => {
+      const placeId = event.features?.[0]?.properties?.id;
+      if (isEditablePath(getPlace(placeId))) mapLibreMap.getCanvas().style.cursor = "pointer";
+    });
+    mapLibreMap.on("mouseleave", "imported-shapes-path-line", () => {
+      if (!mapAddMode && !mapPathMode) mapLibreMap.getCanvas().style.cursor = "";
+    });
+  }
   if (!mapLibreLayerHandlersBound.country && mapLibreMap.getLayer("country-click-fill")) {
     mapLibreLayerHandlersBound.country = true;
     mapLibreMap.on("click", "country-click-fill", (event) => {
@@ -8529,6 +9007,18 @@ function addMapLibreImportedPathLayer(sourceId, lineId, lineWidth) {
       "line-color": "#0000FF",
       "line-width": lineWidth,
       "line-opacity": 0.95,
+    },
+  });
+  mapLibreMap.addLayer({
+    id: `${lineId}-vertices`,
+    type: "circle",
+    source: sourceId,
+    filter: ["==", ["get", "draftVertex"], true],
+    paint: {
+      "circle-radius": ["case", ["==", ["get", "selected"], true], 7, 5],
+      "circle-color": ["case", ["==", ["get", "selected"], true], "#f97316", "#ffffff"],
+      "circle-stroke-color": ["case", ["==", ["get", "selected"], true], "#7c2d12", "#0000FF"],
+      "circle-stroke-width": 2,
     },
   });
 }
@@ -8725,8 +9215,28 @@ function renderLeafletLayers() {
   if (overlays.paths) {
     L.geoJSON(importedPathGeoJson(), {
       style: () => ({ color: "#0000FF", weight: 3, opacity: 0.95 }),
+      pointToLayer: (feature, latlng) => L.circleMarker(latlng, {
+        radius: feature.properties.selected ? 7 : 5,
+        color: feature.properties.selected ? "#7c2d12" : "#0000FF",
+        weight: 2,
+        fillColor: feature.properties.selected ? "#f97316" : "#ffffff",
+        fillOpacity: 1,
+      }),
       onEachFeature: (feature, layer) => {
         layer.bindTooltip(feature.properties.name, { sticky: true });
+        if (feature.properties.draftVertex) {
+          layer.on("click", (event) => {
+            if (event.originalEvent) event.originalEvent._travelMapHandled = true;
+            activateMapPathVertex(Number(feature.properties.vertexIndex));
+          });
+          return;
+        }
+        if (isEditablePath(getPlace(feature.properties.id))) {
+          layer.on("click", (event) => {
+            if (event.originalEvent) event.originalEvent._travelMapHandled = true;
+            editManualPath(feature.properties.id);
+          });
+        }
       },
     }).addTo(leafletLayers);
   }
@@ -9529,6 +10039,13 @@ function isManualDrawnPath(place, fileById = null) {
   return /手绘路径|地图绘制|drawn path|map drawing/.test(text);
 }
 
+function isEditablePath(place) {
+  return Boolean(place?.shapeOnly
+    && place.importedGeometry?.type === "LineString"
+    && Array.isArray(place.importedGeometry.coordinates)
+    && place.importedGeometry.coordinates.length >= 2);
+}
+
 function importManagerDate(value, en) {
   return value ? new Date(value).toLocaleString(en ? "en-US" : "zh-CN") : (en ? "Imported" : "已导入");
 }
@@ -9586,7 +10103,7 @@ function renderImportSummary() {
   const pathRows = visiblePaths.map((place) => `<div class="import-compact-row manual-path-row">
     <label class="manual-path-select"><input type="checkbox" data-select-manual-path="${escapeHtml(place.id)}" ${selectedManualPathIds.has(place.id) ? "checked" : ""} /><span></span></label>
     <div><strong>${escapeHtml(place.name)}</strong><span>${escapeHtml(importManagerDate(place.importedAt, en))} · ${escapeHtml(place.importedGeometry?.type || "LineString")}</span></div>
-    <div class="compact-row-actions"><button class="table-action" data-locate-manual-path="${escapeHtml(place.id)}" type="button">${en ? "Locate" : "定位"}</button><button class="table-action" data-rename-manual-path="${escapeHtml(place.id)}" type="button">${en ? "Rename" : "重命名"}</button><button class="table-action danger" data-delete-inventory-object="${escapeHtml(place.id)}" type="button">${en ? "Delete" : "删除"}</button></div>
+    <div class="compact-row-actions"><button class="table-action" data-locate-manual-path="${escapeHtml(place.id)}" type="button">${en ? "Locate" : "定位"}</button><button class="table-action" data-edit-manual-path="${escapeHtml(place.id)}" type="button">${t("editMapPath")}</button><button class="table-action" data-rename-manual-path="${escapeHtml(place.id)}" type="button">${en ? "Rename" : "重命名"}</button><button class="table-action danger" data-delete-inventory-object="${escapeHtml(place.id)}" type="button">${en ? "Delete" : "删除"}</button></div>
   </div>`).join("");
   const checkinRows = visibleCheckins.map((place) => `<div class="import-compact-row manual-path-row">
     <label class="manual-path-select"><input type="checkbox" data-select-manual-checkin="${escapeHtml(place.id)}" ${selectedManualCheckinIds.has(place.id) ? "checked" : ""} /><span></span></label>
@@ -9933,7 +10450,7 @@ function renderDataInventory() {
       <td data-label="${en ? "Name" : "名称"}">${escapeHtml(place.name)}</td>
       <td data-label="${en ? "Geometry" : "几何类型"}"><strong>${escapeHtml(place.importedGeometry?.type || place.type || "")}</strong></td>
       <td data-label="${en ? "File" : "文件"}">${escapeHtml(place.sourceFile || "")}</td>
-      <td><button class="table-action danger" data-delete-inventory-object="${escapeHtml(place.id)}" type="button">${deleteLabel}</button></td>
+      <td>${isEditablePath(place) ? `<button class="table-action" data-edit-imported-path="${escapeHtml(place.id)}" type="button">${t("editMapPath")}</button>` : ""}<button class="table-action danger" data-delete-inventory-object="${escapeHtml(place.id)}" type="button">${deleteLabel}</button></td>
     </tr>`).join("");
   const flightRows = flights.map((flight) => {
     const from = findAirport(flight.fromAirport);
@@ -12304,7 +12821,35 @@ function readExifGps(buffer) {
   if (view.byteLength < 12) return null;
   if (view.getUint16(0, false) === 0xffd8) return readJpegExifGps(view);
   const tiffGps = readTiffGps(view, 0);
-  return tiffGps;
+  if (tiffGps) return tiffGps;
+  if (asciiFromView(view, 4, 4) === "ftyp") return readEmbeddedExifGps(view);
+  return null;
+}
+
+function readEmbeddedExifGps(view) {
+  // HEIC/HEIF stores an ordinary EXIF/TIFF payload inside an ISO-BMFF item.
+  // Searching the local buffer also handles files whose Exif item is in idat
+  // or mdat without needing to decode the image pixels.
+  for (let offset = 0; offset + 8 <= view.byteLength; offset += 1) {
+    if (view.getUint8(offset) === 0x45 && view.getUint8(offset + 1) === 0x78
+      && view.getUint8(offset + 2) === 0x69 && view.getUint8(offset + 3) === 0x66
+      && view.getUint8(offset + 4) === 0 && view.getUint8(offset + 5) === 0) {
+      const gps = readTiffGps(view, offset + 6);
+      if (gps) return gps;
+      offset += 5;
+      continue;
+    }
+    const littleTiff = view.getUint8(offset) === 0x49 && view.getUint8(offset + 1) === 0x49
+      && view.getUint16(offset + 2, true) === 42;
+    const bigTiff = view.getUint8(offset) === 0x4d && view.getUint8(offset + 1) === 0x4d
+      && view.getUint16(offset + 2, false) === 42;
+    if (littleTiff || bigTiff) {
+      const gps = readTiffGps(view, offset);
+      if (gps) return gps;
+      offset += 3;
+    }
+  }
+  return null;
 }
 
 function readJpegExifGps(view) {
@@ -12331,9 +12876,11 @@ function readTiffGps(view, tiffOffset) {
   if (!littleEndian && endian !== "MM") return null;
   if (view.getUint16(tiffOffset + 2, littleEndian) !== 42) return null;
   const ifd0Offset = view.getUint32(tiffOffset + 4, littleEndian);
+  if (ifd0Offset < 8 || tiffOffset + ifd0Offset + 2 > view.byteLength) return null;
   const gpsIfdOffset = readIfdValue(view, tiffOffset, tiffOffset + ifd0Offset, 0x8825, littleEndian)?.valueOffset;
   if (!gpsIfdOffset) return null;
   const gpsIfd = tiffOffset + gpsIfdOffset;
+  if (gpsIfd + 2 > view.byteLength) return null;
   const latRef = readExifAsciiValue(view, tiffOffset, gpsIfd, 1, littleEndian);
   const lat = readExifRationalTriplet(view, tiffOffset, gpsIfd, 2, littleEndian);
   const lngRef = readExifAsciiValue(view, tiffOffset, gpsIfd, 3, littleEndian);
@@ -13134,6 +13681,13 @@ $("#importSummary").addEventListener("click", (event) => {
     locateManualPath(locatePathButton.dataset.locateManualPath);
     return;
   }
+  const editPathButton = event.target.closest("[data-edit-manual-path]");
+  if (editPathButton) {
+    const placeId = editPathButton.dataset.editManualPath;
+    locateManualPath(placeId);
+    window.setTimeout(() => editManualPath(placeId), 160);
+    return;
+  }
   const renamePathButton = event.target.closest("[data-rename-manual-path]");
   if (renamePathButton) {
     renameManualPath(renamePathButton.dataset.renameManualPath);
@@ -13223,6 +13777,13 @@ $("#importSummary").addEventListener("change", (event) => {
   }
 });
 $("#dataInventory")?.addEventListener("click", (event) => {
+  const editPathButton = event.target.closest("[data-edit-imported-path]");
+  if (editPathButton) {
+    const placeId = editPathButton.dataset.editImportedPath;
+    locateManualPath(placeId);
+    window.setTimeout(() => editManualPath(placeId), 160);
+    return;
+  }
   const visitButton = event.target.closest("[data-delete-inventory-visit]");
   if (visitButton) {
     deleteInventoryVisit(visitButton.dataset.deleteInventoryVisit);
@@ -13372,6 +13933,7 @@ $("#showHighAltitudeOnMap")?.addEventListener("change", (event) => {
   if (mapLibreMap) renderMapLibreMarkers();
   else renderGeoMap();
 });
+bindMapPathBoxSelection();
 $("#addMapPoint")?.addEventListener("click", () => {
   if (mapAddMode) {
     setMapAddMode(false);
@@ -13522,10 +14084,40 @@ $("#mapDetail").addEventListener("submit", (event) => {
   });
 });
 $("#mapDetail").addEventListener("click", (event) => {
+  const toolButton = event.target.closest("[data-map-path-tool]");
+  if (toolButton) {
+    setMapPathEditTool(toolButton.dataset.mapPathTool);
+    return;
+  }
+  if (event.target.closest("[data-undo-map-path-edit]")) {
+    undoMapPathEdit();
+    return;
+  }
+  if (event.target.closest("[data-redo-map-path-edit]")) {
+    redoMapPathEdit();
+    return;
+  }
   if (event.target.closest("[data-undo-map-path]")) {
+    recordMapPathEdit();
     pendingMapPath.pop();
+    mapPathSimplifyLevel = 0;
+    selectedMapPathVertexIndices.clear();
+    movingMapPathVertexIndex = null;
     openMapPathForm();
     refreshMapPathPreview();
+    return;
+  }
+  if (event.target.closest("[data-simplify-map-path]")) {
+    simplifyPendingMapPath();
+    return;
+  }
+  if (event.target.closest("[data-delete-selected-map-path]")) {
+    deleteSelectedMapPathVertices();
+    return;
+  }
+  if (event.target.closest("[data-delete-map-path]")) {
+    deleteEditingMapPath();
+    return;
   }
   if (event.target.closest("[data-cancel-map-path]")) {
     setMapPathMode(false, false);
