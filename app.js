@@ -21,7 +21,7 @@ const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
 const worldHeritageCatalogTotal = 1248;
 const usNpsUnitTotal = 433;
-const dataCacheVersion = "20260830-us-nps-zh1";
+const dataCacheVersion = "20260831-crmo-crmp-split1";
 let importGuideUserToggled = false;
 let syncingImportGuideOpenState = false;
 const fixedChecklistTotals = {
@@ -6092,7 +6092,7 @@ function loadUsNpsCatalog() {
 
 function loadUsNpsBoundaries() {
   if (usNpsBoundaryPromise) return usNpsBoundaryPromise;
-  usNpsBoundaryPromise = fetchJson("data/us-nps-boundaries.geojson?v=449")
+  usNpsBoundaryPromise = fetchJson("data/us-nps-boundaries.geojson?v=455")
     .then((data) => {
       if (data?.type !== "FeatureCollection" || !Array.isArray(data.features)) throw new Error("invalid NPS boundaries");
       usNpsBoundaries = data;
@@ -6971,6 +6971,12 @@ function renderMapLibreMap() {
     mapLibreMap.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-left");
     mapLibreMap.addControl(new maplibregl.ScaleControl({ maxWidth: 120, unit: "metric" }), "bottom-right");
     mapLibreMap.on("click", (event) => {
+      if (event.originalEvent?._travelMapHandled) return;
+      const npsLayers = ["us-nps-hit-line", "us-nps-fill"].filter((layerId) => mapLibreMap.getLayer(layerId));
+      const selectableNpsFeature = npsLayers.length
+        && mapLibreMap.queryRenderedFeatures(event.point, { layers: npsLayers })
+          .some((feature) => Boolean(feature.properties?.itemId));
+      if (selectableNpsFeature) return;
       handleMapCanvasClick(event.lngLat.lng, event.lngLat.lat, event.originalEvent);
     });
     mapLibreMap.on("moveend", rememberMapViewportSoon);
@@ -7117,7 +7123,6 @@ function mapLibreSourceOptions(id) {
       maxzoom: 16,
       buffer: 128,
       tolerance: 0.05,
-      promoteId: "code",
     };
   }
   if (id === "visited-subadmin" || id === "us-county-reference") {
@@ -7178,8 +7183,23 @@ function usNpsDoneCodes() {
   return doneCodes;
 }
 
-function usNpsFeatureDoneExpression() {
-  return ["boolean", ["feature-state", "done"], ["get", "done"]];
+function usNpsDoneFilterExpression() {
+  return ["in", ["get", "code"], ["literal", Array.from(usNpsDoneCodes())]];
+}
+
+const usNpsLegacyBoundaryCodeAliases = {
+  MALL: "NAMA",
+  NACA: "NACE",
+  LOSA: "SACN",
+};
+
+function usNpsUnitForBoundaryFeature(feature) {
+  const boundaryCode = String(feature?.properties?.code || "").toUpperCase();
+  const aliasedCode = usNpsLegacyBoundaryCodeAliases[boundaryCode] || boundaryCode;
+  const unitsByCode = usNpsUnitsByCode.get(aliasedCode) || [];
+  if (unitsByCode.length) return unitsByCode.find((unit) => unit.designation === "National Parks") || unitsByCode[0];
+  const nameKey = canonicalPlaceKey(feature?.properties?.name || "");
+  return nameKey ? (usNpsUnitByMergeName.get(nameKey) || null) : null;
 }
 
 function usNpsBoundaryGeoJson() {
@@ -7188,14 +7208,15 @@ function usNpsBoundaryGeoJson() {
   return {
     type: "FeatureCollection",
     features: usNpsBoundaries.features.map((feature) => {
-      const code = String(feature.properties?.code || "").toUpperCase();
-      const units = usNpsUnitsByCode.get(code) || [];
-      const primary = units.find((unit) => unit.designation === "National Parks") || units[0];
+      const boundaryCode = String(feature.properties?.code || "").toUpperCase();
+      const primary = usNpsUnitForBoundaryFeature(feature);
+      const code = String(primary?.code || boundaryCode).toUpperCase();
       return {
         ...feature,
         geometry: filterTinyUsNpsPolygonParts(restoreUsNpsPolygonHoles(feature.geometry)),
         properties: {
           ...(feature.properties || {}),
+          boundaryCode,
           code,
           itemId: primary?.id || "",
           entityId: primary ? parkHeritageEntityId("usNationalParks", primary.id) : "",
@@ -7264,15 +7285,27 @@ function filterTinyUsNpsPolygonParts(geometry) {
 }
 
 function addMapLibreUsNpsLayers() {
-  const doneExpression = usNpsFeatureDoneExpression();
+  const doneFilter = usNpsDoneFilterExpression();
   if (!mapLibreMap.getLayer("us-nps-fill")) {
     mapLibreMap.addLayer({
       id: "us-nps-fill",
       type: "fill",
       source: "us-nps-boundaries",
       paint: {
-        "fill-color": ["case", doneExpression, "#176b4b", "#315b46"],
-        "fill-opacity": ["case", doneExpression, 0.38, 0.08],
+        "fill-color": "#315b46",
+        "fill-opacity": 0.08,
+      },
+    });
+  }
+  if (!mapLibreMap.getLayer("us-nps-done-fill")) {
+    mapLibreMap.addLayer({
+      id: "us-nps-done-fill",
+      type: "fill",
+      source: "us-nps-boundaries",
+      filter: doneFilter,
+      paint: {
+        "fill-color": "#176b4b",
+        "fill-opacity": 0.38,
       },
     });
   }
@@ -7282,18 +7315,67 @@ function addMapLibreUsNpsLayers() {
       type: "line",
       source: "us-nps-boundaries",
       paint: {
-        "line-color": ["case", doneExpression, "#111111", "#315b46"],
+        "line-color": "#315b46",
         "line-width": 0.9,
-        "line-opacity": ["case", doneExpression, 0.95, 0.62],
+        "line-opacity": 0.62,
+      },
+    });
+  }
+  if (!mapLibreMap.getLayer("us-nps-done-line")) {
+    mapLibreMap.addLayer({
+      id: "us-nps-done-line",
+      type: "line",
+      source: "us-nps-boundaries",
+      filter: doneFilter,
+      paint: {
+        "line-color": "#111111",
+        "line-width": 0.9,
+        "line-opacity": 0.95,
+      },
+    });
+  }
+  if (!mapLibreMap.getLayer("us-nps-hit-line")) {
+    mapLibreMap.addLayer({
+      id: "us-nps-hit-line",
+      type: "line",
+      source: "us-nps-boundaries",
+      paint: {
+        "line-color": "#000000",
+        "line-width": 8,
+        "line-opacity": 0.01,
       },
     });
   }
 }
 
+function ensureMapLibreUsNpsSourceAndLayers() {
+  const overlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
+  if (!mapLibreMap?.isStyleLoaded() || !overlays.china5a || !usNpsBoundaries || !usNpsUnits.length) return false;
+  if (!mapLibreMap.getSource("us-nps-boundaries")) {
+    setMapLibreSource("us-nps-boundaries", usNpsBoundaryGeoJson());
+  }
+  addMapLibreUsNpsLayers();
+  bindMapLibreUsNpsHandlers();
+  return true;
+}
+
+function synchronizeUsNpsMapState() {
+  if (!state.mapOverlays?.china5a) return false;
+  const synchronize = () => {
+    if (!isMapPageActive()) return;
+    refreshUsNpsBoundaryState();
+  };
+  renderGeoMap();
+  window.requestAnimationFrame(synchronize);
+  window.setTimeout(synchronize, 120);
+  if (mapLibreMap) mapLibreMap.once("idle", synchronize);
+  return true;
+}
+
 function bindMapLibreUsNpsHandlers() {
   if (mapLibreLayerHandlersBound.nps || !mapLibreMap.getLayer("us-nps-fill")) return;
   mapLibreLayerHandlersBound.nps = true;
-  mapLibreMap.on("click", "us-nps-fill", (event) => {
+  const handleClick = (event) => {
     if (mapAddMode || mapPathMode) return;
     if (event.originalEvent?._travelMapHandled) return;
     const pointLayers = ["map-points-circle", "map-points-label", "map-points-label-full"].filter((layerId) => mapLibreMap.getLayer(layerId));
@@ -7309,9 +7391,12 @@ function bindMapLibreUsNpsHandlers() {
       .setLngLat(event.lngLat)
       .setHTML(mapPopupHtml(`<strong>${escapeHtml(displayName)}</strong><br>${escapeHtml(feature.properties.location || "")}<br><button class="popup-action" data-checklist-map="usNationalParks" data-item="${escapeHtml(itemId)}" type="button">${isChecklistItemDone("usNationalParks", itemId) ? t("unvisit") : t("markVisited")}</button>`))
       .addTo(mapLibreMap);
+  };
+  ["us-nps-fill", "us-nps-hit-line"].forEach((layerId) => {
+    mapLibreMap.on("click", layerId, handleClick);
+    mapLibreMap.on("mouseenter", layerId, () => { mapLibreMap.getCanvas().style.cursor = "pointer"; });
+    mapLibreMap.on("mouseleave", layerId, () => { mapLibreMap.getCanvas().style.cursor = ""; });
   });
-  mapLibreMap.on("mouseenter", "us-nps-fill", () => { mapLibreMap.getCanvas().style.cursor = "pointer"; });
-  mapLibreMap.on("mouseleave", "us-nps-fill", () => { mapLibreMap.getCanvas().style.cursor = ""; });
 }
 
 function invalidateMapCaches() {
@@ -7382,9 +7467,6 @@ function renderMapLibreLayers() {
   removeMapLibreLayer("visited-countries-line");
   removeMapLibreLayer("visited-countries-fill");
   removeMapLibreLayer("country-click-fill");
-  removeMapLibreLayer("us-nps-line");
-  removeMapLibreLayer("us-nps-done-fill");
-  removeMapLibreLayer("us-nps-fill");
   removeMapLibreSource("visited-area-centers");
   removeMapLibreSource("imported-shapes");
   removeMapLibreSource("imported-paths");
@@ -7398,7 +7480,14 @@ function renderMapLibreLayers() {
   removeMapLibreSource("map-background-context");
   removeMapLibreSource("visited-countries");
   removeMapLibreSource("country-click");
-  removeMapLibreSource("us-nps-boundaries");
+  if (!overlays.china5a) {
+    removeMapLibreLayer("us-nps-hit-line");
+    removeMapLibreLayer("us-nps-line");
+    removeMapLibreLayer("us-nps-done-line");
+    removeMapLibreLayer("us-nps-done-fill");
+    removeMapLibreLayer("us-nps-fill");
+    removeMapLibreSource("us-nps-boundaries");
+  }
   perfStageStartedAt = logRenderStage("remove", perfStageStartedAt);
 
   setMapLibreSource("map-background-context", overlays.light ? cachedMapGeoJson("map-background-context", mapBackgroundContextGeoJson) : emptyFeatureCollection());
@@ -7470,13 +7559,12 @@ function renderMapLibreLayers() {
     bindMapLibreFlightRouteHandlers();
   }
   if (overlays.china5a && usNpsBoundaries && usNpsUnits.length) {
-    setMapLibreSource("us-nps-boundaries", usNpsBoundaryGeoJson());
-    addMapLibreUsNpsLayers();
-    bindMapLibreUsNpsHandlers();
+    ensureMapLibreUsNpsSourceAndLayers();
   }
   perfStageStartedAt = logRenderStage("imports", perfStageStartedAt);
   bindMapLibreLayerHandlers();
   renderMapLibreMarkers(overlays);
+  if (overlays.china5a) refreshUsNpsBoundaryState();
   perfStageStartedAt = logRenderStage("bind-points", perfStageStartedAt);
   logSlowStep("renderMapLibreLayers", perfStartedAt);
   setLoadingDebug("渲染地图图层", "done");
@@ -11150,25 +11238,15 @@ function refreshRenderedChecklistGroupStat(key, group) {
 }
 
 function refreshUsNpsBoundaryState(affectedCodes = null) {
-  if (mapLibreMap && mapLibreMap.isStyleLoaded() && mapLibreMap.getSource("us-nps-boundaries")) {
-    addMapLibreUsNpsLayers();
-    const doneCodes = usNpsDoneCodes();
-    if (affectedCodes?.size) {
-      affectedCodes.forEach((code) => {
-        mapLibreMap.setFeatureState(
-          { source: "us-nps-boundaries", id: code },
-          { done: doneCodes.has(code) },
-        );
-      });
-    }
+  if (ensureMapLibreUsNpsSourceAndLayers()) {
+    const doneFilter = usNpsDoneFilterExpression();
+    if (mapLibreMap.getLayer("us-nps-done-fill")) mapLibreMap.setFilter("us-nps-done-fill", doneFilter);
+    if (mapLibreMap.getLayer("us-nps-done-line")) mapLibreMap.setFilter("us-nps-done-line", doneFilter);
     const firstPointLayer = ["map-points-shadow", "map-points-stroke", "map-points-circle", "map-points-label", "map-points-label-full"]
       .find((layerId) => mapLibreMap.getLayer(layerId));
-    if (mapLibreMap.getLayer("us-nps-fill")) {
-      if (firstPointLayer) mapLibreMap.moveLayer("us-nps-fill", firstPointLayer);
-    }
-    if (mapLibreMap.getLayer("us-nps-line")) {
-      if (firstPointLayer) mapLibreMap.moveLayer("us-nps-line", firstPointLayer);
-    }
+    ["us-nps-fill", "us-nps-done-fill", "us-nps-line", "us-nps-done-line", "us-nps-hit-line"].forEach((layerId) => {
+      if (firstPointLayer && mapLibreMap.getLayer(layerId)) mapLibreMap.moveLayer(layerId, firstPointLayer);
+    });
     mapLibreMap.triggerRepaint();
     return true;
   }
@@ -12926,7 +13004,10 @@ function showPage(pageId, targetId = "") {
   }
   document.querySelector(`[data-page="${target}"]`)?.scrollIntoView({ block: "start", inline: "nearest" });
   if (target === "world") {
-    if (state.mapOverlays?.china5a) Promise.all([loadChina5aCatalog(), loadChina5aCoordinates(), loadUsNpsCatalog(), loadUsNpsBoundaries()]).finally(renderGeoMap);
+    if (state.mapOverlays?.china5a) {
+      Promise.all([loadChina5aCatalog(), loadChina5aCoordinates(), loadUsNpsCatalog(), loadUsNpsBoundaries()])
+        .finally(synchronizeUsNpsMapState);
+    }
     if (state.mapOverlays?.chinaAncientCapitals || hasAncientCapitalCheckins()) loadChinaAncientCapitals().finally(renderGeoMap);
     if (state.mapOverlays?.worldHeritage) loadCatalogData();
     if (state.mapOverlays?.flights) loadAirportData().then(refreshFlightRoutesOnMap);
@@ -13253,7 +13334,8 @@ $("#showChina5aOnMap")?.addEventListener("change", (event) => {
   saveUiStateSoon();
   const refresh = () => {
     checklistOverlayCache.signature = "";
-    renderGeoMap();
+    if (event.target.checked) synchronizeUsNpsMapState();
+    else renderGeoMap();
   };
   if (event.target.checked) Promise.all([loadChina5aCatalog(), loadChina5aCoordinates(), loadUsNpsCatalog(), loadUsNpsBoundaries()]).finally(refresh);
   else refresh();
@@ -13506,7 +13588,7 @@ window.visualViewport?.addEventListener("resize", () => {
 });
 if ("serviceWorker" in navigator && location.protocol !== "file:") {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=449").catch((error) => console.warn("Service Worker registration failed", error));
+    navigator.serviceWorker.register("./sw.js?v=455").catch((error) => console.warn("Service Worker registration failed", error));
   });
 }
 window.addEventListener("hashchange", () => {
