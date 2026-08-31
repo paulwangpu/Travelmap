@@ -3497,6 +3497,9 @@
     {
       "code": "CRMO",
       "name": "Craters of the Moon National Monument",
+      "alternateCodes": [
+        "CRMP"
+      ],
       "location": "Idaho",
       "designation": "National Monuments",
       "designationId": "monuments",
@@ -5232,6 +5235,9 @@
     {
       "code": "CRMO",
       "name": "Craters of the Moon National Preserve",
+      "alternateCodes": [
+        "CRMP"
+      ],
       "location": "Idaho",
       "designation": "National Preserves",
       "designationId": "preserves",

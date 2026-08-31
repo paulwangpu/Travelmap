@@ -15,7 +15,7 @@ const mapControlsStorageKey = "travel-map-controls-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "2.0.0";
+const appVersion = "2.0.1";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
@@ -64,7 +64,6 @@ let mapLibreMap = null;
 let mapLibreMarkers = [];
 let mapLibreMarkerSignature = "";
 let mapPointRenderRevision = 0;
-let pendingUsNpsBoundaryRefresh = null;
 let mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false, points: false, flights: false, nps: false };
 let bingMapLibreProtocolRegistered = false;
 let mapProviderDetectionPromise = null;
@@ -81,6 +80,7 @@ let usNpsGroups = [];
 let usNpsUnitById = new Map();
 let usNpsUnitsByCode = new Map();
 let usNpsUnitByMergeName = new Map();
+let usNpsUnitByCanonicalPlace = new Map();
 let usNpsBoundaries = null;
 let legacyUsNationalParkItems = [];
 let china5aCatalogStatus = { source: "本地清单", detail: `${china5aOfficialTotal} 个 5A 景区`, total: china5aOfficialTotal };
@@ -123,6 +123,8 @@ let pendingChecklistNavSpy = null;
 let restoringMapViewport = false;
 let checklistStatusCache = { signature: "", marked: new Set(), visited: new Set() };
 let checklistOverlayCache = { signature: "", items: [], keySet: new Set() };
+let unifiedParkHeritageIndex = { signature: "", byEntity: new Map(), byEntry: new Map() };
+let unifiedParkHeritageDoneCache = { signature: "", values: new Map() };
 let checklistCoordinateLookupCache = { china5a: null, ancientCapitals: null, highAltitude: null, worldHeritage: null, englishNames: null, map: new Map() };
 let derivedStatsRevision = 0;
 let dashboardStatsCache = { signature: "", stats: null };
@@ -5005,18 +5007,17 @@ function checklistMarkKeys() {
 }
 
 function checklistStatusKeys() {
+  if (checklistStatusCache.signature) return checklistStatusCache;
   const signature = [
     (state.visits || []).map((visit) => `${visit.placeId}:${visit.depth || 0}`).sort().join("|"),
     (state.checklistMarks || []).slice().sort().join("|"),
     places.map((place) => `${place.id}:${place.name}:${place.type || ""}:${(place.checklist || []).join(",")}`).sort().join("|"),
   ].join("##");
-  if (checklistStatusCache.signature !== signature) {
-    checklistStatusCache = {
-      signature,
-      marked: checklistMarkKeys(),
-      visited: visitedChecklistKeys(),
-    };
-  }
+  checklistStatusCache = {
+    signature,
+    marked: checklistMarkKeys(),
+    visited: visitedChecklistKeys(),
+  };
   return checklistStatusCache;
 }
 
@@ -5916,6 +5917,7 @@ function loadCatalogData() {
       worldHeritageCountryIds = countryIds;
       worldHeritageParentKeys = parentKeys;
       worldHeritageParentNames = parentNames;
+      invalidateUnifiedParkHeritageIndex();
       const countryCount = Object.keys(byCountry).length;
       const total = Number(data.total) || worldHeritageCatalogTotal;
       worldHeritageCatalogStatus = {
@@ -6038,8 +6040,11 @@ function loadUsNpsCatalog() {
       usNpsUnitById = new Map(usNpsUnits.map((unit) => [unit.id, unit]));
       usNpsUnitsByCode = new Map();
       usNpsUnitByMergeName = new Map();
+      usNpsUnitByCanonicalPlace = new Map();
       usNpsUnits.forEach((unit) => {
         usNpsUnitByMergeName.set(canonicalPlaceKey(unit.name), unit);
+        const canonicalKey = checklistCanonicalKey(unit.name);
+        if (canonicalKey) usNpsUnitByCanonicalPlace.set(canonicalKey, unit);
       });
       usNpsUnits.forEach((unit) => [unit.code, ...(unit.alternateCodes || [])].forEach((code) => {
         const normalizedCode = String(code || "").toUpperCase();
@@ -6050,6 +6055,7 @@ function loadUsNpsCatalog() {
       }));
       if (!legacyUsNationalParkItems.length) legacyUsNationalParkItems = [...(checklistCatalog.usNationalParks.items || [])];
       checklistCatalog.usNationalParks.items = usNpsUnits.map((unit) => unit.id);
+      invalidateUnifiedParkHeritageIndex();
       let migrated = false;
       state.checklistMarks = Array.from(new Set((state.checklistMarks || []).map((mark) => {
         if (!String(mark).startsWith("usNpsUnits:")) return mark;
@@ -6073,6 +6079,7 @@ function loadUsNpsCatalog() {
       usNpsUnitById = new Map();
       usNpsUnitsByCode = new Map();
       usNpsUnitByMergeName = new Map();
+      usNpsUnitByCanonicalPlace = new Map();
       if (legacyUsNationalParkItems.length) checklistCatalog.usNationalParks.items = [...legacyUsNationalParkItems];
     })
     .finally(() => {
@@ -6084,7 +6091,7 @@ function loadUsNpsCatalog() {
 
 function loadUsNpsBoundaries() {
   if (usNpsBoundaryPromise) return usNpsBoundaryPromise;
-  usNpsBoundaryPromise = fetchJson("data/us-nps-boundaries.geojson")
+  usNpsBoundaryPromise = fetchJson("data/us-nps-boundaries.geojson?v=446")
     .then((data) => {
       if (data?.type !== "FeatureCollection" || !Array.isArray(data.features)) throw new Error("invalid NPS boundaries");
       usNpsBoundaries = data;
@@ -7102,6 +7109,7 @@ function mapLibreSourceOptions(id) {
       maxzoom: 16,
       buffer: 128,
       tolerance: 0.05,
+      promoteId: "code",
     };
   }
   if (id === "visited-subadmin" || id === "us-county-reference") {
@@ -7162,8 +7170,8 @@ function usNpsDoneCodes() {
   return doneCodes;
 }
 
-function usNpsDoneExpression() {
-  return ["in", ["get", "code"], ["literal", Array.from(usNpsDoneCodes())]];
+function usNpsFeatureDoneExpression() {
+  return ["boolean", ["feature-state", "done"], ["get", "done"]];
 }
 
 function usNpsBoundaryGeoJson() {
@@ -7182,6 +7190,7 @@ function usNpsBoundaryGeoJson() {
           ...(feature.properties || {}),
           code,
           itemId: primary?.id || "",
+          entityId: primary ? parkHeritageEntityId("usNationalParks", primary.id) : "",
           name: primary?.name || feature.properties?.name || code,
           location: primary?.location || feature.properties?.location || "",
           done: doneCodes.has(code),
@@ -7247,27 +7256,15 @@ function filterTinyUsNpsPolygonParts(geometry) {
 }
 
 function addMapLibreUsNpsLayers() {
-  const doneExpression = usNpsDoneExpression();
+  const doneExpression = usNpsFeatureDoneExpression();
   if (!mapLibreMap.getLayer("us-nps-fill")) {
     mapLibreMap.addLayer({
       id: "us-nps-fill",
       type: "fill",
       source: "us-nps-boundaries",
       paint: {
-        "fill-color": "#315b46",
-        "fill-opacity": 0.08,
-      },
-    });
-  }
-  if (!mapLibreMap.getLayer("us-nps-done-fill")) {
-    mapLibreMap.addLayer({
-      id: "us-nps-done-fill",
-      type: "fill",
-      source: "us-nps-boundaries",
-      filter: doneExpression,
-      paint: {
-        "fill-color": "#176b4b",
-        "fill-opacity": 0.38,
+        "fill-color": ["case", doneExpression, "#176b4b", "#315b46"],
+        "fill-opacity": ["case", doneExpression, 0.38, 0.08],
       },
     });
   }
@@ -7291,6 +7288,8 @@ function bindMapLibreUsNpsHandlers() {
   mapLibreMap.on("click", "us-nps-fill", (event) => {
     if (mapAddMode || mapPathMode) return;
     if (event.originalEvent?._travelMapHandled) return;
+    const pointLayers = ["map-points-circle", "map-points-label", "map-points-label-full"].filter((layerId) => mapLibreMap.getLayer(layerId));
+    if (pointLayers.length && mapLibreMap.queryRenderedFeatures(event.point, { layers: pointLayers }).length) return;
     const feature = event.features?.[0];
     const itemId = feature?.properties?.itemId;
     if (!itemId) return;
@@ -7316,6 +7315,17 @@ function invalidateMapCaches() {
 function invalidateMapGeoJsonCacheOnly() {
   mapDataVersion += 1;
   mapGeoJsonCache.clear();
+}
+
+function invalidateCoverageMapGeoJsonCache() {
+  [
+    "countries",
+    "regions",
+    "region-outlines",
+    "subadmin",
+    "subadmin-country-context",
+    "subadmin-province-outlines",
+  ].forEach((key) => mapGeoJsonCache.delete(`${key}:${mapDataVersion}`));
 }
 
 function invalidateMapPointRenderCache() {
@@ -7688,6 +7698,7 @@ function mapLibrePointGeoJson(overlays) {
         kind: "checklist",
         checklistKey: entry.key,
         item: entry.item,
+        entityId: checklistMergeKeyForEntry(entry),
         title: entry.title || entry.item,
         subtitle: entry.subtitle || checklistCatalog[entry.key]?.label || t("checklistFallback"),
         done: Boolean(entry.done),
@@ -7914,7 +7925,7 @@ function mergeCanonicalChecklistOverlayItems(items) {
     const mergeKey = checklistMergeKeyForEntry(entry) || `${entry.key}:${canonicalPlaceKey(entry.item)}:${entry.lat.toFixed(5)},${entry.lng.toFixed(5)}`;
     const categoryLabel = checklistLabel(entry.key, checklistCatalog[entry.key] || {});
     if (!merged.has(mergeKey)) {
-      merged.set(mergeKey, { ...entry, categoryLabels: [categoryLabel], displayPriority: checklistOverlayDisplayPriority(entry.key) });
+      merged.set(mergeKey, { ...entry, entityId: mergeKey, categoryLabels: [categoryLabel], displayPriority: checklistOverlayDisplayPriority(entry.key) });
       return;
     }
     const existing = merged.get(mergeKey);
@@ -7944,37 +7955,73 @@ function checklistOverlayDisplayPriority(key) {
   }[key] || 9;
 }
 
+function checklistEntryIdentity(key, item, group = "") {
+  return `${key}:${group}:${item}`;
+}
+
+function npsUnitForChecklistEntry(key, item) {
+  if (key === "usNationalParks") return usNpsUnitById.get(String(item || "")) || null;
+  if (key !== "worldHeritage") return null;
+  const englishName = worldHeritageItemEnglishName(item);
+  const exactEnglishMatch = englishName ? usNpsUnitByMergeName.get(canonicalPlaceKey(englishName)) : null;
+  if (exactEnglishMatch) return exactEnglishMatch;
+  const canonicalKey = checklistCanonicalKey(item);
+  if (!canonicalKey) return null;
+  return usNpsUnitByCanonicalPlace.get(canonicalKey) || null;
+}
+
+function parkHeritageEntityId(key, item) {
+  if (key !== "usNationalParks" && key !== "worldHeritage") return "";
+  const npsUnit = npsUnitForChecklistEntry(key, item);
+  if (npsUnit) return `nps:${String(npsUnit.id)}`;
+  return key === "worldHeritage" ? `wh:${worldHeritageMainKey(item)}` : "";
+}
+
+function buildUnifiedParkHeritageIndex() {
+  const signature = [
+    usNpsUnits.length,
+    Object.keys(checklistCatalog.worldHeritage?.byCountry || {}).length,
+    Object.keys(worldHeritageEnglishNames || {}).length,
+    Object.keys(worldHeritageParentKeys || {}).length,
+  ].join(":");
+  if (unifiedParkHeritageIndex.signature === signature) return unifiedParkHeritageIndex;
+  const byEntity = new Map();
+  const byEntry = new Map();
+  ["usNationalParks", "worldHeritage"].forEach((catalogKey) => {
+    checklistOverlayEntriesFor(catalogKey).forEach((entry) => {
+      const entityId = parkHeritageEntityId(entry.key, entry.item);
+      if (!entityId) return;
+      const normalized = { ...entry, entityId };
+      const entries = byEntity.get(entityId) || [];
+      if (!entries.some((candidate) => candidate.key === entry.key && candidate.item === entry.item)) entries.push(normalized);
+      byEntity.set(entityId, entries);
+      byEntry.set(checklistEntryIdentity(entry.key, entry.item, entry.group || ""), entityId);
+      byEntry.set(checklistEntryIdentity(entry.key, entry.item, ""), entityId);
+    });
+  });
+  unifiedParkHeritageIndex = { signature, byEntity, byEntry };
+  unifiedParkHeritageDoneCache = { signature: "", values: new Map() };
+  return unifiedParkHeritageIndex;
+}
+
+function invalidateUnifiedParkHeritageIndex() {
+  unifiedParkHeritageIndex = { signature: "", byEntity: new Map(), byEntry: new Map() };
+  unifiedParkHeritageDoneCache = { signature: "", values: new Map() };
+}
+
 function checklistMergeKeyForEntry(entry) {
-  const npsUnit = entry.key === "usNationalParks"
-    ? usNpsUnitById.get(entry.item)
-    : entry.key === "worldHeritage"
-      ? [worldHeritageItemEnglishName(entry.item)]
-      .filter(Boolean)
-      .map((name) => usNpsUnitByMergeName.get(canonicalPlaceKey(name)))
-      .find(Boolean)
-      : null;
-  const canonicalKey = checklistCanonicalKey(entry.item)
-    || (npsUnit ? checklistCanonicalKey(npsUnit.name) : "");
-  return canonicalKey
-    || (npsUnit ? `nps:${String(npsUnit.code || npsUnit.id).toUpperCase()}` : "")
+  const entityId = parkHeritageEntityId(entry.key, entry.item);
+  if (entityId) return entityId;
+  return checklistCanonicalKey(entry.item)
     || checklistCoordinateKeyForItem(entry.key, entry.item, entry.group || "")
     || "";
 }
 
 function relatedChecklistEntriesForItem(key, item, group = "") {
-  if (key === "chinaAncientCapitals") return [];
-  const targetKey = checklistMergeKeyForEntry({ key, item, group });
-  if (!targetKey) return [];
-  const keys = ["china5a", "usNationalParks", "worldHeritage", "chinaHighAltitude"];
-  const seen = new Set();
-  return keys.flatMap((catalogKey) => checklistOverlayEntriesFor(catalogKey))
-    .filter((entry) => checklistMergeKeyForEntry(entry) === targetKey)
-    .filter((entry) => {
-      const id = `${entry.key}:${entry.item}`;
-      if (seen.has(id)) return false;
-      seen.add(id);
-      return true;
-    });
+  if (key !== "usNationalParks" && key !== "worldHeritage") return [];
+  const index = buildUnifiedParkHeritageIndex();
+  const entityId = index.byEntry.get(checklistEntryIdentity(key, item, group)) || parkHeritageEntityId(key, item);
+  return entityId ? (index.byEntity.get(entityId) || []) : [];
 }
 
 function checklistRelatedDetailRows(key, item, group = "") {
@@ -10788,16 +10835,11 @@ function renderCountryChecklistSection(key, list) {
 
 function checklistDoneCount(key) {
   if (key === "worldHeritage") return worldHeritageDoneCount();
-  const { marked, visited } = checklistStatusKeys();
   const list = checklistCatalog[key] || {};
   const entries = list.byRegion
     ? Object.entries(list.byRegion).flatMap(([group, items]) => items.map((item) => ({ item, group })))
     : checklistItemsFor(key).map((item) => ({ item, group: "" }));
-  return entries.filter(({ item, group }) => {
-    const itemKey = checklistItemKey(key, item, group);
-    const legacyKey = canonicalPlaceKey(item);
-    return marked.has(itemKey) || visited.has(itemKey) || (!isAmbiguousChecklistItem(key, item) && (marked.has(legacyKey) || visited.has(legacyKey)));
-  }).length;
+  return entries.filter(({ item, group }) => isChecklistItemDone(key, item, group)).length;
 }
 
 function worldHeritageMainKey(item) {
@@ -10806,15 +10848,10 @@ function worldHeritageMainKey(item) {
 }
 
 function worldHeritageDoneCount() {
-  const { marked, visited } = checklistStatusKeys();
   const doneMainKeys = new Set();
   checklistItemsFor("worldHeritage").forEach((item) => {
-    const itemKey = checklistItemKey("worldHeritage", item);
-    const legacyKey = canonicalPlaceKey(item);
     const mainKey = worldHeritageMainKey(item);
-    if (marked.has(itemKey) || visited.has(itemKey) || marked.has(legacyKey) || visited.has(legacyKey) || marked.has(mainKey) || visited.has(mainKey)) {
-      doneMainKeys.add(mainKey);
-    }
+    if (isChecklistItemDone("worldHeritage", item)) doneMainKeys.add(mainKey);
   });
   return doneMainKeys.size;
 }
@@ -10831,7 +10868,7 @@ function checklistItemsFor(key) {
   return list.items;
 }
 
-function isChecklistItemDone(key, item, group = "") {
+function isChecklistEntryDirectlyDone(key, item, group = "") {
   const itemKey = checklistItemKey(key, item, group);
   const legacyKey = canonicalPlaceKey(item);
   const canonicalKey = checklistCanonicalKey(item);
@@ -10855,6 +10892,22 @@ function isChecklistItemDone(key, item, group = "") {
     if ((legacyItemKey && (marked.has(legacyItemKey) || visited.has(legacyItemKey))) || (legacyNameKey && (marked.has(legacyNameKey) || visited.has(legacyNameKey)))) return true;
   }
   return false;
+}
+
+function isChecklistItemDone(key, item, group = "") {
+  if (key !== "usNationalParks" && key !== "worldHeritage") return isChecklistEntryDirectlyDone(key, item, group);
+  const index = buildUnifiedParkHeritageIndex();
+  const entityId = index.byEntry.get(checklistEntryIdentity(key, item, group)) || parkHeritageEntityId(key, item);
+  if (!entityId) return isChecklistEntryDirectlyDone(key, item, group);
+  const status = checklistStatusKeys();
+  if (unifiedParkHeritageDoneCache.signature !== status.signature) {
+    unifiedParkHeritageDoneCache = { signature: status.signature, values: new Map() };
+  }
+  if (!unifiedParkHeritageDoneCache.values.has(entityId)) {
+    const entries = index.byEntity.get(entityId) || [{ key, item, group }];
+    unifiedParkHeritageDoneCache.values.set(entityId, entries.some((entry) => isChecklistEntryDirectlyDone(entry.key, entry.item, entry.group || "")));
+  }
+  return unifiedParkHeritageDoneCache.values.get(entityId);
 }
 
 function checklistId(key, item, group = "") {
@@ -10982,7 +11035,10 @@ async function toggleChecklistItem(key, item, group = "") {
         || legacyUsParkKeys.has(markKey)
       ) marks.delete(mark);
     });
-    unvisitChecklistItem(key, item, group);
+    const linkedEntries = relatedChecklistEntriesForItem(key, item, group);
+    (linkedEntries.length ? linkedEntries : [{ key, item, group }]).forEach((entry) => {
+      unvisitChecklistItem(entry.key, entry.item, entry.group || "");
+    });
     if (highAltitudeBaseKey) {
       const ids = new Set(places.filter((place) => canonicalPlaceKey(place.name) === highAltitudeBaseKey).map((place) => place.id));
       state.visits = state.visits.filter((visit) => !ids.has(visit.placeId));
@@ -10998,69 +11054,122 @@ async function toggleChecklistItem(key, item, group = "") {
   }
   state.checklistMarks = Array.from(marks);
   checklistStatusCache.signature = "";
+  unifiedParkHeritageDoneCache = { signature: "", values: new Map() };
   rebuildCoverageFromSavedVisits();
+  invalidateCoverageMapGeoJsonCache();
   saveStateSoon();
-  renderAfterChecklistChange(key, item, group);
+  renderAfterChecklistChange(key, item, group, wasDone);
   if (document.querySelector('[data-page="imports"]')?.classList.contains("active")) renderDataInventory();
 }
 
-function renderAfterChecklistChange(key, item, group = "") {
+function renderAfterChecklistChange(key, item, group = "", wasDone = null) {
   invalidateMapPointRenderCache();
   const refreshedSection = refreshRenderedChecklistSectionMarkup(key);
   if (!refreshedSection || checklistCanonicalKey(item)) updateChecklistButtonsForItem(key, item, group);
-  const statsGroup = key === "usNationalParks"
-    ? (usNpsUnitById.get(item)?.designationId || group)
-    : group;
-  refreshRenderedChecklistStats(key, statsGroup);
-  refreshCanonicalChecklistStats(item);
-  renderMetrics();
-  renderDashboardAchievements();
-  renderNextStops();
+  const relatedEntries = relatedChecklistEntriesForItem(key, item, group);
+  const relatedKeys = new Set([key, ...relatedEntries.map((entry) => entry.key)]);
+  if ((key === "usNationalParks" || key === "worldHeritage") && typeof wasDone === "boolean") {
+    const delta = wasDone ? -1 : 1;
+    relatedKeys.forEach((relatedKey) => adjustRenderedChecklistCount(relatedKey, delta));
+    const relatedGroups = new Set(relatedEntries.map((entry) => {
+      if (entry.key === "usNationalParks") return `${entry.key}:${usNpsUnitById.get(entry.item)?.designationId || ""}`;
+      return `${entry.key}:${entry.group || ""}`;
+    }).filter((value) => !value.endsWith(":")));
+    relatedGroups.forEach((value) => {
+      const separator = value.indexOf(":");
+      refreshRenderedChecklistGroupStat(value.slice(0, separator), value.slice(separator + 1));
+    });
+  } else {
+    relatedKeys.forEach((relatedKey) => {
+      const relatedEntry = relatedEntries.find((entry) => entry.key === relatedKey);
+      const statsGroup = relatedKey === "usNationalParks"
+        ? (usNpsUnitById.get(relatedEntry?.item || item)?.designationId || group)
+        : (relatedEntry?.group || (relatedKey === key ? group : ""));
+      refreshRenderedChecklistStats(relatedKey, statsGroup);
+    });
+  }
+  if (key !== "usNationalParks" && key !== "worldHeritage") refreshCanonicalChecklistStats(item);
+  if (document.querySelector('[data-page="dashboard"]')?.classList.contains("active")) {
+    renderMetrics();
+    renderDashboardAchievements();
+    renderNextStops();
+  }
   if (document.querySelector('[data-page="checkins"]')?.classList.contains("active") && !canRefreshChecklistChangeLocally(key)) renderCheckinsPage();
   if (!$("#mapDetail")?.classList.contains("hidden")) renderChecklistMapDetail(key, item);
   if (document.querySelector('[data-page="imports"]')?.classList.contains("active")) renderDataInventory();
   const linkedToUsNationalPark = key === "usNationalParks"
-    || relatedChecklistEntriesForItem(key, item, group).some((entry) => entry.key === "usNationalParks");
+    || relatedEntries.some((entry) => entry.key === "usNationalParks");
   if (isMapPageActive()) {
-    if (mapLibreMap && mapLibreMap.isStyleLoaded()) renderMapLibreMarkers();
-    if (!linkedToUsNationalPark) scheduleCoverageMapRefresh();
+    const affectedNpsCodes = new Set();
+    const addUnitCodes = (unit) => {
+      if (!unit) return;
+      [unit.code, ...(unit.alternateCodes || [])].forEach((code) => affectedNpsCodes.add(String(code).toUpperCase()));
+    };
+    if (key === "usNationalParks") addUnitCodes(usNpsUnitById.get(item));
+    relatedEntries.forEach((entry) => {
+      if (entry.key === "usNationalParks") addUnitCodes(usNpsUnitById.get(entry.item));
+    });
+    const shapeRefreshed = linkedToUsNationalPark ? refreshUsNpsBoundaryState(affectedNpsCodes) : false;
+    if (mapLibreMap && (shapeRefreshed || mapLibreMap.isStyleLoaded())) renderMapLibreMarkers();
+    scheduleCoverageMapRefresh(linkedToUsNationalPark ? 16 : 180);
   }
-  if (linkedToUsNationalPark) scheduleUsNpsBoundaryStateRefresh();
 }
 
-function scheduleUsNpsBoundaryStateRefresh() {
-  refreshUsNpsBoundaryState();
-  window.requestAnimationFrame(() => refreshUsNpsBoundaryState());
-  if (pendingUsNpsBoundaryRefresh) window.clearTimeout(pendingUsNpsBoundaryRefresh);
-  pendingUsNpsBoundaryRefresh = window.setTimeout(() => {
-    pendingUsNpsBoundaryRefresh = null;
-    refreshUsNpsBoundaryState();
-  }, 300);
+function adjustRenderedChecklistCount(key, delta) {
+  const update = (node) => {
+    const match = String(node?.textContent || "").match(/(\d+)\s*\/\s*(\d+)/);
+    if (!match) return;
+    node.textContent = `${Math.max(0, Math.min(Number(match[2]), Number(match[1]) + delta))}/${match[2]}`;
+  };
+  document.querySelectorAll(`[data-achievement-count="${key}"]`).forEach(update);
+  document.querySelectorAll(`.theme-checklist [data-checklist="${key}"]`).forEach((button) => {
+    update(button.closest(".theme-checklist")?.querySelector(":scope > header span"));
+  });
 }
 
-function refreshUsNpsBoundaryState() {
+function refreshRenderedChecklistGroupStat(key, group) {
+  const list = checklistCatalog[key] || {};
+  const groupId = checklistGroupId(key, group);
+  const details = Array.from(document.querySelectorAll("[data-checklist-group]"))
+    .find((candidate) => candidate.dataset.checklistGroup === groupId);
+  const summaryCount = details?.querySelector(":scope > summary span");
+  const items = key === "usNationalParks"
+    ? (usNpsGroups.find((entry) => entry.id === group)?.items || [])
+    : (list.byRegion?.[group] || list.byCountry?.[group] || []);
+  if (!summaryCount || !items.length) return;
+  const displayItems = displayChecklistItems(key, items);
+  summaryCount.textContent = `${displayItems.filter((entry) => isChecklistItemDone(key, entry, group)).length}/${displayItems.length}`;
+}
+
+function refreshUsNpsBoundaryState(affectedCodes = null) {
   if (mapLibreMap && mapLibreMap.isStyleLoaded() && mapLibreMap.getSource("us-nps-boundaries")) {
     addMapLibreUsNpsLayers();
-    const doneExpression = usNpsDoneExpression();
+    const doneCodes = usNpsDoneCodes();
+    if (affectedCodes?.size) {
+      affectedCodes.forEach((code) => {
+        mapLibreMap.setFeatureState(
+          { source: "us-nps-boundaries", id: code },
+          { done: doneCodes.has(code) },
+        );
+      });
+    }
     const firstPointLayer = ["map-points-shadow", "map-points-stroke", "map-points-circle", "map-points-label", "map-points-label-full"]
       .find((layerId) => mapLibreMap.getLayer(layerId));
-    if (mapLibreMap.getLayer("us-nps-done-fill")) {
-      mapLibreMap.setFilter("us-nps-done-fill", doneExpression);
-      if (firstPointLayer) mapLibreMap.moveLayer("us-nps-done-fill", firstPointLayer);
+    if (mapLibreMap.getLayer("us-nps-fill")) {
+      if (firstPointLayer) mapLibreMap.moveLayer("us-nps-fill", firstPointLayer);
     }
     if (mapLibreMap.getLayer("us-nps-line")) {
-      mapLibreMap.setPaintProperty("us-nps-line", "line-color", ["case", doneExpression, "#111111", "#315b46"]);
-      mapLibreMap.setPaintProperty("us-nps-line", "line-opacity", ["case", doneExpression, 0.95, 0.62]);
       if (firstPointLayer) mapLibreMap.moveLayer("us-nps-line", firstPointLayer);
     }
     mapLibreMap.triggerRepaint();
-    return;
+    return true;
   }
   if (leafletMap && window.L) {
     renderLeafletLayers();
-    return;
+    return true;
   }
   scheduleGeoMapRender();
+  return false;
 }
 
 function canRefreshChecklistChangeLocally(key) {
@@ -11082,7 +11191,12 @@ function updateChecklistButtonsForItem(key, item, group = "") {
   const legacyKey = canonicalPlaceKey(item);
   const canonicalKey = checklistCanonicalKey(item);
   const mergeKey = checklistMergeKeyForEntry({ key, item, group });
-  const selector = mergeKey ? "[data-checklist], [data-checklist-map]" : `[data-checklist="${key}"], [data-checklist-map="${key}"]`;
+  const relatedEntries = mergeKey ? relatedChecklistEntriesForItem(key, item, group) : [];
+  const escapeSelectorValue = (value) => window.CSS?.escape ? window.CSS.escape(String(value || "")) : String(value || "").replace(/["\\]/g, "\\$&");
+  const relatedItems = Array.from(new Set([item, ...relatedEntries.map((entry) => entry.item)].filter(Boolean)));
+  const selector = mergeKey
+    ? relatedItems.map((relatedItem) => `[data-item="${escapeSelectorValue(relatedItem)}"]`).join(",")
+    : `[data-checklist="${key}"], [data-checklist-map="${key}"]`;
   document.querySelectorAll(selector).forEach((button) => {
     const buttonChecklistKey = button.dataset.checklist || button.dataset.checklistMap || key;
     const buttonItem = button.dataset.item || "";
@@ -11299,6 +11413,8 @@ function applyChecklistGeography(place, key, coords) {
 }
 
 function canUseChecklistCatalogGeography(key, item) {
+  if (key === "usNationalParks") return usNpsUnitById.has(String(item || ""));
+  if (key === "worldHeritage") return Boolean(checklistCoordinateFor(item));
   if (key !== "chinaAncientCapitals") return false;
   const meta = typeof item === "object" ? item : chinaAncientCapitalMeta[canonicalPlaceKey(item)];
   return Boolean(parseChinaAdminText(meta?.admin).province);
@@ -12554,37 +12670,23 @@ function renderAll() {
   const activePage = document.querySelector("[data-page].active")?.dataset.page || "world";
   renderMapControls();
   renderPlaceSelect();
-  renderMetrics();
-  renderDashboardAchievements();
   if (isMapPageActive()) renderGeoMap();
+  if (activePage === "dashboard") {
+    renderMetrics();
+    renderDashboardAchievements();
+    renderNextStops();
+  }
   if (activePage === "imports") {
     renderImportSummary();
     renderDataInventory();
   }
   if (activePage === "checkins") renderCheckinsPage();
   if (activePage === "achievements") renderAchievements();
-  renderNextStops();
-}
-
-function preloadDashboardStats() {
-  Promise.allSettled([
-    loadChina5aCatalog(),
-    loadUsNpsCatalog(),
-    loadCatalogData(),
-    loadBoundaryData("china2", { renderOnLoad: false }),
-    loadBoundaryData("chinaDirect", { renderOnLoad: false }),
-    loadBoundaryData("tw2", { renderOnLoad: false }),
-  ]).then(() => {
-    rebuildCoverageFromSavedVisits();
-    renderMetrics();
-    renderDashboardAchievements();
-    renderNextStops();
-    if (document.querySelector('[data-page="checkins"]')?.classList.contains("active")) renderCheckinsPage();
-    if (document.querySelector('[data-page="achievements"]')?.classList.contains("active")) renderAchievements();
-  });
 }
 
 function renderAfterCheckinChange() {
+  checklistStatusCache.signature = "";
+  unifiedParkHeritageDoneCache = { signature: "", values: new Map() };
   invalidateMapPointRenderCache();
   if (pendingCheckinRender) return;
   pendingCheckinRender = window.requestAnimationFrame(() => {
@@ -12602,9 +12704,13 @@ function renderAfterCheckinChange() {
   });
 }
 
-function scheduleCoverageMapRefresh() {
-  if (pendingCoverageMapRefresh) return;
-  pendingCoverageMapRefresh = window.setTimeout(() => {
+function scheduleCoverageMapRefresh(delay = 180) {
+  if (pendingCoverageMapRefresh) {
+    if (delay >= 180) return;
+    window.clearTimeout(pendingCoverageMapRefresh);
+    pendingCoverageMapRefresh = null;
+  }
+  const refresh = (allowRetry = true) => {
     pendingCoverageMapRefresh = null;
     if (!isMapPageActive()) return;
     const pending = isLightOverlayEnabled() ? ensureBoundaryDataForLevel(state.boundaryLevel || "country") : [];
@@ -12615,8 +12721,14 @@ function scheduleCoverageMapRefresh() {
       });
       return;
     }
-    if (!refreshMapLibreDataOnly({ updateImports: false, updateMarkers: false })) scheduleGeoMapRender();
-  }, 180);
+    if (refreshMapLibreDataOnly({ updateImports: false, updateMarkers: false })) return;
+    if (allowRetry && mapLibreMap) {
+      pendingCoverageMapRefresh = window.setTimeout(() => refresh(false), 64);
+      return;
+    }
+    scheduleGeoMapRender();
+  };
+  pendingCoverageMapRefresh = window.setTimeout(refresh, delay);
 }
 
 function isMapPageActive() {
@@ -12790,6 +12902,7 @@ function showPage(pageId, targetId = "") {
     if (state.mapOverlays?.china5a) Promise.all([loadChina5aCatalog(), loadChina5aCoordinates(), loadUsNpsCatalog(), loadUsNpsBoundaries()]).finally(renderGeoMap);
     if (state.mapOverlays?.chinaAncientCapitals || hasAncientCapitalCheckins()) loadChinaAncientCapitals().finally(renderGeoMap);
     if (state.mapOverlays?.worldHeritage) loadCatalogData();
+    if (state.mapOverlays?.flights) loadAirportData().then(refreshFlightRoutesOnMap);
     if (state.mapOverlays?.highAltitude) renderGeoMap();
     setTimeout(() => {
       if (mapLibreMap) mapLibreMap.resize();
@@ -12801,6 +12914,12 @@ function showPage(pageId, targetId = "") {
     renderMetrics();
     renderDashboardAchievements();
     renderNextStops();
+    Promise.allSettled([loadChina5aCatalog(), loadUsNpsCatalog(), loadCatalogData()]).then(() => {
+      if (!document.querySelector('[data-page="dashboard"]')?.classList.contains("active")) return;
+      renderMetrics();
+      renderDashboardAchievements();
+      renderNextStops();
+    });
   }
   if (target === "checkins") {
     preloadBoundaryData(false, ["country", "china", "admin1", "china2", "chinaDirect", "tw2"]).finally(() => {
@@ -12830,20 +12949,12 @@ moveMapLevelControlToToolbar();
 applyLanguage();
 renderMapControls();
 renderLegend();
-renderMetrics();
-renderDashboardAchievements();
-renderNextStops();
 {
   const { pageId, targetId } = parsePageHash();
   showPage(pageId, targetId);
 }
 detectMapProviderByIp();
 ensureBoundaryDataForLevel(state.boundaryLevel || "country");
-loadAirportData().then(() => {
-  invalidateDerivedStatsCache();
-  renderMetrics();
-  refreshFlightRoutesOnMap();
-});
 setLoadingDebug("读取完整旅行数据", "pending");
 loadStateFromIndexedDb().finally(() => {
   fullStateLoaded = true;
@@ -12852,7 +12963,6 @@ loadStateFromIndexedDb().finally(() => {
   rebuildCoverageFromSavedVisits();
   restoreStoredMapViewport();
   ensureBoundaryDataForLevel(state.boundaryLevel || "country");
-  preloadDashboardStats();
   renderAll();
   showPage(location.hash.replace("#", "") || "world");
   detectMapProviderByIp();
@@ -13363,6 +13473,11 @@ window.visualViewport?.addEventListener("resize", () => {
   scheduleActiveMapResize();
   scheduleMapOverlayInsets();
 });
+if ("serviceWorker" in navigator && location.protocol !== "file:") {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js?v=446").catch((error) => console.warn("Service Worker registration failed", error));
+  });
+}
 window.addEventListener("hashchange", () => {
   const { pageId, targetId } = parsePageHash();
   if (document.querySelector(`[data-page="${pageId}"]`)) showPage(pageId, targetId);
