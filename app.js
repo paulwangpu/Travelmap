@@ -5716,6 +5716,13 @@ function mapEventHitsPoint(event) {
   return mapLibreMap.queryRenderedFeatures(event.point, { layers: pointLayers }).length > 0;
 }
 
+function mapEventHitsNpsBoundary(event) {
+  if (!mapLibreMap || !event?.point) return false;
+  const layers = ["us-nps-hit-line", "us-nps-fill"].filter((id) => mapLibreMap.getLayer(id));
+  return layers.length > 0 && mapLibreMap.queryRenderedFeatures(event.point, { layers })
+    .some((feature) => Boolean(feature.properties?.itemId));
+}
+
 function ensureMapDetailCloseButton() {
   const detail = $("#mapDetail");
   if (!detail || detail.classList.contains("hidden") || detail.querySelector("[data-close-detail]")) return;
@@ -8877,7 +8884,7 @@ function bindMapLibreLayerHandlers() {
     mapLibreLayerHandlersBound.country = true;
     mapLibreMap.on("click", "country-click-fill", (event) => {
       if (mapAddMode || mapPathMode) return;
-      if (event.originalEvent?._travelMapHandled || mapEventHitsPoint(event)) return;
+      if (event.originalEvent?._travelMapHandled || mapEventHitsPoint(event) || mapEventHitsNpsBoundary(event)) return;
       markMapEventHandled(event);
       const feature = event.features?.[0];
       if (feature) handleCountryClick(feature);
@@ -8893,7 +8900,7 @@ function bindMapLibreLayerHandlers() {
     mapLibreLayerHandlersBound.admin = true;
     mapLibreMap.on("click", "visited-regions-fill", (event) => {
       if (mapAddMode || mapPathMode) return;
-      if (event.originalEvent?._travelMapHandled || mapEventHitsPoint(event)) return;
+      if (event.originalEvent?._travelMapHandled || mapEventHitsPoint(event) || mapEventHitsNpsBoundary(event)) return;
       markMapEventHandled(event);
       const feature = event.features?.[0];
       if (feature) handleAdminRegionClick(feature);
@@ -8909,7 +8916,7 @@ function bindMapLibreLayerHandlers() {
     mapLibreLayerHandlersBound.subadmin = true;
     mapLibreMap.on("click", "visited-subadmin-fill", (event) => {
       if (mapAddMode || mapPathMode) return;
-      if (event.originalEvent?._travelMapHandled || mapEventHitsPoint(event)) return;
+      if (event.originalEvent?._travelMapHandled || mapEventHitsPoint(event) || mapEventHitsNpsBoundary(event)) return;
       markMapEventHandled(event);
       const feature = event.features?.[0];
       if (feature) handleAdminRegionClick(feature);
@@ -14172,7 +14179,7 @@ window.visualViewport?.addEventListener("resize", () => {
 });
 if ("serviceWorker" in navigator && location.protocol !== "file:") {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=455").catch((error) => console.warn("Service Worker registration failed", error));
+    navigator.serviceWorker.register("./sw.js?v=467").catch((error) => console.warn("Service Worker registration failed", error));
   });
 }
 window.addEventListener("hashchange", () => {
