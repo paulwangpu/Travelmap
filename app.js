@@ -15,7 +15,7 @@ const mapControlsStorageKey = "travel-map-controls-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "2.0.2";
+const appVersion = "2.0.3";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
@@ -128,6 +128,7 @@ let unifiedParkHeritageDoneCache = { signature: "", values: new Map() };
 let checklistCoordinateLookupCache = { china5a: null, ancientCapitals: null, highAltitude: null, worldHeritage: null, englishNames: null, map: new Map() };
 let derivedStatsRevision = 0;
 let dashboardStatsCache = { signature: "", stats: null };
+let dashboardStatsPreloadPromise = null;
 let mapAddMode = false;
 let mapPathMode = false;
 let editingMapPathId = null;
@@ -9738,6 +9739,12 @@ function renderManualSection(section) {
   }
 }
 
+function ensureManualSectionData(section) {
+  const keys = section === "chinaCity" ? ["china2", "chinaDirect", "tw2"] : [];
+  const pending = keys.filter((key) => !boundaryData[key]).map((key) => loadBoundaryData(key, { renderOnLoad: false }));
+  return pending.length ? Promise.all(pending) : Promise.resolve();
+}
+
 function renderChinaProvinceImageryBadges() {
   const en = currentLanguage === "en";
   const unitsByName = new Map(regionSets.china.units.map((unit) => [unit.name, unit]));
@@ -12654,7 +12661,8 @@ function importPlaces(imported, extension, fileName, depth = 1) {
   state.importedFiles.unshift({ id: importId, name: fileName, count: normalizedImported.length, format: extension.toUpperCase(), marked: depth > 0, ids: createdIds, importedAt });
   saveState();
   renderAll();
-  preloadBoundaryData(false, ["country", "admin1", "china2", "tw2"]).then(() => {
+  const pendingBoundaries = ensureBoundaryDataForLevel(state.boundaryLevel || "country");
+  Promise.all(pendingBoundaries).then(() => {
     refreshInferredLocations();
     saveState();
     renderAll();
@@ -13347,7 +13355,8 @@ function renderAfterCheckinChange() {
 }
 
 function preloadDashboardStats() {
-  Promise.allSettled([
+  if (dashboardStatsPreloadPromise) return dashboardStatsPreloadPromise;
+  dashboardStatsPreloadPromise = Promise.allSettled([
     loadChina5aCatalog(),
     loadUsNpsCatalog(),
     loadCatalogData(),
@@ -13363,6 +13372,7 @@ function preloadDashboardStats() {
     if (document.querySelector('[data-page="checkins"]')?.classList.contains("active")) renderCheckinsPage();
     if (document.querySelector('[data-page="achievements"]')?.classList.contains("active")) renderAchievements();
   });
+  return dashboardStatsPreloadPromise;
 }
 
 function scheduleCoverageMapRefresh(delay = 180) {
@@ -13578,7 +13588,7 @@ function showPage(pageId, targetId = "") {
     renderMetrics();
     renderDashboardAchievements();
     renderNextStops();
-    Promise.allSettled([loadChina5aCatalog(), loadUsNpsCatalog(), loadCatalogData()]).then(() => {
+    preloadDashboardStats().then(() => {
       if (!document.querySelector('[data-page="dashboard"]')?.classList.contains("active")) return;
       renderMetrics();
       renderDashboardAchievements();
@@ -13586,8 +13596,11 @@ function showPage(pageId, targetId = "") {
     });
   }
   if (target === "checkins") {
-    preloadBoundaryData(false, ["country", "china", "admin1", "china2", "chinaDirect", "tw2"]).finally(() => {
+    loadBoundaryData("country", { renderOnLoad: false }).finally(() => {
       renderCheckinsPage();
+      document.querySelectorAll("#checkins .manual-section-details[open]").forEach((details) => {
+        ensureManualSectionData(details.dataset.manualSection).then(() => renderManualSection(details.dataset.manualSection));
+      });
       scrollToPageTarget(target, targetId);
     });
   }
@@ -13630,7 +13643,6 @@ loadStateFromIndexedDb().finally(() => {
   rebuildCoverageFromSavedVisits();
   restoreStoredMapViewport();
   ensureBoundaryDataForLevel(state.boundaryLevel || "country");
-  preloadDashboardStats();
   renderAll();
   showPage(location.hash.replace("#", "") || "world");
   detectMapProviderByIp();
@@ -13835,6 +13847,9 @@ $("#checkins")?.addEventListener("toggle", (event) => {
   if (!details) return;
   if (details.open) {
     renderManualSection(details.dataset.manualSection);
+    ensureManualSectionData(details.dataset.manualSection).then(() => {
+      if (details.open) renderManualSection(details.dataset.manualSection);
+    });
     return;
   }
   const target = details.querySelector(".manual-grid, .manual-country-groups, .license-plate-grid");
@@ -14179,7 +14194,7 @@ window.visualViewport?.addEventListener("resize", () => {
 });
 if ("serviceWorker" in navigator && location.protocol !== "file:") {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=467").catch((error) => console.warn("Service Worker registration failed", error));
+    navigator.serviceWorker.register("./sw.js?v=469").catch((error) => console.warn("Service Worker registration failed", error));
   });
 }
 window.addEventListener("hashchange", () => {
