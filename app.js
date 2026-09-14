@@ -7527,14 +7527,18 @@ function applyMapLibreProvider(provider) {
   mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false, points: false, paths: false, pathVertices: false, flights: false, nps: false };
   mapLibreSourceDataRefs.clear();
   clearMapLibreMarkers();
-  mapLibreMap.setStyle(mapLibreBaseStyle(provider));
   const rerender = () => {
     applyMapLibreProjectionMode();
     renderMapLibreLayersWhenReady();
+    if (mapLibreMap.isStyleLoaded() && state.mapOverlays?.china5a && usNpsBoundaries && usNpsUnits.length) {
+      ensureMapLibreUsNpsSourceAndLayers(true);
+      refreshUsNpsBoundaryState();
+    }
   };
   mapLibreMap.once("style.load", rerender);
   mapLibreMap.once("styledata", rerender);
   mapLibreMap.once("idle", rerender);
+  mapLibreMap.setStyle(mapLibreBaseStyle(provider));
   renderMapLibreLayersWhenReady();
 }
 
@@ -7746,6 +7750,7 @@ function addMapLibreUsNpsLayers() {
       type: "fill",
       source: "us-nps-boundaries",
       paint: {
+        "fill-antialias": false,
         "fill-color": "#315b46",
         "fill-opacity": 0.08,
       },
@@ -7758,6 +7763,7 @@ function addMapLibreUsNpsLayers() {
       source: "us-nps-boundaries",
       filter: doneFilter,
       paint: {
+        "fill-antialias": false,
         "fill-color": "#176b4b",
         "fill-opacity": 0.38,
       },
@@ -7802,9 +7808,9 @@ function addMapLibreUsNpsLayers() {
   }
 }
 
-function ensureMapLibreUsNpsSourceAndLayers() {
+function ensureMapLibreUsNpsSourceAndLayers(allowDuringStyleUpdate = false) {
   const overlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
-  if (!mapLibreMap?.isStyleLoaded() || !overlays.china5a || !usNpsBoundaries || !usNpsUnits.length) return false;
+  if (!mapLibreMap || (!allowDuringStyleUpdate && !mapLibreMap.isStyleLoaded()) || !overlays.china5a || !usNpsBoundaries || !usNpsUnits.length) return false;
   if (!mapLibreMap.getSource("us-nps-boundaries")) {
     setMapLibreSource("us-nps-boundaries", usNpsBoundaryGeoJson());
   }
@@ -8014,7 +8020,7 @@ function renderMapLibreLayers() {
     bindMapLibreFlightRouteHandlers();
   }
   if (overlays.china5a && usNpsBoundaries && usNpsUnits.length) {
-    ensureMapLibreUsNpsSourceAndLayers();
+    ensureMapLibreUsNpsSourceAndLayers(true);
   }
   perfStageStartedAt = logRenderStage("imports", perfStageStartedAt);
   bindMapLibreLayerHandlers();
