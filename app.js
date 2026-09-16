@@ -15,7 +15,7 @@ const mapControlsStorageKey = "travel-map-controls-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "2.0.3";
+const appVersion = "2.0.4";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
@@ -3624,6 +3624,8 @@ let state = {
   importedFiles: [],
   flights: [],
   flightImports: [],
+  flightHomeCities: [],
+  flightCalendarShowDestinations: false,
   checklistMarks: [],
   openChecklistGroups: [],
   coverage: { countries: [], regions: {}, subregions: {} },
@@ -5950,6 +5952,8 @@ function localStorageSnapshot(payload) {
       detectedMapProvider: savedState.detectedMapProvider || "",
       mapOverlays: normalizeMapOverlays(savedState.mapOverlays || {}),
       mapViewport: normalizeMapViewport(savedState.mapViewport),
+      flightHomeCities: Array.isArray(savedState.flightHomeCities) ? savedState.flightHomeCities : [],
+      flightCalendarShowDestinations: Boolean(savedState.flightCalendarShowDestinations),
       coverage: savedState.coverage || { countries: [], regions: {}, subregions: {} },
     },
   };
@@ -6021,6 +6025,8 @@ function applySavedPayload(saved) {
       importedFiles: saved.state.importedFiles || [],
       flights: saved.state.flights || [],
       flightImports: saved.state.flightImports || [],
+      flightHomeCities: Array.isArray(saved.state.flightHomeCities) ? saved.state.flightHomeCities : [],
+      flightCalendarShowDestinations: Boolean(saved.state.flightCalendarShowDestinations),
       checklistMarks: saved.state.checklistMarks || [],
       openChecklistGroups: saved.state.openChecklistGroups || [],
       mapProviderMode: normalizeMapProviderMode(saved.state.mapProviderMode || state.mapProviderMode),
@@ -6052,6 +6058,8 @@ function applyLocalStorageSnapshot(saved) {
     detectedMapProvider: normalizeDetectedMapProvider(saved.state.detectedMapProvider || state.detectedMapProvider),
     mapOverlays: normalizeMapOverlays(saved.state.mapOverlays || state.mapOverlays || {}),
     mapViewport: normalizeMapViewport(saved.state.mapViewport) || state.mapViewport || null,
+    flightHomeCities: Array.isArray(saved.state.flightHomeCities) ? saved.state.flightHomeCities : state.flightHomeCities || [],
+    flightCalendarShowDestinations: Boolean(saved.state.flightCalendarShowDestinations),
     coverage: saved.state.coverage || state.coverage || { countries: [], regions: {}, subregions: {} },
   };
   return true;
@@ -6079,6 +6087,8 @@ function sanitizeDataStore() {
   state.importedFiles ||= [];
   state.flights = sanitizeFlights(state.flights || []);
   state.flightImports = Array.isArray(state.flightImports) ? state.flightImports : [];
+  state.flightHomeCities = Array.from(new Set((Array.isArray(state.flightHomeCities) ? state.flightHomeCities : []).map((key) => String(key || "").trim()).filter(Boolean)));
+  state.flightCalendarShowDestinations = Boolean(state.flightCalendarShowDestinations && state.flightHomeCities.length);
   state.checklistMarks ||= [];
   state.openChecklistGroups ||= [];
   if (coverageNeedsRebuild) rebuildCoverageFromSavedVisits();
@@ -6856,7 +6866,6 @@ function totalImportedPathLengthKm() {
 
 function flightStatsSummary() {
   const flights = sanitizeFlights(state.flights || []);
-  const routeKeys = new Set();
   let totalDistanceKm = 0;
   let totalDurationMinutes = 0;
   flights.forEach((flight) => {
@@ -6864,7 +6873,6 @@ function flightStatsSummary() {
     const to = findAirport(flight.toAirport);
     totalDurationMinutes += flightDurationMinutes(flight);
     if (from && to) {
-      routeKeys.add(flightRouteKey(flight));
       const distance = flight.distanceKm || haversineKm([from.lng, from.lat], [to.lng, to.lat]);
       totalDistanceKm += distance;
     } else if (flight.distanceKm) {
@@ -6873,10 +6881,157 @@ function flightStatsSummary() {
   });
   return {
     flights: flights.length,
-    routes: routeKeys.size,
+    routes: flightAnalyticsSummary(flights).routes.length,
     distanceKm: totalDistanceKm,
     durationMinutes: totalDurationMinutes,
   };
+}
+
+function validFlightDate(value) {
+  const match = String(value || "").match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (!match) return "";
+  const year = Number(match[1]);
+  const month = Number(match[2]);
+  const day = Number(match[3]);
+  const date = new Date(Date.UTC(year, month - 1, day));
+  return date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day
+    ? match[0]
+    : "";
+}
+
+function flightTimeSortKey(value) {
+  const match = String(value || "").match(/^(\d{1,2}):(\d{2})/);
+  if (!match) return Number.POSITIVE_INFINITY;
+  const hours = Number(match[1]);
+  const minutes = Number(match[2]);
+  return hours < 24 && minutes < 60 ? hours * 60 + minutes : Number.POSITIVE_INFINITY;
+}
+
+function sortFlightsChronologically(flights = []) {
+  return flights
+    .map((flight, index) => ({ flight, index, date: validFlightDate(flight.date) }))
+    .sort((left, right) => {
+      if (left.date && right.date) {
+        const dateOrder = left.date.localeCompare(right.date);
+        if (dateOrder) return dateOrder;
+        const timeOrder = flightTimeSortKey(left.flight.fromTime) - flightTimeSortKey(right.flight.fromTime);
+        if (Number.isFinite(timeOrder) && timeOrder) return timeOrder;
+        if (!Number.isFinite(timeOrder)) {
+          const leftTime = flightTimeSortKey(left.flight.fromTime);
+          const rightTime = flightTimeSortKey(right.flight.fromTime);
+          if (leftTime !== rightTime) return Number.isFinite(leftTime) ? -1 : 1;
+        }
+      } else if (left.date || right.date) {
+        return left.date ? -1 : 1;
+      }
+      const importedOrder = String(left.flight.importedAt || "").localeCompare(String(right.flight.importedAt || ""));
+      return importedOrder || left.index - right.index;
+    })
+    .map(({ flight }) => flight);
+}
+
+function flightAirportStatEntry(value) {
+  const raw = String(value || "").trim();
+  const airport = findAirport(raw);
+  if (airport) {
+    const iata = String(airport.iata || "").toUpperCase();
+    return {
+      key: iata ? `iata:${iata}` : `airport:${normalizeAirportName(airport.name || raw)}`,
+      label: `${flightRouteEndpointName(airport)}${iata ? ` (${iata})` : ""}`,
+    };
+  }
+  const normalized = normalizeAirportName(raw);
+  return { key: `raw:${normalized || "unknown"}`, label: raw || "—" };
+}
+
+function flightCityStatEntry(value) {
+  const raw = String(value || "").trim();
+  const airport = findAirport(raw);
+  if (airport) {
+    const city = String(airport.city || airport.name || raw).trim();
+    return {
+      key: `city:${String(airport.country || "").toLowerCase()}:${normalizeAirportName(city).toLocaleLowerCase()}`,
+      label: city,
+    };
+  }
+  const normalized = normalizeAirportName(raw).toLocaleLowerCase();
+  return { key: `raw:${normalized || "unknown"}`, label: raw || "—" };
+}
+
+function pruneFlightHomeCities() {
+  const available = new Set(sanitizeFlights(state.flights || []).flatMap((flight) => [
+    flightCityStatEntry(flight.fromAirport).key,
+    flightCityStatEntry(flight.toAirport).key,
+  ]));
+  state.flightHomeCities = (Array.isArray(state.flightHomeCities) ? state.flightHomeCities : []).filter((key) => available.has(key));
+  if (!state.flightHomeCities.length) state.flightCalendarShowDestinations = false;
+}
+
+function flightAnalyticsSummary(flights = [], locale = "zh-CN", homeCityKeys = []) {
+  const airports = new Map();
+  const routes = new Map();
+  const airlines = new Map();
+  const cities = new Map();
+  const years = new Map();
+  const homes = new Set((Array.isArray(homeCityKeys) ? homeCityKeys : []).map(String));
+  let unknownDates = 0;
+  const increment = (map, key, label) => {
+    const current = map.get(key);
+    if (current) current.count += 1;
+    else map.set(key, { key, label, count: 1 });
+  };
+  flights.forEach((flight) => {
+    const from = flightAirportStatEntry(flight.fromAirport);
+    const to = flightAirportStatEntry(flight.toAirport);
+    const fromCity = flightCityStatEntry(flight.fromAirport);
+    const toCity = flightCityStatEntry(flight.toAirport);
+    increment(airports, from.key, from.label);
+    increment(airports, to.key, to.label);
+    increment(cities, fromCity.key, fromCity.label);
+    increment(cities, toCity.key, toCity.label);
+    const endpoints = [from, to].sort((left, right) => left.key.localeCompare(right.key));
+    increment(routes, endpoints.map((entry) => entry.key).join("⇄"), endpoints.map((entry) => entry.label).join(" ⇄ "));
+    const airlineLabel = String(flight.airline || "").trim().replace(/\s+/g, " ");
+    increment(airlines, airlineLabel ? airlineLabel.toLocaleLowerCase() : "__unknown__", airlineLabel);
+    const date = validFlightDate(flight.date);
+    if (!date) {
+      unknownDates += 1;
+      return;
+    }
+    const [year, month] = date.split("-").map(Number);
+    if (!years.has(year)) years.set(year, { months: Array(12).fill(0), destinations: Array.from({ length: 12 }, () => new Map()) });
+    const yearStats = years.get(year);
+    yearStats.months[month - 1] += 1;
+    [fromCity, toCity].forEach((city) => {
+      if (!homes.has(city.key)) increment(yearStats.destinations[month - 1], city.key, city.label);
+    });
+  });
+  const ranked = (map) => Array.from(map.values()).sort((left, right) => right.count - left.count || left.label.localeCompare(right.label, locale));
+  const calendar = Array.from(years, ([year, values]) => ({
+    year,
+    months: values.months,
+    destinations: values.destinations.map(ranked),
+  })).sort((left, right) => left.year - right.year);
+  return {
+    flights: flights.length,
+    airports: ranked(airports),
+    routes: ranked(routes),
+    airlines: ranked(airlines),
+    cityCandidates: ranked(cities),
+    calendar,
+    maxMonthlyFlights: Math.max(0, ...calendar.flatMap(({ months }) => months)),
+    unknownDates,
+  };
+}
+
+function flightRankingPercent(count, maximum) {
+  if (!(count > 0) || !(maximum > 0)) return 0;
+  return Math.min(100, Math.max(0, (count / maximum) * 100));
+}
+
+function flightHeatLevel(count, maximum) {
+  if (!(count > 0) || !(maximum > 0)) return 0;
+  return Math.min(4, Math.max(1, Math.ceil((count / maximum) * 4)));
 }
 
 function flightDurationMinutes(flight) {
@@ -7282,27 +7437,14 @@ function renderMetrics() {
   const stats = dashboardStats();
   const locale = currentLanguage === "en" ? "en-US" : "zh-CN";
   const formatKm = (value) => value ? `${Math.round(value).toLocaleString(locale)} km` : "0 km";
-  const formatDuration = (minutes) => {
-    const total = Math.round(minutes || 0);
-    const hours = Math.floor(total / 60);
-    const mins = total % 60;
-    if (currentLanguage === "en") return hours ? `${hours.toLocaleString(locale)} h ${mins} m` : `${mins} m`;
-    return hours ? `${hours.toLocaleString(locale)} 小时 ${mins} 分` : `${mins} 分`;
-  };
   const regularMetrics = [
     [t("totalCheckins"), stats.visitedPointCount],
     [t("importedPoints"), stats.importedPoints],
     [t("importedTracks"), stats.importedShapes],
     [t("trackLength"), formatKm(stats.pathLengthKm)],
   ];
-  const flightMetrics = [
-    [currentLanguage === "en" ? "Imported flights" : "已导入航班", stats.flights],
-    [currentLanguage === "en" ? "Flight routes" : "航线数量", stats.flightRoutes],
-    [currentLanguage === "en" ? "Flight time" : "累计时长", formatDuration(stats.flightDurationMinutes)],
-    [currentLanguage === "en" ? "Flight distance" : "飞行里程", formatKm(stats.flightDistanceKm)],
-  ];
   const rowHtml = (metrics, className = "") => `<div class="metric-row ${className}">${metrics.map(([label, value]) => `<article class="metric"><strong>${value}</strong><span>${label}</span></article>`).join("")}</div>`;
-  $("#metrics").innerHTML = `${rowHtml(regularMetrics)}${rowHtml(flightMetrics, "flight-metric-row")}`;
+  $("#metrics").innerHTML = rowHtml(regularMetrics);
 }
 
 function renderGeoMap() {
@@ -10397,6 +10539,7 @@ function deleteFlightRecord(flightKey) {
     const count = state.flights.filter((candidate) => candidate.importId === record.id).length;
     return { ...record, count };
   }).filter((record) => record.count > 0);
+  pruneFlightHomeCities();
   invalidateMapCaches();
   invalidateDerivedStatsCache();
   saveState();
@@ -10405,6 +10548,93 @@ function deleteFlightRecord(flightKey) {
   refreshFlightRoutesOnMap();
   if (isMapPageActive()) renderGeoMap();
   showToast(`${flight.flightNo || flight.key} ${currentLanguage === "en" ? "deleted" : "已删除"}`);
+}
+
+function renderFlightRanking(title, entries, en) {
+  const maximum = entries[0]?.count || 0;
+  const itemHtml = (items, start = 1) => `<ol class="flight-ranking-list" start="${start}">${items.map((entry) => {
+    const percent = flightRankingPercent(entry.count, maximum);
+    return `<li style="--flight-ranking-width:${percent.toFixed(2)}%">
+      <div class="flight-ranking-row"><span>${escapeHtml(entry.label || (en ? "Unknown airline" : "未知航空公司"))}</span><strong title="${entry.count} ${en ? "times" : "次"}">${entry.count}</strong></div>
+      <i class="flight-ranking-bar" aria-hidden="true"><b></b></i>
+    </li>`;
+  }).join("")}</ol>`;
+  const leading = entries.slice(0, 10);
+  const remaining = entries.slice(10);
+  return `<article class="flight-ranking-card">
+    <h5>${title}</h5>
+    ${leading.length ? itemHtml(leading) : `<p class="muted small">${en ? "No data" : "暂无数据"}</p>`}
+    ${remaining.length ? `<details class="flight-ranking-more"><summary><span class="when-closed">${en ? `Show all (${entries.length})` : `展开全部（${entries.length}）`}</span><span class="when-open">${en ? "Collapse" : "收起"}</span></summary>${itemHtml(remaining, 11)}</details>` : ""}
+  </article>`;
+}
+
+function renderFlightAnalytics(flights, en) {
+  const homeCityKeys = Array.isArray(state.flightHomeCities) ? state.flightHomeCities : [];
+  const analytics = flightAnalyticsSummary(flights, en ? "en-US" : "zh-CN", homeCityKeys);
+  const showDestinations = Boolean(state.flightCalendarShowDestinations && homeCityKeys.length);
+  const flightStats = flightStatsSummary();
+  const locale = en ? "en-US" : "zh-CN";
+  const formatKm = (value) => value ? `${Math.round(value).toLocaleString(locale)} km` : "0 km";
+  const formatDuration = (minutes) => {
+    const total = Math.round(minutes || 0);
+    const hours = Math.floor(total / 60);
+    const mins = total % 60;
+    if (en) return hours ? `${hours.toLocaleString(locale)} h ${mins} m` : `${mins} m`;
+    return hours ? `${hours.toLocaleString(locale)} 小时 ${mins} 分` : `${mins} 分`;
+  };
+  const summaryMetrics = [
+    [en ? "Imported flights" : "已导入航班", analytics.flights],
+    [en ? "Flight routes" : "航线数量", analytics.routes.length],
+    [en ? "Flight time" : "累计时长", formatDuration(flightStats.durationMinutes)],
+    [en ? "Flight distance" : "飞行里程", formatKm(flightStats.distanceKm)],
+  ];
+  const monthFormatter = en ? new Intl.DateTimeFormat("en-US", { month: "short", timeZone: "UTC" }) : null;
+  const monthLabels = Array.from({ length: 12 }, (_, index) => en
+    ? monthFormatter.format(new Date(Date.UTC(2020, index, 1)))
+    : `${index + 1}月`);
+  const maxAnnualFlights = Math.max(0, ...analytics.calendar.map(({ months }) => months.reduce((total, count) => total + count, 0)));
+  const calendar = analytics.calendar.map(({ year, months, destinations }) => {
+    const annualFlights = months.reduce((total, count) => total + count, 0);
+    const annualPercent = flightRankingPercent(annualFlights, maxAnnualFlights);
+    return `<div class="flight-calendar-year">
+    <h5 style="--flight-year-width:${annualPercent.toFixed(2)}%" title="${year}：${annualFlights} ${en ? "flights" : "次航班"}"><span>${year}</span><strong>${annualFlights}</strong><i aria-hidden="true"><b></b></i></h5>
+    <div class="flight-month-grid">${months.map((count, index) => {
+      const month = monthLabels[index];
+      const level = flightHeatLevel(count, analytics.maxMonthlyFlights);
+      const destinationEntries = showDestinations ? destinations[index] : [];
+      const destinationHtml = destinationEntries.length ? `<div class="flight-month-destinations">${destinationEntries.map((entry) => `<span>${escapeHtml(entry.label)}</span>`).join("")}</div>` : "";
+      return `<span class="flight-heat-${level}${destinationHtml ? " has-destinations" : ""}" title="${year} ${month}：${count} ${en ? "flights" : "次航班"}" aria-label="${year} ${month}：${count} ${en ? "flights" : "次航班"}"><strong>${count || ""}</strong>${destinationHtml}</span>`;
+    }).join("")}</div>
+  </div>`;
+  }).join("");
+  const calendarMonthHeader = analytics.calendar.length ? `<div class="flight-calendar-months" aria-hidden="true"><i></i><div>${monthLabels.map((month) => `<span>${month}</span>`).join("")}</div></div>` : "";
+  const homeOptions = analytics.cityCandidates.map((city) => `<label data-flight-home-option data-search-text="${escapeHtml(city.label.toLocaleLowerCase())}"><input type="checkbox" data-flight-home-city="${escapeHtml(city.key)}" ${homeCityKeys.includes(city.key) ? "checked" : ""} /><span>${escapeHtml(city.label)}</span><em>${city.count}</em></label>`).join("");
+  const calendarControls = `<div class="flight-calendar-controls">
+    <label class="flight-destination-toggle" title="${!homeCityKeys.length ? (en ? "Set at least one home city first" : "请先设置至少一个家") : ""}"><input type="checkbox" data-flight-show-destinations ${showDestinations ? "checked" : ""} ${homeCityKeys.length ? "" : "disabled"} /><span>${en ? "Show destinations" : "显示目的地"}</span></label>
+    <details class="flight-home-settings"><summary>${en ? "Set home" : "设置家"}${homeCityKeys.length ? ` (${homeCityKeys.length})` : ""}</summary><div class="flight-home-settings-panel"><input type="search" data-flight-home-search placeholder="${en ? "Search cities" : "搜索城市"}" aria-label="${en ? "Search home cities" : "搜索家庭城市"}" /><div class="flight-home-options">${homeOptions || `<p class="muted small">${en ? "Import flights to choose home cities." : "导入航班后即可选择家庭城市。"}</p>`}</div></div></details>
+  </div>`;
+  return `<section class="flight-analytics" aria-label="${en ? "Flight statistics" : "航班统计"}">
+    <div class="flight-summary-metrics">${summaryMetrics.map(([label, value]) => `<article><strong>${value}</strong><span>${label}</span></article>`).join("")}</div>
+    <div class="flight-rankings">
+      ${renderFlightRanking(en ? "Airport frequency" : "机场次数", analytics.airports, en)}
+      ${renderFlightRanking(en ? "Route frequency" : "航线次数", analytics.routes, en)}
+      ${renderFlightRanking(en ? "Airline frequency" : "航空公司次数", analytics.airlines, en)}
+    </div>
+    <section class="flight-calendar"><div class="flight-calendar-heading"><h4>${en ? "Flight calendar" : "飞行日历"}</h4><div class="flight-calendar-heading-tools">${analytics.maxMonthlyFlights ? `<div class="flight-heat-legend" aria-label="${en ? "Fewer to more flights" : "航班次数由少到多"}"><span>${en ? "Fewer" : "少"}</span>${[0, 1, 2, 3, 4].map((level) => `<i class="flight-heat-${level}"></i>`).join("")}<span>${en ? "More" : "多"}</span></div>` : ""}${calendarControls}</div></div>${!homeCityKeys.length && flights.length ? `<p class="flight-home-hint">${en ? "Set one or more home cities to list monthly destinations." : "设置一个或多个家，即可按月查看家以外的目的地。"}</p>` : ""}${calendarMonthHeader}${calendar || `<p class="muted small">${en ? "No dated flights" : "暂无有效日期的航班"}</p>`}${analytics.unknownDates ? `<p class="flight-unknown-dates">${en ? "Unknown date" : "日期未知"}：<strong>${analytics.unknownDates}</strong></p>` : ""}</section>
+  </section>`;
+}
+
+function renderDashboardFlightAnalytics() {
+  const target = $("#dashboardFlightAnalytics");
+  if (!target) return;
+  const en = currentLanguage === "en";
+  const flights = sortFlightsChronologically(sanitizeFlights(state.flights || []));
+  target.setAttribute("aria-label", en ? "Flight statistics" : "航班统计");
+  target.innerHTML = `
+    <div class="section-head dashboard-flight-head">
+      <div><p class="eyebrow">${en ? "Flights" : "航班"}</p><h3>${en ? "Flight statistics" : "航班统计"}</h3></div>
+    </div>
+    ${renderFlightAnalytics(flights, en)}`;
 }
 
 function renderDataInventory() {
@@ -10423,8 +10653,7 @@ function renderDataInventory() {
     .map(({ place }) => place);
   const importedPoints = imported.filter(isImportedPoint);
   const importedTracks = imported.filter(isImportedTrack);
-  const flights = sanitizeFlights(state.flights || [])
-    .sort((left, right) => (right.importedAt || right.date || "").localeCompare(left.importedAt || left.date || ""));
+  const flights = sortFlightsChronologically(sanitizeFlights(state.flights || []));
   const visited = visitedPlaces()
     .map((visit, index) => ({ visit, index }))
     .sort((left, right) => (right.visit.updatedAt || right.visit.date || "").localeCompare(left.visit.updatedAt || left.visit.date || "") || right.index - left.index)
@@ -10546,6 +10775,7 @@ function renderAchievements() {
 }
 
 function renderDashboardAchievements() {
+  renderDashboardFlightAnalytics();
   const target = $("#dashboardAchievements");
   if (!target) return;
   const achievements = coreAchievementModels();
@@ -12716,6 +12946,7 @@ function deleteFlightImportBatch(importId) {
   if (!record) return;
   state.flights = (state.flights || []).filter((flight) => flight.importId !== record.id);
   state.flightImports = (state.flightImports || []).filter((file) => file !== record);
+  pruneFlightHomeCities();
   invalidateMapCaches();
   invalidateDerivedStatsCache();
   saveState();
@@ -12735,6 +12966,8 @@ function deleteAllImportedData() {
   state.importedFiles = [];
   state.flights = [];
   state.flightImports = [];
+  state.flightHomeCities = [];
+  state.flightCalendarShowDestinations = false;
   sanitizeDataStore();
   closeMapPopupsAndDetail();
   recomputeCoverage();
@@ -12761,6 +12994,8 @@ function clearAllUserData() {
   state.importedFiles = [];
   state.flights = [];
   state.flightImports = [];
+  state.flightHomeCities = [];
+  state.flightCalendarShowDestinations = false;
   state.checklistMarks = [];
   state.openChecklistGroups = [];
   state.coverage = { countries: [], regions: {}, subregions: {}, updatedAt: new Date().toISOString() };
@@ -13363,6 +13598,7 @@ function renderAfterCheckinChange() {
 function preloadDashboardStats() {
   if (dashboardStatsPreloadPromise) return dashboardStatsPreloadPromise;
   dashboardStatsPreloadPromise = Promise.allSettled([
+    loadAirportData(),
     loadChina5aCatalog(),
     loadUsNpsCatalog(),
     loadCatalogData(),
@@ -13672,6 +13908,33 @@ $("#exportArchive").addEventListener("click", exportArchive);
 $("#archiveFile").addEventListener("change", importArchiveFile);
 $("#clearAllData")?.addEventListener("click", () => {
   if (window.confirm("确认清空所有点亮、导入、手动行政区和打卡勾选？")) clearAllUserData();
+});
+$("#dashboard")?.addEventListener("change", (event) => {
+  if (event.target.matches("[data-flight-show-destinations]")) {
+    state.flightCalendarShowDestinations = Boolean(event.target.checked && state.flightHomeCities?.length);
+    saveStateSoon({ invalidateMapData: false });
+    renderDashboardFlightAnalytics();
+    return;
+  }
+  if (event.target.matches("[data-flight-home-city]")) {
+    const selected = new Set(Array.isArray(state.flightHomeCities) ? state.flightHomeCities : []);
+    const key = event.target.dataset.flightHomeCity;
+    if (event.target.checked) selected.add(key);
+    else selected.delete(key);
+    state.flightHomeCities = [...selected];
+    if (!state.flightHomeCities.length) state.flightCalendarShowDestinations = false;
+    saveStateSoon({ invalidateMapData: false });
+    renderDashboardFlightAnalytics();
+    const settings = $("#dashboardFlightAnalytics .flight-home-settings");
+    if (settings) settings.open = true;
+  }
+});
+$("#dashboard")?.addEventListener("input", (event) => {
+  if (!event.target.matches("[data-flight-home-search]")) return;
+  const query = String(event.target.value || "").trim().toLocaleLowerCase();
+  $("#dashboardFlightAnalytics")?.querySelectorAll("[data-flight-home-option]").forEach((option) => {
+    option.hidden = Boolean(query && !String(option.dataset.searchText || "").includes(query));
+  });
 });
 $("#importSummary").addEventListener("click", (event) => {
   if (event.target.closest("[data-clear-checkins]")) {

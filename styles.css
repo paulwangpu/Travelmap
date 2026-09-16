@@ -998,7 +998,7 @@ button:hover {
 }
 
 .dashboard-achievements {
-  margin-bottom: 16px;
+  margin-bottom: 0;
 }
 
 .dashboard-achievement-head {
@@ -1399,6 +1399,549 @@ button:hover {
   font-style: normal;
   font-size: 12px;
   text-align: center;
+}
+
+.flight-analytics {
+  display: grid;
+  gap: 12px;
+  padding: 12px;
+  border-top: 1px solid var(--line);
+  background: #fbfdfc;
+}
+
+.flight-analytics-overview {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.flight-summary-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.flight-summary-metrics > article {
+  display: grid;
+  gap: 7px;
+  align-content: space-between;
+  min-width: 0;
+  min-height: 82px;
+  padding: 14px;
+  border: 1px solid rgba(23, 107, 75, 0.14);
+  border-radius: 10px;
+  background: linear-gradient(145deg, #ffffff 0%, #f2f8f4 100%);
+}
+
+.flight-summary-metrics strong {
+  color: var(--deep);
+  font-size: 25px;
+  line-height: 1.05;
+  overflow-wrap: anywhere;
+  font-variant-numeric: tabular-nums;
+}
+
+.flight-summary-metrics span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.flight-analytics-overview > span {
+  position: relative;
+  display: grid;
+  gap: 7px;
+  align-content: space-between;
+  min-width: 0;
+  min-height: 78px;
+  padding: 11px 12px;
+  overflow: hidden;
+  border: 1px solid rgba(23, 107, 75, 0.15);
+  border-radius: 10px;
+  background: linear-gradient(145deg, #ffffff 0%, #edf7f1 100%);
+  box-shadow: 0 3px 10px rgba(17, 54, 40, 0.05);
+}
+
+.flight-analytics-overview > span::after {
+  position: absolute;
+  right: -20px;
+  bottom: -24px;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: rgba(23, 107, 75, 0.07);
+  content: "";
+}
+
+.flight-analytics-overview strong {
+  position: relative;
+  z-index: 1;
+  color: var(--deep);
+  font-size: 26px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.flight-analytics-overview em,
+.flight-month-grid em {
+  color: var(--muted);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.flight-analytics-overview em {
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.02em;
+}
+
+.flight-rankings {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  align-items: stretch;
+}
+
+.flight-ranking-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.flight-ranking-card h5,
+.flight-calendar h4,
+.flight-calendar-year h5 {
+  margin: 0 0 8px;
+  color: var(--deep);
+}
+
+.flight-ranking-list {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding-left: 26px;
+}
+
+.flight-ranking-list li {
+  min-width: 0;
+  padding-left: 3px;
+  color: var(--muted);
+}
+
+.flight-ranking-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 0;
+}
+
+.flight-ranking-row > span {
+  min-width: 0;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.flight-ranking-row > strong {
+  flex: 0 0 auto;
+  min-width: 36px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #dceee5;
+  color: var(--deep);
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.flight-ranking-bar {
+  display: block;
+  width: 100%;
+  height: 5px;
+  margin-top: 4px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #edf3f0;
+  font-style: normal;
+}
+
+.flight-ranking-bar > b {
+  display: block;
+  width: var(--flight-ranking-width, 0%);
+  min-width: 4px;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #82bd9e 0%, #176b4b 100%);
+}
+
+.flight-ranking-more {
+  margin-top: auto;
+  padding-top: 7px;
+}
+
+.flight-ranking-more > summary {
+  display: inline-flex;
+  padding: 4px 0;
+  color: var(--accent);
+  background: transparent;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.flight-ranking-more[open] > summary .when-closed,
+.flight-ranking-more:not([open]) > summary .when-open {
+  display: none;
+}
+
+.flight-ranking-more .flight-ranking-list {
+  margin-top: 5px;
+}
+
+.flight-calendar {
+  position: relative;
+  display: grid;
+  gap: 5px;
+}
+
+.flight-calendar-heading {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.flight-calendar-heading-tools,
+.flight-calendar-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flight-destination-toggle,
+.flight-home-settings > summary {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--deep);
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.flight-destination-toggle {
+  grid-template-columns: auto 1fr;
+}
+
+.flight-destination-toggle input {
+  margin: 0;
+}
+
+.flight-destination-toggle:has(input:disabled) {
+  color: var(--muted);
+  background: #f2f5f3;
+  cursor: not-allowed;
+}
+
+.flight-home-settings {
+  position: relative;
+}
+
+.flight-home-settings > summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.flight-home-settings > summary::-webkit-details-marker {
+  display: none;
+}
+
+.flight-home-settings-panel {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 6px);
+  right: 0;
+  width: min(320px, calc(100vw - 40px));
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(17, 54, 40, 0.16);
+}
+
+.flight-home-settings-panel > input {
+  width: 100%;
+  min-height: 34px;
+  padding: 7px 9px;
+}
+
+.flight-home-options {
+  display: grid;
+  gap: 3px;
+  max-height: 260px;
+  margin-top: 8px;
+  overflow: auto;
+}
+
+.flight-home-options label {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 7px;
+  align-items: center;
+  min-height: 32px;
+  padding: 5px 7px;
+  border-radius: 7px;
+  color: var(--ink);
+  font-size: 12px;
+}
+
+.flight-home-options label:hover {
+  background: #eef6f1;
+}
+
+.flight-home-options label[hidden] {
+  display: none;
+}
+
+.flight-home-options input {
+  margin: 0;
+}
+
+.flight-home-options em {
+  color: var(--muted);
+  font-size: 10px;
+  font-style: normal;
+}
+
+.flight-home-hint {
+  margin: 0;
+  padding: 7px 9px;
+  border-radius: 7px;
+  background: #f2f7f4;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.flight-calendar > .flight-calendar-heading {
+  margin-bottom: 0;
+}
+
+.flight-heat-legend {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.flight-heat-legend i {
+  width: 12px;
+  height: 12px;
+  border: 1px solid rgba(17, 54, 40, 0.08);
+  border-radius: 3px;
+}
+
+.flight-calendar-year h5 {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.flight-calendar-year {
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr);
+  gap: 6px;
+  align-items: stretch;
+  min-width: 0;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.flight-calendar-months {
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr);
+  gap: 6px;
+  padding: 0 4px;
+}
+
+.flight-calendar-months > div {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 3px;
+}
+
+.flight-calendar-months span {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.flight-calendar-year > h5 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
+  align-content: center;
+  justify-items: center;
+  padding: 5px;
+  border-radius: 6px;
+  background: #edf5f1;
+  color: var(--deep);
+}
+
+.flight-calendar-year > h5 > span {
+  min-width: 0;
+}
+
+.flight-calendar-year > h5 > strong {
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.flight-calendar-year > h5 > i {
+  width: 100%;
+  height: 4px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(23, 107, 75, 0.12);
+}
+
+.flight-calendar-year > h5 > i > b {
+  display: block;
+  width: var(--flight-year-width, 0%);
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #82bd9e 0%, #176b4b 100%);
+}
+
+.flight-month-grid > span.has-destinations {
+  align-content: start;
+  gap: 5px;
+  padding: 5px 4px;
+}
+
+.flight-month-destinations {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.flight-month-destinations span {
+  display: inline-flex;
+  gap: 3px;
+  align-items: baseline;
+  min-width: 0;
+  padding: 3px 5px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #174b37;
+  font-size: 11px;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.flight-heat-3 .flight-month-destinations span,
+.flight-heat-4 .flight-month-destinations span {
+  background: rgba(255, 255, 255, 0.88);
+  color: #123e2d;
+}
+
+.flight-month-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 3px;
+}
+
+.flight-month-grid > span {
+  display: grid;
+  gap: 2px;
+  align-content: center;
+  min-width: 0;
+  min-height: 28px;
+  padding: 3px 2px;
+  border: 1px solid rgba(17, 54, 40, 0.06);
+  border-radius: 6px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.flight-heat-0 {
+  background: #f2f5f3;
+}
+
+.flight-heat-1 {
+  background: #dceee5;
+  color: var(--deep);
+}
+
+.flight-heat-2 {
+  background: #a9d3bc;
+  color: #123e2d;
+}
+
+.flight-heat-3 {
+  background: #559a75;
+  color: #ffffff;
+  box-shadow: inset 0 0 0 1px rgba(17, 54, 40, 0.08);
+}
+
+.flight-heat-4 {
+  background: #176b4b;
+  color: #ffffff;
+  box-shadow: inset 0 0 0 1px rgba(17, 54, 40, 0.12);
+}
+
+.flight-month-grid > .flight-heat-3 em,
+.flight-month-grid > .flight-heat-4 em {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.flight-month-grid strong {
+  font-size: 12px;
+}
+
+.dashboard-flight-panel {
+  display: grid;
+  gap: 10px;
+}
+
+.dashboard-flight-head h3,
+.dashboard-flight-head p {
+  margin-bottom: 0;
+}
+
+.dashboard-flight-panel > .flight-analytics {
+  padding: 0;
+  border-top: 0;
+  background: transparent;
+}
+
+.flight-unknown-dates {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
 }
 
 .data-table-block table {
@@ -3072,6 +3615,92 @@ button:hover {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .flight-analytics-overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .flight-summary-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .flight-summary-metrics > article {
+    min-height: 70px;
+    padding: 10px;
+  }
+
+  .flight-summary-metrics strong {
+    font-size: 21px;
+  }
+
+  .flight-analytics-overview > span {
+    min-height: 70px;
+    padding: 9px 10px;
+  }
+
+  .flight-rankings {
+    grid-template-columns: 1fr;
+  }
+
+  .flight-month-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .flight-month-grid > span {
+    min-height: 26px;
+  }
+
+  .flight-calendar-year {
+    grid-template-columns: 68px minmax(0, 1fr);
+    gap: 4px;
+    padding: 3px;
+  }
+
+  .flight-calendar-year h5 {
+    padding: 4px 3px;
+    font-size: 11px;
+  }
+
+  .flight-calendar-year > h5 > strong {
+    font-size: 10px;
+  }
+
+  .flight-calendar-months {
+    grid-template-columns: 68px minmax(0, 1fr);
+    gap: 4px;
+    padding: 0 3px;
+  }
+
+  .flight-calendar-months > div {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .flight-calendar-heading {
+    align-items: flex-start;
+  }
+
+  .flight-calendar-heading-tools {
+    justify-content: flex-end;
+  }
+
+  .flight-month-grid > span.has-destinations {
+    padding-inline: 3px;
+  }
+
+  .flight-month-destinations span {
+    padding-inline: 3px;
+    font-size: 10px;
+  }
+
+  .flight-home-settings-panel {
+    position: fixed;
+    top: auto;
+    right: 10px;
+    bottom: calc(74px + env(safe-area-inset-bottom));
+    left: 10px;
+    width: auto;
+  }
+
   .sidebar {
     max-height: none;
   }
@@ -3432,8 +4061,82 @@ button:hover {
 }
 
 .compact-metrics {
-  padding: 14px 20px;
+  padding: 0;
   grid-template-columns: repeat(6, minmax(120px, 1fr));
+}
+
+#dashboard.content-page.active {
+  display: grid !important;
+  align-content: start;
+  gap: 16px;
+}
+
+#dashboard > .page-head {
+  margin-bottom: 0;
+}
+
+#dashboard .compact-metrics,
+#dashboard .compact-metrics .metric-row {
+  gap: 12px;
+}
+
+#dashboard .metric,
+#dashboard > .panel,
+#dashboard .dashboard-achievements {
+  border-color: rgba(23, 107, 75, 0.14);
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(17, 54, 40, 0.045);
+}
+
+#dashboard .metric {
+  min-width: 0;
+  background: linear-gradient(145deg, #ffffff 0%, #f7faf8 100%);
+}
+
+#dashboard .metric strong {
+  color: var(--deep);
+  font-variant-numeric: tabular-nums;
+}
+
+#dashboard .dashboard-achievements {
+  padding: 20px;
+  border: 1px solid rgba(23, 107, 75, 0.14);
+  background: #ffffff;
+}
+
+#dashboard .dashboard-achievement-head,
+#dashboard .dashboard-flight-head {
+  margin-bottom: 2px;
+}
+
+#dashboard .achievement-card-grid {
+  align-items: stretch;
+}
+
+#dashboard .achievement {
+  height: 100%;
+  border-color: rgba(23, 107, 75, 0.12);
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+#dashboard .dashboard-flight-panel {
+  gap: 12px;
+}
+
+#dashboard .flight-analytics {
+  gap: 10px;
+}
+
+#dashboard .flight-analytics-overview > span,
+#dashboard .flight-ranking-card,
+#dashboard .flight-calendar-year {
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+#dashboard > .panel:last-child .next-list {
+  margin-top: 2px;
 }
 
 .compact-metrics .metric-row {
@@ -3866,6 +4569,10 @@ button:hover {
     padding: 0;
   }
 
+  #dashboard .dashboard-flight-panel {
+    margin-inline: 0;
+  }
+
   #dashboard .compact-metrics .metric-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
@@ -3896,6 +4603,8 @@ button:hover {
     display: grid;
     gap: 8px;
     margin-bottom: 0;
+    padding: 12px;
+    border-radius: 8px;
   }
 
   #dashboard .dashboard-achievement-head {
