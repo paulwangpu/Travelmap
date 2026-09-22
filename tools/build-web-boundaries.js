@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const https = require("https");
 const { execFileSync } = require("child_process");
+const { rebuildSharedBoundaries } = require("./shared-boundary-topology");
 
 const root = path.resolve(__dirname, "..");
 const dataDir = path.join(root, "data");
@@ -806,6 +807,13 @@ async function main() {
       };
     }
   }
+
+  const sharedBoundaryCounts = rebuildSharedBoundaries(root);
+  index.countries.cn.province.count = sharedBoundaryCounts.cnProvinceCount;
+  index.countries.cn.province.source = "city-topology-dissolve";
+  index.countries.us.province.count = sharedBoundaryCounts.usProvinceCount;
+  index.countries.us.province.source = "city-topology-dissolve";
+  index.layers.country.source = "province-topology-dissolve-for-cn-us";
 
   writeJson(path.join(outDir, "index.json"), index);
   console.log(`Built ${Object.keys(index.countries).length} country boundary entries`);
