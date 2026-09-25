@@ -1,5 +1,5 @@
-const cacheName = "travel-map-v491";
-const shellFiles = ["./", "./index.html", "./styles.css?v=114", "./app.js?v=491"];
+const cacheName = "travel-map-v492";
+const shellFiles = ["./", "./index.html", "./styles.css?v=114", "./app.js?v=492"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(cacheName).then((cache) => cache.addAll(shellFiles)));

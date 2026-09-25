@@ -125,6 +125,7 @@ let pendingManualNavSpy = null;
 let pendingChecklistNavSpy = null;
 let restoringMapViewport = false;
 let checklistStatusCache = { signature: "", marked: new Set(), visited: new Set() };
+let checklistStatusCacheReusable = false;
 let checklistOverlayCache = { signature: "", items: [], keySet: new Set() };
 let unifiedParkHeritageIndex = { signature: "", byEntity: new Map(), byEntry: new Map() };
 let unifiedParkHeritageDoneCache = { signature: "", values: new Map() };
@@ -5056,6 +5057,10 @@ function checklistMarkKeys() {
 }
 
 function checklistStatusKeys() {
+  // Checklist rendering asks for this status hundreds of times in one pass.
+  // Mutations explicitly clear the signature, so reuse the prepared sets until
+  // the next mutation instead of rebuilding and sorting every visit/place list.
+  if (checklistStatusCache.signature && checklistStatusCacheReusable) return checklistStatusCache;
   const signature = [
     (state.visits || []).map((visit) => `${visit.placeId}:${visit.depth || 0}`).sort().join("|"),
     (state.checklistMarks || []).slice().sort().join("|"),
@@ -5068,6 +5073,10 @@ function checklistStatusKeys() {
       visited: visitedChecklistKeys(),
     };
   }
+  checklistStatusCacheReusable = true;
+  queueMicrotask(() => {
+    checklistStatusCacheReusable = false;
+  });
   return checklistStatusCache;
 }
 
@@ -11890,6 +11899,7 @@ async function toggleChecklistItem(key, item, group = "") {
   ].filter(Boolean));
   const marks = new Set(state.checklistMarks || []);
   const wasDone = isChecklistItemDone(key, item, group);
+  let changedPlace = null;
   if (wasDone) {
     Array.from(marks).forEach((mark) => {
       const markRawKey = mark.split(":").slice(1).join(":");
@@ -11920,15 +11930,17 @@ async function toggleChecklistItem(key, item, group = "") {
   } else {
     marks.add(id);
     const place = ensureChecklistPlace(key, item, group);
+    changedPlace = place;
     if (Number.isFinite(place?.lng) && Number.isFinite(place?.lat)) {
-      if (!canUseChecklistCatalogGeography(key, item)) await ensureBoundaryLayersForPoint(place.country, place.lng, place.lat);
+      if (!canUseChecklistCatalogGeography(key, item, group)) await ensureBoundaryLayersForPoint(place.country, place.lng, place.lat);
       applyChecklistGeography(place, key, checklistCoordinateFor(item, group));
     }
   }
   state.checklistMarks = Array.from(marks);
   checklistStatusCache.signature = "";
   unifiedParkHeritageDoneCache = { signature: "", values: new Map() };
-  rebuildCoverageFromSavedVisits();
+  if (wasDone) rebuildCoverageFromSavedVisits();
+  else if (changedPlace) addCoverageForPlace(changedPlace);
   invalidateCoverageMapGeoJsonCache();
   saveStateSoon();
   renderAfterChecklistChange(key, item, group, wasDone);
@@ -12275,9 +12287,13 @@ function applyChecklistGeography(place, key, coords) {
   if (subregion?.name) place.subunit = subregion.name;
 }
 
-function canUseChecklistCatalogGeography(key, item) {
+function canUseChecklistCatalogGeography(key, item, group = "") {
   if (key === "usNationalParks") return usNpsUnitById.has(String(item || ""));
   if (key === "worldHeritage") return Boolean(checklistCoordinateFor(item));
+  if (key === "china5a") {
+    const coords = checklistCoordinateFor(item, group);
+    return Boolean(coords?.[2] && (!group || sameAdminName(group, coords[2])));
+  }
   if (key !== "chinaAncientCapitals") return false;
   const meta = typeof item === "object" ? item : chinaAncientCapitalMeta[canonicalPlaceKey(item)];
   return Boolean(parseChinaAdminText(meta?.admin).province);
