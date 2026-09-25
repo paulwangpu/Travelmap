@@ -1,12 +1,26 @@
 const fs = require("fs");
 const path = require("path");
+const polygonClipping = require("polygon-clipping");
 
 function readJson(file) {
   return JSON.parse(fs.readFileSync(file, "utf8"));
 }
 
 function writeJson(file, value) {
-  fs.writeFileSync(file, `${JSON.stringify(value)}\n`, "utf8");
+  const temporary = `${file}.${process.pid}.tmp`;
+  fs.writeFileSync(temporary, `${JSON.stringify(value)}\n`, "utf8");
+  let lastError;
+  for (let attempt = 0; attempt < 5; attempt += 1) {
+    try {
+      fs.renameSync(temporary, file);
+      return;
+    } catch (error) {
+      lastError = error;
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 40 * (attempt + 1));
+    }
+  }
+  if (fs.existsSync(temporary)) fs.unlinkSync(temporary);
+  throw lastError;
 }
 
 function polygons(geometry) {
@@ -14,6 +28,28 @@ function polygons(geometry) {
   if (geometry.type === "Polygon") return [geometry.coordinates];
   if (geometry.type === "MultiPolygon") return geometry.coordinates || [];
   return [];
+}
+
+function geometryFromMultiPolygon(coordinates) {
+  if (!Array.isArray(coordinates) || !coordinates.length) return null;
+  return coordinates.length === 1
+    ? { type: "Polygon", coordinates: coordinates[0] }
+    : { type: "MultiPolygon", coordinates };
+}
+
+function polygonCenter(polygon) {
+  const ring = polygon?.[0] || [];
+  if (!ring.length) return [0, 0];
+  const xs = ring.map((point) => point[0]);
+  const ys = ring.map((point) => point[1]);
+  return [(Math.min(...xs) + Math.max(...xs)) / 2, (Math.min(...ys) + Math.max(...ys)) / 2];
+}
+
+function distanceToBbox(point, bbox) {
+  if (!bbox) return Number.POSITIVE_INFINITY;
+  const dx = point[0] < bbox[0] ? bbox[0] - point[0] : point[0] > bbox[2] ? point[0] - bbox[2] : 0;
+  const dy = point[1] < bbox[1] ? bbox[1] - point[1] : point[1] > bbox[3] ? point[1] - bbox[3] : 0;
+  return dx * dx + dy * dy;
 }
 
 function pointKey(point) {
@@ -236,14 +272,125 @@ function replaceCountryGeometry(world, countryCode, provinceFeatures) {
   feature.properties.grouped_from = "province";
 }
 
+function preserveProvinceTopology(collection, countryId) {
+  return {
+    type: "FeatureCollection",
+    features: (collection.features || []).map((feature) => ({
+      ...feature,
+      properties: {
+        ...(feature.properties || {}),
+        countryId,
+        source_layer: "province",
+        topology_source: "province",
+        bbox: bboxForGeometry(feature.geometry),
+      },
+    })),
+  };
+}
+
+function chinaCityProvinceKeys(root, cityCount) {
+  const data = path.join(root, "data");
+  const files = [
+    path.join(data, "china-prefectures.geojson"),
+    path.join(data, "china-direct-admin.geojson"),
+    path.join(data, "admin1-by-country", "tw.geojson"),
+  ];
+  const raw = files.flatMap((file) => (fs.existsSync(file) ? readJson(file).features || [] : []));
+  if (raw.length !== cityCount) throw new Error(`China city hierarchy mismatch: ${raw.length}/${cityCount}`);
+  const taiwanStart = raw.length - (readJson(files[2]).features || []).length;
+  return raw.map((feature, index) => String(provinceCode(feature.properties || {}) || (index >= taiwanStart ? 710000 : "")));
+}
+
+function alignCitiesToProvinces(cityCollection, provinceCollection, cityGroupKeys, provinceGroupKey, fillResidual = true) {
+  const provinceByKey = new Map(provinceCollection.features.map((feature) => [String(provinceGroupKey(feature)), feature]));
+  const groupedIndexes = new Map();
+  cityCollection.features.forEach((feature, index) => {
+    const key = String(cityGroupKeys[index] || "");
+    if (!key || !provinceByKey.has(key)) return;
+    if (!groupedIndexes.has(key)) groupedIndexes.set(key, []);
+    groupedIndexes.get(key).push(index);
+  });
+
+  groupedIndexes.forEach((indexes, key) => {
+    const province = provinceByKey.get(key);
+    const provincePolygon = polygons(province.geometry);
+    const clipped = [];
+    indexes.forEach((index) => {
+      const city = cityCollection.features[index];
+      let coordinates;
+      try {
+        coordinates = polygonClipping.intersection(polygons(city.geometry), provincePolygon);
+      } catch (error) {
+        return;
+      }
+      if (!coordinates.length) return;
+      city.geometry = geometryFromMultiPolygon(coordinates);
+      city.properties = { ...city.properties, topology_source: "province-clip", bbox: bboxForGeometry(city.geometry) };
+      clipped.push(index);
+    });
+    if (!clipped.length) return;
+
+    if (!fillResidual) return;
+    const covered = polygonClipping.union(...clipped.map((index) => polygons(cityCollection.features[index].geometry)));
+    let residual = [];
+    try {
+      residual = polygonClipping.difference(provincePolygon, covered);
+    } catch (error) {
+      // Dateline geometries (notably Alaska) can contain nearly identical
+      // floating-point endpoints. Their cities are still clipped safely; only
+      // optional microscopic-gap assignment is skipped for that group.
+      residual = [];
+    }
+    residual.forEach((gapPolygon) => {
+      const center = polygonCenter(gapPolygon);
+      const owner = clipped.reduce((best, index) => {
+        const distance = distanceToBbox(center, cityCollection.features[index].properties?.bbox);
+        return !best || distance < best.distance ? { index, distance } : best;
+      }, null)?.index;
+      if (owner === undefined) return;
+      const city = cityCollection.features[owner];
+      city.geometry = geometryFromMultiPolygon(polygonClipping.union(polygons(city.geometry), [gapPolygon]));
+      city.properties.bbox = bboxForGeometry(city.geometry);
+    });
+  });
+  return cityCollection;
+}
+
 function rebuildSharedBoundaries(root) {
   const boundaryRoot = path.join(root, "data", "boundaries");
-  const cnCity = readJson(path.join(boundaryRoot, "city", "cn.geojson"));
-  const usCity = readJson(path.join(boundaryRoot, "city", "us.geojson"));
   const oldCnProvince = readJson(path.join(boundaryRoot, "province", "cn.geojson"));
   const oldUsProvince = readJson(path.join(boundaryRoot, "province", "us.geojson"));
-  const cnProvince = { type: "FeatureCollection", features: rebuildChina(root, cnCity, oldCnProvince) };
-  const usProvince = { type: "FeatureCollection", features: rebuildUs(usCity, oldUsProvince) };
+  // Province/state sources already share their internal borders. City sources do
+  // not: their cross-province edges were simplified independently and create
+  // visible slivers when dissolved upward. Keep the coherent province topology,
+  // then derive the country outline from exactly those province vertices.
+  const cnProvince = preserveProvinceTopology(oldCnProvince, "cn");
+  const usProvince = preserveProvinceTopology(oldUsProvince, "us");
+  const chinaProvinceCodeByName = new Map(
+    (readJson(path.join(root, "data", "china-provinces.geojson")).features || [])
+      .map((feature) => [String(feature.properties?.name || ""), String(feature.properties?.adcode || "")]),
+  );
+  chinaProvinceCodeByName.set("台湾省", "710000");
+  chinaProvinceCodeByName.set("台湾", "710000");
+  const cnCityFile = path.join(boundaryRoot, "city", "cn.geojson");
+  const usCityFile = path.join(boundaryRoot, "city", "us.geojson");
+  const cnCity = alignCitiesToProvinces(
+    readJson(cnCityFile),
+    cnProvince,
+    chinaCityProvinceKeys(root, readJson(cnCityFile).features.length),
+    (feature) => chinaProvinceCodeByName.get(String(feature.properties?.name || "")) || "",
+    false,
+  );
+  const usCitySource = readJson(usCityFile);
+  const usCity = alignCitiesToProvinces(
+    usCitySource,
+    usProvince,
+    usCitySource.features.map((feature) => feature.properties?.statefp),
+    (feature) => Object.entries(usStateNameByFips).find(([, name]) => name === feature.properties?.name)?.[0] || "",
+    false,
+  );
+  writeJson(cnCityFile, cnCity);
+  writeJson(usCityFile, usCity);
   writeJson(path.join(boundaryRoot, "province", "cn.geojson"), cnProvince);
   writeJson(path.join(boundaryRoot, "province", "us.geojson"), usProvince);
 

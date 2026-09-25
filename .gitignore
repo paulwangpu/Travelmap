@@ -2,3 +2,4 @@
 .codex/
 travel-map-backup-*.json
 data/sources/
+node_modules/

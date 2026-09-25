@@ -21,7 +21,7 @@ const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
 const worldHeritageCatalogTotal = 1248;
 const usNpsUnitTotal = 433;
-const dataCacheVersion = "20260922-shared-boundaries";
+const dataCacheVersion = "20260924-great-wall-coordinate-fix";
 let importGuideUserToggled = false;
 let syncingImportGuideOpenState = false;
 const fixedChecklistTotals = {
@@ -94,6 +94,9 @@ let worldHeritageEnglishNames = {};
 let worldHeritageCountryIds = {};
 let worldHeritageParentKeys = {};
 let worldHeritageParentNames = {};
+const worldHeritageCoordinateOverrides = {
+  "北京皇家园林-颐和园": [39.9999, 116.2755, "中国"],
+};
 let boundaryData = { country: null, china: null, us: null, japan: null, admin1: null, china2: null, chinaDirect: null, tw2: null, us2: null, ru2: null };
 let boundaryLoading = { country: false, china: false, us: false, japan: false, admin1: false, china2: false, chinaDirect: false, tw2: false, us2: false, ru2: false };
 let boundaryPromises = {};
@@ -3548,7 +3551,7 @@ const chinaHighAltitudeCoordinates = {
 };
 
 const checklistPlaceCoordinates = {
-  故宫: [39.9163, 116.3972, "北京"], "八达岭-慕田峪长城": [40.4319, 116.5704, "北京"], 颐和园: [39.9999, 116.2755, "北京"], 天坛: [39.8822, 116.4066, "北京"], 恭王府: [39.9366, 116.3868, "北京"], 圆明园: [40.0086, 116.2983, "北京"], 明十三陵: [40.2552, 116.2273, "北京"],
+  故宫: [39.9163, 116.3972, "北京"], "八达岭-慕田峪长城": [40.354244, 116.006841, "北京"], 颐和园: [39.9999, 116.2755, "北京"], 天坛: [39.8822, 116.4066, "北京"], 恭王府: [39.9366, 116.3868, "北京"], 圆明园: [40.0086, 116.2983, "北京"], 明十三陵: [40.2552, 116.2273, "北京"],
   "秦始皇帝陵博物院": [34.3844, 109.2783, "陕西"], 华山: [34.4833, 110.0833, "陕西"], 恒山: [39.6739, 113.7336, "山西"], "大雁塔-大唐芙蓉园": [34.218, 108.964, "陕西"], 黄帝陵: [35.5856, 109.2608, "陕西"], 法门寺: [34.4377, 107.8971, "陕西"],
   泰山: [36.255, 117.106, "山东"], 曲阜三孔: [35.5966, 116.9865, "山东"], 崂山: [36.19, 120.59, "山东"], 蓬莱阁: [37.8267, 120.7586, "山东"], 刘公岛: [37.501, 122.188, "山东"],
   黄山: [30.1302, 118.1689, "安徽"], 九华山: [30.478, 117.807, "安徽"], 天柱山: [30.733, 116.45, "安徽"], 皖南古村落: [29.904, 117.987, "安徽"],
@@ -4927,7 +4930,7 @@ const checklistCanonicalPlaces = [
   { id: "cn-lijiang-old-town", aliases: ["丽江古城", "丽江古城景区", "Old Town of Lijiang"] },
   { id: "cn-pingyao", aliases: ["平遥古城", "平遥古城景区"] },
   { id: "cn-suzhou-gardens", aliases: ["苏州古典园林", "苏州市园林", "Classical Gardens of Suzhou"] },
-  { id: "cn-summer-palace", aliases: ["颐和园", "颐和园景区"] },
+  { id: "cn-summer-palace", aliases: ["颐和园", "颐和园景区", "北京皇家园林-颐和园", "Summer Palace, an Imperial Garden in Beijing"] },
   { id: "cn-temple-of-heaven", aliases: ["天坛", "天坛公园"] },
   { id: "cn-dazu-rock-carvings", aliases: ["大足石刻", "大足石刻景区"] },
   { id: "cn-wuyishan", aliases: ["武夷山", "武夷山景区", "武夷山 · 黄岗山 · 2160m"] },
@@ -6361,6 +6364,10 @@ function loadCatalogData() {
       Object.entries(data.countryIds || {}).forEach(([country, id]) => {
         const normalizedCountry = normalizeWorldHeritageCountryName(country);
         if (normalizedCountry && id) countryIds[normalizedCountry] = String(id).toLowerCase();
+      });
+      Object.entries(worldHeritageCoordinateOverrides).forEach(([name, coordinate]) => {
+        const normalizedName = normalizeWorldHeritageItemName(name, nameAliases);
+        if (normalizedName) coordinates[normalizedName] = coordinate.slice();
       });
       Object.keys(byCountry).forEach((country) => {
         byCountry[country] = Array.from(new Set(byCountry[country])).sort((a, b) => a.localeCompare(b, "zh-Hans-CN"));
@@ -9091,6 +9098,7 @@ function addMapLibreFillLayer(sourceId, fillId, lineId, opacity, lineWidth, geom
     source: sourceId,
     ...(geometryFilter ? { filter: polygonFilter } : {}),
     paint: {
+      "fill-antialias": false,
       "fill-color": paintColor,
       "fill-opacity": paintOpacity,
     },

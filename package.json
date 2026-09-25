@@ -1,0 +1,8 @@
+{
+  "name": "travel-map",
+  "private": true,
+  "version": "2.0.5",
+  "devDependencies": {
+    "polygon-clipping": "0.15.7"
+  }
+}

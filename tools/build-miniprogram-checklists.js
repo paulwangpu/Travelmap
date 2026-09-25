@@ -12,6 +12,9 @@ const worldHeritageNameAliases = {
   "梅萨维德印第安遗址": "梅萨维德国家公园",
   "红杉国家公园": "红木国家和州立公园"
 };
+const worldHeritageCoordinateOverrides = {
+  "whc-880": [39.9999, 116.2755]
+};
 
 function extractStringArray(source, marker) {
   const markerIndex = source.indexOf(marker);
@@ -56,13 +59,16 @@ const china5a = Object.entries(china5aSource.byRegion).flatMap(([region, names])
   })
 );
 
-const worldHeritage = heritageSource.items.map((item) => ({
-  id: item.id,
-  name: worldHeritageNameAliases[item.zhName || item.name || item.enName] || item.zhName || item.name || item.enName,
-  area: Array.isArray(item.countries) ? item.countries.join("、") : "",
-  latitude: item.lat,
-  longitude: item.lng
-}));
+const worldHeritage = heritageSource.items.map((item) => {
+  const coordinate = worldHeritageCoordinateOverrides[item.id] || [item.lat, item.lng];
+  return {
+    id: item.id,
+    name: worldHeritageNameAliases[item.zhName || item.name || item.enName] || item.zhName || item.name || item.enName,
+    area: Array.isArray(item.countries) ? item.countries.join("、") : "",
+    latitude: coordinate[0],
+    longitude: coordinate[1]
+  };
+});
 const referenceLists = [
   ...["黄山", "庐山", "雁荡山"].map((name, index) => ({ id: `three-${index}`, name, area: "三山" })),
   ...["泰山", "华山", "衡山", "恒山", "嵩山"].map((name, index) => ({ id: `five-${index}`, name, area: "五岳" })),

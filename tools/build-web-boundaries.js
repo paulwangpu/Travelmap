@@ -810,9 +810,9 @@ async function main() {
 
   const sharedBoundaryCounts = rebuildSharedBoundaries(root);
   index.countries.cn.province.count = sharedBoundaryCounts.cnProvinceCount;
-  index.countries.cn.province.source = "city-topology-dissolve";
+  index.countries.cn.province.source = "province-shared-topology";
   index.countries.us.province.count = sharedBoundaryCounts.usProvinceCount;
-  index.countries.us.province.source = "city-topology-dissolve";
+  index.countries.us.province.source = "province-shared-topology";
   index.layers.country.source = "province-topology-dissolve-for-cn-us";
 
   writeJson(path.join(outDir, "index.json"), index);
