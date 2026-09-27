@@ -779,6 +779,65 @@ button:hover {
   font-size: 12px;
 }
 
+.population-density-legend {
+  position: absolute;
+  z-index: 5;
+  left: 12px;
+  bottom: 12px;
+  width: min(260px, calc(100% - 90px));
+  padding: 8px 10px;
+  border: 1px solid rgba(18, 54, 45, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 8px 20px rgba(24, 32, 28, 0.15);
+  color: #12362d;
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+  transition: bottom 160ms ease;
+}
+
+@media (min-width: 681px) {
+  .loading-debug:not([hidden]) ~ .population-density-legend {
+    bottom: 122px;
+  }
+}
+
+.population-density-legend[hidden] {
+  display: none;
+}
+
+.population-density-legend strong,
+.population-density-legend small {
+  display: block;
+}
+
+.population-density-legend strong {
+  margin-bottom: 5px;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.population-density-legend small {
+  margin-top: 3px;
+  color: #53655f;
+  font-size: 9px;
+}
+
+.population-density-scale {
+  height: 7px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #fff7bc, #fec44f, #fe9929, #ec7014, #cc4c02, #993404, #7a0177, #2c7fb8, #00a6ca);
+}
+
+.population-density-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2px;
+  color: #53655f;
+  font-size: 8px;
+  font-variant-numeric: tabular-nums;
+}
+
 .swatch {
   width: 14px;
   height: 14px;

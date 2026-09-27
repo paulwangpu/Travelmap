@@ -3,3 +3,7 @@
 travel-map-backup-*.json
 data/sources/
 node_modules/
+tmp/
+*.tif
+*.tiff
+*.mbtiles

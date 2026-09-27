@@ -6,7 +6,7 @@
     <title>我的全球旅行地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" />
-    <link rel="stylesheet" href="styles.css?v=114" />
+    <link rel="stylesheet" href="styles.css?v=116" />
   </head>
   <body>
     <div class="app-shell map-first-shell">
@@ -35,7 +35,7 @@
             <strong data-i18n="privacyTitle">本地保存</strong>
             <p data-i18n="privacyText">数据只保存在本机浏览器里，不会自动上传或公开。如需备份请导出。</p>
           </div>
-          <div class="app-version" id="appVersion">v2.0.5</div>
+          <div class="app-version" id="appVersion">v2.0.6</div>
         </div>
       </aside>
 
@@ -54,6 +54,7 @@
                 <select id="mapProvider">
                   <option value="auto" data-i18n="providerAuto">自动</option>
                   <option value="osm" data-i18n="providerOsm">OpenStreetMap</option>
+                  <option value="population" data-i18n="providerPopulation">人口密度</option>
                   <option value="gaode" data-i18n="providerGaode">高德</option>
                   <option value="gaodeSatellite" data-i18n="providerGaodeSatellite">高德卫星</option>
                   <option value="google" data-i18n="providerGoogle">Google 街道</option>
@@ -126,6 +127,12 @@
               </div>
               <div class="loading-debug" id="loadingDebug" hidden></div>
               <div class="leaflet-map" id="leafletMap"></div>
+              <aside class="population-density-legend" id="populationDensityLegend" hidden>
+                <strong data-i18n="populationDensityLegend">人口密度 · 2020</strong>
+                <div class="population-density-scale" aria-hidden="true"></div>
+                <div class="population-density-labels"><span>20</span><span>400</span><span>2k</span><span>10k</span><span>50k</span><span>200k+</span></div>
+                <small data-i18n="populationDensityUnit">人 / km² · GHSL</small>
+              </aside>
             </div>
 
             <aside class="map-drawer hidden" id="mapDetail">
@@ -320,6 +327,7 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
-    <script src="app.js?v=492"></script>
+    <script src="https://unpkg.com/pmtiles@4.4.0/dist/pmtiles.js"></script>
+    <script src="app.js?v=499"></script>
   </body>
 </html>

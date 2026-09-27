@@ -4,7 +4,7 @@ const path = require("path");
 const { exec } = require("child_process");
 
 const host = "0.0.0.0";
-const port = 4173;
+const port = Number(process.env.PORT) || 4173;
 const root = __dirname;
 const url = `http://localhost:${port}/index.html`;
 const shouldOpenBrowser = process.argv.includes("--open");
@@ -18,6 +18,7 @@ const contentTypes = {
   ".png": "image/png",
   ".jpg": "image/jpeg",
   ".jpeg": "image/jpeg",
+  ".pmtiles": "application/vnd.pmtiles",
 };
 
 function openBrowser() {
@@ -37,17 +38,40 @@ const server = http.createServer((request, response) => {
     return;
   }
 
-  fs.readFile(fullPath, (error, data) => {
+  fs.stat(fullPath, (error, stat) => {
     if (error) {
       response.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
       response.end("Not found");
       return;
     }
+    const contentType = contentTypes[path.extname(fullPath).toLowerCase()] || "application/octet-stream";
+    const range = request.headers.range?.match(/^bytes=(\d+)-(\d*)$/);
+    if (range) {
+      const start = Number(range[1]);
+      const requestedEnd = range[2] ? Number(range[2]) : stat.size - 1;
+      const end = Math.min(requestedEnd, stat.size - 1);
+      if (!Number.isFinite(start) || start < 0 || start > end) {
+        response.writeHead(416, { "Content-Range": `bytes */${stat.size}` });
+        response.end();
+        return;
+      }
+      response.writeHead(206, {
+        "Accept-Ranges": "bytes",
+        "Content-Range": `bytes ${start}-${end}/${stat.size}`,
+        "Content-Length": end - start + 1,
+        "Content-Type": contentType,
+        "Cache-Control": "no-store",
+      });
+      fs.createReadStream(fullPath, { start, end }).pipe(response);
+      return;
+    }
     response.writeHead(200, {
-      "Content-Type": contentTypes[path.extname(fullPath).toLowerCase()] || "application/octet-stream",
+      "Accept-Ranges": "bytes",
+      "Content-Length": stat.size,
+      "Content-Type": contentType,
       "Cache-Control": "no-store",
     });
-    response.end(data);
+    fs.createReadStream(fullPath).pipe(response);
   });
 });
 

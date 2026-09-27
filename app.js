@@ -15,7 +15,7 @@ const mapControlsStorageKey = "travel-map-controls-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "2.0.5";
+const appVersion = "2.0.6";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
@@ -61,11 +61,13 @@ let leafletMap = null;
 let leafletLayers = null;
 let leafletBaseLayer = null;
 let mapLibreMap = null;
+let mapLibreStyleReady = false;
 let mapLibreMarkers = [];
 let mapLibreMarkerSignature = "";
 let mapPointRenderRevision = 0;
 let mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false, points: false, paths: false, pathVertices: false, flights: false, nps: false };
 let bingMapLibreProtocolRegistered = false;
+let pmtilesMapLibreProtocolRegistered = false;
 let mapProviderDetectionPromise = null;
 let leafletDidInitialFit = false;
 let catalogDataRequested = false;
@@ -300,11 +302,14 @@ const translations = {
     mapProvider: "底图",
     providerAuto: "自动底图",
     providerOsm: "OpenStreetMap",
+    providerPopulation: "人口密度",
     providerGaode: "高德",
     providerGaodeSatellite: "高德卫星",
     providerGoogle: "Google 街道",
     providerGoogleSatellite: "Google 卫星",
     providerGoogleTerrain: "Google 地形",
+    populationDensityLegend: "人口密度 · 2020",
+    populationDensityUnit: "人 / km² · GHSL",
     providerEsriSatellite: "Esri 卫星",
     providerBingRoad: "Bing 地图",
     providerBingAerial: "Bing 卫星",
@@ -456,11 +461,14 @@ const translations = {
     mapProvider: "Basemap",
     providerAuto: "Auto map",
     providerOsm: "OpenStreetMap",
+    providerPopulation: "Population density",
     providerGaode: "Gaode",
     providerGaodeSatellite: "Gaode Satellite",
     providerGoogle: "Google Road",
     providerGoogleSatellite: "Google Satellite",
     providerGoogleTerrain: "Google Terrain",
+    populationDensityLegend: "Population density · 2020",
+    populationDensityUnit: "people / km² · GHSL",
     providerEsriSatellite: "Esri Satellite",
     providerBingRoad: "Bing Road",
     providerBingAerial: "Bing Aerial",
@@ -859,6 +867,16 @@ const mapProviders = {
     ],
     attribution: "© OpenStreetMap contributors",
   },
+  population: {
+    label: "人口密度",
+    tiles: [
+      "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      "https://b.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      "https://c.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    ],
+    populationArchive: "data/population-density-2020-z0-8.pmtiles",
+    attribution: "© OpenStreetMap contributors · Population: European Commission, JRC (GHSL 2023)",
+  },
   gaode: {
     label: "高德",
     tiles: [
@@ -927,6 +945,10 @@ const mapProviders = {
     attribution: "© Microsoft Bing",
   },
 };
+
+// In population mode the road map is context only; keep it faint so the
+// density colors remain the dominant visual layer.
+const populationContextOpacity = 0.5;
 
 function normalizeMapProviderMode(value) {
   return ["auto", ...Object.keys(mapProviders)].includes(value) ? value : "auto";
@@ -1038,6 +1060,13 @@ function registerBingMapLibreProtocol() {
     return { data: await response.arrayBuffer() };
   });
   bingMapLibreProtocolRegistered = true;
+}
+
+function registerPmtilesMapLibreProtocol() {
+  if (pmtilesMapLibreProtocolRegistered || !window.maplibregl || !window.pmtiles?.Protocol) return;
+  const protocol = new window.pmtiles.Protocol();
+  window.maplibregl.addProtocol("pmtiles", protocol.tile);
+  pmtilesMapLibreProtocolRegistered = true;
 }
 
 async function detectMapProviderByIp() {
@@ -5790,7 +5819,7 @@ function setLanguage(language) {
 function refreshMapLabelsForLanguage() {
   checklistOverlayCache.signature = "";
   mapLibreMarkerSignature = "";
-  if (mapLibreMap && mapLibreMap.isStyleLoaded() && mapLibreMap.getSource("map-points")) {
+  if (mapLibreMap && mapLibreStyleReady && mapLibreMap.getSource("map-points")) {
     renderMapLibreMarkers();
   } else if (leafletMap && window.L) {
     renderLeafletLayers();
@@ -7511,7 +7540,23 @@ function applyLeafletProvider() {
   if (leafletBaseLayer?._travelMapProvider === providerId) return;
   if (leafletBaseLayer) leafletMap.removeLayer(leafletBaseLayer);
   const provider = mapProviders[providerId] || mapProviders.osm;
-  leafletBaseLayer = providerId.startsWith("bing")
+  if (providerId === "population" && window.pmtiles?.leafletRasterLayer) {
+    const base = L.tileLayer(provider.tiles[0], {
+      maxZoom: 18,
+      updateWhenZooming: false,
+      attribution: "© OpenStreetMap contributors",
+      opacity: populationContextOpacity,
+    });
+    const archive = new window.pmtiles.PMTiles(new URL(provider.populationArchive, location.href).href);
+    const density = window.pmtiles.leafletRasterLayer(archive, {
+      maxNativeZoom: 8,
+      maxZoom: 18,
+      opacity: normalizeMapBaseOpacity(state.mapBaseOpacity) / 100,
+      attribution: "Population: European Commission, JRC (GHSL 2023)",
+    });
+    leafletBaseLayer = L.layerGroup([base, density]);
+    leafletBaseLayer.setOpacity = (opacity) => density.setOpacity(opacity);
+  } else leafletBaseLayer = providerId.startsWith("bing")
     ? new (L.TileLayer.extend({
       getTileUrl(coords) {
         return bingTileUrl(providerId === "bingAerial" ? "aerial" : "road", coords.z, coords.x, coords.y);
@@ -7594,9 +7639,23 @@ function renderMapLibreMap() {
     mapLibreMap.on("moveend", rememberMapViewportSoon);
     mapLibreMap.on("zoomend", rememberMapViewportSoon);
     mapLibreMap.on("load", () => {
+      mapLibreStyleReady = true;
       setLoadingDebug("使用 MapLibre 显示底图", "done");
       clearLoadingDebugSoon();
       renderMapLibreLayers();
+    });
+    mapLibreMap.on("style.load", () => {
+      mapLibreStyleReady = true;
+      if (isMapPageActive()) renderMapLibreLayers();
+    });
+    mapLibreMap.on("idle", () => {
+      if (!isMapPageActive() || !mapLibreStyleReady) return;
+      const overlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
+      const signature = mapLibreMarkerRenderSignature(overlays);
+      if (signature !== mapLibreMarkerSignature || !mapLibreMap.getLayer("map-points-circle")) {
+        renderMapLibreMarkers(overlays);
+        bringMapLibrePointLayersToFront();
+      }
     });
     mapLibreMap.on("error", () => {
       setLoadingDebug("使用 MapLibre 显示底图", "error");
@@ -7610,7 +7669,8 @@ function renderMapLibreMap() {
   applyMapLibreProjectionMode();
   applyMapLibreProvider(provider);
   mapLibreMap.resize();
-  if (mapLibreMap.isStyleLoaded()) renderMapLibreLayers();
+  if (mapLibreStyleReady) renderMapLibreLayers();
+  else renderMapLibreLayersWhenReady();
 }
 
 function mapLibreProjection() {
@@ -7658,8 +7718,28 @@ function mapLibreBaseStyle(providerId) {
         attribution: provider.attribution,
       },
     },
-    layers: [{ id: "basemap", type: "raster", source: "basemap", paint: { "raster-opacity": normalizeMapBaseOpacity(state.mapBaseOpacity) / 100 } }],
+    layers: [{ id: "basemap", type: "raster", source: "basemap", paint: { "raster-opacity": providerId === "population" ? populationContextOpacity : normalizeMapBaseOpacity(state.mapBaseOpacity) / 100 } }],
   };
+  if (providerId === "population" && window.pmtiles) {
+    registerPmtilesMapLibreProtocol();
+    style.sources.populationDensity = {
+      type: "raster",
+      url: `pmtiles://${new URL(provider.populationArchive, location.href).href}`,
+      tileSize: 256,
+      attribution: "Population: European Commission, JRC (GHSL 2023)",
+    };
+    style.layers.push({
+      id: "population-density",
+      type: "raster",
+      source: "populationDensity",
+      minzoom: 0,
+      maxzoom: 18,
+      paint: {
+        "raster-opacity": normalizeMapBaseOpacity(state.mapBaseOpacity) / 100,
+        "raster-resampling": "linear",
+      },
+    });
+  }
   if (state.map3d) {
     style.sky = {
       "sky-color": "#0f172a",
@@ -7676,19 +7756,21 @@ function mapLibreBaseStyle(providerId) {
 function applyMapBaseOpacity() {
   const opacity = normalizeMapBaseOpacity(state.mapBaseOpacity) / 100;
   if (leafletBaseLayer?.setOpacity) leafletBaseLayer.setOpacity(opacity);
-  if (mapLibreMap?.getLayer("basemap")) mapLibreMap.setPaintProperty("basemap", "raster-opacity", opacity);
+  if (mapLibreMap?.getLayer("population-density")) mapLibreMap.setPaintProperty("population-density", "raster-opacity", opacity);
+  else if (mapLibreMap?.getLayer("basemap")) mapLibreMap.setPaintProperty("basemap", "raster-opacity", opacity);
 }
 
 function applyMapLibreProvider(provider) {
   if (!mapLibreMap || mapLibreMap._travelMapProvider === provider) return;
   mapLibreMap._travelMapProvider = provider;
+  mapLibreStyleReady = false;
   mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false, points: false, paths: false, pathVertices: false, flights: false, nps: false };
   mapLibreSourceDataRefs.clear();
   clearMapLibreMarkers();
   const rerender = () => {
     applyMapLibreProjectionMode();
     renderMapLibreLayersWhenReady();
-    if (mapLibreMap.isStyleLoaded() && state.mapOverlays?.china5a && usNpsBoundaries && usNpsUnits.length) {
+    if (mapLibreStyleReady && state.mapOverlays?.china5a && usNpsBoundaries && usNpsUnits.length) {
       ensureMapLibreUsNpsSourceAndLayers(true);
       refreshUsNpsBoundaryState();
     }
@@ -7708,12 +7790,12 @@ function clearMapLibreMarkers() {
 
 function renderMapLibreLayersWhenReady(attempt = 0) {
   if (!mapLibreMap) return;
-  if (mapLibreMap.isStyleLoaded()) {
+  if (mapLibreStyleReady) {
     renderMapLibreLayers();
     return;
   }
-  if (attempt >= 12) return;
-  window.setTimeout(() => renderMapLibreLayersWhenReady(attempt + 1), 120);
+  if (attempt >= 80) return;
+  window.setTimeout(() => renderMapLibreLayersWhenReady(attempt + 1), 150);
 }
 
 function setMapLibreSource(id, data) {
@@ -7968,7 +8050,7 @@ function addMapLibreUsNpsLayers() {
 
 function ensureMapLibreUsNpsSourceAndLayers(allowDuringStyleUpdate = false) {
   const overlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
-  if (!mapLibreMap || (!allowDuringStyleUpdate && !mapLibreMap.isStyleLoaded()) || !overlays.china5a || !usNpsBoundaries || !usNpsUnits.length) return false;
+  if (!mapLibreMap || (!allowDuringStyleUpdate && !mapLibreStyleReady) || !overlays.china5a || !usNpsBoundaries || !usNpsUnits.length) return false;
   if (!mapLibreMap.getSource("us-nps-boundaries")) {
     setMapLibreSource("us-nps-boundaries", usNpsBoundaryGeoJson());
   }
@@ -8048,7 +8130,7 @@ function invalidateMapPointRenderCache() {
 
 function renderMapLibreLayers() {
   const perfStartedAt = perfNow();
-  if (!mapLibreMap || !mapLibreMap.isStyleLoaded()) return;
+  if (!mapLibreMap || !mapLibreStyleReady) return;
   let perfStageStartedAt = perfStartedAt;
   const overlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
 
@@ -8056,6 +8138,10 @@ function renderMapLibreLayers() {
   ensureBoundaryDataForLevel(state.boundaryLevel);
   perfStageStartedAt = logRenderStage("ensure", perfStageStartedAt);
   if (boundaryLevelHasPendingDetailLoads(state.boundaryLevel)) {
+    // Points do not depend on detailed boundary geometry. Keep check-ins
+    // visible while a newly selected basemap or boundary level is loading.
+    renderMapLibreMarkers(overlays);
+    bringMapLibrePointLayersToFront();
     setLoadingDebug("娓叉煋鍦板浘鍥惧眰", "done");
     clearLoadingDebugSoon();
     return;
@@ -8183,6 +8269,7 @@ function renderMapLibreLayers() {
   perfStageStartedAt = logRenderStage("imports", perfStageStartedAt);
   bindMapLibreLayerHandlers();
   renderMapLibreMarkers(overlays);
+  bringMapLibrePointLayersToFront();
   if (overlays.china5a) refreshUsNpsBoundaryState();
   perfStageStartedAt = logRenderStage("bind-points", perfStageStartedAt);
   logSlowStep("renderMapLibreLayers", perfStartedAt);
@@ -8190,9 +8277,22 @@ function renderMapLibreLayers() {
   clearLoadingDebugSoon();
 }
 
+function bringMapLibrePointLayersToFront() {
+  if (!mapLibreMap) return;
+  [
+    "map-points-shadow",
+    "map-points-stroke",
+    "map-points-circle",
+    "map-points-label",
+    "map-points-label-full",
+  ].forEach((layerId) => {
+    if (mapLibreMap.getLayer(layerId)) mapLibreMap.moveLayer(layerId);
+  });
+}
+
 function refreshMapLibreDataOnly(options = {}) {
   const perfStartedAt = perfNow();
-  if (!mapLibreMap || !mapLibreMap.isStyleLoaded()) return false;
+  if (!mapLibreMap || !mapLibreStyleReady) return false;
   const { updateImports = true, updateMarkers = true } = options;
   const overlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
   const needs = ["map-background-context"];
@@ -8263,7 +8363,7 @@ function refreshMapLibreDataOnly(options = {}) {
 
 function refreshFlightRoutesOnMap() {
   const overlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
-  if (mapLibreMap && mapLibreMap.isStyleLoaded()) {
+  if (mapLibreMap && mapLibreStyleReady) {
     if (!overlays.flights && !mapLibreMap.getSource("flight-routes")) return true;
     const data = overlays.flights ? cachedMapGeoJson("flight-routes", flightRouteGeoJson) : emptyFeatureCollection();
     setMapLibreSource("flight-routes", data);
@@ -8338,9 +8438,13 @@ function renderMapLibreMarkers(overlays = { ...defaultMapOverlays(), ...(state.m
 
 function mapLibreMarkerRenderSignature(overlays) {
   const activeKeys = activeChecklistOverlayKeys();
+  const visitedPointSignature = visitedPlaces()
+    .map(({ place }) => [place.id, place.lng, place.lat, place.checklistKey || ""].join(":"))
+    .sort()
+    .join("|");
   const checklistSignature = [
     activeKeys.join(","),
-    (state.checklistMarks || []).length,
+    [...(state.checklistMarks || [])].sort().join(","),
     checklistTotalCount("china5a"),
     checklistTotalCount("usNationalParks"),
     checklistTotalCount("chinaAncientCapitals"),
@@ -8360,8 +8464,7 @@ function mapLibreMarkerRenderSignature(overlays) {
     worldHeritage: Boolean(overlays.worldHeritage),
     highAltitude: Boolean(overlays.highAltitude),
     revision: mapPointRenderRevision,
-    visits: (state.visits || []).length,
-    places: places.length,
+    visitedPointSignature,
     checklistSignature,
   });
 }
@@ -11995,7 +12098,7 @@ function renderAfterChecklistChange(key, item, group = "", wasDone = null) {
       if (entry.key === "usNationalParks") addUnitCodes(usNpsUnitById.get(entry.item));
     });
     const shapeRefreshed = linkedToUsNationalPark ? refreshUsNpsBoundaryState(affectedNpsCodes) : false;
-    if (mapLibreMap && (shapeRefreshed || mapLibreMap.isStyleLoaded())) renderMapLibreMarkers();
+    if (mapLibreMap && (shapeRefreshed || mapLibreStyleReady)) renderMapLibreMarkers();
     scheduleCoverageMapRefresh(linkedToUsNationalPark ? 16 : 180);
   }
 }
@@ -13613,7 +13716,7 @@ function renderAfterCheckinChange() {
     if (document.querySelector('[data-page="achievements"]')?.classList.contains("active")) renderAchievements();
     if (document.querySelector('[data-page="imports"]')?.classList.contains("active")) renderDataInventory();
     if (isMapPageActive()) {
-      if (mapLibreMap && mapLibreMap.isStyleLoaded()) renderMapLibreMarkers();
+      if (mapLibreMap && mapLibreStyleReady) renderMapLibreMarkers();
       scheduleCoverageMapRefresh();
     }
   });
@@ -13686,6 +13789,8 @@ function renderMapControls() {
   if (level) level.value = state.boundaryLevel || "country";
   const provider = $("#mapProvider");
   if (provider) provider.value = normalizeMapProviderMode(state.mapProviderMode);
+  const populationLegend = $("#populationDensityLegend");
+  if (populationLegend) populationLegend.hidden = activeMapProvider() !== "population";
   const baseOpacity = $("#mapBaseOpacity");
   if (baseOpacity) {
     const value = normalizeMapBaseOpacity(state.mapBaseOpacity);
@@ -14186,8 +14291,14 @@ $("#showLightOnMap")?.addEventListener("change", (event) => {
 $("#showCheckinsOnMap")?.addEventListener("change", (event) => {
   state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
   state.mapOverlays.checkins = event.target.checked;
+  invalidateMapPointRenderCache();
   saveUiStateSoon();
-  renderGeoMap();
+  if (mapLibreMap && mapLibreStyleReady) {
+    renderMapLibreMarkers();
+    bringMapLibrePointLayersToFront();
+  } else {
+    renderGeoMap();
+  }
 });
 $("#showTracksOnMap")?.addEventListener("change", (event) => {
   state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
