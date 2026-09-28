@@ -15,7 +15,7 @@ const mapControlsStorageKey = "travel-map-controls-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "2.0.6";
+const appVersion = "2.1.0";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
@@ -310,6 +310,11 @@ const translations = {
     providerGoogleTerrain: "Google 地形",
     populationDensityLegend: "人口密度 · 2020",
     populationDensityUnit: "人 / km² · GHSL",
+    railwayLegendTitle: "铁路 · OpenRailwayMap",
+    railwayLegendHighspeed: "高速铁路（>200 km/h）",
+    railwayLegendMain: "铁路干线",
+    railwayLegendBranch: "支线铁路",
+    railwayLegendInactive: "建设中 / 停用",
     providerEsriSatellite: "Esri 卫星",
     providerBingRoad: "Bing 地图",
     providerBingAerial: "Bing 卫星",
@@ -321,6 +326,7 @@ const translations = {
     overlayCheckins: "我的打卡",
     overlayTracks: "我的轨迹",
     overlayFlights: "我的航线",
+    overlayRailways: "铁路",
     overlay3d: "3D",
     overlay5a: "5A / 国家公园",
     overlayAncientCapitals: "中国古都",
@@ -469,6 +475,11 @@ const translations = {
     providerGoogleTerrain: "Google Terrain",
     populationDensityLegend: "Population density · 2020",
     populationDensityUnit: "people / km² · GHSL",
+    railwayLegendTitle: "Railways · OpenRailwayMap",
+    railwayLegendHighspeed: "High-speed (>200 km/h)",
+    railwayLegendMain: "Main line",
+    railwayLegendBranch: "Branch line",
+    railwayLegendInactive: "Construction / inactive",
     providerEsriSatellite: "Esri Satellite",
     providerBingRoad: "Bing Road",
     providerBingAerial: "Bing Aerial",
@@ -480,6 +491,7 @@ const translations = {
     overlayCheckins: "My check-ins",
     overlayTracks: "My tracks",
     overlayFlights: "My flights",
+    overlayRailways: "Railways",
     overlay3d: "3D",
     overlay5a: "5A / National Parks",
     overlayAncientCapitals: "Ancient Chinese Capitals",
@@ -608,13 +620,15 @@ function t(key) {
 }
 
 function defaultMapOverlays() {
-  return { light: true, checkins: true, paths: true, flights: true, china5a: false, chinaAncientCapitals: false, worldHeritage: false, highAltitude: false };
+  return { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, china5a: false, chinaAncientCapitals: false, worldHeritage: false, highAltitude: false };
 }
 
 function normalizeMapOverlays(overlays = {}) {
   return {
     ...defaultMapOverlays(),
     ...overlays,
+    populationDensity: Boolean(overlays.populationDensity),
+    railways: Boolean(overlays.railways),
     china5a: Boolean(overlays.china5a),
     chinaAncientCapitals: Boolean(overlays.chinaAncientCapitals),
     worldHeritage: Boolean(overlays.worldHeritage),
@@ -867,17 +881,6 @@ const mapProviders = {
     ],
     attribution: "© OpenStreetMap contributors",
   },
-  population: {
-    label: "人口密度",
-    tiles: [
-      "https://mt0.google.com/vt/lyrs=p&x={x}&y={y}&z={z}",
-      "https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}",
-      "https://mt2.google.com/vt/lyrs=p&x={x}&y={y}&z={z}",
-      "https://mt3.google.com/vt/lyrs=p&x={x}&y={y}&z={z}",
-    ],
-    populationArchive: "data/population-density-2020-z0-8.pmtiles",
-    attribution: "© Google · Population: European Commission, JRC (GHSL 2023)",
-  },
   gaode: {
     label: "高德",
     tiles: [
@@ -947,11 +950,14 @@ const mapProviders = {
   },
 };
 
-// In population mode the road map is context only; keep it faint so the
-// density colors remain the dominant visual layer.
-const populationContextOpacity = 0.5;
+const populationDensityArchive = "data/population-density-2020-z0-8.pmtiles";
+const populationDensityAttribution = "Population: European Commission, JRC (GHSL 2023)";
+const populationDensityOpacity = 0.68;
+const railwayOverlayTiles = ["https://tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png"];
+const railwayOverlayAttribution = "© OpenStreetMap contributors · OpenRailwayMap";
 
 function normalizeMapProviderMode(value) {
+  if (value === "population") return "googleTerrain";
   return ["auto", ...Object.keys(mapProviders)].includes(value) ? value : "auto";
 }
 
@@ -3669,7 +3675,7 @@ let state = {
   mapBaseOpacity: 100,
   map3d: false,
   detectedMapProvider: "",
-  mapOverlays: { light: true, checkins: true, paths: true, flights: true, china5a: false, chinaAncientCapitals: false, worldHeritage: false, highAltitude: false },
+  mapOverlays: { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, china5a: false, chinaAncientCapitals: false, worldHeritage: false, highAltitude: false },
   mapViewport: null,
   focusPlaceId: "",
 };
@@ -7541,23 +7547,7 @@ function applyLeafletProvider() {
   if (leafletBaseLayer?._travelMapProvider === providerId) return;
   if (leafletBaseLayer) leafletMap.removeLayer(leafletBaseLayer);
   const provider = mapProviders[providerId] || mapProviders.osm;
-  if (providerId === "population" && window.pmtiles?.leafletRasterLayer) {
-    const base = L.tileLayer(provider.tiles[0], {
-      maxZoom: 18,
-      updateWhenZooming: false,
-      attribution: "© Google",
-      opacity: populationContextOpacity,
-    });
-    const archive = new window.pmtiles.PMTiles(new URL(provider.populationArchive, location.href).href);
-    const density = window.pmtiles.leafletRasterLayer(archive, {
-      maxNativeZoom: 8,
-      maxZoom: 18,
-      opacity: normalizeMapBaseOpacity(state.mapBaseOpacity) / 100,
-      attribution: "Population: European Commission, JRC (GHSL 2023)",
-    });
-    leafletBaseLayer = L.layerGroup([base, density]);
-    leafletBaseLayer.setOpacity = (opacity) => density.setOpacity(opacity);
-  } else leafletBaseLayer = providerId.startsWith("bing")
+  leafletBaseLayer = providerId.startsWith("bing")
     ? new (L.TileLayer.extend({
       getTileUrl(coords) {
         return bingTileUrl(providerId === "bingAerial" ? "aerial" : "road", coords.z, coords.x, coords.y);
@@ -7719,28 +7709,8 @@ function mapLibreBaseStyle(providerId) {
         attribution: provider.attribution,
       },
     },
-    layers: [{ id: "basemap", type: "raster", source: "basemap", paint: { "raster-opacity": providerId === "population" ? populationContextOpacity : normalizeMapBaseOpacity(state.mapBaseOpacity) / 100 } }],
+    layers: [{ id: "basemap", type: "raster", source: "basemap", paint: { "raster-opacity": normalizeMapBaseOpacity(state.mapBaseOpacity) / 100 } }],
   };
-  if (providerId === "population" && window.pmtiles) {
-    registerPmtilesMapLibreProtocol();
-    style.sources.populationDensity = {
-      type: "raster",
-      url: `pmtiles://${new URL(provider.populationArchive, location.href).href}`,
-      tileSize: 256,
-      attribution: "Population: European Commission, JRC (GHSL 2023)",
-    };
-    style.layers.push({
-      id: "population-density",
-      type: "raster",
-      source: "populationDensity",
-      minzoom: 0,
-      maxzoom: 18,
-      paint: {
-        "raster-opacity": normalizeMapBaseOpacity(state.mapBaseOpacity) / 100,
-        "raster-resampling": "linear",
-      },
-    });
-  }
   if (state.map3d) {
     style.sky = {
       "sky-color": "#0f172a",
@@ -7757,8 +7727,7 @@ function mapLibreBaseStyle(providerId) {
 function applyMapBaseOpacity() {
   const opacity = normalizeMapBaseOpacity(state.mapBaseOpacity) / 100;
   if (leafletBaseLayer?.setOpacity) leafletBaseLayer.setOpacity(opacity);
-  if (mapLibreMap?.getLayer("population-density")) mapLibreMap.setPaintProperty("population-density", "raster-opacity", opacity);
-  else if (mapLibreMap?.getLayer("basemap")) mapLibreMap.setPaintProperty("basemap", "raster-opacity", opacity);
+  if (mapLibreMap?.getLayer("basemap")) mapLibreMap.setPaintProperty("basemap", "raster-opacity", opacity);
 }
 
 function applyMapLibreProvider(provider) {
@@ -7807,6 +7776,71 @@ function setMapLibreSource(id, data) {
     mapLibreMap.addSource(id, { type: "geojson", data, ...mapLibreSourceOptions(id) });
   }
   mapLibreSourceDataRefs.set(id, data);
+}
+
+function syncMapLibrePopulationDensityOverlay(enabled) {
+  if (!mapLibreMap || !mapLibreStyleReady) return;
+  if (!enabled) {
+    removeMapLibreLayer("population-density");
+    removeMapLibreSource("populationDensity");
+    return;
+  }
+  if (!window.pmtiles) return;
+  registerPmtilesMapLibreProtocol();
+  if (!mapLibreMap.getSource("populationDensity")) {
+    mapLibreMap.addSource("populationDensity", {
+      type: "raster",
+      url: `pmtiles://${new URL(populationDensityArchive, location.href).href}`,
+      tileSize: 256,
+      attribution: populationDensityAttribution,
+    });
+  }
+  if (!mapLibreMap.getLayer("population-density")) {
+    const beforeId = mapLibreMap.getStyle()?.layers?.find((layer) => layer.id !== "basemap" && layer.id !== "population-density")?.id;
+    mapLibreMap.addLayer({
+      id: "population-density",
+      type: "raster",
+      source: "populationDensity",
+      minzoom: 0,
+      maxzoom: 18,
+      paint: {
+        "raster-opacity": populationDensityOpacity,
+        "raster-resampling": "linear",
+      },
+    }, beforeId);
+  }
+}
+
+function syncMapLibreRailwayOverlay(enabled) {
+  if (!mapLibreMap || !mapLibreStyleReady) return;
+  if (!enabled) {
+    removeMapLibreLayer("railway-network-raster");
+    if (mapLibreMap.getSource("railway-network") && !mapLibreMap.getStyle()?.layers?.some((layer) => layer.source === "railway-network")) {
+      mapLibreMap.removeSource("railway-network");
+    }
+    return;
+  }
+  if (!mapLibreMap.getSource("railway-network")) {
+    mapLibreMap.addSource("railway-network", {
+      type: "raster",
+      tiles: railwayOverlayTiles,
+      tileSize: 256,
+      attribution: railwayOverlayAttribution,
+    });
+  }
+  if (!mapLibreMap.getLayer("railway-network-raster")) {
+    mapLibreMap.addLayer({
+      id: "railway-network-raster",
+      type: "raster",
+      source: "railway-network",
+      minzoom: 2,
+      maxzoom: 19,
+      paint: {
+        "raster-opacity": 0.88,
+        "raster-fade-duration": 120,
+      },
+    });
+  }
 }
 
 function mapLibreSourceOptions(id) {
@@ -8140,7 +8174,10 @@ function renderMapLibreLayers() {
   perfStageStartedAt = logRenderStage("ensure", perfStageStartedAt);
   if (boundaryLevelHasPendingDetailLoads(state.boundaryLevel)) {
     // Points do not depend on detailed boundary geometry. Keep check-ins
-    // visible while a newly selected basemap or boundary level is loading.
+    // and transport overlays visible while a newly selected basemap or
+    // boundary level is loading.
+    syncMapLibrePopulationDensityOverlay(overlays.populationDensity);
+    syncMapLibreRailwayOverlay(overlays.railways);
     renderMapLibreMarkers(overlays);
     bringMapLibrePointLayersToFront();
     setLoadingDebug("娓叉煋鍦板浘鍥惧眰", "done");
@@ -8155,6 +8192,7 @@ function renderMapLibreLayers() {
   removeMapLibreLayer("imported-shapes-path-line");
   removeMapLibreLayer("imported-shapes-path-line-vertices");
   removeMapLibreLayer("flight-routes-line");
+  removeMapLibreLayer("railway-network-raster");
   removeMapLibreLayer("visited-regions-line");
   removeMapLibreLayer("visited-regions-fill");
   removeMapLibreLayer("visited-region-group-outlines-line");
@@ -8264,6 +8302,8 @@ function renderMapLibreLayers() {
     addMapLibreFlightRouteLayer("flight-routes", "flight-routes-line");
     bindMapLibreFlightRouteHandlers();
   }
+  syncMapLibrePopulationDensityOverlay(overlays.populationDensity);
+  syncMapLibreRailwayOverlay(overlays.railways);
   if (overlays.china5a && usNpsBoundaries && usNpsUnits.length) {
     ensureMapLibreUsNpsSourceAndLayers(true);
   }
@@ -9355,6 +9395,37 @@ function renderLeafletLayers() {
   ensureBoundaryDataForLevel(state.boundaryLevel);
   if (leafletLayers) leafletLayers.remove();
   leafletLayers = L.layerGroup().addTo(leafletMap);
+
+  if (overlays.populationDensity && window.pmtiles?.leafletRasterLayer) {
+    if (!leafletMap.getPane("populationDensityPane")) {
+      const pane = leafletMap.createPane("populationDensityPane");
+      pane.style.zIndex = "250";
+      pane.style.pointerEvents = "none";
+    }
+    const archive = new window.pmtiles.PMTiles(new URL(populationDensityArchive, location.href).href);
+    window.pmtiles.leafletRasterLayer(archive, {
+      pane: "populationDensityPane",
+      maxNativeZoom: 8,
+      maxZoom: 18,
+      opacity: populationDensityOpacity,
+      attribution: populationDensityAttribution,
+    }).addTo(leafletLayers);
+  }
+
+  if (overlays.railways) {
+    if (!leafletMap.getPane("railwayPane")) {
+      const pane = leafletMap.createPane("railwayPane");
+      pane.style.zIndex = "350";
+      pane.style.pointerEvents = "none";
+    }
+    L.tileLayer(railwayOverlayTiles[0], {
+      pane: "railwayPane",
+      minZoom: 2,
+      maxZoom: 19,
+      opacity: 0.88,
+      attribution: railwayOverlayAttribution,
+    }).addTo(leafletLayers);
+  }
 
   if (overlays.light) {
     L.geoJSON(mapBackgroundContextGeoJson(), {
@@ -13790,8 +13861,6 @@ function renderMapControls() {
   if (level) level.value = state.boundaryLevel || "country";
   const provider = $("#mapProvider");
   if (provider) provider.value = normalizeMapProviderMode(state.mapProviderMode);
-  const populationLegend = $("#populationDensityLegend");
-  if (populationLegend) populationLegend.hidden = activeMapProvider() !== "population";
   const baseOpacity = $("#mapBaseOpacity");
   if (baseOpacity) {
     const value = normalizeMapBaseOpacity(state.mapBaseOpacity);
@@ -13812,6 +13881,8 @@ function renderMapControls() {
   const showCheckins = $("#showCheckinsOnMap");
   const showTracks = $("#showTracksOnMap");
   const showFlights = $("#showFlightsOnMap");
+  const showPopulationDensity = $("#showPopulationDensityOnMap");
+  const showRailways = $("#showRailwaysOnMap");
   const show3d = $("#show3dMap");
   const showChina5a = $("#showChina5aOnMap");
   const showAncientCapitals = $("#showAncientCapitalsOnMap");
@@ -13821,6 +13892,14 @@ function renderMapControls() {
   if (showCheckins) showCheckins.checked = Boolean(overlays.checkins);
   if (showTracks) showTracks.checked = Boolean(overlays.paths);
   if (showFlights) showFlights.checked = Boolean(overlays.flights);
+  if (showPopulationDensity) showPopulationDensity.checked = Boolean(overlays.populationDensity);
+  if (showRailways) showRailways.checked = Boolean(overlays.railways);
+  const populationLegend = $("#populationDensityLegend");
+  if (populationLegend) populationLegend.hidden = !overlays.populationDensity;
+  const railwayLegend = $("#railwayLegend");
+  if (railwayLegend) railwayLegend.hidden = !overlays.railways;
+  const overlayLegends = $("#mapOverlayLegends");
+  if (overlayLegends) overlayLegends.hidden = !overlays.populationDensity && !overlays.railways;
   if (show3d) show3d.checked = Boolean(state.map3d);
   if (showChina5a) showChina5a.checked = Boolean(overlays.china5a);
   if (showAncientCapitals) showAncientCapitals.checked = Boolean(overlays.chinaAncientCapitals);
@@ -14312,6 +14391,31 @@ $("#showFlightsOnMap")?.addEventListener("change", (event) => {
   state.mapOverlays.flights = event.target.checked;
   saveUiStateSoon();
   renderGeoMap();
+});
+$("#showPopulationDensityOnMap")?.addEventListener("change", (event) => {
+  state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
+  state.mapOverlays.populationDensity = event.target.checked;
+  saveUiStateSoon();
+  renderMapControls();
+  if (mapLibreMap && mapLibreStyleReady) {
+    syncMapLibrePopulationDensityOverlay(event.target.checked);
+    syncMapLibreRailwayOverlay(Boolean(state.mapOverlays.railways));
+    bringMapLibrePointLayersToFront();
+  } else {
+    renderGeoMap();
+  }
+});
+$("#showRailwaysOnMap")?.addEventListener("change", (event) => {
+  state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
+  state.mapOverlays.railways = event.target.checked;
+  saveUiStateSoon();
+  renderMapControls();
+  if (mapLibreMap && mapLibreStyleReady) {
+    syncMapLibreRailwayOverlay(event.target.checked);
+    bringMapLibrePointLayersToFront();
+  } else {
+    renderGeoMap();
+  }
 });
 $("#show3dMap")?.addEventListener("change", (event) => {
   applyMap3dToggle(event.target.checked);

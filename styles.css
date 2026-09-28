@@ -779,12 +779,24 @@ button:hover {
   font-size: 12px;
 }
 
-.population-density-legend {
+.map-overlay-legends {
   position: absolute;
   z-index: 5;
   left: 12px;
-  bottom: 12px;
-  width: min(260px, calc(100% - 90px));
+  bottom: 42px;
+  width: min(280px, calc(100% - 126px));
+  display: grid;
+  gap: 6px;
+  pointer-events: none;
+  transition: bottom 160ms ease;
+}
+
+.map-overlay-legends[hidden] {
+  display: none;
+}
+
+.population-density-legend,
+.railway-legend {
   padding: 8px 10px;
   border: 1px solid rgba(18, 54, 45, 0.16);
   border-radius: 8px;
@@ -793,16 +805,14 @@ button:hover {
   color: #12362d;
   pointer-events: none;
   backdrop-filter: blur(8px);
-  transition: bottom 160ms ease;
 }
 
-@media (min-width: 681px) {
-  .loading-debug:not([hidden]) ~ .population-density-legend {
-    bottom: 122px;
-  }
+.loading-debug:not([hidden]) ~ .map-overlay-legends {
+  bottom: 122px;
 }
 
-.population-density-legend[hidden] {
+.population-density-legend[hidden],
+.railway-legend[hidden] {
   display: none;
 }
 
@@ -836,6 +846,58 @@ button:hover {
   color: #53655f;
   font-size: 8px;
   font-variant-numeric: tabular-nums;
+}
+
+.railway-legend strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.railway-legend-items {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 5px 10px;
+  color: #40544e;
+  font-size: 9px;
+  line-height: 1.2;
+}
+
+.railway-legend-items > span {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 6px;
+  white-space: normal;
+}
+
+.railway-legend-items > span > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.railway-legend-items > span:first-child > span {
+  white-space: nowrap;
+}
+
+.railway-swatch {
+  flex: 0 0 24px;
+  height: 0;
+  border-top: 3px solid;
+  border-radius: 999px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.72);
+}
+
+.railway-swatch-highspeed { border-color: #e31a1c; }
+.railway-swatch-main { border-color: #f07f00; }
+.railway-swatch-branch { border-color: #f2c300; }
+.railway-swatch-inactive { border-color: #777; border-top-style: dashed; }
+
+@media (max-width: 380px) {
+  .railway-legend-items {
+    grid-template-columns: 1fr;
+  }
 }
 
 .swatch {
@@ -6152,9 +6214,14 @@ button:hover {
   grid-area: features !important;
 }
 
+.map-thematic-overlays {
+  grid-area: thematic !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+
 .map-overlay-toggles {
   display: grid !important;
-  gap: 6px !important;
+  gap: 4px !important;
   justify-content: stretch !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -6690,12 +6757,14 @@ button:hover {
   grid-template-areas:
     "provider level actions"
     "primary primary primary"
-    "features features features" !important;
+    "features features features"
+    "thematic thematic thematic" !important;
   width: min(430px, calc(100vw - 16px)) !important;
   min-width: 0 !important;
   max-width: min(430px, calc(100vw - 16px)) !important;
   box-sizing: border-box !important;
   padding: 8px !important;
+  gap: 4px !important;
 }
 
 .map-control-panel:not(.collapsed) .map-provider-control select,
@@ -6743,7 +6812,8 @@ button:hover {
 }
 
 .map-control-panel:not(.collapsed) .map-primary-overlays,
-.map-control-panel:not(.collapsed) .map-feature-overlays {
+.map-control-panel:not(.collapsed) .map-feature-overlays,
+.map-control-panel:not(.collapsed) .map-thematic-overlays {
   grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
   justify-content: stretch !important;
   width: 100% !important;
@@ -6792,9 +6862,17 @@ button:hover {
 
 /* Use the free title line above the map actions for basemap opacity. */
 .map-control-panel:not(.collapsed) .map-action-group {
-  grid-template-rows: 11px 34px !important;
+  grid-template-rows: 11px 30px !important;
   row-gap: 4px !important;
   align-self: stretch !important;
+}
+
+.map-control-panel:not(.collapsed) .map-provider-control select,
+.map-control-panel:not(.collapsed) .map-level-control select,
+.map-control-panel:not(.collapsed) .map-mode-toggle,
+.map-control-panel:not(.collapsed) .map-add-point-button {
+  height: 30px !important;
+  min-height: 30px !important;
 }
 
 .map-opacity-control {
