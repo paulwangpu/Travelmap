@@ -870,12 +870,13 @@ const mapProviders = {
   population: {
     label: "人口密度",
     tiles: [
-      "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png",
-      "https://b.tile.openstreetmap.org/{z}/{x}/{y}.png",
-      "https://c.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      "https://mt0.google.com/vt/lyrs=p&x={x}&y={y}&z={z}",
+      "https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}",
+      "https://mt2.google.com/vt/lyrs=p&x={x}&y={y}&z={z}",
+      "https://mt3.google.com/vt/lyrs=p&x={x}&y={y}&z={z}",
     ],
     populationArchive: "data/population-density-2020-z0-8.pmtiles",
-    attribution: "© OpenStreetMap contributors · Population: European Commission, JRC (GHSL 2023)",
+    attribution: "© Google · Population: European Commission, JRC (GHSL 2023)",
   },
   gaode: {
     label: "高德",
@@ -7544,7 +7545,7 @@ function applyLeafletProvider() {
     const base = L.tileLayer(provider.tiles[0], {
       maxZoom: 18,
       updateWhenZooming: false,
-      attribution: "© OpenStreetMap contributors",
+      attribution: "© Google",
       opacity: populationContextOpacity,
     });
     const archive = new window.pmtiles.PMTiles(new URL(provider.populationArchive, location.href).href);
