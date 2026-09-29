@@ -1077,6 +1077,27 @@ button:hover {
 .hazard-legend label { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 5px; font-size: 10px; pointer-events: auto; }
 .volcano-legend label { white-space: nowrap; }
 .volcano-legend label > span { white-space: nowrap; }
+.volcano-legend-items {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 7px;
+  font-size: 10px;
+}
+.volcano-legend-items > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+.volcano-legend-symbol {
+  color: #8b1e1e;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+.volcano-legend-symbol.pleistocene { color: #78716c; }
 .hazard-legend select { width: 70px; height: 24px; min-height: 24px; padding: 1px 22px 1px 7px; border-radius: 6px; font-size: 10px; }
 
 .volcano-map-marker {
@@ -1087,7 +1108,9 @@ button:hover {
   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
   cursor: pointer;
 }
-.volcano-map-marker.pleistocene { color: #7b4328; font-weight: 900; text-shadow: 0 0 1px #f0b277; }
+.volcano-map-marker.pleistocene {
+  color: #78716c;
+}
 
 .leaflet-interactive { cursor: pointer; }
 

@@ -6,7 +6,7 @@
     <title>我的全球旅行地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" />
-    <link rel="stylesheet" href="styles.css?v=137" />
+    <link rel="stylesheet" href="styles.css?v=141" />
   </head>
   <body>
     <div class="app-shell map-first-shell">
@@ -159,7 +159,11 @@
                 <aside class="hazard-legend volcano-legend" id="volcanoLegend" hidden>
                   <strong data-i18n="volcanoLegendTitle">全球火山</strong>
                   <label><span data-i18n="includePleistoceneVolcanoes">包含更新世火山</span><input id="includePleistoceneVolcanoes" type="checkbox" /></label>
-                  <small data-i18n="volcanoLegendSource">实心：全新世 · 空心：更新世 · Smithsonian GVP</small>
+                  <div class="volcano-legend-items" aria-label="火山年代图例">
+                    <span><i class="volcano-legend-symbol holocene" aria-hidden="true">▲</i><span data-i18n="holoceneVolcanoes">全新世</span></span>
+                    <span><i class="volcano-legend-symbol pleistocene" aria-hidden="true">▲</i><span data-i18n="pleistoceneVolcanoes">更新世</span></span>
+                  </div>
+                  <small>Smithsonian GVP</small>
                 </aside>
                 <aside class="railway-legend" id="railwayLegend" hidden>
                   <strong data-i18n="railwayLegendTitle">铁路线路 · OpenRailwayMap</strong>
@@ -379,6 +383,6 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
     <script src="https://unpkg.com/pmtiles@4.4.0/dist/pmtiles.js"></script>
-    <script src="app.js?v=527"></script>
+    <script src="app.js?v=532"></script>
   </body>
 </html>

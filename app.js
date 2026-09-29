@@ -386,7 +386,8 @@ const translations = {
     earthquakeLegendSource: "圆点大小表示震级 · ISC-GEM、NOAA/NCEI；早期完整度因地区而异",
     volcanoLegendTitle: "全球火山",
     includePleistoceneVolcanoes: "包含更新世火山",
-    volcanoLegendSource: "实心：全新世 · 空心：更新世 · Smithsonian GVP",
+    holoceneVolcanoes: "全新世",
+    pleistoceneVolcanoes: "更新世",
     overlay3d: "3D",
     overlay5a: "5A / 国家公园",
     overlayAncientCapitals: "中国古都",
@@ -607,7 +608,8 @@ const translations = {
     earthquakeLegendSource: "Circle size represents magnitude · ISC-GEM, NOAA/NCEI; early coverage varies by region",
     volcanoLegendTitle: "Global volcanoes",
     includePleistoceneVolcanoes: "Include Pleistocene volcanoes",
-    volcanoLegendSource: "Solid: Holocene · Outline: Pleistocene · Smithsonian GVP",
+    holoceneVolcanoes: "Holocene",
+    pleistoceneVolcanoes: "Pleistocene",
     overlay3d: "3D",
     overlay5a: "5A / National Parks",
     overlayAncientCapitals: "Ancient Chinese Capitals",
@@ -8080,14 +8082,14 @@ function syncMapLibreHazardOverlays(overlays) {
   }
   if (overlays.volcanoes && globalVolcanoes.length) {
     if (!mapLibreMap.hasImage("volcano-triangle")) mapLibreMap.addImage("volcano-triangle", createVolcanoTriangleImage(), { pixelRatio: 2 });
-    if (!mapLibreMap.hasImage("volcano-triangle-outline")) mapLibreMap.addImage("volcano-triangle-outline", createVolcanoTriangleImage(32, true), { pixelRatio: 2 });
+    if (!mapLibreMap.hasImage("volcano-triangle-pleistocene")) mapLibreMap.addImage("volcano-triangle-pleistocene", createVolcanoTriangleImage(32, "pleistocene"), { pixelRatio: 2 });
     setMapLibreSource("global-volcanoes", volcanoGeoJson());
     mapLibreMap.addLayer({
       id: "volcano-points",
       type: "symbol",
       source: "global-volcanoes",
       layout: {
-        "icon-image": ["case", ["==", ["get", "epoch"], "Pleistocene"], "volcano-triangle-outline", "volcano-triangle"],
+        "icon-image": ["case", ["==", ["get", "epoch"], "Pleistocene"], "volcano-triangle-pleistocene", "volcano-triangle"],
         "icon-size": ["interpolate", ["linear"], ["zoom"], 2, 0.7, 8, 1.15],
         "icon-allow-overlap": true,
         "icon-ignore-placement": true,
@@ -8096,9 +8098,9 @@ function syncMapLibreHazardOverlays(overlays) {
   }
 }
 
-function createVolcanoTriangleImage(size = 32, outline = false) {
+function createVolcanoTriangleImage(size = 32, variant = "holocene") {
   const data = new Uint8Array(size * size * 4);
-  const paintTriangle = (inset, color) => {
+  const paintTriangle = (inset, color, alpha = 255) => {
     const topY = inset;
     const bottomY = size - inset - 1;
     const centerX = (size - 1) / 2;
@@ -8113,12 +8115,13 @@ function createVolcanoTriangleImage(size = 32, outline = false) {
         data[offset] = color[0];
         data[offset + 1] = color[1];
         data[offset + 2] = color[2];
-        data[offset + 3] = 255;
+        data[offset + 3] = alpha;
       }
     }
   };
-  paintTriangle(2, outline ? [111, 66, 45] : [255, 255, 255]);
-  paintTriangle(6, outline ? [232, 169, 104] : [139, 30, 30]);
+  const isPleistocene = variant === "pleistocene";
+  paintTriangle(2, [255, 255, 255]);
+  paintTriangle(6, isPleistocene ? [120, 113, 108] : [139, 30, 30]);
   return { width: size, height: size, data };
 }
 
@@ -9758,7 +9761,7 @@ function renderLeafletLayers() {
     volcanoGeoJson().features.forEach((feature) => {
       const props = feature.properties;
       L.marker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], {
-        icon: L.divIcon({ className: `volcano-map-marker${props.epoch === "Pleistocene" ? " pleistocene" : ""}`, html: props.epoch === "Pleistocene" ? "△" : "▲", iconSize: [18, 18], iconAnchor: [9, 9] }),
+        icon: L.divIcon({ className: `volcano-map-marker${props.epoch === "Pleistocene" ? " pleistocene" : ""}`, html: "▲", iconSize: [18, 18], iconAnchor: [9, 9] }),
       }).bindPopup(mapPopupHtml(`<strong>${escapeHtml(props.name || "")}</strong><br>${escapeHtml([props.country, props.morphology].filter(Boolean).join(" · "))}<br>${props.elevation ? `${escapeHtml(props.elevation)} m` : ""} · ${props.epoch === "Pleistocene" ? (currentLanguage === "en" ? "Pleistocene" : "更新世") : (currentLanguage === "en" ? "Holocene" : "全新世")}${props.lastEruption ? `<br>${currentLanguage === "en" ? "Last known eruption" : "最近已知喷发"} ${escapeHtml(props.lastEruption)}` : ""}<br><small>Smithsonian GVP</small>`), { closeButton: false }).addTo(leafletLayers);
     });
   }
