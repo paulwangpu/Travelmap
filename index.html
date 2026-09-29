@@ -6,7 +6,7 @@
     <title>我的全球旅行地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" />
-    <link rel="stylesheet" href="styles.css?v=133" />
+    <link rel="stylesheet" href="styles.css?v=136" />
   </head>
   <body>
     <div class="app-shell map-first-shell">
@@ -35,7 +35,7 @@
             <strong data-i18n="privacyTitle">本地保存</strong>
             <p data-i18n="privacyText">数据只保存在本机浏览器里，不会自动上传或公开。如需备份请导出。</p>
           </div>
-          <div class="app-version" id="appVersion">v2.1.0</div>
+          <div class="app-version" id="appVersion">v2.1.1</div>
         </div>
       </aside>
 
@@ -59,6 +59,8 @@
                   <option value="google" data-i18n="providerGoogle">Google 街道</option>
                   <option value="googleSatellite" data-i18n="providerGoogleSatellite">Google 卫星</option>
                   <option value="googleTerrain" data-i18n="providerGoogleTerrain">Google 地形</option>
+                  <option value="seafloorAge" data-i18n="providerSeafloorAge">海底年龄（植被）</option>
+                  <option value="seafloorContours" data-i18n="providerSeafloorContours">海底年龄（植被＋等值线）</option>
                   <option value="esriSatellite" data-i18n="providerEsriSatellite">Esri 卫星</option>
                   <option value="bingRoad" data-i18n="providerBingRoad">Bing 地图</option>
                   <option value="bingAerial" data-i18n="providerBingAerial">Bing 卫星</option>
@@ -102,6 +104,7 @@
                 <label><input id="showRailwaysOnMap" type="checkbox" /> <span data-i18n="overlayRailways">铁路线路</span></label>
                 <label><input id="showEarthquakesOnMap" type="checkbox" /> <span data-i18n="overlayEarthquakes">地震</span></label>
                 <label><input id="showVolcanoesOnMap" type="checkbox" /> <span data-i18n="overlayVolcanoes">火山</span></label>
+                <label><input id="showPlateTectonicsOnMap" type="checkbox" /> <span data-i18n="overlayPlateTectonics">板块构造</span></label>
               </div>
             </section>
 
@@ -133,6 +136,35 @@
               <div class="loading-debug" id="loadingDebug" hidden></div>
               <div class="leaflet-map" id="leafletMap"></div>
               <div class="map-overlay-legends" id="mapOverlayLegends" hidden>
+                <aside class="seafloor-age-legend" id="seafloorAgeLegend" hidden>
+                  <strong data-i18n="seafloorAgeLegend">海洋岩石圈年龄</strong>
+                  <div class="seafloor-age-scale" aria-hidden="true"></div>
+                  <div class="seafloor-age-labels"><span>0</span><span>50</span><span>100</span><span>150</span><span>200</span><span>250</span><span>280</span></div>
+                  <small data-i18n="seafloorAgeUnit">百万年 · NOAA/NCEI</small>
+                </aside>
+                <aside class="seafloor-contour-legend" id="seafloorContourLegend" hidden>
+                  <strong data-i18n="seafloorContourLegend">海底年龄等值线</strong>
+                  <div class="seafloor-contour-row"><i class="seafloor-contour-swatch"></i><span data-i18n="seafloorContourInterval">年龄等值线：每 5 百万年</span></div>
+                  <div class="seafloor-contour-boundaries">
+                    <span><i class="seafloor-boundary-convergent"></i><b data-i18n="plateBoundaryConvergent">汇聚边界</b></span>
+                    <span><i class="seafloor-boundary-divergent"></i><b data-i18n="plateBoundaryDivergent">离散边界</b></span>
+                    <span><i class="seafloor-boundary-transform"></i><b data-i18n="plateBoundaryTransform">转换边界</b></span>
+                  </div>
+                  <small data-i18n="seafloorContourSource">NOAA/NCEI · 悉尼大学</small>
+                </aside>
+                <aside class="tectonic-legend" id="tectonicLegend" hidden>
+                  <strong data-i18n="tectonicLegendTitle">全球板块构造</strong>
+                  <div class="tectonic-legend-items">
+                    <span><i class="tectonic-swatch tectonic-subduction"></i><b data-i18n="tectonicSubduction">俯冲带</b></span>
+                    <span><i class="tectonic-swatch tectonic-ridge"></i><b data-i18n="tectonicRidge">洋中脊</b></span>
+                    <span><i class="tectonic-swatch tectonic-transform"></i><b data-i18n="tectonicTransform">转换断层</b></span>
+                    <span><i class="tectonic-swatch tectonic-rift"></i><b data-i18n="tectonicRift">大陆裂谷</b></span>
+                    <span><i class="tectonic-swatch tectonic-fracture"></i><b data-i18n="tectonicFracture">断裂带 / 断层</b></span>
+                    <span><i class="tectonic-swatch tectonic-orogen"></i><b data-i18n="tectonicOrogen">造山带 / 地体边界</b></span>
+                    <span><i class="tectonic-swatch tectonic-inferred"></i><b data-i18n="tectonicInferred">推断及其他边界</b></span>
+                  </div>
+                  <small data-i18n="tectonicLegendSource">现今有效构造 · EarthByte GPlates Müller 2019</small>
+                </aside>
                 <aside class="hazard-legend earthquake-legend" id="earthquakeLegend" hidden>
                   <strong data-i18n="earthquakeLegendTitle">全球历史地震</strong>
                   <label><span data-i18n="minimumMagnitude">最低震级</span><select id="earthquakeMagnitude"><option value="4">4.0+</option><option value="5">5.0+</option><option value="6">6.0+</option><option value="7">7.0+</option></select></label>
@@ -361,6 +393,6 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
     <script src="https://unpkg.com/pmtiles@4.4.0/dist/pmtiles.js"></script>
-    <script src="app.js?v=523"></script>
+    <script src="app.js?v=526"></script>
   </body>
 </html>

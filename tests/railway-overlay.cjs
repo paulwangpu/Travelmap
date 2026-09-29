@@ -18,7 +18,7 @@ assert.match(app, /function syncMapLibreRailwayOverlay/);
 assert.match(app, /railwayPane/);
 assert.match(app, /OpenStreetMap contributors · OpenRailwayMap/);
 assert.match(app, /railwayLegend\.hidden = !overlays\.railways/);
-assert.match(app, /overlayLegends\.hidden = !overlays\.populationDensity && !overlays\.railways/);
+assert.match(app, /overlayLegends\.hidden = .*?!overlays\.populationDensity && !overlays\.railways/);
 assert.match(app, /railwayLegendHighspeed: "高速铁路（>200 km\/h）"/);
 assert.match(app, /overlayRailways: "铁路线路"/);
 assert.match(html, /class="railway-legend-details"/);
