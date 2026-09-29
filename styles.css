@@ -800,7 +800,6 @@ button:hover {
 .population-density-legend,
 .seafloor-age-legend,
 .seafloor-contour-legend,
-.tectonic-legend,
 .railway-legend,
 .hazard-legend {
   padding: 8px 10px;
@@ -820,7 +819,6 @@ button:hover {
 .population-density-legend[hidden],
 .seafloor-age-legend[hidden],
 .seafloor-contour-legend[hidden],
-.tectonic-legend[hidden],
 .railway-legend[hidden],
 .hazard-legend[hidden] {
   display: none;
@@ -853,21 +851,6 @@ button:hover {
 .seafloor-contour-boundaries .seafloor-boundary-convergent { border-color: #00e629; }
 .seafloor-contour-boundaries .seafloor-boundary-divergent { border-color: #f20d18; }
 .seafloor-contour-boundaries .seafloor-boundary-transform { border-color: #cf00de; }
-
-.tectonic-legend { padding: 8px 10px; border: 1px solid rgba(18, 54, 45, 0.16); border-radius: 8px; background: rgba(255, 255, 255, 0.92); box-shadow: 0 8px 20px rgba(24, 32, 28, 0.15); color: #12362d; pointer-events: none; backdrop-filter: blur(8px); }
-.tectonic-legend strong { display: block; margin-bottom: 6px; font-size: 11px; }
-.tectonic-legend small { display: block; margin-top: 6px; color: #53655f; font-size: 8px; }
-.tectonic-legend-items { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px 10px; }
-.tectonic-legend-items span { display: flex; min-width: 0; align-items: center; gap: 6px; color: #40544e; font-size: 8px; }
-.tectonic-legend-items b { overflow: hidden; font-weight: 600; text-overflow: ellipsis; white-space: nowrap; }
-.tectonic-swatch { flex: 0 0 24px; width: 24px; height: 0; border-top: 3px solid; }
-.tectonic-subduction { border-color: #c62828; }
-.tectonic-ridge { border-color: #f57c00; }
-.tectonic-transform { border-color: #7b1fa2; border-top-style: dashed; }
-.tectonic-rift { border-color: #0288d1; border-top-style: dashed; }
-.tectonic-fracture { border-color: #546e7a; border-top-style: dotted; }
-.tectonic-orogen { border-color: #2e7d32; }
-.tectonic-inferred { border-color: #90a4ae; border-top-style: dashed; }
 
 .population-density-legend strong,
 .population-density-legend small {

@@ -79,10 +79,8 @@ let usNpsCatalogPromise = null;
 let usNpsBoundaryPromise = null;
 let earthquakeDataPromise = null;
 let volcanoDataPromise = null;
-let plateTectonicsDataPromise = null;
 let historicalEarthquakes = [];
 let globalVolcanoes = [];
-let plateTectonicsData = { type: "FeatureCollection", features: [] };
 let usNpsUnits = [];
 let usNpsGroups = [];
 let usNpsUnitById = new Map();
@@ -383,16 +381,6 @@ const translations = {
     overlayRailways: "铁路线路",
     overlayEarthquakes: "地震",
     overlayVolcanoes: "火山",
-    overlayPlateTectonics: "板块构造",
-    tectonicLegendTitle: "全球板块构造",
-    tectonicSubduction: "俯冲带",
-    tectonicRidge: "洋中脊",
-    tectonicTransform: "转换断层",
-    tectonicRift: "大陆裂谷",
-    tectonicFracture: "断裂带 / 断层",
-    tectonicOrogen: "造山带 / 地体边界",
-    tectonicInferred: "推断及其他边界",
-    tectonicLegendSource: "现今有效构造 · EarthByte GPlates Müller 2019",
     earthquakeLegendTitle: "全球历史地震",
     minimumMagnitude: "最低震级",
     earthquakeLegendSource: "圆点大小表示震级 · ISC-GEM、NOAA/NCEI；早期完整度因地区而异",
@@ -614,16 +602,6 @@ const translations = {
     overlayRailways: "Railway lines",
     overlayEarthquakes: "Earthquakes",
     overlayVolcanoes: "Volcanoes",
-    overlayPlateTectonics: "Plate tectonics",
-    tectonicLegendTitle: "Global plate tectonics",
-    tectonicSubduction: "Subduction zone",
-    tectonicRidge: "Mid-ocean ridge",
-    tectonicTransform: "Transform fault",
-    tectonicRift: "Continental rift",
-    tectonicFracture: "Fracture zone / fault",
-    tectonicOrogen: "Orogen / terrane boundary",
-    tectonicInferred: "Inferred and other boundary",
-    tectonicLegendSource: "Present-day features · EarthByte GPlates Müller 2019",
     earthquakeLegendTitle: "Global historical earthquakes",
     minimumMagnitude: "Minimum magnitude",
     earthquakeLegendSource: "Circle size represents magnitude · ISC-GEM, NOAA/NCEI; early coverage varies by region",
@@ -758,7 +736,7 @@ function t(key) {
 }
 
 function defaultMapOverlays() {
-  return { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, earthquakes: false, volcanoes: false, plateTectonics: false, china5a: false, chinaAncientCapitals: false, worldHeritage: false, highAltitude: false };
+  return { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, earthquakes: false, volcanoes: false, china5a: false, chinaAncientCapitals: false, worldHeritage: false, highAltitude: false };
 }
 
 function normalizeMapOverlays(overlays = {}) {
@@ -769,7 +747,6 @@ function normalizeMapOverlays(overlays = {}) {
     railways: Boolean(overlays.railways),
     earthquakes: Boolean(overlays.earthquakes),
     volcanoes: Boolean(overlays.volcanoes),
-    plateTectonics: Boolean(overlays.plateTectonics),
     china5a: Boolean(overlays.china5a),
     chinaAncientCapitals: Boolean(overlays.chinaAncientCapitals),
     worldHeritage: Boolean(overlays.worldHeritage),
@@ -3833,7 +3810,7 @@ let state = {
   populationDensityOpacity: 50,
   map3d: false,
   detectedMapProvider: "",
-  mapOverlays: { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, earthquakes: false, volcanoes: false, plateTectonics: false, china5a: false, chinaAncientCapitals: false, worldHeritage: false, highAltitude: false },
+  mapOverlays: { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, earthquakes: false, volcanoes: false, china5a: false, chinaAncientCapitals: false, worldHeritage: false, highAltitude: false },
   earthquakeMinMagnitude: 5,
   volcanoIncludePleistocene: false,
   mapViewport: null,
@@ -4206,15 +4183,6 @@ function loadVolcanoData() {
     return globalVolcanoes;
   });
   return volcanoDataPromise;
-}
-
-function loadPlateTectonicsData() {
-  if (plateTectonicsDataPromise) return plateTectonicsDataPromise;
-  plateTectonicsDataPromise = fetchJson("data/plate-tectonics.geojson").then((data) => {
-    plateTectonicsData = data?.type === "FeatureCollection" ? data : { type: "FeatureCollection", features: [] };
-    return plateTectonicsData;
-  });
-  return plateTectonicsDataPromise;
 }
 
 function earthquakeMagnitude(item) {
@@ -8128,40 +8096,6 @@ function syncMapLibreHazardOverlays(overlays) {
   }
 }
 
-const tectonicStyles = {
-  subduction: { color: "#c62828", width: 2.6, dash: [1, 0] },
-  ridge: { color: "#f57c00", width: 2.2, dash: [1, 0] },
-  transform: { color: "#7b1fa2", width: 2, dash: [3, 2] },
-  rift: { color: "#0288d1", width: 2, dash: [5, 2] },
-  "fracture-zone": { color: "#546e7a", width: 1.5, dash: [2, 2] },
-  fault: { color: "#37474f", width: 1.7, dash: [1, 0] },
-  "terrane-boundary": { color: "#6d4c41", width: 1.6, dash: [4, 2] },
-  "orogenic-belt": { color: "#2e7d32", width: 2.2, dash: [1, 0] },
-  "inferred-boundary": { color: "#78909c", width: 1.4, dash: [2, 3] },
-  other: { color: "#90a4ae", width: 1.3, dash: [2, 3] },
-};
-
-function syncMapLibrePlateTectonicsOverlay(enabled) {
-  if (!mapLibreMap || !mapLibreStyleReady) return;
-  Object.keys(tectonicStyles).forEach((category) => removeMapLibreLayer(`plate-tectonics-${category}`));
-  if (!enabled || !plateTectonicsData.features.length) return;
-  setMapLibreSource("plate-tectonics", plateTectonicsData);
-  Object.entries(tectonicStyles).forEach(([category, style]) => {
-    mapLibreMap.addLayer({
-      id: `plate-tectonics-${category}`,
-      type: "line",
-      source: "plate-tectonics",
-      filter: ["==", ["get", "category"], category],
-      paint: {
-        "line-color": style.color,
-        "line-width": ["interpolate", ["linear"], ["zoom"], 1, style.width * 0.65, 6, style.width, 10, style.width * 1.35],
-        "line-opacity": 0.9,
-        ...(style.dash[1] ? { "line-dasharray": style.dash } : {}),
-      },
-    });
-  });
-}
-
 function createVolcanoTriangleImage(size = 32, outline = false) {
   const data = new Uint8Array(size * size * 4);
   const paintTriangle = (inset, color) => {
@@ -8524,7 +8458,6 @@ function renderMapLibreLayers() {
     syncMapLibrePopulationDensityOverlay(overlays.populationDensity);
     syncMapLibreRailwayOverlay(overlays.railways);
     syncMapLibreHazardOverlays(overlays);
-    syncMapLibrePlateTectonicsOverlay(overlays.plateTectonics);
     renderMapLibreMarkers(overlays);
     bringMapLibrePointLayersToFront();
     setLoadingDebug("娓叉煋鍦板浘鍥惧眰", "done");
@@ -8652,7 +8585,6 @@ function renderMapLibreLayers() {
   syncMapLibrePopulationDensityOverlay(overlays.populationDensity);
   syncMapLibreRailwayOverlay(overlays.railways);
   syncMapLibreHazardOverlays(overlays);
-  syncMapLibrePlateTectonicsOverlay(overlays.plateTectonics);
   if (overlays.china5a && usNpsBoundaries && usNpsUnits.length) {
     ensureMapLibreUsNpsSourceAndLayers(true);
   }
@@ -9829,16 +9761,6 @@ function renderLeafletLayers() {
         icon: L.divIcon({ className: `volcano-map-marker${props.epoch === "Pleistocene" ? " pleistocene" : ""}`, html: props.epoch === "Pleistocene" ? "△" : "▲", iconSize: [18, 18], iconAnchor: [9, 9] }),
       }).bindPopup(mapPopupHtml(`<strong>${escapeHtml(props.name || "")}</strong><br>${escapeHtml([props.country, props.morphology].filter(Boolean).join(" · "))}<br>${props.elevation ? `${escapeHtml(props.elevation)} m` : ""} · ${props.epoch === "Pleistocene" ? (currentLanguage === "en" ? "Pleistocene" : "更新世") : (currentLanguage === "en" ? "Holocene" : "全新世")}${props.lastEruption ? `<br>${currentLanguage === "en" ? "Last known eruption" : "最近已知喷发"} ${escapeHtml(props.lastEruption)}` : ""}<br><small>Smithsonian GVP</small>`), { closeButton: false }).addTo(leafletLayers);
     });
-  }
-
-  if (overlays.plateTectonics && plateTectonicsData.features.length) {
-    L.geoJSON(plateTectonicsData, {
-      style: (feature) => {
-        const style = tectonicStyles[feature.properties?.category] || tectonicStyles.other;
-        return { color: style.color, weight: style.width, opacity: 0.9, dashArray: style.dash[1] ? style.dash.join(" ") : null };
-      },
-      onEachFeature: (feature, layer) => layer.bindTooltip(feature.properties?.name || t("tectonicLegendTitle"), { sticky: true }),
-    }).addTo(leafletLayers);
   }
 
   if (overlays.light) {
@@ -14299,7 +14221,6 @@ function renderMapControls() {
   const showRailways = $("#showRailwaysOnMap");
   const showEarthquakes = $("#showEarthquakesOnMap");
   const showVolcanoes = $("#showVolcanoesOnMap");
-  const showPlateTectonics = $("#showPlateTectonicsOnMap");
   const show3d = $("#show3dMap");
   const showChina5a = $("#showChina5aOnMap");
   const showAncientCapitals = $("#showAncientCapitalsOnMap");
@@ -14313,7 +14234,6 @@ function renderMapControls() {
   if (showRailways) showRailways.checked = Boolean(overlays.railways);
   if (showEarthquakes) showEarthquakes.checked = Boolean(overlays.earthquakes);
   if (showVolcanoes) showVolcanoes.checked = Boolean(overlays.volcanoes);
-  if (showPlateTectonics) showPlateTectonics.checked = Boolean(overlays.plateTectonics);
   const populationLegend = $("#populationDensityLegend");
   if (populationLegend) populationLegend.hidden = !overlays.populationDensity;
   const densityOpacity = $("#populationDensityOpacity");
@@ -14343,8 +14263,6 @@ function renderMapControls() {
   if (earthquakeLegend) earthquakeLegend.hidden = !overlays.earthquakes;
   const volcanoLegend = $("#volcanoLegend");
   if (volcanoLegend) volcanoLegend.hidden = !overlays.volcanoes;
-  const tectonicLegend = $("#tectonicLegend");
-  if (tectonicLegend) tectonicLegend.hidden = !overlays.plateTectonics;
   const activeProvider = activeMapProvider();
   const showSeafloorAgeLegend = activeProvider === "seafloorAge";
   const showSeafloorContourLegend = activeProvider === "seafloorContours";
@@ -14357,7 +14275,7 @@ function renderMapControls() {
   const earthquakeMagnitudeSelect = $("#earthquakeMagnitude");
   if (earthquakeMagnitudeSelect) earthquakeMagnitudeSelect.value = String(Number(state.earthquakeMinMagnitude) || 5);
   const overlayLegends = $("#mapOverlayLegends");
-  if (overlayLegends) overlayLegends.hidden = !showSeafloorAgeLegend && !showSeafloorContourLegend && !overlays.populationDensity && !overlays.railways && !overlays.earthquakes && !overlays.volcanoes && !overlays.plateTectonics;
+  if (overlayLegends) overlayLegends.hidden = !showSeafloorAgeLegend && !showSeafloorContourLegend && !overlays.populationDensity && !overlays.railways && !overlays.earthquakes && !overlays.volcanoes;
   if (show3d) show3d.checked = Boolean(state.map3d);
   if (showChina5a) showChina5a.checked = Boolean(overlays.china5a);
   if (showAncientCapitals) showAncientCapitals.checked = Boolean(overlays.chinaAncientCapitals);
@@ -14488,7 +14406,6 @@ function showPage(pageId, targetId = "") {
     if (state.mapOverlays?.flights) loadAirportData().then(refreshFlightRoutesOnMap);
     if (state.mapOverlays?.earthquakes) loadEarthquakeData().finally(renderGeoMap);
     if (state.mapOverlays?.volcanoes) loadVolcanoData().finally(renderGeoMap);
-    if (state.mapOverlays?.plateTectonics) loadPlateTectonicsData().finally(renderGeoMap);
     if (state.mapOverlays?.highAltitude) renderGeoMap();
     setTimeout(() => {
       if (mapLibreMap) mapLibreMap.resize();
@@ -14910,14 +14827,6 @@ $("#showVolcanoesOnMap")?.addEventListener("change", (event) => {
   renderMapControls();
   if (!event.target.checked) return renderGeoMap();
   loadVolcanoData().finally(renderGeoMap);
-});
-$("#showPlateTectonicsOnMap")?.addEventListener("change", (event) => {
-  state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
-  state.mapOverlays.plateTectonics = event.target.checked;
-  saveUiStateSoon();
-  renderMapControls();
-  if (!event.target.checked) return renderGeoMap();
-  loadPlateTectonicsData().finally(renderGeoMap);
 });
 $("#earthquakeMagnitude")?.addEventListener("change", (event) => {
   state.earthquakeMinMagnitude = [4, 5, 6, 7].includes(Number(event.target.value)) ? Number(event.target.value) : 5;
