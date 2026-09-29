@@ -785,6 +785,8 @@ button:hover {
   left: 12px;
   bottom: 42px;
   width: min(280px, calc(100% - 126px));
+  max-height: calc(100% - 100px);
+  overflow-y: auto;
   display: grid;
   gap: 6px;
   pointer-events: none;
@@ -796,7 +798,8 @@ button:hover {
 }
 
 .population-density-legend,
-.railway-legend {
+.railway-legend,
+.hazard-legend {
   padding: 8px 10px;
   border: 1px solid rgba(18, 54, 45, 0.16);
   border-radius: 8px;
@@ -812,13 +815,45 @@ button:hover {
 }
 
 .population-density-legend[hidden],
-.railway-legend[hidden] {
+.railway-legend[hidden],
+.hazard-legend[hidden] {
   display: none;
 }
 
 .population-density-legend strong,
 .population-density-legend small {
   display: block;
+}
+
+.population-density-opacity {
+  display: grid;
+  grid-template-columns: auto minmax(76px, 1fr) 32px;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 6px;
+  color: #40544e;
+  font-size: 9px;
+  line-height: 1;
+  pointer-events: auto;
+  white-space: nowrap;
+}
+
+#populationDensityOpacity {
+  width: 100%;
+  height: 14px;
+  min-height: 14px;
+  margin: 0;
+  padding: 0;
+  accent-color: #176b52;
+  cursor: pointer;
+}
+
+#populationDensityOpacityValue {
+  color: #34554c;
+  font-size: 9px;
+  font-weight: 800;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
 }
 
 .population-density-legend strong {
@@ -853,6 +888,14 @@ button:hover {
   margin-bottom: 6px;
   font-size: 11px;
   line-height: 1.2;
+}
+
+.railway-legend-hint {
+  display: block;
+  margin: -2px 0 6px;
+  color: #65756f;
+  font-size: 8px;
+  line-height: 1.3;
 }
 
 .railway-legend-items {
@@ -893,9 +936,132 @@ button:hover {
 .railway-swatch-main { border-color: #f07f00; }
 .railway-swatch-branch { border-color: #f2c300; }
 .railway-swatch-inactive { border-color: #777; border-top-style: dashed; }
+.railway-swatch-rail { border-color: #ff8100; }
+.railway-swatch-narrow { border-color: #9a6324; }
+.railway-swatch-industrial { border-color: #87491d; }
+.railway-swatch-light { border-color: #7286c7; }
+.railway-swatch-subway { border-color: #667085; border-top-style: dotted; }
+.railway-swatch-tram { border-color: #6f42c1; }
+.railway-swatch-construction { border-color: #e31a1c; border-top-style: dashed; }
+.railway-swatch-proposed { border-color: #f07f00; border-top-style: dotted; }
+.railway-swatch-disused { border-color: #858585; border-top-style: dashed; }
+.railway-swatch-abandoned { border-color: #aaa; border-top-style: dotted; }
+.railway-swatch-siding { border-color: #d29a27; border-top-width: 2px; }
+.railway-swatch-yard-track { border-color: #ad8b45; border-top-width: 2px; }
+.railway-swatch-spur { border-color: #87491d; border-top-width: 2px; }
+.railway-swatch-crossover { border-color: #805b36; border-top-width: 2px; border-top-style: dashed; }
+.railway-swatch-preserved { border-color: #2e8b57; }
+.railway-swatch-funicular { border-color: #a04fc4; border-top-style: double; border-top-width: 4px; }
+.railway-swatch-rack { border-color: #555; border-top-style: dotted; }
+.railway-swatch-monorail { border-color: #2780a5; border-top-width: 4px; }
+
+.railway-legend-details {
+  margin-top: 7px;
+  max-height: min(360px, 48vh);
+  overflow: auto;
+  pointer-events: auto;
+  scrollbar-width: thin;
+}
+
+.railway-legend-details summary {
+  width: fit-content;
+  cursor: pointer;
+  color: #176b52;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.railway-legend-details[open] summary { margin-bottom: 7px; }
+
+.railway-official-legend {
+  display: block;
+  width: 100%;
+  height: min(360px, 44vh);
+  border: 1px solid rgba(18, 54, 45, 0.12);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.railway-legend-section {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px 10px;
+  padding: 7px 0;
+  border-top: 1px solid rgba(18, 54, 45, 0.1);
+  color: #40544e;
+  font-size: 9px;
+}
+
+.railway-legend-section b {
+  grid-column: 1 / -1;
+  color: #12362d;
+  font-size: 9px;
+}
+
+.railway-legend-section > span {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 6px;
+}
+
+.railway-symbol {
+  position: relative;
+  display: inline-grid;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 12px;
+  place-items: center;
+  color: #d92828;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.railway-symbol-station::before,
+.railway-symbol-halt::before,
+.railway-symbol-yard::before,
+.railway-symbol-switch::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border: 2px solid #263b36;
+  background: #fff;
+}
+.railway-symbol-halt::before { width: 5px; height: 5px; border-radius: 50%; }
+.railway-symbol-yard::before { width: 10px; height: 5px; background: #d7e5e0; }
+.railway-symbol-switch::before { width: 8px; height: 8px; border-width: 0 0 2px 2px; transform: rotate(-45deg); background: transparent; }
+.railway-symbol-tunnel::before { content: ""; width: 20px; border-top: 3px double #555; }
+.railway-symbol-crossing::before { content: "×"; color: #263b36; font-size: 14px; }
+.railway-symbol-signal::before { content: ""; width: 5px; height: 9px; border: 1px solid #263b36; border-radius: 3px; background: #e31a1c; }
+.railway-symbol-milestone::before { content: "1"; color: #263b36; font-size: 8px; border: 1px solid #263b36; border-radius: 2px; padding: 0 2px; }
+.railway-symbol-border::before { content: "│"; color: #263b36; font-size: 14px; font-weight: 400; }
+.railway-legend-note { display: block; padding-top: 7px; border-top: 1px solid rgba(18, 54, 45, 0.1); color: #60716b; font-size: 8px; line-height: 1.4; }
+.railway-legend-note a { color: #176b52; font-weight: 800; pointer-events: auto; }
+
+.hazard-legend strong,
+.hazard-legend small { display: block; }
+.hazard-legend strong { font-size: 11px; }
+.hazard-legend small { margin-top: 4px; color: #53655f; font-size: 9px; }
+.hazard-legend label { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 5px; font-size: 10px; pointer-events: auto; }
+.volcano-legend label { white-space: nowrap; }
+.volcano-legend label > span { white-space: nowrap; }
+.hazard-legend select { width: 70px; height: 24px; min-height: 24px; padding: 1px 22px 1px 7px; border-radius: 6px; font-size: 10px; }
+
+.volcano-map-marker {
+  color: #8b1e1e;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  cursor: pointer;
+}
+.volcano-map-marker.pleistocene { color: #7b4328; font-weight: 900; text-shadow: 0 0 1px #f0b277; }
+
+.leaflet-interactive { cursor: pointer; }
 
 @media (max-width: 380px) {
-  .railway-legend-items {
+  .railway-legend-items,
+  .railway-legend-section {
     grid-template-columns: 1fr;
   }
 }

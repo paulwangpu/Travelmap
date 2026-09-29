@@ -21,7 +21,7 @@ const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
 const worldHeritageCatalogTotal = 1248;
 const usNpsUnitTotal = 433;
-const dataCacheVersion = "20260924-great-wall-coordinate-fix";
+const dataCacheVersion = "20260928-isc-gem-gvp-hazards";
 let importGuideUserToggled = false;
 let syncingImportGuideOpenState = false;
 const fixedChecklistTotals = {
@@ -77,6 +77,10 @@ let china5aCoordinatesPromise = null;
 let chinaAncientCapitalsPromise = null;
 let usNpsCatalogPromise = null;
 let usNpsBoundaryPromise = null;
+let earthquakeDataPromise = null;
+let volcanoDataPromise = null;
+let historicalEarthquakes = [];
+let globalVolcanoes = [];
 let usNpsUnits = [];
 let usNpsGroups = [];
 let usNpsUnitById = new Map();
@@ -309,12 +313,50 @@ const translations = {
     providerGoogleSatellite: "Google 卫星",
     providerGoogleTerrain: "Google 地形",
     populationDensityLegend: "人口密度 · 2020",
+    populationDensityOpacity: "透明度",
     populationDensityUnit: "人 / km² · GHSL",
-    railwayLegendTitle: "铁路 · OpenRailwayMap",
+    railwayLegendTitle: "铁路线路 · OpenRailwayMap",
+    railwayLegendHint: "精简图例；展开后使用 OpenRailwayMap 官方图例",
     railwayLegendHighspeed: "高速铁路（>200 km/h）",
     railwayLegendMain: "铁路干线",
     railwayLegendBranch: "支线铁路",
     railwayLegendInactive: "建设中 / 停用",
+    railwayLegendMore: "完整图例",
+    railwayLegendTrackTypes: "线路类型",
+    railwayLegendRail: "普通铁路",
+    railwayLegendNarrow: "窄轨铁路",
+    railwayLegendIndustrial: "工业 / 专用铁路",
+    railwayLegendLightRail: "轻轨",
+    railwayLegendSubway: "地铁",
+    railwayLegendTram: "有轨电车",
+    railwayLegendServiceTracks: "站内与服务线",
+    railwayLegendSiding: "侧线 / 会让线",
+    railwayLegendYardTrack: "站场 / 调车线",
+    railwayLegendSpur: "专用线 / 岔线",
+    railwayLegendCrossover: "渡线",
+    railwayLegendSpecialRail: "特殊铁路",
+    railwayLegendPreserved: "保存铁路",
+    railwayLegendFunicular: "缆索铁路",
+    railwayLegendRack: "齿轨铁路",
+    railwayLegendMonorail: "单轨铁路",
+    railwayLegendStatus: "线路状态",
+    railwayLegendConstruction: "建设中",
+    railwayLegendProposed: "规划中",
+    railwayLegendDisused: "停用",
+    railwayLegendAbandoned: "废弃 / 已拆除",
+    railwayLegendFacilities: "铁路设施",
+    railwayLegendStation: "车站",
+    railwayLegendHalt: "乘降所",
+    railwayLegendYard: "编组场 / 线路所",
+    railwayLegendBuffer: "车挡",
+    railwayLegendSwitch: "道岔",
+    railwayLegendBridgeTunnel: "桥梁 / 隧道",
+    railwayLegendCrossing: "道口",
+    railwayLegendSignal: "铁路信号",
+    railwayLegendMilestone: "里程标",
+    railwayLegendOwnerChange: "管理分界",
+    railwayLegendNote: "完整图例由 OpenRailwayMap 官方实时生成，内容与标准铁路瓦片一致。",
+    railwayLegendOfficial: "单独打开",
     providerEsriSatellite: "Esri 卫星",
     providerBingRoad: "Bing 地图",
     providerBingAerial: "Bing 卫星",
@@ -324,9 +366,17 @@ const translations = {
     levelCity: "市级",
     overlayLight: "我的点亮",
     overlayCheckins: "我的打卡",
-    overlayTracks: "我的轨迹",
+    overlayTracks: "我的路径",
     overlayFlights: "我的航线",
-    overlayRailways: "铁路",
+    overlayRailways: "铁路线路",
+    overlayEarthquakes: "地震",
+    overlayVolcanoes: "火山",
+    earthquakeLegendTitle: "全球历史地震",
+    minimumMagnitude: "最低震级",
+    earthquakeLegendSource: "圆点大小表示震级 · ISC-GEM、NOAA/NCEI；早期完整度因地区而异",
+    volcanoLegendTitle: "全球火山",
+    includePleistoceneVolcanoes: "包含更新世火山",
+    volcanoLegendSource: "实心：全新世 · 空心：更新世 · Smithsonian GVP",
     overlay3d: "3D",
     overlay5a: "5A / 国家公园",
     overlayAncientCapitals: "中国古都",
@@ -359,9 +409,9 @@ const translations = {
     chooseFile: "选择文件",
     importGuideTitle: "导入说明",
     importGuideSummary: "查看导入说明",
-    importHelpCheckinsTitle: "打卡与轨迹导入",
+    importHelpCheckinsTitle: "打卡与路径导入",
     importHelpCheckinsIntro: "支持导入 GeoJSON/JSON、KML、CSV 和照片。",
-    importHelpGeoJson: "GeoJSON/KML：点数据将作为“我的打卡”显示；线和面数据将作为“我的轨迹”显示。",
+    importHelpGeoJson: "GeoJSON/KML：点数据将作为“我的打卡”显示；线和面数据将作为“我的路径”显示。",
     importHelpCsv: "CSV：建议仅保留名称、纬度和经度三列。也支持英文列名：name、lat/latitude、lng/lon/longitude。",
     importHelpPhoto: "照片：仅在本地读取文件名和 EXIF GPS 信息，不会上传照片。",
     importHelpFlightsTitle: "航线导入",
@@ -386,9 +436,9 @@ const translations = {
     coreCheckinsEyebrow: "核心打卡",
     totalCheckins: "总打卡地点",
     importedPoints: "已导入地点",
-    importedTracks: "已导入轨迹",
+    importedTracks: "已导入路径",
     importedFlights: "已导入航班",
-    trackLength: "轨迹长度",
+    trackLength: "路径长度",
     checked: "已去",
     unvisited: "未去",
     markVisited: "标记去过",
@@ -474,12 +524,50 @@ const translations = {
     providerGoogleSatellite: "Google Satellite",
     providerGoogleTerrain: "Google Terrain",
     populationDensityLegend: "Population density · 2020",
+    populationDensityOpacity: "Opacity",
     populationDensityUnit: "people / km² · GHSL",
-    railwayLegendTitle: "Railways · OpenRailwayMap",
+    railwayLegendTitle: "Railway lines · OpenRailwayMap",
+    railwayLegendHint: "Compact legend; expand for the official OpenRailwayMap legend",
     railwayLegendHighspeed: "High-speed (>200 km/h)",
     railwayLegendMain: "Main line",
     railwayLegendBranch: "Branch line",
     railwayLegendInactive: "Construction / inactive",
+    railwayLegendMore: "Full legend",
+    railwayLegendTrackTypes: "Track types",
+    railwayLegendRail: "Railroad line",
+    railwayLegendNarrow: "Narrow gauge",
+    railwayLegendIndustrial: "Industrial / service",
+    railwayLegendLightRail: "Light rail",
+    railwayLegendSubway: "Subway",
+    railwayLegendTram: "Tram",
+    railwayLegendServiceTracks: "Station and service tracks",
+    railwayLegendSiding: "Siding / passing loop",
+    railwayLegendYardTrack: "Yard track",
+    railwayLegendSpur: "Spur",
+    railwayLegendCrossover: "Crossover",
+    railwayLegendSpecialRail: "Special railways",
+    railwayLegendPreserved: "Preserved railway",
+    railwayLegendFunicular: "Funicular",
+    railwayLegendRack: "Rack railway",
+    railwayLegendMonorail: "Monorail",
+    railwayLegendStatus: "Line status",
+    railwayLegendConstruction: "Under construction",
+    railwayLegendProposed: "Proposed",
+    railwayLegendDisused: "Disused",
+    railwayLegendAbandoned: "Abandoned / razed",
+    railwayLegendFacilities: "Railway facilities",
+    railwayLegendStation: "Station",
+    railwayLegendHalt: "Halt",
+    railwayLegendYard: "Yard / service site",
+    railwayLegendBuffer: "Buffer stop",
+    railwayLegendSwitch: "Switch",
+    railwayLegendBridgeTunnel: "Bridge / tunnel",
+    railwayLegendCrossing: "Level crossing",
+    railwayLegendSignal: "Railway signal",
+    railwayLegendMilestone: "Milestone",
+    railwayLegendOwnerChange: "Owner boundary",
+    railwayLegendNote: "The full legend is generated live by OpenRailwayMap and matches its standard railway tiles.",
+    railwayLegendOfficial: "Open separately",
     providerEsriSatellite: "Esri Satellite",
     providerBingRoad: "Bing Road",
     providerBingAerial: "Bing Aerial",
@@ -489,9 +577,17 @@ const translations = {
     levelCity: "City level",
     overlayLight: "My lit areas",
     overlayCheckins: "My check-ins",
-    overlayTracks: "My tracks",
+    overlayTracks: "My paths",
     overlayFlights: "My flights",
-    overlayRailways: "Railways",
+    overlayRailways: "Railway lines",
+    overlayEarthquakes: "Earthquakes",
+    overlayVolcanoes: "Volcanoes",
+    earthquakeLegendTitle: "Global historical earthquakes",
+    minimumMagnitude: "Minimum magnitude",
+    earthquakeLegendSource: "Circle size represents magnitude · ISC-GEM, NOAA/NCEI; early coverage varies by region",
+    volcanoLegendTitle: "Global volcanoes",
+    includePleistoceneVolcanoes: "Include Pleistocene volcanoes",
+    volcanoLegendSource: "Solid: Holocene · Outline: Pleistocene · Smithsonian GVP",
     overlay3d: "3D",
     overlay5a: "5A / National Parks",
     overlayAncientCapitals: "Ancient Chinese Capitals",
@@ -524,9 +620,9 @@ const translations = {
     chooseFile: "Choose file",
     importGuideTitle: "Import Guide",
     importGuideSummary: "View import guide",
-    importHelpCheckinsTitle: "Check-in and Track Import",
+    importHelpCheckinsTitle: "Check-in and Path Import",
     importHelpCheckinsIntro: "Import GeoJSON/JSON, KML, CSV, and photos.",
-    importHelpGeoJson: "GeoJSON/KML: point data appears in My check-ins; lines and polygons appear in My tracks.",
+    importHelpGeoJson: "GeoJSON/KML: point data appears in My check-ins; lines and polygons appear in My paths.",
     importHelpCsv: "CSV: use only name, latitude, and longitude when possible. English headers are also supported: name, lat/latitude, lng/lon/longitude.",
     importHelpPhoto: "Photos: only local filenames and EXIF GPS metadata are read. Photos are not uploaded.",
     importHelpFlightsTitle: "Flight Route Import",
@@ -551,9 +647,9 @@ const translations = {
     coreCheckinsEyebrow: "Core check-ins",
     totalCheckins: "Total check-ins",
     importedPoints: "Imported places",
-    importedTracks: "Imported tracks",
+    importedTracks: "Imported paths",
     importedFlights: "Imported flights",
-    trackLength: "Track length",
+    trackLength: "Path length",
     checked: "Visited",
     unvisited: "Unvisited",
     markVisited: "Mark visited",
@@ -620,7 +716,7 @@ function t(key) {
 }
 
 function defaultMapOverlays() {
-  return { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, china5a: false, chinaAncientCapitals: false, worldHeritage: false, highAltitude: false };
+  return { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, earthquakes: false, volcanoes: false, china5a: false, chinaAncientCapitals: false, worldHeritage: false, highAltitude: false };
 }
 
 function normalizeMapOverlays(overlays = {}) {
@@ -629,6 +725,8 @@ function normalizeMapOverlays(overlays = {}) {
     ...overlays,
     populationDensity: Boolean(overlays.populationDensity),
     railways: Boolean(overlays.railways),
+    earthquakes: Boolean(overlays.earthquakes),
+    volcanoes: Boolean(overlays.volcanoes),
     china5a: Boolean(overlays.china5a),
     chinaAncientCapitals: Boolean(overlays.chinaAncientCapitals),
     worldHeritage: Boolean(overlays.worldHeritage),
@@ -952,7 +1050,6 @@ const mapProviders = {
 
 const populationDensityArchive = "data/population-density-2020-z0-8.pmtiles";
 const populationDensityAttribution = "Population: European Commission, JRC (GHSL 2023)";
-const populationDensityOpacity = 0.68;
 const railwayOverlayTiles = ["https://tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png"];
 const railwayOverlayAttribution = "© OpenStreetMap contributors · OpenRailwayMap";
 
@@ -964,6 +1061,11 @@ function normalizeMapProviderMode(value) {
 function normalizeMapBaseOpacity(value) {
   const number = Number(value);
   return Number.isFinite(number) ? Math.max(0, Math.min(100, Math.round(number))) : 100;
+}
+
+function normalizePopulationDensityOpacity(value) {
+  const number = Number(value);
+  return Number.isFinite(number) ? Math.max(0, Math.min(100, Math.round(number))) : 50;
 }
 
 function normalizeDetectedMapProvider(value) {
@@ -3673,9 +3775,12 @@ let state = {
   boundaryLevel: "country",
   mapProviderMode: "auto",
   mapBaseOpacity: 100,
+  populationDensityOpacity: 50,
   map3d: false,
   detectedMapProvider: "",
-  mapOverlays: { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, china5a: false, chinaAncientCapitals: false, worldHeritage: false, highAltitude: false },
+  mapOverlays: { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, earthquakes: false, volcanoes: false, china5a: false, chinaAncientCapitals: false, worldHeritage: false, highAltitude: false },
+  earthquakeMinMagnitude: 5,
+  volcanoIncludePleistocene: false,
   mapViewport: null,
   focusPlaceId: "",
 };
@@ -4028,6 +4133,70 @@ function fetchJson(url) {
     if (!response.ok) throw new Error(`${response.status}`);
     return response.json();
   });
+}
+
+function loadEarthquakeData() {
+  if (earthquakeDataPromise) return earthquakeDataPromise;
+  earthquakeDataPromise = fetchJson("data/historical-earthquakes.json").then((data) => {
+    historicalEarthquakes = (data?.items || []).filter((item) => Number.isFinite(Number(item.latitude)) && Number.isFinite(Number(item.longitude)));
+    return historicalEarthquakes;
+  });
+  return earthquakeDataPromise;
+}
+
+function loadVolcanoData() {
+  if (volcanoDataPromise) return volcanoDataPromise;
+  volcanoDataPromise = fetchJson("data/global-volcanoes.json").then((data) => {
+    globalVolcanoes = (data?.items || []).filter((item) => Number.isFinite(Number(item.latitude)) && Number.isFinite(Number(item.longitude)));
+    return globalVolcanoes;
+  });
+  return volcanoDataPromise;
+}
+
+function earthquakeMagnitude(item) {
+  return Number(item.eqMagnitude ?? item.eqMagUnk ?? 0) || 0;
+}
+
+function earthquakeGeoJson() {
+  const minimum = Number(state.earthquakeMinMagnitude) || 5;
+  return {
+    type: "FeatureCollection",
+    features: historicalEarthquakes.filter((item) => earthquakeMagnitude(item) >= minimum).map((item) => ({
+      type: "Feature",
+      geometry: { type: "Point", coordinates: [Number(item.longitude), Number(item.latitude)] },
+      properties: {
+        id: item.id,
+        name: item.locationName || item.country || "Earthquake",
+        country: item.country || "",
+        year: Number(item.year) || 0,
+        magnitude: earthquakeMagnitude(item),
+        source: item.source || "NOAA/NCEI",
+        catalogue: item.catalogue || "",
+        uncertain: Boolean(item.uncertain),
+      },
+    })),
+  };
+}
+
+function volcanoGeoJson() {
+  return {
+    type: "FeatureCollection",
+    features: globalVolcanoes.filter((item) => item.epoch !== "Pleistocene" || state.volcanoIncludePleistocene).map((item) => ({
+      type: "Feature",
+      geometry: { type: "Point", coordinates: [Number(item.longitude), Number(item.latitude)] },
+      properties: {
+        id: item.volcanoLocationId,
+        name: item.name || "Volcano",
+        country: item.country || item.location || "",
+        elevation: Number(item.elevation) || 0,
+        morphology: item.morphology || "",
+        evidence: item.evidence || "",
+        lastEruption: item.lastEruption || "",
+        epoch: item.epoch || "Holocene",
+        region: item.region || "",
+      },
+    })),
+  };
 }
 
 function versionedLocalDataUrl(url) {
@@ -5761,10 +5930,10 @@ function markMapEventHandled(event) {
 }
 
 function mapEventHitsPoint(event) {
-  if (!mapLibreMap || !event?.point || !mapLibreMap.getLayer("map-points-circle")) return false;
-  const pointLayers = ["map-points-circle", "map-points-label", "map-points-label-full"]
+  if (!mapLibreMap || !event?.point) return false;
+  const pointLayers = ["map-points-circle", "map-points-label", "map-points-label-full", "earthquake-points", "volcano-points"]
     .filter((layerId) => mapLibreMap.getLayer(layerId));
-  return mapLibreMap.queryRenderedFeatures(event.point, { layers: pointLayers }).length > 0;
+  return pointLayers.length > 0 && mapLibreMap.queryRenderedFeatures(event.point, { layers: pointLayers }).length > 0;
 }
 
 function mapEventHitsNpsBoundary(event) {
@@ -5802,6 +5971,7 @@ function applyLanguage() {
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     element.textContent = t(element.dataset.i18n);
   });
+  updateMapCheckboxTooltips();
   const version = $("#appVersion");
   if (version) version.textContent = `v${appVersion}`;
   document.querySelectorAll("[data-language]").forEach((button) => {
@@ -5811,6 +5981,16 @@ function applyLanguage() {
   });
   syncImportGuideOpenState();
   renderMapControls();
+}
+
+function updateMapCheckboxTooltips() {
+  document.querySelectorAll(".map-overlay-toggles label").forEach((label) => {
+    const input = label.querySelector('input[type="checkbox"]');
+    const text = label.querySelector("span")?.textContent?.trim();
+    if (!text) return;
+    label.title = text;
+    if (input) input.setAttribute("aria-label", text);
+  });
 }
 
 function setLanguage(language) {
@@ -5996,6 +6176,7 @@ function localStorageSnapshot(payload) {
       openChecklistGroups: savedState.openChecklistGroups || [],
       mapProviderMode: savedState.mapProviderMode || "auto",
       mapBaseOpacity: normalizeMapBaseOpacity(savedState.mapBaseOpacity),
+      populationDensityOpacity: normalizePopulationDensityOpacity(savedState.populationDensityOpacity),
       map3d: Boolean(savedState.map3d),
       detectedMapProvider: savedState.detectedMapProvider || "",
       mapOverlays: normalizeMapOverlays(savedState.mapOverlays || {}),
@@ -6079,6 +6260,7 @@ function applySavedPayload(saved) {
       openChecklistGroups: saved.state.openChecklistGroups || [],
       mapProviderMode: normalizeMapProviderMode(saved.state.mapProviderMode || state.mapProviderMode),
       mapBaseOpacity: normalizeMapBaseOpacity(saved.state.mapBaseOpacity),
+      populationDensityOpacity: normalizePopulationDensityOpacity(saved.state.populationDensityOpacity),
       map3d: Boolean(saved.state.map3d),
       detectedMapProvider: normalizeDetectedMapProvider(saved.state.detectedMapProvider || state.detectedMapProvider),
       mapOverlays: normalizeMapOverlays(saved.state.mapOverlays || {}),
@@ -6102,6 +6284,7 @@ function applyLocalStorageSnapshot(saved) {
     openChecklistGroups: saved.state.openChecklistGroups || state.openChecklistGroups || [],
     mapProviderMode: normalizeMapProviderMode(saved.state.mapProviderMode || state.mapProviderMode),
     mapBaseOpacity: normalizeMapBaseOpacity(saved.state.mapBaseOpacity),
+    populationDensityOpacity: normalizePopulationDensityOpacity(saved.state.populationDensityOpacity),
     map3d: Boolean(saved.state.map3d),
     detectedMapProvider: normalizeDetectedMapProvider(saved.state.detectedMapProvider || state.detectedMapProvider),
     mapOverlays: normalizeMapOverlays(saved.state.mapOverlays || state.mapOverlays || {}),
@@ -7804,7 +7987,7 @@ function syncMapLibrePopulationDensityOverlay(enabled) {
       minzoom: 0,
       maxzoom: 18,
       paint: {
-        "raster-opacity": populationDensityOpacity,
+        "raster-opacity": normalizePopulationDensityOpacity(state.populationDensityOpacity) / 100,
         "raster-resampling": "linear",
       },
     }, beforeId);
@@ -7841,6 +8024,68 @@ function syncMapLibreRailwayOverlay(enabled) {
       },
     });
   }
+}
+
+function syncMapLibreHazardOverlays(overlays) {
+  if (!mapLibreMap || !mapLibreStyleReady) return;
+  ["earthquake-points", "volcano-points"].forEach(removeMapLibreLayer);
+  if (overlays.earthquakes && historicalEarthquakes.length) {
+    setMapLibreSource("historical-earthquakes", earthquakeGeoJson());
+    mapLibreMap.addLayer({
+      id: "earthquake-points",
+      type: "circle",
+      source: "historical-earthquakes",
+      paint: {
+        "circle-radius": ["interpolate", ["linear"], ["get", "magnitude"], 4, 2, 6, 3.6, 8, 6.5],
+        "circle-color": ["interpolate", ["linear"], ["get", "magnitude"], 4, "#ffd166", 6, "#f97316", 8, "#b91c1c"],
+        "circle-stroke-color": "#fff",
+        "circle-stroke-width": 1.2,
+        "circle-opacity": 0.82,
+      },
+    });
+  }
+  if (overlays.volcanoes && globalVolcanoes.length) {
+    if (!mapLibreMap.hasImage("volcano-triangle")) mapLibreMap.addImage("volcano-triangle", createVolcanoTriangleImage(), { pixelRatio: 2 });
+    if (!mapLibreMap.hasImage("volcano-triangle-outline")) mapLibreMap.addImage("volcano-triangle-outline", createVolcanoTriangleImage(32, true), { pixelRatio: 2 });
+    setMapLibreSource("global-volcanoes", volcanoGeoJson());
+    mapLibreMap.addLayer({
+      id: "volcano-points",
+      type: "symbol",
+      source: "global-volcanoes",
+      layout: {
+        "icon-image": ["case", ["==", ["get", "epoch"], "Pleistocene"], "volcano-triangle-outline", "volcano-triangle"],
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 2, 0.7, 8, 1.15],
+        "icon-allow-overlap": true,
+        "icon-ignore-placement": true,
+      },
+    });
+  }
+}
+
+function createVolcanoTriangleImage(size = 32, outline = false) {
+  const data = new Uint8Array(size * size * 4);
+  const paintTriangle = (inset, color) => {
+    const topY = inset;
+    const bottomY = size - inset - 1;
+    const centerX = (size - 1) / 2;
+    const halfWidth = centerX - inset;
+    for (let y = topY; y <= bottomY; y += 1) {
+      const progress = (y - topY) / Math.max(1, bottomY - topY);
+      const span = halfWidth * progress;
+      const startX = Math.max(0, Math.ceil(centerX - span));
+      const endX = Math.min(size - 1, Math.floor(centerX + span));
+      for (let x = startX; x <= endX; x += 1) {
+        const offset = (y * size + x) * 4;
+        data[offset] = color[0];
+        data[offset + 1] = color[1];
+        data[offset + 2] = color[2];
+        data[offset + 3] = 255;
+      }
+    }
+  };
+  paintTriangle(2, outline ? [111, 66, 45] : [255, 255, 255]);
+  paintTriangle(6, outline ? [232, 169, 104] : [139, 30, 30]);
+  return { width: size, height: size, data };
 }
 
 function mapLibreSourceOptions(id) {
@@ -8178,6 +8423,7 @@ function renderMapLibreLayers() {
     // boundary level is loading.
     syncMapLibrePopulationDensityOverlay(overlays.populationDensity);
     syncMapLibreRailwayOverlay(overlays.railways);
+    syncMapLibreHazardOverlays(overlays);
     renderMapLibreMarkers(overlays);
     bringMapLibrePointLayersToFront();
     setLoadingDebug("娓叉煋鍦板浘鍥惧眰", "done");
@@ -8304,6 +8550,7 @@ function renderMapLibreLayers() {
   }
   syncMapLibrePopulationDensityOverlay(overlays.populationDensity);
   syncMapLibreRailwayOverlay(overlays.railways);
+  syncMapLibreHazardOverlays(overlays);
   if (overlays.china5a && usNpsBoundaries && usNpsUnits.length) {
     ensureMapLibreUsNpsSourceAndLayers(true);
   }
@@ -9157,6 +9404,41 @@ function renderCompactValueList(values) {
 }
 
 function bindMapLibreLayerHandlers() {
+  if (!mapLibreLayerHandlersBound.earthquakes && mapLibreMap.getLayer("earthquake-points")) {
+    mapLibreLayerHandlersBound.earthquakes = true;
+    mapLibreMap.on("click", "earthquake-points", (event) => {
+      if (mapAddMode || mapPathMode) return;
+      markMapEventHandled(event);
+      const props = event.features?.[0]?.properties || {};
+      const year = Number(props.year) < 0 ? `${Math.abs(Number(props.year))} BCE` : String(props.year || "");
+      const source = props.source === "ISC-GEM" ? `ISC-GEM${props.uncertain === true || props.uncertain === "true" ? ` · ${currentLanguage === "en" ? "supplementary catalogue" : "补充目录"}` : ""}` : "NOAA/NCEI";
+      new maplibregl.Popup({ offset: 10, closeButton: false }).setLngLat(event.lngLat).setHTML(mapPopupHtml(`<strong>${escapeHtml(props.name || "")}</strong><br>${currentLanguage === "en" ? "Magnitude" : "震级"} ${escapeHtml(props.magnitude)} · ${escapeHtml(year)}<br>${escapeHtml(props.country || "")}<br><small>${escapeHtml(source)}</small>`)).addTo(mapLibreMap);
+    });
+    mapLibreMap.on("mouseenter", "earthquake-points", () => {
+      if (!mapAddMode && !mapPathMode) mapLibreMap.getCanvas().style.cursor = "pointer";
+    });
+    mapLibreMap.on("mouseleave", "earthquake-points", () => {
+      if (!mapAddMode && !mapPathMode) mapLibreMap.getCanvas().style.cursor = "";
+    });
+  }
+  if (!mapLibreLayerHandlersBound.volcanoes && mapLibreMap.getLayer("volcano-points")) {
+    mapLibreLayerHandlersBound.volcanoes = true;
+    mapLibreMap.on("click", "volcano-points", (event) => {
+      if (mapAddMode || mapPathMode) return;
+      markMapEventHandled(event);
+      const props = event.features?.[0]?.properties || {};
+      const elevation = props.elevation ? `${props.elevation} m` : "";
+      const epoch = props.epoch === "Pleistocene" ? (currentLanguage === "en" ? "Pleistocene" : "更新世") : (currentLanguage === "en" ? "Holocene" : "全新世");
+      const lastEruption = props.lastEruption ? ` · ${currentLanguage === "en" ? "Last known eruption" : "最近已知喷发"} ${escapeHtml(props.lastEruption)}` : "";
+      new maplibregl.Popup({ offset: 10, closeButton: false }).setLngLat(event.lngLat).setHTML(mapPopupHtml(`<strong>${escapeHtml(props.name || "")}</strong><br>${escapeHtml([props.country, props.morphology].filter(Boolean).join(" · "))}<br>${escapeHtml(elevation)} · ${escapeHtml(epoch)}${lastEruption}${props.evidence ? `<br>${escapeHtml(props.evidence)}` : ""}<br><small>Smithsonian GVP</small>`)).addTo(mapLibreMap);
+    });
+    mapLibreMap.on("mouseenter", "volcano-points", () => {
+      if (!mapAddMode && !mapPathMode) mapLibreMap.getCanvas().style.cursor = "pointer";
+    });
+    mapLibreMap.on("mouseleave", "volcano-points", () => {
+      if (!mapAddMode && !mapPathMode) mapLibreMap.getCanvas().style.cursor = "";
+    });
+  }
   if (!mapLibreLayerHandlersBound.pathVertices && mapLibreMap.getLayer("imported-shapes-path-line-vertices")) {
     mapLibreLayerHandlersBound.pathVertices = true;
     mapLibreMap.on("click", "imported-shapes-path-line-vertices", (event) => {
@@ -9407,7 +9689,7 @@ function renderLeafletLayers() {
       pane: "populationDensityPane",
       maxNativeZoom: 8,
       maxZoom: 18,
-      opacity: populationDensityOpacity,
+      opacity: normalizePopulationDensityOpacity(state.populationDensityOpacity) / 100,
       attribution: populationDensityAttribution,
     }).addTo(leafletLayers);
   }
@@ -9425,6 +9707,26 @@ function renderLeafletLayers() {
       opacity: 0.88,
       attribution: railwayOverlayAttribution,
     }).addTo(leafletLayers);
+  }
+
+  if (overlays.earthquakes && historicalEarthquakes.length) {
+    earthquakeGeoJson().features.forEach((feature) => {
+      const props = feature.properties;
+      const year = Number(props.year) < 0 ? `${Math.abs(Number(props.year))} BCE` : String(props.year || "");
+      L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], {
+        radius: Math.max(2, Math.min(6.5, Number(props.magnitude) - 3)),
+        color: "#fff", weight: 1, fillColor: Number(props.magnitude) >= 7 ? "#b91c1c" : Number(props.magnitude) >= 6 ? "#f97316" : "#ffd166", fillOpacity: 0.82,
+      }).bindPopup(mapPopupHtml(`<strong>${escapeHtml(props.name || "")}</strong><br>${currentLanguage === "en" ? "Magnitude" : "震级"} ${escapeHtml(props.magnitude)} · ${escapeHtml(year)}<br>${escapeHtml(props.country || "")}<br><small>${escapeHtml(props.source === "ISC-GEM" ? `ISC-GEM${props.uncertain ? ` · ${currentLanguage === "en" ? "supplementary catalogue" : "补充目录"}` : ""}` : "NOAA/NCEI")}</small>`), { closeButton: false }).addTo(leafletLayers);
+    });
+  }
+
+  if (overlays.volcanoes && globalVolcanoes.length) {
+    volcanoGeoJson().features.forEach((feature) => {
+      const props = feature.properties;
+      L.marker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], {
+        icon: L.divIcon({ className: `volcano-map-marker${props.epoch === "Pleistocene" ? " pleistocene" : ""}`, html: props.epoch === "Pleistocene" ? "△" : "▲", iconSize: [18, 18], iconAnchor: [9, 9] }),
+      }).bindPopup(mapPopupHtml(`<strong>${escapeHtml(props.name || "")}</strong><br>${escapeHtml([props.country, props.morphology].filter(Boolean).join(" · "))}<br>${props.elevation ? `${escapeHtml(props.elevation)} m` : ""} · ${props.epoch === "Pleistocene" ? (currentLanguage === "en" ? "Pleistocene" : "更新世") : (currentLanguage === "en" ? "Holocene" : "全新世")}${props.lastEruption ? `<br>${currentLanguage === "en" ? "Last known eruption" : "最近已知喷发"} ${escapeHtml(props.lastEruption)}` : ""}<br><small>Smithsonian GVP</small>`), { closeButton: false }).addTo(leafletLayers);
+    });
   }
 
   if (overlays.light) {
@@ -10475,7 +10777,7 @@ function renderImportSummary() {
     <details class="import-manager-group" data-import-group="manualCheckins" ${open("manualCheckins")}><summary><strong>${en ? "Manual check-ins" : "手动打卡"}</strong><span>${manualCheckins.length}</span></summary><div class="manual-path-bulk"><label><input type="checkbox" data-select-visible-checkins ${allVisibleCheckinsSelected ? "checked" : ""} /> ${checkinPageCount > 1 ? (en ? "Select this page" : "选择本页") : (en ? "Select all" : "全选")}</label><button class="table-action danger" data-delete-selected-checkins type="button" ${selectedManualCheckinIds.size ? "" : "disabled"}>${en ? `Delete selected (${selectedManualCheckinIds.size})` : `删除所选（${selectedManualCheckinIds.size}）`}</button></div><div class="import-compact-list">${checkinRows || `<p class="muted small">${en ? "No matching manual check-ins" : "没有匹配的手动打卡"}</p>`}</div>${checkinPageCount > 1 ? renderImportPagination("checkins", manualCheckinPage, checkinPageCount, en) : ""}</details>
     <details class="import-manager-group" data-import-group="paths" ${open("paths")}><summary><strong>${en ? "Manual paths" : "手动路径"}</strong><span>${manualPaths.length}</span></summary><div class="manual-path-bulk"><label><input type="checkbox" data-select-visible-paths ${allVisiblePathsSelected ? "checked" : ""} /> ${pathPageCount > 1 ? (en ? "Select this page" : "选择本页") : (en ? "Select all" : "全选")}</label><button class="table-action danger" data-delete-selected-paths type="button" ${selectedManualPathIds.size ? "" : "disabled"}>${en ? `Delete selected (${selectedManualPathIds.size})` : `删除所选（${selectedManualPathIds.size}）`}</button></div><div class="import-compact-list">${pathRows || `<p class="muted small">${en ? "No matching manual paths" : "没有匹配的手动路径"}</p>`}</div>${pathPageCount > 1 ? renderImportPagination("paths", manualPathPage, pathPageCount, en) : ""}</details>
     <details class="import-manager-group" data-import-group="flights" ${open("flights")}><summary><strong>${en ? "Flight imports" : "航班导入"}</strong><span>${flightFiles.length}</span></summary><div class="import-compact-list">${flightRows || `<p class="muted small">${en ? "No matching flight imports" : "没有匹配的航班导入"}</p>`}</div></details>
-    <details class="import-manager-group" data-import-group="checkins" ${open("checkins")}><summary><strong>${en ? "Light-up / checklist data" : "点亮/打卡数据"}</strong><span>${nonImportedVisits.length}</span></summary><div class="import-group-note"><p class="muted">${en ? "Clears manual countries, administrative units, map-click points, and checklist marks. Imports are kept." : "清除手动国家、行政区、地图点击点和打卡清单；导入文件与轨迹会保留。"}</p><button class="text-action" data-clear-checkins="1" type="button">${en ? "Clear light-up / checklist points" : "清除点亮/打卡点"}</button></div></details>`;
+    <details class="import-manager-group" data-import-group="checkins" ${open("checkins")}><summary><strong>${en ? "Light-up / checklist data" : "点亮/打卡数据"}</strong><span>${nonImportedVisits.length}</span></summary><div class="import-group-note"><p class="muted">${en ? "Clears manual countries, administrative units, map-click points, and checklist marks. Imports are kept." : "清除手动国家、行政区、地图点击点和打卡清单；导入文件与路径会保留。"}</p><button class="text-action" data-clear-checkins="1" type="button">${en ? "Clear light-up / checklist points" : "清除点亮/打卡点"}</button></div></details>`;
 }
 
 function inventorySourceLabel(visit) {
@@ -10497,7 +10799,7 @@ function inventorySourceLabel(visit) {
 }
 
 function inventoryTypeLabel(place) {
-  if (place.shapeOnly) return currentLanguage === "en" ? "Imported track" : "已导入轨迹";
+  if (place.shapeOnly) return currentLanguage === "en" ? "Imported path" : "已导入路径";
   if (place.imported || place.importId || place.sourceFile) return currentLanguage === "en" ? "Imported place" : "已导入地点";
   if (place.checklistOnly) return currentLanguage === "en" ? "Checklist point" : "清单打卡";
   if (place.manualCountry) return currentLanguage === "en" ? "Manual country" : "手动国家";
@@ -10856,7 +11158,7 @@ function renderDataInventory() {
     [en ? "Lit places" : "已点亮地点", counts.litPlaces],
     [en ? "Lit administrative units" : "已点亮行政区", counts.litAdministrativeUnits],
     [en ? "Imported places" : "已导入地点", counts.importedPoints],
-    [en ? "Imported tracks" : "已导入轨迹", counts.importedTracks],
+    [en ? "Imported paths" : "已导入路径", counts.importedTracks],
     [en ? "Imported flights" : "已导入航班", counts.importedFlights],
   ];
   const deleteLabel = en ? "Delete" : "删除";
@@ -10925,8 +11227,8 @@ function renderDataInventory() {
       <table><thead><tr><th>${en ? "Name" : "名称"}</th><th>${en ? "Location" : "位置"}</th><th>${en ? "File" : "文件"}</th><th>${en ? "Light-up" : "点亮"}</th><th>${en ? "Action" : "操作"}</th></tr></thead><tbody>${importedPointRows || emptyRow(en ? "No imported places" : "暂无已导入地点", 5)}</tbody></table>
     </details>
     <details class="data-table-block" data-inventory-section="importedTracks" ${isOpen("importedTracks")}>
-      <summary><span>${en ? "Imported tracks" : "已导入轨迹"}</span><em>${importedTracks.length}</em></summary>
-      <table><thead><tr><th>${en ? "Name" : "名称"}</th><th>${en ? "Geometry" : "几何类型"}</th><th>${en ? "File" : "文件"}</th><th>${en ? "Action" : "操作"}</th></tr></thead><tbody>${importedTrackRows || emptyRow(en ? "No imported tracks" : "暂无已导入轨迹", 4)}</tbody></table>
+      <summary><span>${en ? "Imported paths" : "已导入路径"}</span><em>${importedTracks.length}</em></summary>
+      <table><thead><tr><th>${en ? "Name" : "名称"}</th><th>${en ? "Geometry" : "几何类型"}</th><th>${en ? "File" : "文件"}</th><th>${en ? "Action" : "操作"}</th></tr></thead><tbody>${importedTrackRows || emptyRow(en ? "No imported paths" : "暂无已导入路径", 4)}</tbody></table>
     </details>
     <details class="data-table-block" data-inventory-section="importedFlights" ${isOpen("importedFlights")}>
       <summary><span>${en ? "Imported flights" : "已导入航班"}</span><em>${flights.length}</em></summary>
@@ -12614,13 +12916,13 @@ function renderNextStops() {
     ["Complete China provinces", missingChina.length ? `Remaining province-level units: ${missingChina.slice(0, 6).join(", ")}${missingChina.length > 6 ? "..." : ""}` : "China province level is complete.", "Light up", "#checkins:manual-section-china"],
     ["Complete China cities", `About ${cityMissing} prefecture-level units remain. Work province by province.`, "Light up", "#checkins:manual-section-china-city"],
     ["Check in 5A / World Heritage", "Checklist marks sync to map points and core check-in levels.", "Check in", "#achievements:achievement-section-china5a"],
-    ["Import places or tracks", "GeoJSON, KML, and CSV imports can update light-up results automatically.", "Import", "#imports"],
+    ["Import places or paths", "GeoJSON, KML, and CSV imports can update light-up results automatically.", "Import", "#imports"],
   ] : [
     ["手动点亮国家/地区", `还有 ${countryMissing} 个国家/地区未点亮。可以先从常去国家开始补。`, "点亮", "#checkins:manual-section-country"],
     ["补中国省级", missingChina.length ? `中国省级还差：${missingChina.slice(0, 6).join("、")}${missingChina.length > 6 ? "…" : ""}` : "中国省级已完成。", "点亮", "#checkins:manual-section-china"],
     ["补中国地级市", `中国地级尺度还差约 ${cityMissing} 个。适合按省逐步补。`, "点亮", "#checkins:manual-section-china-city"],
     ["打卡 5A / 世界遗产", "在清单里勾选后，会同步到地图点和核心打卡等级。", "打卡", "#achievements:achievement-section-china5a"],
-    ["导入地点/轨迹文件", "已有 GeoJSON、KML 或 CSV 时，可以导入并自动更新点亮结果。", "导入", "#imports"],
+    ["导入地点/路径文件", "已有 GeoJSON、KML 或 CSV 时，可以导入并自动更新点亮结果。", "导入", "#imports"],
   ];
   $("#nextStops").innerHTML = recommendations.map(([title, body, goal, href]) => `
     <article class="next-card"><header><strong>${title}</strong><a class="tag" href="${href}">${goal}</a></header><p class="muted">${body}</p></article>`).join("");
@@ -12690,7 +12992,7 @@ async function handleImport(event) {
     const skippedText = skippedPhotos ? `，${skippedPhotos} 张照片没有 GPS 已跳过` : "";
     const archiveText = restoredArchives ? `，已恢复 ${restoredArchives} 个存档` : "";
     const flightText = flightJobs.length ? `；航班新增 ${flightStats.added} 条，重复跳过 ${flightStats.duplicates} 条，机场未识别 ${flightStats.unrecognized} 条` : "";
-    showToast(`已导入 ${totalImported} 个地点/轨迹${skippedText}${archiveText}${flightText}，地点会自动点亮相应地区`);
+    showToast(`已导入 ${totalImported} 个地点/路径${skippedText}${archiveText}${flightText}，地点会自动点亮相应地区`);
   } catch (error) {
     showToast(`导入失败：${error.message}`);
   } finally {
@@ -13883,6 +14185,8 @@ function renderMapControls() {
   const showFlights = $("#showFlightsOnMap");
   const showPopulationDensity = $("#showPopulationDensityOnMap");
   const showRailways = $("#showRailwaysOnMap");
+  const showEarthquakes = $("#showEarthquakesOnMap");
+  const showVolcanoes = $("#showVolcanoesOnMap");
   const show3d = $("#show3dMap");
   const showChina5a = $("#showChina5aOnMap");
   const showAncientCapitals = $("#showAncientCapitalsOnMap");
@@ -13894,12 +14198,43 @@ function renderMapControls() {
   if (showFlights) showFlights.checked = Boolean(overlays.flights);
   if (showPopulationDensity) showPopulationDensity.checked = Boolean(overlays.populationDensity);
   if (showRailways) showRailways.checked = Boolean(overlays.railways);
+  if (showEarthquakes) showEarthquakes.checked = Boolean(overlays.earthquakes);
+  if (showVolcanoes) showVolcanoes.checked = Boolean(overlays.volcanoes);
   const populationLegend = $("#populationDensityLegend");
   if (populationLegend) populationLegend.hidden = !overlays.populationDensity;
+  const densityOpacity = $("#populationDensityOpacity");
+  if (densityOpacity) {
+    const value = normalizePopulationDensityOpacity(state.populationDensityOpacity);
+    densityOpacity.value = String(value);
+    densityOpacity.style.setProperty("--density-opacity-progress", `${value}%`);
+    densityOpacity.title = `${t("populationDensityOpacity")}：${value}%`;
+    densityOpacity.setAttribute("aria-label", t("populationDensityOpacity"));
+    densityOpacity.setAttribute("aria-valuetext", `${value}%`);
+    const densityOpacityValue = $("#populationDensityOpacityValue");
+    if (densityOpacityValue) densityOpacityValue.textContent = `${value}%`;
+  }
   const railwayLegend = $("#railwayLegend");
   if (railwayLegend) railwayLegend.hidden = !overlays.railways;
+  const railwayOfficialLegend = $("#railwayOfficialLegend");
+  if (railwayOfficialLegend) {
+    const locale = currentLanguage === "en" ? "en" : "zh_CN";
+    if (railwayOfficialLegend.dataset.locale !== locale) {
+      railwayOfficialLegend.dataset.locale = locale;
+      railwayOfficialLegend.src = `https://www.openrailwaymap.org/legend-generator.php?style=standard&zoom=18&lang=${locale}`;
+      const officialLink = railwayOfficialLegend.nextElementSibling?.querySelector("a");
+      if (officialLink) officialLink.href = railwayOfficialLegend.src;
+    }
+  }
+  const earthquakeLegend = $("#earthquakeLegend");
+  if (earthquakeLegend) earthquakeLegend.hidden = !overlays.earthquakes;
+  const volcanoLegend = $("#volcanoLegend");
+  if (volcanoLegend) volcanoLegend.hidden = !overlays.volcanoes;
+  const includePleistoceneVolcanoes = $("#includePleistoceneVolcanoes");
+  if (includePleistoceneVolcanoes) includePleistoceneVolcanoes.checked = Boolean(state.volcanoIncludePleistocene);
+  const earthquakeMagnitudeSelect = $("#earthquakeMagnitude");
+  if (earthquakeMagnitudeSelect) earthquakeMagnitudeSelect.value = String(Number(state.earthquakeMinMagnitude) || 5);
   const overlayLegends = $("#mapOverlayLegends");
-  if (overlayLegends) overlayLegends.hidden = !overlays.populationDensity && !overlays.railways;
+  if (overlayLegends) overlayLegends.hidden = !overlays.populationDensity && !overlays.railways && !overlays.earthquakes && !overlays.volcanoes;
   if (show3d) show3d.checked = Boolean(state.map3d);
   if (showChina5a) showChina5a.checked = Boolean(overlays.china5a);
   if (showAncientCapitals) showAncientCapitals.checked = Boolean(overlays.chinaAncientCapitals);
@@ -14028,6 +14363,8 @@ function showPage(pageId, targetId = "") {
     if (state.mapOverlays?.chinaAncientCapitals || hasAncientCapitalCheckins()) loadChinaAncientCapitals().finally(renderGeoMap);
     if (state.mapOverlays?.worldHeritage) loadCatalogData();
     if (state.mapOverlays?.flights) loadAirportData().then(refreshFlightRoutesOnMap);
+    if (state.mapOverlays?.earthquakes) loadEarthquakeData().finally(renderGeoMap);
+    if (state.mapOverlays?.volcanoes) loadVolcanoData().finally(renderGeoMap);
     if (state.mapOverlays?.highAltitude) renderGeoMap();
     setTimeout(() => {
       if (mapLibreMap) mapLibreMap.resize();
@@ -14147,7 +14484,7 @@ $("#dashboard")?.addEventListener("input", (event) => {
 });
 $("#importSummary").addEventListener("click", (event) => {
   if (event.target.closest("[data-clear-checkins]")) {
-    if (window.confirm("确认清除所有点亮、打卡勾选和手动行政区？导入文件和轨迹会保留。")) clearCheckinsAndAchievementPoints();
+    if (window.confirm("确认清除所有点亮、打卡勾选和手动行政区？导入文件和路径会保留。")) clearCheckinsAndAchievementPoints();
     return;
   }
   if (event.target.closest("[data-delete-all-imports]")) {
@@ -14405,6 +14742,23 @@ $("#showPopulationDensityOnMap")?.addEventListener("change", (event) => {
     renderGeoMap();
   }
 });
+$("#populationDensityOpacity")?.addEventListener("input", (event) => {
+  const value = normalizePopulationDensityOpacity(event.target.value);
+  state.populationDensityOpacity = value;
+  event.target.style.setProperty("--density-opacity-progress", `${value}%`);
+  event.target.title = `${t("populationDensityOpacity")}：${value}%`;
+  event.target.setAttribute("aria-valuetext", `${value}%`);
+  const output = $("#populationDensityOpacityValue");
+  if (output) output.textContent = `${value}%`;
+  if (mapLibreMap?.getLayer("population-density")) {
+    mapLibreMap.setPaintProperty("population-density", "raster-opacity", value / 100);
+  } else if (leafletLayers) {
+    leafletLayers.eachLayer((layer) => {
+      if (layer?.options?.attribution === populationDensityAttribution && typeof layer.setOpacity === "function") layer.setOpacity(value / 100);
+    });
+  }
+  saveUiStateSoon();
+});
 $("#showRailwaysOnMap")?.addEventListener("change", (event) => {
   state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
   state.mapOverlays.railways = event.target.checked;
@@ -14416,6 +14770,32 @@ $("#showRailwaysOnMap")?.addEventListener("change", (event) => {
   } else {
     renderGeoMap();
   }
+});
+$("#showEarthquakesOnMap")?.addEventListener("change", (event) => {
+  state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
+  state.mapOverlays.earthquakes = event.target.checked;
+  saveUiStateSoon();
+  renderMapControls();
+  if (!event.target.checked) return renderGeoMap();
+  loadEarthquakeData().finally(renderGeoMap);
+});
+$("#showVolcanoesOnMap")?.addEventListener("change", (event) => {
+  state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
+  state.mapOverlays.volcanoes = event.target.checked;
+  saveUiStateSoon();
+  renderMapControls();
+  if (!event.target.checked) return renderGeoMap();
+  loadVolcanoData().finally(renderGeoMap);
+});
+$("#earthquakeMagnitude")?.addEventListener("change", (event) => {
+  state.earthquakeMinMagnitude = [4, 5, 6, 7].includes(Number(event.target.value)) ? Number(event.target.value) : 5;
+  saveUiStateSoon();
+  renderGeoMap();
+});
+$("#includePleistoceneVolcanoes")?.addEventListener("change", (event) => {
+  state.volcanoIncludePleistocene = event.target.checked;
+  saveUiStateSoon();
+  renderGeoMap();
 });
 $("#show3dMap")?.addEventListener("change", (event) => {
   applyMap3dToggle(event.target.checked);

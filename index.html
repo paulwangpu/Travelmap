@@ -6,7 +6,7 @@
     <title>我的全球旅行地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" />
-    <link rel="stylesheet" href="styles.css?v=123" />
+    <link rel="stylesheet" href="styles.css?v=133" />
   </head>
   <body>
     <div class="app-shell map-first-shell">
@@ -88,7 +88,7 @@
               <div class="map-overlay-toggles map-primary-overlays">
                 <label><input id="showLightOnMap" type="checkbox" checked /> <span data-i18n="overlayLight">我的点亮</span></label>
                 <label><input id="showCheckinsOnMap" type="checkbox" checked /> <span data-i18n="overlayCheckins">我的打卡</span></label>
-                <label><input id="showTracksOnMap" type="checkbox" checked /> <span data-i18n="overlayTracks">我的轨迹</span></label>
+                <label><input id="showTracksOnMap" type="checkbox" checked /> <span data-i18n="overlayTracks">我的路径</span></label>
                 <label><input id="showFlightsOnMap" type="checkbox" checked /> <span data-i18n="overlayFlights">我的航线</span></label>
               </div>
               <div class="map-overlay-toggles map-feature-overlays">
@@ -99,7 +99,9 @@
               </div>
               <div class="map-overlay-toggles map-thematic-overlays">
                 <label><input id="showPopulationDensityOnMap" type="checkbox" /> <span data-i18n="providerPopulation">人口密度</span></label>
-                <label><input id="showRailwaysOnMap" type="checkbox" /> <span data-i18n="overlayRailways">铁路</span></label>
+                <label><input id="showRailwaysOnMap" type="checkbox" /> <span data-i18n="overlayRailways">铁路线路</span></label>
+                <label><input id="showEarthquakesOnMap" type="checkbox" /> <span data-i18n="overlayEarthquakes">地震</span></label>
+                <label><input id="showVolcanoesOnMap" type="checkbox" /> <span data-i18n="overlayVolcanoes">火山</span></label>
               </div>
             </section>
 
@@ -131,17 +133,34 @@
               <div class="loading-debug" id="loadingDebug" hidden></div>
               <div class="leaflet-map" id="leafletMap"></div>
               <div class="map-overlay-legends" id="mapOverlayLegends" hidden>
+                <aside class="hazard-legend earthquake-legend" id="earthquakeLegend" hidden>
+                  <strong data-i18n="earthquakeLegendTitle">全球历史地震</strong>
+                  <label><span data-i18n="minimumMagnitude">最低震级</span><select id="earthquakeMagnitude"><option value="4">4.0+</option><option value="5">5.0+</option><option value="6">6.0+</option><option value="7">7.0+</option></select></label>
+                  <small data-i18n="earthquakeLegendSource">圆点大小表示震级 · ISC-GEM、NOAA/NCEI；早期完整度因地区而异</small>
+                </aside>
+                <aside class="hazard-legend volcano-legend" id="volcanoLegend" hidden>
+                  <strong data-i18n="volcanoLegendTitle">全球火山</strong>
+                  <label><span data-i18n="includePleistoceneVolcanoes">包含更新世火山</span><input id="includePleistoceneVolcanoes" type="checkbox" /></label>
+                  <small data-i18n="volcanoLegendSource">实心：全新世 · 空心：更新世 · Smithsonian GVP</small>
+                </aside>
                 <aside class="railway-legend" id="railwayLegend" hidden>
-                  <strong data-i18n="railwayLegendTitle">铁路 · OpenRailwayMap</strong>
+                  <strong data-i18n="railwayLegendTitle">铁路线路 · OpenRailwayMap</strong>
+                  <small class="railway-legend-hint" data-i18n="railwayLegendHint">精简图例；展开后使用 OpenRailwayMap 官方图例</small>
                   <div class="railway-legend-items">
                     <span><i class="railway-swatch railway-swatch-highspeed"></i><span data-i18n="railwayLegendHighspeed">高速铁路（&gt;200 km/h）</span></span>
                     <span><i class="railway-swatch railway-swatch-main"></i><span data-i18n="railwayLegendMain">铁路干线</span></span>
                     <span><i class="railway-swatch railway-swatch-branch"></i><span data-i18n="railwayLegendBranch">支线铁路</span></span>
                     <span><i class="railway-swatch railway-swatch-inactive"></i><span data-i18n="railwayLegendInactive">建设中 / 停用</span></span>
                   </div>
+                  <details class="railway-legend-details">
+                    <summary data-i18n="railwayLegendMore">完整图例</summary>
+                    <iframe class="railway-official-legend" id="railwayOfficialLegend" src="https://www.openrailwaymap.org/legend-generator.php?style=standard&amp;zoom=18&amp;lang=zh_CN" loading="lazy" title="OpenRailwayMap official legend"></iframe>
+                    <small class="railway-legend-note"><span data-i18n="railwayLegendNote">完整图例由 OpenRailwayMap 官方实时生成，内容与标准铁路瓦片一致。</span> <a href="https://www.openrailwaymap.org/legend-generator.php?style=standard&amp;zoom=18&amp;lang=zh_CN" target="_blank" rel="noopener noreferrer" data-i18n="railwayLegendOfficial">单独打开</a></small>
+                  </details>
                 </aside>
                 <aside class="population-density-legend" id="populationDensityLegend" hidden>
                   <strong data-i18n="populationDensityLegend">人口密度 · 2020</strong>
+                  <label class="population-density-opacity"><span data-i18n="populationDensityOpacity">透明度</span><input id="populationDensityOpacity" type="range" min="0" max="100" step="1" value="50" /><output id="populationDensityOpacityValue" for="populationDensityOpacity">50%</output></label>
                   <div class="population-density-scale" aria-hidden="true"></div>
                   <div class="population-density-labels"><span>20</span><span>400</span><span>2k</span><span>10k</span><span>50k</span><span>200k+</span></div>
                   <small data-i18n="populationDensityUnit">人 / km² · GHSL</small>
@@ -276,10 +295,10 @@
                 </summary>
                 <div class="import-help muted small">
                   <section>
-                    <h4 data-i18n="importHelpCheckinsTitle">打卡与轨迹导入</h4>
+                    <h4 data-i18n="importHelpCheckinsTitle">打卡与路径导入</h4>
                     <p data-i18n="importHelpCheckinsIntro">支持导入 GeoJSON/JSON、KML、CSV 和照片。</p>
                     <ul>
-                      <li data-i18n="importHelpGeoJson">GeoJSON/KML：点数据将作为“我的打卡”显示；线和面数据将作为“我的轨迹”显示。</li>
+                      <li data-i18n="importHelpGeoJson">GeoJSON/KML：点数据将作为“我的打卡”显示；线和面数据将作为“我的路径”显示。</li>
                       <li data-i18n="importHelpCsv">CSV：建议仅保留名称、纬度和经度三列。也支持英文列名：name、lat/latitude、lng/lon/longitude。</li>
                       <li data-i18n="importHelpPhoto">照片：仅在本地读取文件名和 EXIF GPS 信息，不会上传照片。</li>
                     </ul>
@@ -342,6 +361,6 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
     <script src="https://unpkg.com/pmtiles@4.4.0/dist/pmtiles.js"></script>
-    <script src="app.js?v=508"></script>
+    <script src="app.js?v=523"></script>
   </body>
 </html>

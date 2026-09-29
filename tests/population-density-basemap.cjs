@@ -10,10 +10,13 @@ const archivePath = path.join(root, "data", "population-density-2020-z0-8.pmtile
 
 assert.doesNotMatch(html, /option value="population"/);
 assert.match(html, /id="showPopulationDensityOnMap"/);
+assert.match(html, /id="populationDensityOpacity"[^>]+value="50"/);
 assert.match(html, /map-thematic-overlays/);
 assert.match(html, /pmtiles@4\.4\.0\/dist\/pmtiles\.js/);
 assert.match(app, /populationDensityArchive = "data\/population-density-2020-z0-8\.pmtiles"/);
 assert.match(app, /populationDensity: false/);
+assert.match(app, /populationDensityOpacity: 50/);
+assert.match(app, /setPaintProperty\("population-density", "raster-opacity", value \/ 100\)/);
 assert.match(app, /function syncMapLibrePopulationDensityOverlay/);
 assert.match(app, /value === "population"\) return "googleTerrain"/);
 assert.match(app, /registerPmtilesMapLibreProtocol\(\)/);

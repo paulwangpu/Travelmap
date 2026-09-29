@@ -20,5 +20,12 @@ assert.match(app, /OpenStreetMap contributors · OpenRailwayMap/);
 assert.match(app, /railwayLegend\.hidden = !overlays\.railways/);
 assert.match(app, /overlayLegends\.hidden = !overlays\.populationDensity && !overlays\.railways/);
 assert.match(app, /railwayLegendHighspeed: "高速铁路（>200 km\/h）"/);
+assert.match(app, /overlayRailways: "铁路线路"/);
+assert.match(html, /class="railway-legend-details"/);
+assert.match(html, /id="railwayOfficialLegend"/);
+assert.match(html, /openrailwaymap\.org\/legend-generator\.php\?style=standard/);
+assert.match(html, /data-i18n="railwayLegendNote"/);
+assert.match(html, /data-i18n="railwayLegendHint"/);
+assert.match(html, /data-i18n="railwayLegendOfficial"/);
 
 console.log("PASS: optional railway overlay and non-overlapping railway legend are wired");
