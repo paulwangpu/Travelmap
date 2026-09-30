@@ -15,7 +15,7 @@ const mapControlsStorageKey = "travel-map-controls-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "2.1.1";
+const appVersion = "2.1.2";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
@@ -63,6 +63,9 @@ let leafletBaseLayer = null;
 let mapLibreMap = null;
 let mapLibreStyleReady = false;
 let mapLibreMarkers = [];
+let arcgisWaterLabelMarkers = [];
+let arcgisWaterHoverPopup = null;
+let arcgisWaterPinnedPopup = null;
 let mapLibreMarkerSignature = "";
 let mapPointRenderRevision = 0;
 let mapLibreLayerHandlersBound = { country: false, admin: false, subadmin: false, points: false, paths: false, pathVertices: false, flights: false, nps: false };
@@ -367,6 +370,13 @@ const translations = {
     railwayLegendOwnerChange: "管理分界",
     railwayLegendNote: "完整图例由 OpenRailwayMap 官方实时生成，内容与标准铁路瓦片一致。",
     railwayLegendOfficial: "单独打开",
+    overlayArcgisWater: "全球水系",
+    arcgisWaterLegendTitle: "全球水系",
+    arcgisWaterEsriSource: "ArcGIS 水面与名称",
+    arcgisWaterHydroSource: "HydroRIVERS 缺失河段补全",
+    arcgisWaterMajor: "主要河流",
+    arcgisWaterMinor: "支流、溪流与运河",
+    arcgisWaterLegendSource: "Esri 水面与名称 · HydroRIVERS 仅补全缺失河段",
     providerEsriSatellite: "Esri 卫星",
     providerBingRoad: "Bing 地图",
     providerBingAerial: "Bing 卫星",
@@ -589,6 +599,13 @@ const translations = {
     railwayLegendOwnerChange: "Owner boundary",
     railwayLegendNote: "The full legend is generated live by OpenRailwayMap and matches its standard railway tiles.",
     railwayLegendOfficial: "Open separately",
+    overlayArcgisWater: "Global waters",
+    arcgisWaterLegendTitle: "Global waters",
+    arcgisWaterEsriSource: "ArcGIS areas and names",
+    arcgisWaterHydroSource: "HydroRIVERS gap fill",
+    arcgisWaterMajor: "Major rivers",
+    arcgisWaterMinor: "Tributaries, streams, and canals",
+    arcgisWaterLegendSource: "Esri water areas and names · HydroRIVERS fills gaps only",
     providerEsriSatellite: "Esri Satellite",
     providerBingRoad: "Bing Road",
     providerBingAerial: "Bing Aerial",
@@ -738,7 +755,7 @@ function t(key) {
 }
 
 function defaultMapOverlays() {
-  return { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, earthquakes: false, volcanoes: false, china5a: false, chinaAncientCapitals: false, worldHeritage: false, highAltitude: false };
+  return { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, arcgisWater: false, arcgisWaterEsri: true, arcgisWaterHydroRivers: true, earthquakes: false, volcanoes: false, china5a: false, chinaAncientCapitals: false, worldHeritage: false, highAltitude: false };
 }
 
 function normalizeMapOverlays(overlays = {}) {
@@ -747,6 +764,9 @@ function normalizeMapOverlays(overlays = {}) {
     ...overlays,
     populationDensity: Boolean(overlays.populationDensity),
     railways: Boolean(overlays.railways),
+    arcgisWater: Boolean(overlays.arcgisWater ?? overlays.hydroRivers),
+    arcgisWaterEsri: overlays.arcgisWaterEsri !== false,
+    arcgisWaterHydroRivers: overlays.arcgisWaterHydroRivers !== false,
     earthquakes: Boolean(overlays.earthquakes),
     volcanoes: Boolean(overlays.volcanoes),
     china5a: Boolean(overlays.china5a),
@@ -1086,6 +1106,107 @@ const populationDensityArchive = "data/population-density-2020-z0-8.pmtiles";
 const populationDensityAttribution = "Population: European Commission, JRC (GHSL 2023)";
 const railwayOverlayTiles = ["https://tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png"];
 const railwayOverlayAttribution = "© OpenStreetMap contributors · OpenRailwayMap";
+const arcgisWaterStyleUrl = "https://www.arcgis.com/sharing/rest/content/items/6d188135dc814d4ea254440a3dd844df/resources/styles/root.json";
+const arcgisWaterServiceUrl = "https://basemaps.arcgis.com/arcgis/rest/services/World_Basemap_v2/VectorTileServer";
+const arcgisWaterGlyphsUrl = `${arcgisWaterServiceUrl}/resources/fonts/{fontstack}/{range}.pbf`;
+const arcgisWaterAttribution = "Esri, TomTom, Garmin, FAO, NOAA, USGS, © OpenStreetMap contributors, GIS User Community";
+const arcgisWaterLayerPrefix = "arcgis-water-";
+const arcgisWaterNameOverrides = new Map([
+  ["yangtze", { zh: "长江", en: "Yangtze River" }],
+  ["yangtze kiang", { zh: "长江", en: "Yangtze River" }],
+  ["chang", { zh: "长江", en: "Yangtze River" }],
+  ["yukon", { zh: "育空河", en: "Yukon River" }],
+  ["mackenzie", { zh: "麦肯齐河", en: "Mackenzie River" }],
+  ["slave", { zh: "奴河", en: "Slave River" }],
+  ["peace", { zh: "皮斯河", en: "Peace River" }],
+  ["saskatchewan", { zh: "萨斯喀彻温河", en: "Saskatchewan River" }],
+  ["nelson", { zh: "纳尔逊河", en: "Nelson River" }],
+  ["columbia", { zh: "哥伦比亚河", en: "Columbia River" }],
+  ["snake", { zh: "斯内克河", en: "Snake River" }],
+  ["missouri", { zh: "密苏里河", en: "Missouri River" }],
+  ["ohio", { zh: "俄亥俄河", en: "Ohio River" }],
+  ["colorado", { zh: "科罗拉多河", en: "Colorado River" }],
+  ["arkansas", { zh: "阿肯色河", en: "Arkansas River" }],
+  ["mississippi", { zh: "密西西比河", en: "Mississippi River" }],
+  ["rio grande", { zh: "格兰德河", en: "Rio Grande" }],
+]);
+let arcgisWaterStylePromise = null;
+let arcgisWaterSyncRevision = 0;
+
+function normalizeArcgisWaterEnglishName(value) {
+  return String(value || "")
+    .replace(/_/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/\s+(?:jiang|he|shui)(?:\s+river)?$/iu, " River")
+    .replace(/\s+xi(?:\s+(?:stream|river))?$/iu, " Stream")
+    .replace(/\s+gou(?:\s+(?:creek|stream|river))?$/iu, " Creek");
+}
+
+function arcgisWaterNameKey(value) {
+  return normalizeArcgisWaterEnglishName(value).toLowerCase().replace(/\s+(?:river|stream|creek|brook|canal|channel|ditch)$/u, "");
+}
+
+function arcgisWaterEnglishLabel(properties = {}, sourceLayer = "") {
+  const englishName = normalizeArcgisWaterEnglishName(
+    properties._name_en
+      || properties.name_en
+      || properties["name:en"]
+      || properties._name
+      || properties.name
+      || properties._name_local
+  );
+  const override = arcgisWaterNameOverrides.get(arcgisWaterNameKey(englishName));
+  if (override) return override.en;
+  if (sourceLayer.startsWith("Water area")) return englishName;
+  if (sourceLayer !== "Water line/label" && englishName && !/\b(?:river|stream|creek|brook|canal|channel|ditch)\b/i.test(englishName)) return `${englishName} River`;
+  return englishName;
+}
+
+function arcgisWaterChineseLabel(properties = {}, sourceLayer = "") {
+  const rawEnglishName = String(
+    properties._name_en
+      || properties.name_en
+      || properties["name:en"]
+      || properties._name
+      || properties.name
+      || properties._name_local
+      || ""
+  ).replace(/_/g, " ").replace(/\s+/g, " ").trim();
+  const englishName = normalizeArcgisWaterEnglishName(rawEnglishName);
+  const override = arcgisWaterNameOverrides.get(arcgisWaterNameKey(englishName));
+  if (override) return override.zh;
+  let chineseName = String(
+    properties._name_zh_s
+      || properties._name_zh_cn
+      || properties._name_zh
+      || properties.name_zh
+      || properties["name:zh"]
+      || properties._name_local
+      || properties._name
+      || properties.name
+      || rawEnglishName
+  ).replace(/_/g, " ").replace(/\s+/g, " ").replace(/扬子江|揚子江/gu, "长江").trim();
+  if (!chineseName) return "";
+  if (/[A-Za-z]/.test(chineseName) && !/[\u3400-\u9fff]/u.test(chineseName)) {
+    return chineseName.replace(/\s+((?:jiang|he|shui|xi|gou))\s+(?:river|stream|creek)$/iu, " $1");
+  }
+  if (sourceLayer.startsWith("Water area")) return chineseName;
+  if (/(?:河|江|溪|川|运河|水道|渠|沟)$/.test(chineseName)) return chineseName;
+  if (sourceLayer !== "Water line/label") {
+    chineseName = chineseName.replace(/(?:特别行政区|自治区|地区|州|省|市|县|郡)$/u, "").trim();
+    return chineseName ? `${chineseName}河` : String(properties._name || englishName);
+  }
+  const englishLower = englishName.toLowerCase();
+  let suffix = "";
+  if (/\b(?:river|stream)\b/.test(englishLower)) suffix = "河";
+  else if (/\b(?:creek|brook)\b/.test(englishLower)) suffix = "溪";
+  else if (/\b(?:canal|ditch)\b/.test(englishLower)) suffix = "运河";
+  else if (/\bchannel\b/.test(englishLower)) suffix = "水道";
+  if (!suffix) return chineseName;
+  chineseName = chineseName.replace(/(?:特别行政区|自治区|地区|州|省|市|县|郡)$/u, "").trim();
+  return chineseName ? `${chineseName}${suffix}` : String(properties._name || englishName);
+}
 
 function normalizeMapProviderMode(value) {
   if (value === "population") return "googleTerrain";
@@ -3812,7 +3933,7 @@ let state = {
   populationDensityOpacity: 50,
   map3d: false,
   detectedMapProvider: "",
-  mapOverlays: { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, earthquakes: false, volcanoes: false, china5a: false, chinaAncientCapitals: false, worldHeritage: false, highAltitude: false },
+  mapOverlays: { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, arcgisWater: false, earthquakes: false, volcanoes: false, china5a: false, chinaAncientCapitals: false, worldHeritage: false, highAltitude: false },
   earthquakeMinMagnitude: 5,
   volcanoIncludePleistocene: false,
   mapViewport: null,
@@ -6040,6 +6161,9 @@ function setLanguage(language) {
 function refreshMapLabelsForLanguage() {
   checklistOverlayCache.signature = "";
   mapLibreMarkerSignature = "";
+  if (mapLibreMap && mapLibreStyleReady) {
+    syncMapLibreArcgisWaterOverlay(Boolean(state.mapOverlays?.arcgisWater));
+  }
   if (mapLibreMap && mapLibreStyleReady && mapLibreMap.getSource("map-points")) {
     renderMapLibreMarkers();
   } else if (leafletMap && window.L) {
@@ -7817,6 +7941,10 @@ function renderMapLibreMap() {
       container: "leafletMap",
       center,
       zoom: savedViewport?.zoom ?? 2,
+      // Raster basemaps top out around z18 and the ArcGIS hydrology tiles at
+      // z14. Deeper zooms only magnify generalized tiles until both the base
+      // map and river geometry appear blank or drift outside the viewport.
+      maxZoom: 18,
       bearing: 0,
       pitch: 0,
       projection: mapLibreProjection(),
@@ -7832,12 +7960,15 @@ function renderMapLibreMap() {
     mapLibreMap._travelMapProvider = provider;
     mapLibreMap.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-left");
     mapLibreMap.addControl(new maplibregl.ScaleControl({ maxWidth: 120, unit: "metric" }), "bottom-right");
+    mapLibreMap.on("mousemove", handleMapLibreArcgisWaterHover);
+    mapLibreMap.on("mouseout", clearMapLibreArcgisWaterHover);
     mapLibreMap.on("click", (event) => {
       if (event.originalEvent?._travelMapHandled) return;
       if (mapAddMode || mapPathMode) {
         handleMapCanvasClick(event.lngLat.lng, event.lngLat.lat, event.originalEvent);
         return;
       }
+      if (handleMapLibreArcgisWaterClick(event)) return;
       const npsLayers = ["us-nps-hit-line", "us-nps-fill"].filter((layerId) => mapLibreMap.getLayer(layerId));
       const selectableNpsFeature = npsLayers.length
         && mapLibreMap.queryRenderedFeatures(event.point, { layers: npsLayers })
@@ -7866,9 +7997,11 @@ function renderMapLibreMap() {
         bringMapLibrePointLayersToFront();
       }
     });
-    mapLibreMap.on("error", () => {
-      setLoadingDebug("使用 MapLibre 显示底图", "error");
-      clearLoadingDebugSoon();
+    mapLibreMap.on("error", (event) => {
+      // Individual raster/vector tiles can fail transiently while the map and
+      // all other sources remain usable. Do not report the whole map as failed
+      // for a recoverable source or tile request.
+      console.warn("MapLibre source warning", event?.error?.message || event?.error || event);
     });
     return;
   }
@@ -7918,7 +8051,7 @@ function mapLibreBaseStyle(providerId) {
   const style = {
     version: 8,
     projection: mapLibreProjection(),
-    glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
+    glyphs: arcgisWaterGlyphsUrl,
     sources: {
       basemap: {
         type: "raster",
@@ -8027,6 +8160,480 @@ function syncMapLibrePopulationDensityOverlay(enabled) {
         "raster-resampling": "linear",
       },
     }, beforeId);
+  }
+}
+
+function removeMapLibreArcgisWaterOverlay() {
+  if (!mapLibreMap) return;
+  clearMapLibreArcgisWaterHover();
+  arcgisWaterPinnedPopup?.remove();
+  arcgisWaterPinnedPopup = null;
+  arcgisWaterLabelMarkers.forEach((marker) => marker.remove());
+  arcgisWaterLabelMarkers = [];
+  [...(mapLibreMap.getStyle()?.layers || [])]
+    .filter((layer) => layer.id.startsWith(arcgisWaterLayerPrefix))
+    .reverse()
+    .forEach((layer) => removeMapLibreLayer(layer.id));
+  [
+    "arcgis-water",
+    "arcgis-water-major",
+    "arcgis-water-medium",
+    "arcgis-water-small",
+    "arcgis-water-area-large",
+    "arcgis-water-area-medium",
+    "arcgis-water-area-small",
+    "hydrorivers-major",
+  ].forEach((sourceId) => {
+    if (mapLibreMap.getSource(sourceId)) mapLibreMap.removeSource(sourceId);
+  });
+}
+
+function mapLibreArcgisWaterFeatureAt(point) {
+  if (!mapLibreMap || !state.mapOverlays?.arcgisWater) return null;
+  const waterLayers = (mapLibreMap.getStyle()?.layers || [])
+    .filter((layer) => layer.id.startsWith(arcgisWaterLayerPrefix) && ["line", "fill", "circle"].includes(layer.type));
+  const layers = waterLayers.map((layer) => layer.id);
+  if (!layers.length) return null;
+  const rendered = mapLibreMap.queryRenderedFeatures(point, { layers });
+  // Expand only line picking, so nearby shorelines do not turn a large area
+  // outside a lake into a polygon hit. Prefer direct hits and the nearest line.
+  if (!rendered.length) {
+    const tolerance = 8;
+    const lineLayers = waterLayers.filter((layer) => layer.type === "line").map((layer) => layer.id);
+    if (lineLayers.length) {
+      const nearbyLines = mapLibreMap.queryRenderedFeatures([
+        [point.x - tolerance, point.y - tolerance],
+        [point.x + tolerance, point.y + tolerance],
+      ], { layers: lineLayers });
+      const lineDistance = (feature) => {
+        const geometry = feature.geometry;
+        const lines = geometry?.type === "LineString" ? [geometry.coordinates]
+          : geometry?.type === "MultiLineString" ? geometry.coordinates : [];
+        let distance = Infinity;
+        for (const line of lines) {
+          for (let index = 1; index < line.length; index += 1) {
+            const a = mapLibreMap.project(line[index - 1]);
+            const b = mapLibreMap.project(line[index]);
+            const dx = b.x - a.x;
+            const dy = b.y - a.y;
+            const lengthSquared = dx * dx + dy * dy;
+            const fraction = lengthSquared ? Math.max(0, Math.min(1,
+              ((point.x - a.x) * dx + (point.y - a.y) * dy) / lengthSquared)) : 0;
+            distance = Math.min(distance, Math.hypot(point.x - a.x - fraction * dx, point.y - a.y - fraction * dy));
+          }
+        }
+        return distance;
+      };
+      const nearest = nearbyLines.map((feature) => ({ feature, distance: lineDistance(feature) }))
+        .filter((hit) => hit.distance <= tolerance)
+        .sort((left, right) => left.distance - right.distance)[0];
+      if (nearest) rendered.push(nearest.feature);
+    }
+  }
+  const namedFeature = rendered.find((feature) => {
+    const properties = feature.properties || {};
+    return Boolean(
+      properties._name_en
+        || properties.name_en
+        || properties["name:en"]
+        || properties._name_zh_s
+        || properties._name_zh_cn
+        || properties._name_zh
+        || properties.name_zh
+        || properties["name:zh"]
+        || properties._name_local
+        || properties._name
+        || properties.name
+    );
+  });
+  if (namedFeature) {
+    namedFeature._travelHoverTarget = namedFeature;
+    return namedFeature;
+  }
+  // ArcGIS stores many lake names in a separate point layer while the water
+  // polygon itself is unnamed. If the pointer is over such a polygon, use the
+  // nearest visible area-label point so lakes such as Qiandao Lake remain
+  // interactive across scale tiers.
+  const hoveredFeature = rendered[0] || null;
+  if (!rendered.some((feature) => feature.layer?.type === "fill")) return hoveredFeature;
+  const labelHitLayers = waterLayers
+    .filter((layer) => layer.id.includes("area-label-hit"))
+    .map((layer) => layer.id);
+  if (!labelHitLayers.length) return hoveredFeature;
+  const radius = 160;
+  const nearby = mapLibreMap.queryRenderedFeatures([
+    [point.x - radius, point.y - radius],
+    [point.x + radius, point.y + radius],
+  ], { layers: labelHitLayers });
+  const nearbyLabel = nearby
+    .filter((feature) => mapLibreArcgisWaterFeatureLabel(feature))
+    .map((feature) => {
+      const coordinate = feature.geometry?.type === "Point" ? feature.geometry.coordinates : null;
+      const projected = coordinate ? mapLibreMap.project(coordinate) : point;
+      return { feature, distance: Math.hypot(projected.x - point.x, projected.y - point.y) };
+    })
+    .sort((left, right) => left.distance - right.distance)[0]?.feature || null;
+  if (nearbyLabel) nearbyLabel._travelHoverTarget = hoveredFeature;
+  return nearbyLabel || hoveredFeature;
+}
+
+function mapLibreArcgisWaterFeatureLabel(feature) {
+  if (!feature) return "";
+  const sourceLayer = feature.layer?.["source-layer"] || feature.sourceLayer || "";
+  return currentLanguage === "en"
+    ? arcgisWaterEnglishLabel(feature.properties, sourceLayer)
+    : arcgisWaterChineseLabel(feature.properties, sourceLayer);
+}
+
+function clearMapLibreArcgisWaterHover() {
+  arcgisWaterHoverPopup?.remove();
+  arcgisWaterHoverPopup = null;
+}
+
+function mapLibreArcgisWaterDebugHtml(feature) {
+  const hovered = feature?._travelHoverTarget || feature;
+  const rows = [
+    [currentLanguage === "en" ? "Source" : "来源", hovered?.source || ""],
+    [currentLanguage === "en" ? "Source layer" : "源图层", hovered?.layer?.["source-layer"] || hovered?.sourceLayer || ""],
+    [currentLanguage === "en" ? "Rendered layer" : "渲染图层", hovered?.layer?.id || ""],
+    [currentLanguage === "en" ? "Geometry" : "几何类型", hovered?.geometry?.type || ""],
+    ...Object.entries(hovered?.properties || {}).sort(([left], [right]) => left.localeCompare(right)),
+  ];
+  if (feature && feature !== hovered) {
+    rows.push(
+      [currentLanguage === "en" ? "Matched label layer" : "匹配标签层", feature.layer?.["source-layer"] || feature.sourceLayer || ""],
+      ...Object.entries(feature.properties || {}).sort(([left], [right]) => left.localeCompare(right)).map(([key, value]) => [`label.${key}`, value])
+    );
+  }
+  return `<div class="arcgis-water-debug-fields">${rows.map(([key, value]) => `<div><b>${escapeHtml(key)}</b><span>${escapeHtml(typeof value === "string" ? value : JSON.stringify(value))}</span></div>`).join("")}</div>`;
+}
+
+function handleMapLibreArcgisWaterHover(event) {
+  if (!mapLibreMap || mapAddMode || mapPathMode || arcgisWaterPinnedPopup) return;
+  const feature = mapLibreArcgisWaterFeatureAt(event.point);
+  if (!feature) {
+    clearMapLibreArcgisWaterHover();
+    if (!mapAddMode && !mapPathMode) mapLibreMap.getCanvas().style.cursor = "";
+    return;
+  }
+  const label = mapLibreArcgisWaterFeatureLabel(feature) || (currentLanguage === "en" ? "Unnamed water feature" : "未命名水系要素");
+  mapLibreMap.getCanvas().style.cursor = "pointer";
+  if (!arcgisWaterHoverPopup) {
+    arcgisWaterHoverPopup = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 8, className: "arcgis-water-hover-popup" });
+  }
+  arcgisWaterHoverPopup
+    .setLngLat(event.lngLat)
+    .setHTML(`<div class="popup-body arcgis-water-debug-popup"><strong>${escapeHtml(label)}</strong>${mapLibreArcgisWaterDebugHtml(feature)}</div>`)
+    .addTo(mapLibreMap);
+}
+
+function handleMapLibreArcgisWaterClick(event) {
+  const feature = mapLibreArcgisWaterFeatureAt(event.point);
+  if (!feature) {
+    arcgisWaterPinnedPopup?.remove();
+    arcgisWaterPinnedPopup = null;
+    return false;
+  }
+  markMapEventHandled(event);
+  clearMapLibreArcgisWaterHover();
+  const label = mapLibreArcgisWaterFeatureLabel(feature) || (currentLanguage === "en" ? "Unnamed water feature" : "未命名水系要素");
+  arcgisWaterPinnedPopup?.remove();
+  arcgisWaterPinnedPopup = new maplibregl.Popup({ offset: 8, closeButton: false, className: "arcgis-water-hover-popup arcgis-water-pinned-popup" })
+    .setLngLat(event.lngLat)
+    .setHTML(mapPopupHtml(`<div class="arcgis-water-debug-popup"><strong>${escapeHtml(label)}</strong>${mapLibreArcgisWaterDebugHtml(feature)}</div>`))
+    .addTo(mapLibreMap);
+  arcgisWaterPinnedPopup.on("close", () => { arcgisWaterPinnedPopup = null; });
+  return true;
+}
+
+function applyMapLibreArcgisWaterSourceVisibility() {
+  if (!mapLibreMap) return;
+  const overlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
+  (mapLibreMap.getStyle()?.layers || [])
+    .filter((layer) => layer.id.startsWith(arcgisWaterLayerPrefix))
+    .forEach((layer) => {
+      const visible = layer.id.includes("hydrorivers-")
+        ? overlays.arcgisWaterHydroRivers
+        : overlays.arcgisWaterEsri;
+      mapLibreMap.setLayoutProperty(layer.id, "visibility", visible ? "visible" : "none");
+    });
+  if (!overlays.arcgisWaterEsri) {
+    arcgisWaterLabelMarkers.forEach((marker) => marker.remove());
+    arcgisWaterLabelMarkers = [];
+  } else {
+    refreshMapLibreArcgisWaterLabels();
+  }
+}
+
+function refreshMapLibreArcgisWaterLabels() {
+  arcgisWaterLabelMarkers.forEach((marker) => marker.remove());
+  arcgisWaterLabelMarkers = [];
+  if (!mapLibreMap || !mapLibreStyleReady || !state.mapOverlays?.arcgisWater || state.mapOverlays?.arcgisWaterEsri === false || !mapLibreMap.getSource("arcgis-water")) return;
+  const zoom = mapLibreMap.getZoom();
+  const sourceLayers = zoom < 5
+    ? [
+        { source: "arcgis-water-small", layer: "Water line small scale/label" },
+        { source: "arcgis-water-area-small", layer: "Water area small scale/label" },
+      ]
+    : zoom < 7
+      ? [
+          { source: "arcgis-water-small", layer: "Water line small scale/label" },
+          { source: "arcgis-water-medium", layer: "Water line medium scale/label" },
+          { source: "arcgis-water-area-small", layer: "Water area small scale/label" },
+          { source: "arcgis-water-area-medium", layer: "Water area medium scale/label" },
+        ]
+      : zoom < 11
+        ? [
+            { source: "arcgis-water-medium", layer: "Water line medium scale/label" },
+            { source: "arcgis-water-major", layer: "Water line large scale/label" },
+            { source: "arcgis-water-area-medium", layer: "Water area medium scale/label" },
+            { source: "arcgis-water-area-large", layer: "Water area large scale/label" },
+          ]
+        : [
+            { source: "arcgis-water-major", layer: "Water line large scale/label" },
+            { source: "arcgis-water", layer: "Water line/label" },
+            { source: "arcgis-water-area-large", layer: "Water area large scale/label" },
+            { source: "arcgis-water", layer: "Water area/label" },
+          ];
+  const seenNames = new Set();
+  const occupiedCells = new Set();
+  const limit = zoom < 7 ? 80 : 140;
+  labelSources: for (const { source, layer: sourceLayer } of sourceLayers) {
+    if (!mapLibreMap.getSource(source)) continue;
+    for (const feature of mapLibreMap.querySourceFeatures(source, { sourceLayer })) {
+      const label = currentLanguage === "en"
+        ? arcgisWaterEnglishLabel(feature.properties, sourceLayer)
+        : arcgisWaterChineseLabel(feature.properties, sourceLayer);
+      if (!label || seenNames.has(label)) continue;
+      let coordinate = null;
+      if (feature.geometry?.type === "Point") {
+        coordinate = feature.geometry.coordinates;
+      } else if (feature.geometry?.type === "MultiPoint") {
+        coordinate = feature.geometry.coordinates?.[0];
+      } else if (["Polygon", "MultiPolygon"].includes(feature.geometry?.type)) {
+        const polygons = feature.geometry.type === "MultiPolygon" ? feature.geometry.coordinates : [feature.geometry.coordinates];
+        const ring = polygons
+          .flatMap((polygon) => polygon.slice(0, 1))
+          .filter(Array.isArray)
+          .sort((left, right) => right.length - left.length)[0];
+        if (ring?.length) {
+          const bounds = ring.reduce((result, point) => [
+            Math.min(result[0], point[0]),
+            Math.min(result[1], point[1]),
+            Math.max(result[2], point[0]),
+            Math.max(result[3], point[1]),
+          ], [Infinity, Infinity, -Infinity, -Infinity]);
+          coordinate = [(bounds[0] + bounds[2]) / 2, (bounds[1] + bounds[3]) / 2];
+        }
+      } else {
+        const lines = feature.geometry?.type === "MultiLineString" ? feature.geometry.coordinates : [feature.geometry?.coordinates];
+        const line = lines.filter(Array.isArray).sort((left, right) => right.length - left.length)[0];
+        coordinate = line?.[Math.floor(line.length / 2)];
+      }
+      if (!Array.isArray(coordinate) || coordinate.length < 2) continue;
+      const point = mapLibreMap.project(coordinate);
+      const cell = `${Math.round(point.x / 105)}:${Math.round(point.y / 28)}`;
+      if (occupiedCells.has(cell)) continue;
+      seenNames.add(label);
+      occupiedCells.add(cell);
+      const element = document.createElement("span");
+      element.className = "arcgis-water-map-label";
+      element.textContent = label;
+      arcgisWaterLabelMarkers.push(new maplibregl.Marker({ element, anchor: "center" }).setLngLat(coordinate).addTo(mapLibreMap));
+      if (arcgisWaterLabelMarkers.length >= limit) break labelSources;
+    }
+  }
+}
+
+function loadArcgisWaterStyle() {
+  if (!arcgisWaterStylePromise) {
+    arcgisWaterStylePromise = fetch(arcgisWaterStyleUrl)
+      .then((response) => {
+        if (!response.ok) throw new Error(`ArcGIS water style request failed (${response.status})`);
+        return response.json();
+      })
+      .catch((error) => {
+        arcgisWaterStylePromise = null;
+        throw error;
+      });
+  }
+  return arcgisWaterStylePromise;
+}
+
+async function syncMapLibreArcgisWaterOverlay(enabled) {
+  if (!mapLibreMap || !mapLibreStyleReady) return;
+  if (enabled && mapLibreMap.getSource("arcgis-water") && mapLibreMap.getSource("hydrorivers-major")) return;
+  if (enabled && mapLibreMap._travelArcgisWaterSyncPending) return;
+  const targetMap = mapLibreMap;
+  const revision = ++arcgisWaterSyncRevision;
+  removeMapLibreArcgisWaterOverlay();
+  if (!enabled) return;
+  targetMap._travelArcgisWaterSyncPending = true;
+  try {
+    const style = await loadArcgisWaterStyle();
+    if (revision !== arcgisWaterSyncRevision || !mapLibreMap || !mapLibreStyleReady || !state.mapOverlays?.arcgisWater) return;
+    const addWaterSource = (id, maxzoom) => mapLibreMap.addSource(id, {
+      type: "vector",
+      tiles: [`${arcgisWaterServiceUrl}/tile/{z}/{y}/{x}.pbf`],
+      tileSize: 512,
+      minzoom: 0,
+      maxzoom,
+      attribution: arcgisWaterAttribution,
+    });
+    // ArcGIS publishes four separately generalized water networks. Keep each
+    // overview tier on its last native tile and overlap adjacent tiers so a
+    // reach cannot disappear merely because the map crossed a zoom boundary.
+    addWaterSource("arcgis-water-small", 5);
+    addWaterSource("arcgis-water-medium", 7);
+    addWaterSource("arcgis-water-major", 13);
+    addWaterSource("arcgis-water-area-small", 4);
+    addWaterSource("arcgis-water-area-medium", 6);
+    addWaterSource("arcgis-water-area-large", 10);
+    addWaterSource("arcgis-water", 14);
+    const waterLayers = (style.layers || []).filter((layer) => /^Water (?:line|area)/.test(String(layer["source-layer"] || "")));
+    waterLayers.forEach((sourceLayer, index) => {
+      if (sourceLayer.type === "symbol") return;
+      if (sourceLayer["source-layer"] !== "Water line") return;
+      const layer = structuredClone(sourceLayer);
+      layer.id = `${arcgisWaterLayerPrefix}${index}`;
+      layer.source = "arcgis-water";
+      delete layer.metadata;
+      mapLibreMap.addLayer(layer);
+    });
+    const addPersistentScaleLayer = (sourceLayerName, source, maxzoom, id) => {
+      const sourceStyle = waterLayers.find((layer) => layer.type === "line" && layer["source-layer"] === sourceLayerName);
+      if (!sourceStyle) return;
+      const layer = structuredClone(sourceStyle);
+      layer.id = `${arcgisWaterLayerPrefix}${id}`;
+      layer.source = source;
+      layer.maxzoom = maxzoom;
+      delete layer.metadata;
+      if (id === "major-persistent") {
+        layer.paint = {
+          ...layer.paint,
+          "line-color": "#527f96",
+          "line-width": ["interpolate", ["linear"], ["zoom"], 6, 1.2, 10, 1.8, 14, 2.8, 18, 4.2, 22, 5.4],
+        };
+      } else {
+        // Overview centerlines are often the only continuous representation
+        // where a river switches between line and polygon features downstream.
+        // Keep them as a restrained underlay at close zooms to bridge those
+        // source-data seams without overpowering detailed waterways.
+        layer.paint = {
+          ...layer.paint,
+          "line-color": "#6f98aa",
+          "line-width": ["interpolate", ["linear"], ["zoom"], 4, 0.9, 10, 1.15, 18, 1.6],
+        };
+      }
+      mapLibreMap.addLayer(layer);
+    };
+    addPersistentScaleLayer("Water line small scale", "arcgis-water-small", 8, "small-persistent");
+    addPersistentScaleLayer("Water line medium scale", "arcgis-water-medium", 14, "medium-persistent");
+    addPersistentScaleLayer("Water line large scale", "arcgis-water-major", 24, "major-persistent");
+    const addPersistentAreaLayer = (sourceLayerName, source, minzoom, maxzoom, id, symbol = null) => {
+      // ArcGIS water-area tiles also contain intermittent water, inundated
+      // areas, dams, swamps, and marshes. Filling every symbol as ordinary
+      // water creates very broad grey "shadows" around rivers. Match the
+      // official ordinary lake/river class at each scale instead.
+      const layer = {
+        id: `${arcgisWaterLayerPrefix}${id}`,
+        type: "fill",
+        source,
+        "source-layer": sourceLayerName,
+        minzoom,
+        maxzoom,
+        paint: {
+          "fill-color": "#9ab4c4",
+          "fill-outline-color": "#9ab4c4",
+        },
+      };
+      if (symbol !== null) layer.filter = ["==", "_symbol", symbol];
+      mapLibreMap.addLayer(layer);
+    };
+    mapLibreMap.addSource("hydrorivers-major", {
+      type: "geojson",
+      data: "data/hydrorivers-major.geojson",
+      maxzoom: 12,
+      tolerance: 0.7,
+      buffer: 64,
+      attribution: "HydroRIVERS © HydroSHEDS / WWF, Lehner & Grill (2013)",
+    });
+    const hydroRiverClasses = [
+      { order: 1, minzoom: 7, widths: [2.4, 6.2, 13] },
+      { order: 2, minzoom: 7, widths: [1.9, 5.1, 11] },
+      { order: 3, minzoom: 7, widths: [1.35, 3.9, 8.5] },
+      { order: 4, minzoom: 7, widths: [0.85, 2.7, 6.2] },
+    ];
+    hydroRiverClasses.forEach(({ order, minzoom, widths }) => {
+      const width = ["interpolate", ["linear"], ["zoom"], minzoom, widths[0], 11, widths[1], 18, widths[2]];
+      mapLibreMap.addLayer({
+        id: `${arcgisWaterLayerPrefix}hydrorivers-${order}-water`,
+        type: "line",
+        source: "hydrorivers-major",
+        minzoom,
+        maxzoom: 19,
+        filter: ["==", ["get", "flowOrder"], order],
+        layout: { "line-cap": "round", "line-join": "round" },
+        paint: {
+          "line-color": "#9ab4c4",
+          "line-opacity": 0.9,
+          "line-width": width,
+        },
+      });
+    });
+    // Area datasets are independently generalized and their shorelines do not
+    // align exactly. Never overlap adjacent tiers: stacked fills create broad
+    // grey halos around rivers and lakes at the transition zooms. Continuity
+    // across tiers is handled by the persistent centerline layers above.
+    addPersistentAreaLayer("Water area small scale", "arcgis-water-area-small", 1, 5, "area-small-persistent");
+    addPersistentAreaLayer("Water area medium scale", "arcgis-water-area-medium", 5, 7, "area-medium-persistent", 0);
+    addPersistentAreaLayer("Water area large scale", "arcgis-water-area-large", 7, 11, "area-large-persistent", 0);
+    addPersistentAreaLayer("Water area", "arcgis-water", 11, 24, "area-detail-persistent", 7);
+    const addAreaLabelHitLayer = (sourceLayerName, source, minzoom, maxzoom, id) => {
+      mapLibreMap.addLayer({
+        id: `${arcgisWaterLayerPrefix}${id}-area-label-hit`,
+        type: "circle",
+        source,
+        "source-layer": sourceLayerName,
+        minzoom,
+        maxzoom,
+        paint: {
+          "circle-radius": 20,
+          // Hit areas must be invisible. Label points can be repeated densely
+          // along a river and across scale sources; even 1% black accumulates
+          // into a wide band around the channel.
+          "circle-opacity": 0,
+          "circle-stroke-opacity": 0,
+        },
+      });
+    };
+    addAreaLabelHitLayer("Water area small scale/label", "arcgis-water-area-small", 1, 7, "small");
+    addAreaLabelHitLayer("Water area medium scale/label", "arcgis-water-area-medium", 5, 11, "medium");
+    addAreaLabelHitLayer("Water area large scale/label", "arcgis-water-area-large", 6, 15, "large");
+    addAreaLabelHitLayer("Water area/label", "arcgis-water", 11, 24, "detail");
+    // Keep HydroRIVERS below every Esri water layer. It remains visible across
+    // zooms 7-19, but only where ArcGIS has no river reach to cover it.
+    const firstEsriWaterLayer = (mapLibreMap.getStyle()?.layers || []).find((layer) =>
+      layer.id.startsWith(arcgisWaterLayerPrefix) && !layer.id.includes("hydrorivers-")
+    )?.id;
+    if (firstEsriWaterLayer) {
+      (mapLibreMap.getStyle()?.layers || [])
+        .filter((layer) => layer.id.startsWith(`${arcgisWaterLayerPrefix}hydrorivers-`))
+        .forEach((layer) => mapLibreMap.moveLayer(layer.id, firstEsriWaterLayer));
+    }
+    if (!mapLibreMap._travelArcgisWaterLabelRefreshBound) {
+      mapLibreMap._travelArcgisWaterLabelRefreshBound = true;
+      mapLibreMap.on("idle", refreshMapLibreArcgisWaterLabels);
+      mapLibreMap.on("moveend", refreshMapLibreArcgisWaterLabels);
+    }
+    window.setTimeout(refreshMapLibreArcgisWaterLabels, 500);
+    applyMapLibreArcgisWaterSourceVisibility();
+    bringMapLibrePointLayersToFront();
+  } catch (error) {
+    removeMapLibreArcgisWaterOverlay();
+    console.error("Global water layer unavailable", error?.stack || error);
+  } finally {
+    targetMap._travelArcgisWaterSyncPending = false;
   }
 }
 
@@ -8459,6 +9066,7 @@ function renderMapLibreLayers() {
     // and transport overlays visible while a newly selected basemap or
     // boundary level is loading.
     syncMapLibrePopulationDensityOverlay(overlays.populationDensity);
+    syncMapLibreArcgisWaterOverlay(overlays.arcgisWater);
     syncMapLibreRailwayOverlay(overlays.railways);
     syncMapLibreHazardOverlays(overlays);
     renderMapLibreMarkers(overlays);
@@ -8586,6 +9194,7 @@ function renderMapLibreLayers() {
     bindMapLibreFlightRouteHandlers();
   }
   syncMapLibrePopulationDensityOverlay(overlays.populationDensity);
+  syncMapLibreArcgisWaterOverlay(overlays.arcgisWater);
   syncMapLibreRailwayOverlay(overlays.railways);
   syncMapLibreHazardOverlays(overlays);
   if (overlays.china5a && usNpsBoundaries && usNpsUnits.length) {
@@ -14222,6 +14831,9 @@ function renderMapControls() {
   const showFlights = $("#showFlightsOnMap");
   const showPopulationDensity = $("#showPopulationDensityOnMap");
   const showRailways = $("#showRailwaysOnMap");
+  const showArcgisWater = $("#showArcgisWaterOnMap");
+  const showArcgisWaterEsri = $("#showArcgisWaterEsri");
+  const showArcgisWaterHydroRivers = $("#showArcgisWaterHydroRivers");
   const showEarthquakes = $("#showEarthquakesOnMap");
   const showVolcanoes = $("#showVolcanoesOnMap");
   const show3d = $("#show3dMap");
@@ -14235,6 +14847,9 @@ function renderMapControls() {
   if (showFlights) showFlights.checked = Boolean(overlays.flights);
   if (showPopulationDensity) showPopulationDensity.checked = Boolean(overlays.populationDensity);
   if (showRailways) showRailways.checked = Boolean(overlays.railways);
+  if (showArcgisWater) showArcgisWater.checked = Boolean(overlays.arcgisWater);
+  if (showArcgisWaterEsri) showArcgisWaterEsri.checked = overlays.arcgisWaterEsri !== false;
+  if (showArcgisWaterHydroRivers) showArcgisWaterHydroRivers.checked = overlays.arcgisWaterHydroRivers !== false;
   if (showEarthquakes) showEarthquakes.checked = Boolean(overlays.earthquakes);
   if (showVolcanoes) showVolcanoes.checked = Boolean(overlays.volcanoes);
   const populationLegend = $("#populationDensityLegend");
@@ -14252,6 +14867,8 @@ function renderMapControls() {
   }
   const railwayLegend = $("#railwayLegend");
   if (railwayLegend) railwayLegend.hidden = !overlays.railways;
+  const arcgisWaterLegend = $("#arcgisWaterLegend");
+  if (arcgisWaterLegend) arcgisWaterLegend.hidden = !overlays.arcgisWater;
   const railwayOfficialLegend = $("#railwayOfficialLegend");
   if (railwayOfficialLegend) {
     const locale = currentLanguage === "en" ? "en" : "zh_CN";
@@ -14278,7 +14895,7 @@ function renderMapControls() {
   const earthquakeMagnitudeSelect = $("#earthquakeMagnitude");
   if (earthquakeMagnitudeSelect) earthquakeMagnitudeSelect.value = String(Number(state.earthquakeMinMagnitude) || 5);
   const overlayLegends = $("#mapOverlayLegends");
-  if (overlayLegends) overlayLegends.hidden = !showSeafloorAgeLegend && !showSeafloorContourLegend && !overlays.populationDensity && !overlays.railways && !overlays.earthquakes && !overlays.volcanoes;
+  if (overlayLegends) overlayLegends.hidden = !showSeafloorAgeLegend && !showSeafloorContourLegend && !overlays.populationDensity && !overlays.railways && !overlays.arcgisWater && !overlays.earthquakes && !overlays.volcanoes;
   if (show3d) show3d.checked = Boolean(state.map3d);
   if (showChina5a) showChina5a.checked = Boolean(overlays.china5a);
   if (showAncientCapitals) showAncientCapitals.checked = Boolean(overlays.chinaAncientCapitals);
@@ -14780,6 +15397,7 @@ $("#showPopulationDensityOnMap")?.addEventListener("change", (event) => {
   renderMapControls();
   if (mapLibreMap && mapLibreStyleReady) {
     syncMapLibrePopulationDensityOverlay(event.target.checked);
+    syncMapLibreArcgisWaterOverlay(Boolean(state.mapOverlays.arcgisWater));
     syncMapLibreRailwayOverlay(Boolean(state.mapOverlays.railways));
     bringMapLibrePointLayersToFront();
   } else {
@@ -14814,6 +15432,28 @@ $("#showRailwaysOnMap")?.addEventListener("change", (event) => {
   } else {
     renderGeoMap();
   }
+});
+$("#showArcgisWaterOnMap")?.addEventListener("change", (event) => {
+  state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
+  state.mapOverlays.arcgisWater = event.target.checked;
+  saveUiStateSoon();
+  renderMapControls();
+  if (mapLibreMap && mapLibreStyleReady) {
+    syncMapLibreArcgisWaterOverlay(event.target.checked);
+    bringMapLibrePointLayersToFront();
+  } else {
+    renderGeoMap();
+  }
+});
+["showArcgisWaterEsri", "showArcgisWaterHydroRivers"].forEach((id) => {
+  $("#" + id)?.addEventListener("change", (event) => {
+    state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
+    const key = id === "showArcgisWaterEsri" ? "arcgisWaterEsri" : "arcgisWaterHydroRivers";
+    state.mapOverlays[key] = event.target.checked;
+    saveUiStateSoon();
+    renderMapControls();
+    if (mapLibreMap && mapLibreStyleReady) applyMapLibreArcgisWaterSourceVisibility();
+  });
 });
 $("#showEarthquakesOnMap")?.addEventListener("change", (event) => {
   state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };

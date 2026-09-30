@@ -20,6 +20,7 @@ assert.match(app, /volcano-triangle-pleistocene/);
 assert.match(app, /variant === "pleistocene"/);
 assert.doesNotMatch(app, /volcano-triangle-outline/);
 assert.doesNotMatch(html, /空心：更新世/);
+assert.match(html, /class="hazard-toggle-pair"[\s\S]*showEarthquakesOnMap[\s\S]*showVolcanoesOnMap/);
 assert.match(app, /4, 2, 6, 3\.6, 8, 6\.5/);
 assert.match(app, /mouseenter", "earthquake-points"/);
 assert.match(app, /mouseenter", "volcano-points"/);

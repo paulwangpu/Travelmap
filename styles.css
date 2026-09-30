@@ -798,6 +798,7 @@ button:hover {
 }
 
 .population-density-legend,
+.arcgis-water-legend,
 .seafloor-age-legend,
 .seafloor-contour-legend,
 .railway-legend,
@@ -817,6 +818,7 @@ button:hover {
 }
 
 .population-density-legend[hidden],
+.arcgis-water-legend[hidden],
 .seafloor-age-legend[hidden],
 .seafloor-contour-legend[hidden],
 .railway-legend[hidden],
@@ -855,6 +857,139 @@ button:hover {
 .population-density-legend strong,
 .population-density-legend small {
   display: block;
+}
+
+.arcgis-water-legend strong,
+.arcgis-water-legend small {
+  display: block;
+}
+
+.arcgis-water-legend strong {
+  margin-bottom: 6px;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.arcgis-water-legend small {
+  margin-top: 5px;
+  color: #53655f;
+  font-size: 9px;
+}
+
+.arcgis-water-legend-items {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 10px;
+}
+
+.arcgis-water-source-toggles {
+  display: grid;
+  gap: 3px;
+  margin-bottom: 7px;
+}
+
+.arcgis-water-source-toggles label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #324b43;
+  font-size: 9px;
+  line-height: 1.2;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.arcgis-water-source-toggles input {
+  width: 13px;
+  height: 13px;
+  margin: 0;
+  accent-color: #176b52;
+}
+
+.arcgis-water-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #40544e;
+  font-size: 9px;
+}
+
+.arcgis-water-legend-item i {
+  display: inline-block;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 0;
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-color: #809caa;
+  border-radius: 999px;
+}
+
+.arcgis-water-legend-item.major i {
+  border-top-width: 4px;
+  border-color: #527f96;
+}
+
+.arcgis-water-map-label {
+  display: block;
+  max-width: 150px;
+  color: #315d72;
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.96), 1px -1px 0 rgba(255, 255, 255, 0.96), -1px 1px 0 rgba(255, 255, 255, 0.96), 1px 1px 0 rgba(255, 255, 255, 0.96), 0 0 4px #fff;
+  transform: translateY(-2px);
+  pointer-events: none;
+}
+
+.arcgis-water-hover-popup .maplibregl-popup-content {
+  min-width: 220px;
+  max-width: min(380px, calc(100vw - 28px));
+  padding: 5px 8px;
+  border-radius: 7px;
+}
+
+.arcgis-water-hover-popup .popup-body {
+  padding-right: 0;
+  line-height: 1.1;
+}
+
+.arcgis-water-pinned-popup .arcgis-water-debug-popup > strong {
+  padding-right: 28px;
+}
+
+.arcgis-water-debug-popup > strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 11px;
+}
+
+.arcgis-water-debug-fields {
+  display: grid;
+  gap: 2px;
+  max-height: 240px;
+  overflow: auto;
+  font: 9px/1.25 ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.arcgis-water-debug-fields > div {
+  display: grid;
+  grid-template-columns: minmax(74px, auto) minmax(0, 1fr);
+  gap: 6px;
+  padding-top: 2px;
+  border-top: 1px solid rgba(84, 111, 102, 0.14);
+}
+
+.arcgis-water-debug-fields b {
+  color: #49645b;
+  overflow-wrap: anywhere;
+}
+
+.arcgis-water-debug-fields span {
+  color: #172620;
+  overflow-wrap: anywhere;
 }
 
 .population-density-opacity {
@@ -7053,6 +7188,20 @@ button:hover {
   overflow: hidden !important;
   text-overflow: ellipsis !important;
   white-space: nowrap !important;
+}
+
+.map-control-panel:not(.collapsed) .hazard-toggle-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2px;
+  min-width: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.map-control-panel:not(.collapsed) .hazard-toggle-pair label {
+  padding-inline: 3px !important;
+  gap: 2px !important;
 }
 
 .map-control-panel:not(.collapsed) .map-controls-toggle::before {

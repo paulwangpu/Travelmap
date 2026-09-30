@@ -6,7 +6,7 @@
     <title>我的全球旅行地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" />
-    <link rel="stylesheet" href="styles.css?v=141" />
+    <link rel="stylesheet" href="styles.css?v=151" />
   </head>
   <body>
     <div class="app-shell map-first-shell">
@@ -35,7 +35,7 @@
             <strong data-i18n="privacyTitle">本地保存</strong>
             <p data-i18n="privacyText">数据只保存在本机浏览器里，不会自动上传或公开。如需备份请导出。</p>
           </div>
-          <div class="app-version" id="appVersion">v2.1.1</div>
+          <div class="app-version" id="appVersion">v2.1.2</div>
         </div>
       </aside>
 
@@ -102,8 +102,11 @@
               <div class="map-overlay-toggles map-thematic-overlays">
                 <label><input id="showPopulationDensityOnMap" type="checkbox" /> <span data-i18n="providerPopulation">人口密度</span></label>
                 <label><input id="showRailwaysOnMap" type="checkbox" /> <span data-i18n="overlayRailways">铁路线路</span></label>
-                <label><input id="showEarthquakesOnMap" type="checkbox" /> <span data-i18n="overlayEarthquakes">地震</span></label>
-                <label><input id="showVolcanoesOnMap" type="checkbox" /> <span data-i18n="overlayVolcanoes">火山</span></label>
+                <label><input id="showArcgisWaterOnMap" type="checkbox" /> <span data-i18n="overlayArcgisWater">全球水系</span></label>
+                <div class="hazard-toggle-pair">
+                  <label><input id="showEarthquakesOnMap" type="checkbox" /> <span data-i18n="overlayEarthquakes">地震</span></label>
+                  <label><input id="showVolcanoesOnMap" type="checkbox" /> <span data-i18n="overlayVolcanoes">火山</span></label>
+                </div>
               </div>
             </section>
 
@@ -186,6 +189,18 @@
                   <div class="population-density-scale" aria-hidden="true"></div>
                   <div class="population-density-labels"><span>20</span><span>400</span><span>2k</span><span>10k</span><span>50k</span><span>200k+</span></div>
                   <small data-i18n="populationDensityUnit">人 / km² · GHSL</small>
+                </aside>
+                <aside class="arcgis-water-legend" id="arcgisWaterLegend" hidden>
+                  <strong data-i18n="arcgisWaterLegendTitle">全球水系</strong>
+                  <div class="arcgis-water-source-toggles">
+                    <label><input id="showArcgisWaterEsri" type="checkbox" checked /><span data-i18n="arcgisWaterEsriSource">ArcGIS 水面与名称</span></label>
+                    <label><input id="showArcgisWaterHydroRivers" type="checkbox" checked /><span data-i18n="arcgisWaterHydroSource">HydroRIVERS 缺失河段补全</span></label>
+                  </div>
+                  <div class="arcgis-water-legend-items">
+                    <div class="arcgis-water-legend-item major"><i aria-hidden="true"></i><span data-i18n="arcgisWaterMajor">主要河流</span></div>
+                    <div class="arcgis-water-legend-item minor"><i aria-hidden="true"></i><span data-i18n="arcgisWaterMinor">支流、溪流与运河</span></div>
+                  </div>
+                  <small data-i18n="arcgisWaterLegendSource">Esri Living Atlas · 数据随在线图层更新</small>
                 </aside>
               </div>
             </div>
@@ -383,6 +398,6 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
     <script src="https://unpkg.com/pmtiles@4.4.0/dist/pmtiles.js"></script>
-    <script src="app.js?v=532"></script>
+    <script src="app.js?v=598"></script>
   </body>
 </html>
