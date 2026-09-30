@@ -1,8 +1,10 @@
-const cacheName = "travel-map-v604";
-const shellFiles = ["./", "./index.html", "./styles.css?v=151", "./app.js?v=599"];
+const cacheName = "travel-map-v605";
+const shellFiles = ["./", "./index.html", "./styles.css?v=151", "./app.js?v=600"];
 
 self.addEventListener("install", (event) => {
-  event.waitUntil(caches.open(cacheName).then((cache) => cache.addAll(shellFiles)));
+  event.waitUntil(caches.open(cacheName).then((cache) => cache.addAll(
+    shellFiles.map((url) => new Request(url, { cache: "reload" }))
+  )));
   self.skipWaiting();
 });
 
@@ -27,7 +29,7 @@ self.addEventListener("fetch", (event) => {
   if (url.origin !== self.location.origin) return;
   if (url.pathname.endsWith(".pmtiles")) return;
   if (event.request.mode === "navigate") {
-    event.respondWith(fetch(event.request).catch(() => caches.match("./index.html")));
+    event.respondWith(fetch(event.request, { cache: "no-store" }).catch(() => caches.match("./index.html")));
     return;
   }
   if (url.searchParams.has("v") || url.pathname.includes("/data/") || /\.(?:js|css|png|svg|ico)$/i.test(url.pathname)) {

@@ -15763,7 +15763,9 @@ window.visualViewport?.addEventListener("resize", () => {
 });
 if ("serviceWorker" in navigator && location.protocol !== "file:") {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=469").catch((error) => console.warn("Service Worker registration failed", error));
+    navigator.serviceWorker.register("./sw.js?v=605", { updateViaCache: "none" })
+      .then((registration) => registration.update())
+      .catch((error) => console.warn("Service Worker registration failed", error));
   });
 }
 window.addEventListener("hashchange", () => {
