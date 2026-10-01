@@ -1,5 +1,5 @@
-const cacheName = "travel-map-v608";
-const shellFiles = ["./", "./index.html", "./styles.css?v=151", "./app.js?v=603"];
+const cacheName = "travel-map-v612";
+const shellFiles = ["./", "./index.html", "./styles.css?v=154", "./vendor/openrailwaymap/composite.js?v=1", "./vendor/openrailwaymap/style.json?v=1", "./vendor/openrailwaymap/legend.json?v=1", "./railway-vector.js?v=6", "./app.js?v=606"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(cacheName).then((cache) => cache.addAll(
@@ -32,7 +32,7 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(fetch(event.request, { cache: "no-store" }).catch(() => caches.match("./index.html")));
     return;
   }
-  if (url.searchParams.has("v") || url.pathname.includes("/data/") || /\.(?:js|css|png|svg|ico)$/i.test(url.pathname)) {
+  if (url.searchParams.has("v") || url.pathname.includes("/data/") || url.pathname.includes("/vendor/openrailwaymap/") || /\.(?:js|css|png|svg|ico)$/i.test(url.pathname)) {
     event.respondWith(cacheFirst(event.request));
   }
 });

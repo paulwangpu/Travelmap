@@ -1,0 +1,18 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><title>Railway vector verification</title>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css">
+<style>body{margin:0;font:15px sans-serif}header{padding:8px;display:flex;gap:12px;align-items:center}#map{height:calc(100vh - 54px)}#result{white-space:pre-wrap}</style>
+<header><label>地区<select id="region"><option value="cn">中国 · 北京南站</option><option value="us">美国 · 休斯敦</option><option value="eu">欧洲 · 柏林中央站</option></select></label><label>缩放<select id="zoom"><option>4</option><option>10</option><option>17</option><option>18</option></select></label><label>底图<select id="base"><option value="osm">OSM</option><option value="terrain">地形</option></select></label><span id="result">加载中</span></header>
+<div id="map"></div><script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script><script src="../vendor/openrailwaymap/composite.js?v=1"></script><script src="../railway-vector.js?v=5"></script>
+<script>
+// The application module uses project-root asset URLs; this preview explicitly sets its base URL.
+const baseElement=document.createElement('base');baseElement.href='../';document.head.prepend(baseElement);
+const centers={cn:[116.378,39.865],us:[-95.367,29.767],eu:[13.369,52.525]};
+const map=new maplibregl.Map({container:'map',center:centers.cn,zoom:4,maxZoom:18,style:{version:8,glyphs:'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',sources:{base:{type:'raster',tiles:['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],tileSize:256}},layers:[{id:'base',type:'raster',source:'base',paint:{'raster-opacity':0.4}}]}});
+let errors=[];let ready=false;
+map.on('error',event=>{errors.push(event.error.message);document.querySelector('#result').textContent=errors.at(-1)});
+map.on('load',async()=>{await RailwayVector.install(map,'zh');ready=true;});
+map.on('idle',()=>{if(!ready)return;const features=map.queryRenderedFeatures().filter(f=>f.layer.id.startsWith('orm-'));document.querySelector('#result').textContent=`z${map.getZoom().toFixed(1)} · ${features.length}铁路要素 · ${features.filter(f=>f.geometry.type.includes('Line')).length}线路 · 错误${errors.length}`});
+function view(){map.jumpTo({center:centers[document.querySelector('#region').value],zoom:Number(document.querySelector('#zoom').value)})}
+document.querySelector('#region').onchange=view;document.querySelector('#zoom').onchange=view;
+document.querySelector('#base').onchange=async()=>{ready=false;RailwayVector.remove(map);const terrain=document.querySelector('#base').value==='terrain';map.setStyle({version:8,glyphs:'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',sources:{base:{type:'raster',tiles:[terrain?'https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}':'https://tile.openstreetmap.org/{z}/{x}/{y}.png'],tileSize:256}},layers:[{id:'base',type:'raster',source:'base',paint:{'raster-opacity':0.4}}]});map.once('style.load',async()=>{await RailwayVector.install(map,'zh');ready=true;})};
+</script></html>

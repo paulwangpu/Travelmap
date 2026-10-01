@@ -762,6 +762,7 @@ function normalizeMapOverlays(overlays = {}) {
     ...overlays,
     populationDensity: Boolean(overlays.populationDensity),
     railways: Boolean(overlays.railways),
+    railwayMode: overlays.railwayMode === "raster" ? "raster" : "vector",
     arcgisWater: Boolean(overlays.arcgisWater ?? overlays.hydroRivers),
     arcgisWaterEsri: overlays.arcgisWaterEsri !== false,
     arcgisWaterHydroRivers: overlays.arcgisWaterHydroRivers !== false,
@@ -6161,6 +6162,7 @@ function refreshMapLabelsForLanguage() {
   mapLibreMarkerSignature = "";
   if (mapLibreMap && mapLibreStyleReady) {
     syncMapLibreArcgisWaterOverlay(Boolean(state.mapOverlays?.arcgisWater));
+    syncMapLibreRailwayOverlay(Boolean(state.mapOverlays?.railways));
   }
   if (mapLibreMap && mapLibreStyleReady && mapLibreMap.getSource("map-points")) {
     renderMapLibreMarkers();
@@ -7999,6 +8001,9 @@ function renderMapLibreMap() {
       }
     });
     mapLibreMap.on("error", (event) => {
+      if (String(event.sourceId || "").startsWith("orm-") && state.mapOverlays?.railways && state.mapOverlays?.railwayMode !== "raster") {
+        railwayInteractionStatus(currentLanguage === "en" ? "Some vector resources failed; raster is available above" : "部分矢量资源加载失败，可切换上方图片版");
+      }
       // Individual raster/vector tiles can fail transiently while the map and
       // all other sources remain usable. Do not report the whole map as failed
       // for a recoverable source or tile request.
@@ -8648,6 +8653,7 @@ let railwayLastQueryAt = 0;
 let railwayClickRevision = 0;
 
 function clearMapLibreRailwayHover() {
+  if (railwayHoverPopup && !arcgisWaterHoverPopup && mapLibreMap && !mapAddMode && !mapPathMode) mapLibreMap.getCanvas().style.cursor = "";
   clearTimeout(railwayHoverTimer);
   railwayHoverTimer = null;
   railwayHoverEvent = null;
@@ -8738,19 +8744,20 @@ function nearestRailwayFeature(event, features) {
 
 function railwayFeatureHtml(feature, full) {
   const tags = feature.properties;
-  const name = tags[currentLanguage === "en" ? "name:en" : "name:zh"] || tags.name || tags.ref || (currentLanguage === "en" ? "Unnamed railway" : "未命名铁路");
-  const fields = full ? { osm_id: feature.id, ...tags }
+  const name = tags.localized_name || tags[currentLanguage === "en" ? "name:en" : "name:zh"] || tags.name || tags.ref || (currentLanguage === "en" ? "Unnamed railway" : "未命名铁路");
+  const fields = full ? (feature.layer ? { source: feature.source, source_layer: feature.sourceLayer, render_layer: feature.layer.id, feature_id: feature.id, ...tags } : { osm_id: feature.id, ...tags })
     : Object.fromEntries(["ref", "railway", "usage", "operator", "maxspeed", "electrified"].filter((key) => tags[key]).map((key) => [key, tags[key]]));
   return `<div class="arcgis-water-debug-popup"><strong>${escapeHtml(name)}</strong><div class="arcgis-water-debug-fields">${Object.entries(fields).map(([key, value]) => `<div><b>${escapeHtml(key)}</b><span>${escapeHtml(String(value))}</span></div>`).join("")}</div></div>`;
 }
 
-function showRailwayHover(event, features) {
+function showRailwayHover(event, features, vectorFeature = null) {
   if (!mapLibreMap || !state.mapOverlays?.railways || railwayPinnedPopup || mapAddMode || mapPathMode) return;
-  const feature = nearestRailwayFeature(event, features);
+  const feature = vectorFeature || nearestRailwayFeature(event, features);
+  const wasHovering = Boolean(railwayHoverPopup);
   railwayHoverPopup?.remove();
   railwayHoverPopup = null;
   if (!feature) {
-    if (!arcgisWaterHoverPopup && !mapAddMode && !mapPathMode) mapLibreMap.getCanvas().style.cursor = "";
+    if (wasHovering && !arcgisWaterHoverPopup && !mapAddMode && !mapPathMode) mapLibreMap.getCanvas().style.cursor = "";
     return;
   }
   clearMapLibreArcgisWaterHover();
@@ -8759,7 +8766,23 @@ function showRailwayHover(event, features) {
     .setLngLat(event.lngLat).setHTML(`<div class="popup-body">${railwayFeatureHtml(feature, false)}</div>`).addTo(mapLibreMap);
 }
 
+function railwayForegroundPoint(event) {
+  const layers = ["map-points-circle", "map-points-label", "map-points-label-full", "earthquake-points", "volcano-points"].filter(id => mapLibreMap.getLayer(id));
+  return layers.length && mapLibreMap.queryRenderedFeatures(event.point, { layers }).length > 0;
+}
+
 function handleMapLibreRailwayHover(event) {
+  if (railwayForegroundPoint(event)) {
+    clearMapLibreRailwayHover();
+    if (!mapAddMode && !mapPathMode) mapLibreMap.getCanvas().style.cursor = "pointer";
+    return;
+  }
+  if (state.mapOverlays?.railwayMode !== "raster") {
+    if (!state.mapOverlays?.railways || railwayPinnedPopup || mapAddMode || mapPathMode) return clearMapLibreRailwayHover();
+    const feature = RailwayVector.query(mapLibreMap, event.point);
+    showRailwayHover(event, [], feature);
+    return;
+  }
   if (!state.mapOverlays?.railways || mapAddMode || mapPathMode || railwayPinnedPopup || mapLibreMap.getZoom() < 8) {
     clearMapLibreRailwayHover();
     return;
@@ -8784,6 +8807,20 @@ function handleMapLibreRailwayHover(event) {
 }
 
 function handleMapLibreRailwayClick(event, loaded = false) {
+  if (railwayForegroundPoint(event)) return false;
+  if (state.mapOverlays?.railways && state.mapOverlays?.railwayMode !== "raster") {
+    const feature = RailwayVector.query(mapLibreMap, event.point);
+    railwayPinnedPopup?.remove();
+    railwayPinnedPopup = null;
+    if (!feature) return false;
+    markMapEventHandled(event);
+    clearMapLibreRailwayHover();
+    clearMapLibreArcgisWaterHover();
+    railwayPinnedPopup = new maplibregl.Popup({ closeButton: false, offset: 8, className: "arcgis-water-hover-popup arcgis-water-pinned-popup" })
+      .setLngLat(event.lngLat).setHTML(mapPopupHtml(railwayFeatureHtml(feature, true))).addTo(mapLibreMap);
+    railwayPinnedPopup.on("close", () => { railwayPinnedPopup = null; });
+    return true;
+  }
   const revision = ++railwayClickRevision;
   if (!state.mapOverlays?.railways || mapLibreMap.getZoom() < 8) return false;
   const features = railwayFeatureCache.get(railwayQueryCell(event.lngLat).key)?.features || [];
@@ -8811,6 +8848,26 @@ function handleMapLibreRailwayClick(event, loaded = false) {
 
 function syncMapLibreRailwayOverlay(enabled) {
   if (!mapLibreMap || !mapLibreStyleReady) return;
+  railwayClickRevision += 1;
+  RailwayVector.remove(mapLibreMap);
+  clearMapLibreRailwayHover();
+  railwayPinnedPopup?.remove();
+  railwayPinnedPopup = null;
+  if (enabled && state.mapOverlays?.railwayMode !== "raster") {
+    removeMapLibreLayer("railway-network-raster");
+    if (mapLibreMap.getSource("railway-network")) mapLibreMap.removeSource("railway-network");
+    const target = mapLibreMap;
+    RailwayVector.install(target, currentLanguage === "en" ? "en" : "zh").then(record => {
+      if (record && target === mapLibreMap) {
+        bringMapLibrePointLayersToFront();
+        railwayInteractionStatus(currentLanguage === "en" ? "Hover or click near a railway" : "悬停或点击铁路附近查看信息");
+      }
+    }).catch(error => {
+      console.warn("Vector railway unavailable", error);
+      railwayInteractionStatus(currentLanguage === "en" ? "Vector resources failed; select raster above" : "矢量资源加载失败，可切换上方图片版");
+    });
+    return;
+  }
   if (!enabled) {
     clearMapLibreRailwayHover();
     railwayPinnedPopup?.remove();
@@ -10516,6 +10573,7 @@ function renderLeafletLayers() {
   }
 
   if (overlays.railways) {
+    railwayInteractionStatus(currentLanguage === "en" ? "Leaflet fallback uses raster railways" : "Leaflet 回退模式使用图片版铁路");
     if (!leafletMap.getPane("railwayPane")) {
       const pane = leafletMap.createPane("railwayPane");
       pane.style.zIndex = "350";
@@ -15042,6 +15100,23 @@ function renderMapControls() {
   }
   const railwayLegend = $("#railwayLegend");
   if (railwayLegend) railwayLegend.hidden = !overlays.railways;
+  const vectorRailway = overlays.railwayMode !== "raster" && Boolean(window.maplibregl);
+  const railwayMode = $("#railwayMode");
+  if (railwayMode) {
+    railwayMode.value = overlays.railwayMode === "raster" ? "raster" : "vector";
+    railwayMode.setAttribute("aria-label", currentLanguage === "en" ? "Railway renderer" : "铁路版本");
+    railwayMode.options[0].textContent = currentLanguage === "en" ? "Vector" : "矢量版";
+    railwayMode.options[1].textContent = currentLanguage === "en" ? "Raster" : "图片版";
+  }
+  if (railwayLegend) {
+    railwayLegend.querySelector(".railway-legend-items").hidden = vectorRailway;
+    railwayLegend.querySelector(".railway-legend-details").hidden = vectorRailway;
+    railwayLegend.querySelector("[data-i18n=railwayLegendHint]").hidden = vectorRailway;
+  }
+  $("#railwayVectorLegend").hidden = !vectorRailway;
+  $("#railwayVectorLegend a").textContent = currentLanguage === "en" ? "OpenRailwayMap · full vector legend ↗" : "OpenRailwayMap · 矢量版完整图例 ↗";
+  $("#railwayVectorLegendDetails summary").textContent = currentLanguage === "en" ? "Vector legend" : "矢量版图例";
+  RailwayVector.translateLegend($("#railwayVectorLegendSamples"), currentLanguage);
   const arcgisWaterLegend = $("#arcgisWaterLegend");
   if (arcgisWaterLegend) arcgisWaterLegend.hidden = !overlays.arcgisWater;
   const railwayOfficialLegend = $("#railwayOfficialLegend");
@@ -15608,6 +15683,16 @@ $("#showRailwaysOnMap")?.addEventListener("change", (event) => {
     renderGeoMap();
   }
 });
+$("#railwayVectorLegendDetails")?.addEventListener("toggle", event => {
+  if (event.target.open) RailwayVector.legend($("#railwayVectorLegendSamples"));
+});
+$("#railwayMode")?.addEventListener("change", (event) => {
+  state.mapOverlays = normalizeMapOverlays({ ...state.mapOverlays, railwayMode: event.target.value });
+  saveUiStateSoon();
+  renderMapControls();
+  if (mapLibreMap && mapLibreStyleReady) syncMapLibreRailwayOverlay(state.mapOverlays.railways);
+  else renderGeoMap();
+});
 $("#showArcgisWaterOnMap")?.addEventListener("change", (event) => {
   state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
   state.mapOverlays.arcgisWater = event.target.checked;
@@ -15942,7 +16027,7 @@ window.visualViewport?.addEventListener("resize", () => {
 });
 if ("serviceWorker" in navigator && location.protocol !== "file:") {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=608", { updateViaCache: "none" })
+    navigator.serviceWorker.register("./sw.js?v=612", { updateViaCache: "none" })
       .then((registration) => registration.update())
       .catch((error) => console.warn("Service Worker registration failed", error));
   });

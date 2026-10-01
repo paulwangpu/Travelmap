@@ -7342,3 +7342,13 @@ button:hover {
   background: #12362d;
   box-shadow: 0 0 0 1px #12362d;
 }
+/* Renderer-specific legend content must stay hidden despite grid styles. */
+#railwayLegend [hidden] { display: none !important; }
+.railway-mode select { width: auto; max-width: 100%; padding: 3px 22px 3px 8px; font-size: 12px; }
+#railwayVectorLegend small { display: block; }
+#railwayVectorLegend a { display: block; font-size: 11px; color: var(--brand, #176c54); line-height: 1.4; margin: 4px 0; }
+#railwayVectorLegend small { font-size: 10px; line-height: 1.4; }
+.railway-vector-legend-scroll { max-height: 260px; overflow: auto; margin: 6px 0; }
+#railwayVectorLegendSamples { display: grid; grid-template-columns: 85px minmax(0, 1fr); }
+.railway-vector-legend-captions span { display: flex; align-items: center; height: 34px; font-size: 11px; line-height: 1.15; overflow-wrap: anywhere; }
+.railway-vector-legend-canvas { width: 85px; }
