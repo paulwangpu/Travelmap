@@ -5,6 +5,8 @@ const RailwayVector = (() => {
   const origin = 'https://openrailwaymap.app';
   let stylePromise;
   const installed = new WeakMap();
+  const legendMaps = new WeakMap();
+  let catalogPromise;
   function rewrite(value, defaults) {
     if (Array.isArray(value)) {
       if (value[0] === 'global-state') {
@@ -64,7 +66,7 @@ const RailwayVector = (() => {
       source.attribution = '© OpenStreetMap contributors · <a href="https://openrailwaymap.app/" target="_blank">OpenRailwayMap</a>';
       return ['orm-' + id, source];
     }));
-    return { sources, layers, sprites: style.sprite.map(sprite => ({ ...sprite, url: new URL(sprite.url, origin).href })) };
+    return { sources, layers, state: defaults, sprites: style.sprite.map(sprite => ({ ...sprite, url: new URL(sprite.url, origin).href })) };
   }
   function remove(map) {
     const record = installed.get(map);
@@ -111,11 +113,54 @@ const RailwayVector = (() => {
   function query(map, point) {
     const layers = (installed.get(map)?.layers || []).filter(id => map.getLayer(id));
     if (!layers.length) return null;
+    const namedStation = feature => {
+      const p = feature.properties || {};
+      return feature.layer?.type === 'symbol' &&
+        (/station|halt|tram_stop/.test(feature.sourceLayer || feature.layer?.['source-layer'] || '') || ['station', 'halt', 'tram_stop'].includes(p.feature)) &&
+        Boolean(p.localized_name || p.name || p['name:zh'] || p['name:en'] || p.label);
+    };
+    // Rendered labels may be offset from their Point geometry. An exact hit on
+    // a station label must win over an unnamed track underneath the text.
+    const station = map.queryRenderedFeatures(point, { layers }).find(namedStation);
+    if (station) return station;
     const features = map.queryRenderedFeatures([[point.x - 12, point.y - 12], [point.x + 12, point.y + 12]], { layers });
     // Prefer a named line over its casing or an unrelated nearby label.
     const distances = new Map(features.map(feature => [feature, featureDistance(map, point, feature)]));
-    features.sort((a, b) => distances.get(a) - distances.get(b) || Number(Boolean(b.properties?.name)) - Number(Boolean(a.properties?.name)));
-    return features.find(feature => distances.get(feature) <= 12) || null;
+    features.sort((a, b) => distances.get(a) - distances.get(b) || Number(Boolean(b.properties?.localized_name || b.properties?.name || b.properties?.label)) - Number(Boolean(a.properties?.localized_name || a.properties?.name || a.properties?.label)));
+    const hit = features.find(feature => distances.get(feature) <= 12) || null;
+    return resolveStationName(map, hit);
+  }
+  function resolveStationName(map, feature) {
+    if (!feature || !['station', 'halt', 'tram_stop'].includes(feature.properties?.feature)) return feature;
+    const properties = feature.properties;
+    if (properties.localized_name || properties.name || properties.label || !map.querySourceFeatures) return feature;
+    const source = feature.source || feature.layer?.source;
+    if (!source || !map.getSource?.(source)) return feature;
+    const identity = value => String(value ?? '').match(/(?:node|way|relation)-\d+/)?.[0] || String(value ?? '');
+    const id = identity(properties.id || feature.id);
+    const labels = map.querySourceFeatures(source, {sourceLayer:'standard_railway_text_stations'}).filter(item => item.properties?.localized_name || item.properties?.name || item.properties?.label);
+    let label = id && labels.find(item => identity(item.properties?.id || item.id) === id);
+    // Grouped station areas can reference an area/group ID instead of the label
+    // node. Only use a uniquely named station point inside the actual polygon.
+    if (!label && /Polygon/.test(feature.geometry?.type)) {
+      const insideRing = (point, ring) => {
+        let inside = false;
+        for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+          const a = ring[i], b = ring[j];
+          if ((a[1] > point[1]) !== (b[1] > point[1]) && point[0] < (b[0]-a[0])*(point[1]-a[1])/(b[1]-a[1])+a[0]) inside = !inside;
+        }
+        return inside;
+      };
+      const polygons = feature.geometry.type === 'Polygon' ? [feature.geometry.coordinates] : feature.geometry.coordinates;
+      const contained = labels.filter(item => item.geometry?.type === 'Point' && polygons.some(rings => insideRing(item.geometry.coordinates, rings[0]) && !rings.slice(1).some(ring=>insideRing(item.geometry.coordinates,ring))));
+      const names = new Set(contained.map(item=>item.properties.localized_name || item.properties.name || item.properties.label));
+      if (names.size === 1) label = contained[0];
+    }
+    if (!label) return feature;
+    const resolved = {...properties};
+    for (const key of ['localized_name','name','name:zh','name:en','label']) if (label.properties[key]) resolved[key] = label.properties[key];
+    resolved.name_source_layer = 'standard_railway_text_stations';
+    return {type:feature.type, id:feature.id, source:feature.source, sourceLayer:feature.sourceLayer, layer:feature.layer, geometry:feature.geometry, properties:resolved};
   }
   function featureDistance(map, point, feature) {
     let distance = Infinity;
@@ -141,6 +186,7 @@ const RailwayVector = (() => {
     return distance;
   }
   const legendChinese = {
+    'Under construction': '建设中铁路', 'Proposed railway': '规划铁路', 'Disused railway': '停用铁路', 'Milestone': '里程标', 'Interlocking': '联锁设施', 'Platform edge': '站台边缘', 'Stop position': '停车位置', 'Subway entrance': '地铁入口',
     'Highspeed main line': '高速铁路', 'Main line': '铁路干线', 'Branch line': '支线铁路', 'Industrial line': '工业铁路', 'Narrow gauge line': '窄轨铁路',
     'Subway': '地铁', 'Light rail': '轻轨', 'Tram': '有轨电车', 'Monorail': '单轨铁路', 'Test railway': '试验铁路', 'Military railway': '军事铁路', 'Miniature railway': '微型铁路',
     'Yard': '站场', 'Spur': '专用支线', 'Siding': '侧线', 'Crossover': '渡线', 'Tourism (preserved)': '观光／保留铁路', 'Ferry': '铁路轮渡',
@@ -158,23 +204,55 @@ const RailwayVector = (() => {
       caption.textContent = language === 'en' ? label : legendChinese[label] || label;
     }
   }
-  async function legend(container) {
-    if (container.dataset.ready) return;
-    container.dataset.ready = 'loading';
-    try {
-      const [style, catalog] = await Promise.all([loadStyle(), fetch('./vendor/openrailwaymap/legend.json?v=1').then(response => response.json())]);
-      const adapted = adaptStyle(style, 'en');
-      const rows = [];
-      const groups = new Set(['usage', 'stations', 'switches', 'pois', 'platforms', 'turntables']);
-      for (const [sourceLayer, definitions] of Object.entries(catalog.sourceLayers)) {
-        if (!/^(high-|openrailwaymap_standard-|openrailwaymap_points_of_interest-)/.test(sourceLayer)) continue;
-        for (const [key, definition] of Object.entries(definitions)) if (groups.has(key)) {
-          for (const feature of definition.features) rows.push({ ...feature, sourceLayer });
+  // Adapted from the upstream LegendControl matching rules (GPL-3.0-or-later).
+  function legendRows(adapted, catalog, zoom, features = null) {
+    const matchesState = item => Object.entries(item.mapState || {}).every(([key, value]) =>
+      Array.isArray(adapted.state[key]) ? adapted.state[key].includes(value) : adapted.state[key] === value);
+    const atZoom = item => (item.minzoom ?? 0) <= zoom && zoom < (item.maxzoom ?? 24);
+    const active = adapted.layers.filter(atZoom);
+    const done = new Set(), rows = [];
+    const keyOf = (properties, keys) => keys.map(key => String(properties[key] ?? '').replace(/\{[^}]+}/, '{}').replace(/@([^|]+|$)/g, '')).join('\u001e');
+    for (const layer of active) {
+      const sourceLayer = layer.source.slice(4) + '-' + layer['source-layer'];
+      if (done.has(sourceLayer)) continue;
+      done.add(sourceLayer);
+      const visible = features?.filter(feature => feature.source === layer.source && feature.sourceLayer === layer['source-layer']);
+      for (const [section, definition] of Object.entries(catalog.sourceLayers[sourceLayer] || {})) {
+        if (!matchesState(definition)) continue;
+        const keys = visible && new Set(visible.flatMap(feature => [definition.key || [], ...(definition.matchKeys || [])].map(key => keyOf(feature.properties || {}, key))));
+        for (const item of definition.features || []) {
+          if (!atZoom(item) || !matchesState(item) || (keys && (!visible.length || (item.keys?.length && !item.keys.some(key => keys.has(key)))))) continue;
+          const samples = [item, ...(item.variants || []).map(variant => ({ ...item, ...variant, properties: { ...item.properties, ...variant.properties } }))].filter(sample => atZoom(sample) && matchesState(sample));
+          rows.push({ ...item, sourceLayer, section, samples });
         }
       }
+    }
+    return rows;
+  }
+  async function legend(container, mainMap, mode = 'inView') {
+    if (!mainMap || !installed.get(mainMap)?.layers) return;
+    const revision = (Number(container.dataset.revision) || 0) + 1;
+    container.dataset.revision = String(revision);
+    try {
+      catalogPromise ||= fetch('./vendor/openrailwaymap/legend.json?v=1').then(response => { if (!response.ok) throw new Error('Legend HTTP ' + response.status); return response.json(); }).catch(error => { catalogPromise = null; throw error; });
+      const [style, catalog] = await Promise.all([loadStyle(), catalogPromise]);
+      if (Number(container.dataset.revision) !== revision) return;
+      const adapted = adaptStyle(style, 'en');
+      const zoom = Math.floor(mainMap.getZoom());
+      adapted.layers = adapted.layers.filter(layer => mainMap.getLayer(layer.id) && mainMap.getLayoutProperty(layer.id, 'visibility') !== 'none');
+      const features = mode === 'inView' ? mainMap.queryRenderedFeatures({ layers: adapted.layers.map(layer => layer.id) }) : null;
+      const rows = legendRows(adapted, catalog, zoom, features);
+      const signature = JSON.stringify([zoom, mode, rows.map(row => [row.sourceLayer, row.legend, row.samples.map(sample => sample.properties)])]);
+      if (container.dataset.signature === signature) { translateLegend(container, document.documentElement.lang.startsWith('zh') ? 'zh' : 'en'); return; }
+      container.dataset.signature = signature;
+      const scroll = container.parentElement.scrollTop;
+      legendMaps.get(container)?.remove();
+      legendMaps.delete(container);
+      if (!rows.length) { container.textContent = document.documentElement.lang.startsWith('zh') ? '当前视野暂无铁路类型' : 'No railway types in this view'; return; }
       const canvas = document.createElement('div');
       canvas.className = 'railway-vector-legend-canvas';
-      canvas.style.height = `${rows.length * 34}px`;
+      const rowHeight = 20;
+      canvas.style.height = `${rows.length * rowHeight}px`;
       const captions = document.createElement('div');
       captions.className = 'railway-vector-legend-captions';
       for (const row of rows) {
@@ -187,26 +265,38 @@ const RailwayVector = (() => {
       container.replaceChildren(canvas, captions);
       translateLegend(container, document.documentElement.lang.startsWith('zh') ? 'zh' : 'en');
       const sources = {};
-      const scale = 360 / (512 * 2 ** 18);
+      const scale = 360 / (512 * 2 ** zoom);
       const latitude = pixel => Math.atan(Math.sinh(-pixel * scale * Math.PI / 180)) * 180 / Math.PI;
       rows.forEach((row, index) => {
         const dash = row.sourceLayer.indexOf('-');
         const sourceId = 'orm-' + row.sourceLayer.slice(0, dash) + '__' + row.sourceLayer.slice(dash + 1);
         sources[sourceId] ||= { type: 'geojson', data: { type: 'FeatureCollection', features: [] } };
-        const y = (index + 0.5) * 34 - rows.length * 17;
-        const a = [-32 * scale, latitude(y)], b = [32 * scale, latitude(y)];
-        const geometry = row.type === 'line' ? { type: 'LineString', coordinates: [a, b] }
-          : row.type === 'polygon' ? { type: 'Polygon', coordinates: [[[-25 * scale, latitude(y - 8)], [25 * scale, latitude(y - 8)], [25 * scale, latitude(y + 8)], [-25 * scale, latitude(y + 8)], [-25 * scale, latitude(y - 8)]]] }
-          : { type: 'Point', coordinates: [0, latitude(y)] };
-        sources[sourceId].data.features.push({ type: 'Feature', properties: row.properties, geometry });
+        const y = (index + 0.5) * rowHeight - rows.length * rowHeight / 2;
+        row.samples.forEach((sample, sampleIndex) => {
+        const left = -32 + sampleIndex / row.samples.length * 64;
+        const right = -32 + (sampleIndex + 1) / row.samples.length * 64;
+        const center = (left + right) / 2;
+        const a = [left * scale, latitude(y)], b = [right * scale, latitude(y)];
+        const geometry = sample.type === 'line' ? { type: 'LineString', coordinates: [a, b] }
+          : sample.type === 'polygon' ? { type: 'Polygon', coordinates: [[[left * scale, latitude(y - 5)], [right * scale, latitude(y - 5)], [right * scale, latitude(y + 5)], [left * scale, latitude(y + 5)], [left * scale, latitude(y - 5)]]] }
+          : { type: 'Point', coordinates: [center * scale, latitude(y)] };
+        sources[sourceId].data.features.push({ type: 'Feature', properties: { ...sample.properties, localized_name: sample.properties.localized_name ?? sample.properties.name }, geometry });
+        });
       });
-      const layers = adapted.layers.filter(layer => sources[layer.source + '__' + layer['source-layer']] && (layer.minzoom ?? 0) <= 18 && (layer.maxzoom ?? 24) > 18).map(layer => {
+      const layers = adapted.layers.filter(layer => sources[layer.source + '__' + layer['source-layer']] && (layer.minzoom ?? 0) <= zoom && (layer.maxzoom ?? 24) > zoom).map(layer => {
         const result = structuredClone(layer);
         result.source += '__' + result['source-layer'];
         delete result['source-layer']; delete result.minzoom; delete result.maxzoom;
+        if (result.layout) {
+          if (result.layout['text-size']) result.layout['text-size'] = 9;
+          delete result.layout['text-padding']; delete result.layout['text-offset']; delete result.layout['symbol-spacing']; delete result.layout['icon-offset'];
+          if (result.layout['symbol-placement'] === 'line') result.layout['symbol-placement'] = 'line-center';
+        }
         return result;
       });
-      const map = new maplibregl.Map({ container: canvas, interactive: false, attributionControl: false, center: [0, 0], zoom: 18, style: { version: 8, glyphs: 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf', sprite: adapted.sprites, sources, layers } });
+      const map = new maplibregl.Map({ container: canvas, interactive: false, attributionControl: false, maxCanvasSize: [Infinity, Infinity], center: [0, 0], zoom, style: { version: 8, glyphs: 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf', sprite: adapted.sprites, sources, layers } });
+      legendMaps.set(container, map);
+      container.parentElement.scrollTop = scroll;
       const compose = railwayCompositeImages(map);
       map.on('styleimagemissing', async ({ id }) => {
         const raw = id.replace(/^sdf:/, '');
@@ -223,5 +313,5 @@ const RailwayVector = (() => {
       console.warn('Vector railway legend unavailable', error);
     }
   }
-  return { install, remove, query, adaptStyle, constant, origin, legend, translateLegend, featureDistance };
+  return { install, remove, query, resolveStationName, adaptStyle, constant, origin, legend, legendRows, translateLegend, featureDistance };
 })();

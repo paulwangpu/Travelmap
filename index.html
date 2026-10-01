@@ -6,7 +6,7 @@
     <title>我的全球旅行地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" />
-    <link rel="stylesheet" href="styles.css?v=154" />
+    <link rel="stylesheet" href="styles.css?v=160" />
   </head>
   <body>
     <div class="app-shell map-first-shell">
@@ -35,7 +35,7 @@
             <strong data-i18n="privacyTitle">本地保存</strong>
             <p data-i18n="privacyText">数据只保存在本机浏览器里，不会自动上传或公开。如需备份请导出。</p>
           </div>
-          <div class="app-version" id="appVersion">v2.1.2</div>
+          <div class="app-version" id="appVersion">v2.1.3</div>
         </div>
       </aside>
 
@@ -171,7 +171,7 @@
                 <aside class="railway-legend" id="railwayLegend" hidden>
                   <strong data-i18n="railwayLegendTitle">铁路线路 · OpenRailwayMap</strong>
                   <label class="railway-mode"><select id="railwayMode" aria-label="铁路版本"><option value="vector">矢量版</option><option value="raster">图片版</option></select></label>
-                  <div id="railwayVectorLegend" hidden><details id="railwayVectorLegendDetails"><summary>矢量版图例</summary><div class="railway-vector-legend-scroll"><div id="railwayVectorLegendSamples"></div></div></details><a href="https://openrailwaymap.app/" target="_blank" rel="noopener">OpenRailwayMap · 矢量版完整图例 ↗</a><small>© OpenStreetMap · OpenRailwayMap · GPL-3.0-or-later</small></div>
+                  <div id="railwayVectorLegend" hidden><details id="railwayVectorLegendDetails"><summary>矢量版图例</summary><select id="railwayLegendScope" aria-label="图例范围"><option value="inView">当前视野</option><option value="all">当前级别全部</option></select><div class="railway-vector-legend-scroll"><div id="railwayVectorLegendSamples"></div></div></details><a href="https://openrailwaymap.app/" target="_blank" rel="noopener">OpenRailwayMap · 独立地图与图例 ↗</a><small>© OpenStreetMap · OpenRailwayMap · GPL-3.0-or-later</small></div>
                   <small class="railway-legend-hint" data-i18n="railwayLegendHint">精简图例；展开后使用 OpenRailwayMap 官方图例</small>
                   <small class="railway-legend-hint" id="railwayInteractionStatus" data-i18n="railwayInteractionHint">悬停或点击铁路附近查看信息（需联网）</small>
                   <div class="railway-legend-items">
@@ -398,7 +398,7 @@
     <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
     <script src="https://unpkg.com/pmtiles@4.4.0/dist/pmtiles.js"></script>
     <script src="vendor/openrailwaymap/composite.js?v=1"></script>
-    <script src="railway-vector.js?v=6"></script>
-    <script src="app.js?v=606"></script>
+    <script src="railway-vector.js?v=11"></script>
+    <script src="app.js?v=614"></script>
   </body>
 </html>

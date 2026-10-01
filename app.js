@@ -15,7 +15,7 @@ const mapControlsStorageKey = "travel-map-controls-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "2.1.2";
+const appVersion = "2.1.3";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
@@ -7981,6 +7981,7 @@ function renderMapLibreMap() {
     });
     mapLibreMap.on("moveend", rememberMapViewportSoon);
     mapLibreMap.on("zoomend", rememberMapViewportSoon);
+    mapLibreMap.on("idle", updateRailwayVectorLegend);
     mapLibreMap.on("load", () => {
       mapLibreStyleReady = true;
       setLoadingDebug("使用 MapLibre 显示底图", "done");
@@ -8744,7 +8745,7 @@ function nearestRailwayFeature(event, features) {
 
 function railwayFeatureHtml(feature, full) {
   const tags = feature.properties;
-  const name = tags.localized_name || tags[currentLanguage === "en" ? "name:en" : "name:zh"] || tags.name || tags.ref || (currentLanguage === "en" ? "Unnamed railway" : "未命名铁路");
+  const name = tags.localized_name || tags[currentLanguage === "en" ? "name:en" : "name:zh"] || tags.name || tags.label || tags.ref || (currentLanguage === "en" ? "Unnamed railway" : "未命名铁路");
   const fields = full ? (feature.layer ? { source: feature.source, source_layer: feature.sourceLayer, render_layer: feature.layer.id, feature_id: feature.id, ...tags } : { osm_id: feature.id, ...tags })
     : Object.fromEntries(["ref", "railway", "usage", "operator", "maxspeed", "electrified"].filter((key) => tags[key]).map((key) => [key, tags[key]]));
   return `<div class="arcgis-water-debug-popup"><strong>${escapeHtml(name)}</strong><div class="arcgis-water-debug-fields">${Object.entries(fields).map(([key, value]) => `<div><b>${escapeHtml(key)}</b><span>${escapeHtml(String(value))}</span></div>`).join("")}</div></div>`;
@@ -8762,7 +8763,7 @@ function showRailwayHover(event, features, vectorFeature = null) {
   }
   clearMapLibreArcgisWaterHover();
   mapLibreMap.getCanvas().style.cursor = "pointer";
-  railwayHoverPopup = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 8, className: "arcgis-water-hover-popup" })
+  railwayHoverPopup = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 8, className: "arcgis-water-hover-popup railway-hover-popup" })
     .setLngLat(event.lngLat).setHTML(`<div class="popup-body">${railwayFeatureHtml(feature, false)}</div>`).addTo(mapLibreMap);
 }
 
@@ -15114,7 +15115,11 @@ function renderMapControls() {
     railwayLegend.querySelector("[data-i18n=railwayLegendHint]").hidden = vectorRailway;
   }
   $("#railwayVectorLegend").hidden = !vectorRailway;
-  $("#railwayVectorLegend a").textContent = currentLanguage === "en" ? "OpenRailwayMap · full vector legend ↗" : "OpenRailwayMap · 矢量版完整图例 ↗";
+  $("#railwayVectorLegend a").textContent = currentLanguage === "en" ? "OpenRailwayMap · separate map & legend ↗" : "OpenRailwayMap · 独立地图与图例 ↗";
+  const legendScope = $("#railwayLegendScope");
+  legendScope.setAttribute("aria-label", currentLanguage === "en" ? "Legend scope" : "图例范围");
+  legendScope.options[0].textContent = currentLanguage === "en" ? "Current view" : "当前视野";
+  legendScope.options[1].textContent = currentLanguage === "en" ? "All at this zoom" : "当前级别全部";
   $("#railwayVectorLegendDetails summary").textContent = currentLanguage === "en" ? "Vector legend" : "矢量版图例";
   RailwayVector.translateLegend($("#railwayVectorLegendSamples"), currentLanguage);
   const arcgisWaterLegend = $("#arcgisWaterLegend");
@@ -15683,9 +15688,12 @@ $("#showRailwaysOnMap")?.addEventListener("change", (event) => {
     renderGeoMap();
   }
 });
-$("#railwayVectorLegendDetails")?.addEventListener("toggle", event => {
-  if (event.target.open) RailwayVector.legend($("#railwayVectorLegendSamples"));
-});
+function updateRailwayVectorLegend() {
+  if (!$("#railwayVectorLegendDetails")?.open || $("#railwayVectorLegend").hidden || !state.mapOverlays?.railways) return;
+  RailwayVector.legend($("#railwayVectorLegendSamples"), mapLibreMap, $("#railwayLegendScope").value);
+}
+$("#railwayVectorLegendDetails")?.addEventListener("toggle", updateRailwayVectorLegend);
+$("#railwayLegendScope")?.addEventListener("change", updateRailwayVectorLegend);
 $("#railwayMode")?.addEventListener("change", (event) => {
   state.mapOverlays = normalizeMapOverlays({ ...state.mapOverlays, railwayMode: event.target.value });
   saveUiStateSoon();
@@ -16027,7 +16035,7 @@ window.visualViewport?.addEventListener("resize", () => {
 });
 if ("serviceWorker" in navigator && location.protocol !== "file:") {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=612", { updateViaCache: "none" })
+    navigator.serviceWorker.register("./sw.js?v=621", { updateViaCache: "none" })
       .then((registration) => registration.update())
       .catch((error) => console.warn("Service Worker registration failed", error));
   });
