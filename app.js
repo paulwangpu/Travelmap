@@ -387,6 +387,7 @@ const translations = {
     overlayTracks: "我的路径",
     overlayFlights: "我的航线",
     overlayRailways: "铁路线路",
+    railwayInteractionHint: "悬停或点击铁路附近查看信息（需联网）",
     overlayEarthquakes: "地震",
     overlayVolcanoes: "火山",
     earthquakeLegendTitle: "全球历史地震",
@@ -614,6 +615,7 @@ const translations = {
     overlayTracks: "My paths",
     overlayFlights: "My flights",
     overlayRailways: "Railway lines",
+    railwayInteractionHint: "Hover or click near a railway for details (online)",
     overlayEarthquakes: "Earthquakes",
     overlayVolcanoes: "Volcanoes",
     earthquakeLegendTitle: "Global historical earthquakes",
@@ -7958,12 +7960,15 @@ function renderMapLibreMap() {
     mapLibreMap.addControl(new maplibregl.ScaleControl({ maxWidth: 120, unit: "metric" }), "bottom-right");
     mapLibreMap.on("mousemove", handleMapLibreArcgisWaterHover);
     mapLibreMap.on("mouseout", clearMapLibreArcgisWaterHover);
+    mapLibreMap.on("mousemove", handleMapLibreRailwayHover);
+    mapLibreMap.on("mouseout", clearMapLibreRailwayHover);
     mapLibreMap.on("click", (event) => {
       if (event.originalEvent?._travelMapHandled) return;
       if (mapAddMode || mapPathMode) {
         handleMapCanvasClick(event.lngLat.lng, event.lngLat.lat, event.originalEvent);
         return;
       }
+      if (handleMapLibreRailwayClick(event)) return;
       if (handleMapLibreArcgisWaterClick(event)) return;
       const npsLayers = ["us-nps-hit-line", "us-nps-fill"].filter((layerId) => mapLibreMap.getLayer(layerId));
       const selectableNpsFeature = npsLayers.length
@@ -8633,9 +8638,183 @@ async function syncMapLibreArcgisWaterOverlay(enabled) {
   }
 }
 
+const railwayFeatureCache = new Map();
+let railwayHoverPopup = null;
+let railwayPinnedPopup = null;
+let railwayHoverTimer = null;
+let railwayHoverEvent = null;
+let railwayQueryPending = false;
+let railwayLastQueryAt = 0;
+let railwayClickRevision = 0;
+
+function clearMapLibreRailwayHover() {
+  clearTimeout(railwayHoverTimer);
+  railwayHoverTimer = null;
+  railwayHoverEvent = null;
+  railwayHoverPopup?.remove();
+  railwayHoverPopup = null;
+}
+
+function railwayQueryCell(lngLat) {
+  const size = 0.004;
+  const west = Math.floor(lngLat.lng / size) * size;
+  const south = Math.floor(lngLat.lat / size) * size;
+  return { key: `${west.toFixed(3)},${south.toFixed(3)}`, bounds: [Math.max(-90, south - 0.001), Math.max(-180, west - 0.001), Math.min(90, south + size + 0.001), Math.min(180, west + size + 0.001)] };
+}
+
+function railwayFeaturesFromOsm(data) {
+  const nodes = new Map((data.elements || []).filter((element) => element.type === "node")
+    .map((node) => [node.id, [node.lon, node.lat]]));
+  const features = [];
+  const types = /^(rail|light_rail|subway|tram|narrow_gauge|monorail|disused|abandoned|construction|proposed)$/;
+  for (const way of data.elements || []) {
+    if (way.type !== "way" || !types.test(way.tags?.railway || "")) continue;
+    let coordinates = [];
+    const flush = () => {
+      if (coordinates.length > 1) features.push({ id: way.id, properties: way.tags, coordinates });
+      coordinates = [];
+    };
+    for (const id of way.nodes || []) {
+      const coordinate = nodes.get(id);
+      if (coordinate) coordinates.push(coordinate);
+      else flush();
+    }
+    flush();
+  }
+  return features;
+}
+
+function railwayInteractionStatus(message) {
+  const element = document.querySelector("#railwayInteractionStatus");
+  if (element) element.textContent = message;
+}
+
+async function loadNearbyRailwayFeatures(lngLat) {
+  const cell = railwayQueryCell(lngLat);
+  const cached = railwayFeatureCache.get(cell.key);
+  if (cached && Date.now() - cached.time < 600000) return cached.features;
+  if (railwayQueryPending || Date.now() - railwayLastQueryAt < 3000) return [];
+  railwayQueryPending = true;
+  railwayLastQueryAt = Date.now();
+  railwayInteractionStatus(currentLanguage === "en" ? "Loading nearby railway details…" : "正在读取附近铁路信息…");
+  try {
+    const [south, west, north, east] = cell.bounds;
+    const response = await fetch(`https://www.openstreetmap.org/api/0.6/map.json?bbox=${west},${south},${east},${north}`, {
+      signal: AbortSignal.timeout(15000),
+    });
+    if (!response.ok) throw new Error(`Railway query failed (${response.status})`);
+    const data = await response.json();
+    if (data.remark) throw new Error(data.remark);
+    const features = railwayFeaturesFromOsm(data);
+    railwayFeatureCache.set(cell.key, { time: Date.now(), features });
+    if (railwayFeatureCache.size > 32) railwayFeatureCache.delete(railwayFeatureCache.keys().next().value);
+    railwayInteractionStatus(currentLanguage === "en" ? "Hover or click near a railway to inspect it" : "悬停或点击铁路附近查看信息");
+    return features;
+  } catch (error) {
+    console.warn("Railway details unavailable", error.message);
+    railwayInteractionStatus(currentLanguage === "en" ? "Railway query failed; move away and retry" : "铁路信息加载失败，请移开后重试");
+    return [];
+  } finally {
+    railwayQueryPending = false;
+  }
+}
+
+function nearestRailwayFeature(event, features) {
+  let nearest = null;
+  let nearestDistance = 12;
+  for (const feature of features) {
+    for (let index = 1; index < feature.coordinates.length; index += 1) {
+      const a = mapLibreMap.project(feature.coordinates[index - 1]);
+      const b = mapLibreMap.project(feature.coordinates[index]);
+      const dx = b.x - a.x, dy = b.y - a.y;
+      const length = dx * dx + dy * dy;
+      const fraction = length ? Math.max(0, Math.min(1, ((event.point.x - a.x) * dx + (event.point.y - a.y) * dy) / length)) : 0;
+      const distance = Math.hypot(event.point.x - a.x - fraction * dx, event.point.y - a.y - fraction * dy);
+      if (distance < nearestDistance) { nearest = feature; nearestDistance = distance; }
+    }
+  }
+  return nearest;
+}
+
+function railwayFeatureHtml(feature, full) {
+  const tags = feature.properties;
+  const name = tags[currentLanguage === "en" ? "name:en" : "name:zh"] || tags.name || tags.ref || (currentLanguage === "en" ? "Unnamed railway" : "未命名铁路");
+  const fields = full ? { osm_id: feature.id, ...tags }
+    : Object.fromEntries(["ref", "railway", "usage", "operator", "maxspeed", "electrified"].filter((key) => tags[key]).map((key) => [key, tags[key]]));
+  return `<div class="arcgis-water-debug-popup"><strong>${escapeHtml(name)}</strong><div class="arcgis-water-debug-fields">${Object.entries(fields).map(([key, value]) => `<div><b>${escapeHtml(key)}</b><span>${escapeHtml(String(value))}</span></div>`).join("")}</div></div>`;
+}
+
+function showRailwayHover(event, features) {
+  if (!mapLibreMap || !state.mapOverlays?.railways || railwayPinnedPopup || mapAddMode || mapPathMode) return;
+  const feature = nearestRailwayFeature(event, features);
+  railwayHoverPopup?.remove();
+  railwayHoverPopup = null;
+  if (!feature) {
+    if (!arcgisWaterHoverPopup && !mapAddMode && !mapPathMode) mapLibreMap.getCanvas().style.cursor = "";
+    return;
+  }
+  clearMapLibreArcgisWaterHover();
+  mapLibreMap.getCanvas().style.cursor = "pointer";
+  railwayHoverPopup = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 8, className: "arcgis-water-hover-popup" })
+    .setLngLat(event.lngLat).setHTML(`<div class="popup-body">${railwayFeatureHtml(feature, false)}</div>`).addTo(mapLibreMap);
+}
+
+function handleMapLibreRailwayHover(event) {
+  if (!state.mapOverlays?.railways || mapAddMode || mapPathMode || railwayPinnedPopup || mapLibreMap.getZoom() < 8) {
+    clearMapLibreRailwayHover();
+    return;
+  }
+  railwayHoverEvent = event;
+  const cached = railwayFeatureCache.get(railwayQueryCell(event.lngLat).key);
+  showRailwayHover(event, cached?.features || []);
+  clearTimeout(railwayHoverTimer);
+  if (cached && Date.now() - cached.time < 600000) return;
+  railwayHoverTimer = setTimeout(async () => {
+    if (railwayQueryPending || Date.now() - railwayLastQueryAt < 3000) {
+      if (railwayHoverEvent) handleMapLibreRailwayHover(railwayHoverEvent);
+      return;
+    }
+    const targetMap = mapLibreMap;
+    const cellKey = railwayQueryCell(event.lngLat).key;
+    const features = await loadNearbyRailwayFeatures(event.lngLat);
+    if (mapLibreMap === targetMap && railwayHoverEvent && railwayQueryCell(railwayHoverEvent.lngLat).key === cellKey) {
+      showRailwayHover(railwayHoverEvent, features);
+    }
+  }, 650);
+}
+
+function handleMapLibreRailwayClick(event, loaded = false) {
+  const revision = ++railwayClickRevision;
+  if (!state.mapOverlays?.railways || mapLibreMap.getZoom() < 8) return false;
+  const features = railwayFeatureCache.get(railwayQueryCell(event.lngLat).key)?.features || [];
+  const feature = nearestRailwayFeature(event, features);
+  railwayPinnedPopup?.remove();
+  railwayPinnedPopup = null;
+  if (!feature) {
+    if (!loaded) {
+      const targetMap = mapLibreMap;
+      loadNearbyRailwayFeatures(event.lngLat).then((nearby) => {
+        if (revision !== railwayClickRevision || targetMap !== mapLibreMap || !state.mapOverlays?.railways || mapAddMode || mapPathMode) return;
+        if (nearestRailwayFeature(event, nearby)) handleMapLibreRailwayClick(event, true);
+      });
+    }
+    return false;
+  }
+  markMapEventHandled(event);
+  clearMapLibreRailwayHover();
+  clearMapLibreArcgisWaterHover();
+  railwayPinnedPopup = new maplibregl.Popup({ closeButton: false, offset: 8, className: "arcgis-water-hover-popup arcgis-water-pinned-popup" })
+    .setLngLat(event.lngLat).setHTML(mapPopupHtml(railwayFeatureHtml(feature, true))).addTo(mapLibreMap);
+  railwayPinnedPopup.on("close", () => { railwayPinnedPopup = null; });
+  return true;
+}
+
 function syncMapLibreRailwayOverlay(enabled) {
   if (!mapLibreMap || !mapLibreStyleReady) return;
   if (!enabled) {
+    clearMapLibreRailwayHover();
+    railwayPinnedPopup?.remove();
+    railwayPinnedPopup = null;
     removeMapLibreLayer("railway-network-raster");
     if (mapLibreMap.getSource("railway-network") && !mapLibreMap.getStyle()?.layers?.some((layer) => layer.source === "railway-network")) {
       mapLibreMap.removeSource("railway-network");
@@ -15763,7 +15942,7 @@ window.visualViewport?.addEventListener("resize", () => {
 });
 if ("serviceWorker" in navigator && location.protocol !== "file:") {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=605", { updateViaCache: "none" })
+    navigator.serviceWorker.register("./sw.js?v=608", { updateViaCache: "none" })
       .then((registration) => registration.update())
       .catch((error) => console.warn("Service Worker registration failed", error));
   });
