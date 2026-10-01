@@ -6,7 +6,7 @@
     <title>我的全球旅行地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" />
-    <link rel="stylesheet" href="styles.css?v=161" />
+    <link rel="stylesheet" href="styles.css?v=171" />
   </head>
   <body>
     <div class="app-shell map-first-shell">
@@ -157,16 +157,23 @@
                 <aside class="hazard-legend earthquake-legend" id="earthquakeLegend" hidden>
                   <strong data-i18n="earthquakeLegendTitle">全球历史地震</strong>
                   <label><span data-i18n="minimumMagnitude">最低震级</span><select id="earthquakeMagnitude"><option value="4">4.0+</option><option value="5">5.0+</option><option value="6">6.0+</option><option value="7">7.0+</option></select></label>
-                  <small data-i18n="earthquakeLegendSource">圆点大小表示震级 · ISC-GEM、NOAA/NCEI；早期完整度因地区而异</small>
+                  <div class="earthquake-year-presets" role="group" aria-label="地震年份范围">
+                    <button type="button" data-earthquake-years="all" data-i18n="earthquakeYearsAll">全部</button><button type="button" data-earthquake-years="before1900" data-i18n="earthquakeYearsBefore1900">1900 年前</button><button type="button" data-earthquake-years="1900" data-i18n="earthquakeYears1900">1900 年起</button><button type="button" data-earthquake-years="10" data-i18n="earthquakeYears10">近 10 年</button>
+                  </div>
+                  <div class="earthquake-year-slider" id="earthquakeYearSlider"><div class="earthquake-year-track"></div><span class="earthquake-year-break" aria-hidden="true">1900</span><input id="earthquakeYearFromSlider" type="range" min="0" max="10000" step="1" value="0" aria-label="起始年"><input id="earthquakeYearToSlider" type="range" min="0" max="10000" step="1" value="10000" aria-label="结束年"></div>
+                  <div id="earthquakeYearScale" class="earthquake-year-scale"></div>
+                  <details class="earthquake-year-precision"><summary id="earthquakeYearRangeText">全部年份（含古代）</summary><div class="earthquake-years"><label><span data-i18n="earthquakeStartYear">起始年</span><input id="earthquakeStartYear" type="number" min="-3000" max="9998" placeholder="不限"></label><label><span data-i18n="earthquakeEndYear">结束年</span><input id="earthquakeEndYear" type="number" min="-3000" max="9998" placeholder="不限"></label></div></details>
+                  <div class="earthquake-scale"><span style="--quake-color:#0a76c9">● 4–4.9</span><span style="--quake-color:#02b295">● 5–5.9</span><span style="--quake-color:#e8b80c">● 6–6.9</span><span style="--quake-color:#f27303">● 7–7.9</span><span style="--quake-color:#d33700">● 8+</span></div>
+                  <small id="earthquakeOnlineStatus" role="status"></small>
+                  <button id="earthquakeOnlineRetry" type="button" hidden>重试</button>
+                  <small data-i18n="earthquakeLegendSource">ISC-GEM、NOAA/NCEI 历史记录 · USGS / Esri 在线补充（1900 年起）；早期完整度因地区而异</small>
                 </aside>
                 <aside class="hazard-legend volcano-legend" id="volcanoLegend" hidden>
                   <strong data-i18n="volcanoLegendTitle">全球火山</strong>
-                  <label><span data-i18n="includePleistoceneVolcanoes">包含更新世火山</span><input id="includePleistoceneVolcanoes" type="checkbox" /></label>
-                  <div class="volcano-legend-items" aria-label="火山年代图例">
-                    <span><i class="volcano-legend-symbol holocene" aria-hidden="true">▲</i><span data-i18n="holoceneVolcanoes">全新世</span></span>
-                    <span><i class="volcano-legend-symbol pleistocene" aria-hidden="true">▲</i><span data-i18n="pleistoceneVolcanoes">更新世</span></span>
-                  </div>
-                  <small>Smithsonian GVP</small>
+                  <label><span data-i18n="volcanoHoloceneRange">全新世（约1.17万年前至今）</span><input id="includeHoloceneVolcanoes" type="checkbox" checked /></label>
+                  <label><span data-i18n="volcanoPleistoceneRange">更新世（约258万—1.17万年前）</span><input id="includePleistoceneVolcanoes" type="checkbox" /></label>
+                  <div class="volcano-legend-items" id="volcanoLegendTypes" aria-label="火山类型图例"></div>
+                  <small data-i18n="volcanoSnapshot">Smithsonian GVP · 目录快照，非实时喷发</small>
                 </aside>
                 <aside class="railway-legend" id="railwayLegend" hidden>
                   <strong data-i18n="railwayLegendTitle">铁路线路 · OpenRailwayMap</strong>
@@ -399,6 +406,8 @@
     <script src="https://unpkg.com/pmtiles@4.4.0/dist/pmtiles.js"></script>
     <script src="vendor/openrailwaymap/composite.js?v=1"></script>
     <script src="railway-vector.js?v=11"></script>
-    <script src="app.js?v=615"></script>
+    <script src="earthquake-online.js?v=7"></script>
+    <script src="volcano-catalog.js?v=3"></script>
+    <script src="app.js?v=626"></script>
   </body>
 </html>

@@ -21,7 +21,7 @@ const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
 const worldHeritageCatalogTotal = 1248;
 const usNpsUnitTotal = 433;
-const dataCacheVersion = "20260928-isc-gem-gvp-hazards";
+const dataCacheVersion = "20261001-gvp-reference";
 let importGuideUserToggled = false;
 let syncingImportGuideOpenState = false;
 const fixedChecklistTotals = {
@@ -83,6 +83,15 @@ let usNpsBoundaryPromise = null;
 let earthquakeDataPromise = null;
 let volcanoDataPromise = null;
 let historicalEarthquakes = [];
+let onlineEarthquakes = [];
+let earthquakeOnlineController = null;
+let earthquakeOnlineTimer = null;
+let earthquakeOnlineKey = "";
+let earthquakeOnlineStatus = "";
+let earthquakeHoverPopup = null;
+let earthquakeYearDraft = null;
+let volcanoHoverPopup = null;
+let earthquakeEarliestYear = -2150;
 let globalVolcanoes = [];
 let usNpsUnits = [];
 let usNpsGroups = [];
@@ -392,10 +401,34 @@ const translations = {
     overlayVolcanoes: "火山",
     earthquakeLegendTitle: "全球历史地震",
     minimumMagnitude: "最低震级",
-    earthquakeLegendSource: "圆点大小表示震级 · ISC-GEM、NOAA/NCEI；早期完整度因地区而异",
+    earthquakeLegendSource: "ISC-GEM、NOAA/NCEI 历史记录 · USGS / Esri 在线补充（1900 年起）；早期完整度因地区而异",
+    earthquakeStartYear: "起始年",
+    earthquakeEndYear: "结束年",
+    earthquakeYearsAll: "全部",
+    earthquakeYears1900: "1900 年起",
+    earthquakeYearsBefore1900: "1900 年前",
+    earthquakeYears10: "近 10 年",
     volcanoLegendTitle: "全球火山",
     includePleistoceneVolcanoes: "包含更新世火山",
+    volcanoHoloceneRange: "全新世（约1.17万年前至今）",
+    volcanoPleistoceneRange: "更新世（约258万—1.17万年前）",
     holoceneVolcanoes: "全新世",
+    volcanoTypeFilter: "火山类型",
+    volcanoEruptionFilter: "最近已知喷发",
+    volcanoAll: "全部",
+    volcanoStrato: "层状火山",
+    volcanoShield: "盾状火山",
+    volcanoCaldera: "破火山口",
+    volcanoField: "火山群 / 火山区",
+    volcanoOther: "其他 / 未知",
+    volcanoDome: "熔岩穹丘",
+    volcanoCone: "火山锥",
+    volcanoMaar: "玛珥 / 爆裂火口",
+    volcanoFissure: "裂隙 / 火口列",
+    volcanoSince1900: "1900 年起",
+    volcanoBefore1900: "1900 年前",
+    volcanoUnknown: "日期未知",
+    volcanoSnapshot: "Smithsonian GVP · 目录快照，非实时喷发",
     pleistoceneVolcanoes: "更新世",
     overlay3d: "3D",
     overlay5a: "5A / 国家公园",
@@ -620,10 +653,34 @@ const translations = {
     overlayVolcanoes: "Volcanoes",
     earthquakeLegendTitle: "Global historical earthquakes",
     minimumMagnitude: "Minimum magnitude",
-    earthquakeLegendSource: "Circle size represents magnitude · ISC-GEM, NOAA/NCEI; early coverage varies by region",
+    earthquakeLegendSource: "ISC-GEM, NOAA/NCEI history · USGS / Esri online archive (since 1900); early coverage varies by region",
+    earthquakeStartYear: "From year",
+    earthquakeEndYear: "To year",
+    earthquakeYearsAll: "All",
+    earthquakeYears1900: "Since 1900",
+    earthquakeYearsBefore1900: "Before 1900",
+    earthquakeYears10: "Last 10 years",
     volcanoLegendTitle: "Global volcanoes",
     includePleistoceneVolcanoes: "Include Pleistocene volcanoes",
+    volcanoHoloceneRange: "Holocene (~11,700 years ago–present)",
+    volcanoPleistoceneRange: "Pleistocene (~2.58 million–11,700 years ago)",
     holoceneVolcanoes: "Holocene",
+    volcanoTypeFilter: "Volcano type",
+    volcanoEruptionFilter: "Last known eruption",
+    volcanoAll: "All",
+    volcanoStrato: "Stratovolcano",
+    volcanoShield: "Shield",
+    volcanoCaldera: "Caldera",
+    volcanoField: "Volcanic field",
+    volcanoOther: "Other / unknown",
+    volcanoDome: "Lava dome",
+    volcanoCone: "Volcanic cone",
+    volcanoMaar: "Maar / explosion crater",
+    volcanoFissure: "Fissure / crater rows",
+    volcanoSince1900: "Since 1900",
+    volcanoBefore1900: "Before 1900",
+    volcanoUnknown: "Unknown date",
+    volcanoSnapshot: "Smithsonian GVP · Catalogue snapshot, not live eruptions",
     pleistoceneVolcanoes: "Pleistocene",
     overlay3d: "3D",
     overlay5a: "5A / National Parks",
@@ -3934,7 +3991,12 @@ let state = {
   detectedMapProvider: "",
   mapOverlays: { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, arcgisWater: false, earthquakes: false, volcanoes: false, china5a: false, chinaAncientCapitals: false, worldHeritage: false, highAltitude: false },
   earthquakeMinMagnitude: 5,
+  earthquakeStartYear: null,
+  earthquakeEndYear: null,
   volcanoIncludePleistocene: false,
+  volcanoIncludeHolocene: true,
+  volcanoTypeFilter: "all",
+  volcanoEruptionFilter: "all",
   mapViewport: null,
   focusPlaceId: "",
 };
@@ -4293,6 +4355,7 @@ function loadEarthquakeData() {
   if (earthquakeDataPromise) return earthquakeDataPromise;
   earthquakeDataPromise = fetchJson("data/historical-earthquakes.json").then((data) => {
     historicalEarthquakes = (data?.items || []).filter((item) => Number.isFinite(Number(item.latitude)) && Number.isFinite(Number(item.longitude)));
+    earthquakeEarliestYear = historicalEarthquakes.reduce((min, item) => Number.isFinite(Number(item.year)) ? Math.min(min, Number(item.year)) : min, 1900);
     return historicalEarthquakes;
   });
   return earthquakeDataPromise;
@@ -4315,7 +4378,7 @@ function earthquakeGeoJson() {
   const minimum = Number(state.earthquakeMinMagnitude) || 5;
   return {
     type: "FeatureCollection",
-    features: historicalEarthquakes.filter((item) => earthquakeMagnitude(item) >= minimum).map((item) => ({
+    features: EarthquakeOnline.merge(historicalEarthquakes, onlineEarthquakes).filter((item) => earthquakeMagnitude(item) >= minimum && (state.earthquakeStartYear == null || Number(item.year) >= state.earthquakeStartYear) && (state.earthquakeEndYear == null || Number(item.year) <= state.earthquakeEndYear)).map((item) => ({
       type: "Feature",
       geometry: { type: "Point", coordinates: [Number(item.longitude), Number(item.latitude)] },
       properties: {
@@ -4327,23 +4390,159 @@ function earthquakeGeoJson() {
         source: item.source || "NOAA/NCEI",
         catalogue: item.catalogue || "",
         uncertain: Boolean(item.uncertain),
+        date: item.month && item.day ? `${item.year}-${String(item.month).padStart(2, "0")}-${String(item.day).padStart(2, "0")}` : String(item.year),
+        depth: item.eqDepth ?? "",
+        magnitudeType: item.magnitudeType || "",
+        url: /^https:\/\/earthquake\.usgs\.gov\//.test(item.url || "") ? item.url : "",
       },
     })),
   };
 }
 
+function earthquakeOnlineStatusText() {
+  const en = currentLanguage === "en";
+  const messages = {
+    loading: en ? "Loading online earthquakes…" : "正在加载在线地震…",
+    ready: en ? `Online: ${onlineEarthquakes.length.toLocaleString()} in view` : `当前视野在线记录：${onlineEarthquakes.length.toLocaleString()} 条`,
+    dense: en ? "Showing strongest 20,000 online events; zoom in or narrow years/magnitude." : "在线记录过密，仅显示前 20,000 条较强地震；请放大或缩小年份/震级范围。",
+    error: en ? "Online query failed; local history remains. Move map or retry." : "在线请求失败，保留本地历史记录；移动地图或重试。",
+  };
+  return messages[earthquakeOnlineStatus] || "";
+}
+
+function updateEarthquakeOnlineStatus() {
+  const node = $("#earthquakeOnlineStatus");
+  if (node) node.textContent = earthquakeOnlineStatusText();
+  const retry = $("#earthquakeOnlineRetry");
+  if (retry) { retry.hidden = earthquakeOnlineStatus !== "error"; retry.textContent = currentLanguage === "en" ? "Retry" : "重试"; }
+}
+
+function refreshEarthquakeOnline(force = false) {
+  if (!state.mapOverlays?.earthquakes) {
+    clearTimeout(earthquakeOnlineTimer);
+    earthquakeOnlineController?.abort();
+    earthquakeOnlineKey = "";
+    onlineEarthquakes = [];
+    earthquakeHoverPopup?.remove();
+    return;
+  }
+  const map = mapLibreMap || leafletMap;
+  if (!map) return;
+  const bounds = map.getBounds();
+  const extent = [bounds.getWest(), bounds.getSouth(), bounds.getEast(), bounds.getNorth()];
+  const key = JSON.stringify([extent, state.earthquakeMinMagnitude, state.earthquakeStartYear, state.earthquakeEndYear]);
+  if (!force && key === earthquakeOnlineKey) return;
+  clearTimeout(earthquakeOnlineTimer);
+  earthquakeOnlineKey = key;
+  earthquakeOnlineController?.abort();
+  const controller = new AbortController();
+  earthquakeOnlineController = controller;
+  onlineEarthquakes = [];
+  earthquakeOnlineStatus = "loading";
+  updateEarthquakeOnlineStatus();
+  const redraw = () => {
+    if (mapLibreMap && mapLibreStyleReady && state.mapOverlays?.earthquakes) {
+      setMapLibreSource("historical-earthquakes", earthquakeGeoJson());
+    } else if (!mapLibreMap && leafletMap) renderGeoMap();
+  };
+  redraw();
+  earthquakeOnlineTimer = setTimeout(async () => {
+    const timeout = setTimeout(() => controller.abort(), 60000);
+    try {
+      const result = await EarthquakeOnline.query({ bounds: extent, minimum: state.earthquakeMinMagnitude, startYear: state.earthquakeStartYear, endYear: state.earthquakeEndYear, signal: controller.signal, onPage(items) {
+        if (controller !== earthquakeOnlineController || controller.signal.aborted) return;
+        onlineEarthquakes = items;
+        redraw();
+      } });
+      if (controller !== earthquakeOnlineController || controller.signal.aborted) return;
+      onlineEarthquakes = result.items;
+      earthquakeOnlineStatus = result.truncated ? "dense" : "ready";
+    } catch (error) {
+      if (controller !== earthquakeOnlineController || !state.mapOverlays?.earthquakes) return;
+      earthquakeOnlineStatus = "error";
+    } finally {
+      clearTimeout(timeout);
+      if (controller === earthquakeOnlineController) { updateEarthquakeOnlineStatus(); redraw(); }
+    }
+  }, 350);
+}
+
+function earthquakePopupContent(props, detailed = false) {
+  const en = currentLanguage === "en";
+  let html = `<strong>${escapeHtml(props.name || "")}</strong><br>${escapeHtml(props.date || props.year)} · M ${escapeHtml(props.magnitude)}${detailed ? ` ${escapeHtml(props.magnitudeType || "")}` : ""}`;
+  if (detailed) {
+    if (props.depth !== "" && props.depth != null) html += `<br>${en ? "Depth" : "深度"}: ${escapeHtml(props.depth)} km`;
+    html += `<br><small>${escapeHtml(props.source || "")}${props.uncertain === true || props.uncertain === "true" ? ` · ${en ? "uncertain" : "不确定记录"}` : ""}</small>`;
+    if (/^https:\/\/earthquake\.usgs\.gov\//.test(props.url || "")) html += `<br><a href="${escapeHtml(props.url)}" target="_blank" rel="noopener noreferrer">${en ? "USGS event details" : "USGS 事件详情"}</a>`;
+  }
+  return html;
+}
+
+function syncEarthquakeYearSlider() {
+  const currentYear = new Date().getFullYear();
+  const start = earthquakeYearDraft ? earthquakeYearDraft[0] : state.earthquakeStartYear;
+  const end = earthquakeYearDraft ? earthquakeYearDraft[1] : state.earthquakeEndYear;
+  const min = Math.min(earthquakeEarliestYear, state.earthquakeStartYear ?? earthquakeEarliestYear, state.earthquakeEndYear ?? earthquakeEarliestYear);
+  const max = Math.max(currentYear, state.earthquakeStartYear ?? currentYear, state.earthquakeEndYear ?? currentYear);
+  const from = $("#earthquakeYearFromSlider"), to = $("#earthquakeYearToSlider");
+  if (!from || !to) return;
+  for (const input of [from, to]) { input.min = "0"; input.max = "10000"; input.dataset.earliest = String(min); input.dataset.latest = String(max); }
+  from.value = String(Math.round(EarthquakeOnline.yearPosition(start ?? min, min, max)));
+  to.value = String(Math.round(EarthquakeOnline.yearPosition(end ?? max, min, max)));
+  from.setAttribute("aria-label", t("earthquakeStartYear"));
+  to.setAttribute("aria-label", t("earthquakeEndYear"));
+  from.setAttribute("aria-valuetext", from.value); to.setAttribute("aria-valuetext", to.value);
+  const slider = $("#earthquakeYearSlider");
+  slider?.style.setProperty("--year-from", `${Number(from.value) / 100}%`);
+  slider?.style.setProperty("--year-to", `${Number(to.value) / 100}%`);
+  const en = currentLanguage === "en";
+  const formatYear = year => year < 0 ? (en ? `${Math.abs(year)} BCE` : `公元前 ${Math.abs(year)}`) : String(year);
+  from.setAttribute("aria-valuetext", formatYear(start ?? min));
+  to.setAttribute("aria-valuetext", formatYear(end ?? max));
+  const scale = $("#earthquakeYearScale");
+  if (scale) {
+    scale.textContent = `${formatYear(min)} — ${formatYear(max)} · ${en ? "Before 1900: 15%" : "1900 年前占 15%"}`;
+  }
+  const label = $("#earthquakeYearRangeText");
+  if (label) {
+    label.textContent = start == null && end == null ? (en ? "All years (including ancient history)" : "全部年份（含古代）") : `${start == null ? (en ? "Earliest" : "最早") : formatYear(start)} — ${end == null ? (en ? "Present" : "至今") : formatYear(end)}`;
+    label.title = en ? "Click to enter exact years" : "点击精确输入年份";
+  }
+  $(".earthquake-year-presets")?.setAttribute("aria-label", en ? "Earthquake year range" : "地震年份范围");
+  document.querySelectorAll("[data-earthquake-years]").forEach(button => {
+    const range = EarthquakeOnline.yearPreset(button.dataset.earthquakeYears, currentYear);
+    button.setAttribute("aria-pressed", String(!earthquakeYearDraft && range[0] === state.earthquakeStartYear && range[1] === state.earthquakeEndYear));
+  });
+}
+
+function applyEarthquakeYears(start, end) {
+  earthquakeYearDraft = null;
+  state.earthquakeStartYear = start;
+  state.earthquakeEndYear = end;
+  if (start != null && end != null && start > end) [state.earthquakeStartYear, state.earthquakeEndYear] = [end, start];
+  saveUiStateSoon();
+  renderMapControls();
+  renderGeoMap();
+  refreshEarthquakeOnline(true);
+}
+
 function volcanoGeoJson() {
   return {
     type: "FeatureCollection",
-    features: globalVolcanoes.filter((item) => item.epoch !== "Pleistocene" || state.volcanoIncludePleistocene).map((item) => ({
+    features: globalVolcanoes.filter((item) => VolcanoCatalog.matches(item, { includeHolocene: state.volcanoIncludeHolocene, includePleistocene: state.volcanoIncludePleistocene })).map((item) => ({
       type: "Feature",
       geometry: { type: "Point", coordinates: [Number(item.longitude), Number(item.latitude)] },
       properties: {
         id: item.volcanoLocationId,
         name: item.name || "Volcano",
         country: item.country || item.location || "",
-        elevation: Number(item.elevation) || 0,
+        elevation: item.elevation !== "" && item.elevation != null && Number.isFinite(Number(item.elevation)) ? Number(item.elevation) : "",
         morphology: item.morphology || "",
+        primaryType: item.primaryType || item.morphology || "",
+        typeGroup: VolcanoCatalog.typeGroup(item),
+        typeColor: VolcanoCatalog.colors[VolcanoCatalog.typeGroup(item)],
+        rockType: item.rockType || "",
+        tectonicSetting: item.tectonicSetting || "",
         evidence: item.evidence || "",
         lastEruption: item.lastEruption || "",
         epoch: item.epoch || "Holocene",
@@ -4351,6 +4550,30 @@ function volcanoGeoJson() {
       },
     })),
   };
+}
+
+function volcanoPopupContent(props, detailed = false) {
+  const en = currentLanguage === "en";
+  const rawType = props.primaryType || props.morphology || "";
+  const typeNames = { strato: "volcanoStrato", shield: "volcanoShield", caldera: "volcanoCaldera", field: "volcanoField", dome: "volcanoDome", cone: "volcanoCone", maar: "volcanoMaar", fissure: "volcanoFissure" };
+  const type = en ? rawType : typeNames[props.typeGroup] ? t(typeNames[props.typeGroup]) : ({ "Lava dome(s)": "熔岩穹丘", "Pyroclastic cone(s)": "火山碎屑锥", Complex: "复合火山", Compound: "复合火山", "Maar(s)": "玛珥火山", "Fissure vent(s)": "裂隙火山" }[rawType] || rawType || t("volcanoOther"));
+  const eruption = props.lastEruption || t("volcanoUnknown");
+  let html = `<strong>${escapeHtml(props.name || "")}</strong><br>${escapeHtml(type)} · ${escapeHtml(eruption)}`;
+  if (!detailed) return html;
+  const fields = [
+    [en ? "Country" : "国家", props.country],
+    [en ? "Catalogue" : "目录", props.epoch === "Pleistocene" ? t("pleistoceneVolcanoes") : t("holoceneVolcanoes")],
+    [t("volcanoTypeFilter"), rawType],
+    [en ? "Landform" : "地貌", props.morphology],
+    [en ? "Elevation" : "海拔", props.elevation !== "" && props.elevation != null ? `${props.elevation} m` : ""],
+    [t("volcanoEruptionFilter"), eruption],
+    [en ? "Activity evidence" : "活动证据", props.evidence],
+    [en ? "Tectonic setting" : "构造环境", props.tectonicSetting],
+    [en ? "Rock type" : "岩石类型", props.rockType],
+  ];
+  html = `<strong>${escapeHtml(props.name || "")}</strong>${fields.filter(([, value]) => value !== "" && value != null).map(([label, value]) => `<br>${escapeHtml(label)}：${escapeHtml(value)}`).join("")}<br><small>Smithsonian GVP</small>`;
+  if (/^\d{6}$/.test(String(props.id))) html += `<br><a href="https://volcano.si.edu/volcano.cfm?vn=${Number(props.id)}" target="_blank" rel="noopener noreferrer">${en ? "GVP volcano details" : "GVP 火山详情"}</a>`;
+  return html;
 }
 
 function versionedLocalDataUrl(url) {
@@ -6338,6 +6561,13 @@ function localStorageSnapshot(payload) {
       map3d: Boolean(savedState.map3d),
       detectedMapProvider: savedState.detectedMapProvider || "",
       mapOverlays: normalizeMapOverlays(savedState.mapOverlays || {}),
+      earthquakeMinMagnitude: [4, 5, 6, 7].includes(Number(savedState.earthquakeMinMagnitude)) ? Number(savedState.earthquakeMinMagnitude) : 5,
+      earthquakeStartYear: savedState.earthquakeStartYear ?? null,
+      earthquakeEndYear: savedState.earthquakeEndYear ?? null,
+      volcanoIncludePleistocene: Boolean(savedState.volcanoIncludePleistocene),
+      volcanoIncludeHolocene: savedState.volcanoIncludeHolocene !== false,
+      volcanoTypeFilter: savedState.volcanoTypeFilter || "all",
+      volcanoEruptionFilter: savedState.volcanoEruptionFilter || "all",
       mapViewport: normalizeMapViewport(savedState.mapViewport),
       flightHomeCities: Array.isArray(savedState.flightHomeCities) ? savedState.flightHomeCities : [],
       flightCalendarShowDestinations: Boolean(savedState.flightCalendarShowDestinations),
@@ -7866,6 +8096,7 @@ function renderGeoMap() {
     }).setView([savedViewport?.center?.[1] ?? 25, savedViewport?.center?.[0] ?? 20], savedViewport?.zoom ?? 2);
 
     leafletMap.on("moveend zoomend", rememberMapViewportSoon);
+    leafletMap.on("moveend", () => refreshEarthquakeOnline());
     leafletMap.on("click", (event) => {
       handleMapCanvasClick(event.latlng.lng, event.latlng.lat, event.originalEvent);
     });
@@ -7980,6 +8211,7 @@ function renderMapLibreMap() {
       handleMapCanvasClick(event.lngLat.lng, event.lngLat.lat, event.originalEvent);
     });
     mapLibreMap.on("moveend", rememberMapViewportSoon);
+    mapLibreMap.on("moveend", () => refreshEarthquakeOnline());
     mapLibreMap.on("zoomend", rememberMapViewportSoon);
     mapLibreMap.on("idle", updateRailwayVectorLegend);
     mapLibreMap.on("load", () => {
@@ -8904,6 +9136,8 @@ function syncMapLibreRailwayOverlay(enabled) {
 
 function syncMapLibreHazardOverlays(overlays) {
   if (!mapLibreMap || !mapLibreStyleReady) return;
+  refreshEarthquakeOnline();
+  if (!overlays.volcanoes) volcanoHoverPopup?.remove();
   ["earthquake-points", "volcano-points"].forEach(removeMapLibreLayer);
   if (overlays.earthquakes && historicalEarthquakes.length) {
     setMapLibreSource("historical-earthquakes", earthquakeGeoJson());
@@ -8911,9 +9145,10 @@ function syncMapLibreHazardOverlays(overlays) {
       id: "earthquake-points",
       type: "circle",
       source: "historical-earthquakes",
+      layout: { "circle-sort-key": ["get", "magnitude"] },
       paint: {
         "circle-radius": ["interpolate", ["linear"], ["get", "magnitude"], 4, 2, 6, 3.6, 8, 6.5],
-        "circle-color": ["interpolate", ["linear"], ["get", "magnitude"], 4, "#ffd166", 6, "#f97316", 8, "#b91c1c"],
+        "circle-color": ["step", ["get", "magnitude"], "#0a76c9", 5, "#02b295", 6, "#e8b80c", 7, "#f27303", 8, "#d33700"],
         "circle-stroke-color": "#fff",
         "circle-stroke-width": 1.2,
         "circle-opacity": 0.82,
@@ -8921,15 +9156,17 @@ function syncMapLibreHazardOverlays(overlays) {
     });
   }
   if (overlays.volcanoes && globalVolcanoes.length) {
-    if (!mapLibreMap.hasImage("volcano-triangle")) mapLibreMap.addImage("volcano-triangle", createVolcanoTriangleImage(), { pixelRatio: 2 });
-    if (!mapLibreMap.hasImage("volcano-triangle-pleistocene")) mapLibreMap.addImage("volcano-triangle-pleistocene", createVolcanoTriangleImage(32, "pleistocene"), { pixelRatio: 2 });
+    for (const group of Object.keys(VolcanoCatalog.colors)) {
+      const id = `volcano-triangle-${group}`;
+      if (!mapLibreMap.hasImage(id)) mapLibreMap.addImage(id, createVolcanoTriangleImage(32, group), { pixelRatio: 2 });
+    }
     setMapLibreSource("global-volcanoes", volcanoGeoJson());
     mapLibreMap.addLayer({
       id: "volcano-points",
       type: "symbol",
       source: "global-volcanoes",
       layout: {
-        "icon-image": ["case", ["==", ["get", "epoch"], "Pleistocene"], "volcano-triangle-pleistocene", "volcano-triangle"],
+        "icon-image": ["concat", "volcano-triangle-", ["get", "typeGroup"]],
         "icon-size": ["interpolate", ["linear"], ["zoom"], 2, 0.7, 8, 1.15],
         "icon-allow-overlap": true,
         "icon-ignore-placement": true,
@@ -8959,9 +9196,10 @@ function createVolcanoTriangleImage(size = 32, variant = "holocene") {
       }
     }
   };
-  const isPleistocene = variant === "pleistocene";
+  const hex = VolcanoCatalog.colors[variant] || VolcanoCatalog.colors.strato;
+  const color = [1, 3, 5].map(offset => parseInt(hex.slice(offset, offset + 2), 16));
   paintTriangle(2, [255, 255, 255]);
-  paintTriangle(6, isPleistocene ? [120, 113, 108] : [139, 30, 30]);
+  paintTriangle(6, color);
   return { width: size, height: size, data };
 }
 
@@ -10289,14 +10527,21 @@ function bindMapLibreLayerHandlers() {
       if (mapAddMode || mapPathMode) return;
       markMapEventHandled(event);
       const props = event.features?.[0]?.properties || {};
-      const year = Number(props.year) < 0 ? `${Math.abs(Number(props.year))} BCE` : String(props.year || "");
-      const source = props.source === "ISC-GEM" ? `ISC-GEM${props.uncertain === true || props.uncertain === "true" ? ` · ${currentLanguage === "en" ? "supplementary catalogue" : "补充目录"}` : ""}` : "NOAA/NCEI";
-      new maplibregl.Popup({ offset: 10, closeButton: false }).setLngLat(event.lngLat).setHTML(mapPopupHtml(`<strong>${escapeHtml(props.name || "")}</strong><br>${currentLanguage === "en" ? "Magnitude" : "震级"} ${escapeHtml(props.magnitude)} · ${escapeHtml(year)}<br>${escapeHtml(props.country || "")}<br><small>${escapeHtml(source)}</small>`)).addTo(mapLibreMap);
+      earthquakeHoverPopup?.remove();
+      new maplibregl.Popup({ offset: 10, closeButton: true }).setLngLat(event.lngLat).setHTML(mapPopupHtml(earthquakePopupContent(props, true))).addTo(mapLibreMap);
+    });
+    mapLibreMap.on("mousemove", "earthquake-points", (event) => {
+      if (mapAddMode || mapPathMode) return;
+      const props = event.features?.[0]?.properties;
+      if (!props) return;
+      if (!earthquakeHoverPopup) earthquakeHoverPopup = new maplibregl.Popup({ offset: 10, closeButton: false, closeOnClick: false, className: "earthquake-hover-popup" });
+      earthquakeHoverPopup.setLngLat(event.lngLat).setHTML(earthquakePopupContent(props)).addTo(mapLibreMap);
     });
     mapLibreMap.on("mouseenter", "earthquake-points", () => {
       if (!mapAddMode && !mapPathMode) mapLibreMap.getCanvas().style.cursor = "pointer";
     });
     mapLibreMap.on("mouseleave", "earthquake-points", () => {
+      earthquakeHoverPopup?.remove();
       if (!mapAddMode && !mapPathMode) mapLibreMap.getCanvas().style.cursor = "";
     });
   }
@@ -10306,15 +10551,21 @@ function bindMapLibreLayerHandlers() {
       if (mapAddMode || mapPathMode) return;
       markMapEventHandled(event);
       const props = event.features?.[0]?.properties || {};
-      const elevation = props.elevation ? `${props.elevation} m` : "";
-      const epoch = props.epoch === "Pleistocene" ? (currentLanguage === "en" ? "Pleistocene" : "更新世") : (currentLanguage === "en" ? "Holocene" : "全新世");
-      const lastEruption = props.lastEruption ? ` · ${currentLanguage === "en" ? "Last known eruption" : "最近已知喷发"} ${escapeHtml(props.lastEruption)}` : "";
-      new maplibregl.Popup({ offset: 10, closeButton: false }).setLngLat(event.lngLat).setHTML(mapPopupHtml(`<strong>${escapeHtml(props.name || "")}</strong><br>${escapeHtml([props.country, props.morphology].filter(Boolean).join(" · "))}<br>${escapeHtml(elevation)} · ${escapeHtml(epoch)}${lastEruption}${props.evidence ? `<br>${escapeHtml(props.evidence)}` : ""}<br><small>Smithsonian GVP</small>`)).addTo(mapLibreMap);
+      volcanoHoverPopup?.remove();
+      new maplibregl.Popup({ offset: 10, closeButton: true }).setLngLat(event.lngLat).setHTML(mapPopupHtml(volcanoPopupContent(props, true))).addTo(mapLibreMap);
+    });
+    mapLibreMap.on("mousemove", "volcano-points", event => {
+      if (mapAddMode || mapPathMode) return;
+      const props = event.features?.[0]?.properties;
+      if (!props) return;
+      if (!volcanoHoverPopup) volcanoHoverPopup = new maplibregl.Popup({ offset: 10, closeButton: false, closeOnClick: false, className: "volcano-hover-popup" });
+      volcanoHoverPopup.setLngLat(event.lngLat).setHTML(volcanoPopupContent(props)).addTo(mapLibreMap);
     });
     mapLibreMap.on("mouseenter", "volcano-points", () => {
       if (!mapAddMode && !mapPathMode) mapLibreMap.getCanvas().style.cursor = "pointer";
     });
     mapLibreMap.on("mouseleave", "volcano-points", () => {
+      volcanoHoverPopup?.remove();
       if (!mapAddMode && !mapPathMode) mapLibreMap.getCanvas().style.cursor = "";
     });
   }
@@ -10589,14 +10840,14 @@ function renderLeafletLayers() {
     }).addTo(leafletLayers);
   }
 
+  refreshEarthquakeOnline();
   if (overlays.earthquakes && historicalEarthquakes.length) {
     earthquakeGeoJson().features.forEach((feature) => {
       const props = feature.properties;
-      const year = Number(props.year) < 0 ? `${Math.abs(Number(props.year))} BCE` : String(props.year || "");
       L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], {
         radius: Math.max(2, Math.min(6.5, Number(props.magnitude) - 3)),
-        color: "#fff", weight: 1, fillColor: Number(props.magnitude) >= 7 ? "#b91c1c" : Number(props.magnitude) >= 6 ? "#f97316" : "#ffd166", fillOpacity: 0.82,
-      }).bindPopup(mapPopupHtml(`<strong>${escapeHtml(props.name || "")}</strong><br>${currentLanguage === "en" ? "Magnitude" : "震级"} ${escapeHtml(props.magnitude)} · ${escapeHtml(year)}<br>${escapeHtml(props.country || "")}<br><small>${escapeHtml(props.source === "ISC-GEM" ? `ISC-GEM${props.uncertain ? ` · ${currentLanguage === "en" ? "supplementary catalogue" : "补充目录"}` : ""}` : "NOAA/NCEI")}</small>`), { closeButton: false }).addTo(leafletLayers);
+        color: "#fff", weight: 1, fillColor: ["#0a76c9", "#02b295", "#e8b80c", "#f27303", "#d33700"][Math.max(0, Math.min(4, Math.floor(props.magnitude) - 4))], fillOpacity: 0.82,
+      }).bindTooltip(earthquakePopupContent(props)).bindPopup(mapPopupHtml(earthquakePopupContent(props, true)), { closeButton: true }).addTo(leafletLayers);
     });
   }
 
@@ -10604,8 +10855,8 @@ function renderLeafletLayers() {
     volcanoGeoJson().features.forEach((feature) => {
       const props = feature.properties;
       L.marker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], {
-        icon: L.divIcon({ className: `volcano-map-marker${props.epoch === "Pleistocene" ? " pleistocene" : ""}`, html: "▲", iconSize: [18, 18], iconAnchor: [9, 9] }),
-      }).bindPopup(mapPopupHtml(`<strong>${escapeHtml(props.name || "")}</strong><br>${escapeHtml([props.country, props.morphology].filter(Boolean).join(" · "))}<br>${props.elevation ? `${escapeHtml(props.elevation)} m` : ""} · ${props.epoch === "Pleistocene" ? (currentLanguage === "en" ? "Pleistocene" : "更新世") : (currentLanguage === "en" ? "Holocene" : "全新世")}${props.lastEruption ? `<br>${currentLanguage === "en" ? "Last known eruption" : "最近已知喷发"} ${escapeHtml(props.lastEruption)}` : ""}<br><small>Smithsonian GVP</small>`), { closeButton: false }).addTo(leafletLayers);
+        icon: L.divIcon({ className: "volcano-map-marker", html: `<span style="color:${props.typeColor}">▲</span>`, iconSize: [18, 18], iconAnchor: [9, 9] }),
+      }).bindTooltip(volcanoPopupContent(props)).bindPopup(mapPopupHtml(volcanoPopupContent(props, true)), { closeButton: true }).addTo(leafletLayers);
     });
   }
 
@@ -15146,9 +15397,22 @@ function renderMapControls() {
   const seafloorContourLegend = $("#seafloorContourLegend");
   if (seafloorContourLegend) seafloorContourLegend.hidden = !showSeafloorContourLegend;
   const includePleistoceneVolcanoes = $("#includePleistoceneVolcanoes");
+  const includeHoloceneVolcanoes = $("#includeHoloceneVolcanoes");
+  if (includeHoloceneVolcanoes) includeHoloceneVolcanoes.checked = state.volcanoIncludeHolocene !== false;
   if (includePleistoceneVolcanoes) includePleistoceneVolcanoes.checked = Boolean(state.volcanoIncludePleistocene);
+  const volcanoLegendTypes = $("#volcanoLegendTypes");
+  if (volcanoLegendTypes) {
+    const keys = { strato: "volcanoStrato", shield: "volcanoShield", caldera: "volcanoCaldera", field: "volcanoField", dome: "volcanoDome", cone: "volcanoCone", maar: "volcanoMaar", fissure: "volcanoFissure", other: "volcanoOther" };
+    volcanoLegendTypes.innerHTML = Object.entries(VolcanoCatalog.colors).map(([group, color]) => `<span><i class="volcano-legend-symbol" style="color:${color}" aria-hidden="true">▲</i><span>${escapeHtml(t(keys[group]))}</span></span>`).join("");
+  }
   const earthquakeMagnitudeSelect = $("#earthquakeMagnitude");
   if (earthquakeMagnitudeSelect) earthquakeMagnitudeSelect.value = String(Number(state.earthquakeMinMagnitude) || 5);
+  syncEarthquakeYearSlider();
+  for (const key of ["earthquakeStartYear", "earthquakeEndYear"]) {
+    const input = $(`#${key}`);
+    if (input) { input.value = state[key] ?? ""; input.placeholder = currentLanguage === "en" ? "Any" : "不限"; }
+  }
+  updateEarthquakeOnlineStatus();
   const overlayLegends = $("#mapOverlayLegends");
   if (overlayLegends) overlayLegends.hidden = !showSeafloorAgeLegend && !showSeafloorContourLegend && !overlays.populationDensity && !overlays.railways && !overlays.arcgisWater && !overlays.earthquakes && !overlays.volcanoes;
   if (show3d) show3d.checked = Boolean(state.map3d);
@@ -15743,9 +16007,50 @@ $("#earthquakeMagnitude")?.addEventListener("change", (event) => {
   state.earthquakeMinMagnitude = [4, 5, 6, 7].includes(Number(event.target.value)) ? Number(event.target.value) : 5;
   saveUiStateSoon();
   renderGeoMap();
+  refreshEarthquakeOnline(true);
 });
+for (const key of ["earthquakeStartYear", "earthquakeEndYear"]) {
+  $(`#${key}`)?.addEventListener("change", (event) => {
+    const value = event.target.value.trim();
+    state[key] = value !== "" && Number.isInteger(Number(value)) ? Math.max(-3000, Math.min(9998, Number(value))) : null;
+    applyEarthquakeYears(state.earthquakeStartYear, state.earthquakeEndYear);
+  });
+}
+$("#earthquakeOnlineRetry")?.addEventListener("click", () => refreshEarthquakeOnline(true));
+document.querySelectorAll("[data-earthquake-years]").forEach(button => button.addEventListener("click", () => {
+  const range = EarthquakeOnline.yearPreset(button.dataset.earthquakeYears);
+  if (range) applyEarthquakeYears(...range);
+}));
+for (const [id, index] of [["earthquakeYearFromSlider", 0], ["earthquakeYearToSlider", 1]]) {
+  const input = $(`#${id}`);
+  input?.addEventListener("input", () => {
+    const min = Number(input.dataset.earliest), max = Number(input.dataset.latest);
+    const from = EarthquakeOnline.positionYear($("#earthquakeYearFromSlider").value, min, max), to = EarthquakeOnline.positionYear($("#earthquakeYearToSlider").value, min, max);
+    earthquakeYearDraft = index === 0 ? [Math.min(from, to), to] : [from, Math.max(from, to)];
+    syncEarthquakeYearSlider();
+  });
+  input?.addEventListener("change", () => {
+    if (earthquakeYearDraft) applyEarthquakeYears(...earthquakeYearDraft);
+  });
+  input?.addEventListener("keydown", event => {
+    const steps = { ArrowLeft: -1, ArrowDown: -1, ArrowRight: 1, ArrowUp: 1, PageDown: -10, PageUp: 10 };
+    if (!(event.key in steps) && event.key !== "Home" && event.key !== "End") return;
+    event.preventDefault();
+    const min = Number(input.dataset.earliest), max = Number(input.dataset.latest);
+    const range = [state.earthquakeStartYear ?? min, state.earthquakeEndYear ?? max];
+    range[index] = event.key === "Home" ? min : event.key === "End" ? max : Math.max(min, Math.min(max, range[index] + steps[event.key]));
+    range[index] = index === 0 ? Math.min(range[0], range[1]) : Math.max(range[0], range[1]);
+    applyEarthquakeYears(...range);
+  });
+}
 $("#includePleistoceneVolcanoes")?.addEventListener("change", (event) => {
   state.volcanoIncludePleistocene = event.target.checked;
+  saveUiStateSoon();
+  renderGeoMap();
+});
+$("#includeHoloceneVolcanoes")?.addEventListener("change", (event) => {
+  state.volcanoIncludeHolocene = event.target.checked;
+  volcanoHoverPopup?.remove();
   saveUiStateSoon();
   renderGeoMap();
 });
@@ -16035,7 +16340,7 @@ window.visualViewport?.addEventListener("resize", () => {
 });
 if ("serviceWorker" in navigator && location.protocol !== "file:") {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=622", { updateViaCache: "none" })
+    navigator.serviceWorker.register("./sw.js?v=635", { updateViaCache: "none" })
       .then((registration) => registration.update())
       .catch((error) => console.warn("Service Worker registration failed", error));
   });
