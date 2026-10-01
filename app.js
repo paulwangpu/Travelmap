@@ -8326,11 +8326,11 @@ function handleMapLibreArcgisWaterHover(event) {
   const label = mapLibreArcgisWaterFeatureLabel(feature) || (currentLanguage === "en" ? "Unnamed water feature" : "未命名水系要素");
   mapLibreMap.getCanvas().style.cursor = "pointer";
   if (!arcgisWaterHoverPopup) {
-    arcgisWaterHoverPopup = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 8, className: "arcgis-water-hover-popup" });
+    arcgisWaterHoverPopup = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 8, className: "arcgis-water-hover-popup water-summary-hover-popup" });
   }
   arcgisWaterHoverPopup
     .setLngLat(event.lngLat)
-    .setHTML(`<div class="popup-body arcgis-water-debug-popup"><strong>${escapeHtml(label)}</strong>${mapLibreArcgisWaterDebugHtml(feature)}</div>`)
+    .setHTML(`<div class="popup-body arcgis-water-debug-popup"><strong>${escapeHtml(label)}</strong></div>`)
     .addTo(mapLibreMap);
 }
 
@@ -16035,7 +16035,7 @@ window.visualViewport?.addEventListener("resize", () => {
 });
 if ("serviceWorker" in navigator && location.protocol !== "file:") {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=621", { updateViaCache: "none" })
+    navigator.serviceWorker.register("./sw.js?v=622", { updateViaCache: "none" })
       .then((registration) => registration.update())
       .catch((error) => console.warn("Service Worker registration failed", error));
   });

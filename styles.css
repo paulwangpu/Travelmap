@@ -7360,3 +7360,5 @@ button:hover {
 .railway-vector-legend-canvas { width: 85px; }
 .railway-hover-popup .maplibregl-popup-content { min-width: 0; width: max-content; max-width: min(240px, calc(100vw - 28px)); }
 .railway-hover-popup .arcgis-water-debug-fields > div { grid-template-columns: auto minmax(0, 1fr); gap: 8px; }
+.water-summary-hover-popup .maplibregl-popup-content { min-width: 0; width: max-content; max-width: min(240px, calc(100vw - 28px)); }
+.water-summary-hover-popup .arcgis-water-debug-popup > strong { margin-bottom: 0; overflow-wrap: anywhere; }

@@ -98,4 +98,9 @@ assert.ok(hydroRivers.features.every((feature) => feature.geometry?.type === "Mu
 assert.match(app, /HydroRIVERS 仅补全缺失河段/);
 assert.doesNotMatch(app, /setLoadingDebug\("使用 MapLibre 显示底图", "error"\)/);
 
+const hoverBody = app.slice(app.indexOf('function handleMapLibreArcgisWaterHover'),app.indexOf('function handleMapLibreArcgisWaterClick'));
+assert.doesNotMatch(hoverBody,/mapLibreArcgisWaterDebugHtml/);
+assert.match(hoverBody,/water-summary-hover-popup/);
+const clickBody = app.slice(app.indexOf('function handleMapLibreArcgisWaterClick'),app.indexOf('function applyMapLibreArcgisWaterSourceVisibility'));
+assert.match(clickBody,/mapLibreArcgisWaterDebugHtml/);
 console.log("PASS: ArcGIS Living Atlas water lines and labels are wired as a thematic overlay");
