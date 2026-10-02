@@ -1,6 +1,8 @@
 # 长城数据
 
-显示去重：Wikipedia 概览中的19条明代线路保留在文件中，但不渲染；“其他朝代概览”仅显示其余30条。详细数据以明代为主，同时包含汉长城、北齐等早期遗址，不把全部详细数据强行标为明代。
+ArcGIS 点位补充（v2.1.6）：Great_Wall_of_China_WFL1 的 Forts / Towers，来源为 Yuanyuan Zhang（2010）与 Tom Hammond（2012）的 ver04 KMZ。821个原始点与既有点位比较；同类100米内、同类100–300米待核查、不同类100米内冲突均不加入。725个候选内部再按同层同朝代100米去重，加入714个：堡城620、塔台94。原始坐标及七个字段完整保留，全部标为未核实来源候选；不推断精确年代，按用户要求将 Towers 统一归入墩台烽燧（仅展示分类，原始 Towers 与 Structure 字段保留，不代表已考证用途），不直接用占位符作名称。Later Han 显示为东汉（Eastern Han），原始朝代名称仍保留供追溯。重建：先运行 scripts/compare-arcgis-great-wall.cjs，再运行 scripts/integrate-arcgis-great-wall.cjs；后者可重复运行，不重复追加。原始下载留在 output/arcgis-great-wall，原始下载不随版本发布。来源：https://www.arcgis.com/home/item.html?id=7858f29201864201802db840db2daf89 。该服务许可字段为空，不推定MIT或CC授权。
+
+“历代概览”显示 Wikipedia KMZ 的全部49条线路，包含19条明代线路。详细数据包含多个朝代；概览作为独立粗点线绘制在详细数据下方，不替换详细线路，也不裁剪重叠段。六组朝代有独立复选框，旧存档默认全部选中；顶部开关仅控制整组显示，子选择保存于 mapOverlays.greatWallHistoryEras。
 
 独立历史概览：`history.geojson` 来自用户提供的 `GreatWall wikipedia.kmz`，保留全部49条线路和2005个顶点，不裁剪重叠段。六组时代：春秋战国、秦、汉、北魏、辽金、明。默认关闭，作为概略走向，不代表精确测绘；文件名不能证明 Wikipedia 授权。重建：`node scripts/build-great-wall-history.cjs "C:/Users/paulw/Downloads/GreatWall wikipedia.kmz"`，不改动详细数据。
 

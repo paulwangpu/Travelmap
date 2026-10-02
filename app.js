@@ -15,7 +15,7 @@ const mapControlsStorageKey = "travel-map-controls-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "2.1.5";
+const appVersion = "2.1.6";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
@@ -824,6 +824,7 @@ function normalizeMapOverlays(overlays = {}) {
     populationDensity: Boolean(overlays.populationDensity),
     greatWall: Boolean(overlays.greatWall),
     greatWallHistory: Boolean(overlays.greatWallHistory),
+    greatWallHistoryEras: Object.fromEntries(['spring-autumn','qin','han','northern-wei','liao-jin','ming'].map(key => [key, overlays.greatWallHistoryEras?.[key] !== false])),
     railways: Boolean(overlays.railways),
     railwayMode: overlays.railwayMode === "raster" ? "raster" : "vector",
     arcgisWater: Boolean(overlays.arcgisWater ?? overlays.hydroRivers),
@@ -16475,7 +16476,7 @@ window.visualViewport?.addEventListener("resize", () => {
 });
 if ("serviceWorker" in navigator && location.protocol !== "file:") {
   window.addEventListener("load", () => {
-navigator.serviceWorker.register("./sw.js?v=663", { updateViaCache: "none" })
+navigator.serviceWorker.register("./sw.js?v=676", { updateViaCache: "none" })
       .then((registration) => registration.update())
       .catch((error) => console.warn("Service Worker registration failed", error));
   });

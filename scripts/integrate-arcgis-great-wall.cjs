@@ -1,0 +1,16 @@
+const fs=require('node:fs'),path=require('node:path');
+const root=path.resolve(__dirname,'..'),source='arcgis-hammond',file=path.join(root,'data/great-wall/features.geojson');
+const periods={1:['秦与早期汉','Qin and Early Han'],2:['Han（原分类）','Han'],3:['东汉','Eastern Han'],4:['辽代','Liao'],5:['金代','Jin'],6:['明代','Ming']};
+function distance(a,b){const r=Math.PI/180,h=Math.sin((b[1]-a[1])*r/2)**2+Math.cos(a[1]*r)*Math.cos(b[1]*r)*Math.sin((b[0]-a[0])*r/2)**2;return 12742017.6*Math.asin(Math.sqrt(Math.min(1,h)));}
+function integrate(data,comparison){const original=data.features.filter(f=>f.properties.source!==source),accepted=[],omitted=[];
+ const candidates=comparison.features.filter(f=>f.properties.decision==='candidate-new-location').sort((a,b)=>Number(b.properties.meaningfulName)-Number(a.properties.meaningfulName)||a.id.localeCompare(b.id,'en',{numeric:true}));
+ for(const f of candidates){const p=f.properties,duplicate=accepted.find(g=>g.properties.originalLayer===p.layer&&g.properties.dynastyCode===p.Dynasty&&distance(g.geometry.coordinates,f.geometry.coordinates)<=100);if(duplicate){omitted.push({id:f.id,kept:duplicate.id});continue;}
+ const period=periods[p.Dynasty]||['朝代未知','Unknown dynasty'],type=p.layer==='Forts'?['堡城','Fort']:['墩台烽燧','Beacon'];
+ const descriptive=!p.Name||/fort|tower|beacon|placemark|^[?\s]+$|^[a-z]$|^(?:small|tiny|large|possible|ruins|wall)\b|^(?:liao|jin|ming|han)\s*[#\d]/i.test(p.Name);
+ accepted.push({type:'Feature',id:f.id,geometry:f.geometry,properties:{name:descriptive?`${period[0]} · ${type[0]}`:p.Name,nameEn:descriptive?`${period[1]} · ${type[1]}`:p.Name,category:p.layer==='Forts'?'fortress':'beacon',source,originalId:p.OBJECTID,originalName:p.Name,originalPath:p.FolderPath,originalLayer:p.layer,originalDynastyName:p.dynastyName,dynastyCode:p.Dynasty,dynastyZh:period[0],dynastyEn:period[1],comment:p.Notes||'',approximate:true,reviewStatus:'unverified-source-candidate',rawFields:Object.fromEntries(['OBJECTID','Name','FolderPath','Structure','Dynasty','Year','Notes'].map(k=>[k,p[k]]))}});
+ }
+ const counts={};for(const f of accepted){const key=`${f.properties.originalLayer} / ${f.properties.dynastyEn}`;counts[key]=(counts[key]||0)+1;}
+ return {data:{...data,features:[...original,...accepted]},report:{source,input:comparison.features.length,candidates:candidates.length,added:accepted.length,omittedSourceDuplicates:omitted,excludedExistingOrReview:comparison.features.length-candidates.length,counts,status:'ok'}};
+}
+if(require.main===module){const result=integrate(JSON.parse(fs.readFileSync(file)),JSON.parse(fs.readFileSync(path.join(root,'output/arcgis-great-wall/comparison.geojson'))));fs.writeFileSync(file,JSON.stringify(result.data));const reportFile=path.join(root,'data/great-wall/report.json'),report=JSON.parse(fs.readFileSync(reportFile));report.sources=report.sources.filter(s=>s.source!==source);report.sources.push(result.report);report.total=result.data.features.length;report.categories={};for(const f of result.data.features)report.categories[f.properties.category]=(report.categories[f.properties.category]||0)+1;fs.writeFileSync(reportFile,JSON.stringify(report,null,2));console.log(JSON.stringify(result.report,null,2));}
+module.exports={integrate,distance};

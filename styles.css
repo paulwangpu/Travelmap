@@ -7407,7 +7407,7 @@ button:hover {
 .great-wall-section[open] > summary .wall-disclosure { transform:rotate(90deg); }
 .wall-line { display:inline-block; width:28px; border-top:2px solid #8e4829; margin-right:6px; vertical-align:middle; }
 .wall-line.approximate { border-top-style:dashed; }
-#greatWallCategories { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:3px 5px; padding-top:4px; }
+#greatWallCategories { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:3px 5px; padding-top:4px; padding-left:17px; }
 #greatWallCategories label { display:flex; align-items:center; gap:3px; min-width:0; font-size:9px; line-height:1.2; cursor:pointer; }
 #greatWallCategories label span { white-space:nowrap; }
 #greatWallCategories .wall-line { width:14px; flex:none; margin-right:0; }
@@ -7415,10 +7415,12 @@ button:hover {
 #greatWallSelectAll { width:13px; height:13px; margin:0; accent-color:#8e4829; cursor:pointer; }
 .great-wall-history-toggle { display:flex; align-items:center; gap:5px; margin:4px 0 5px; font-size:9px; cursor:pointer; }
 .great-wall-history-toggle input { width:13px; height:13px; margin:0; accent-color:#176b52; }
-#greatWallHistoryEras { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:3px 5px; margin-bottom:5px; font-size:9px; }
+#greatWallHistoryEras { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:3px 5px; margin-bottom:5px; padding-left:17px; font-size:9px; }
 #greatWallHistoryEras[hidden] { display:none; }
-#greatWallHistoryEras span { display:flex; align-items:center; gap:4px; min-width:0; }
-#greatWallHistoryEras i { width:14px; flex:none; border-top:1.5px dashed; }
+#greatWallHistoryEras label { display:flex; align-items:center; gap:3px; min-width:0; font-size:9px; line-height:1.2; font-weight:400; margin:0; cursor:pointer; }
+#greatWallHistoryEras span { white-space:nowrap; }
+#greatWallHistoryEras input { width:13px; height:13px; margin:0; accent-color:#176b52; flex:none; }
+#greatWallHistoryEras i { width:14px; flex:none; border-top:3px dotted; opacity:.5; }
 .great-wall-info { color:#173f34; font-size:13px; overflow-wrap:anywhere; }
 .great-wall-info small { display:block; font-size:11px; color:#67776e; }
 .great-wall-info dl { display:grid; grid-template-columns:auto minmax(0,1fr); gap:4px 8px; margin:8px 0 0; max-height:240px; overflow:auto; }

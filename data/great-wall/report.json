@@ -21,6 +21,69 @@
       "status": "ok",
       "added": 568,
       "omittedEdges": 83394
+    },
+    {
+      "source": "arcgis-hammond",
+      "input": 821,
+      "candidates": 725,
+      "added": 714,
+      "omittedSourceDuplicates": [
+        {
+          "id": "arcgis-0-107",
+          "kept": "arcgis-0-78"
+        },
+        {
+          "id": "arcgis-0-10",
+          "kept": "arcgis-0-4"
+        },
+        {
+          "id": "arcgis-0-32",
+          "kept": "arcgis-0-31"
+        },
+        {
+          "id": "arcgis-0-171",
+          "kept": "arcgis-0-169"
+        },
+        {
+          "id": "arcgis-0-280",
+          "kept": "arcgis-0-277"
+        },
+        {
+          "id": "arcgis-0-353",
+          "kept": "arcgis-0-352"
+        },
+        {
+          "id": "arcgis-0-429",
+          "kept": "arcgis-0-428"
+        },
+        {
+          "id": "arcgis-0-509",
+          "kept": "arcgis-0-496"
+        },
+        {
+          "id": "arcgis-1-14",
+          "kept": "arcgis-1-9"
+        },
+        {
+          "id": "arcgis-1-26",
+          "kept": "arcgis-1-24"
+        },
+        {
+          "id": "arcgis-1-30",
+          "kept": "arcgis-1-29"
+        }
+      ],
+      "excludedExistingOrReview": 96,
+      "counts": {
+        "Forts / Eastern Han": 89,
+        "Forts / Jin": 259,
+        "Forts / Ming": 229,
+        "Towers / Ming": 55,
+        "Forts / Qin and Early Han": 26,
+        "Forts / Liao": 17,
+        "Towers / Jin": 39
+      },
+      "status": "ok"
     }
   ],
   "categories": {
@@ -28,15 +91,15 @@
     "landmark": 145,
     "pass": 406,
     "city": 43,
-    "fortress": 645,
+    "fortress": 1265,
     "wall": 1450,
     "town": 113,
     "guard": 115,
     "tower": 555,
-    "beacon": 266,
+    "beacon": 360,
     "lost": 19
   },
-  "total": 3767,
+  "total": 4481,
   "builtAt": "2026-10-02T15:30:28.844Z",
   "proximityMetres": 100,
   "classificationUpdatedAt": "2026-10-02T16:10:29.956Z"
