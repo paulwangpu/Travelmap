@@ -1,0 +1,13 @@
+const assert = require('node:assert/strict');
+const api = require('../esri-relief.js');
+const fixture = { version: 8, glyphs: 'https://example.test/{fontstack}/{range}.pbf', sprite: 'https://example.test/sprite', sources: { osm: { type: 'vector', url: 'arcgis-url' } }, layers: [{ id: 'water', type: 'fill', source: 'osm', 'source-layer': 'water', paint: { 'fill-opacity': ['interpolate', ['linear'], ['zoom'], 0, 0.2, 10, 0.8] } }, { id: 'labels', type: 'symbol', source: 'osm' }] };
+const style = api.build(fixture, 0.5, { type: 'mercator' });
+assert.equal(style.layers[0].id, 'basemap');
+assert.match(style.sources.basemap.tiles[0], /World_Hillshade/);
+assert.match(style.sources['esri-relief-osm'].tiles[0], /tile\/\{z\}\/\{y\}\/\{x\}\.pbf/);
+assert.deepEqual(style.layers[1].paint['fill-opacity'], ['interpolate', ['linear'], ['zoom'], 0, 0.1, 10, 0.4]);
+assert.equal(style.layers[2].paint['text-opacity'], 0.5);
+assert.equal(fixture.layers[1].paint, undefined);
+assert.deepEqual(api.scale({ stops: [[0, 1], [10, 0.4]] }, 0.5), { stops: [[0, 0.5], [10, 0.2]] });
+assert.deepEqual(api.scale(['step', ['zoom'], 1, 5, 0.5], 0.5), ['step', ['zoom'], 0.5, 5, 0.25]);
+console.log('PASS: Esri relief original style, terrain composition, attribution and zoom-safe opacity');

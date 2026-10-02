@@ -15,7 +15,7 @@ const mapControlsStorageKey = "travel-map-controls-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "2.1.3";
+const appVersion = "2.1.4";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
@@ -385,6 +385,7 @@ const translations = {
     arcgisWaterHydroSource: "HydroRIVERS 缺失河段补全",
     arcgisWaterLegendSource: "Esri 水面与名称 · HydroRIVERS 仅补全缺失河段",
     providerEsriSatellite: "Esri 卫星",
+    providerEsriRelief: "OpenStreetMap 地形（Esri）",
     providerBingRoad: "Bing 地图",
     providerBingAerial: "Bing 卫星",
     mapLevel: "显示层级",
@@ -637,6 +638,7 @@ const translations = {
     arcgisWaterHydroSource: "HydroRIVERS gap fill",
     arcgisWaterLegendSource: "Esri water areas and names · HydroRIVERS fills gaps only",
     providerEsriSatellite: "Esri Satellite",
+    providerEsriRelief: "OpenStreetMap Relief (Esri)",
     providerBingRoad: "Bing Road",
     providerBingAerial: "Bing Aerial",
     mapLevel: "Boundary level",
@@ -1067,6 +1069,8 @@ function splitAntimeridian(points) {
   return lines.length > 1 ? { type: "MultiLineString", coordinates: lines } : { type: "LineString", coordinates: points };
 }
 
+let esriReliefLoading = false;
+let esriReliefFailed = false;
 const mapProviders = {
   osm: {
     label: "OpenStreetMap",
@@ -1145,6 +1149,11 @@ const mapProviders = {
       "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
     ],
     attribution: "Tiles © Esri",
+  },
+  esriRelief: {
+    label: "OpenStreetMap 地形（Esri）",
+    tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"],
+    attribution: "© OpenStreetMap contributors",
   },
   bingRoad: {
     label: "Bing 地图",
@@ -8117,6 +8126,7 @@ function applyLeafletProvider() {
   if (!leafletMap || !window.L) return;
   const providerId = activeMapProvider();
   if (leafletBaseLayer?._travelMapProvider === providerId) return;
+  if (providerId === "esriRelief") alert(currentLanguage === "en" ? "This vector basemap requires MapLibre. Leaflet fallback shows OpenStreetMap." : "此矢量底图需要 MapLibre；Leaflet 回退模式暂显示 OpenStreetMap。");
   if (leafletBaseLayer) leafletMap.removeLayer(leafletBaseLayer);
   const provider = mapProviders[providerId] || mapProviders.osm;
   leafletBaseLayer = providerId.startsWith("bing")
@@ -8165,6 +8175,20 @@ function renderMapLibreMap() {
   const savedViewport = normalizeMapViewport(state.mapViewport);
   const center = savedViewport?.center || [20, 25];
   const provider = activeMapProvider();
+  if (provider === "esriRelief" && !EsriRelief.cached && !esriReliefFailed) {
+    if (!esriReliefLoading) {
+      esriReliefLoading = true;
+      setLoadingDebug("Esri OSM 地形", "pending");
+      EsriRelief.load().then(() => {
+        setLoadingDebug("Esri OSM 地形", "done");
+      }).catch(error => {
+        esriReliefFailed = true;
+        console.warn("Esri relief style", error);
+        alert(currentLanguage === "en" ? "Esri relief could not load. OpenStreetMap is shown temporarily; select the basemap again to retry." : "Esri 地形底图加载失败，暂显示 OpenStreetMap；重新选择底图可重试。");
+      }).finally(() => { esriReliefLoading = false; if (isMapPageActive()) renderGeoMap(); });
+    }
+    return;
+  }
 
   if (!mapLibreMap) {
     setLoadingDebug("使用 MapLibre 显示底图", "pending");
@@ -8285,6 +8309,10 @@ function applyMap3dToggle(enabled) {
 }
 
 function mapLibreBaseStyle(providerId) {
+  if (providerId === "esriRelief" && EsriRelief.cached) {
+    const style = EsriRelief.build(EsriRelief.cached, normalizeMapBaseOpacity(state.mapBaseOpacity) / 100, mapLibreProjection());
+    return style;
+  }
   if (providerId.startsWith("bing")) registerBingMapLibreProtocol();
   const provider = mapProviders[providerId] || mapProviders.osm;
   const style = {
@@ -8319,6 +8347,13 @@ function applyMapBaseOpacity() {
   const opacity = normalizeMapBaseOpacity(state.mapBaseOpacity) / 100;
   if (leafletBaseLayer?.setOpacity) leafletBaseLayer.setOpacity(opacity);
   if (mapLibreMap?.getLayer("basemap")) mapLibreMap.setPaintProperty("basemap", "raster-opacity", opacity);
+  if (mapLibreMap?._travelMapProvider === "esriRelief" && EsriRelief.cached) {
+    const style = EsriRelief.build(EsriRelief.cached, opacity, mapLibreProjection());
+    for (const layer of style.layers.filter(layer => layer.id.startsWith("esri-relief-"))) {
+      if (!mapLibreMap.getLayer(layer.id)) continue;
+      for (const [key, value] of Object.entries(layer.paint || {})) if (key.endsWith("opacity")) mapLibreMap.setPaintProperty(layer.id, key, value);
+    }
+  }
 }
 
 function applyMapLibreProvider(provider) {
@@ -8387,7 +8422,7 @@ function syncMapLibrePopulationDensityOverlay(enabled) {
     });
   }
   if (!mapLibreMap.getLayer("population-density")) {
-    const beforeId = mapLibreMap.getStyle()?.layers?.find((layer) => layer.id !== "basemap" && layer.id !== "population-density")?.id;
+    const beforeId = mapLibreMap.getStyle()?.layers?.find((layer) => layer.id !== "basemap" && !layer.id.startsWith("esri-relief-") && layer.id !== "population-density")?.id;
     mapLibreMap.addLayer({
       id: "population-density",
       type: "raster",
@@ -15859,6 +15894,7 @@ $("#boundaryLevel").addEventListener("change", (event) => {
   saveUiStateSoon();
 });
 $("#mapProvider")?.addEventListener("change", (event) => {
+  esriReliefFailed = false;
   state.mapProviderMode = normalizeMapProviderMode(event.target.value);
   renderMapControls();
   renderGeoMap();
@@ -16340,7 +16376,7 @@ window.visualViewport?.addEventListener("resize", () => {
 });
 if ("serviceWorker" in navigator && location.protocol !== "file:") {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=635", { updateViaCache: "none" })
+    navigator.serviceWorker.register("./sw.js?v=638", { updateViaCache: "none" })
       .then((registration) => registration.update())
       .catch((error) => console.warn("Service Worker registration failed", error));
   });
