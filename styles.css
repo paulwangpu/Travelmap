@@ -813,9 +813,7 @@ button:hover {
   backdrop-filter: blur(8px);
 }
 
-.loading-debug:not([hidden]) ~ .map-overlay-legends {
-  bottom: 122px;
-}
+.loading-debug:not([hidden]) ~ .map-overlay-legends { bottom: var(--map-legend-bottom, 42px); }
 
 .population-density-legend[hidden],
 .arcgis-water-legend[hidden],
@@ -7393,3 +7391,50 @@ button:hover {
 .earthquake-year-slider input:focus-visible::-webkit-slider-thumb { outline: 2px solid #ee9e26; outline-offset: 3px; }
 .earthquake-year-precision summary { cursor: pointer; font-size: 12px; color: #176e54; padding: 3px 0 5px; font-variant-numeric: tabular-nums; }
 .earthquake-year-precision .earthquake-years { margin-bottom: 7px; }
+.compact-toggle-pair { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:2px; min-width:0; }
+.great-wall-legend { pointer-events:auto; background:rgba(255,255,255,.92); border:1px solid rgba(18,54,45,.16); border-radius:8px; padding:8px 10px; color:#12362d; font-size:9px; line-height:1.2; box-shadow:0 8px 20px rgba(24,32,28,.15); backdrop-filter:blur(8px); }
+.great-wall-legend[hidden] { display:none; }
+.great-wall-legend label svg { width:14px; height:14px; flex:none; }
+.great-wall-marker svg { width:100%; height:100%; }
+.great-wall-legend strong,.great-wall-legend small { display:block; }
+.great-wall-legend > strong { margin-bottom:6px; font-size:11px; line-height:1.2; }
+.great-wall-legend small { color:#53655f; margin-top:4px; font-size:9px; line-height:1.3; }
+.great-wall-legend > a { font-size:9px; }
+#greatWallCategorySummary { cursor:pointer; color:#176b52; font-size:10px; font-weight:800; }
+.great-wall-section > summary { display:flex; align-items:center; gap:4px; list-style:none; cursor:pointer; color:#176b52; font-size:10px; font-weight:800; }
+.great-wall-section > summary::-webkit-details-marker { display:none; }
+.wall-disclosure { width:0; height:0; border-top:4px solid transparent; border-bottom:4px solid transparent; border-left:5px solid currentColor; flex:none; margin:0 2px; }
+.great-wall-section[open] > summary .wall-disclosure { transform:rotate(90deg); }
+.wall-line { display:inline-block; width:28px; border-top:2px solid #8e4829; margin-right:6px; vertical-align:middle; }
+.wall-line.approximate { border-top-style:dashed; }
+#greatWallCategories { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:3px 5px; padding-top:4px; }
+#greatWallCategories label { display:flex; align-items:center; gap:3px; min-width:0; font-size:9px; line-height:1.2; cursor:pointer; }
+#greatWallCategories label span { white-space:nowrap; }
+#greatWallCategories .wall-line { width:14px; flex:none; margin-right:0; }
+#greatWallCategories input { width:13px; height:13px; margin:0; accent-color:#8e4829; }
+#greatWallSelectAll { width:13px; height:13px; margin:0; accent-color:#8e4829; cursor:pointer; }
+.great-wall-history-toggle { display:flex; align-items:center; gap:5px; margin:4px 0 5px; font-size:9px; cursor:pointer; }
+.great-wall-history-toggle input { width:13px; height:13px; margin:0; accent-color:#176b52; }
+#greatWallHistoryEras { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:3px 5px; margin-bottom:5px; font-size:9px; }
+#greatWallHistoryEras[hidden] { display:none; }
+#greatWallHistoryEras span { display:flex; align-items:center; gap:4px; min-width:0; }
+#greatWallHistoryEras i { width:14px; flex:none; border-top:1.5px dashed; }
+.great-wall-info { color:#173f34; font-size:13px; overflow-wrap:anywhere; }
+.great-wall-info small { display:block; font-size:11px; color:#67776e; }
+.great-wall-info dl { display:grid; grid-template-columns:auto minmax(0,1fr); gap:4px 8px; margin:8px 0 0; max-height:240px; overflow:auto; }
+.great-wall-info dd { margin:0; }
+.great-wall-hover .maplibregl-popup-content { padding:7px 9px; width:max-content; max-width:220px; }
+.ancient-capital-hover { pointer-events:none; }
+.ancient-capital-hover .maplibregl-popup-content { width:max-content; max-width:220px; padding:6px 9px; font-size:12px; line-height:1.3; }
+.ancient-capital-hover small,.ancient-capital-tooltip small { display:block; font-size:10px; color:#60736b; margin-top:2px; }
+.ancient-capital-tooltip { max-width:220px; white-space:normal; }
+
+/* Status floats above the fixed legend stack; its visibility never shifts legends. */
+.map-overlay-legends { bottom:var(--map-legend-bottom,42px); max-height:var(--map-legend-height,calc(100% - 100px)); }
+.loading-debug { left:12px; right:auto; bottom:var(--map-status-bottom,50px); width:min(280px,calc(100% - 126px)); max-width:none; box-sizing:border-box; }
+.loading-debug[hidden] { display:none !important; }
+@media (max-width:700px) {
+  .loading-debug { display:grid !important; left:8px; right:auto; bottom:var(--map-status-bottom,112px); width:min(280px,calc(100% - 16px)); max-width:none; max-height:70px; padding:6px 8px; font-size:10px; }
+  .loading-debug[hidden] { display:none !important; }
+  .map-overlay-legends { left:8px; width:min(280px,calc(100% - 16px)); }
+}

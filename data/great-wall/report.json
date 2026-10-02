@@ -1,0 +1,43 @@
+{
+  "original": 2454,
+  "folders": 135,
+  "sources": [
+    {
+      "source": "greatwall-station",
+      "url": "https://www.ilovegreatwall.cn/public/TheGoogleGreatWall/MingDynastyGreatWall_Songyizhe_V1.0.kmz",
+      "input": 1704,
+      "wallLines": 537,
+      "addedPoints": 62,
+      "status": "ok",
+      "added": 683,
+      "omittedEdges": 57958
+    },
+    {
+      "source": "public-geojson",
+      "url": "https://raw.githubusercontent.com/Adl3rAi/The-Great-Wall-of-China-geodata/main/direction/fulldirection.geojson",
+      "input": 270,
+      "wallLines": 270,
+      "addedPoints": 0,
+      "status": "ok",
+      "added": 568,
+      "omittedEdges": 83394
+    }
+  ],
+  "categories": {
+    "museum": 10,
+    "landmark": 145,
+    "pass": 406,
+    "city": 43,
+    "fortress": 645,
+    "wall": 1450,
+    "town": 113,
+    "guard": 115,
+    "tower": 555,
+    "beacon": 266,
+    "lost": 19
+  },
+  "total": 3767,
+  "builtAt": "2026-10-02T15:30:28.844Z",
+  "proximityMetres": 100,
+  "classificationUpdatedAt": "2026-10-02T16:10:29.956Z"
+}

@@ -15,7 +15,7 @@ const mapControlsStorageKey = "travel-map-controls-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "2.1.4";
+const appVersion = "2.1.5";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
@@ -433,7 +433,8 @@ const translations = {
     pleistoceneVolcanoes: "更新世",
     overlay3d: "3D",
     overlay5a: "5A / 国家公园",
-    overlayAncientCapitals: "中国古都",
+    overlayAncientCapitals: "古都",
+    overlayGreatWall: "长城",
     overlayHeritage: "世界遗产",
     overlayHighAltitude: "高海拔挑战",
     hideMapControls: "收起",
@@ -686,7 +687,8 @@ const translations = {
     pleistoceneVolcanoes: "Pleistocene",
     overlay3d: "3D",
     overlay5a: "5A / National Parks",
-    overlayAncientCapitals: "Ancient Chinese Capitals",
+    overlayAncientCapitals: "Ancient Capitals",
+    overlayGreatWall: "Great Wall",
     overlayHeritage: "World Heritage",
     overlayHighAltitude: "High-altitude challenge",
     hideMapControls: "Collapse",
@@ -812,7 +814,7 @@ function t(key) {
 }
 
 function defaultMapOverlays() {
-  return { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, arcgisWater: false, arcgisWaterEsri: true, arcgisWaterHydroRivers: true, earthquakes: false, volcanoes: false, china5a: false, chinaAncientCapitals: false, worldHeritage: false, highAltitude: false };
+return { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, arcgisWater: false, arcgisWaterEsri: true, arcgisWaterHydroRivers: true, earthquakes: false, volcanoes: false, china5a: false, chinaAncientCapitals: false, greatWall: false, greatWallHistory: false, worldHeritage: false, highAltitude: false };
 }
 
 function normalizeMapOverlays(overlays = {}) {
@@ -820,6 +822,8 @@ function normalizeMapOverlays(overlays = {}) {
     ...defaultMapOverlays(),
     ...overlays,
     populationDensity: Boolean(overlays.populationDensity),
+    greatWall: Boolean(overlays.greatWall),
+    greatWallHistory: Boolean(overlays.greatWallHistory),
     railways: Boolean(overlays.railways),
     railwayMode: overlays.railwayMode === "raster" ? "raster" : "vector",
     arcgisWater: Boolean(overlays.arcgisWater ?? overlays.hydroRivers),
@@ -4066,6 +4070,7 @@ function setLoadingDebug(label, status = "pending") {
   if (!loadingDebugState.size) {
     panel.hidden = true;
     panel.innerHTML = "";
+    scheduleMapOverlayInsets();
     return;
   }
 
@@ -4083,6 +4088,7 @@ function setLoadingDebug(label, status = "pending") {
     .join("");
   panel.hidden = false;
   panel.innerHTML = `<strong>状态</strong>${items}<em>调试提示</em>`;
+  scheduleMapOverlayInsets();
 }
 
 function clearLoadingDebugSoon() {
@@ -9202,6 +9208,7 @@ function syncMapLibreRailwayOverlay(enabled) {
 
 function syncMapLibreHazardOverlays(overlays) {
   if (!mapLibreMap || !mapLibreStyleReady) return;
+  GreatWall.sync(mapLibreMap);
   refreshEarthquakeOnline();
   if (!overlays.volcanoes) volcanoHoverPopup?.remove();
   ["earthquake-points", "volcano-points"].forEach(removeMapLibreLayer);
@@ -9859,6 +9866,7 @@ function refreshFlightRoutesOnMap() {
 }
 
 function renderMapLibreMarkers(overlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) }) {
+  clearAncientCapitalHover();
   const perfStartedAt = perfNow();
   const signature = mapLibreMarkerRenderSignature(overlays);
   if (mapLibreMarkerSignature === signature && mapLibreMap.getLayer("map-points-circle")) return;
@@ -10111,10 +10119,22 @@ function addMapLibrePointLayers(sourceId) {
   }
 }
 
+let ancientCapitalHoverPopup = null;
+function hasChecklistHover(key) {
+  return ['chinaAncientCapitals', 'china5a', 'usNationalParks', 'worldHeritage', 'chinaHighAltitude'].includes(key);
+}
+function clearAncientCapitalHover() {
+  ancientCapitalHoverPopup?.remove();
+  ancientCapitalHoverPopup = null;
+}
+function ancientCapitalHoverContent(props) {
+  return `<strong>${escapeHtml(props.title || props.item || '')}</strong>${props.subtitle ? `<small>${escapeHtml(props.subtitle)}</small>` : ''}`;
+}
 function bindMapLibrePointHandlers() {
   if (mapLibreLayerHandlersBound.points || !mapLibreMap.getLayer("map-points-circle")) return;
   mapLibreLayerHandlersBound.points = true;
   const handlePointClick = (event) => {
+    clearAncientCapitalHover();
     if (event.originalEvent?._travelMapHandled) return;
     markMapEventHandled(event);
     const feature = event.features?.[0];
@@ -10126,6 +10146,7 @@ function bindMapLibrePointHandlers() {
     mapLibreMap.getCanvas().style.cursor = "pointer";
   };
   const clearPointer = () => {
+    clearAncientCapitalHover();
     mapLibreMap.getCanvas().style.cursor = "";
   };
   ["map-points-circle", "map-points-label", "map-points-label-full"].forEach((layerId) => {
@@ -10133,6 +10154,13 @@ function bindMapLibrePointHandlers() {
     mapLibreMap.on("click", layerId, handlePointClick);
     mapLibreMap.on("mouseenter", layerId, setPointer);
     mapLibreMap.on("mouseleave", layerId, clearPointer);
+    mapLibreMap.on("mousemove", layerId, (event) => {
+      const feature = event.features?.find(f => hasChecklistHover(f.properties?.checklistKey));
+      if (!feature || mapAddMode || mapPathMode) { clearAncientCapitalHover(); return; }
+      if (!ancientCapitalHoverPopup) ancientCapitalHoverPopup = new maplibregl.Popup({closeButton:false,closeOnClick:false,offset:10,maxWidth:'220px',className:'ancient-capital-hover'});
+      ancientCapitalHoverPopup.setLngLat(event.lngLat).setHTML(ancientCapitalHoverContent(feature.properties)).addTo(mapLibreMap);
+      mapLibreMap.getCanvas().style.cursor = 'pointer';
+    });
   });
 }
 
@@ -10880,6 +10908,7 @@ function renderLeafletLayers() {
   ensureBoundaryDataForLevel(state.boundaryLevel);
   if (leafletLayers) leafletLayers.remove();
   leafletLayers = L.layerGroup().addTo(leafletMap);
+  GreatWall.leaflet(leafletMap, leafletLayers);
 
   if (overlays.populationDensity && window.pmtiles?.leafletRasterLayer) {
     if (!leafletMap.getPane("populationDensityPane")) {
@@ -11138,7 +11167,7 @@ function renderLeafletLayers() {
       fillColor: checklistOverlayColor(entry.key, entry.done),
       fillOpacity: entry.done ? 0.96 : 0.82,
     });
-    marker.bindTooltip(entry.title || entry.item, { sticky: true });
+    marker.bindTooltip(hasChecklistHover(entry.key) ? ancientCapitalHoverContent(entry) : escapeHtml(entry.title || entry.item), { sticky: true, className: hasChecklistHover(entry.key) ? 'ancient-capital-tooltip' : '' });
     marker.bindPopup(mapPopupHtml(`<strong>${escapeHtml(entry.title || entry.item)}</strong><br>${escapeHtml(entry.subtitle || checklistLabel(entry.key, checklistCatalog[entry.key] || {}) || t("checklistFallback"))}<br><button class="popup-action" data-checklist-map="${escapeHtml(entry.key)}" data-item="${escapeHtml(entry.item)}" type="button">${entry.done ? t("unvisit") : t("markVisited")}</button>`), { closeButton: false });
     marker.on("click", (event) => {
       if (event.originalEvent) event.originalEvent._travelMapHandled = true;
@@ -13654,7 +13683,7 @@ function renderAfterChecklistChange(key, item, group = "", wasDone = null) {
       refreshRenderedChecklistStats(relatedKey, statsGroup);
     });
   }
-  if (key !== "usNationalParks" && key !== "worldHeritage") refreshCanonicalChecklistStats(item);
+  if (key !== "usNationalParks" && key !== "worldHeritage") refreshCanonicalChecklistStats(item, relatedKeys);
   if (document.querySelector('[data-page="dashboard"]')?.classList.contains("active")) {
     renderMetrics();
     renderDashboardAchievements();
@@ -13804,15 +13833,16 @@ function refreshRenderedChecklistSectionMarkup(key) {
 function refreshRenderedChecklistStats(key, group = "") {
   const list = checklistCatalog[key];
   if (!list) return;
-  refreshAchievementChecklistCount(key);
-  if (key === "chinaAncientCapitals") refreshAncientCapitalEraStats();
+  const countNodes = new Set(document.querySelectorAll(`[data-achievement-count="${key}"]`));
   document.querySelectorAll(`.theme-checklist [data-checklist="${key}"]`).forEach((button) => {
-    const section = button.closest(".theme-checklist");
-    const total = checklistTotalCount(key);
-    const count = checklistDoneCount(key);
-    const countNode = section?.querySelector(":scope > header span");
-    if (countNode) countNode.textContent = `${count}/${total}`;
+    const countNode = button.closest(".theme-checklist")?.querySelector(":scope > header span");
+    if (countNode) countNodes.add(countNode);
   });
+  if (countNodes.size) {
+    const text = `${checklistDoneCount(key)}/${checklistTotalCount(key)}`;
+    countNodes.forEach((node) => { node.textContent = text; });
+  }
+  if (key === "chinaAncientCapitals") refreshAncientCapitalEraStats();
   if (!group) return;
   const groupId = checklistGroupId(key, group);
   const details = Array.from(document.querySelectorAll("[data-checklist-group]"))
@@ -13822,15 +13852,16 @@ function refreshRenderedChecklistStats(key, group = "") {
     ? (usNpsGroups.find((entry) => entry.id === group)?.items || [])
     : (list.byRegion?.[group] || list.byCountry?.[group] || []);
   if (summaryCount && items.length) {
-    const done = displayChecklistItems(key, items).filter((entry) => isChecklistItemDone(key, entry, group)).length;
-    summaryCount.textContent = `${done}/${displayChecklistItems(key, items).length}`;
+    const displayItems = displayChecklistItems(key, items);
+    const done = displayItems.filter((entry) => isChecklistItemDone(key, entry, group)).length;
+    summaryCount.textContent = `${done}/${displayItems.length}`;
   }
 }
 
-function refreshCanonicalChecklistStats(item) {
+function refreshCanonicalChecklistStats(item, refreshedKeys = new Set()) {
   if (!checklistCanonicalKey(item)) return;
   ["china5a", "usNationalParks", "worldHeritage", "chinaHighAltitude"].forEach((linkedKey) => {
-    if (checklistCatalog[linkedKey]) refreshRenderedChecklistStats(linkedKey);
+    if (checklistCatalog[linkedKey] && !refreshedKeys.has(linkedKey)) refreshRenderedChecklistStats(linkedKey);
   });
 }
 
@@ -15490,7 +15521,8 @@ function renderMapControls() {
   }
   updateEarthquakeOnlineStatus();
   const overlayLegends = $("#mapOverlayLegends");
-  if (overlayLegends) overlayLegends.hidden = !showSeafloorAgeLegend && !showSeafloorContourLegend && !overlays.populationDensity && !overlays.railways && !overlays.arcgisWater && !overlays.earthquakes && !overlays.volcanoes;
+  GreatWall.legend();
+  if (overlayLegends) overlayLegends.hidden = !overlays.greatWall && !showSeafloorAgeLegend && !showSeafloorContourLegend && !overlays.populationDensity && !overlays.railways && !overlays.arcgisWater && !overlays.earthquakes && !overlays.volcanoes;
   if (show3d) show3d.checked = Boolean(state.map3d);
   if (showChina5a) showChina5a.checked = Boolean(overlays.china5a);
   if (showAncientCapitals) showAncientCapitals.checked = Boolean(overlays.chinaAncientCapitals);
@@ -15505,7 +15537,12 @@ function renderMapControls() {
 }
 
 let mapOverlayInsetFrame = 0;
+let mapOverlayResizeObserver;
 function scheduleMapOverlayInsets() {
+  if(!mapOverlayResizeObserver&&typeof ResizeObserver!=='undefined') {
+    mapOverlayResizeObserver=new ResizeObserver(()=>scheduleMapOverlayInsets());
+    for(const element of document.querySelectorAll('.map-surface, .map-toolbar > .map-control-panel, #mapOverlayLegends, .map-drawer'))mapOverlayResizeObserver.observe(element);
+  }
   if (mapOverlayInsetFrame) cancelAnimationFrame(mapOverlayInsetFrame);
   mapOverlayInsetFrame = requestAnimationFrame(() => {
     mapOverlayInsetFrame = 0;
@@ -15516,6 +15553,24 @@ function scheduleMapOverlayInsets() {
 function updateMapOverlayInsets() {
   const mapSurface = document.querySelector(".map-surface");
   const controlPanel = document.querySelector(".map-toolbar > .map-control-panel");
+  if (mapSurface) {
+    const surface=mapSurface.getBoundingClientRect(), narrow=window.matchMedia('(max-width:700px)').matches;
+    let footer=42;
+    for(const element of mapSurface.querySelectorAll('.maplibregl-ctrl-bottom-right, .leaflet-bottom.leaflet-right, .map-drawer:not(.hidden)')) {
+      const rect=element.getBoundingClientRect();
+      if(!rect.width||!rect.height||getComputedStyle(element).display==='none')continue;
+      const clearance=Math.max(0,Math.ceil(surface.bottom-rect.top+8));
+      if(narrow)footer=Math.max(footer,clearance);
+    }
+    const toolbar=controlPanel?.getBoundingClientRect();
+    const top=toolbar&&toolbar.bottom>surface.top?Math.max(12,toolbar.bottom-surface.top+12):12;
+    mapSurface.style.setProperty('--map-legend-bottom',`${footer}px`);
+    // Always reserve the same status headroom: visibility must not move the legends.
+    mapSurface.style.setProperty('--map-legend-height',`${Math.max(48,surface.height-footer-top-104)}px`);
+    const legends=document.querySelector('#mapOverlayLegends');
+    const legendHeight=legends&&!legends.hidden?legends.getBoundingClientRect().height:0;
+    mapSurface.style.setProperty('--map-status-bottom',`${footer+legendHeight+8}px`);
+  }
   if (!mapSurface || !controlPanel || window.matchMedia("(max-width: 1100px)").matches) {
     document.documentElement.style.removeProperty("--map-detail-top");
     return;
@@ -15664,6 +15719,9 @@ function showPage(pageId, targetId = "") {
 }
 
 setLoadingDebug("读取本地快速状态", "pending");
+GreatWall.init({ state: () => state, language: () => currentLanguage, map: () => mapLibreMap,
+  leafletGroup: () => leafletLayers, front: bringMapLibrePointLayersToFront,
+  save: saveUiStateSoon, render: () => { renderMapControls(); renderGeoMap(); } });
 loadState();
 setLoadingDebug("读取本地快速状态", "done");
 moveMapLevelControlToToolbar();
@@ -16417,7 +16475,7 @@ window.visualViewport?.addEventListener("resize", () => {
 });
 if ("serviceWorker" in navigator && location.protocol !== "file:") {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=643", { updateViaCache: "none" })
+navigator.serviceWorker.register("./sw.js?v=663", { updateViaCache: "none" })
       .then((registration) => registration.update())
       .catch((error) => console.warn("Service Worker registration failed", error));
   });

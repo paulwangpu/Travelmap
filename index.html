@@ -6,7 +6,7 @@
     <title>我的全球旅行地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" />
-    <link rel="stylesheet" href="styles.css?v=171" />
+<link rel="stylesheet" href="styles.css?v=184" />
   </head>
   <body>
     <div class="app-shell map-first-shell">
@@ -35,7 +35,7 @@
             <strong data-i18n="privacyTitle">本地保存</strong>
             <p data-i18n="privacyText">数据只保存在本机浏览器里，不会自动上传或公开。如需备份请导出。</p>
           </div>
-          <div class="app-version" id="appVersion">v2.1.4</div>
+          <div class="app-version" id="appVersion">v2.1.5</div>
         </div>
       </aside>
 
@@ -96,7 +96,10 @@
               </div>
               <div class="map-overlay-toggles map-feature-overlays">
                 <label><input id="showChina5aOnMap" type="checkbox" /> <span data-i18n="overlay5a">5A / NPS 园区边界</span></label>
-                <label><input id="showAncientCapitalsOnMap" type="checkbox" /> <span data-i18n="overlayAncientCapitals">中国古都</span></label>
+                <div class="hazard-toggle-pair compact-toggle-pair">
+                  <label><input id="showAncientCapitalsOnMap" type="checkbox" /> <span data-i18n="overlayAncientCapitals">古都</span></label>
+                  <label><input id="showGreatWallOnMap" type="checkbox" /> <span data-i18n="overlayGreatWall">长城</span></label>
+                </div>
                 <label><input id="showWorldHeritageOnMap" type="checkbox" /> <span data-i18n="overlayHeritage">世界遗产</span></label>
                 <label><input id="showHighAltitudeOnMap" type="checkbox" /> <span data-i18n="overlayHighAltitude">高海拔挑战</span></label>
               </div>
@@ -139,6 +142,14 @@
               <div class="loading-debug" id="loadingDebug" hidden></div>
               <div class="leaflet-map" id="leafletMap"></div>
               <div class="map-overlay-legends" id="mapOverlayLegends" hidden>
+                <aside class="great-wall-legend" id="greatWallLegend" hidden>
+                  <strong id="greatWallLegendTitle">长城</strong>
+                  <details class="great-wall-section"><summary id="greatWallCategorySummary"><input id="greatWallSelectAll" type="checkbox" data-wall-all checked aria-label="全选详细类型"><i class="wall-disclosure" aria-hidden="true"></i><span id="greatWallCategorySummaryText">详细线路与遗址 · 类型</span></summary><div id="greatWallCategories"></div></details>
+                  <details class="great-wall-section" open><summary class="great-wall-history-toggle"><input id="showGreatWallHistory" type="checkbox" /><i class="wall-disclosure" aria-hidden="true"></i><span id="greatWallHistoryText">其他朝代概览</span></summary><div id="greatWallHistoryEras"></div></details>
+                  <small id="greatWallStatus" role="status"></small>
+                  <small id="greatWallNote"></small>
+                  <a href="https://www.ilovegreatwall.cn/public/TheGoogleGreatWall/" target="_blank" rel="noopener">长城小站 ↗</a> · <a href="https://github.com/Adl3rAi/The-Great-Wall-of-China-geodata" target="_blank" rel="noopener">GeoJSON · MIT ↗</a>
+                </aside>
                 <aside class="seafloor-age-legend" id="seafloorAgeLegend" hidden>
                   <strong data-i18n="seafloorAgeLegend">海洋岩石圈年龄</strong>
                   <div class="seafloor-age-scale" aria-hidden="true"></div>
@@ -411,6 +422,7 @@
     <script src="volcano-catalog.js?v=3"></script>
     <script src="esri-relief.js?v=2"></script>
     <script src="basemap-alignment.js?v=4"></script>
-    <script src="app.js?v=632"></script>
+<script src="great-wall.js?v=14"></script>
+<script src="app.js?v=652"></script>
   </body>
 </html>

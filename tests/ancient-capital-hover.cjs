@@ -1,0 +1,17 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const app=fs.readFileSync(require.resolve('../app.js'),'utf8');
+const start=app.indexOf('function ancientCapitalHoverContent('),end=app.indexOf('\nfunction bindMapLibrePointHandlers()',start);
+const escapeHtml=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const context={escapeHtml};vm.runInNewContext(app.slice(start,end),context);
+assert.equal(context.ancientCapitalHoverContent({title:'长安',subtitle:'汉 · 唐'}),'<strong>长安</strong><small>汉 · 唐</small>');
+assert.equal(context.ancientCapitalHoverContent({item:'<img>'}),'<strong>&lt;img&gt;</strong>');
+assert.match(app,/hasChecklistHover\(f.properties\?\.checklistKey\)/);
+assert.match(app,/className:'ancient-capital-hover'/);
+assert.match(app,/className: hasChecklistHover\(entry.key\) \? 'ancient-capital-tooltip'/);
+const keyStart=app.indexOf('function hasChecklistHover('),keyEnd=app.indexOf('\nfunction clearAncientCapitalHover()',keyStart);
+vm.runInNewContext(app.slice(keyStart,keyEnd),context);
+for(const key of ['chinaAncientCapitals','china5a','usNationalParks','worldHeritage','chinaHighAltitude'])assert.equal(context.hasChecklistHover(key),true);
+assert.equal(context.hasChecklistHover(undefined),false);
+assert.equal(context.hasChecklistHover('other'),false);
+assert.match(app,/function renderMapLibreMarkers[^]*?clearAncientCapitalHover\(\)/);
+console.log('PASS: compact capital hover, escaped content, MapLibre handlers, Leaflet tooltip and rerender cleanup');
