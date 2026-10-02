@@ -1158,6 +1158,7 @@ const mapProviders = {
   bingRoad: {
     label: "Bing 地图",
     tiles: ["bing://road/{z}/{x}/{y}"],
+    tileUrl: (z, x, y) => bingTileUrl("road", z, x, y),
     attribution: "© Microsoft Bing",
   },
   bingAerial: {
@@ -1339,16 +1340,26 @@ function wgsToGcj(lng, lat) {
 
 function gcjToWgs(lng, lat) {
   if (!isCoordinateInChina(lng, lat)) return [lng, lat];
-  const [gcjLng, gcjLat] = wgsToGcj(lng, lat);
-  return [lng * 2 - gcjLng, lat * 2 - gcjLat];
+  let result = [lng, lat];
+  for (let i = 0; i < 5; i++) {
+    const projected = wgsToGcj(...result);
+    result = [result[0] + lng - projected[0], result[1] + lat - projected[1]];
+  }
+  return result;
+}
+
+function pathDisplayGeometry(place) {
+  // User-requested correction for legacy untagged paths; keep raw coordinates
+  // in storage. Newly drawn/standard imported paths explicitly declare WGS84.
+  return BasemapAlignment.pathGeometry(place, gcjToWgs);
 }
 
 function mapDisplayCoordinate(lng, lat) {
-  return isGaodeProvider() ? wgsToGcj(lng, lat) : [lng, lat];
+  return [lng, lat]; // All basemaps now render on the WGS84 grid.
 }
 
 function mapStorageCoordinateFromClick(lng, lat) {
-  return isGaodeProvider() ? gcjToWgs(lng, lat) : [lng, lat];
+  return [lng, lat];
 }
 
 function fallbackMapProviderFromLocale() {
@@ -6107,6 +6118,7 @@ function saveMapPath(name) {
     place.name = finalName;
     place.geometryType = "LineString";
     place.importedGeometry = geometry;
+    place.pathCoordinateSystem = "wgs84";
     if (manualPath) {
       place.sourceFile = finalName;
       state.importedFiles = (state.importedFiles || []).map((record) => record.id === place.importId
@@ -6130,6 +6142,7 @@ function saveMapPath(name) {
     type: currentLanguage === "en" ? "Drawn path" : "手绘路径",
     geometryType: "LineString",
     importedGeometry: geometry,
+    pathCoordinateSystem: "wgs84",
     shapeOnly: true,
     sourceType: "manual-path",
     tags: [currentLanguage === "en" ? "Map drawing" : "地图绘制"],
@@ -6140,7 +6153,8 @@ function saveMapPath(name) {
 
 function editManualPath(placeId) {
   const place = getPlace(placeId);
-  const coordinates = place?.importedGeometry?.type === "LineString" ? place.importedGeometry.coordinates : null;
+  const displayGeometry = pathDisplayGeometry(place);
+  const coordinates = displayGeometry?.type === "LineString" ? displayGeometry.coordinates : null;
   if (!isEditablePath(place) || !Array.isArray(coordinates) || coordinates.length < 2) return;
   setMapPathMode(true, false);
   editingMapPathId = place.id;
@@ -7430,7 +7444,7 @@ function importedShapeGeoJson() {
           depth: 1,
           type: place.type,
         },
-        geometry: place.importedGeometry,
+        geometry: pathDisplayGeometry(place),
       })),
   };
 }
@@ -8030,7 +8044,7 @@ function customBoundaryFor(level, countryOrRegion, unitName = "") {
   return match ? {
     type: "Feature",
     properties: { source: "imported-boundary", name: match.name },
-    geometry: match.importedGeometry,
+    geometry: pathDisplayGeometry(match),
   } : null;
 }
 
@@ -8129,7 +8143,19 @@ function applyLeafletProvider() {
   if (providerId === "esriRelief") alert(currentLanguage === "en" ? "This vector basemap requires MapLibre. Leaflet fallback shows OpenStreetMap." : "此矢量底图需要 MapLibre；Leaflet 回退模式暂显示 OpenStreetMap。");
   if (leafletBaseLayer) leafletMap.removeLayer(leafletBaseLayer);
   const provider = mapProviders[providerId] || mapProviders.osm;
-  leafletBaseLayer = providerId.startsWith("bing")
+  leafletBaseLayer = BasemapAlignment.shifted.has(providerId)
+    ? new (L.GridLayer.extend({ createTile(coords, done) {
+      const img = document.createElement("img");
+      img.width = img.height = 256;
+      BasemapAlignment.tile(provider, coords.z, coords.x, coords.y, wgsToGcj).then(data => {
+        const url = URL.createObjectURL(new Blob([data], { type: "image/png" }));
+        img.onload = () => { URL.revokeObjectURL(url); done(null, img); };
+        img.onerror = () => { URL.revokeObjectURL(url); done(new Error("Aligned tile decode"), img); };
+        img.src = url;
+      }).catch(error => done(error, img));
+      return img;
+    } }))({ maxZoom: 18, attribution: provider.attribution, opacity: normalizeMapBaseOpacity(state.mapBaseOpacity) / 100 })
+    : providerId.startsWith("bing")
     ? new (L.TileLayer.extend({
       getTileUrl(coords) {
         return bingTileUrl(providerId === "bingAerial" ? "aerial" : "road", coords.z, coords.x, coords.y);
@@ -8308,7 +8334,12 @@ function applyMap3dToggle(enabled) {
   applyMapLibreProjectionMode();
 }
 
+let basemapAlignmentRegistered = false;
 function mapLibreBaseStyle(providerId) {
+  if (!basemapAlignmentRegistered) {
+    BasemapAlignment.register(maplibregl, mapProviders, wgsToGcj);
+    basemapAlignmentRegistered = true;
+  }
   if (providerId === "esriRelief" && EsriRelief.cached) {
     const style = EsriRelief.build(EsriRelief.cached, normalizeMapBaseOpacity(state.mapBaseOpacity) / 100, mapLibreProjection());
     return style;
@@ -8322,7 +8353,7 @@ function mapLibreBaseStyle(providerId) {
     sources: {
       basemap: {
         type: "raster",
-        tiles: provider.tiles,
+        tiles: BasemapAlignment.shifted.has(providerId) ? [`aligned://${providerId}/{z}/{x}/{y}`] : provider.tiles,
         tileSize: 256,
         maxzoom: provider.maxNativeZoom || 18,
         attribution: provider.attribution,
@@ -9719,6 +9750,13 @@ function renderMapLibreLayers() {
 
 function bringMapLibrePointLayersToFront() {
   if (!mapLibreMap) return;
+  // Keep both railway modes below personal paths, including async vector loads.
+  const layers = mapLibreMap.getStyle()?.layers || [];
+  const firstPath = layers.find(layer => layer.source === "imported-paths");
+  if (firstPath) {
+    layers.filter(layer => layer.id.startsWith("orm-") || layer.id === "railway-network-raster")
+      .forEach(layer => mapLibreMap.moveLayer(layer.id, firstPath.id));
+  }
   [
     "map-points-shadow",
     "map-points-stroke",
@@ -12086,7 +12124,7 @@ function deleteImportedObjects(placeIds) {
 
 function locateManualPath(placeId) {
   const place = getPlace(placeId);
-  const center = geometryCenter(place?.importedGeometry);
+  const center = geometryCenter(pathDisplayGeometry(place));
   if (!place || !center?.every(Number.isFinite)) return;
   state.mapViewport = { center: [center[0], center[1]], zoom: Math.max(5, normalizeMapViewport(state.mapViewport)?.zoom || 5) };
   history.replaceState(null, "", "#world");
@@ -14885,6 +14923,7 @@ function parseGeoJson(text) {
       boundaryLevel: detectBoundaryLevel(props, feature.geometry),
       geometryType: feature.geometry?.type || "Feature",
       importedGeometry: feature.geometry,
+      pathCoordinateSystem: props.pathCoordinateSystem || props.coordinateSystem || "wgs84",
       shapeOnly: feature.geometry?.type !== "Point" && feature.geometry?.type !== "MultiPoint",
     });
   }).filter((place) => place.importedGeometry || Number.isFinite(place.lat) || Number.isFinite(place.lng));
@@ -14936,6 +14975,7 @@ function parseKml(text) {
       lat,
       lng,
       tags: "KML",
+      pathCoordinateSystem: "wgs84",
       checklist: "",
       geometryType,
       importedGeometry,
@@ -15086,6 +15126,7 @@ function normalizeImportedPlace(raw) {
     checklist: normalizeChecklist(raw),
     geometryType: raw.geometryType || "Imported",
     importedGeometry: raw.importedGeometry || null,
+    pathCoordinateSystem: String(raw.pathCoordinateSystem || "").toLowerCase(),
     boundaryLevel: raw.boundaryLevel || "",
     shapeOnly: Boolean(raw.shapeOnly),
     sourceType: String(raw.sourceType || "").trim(),
@@ -16376,7 +16417,7 @@ window.visualViewport?.addEventListener("resize", () => {
 });
 if ("serviceWorker" in navigator && location.protocol !== "file:") {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=638", { updateViaCache: "none" })
+    navigator.serviceWorker.register("./sw.js?v=643", { updateViaCache: "none" })
       .then((registration) => registration.update())
       .catch((error) => console.warn("Service Worker registration failed", error));
   });

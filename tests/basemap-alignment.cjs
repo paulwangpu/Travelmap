@@ -1,0 +1,51 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const vm = require('node:vm');
+const api = require('../basemap-alignment.js');
+const app = fs.readFileSync(require.resolve('../app.js'), 'utf8');
+const context = {};
+vm.runInNewContext(app.slice(app.indexOf('function isCoordinateInChina('), app.indexOf('function mapDisplayCoordinate(')), context);
+const convert = context.wgsToGcj;
+const beijing = convert(116.397389, 39.908722);
+assert.ok(Math.abs(beijing[0] - 116.403633) < 0.00001);
+assert.ok(Math.abs(beijing[1] - 39.910125) < 0.00001);
+assert.deepEqual(Array.from(convert(-73.98, 40.75)), [-73.98, 40.75]);
+for (const z of [0, 7, 12, 18]) {
+  const p = api.pixel(116.397389, 39.908722, z);
+  const ll = api.coordinate(...p, z);
+  assert.ok(Math.abs(ll[0] - 116.397389) < 1e-9);
+  assert.ok(Math.abs(ll[1] - 39.908722) < 1e-9);
+  const x = Math.floor(p[0] / 256), y = Math.floor(p[1] / 256);
+  const mesh = api.grid(z, x, y, convert);
+  assert.ok(mesh.points.every(q => Number.isFinite(q.x) && Number.isFinite(q.y)));
+  const east = api.grid(z, x + 1, y, convert);
+  for (let j = 0; j <= mesh.steps; j++) {
+    const a = mesh.points[j * 9 + 8], b = east.points[j * 9];
+    assert.equal(a.x, b.x); assert.equal(a.y, b.y);
+  }
+}
+assert.equal(api.shifted.has('googleSatellite'), false);
+assert.equal(api.shifted.has('esriRelief'), false);
+assert.equal(api.shifted.has('googleTerrain'), true);
+assert.equal(api.shifted.has('bingRoad'), true);
+assert.equal(api.shifted.has('bingAerial'), false);
+assert.match(app, /tileUrl: \(z, x, y\) => bingTileUrl\("road", z, x, y\)/);
+assert.match(app, /BasemapAlignment\.register/);
+assert.match(app, /BasemapAlignment\.tile/);
+const raw = { type: 'LineString', coordinates: [[...beijing, 25], [-73.98, 40.75, 10]] };
+const snapshot = JSON.stringify(raw);
+const corrected = api.pathGeometry({ importedGeometry: raw }, context.gcjToWgs);
+assert.ok(Math.abs(corrected.coordinates[0][0] - 116.397389) < 1e-8);
+assert.ok(Math.abs(corrected.coordinates[0][1] - 39.908722) < 1e-8);
+assert.equal(corrected.coordinates[0][2], 25);
+assert.deepEqual(corrected.coordinates[1], [-73.98, 40.75, 10]);
+assert.equal(JSON.stringify(raw), snapshot);
+assert.equal(api.pathGeometry({ importedGeometry: raw, pathCoordinateSystem: 'wgs84' }, context.gcjToWgs), raw);
+const multi = api.pathGeometry({ importedGeometry: { type: 'MultiLineString', coordinates: [raw.coordinates] } }, context.gcjToWgs);
+assert.deepEqual(multi.coordinates[0], corrected.coordinates);
+const polygon = { type: 'Polygon', coordinates: [raw.coordinates] };
+assert.equal(api.pathGeometry({ importedGeometry: polygon }, context.gcjToWgs), polygon);
+assert.match(app, /geometry: pathDisplayGeometry\(place\)/);
+assert.match(app, /place\.pathCoordinateSystem = "wgs84"/);
+console.log('PASS: legacy path correction, WGS84 opt-out, foreign identity, altitude, multiline and original data preservation');
+console.log('PASS: GCJ control point, foreign identity, mesh continuity at z0/7/12/18, raster/Leaflet wiring');
