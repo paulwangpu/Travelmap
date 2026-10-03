@@ -59,5 +59,6 @@ assert.match(css,/#greatWallHistoryEras i \{[^}]*border-top:3px dotted/);
 context.config.state=()=>({mapOverlays:{greatWallHistory:false}});
 assert.equal(context.historyFeatures().features.length,0);
 const html=fs.readFileSync(require.resolve('../index.html'),'utf8');
+assert.match(html,/href="https:\/\/www.dcbx-note.com\/wp-content\/uploads\/GreatWall%20wikipedia.kmz"[^>]*>Wikipedia KMZ/);
 assert.equal((html.match(/id="showGreatWallHistory"/g)||[]).length,1);
 console.log('PASS: historical KMZ preserves all 49 routes and coordinates; eras, naming, defaults and both renderers wired');

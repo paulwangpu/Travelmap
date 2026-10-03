@@ -1,0 +1,495 @@
+{
+  "reviewedAt": "2026-10-02",
+  "referenceRecords": 42073,
+  "source": "https://greatwallarchive.com/map",
+  "records": [
+    {
+      "id": "greatwall-station-1059-5",
+      "name": "盘道梁段",
+      "era": "northern-wei",
+      "previousDisplayEra": "ming",
+      "mixed": false,
+      "periods": [
+        "northern-wei"
+      ],
+      "dynastyZh": "北齐",
+      "confidence": "95%-length-within-40m-single-era",
+      "referenceCodes": [
+        "140981382102090006"
+      ],
+      "coverage": 1,
+      "closeCoverage": 1,
+      "ambiguousShare": 0
+    },
+    {
+      "id": "greatwall-station-1559-0",
+      "name": "五墩堡至民勤",
+      "era": "han",
+      "previousDisplayEra": "ming",
+      "mixed": false,
+      "periods": [
+        "han"
+      ],
+      "dynastyZh": "汉",
+      "confidence": "95%-length-within-40m-single-era",
+      "referenceCodes": [
+        "620602382301040002",
+        "620602382101040003"
+      ],
+      "coverage": 1,
+      "closeCoverage": 1,
+      "ambiguousShare": 0
+    },
+    {
+      "id": "public-geojson-148-2",
+      "name": "Huangcaoliang to Guangwucheng",
+      "era": "northern-wei",
+      "previousDisplayEra": "ming",
+      "mixed": false,
+      "periods": [
+        "northern-wei"
+      ],
+      "dynastyZh": "北齐",
+      "confidence": "95%-length-within-40m-single-era",
+      "referenceCodes": [
+        "140981382102090006"
+      ],
+      "coverage": 1,
+      "closeCoverage": 1,
+      "ambiguousShare": 0
+    },
+    {
+      "id": "public-geojson-151-0",
+      "name": "Dayukou to Lingyunkou",
+      "era": "northern-wei",
+      "previousDisplayEra": "ming",
+      "mixed": false,
+      "periods": [
+        "northern-wei"
+      ],
+      "dynastyZh": "北齐",
+      "confidence": "95%-length-within-40m-single-era",
+      "referenceCodes": [
+        "140225382102090023"
+      ],
+      "coverage": 1,
+      "closeCoverage": 1,
+      "ambiguousShare": 0
+    },
+    {
+      "id": "public-geojson-151-1",
+      "name": "Dayukou to Lingyunkou",
+      "era": "northern-wei",
+      "previousDisplayEra": "ming",
+      "mixed": false,
+      "periods": [
+        "northern-wei"
+      ],
+      "dynastyZh": "北齐",
+      "confidence": "95%-length-within-40m-single-era",
+      "referenceCodes": [
+        "140225382102090023"
+      ],
+      "coverage": 1,
+      "closeCoverage": 1,
+      "ambiguousShare": 0
+    },
+    {
+      "id": "public-geojson-151-2",
+      "name": "Dayukou to Lingyunkou",
+      "era": "northern-wei",
+      "previousDisplayEra": "ming",
+      "mixed": false,
+      "periods": [
+        "northern-wei"
+      ],
+      "dynastyZh": "北齐",
+      "confidence": "95%-length-within-40m-single-era",
+      "referenceCodes": [
+        "140225382102090023"
+      ],
+      "coverage": 1,
+      "closeCoverage": 1,
+      "ambiguousShare": 0
+    },
+    {
+      "id": "gwa-150622353201040012",
+      "name": "铧尖烽火台",
+      "era": "han",
+      "previousDisplayEra": "han",
+      "mixed": true,
+      "periods": [
+        "spring-autumn",
+        "han"
+      ],
+      "dynastyZh": "战国秦、汉",
+      "confidence": "survey-id",
+      "referenceCodes": [
+        "150622353201040012"
+      ]
+    },
+    {
+      "id": "gwa-150622353201040001",
+      "name": "碾房塔烽火台",
+      "era": "han",
+      "previousDisplayEra": "han",
+      "mixed": true,
+      "periods": [
+        "spring-autumn",
+        "han"
+      ],
+      "dynastyZh": "战国秦、汉",
+      "confidence": "survey-id",
+      "referenceCodes": [
+        "150622353201040001"
+      ]
+    },
+    {
+      "id": "gwa-150823353201030058",
+      "name": "新村1号烽火台",
+      "era": "qin",
+      "previousDisplayEra": "qin",
+      "mixed": true,
+      "periods": [
+        "qin",
+        "han"
+      ],
+      "dynastyZh": "秦汉",
+      "confidence": "survey-id",
+      "referenceCodes": [
+        "150823353201030058"
+      ]
+    },
+    {
+      "id": "gwa-150823353201030006",
+      "name": "广申隆6号烽火台",
+      "era": "qin",
+      "previousDisplayEra": "qin",
+      "mixed": true,
+      "periods": [
+        "qin",
+        "han"
+      ],
+      "dynastyZh": "秦汉",
+      "confidence": "survey-id",
+      "referenceCodes": [
+        "150823353201030006"
+      ]
+    },
+    {
+      "id": "gwa-150823353201030003",
+      "name": "广申隆3号烽火台",
+      "era": "qin",
+      "previousDisplayEra": "qin",
+      "mixed": true,
+      "periods": [
+        "qin",
+        "han"
+      ],
+      "dynastyZh": "秦汉",
+      "confidence": "survey-id",
+      "referenceCodes": [
+        "150823353201030003"
+      ]
+    },
+    {
+      "id": "gwa-150824353201030247",
+      "name": "前达门12号烽火台",
+      "era": "qin",
+      "previousDisplayEra": "qin",
+      "mixed": true,
+      "periods": [
+        "qin",
+        "han"
+      ],
+      "dynastyZh": "秦汉",
+      "confidence": "survey-id",
+      "referenceCodes": [
+        "150824353201030247"
+      ]
+    },
+    {
+      "id": "gwa-150824353201030205",
+      "name": "罕乌拉3号烽火台",
+      "era": "qin",
+      "previousDisplayEra": "qin",
+      "mixed": true,
+      "periods": [
+        "qin",
+        "han"
+      ],
+      "dynastyZh": "秦汉",
+      "confidence": "survey-id",
+      "referenceCodes": [
+        "150824353201030205"
+      ]
+    },
+    {
+      "id": "gwa-150824353201030149",
+      "name": "西希日朝鲁6号烽火台",
+      "era": "qin",
+      "previousDisplayEra": "qin",
+      "mixed": true,
+      "periods": [
+        "qin",
+        "han"
+      ],
+      "dynastyZh": "秦汉",
+      "confidence": "survey-id",
+      "referenceCodes": [
+        "150824353201030149"
+      ]
+    },
+    {
+      "id": "gwa-150824353201030112",
+      "name": "同和太55号烽火台",
+      "era": "qin",
+      "previousDisplayEra": "qin",
+      "mixed": true,
+      "periods": [
+        "qin",
+        "han"
+      ],
+      "dynastyZh": "秦汉",
+      "confidence": "survey-id",
+      "referenceCodes": [
+        "150824353201030112"
+      ]
+    },
+    {
+      "id": "gwa-150824353201030111",
+      "name": "同和太54号烽火台",
+      "era": "qin",
+      "previousDisplayEra": "qin",
+      "mixed": true,
+      "periods": [
+        "qin",
+        "han"
+      ],
+      "dynastyZh": "秦汉",
+      "confidence": "survey-id",
+      "referenceCodes": [
+        "150824353201030111"
+      ]
+    },
+    {
+      "id": "gwa-150825353201030014",
+      "name": "富海1号烽火台",
+      "era": "han",
+      "previousDisplayEra": "qin",
+      "mixed": false,
+      "periods": [
+        "han"
+      ],
+      "dynastyZh": "汉",
+      "confidence": "survey-id",
+      "referenceCodes": [
+        "150825353201030014"
+      ]
+    },
+    {
+      "id": "gwa-152923353201170135",
+      "name": "T171烽火台",
+      "era": "han",
+      "previousDisplayEra": "ming",
+      "mixed": false,
+      "periods": [
+        "han"
+      ],
+      "dynastyZh": "汉",
+      "confidence": "survey-id",
+      "referenceCodes": [
+        "152923353201170135"
+      ]
+    },
+    {
+      "id": "gwa-152923353201170106",
+      "name": "T158烽火台",
+      "era": "han",
+      "previousDisplayEra": "ming",
+      "mixed": false,
+      "periods": [
+        "han"
+      ],
+      "dynastyZh": "汉",
+      "confidence": "survey-id",
+      "referenceCodes": [
+        "152923353201170106"
+      ]
+    },
+    {
+      "id": "gwa-620623353201170011",
+      "name": "四道沟岭墩(烽火台)",
+      "era": "ming",
+      "previousDisplayEra": "ming",
+      "mixed": true,
+      "periods": [
+        "han",
+        "ming"
+      ],
+      "dynastyZh": "汉、明",
+      "confidence": "survey-id",
+      "referenceCodes": [
+        "620623353201170011"
+      ]
+    },
+    {
+      "id": "gwa-640323352101110006",
+      "name": "刘八庄明长城2段1号敌台",
+      "era": "ming",
+      "previousDisplayEra": "other",
+      "mixed": false,
+      "periods": [
+        "ming"
+      ],
+      "dynastyZh": "明",
+      "confidence": "survey-id",
+      "referenceCodes": [
+        "640323352101110006"
+      ]
+    },
+    {
+      "id": "gwa-640323352101110005",
+      "name": "刘八庄明长城1段敌台",
+      "era": "ming",
+      "previousDisplayEra": "other",
+      "mixed": false,
+      "periods": [
+        "ming"
+      ],
+      "dynastyZh": "明",
+      "confidence": "survey-id",
+      "referenceCodes": [
+        "640323352101110005"
+      ]
+    },
+    {
+      "id": "gwa-652823353201050007",
+      "name": "脱西克烽火台",
+      "era": "other",
+      "previousDisplayEra": "other",
+      "mixed": true,
+      "periods": [
+        "han",
+        "other"
+      ],
+      "dynastyZh": "汉～晋",
+      "confidence": "survey-id",
+      "referenceCodes": [
+        "652823353201050007"
+      ]
+    },
+    {
+      "id": "gwa-150602353102040001",
+      "name": "吴坝塔障城",
+      "era": "han",
+      "previousDisplayEra": "han",
+      "mixed": true,
+      "periods": [
+        "spring-autumn",
+        "han"
+      ],
+      "dynastyZh": "战国秦、汉",
+      "confidence": "survey-id",
+      "referenceCodes": [
+        "150602353102040001"
+      ]
+    },
+    {
+      "id": "gwa-150622353102040003",
+      "name": "榢明沟1号障城",
+      "era": "han",
+      "previousDisplayEra": "han",
+      "mixed": true,
+      "periods": [
+        "spring-autumn",
+        "han"
+      ],
+      "dynastyZh": "战国秦、汉",
+      "confidence": "survey-id",
+      "referenceCodes": [
+        "150622353102040003"
+      ]
+    },
+    {
+      "id": "gwa-150823353102030003",
+      "name": "圐圙补隆1号障城",
+      "era": "qin",
+      "previousDisplayEra": "qin",
+      "mixed": true,
+      "periods": [
+        "qin",
+        "han"
+      ],
+      "dynastyZh": "秦汉",
+      "confidence": "survey-id",
+      "referenceCodes": [
+        "150823353102030003"
+      ]
+    },
+    {
+      "id": "gwa-150823353102030002",
+      "name": "阿尔善1号障城",
+      "era": "qin",
+      "previousDisplayEra": "qin",
+      "mixed": true,
+      "periods": [
+        "qin",
+        "han"
+      ],
+      "dynastyZh": "秦汉",
+      "confidence": "survey-id",
+      "referenceCodes": [
+        "150823353102030002"
+      ]
+    },
+    {
+      "id": "gwa-150823353102030001",
+      "name": "增隆昌1号障城",
+      "era": "qin",
+      "previousDisplayEra": "qin",
+      "mixed": true,
+      "periods": [
+        "qin",
+        "han"
+      ],
+      "dynastyZh": "秦汉",
+      "confidence": "survey-id",
+      "referenceCodes": [
+        "150823353102030001"
+      ]
+    },
+    {
+      "id": "gwa-150824353102030001",
+      "name": "阿拉腾哈少1号障城",
+      "era": "qin",
+      "previousDisplayEra": "qin",
+      "mixed": true,
+      "periods": [
+        "qin",
+        "han"
+      ],
+      "dynastyZh": "秦汉",
+      "confidence": "survey-id",
+      "referenceCodes": [
+        "150824353102030001"
+      ]
+    },
+    {
+      "id": "gwa-640402353102170015",
+      "name": "大营城址",
+      "era": "ming",
+      "previousDisplayEra": "ming",
+      "mixed": true,
+      "periods": [
+        "other",
+        "ming"
+      ],
+      "dynastyZh": "宋、明",
+      "confidence": "survey-id",
+      "referenceCodes": [
+        "640402353102170015"
+      ]
+    }
+  ]
+}

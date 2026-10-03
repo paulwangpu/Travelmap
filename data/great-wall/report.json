@@ -84,22 +84,1303 @@
         "Towers / Jin": 39
       },
       "status": "ok"
+    },
+    {
+      "source": "great-wall-archive",
+      "url": "https://greatwallarchive.com/data/great-wall-heritage-sites.geojson",
+      "license": "CC BY 4.0",
+      "attribution": "Great Wall Archive",
+      "input": 1500,
+      "added": 1494,
+      "merged": 6,
+      "counts": {
+        "types": {
+          "Watchtower": 620,
+          "Beacon Tower": 348,
+          "Bastion": 441,
+          "Pass Gate": 7,
+          "Guard Shelter": 25,
+          "Gate Tower": 2,
+          "Other": 2,
+          "Fortress": 44,
+          "Fortified Pass": 5,
+          "Anti-cavalry": 3,
+          "Border Trench": 3
+        },
+        "dynasties": {
+          "Ming": 838,
+          "Jin": 457,
+          "Han": 88,
+          "Qin": 13,
+          "Song": 1,
+          "Warring States": 86,
+          "Sui": 2,
+          "Tang": 14,
+          "Jin (266–420)": 1
+        }
+      },
+      "mergedRecords": [
+        {
+          "code": "620201353201170020",
+          "existingId": "arcgis-1-74",
+          "existingName": "明代 · 墩台烽燧",
+          "distanceMetres": 17,
+          "reason": "nearby-generic-source-point"
+        },
+        {
+          "code": "150526353102150004",
+          "existingId": "arcgis-0-308",
+          "existingName": "金代 · 堡城",
+          "distanceMetres": 34,
+          "reason": "nearby-generic-source-point"
+        },
+        {
+          "code": "150526353102150002",
+          "existingId": "arcgis-0-310",
+          "existingName": "金代 · 堡城",
+          "distanceMetres": 18,
+          "reason": "nearby-generic-source-point"
+        },
+        {
+          "code": "150722353102150001",
+          "existingId": "arcgis-0-223",
+          "existingName": "金代 · 堡城",
+          "distanceMetres": 11,
+          "reason": "nearby-generic-source-point"
+        },
+        {
+          "code": "640181353102170003",
+          "existingId": "ov-1168160702",
+          "existingName": "红山堡",
+          "distanceMetres": 15,
+          "reason": "same-name-and-type"
+        },
+        {
+          "code": "640323353102170008",
+          "existingId": "ov-382128946",
+          "existingName": "隰宁堡",
+          "distanceMetres": 242,
+          "reason": "same-name-and-type"
+        }
+      ],
+      "nearbyDistinctRecords": [
+        {
+          "code": "110109352101170004",
+          "existingId": "ov-1037320638",
+          "distanceMetres": 28,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110109352101170003",
+          "existingId": "ov-1037320638",
+          "distanceMetres": 60,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352103170251",
+          "existingId": "ov-835144655",
+          "distanceMetres": 49,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352103170235",
+          "existingId": "ov-945951996",
+          "distanceMetres": 24,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352101170211",
+          "existingId": "ov-925589561",
+          "distanceMetres": 16,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352101170205",
+          "existingId": "ov-54093453",
+          "distanceMetres": 2,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352101170199",
+          "existingId": "ov-1093185962",
+          "distanceMetres": 57,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352101170198",
+          "existingId": "ov-1093185962",
+          "distanceMetres": 90,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352101170195",
+          "existingId": "ov-1925697599",
+          "distanceMetres": 49,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352101170169",
+          "existingId": "ov-1764420890",
+          "distanceMetres": 15,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352101170165",
+          "existingId": "ov-1799687795",
+          "distanceMetres": 87,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352101170159",
+          "existingId": "ov-320100220",
+          "distanceMetres": 28,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352101170158",
+          "existingId": "ov-1689792051",
+          "distanceMetres": 26,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352101170157",
+          "existingId": "ov-142599234",
+          "distanceMetres": 21,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352101170155",
+          "existingId": "ov-1638958676",
+          "distanceMetres": 50,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352101170154",
+          "existingId": "ov-1409901341",
+          "distanceMetres": 3,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352101170149",
+          "existingId": "ov-529547746",
+          "distanceMetres": 63,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352101170148",
+          "existingId": "ov-726013797",
+          "distanceMetres": 25,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352101170147",
+          "existingId": "ov-669466401",
+          "distanceMetres": 11,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352101170129",
+          "existingId": "ov-523072922",
+          "distanceMetres": 11,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352101170128",
+          "existingId": "ov-1033945966",
+          "distanceMetres": 27,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352101170127",
+          "existingId": "ov-1846249989",
+          "distanceMetres": 1,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352101170126",
+          "existingId": "ov-1416941856",
+          "distanceMetres": 23,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352101170123",
+          "existingId": "ov-1538722782",
+          "distanceMetres": 12,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352101170122",
+          "existingId": "ov-1093529496",
+          "distanceMetres": 20,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352101170040",
+          "existingId": "ov-998885255",
+          "distanceMetres": 87,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352101170008",
+          "existingId": "ov-2029237888",
+          "distanceMetres": 80,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116352101170005",
+          "existingId": "ov-355956874",
+          "distanceMetres": 15,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110117352101170121",
+          "existingId": "ov-65782239",
+          "distanceMetres": 14,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110117352101170117",
+          "existingId": "ov-1207742291",
+          "distanceMetres": 11,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110117352101170115",
+          "existingId": "ov-196878101",
+          "distanceMetres": 26,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110117352101170108",
+          "existingId": "ov-681909692",
+          "distanceMetres": 23,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110117352101170107",
+          "existingId": "ov-912022081",
+          "distanceMetres": 27,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110117352101170106",
+          "existingId": "ov-1448813102",
+          "distanceMetres": 20,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110117352101170105",
+          "existingId": "ov-557452506",
+          "distanceMetres": 34,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110117352101170096",
+          "existingId": "ov-1998703995",
+          "distanceMetres": 64,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110117352101170080",
+          "existingId": "ov-866599110",
+          "distanceMetres": 3,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110117352101170072",
+          "existingId": "ov-467620993",
+          "distanceMetres": 17,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110117352101170070",
+          "existingId": "ov-913070719",
+          "distanceMetres": 25,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110117352101170067",
+          "existingId": "ov-612645362",
+          "distanceMetres": 13,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110117352101170059",
+          "existingId": "ov-1224888182",
+          "distanceMetres": 13,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110117352101170056",
+          "existingId": "ov-852709892",
+          "distanceMetres": 12,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110117352101170045",
+          "existingId": "ov-1866161329",
+          "distanceMetres": 70,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110117352101170041",
+          "existingId": "ov-422974798",
+          "distanceMetres": 42,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110117352102170035",
+          "existingId": "ov-449037817",
+          "distanceMetres": 3,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110117352101170033",
+          "existingId": "ov-1902510918",
+          "distanceMetres": 8,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110117352101170030",
+          "existingId": "ov-360975757",
+          "distanceMetres": 23,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110117352101170022",
+          "existingId": "ov-2143623976",
+          "distanceMetres": 9,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352105170594",
+          "existingId": "greatwall-station-point-773",
+          "distanceMetres": 15,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352103170309",
+          "existingId": "ov-461409920",
+          "distanceMetres": 29,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352103170205",
+          "existingId": "ov-517629907",
+          "distanceMetres": 37,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352103170179",
+          "existingId": "ov-1195527648",
+          "distanceMetres": 26,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170630",
+          "existingId": "greatwall-station-point-772",
+          "distanceMetres": 29,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170628",
+          "existingId": "ov-689453463",
+          "distanceMetres": 26,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170621",
+          "existingId": "ov-2064096406",
+          "distanceMetres": 47,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170593",
+          "existingId": "greatwall-station-point-773",
+          "distanceMetres": 15,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170324",
+          "existingId": "ov-726451847",
+          "distanceMetres": 10,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170323",
+          "existingId": "ov-434094440",
+          "distanceMetres": 3,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170322",
+          "existingId": "ov-67328836",
+          "distanceMetres": 9,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170321",
+          "existingId": "ov-356206913",
+          "distanceMetres": 30,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170320",
+          "existingId": "ov-529634149",
+          "distanceMetres": 18,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170319",
+          "existingId": "ov-658068265",
+          "distanceMetres": 17,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170316",
+          "existingId": "ov-1951866352",
+          "distanceMetres": 21,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170314",
+          "existingId": "ov-77809710",
+          "distanceMetres": 18,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170313",
+          "existingId": "ov-1277530322",
+          "distanceMetres": 14,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170312",
+          "existingId": "ov-1539820366",
+          "distanceMetres": 16,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170311",
+          "existingId": "ov-958558210",
+          "distanceMetres": 10,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170308",
+          "existingId": "ov-1114711559",
+          "distanceMetres": 10,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170305",
+          "existingId": "ov-1083866262",
+          "distanceMetres": 9,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170304",
+          "existingId": "ov-979921431",
+          "distanceMetres": 9,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170302",
+          "existingId": "ov-1261800999",
+          "distanceMetres": 3,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170299",
+          "existingId": "ov-1285966783",
+          "distanceMetres": 14,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170298",
+          "existingId": "ov-1712766117",
+          "distanceMetres": 13,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170297",
+          "existingId": "ov-721392777",
+          "distanceMetres": 13,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170296",
+          "existingId": "ov-876599118",
+          "distanceMetres": 40,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170295",
+          "existingId": "ov-1680470405",
+          "distanceMetres": 47,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170294",
+          "existingId": "ov-1367145808",
+          "distanceMetres": 30,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170233",
+          "existingId": "ov-768045628",
+          "distanceMetres": 59,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170051",
+          "existingId": "ov-52718554",
+          "distanceMetres": 40,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228352101170018",
+          "existingId": "ov-1172468797",
+          "distanceMetres": 23,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110229353201170559",
+          "existingId": "ov-1335551749",
+          "distanceMetres": 49,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110229352101170233",
+          "existingId": "arcgis-0-626",
+          "distanceMetres": 9,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110229352101170228",
+          "existingId": "ov-312945348",
+          "distanceMetres": 76,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110229352101170105",
+          "existingId": "ov-117009907",
+          "distanceMetres": 47,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110229352101170104",
+          "existingId": "ov-117009907",
+          "distanceMetres": 44,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110229352101170103",
+          "existingId": "ov-191425246",
+          "distanceMetres": 39,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110229352101170082",
+          "existingId": "ov-2002768492",
+          "distanceMetres": 91,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110229352101170071",
+          "existingId": "ov-1881504702",
+          "distanceMetres": 74,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110229352101170069",
+          "existingId": "ov-1332004590",
+          "distanceMetres": 60,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110229352101170039",
+          "existingId": "ov-2132179601",
+          "distanceMetres": 48,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110229352101170038",
+          "existingId": "ov-1367983094",
+          "distanceMetres": 36,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110229352101170037",
+          "existingId": "ov-144047370",
+          "distanceMetres": 39,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110229352101170036",
+          "existingId": "ov-105713337",
+          "distanceMetres": 32,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110229352101170035",
+          "existingId": "ov-382905341",
+          "distanceMetres": 25,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110229352101170034",
+          "existingId": "ov-1166841591",
+          "distanceMetres": 13,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110229352101170033",
+          "existingId": "ov-1166841591",
+          "distanceMetres": 42,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110229352101170032",
+          "existingId": "ov-620814131",
+          "distanceMetres": 41,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110229352101170031",
+          "existingId": "ov-1101721935",
+          "distanceMetres": 42,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130323353201170256",
+          "existingId": "ov-2075656848",
+          "distanceMetres": 8,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130323352102170198",
+          "existingId": "ov-741215757",
+          "distanceMetres": 3,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130303352102170081",
+          "existingId": "ov-1796259517",
+          "distanceMetres": 17,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130303352102170080",
+          "existingId": "ov-555008967",
+          "distanceMetres": 8,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130303352102170035",
+          "existingId": "ov-35015896",
+          "distanceMetres": 74,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130303352102170004",
+          "existingId": "ov-299649223",
+          "distanceMetres": 14,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130303352101170046",
+          "existingId": "ov-1067307021",
+          "distanceMetres": 22,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130303352101170045",
+          "existingId": "ov-1107489852",
+          "distanceMetres": 22,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130303352101170044",
+          "existingId": "ov-429908067",
+          "distanceMetres": 15,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130303352101170042",
+          "existingId": "ov-1288339240",
+          "distanceMetres": 31,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130303352104170002",
+          "existingId": "ov-133584068",
+          "distanceMetres": 7,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130303352101170001",
+          "existingId": "ov-752625313",
+          "distanceMetres": 7,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130630352101170030",
+          "existingId": "ov-1543737891",
+          "distanceMetres": 19,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130630352101170027",
+          "existingId": "ov-1914209989",
+          "distanceMetres": 19,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130630352101170026",
+          "existingId": "ov-184307440",
+          "distanceMetres": 18,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130630352101170022",
+          "existingId": "ov-1622631259",
+          "distanceMetres": 22,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130630352101170020",
+          "existingId": "ov-98337363",
+          "distanceMetres": 70,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130630352101170019",
+          "existingId": "ov-2099332026",
+          "distanceMetres": 17,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130630352101170017",
+          "existingId": "ov-401551909",
+          "distanceMetres": 8,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130630352101170016",
+          "existingId": "ov-76442972",
+          "distanceMetres": 15,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130630352101170015",
+          "existingId": "ov-1037695190",
+          "distanceMetres": 22,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130630352101170014",
+          "existingId": "ov-518959530",
+          "distanceMetres": 20,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130630352101170013",
+          "existingId": "ov-1946410438",
+          "distanceMetres": 4,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130630352101170008",
+          "existingId": "ov-1246414939",
+          "distanceMetres": 42,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130630352101170007",
+          "existingId": "ov-1228993792",
+          "distanceMetres": 3,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130630352101170002",
+          "existingId": "ov-1070624664",
+          "distanceMetres": 55,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130824352199170046",
+          "existingId": "ov-1312727440",
+          "distanceMetres": 40,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130824352101170030",
+          "existingId": "ov-692471803",
+          "distanceMetres": 28,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130824352101170029",
+          "existingId": "ov-899946098",
+          "distanceMetres": 26,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130824352101170028",
+          "existingId": "ov-2074129630",
+          "distanceMetres": 35,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130824352101170027",
+          "existingId": "ov-534275981",
+          "distanceMetres": 30,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130824352101170017",
+          "existingId": "ov-1340272070",
+          "distanceMetres": 17,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130824352101170016",
+          "existingId": "ov-436583357",
+          "distanceMetres": 18,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130824352101170015",
+          "existingId": "ov-1918958327",
+          "distanceMetres": 24,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130824352101170014",
+          "existingId": "ov-1891866421",
+          "distanceMetres": 16,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130824352101170013",
+          "existingId": "ov-404274466",
+          "distanceMetres": 10,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "140623353201170218",
+          "existingId": "arcgis-0-512",
+          "distanceMetres": 23,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "150124353201170562",
+          "existingId": "arcgis-0-469",
+          "distanceMetres": 48,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "150124353201170560",
+          "existingId": "arcgis-0-468",
+          "distanceMetres": 32,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "150124353201170559",
+          "existingId": "arcgis-0-466",
+          "distanceMetres": 32,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "150124353201170556",
+          "existingId": "arcgis-0-465",
+          "distanceMetres": 35,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "150124352101170464",
+          "existingId": "arcgis-0-618",
+          "distanceMetres": 67,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "150124352101170463",
+          "existingId": "arcgis-0-618",
+          "distanceMetres": 92,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "150124352101170167",
+          "existingId": "ov-1397279505",
+          "distanceMetres": 78,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "150929352102150373",
+          "existingId": "arcgis-0-204",
+          "distanceMetres": 43,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "150929352102150350",
+          "existingId": "arcgis-0-207",
+          "distanceMetres": 60,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "150929352102150342",
+          "existingId": "arcgis-0-205",
+          "distanceMetres": 65,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "150929352102150333",
+          "existingId": "arcgis-0-194",
+          "distanceMetres": 58,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "150929352102150326",
+          "existingId": "arcgis-0-235",
+          "distanceMetres": 42,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "150929352102150289",
+          "existingId": "arcgis-0-241",
+          "distanceMetres": 56,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "230225352102150598",
+          "existingId": "arcgis-0-224",
+          "distanceMetres": 94,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "230225352102150597",
+          "existingId": "arcgis-0-224",
+          "distanceMetres": 79,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620201352101170019",
+          "existingId": "arcgis-1-71",
+          "distanceMetres": 20,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620201352101170018",
+          "existingId": "arcgis-1-72",
+          "distanceMetres": 18,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620201352101170016",
+          "existingId": "arcgis-1-80",
+          "distanceMetres": 42,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620201352101170013",
+          "existingId": "ov-721241153",
+          "distanceMetres": 27,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620201352101170010",
+          "existingId": "ov-292801657",
+          "distanceMetres": 17,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620201352101170009",
+          "existingId": "ov-1277416227",
+          "distanceMetres": 9,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620201352101170008",
+          "existingId": "ov-1623893967",
+          "distanceMetres": 15,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620201352101170007",
+          "existingId": "ov-992203668",
+          "distanceMetres": 14,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620201352101170006",
+          "existingId": "ov-1419805849",
+          "distanceMetres": 15,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620201352101170005",
+          "existingId": "ov-12334182",
+          "distanceMetres": 16,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620201352101170004",
+          "existingId": "ov-2047924200",
+          "distanceMetres": 22,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620201352101170001",
+          "existingId": "ov-266390084",
+          "distanceMetres": 7,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620602352101170013",
+          "existingId": "arcgis-1-85",
+          "distanceMetres": 9,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620725352101170043",
+          "existingId": "ov-1761600735",
+          "distanceMetres": 24,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620902352101170010",
+          "existingId": "ov-1815111210",
+          "distanceMetres": 27,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620902352101170001",
+          "existingId": "ov-1930262680",
+          "distanceMetres": 15,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620921352101170006",
+          "existingId": "ov-1169194510",
+          "distanceMetres": 17,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620921353201170003",
+          "existingId": "ov-1940979551",
+          "distanceMetres": 33,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620921353201170001",
+          "existingId": "ov-2056265814",
+          "distanceMetres": 81,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620982353201040092",
+          "existingId": "ov-902165070",
+          "distanceMetres": 27,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620982353201040075",
+          "existingId": "greatwall-station-point-1638",
+          "distanceMetres": 31,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620982353201040068",
+          "existingId": "ov-1639273127",
+          "distanceMetres": 3,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620982353201040061",
+          "existingId": "ov-1084915024",
+          "distanceMetres": 33,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620982353201040055",
+          "existingId": "ov-97742921",
+          "distanceMetres": 27,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620982353201040054",
+          "existingId": "ov-498280335",
+          "distanceMetres": 8,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620982353201040014",
+          "existingId": "ov-885387494",
+          "distanceMetres": 15,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620982353201040005",
+          "existingId": "ov-638319329",
+          "distanceMetres": 17,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620982353201040004",
+          "existingId": "ov-1848806011",
+          "distanceMetres": 26,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620982353201040002",
+          "existingId": "ov-577074510",
+          "distanceMetres": 15,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "640402352101020047",
+          "existingId": "arcgis-0-8",
+          "distanceMetres": 84,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110116353102170003",
+          "existingId": "ov-482314631",
+          "distanceMetres": 9,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228353102170057",
+          "existingId": "ov-776156243",
+          "distanceMetres": 31,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228353102170040",
+          "existingId": "ov-1442961770",
+          "distanceMetres": 67,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228353102170025",
+          "existingId": "ov-128236344",
+          "distanceMetres": 19,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228353102170012",
+          "existingId": "ov-1773164738",
+          "distanceMetres": 96,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110228353102170011",
+          "existingId": "ov-316361390",
+          "distanceMetres": 83,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "110229353102170040",
+          "existingId": "ov-898594589",
+          "distanceMetres": 47,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "130303353102170001",
+          "existingId": "ov-698806466",
+          "distanceMetres": 15,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "140623353102170020",
+          "existingId": "ov-226994233",
+          "distanceMetres": 80,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "140623353102170016",
+          "existingId": "ov-1677833349",
+          "distanceMetres": 33,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "150784353101150005",
+          "existingId": "arcgis-0-134",
+          "distanceMetres": 17,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "150823353102030003",
+          "existingId": "arcgis-0-397",
+          "distanceMetres": 19,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "150823353102030001",
+          "existingId": "arcgis-0-394",
+          "distanceMetres": 16,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620201353102170007",
+          "existingId": "ov-1519951668",
+          "distanceMetres": 6,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620201353101170003",
+          "existingId": "greatwall-station-point-1636",
+          "distanceMetres": 23,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620921353102040014",
+          "existingId": "arcgis-0-116",
+          "distanceMetres": 52,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "620982353101040002",
+          "existingId": "greatwall-station-point-1639",
+          "distanceMetres": 7,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "640181353102170005",
+          "existingId": "ov-1531199217",
+          "distanceMetres": 34,
+          "reason": "distinct-survey-record-retained"
+        },
+        {
+          "code": "640323353102170013",
+          "existingId": "ov-102994645",
+          "distanceMetres": 38,
+          "reason": "distinct-survey-record-retained"
+        }
+      ],
+      "status": "ok"
     }
   ],
   "categories": {
     "museum": 10,
-    "landmark": 145,
-    "pass": 406,
+    "landmark": 147,
+    "pass": 418,
     "city": 43,
-    "fortress": 1265,
+    "fortress": 1304,
     "wall": 1450,
     "town": 113,
     "guard": 115,
-    "tower": 555,
-    "beacon": 360,
-    "lost": 19
+    "tower": 1175,
+    "beacon": 707,
+    "lost": 19,
+    "bastion": 441,
+    "shelter": 25,
+    "gateTower": 2,
+    "relic": 3,
+    "trench": 3
   },
-  "total": 4481,
+  "total": 5975,
   "builtAt": "2026-10-02T15:30:28.844Z",
   "proximityMetres": 100,
   "classificationUpdatedAt": "2026-10-02T16:10:29.956Z"

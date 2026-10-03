@@ -1,0 +1,15 @@
+{
+  "reviewedAt": "2026-10-02",
+  "confirmed": [
+    {"id":"greatwall-station-point-1639","name":"玉门关","dynasty":"han","dynastyZh":"汉代","dynastyEn":"Han","note":"交互图玉门关遗址弹窗标汉；公开记录620982353101040002与此点相距约7米。不是根据附近点位推断。","noteEn":"Matched Han Yumen Pass record; not inferred from nearby features.","url":"https://greatwallarchive.com/map#11/40.35345/93.86398"},
+    {"id":"greatwall-station-1538-0","name":"大方盘城","dynasty":"han","dynastyZh":"汉代（沿用至魏晋）","dynastyEn":"Han (used through Wei–Jin)","note":"同址河仓城遗址交互弹窗标汉；敦煌市博物馆确认西汉始建。仅更正此城址轮廓，不外推附近墙体。","noteEn":"Same-site Hecang City is Han; used through Wei–Jin. Applies only to this outline.","url":"https://greatwallarchive.com/map#11/40.4091/93.9687","supportUrl":"https://www.dhbwg.org.cn/yichanyanjiu/137"},
+    {"id":"greatwall-station-point-1638","name":"阳关","dynasty":"han","dynastyZh":"汉代（后世沿用）","dynastyEn":"Han (later reuse)","note":"本地汉长城阳关点与补充点相距约62米；阳关博物馆确认属汉代两关。此次未成功命中交互图对应弹窗，依据博物馆资料更正，不声称已核实地图记录。","noteEn":"Han attribution corroborated by Yangguan Museum; later reuse. Map popup not verified.","url":"https://dhygbwg.com/tyww.html"}
+  ],
+  "pending": [
+    {"id":"greatwall-station-1539-0","name":"破城子","reason":"同址旧数据位于汉长城目录，但目录不等于遗存年代；待明确记录或考古资料。"},
+    {"id":"greatwall-station-1543-0","name":"寿昌城","reason":"涉及汉晋唐时期沿用；不能仅按汉长城目录把现存轮廓定为汉代。"},
+    {"id":"greatwall-station-1544-0","name":"冥安县城","reason":"同名同址补充线误用统一明代配色的风险；缺少本次交互图独立定年证据。"},
+    {"id":"greatwall-station-1585-0","name":"六工城","reason":"与汉长城目录六工城吻合，但需独立核对城址年代。"},
+    {"id":"ov-305192898","name":"骟马城","reason":"本次汉、明筛选均未命中对应弹窗；地图缺记录不能作为改年代依据。"}
+  ]
+}

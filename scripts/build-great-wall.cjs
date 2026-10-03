@@ -119,7 +119,7 @@ async function main() {
   for (const f of features) report.categories[f.properties.category] = (report.categories[f.properties.category] || 0) + 1;
   report.total = features.length; report.builtAt = new Date().toISOString(); report.proximityMetres = 100;
   fs.mkdirSync(path.join(__dirname, '../data/great-wall'), { recursive: true });
-  fs.writeFileSync(path.join(__dirname, '../data/great-wall/features.geojson'), JSON.stringify({ type: 'FeatureCollection', features }));
+  fs.writeFileSync(path.join(__dirname, '../data/great-wall/features.geojson'), JSON.stringify(require('./apply-great-wall-dynasties.cjs').apply({ type: 'FeatureCollection', features })));
   fs.writeFileSync(path.join(__dirname, '../data/great-wall/report.json'), JSON.stringify(report, null, 2));
   console.log(JSON.stringify(report, null, 2));
 }

@@ -1,0 +1,7 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const {apply,review}=require('../scripts/apply-great-wall-dynasties.cjs');
+const d=JSON.parse(fs.readFileSync(require.resolve('../data/great-wall/features.geojson'))),s=fs.readFileSync(require.resolve('../great-wall.js'),'utf8'),c={};vm.createContext(c);vm.runInContext(s.match(/const eras=[^\n]+/)[0]+s.match(/const colors =[^\n]+/)[0]+s.slice(s.indexOf('function detailEra('),s.indexOf('function filtered(')),c);
+assert.equal(review.confirmed.length,3);for(const r of review.confirmed){const f=d.features.find(f=>f.id===r.id);assert.equal(c.detailEra(f.properties),'han');assert.equal(c.detailColor(f.properties),'#1565c0');assert.equal(f.properties.datingCorrection.url,r.url);}
+assert.deepEqual(apply(d),d);for(const r of review.pending){const f=d.features.find(f=>f.id===r.id);assert.ok(f);assert.ok(!f.properties.datingCorrection);}
+const mock={type:'FeatureCollection',features:review.confirmed.map(r=>({id:r.id,properties:{name:r.name,originalPath:'unchanged'},geometry:{type:'Point',coordinates:[98,40]}}))};const corrected=apply(mock);corrected.features.forEach((f,i)=>{assert.deepEqual(f.geometry,mock.features[i].geometry);assert.equal(f.properties.originalPath,'unchanged');});
+assert.match(s,/typeof p.datingCorrection==='string'/);console.log('PASS: three evidence-backed Han corrections, pending sites unchanged, repeat build and original geometry preserved');

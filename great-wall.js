@@ -1,6 +1,6 @@
 (function(root) {
-  const categories = { wall:['墙体','Wall'],lost:['消失走势','Lost / approximate'],pass:['关口','Pass'],fortress:['军堡','Fortress'],town:['营城','Garrison town'],guard:['卫所','Guard post'],city:['古城','Historic city'],tower:['敌楼','Watchtower'],beacon:['墩台烽燧','Beacon'],museum:['博物馆','Museum'],landmark:['其他地标','Landmark'],unknown:['未分类','Unclassified'] };
-  const colors = {wall:'#8e4829',lost:'#a97650',pass:'#ab342d',fortress:'#776041',town:'#776041',guard:'#776041',city:'#776041',tower:'#ab342d',beacon:'#b57921',museum:'#536e88',landmark:'#637b65',unknown:'#747474'};
+  const categories = { wall:['墙体','Wall'],lost:['消失走势','Lost / approximate'],pass:['关口','Pass'],fortress:['军堡','Fortress'],town:['营城','Garrison town'],guard:['卫所','Guard post'],city:['古城','Historic city'],tower:['敌楼','Watchtower'],beacon:['墩台烽燧','Beacon'],bastion:['马面','Bastion'],shelter:['铺房','Guard shelter'],gateTower:['城楼','Gate tower'],trench:['界壕壕堑','Trench'],relic:['相关遗存','Relic'],museum:['博物馆','Museum'],landmark:['其他地标','Landmark'],unknown:['未分类','Unclassified'] };
+  const colors = {wall:'#8e4829',lost:'#a97650',pass:'#ab342d',fortress:'#776041',town:'#776041',guard:'#776041',city:'#776041',tower:'#ab342d',beacon:'#b57921',bastion:'#776041',shelter:'#776041',gateTower:'#ab342d',trench:'#8e4829',relic:'#637b65',museum:'#536e88',landmark:'#637b65',unknown:'#747474'};
   // One icon definition shared by MapLibre, Leaflet and the legend.
   const iconPaths = {
     wall:'M4 19V7H7V10H10V7H14V10H17V7H20V19Z M4 15H20 M10 10V15 M14 15V19',
@@ -12,6 +12,11 @@
     city:'M3 20V11H7V7H10V11H14V4H18V11H21V20Z M7 15H8 M11 15H12 M16 14H18 M16 17H18',
     tower:'M7 20L9 8H15L17 20Z M6 8V4H9V6H11V4H13V6H15V4H18V8Z M11 12H13 M11 16H13',
     beacon:'M6 21L8 13H16L18 21Z M12 12C5 9 12 7 10 3C18 7 18 10 12 12Z',
+    bastion:'M3 20V10H8V5H16V10H21V20Z M8 10V20 M16 10V20',
+    shelter:'M4 20V10L12 4L20 10V20Z M9 20V13H15V20',
+    gateTower:'M3 20V12H21V20H15V16H9V20 M5 12V6H19V12 M3 6L12 2L21 6',
+    trench:'M3 8L7 18H17L21 8 M3 5H7 M17 5H21',
+    relic:'M3 20L6 12H10L14 7H19L21 20Z M7 16H10 M14 13H17',
     museum:'M3 9L12 3L21 9Z M5 11V18 M10 11V18 M14 11V18 M19 11V18 M3 21H21 M4 18H20',
     landmark:'M12 21C10 18 5 13 5 9A7 7 0 0 1 19 9C19 13 14 18 12 21Z M10 9A2 2 0 1 0 14 9A2 2 0 1 0 10 9',
     unknown:'M12 3L21 12L12 21L3 12Z M10 9C10 6 15 6 15 9C15 11 12 11 12 14 M12 17H12.1'
@@ -19,11 +24,11 @@
   function iconSvg(key, color = colors[key] || colors.unknown) { return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="${iconPaths[key] || iconPaths.unknown}" fill="white" stroke="${color}" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>`; }
   function legendSymbol(key) {return key==='wall'||key==='lost'?`<i class="wall-line${key==='lost'?' approximate':''}" style="border-color:${eras.ming[2]}" aria-hidden="true"></i>`:iconSvg(key,eras.ming[2]);}
   function installIcons(map) {
-    for(const key of Object.keys(categories)) for(const era of ['',...Object.keys(eras)]) {
+    for(const key of Object.keys(categories)) for(const era of ['',...Object.keys(eras),'other']) {
       const id='great-wall-icon-'+key+(era?'-'+era:'');if(map.hasImage(id))continue;
       const canvas=document.createElement('canvas');canvas.width=canvas.height=48;
       const ctx=canvas.getContext('2d');ctx.scale(2,2);const path=new Path2D(iconPaths[key]);
-      ctx.fillStyle='white';ctx.strokeStyle=eras[era]?.[2]||colors[key];ctx.lineWidth=1.7;ctx.lineCap=ctx.lineJoin='round';
+      ctx.fillStyle='white';ctx.strokeStyle=era==='other'?'#5b6470':(eras[era]?.[2]||colors[key]);ctx.lineWidth=1.7;ctx.lineCap=ctx.lineJoin='round';
       ctx.fill(path);ctx.stroke(path);map.addImage(id,ctx.getImageData(0,0,48,48),{pixelRatio:2});
     }
   }
@@ -34,23 +39,35 @@
   const en = () => config.language() === 'en';
   const label = key => categories[key]?.[en()?1:0] || key;
   function detailEra(p) {
+    const dating=typeof p.datingCorrection==='string'?JSON.parse(p.datingCorrection):p.datingCorrection;
+    if(dating?.era)return dating.era;
+    // Survey codes outrank cached display groups and legacy folder names.
+    if(p.source==='great-wall-archive') {
+      const raw=typeof p.rawFields==='string'?JSON.parse(p.rawFields):p.rawFields;
+      const code=String(raw?.dynasty_code||'').padStart(2,'0');
+      const coded={'01':'spring-autumn','02':'spring-autumn','03':'qin','04':'han','05':'other','06':'northern-wei','07':'northern-wei','08':'northern-wei','09':'northern-wei','10':'northern-wei','11':'other','12':'other','13':'other','14':'liao-jin','15':'liao-jin','16':'other','17':'ming','18':'other','19':'other'};
+      if(coded[code])return coded[code];
+    }
+    if(p.source==='great-wall-archive')return p.dynasty||'other';
     if(eras[p.dynasty])return p.dynasty;
     if(p.source==='arcgis-hammond')return ({1:'qin',2:'han',3:'han',4:'liao-jin',5:'liao-jin',6:'ming'})[p.dynastyCode]||'ming';
     if(p.source==='greatwall-station')return 'ming';
     const text=(p.originalPath||'')+' '+(p.name||'');
+    if(/唐代|唐朝|隋代|隋朝|宋代|宋朝|晋代|晋朝/.test(p.name||''))return 'other';
     if(/汉长城|汉代|汉朝/.test(text))return 'han';
     if(/明长城|明代|明朝/.test(text))return 'ming';
     if(/辽金|辽代|辽朝|金代|金朝/.test(text))return 'liao-jin';
-    if(/北魏|北齐/.test(text))return 'northern-wei';
+    if(/北魏|东魏|西魏|北齐|北周/.test(text))return 'northern-wei';
+    if(/唐代|唐朝|隋代|隋朝|宋代|宋朝|晋代|晋朝/.test(text))return 'other';
     if(/秦长城|秦代|秦朝/.test(text))return 'qin';
     if(/春秋|战国/.test(text))return 'spring-autumn';
     return 'ming';
   }
-  function detailColor(p) {return eras[detailEra(p)]?.[2]||colors[p.category]||colors.unknown;}
+  function detailColor(p) {const era=detailEra(p);return era==='other'?'#5b6470':(eras[era]?.[2]||colors[p.category]||colors.unknown);}
   function filtered() { const hidden = config.state().mapOverlays?.greatWallCategories || {}; return {type:'FeatureCollection',features:(data?.features||[]).filter(f=>hidden[f.properties.category] !== false).map(f=>({...f,properties:{...f.properties,displayColor:detailColor(f.properties),iconKey:f.properties.category+(detailEra(f.properties)?'-'+detailEra(f.properties):'')}}))}; }
   async function load() {
     if (data) return data;
-    if (!pending) pending = fetch('./data/great-wall/features.geojson?v=20261002e').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).then(d=>data=d).finally(()=>pending=null);
+    if (!pending) pending = fetch('./data/great-wall/features.geojson?v=20261002h').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).then(d=>data=d).finally(()=>pending=null);
     return pending;
   }
   async function loadView() {
@@ -62,16 +79,27 @@
   }
   function historyFeatures() {return {type:'FeatureCollection',features:config.state().mapOverlays?.greatWallHistory?(historyData?.features||[]).filter(f=>config.state().mapOverlays?.greatWallHistoryEras?.[f.properties.dynasty]!==false):[]};}
   function html(f, full) {
+    if(f.properties.source==='great-wall-archive') {
+      const p=f.properties;return `<div class="great-wall-info"><strong>${esc(en()?p.nameEn:p.name)}</strong><small>${esc(en()?p.dynastyEn:p.dynastyZh)} · ${esc(label(p.category))}</small>${full?datingDetails(p)+archiveDetails(p):''}</div>`;
+    }
     if(f.properties.source==='arcgis-hammond') {
-      const p=f.properties;return `<div class="great-wall-info"><strong>${esc(en()?p.nameEn:p.name)}</strong><small>${esc(en()?p.dynastyEn:p.dynastyZh)} · ${en()?'Source candidate, unverified':'来源候选，未核实'}</small>${full?`<dl><dt>${en()?'Source':'来源'}</dt><dd>ArcGIS · Tom Hammond / Yuanyuan Zhang</dd><dt>${en()?'Type':'类型'}</dt><dd>${esc(label(p.category))}</dd><dt>${en()?'Original dynasty':'原始朝代'}</dt><dd>${esc(p.originalDynastyName)}</dd><dt>${en()?'Original name':'原名称'}</dt><dd>${esc(p.originalName)}</dd><dt>${en()?'Original folder':'原目录'}</dt><dd>${esc(p.originalPath)}</dd>${Object.entries(typeof p.rawFields==='string'?JSON.parse(p.rawFields):p.rawFields||{}).map(([k,v])=>`<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>`:''}</div>`;
+      const p=f.properties;return `<div class="great-wall-info"><strong>${esc(en()?p.nameEn:p.name)}</strong><small>${esc(en()?p.dynastyEn:p.dynastyZh)} · ${en()?'Source candidate, unverified':'来源候选，未核实'}</small>${full?`<dl><dt>${en()?'Source':'来源'}</dt><dd>ArcGIS · Tom Hammond / Yuanyuan Zhang</dd><dt>${en()?'Type':'类型'}</dt><dd>${esc(label(p.category))}</dd><dt>${en()?'Original dynasty':'原始朝代'}</dt><dd>${esc(p.originalDynastyName)}</dd><dt>${en()?'Original name':'原名称'}</dt><dd>${esc(p.originalName)}</dd><dt>${en()?'Original folder':'原目录'}</dt><dd>${esc(p.originalPath)}</dd>${Object.entries(typeof p.rawFields==='string'?JSON.parse(p.rawFields):p.rawFields||{}).map(([k,v])=>`<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>`:''}${full?archiveDetails(p):''}</div>`;
     }
     if(f.properties.source==='wikipedia-kmz') {
       const p=f.properties;return `<div class="great-wall-info"><strong>${esc(en()?p.nameEn:p.name)}</strong><small>${esc(en()?p.dynastyEn:p.dynastyZh)} · ${en()?'Approximate route':'概略线路'}</small>${full?`<dl><dt>${en()?'Source':'来源'}</dt><dd>${en()?'User-provided Wikipedia KMZ':'用户提供的 Wikipedia KMZ'}</dd><dt>${en()?'Original name':'原名称'}</dt><dd>${esc(p.originalName)}</dd><dt>${en()?'Original folder':'原目录'}</dt><dd>${esc(p.originalPath)}</dd><dt>ID</dt><dd>${esc(p.originalId)}</dd>${p.comment?`<dt>${en()?'Note':'备注'}</dt><dd>${esc(p.comment)}</dd>`:''}</dl>`:''}</div>`;
     }
     const p = f.properties, source = p.source==='ovital' ? (en()?'Local original data':'本地原始数据') : p.source==='greatwall-station'?(en()?'Great Wall Station original collection':'长城小站原版专栏'):(en()?'Public GeoJSON collection':'公开 GeoJSON');
-    return `<div class="great-wall-info"><strong>${esc(p.name)}</strong><small>${esc(label(p.category))}${p.approximate?' · '+(en()?'Approximate':'概略／消失段'):''}</small>${full?`<dl><dt>${en()?'Source':'来源'}</dt><dd>${esc(source)}</dd>${p.comment?`<dt>${en()?'Note':'备注'}</dt><dd>${esc(p.comment)}</dd>`:''}${p.originalPath?`<dt>${en()?'Original folder':'原目录'}</dt><dd>${esc(p.originalPath)}</dd>`:''}<dt>ID</dt><dd>${esc(p.originalId)}</dd></dl>`:''}</div>`;
+    return `<div class="great-wall-info"><strong>${esc(p.name)}</strong><small>${esc(label(p.category))}${p.datingCorrection?' · '+esc(en()?p.dynastyEn:p.dynastyZh):''}${p.approximate?' · '+(en()?'Approximate':'概略／消失段'):''}</small>${full?`<dl><dt>${en()?'Source':'来源'}</dt><dd>${esc(source)}</dd>${p.comment?`<dt>${en()?'Note':'备注'}</dt><dd>${esc(p.comment)}</dd>`:''}${p.originalPath?`<dt>${en()?'Original folder':'原目录'}</dt><dd>${esc(p.originalPath)}</dd>`:''}<dt>ID</dt><dd>${esc(p.originalId)}</dd></dl>`:''}${full?datingDetails(p)+archiveDetails(p):''}</div>`;
+  }
+  function datingDetails(p) {
+    const r=typeof p.datingCorrection==='string'?JSON.parse(p.datingCorrection):p.datingCorrection;if(!r)return '';
+    return `<small>${en()?'Dating correction':'年代更正'} · ${esc(en()?p.dynastyEn:p.dynastyZh)}</small><p>${esc(en()?r.noteEn:r.note)}</p><small><a href="${esc(r.url)}" target="_blank" rel="noopener">${en()?'Evidence':'查看依据'} ↗</a>${r.supportUrl?` · <a href="${esc(r.supportUrl)}" target="_blank" rel="noopener">${en()?'Museum reference':'博物馆资料'} ↗</a>`:''}</small>`;
   }
   function clear() { hover?.remove();pinned?.remove();hover=pinned=null; }
+  function archiveDetails(p) {
+    const records=p.source==='great-wall-archive'?[{rawFields:p.rawFields}]:(typeof p.archiveRecords==='string'?JSON.parse(p.archiveRecords):p.archiveRecords)||[];
+    return records.map(record=>{const raw=typeof record.rawFields==='string'?JSON.parse(record.rawFields):record.rawFields||{};return `<small><a href="https://greatwallarchive.com/sources" target="_blank" rel="noopener">Great Wall Archive ↗</a> · CC BY 4.0</small><dl>${Object.entries(raw).map(([key,value])=>`<dt>${esc(key)}</dt><dd>${esc(value)}</dd>`).join('')}</dl>`;}).join('');
+  }
   function legend() {
     const enabled=Boolean(config.state().mapOverlays?.greatWall), box=document.getElementById('greatWallLegend');
     box.hidden=!enabled; document.getElementById('showGreatWallOnMap').checked=enabled;
@@ -90,7 +118,7 @@
     selectAll.indeterminate=selected>0&&selected<keys.length;
     selectAll.title=en()?'Select / deselect all detail types':'全选／取消全部详细类型';
     selectAll.setAttribute('aria-label',selectAll.title);
-    document.getElementById('greatWallNote').textContent=en()?'Unspecified detail uses Ming colors by default, not a dating conclusion. Overview: 50% opacity, approximate routes.':'详细未注明朝代默认按明代配色，不代表断代结论；概览50%透明，为概略走向。';
+    document.getElementById('greatWallNote').textContent=en()?'Unspecified detail uses Ming colors by default, not a dating conclusion. Other historical periods: gray. Overview: 50% opacity, approximate routes.':'详细未注明朝代默认按明代配色，不代表断代结论；晋隋唐宋等其他朝代灰色；概览50%透明，为概略走向。';
   }
   function status(text) {document.getElementById('greatWallStatus').textContent=text;}
   function sync(map) {

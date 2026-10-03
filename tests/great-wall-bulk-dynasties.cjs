@@ -1,0 +1,17 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const {periods,compare,segmentDistance}=require('../scripts/compare-great-wall-dynasties.cjs');
+const audit=JSON.parse(fs.readFileSync(require.resolve('../data/great-wall/dynasty-comparison.json'))),verified=JSON.parse(fs.readFileSync(require.resolve('../data/great-wall/dynasty-verified.json'))),data=JSON.parse(fs.readFileSync(require.resolve('../data/great-wall/features.geojson'))),history=JSON.parse(fs.readFileSync(require.resolve('../data/great-wall/history.geojson')));
+assert.equal(audit.summary.referenceRecords,42073);assert.equal(audit.rows.length,data.features.length+history.features.length);assert.equal(new Set(audit.rows.map(r=>r.id)).size,audit.rows.length);for(const f of [...data.features,...history.features])assert.ok(audit.rows.some(r=>r.id===f.id));
+assert.equal(verified.records.length,30);assert.equal(verified.records.filter(r=>r.mixed).length,19);assert.equal(verified.records.filter(r=>!r.mixed).length,11);
+assert.deepEqual(periods('战国秦、汉'),['spring-autumn','han']);assert.deepEqual(periods('汉、明'),['han','ming']);assert.deepEqual(periods('汉～晋'),['han','other']);assert.deepEqual(periods('秦汉'),['qin','han']);assert.equal(segmentDistance([100,40],[99,40],[101,40]),0);
+const src=fs.readFileSync(require.resolve('../great-wall.js'),'utf8'),c={};vm.createContext(c);vm.runInContext(src.match(/const eras=[^\n]+/)[0]+src.match(/const colors =[^\n]+/)[0]+src.slice(src.indexOf('function detailEra('),src.indexOf('function filtered(')),c);
+for(const r of verified.records){const f=data.features.find(f=>f.id===r.id);assert.equal(c.detailEra(f.properties),r.era);assert.equal(f.properties.datingCorrection.mixed,r.mixed);assert.equal(f.properties.dynastyZh,r.dynastyZh);}
+assert.equal(c.detailEra({source:'great-wall-archive',rawFields:JSON.stringify({dynasty_code:'17'}),datingCorrection:JSON.stringify({era:'han'})}),'han');
+const feature=(id,geometry,p={})=>({type:'Feature',id,geometry,properties:{name:'测试',category:'wall',source:'public-geojson',...p}}),line={type:'LineString',coordinates:[[100,40],[100.01,40]]};
+const ref=feature('reference',line,{dynasty:'汉',_layer:'wall'}),local=feature('old',line);assert.equal(compare([local],[ref],()=> 'ming')[0].eligibleCorrection,true);
+const mixed=feature('second',line,{dynasty:'明',_layer:'wall'});assert.equal(compare([local],[ref,mixed],()=> 'ming')[0].eligibleCorrection,false);
+const explicit=feature('old',line,{source:'arcgis-hammond'});assert.equal(compare([explicit],[ref],()=> 'ming')[0].decision,'explicit-dynasty-conflict');
+const coarse=feature('old',line,{source:'wikipedia-kmz'});assert.equal(compare([coarse],[ref],()=> 'ming')[0].eligibleCorrection,false);
+const half=feature('half',{type:'LineString',coordinates:[[100,40],[100.004,40]]},{dynasty:'汉',_layer:'wall'});assert.equal(compare([local],[half],()=> 'ming')[0].eligibleCorrection,false);
+const distant=feature('reference',{type:'Point',coordinates:[110,40]},{dynasty:'汉',_layer:'building'}),coded=feature('old',{type:'Point',coordinates:[100,40]},{source:'great-wall-archive',originalId:'reference'});const conflict=compare([coded],[distant],()=> 'ming')[0];assert.equal(conflict.decision,'identity-position-conflict');assert.equal(conflict.eligibleCorrection,false);
+console.log('PASS: all 6024 records audited against 42073 references; 11 recolors/19 multi-era refinements; ambiguity, explicit dates and coarse overview protected');
