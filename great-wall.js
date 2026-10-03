@@ -33,7 +33,7 @@
     }
   }
   const eras={'spring-autumn':['春秋战国','Spring / Warring States','#7b3294'],qin:['秦代','Qin','#d32f2f'],han:['汉代','Han','#1565c0'],'northern-wei':['北朝','Northern Dynasties','#008044'],'liao-jin':['辽金','Liao / Jin','#ce5c00'],ming:['明代','Ming','#c21875']};
-  let data, pending, historyData, historyPending, historyError='', config, revision=0, hover, pinned, leafletGroup;
+  let data, pending, historyData, historyPending, historyError='', config, revision=0, hover, pinned, leafletGroup, leafletLabelCleanup;
   const bound = new WeakSet();
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const en = () => config.language() === 'en';
@@ -64,7 +64,34 @@
     return 'ming';
   }
   function detailColor(p) {const era=detailEra(p);return era==='other'?'#5b6470':(eras[era]?.[2]||colors[p.category]||colors.unknown);}
-  function filtered() { const hidden = config.state().mapOverlays?.greatWallCategories || {}; return {type:'FeatureCollection',features:(data?.features||[]).filter(f=>hidden[f.properties.category] !== false).map(f=>({...f,properties:{...f.properties,displayColor:detailColor(f.properties),iconKey:f.properties.category+(detailEra(f.properties)?'-'+detailEra(f.properties):'')}}))}; }
+  // Exact curated names: a nearby museum or numbered tower is not the landmark itself.
+  const landmarkGroups = [
+    [2, ['山海关','山海关关城']], [2, ['嘉峪关','嘉峪关关城']],
+    [2, ['居庸关']], [2, ['玉门关','玉门关遗址']], [2, ['阳关']],
+    [2, ['八达岭口','八达岭关城']], [2, ['慕田峪关']],
+    [1, ['老龙头']], [2, ['金山岭']], [1, ['司马台','司马台关']],
+    [1, ['古北口']], [1, ['黄崖关']], [1, ['雁门关']],
+    [1, ['娘子关']], [1, ['平型关']], [1, ['偏头关']],
+    [1, ['喜峰口']], [1, ['大境门']], [1, ['镇北台']],
+    [1, ['虎山长城']], [1, ['杀虎口','杀虎口城楼']], [1, ['河仓城','大方盘城']],
+    [1, ['紫荆关']], [1, ['宁武关']], [1, ['倒马关']],
+    [1, ['红山堡']], [1, ['得胜堡']], [1, ['鸡鸣驿堡']], [1, ['榆林卫城']],
+    [1, ['锁阳城']], [1, ['角山','角山关']], [1, ['九门口']],
+    [1, ['青龙峡']], [1, ['龙井关']], [1, ['蟠龙山']], [1, ['潘家口']],
+    [1, ['黄花城关']], [1, ['水关']]
+  ];
+  function landmarkTier(p) {return landmarkGroups.find(([,names])=>names.includes(p.name))?.[0]||0;}
+  function filtered() {
+    const hidden=config.state().mapOverlays?.greatWallCategories||{};
+    const features=(data?.features||[]).filter(f=>hidden[f.properties.category]!==false).map(f=>({...f,properties:{...f.properties,landmarkTier:f.geometry.type==='Point'?landmarkTier(f.properties):0,labelRepresentative:true,displayColor:detailColor(f.properties),iconKey:f.properties.category+(detailEra(f.properties)?'-'+detailEra(f.properties):'')}}));
+    for(const [,names] of landmarkGroups) {
+      const candidates=features.filter(f=>f.geometry.type==='Point'&&names.includes(f.properties.name));
+      candidates.sort((a,b)=>Number(b.properties.category==='pass')-Number(a.properties.category==='pass')||String(a.id).localeCompare(String(b.id)));
+      // Retain every source feature, but don't repeat a famous site's early label.
+      candidates.slice(1).forEach(f=>f.properties.labelRepresentative=false);
+    }
+    return {type:'FeatureCollection',features};
+  }
   async function load() {
     if (data) return data;
     if (!pending) pending = fetch('./data/great-wall/features.geojson?v=20261002h').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).then(d=>data=d).finally(()=>pending=null);
@@ -139,10 +166,10 @@
       const color=['get','displayColor'];
       add({id:'great-wall-area',source:'great-wall-geometry',type:'fill',filter:['==',['geometry-type'],'Polygon'],paint:{'fill-color':'#8e4829','fill-opacity':.08}});
       for(const approximate of [false,true])add({id:'great-wall-'+(approximate?'approximate':'line'),source:'great-wall-geometry',type:'line',filter:['==',['boolean',['get','approximate'],false],approximate],paint:{'line-color':color,'line-width':['interpolate',['linear'],['zoom'],3,1,12,2.2,19,3.2],...(approximate?{'line-dasharray':[3,2]}:{})}});
-      add({id:'great-wall-point',source:'great-wall-points',type:'symbol',layout:{'icon-image':['concat','great-wall-icon-',['get','iconKey']],'icon-size':['interpolate',['linear'],['zoom'],3,.5,9,.7,14,.9],'icon-allow-overlap':true,'icon-ignore-placement':true}});
-      add({id:'great-wall-label',source:'great-wall-points',type:'symbol',minzoom:11,layout:{'text-field':en()?['coalesce',['get','nameEn'],['get','name']]:['get','name'],'text-size':12,'text-offset':[0,1],'text-anchor':'top'},paint:{'text-color':'#65371f','text-halo-color':'#fff','text-halo-width':1.5}});
+      add({id:'great-wall-point',source:'great-wall-points',type:'symbol',layout:{'icon-image':['concat','great-wall-icon-',['get','iconKey']],'icon-size':['interpolate',['linear'],['zoom'],3,['match',['get','landmarkTier'],2,.65,1,.575,.5],9,['match',['get','landmarkTier'],2,.91,1,.805,.7],14,['match',['get','landmarkTier'],2,1.17,1,1.035,.9]],'icon-allow-overlap':true,'icon-ignore-placement':true}});
+      for(const [tier,minzoom,size] of [[0,11,12],[1,7,13],[2,5,14]]) add({id:tier===0?'great-wall-label':'great-wall-label-'+tier,source:'great-wall-points',type:'symbol',minzoom,filter:['all',['==',['get','landmarkTier'],tier],['==',['get','labelRepresentative'],true]],layout:{'text-field':en()?['coalesce',['get','nameEn'],['get','name']]:['get','name'],'text-size':size,'text-offset':[0,1.2],'text-variable-anchor':['top','bottom','left','right'],'text-padding':4,'symbol-sort-key':tier===0?2:2-tier,'text-allow-overlap':false},paint:{'text-color':color,'text-halo-color':'#fff','text-halo-width':1.5}});
       status(historyError); legend(); config.front();
-      if(!bound.has(map)) {bound.add(map);const hits=e=>{const ids=['great-wall-point','great-wall-label','great-wall-line','great-wall-approximate','great-wall-area','great-wall-history-line'].filter(id=>map.getLayer(id));const found=ids.length?map.queryRenderedFeatures([[e.point.x-12,e.point.y-12],[e.point.x+12,e.point.y+12]],{layers:ids}):[];return found.sort((a,b)=>Number(a.properties.source==='wikipedia-kmz')-Number(b.properties.source==='wikipedia-kmz'));};
+      if(!bound.has(map)) {bound.add(map);const hits=e=>{const ids=['great-wall-point','great-wall-label','great-wall-label-1','great-wall-label-2','great-wall-line','great-wall-approximate','great-wall-area','great-wall-history-line'].filter(id=>map.getLayer(id));const found=ids.length?map.queryRenderedFeatures([[e.point.x-12,e.point.y-12],[e.point.x+12,e.point.y+12]],{layers:ids}):[];return found.sort((a,b)=>Number(a.properties.source==='wikipedia-kmz')-Number(b.properties.source==='wikipedia-kmz'));};
         map.on('mousemove',e=>{if(!config.state().mapOverlays?.greatWall)return;const f=hits(e)[0];hover?.remove();hover=null;if(f){map.getCanvas().style.cursor='pointer';hover=new maplibregl.Popup({closeButton:false,closeOnClick:false,offset:10,maxWidth:'220px',className:'great-wall-hover'}).setLngLat(e.lngLat).setHTML(html(f,false)).addTo(map);}else if(map.getCanvas().style.cursor==='pointer')map.getCanvas().style.cursor='';});
         map.on('mouseout',()=>{hover?.remove();hover=null;});
         map.on('click',e=>{if(!config.state().mapOverlays?.greatWall)return;const f=hits(e)[0];if(!f)return;pinned?.remove();hover?.remove();pinned=new maplibregl.Popup({offset:10,maxWidth:'340px',className:'great-wall-pinned'}).setLngLat(e.lngLat).setHTML(html(f,true)).addTo(map);});
@@ -151,13 +178,23 @@
     if(data&&(!config.state().mapOverlays?.greatWallHistory||historyData))apply();else {status(en()?'Loading…':'加载中…');loadView().then(apply).catch(()=>{if(token===revision)status(en()?'Load failed — toggle to retry':'加载失败，请重新开启重试');});}
   }
   function leaflet(map,group) {
-    leafletGroup?.remove();leafletGroup=null;if(!config.state().mapOverlays?.greatWall)return;
+    leafletLabelCleanup?.();leafletLabelCleanup=null;leafletGroup?.remove();leafletGroup=null;if(!config.state().mapOverlays?.greatWall)return;
     const apply=()=>{if(!config.state().mapOverlays?.greatWall||group!==config.leafletGroup())return;
       if(!map.getPane('greatWallPane'))map.createPane('greatWallPane').style.zIndex='390';
       if(!map.getPane('greatWallHistoryPane'))map.createPane('greatWallHistoryPane').style.zIndex='389';
       leafletGroup=L.layerGroup().addTo(group);
       L.geoJSON(historyFeatures(),{pane:'greatWallHistoryPane',style:f=>({color:eras[f.properties.dynasty]?.[2]||'#795548',weight:4,opacity:0.5,dashArray:'0.1 8',lineCap:'round',lineJoin:'round'}),onEachFeature:(f,l)=>l.bindTooltip(html(f,false)).bindPopup(html(f,true),{maxWidth:340})}).addTo(leafletGroup);
-L.geoJSON(filtered(),{pane:'greatWallPane',style:f=>({color:detailColor(f.properties),weight:2,dashArray:f.properties.approximate?'6 4':null,fillOpacity:.08}),pointToLayer:(f,ll)=>L.marker(ll,{pane:'greatWallPane',icon:L.divIcon({className:'great-wall-marker',html:iconSvg(f.properties.category,detailColor(f.properties)),iconSize:[20,20],iconAnchor:[10,10]})}),onEachFeature:(f,l)=>l.bindTooltip(html(f,false)).bindPopup(html(f,true),{maxWidth:340})}).addTo(leafletGroup);status(historyError);legend();};
+      const landmarkLabels=[];
+      L.geoJSON(filtered(),{pane:'greatWallPane',style:f=>({color:detailColor(f.properties),weight:2,dashArray:f.properties.approximate?'6 4':null,fillOpacity:.08}),pointToLayer:(f,ll)=>{const size=f.properties.landmarkTier===2?26:f.properties.landmarkTier===1?23:20;return L.marker(ll,{pane:'greatWallPane',icon:L.divIcon({className:'great-wall-marker',html:iconSvg(f.properties.category,detailColor(f.properties)),iconSize:[size,size],iconAnchor:[size/2,size/2]})});},onEachFeature:(f,l)=>{l.bindTooltip(html(f,false)).bindPopup(html(f,true),{maxWidth:340});if(f.properties.landmarkTier&&f.properties.labelRepresentative)landmarkLabels.push({f,l});}}).addTo(leafletGroup);
+      const updateLabels=()=>{
+        const placed=[];
+        for(const {f,l} of landmarkLabels.sort((a,b)=>b.f.properties.landmarkTier-a.f.properties.landmarkTier)) {
+          const p=f.properties,xy=map.latLngToContainerPoint(l.getLatLng()),name=en()?(p.nameEn||p.name):p.name,width=Math.max(60,String(name).length*14);
+          const visible=map.getZoom()>=(p.landmarkTier===2?5:7)&&map.getBounds().contains(l.getLatLng())&&!placed.some(b=>Math.abs(b.x-xy.x)<(b.width+width)/2&&Math.abs(b.y-xy.y)<32);
+          l.unbindTooltip();l.bindTooltip(visible?`<span style="color:${detailColor(p)};font-size:${p.landmarkTier===2?14:13}px">${esc(name)}</span>`:html(f,false),{permanent:visible,direction:'top'});if(visible){l.openTooltip();placed.push({x:xy.x,y:xy.y,width});}
+        }
+      };
+      map.on('zoomend moveend',updateLabels);leafletLabelCleanup=()=>map.off('zoomend moveend',updateLabels);updateLabels();status(historyError);legend();};
     if(data&&(!config.state().mapOverlays?.greatWallHistory||historyData))apply();else loadView().then(apply).catch(()=>status(en()?'Load failed — toggle to retry':'加载失败，请重新开启重试'));
   }
   function init(options) {config=options;document.getElementById('showGreatWallOnMap').addEventListener('change',e=>{config.state().mapOverlays.greatWall=e.target.checked;clear();config.save();config.render();});document.getElementById('greatWallCategories').addEventListener('change',e=>{const k=e.target.dataset.wallCategory,all=e.target.hasAttribute('data-wall-all');if(!k&&!all)return;const o=config.state().mapOverlays;o.greatWallCategories=all?Object.fromEntries(Object.keys(categories).map(key=>[key,e.target.checked])):{...o.greatWallCategories,[k]:e.target.checked};clear();config.save();config.render();});}

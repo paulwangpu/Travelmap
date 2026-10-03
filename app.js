@@ -16476,7 +16476,7 @@ window.visualViewport?.addEventListener("resize", () => {
 });
 if ("serviceWorker" in navigator && location.protocol !== "file:") {
   window.addEventListener("load", () => {
-navigator.serviceWorker.register("./sw.js?v=682", { updateViaCache: "none" })
+navigator.serviceWorker.register("./sw.js?v=686", { updateViaCache: "none" })
       .then((registration) => registration.update())
       .catch((error) => console.warn("Service Worker registration failed", error));
   });
