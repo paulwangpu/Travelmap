@@ -43,7 +43,7 @@ const html=fs.readFileSync(require.resolve('../index.html'),'utf8');
 assert.match(html,/compact-toggle-pair[^]*?showAncientCapitalsOnMap[^]*?showImperialTombsOnMap/);
 assert.match(html,/hazard-toggle-pair[^]*?showArcgisWaterOnMap[^]*?水系[^]*?showGreatWallOnMap/);
 for(const id of ['showImperialTombsOnMap','showGreatWallOnMap','showArcgisWaterOnMap'])assert.equal(html.split(`id="${id}"`).length,2);
-const sw=fs.readFileSync(require.resolve('../sw.js'),'utf8');assert(sw.includes('imperial-tombs.js?v=55'));assert(sw.includes('data/imperial-tombs/catalog.json?v=33'));
+const sw=fs.readFileSync(require.resolve('../sw.js'),'utf8');assert(sw.includes('imperial-tombs.js?v=56'));assert(sw.includes('data/imperial-tombs/catalog.json?v=33'));
 console.log(`PASS: ${low.length} overview / ${high.length} detailed points; era filtering, invalid coordinate exclusion, hierarchy, layout and offline assets`);
 
 assert.equal(Object.keys(c.summary)[0],'传说时代');

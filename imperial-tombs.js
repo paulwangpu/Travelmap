@@ -141,15 +141,15 @@
   }
   function popupContent(catalog,x,isVisited=()=>false) {
     const members=visitMembers(catalog,x);
-    const action=item=>`<button class="popup-action" data-checklist-map="imperialTombs" data-item="${esc(item.name)}" type="button">${isVisited(item)?(en()?'Cancel visited':'取消去过'):(en()?'Mark visited':'标记去过')}</button>`;
-    const body=members.length===1&&members[0].id===x.id?action(x):`<div style="max-height:220px;overflow:auto">${members.map(item=>`<div><span>${esc(item.mapLabel||item.name)}</span><br>${action(item)}</div>`).join('')}</div>`;
-    return `<strong>${esc(x.mapLabel||x.name)}</strong><br>${esc(x.admin)}<br>${body}`;
+    const action=item=>`<button class="popup-action" aria-pressed="${Boolean(isVisited(item))}" data-checklist-map="imperialTombs" data-item="${esc(item.name)}" type="button">${isVisited(item)?(en()?'Visited':'已去过'):(en()?'Mark visited':'标记去过')}</button>`;
+    const body=members.length===1&&members[0].id===x.id?`<div class="tomb-popup-single">${action(x)}</div>`:`<div class="tomb-popup-list">${members.sort(compareChecklistItems).map(item=>`<div class="tomb-popup-row"><span>${esc(item.mapLabel||item.name)}</span>${action(item)}</div>`).join('')}</div>`;
+    return `<div class="tomb-popup"><strong>${esc(x.mapLabel||x.name)}</strong><p class="tomb-popup-location">${esc(x.admin)}</p>${body}</div>`;
   }
   function showPopup(map,x) {
     removePopups();
     const content=popupContent(data,x,item=>config.isVisited?.(item));
     const html=config.popupHtml?config.popupHtml(content):content;
-    pinned=new maplibregl.Popup({offset:12,closeButton:false,maxWidth:'300px'}).setLngLat([x.coordinates.lng,x.coordinates.lat]).setHTML(html).addTo(map);
+    pinned=new maplibregl.Popup({offset:12,closeButton:false,maxWidth:'310px',className:'tomb-click-popup'}).setLngLat([x.coordinates.lng,x.coordinates.lat]).setHTML(html).addTo(map);
   }
   function handleClick(map,e) {
     if(!enabled()||!map.getLayer('imperial-tomb-point'))return false;
