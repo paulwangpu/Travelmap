@@ -9581,6 +9581,18 @@ function synchronizeUsNpsMapState() {
   return true;
 }
 
+let usNpsHoverPopup = null;
+function clearUsNpsHover() {
+  usNpsHoverPopup?.remove();
+  usNpsHoverPopup = null;
+}
+function usNpsHoverContent(props) {
+  const name = props.itemId ? checklistItemDisplayName("usNationalParks", props.itemId) : (props.name || props.code || "");
+  const done = props.itemId ? isChecklistItemDone("usNationalParks", props.itemId) : props.done === true;
+  return '<strong>' + (done ? '✓ ' : '') + escapeHtml(name) + '</strong>'
+    + (props.location ? '<small>' + escapeHtml(props.location) + '</small>' : '');
+}
+
 function bindMapLibreUsNpsHandlers() {
   if (mapLibreLayerHandlersBound.nps || !mapLibreMap.getLayer("us-nps-fill")) return;
   mapLibreLayerHandlersBound.nps = true;
@@ -9593,6 +9605,7 @@ function bindMapLibreUsNpsHandlers() {
     const itemId = feature?.properties?.itemId;
     if (!itemId) return;
     markMapEventHandled(event);
+    clearUsNpsHover();
     renderChecklistMapDetail("usNationalParks", itemId);
     const displayName = checklistItemDisplayName("usNationalParks", itemId);
     document.querySelectorAll(".maplibregl-popup").forEach((popup) => popup.remove());
@@ -9604,7 +9617,17 @@ function bindMapLibreUsNpsHandlers() {
   ["us-nps-fill", "us-nps-hit-line"].forEach((layerId) => {
     mapLibreMap.on("click", layerId, handleClick);
     mapLibreMap.on("mouseenter", layerId, () => { mapLibreMap.getCanvas().style.cursor = mapAddMode || mapPathMode ? "crosshair" : "pointer"; });
-    mapLibreMap.on("mouseleave", layerId, () => { mapLibreMap.getCanvas().style.cursor = mapAddMode || mapPathMode ? "crosshair" : ""; });
+    mapLibreMap.on("mousemove", layerId, (event) => {
+      const props = event.features?.[0]?.properties;
+      const pointLayers = ["map-points-circle", "map-points-label", "map-points-label-full", "ancient-capital-point", "ancient-capital-label", "ancient-capital-label-full"].filter(id => mapLibreMap.getLayer(id));
+      if (!props || mapAddMode || mapPathMode || (pointLayers.length && mapLibreMap.queryRenderedFeatures(event.point, { layers: pointLayers }).length)) {
+        clearUsNpsHover();
+        return;
+      }
+      if (!usNpsHoverPopup) usNpsHoverPopup = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 10, maxWidth: "220px", className: "ancient-capital-hover" });
+      usNpsHoverPopup.setLngLat(event.lngLat).setHTML(usNpsHoverContent(props)).addTo(mapLibreMap);
+    });
+    mapLibreMap.on("mouseleave", layerId, () => { clearUsNpsHover(); mapLibreMap.getCanvas().style.cursor = mapAddMode || mapPathMode ? "crosshair" : ""; });
   });
 }
 
@@ -9702,6 +9725,7 @@ function renderMapLibreLayers() {
   removeMapLibreSource("visited-countries");
   removeMapLibreSource("country-click");
   if (!overlays.china5a) {
+    clearUsNpsHover();
     removeMapLibreLayer("us-nps-hit-line");
     removeMapLibreLayer("us-nps-line");
     removeMapLibreLayer("us-nps-done-line");
@@ -9914,6 +9938,7 @@ function refreshFlightRoutesOnMap() {
 }
 
 function renderMapLibreMarkers(overlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) }) {
+  clearUsNpsHover();
   clearAncientCapitalHover();
   const perfStartedAt = perfNow();
   const signature = mapLibreMarkerRenderSignature(overlays);
@@ -11194,7 +11219,7 @@ function renderLeafletLayers() {
         const displayName = itemId
           ? checklistItemDisplayName("usNationalParks", itemId)
           : (feature.properties.name || feature.properties.code);
-        layer.bindTooltip(displayName, { sticky: true });
+        layer.bindTooltip(usNpsHoverContent(feature.properties), { sticky: true, className: "ancient-capital-tooltip" });
         if (!itemId) return;
         layer.on("click", (event) => {
           if (mapAddMode || mapPathMode) return;
