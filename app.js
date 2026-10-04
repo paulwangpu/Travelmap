@@ -9525,7 +9525,7 @@ function addMapLibreUsNpsLayers() {
       source: "us-nps-boundaries",
       paint: {
         "line-color": "#315b46",
-        "line-width": 0.9,
+        "line-width": ["interpolate", ["linear"], ["zoom"], 3, 0.25, 8, 0.5, 12, 0.9],
         "line-opacity": 0.62,
       },
     });
@@ -9538,7 +9538,7 @@ function addMapLibreUsNpsLayers() {
       filter: doneFilter,
       paint: {
         "line-color": "#111111",
-        "line-width": 0.9,
+        "line-width": ["interpolate", ["linear"], ["zoom"], 3, 0.25, 8, 0.5, 12, 0.9],
         "line-opacity": 0.95,
       },
     });
@@ -9551,7 +9551,7 @@ function addMapLibreUsNpsLayers() {
       paint: {
         "line-color": "#000000",
         "line-width": 8,
-        "line-opacity": 0.01,
+        "line-opacity": 0,
       },
     });
   }

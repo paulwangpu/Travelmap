@@ -1,5 +1,5 @@
-const cacheName = "travel-map-v789";
-const shellFiles = ["./", "./index.html", "./styles.css?v=207", "./vendor/openrailwaymap/composite.js?v=1", "./vendor/openrailwaymap/style.json?v=1", "./vendor/openrailwaymap/legend.json?v=1", "./railway-vector.js?v=11", "./earthquake-online.js?v=7", "./volcano-catalog.js?v=3", "./esri-relief.js?v=2", "./basemap-alignment.js?v=4", "./great-wall.js?v=34", "./western-regions.js?v=2", "./historical-periods.js?v=6", "./imperial-tombs.js?v=81", "./data/imperial-tombs/catalog.json?v=59", "./map-resolution.js?v=1", "./app.js?v=760"];
+const cacheName = "travel-map-v790";
+const shellFiles = ["./", "./index.html", "./styles.css?v=207", "./vendor/openrailwaymap/composite.js?v=1", "./vendor/openrailwaymap/style.json?v=1", "./vendor/openrailwaymap/legend.json?v=1", "./railway-vector.js?v=11", "./earthquake-online.js?v=7", "./volcano-catalog.js?v=3", "./esri-relief.js?v=2", "./basemap-alignment.js?v=4", "./great-wall.js?v=34", "./western-regions.js?v=2", "./historical-periods.js?v=6", "./imperial-tombs.js?v=81", "./data/imperial-tombs/catalog.json?v=59", "./map-resolution.js?v=1", "./app.js?v=761"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(cacheName).then((cache) => cache.addAll(
