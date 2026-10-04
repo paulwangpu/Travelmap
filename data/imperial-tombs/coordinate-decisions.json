@@ -183,6 +183,7 @@
     "rui-liangdaicun",
     "rui-liujiawa",
     "ba-dahekou",
+    "peng-hengshui",
     "ba-xiaotianxi",
     "rong-majiayuan",
     "zhou-lingpo",
@@ -200,6 +201,8 @@
     "cheshi-goubei",
     "tuyuhun-reshui",
     "jin-taizu-acheng",
+    "modern-zhongshan",
+    "modern-mao-hall",
     "han-chan",
     "chu-yi",
     "shu-hui",
@@ -766,6 +769,11 @@
       "method": "已有考古或文保来源确定地点，P625 Earth仅提供对应遗址区域参考位置"
     },
     {
+      "id": "peng-hengshui",
+      "sourceId": "geo-more-Q18165254",
+      "method": "地理实体P625 Earth声明与机构所述所在地核对，采用区域参考位置"
+    },
+    {
       "id": "ba-xiaotianxi",
       "sourceId": "geo-ba-xiaotianxi",
       "method": "沿用项目GCJ-02迭代反解为WGS84；机构地望交叉核对，仅区域参考"
@@ -849,6 +857,16 @@
       "id": "jin-taizu-acheng",
       "sourceId": "jin-acheng-osm",
       "method": "读取OSM官方API，核对公园节点及附近金太祖陵节点，与机构所述上京遗址西侧交叉检查"
+    },
+    {
+      "id": "modern-zhongshan",
+      "sourceId": "geo-more-Q1338405",
+      "method": "地理实体P625 Earth声明与机构所述所在地核对，采用区域参考位置"
+    },
+    {
+      "id": "modern-mao-hall",
+      "sourceId": "geo-more-Q1154819",
+      "method": "地理实体P625 Earth声明与机构所述所在地核对，采用区域参考位置"
     },
     {
       "id": "shu-hui",

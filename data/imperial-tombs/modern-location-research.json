@@ -1,0 +1,183 @@
+{
+  "retrievedAt": "2026-10-03",
+  "entities": {
+    "Q1338405": {
+      "id": "Q1338405",
+      "labels": {
+        "zh": {
+          "language": "zh",
+          "value": "中山陵"
+        },
+        "en": {
+          "language": "en",
+          "value": "Sun Yat-sen Mausoleum"
+        }
+      },
+      "claims": {
+        "P625": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P625",
+              "hash": "fd1832947aa4f7fb551efb30e43e89c055c730f6",
+              "datavalue": {
+                "value": {
+                  "latitude": 32.064416666667,
+                  "longitude": 118.84826944444,
+                  "altitude": null,
+                  "precision": 0.00027777777777778,
+                  "globe": "http://www.wikidata.org/entity/Q2"
+                },
+                "type": "globecoordinate"
+              },
+              "datatype": "globe-coordinate"
+            },
+            "type": "statement",
+            "id": "q1338405$F5122726-3703-46D3-A52B-B1FD8029BC15",
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "fa278ebfc458360e5aed63d5058cca83c46134f1",
+                "snaks": {
+                  "P143": [
+                    {
+                      "snaktype": "value",
+                      "property": "P143",
+                      "hash": "e4f6d9441d0600513c4533c672b5ab472dc73694",
+                      "datavalue": {
+                        "value": {
+                          "entity-type": "item",
+                          "numeric-id": 328,
+                          "id": "Q328"
+                        },
+                        "type": "wikibase-entityid"
+                      },
+                      "datatype": "wikibase-item"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P143"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Q1154819": {
+      "id": "Q1154819",
+      "labels": {
+        "zh": {
+          "language": "zh",
+          "value": "毛主席纪念堂"
+        },
+        "en": {
+          "language": "en",
+          "value": "Mausoleum of Mao Zedong"
+        }
+      },
+      "claims": {
+        "P625": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P625",
+              "hash": "0290e02cb7491cb387adc49e09d4f394617d174b",
+              "datavalue": {
+                "value": {
+                  "latitude": 39.901025,
+                  "longitude": 116.39158055556,
+                  "altitude": null,
+                  "precision": 0.0000027777777777778,
+                  "globe": "http://www.wikidata.org/entity/Q2"
+                },
+                "type": "globecoordinate"
+              },
+              "datatype": "globe-coordinate"
+            },
+            "type": "statement",
+            "id": "q1154819$6EFD66E5-4855-441F-AFCE-DF8ED9BAFA56",
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "288ab581e7d2d02995a26dfa8b091d96e78457fc",
+                "snaks": {
+                  "P143": [
+                    {
+                      "snaktype": "value",
+                      "property": "P143",
+                      "hash": "6a164248fc96bfa583bbb495cb63ae6401ec203c",
+                      "datavalue": {
+                        "value": {
+                          "entity-type": "item",
+                          "numeric-id": 206855,
+                          "id": "Q206855"
+                        },
+                        "type": "wikibase-entityid"
+                      },
+                      "datatype": "wikibase-item"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P143"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Q19841777": {
+      "id": "Q19841777",
+      "labels": {
+        "zh": {
+          "language": "zh",
+          "value": "唐建陵"
+        }
+      },
+      "claims": {
+        "P625": []
+      }
+    },
+    "Q18165254": {
+      "id": "Q18165254",
+      "labels": {
+        "zh": {
+          "language": "zh",
+          "value": "横北倗国墓地"
+        },
+        "en": {
+          "language": "en",
+          "value": "Cemetery of Peng State at Hengbei"
+        }
+      },
+      "claims": {
+        "P625": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P625",
+              "hash": "e910011bd6f6170d137c8966fd83676c8e27a6f8",
+              "datavalue": {
+                "value": {
+                  "latitude": 35.48754,
+                  "longitude": 111.4437,
+                  "altitude": null,
+                  "precision": 0.000001,
+                  "globe": "http://www.wikidata.org/entity/Q2"
+                },
+                "type": "globecoordinate"
+              },
+              "datatype": "globe-coordinate"
+            },
+            "type": "statement",
+            "id": "Q18165254$6D6E598E-D430-4DD2-BD1D-5D822A57F4BE",
+            "rank": "normal"
+          }
+        ]
+      }
+    }
+  }
+}

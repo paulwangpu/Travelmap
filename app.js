@@ -12584,7 +12584,7 @@ function renderDataInventory() {
 
 function loadImperialTombChecklist() {
   if (imperialTombChecklistPromise) return imperialTombChecklistPromise;
-  imperialTombChecklistPromise = fetchJson("data/imperial-tombs/catalog.json?v=33").then(catalog => {
+  imperialTombChecklistPromise = fetchJson("data/imperial-tombs/catalog.json?v=34").then(catalog => {
     if (!Array.isArray(catalog.items)) throw new Error("Invalid imperial tomb catalog");
     imperialTombMapIndex=new Map(catalog.items.flatMap(item=>[item.name,...(item.aliases||[])].map(name=>[canonicalPlaceKey(name),item])));
     const parents = new Set(catalog.items.map(item => item.parentId).filter(Boolean));

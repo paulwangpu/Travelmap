@@ -52,7 +52,7 @@
   const removePopups=()=>{hover?.remove();pinned?.remove();hover=pinned=null;};
   async function load() {
     if(data)return data;if(pending)return pending;
-    pending=config.fetch('data/imperial-tombs/catalog.json?v=33').then(c=>{
+    pending=config.fetch('data/imperial-tombs/catalog.json?v=34').then(c=>{
       if(!Array.isArray(c.items)||!Array.isArray(c.sources))throw new Error('invalid tomb catalog');
       data=c;error='';return c;
     }).catch(e=>{error=en()?'Tomb data could not be loaded. Retry.':'皇陵资料加载失败，点击重试。';throw e;}).finally(()=>{pending=null;});

@@ -12,7 +12,7 @@
     "zhou-lingpo",
     "early-xingan"
   ],
-  "withIndependentOrRegionalPoint": 207,
+  "withIndependentOrRegionalPoint": 210,
   "sharedCemeteryReferences": [
     "nantang-qin",
     "nantang-shun",
@@ -23,6 +23,7 @@
     "song-mu",
     "song-shao",
     "jin-rui",
+    "qing-cian",
     "shang-m1001",
     "shang-m1002",
     "shang-m1003",
@@ -159,12 +160,6 @@
       "reason": "补核单陵WGS84坐标、指向对象与精度"
     },
     {
-      "id": "qing-cian",
-      "name": "普祥峪定东陵（慈安）",
-      "admin": "河北省唐山市遵化市清东陵普祥峪",
-      "reason": "补核单陵WGS84坐标、指向对象与精度"
-    },
-    {
       "id": "han-shen",
       "name": "东汉慎陵",
       "admin": "河南省洛阳市洛南万安山北麓陵区",
@@ -211,12 +206,6 @@
       "name": "新都马家战国大墓（疑似蜀王族墓）",
       "admin": "四川省成都市新都区原马家乡普东村一带",
       "reason": "补核单陵WGS84坐标、指向对象与精度"
-    },
-    {
-      "id": "peng-hengshui",
-      "name": "横北倗国国君墓地（横水）",
-      "admin": "山西省运城市绛县横水镇横北村北",
-      "reason": "广域陵群不应任取一座陵或城市中心代表"
     },
     {
       "id": "rong-yimen",

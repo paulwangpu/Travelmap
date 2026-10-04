@@ -11,6 +11,8 @@ module.exports=({items,source,sources})=>{
  const easternHanDates=[['汉明帝刘庄',28,75,130513],['汉章帝刘炟',57,88,473498],['汉和帝刘肇',79,106,409011],['汉殇帝刘隆',105,106,77403],['汉质帝刘缵',138,146,626280],['汉桓帝刘志',132,168,614805]];
  for(const [label,b,d,res] of easternHanDates)source('east-han-life-'+res,label+'生卒资料与纪年语句','中国哲学书电子化计划','https://ctext.org/datawiki.pl?if=gb&res='+res,'人物日期资料，不作为陵墓归属依据；采用换算后的公历年份。');
  const overrides={
+  '孙中山':[1866,1925,'modern-sun-life'],
+  '毛泽东':[1893,1976,'modern-mao-life'],
   '金德宗完颜宗干（追尊后削号）':[null,1141,'beijing-jin-history'],
   '金徽宗完颜宗峻（追尊）':[null,1124,'jin-huizong-original'],
   '卫绍王完颜永济':[null,1213,'jin-five-areas'],

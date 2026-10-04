@@ -1,6 +1,6 @@
 # 历代皇陵资料总表
 
-核查日期：2026-10-03。共 288 条记录，207 条可作地图区域代表点。记录数包含陵群与子陵，不能相加为实体墓数；不是全国帝陵全集。
+核查日期：2026-10-03。共 290 条记录，210 条可作地图区域代表点。记录数包含陵群与子陵，不能相加为实体墓数；不是全国帝陵全集。
 
 历史认定优先采用文物部门、考古机构与遗产资料。地理位置另引Wikidata P625 Earth、OSM区域参考点及研究论文的高德坐标表（按GCJ-02转换WGS84），具体来源与转换方法逐条保存。Wikidata的[坐标类型采用WGS84](https://www.wikidata.org/wiki/Help:Data_type#Globe_coordinate)。已复核实体对应和行政地区，精度与入口仍待实测，不能用于墓室定位或导航。有地点依据的估计点可入图，以estimated_wgs84单独记录，卡片标“估计位置”、地图名加“（估）”；保存估计依据和参考范围。无地点依据或冲突未解决的点不入图，旧官方点保存在coordinateAlternatives。地理数据不改变传说陵、衣冠冢等性质。
 
@@ -13,7 +13,7 @@
 | 时代 | 记录 | 单陵 | 陵群 | 地图代表点 | 基准待核 | 无坐标 |
 |---|---:|---:|---:|---:|---:|---:|
 | 传说时代 | 8 | 7 | 1 | 8 | 0 | 0 |
-| 先秦 | 66 | 32 | 34 | 40 | 0 | 26 |
+| 先秦 | 66 | 32 | 34 | 41 | 0 | 25 |
 | 秦汉 | 37 | 35 | 2 | 33 | 0 | 4 |
 | 秦汉至五代 | 1 | 0 | 1 | 0 | 0 | 1 |
 | 魏晋南北朝 | 23 | 22 | 1 | 16 | 0 | 7 |
@@ -23,6 +23,7 @@
 | 元 | 3 | 3 | 0 | 3 | 0 | 0 |
 | 明 | 23 | 21 | 2 | 23 | 0 | 0 |
 | 清 | 19 | 16 | 3 | 18 | 0 | 1 |
+| 近现代 | 2 | 2 | 0 | 2 | 0 | 0 |
 
 | ID | 名称 | 朝代/政权 | 墓主/祭祀对象 | 生卒 | 盗掘情况 | 行政区 | 性质 | 所属陵群 | 点位与状态 | 来源 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -202,7 +203,7 @@
 | qi-jing | 齐景公墓（河崖头疑似陵址） | 齐 | 齐景公杵臼（推定） | 生年不详—前490年 | 尚未核查 | 山东省淄博市临淄区齐都镇河崖头村 | 实际墓葬 | — | 36.88663, 118.37021 / estimated_wgs84 / 河崖头五号墓所在殉马坑原址区域（估计） | [齐景公墓（河崖头疑似陵址）：地点与历史](https://wh.zibo.gov.cn/art/2018/3/15/art_265_1365783.html)、[齐文化：东周殉马坑与五号墓位置关系](https://www.linzi.gov.cn/lz/files/app/20150402_083214.pdf)、[东周殉马坑原址地理索引](https://mapcarta.com/W1247573797)、[齊景公：生卒日期语句](https://www.wikidata.org/wiki/Q709736) |
 | qing-zhaoxi | 昭西陵（孝庄） | 清 | 孝庄文皇后博尔济吉特氏 | 1613—1688年 | 尚未核查 | 河北省唐山市遵化市清东陵大红门东侧 | 实际墓葬 | qing-east | 40.14966488, 117.6846242 / verified_wgs84 / 遗址代表点（非墓室或入口） | [昭西陵（孝庄）：地点与历史](https://www.dpm.org.cn/court/system/236376.html)、[昭西陵：地理坐标](https://www.wikidata.org/wiki/Q11089004)、[孝莊文皇后：生卒日期语句](https://www.wikidata.org/wiki/Q1373915) |
 | qing-cixi | 菩陀峪定东陵（慈禧） | 清 | 慈禧太后叶赫那拉氏 | 1835—1908年 | 有盗掘记录 | 河北省唐山市遵化市清东陵菩陀峪 | 实际墓葬 | qing-east | 40.18784, 117.6396 / verified_wgs84 / 菩陀峪慈禧陵区域参考点 | [菩陀峪定东陵（慈禧）：地点与历史](https://www.dpm.org.cn/lemmas/245310.html)、[陵墓实体参考点：OSM W506485651](https://mapcarta.com/W506485651)、[慈禧太后：生卒日期语句](https://www.wikidata.org/wiki/Q47842)、[孙殿英东陵盗宝案](https://www.dpm.org.cn/lemmas/245498.html) |
-| qing-cian | 普祥峪定东陵（慈安） | 清 | 慈安太后钮祜禄氏 | 1837—1881年 | 尚未核查 | 河北省唐山市遵化市清东陵普祥峪 | 实际墓葬 | — | 未定位 | [普祥峪定东陵（慈安）：地点与历史](https://www.dpm.org.cn/lemmas/245310.html)、[慈安太后：生卒日期语句](https://www.wikidata.org/wiki/Q1150358) |
+| qing-cian | 普祥峪定东陵（慈安） | 清 | 慈安太后钮祜禄氏 | 1837—1881年 | 尚未核查 | 河北省唐山市遵化市清东陵普祥峪 | 实际墓葬 | qing-east | 陵区估计：40.193333333333, 117.65111111111（非单墓） | [普祥峪定东陵（慈安）：地点与历史](https://www.dpm.org.cn/lemmas/245310.html)、[定东陵：慈安普祥峪与慈禧菩陀峪](https://www.dpm.org.cn/court/system/236384.html)、[清东陵：地理坐标](https://www.wikidata.org/wiki/Q306978)、[慈安太后：生卒日期语句](https://www.wikidata.org/wiki/Q1150358) |
 | qing-xiaodong | 孝东陵（孝惠） | 清 | 孝惠章皇后博尔济吉特氏 | 1641—1718年 | 尚未核查 | 河北省唐山市遵化市清东陵孝陵东侧 | 实际墓葬 | qing-east | 40.19592, 117.65431 / verified_wgs84 / 孝东陵石五供参考点（不是墓室中心） | [孝东陵（孝惠）：地点与历史](https://www.dpm.org.cn/lemmas/245310.html)、[孝东陵石五供参考点（不是墓室中心）](https://mapcarta.com/W504653816)、[孝惠章皇后：生卒日期语句](https://www.wikidata.org/wiki/Q855768) |
 | ming-luwang | 南明监国鲁王墓（迁葬新墓） | 南明 | 朱以海 | 1618—1662年 | 尚未核查 | 福建省金门县金湖镇小径 | 实际墓葬 | — | 24.44769, 118.3871 / verified_wgs84 / 金门小径鲁王新墓园区域参考点 | [南明监国鲁王墓（迁葬新墓）：地点与历史](https://www.kinmen.gov.tw/News_Content2.aspx?Create=1&n=98E3CA7358C89100&s=3D6E6B19144483E6&sms=BF7D6D478B935644)、[鲁王墓园：机构景点经纬度](https://media.taiwan.net.tw/zh-tw/portal/travel/details/attraction_371020000a_000689)、[朱以海生卒与金门遗迹](https://www.kinmen.gov.tw/News_Content2.aspx?n=98E3CA7358C89100&s=4B33A64D9A1030A0&sms=BF7D6D478B935644)、[朱以海：生卒日期语句](https://www.wikidata.org/wiki/Q1132871) |
 | ming-shaowu | 绍武君臣冢 | 南明 | 绍武帝朱聿鐭 | 1605—1647年 | 尚未核查 | 广东省广州市越秀区越秀公园南秀湖畔 | 实际墓葬 | — | 23.1416, 113.25883 / verified_wgs84 / 越秀公园南秀湖畔绍武君臣冢现址参考点 | [绍武君臣冢：地点与历史](https://wglj.gz.gov.cn/zwpd/2.5.6/201904/8f2cc8ddb1764ea78283ee4f0c84601c/files/cbdf2782b10e49478acf3c2fd51b3cde.pdf)、[陵墓实体参考点：OSM N9831084912](https://mapcarta.com/N9831084912)、[紹武帝：生卒日期语句](https://www.wikidata.org/wiki/Q1046002) |
@@ -274,7 +275,7 @@
 | rui-liangdaicun | 梁带村芮国国君墓地 | 芮 | 芮国国君及王室成员（逐墓待核） | 生卒不详 | 尚未核查 | 陕西省韩城市梁带村、黄河西岸台塬 | 陵群或混合性质 | — | 35.51145136711355, 110.4900620187848 / estimated_wgs84 / 梁带村芮国遗址博物馆区域参考（估计） | [周风遗韵：梁带村与刘家洼芮国考古](https://m.chnmuseum.cn/portals/0/web/zt/20191213zfyy/)、[金玉华年：陕西韩城出土周代芮国文物珍品](https://www.shanghaimuseum.net/mu/frontend/pg/m/article/id/R00003006)、[梁带村芮国遗址博物馆区域参考点](https://www.amap.com/place/B0FFITA0RW) |
 | rui-liujiawa | 刘家洼芮国国君墓地 | 芮 | 芮国后期国君（姓名未定） | 生卒不详 | 有盗掘考古证据 | 陕西省渭南市澄城县王庄镇刘家洼、鲁家河东岸 | 陵群或混合性质 | — | 35.36314, 109.85089 / estimated_wgs84 / 刘家洼遗址区域（芮国国君墓区待细化） | [周风遗韵：梁带村与刘家洼芮国考古](https://m.chnmuseum.cn/portals/0/web/zt/20191213zfyy/)、[刘家洼遗址区域（芮国国君墓区待细化）：WGS84地理声明](https://www.wikidata.org/wiki/Q133309358) |
 | ba-dahekou | 大河口霸国国君墓地 | 霸 | 霸伯等国君（各墓对应待核） | 生卒不详 | 尚未核查 | 山西省临汾市翼城县隆化镇大河口村 | 陵群或混合性质 | — | 35.74677, 111.78313 / estimated_wgs84 / 大河口遗址国君墓地区域 | [大河口西周墓地考古发现与综合研究](https://www.nopss.gov.cn/n1/2019/1212/c417361-31503279.html)、[大河口遗址国君墓地区域：WGS84地理声明](https://www.wikidata.org/wiki/Q133309238)、[大河口西周墓地综合研究](https://www.nopss.gov.cn/n1/2019/1212/c417361-31503279.html)、[横水M2与大河口M1017的西周中期墓葬比较](https://www.dpm.org.cn/Uploads/File/2022/08/17/u62fcaa6551ac5.pdf) |
-| peng-hengshui | 横北倗国国君墓地（横水） | 倗 | 倗国国君及家族（身份对应待核） | 生卒不详 | 尚未核查 | 山西省运城市绛县横水镇横北村北 | 陵群或混合性质 | — | 未定位 | [倗伯、霸伯诸器与西周政权结构问题](https://ccj.pku.edu.cn/article/info?id=331094838)、[横水M2与大河口M1017的西周中期墓葬比较](https://www.dpm.org.cn/Uploads/File/2022/08/17/u62fcaa6551ac5.pdf) |
+| peng-hengshui | 横北倗国国君墓地（横水） | 倗 | 倗国国君及家族（身份对应待核） | 生卒不详 | 尚未核查 | 山西省运城市绛县横水镇横北村北 | 陵群或混合性质 | — | 35.48754, 111.4437 / estimated_wgs84 / 横北倗国墓地区域（非国君墓室中心） | [倗伯、霸伯诸器与西周政权结构问题](https://ccj.pku.edu.cn/article/info?id=331094838)、[横北倗国墓地区域（非国君墓室中心）：WGS84参考点](https://www.wikidata.org/wiki/Q18165254)、[横水墓地：倗国国君、夫人与国人墓地](https://www.yuncheng.gov.cn/doc/2024/05/15/448911.shtml)、[横水M2与大河口M1017的西周中期墓葬比较](https://www.dpm.org.cn/Uploads/File/2022/08/17/u62fcaa6551ac5.pdf) |
 | ba-xiaotianxi | 小田溪巴王族墓群（归属有争议） | 巴 | 巴族上层统治人物（逐墓身份未定） | 生卒不详 | 尚未核查 | 重庆市涪陵区白涛街道小田溪村、乌江西岸 | 陵群或混合性质 | — | 29.55649460942393, 107.47980104033363 / estimated_wgs84 / 小田溪巴王墓群区域参考（估计） | [重庆涪陵小田溪墓群M15发掘收获](https://www.cqkaogu.cn/web/article/1420168865999982592/web/content_1420168865999982592.html)、[涪陵小田溪墓群地望](https://mzj.cq.gov.cn/sy_218/bmdt/mzyw/202403/t20240326_13082780.html)、[小田溪巴王墓群区域参考点](https://www.amap.com/place/B001793Q4H) |
 | rong-majiayuan | 马家塬西戎首领墓地（疑似王级墓） | 西戎 | 见子陵 | 陵群，见各墓主资料 | 尚未核查 | 甘肃省天水市张家川回族自治县木河乡桃园村马家塬 | 陵群或混合性质 | — | 35.08277777777778, 106.2875 / estimated_wgs84 / 桃园村北马家塬墓地区域 | [马家塬墓地与西戎首领墓研究](https://www.nxkg.org.cn/silukaogu/161.html)、[马家塬墓地地理环境与位置](https://www.sohu.com/a/521455216_121106869) |
 | rong-yimen | 益门村二号墓（疑似戎王墓） | 西戎 | 西戎国君（学术推定，姓名未定） | 生卒不详 | 尚未核查 | 陕西省宝鸡市渭滨区益门村 | 实际墓葬 | — | 未定位 | [马家塬墓地与西戎首领墓研究](https://www.nxkg.org.cn/silukaogu/161.html) |
@@ -303,6 +304,8 @@
 | jin-ai-rushui | 金哀宗葬骨处（汝水滨，故址待核） | 金 | 金哀宗完颜守绪 | 生年不详—1234年 | 尚未核查 | 河南省驻马店市汝南县汝水滨、后龙亭河湾北岸张彦庄一带（线索） | 性质未明 | — | 未定位 | [完颜守绪](https://www.dpm.org.cn/lemmas/242756.html)、[金末帝调查：汝水葬骨与葬颜冢线索](https://epaper.lnd.com.cn/lswbepaper/pad/con/201911/18/content_52240.html) |
 | jin-chenglin-boji | 金末帝传统墓址（泾川簸箕湾） | 金 | 金末帝完颜承麟（传统墓主） | 生年不详—1234年 | 尚未核查 | 甘肃省平凉市泾川县太平乡三星村岭背后簸箕湾、大湾林场一带 | 性质未明 | — | 未定位 | [泾川完颜村传统陵墓与迁葬说](https://wlj.pingliang.gov.cn/ztzl/yzpl/y/art/2022/art_1b88c7fb367c48a9a35cdebba1cf5c1b.html)、[祭祖七百载：2003年取土建冢并非遗骸迁葬](https://epaper.lnd.com.cn/lswbepaper/pc/con/201911/18/content_52199.html)、[完颜守绪](https://www.dpm.org.cn/lemmas/242756.html) |
 | jin-chenglin-memorial | 金末帝纪念冢（完颜村） | 金 | 金末帝完颜承麟（纪念对象） | 生年不详—1234年 | 尚未核查 | 甘肃省平凉市泾川县王村镇完颜村东沟芮王坪 | 祭祀纪念陵 | — | 未定位 | [泾川完颜村传统陵墓与迁葬说](https://wlj.pingliang.gov.cn/ztzl/yzpl/y/art/2022/art_1b88c7fb367c48a9a35cdebba1cf5c1b.html)、[祭祖七百载：2003年取土建冢并非遗骸迁葬](https://epaper.lnd.com.cn/lswbepaper/pc/con/201911/18/content_52199.html)、[完颜村现存景点与仿金地宫](https://gansu.gscn.com.cn/system/2020/05/22/012389293.shtml)、[完颜守绪](https://www.dpm.org.cn/lemmas/242756.html) |
+| modern-zhongshan | 中山陵 | 中华民国 | 孙中山 | 1866—1925年 | 尚未核查 | 江苏省南京市玄武区钟山中茅峰南麓 | 实际墓葬 | — | 32.064416666667, 118.84826944444 / estimated_wgs84 / 中山陵陵寝建筑区域（非园区入口） | [中山陵：陵墓营建及1929年奉安](https://zschina.nanjing.gov.cn/fjms/jqjd/zsljq/zyjd/201808/t20180823_3860682.html)、[孙中山生平与诞辰](https://zschina.nanjing.gov.cn/zszx/dtxx/202604/t20260408_5819634.html)、[中山陵陵寝建筑区域（非园区入口）：WGS84参考点](https://www.wikidata.org/wiki/Q1338405) |
+| modern-mao-hall | 毛主席纪念堂 | 中华人民共和国 | 毛泽东 | 1893—1976年 | 尚未核查 | 北京市东城区天安门广场南部 | 祭祀纪念陵 | — | 39.901025, 116.39158055556 / estimated_wgs84 / 毛主席纪念堂建筑区域（非瞻仰入口） | [毛主席纪念堂：瞻仰大厅与遗体安放](https://tamgw.beijing.gov.cn/diqufuwu/zjtam/201912/t20191218_1272027.html)、[毛泽东逝世及生年](https://cpc.people.com.cn/GB/33837/2534985.html)、[毛主席纪念堂建筑区域（非瞻仰入口）：WGS84参考点](https://www.wikidata.org/wiki/Q1154819) |
 | shang-m27 | 殷墟王陵区M27（王室候选大墓） | 商 | 商代高等级墓主（姓名与身份未定） | 生卒不详 | 有盗掘考古证据 | 河南省安阳市殷都区殷墟王陵遗址 | 实际墓葬 | yin-kings | 陵区估计：36.13954, 114.30281（非单墓） | [殷墟王陵遗址2025年度勘探发掘：M27与道路网络](https://www.yindu.gov.cn/2026/04-20/3641341.html)、[陵墓实体参考点：OSM W503149933](https://mapcarta.com/W503149933) |
 | han-chan | 汉献帝禅陵 | 东汉 | 汉献帝刘协 | 181—234年 | 尚未核查 | 河南省焦作市修武县 | 实际墓葬 | — | 35.36315, 113.43582 / verified_wgs84 / 遗址代表点（非墓室或入口） | [第七批全国重点文物保护单位](https://www.gov.cn/guoqing/2014-07/21/dqpqgzdwwbhdwmd.pdf)、[漢禪陵：地理坐标](https://www.wikidata.org/wiki/Q15902145)、[汉献帝：生卒日期语句](https://www.wikidata.org/wiki/Q7316) |
 | chu-yi | 义帝陵 | 楚 | 楚义帝熊心 | 生年不详—前206年 | 尚未核查 | 湖南省郴州市北湖区 | 性质未明 | — | 25.79642, 113.02681 / verified_wgs84 / 遗址代表点（非墓室或入口） | [第七批全国重点文物保护单位](https://www.gov.cn/guoqing/2014-07/21/dqpqgzdwwbhdwmd.pdf)、[义帝陵：地理坐标](https://www.wikidata.org/wiki/Q109348769)、[楚義帝：生卒日期语句](https://www.wikidata.org/wiki/Q1207474) |

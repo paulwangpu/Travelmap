@@ -29,7 +29,7 @@
     "surface_theft": "有地面文物盗窃记录",
     "mixed": "陵群，逐陵情况不同"
   },
-  "totalRecords": 288,
+  "totalRecords": 290,
   "summary": {
     "传说时代": {
       "records": 8,
@@ -43,9 +43,9 @@
       "records": 66,
       "singles": 32,
       "groups": 34,
-      "mapCandidates": 40,
+      "mapCandidates": 41,
       "sourcePointsPendingDatum": 0,
-      "missingCoordinates": 26
+      "missingCoordinates": 25
     },
     "秦汉": {
       "records": 37,
@@ -118,6 +118,14 @@
       "mapCandidates": 18,
       "sourcePointsPendingDatum": 0,
       "missingCoordinates": 1
+    },
+    "近现代": {
+      "records": 2,
+      "singles": 2,
+      "groups": 0,
+      "mapCandidates": 2,
+      "sourcePointsPendingDatum": 0,
+      "missingCoordinates": 0
     }
   },
   "mapCandidateIds": [
@@ -302,6 +310,7 @@
     "rui-liangdaicun",
     "rui-liujiawa",
     "ba-dahekou",
+    "peng-hengshui",
     "ba-xiaotianxi",
     "rong-majiayuan",
     "zhou-lingpo",
@@ -319,6 +328,8 @@
     "cheshi-goubei",
     "tuyuhun-reshui",
     "jin-taizu-acheng",
+    "modern-zhongshan",
+    "modern-mao-hall",
     "han-chan",
     "chu-yi",
     "shu-hui",
@@ -1951,6 +1962,54 @@
       "note": "旅游基地仿金地宫不是金代考古墓室。"
     },
     {
+      "id": "modern-sun",
+      "title": "中山陵：陵墓营建及1929年奉安",
+      "publisher": "南京市中山陵园管理局",
+      "url": "https://zschina.nanjing.gov.cn/fjms/jqjd/zsljq/zyjd/201808/t20180823_3860682.html",
+      "accessedAt": "2026-10-03",
+      "note": ""
+    },
+    {
+      "id": "modern-sun-life",
+      "title": "孙中山生平与诞辰",
+      "publisher": "南京市中山陵园管理局",
+      "url": "https://zschina.nanjing.gov.cn/zszx/dtxx/202604/t20260408_5819634.html",
+      "accessedAt": "2026-10-03",
+      "note": ""
+    },
+    {
+      "id": "modern-mao",
+      "title": "毛主席纪念堂：瞻仰大厅与遗体安放",
+      "publisher": "北京市天安门地区管理委员会",
+      "url": "https://tamgw.beijing.gov.cn/diqufuwu/zjtam/201912/t20191218_1272027.html",
+      "accessedAt": "2026-10-03",
+      "note": ""
+    },
+    {
+      "id": "modern-mao-life",
+      "title": "毛泽东逝世及生年",
+      "publisher": "人民网中国共产党新闻网",
+      "url": "https://cpc.people.com.cn/GB/33837/2534985.html",
+      "accessedAt": "2026-10-03",
+      "note": ""
+    },
+    {
+      "id": "geo-modern-hengbei",
+      "title": "横水墓地：倗国国君、夫人与国人墓地",
+      "publisher": "运城市人民政府",
+      "url": "https://www.yuncheng.gov.cn/doc/2024/05/15/448911.shtml",
+      "accessedAt": "2026-10-03",
+      "note": ""
+    },
+    {
+      "id": "cian-membership",
+      "title": "定东陵：慈安普祥峪与慈禧菩陀峪",
+      "publisher": "故宫博物院",
+      "url": "https://www.dpm.org.cn/court/system/236384.html",
+      "accessedAt": "2026-10-03",
+      "note": ""
+    },
+    {
       "id": "recent-yin-2025",
       "title": "殷墟王陵遗址2025年度勘探发掘：M27与道路网络",
       "publisher": "殷都区人民政府（中国社会科学院考古研究所成果）",
@@ -3277,6 +3336,30 @@
       "url": "https://mapcarta.com/W675568721",
       "accessedAt": "2026-10-03",
       "note": "WGS84园区参考点；不能据地理实体证明传说人物实际埋葬。"
+    },
+    {
+      "id": "geo-more-Q1338405",
+      "title": "中山陵陵寝建筑区域（非园区入口）：WGS84参考点",
+      "publisher": "Wikidata P625 Earth",
+      "url": "https://www.wikidata.org/wiki/Q1338405",
+      "accessedAt": "2026-10-03",
+      "note": "原始声明存于modern-location-research.json；与机构地点描述核对，不作现场测绘精度声明。"
+    },
+    {
+      "id": "geo-more-Q1154819",
+      "title": "毛主席纪念堂建筑区域（非瞻仰入口）：WGS84参考点",
+      "publisher": "Wikidata P625 Earth",
+      "url": "https://www.wikidata.org/wiki/Q1154819",
+      "accessedAt": "2026-10-03",
+      "note": "原始声明存于modern-location-research.json；与机构地点描述核对，不作现场测绘精度声明。"
+    },
+    {
+      "id": "geo-more-Q18165254",
+      "title": "横北倗国墓地区域（非国君墓室中心）：WGS84参考点",
+      "publisher": "Wikidata P625 Earth",
+      "url": "https://www.wikidata.org/wiki/Q18165254",
+      "accessedAt": "2026-10-03",
+      "note": "原始声明存于modern-location-research.json；与机构地点描述核对，不作现场测绘精度声明。"
     },
     {
       "id": "geo-missing-Q131522427",
@@ -18272,7 +18355,7 @@
       "admin": "河北省唐山市遵化市清东陵普祥峪",
       "adminStatus": "来源概略行政区，未逐项核验现行区划",
       "recordType": "single",
-      "parentId": null,
+      "parentId": "qing-east",
       "nature": "actual_burial",
       "recognition": "documented",
       "evidence": "后妃陵：慈安；定东陵二陵须独立地点，不复制共同陵群点。",
@@ -18280,7 +18363,8 @@
         "后妃陵：慈安；定东陵二陵须独立地点，不复制共同陵群点。"
       ],
       "sourceIds": [
-        "royal-qing-cian"
+        "royal-qing-cian",
+        "cian-membership"
       ],
       "coordinates": null,
       "mapEligible": false,
@@ -18289,6 +18373,19 @@
         "补核单陵WGS84坐标、指向对象与精度"
       ],
       "ownerRole": "royal_consort",
+      "locationReference": {
+        "parentId": "qing-east",
+        "status": "shared_region_estimate",
+        "target": "清东陵所属陵区参考（非独立单墓位置）",
+        "basis": "目录考古或文保资料明确所属陵群；仅关联已定位陵区，不生成复制的单陵地图点。",
+        "limitation": "社区地理资料，未提供实测误差；可用于区域浏览，不作为墓室中心或入口导航。",
+        "coordinates": {
+          "lat": 40.193333333333,
+          "lng": 117.65111111111,
+          "crs": "WGS84",
+          "sourceId": "geo-Q306978"
+        }
+      },
       "chronology": {
         "sortYear": 1881,
         "basis": "首位墓主生卒资料中的卒年；不是建陵或迁葬年"
@@ -23971,13 +24068,37 @@
       ],
       "sourceIds": [
         "peng-research",
+        "geo-more-Q18165254",
+        "geo-modern-hengbei",
         "wz-peng"
       ],
-      "coordinates": null,
-      "mapEligible": false,
-      "mapReason": "缺少经核实的WGS84点位",
+      "coordinates": {
+        "lat": 35.48754,
+        "lng": 111.4437,
+        "crs": "WGS84",
+        "status": "estimated_wgs84",
+        "sourceId": "geo-more-Q18165254",
+        "target": "横北倗国墓地区域（非国君墓室中心）",
+        "original": "Q18165254$6D6E598E-D430-4DD2-BD1D-5D822A57F4BE",
+        "method": "地理实体P625 Earth声明与机构所述所在地核对，采用区域参考位置",
+        "sourceDatumExplicit": true,
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.000001,
+          "horizontalAccuracyMeters": null
+        },
+        "estimate": {
+          "basis": "机构地点描述与独立地理实体交叉核对",
+          "extent": "横北倗国墓地区域（非国君墓室中心）",
+          "confidence": "site",
+          "reviewedAt": "2026-10-03"
+        },
+        "limitation": "社区地理参考点，非入口、棺位或墓室实测中心，小数精度不等于测量准确度。"
+      },
+      "mapEligible": true,
+      "mapReason": "已补可复核WGS84区域参考点",
       "reviewTasks": [
-        "补核陵区边界或代表点；单陵未知时仅显示陵群"
+        "补核现场入口、陵体或墓室中心及实测精度"
       ],
       "preqinPeriod": "西周",
       "chronology": {
@@ -26251,6 +26372,173 @@
         }
       ],
       "lifespanText": "生年不详—1234年",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "尚未取得足以判断墓室盗掘情况的直接资料；未核查不等于未被盗。",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-03"
+      }
+    },
+    {
+      "id": "modern-zhongshan",
+      "name": "中山陵",
+      "aliases": [],
+      "era": "近现代",
+      "dynasty": "中华民国",
+      "occupants": [
+        "孙中山"
+      ],
+      "admin": "江苏省南京市玄武区钟山中茅峰南麓",
+      "adminStatus": "来源概略行政区，未逐项核验现行区划",
+      "recordType": "single",
+      "parentId": null,
+      "nature": "actual_burial",
+      "recognition": "documented",
+      "evidence": "陵园管理机构明确为孙中山陵墓，1929年6月1日奉安。",
+      "disputes": [
+        "孙中山为近现代领导人，并非帝王；依用户指定纳入本图层。"
+      ],
+      "sourceIds": [
+        "modern-sun",
+        "modern-sun-life",
+        "geo-more-Q1338405"
+      ],
+      "coordinates": {
+        "lat": 32.064416666667,
+        "lng": 118.84826944444,
+        "crs": "WGS84",
+        "status": "estimated_wgs84",
+        "sourceId": "geo-more-Q1338405",
+        "target": "中山陵陵寝建筑区域（非园区入口）",
+        "original": "q1338405$F5122726-3703-46D3-A52B-B1FD8029BC15",
+        "method": "地理实体P625 Earth声明与机构所述所在地核对，采用区域参考位置",
+        "sourceDatumExplicit": true,
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.00027777777777778,
+          "horizontalAccuracyMeters": null
+        },
+        "estimate": {
+          "basis": "机构地点描述与独立地理实体交叉核对",
+          "extent": "中山陵陵寝建筑区域（非园区入口）",
+          "confidence": "site",
+          "reviewedAt": "2026-10-03"
+        },
+        "limitation": "社区地理参考点，非入口、棺位或墓室实测中心，小数精度不等于测量准确度。"
+      },
+      "mapEligible": true,
+      "mapReason": "已补可复核WGS84区域参考点",
+      "reviewTasks": [
+        "补核现场入口、陵体或墓室中心及实测精度"
+      ],
+      "siteRole": "modern_leader_mausoleum",
+      "periodText": "1929年迁葬奉安",
+      "chronology": {
+        "sortYear": 1925,
+        "basis": "首位墓主生卒资料中的卒年；不是建陵或迁葬年"
+      },
+      "biographies": [
+        {
+          "label": "孙中山",
+          "birthYear": 1866,
+          "deathYear": 1925,
+          "lifespanText": "1866—1925年",
+          "status": "institution_biography",
+          "sourceIds": [
+            "modern-sun-life"
+          ],
+          "entity": null,
+          "precision": "year",
+          "limitations": "只显示可核查年份，不将卒年视为建陵、迁葬或发掘年；索引资料需持续复核。"
+        }
+      ],
+      "lifespanText": "1866—1925年",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "尚未取得足以判断墓室盗掘情况的直接资料；未核查不等于未被盗。",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-03"
+      }
+    },
+    {
+      "id": "modern-mao-hall",
+      "name": "毛主席纪念堂",
+      "aliases": [],
+      "era": "近现代",
+      "dynasty": "中华人民共和国",
+      "occupants": [
+        "毛泽东"
+      ],
+      "admin": "北京市东城区天安门广场南部",
+      "adminStatus": "来源概略行政区，未逐项核验现行区划",
+      "recordType": "single",
+      "parentId": null,
+      "nature": "commemorative",
+      "recognition": "documented",
+      "evidence": "天安门地区管理机构明确纪念堂及瞻仰大厅遗体安放，不按地下墓葬标注。",
+      "disputes": [
+        "毛泽东为近现代领导人，并非帝王；依用户指定纳入本图层。",
+        "此处为保存遗体的纪念堂，不是衣冠冢或仅有纪念建筑。"
+      ],
+      "sourceIds": [
+        "modern-mao",
+        "modern-mao-life",
+        "geo-more-Q1154819"
+      ],
+      "coordinates": {
+        "lat": 39.901025,
+        "lng": 116.39158055556,
+        "crs": "WGS84",
+        "status": "estimated_wgs84",
+        "sourceId": "geo-more-Q1154819",
+        "target": "毛主席纪念堂建筑区域（非瞻仰入口）",
+        "original": "q1154819$6EFD66E5-4855-441F-AFCE-DF8ED9BAFA56",
+        "method": "地理实体P625 Earth声明与机构所述所在地核对，采用区域参考位置",
+        "sourceDatumExplicit": true,
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.0000027777777777778,
+          "horizontalAccuracyMeters": null
+        },
+        "estimate": {
+          "basis": "机构地点描述与独立地理实体交叉核对",
+          "extent": "毛主席纪念堂建筑区域（非瞻仰入口）",
+          "confidence": "site",
+          "reviewedAt": "2026-10-03"
+        },
+        "limitation": "社区地理参考点，非入口、棺位或墓室实测中心，小数精度不等于测量准确度。"
+      },
+      "mapEligible": true,
+      "mapReason": "已补可复核WGS84区域参考点",
+      "reviewTasks": [
+        "补核现场入口、陵体或墓室中心及实测精度"
+      ],
+      "siteRole": "preserved_remains_memorial",
+      "periodText": "1977年开放；遗体安放于瞻仰大厅水晶棺",
+      "chronology": {
+        "sortYear": 1976,
+        "basis": "首位墓主生卒资料中的卒年；不是建陵或迁葬年"
+      },
+      "biographies": [
+        {
+          "label": "毛泽东",
+          "birthYear": 1893,
+          "deathYear": 1976,
+          "lifespanText": "1893—1976年",
+          "status": "institution_biography",
+          "sourceIds": [
+            "modern-mao-life"
+          ],
+          "entity": null,
+          "precision": "year",
+          "limitations": "只显示可核查年份，不将卒年视为建陵、迁葬或发掘年；索引资料需持续复核。"
+        }
+      ],
+      "lifespanText": "1893—1976年",
       "disturbance": {
         "status": "unknown",
         "label": "尚未核查",
