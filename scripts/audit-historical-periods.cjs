@@ -1,0 +1,17 @@
+const fs=require('node:fs'),path=require('node:path');
+const H=require('../historical-periods.js');
+const capitals=require('../western-regions.js').merge(require('../data/china-ancient-capitals.json'),require('../data/western-regions-36.json'));
+const tombs=require('../data/imperial-tombs/catalog.json');
+const prior=JSON.parse(fs.readFileSync(path.join(__dirname,'../output/historical-periods-before.json'),'utf8'));
+const rows=capitals.recordItems.map(x=>({category:'古都',name:x.name,dynasty:x.dynasty,sourceEra:x.era,capitalYears:x.capitalYears,regimeYears:x.regimeYears,period:H.capitalPeriod(x),previousPeriod:prior.find(y=>y.name===x.name)?.period,westernRegion:x.westernRegion?.name||null}));
+rows.push(...tombs.items.map(x=>({category:'皇陵',id:x.id,name:x.name,dynasty:x.dynasty,sourceEra:x.era,preqinPeriod:x.preqinPeriod||null,period:H.tombPeriod(x),nature:x.nature,chronology:x.chronology||null})));
+const missing=rows.filter(x=>!H.keys.includes(x.period));if(missing.length)throw Error(JSON.stringify(missing));
+const parents=new Set(tombs.items.map(x=>x.parentId).filter(Boolean));
+const checklist=tombs.items.filter(x=>x.recordType==='single'||!parents.has(x.id));
+const counts=H.keys.map(period=>({period,capitals:rows.filter(x=>x.category==='古都'&&x.period===period).length,tombs:tombs.items.filter(x=>H.tombPeriod(x)===period).length,tombChecklist:checklist.filter(x=>H.tombPeriod(x)===period).length}));
+const changed=rows.filter(x=>x.category==='古都'&&x.previousPeriod!==x.period);
+const report={reviewed:'2026-10-03',policy:['传说时代与史前仅合并展示为“传说”，保留原始性质与年代，史前不等同于传说。','朝代明确时保留政权归属；辽、南明、追尊陵等不按中原年界机械改名。','先秦都城以最早已给出的建都年代归组；跨期存续年代保留原文，不声称整段都属一个时代。','西域三十六国采用汉代名单口径归秦汉，龟兹、于阗等长期存续仍保留原记录。','缺失起年不得把止年当起年；年份支持负号、公元前、BC及世纪。','边疆与并立政权依据记录年代归入同期；未知资料不默认隋唐。','皇陵先秦细分与地图一致；邙山跨期群按最早秦汉展示，原始秦汉至五代范围保留。'],sources:['https://www.neac.gov.cn/seac/c103064/202101/1144132.shtml'],counts,changed,records:rows};
+fs.writeFileSync(path.join(__dirname,'../output/historical-period-audit.json'),JSON.stringify(report,null,2)+'\n');
+const md=['# 朝代划分核查（2026-10-03）','',`检查古都 ${capitals.recordItems.length} 条、皇陵 ${tombs.items.length} 条；皇陵打卡去除已拆分父群后 ${checklist.length} 条。修正古都展示归类 ${changed.length} 条。原始政权、年代及打卡名称保留。`,'',...report.policy.map(x=>'- '+x),'','汉代西域依据：[国家民委：西域都护府](https://www.neac.gov.cn/seac/c103064/202101/1144132.shtml)。其余分期依据现有目录年代及政权字段，本轮全面核对分类规则，未重新考证每条原始考古断代。','','|时代|古都记录|皇陵记录（含父群）|皇陵打卡|','|---|---:|---:|---:|',...counts.map(x=>`|${x.period}|${x.capitals}|${x.tombs}|${x.tombChecklist}|`),'','## 古都修正清单','','|政权／地点|原分类|新分类|原文建都年代|','|---|---|---|---|',...changed.map(x=>`|${x.dynasty}／${x.name}|${x.previousPeriod}|${x.period}|${x.capitalYears}|`)];
+fs.writeFileSync(path.join(__dirname,'../output/historical-period-audit.md'),md.join('\n')+'\n');
+console.log(`Audited ${rows.length} records; ${changed.length} changed capital classifications; no unclassified records.`);

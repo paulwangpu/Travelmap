@@ -1,0 +1,865 @@
+{
+  "reviewedAt": "2026-10-03",
+  "policy": "明确白名单；新增索引不自动批准；历史性质独立核查",
+  "approved": [
+    "legend-huangdi",
+    "legend-yandi",
+    "legend-taihao",
+    "legend-shun-yuncheng",
+    "legend-shun-ningyuan",
+    "legend-yu",
+    "yin-kings",
+    "qin-gong-1",
+    "zhao-kings",
+    "chu-wuwangdun",
+    "zhongshan-cuo",
+    "qin-first",
+    "han-chang",
+    "han-an",
+    "han-ba",
+    "han-yang",
+    "han-mao",
+    "han-ping",
+    "han-du",
+    "han-wei",
+    "han-yan",
+    "han-yi",
+    "han-kang",
+    "han-yuan",
+    "han-gong",
+    "han-xian",
+    "han-huai",
+    "han-wen",
+    "wei-gao",
+    "wei-xizhu-m2",
+    "jin-chongyang",
+    "jin-junyang",
+    "wei-chang",
+    "wei-jing",
+    "wei-ding",
+    "wei-jing2",
+    "zhou-xiao",
+    "liang-jian",
+    "sui-yang",
+    "sui-tai",
+    "tang-xian",
+    "tang-zhao",
+    "tang-qian",
+    "tang-ding",
+    "tang-qiao",
+    "tang-tai",
+    "tang-yuan",
+    "tang-chong",
+    "tang-feng",
+    "tang-jing",
+    "tang-guang",
+    "tang-zhuang",
+    "tang-zhang",
+    "tang-duan",
+    "tang-zhen",
+    "tang-jian2",
+    "tang-jing2",
+    "shu-yong",
+    "nantang2",
+    "nanhan-de",
+    "nanhan-kang",
+    "later-tang-hui",
+    "song8",
+    "song-an",
+    "song-chang",
+    "song-xi",
+    "song-ding",
+    "song-zhao",
+    "song-hou",
+    "song-yu",
+    "song-tai",
+    "song6",
+    "liao-zu",
+    "liao-huai",
+    "liao-qing",
+    "jin-group",
+    "xixia9",
+    "xixia-1",
+    "xixia-2",
+    "xixia-3",
+    "xixia-4",
+    "xixia-5",
+    "xixia-6",
+    "xixia-7",
+    "xixia-8",
+    "xixia-9",
+    "yuan-genghis",
+    "ming13",
+    "ming-chang",
+    "ming-xian",
+    "ming-jing",
+    "ming-yu",
+    "ming-mao",
+    "ming-tai",
+    "ming-kang",
+    "ming-yong",
+    "ming-zhao",
+    "ming-ding",
+    "ming-qing",
+    "ming-de",
+    "ming-si",
+    "ming-xiao",
+    "ming-xianling",
+    "ming-zu",
+    "ming-huang",
+    "qing-east",
+    "qing-xiao",
+    "qing-jing",
+    "qing-yu",
+    "qing-ding",
+    "qing-hui",
+    "qing-west",
+    "qing-tai",
+    "qing-chang",
+    "qing-mu",
+    "qing-chong",
+    "qing-yong",
+    "qing-fu",
+    "qing-zhao",
+    "qin-second",
+    "han-haihun",
+    "wuyue-qian",
+    "min-xuan",
+    "houshu-he",
+    "chen-wanan",
+    "southern-song-chuning",
+    "zhou-jue",
+    "song-shaodi",
+    "tubo-kings",
+    "legend-two",
+    "zhou-ling",
+    "zhou-three",
+    "zhou-xianyang",
+    "yue-yinshan",
+    "wu-helv",
+    "chu-xiongjia",
+    "chu-you",
+    "qi-tian",
+    "qin-east",
+    "jin-hou",
+    "lu-fangshan",
+    "xichu-xiang-dongping",
+    "xichu-xiang-wujiang",
+    "tang-shun",
+    "nanyue-wen",
+    "shang-fuhao",
+    "zeng-yi",
+    "guo-kings",
+    "qi-jing",
+    "qing-zhaoxi",
+    "qing-cixi",
+    "qing-xiaodong",
+    "ming-luwang",
+    "ming-shaowu",
+    "han-yuan-tiexie",
+    "han-xianjie",
+    "han-jing-east",
+    "han-xuan",
+    "wei-jiemin",
+    "han-sanhan",
+    "han-m1048",
+    "han-m1055",
+    "han-m1071",
+    "yuan-burkhan",
+    "zeng-yejiashan",
+    "liao-xian",
+    "liao-qian",
+    "yan-liulihe",
+    "liao-yongan",
+    "houjin-xian",
+    "houhan-group",
+    "tang-gong",
+    "zhou-jincun",
+    "zhou-zhoushan",
+    "zhou-wangcheng",
+    "shu-sanxingdui-search",
+    "shu-jinsha-search",
+    "shu-commercial-boat",
+    "rui-liangdaicun",
+    "rui-liujiawa",
+    "ba-dahekou",
+    "ba-xiaotianxi",
+    "rong-majiayuan",
+    "zhou-lingpo",
+    "early-liangzhu",
+    "early-taosi",
+    "early-shimao",
+    "early-erlitou-search",
+    "early-panlongcheng-search",
+    "early-xingan",
+    "moghul-tughluq",
+    "moghul-wais",
+    "yarkand-khans",
+    "karakhanid-satuq",
+    "hami-hui-kings",
+    "cheshi-goubei",
+    "tuyuhun-reshui",
+    "han-chan",
+    "chu-yi",
+    "shu-hui",
+    "wu-jiang",
+    "zhou-song",
+    "zhou-qing",
+    "zhou-shun",
+    "ming-jingtai",
+    "legend-shaohao"
+  ],
+  "wikidataApproved": [
+    "chen-wanan",
+    "han-haihun",
+    "houshu-he",
+    "min-xuan",
+    "qin-second",
+    "song-shaodi",
+    "southern-song-chuning",
+    "tubo-kings",
+    "wuyue-qian",
+    "han-chan",
+    "chu-yi",
+    "legend-shaohao",
+    "ming-jingtai",
+    "zhou-qing",
+    "zhou-shun",
+    "zhou-song",
+    "qing-yong",
+    "chu-wuwangdun",
+    "han-an",
+    "han-chang",
+    "han-du",
+    "han-mao",
+    "han-wei",
+    "han-yan",
+    "han-yang",
+    "legend-taihao",
+    "legend-yu",
+    "liang-jian",
+    "liao-huai",
+    "liao-qing",
+    "liao-zu",
+    "ming-chang",
+    "ming-de",
+    "ming-ding",
+    "ming-huang",
+    "ming-jing",
+    "ming-kang",
+    "ming-mao",
+    "ming-qing",
+    "ming-si",
+    "ming-tai",
+    "ming-xian",
+    "ming-xiao",
+    "ming-yong",
+    "ming-yu",
+    "ming-zhao",
+    "ming-zu",
+    "ming13",
+    "nantang2",
+    "qin-first",
+    "qing-chang",
+    "qing-chong",
+    "qing-ding",
+    "qing-east",
+    "qing-fu",
+    "qing-hui",
+    "qing-jing",
+    "qing-mu",
+    "qing-tai",
+    "qing-west",
+    "qing-xiao",
+    "qing-yu",
+    "qing-zhao",
+    "shu-yong",
+    "song-an",
+    "song-chang",
+    "song-ding",
+    "song-hou",
+    "song-tai",
+    "song-xi",
+    "song-yu",
+    "song-zhao",
+    "song6",
+    "song8",
+    "sui-tai",
+    "sui-yang",
+    "tang-ding",
+    "tang-qian",
+    "tang-qiao",
+    "tang-xian",
+    "tang-zhao",
+    "wei-gao",
+    "xixia9",
+    "yuan-genghis",
+    "zhao-kings",
+    "zhou-three",
+    "zhou-xianyang",
+    "yue-yinshan",
+    "wu-helv",
+    "qi-tian",
+    "qin-east",
+    "lu-fangshan",
+    "jin-hou",
+    "shang-fuhao",
+    "zeng-yi",
+    "guo-kings",
+    "qing-zhaoxi"
+  ],
+  "supplementalApproved": [
+    {
+      "id": "legend-huangdi",
+      "sourceId": "geo-osm-549391815",
+      "method": "OSM索引区域点，结合目录机构资料核对地点"
+    },
+    {
+      "id": "legend-yandi",
+      "sourceId": "geo-osm-527139704",
+      "method": "OSM索引区域点，结合目录机构资料核对地点"
+    },
+    {
+      "id": "legend-shun-yuncheng",
+      "sourceId": "geo-reviewed-legend-shun-yuncheng",
+      "method": "OSM独立陵墓实体参考坐标，核对名称与行政区，非墓室测绘"
+    },
+    {
+      "id": "legend-shun-ningyuan",
+      "sourceId": "geo-reviewed-legend-shun-ningyuan",
+      "method": "高德POI经GCJ-02反解为WGS84，核对机构资料中的村址"
+    },
+    {
+      "id": "yin-kings",
+      "sourceId": "geo-osm-W503149933",
+      "method": "OSM实体索引坐标，结合机构资料核对现存陵墓或原址展示区"
+    },
+    {
+      "id": "qin-gong-1",
+      "sourceId": "geo-amap-qin-gong-1",
+      "method": "高德POI经项目GCJ-02迭代反解为WGS84；区域参考点，不是现场测绘"
+    },
+    {
+      "id": "zhongshan-cuo",
+      "sourceId": "geo-estimate-zhongshan",
+      "method": "采用中山王墓陵区WGS84索引，目录考古资料认定一号墓墓主，但索引未拆分各墓"
+    },
+    {
+      "id": "han-ba",
+      "sourceId": "geo-reviewed-han-ba",
+      "method": "OSM实体坐标与机构所述现址交叉核对"
+    },
+    {
+      "id": "han-ping",
+      "sourceId": "geo-hantang-table",
+      "method": "高德API原始坐标采用项目GCJ-02迭代反解为WGS84；表中同名景陵/靖陵按行政区区别"
+    },
+    {
+      "id": "han-yi",
+      "sourceId": "geo-hantang-table",
+      "method": "高德API原始坐标采用项目GCJ-02迭代反解为WGS84；表中同名景陵/靖陵按行政区区别"
+    },
+    {
+      "id": "han-kang",
+      "sourceId": "geo-hantang-table",
+      "method": "高德API原始坐标采用项目GCJ-02迭代反解为WGS84；表中同名景陵/靖陵按行政区区别"
+    },
+    {
+      "id": "han-yuan",
+      "sourceId": "geo-reviewed-han-yuan",
+      "method": "OSM独立陵墓实体参考坐标，核对名称与行政区，非墓室测绘"
+    },
+    {
+      "id": "han-gong",
+      "sourceId": "geo-reviewed-han-gong",
+      "method": "OSM独立陵墓实体参考坐标，核对名称与行政区，非墓室测绘"
+    },
+    {
+      "id": "han-xian",
+      "sourceId": "luoyang-tomb-protection-text",
+      "method": "原始保护文本公布独立墓葬保护中心，未注明坐标基准，按WGS84区域估计保存"
+    },
+    {
+      "id": "han-huai",
+      "sourceId": "geo-reviewed-han-huai",
+      "method": "OSM独立陵墓实体参考坐标，核对名称与行政区，非墓室测绘"
+    },
+    {
+      "id": "han-wen",
+      "sourceId": "geo-reviewed-han-wen",
+      "method": "OSM独立陵墓实体参考坐标，核对名称与行政区，非墓室测绘"
+    },
+    {
+      "id": "wei-xizhu-m2",
+      "sourceId": "geo-missing-Q131522427",
+      "method": "已有考古或文保来源确定地点，P625 Earth仅提供对应遗址区域参考位置"
+    },
+    {
+      "id": "jin-chongyang",
+      "sourceId": "luoyang-jin-plan",
+      "method": "原始保护文本公布独立墓葬保护中心，未注明坐标基准，按WGS84区域估计保存"
+    },
+    {
+      "id": "jin-junyang",
+      "sourceId": "luoyang-jin-plan",
+      "method": "原始保护文本公布独立墓葬保护中心，未注明坐标基准，按WGS84区域估计保存"
+    },
+    {
+      "id": "wei-chang",
+      "sourceId": "geo-reviewed-wei-chang",
+      "method": "OSM独立陵墓实体参考坐标，核对名称与行政区，非墓室测绘"
+    },
+    {
+      "id": "wei-jing",
+      "sourceId": "luoyang-northwei-plan",
+      "method": "原始保护文本公布独立墓葬保护中心，未注明坐标基准，按WGS84区域估计保存"
+    },
+    {
+      "id": "wei-ding",
+      "sourceId": "luoyang-tomb-protection-text",
+      "method": "原始保护文本公布独立墓葬保护中心，未注明坐标基准，按WGS84区域估计保存"
+    },
+    {
+      "id": "wei-jing2",
+      "sourceId": "luoyang-northwei-plan",
+      "method": "原始保护文本公布独立墓葬保护中心，未注明坐标基准，按WGS84区域估计保存"
+    },
+    {
+      "id": "zhou-xiao",
+      "sourceId": "geo-reviewed-zhou-xiao",
+      "method": "OSM独立陵墓实体参考坐标，核对名称与行政区，非墓室测绘"
+    },
+    {
+      "id": "tang-tai",
+      "sourceId": "geo-hantang-table",
+      "method": "高德API原始坐标采用项目GCJ-02迭代反解为WGS84；表中同名景陵/靖陵按行政区区别"
+    },
+    {
+      "id": "tang-yuan",
+      "sourceId": "geo-hantang-table",
+      "method": "高德API原始坐标采用项目GCJ-02迭代反解为WGS84；表中同名景陵/靖陵按行政区区别"
+    },
+    {
+      "id": "tang-chong",
+      "sourceId": "geo-hantang-table",
+      "method": "高德API原始坐标采用项目GCJ-02迭代反解为WGS84；表中同名景陵/靖陵按行政区区别"
+    },
+    {
+      "id": "tang-feng",
+      "sourceId": "geo-hantang-table",
+      "method": "高德API原始坐标采用项目GCJ-02迭代反解为WGS84；表中同名景陵/靖陵按行政区区别"
+    },
+    {
+      "id": "tang-jing",
+      "sourceId": "geo-hantang-table",
+      "method": "高德API原始坐标采用项目GCJ-02迭代反解为WGS84；表中同名景陵/靖陵按行政区区别"
+    },
+    {
+      "id": "tang-guang",
+      "sourceId": "geo-hantang-table",
+      "method": "高德API原始坐标采用项目GCJ-02迭代反解为WGS84；表中同名景陵/靖陵按行政区区别"
+    },
+    {
+      "id": "tang-zhuang",
+      "sourceId": "geo-hantang-table",
+      "method": "高德API原始坐标采用项目GCJ-02迭代反解为WGS84；表中同名景陵/靖陵按行政区区别"
+    },
+    {
+      "id": "tang-zhang",
+      "sourceId": "geo-hantang-table",
+      "method": "高德API原始坐标采用项目GCJ-02迭代反解为WGS84；表中同名景陵/靖陵按行政区区别"
+    },
+    {
+      "id": "tang-duan",
+      "sourceId": "geo-hantang-table",
+      "method": "高德API原始坐标采用项目GCJ-02迭代反解为WGS84；表中同名景陵/靖陵按行政区区别"
+    },
+    {
+      "id": "tang-zhen",
+      "sourceId": "geo-hantang-table",
+      "method": "高德API原始坐标采用项目GCJ-02迭代反解为WGS84；表中同名景陵/靖陵按行政区区别"
+    },
+    {
+      "id": "tang-jian2",
+      "sourceId": "geo-hantang-table",
+      "method": "高德API原始坐标采用项目GCJ-02迭代反解为WGS84；表中同名景陵/靖陵按行政区区别"
+    },
+    {
+      "id": "tang-jing2",
+      "sourceId": "geo-hantang-table",
+      "method": "高德API原始坐标采用项目GCJ-02迭代反解为WGS84；表中同名景陵/靖陵按行政区区别"
+    },
+    {
+      "id": "nanhan-de",
+      "sourceId": "nanhan-relative-location",
+      "method": "官方名录记录两陵相距约800米，广州考古公布资料介绍德陵位于康陵以北的青岗北坡；从康陵原址展厅参考点向北推算"
+    },
+    {
+      "id": "nanhan-kang",
+      "sourceId": "geo-estimate-nanhan-kang",
+      "method": "原址保护展厅OSM索引与官方康陵保护设施地块核对，展厅参考点尚未直接对应玄宫中心"
+    },
+    {
+      "id": "later-tang-hui",
+      "sourceId": "luoyang-tomb-protection-text",
+      "method": "原始保护文本公布独立墓葬保护中心，未注明坐标基准，按WGS84区域估计保存"
+    },
+    {
+      "id": "jin-group",
+      "sourceId": "geo-beijing-jin",
+      "method": "公开地理标注与官方主陵区所在村、山位置交叉核对；只定位遗址区域，不将陵名与单墓一一对应"
+    },
+    {
+      "id": "xixia-1",
+      "sourceId": "geo-reviewed-xixia-1",
+      "method": "与官方保护规划的编号体系及南北分布核对；采用独立OSM地理实体，不赋予未经确认的墓主"
+    },
+    {
+      "id": "xixia-2",
+      "sourceId": "geo-reviewed-xixia-2",
+      "method": "与官方保护规划的编号体系及南北分布核对；采用独立OSM地理实体，不赋予未经确认的墓主"
+    },
+    {
+      "id": "xixia-3",
+      "sourceId": "geo-reviewed-xixia-3",
+      "method": "与官方保护规划的编号体系及南北分布核对；采用独立OSM地理实体，不赋予未经确认的墓主"
+    },
+    {
+      "id": "xixia-4",
+      "sourceId": "geo-reviewed-xixia-4",
+      "method": "与官方保护规划的编号体系及南北分布核对；采用独立OSM地理实体，不赋予未经确认的墓主"
+    },
+    {
+      "id": "xixia-5",
+      "sourceId": "geo-reviewed-xixia-5",
+      "method": "与官方保护规划的编号体系及南北分布核对；采用独立OSM地理实体，不赋予未经确认的墓主"
+    },
+    {
+      "id": "xixia-6",
+      "sourceId": "geo-reviewed-xixia-6",
+      "method": "与官方保护规划的编号体系及南北分布核对；采用独立OSM地理实体，不赋予未经确认的墓主"
+    },
+    {
+      "id": "xixia-7",
+      "sourceId": "geo-reviewed-xixia-7",
+      "method": "与官方保护规划的编号体系及南北分布核对；采用独立OSM地理实体，不赋予未经确认的墓主"
+    },
+    {
+      "id": "xixia-8",
+      "sourceId": "geo-reviewed-xixia-8",
+      "method": "与官方保护规划的编号体系及南北分布核对；采用独立OSM地理实体，不赋予未经确认的墓主"
+    },
+    {
+      "id": "xixia-9",
+      "sourceId": "geo-reviewed-xixia-9",
+      "method": "与官方保护规划的编号体系及南北分布核对；采用独立OSM地理实体，不赋予未经确认的墓主"
+    },
+    {
+      "id": "ming-xianling",
+      "sourceId": "geo-estimate-xianling",
+      "method": "官方给出112°37′50″—112°38′09″、31°12′20″—31°13′00″，取范围中点，基准未明"
+    },
+    {
+      "id": "zhou-jue",
+      "sourceId": "geo-estimate-zhou-jue",
+      "method": "西咸新区公布宇文觉墓位于北贺村，结合GeoNames同名村地理记录作村域估计"
+    },
+    {
+      "id": "legend-two",
+      "sourceId": "geo-reviewed-legend-two",
+      "method": "核对内黄梁庄镇祭祀陵园位置，保留祭祀纪念陵认定"
+    },
+    {
+      "id": "zhou-ling",
+      "sourceId": "geo-zhou-ling",
+      "method": "MediaWiki Earth GeoData（WGS84约定）；与周山西端位置及三王陵东部区别核对"
+    },
+    {
+      "id": "chu-xiongjia",
+      "sourceId": "geo-amap-chu-xiongjia",
+      "method": "高德POI经项目GCJ-02迭代反解为WGS84；区域参考点，不是现场测绘"
+    },
+    {
+      "id": "chu-you",
+      "sourceId": "chu-you-relative-location",
+      "method": "根据考古人员所述武王墩位于李三孤堆正北14.6公里，从武王墩遗址代表点保持经度不变向南推算，纬度按每度约111.32公里换算"
+    },
+    {
+      "id": "xichu-xiang-dongping",
+      "sourceId": "geo-estimate-xiang-dongping",
+      "method": "地方志明确遗址在霸王墓周围，以公布的分级经纬度按WGS84区域估计，不声称墓冢中心"
+    },
+    {
+      "id": "xichu-xiang-wujiang",
+      "sourceId": "geo-estimate-xiang-wujiang",
+      "method": "OSM祠园坐标与南京大学所述凤凰山位置核对，以祠园代表点估计墓区"
+    },
+    {
+      "id": "tang-shun",
+      "sourceId": "geo-reviewed-tang-shun",
+      "method": "OSM独立陵墓实体参考坐标，核对名称与行政区，非墓室测绘"
+    },
+    {
+      "id": "nanyue-wen",
+      "sourceId": "geo-osm-W298795705",
+      "method": "OSM实体索引坐标，结合机构资料核对现存陵墓或原址展示区"
+    },
+    {
+      "id": "qi-jing",
+      "sourceId": "geo-estimate-qijing",
+      "method": "根据政府资料所述五号墓与殉马坑关系，用原址殉马坑坐标估计主墓区域，未用迁址博物馆"
+    },
+    {
+      "id": "qing-cixi",
+      "sourceId": "geo-osm-W506485651",
+      "method": "OSM实体索引坐标，结合机构资料核对现存陵墓或原址展示区"
+    },
+    {
+      "id": "qing-xiaodong",
+      "sourceId": "geo-reviewed-qing-xiaodong",
+      "method": "OSM实体坐标与机构所述现址交叉核对"
+    },
+    {
+      "id": "ming-luwang",
+      "sourceId": "geo-kinmen-luwang",
+      "method": "观光机构旅游开放数据经纬度按WGS84约定，与小径现墓行政区交叉核对"
+    },
+    {
+      "id": "ming-shaowu",
+      "sourceId": "geo-osm-N9831084912",
+      "method": "OSM实体索引坐标，结合机构资料核对现存陵墓或原址展示区"
+    },
+    {
+      "id": "han-yuan-tiexie",
+      "sourceId": "geo-reviewed-han-yuan-tiexie",
+      "method": "高德POI经GCJ-02反解为WGS84，核对机构资料中的村址"
+    },
+    {
+      "id": "han-xianjie",
+      "sourceId": "east-han-plan-coordinates",
+      "method": "政府公开资料引用保护规划所列独立大墓中心经纬度，基准未明，按WGS84区域估计处理"
+    },
+    {
+      "id": "han-jing-east",
+      "sourceId": "east-han-plan-coordinates",
+      "method": "政府公开资料引用保护规划所列独立大墓中心经纬度，基准未明，按WGS84区域估计处理"
+    },
+    {
+      "id": "han-xuan",
+      "sourceId": "east-han-plan-coordinates",
+      "method": "政府公开资料引用保护规划所列独立大墓中心经纬度，基准未明，按WGS84区域估计处理"
+    },
+    {
+      "id": "wei-jiemin",
+      "sourceId": "luoyang-northwei-plan",
+      "method": "政府公开资料公布张岭村东南帝陵重点保护区独立中心，未明确坐标基准"
+    },
+    {
+      "id": "han-sanhan",
+      "sourceId": "geo-reviewed-han-sanhan",
+      "method": "OSM独立陵墓实体参考坐标，核对名称与行政区，非墓室测绘"
+    },
+    {
+      "id": "han-m1048",
+      "sourceId": "east-han-plan-coordinates",
+      "method": "政府公开资料引用保护规划所列独立大墓中心经纬度，基准未明，按WGS84区域估计处理"
+    },
+    {
+      "id": "han-m1055",
+      "sourceId": "east-han-plan-coordinates",
+      "method": "政府公开资料引用保护规划所列独立大墓中心经纬度，基准未明，按WGS84区域估计处理"
+    },
+    {
+      "id": "han-m1071",
+      "sourceId": "east-han-plan-coordinates",
+      "method": "政府公开资料引用保护规划所列独立大墓中心经纬度，基准未明，按WGS84区域估计处理"
+    },
+    {
+      "id": "yuan-burkhan",
+      "sourceId": "yuan-burkhan",
+      "method": "采用UNESCO公布的圣地代表经纬度作WGS84区域参考；资料只记传说葬地关联，未确认实际墓址"
+    },
+    {
+      "id": "zeng-yejiashan",
+      "sourceId": "yejiashan-location",
+      "method": "考古保护论文公布墓地经纬度，原始基准未明，按WGS84区域估计处理"
+    },
+    {
+      "id": "liao-xian",
+      "sourceId": "liao-protection-transcript",
+      "method": "辽宁省政府保护范围通知附件转录的陵前遗址参考经纬度，原附件数值尚待再次直接核对且基准未明；作为WGS84区域估计"
+    },
+    {
+      "id": "liao-qian",
+      "sourceId": "liao-protection-transcript",
+      "method": "辽宁省政府保护范围通知附件转录的陵前遗址参考经纬度，原附件数值尚待再次直接核对且基准未明；作为WGS84区域估计"
+    },
+    {
+      "id": "yan-liulihe",
+      "sourceId": "geo-beijing-liulihe",
+      "method": "网页实读原址馆区代表坐标，结合政府保护规划的黄土坡墓葬Ⅱ区与馆区对应，仅作WGS84区域估计；未直接测绘单墓，原网页坐标基准未明"
+    },
+    {
+      "id": "liao-yongan",
+      "sourceId": "geo-beijing-shuangqing",
+      "method": "机构文史记辽王坟在双清西南上坡、蟾蜍峰附近；以有原始摄影地理记录的双清作关联区域锚点，不任意偏移或声称找到了旧陵"
+    },
+    {
+      "id": "houjin-xian",
+      "sourceId": "geo-missing-Q10566151",
+      "method": "已有考古或文保来源确定地点，P625 Earth仅提供对应遗址区域参考位置"
+    },
+    {
+      "id": "houhan-group",
+      "sourceId": "houhan-survey-coordinate",
+      "method": "原项目敏感目标表提供投影坐标，结合报告UTM记述和所在经度推断49N带，按WGS84逆算；带号与大地基准属推断，不作精测坐标"
+    },
+    {
+      "id": "tang-gong",
+      "sourceId": "geo-missing-gong",
+      "method": "OSM陵墓实体坐标与河南省保护规划交叉核对，行政区采用偃师缑氏镇"
+    },
+    {
+      "id": "zhou-jincun",
+      "sourceId": "jincun-old-coordinate",
+      "method": "历史坐标转引到整角分，与洛阳考古研究院白马寺镇金村、汉魏故城北部的地望交叉核对；按WGS84区域估计展示。原书尚待直接校核，非现代GPS实测，也不指向某座墓"
+    },
+    {
+      "id": "zhou-zhoushan",
+      "sourceId": "geo-missing-zhoushan",
+      "method": "东周王城研究提出周山王陵区，采用周山森林公园地理范围作区域参考"
+    },
+    {
+      "id": "zhou-wangcheng",
+      "sourceId": "geo-missing-wangcheng",
+      "method": "东周王城研究明确春秋王陵区地望，以广场POI经GCJ-02反解作区域参考"
+    },
+    {
+      "id": "shu-sanxingdui-search",
+      "sourceId": "shu-tentative",
+      "method": "度分秒转换，作为WGS84近似区域参考；提交页未明示坐标基准"
+    },
+    {
+      "id": "shu-jinsha-search",
+      "sourceId": "shu-tentative",
+      "method": "度分秒转换，作为WGS84近似区域参考；提交页未明示坐标基准"
+    },
+    {
+      "id": "shu-commercial-boat",
+      "sourceId": "shu-tentative",
+      "method": "度分秒转换，作为WGS84近似区域参考；提交页未明示坐标基准"
+    },
+    {
+      "id": "rui-liangdaicun",
+      "sourceId": "geo-rui-liangdaicun",
+      "method": "沿用项目GCJ-02迭代反解为WGS84；机构地望交叉核对，仅区域参考"
+    },
+    {
+      "id": "rui-liujiawa",
+      "sourceId": "geo-missing-Q133309358",
+      "method": "已有考古或文保来源确定地点，P625 Earth仅提供对应遗址区域参考位置"
+    },
+    {
+      "id": "ba-dahekou",
+      "sourceId": "geo-missing-Q133309238",
+      "method": "已有考古或文保来源确定地点，P625 Earth仅提供对应遗址区域参考位置"
+    },
+    {
+      "id": "ba-xiaotianxi",
+      "sourceId": "geo-ba-xiaotianxi",
+      "method": "沿用项目GCJ-02迭代反解为WGS84；机构地望交叉核对，仅区域参考"
+    },
+    {
+      "id": "rong-majiayuan",
+      "sourceId": "geo-missing-majiayuan",
+      "method": "文物局公开墓地经纬度按WGS84作区域估计，原坐标基准尚待核"
+    },
+    {
+      "id": "zhou-lingpo",
+      "sourceId": "geo-missing-Q991847",
+      "method": "已有考古或文保来源确定地点，P625 Earth仅提供对应遗址区域参考位置"
+    },
+    {
+      "id": "early-liangzhu",
+      "sourceId": "early-liangzhu-map",
+      "method": "机构或公开地理数据代表点与考古地望交叉核对；只保留遗址区域参考"
+    },
+    {
+      "id": "early-taosi",
+      "sourceId": "early-taosi-anchor",
+      "method": "机构或公开地理数据代表点与考古地望交叉核对；只保留遗址区域参考"
+    },
+    {
+      "id": "early-shimao",
+      "sourceId": "early-shimao-geo",
+      "method": "机构或公开地理数据代表点与考古地望交叉核对；只保留遗址区域参考"
+    },
+    {
+      "id": "early-erlitou-search",
+      "sourceId": "early-erlitou-geo",
+      "method": "机构或公开地理数据代表点与考古地望交叉核对；只保留遗址区域参考"
+    },
+    {
+      "id": "early-panlongcheng-search",
+      "sourceId": "early-panlongcheng-map",
+      "method": "机构或公开地理数据代表点与考古地望交叉核对；只保留遗址区域参考"
+    },
+    {
+      "id": "early-xingan",
+      "sourceId": "geo-missing-Q400087",
+      "method": "已有考古或文保来源确定地点，P625 Earth仅提供对应遗址区域参考位置"
+    },
+    {
+      "id": "moghul-tughluq",
+      "sourceId": "geo-west-Q1455687",
+      "method": "机构所述地望与P625 Earth地理实体交叉核对"
+    },
+    {
+      "id": "moghul-wais",
+      "sourceId": "geo-west-Q2364732",
+      "method": "机构所述地望与P625 Earth地理实体交叉核对"
+    },
+    {
+      "id": "yarkand-khans",
+      "sourceId": "geo-west-yarkand",
+      "method": "王陵POI原GCJ-02坐标反解为WGS84区域参考"
+    },
+    {
+      "id": "karakhanid-satuq",
+      "sourceId": "west-satuq-boundary",
+      "method": "2012年文保通知GPS四至均值，坐标基准未明，按WGS84作区域估计"
+    },
+    {
+      "id": "hami-hui-kings",
+      "sourceId": "geo-west-Q1551275",
+      "method": "机构所述地望与P625 Earth地理实体交叉核对"
+    },
+    {
+      "id": "cheshi-goubei",
+      "sourceId": "geo-west-Q1330939",
+      "method": "机构所述地望与P625 Earth地理实体交叉核对"
+    },
+    {
+      "id": "tuyuhun-reshui",
+      "sourceId": "geo-west-Q2145631",
+      "method": "机构所述地望与P625 Earth地理实体交叉核对"
+    },
+    {
+      "id": "shu-hui",
+      "sourceId": "geo-osm-1203841496",
+      "method": "OSM索引区域点，结合目录机构资料核对地点"
+    },
+    {
+      "id": "wu-jiang",
+      "sourceId": "geo-osm-791617219",
+      "method": "OSM索引区域点，结合目录机构资料核对地点"
+    }
+  ],
+  "rejected": {
+    "han-west": "分布广泛的西汉帝陵不能用阳陵点替代",
+    "nanhan2": "实体为博物馆，不是二陵墓址",
+    "nantang-shun": "名称重定向为二陵陵群，不能复制给顺陵",
+    "tang18": "代表坐标指向十八陵之一，不能代表整个分布"
+  },
+  "datumDocumentation": "https://www.wikidata.org/wiki/Help:Data_type#Globe_coordinate"
+}

@@ -12,6 +12,7 @@
   --rose: #b84d63;
   --deep: #163f38;
   --shadow: 0 18px 45px rgba(26, 35, 31, 0.12);
+  --font-ui: Inter, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
 }
 
 /* Keep the compact first-row actions inside their assigned grid columns. */
@@ -56,7 +57,7 @@ body {
   height: 100%;
   background: var(--bg);
   color: var(--ink);
-  font-family: Inter, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  font-family: var(--font-ui);
   overflow: hidden;
 }
 
@@ -7280,9 +7281,11 @@ button:hover {
   line-height: 11px !important;
 }
 
-#mapBaseOpacityValue {
-  flex: 0 0 25px;
-  width: 25px;
+.map-opacity-number {
+  display: flex;
+  align-items: center;
+  flex: 0 0 44px;
+  gap: 2px;
   color: #53655f;
   font: inherit;
   font-size: 11px !important;
@@ -7291,6 +7294,26 @@ button:hover {
   line-height: 11px !important;
   text-align: right;
 }
+
+#mapBaseOpacityNumber {
+  width: 34px !important;
+  min-width: 34px !important;
+  height: 20px !important;
+  min-height: 20px !important;
+  padding: 1px 3px !important;
+  border: 1px solid #cbd5cf;
+  border-radius: 4px;
+  background: #fff;
+  color: #263d33;
+  font-size: 11px !important;
+  line-height: 16px;
+  text-align: right;
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+#mapBaseOpacityNumber::-webkit-inner-spin-button,
+#mapBaseOpacityNumber::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+#mapBaseOpacityNumber:focus { outline: 2px solid #74998a; outline-offset: 1px; }
 
 #mapBaseOpacity {
   appearance: none;
@@ -7392,6 +7415,41 @@ button:hover {
 .earthquake-year-precision summary { cursor: pointer; font-size: 12px; color: #176e54; padding: 3px 0 5px; font-variant-numeric: tabular-nums; }
 .earthquake-year-precision .earthquake-years { margin-bottom: 7px; }
 .compact-toggle-pair { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:2px; min-width:0; }
+.compact-toggle-pair label:has(#showImperialTombsOnMap) { font-size:9px; gap:2px; padding-left:2px; padding-right:2px; }
+.compact-toggle-pair #showImperialTombsOnMap { width:10px; height:10px; flex-shrink:0; }
+.imperial-tombs-legend { max-width:320px; }
+.imperial-tomb-card-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:8px; padding:10px; }
+.imperial-tomb-subsection > h4 { display:flex; align-items:center; justify-content:space-between; gap:12px; margin:0; padding:10px 12px 0; color:#465b51; font-size:14px; font-weight:600; }
+.imperial-tomb-subsection > h4 > span { color:#6a7b72; font-size:12px; font-weight:400; }
+.imperial-tomb-subsection + .imperial-tomb-subsection { border-top:1px solid #e2e9e5; }
+.imperial-tomb-card { display:flex; flex-direction:column; align-items:stretch; gap:7px; min-width:0; width:100%; padding:14px 16px; border:1px solid #d9e3de; border-radius:10px; background:#fff; color:#243b32; text-align:left; white-space:normal; font-size:13px; line-height:1.5; cursor:pointer; }
+.imperial-tomb-card:hover { border-color:#87ad9c; background:#f8fbf9; }
+.imperial-tomb-card.done { border-color:#72a48c; background:#eef7f1; }
+.imperial-tomb-card-head { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+.imperial-tomb-card-head strong { min-width:0; font-size:15px; line-height:1.4; overflow-wrap:anywhere; }
+.imperial-tomb-card-head .us-park-card-status { flex:none; font-size:11px; }
+.imperial-tomb-card-owner,.imperial-tomb-card-location { display:block; font-weight:400; overflow-wrap:anywhere; }
+.imperial-tomb-card-owner { color:#465b51; }
+.imperial-tomb-card-lifetime { display:block; color:#5f7368; font-size:12px; font-weight:400; line-height:1.45; overflow-wrap:anywhere; }
+.imperial-tomb-card-location { color:#6a7b72; font-size:12px; }
+.imperial-tomb-card-tags { display:flex; flex-wrap:wrap; gap:5px 8px; margin-top:auto; padding-top:3px; font-size:11px; font-weight:400; color:#5f7368; }
+.imperial-tomb-card-tags > span { padding:2px 7px; border-radius:5px; background:#f0f5f2; }
+@media (max-width:700px) { .imperial-tomb-card-grid { grid-template-columns:minmax(0,1fr); gap:10px; padding:10px; } }
+.imperial-tombs-legend[hidden] { display:none; }
+.imperial-tombs-legend .great-wall-section + .great-wall-section { margin-top:5px; }
+.tomb-legend-options { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:3px 5px; padding-top:4px; padding-left:17px; }
+.tomb-legend-options label { display:flex; align-items:center; gap:3px; min-width:0; font-size:9px; line-height:1.2; font-weight:400; cursor:pointer; margin:0; }
+.tomb-legend-options label span { white-space:nowrap; }
+.imperial-tombs-legend input { width:13px; height:13px; margin:0; flex:none; accent-color:#8e4829; cursor:pointer; }
+.tomb-swatch { width:8px; height:8px; border:2px solid var(--tomb-color); background:var(--tomb-color); border-radius:50%; flex:none; }
+.tomb-swatch.memorial { background:white; }
+.tomb-legend-symbols { display:flex; flex-wrap:wrap; gap:5px 10px; margin-bottom:5px; }
+.tomb-legend-symbols span { display:flex; align-items:center; gap:4px; }
+.tomb-legend-symbols i { width:8px; height:8px; border-radius:50%; display:inline-block; border:2px solid #9d4b20; }
+.tomb-legend-symbols i.memorial { background:white; }
+.imperial-tombs-legend select { max-width:170px; font-size:11px; padding:2px 4px; }
+.tomb-status { margin:5px 0 0; font-size:10px; }
+.imperial-tomb-detail a { overflow-wrap:anywhere; }
 .great-wall-legend { pointer-events:auto; background:rgba(255,255,255,.92); border:1px solid rgba(18,54,45,.16); border-radius:8px; padding:8px 10px; color:#12362d; font-size:9px; line-height:1.2; box-shadow:0 8px 20px rgba(24,32,28,.15); backdrop-filter:blur(8px); }
 .great-wall-legend[hidden] { display:none; }
 .great-wall-legend label svg { width:14px; height:14px; flex:none; }
@@ -7440,3 +7498,50 @@ button:hover {
   .loading-debug[hidden] { display:none !important; }
   .map-overlay-legends { left:8px; width:min(280px,calc(100% - 16px)); }
 }
+
+/* Shared typography for map details and both map engines. */
+.map-drawer, .maplibregl-popup, .leaflet-popup, .leaflet-tooltip { font-family:var(--font-ui); }
+.map-drawer { font-size:13px; line-height:1.65; }
+.map-drawer h3 { margin:0 30px 14px 0; font-size:20px; line-height:1.4; font-weight:700; overflow-wrap:anywhere; }
+.map-drawer .eyebrow { margin:0 30px 5px 0; font-size:11px; font-weight:600; letter-spacing:.06em; }
+.map-drawer dl { display:grid; gap:12px; margin:12px 0 0; }
+.map-drawer dt { color:var(--muted); font-size:11px; line-height:1.5; font-weight:400; }
+.map-drawer dd { margin:3px 0 0; font-size:13px; line-height:1.65; font-weight:500; overflow-wrap:anywhere; }
+.map-drawer p, .map-drawer li { line-height:1.65; }
+.map-drawer a { color:#27634f; text-decoration-thickness:1px; text-underline-offset:3px; overflow-wrap:anywhere; }
+.map-drawer a:hover { color:#123e2f; }
+.map-drawer a:focus-visible { outline:2px solid #208765; outline-offset:3px; border-radius:2px; }
+.imperial-tomb-detail .tomb-detail-section { margin-top:14px; padding-top:14px; border-top:1px solid var(--line); }
+.imperial-tomb-detail .tomb-detail-section h4 { margin:0 0 10px; font-size:13px; line-height:1.5; font-weight:700; }
+.imperial-tomb-detail dl { grid-template-columns:minmax(0,1fr); margin:0; gap:10px; }
+.imperial-tomb-detail dd { font-weight:400; }
+.tomb-detail-note { margin-top:12px; padding:10px 12px; border-left:3px solid #e7c64e; border-radius:0 6px 6px 0; background:#fffbed; color:#655a36; font-size:12px; }
+.tomb-detail-sources { margin:0; padding:0; list-style:none; display:grid; gap:9px; }
+.tomb-detail-sources li { padding:8px 10px; border:1px solid var(--line); border-radius:6px; background:var(--soft); }
+.tomb-detail-sources a { display:block; font-size:12px; }
+.tomb-detail-sources small { display:block; margin-top:3px; color:var(--muted); font-size:11px; }
+
+/* Category-specific facts use the same readable weight scale. */
+.map-drawer .capital-facts header,
+.map-drawer .capital-facts header em,
+.map-drawer .ancient-capital-record b { font-weight:600; }
+.map-drawer .capital-meta-line span,
+.map-drawer .ancient-capital-record em,
+.map-drawer .compact-value-list span { font-weight:400; }
+.map-drawer .detail-action { font-size:13px; font-weight:600; border-radius:7px; }
+.map-drawer .tag { font-size:11px; font-weight:500; }
+.maplibregl-popup-content .popup-body,
+.leaflet-popup-content .popup-body,
+.great-wall-info { font-family:var(--font-ui); font-size:13px; line-height:1.65; font-weight:400; }
+.popup-body > strong, .great-wall-info > strong { display:inline-block; margin-bottom:5px; font-size:15px; line-height:1.45; font-weight:700; }
+.popup-body small, .great-wall-info small { font-size:11px; line-height:1.55; color:var(--muted); }
+.popup-body dl, .great-wall-info dl { gap:6px 10px; }
+.popup-body dt, .great-wall-info dt { color:var(--muted); font-weight:400; }
+.popup-body dd, .great-wall-info dd { font-weight:400; overflow-wrap:anywhere; }
+.popup-body .popup-action { margin-top:10px; font-size:12px; font-weight:600; }
+
+.tomb-era-icon { width:16px; height:16px; flex:none; display:inline-flex; align-items:center; justify-content:center; background:var(--era-color); border-radius:3px; }
+.great-wall-legend .tomb-era-icon svg { width:14px; height:14px; }
+.tomb-era-icon svg,.imperial-tomb-marker svg { width:100%; height:100%; }
+.imperial-tomb-marker { background:none; border:0; }
+.imperial-tomb-card-tags .tomb-dynasty-tag { color:var(--tomb-dynasty-color); font-weight:600; }

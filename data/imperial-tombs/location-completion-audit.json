@@ -1,0 +1,237 @@
+{
+  "reviewedAt": "2026-10-03",
+  "newRegionalPoints": [
+    "wei-xizhu-m2",
+    "houjin-xian",
+    "tang-gong",
+    "zhou-zhoushan",
+    "zhou-wangcheng",
+    "rui-liujiawa",
+    "ba-dahekou",
+    "rong-majiayuan",
+    "zhou-lingpo",
+    "early-xingan"
+  ],
+  "withIndependentOrRegionalPoint": 206,
+  "sharedCemeteryReferences": [
+    "nantang-qin",
+    "nantang-shun",
+    "song-si",
+    "song-fu",
+    "song-chong",
+    "song-mao",
+    "song-mu",
+    "song-shao",
+    "jin-rui",
+    "shang-m1001",
+    "shang-m1002",
+    "shang-m1003",
+    "shang-m1004",
+    "shang-m1217",
+    "shang-m1400",
+    "shang-m1500",
+    "shang-m1550",
+    "shang-m1567",
+    "zeng-m111",
+    "guo-m2001",
+    "guo-m2009",
+    "jin-m114",
+    "jin-guang",
+    "jin-xi",
+    "jin-jian",
+    "jin-hui",
+    "jin-an",
+    "jin-ding",
+    "jin-yong",
+    "jin-tai",
+    "jin-xian",
+    "jin-qiao",
+    "jin-gong",
+    "jin-jing",
+    "jin-xing",
+    "jin-dao",
+    "jin-yu",
+    "jin-si",
+    "yan-liulihe-m1193",
+    "yan-liulihe-m202",
+    "houhan-rui",
+    "houhan-ying",
+    "tuyuhun-xuewei-2018"
+  ],
+  "unresolved": [
+    {
+      "id": "qin-gong-group",
+      "name": "秦公陵园",
+      "admin": "陕西省宝鸡市凤翔区",
+      "reason": "广域陵群不应任取一座陵或城市中心代表"
+    },
+    {
+      "id": "han-west",
+      "name": "西汉帝陵",
+      "admin": "陕西省西安市、咸阳市",
+      "reason": "广域陵群不应任取一座陵或城市中心代表"
+    },
+    {
+      "id": "mangshan",
+      "name": "邙山帝陵群",
+      "admin": "河南省洛阳市",
+      "reason": "广域陵群不应任取一座陵或城市中心代表"
+    },
+    {
+      "id": "wei-shouyang",
+      "name": "曹魏首阳陵",
+      "admin": "河南省洛阳市",
+      "reason": "补核单陵WGS84坐标、指向对象与精度"
+    },
+    {
+      "id": "jin-gaoyuan",
+      "name": "晋高原陵",
+      "admin": "河南省洛阳市",
+      "reason": "补核单陵WGS84坐标、指向对象与精度"
+    },
+    {
+      "id": "jin-junping",
+      "name": "晋峻平陵",
+      "admin": "河南省洛阳市",
+      "reason": "补核单陵WGS84坐标、指向对象与精度"
+    },
+    {
+      "id": "jin-taiyang",
+      "name": "晋太阳陵",
+      "admin": "河南省洛阳市",
+      "reason": "补核单陵WGS84坐标、指向对象与精度"
+    },
+    {
+      "id": "southern-danyang",
+      "name": "丹阳南朝齐梁帝陵遗存",
+      "admin": "江苏省镇江市丹阳市",
+      "reason": "广域陵群不应任取一座陵或城市中心代表"
+    },
+    {
+      "id": "tang18",
+      "name": "唐十八陵",
+      "admin": "陕西省咸阳市、渭南市",
+      "reason": "广域陵群不应任取一座陵或城市中心代表"
+    },
+    {
+      "id": "tang-jian",
+      "name": "唐建陵",
+      "admin": "陕西省咸阳市礼泉县",
+      "reason": "补核单陵WGS84坐标、指向对象与精度；论文表4此行英文仅为Mausoleums，未明确对应建陵；须补独立坐标来源，暂不入图。"
+    },
+    {
+      "id": "nanhan2",
+      "name": "南汉二陵",
+      "admin": "广东省广州市番禺区",
+      "reason": "广域陵群不应任取一座陵或城市中心代表"
+    },
+    {
+      "id": "qi-taian",
+      "name": "南齐泰安陵",
+      "admin": "江苏省镇江市丹阳市（传统归属，墓址待核）",
+      "reason": "补核单陵WGS84坐标、指向对象与精度"
+    },
+    {
+      "id": "han-huzhuang",
+      "name": "胡庄韩王陵（墓主未定）",
+      "admin": "河南省郑州市新郑市胡庄",
+      "reason": "广域陵群不应任取一座陵或城市中心代表"
+    },
+    {
+      "id": "yan-xuliang",
+      "name": "燕下都虚粮冢（疑似燕王陵区）",
+      "admin": "河北省保定市易县燕下都东城西北部",
+      "reason": "广域陵群不应任取一座陵或城市中心代表"
+    },
+    {
+      "id": "lu-nine",
+      "name": "鲁九公墓（鲁诸公墓）",
+      "admin": "山东省济宁市汶上、梁山、嘉祥交界",
+      "reason": "广域陵群不应任取一座陵或城市中心代表"
+    },
+    {
+      "id": "cai-hou",
+      "name": "寿县蔡侯墓",
+      "admin": "安徽省淮南市寿县寿春镇西门内",
+      "reason": "补核单陵WGS84坐标、指向对象与精度"
+    },
+    {
+      "id": "qing-cian",
+      "name": "普祥峪定东陵（慈安）",
+      "admin": "河北省唐山市遵化市清东陵普祥峪",
+      "reason": "补核单陵WGS84坐标、指向对象与精度"
+    },
+    {
+      "id": "han-shen",
+      "name": "东汉慎陵",
+      "admin": "河南省洛阳市洛南万安山北麓陵区",
+      "reason": "补核单陵WGS84坐标、指向对象与精度"
+    },
+    {
+      "id": "han-kang-east",
+      "name": "东汉康陵",
+      "admin": "河南省洛阳市洛南万安山北麓陵区",
+      "reason": "补核单陵WGS84坐标、指向对象与精度"
+    },
+    {
+      "id": "han-jing-zhi",
+      "name": "东汉静陵",
+      "admin": "河南省洛阳市洛南万安山北麓陵区",
+      "reason": "补核单陵WGS84坐标、指向对象与精度"
+    },
+    {
+      "id": "jin-hailing",
+      "name": "金海陵王墓（故址待核）",
+      "admin": "北京市房山区大房山周边（历史归葬范围）",
+      "reason": "补核单陵WGS84坐标、指向对象与精度"
+    },
+    {
+      "id": "yan-jiunutai",
+      "name": "燕下都九女台墓区（疑似王室墓地）",
+      "admin": "河北省保定市易县燕下都东城西北部",
+      "reason": "广域陵群不应任取一座陵或城市中心代表"
+    },
+    {
+      "id": "yan-jiunutai-m16",
+      "name": "九女台M16（疑似燕王室墓）",
+      "admin": "河北省保定市易县九女台墓区",
+      "reason": "补核单陵WGS84坐标、指向对象与精度"
+    },
+    {
+      "id": "wei-gaoping-rudian",
+      "name": "魏明帝高平陵（汝阳茹店传统认定）",
+      "admin": "河南省洛阳市汝阳县大安工业区茹店村",
+      "reason": "补核单陵WGS84坐标、指向对象与精度"
+    },
+    {
+      "id": "shu-majia",
+      "name": "新都马家战国大墓（疑似蜀王族墓）",
+      "admin": "四川省成都市新都区原马家乡普东村一带",
+      "reason": "补核单陵WGS84坐标、指向对象与精度"
+    },
+    {
+      "id": "peng-hengshui",
+      "name": "横北倗国国君墓地（横水）",
+      "admin": "山西省运城市绛县横水镇横北村北",
+      "reason": "广域陵群不应任取一座陵或城市中心代表"
+    },
+    {
+      "id": "rong-yimen",
+      "name": "益门村二号墓（疑似戎王墓）",
+      "admin": "陕西省宝鸡市渭滨区益门村",
+      "reason": "补核单陵WGS84坐标、指向对象与精度"
+    },
+    {
+      "id": "tuyuhun-wuwei",
+      "name": "武威吐谷浑王族墓群（大可汗陵线索）",
+      "admin": "甘肃省武威市凉州区",
+      "reason": "广域陵群不应任取一座陵或城市中心代表"
+    },
+    {
+      "id": "zhou-later",
+      "name": "后周皇陵",
+      "admin": "河南省郑州市新郑市",
+      "reason": "广域陵群不应任取一座陵或城市中心代表"
+    }
+  ]
+}

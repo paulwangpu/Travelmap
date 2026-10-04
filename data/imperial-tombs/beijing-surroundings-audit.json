@@ -1,0 +1,306 @@
+{
+  "reviewedAt": "2026-10-03",
+  "scope": "北京、房山、香山及易县燕下都；阶段区域核查，非穷尽",
+  "newRecords": 23,
+  "newAreaPoints": 3,
+  "totalRecords": 242,
+  "totalMapCandidates": 177,
+  "rows": [
+    {
+      "id": "jin-group",
+      "name": "金陵（大房山陵区）",
+      "location": "北京市房山区周口店镇车厂村、龙门口村北大房山陵区",
+      "position": "区域估计点",
+      "sourceIds": [
+        "jin",
+        "jin-confirmed",
+        "beijing-jin-list",
+        "beijing-jin-tour"
+      ]
+    },
+    {
+      "id": "jin-rui",
+      "name": "金太祖睿陵",
+      "location": "北京市房山区",
+      "position": "引用所属陵区（非单墓点）",
+      "sourceIds": [
+        "jin",
+        "jin-confirmed"
+      ]
+    },
+    {
+      "id": "jin-guang",
+      "name": "金始祖光陵",
+      "location": "北京市房山区大房山历史陵区",
+      "position": "引用所属陵区（非单墓点）",
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed"
+      ]
+    },
+    {
+      "id": "jin-xi",
+      "name": "金德帝熙陵",
+      "location": "北京市房山区大房山历史陵区",
+      "position": "引用所属陵区（非单墓点）",
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed"
+      ]
+    },
+    {
+      "id": "jin-jian",
+      "name": "金安帝建陵",
+      "location": "北京市房山区大房山历史陵区",
+      "position": "引用所属陵区（非单墓点）",
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed"
+      ]
+    },
+    {
+      "id": "jin-hui",
+      "name": "金献祖辉陵",
+      "location": "北京市房山区大房山历史陵区",
+      "position": "引用所属陵区（非单墓点）",
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed"
+      ]
+    },
+    {
+      "id": "jin-an",
+      "name": "金昭祖安陵",
+      "location": "北京市房山区大房山历史陵区",
+      "position": "引用所属陵区（非单墓点）",
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed"
+      ]
+    },
+    {
+      "id": "jin-ding",
+      "name": "金景祖定陵",
+      "location": "北京市房山区大房山历史陵区",
+      "position": "引用所属陵区（非单墓点）",
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed"
+      ]
+    },
+    {
+      "id": "jin-yong",
+      "name": "金世祖永陵",
+      "location": "北京市房山区大房山历史陵区",
+      "position": "引用所属陵区（非单墓点）",
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed"
+      ]
+    },
+    {
+      "id": "jin-tai",
+      "name": "金肃宗泰陵",
+      "location": "北京市房山区大房山历史陵区",
+      "position": "引用所属陵区（非单墓点）",
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed"
+      ]
+    },
+    {
+      "id": "jin-xian",
+      "name": "金穆宗献陵",
+      "location": "北京市房山区大房山历史陵区",
+      "position": "引用所属陵区（非单墓点）",
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed"
+      ]
+    },
+    {
+      "id": "jin-qiao",
+      "name": "金康宗乔陵",
+      "location": "北京市房山区大房山历史陵区",
+      "position": "引用所属陵区（非单墓点）",
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed"
+      ]
+    },
+    {
+      "id": "jin-gong",
+      "name": "金太宗恭陵",
+      "location": "北京市房山区大房山历史陵区",
+      "position": "引用所属陵区（非单墓点）",
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed"
+      ]
+    },
+    {
+      "id": "jin-jing",
+      "name": "金睿宗景陵",
+      "location": "北京市房山区大房山历史陵区",
+      "position": "引用所属陵区（非单墓点）",
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed"
+      ]
+    },
+    {
+      "id": "jin-xing",
+      "name": "金世宗兴陵",
+      "location": "北京市房山区大房山历史陵区",
+      "position": "引用所属陵区（非单墓点）",
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed"
+      ]
+    },
+    {
+      "id": "jin-dao",
+      "name": "金章宗道陵",
+      "location": "北京市房山区大房山历史陵区",
+      "position": "引用所属陵区（非单墓点）",
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed"
+      ]
+    },
+    {
+      "id": "jin-yu",
+      "name": "金显宗裕陵",
+      "location": "北京市房山区大房山历史陵区",
+      "position": "引用所属陵区（非单墓点）",
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed"
+      ]
+    },
+    {
+      "id": "jin-si",
+      "name": "金熙宗思陵",
+      "location": "北京市房山区大房山峨眉谷（历史迁葬地，具体范围待核）",
+      "position": "引用所属陵区（非单墓点）",
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed"
+      ]
+    },
+    {
+      "id": "jin-hailing",
+      "name": "金海陵王墓（故址待核）",
+      "location": "北京市房山区大房山周边（历史归葬范围）",
+      "position": "待定位",
+      "sourceIds": [
+        "beijing-jin-history",
+        "beijing-liuji-exclusion"
+      ]
+    },
+    {
+      "id": "liao-yongan",
+      "name": "辽永安陵（香山辽王坟，故址推定）",
+      "location": "北京市海淀区香山双清别墅西南上坡、蟾蜍峰附近",
+      "position": "区域估计点",
+      "sourceIds": [
+        "beijing-liao-yongan",
+        "beijing-liao-yongan-area"
+      ]
+    },
+    {
+      "id": "yan-liulihe",
+      "name": "琉璃河燕侯墓地",
+      "location": "北京市房山区琉璃河镇黄土坡墓葬Ⅱ区",
+      "position": "区域估计点",
+      "sourceIds": [
+        "beijing-liulihe-plan",
+        "beijing-liulihe-m1193"
+      ]
+    },
+    {
+      "id": "yan-liulihe-m1193",
+      "name": "琉璃河M1193（燕侯克，推定）",
+      "location": "北京市房山区琉璃河镇黄土坡墓葬Ⅱ区",
+      "position": "引用所属陵区（非单墓点）",
+      "sourceIds": [
+        "beijing-liulihe-m1193",
+        "beijing-liulihe-ke"
+      ]
+    },
+    {
+      "id": "yan-liulihe-m202",
+      "name": "琉璃河M202（燕侯级大墓）",
+      "location": "北京市房山区琉璃河镇黄土坡墓葬Ⅱ区",
+      "position": "引用所属陵区（非单墓点）",
+      "sourceIds": [
+        "beijing-liulihe-m202"
+      ]
+    },
+    {
+      "id": "yan-xuliang",
+      "name": "燕下都虚粮冢（疑似燕王陵区）",
+      "location": "河北省保定市易县燕下都东城西北部",
+      "position": "待定位",
+      "sourceIds": [
+        "preqin-yan-xuliang",
+        "yan-xiadu-layout",
+        "yan-xiadu-reassessment"
+      ]
+    },
+    {
+      "id": "yan-jiunutai",
+      "name": "燕下都九女台墓区（疑似王室墓地）",
+      "location": "河北省保定市易县燕下都东城西北部",
+      "position": "待定位",
+      "sourceIds": [
+        "yan-xiadu-layout",
+        "yan-xiadu-reassessment"
+      ]
+    },
+    {
+      "id": "yan-jiunutai-m16",
+      "name": "九女台M16（疑似燕王室墓）",
+      "location": "河北省保定市易县九女台墓区",
+      "position": "待定位",
+      "sourceIds": [
+        "yan-xiadu-reassessment",
+        "yan-xiadu-layout",
+        "yan-xiadu-m16-disturbance"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "name": "长沟坟庄大墓",
+      "reason": "墓志确认为唐刘济墓，不能作为金海陵王陵",
+      "sourceId": "beijing-liuji-exclusion"
+    },
+    {
+      "name": "辽刘六符家族墓、宣化张氏辽墓、耶律楚材墓",
+      "reason": "普通贵族或臣僚，不在本次君主陵默认范围内"
+    }
+  ],
+  "pending": [
+    "燕下都九女台与虚粮冢墓区的可靠地理定位",
+    "金陵各历史陵名与独立墓室对应",
+    "海陵王最终墓址",
+    "香山辽永安陵旧址实体认定"
+  ]
+}

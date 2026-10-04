@@ -1,0 +1,26 @@
+module.exports=({add,group,source})=>{
+ source('early-liangzhu-royal','良渚反山王陵与高等级墓葬','杭州良渚遗址管理区','https://www.lzsite.cn/wap/details.aspx?id=2169');
+ source('early-liangzhu-map','良渚世界遗产各组成部分代表坐标','UNESCO','https://whc.unesco.org/fr/list/1592/cartes/','1592-004为整个城址组成区；不是反山墓地中心。');
+ source('early-taosi-royal','关于陶寺早期王族墓地的几点思考','中国社会科学网（学术论文）','https://www.cssn.cn/lsx/lsx_kgx/202210/t20221024_5552710.shtml');
+ source('early-taosi-anchor','陶寺遗址观象台地理坐标及王级大墓研究出处','UNESCO合作天文遗产门户','https://web.astronomicalheritage.net/index.php/show-entity?identity=16&idsubentity=1','坐标明确指观象台，只作为同一遗址的区域锚点；不得将其称为王墓坐标。');
+ source('early-shimao-royal','石峁皇城台墓地2022—2024年发掘成果','陕西省考古研究院（西北大学发布）','https://slkgycbh.nwu.edu.cn/info/1023/1010.htm','墓地为所见最高等级人群墓地，严重盗掘；不代表每一墓主均为王。');
+ source('early-shimao-geo','石峁遗址地理实体区域代表点','OpenStreetMap／Mapcarta','https://mapcarta.com/W457394939','区域代表位置，不是皇城台某座墓室。');
+ source('early-erlitou','二里头都邑结构、居住区及墓葬研究','中国历史研究院','https://hrczh.cass.cn/sxqy/zl/202502/t20250228_5851806.shtml');
+ source('early-erlitou-geo','二里头遗址地理实体区域代表点','OpenStreetMap／Mapcarta','https://mapcarta.com/W851367302');
+ source('early-panlongcheng','盘龙城宫殿、李家嘴墓地发掘者访谈','湖北省文物考古研究院','https://hbsbwg.cjyun.org/yjy_mtbd/p/6645.html');
+ source('early-panlongcheng-map','盘龙城遗址中心坐标与公园展示','盘龙城遗址博物院','https://www.plcsmuseum.com.cn/Exhibition/Detail/9d0c976c-b4fe-4bae-bd8b-fee4541b95e5','官网度分秒坐标未明示基准，标为估计；不是首领墓中心。');
+ source('early-xingan-study','新干大洋洲遗存性质及最高统治者家族墓说','故宫博物院学术论文','https://www.dpm.org.cn/Uploads/pdf/1512/T00020_00.pdf','墓葬说与其他解释、最高统治者推定分别保留。');
+ const chronology=year=>({sortYear:year,basis:'考古文化约略年代；不是特定君主的卒年或建陵年'});
+ const liang=group('early-liangzhu','良渚反山王族墓地','先秦','良渚','浙江省杭州市余杭区良渚古城反山','early-liangzhu-royal,early-liangzhu-map',{occupants:['良渚最高等级统治者或王族（姓名未定）'],recognition:'attributed',preqinPeriod:'史前',chronology:chronology(-3000),siteRole:'royal_cemetery_candidate',evidence:'反山大型墓葬及象征神权、军事权的玉器支持最高等级王族墓地解释；管理机构介绍研究中的王陵认定。',disputes:['没有可确认具体王名的文字材料；“王陵”是社会等级解释，不将每座墓均写成一位王。']});
+ point(liang,30+23/60+43.97/3600,119+59/60+26.97/3600,'early-liangzhu-map','良渚古城组成区参考点（反山墓地位置未单独配准）','UNESCO 1592-004: N30 23 43.97, E119 59 26.97','古城组成区数公里范围；参考坐标不等于反山中心。');
+ const taosi=group('early-taosi','陶寺王族墓地','先秦','陶寺','山西省临汾市襄汾县陶寺遗址','early-taosi-royal,early-taosi-anchor',{occupants:['陶寺政体统治者及家族（姓名未定）'],recognition:'attributed',preqinPeriod:'史前',chronology:chronology(-2200),siteRole:'royal_cemetery_candidate',evidence:'陶寺发掘报告与研究区分早期王族墓地和不同等级墓葬；记录实际发现的高等级墓地及王权解释。',disputes:['不能将王级墓直接命名为尧陵；早中期墓地应分别进一步定位。','参考点是同一遗址的观象台，并非墓室。']});
+ point(taosi,35+52/60+55.9/3600,111+29/60+54.9/3600,'early-taosi-anchor','陶寺遗址区域参考（观象台锚点，非墓地中心）','N35 52 55.9, E111 29 54.9; Taosi observatory','同一陶寺遗址约数公里范围；早中期王族墓地单独坐标待核。');
+ const shimao=group('early-shimao','石峁皇城台高等级墓地（王族候选）','先秦','石峁','陕西省榆林市神木市高家堡镇石峁村','early-shimao-royal,early-shimao-geo',{occupants:['石峁最高等级统治人群（姓名未定）'],recognition:'archaeological',preqinPeriod:'史前',chronology:chronology(-2000),siteRole:'royal_cemetery_candidate',evidence:'皇城台顶部偏西墓地经2022—2024年发掘，被初步认定为石峁文化最高等级人群墓地。',disputes:['高等级人群与具体王室身份仍需研究，不能把120余座墓全部计作王墓。','石峁遗址代表点不能当作皇城台墓地或单墓中心。']});
+ point(shimao,38.56573,110.32555,'early-shimao-geo','石峁遗址区域参考（皇城台墓地单独坐标待核）','38.56573, 110.32555; OSM way 457394939','遗址约数公里；皇城台墓地位于台顶西部，尚未配准单墓位置。');
+ const erl=group('early-erlitou-search','二里头（王陵探索区）','先秦','二里头文化','河南省洛阳市偃师区二里头遗址','early-erlitou,early-erlitou-geo',{occupants:['二里头王权中心统治者（王陵未确认）'],nature:'unknown',recognition:'attributed',preqinPeriod:'夏商',chronology:chronology(-1700),siteRole:'royal_burial_search_area',evidence:'大型都邑、宫殿及分等级墓葬提供王权中心线索；按王陵探索区纳入。',disputes:['不将普通墓葬或宫殿区直接认定为夏王陵；王陵墓室、具体墓主尚无此处所采资料确认。','二里头文化与夏王朝对应的研究不能代替逐墓墓主认定。']});
+ point(erl,34.69134,112.69077,'early-erlitou-geo','二里头遗址区域参考（王陵位置未知）','34.69134, 112.69077; OSM way 851367302','遗址周边数公里探索范围，非王陵边界、墓室或博物馆位置。');
+ const pan=group('early-panlongcheng-search','盘龙城（首领墓葬探索区）','先秦','商代盘龙城','湖北省武汉市黄陂区盘龙城遗址','early-panlongcheng,early-panlongcheng-map',{occupants:['盘龙城统治首领或高等级人群（具体对应未定）'],recognition:'attributed',preqinPeriod:'夏商',chronology:chronology(-1500),siteRole:'royal_burial_search_area',nature:'unknown',evidence:'宫殿及李家嘴高等级墓葬有考古支持；按区域统治首领墓葬线索纳入，不将该地自动视作独立王国。',disputes:['商王朝地方中心、区域首领与独立方国国君属于不同解释；不直接给墓主加王号。','遗址中心不能代替李家嘴或杨家湾具体墓号位置。']});
+ point(pan,30+41/60+40/3600,114+15/60+57/3600,'early-panlongcheng-map','盘龙城遗址中心参考（非首领墓室）','官网 N30 41 40, E114 15 57','遗址约数公里，李家嘴、杨家湾墓地位置需进一步配准。');
+ add('early-xingan','新干大洋洲商代大墓（统治者候选）','先秦','商代赣江区域政体','区域最高统治者或家族（学术推定）','江西省吉安市新干县大洋洲镇程家村涝背沙丘','early-xingan-study',{recognition:'attributed',preqinPeriod:'夏商',chronology:chronology(-1200),siteRole:'royal_cemetery_candidate',evidence:'大型青铜器遗存的墓葬说得到考古研究支持，论文提出墓主可能为区域政体最高统治者或其家族。',disputes:['遗存性质仍有不同解释；不能确定国名、王名或将其直接命名为商王陵。'],reviewTasks:['核实原沙丘与保护展示位置及WGS84区域参考点','核对墓葬、器物埋藏等解释与最高统治者假说']});
+ function point(x,lat,lng,sid,target,original,extent){x.coordinates={lat,lng,crs:'WGS84',status:'estimated_wgs84',sourceId:sid,original,target,sourceDatumExplicit:false,method:'机构或公开地理数据代表点与考古地望交叉核对；只保留遗址区域参考',precision:{sourceUnit:'degree',horizontalAccuracyMeters:null},estimate:{basis:'已有明确遗址参考坐标，按机构考古地点核对；未测绘王族墓地边界或墓室',extent},limitation:extent+' 统一作为WGS84近似区域点标估，不能用于墓室导航。'};x.mapEligible=true;x.mapReason='区域参考坐标有据；王陵候选或探索区标签保留';}
+};

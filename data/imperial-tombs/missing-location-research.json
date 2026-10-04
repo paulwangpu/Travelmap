@@ -1,0 +1,238 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "converted": [
+      {
+        "from": "王城公园",
+        "to": "王城公園"
+      }
+    ],
+    "redirects": [
+      {
+        "from": "唐恭陵",
+        "to": "恭陵"
+      }
+    ],
+    "pages": {
+      "506120": {
+        "pageid": 506120,
+        "ns": 0,
+        "title": "周公庙遗址",
+        "coordinates": [
+          {
+            "lat": 34.48815694,
+            "lon": 107.60026111,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "pageprops": {
+          "kartographer_frames": "1",
+          "wikibase_item": "Q991847"
+        }
+      },
+      "566036": {
+        "pageid": 566036,
+        "ns": 0,
+        "title": "王城公園",
+        "pageprops": {
+          "page_image_free": "王城公园_-_panoramio.jpg",
+          "wikibase_item": "Q10920849"
+        }
+      },
+      "807671": {
+        "pageid": 807671,
+        "ns": 0,
+        "title": "唐建陵",
+        "pageprops": {
+          "wikibase_item": "Q19841777"
+        }
+      },
+      "1657953": {
+        "pageid": 1657953,
+        "ns": 0,
+        "title": "后晋显陵",
+        "coordinates": [
+          {
+            "lat": 34.62222222,
+            "lon": 112.095,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "pageprops": {
+          "defaultsort": "H",
+          "wikibase_item": "Q10566151"
+        }
+      },
+      "1660795": {
+        "pageid": 1660795,
+        "ns": 0,
+        "title": "恭陵",
+        "coordinates": [
+          {
+            "lat": 34.63333333,
+            "lon": 112.81111111,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "pageprops": {
+          "page_image_free": "20231119_Gongling_01.jpg",
+          "wikibase_item": "Q653142"
+        }
+      },
+      "2807344": {
+        "pageid": 2807344,
+        "ns": 0,
+        "title": "鲁九公墓",
+        "pageprops": {
+          "wikibase_item": "Q17031139"
+        }
+      },
+      "2909557": {
+        "pageid": 2909557,
+        "ns": 0,
+        "title": "大洋洲程家遗址",
+        "coordinates": [
+          {
+            "lat": 27.91916667,
+            "lon": 115.45027778,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "pageprops": {
+          "defaultsort": "Da",
+          "wikibase_item": "Q400087"
+        }
+      },
+      "3615614": {
+        "pageid": 3615614,
+        "ns": 0,
+        "title": "后汉皇陵",
+        "coordinates": [
+          {
+            "lat": 34.33893,
+            "lon": 113.30361,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "pageprops": {
+          "wikibase_item": "Q15944106"
+        }
+      },
+      "8615996": {
+        "pageid": 8615996,
+        "ns": 0,
+        "title": "大河口遗址",
+        "coordinates": [
+          {
+            "lat": 35.74677,
+            "lon": 111.78313,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "pageprops": {
+          "wikibase_item": "Q133309238"
+        }
+      },
+      "8925352": {
+        "pageid": 8925352,
+        "ns": 0,
+        "title": "周山森林公园",
+        "coordinates": [
+          {
+            "lat": 34.62722222,
+            "lon": 112.38,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "pageprops": {
+          "wikibase_item": "Q134891949"
+        }
+      },
+      "8952148": {
+        "pageid": 8952148,
+        "ns": 0,
+        "title": "西朱村曹魏墓",
+        "coordinates": [
+          {
+            "lat": 34.54432,
+            "lon": 112.63679,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "pageprops": {
+          "page_image_free": "西朱村曹魏墓_M1_考古现场.jpg",
+          "wikibase_item": "Q131522427"
+        }
+      },
+      "9549786": {
+        "pageid": 9549786,
+        "ns": 0,
+        "title": "刘家洼遗址",
+        "coordinates": [
+          {
+            "lat": 35.36314,
+            "lon": 109.85089,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "pageprops": {
+          "defaultsort": "L",
+          "kartographer_frames": "1",
+          "wikibase_item": "Q133309358"
+        }
+      },
+      "-1": {
+        "ns": 0,
+        "title": "马家塬遗址",
+        "missing": ""
+      },
+      "-2": {
+        "ns": 0,
+        "title": "横水墓地",
+        "missing": ""
+      },
+      "-3": {
+        "ns": 0,
+        "title": "叶家山墓地",
+        "missing": ""
+      },
+      "-4": {
+        "ns": 0,
+        "title": "蔡侯墓",
+        "missing": ""
+      },
+      "-5": {
+        "ns": 0,
+        "title": "普祥峪定东陵",
+        "missing": ""
+      },
+      "-6": {
+        "ns": 0,
+        "title": "九女台",
+        "missing": ""
+      },
+      "-7": {
+        "ns": 0,
+        "title": "虚粮冢",
+        "missing": ""
+      },
+      "-8": {
+        "ns": 0,
+        "title": "胡庄韩王陵",
+        "missing": ""
+      }
+    }
+  },
+  "limits": {
+    "coordinates": 500
+  }
+}

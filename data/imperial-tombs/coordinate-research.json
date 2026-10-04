@@ -1,0 +1,3347 @@
+{
+  "researchedAt": "2026-10-03",
+  "provider": "Wikidata P625 (batch entity retrieval)",
+  "matches": [
+    {
+      "id": "chen-wanan",
+      "entity": "Q24841251",
+      "label": "萬安陵 (南陳)",
+      "description": "",
+      "statementId": "Q24841251$27182C7C-8B8C-48E3-8303-B23A95BDBBD5",
+      "rank": "normal",
+      "lat": 31.967082,
+      "lng": 118.880401,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "chu-wuwangdun",
+      "entity": "Q126007958",
+      "label": "武王墩墓",
+      "description": "",
+      "statementId": "Q126007958$3a16a0a4-423f-f94b-3284-003865b29bcb",
+      "rank": "normal",
+      "lat": 32.58656111111111,
+      "lng": 116.94371944444444,
+      "precisionDegrees": 0.000002777777777777778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "chu-yi",
+      "entity": "Q109348769",
+      "label": "义帝陵",
+      "description": "",
+      "statementId": "Q109348769$3C686D6B-1B7B-4C79-8400-AE72AE07DA3F",
+      "rank": "normal",
+      "lat": 25.79642,
+      "lng": 113.02681,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "guo-kings",
+      "entity": "Q17012944",
+      "label": "虢国墓地",
+      "description": "cemetery in Guo Tombs, China",
+      "statementId": "Q17012944$918ffed2-4a51-6421-ec0e-75cfe2ea3dc6",
+      "rank": "normal",
+      "lat": 34.7874,
+      "lng": 111.20525,
+      "precisionDegrees": 0.00001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "陵群代表点",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "han-an",
+      "entity": "Q17032673",
+      "label": "漢安陵",
+      "description": "building in China",
+      "statementId": "Q17032673$c02210b6-43bc-9658-45b3-e6d37790fcdd",
+      "rank": "normal",
+      "lat": 34.42295,
+      "lng": 108.84147,
+      "precisionDegrees": 0.00001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "han-ba",
+      "entity": "Q15911545",
+      "label": "漢霸陵",
+      "description": "漢文帝陵寢",
+      "statementId": "Q15911545$FC8E847B-E27B-4CAB-9ED9-F4FEB98AE921",
+      "rank": "normal",
+      "lat": 34.23586,
+      "lng": 109.11845,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "han-chan",
+      "entity": "Q15902145",
+      "label": "漢禪陵",
+      "description": "building in China",
+      "statementId": "Q15902145$121EBE0D-23B1-4F7D-8182-B8C4A8DB237B",
+      "rank": "normal",
+      "lat": 35.36315,
+      "lng": 113.43582,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "han-chang",
+      "entity": "Q1062077",
+      "label": "漢長陵",
+      "description": "汉高祖刘邦陵墓",
+      "statementId": "Q1062077$4FA8FE02-32AF-4C77-B033-776FA8DCB7E4",
+      "rank": "normal",
+      "lat": 34.43416667,
+      "lng": 108.87907222,
+      "precisionDegrees": 0.00000277777777778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "9a24f7c0208b05d6be97077d855671d1dfdbc0dd",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "d38375ffe6fe142663ff55cd783aa4df4301d83d",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 48183,
+                    "id": "Q48183"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "han-du",
+      "entity": "Q17032732",
+      "label": "漢杜陵",
+      "description": "漢宣帝劉詢及其皇后許平君的陵寢",
+      "statementId": "Q17032732$de6eb110-4173-eda9-f578-4bda3736b105",
+      "rank": "normal",
+      "lat": 34.18103579204202,
+      "lng": 109.02265308486051,
+      "precisionDegrees": 0.00001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "han-haihun",
+      "entity": "Q22680413",
+      "label": "海昏侯墓",
+      "description": "汉废帝的坟墓",
+      "statementId": "Q22680413$AF64A059-975D-4FF8-B016-B849631A3550",
+      "rank": "normal",
+      "lat": 29.03358,
+      "lng": 115.94293,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "0ee3b3ba1c958f4c3dcba7ed8091fe4b57311348",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 30239,
+                    "id": "Q30239"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "han-mao",
+      "entity": "Q1892008",
+      "label": "汉茂陵",
+      "description": "mausoleum of Emperor Wu of Han",
+      "statementId": "Q1892008$ff4c79c2-4695-4eff-3d03-84636daa1d99",
+      "rank": "normal",
+      "lat": 34.338259,
+      "lng": 108.569597,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "han-wei",
+      "entity": "Q17039158",
+      "label": "漢渭陵",
+      "description": "building in China",
+      "statementId": "Q17039158$3f8f01a2-74bd-440c-a04e-ac16a04035fc",
+      "rank": "normal",
+      "lat": 34.39027778,
+      "lng": 108.73916667,
+      "precisionDegrees": 0.010885907693583,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "bd49d3e4f67bc460ce7a06b6ac3027347cf5ee55",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "e84b0343e79e2a9aa8abadd7301051e15fba52d6",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 169514,
+                    "id": "Q169514"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "han-west",
+      "entity": "Q17067049",
+      "label": "西汉帝陵",
+      "description": "tombs",
+      "statementId": "Q17067049$81B77154-DC1A-40FB-8EAF-5FB98587A6DE",
+      "rank": "normal",
+      "lat": 34.44386,
+      "lng": 108.94072,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "陵群代表点",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "han-yan",
+      "entity": "Q17039147",
+      "label": "漢延陵",
+      "description": "Han Dynasty imperial mausoleum",
+      "statementId": "Q17039147$ea3621d2-4d83-0d2c-8e62-58d09ca5b821",
+      "rank": "normal",
+      "lat": 34.37494,
+      "lng": 108.69798,
+      "precisionDegrees": 0.00001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "han-yang",
+      "entity": "Q1350906",
+      "label": "汉阳陵",
+      "description": "汉景帝刘启陵墓",
+      "statementId": "Q1350906$0A73773E-D6AD-4FAE-82EB-E33CFAFF0AA7",
+      "rank": "normal",
+      "lat": 34.44379722,
+      "lng": 108.94071111,
+      "precisionDegrees": 0.00000277777777778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "9a24f7c0208b05d6be97077d855671d1dfdbc0dd",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "d38375ffe6fe142663ff55cd783aa4df4301d83d",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 48183,
+                    "id": "Q48183"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "houshu-he",
+      "entity": "Q10945218",
+      "label": "孟知祥墓",
+      "description": "cemetery in China",
+      "statementId": "Q10945218$683DB71D-7061-488F-9236-5C49D0D41781",
+      "rank": "normal",
+      "lat": 30.74115,
+      "lng": 104.11961111111111,
+      "precisionDegrees": 0.000002777777777777778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "jin-hou",
+      "entity": "Q1436244",
+      "label": "曲村-天马遗址",
+      "description": "archaeological site",
+      "statementId": "Q1436244$397C09C2-3FF2-4B33-95AE-05EF18AC5C3C",
+      "rank": "normal",
+      "lat": 35.7357,
+      "lng": 111.56281,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "陵群代表点",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "legend-shaohao",
+      "entity": "Q7489163",
+      "label": "少昊陵",
+      "description": "cemetery in Mausoleum of Shaohao, China",
+      "statementId": "Q7489163$89C4B838-3D99-4B93-A31D-C6487843837A",
+      "rank": "normal",
+      "lat": 35.610802,
+      "lng": 117.033,
+      "precisionDegrees": 0.00000277777777778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "fa278ebfc458360e5aed63d5058cca83c46134f1",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "e4f6d9441d0600513c4533c672b5ab472dc73694",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 328,
+                    "id": "Q328"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "legend-taihao",
+      "entity": "Q10941563",
+      "label": "太昊陵庙",
+      "description": "in the Huaiyang , Zhoukou, Henan,China",
+      "statementId": "Q10941563$f220f99d-4f16-cd85-95e7-05403210f840",
+      "rank": "normal",
+      "lat": 33.75373888099727,
+      "lng": 114.88229159048569,
+      "precisionDegrees": 0.00001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "legend-yu",
+      "entity": "Q10937154",
+      "label": "大禹陵",
+      "description": "",
+      "statementId": "Q10937154$CAFD70D5-143C-4A42-9B60-47A459F8B231",
+      "rank": "normal",
+      "lat": 29.96666667,
+      "lng": 120.60944444,
+      "precisionDegrees": 0.00027777777777778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "9a24f7c0208b05d6be97077d855671d1dfdbc0dd",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "d38375ffe6fe142663ff55cd783aa4df4301d83d",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 48183,
+                    "id": "Q48183"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "liang-jian",
+      "entity": "Q24839137",
+      "label": "建陵 (南梁)",
+      "description": "",
+      "statementId": "Q24839137$50ad4ca4-453e-b09d-a222-297ac1fbc636",
+      "rank": "normal",
+      "lat": 32.0136471,
+      "lng": 119.6529232,
+      "precisionDegrees": 0.00001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "liao-huai",
+      "entity": "Q24835555",
+      "label": "辽怀陵",
+      "description": "building in China",
+      "statementId": "Q24835555$67eb2e37-4610-ddd0-0adb-a33b6eed1965",
+      "rank": "normal",
+      "lat": 44.006789,
+      "lng": 118.841386,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "陵群代表点",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "liao-qing",
+      "entity": "Q24835549",
+      "label": "辽庆陵",
+      "description": "building in China",
+      "statementId": "Q24835549$6a1abab7-471c-5945-d0a4-1e87df52e613",
+      "rank": "normal",
+      "lat": 44.273143,
+      "lng": 118.442488,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "陵群代表点",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "liao-zu",
+      "entity": "Q24841246",
+      "label": "遼祖陵",
+      "description": "building in China",
+      "statementId": "Q24841246$13f7e4e4-4800-8007-f0b9-2fa41c466c69",
+      "rank": "normal",
+      "lat": 43.89169,
+      "lng": 119.106066,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "lu-fangshan",
+      "entity": "Q17031923",
+      "label": "防山墓群",
+      "description": "",
+      "statementId": "Q17031923$7F022EB5-5160-4BAE-B338-0CB273290631",
+      "rank": "normal",
+      "lat": 35.59652,
+      "lng": 117.07727,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "陵群代表点",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "min-xuan",
+      "entity": "Q17031660",
+      "label": "闽宣陵",
+      "description": "閩王王審知墓",
+      "statementId": "Q17031660$009A0057-1DD8-47B3-A2A6-34895FD44F9E",
+      "rank": "normal",
+      "lat": 26.155613,
+      "lng": 119.312755,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "0ee3b3ba1c958f4c3dcba7ed8091fe4b57311348",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 30239,
+                    "id": "Q30239"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "ming-chang",
+      "entity": "Q11088234",
+      "label": "明长陵",
+      "description": "明成祖墓",
+      "statementId": "Q11088234$883B0E57-4D7C-428F-AACE-9C38855FDAC2",
+      "rank": "normal",
+      "lat": 40.30111111,
+      "lng": 116.24305556,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "0ee3b3ba1c958f4c3dcba7ed8091fe4b57311348",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 30239,
+                    "id": "Q30239"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "ming-de",
+      "entity": "Q11087864",
+      "label": "明德陵",
+      "description": "tomb",
+      "statementId": "Q11087864$647DB617-5584-4B69-9BB4-41DAF0316074",
+      "rank": "normal",
+      "lat": 40.28833333,
+      "lng": 116.26,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "0ee3b3ba1c958f4c3dcba7ed8091fe4b57311348",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 30239,
+                    "id": "Q30239"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "ming-ding",
+      "entity": "Q11087810",
+      "label": "明定陵",
+      "description": "mausoleum in China",
+      "statementId": "Q11087810$56082405-931A-49F5-BD28-F4D1F70D9DA8",
+      "rank": "normal",
+      "lat": 40.295,
+      "lng": 116.21583333,
+      "precisionDegrees": 0.00027777777777778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "0ee3b3ba1c958f4c3dcba7ed8091fe4b57311348",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 30239,
+                    "id": "Q30239"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "ming-huang",
+      "entity": "Q11088150",
+      "label": "明皇陵",
+      "description": "mausoleum of Zhu Shizhen",
+      "statementId": "Q11088150$449C364A-3B67-4D63-AE9E-5F96635E2E39",
+      "rank": "normal",
+      "lat": 32.81083298,
+      "lng": 117.51833344,
+      "precisionDegrees": 0.00027777777777778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "0ee3b3ba1c958f4c3dcba7ed8091fe4b57311348",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 30239,
+                    "id": "Q30239"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "ming-jing",
+      "entity": "Q11087936",
+      "label": "明景陵",
+      "description": "明宣宗朱瞻基陵墓",
+      "statementId": "Q11087936$25551804-6696-43E3-BA14-33E051F16007",
+      "rank": "normal",
+      "lat": 40.29916667,
+      "lng": 116.25222222,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "0ee3b3ba1c958f4c3dcba7ed8091fe4b57311348",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 30239,
+                    "id": "Q30239"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "ming-jingtai",
+      "entity": "Q1689587",
+      "label": "景泰陵",
+      "description": "明景帝朱祁钰陵墓",
+      "statementId": "Q1689587$3B095522-4D6A-4290-A726-F202B04D9377",
+      "rank": "normal",
+      "lat": 40.00227778,
+      "lng": 116.23619444,
+      "precisionDegrees": 0.00002777777777778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "9a24f7c0208b05d6be97077d855671d1dfdbc0dd",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "d38375ffe6fe142663ff55cd783aa4df4301d83d",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 48183,
+                    "id": "Q48183"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "ming-kang",
+      "entity": "Q11087824",
+      "label": "明康陵",
+      "description": "tomb of the Zhengde Emperor",
+      "statementId": "Q11087824$24823D14-BD99-4FF6-9C9F-1B9DDDEE9E79",
+      "rank": "normal",
+      "lat": 40.31944444,
+      "lng": 116.20361111,
+      "precisionDegrees": 0.00027777777777778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "0ee3b3ba1c958f4c3dcba7ed8091fe4b57311348",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 30239,
+                    "id": "Q30239"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "ming-luwang",
+      "entity": "Q11088247",
+      "label": "明鲁王墓",
+      "description": "cemetery in Zoucheng, China",
+      "statementId": "Q11088247$2E486587-28C8-438F-884F-C783639C3396",
+      "rank": "normal",
+      "lat": 35.47666667,
+      "lng": 117.00555556,
+      "precisionDegrees": 0.00027777777777778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "9a24f7c0208b05d6be97077d855671d1dfdbc0dd",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "d38375ffe6fe142663ff55cd783aa4df4301d83d",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 48183,
+                    "id": "Q48183"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "ming-mao",
+      "entity": "Q24841491",
+      "label": "明茂陵",
+      "description": "tomb of the Chenghua Emperor",
+      "statementId": "Q24841491$8ce13f43-43d1-b046-2da3-0be4114898b1",
+      "rank": "normal",
+      "lat": 40.314303,
+      "lng": 116.226473,
+      "precisionDegrees": 0.0000277778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "ming-qing",
+      "entity": "Q11087823",
+      "label": "明庆陵",
+      "description": "tomb",
+      "statementId": "Q11087823$1F1C7E23-6FB6-42CB-8CF4-C3823E210A25",
+      "rank": "normal",
+      "lat": 40.30888889,
+      "lng": 116.23361111,
+      "precisionDegrees": 0.00027777777777778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "0ee3b3ba1c958f4c3dcba7ed8091fe4b57311348",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 30239,
+                    "id": "Q30239"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "ming-si",
+      "entity": "Q6789669",
+      "label": "明思陵",
+      "description": "明思宗崇祯帝朱由检及其后妃合葬陵墓",
+      "statementId": "Q6789669$faaea2bf-45b4-8ef4-e705-13b42b85b82a",
+      "rank": "normal",
+      "lat": 40.26858,
+      "lng": 116.19208,
+      "precisionDegrees": 0.00001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "ming-tai",
+      "entity": "Q11088097",
+      "label": "明泰陵",
+      "description": "mausoleum of Hongzhi Emperor",
+      "statementId": "Q11088097$45643FD6-2554-4FF9-9427-BC2DDF7A4FF7",
+      "rank": "normal",
+      "lat": 40.32388889,
+      "lng": 116.21666667,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "0ee3b3ba1c958f4c3dcba7ed8091fe4b57311348",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 30239,
+                    "id": "Q30239"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "ming-xian",
+      "entity": "Q11088114",
+      "label": "明献陵",
+      "description": "明仁宗朱高熾的陵墓",
+      "statementId": "Q11088114$0FDB7100-A3EA-49B1-8192-29C4B640948A",
+      "rank": "normal",
+      "lat": 40.3052639,
+      "lng": 116.2429526,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "0ee3b3ba1c958f4c3dcba7ed8091fe4b57311348",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 30239,
+                    "id": "Q30239"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "ming-xianling",
+      "entity": "Q11087935",
+      "label": "明显陵",
+      "description": "明世宗生父母合葬陵寢",
+      "statementId": "Q11087935$2E62EF28-B217-4B6E-B1DE-7599818121DE",
+      "rank": "normal",
+      "lat": 31.205675,
+      "lng": 112.62976,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "ming-xiao",
+      "entity": "Q28769",
+      "label": "明孝陵",
+      "description": "明太祖朱元璋及馬皇后合葬墓",
+      "statementId": "q28769$C5BDE764-18AA-4D67-A86E-3F3141D5730C",
+      "rank": "normal",
+      "lat": 32.060305555556,
+      "lng": 118.83456944444,
+      "precisionDegrees": 0.00027777777777778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "fa278ebfc458360e5aed63d5058cca83c46134f1",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "e4f6d9441d0600513c4533c672b5ab472dc73694",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 328,
+                    "id": "Q328"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "ming-yong",
+      "entity": "Q24841490",
+      "label": "明永陵",
+      "description": "tomb of the Jiajing Emperor",
+      "statementId": "Q24841490$fc039880-44b8-d112-3356-f0df7f63c71b",
+      "rank": "normal",
+      "lat": 40.28841,
+      "lng": 116.25044,
+      "precisionDegrees": 0.00001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "ming-yu",
+      "entity": "Q6789405",
+      "label": "明裕陵",
+      "description": "tomb of the Zhengtong Emperor",
+      "statementId": "Q6789405$798CD117-D3AE-481C-B124-48843660205B",
+      "rank": "normal",
+      "lat": 40.31444444,
+      "lng": 116.23194444,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "0ee3b3ba1c958f4c3dcba7ed8091fe4b57311348",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 30239,
+                    "id": "Q30239"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "ming-zhao",
+      "entity": "Q19842614",
+      "label": "明昭陵",
+      "description": "mausoleum of Longqing Emperor",
+      "statementId": "Q19842614$0c2d7f98-19db-44d0-9f0d-23b155ee6b3b",
+      "rank": "normal",
+      "lat": 40.291254,
+      "lng": 116.210359,
+      "precisionDegrees": 0.0000277778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "ming-zu",
+      "entity": "Q6864623",
+      "label": "明祖陵",
+      "description": "grave mound and tomb complex for the grandfather, great-grandfather, and great-great-grandfather of the Hongwu Emperor of the Ming in Huai'an Prefecture, Jiangsu Province, China",
+      "statementId": "Q6864623$8ADBE42B-73BB-487B-98D2-345FB2474F81",
+      "rank": "normal",
+      "lat": 33.0889,
+      "lng": 118.472,
+      "precisionDegrees": 0.010721998296558,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "fa278ebfc458360e5aed63d5058cca83c46134f1",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "e4f6d9441d0600513c4533c672b5ab472dc73694",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 328,
+                    "id": "Q328"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "ming13",
+      "entity": "Q41135",
+      "label": "明十三陵",
+      "description": "明朝皇帝陵墓",
+      "statementId": "q41135$949C068C-1528-4FD3-B993-7142B983B99B",
+      "rank": "normal",
+      "lat": 40.253333333333,
+      "lng": 116.2175,
+      "precisionDegrees": null,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "陵群代表点",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "nanhan2",
+      "entity": "Q232014",
+      "label": "南汉二陵博物馆",
+      "description": "位于中国广东省广州市的皇陵遗址博物馆",
+      "statementId": "Q232014$1298cd3d-efa0-4b25-8c08-f5d81ed1f678",
+      "rank": "normal",
+      "lat": 23.05073,
+      "lng": 113.37789,
+      "precisionDegrees": 0.0097626142432845,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "9a24f7c0208b05d6be97077d855671d1dfdbc0dd",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "d38375ffe6fe142663ff55cd783aa4df4301d83d",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 48183,
+                    "id": "Q48183"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "陵群代表点",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "nantang-shun",
+      "entity": "Q232074",
+      "label": "南唐二陵",
+      "description": "building in Nanjing, China",
+      "statementId": "Q232074$069A28CA-DD37-466E-85BA-E372F291FE56",
+      "rank": "normal",
+      "lat": 31.89055556,
+      "lng": 118.73361111,
+      "precisionDegrees": 0.00027777777777778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "9a24f7c0208b05d6be97077d855671d1dfdbc0dd",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "d38375ffe6fe142663ff55cd783aa4df4301d83d",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 48183,
+                    "id": "Q48183"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "nantang2",
+      "entity": "Q232074",
+      "label": "南唐二陵",
+      "description": "building in Nanjing, China",
+      "statementId": "Q232074$069A28CA-DD37-466E-85BA-E372F291FE56",
+      "rank": "normal",
+      "lat": 31.89055556,
+      "lng": 118.73361111,
+      "precisionDegrees": 0.00027777777777778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "9a24f7c0208b05d6be97077d855671d1dfdbc0dd",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "d38375ffe6fe142663ff55cd783aa4df4301d83d",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 48183,
+                    "id": "Q48183"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "陵群代表点",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "qi-tian",
+      "entity": "Q17063580",
+      "label": "田齐王陵",
+      "description": "cemetery in Zibo, China",
+      "statementId": "Q17063580$D07A1709-0276-4F77-A2AF-CDBDEE63044B",
+      "rank": "normal",
+      "lat": 36.78375,
+      "lng": 118.36854,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "陵群代表点",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "qin-east",
+      "entity": "Q15911291",
+      "label": "秦东陵",
+      "description": "cemetery in Shaanxi, China",
+      "statementId": "Q15911291$6C842406-9D7B-4827-81C5-D7EF6AA3B6A9",
+      "rank": "normal",
+      "lat": 34.33386,
+      "lng": 109.16661,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "陵群代表点",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "qin-first",
+      "entity": "Q910180",
+      "label": "秦始皇陵",
+      "description": "秦朝始皇帝陵墓",
+      "statementId": "Q910180$1BFBD7E8-91B2-4984-A3C5-011504F2DDB9",
+      "rank": "normal",
+      "lat": 34.38166667,
+      "lng": 109.25388889,
+      "precisionDegrees": 0.00027777777777778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "fa278ebfc458360e5aed63d5058cca83c46134f1",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "e4f6d9441d0600513c4533c672b5ab472dc73694",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 328,
+                    "id": "Q328"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "qin-second",
+      "entity": "Q15936271",
+      "label": "秦二世陵",
+      "description": "cemetery in China",
+      "statementId": "Q15936271$b138ed16-4070-6d13-979c-ac00f5d133cc",
+      "rank": "normal",
+      "lat": 34.19361506647696,
+      "lng": 108.98024663817178,
+      "precisionDegrees": 0.00001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "qing-chang",
+      "entity": "Q24841492",
+      "label": "清昌陵",
+      "description": "mausoleum of Jiaqing Emperor",
+      "statementId": "Q24841492$bf7944d0-489b-9457-8732-ac07331c3cf9",
+      "rank": "normal",
+      "lat": 39.362769133,
+      "lng": 115.33955812,
+      "precisionDegrees": 1e-8,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "qing-chong",
+      "entity": "Q24841493",
+      "label": "清崇陵",
+      "description": "mausoleum of Guangxu Emperor",
+      "statementId": "Q24841493$8af6e886-49d4-5043-203d-a7e708e484fe",
+      "rank": "normal",
+      "lat": 39.39510047,
+      "lng": 115.37857354,
+      "precisionDegrees": 1e-8,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "qing-ding",
+      "entity": "Q17028885",
+      "label": "清定陵",
+      "description": "咸豐帝陵",
+      "statementId": "Q17028885$eb823a36-4b70-bd63-6c30-2dd37048241d",
+      "rank": "normal",
+      "lat": 40.18599808,
+      "lng": 117.63143599,
+      "precisionDegrees": 1e-8,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "qing-east",
+      "entity": "Q306978",
+      "label": "清东陵",
+      "description": "陵墓",
+      "statementId": "q306978$3531E47B-E110-4D54-9075-1EB0EE1C6AF3",
+      "rank": "normal",
+      "lat": 40.193333333333,
+      "lng": 117.65111111111,
+      "precisionDegrees": 0.00027777777777778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "a29a646602abf65105ed0f39a44231c962ece9ee",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "c6f1777471211df31724ac60175786f3872c83e9",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 177837,
+                    "id": "Q177837"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "陵群代表点",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "qing-fu",
+      "entity": "Q1473630",
+      "label": "清福陵",
+      "description": "努爾哈赤的陵寢",
+      "statementId": "q1473630$C20E9B86-0D52-42D8-B20D-1284AA77416A",
+      "rank": "normal",
+      "lat": 41.83293,
+      "lng": 123.58351,
+      "precisionDegrees": 0.00001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "288ab581e7d2d02995a26dfa8b091d96e78457fc",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "6a164248fc96bfa583bbb495cb63ae6401ec203c",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 206855,
+                    "id": "Q206855"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "qing-hui",
+      "entity": "Q19841787",
+      "label": "清惠陵",
+      "description": "",
+      "statementId": "Q19841787$1799a7e1-45cb-4117-f190-cc0d831193f5",
+      "rank": "normal",
+      "lat": 40.16984582,
+      "lng": 117.6959753,
+      "precisionDegrees": 1e-8,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "qing-jing",
+      "entity": "Q17028952",
+      "label": "清景陵",
+      "description": "康熙帝的陵墓",
+      "statementId": "Q17028952$c6e407d3-4bb5-8c9e-7824-203c0a29832a",
+      "rank": "normal",
+      "lat": 40.18862128,
+      "lng": 117.66260862,
+      "precisionDegrees": 1e-8,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "qing-mu",
+      "entity": "Q24841488",
+      "label": "清慕陵",
+      "description": "mausoleum of Daoguang Emperor",
+      "statementId": "Q24841488$8730fb67-43ab-d73b-ebfb-08a2f47bccdf",
+      "rank": "normal",
+      "lat": 39.34219122,
+      "lng": 115.29638529,
+      "precisionDegrees": 1e-8,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "qing-tai",
+      "entity": "Q17029222",
+      "label": "清泰陵",
+      "description": "mausoleum of Yongzheng Emperor",
+      "statementId": "Q17029222$45f3ce54-47f5-5b8d-d37c-6003a91fceb4",
+      "rank": "normal",
+      "lat": 39.36927617,
+      "lng": 115.34505665,
+      "precisionDegrees": 1e-8,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "qing-west",
+      "entity": "Q1683260",
+      "label": "清西陵",
+      "description": "Necropolis in Hebei Province, China",
+      "statementId": "Q1683260$E8B5A2C5-9FBC-468C-919B-9524AB2A93E5",
+      "rank": "normal",
+      "lat": 39.36061,
+      "lng": 115.339809,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "陵群代表点",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "qing-xiao",
+      "entity": "Q24841407",
+      "label": "清孝陵",
+      "description": "順治帝陵",
+      "statementId": "Q24841407$86248f14-4f67-09c3-44d8-adeeecf7e161",
+      "rank": "normal",
+      "lat": 40.19528697822957,
+      "lng": 117.6547528920938,
+      "precisionDegrees": 1e-8,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "qing-yong",
+      "entity": "Q11681626",
+      "label": "清永陵",
+      "description": "努爾哈赤先祖的陵寢",
+      "statementId": "Q11681626$C6019E0F-BD6C-44A4-B30E-1450130E86CD",
+      "rank": "normal",
+      "lat": 41.70753,
+      "lng": 124.79711,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "qing-yu",
+      "entity": "Q1440364",
+      "label": "清裕陵",
+      "description": "乾隆帝陵墓",
+      "statementId": "Q1440364$C8A63CBC-275A-4643-8955-F05084A7A33A",
+      "rank": "normal",
+      "lat": 40.185783,
+      "lng": 117.646923,
+      "precisionDegrees": 0.00000277777777778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "9a24f7c0208b05d6be97077d855671d1dfdbc0dd",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "d38375ffe6fe142663ff55cd783aa4df4301d83d",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 48183,
+                    "id": "Q48183"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "qing-zhao",
+      "entity": "Q8189796",
+      "label": "清昭陵",
+      "description": "皇太極與孝莊文皇后的陵寢",
+      "statementId": "Q8189796$bcc27a76-4d43-737f-510a-856a60e324f7",
+      "rank": "normal",
+      "lat": 41.85038,
+      "lng": 123.4213,
+      "precisionDegrees": 1e-7,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "qing-zhaoxi",
+      "entity": "Q11089004",
+      "label": "昭西陵",
+      "description": "清朝孝莊文皇后的陵寢",
+      "statementId": "Q11089004$ef748e87-47a0-590b-6d1b-509e59fd1501",
+      "rank": "normal",
+      "lat": 40.14966488,
+      "lng": 117.6846242,
+      "precisionDegrees": 1e-8,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "shang-fuhao",
+      "entity": "Q6112269",
+      "label": "妇好墓",
+      "description": "墓葬",
+      "statementId": "Q6112269$7b7c6c2b-48ce-bbcf-747b-484708dd56d3",
+      "rank": "normal",
+      "lat": 36.121031,
+      "lng": 114.316206,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "fa278ebfc458360e5aed63d5058cca83c46134f1",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "e4f6d9441d0600513c4533c672b5ab472dc73694",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 328,
+                    "id": "Q328"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "shu-hui",
+      "entity": "Q1069942",
+      "label": "成都武侯祠",
+      "description": "成都祭祀诸葛亮、刘备等的祠庙",
+      "statementId": "Q1069942$F51F67A8-1C5B-493D-8A45-1C168687CC13",
+      "rank": "normal",
+      "lat": 30.64830556,
+      "lng": 104.04702778,
+      "precisionDegrees": 0.00002777777777778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "9a24f7c0208b05d6be97077d855671d1dfdbc0dd",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "d38375ffe6fe142663ff55cd783aa4df4301d83d",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 48183,
+                    "id": "Q48183"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "shu-yong",
+      "entity": "Q1540709",
+      "label": "王建墓",
+      "description": "Tomb of Wang Jian, emperor of Former Shu",
+      "statementId": "Q1540709$7945D760-DBE3-461B-80A2-8FFBA7218961",
+      "rank": "normal",
+      "lat": 30.67671,
+      "lng": 104.04444,
+      "precisionDegrees": 0.00001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "song-an",
+      "entity": "Q24841501",
+      "label": "宋永安陵",
+      "description": "宋宣祖趙弘殷的陵墓",
+      "statementId": "Q24841501$26ECDFC7-483E-4783-B15F-30C90BF44940",
+      "rank": "normal",
+      "lat": 34.6639,
+      "lng": 112.96179,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "song-chang",
+      "entity": "Q24841500",
+      "label": "永昌陵",
+      "description": "宋太祖赵匡胤的陵墓",
+      "statementId": "Q24841500$D52ADC40-9F05-46ED-B8B8-449D2BB17B55",
+      "rank": "normal",
+      "lat": 34.66542,
+      "lng": 112.95455,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "song-ding",
+      "entity": "Q24841498",
+      "label": "永定陵",
+      "description": "宋真宗赵恒的陵墓",
+      "statementId": "Q24841498$945BB883-81FC-44DA-848D-64F8B9D3F39A",
+      "rank": "normal",
+      "lat": 34.70176,
+      "lng": 112.97437,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "song-hou",
+      "entity": "Q24841496",
+      "label": "永厚陵",
+      "description": "宋英宗赵曙的陵墓",
+      "statementId": "Q24841496$D42F302D-7870-4C8D-98BE-02C63A03698E",
+      "rank": "normal",
+      "lat": 34.74545,
+      "lng": 112.97261,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "song-shaodi",
+      "entity": "Q10189319",
+      "label": "宋少帝陵",
+      "description": "cemetery in Tomb of Emperor Shao of Song, China",
+      "statementId": "Q10189319$69177146-FD48-4F40-988A-97E155ADD4CB",
+      "rank": "normal",
+      "lat": 22.48017,
+      "lng": 113.88658,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "e71a7903858496c67eea189a7084d5559f788edb",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "5d3b16d350189b0a81818758208505444c86c127",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 565,
+                    "id": "Q565"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "song-tai",
+      "entity": "Q24841494",
+      "label": "永泰陵",
+      "description": "宋哲宗赵煦的陵墓",
+      "statementId": "Q24841494$CE346E2C-3327-49D4-9801-D0A2AD591ADD",
+      "rank": "normal",
+      "lat": 34.65156,
+      "lng": 112.9079,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "song-xi",
+      "entity": "Q24841499",
+      "label": "永熙陵",
+      "description": "宋太宗赵炅的陵墓",
+      "statementId": "Q24841499$17596C73-365A-4F6D-B664-2D3162DE4D3D",
+      "rank": "normal",
+      "lat": 34.67167,
+      "lng": 112.94454,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "song-yu",
+      "entity": "Q24841495",
+      "label": "永裕陵",
+      "description": "宋神宗赵顼的陵墓",
+      "statementId": "Q24841495$BD4D12AF-5789-4814-80DB-7D025CCDE8C9",
+      "rank": "normal",
+      "lat": 34.64939,
+      "lng": 112.916,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "song-zhao",
+      "entity": "Q24841497",
+      "label": "永昭陵",
+      "description": "宋仁宗赵祯的陵墓",
+      "statementId": "Q24841497$B1B7F4D1-F279-4777-928E-F9E5631083F7",
+      "rank": "normal",
+      "lat": 34.74213,
+      "lng": 112.97989,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "song6",
+      "entity": "Q10907407",
+      "label": "宋六陵",
+      "description": "中國紹興的墓地",
+      "statementId": "Q10907407$98d72406-ceac-4e94-a7e3-30c852b0457f",
+      "rank": "normal",
+      "lat": 29.936155,
+      "lng": 120.696339,
+      "precisionDegrees": 0.01036618882801,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "bd49d3e4f67bc460ce7a06b6ac3027347cf5ee55",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "e84b0343e79e2a9aa8abadd7301051e15fba52d6",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 169514,
+                    "id": "Q169514"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "陵群代表点",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "song8",
+      "entity": "Q1721528",
+      "label": "宋陵",
+      "description": "北宋皇室的陵墓群，位于河南省巩义市",
+      "statementId": "Q1721528$5D7B64C5-C29E-4E1D-80A4-0D25435231EC",
+      "rank": "normal",
+      "lat": 34.66542,
+      "lng": 112.95455,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "陵群代表点",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "southern-song-chuning",
+      "entity": "Q24841252",
+      "label": "初宁陵",
+      "description": "Tomb of Liu Yu",
+      "statementId": "Q24841252$F96E7821-8975-4C36-B49E-20CEBDB3D649",
+      "rank": "normal",
+      "lat": 32.064264,
+      "lng": 118.921965,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "sui-tai",
+      "entity": "Q11145207",
+      "label": "泰陵 (隋朝)",
+      "description": "mausoleum of Emperor Wen of Sui",
+      "statementId": "Q11145207$963CCDF5-B9BB-4DDF-8FAA-7586CD5B2BFF",
+      "rank": "normal",
+      "lat": 34.28886,
+      "lng": 108.02272,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "sui-yang",
+      "entity": "Q15935843",
+      "label": "隋煬帝墓",
+      "description": "cemetery in China",
+      "statementId": "Q15935843$E5E02D7F-41F2-4C9F-AD1E-230CFBC593A6",
+      "rank": "normal",
+      "lat": 32.42266,
+      "lng": 119.39239,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "tang-ding",
+      "entity": "Q19798876",
+      "label": "唐定陵",
+      "description": "cemetery in China",
+      "statementId": "Q19798876$adcdfb74-7cf0-492f-bdb6-a8d96f2a1047",
+      "rank": "normal",
+      "lat": 34.86805556,
+      "lng": 109.1475,
+      "precisionDegrees": 0.010948779038695,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "bd49d3e4f67bc460ce7a06b6ac3027347cf5ee55",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "e84b0343e79e2a9aa8abadd7301051e15fba52d6",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 169514,
+                    "id": "Q169514"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "tang-qian",
+      "entity": "Q950653",
+      "label": "唐乾陵",
+      "description": "mausoleum of Emperor Gaozong and Wu Zetian",
+      "statementId": "Q950653$7F818518-FC43-4778-86A5-4DF0235F4D69",
+      "rank": "normal",
+      "lat": 34.56917611111111,
+      "lng": 108.21473305555556,
+      "precisionDegrees": 0.0000277778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "tang-qiao",
+      "entity": "Q10922864",
+      "label": "唐橋陵",
+      "description": "cemetery in China",
+      "statementId": "Q10922864$E8DBB2A6-9BD1-4755-8492-CD3CC19F866F",
+      "rank": "normal",
+      "lat": 34.982919,
+      "lng": 109.46857,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "tang-xian",
+      "entity": "Q19841780",
+      "label": "唐獻陵",
+      "description": "唐高祖李渊陵寝",
+      "statementId": "Q19841780$1d24b5c8-9e3e-4620-987d-e7b88a03aee4",
+      "rank": "normal",
+      "lat": 34.69972222,
+      "lng": 109.13111111,
+      "precisionDegrees": 0.010926458426157,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "bd49d3e4f67bc460ce7a06b6ac3027347cf5ee55",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "e84b0343e79e2a9aa8abadd7301051e15fba52d6",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 169514,
+                    "id": "Q169514"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "tang-zhao",
+      "entity": "Q197502",
+      "label": "唐昭陵",
+      "description": "李世民之墓",
+      "statementId": "Q197502$97EE81AA-CA84-45A7-AB34-17B0F98604D7",
+      "rank": "normal",
+      "lat": 34.63168,
+      "lng": 108.48335,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "tang18",
+      "entity": "Q1721530",
+      "label": "唐十八陵",
+      "description": "archaeological site in Pucheng County, Shaanxi, People's Republic of China",
+      "statementId": "Q1721530$634916D5-67CC-42F9-BAEB-2B8877E7C0DD",
+      "rank": "normal",
+      "lat": 35.03444,
+      "lng": 109.66916,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "陵群代表点",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "tubo-kings",
+      "entity": "Q750107",
+      "label": "藏王墓",
+      "description": "cemetery in Qonggyai County, Shannan, Tibet, China",
+      "statementId": "Q750107$F09B351E-CAEC-49C4-AC46-E1548DE7E684",
+      "rank": "normal",
+      "lat": 29.017821,
+      "lng": 91.679769,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "陵群代表点",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "wei-gao",
+      "entity": "Q11091115",
+      "label": "曹操高陵",
+      "description": "Mausoleum",
+      "statementId": "Q11091115$FEDB908F-E1FF-4ED8-9C34-EAA1B8D6C414",
+      "rank": "normal",
+      "lat": 36.24083333,
+      "lng": 114.25972222,
+      "precisionDegrees": 0.00027777777777778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "fa278ebfc458360e5aed63d5058cca83c46134f1",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "e4f6d9441d0600513c4533c672b5ab472dc73694",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 328,
+                    "id": "Q328"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "wu-helv",
+      "entity": "Q8013177",
+      "label": "虎丘",
+      "description": "苏州名胜风景区",
+      "statementId": "Q8013177$4CFB08E9-5D23-4BCC-9621-8A16F93630DD",
+      "rank": "normal",
+      "lat": 31.3375,
+      "lng": 120.576,
+      "precisionDegrees": 0.01051745343403,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "wuyue-qian",
+      "entity": "Q17028307",
+      "label": "钱镠墓",
+      "description": "",
+      "statementId": "Q17028307$8f111e24-4738-a5cd-51b8-e641de695d9b",
+      "rank": "normal",
+      "lat": 30.23915277777778,
+      "lng": 119.71991944444444,
+      "precisionDegrees": 0.000002777777777777778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "xixia9",
+      "entity": "Q1069411",
+      "label": "西夏陵",
+      "description": "位於中國寧夏的西夏君主墓地",
+      "statementId": "Q1069411$242F3424-CB21-4346-8CD6-B3F12ED8E5EF",
+      "rank": "normal",
+      "lat": 38.435035,
+      "lng": 105.987167,
+      "precisionDegrees": 0.00000277777777778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "9a24f7c0208b05d6be97077d855671d1dfdbc0dd",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "d38375ffe6fe142663ff55cd783aa4df4301d83d",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 48183,
+                    "id": "Q48183"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "陵群代表点",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "yuan-genghis",
+      "entity": "Q3301848",
+      "label": "成吉思汗陵",
+      "description": "building in Ejin Horo Banner, China",
+      "statementId": "Q3301848$5c9e78c6-4100-c18e-d372-98ab4fa09862",
+      "rank": "normal",
+      "lat": 39.371153,
+      "lng": 109.779397,
+      "precisionDegrees": 0.0000277778,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "yue-yinshan",
+      "entity": "Q10910328",
+      "label": "印山越国王陵",
+      "description": "cemetery in People's Republic of China",
+      "statementId": "Q10910328$52821C78-66D3-4C4E-95C1-BB04EA4247F8",
+      "rank": "normal",
+      "lat": 29.93444443,
+      "lng": 120.51972198,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "0ee3b3ba1c958f4c3dcba7ed8091fe4b57311348",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 30239,
+                    "id": "Q30239"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "zeng-yi",
+      "entity": "Q1196070",
+      "label": "曾侯乙墓",
+      "description": "戰國時代墓葬",
+      "statementId": "Q1196070$bb962dd6-4c06-894d-7388-083da4891fd9",
+      "rank": "normal",
+      "lat": 31.7309,
+      "lng": 113.3449,
+      "precisionDegrees": 0.0001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "zhao-kings",
+      "entity": "Q15942641",
+      "label": "赵王陵",
+      "description": "cemetery in Yongnian District, China",
+      "statementId": "Q15942641$D33EC5DD-DB4D-4F1C-884B-50CBDEA6C0A7",
+      "rank": "normal",
+      "lat": 36.70751,
+      "lng": 114.41849,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "陵群代表点",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "zhongshan-cuo",
+      "entity": "Q1500653",
+      "label": "中山王墓",
+      "description": "cemetery in China",
+      "statementId": "Q1500653$AA01FE6E-B5F1-4577-9FBE-F92567B1BD59",
+      "rank": "normal",
+      "lat": 38.32775,
+      "lng": 114.1972,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "9a24f7c0208b05d6be97077d855671d1dfdbc0dd",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "d38375ffe6fe142663ff55cd783aa4df4301d83d",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 48183,
+                    "id": "Q48183"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "zhou-later",
+      "entity": "Q10917832",
+      "label": "后周皇陵",
+      "description": "cemetery in Xinzheng, China",
+      "statementId": "Q10917832$29F2EBD3-4229-4E05-AFF3-0216DC2307E2",
+      "rank": "normal",
+      "lat": 34.56237,
+      "lng": 113.69644,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "陵群代表点",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "zhou-qing",
+      "entity": "Q24841247",
+      "label": "后周庆陵",
+      "description": "mausoleum of Chai Rong",
+      "statementId": "Q24841247$123D42A2-1FD2-495D-B344-159A7F442AEC",
+      "rank": "normal",
+      "lat": 34.5623528,
+      "lng": 113.69645,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "0ee3b3ba1c958f4c3dcba7ed8091fe4b57311348",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 30239,
+                    "id": "Q30239"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "zhou-shun",
+      "entity": "Q24832116",
+      "label": "后周顺陵",
+      "description": "mausoleum of Guo Zongxun, Emperor Gong",
+      "statementId": "Q24832116$83C7A28E-A29A-463F-9AF5-1CC806FA6EEC",
+      "rank": "normal",
+      "lat": 34.5640694,
+      "lng": 113.7000972,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "0ee3b3ba1c958f4c3dcba7ed8091fe4b57311348",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 30239,
+                    "id": "Q30239"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "zhou-song",
+      "entity": "Q24841250",
+      "label": "嵩陵",
+      "description": "",
+      "statementId": "Q24841250$846FA637-B5EA-4FE4-881D-CF9216F1A94C",
+      "rank": "normal",
+      "lat": 34.5381528,
+      "lng": 113.6943889,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "0ee3b3ba1c958f4c3dcba7ed8091fe4b57311348",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 30239,
+                    "id": "Q30239"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "遗址代表点（非入口）",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "zhou-three",
+      "entity": "Q130601928",
+      "label": "周三王陵",
+      "description": "",
+      "statementId": "Q130601928$E6B732DD-BB34-4704-BD19-1207430AF47E",
+      "rank": "normal",
+      "lat": 34.62833,
+      "lng": 112.38278,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [
+        {
+          "hash": "0ee3b3ba1c958f4c3dcba7ed8091fe4b57311348",
+          "snaks": {
+            "P143": [
+              {
+                "snaktype": "value",
+                "property": "P143",
+                "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 30239,
+                    "id": "Q30239"
+                  },
+                  "type": "wikibase-entityid"
+                },
+                "datatype": "wikibase-item"
+              }
+            ]
+          },
+          "snaks-order": [
+            "P143"
+          ]
+        }
+      ],
+      "retrievedAt": "2026-10-03",
+      "target": "陵群代表点",
+      "reviewStatus": "indexed_name_match_pending_review"
+    },
+    {
+      "id": "zhou-xianyang",
+      "entity": "Q10921119",
+      "label": "周陵",
+      "description": "cemetery in China",
+      "statementId": "Q10921119$388b03fb-4431-9d86-0894-9e7fd90cee0e",
+      "rank": "normal",
+      "lat": 34.410419,
+      "lng": 108.725561,
+      "precisionDegrees": 0.000001,
+      "globe": "http://www.wikidata.org/entity/Q2",
+      "references": [],
+      "retrievedAt": "2026-10-03",
+      "target": "陵群代表点",
+      "reviewStatus": "indexed_name_match_pending_review"
+    }
+  ],
+  "unmatched": [
+    {
+      "id": "cai-hou",
+      "name": "寿县蔡侯墓",
+      "entityCandidates": []
+    },
+    {
+      "id": "qi-jing",
+      "name": "齐景公墓（河崖头疑似陵址）",
+      "entityCandidates": []
+    },
+    {
+      "id": "qing-cixi",
+      "name": "菩陀峪定东陵（慈禧）",
+      "entityCandidates": []
+    },
+    {
+      "id": "qing-cian",
+      "name": "普祥峪定东陵（慈安）",
+      "entityCandidates": []
+    },
+    {
+      "id": "qing-xiaodong",
+      "name": "孝东陵（孝惠）",
+      "entityCandidates": []
+    },
+    {
+      "id": "ming-shaowu",
+      "name": "绍武君臣冢",
+      "entityCandidates": [
+        {
+          "q": "Q16926399",
+          "title": "绍武君臣冢"
+        },
+        {
+          "q": "Q16926399",
+          "title": "绍武君臣冢"
+        }
+      ]
+    },
+    {
+      "id": "legend-huangdi",
+      "name": "桥山黄帝陵",
+      "entityCandidates": [
+        {
+          "q": "Q1518486",
+          "title": "黄帝陵 (黄陵县)"
+        }
+      ]
+    },
+    {
+      "id": "legend-yandi",
+      "name": "炎陵炎帝陵",
+      "entityCandidates": [
+        {
+          "q": "Q15915073",
+          "title": "炎帝陵"
+        }
+      ]
+    },
+    {
+      "id": "legend-shun-yuncheng",
+      "name": "运城舜帝陵",
+      "entityCandidates": []
+    },
+    {
+      "id": "legend-shun-ningyuan",
+      "name": "九疑山舜帝陵",
+      "entityCandidates": []
+    },
+    {
+      "id": "yin-kings",
+      "name": "殷墟王陵区",
+      "entityCandidates": []
+    },
+    {
+      "id": "qin-gong-group",
+      "name": "秦公陵园",
+      "entityCandidates": []
+    },
+    {
+      "id": "qin-gong-1",
+      "name": "秦公一号大墓",
+      "entityCandidates": [
+        {
+          "q": "Q48897676",
+          "title": "秦公一号大墓"
+        },
+        {
+          "q": "Q48897676",
+          "title": "秦公一号大墓"
+        }
+      ]
+    },
+    {
+      "id": "han-ping",
+      "name": "汉平陵",
+      "entityCandidates": [
+        {
+          "q": "Q17039137",
+          "title": "漢平陵"
+        }
+      ]
+    },
+    {
+      "id": "han-yi",
+      "name": "汉义陵",
+      "entityCandidates": [
+        {
+          "q": "Q17032762",
+          "title": "漢義陵"
+        }
+      ]
+    },
+    {
+      "id": "han-kang",
+      "name": "汉康陵",
+      "entityCandidates": [
+        {
+          "q": "Q17032691",
+          "title": "漢康陵"
+        }
+      ]
+    },
+    {
+      "id": "wei-xizhu-m2",
+      "name": "西朱村曹魏墓M2",
+      "entityCandidates": []
+    },
+    {
+      "id": "zhou-xiao",
+      "name": "北周孝陵",
+      "entityCandidates": [
+        {
+          "q": "Q10902592",
+          "title": "北周孝陵"
+        },
+        {
+          "q": "Q10902592",
+          "title": "北周孝陵"
+        }
+      ]
+    },
+    {
+      "id": "southern-danyang",
+      "name": "丹阳南朝齐梁帝陵遗存",
+      "entityCandidates": [
+        {
+          "q": "Q7619081",
+          "title": "南朝陵墓石刻"
+        }
+      ]
+    },
+    {
+      "id": "tang-tai",
+      "name": "唐泰陵",
+      "entityCandidates": [
+        {
+          "q": "Q19841779",
+          "title": "唐泰陵"
+        }
+      ]
+    },
+    {
+      "id": "tang-jian",
+      "name": "唐建陵",
+      "entityCandidates": [
+        {
+          "q": "Q19841777",
+          "title": "唐建陵"
+        }
+      ]
+    },
+    {
+      "id": "tang-yuan",
+      "name": "唐元陵",
+      "entityCandidates": [
+        {
+          "q": "Q19841774",
+          "title": "唐元陵"
+        }
+      ]
+    },
+    {
+      "id": "tang-chong",
+      "name": "唐崇陵",
+      "entityCandidates": [
+        {
+          "q": "Q19841776",
+          "title": "唐崇陵"
+        }
+      ]
+    },
+    {
+      "id": "tang-feng",
+      "name": "唐丰陵",
+      "entityCandidates": [
+        {
+          "q": "Q19841785",
+          "title": "唐豐陵"
+        }
+      ]
+    },
+    {
+      "id": "tang-jing",
+      "name": "唐景陵",
+      "entityCandidates": [
+        {
+          "q": "Q19841778",
+          "title": "唐景陵"
+        }
+      ]
+    },
+    {
+      "id": "tang-guang",
+      "name": "唐光陵",
+      "entityCandidates": [
+        {
+          "q": "Q19841775",
+          "title": "唐光陵"
+        }
+      ]
+    },
+    {
+      "id": "tang-zhuang",
+      "name": "唐庄陵",
+      "entityCandidates": [
+        {
+          "q": "Q19841784",
+          "title": "唐莊陵"
+        }
+      ]
+    },
+    {
+      "id": "tang-zhang",
+      "name": "唐章陵",
+      "entityCandidates": [
+        {
+          "q": "Q19841781",
+          "title": "唐章陵"
+        }
+      ]
+    },
+    {
+      "id": "tang-duan",
+      "name": "唐端陵",
+      "entityCandidates": [
+        {
+          "q": "Q19841782",
+          "title": "唐端陵"
+        }
+      ]
+    },
+    {
+      "id": "tang-zhen",
+      "name": "唐贞陵",
+      "entityCandidates": [
+        {
+          "q": "Q19841786",
+          "title": "唐貞陵"
+        }
+      ]
+    },
+    {
+      "id": "tang-jian2",
+      "name": "唐简陵",
+      "entityCandidates": [
+        {
+          "q": "Q19841783",
+          "title": "唐簡陵"
+        }
+      ]
+    },
+    {
+      "id": "tang-jing2",
+      "name": "唐靖陵",
+      "entityCandidates": [
+        {
+          "q": "Q10923047",
+          "title": "唐靖陵"
+        }
+      ]
+    },
+    {
+      "id": "nantang-qin",
+      "name": "南唐钦陵",
+      "entityCandidates": [
+        {
+          "q": "Q24841204",
+          "title": "钦陵"
+        }
+      ]
+    },
+    {
+      "id": "nanhan-de",
+      "name": "南汉德陵",
+      "entityCandidates": [
+        {
+          "q": "Q28410072",
+          "title": "德陵 (南漢)"
+        },
+        {
+          "q": "Q28410072",
+          "title": "德陵 (南漢)"
+        }
+      ]
+    },
+    {
+      "id": "nanhan-kang",
+      "name": "南汉康陵",
+      "entityCandidates": [
+        {
+          "q": "Q10287069",
+          "title": "康陵 (南漢)"
+        },
+        {
+          "q": "Q10287069",
+          "title": "康陵 (南漢)"
+        }
+      ]
+    },
+    {
+      "id": "song-si",
+      "name": "宋永思陵",
+      "entityCandidates": [
+        {
+          "q": "Q11132068",
+          "title": "永思陵"
+        }
+      ]
+    },
+    {
+      "id": "song-fu",
+      "name": "宋永阜陵",
+      "entityCandidates": [
+        {
+          "q": "Q10376035",
+          "title": "永阜陵"
+        }
+      ]
+    },
+    {
+      "id": "song-chong",
+      "name": "宋永崇陵",
+      "entityCandidates": [
+        {
+          "q": "Q10375207",
+          "title": "永崇陵"
+        }
+      ]
+    },
+    {
+      "id": "song-mao",
+      "name": "宋永茂陵",
+      "entityCandidates": [
+        {
+          "q": "Q10375826",
+          "title": "永茂陵"
+        }
+      ]
+    },
+    {
+      "id": "song-mu",
+      "name": "宋永穆陵",
+      "entityCandidates": [
+        {
+          "q": "Q10375749",
+          "title": "永穆陵"
+        }
+      ]
+    },
+    {
+      "id": "song-shao",
+      "name": "宋永绍陵",
+      "entityCandidates": [
+        {
+          "q": "Q10375771",
+          "title": "永紹陵"
+        }
+      ]
+    },
+    {
+      "id": "jin-group",
+      "name": "金陵（大房山陵区）",
+      "entityCandidates": []
+    },
+    {
+      "id": "jin-rui",
+      "name": "金太祖睿陵",
+      "entityCandidates": []
+    },
+    {
+      "id": "qi-taian",
+      "name": "南齐泰安陵",
+      "entityCandidates": [
+        {
+          "q": "Q24839078",
+          "title": "泰安陵"
+        }
+      ]
+    },
+    {
+      "id": "zhou-jue",
+      "name": "北周静陵（宇文觉墓）",
+      "entityCandidates": []
+    },
+    {
+      "id": "legend-two",
+      "name": "颛顼帝喾陵",
+      "entityCandidates": []
+    },
+    {
+      "id": "zhou-ling",
+      "name": "周灵王陵（传统归属）",
+      "entityCandidates": [
+        {
+          "q": "Q10565936",
+          "title": "靈王陵"
+        }
+      ]
+    },
+    {
+      "id": "chu-xiongjia",
+      "name": "熊家冢楚王陵（墓主未定）",
+      "entityCandidates": []
+    },
+    {
+      "id": "chu-you",
+      "name": "李三孤堆（疑似楚幽王墓）",
+      "entityCandidates": []
+    },
+    {
+      "id": "han-huzhuang",
+      "name": "胡庄韩王陵（墓主未定）",
+      "entityCandidates": []
+    },
+    {
+      "id": "yan-xuliang",
+      "name": "燕下都虚粮冢（疑似燕王陵区）",
+      "entityCandidates": []
+    },
+    {
+      "id": "lu-nine",
+      "name": "鲁九公墓（鲁诸公墓）",
+      "entityCandidates": [
+        {
+          "q": "Q17031139",
+          "title": "鲁九公墓"
+        }
+      ]
+    },
+    {
+      "id": "wu-jiang",
+      "name": "吴大帝蒋陵",
+      "entityCandidates": [
+        {
+          "q": "Q10944806",
+          "title": "蒋陵"
+        },
+        {
+          "q": "Q10944806",
+          "title": "蒋陵"
+        },
+        {
+          "q": "Q10944806",
+          "title": "蒋陵"
+        },
+        {
+          "q": "Q11115193",
+          "title": "梅花山 (南京)"
+        }
+      ]
+    },
+    {
+      "id": "mangshan",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "han-yuan",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "han-gong",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "han-xian",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "han-huai",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "han-wen",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "wei-shouyang",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "jin-gaoyuan",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "jin-junping",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "jin-chongyang",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "jin-junyang",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "jin-taiyang",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "wei-chang",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "wei-jing",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "wei-ding",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "wei-jing2",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "later-tang-hui",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "xixia-1",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "xixia-2",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "xixia-3",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "xixia-4",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "xixia-5",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "xixia-6",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "xixia-7",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "xixia-8",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    },
+    {
+      "id": "xixia-9",
+      "reason": "Historical-to-physical correspondence needs archaeological verification."
+    }
+  ],
+  "errors": []
+}

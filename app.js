@@ -15,7 +15,7 @@ const mapControlsStorageKey = "travel-map-controls-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "2.1.7";
+const appVersion = "2.2.0";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
@@ -78,6 +78,9 @@ let catalogDataPromise = null;
 let china5aCatalogPromise = null;
 let china5aCoordinatesPromise = null;
 let chinaAncientCapitalsPromise = null;
+let imperialTombChecklistPromise = null;
+let imperialTombChecklistItems = [];
+let imperialTombMapIndex = new Map();
 let usNpsCatalogPromise = null;
 let usNpsBoundaryPromise = null;
 let earthquakeDataPromise = null;
@@ -324,6 +327,7 @@ const translations = {
     providerGoogle: "Google 街道",
     providerGoogleSatellite: "Google 卫星",
     providerGoogleTerrain: "Google 地形",
+    providerDem: "DEM 高程（ETOPO）",
     providerSeafloorAge: "海底年龄（植被）",
     providerSeafloorContours: "海底年龄（植被＋等值线）",
     seafloorAgeLegend: "海洋岩石圈年龄",
@@ -379,8 +383,8 @@ const translations = {
     railwayLegendOwnerChange: "管理分界",
     railwayLegendNote: "完整图例由 OpenRailwayMap 官方实时生成，内容与标准铁路瓦片一致。",
     railwayLegendOfficial: "单独打开",
-    overlayArcgisWater: "全球水系",
-    arcgisWaterLegendTitle: "全球水系",
+    overlayArcgisWater: "水系",
+    arcgisWaterLegendTitle: "水系",
     arcgisWaterEsriSource: "ArcGIS 水面与名称",
     arcgisWaterHydroSource: "HydroRIVERS 缺失河段补全",
     arcgisWaterLegendSource: "Esri 水面与名称 · HydroRIVERS 仅补全缺失河段",
@@ -435,6 +439,7 @@ const translations = {
     overlay5a: "5A / 国家公园",
     overlayAncientCapitals: "古都",
     overlayGreatWall: "长城",
+    overlayImperialTombs: "皇陵",
     overlayHeritage: "世界遗产",
     overlayHighAltitude: "高海拔挑战",
     hideMapControls: "收起",
@@ -578,6 +583,7 @@ const translations = {
     providerGoogle: "Google Road",
     providerGoogleSatellite: "Google Satellite",
     providerGoogleTerrain: "Google Terrain",
+    providerDem: "DEM elevation (ETOPO)",
     providerSeafloorAge: "Seafloor age (vegetation)",
     providerSeafloorContours: "Seafloor age (vegetation + contours)",
     seafloorAgeLegend: "Age of oceanic lithosphere",
@@ -633,8 +639,8 @@ const translations = {
     railwayLegendOwnerChange: "Owner boundary",
     railwayLegendNote: "The full legend is generated live by OpenRailwayMap and matches its standard railway tiles.",
     railwayLegendOfficial: "Open separately",
-    overlayArcgisWater: "Global waters",
-    arcgisWaterLegendTitle: "Global waters",
+    overlayArcgisWater: "Waterways",
+    arcgisWaterLegendTitle: "Waterways",
     arcgisWaterEsriSource: "ArcGIS areas and names",
     arcgisWaterHydroSource: "HydroRIVERS gap fill",
     arcgisWaterLegendSource: "Esri water areas and names · HydroRIVERS fills gaps only",
@@ -689,6 +695,7 @@ const translations = {
     overlay5a: "5A / National Parks",
     overlayAncientCapitals: "Ancient Capitals",
     overlayGreatWall: "Great Wall",
+    overlayImperialTombs: "Imperial Tombs",
     overlayHeritage: "World Heritage",
     overlayHighAltitude: "High-altitude challenge",
     hideMapControls: "Collapse",
@@ -814,7 +821,7 @@ function t(key) {
 }
 
 function defaultMapOverlays() {
-return { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, arcgisWater: false, arcgisWaterEsri: true, arcgisWaterHydroRivers: true, earthquakes: false, volcanoes: false, china5a: false, chinaAncientCapitals: false, greatWall: false, greatWallHistory: false, worldHeritage: false, highAltitude: false };
+return { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, arcgisWater: false, arcgisWaterEsri: true, arcgisWaterHydroRivers: true, earthquakes: false, volcanoes: false, china5a: false, chinaAncientCapitals: false, imperialTombs: false, imperialTombsEra: "", greatWall: false, greatWallHistory: false, worldHeritage: false, highAltitude: false };
 }
 
 function normalizeMapOverlays(overlays = {}) {
@@ -823,6 +830,11 @@ function normalizeMapOverlays(overlays = {}) {
     ...overlays,
     populationDensity: Boolean(overlays.populationDensity),
     greatWall: Boolean(overlays.greatWall),
+    imperialTombs: Boolean(overlays.imperialTombs),
+    imperialTombsEra: typeof overlays.imperialTombsEra === "string" ? overlays.imperialTombsEra : "",
+    imperialTombsEras: overlays.imperialTombsEras && typeof overlays.imperialTombsEras === "object" && !Array.isArray(overlays.imperialTombsEras)
+      ? Object.fromEntries(Object.entries(overlays.imperialTombsEras).map(([key,value]) => [key,value !== false])) : null,
+    imperialTombsNatures: Object.fromEntries(['actual_burial','posthumous','cenotaph','commemorative','mixed','unknown'].map(key => [key,overlays.imperialTombsNatures?.[key] !== false])),
     greatWallHistory: Boolean(overlays.greatWallHistory),
     greatWallHistoryEras: Object.fromEntries(['spring-autumn','qin','han','northern-wei','liao-jin','ming'].map(key => [key, overlays.greatWallHistoryEras?.[key] !== false])),
     railways: Boolean(overlays.railways),
@@ -834,6 +846,7 @@ function normalizeMapOverlays(overlays = {}) {
     volcanoes: Boolean(overlays.volcanoes),
     china5a: Boolean(overlays.china5a),
     chinaAncientCapitals: Boolean(overlays.chinaAncientCapitals),
+    ancientCapitalPeriods: HistoricalPeriods.periodSelection(overlays.ancientCapitalPeriods && typeof overlays.ancientCapitalPeriods === "object" ? overlays.ancientCapitalPeriods : {}),
     worldHeritage: Boolean(overlays.worldHeritage),
     highAltitude: Boolean(overlays.highAltitude),
   };
@@ -1135,6 +1148,12 @@ const mapProviders = {
       "https://mt3.google.com/vt/lyrs=p&x={x}&y={y}&z={z}",
     ],
     attribution: "© Google",
+  },
+  dem: {
+    label: "DEM 高程（ETOPO）",
+    tiles: ["https://tiles.arcgis.com/tiles/C8EMgrsFcRFL6LrL/arcgis/rest/services/ETOPO_hillshade/MapServer/tile/{z}/{y}/{x}"],
+    attribution: "Elevation / bathymetry: NOAA NCEI · ETOPO 2022",
+    maxNativeZoom: 12,
   },
   seafloorAge: {
     label: "海底年龄（植被）",
@@ -1995,6 +2014,7 @@ function chineseToPinyinTitle(value) {
 const checklistEnglishLabels = {
   china5a: "China 5A Scenic Areas",
   chinaAncientCapitals: "Ancient Chinese Capitals",
+  imperialTombs: "Imperial tombs",
   worldHeritage: "World Heritage",
   fiveMountains: "Five Great Mountains of China",
   threeMountains: "Three Famous Mountains of China",
@@ -2942,7 +2962,11 @@ const checklistCatalog = {
     ],
   },
   chinaAncientCapitals: {
-    label: "中国古都",
+    label: "古都",
+    items: [],
+  },
+  imperialTombs: {
+    label: "皇陵",
     items: [],
   },
   worldHeritage: {
@@ -5611,7 +5635,7 @@ function checklistCoordinateKeyFromCoords(coords) {
 }
 
 function checklistCoordinateKeyForItem(key, item, context = null) {
-  if (key === "chinaAncientCapitals") return "";
+  if (key === "chinaAncientCapitals" || key === "imperialTombs") return "";
   const group = key === "china5a" ? (typeof context === "string" ? context : context?.unit || "") : "";
   return checklistCoordinateKeyFromCoords(checklistCoordinateFor(item, group));
 }
@@ -5721,7 +5745,7 @@ function closeMapPopupsAndDetail() {
 }
 
 function resetMapDetailClass() {
-  $("#mapDetail")?.classList.remove("ancient-capital-detail");
+  $("#mapDetail")?.classList.remove("ancient-capital-detail", "imperial-tomb-detail");
 }
 
 function setMapAddMode(enabled) {
@@ -6338,7 +6362,7 @@ function markMapEventHandled(event) {
 
 function mapEventHitsPoint(event) {
   if (!mapLibreMap || !event?.point) return false;
-  const pointLayers = ["map-points-circle", "map-points-label", "map-points-label-full", "earthquake-points", "volcano-points"]
+  const pointLayers = ["map-points-circle", "map-points-label", "map-points-label-full", "ancient-capital-point", "ancient-capital-label", "ancient-capital-label-full", "earthquake-points", "volcano-points", "imperial-tomb-point", "imperial-tomb-label", "imperial-tomb-label-full"]
     .filter((layerId) => mapLibreMap.getLayer(layerId));
   return pointLayers.length > 0 && mapLibreMap.queryRenderedFeatures(event.point, { layers: pointLayers }).length > 0;
 }
@@ -7217,10 +7241,20 @@ function loadUsNpsBoundaries() {
 function loadChinaAncientCapitals() {
   if (chinaAncientCapitalsPromise) return chinaAncientCapitalsPromise;
   chinaAncientCapitalsPromise = fetchJson("data/china-ancient-capitals.json")
+    .then(async (base) => {
+      try {
+        const supplement = await fetchJson("data/western-regions-36.json?v=2");
+        return WesternRegions.merge(base, supplement);
+      } catch (error) {
+        console.warn("西域三十六国补充加载失败，保留原古都目录", error);
+        return base;
+      }
+    })
     .then((data) => {
       const items = Array.isArray(data?.items) ? data.items : [];
       if (!items.length) throw new Error("invalid ancient capitals catalog");
       chinaAncientCapitals = data;
+      fixedChecklistTotals.chinaAncientCapitals = data.recordItems?.length || data.recordCount || chinaAncientCapitalTotal;
       chinaAncientCapitalCoordinates = {};
       chinaAncientCapitalMeta = {};
       const mergedSiteByCoordinate = new Map();
@@ -7256,7 +7290,7 @@ function loadChinaAncientCapitals() {
       });
     })
     .catch((error) => {
-      console.warn("中国古都清单加载失败", error);
+      console.warn("古都清单加载失败", error);
       chinaAncientCapitals = {};
       chinaAncientCapitalCoordinates = {};
       chinaAncientCapitalMeta = {};
@@ -7264,7 +7298,7 @@ function loadChinaAncientCapitals() {
     })
     .finally(() => {
       checklistOverlayCache.signature = "";
-      if (isMapPageActive() && state.mapOverlays?.chinaAncientCapitals) scheduleGeoMapRender();
+      if (isMapPageActive() && state.mapOverlays?.chinaAncientCapitals) { renderMapControls(); scheduleGeoMapRender(); }
     });
   return chinaAncientCapitalsPromise;
 }
@@ -8254,6 +8288,7 @@ function renderMapLibreMap() {
     mapLibreMap.on("mouseout", clearMapLibreRailwayHover);
     mapLibreMap.on("click", (event) => {
       if (event.originalEvent?._travelMapHandled) return;
+      if (!mapAddMode && !mapPathMode && globalThis.ImperialTombs?.handleClick(mapLibreMap, event)) return;
       if (mapAddMode || mapPathMode) {
         handleMapCanvasClick(event.lngLat.lng, event.lngLat.lat, event.originalEvent);
         return;
@@ -9073,7 +9108,7 @@ function showRailwayHover(event, features, vectorFeature = null) {
 }
 
 function railwayForegroundPoint(event) {
-  const layers = ["map-points-circle", "map-points-label", "map-points-label-full", "earthquake-points", "volcano-points"].filter(id => mapLibreMap.getLayer(id));
+  const layers = ["map-points-circle", "map-points-label", "map-points-label-full", "ancient-capital-point", "ancient-capital-label", "ancient-capital-label-full", "earthquake-points", "volcano-points"].filter(id => mapLibreMap.getLayer(id));
   return layers.length && mapLibreMap.queryRenderedFeatures(event.point, { layers }).length > 0;
 }
 
@@ -9210,6 +9245,7 @@ function syncMapLibreRailwayOverlay(enabled) {
 function syncMapLibreHazardOverlays(overlays) {
   if (!mapLibreMap || !mapLibreStyleReady) return;
   GreatWall.sync(mapLibreMap);
+  ImperialTombs.sync(mapLibreMap);
   refreshEarthquakeOnline();
   if (!overlays.volcanoes) volcanoHoverPopup?.remove();
   ["earthquake-points", "volcano-points"].forEach(removeMapLibreLayer);
@@ -9547,7 +9583,7 @@ function bindMapLibreUsNpsHandlers() {
   const handleClick = (event) => {
     if (mapAddMode || mapPathMode) return;
     if (event.originalEvent?._travelMapHandled) return;
-    const pointLayers = ["map-points-circle", "map-points-label", "map-points-label-full"].filter((layerId) => mapLibreMap.getLayer(layerId));
+    const pointLayers = ["map-points-circle", "map-points-label", "map-points-label-full", "ancient-capital-point", "ancient-capital-label", "ancient-capital-label-full"].filter((layerId) => mapLibreMap.getLayer(layerId));
     if (pointLayers.length && mapLibreMap.queryRenderedFeatures(event.point, { layers: pointLayers }).length) return;
     const feature = event.features?.[0];
     const itemId = feature?.properties?.itemId;
@@ -9640,6 +9676,7 @@ function renderMapLibreLayers() {
   removeMapLibreLayer("map-points-circle");
   removeMapLibreLayer("map-points-label");
   removeMapLibreLayer("map-points-label-full");
+  ["ancient-capital-point", "ancient-capital-label", "ancient-capital-label-full"].forEach(removeMapLibreLayer);
   removeMapLibreLayer("admin-country-context-line");
   removeMapLibreLayer("admin-country-context-fill");
   removeMapLibreLayer("map-background-context-line");
@@ -9756,24 +9793,30 @@ function renderMapLibreLayers() {
   clearLoadingDebugSoon();
 }
 
+function mapLayerOrder(layer) {
+  const id = layer.id, source = String(layer.source || "");
+  if (layer.type === "background" || id === "basemap" || id.startsWith("esri-relief-")) return 0;
+  if (id === "population-density") return 10;
+  if (/^(map-background-context|admin-country-context|country-click)/.test(id)) return 20;
+  if (/^visited-(countries|regions|subadmin|region-group-outlines)/.test(id) || id === "us-county-reference-line") return 30;
+  if (id.startsWith("us-nps-") || id.startsWith("imported-shapes") && source !== "imported-paths") return 35;
+  if (id.startsWith("arcgis-water-")) return 40;
+  if (id.startsWith("orm-") || id === "railway-network-raster") return 50;
+  if (id.startsWith("great-wall-") && layer.type !== "symbol") return 60;
+  if (source === "imported-paths" || id.startsWith("flight-routes")) return 70;
+  if (id === "earthquake-points" || id === "volcano-points") return 80;
+  if (/^(map-points|ancient-capital|imperial-tomb|great-wall-(point|label)|visited-area)/.test(id)) return 90;
+  return 40;
+}
+
 function bringMapLibrePointLayersToFront() {
   if (!mapLibreMap) return;
-  // Keep both railway modes below personal paths, including async vector loads.
+  // Stable ordering also handles overlays arriving after boundary redraws.
   const layers = mapLibreMap.getStyle()?.layers || [];
-  const firstPath = layers.find(layer => layer.source === "imported-paths");
-  if (firstPath) {
-    layers.filter(layer => layer.id.startsWith("orm-") || layer.id === "railway-network-raster")
-      .forEach(layer => mapLibreMap.moveLayer(layer.id, firstPath.id));
-  }
-  [
-    "map-points-shadow",
-    "map-points-stroke",
-    "map-points-circle",
-    "map-points-label",
-    "map-points-label-full",
-  ].forEach((layerId) => {
-    if (mapLibreMap.getLayer(layerId)) mapLibreMap.moveLayer(layerId);
-  });
+  const ordered = layers.map((layer, index) => ({ layer, index }))
+    .sort((a, b) => mapLayerOrder(a.layer) - mapLayerOrder(b.layer) || a.index - b.index);
+  if (ordered.every((entry, index) => entry.layer.id === layers[index].id)) return;
+  ordered.forEach(({ layer }) => mapLibreMap.moveLayer(layer.id));
 }
 
 function refreshMapLibreDataOnly(options = {}) {
@@ -9875,6 +9918,7 @@ function renderMapLibreMarkers(overlays = { ...defaultMapOverlays(), ...(state.m
   mapLibreMarkers.forEach((marker) => marker.remove());
   mapLibreMarkers = [];
   renderMapLibrePointLayers(overlays);
+  ImperialTombs.sync(mapLibreMap);
   logSlowStep("renderMapLibreMarkers", perfStartedAt);
   return;
   if (overlays.checkins) {
@@ -9964,6 +10008,7 @@ function renderMapLibrePointLayers(overlays) {
 
 function mapLibrePointGeoJson(overlays) {
   const features = [];
+  if (overlays.checkins) ensureHistoricalCheckinCatalogs();
   if (overlays.checkins) {
     visitedPlaces()
       .filter((visit) =>
@@ -9977,6 +10022,7 @@ function mapLibrePointGeoJson(overlays) {
         const [displayLng, displayLat] = mapDisplayCoordinate(visit.place.lng, visit.place.lat);
         const title = mapCheckinTitle(visit.place);
         const subtitle = mapCheckinSubtitle(visit.place);
+        const historical = historicalCheckinTheme(visit.place);
         features.push({
           type: "Feature",
           geometry: { type: "Point", coordinates: [displayLng, displayLat] },
@@ -9990,6 +10036,7 @@ function mapLibrePointGeoJson(overlays) {
             radius: 4,
             haloOpacity: 0.98,
             shadowOpacity: 0.26,
+            ...(historical ? {checklistKey:historical.key,done:true,color:historical.color,capitalIcon:historical.icon+'-visited',capitalLabel:'✓ '+title} : {}),
           },
         });
       });
@@ -10007,7 +10054,9 @@ function mapLibrePointGeoJson(overlays) {
         title: entry.title || entry.item,
         subtitle: entry.subtitle || checklistCatalog[entry.key]?.label || t("checklistFallback"),
         done: Boolean(entry.done),
-        color: checklistOverlayColor(entry.key, Boolean(entry.done)),
+        color: entry.key === "chinaAncientCapitals" ? HistoricalPeriods.capitalTheme(ancientCapitalMapMeta(entry.item), state.mapOverlays?.ancientCapitalPeriods).color : checklistOverlayColor(entry.key, Boolean(entry.done)),
+        capitalIcon: entry.key === "chinaAncientCapitals" ? HistoricalPeriods.capitalTheme(ancientCapitalMapMeta(entry.item), state.mapOverlays?.ancientCapitalPeriods).icon + (entry.done ? "-visited" : "") : "",
+        capitalLabel: (entry.done ? "✓ " : "") + (entry.title || entry.item),
         stroke: entry.done ? "#111827" : "rgba(17, 24, 39, 0.5)",
         radius: entry.done ? 4 : 3,
         haloOpacity: entry.done ? 0.98 : 0,
@@ -10025,12 +10074,50 @@ function checklistOverlayColor(key, done = false) {
   return done ? "#0f5f51" : "#218a78";
 }
 
+function ancientCapitalMapMeta(name) {
+ return chinaAncientCapitals.items?.find(item => item.name === name) || chinaAncientCapitalMeta[canonicalPlaceKey(name)] || {};
+}
+
+function ensureHistoricalCheckinCatalogs() {
+  const refresh=()=>{invalidateMapPointRenderCache();if(isMapPageActive())scheduleGeoMapRender();};
+  if(!chinaAncientCapitalsPromise)loadChinaAncientCapitals().then(refresh).catch(()=>{});
+  if(!imperialTombChecklistPromise)loadImperialTombChecklist().then(refresh).catch(()=>{});
+}
+
+function historicalCheckinTheme(place) {
+  const capital=ancientCapitalMetaForPlace(place);
+  if(capital)return {...HistoricalPeriods.capitalTheme(capital),key:'chinaAncientCapitals',svg:HistoricalPeriods.capitalSvg(HistoricalPeriods.capitalTheme(capital).color)};
+  const name=canonicalPlaceKey(place?.name);
+  const tomb=imperialTombMapIndex.get(name)||(ImperialTombs.catalogItems?.()||[]).find(x=>[x.name,...(x.aliases||[])].some(alias=>canonicalPlaceKey(alias)===name));
+  if(!tomb)return null;
+  const theme=ImperialTombs.dynastyTheme(tomb);
+  return {...theme,key:'imperialTombs',svg:ImperialTombs.markerSvg(theme.color)};
+}
+
+function addAncientCapitalSymbolLayers(sourceId) {
+  HistoricalPeriods.keys.forEach(key => {
+    const id = "ancient-capital-" + key;
+    if (!mapLibreMap.hasImage(id)) mapLibreMap.addImage(id, HistoricalPeriods.capitalImage(HistoricalPeriods.colors[key]), { pixelRatio: 2 });
+    if (!mapLibreMap.hasImage(id + "-visited")) mapLibreMap.addImage(id + "-visited", HistoricalPeriods.visitedImage(HistoricalPeriods.capitalImage(HistoricalPeriods.colors[key])), { pixelRatio: 2 });
+    const tombId="imperial-mausoleum-"+key+"-visited";
+    if(!mapLibreMap.hasImage(tombId))mapLibreMap.addImage(tombId,HistoricalPeriods.visitedImage(ImperialTombs.markerImage(HistoricalPeriods.colors[key])),{pixelRatio:2});
+  });
+  const filter = ["in", ["get", "checklistKey"], ["literal", ["chinaAncientCapitals","imperialTombs"]]];
+  if (!mapLibreMap.getLayer("ancient-capital-point")) mapLibreMap.addLayer({id:"ancient-capital-point", type:"symbol", source:sourceId, filter, layout:{"icon-image":["get","capitalIcon"], "icon-size":0.9,"icon-allow-overlap":true}});
+  ["ancient-capital-label", "ancient-capital-label-full"].forEach((id,index) => {
+    if (mapLibreMap.getLayer(id)) return;
+    mapLibreMap.addLayer({id,type:"symbol",source:sourceId,filter,minzoom:index?11:5,...(index?{}:{maxzoom:11}),layout:{"text-field":["get","capitalLabel"],"text-font":["Open Sans Regular","Arial Unicode MS Regular"],"text-size":12,"text-variable-anchor":["top","bottom","left","right"],"text-radial-offset":1.2,"text-max-width":12,"text-padding":3,"text-optional":true},paint:{"text-color":["get","color"],"text-halo-color":"#ffffff","text-halo-width":1.5}});
+  });
+}
+
 function addMapLibrePointLayers(sourceId) {
+  addAncientCapitalSymbolLayers(sourceId);
   if (!mapLibreMap.getLayer("map-points-shadow")) {
     mapLibreMap.addLayer({
       id: "map-points-shadow",
       type: "circle",
       source: sourceId,
+      filter: ["!", ["in", ["get", "checklistKey"], ["literal", ["chinaAncientCapitals","imperialTombs"]]]],
       paint: {
         "circle-radius": ["+", ["get", "radius"], 4.6],
         "circle-color": "#0f172a",
@@ -10045,6 +10132,7 @@ function addMapLibrePointLayers(sourceId) {
       id: "map-points-stroke",
       type: "circle",
       source: sourceId,
+      filter: ["!", ["in", ["get", "checklistKey"], ["literal", ["chinaAncientCapitals","imperialTombs"]]]],
       paint: {
         "circle-radius": ["+", ["get", "radius"], 3.6],
         "circle-color": "#ffffff",
@@ -10057,6 +10145,7 @@ function addMapLibrePointLayers(sourceId) {
       id: "map-points-circle",
       type: "circle",
       source: sourceId,
+      filter: ["!", ["in", ["get", "checklistKey"], ["literal", ["chinaAncientCapitals","imperialTombs"]]]],
       paint: {
         "circle-radius": ["get", "radius"],
         "circle-color": ["get", "color"],
@@ -10071,6 +10160,7 @@ function addMapLibrePointLayers(sourceId) {
       id: "map-points-label",
       type: "symbol",
       source: sourceId,
+      filter: ["!", ["in", ["get", "checklistKey"], ["literal", ["chinaAncientCapitals","imperialTombs"]]]],
       minzoom: 5,
       maxzoom: 8.5,
       layout: {
@@ -10097,6 +10187,7 @@ function addMapLibrePointLayers(sourceId) {
       id: "map-points-label-full",
       type: "symbol",
       source: sourceId,
+      filter: ["!", ["in", ["get", "checklistKey"], ["literal", ["chinaAncientCapitals","imperialTombs"]]]],
       minzoom: 8.5,
       layout: {
         "text-field": ["get", "title"],
@@ -10150,7 +10241,7 @@ function bindMapLibrePointHandlers() {
     clearAncientCapitalHover();
     mapLibreMap.getCanvas().style.cursor = "";
   };
-  ["map-points-circle", "map-points-label", "map-points-label-full"].forEach((layerId) => {
+  ["map-points-circle", "map-points-label", "map-points-label-full", "ancient-capital-point", "ancient-capital-label", "ancient-capital-label-full"].forEach((layerId) => {
     if (!mapLibreMap.getLayer(layerId)) return;
     mapLibreMap.on("click", layerId, handlePointClick);
     mapLibreMap.on("mouseenter", layerId, setPointer);
@@ -10224,6 +10315,7 @@ function checklistOverlayPlaces() {
     const coords = checklistCoordinateFor(item, key === "china5a" ? group : "");
     if (!coords || !Number.isFinite(coords[0]) || !Number.isFinite(coords[1])) return null;
     const done = isChecklistItemDone(key, item, group);
+    if (key === "chinaAncientCapitals" && !HistoricalPeriods.capitalPeriods(ancientCapitalMapMeta(item)).some(k => state.mapOverlays?.ancientCapitalPeriods?.[k] !== false)) return null;
     if (seen.has(itemKey) && !done) return null;
     if (seen.has(legacyKey) && !done) return null;
     return { key, item, lat: coords[0], lng: coords[1], done, title, subtitle };
@@ -10484,6 +10576,9 @@ function hasAncientCapitalCheckins() {
 
 function placeBelongsToActiveChecklistOverlay(place) {
   if (!place) return false;
+  const historical=historicalCheckinTheme(place);
+  if(historical?.key==='imperialTombs'&&state.mapOverlays?.imperialTombs)return true;
+  if(historical?.key==='chinaAncientCapitals'&&state.mapOverlays?.chinaAncientCapitals)return true;
   const activeKeys = activeChecklistOverlayKeys();
   if (!activeKeys.length) return false;
   if (place.checklistOnly && activeKeys.includes(place.checklistKey)) return true;
@@ -10542,6 +10637,7 @@ function renderAncientCapitalDetail(key, item, capitalMeta, done) {
   $("#mapDetail").innerHTML = `
     <p class="eyebrow">${checklistCatalog[key]?.label || t("checklistFallback")}</p>
     <h3>${escapeHtml(currentPlace)}</h3>
+    ${westernRegionInfo(capitalMeta)}
     <div class="capital-facts">
       <section>
         <header><strong>${currentLanguage === "en" ? "Capital records" : "都城记录"}</strong><em>${recordsLabel}</em></header>
@@ -10558,7 +10654,7 @@ function renderAncientCapitalDetail(key, item, capitalMeta, done) {
 function ancientCapitalDetailRecords(capitalMeta) {
   if (Array.isArray(capitalMeta?.records) && capitalMeta.records.length) {
     return capitalMeta.records.map((record) => ({
-      era: ancientCapitalDisplayEra(record["时代"] || capitalMeta.sourceEra || capitalMeta.era),
+      era: HistoricalPeriods.capitalPeriod(record),
       ancientName: record["古称"] || capitalMeta.ancientName || capitalMeta.name,
       dynasty: record["政权/国号"] || capitalMeta.dynasty,
       years: ancientCapitalRecordYears(record),
@@ -10567,7 +10663,7 @@ function ancientCapitalDetailRecords(capitalMeta) {
     }));
   }
   return [{
-    era: ancientCapitalDisplayEra(capitalMeta?.era || capitalMeta?.sourceEra || ancientCapitalPrimaryEra(capitalMeta)),
+    era: ancientCapitalPrimaryEra(capitalMeta),
     ancientName: capitalMeta?.ancientName || capitalMeta?.name,
     dynasty: capitalMeta?.dynasty || compactMapLabelValues(capitalMeta?.dynasties, 2, "、"),
     years: ancientCapitalRecordYears(capitalMeta),
@@ -10906,10 +11002,15 @@ function removeMapLibreSource(id) {
 function renderLeafletLayers() {
   if (!leafletMap || !window.L) return;
   const overlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
+  if(overlays.checkins)ensureHistoricalCheckinCatalogs();
   ensureBoundaryDataForLevel(state.boundaryLevel);
   if (leafletLayers) leafletLayers.remove();
+  if (!leafletMap.getPane("coveragePane")) {
+    leafletMap.createPane("coveragePane").style.zIndex = "300";
+  }
   leafletLayers = L.layerGroup().addTo(leafletMap);
   GreatWall.leaflet(leafletMap, leafletLayers);
+  ImperialTombs.leaflet(leafletMap);
 
   if (overlays.populationDensity && window.pmtiles?.leafletRasterLayer) {
     if (!leafletMap.getPane("populationDensityPane")) {
@@ -10931,7 +11032,7 @@ function renderLeafletLayers() {
     railwayInteractionStatus(currentLanguage === "en" ? "Leaflet fallback uses raster railways" : "Leaflet 回退模式使用图片版铁路");
     if (!leafletMap.getPane("railwayPane")) {
       const pane = leafletMap.createPane("railwayPane");
-      pane.style.zIndex = "350";
+      pane.style.zIndex = "450";
       pane.style.pointerEvents = "none";
     }
     L.tileLayer(railwayOverlayTiles[0], {
@@ -10965,6 +11066,7 @@ function renderLeafletLayers() {
 
   if (overlays.light) {
     L.geoJSON(mapBackgroundContextGeoJson(), {
+      pane: "coveragePane",
       style: (feature) => ({ ...leafletBoundaryStyle(feature), fillOpacity: 0.2, weight: 1 }),
       onEachFeature: (feature, layer) => {
         layer.bindTooltip(feature.properties.name, { sticky: true });
@@ -10974,6 +11076,7 @@ function renderLeafletLayers() {
 
   if (overlays.light && state.boundaryLevel === "country") {
     L.geoJSON(allCountryClickGeoJson(), {
+      pane: "coveragePane",
       style: () => ({ color: "transparent", weight: 0, fillColor: "#ffffff", fillOpacity: 0.01 }),
       onEachFeature: (feature, layer) => {
         layer.on("click", (event) => {
@@ -10985,6 +11088,7 @@ function renderLeafletLayers() {
       },
     }).addTo(leafletLayers);
     L.geoJSON(countryGeoJson(), {
+      pane: "coveragePane",
       style: leafletBoundaryStyle,
       onEachFeature: (feature, layer) => {
         layer.on("click", (event) => {
@@ -10999,6 +11103,7 @@ function renderLeafletLayers() {
 
   if (overlays.light && state.boundaryLevel === "admin") {
     L.geoJSON(regionGeoJson(), {
+      pane: "coveragePane",
       style: (feature) => boundaryIndex ? { ...leafletBoundaryStyle(feature), weight: 0, opacity: 0 } : leafletBoundaryStyle(feature),
       onEachFeature: (feature, layer) => {
         layer.on("click", (event) => {
@@ -11010,12 +11115,14 @@ function renderLeafletLayers() {
       },
     }).addTo(leafletLayers);
     L.geoJSON(provinceOutlineGeoJson(), {
+      pane: "coveragePane",
       style: leafletOutlineStyle,
       onEachFeature: (feature, layer) => {
         layer.bindTooltip(feature.properties.name, { sticky: true });
       },
     }).addTo(leafletLayers);
     L.geoJSON(adminCountryContextGeoJson(), {
+      pane: "coveragePane",
       style: (feature) => ({ ...leafletBoundaryStyle(feature), fillOpacity: 0.2, weight: 1 }),
       onEachFeature: (feature, layer) => {
         layer.bindTooltip(feature.properties.name, { sticky: true });
@@ -11028,6 +11135,7 @@ function renderLeafletLayers() {
     const countriesWithSubadmin = new Set(subadminKeys.map(countryIdForSubadminKey).filter(Boolean));
     if (countriesWithSubadmin.size) {
       L.geoJSON(adminCountryContextGeoJson(countriesWithSubadmin), {
+        pane: "coveragePane",
         style: (feature) => ({ ...leafletBoundaryStyle(feature), fillOpacity: 0.2, weight: 1 }),
         onEachFeature: (feature, layer) => {
           layer.bindTooltip(feature.properties.name, { sticky: true });
@@ -11036,6 +11144,7 @@ function renderLeafletLayers() {
     }
     if (subadminKeys.length) {
       L.geoJSON(subadminGeoJson(), {
+        pane: "coveragePane",
         style: (feature) => ({ ...leafletBoundaryStyle(feature), weight: 0.55 }),
         onEachFeature: (feature, layer) => {
           layer.on("click", (event) => {
@@ -11049,6 +11158,7 @@ function renderLeafletLayers() {
     }
     if (shouldShowUsCountyReference()) {
       L.geoJSON(usCountyReferenceGeoJson(), {
+        pane: "coveragePane",
         style: () => ({ color: "#b45309", weight: 0.35, opacity: 0.34, fillOpacity: 0 }),
         onEachFeature: (feature, layer) => {
           layer.bindTooltip(String(feature.properties.name || ""), { sticky: true });
@@ -11057,6 +11167,7 @@ function renderLeafletLayers() {
     }
     if (boundaryIndex || subadminKeys.includes("china2")) {
       L.geoJSON(boundaryIndex ? provinceOutlineGeoJson() : adminOutlineGeoJsonForKeys(["china"]), {
+        pane: "coveragePane",
         style: leafletOutlineStyle,
         onEachFeature: (feature, layer) => {
           layer.bindTooltip(feature.properties.name, { sticky: true });
@@ -11138,12 +11249,13 @@ function renderLeafletLayers() {
 
   if (overlays.checkins) {
     visitedPlaces()
-      .filter((visit) => !visit.place.shapeOnly && !visit.place.manualAdmin && Number.isFinite(visit.place.lng) && Number.isFinite(visit.place.lat))
+      .filter((visit) => !visit.place.shapeOnly && !visit.place.manualAdmin && !placeBelongsToActiveChecklistOverlay(visit.place) && Number.isFinite(visit.place.lng) && Number.isFinite(visit.place.lat))
       .forEach((visit) => {
         const [displayLng, displayLat] = mapDisplayCoordinate(visit.place.lng, visit.place.lat);
         const title = mapCheckinTitle(visit.place);
         const subtitle = mapCheckinSubtitle(visit.place);
-        const marker = L.circleMarker([displayLat, displayLng], {
+        const historical=historicalCheckinTheme(visit.place);
+        const marker = historical ? L.marker([displayLat,displayLng],{icon:L.divIcon({className:'imperial-tomb-marker',html:HistoricalPeriods.visitedSvg(historical.svg,true),iconSize:[18,18],iconAnchor:[9,9]})}).bindTooltip('✓ '+title) : L.circleMarker([displayLat, displayLng], {
           radius: 4,
           color: "#111827",
           weight: 2,
@@ -11161,7 +11273,7 @@ function renderLeafletLayers() {
 
   checklistOverlayPlaces().forEach((entry) => {
     const [displayLng, displayLat] = mapDisplayCoordinate(entry.lng, entry.lat);
-    const marker = L.circleMarker([displayLat, displayLng], {
+    const marker = entry.key === "chinaAncientCapitals" ? L.marker([displayLat, displayLng], {icon: L.divIcon({className: "imperial-tomb-marker", html: HistoricalPeriods.visitedSvg(HistoricalPeriods.capitalSvg(HistoricalPeriods.capitalTheme(ancientCapitalMapMeta(entry.item), state.mapOverlays?.ancientCapitalPeriods).color), entry.done), iconSize: [18,18], iconAnchor: [9,9]})}) : L.circleMarker([displayLat, displayLng], {
       radius: entry.done ? 4 : 3,
       color: entry.done ? "#111827" : "rgba(17, 24, 39, 0.5)",
       weight: entry.done ? 2 : 1,
@@ -12470,11 +12582,68 @@ function renderDataInventory() {
     </details>`;
 }
 
+function loadImperialTombChecklist() {
+  if (imperialTombChecklistPromise) return imperialTombChecklistPromise;
+  imperialTombChecklistPromise = fetchJson("data/imperial-tombs/catalog.json?v=30").then(catalog => {
+    if (!Array.isArray(catalog.items)) throw new Error("Invalid imperial tomb catalog");
+    imperialTombMapIndex=new Map(catalog.items.flatMap(item=>[item.name,...(item.aliases||[])].map(name=>[canonicalPlaceKey(name),item])));
+    const parents = new Set(catalog.items.map(item => item.parentId).filter(Boolean));
+    const eraOrder = HistoricalPeriods.keys;
+    imperialTombChecklistItems = catalog.items.filter(item => item.recordType === "single" || !parents.has(item.id)).sort((a,b) => eraOrder.indexOf(HistoricalPeriods.tombPeriod(a)) - eraOrder.indexOf(HistoricalPeriods.tombPeriod(b)) || ImperialTombs.compareChecklistItems(a, b));
+    checklistCatalog.imperialTombs.items = imperialTombChecklistItems.map(item => item.name);
+    return catalog;
+  }).catch(error => { imperialTombChecklistPromise = null; throw error; });
+  return imperialTombChecklistPromise;
+}
+
+function renderImperialTombChecklist() {
+  const key = "imperialTombs", en = currentLanguage === "en";
+  const groups = new Map();
+  for (const item of imperialTombChecklistItems) {
+    const era = HistoricalPeriods.tombPeriod(item);
+    if (!groups.has(era)) groups.set(era, []);
+    groups.get(era).push(item);
+  }
+  const nature = {actual_burial:"实际墓葬",posthumous:"追尊陵",cenotaph:"衣冠冢",commemorative:"祭祀纪念陵",mixed:"陵群",unknown:"性质未明"};
+  return `<section class="theme-checklist imperial-tomb-checklist">
+    <header><strong>${en ? "Imperial tombs" : "皇陵"}</strong><span>${checklistDoneCount(key)}/${checklistTotalCount(key)}</span></header>
+    <p class="checklist-health">${en ? "Individual tombs first; groups appear only without separate records. Memorials are identified separately. Unlocated entries can be checked in without adding a map point." : "单陵优先，仅未拆分者保留陵群；祭祀纪念陵单独标注。未定位条目可打卡，不生成地图点。"}</p>
+    <div class="country-checklist-list">${Array.from(groups, ([era, items]) => {
+      const groupId = checklistGroupId(key, era);
+      return `<details class="country-checklist" data-checklist-group="${escapeHtml(groupId)}" ${isChecklistGroupOpen(groupId) ? "open" : ""}>
+        <summary><strong>${escapeHtml(era)}</strong><span>${items.filter(item => isChecklistItemDone(key, item.name)).length}/${items.length}</span></summary>
+        ${items.some(item => item.era === "先秦") ? `<p class="checklist-health">${en ? "Grouped by royal house and state within each period." : "时代内按王室、诸侯国及陵区分组；跨期陵区以主要墓葬年代归类。"}</p>` : ""}
+        ${(() => {
+          const sections = new Map();
+          for (const item of items) {
+            const section = item.era === "先秦" ? item.preqinClassification?.displayGroup || item.preqinClassification?.section || "其他待分类" : "";
+            if (!sections.has(section)) sections.set(section, []);
+            sections.get(section).push(item);
+          }
+          return Array.from(sections, ([section, rows]) => `<section class="imperial-tomb-subsection">${section ? `<h4>${escapeHtml(section)}<span>${rows.filter(item => isChecklistItemDone(key, item.name)).length}/${rows.length}</span></h4>` : ""}<div class="imperial-tomb-card-grid">${rows.map(item => {
+          const checked = isChecklistItemDone(key, item.name);
+          return `<button type="button" class="imperial-tomb-card ${checked ? "done" : ""}" data-checklist="${key}" data-item="${escapeHtml(item.name)}">
+            <span class="imperial-tomb-card-head"><strong>${escapeHtml(item.mapLabel || item.name)}</strong><span class="us-park-card-status">${checked ? t("checked") : t("unvisited")}</span></span>
+            <span class="imperial-tomb-card-owner">${escapeHtml(item.occupants.join("、") || (en ? "Tomb group" : "陵群"))}</span>
+            <span class="imperial-tomb-card-lifetime">${escapeHtml(item.lifespanText || (en ? "Dates pending" : "生卒待核"))}</span>
+            ${item.periodText ? `<span class="imperial-tomb-card-lifetime">${escapeHtml(item.periodText)}</span>` : ""}
+            <span class="imperial-tomb-card-location">${escapeHtml(item.admin)}</span>
+            <span class="imperial-tomb-card-tags">${item.preqinClassification ? `<span class="tomb-dynasty-tag" style="--tomb-dynasty-color:${ImperialTombs.dynastyTheme(item).color}">${escapeHtml(item.preqinClassification.country)}</span>` : ""}<span>${item.locationReference ? (en ? "Cemetery reference · estimated" : "陵区参考定位（估）") : item.coordinates?.status === "estimated_wgs84" ? (en ? "Estimated location" : "估计位置") : item.mapEligible ? (en ? "Regional location" : "区域代表定位") : (en ? "Location pending" : "位置待核")}</span></span>
+          </button>`;
+        }).join("")}</div></section>`).join("");
+        })()}
+      </details>`;
+    }).join("")}</div>
+  </section>`;
+}
+
 function renderAchievements() {
+  loadImperialTombChecklist().then(() => refreshRenderedChecklistStats("imperialTombs")).catch(() => {});
   $("#achievementList").innerHTML = `
     <nav class="checklist-nav checklist-page-nav manual-view-tabs">
       <button type="button" data-checklist-jump="achievement-section-china5a">${currentLanguage === "en" ? "5A scenic areas" : "5A 景区"}</button>
-      <button type="button" data-checklist-jump="achievement-section-ancientCapitals">${currentLanguage === "en" ? "Ancient capitals" : "中国古都"}</button>
+      <button type="button" data-checklist-jump="achievement-section-ancientCapitals">${currentLanguage === "en" ? "Ancient capitals" : "古都"}</button>
+      <button type="button" data-checklist-jump="achievement-section-imperialTombs">${currentLanguage === "en" ? "Imperial tombs" : "皇陵"}</button>
       <button type="button" data-checklist-jump="achievement-section-usNationalParks">${currentLanguage === "en" ? "U.S. National Parks" : "美国国家公园"}</button>
       <button type="button" data-checklist-jump="achievement-section-worldHeritage">${currentLanguage === "en" ? "World Heritage" : "世界遗产"}</button>
       <button type="button" data-checklist-jump="achievement-section-highAltitude">${currentLanguage === "en" ? "High altitude" : "高海拔挑战"}</button>
@@ -12484,7 +12653,11 @@ function renderAchievements() {
       <div class="achievement-section-placeholder"><p class="muted small">${currentLanguage === "en" ? "Expand to load this checklist." : "展开后加载该清单。"}</p></div>
     </details>
     <details id="achievement-section-ancientCapitals" class="achievement-group" data-achievement-section="ancientCapitals">
-      <summary><strong>${currentLanguage === "en" ? "Ancient Chinese capitals" : "中国古都"}</strong><span data-achievement-count="chinaAncientCapitals">${checklistDoneCount("chinaAncientCapitals")}/${checklistTotalCount("chinaAncientCapitals")}</span></summary>
+      <summary><strong>${currentLanguage === "en" ? "Ancient Chinese capitals" : "古都"}</strong><span data-achievement-count="chinaAncientCapitals">${checklistDoneCount("chinaAncientCapitals")}/${checklistTotalCount("chinaAncientCapitals")}</span></summary>
+      <div class="achievement-section-placeholder"><p class="muted small">${currentLanguage === "en" ? "Expand to load this checklist." : "展开后加载该清单。"}</p></div>
+    </details>
+    <details id="achievement-section-imperialTombs" class="achievement-group" data-achievement-section="imperialTombs">
+      <summary><strong>${currentLanguage === "en" ? "Imperial tombs" : "皇陵"}</strong><span data-achievement-count="imperialTombs">${checklistDoneCount("imperialTombs")}/${checklistTotalCount("imperialTombs")}</span></summary>
       <div class="achievement-section-placeholder"><p class="muted small">${currentLanguage === "en" ? "Expand to load this checklist." : "展开后加载该清单。"}</p></div>
     </details>
     <details id="achievement-section-usNationalParks" class="achievement-group" data-achievement-section="usNationalParks">
@@ -12522,6 +12695,19 @@ function fillAchievementSection(details) {
   const placeholder = details?.querySelector?.(".achievement-section-placeholder");
   if (!placeholder) return;
   const section = details.dataset.achievementSection;
+  if (section === "imperialTombs") {
+    loadImperialTombChecklist().then(() => {
+      if (placeholder.isConnected) placeholder.outerHTML = renderImperialTombChecklist();
+      refreshRenderedChecklistStats("imperialTombs");
+    }).catch((error) => {
+      console.warn("皇陵打卡清单加载失败", error);
+      if (placeholder.isConnected) {
+        delete placeholder.dataset.loading;
+        placeholder.innerHTML = `<p class="muted small">${currentLanguage === "en" ? "Could not load. Close and reopen to retry." : "加载失败，收起后重新展开可重试。"}</p>`;
+      }
+    });
+    return;
+  }
   if (section === "china5a") {
     placeholder.outerHTML = renderChina5aSection();
     return;
@@ -13079,33 +13265,9 @@ function renderHighAltitudeCard(key, item) {
   </button>`;
 }
 
-const ancientCapitalEraOrder = [
-  "上古与夏商周",
-  "春秋战国",
-  "秦汉及同期",
-  "三国两晋",
-  "十六国",
-  "南北朝",
-  "隋唐及同期",
-  "五代十国",
-  "宋辽夏金及同期",
-  "元及元末",
-  "明清及同期",
-  "边疆与并立政权",
-  "近现代",
-];
-
-function ancientCapitalDisplayEra(era) {
-  if (era === "上古与夏商周") return currentLanguage === "en" ? "Xia, Shang and Zhou" : "夏商周";
-  return era || (currentLanguage === "en" ? "Unassigned" : "未分时代");
-}
-
-function ancientCapitalPrimaryEra(item) {
-  if (item?.era) return item.era;
-  if (item?.sourceEra) return item.sourceEra;
-  const eras = item?.eras || [];
-  return eras.slice().sort((left, right) => ancientCapitalEraIndex(left) - ancientCapitalEraIndex(right))[0] || (currentLanguage === "en" ? "Unassigned" : "未分时代");
-}
+const ancientCapitalEraOrder = HistoricalPeriods.keys;
+function ancientCapitalDisplayEra(era) { return HistoricalPeriods.keys.includes(era) ? era : HistoricalPeriods.capitalPeriod({era}); }
+function ancientCapitalPrimaryEra(item) { return HistoricalPeriods.capitalPeriods(item || {})[0]; }
 
 function ancientCapitalEraIndex(era) {
   const index = ancientCapitalEraOrder.indexOf(era);
@@ -13147,10 +13309,18 @@ function compactMapLabelValues(values, limit = 3, separator = " · ") {
 }
 
 function ancientCapitalMapTitle(item) {
+  if (item?.westernRegion && item.westernRegion.position !== "existing") return currentLanguage === "en" ? item.westernRegion.nameEn : item.westernRegion.name;
   return ancientCapitalCurrentDisplayName(item) || item?.name || "";
 }
 
 function ancientCapitalMapSubtitle(item) {
+  if (item?.westernRegion) {
+    const position = item.westernRegion.position;
+    const status = currentLanguage === "en"
+      ? (position === "site" ? "Site reference; identity discussed" : position === "inferred" ? "Inferred location; unverified" : position === "pending" ? "Location unresolved" : "Approximate location")
+      : (position === "site" ? "遗址参照，身份见说明" : position === "inferred" ? "推测位置，非都城确址" : position === "pending" ? "地望待考" : "概略地望");
+    return `${currentLanguage === "en" ? "36 Western Kingdoms" : "西域三十六国"} · ${status}`;
+  }
   const eras = compactMapLabelValues((item?.eras || []).map(ancientCapitalDisplayEra), 2, "、");
   const recordCount = Number(item?.recordCount) || (Array.isArray(item?.records) ? item.records.length : 0);
   const count = recordCount > 1
@@ -13208,22 +13378,13 @@ function ancientCapitalSiteKeyForItem(item) {
 }
 
 function ancientCapitalStartYear(item) {
-  const candidates = (item?.records || [])
-    .flatMap((record) => [record?.["都城年代（原文）"], record?.["政权年代（原文）"]])
-    .map(extractAncientYear)
-    .filter(Number.isFinite);
+  const candidates = (item?.records?.length ? item.records : [item])
+    .map(HistoricalPeriods.yearOf).filter(Number.isFinite);
   return candidates.length ? Math.min(...candidates) : Number.POSITIVE_INFINITY;
 }
 
 function extractAncientYear(value) {
-  const text = String(value || "").trim();
-  if (!text) return Number.NaN;
-  const match = text.match(/(?:公元前|前|BC|BCE)?\s*(\d{1,4})/i);
-  if (!match) return Number.NaN;
-  const year = Number(match[1]);
-  return /公元前|前|BC|BCE/i.test(match[0]) || /公元前|前/.test(text.slice(0, match.index + match[0].length))
-    ? -year
-    : year;
+  return HistoricalPeriods.startYear(value) ?? Number.NaN;
 }
 
 function renderAncientCapitalsSection() {
@@ -13238,10 +13399,10 @@ function renderAncientCapitalsSection() {
     .sort((left, right) => {
       const eraDiff = ancientCapitalEraIndex(ancientCapitalPrimaryEra(left)) - ancientCapitalEraIndex(ancientCapitalPrimaryEra(right));
       if (eraDiff) return eraDiff;
-      const orderDiff = ancientCapitalSourceOrder(left) - ancientCapitalSourceOrder(right);
-      if (Number.isFinite(orderDiff) && orderDiff) return orderDiff;
       const yearDiff = ancientCapitalStartYear(left) - ancientCapitalStartYear(right);
       if (Number.isFinite(yearDiff) && yearDiff) return yearDiff;
+      const orderDiff = ancientCapitalSourceOrder(left) - ancientCapitalSourceOrder(right);
+      if (Number.isFinite(orderDiff) && orderDiff) return orderDiff;
       return left.name.localeCompare(right.name, "zh-Hans-CN");
     })
     .forEach((item) => {
@@ -13259,10 +13420,11 @@ function renderAncientCapitalsSection() {
     </details>`;
   }).join("");
   const sourceText = currentLanguage === "en"
-    ? `${items.length} source records, ${chinaAncientCapitals?.siteCount || 0} map places`
-    : `${items.length} 条原表记录，${chinaAncientCapitals?.siteCount || 0} 个地图地点`;
+    ? `${items.length} catalog records, ${chinaAncientCapitals?.siteCount || 0} map places`
+    : `${items.length} 条目录记录，${chinaAncientCapitals?.siteCount || 0} 个地图地点`;
   return `<section class="theme-checklist ancient-capitals-checklist">
     <div class="checklist-health"><span>${sourceText}</span><span>${currentLanguage === "en" ? "Grouped by era" : "按时代排列"}</span></div>
+    ${chinaAncientCapitals.westernRegions ? `<p class="checklist-health">${currentLanguage === "en" ? `Western kingdoms: ${chinaAncientCapitals.westernRegions.mapped} mapped; ${chinaAncientCapitals.westernRegions.inferred || 0} inferred locations. Regional markers are not exact capitals.` : `西域36国：${chinaAncientCapitals.westernRegions.mapped}国均有地图参照点，其中${chinaAncientCapitals.westernRegions.inferred || 0}国为推测位置；概略点不代表都城确址。`} <a href="https://zh.wikipedia.org/wiki/西域三十六国" target="_blank" rel="noopener">${currentLanguage === "en" ? "List basis ↗" : "名单依据 ↗"}</a></p>` : ""}
     <div class="country-checklist-list">${blocks}</div>
   </section>`;
 }
@@ -13286,6 +13448,8 @@ function renderAncientCapitalCard(key, item) {
     <span class="ancient-capital-card-row wide"><b>${labels.admin}</b><em>${escapeHtml(item.admin || t("none"))}</em></span>
     <span class="ancient-capital-card-row wide"><b>${labels.type}</b><em>${escapeHtml(item.capitalType || compactInlineValues(item.capitalTypes) || t("none"))}</em></span>
     <span class="ancient-capital-card-row"><b>${labels.confidence}</b><em>${escapeHtml(item.confidence || t("none"))}</em></span>
+    ${item.westernRegion ? `<span class="ancient-capital-card-row wide"><b>${currentLanguage === "en" ? "Location" : "定位"}</b><em>${escapeHtml(ancientCapitalMapSubtitle(item))}</em></span>` : ""}
+    ${item.westernRegion?.note ? `<span class="ancient-capital-card-row wide"><b>${currentLanguage === "en" ? "Note" : "说明"}</b><em>${escapeHtml(item.westernRegion.note)}</em></span>` : ""}
   </button>`;
 }
 
@@ -13296,6 +13460,14 @@ function renderAncientCapitalTitle(item) {
     ? ["Ancient", "Current place"]
     : ["古称", "今址"];
   return `<span class="ancient-capital-title-pair"><span><em>${labels[0]}</em>${escapeHtml(ancient)}</span><span><em>${labels[1]}</em>${escapeHtml(current)}</span></span>`;
+}
+
+function westernRegionInfo(item) {
+  const info = item?.westernRegion;
+  if (!info) return "";
+  const en = currentLanguage === "en";
+  const sourceLinks = (info.sources || []).filter(url => /^https:\/\//.test(url)).map((url, i) => `<a href="${escapeHtml(url)}" target="_blank" rel="noopener">${en ? "Source" : "资料"} ${i + 1} ↗</a>`).join(" · ");
+  return `<section class="capital-meta-line"><strong>${escapeHtml(en ? info.nameEn : info.name)} · ${en ? "36 Western Kingdoms" : "西域三十六国"}</strong><p>${escapeHtml(ancientCapitalMapSubtitle(item))}</p><p>${escapeHtml(info.note || (en ? "Modern reference point only; not a verified ancient capital location." : "今地名参照点，不代表已核实的古代都城确址。"))}</p><small>${escapeHtml(info.basis)} ${sourceLinks}</small></section>`;
 }
 
 function renderAncientCapitalSiteNote(item, label) {
@@ -13742,7 +13914,7 @@ function refreshUsNpsBoundaryState(affectedCodes = null) {
     const doneFilter = usNpsDoneFilterExpression();
     if (mapLibreMap.getLayer("us-nps-done-fill")) mapLibreMap.setFilter("us-nps-done-fill", doneFilter);
     if (mapLibreMap.getLayer("us-nps-done-line")) mapLibreMap.setFilter("us-nps-done-line", doneFilter);
-    const firstPointLayer = ["map-points-shadow", "map-points-stroke", "map-points-circle", "map-points-label", "map-points-label-full"]
+    const firstPointLayer = ["map-points-shadow", "map-points-stroke", "map-points-circle", "map-points-label", "map-points-label-full", "ancient-capital-point", "ancient-capital-label", "ancient-capital-label-full"]
       .find((layerId) => mapLibreMap.getLayer(layerId));
     ["us-nps-fill", "us-nps-done-fill", "us-nps-line", "us-nps-done-line", "us-nps-hit-line"].forEach((layerId) => {
       if (firstPointLayer && mapLibreMap.getLayer(layerId)) mapLibreMap.moveLayer(layerId, firstPointLayer);
@@ -13844,6 +14016,13 @@ function refreshRenderedChecklistStats(key, group = "") {
     countNodes.forEach((node) => { node.textContent = text; });
   }
   if (key === "chinaAncientCapitals") refreshAncientCapitalEraStats();
+  if (key === "imperialTombs") {
+    document.querySelectorAll('.imperial-tomb-checklist [data-checklist-group]').forEach(details => {
+      const buttons = Array.from(details.querySelectorAll('[data-checklist="imperialTombs"]'));
+      const count = details.querySelector(":scope > summary span");
+      if (count) count.textContent = `${buttons.filter(button => isChecklistItemDone(key, button.dataset.item)).length}/${buttons.length}`;
+    });
+  }
   if (!group) return;
   const groupId = checklistGroupId(key, group);
   const details = Array.from(document.querySelectorAll("[data-checklist-group]"))
@@ -13912,7 +14091,10 @@ function unvisitChecklistItem(key, item, group = "") {
 
 function ensureChecklistPlace(key, item, group = "") {
   const listLabel = checklistCatalog[key].label;
-  const coords = checklistCoordinateFor(item, group);
+  const tomb = key === "imperialTombs" ? imperialTombChecklistItems.find(entry => entry.name === item) : null;
+  const coords = key === "imperialTombs"
+    ? (tomb?.mapEligible && ["verified_wgs84", "estimated_wgs84"].includes(tomb.coordinates?.status) ? [tomb.coordinates.lat, tomb.coordinates.lng, tomb.admin] : null)
+    : checklistCoordinateFor(item, group);
   const existing = findChecklistPlace(key, item, group);
   if (existing) {
     existing.checklist = Array.from(new Set([...(existing.checklist || []), listLabel]));
@@ -14044,6 +14226,9 @@ function cleanChecklistName(value) {
 }
 
 function checklistCoordinateFor(item, group = "") {
+  const tomb = imperialTombChecklistItems.find(entry => entry.name === item);
+  if (tomb) return tomb.mapEligible && ["verified_wgs84", "estimated_wgs84"].includes(tomb.coordinates?.status)
+    ? [tomb.coordinates.lat, tomb.coordinates.lng, tomb.admin] : null;
   const lookup = checklistCoordinateLookup();
   const canonical = checklistCanonicalPlaceForItem(item);
   const npsUnit = usNpsUnitById.get(String(item || ""));
@@ -15388,6 +15573,18 @@ function isMapPageActive() {
   return document.querySelector('[data-page="world"]')?.classList.contains("active");
 }
 
+function renderAncientCapitalLegend() {
+ const parent=document.getElementById("mapOverlayLegends"); if(!parent)return;
+ let el=document.getElementById("ancientCapitalLegend");
+ if(!el){el=document.createElement("section");el.id="ancientCapitalLegend";el.className="great-wall-legend imperial-tombs-legend";parent.appendChild(el);
+ el.addEventListener("click",event=>{if(event.target.matches("[data-capital-all]"))event.stopPropagation();});
+ el.addEventListener("change",event=>{const input=event.target;if(!input.hasAttribute("data-capital-all")&&!input.hasAttribute("data-capital-period"))return;const selection=state.mapOverlays.ancientCapitalPeriods ||= {};if(input.hasAttribute("data-capital-all"))el.querySelectorAll("[data-capital-period]:not(:disabled)").forEach(box=>{selection[box.dataset.capitalPeriod]=input.checked;});else selection[input.dataset.capitalPeriod]=input.checked;mapPointRenderRevision+=1;saveUiStateSoon();renderMapControls();renderGeoMap();});}
+ el.hidden=!state.mapOverlays.chinaAncientCapitals;if(el.hidden)return;
+ const items=chinaAncientCapitals.items||[],keys=HistoricalPeriods.keys,available=keys.filter(key=>items.some(item=>HistoricalPeriods.capitalPeriods(item).includes(key))),selection=state.mapOverlays.ancientCapitalPeriods||{},open=el.querySelector("details")?.open!==false;
+ el.innerHTML='<strong>'+ (currentLanguage==="en"?"Ancient capitals":"古都")+'</strong><details class="great-wall-section" '+(open?'open':'')+'><summary><input type="checkbox" data-capital-all aria-label="全选古都时代"><i class="wall-disclosure" aria-hidden="true"></i><span>时代 · 全选</span></summary><div class="tomb-legend-options">'+keys.map(key=>'<label'+(!available.includes(key)?' title="暂无条目"':'')+'><input type="checkbox" data-capital-period="'+key+'" '+(!available.includes(key)?'disabled':selection[key]!==false?'checked':'')+'>'+HistoricalPeriods.legendIcon(HistoricalPeriods.capitalSvg('#fff'),HistoricalPeriods.colors[key])+'<span>'+key+'</span></label>').join('')+'</div></details>';
+ const all=el.querySelector('[data-capital-all]'),count=available.filter(key=>selection[key]!==false).length;all.checked=available.length>0&&count===available.length;all.indeterminate=count>0&&count<available.length;all.disabled=!available.length;
+}
+
 function renderMapControls() {
   const panel = document.querySelector(".map-control-panel");
   const toggle = $("#toggleMapControls");
@@ -15411,9 +15608,12 @@ function renderMapControls() {
     baseOpacity.setAttribute("aria-label", currentLanguage === "en" ? "Basemap opacity" : "底图透明度");
     baseOpacity.setAttribute("aria-valuetext", `${value}%`);
     const opacityLabel = $("#mapBaseOpacityLabel");
-    const opacityValue = $("#mapBaseOpacityValue");
+    const opacityValue = $("#mapBaseOpacityNumber");
     if (opacityLabel) opacityLabel.textContent = currentLanguage === "en" ? "Basemap opacity" : "底图透明度";
-    if (opacityValue) opacityValue.textContent = `${value}%`;
+    if (opacityValue) {
+      opacityValue.value = String(value);
+      opacityValue.setAttribute("aria-label", currentLanguage === "en" ? "Basemap opacity percentage" : "底图透明度百分比");
+    }
   }
   applyMapBaseOpacity();
   const overlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
@@ -15523,7 +15723,9 @@ function renderMapControls() {
   updateEarthquakeOnlineStatus();
   const overlayLegends = $("#mapOverlayLegends");
   GreatWall.legend();
-  if (overlayLegends) overlayLegends.hidden = !overlays.greatWall && !showSeafloorAgeLegend && !showSeafloorContourLegend && !overlays.populationDensity && !overlays.railways && !overlays.arcgisWater && !overlays.earthquakes && !overlays.volcanoes;
+  ImperialTombs.legend();
+  renderAncientCapitalLegend();
+  if (overlayLegends) overlayLegends.hidden = !overlays.chinaAncientCapitals && !overlays.imperialTombs && !overlays.greatWall && !showSeafloorAgeLegend && !showSeafloorContourLegend && !overlays.populationDensity && !overlays.railways && !overlays.arcgisWater && !overlays.earthquakes && !overlays.volcanoes;
   if (show3d) show3d.checked = Boolean(state.map3d);
   if (showChina5a) showChina5a.checked = Boolean(overlays.china5a);
   if (showAncientCapitals) showAncientCapitals.checked = Boolean(overlays.chinaAncientCapitals);
@@ -15722,6 +15924,10 @@ function showPage(pageId, targetId = "") {
 setLoadingDebug("读取本地快速状态", "pending");
 GreatWall.init({ state: () => state, language: () => currentLanguage, map: () => mapLibreMap,
   leafletGroup: () => leafletLayers, front: bringMapLibrePointLayersToFront,
+  save: saveUiStateSoon, render: () => { renderMapControls(); renderGeoMap(); } });
+ImperialTombs.init({ state: () => state, language: () => currentLanguage, fetch: fetchJson,
+  isVisited: item => isChecklistItemDone("imperialTombs", item.name),
+  resetDetail: resetMapDetailClass, front: bringMapLibrePointLayersToFront,
   save: saveUiStateSoon, render: () => { renderMapControls(); renderGeoMap(); } });
 loadState();
 setLoadingDebug("读取本地快速状态", "done");
@@ -16000,15 +16206,27 @@ $("#mapProvider")?.addEventListener("change", (event) => {
   renderGeoMap();
   saveUiStateSoon();
 });
-$("#mapBaseOpacity")?.addEventListener("input", (event) => {
-  state.mapBaseOpacity = normalizeMapBaseOpacity(event.target.value);
-  event.target.style.setProperty("--opacity-progress", `${state.mapBaseOpacity}%`);
-  event.target.title = `${currentLanguage === "en" ? "Basemap opacity" : "底图透明度"}：${state.mapBaseOpacity}%`;
-  event.target.setAttribute("aria-valuetext", `${state.mapBaseOpacity}%`);
-  const opacityValue = $("#mapBaseOpacityValue");
-  if (opacityValue) opacityValue.textContent = `${state.mapBaseOpacity}%`;
+function setMapBaseOpacity(value, keepNumberDraft = false) {
+  state.mapBaseOpacity = normalizeMapBaseOpacity(value);
+  const slider = $("#mapBaseOpacity"), number = $("#mapBaseOpacityNumber");
+  if (slider) {
+    slider.value = String(state.mapBaseOpacity);
+    slider.style.setProperty("--opacity-progress", `${state.mapBaseOpacity}%`);
+    slider.title = `${currentLanguage === "en" ? "Basemap opacity" : "底图透明度"}：${state.mapBaseOpacity}%`;
+    slider.setAttribute("aria-valuetext", `${state.mapBaseOpacity}%`);
+  }
+  if (number && !keepNumberDraft) number.value = String(state.mapBaseOpacity);
   applyMapBaseOpacity();
   saveUiStateSoon();
+}
+$("#mapBaseOpacity")?.addEventListener("input", event => setMapBaseOpacity(event.target.value));
+$("#mapBaseOpacityNumber")?.addEventListener("input", event => {
+  const value = event.target.valueAsNumber;
+  if (Number.isFinite(value) && value >= 0 && value <= 100) setMapBaseOpacity(value, true);
+});
+$("#mapBaseOpacityNumber")?.addEventListener("change", event => setMapBaseOpacity(event.target.value === "" ? state.mapBaseOpacity : event.target.value));
+$("#mapBaseOpacityNumber")?.addEventListener("keydown", event => {
+  if (event.key === "Enter") { event.preventDefault(); event.target.blur(); }
 });
 $("#showLightOnMap")?.addEventListener("change", (event) => {
   state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };
@@ -16213,6 +16431,7 @@ $("#showAncientCapitalsOnMap")?.addEventListener("change", (event) => {
   saveUiStateSoon();
   const refresh = () => {
     checklistOverlayCache.signature = "";
+    renderMapControls();
     if (mapLibreMap) renderMapLibreMarkers();
     else renderGeoMap();
   };
@@ -16476,7 +16695,7 @@ window.visualViewport?.addEventListener("resize", () => {
 });
 if ("serviceWorker" in navigator && location.protocol !== "file:") {
   window.addEventListener("load", () => {
-navigator.serviceWorker.register("./sw.js?v=686", { updateViaCache: "none" })
+navigator.serviceWorker.register("./sw.js?v=688", { updateViaCache: "none" })
       .then((registration) => registration.update())
       .catch((error) => console.warn("Service Worker registration failed", error));
   });

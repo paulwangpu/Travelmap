@@ -1,0 +1,27 @@
+module.exports=({add,group,source,items})=>{
+ source('qin-second-history','秦二世皇帝陵与墓主生平','陕西省地方志','https://dfz.shaanxi.gov.cn/zslm/fzzlk/dqcs/201803/P020250630548327427771.pdf');
+ add('qin-second','秦二世陵','秦汉','秦','秦二世胡亥','陕西省西安市雁塔区曲江','qin-second-history',{recognition:'traditional',aliases:['胡亥墓'],disputes:['地面陵名与传统认定有据，不据此声称已确认墓室遗体。']});
+ source('haihun-history','海昏侯遗址与汉废帝刘贺','南昌市政府','https://www.nc.gov.cn/ncszf/bmdt/202011/6880dd1c67804a42a0de6f9a35c57fde.shtml');
+ add('han-haihun','海昏侯刘贺墓','秦汉','西汉','刘贺','江西省南昌市新建区','haihun-history',{recognition:'archaeological',aliases:['刘贺墓','海昏侯墓'],evidence:'考古认定为曾在位的汉废帝刘贺，卒时为海昏侯；因有皇帝经历纳入，普通列侯不因此扩入。'});
+ source('qian-history','临安钱王陵及钱镠生卒','杭州市政府','https://stb.hangzhou.gov.cn/art/2020/7/23/art_1229052385_52354100.html');
+ add('wuyue-qian','钱镠墓（钱王陵）','五代十国','吴越','钱镠','浙江省杭州市临安区','qian-history',{aliases:['钱镠墓','钱王陵'],evidence:'地方政权吴越国君主陵；吴越国王陵保护单位内的后妃及普通亲属墓不单独计入。'});
+ source('min-history','新店镇文物保护单位：闽王王审知墓','福州市晋安区政府','https://www.fzja.gov.cn/xjwz/zwgk/zfxxgkzdgz/ggwhty/bhmlhssml/201810/t20181019_2646835.htm');
+ add('min-xuan','闽王王审知墓（宣陵）','五代十国','闽','王审知','福建省福州市晋安区新店镇斗顶山','min-history',{aliases:['闽宣陵','王审知墓'],disputes:['曾从凤池山迁葬至斗顶山；原葬地不另造重复墓点。合葬任氏见机构资料。']});
+ source('houshu-history','孟知祥墓发掘、保护与盗掘情况','新华社（四川省文物局资料）','https://www.xinhuanet.com/politics/2016-12/08/c_1120082607.htm');
+ add('houshu-he','后蜀和陵（孟知祥墓）','五代十国','后蜀','孟知祥','四川省成都市成华区磨盘山','houshu-history',{aliases:['孟知祥墓'],recognition:'archaeological',disputes:['与福庆长公主合葬，按一座陵计。']});
+ source('chen-wanan','陈霸先万安陵石刻保护管理答复','南京市政府','https://www.nanjing.gov.cn/hdjl/hygq/202007/t20200716_2257280.html');
+ add('chen-wanan','陈武帝万安陵','魏晋南北朝','陈','陈霸先','江苏省南京市江宁区','chen-wanan',{aliases:['万安陵','陈霸先墓'],recognition:'attributed',evidence:'政府确认以陈霸先万安陵石刻列入文保管理；地面石刻认定与墓室考古确认分开记录。'});
+ source('song-chuning','刘裕初宁陵历史与麒麟门地名','南京市地方志办公室','https://dfz.nanjing.gov.cn/gzdt/202506/t20250612_5584606.html');
+ add('southern-song-chuning','刘宋初宁陵','魏晋南北朝','刘宋','刘裕','江苏省南京市江宁区麒麟一带','song-chuning',{aliases:['初宁陵'],recognition:'attributed',disputes:['陵号有文献记载，精确墓室位置仍待核；不把麒麟门城门坐标当陵体。']});
+ source('qi-taian','萧道成生平与泰安陵','常州市地方志','https://fzg.changzhou.gov.cn/html/fzg/2015/FNBDOFDF_1208/2204.html');
+ add('qi-taian','南齐泰安陵','魏晋南北朝','南齐','萧道成','江苏省镇江市丹阳市（传统归属，墓址待核）','qi-taian',{aliases:['泰安陵'],recognition:'attributed',disputes:['南朝石刻与陵号存在不同归属意见，未明确单墓实体前不接入地图。']});
+ source('zhou-jue','北周宇文觉帝陵考古成果','西咸新区管委会（陕西省考古研究院资料）','https://www.xixianxinqu.gov.cn/xwzx/ztzl/yjhj/wh/650bf109f8fd1c1a70396568.html');
+ add('zhou-jue','北周静陵（宇文觉墓）','魏晋南北朝','北周','宇文觉','陕西省咸阳市渭城区北贺村','zhou-jue',{recognition:'archaeological',aliases:['宇文觉墓'],evidence:'2023年发表考古成果，墓志确认北周孝闵皇帝宇文觉。墓被盗扰，不影响列入帝陵目录。'});
+ source('song-last','宋少帝陵历史与认定','深圳市档案馆','https://www.szdag.gov.cn/dawh/tqssn/content/post_947715.html');
+ add('song-shaodi','宋少帝陵','宋辽金西夏','南宋','赵昺','广东省深圳市南山区赤湾','song-last',{aliases:['少帝陵'],recognition:'traditional',disputes:['传统归属及历代重修有据，不将现存碑墓直接视为墓主遗体的考古认定。']});
+ source('tubo-history','藏王墓及墓主归属问题','山南市旅游发展局','https://lyfzj.shannan.gov.cn/zjsn/jdjs/201208/t20120831_36781.html');
+ source('tubo-review','琼结藏王墓景区、分区与未盗掘说法','琼结县政府','https://www.qiongjie.gov.cn/zjqj/lzly/jdjs/201901/t20190122_13793.html');
+ group('tubo-kings','藏王墓','隋唐','吐蕃','西藏自治区山南市琼结县','tubo-history,tubo-review',{aliases:['藏王墓群'],disputes:['墓数、分区及墓主尚有不同说法；保留陵群记录，不据旅游概述将各赞普强行分配给墓冢。'],evidence:'官方资料确认吐蕃王陵群；部分墓主为文献结合实地调查的初步对应，不能视为完整考古鉴定。'});
+ source('legend-two-history','颛顼帝喾陵御祭碑与祭祀传统','安阳市政协文史资料','https://oss.hnzx.gov.cn/anyang/filedownload/345470/gbgq.pdf');
+ group('legend-two','颛顼帝喾陵','传说时代','传说时代','河南省安阳市内黄县','legend-two-history',{nature:'commemorative',recognition:'traditional',occupants:['颛顼（传说人物）','帝喾（传说人物）'],aliases:['二帝陵'],evidence:'御祭碑与公祭传统说明祭祀陵园，不等于两位传说人物遗体的考古确认。'});
+};

@@ -1,0 +1,141 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "1301439": {
+        "pageid": 1301439,
+        "ns": 0,
+        "title": "交河故城",
+        "coordinates": [
+          {
+            "lat": 42.94972222,
+            "lon": 89.06527778,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "pageprops": {
+          "page_image_free": "Jiaohe_City(Yarkhoto),Turpan,Xinjiang_HY2.jpg",
+          "wikibase-badge-Q17437798": "",
+          "wikibase_item": "Q1330939"
+        }
+      },
+      "1302135": {
+        "pageid": 1302135,
+        "ns": 0,
+        "title": "吐虎鲁克·铁木尔汗麻扎",
+        "coordinates": [
+          {
+            "lat": 44.24019444,
+            "lon": 80.53316667,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "pageprops": {
+          "defaultsort": "H",
+          "kartographer_frames": "1",
+          "page_image_free": "Tughlugh_Timur_Mausoleum_-_exterior.jpg",
+          "wikibase_item": "Q1455687"
+        }
+      },
+      "1661677": {
+        "pageid": 1661677,
+        "ns": 0,
+        "title": "阿斯塔那古墓群",
+        "coordinates": [
+          {
+            "lat": 42.880957,
+            "lon": 89.526891,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "pageprops": {
+          "page_image_free": "阿斯塔那古墓群_大门.jpg",
+          "wikibase_item": "Q746537"
+        }
+      },
+      "7691199": {
+        "pageid": 7691199,
+        "ns": 0,
+        "title": "速檀·歪思汗麻扎",
+        "coordinates": [
+          {
+            "lat": 43.85269611,
+            "lon": 81.94592,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "pageprops": {
+          "kartographer_frames": "1",
+          "wikibase_item": "Q2364732"
+        }
+      },
+      "7712573": {
+        "pageid": 7712573,
+        "ns": 0,
+        "title": "哈密回王墓",
+        "coordinates": [
+          {
+            "lat": 42.81138889,
+            "lon": 93.48611111,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "pageprops": {
+          "kartographer_frames": "1",
+          "page_image_free": "哈密回王墓.jpg",
+          "wikibase_item": "Q1551275"
+        }
+      },
+      "8229581": {
+        "pageid": 8229581,
+        "ns": 0,
+        "title": "热水墓群",
+        "coordinates": [
+          {
+            "lat": 36.17847222,
+            "lon": 98.29855556,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "pageprops": {
+          "kartographer_frames": "1",
+          "wikibase_item": "Q2145631"
+        }
+      },
+      "-1": {
+        "ns": 0,
+        "title": "叶尔羌汗国王陵",
+        "missing": ""
+      },
+      "-2": {
+        "ns": 0,
+        "title": "苏里唐麻扎",
+        "missing": ""
+      },
+      "-3": {
+        "ns": 0,
+        "title": "慕容诺曷钵墓",
+        "missing": ""
+      },
+      "-4": {
+        "ns": 0,
+        "title": "慕容智墓",
+        "missing": ""
+      },
+      "-5": {
+        "ns": 0,
+        "title": "吐谷浑王族墓群",
+        "missing": ""
+      }
+    }
+  },
+  "limits": {
+    "coordinates": 500
+  }
+}

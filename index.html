@@ -6,7 +6,7 @@
     <title>我的全球旅行地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" />
-<link rel="stylesheet" href="styles.css?v=189" />
+<link rel="stylesheet" href="styles.css?v=200" />
   </head>
   <body>
     <div class="app-shell map-first-shell">
@@ -35,7 +35,7 @@
             <strong data-i18n="privacyTitle">本地保存</strong>
             <p data-i18n="privacyText">数据只保存在本机浏览器里，不会自动上传或公开。如需备份请导出。</p>
           </div>
-          <div class="app-version" id="appVersion">v2.1.7</div>
+          <div class="app-version" id="appVersion">v2.2.0</div>
         </div>
       </aside>
 
@@ -60,11 +60,12 @@
                   <option value="google" data-i18n="providerGoogle">Google 街道</option>
                   <option value="googleSatellite" data-i18n="providerGoogleSatellite">Google 卫星</option>
                   <option value="googleTerrain" data-i18n="providerGoogleTerrain">Google 地形</option>
-                  <option value="seafloorAge" data-i18n="providerSeafloorAge">海底年龄（植被）</option>
-                  <option value="seafloorContours" data-i18n="providerSeafloorContours">海底年龄（植被＋等值线）</option>
                   <option value="esriSatellite" data-i18n="providerEsriSatellite">Esri 卫星</option>
                   <option value="bingRoad" data-i18n="providerBingRoad">Bing 地图</option>
                   <option value="bingAerial" data-i18n="providerBingAerial">Bing 卫星</option>
+                  <option value="dem" data-i18n="providerDem">DEM 高程（ETOPO）</option>
+                  <option value="seafloorAge" data-i18n="providerSeafloorAge">海底年龄（植被）</option>
+                  <option value="seafloorContours" data-i18n="providerSeafloorContours">海底年龄（植被＋等值线）</option>
                 </select>
               </label>
               <label class="map-level-control">
@@ -79,7 +80,7 @@
                 <div class="map-opacity-control">
                   <span id="mapBaseOpacityLabel" class="map-opacity-label">底图透明度</span>
                   <input id="mapBaseOpacity" type="range" min="0" max="100" step="1" value="100" aria-label="底图透明度" />
-                  <output id="mapBaseOpacityValue" for="mapBaseOpacity">100%</output>
+                  <span class="map-opacity-number"><input id="mapBaseOpacityNumber" type="number" min="0" max="100" step="1" value="100" inputmode="numeric" aria-label="底图透明度百分比" /><span aria-hidden="true">%</span></span>
                 </div>
                 <label class="map-mode-toggle">
                   <input id="show3dMap" type="checkbox" />
@@ -98,7 +99,7 @@
                 <label><input id="showChina5aOnMap" type="checkbox" /> <span data-i18n="overlay5a">5A / NPS 园区边界</span></label>
                 <div class="hazard-toggle-pair compact-toggle-pair">
                   <label><input id="showAncientCapitalsOnMap" type="checkbox" /> <span data-i18n="overlayAncientCapitals">古都</span></label>
-                  <label><input id="showGreatWallOnMap" type="checkbox" /> <span data-i18n="overlayGreatWall">长城</span></label>
+                  <label><input id="showImperialTombsOnMap" type="checkbox" /> <span data-i18n="overlayImperialTombs">皇陵</span></label>
                 </div>
                 <label><input id="showWorldHeritageOnMap" type="checkbox" /> <span data-i18n="overlayHeritage">世界遗产</span></label>
                 <label><input id="showHighAltitudeOnMap" type="checkbox" /> <span data-i18n="overlayHighAltitude">高海拔挑战</span></label>
@@ -106,7 +107,10 @@
               <div class="map-overlay-toggles map-thematic-overlays">
                 <label><input id="showPopulationDensityOnMap" type="checkbox" /> <span data-i18n="providerPopulation">人口密度</span></label>
                 <label><input id="showRailwaysOnMap" type="checkbox" /> <span data-i18n="overlayRailways">铁路线路</span></label>
-                <label><input id="showArcgisWaterOnMap" type="checkbox" /> <span data-i18n="overlayArcgisWater">全球水系</span></label>
+                <div class="hazard-toggle-pair compact-toggle-pair">
+                  <label><input id="showArcgisWaterOnMap" type="checkbox" /> <span data-i18n="overlayArcgisWater">水系</span></label>
+                  <label><input id="showGreatWallOnMap" type="checkbox" /> <span data-i18n="overlayGreatWall">长城</span></label>
+                </div>
                 <div class="hazard-toggle-pair">
                   <label><input id="showEarthquakesOnMap" type="checkbox" /> <span data-i18n="overlayEarthquakes">地震</span></label>
                   <label><input id="showVolcanoesOnMap" type="checkbox" /> <span data-i18n="overlayVolcanoes">火山</span></label>
@@ -213,7 +217,7 @@
                   <small data-i18n="populationDensityUnit">人 / km² · GHSL</small>
                 </aside>
                 <aside class="arcgis-water-legend" id="arcgisWaterLegend" hidden>
-                  <strong data-i18n="arcgisWaterLegendTitle">全球水系</strong>
+                  <strong data-i18n="arcgisWaterLegendTitle">水系</strong>
                   <div class="arcgis-water-source-toggles">
                     <label><input id="showArcgisWaterEsri" type="checkbox" checked /><span data-i18n="arcgisWaterEsriSource">ArcGIS 水面与名称</span></label>
                     <label><input id="showArcgisWaterHydroRivers" type="checkbox" checked /><span data-i18n="arcgisWaterHydroSource">HydroRIVERS 缺失河段补全</span></label>
@@ -423,6 +427,9 @@
     <script src="esri-relief.js?v=2"></script>
     <script src="basemap-alignment.js?v=4"></script>
 <script src="great-wall.js?v=34"></script>
-<script src="app.js?v=675"></script>
+<script src="western-regions.js?v=2"></script>
+<script src="historical-periods.js?v=6"></script>
+<script src="imperial-tombs.js?v=50"></script>
+<script src="app.js?v=723"></script>
   </body>
 </html>

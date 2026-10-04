@@ -1,0 +1,6 @@
+const fs=require('node:fs'),path=require('node:path'),c=require('../data/imperial-tombs/catalog.json');
+const rows=c.items.filter(x=>x.periodReview?.originalPeriod==='西周').map(x=>({id:x.id,name:x.mapLabel||x.name,period:x.preqinPeriod,periodText:x.periodText,decision:x.periodReview.decision,sources:x.periodReview.sourceIds.map(id=>c.sources.find(s=>s.id===id))}));
+const report={reviewedAt:'2026-10-03',total:rows.length,policy:'地图及打卡以“周”合并西周、春秋、战国；此报告保留考古断代，区分传统祭祀对象、墓葬年代、国君墓地与王陵探索区。',records:rows};
+fs.writeFileSync(path.join(__dirname,'../output/western-zhou-tomb-review.json'),JSON.stringify(report,null,2)+'\n');
+fs.writeFileSync(path.join(__dirname,'../output/western-zhou-tomb-review.md'),['# 原西周分组墓地逐项核查','',`2026-10-03，共核查 ${rows.length} 条（含父群，不能相加作实墓总数）。`, '',report.policy,'','- 防山墓群已在前一轮改为春秋代表归类，官方年代为周、汉，不在本轮原西周15条内。','- 咸阳周陵改为战国秦陵候选；地图仍归合并后的“周”。','- 虢国墓地及M2001、M2009保留馆方西周认定，同时注明跨期或断代争议。','- 其余保留西周年代依据；金沙仍为王陵探索线索，陵坡仍为王室候选，均非确认周天子陵。','','|记录|考古年代／范围|核查结论|资料|','|---|---|---|---|',...rows.map(x=>`|${x.name}|${x.periodText}|${x.decision}|${x.sources.map(s=>`[${s.publisher}](${s.url})`).join('；')}|`)].join('\n')+'\n');
+console.log('Western Zhou source review: '+rows.length+' records');

@@ -1,5 +1,5 @@
-const cacheName = "travel-map-v686";
-const shellFiles = ["./", "./index.html", "./styles.css?v=189", "./vendor/openrailwaymap/composite.js?v=1", "./vendor/openrailwaymap/style.json?v=1", "./vendor/openrailwaymap/legend.json?v=1", "./railway-vector.js?v=11", "./earthquake-online.js?v=7", "./volcano-catalog.js?v=3", "./esri-relief.js?v=2", "./basemap-alignment.js?v=4", "./great-wall.js?v=34", "./app.js?v=675"];
+const cacheName = "travel-map-v744";
+const shellFiles = ["./", "./index.html", "./styles.css?v=200", "./vendor/openrailwaymap/composite.js?v=1", "./vendor/openrailwaymap/style.json?v=1", "./vendor/openrailwaymap/legend.json?v=1", "./railway-vector.js?v=11", "./earthquake-online.js?v=7", "./volcano-catalog.js?v=3", "./esri-relief.js?v=2", "./basemap-alignment.js?v=4", "./great-wall.js?v=34", "./western-regions.js?v=2", "./historical-periods.js?v=6", "./imperial-tombs.js?v=50", "./data/imperial-tombs/catalog.json?v=30", "./app.js?v=723"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(cacheName).then((cache) => cache.addAll(

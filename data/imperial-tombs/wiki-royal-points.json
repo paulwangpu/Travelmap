@@ -1,0 +1,207 @@
+{
+  "retrievedAt": "2026-10-03",
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "896110": {
+        "pageid": 896110,
+        "ns": 0,
+        "title": "魯王墓",
+        "pageprops": {
+          "wikibase_item": "Q11172572"
+        }
+      },
+      "1673276": {
+        "pageid": 1673276,
+        "ns": 0,
+        "title": "靈王陵",
+        "coordinates": [
+          {
+            "lat": 34.62583333,
+            "lon": 112.37527778,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "pageprops": {
+          "kartographer_frames": "1",
+          "page_image_free": "周山森林公园-周灵王陵.jpg",
+          "wikibase_item": "Q10565936"
+        }
+      },
+      "1673318": {
+        "pageid": 1673318,
+        "ns": 0,
+        "title": "溥儀墓",
+        "pageprops": {
+          "wikibase_item": "Q10867785"
+        }
+      },
+      "2807344": {
+        "pageid": 2807344,
+        "ns": 0,
+        "title": "鲁九公墓",
+        "pageprops": {
+          "wikibase_item": "Q17031139"
+        }
+      },
+      "3137904": {
+        "pageid": 3137904,
+        "ns": 0,
+        "title": "绍武君臣冢",
+        "pageprops": {
+          "page_image_free": "明绍武君臣冢.jpg",
+          "wikibase_item": "Q16926399"
+        }
+      },
+      "3421894": {
+        "pageid": 3421894,
+        "ns": 0,
+        "title": "中山王墓",
+        "pageprops": {
+          "page_image_free": "Zhongshan_Zhaoyutu.jpg",
+          "wikibase_item": "Q1500653"
+        }
+      },
+      "5862670": {
+        "pageid": 5862670,
+        "ns": 0,
+        "title": "秦公一号大墓",
+        "pageprops": {
+          "wikibase_item": "Q48897676"
+        }
+      },
+      "7645639": {
+        "pageid": 7645639,
+        "ns": 0,
+        "title": "晋国博物馆",
+        "coordinates": [
+          {
+            "lat": 35.73638,
+            "lon": 111.56264,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "pageprops": {
+          "kartographer_frames": "1",
+          "wikibase_item": "Q137396604"
+        }
+      },
+      "8925352": {
+        "pageid": 8925352,
+        "ns": 0,
+        "title": "周山森林公园",
+        "coordinates": [
+          {
+            "lat": 34.62722222,
+            "lon": 112.38,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "pageprops": {
+          "wikibase_item": "Q134891949"
+        }
+      },
+      "-1": {
+        "ns": 0,
+        "title": "熊家冢",
+        "missing": ""
+      },
+      "-2": {
+        "ns": 0,
+        "title": "熊家冢遗址",
+        "missing": ""
+      },
+      "-3": {
+        "ns": 0,
+        "title": "熊家冢墓地",
+        "missing": ""
+      },
+      "-4": {
+        "ns": 0,
+        "title": "楚幽王墓",
+        "missing": ""
+      },
+      "-5": {
+        "ns": 0,
+        "title": "李三孤堆",
+        "missing": ""
+      },
+      "-6": {
+        "ns": 0,
+        "title": "韩王陵",
+        "missing": ""
+      },
+      "-7": {
+        "ns": 0,
+        "title": "胡庄韩王陵",
+        "missing": ""
+      },
+      "-8": {
+        "ns": 0,
+        "title": "虚粮冢",
+        "missing": ""
+      },
+      "-9": {
+        "ns": 0,
+        "title": "燕下都王陵",
+        "missing": ""
+      },
+      "-10": {
+        "ns": 0,
+        "title": "晋侯墓地",
+        "missing": ""
+      },
+      "-11": {
+        "ns": 0,
+        "title": "殷墟王陵遗址",
+        "missing": ""
+      },
+      "-12": {
+        "ns": 0,
+        "title": "蔡侯墓",
+        "missing": ""
+      },
+      "-13": {
+        "ns": 0,
+        "title": "蔡昭侯墓",
+        "missing": ""
+      },
+      "-14": {
+        "ns": 0,
+        "title": "齐景公墓",
+        "missing": ""
+      },
+      "-15": {
+        "ns": 0,
+        "title": "殉马坑",
+        "missing": ""
+      },
+      "-16": {
+        "ns": 0,
+        "title": "菩陀峪定东陵",
+        "missing": ""
+      },
+      "-17": {
+        "ns": 0,
+        "title": "普祥峪定东陵",
+        "missing": ""
+      },
+      "-18": {
+        "ns": 0,
+        "title": "孝东陵",
+        "missing": ""
+      },
+      "-19": {
+        "ns": 0,
+        "title": "明魯王墓 (金門)",
+        "missing": ""
+      }
+    }
+  },
+  "limits": {
+    "coordinates": 500
+  }
+}

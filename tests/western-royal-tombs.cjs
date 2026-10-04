@@ -1,0 +1,27 @@
+const assert=require('node:assert/strict');
+const c=require('../data/imperial-tombs/catalog.json');
+const {mappedItems,dynastyTheme}=require('../imperial-tombs.js');
+const byId=new Map(c.items.map(x=>[x.id,x]));
+const ids=['moghul-tughluq','moghul-wais','yarkand-khans','karakhanid-satuq','hami-hui-kings','cheshi-goubei','tuyuhun-reshui'];
+for(const id of ids){const x=byId.get(id);assert(x.mapEligible,id);assert.equal(x.coordinates.status,'estimated_wgs84');assert(x.coordinates.estimate.extent);assert.equal(x.coordinates.precision.horizontalAccuracyMeters,null);}
+assert.equal(byId.get('moghul-tughluq').biographies[0].deathYear,1363);
+assert.equal(dynastyTheme(byId.get('moghul-tughluq')).key,'元');
+assert.equal(byId.get('karakhanid-satuq').biographies[0].deathYear,955);
+assert.equal(dynastyTheme(byId.get('karakhanid-satuq')).key,'五代十国');
+assert.equal(byId.get('moghul-wais').nature,'unknown');
+assert.equal(byId.get('hami-hui-kings').ownerRole,'regional_ruler');
+assert.equal(byId.get('yarkand-khans').recordType,'group');
+assert(byId.get('yarkand-khans').coordinates.original.includes('GCJ-02'));
+const satuq=byId.get('karakhanid-satuq');assert(satuq.coordinates.lat>39.687&&satuq.coordinates.lat<39.688);assert(satuq.coordinates.lng>76.175&&satuq.coordinates.lng<76.176);
+assert.equal(satuq.coordinates.sourceDatumExplicit,false);
+assert(byId.get('cheshi-goubei').coordinates.target.includes('区域参考'));
+assert(byId.get('cheshi-goubei').disputes.some(x=>x.includes('沟西')));
+const child=byId.get('tuyuhun-xuewei-2018');
+assert.equal(child.coordinates,null);assert.equal(child.locationReference.parentId,'tuyuhun-reshui');assert.equal(child.disturbance.status,'archaeological_evidence');
+assert(child.disputes.some(x=>x.includes('推定')));
+assert(byId.get('tuyuhun-reshui').disputes.some(x=>x.includes('1982')));
+assert(mappedItems(c,'隋唐',10).some(x=>x.id==='tuyuhun-reshui'));
+assert(!mappedItems(c,'隋唐',10).some(x=>x.id==='tuyuhun-xuewei-2018'));
+assert.equal(byId.get('tuyuhun-wuwei').mapEligible,false);
+assert.equal(byId.get('tuyuhun-wuwei').coordinates,null);
+console.log('Western royal tombs: regional coordinates, era colors, attribution and duplicate suppression passed.');

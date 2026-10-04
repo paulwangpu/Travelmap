@@ -1,0 +1,21 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const catalog=require('../data/imperial-tombs/catalog.json');
+const context={HistoricalPeriods:require("../historical-periods.js"),console,document:{getElementById:()=>null},maplibregl:{},globalThis:null};context.globalThis=context;
+vm.runInNewContext(fs.readFileSync(require.resolve('../imperial-tombs.js'),'utf8'),context);
+const api=context.ImperialTombs,state={mapOverlays:{imperialTombs:true}},sources=new Map(),layers=new Map(),images=new Map();
+const map={hasImage:id=>images.has(id),addImage:(id,data)=>images.set(id,data),getLayer:id=>layers.get(id),getSource:id=>sources.get(id),getStyle:()=>({layers:[]}),getZoom:()=>10,getCanvas:()=>({style:{}}),addSource:(id,s)=>sources.set(id,{data:s.data,setData(d){this.data=d;}}),addLayer:l=>layers.set(l.id,l),removeLayer:id=>layers.delete(id),removeSource:id=>sources.delete(id),on:()=>{}};
+(async()=>{
+ const visited=new Set();let resolve;api.init({state:()=>state,language:()=> 'zh',isVisited:x=>visited.has(x.id),fetch:()=>new Promise(r=>resolve=r)});
+ const pending=api.sync(map);state.mapOverlays.imperialTombs=false;await api.sync(map);resolve(catalog);await pending;assert.equal(layers.size,0,'late load must not re-enable overlay');
+ state.mapOverlays.imperialTombs=true;await api.sync(map);assert.equal(layers.size,3);assert.equal(sources.get('imperial-tombs').data.features.length,api.geojson(catalog).features.length);
+ assert.equal(layers.get('imperial-tomb-label').minzoom,5);assert.equal(layers.get('imperial-tomb-label').maxzoom,11);assert.equal(layers.get('imperial-tomb-label-full').minzoom,11);
+ assert.equal(layers.get('imperial-tomb-point').type,'symbol');assert.equal(images.size,Object.keys(api.dynastyColors).length*2);
+ state.mapOverlays.checkins=false;visited.add('ming-chang');await api.sync(map);
+ assert(sources.get('imperial-tombs').data.features.find(f=>f.properties.id==='ming-chang').properties.done,'visited badge independent of generic check-in overlay');
+ visited.clear();await api.sync(map);
+ assert.equal(sources.get('imperial-tombs').data.features.find(f=>f.properties.id==='ming-chang').properties.done,false,'unvisit updates without reloading');
+ state.mapOverlays.imperialTombsEra='隋唐';await api.sync(map);assert.equal(sources.get('imperial-tombs').data.features.length,api.geojson(catalog,'隋唐').features.length);
+ layers.clear();sources.clear();images.clear();await api.sync(map);assert.equal(layers.size,3,'rebuild after basemap style replacement');assert.equal(images.size,Object.keys(api.dynastyColors).length*2,'icons recreated after basemap change');
+ state.mapOverlays.imperialTombs=false;await api.sync(map);assert.equal(layers.size,0);assert.equal(sources.size,0);
+ console.log('PASS: asynchronous toggle cancellation, era updates, style replacement and source cleanup');
+})().catch(e=>{console.error(e);process.exitCode=1;});

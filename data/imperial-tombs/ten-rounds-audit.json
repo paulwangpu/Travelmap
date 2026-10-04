@@ -1,0 +1,336 @@
+{
+  "researchedAt": "2026-10-03",
+  "scope": "本次十轮专题补充与核验；不是全国王陵穷尽性目录",
+  "before": {
+    "records": 211,
+    "mapCandidates": 170
+  },
+  "after": {
+    "records": 219,
+    "mapCandidates": 174,
+    "estimatedCandidates": 27
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "title": "元代传说葬地与祭祀陵分开",
+      "ids": [
+        "yuan-burkhan",
+        "yuan-genghis"
+      ],
+      "result": "新增大不儿罕山圣地代表点；墓址未确认，标区域估计。",
+      "status": "passed",
+      "sources": [
+        {
+          "id": "yuan-burkhan",
+          "title": "大不儿罕山及其周边圣地：传说葬地与遗产坐标",
+          "publisher": "UNESCO",
+          "url": "https://whc.unesco.org/en/list/1440/",
+          "accessedAt": "2026-10-03",
+          "note": "登记N48 45 43.12 E109 0 33.58，整个443739.2公顷遗产地的参考点，不是帝陵墓室。"
+        },
+        {
+          "id": "genghis",
+          "title": "成吉思汗祭典与英灵祭祀",
+          "publisher": "鄂尔多斯文化资源平台",
+          "url": "https://www.ordoswh.cn/project/Info/index/id-7",
+          "accessedAt": "2026-10-03",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "title": "叶家山曾侯墓地定位",
+      "ids": [
+        "zeng-yejiashan"
+      ],
+      "result": "采用机构论文的墓地经纬度，原基准未明，保留估计及400×100米参考范围。",
+      "status": "passed",
+      "sources": [
+        {
+          "id": "yejiashan-location",
+          "title": "叶家山曾国墓地二期考古现场保护研究",
+          "publisher": "湖北省博物馆、湖北省文物考古研究所（中国文物保护技术协会论文集）",
+          "url": "https://www.cactch.org.cn/webfile/upload/2020/12-23/15-53-540273-303733068.pdf",
+          "accessedAt": "2026-10-03",
+          "note": "论文第281页：淅河镇蒋寨村八组，墓地113°27′28″、31°45′22″，岗地约400×100米；基准未明。"
+        },
+        {
+          "id": "zeng-research-2026",
+          "title": "曾国考古发现与历史研究",
+          "publisher": "湖北省文化和旅游厅",
+          "url": "https://wlt.hubei.gov.cn/bmdt/mtjj/202601/t20260131_5867511.shtml",
+          "accessedAt": "2026-10-03",
+          "note": "核对曾国君主墓与具体铭文；不将所有贵族墓作为君主陵。"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "title": "曾侯犺单墓归属",
+      "ids": [
+        "zeng-m111",
+        "zeng-yejiashan"
+      ],
+      "result": "M111单独建档，君主身份注明推定；共享墓地位置，不生成重复点。",
+      "status": "passed",
+      "sources": [
+        {
+          "id": "zeng-research-2026",
+          "title": "曾国考古发现与历史研究",
+          "publisher": "湖北省文化和旅游厅",
+          "url": "https://wlt.hubei.gov.cn/bmdt/mtjj/202601/t20260131_5867511.shtml",
+          "accessedAt": "2026-10-03",
+          "note": "核对曾国君主墓与具体铭文；不将所有贵族墓作为君主陵。"
+        },
+        {
+          "id": "yejiashan-location",
+          "title": "叶家山曾国墓地二期考古现场保护研究",
+          "publisher": "湖北省博物馆、湖北省文物考古研究所（中国文物保护技术协会论文集）",
+          "url": "https://www.cactch.org.cn/webfile/upload/2020/12-23/15-53-540273-303733068.pdf",
+          "accessedAt": "2026-10-03",
+          "note": "论文第281页：淅河镇蒋寨村八组，墓地113°27′28″、31°45′22″，岗地约400×100米；基准未明。"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "title": "虢国国君墓细分",
+      "ids": [
+        "guo-m2001",
+        "guo-m2009",
+        "guo-kings"
+      ],
+      "result": "补虢季M2001、虢仲M2009；使用原墓地共享参考，普通贵族不另列。",
+      "status": "passed",
+      "sources": [
+        {
+          "id": "guo-m2001",
+          "title": "虢季墓M2001出土蟠龙纹铜盉及墓主",
+          "publisher": "河南博物院",
+          "url": "https://www.chnmus.net/ch/collection/appraise/details.html?id=512154987666232967",
+          "accessedAt": "2026-10-03",
+          "note": ""
+        },
+        {
+          "id": "guo-m2009",
+          "title": "虢仲墓M2009出土虢仲盨及墓主",
+          "publisher": "河南博物院",
+          "url": "https://www.chnmus.net/ch/collection/appraise/details.html?id=512157738423582660",
+          "accessedAt": "2026-10-03",
+          "note": ""
+        },
+        {
+          "id": "royal-guo-kings",
+          "title": "虢国国君墓地：地点与历史",
+          "publisher": "三门峡市政府",
+          "url": "https://www.smx.gov.cn/4042/2025/10/2143489.html",
+          "accessedAt": "2026-10-03",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "title": "晋侯M114及盗扰证据",
+      "ids": [
+        "jin-m114",
+        "jin-hou"
+      ],
+      "result": "新增鸟尊出土墓；燮父身份保留推定，盗洞及爆破作为考古证据记录。",
+      "status": "passed",
+      "sources": [
+        {
+          "id": "jin-m114",
+          "title": "山西博物院晋侯鸟尊及M114盗扰证据",
+          "publisher": "新加坡中国文化中心（山西博物院专题）",
+          "url": "https://cccsingapore.org/2024/10/7196/",
+          "accessedAt": "2026-10-03",
+          "note": "114号墓出土鸟尊，发掘发现盗洞和爆破破坏；不采用网络汇总的错误发掘年份。"
+        },
+        {
+          "id": "preqin-jin-hou",
+          "title": "北赵晋侯墓地：地点与认定依据",
+          "publisher": "曲沃县晋国博物馆",
+          "url": "https://www.jinguomuseum.com/newsinfo/807057.html?templateId=1133604",
+          "accessedAt": "2026-10-03",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "title": "辽显陵与乾陵位置",
+      "ids": [
+        "liao-xian",
+        "liao-qian"
+      ],
+      "result": "补琉璃寺、新立陵前建筑参考点；注明公文转录与基准待核，不指定帝王墓室。",
+      "status": "passed",
+      "sources": [
+        {
+          "id": "liao-yiwulv",
+          "title": "医巫闾山显陵、乾陵遗址与历史葬者",
+          "publisher": "辽宁省文化和旅游厅",
+          "url": "https://whly.ln.gov.cn/whly/wlzt/lnww/zdwwbhdw/D8920AD1B7A94CE995F8ED651A0B7BAA/index.shtml",
+          "accessedAt": "2026-10-03",
+          "note": ""
+        },
+        {
+          "id": "liao-yiwulv-2026",
+          "title": "闾山辽帝陵考古成果展：显陵与乾陵",
+          "publisher": "辽宁省文化和旅游厅（辽宁日报）",
+          "url": "https://whly.ln.gov.cn/whly/mtjj/2026051511002192580/index.shtml",
+          "accessedAt": "2026-10-03",
+          "note": "2026年机构展览资料，避免沿用旧文称两陵无法定位的概括。"
+        },
+        {
+          "id": "liao-protection-2024",
+          "title": "医巫闾山辽陵保护范围通知与附件",
+          "publisher": "辽宁省人民政府",
+          "url": "https://www.ln.gov.cn/web/zwgkx/zfwj/szfwj/2024n/2025010216463013082/index.shtml",
+          "accessedAt": "2026-10-03",
+          "note": "辽政发〔2024〕19号，附件第10项；附件访问受限时以转录核对数值，明确保留此限制。"
+        },
+        {
+          "id": "liao-protection-transcript",
+          "title": "辽政发〔2024〕19号保护范围附件转录",
+          "publisher": "维基文库（省政府公文转录）",
+          "url": "https://zh.wikisource.org/wiki/辽宁省人民政府关于公布第八批全国重点文物保护单位、第十批省级文物保护单位（长城类）保护范围和建设控制地带的通知",
+          "accessedAt": "2026-10-03",
+          "note": "琉璃寺121°41′47.66″、41°39′00.07″；新立陵前建筑121°44′17.40″、41°39′17.10″；原始基准未明，转录待继续对照原附件。"
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "title": "咸阳周陵身份与异名去重",
+      "ids": [
+        "zhou-xianyang"
+      ],
+      "result": "补秦陵重新认定及墓主多种异说；不另按秦王姓名复制同一实体。",
+      "status": "passed",
+      "sources": [
+        {
+          "id": "preqin-zhou-xianyang",
+          "title": "周陵（周文武王传统陵址）：地点与认定依据",
+          "publisher": "故宫博物院",
+          "url": "https://www.dpm.org.cn/Uploads/File/2022/07/22/u62da4dd4ade3e.pdf",
+          "accessedAt": "2026-10-03",
+          "note": ""
+        },
+        {
+          "id": "zhou-qin-reassessment",
+          "title": "咸阳周陵为秦陵及墓主异说",
+          "publisher": "陕西省地方志《陕西帝王陵墓志》",
+          "url": "https://dfz.shaanxi.gov.cn/zslm/fzzlk/dqcs/201803/P020250630548327427771.pdf",
+          "accessedAt": "2026-10-03",
+          "note": "第66页列秦惠文王/秦武王、惠文王及王后、秦武王及夫人等归属异说。"
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "title": "霸陵旧址及帝后关系",
+      "ids": [
+        "han-ba"
+      ],
+      "result": "加强江村大墓机构证据，纠正凤凰嘴旧址；帝后同茔异穴不混为一墓。",
+      "status": "passed",
+      "sources": [
+        {
+          "id": "baling",
+          "title": "江村大墓确认为汉文帝霸陵",
+          "publisher": "新华网",
+          "url": "https://www.xinhuanet.com/2021-12/17/c_1128171734.htm",
+          "accessedAt": "2026-10-03",
+          "note": ""
+        },
+        {
+          "id": "national-8",
+          "title": "第八批全国重点文物保护单位",
+          "publisher": "国务院",
+          "url": "https://www.gov.cn/gbgl/75e17ff291dd418f8f758d508087cd8b/files/6250670fc770465787b85d705d4b12f9.pdf",
+          "accessedAt": "2026-10-03",
+          "note": ""
+        },
+        {
+          "id": "han-table",
+          "title": "汉代雄风：西汉帝陵一览表",
+          "publisher": "陕西省地方志",
+          "url": "https://dfz.shaanxi.gov.cn/zslm/fzzlk/dqcs/201706/P020240924681697197239.pdf",
+          "accessedAt": "2026-10-03",
+          "note": "行政区为书中概略地点，需补现代行政区；霸陵另据新考古结论修正。"
+        },
+        {
+          "id": "baling-primary-2022",
+          "title": "江村大墓确认为霸陵及帝后同茔异穴",
+          "publisher": "陕西省文物局",
+          "url": "https://wwj.shaanxi.gov.cn/sy/dtyw/wbyw/202204/t20220402_2216126.html",
+          "accessedAt": "2026-10-03",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "round": 9,
+      "title": "清永陵葬者与衣冠冢",
+      "ids": [
+        "qing-yong"
+      ],
+      "result": "补孟特穆、福满、觉昌安、塔克世；衣冠冢与实葬另作说明，附葬不单列。",
+      "status": "passed",
+      "sources": [
+        {
+          "id": "qing-three",
+          "title": "清永陵与盛京三陵墓主",
+          "publisher": "辽宁省文化和旅游厅",
+          "url": "https://whly.ln.gov.cn/whly/wlzt/lnww/sjwhycd/2BC112E80B8A4541B406312D1F0856F4/index.shtml",
+          "accessedAt": "2026-10-03",
+          "note": ""
+        },
+        {
+          "id": "ming-qing-map",
+          "title": "明清皇家陵寝组成与坐标",
+          "publisher": "UNESCO",
+          "url": "https://whc.unesco.org/fr/list/1004/cartes/",
+          "accessedAt": "2026-10-03",
+          "note": "明显陵坐标与湖北文旅厅公布范围冲突；本目录不采用该点。"
+        },
+        {
+          "id": "qing-yong-occupants",
+          "title": "清永陵先祖与附葬名单",
+          "publisher": "辽宁省文化和旅游厅（清永陵官网）",
+          "url": "https://whly.ln.gov.cn/whly/wlzt/lnww/sjwhycd/2BC112E80B8A4541B406312D1F0856F4/index.shtml",
+          "accessedAt": "2026-10-03",
+          "note": ""
+        },
+        {
+          "id": "qing-yong-cenotaph",
+          "title": "清永陵实葬与孟特穆衣冠冢",
+          "publisher": "新华网《中国国家人文地理·辽宁抚顺》",
+          "url": "https://www.xinhuanet.com/expo/2021-04/28/c_1211133045_3.htm",
+          "accessedAt": "2026-10-03",
+          "note": ""
+        },
+        {
+          "id": "yongling-location",
+          "title": "清永陵地理位置交叉核查",
+          "publisher": "高德地图",
+          "url": "https://ditu.amap.com/place/B019D00YMB",
+          "accessedAt": "2026-10-03",
+          "note": "GCJ-02坐标仅用于交叉核查地区，不直接导入WGS84。"
+        }
+      ]
+    },
+    {
+      "round": 10,
+      "title": "全目录位置、排序与重复审计",
+      "ids": [],
+      "result": "修复新增年代被通用排序覆盖；更新过时缺项清单；验证来源、共享位置和地图过滤。",
+      "status": "passed",
+      "sources": []
+    }
+  ]
+}

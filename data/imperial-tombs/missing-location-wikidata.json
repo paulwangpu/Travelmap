@@ -1,0 +1,2684 @@
+{
+  "entities": {
+    "Q19841777": {
+      "type": "item",
+      "id": "Q19841777",
+      "labels": {
+        "zh": {
+          "language": "zh",
+          "value": "唐建陵"
+        },
+        "ko": {
+          "language": "ko",
+          "value": "건릉"
+        }
+      },
+      "claims": {
+        "P17": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P17",
+              "hash": "30e172796b0726589e92b001c327f5d55fa0782e",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 148,
+                  "id": "Q148"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q19841777$8B27BDCB-6FB2-486F-BCE7-06E3860EA762",
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "0ee3b3ba1c958f4c3dcba7ed8091fe4b57311348",
+                "snaks": {
+                  "P143": [
+                    {
+                      "snaktype": "value",
+                      "property": "P143",
+                      "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                      "datavalue": {
+                        "value": {
+                          "entity-type": "item",
+                          "numeric-id": 30239,
+                          "id": "Q30239"
+                        },
+                        "type": "wikibase-entityid"
+                      },
+                      "datatype": "wikibase-item"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P143"
+                ]
+              }
+            ]
+          }
+        ],
+        "P31": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P31",
+              "hash": "f44a16440074e2d133fbdad5d59f754d6e9dff51",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 39614,
+                  "id": "Q39614"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q19841777$DBC8AE97-848C-41A9-AFEE-07CF1CDD6DF2",
+            "rank": "normal"
+          }
+        ],
+        "P131": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P131",
+              "hash": "21b1729334a14b046ca7a19eb49e656ba8765a3a",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 47974,
+                  "id": "Q47974"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q19841777$55FF100E-3549-429B-9183-F0F90783951D",
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "3fc82f5e7362c64e4c73f3b39705550db736bdc9",
+                "snaks": {
+                  "P143": [
+                    {
+                      "snaktype": "value",
+                      "property": "P143",
+                      "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                      "datavalue": {
+                        "value": {
+                          "entity-type": "item",
+                          "numeric-id": 30239,
+                          "id": "Q30239"
+                        },
+                        "type": "wikibase-entityid"
+                      },
+                      "datatype": "wikibase-item"
+                    }
+                  ],
+                  "P4656": [
+                    {
+                      "snaktype": "value",
+                      "property": "P4656",
+                      "hash": "4c36fb4ebda54fa92bed63d2e3e1491f0e624d7d",
+                      "datavalue": {
+                        "value": "https://zh.wikipedia.org/w/index.php?title=唐建陵&oldid=40097617",
+                        "type": "string"
+                      },
+                      "datatype": "url"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P143",
+                  "P4656"
+                ]
+              }
+            ]
+          }
+        ],
+        "P2671": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P2671",
+              "hash": "8f1d33cb701a7c9d4fd014a0c08c59dcf32b5ab4",
+              "datavalue": {
+                "value": "/g/11b631ywyw",
+                "type": "string"
+              },
+              "datatype": "external-id"
+            },
+            "type": "statement",
+            "id": "Q19841777$2C014FC6-5B2D-4702-856A-202EFA485A8F",
+            "rank": "normal"
+          }
+        ]
+      }
+    },
+    "Q991847": {
+      "type": "item",
+      "id": "Q991847",
+      "labels": {
+        "de": {
+          "language": "de",
+          "value": "Zhougong Miao"
+        },
+        "zh": {
+          "language": "zh",
+          "value": "周公庙遗址"
+        },
+        "ja": {
+          "language": "ja",
+          "value": "周公廟遺址"
+        },
+        "en": {
+          "language": "en",
+          "value": "Fenghuangshan Site"
+        }
+      },
+      "claims": {
+        "P17": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P17",
+              "hash": "30e172796b0726589e92b001c327f5d55fa0782e",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 148,
+                  "id": "Q148"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q991847$D1D8601C-4B33-43F9-AE8F-C6530844189E",
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "0ee3b3ba1c958f4c3dcba7ed8091fe4b57311348",
+                "snaks": {
+                  "P143": [
+                    {
+                      "snaktype": "value",
+                      "property": "P143",
+                      "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                      "datavalue": {
+                        "value": {
+                          "entity-type": "item",
+                          "numeric-id": 30239,
+                          "id": "Q30239"
+                        },
+                        "type": "wikibase-entityid"
+                      },
+                      "datatype": "wikibase-item"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P143"
+                ]
+              }
+            ]
+          }
+        ],
+        "P31": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P31",
+              "hash": "4441c653c09b7127b7d39c2f526a738ab5fbd6a9",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 839954,
+                  "id": "Q839954"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q991847$716DB8AB-2EB4-451A-A2A3-D33655B65ECD",
+            "rank": "normal"
+          },
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P31",
+              "hash": "f44a16440074e2d133fbdad5d59f754d6e9dff51",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 39614,
+                  "id": "Q39614"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q991847$2FF0BF95-74B5-49B5-8D2E-5E5900ACF41C",
+            "rank": "normal"
+          }
+        ],
+        "P131": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P131",
+              "hash": "7973da9d8272d2d10b337e742bfea8916ba61ebf",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 1201047,
+                  "id": "Q1201047"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q991847$01BC1222-A48B-4C2E-BD38-374363D3CBB3",
+            "rank": "normal"
+          }
+        ],
+        "P625": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P625",
+              "hash": "c7792ad7f3832f040bd71f524f8f51761adfe84e",
+              "datavalue": {
+                "value": {
+                  "latitude": 34.488157,
+                  "longitude": 107.600261,
+                  "altitude": null,
+                  "precision": 0.000001,
+                  "globe": "http://www.wikidata.org/entity/Q2"
+                },
+                "type": "globecoordinate"
+              },
+              "datatype": "globe-coordinate"
+            },
+            "type": "statement",
+            "id": "Q991847$A009E2C7-6B3E-47B5-B9E8-6CFCF55D8F05",
+            "rank": "normal"
+          }
+        ],
+        "P2671": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P2671",
+              "hash": "6d4f374097559fded78ee877c1cbb00a59ece388",
+              "datavalue": {
+                "value": "/g/11b6grpkv4",
+                "type": "string"
+              },
+              "datatype": "external-id"
+            },
+            "type": "statement",
+            "id": "Q991847$4032D6B8-3B50-488B-BAE5-AB21ADD6089C",
+            "rank": "normal"
+          }
+        ],
+        "P1435": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P1435",
+              "hash": "88b09422a95f0e849d833967c8843d2f3e76f85c",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 1188574,
+                  "id": "Q1188574"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P217": [
+                {
+                  "snaktype": "value",
+                  "property": "P217",
+                  "hash": "7d92666b18e27281344fef194f67653c11c913e8",
+                  "datavalue": {
+                    "value": "6-0196-1-196",
+                    "type": "string"
+                  },
+                  "datatype": "string"
+                }
+              ],
+              "P580": [
+                {
+                  "snaktype": "value",
+                  "property": "P580",
+                  "hash": "f5a68d4ecb10e0028eb483521a7e7a79a6432152",
+                  "datavalue": {
+                    "value": {
+                      "time": "+2006-05-25T00:00:00Z",
+                      "timezone": 0,
+                      "before": 0,
+                      "after": 0,
+                      "precision": 11,
+                      "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                    },
+                    "type": "time"
+                  },
+                  "datatype": "time"
+                }
+              ],
+              "P1448": [
+                {
+                  "snaktype": "value",
+                  "property": "P1448",
+                  "hash": "f89117c0ee0c678f77ed5e31597600d6f6e71f46",
+                  "datavalue": {
+                    "value": {
+                      "text": "凤凰山遗址",
+                      "language": "zh-cn"
+                    },
+                    "type": "monolingualtext"
+                  },
+                  "datatype": "monolingualtext"
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P217",
+              "P580",
+              "P1448"
+            ],
+            "id": "Q991847$D46E9029-709E-4DCA-A77A-512E92BED9A2",
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "83fb8cc9b7c57b97855568c4c0fc1c921f3dfcdc",
+                "snaks": {
+                  "P854": [
+                    {
+                      "snaktype": "value",
+                      "property": "P854",
+                      "hash": "aa99c920405d39f89330da7aad3a3ef5e852dc1d",
+                      "datavalue": {
+                        "value": "http://dtdj.cchicc.org.cn/#/stateprotect",
+                        "type": "string"
+                      },
+                      "datatype": "url"
+                    }
+                  ],
+                  "P813": [
+                    {
+                      "snaktype": "value",
+                      "property": "P813",
+                      "hash": "b2df3676447de8b44ab96c618be6688223fde7bc",
+                      "datavalue": {
+                        "value": {
+                          "time": "+2025-03-04T00:00:00Z",
+                          "timezone": 0,
+                          "before": 0,
+                          "after": 0,
+                          "precision": 11,
+                          "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                        },
+                        "type": "time"
+                      },
+                      "datatype": "time"
+                    }
+                  ],
+                  "P1476": [
+                    {
+                      "snaktype": "value",
+                      "property": "P1476",
+                      "hash": "9bc974e739ee7cad0f14000f930eb7882a690590",
+                      "datavalue": {
+                        "value": {
+                          "text": "国家文物局全国文物地理信息平台",
+                          "language": "zh-cn"
+                        },
+                        "type": "monolingualtext"
+                      },
+                      "datatype": "monolingualtext"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P854",
+                  "P813",
+                  "P1476"
+                ]
+              },
+              {
+                "hash": "335af0ad4d82879032f170620a99d3b17b56bd67",
+                "snaks": {
+                  "P248": [
+                    {
+                      "snaktype": "value",
+                      "property": "P248",
+                      "hash": "38fd6fc33254957003ce44c769630dd08402bb90",
+                      "datavalue": {
+                        "value": {
+                          "entity-type": "item",
+                          "numeric-id": 89332005,
+                          "id": "Q89332005"
+                        },
+                        "type": "wikibase-entityid"
+                      },
+                      "datatype": "wikibase-item"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P248"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Q400087": {
+      "type": "item",
+      "id": "Q400087",
+      "labels": {
+        "zh-hans": {
+          "language": "zh-hans",
+          "value": "大洋洲程家遗址"
+        },
+        "zh-hant": {
+          "language": "zh-hant",
+          "value": "大洋洲程家遺址"
+        },
+        "zh-hk": {
+          "language": "zh-hk",
+          "value": "大洋洲程家遺址"
+        },
+        "zh-cn": {
+          "language": "zh-cn",
+          "value": "大洋洲程家遗址"
+        },
+        "zh-sg": {
+          "language": "zh-sg",
+          "value": "大洋洲程家遗址"
+        },
+        "zh-tw": {
+          "language": "zh-tw",
+          "value": "大洋洲程家遺址"
+        },
+        "de": {
+          "language": "de",
+          "value": "Shangzeitliche Bronzen aus Xingan"
+        },
+        "en": {
+          "language": "en",
+          "value": "Dayangzhou"
+        },
+        "it": {
+          "language": "it",
+          "value": "Xingan"
+        },
+        "zh": {
+          "language": "zh",
+          "value": "大洋洲程家遗址"
+        },
+        "nl": {
+          "language": "nl",
+          "value": "Xingan"
+        },
+        "pt": {
+          "language": "pt",
+          "value": "Ruínas de Jiangxi"
+        },
+        "fr": {
+          "language": "fr",
+          "value": "Site de Dayangzhou"
+        },
+        "ja": {
+          "language": "ja",
+          "value": "新幹商墓"
+        },
+        "en-gb": {
+          "language": "en-gb",
+          "value": "Dayangzhou"
+        },
+        "en-us": {
+          "language": "en-us",
+          "value": "Dayangzhou"
+        }
+      },
+      "claims": {
+        "P373": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P373",
+              "hash": "84cd5723302ed26d8c2eb50abbd847e5cf6dab59",
+              "datavalue": {
+                "value": "Dayangzhou Site",
+                "type": "string"
+              },
+              "datatype": "string"
+            },
+            "type": "statement",
+            "id": "q400087$C2BABB6E-EB37-4646-A712-4914C8020F1E",
+            "rank": "normal"
+          }
+        ],
+        "P646": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P646",
+              "hash": "5024fbb29192eee2d60e2f9c721f58a9ed2ae87e",
+              "datavalue": {
+                "value": "/m/093mp8",
+                "type": "string"
+              },
+              "datatype": "external-id"
+            },
+            "type": "statement",
+            "id": "Q400087$649D3124-FFE9-4FD9-86CA-7F4AA877C7B6",
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "2b00cb481cddcac7623114367489b5c194901c4a",
+                "snaks": {
+                  "P248": [
+                    {
+                      "snaktype": "value",
+                      "property": "P248",
+                      "hash": "a94b740202b097dd33355e0e6c00e54b9395e5e0",
+                      "datavalue": {
+                        "value": {
+                          "entity-type": "item",
+                          "numeric-id": 15241312,
+                          "id": "Q15241312"
+                        },
+                        "type": "wikibase-entityid"
+                      },
+                      "datatype": "wikibase-item"
+                    }
+                  ],
+                  "P577": [
+                    {
+                      "snaktype": "value",
+                      "property": "P577",
+                      "hash": "fde79ecb015112d2f29229ccc1ec514ed3e71fa2",
+                      "datavalue": {
+                        "value": {
+                          "time": "+2013-10-28T00:00:00Z",
+                          "timezone": 0,
+                          "before": 0,
+                          "after": 0,
+                          "precision": 11,
+                          "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                        },
+                        "type": "time"
+                      },
+                      "datatype": "time"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P248",
+                  "P577"
+                ]
+              }
+            ]
+          }
+        ],
+        "P625": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P625",
+              "hash": "138bf99692e7d11156dd10638abbe431dd10b3d5",
+              "datavalue": {
+                "value": {
+                  "latitude": 27.9193,
+                  "longitude": 115.4515,
+                  "altitude": null,
+                  "precision": 0.010165572054263,
+                  "globe": "http://www.wikidata.org/entity/Q2"
+                },
+                "type": "globecoordinate"
+              },
+              "datatype": "globe-coordinate"
+            },
+            "type": "statement",
+            "id": "Q400087$F0BDD7F2-3063-454F-8E83-CD4DADB6EA8F",
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "fa278ebfc458360e5aed63d5058cca83c46134f1",
+                "snaks": {
+                  "P143": [
+                    {
+                      "snaktype": "value",
+                      "property": "P143",
+                      "hash": "e4f6d9441d0600513c4533c672b5ab472dc73694",
+                      "datavalue": {
+                        "value": {
+                          "entity-type": "item",
+                          "numeric-id": 328,
+                          "id": "Q328"
+                        },
+                        "type": "wikibase-entityid"
+                      },
+                      "datatype": "wikibase-item"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P143"
+                ]
+              }
+            ]
+          }
+        ],
+        "P17": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P17",
+              "hash": "30e172796b0726589e92b001c327f5d55fa0782e",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 148,
+                  "id": "Q148"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q400087$5A7789DE-71AE-4C08-96D3-5709F94FF46A",
+            "rank": "normal"
+          }
+        ],
+        "P31": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P31",
+              "hash": "4441c653c09b7127b7d39c2f526a738ab5fbd6a9",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 839954,
+                  "id": "Q839954"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q400087$5015E178-D4C5-4414-B044-22CA969A8F5B",
+            "rank": "normal"
+          }
+        ],
+        "P18": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P18",
+              "hash": "cff96ffed8176fbc885ed0cf89651903e1728c10",
+              "datavalue": {
+                "value": "Jiangxi Sheng Bowuguan 20120627-64.jpg",
+                "type": "string"
+              },
+              "datatype": "commonsMedia"
+            },
+            "type": "statement",
+            "id": "Q400087$76F5A5F0-20B4-497B-893B-D7203F2B982D",
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "d5847b9b6032aa8b13dae3c2dfd9ed5d114d21b3",
+                "snaks": {
+                  "P143": [
+                    {
+                      "snaktype": "value",
+                      "property": "P143",
+                      "hash": "5a343e7e758a4282a01316d3e959b6e653b767fc",
+                      "datavalue": {
+                        "value": {
+                          "entity-type": "item",
+                          "numeric-id": 11920,
+                          "id": "Q11920"
+                        },
+                        "type": "wikibase-entityid"
+                      },
+                      "datatype": "wikibase-item"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P143"
+                ]
+              }
+            ]
+          }
+        ],
+        "P131": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P131",
+              "hash": "4512db5f2f7fa27b746dcb003b9d6117e76104b0",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 1273596,
+                  "id": "Q1273596"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q400087$EE809256-E5BB-47D5-AD25-31862053F39D",
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "b1ad75fb3a0fa624caeae1842a11ee26b719c8dc",
+                "snaks": {
+                  "P143": [
+                    {
+                      "snaktype": "value",
+                      "property": "P143",
+                      "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                      "datavalue": {
+                        "value": {
+                          "entity-type": "item",
+                          "numeric-id": 30239,
+                          "id": "Q30239"
+                        },
+                        "type": "wikibase-entityid"
+                      },
+                      "datatype": "wikibase-item"
+                    }
+                  ],
+                  "P4656": [
+                    {
+                      "snaktype": "value",
+                      "property": "P4656",
+                      "hash": "5388e0a8ed1d19286feaa180505473f137b3c3db",
+                      "datavalue": {
+                        "value": "https://zh.wikipedia.org/w/index.php?title=大洋洲程家遗址&oldid=42080687",
+                        "type": "string"
+                      },
+                      "datatype": "url"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P143",
+                  "P4656"
+                ]
+              }
+            ]
+          }
+        ],
+        "P11693": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P11693",
+              "hash": "b4be766e620ba3853a15f15fa33eeb8e7bb7fb87",
+              "datavalue": {
+                "value": "8703958025",
+                "type": "string"
+              },
+              "datatype": "external-id"
+            },
+            "type": "statement",
+            "id": "Q400087$65436FD4-DC18-40B2-B9CF-8466CAD5A4BD",
+            "rank": "normal"
+          }
+        ]
+      }
+    },
+    "Q133309238": {
+      "type": "item",
+      "id": "Q133309238",
+      "labels": {
+        "zh": {
+          "language": "zh",
+          "value": "大河口遗址"
+        },
+        "zh-hans": {
+          "language": "zh-hans",
+          "value": "大河口遗址"
+        },
+        "zh-cn": {
+          "language": "zh-cn",
+          "value": "大河口遗址"
+        },
+        "en": {
+          "language": "en",
+          "value": "Dahekou Site"
+        }
+      },
+      "claims": {
+        "P31": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P31",
+              "hash": "114b9a729ce914ba57db7172200ce6d72e7a5956",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 10300916,
+                  "id": "Q10300916"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q133309238$5E62A999-47AB-4FF9-A18E-ECD224A183AF",
+            "rank": "normal"
+          }
+        ],
+        "P17": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P17",
+              "hash": "30e172796b0726589e92b001c327f5d55fa0782e",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 148,
+                  "id": "Q148"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q133309238$EA400D3B-E097-4BD5-A6DD-B743742745DD",
+            "rank": "normal"
+          }
+        ],
+        "P131": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P131",
+              "hash": "c596cdef160b94806af7071fd822cb385859b3ef",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 684912,
+                  "id": "Q684912"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q133309238$3B52750C-DA7F-498E-9589-80009929DB6A",
+            "rank": "normal"
+          }
+        ],
+        "P625": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P625",
+              "hash": "317bee184b0b44e062d96b065ae7a8173ebfec6e",
+              "datavalue": {
+                "value": {
+                  "latitude": 35.74677,
+                  "longitude": 111.78313,
+                  "altitude": null,
+                  "precision": 0.000001,
+                  "globe": "http://www.wikidata.org/entity/Q2"
+                },
+                "type": "globecoordinate"
+              },
+              "datatype": "globe-coordinate"
+            },
+            "type": "statement",
+            "id": "Q133309238$1767C554-7CD5-441A-A686-2EBE908E56D1",
+            "rank": "normal"
+          }
+        ],
+        "P1435": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P1435",
+              "hash": "88b09422a95f0e849d833967c8843d2f3e76f85c",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 1188574,
+                  "id": "Q1188574"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P217": [
+                {
+                  "snaktype": "value",
+                  "property": "P217",
+                  "hash": "da7fa9e33d26f1f339cacc9f34282fe26eb3c5b0",
+                  "datavalue": {
+                    "value": "8-0008-1-008",
+                    "type": "string"
+                  },
+                  "datatype": "string"
+                }
+              ],
+              "P580": [
+                {
+                  "snaktype": "value",
+                  "property": "P580",
+                  "hash": "ce224f8bb52f6fc7aa02173683603095f44a6fb4",
+                  "datavalue": {
+                    "value": {
+                      "time": "+2019-10-07T00:00:00Z",
+                      "timezone": 0,
+                      "before": 0,
+                      "after": 0,
+                      "precision": 11,
+                      "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                    },
+                    "type": "time"
+                  },
+                  "datatype": "time"
+                }
+              ],
+              "P1448": [
+                {
+                  "snaktype": "value",
+                  "property": "P1448",
+                  "hash": "ebb3fefd7775345e7ed76d87ea990f0b6d6af816",
+                  "datavalue": {
+                    "value": {
+                      "text": "大河口遗址",
+                      "language": "zh-cn"
+                    },
+                    "type": "monolingualtext"
+                  },
+                  "datatype": "monolingualtext"
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P217",
+              "P580",
+              "P1448"
+            ],
+            "id": "Q133309238$EDAB7D13-7DE0-4387-8C0A-DF24B944ACF0",
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "83fb8cc9b7c57b97855568c4c0fc1c921f3dfcdc",
+                "snaks": {
+                  "P854": [
+                    {
+                      "snaktype": "value",
+                      "property": "P854",
+                      "hash": "aa99c920405d39f89330da7aad3a3ef5e852dc1d",
+                      "datavalue": {
+                        "value": "http://dtdj.cchicc.org.cn/#/stateprotect",
+                        "type": "string"
+                      },
+                      "datatype": "url"
+                    }
+                  ],
+                  "P1476": [
+                    {
+                      "snaktype": "value",
+                      "property": "P1476",
+                      "hash": "9bc974e739ee7cad0f14000f930eb7882a690590",
+                      "datavalue": {
+                        "value": {
+                          "text": "国家文物局全国文物地理信息平台",
+                          "language": "zh-cn"
+                        },
+                        "type": "monolingualtext"
+                      },
+                      "datatype": "monolingualtext"
+                    }
+                  ],
+                  "P813": [
+                    {
+                      "snaktype": "value",
+                      "property": "P813",
+                      "hash": "b2df3676447de8b44ab96c618be6688223fde7bc",
+                      "datavalue": {
+                        "value": {
+                          "time": "+2025-03-04T00:00:00Z",
+                          "timezone": 0,
+                          "before": 0,
+                          "after": 0,
+                          "precision": 11,
+                          "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                        },
+                        "type": "time"
+                      },
+                      "datatype": "time"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P854",
+                  "P1476",
+                  "P813"
+                ]
+              },
+              {
+                "hash": "d81e807400f6fe54aa794c2baf3a395f56c1dd09",
+                "snaks": {
+                  "P248": [
+                    {
+                      "snaktype": "value",
+                      "property": "P248",
+                      "hash": "e8d72c38d6a4b02d8a54d34afd0fe9b8fa8ce7d6",
+                      "datavalue": {
+                        "value": {
+                          "entity-type": "item",
+                          "numeric-id": 89327640,
+                          "id": "Q89327640"
+                        },
+                        "type": "wikibase-entityid"
+                      },
+                      "datatype": "wikibase-item"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P248"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Q134891949": {
+      "type": "item",
+      "id": "Q134891949",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Zhoushan Forest Park"
+        },
+        "zh": {
+          "language": "zh",
+          "value": "周山森林公园"
+        }
+      },
+      "claims": {
+        "P373": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P373",
+              "hash": "f20bba0a9af46ee2cb1a32032cf6dea92bf26b95",
+              "datavalue": {
+                "value": "Zhoushan Forest Park",
+                "type": "string"
+              },
+              "datatype": "string"
+            },
+            "type": "statement",
+            "id": "Q134891949$d636e5e9-b99a-400f-869c-612d1fdaf2c0",
+            "rank": "normal"
+          }
+        ]
+      }
+    },
+    "Q131522427": {
+      "type": "item",
+      "id": "Q131522427",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Category:Cao Wei Tombs in Xizhu Village"
+        },
+        "zh": {
+          "language": "zh",
+          "value": "西朱村曹魏墓"
+        },
+        "zh-hans": {
+          "language": "zh-hans",
+          "value": "西朱村曹魏墓"
+        },
+        "zh-cn": {
+          "language": "zh-cn",
+          "value": "西朱村曹魏墓"
+        }
+      },
+      "claims": {
+        "P373": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P373",
+              "hash": "0ebc685db3707b3885384b1510058dfe69546adc",
+              "datavalue": {
+                "value": "Cao Wei Tombs in Xizhu Village",
+                "type": "string"
+              },
+              "datatype": "string"
+            },
+            "type": "statement",
+            "id": "Q131522427$8d679c92-3190-4f44-9d87-f030a6884690",
+            "rank": "normal"
+          }
+        ],
+        "P17": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P17",
+              "hash": "30e172796b0726589e92b001c327f5d55fa0782e",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 148,
+                  "id": "Q148"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q131522427$CD7C08A2-A1CA-4E4E-86A7-94F922B57E1A",
+            "rank": "normal"
+          }
+        ],
+        "P131": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P131",
+              "hash": "c803ddb754ad51f4c349a97ecd9120838b19ac5d",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 1198624,
+                  "id": "Q1198624"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q131522427$E57DB4C7-CBBF-4ECB-9B99-A822908264A2",
+            "rank": "normal"
+          }
+        ],
+        "P1435": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P1435",
+              "hash": "88b09422a95f0e849d833967c8843d2f3e76f85c",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 1188574,
+                  "id": "Q1188574"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P217": [
+                {
+                  "snaktype": "value",
+                  "property": "P217",
+                  "hash": "b28d4e0fd6972c004d04279c2f07b6031acc083b",
+                  "datavalue": {
+                    "value": "8-0184-2-017",
+                    "type": "string"
+                  },
+                  "datatype": "string"
+                }
+              ],
+              "P580": [
+                {
+                  "snaktype": "value",
+                  "property": "P580",
+                  "hash": "ce224f8bb52f6fc7aa02173683603095f44a6fb4",
+                  "datavalue": {
+                    "value": {
+                      "time": "+2019-10-07T00:00:00Z",
+                      "timezone": 0,
+                      "before": 0,
+                      "after": 0,
+                      "precision": 11,
+                      "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                    },
+                    "type": "time"
+                  },
+                  "datatype": "time"
+                }
+              ],
+              "P1448": [
+                {
+                  "snaktype": "value",
+                  "property": "P1448",
+                  "hash": "6bb2bd8f692a1067ce9d2af13b8cbb840513259d",
+                  "datavalue": {
+                    "value": {
+                      "text": "西朱村曹魏墓",
+                      "language": "zh-cn"
+                    },
+                    "type": "monolingualtext"
+                  },
+                  "datatype": "monolingualtext"
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P217",
+              "P580",
+              "P1448"
+            ],
+            "id": "Q131522427$879A2C52-8C1D-4F58-A82B-800BFC466A29",
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "83fb8cc9b7c57b97855568c4c0fc1c921f3dfcdc",
+                "snaks": {
+                  "P854": [
+                    {
+                      "snaktype": "value",
+                      "property": "P854",
+                      "hash": "aa99c920405d39f89330da7aad3a3ef5e852dc1d",
+                      "datavalue": {
+                        "value": "http://dtdj.cchicc.org.cn/#/stateprotect",
+                        "type": "string"
+                      },
+                      "datatype": "url"
+                    }
+                  ],
+                  "P1476": [
+                    {
+                      "snaktype": "value",
+                      "property": "P1476",
+                      "hash": "9bc974e739ee7cad0f14000f930eb7882a690590",
+                      "datavalue": {
+                        "value": {
+                          "text": "国家文物局全国文物地理信息平台",
+                          "language": "zh-cn"
+                        },
+                        "type": "monolingualtext"
+                      },
+                      "datatype": "monolingualtext"
+                    }
+                  ],
+                  "P813": [
+                    {
+                      "snaktype": "value",
+                      "property": "P813",
+                      "hash": "b2df3676447de8b44ab96c618be6688223fde7bc",
+                      "datavalue": {
+                        "value": {
+                          "time": "+2025-03-04T00:00:00Z",
+                          "timezone": 0,
+                          "before": 0,
+                          "after": 0,
+                          "precision": 11,
+                          "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                        },
+                        "type": "time"
+                      },
+                      "datatype": "time"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P854",
+                  "P1476",
+                  "P813"
+                ]
+              },
+              {
+                "hash": "d81e807400f6fe54aa794c2baf3a395f56c1dd09",
+                "snaks": {
+                  "P248": [
+                    {
+                      "snaktype": "value",
+                      "property": "P248",
+                      "hash": "e8d72c38d6a4b02d8a54d34afd0fe9b8fa8ce7d6",
+                      "datavalue": {
+                        "value": {
+                          "entity-type": "item",
+                          "numeric-id": 89327640,
+                          "id": "Q89327640"
+                        },
+                        "type": "wikibase-entityid"
+                      },
+                      "datatype": "wikibase-item"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P248"
+                ]
+              }
+            ]
+          }
+        ],
+        "P625": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P625",
+              "hash": "e8907a183403f50384ef1391c39795671bb54356",
+              "datavalue": {
+                "value": {
+                  "latitude": 34.54432,
+                  "longitude": 112.63679,
+                  "altitude": null,
+                  "precision": 0.000001,
+                  "globe": "http://www.wikidata.org/entity/Q2"
+                },
+                "type": "globecoordinate"
+              },
+              "datatype": "globe-coordinate"
+            },
+            "type": "statement",
+            "id": "Q131522427$2511A132-0023-4727-8756-0DCD09DD565F",
+            "rank": "normal"
+          }
+        ],
+        "P31": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P31",
+              "hash": "114b9a729ce914ba57db7172200ce6d72e7a5956",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 10300916,
+                  "id": "Q10300916"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q131522427$BC5C0B52-3EDB-4281-B08A-128397A3F93C",
+            "rank": "normal"
+          }
+        ]
+      }
+    },
+    "Q133309358": {
+      "type": "item",
+      "id": "Q133309358",
+      "labels": {
+        "zh": {
+          "language": "zh",
+          "value": "刘家洼遗址"
+        },
+        "zh-hans": {
+          "language": "zh-hans",
+          "value": "刘家洼遗址"
+        },
+        "zh-cn": {
+          "language": "zh-cn",
+          "value": "刘家洼遗址"
+        },
+        "en": {
+          "language": "en",
+          "value": "Liujiawa Site"
+        }
+      },
+      "claims": {
+        "P31": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P31",
+              "hash": "114b9a729ce914ba57db7172200ce6d72e7a5956",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 10300916,
+                  "id": "Q10300916"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q133309358$77AB8D93-7ADC-4681-AD21-D9EB4AA75C58",
+            "rank": "normal"
+          }
+        ],
+        "P17": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P17",
+              "hash": "30e172796b0726589e92b001c327f5d55fa0782e",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 148,
+                  "id": "Q148"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q133309358$7216AD1C-88AC-42DA-805D-4B7E7CEC0A43",
+            "rank": "normal"
+          }
+        ],
+        "P131": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P131",
+              "hash": "92468a79ef1c28d70a0a52d5888455f94eea3873",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 1069933,
+                  "id": "Q1069933"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q133309358$662050FD-60E5-481B-A69E-70D8DCA50848",
+            "rank": "normal"
+          }
+        ],
+        "P625": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P625",
+              "hash": "4d262b13ce008b5d83d9cd19d801dc7fa99b907e",
+              "datavalue": {
+                "value": {
+                  "latitude": 35.36314,
+                  "longitude": 109.85089,
+                  "altitude": null,
+                  "precision": 0.000001,
+                  "globe": "http://www.wikidata.org/entity/Q2"
+                },
+                "type": "globecoordinate"
+              },
+              "datatype": "globe-coordinate"
+            },
+            "type": "statement",
+            "id": "Q133309358$7B583813-A04F-4351-ACE6-15DE9C9A886C",
+            "rank": "normal"
+          }
+        ],
+        "P1435": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P1435",
+              "hash": "88b09422a95f0e849d833967c8843d2f3e76f85c",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 1188574,
+                  "id": "Q1188574"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P217": [
+                {
+                  "snaktype": "value",
+                  "property": "P217",
+                  "hash": "4ef6777a58d6c5b9caecd98ae1333beac54ed855",
+                  "datavalue": {
+                    "value": "8-0141-1-141",
+                    "type": "string"
+                  },
+                  "datatype": "string"
+                }
+              ],
+              "P580": [
+                {
+                  "snaktype": "value",
+                  "property": "P580",
+                  "hash": "ce224f8bb52f6fc7aa02173683603095f44a6fb4",
+                  "datavalue": {
+                    "value": {
+                      "time": "+2019-10-07T00:00:00Z",
+                      "timezone": 0,
+                      "before": 0,
+                      "after": 0,
+                      "precision": 11,
+                      "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                    },
+                    "type": "time"
+                  },
+                  "datatype": "time"
+                }
+              ],
+              "P1448": [
+                {
+                  "snaktype": "value",
+                  "property": "P1448",
+                  "hash": "875da91437bc976c6478869ce9813ef2b840f15c",
+                  "datavalue": {
+                    "value": {
+                      "text": "刘家洼遗址",
+                      "language": "zh-cn"
+                    },
+                    "type": "monolingualtext"
+                  },
+                  "datatype": "monolingualtext"
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P217",
+              "P580",
+              "P1448"
+            ],
+            "id": "Q133309358$661C1DE0-2E86-4887-A5E6-5635EFB87A66",
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "83fb8cc9b7c57b97855568c4c0fc1c921f3dfcdc",
+                "snaks": {
+                  "P854": [
+                    {
+                      "snaktype": "value",
+                      "property": "P854",
+                      "hash": "aa99c920405d39f89330da7aad3a3ef5e852dc1d",
+                      "datavalue": {
+                        "value": "http://dtdj.cchicc.org.cn/#/stateprotect",
+                        "type": "string"
+                      },
+                      "datatype": "url"
+                    }
+                  ],
+                  "P1476": [
+                    {
+                      "snaktype": "value",
+                      "property": "P1476",
+                      "hash": "9bc974e739ee7cad0f14000f930eb7882a690590",
+                      "datavalue": {
+                        "value": {
+                          "text": "国家文物局全国文物地理信息平台",
+                          "language": "zh-cn"
+                        },
+                        "type": "monolingualtext"
+                      },
+                      "datatype": "monolingualtext"
+                    }
+                  ],
+                  "P813": [
+                    {
+                      "snaktype": "value",
+                      "property": "P813",
+                      "hash": "b2df3676447de8b44ab96c618be6688223fde7bc",
+                      "datavalue": {
+                        "value": {
+                          "time": "+2025-03-04T00:00:00Z",
+                          "timezone": 0,
+                          "before": 0,
+                          "after": 0,
+                          "precision": 11,
+                          "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                        },
+                        "type": "time"
+                      },
+                      "datatype": "time"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P854",
+                  "P1476",
+                  "P813"
+                ]
+              },
+              {
+                "hash": "d81e807400f6fe54aa794c2baf3a395f56c1dd09",
+                "snaks": {
+                  "P248": [
+                    {
+                      "snaktype": "value",
+                      "property": "P248",
+                      "hash": "e8d72c38d6a4b02d8a54d34afd0fe9b8fa8ce7d6",
+                      "datavalue": {
+                        "value": {
+                          "entity-type": "item",
+                          "numeric-id": 89327640,
+                          "id": "Q89327640"
+                        },
+                        "type": "wikibase-entityid"
+                      },
+                      "datatype": "wikibase-item"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P248"
+                ]
+              }
+            ]
+          }
+        ],
+        "P10565": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P10565",
+              "hash": "3d31144e9178ffaea313b7847b562af1f3755eca",
+              "datavalue": {
+                "value": "590372",
+                "type": "string"
+              },
+              "datatype": "external-id"
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P1810": [
+                {
+                  "snaktype": "value",
+                  "property": "P1810",
+                  "hash": "221d8894b139e03cd2b8b018a1d07320e5c452a8",
+                  "datavalue": {
+                    "value": "刘家洼遗址",
+                    "type": "string"
+                  },
+                  "datatype": "string"
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P1810"
+            ],
+            "id": "Q133309358$5F188936-FDA2-48DD-8D92-7D7EED30D9B7",
+            "rank": "normal"
+          }
+        ],
+        "P14541": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P14541",
+              "hash": "b8aca60a21bfa9cae60391b11b33c071d4cd2b33",
+              "datavalue": {
+                "value": "2lo83Z",
+                "type": "string"
+              },
+              "datatype": "external-id"
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P1810": [
+                {
+                  "snaktype": "value",
+                  "property": "P1810",
+                  "hash": "221d8894b139e03cd2b8b018a1d07320e5c452a8",
+                  "datavalue": {
+                    "value": "刘家洼遗址",
+                    "type": "string"
+                  },
+                  "datatype": "string"
+                }
+              ],
+              "P5017": [
+                {
+                  "snaktype": "value",
+                  "property": "P5017",
+                  "hash": "6126bf02f49c1f8c12b9e284668cb4c37a7dd9b9",
+                  "datavalue": {
+                    "value": {
+                      "time": "+2026-03-06T00:00:00Z",
+                      "timezone": 0,
+                      "before": 0,
+                      "after": 0,
+                      "precision": 11,
+                      "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                    },
+                    "type": "time"
+                  },
+                  "datatype": "time"
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P1810",
+              "P5017"
+            ],
+            "id": "Q133309358$BA3806E2-E298-4F4A-9F33-BCA1AF026BA8",
+            "rank": "normal"
+          }
+        ]
+      }
+    },
+    "Q10566151": {
+      "type": "item",
+      "id": "Q10566151",
+      "labels": {
+        "zh-hans": {
+          "language": "zh-hans",
+          "value": "后晋显陵"
+        },
+        "zh-cn": {
+          "language": "zh-cn",
+          "value": "后晋显陵"
+        },
+        "en": {
+          "language": "en",
+          "value": "Xianling Mausoleum of Later Jin"
+        },
+        "zh": {
+          "language": "zh",
+          "value": "后晋显陵"
+        }
+      },
+      "claims": {
+        "P17": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P17",
+              "hash": "30e172796b0726589e92b001c327f5d55fa0782e",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 148,
+                  "id": "Q148"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q10566151$DB30C8F0-220F-4086-8A32-85980139B668",
+            "rank": "normal"
+          }
+        ],
+        "P31": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P31",
+              "hash": "50078869a72d3f2e251fc1666639b361b420e617",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 162875,
+                  "id": "Q162875"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q10566151$fdba0bd3-40c7-2ed1-473c-10a972372237",
+            "rank": "normal"
+          },
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P31",
+              "hash": "114b9a729ce914ba57db7172200ce6d72e7a5956",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 10300916,
+                  "id": "Q10300916"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q10566151$F7C72506-3513-4AD4-9A88-487ABE0757FF",
+            "rank": "normal"
+          }
+        ],
+        "P131": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P131",
+              "hash": "a943e413e472f445ebb32a637b08728223d4e1d3",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 1198654,
+                  "id": "Q1198654"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q10566151$D1F1BBF3-5B64-45E7-A000-CE179DC93919",
+            "rank": "normal"
+          }
+        ],
+        "P2671": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P2671",
+              "hash": "c86a5ef11a6422bc7c754fe5cda8c9dff0d7d8a0",
+              "datavalue": {
+                "value": "/g/155pfrq6",
+                "type": "string"
+              },
+              "datatype": "external-id"
+            },
+            "type": "statement",
+            "id": "Q10566151$62F4D868-0FC1-42A0-A3BC-AD47EEC5045B",
+            "rank": "normal"
+          }
+        ],
+        "P625": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P625",
+              "hash": "55ea27d8772a161218991a3219f12f840d627d62",
+              "datavalue": {
+                "value": {
+                  "latitude": 34.62222,
+                  "longitude": 112.095,
+                  "altitude": null,
+                  "precision": 0.000001,
+                  "globe": "http://www.wikidata.org/entity/Q2"
+                },
+                "type": "globecoordinate"
+              },
+              "datatype": "globe-coordinate"
+            },
+            "type": "statement",
+            "id": "Q10566151$8E4D63E8-0064-4E67-AA55-52F5A5D86CE9",
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "0ee3b3ba1c958f4c3dcba7ed8091fe4b57311348",
+                "snaks": {
+                  "P143": [
+                    {
+                      "snaktype": "value",
+                      "property": "P143",
+                      "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                      "datavalue": {
+                        "value": {
+                          "entity-type": "item",
+                          "numeric-id": 30239,
+                          "id": "Q30239"
+                        },
+                        "type": "wikibase-entityid"
+                      },
+                      "datatype": "wikibase-item"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P143"
+                ]
+              }
+            ]
+          }
+        ],
+        "P1435": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P1435",
+              "hash": "88b09422a95f0e849d833967c8843d2f3e76f85c",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 1188574,
+                  "id": "Q1188574"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P217": [
+                {
+                  "snaktype": "value",
+                  "property": "P217",
+                  "hash": "44a742423276cdb21f443c6341a253aee0b77929",
+                  "datavalue": {
+                    "value": "7-0616-2-100",
+                    "type": "string"
+                  },
+                  "datatype": "string"
+                }
+              ],
+              "P580": [
+                {
+                  "snaktype": "value",
+                  "property": "P580",
+                  "hash": "d5f4a2d24cf3381ba4e0caaad5c172eb9f70951a",
+                  "datavalue": {
+                    "value": {
+                      "time": "+2013-03-05T00:00:00Z",
+                      "timezone": 0,
+                      "before": 0,
+                      "after": 0,
+                      "precision": 11,
+                      "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                    },
+                    "type": "time"
+                  },
+                  "datatype": "time"
+                }
+              ],
+              "P1448": [
+                {
+                  "snaktype": "value",
+                  "property": "P1448",
+                  "hash": "41a7e829dbe9299ed2beab57e66c85f9e9b3225e",
+                  "datavalue": {
+                    "value": {
+                      "text": "后晋显陵",
+                      "language": "zh-cn"
+                    },
+                    "type": "monolingualtext"
+                  },
+                  "datatype": "monolingualtext"
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P217",
+              "P580",
+              "P1448"
+            ],
+            "id": "Q10566151$887953C2-9E52-4994-86A7-A9784750A8A2",
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "83fb8cc9b7c57b97855568c4c0fc1c921f3dfcdc",
+                "snaks": {
+                  "P854": [
+                    {
+                      "snaktype": "value",
+                      "property": "P854",
+                      "hash": "aa99c920405d39f89330da7aad3a3ef5e852dc1d",
+                      "datavalue": {
+                        "value": "http://dtdj.cchicc.org.cn/#/stateprotect",
+                        "type": "string"
+                      },
+                      "datatype": "url"
+                    }
+                  ],
+                  "P1476": [
+                    {
+                      "snaktype": "value",
+                      "property": "P1476",
+                      "hash": "9bc974e739ee7cad0f14000f930eb7882a690590",
+                      "datavalue": {
+                        "value": {
+                          "text": "国家文物局全国文物地理信息平台",
+                          "language": "zh-cn"
+                        },
+                        "type": "monolingualtext"
+                      },
+                      "datatype": "monolingualtext"
+                    }
+                  ],
+                  "P813": [
+                    {
+                      "snaktype": "value",
+                      "property": "P813",
+                      "hash": "b2df3676447de8b44ab96c618be6688223fde7bc",
+                      "datavalue": {
+                        "value": {
+                          "time": "+2025-03-04T00:00:00Z",
+                          "timezone": 0,
+                          "before": 0,
+                          "after": 0,
+                          "precision": 11,
+                          "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                        },
+                        "type": "time"
+                      },
+                      "datatype": "time"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P854",
+                  "P1476",
+                  "P813"
+                ]
+              },
+              {
+                "hash": "a0468e6a866425e794c7edfc4d3508dd143033d2",
+                "snaks": {
+                  "P248": [
+                    {
+                      "snaktype": "value",
+                      "property": "P248",
+                      "hash": "2fb23bb5e6bbabf91119ea6f7c41547d8b9ceda4",
+                      "datavalue": {
+                        "value": {
+                          "entity-type": "item",
+                          "numeric-id": 125790710,
+                          "id": "Q125790710"
+                        },
+                        "type": "wikibase-entityid"
+                      },
+                      "datatype": "wikibase-item"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P248"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Q15944106": {
+      "type": "item",
+      "id": "Q15944106",
+      "labels": {
+        "zh": {
+          "language": "zh",
+          "value": "后汉皇陵"
+        },
+        "zh-hans": {
+          "language": "zh-hans",
+          "value": "后汉皇陵"
+        },
+        "zh-cn": {
+          "language": "zh-cn",
+          "value": "后汉皇陵"
+        },
+        "en": {
+          "language": "en",
+          "value": "Later Han Mausoleums"
+        }
+      },
+      "claims": {
+        "P17": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P17",
+              "hash": "30e172796b0726589e92b001c327f5d55fa0782e",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 148,
+                  "id": "Q148"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q15944106$48F46C03-5309-49A3-8543-B332335060C3",
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "0ee3b3ba1c958f4c3dcba7ed8091fe4b57311348",
+                "snaks": {
+                  "P143": [
+                    {
+                      "snaktype": "value",
+                      "property": "P143",
+                      "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                      "datavalue": {
+                        "value": {
+                          "entity-type": "item",
+                          "numeric-id": 30239,
+                          "id": "Q30239"
+                        },
+                        "type": "wikibase-entityid"
+                      },
+                      "datatype": "wikibase-item"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P143"
+                ]
+              }
+            ]
+          }
+        ],
+        "P1435": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P1435",
+              "hash": "88b09422a95f0e849d833967c8843d2f3e76f85c",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 1188574,
+                  "id": "Q1188574"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P217": [
+                {
+                  "snaktype": "value",
+                  "property": "P217",
+                  "hash": "16d0d9ec94d8e1b76c65bcc89621bb50246847de",
+                  "datavalue": {
+                    "value": "7-0617-2-101",
+                    "type": "string"
+                  },
+                  "datatype": "string"
+                }
+              ],
+              "P580": [
+                {
+                  "snaktype": "value",
+                  "property": "P580",
+                  "hash": "d5f4a2d24cf3381ba4e0caaad5c172eb9f70951a",
+                  "datavalue": {
+                    "value": {
+                      "time": "+2013-03-05T00:00:00Z",
+                      "timezone": 0,
+                      "before": 0,
+                      "after": 0,
+                      "precision": 11,
+                      "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                    },
+                    "type": "time"
+                  },
+                  "datatype": "time"
+                }
+              ],
+              "P1448": [
+                {
+                  "snaktype": "value",
+                  "property": "P1448",
+                  "hash": "e31a01c7a078c7c62bbba59cba7039959777753b",
+                  "datavalue": {
+                    "value": {
+                      "text": "后汉皇陵",
+                      "language": "zh-cn"
+                    },
+                    "type": "monolingualtext"
+                  },
+                  "datatype": "monolingualtext"
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P217",
+              "P580",
+              "P1448"
+            ],
+            "id": "Q15944106$E2192E0C-EB1B-48A9-98BE-460C622A6741",
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "83fb8cc9b7c57b97855568c4c0fc1c921f3dfcdc",
+                "snaks": {
+                  "P854": [
+                    {
+                      "snaktype": "value",
+                      "property": "P854",
+                      "hash": "aa99c920405d39f89330da7aad3a3ef5e852dc1d",
+                      "datavalue": {
+                        "value": "http://dtdj.cchicc.org.cn/#/stateprotect",
+                        "type": "string"
+                      },
+                      "datatype": "url"
+                    }
+                  ],
+                  "P1476": [
+                    {
+                      "snaktype": "value",
+                      "property": "P1476",
+                      "hash": "9bc974e739ee7cad0f14000f930eb7882a690590",
+                      "datavalue": {
+                        "value": {
+                          "text": "国家文物局全国文物地理信息平台",
+                          "language": "zh-cn"
+                        },
+                        "type": "monolingualtext"
+                      },
+                      "datatype": "monolingualtext"
+                    }
+                  ],
+                  "P813": [
+                    {
+                      "snaktype": "value",
+                      "property": "P813",
+                      "hash": "b2df3676447de8b44ab96c618be6688223fde7bc",
+                      "datavalue": {
+                        "value": {
+                          "time": "+2025-03-04T00:00:00Z",
+                          "timezone": 0,
+                          "before": 0,
+                          "after": 0,
+                          "precision": 11,
+                          "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                        },
+                        "type": "time"
+                      },
+                      "datatype": "time"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P854",
+                  "P1476",
+                  "P813"
+                ]
+              },
+              {
+                "hash": "a0468e6a866425e794c7edfc4d3508dd143033d2",
+                "snaks": {
+                  "P248": [
+                    {
+                      "snaktype": "value",
+                      "property": "P248",
+                      "hash": "2fb23bb5e6bbabf91119ea6f7c41547d8b9ceda4",
+                      "datavalue": {
+                        "value": {
+                          "entity-type": "item",
+                          "numeric-id": 125790710,
+                          "id": "Q125790710"
+                        },
+                        "type": "wikibase-entityid"
+                      },
+                      "datatype": "wikibase-item"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P248"
+                ]
+              }
+            ]
+          }
+        ],
+        "P528": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P528",
+              "hash": "dfb6fe1dd63541b779bbbff4e715266530987980",
+              "datavalue": {
+                "value": "0617",
+                "type": "string"
+              },
+              "datatype": "string"
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P972": [
+                {
+                  "snaktype": "value",
+                  "property": "P972",
+                  "hash": "5a4ed1765c1a5a9802397385a6e17075cd85cb0b",
+                  "datavalue": {
+                    "value": {
+                      "entity-type": "item",
+                      "numeric-id": 15922592,
+                      "id": "Q15922592"
+                    },
+                    "type": "wikibase-entityid"
+                  },
+                  "datatype": "wikibase-item"
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P972"
+            ],
+            "id": "Q15944106$266354A8-11C3-4FDE-B569-2BCA76C9AAA7",
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "0ee3b3ba1c958f4c3dcba7ed8091fe4b57311348",
+                "snaks": {
+                  "P143": [
+                    {
+                      "snaktype": "value",
+                      "property": "P143",
+                      "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                      "datavalue": {
+                        "value": {
+                          "entity-type": "item",
+                          "numeric-id": 30239,
+                          "id": "Q30239"
+                        },
+                        "type": "wikibase-entityid"
+                      },
+                      "datatype": "wikibase-item"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P143"
+                ]
+              }
+            ]
+          }
+        ],
+        "P131": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P131",
+              "hash": "7464516fcc6cd64aaf3119200b3f863486b91da6",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 1344848,
+                  "id": "Q1344848"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q15944106$230B9B99-5268-4692-AF58-BE5455440B6E",
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "0ee3b3ba1c958f4c3dcba7ed8091fe4b57311348",
+                "snaks": {
+                  "P143": [
+                    {
+                      "snaktype": "value",
+                      "property": "P143",
+                      "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                      "datavalue": {
+                        "value": {
+                          "entity-type": "item",
+                          "numeric-id": 30239,
+                          "id": "Q30239"
+                        },
+                        "type": "wikibase-entityid"
+                      },
+                      "datatype": "wikibase-item"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P143"
+                ]
+              }
+            ]
+          }
+        ],
+        "P31": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P31",
+              "hash": "50078869a72d3f2e251fc1666639b361b420e617",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 162875,
+                  "id": "Q162875"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q15944106$4B7B0CF3-AE55-4680-8E51-DE6CE69D8B0D",
+            "rank": "normal"
+          }
+        ],
+        "P625": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P625",
+              "hash": "22e6b469d076c072f11c92db26805aa117265d85",
+              "datavalue": {
+                "value": {
+                  "latitude": 34.33893,
+                  "longitude": 113.30361,
+                  "altitude": null,
+                  "precision": 0.000001,
+                  "globe": "http://www.wikidata.org/entity/Q2"
+                },
+                "type": "globecoordinate"
+              },
+              "datatype": "globe-coordinate"
+            },
+            "type": "statement",
+            "id": "Q15944106$0FF8B447-0067-4CAD-8F51-62EC1180DCD4",
+            "rank": "normal"
+          }
+        ]
+      }
+    },
+    "Q17031139": {
+      "type": "item",
+      "id": "Q17031139",
+      "labels": {
+        "zh": {
+          "language": "zh",
+          "value": "茅家堆古墓群"
+        }
+      },
+      "claims": {
+        "P17": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P17",
+              "hash": "30e172796b0726589e92b001c327f5d55fa0782e",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 148,
+                  "id": "Q148"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q17031139$DD19E682-5A9D-4BA2-B86E-8C9E9F9DC37A",
+            "rank": "normal"
+          }
+        ],
+        "P131": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P131",
+              "hash": "be77feb0406c7762b09ddadd7b20e6fcbe158739",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 43407,
+                  "id": "Q43407"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q17031139$367E5965-0AFB-4D60-9D49-6DA5F81854E4",
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "37099bf9e61a7c5d42139fd93d62e2f73d595574",
+                "snaks": {
+                  "P143": [
+                    {
+                      "snaktype": "value",
+                      "property": "P143",
+                      "hash": "cb49f6fa327b245e4a5aaf48c44b3f503bcd4265",
+                      "datavalue": {
+                        "value": {
+                          "entity-type": "item",
+                          "numeric-id": 30239,
+                          "id": "Q30239"
+                        },
+                        "type": "wikibase-entityid"
+                      },
+                      "datatype": "wikibase-item"
+                    }
+                  ],
+                  "P4656": [
+                    {
+                      "snaktype": "value",
+                      "property": "P4656",
+                      "hash": "ee20297292704bd4b1639e8fc829debbe5a017dd",
+                      "datavalue": {
+                        "value": "https://zh.wikipedia.org/w/index.php?title=茅家堆古墓群&oldid=45269208",
+                        "type": "string"
+                      },
+                      "datatype": "url"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P143",
+                  "P4656"
+                ]
+              }
+            ]
+          }
+        ],
+        "P31": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P31",
+              "hash": "be83fa6f124e2faf6addff29f809994dcad205c0",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 210272,
+                  "id": "Q210272"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q17031139$EA315B43-9294-4A71-A38F-79EDFAB11808",
+            "rank": "normal"
+          }
+        ],
+        "P2671": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P2671",
+              "hash": "011f220732c937091eb0c05e88605b03e267da44",
+              "datavalue": {
+                "value": "/g/1hc0gj0w1",
+                "type": "string"
+              },
+              "datatype": "external-id"
+            },
+            "type": "statement",
+            "id": "Q17031139$584FF5E6-CD45-47C5-8D3D-BC3E13FDD7AC",
+            "rank": "normal"
+          }
+        ]
+      }
+    },
+    "Q10920849": {
+      "type": "item",
+      "id": "Q10920849",
+      "labels": {
+        "zh": {
+          "language": "zh",
+          "value": "周王城公園"
+        }
+      },
+      "claims": {
+        "P17": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P17",
+              "hash": "30e172796b0726589e92b001c327f5d55fa0782e",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 148,
+                  "id": "Q148"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q10920849$CA924660-F540-4D3E-A81C-97D3B39BE351",
+            "rank": "normal"
+          }
+        ],
+        "P2671": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P2671",
+              "hash": "380b807161e63905d7d4fb88e17aa92fc1ad77ac",
+              "datavalue": {
+                "value": "/g/12324bkts",
+                "type": "string"
+              },
+              "datatype": "external-id"
+            },
+            "type": "statement",
+            "id": "Q10920849$A797D335-39B1-44C2-ACE2-30634F1AC441",
+            "rank": "normal"
+          }
+        ]
+      }
+    }
+  },
+  "success": 1
+}

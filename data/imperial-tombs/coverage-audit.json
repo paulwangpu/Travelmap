@@ -1,0 +1,2205 @@
+{
+  "reviewedAt": "2026-10-03",
+  "policy": "政权目录空白不等于无陵；人物无匹配不等于无墓；有一条不等于完整。先用君主工作名单和公布文保名录反查，再据原址证据定位。",
+  "totalRecords": 278,
+  "totalMapCandidates": 206,
+  "matrix": [
+    {
+      "era": "传说时代",
+      "dynasty": "传说时代",
+      "records": 8,
+      "singleRecords": 7,
+      "mapCandidates": 8,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "legend-huangdi",
+        "legend-yandi",
+        "legend-taihao",
+        "legend-shun-yuncheng",
+        "legend-shun-ningyuan",
+        "legend-yu",
+        "legend-two",
+        "legend-shaohao"
+      ]
+    },
+    {
+      "era": "先秦",
+      "dynasty": "夏",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "先秦",
+      "dynasty": "商",
+      "records": 11,
+      "singleRecords": 10,
+      "mapCandidates": 2,
+      "sharedLocations": 9,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "yin-kings",
+        "shang-fuhao",
+        "shang-m1001",
+        "shang-m1002",
+        "shang-m1003",
+        "shang-m1004",
+        "shang-m1217",
+        "shang-m1400",
+        "shang-m1500",
+        "shang-m1550",
+        "shang-m1567"
+      ]
+    },
+    {
+      "era": "先秦",
+      "dynasty": "西周",
+      "records": 1,
+      "singleRecords": 0,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "zhou-xianyang"
+      ]
+    },
+    {
+      "era": "先秦",
+      "dynasty": "东周",
+      "records": 5,
+      "singleRecords": 1,
+      "mapCandidates": 5,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "zhou-ling",
+        "zhou-three",
+        "zhou-jincun",
+        "zhou-zhoushan",
+        "zhou-wangcheng"
+      ]
+    },
+    {
+      "era": "先秦",
+      "dynasty": "齐",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "qi-jing"
+      ]
+    },
+    {
+      "era": "先秦",
+      "dynasty": "田齐",
+      "records": 1,
+      "singleRecords": 0,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "qi-tian"
+      ]
+    },
+    {
+      "era": "先秦",
+      "dynasty": "晋",
+      "records": 2,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 1,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "jin-hou",
+        "jin-m114"
+      ]
+    },
+    {
+      "era": "先秦",
+      "dynasty": "楚",
+      "records": 4,
+      "singleRecords": 3,
+      "mapCandidates": 4,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "chu-wuwangdun",
+        "chu-xiongjia",
+        "chu-you",
+        "chu-yi"
+      ]
+    },
+    {
+      "era": "先秦",
+      "dynasty": "秦国",
+      "records": 2,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 1,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "qin-gong-group",
+        "qin-gong-1"
+      ]
+    },
+    {
+      "era": "先秦",
+      "dynasty": "燕",
+      "records": 6,
+      "singleRecords": 3,
+      "mapCandidates": 1,
+      "sharedLocations": 2,
+      "unlocated": 3,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "yan-xuliang",
+        "yan-liulihe",
+        "yan-liulihe-m1193",
+        "yan-liulihe-m202",
+        "yan-jiunutai",
+        "yan-jiunutai-m16"
+      ]
+    },
+    {
+      "era": "先秦",
+      "dynasty": "赵国",
+      "records": 1,
+      "singleRecords": 0,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "zhao-kings"
+      ]
+    },
+    {
+      "era": "先秦",
+      "dynasty": "韩",
+      "records": 1,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 1,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "han-huzhuang"
+      ]
+    },
+    {
+      "era": "先秦",
+      "dynasty": "魏国",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "先秦",
+      "dynasty": "吴",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "wu-helv"
+      ]
+    },
+    {
+      "era": "先秦",
+      "dynasty": "越",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "yue-yinshan"
+      ]
+    },
+    {
+      "era": "先秦",
+      "dynasty": "鲁",
+      "records": 2,
+      "singleRecords": 0,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 1,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "lu-nine",
+        "lu-fangshan"
+      ]
+    },
+    {
+      "era": "先秦",
+      "dynasty": "蔡",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 1,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "cai-hou"
+      ]
+    },
+    {
+      "era": "先秦",
+      "dynasty": "虢",
+      "records": 3,
+      "singleRecords": 2,
+      "mapCandidates": 1,
+      "sharedLocations": 2,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "guo-kings",
+        "guo-m2001",
+        "guo-m2009"
+      ]
+    },
+    {
+      "era": "先秦",
+      "dynasty": "曾",
+      "records": 3,
+      "singleRecords": 2,
+      "mapCandidates": 2,
+      "sharedLocations": 1,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "zeng-yi",
+        "zeng-yejiashan",
+        "zeng-m111"
+      ]
+    },
+    {
+      "era": "先秦",
+      "dynasty": "中山国",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "zhongshan-cuo"
+      ]
+    },
+    {
+      "era": "先秦",
+      "dynasty": "陈国",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "先秦",
+      "dynasty": "宋国",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "先秦",
+      "dynasty": "郑国",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "先秦",
+      "dynasty": "卫国",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "先秦",
+      "dynasty": "许国",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "先秦",
+      "dynasty": "邾国",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "先秦",
+      "dynasty": "滕国",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "先秦",
+      "dynasty": "薛国",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "先秦",
+      "dynasty": "芮",
+      "records": 2,
+      "singleRecords": 0,
+      "mapCandidates": 2,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "rui-liangdaicun",
+        "rui-liujiawa"
+      ]
+    },
+    {
+      "era": "先秦",
+      "dynasty": "霸",
+      "records": 1,
+      "singleRecords": 0,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "ba-dahekou"
+      ]
+    },
+    {
+      "era": "先秦",
+      "dynasty": "倗",
+      "records": 1,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 1,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "peng-hengshui"
+      ]
+    },
+    {
+      "era": "先秦",
+      "dynasty": "古蜀",
+      "records": 4,
+      "singleRecords": 2,
+      "mapCandidates": 3,
+      "sharedLocations": 0,
+      "unlocated": 1,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "shu-sanxingdui-search",
+        "shu-jinsha-search",
+        "shu-commercial-boat",
+        "shu-majia"
+      ]
+    },
+    {
+      "era": "先秦",
+      "dynasty": "巴",
+      "records": 1,
+      "singleRecords": 0,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "ba-xiaotianxi"
+      ]
+    },
+    {
+      "era": "先秦",
+      "dynasty": "西戎",
+      "records": 2,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 1,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "rong-majiayuan",
+        "rong-yimen"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "秦",
+      "records": 3,
+      "singleRecords": 2,
+      "mapCandidates": 3,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "qin-first",
+        "qin-second",
+        "qin-east"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "西汉",
+      "records": 13,
+      "singleRecords": 12,
+      "mapCandidates": 12,
+      "sharedLocations": 0,
+      "unlocated": 1,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "han-west",
+        "han-chang",
+        "han-an",
+        "han-ba",
+        "han-yang",
+        "han-mao",
+        "han-ping",
+        "han-du",
+        "han-wei",
+        "han-yan",
+        "han-yi",
+        "han-kang",
+        "han-haihun"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "新",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "东汉",
+      "records": 16,
+      "singleRecords": 16,
+      "mapCandidates": 13,
+      "sharedLocations": 0,
+      "unlocated": 3,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "han-yuan",
+        "han-gong",
+        "han-xian",
+        "han-huai",
+        "han-wen",
+        "han-xianjie",
+        "han-jing-east",
+        "han-shen",
+        "han-kang-east",
+        "han-jing-zhi",
+        "han-xuan",
+        "han-sanhan",
+        "han-m1048",
+        "han-m1055",
+        "han-m1071",
+        "han-chan"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "南越",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "nanyue-wen"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "闽越",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "西楚",
+      "records": 2,
+      "singleRecords": 2,
+      "mapCandidates": 2,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "xichu-xiang-dongping",
+        "xichu-xiang-wujiang"
+      ]
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "曹魏",
+      "records": 4,
+      "singleRecords": 4,
+      "mapCandidates": 2,
+      "sharedLocations": 0,
+      "unlocated": 2,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "wei-gao",
+        "wei-xizhu-m2",
+        "wei-shouyang",
+        "wei-gaoping-rudian"
+      ]
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "蜀汉",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "shu-hui"
+      ]
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "东吴",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "wu-jiang"
+      ]
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "西晋",
+      "records": 5,
+      "singleRecords": 5,
+      "mapCandidates": 2,
+      "sharedLocations": 0,
+      "unlocated": 3,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "jin-gaoyuan",
+        "jin-junping",
+        "jin-chongyang",
+        "jin-junyang",
+        "jin-taiyang"
+      ]
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "东晋",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "刘宋",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "southern-song-chuning"
+      ]
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "南齐",
+      "records": 2,
+      "singleRecords": 1,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 2,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "southern-danyang",
+        "qi-taian"
+      ]
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "南梁",
+      "records": 2,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 1,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "southern-danyang",
+        "liang-jian"
+      ]
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "陈",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "chen-wanan"
+      ]
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "北魏",
+      "records": 5,
+      "singleRecords": 5,
+      "mapCandidates": 5,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "wei-chang",
+        "wei-jing",
+        "wei-ding",
+        "wei-jing2",
+        "wei-jiemin"
+      ]
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "东魏",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "西魏",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "北齐",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "北周",
+      "records": 2,
+      "singleRecords": 2,
+      "mapCandidates": 2,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "zhou-xiao",
+        "zhou-jue"
+      ]
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "成汉",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "前赵",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "后赵",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "前凉",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "后凉",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "南凉",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "北凉",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "西凉",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "前燕",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "后燕",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "南燕",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "北燕",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "前秦",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "后秦",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "西秦",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "魏晋南北朝",
+      "dynasty": "夏（赫连）",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "隋唐",
+      "dynasty": "隋",
+      "records": 2,
+      "singleRecords": 2,
+      "mapCandidates": 2,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "sui-yang",
+        "sui-tai"
+      ]
+    },
+    {
+      "era": "隋唐",
+      "dynasty": "唐",
+      "records": 21,
+      "singleRecords": 20,
+      "mapCandidates": 19,
+      "sharedLocations": 0,
+      "unlocated": 2,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "tang18",
+        "tang-xian",
+        "tang-zhao",
+        "tang-qian",
+        "tang-ding",
+        "tang-qiao",
+        "tang-tai",
+        "tang-jian",
+        "tang-yuan",
+        "tang-chong",
+        "tang-feng",
+        "tang-jing",
+        "tang-guang",
+        "tang-zhuang",
+        "tang-zhang",
+        "tang-duan",
+        "tang-zhen",
+        "tang-jian2",
+        "tang-jing2",
+        "tang-shun",
+        "tang-gong"
+      ]
+    },
+    {
+      "era": "隋唐",
+      "dynasty": "武周",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "tang-shun"
+      ]
+    },
+    {
+      "era": "五代十国",
+      "dynasty": "后梁",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "五代十国",
+      "dynasty": "后唐",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "later-tang-hui"
+      ]
+    },
+    {
+      "era": "五代十国",
+      "dynasty": "后晋",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "houjin-xian"
+      ]
+    },
+    {
+      "era": "五代十国",
+      "dynasty": "后汉",
+      "records": 3,
+      "singleRecords": 2,
+      "mapCandidates": 1,
+      "sharedLocations": 2,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "houhan-group",
+        "houhan-rui",
+        "houhan-ying"
+      ]
+    },
+    {
+      "era": "五代十国",
+      "dynasty": "后周",
+      "records": 4,
+      "singleRecords": 3,
+      "mapCandidates": 3,
+      "sharedLocations": 0,
+      "unlocated": 1,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "zhou-later",
+        "zhou-song",
+        "zhou-qing",
+        "zhou-shun"
+      ]
+    },
+    {
+      "era": "五代十国",
+      "dynasty": "吴",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "wu-helv"
+      ]
+    },
+    {
+      "era": "五代十国",
+      "dynasty": "南唐",
+      "records": 3,
+      "singleRecords": 2,
+      "mapCandidates": 1,
+      "sharedLocations": 2,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "nantang2",
+        "nantang-qin",
+        "nantang-shun"
+      ]
+    },
+    {
+      "era": "五代十国",
+      "dynasty": "吴越",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "wuyue-qian"
+      ]
+    },
+    {
+      "era": "五代十国",
+      "dynasty": "闽",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "min-xuan"
+      ]
+    },
+    {
+      "era": "五代十国",
+      "dynasty": "前蜀",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "shu-yong"
+      ]
+    },
+    {
+      "era": "五代十国",
+      "dynasty": "后蜀",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "houshu-he"
+      ]
+    },
+    {
+      "era": "五代十国",
+      "dynasty": "南汉",
+      "records": 3,
+      "singleRecords": 2,
+      "mapCandidates": 2,
+      "sharedLocations": 0,
+      "unlocated": 1,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "nanhan2",
+        "nanhan-de",
+        "nanhan-kang"
+      ]
+    },
+    {
+      "era": "五代十国",
+      "dynasty": "北汉",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "五代十国",
+      "dynasty": "荆南",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "宋辽金西夏",
+      "dynasty": "北宋",
+      "records": 9,
+      "singleRecords": 8,
+      "mapCandidates": 9,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "song8",
+        "song-an",
+        "song-chang",
+        "song-xi",
+        "song-ding",
+        "song-zhao",
+        "song-hou",
+        "song-yu",
+        "song-tai"
+      ]
+    },
+    {
+      "era": "宋辽金西夏",
+      "dynasty": "南宋",
+      "records": 8,
+      "singleRecords": 7,
+      "mapCandidates": 2,
+      "sharedLocations": 6,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "song6",
+        "song-si",
+        "song-fu",
+        "song-chong",
+        "song-mao",
+        "song-mu",
+        "song-shao",
+        "song-shaodi"
+      ]
+    },
+    {
+      "era": "宋辽金西夏",
+      "dynasty": "辽",
+      "records": 5,
+      "singleRecords": 3,
+      "mapCandidates": 5,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "liao-zu",
+        "liao-huai",
+        "liao-qing",
+        "liao-xian",
+        "liao-qian"
+      ]
+    },
+    {
+      "era": "宋辽金西夏",
+      "dynasty": "北辽",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "liao-yongan"
+      ]
+    },
+    {
+      "era": "宋辽金西夏",
+      "dynasty": "金",
+      "records": 19,
+      "singleRecords": 18,
+      "mapCandidates": 1,
+      "sharedLocations": 17,
+      "unlocated": 1,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "jin-group",
+        "jin-rui",
+        "jin-guang",
+        "jin-xi",
+        "jin-jian",
+        "jin-hui",
+        "jin-an",
+        "jin-ding",
+        "jin-yong",
+        "jin-tai",
+        "jin-xian",
+        "jin-qiao",
+        "jin-gong",
+        "jin-jing",
+        "jin-xing",
+        "jin-dao",
+        "jin-yu",
+        "jin-si",
+        "jin-hailing"
+      ]
+    },
+    {
+      "era": "宋辽金西夏",
+      "dynasty": "西夏",
+      "records": 10,
+      "singleRecords": 9,
+      "mapCandidates": 10,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "xixia9",
+        "xixia-1",
+        "xixia-2",
+        "xixia-3",
+        "xixia-4",
+        "xixia-5",
+        "xixia-6",
+        "xixia-7",
+        "xixia-8",
+        "xixia-9"
+      ]
+    },
+    {
+      "era": "宋辽金西夏",
+      "dynasty": "西辽",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "宋辽金西夏",
+      "dynasty": "大理",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "宋辽金西夏",
+      "dynasty": "南诏",
+      "records": 0,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "目录空白，需查君主与考古名录",
+      "recordIds": []
+    },
+    {
+      "era": "元",
+      "dynasty": "蒙古",
+      "records": 2,
+      "singleRecords": 2,
+      "mapCandidates": 2,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "yuan-genghis",
+        "yuan-burkhan"
+      ]
+    },
+    {
+      "era": "元",
+      "dynasty": "元",
+      "records": 2,
+      "singleRecords": 2,
+      "mapCandidates": 2,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "yuan-genghis",
+        "yuan-burkhan"
+      ]
+    },
+    {
+      "era": "明清",
+      "dynasty": "明",
+      "records": 19,
+      "singleRecords": 18,
+      "mapCandidates": 19,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "ming13",
+        "ming-chang",
+        "ming-xian",
+        "ming-jing",
+        "ming-yu",
+        "ming-mao",
+        "ming-tai",
+        "ming-kang",
+        "ming-yong",
+        "ming-zhao",
+        "ming-ding",
+        "ming-qing",
+        "ming-de",
+        "ming-si",
+        "ming-xiao",
+        "ming-xianling",
+        "ming-zu",
+        "ming-huang",
+        "ming-jingtai"
+      ]
+    },
+    {
+      "era": "明清",
+      "dynasty": "南明",
+      "records": 2,
+      "singleRecords": 2,
+      "mapCandidates": 2,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "ming-luwang",
+        "ming-shaowu"
+      ]
+    },
+    {
+      "era": "明清",
+      "dynasty": "清",
+      "records": 18,
+      "singleRecords": 16,
+      "mapCandidates": 17,
+      "sharedLocations": 0,
+      "unlocated": 1,
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "qing-east",
+        "qing-xiao",
+        "qing-jing",
+        "qing-yu",
+        "qing-ding",
+        "qing-hui",
+        "qing-west",
+        "qing-tai",
+        "qing-chang",
+        "qing-mu",
+        "qing-chong",
+        "qing-yong",
+        "qing-fu",
+        "qing-zhao",
+        "qing-zhaoxi",
+        "qing-cixi",
+        "qing-cian",
+        "qing-xiaodong"
+      ]
+    }
+  ],
+  "rulerChecks": [
+    {
+      "dynasty": "后梁",
+      "name": "朱温",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "后梁",
+      "name": "朱友珪",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "后梁",
+      "name": "朱友贞",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "后唐",
+      "name": "李存勖",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "后唐",
+      "name": "李嗣源",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [
+        "later-tang-hui"
+      ],
+      "status": "有独立或区域地图参考"
+    },
+    {
+      "dynasty": "后唐",
+      "name": "李从厚",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "后唐",
+      "name": "李从珂",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "后晋",
+      "name": "石敬瑭",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [
+        "houjin-xian"
+      ],
+      "status": "有独立或区域地图参考"
+    },
+    {
+      "dynasty": "后晋",
+      "name": "石重贵",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "后汉",
+      "name": "刘知远",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [
+        "houhan-rui"
+      ],
+      "status": "有所属陵区参考，单墓待核"
+    },
+    {
+      "dynasty": "后汉",
+      "name": "刘承祐",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [
+        "houhan-ying"
+      ],
+      "status": "有所属陵区参考，单墓待核"
+    },
+    {
+      "dynasty": "后周",
+      "name": "郭威",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [
+        "zhou-song"
+      ],
+      "status": "有独立或区域地图参考"
+    },
+    {
+      "dynasty": "后周",
+      "name": "柴荣",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [
+        "zhou-qing"
+      ],
+      "status": "有独立或区域地图参考"
+    },
+    {
+      "dynasty": "后周",
+      "name": "柴宗训",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [
+        "zhou-shun"
+      ],
+      "status": "有独立或区域地图参考"
+    },
+    {
+      "dynasty": "吴",
+      "name": "杨行密",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "吴",
+      "name": "杨渥",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "吴",
+      "name": "杨隆演",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "吴",
+      "name": "杨溥",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "南唐",
+      "name": "李昪",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [
+        "nantang-qin"
+      ],
+      "status": "有所属陵区参考，单墓待核"
+    },
+    {
+      "dynasty": "南唐",
+      "name": "李璟",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [
+        "nantang-shun"
+      ],
+      "status": "有所属陵区参考，单墓待核"
+    },
+    {
+      "dynasty": "南唐",
+      "name": "李煜",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "吴越",
+      "name": "钱镠",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [
+        "wuyue-qian"
+      ],
+      "status": "有独立或区域地图参考"
+    },
+    {
+      "dynasty": "吴越",
+      "name": "钱元瓘",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "吴越",
+      "name": "钱弘佐",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "吴越",
+      "name": "钱弘倧",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "吴越",
+      "name": "钱弘俶",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "闽",
+      "name": "王审知",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [
+        "min-xuan"
+      ],
+      "status": "有独立或区域地图参考"
+    },
+    {
+      "dynasty": "闽",
+      "name": "王延翰",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "闽",
+      "name": "王延钧",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "闽",
+      "name": "王昶",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "闽",
+      "name": "王曦",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "闽",
+      "name": "朱文进",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "闽",
+      "name": "王延政",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "前蜀",
+      "name": "王建",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [
+        "shu-yong"
+      ],
+      "status": "有独立或区域地图参考"
+    },
+    {
+      "dynasty": "前蜀",
+      "name": "王衍",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "后蜀",
+      "name": "孟知祥",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [
+        "houshu-he"
+      ],
+      "status": "有独立或区域地图参考"
+    },
+    {
+      "dynasty": "后蜀",
+      "name": "孟昶",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "南汉",
+      "name": "刘龑",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [
+        "nanhan-kang"
+      ],
+      "status": "有独立或区域地图参考"
+    },
+    {
+      "dynasty": "南汉",
+      "name": "刘玢",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "南汉",
+      "name": "刘晟",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "南汉",
+      "name": "刘鋹",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "北汉",
+      "name": "刘崇",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "北汉",
+      "name": "刘钧",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "北汉",
+      "name": "刘继恩",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "北汉",
+      "name": "刘继元",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "荆南",
+      "name": "高季兴",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "荆南",
+      "name": "高从诲",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "荆南",
+      "name": "高保融",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "荆南",
+      "name": "高保勖",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "荆南",
+      "name": "高继冲",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "元",
+      "name": "忽必烈",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "元",
+      "name": "铁穆耳",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "元",
+      "name": "海山",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "元",
+      "name": "爱育黎拔力八达",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "元",
+      "name": "硕德八剌",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "元",
+      "name": "也孙铁木儿",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "元",
+      "name": "阿速吉八",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "元",
+      "name": "图帖睦尔",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "元",
+      "name": "和世㻋",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "元",
+      "name": "懿璘质班",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "元",
+      "name": "妥懽帖睦尔",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "东晋",
+      "name": "司马睿",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "东晋",
+      "name": "司马绍",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "东晋",
+      "name": "司马衍",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "东晋",
+      "name": "司马岳",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "东晋",
+      "name": "司马聃",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "东晋",
+      "name": "司马丕",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "东晋",
+      "name": "司马奕",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "东晋",
+      "name": "司马昱",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "东晋",
+      "name": "司马曜",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "东晋",
+      "name": "司马德宗",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "东晋",
+      "name": "司马德文",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "南明",
+      "name": "朱由崧",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "南明",
+      "name": "朱聿键",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "南明",
+      "name": "朱聿鐭",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [
+        "ming-shaowu"
+      ],
+      "status": "有独立或区域地图参考"
+    },
+    {
+      "dynasty": "南明",
+      "name": "朱由榔",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [],
+      "status": "未匹配陵墓记录，主动查葬地文献"
+    },
+    {
+      "dynasty": "南明",
+      "name": "朱以海",
+      "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
+      "matchedRecordIds": [
+        "ming-luwang"
+      ],
+      "status": "有独立或区域地图参考"
+    }
+  ],
+  "leads": [
+    {
+      "id": "coverage-lead-1",
+      "era": "传说时代",
+      "target": "尧陵、女娲陵及异地黄帝炎帝陵",
+      "task": "逐地辨别传统祭祀与墓葬",
+      "status": "待检索与核实",
+      "mapEligible": false
+    },
+    {
+      "id": "coverage-lead-2",
+      "era": "先秦",
+      "target": "魏国王陵、宋国公陵、陈胡公墓、郑韩国君墓",
+      "task": "现有目录政权空白；先查国保、省保与考古报告",
+      "status": "待检索与核实",
+      "mapEligible": false
+    },
+    {
+      "id": "coverage-lead-3",
+      "era": "先秦",
+      "target": "晋侯墓地其他国君墓号、叶家山及文峰塔曾侯墓",
+      "task": "已收一墓不等于整个君主墓地已覆盖",
+      "status": "待检索与核实",
+      "mapEligible": false
+    },
+    {
+      "id": "coverage-lead-4",
+      "era": "先秦",
+      "target": "中山灵寿王陵其他大型墓与三汲墓区",
+      "task": "同墓异名、墓主及墓号对应",
+      "status": "待检索与核实",
+      "mapEligible": false
+    },
+    {
+      "id": "coverage-lead-5",
+      "era": "先秦",
+      "target": "周原与周公庙高等级墓群",
+      "task": "身份争议保留，不把都城遗址自动当王陵",
+      "status": "待检索与核实",
+      "mapEligible": false
+    },
+    {
+      "id": "coverage-lead-6",
+      "era": "秦汉",
+      "target": "新莽王莽及更始、赤眉政权君主葬地",
+      "task": "历史君主与实际葬地分开查",
+      "status": "待检索与核实",
+      "mapEligible": false
+    },
+    {
+      "id": "coverage-lead-7",
+      "era": "魏晋南北朝",
+      "target": "东晋各帝陵、刘宋其余帝陵、南齐梁陈帝陵",
+      "task": "零散石刻、传统陵址与科学发掘分开",
+      "status": "待检索与核实",
+      "mapEligible": false
+    },
+    {
+      "id": "coverage-lead-8",
+      "era": "魏晋南北朝",
+      "target": "北齐义平陵、武宁陵与响堂山陵址线索",
+      "task": "优先高氏君主墓，不将王公墓自动纳入",
+      "status": "待检索与核实",
+      "mapEligible": false
+    },
+    {
+      "id": "coverage-lead-9",
+      "era": "魏晋南北朝",
+      "target": "十六国君主、统万城赫连氏陵墓、前后凉及燕国墓",
+      "task": "不能以城市遗址中心替代墓区",
+      "status": "待检索与核实",
+      "mapEligible": false
+    },
+    {
+      "id": "coverage-lead-10",
+      "era": "隋唐",
+      "target": "唐和陵、唐温陵及追尊祖陵",
+      "task": "核查十八陵以外的在位及追尊者",
+      "status": "待检索与核实",
+      "mapEligible": false
+    },
+    {
+      "id": "coverage-lead-11",
+      "era": "五代十国",
+      "target": "后梁宣陵、后唐雍陵、闵帝与末帝葬地",
+      "task": "完整五代君主名单反查",
+      "status": "待检索与核实",
+      "mapEligible": false
+    },
+    {
+      "id": "coverage-lead-12",
+      "era": "五代十国",
+      "target": "吴越钱元瓘康陵、钱弘佐等陵及迁葬",
+      "task": "钱镠一墓不能代表吴越诸王",
+      "status": "待检索与核实",
+      "mapEligible": false
+    },
+    {
+      "id": "coverage-lead-13",
+      "era": "五代十国",
+      "target": "吴杨行密及杨氏陵墓、闽王延政墓",
+      "task": "分清君主、夫人和普通贵族墓",
+      "status": "待检索与核实",
+      "mapEligible": false
+    },
+    {
+      "id": "coverage-lead-14",
+      "era": "五代十国",
+      "target": "南唐李煜墓、后蜀孟昶墓、南汉刘晟昭陵",
+      "task": "先核现存地点，再处理史载陵名",
+      "status": "待检索与核实",
+      "mapEligible": false
+    },
+    {
+      "id": "coverage-lead-15",
+      "era": "五代十国",
+      "target": "北汉和荆南历代君主葬地",
+      "task": "目前目录空白",
+      "status": "待检索与核实",
+      "mapEligible": false
+    },
+    {
+      "id": "coverage-lead-16",
+      "era": "宋辽金西夏",
+      "target": "宋钦宗永献陵、宋恭帝与辽穆宗归葬",
+      "task": "被俘、异地和迁葬情形不能漏",
+      "status": "待检索与核实",
+      "mapEligible": false
+    },
+    {
+      "id": "coverage-lead-17",
+      "era": "宋辽金西夏",
+      "target": "西辽、大理国、南诏君主陵墓",
+      "task": "地方政权不能因不在中原而跳过",
+      "status": "待检索与核实",
+      "mapEligible": false
+    },
+    {
+      "id": "coverage-lead-18",
+      "era": "元",
+      "target": "起辇谷与元代历帝葬地；元顺帝葬地异说",
+      "task": "秘密葬不等于所有元帝只有同一传说点",
+      "status": "待检索与核实",
+      "mapEligible": false
+    },
+    {
+      "id": "coverage-lead-19",
+      "era": "明清",
+      "target": "南明弘光、隆武、永历陵址及贵州都匀桂王坟",
+      "task": "同名异地及传统认定逐项核查",
+      "status": "待检索与核实",
+      "mapEligible": false
+    },
+    {
+      "id": "coverage-lead-20",
+      "era": "明清",
+      "target": "建文帝与溥仪迁葬",
+      "task": "不以未找到确切陵址删除人物缺口",
+      "status": "待检索与核实",
+      "mapEligible": false
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+const fs=require('node:fs');
+const titles=['靈王陵','周山森林公园','熊家冢','熊家冢遗址','熊家冢墓地','楚幽王墓','李三孤堆','韩王陵','胡庄韩王陵','虚粮冢','燕下都王陵','鲁九公墓','晋国博物馆','晋侯墓地','中山王墓','秦公一号大墓','殷墟王陵遗址','蔡侯墓','蔡昭侯墓','齐景公墓','殉马坑','菩陀峪定东陵','普祥峪定东陵','孝东陵','魯王墓','明魯王墓 (金門)','绍武君臣冢','溥儀墓'];
+const u=new URL('https://zh.wikipedia.org/w/api.php');u.search=new URLSearchParams({action:'query',format:'json',titles:titles.join('|'),prop:'coordinates|pageprops',colimit:'max',coprimary:'all',redirects:'1',converttitles:'1'});
+fetch(u,{signal:AbortSignal.timeout(30000),headers:{'User-Agent':'TravelMapResearch/1.0'}}).then(async r=>{if(!r.ok)throw Error(r.status);const d=await r.json();fs.writeFileSync('data/imperial-tombs/wiki-royal-points.json',JSON.stringify({retrievedAt:'2026-10-03',...d},null,2)+'\n');console.log(JSON.stringify(Object.values(d.query.pages).map(x=>({title:x.title,q:x.pageprops?.wikibase_item,coordinates:x.coordinates})),null,2));}).catch(e=>{console.error(e);process.exitCode=1;});

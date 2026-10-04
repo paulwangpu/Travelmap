@@ -2,7 +2,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
 const app = fs.readFileSync(require.resolve('../app.js'), 'utf8');
-const source = app.slice(app.indexOf('function bringMapLibrePointLayersToFront()'), app.indexOf('function refreshMapLibreDataOnly('));
+const source = app.slice(app.indexOf('function mapLayerOrder('), app.indexOf('function refreshMapLibreDataOnly('));
 for (const railway of [['orm-line', 'orm-station'], ['railway-network-raster']]) {
   const layers = [{ id: 'base' }, { id: 'path', source: 'imported-paths' }, { id: 'vertices', source: 'imported-paths' }, ...railway.map(id => ({ id })), { id: 'map-points-circle' }];
   const map = {
