@@ -10607,7 +10607,7 @@ function checklistMapItemsFor(key) {
 function renderChecklistMapDetail(key, item) {
   const done = isChecklistItemDone(key, item);
   const npsUnit = key === "usNationalParks" ? usNpsUnitById.get(item) : null;
-  const capitalMeta = key === "chinaAncientCapitals" ? chinaAncientCapitalMeta[canonicalPlaceKey(item)] : null;
+  const capitalMeta = key === "chinaAncientCapitals" ? ancientCapitalMergedMeta(chinaAncientCapitalMeta[canonicalPlaceKey(item)]) : null;
   if (capitalMeta) {
     renderAncientCapitalDetail(key, item, capitalMeta, done);
     return;
@@ -13321,7 +13321,8 @@ function ancientCapitalMapSubtitle(item) {
       : (position === "site" ? "遗址参照，身份见说明" : position === "inferred" ? "推测位置，非都城确址" : position === "pending" ? "地望待考" : "概略地望");
     return `${currentLanguage === "en" ? "36 Western Kingdoms" : "西域三十六国"} · ${status}`;
   }
-  const eras = compactMapLabelValues((item?.eras || []).map(ancientCapitalDisplayEra), 2, "、");
+  const eras = uniqueTextValues((item?.eras || []).map(ancientCapitalDisplayEra))
+    .sort((a,b) => HistoricalPeriods.keys.indexOf(a) - HistoricalPeriods.keys.indexOf(b)).join("、");
   const recordCount = Number(item?.recordCount) || (Array.isArray(item?.records) ? item.records.length : 0);
   const count = recordCount > 1
     ? (currentLanguage === "en" ? `${recordCount} records` : `${recordCount} 条记录`)
@@ -13338,7 +13339,8 @@ function ancientCapitalMetaForPlace(place) {
 
 function ancientCapitalMergedMeta(meta) {
   if (!meta?.siteKey || meta.isMergedSite) return meta || null;
-  return Object.values(chinaAncientCapitalMeta)
+  return chinaAncientCapitals.items?.find((candidate) => candidate.siteKey === meta.siteKey)
+    || Object.values(chinaAncientCapitalMeta)
     .find((candidate) => candidate?.isMergedSite && candidate.siteKey === meta.siteKey) || meta;
 }
 
