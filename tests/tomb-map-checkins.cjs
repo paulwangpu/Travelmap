@@ -19,3 +19,6 @@ assert(app.includes('if (key === "imperialTombs") await loadImperialTombChecklis
 console.log('PASS: map check-in buttons, cancellation, cemetery progress, and Zhaoxi low/high zoom membership');
 
 const singlePopup=api.popupContent(c,c.items.find(x=>x.id==='qing-zhaoxi'),()=>false);assert(singlePopup.includes('class="popup-action"'));assert(singlePopup.includes('data-item="昭西陵（孝庄）"'));assert(singlePopup.includes('标记去过'));assert(api.popupContent(c,c.items.find(x=>x.id==='qing-zhaoxi'),()=>true).includes('已去过'));const groupPopup=api.popupContent(c,c.items.find(x=>x.id==='qing-east'),x=>x.id==='qing-zhaoxi');assert.equal((groupPopup.match(/data-checklist-map=/g)||[]).length,9);assert(groupPopup.includes('已去过'));assert(groupPopup.includes('标记去过'));console.log('PASS: shared popup actions and individual cemetery toggles');
+
+const unknown=c.items.find(x=>x.disturbance.status==='unknown');assert.equal(unknown.disturbance.evidence,'');ctx.showDetail(unknown.id);assert(!el.innerHTML.includes('盗掘依据'));assert(el.innerHTML.includes('尚未核查'));
+const known=c.items.find(x=>x.disturbance.evidence);ctx.showDetail(known.id);assert(el.innerHTML.includes('盗掘依据'));assert(el.innerHTML.includes(known.disturbance.evidence));

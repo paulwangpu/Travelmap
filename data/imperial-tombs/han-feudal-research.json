@@ -1,0 +1,680 @@
+{
+  "reviewedAt": "2026-10-04",
+  "scope": "汉代诸侯国王陵；王后仅在合葬或陵群说明中记录；推定墓主保留异说。",
+  "sources": [
+    {
+      "id": "han-feudal-guangling",
+      "title": "汉陵苑简介",
+      "publisher": "扬州汉广陵王墓博物馆",
+      "url": "https://hanlingyuan.com/i/hlyjj.html",
+      "note": "展示刘胥及王后墓葬；原天山汉墓与迁移展示地点不能当成两位王的陵墓。"
+    },
+    {
+      "id": "han-feudal-guangling-move",
+      "title": "天山汉墓：发掘与迁移保护",
+      "publisher": "天天读旅游资料平台",
+      "url": "https://wap.dm.ttdm.cn/landscape/19/tianshanhanmu.html"
+    },
+    {
+      "id": "han-feudal-mancheng",
+      "title": "中山靖王墓防渗加固工程",
+      "publisher": "河北省文物局",
+      "url": "https://wenwu.hebei.gov.cn/system/2023/10/11/030256983.shtml"
+    },
+    {
+      "id": "han-feudal-chu",
+      "title": "徐州楚王山汉墓时代和墓主考",
+      "publisher": "中国国家博物馆馆刊／刘照建",
+      "url": "https://www.chnmuseum.cn/yj/xscg/xslw/201812/t20181224_36412.shtml",
+      "note": "八处楚王陵区清单；楚王山刘交旧说与刘嚣推定并存；不强行分配十二王。"
+    },
+    {
+      "id": "han-feudal-guishan",
+      "title": "徐州龟山汉墓景区",
+      "publisher": "江苏省台办",
+      "url": "https://www.jsstb.gov.cn/view/202012/t20201210_12310722.htm"
+    },
+    {
+      "id": "han-feudal-liang",
+      "title": "芒砀山上西汉梁国众王陵",
+      "publisher": "河南省政府文化旅游资料",
+      "url": "https://ytsc.rootinhenan.gov.cn/sitesources/ytsc/page_pc/hnly/fjms/article6a0989c9111d472bad0fbd6da8c79dc1.html"
+    },
+    {
+      "id": "han-feudal-dayun",
+      "title": "江苏盱眙大云山1号汉墓音乐考古研究",
+      "publisher": "中国博物馆协会／南京博物院",
+      "url": "https://www.chinamuseum.org.cn/cma/detail.html?contentId=6774&id=13"
+    },
+    {
+      "id": "han-feudal-jibei",
+      "title": "双乳山汉墓遗址实地调研",
+      "publisher": "山东大学",
+      "url": "https://www.view.sdu.edu.cn/info/1157/89760.htm"
+    },
+    {
+      "id": "han-feudal-lu",
+      "title": "曲阜九龙山汉鲁王墓",
+      "publisher": "曲阜文物机构／三孔景区",
+      "url": "https://www.qfwbw.cn/wbzy/jd/2016-03-24/2814.html"
+    },
+    {
+      "id": "han-feudal-qi",
+      "title": "临淄区志：调查与发掘",
+      "publisher": "山东省地方史志资料库",
+      "url": "https://shandong-chorography.org/database/c34/section/8/article/709/"
+    },
+    {
+      "id": "han-feudal-changsha",
+      "title": "汉代长沙王陵墓群象鼻嘴汉墓保护批复",
+      "publisher": "湖南省文物局",
+      "url": "https://wwj.hunan.gov.cn/wwj/c100322/c100324/202401/t20240123_32631995.html"
+    },
+    {
+      "id": "han-feudal-changsha-survey",
+      "title": "十二五湖南田野考古成果：长沙王陵系统调查",
+      "publisher": "湖南省文物局",
+      "url": "https://wwj.hunan.gov.cn/c100310/c100350/201709/t20170916_10483276.html"
+    },
+    {
+      "id": "han-feudal-liuan",
+      "title": "六安市文物保护利用专项规划（2022—2035）",
+      "publisher": "六安市人民政府",
+      "url": "https://www.luan.gov.cn/group1/M00/12/C1/wKgSGWhaGuuAJS6DADwYf2F2G24226.pdf"
+    },
+    {
+      "id": "han-feudal-hejian",
+      "title": "沧州文化产业带与献王陵汉文化园",
+      "publisher": "河北省工业和信息化厅",
+      "url": "https://gxt.hebei.gov.cn/sme/zx/snxw34/2025042122074929512/index.html"
+    },
+    {
+      "id": "han-feudal-huainan",
+      "title": "淮南王刘安家族墓地考古情况说明",
+      "publisher": "淮南文物部门官方说明／中安在线",
+      "url": "https://ah.anhuinews.com/gdxw/202106/t20210621_5325722.html"
+    },
+    {
+      "id": "han-feudal-langya",
+      "title": "琅琊王墓保护利用提案答复",
+      "publisher": "临沂市人民政府／文化和旅游局",
+      "url": "https://www.linyi.gov.cn/info/6237/336106.htm"
+    },
+    {
+      "id": "han-feudal-ditao",
+      "title": "山东定陶王墓地M2汉墓砖铭补释",
+      "publisher": "山东省文物考古研究院、山东大学《海岱考古》",
+      "url": "https://adkg.cbpt.cnki.net/portal/journal/portal/client/paper/e312c18a201bee4731cd3203a3e85238"
+    },
+    {
+      "id": "han-feudal-dabaotai",
+      "title": "北京考古遗址博物馆大葆台墓主与原址介绍",
+      "publisher": "北京市文物局",
+      "url": "https://wwj.beijing.gov.cn/bjww/362771/362773/743761569/index.html"
+    },
+    {
+      "id": "han-feudal-rencheng",
+      "title": "萧王庄墓群",
+      "publisher": "济宁市文化和旅游局",
+      "url": "https://whlyj.jining.gov.cn/art/2020/1/2/art_65780_2418437.html"
+    },
+    {
+      "id": "han-feudal-changyi",
+      "title": "第一代昌邑王刘髆的玉具剑",
+      "publisher": "巨野博物馆",
+      "url": "https://juyemuseum.com/?id=84"
+    },
+    {
+      "id": "han-feudal-dingzhou",
+      "title": "定州汉王墓",
+      "publisher": "定州新闻网",
+      "url": "https://www.dingzhoudaily.com/zhongshanwenhua/2012-03-07/4641.html"
+    }
+  ],
+  "sites": [
+    {
+      "id": "han-king-guangling",
+      "name": "广陵王刘胥墓（汉陵苑）",
+      "aliases": [
+        "天山汉墓",
+        "汉广陵王墓博物馆"
+      ],
+      "state": "西汉·广陵国",
+      "owner": "广陵王刘胥",
+      "admin": "江苏省扬州市邗江区平山堂东路98号（现展示址）；原址高邮神居山",
+      "source": "han-feudal-guangling,han-feudal-guangling-move",
+      "sortYear": -54,
+      "evidence": "馆方明确展示刘胥及王后黄肠题凑木椁墓；天山汉墓出土后迁至扬州保护展示。",
+      "disputes": [
+        "地图指向汉陵苑迁移保护展示地点，不是高邮神居山原墓址。",
+        "刘胥与王后墓为同茔异穴，王后墓不另列。"
+      ],
+      "point": {
+        "lat": 32.424855,
+        "lng": 119.430422,
+        "crs": "GCJ-02",
+        "publisher": "高德地图",
+        "url": "https://www.amap.com/place/B0202009PY",
+        "target": "汉广陵王墓博物馆迁移保护展示区",
+        "limitation": "采用汉陵苑参观点，非高邮神居山原址墓室。"
+      }
+    },
+    {
+      "id": "han-king-mancheng",
+      "name": "中山靖王刘胜墓（满城汉墓）",
+      "aliases": [
+        "满城汉墓",
+        "中山靖王墓"
+      ],
+      "state": "西汉·中山国",
+      "owner": "中山靖王刘胜",
+      "admin": "河北省保定市满城区陵山",
+      "source": "han-feudal-mancheng",
+      "sortYear": -113,
+      "evidence": "河北省文物局明确刘胜与窦绾墓的身份、原址和1968年发掘情况。",
+      "disputes": [
+        "窦绾墓仅在同茔墓葬说明中记录，不另作王陵点。",
+        "汉代中山国与战国中山国分开记录。"
+      ],
+      "point": {
+        "lat": 38.947883,
+        "lng": 115.298148,
+        "crs": "GCJ-02",
+        "publisher": "高德地图",
+        "url": "https://www.amap.com/place/B013801ZRR",
+        "target": "满城汉墓原址景区区域"
+      }
+    },
+    {
+      "id": "han-chu-shizi",
+      "name": "狮子山楚王陵",
+      "state": "西汉·楚国",
+      "owner": "楚王（墓主未确定）",
+      "admin": "江苏省徐州市云龙区狮子山",
+      "source": "han-feudal-chu",
+      "sortYear": -175,
+      "periodText": "西汉早期",
+      "evidence": "发掘与王陵等级明确，国博研究列为徐州楚王陵之一。",
+      "disputes": [
+        "刘郢客、刘戊等墓主说存在争论，不用推定姓名作为确定标题。",
+        "兵马俑坑为陵区附属遗存，不替代主陵点。"
+      ],
+      "point": {
+        "lat": 34.244957,
+        "lng": 117.225186,
+        "crs": "GCJ-02",
+        "publisher": "高德地图",
+        "url": "https://ditu.amap.com/place/B020400654",
+        "target": "狮子山楚王陵原址景区参考点"
+      }
+    },
+    {
+      "id": "han-chu-guishan",
+      "name": "楚襄王刘注墓（龟山汉墓）",
+      "aliases": [
+        "龟山汉楚王墓"
+      ],
+      "state": "西汉·楚国",
+      "owner": "楚襄王刘注",
+      "admin": "江苏省徐州市鼓楼区龟山西麓",
+      "source": "han-feudal-guishan",
+      "sortYear": -116,
+      "evidence": "机构资料记为楚襄王刘注夫妇合葬崖洞墓。",
+      "disputes": [
+        "夫妇合葬以一条王陵记录；点石园不替代王墓。"
+      ],
+      "point": {
+        "lat": 34.308478889,
+        "lng": 117.131428889,
+        "crs": "WGS84",
+        "publisher": "Wikidata P625 Earth",
+        "url": "https://www.wikidata.org/wiki/Q11182016",
+        "target": "龟山汉墓原址区域参考点",
+        "resolution": 0.000001
+      }
+    },
+    {
+      "id": "han-chu-chuwangshan",
+      "name": "楚王山汉墓群",
+      "type": "group",
+      "state": "西汉·楚国",
+      "admin": "江苏省徐州市铜山区楚王山北麓",
+      "source": "han-feudal-chu",
+      "sortYear": -50,
+      "periodText": "西汉；有西汉晚期断代意见",
+      "evidence": "国博研究记录山北麓四座大墓及调查材料；以陵群记录，暂不拆分无可靠独立点位的单墓。",
+      "disputes": [
+        "传统归于刘交；国博刊物研究提出刘嚣等晚期楚王推定，墓主未定。"
+      ],
+      "point": {
+        "lat": 34.261221,
+        "lng": 117.066182,
+        "crs": "GCJ-02",
+        "publisher": "高德地图",
+        "url": "https://www.amap.com/place/B020400779",
+        "target": "楚王山汉墓群区域参考点"
+      }
+    },
+    {
+      "id": "han-chu-beidong",
+      "name": "北洞山楚王墓",
+      "state": "西汉·楚国",
+      "owner": "楚王（墓主未确定）",
+      "admin": "江苏省徐州市铜山区茅村镇洞山村",
+      "source": "han-feudal-chu",
+      "sortYear": -175,
+      "periodText": "西汉早期",
+      "evidence": "国博研究明确为已发现楚王陵；刘交、刘郢客等归属仍有异说。",
+      "reviewTasks": [
+        "补核北洞山主墓WGS84点，不能误用东南桓山王后墓或狮子山点"
+      ]
+    },
+    {
+      "id": "han-chu-tuolan",
+      "name": "驮篮山楚王墓群",
+      "type": "group",
+      "state": "西汉·楚国",
+      "admin": "江苏省徐州市驮篮山",
+      "source": "han-feudal-chu",
+      "sortYear": -150,
+      "evidence": "国博研究列入八处楚王陵区；王、王后墓以陵群兜底，具体墓主未定。",
+      "reviewTasks": [
+        "补核驮篮山原墓群位置，不将驮龙山异名误并入"
+      ]
+    },
+    {
+      "id": "han-chu-woniu",
+      "name": "卧牛山楚王墓群",
+      "type": "group",
+      "state": "西汉·楚国",
+      "admin": "江苏省徐州市卧牛山",
+      "source": "han-feudal-chu",
+      "sortYear": -150,
+      "evidence": "国博研究列入徐州楚王陵区；不按猜测王名生成重复点。",
+      "reviewTasks": [
+        "补核卧牛山墓群WGS84位置与王后墓关系"
+      ]
+    },
+    {
+      "id": "han-chu-dongdong",
+      "name": "东洞山楚王墓群",
+      "type": "group",
+      "state": "西汉·楚国",
+      "admin": "江苏省徐州市鼓楼区桃园路与洞山路交汇处",
+      "source": "han-feudal-chu",
+      "sortYear": -100,
+      "evidence": "国博研究列入徐州楚王陵区；未可靠拆分的王、王后墓保留陵群记录。",
+      "reviewTasks": [
+        "补核王、王后墓关系及现场精度"
+      ],
+      "point": {
+        "lat": 34.29178,
+        "lng": 117.251008,
+        "crs": "GCJ-02",
+        "publisher": "高德地图",
+        "url": "https://www.amap.com/place/B0FFGCSQ8K",
+        "target": "东洞山楚王墓群原址区域参考点"
+      }
+    },
+    {
+      "id": "han-chu-nandong",
+      "name": "南洞山楚王墓群",
+      "aliases": [
+        "段山楚王墓"
+      ],
+      "type": "group",
+      "state": "西汉·楚国",
+      "admin": "江苏省徐州市南洞山（段山）",
+      "source": "han-feudal-chu",
+      "sortYear": -100,
+      "evidence": "国博研究列入徐州楚王陵区；具体墓主待核。",
+      "reviewTasks": [
+        "补核南洞山原墓群位置，避免与东洞山混淆"
+      ]
+    },
+    {
+      "id": "han-liang-kings",
+      "name": "芒砀山汉梁王墓群",
+      "type": "group",
+      "state": "西汉·梁国",
+      "admin": "河南省商丘市永城市芒山镇",
+      "source": "han-feudal-liang",
+      "sortYear": -144,
+      "periodText": "西汉",
+      "evidence": "机构资料记录历代梁王墓群；明确子陵另列并建立所属关系，王后及陪葬墓不单列。",
+      "point": {
+        "lat": 34.184245,
+        "lng": 116.495332,
+        "crs": "GCJ-02",
+        "publisher": "高德地图",
+        "url": "https://www.amap.com/place/B0FFL6QGVQ",
+        "target": "芒砀山汉梁王墓群区域参考点",
+        "estimated": true,
+        "basis": "机构确认墓群跨多座山头，采用墓群POI作为概览区域代表，非保安山单陵"
+      }
+    },
+    {
+      "id": "han-liang-xiao",
+      "name": "梁孝王刘武陵",
+      "state": "西汉·梁国",
+      "owner": "梁孝王刘武",
+      "admin": "河南省商丘市永城市保安山",
+      "source": "han-feudal-liang",
+      "parentId": "han-liang-kings",
+      "sortYear": -144,
+      "evidence": "机构资料明确保安山一号墓为梁孝王陵；王后墓仅作陵区说明。",
+      "point": {
+        "lat": 34.16902,
+        "lng": 116.50434,
+        "crs": "WGS84",
+        "publisher": "OpenStreetMap（Mapcarta索引）",
+        "url": "https://mapcarta.com/W1422246196",
+        "target": "梁孝王陵区域参考点",
+        "resolution": 0.00001
+      }
+    },
+    {
+      "id": "han-liang-gong",
+      "name": "梁共王刘买陵",
+      "state": "西汉·梁国",
+      "owner": "梁共王刘买",
+      "admin": "河南省商丘市永城市保安山",
+      "source": "han-feudal-liang",
+      "parentId": "han-liang-kings",
+      "sortYear": -137,
+      "evidence": "机构资料将保安山三座主墓之一归为刘买陵；以景区传统标识对应实体。",
+      "recognition": "attributed",
+      "point": {
+        "lat": 34.16607,
+        "lng": 116.50734,
+        "crs": "WGS84",
+        "publisher": "OpenStreetMap（Mapcarta索引）",
+        "url": "https://mapcarta.com/W1422246197",
+        "target": "梁共王陵区域参考点",
+        "resolution": 0.00001
+      }
+    },
+    {
+      "id": "han-king-dayun",
+      "name": "江都王刘非陵（大云山）",
+      "aliases": [
+        "大云山汉墓群",
+        "大云山一号墓"
+      ],
+      "state": "西汉·江都国",
+      "owner": "江都王刘非",
+      "admin": "江苏省淮安市盱眙县马坝镇云山村",
+      "source": "han-feudal-dayun",
+      "sortYear": -127,
+      "evidence": "南京博物院发掘研究认定一号墓为刘非陵；陵园王后与陪葬墓仅作说明。",
+      "point": {
+        "lat": 32.975825,
+        "lng": 118.848042,
+        "crs": "GCJ-02",
+        "publisher": "高德地图",
+        "url": "https://www.amap.com/place/B0FFKB8BLD",
+        "target": "大云山汉墓群原址区域（非南京博物院展厅）"
+      }
+    },
+    {
+      "id": "han-king-jibei",
+      "name": "双乳山济北王墓",
+      "aliases": [
+        "汉济北王墓",
+        "双乳山一号汉墓"
+      ],
+      "state": "西汉·济北国",
+      "owner": "济北王（墓主未确定，推定刘宽）",
+      "admin": "山东省济南市长清区归德街道双乳村",
+      "source": "han-feudal-jibei",
+      "sortYear": -90,
+      "periodText": "西汉中晚期",
+      "evidence": "山东大学考古发掘与机构资料明确为济北王陵，具体王名保留推定。",
+      "point": {
+        "lat": 36.4452,
+        "lng": 116.63931,
+        "crs": "WGS84",
+        "publisher": "Wikidata P625 Earth",
+        "url": "https://www.wikidata.org/wiki/Q1574075",
+        "target": "双乳山汉济北王墓区域参考点",
+        "resolution": 0.00001
+      }
+    },
+    {
+      "id": "han-lu-jiulong",
+      "name": "九龙山汉鲁王墓群",
+      "type": "group",
+      "state": "西汉·鲁国",
+      "admin": "山东省济宁市曲阜市小雪街道武家村九龙山",
+      "source": "han-feudal-lu",
+      "sortYear": -130,
+      "periodText": "西汉",
+      "evidence": "曲阜文物机构记录五座并列崖墓、四座发掘墓；不将鲁国世系与五墓强行一一对应。",
+      "disputes": [
+        "与明鲁王陵、先秦鲁国防山墓群分开。"
+      ],
+      "reviewTasks": [
+        "补核曲阜九龙山墓群WGS84位置；不可使用邹城明鲁王陵点"
+      ]
+    },
+    {
+      "id": "han-qi-dawu",
+      "name": "大武西汉齐王墓",
+      "aliases": [
+        "窝托齐王墓"
+      ],
+      "state": "西汉·齐国",
+      "owner": "齐王（墓主未确定）",
+      "admin": "山东省淄博市临淄区原大武镇窝托村南",
+      "source": "han-feudal-qi",
+      "sortYear": -180,
+      "periodText": "西汉早期",
+      "evidence": "地方志记录1978—1981年勘探发掘五个陪葬坑，以规模、形制和年代判定为汉齐王墓。",
+      "disputes": [
+        "不与战国田齐王陵合并，不将陪葬坑另算王陵。"
+      ],
+      "reviewTasks": [
+        "补核原窝托村汉齐王主墓位置及现存状况"
+      ]
+    },
+    {
+      "id": "han-changsha-kings",
+      "name": "汉代长沙王陵墓群",
+      "type": "group",
+      "state": "汉·长沙国",
+      "admin": "湖南省长沙市岳麓区、望城区湘江西岸",
+      "source": "han-feudal-changsha,han-feudal-changsha-survey",
+      "sortYear": -150,
+      "periodText": "汉代",
+      "evidence": "湖南省文物局记录多处墓地调查和象鼻嘴墓保护；单墓未可靠对应王名时保留陵群。",
+      "disputes": [
+        "风篷岭、渔阳等王后墓仅作陵群说明；不将马王堆轪侯家族墓纳入王陵。"
+      ],
+      "reviewTasks": [
+        "分别核对戴公庙、谷山、象鼻嘴等片区点位，不用汉王陵公园地铁站代替墓址"
+      ]
+    },
+    {
+      "id": "han-king-liuan",
+      "name": "六安王刘庆墓（双墩一号）",
+      "state": "西汉·六安国",
+      "owner": "六安王刘庆",
+      "admin": "安徽省六安市金安区三十铺镇双墩村",
+      "source": "han-feudal-liuan",
+      "sortYear": -83,
+      "evidence": "六安市文物专项规划明确双墩一号墓为第一代六安王刘庆墓。",
+      "point": {
+        "lat": 31.744045,
+        "lng": 116.587518,
+        "crs": "GCJ-02",
+        "publisher": "高德地图",
+        "url": "https://www.amap.com/place/B0FFFY7LP1",
+        "target": "六安双墩汉墓原址区域参考点"
+      }
+    },
+    {
+      "id": "han-king-hejian",
+      "name": "河间献王陵",
+      "state": "西汉·河间国",
+      "owner": "河间献王刘德（传统归属）",
+      "admin": "河北省沧州市献县西八册屯村西",
+      "source": "han-feudal-hejian",
+      "sortYear": -130,
+      "recognition": "traditional",
+      "evidence": "政府资料明确献王陵汉文化园地理实体，传统归为刘德陵；不据景区名称声称墓主经发掘确认。",
+      "point": {
+        "lat": 38.189763,
+        "lng": 116.177785,
+        "crs": "GCJ-02",
+        "publisher": "高德地图",
+        "url": "https://www.amap.com/place/B013D00MXO",
+        "target": "献王陵传统陵址区域"
+      }
+    },
+    {
+      "id": "han-king-huainan",
+      "name": "淮南王刘安墓（传统陵址）",
+      "state": "西汉·淮南国",
+      "owner": "淮南王刘安（传统归属）",
+      "admin": "安徽省淮南市寿县八公山乡团结村",
+      "source": "han-feudal-huainan",
+      "sortYear": -122,
+      "recognition": "traditional",
+      "evidence": "官方考古情况说明记录老母猪山南坡传统刘安墓及家族墓地；墓主归属与考古确认分开。",
+      "point": {
+        "lat": 32.601454,
+        "lng": 116.783306,
+        "crs": "GCJ-02",
+        "publisher": "高德地图",
+        "url": "https://www.amap.com/place/B023405D5Q",
+        "target": "淮南王墓传统陵址参观点"
+      }
+    },
+    {
+      "id": "han-king-langya",
+      "name": "琅琊王墓",
+      "state": "东汉·琅琊国",
+      "owner": "琅琊王（墓主未确定）",
+      "admin": "山东省临沂市兰山区琅琊王路与水田路交汇处",
+      "source": "han-feudal-langya",
+      "sortYear": 150,
+      "periodText": "东汉",
+      "evidence": "临沂文旅部门答复确认为已发掘汉代王墓，保护方案针对墓葬本体。",
+      "point": {
+        "lat": 35.072341,
+        "lng": 118.300244,
+        "crs": "GCJ-02",
+        "publisher": "高德地图",
+        "url": "https://ditu.amap.com/place/B021B0AH7V",
+        "target": "琅琊王墓遗址区域参考点"
+      }
+    },
+    {
+      "id": "han-king-tushan",
+      "name": "土山二号诸侯王墓",
+      "state": "东汉·楚国／彭城国（归属待核）",
+      "owner": "东汉诸侯王（墓主未确定）",
+      "admin": "江苏省徐州市云龙区徐州博物馆北侧土山",
+      "source": "han-feudal-chu",
+      "sortYear": 100,
+      "periodText": "东汉",
+      "evidence": "国博研究记录土山为东汉诸侯王墓；二号墓为主墓，避免将王后的一号墓另计。",
+      "disputes": [
+        "刘英、刘恭等身份说待核；不沿用范增墓传统归属。"
+      ],
+      "reviewTasks": [
+        "补核土山二号墓原址坐标和近年身份研究，不能用西汉采石场点替代"
+      ]
+    },
+    {
+      "id": "han-king-dingtao",
+      "name": "定陶王墓地M2（灵圣湖汉墓）",
+      "state": "西汉·定陶国（归属待核）",
+      "owner": "王陵级墓葬（墓主未确定）",
+      "admin": "山东省菏泽市定陶区马集镇",
+      "source": "han-feudal-ditao",
+      "sortYear": -50,
+      "periodText": "西汉",
+      "evidence": "考古机构2023年研究采用定陶王墓地M2名称，记录高等级黄肠题凑墓。",
+      "disputes": [
+        "墓主具体身份未核实；不直接定为刘康或傅太后墓。"
+      ],
+      "reviewTasks": [
+        "补核灵圣湖M2墓本体WGS84位置及墓主研究"
+      ]
+    },
+    {
+      "id": "han-king-dabaotai",
+      "name": "广阳王刘建墓（大葆台）",
+      "aliases": [
+        "大葆台西汉墓"
+      ],
+      "state": "西汉·广阳国",
+      "owner": "广阳顷王刘建",
+      "admin": "北京市丰台区郭公庄707号",
+      "source": "han-feudal-dabaotai",
+      "sortYear": -45,
+      "evidence": "北京市文物局明确博物馆建于刘建墓原址，王后墓仅在同茔说明中记录。",
+      "point": {
+        "lat": 39.80532,
+        "lng": 116.297203,
+        "crs": "GCJ-02",
+        "publisher": "高德地图",
+        "url": "https://ditu.amap.com/place/B000A79694",
+        "target": "大葆台西汉王陵原址博物馆区域"
+      }
+    },
+    {
+      "id": "han-king-rencheng",
+      "name": "任城王陵（萧王庄）",
+      "state": "东汉·任城国",
+      "owner": "任城孝王刘尚（推定）",
+      "admin": "山东省济宁市任城区李营街道肖汪庄村",
+      "source": "han-feudal-rencheng",
+      "sortYear": 101,
+      "periodText": "东汉",
+      "recognition": "attributed",
+      "evidence": "济宁文旅机构按出土器物与墓制推定为刘尚陵。",
+      "disputes": [
+        "文旅机构称一号墓；地方志有二号墓编号，暂以遗址实体一条记录，墓号差异待核。"
+      ],
+      "reviewTasks": [
+        "核对萧王庄修复王墓位置和不同资料的墓号差异"
+      ]
+    },
+    {
+      "id": "han-king-changyi",
+      "name": "昌邑王墓（红土山）",
+      "state": "西汉·昌邑国",
+      "owner": "昌邑哀王刘髆（推定）",
+      "admin": "山东省菏泽市巨野县红土山",
+      "source": "han-feudal-changyi",
+      "sortYear": -88,
+      "recognition": "attributed",
+      "evidence": "巨野博物馆按墓制和出土器物判定为刘髆墓。",
+      "disputes": [
+        "不与南昌刘贺海昏侯墓合并。"
+      ],
+      "reviewTasks": [
+        "补核巨野红土山墓本体坐标与保护状况"
+      ]
+    },
+    {
+      "id": "han-zhongshan-dingzhou",
+      "name": "定州汉中山王墓群",
+      "type": "group",
+      "state": "两汉·中山国",
+      "admin": "河北省定州市北庄子、北陵头等墓地",
+      "source": "han-feudal-dingzhou",
+      "sortYear": -100,
+      "periodText": "西汉至东汉",
+      "evidence": "定州机构资料记录多座中山王墓；未完成单墓定位时以墓群兜底。",
+      "disputes": [
+        "与满城刘胜墓分开；北庄子、北陵头等不是一个墓室。"
+      ],
+      "reviewTasks": [
+        "补核定州各片区单墓位置，刘焉、刘畅等墓分期与身份分别复核"
+      ]
+    }
+  ]
+}

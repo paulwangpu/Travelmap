@@ -1,0 +1,608 @@
+{
+  "reviewedAt": "2026-10-04",
+  "scope": "上轮26条无独立坐标且无可用上级位置的记录；不重复计已有定位的总览",
+  "reviewedCount": 26,
+  "newMapPoints": [
+    "han-huzhuang",
+    "han-shen",
+    "han-kang-east",
+    "shu-majia",
+    "rong-yimen",
+    "jin-chenglin-memorial",
+    "han-king-changyi",
+    "han-yanlou-cemetery",
+    "tuyuhun-qingzui-lamawan",
+    "tuyuhun-murongzhi"
+  ],
+  "resolvedOrPartlyResolved": 9,
+  "stillWithoutUsableLocation": 17,
+  "items": [
+    {
+      "id": "han-shen",
+      "name": "东汉慎陵（M1054，推定）",
+      "admin": "河南省洛阳市洛南万安山北麓陵区",
+      "reviewedAt": "2026-10-04",
+      "status": "regional_estimate_added",
+      "reason": "已补候选墓冢区域估计；墓主对应与点位精度分别保留争议。",
+      "nextStep": "取得M1054／M1079墓冢保护坐标，替换相对方位推算",
+      "sourceIds": [
+        "east-han-layout",
+        "east-han-layout-text",
+        "east-han-plan-coordinates"
+      ],
+      "coordinates": {
+        "lat": 34.592,
+        "lng": 112.668,
+        "crs": "WGS84",
+        "status": "estimated_wgs84",
+        "sourceId": "east-han-layout-text",
+        "target": "M1054候选墓冢区域（推算）",
+        "original": "M1038 112.66441666666667,34.60831666666667; M1052 112.6664,34.59953333333333; extend 800m",
+        "method": "以保护规划M1038、M1052为锚点，沿两点向东南的方向延伸研究所述800米／后续1900米间隔；直线延伸是假设，不能代替墓冢测绘",
+        "sourceDatumExplicit": false,
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "候选点周围约1公里；包含示意排列、非严格共线及坐标基准不明的限制；区域估计，非实测墓室或入口。",
+        "estimate": {
+          "basis": "以保护规划M1038、M1052为锚点，沿两点向东南的方向延伸研究所述800米／后续1900米间隔；直线延伸是假设，不能代替墓冢测绘",
+          "extent": "候选点周围约1公里；包含示意排列、非严格共线及坐标基准不明的限制",
+          "confidence": "regional",
+          "reviewedAt": "2026-10-04"
+        }
+      },
+      "locationReference": null,
+      "mappedChildren": []
+    },
+    {
+      "id": "han-kang-east",
+      "name": "东汉康陵（M1079，推定）",
+      "admin": "河南省洛阳市洛南万安山北麓陵区",
+      "reviewedAt": "2026-10-04",
+      "status": "regional_estimate_added",
+      "reason": "已补候选墓冢区域估计；墓主对应与点位精度分别保留争议。",
+      "nextStep": "取得M1054／M1079墓冢保护坐标，替换相对方位推算",
+      "sourceIds": [
+        "east-han-layout",
+        "east-han-layout-text",
+        "east-han-plan-coordinates"
+      ],
+      "coordinates": {
+        "lat": 34.576,
+        "lng": 112.672,
+        "crs": "WGS84",
+        "status": "estimated_wgs84",
+        "sourceId": "east-han-layout-text",
+        "target": "M1079候选墓冢区域（推算）",
+        "original": "M1038 112.66441666666667,34.60831666666667; M1052 112.6664,34.59953333333333; extend 2700m",
+        "method": "以保护规划M1038、M1052为锚点，沿两点向东南的方向延伸研究所述800米／后续1900米间隔；直线延伸是假设，不能代替墓冢测绘",
+        "sourceDatumExplicit": false,
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "候选点周围约1公里；包含示意排列、非严格共线及坐标基准不明的限制；区域估计，非实测墓室或入口。",
+        "estimate": {
+          "basis": "以保护规划M1038、M1052为锚点，沿两点向东南的方向延伸研究所述800米／后续1900米间隔；直线延伸是假设，不能代替墓冢测绘",
+          "extent": "候选点周围约1公里；包含示意排列、非严格共线及坐标基准不明的限制",
+          "confidence": "regional",
+          "reviewedAt": "2026-10-04"
+        }
+      },
+      "locationReference": null,
+      "mappedChildren": []
+    },
+    {
+      "id": "han-jing-zhi",
+      "name": "东汉静陵",
+      "admin": "河南省洛阳市洛南万安山北麓陵区",
+      "reviewedAt": "2026-10-04",
+      "status": "cemetery_reference_added",
+      "reason": "关联已补阎楼候选陵园区域；M1108与M1129的唯一对应尚未解决。",
+      "nextStep": "取得阎楼陵园边界和两候选墓独立坐标，复核静陵归属",
+      "sourceIds": [
+        "east-han-layout",
+        "east-han-layout-text"
+      ],
+      "coordinates": null,
+      "locationReference": {
+        "parentId": "han-yanlou-cemetery",
+        "status": "shared_region_estimate",
+        "target": "阎楼陵园静陵候选区参考",
+        "basis": "研究提出M1108或M1129为候选；关联候选陵园，不指定其中某墓。",
+        "limitation": "推算点周边约1公里；是阎楼陵园候选区，不是M1108或M1129的独立墓室坐标；区域估计，非实测墓室或入口。"
+      },
+      "mappedChildren": []
+    },
+    {
+      "id": "tuyuhun-wuwei",
+      "name": "武威吐谷浑王族墓群（大可汗陵线索）",
+      "admin": "甘肃省武威市凉州区、天祝藏族自治县",
+      "reviewedAt": "2026-10-04",
+      "status": "mapped_subareas_added",
+      "reason": "已分出青咀—喇嘛湾和岔山慕容智墓两个定位子项；长岭、马场滩及可汗单陵仍待定位。",
+      "nextStep": "继续取得长岭和马场滩分区坐标；大可汗陵须独立考古认定",
+      "sourceIds": [
+        "west-wuwei",
+        "west-wuwei-inventory",
+        "wuwei-qingzui-survey-2024",
+        "murongzhi-excavation-2021"
+      ],
+      "coordinates": null,
+      "locationReference": null,
+      "mappedChildren": [
+        "tuyuhun-qingzui-lamawan",
+        "tuyuhun-murongzhi"
+      ]
+    },
+    {
+      "id": "jin-chenglin-memorial",
+      "name": "金末帝纪念冢（完颜村）",
+      "admin": "甘肃省平凉市泾川县王村镇完颜村东沟芮王坪",
+      "reviewedAt": "2026-10-04",
+      "status": "regional_estimate_added",
+      "reason": "补完颜村纪念陵区区域参考；性质仍为2003年取土纪念冢，非遗骸迁葬。",
+      "nextStep": "补东沟芮王坪纪念冢现场坐标及入口，缩小村域参考范围",
+      "sourceIds": [
+        "jin-chenglin-local",
+        "jin-chenglin-soil",
+        "jin-wanyan-tour",
+        "wanyan-village-map"
+      ],
+      "coordinates": {
+        "lat": 35.364,
+        "lng": 107.275,
+        "crs": "WGS84",
+        "status": "estimated_wgs84",
+        "sourceId": "wanyan-village-map",
+        "target": "完颜村纪念陵区区域参考（冢体待测）",
+        "original": "Google Maps village entity 35.36394,107.27485; rounded regional reference",
+        "method": "文旅资料确定纪念陵区在完颜村，以公开地理实体为村域参考；不把村域点称为已核实墓室",
+        "sourceDatumExplicit": false,
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "完颜村东沟、芮王坪纪念区域约3公里参考范围；地图村域点不是纪念冢入口；区域估计，非实测墓室或入口。",
+        "estimate": {
+          "basis": "文旅资料确定纪念陵区在完颜村，以公开地理实体为村域参考；不把村域点称为已核实墓室",
+          "extent": "完颜村东沟、芮王坪纪念区域约3公里参考范围；地图村域点不是纪念冢入口",
+          "confidence": "regional",
+          "reviewedAt": "2026-10-04"
+        }
+      },
+      "locationReference": null,
+      "mappedChildren": []
+    },
+    {
+      "id": "rong-yimen",
+      "name": "益门村二号墓（疑似戎王墓）",
+      "admin": "陕西省宝鸡市渭滨区益门村北、茹家庄遗址保护区南端（1992年原址）",
+      "reviewedAt": "2026-10-04",
+      "status": "regional_estimate_added",
+      "reason": "补益门堡原墓所在区域参考；已纠正施工地点为电讯器材设备厂，旧厂界和二号墓坑仍需细化。",
+      "nextStep": "配准1992年发掘简报图一、旧厂地块与道路，替换村域参考点",
+      "sourceIds": [
+        "rong-majiayuan",
+        "yimenbao-place",
+        "yimen-original-report",
+        "yimenbao-1992-yearbook"
+      ],
+      "coordinates": {
+        "lat": 34.327,
+        "lng": 107.109,
+        "crs": "WGS84",
+        "status": "estimated_wgs84",
+        "sourceId": "yimenbao-place",
+        "target": "益门堡村原墓所在区域参考（墓坑待配准）",
+        "original": "Google Maps village entity 34.327371,107.108824; rounded regional reference",
+        "method": "地方志的益门堡与原发掘简报益门村互核，以村域地理实体提供原墓所在区域；不推定旧厂界或某个墓坑中心",
+        "sourceDatumExplicit": false,
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "益门堡村北及茹家庄保护区南端约2公里参考范围；原厂与公路旧址仍待配准；区域估计，非实测墓室或入口。",
+        "estimate": {
+          "basis": "地方志的益门堡与原发掘简报益门村互核，以村域地理实体提供原墓所在区域；不推定旧厂界或某个墓坑中心",
+          "extent": "益门堡村北及茹家庄保护区南端约2公里参考范围；原厂与公路旧址仍待配准",
+          "confidence": "regional",
+          "reviewedAt": "2026-10-04"
+        }
+      },
+      "locationReference": null,
+      "mappedChildren": []
+    },
+    {
+      "id": "han-huzhuang",
+      "name": "胡庄韩王陵（墓主未定）",
+      "admin": "河南省郑州市新郑市胡庄",
+      "reviewedAt": "2026-10-04",
+      "status": "regional_estimate_added",
+      "reason": "已补新郑胡庄及西北韩王陵区区域参考；保留墓主未定，桓惠王为发掘者提出的候选。",
+      "nextStep": "取得发掘总平面与南水北调桩号或保护图，细化到陵体",
+      "sourceIds": [
+        "preqin-han-huzhuang",
+        "huzhuang-place",
+        "han-huzhuang-interview-2024"
+      ],
+      "coordinates": {
+        "lat": 34.394,
+        "lng": 113.696,
+        "crs": "WGS84",
+        "status": "estimated_wgs84",
+        "sourceId": "huzhuang-place",
+        "target": "胡庄村西北韩王陵区区域参考（墓体待配准）",
+        "original": "Google Maps Huzhuang 34.394158,113.696345; rounded regional reference",
+        "method": "发掘资料确定胡庄村西北岗地，公开地图核对新郑胡庄村，取村域位置为周边陵区参考，不擅自设定两墓中心",
+        "sourceDatumExplicit": false,
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "胡庄村及西北岗地约2公里范围；两墓与干渠交点仍待配准；区域估计，非实测墓室或入口。",
+        "estimate": {
+          "basis": "发掘资料确定胡庄村西北岗地，公开地图核对新郑胡庄村，取村域位置为周边陵区参考，不擅自设定两墓中心",
+          "extent": "胡庄村及西北岗地约2公里范围；两墓与干渠交点仍待配准",
+          "confidence": "regional",
+          "reviewedAt": "2026-10-04"
+        }
+      },
+      "locationReference": null,
+      "mappedChildren": []
+    },
+    {
+      "id": "shu-majia",
+      "name": "新都马家战国大墓（疑似蜀王族墓）",
+      "admin": "四川省成都市新都区原马家乡普东村一带",
+      "reviewedAt": "2026-10-04",
+      "status": "regional_estimate_added",
+      "reason": "补原普东村战国大墓所在区域参考；蜀王族身份仍为推定，现行组号与墓坑中心需细化。",
+      "nextStep": "取得周边考古调查范围图，核升庵村组号和墓坑位置",
+      "sourceIds": [
+        "shu-majia-museum",
+        "shu-boat-museum",
+        "pudong-village-place",
+        "majiatomb-procurement-2023"
+      ],
+      "coordinates": {
+        "lat": 30.862,
+        "lng": 104.125,
+        "crs": "WGS84",
+        "status": "estimated_wgs84",
+        "sourceId": "pudong-village-place",
+        "target": "马家乡普东村战国大墓所在区域参考",
+        "original": "Google Maps Pudong 30.86173,104.12497; rounded regional reference",
+        "method": "博物馆资料记原马家乡普东村，公开地理实体核对新都普东村，作为原墓区域参考；升庵村现行组号和原墓中心另核",
+        "sourceDatumExplicit": false,
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "原普东村约2公里参考范围；不是地铁站，也不代表墓室坐标；区域估计，非实测墓室或入口。",
+        "estimate": {
+          "basis": "博物馆资料记原马家乡普东村，公开地理实体核对新都普东村，作为原墓区域参考；升庵村现行组号和原墓中心另核",
+          "extent": "原普东村约2公里参考范围；不是地铁站，也不代表墓室坐标",
+          "confidence": "regional",
+          "reviewedAt": "2026-10-04"
+        }
+      },
+      "locationReference": null,
+      "mappedChildren": []
+    },
+    {
+      "id": "yan-xuliang",
+      "name": "燕下都虚粮冢（疑似燕王陵区）",
+      "admin": "河北省保定市易县燕下都东城西北部",
+      "reviewedAt": "2026-10-04",
+      "status": "known_site_not_georeferenced",
+      "reason": "已确认东城西北虚粮冢墓区；都城示意图缺可读取的墓区控制坐标，尚未完成与现代地形的配准。",
+      "nextStep": "取得墓区保护边界或带现代控制点的考古总平面",
+      "sourceIds": [
+        "preqin-yan-xuliang",
+        "yan-xiadu-layout",
+        "yan-xiadu-reassessment"
+      ],
+      "coordinates": null,
+      "locationReference": null,
+      "mappedChildren": []
+    },
+    {
+      "id": "yan-jiunutai",
+      "name": "燕下都九女台墓区（疑似王室墓地）",
+      "admin": "河北省保定市易县燕下都东城西北部",
+      "reviewedAt": "2026-10-04",
+      "status": "known_site_not_georeferenced",
+      "reason": "与虚粮冢是两处墓区；九女台墓区地望明确，但尚未取得能与现代底图配准的墓区边界。",
+      "nextStep": "配准燕下都墓区总平面，分别定位九女台与虚粮冢",
+      "sourceIds": [
+        "yan-xiadu-layout",
+        "yan-xiadu-reassessment"
+      ],
+      "coordinates": null,
+      "locationReference": null,
+      "mappedChildren": []
+    },
+    {
+      "id": "yan-jiunutai-m16",
+      "name": "九女台M16（高等级贵族墓，王室归属待考）",
+      "admin": "河北省保定市易县九女台墓区",
+      "reviewedAt": "2026-10-04",
+      "status": "parent_site_not_georeferenced",
+      "reason": "M16所属九女台已明确，单墓不重复统计；所属墓区本身尚未定位，不能提供有效地图参考。公开研究称高等级贵族墓，国君身份未定。",
+      "nextStep": "先定位九女台墓区，再建立共享位置；单墓中心另核",
+      "sourceIds": [
+        "yan-xiadu-reassessment",
+        "yan-xiadu-layout",
+        "yan-xiadu-m16-disturbance"
+      ],
+      "coordinates": null,
+      "locationReference": null,
+      "mappedChildren": []
+    },
+    {
+      "id": "han-chu-nandong",
+      "name": "南洞山楚王墓群",
+      "admin": "江苏省徐州市南洞山（段山）",
+      "reviewedAt": "2026-10-04",
+      "status": "known_site_not_georeferenced",
+      "reason": "学术分布图明确段山（南洞山），但无独立经纬度；地图同名段山地理实体在117.669°E，远于资料所述市区东南两山口地望，排除；北洞山、东洞山也不是本墓。",
+      "nextStep": "取得段山原墓保护点或将带比例尺分布图配准现代山体",
+      "sourceIds": [
+        "han-feudal-chu",
+        "nandong-distribution-2016"
+      ],
+      "coordinates": null,
+      "locationReference": null,
+      "mappedChildren": []
+    },
+    {
+      "id": "han-qi-dawu",
+      "name": "大武西汉齐王墓",
+      "admin": "山东省淄博市临淄区原大武镇窝托村南",
+      "reviewedAt": "2026-10-04",
+      "status": "known_site_not_georeferenced",
+      "reason": "窝托冢地点及陪葬坑发掘明确；原窝托村与迁建后的社区须分开，尚未确认原墓封土对应的现代地块。",
+      "nextStep": "查1978—1980年发掘图与旧村地籍，取得封土或陪葬坑原址参考点",
+      "sourceIds": [
+        "han-feudal-qi",
+        "dawu-site-2017"
+      ],
+      "coordinates": null,
+      "locationReference": null,
+      "mappedChildren": []
+    },
+    {
+      "id": "han-king-changyi",
+      "name": "昌邑王墓（红土山）",
+      "admin": "山东省菏泽市巨野县红土山",
+      "reviewedAt": "2026-10-04",
+      "status": "regional_estimate_added",
+      "reason": "补金山店子村及村东红土山原墓区域参考；村域点不是墓室入口，墓主刘髆仍为推定，不能与金山大洞混同。",
+      "nextStep": "取得红土山保护图或原墓现场控制点，将村域参考细化到山体和墓口",
+      "sourceIds": [
+        "han-feudal-changyi",
+        "jinshandianzi-place"
+      ],
+      "coordinates": {
+        "lat": 35.219,
+        "lng": 116.226,
+        "crs": "WGS84",
+        "status": "estimated_wgs84",
+        "sourceId": "jinshandianzi-place",
+        "target": "金山店子村东红土山原墓区域参考（墓口待测）",
+        "original": "Google Maps village entity 35.219223,116.226251; rounded regional reference",
+        "method": "博物馆资料确定红土山位于金山店子村东；公开地图核对巨野村址，以村域作周边原墓区域参考",
+        "sourceDatumExplicit": false,
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "金山店子村及东侧红土山约2公里参考范围；不代表墓室、山顶或金山大洞入口；区域估计，非实测墓室或入口。",
+        "estimate": {
+          "basis": "博物馆资料确定红土山位于金山店子村东；公开地图核对巨野村址，以村域作周边原墓区域参考",
+          "extent": "金山店子村及东侧红土山约2公里参考范围；不代表墓室、山顶或金山大洞入口",
+          "confidence": "regional",
+          "reviewedAt": "2026-10-04"
+        }
+      },
+      "locationReference": null,
+      "mappedChildren": []
+    },
+    {
+      "id": "han-zhongshan-dingzhou",
+      "name": "定州汉中山王墓群",
+      "admin": "河北省定州市北庄子、北陵头等墓地",
+      "reviewedAt": "2026-10-04",
+      "status": "discontinuous_cemetery",
+      "reason": "总项包含北庄子、北陵头等不连续墓地，无法以一个点代表；石刻馆或博物馆也不是这些原墓址。",
+      "nextStep": "按原墓号与保护单位拆分子项，取得各分区原址坐标",
+      "sourceIds": [
+        "han-feudal-dingzhou"
+      ],
+      "coordinates": null,
+      "locationReference": null,
+      "mappedChildren": []
+    },
+    {
+      "id": "wei-shouyang",
+      "name": "曹魏首阳陵",
+      "admin": "河南省洛阳市",
+      "reviewedAt": "2026-10-04",
+      "status": "unresolved_tomb_identity",
+      "reason": "曹丕首阳陵有文献和邙山陵群归属，但古首阳山地望及现代墓葬对应仍未落实；不能沿用现代同名山或任一魏墓。",
+      "nextStep": "取得能对应首阳陵的考古墓号、保护范围或可配准地望研究",
+      "sourceIds": [
+        "mangshan"
+      ],
+      "coordinates": null,
+      "locationReference": null,
+      "mappedChildren": []
+    },
+    {
+      "id": "jin-gaoyuan",
+      "name": "晋高原陵",
+      "admin": "河南省洛阳市",
+      "reviewedAt": "2026-10-04",
+      "status": "unresolved_tomb_identity",
+      "reason": "司马懿高原陵有陵号及邙山归属；机构概述没有唯一墓冢对应或窄区域，邙山总范围过大不能作为单陵估计。",
+      "nextStep": "取得高原陵候选墓号及其窄范围定位依据",
+      "sourceIds": [
+        "mangshan"
+      ],
+      "coordinates": null,
+      "locationReference": null,
+      "mappedChildren": []
+    },
+    {
+      "id": "jin-junping",
+      "name": "晋峻平陵",
+      "admin": "河南省洛阳市",
+      "reviewedAt": "2026-10-04",
+      "status": "unresolved_tomb_identity",
+      "reason": "司马师峻平陵有文献记录，尚未取得与现代已发现墓葬的唯一对应；不能套用司马昭崇阳陵坐标。",
+      "nextStep": "取得峻平陵候选墓号、勘察平面或保护边界",
+      "sourceIds": [
+        "mangshan"
+      ],
+      "coordinates": null,
+      "locationReference": null,
+      "mappedChildren": []
+    },
+    {
+      "id": "jin-taiyang",
+      "name": "晋太阳陵",
+      "admin": "河南省洛阳市",
+      "reviewedAt": "2026-10-04",
+      "status": "unresolved_tomb_identity",
+      "reason": "司马衷太阳陵的陵号存在，但未取得独立墓冢地理对应；不能套用司马炎峻阳陵或洛阳城市中心。",
+      "nextStep": "取得太阳陵墓冢候选与现代位置的考古证据",
+      "sourceIds": [
+        "mangshan"
+      ],
+      "coordinates": null,
+      "locationReference": null,
+      "mappedChildren": []
+    },
+    {
+      "id": "qi-taian",
+      "name": "南齐泰安陵",
+      "admin": "江苏省镇江市丹阳市（传统归属，墓址待核）",
+      "reviewedAt": "2026-10-04",
+      "status": "conflicting_site_attribution",
+      "reason": "泰安陵陵号有文献依据；丹阳石刻与陵号归属存在不同意见，赵家湾传统石刻地点与墓葬实体对应未完成复核。",
+      "nextStep": "核赵家湾旧石刻原址及陵区考证，分别记录地理位置和陵号争议",
+      "sourceIds": [
+        "qi-taian",
+        "taian-identity-review"
+      ],
+      "coordinates": null,
+      "locationReference": null,
+      "mappedChildren": []
+    },
+    {
+      "id": "jin-hailing",
+      "name": "金海陵王墓（故址待核）",
+      "admin": "北京市房山区大房山周边（历史归葬范围）",
+      "reviewedAt": "2026-10-04",
+      "status": "unresolved_tomb_identity",
+      "reason": "归葬地望仍未对应现代墓葬；曾被误指的长沟坟庄已由墓志确认为唐刘济墓，不能据旧说加入。",
+      "nextStep": "寻找完颜亮最终归葬墓址的独立考古对应",
+      "sourceIds": [
+        "beijing-jin-history",
+        "beijing-liuji-exclusion"
+      ],
+      "coordinates": null,
+      "locationReference": null,
+      "mappedChildren": []
+    },
+    {
+      "id": "jin-hekai",
+      "name": "金和陵旧址（胡凯山，疑似）",
+      "admin": "黑龙江省哈尔滨市阿城区老母顶子山南麓（三清屯附近；现行区划待核）",
+      "reviewedAt": "2026-10-04",
+      "status": "conflicting_place_names",
+      "reason": "老母顶子山南麓、三清屯线索保留；报道镇名不一致，未取得山体/墓区控制点及2011年后身份确认。不能采用现阿骨打纪念陵位置。",
+      "nextStep": "核三清屯旧地名与老母顶子山实体，再给区域估计；墓主认定另核",
+      "sourceIds": [
+        "jin-acheng-stages",
+        "jin-hekai-response",
+        "beijing-jin-history"
+      ],
+      "coordinates": null,
+      "locationReference": null,
+      "mappedChildren": []
+    },
+    {
+      "id": "jin-huizong-xing",
+      "name": "金徽宗兴陵（陵址未定）",
+      "admin": "黑龙江省哈尔滨市阿城区金上京附近（具体陵址待考）",
+      "reviewedAt": "2026-10-04",
+      "status": "unresolved_tomb_identity",
+      "reason": "宗峻兴陵仅能落实到金上京地望，尚未找到独立陵址；与房山金世宗兴陵同名异陵，不能共用坐标。",
+      "nextStep": "取得上京兴陵候选遗址与文献地望的对应",
+      "sourceIds": [
+        "jin-huizong-original",
+        "beijing-jin-history"
+      ],
+      "coordinates": null,
+      "locationReference": null,
+      "mappedChildren": []
+    },
+    {
+      "id": "jin-de",
+      "name": "金宣宗德陵（开封，陵址未定）",
+      "admin": "河南省开封市附近，具体陵址不明",
+      "reviewedAt": "2026-10-04",
+      "status": "unresolved_tomb_identity",
+      "reason": "宣宗德陵只落实到开封附近，没有窄范围原陵址或候选地块；金南迁后陵寝不能归入房山金陵。",
+      "nextStep": "核金史与开封古地名，寻找原址考古或保护记录",
+      "sourceIds": [
+        "jin-national-table"
+      ],
+      "coordinates": null,
+      "locationReference": null,
+      "mappedChildren": []
+    },
+    {
+      "id": "jin-ai-rushui",
+      "name": "金哀宗葬骨处（汝水滨，故址待核）",
+      "admin": "河南省驻马店市汝南县汝水滨、后龙亭河湾北岸张彦庄一带（线索）",
+      "reviewedAt": "2026-10-04",
+      "status": "historical_geography_unresolved",
+      "reason": "汝水滨、张彦庄和葬颜冢为线索；河道、村址与合葬传统尚未配准，且遗骸去向有不同记载。",
+      "nextStep": "核古汝水/后龙亭河湾及旧张彦庄地籍；与蔡州死亡地分开",
+      "sourceIds": [
+        "jin-aizong-bio",
+        "jin-aizong-site"
+      ],
+      "coordinates": null,
+      "locationReference": null,
+      "mappedChildren": []
+    },
+    {
+      "id": "jin-chenglin-boji",
+      "name": "金末帝传统墓址（泾川簸箕湾）",
+      "admin": "甘肃省平凉市泾川县太平乡三星村岭背后簸箕湾、大湾林场一带",
+      "reviewedAt": "2026-10-04",
+      "status": "known_site_not_georeferenced",
+      "reason": "太平乡三星村岭背后簸箕湾、大湾林场是传统故址线索；尚无可复核山谷点位。完颜村纪念冢与此不同址，不能互相代替。",
+      "nextStep": "取得簸箕湾现场地理控制点；传统墓主归属保留未确证",
+      "sourceIds": [
+        "jin-chenglin-local",
+        "jin-chenglin-soil"
+      ],
+      "coordinates": null,
+      "locationReference": null,
+      "mappedChildren": []
+    }
+  ]
+}

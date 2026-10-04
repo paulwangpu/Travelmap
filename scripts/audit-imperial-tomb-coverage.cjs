@@ -8,6 +8,10 @@ const eras=[
 ];
 const aliases={'西周':['西周／秦（归属争议）'],'东周':['东周'],'秦国':['秦国'],'赵国':['赵国'],'魏国':['魏国'],'楚':['楚','楚国'],'蒙古':['蒙古、元（追尊）'],'元':['元','蒙古、元（追尊）'],'武周':['唐、武周'],'唐':['唐','唐、武周','唐（追尊）'],'明':['明','明（追尊）'],'清':['清','清（追尊）'],'南齐':['南齐','南齐、南梁'],'南梁':['南梁','南齐、南梁'],'曹魏':['曹魏','曹魏（追尊）']};
 const matrix=eras.flatMap(([era,ds])=>ds.split(' ').map(d=>{const rows=c.items.filter(x=>(aliases[d]||[d]).includes(x.dynasty));return {era,dynasty:d,records:rows.length,singleRecords:rows.filter(x=>x.recordType==='single').length,mapCandidates:rows.filter(x=>x.mapEligible).length,sharedLocations:rows.filter(x=>x.locationReference?.coordinates).length,unlocated:rows.filter(x=>!x.mapEligible&&!x.locationReference?.coordinates).length,status:rows.length?'已有条目，君主及遗址覆盖未判定完整':'目录空白，需查君主与考古名录',recordIds:rows.map(x=>x.id)};}));
+for(const dynasty of [...new Set(c.items.filter(x=>x.rulerCategory==='feudal_king').map(x=>x.dynasty))]){
+ const rows=c.items.filter(x=>x.rulerCategory==='feudal_king'&&x.dynasty===dynasty);
+ matrix.push({era:'秦汉',dynasty,records:rows.length,singleRecords:rows.filter(x=>x.recordType==='single').length,mapCandidates:rows.filter(x=>x.mapEligible).length,sharedLocations:0,unlocated:rows.filter(x=>!x.mapEligible).length,status:'汉代封国王陵核查；普通宗室及列侯不自动纳入',recordIds:rows.map(x=>x.id)});
+}
 const rosters={
  '后梁':'朱温 朱友珪 朱友贞','后唐':'李存勖 李嗣源 李从厚 李从珂','后晋':'石敬瑭 石重贵','后汉':'刘知远 刘承祐','后周':'郭威 柴荣 柴宗训',
  '吴':'杨行密 杨渥 杨隆演 杨溥','南唐':'李昪 李璟 李煜','吴越':'钱镠 钱元瓘 钱弘佐 钱弘倧 钱弘俶','闽':'王审知 王延翰 王延钧 王昶 王曦 朱文进 王延政','前蜀':'王建 王衍','后蜀':'孟知祥 孟昶','南汉':'刘龑 刘玢 刘晟 刘鋹','北汉':'刘崇 刘钧 刘继恩 刘继元','荆南':'高季兴 高从诲 高保融 高保勖 高继冲',

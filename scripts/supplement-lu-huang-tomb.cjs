@@ -1,0 +1,7 @@
+module.exports=({add,source})=>{
+ source('lu-huang-official','明鲁王墓：鲁荒王陵、鲁靖王墓与钜野王墓','济宁市文化和旅游局','https://whlyj.jining.gov.cn/art/2025/6/10/art_70690_2706002.html','鲁荒王陵在九龙山南麓；鲁靖王墓、钜野王墓另在不同村落，不能共用荒王陵点。');
+ source('lu-huang-village','尚寨竹马与九龙山鲁荒王陵','曲阜文化建设示范区推进办公室','https://qfwhjssfq.jining.gov.cn/art/2016/4/29/art_31971_1471417.html','确认中心店镇尚寨村九龙山鲁荒王陵及守陵历史。');
+ source('lu-huang-map','明鲁王陵园地理实体','OpenStreetMap／Mapcarta','https://mapcarta.com/W509402116','OSM way509402116：35.47533,117.00562，陵园公园区域点，非地宫入口实测点。');
+ const x=add('ming-lu-huang','鲁荒王陵','明','明（鲁藩）','鲁荒王朱檀','山东省济宁市邹城市中心店镇尚寨村九龙山南麓','lu-huang-official,lu-huang-village,lu-huang-map',{rulerCategory:'feudal_king',recognition:'archaeological',aliases:['明鲁王陵','朱檀墓'],evidence:'地方文物部门确认墓主、原址及地宫发掘遗存；不把分散的明鲁王墓保护单位全部放在此点。',chronology:{sortYear:1389,basis:'地方文物部门采用的卒年纪年；公历跨年差异见争议，不作为建陵年'},disputes:['地方简介记生卒1370—1389年；卒于洪武二十二年十二月的公历年份跨至1390年，保留纪年差异。','与金门南明监国鲁王朱以海墓、河南潞简王朱翊镠陵为不同人物和陵址。'],reviewTasks:['核对地宫当前开放公告及入口测绘；复核公历卒日换算']});
+ x.coordinates={lat:35.475,lng:117.006,crs:'WGS84',status:'estimated_wgs84',sourceId:'lu-huang-map',target:'九龙山南麓鲁荒王陵园区域',original:'OSM way509402116：35.47533,117.00562',method:'文物部门与尚寨村地望交叉核对公开陵园实体，采用三位小数区域锚点',sourceDatumExplicit:false,precision:{sourceUnit:'degree',resolutionDegrees:.001,horizontalAccuracyMeters:null},limitation:'陵园区域估计，非地宫入口或墓室中心；不覆盖官厅村、凰翥村其他鲁藩墓。',estimate:{basis:'官方墓主和原址资料与公开陵园实体交叉核对',extent:'九龙山南麓陵园附近约500米参考范围',confidence:'regional',reviewedAt:'2026-10-04'}};x.mapEligible=true;x.mapReason=x.coordinates.target;
+};

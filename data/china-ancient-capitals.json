@@ -1,8 +1,8 @@
 {
   "source": "中国历代政权都城_古今地名与坐标.xlsx 都城总表",
   "generatedAt": "2026-07-23",
-  "recordCount": 296,
-  "siteCount": 146,
+  "recordCount": 295,
+  "siteCount": 145,
   "skippedCount": 0,
   "items": [
     {
@@ -10332,60 +10332,6 @@
       "siteKey": "ancient-site:武汉:30.59280,114.30550"
     },
     {
-      "lat": 25.033,
-      "lng": 121.5654,
-      "admin": "台湾省台北市",
-      "siteNames": [
-        "台北"
-      ],
-      "ancientNames": [
-        "台北"
-      ],
-      "dynasties": [
-        "中华民国政府"
-      ],
-      "eras": [
-        "近现代"
-      ],
-      "capitalTypes": [
-        "中央政府所在地"
-      ],
-      "categoryCodes": [
-        "O"
-      ],
-      "confidence": "高",
-      "records": [
-        {
-          "时代": "近现代",
-          "政权/国号": "中华民国政府",
-          "政权年代（原文）": "1949—今",
-          "都城性质": "中央政府所在地",
-          "都城年代（原文）": "1949—今",
-          "古称": "台北",
-          "今称/遗址名": "台北",
-          "今属行政区": "台湾省台北市",
-          "置信度": "高",
-          "备注/争议": "1949年后实际中央政府所在地",
-          "来源编号": "S14",
-          "来源URL": "https://zh.wikipedia.org/wiki/中华民国大陆时期",
-          "都城类别码": "O",
-          "sourceOrder": 284
-        }
-      ],
-      "name": "台北",
-      "categoryLabels": [
-        "其他都城"
-      ],
-      "recordCount": 1,
-      "sourceOrder": 284,
-      "sourceEra": "近现代",
-      "sourceSite": "台北",
-      "sourceAncientName": "台北",
-      "currentPlace": "台北",
-      "currentKey": "ancient-site:台北:25.03300,121.56540",
-      "siteKey": "ancient-site:台北:25.03300,121.56540"
-    },
-    {
       "lat": 25.885,
       "lng": 116.027,
       "admin": "江西省赣州市瑞金市",
@@ -16320,26 +16266,6 @@
       "currentKey": "ancient-site:南京:32.06030,118.79690"
     },
     {
-      "name": "台北",
-      "siteName": "台北",
-      "ancientName": "台北",
-      "dynasty": "中华民国政府",
-      "era": "近现代",
-      "admin": "台湾省台北市",
-      "capitalType": "中央政府所在地",
-      "capitalYears": "1949—今",
-      "regimeYears": "1949—今",
-      "confidence": "高",
-      "categoryCode": "O",
-      "sourceOrder": 284,
-      "siteKey": "ancient-site:台北:25.03300,121.56540",
-      "lat": 25.033,
-      "lng": 121.5654,
-      "parentName": "台北",
-      "currentPlace": "台北",
-      "currentKey": "ancient-site:台北:25.03300,121.56540"
-    },
-    {
       "name": "瑞京 · 瑞金",
       "siteName": "瑞金",
       "ancientName": "瑞京",
@@ -16580,5 +16506,5 @@
       "currentKey": "ancient-site:北京:39.90420,116.40740"
     }
   ],
-  "recordItemCount": 296
+  "recordItemCount": 295
 }

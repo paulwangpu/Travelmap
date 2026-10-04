@@ -1,0 +1,107 @@
+[
+  {
+    "place_id": 238645411,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "node",
+    "osm_id": 4787165826,
+    "lat": "30.6760775",
+    "lon": "104.0444989",
+    "category": "tourism",
+    "type": "attraction",
+    "place_rank": 30,
+    "importance": 0.3913944132881851,
+    "addresstype": "tourism",
+    "name": "永陵",
+    "display_name": "永陵, 10, 永陵路, 永陵社区, 西安路街道, 金牛区, 成都市, 四川省, 610032, 中国",
+    "boundingbox": [
+      "30.6760275",
+      "30.6761275",
+      "104.0444489",
+      "104.0445489"
+    ]
+  },
+  {
+    "place_id": 238724945,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "node",
+    "osm_id": 2921654288,
+    "lat": "18.3767167",
+    "lon": "110.0000080",
+    "category": "natural",
+    "type": "peak",
+    "place_rank": 18,
+    "importance": 0.1600503234912642,
+    "addresstype": "peak",
+    "name": "尖岭",
+    "display_name": "尖岭, 陵水县, 陵水黎族自治县, 海南省, 中国",
+    "boundingbox": [
+      "18.3766667",
+      "18.3767667",
+      "109.9999580",
+      "110.0000580"
+    ]
+  },
+  {
+    "place_id": 240678982,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 1225938842,
+    "lat": "25.6605159",
+    "lon": "99.9811604",
+    "category": "tunnel",
+    "type": "yes",
+    "place_rank": 30,
+    "importance": 0.4555254752192445,
+    "addresstype": "tunnel",
+    "name": "尖山岭隧道",
+    "display_name": "尖山岭隧道, S233, 下蒲, 十家村, 苍山西镇, 漾濞彝族自治县, 大理白族自治州, 云南省, 中国",
+    "boundingbox": [
+      "25.6588014",
+      "25.6616895",
+      "99.9719674",
+      "99.9902789"
+    ]
+  },
+  {
+    "place_id": 220580255,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 1088448627,
+    "lat": "32.0576780",
+    "lon": "118.8629106",
+    "category": "amenity",
+    "type": "place_of_worship",
+    "place_rank": 30,
+    "importance": 0.44483426465222636,
+    "addresstype": "amenity",
+    "name": "灵谷寺",
+    "display_name": "灵谷寺, 灵谷寺东路, 孝陵卫街道, 玄武区, 南京市, 江苏省, 210095, 中国",
+    "boundingbox": [
+      "32.0569576",
+      "32.0583975",
+      "118.8623523",
+      "118.8633933"
+    ]
+  },
+  {
+    "place_id": 237928656,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 1137655549,
+    "lat": "23.1198134",
+    "lon": "113.3147781",
+    "category": "office",
+    "type": "diplomatic",
+    "place_rank": 30,
+    "importance": 0.42488189173487034,
+    "addresstype": "office",
+    "name": "美利坚合众国驻广州总领事馆",
+    "display_name": "美利坚合众国驻广州总领事馆, 43号, 华就路, 猎德街道, 天河区, 广州市, 广东省, 510623, 中国",
+    "boundingbox": [
+      "23.1187105",
+      "23.1201950",
+      "113.3132303",
+      "113.3154842"
+    ]
+  }
+]

@@ -1,6 +1,6 @@
 module.exports=({items,source})=>{
  const labels={unknown:'尚未核查',archaeological_evidence:'有盗掘考古证据',documentary_record:'有盗掘记录',attempted:'有盗扰尝试记录',reported_unrobbed:'机构文献称未被盗',no_evidence_reported:'已查资料未见盗掘证据',surface_theft:'有地面文物盗窃记录',mixed:'陵群，逐陵情况不同'};
- for(const x of items)x.disturbance={status:'unknown',label:labels.unknown,evidence:'尚未取得足以判断墓室盗掘情况的直接资料；未核查不等于未被盗。',scope:'墓室',sourceIds:[],reviewedAt:'2026-10-03'};
+ for(const x of items)x.disturbance={status:'unknown',label:labels.unknown,evidence:'',scope:'墓室',sourceIds:[],reviewedAt:'2026-10-03'};
  source('robbery-qian','钱镠墓盗掘案件情况通报会','杭州市发布的案件通报（公开转载）','https://m.thepaper.cn/baijiahao_12644658');
  source('robbery-zhou','北周武帝孝陵铜锡焊料研究与抢救发掘背景','北京科技大学科技史与文化遗产研究院','https://ihmm.ustb.edu.cn/kxyj/kycg/xslw/yjycls/90d34d36e6204ed1a28daab6d86e1407.htm');
  source('robbery-haihun','海昏侯刘贺墓与盗洞未达主墓情况','新华社（考古队介绍）','https://www.xinhuanet.com/politics/2016-03/03/c_128769662.htm');
@@ -8,6 +8,9 @@ module.exports=({items,source})=>{
  source('robbery-min','王审知墓历史盗掘与清理','福州市党史方志室','https://fz.fjdsfzw.org.cn/wap/2021-11-25/content_767.html');
  source('robbery-tang-history','唐陵保护与温韬盗掘文献研究','陕西师范大学（中国历史地理论丛）','https://lishiwenhua.snnu.edu.cn/__local/B/68/6A/EE800520C42DA2A89C0D1D337D6_782CCE40_5A92E.pdf?e=.pdf');
  source('robbery-mojin','陈琳檄文与摸金校尉说法的史料辨析','全国哲学社会科学工作办公室','https://www.nopss.gov.cn/GB/219567/219576/17725364.html');
+ set('ming-zhou-yi','archaeological_evidence','河南博物院发掘介绍明确主墓遭严重盗掘；残存壁画不代表未盗。','ming-zhou-yi-excavation','主墓');
+ set('ming-yi-xuan','archaeological_evidence','考古汇表记王及元妃棺室被盗，继妃棺室保存完好；分别记录，不外推整墓所有棺室。','ming-yi-archaeology','王及元妃棺室');
+ set('ming-yi-ding','archaeological_evidence','考古汇表记王及元妃棺室被盗，次妃棺室保存完好。','ming-yi-archaeology','王及元妃棺室');
  function set(id,status,evidence,sid,scope='墓室'){const x=items.find(x=>x.id===id);x.disturbance={status,label:labels[status],evidence,scope,sourceIds:[sid],reviewedAt:'2026-10-03'};}
  set('wuyue-qian','documentary_record','案件通报确认2019年起盗掘，2021年公开通报；早期景区“保存完好”描述不能当作未盗证明。','robbery-qian');
  source('robbery-qingdong','孙殿英东陵盗宝案','故宫博物院','https://www.dpm.org.cn/lemmas/245498.html');

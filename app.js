@@ -15,7 +15,7 @@ const mapControlsStorageKey = "travel-map-controls-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "2.0.1";
+const appVersion = "2.2.1";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
@@ -821,7 +821,7 @@ function t(key) {
 }
 
 function defaultMapOverlays() {
-return { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, arcgisWater: false, arcgisWaterEsri: true, arcgisWaterHydroRivers: true, earthquakes: false, volcanoes: false, china5a: false, chinaAncientCapitals: false, imperialTombs: false, imperialTombsEra: "", greatWall: false, greatWallHistory: false, worldHeritage: false, highAltitude: false };
+return { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, arcgisWater: false, arcgisWaterEsri: true, arcgisWaterHydroRivers: true, earthquakes: false, volcanoes: false, china5a: false, chinaAncientCapitals: false, imperialTombs: false, imperialTombsIncludeFeudalKings: true, imperialTombsOnlyVisitableChambers: false, imperialTombsEra: "", greatWall: false, greatWallHistory: false, worldHeritage: false, highAltitude: false };
 }
 
 function normalizeMapOverlays(overlays = {}) {
@@ -831,6 +831,8 @@ function normalizeMapOverlays(overlays = {}) {
     populationDensity: Boolean(overlays.populationDensity),
     greatWall: Boolean(overlays.greatWall),
     imperialTombs: Boolean(overlays.imperialTombs),
+    imperialTombsIncludeFeudalKings: overlays.imperialTombsIncludeFeudalKings !== false,
+    imperialTombsOnlyVisitableChambers: overlays.imperialTombsOnlyVisitableChambers === true,
     imperialTombsEra: typeof overlays.imperialTombsEra === "string" ? overlays.imperialTombsEra : "",
     imperialTombsEras: overlays.imperialTombsEras && typeof overlays.imperialTombsEras === "object" && !Array.isArray(overlays.imperialTombsEras)
       ? Object.fromEntries(Object.entries(overlays.imperialTombsEras).map(([key,value]) => [key,value !== false])) : null,
@@ -7240,7 +7242,7 @@ function loadUsNpsBoundaries() {
 
 function loadChinaAncientCapitals() {
   if (chinaAncientCapitalsPromise) return chinaAncientCapitalsPromise;
-  chinaAncientCapitalsPromise = fetchJson("data/china-ancient-capitals.json")
+  chinaAncientCapitalsPromise = fetchJson("data/china-ancient-capitals.json?v=2")
     .then(async (base) => {
       try {
         const supplement = await fetchJson("data/western-regions-36.json?v=2");
@@ -8261,6 +8263,7 @@ function renderMapLibreMap() {
     setLoadingDebug("使用 MapLibre 显示底图", "pending");
     mapLibreMap = new maplibregl.Map({
       container: "leafletMap",
+      ...MapResolution.options(document, window),
       center,
       zoom: savedViewport?.zoom ?? 2,
       // Raster basemaps top out around z18 and the ArcGIS hydrology tiles at
@@ -8277,6 +8280,7 @@ function renderMapLibreMap() {
       attributionControl: true,
       style: mapLibreBaseStyle(provider),
     });
+    MapResolution.observe(mapLibreMap, window);
     mapLibreMap.dragRotate?.disable();
     mapLibreMap.touchZoomRotate?.disableRotation();
     mapLibreMap._travelMapProvider = provider;
@@ -12584,7 +12588,7 @@ function renderDataInventory() {
 
 function loadImperialTombChecklist() {
   if (imperialTombChecklistPromise) return imperialTombChecklistPromise;
-  imperialTombChecklistPromise = fetchJson("data/imperial-tombs/catalog.json?v=34").then(catalog => {
+  imperialTombChecklistPromise = fetchJson("data/imperial-tombs/catalog.json?v=59").then(catalog => {
     if (!Array.isArray(catalog.items)) throw new Error("Invalid imperial tomb catalog");
     imperialTombMapIndex=new Map(catalog.items.flatMap(item=>[item.name,...(item.aliases||[])].map(name=>[canonicalPlaceKey(name),item])));
     const parents = new Set(catalog.items.map(item => item.parentId).filter(Boolean));
@@ -12612,7 +12616,7 @@ function renderImperialTombChecklist() {
       const groupId = checklistGroupId(key, era);
       return `<details class="country-checklist" data-checklist-group="${escapeHtml(groupId)}" ${isChecklistGroupOpen(groupId) ? "open" : ""}>
         <summary><strong>${escapeHtml(era)}</strong><span>${items.filter(item => isChecklistItemDone(key, item.name)).length}/${items.length}</span></summary>
-        ${items.some(item => item.era === "先秦") ? `<p class="checklist-health">${en ? "Grouped by royal house and state within each period." : "时代内按王室、诸侯国及陵区分组；跨期陵区以主要墓葬年代归类。"}</p>` : ""}
+        ${items.some(item => item.era === "先秦") ? `<p class="checklist-health">${en ? "Grouped by royal house and state within each period." : "朝代内按王室、诸侯国及陵区分组；跨期陵区以主要墓葬年代归类。"}</p>` : ""}
         ${(() => {
           const sections = new Map();
           for (const item of items) {
@@ -13425,7 +13429,7 @@ function renderAncientCapitalsSection() {
     ? `${items.length} catalog records, ${chinaAncientCapitals?.siteCount || 0} map places`
     : `${items.length} 条目录记录，${chinaAncientCapitals?.siteCount || 0} 个地图地点`;
   return `<section class="theme-checklist ancient-capitals-checklist">
-    <div class="checklist-health"><span>${sourceText}</span><span>${currentLanguage === "en" ? "Grouped by era" : "按时代排列"}</span></div>
+    <div class="checklist-health"><span>${sourceText}</span><span>${currentLanguage === "en" ? "Grouped by dynasty" : "按朝代排列"}</span></div>
     ${chinaAncientCapitals.westernRegions ? `<p class="checklist-health">${currentLanguage === "en" ? `Western kingdoms: ${chinaAncientCapitals.westernRegions.mapped} mapped; ${chinaAncientCapitals.westernRegions.inferred || 0} inferred locations. Regional markers are not exact capitals.` : `西域36国：${chinaAncientCapitals.westernRegions.mapped}国均有地图参照点，其中${chinaAncientCapitals.westernRegions.inferred || 0}国为推测位置；概略点不代表都城确址。`} <a href="https://zh.wikipedia.org/wiki/西域三十六国" target="_blank" rel="noopener">${currentLanguage === "en" ? "List basis ↗" : "名单依据 ↗"}</a></p>` : ""}
     <div class="country-checklist-list">${blocks}</div>
   </section>`;
@@ -15584,7 +15588,7 @@ function renderAncientCapitalLegend() {
  el.addEventListener("change",event=>{const input=event.target;if(!input.hasAttribute("data-capital-all")&&!input.hasAttribute("data-capital-period"))return;const selection=state.mapOverlays.ancientCapitalPeriods ||= {};if(input.hasAttribute("data-capital-all"))el.querySelectorAll("[data-capital-period]:not(:disabled)").forEach(box=>{selection[box.dataset.capitalPeriod]=input.checked;});else selection[input.dataset.capitalPeriod]=input.checked;mapPointRenderRevision+=1;saveUiStateSoon();renderMapControls();renderGeoMap();});}
  el.hidden=!state.mapOverlays.chinaAncientCapitals;if(el.hidden)return;
  const items=chinaAncientCapitals.items||[],keys=HistoricalPeriods.keys,available=keys.filter(key=>items.some(item=>HistoricalPeriods.capitalPeriods(item).includes(key))),selection=state.mapOverlays.ancientCapitalPeriods||{},open=el.querySelector("details")?.open!==false;
- el.innerHTML='<strong>'+ (currentLanguage==="en"?"Ancient capitals":"古都")+'</strong><details class="great-wall-section" '+(open?'open':'')+'><summary><input type="checkbox" data-capital-all aria-label="全选古都时代"><i class="wall-disclosure" aria-hidden="true"></i><span>时代 · 全选</span></summary><div class="tomb-legend-options">'+keys.map(key=>'<label'+(!available.includes(key)?' title="暂无条目"':'')+'><input type="checkbox" data-capital-period="'+key+'" '+(!available.includes(key)?'disabled':selection[key]!==false?'checked':'')+'>'+HistoricalPeriods.legendIcon(HistoricalPeriods.capitalSvg('#fff'),HistoricalPeriods.colors[key])+'<span>'+key+'</span></label>').join('')+'</div></details>';
+ el.innerHTML='<strong>'+ (currentLanguage==="en"?"Ancient capitals":"古都")+'</strong><details class="great-wall-section" '+(open?'open':'')+'><summary><input type="checkbox" data-capital-all aria-label="全选古都朝代"><i class="wall-disclosure" aria-hidden="true"></i><span>朝代 · 全选</span></summary><div class="tomb-legend-options">'+keys.map(key=>'<label'+(!available.includes(key)?' title="暂无条目"':'')+'><input type="checkbox" data-capital-period="'+key+'" '+(!available.includes(key)?'disabled':selection[key]!==false?'checked':'')+'>'+HistoricalPeriods.legendIcon(HistoricalPeriods.capitalSvg('#fff'),HistoricalPeriods.colors[key])+'<span>'+key+'</span></label>').join('')+'</div></details>';
  const all=el.querySelector('[data-capital-all]'),count=available.filter(key=>selection[key]!==false).length;all.checked=available.length>0&&count===available.length;all.indeterminate=count>0&&count<available.length;all.disabled=!available.length;
 }
 

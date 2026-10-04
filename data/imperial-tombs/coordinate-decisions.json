@@ -48,6 +48,7 @@
     "tang-ding",
     "tang-qiao",
     "tang-tai",
+    "tang-jian",
     "tang-yuan",
     "tang-chong",
     "tang-feng",
@@ -140,8 +141,10 @@
     "chu-xiongjia",
     "chu-you",
     "qi-tian",
+    "han-huzhuang",
     "qin-east",
     "jin-hou",
+    "lu-nine",
     "lu-fangshan",
     "xichu-xiang-dongping",
     "xichu-xiang-wujiang",
@@ -149,6 +152,7 @@
     "nanyue-wen",
     "shang-fuhao",
     "zeng-yi",
+    "cai-hou",
     "guo-kings",
     "qi-jing",
     "qing-zhaoxi",
@@ -159,6 +163,8 @@
     "han-yuan-tiexie",
     "han-xianjie",
     "han-jing-east",
+    "han-shen",
+    "han-kang-east",
     "han-xuan",
     "wei-jiemin",
     "han-sanhan",
@@ -173,6 +179,7 @@
     "liao-yongan",
     "houjin-xian",
     "houhan-group",
+    "wei-gaoping-rudian",
     "tang-gong",
     "zhou-jincun",
     "zhou-zhoushan",
@@ -180,12 +187,14 @@
     "shu-sanxingdui-search",
     "shu-jinsha-search",
     "shu-commercial-boat",
+    "shu-majia",
     "rui-liangdaicun",
     "rui-liujiawa",
     "ba-dahekou",
     "peng-hengshui",
     "ba-xiaotianxi",
     "rong-majiayuan",
+    "rong-yimen",
     "zhou-lingpo",
     "early-liangzhu",
     "early-taosi",
@@ -201,8 +210,35 @@
     "cheshi-goubei",
     "tuyuhun-reshui",
     "jin-taizu-acheng",
+    "jin-chenglin-memorial",
     "modern-zhongshan",
     "modern-mao-hall",
+    "han-king-guangling",
+    "han-king-mancheng",
+    "han-chu-shizi",
+    "han-chu-guishan",
+    "han-chu-chuwangshan",
+    "han-chu-beidong",
+    "han-chu-tuolan",
+    "han-chu-woniu",
+    "han-chu-dongdong",
+    "han-chu-nandong",
+    "han-liang-kings",
+    "han-liang-xiao",
+    "han-liang-gong",
+    "han-king-dayun",
+    "han-king-jibei",
+    "han-lu-jiulong",
+    "han-changsha-kings",
+    "han-king-liuan",
+    "han-king-hejian",
+    "han-king-huainan",
+    "han-king-langya",
+    "han-king-tushan",
+    "han-king-dingtao",
+    "han-king-dabaotai",
+    "han-king-rencheng",
+    "han-king-changyi",
     "han-chan",
     "chu-yi",
     "shu-hui",
@@ -211,7 +247,40 @@
     "zhou-qing",
     "zhou-shun",
     "ming-jingtai",
-    "legend-shaohao"
+    "legend-shaohao",
+    "han-liuan-gaodadun",
+    "han-liuan-madadun",
+    "han-liuan-sanxingmiao",
+    "han-yanlou-cemetery",
+    "tuyuhun-qingzui-lamawan",
+    "tuyuhun-murongzhi",
+    "wuyue-yuanguan",
+    "chenghan-huaxi",
+    "shang-tang-bozhou",
+    "wu-gao-danyang",
+    "legend-nuwa-hongtong",
+    "legend-yan-baoji",
+    "legend-yan-gaoping",
+    "legend-taikang-area",
+    "han-zhongshan-jian",
+    "han-zhongshan-mu",
+    "han-zhongshan-huai",
+    "qi-shizi-zhaojia-region",
+    "ming-shu-cemetery",
+    "ming-shu-xi",
+    "ming-lujian",
+    "ming-jingjiang-south",
+    "ming-jingjiang-zhaohe",
+    "ming-jingjiang-ansu",
+    "ming-chu-zhao",
+    "ming-chu-cemetery",
+    "ming-chu-kang",
+    "ming-chu-duan",
+    "ming-chu-gong",
+    "ming-lu-huang",
+    "ming-ning-xian",
+    "ming-zhou-cemetery",
+    "ming-zhou-ding"
   ],
   "wikidataApproved": [
     "chen-wanan",
@@ -439,6 +508,11 @@
       "method": "高德API原始坐标采用项目GCJ-02迭代反解为WGS84；表中同名景陵/靖陵按行政区区别"
     },
     {
+      "id": "tang-jian",
+      "sourceId": "clear-location-tang-jian",
+      "method": "Google Maps唐建陵地理实体/g/11b631ywyw公开位置，与地球在线唐建陵定位34.60727,108.43042及陕西地方志所述武将山、石马岭交叉核对；以原地图点作为WGS84公里级区域估计，基准和墓室中心待实测"
+    },
+    {
       "id": "tang-yuan",
       "sourceId": "geo-hantang-table",
       "method": "高德API原始坐标采用项目GCJ-02迭代反解为WGS84；表中同名景陵/靖陵按行政区区别"
@@ -589,6 +663,16 @@
       "method": "根据考古人员所述武王墩位于李三孤堆正北14.6公里，从武王墩遗址代表点保持经度不变向南推算，纬度按每度约111.32公里换算"
     },
     {
+      "id": "han-huzhuang",
+      "sourceId": "huzhuang-place",
+      "method": "发掘资料确定胡庄村西北岗地，公开地图核对新郑胡庄村，取村域位置为周边陵区参考，不擅自设定两墓中心"
+    },
+    {
+      "id": "lu-nine",
+      "sourceId": "clear-location-lu-nine",
+      "method": "公开鲁诸公墓实体/g/1hc0gj0w1明确在山东嘉祥，结合汶上县志实地访查及济宁市文物名录所述鲁诸公墓分布，采用原地图点作WGS84区域估计；不指认九位鲁君逐墓"
+    },
+    {
       "id": "xichu-xiang-dongping",
       "sourceId": "geo-estimate-xiang-dongping",
       "method": "地方志明确遗址在霸王墓周围，以公布的分级经纬度按WGS84区域估计，不声称墓冢中心"
@@ -607,6 +691,11 @@
       "id": "nanyue-wen",
       "sourceId": "geo-osm-W298795705",
       "method": "OSM实体索引坐标，结合机构资料核对现存陵墓或原址展示区"
+    },
+    {
+      "id": "cai-hou",
+      "sourceId": "clear-location-cai-hou",
+      "method": "OSM定湖门WGS84点32.5787604,116.7676517作为参照；文献确定蔡侯墓在西门内北侧，参照公开遗址位置介绍所述距西大街约280米、墙脚40余米，在门内北侧约280米、向东约40米设置区域估计；未经遗址现场测绘"
     },
     {
       "id": "qi-jing",
@@ -647,6 +736,16 @@
       "id": "han-jing-east",
       "sourceId": "east-han-plan-coordinates",
       "method": "政府公开资料引用保护规划所列独立大墓中心经纬度，基准未明，按WGS84区域估计处理"
+    },
+    {
+      "id": "han-shen",
+      "sourceId": "east-han-layout-text",
+      "method": "以保护规划M1038、M1052为锚点，沿两点向东南的方向延伸研究所述800米／后续1900米间隔；直线延伸是假设，不能代替墓冢测绘"
+    },
+    {
+      "id": "han-kang-east",
+      "sourceId": "east-han-layout-text",
+      "method": "以保护规划M1038、M1052为锚点，沿两点向东南的方向延伸研究所述800米／后续1900米间隔；直线延伸是假设，不能代替墓冢测绘"
     },
     {
       "id": "han-xuan",
@@ -719,6 +818,11 @@
       "method": "原项目敏感目标表提供投影坐标，结合报告UTM记述和所在经度推断49N带，按WGS84逆算；带号与大地基准属推断，不作精测坐标"
     },
     {
+      "id": "wei-gaoping-rudian",
+      "sourceId": "clear-location-wei-gaoping-rudian",
+      "method": "公开高平陵实体/g/11hyl1cbfh位于汝阳，结合河南省文物局2018年保护范围所述茹店村东南陵冢；原地图点基准未说明，按WGS84公里级区域估计保存，未据地图名称确认曹叡墓主。"
+    },
+    {
       "id": "tang-gong",
       "sourceId": "geo-missing-gong",
       "method": "OSM陵墓实体坐标与河南省保护规划交叉核对，行政区采用偃师缑氏镇"
@@ -754,6 +858,11 @@
       "method": "度分秒转换，作为WGS84近似区域参考；提交页未明示坐标基准"
     },
     {
+      "id": "shu-majia",
+      "sourceId": "pudong-village-place",
+      "method": "博物馆资料记原马家乡普东村，公开地理实体核对新都普东村，作为原墓区域参考；升庵村现行组号和原墓中心另核"
+    },
+    {
       "id": "rui-liangdaicun",
       "sourceId": "geo-rui-liangdaicun",
       "method": "沿用项目GCJ-02迭代反解为WGS84；机构地望交叉核对，仅区域参考"
@@ -782,6 +891,11 @@
       "id": "rong-majiayuan",
       "sourceId": "geo-missing-majiayuan",
       "method": "文物局公开墓地经纬度按WGS84作区域估计，原坐标基准尚待核"
+    },
+    {
+      "id": "rong-yimen",
+      "sourceId": "yimenbao-place",
+      "method": "地方志的益门堡与原发掘简报益门村互核，以村域地理实体提供原墓所在区域；不推定旧厂界或某个墓坑中心"
     },
     {
       "id": "zhou-lingpo",
@@ -859,14 +973,149 @@
       "method": "读取OSM官方API，核对公园节点及附近金太祖陵节点，与机构所述上京遗址西侧交叉检查"
     },
     {
+      "id": "jin-chenglin-memorial",
+      "sourceId": "wanyan-village-map",
+      "method": "文旅资料确定纪念陵区在完颜村，以公开地理实体为村域参考；不把村域点称为已核实墓室"
+    },
+    {
       "id": "modern-zhongshan",
       "sourceId": "geo-more-Q1338405",
-      "method": "地理实体P625 Earth声明与机构所述所在地核对，采用区域参考位置"
+      "method": "已核对中山陵地理实体与陵园管理机构所述位置，采用陵寝建筑区域WGS84参考点"
     },
     {
       "id": "modern-mao-hall",
       "sourceId": "geo-more-Q1154819",
-      "method": "地理实体P625 Earth声明与机构所述所在地核对，采用区域参考位置"
+      "method": "已核对纪念堂地理实体与天安门管委会所述位置，采用建筑区域WGS84参考点"
+    },
+    {
+      "id": "han-king-guangling",
+      "sourceId": "geo-han-king-guangling",
+      "method": "高德POI使用项目迭代反解转换WGS84；与机构所述地址核对"
+    },
+    {
+      "id": "han-king-mancheng",
+      "sourceId": "geo-han-king-mancheng",
+      "method": "高德POI使用项目迭代反解转换WGS84；与机构所述地址核对"
+    },
+    {
+      "id": "han-chu-shizi",
+      "sourceId": "geo-han-chu-shizi",
+      "method": "高德POI使用项目迭代反解转换WGS84；与机构所述地址核对"
+    },
+    {
+      "id": "han-chu-guishan",
+      "sourceId": "geo-han-chu-guishan",
+      "method": "WGS84地理实体区域参考点，与机构所述地点核对"
+    },
+    {
+      "id": "han-chu-chuwangshan",
+      "sourceId": "geo-han-chu-chuwangshan",
+      "method": "高德POI使用项目迭代反解转换WGS84；与机构所述地址核对"
+    },
+    {
+      "id": "han-chu-beidong",
+      "sourceId": "clear-location-han-chu-beidong",
+      "method": "公开POI明确标注GCJ-02，使用项目迭代反解转换WGS84；核对遗址地址"
+    },
+    {
+      "id": "han-chu-tuolan",
+      "sourceId": "clear-location-han-chu-tuolan",
+      "method": "公开驮篮山汉文化遗址公园实体/g/1th6by2h与江苏地方志所述经开区东王庄及两山头楚王陵核对；以原地图点作WGS84区域估计，公园点不等于墓室实测位置"
+    },
+    {
+      "id": "han-chu-woniu",
+      "sourceId": "clear-location-han-chu-woniu",
+      "method": "公开卧牛山地理实体/g/1tlzy7sv明确为徐州泉山区山峰，结合楚王陵研究所述墓地在山体北麓，以原地图点作为WGS84区域估计，未取得逐墓中心"
+    },
+    {
+      "id": "han-chu-dongdong",
+      "sourceId": "geo-han-chu-dongdong",
+      "method": "高德POI使用项目迭代反解转换WGS84；与机构所述地址核对"
+    },
+    {
+      "id": "han-chu-nandong",
+      "sourceId": "nandong-baidu-region",
+      "method": "现场考察的湘江路北侧段山南坡与地图条目吻合；BD09MC多项式转BD09LL，再转GCJ02并迭代转WGS84；视窗中心仅作区域参考"
+    },
+    {
+      "id": "han-liang-kings",
+      "sourceId": "geo-han-liang-kings",
+      "method": "高德POI使用项目迭代反解转换WGS84；与机构所述地址核对"
+    },
+    {
+      "id": "han-liang-xiao",
+      "sourceId": "geo-han-liang-xiao",
+      "method": "WGS84地理实体区域参考点，与机构所述地点核对"
+    },
+    {
+      "id": "han-liang-gong",
+      "sourceId": "geo-han-liang-gong",
+      "method": "WGS84地理实体区域参考点，与机构所述地点核对"
+    },
+    {
+      "id": "han-king-dayun",
+      "sourceId": "geo-han-king-dayun",
+      "method": "高德POI使用项目迭代反解转换WGS84；与机构所述地址核对"
+    },
+    {
+      "id": "han-king-jibei",
+      "sourceId": "geo-han-king-jibei",
+      "method": "WGS84地理实体区域参考点，与机构所述地点核对"
+    },
+    {
+      "id": "han-lu-jiulong",
+      "sourceId": "clear-location-han-lu-jiulong",
+      "method": "公开地理实体WGS84区域参考点；核对遗址地址"
+    },
+    {
+      "id": "han-changsha-kings",
+      "sourceId": "clear-location-han-changsha-kings",
+      "method": "公开POI明确标注GCJ-02，使用项目迭代反解转换WGS84；核对遗址地址"
+    },
+    {
+      "id": "han-king-liuan",
+      "sourceId": "geo-han-king-liuan",
+      "method": "高德POI使用项目迭代反解转换WGS84；与机构所述地址核对"
+    },
+    {
+      "id": "han-king-hejian",
+      "sourceId": "geo-han-king-hejian",
+      "method": "高德POI使用项目迭代反解转换WGS84；与机构所述地址核对"
+    },
+    {
+      "id": "han-king-huainan",
+      "sourceId": "geo-han-king-huainan",
+      "method": "高德POI使用项目迭代反解转换WGS84；与机构所述地址核对"
+    },
+    {
+      "id": "han-king-langya",
+      "sourceId": "geo-han-king-langya",
+      "method": "高德POI使用项目迭代反解转换WGS84；与机构所述地址核对"
+    },
+    {
+      "id": "han-king-tushan",
+      "sourceId": "clear-location-han-king-tushan",
+      "method": "公开地理实体WGS84区域参考点；核对遗址地址"
+    },
+    {
+      "id": "han-king-dingtao",
+      "sourceId": "clear-location-han-king-dingtao",
+      "method": "公开POI明确标注GCJ-02，使用项目迭代反解转换WGS84；核对遗址地址"
+    },
+    {
+      "id": "han-king-dabaotai",
+      "sourceId": "geo-han-king-dabaotai",
+      "method": "高德POI使用项目迭代反解转换WGS84；与机构所述地址核对"
+    },
+    {
+      "id": "han-king-rencheng",
+      "sourceId": "clear-location-han-king-rencheng",
+      "method": "公开POI明确标注GCJ-02，使用项目迭代反解转换WGS84；核对遗址地址"
+    },
+    {
+      "id": "han-king-changyi",
+      "sourceId": "jinshandianzi-place",
+      "method": "博物馆资料确定红土山位于金山店子村东；公开地图核对巨野村址，以村域作周边原墓区域参考"
     },
     {
       "id": "shu-hui",
@@ -875,8 +1124,173 @@
     },
     {
       "id": "wu-jiang",
-      "sourceId": "geo-osm-791617219",
-      "method": "OSM索引区域点，结合目录机构资料核对地点"
+      "sourceId": "geo-wu-memorial",
+      "method": "高德纪念馆POI按GCJ-02迭代反解为WGS84；按用户要求作为孙权墓参观点"
+    },
+    {
+      "id": "han-liuan-gaodadun",
+      "sourceId": "liuan-plan-centres-2023",
+      "method": "将官方规划分别列出的南北墩经纬度转换为十进制度，取两点中点作为成对墓群区域代表点；原表未明示坐标基准，暂按WGS84区域估计保存，不主张精确测绘。"
+    },
+    {
+      "id": "han-liuan-madadun",
+      "sourceId": "liuan-plan-centres-2023",
+      "method": "将官方规划分别列出的南北墩经纬度转换为十进制度，取两点中点作为成对墓群区域代表点；原表未明示坐标基准，暂按WGS84区域估计保存，不主张精确测绘。"
+    },
+    {
+      "id": "han-liuan-sanxingmiao",
+      "sourceId": "liuan-plan-centres-2023",
+      "method": "将官方规划分别列出的南北墩经纬度转换为十进制度，取两点中点作为成对墓群区域代表点；原表未明示坐标基准，暂按WGS84区域估计保存，不主张精确测绘。"
+    },
+    {
+      "id": "han-yanlou-cemetery",
+      "sourceId": "east-han-layout-text",
+      "method": "依研究所述白草坡陵园东北约2.5公里推算；东北采用45度为浏览估计，实际陵园边界待核"
+    },
+    {
+      "id": "tuyuhun-qingzui-lamawan",
+      "sourceId": "wuwei-qingzui-survey-2024",
+      "method": "公开文物调查报告经纬度换算；原表未明确基准，按WGS84区域估计"
+    },
+    {
+      "id": "tuyuhun-murongzhi",
+      "sourceId": "murongzhi-excavation-2021",
+      "method": "署名发掘简报公开转载给出GPS位置；原刊和基准待复核，暂作区域估计"
+    },
+    {
+      "id": "wuyue-yuanguan",
+      "sourceId": "nanshan-cemetery-reference",
+      "method": "机构资料与报道核对玉皇山南麓南山陵园，采用公开陵园地理实体作区域参考"
+    },
+    {
+      "id": "chenghan-huaxi",
+      "sourceId": "chenghan-place",
+      "method": "公开高德原墓实体经GCJ-02转换，取0.001度区域参考"
+    },
+    {
+      "id": "shang-tang-bozhou",
+      "sourceId": "tang-bozhou-place",
+      "method": "规划记载与北岸汤王墓地图实体互核"
+    },
+    {
+      "id": "wu-gao-danyang",
+      "sourceId": "follow-sunjian-gps",
+      "method": "文献地望与公开地理实体互核，按WGS84约定取区域参考；非现场测绘"
+    },
+    {
+      "id": "legend-nuwa-hongtong",
+      "sourceId": "follow-nuwa-map",
+      "method": "文献地望与公开地理实体互核，按WGS84约定取区域参考；非现场测绘"
+    },
+    {
+      "id": "legend-yan-baoji",
+      "sourceId": "follow-yan-baoji-map",
+      "method": "文献地望与公开地理实体互核，按WGS84约定取区域参考；非现场测绘"
+    },
+    {
+      "id": "legend-yan-gaoping",
+      "sourceId": "follow-yan-gaoping-map",
+      "method": "文献地望与公开地理实体互核，按WGS84约定取区域参考；非现场测绘"
+    },
+    {
+      "id": "legend-taikang-area",
+      "sourceId": "follow-taikang-map",
+      "method": "文献地望与公开地理实体互核，按WGS84约定取区域参考；非现场测绘"
+    },
+    {
+      "id": "han-zhongshan-jian",
+      "sourceId": "han-zhongshan-jian-region",
+      "method": "机构资料确认原墓所在地村名，核对同名现代村域实体；取村域参考而非推定墓室中心"
+    },
+    {
+      "id": "han-zhongshan-mu",
+      "sourceId": "han-zhongshan-mu-region",
+      "method": "机构资料确认原墓所在地村名，核对同名现代村域实体；取村域参考而非推定墓室中心"
+    },
+    {
+      "id": "han-zhongshan-huai",
+      "sourceId": "bajiaolang-osm",
+      "method": "原墓资料的村名与现代地理节点一致；取村域代表点，覆盖村西南墓区，不推定具体墓坑"
+    },
+    {
+      "id": "qi-shizi-zhaojia-region",
+      "sourceId": "danyang-shizi-baidu",
+      "method": "实地考察确认两处相隔数百步；核对狮子湾地图条目与胡桥周边道路；BD09MC转BD09LL、GCJ02并迭代转WGS84，取区域锚点而非墓室中心"
+    },
+    {
+      "id": "ming-shu-cemetery",
+      "sourceId": "ming-shu-map",
+      "method": "官方地望与公开地理实体交叉核对，保留为区域参考点"
+    },
+    {
+      "id": "ming-shu-xi",
+      "sourceId": "ming-shu-xi-map",
+      "method": "官方地望与公开地理实体交叉核对，保留为区域参考点"
+    },
+    {
+      "id": "ming-lujian",
+      "sourceId": "ming-lujian-map",
+      "method": "官方地望与公开地理实体交叉核对，保留为区域参考点"
+    },
+    {
+      "id": "ming-jingjiang-south",
+      "sourceId": "jingjiang-museum-map",
+      "method": "核对管理机构地望及同名公开地理实体，取三位小数区域锚点"
+    },
+    {
+      "id": "ming-jingjiang-zhaohe",
+      "sourceId": "jingjiang-zhaohe-map",
+      "method": "核对管理机构地望及同名公开地理实体，取三位小数区域锚点"
+    },
+    {
+      "id": "ming-jingjiang-ansu",
+      "sourceId": "jingjiang-ansu-map",
+      "method": "核对管理机构地望及同名公开地理实体，取三位小数区域锚点"
+    },
+    {
+      "id": "ming-chu-zhao",
+      "sourceId": "chu-zhao-map",
+      "method": "核对管理机构地望及同名公开地理实体，取三位小数区域锚点"
+    },
+    {
+      "id": "ming-chu-cemetery",
+      "sourceId": "chu-zhao-map",
+      "method": "核对管理机构地望及同名公开地理实体，取三位小数区域锚点"
+    },
+    {
+      "id": "ming-chu-kang",
+      "sourceId": "chu-kang-map",
+      "method": "机构确认陵区及陵名，交叉核对公开地理实体，采用三位小数区域锚点"
+    },
+    {
+      "id": "ming-chu-duan",
+      "sourceId": "chu-duan-map",
+      "method": "机构确认陵区及陵名，交叉核对公开地理实体，采用三位小数区域锚点"
+    },
+    {
+      "id": "ming-chu-gong",
+      "sourceId": "chu-gong-map",
+      "method": "机构确认陵区及陵名，交叉核对公开地理实体，采用三位小数区域锚点"
+    },
+    {
+      "id": "ming-lu-huang",
+      "sourceId": "lu-huang-map",
+      "method": "文物部门与尚寨村地望交叉核对公开陵园实体，采用三位小数区域锚点"
+    },
+    {
+      "id": "ming-ning-xian",
+      "sourceId": "ning-quan-map",
+      "method": "文物部门原址与公开墓葬地理实体交叉核对，采用三位小数区域锚点"
+    },
+    {
+      "id": "ming-zhou-cemetery",
+      "sourceId": "ming-zhou-entity",
+      "method": "官方明山东坡地望与同名陵墓实体交叉核对，采用三位小数区域锚点"
+    },
+    {
+      "id": "ming-zhou-ding",
+      "sourceId": "ming-zhou-entity",
+      "method": "官方明山东坡地望与同名陵墓实体交叉核对，采用三位小数区域锚点"
     }
   ],
   "rejected": {

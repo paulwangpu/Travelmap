@@ -1,6 +1,49 @@
 const assert=require('node:assert/strict'),fs=require('node:fs');
 const {mappedItems,geojson}=require('../imperial-tombs.js'),c=require('../data/imperial-tombs/catalog.json');
 const low=mappedItems(c,'',5),high=mappedItems(c,'',10);
+const {isFeudalKing}=require('../imperial-tombs.js');
+const withoutKings=mappedItems(c,'',10,{}, {},false);
+assert(withoutKings.length<high.length);
+assert(withoutKings.every(x=>!isFeudalKing(x)));
+assert(withoutKings.some(x=>x.id==='qin-first'),'emperors remain visible');
+assert(high.some(x=>x.preqinClassification?.section==='诸侯国'));
+const addedKings=c.items.filter(x=>x.rulerCategory==='feudal_king');
+assert.equal(addedKings.length,83);
+assert.equal(addedKings.filter(x=>x.mapEligible).length,48);
+const liuanParent=c.items.find(x=>x.id==='han-liuan-cemetery');
+assert.equal(liuanParent.recordType,'group');
+assert.equal(c.items.find(x=>x.id==='han-king-liuan').parentId,liuanParent.id);
+const liuanPairs=['gaodadun','madadun','sanxingmiao'].map(k=>c.items.find(x=>x.id==='han-liuan-'+k));
+for(const x of liuanPairs){
+ assert.equal(x.parentId,liuanParent.id);assert.equal(x.recordType,'group');
+ assert.equal(x.coordinates.status,'estimated_wgs84');assert.equal(x.coordinates.sourceDatumExplicit,false);
+ assert(x.coordinates.original.includes('北墩')&&x.coordinates.original.includes('南墩'));
+ assert(x.coordinates.lat>31.73&&x.coordinates.lat<31.76&&x.coordinates.lng>116.57&&x.coordinates.lng<116.60);
+ assert(high.some(p=>p.id===x.id),'paired cemeteries must remain visible at detailed zoom');
+}
+assert.equal(new Set(liuanPairs.map(x=>x.coordinates.lat+','+x.coordinates.lng)).size,3);
+const rudian=c.items.find(x=>x.id==='wei-gaoping-rudian');
+assert.equal(rudian.recognition,'traditional');assert(rudian.relatedSiteIds.includes('wei-xizhu-m2'));
+assert(rudian.coordinates.lat>34.14&&rudian.coordinates.lat<34.17&&rudian.coordinates.lng>112.46&&rudian.coordinates.lng<112.49);
+for(const p of require('../data/imperial-tombs/clear-location-completion.json').locations){
+ const item=c.items.find(x=>x.id===p.id);
+ assert(item.mapEligible && item.coordinates.crs==='WGS84');
+ assert(c.sources.some(x=>x.id===item.coordinates.sourceId));
+ assert.equal(item.coordinates.target,p.target);
+ assert.equal(item.coordinates.status,p.estimated?'estimated_wgs84':'verified_wgs84');
+ if(p.estimated)assert(item.coordinates.estimate.basis&&item.coordinates.estimate.extent);
+ if(p.crs==='GCJ-02')assert(Math.abs(item.coordinates.lng-p.lng)>0.001,'GCJ point must be converted');
+}
+const luPoint=c.items.find(x=>x.id==='han-lu-jiulong').coordinates;
+assert(luPoint.lat>35.5 && luPoint.lat<35.52 && luPoint.lng>116.98 && luPoint.lng<117.01,'Han Lu cemetery, not Ming Lu cemetery');
+const remaining=require('../data/imperial-tombs/remaining-locations.json');
+assert.equal(remaining.mapCandidates,c.mapCandidateIds.length);
+assert.equal(remaining.missingIndependentCoordinates,c.items.filter(x=>!x.coordinates&&!x.locationReference).length);
+assert(remaining.unlocated.some(x=>x.id==='tang18'&&x.category==='overview_with_mapped_children'));
+assert(!remaining.unlocated.some(x=>x.id==='tang-jian'));
+assert(addedKings.every(x=>['秦汉','明'].includes(x.era)||x.id==='tuyuhun-murongzhi'));
+assert(!geojson(c,'',10,{}, {},()=>true,false).features.some(x=>isFeudalKing(c.items.find(y=>y.id===x.id))));
+assert(geojson(c,'',10,{}, {},()=>true,true).features.find(x=>x.id==='han-king-mancheng').properties.done,'re-enabling retains visited rendering');
 const xixia=c.items.filter(x=>/^xixia-\d$/.test(x.id));
 assert.equal(xixia.length,9);
 assert.equal(new Set(xixia.map(x=>{assert(x.mapEligible);assert.equal(x.coordinates.status,'verified_wgs84');return x.coordinates.lat+','+x.coordinates.lng;})).size,9);
@@ -12,8 +55,8 @@ for(const id of ['nantang-qin','nantang-shun','song-si','song-fu','song-chong','
  const x=c.items.find(x=>x.id===id);assert(!x.mapEligible);assert.equal(x.coordinates,null);assert.equal(x.locationReference.coordinates.crs,'WGS84');assert(x.locationReference.coordinates.sourceId);
 }
 assert.equal(c.items.find(x=>x.id==='nanhan-de').disturbance.status,'archaeological_evidence');
-const easternHanPoints=high.filter(x=>x.dynasty.startsWith('东汉'));
-assert.equal(easternHanPoints.length,14);
+const easternHanPoints=high.filter(x=>x.dynasty.startsWith('东汉')&&x.rulerCategory!=='feudal_king');
+assert.equal(easternHanPoints.length,17);
 for(const id of ['han-xian','jin-chongyang','jin-junyang','wei-jing','wei-ding','wei-jing2','wei-jiemin','later-tang-hui']){
  const x=c.items.find(x=>x.id===id);assert(x.mapEligible);assert.equal(x.coordinates.status,'estimated_wgs84');assert(x.coordinates.estimate.basis);assert.equal(x.coordinates.precision.horizontalAccuracyMeters,null);
 }
@@ -43,13 +86,13 @@ const html=fs.readFileSync(require.resolve('../index.html'),'utf8');
 assert.match(html,/compact-toggle-pair[^]*?showAncientCapitalsOnMap[^]*?showImperialTombsOnMap/);
 assert.match(html,/hazard-toggle-pair[^]*?showArcgisWaterOnMap[^]*?水系[^]*?showGreatWallOnMap/);
 for(const id of ['showImperialTombsOnMap','showGreatWallOnMap','showArcgisWaterOnMap'])assert.equal(html.split(`id="${id}"`).length,2);
-const sw=fs.readFileSync(require.resolve('../sw.js'),'utf8');assert(sw.includes('imperial-tombs.js?v=57'));assert(sw.includes('data/imperial-tombs/catalog.json?v=34'));
+const sw=fs.readFileSync(require.resolve('../sw.js'),'utf8');assert(sw.includes(html.match(/imperial-tombs\.js\?v=\d+/)[0]));assert(sw.includes(fs.readFileSync(require.resolve('../imperial-tombs.js'),'utf8').match(/data\/imperial-tombs\/catalog\.json\?v=\d+/)[0]));
 console.log(`PASS: ${low.length} overview / ${high.length} detailed points; era filtering, invalid coordinate exclusion, hierarchy, layout and offline assets`);
 
 assert.equal(Object.keys(c.summary)[0],'传说时代');
 for(const id of ['wu-jiang','shu-hui','han-chan','han-ping','han-kang','han-yi','zhou-song','zhou-qing','zhou-shun','ming-jingtai','tang-tai','tang-jing2'])assert(high.some(x=>x.id===id),id+' must have a map point');
 assert(geojson(c).features.find(x=>x.id==='wu-jiang').properties.name.includes('孙权'));
-assert(c.items.find(x=>x.id==='wu-jiang').coordinates.target.includes('非已确认墓室'));
+assert(c.items.find(x=>x.id==='wu-jiang').coordinates.target.includes('非孙权墓室'));
 const ping=c.items.find(x=>x.id==='han-ping').coordinates;
 assert(Math.abs(ping.lat-34.36182)<0.0002&&Math.abs(ping.lng-108.64036)<0.0002,'GCJ conversion agrees with independent OSM regional point');
 const decisions=require('../data/imperial-tombs/coordinate-decisions.json');

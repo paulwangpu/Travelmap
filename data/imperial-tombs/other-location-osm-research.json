@@ -1,0 +1,133 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-04T07:23:06Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 2467826657,
+  "lat": 32.5787604,
+  "lon": 116.7676517,
+  "tags": {
+    "barrier": "sally_port",
+    "bicycle": "yes",
+    "foot": "yes",
+    "motorcar": "yes",
+    "motorcycle": "yes",
+    "name": "定湖门",
+    "name:en": "Dinghu Gate"
+  }
+},
+{
+  "type": "way",
+  "id": 234563961,
+  "center": {
+    "lat": 32.5812503,
+    "lon": 116.7718945
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "定湖巷"
+  }
+},
+{
+  "type": "way",
+  "id": 407167660,
+  "center": {
+    "lat": 32.5716085,
+    "lon": 116.7640391
+  },
+  "tags": {
+    "highway": "trunk",
+    "name": "定湖大道",
+    "name:en": "Dinghu Avenue",
+    "ref": "G237"
+  }
+},
+{
+  "type": "way",
+  "id": 468749071,
+  "center": {
+    "lat": 32.5761299,
+    "lon": 116.7605904
+  },
+  "tags": {
+    "landuse": "residential",
+    "name": "定湖花园"
+  }
+},
+{
+  "type": "way",
+  "id": 539153017,
+  "center": {
+    "lat": 35.2341968,
+    "lon": 116.2256003
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "金山公园",
+    "natural": "scrub"
+  }
+},
+{
+  "type": "way",
+  "id": 1461299898,
+  "center": {
+    "lat": 32.5583289,
+    "lon": 116.7672041
+  },
+  "tags": {
+    "highway": "primary",
+    "name": "定湖大道",
+    "name:en": "Dinghu Avenue",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1487230374,
+  "center": {
+    "lat": 32.5788318,
+    "lon": 116.7693292
+  },
+  "tags": {
+    "amenity": "bus_station",
+    "bus": "yes",
+    "name": "西门公交总站",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "way",
+  "id": 1507585956,
+  "center": {
+    "lat": 32.5581528,
+    "lon": 116.7671317
+  },
+  "tags": {
+    "highway": "primary",
+    "name": "定湖大道",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1550781981,
+  "center": {
+    "lat": 35.2280555,
+    "lon": 116.2251389
+  },
+  "tags": {
+    "alt_name": "金山旅游区;金山景区",
+    "leisure": "nature_reserve",
+    "name": "巨野金山省级地质公园",
+    "short_name": "金山地质公园"
+  }
+}
+
+  ]
+}

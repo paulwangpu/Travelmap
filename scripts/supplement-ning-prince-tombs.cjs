@@ -1,0 +1,7 @@
+module.exports=({add,source})=>{
+ source('ning-tombs-official','朱权墓与乐安王墓：文物安全责任公示','南昌市文化广电旅游局','https://wgxj.nc.gov.cn/wgxlj/tzgg/202112/f67f7ad0ff71464083db7e733a954db6.shtml','同一国保项目含两个不同墓址：石埠镇璜源村朱家自然村缑岭山，望城镇幸福村莲花自然村花坑山。');
+ source('ning-quan-map','宁王朱权墓地理实体','OpenStreetMap／Mapcarta','https://mapcarta.com/W1312221437','OSM way1312221437：28.66549,115.6703；与石埠璜源村缑岭东麓官方地望核对。');
+ const x=add('ming-ning-xian','宁献王朱权墓','明','明（宁藩）','宁献王朱权','江西省南昌市新建区石埠镇璜源村朱家自然村缑岭山','ning-tombs-official,ning-quan-map',{rulerCategory:'feudal_king',aliases:['宁王朱权墓','朱权墓'],evidence:'文物部门单列墓葬1座及华表一对，确认原址；同一保护项目的乐安王墓在另一村，不混为陵群点。',reviewTasks:['核对原墓室入口与开放公告；补核圹志生卒']});
+ x.coordinates={lat:28.665,lng:115.670,crs:'WGS84',status:'estimated_wgs84',sourceId:'ning-quan-map',target:'宁献王朱权墓陵园区域',original:'OSM way1312221437：28.66549,115.6703',method:'文物部门原址与公开墓葬地理实体交叉核对，采用三位小数区域锚点',sourceDatumExplicit:false,precision:{sourceUnit:'degree',resolutionDegrees:.001,horizontalAccuracyMeters:null},limitation:'陵园附近区域估计，非实测地宫入口；不能用于另一处乐安王墓。',estimate:{basis:'文物责任公示原址与同名地理实体',extent:'缑岭东麓该陵园附近约500米参考范围',confidence:'regional',reviewedAt:'2026-10-04'}};x.mapEligible=true;x.mapReason=x.coordinates.target;
+ add('ming-ning-lean','乐安王墓','明','明（宁藩）','乐安王','江西省南昌市新建区望城镇幸福村莲花自然村花坑山','ning-tombs-official',{rulerCategory:'feudal_king',evidence:'文物部门与朱权墓并列确认另一墓址，单独建条目；不共享朱权墓地图位置。',mapReason:'花坑山单墓位置尚未配准；不得复制石埠镇朱权墓坐标',reviewTasks:['核对乐安王圹志与墓主人名、生卒；配准花坑山墓址']});
+};

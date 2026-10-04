@@ -10,6 +10,8 @@ const htmlMatch = html.match(/id="appVersion"[^>]*>\s*v?([^<\s]+)/);
 const appVersion = appMatch?.[1] || "";
 const htmlVersion = htmlMatch?.[1] || "";
 const failures = [];
+const packageVersion = JSON.parse(fs.readFileSync("package.json", "utf8")).version;
+if (packageVersion !== appVersion) failures.push(`package.json version ${packageVersion} does not match app.js version ${appVersion}`);
 
 if (!appVersion) failures.push("app.js appVersion not found");
 if (!htmlVersion) failures.push("index.html #appVersion not found");

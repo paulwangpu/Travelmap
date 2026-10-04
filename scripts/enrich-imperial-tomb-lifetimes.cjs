@@ -11,6 +11,13 @@ module.exports=({items,source,sources})=>{
  const easternHanDates=[['汉明帝刘庄',28,75,130513],['汉章帝刘炟',57,88,473498],['汉和帝刘肇',79,106,409011],['汉殇帝刘隆',105,106,77403],['汉质帝刘缵',138,146,626280],['汉桓帝刘志',132,168,614805]];
  for(const [label,b,d,res] of easternHanDates)source('east-han-life-'+res,label+'生卒资料与纪年语句','中国哲学书电子化计划','https://ctext.org/datawiki.pl?if=gb&res='+res,'人物日期资料，不作为陵墓归属依据；采用换算后的公历年份。');
  const overrides={
+  '鲁荒王朱檀':[1370,1389,'lu-huang-official'],
+  '楚昭王朱桢':[1364,1424,'chu-zhao-official'],
+  '蜀僖王朱友壎':[1409,1434,'ming-shu-local'],
+  '潞简王朱翊镠':[1568,1614,'ming-lujian-official'],
+  '中山怀王刘修':[null,-55,'han-feudal-dingzhou'],
+  '齐宣帝萧承之（追尊）':[null,447,'qi-xuan-life'],
+  '孙坚（传统墓主）':[155,192,'follow-sunjian'],
   '孙中山':[1866,1925,'modern-sun-life'],
   '毛泽东':[1893,1976,'modern-mao-life'],
   '金德宗完颜宗干（追尊后削号）':[null,1141,'beijing-jin-history'],
@@ -33,6 +40,8 @@ module.exports=({items,source,sources})=>{
   x.biographies=x.occupants.map(label=>{
    if(/传说/.test(label))return {label,birthYear:null,deathYear:null,status:'legendary',lifespanText:'传说人物，生卒不详',sourceIds:[]};
    if(/未确定|推测|逐位待核/.test(label))return {label,birthYear:null,deathYear:null,status:'unresolved',lifespanText:'墓主未确定，生卒待核',sourceIds:[]};
+   if(label==='中山靖王刘胜')overrides[label]=[null,-113,'han-feudal-mancheng'];
+   if(label==='楚襄王刘注')overrides[label]=[null,-116,'han-feudal-guishan'];
    const r=indexed.get(label),override=overrides[label];
    let sid=null;if(r?.entity){sid='bio-'+r.entity;if(!sources.some(s=>s.id===sid))source(sid,(r.resolvedTitle||label)+'：生卒日期语句','Wikidata人物数据库','https://www.wikidata.org/wiki/'+r.entity,'P569/P570；仅显示年份，保留原始精度、历法及引用于biography-research.json。人物索引不是陵墓归属证据。');}
    const b=override?override[0]:r?.birth?.year??null,d=override?override[1]:r?.death?.year??null;
@@ -42,6 +51,7 @@ module.exports=({items,source,sources})=>{
    if(label==='唐太宗李世民'){p.birthYear=null;p.birthYearAlternatives=[598,599];p.lifespanText='598或599—649年';p.disputes=['索引为598年，数字唐陵机构简介为599年，保留生年异说。'];p.sourceIds.push('tang');}
    if(label==='汉高祖刘邦'){p.birthYearAlternatives=[-256,-247];p.lifespanText='前256（另说前247）—前195年';p.disputes=['陕西地方志采用前256年；另有前247年说，生年异说保留。'];p.sourceIds.push('qin-second-history','liu-bang-dates');}
    if(label==='妇好'){p.birthYear=null;p.deathYear=null;p.lifespanText='生卒不详（生活于前13世纪中后期）';p.status='institution_biography';p.sourceIds.push('royal-shang-fuhao');p.disputes=['索引的前1200年为约略年代，不能作为精确卒年；依首都博物馆资料只给生活年代。'];}
+   if(label==='孙坚（传统墓主）'){p.deathYearAlternatives=[191,192];p.lifespanText='155—191或192年';p.disputes=['地方报道采用192年，另有191年纪年说；人物日期不证明丹阳高陵墓主。'];}
    if(label==='越王允常（疑似）'){p.birthYear=null;p.deathYear=-497;p.sourceIds.push('preqin-yue-yinshan');p.lifespanText='生年不详—前497年（疑似墓主）';p.status='institution_biography';p.disputes=['生年缺少直接传记证据，暂不显示；柯桥机构资料记卒年前497，但人物年表不用于证明印山陵归属。'];}
    if(label==='朱以海')p.disputes=['人物索引的卒年1654与金门机构、圹志资料不符，采用机构生卒1618—1662年。'];
    return p;

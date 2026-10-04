@@ -1,8 +1,8 @@
 {
-  "reviewedAt": "2026-10-03",
+  "reviewedAt": "2026-10-04",
   "policy": "政权目录空白不等于无陵；人物无匹配不等于无墓；有一条不等于完整。先用君主工作名单和公布文保名录反查，再据原址证据定位。",
-  "totalRecords": 290,
-  "totalMapCandidates": 210,
+  "totalRecords": 387,
+  "totalMapCandidates": 279,
   "matrix": [
     {
       "era": "传说时代",
@@ -38,9 +38,9 @@
     {
       "era": "先秦",
       "dynasty": "商",
-      "records": 12,
-      "singleRecords": 11,
-      "mapCandidates": 2,
+      "records": 13,
+      "singleRecords": 12,
+      "mapCandidates": 3,
       "sharedLocations": 10,
       "unlocated": 0,
       "status": "已有条目，君主及遗址覆盖未判定完整",
@@ -56,7 +56,8 @@
         "shang-m1500",
         "shang-m1550",
         "shang-m1567",
-        "shang-m27"
+        "shang-m27",
+        "shang-tang-bozhou"
       ]
     },
     {
@@ -195,9 +196,9 @@
       "dynasty": "韩",
       "records": 1,
       "singleRecords": 0,
-      "mapCandidates": 0,
+      "mapCandidates": 1,
       "sharedLocations": 0,
-      "unlocated": 1,
+      "unlocated": 0,
       "status": "已有条目，君主及遗址覆盖未判定完整",
       "recordIds": [
         "han-huzhuang"
@@ -245,9 +246,9 @@
       "dynasty": "鲁",
       "records": 2,
       "singleRecords": 0,
-      "mapCandidates": 1,
+      "mapCandidates": 2,
       "sharedLocations": 0,
-      "unlocated": 1,
+      "unlocated": 0,
       "status": "已有条目，君主及遗址覆盖未判定完整",
       "recordIds": [
         "lu-nine",
@@ -259,9 +260,9 @@
       "dynasty": "蔡",
       "records": 1,
       "singleRecords": 1,
-      "mapCandidates": 0,
+      "mapCandidates": 1,
       "sharedLocations": 0,
-      "unlocated": 1,
+      "unlocated": 0,
       "status": "已有条目，君主及遗址覆盖未判定完整",
       "recordIds": [
         "cai-hou"
@@ -443,9 +444,9 @@
       "dynasty": "古蜀",
       "records": 4,
       "singleRecords": 2,
-      "mapCandidates": 3,
+      "mapCandidates": 4,
       "sharedLocations": 0,
-      "unlocated": 1,
+      "unlocated": 0,
       "status": "已有条目，君主及遗址覆盖未判定完整",
       "recordIds": [
         "shu-sanxingdui-search",
@@ -472,9 +473,9 @@
       "dynasty": "西戎",
       "records": 2,
       "singleRecords": 1,
-      "mapCandidates": 1,
+      "mapCandidates": 2,
       "sharedLocations": 0,
-      "unlocated": 1,
+      "unlocated": 0,
       "status": "已有条目，君主及遗址覆盖未判定完整",
       "recordIds": [
         "rong-majiayuan",
@@ -499,9 +500,9 @@
     {
       "era": "秦汉",
       "dynasty": "西汉",
-      "records": 13,
-      "singleRecords": 12,
-      "mapCandidates": 12,
+      "records": 14,
+      "singleRecords": 13,
+      "mapCandidates": 13,
       "sharedLocations": 0,
       "unlocated": 1,
       "status": "已有条目，君主及遗址覆盖未判定完整",
@@ -518,7 +519,8 @@
         "han-yan",
         "han-yi",
         "han-kang",
-        "han-haihun"
+        "han-haihun",
+        "han-zhongshan-huai"
       ]
     },
     {
@@ -535,11 +537,11 @@
     {
       "era": "秦汉",
       "dynasty": "东汉",
-      "records": 16,
-      "singleRecords": 16,
-      "mapCandidates": 13,
-      "sharedLocations": 0,
-      "unlocated": 3,
+      "records": 19,
+      "singleRecords": 18,
+      "mapCandidates": 18,
+      "sharedLocations": 1,
+      "unlocated": 0,
       "status": "已有条目，君主及遗址覆盖未判定完整",
       "recordIds": [
         "han-yuan",
@@ -557,7 +559,10 @@
         "han-m1048",
         "han-m1055",
         "han-m1071",
-        "han-chan"
+        "han-chan",
+        "han-yanlou-cemetery",
+        "han-zhongshan-jian",
+        "han-zhongshan-mu"
       ]
     },
     {
@@ -603,9 +608,9 @@
       "dynasty": "曹魏",
       "records": 4,
       "singleRecords": 4,
-      "mapCandidates": 2,
+      "mapCandidates": 3,
       "sharedLocations": 0,
-      "unlocated": 2,
+      "unlocated": 1,
       "status": "已有条目，君主及遗址覆盖未判定完整",
       "recordIds": [
         "wei-gao",
@@ -684,15 +689,17 @@
     {
       "era": "魏晋南北朝",
       "dynasty": "南齐",
-      "records": 2,
-      "singleRecords": 1,
-      "mapCandidates": 0,
-      "sharedLocations": 0,
-      "unlocated": 2,
+      "records": 4,
+      "singleRecords": 2,
+      "mapCandidates": 1,
+      "sharedLocations": 2,
+      "unlocated": 1,
       "status": "已有条目，君主及遗址覆盖未判定完整",
       "recordIds": [
         "southern-danyang",
-        "qi-taian"
+        "qi-taian",
+        "qi-shizi-zhaojia-region",
+        "qi-xuan-yongan"
       ]
     },
     {
@@ -789,13 +796,15 @@
     {
       "era": "魏晋南北朝",
       "dynasty": "成汉",
-      "records": 0,
-      "singleRecords": 0,
-      "mapCandidates": 0,
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
       "sharedLocations": 0,
       "unlocated": 0,
-      "status": "目录空白，需查君主与考古名录",
-      "recordIds": []
+      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "recordIds": [
+        "chenghan-huaxi"
+      ]
     },
     {
       "era": "魏晋南北朝",
@@ -981,9 +990,9 @@
       "dynasty": "唐",
       "records": 21,
       "singleRecords": 20,
-      "mapCandidates": 19,
+      "mapCandidates": 20,
       "sharedLocations": 0,
-      "unlocated": 2,
+      "unlocated": 1,
       "status": "已有条目，君主及遗址覆盖未判定完整",
       "recordIds": [
         "tang18",
@@ -1121,14 +1130,15 @@
     {
       "era": "五代十国",
       "dynasty": "吴越",
-      "records": 1,
-      "singleRecords": 1,
-      "mapCandidates": 1,
+      "records": 2,
+      "singleRecords": 2,
+      "mapCandidates": 2,
       "sharedLocations": 0,
       "unlocated": 0,
       "status": "已有条目，君主及遗址覆盖未判定完整",
       "recordIds": [
-        "wuyue-qian"
+        "wuyue-qian",
+        "wuyue-yuanguan"
       ]
     },
     {
@@ -1283,9 +1293,9 @@
       "dynasty": "金",
       "records": 28,
       "singleRecords": 26,
-      "mapCandidates": 2,
+      "mapCandidates": 3,
       "sharedLocations": 19,
-      "unlocated": 7,
+      "unlocated": 6,
       "status": "已有条目，君主及遗址覆盖未判定完整",
       "recordIds": [
         "jin-group",
@@ -1475,6 +1485,521 @@
         "qing-cian",
         "qing-xiaodong"
       ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "西汉·广陵国",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "han-king-guangling"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "西汉·中山国",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "han-king-mancheng"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "西汉·楚国",
+      "records": 8,
+      "singleRecords": 3,
+      "mapCandidates": 8,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "han-chu-shizi",
+        "han-chu-guishan",
+        "han-chu-chuwangshan",
+        "han-chu-beidong",
+        "han-chu-tuolan",
+        "han-chu-woniu",
+        "han-chu-dongdong",
+        "han-chu-nandong"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "西汉·梁国",
+      "records": 3,
+      "singleRecords": 2,
+      "mapCandidates": 3,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "han-liang-kings",
+        "han-liang-xiao",
+        "han-liang-gong"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "西汉·江都国",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "han-king-dayun"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "西汉·济北国",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "han-king-jibei"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "西汉·鲁国",
+      "records": 1,
+      "singleRecords": 0,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "han-lu-jiulong"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "西汉·齐国",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 1,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "han-qi-dawu"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "汉·长沙国",
+      "records": 1,
+      "singleRecords": 0,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "han-changsha-kings"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "西汉·六安国",
+      "records": 5,
+      "singleRecords": 1,
+      "mapCandidates": 4,
+      "sharedLocations": 0,
+      "unlocated": 1,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "han-king-liuan",
+        "han-liuan-cemetery",
+        "han-liuan-gaodadun",
+        "han-liuan-madadun",
+        "han-liuan-sanxingmiao"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "西汉·河间国",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "han-king-hejian"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "西汉·淮南国",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "han-king-huainan"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "东汉·琅琊国",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "han-king-langya"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "东汉·楚国／彭城国（归属待核）",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "han-king-tushan"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "西汉·定陶国（归属待核）",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "han-king-dingtao"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "西汉·广阳国",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "han-king-dabaotai"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "东汉·任城国",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "han-king-rencheng"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "西汉·昌邑国",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "han-king-changyi"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "两汉·中山国",
+      "records": 1,
+      "singleRecords": 0,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 1,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "han-zhongshan-dingzhou"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "唐代吐谷浑王族",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "tuyuhun-murongzhi"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "东汉",
+      "records": 2,
+      "singleRecords": 2,
+      "mapCandidates": 2,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "han-zhongshan-jian",
+        "han-zhongshan-mu"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "西汉",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "han-zhongshan-huai"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "明（蜀藩）",
+      "records": 3,
+      "singleRecords": 2,
+      "mapCandidates": 2,
+      "sharedLocations": 0,
+      "unlocated": 1,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "ming-shu-cemetery",
+        "ming-shu-xi",
+        "ming-shu-zhao"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "明（潞藩）",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 0,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "ming-lujian"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "明（靖江藩）",
+      "records": 12,
+      "singleRecords": 11,
+      "mapCandidates": 3,
+      "sharedLocations": 0,
+      "unlocated": 9,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "ming-jingjiang-south",
+        "ming-jingjiang-daoxi",
+        "ming-jingjiang-huaishun",
+        "ming-jingjiang-zhuangjian",
+        "ming-jingjiang-zhaohe",
+        "ming-jingjiang-duanyi",
+        "ming-jingjiang-ansu",
+        "ming-jingjiang-gonghui",
+        "ming-jingjiang-kangxi",
+        "ming-jingjiang-wenyu",
+        "ming-jingjiang-xianding",
+        "ming-jingjiang-rongmu"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "明（楚藩）",
+      "records": 10,
+      "singleRecords": 9,
+      "mapCandidates": 5,
+      "sharedLocations": 0,
+      "unlocated": 5,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "ming-chu-zhao",
+        "ming-chu-cemetery",
+        "ming-chu-zhuang",
+        "ming-chu-xian",
+        "ming-chu-kang",
+        "ming-chu-jing",
+        "ming-chu-duan",
+        "ming-chu-min",
+        "ming-chu-gong",
+        "ming-chu-ding"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "明（鲁藩）",
+      "records": 3,
+      "singleRecords": 3,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 2,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "ming-lu-huang",
+        "ming-lu-jing",
+        "ming-lu-juye"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "明（晋藩）",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 1,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "ming-jin-duan"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "明（梁藩）",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 1,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "ming-liang-zhuang"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "明（湘藩）",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 1,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "ming-xiang-xian"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "明（辽藩）",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 1,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "ming-liao-jian"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "明（郢藩）",
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 1,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "ming-ying-jing"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "明（宁藩）",
+      "records": 2,
+      "singleRecords": 2,
+      "mapCandidates": 1,
+      "sharedLocations": 0,
+      "unlocated": 1,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "ming-ning-xian",
+        "ming-ning-lean"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "明（周藩）",
+      "records": 5,
+      "singleRecords": 4,
+      "mapCandidates": 2,
+      "sharedLocations": 0,
+      "unlocated": 3,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "ming-zhou-cemetery",
+        "ming-zhou-ding",
+        "ming-zhou-gong",
+        "ming-zhou-duan",
+        "ming-zhou-yi"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "明（益藩）",
+      "records": 4,
+      "singleRecords": 4,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 4,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "ming-yi-duan",
+        "ming-yi-zhuang",
+        "ming-yi-xuan",
+        "ming-yi-ding"
+      ]
+    },
+    {
+      "era": "秦汉",
+      "dynasty": "明（德藩）",
+      "records": 2,
+      "singleRecords": 1,
+      "mapCandidates": 0,
+      "sharedLocations": 0,
+      "unlocated": 2,
+      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "recordIds": [
+        "ming-de-cemetery",
+        "ming-de-zhuang"
+      ]
     }
   ],
   "rulerChecks": [
@@ -1656,8 +2181,10 @@
       "dynasty": "吴越",
       "name": "钱元瓘",
       "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
-      "matchedRecordIds": [],
-      "status": "未匹配陵墓记录，主动查葬地文献"
+      "matchedRecordIds": [
+        "wuyue-yuanguan"
+      ],
+      "status": "有独立或区域地图参考"
     },
     {
       "dynasty": "吴越",

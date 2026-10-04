@@ -1,0 +1,209 @@
+{
+  "reviewedAt": "2026-10-04",
+  "locations": [
+    {
+      "id": "han-chu-beidong",
+      "lat": 34.333184,
+      "lng": 117.227234,
+      "crs": "GCJ-02",
+      "target": "北洞山汉墓遗址景区参考点",
+      "publisher": "携程公开景点地理数据",
+      "url": "https://gs.ctrip.com/html5/you/sight/xuzhou230/133787.html",
+      "note": "页面ggCoordinate明确标注GCJ02；地点与徐州公共资源交易平台2025年北洞山保护工程所述铜山茅村洞山核对。景区参考点，不表示墓室实测中心，不采用旅游页面的墓主断言。"
+    },
+    {
+      "id": "han-lu-jiulong",
+      "lat": 35.5075,
+      "lng": 116.9930556,
+      "crs": "WGS84",
+      "resolution": 0.0001,
+      "target": "曲阜九龙山汉鲁王墓群区域参考点",
+      "publisher": "Wikidata地理实体",
+      "url": "https://www.wikidata.org/wiki/Q11133431",
+      "note": "P625地球坐标；与曲阜文保资料及山东地方志所述九龙山南坡核对。指向汉鲁王墓群，不是邹城明鲁王陵；不拆分五座墓室位置。"
+    },
+    {
+      "id": "han-king-rencheng",
+      "lat": 35.445234,
+      "lng": 116.567405,
+      "crs": "GCJ-02",
+      "target": "萧王庄墓群（任城王陵）区域参考点",
+      "publisher": "高德地图公开POI",
+      "url": "https://www.amap.com/place/B02190ABB8",
+      "note": "高德GCJ-02点，地址济宁任城拥军路西150米；与李营肖汪庄/萧王庄墓群资料核对。不表示某一墓室中心；保留墓主对应争议。"
+    },
+    {
+      "id": "han-king-tushan",
+      "lat": 34.25308,
+      "lng": 117.18134,
+      "crs": "WGS84",
+      "resolution": 0.00001,
+      "target": "土山汉墓原址保护展示区参考点",
+      "publisher": "OpenStreetMap地理实体（Mapcarta公开镜像）",
+      "url": "https://mapcarta.com/W793694478",
+      "note": "镜像列出OSM way 793694478的WGS84地理点；与徐州博物馆北侧土山原址展示建筑核对。点指向墓区，不是二号墓室实测中心，也不是博物馆主馆入口。"
+    },
+    {
+      "id": "han-king-dingtao",
+      "lat": 35.054345,
+      "lng": 115.426041,
+      "crs": "GCJ-02",
+      "target": "定陶汉墓博物馆原址保护展示区参考点",
+      "publisher": "携程公开景点地理数据",
+      "url": "https://gs.ctrip.com/html5/you/sight/heze708/145642808.html",
+      "note": "页面ggCoordinate明确标注GCJ02；与马集灵圣湖汉墓原址保护及筹建博物馆资料核对。指向保护展示区，不是M2墓室实测中心；不据坐标确定墓主身份。"
+    },
+    {
+      "id": "han-changsha-kings",
+      "lat": 28.267455,
+      "lng": 112.938998,
+      "crs": "GCJ-02",
+      "target": "汉长沙国王陵考古遗址公园（谷山片区）参考点",
+      "publisher": "携程公开景点地理数据",
+      "url": "https://gs.ctrip.com/html5/you/sight/changsha148/145649737.html",
+      "note": "ggCoordinate明确为GCJ02；银杉路1375号遗址公园，与同名地铁站点区分。只是多片陵群的谷山片区参考点，不表示15公里陵区的中心或所有长沙王墓的位置。",
+      "supportingSources": [
+        {
+          "id": "clear-changsha-2023",
+          "title": "长沙王陵墓群十年考古新发现",
+          "publisher": "湖南省文物局",
+          "url": "https://wwj.hunan.gov.cn/wwj/c100310/c100313/202306/t20230619_29378786.html"
+        }
+      ]
+    },
+    {
+      "id": "tang-jian",
+      "lat": 34.606452,
+      "lng": 108.430549,
+      "crs": "地图点基准未逐项说明",
+      "estimated": true,
+      "target": "唐建陵陵区及南神道区域估计",
+      "publisher": "Google Maps公开地理实体",
+      "url": "https://www.google.com/maps/place/%E5%94%90%E5%BB%BA%E9%99%B5/data=!4m3!3m2!1s0x36647334807c6ee7:0xb17aa4d2f8d27991",
+      "basis": "Google Maps唐建陵地理实体/g/11b631ywyw公开位置，与地球在线唐建陵定位34.60727,108.43042及陕西地方志所述武将山、石马岭交叉核对；以原地图点作为WGS84公里级区域估计，基准和墓室中心待实测",
+      "extent": "建陵南神道及相邻陵区约1公里范围；包含网络地图基准偏移与参观点误差",
+      "note": "区域估计，非墓室中心。Google地图点的坐标基准未独立确认，不能用于墓室定位或精确导航；不采用错误的唐十八陵总览点或建陵镇学校点。",
+      "supportingSources": [
+        {
+          "id": "clear-jian-earthol",
+          "title": "唐建陵卫星图定位",
+          "publisher": "地球在线",
+          "url": "https://www.earthol.com/view-13103.html",
+          "note": "仅作地点交叉核对；地图点基准未明。"
+        },
+        {
+          "id": "clear-jian-local",
+          "title": "醴泉县志稿：石马岭即唐建陵所在",
+          "publisher": "陕西省地方志",
+          "url": "https://dfz.shaanxi.gov.cn/zslm/fzzlk/sxjz/xys_16200/201706/P020240923599289752854.pdf"
+        }
+      ]
+    },
+    {
+      "id": "han-chu-woniu",
+      "lat": 34.252739,
+      "lng": 117.129641,
+      "crs": "地图点基准未逐项说明",
+      "estimated": true,
+      "target": "徐州卧牛山山体及北麓王墓区域估计",
+      "publisher": "Google Maps公开山体实体",
+      "url": "https://www.google.com/maps/place/Woniu+Mountain/data=!4m3!3m2!1s0x35c5fdab83a8bd1d:0xe1aedb0a789b1cb",
+      "basis": "公开卧牛山地理实体/g/1tlzy7sv明确为徐州泉山区山峰，结合楚王陵研究所述墓地在山体北麓，以原地图点作为WGS84区域估计，未取得逐墓中心",
+      "extent": "徐州卧牛山及北麓约1公里范围；不是济南、巢湖或常熟同名山，也不是四座墓室共用精确中心",
+      "note": "山体区域估计。原地图点坐标基准待独立确认，保留约公里级范围，不能作墓室中心或入口导航。"
+    },
+    {
+      "id": "han-chu-tuolan",
+      "lat": 34.304204,
+      "lng": 117.26592,
+      "crs": "地图点基准未逐项说明",
+      "estimated": true,
+      "target": "驮篮山汉文化遗址公园及王陵区域估计",
+      "publisher": "Google Maps公开遗址公园实体",
+      "url": "https://www.google.com/maps/place/Xuzhou+Tuolanshan+Han+Culture+Relics+Park/data=!4m3!3m2!1s0x35c608d4e6d4edb9:0xa098e3208f4ba07e",
+      "basis": "公开驮篮山汉文化遗址公园实体/g/1th6by2h与江苏地方志所述经开区东王庄及两山头楚王陵核对；以原地图点作WGS84区域估计，公园点不等于墓室实测位置",
+      "extent": "驮篮山汉文化遗址公园及东西山头陵区约1公里范围",
+      "note": "区域估计，原地图点基准待独立确认。排除位于117.380534的另一Tuolanshan山峰，不把公园参观点当王后或王墓中心。",
+      "supportingSources": [
+        {
+          "id": "clear-tuolan-2024",
+          "title": "揭秘驮篮山中的楚王宫",
+          "publisher": "江苏省地方志",
+          "url": "https://jssdfz.jiangsu.gov.cn/n257/20241023/i36438.html"
+        }
+      ]
+    },
+    {
+      "id": "cai-hou",
+      "lat": 32.58128,
+      "lng": 116.7681,
+      "crs": "WGS84",
+      "estimated": true,
+      "resolution": 0.0001,
+      "target": "寿县定湖门内北侧蔡侯墓故址区域估计",
+      "publisher": "公开城门地理实体与遗址方位资料",
+      "url": "https://www.openstreetmap.org/node/2467826657",
+      "basis": "OSM定湖门WGS84点32.5787604,116.7676517作为参照；文献确定蔡侯墓在西门内北侧，参照公开遗址位置介绍所述距西大街约280米、墙脚40余米，在门内北侧约280米、向东约40米设置区域估计；未经遗址现场测绘",
+      "extent": "西门内北侧沿城墙约500米范围；不是城门本身或楚文化博物馆",
+      "note": "由城门地理参照及历史方位推定的区域点，不是已核实墓坑中心。约280米/40余米距离来自公开位置介绍，尚须用1956年发掘报告原图和现代测绘复核。",
+      "supportingSources": [
+        {
+          "id": "clear-cai-place",
+          "title": "蔡侯墓位置与型制（距离线索待原报告复核）",
+          "publisher": "快懂百科（仅地理距离线索）",
+          "url": "https://www.baike.com/wikiid/9091759429869285161",
+          "note": "只保存位置线索，不作为墓主或考古结论的新依据。"
+        },
+        {
+          "id": "clear-cai-north",
+          "title": "寿县文物与蔡昭侯墓发现位置",
+          "publisher": "淮南日报",
+          "url": "https://hnrb.huainannet.com/attachment/202302/17/1985d3ea-a71a-4287-a50e-add92a3f7983.pdf",
+          "note": "2023年2月17日楚风浩荡版：西门内北侧。"
+        }
+      ]
+    },
+    {
+      "id": "lu-nine",
+      "lat": 35.613251,
+      "lng": 116.32755,
+      "crs": "地图点基准未逐项说明",
+      "estimated": true,
+      "target": "鲁诸公墓（鲁九公墓）嘉祥片区区域估计",
+      "publisher": "Google Maps公开墓地实体",
+      "url": "https://www.google.com/maps/place/%E9%B2%81%E8%AF%B8%E5%85%AC%E5%A2%93/data=!4m3!3m2!1s0x35c4818adeaf5439:0x30f8f0e1615c098a",
+      "basis": "公开鲁诸公墓实体/g/1hc0gj0w1明确在山东嘉祥，结合汶上县志实地访查及济宁市文物名录所述鲁诸公墓分布，采用原地图点作WGS84区域估计；不指认九位鲁君逐墓",
+      "extent": "鲁诸公墓嘉祥片区及相邻封土约1公里范围；不表示汶上、梁山、嘉祥全部分布范围",
+      "note": "陵群区域估计；原地图点基准与封土中心待实测。不是曲阜防山墓群，不能把传统九位鲁君对应作考古确认。",
+      "supportingSources": [
+        {
+          "id": "clear-lu-inventory",
+          "title": "济宁市文物保护单位名录：鲁诸公墓",
+          "publisher": "济宁市文化和旅游局",
+          "url": "https://whlyj.jining.gov.cn/art/2019/6/3/art_32455_1508935.html"
+        }
+      ]
+    },
+    {
+      "id": "wei-gaoping-rudian",
+      "lat": 34.1539324,
+      "lng": 112.4731417,
+      "crs": "地图点基准未逐项说明",
+      "estimated": true,
+      "target": "汝阳茹店高平陵传统陵址区域估计",
+      "publisher": "Google Maps公开传统陵址实体",
+      "url": "https://www.google.com/maps/place/高平陵/data=!4m3!3m2!1s0x3678985e2f8fbb3b:0x98436380b69559c0",
+      "basis": "公开高平陵实体/g/11hyl1cbfh位于汝阳，结合河南省文物局2018年保护范围所述茹店村东南陵冢；原地图点基准未说明，按WGS84公里级区域估计保存，未据地图名称确认曹叡墓主。",
+      "extent": "茹店村东南传统陵址周边约1公里；不代表墓室实测中心",
+      "note": "传统陵址区域估计。不能将国保名称视为墓主考古确认；与洛阳西朱村M2候选墓址分别保留，不能统计为两座确认的曹叡墓。",
+      "supportingSources": [
+        {
+          "id": "clear-rudian-protection",
+          "title": "河南省文物保护单位保护范围：魏明帝高平陵",
+          "publisher": "河南省文物局、河南省住房和城乡建设厅",
+          "url": "https://wgl.kaifeng.gov.cn/kfswhgdhlyj/swgljwbdw/1805436537969889280/M71CbQHO.pdf"
+        }
+      ]
+    }
+  ]
+}

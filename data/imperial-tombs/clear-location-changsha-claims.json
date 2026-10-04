@@ -1,0 +1,92 @@
+{
+  "entities": {
+    "Q15932246": {
+      "pageid": 17556390,
+      "ns": 0,
+      "title": "Q15932246",
+      "lastrevid": 2336591414,
+      "modified": "2025-04-10T10:19:30Z",
+      "type": "item",
+      "id": "Q15932246",
+      "labels": {
+        "zh": {
+          "language": "zh",
+          "value": "长沙王陵公园"
+        }
+      },
+      "descriptions": {},
+      "aliases": {},
+      "claims": {
+        "P17": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P17",
+              "hash": "30e172796b0726589e92b001c327f5d55fa0782e",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 148,
+                  "id": "Q148"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q15932246$8E709F9B-8BDA-4C2E-808C-71A1DA9AC027",
+            "rank": "normal"
+          }
+        ],
+        "P373": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P373",
+              "hash": "6aab54d4213cfc90a3d9f86ed89766020f282dd5",
+              "datavalue": {
+                "value": "Wangyue Park",
+                "type": "string"
+              },
+              "datatype": "string"
+            },
+            "type": "statement",
+            "id": "Q15932246$548b0442-2948-445a-97a1-858c93da3c79",
+            "rank": "normal"
+          }
+        ],
+        "P18": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P18",
+              "hash": "60ebef5f1d4b270ba189016010bf417964b76811",
+              "datavalue": {
+                "value": "Entrance of Wangyue Park 2025030102.jpg",
+                "type": "string"
+              },
+              "datatype": "commonsMedia"
+            },
+            "type": "statement",
+            "id": "Q15932246$c108f66f-44dc-e2bd-6ae1-48888582d36e",
+            "rank": "normal"
+          }
+        ]
+      },
+      "sitelinks": {
+        "zhwiki": {
+          "site": "zhwiki",
+          "title": "长沙王陵公园",
+          "badges": [],
+          "url": "https://zh.wikipedia.org/wiki/%E9%95%BF%E6%B2%99%E7%8E%8B%E9%99%B5%E5%85%AC%E5%9B%AD"
+        },
+        "commonswiki": {
+          "site": "commonswiki",
+          "title": "Category:Wangyue Park",
+          "badges": [],
+          "url": "https://commons.wikimedia.org/wiki/Category:Wangyue_Park"
+        }
+      }
+    }
+  }
+}

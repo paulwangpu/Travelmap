@@ -2,7 +2,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const dir = path.join(__dirname, '..', 'data', 'imperial-tombs');
-const date = '2026-10-03';
+const date = '2026-10-04';
 const sources = [];
 function source(id, title, publisher, url, note = '') {
   sources.push({ id, title, publisher, url, accessedAt: date, note });
@@ -265,10 +265,10 @@ officialPoint('qing-zhao','41 50 29.00','123 25 4.00','ming-qing-map','1004-014'
 const coverageGaps = [
   {era:'跨时代西域及地方政权',targets:'乌孙、龟兹、于阗、楼兰、焉耆、疏勒、高昌及其他地方政权君主墓；武威吐谷浑大可汗陵',reason:'已增新疆汗王陵、回王墓及车师王族候选；各政权需继续反查文保名录与发掘报告。阿斯塔那等公共墓地不能整体认作王陵；没有直接王族依据的普通古墓不批量添加。'},
   {era:'传说时代',targets:'尧陵、女娲陵及异地黄帝炎帝陵',reason:'逐地补官方依据；传统祭祀地与实际墓址分开。'},
-  {era:'先秦',targets:'夏王陵、中山及楚国其他王陵、曾国其他国君墓；胡庄、虚粮冢、鲁九公墓、蔡侯墓独立位置',reason:'有记录但部分缺原址坐标；墓主推定与确认分开，不能以城市中心造点。'},
+  {era:'先秦',targets:'夏王陵、中山及楚国其他王陵、曾国其他国君墓；胡庄、虚粮冢、鲁九公墓独立位置及蔡侯墓实测点',reason:'蔡侯墓已补西门内北侧区域估计；其余继续核对原址，墓主推定与确认分开，不能以城市中心造点。'},
   {era:'秦汉',targets:'东汉慎陵、康陵、静陵的实体对应与独立位置',reason:'已收历史陵名，具体考古墓号尚未可靠对应，不把洛阳陵区点复制为三座陵。'},
   {era:'魏晋南北朝',targets:'首阳陵、高原陵、峻平陵、太阳陵、西朱村M2、南齐泰安陵独立位置及十六国其他帝陵',reason:'已有条目继续核对原址及归属；陵区概述不能代替逐陵坐标。'},
-  {era:'隋唐',targets:'唐建陵独立位置、唐和陵、唐温陵、隋恭帝陵与其他追尊祖陵',reason:'唐建陵已有记录，独立坐标仍待核；唐和陵、温陵仍需实体与原址核对；唐恭陵已补。'},
+  {era:'隋唐',targets:'唐建陵实测点、唐和陵、唐温陵、隋恭帝陵与其他追尊祖陵',reason:'唐建陵已补陵区与南神道区域估计，原地图点基准和墓室中心仍待核；唐和陵、温陵仍需实体与原址核对；唐恭陵已补。'},
   {era:'五代十国',targets:'后梁、吴、吴越、闽、北汉、荆南等遗漏君主陵及后晋、后汉逐陵位置',reason:'按君主工作名单和文保名录反查；后晋显陵、后汉睿陵颍陵已补，不能据各一两条认定政权覆盖完整。'},
   {era:'宋辽金西夏',targets:'金太祖睿陵独立位置、南宋六陵逐陵对应及西夏墓号与墓主关系',reason:'辽显陵、乾陵已补陵前遗址估计点；其墓室归属和原保护附件坐标仍待进一步核对。'},
   {era:'元',targets:'其余元帝实际葬地及大不儿罕山与起辇谷的对应',reason:'已补传说葬地区域；实际墓室仍未确认，不以圣地参考坐标证明元帝墓址。'},
@@ -289,9 +289,30 @@ require('./expand-jin-migration-sites.cjs')({items,add,group,source});
 require('./complete-jin-tombs.cjs')({items,add,source});
 require('./add-modern-mausoleums.cjs')({items,add,source});
 require('./review-recent-tomb-archaeology.cjs')({items,add,source});
+require('./expand-han-feudal-tombs.cjs')({items,add,group,source});
 require('./enrich-imperial-tombs.cjs')({items,sources,add,group,batch,source,dir});
 require('./complete-more-tomb-locations.cjs')({items,source});
 require('./complete-missing-tomb-locations.cjs')({items,source});
+require('./expand-han-feudal-tombs.cjs')({items,source,locationsOnly:true});
+require('./complete-clear-tomb-locations.cjs')({items,source});
+require('./expand-liuan-royal-cemetery.cjs')({items,group,source});
+require('./review-all-missing-tomb-locations.cjs')({items,sources,add,group,source});
+require('./supplement-sovereign-list.cjs')({items,add,source});
+require('./supplement-sovereign-followup.cjs')({items,add,group,source});
+require('./complete-original-tomb-regions.cjs')({items,add,source});
+require('./complete-original-tomb-followup.cjs')({items,add,source});
+require('./complete-danyang-tomb-region.cjs')({items,add,source});
+require('./supplement-ming-prince-tombs.cjs')({items,add,source});
+require('./supplement-jingjiang-chu-tombs.cjs')({items,add,source});
+require('./supplement-longquan-chu-tombs.cjs')({items,add,source});
+require('./supplement-lu-huang-tomb.cjs')({add,source});
+require('./supplement-documented-ming-tombs.cjs')({add,source});
+require('./supplement-ning-prince-tombs.cjs')({add,source});
+require('./supplement-ming-zhou-tombs.cjs')({add,source});
+require('./supplement-yi-zhou-archaeology.cjs')({add,source});
+require('./supplement-shandong-prince-review.cjs')({items,add,source});
+require('./review-priority-tomb-sites.cjs')({items,source});
+require('./enrich-tomb-visiting.cjs')({items,source});
 for (const item of items) if (item.era === '明清') item.era = item.dynasty.startsWith('清') ? '清' : '明';
 require('./imperial-tomb-chronology.cjs')(items);
 require('./enrich-imperial-tomb-lifetimes.cjs')({items,source,sources});
@@ -305,6 +326,11 @@ for(const x of items.filter(x=>x.locationReference)) {
 }
 const recentM27=items.find(x=>x.id==='shang-m27');
 recentM27.disturbance={status:'archaeological_evidence',label:disturbanceLabels.archaeological_evidence,evidence:'2025年度发掘记录H335、H348早期盗坑直达墓底，椁室被盗一空；保留2026年公开报告。',scope:'M27墓室',sourceIds:['recent-yin-2025'],reviewedAt:date};
+const decisionsPath=path.join(dir,'coordinate-decisions.json');
+const decisions=JSON.parse(fs.readFileSync(decisionsPath,'utf8'));
+decisions.approved=items.filter(x=>x.mapEligible).map(x=>x.id);
+decisions.supplementalApproved=items.filter(x=>x.mapEligible&&!decisions.wikidataApproved.includes(x.id)).map(x=>({id:x.id,sourceId:x.coordinates.sourceId,method:x.coordinates.method}));
+fs.writeFileSync(decisionsPath,JSON.stringify(decisions,null,2)+'\n');
 const mapCandidateIds = items.filter(x=>x.mapEligible).map(x=>x.id);
 const summary = {};
 for(const x of items) {
@@ -312,7 +338,7 @@ for(const x of items) {
   s.records++;s[x.recordType==='single'?'singles':'groups']++;s.mapCandidates+=Number(x.mapEligible);s.sourcePointsPendingDatum+=Number(x.coordinates?.status==='datum_pending');s.missingCoordinates+=Number(!x.coordinates);
 }
 const catalog = {schemaVersion:1,researchedAt:date,status:'research_catalog_not_exhaustive',
-  scope:'中国历代君主陵、先秦王陵、地方政权及地方世袭统治者王陵、传说祭祀陵与有王权文化依据的王陵探索区；单陵优先、陵群兜底。探索区不表示已确认墓葬，不以现代民族名称替代历史政权归属。',
+  scope:'中国历代君主陵、先秦王陵、汉代诸侯国王陵与明代藩王陵、地方政权及地方世袭统治者王陵、传说祭祀陵与有王权文化依据的王陵探索区；单陵优先、陵群兜底。探索区不表示已确认墓葬，不以现代民族名称替代历史政权归属。',
   countPolicy:'记录数不是实际陵墓总数：陵群与子陵不能相加；单陵按实体而非墓主人数统计；同名异陵以稳定ID区分。siteRole=royal_burial_search_area为探索线索，不计已发现王陵。',
   natureLabels:{actual_burial:'实际墓葬',posthumous:'追尊陵（实葬性质另见证据）',cenotaph:'衣冠冢',commemorative:'祭祀纪念陵',mixed:'陵群或混合性质',unknown:'性质未明'},
   recognitionLabels:{archaeological:'有考古支持（程度见证据）',documented:'机构文献记载',attributed:'归属推定',traditional:'传统或祭祀认定'},
@@ -322,4 +348,6 @@ fs.mkdirSync(dir,{recursive:true});
 fs.writeFileSync(path.join(dir,'catalog.json'),JSON.stringify(catalog,null,2)+'\n');
 require('./write-imperial-tomb-reports.cjs');
 require('./audit-imperial-tomb-coverage.cjs');
+require('./write-remaining-tomb-locations.cjs');
+require('./write-tomb-visit-review.cjs');
 console.log(JSON.stringify({records:items.length,mapCandidates:mapCandidateIds.length,summary},null,2));

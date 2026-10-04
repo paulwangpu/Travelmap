@@ -27,6 +27,11 @@ module.exports=({items,source})=>{
  require('./supplement-royal-tomb-coordinates.cjs')({items,source,set,gcjToWgs:ctx.gcjToWgs});
  require('./estimate-imperial-tomb-coordinates.cjs')({items,source,set,gcjToWgs:ctx.gcjToWgs});
  require('./supplement-xixia-tomb-coordinates.cjs')({items,source,set});
- wu.disputes.push('地图仅指向管理机构所述梅花山传统陵址区域，孙权墓室确切位置尚未确认。');
+ source('geo-wu-memorial','东吴大帝孙权纪念馆位置','高德地图','https://www.amap.com/place/B001911OPO','原始GCJ-02坐标：118.839703,32.050204；使用项目迭代反解转换WGS84。');
+ const memorial=ctx.gcjToWgs(118.839703,32.050204);
+ set('wu-jiang',memorial[0],memorial[1],'geo-wu-memorial','孙权纪念馆位置（非孙权墓室）','118.839703,32.050204; GCJ-02; B001911OPO','高德纪念馆POI按GCJ-02迭代反解为WGS84；按用户要求作为孙权墓参观点',0.000001);
+ wu.coordinates.limitation='地图点指向孙权纪念馆，不代表孙权墓室确切位置。';
+ wu.mapReason='使用孙权纪念馆作为参观点';wu.reviewTasks=['补核纪念馆入口与实测精度'];
+ wu.disputes.push('地图使用孙权纪念馆位置作为参观点；孙权墓室确切位置尚未确认。');
  items.find(x=>x.id==='tang-jian').reviewTasks.push('论文表4此行英文仅为Mausoleums，未明确对应建陵；须补独立坐标来源，暂不入图。');
 };

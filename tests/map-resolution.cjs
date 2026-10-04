@@ -1,0 +1,20 @@
+const assert=require('node:assert/strict'),fs=require('node:fs');
+const {canvasLimits,observe}=require('../map-resolution.js');
+const gpu=(texture,buffer,viewport)=>({MAX_TEXTURE_SIZE:1,MAX_RENDERBUFFER_SIZE:2,MAX_VIEWPORT_DIMS:3,getParameter:k=>({1:texture,2:buffer,3:viewport})[k]});
+assert.deepEqual(canvasLimits(gpu(16384,16384,[16384,16384])),[8192,8192]);
+assert.deepEqual(canvasLimits(gpu(4096,8192,[8192,8192])),[4096,4096]);
+assert.deepEqual(canvasLimits(gpu(8192,8192,[8192,4096])),[8192,4096]);
+// Two 4K screens at 200% scaling: CSS width3840 * DPR2 =7680.
+assert(3840*2<=canvasLimits(gpu(16384,16384,[16384,16384]))[0]);
+let queued,resizeCount=0,ratio=2,observerCallback,observerDisconnected=false,remove;
+const events=new Map(),media=[];
+const w={devicePixelRatio:2,requestAnimationFrame:fn=>(queued=fn,1),cancelAnimationFrame:()=>queued=null,addEventListener:(k,fn)=>events.set(k,fn),removeEventListener:k=>events.delete(k),ResizeObserver:class{constructor(fn){observerCallback=fn}observe(){}disconnect(){observerDisconnected=true}},matchMedia:()=>{const x={addEventListener:(k,fn)=>x.listener=fn,removeEventListener:()=>x.listener=null};media.push(x);return x;}};
+const container={clientWidth:3840,clientHeight:1080},map={getContainer:()=>container,getPixelRatio:()=>ratio,setPixelRatio:r=>{ratio=r;resizeCount++},resize:()=>resizeCount++,on:(event,fn)=>remove=fn};
+observe(map,w);queued();assert.equal(resizeCount,1);
+container.clientWidth=1900;observerCallback();queued();assert.equal(resizeCount,2);
+w.devicePixelRatio=1.5;media[0].listener();queued();assert.equal(ratio,1.5);assert.equal(media.length,2);
+container.clientWidth=0;observerCallback();queued();assert.equal(resizeCount,3,'hidden map must not resize to zero');
+remove();assert(observerDisconnected);assert(!events.has('resize'));assert.equal(media[1].listener,null);
+const app=fs.readFileSync(require.resolve('../app.js'),'utf8'),index=fs.readFileSync(require.resolve('../index.html'),'utf8'),sw=fs.readFileSync(require.resolve('../sw.js'),'utf8');
+assert(app.includes('...MapResolution.options(document, window)'));assert(app.includes('MapResolution.observe(mapLibreMap, window)'));assert(index.indexOf('map-resolution.js?v=1')<index.search(/app\.js\?v=\d+/));assert(sw.includes('map-resolution.js?v=1'));
+console.log('PASS: dual4K canvas limit, GPU safety, container resize, DPI changes and observer cleanup');

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "唐建陵",
+    "id": "Q1721530",
+    "label": "Eighteen Tombs of the Tang Dynasty",
+    "points": [
+      {
+        "latitude": 35.03444,
+        "longitude": 109.66916,
+        "altitude": null,
+        "precision": 0.000001,
+        "globe": "http://www.wikidata.org/entity/Q2"
+      }
+    ]
+  },
+  {
+    "name": "唐建陵",
+    "id": "Q19841777",
+    "label": "唐建陵"
+  },
+  {
+    "name": "唐建陵",
+    "id": "Q63484299",
+    "label": "唐建陵探测工作简报"
+  },
+  {
+    "name": "蔡侯墓",
+    "id": "Q132523211",
+    "label": "蔡侯墓铜器拓片"
+  },
+  {
+    "name": "蔡侯墓",
+    "id": "Q63482009",
+    "label": "蔡侯墓出土的三件铜器铭文考释"
+  },
+  {
+    "name": "汉代长沙王陵墓群",
+    "id": "Q133306530",
+    "label": "Tombs of Changsha Kings of Han Dynasty",
+    "points": [
+      {
+        "latitude": 28.21397,
+        "longitude": 112.94746,
+        "altitude": null,
+        "precision": 0.000001,
+        "globe": "http://www.wikidata.org/entity/Q2"
+      }
+    ]
+  }
+]

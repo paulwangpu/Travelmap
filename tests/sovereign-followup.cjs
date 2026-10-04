@@ -1,0 +1,9 @@
+const assert=require('node:assert/strict');const c=require('../data/imperial-tombs/catalog.json');const api=require('../imperial-tombs.js');const byId=new Map(c.items.map(x=>[x.id,x]));
+const added=['wu-gao-danyang','legend-nuwa-hongtong','legend-yan-baoji','legend-yan-gaoping','legend-taikang-area','legend-taikang','legend-shaokang'];
+assert(added.every(id=>byId.has(id)));assert.equal(added.filter(id=>byId.get(id).mapEligible).length,5);
+for(const id of added){const x=byId.get(id);assert.notEqual(x.recognition,'archaeological');assert(!api.hasVisitableChamber(x));if(x.mapEligible){assert.equal(x.coordinates.status,'estimated_wgs84');assert(x.coordinates.estimate.extent);assert.equal(x.coordinates.precision.horizontalAccuracyMeters,null);}}
+for(const id of added.filter(id=>id.startsWith('legend-'))){const x=byId.get(id);assert.equal(x.era,'传说时代');assert.equal(x.nature,'commemorative');assert(x.biographies.every(b=>b.birthYear===null&&b.deathYear===null));}
+const high=api.mappedItems(c,'',10).map(x=>x.id);assert(high.includes('legend-taikang-area'));assert(!high.includes('legend-taikang'));assert(!high.includes('legend-shaokang'));for(const id of ['legend-taikang','legend-shaokang'])assert.equal(byId.get(id).locationReference.parentId,'legend-taikang-area');
+assert(byId.get('wu-gao-danyang').disputes.some(x=>x.includes('商周')));assert.equal(byId.get('wu-gao-danyang').nature,'posthumous');assert.deepEqual(byId.get('wu-gao-danyang').biographies[0].deathYearAlternatives,[191,192]);
+const temples=['legend-yan-baoji','legend-yan-gaoping'].map(id=>byId.get(id).coordinates);assert(Math.abs(temples[0].lng-temples[1].lng)>5,'same-name separate sites must not collapse');
+console.log('PASS: traditional site attribution, distinct locations, cemetery deduplication, legendary dates and no invented chamber access');

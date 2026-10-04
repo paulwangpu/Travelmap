@@ -1,0 +1,517 @@
+{
+  "reviewedAt": "2026-10-04",
+  "policy": "可参观地宫=有资料支持原墓室可参观或原址墓室遗存可观看；迁建、模型、仅地面景区开放不自动入选。不是实时营业保证。",
+  "eligibleRecordIds": [
+    "qin-gong-1",
+    "wei-gao",
+    "wei-jing",
+    "sui-yang",
+    "shu-yong",
+    "nantang2",
+    "nantang-shun",
+    "ming-ding",
+    "qing-yu",
+    "qing-chong",
+    "han-haihun",
+    "nanyue-wen",
+    "qing-cixi",
+    "han-king-mancheng",
+    "han-chu-shizi",
+    "han-chu-guishan",
+    "han-liang-kings",
+    "han-liang-xiao",
+    "han-king-tushan",
+    "han-king-dabaotai",
+    "ming-shu-xi"
+  ],
+  "detailMapPointIds": [
+    "qin-gong-1",
+    "wei-gao",
+    "wei-jing",
+    "sui-yang",
+    "shu-yong",
+    "nantang2",
+    "ming-ding",
+    "qing-yu",
+    "qing-chong",
+    "han-haihun",
+    "nanyue-wen",
+    "qing-cixi",
+    "han-king-mancheng",
+    "han-chu-shizi",
+    "han-chu-guishan",
+    "han-liang-xiao",
+    "han-king-tushan",
+    "han-king-dabaotai",
+    "ming-shu-xi"
+  ],
+  "chambers": [
+    {
+      "id": "qin-gong-1",
+      "name": "秦公一号大墓",
+      "status": "documented_visitable",
+      "originalChamber": true,
+      "mode": "view_original_remains",
+      "note": "博物馆以原址秦公一号大墓及车马坑为主要展示内容；属于原墓坑遗址观看，不承诺进入椁室。",
+      "sourceIds": [
+        "visit-qin-gong"
+      ],
+      "reviewedAt": "2026-10-04",
+      "openingPolicy": "出行前核对管理机构临时关闭、维修及限流公告"
+    },
+    {
+      "id": "wei-gao",
+      "name": "曹操高陵",
+      "status": "documented_visitable",
+      "originalChamber": true,
+      "mode": "view_original_remains",
+      "note": "可沿栈道观看原址曹操墓本体；可进入的1∶1模拟墓室另在展览区，不等同进入原墓室。",
+      "sourceIds": [
+        "visit-gao"
+      ],
+      "reviewedAt": "2026-10-04",
+      "openingPolicy": "出行前核对管理机构临时关闭、维修及限流公告"
+    },
+    {
+      "id": "wei-jing",
+      "name": "北魏景陵",
+      "status": "documented_visitable",
+      "originalChamber": true,
+      "mode": "original_chamber",
+      "note": "可参观原址北魏景陵；区别于古墓博物馆迁建复原的其他墓葬。",
+      "sourceIds": [
+        "visit-jing"
+      ],
+      "reviewedAt": "2026-10-04",
+      "openingPolicy": "出行前核对管理机构临时关闭、维修及限流公告"
+    },
+    {
+      "id": "sui-yang",
+      "name": "隋炀帝墓（曹庄）",
+      "status": "documented_visitable",
+      "originalChamber": true,
+      "mode": "view_original_remains",
+      "note": "馆内可观看原址隋炀帝砖室墓穴；与萧后墓一同展示，不承诺进入墓室内部。",
+      "sourceIds": [
+        "visit-sui-yang"
+      ],
+      "reviewedAt": "2026-10-04",
+      "openingPolicy": "出行前核对管理机构临时关闭、维修及限流公告"
+    },
+    {
+      "id": "shu-yong",
+      "name": "前蜀永陵",
+      "status": "documented_visitable",
+      "originalChamber": true,
+      "mode": "original_chamber",
+      "note": "原陵宫可参观；墓室建于地表之上，虽惯称地宫，实际并非地下建造。",
+      "sourceIds": [
+        "visit-yong"
+      ],
+      "reviewedAt": "2026-10-04",
+      "openingPolicy": "出行前核对管理机构临时关闭、维修及限流公告"
+    },
+    {
+      "id": "nantang2",
+      "name": "南唐二陵",
+      "status": "documented_visitable",
+      "originalChamber": true,
+      "mode": "original_chamber",
+      "note": "陵区内有原墓室参观项目；钦陵另有封闭提示，不能理解为两陵均随时可进入。",
+      "sourceIds": [
+        "visit-nantang"
+      ],
+      "reviewedAt": "2026-10-04",
+      "openingPolicy": "出行前核对管理机构临时关闭、维修及限流公告"
+    },
+    {
+      "id": "nantang-shun",
+      "name": "南唐顺陵",
+      "status": "documented_visitable",
+      "originalChamber": true,
+      "mode": "original_chamber",
+      "note": "顺陵原墓室参观项目；共享南唐二陵位置，不能据此指向单陵入口。",
+      "sourceIds": [
+        "visit-nantang"
+      ],
+      "reviewedAt": "2026-10-04"
+    },
+    {
+      "id": "ming-ding",
+      "name": "明定陵",
+      "status": "documented_visitable",
+      "originalChamber": true,
+      "mode": "original_chamber",
+      "note": "原地宫可参观；十三陵地面景区开放不代表其他陵墓地宫开放。",
+      "sourceIds": [
+        "visit-ding"
+      ],
+      "reviewedAt": "2026-10-04",
+      "openingPolicy": "出行前核对管理机构临时关闭、维修及限流公告"
+    },
+    {
+      "id": "qing-yu",
+      "name": "清裕陵",
+      "status": "documented_visitable",
+      "originalChamber": true,
+      "mode": "original_chamber",
+      "note": "裕陵原地宫有开放参观记录；2026年地宫修缮方案获批，具体开放以管理处公告为准。",
+      "sourceIds": [
+        "visit-yu"
+      ],
+      "reviewedAt": "2026-10-04",
+      "openingPolicy": "出行前核对管理机构临时关闭、维修及限流公告"
+    },
+    {
+      "id": "qing-chong",
+      "name": "清崇陵",
+      "status": "documented_visitable",
+      "originalChamber": true,
+      "mode": "original_chamber",
+      "note": "原地宫可参观；清西陵其他帝陵地宫不据此纳入。",
+      "sourceIds": [
+        "visit-chong"
+      ],
+      "reviewedAt": "2026-10-04",
+      "openingPolicy": "出行前核对管理机构临时关闭、维修及限流公告"
+    },
+    {
+      "id": "han-haihun",
+      "name": "海昏侯刘贺墓",
+      "status": "documented_visitable",
+      "originalChamber": true,
+      "mode": "view_original_remains",
+      "note": "墎墩苑室内展示刘贺主墓原址遗存；属于墓坑遗址观看，不是完整地宫内部游览。",
+      "sourceIds": [
+        "visit-haihun"
+      ],
+      "reviewedAt": "2026-10-04",
+      "openingPolicy": "出行前核对管理机构临时关闭、维修及限流公告"
+    },
+    {
+      "id": "nanyue-wen",
+      "name": "南越文王墓（赵眜墓）",
+      "status": "documented_visitable",
+      "originalChamber": true,
+      "mode": "original_chamber",
+      "note": "王墓展区保留并开放原墓室，区别于王宫展区。",
+      "sourceIds": [
+        "visit-nanyue"
+      ],
+      "reviewedAt": "2026-10-04",
+      "openingPolicy": "出行前核对管理机构临时关闭、维修及限流公告"
+    },
+    {
+      "id": "qing-cixi",
+      "name": "菩陀峪定东陵（慈禧）",
+      "status": "documented_visitable",
+      "originalChamber": true,
+      "mode": "original_chamber",
+      "note": "可进入慈禧陵原地宫参观；不把慈安陵地面开放视为其地宫开放。",
+      "sourceIds": [
+        "visit-cixi"
+      ],
+      "reviewedAt": "2026-10-04",
+      "openingPolicy": "出行前核对管理机构临时关闭、维修及限流公告"
+    },
+    {
+      "id": "han-king-mancheng",
+      "name": "中山靖王刘胜墓（满城汉墓）",
+      "status": "documented_visitable",
+      "originalChamber": true,
+      "mode": "original_chamber",
+      "note": "刘胜原崖洞墓室可参观；王后墓不另增加王陵条目。",
+      "sourceIds": [
+        "visit-mancheng"
+      ],
+      "reviewedAt": "2026-10-04",
+      "openingPolicy": "出行前核对管理机构临时关闭、维修及限流公告"
+    },
+    {
+      "id": "han-chu-shizi",
+      "name": "狮子山楚王陵",
+      "status": "documented_visitable",
+      "originalChamber": true,
+      "mode": "original_chamber",
+      "note": "汉文化景区原址墓室可参观；兵马俑展厅不是墓室点位。",
+      "sourceIds": [
+        "visit-shizi"
+      ],
+      "reviewedAt": "2026-10-04",
+      "openingPolicy": "出行前核对管理机构临时关闭、维修及限流公告"
+    },
+    {
+      "id": "han-chu-guishan",
+      "name": "楚襄王刘注墓（龟山汉墓）",
+      "status": "documented_visitable",
+      "originalChamber": true,
+      "mode": "original_chamber",
+      "note": "原崖洞墓道和墓室可参观；数字展厅复刻模型不是筛选依据。",
+      "sourceIds": [
+        "visit-guishan"
+      ],
+      "reviewedAt": "2026-10-04",
+      "openingPolicy": "出行前核对管理机构临时关闭、维修及限流公告"
+    },
+    {
+      "id": "han-liang-kings",
+      "name": "芒砀山汉梁王墓群",
+      "status": "documented_visitable",
+      "originalChamber": true,
+      "mode": "original_chamber",
+      "note": "陵群内有梁孝王等原址崖洞地宫参观项目；不代表所有山头的王陵都已开放。",
+      "sourceIds": [
+        "visit-liang"
+      ],
+      "reviewedAt": "2026-10-04",
+      "openingPolicy": "出行前核对管理机构临时关闭、维修及限流公告"
+    },
+    {
+      "id": "han-liang-xiao",
+      "name": "梁孝王刘武陵",
+      "status": "documented_visitable",
+      "originalChamber": true,
+      "mode": "original_chamber",
+      "note": "保安山梁孝王原址崖洞地宫参观项目；开放范围依景区公告。",
+      "sourceIds": [
+        "visit-liang"
+      ],
+      "reviewedAt": "2026-10-04"
+    },
+    {
+      "id": "han-king-tushan",
+      "name": "土山二号诸侯王墓",
+      "status": "documented_visitable",
+      "originalChamber": true,
+      "mode": "view_original_remains",
+      "note": "可观看原址墓室及发掘现场；属于遗址展示，不承诺游客能进入墓室内部。",
+      "sourceIds": [
+        "visit-tushan"
+      ],
+      "reviewedAt": "2026-10-04",
+      "openingPolicy": "出行前核对管理机构临时关闭、维修及限流公告"
+    },
+    {
+      "id": "han-king-dabaotai",
+      "name": "广阳王刘建墓（大葆台）",
+      "status": "documented_visitable",
+      "originalChamber": true,
+      "mode": "view_original_remains",
+      "note": "可观看原址一号墓黄肠题凑及墓室遗存，含加固及补配；不是完整石室地宫，不可进入棺椁内部。二号墓地面轮廓复现不计。",
+      "sourceIds": [
+        "visit-dabaotai"
+      ],
+      "reviewedAt": "2026-10-04",
+      "openingPolicy": "出行前核对管理机构临时关闭、维修及限流公告"
+    },
+    {
+      "id": "ming-shu-xi",
+      "name": "蜀僖王陵",
+      "status": "documented_visitable",
+      "originalChamber": true,
+      "mode": "original_chamber",
+      "note": "原址僖王陵地宫有参观记录；具体开放、修缮与限流以馆方公告为准。",
+      "sourceIds": [
+        "ming-shu-local"
+      ],
+      "reviewedAt": "2026-10-04"
+    }
+  ],
+  "knownSitesStillUnregistered": [
+    {
+      "id": "yan-xuliang",
+      "name": "燕下都虚粮冢（疑似燕王陵区）",
+      "reviewedAt": "2026-10-04",
+      "status": "known_site_not_georeferenced",
+      "reason": "已复核河北省文物局考古综述和燕下都墓区研究：虚粮冢属于东城西北部，与九女台是两处墓区。城址中心及把墓区写入西城的游记均不能作为定位依据。",
+      "nextStep": "仍需东城西北墓区保护界桩坐标，或包含武阳台、运粮河等现代可识别控制点的总平面；现有文字不足以计算独立WGS84锚点。",
+      "sourceIds": [
+        "preqin-yan-xuliang",
+        "yan-xiadu-layout",
+        "yan-xiadu-reassessment"
+      ]
+    },
+    {
+      "id": "yan-jiunutai",
+      "name": "燕下都九女台墓区（疑似王室墓地）",
+      "reviewedAt": "2026-10-04",
+      "status": "known_site_not_georeferenced",
+      "reason": "已复核九女台与虚粮冢两区关系，M16经考古研究认定高等级贵族墓，尚不能指名燕王。墓区点须与北部虚粮冢分开，不采用黄金台、城址中心或外地同名九女台。",
+      "nextStep": "仍需九女台墓区边界和现代控制点；M16位置在墓区定位后关联，不能以墓号反推经纬度。",
+      "sourceIds": [
+        "yan-xiadu-layout",
+        "yan-xiadu-reassessment"
+      ]
+    },
+    {
+      "id": "yan-jiunutai-m16",
+      "name": "九女台M16（高等级贵族墓，王室归属待考）",
+      "reviewedAt": "2026-10-04",
+      "status": "parent_site_not_georeferenced",
+      "reason": "M16所属九女台已明确，单墓不重复统计；所属墓区本身尚未定位，不能提供有效地图参考。公开研究称高等级贵族墓，国君身份未定。",
+      "nextStep": "先定位九女台墓区，再建立共享位置；单墓中心另核",
+      "sourceIds": [
+        "yan-xiadu-reassessment",
+        "yan-xiadu-layout",
+        "yan-xiadu-m16-disturbance"
+      ]
+    },
+    {
+      "id": "jin-chenglin-boji",
+      "name": "金末帝传统墓址（泾川簸箕湾）",
+      "reviewedAt": "2026-10-04",
+      "status": "known_site_not_georeferenced",
+      "reason": "太平乡三星村岭背后簸箕湾、大湾林场是传统故址线索；尚无可复核山谷点位。完颜村纪念冢与此不同址，不能互相代替。",
+      "nextStep": "取得簸箕湾现场地理控制点；传统墓主归属保留未确证",
+      "sourceIds": [
+        "jin-chenglin-local",
+        "jin-chenglin-soil"
+      ]
+    },
+    {
+      "id": "han-qi-dawu",
+      "name": "大武西汉齐王墓",
+      "reviewedAt": "2026-10-04",
+      "status": "known_site_not_georeferenced",
+      "reason": "淄博文旅、临淄区志及环境报告交叉确认原窝托村南的大武汉墓即汉齐王墓；传统淳于髡墓名称不代表战国墓主认定。旧村地块与迁建社区、藏品馆必须分开。",
+      "nextStep": "仍需原窝托村旧地籍、东风站扩建发掘位置图，或文保单位墓区测绘；新社区、车站中心和展厅不能替代原墓址。",
+      "sourceIds": [
+        "han-feudal-qi",
+        "dawu-site-2017",
+        "dawu-current-site-review",
+        "dawu-historical-name-review"
+      ]
+    },
+    {
+      "id": "han-zhongshan-dingzhou",
+      "name": "定州汉中山王墓群",
+      "reviewedAt": "2026-10-04",
+      "status": "partly_georeferenced",
+      "reason": "已分别补北庄子刘焉墓、北陵头刘畅墓、八角郎刘修墓区域参考；陵群不连续，不设总中心。三盘山及陵北原墓区仍待配准。",
+      "nextStep": "核对三盘山M120—122及陵北M137地望和墓主，避免使用城内展馆位置",
+      "sourceIds": [
+        "han-feudal-dingzhou",
+        "dingzhou-jian-national"
+      ]
+    }
+  ],
+  "sovereignListLeads": [
+    {
+      "name": "钱元瓘墓",
+      "status": "added",
+      "catalogIds": [
+        "wuyue-yuanguan"
+      ],
+      "reason": "机构地望与南山陵园互核，新增区域点；墓体待细化。"
+    },
+    {
+      "name": "洪洞女娲陵",
+      "status": "added",
+      "catalogIds": [
+        "legend-nuwa-hongtong"
+      ],
+      "reason": "省保祭祀陵区，正陵与衣冠冢传统保留，不伪造遗骸确认。"
+    },
+    {
+      "name": "宝鸡、高平炎帝陵",
+      "status": "added",
+      "catalogIds": [
+        "legend-yan-baoji",
+        "legend-yan-gaoping"
+      ],
+      "reason": "同名异址分别收录，与湖南炎陵分开。"
+    },
+    {
+      "name": "太康、少康陵",
+      "status": "added_shared_region",
+      "catalogIds": [
+        "legend-taikang-area",
+        "legend-taikang",
+        "legend-shaokang"
+      ],
+      "reason": "王陵村传统陵区参考点；两单陵共享位置，不画两个重合点。"
+    },
+    {
+      "name": "成汉墓",
+      "status": "added",
+      "catalogIds": [
+        "chenghan-huaxi"
+      ],
+      "reason": "博物馆遗存数据库支持成汉墓；李班身份保留推定。"
+    },
+    {
+      "name": "亳州汤王陵",
+      "status": "added",
+      "catalogIds": [
+        "shang-tang-bozhou"
+      ],
+      "reason": "官方规划明确为衣冠冢，区别于商王实葬。"
+    },
+    {
+      "name": "孙坚高陵",
+      "status": "added_traditional_site",
+      "catalogIds": [
+        "wu-gao-danyang"
+      ],
+      "reason": "已补丹阳高陵区域点；孙坚归属与商周土墩说并存，苏州等地异说另核。"
+    },
+    {
+      "name": "孙亮墓、孙休定陵",
+      "status": "pending_primary_source",
+      "catalogIds": [],
+      "reason": "当涂传统地点须核保护单位和墓主认定，不能以县中心定位。"
+    },
+    {
+      "name": "东晋各帝陵",
+      "status": "pending_tomb_identity",
+      "catalogIds": [],
+      "reason": "鸡笼山、钟山等文献地望不等于已确认单墓；须与考古墓号对应。"
+    },
+    {
+      "name": "南齐景安、修安、兴安等陵",
+      "status": "pending_entity_split",
+      "catalogIds": [],
+      "reason": "先核丹阳既有陵群包含关系及石刻归属，不能仅按名单生成重复点。"
+    },
+    {
+      "name": "苻坚长角冢",
+      "status": "pending_primary_source",
+      "catalogIds": [],
+      "reason": "须核彬州水口镇原冢及保护记录；传统归属单独标注。"
+    },
+    {
+      "name": "王衍墓",
+      "status": "pending_primary_source",
+      "catalogIds": [],
+      "reason": "须核西安三赵村原葬地与现存实体，不采用村名自动推定墓体。"
+    },
+    {
+      "name": "李煜墓",
+      "status": "pending_site_attribution",
+      "catalogIds": [],
+      "reason": "后李村等传统墓址须与文献北邙葬地互核。"
+    },
+    {
+      "name": "宋端宗永福陵",
+      "status": "pending_site_attribution",
+      "catalogIds": [],
+      "reason": "大屿山黄龙坑传统须核历史资料与現存陵址实体。"
+    },
+    {
+      "name": "元帝诸陵",
+      "status": "unresolved_original_burials",
+      "catalogIds": [],
+      "reason": "起辇谷具体地望及各帝墓室未确认，祭祀陵不能代替实际葬地。"
+    },
+    {
+      "name": "霸陵、南唐钦陵",
+      "status": "existing_corrected",
+      "catalogIds": [
+        "han-ba",
+        "nantang-qin"
+      ],
+      "reason": "保留现考古与机构资料；不沿用列表的霸陵旧址或李昪永陵错误陵号。"
+    }
+  ],
+  "comparisonLimit": "对参考名单提取遗漏与冲突线索；仍有待核项，不能声称已穷尽中国全部君主陵墓。"
+}
