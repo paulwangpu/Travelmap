@@ -1,8 +1,8 @@
 {
   "reviewedAt": "2026-10-03",
   "policy": "政权目录空白不等于无陵；人物无匹配不等于无墓；有一条不等于完整。先用君主工作名单和公布文保名录反查，再据原址证据定位。",
-  "totalRecords": 278,
-  "totalMapCandidates": 206,
+  "totalRecords": 288,
+  "totalMapCandidates": 207,
   "matrix": [
     {
       "era": "传说时代",
@@ -38,10 +38,10 @@
     {
       "era": "先秦",
       "dynasty": "商",
-      "records": 11,
-      "singleRecords": 10,
+      "records": 12,
+      "singleRecords": 11,
       "mapCandidates": 2,
-      "sharedLocations": 9,
+      "sharedLocations": 10,
       "unlocated": 0,
       "status": "已有条目，君主及遗址覆盖未判定完整",
       "recordIds": [
@@ -55,7 +55,8 @@
         "shang-m1400",
         "shang-m1500",
         "shang-m1550",
-        "shang-m1567"
+        "shang-m1567",
+        "shang-m27"
       ]
     },
     {
@@ -1280,11 +1281,11 @@
     {
       "era": "宋辽金西夏",
       "dynasty": "金",
-      "records": 19,
-      "singleRecords": 18,
-      "mapCandidates": 1,
-      "sharedLocations": 17,
-      "unlocated": 1,
+      "records": 28,
+      "singleRecords": 26,
+      "mapCandidates": 2,
+      "sharedLocations": 19,
+      "unlocated": 7,
       "status": "已有条目，君主及遗址覆盖未判定完整",
       "recordIds": [
         "jin-group",
@@ -1305,7 +1306,16 @@
         "jin-dao",
         "jin-yu",
         "jin-si",
-        "jin-hailing"
+        "jin-hailing",
+        "jin-taizu-acheng",
+        "jin-hekai",
+        "jin-shun",
+        "jin-huizong-xing",
+        "jin-weishao",
+        "jin-de",
+        "jin-ai-rushui",
+        "jin-chenglin-boji",
+        "jin-chenglin-memorial"
       ]
     },
     {

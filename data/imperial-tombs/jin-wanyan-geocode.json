@@ -1,0 +1,21 @@
+{
+  "place_id": 218432286,
+  "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+  "osm_type": "node",
+  "osm_id": 8676883723,
+  "lat": "35.3829891",
+  "lon": "107.3277864",
+  "category": "place",
+  "type": "village",
+  "place_rank": 19,
+  "importance": 0.14670416800183103,
+  "addresstype": "village",
+  "name": "完颜洼村",
+  "display_name": "完颜洼村, 泾川县, 平凉市, 甘肃省, 中国",
+  "boundingbox": [
+    "35.3629891",
+    "35.4029891",
+    "107.3077864",
+    "107.3477864"
+  ]
+}

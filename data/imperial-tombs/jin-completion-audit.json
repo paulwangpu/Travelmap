@@ -1,0 +1,410 @@
+{
+  "reviewedAt": "2026-10-03",
+  "records": 28,
+  "newRecordIds": [
+    "jin-shun",
+    "jin-huizong-xing",
+    "jin-weishao",
+    "jin-de",
+    "jin-ai-rushui",
+    "jin-chenglin-boji",
+    "jin-chenglin-memorial"
+  ],
+  "newMapPoints": 0,
+  "rejectedGeocodes": [
+    {
+      "query": "完颜村 泾川",
+      "result": "完颜洼村",
+      "reason": "属于党原镇同县异村，不能用于王村镇完颜村纪念冢",
+      "sourceFile": "jin-wanyan-geocode.json"
+    }
+  ],
+  "pending": [
+    "胡凯山和陵现址及墓主认定",
+    "石门峪十帝陵区与峨眉峪思陵的独立地理实体",
+    "康东峪卫绍王墓归属与位置",
+    "开封德陵确切地点",
+    "汝水葬骨处遗址及遗骸记载差异",
+    "簸箕湾传统墓与完颜村纪念冢的实地测绘"
+  ],
+  "rows": [
+    {
+      "id": "jin-group",
+      "name": "金陵（大房山陵区）",
+      "location": "北京市房山区周口店镇车厂村、龙门口村北大房山陵区",
+      "recognition": "documented",
+      "nature": "mixed",
+      "mapEligible": true,
+      "sourceIds": [
+        "jin",
+        "jin-confirmed",
+        "beijing-jin-list",
+        "beijing-jin-tour",
+        "jin-five-areas",
+        "jin-2025-story"
+      ]
+    },
+    {
+      "id": "jin-rui",
+      "name": "金太祖睿陵",
+      "location": "北京市房山区",
+      "recognition": "archaeological",
+      "nature": "actual_burial",
+      "mapEligible": false,
+      "sourceIds": [
+        "jin",
+        "jin-confirmed",
+        "jin-acheng-stages",
+        "jin-five-areas"
+      ]
+    },
+    {
+      "id": "jin-guang",
+      "name": "金始祖光陵",
+      "location": "北京市房山区大房山石门峪十帝陵区（历史归属）",
+      "recognition": "documented",
+      "nature": "posthumous",
+      "mapEligible": false,
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed",
+        "jin-five-areas"
+      ]
+    },
+    {
+      "id": "jin-xi",
+      "name": "金德帝熙陵",
+      "location": "北京市房山区大房山石门峪十帝陵区（历史归属）",
+      "recognition": "documented",
+      "nature": "posthumous",
+      "mapEligible": false,
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed",
+        "jin-five-areas"
+      ]
+    },
+    {
+      "id": "jin-jian",
+      "name": "金安帝建陵",
+      "location": "北京市房山区大房山石门峪十帝陵区（历史归属）",
+      "recognition": "documented",
+      "nature": "posthumous",
+      "mapEligible": false,
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed",
+        "jin-five-areas"
+      ]
+    },
+    {
+      "id": "jin-hui",
+      "name": "金献祖辉陵",
+      "location": "北京市房山区大房山石门峪十帝陵区（历史归属）",
+      "recognition": "documented",
+      "nature": "posthumous",
+      "mapEligible": false,
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed",
+        "jin-five-areas"
+      ]
+    },
+    {
+      "id": "jin-an",
+      "name": "金昭祖安陵",
+      "location": "北京市房山区大房山石门峪十帝陵区（历史归属）",
+      "recognition": "documented",
+      "nature": "posthumous",
+      "mapEligible": false,
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed",
+        "jin-five-areas"
+      ]
+    },
+    {
+      "id": "jin-ding",
+      "name": "金景祖定陵",
+      "location": "北京市房山区大房山石门峪十帝陵区（历史归属）",
+      "recognition": "documented",
+      "nature": "posthumous",
+      "mapEligible": false,
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed",
+        "jin-five-areas"
+      ]
+    },
+    {
+      "id": "jin-yong",
+      "name": "金世祖永陵",
+      "location": "北京市房山区大房山石门峪十帝陵区（历史归属）",
+      "recognition": "documented",
+      "nature": "posthumous",
+      "mapEligible": false,
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed",
+        "jin-five-areas"
+      ]
+    },
+    {
+      "id": "jin-tai",
+      "name": "金肃宗泰陵",
+      "location": "北京市房山区大房山石门峪十帝陵区（历史归属）",
+      "recognition": "documented",
+      "nature": "posthumous",
+      "mapEligible": false,
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed",
+        "jin-five-areas"
+      ]
+    },
+    {
+      "id": "jin-xian",
+      "name": "金穆宗献陵",
+      "location": "北京市房山区大房山石门峪十帝陵区（历史归属）",
+      "recognition": "documented",
+      "nature": "posthumous",
+      "mapEligible": false,
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed",
+        "jin-five-areas"
+      ]
+    },
+    {
+      "id": "jin-qiao",
+      "name": "金康宗乔陵",
+      "location": "北京市房山区大房山石门峪十帝陵区（历史归属）",
+      "recognition": "documented",
+      "nature": "posthumous",
+      "mapEligible": false,
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed",
+        "jin-five-areas"
+      ]
+    },
+    {
+      "id": "jin-gong",
+      "name": "金太宗恭陵",
+      "location": "北京市房山区大房山历史陵区",
+      "recognition": "documented",
+      "nature": "actual_burial",
+      "mapEligible": false,
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed",
+        "jin-acheng-stages",
+        "beijing-jin-history",
+        "jin-five-areas"
+      ]
+    },
+    {
+      "id": "jin-jing",
+      "name": "金睿宗景陵",
+      "location": "北京市房山区大房山历史陵区",
+      "recognition": "documented",
+      "nature": "posthumous",
+      "mapEligible": false,
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed",
+        "jin-five-areas"
+      ]
+    },
+    {
+      "id": "jin-xing",
+      "name": "金世宗兴陵",
+      "location": "北京市房山区大房山历史陵区",
+      "recognition": "documented",
+      "nature": "actual_burial",
+      "mapEligible": false,
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed",
+        "jin-five-areas"
+      ]
+    },
+    {
+      "id": "jin-dao",
+      "name": "金章宗道陵",
+      "location": "北京市房山区大房山主陵区、柳家沟一带（具体对应推测）",
+      "recognition": "documented",
+      "nature": "actual_burial",
+      "mapEligible": false,
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed"
+      ]
+    },
+    {
+      "id": "jin-yu",
+      "name": "金显宗裕陵",
+      "location": "北京市房山区大房山历史陵区",
+      "recognition": "documented",
+      "nature": "posthumous",
+      "mapEligible": false,
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed",
+        "jin-five-areas"
+      ]
+    },
+    {
+      "id": "jin-si",
+      "name": "金熙宗思陵",
+      "location": "北京市房山区西庄村西坡、凤凰山峨眉峪沟（历史陵址线索）",
+      "recognition": "documented",
+      "nature": "actual_burial",
+      "mapEligible": false,
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed",
+        "jin-five-areas",
+        "jin-site-study"
+      ]
+    },
+    {
+      "id": "jin-hailing",
+      "name": "金海陵王墓（故址待核）",
+      "location": "北京市房山区大房山周边（历史归葬范围）",
+      "recognition": "documented",
+      "nature": "unknown",
+      "mapEligible": false,
+      "sourceIds": [
+        "beijing-jin-history",
+        "beijing-liuji-exclusion"
+      ]
+    },
+    {
+      "id": "jin-taizu-acheng",
+      "name": "金太祖陵（阿城初葬陵址）",
+      "location": "黑龙江省哈尔滨市阿城区金上京会宁府遗址西侧、金太祖陵址公园",
+      "recognition": "documented",
+      "nature": "unknown",
+      "mapEligible": true,
+      "sourceIds": [
+        "jin-acheng-history",
+        "jin-acheng-stages",
+        "jin-acheng-osm"
+      ]
+    },
+    {
+      "id": "jin-hekai",
+      "name": "金和陵旧址（胡凯山，疑似）",
+      "location": "黑龙江省哈尔滨市阿城区老母顶子山南麓（三清屯附近；现行区划待核）",
+      "recognition": "attributed",
+      "nature": "unknown",
+      "mapEligible": false,
+      "sourceIds": [
+        "jin-acheng-stages",
+        "jin-hekai-response",
+        "beijing-jin-history"
+      ]
+    },
+    {
+      "id": "jin-shun",
+      "name": "金德宗顺陵（后降为墓）",
+      "location": "北京市房山区九龙山主陵区（历史迁葬范围）",
+      "recognition": "documented",
+      "nature": "posthumous",
+      "mapEligible": false,
+      "sourceIds": [
+        "beijing-jin-history",
+        "jin-five-areas"
+      ]
+    },
+    {
+      "id": "jin-huizong-xing",
+      "name": "金徽宗兴陵（陵址未定）",
+      "location": "黑龙江省哈尔滨市阿城区金上京附近（具体陵址待考）",
+      "recognition": "documented",
+      "nature": "posthumous",
+      "mapEligible": false,
+      "sourceIds": [
+        "jin-huizong-original",
+        "beijing-jin-history"
+      ]
+    },
+    {
+      "id": "jin-weishao",
+      "name": "金卫绍王墓（康东峪线索）",
+      "location": "北京市房山区大房山康东峪（文史归属线索）",
+      "recognition": "attributed",
+      "nature": "actual_burial",
+      "mapEligible": false,
+      "sourceIds": [
+        "jin-five-areas",
+        "beijing-jin-history"
+      ]
+    },
+    {
+      "id": "jin-de",
+      "name": "金宣宗德陵（开封，陵址未定）",
+      "location": "河南省开封市附近，具体陵址不明",
+      "recognition": "documented",
+      "nature": "actual_burial",
+      "mapEligible": false,
+      "sourceIds": [
+        "jin-national-table"
+      ]
+    },
+    {
+      "id": "jin-ai-rushui",
+      "name": "金哀宗葬骨处（汝水滨，故址待核）",
+      "location": "河南省驻马店市汝南县汝水滨、后龙亭河湾北岸张彦庄一带（线索）",
+      "recognition": "attributed",
+      "nature": "unknown",
+      "mapEligible": false,
+      "sourceIds": [
+        "jin-aizong-bio",
+        "jin-aizong-site"
+      ]
+    },
+    {
+      "id": "jin-chenglin-boji",
+      "name": "金末帝传统墓址（泾川簸箕湾）",
+      "location": "甘肃省平凉市泾川县太平乡三星村岭背后簸箕湾、大湾林场一带",
+      "recognition": "traditional",
+      "nature": "unknown",
+      "mapEligible": false,
+      "sourceIds": [
+        "jin-chenglin-local",
+        "jin-chenglin-soil"
+      ]
+    },
+    {
+      "id": "jin-chenglin-memorial",
+      "name": "金末帝纪念冢（完颜村）",
+      "location": "甘肃省平凉市泾川县王村镇完颜村东沟芮王坪",
+      "recognition": "documented",
+      "nature": "commemorative",
+      "mapEligible": false,
+      "sourceIds": [
+        "jin-chenglin-local",
+        "jin-chenglin-soil",
+        "jin-wanyan-tour"
+      ]
+    }
+  ]
+}

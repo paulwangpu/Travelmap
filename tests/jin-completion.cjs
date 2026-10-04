@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict'),c=require('../data/imperial-tombs/catalog.json');
+const get=id=>c.items.find(x=>x.id===id);
+for(const owner of ['阿骨打','完颜晟','完颜亶','完颜亮','完颜雍','完颜璟','完颜永济','完颜珣','完颜守绪','完颜承麟'])assert(c.items.some(x=>x.dynasty==='金'&&x.occupants.some(y=>y.includes(owner))),owner+' must have a record');
+assert.equal(c.items.filter(x=>x.dynasty==='金').length,28);
+assert.equal(get('jin-chenglin-memorial').nature,'commemorative');assert.equal(get('jin-chenglin-boji').recognition,'traditional');
+assert.notEqual(get('jin-chenglin-memorial').admin,get('jin-chenglin-boji').admin);
+assert.equal(get('jin-de').parentId,null);assert(!get('jin-de').mapEligible);assert(!get('jin-de').coordinates);
+assert.notEqual(get('jin-huizong-xing').id,get('jin-xing').id);assert.equal(get('jin-huizong-xing').parentId,null);
+assert(get('jin-guang').admin.includes('石门峪'));assert(get('jin-si').admin.includes('峨眉峪'));assert.equal(get('jin-weishao').recognition,'attributed');
+for(const x of c.items.filter(x=>x.dynasty==='金'))for(const sid of x.sourceIds)assert(c.sources.some(s=>s.id===sid),sid);
+console.log('PASS: all ten Jin rulers covered, distinct homonymous tombs, burial areas, memorial classification and source integrity');

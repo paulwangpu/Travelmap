@@ -43,7 +43,7 @@ const html=fs.readFileSync(require.resolve('../index.html'),'utf8');
 assert.match(html,/compact-toggle-pair[^]*?showAncientCapitalsOnMap[^]*?showImperialTombsOnMap/);
 assert.match(html,/hazard-toggle-pair[^]*?showArcgisWaterOnMap[^]*?水系[^]*?showGreatWallOnMap/);
 for(const id of ['showImperialTombsOnMap','showGreatWallOnMap','showArcgisWaterOnMap'])assert.equal(html.split(`id="${id}"`).length,2);
-const sw=fs.readFileSync(require.resolve('../sw.js'),'utf8');assert(sw.includes('imperial-tombs.js?v=50'));assert(sw.includes('data/imperial-tombs/catalog.json?v=30'));
+const sw=fs.readFileSync(require.resolve('../sw.js'),'utf8');assert(sw.includes('imperial-tombs.js?v=55'));assert(sw.includes('data/imperial-tombs/catalog.json?v=33'));
 console.log(`PASS: ${low.length} overview / ${high.length} detailed points; era filtering, invalid coordinate exclusion, hierarchy, layout and offline assets`);
 
 assert.equal(Object.keys(c.summary)[0],'传说时代');
@@ -59,7 +59,7 @@ assert.equal(mappedItems({items:[{mapEligible:true,coordinates:{status:'estimate
 assert(geojson(c).features.find(x=>x.id==='ming-xianling').properties.name.endsWith('（估）'));
 
 const shang=c.items.filter(x=>x.id.startsWith('shang-m'));
-assert.equal(shang.length,9);
+assert.equal(shang.length,10);
 for(const x of shang){assert.equal(x.parentId,'yin-kings');assert.equal(x.mapEligible,false);assert.equal(x.coordinates,null);assert.equal(x.locationReference.coordinates.crs,'WGS84');}
 assert(high.some(x=>x.id==='yin-kings'),'shared references retain the one cemetery marker');
 assert.equal(c.items.find(x=>x.id==='shang-m1567').nature,'unknown');

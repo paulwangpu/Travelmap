@@ -15,7 +15,7 @@ const mapControlsStorageKey = "travel-map-controls-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "2.2.0";
+const appVersion = "2.0.1";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 296;
@@ -12584,7 +12584,7 @@ function renderDataInventory() {
 
 function loadImperialTombChecklist() {
   if (imperialTombChecklistPromise) return imperialTombChecklistPromise;
-  imperialTombChecklistPromise = fetchJson("data/imperial-tombs/catalog.json?v=30").then(catalog => {
+  imperialTombChecklistPromise = fetchJson("data/imperial-tombs/catalog.json?v=33").then(catalog => {
     if (!Array.isArray(catalog.items)) throw new Error("Invalid imperial tomb catalog");
     imperialTombMapIndex=new Map(catalog.items.flatMap(item=>[item.name,...(item.aliases||[])].map(name=>[canonicalPlaceKey(name),item])));
     const parents = new Set(catalog.items.map(item => item.parentId).filter(Boolean));
@@ -13768,6 +13768,7 @@ function scheduleFillLazyChecklistGroup(details, afterFill) {
 }
 
 async function toggleChecklistItem(key, item, group = "") {
+  if (key === "imperialTombs") await loadImperialTombChecklist();
   const id = checklistId(key, item, group);
   const itemKey = checklistItemKey(key, item, group);
   const legacyKey = canonicalPlaceKey(item);
@@ -15927,6 +15928,7 @@ GreatWall.init({ state: () => state, language: () => currentLanguage, map: () =>
   save: saveUiStateSoon, render: () => { renderMapControls(); renderGeoMap(); } });
 ImperialTombs.init({ state: () => state, language: () => currentLanguage, fetch: fetchJson,
   isVisited: item => isChecklistItemDone("imperialTombs", item.name),
+  popupHtml: mapPopupHtml,
   resetDetail: resetMapDetailClass, front: bringMapLibrePointLayersToFront,
   save: saveUiStateSoon, render: () => { renderMapControls(); renderGeoMap(); } });
 loadState();

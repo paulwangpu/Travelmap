@@ -199,6 +199,7 @@
     "hami-hui-kings",
     "cheshi-goubei",
     "tuyuhun-reshui",
+    "jin-taizu-acheng",
     "han-chan",
     "chu-yi",
     "shu-hui",
@@ -843,6 +844,11 @@
       "id": "tuyuhun-reshui",
       "sourceId": "geo-west-Q2145631",
       "method": "机构所述地望与P625 Earth地理实体交叉核对"
+    },
+    {
+      "id": "jin-taizu-acheng",
+      "sourceId": "jin-acheng-osm",
+      "method": "读取OSM官方API，核对公园节点及附近金太祖陵节点，与机构所述上京遗址西侧交叉检查"
     },
     {
       "id": "shu-hui",

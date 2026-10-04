@@ -29,10 +29,16 @@
     const ids=new Set(valid.map(x=>x.id)),parents=new Set(valid.map(x=>x.parentId).filter(Boolean));
     return valid.filter(x=>zoom<7 ? !x.parentId||!ids.has(x.parentId) : x.recordType!=='group'||!parents.has(x.id));
   }
-  function geojson(catalog,era='',zoom=10,natures={},preqin={},isVisited=()=>false) {return {type:'FeatureCollection',features:mappedItems(catalog,era,zoom,natures,preqin).map(x=>{const done=Boolean(isVisited(x));return {type:'Feature',id:x.id,geometry:{type:'Point',coordinates:[x.coordinates.lng,x.coordinates.lat]},properties:{id:x.id,name:(done?'✓ ':'')+(x.mapLabel||x.name)+(x.coordinates.status==='estimated_wgs84'?'（估）':''),done,color:dynastyTheme(x).color,dynastyColorKey:dynastyTheme(x).key,icon:dynastyTheme(x).icon+(done?'-visited':''),group:x.recordType==='group',memorial:['commemorative','cenotaph'].includes(x.nature)}};})};}
+  function visitMembers(catalog,x) {
+    if(x.recordType!=='group')return [x];
+    const descendants=(catalog.items||[]).filter(item=>{let current=item;const seen=new Set();while(current.parentId&&!seen.has(current.id)){seen.add(current.id);if(current.parentId===x.id)return true;current=catalog.items.find(parent=>parent.id===current.parentId);if(!current)break;}return false;});
+    const parents=new Set(descendants.map(item=>item.parentId).filter(Boolean));
+    return descendants.length?descendants.filter(item=>item.recordType==='single'||!parents.has(item.id)):[x];
+  }
+  function geojson(catalog,era='',zoom=10,natures={},preqin={},isVisited=()=>false) {return {type:'FeatureCollection',features:mappedItems(catalog,era,zoom,natures,preqin).map(x=>{const members=visitMembers(catalog,x),visited=members.filter(isVisited).length,done=visited===members.length;return {type:'Feature',id:x.id,geometry:{type:'Point',coordinates:[x.coordinates.lng,x.coordinates.lat]},properties:{id:x.id,name:(done?'✓ ':'')+(x.mapLabel||x.name)+(x.coordinates.status==='estimated_wgs84'?'（估）':''),done,visitedCount:visited,visitTotal:members.length,partlyVisited:visited>0&&!done,color:dynastyTheme(x).color,dynastyColorKey:dynastyTheme(x).key,icon:dynastyTheme(x).icon+(visited>0?'-visited':''),group:x.recordType==='group',memorial:['commemorative','cenotaph'].includes(x.nature)}};})};}
   let config,data,pending,error='',revision=0,hover,pinned,leafletGroup,selectedId;
   const bound=new WeakSet();
-  const en=()=>config.language()==='en';
+  const en=()=>config?.language?.()==='en';
   const enabled=()=>Boolean(config.state().mapOverlays?.imperialTombs);
   const era=()=>config.state().mapOverlays?.imperialTombsEra||'';
   const eraSelection=()=>{const saved=config.state().mapOverlays?.imperialTombsEras;if(saved)return {...root.HistoricalPeriods.periodSelection(saved),明:saved.明??saved['明清'],清:saved.清??saved['明清']};return era()==='明清'?{明:true,清:true,...Object.fromEntries(eraKeys().filter(k=>!['明','清'].includes(k)).map(k=>[k,false]))}:root.HistoricalPeriods.displayPeriod(era());};
@@ -46,7 +52,7 @@
   const removePopups=()=>{hover?.remove();pinned?.remove();hover=pinned=null;};
   async function load() {
     if(data)return data;if(pending)return pending;
-    pending=config.fetch('data/imperial-tombs/catalog.json?v=30').then(c=>{
+    pending=config.fetch('data/imperial-tombs/catalog.json?v=33').then(c=>{
       if(!Array.isArray(c.items)||!Array.isArray(c.sources))throw new Error('invalid tomb catalog');
       data=c;error='';return c;
     }).catch(e=>{error=en()?'Tomb data could not be loaded. Retry.':'皇陵资料加载失败，点击重试。';throw e;}).finally(()=>{pending=null;});
@@ -74,12 +80,18 @@
     const sources=new Map(data.sources.map(s=>[s.id,s]));
     const row=(label,value)=>`<div><dt>${label}</dt><dd>${esc(value||'—')}</dd></div>`;
     const section=(title,content)=>`<section class="tomb-detail-section"><h4>${title}</h4>${content}</section>`;
-    const links=[...new Set([...x.sourceIds,...(x.biographies||[]).flatMap(p=>p.sourceIds||[]),...(x.disturbance?.sourceIds||[]),x.coordinates?.sourceId,x.locationReference?.coordinates?.sourceId].filter(Boolean))].map(k=>sources.get(k)).filter(s=>s&&/^https:\/\//.test(s.url));
-    el.innerHTML=`<p class="eyebrow">${en()?'Imperial tombs':'皇陵'}</p><h3>${esc(x.mapLabel||x.name)}</h3>
+    const links=[...new Set([...x.sourceIds,...(x.migrationHistory?.sourceIds||[]),...(x.researchUpdates||[]).flatMap(update=>update.sourceIds),...(x.biographies||[]).flatMap(p=>p.sourceIds||[]),...(x.disturbance?.sourceIds||[]),x.coordinates?.sourceId,x.locationReference?.coordinates?.sourceId].filter(Boolean))].map(k=>sources.get(k)).filter(s=>s&&/^https:\/\//.test(s.url));
+    const members=visitMembers(data,x);
+    const action=item=>`<button type="button" class="detail-action" data-checklist-map="imperialTombs" data-item="${esc(item.name)}">${config.isVisited?.(item)?(en()?'Mark unvisited':'取消去过'):(en()?'Mark visited':'标记去过')}</button>`;
+    el.innerHTML=`<button type="button" class="map-detail-close" data-close-detail aria-label="${en()?'Close':'关闭'}">×</button><p class="eyebrow">${en()?'Imperial tombs':'皇陵'}</p><h3>${esc(x.mapLabel||x.name)}</h3>
+      ${members.length===1&&members[0].id===x.id?action(x):section(en()?'Tombs in this cemetery':'陵区内陵墓',`<ul class="tomb-detail-sources">${members.map(item=>`<li><button type="button" class="popup-action" data-tomb-related="${esc(item.id)}">${esc(item.mapLabel||item.name)}</button>${action(item)}</li>`).join('')}</ul>`)}
       ${section(en()?'Overview':'基本信息',`<dl>${row(en()?'Dynasty':'朝代 / 政权',x.dynasty)}${row(en()?'Occupants / dedication':'墓主 / 祭祀对象',x.occupants.join('、'))}${row(en()?'Lifespan':'生卒时间',x.lifespanText)}${row(en()?'Location':'所在地',x.admin)}${row(en()?'Nature':'性质',data.natureLabels[x.nature])}</dl>`)}
       ${section(en()?'Evidence and uncertainty':'认定与争议',`<dl>${row(en()?'Dating':'年代范围',x.periodText||x.preqinPeriod||x.era)}${row(en()?'Period evidence':'分期依据',x.preqinPeriodBasis)}${row(en()?'Recognition':'认定依据',x.evidence)}${row(en()?'Disturbance record':'盗掘记录',x.disturbance?.label)}${row(en()?'Disturbance evidence':'盗掘依据',x.disturbance?.evidence)}</dl>${x.disputes.length?`<div class="tomb-detail-note">${esc(x.disputes.join('；'))}</div>`:''}`)}
+      ${x.researchUpdates?.length?section(en()?'Recent research':'近年考古进展',`<ul>${x.researchUpdates.map(update=>`<li>${esc(update.note)}</li>`).join('')}</ul>`):''}
+      ${x.migrationHistory?section(en()?'Burial and relocation':'初葬与迁葬',`<ol>${x.migrationHistory.stages.map(stage=>`<li>${esc(stage.year)}年 · <button type="button" class="popup-action" data-tomb-related="${esc(stage.siteId)}">${esc(stage.label)}</button>${stage.siteId===x.id?'（本条目）':''}</li>`).join('')}</ol>`):''}
       ${section(en()?'Map location':'地图位置',`<dl>${row(en()?'Reference point':'地图点位',x.coordinates?.target||x.locationReference?.target)}${row(en()?'Location evidence':'定位资料',x.coordinates?.limitation||x.locationReference?.limitation||x.locationReference?.basis)}</dl>`)}
       ${section(en()?'Sources':'资料来源',`<ul class="tomb-detail-sources">${links.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)}</a><small>${esc(s.publisher||'')}</small></li>`).join('')}</ul>`)}`;
+    el.querySelectorAll('[data-tomb-related]').forEach(button=>button.addEventListener('click',()=>showDetail(button.dataset.tombRelated)));
 
   }
   async function sync(map) {
@@ -100,7 +112,7 @@
       if(selectedId&&document.getElementById('mapDetail')?.classList.contains('imperial-tomb-detail'))showDetail(selectedId);
       if(!bound.has(map)){bound.add(map);
         const hit=e=>{const layers=['imperial-tomb-point','imperial-tomb-label','imperial-tomb-label-full'].filter(id=>map.getLayer(id));return layers.length?map.queryRenderedFeatures([[e.point.x-7,e.point.y-7],[e.point.x+7,e.point.y+7]],{layers})[0]:null;};
-        map.on('mousemove',e=>{if(!enabled())return;const f=hit(e);hover?.remove();hover=null;if(f){map.getCanvas().style.cursor='pointer';hover=new maplibregl.Popup({closeButton:false,closeOnClick:false,offset:10,maxWidth:'220px',className:'ancient-capital-hover'}).setLngLat(f.geometry.coordinates).setHTML(`<b>${esc(f.properties.name)}</b>`).addTo(map);}else if(map.getCanvas().style.cursor==='pointer')map.getCanvas().style.cursor='';});
+        map.on('mousemove',e=>{if(!enabled()||pinned?.isOpen())return;const f=hit(e);hover?.remove();hover=null;if(f){map.getCanvas().style.cursor='pointer';hover=new maplibregl.Popup({closeButton:false,closeOnClick:false,offset:10,maxWidth:'220px',className:'ancient-capital-hover'}).setLngLat(f.geometry.coordinates).setHTML(`<b>${esc(f.properties.name)}</b>`).addTo(map);}else if(map.getCanvas().style.cursor==='pointer')map.getCanvas().style.cursor='';});
         map.on('zoomend',()=>{if(enabled())sync(map);});
       }
     }catch(e){if(token===revision){legend();console.warn('Imperial tomb overlay',e);}}
@@ -109,7 +121,7 @@
     const token=++revision;if(leafletGroup){map.removeLayer(leafletGroup);leafletGroup=null;}
     if(!enabled()){legend();return;}legend();
     try{const c=await load();if(token!==revision||!enabled())return;leafletGroup=L.layerGroup().addTo(map);
-      for(const x of mappedItems(c,eraSelection(),map.getZoom(),natureSelection())) {const done=Boolean(config.isVisited?.(x));L.marker([x.coordinates.lat,x.coordinates.lng],{icon:L.divIcon({className:'imperial-tomb-marker',html:root.HistoricalPeriods.visitedSvg(markerSvg(dynastyTheme(x).color),done),iconSize:[18,18],iconAnchor:[9,9]})}).bindTooltip(esc((done?'✓ ':'')+(x.mapLabel||x.name))).on('click',e=>{L.DomEvent.stopPropagation(e.originalEvent);showDetail(x.id);}).addTo(leafletGroup);}
+      for(const x of mappedItems(c,eraSelection(),map.getZoom(),natureSelection())) {const members=visitMembers(c,x),count=members.filter(item=>config.isVisited?.(item)).length,done=count===members.length;L.marker([x.coordinates.lat,x.coordinates.lng],{icon:L.divIcon({className:'imperial-tomb-marker',html:root.HistoricalPeriods.visitedSvg(markerSvg(dynastyTheme(x).color),count>0),iconSize:[18,18],iconAnchor:[9,9]})}).bindTooltip(esc((done?'✓ ':'')+(x.mapLabel||x.name))).bindPopup(config.popupHtml(popupContent(c,x,item=>config.isVisited?.(item))),{closeButton:false,maxWidth:300}).on('click',e=>{L.DomEvent.stopPropagation(e.originalEvent);showDetail(x.id);}).addTo(leafletGroup);}
       legend();if(!bound.has(map)){bound.add(map);map.on('zoomend',()=>{if(enabled())leaflet(map);});}
     }catch(e){if(token===revision){legend();console.warn('Imperial tomb overlay',e);}}
   }
@@ -127,11 +139,23 @@
       el.addEventListener('click',e=>{if(e.target.closest('[data-tomb-all]'))e.stopPropagation();if(e.target.closest('[data-tomb-retry]')){error='';config.render();}});
     }
   }
+  function popupContent(catalog,x,isVisited=()=>false) {
+    const members=visitMembers(catalog,x);
+    const action=item=>`<button class="popup-action" data-checklist-map="imperialTombs" data-item="${esc(item.name)}" type="button">${isVisited(item)?(en()?'Cancel visited':'取消去过'):(en()?'Mark visited':'标记去过')}</button>`;
+    const body=members.length===1&&members[0].id===x.id?action(x):`<div style="max-height:220px;overflow:auto">${members.map(item=>`<div><span>${esc(item.mapLabel||item.name)}</span><br>${action(item)}</div>`).join('')}</div>`;
+    return `<strong>${esc(x.mapLabel||x.name)}</strong><br>${esc(x.admin)}<br>${body}`;
+  }
+  function showPopup(map,x) {
+    removePopups();
+    const content=popupContent(data,x,item=>config.isVisited?.(item));
+    const html=config.popupHtml?config.popupHtml(content):content;
+    pinned=new maplibregl.Popup({offset:12,closeButton:false,maxWidth:'300px'}).setLngLat([x.coordinates.lng,x.coordinates.lat]).setHTML(html).addTo(map);
+  }
   function handleClick(map,e) {
     if(!enabled()||!map.getLayer('imperial-tomb-point'))return false;
     const f=map.queryRenderedFeatures([[e.point.x-7,e.point.y-7],[e.point.x+7,e.point.y+7]],{layers:['imperial-tomb-point']})[0];
-    if(!f)return false;if(e.originalEvent)e.originalEvent._travelMapHandled=true;showDetail(f.properties.id);return true;
+    if(!f)return false;if(e.originalEvent)e.originalEvent._travelMapHandled=true;const x=data?.items.find(item=>item.id===f.properties.id);if(!x)return false;showDetail(x.id);showPopup(map,x);return true;
   }
   root.ImperialTombs={init,legend,sync,leaflet,mappedItems,geojson,handleClick,compareChecklistItems,dynastyTheme,markerSvg,markerImage,dynastyColors,catalogItems:()=>data?.items||[]};
-  if(typeof module!=='undefined')module.exports={mappedItems,geojson,compareChecklistItems,dynastyTheme,markerSvg,markerImage,dynastyColors};
+  if(typeof module!=='undefined')module.exports={mappedItems,geojson,compareChecklistItems,dynastyTheme,markerSvg,markerImage,dynastyColors,popupContent};
 })(globalThis);

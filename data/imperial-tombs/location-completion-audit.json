@@ -12,7 +12,7 @@
     "zhou-lingpo",
     "early-xingan"
   ],
-  "withIndependentOrRegionalPoint": 206,
+  "withIndependentOrRegionalPoint": 207,
   "sharedCemeteryReferences": [
     "nantang-qin",
     "nantang-shun",
@@ -56,7 +56,10 @@
     "yan-liulihe-m202",
     "houhan-rui",
     "houhan-ying",
-    "tuyuhun-xuewei-2018"
+    "tuyuhun-xuewei-2018",
+    "jin-shun",
+    "jin-weishao",
+    "shang-m27"
   ],
   "unresolved": [
     {
@@ -226,6 +229,42 @@
       "name": "武威吐谷浑王族墓群（大可汗陵线索）",
       "admin": "甘肃省武威市凉州区",
       "reason": "广域陵群不应任取一座陵或城市中心代表"
+    },
+    {
+      "id": "jin-hekai",
+      "name": "金和陵旧址（胡凯山，疑似）",
+      "admin": "黑龙江省哈尔滨市阿城区老母顶子山南麓（三清屯附近；现行区划待核）",
+      "reason": "广域陵群不应任取一座陵或城市中心代表"
+    },
+    {
+      "id": "jin-huizong-xing",
+      "name": "金徽宗兴陵（陵址未定）",
+      "admin": "黑龙江省哈尔滨市阿城区金上京附近（具体陵址待考）",
+      "reason": "核对原始文献、独立陵址及可复核WGS84区域坐标"
+    },
+    {
+      "id": "jin-de",
+      "name": "金宣宗德陵（开封，陵址未定）",
+      "admin": "河南省开封市附近，具体陵址不明",
+      "reason": "核对原始文献、独立陵址及可复核WGS84区域坐标"
+    },
+    {
+      "id": "jin-ai-rushui",
+      "name": "金哀宗葬骨处（汝水滨，故址待核）",
+      "admin": "河南省驻马店市汝南县汝水滨、后龙亭河湾北岸张彦庄一带（线索）",
+      "reason": "核对原始文献、独立陵址及可复核WGS84区域坐标"
+    },
+    {
+      "id": "jin-chenglin-boji",
+      "name": "金末帝传统墓址（泾川簸箕湾）",
+      "admin": "甘肃省平凉市泾川县太平乡三星村岭背后簸箕湾、大湾林场一带",
+      "reason": "核对原始文献、独立陵址及可复核WGS84区域坐标"
+    },
+    {
+      "id": "jin-chenglin-memorial",
+      "name": "金末帝纪念冢（完颜村）",
+      "admin": "甘肃省平凉市泾川县王村镇完颜村东沟芮王坪",
+      "reason": "核对原始文献、独立陵址及可复核WGS84区域坐标"
     },
     {
       "id": "zhou-later",

@@ -1,0 +1,301 @@
+{
+  "reviewedAt": "2026-10-03",
+  "scope": "金初葬迁葬及2023—2026年王陵考古定向核查，非穷尽",
+  "added": [
+    "jin-taizu-acheng",
+    "jin-hekai",
+    "shang-m27"
+  ],
+  "newMapPoints": [
+    "jin-taizu-acheng"
+  ],
+  "totalRecords": 281,
+  "totalMapCandidates": 207,
+  "items": [
+    {
+      "id": "chu-wuwangdun",
+      "name": "武王墩一号墓",
+      "mapEligible": true,
+      "researchUpdates": [
+        {
+          "publishedYear": 2025,
+          "reviewedAt": "2026-10-03",
+          "note": "2024年底田野发掘完成，2025年机构成果明确综合分析认定楚考烈王；保留证据类型为综合考古分析。",
+          "sourceIds": [
+            "recent-chu-2025"
+          ]
+        }
+      ],
+      "reviewTasks": [
+        "补测陵体、入口及误差；复核地理资料更新"
+      ],
+      "sourceIds": [
+        "wu-dun-confirmed",
+        "wu-dun",
+        "recent-chu-2025"
+      ]
+    },
+    {
+      "id": "song6",
+      "name": "南宋六陵",
+      "mapEligible": true,
+      "researchUpdates": [
+        {
+          "publishedYear": 2026,
+          "reviewedAt": "2026-10-03",
+          "note": "2026年三、四号陵园发掘简报等进展补入；考古编号与历史陵号保持独立，未核定对应关系不造单陵坐标。",
+          "sourceIds": [
+            "recent-song6-2026"
+          ]
+        }
+      ],
+      "reviewTasks": [
+        "补测陵体、入口及误差；复核地理资料更新",
+        "补核陵区边界或代表点；单陵未知时仅显示陵群"
+      ],
+      "sourceIds": [
+        "song6",
+        "recent-song6-2026"
+      ]
+    },
+    {
+      "id": "jin-rui",
+      "name": "金太祖睿陵",
+      "mapEligible": false,
+      "migrationHistory": {
+        "person": "金太祖完颜阿骨打",
+        "stages": [
+          {
+            "year": 1123,
+            "siteId": "jin-taizu-acheng",
+            "label": "阿城初葬陵址",
+            "status": "documented"
+          },
+          {
+            "year": 1135,
+            "siteId": "jin-hekai",
+            "label": "胡凯山和陵（现址疑似）",
+            "status": "attributed"
+          },
+          {
+            "year": 1155,
+            "siteId": "jin-rui",
+            "label": "北京房山睿陵（迁葬）",
+            "status": "archaeological"
+          }
+        ],
+        "sourceIds": [
+          "jin-acheng-stages",
+          "jin-hekai-response",
+          "jin-confirmed"
+        ]
+      },
+      "reviewTasks": [
+        "补核单陵WGS84坐标、指向对象与精度",
+        "太祖身份已确认，独立墓室经纬度仍待核；当前仅引用陵区参考位置。"
+      ],
+      "sourceIds": [
+        "jin",
+        "jin-confirmed",
+        "jin-acheng-stages"
+      ]
+    },
+    {
+      "id": "tubo-kings",
+      "name": "藏王墓",
+      "mapEligible": true,
+      "researchUpdates": [
+        {
+          "publishedYear": 2026,
+          "reviewedAt": "2026-10-03",
+          "note": "2025年遗址公园立项、2026年保护规划编制进展，未据此新增确证墓主或单陵点。",
+          "sourceIds": [
+            "recent-tubo-2026"
+          ]
+        }
+      ],
+      "reviewTasks": [
+        "补测陵体、入口及误差；复核地理资料更新",
+        "补核陵区边界或代表点；单陵未知时仅显示陵群"
+      ],
+      "sourceIds": [
+        "tubo-history",
+        "tubo-review",
+        "recent-tubo-2026"
+      ]
+    },
+    {
+      "id": "jin-gong",
+      "name": "金太宗恭陵",
+      "mapEligible": false,
+      "migrationHistory": {
+        "person": "金太宗完颜晟",
+        "stages": [
+          {
+            "year": 1135,
+            "siteId": "jin-hekai",
+            "label": "胡凯山和陵（现址疑似）",
+            "status": "attributed"
+          },
+          {
+            "year": 1155,
+            "siteId": "jin-gong",
+            "label": "北京房山恭陵（迁葬，墓室对应未定）",
+            "status": "documented"
+          }
+        ],
+        "sourceIds": [
+          "beijing-jin-history",
+          "jin-hekai-response"
+        ]
+      },
+      "reviewTasks": [
+        "补核单陵WGS84坐标、指向对象与精度"
+      ],
+      "sourceIds": [
+        "beijing-jin-list",
+        "beijing-jin-history",
+        "jin-confirmed",
+        "jin-acheng-stages",
+        "beijing-jin-history"
+      ]
+    },
+    {
+      "id": "early-shimao",
+      "name": "石峁皇城台高等级墓地（王族候选）",
+      "mapEligible": true,
+      "researchUpdates": [
+        {
+          "publishedYear": 2025,
+          "reviewedAt": "2026-10-03",
+          "note": "2022—2024年发掘120余座墓，2025年公布；最高等级人群墓地不能批量拆成已确认君主墓。",
+          "sourceIds": [
+            "recent-shimao-2025"
+          ]
+        },
+        {
+          "publishedYear": 2025,
+          "reviewedAt": "2026-10-03",
+          "note": "2025年古DNA构建跨四代家族谱系；不以遗传亲缘替代王室身份与墓主姓名。",
+          "sourceIds": [
+            "recent-shimao-dna"
+          ]
+        }
+      ],
+      "reviewTasks": [
+        "补核陵区边界或代表点；单陵未知时仅显示陵群"
+      ],
+      "sourceIds": [
+        "early-shimao-royal",
+        "early-shimao-geo",
+        "recent-shimao-2025",
+        "recent-shimao-dna"
+      ]
+    },
+    {
+      "id": "jin-taizu-acheng",
+      "name": "金太祖陵（阿城初葬陵址）",
+      "mapEligible": true,
+      "migrationHistory": {
+        "person": "金太祖完颜阿骨打",
+        "stages": [
+          {
+            "year": 1123,
+            "siteId": "jin-taizu-acheng",
+            "label": "阿城初葬陵址",
+            "status": "documented"
+          },
+          {
+            "year": 1135,
+            "siteId": "jin-hekai",
+            "label": "胡凯山和陵（现址疑似）",
+            "status": "attributed"
+          },
+          {
+            "year": 1155,
+            "siteId": "jin-rui",
+            "label": "北京房山睿陵（迁葬）",
+            "status": "archaeological"
+          }
+        ],
+        "sourceIds": [
+          "jin-acheng-stages",
+          "jin-hekai-response",
+          "jin-confirmed"
+        ]
+      },
+      "reviewTasks": [
+        "补核原始墓室与宁神殿基址对应、陵园边界和入口实测坐标"
+      ],
+      "sourceIds": [
+        "jin-acheng-history",
+        "jin-acheng-stages",
+        "jin-acheng-osm"
+      ]
+    },
+    {
+      "id": "jin-hekai",
+      "name": "金和陵旧址（胡凯山，疑似）",
+      "mapEligible": false,
+      "migrationHistory": {
+        "person": "金太祖完颜阿骨打",
+        "stages": [
+          {
+            "year": 1123,
+            "siteId": "jin-taizu-acheng",
+            "label": "阿城初葬陵址",
+            "status": "documented"
+          },
+          {
+            "year": 1135,
+            "siteId": "jin-hekai",
+            "label": "胡凯山和陵（现址疑似）",
+            "status": "attributed"
+          },
+          {
+            "year": 1155,
+            "siteId": "jin-rui",
+            "label": "北京房山睿陵（迁葬）",
+            "status": "archaeological"
+          }
+        ],
+        "sourceIds": [
+          "jin-acheng-stages",
+          "jin-hekai-response",
+          "jin-confirmed"
+        ]
+      },
+      "reviewTasks": [
+        "核对老母顶子山、三清屯及现行保护区划，补有依据的区域坐标",
+        "查找2011年后考古勘测结果与墓主认定，不能引用早期报道作为最新确证"
+      ],
+      "sourceIds": [
+        "jin-acheng-stages",
+        "jin-hekai-response",
+        "beijing-jin-history"
+      ]
+    },
+    {
+      "id": "shang-m27",
+      "name": "殷墟王陵区M27（王室候选大墓）",
+      "mapEligible": false,
+      "researchUpdates": [
+        {
+          "publishedYear": 2026,
+          "reviewedAt": "2026-10-03",
+          "note": "2025年度发掘、2026年公开成果；新增记录，未取得独立坐标。",
+          "sourceIds": [
+            "recent-yin-2025"
+          ]
+        }
+      ],
+      "reviewTasks": [
+        "取得M27发掘区定位图及墓室WGS84坐标",
+        "核对墓主等级与王室关系后再细化认定"
+      ],
+      "sourceIds": [
+        "recent-yin-2025"
+      ]
+    }
+  ]
+}

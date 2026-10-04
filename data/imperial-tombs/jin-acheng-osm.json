@@ -1,0 +1,26 @@
+{
+  "retrievedAt": "2026-10-03",
+  "source": "https://www.openstreetmap.org/api/0.6/map?bbox=126.953,45.490,126.968,45.498",
+  "crs": "WGS84",
+  "attribution": "OpenStreetMap contributors, ODbL",
+  "nodes": [
+    {
+      "id": 6366690886,
+      "lat": 45.493531,
+      "lng": 126.9593646,
+      "tags": {
+        "name:ja": "金太祖陵",
+        "tourism": "museum"
+      }
+    },
+    {
+      "id": 8155878635,
+      "lat": 45.4427324,
+      "lng": 126.9660335,
+      "tags": {
+        "leisure": "park",
+        "name": "金太祖陵址公园"
+      }
+    }
+  ]
+}

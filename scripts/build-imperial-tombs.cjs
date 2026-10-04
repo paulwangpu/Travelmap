@@ -285,6 +285,9 @@ require('./expand-inventory-tombs.cjs')({items,add,group,source});
 require('./expand-archaeological-royal-tombs.cjs')({items,add,group,source});
 require('./expand-early-royal-sites.cjs')({add,group,source});
 require('./expand-western-royal-tombs.cjs')({items,add,group,source});
+require('./expand-jin-migration-sites.cjs')({items,add,group,source});
+require('./complete-jin-tombs.cjs')({items,add,source});
+require('./review-recent-tomb-archaeology.cjs')({items,add,source});
 require('./enrich-imperial-tombs.cjs')({items,sources,add,group,batch,source,dir});
 require('./complete-missing-tomb-locations.cjs')({items,source});
 for (const item of items) if (item.era === '明清') item.era = item.dynasty.startsWith('清') ? '清' : '明';
@@ -298,6 +301,8 @@ for(const x of items.filter(x=>x.locationReference)) {
  const p=items.find(p=>p.id===x.locationReference.parentId);
  if(p?.coordinates)x.locationReference.coordinates={lat:p.coordinates.lat,lng:p.coordinates.lng,crs:'WGS84',sourceId:p.coordinates.sourceId};
 }
+const recentM27=items.find(x=>x.id==='shang-m27');
+recentM27.disturbance={status:'archaeological_evidence',label:disturbanceLabels.archaeological_evidence,evidence:'2025年度发掘记录H335、H348早期盗坑直达墓底，椁室被盗一空；保留2026年公开报告。',scope:'M27墓室',sourceIds:['recent-yin-2025'],reviewedAt:date};
 const mapCandidateIds = items.filter(x=>x.mapEligible).map(x=>x.id);
 const summary = {};
 for(const x of items) {
