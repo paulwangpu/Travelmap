@@ -114,7 +114,8 @@
       if(!map.getLayer('imperial-tomb-label'))map.addLayer({id:'imperial-tomb-label',type:'symbol',source:'imperial-tombs',minzoom:5,maxzoom:11,layout:{...layout,'text-size':12},paint});
       if(!map.getLayer('imperial-tomb-label-full'))map.addLayer({id:'imperial-tomb-label-full',type:'symbol',source:'imperial-tombs',minzoom:11,layout:{...layout,'text-size':12},paint});
       legend();config.front?.();
-      if(selectedId&&document.getElementById('mapDetail')?.classList.contains('imperial-tomb-detail'))showDetail(selectedId);
+      const detail=document.getElementById('mapDetail');
+      if(selectedId&&detail?.classList.contains('imperial-tomb-detail')&&!detail.classList.contains('hidden'))showDetail(selectedId);
       if(!bound.has(map)){bound.add(map);
         const hit=e=>{const layers=['imperial-tomb-point','imperial-tomb-label','imperial-tomb-label-full'].filter(id=>map.getLayer(id));return layers.length?map.queryRenderedFeatures([[e.point.x-7,e.point.y-7],[e.point.x+7,e.point.y+7]],{layers})[0]:null;};
         map.on('mousemove',e=>{if(!enabled()||pinned?.isOpen())return;const f=hit(e);hover?.remove();hover=null;if(f){map.getCanvas().style.cursor='pointer';hover=new maplibregl.Popup({closeButton:false,closeOnClick:false,offset:10,maxWidth:'220px',className:'ancient-capital-hover'}).setLngLat(f.geometry.coordinates).setHTML(`<b>${esc(f.properties.name)}</b>`).addTo(map);}else if(map.getCanvas().style.cursor==='pointer')map.getCanvas().style.cursor='';});

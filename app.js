@@ -5738,7 +5738,7 @@ function closeMapPopupsAndDetail() {
   const detail = $("#mapDetail");
   if (detail) {
     detail.classList.add("hidden");
-    detail.classList.remove("ancient-capital-detail");
+    detail.classList.remove("ancient-capital-detail", "imperial-tomb-detail");
     detail.innerHTML = `
       <p class="eyebrow">${t("selectionEyebrow")}</p>
       <h3>${t("mapDetailTitle")}</h3>
