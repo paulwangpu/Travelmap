@@ -6,7 +6,7 @@
     <title>我的全球旅行地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" />
-<link rel="stylesheet" href="styles.css?v=212" />
+<link rel="stylesheet" href="styles.css?v=226" />
   </head>
   <body>
     <div class="app-shell map-first-shell">
@@ -35,7 +35,7 @@
             <strong data-i18n="privacyTitle">本地保存</strong>
             <p data-i18n="privacyText">数据只保存在本机浏览器里，不会自动上传或公开。如需备份请导出。</p>
           </div>
-          <div class="app-version" id="appVersion">v2.2.2</div>
+          <div class="app-version" id="appVersion">v2.2.3</div>
         </div>
       </aside>
 
@@ -216,11 +216,13 @@
                 <aside class="population-density-legend geology-legend" id="geologyLegend" hidden>
                   <strong data-i18n="geologyLegendTitle">地质 · 当前视野</strong>
                   <label class="population-density-opacity"><span data-i18n="populationDensityOpacity">透明度</span><input id="geologyOpacity" type="range" min="0" max="100" step="1" value="65" /><output id="geologyOpacityValue" for="geologyOpacity">65%</output></label>
-                  <div class="geology-age-heading"><span data-i18n="geologyLegendAge">地质年代</span><span data-i18n="geologyLegendMa">百万年前</span></div>
+                  <label class="geology-provider-control"><span id="geologySourceLabel">显示模式</span><select id="geologySource"><option value="auto">自动拼合（不同尺度）</option><option value="large">局部详图</option><option value="medium">区域地质图</option><option value="small">洲际地质图</option><option value="global">全球概略图</option><option value="asia">亚洲地质图（影像）</option></select></label>
+                  <small id="geologyProviderStatus" role="status"></small>
+                  <div class="geology-age-heading"><span data-i18n="geologyLegendAge">地质单元</span><span data-i18n="geologyLegendMa">百万年前</span></div>
                   <div class="geology-age-list" id="geologyAgeList"></div>
                   <small data-i18n="geologyClickHint">点击地图查看此处地层与岩性</small>
                   <small id="geologyLegendStatus" role="status"></small>
-                  <small class="geology-source"><a href="https://macrostrat.org/map/" target="_blank" rel="noopener">Macrostrat</a> · <a href="https://macrostrat.org/api/v2/defs/sources" target="_blank" rel="noopener" data-i18n="geologyLegendSources">原始图源</a> · CC BY 4.0 <button id="retryGeologyLegend" type="button" data-i18n="geologyLegendRetry">刷新</button></small>
+                  <small class="geology-source" id="geologyCredits"><span id="geologyAttribution"><a href="https://macrostrat.org/map/" target="_blank" rel="noopener">Macrostrat</a> · <a href="https://macrostrat.org/api/v2/defs/sources" target="_blank" rel="noopener" data-i18n="geologyLegendSources">原始图源</a> · CC BY 4.0</span> <button id="retryGeologyLegend" type="button" data-i18n="geologyLegendRetry">刷新</button></small>
                 </aside>
                 <aside class="population-density-legend" id="populationDensityLegend" hidden>
                   <strong data-i18n="populationDensityLegend">人口密度 · 2020</strong>
@@ -442,9 +444,12 @@
 <script src="great-wall.js?v=34"></script>
 <script src="western-regions.js?v=2"></script>
 <script src="historical-periods.js?v=6"></script>
-<script src="imperial-tombs.js?v=83"></script>
+<script src="imperial-tombs.js?v=86"></script>
 <script src="map-resolution.js?v=1"></script>
-<script src="geology-legend.js?v=7"></script>
-<script src="app.js?v=778"></script>
+<script src="vendor/geology/vector-tile.js?v=1"></script>
+<script src="geology-providers.js?v=11"></script>
+<script src="geology-auto.js?v=10"></script>
+<script src="geology-legend.js?v=30"></script>
+<script src="app.js?v=803"></script>
   </body>
 </html>

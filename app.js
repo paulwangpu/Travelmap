@@ -15,7 +15,7 @@ const mapControlsStorageKey = "travel-map-controls-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "2.2.2";
+const appVersion = "2.2.3";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 339;
@@ -405,7 +405,7 @@ const translations = {
     overlayGeology: "地质",
     geologyLegendTitle: "地质 · 当前视野",
     geologyClickHint: "点击地图查看此处地层与岩性",
-    geologyLegendAge: "地质年代",
+    geologyLegendAge: "地质单元",
     geologyLegendMa: "百万年前",
     geologyLegendUnits: "地层与岩性",
     geologyLegendSources: "原始图源",
@@ -670,7 +670,7 @@ const translations = {
     overlayGeology: "Geology",
     geologyLegendTitle: "Geology · current view",
     geologyClickHint: "Click the map for units & lithology",
-    geologyLegendAge: "Geologic age",
+    geologyLegendAge: "Geologic units",
     geologyLegendMa: "Million years ago",
     geologyLegendUnits: "Units & lithology",
     geologyLegendSources: "Map sources",
@@ -859,6 +859,7 @@ function normalizeMapOverlays(overlays = {}) {
     greatWallHistoryEras: Object.fromEntries(['spring-autumn','qin','han','northern-wei','liao-jin','ming'].map(key => [key, overlays.greatWallHistoryEras?.[key] !== false])),
     railways: Boolean(overlays.railways),
     geology: Boolean(overlays.geology),
+    geologySource: GeologyProviders.normalizeMode(overlays.geologySource),
     geologyOpacity: Number.isFinite(Number(overlays.geologyOpacity)) ? Math.max(0, Math.min(100, Number(overlays.geologyOpacity))) : 65,
     railwayMode: overlays.railwayMode === "raster" ? "raster" : "vector",
     arcgisWater: Boolean(overlays.arcgisWater ?? overlays.hydroRivers),
@@ -6456,6 +6457,7 @@ function updateMapCheckboxTooltips() {
 
 function setLanguage(language) {
   const viewState = captureLanguageSwitchViewState();
+  GeologyLegend.closeDetail();
   currentLanguage = language === "en" ? "en" : "zh";
   localStorage.setItem(languageStorageKey, currentLanguage);
   applyLanguage();
@@ -6589,11 +6591,18 @@ function normalizeMapViewport(viewport, options = {}) {
   const [lng, lat] = viewport.center.map(Number);
   const zoom = Number(viewport.zoom);
   if (!Number.isFinite(lng) || !Number.isFinite(lat) || !Number.isFinite(zoom)) return null;
-  const minZoom = Number.isFinite(options.minZoom) ? options.minZoom : 1;
+  const minZoom = Number.isFinite(options.minZoom) ? options.minZoom : viewport.scaleBasis === 'mercator512' ? 0 : 1;
   return {
     center: [Math.max(-180, Math.min(180, lng)), Math.max(-85, Math.min(85, lat))],
     zoom: Math.max(minZoom, Math.min(18, zoom)),
+    ...(viewport.scaleBasis === 'mercator512' ? { scaleBasis: 'mercator512' } : {}),
   };
+}
+
+// Leaflet's world at zoom zero is 256 pixels; MapLibre's is 512.
+// Persist one scale basis, while retaining the meaning of older saved viewports.
+function leafletViewportZoom(viewport) {
+  return viewport ? viewport.zoom + (viewport.scaleBasis === 'mercator512' ? 1 : 0) : 2;
 }
 
 function rememberMapViewportSoon() {
@@ -6601,10 +6610,10 @@ function rememberMapViewportSoon() {
   let viewport = null;
   if (mapLibreMap) {
     const center = mapLibreMap.getCenter();
-    viewport = normalizeMapViewport({ center: [center.lng, center.lat], zoom: mapLibreMap.getZoom() }, { minZoom: state.map3d ? 0 : 1 });
+    viewport = normalizeMapViewport({ center: [center.lng, center.lat], zoom: mapLibreMap.getZoom(), scaleBasis: 'mercator512' }, { minZoom: 0 });
   } else if (leafletMap) {
     const center = leafletMap.getCenter();
-    viewport = normalizeMapViewport({ center: [center.lng, center.lat], zoom: leafletMap.getZoom() });
+    viewport = normalizeMapViewport({ center: [center.lng, center.lat], zoom: leafletMap.getZoom() - 1, scaleBasis: 'mercator512' }, { minZoom: 0 });
   }
   if (!viewport) return;
   state.mapViewport = viewport;
@@ -6619,7 +6628,7 @@ function restoreStoredMapViewport() {
     if (mapLibreMap) {
       mapLibreMap.jumpTo({ center: viewport.center, zoom: viewport.zoom });
     } else if (leafletMap) {
-      leafletMap.setView([viewport.center[1], viewport.center[0]], viewport.zoom, { animate: false });
+      leafletMap.setView([viewport.center[1], viewport.center[0]], leafletViewportZoom(viewport), { animate: false });
     }
   } finally {
     setTimeout(() => {
@@ -8167,7 +8176,16 @@ function renderGeoMap() {
     $("#leafletMap").innerHTML = `<div class="map-empty"><strong>请通过本地 HTTP 打开拓界足迹</strong><br>浏览器会拦截 file:// 页面读取 data/*.geojson，所以二级行政区和本地边界不会显示。请在项目目录运行本地服务后访问 http://localhost 对应地址。</div>`;
     return;
   }
-  if (window.maplibregl) {
+  const asiaRaster = Boolean(state.mapOverlays?.geology) && state.mapOverlays.geologySource === 'asia';
+  if ((asiaRaster && mapLibreMap) || (!asiaRaster && window.maplibregl && leafletMap)) {
+    const previous = mapLibreMap || leafletMap, center = previous.getCenter();
+    state.mapViewport = normalizeMapViewport({center:[center.lng,center.lat],zoom:previous.getZoom() - (leafletMap ? 1 : 0),scaleBasis:'mercator512'}, {minZoom:0});
+    GeologyLegend.closeDetail();
+    if (mapLibreMap) { mapLibreMarkers.forEach(marker=>marker.remove()); mapLibreMarkers=[]; mapLibreMap.remove(); mapLibreMap=null; mapLibreStyleReady=false; mapLibreMarkerSignature=''; mapLibreLayerHandlersBound={ country:false,admin:false,subadmin:false,points:false,paths:false,pathVertices:false,flights:false,nps:false }; }
+    if (leafletMap) { leafletMap.remove(); leafletMap=null; leafletLayers=null; leafletBaseLayer=null; }
+    $('#leafletMap').replaceChildren();
+  }
+  if (window.maplibregl && !asiaRaster) {
     renderMapLibreMap();
     return;
   }
@@ -8182,10 +8200,12 @@ function renderGeoMap() {
     leafletMap = L.map("leafletMap", {
       worldCopyJump: true,
       minZoom: 1,
+      maxZoom: 19,
+      zoomSnap: 0,
       zoomAnimation: false,
       fadeAnimation: false,
       markerZoomAnimation: false,
-    }).setView([savedViewport?.center?.[1] ?? 25, savedViewport?.center?.[0] ?? 20], savedViewport?.zoom ?? 2);
+    }).setView([savedViewport?.center?.[1] ?? 25, savedViewport?.center?.[0] ?? 20], leafletViewportZoom(savedViewport));
 
     leafletMap.on("moveend zoomend", rememberMapViewportSoon);
     leafletMap.on("moveend", () => refreshEarthquakeOnline());
@@ -8202,7 +8222,7 @@ function renderGeoMap() {
 
   renderLeafletLayers();
   setTimeout(() => {
-    leafletMap.invalidateSize();
+    leafletMap?.invalidateSize();
     leafletDidInitialFit = true;
   }, 80);
 }
@@ -8491,6 +8511,7 @@ function applyMapLibreProvider(provider) {
   mapLibreMap.once("style.load", rerender);
   mapLibreMap.once("styledata", rerender);
   mapLibreMap.once("idle", rerender);
+  GeologyLegend.closeDetail();
   mapLibreMap.setStyle(mapLibreBaseStyle(provider));
   renderMapLibreLayersWhenReady();
 }
@@ -9239,33 +9260,56 @@ function handleGeologyClick(lng, lat, point, leaflet = false) {
   return true;
 }
 function updateGeologyLegend() {
-  GeologyLegend.update(mapLibreMap || leafletMap, Boolean(state.mapOverlays?.geology), currentLanguage === "en");
+  GeologyLegend.update(mapLibreMap || leafletMap, Boolean(state.mapOverlays?.geology), currentLanguage === "en", state.mapOverlays?.geologySource);
 }
 $("#retryGeologyLegend")?.addEventListener("click", () => {
-  GeologyLegend.update(null, false, currentLanguage === "en"); updateGeologyLegend();
+  GeologyLegend.update(null, false, currentLanguage === "en"); if (state.mapOverlays?.geologySource === "asia") renderGeoMap(); else updateGeologyLegend();
 });
 function syncMapLibreGeologyOverlay(enabled) {
   if (!mapLibreMap || !mapLibreStyleReady) return;
   updateGeologyLegend();
   if (!enabled) {
     GeologyLegend.closeDetail();
+    if (mapLibreMap.getLayer("geology-overview")) mapLibreMap.removeLayer("geology-overview");
+    if (mapLibreMap.getSource("geology-overview")) mapLibreMap.removeSource("geology-overview");
     if (mapLibreMap.getLayer("geology")) mapLibreMap.removeLayer("geology");
     if (mapLibreMap.getSource("geology")) mapLibreMap.removeSource("geology");
     return;
   }
   const opacity = Number($("#geologyOpacity").value) / 100;
-  if (!mapLibreMap.getSource("geology")) mapLibreMap.addSource("geology", { type: "raster", tiles: ["https://tiles.macrostrat.org/carto/{z}/{x}/{y}.png"], tileSize: 256, maxzoom: 14, attribution: geologyAttribution });
+  GeologyAuto.registerScales(maplibregl);
+  const selectedMode = GeologyProviders.normalizeMode(state.mapOverlays?.geologySource);
+  const selectedProvider = GeologyProviders.chooseAt(null, selectedMode);
+  const existingProvider = mapLibreMap.getSource("geology")?.tiles?.[0];
+  if (existingProvider && existingProvider !== selectedProvider.render.tiles[0]) {
+    if (mapLibreMap.getLayer("geology")) mapLibreMap.removeLayer("geology");
+    mapLibreMap.removeSource("geology");
+  }
+  if (!mapLibreMap.getSource("geology")) mapLibreMap.addSource("geology", { type: "raster", ...selectedProvider.render, attribution: geologyAttribution });
   if (!mapLibreMap.getLayer("geology")) {
     const before = mapLibreMap.getStyle()?.layers?.find(layer => layer.id !== "basemap" && !layer.id.startsWith("esri-relief-"))?.id;
     mapLibreMap.addLayer({ id: "geology", type: "raster", source: "geology", paint: { "raster-opacity": opacity } }, before);
   } else mapLibreMap.setPaintProperty("geology", "raster-opacity", opacity);
+  const automatic = GeologyProviders.normalizeMode(state.mapOverlays?.geologySource) === "auto";
+  if (!mapLibreMap.getSource("geology-overview")) mapLibreMap.addSource("geology-overview", { type: "raster", ...GeologyProviders.overview.render, attribution: geologyAttribution });
+  if (!mapLibreMap.getLayer("geology-overview")) mapLibreMap.addLayer({ id: "geology-overview", type: "raster", source: "geology-overview", paint: { "raster-opacity": opacity } }, "geology");
+  else mapLibreMap.setPaintProperty("geology-overview", "raster-opacity", opacity);
+  mapLibreMap.setLayoutProperty("geology-overview", "visibility", selectedMode === "auto" ? "visible" : "none");
+  mapLibreMap.setLayoutProperty("geology", "visibility", "visible");
 }
 $("#showGeologyOnMap")?.addEventListener("change", event => {
   state.mapOverlays = { ...defaultMapOverlays(), ...state.mapOverlays, geology: event.target.checked };
   if (!event.target.checked) GeologyLegend.closeDetail();
   saveUiStateSoon(); renderMapControls();
-  if (mapLibreMap && mapLibreStyleReady) { syncMapLibreGeologyOverlay(event.target.checked); bringMapLibrePointLayersToFront(); }
+  if (state.mapOverlays.geologySource === "asia") renderGeoMap();
+  else if (mapLibreMap && mapLibreStyleReady) { syncMapLibreGeologyOverlay(event.target.checked); bringMapLibrePointLayersToFront(); }
   else renderGeoMap();
+});
+$("#geologySource")?.addEventListener("change", event => {
+  state.mapOverlays.geologySource = GeologyProviders.normalizeMode(event.target.value);
+  GeologyLegend.closeDetail(); GeologyLegend.update(null, false, currentLanguage === "en");
+  saveUiStateSoon(); renderMapControls();
+  if (state.mapOverlays.geologySource === "asia" || leafletMap) renderGeoMap(); else if (mapLibreMap && mapLibreStyleReady) syncMapLibreGeologyOverlay(Boolean(state.mapOverlays.geology)); else renderGeoMap();
 });
 $("#geologyOpacity")?.addEventListener("input", event => {
   state.mapOverlays.geologyOpacity = Number(event.target.value);
@@ -9912,6 +9956,8 @@ function mapLayerOrder(layer) {
   const id = layer.id, source = String(layer.source || "");
   if (layer.type === "background" || id === "basemap" || id.startsWith("esri-relief-")) return 0;
   if (id === "population-density") return 10;
+  if (id === "geology-overview") return 11;
+  if (id === "geology") return 12;
   if (/^(map-background-context|admin-country-context|country-click)/.test(id)) return 20;
   if (/^visited-(countries|regions|subadmin|region-group-outlines)/.test(id) || id === "us-county-reference-line") return 30;
   if (id.startsWith("us-nps-") || id.startsWith("imported-shapes") && source !== "imported-paths") return 35;
@@ -10282,7 +10328,7 @@ function addMapLibrePointLayers(sourceId) {
       layout: {
         "text-field": ["get", "title"],
         "text-font": ["Open Sans Regular", "Arial Unicode MS Regular"],
-        "text-size": ["interpolate", ["linear"], ["zoom"], 5, 12, 8.5, 14],
+        "text-size": 12,
         "text-variable-anchor": ["top", "bottom", "left", "right"],
         "text-radial-offset": 0.75,
         "text-max-width": 12,
@@ -10308,7 +10354,7 @@ function addMapLibrePointLayers(sourceId) {
       layout: {
         "text-field": ["get", "title"],
         "text-font": ["Open Sans Regular", "Arial Unicode MS Regular"],
-        "text-size": ["interpolate", ["linear"], ["zoom"], 8.5, 14, 11, 16],
+        "text-size": 12,
         "text-offset": [0, 1.15],
         "text-anchor": "top",
         "text-max-width": 12,
@@ -11131,7 +11177,16 @@ function renderLeafletLayers() {
       const pane = leafletMap.createPane("geologyPane");
       pane.style.zIndex = "260"; pane.style.pointerEvents = "none";
     }
-    L.tileLayer("https://tiles.macrostrat.org/carto/{z}/{x}/{y}.png", { pane: "geologyPane", maxNativeZoom: 14, maxZoom: 19, opacity: Number($("#geologyOpacity").value) / 100, attribution: geologyAttribution }).addTo(leafletLayers);
+    const mode = GeologyProviders.normalizeMode(overlays.geologySource);
+    const options = { pane: "geologyPane", maxZoom: 19, opacity: Number($("#geologyOpacity").value) / 100, attribution: geologyAttribution };
+    if (mode === "asia") {
+      const layer=L.tileLayer('https://tiles.igeodata.org/asia_ren/{z}/{x}/{y}.png',{...options,tms:true,maxNativeZoom:12,attribution:GeologyProviders.asia.attribution});
+      layer.on('tileerror',()=>{ const status=$('#geologyLegendStatus'); if(state.mapOverlays.geologySource==='asia')status.textContent=currentLanguage==='en'?'Asian map tile unavailable here · retry':'此处亚洲图瓦片无法读取 · 可刷新重试'; });
+      layer.addTo(leafletLayers);
+    } else if (mode === "auto" || mode === "global") {
+      L.tileLayer(GeologyProviders.overview.render.tiles[0], { ...options, maxNativeZoom: mode === "global" ? 2 : 4 }).addTo(leafletLayers);
+      if (mode === "auto") L.tileLayer(GeologyProviders.macrostrat.render.tiles[0], { ...options, maxNativeZoom: 14 }).addTo(leafletLayers);
+    } else GeologyAuto.scaleLeaflet(leafletLayers, mode, options);
   }
   GreatWall.leaflet(leafletMap, leafletLayers);
   ImperialTombs.leaflet(leafletMap);
@@ -12708,7 +12763,7 @@ function renderDataInventory() {
 
 function loadImperialTombChecklist() {
   if (imperialTombChecklistPromise) return imperialTombChecklistPromise;
-  imperialTombChecklistPromise = fetchJson("data/imperial-tombs/catalog.json?v=60").then(catalog => {
+  imperialTombChecklistPromise = fetchJson("data/imperial-tombs/catalog.json?v=63").then(catalog => {
     if (!Array.isArray(catalog.items)) throw new Error("Invalid imperial tomb catalog");
     imperialTombMapIndex=new Map(catalog.items.flatMap(item=>[item.name,...(item.aliases||[])].map(name=>[canonicalPlaceKey(name),item])));
     const parents = new Set(catalog.items.map(item => item.parentId).filter(Boolean));
@@ -15753,6 +15808,12 @@ function renderMapControls() {
   const showRailways = $("#showRailwaysOnMap");
   $("#showGeologyOnMap").checked = Boolean(overlays.geology);
   $("#geologyLegend").hidden = !overlays.geology;
+  $("#geologySource").value = GeologyProviders.normalizeMode(overlays.geologySource);
+  $("#geologySourceLabel").textContent = currentLanguage === "en" ? "Display mode" : "显示模式";
+  $("#geologySource").options[0].textContent = currentLanguage === "en" ? "Automatic · combined scales" : "自动拼合（不同尺度）";
+  ["Local detailed map", "Regional geological map", "Continental geological map", "Global overview", "Asian geological map (image)"].forEach((label, index) => {
+    $("#geologySource").options[index + 1].textContent = currentLanguage === "en" ? label : ["局部详图", "区域地质图", "洲际地质图", "全球概略图", "亚洲地质图（影像）"][index];
+  });
   $("#geologyOpacity").value = overlays.geologyOpacity ?? 65;
   $("#geologyOpacityValue").textContent = `${overlays.geologyOpacity ?? 65}%`;
   $("#geologyOpacity").title = `${t("populationDensityOpacity")}：${overlays.geologyOpacity ?? 65}%`;
@@ -16837,7 +16898,7 @@ if ("serviceWorker" in navigator && location.protocol !== "file:") {
     });
   });
   window.addEventListener("load", () => {
-navigator.serviceWorker.register("./sw.js?v=808", { updateViaCache: "none" })
+navigator.serviceWorker.register("./sw.js?v=842", { updateViaCache: "none" })
       .then((registration) => registration.update())
       .catch((error) => console.warn("Service Worker registration failed", error));
   });

@@ -1,7 +1,7 @@
 const fs = require('node:fs');
 const vm = require('node:vm');
 const assert = require('node:assert/strict');
-const context = vm.createContext({ URL, structuredClone, console, HistoricalPeriods: require("../historical-periods.js") });
+const context = vm.createContext({ URL, structuredClone, console, HistoricalPeriods: require("../historical-periods.js"), GeologyProviders: require("../geology-providers.js") });
 vm.runInContext(fs.readFileSync('railway-vector.js', 'utf8') + '\nthis.adapter = RailwayVector;', context);
 const upstream = JSON.parse(fs.readFileSync('vendor/openrailwaymap/style.json', 'utf8'));
 const app = fs.readFileSync('app.js','utf8');

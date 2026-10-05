@@ -1,6 +1,7 @@
 // Only documented original chambers qualify; a museum or open park alone does not.
 module.exports=({items,source})=>{
  const entries=[
+ ['tang-hui-rang','visit-tang-hui','唐惠陵原地宫开放参观记录','华山风景名胜区／景区运营方','https://www.sohu.com/a/168566269_155446','2017年8月30日开馆报道明确游客可走入原地宫甬道；不是复制墓室。此为历史开放记录，当日开放以博物馆公告为准。'],
  ['ming-ding','visit-ding','明定陵地宫开放资料','北京市文物局','https://wwj.beijing.gov.cn/bjww/362679/362680/482911/10871994/2020101014363863044.pdf','原地宫可参观；十三陵地面景区开放不代表其他陵墓地宫开放。'],
  ['qing-yu','visit-yu','清东陵开放陵寝','河北省文物局','https://wenwu.hebei.gov.cn/system/2023/09/26/030253453.shtml','裕陵原地宫有开放参观记录；2026年地宫修缮方案获批，具体开放以管理处公告为准。'],
  ['qing-cixi','visit-cixi','定东陵：慈禧陵地宫向游人开放','故宫博物院','https://www.dpm.org.cn/court/system/236384.html','可进入慈禧陵原地宫参观；不把慈安陵地面开放视为其地宫开放。'],

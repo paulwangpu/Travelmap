@@ -22,7 +22,8 @@
     "han-liang-xiao",
     "han-king-tushan",
     "han-king-dabaotai",
-    "ming-shu-xi"
+    "ming-shu-xi",
+    "tang-hui-rang"
   ],
   "detailMapPointIds": [
     "qin-gong-1",
@@ -43,7 +44,8 @@
     "han-liang-xiao",
     "han-king-tushan",
     "han-king-dabaotai",
-    "ming-shu-xi"
+    "ming-shu-xi",
+    "tang-hui-rang"
   ],
   "chambers": [
     {
@@ -315,6 +317,19 @@
         "ming-shu-local"
       ],
       "reviewedAt": "2026-10-04"
+    },
+    {
+      "id": "tang-hui-rang",
+      "name": "唐让帝惠陵",
+      "status": "documented_visitable",
+      "originalChamber": true,
+      "mode": "original_chamber",
+      "note": "2017年8月30日开馆报道明确游客可走入原地宫甬道；不是复制墓室。此为历史开放记录，当日开放以博物馆公告为准。",
+      "sourceIds": [
+        "visit-tang-hui"
+      ],
+      "reviewedAt": "2026-10-04",
+      "openingPolicy": "出行前核对管理机构临时关闭、维修及限流公告"
     }
   ],
   "knownSitesStillUnregistered": [

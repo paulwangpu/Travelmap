@@ -1,5 +1,5 @@
-const cacheName = "travel-map-v808";
-const shellFiles = ["./", "./index.html", "./styles.css?v=212", "./vendor/openrailwaymap/composite.js?v=1", "./vendor/openrailwaymap/style.json?v=1", "./vendor/openrailwaymap/legend.json?v=1", "./railway-vector.js?v=11", "./earthquake-online.js?v=7", "./volcano-catalog.js?v=3", "./esri-relief.js?v=2", "./basemap-alignment.js?v=4", "./great-wall.js?v=34", "./western-regions.js?v=2", "./historical-periods.js?v=6", "./imperial-tombs.js?v=83", "./data/imperial-tombs/catalog.json?v=60", "./map-resolution.js?v=1", "./geology-legend.js?v=7", "./app.js?v=778"];
+const cacheName = "travel-map-v842";
+const shellFiles = ["./", "./index.html", "./styles.css?v=226", "./vendor/openrailwaymap/composite.js?v=1", "./vendor/openrailwaymap/style.json?v=1", "./vendor/openrailwaymap/legend.json?v=1", "./railway-vector.js?v=11", "./earthquake-online.js?v=7", "./volcano-catalog.js?v=3", "./esri-relief.js?v=2", "./basemap-alignment.js?v=4", "./great-wall.js?v=34", "./western-regions.js?v=2", "./historical-periods.js?v=6", "./imperial-tombs.js?v=86", "./data/imperial-tombs/catalog.json?v=63", "./map-resolution.js?v=1", "./vendor/geology/vector-tile.js?v=1", "./geology-providers.js?v=11", "./geology-auto.js?v=10", "./data/geology/source-scales.json?v=1", "./geology-legend.js?v=30", "./app.js?v=803"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(cacheName).then((cache) => cache.addAll(

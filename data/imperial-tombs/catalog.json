@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "researchedAt": "2026-10-04",
   "status": "research_catalog_not_exhaustive",
-  "scope": "中国历代君主陵、先秦王陵、汉代诸侯国王陵与明代藩王陵、地方政权及地方世袭统治者王陵、传说祭祀陵与有独立墓葬依据的王族候选墓地；单陵优先、陵群兜底。都邑、宫殿及仅供王陵探索的区域不纳入皇陵目录，不以现代民族名称替代历史政权归属。",
+  "scope": "中国历代君主陵、先秦王陵、汉代诸侯国王陵与明代藩王陵、地方政权及地方世袭统治者王陵、高句丽在朝鲜境内的关联王陵、传说祭祀陵与有独立墓葬依据的王族候选墓地；单陵优先、陵群兜底。都邑、宫殿及仅供王陵探索的区域不纳入皇陵目录，不以现代民族名称替代历史政权归属。",
   "countPolicy": "记录数不是实际陵墓总数：陵群与子陵不能相加；单陵按实体而非墓主人数统计；同名异陵以稳定ID区分。有实际墓地的王族归属候选保留争议说明；都邑探索条目移出目录并存档于excluded-settlement-sites.json。",
   "natureLabels": {
     "actual_burial": "实际墓葬",
@@ -29,7 +29,7 @@
     "surface_theft": "有地面文物盗窃记录",
     "mixed": "陵群，逐陵情况不同"
   },
-  "totalRecords": 383,
+  "totalRecords": 403,
   "summary": {
     "传说时代": {
       "records": 14,
@@ -64,20 +64,20 @@
       "missingCoordinates": 1
     },
     "魏晋南北朝": {
-      "records": 27,
-      "singles": 25,
-      "groups": 2,
-      "mapCandidates": 20,
+      "records": 42,
+      "singles": 39,
+      "groups": 3,
+      "mapCandidates": 24,
       "sourcePointsPendingDatum": 0,
-      "missingCoordinates": 7
+      "missingCoordinates": 18
     },
     "隋唐": {
-      "records": 29,
-      "singles": 24,
-      "groups": 5,
-      "mapCandidates": 26,
+      "records": 34,
+      "singles": 25,
+      "groups": 9,
+      "mapCandidates": 28,
       "sourcePointsPendingDatum": 0,
-      "missingCoordinates": 3
+      "missingCoordinates": 6
     },
     "五代十国": {
       "records": 21,
@@ -402,7 +402,13 @@
     "ming-lu-huang",
     "ming-ning-xian",
     "ming-zhou-cemetery",
-    "ming-zhou-ding"
+    "ming-zhou-ding",
+    "koguryo-jian-kings",
+    "koguryo-ym0541",
+    "koguryo-tongmyong",
+    "koguryo-kangso",
+    "koguryo-honam-sasin",
+    "tang-hui-rang"
   ],
   "coverageGaps": [
     {
@@ -4664,6 +4670,142 @@
       "url": "https://www.linzi.gov.cn/lz/files/app/20140324_162221.pdf",
       "accessedAt": "2026-10-04",
       "note": "第11页讨论窝托冢子、驸马坟传统名称及汉齐王墓认定；关于旧封土搬运的叙述只作寻找旧地块线索，不推断墓室整体消失。"
+    },
+    {
+      "id": "koguryo-law",
+      "title": "高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录",
+      "publisher": "吉林省人大",
+      "url": "https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf",
+      "accessedAt": "2026-10-04",
+      "note": "第十条区分12座王陵与27座贵族墓；好太王碑与陪坟不另计王陵。"
+    },
+    {
+      "id": "koguryo-nomination",
+      "title": "集安高句丽王陵申报档案",
+      "publisher": "UNESCO／中国申报资料",
+      "url": "https://whc.unesco.org/uploads/nominations/1135.pdf",
+      "accessedAt": "2026-10-04",
+      "note": "第22—24页列各王陵墓号及候选归属；不将整个遗产地代表坐标当作单陵坐标。"
+    },
+    {
+      "id": "koguryo-taewang-survey",
+      "title": "太王陵YM0541中心地理坐标与考古资料",
+      "publisher": "东北亚历史财团资料库",
+      "url": "https://contents.nahf.or.kr/id/NAHF.ku.d_0001_0040_0030_1750",
+      "accessedAt": "2026-10-04",
+      "note": "太王陵中心N41°8′30.7″ E126°12′35.5″；与吉林王陵墓号互核，来源未说明基准。"
+    },
+    {
+      "id": "koguryo-general-conflict",
+      "title": "将军坟地质调查报告坐标待复核",
+      "publisher": "东北亚历史财团",
+      "url": "https://contents.nahf.or.kr/id/NAHF.cr.d_0005_0040_0010_0040",
+      "accessedAt": "2026-10-04",
+      "note": "报告E126°12′35.3″与公开地理索引E126°13′34.62″相差约1.4公里；保留冲突，未直接采用任一值。"
+    },
+    {
+      "id": "koguryo-royal-attributions",
+      "title": "高句丽平壤时期候选王陵及归属比较",
+      "publisher": "东北亚历史财团",
+      "url": "https://contents.nahf.or.kr/item/level.do?levelId=gt.d_0008_0040_0030",
+      "accessedAt": "2026-10-04",
+      "note": "讨论东明王陵、湖南里四神墓、江西大墓和中墓等王陵候选；不同于一般贵族墓。"
+    },
+    {
+      "id": "koguryo-dprk-map",
+      "title": "朝鲜高句丽墓葬群组成与地理坐标",
+      "publisher": "UNESCO",
+      "url": "https://whc.unesco.org/en/list/1091/maps/",
+      "accessedAt": "2026-10-04",
+      "note": "1091-001东明王陵及真坡里墓群、002湖南里四神墓、004江西三墓；坐标指遗产组成部分。"
+    },
+    {
+      "id": "koguryo-dprk-nomination",
+      "title": "朝鲜高句丽墓葬群申报档案",
+      "publisher": "UNESCO／朝鲜申报资料",
+      "url": "https://whc.unesco.org/uploads/nominations/1091.pdf",
+      "accessedAt": "2026-10-04",
+      "note": "保留王陵归属及时代争议，组分代表点不等于单陵墓室。"
+    },
+    {
+      "id": "bohai-liudingshan",
+      "title": "六顶山古墓群及王室归属",
+      "publisher": "吉林省地方志",
+      "url": "https://dfz.jl.gov.cn/ybjl/201106/t20110607_5217088.html",
+      "accessedAt": "2026-10-04",
+      "note": "王室贵族墓地，第二墓区有珍陵传统；不将贞惠公主墓单独列为君主陵。"
+    },
+    {
+      "id": "bohai-longtoushan",
+      "title": "龙头山渤海王陵考古与展示",
+      "publisher": "吉林省政府",
+      "url": "https://www.jl.gov.cn/yaowen/202609/t20260903_3667664.html",
+      "accessedAt": "2026-10-04",
+      "note": "报道龙头山渤海王陵专题展及2026年调查，不据此认定全部墓主。"
+    },
+    {
+      "id": "bohai-sanlingfen",
+      "title": "三灵坟位置与陵园组成：保护规划",
+      "publisher": "黑龙江省政府／保护规划",
+      "url": "https://www.hlj.gov.cn/hlj/c108411/202110/31182525/files/a5a0b47f8f709901864104e4cf2bb558.pdf",
+      "accessedAt": "2026-10-04",
+      "note": "上京城北牡丹江左岸，三处陵园；城址位置不能替代三灵坟坐标。"
+    },
+    {
+      "id": "tang-hui-amap",
+      "title": "唐惠陵博物馆实体点B0HA1KCLP9",
+      "publisher": "高德地图",
+      "url": "https://www.amap.com/place/B0HA1KCLP9",
+      "accessedAt": "2026-10-04",
+      "note": "GCJ-02：109.526053,34.972611；地址金十路与三五路交叉口北340米，与三合村原址博物馆互核。"
+    },
+    {
+      "id": "tang-hui-amap-datum",
+      "title": "高德地图坐标基准说明",
+      "publisher": "高德开放平台",
+      "url": "https://developer.amap.com/faq/advisory/others/39838",
+      "accessedAt": "2026-10-04",
+      "note": "明确高德服务采用GCJ-02，转换后写入WGS84。"
+    },
+    {
+      "id": "tang-hui-national",
+      "title": "第七批全国重点文物保护单位：唐惠陵",
+      "publisher": "国务院",
+      "url": "https://www.gov.cn/guoqing/2014-07/21/dqpqgzdwwbhdwmd.pdf",
+      "accessedAt": "2026-10-04",
+      "note": "7-0675-2-159，唐，陕西省蒲城县；区别清同治帝惠陵。"
+    },
+    {
+      "id": "tang-hui-operator",
+      "title": "唐惠陵博物馆开馆及原地宫参观",
+      "publisher": "华山风景名胜区／华山旅游集团运营方报道",
+      "url": "https://www.sohu.com/a/168566269_155446",
+      "accessedAt": "2026-10-04",
+      "note": "2017年8月30日开馆，明确走入地宫甬道；墓主为追谥让皇帝李宪及恭皇后元氏。"
+    },
+    {
+      "id": "tang-hui-excavation",
+      "title": "唐李宪墓考古发掘报告书摘",
+      "publisher": "陕西省考古研究机构／科学出版社",
+      "url": "https://www.ecsponline.com/yz/B312F9F851B214C9488CF4D3EBEAD0174000.pdf",
+      "accessedAt": "2026-10-04",
+      "note": "发掘报告目录书摘；完整报告需持续复核。"
+    },
+    {
+      "id": "tang-hui-map",
+      "title": "唐惠陵地理索引及文保名称互核",
+      "publisher": "国保地图（地理索引，非墓主认定依据）",
+      "url": "https://guobao.org/zh/china/shaanxi/",
+      "accessedAt": "2026-10-04",
+      "note": "拒绝旧点109.581486,34.956901：落在县城附近，与原址博物馆相差约5公里；保留作为错误地理索引审查记录，不用于定位。"
+    },
+    {
+      "id": "visit-tang-hui",
+      "title": "唐惠陵原地宫开放参观记录",
+      "publisher": "华山风景名胜区／景区运营方",
+      "url": "https://www.sohu.com/a/168566269_155446",
+      "accessedAt": "2026-10-04",
+      "note": "证明原墓室参观或原址墓葬遗存展示，具体方式见条目；不是当日实时开放保证。"
     },
     {
       "id": "visit-ding",
@@ -36017,6 +36159,1294 @@
         }
       ],
       "lifespanText": "生卒不详",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-03"
+      }
+    },
+    {
+      "id": "koguryo-jian-kings",
+      "name": "集安高句丽王陵群",
+      "aliases": [],
+      "era": "魏晋南北朝",
+      "dynasty": "高句丽",
+      "occupants": [],
+      "admin": "吉林省通化市集安市",
+      "adminStatus": "来源概略行政区，未逐项核验现行区划",
+      "recordType": "group",
+      "parentId": null,
+      "nature": "mixed",
+      "recognition": "archaeological",
+      "evidence": "保护条例明确列十二座王陵，逐墓建立子记录；陵群数与子陵数不相加。",
+      "disputes": [
+        "保护名录认定王陵类别，并不等于十二位墓主均已确认。",
+        "地图陵群代表点选在已核地望的太王陵；不指陵群中心或全部保护区边界。"
+      ],
+      "sourceIds": [
+        "koguryo-law",
+        "koguryo-nomination",
+        "koguryo-taewang-survey"
+      ],
+      "coordinates": {
+        "lat": 41.142,
+        "lng": 126.21,
+        "crs": "WGS84",
+        "status": "estimated_wgs84",
+        "sourceId": "koguryo-taewang-survey",
+        "target": "以太王陵实体作集安王陵群代表点",
+        "original": "N41°8′30.7″ E126°12′35.5″",
+        "method": "机构公开DMS坐标换算后取三位小数；按WGS84约定作为区域参考，未声称现场实测",
+        "sourceDatumExplicit": false,
+        "precision": {
+          "sourceUnit": "arcsecond",
+          "resolutionDegrees": 0.001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "集安不同墓区跨度数公里，点位仅表示太王陵，不代表其余十一陵位置；原始来源未明示基准与测量误差，不作为墓室中心或入口。",
+        "estimate": {
+          "basis": "机构记录名称、墓号与地望互核；保留原始坐标供复核",
+          "extent": "集安不同墓区跨度数公里，点位仅表示太王陵，不代表其余十一陵位置",
+          "confidence": "regional",
+          "reviewedAt": "2026-10-04"
+        }
+      },
+      "mapEligible": true,
+      "mapReason": "以太王陵实体作集安王陵群代表点",
+      "reviewTasks": [
+        "补核现场实测坐标、基准及入口；区域参考不证明墓主身份"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "年代未确定；传说时代及未定墓主保留目录次序"
+      },
+      "biographies": [],
+      "lifespanText": "陵群，见各墓主资料",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-03"
+      }
+    },
+    {
+      "id": "koguryo-ym0001",
+      "name": "将军坟",
+      "aliases": [
+        "YM0001",
+        "高句丽将军坟",
+        "长寿王陵"
+      ],
+      "era": "魏晋南北朝",
+      "dynasty": "高句丽",
+      "occupants": [
+        "长寿王高琏（推定）"
+      ],
+      "admin": "吉林省通化市集安市",
+      "adminStatus": "来源概略行政区，未逐项核验现行区划",
+      "recordType": "single",
+      "parentId": "koguryo-jian-kings",
+      "nature": "actual_burial",
+      "recognition": "attributed",
+      "evidence": "吉林保护条例第十条列为高句丽王陵；墓号用于实体对应，具体墓主见争议说明。",
+      "disputes": [
+        "亦有好太王归属及长寿王虚宫说，不能将旅游通称当作确定墓主。",
+        "地质报告与地理索引经度冲突，本轮不采用为独立点。"
+      ],
+      "sourceIds": [
+        "koguryo-law",
+        "koguryo-nomination",
+        "koguryo-general-conflict"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "单陵坐标待核，可参考所属集安王陵群；不生成重叠单陵点。",
+      "reviewTasks": [
+        "核对单陵保护界址、独立坐标及墓主研究；不借用同名墓点"
+      ],
+      "locationReference": {
+        "parentId": "koguryo-jian-kings",
+        "label": "集安高句丽王陵群参考（太王陵代表点）",
+        "reason": "只表示属于该陵群，不表示单陵与太王陵同址。",
+        "coordinates": {
+          "lat": 41.142,
+          "lng": 126.21,
+          "crs": "WGS84",
+          "sourceId": "koguryo-taewang-survey"
+        }
+      },
+      "chronology": {
+        "sortYear": null,
+        "basis": "年代未确定；传说时代及未定墓主保留目录次序"
+      },
+      "biographies": [
+        {
+          "label": "长寿王高琏（推定）",
+          "birthYear": null,
+          "deathYear": null,
+          "lifespanText": "生卒不详",
+          "status": "unresolved",
+          "sourceIds": [],
+          "entity": null,
+          "precision": "year",
+          "limitations": "只显示可核查年份，不将卒年视为建陵、迁葬或发掘年；索引资料需持续复核。"
+        }
+      ],
+      "lifespanText": "生卒不详",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-03"
+      }
+    },
+    {
+      "id": "koguryo-ym0541",
+      "name": "太王陵",
+      "aliases": [
+        "YM0541",
+        "高句丽太王陵",
+        "好太王陵",
+        "广开土王陵"
+      ],
+      "era": "魏晋南北朝",
+      "dynasty": "高句丽",
+      "occupants": [
+        "好太王高谈德（推定）"
+      ],
+      "admin": "吉林省通化市集安市",
+      "adminStatus": "来源概略行政区，未逐项核验现行区划",
+      "recordType": "single",
+      "parentId": "koguryo-jian-kings",
+      "nature": "actual_burial",
+      "recognition": "attributed",
+      "evidence": "吉林保护条例第十条列为高句丽王陵；墓号用于实体对应，具体墓主见争议说明。",
+      "disputes": [
+        "亦有故国壤王等异说，铭文及碑墓关系的解释仍存在分歧。"
+      ],
+      "sourceIds": [
+        "koguryo-law",
+        "koguryo-nomination",
+        "koguryo-taewang-survey"
+      ],
+      "coordinates": {
+        "lat": 41.142,
+        "lng": 126.21,
+        "crs": "WGS84",
+        "status": "estimated_wgs84",
+        "sourceId": "koguryo-taewang-survey",
+        "target": "太王陵实体周边区域参考",
+        "original": "N41°8′30.7″ E126°12′35.5″",
+        "method": "机构公开DMS坐标换算后取三位小数；按WGS84约定作为区域参考，未声称现场实测",
+        "sourceDatumExplicit": false,
+        "precision": {
+          "sourceUnit": "arcsecond",
+          "resolutionDegrees": 0.001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "太王陵及周边约500米；原始来源未明示基准与测量误差，不作为墓室中心或入口。",
+        "estimate": {
+          "basis": "机构记录名称、墓号与地望互核；保留原始坐标供复核",
+          "extent": "太王陵及周边约500米",
+          "confidence": "regional",
+          "reviewedAt": "2026-10-04"
+        }
+      },
+      "mapEligible": true,
+      "mapReason": "太王陵实体周边区域参考",
+      "reviewTasks": [
+        "补核现场实测坐标、基准及入口；区域参考不证明墓主身份"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "年代未确定；传说时代及未定墓主保留目录次序"
+      },
+      "biographies": [
+        {
+          "label": "好太王高谈德（推定）",
+          "birthYear": null,
+          "deathYear": null,
+          "lifespanText": "生卒不详",
+          "status": "unresolved",
+          "sourceIds": [],
+          "entity": null,
+          "precision": "year",
+          "limitations": "只显示可核查年份，不将卒年视为建陵、迁葬或发掘年；索引资料需持续复核。"
+        }
+      ],
+      "lifespanText": "生卒不详",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-03"
+      }
+    },
+    {
+      "id": "koguryo-mm1000",
+      "name": "千秋墓",
+      "aliases": [
+        "MM1000",
+        "高句丽千秋墓"
+      ],
+      "era": "魏晋南北朝",
+      "dynasty": "高句丽",
+      "occupants": [
+        "故国壤王（候选）"
+      ],
+      "admin": "吉林省通化市集安市",
+      "adminStatus": "来源概略行政区，未逐项核验现行区划",
+      "recordType": "single",
+      "parentId": "koguryo-jian-kings",
+      "nature": "actual_burial",
+      "recognition": "attributed",
+      "evidence": "吉林保护条例第十条列为高句丽王陵；墓号用于实体对应，具体墓主见争议说明。",
+      "disputes": [
+        "亦有故国原王、小兽林王等候选，不以任一说固定墓主。"
+      ],
+      "sourceIds": [
+        "koguryo-law",
+        "koguryo-nomination"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "单陵坐标待核，可参考所属集安王陵群；不生成重叠单陵点。",
+      "reviewTasks": [
+        "核对单陵保护界址、独立坐标及墓主研究；不借用同名墓点"
+      ],
+      "locationReference": {
+        "parentId": "koguryo-jian-kings",
+        "label": "集安高句丽王陵群参考（太王陵代表点）",
+        "reason": "只表示属于该陵群，不表示单陵与太王陵同址。",
+        "coordinates": {
+          "lat": 41.142,
+          "lng": 126.21,
+          "crs": "WGS84",
+          "sourceId": "koguryo-taewang-survey"
+        }
+      },
+      "chronology": {
+        "sortYear": null,
+        "basis": "年代未确定；传说时代及未定墓主保留目录次序"
+      },
+      "biographies": [
+        {
+          "label": "故国壤王（候选）",
+          "birthYear": null,
+          "deathYear": null,
+          "lifespanText": "生卒不详",
+          "status": "unresolved",
+          "sourceIds": [],
+          "entity": null,
+          "precision": "year",
+          "limitations": "只显示可核查年份，不将卒年视为建陵、迁葬或发掘年；索引资料需持续复核。"
+        }
+      ],
+      "lifespanText": "生卒不详",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-03"
+      }
+    },
+    {
+      "id": "koguryo-mm0500",
+      "name": "西大墓",
+      "aliases": [
+        "MM0500",
+        "高句丽西大墓"
+      ],
+      "era": "魏晋南北朝",
+      "dynasty": "高句丽",
+      "occupants": [
+        "西川王（候选）"
+      ],
+      "admin": "吉林省通化市集安市",
+      "adminStatus": "来源概略行政区，未逐项核验现行区划",
+      "recordType": "single",
+      "parentId": "koguryo-jian-kings",
+      "nature": "actual_burial",
+      "recognition": "attributed",
+      "evidence": "吉林保护条例第十条列为高句丽王陵；墓号用于实体对应，具体墓主见争议说明。",
+      "disputes": [
+        "申报资料提出西川王对应，保留候选。"
+      ],
+      "sourceIds": [
+        "koguryo-law",
+        "koguryo-nomination"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "单陵坐标待核，可参考所属集安王陵群；不生成重叠单陵点。",
+      "reviewTasks": [
+        "核对单陵保护界址、独立坐标及墓主研究；不借用同名墓点"
+      ],
+      "locationReference": {
+        "parentId": "koguryo-jian-kings",
+        "label": "集安高句丽王陵群参考（太王陵代表点）",
+        "reason": "只表示属于该陵群，不表示单陵与太王陵同址。",
+        "coordinates": {
+          "lat": 41.142,
+          "lng": 126.21,
+          "crs": "WGS84",
+          "sourceId": "koguryo-taewang-survey"
+        }
+      },
+      "chronology": {
+        "sortYear": null,
+        "basis": "年代未确定；传说时代及未定墓主保留目录次序"
+      },
+      "biographies": [
+        {
+          "label": "西川王（候选）",
+          "birthYear": null,
+          "deathYear": null,
+          "lifespanText": "生卒不详",
+          "status": "unresolved",
+          "sourceIds": [],
+          "entity": null,
+          "precision": "year",
+          "limitations": "只显示可核查年份，不将卒年视为建陵、迁葬或发掘年；索引资料需持续复核。"
+        }
+      ],
+      "lifespanText": "生卒不详",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-03"
+      }
+    },
+    {
+      "id": "koguryo-ym0043",
+      "name": "临江墓",
+      "aliases": [
+        "YM0043",
+        "高句丽临江墓"
+      ],
+      "era": "魏晋南北朝",
+      "dynasty": "高句丽",
+      "occupants": [],
+      "admin": "吉林省通化市集安市",
+      "adminStatus": "来源概略行政区，未逐项核验现行区划",
+      "recordType": "single",
+      "parentId": "koguryo-jian-kings",
+      "nature": "actual_burial",
+      "recognition": "archaeological",
+      "evidence": "吉林保护条例第十条列为高句丽王陵；墓号用于实体对应，具体墓主见争议说明。",
+      "disputes": [
+        "王陵墓主尚未可靠确认。"
+      ],
+      "sourceIds": [
+        "koguryo-law",
+        "koguryo-nomination"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "单陵坐标待核，可参考所属集安王陵群；不生成重叠单陵点。",
+      "reviewTasks": [
+        "核对单陵保护界址、独立坐标及墓主研究；不借用同名墓点"
+      ],
+      "locationReference": {
+        "parentId": "koguryo-jian-kings",
+        "label": "集安高句丽王陵群参考（太王陵代表点）",
+        "reason": "只表示属于该陵群，不表示单陵与太王陵同址。",
+        "coordinates": {
+          "lat": 41.142,
+          "lng": 126.21,
+          "crs": "WGS84",
+          "sourceId": "koguryo-taewang-survey"
+        }
+      },
+      "chronology": {
+        "sortYear": null,
+        "basis": "年代未确定；传说时代及未定墓主保留目录次序"
+      },
+      "biographies": [],
+      "lifespanText": "墓主未确定，生卒待核",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-03"
+      }
+    },
+    {
+      "id": "koguryo-ym2110",
+      "name": "禹山2110号王陵",
+      "aliases": [
+        "YM2110",
+        "高句丽禹山2110号王陵"
+      ],
+      "era": "魏晋南北朝",
+      "dynasty": "高句丽",
+      "occupants": [],
+      "admin": "吉林省通化市集安市",
+      "adminStatus": "来源概略行政区，未逐项核验现行区划",
+      "recordType": "single",
+      "parentId": "koguryo-jian-kings",
+      "nature": "actual_burial",
+      "recognition": "archaeological",
+      "evidence": "吉林保护条例第十条列为高句丽王陵；墓号用于实体对应，具体墓主见争议说明。",
+      "disputes": [
+        "王陵墓主尚未可靠确认。"
+      ],
+      "sourceIds": [
+        "koguryo-law",
+        "koguryo-nomination"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "单陵坐标待核，可参考所属集安王陵群；不生成重叠单陵点。",
+      "reviewTasks": [
+        "核对单陵保护界址、独立坐标及墓主研究；不借用同名墓点"
+      ],
+      "locationReference": {
+        "parentId": "koguryo-jian-kings",
+        "label": "集安高句丽王陵群参考（太王陵代表点）",
+        "reason": "只表示属于该陵群，不表示单陵与太王陵同址。",
+        "coordinates": {
+          "lat": 41.142,
+          "lng": 126.21,
+          "crs": "WGS84",
+          "sourceId": "koguryo-taewang-survey"
+        }
+      },
+      "chronology": {
+        "sortYear": null,
+        "basis": "年代未确定；传说时代及未定墓主保留目录次序"
+      },
+      "biographies": [],
+      "lifespanText": "墓主未确定，生卒待核",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-03"
+      }
+    },
+    {
+      "id": "koguryo-ym0992",
+      "name": "禹山0992号王陵",
+      "aliases": [
+        "YM0992",
+        "高句丽禹山0992号王陵"
+      ],
+      "era": "魏晋南北朝",
+      "dynasty": "高句丽",
+      "occupants": [],
+      "admin": "吉林省通化市集安市",
+      "adminStatus": "来源概略行政区，未逐项核验现行区划",
+      "recordType": "single",
+      "parentId": "koguryo-jian-kings",
+      "nature": "actual_burial",
+      "recognition": "archaeological",
+      "evidence": "吉林保护条例第十条列为高句丽王陵；墓号用于实体对应，具体墓主见争议说明。",
+      "disputes": [
+        "王陵墓主尚未可靠确认。"
+      ],
+      "sourceIds": [
+        "koguryo-law",
+        "koguryo-nomination"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "单陵坐标待核，可参考所属集安王陵群；不生成重叠单陵点。",
+      "reviewTasks": [
+        "核对单陵保护界址、独立坐标及墓主研究；不借用同名墓点"
+      ],
+      "locationReference": {
+        "parentId": "koguryo-jian-kings",
+        "label": "集安高句丽王陵群参考（太王陵代表点）",
+        "reason": "只表示属于该陵群，不表示单陵与太王陵同址。",
+        "coordinates": {
+          "lat": 41.142,
+          "lng": 126.21,
+          "crs": "WGS84",
+          "sourceId": "koguryo-taewang-survey"
+        }
+      },
+      "chronology": {
+        "sortYear": null,
+        "basis": "年代未确定；传说时代及未定墓主保留目录次序"
+      },
+      "biographies": [],
+      "lifespanText": "墓主未确定，生卒待核",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-03"
+      }
+    },
+    {
+      "id": "koguryo-mm0626",
+      "name": "麻线0626号王陵",
+      "aliases": [
+        "MM0626",
+        "高句丽麻线0626号王陵"
+      ],
+      "era": "魏晋南北朝",
+      "dynasty": "高句丽",
+      "occupants": [],
+      "admin": "吉林省通化市集安市",
+      "adminStatus": "来源概略行政区，未逐项核验现行区划",
+      "recordType": "single",
+      "parentId": "koguryo-jian-kings",
+      "nature": "actual_burial",
+      "recognition": "archaeological",
+      "evidence": "吉林保护条例第十条列为高句丽王陵；墓号用于实体对应，具体墓主见争议说明。",
+      "disputes": [
+        "王陵墓主尚未可靠确认。"
+      ],
+      "sourceIds": [
+        "koguryo-law",
+        "koguryo-nomination"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "单陵坐标待核，可参考所属集安王陵群；不生成重叠单陵点。",
+      "reviewTasks": [
+        "核对单陵保护界址、独立坐标及墓主研究；不借用同名墓点"
+      ],
+      "locationReference": {
+        "parentId": "koguryo-jian-kings",
+        "label": "集安高句丽王陵群参考（太王陵代表点）",
+        "reason": "只表示属于该陵群，不表示单陵与太王陵同址。",
+        "coordinates": {
+          "lat": 41.142,
+          "lng": 126.21,
+          "crs": "WGS84",
+          "sourceId": "koguryo-taewang-survey"
+        }
+      },
+      "chronology": {
+        "sortYear": null,
+        "basis": "年代未确定；传说时代及未定墓主保留目录次序"
+      },
+      "biographies": [],
+      "lifespanText": "墓主未确定，生卒待核",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-03"
+      }
+    },
+    {
+      "id": "koguryo-mm2100",
+      "name": "麻线2100号王陵",
+      "aliases": [
+        "MM2100",
+        "高句丽麻线2100号王陵"
+      ],
+      "era": "魏晋南北朝",
+      "dynasty": "高句丽",
+      "occupants": [],
+      "admin": "吉林省通化市集安市",
+      "adminStatus": "来源概略行政区，未逐项核验现行区划",
+      "recordType": "single",
+      "parentId": "koguryo-jian-kings",
+      "nature": "actual_burial",
+      "recognition": "archaeological",
+      "evidence": "吉林保护条例第十条列为高句丽王陵；墓号用于实体对应，具体墓主见争议说明。",
+      "disputes": [
+        "王陵墓主尚未可靠确认。"
+      ],
+      "sourceIds": [
+        "koguryo-law",
+        "koguryo-nomination"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "单陵坐标待核，可参考所属集安王陵群；不生成重叠单陵点。",
+      "reviewTasks": [
+        "核对单陵保护界址、独立坐标及墓主研究；不借用同名墓点"
+      ],
+      "locationReference": {
+        "parentId": "koguryo-jian-kings",
+        "label": "集安高句丽王陵群参考（太王陵代表点）",
+        "reason": "只表示属于该陵群，不表示单陵与太王陵同址。",
+        "coordinates": {
+          "lat": 41.142,
+          "lng": 126.21,
+          "crs": "WGS84",
+          "sourceId": "koguryo-taewang-survey"
+        }
+      },
+      "chronology": {
+        "sortYear": null,
+        "basis": "年代未确定；传说时代及未定墓主保留目录次序"
+      },
+      "biographies": [],
+      "lifespanText": "墓主未确定，生卒待核",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-03"
+      }
+    },
+    {
+      "id": "koguryo-mm2378",
+      "name": "麻线2378号王陵",
+      "aliases": [
+        "MM2378",
+        "高句丽麻线2378号王陵"
+      ],
+      "era": "魏晋南北朝",
+      "dynasty": "高句丽",
+      "occupants": [],
+      "admin": "吉林省通化市集安市",
+      "adminStatus": "来源概略行政区，未逐项核验现行区划",
+      "recordType": "single",
+      "parentId": "koguryo-jian-kings",
+      "nature": "actual_burial",
+      "recognition": "archaeological",
+      "evidence": "吉林保护条例第十条列为高句丽王陵；墓号用于实体对应，具体墓主见争议说明。",
+      "disputes": [
+        "王陵墓主尚未可靠确认。"
+      ],
+      "sourceIds": [
+        "koguryo-law",
+        "koguryo-nomination"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "单陵坐标待核，可参考所属集安王陵群；不生成重叠单陵点。",
+      "reviewTasks": [
+        "核对单陵保护界址、独立坐标及墓主研究；不借用同名墓点"
+      ],
+      "locationReference": {
+        "parentId": "koguryo-jian-kings",
+        "label": "集安高句丽王陵群参考（太王陵代表点）",
+        "reason": "只表示属于该陵群，不表示单陵与太王陵同址。",
+        "coordinates": {
+          "lat": 41.142,
+          "lng": 126.21,
+          "crs": "WGS84",
+          "sourceId": "koguryo-taewang-survey"
+        }
+      },
+      "chronology": {
+        "sortYear": null,
+        "basis": "年代未确定；传说时代及未定墓主保留目录次序"
+      },
+      "biographies": [],
+      "lifespanText": "墓主未确定，生卒待核",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-03"
+      }
+    },
+    {
+      "id": "koguryo-qm0211",
+      "name": "七星山0211号王陵",
+      "aliases": [
+        "QM0211",
+        "高句丽七星山0211号王陵"
+      ],
+      "era": "魏晋南北朝",
+      "dynasty": "高句丽",
+      "occupants": [],
+      "admin": "吉林省通化市集安市",
+      "adminStatus": "来源概略行政区，未逐项核验现行区划",
+      "recordType": "single",
+      "parentId": "koguryo-jian-kings",
+      "nature": "actual_burial",
+      "recognition": "archaeological",
+      "evidence": "吉林保护条例第十条列为高句丽王陵；墓号用于实体对应，具体墓主见争议说明。",
+      "disputes": [
+        "王陵墓主尚未可靠确认。"
+      ],
+      "sourceIds": [
+        "koguryo-law",
+        "koguryo-nomination"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "单陵坐标待核，可参考所属集安王陵群；不生成重叠单陵点。",
+      "reviewTasks": [
+        "核对单陵保护界址、独立坐标及墓主研究；不借用同名墓点"
+      ],
+      "locationReference": {
+        "parentId": "koguryo-jian-kings",
+        "label": "集安高句丽王陵群参考（太王陵代表点）",
+        "reason": "只表示属于该陵群，不表示单陵与太王陵同址。",
+        "coordinates": {
+          "lat": 41.142,
+          "lng": 126.21,
+          "crs": "WGS84",
+          "sourceId": "koguryo-taewang-survey"
+        }
+      },
+      "chronology": {
+        "sortYear": null,
+        "basis": "年代未确定；传说时代及未定墓主保留目录次序"
+      },
+      "biographies": [],
+      "lifespanText": "墓主未确定，生卒待核",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-03"
+      }
+    },
+    {
+      "id": "koguryo-qm0871",
+      "name": "七星山0871号王陵",
+      "aliases": [
+        "QM0871",
+        "高句丽七星山0871号王陵"
+      ],
+      "era": "魏晋南北朝",
+      "dynasty": "高句丽",
+      "occupants": [],
+      "admin": "吉林省通化市集安市",
+      "adminStatus": "来源概略行政区，未逐项核验现行区划",
+      "recordType": "single",
+      "parentId": "koguryo-jian-kings",
+      "nature": "actual_burial",
+      "recognition": "archaeological",
+      "evidence": "吉林保护条例第十条列为高句丽王陵；墓号用于实体对应，具体墓主见争议说明。",
+      "disputes": [
+        "王陵墓主尚未可靠确认。"
+      ],
+      "sourceIds": [
+        "koguryo-law",
+        "koguryo-nomination"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "单陵坐标待核，可参考所属集安王陵群；不生成重叠单陵点。",
+      "reviewTasks": [
+        "核对单陵保护界址、独立坐标及墓主研究；不借用同名墓点"
+      ],
+      "locationReference": {
+        "parentId": "koguryo-jian-kings",
+        "label": "集安高句丽王陵群参考（太王陵代表点）",
+        "reason": "只表示属于该陵群，不表示单陵与太王陵同址。",
+        "coordinates": {
+          "lat": 41.142,
+          "lng": 126.21,
+          "crs": "WGS84",
+          "sourceId": "koguryo-taewang-survey"
+        }
+      },
+      "chronology": {
+        "sortYear": null,
+        "basis": "年代未确定；传说时代及未定墓主保留目录次序"
+      },
+      "biographies": [],
+      "lifespanText": "墓主未确定，生卒待核",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-03"
+      }
+    },
+    {
+      "id": "koguryo-tongmyong",
+      "name": "东明王陵（传统指认）",
+      "aliases": [
+        "东明王墓",
+        "朱蒙陵",
+        "Tongmyong"
+      ],
+      "era": "魏晋南北朝",
+      "dynasty": "高句丽",
+      "occupants": [
+        "东明王朱蒙（传统祭祀对象）"
+      ],
+      "admin": "朝鲜平壤市力浦区龙山里",
+      "adminStatus": "来源概略行政区，未逐项核验现行区划",
+      "recordType": "single",
+      "parentId": null,
+      "nature": "unknown",
+      "recognition": "traditional",
+      "evidence": "联合国教科文组织以东明王陵及真坡里墓群组成部分收录；现存墓葬与建国君主的对应有争议。",
+      "disputes": [
+        "现存墓葬一般置于高句丽平壤时期；朱蒙是传统祭祀对象，不能以其卒年作为现存墓建造年代。",
+        "有迁葬、象征纪念及其他国王墓等观点，不能直接定为朱蒙原葬墓。"
+      ],
+      "sourceIds": [
+        "koguryo-dprk-map",
+        "koguryo-dprk-nomination",
+        "koguryo-royal-attributions"
+      ],
+      "coordinates": {
+        "lat": 38.889,
+        "lng": 125.93,
+        "crs": "WGS84",
+        "status": "estimated_wgs84",
+        "sourceId": "koguryo-dprk-map",
+        "target": "东明王陵与真坡里陵区代表点",
+        "original": "1091-001 N38°53′22″ E125°55′47″",
+        "method": "机构公开DMS坐标换算后取三位小数；按WGS84约定作为区域参考，未声称现场实测",
+        "sourceDatumExplicit": false,
+        "precision": {
+          "sourceUnit": "arcsecond",
+          "resolutionDegrees": 0.001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "遗产组分220公顷；不是单陵墓室中心；原始来源未明示基准与测量误差，不作为墓室中心或入口。",
+        "estimate": {
+          "basis": "机构记录名称、墓号与地望互核；保留原始坐标供复核",
+          "extent": "遗产组分220公顷；不是单陵墓室中心",
+          "confidence": "regional",
+          "reviewedAt": "2026-10-04"
+        }
+      },
+      "mapEligible": true,
+      "mapReason": "东明王陵与真坡里陵区代表点",
+      "reviewTasks": [
+        "补核现场实测坐标、基准及入口；区域参考不证明墓主身份"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "年代未确定；传说时代及未定墓主保留目录次序"
+      },
+      "biographies": [
+        {
+          "label": "东明王朱蒙（传统祭祀对象）",
+          "birthYear": null,
+          "deathYear": null,
+          "lifespanText": "生卒不详",
+          "status": "unresolved",
+          "sourceIds": [],
+          "entity": null,
+          "precision": "year",
+          "limitations": "只显示可核查年份，不将卒年视为建陵、迁葬或发掘年；索引资料需持续复核。"
+        }
+      ],
+      "lifespanText": "生卒不详",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-03"
+      }
+    },
+    {
+      "id": "koguryo-kangso",
+      "name": "江西三墓（高句丽王陵候选）",
+      "aliases": [],
+      "era": "隋唐",
+      "dynasty": "高句丽",
+      "occupants": [],
+      "admin": "朝鲜南浦市江西区域",
+      "adminStatus": "来源概略行政区，未逐项核验现行区划",
+      "recordType": "group",
+      "parentId": null,
+      "nature": "mixed",
+      "recognition": "attributed",
+      "evidence": "江西大墓和中墓有王陵归属研究；小墓随陵群说明保留，不强行指定三位国王。",
+      "disputes": [
+        "大墓、中墓被推定为平原王、婴阳王等陵墓，各说不一。",
+        "整体归入六世纪末至七世纪对应隋唐展示，不代表整个高句丽政权仅属隋唐。"
+      ],
+      "sourceIds": [
+        "koguryo-dprk-map",
+        "koguryo-dprk-nomination",
+        "koguryo-royal-attributions"
+      ],
+      "coordinates": {
+        "lat": 38.965,
+        "lng": 125.425,
+        "crs": "WGS84",
+        "status": "estimated_wgs84",
+        "sourceId": "koguryo-dprk-map",
+        "target": "江西三墓陵区代表点",
+        "original": "1091-004 N38°57′53″ E125°25′30″",
+        "method": "机构公开DMS坐标换算后取三位小数；按WGS84约定作为区域参考，未声称现场实测",
+        "sourceDatumExplicit": false,
+        "precision": {
+          "sourceUnit": "arcsecond",
+          "resolutionDegrees": 0.001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "遗产本体1.9公顷；未拆分三座墓室坐标；原始来源未明示基准与测量误差，不作为墓室中心或入口。",
+        "estimate": {
+          "basis": "机构记录名称、墓号与地望互核；保留原始坐标供复核",
+          "extent": "遗产本体1.9公顷；未拆分三座墓室坐标",
+          "confidence": "regional",
+          "reviewedAt": "2026-10-04"
+        }
+      },
+      "mapEligible": true,
+      "mapReason": "江西三墓陵区代表点",
+      "reviewTasks": [
+        "补核现场实测坐标、基准及入口；区域参考不证明墓主身份"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "年代未确定；传说时代及未定墓主保留目录次序"
+      },
+      "biographies": [],
+      "lifespanText": "陵群，见各墓主资料",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-03"
+      }
+    },
+    {
+      "id": "koguryo-honam-sasin",
+      "name": "湖南里四神墓（王陵候选）",
+      "aliases": [
+        "湖南里四神冢",
+        "Honam-ri Sasin"
+      ],
+      "era": "魏晋南北朝",
+      "dynasty": "高句丽",
+      "occupants": [
+        "高句丽国王（未定）"
+      ],
+      "admin": "朝鲜平壤市三石区域湖南里",
+      "adminStatus": "来源概略行政区，未逐项核验现行区划",
+      "recordType": "single",
+      "parentId": null,
+      "nature": "actual_burial",
+      "recognition": "attributed",
+      "evidence": "独立大型壁画墓，有王陵归属研究；不是仅因列入世界遗产而认定王陵。",
+      "disputes": [
+        "安原王、阳原王等归属说尚不能确定，保留王陵候选。"
+      ],
+      "sourceIds": [
+        "koguryo-dprk-map",
+        "koguryo-royal-attributions"
+      ],
+      "coordinates": {
+        "lat": 39.081,
+        "lng": 125.922,
+        "crs": "WGS84",
+        "status": "estimated_wgs84",
+        "sourceId": "koguryo-dprk-map",
+        "target": "湖南里四神墓遗产组分参考点",
+        "original": "1091-002 N39°4′51″ E125°55′19″",
+        "method": "机构公开DMS坐标换算后取三位小数；按WGS84约定作为区域参考，未声称现场实测",
+        "sourceDatumExplicit": false,
+        "precision": {
+          "sourceUnit": "arcsecond",
+          "resolutionDegrees": 0.001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "遗产本体0.8公顷及周边约500米参考范围；原始来源未明示基准与测量误差，不作为墓室中心或入口。",
+        "estimate": {
+          "basis": "机构记录名称、墓号与地望互核；保留原始坐标供复核",
+          "extent": "遗产本体0.8公顷及周边约500米参考范围",
+          "confidence": "regional",
+          "reviewedAt": "2026-10-04"
+        }
+      },
+      "mapEligible": true,
+      "mapReason": "湖南里四神墓遗产组分参考点",
+      "reviewTasks": [
+        "补核现场实测坐标、基准及入口；区域参考不证明墓主身份"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "年代未确定；传说时代及未定墓主保留目录次序"
+      },
+      "biographies": [
+        {
+          "label": "高句丽国王（未定）",
+          "birthYear": null,
+          "deathYear": null,
+          "lifespanText": "生卒不详",
+          "status": "unresolved",
+          "sourceIds": [],
+          "entity": null,
+          "precision": "year",
+          "limitations": "只显示可核查年份，不将卒年视为建陵、迁葬或发掘年；索引资料需持续复核。"
+        }
+      ],
+      "lifespanText": "生卒不详",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-03"
+      }
+    },
+    {
+      "id": "bohai-liudingshan",
+      "name": "六顶山渤海王室墓群",
+      "aliases": [],
+      "era": "隋唐",
+      "dynasty": "渤海国",
+      "occupants": [],
+      "admin": "吉林省延边朝鲜族自治州敦化市",
+      "adminStatus": "来源概略行政区，未逐项核验现行区划",
+      "recordType": "group",
+      "parentId": null,
+      "nature": "mixed",
+      "recognition": "documented",
+      "evidence": "机构资料确认王室墓地或王陵区，以群记录避免将未定墓主强行分配给渤海国王。",
+      "disputes": [
+        "珍陵具体墓主与墓号未定；混合王室贵族墓地不等于所有墓都是王陵。",
+        "遗存包含唐至五代阶段，采用主要时期隋唐展示，具体分期待逐陵核对。"
+      ],
+      "sourceIds": [
+        "bohai-liudingshan"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "缺少经核实的WGS84点位",
+      "reviewTasks": [
+        "从文保保护图或现场地理资料配准陵区；不同坐标索引存在冲突，不使用城址或景区中心替代"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "年代未确定；传说时代及未定墓主保留目录次序"
+      },
+      "biographies": [],
+      "lifespanText": "陵群，见各墓主资料",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-03"
+      }
+    },
+    {
+      "id": "bohai-longtoushan",
+      "name": "龙头山渤海王陵区",
+      "aliases": [],
+      "era": "隋唐",
+      "dynasty": "渤海国",
+      "occupants": [],
+      "admin": "吉林省延边朝鲜族自治州和龙市",
+      "adminStatus": "来源概略行政区，未逐项核验现行区划",
+      "recordType": "group",
+      "parentId": null,
+      "nature": "mixed",
+      "recognition": "documented",
+      "evidence": "机构资料确认王室墓地或王陵区，以群记录避免将未定墓主强行分配给渤海国王。",
+      "disputes": [
+        "保留陵区，后妃及公主墓只在群内说明，不单独纳入。",
+        "遗存包含唐至五代阶段，采用主要时期隋唐展示，具体分期待逐陵核对。"
+      ],
+      "sourceIds": [
+        "bohai-longtoushan"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "缺少经核实的WGS84点位",
+      "reviewTasks": [
+        "从文保保护图或现场地理资料配准陵区；不同坐标索引存在冲突，不使用城址或景区中心替代"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "年代未确定；传说时代及未定墓主保留目录次序"
+      },
+      "biographies": [],
+      "lifespanText": "陵群，见各墓主资料",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-03"
+      }
+    },
+    {
+      "id": "bohai-sanlingfen",
+      "name": "渤海国三灵坟陵区",
+      "aliases": [],
+      "era": "隋唐",
+      "dynasty": "渤海国",
+      "occupants": [],
+      "admin": "黑龙江省牡丹江市宁安市渤海镇",
+      "adminStatus": "来源概略行政区，未逐项核验现行区划",
+      "recordType": "group",
+      "parentId": null,
+      "nature": "mixed",
+      "recognition": "documented",
+      "evidence": "机构资料确认王室墓地或王陵区，以群记录避免将未定墓主强行分配给渤海国王。",
+      "disputes": [
+        "三个陵园不等于恰有三位国王；未以渤海上京城坐标代替陵园位置。",
+        "遗存包含唐至五代阶段，采用主要时期隋唐展示，具体分期待逐陵核对。"
+      ],
+      "sourceIds": [
+        "bohai-sanlingfen"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "缺少经核实的WGS84点位",
+      "reviewTasks": [
+        "从文保保护图或现场地理资料配准陵区；不同坐标索引存在冲突，不使用城址或景区中心替代"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "年代未确定；传说时代及未定墓主保留目录次序"
+      },
+      "biographies": [],
+      "lifespanText": "陵群，见各墓主资料",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-03"
+      }
+    },
+    {
+      "id": "tang-hui-rang",
+      "name": "唐让帝惠陵",
+      "aliases": [
+        "唐惠陵",
+        "让皇帝陵",
+        "李宪墓",
+        "李成器墓",
+        "宁王李宪墓"
+      ],
+      "era": "隋唐",
+      "dynasty": "唐",
+      "occupants": [
+        "唐让帝李宪（追谥）",
+        "恭皇后元氏"
+      ],
+      "admin": "陕西省渭南市蒲城县桥陵镇三合村",
+      "adminStatus": "来源概略行政区，未逐项核验现行区划",
+      "recordType": "single",
+      "parentId": null,
+      "nature": "posthumous",
+      "recognition": "archaeological",
+      "evidence": "原址墓葬已抢救性发掘，运营方记为李宪与元氏合葬墓；李宪死后追谥让皇帝，并非生前在位皇帝。",
+      "disputes": [
+        "属于桥陵陪葬体系，但追谥皇帝陵作为独立实体记录，不以桥陵坐标替代。",
+        "与清东陵同治帝惠陵同名异陵，不能合并。"
+      ],
+      "sourceIds": [
+        "tang-hui-national",
+        "tang-hui-operator",
+        "tang-hui-excavation",
+        "tang-hui-map",
+        "tang-hui-amap",
+        "tang-hui-amap-datum",
+        "visit-tang-hui"
+      ],
+      "coordinates": {
+        "lat": 34.973518,
+        "lng": 109.520903,
+        "crs": "WGS84",
+        "status": "verified_wgs84",
+        "sourceId": "tang-hui-amap",
+        "sourceRecordId": "B0HA1KCLP9",
+        "target": "唐惠陵博物馆实体点（原址展示区）",
+        "original": "GCJ-02：109.526053,34.972611",
+        "method": "按高德官方基准说明，使用项目迭代反解将GCJ-02转换为WGS84；核对原址博物馆名称和地址",
+        "sourceDatumExplicit": true,
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.000001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "博物馆POI点，非测绘地宫中心或墓道入口；平台未提供测量误差。"
+      },
+      "mapEligible": true,
+      "mapReason": "唐惠陵博物馆原址展示区实体点",
+      "reviewTasks": [
+        "补核墓道入口实测坐标及当前开放公告"
+      ],
+      "rulerCategory": "posthumous_emperor",
+      "locationReview": {
+        "reviewedAt": "2026-10-05",
+        "status": "located",
+        "reason": "改用高德原址博物馆实体点；旧国保地理索引落在县城附近，已拒绝。",
+        "nextStep": "补核墓道入口实测位置及当前开放公告",
+        "sourceIds": [
+          "tang-hui-amap",
+          "tang-hui-amap-datum",
+          "tang-hui-map"
+        ]
+      },
+      "visitorAccess": {
+        "status": "documented_visitable",
+        "originalChamber": true,
+        "mode": "original_chamber",
+        "note": "2017年8月30日开馆报道明确游客可走入原地宫甬道；不是复制墓室。此为历史开放记录，当日开放以博物馆公告为准。",
+        "sourceIds": [
+          "visit-tang-hui"
+        ],
+        "reviewedAt": "2026-10-04",
+        "openingPolicy": "出行前核对管理机构临时关闭、维修及限流公告"
+      },
+      "chronology": {
+        "sortYear": null,
+        "basis": "年代未确定；传说时代及未定墓主保留目录次序"
+      },
+      "biographies": [
+        {
+          "label": "唐让帝李宪（追谥）",
+          "birthYear": null,
+          "deathYear": null,
+          "lifespanText": "生卒不详",
+          "status": "unresolved",
+          "sourceIds": [],
+          "entity": null,
+          "precision": "year",
+          "limitations": "只显示可核查年份，不将卒年视为建陵、迁葬或发掘年；索引资料需持续复核。"
+        },
+        {
+          "label": "恭皇后元氏",
+          "birthYear": null,
+          "deathYear": null,
+          "lifespanText": "生卒不详",
+          "status": "unresolved",
+          "sourceIds": [],
+          "entity": null,
+          "precision": "year",
+          "limitations": "只显示可核查年份，不将卒年视为建陵、迁葬或发掘年；索引资料需持续复核。"
+        }
+      ],
+      "lifespanText": "唐让帝李宪（追谥）：生卒不详；恭皇后元氏：生卒不详",
       "disturbance": {
         "status": "unknown",
         "label": "尚未核查",

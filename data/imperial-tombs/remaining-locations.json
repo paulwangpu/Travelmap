@@ -1,10 +1,10 @@
 {
   "reviewedAt": "2026-10-04",
-  "totalRecords": 383,
-  "mapCandidates": 274,
-  "missingIndependentCoordinates": 41,
+  "totalRecords": 403,
+  "mapCandidates": 280,
+  "missingIndependentCoordinates": 44,
   "overviewsWithMappedChildren": 10,
-  "sharedCemeteryReferences": 67,
+  "sharedCemeteryReferences": 78,
   "unlocated": [
     {
       "id": "qin-gong-group",
@@ -442,6 +442,33 @@
       "mappedChildren": [],
       "reason": null,
       "nextStep": "配准M4发掘平面与保护边界；核对原墓志生卒、济宁安僖王名字及发掘年份；核当前地宫开放情况"
+    },
+    {
+      "id": "bohai-liudingshan",
+      "name": "六顶山渤海王室墓群",
+      "admin": "吉林省延边朝鲜族自治州敦化市",
+      "category": "unresolved_site_or_entity",
+      "mappedChildren": [],
+      "reason": null,
+      "nextStep": "从文保保护图或现场地理资料配准陵区；不同坐标索引存在冲突，不使用城址或景区中心替代"
+    },
+    {
+      "id": "bohai-longtoushan",
+      "name": "龙头山渤海王陵区",
+      "admin": "吉林省延边朝鲜族自治州和龙市",
+      "category": "unresolved_site_or_entity",
+      "mappedChildren": [],
+      "reason": null,
+      "nextStep": "从文保保护图或现场地理资料配准陵区；不同坐标索引存在冲突，不使用城址或景区中心替代"
+    },
+    {
+      "id": "bohai-sanlingfen",
+      "name": "渤海国三灵坟陵区",
+      "admin": "黑龙江省牡丹江市宁安市渤海镇",
+      "category": "unresolved_site_or_entity",
+      "mappedChildren": [],
+      "reason": null,
+      "nextStep": "从文保保护图或现场地理资料配准陵区；不同坐标索引存在冲突，不使用城址或景区中心替代"
     }
   ]
 }

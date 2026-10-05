@@ -275,7 +275,13 @@
     "ming-lu-huang",
     "ming-ning-xian",
     "ming-zhou-cemetery",
-    "ming-zhou-ding"
+    "ming-zhou-ding",
+    "koguryo-jian-kings",
+    "koguryo-ym0541",
+    "koguryo-tongmyong",
+    "koguryo-kangso",
+    "koguryo-honam-sasin",
+    "tang-hui-rang"
   ],
   "wikidataApproved": [
     "chen-wanan",
@@ -1261,6 +1267,36 @@
       "id": "ming-zhou-ding",
       "sourceId": "ming-zhou-entity",
       "method": "官方明山东坡地望与同名陵墓实体交叉核对，采用三位小数区域锚点"
+    },
+    {
+      "id": "koguryo-jian-kings",
+      "sourceId": "koguryo-taewang-survey",
+      "method": "机构公开DMS坐标换算后取三位小数；按WGS84约定作为区域参考，未声称现场实测"
+    },
+    {
+      "id": "koguryo-ym0541",
+      "sourceId": "koguryo-taewang-survey",
+      "method": "机构公开DMS坐标换算后取三位小数；按WGS84约定作为区域参考，未声称现场实测"
+    },
+    {
+      "id": "koguryo-tongmyong",
+      "sourceId": "koguryo-dprk-map",
+      "method": "机构公开DMS坐标换算后取三位小数；按WGS84约定作为区域参考，未声称现场实测"
+    },
+    {
+      "id": "koguryo-kangso",
+      "sourceId": "koguryo-dprk-map",
+      "method": "机构公开DMS坐标换算后取三位小数；按WGS84约定作为区域参考，未声称现场实测"
+    },
+    {
+      "id": "koguryo-honam-sasin",
+      "sourceId": "koguryo-dprk-map",
+      "method": "机构公开DMS坐标换算后取三位小数；按WGS84约定作为区域参考，未声称现场实测"
+    },
+    {
+      "id": "tang-hui-rang",
+      "sourceId": "tang-hui-amap",
+      "method": "按高德官方基准说明，使用项目迭代反解将GCJ-02转换为WGS84；核对原址博物馆名称和地址"
     }
   ],
   "rejected": {

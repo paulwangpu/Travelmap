@@ -13,6 +13,10 @@
   --deep: #163f38;
   --shadow: 0 18px 45px rgba(26, 35, 31, 0.12);
   --font-ui: Inter, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  --text-body: 14px;
+  --text-secondary: 13px;
+  --text-caption: 11px;
+  --leading-body: 1.6;
 }
 
 /* Keep the compact first-row actions inside their assigned grid columns. */
@@ -58,14 +62,28 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-ui);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
   overflow: hidden;
 }
 
 button,
 input,
-select {
+select,
+textarea {
   font: inherit;
 }
+
+/* Low-specificity defaults let compact map labels and statistics keep their scale. */
+:where(p) { margin:0 0 .75em; line-height:var(--leading-body); }
+:where(h1,h2,h3,h4,h5,h6) { margin:0 0 .5em; line-height:1.35; font-weight:600; }
+:where(h1) { font-size:26px; }
+:where(h2) { font-size:22px; }
+:where(h3) { font-size:18px; }
+:where(h4) { font-size:15px; }
+:where(h5,h6) { font-size:13px; }
+:where(small) { font-size:var(--text-caption); line-height:1.5; }
+:where(textarea) { line-height:var(--leading-body); }
 
 .app-shell {
   height: 100vh;
@@ -129,6 +147,9 @@ select {
 .privacy-note p {
   color: #b8c6bd;
   margin-top: 4px;
+  margin-bottom: 0;
+  font-size: var(--text-secondary);
+  line-height: 1.6;
 }
 
 .sidebar-footer {
@@ -492,6 +513,7 @@ button:hover {
 }
 
 .leaflet-map {
+  isolation: isolate;
   min-height: 640px;
   height: 640px;
   border: 1px solid var(--line);
@@ -7568,11 +7590,15 @@ button:hover {
 
 /* Geology uses the population-density card and opacity controls. */
 .geology-age-heading { display:flex; justify-content:space-between; margin-bottom:5px; color:#40544e; font-size:10px; font-weight:600; line-height:1.4; }
-.geology-age-list { display:grid; gap:4px; max-height:180px; overflow:auto; scrollbar-width:thin; pointer-events:auto; }
+.geology-age-list { display:grid; gap:4px; min-width:0; max-height:180px; overflow-y:auto; overflow-x:hidden; scrollbar-width:thin; pointer-events:auto; }
 .geology-age-row { display:grid; grid-template-columns:24px minmax(0,1fr) auto; align-items:center; gap:6px; color:#40544e; font-size:9px; line-height:1.3; }
 .geology-swatch { display:inline-block; width:12px; height:9px; border:1px solid rgba(18,54,45,.2); border-radius:2px; flex-shrink:0; }
 .geology-age-range { color:#53655f; font-size:8px; font-variant-numeric:tabular-nums; }
+.geology-age-row > span { min-width:0; }
+.geology-age-row > span:nth-child(2) { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.geology-legend { min-width:0; max-width:100%; }
 .geology-legend a { color:#176b52; font-size:9px; pointer-events:auto; }
+.geology-legend .geology-raster-note { margin:4px 0; color:#617168; font-size:11px; font-weight:400; line-height:1.5; }
 .geology-source { line-height:1.4; }
 .geology-source button { border:0; padding:0; margin-left:4px; background:none; color:#176b52; font:inherit; text-decoration:underline; cursor:pointer; pointer-events:auto; }
 
@@ -7604,3 +7630,48 @@ button:hover {
 .geology-comparison-record { margin-top:8px; border-top:1px solid #e9eeeb; }
 .geology-comparison-record .geology-record-label > span:first-child { background:#f0f2f1; color:#65756f; }
 .geology-comparison-record h3 { font-size:13px; }
+.geology-provider-control { display:flex; align-items:center; gap:8px; font-size:11px; margin:6px 0; pointer-events:auto; }
+.geology-provider-control select { flex:1; width:0; min-width:0; max-width:100%; height:28px; font:inherit; padding:4px; border:1px solid #d9dee4; border-radius:5px; background:white; color:#334155; }
+#geologyProviderStatus { display:block; line-height:1.5; }
+.geology-age-heading { font-size:12px; }
+.geology-age-row { font-size:11px; }
+.geology-detail-tabs { display:flex; gap:4px; border-bottom:1px solid #d9dee4; margin:10px 0; }
+.geology-detail-tabs button { flex:1; font:inherit; padding:8px 4px; border:0; border-bottom:2px solid transparent; background:transparent; color:#64748b; cursor:pointer; }
+.geology-detail-tabs button[aria-selected="true"] { color:#175c8b; border-bottom-color:#175c8b; font-weight:600; }
+.geology-detail [hidden] { display:none !important; }
+.geology-detail [role="tabpanel"] { overflow-wrap:anywhere; }
+.geology-detail-popup .leaflet-popup-content { width:min(320px,calc(100vw - 96px)) !important; }
+.geology-detail-popup .leaflet-popup-content .geology-detail { width:100%; }
+.geology-detail-header { flex-wrap:wrap; }
+.geology-detail-tabs { overflow-x:auto; scrollbar-width:thin; }
+.geology-detail-tabs button { min-width:58px; white-space:nowrap; flex-shrink:0; font-size:11px; }
+
+
+.geology-age-heading[hidden], #geologyAttribution[hidden] { display:none !important; }
+
+/* Shared prose and captions, including dynamically generated cards and popups. */
+.content-page p.muted { font-size:var(--text-secondary); line-height:var(--leading-body); }
+.content-page :is(.section-head,.page-heading) :is(h2,h3,h4) { line-height:1.35; }
+.content-page :is(.section-head,.page-heading) p { line-height:1.5; }
+.content-page :is(.panel,.import-help) > p:last-child { margin-bottom:0; }
+.content-page li { line-height:var(--leading-body); }
+.map-overlay-legends p { margin:4px 0; font-size:var(--text-caption); line-height:1.5; }
+.map-overlay-legends :is(small,.railway-legend-hint,.railway-legend-note) { font-size:10px; line-height:1.5; }
+.map-overlay-legends :is(.population-density-labels,.seafloor-age-labels,.seafloor-contour-legend small,.geology-age-range) { font-size:10px; line-height:1.4; }
+.map-overlay-legends :is(.railway-legend-item,.seafloor-contour-row,.geology-age-row) { font-size:11px; line-height:1.4; }
+.map-overlay-legends a { font-size:10px; line-height:1.5; }
+.map-overlay-legends [hidden] { display:none !important; }
+.maplibregl-popup-content,.leaflet-popup-content { font-family:var(--font-ui); line-height:var(--leading-body); }
+.maplibregl-popup-content p,.leaflet-popup-content p { line-height:var(--leading-body); }
+.geology-detail p { font-size:var(--text-secondary); line-height:var(--leading-body); }
+.geology-detail :is(summary,.geology-record-label) { line-height:1.5; }
+.content-page .manual-view-tabs button { font-size:13px; font-weight:600; line-height:1.5; }
+.content-page :is(.achievement-group,.country-checklist,.manual-group) > summary { font-size:14px; font-weight:600; line-height:1.5; }
+.content-page :is(.achievement-group,.country-checklist,.manual-group) > summary strong { font-weight:600; }
+@media (max-width:640px) {
+  .content-page { font-size:var(--text-body); }
+  .content-page :is(input,select,textarea) { font-size:16px; }
+  .map-overlay-legends :is(small,.railway-legend-hint,.railway-legend-note,a) { font-size:11px; }
+  .map-first-shell .nav a { font-weight:600 !important; line-height:1.25 !important; }
+  html[lang="en"] .map-first-shell .nav a { font-size:10px !important; white-space:normal !important; overflow-wrap:anywhere; }
+}

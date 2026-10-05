@@ -1,0 +1,32 @@
+/* The enabled registry deliberately contains no unverified China service. */
+(function(root){
+  const MAX_ZOOM=14, cache=new Map(), pending=new Map();
+  const normalizeMode=value=>['auto','large','medium','small','global','asia'].includes(value)?value:'auto';
+  function tilePoint(lng,lat,z){const n=2**z; const x=(((lng+180)%360+360)%360)/360*n; const r=Math.max(-85.05112878,Math.min(85.05112878,lat))*Math.PI/180; return [x,(1-Math.asinh(Math.tan(r))/Math.PI)/2*n];}
+  function contains(rings,x,y){let inside=false;for(const ring of rings)for(let i=0,j=ring.length-1;i<ring.length;j=i++){const a=ring[i],b=ring[j];if((a.y>y)!==(b.y>y)&&x<(b.x-a.x)*(y-a.y)/(b.y-a.y)+a.x)inside=!inside;}return inside;}
+  function decode(bytes){const tile=new root.GeologyVectorTile.VectorTile(new root.GeologyVectorTile.Pbf(new Uint8Array(bytes)));const layer=tile.layers.units;const result=[];for(let i=0;i<(layer?.length||0);i++){const f=layer.feature(i);if(f.type!==3)continue;const p=f.properties;result.push({unit:{...p,name:p.name||p.strat_name,t_age:p.best_age_top ?? p.best_t_age,b_age:p.best_age_bottom ?? p.best_b_age,t_int_name:p.t_int_name || p.t_int,age:p.age||p.t_int_name||p.t_int},rings:f.loadGeometry(),extent:f.extent});}return result;}
+  async function tile(z,x,y,signal){const key=`${z}/${x}/${y}`;if(signal?.aborted)throw new DOMException('Aborted','AbortError');if(cache.has(key))return cache.get(key);if(!pending.has(key))pending.set(key,(async()=>{const response=await fetch(`https://tiles.macrostrat.org/carto/${key}`,{signal:AbortSignal.timeout(20000)});if(!response.ok)throw Error(`Tile HTTP ${response.status}`);const value=decode(await response.arrayBuffer());cache.set(key,value);if(cache.size>256)cache.delete(cache.keys().next().value);return value;})().finally(()=>pending.delete(key)));const value=await pending.get(key);if(signal?.aborted)throw new DOMException('Aborted','AbortError');return value;}
+
+  const zoom=value=>Math.max(0,Math.min(MAX_ZOOM,Math.round(value)));
+  async function inspect(lng,lat,level,signal){const z=zoom(level),[px,py]=tilePoint(lng,lat,z),x=Math.floor(px),y=Math.min(2**z-1,Math.floor(py));return (await tile(z,x,y,signal)).filter(f=>contains(f.rings,(px-x)*f.extent,(py-y)*f.extent)).map(f=>f.unit);}
+  function intersects(f,left,top,right,bottom){const points=f.rings.flat();if(points.some(p=>p.x>=left&&p.x<=right&&p.y>=top&&p.y<=bottom))return true;if([[left,top],[right,top],[left,bottom],[right,bottom]].some(p=>contains(f.rings,...p)))return true;const cross=(a,b,c)=>(b.x-a.x)*(c.y-a.y)-(b.y-a.y)*(c.x-a.x);const edges=[[{x:left,y:top},{x:right,y:top}],[{x:right,y:top},{x:right,y:bottom}],[{x:right,y:bottom},{x:left,y:bottom}],[{x:left,y:bottom},{x:left,y:top}]];for(const ring of f.rings)for(let i=0,j=ring.length-1;i<ring.length;j=i++){const a=ring[j],b=ring[i];if(Math.max(a.x,b.x)<left||Math.min(a.x,b.x)>right||Math.max(a.y,b.y)<top||Math.min(a.y,b.y)>bottom)continue;for(const[c,d]of edges)if(cross(a,b,c)*cross(a,b,d)<=0&&cross(c,d,a)*cross(c,d,b)<=0)return true;}return false;}
+  async function legend(boxes,level,signal,reader=tile){const z=zoom(level),n=2**z,tasks=[];for(const[w,s,e,north]of boxes){const[a,b]=tilePoint(w,north,z);const[c0,d]=tilePoint(e===180?179.999999:e,s,z),c=c0;for(let x=Math.floor(a);x<=Math.floor(c);x++)for(let y=Math.max(0,Math.floor(b));y<=Math.min(n-1,Math.floor(d));y++)tasks.push({x,y,a,b,c,d});}if(tasks.length>160)throw Error('Viewport too large');const result=[];let next=0;await Promise.all(Array.from({length:Math.min(4,tasks.length)},async()=>{while(next<tasks.length){const t=tasks[next++];const items=await reader(z,t.x,t.y,signal);for(const f of items)if(intersects(f,(t.a-t.x)*f.extent,(t.b-t.y)*f.extent,(t.c-t.x)*f.extent,(t.d-t.y)*f.extent))result.push(f.unit);}}));return result;}
+  const macrostrat={id:'macrostrat',covers:()=>true,render:{tiles:['https://tiles.macrostrat.org/carto/{z}/{x}/{y}.png'],tileSize:256,maxzoom:MAX_ZOOM},legend,inspect};
+  const overviewZoom=level=>Math.min(4,zoom(level));
+  const overview={...macrostrat,render:{...macrostrat.render,maxzoom:4},
+    async inspect(lng,lat,level,signal){return (await inspect(lng,lat,overviewZoom(level),signal)).map(unit=>({...unit,overview:zoom(level)>4}));},
+    async legend(boxes,level,signal){return (await legend(boxes,overviewZoom(level),signal)).map(unit=>({...unit,overview:zoom(level)>4}));}
+  };
+  function geoRings(poly){return poly.map(r=>r.map(([x,y])=>({x,y})));}
+  function at(feature,lng,lat){return feature.geometry.coordinates.some(poly=>contains(geoRings(poly),lng,lat));}
+  const automatic={...macrostrat,
+    async inspect(lng,lat,level,signal){const native=await inspect(lng,lat,level,signal);return native.length||zoom(level)<=4?native:overview.inspect(lng,lat,level,signal);},
+    async legend(boxes,level,signal){const native=await legend(boxes,level,signal);return zoom(level)<=4?native:[...native,...await overview.legend(boxes,level,signal)];}
+  };
+  const globalOverview={...overview,render:{...overview.render,maxzoom:2},inspect:(lng,lat,level,signal)=>inspect(lng,lat,Math.min(2,zoom(level)),signal),legend:(boxes,level,signal)=>legend(boxes,Math.min(2,zoom(level)),signal)};
+  const asia={id:'asia-ren-raster',rasterOnly:true,attribution:'Asia Geology Map by Ren JISHUN team · IGEO/CAGS · OnePetrology',render:{tiles:['https://tiles.igeodata.org/asia_ren/{z}/{x}/{y}.png'],scheme:'tms',tileSize:256,maxzoom:12},legend:async()=>[],inspect:async()=>[]};
+  const chooseAt=(point,mode='auto')=>normalizeMode(mode)==='asia'?asia:normalizeMode(mode)==='global'?globalOverview:normalizeMode(mode)==='auto'?automatic:root.GeologyAuto.scaleProvider(normalizeMode(mode));
+  function scale(source){for(const key of ['map_scale','scale_denominator']){const value=Number(source?.[key]);if(Number.isFinite(value)&&value>=1000)return `1:${value.toLocaleString()}`;}return null;}
+  root.GeologyProviders={normalizeMode,chooseAt,macrostrat,overview,globalOverview,asia,at,tilePoint,contains,decode,intersects,scale,readTile:tile,scanLegend:legend,zoom,chinaProviders:[]};
+  if(typeof module!=='undefined')module.exports=root.GeologyProviders;
+})(typeof window!=='undefined'?window:globalThis);

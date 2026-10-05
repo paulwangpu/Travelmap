@@ -312,6 +312,8 @@ require('./supplement-ming-zhou-tombs.cjs')({add,source});
 require('./supplement-yi-zhou-archaeology.cjs')({add,source});
 require('./supplement-shandong-prince-review.cjs')({items,add,source});
 require('./review-priority-tomb-sites.cjs')({items,source});
+require('./supplement-koguryo-bohai-tombs.cjs')({add,group,source});
+require('./supplement-tang-huiling.cjs')({add,source});
 require('./enrich-tomb-visiting.cjs')({items,source});
 for (const item of items) if (item.era === '明清') item.era = item.dynasty.startsWith('清') ? '清' : '明';
 require('./imperial-tomb-chronology.cjs')(items);
@@ -339,7 +341,7 @@ for(const x of items) {
   s.records++;s[x.recordType==='single'?'singles':'groups']++;s.mapCandidates+=Number(x.mapEligible);s.sourcePointsPendingDatum+=Number(x.coordinates?.status==='datum_pending');s.missingCoordinates+=Number(!x.coordinates);
 }
 const catalog = {schemaVersion:1,researchedAt:date,status:'research_catalog_not_exhaustive',
-  scope:'中国历代君主陵、先秦王陵、汉代诸侯国王陵与明代藩王陵、地方政权及地方世袭统治者王陵、传说祭祀陵与有独立墓葬依据的王族候选墓地；单陵优先、陵群兜底。都邑、宫殿及仅供王陵探索的区域不纳入皇陵目录，不以现代民族名称替代历史政权归属。',
+  scope:'中国历代君主陵、先秦王陵、汉代诸侯国王陵与明代藩王陵、地方政权及地方世袭统治者王陵、高句丽在朝鲜境内的关联王陵、传说祭祀陵与有独立墓葬依据的王族候选墓地；单陵优先、陵群兜底。都邑、宫殿及仅供王陵探索的区域不纳入皇陵目录，不以现代民族名称替代历史政权归属。',
   countPolicy:'记录数不是实际陵墓总数：陵群与子陵不能相加；单陵按实体而非墓主人数统计；同名异陵以稳定ID区分。有实际墓地的王族归属候选保留争议说明；都邑探索条目移出目录并存档于excluded-settlement-sites.json。',
   natureLabels:{actual_burial:'实际墓葬',posthumous:'追尊陵（实葬性质另见证据）',cenotaph:'衣冠冢',commemorative:'祭祀纪念陵',mixed:'陵群或混合性质',unknown:'性质未明'},
   recognitionLabels:{archaeological:'有考古支持（程度见证据）',documented:'机构文献记载',attributed:'归属推定',traditional:'传统或祭祀认定'},
