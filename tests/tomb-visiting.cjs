@@ -15,7 +15,8 @@ for(const x of c.items.filter(hasVisitableChamber))assert(x.visitorAccess.source
 const app=fs.readFileSync(require.resolve('../app.js'),'utf8'),ui=fs.readFileSync(require.resolve('../imperial-tombs.js'),'utf8');
 assert(app.includes('imperialTombsOnlyVisitableChambers: overlays.imperialTombsOnlyVisitableChambers === true'));
 assert(ui.includes('data-tomb-chambers'));assert(!ui.includes("en()?'Periods':'时代'"));
-assert(ui.includes('catalog.json?v=59')&&app.includes('catalog.json?v=59'),'map and checklist must request the same catalog version');
+const mapCatalogVersion=ui.match(/catalog\.json\?v=(\d+)/)?.[1],checklistCatalogVersion=app.match(/catalog\.json\?v=(\d+)/)?.[1];
+assert(mapCatalogVersion&&mapCatalogVersion===checklistCatalogVersion,'map and checklist must request the same catalog version');
 for(const id of ['wei-gao','sui-yang','han-haihun','qin-gong-1']){
  const x=c.items.find(x=>x.id===id);assert(hasVisitableChamber(x));assert.equal(x.visitorAccess.mode,'view_original_remains');assert(ids(10).includes(id));
 }

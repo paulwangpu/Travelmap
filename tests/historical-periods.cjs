@@ -33,7 +33,7 @@ assert.equal(H.periodSelection({'西周':false,'春秋':false,'战国':false}).�
 assert.equal(H.periodSelection({'西周':false,'春秋':true,'战国':false}).周,true);
 for(const raw of ['西周','东周','春秋','战国','春秋战国'])assert.equal(H.displayPeriod(raw),'周');
 const reviewed=tombs.items.filter(x=>x.periodReview?.originalPeriod==='西周');
-assert.equal(reviewed.length,15);
+assert.equal(reviewed.length,14);
 assert.equal(tombs.items.find(x=>x.id==='zhou-xianyang').preqinPeriod,'战国');
 assert(reviewed.every(x=>x.periodReview.sourceIds.every(id=>tombs.sources.some(s=>s.id===id))));
 assert.match(tombs.items.find(x=>x.id==='guo-m2001').periodText,/断代争议/);

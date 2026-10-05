@@ -6,7 +6,7 @@
     <title>我的全球旅行地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" />
-<link rel="stylesheet" href="styles.css?v=207" />
+<link rel="stylesheet" href="styles.css?v=212" />
   </head>
   <body>
     <div class="app-shell map-first-shell">
@@ -35,7 +35,7 @@
             <strong data-i18n="privacyTitle">本地保存</strong>
             <p data-i18n="privacyText">数据只保存在本机浏览器里，不会自动上传或公开。如需备份请导出。</p>
           </div>
-          <div class="app-version" id="appVersion">v2.2.1</div>
+          <div class="app-version" id="appVersion">v2.2.2</div>
         </div>
       </aside>
 
@@ -64,6 +64,7 @@
                   <option value="bingRoad" data-i18n="providerBingRoad">Bing 地图</option>
                   <option value="bingAerial" data-i18n="providerBingAerial">Bing 卫星</option>
                   <option value="dem" data-i18n="providerDem">DEM 高程（ETOPO）</option>
+                  <option value="gebco" data-i18n="providerGebco">DEM 高程（GEBCO）</option>
                   <option value="seafloorAge" data-i18n="providerSeafloorAge">海底年龄（植被）</option>
                   <option value="seafloorContours" data-i18n="providerSeafloorContours">海底年龄（植被＋等值线）</option>
                 </select>
@@ -106,7 +107,10 @@
               </div>
               <div class="map-overlay-toggles map-thematic-overlays">
                 <label><input id="showPopulationDensityOnMap" type="checkbox" /> <span data-i18n="providerPopulation">人口密度</span></label>
-                <label><input id="showRailwaysOnMap" type="checkbox" /> <span data-i18n="overlayRailways">铁路线路</span></label>
+                <div class="hazard-toggle-pair compact-toggle-pair">
+                  <label><input id="showRailwaysOnMap" type="checkbox" /> <span data-i18n="overlayRailways">铁路</span></label>
+                  <label><input id="showGeologyOnMap" type="checkbox" /> <span data-i18n="overlayGeology">地质</span></label>
+                </div>
                 <div class="hazard-toggle-pair compact-toggle-pair">
                   <label><input id="showArcgisWaterOnMap" type="checkbox" /> <span data-i18n="overlayArcgisWater">水系</span></label>
                   <label><input id="showGreatWallOnMap" type="checkbox" /> <span data-i18n="overlayGreatWall">长城</span></label>
@@ -208,6 +212,15 @@
                     <iframe class="railway-official-legend" id="railwayOfficialLegend" src="https://www.openrailwaymap.org/legend-generator.php?style=standard&amp;zoom=18&amp;lang=zh_CN" loading="lazy" title="OpenRailwayMap official legend"></iframe>
                     <small class="railway-legend-note"><span data-i18n="railwayLegendNote">完整图例由 OpenRailwayMap 官方实时生成，内容与标准铁路瓦片一致。</span> <a href="https://www.openrailwaymap.org/legend-generator.php?style=standard&amp;zoom=18&amp;lang=zh_CN" target="_blank" rel="noopener noreferrer" data-i18n="railwayLegendOfficial">单独打开</a></small>
                   </details>
+                </aside>
+                <aside class="population-density-legend geology-legend" id="geologyLegend" hidden>
+                  <strong data-i18n="geologyLegendTitle">地质 · 当前视野</strong>
+                  <label class="population-density-opacity"><span data-i18n="populationDensityOpacity">透明度</span><input id="geologyOpacity" type="range" min="0" max="100" step="1" value="65" /><output id="geologyOpacityValue" for="geologyOpacity">65%</output></label>
+                  <div class="geology-age-heading"><span data-i18n="geologyLegendAge">地质年代</span><span data-i18n="geologyLegendMa">百万年前</span></div>
+                  <div class="geology-age-list" id="geologyAgeList"></div>
+                  <small data-i18n="geologyClickHint">点击地图查看此处地层与岩性</small>
+                  <small id="geologyLegendStatus" role="status"></small>
+                  <small class="geology-source"><a href="https://macrostrat.org/map/" target="_blank" rel="noopener">Macrostrat</a> · <a href="https://macrostrat.org/api/v2/defs/sources" target="_blank" rel="noopener" data-i18n="geologyLegendSources">原始图源</a> · CC BY 4.0 <button id="retryGeologyLegend" type="button" data-i18n="geologyLegendRetry">刷新</button></small>
                 </aside>
                 <aside class="population-density-legend" id="populationDensityLegend" hidden>
                   <strong data-i18n="populationDensityLegend">人口密度 · 2020</strong>
@@ -429,8 +442,9 @@
 <script src="great-wall.js?v=34"></script>
 <script src="western-regions.js?v=2"></script>
 <script src="historical-periods.js?v=6"></script>
-<script src="imperial-tombs.js?v=82"></script>
+<script src="imperial-tombs.js?v=83"></script>
 <script src="map-resolution.js?v=1"></script>
-<script src="app.js?v=762"></script>
+<script src="geology-legend.js?v=7"></script>
+<script src="app.js?v=778"></script>
   </body>
 </html>

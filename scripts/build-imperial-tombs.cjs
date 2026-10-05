@@ -327,6 +327,7 @@ for(const x of items.filter(x=>x.locationReference)) {
 const recentM27=items.find(x=>x.id==='shang-m27');
 recentM27.disturbance={status:'archaeological_evidence',label:disturbanceLabels.archaeological_evidence,evidence:'2025年度发掘记录H335、H348早期盗坑直达墓底，椁室被盗一空；保留2026年公开报告。',scope:'M27墓室',sourceIds:['recent-yin-2025'],reviewedAt:date};
 const decisionsPath=path.join(dir,'coordinate-decisions.json');
+require('./clean-tomb-site-overlaps.cjs')({items,dir});
 const decisions=JSON.parse(fs.readFileSync(decisionsPath,'utf8'));
 decisions.approved=items.filter(x=>x.mapEligible).map(x=>x.id);
 decisions.supplementalApproved=items.filter(x=>x.mapEligible&&!decisions.wikidataApproved.includes(x.id)).map(x=>({id:x.id,sourceId:x.coordinates.sourceId,method:x.coordinates.method}));
@@ -338,8 +339,8 @@ for(const x of items) {
   s.records++;s[x.recordType==='single'?'singles':'groups']++;s.mapCandidates+=Number(x.mapEligible);s.sourcePointsPendingDatum+=Number(x.coordinates?.status==='datum_pending');s.missingCoordinates+=Number(!x.coordinates);
 }
 const catalog = {schemaVersion:1,researchedAt:date,status:'research_catalog_not_exhaustive',
-  scope:'中国历代君主陵、先秦王陵、汉代诸侯国王陵与明代藩王陵、地方政权及地方世袭统治者王陵、传说祭祀陵与有王权文化依据的王陵探索区；单陵优先、陵群兜底。探索区不表示已确认墓葬，不以现代民族名称替代历史政权归属。',
-  countPolicy:'记录数不是实际陵墓总数：陵群与子陵不能相加；单陵按实体而非墓主人数统计；同名异陵以稳定ID区分。siteRole=royal_burial_search_area为探索线索，不计已发现王陵。',
+  scope:'中国历代君主陵、先秦王陵、汉代诸侯国王陵与明代藩王陵、地方政权及地方世袭统治者王陵、传说祭祀陵与有独立墓葬依据的王族候选墓地；单陵优先、陵群兜底。都邑、宫殿及仅供王陵探索的区域不纳入皇陵目录，不以现代民族名称替代历史政权归属。',
+  countPolicy:'记录数不是实际陵墓总数：陵群与子陵不能相加；单陵按实体而非墓主人数统计；同名异陵以稳定ID区分。有实际墓地的王族归属候选保留争议说明；都邑探索条目移出目录并存档于excluded-settlement-sites.json。',
   natureLabels:{actual_burial:'实际墓葬',posthumous:'追尊陵（实葬性质另见证据）',cenotaph:'衣冠冢',commemorative:'祭祀纪念陵',mixed:'陵群或混合性质',unknown:'性质未明'},
   recognitionLabels:{archaeological:'有考古支持（程度见证据）',documented:'机构文献记载',attributed:'归属推定',traditional:'传统或祭祀认定'},
   coordinatePolicy:'WGS84为目标坐标系。verified_wgs84为已核对地理实体及坐标系的区域参考点，非现场测绘；estimated_wgs84须保存估计依据和参考范围，地图明确标估；datum_pending禁止入图。locationReference仅关联所属陵区，不生成重复单陵点。未知点为null，不以0或城中心补齐；精度小数位不等于测量准确度。',

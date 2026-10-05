@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "researchedAt": "2026-10-04",
   "status": "research_catalog_not_exhaustive",
-  "scope": "中国历代君主陵、先秦王陵、汉代诸侯国王陵与明代藩王陵、地方政权及地方世袭统治者王陵、传说祭祀陵与有王权文化依据的王陵探索区；单陵优先、陵群兜底。探索区不表示已确认墓葬，不以现代民族名称替代历史政权归属。",
-  "countPolicy": "记录数不是实际陵墓总数：陵群与子陵不能相加；单陵按实体而非墓主人数统计；同名异陵以稳定ID区分。siteRole=royal_burial_search_area为探索线索，不计已发现王陵。",
+  "scope": "中国历代君主陵、先秦王陵、汉代诸侯国王陵与明代藩王陵、地方政权及地方世袭统治者王陵、传说祭祀陵与有独立墓葬依据的王族候选墓地；单陵优先、陵群兜底。都邑、宫殿及仅供王陵探索的区域不纳入皇陵目录，不以现代民族名称替代历史政权归属。",
+  "countPolicy": "记录数不是实际陵墓总数：陵群与子陵不能相加；单陵按实体而非墓主人数统计；同名异陵以稳定ID区分。有实际墓地的王族归属候选保留争议说明；都邑探索条目移出目录并存档于excluded-settlement-sites.json。",
   "natureLabels": {
     "actual_burial": "实际墓葬",
     "posthumous": "追尊陵（实葬性质另见证据）",
@@ -29,7 +29,7 @@
     "surface_theft": "有地面文物盗窃记录",
     "mixed": "陵群，逐陵情况不同"
   },
-  "totalRecords": 387,
+  "totalRecords": 383,
   "summary": {
     "传说时代": {
       "records": 14,
@@ -40,10 +40,10 @@
       "missingCoordinates": 2
     },
     "先秦": {
-      "records": 67,
+      "records": 63,
       "singles": 33,
-      "groups": 34,
-      "mapCandidates": 47,
+      "groups": 30,
+      "mapCandidates": 43,
       "sourcePointsPendingDatum": 0,
       "missingCoordinates": 20
     },
@@ -51,7 +51,7 @@
       "records": 73,
       "singles": 57,
       "groups": 16,
-      "mapCandidates": 68,
+      "mapCandidates": 67,
       "sourcePointsPendingDatum": 0,
       "missingCoordinates": 5
     },
@@ -311,8 +311,6 @@
     "zhou-jincun",
     "zhou-zhoushan",
     "zhou-wangcheng",
-    "shu-sanxingdui-search",
-    "shu-jinsha-search",
     "shu-commercial-boat",
     "shu-majia",
     "rui-liangdaicun",
@@ -326,15 +324,12 @@
     "early-liangzhu",
     "early-taosi",
     "early-shimao",
-    "early-erlitou-search",
-    "early-panlongcheng-search",
     "early-xingan",
     "moghul-tughluq",
     "moghul-wais",
     "yarkand-khans",
     "karakhanid-satuq",
     "hami-hui-kings",
-    "cheshi-goubei",
     "tuyuhun-reshui",
     "jin-taizu-acheng",
     "jin-chenglin-memorial",
@@ -25322,196 +25317,6 @@
       }
     },
     {
-      "id": "shu-sanxingdui-search",
-      "name": "三星堆（古蜀王陵探索区）",
-      "aliases": [],
-      "era": "先秦",
-      "dynasty": "古蜀",
-      "occupants": [
-        "古蜀王室（王陵尚未确认）"
-      ],
-      "admin": "四川省德阳市广汉市三星堆遗址",
-      "adminStatus": "来源概略行政区，未逐项核验现行区划",
-      "recordType": "group",
-      "parentId": null,
-      "nature": "unknown",
-      "recognition": "attributed",
-      "evidence": "古蜀都邑及王权文化遗址，按王陵寻找线索收录；不是已经发现的王室墓地。",
-      "disputes": [
-        "尚未取得可确认王陵墓室及具体位置的资料；遗址坐标只供区域探索。",
-        "祭祀坑、器物埋藏坑不得当作王陵；不能据王都必有王陵的推测确定墓址。"
-      ],
-      "sourceIds": [
-        "shu-tentative",
-        "shu-royal-search"
-      ],
-      "coordinates": {
-        "lat": 30.99388888888889,
-        "lng": 104.19944444444445,
-        "crs": "WGS84",
-        "status": "estimated_wgs84",
-        "sourceId": "shu-tentative",
-        "original": "UNESCO预备名单公布的度分秒遗址坐标",
-        "target": "遗址区域参考（王陵位置未知）",
-        "sourceDatumExplicit": false,
-        "method": "度分秒转换，作为WGS84近似区域参考；提交页未明示坐标基准",
-        "precision": {
-          "sourceUnit": "arcsecond",
-          "horizontalAccuracyMeters": null
-        },
-        "estimate": {
-          "basis": "UNESCO中国提交资料中的明确遗址代表坐标与机构地望交叉核对，未测量墓室",
-          "extent": "遗址代表坐标，不限定潜在王陵搜索边界；周边数公里亦可能有墓地。"
-        },
-        "limitation": "遗址代表坐标，不限定潜在王陵搜索边界；周边数公里亦可能有墓地。 原坐标基准未明示，因此标估；不是已核实王陵墓室位置。"
-      },
-      "mapEligible": true,
-      "mapReason": "有依据的遗址区域估计点，王陵探索区与实际墓址分别说明",
-      "reviewTasks": [
-        "补核陵区边界或代表点；单陵未知时仅显示陵群"
-      ],
-      "siteRole": "royal_burial_search_area",
-      "preqinPeriod": "夏商",
-      "chronology": {
-        "sortYear": -1200,
-        "basis": "遗址文化年代约略排序，不是王陵建造年代"
-      },
-      "biographies": [
-        {
-          "label": "古蜀王室（王陵尚未确认）",
-          "birthYear": null,
-          "deathYear": null,
-          "lifespanText": "生卒不详",
-          "status": "unresolved",
-          "sourceIds": [],
-          "entity": null,
-          "precision": "year",
-          "limitations": "只显示可核查年份，不将卒年视为建陵、迁葬或发掘年；索引资料需持续复核。"
-        }
-      ],
-      "lifespanText": "生卒不详",
-      "preqinClassification": {
-        "section": "诸侯国",
-        "sectionOrder": 3,
-        "country": "古蜀",
-        "area": "",
-        "areaOrder": 0,
-        "displayGroup": "古蜀国",
-        "countryOrder": 17,
-        "note": "按政权分组，各国组内按墓主卒年或遗址约略年代排序；不代表各国建立先后。"
-      },
-      "preqinPeriodBasis": "按主要墓葬年代、代表性大墓或遗址文化阶段归入最接近分期；跨期说明仍保留，不表示全部墓葬同时建造。",
-      "disturbance": {
-        "status": "unknown",
-        "label": "尚未核查",
-        "evidence": "",
-        "scope": "墓室",
-        "sourceIds": [],
-        "reviewedAt": "2026-10-03"
-      }
-    },
-    {
-      "id": "shu-jinsha-search",
-      "name": "金沙（古蜀王陵探索区）",
-      "aliases": [],
-      "era": "先秦",
-      "dynasty": "古蜀",
-      "occupants": [
-        "古蜀王室（王陵尚未确认）"
-      ],
-      "admin": "四川省成都市青羊区金沙遗址",
-      "adminStatus": "来源概略行政区，未逐项核验现行区划",
-      "recordType": "group",
-      "parentId": null,
-      "nature": "unknown",
-      "recognition": "attributed",
-      "evidence": "古蜀都邑及王权文化遗址，按王陵寻找线索收录；不是已经发现的王室墓地。",
-      "disputes": [
-        "尚未取得可确认王陵墓室及具体位置的资料；遗址坐标只供区域探索。",
-        "祭祀坑、器物埋藏坑不得当作王陵；不能据王都必有王陵的推测确定墓址。"
-      ],
-      "sourceIds": [
-        "shu-tentative",
-        "shu-royal-search",
-        "wz-jinsha"
-      ],
-      "coordinates": {
-        "lat": 30.683611111111112,
-        "lng": 104.01138888888889,
-        "crs": "WGS84",
-        "status": "estimated_wgs84",
-        "sourceId": "shu-tentative",
-        "original": "UNESCO预备名单公布的度分秒遗址坐标",
-        "target": "遗址区域参考（王陵位置未知）",
-        "sourceDatumExplicit": false,
-        "method": "度分秒转换，作为WGS84近似区域参考；提交页未明示坐标基准",
-        "precision": {
-          "sourceUnit": "arcsecond",
-          "horizontalAccuracyMeters": null
-        },
-        "estimate": {
-          "basis": "UNESCO中国提交资料中的明确遗址代表坐标与机构地望交叉核对，未测量墓室",
-          "extent": "遗址代表坐标，不限定潜在王陵搜索边界；周边数公里亦可能有墓地。"
-        },
-        "limitation": "遗址代表坐标，不限定潜在王陵搜索边界；周边数公里亦可能有墓地。 原坐标基准未明示，因此标估；不是已核实王陵墓室位置。"
-      },
-      "mapEligible": true,
-      "mapReason": "有依据的遗址区域估计点，王陵探索区与实际墓址分别说明",
-      "reviewTasks": [
-        "补核陵区边界或代表点；单陵未知时仅显示陵群"
-      ],
-      "siteRole": "royal_burial_search_area",
-      "preqinPeriod": "西周",
-      "chronology": {
-        "sortYear": -1000,
-        "basis": "遗址文化年代约略排序，不是王陵建造年代"
-      },
-      "biographies": [
-        {
-          "label": "古蜀王室（王陵尚未确认）",
-          "birthYear": null,
-          "deathYear": null,
-          "lifespanText": "生卒不详",
-          "status": "unresolved",
-          "sourceIds": [],
-          "entity": null,
-          "precision": "year",
-          "limitations": "只显示可核查年份，不将卒年视为建陵、迁葬或发掘年；索引资料需持续复核。"
-        }
-      ],
-      "lifespanText": "生卒不详",
-      "preqinClassification": {
-        "section": "诸侯国",
-        "sectionOrder": 3,
-        "country": "古蜀",
-        "area": "",
-        "areaOrder": 0,
-        "displayGroup": "古蜀国",
-        "countryOrder": 17,
-        "note": "按政权分组，各国组内按墓主卒年或遗址约略年代排序；不代表各国建立先后。"
-      },
-      "preqinPeriodBasis": "保留西周代表分组；这是古蜀都邑及王陵探索线索，不是已发现的王陵。",
-      "periodText": "商晚期至西周为主体，延续至春秋",
-      "periodReview": {
-        "reviewedAt": "2026-10-03",
-        "originalPeriod": "西周",
-        "period": "西周",
-        "periodText": "商晚期至西周为主体，延续至春秋",
-        "decision": "保留西周代表分组；这是古蜀都邑及王陵探索线索，不是已发现的王陵。",
-        "sourceIds": [
-          "wz-jinsha"
-        ]
-      },
-      "disturbance": {
-        "status": "unknown",
-        "label": "尚未核查",
-        "evidence": "",
-        "scope": "墓室",
-        "sourceIds": [],
-        "reviewedAt": "2026-10-03"
-      }
-    },
-    {
       "id": "shu-commercial-boat",
       "name": "商业街古蜀船棺合葬墓",
       "aliases": [],
@@ -26745,184 +26550,6 @@
       }
     },
     {
-      "id": "early-erlitou-search",
-      "name": "二里头（王陵探索区）",
-      "aliases": [],
-      "era": "先秦",
-      "dynasty": "二里头文化",
-      "occupants": [
-        "二里头王权中心统治者（王陵未确认）"
-      ],
-      "admin": "河南省洛阳市偃师区二里头遗址",
-      "adminStatus": "来源概略行政区，未逐项核验现行区划",
-      "recordType": "group",
-      "parentId": null,
-      "nature": "unknown",
-      "recognition": "attributed",
-      "evidence": "大型都邑、宫殿及分等级墓葬提供王权中心线索；按王陵探索区纳入。",
-      "disputes": [
-        "不将普通墓葬或宫殿区直接认定为夏王陵；王陵墓室、具体墓主尚无此处所采资料确认。",
-        "二里头文化与夏王朝对应的研究不能代替逐墓墓主认定。"
-      ],
-      "sourceIds": [
-        "early-erlitou",
-        "early-erlitou-geo"
-      ],
-      "coordinates": {
-        "lat": 34.69134,
-        "lng": 112.69077,
-        "crs": "WGS84",
-        "status": "estimated_wgs84",
-        "sourceId": "early-erlitou-geo",
-        "original": "34.69134, 112.69077; OSM way 851367302",
-        "target": "二里头遗址区域参考（王陵位置未知）",
-        "sourceDatumExplicit": false,
-        "method": "机构或公开地理数据代表点与考古地望交叉核对；只保留遗址区域参考",
-        "precision": {
-          "sourceUnit": "degree",
-          "horizontalAccuracyMeters": null
-        },
-        "estimate": {
-          "basis": "已有明确遗址参考坐标，按机构考古地点核对；未测绘王族墓地边界或墓室",
-          "extent": "遗址周边数公里探索范围，非王陵边界、墓室或博物馆位置。"
-        },
-        "limitation": "遗址周边数公里探索范围，非王陵边界、墓室或博物馆位置。 统一作为WGS84近似区域点标估，不能用于墓室导航。"
-      },
-      "mapEligible": true,
-      "mapReason": "区域参考坐标有据；王陵候选或探索区标签保留",
-      "reviewTasks": [
-        "补核陵区边界或代表点；单陵未知时仅显示陵群"
-      ],
-      "preqinPeriod": "夏商",
-      "chronology": {
-        "sortYear": -1700,
-        "basis": "考古文化约略年代；不是特定君主的卒年或建陵年"
-      },
-      "siteRole": "royal_burial_search_area",
-      "biographies": [
-        {
-          "label": "二里头王权中心统治者（王陵未确认）",
-          "birthYear": null,
-          "deathYear": null,
-          "lifespanText": "生卒不详",
-          "status": "unresolved",
-          "sourceIds": [],
-          "entity": null,
-          "precision": "year",
-          "limitations": "只显示可核查年份，不将卒年视为建陵、迁葬或发掘年；索引资料需持续复核。"
-        }
-      ],
-      "lifespanText": "生卒不详",
-      "preqinClassification": {
-        "section": "早期王权与王陵线索",
-        "sectionOrder": -1,
-        "country": "二里头文化",
-        "area": "",
-        "areaOrder": 0,
-        "displayGroup": "早期王权与王陵线索",
-        "countryOrder": 0,
-        "note": "王陵以墓号排序，人物墓与未完成墓坑分别排列。"
-      },
-      "preqinPeriodBasis": "按主要墓葬年代、代表性大墓或遗址文化阶段归入最接近分期；跨期说明仍保留，不表示全部墓葬同时建造。",
-      "disturbance": {
-        "status": "unknown",
-        "label": "尚未核查",
-        "evidence": "",
-        "scope": "墓室",
-        "sourceIds": [],
-        "reviewedAt": "2026-10-03"
-      }
-    },
-    {
-      "id": "early-panlongcheng-search",
-      "name": "盘龙城（首领墓葬探索区）",
-      "aliases": [],
-      "era": "先秦",
-      "dynasty": "商代盘龙城",
-      "occupants": [
-        "盘龙城统治首领或高等级人群（具体对应未定）"
-      ],
-      "admin": "湖北省武汉市黄陂区盘龙城遗址",
-      "adminStatus": "来源概略行政区，未逐项核验现行区划",
-      "recordType": "group",
-      "parentId": null,
-      "nature": "unknown",
-      "recognition": "attributed",
-      "evidence": "宫殿及李家嘴高等级墓葬有考古支持；按区域统治首领墓葬线索纳入，不将该地自动视作独立王国。",
-      "disputes": [
-        "商王朝地方中心、区域首领与独立方国国君属于不同解释；不直接给墓主加王号。",
-        "遗址中心不能代替李家嘴或杨家湾具体墓号位置。"
-      ],
-      "sourceIds": [
-        "early-panlongcheng",
-        "early-panlongcheng-map"
-      ],
-      "coordinates": {
-        "lat": 30.694444444444446,
-        "lng": 114.26583333333333,
-        "crs": "WGS84",
-        "status": "estimated_wgs84",
-        "sourceId": "early-panlongcheng-map",
-        "original": "官网 N30 41 40, E114 15 57",
-        "target": "盘龙城遗址中心参考（非首领墓室）",
-        "sourceDatumExplicit": false,
-        "method": "机构或公开地理数据代表点与考古地望交叉核对；只保留遗址区域参考",
-        "precision": {
-          "sourceUnit": "degree",
-          "horizontalAccuracyMeters": null
-        },
-        "estimate": {
-          "basis": "已有明确遗址参考坐标，按机构考古地点核对；未测绘王族墓地边界或墓室",
-          "extent": "遗址约数公里，李家嘴、杨家湾墓地位置需进一步配准。"
-        },
-        "limitation": "遗址约数公里，李家嘴、杨家湾墓地位置需进一步配准。 统一作为WGS84近似区域点标估，不能用于墓室导航。"
-      },
-      "mapEligible": true,
-      "mapReason": "区域参考坐标有据；王陵候选或探索区标签保留",
-      "reviewTasks": [
-        "补核陵区边界或代表点；单陵未知时仅显示陵群"
-      ],
-      "preqinPeriod": "夏商",
-      "chronology": {
-        "sortYear": -1500,
-        "basis": "考古文化约略年代；不是特定君主的卒年或建陵年"
-      },
-      "siteRole": "royal_burial_search_area",
-      "biographies": [
-        {
-          "label": "盘龙城统治首领或高等级人群（具体对应未定）",
-          "birthYear": null,
-          "deathYear": null,
-          "lifespanText": "生卒不详",
-          "status": "unresolved",
-          "sourceIds": [],
-          "entity": null,
-          "precision": "year",
-          "limitations": "只显示可核查年份，不将卒年视为建陵、迁葬或发掘年；索引资料需持续复核。"
-        }
-      ],
-      "lifespanText": "生卒不详",
-      "preqinClassification": {
-        "section": "早期王权与王陵线索",
-        "sectionOrder": -1,
-        "country": "商代盘龙城",
-        "area": "",
-        "areaOrder": 0,
-        "displayGroup": "早期王权与王陵线索",
-        "countryOrder": 0,
-        "note": "王陵以墓号排序，人物墓与未完成墓坑分别排列。"
-      },
-      "preqinPeriodBasis": "按主要墓葬年代、代表性大墓或遗址文化阶段归入最接近分期；跨期说明仍保留，不表示全部墓葬同时建造。",
-      "disturbance": {
-        "status": "unknown",
-        "label": "尚未核查",
-        "evidence": "",
-        "scope": "墓室",
-        "sourceIds": [],
-        "reviewedAt": "2026-10-03"
-      }
-    },
-    {
       "id": "early-xingan",
       "name": "新干大洋洲商代大墓（统治者候选）",
       "aliases": [],
@@ -27451,12 +27078,13 @@
         },
         "limitation": "估计位置：机构所述地望与P625 Earth地理实体交叉核对。参考范围：交河故城与隔沟北台地墓地区域，千米级参考；该锚点在故城，不在已确认单墓；非墓室中心或现场测绘点。 故城锚点不能用于单墓导航。"
       },
-      "mapEligible": true,
-      "mapReason": "有来源的陵址或陵区估计点，归属与位置精度另见说明",
+      "mapEligible": false,
+      "mapReason": "实际墓地有考古依据，但现有点借用交河故城；墓地区域独立位置核实前不入图。",
       "reviewTasks": [
-        "补核陵区边界或代表点；单陵未知时仅显示陵群"
+        "补核陵区边界或代表点；单陵未知时仅显示陵群",
+        "取得沟北墓地区域坐标，不能沿用交河故城锚点。"
       ],
-      "siteRole": "royal_burial_search_area",
+      "siteRole": "royal_cemetery_candidate",
       "chronology": {
         "sortYear": -100,
         "basis": "战国至西汉墓葬的概略排序，以主要汉代材料作同期分类"

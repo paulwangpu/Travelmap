@@ -184,8 +184,6 @@
     "zhou-jincun",
     "zhou-zhoushan",
     "zhou-wangcheng",
-    "shu-sanxingdui-search",
-    "shu-jinsha-search",
     "shu-commercial-boat",
     "shu-majia",
     "rui-liangdaicun",
@@ -199,15 +197,12 @@
     "early-liangzhu",
     "early-taosi",
     "early-shimao",
-    "early-erlitou-search",
-    "early-panlongcheng-search",
     "early-xingan",
     "moghul-tughluq",
     "moghul-wais",
     "yarkand-khans",
     "karakhanid-satuq",
     "hami-hui-kings",
-    "cheshi-goubei",
     "tuyuhun-reshui",
     "jin-taizu-acheng",
     "jin-chenglin-memorial",
@@ -843,16 +838,6 @@
       "method": "东周王城研究明确春秋王陵区地望，以广场POI经GCJ-02反解作区域参考"
     },
     {
-      "id": "shu-sanxingdui-search",
-      "sourceId": "shu-tentative",
-      "method": "度分秒转换，作为WGS84近似区域参考；提交页未明示坐标基准"
-    },
-    {
-      "id": "shu-jinsha-search",
-      "sourceId": "shu-tentative",
-      "method": "度分秒转换，作为WGS84近似区域参考；提交页未明示坐标基准"
-    },
-    {
       "id": "shu-commercial-boat",
       "sourceId": "shu-tentative",
       "method": "度分秒转换，作为WGS84近似区域参考；提交页未明示坐标基准"
@@ -918,16 +903,6 @@
       "method": "机构或公开地理数据代表点与考古地望交叉核对；只保留遗址区域参考"
     },
     {
-      "id": "early-erlitou-search",
-      "sourceId": "early-erlitou-geo",
-      "method": "机构或公开地理数据代表点与考古地望交叉核对；只保留遗址区域参考"
-    },
-    {
-      "id": "early-panlongcheng-search",
-      "sourceId": "early-panlongcheng-map",
-      "method": "机构或公开地理数据代表点与考古地望交叉核对；只保留遗址区域参考"
-    },
-    {
       "id": "early-xingan",
       "sourceId": "geo-missing-Q400087",
       "method": "已有考古或文保来源确定地点，P625 Earth仅提供对应遗址区域参考位置"
@@ -955,11 +930,6 @@
     {
       "id": "hami-hui-kings",
       "sourceId": "geo-west-Q1551275",
-      "method": "机构所述地望与P625 Earth地理实体交叉核对"
-    },
-    {
-      "id": "cheshi-goubei",
-      "sourceId": "geo-west-Q1330939",
       "method": "机构所述地望与P625 Earth地理实体交叉核对"
     },
     {

@@ -1,8 +1,8 @@
 {
   "source": "中国历代政权都城_古今地名与坐标.xlsx 都城总表",
   "generatedAt": "2026-07-23",
-  "recordCount": 295,
-  "siteCount": 145,
+  "recordCount": 307,
+  "siteCount": 153,
   "skippedCount": 0,
   "items": [
     {
@@ -3969,14 +3969,16 @@
         "成家",
         "成汉",
         "蜀汉",
-        "谯蜀"
+        "谯蜀",
+        "蜀（开明时期）"
       ],
       "eras": [
         "三国两晋",
         "五代十国",
         "十六国",
         "明清及同期",
-        "秦汉及同期"
+        "秦汉及同期",
+        "春秋战国"
       ],
       "capitalTypes": [
         "正式都城"
@@ -4097,13 +4099,29 @@
           "来源URL": "https://zh.wikipedia.org/wiki/明末民变",
           "都城类别码": "P",
           "sourceOrder": 252
+        },
+        {
+          "时代": "春秋战国",
+          "政权/国号": "蜀（开明时期）",
+          "政权年代（原文）": "先秦（始年未定）",
+          "都城性质": "正式都城",
+          "都城年代（原文）": "战国时期—前316年",
+          "古称": "成都",
+          "今称/遗址名": "成都",
+          "今属行政区": "四川省成都市",
+          "置信度": "中",
+          "备注/争议": "开明迁都成都的具体年代有异说；补入先秦蜀国，不与蜀汉、前蜀、后蜀混同。",
+          "来源编号": "CAP-AUDIT-20261004",
+          "来源URL": "https://www.nopss.gov.cn/n/2013/0419/c362367-21203630.html",
+          "都城类别码": "P",
+          "sourceOrder": 297
         }
       ],
       "name": "成都",
       "categoryLabels": [
         "主要都城"
       ],
-      "recordCount": 7,
+      "recordCount": 8,
       "sourceOrder": 62,
       "sourceEra": "秦汉及同期",
       "sourceSite": "成都",
@@ -6035,7 +6053,8 @@
       "dynasties": [
         "梁（萧铣）",
         "荆南/南平",
-        "西梁/后梁"
+        "西梁/后梁",
+        "南梁"
       ],
       "eras": [
         "五代十国",
@@ -6097,13 +6116,29 @@
           "来源URL": "https://zh.wikipedia.org/wiki/五代十国",
           "都城类别码": "P",
           "sourceOrder": 197
+        },
+        {
+          "时代": "南北朝",
+          "政权/国号": "南梁",
+          "政权年代（原文）": "502—557",
+          "都城性质": "正式都城",
+          "都城年代（原文）": "552—554",
+          "古称": "江陵",
+          "今称/遗址名": "江陵",
+          "今属行政区": "湖北省荆州市",
+          "置信度": "高",
+          "备注/争议": "梁元帝都江陵阶段；与555—587年的西梁/后梁分列。",
+          "来源编号": "CAP-AUDIT-20261004",
+          "来源URL": "https://wlt.hubei.gov.cn/bmdt/ztzl/zshb/201912/t20191226_1799529.shtml",
+          "都城类别码": "P",
+          "sourceOrder": 302
         }
       ],
       "name": "江陵",
       "categoryLabels": [
         "主要都城"
       ],
-      "recordCount": 3,
+      "recordCount": 4,
       "sourceOrder": 123,
       "sourceEra": "南北朝",
       "sourceSite": "江陵",
@@ -8144,7 +8179,8 @@
         "建州"
       ],
       "dynasties": [
-        "殷"
+        "殷",
+        "闽（王延政）"
       ],
       "eras": [
         "五代十国"
@@ -8172,13 +8208,29 @@
           "来源URL": "https://zh.wikipedia.org/wiki/五代十国",
           "都城类别码": "P",
           "sourceOrder": 196
+        },
+        {
+          "时代": "五代十国",
+          "政权/国号": "闽（王延政）",
+          "政权年代（原文）": "909—945",
+          "都城性质": "正式都城",
+          "都城年代（原文）": "945",
+          "古称": "建州",
+          "今称/遗址名": "建瓯",
+          "今属行政区": "福建省南平市建瓯市",
+          "置信度": "高",
+          "备注/争议": "王延政945年改殷号为闽，留都建州；不重复替代既有殷国记录。",
+          "来源编号": "CAP-AUDIT-20261004",
+          "来源URL": "https://tgaz.fudan.edu.cn/tgaz/placename/hvd_100001",
+          "都城类别码": "P",
+          "sourceOrder": 303
         }
       ],
       "name": "建瓯",
       "categoryLabels": [
         "主要都城"
       ],
-      "recordCount": 1,
+      "recordCount": 2,
       "sourceOrder": 196,
       "sourceEra": "五代十国",
       "sourceSite": "建瓯",
@@ -9349,15 +9401,18 @@
         "重庆"
       ],
       "ancientNames": [
-        "重庆"
+        "重庆",
+        "江州"
       ],
       "dynasties": [
         "中华民国国民政府",
-        "明夏"
+        "明夏",
+        "巴"
       ],
       "eras": [
         "元及元末",
-        "近现代"
+        "近现代",
+        "春秋战国"
       ],
       "capitalTypes": [
         "战时首都",
@@ -9399,13 +9454,29 @@
           "来源URL": "https://zh.wikipedia.org/wiki/中华民国大陆时期",
           "都城类别码": "P",
           "sourceOrder": 282
+        },
+        {
+          "时代": "春秋战国",
+          "政权/国号": "巴",
+          "政权年代（原文）": "先秦（始年未定）",
+          "都城性质": "正式都城",
+          "都城年代（原文）": "战国时期—前316年",
+          "古称": "江州",
+          "今称/遗址名": "重庆",
+          "今属行政区": "重庆市",
+          "置信度": "中",
+          "备注/争议": "国务院历史文化名城介绍记载战国重庆为巴国国都；沿用现有重庆参照点，不表示已定位巴王宫。",
+          "来源编号": "CAP-AUDIT-20261004",
+          "来源URL": "https://www.gov.cn/gongbao/shuju/1986/gwyb198635.pdf",
+          "都城类别码": "P",
+          "sourceOrder": 301
         }
       ],
       "name": "重庆",
       "categoryLabels": [
         "主要都城"
       ],
-      "recordCount": 2,
+      "recordCount": 3,
       "sourceOrder": 242,
       "sourceEra": "元及元末",
       "sourceSite": "重庆",
@@ -10600,6 +10671,446 @@
       "currentPlace": "通州",
       "currentKey": "ancient-site:通州:39.90900,116.65700",
       "siteKey": "ancient-site:通州:39.90900,116.65700"
+    },
+    {
+      "name": "三星堆遗址",
+      "lat": 30.995,
+      "lng": 104.2,
+      "admin": "四川省德阳市广汉市三星堆遗址",
+      "siteNames": [
+        "三星堆遗址"
+      ],
+      "ancientNames": [
+        "三星堆"
+      ],
+      "dynasties": [
+        "古蜀（三星堆时期）"
+      ],
+      "eras": [
+        "夏商"
+      ],
+      "capitalTypes": [
+        "都邑（考古遗址）"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "confidence": "高",
+      "records": [
+        {
+          "时代": "夏商",
+          "政权/国号": "古蜀（三星堆时期）",
+          "政权年代（原文）": "先秦（始年未定）",
+          "都城性质": "都邑（考古遗址）",
+          "都城年代（原文）": "商代（具体建都起讫未定）",
+          "古称": "三星堆",
+          "今称/遗址名": "三星堆遗址",
+          "今属行政区": "四川省德阳市广汉市三星堆遗址",
+          "置信度": "高",
+          "备注/争议": "古城遗址为商代古蜀都邑；不把遗址全部文化层年代当作连续建都年代。",
+          "来源编号": "CAP-AUDIT-20261004",
+          "来源URL": "https://www.ccdi.gov.cn/toutu/201505/t20150526_127143.html",
+          "都城类别码": "P",
+          "sourceOrder": 298
+        }
+      ],
+      "sourceOrder": 298,
+      "sourceEra": "夏商",
+      "sourceSite": "三星堆遗址",
+      "sourceAncientName": "三星堆",
+      "currentPlace": "三星堆遗址",
+      "currentKey": "ancient-site:三星堆遗址:30.99500,104.20000",
+      "siteKey": "ancient-site:三星堆遗址:30.99500,104.20000",
+      "coordinatePrecision": "区域参照点，非宫殿确址",
+      "recordCount": 1
+    },
+    {
+      "name": "金沙遗址",
+      "lat": 30.683,
+      "lng": 104.012,
+      "admin": "四川省成都市青羊区金沙遗址",
+      "siteNames": [
+        "金沙遗址"
+      ],
+      "ancientNames": [
+        "古称未定"
+      ],
+      "dynasties": [
+        "古蜀（金沙时期）"
+      ],
+      "eras": [
+        "夏商"
+      ],
+      "capitalTypes": [
+        "都邑（考古遗址）"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "confidence": "高",
+      "records": [
+        {
+          "时代": "夏商",
+          "政权/国号": "古蜀（金沙时期）",
+          "政权年代（原文）": "先秦（始年未定）",
+          "都城性质": "都邑（考古遗址）",
+          "都城年代（原文）": "约前12世纪—前7世纪",
+          "古称": "古称未定",
+          "今称/遗址名": "金沙遗址",
+          "今属行政区": "四川省成都市青羊区金沙遗址",
+          "置信度": "高",
+          "备注/争议": "商末至西周古蜀都邑；年代为遗址文化阶段，不能认定某位蜀王在位年表；与三星堆的继承或并存关系仍在研究。",
+          "来源编号": "CAP-AUDIT-20261004",
+          "来源URL": "https://wwj.sc.gov.cn/scwwj/newpic/2019/12/13/0938718cff8f4ef3ac77e0641e53268b.shtml",
+          "都城类别码": "P",
+          "sourceOrder": 299
+        }
+      ],
+      "sourceOrder": 299,
+      "sourceEra": "夏商",
+      "sourceSite": "金沙遗址",
+      "sourceAncientName": "古称未定",
+      "currentPlace": "金沙遗址",
+      "currentKey": "ancient-site:金沙遗址:30.68300,104.01200",
+      "siteKey": "ancient-site:金沙遗址:30.68300,104.01200",
+      "coordinatePrecision": "区域参照点，非宫殿确址",
+      "recordCount": 1
+    },
+    {
+      "name": "郫邑（杜鹃城候选）",
+      "lat": 30.81,
+      "lng": 103.887,
+      "admin": "四川省成都市郫都区",
+      "siteNames": [
+        "郫邑（杜鹃城候选）"
+      ],
+      "ancientNames": [
+        "郫邑"
+      ],
+      "dynasties": [
+        "蜀（杜宇时期）"
+      ],
+      "eras": [
+        "春秋战国"
+      ],
+      "capitalTypes": [
+        "都城或别都（地望待考）"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "confidence": "低",
+      "records": [
+        {
+          "时代": "春秋战国",
+          "政权/国号": "蜀（杜宇时期）",
+          "政权年代（原文）": "先秦（始年未定）",
+          "都城性质": "都城或别都（地望待考）",
+          "都城年代（原文）": "西周至春秋时期（具体起讫未定）",
+          "古称": "郫邑",
+          "今称/遗址名": "郫邑（杜鹃城候选）",
+          "今属行政区": "四川省成都市郫都区",
+          "置信度": "低",
+          "备注/争议": "文献与研究提出郫邑为都城或别都；都城性质、年代及城址对应未定。地图使用今郫都区域参照点。",
+          "来源编号": "CAP-AUDIT-20261004",
+          "来源URL": "https://www.nopss.gov.cn/n/2013/0419/c362367-21203630.html",
+          "都城类别码": "P",
+          "sourceOrder": 300
+        }
+      ],
+      "sourceOrder": 300,
+      "sourceEra": "春秋战国",
+      "sourceSite": "郫邑（杜鹃城候选）",
+      "sourceAncientName": "郫邑",
+      "currentPlace": "郫邑（杜鹃城候选）",
+      "currentKey": "ancient-site:郫邑（杜鹃城候选）:30.81000,103.88700",
+      "siteKey": "ancient-site:郫邑（杜鹃城候选）:30.81000,103.88700",
+      "coordinatePrecision": "区域参照点，非宫殿确址",
+      "recordCount": 1
+    },
+    {
+      "name": "莒国故城",
+      "lat": 35.58,
+      "lng": 118.835,
+      "admin": "山东省日照市莒县",
+      "siteNames": [
+        "莒国故城"
+      ],
+      "ancientNames": [
+        "莒"
+      ],
+      "dynasties": [
+        "莒"
+      ],
+      "eras": [
+        "春秋战国"
+      ],
+      "capitalTypes": [
+        "正式都城"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "confidence": "高",
+      "records": [
+        {
+          "时代": "春秋战国",
+          "政权/国号": "莒",
+          "政权年代（原文）": "周代（起讫未定）",
+          "都城性质": "正式都城",
+          "都城年代（原文）": "春秋至战国初期（具体起讫未定）",
+          "古称": "莒",
+          "今称/遗址名": "莒国故城",
+          "今属行政区": "山东省日照市莒县",
+          "置信度": "高",
+          "备注/争议": "故城位于今莒县县城；地图为县城区域参照点，不能等同新建旅游街区。",
+          "来源编号": "CAP-AUDIT-20261004",
+          "来源URL": "https://shandong-chorography.org/database/a/section/70/article/95/",
+          "都城类别码": "P",
+          "sourceOrder": 304
+        }
+      ],
+      "sourceOrder": 304,
+      "sourceEra": "春秋战国",
+      "sourceSite": "莒国故城",
+      "sourceAncientName": "莒",
+      "currentPlace": "莒国故城",
+      "currentKey": "ancient-site:莒国故城:35.58000,118.83500",
+      "siteKey": "ancient-site:莒国故城:35.58000,118.83500",
+      "coordinatePrecision": "区域参照点，非宫殿确址",
+      "recordCount": 1
+    },
+    {
+      "name": "中山国灵寿故城",
+      "lat": 38.333,
+      "lng": 114.207,
+      "admin": "河北省石家庄市平山县三汲一带",
+      "siteNames": [
+        "中山国灵寿故城"
+      ],
+      "ancientNames": [
+        "灵寿"
+      ],
+      "dynasties": [
+        "中山"
+      ],
+      "eras": [
+        "春秋战国"
+      ],
+      "capitalTypes": [
+        "正式都城"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "confidence": "高",
+      "records": [
+        {
+          "时代": "春秋战国",
+          "政权/国号": "中山",
+          "政权年代（原文）": "周代（起讫未定）",
+          "都城性质": "正式都城",
+          "都城年代（原文）": "战国时期（具体起讫未定）",
+          "古称": "灵寿",
+          "今称/遗址名": "中山国灵寿故城",
+          "今属行政区": "河北省石家庄市平山县三汲一带",
+          "置信度": "高",
+          "备注/争议": "遗址位于今平山、灵寿交界三汲一带，不是现代灵寿县城；地图为三汲遗址区域参照点。",
+          "来源编号": "CAP-AUDIT-20261004",
+          "来源URL": "https://www.sjzps.gov.cn/columns/f681bde1-734b-4659-82a3-9feee5a002e3/202208/03/1e96205b-b5c2-4983-a7fa-c0f7c94698d6.html",
+          "都城类别码": "P",
+          "sourceOrder": 305
+        }
+      ],
+      "sourceOrder": 305,
+      "sourceEra": "春秋战国",
+      "sourceSite": "中山国灵寿故城",
+      "sourceAncientName": "灵寿",
+      "currentPlace": "中山国灵寿故城",
+      "currentKey": "ancient-site:中山国灵寿故城:38.33300,114.20700",
+      "siteKey": "ancient-site:中山国灵寿故城:38.33300,114.20700",
+      "coordinatePrecision": "区域参照点，非宫殿确址",
+      "recordCount": 1
+    },
+    {
+      "name": "琅琊（越都说）",
+      "lat": 35.652,
+      "lng": 119.912,
+      "admin": "山东省青岛市黄岛区琅琊台一带",
+      "siteNames": [
+        "琅琊（越都说）"
+      ],
+      "ancientNames": [
+        "琅琊"
+      ],
+      "dynasties": [
+        "越（琅琊迁都说）"
+      ],
+      "eras": [
+        "春秋战国"
+      ],
+      "capitalTypes": [
+        "都城（迁都说有争议）"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "confidence": "中",
+      "records": [
+        {
+          "时代": "春秋战国",
+          "政权/国号": "越（琅琊迁都说）",
+          "政权年代（原文）": "先秦（始年未定）",
+          "都城性质": "都城（迁都说有争议）",
+          "都城年代（原文）": "战国初期（迁都起讫有争议）",
+          "古称": "琅琊",
+          "今称/遗址名": "琅琊（越都说）",
+          "今属行政区": "山东省青岛市黄岛区琅琊台一带",
+          "置信度": "中",
+          "备注/争议": "文献与部分学者支持越迁都琅琊，也有异议；不填统一精确迁都年。地图为琅琊台区域参照点，不代表越王宫确址。",
+          "来源编号": "CAP-AUDIT-20261004",
+          "来源URL": "https://www.xihaian.gov.cn/zwgk/jzgk/lyz/gkml/zdgz/202408/t20240801_8158035.shtml",
+          "都城类别码": "P",
+          "sourceOrder": 306
+        }
+      ],
+      "sourceOrder": 306,
+      "sourceEra": "春秋战国",
+      "sourceSite": "琅琊（越都说）",
+      "sourceAncientName": "琅琊",
+      "currentPlace": "琅琊（越都说）",
+      "currentKey": "ancient-site:琅琊（越都说）:35.65200,119.91200",
+      "siteKey": "ancient-site:琅琊（越都说）:35.65200,119.91200",
+      "coordinatePrecision": "区域参照点，非宫殿确址",
+      "recordCount": 1
+    },
+    {
+      "name": "黄国故城",
+      "lat": 32.091,
+      "lng": 114.988,
+      "admin": "河南省信阳市潢川县隆古乡",
+      "siteNames": [
+        "黄国故城"
+      ],
+      "ancientNames": [
+        "黄"
+      ],
+      "dynasties": [
+        "黄"
+      ],
+      "eras": [
+        "春秋战国"
+      ],
+      "capitalTypes": [
+        "正式都城"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "confidence": "高",
+      "records": [
+        {
+          "时代": "春秋战国",
+          "政权/国号": "黄",
+          "政权年代（原文）": "周代（起讫未定）",
+          "都城性质": "正式都城",
+          "都城年代（原文）": "周代（具体建都起讫未定）",
+          "古称": "黄",
+          "今称/遗址名": "黄国故城",
+          "今属行政区": "河南省信阳市潢川县隆古乡",
+          "置信度": "高",
+          "备注/争议": "春秋黄国都城；地图为潢川隆古故城区域参照点，非宫殿精确坐标。",
+          "来源编号": "CAP-AUDIT-20261004",
+          "来源URL": "https://m.huangchuan.gov.cn/2019/04-15/410822.html",
+          "都城类别码": "P",
+          "sourceOrder": 307
+        }
+      ],
+      "sourceOrder": 307,
+      "sourceEra": "春秋战国",
+      "sourceSite": "黄国故城",
+      "sourceAncientName": "黄",
+      "currentPlace": "黄国故城",
+      "currentKey": "ancient-site:黄国故城:32.09100,114.98800",
+      "siteKey": "ancient-site:黄国故城:32.09100,114.98800",
+      "coordinatePrecision": "区域参照点，非宫殿确址",
+      "recordCount": 1
+    },
+    {
+      "name": "薛国故城",
+      "lat": 34.898,
+      "lng": 117.164,
+      "admin": "山东省枣庄市滕州市张汪镇、官桥镇之间",
+      "siteNames": [
+        "薛国故城"
+      ],
+      "ancientNames": [
+        "薛"
+      ],
+      "dynasties": [
+        "薛"
+      ],
+      "eras": [
+        "春秋战国"
+      ],
+      "capitalTypes": [
+        "正式都城"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "confidence": "中",
+      "records": [
+        {
+          "时代": "春秋战国",
+          "政权/国号": "薛",
+          "政权年代（原文）": "先秦（始年未定）",
+          "都城性质": "正式都城",
+          "都城年代（原文）": "西周至战国时期（具体建都起讫未定）",
+          "古称": "薛",
+          "今称/遗址名": "薛国故城",
+          "今属行政区": "山东省枣庄市滕州市张汪镇、官桥镇之间",
+          "置信度": "中",
+          "备注/争议": "薛国都城遗址后为齐国孟尝君封邑；不把封邑时期全部计作独立国都。地图为张汪、官桥之间故城区域参照点。",
+          "来源编号": "CAP-AUDIT-20261004",
+          "来源URL": "https://www.cssn.cn/dfpd/djbd/202506/t20250619_5880252.shtml",
+          "都城类别码": "P",
+          "sourceOrder": 308
+        }
+      ],
+      "sourceOrder": 308,
+      "sourceEra": "春秋战国",
+      "sourceSite": "薛国故城",
+      "sourceAncientName": "薛",
+      "currentPlace": "薛国故城",
+      "currentKey": "ancient-site:薛国故城:34.89800,117.16400",
+      "siteKey": "ancient-site:薛国故城:34.89800,117.16400",
+      "coordinatePrecision": "区域参照点，非宫殿确址",
+      "recordCount": 1
     }
   ],
   "skipped": [],
@@ -16504,7 +17015,277 @@
       "parentName": "北京",
       "currentPlace": "北京",
       "currentKey": "ancient-site:北京:39.90420,116.40740"
+    },
+    {
+      "name": "成都 · 成都 · 蜀（开明时期）",
+      "siteName": "成都",
+      "ancientName": "成都",
+      "dynasty": "蜀（开明时期）",
+      "era": "春秋战国",
+      "admin": "四川省成都市",
+      "capitalType": "正式都城",
+      "capitalYears": "战国时期—前316年",
+      "regimeYears": "先秦（始年未定）",
+      "confidence": "中",
+      "categoryCode": "P",
+      "sourceOrder": 297,
+      "siteKey": "ancient-site:成都:30.57280,104.06680",
+      "lat": 30.5728,
+      "lng": 104.0668,
+      "parentName": "成都",
+      "currentPlace": "成都",
+      "currentKey": "ancient-site:成都:30.57280,104.06680",
+      "sourceUrl": "https://www.nopss.gov.cn/n/2013/0419/c362367-21203630.html",
+      "note": "开明迁都成都的具体年代有异说；补入先秦蜀国，不与蜀汉、前蜀、后蜀混同。"
+    },
+    {
+      "name": "三星堆遗址 · 三星堆 · 古蜀（三星堆时期）",
+      "siteName": "三星堆遗址",
+      "ancientName": "三星堆",
+      "dynasty": "古蜀（三星堆时期）",
+      "era": "夏商",
+      "admin": "四川省德阳市广汉市三星堆遗址",
+      "capitalType": "都邑（考古遗址）",
+      "capitalYears": "商代（具体建都起讫未定）",
+      "regimeYears": "先秦（始年未定）",
+      "confidence": "高",
+      "categoryCode": "P",
+      "sourceOrder": 298,
+      "siteKey": "ancient-site:三星堆遗址:30.99500,104.20000",
+      "lat": 30.995,
+      "lng": 104.2,
+      "parentName": "三星堆遗址",
+      "currentPlace": "三星堆遗址",
+      "currentKey": "ancient-site:三星堆遗址:30.99500,104.20000",
+      "sourceUrl": "https://www.ccdi.gov.cn/toutu/201505/t20150526_127143.html",
+      "note": "古城遗址为商代古蜀都邑；不把遗址全部文化层年代当作连续建都年代。"
+    },
+    {
+      "name": "金沙遗址 · 古称未定 · 古蜀（金沙时期）",
+      "siteName": "金沙遗址",
+      "ancientName": "古称未定",
+      "dynasty": "古蜀（金沙时期）",
+      "era": "夏商",
+      "admin": "四川省成都市青羊区金沙遗址",
+      "capitalType": "都邑（考古遗址）",
+      "capitalYears": "约前12世纪—前7世纪",
+      "regimeYears": "先秦（始年未定）",
+      "confidence": "高",
+      "categoryCode": "P",
+      "sourceOrder": 299,
+      "siteKey": "ancient-site:金沙遗址:30.68300,104.01200",
+      "lat": 30.683,
+      "lng": 104.012,
+      "parentName": "金沙遗址",
+      "currentPlace": "金沙遗址",
+      "currentKey": "ancient-site:金沙遗址:30.68300,104.01200",
+      "sourceUrl": "https://wwj.sc.gov.cn/scwwj/newpic/2019/12/13/0938718cff8f4ef3ac77e0641e53268b.shtml",
+      "note": "商末至西周古蜀都邑；年代为遗址文化阶段，不能认定某位蜀王在位年表；与三星堆的继承或并存关系仍在研究。"
+    },
+    {
+      "name": "郫邑（杜鹃城候选） · 郫邑 · 蜀（杜宇时期）",
+      "siteName": "郫邑（杜鹃城候选）",
+      "ancientName": "郫邑",
+      "dynasty": "蜀（杜宇时期）",
+      "era": "春秋战国",
+      "admin": "四川省成都市郫都区",
+      "capitalType": "都城或别都（地望待考）",
+      "capitalYears": "西周至春秋时期（具体起讫未定）",
+      "regimeYears": "先秦（始年未定）",
+      "confidence": "低",
+      "categoryCode": "P",
+      "sourceOrder": 300,
+      "siteKey": "ancient-site:郫邑（杜鹃城候选）:30.81000,103.88700",
+      "lat": 30.81,
+      "lng": 103.887,
+      "parentName": "郫邑（杜鹃城候选）",
+      "currentPlace": "郫邑（杜鹃城候选）",
+      "currentKey": "ancient-site:郫邑（杜鹃城候选）:30.81000,103.88700",
+      "sourceUrl": "https://www.nopss.gov.cn/n/2013/0419/c362367-21203630.html",
+      "note": "文献与研究提出郫邑为都城或别都；都城性质、年代及城址对应未定。地图使用今郫都区域参照点。"
+    },
+    {
+      "name": "重庆 · 江州 · 巴",
+      "siteName": "重庆",
+      "ancientName": "江州",
+      "dynasty": "巴",
+      "era": "春秋战国",
+      "admin": "重庆市",
+      "capitalType": "正式都城",
+      "capitalYears": "战国时期—前316年",
+      "regimeYears": "先秦（始年未定）",
+      "confidence": "中",
+      "categoryCode": "P",
+      "sourceOrder": 301,
+      "siteKey": "ancient-site:重庆:29.56300,106.55160",
+      "lat": 29.563,
+      "lng": 106.5516,
+      "parentName": "重庆",
+      "currentPlace": "重庆",
+      "currentKey": "ancient-site:重庆:29.56300,106.55160",
+      "sourceUrl": "https://www.gov.cn/gongbao/shuju/1986/gwyb198635.pdf",
+      "note": "国务院历史文化名城介绍记载战国重庆为巴国国都；沿用现有重庆参照点，不表示已定位巴王宫。"
+    },
+    {
+      "name": "江陵 · 江陵 · 南梁",
+      "siteName": "江陵",
+      "ancientName": "江陵",
+      "dynasty": "南梁",
+      "era": "南北朝",
+      "admin": "湖北省荆州市",
+      "capitalType": "正式都城",
+      "capitalYears": "552—554",
+      "regimeYears": "502—557",
+      "confidence": "高",
+      "categoryCode": "P",
+      "sourceOrder": 302,
+      "siteKey": "ancient-site:江陵:30.35000,112.19000",
+      "lat": 30.35,
+      "lng": 112.19,
+      "parentName": "江陵",
+      "currentPlace": "江陵",
+      "currentKey": "ancient-site:江陵:30.35000,112.19000",
+      "sourceUrl": "https://wlt.hubei.gov.cn/bmdt/ztzl/zshb/201912/t20191226_1799529.shtml",
+      "note": "梁元帝都江陵阶段；与555—587年的西梁/后梁分列。"
+    },
+    {
+      "name": "建瓯 · 建州 · 闽（王延政）",
+      "siteName": "建瓯",
+      "ancientName": "建州",
+      "dynasty": "闽（王延政）",
+      "era": "五代十国",
+      "admin": "福建省南平市建瓯市",
+      "capitalType": "正式都城",
+      "capitalYears": "945",
+      "regimeYears": "909—945",
+      "confidence": "高",
+      "categoryCode": "P",
+      "sourceOrder": 303,
+      "siteKey": "ancient-site:建瓯:27.02270,118.30490",
+      "lat": 27.0227,
+      "lng": 118.3049,
+      "parentName": "建瓯",
+      "currentPlace": "建瓯",
+      "currentKey": "ancient-site:建瓯:27.02270,118.30490",
+      "sourceUrl": "https://tgaz.fudan.edu.cn/tgaz/placename/hvd_100001",
+      "note": "王延政945年改殷号为闽，留都建州；不重复替代既有殷国记录。"
+    },
+    {
+      "name": "莒国故城 · 莒 · 莒",
+      "siteName": "莒国故城",
+      "ancientName": "莒",
+      "dynasty": "莒",
+      "era": "春秋战国",
+      "admin": "山东省日照市莒县",
+      "capitalType": "正式都城",
+      "capitalYears": "春秋至战国初期（具体起讫未定）",
+      "regimeYears": "周代（起讫未定）",
+      "confidence": "高",
+      "categoryCode": "P",
+      "sourceOrder": 304,
+      "siteKey": "ancient-site:莒国故城:35.58000,118.83500",
+      "lat": 35.58,
+      "lng": 118.835,
+      "parentName": "莒国故城",
+      "currentPlace": "莒国故城",
+      "currentKey": "ancient-site:莒国故城:35.58000,118.83500",
+      "sourceUrl": "https://shandong-chorography.org/database/a/section/70/article/95/",
+      "note": "故城位于今莒县县城；地图为县城区域参照点，不能等同新建旅游街区。"
+    },
+    {
+      "name": "中山国灵寿故城 · 灵寿 · 中山",
+      "siteName": "中山国灵寿故城",
+      "ancientName": "灵寿",
+      "dynasty": "中山",
+      "era": "春秋战国",
+      "admin": "河北省石家庄市平山县三汲一带",
+      "capitalType": "正式都城",
+      "capitalYears": "战国时期（具体起讫未定）",
+      "regimeYears": "周代（起讫未定）",
+      "confidence": "高",
+      "categoryCode": "P",
+      "sourceOrder": 305,
+      "siteKey": "ancient-site:中山国灵寿故城:38.33300,114.20700",
+      "lat": 38.333,
+      "lng": 114.207,
+      "parentName": "中山国灵寿故城",
+      "currentPlace": "中山国灵寿故城",
+      "currentKey": "ancient-site:中山国灵寿故城:38.33300,114.20700",
+      "sourceUrl": "https://www.sjzps.gov.cn/columns/f681bde1-734b-4659-82a3-9feee5a002e3/202208/03/1e96205b-b5c2-4983-a7fa-c0f7c94698d6.html",
+      "note": "遗址位于今平山、灵寿交界三汲一带，不是现代灵寿县城；地图为三汲遗址区域参照点。"
+    },
+    {
+      "name": "琅琊（越都说） · 琅琊 · 越（琅琊迁都说）",
+      "siteName": "琅琊（越都说）",
+      "ancientName": "琅琊",
+      "dynasty": "越（琅琊迁都说）",
+      "era": "春秋战国",
+      "admin": "山东省青岛市黄岛区琅琊台一带",
+      "capitalType": "都城（迁都说有争议）",
+      "capitalYears": "战国初期（迁都起讫有争议）",
+      "regimeYears": "先秦（始年未定）",
+      "confidence": "中",
+      "categoryCode": "P",
+      "sourceOrder": 306,
+      "siteKey": "ancient-site:琅琊（越都说）:35.65200,119.91200",
+      "lat": 35.652,
+      "lng": 119.912,
+      "parentName": "琅琊（越都说）",
+      "currentPlace": "琅琊（越都说）",
+      "currentKey": "ancient-site:琅琊（越都说）:35.65200,119.91200",
+      "sourceUrl": "https://www.xihaian.gov.cn/zwgk/jzgk/lyz/gkml/zdgz/202408/t20240801_8158035.shtml",
+      "note": "文献与部分学者支持越迁都琅琊，也有异议；不填统一精确迁都年。地图为琅琊台区域参照点，不代表越王宫确址。"
+    },
+    {
+      "name": "黄国故城 · 黄 · 黄",
+      "siteName": "黄国故城",
+      "ancientName": "黄",
+      "dynasty": "黄",
+      "era": "春秋战国",
+      "admin": "河南省信阳市潢川县隆古乡",
+      "capitalType": "正式都城",
+      "capitalYears": "周代（具体建都起讫未定）",
+      "regimeYears": "周代（起讫未定）",
+      "confidence": "高",
+      "categoryCode": "P",
+      "sourceOrder": 307,
+      "siteKey": "ancient-site:黄国故城:32.09100,114.98800",
+      "lat": 32.091,
+      "lng": 114.988,
+      "parentName": "黄国故城",
+      "currentPlace": "黄国故城",
+      "currentKey": "ancient-site:黄国故城:32.09100,114.98800",
+      "sourceUrl": "https://m.huangchuan.gov.cn/2019/04-15/410822.html",
+      "note": "春秋黄国都城；地图为潢川隆古故城区域参照点，非宫殿精确坐标。"
+    },
+    {
+      "name": "薛国故城 · 薛 · 薛",
+      "siteName": "薛国故城",
+      "ancientName": "薛",
+      "dynasty": "薛",
+      "era": "春秋战国",
+      "admin": "山东省枣庄市滕州市张汪镇、官桥镇之间",
+      "capitalType": "正式都城",
+      "capitalYears": "西周至战国时期（具体建都起讫未定）",
+      "regimeYears": "先秦（始年未定）",
+      "confidence": "中",
+      "categoryCode": "P",
+      "sourceOrder": 308,
+      "siteKey": "ancient-site:薛国故城:34.89800,117.16400",
+      "lat": 34.898,
+      "lng": 117.164,
+      "parentName": "薛国故城",
+      "currentPlace": "薛国故城",
+      "currentKey": "ancient-site:薛国故城:34.89800,117.16400",
+      "sourceUrl": "https://www.cssn.cn/dfpd/djbd/202506/t20250619_5880252.shtml",
+      "note": "薛国都城遗址后为齐国孟尝君封邑；不把封邑时期全部计作独立国都。地图为张汪、官桥之间故城区域参照点。"
     }
   ],
-  "recordItemCount": 295
+  "recordItemCount": 307,
+  "coverageAudit": {
+    "date": "2026-10-04",
+    "basis": "在原历代政权都城目录上补查先秦方国、古蜀及已有地点的缺失建都阶段；不是仅限十大古都，也不声称穷尽所有诸侯国、封国和短期政权。",
+    "addedRecords": 12,
+    "addedSites": 8
+  }
 }

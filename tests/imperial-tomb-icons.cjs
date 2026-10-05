@@ -6,10 +6,9 @@ assert(c.items.filter(x=>x.era==='先秦').every(x=>Object.hasOwn(api.dynastyCol
 const preqinOnly=Object.fromEntries(Object.keys(c.summary).map(k=>[k,k==='先秦']));
 assert(api.mappedItems(c,preqinOnly).every(x=>x.era==='先秦'));
 assert(api.mappedItems(c,{...preqinOnly,周:false}).every(x=>!['西周','春秋','战国'].includes(x.preqinPeriod)));
-for(const id of ['shu-sanxingdui-search','shu-jinsha-search']){const x=c.items.find(x=>x.id===id);assert.equal(x.siteRole,'royal_burial_search_area');assert.equal(x.nature,'unknown');assert(x.mapEligible);assert(x.coordinates.target.includes('王陵位置未知'));}
-for(const id of ['early-liangzhu','early-taosi','early-shimao','early-erlitou-search','early-panlongcheng-search']){const x=c.items.find(x=>x.id===id);assert(x.mapEligible);assert.equal(x.coordinates.status,'estimated_wgs84');assert(x.coordinates.target.includes('参考'));assert(x.disputes.length);}
+for(const id of ['shu-sanxingdui-search','shu-jinsha-search','early-erlitou-search','early-panlongcheng-search'])assert(!c.items.some(x=>x.id===id));
+for(const id of ['early-liangzhu','early-taosi','early-shimao']){const x=c.items.find(x=>x.id===id);assert(x.mapEligible);assert.equal(x.coordinates.status,'estimated_wgs84');assert(x.coordinates.target.includes('参考'));assert(x.disputes.length);}
 assert.equal(c.items.find(x=>x.id==='early-shimao').disturbance.status,'archaeological_evidence');
-assert.equal(c.items.find(x=>x.id==='early-erlitou-search').nature,'unknown');
 assert.equal(c.items.find(x=>x.id==='early-taosi').preqinPeriod,'史前');
 assert.equal(api.dynastyTheme({era:'魏晋南北朝',dynasty:'刘宋'}).key,'魏晋南北朝');assert.equal(api.dynastyTheme({era:'五代十国',dynasty:'后汉'}).key,'五代十国');
 assert(f.every(x=>x.properties.icon==='imperial-mausoleum-'+x.properties.dynastyColorKey));
@@ -20,4 +19,4 @@ console.log('PASS: era colors, Ming/Qing separation and shared Song/Liao/Jin/Xix
 assert(!fs.readFileSync(require.resolve('../imperial-tombs.js'),'utf8').includes('tomb-color-key'));
 
 assert(!c.items.some(x=>x.preqinPeriod==='先秦跨期／未定'));
-for(const [id,period] of Object.entries({'qin-gong-group':'春秋','zhao-kings':'战国','lu-nine':'春秋','shu-jinsha-search':'西周','rui-liangdaicun':'春秋'}))assert.equal(c.items.find(x=>x.id===id).preqinPeriod,period);
+for(const [id,period] of Object.entries({'qin-gong-group':'春秋','zhao-kings':'战国','lu-nine':'春秋','rui-liangdaicun':'春秋'}))assert.equal(c.items.find(x=>x.id===id).preqinPeriod,period);

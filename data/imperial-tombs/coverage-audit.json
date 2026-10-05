@@ -1,8 +1,8 @@
 {
   "reviewedAt": "2026-10-04",
   "policy": "政权目录空白不等于无陵；人物无匹配不等于无墓；有一条不等于完整。先用君主工作名单和公布文保名录反查，再据原址证据定位。",
-  "totalRecords": 387,
-  "totalMapCandidates": 279,
+  "totalRecords": 383,
+  "totalMapCandidates": 274,
   "matrix": [
     {
       "era": "传说时代",
@@ -442,15 +442,13 @@
     {
       "era": "先秦",
       "dynasty": "古蜀",
-      "records": 4,
+      "records": 2,
       "singleRecords": 2,
-      "mapCandidates": 4,
+      "mapCandidates": 2,
       "sharedLocations": 0,
       "unlocated": 0,
       "status": "已有条目，君主及遗址覆盖未判定完整",
       "recordIds": [
-        "shu-sanxingdui-search",
-        "shu-jinsha-search",
         "shu-commercial-boat",
         "shu-majia"
       ]

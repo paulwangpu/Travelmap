@@ -2,7 +2,7 @@ const assert=require('node:assert/strict');
 const c=require('../data/imperial-tombs/catalog.json');
 const {mappedItems,dynastyTheme}=require('../imperial-tombs.js');
 const byId=new Map(c.items.map(x=>[x.id,x]));
-const ids=['moghul-tughluq','moghul-wais','yarkand-khans','karakhanid-satuq','hami-hui-kings','cheshi-goubei','tuyuhun-reshui'];
+const ids=['moghul-tughluq','moghul-wais','yarkand-khans','karakhanid-satuq','hami-hui-kings','tuyuhun-reshui'];
 for(const id of ids){const x=byId.get(id);assert(x.mapEligible,id);assert.equal(x.coordinates.status,'estimated_wgs84');assert(x.coordinates.estimate.extent);assert.equal(x.coordinates.precision.horizontalAccuracyMeters,null);}
 assert.equal(byId.get('moghul-tughluq').biographies[0].deathYear,1363);
 assert.equal(dynastyTheme(byId.get('moghul-tughluq')).key,'元');
@@ -15,6 +15,8 @@ assert(byId.get('yarkand-khans').coordinates.original.includes('GCJ-02'));
 const satuq=byId.get('karakhanid-satuq');assert(satuq.coordinates.lat>39.687&&satuq.coordinates.lat<39.688);assert(satuq.coordinates.lng>76.175&&satuq.coordinates.lng<76.176);
 assert.equal(satuq.coordinates.sourceDatumExplicit,false);
 assert(byId.get('cheshi-goubei').coordinates.target.includes('区域参考'));
+assert.equal(byId.get('cheshi-goubei').mapEligible,false);
+assert(!mappedItems(c).some(x=>x.id==='cheshi-goubei'));
 assert(byId.get('cheshi-goubei').disputes.some(x=>x.includes('沟西')));
 const child=byId.get('tuyuhun-xuewei-2018');
 assert.equal(child.coordinates,null);assert.equal(child.locationReference.parentId,'tuyuhun-reshui');assert.equal(child.disturbance.status,'archaeological_evidence');

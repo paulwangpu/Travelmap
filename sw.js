@@ -1,5 +1,5 @@
-const cacheName = "travel-map-v791";
-const shellFiles = ["./", "./index.html", "./styles.css?v=207", "./vendor/openrailwaymap/composite.js?v=1", "./vendor/openrailwaymap/style.json?v=1", "./vendor/openrailwaymap/legend.json?v=1", "./railway-vector.js?v=11", "./earthquake-online.js?v=7", "./volcano-catalog.js?v=3", "./esri-relief.js?v=2", "./basemap-alignment.js?v=4", "./great-wall.js?v=34", "./western-regions.js?v=2", "./historical-periods.js?v=6", "./imperial-tombs.js?v=82", "./data/imperial-tombs/catalog.json?v=59", "./map-resolution.js?v=1", "./app.js?v=762"];
+const cacheName = "travel-map-v808";
+const shellFiles = ["./", "./index.html", "./styles.css?v=212", "./vendor/openrailwaymap/composite.js?v=1", "./vendor/openrailwaymap/style.json?v=1", "./vendor/openrailwaymap/legend.json?v=1", "./railway-vector.js?v=11", "./earthquake-online.js?v=7", "./volcano-catalog.js?v=3", "./esri-relief.js?v=2", "./basemap-alignment.js?v=4", "./great-wall.js?v=34", "./western-regions.js?v=2", "./historical-periods.js?v=6", "./imperial-tombs.js?v=83", "./data/imperial-tombs/catalog.json?v=60", "./map-resolution.js?v=1", "./geology-legend.js?v=7", "./app.js?v=778"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(cacheName).then((cache) => cache.addAll(
@@ -23,11 +23,29 @@ function cacheFirst(request) {
   }));
 }
 
+async function freshCapitalCatalog(request) {
+  try {
+    const response = await fetch(request, { cache: "no-store" });
+    if (!response.ok) throw new Error(`Capital catalog HTTP ${response.status}`);
+    const cache = await caches.open(cacheName);
+    await cache.put(request, response.clone());
+    return response;
+  } catch (error) {
+    const cached = await caches.match(request);
+    if (cached) return cached;
+    throw error;
+  }
+}
+
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
   const url = new URL(event.request.url);
   if (url.origin !== self.location.origin) return;
   if (url.pathname.endsWith(".pmtiles")) return;
+  if (/\/data\/(china-ancient-capitals|western-regions-36)\.json$/.test(url.pathname)) {
+    event.respondWith(freshCapitalCatalog(event.request));
+    return;
+  }
   if (event.request.mode === "navigate") {
     event.respondWith(fetch(event.request, { cache: "no-store" }).catch(() => caches.match("./index.html")));
     return;

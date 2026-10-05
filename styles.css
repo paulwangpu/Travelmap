@@ -1004,7 +1004,8 @@ button:hover {
   white-space: nowrap;
 }
 
-#populationDensityOpacity {
+#populationDensityOpacity,
+#geologyOpacity {
   width: 100%;
   height: 14px;
   min-height: 14px;
@@ -1014,7 +1015,8 @@ button:hover {
   cursor: pointer;
 }
 
-#populationDensityOpacityValue {
+#populationDensityOpacityValue,
+#geologyOpacityValue {
   color: #34554c;
   font-size: 9px;
   font-weight: 800;
@@ -7563,3 +7565,42 @@ button:hover {
 .tomb-legend-scope label span { white-space:nowrap; }
 .tomb-legend-scope label { display:flex; align-items:center; gap:5px; margin:0; color:#617168; font-size:9px; line-height:1.4; font-weight:400; cursor:pointer; }
 .imperial-tombs-legend .tomb-legend-scope input { accent-color:#527363; }
+
+/* Geology uses the population-density card and opacity controls. */
+.geology-age-heading { display:flex; justify-content:space-between; margin-bottom:5px; color:#40544e; font-size:10px; font-weight:600; line-height:1.4; }
+.geology-age-list { display:grid; gap:4px; max-height:180px; overflow:auto; scrollbar-width:thin; pointer-events:auto; }
+.geology-age-row { display:grid; grid-template-columns:24px minmax(0,1fr) auto; align-items:center; gap:6px; color:#40544e; font-size:9px; line-height:1.3; }
+.geology-swatch { display:inline-block; width:12px; height:9px; border:1px solid rgba(18,54,45,.2); border-radius:2px; flex-shrink:0; }
+.geology-age-range { color:#53655f; font-size:8px; font-variant-numeric:tabular-nums; }
+.geology-legend a { color:#176b52; font-size:9px; pointer-events:auto; }
+.geology-source { line-height:1.4; }
+.geology-source button { border:0; padding:0; margin-left:4px; background:none; color:#176b52; font:inherit; text-decoration:underline; cursor:pointer; pointer-events:auto; }
+
+.geology-age-swatches { display:flex; width:24px; height:9px; border:1px solid rgba(18,54,45,.2); border-radius:2px; overflow:hidden; }
+.geology-age-swatches .geology-swatch { flex:1 1 0; width:0; height:100%; border:0; border-radius:0; }
+
+.geology-detail { width:min(320px,calc(100vw - 72px)); color:#12362d; font-size:12px; line-height:1.5; max-height:min(440px,calc(100vh - 110px)); overflow:auto; scrollbar-width:thin; }
+.geology-detail-header { display:flex; align-items:baseline; justify-content:space-between; gap:12px; padding:0 16px 9px 0; border-bottom:1px solid #e3eae6; }
+.geology-detail-header > strong { font-size:12px; font-weight:600; }
+.geology-detail small { display:block; color:#65756f; font-size:10px; }
+.geology-detail-header small { font-size:9px; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.geology-detail article { padding:10px 0; }
+.geology-record-label { display:flex; align-items:center; justify-content:space-between; gap:8px; font-size:10px; color:#65756f; }
+.geology-record-label > span:first-child { border-radius:4px; padding:2px 6px; background:#eaf3ee; color:#27634f; font-weight:600; }
+.geology-detail h3 { margin:7px 0 10px; color:#12362d; font-size:16px; line-height:1.3; font-weight:650; overflow-wrap:anywhere; }
+.geology-facts { display:grid; grid-template-columns:32px minmax(0,1fr); gap:9px 10px; margin:0 0 10px; padding:10px; border-radius:6px; background:#f4f7f5; }
+.geology-facts dt { color:#65756f; font-size:11px; }
+.geology-facts dd { margin:0; font-size:12px; overflow-wrap:anywhere; }
+.geology-age-path { display:flex; align-items:center; flex-wrap:wrap; gap:5px; }
+.geology-age-path > span:last-child { color:#174b39; font-weight:600; }
+.geology-path-arrow { color:#8c9d93; }
+.geology-fact-age small { margin-top:2px; font-variant-numeric:tabular-nums; }
+.geology-fact-lithology > div { display:flex; align-items:baseline; gap:6px; }
+.geology-lith-label { color:#65756f; font-size:10px; flex-shrink:0; }
+.geology-detail p { margin:6px 0; font-size:11px; overflow-wrap:anywhere; }
+.geology-detail summary { padding:4px 0; cursor:pointer; color:#426354; font-size:11px; }
+.geology-other-sources { margin:0 0 10px; border-top:1px solid #e3eae6; padding-top:8px; }
+.geology-other-sources > summary { font-weight:600; }
+.geology-comparison-record { margin-top:8px; border-top:1px solid #e9eeeb; }
+.geology-comparison-record .geology-record-label > span:first-child { background:#f0f2f1; color:#65756f; }
+.geology-comparison-record h3 { font-size:13px; }
