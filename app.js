@@ -58,6 +58,7 @@ const boundaryFallbackSources = {
   ru2: "",
 };
 let leafletMap = null;
+let leafletPointLabels = null;
 let leafletLayers = null;
 let leafletBaseLayer = null;
 let mapLibreMap = null;
@@ -8210,6 +8211,7 @@ function renderGeoMap() {
     leafletMap.on("moveend zoomend", rememberMapViewportSoon);
     leafletMap.on("moveend", () => refreshEarthquakeOnline());
     leafletMap.on("moveend", updateGeologyLegend);
+    leafletMap.on("moveend", renderLeafletPointLabels);
     leafletMap.on("click", (event) => {
       if (handleGeologyClick(event.latlng.lng, event.latlng.lat, null, true)) return;
       handleMapCanvasClick(event.latlng.lng, event.latlng.lat, event.originalEvent);
@@ -8221,6 +8223,7 @@ function renderGeoMap() {
   }
 
   renderLeafletLayers();
+  renderLeafletPointLabels();
   setTimeout(() => {
     leafletMap?.invalidateSize();
     leafletDidInitialFit = true;
@@ -11467,7 +11470,26 @@ function renderLeafletLayers() {
     });
     marker.addTo(leafletLayers);
   });
+  renderLeafletPointLabels();
+}
 
+function renderLeafletPointLabels() {
+  leafletPointLabels?.remove();leafletPointLabels=null;
+  if(!leafletMap||leafletMap.getZoom()<6)return;
+  if(!leafletMap.getPane('pointLabelPane')){
+    const pane=leafletMap.createPane('pointLabelPane');pane.style.zIndex='625';pane.style.pointerEvents='none';
+  }
+  leafletPointLabels=L.layerGroup().addTo(leafletMap);
+  const overlays={...defaultMapOverlays(),...(state.mapOverlays||{})},bounds=leafletMap.getBounds(),occupied=[];
+  for(const feature of mapLibrePointGeoJson(overlays).features){
+    const [lng,lat]=feature.geometry.coordinates;if(!bounds.contains([lat,lng]))continue;
+    const props=feature.properties,text=props.capitalLabel||props.title;if(!text)continue;
+    const point=leafletMap.latLngToContainerPoint([lat,lng]),width=Math.min(180,Array.from(text).reduce((n,c)=>n+(/[\u3000-\u9fff]/.test(c)?12:7),0));
+    const rect={x:point.x-width/2,y:point.y+10,w:width,h:18};
+    if(occupied.some(r=>rect.x<r.x+r.w+4&&rect.x+rect.w+4>r.x&&rect.y<r.y+r.h+3&&rect.y+rect.h+3>r.y))continue;
+    occupied.push(rect);
+    L.marker([lat,lng],{pane:'pointLabelPane',interactive:false,keyboard:false,icon:L.divIcon({className:'map-point-name',html:`<span>${escapeHtml(text)}</span>`,iconSize:[width,18],iconAnchor:[width/2,-10]})}).addTo(leafletPointLabels);
+  }
 }
 
 function leafletBoundaryStyle(feature) {
@@ -16898,7 +16920,7 @@ if ("serviceWorker" in navigator && location.protocol !== "file:") {
     });
   });
   window.addEventListener("load", () => {
-navigator.serviceWorker.register("./sw.js?v=842", { updateViaCache: "none" })
+navigator.serviceWorker.register("./sw.js?v=844", { updateViaCache: "none" })
       .then((registration) => registration.update())
       .catch((error) => console.warn("Service Worker registration failed", error));
   });

@@ -7663,6 +7663,8 @@ button:hover {
 .map-overlay-legends [hidden] { display:none !important; }
 .maplibregl-popup-content,.leaflet-popup-content { font-family:var(--font-ui); line-height:var(--leading-body); }
 .maplibregl-popup-content p,.leaflet-popup-content p { line-height:var(--leading-body); }
+.map-point-name { background:none; border:0; pointer-events:none; }
+.map-point-name span { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:#111827; font-family:var(--font-ui); font-size:12px; font-weight:400; line-height:18px; text-align:center; text-shadow:-1px -1px 0 white,1px -1px 0 white,-1px 1px 0 white,1px 1px 0 white; }
 .geology-detail p { font-size:var(--text-secondary); line-height:var(--leading-body); }
 .geology-detail :is(summary,.geology-record-label) { line-height:1.5; }
 .content-page .manual-view-tabs button { font-size:13px; font-weight:600; line-height:1.5; }

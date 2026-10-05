@@ -1,0 +1,28 @@
+const assert=require('node:assert/strict'),fs=require('node:fs');
+global.GeologyVectorTile=require('../vendor/geology/vector-tile');
+global.GeologyProviders=require('../geology-providers');
+const auto=require('../geology-auto');
+const bytes=fs.readFileSync('tests/fixtures/geology/maps-10-200-392.mvt');
+const decoded=GeologyProviders.decode(bytes);
+assert.equal(decoded.lines.length,974);
+assert(decoded.lines.some(line=>line.properties.type==='normal fault'));
+assert(decoded.every(feature=>feature.unit&&feature.rings),'line features must not enter polygon picking');
+const meta=JSON.parse(fs.readFileSync('data/geology/source-scales.json'));
+global.fetch=async url=>url.includes('source-scales')?{ok:true,json:async()=>meta}:{ok:true,arrayBuffer:async()=>new Uint8Array(bytes).buffer};
+const strokes=[];
+const ctx={beginPath(){},moveTo(){},lineTo(){},closePath(){},fill(){},save(){},restore(){},setLineDash(d){this.dash=d},stroke(){strokes.push({color:this.strokeStyle,width:this.lineWidth,dash:this.dash})}};
+global.document={createElement:()=>({getContext:()=>ctx})};
+(async()=>{
+  const local=auto.scaleProvider('large');
+  const data=await local.readFeatures(10,200,392);
+  assert(data.lines.length>0);
+  const scales=new Map(meta.data.map(s=>[Number(s.source_id),s.scale]));
+  assert(data.lines.every(line=>scales.get(Number(line.properties.source_id))==='large'));
+  await local.paint(10,200,392);
+  assert.equal(strokes.length,data.lines.length,'all selected structural lines are drawn above units');
+  assert(strokes.some(line=>line.color==='#343434'&&line.width===1.2),'faults visible');
+  assert(strokes.some(line=>line.dash.length>0),'inferred lines use a dashed stroke');
+  const regional=await auto.scaleProvider('medium').readFeatures(10,200,392);
+  assert(regional.lines.every(line=>scales.get(Number(line.properties.source_id))==='medium'),'no local faults leak into regional mode');
+  console.log('PASS: real fault decoding, scale isolation, polygon picking and structural line painting');
+})().catch(error=>{console.error(error);process.exitCode=1});

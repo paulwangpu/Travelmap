@@ -20,14 +20,22 @@
   function leaflet(map,group,options){const L=root.L,controllers=new WeakMap();const Layer=L.GridLayer.extend({createTile(coords,done){const tile=root.document.createElement('canvas');tile.width=tile.height=256;const controller=new AbortController();controllers.set(tile,controller);paint(p.zoom(coords.z+1),coords.x,coords.y,controller.signal).then(({canvas})=>{if(controller.signal.aborted)return;tile.getContext('2d').drawImage(canvas,0,0);done(null,tile);}).catch(error=>{if(!controller.signal.aborted)done(error,tile);});return tile;}});const layer=new Layer({...options,tileSize:128,maxNativeZoom:13,maxZoom:19});layer.on('tileunload',event=>controllers.get(event.tile)?.abort());layer.addTo(group);return layer;}
   // Explicit scale modes filter the maps compilation; automatic uses server PNGs.
   const scaleProviders=new Map();
+  function drawLine(ctx,line){
+    const fault=/fault|thrust/i.test(line.properties.type||'');
+    const uncertain=/inferred|concealed|approximate|questionable/i.test(line.properties.descrip||'');
+    ctx.save();ctx.strokeStyle=fault?'#343434':'#586b76';ctx.lineWidth=fault?1.2:0.8;
+    ctx.lineCap='round';ctx.lineJoin='round';ctx.setLineDash(uncertain?[4,3]:[]);
+    ctx.beginPath();for(const path of line.paths){for(let i=0;i<path.length;i++){const pt=path[i],x=pt.x/line.extent*256,y=pt.y/line.extent*256;if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);}}
+    ctx.stroke();ctx.restore();
+  }
   function scaleProvider(category){if(scaleProviders.has(category))return scaleProviders.get(category);
-    async function units(z,x,y,signal){const meta=await sources(signal);let data;try {data=await fullTile(z,x,y,signal);}catch(error){if(signal?.aborted)throw error;data=await p.readTile(z,x,y,signal);}return data.filter(f=>meta.get(Number(f.unit.source_id))?.scale===category);}
+    async function units(z,x,y,signal){const meta=await sources(signal);let data;try {data=await fullTile(z,x,y,signal);}catch(error){if(signal?.aborted)throw error;data=await p.readTile(z,x,y,signal);}const selected=data.filter(f=>meta.get(Number(f.unit.source_id))?.scale===category);Object.defineProperty(selected,'lines',{value:(data.lines||[]).filter(f=>meta.get(Number(f.properties.source_id))?.scale===category)});return selected;}
     const maxzoom={large:14,medium:8,small:5}[category];
     const adapter={id:'scale-'+category,render:{tiles:['geology-scale://'+category+'/{z}/{x}/{y}'],tileSize:256,maxzoom},
       async inspect(lng,lat,level,signal){const z=Math.min(maxzoom,p.zoom(level)),[px,py]=p.tilePoint(lng,lat,z);const selected=(await units(z,Math.floor(px),Math.floor(py),signal)).filter(f=>p.contains(f.rings,(px%1)*f.extent,(py%1)*f.extent)).at(-1);return selected?[selected.unit]:[];},
       readFeatures:units,
       async legend(boxes,level,signal){return p.scanLegend(boxes,Math.min(maxzoom,level),signal,units);},
-      async paint(z,x,y,signal){const canvas=root.document.createElement('canvas');canvas.width=canvas.height=256;const ctx=canvas.getContext('2d');for(const f of await units(z,x,y,signal))draw(ctx,{...f,factor:1,offsetX:0,offsetY:0},f.unit.color||'#bcbcbc');return canvas;}
+      async paint(z,x,y,signal){const canvas=root.document.createElement('canvas');canvas.width=canvas.height=256;const ctx=canvas.getContext('2d');const data=await units(z,x,y,signal);for(const f of data)draw(ctx,{...f,factor:1,offsetX:0,offsetY:0},f.unit.color||'#bcbcbc');for(const line of data.lines)drawLine(ctx,line);if(signal?.aborted)throw new DOMException('Aborted','AbortError');return canvas;}
     };scaleProviders.set(category,adapter);return adapter;}
   const scaleRegistered=new WeakSet();
   function registerScales(gl){if(scaleRegistered.has(gl))return;gl.addProtocol('geology-scale',async(request,controller)=>{const m=request.url.match(/geology-scale:\/\/(large|medium|small)\/(\d+)\/(\d+)\/(\d+)/);if(!m)throw Error('Invalid scale tile');const canvas=await scaleProvider(m[1]).paint(...m.slice(2).map(Number),controller.signal);const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));return {data:await blob.arrayBuffer()};});scaleRegistered.add(gl);}
