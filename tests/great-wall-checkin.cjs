@@ -7,7 +7,7 @@ const source=fs.readFileSync('great-wall.js','utf8').replace('root.GreatWall={in
 vm.runInContext(source,context);
 context.GreatWall.init({state:()=>state,language:()=> 'zh',saveCheckins:()=>saves++,render:()=>renders++});
 const point={id:'wall-a',properties:{name:'同名关隘',source:'ovital',category:'pass',originalId:'a'},geometry:{type:'Point',coordinates:[116,40]}};
-const other={...point,id:'wall-b'};
+const other={...point,id:'wall-b',geometry:{type:'Point',coordinates:[117,40]}};
 const line={...point,geometry:{type:'LineString',coordinates:[[116,40],[117,40]]}};
 assert(!context.GreatWall.html(line,true).includes('data-wall-checkin'));
 assert(!source.includes('function displayFeatures'));
@@ -19,7 +19,9 @@ const key=context.GreatWall.visitKey(point),event={target:{closest:()=>({dataset
 handler(event);assert(context.GreatWall.visited(point));assert(!context.GreatWall.visited(other));
 assert.equal(JSON.parse(JSON.stringify(state)).checklistMarks[0],key,'record survives existing archive serialization');
 assert(context.GreatWall.html(point,true).includes('取消打卡'));
-context.GreatWall.setData({features:[point,other]});
+const duplicate={...point,id:'station-a',properties:{...point.properties,source:'greatwall-station'}};
+context.GreatWall.setData({features:[point,other,duplicate]});
+state.mapOverlays.greatWall=true;assert.equal(context.GreatWall.filtered().features.length,2,'same-name nearby duplicate hidden; distant namesake retained');
 state.mapOverlays.greatWall=false;state.mapOverlays.checkins=true;
 assert(context.GreatWall.hasVisibleFeatures());assert.equal(context.GreatWall.filtered().features.length,1);
 state.mapOverlays.checkins=false;assert(!context.GreatWall.hasVisibleFeatures());assert.equal(context.GreatWall.filtered().features.length,0);

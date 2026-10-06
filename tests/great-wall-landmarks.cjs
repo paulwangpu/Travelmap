@@ -12,13 +12,15 @@ for(const name of ['山海关长城博物馆','山海关东一台','慕田峪村
 const original=JSON.parse(fs.readFileSync(require.resolve('../data/great-wall/features.geojson'),'utf8'));
 const snapshot=JSON.stringify(original);
 api.setData(original);api.setConfig({state:()=>({mapOverlays:{greatWall:true}})});
-const rendered=api.filtered();assert.equal(rendered.features.length,original.features.length);
+const rendered=api.filtered();assert(rendered.features.length<=original.features.length);
+assert.equal(rendered.features.filter(f=>f.geometry.type==='Point'&&f.properties.name==='宣府镇').length,1);
+assert.equal(rendered.features.filter(f=>f.geometry.type!=='Point').length,original.features.filter(f=>f.geometry.type!=='Point').length);
 assert.equal(JSON.stringify(original),snapshot);
 assert.equal(rendered.features.filter(f=>f.geometry.type==='Point'&&f.properties.name==='山海关'&&f.properties.labelRepresentative).length,1);
 assert.ok(rendered.features.some(f=>f.properties.name==='老龙头'&&f.properties.landmarkTier===1));
 api.setConfig({state:()=>({mapOverlays:{greatWall:true,greatWallCategories:{pass:false}}})});
 assert.ok(api.filtered().features.some(f=>f.properties.name==='山海关'&&f.properties.labelRepresentative));
-assert.match(code,/\[\[0,11,12\],\[1,7,13\],\[2,5,14\]\]/);
+assert.match(code,/\[\[0,11,12\],\[1,7,12\],\[2,5,12\]\]/);
 assert.match(code,/'text-allow-overlap':false/);
 assert.match(code,/'text-color':color/);
 assert.ok(code.includes('color:${detailColor(p)}'));
