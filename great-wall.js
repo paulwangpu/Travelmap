@@ -24,12 +24,12 @@
   function iconSvg(key, color = colors[key] || colors.unknown) { return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="${iconPaths[key] || iconPaths.unknown}" fill="white" stroke="${color}" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>`; }
   function legendSymbol(key) {return key==='wall'||key==='lost'?`<i class="wall-line${key==='lost'?' approximate':''}" style="border-color:${eras.ming[2]}" aria-hidden="true"></i>`:iconSvg(key,eras.ming[2]);}
   function installIcons(map) {
-    for(const key of Object.keys(categories)) for(const era of ['',...Object.keys(eras),'other']) {
-      const id='great-wall-icon-'+key+(era?'-'+era:'');if(map.hasImage(id))continue;
+    for(const key of Object.keys(categories)) for(const era of ['',...Object.keys(eras),'other']) for(const checked of [false,true]) {
+      const id='great-wall-icon-'+key+(era?'-'+era:'')+(checked?'-visited':'');if(map.hasImage(id))continue;
       const canvas=document.createElement('canvas');canvas.width=canvas.height=48;
       const ctx=canvas.getContext('2d');ctx.scale(2,2);const path=new Path2D(iconPaths[key]);
       ctx.fillStyle='white';ctx.strokeStyle=era==='other'?'#5b6470':(eras[era]?.[2]||colors[key]);ctx.lineWidth=1.7;ctx.lineCap=ctx.lineJoin='round';
-      ctx.fill(path);ctx.stroke(path);map.addImage(id,ctx.getImageData(0,0,48,48),{pixelRatio:2});
+      ctx.fill(path);ctx.stroke(path);if(checked){ctx.beginPath();ctx.arc(18,18,5,0,Math.PI*2);ctx.fillStyle='#208765';ctx.fill();ctx.beginPath();ctx.moveTo(15.5,18);ctx.lineTo(17.3,20);ctx.lineTo(20.5,16);ctx.strokeStyle='white';ctx.lineWidth=1.5;ctx.stroke();}map.addImage(id,ctx.getImageData(0,0,48,48),{pixelRatio:2});
     }
   }
   const eras={'spring-autumn':['春秋战国','Spring / Warring States','#7b3294'],qin:['秦代','Qin','#d32f2f'],han:['汉代','Han','#1565c0'],'northern-wei':['北朝','Northern Dynasties','#008044'],'liao-jin':['辽金','Liao / Jin','#ce5c00'],ming:['明代','Ming','#c21875']};
@@ -83,10 +83,10 @@
   function landmarkTier(p) {return landmarkGroups.find(([,names])=>names.includes(p.name))?.[0]||0;}
   function filtered() {
     const hidden=config.state().mapOverlays?.greatWallCategories||{};
-    const features=(data?.features||[]).filter(f=>hidden[f.properties.category]!==false).map(f=>({...f,properties:{...f.properties,landmarkTier:f.geometry.type==='Point'?landmarkTier(f.properties):0,labelRepresentative:true,displayColor:detailColor(f.properties),iconKey:f.properties.category+(detailEra(f.properties)?'-'+detailEra(f.properties):'')}}));
+    const features=(data?.features||[]).filter(f=>config.state().mapOverlays?.greatWall?hidden[f.properties.category]!==false:config.state().mapOverlays?.checkins!==false&&visited(f)).map(f=>({...f,properties:{...f.properties,wallId:String(f.id||`${f.properties.source}:${f.properties.originalId}`),visited:visited(f),landmarkTier:f.geometry.type==='Point'?landmarkTier(f.properties):0,labelRepresentative:true,displayColor:detailColor(f.properties),iconKey:f.properties.category+(detailEra(f.properties)?'-'+detailEra(f.properties):'')}}));
     for(const [,names] of landmarkGroups) {
       const candidates=features.filter(f=>f.geometry.type==='Point'&&names.includes(f.properties.name));
-      candidates.sort((a,b)=>Number(b.properties.category==='pass')-Number(a.properties.category==='pass')||String(a.id).localeCompare(String(b.id)));
+      candidates.sort((a,b)=>Number(b.properties.visited)-Number(a.properties.visited)||Number(b.properties.category==='pass')-Number(a.properties.category==='pass')||String(a.id).localeCompare(String(b.id)));
       // Retain every source feature, but don't repeat a famous site's early label.
       candidates.slice(1).forEach(f=>f.properties.labelRepresentative=false);
     }
@@ -104,8 +104,12 @@
       await historyPending;
     }
   }
-  function historyFeatures() {return {type:'FeatureCollection',features:config.state().mapOverlays?.greatWallHistory?(historyData?.features||[]).filter(f=>config.state().mapOverlays?.greatWallHistoryEras?.[f.properties.dynasty]!==false):[]};}
-  function html(f, full) {
+  function hasVisibleFeatures(){return Boolean(config.state().mapOverlays?.greatWall||(config.state().mapOverlays?.checkins!==false&&(config.state().checklistMarks||[]).some(key=>key.startsWith('greatWall:'))));}
+  function historyFeatures() {return {type:'FeatureCollection',features:config.state().mapOverlays?.greatWall&&config.state().mapOverlays?.greatWallHistory?(historyData?.features||[]).filter(f=>config.state().mapOverlays?.greatWallHistoryEras?.[f.properties.dynasty]!==false):[]};}
+  function visitKey(f){const p=f.properties;return 'greatWall:'+String(p.wallId||f.id||`${p.source||'local'}:${p.originalId||p.name}`);}
+  function visited(f){return (config.state().checklistMarks||[]).includes(visitKey(f));}
+  function html(f,full){const content=detailHtml(f,full);return full&&f.geometry?.type==='Point'?content+`<button class="popup-action" type="button" data-wall-checkin="${esc(visitKey(f))}" aria-pressed="${visited(f)}">${visited(f)?(en()?'Cancel check-in':'取消打卡'):(en()?'Check in':'打卡')}</button>`:content;}
+  function detailHtml(f, full) {
     if(f.properties.source==='great-wall-archive') {
       const p=f.properties;return `<div class="great-wall-info"><strong>${esc(en()?p.nameEn:p.name)}</strong><small>${esc(en()?p.dynastyEn:p.dynastyZh)} · ${esc(label(p.category))}</small>${full?datingDetails(p)+archiveDetails(p):''}</div>`;
     }
@@ -151,10 +155,10 @@
   function sync(map) {
     const token=++revision; clear();
     if(!map)return;
-    const enabled=config.state().mapOverlays?.greatWall;
+    const enabled=hasVisibleFeatures();
     if(!enabled){map.getCanvas().style.cursor='';for(const l of [...(map.getStyle()?.layers||[])].reverse())if(l.id.startsWith('great-wall-'))map.removeLayer(l.id);for(const id of ['great-wall-geometry','great-wall-points','great-wall-history'])if(map.getSource(id))map.removeSource(id);return;}
     const apply=()=>{
-      if(token!==revision||!config.state().mapOverlays?.greatWall||map!==config.map())return;
+      if(token!==revision||!hasVisibleFeatures()||map!==config.map())return;
       if(!map.isStyleLoaded()){map.once('idle',apply);return;}
       const all=filtered(), points={type:'FeatureCollection',features:all.features.filter(f=>f.geometry.type==='Point')}, shapes={type:'FeatureCollection',features:all.features.filter(f=>f.geometry.type!=='Point')};
       installIcons(map);
@@ -166,31 +170,31 @@
       const color=['get','displayColor'];
       add({id:'great-wall-area',source:'great-wall-geometry',type:'fill',filter:['==',['geometry-type'],'Polygon'],paint:{'fill-color':'#8e4829','fill-opacity':.08}});
       for(const approximate of [false,true])add({id:'great-wall-'+(approximate?'approximate':'line'),source:'great-wall-geometry',type:'line',filter:['==',['boolean',['get','approximate'],false],approximate],paint:{'line-color':color,'line-width':['interpolate',['linear'],['zoom'],3,1,12,2.2,19,3.2],...(approximate?{'line-dasharray':[3,2]}:{})}});
-      add({id:'great-wall-point',source:'great-wall-points',type:'symbol',layout:{'icon-image':['concat','great-wall-icon-',['get','iconKey']],'icon-size':['interpolate',['linear'],['zoom'],3,['match',['get','landmarkTier'],2,.65,1,.575,.5],9,['match',['get','landmarkTier'],2,.91,1,.805,.7],14,['match',['get','landmarkTier'],2,1.17,1,1.035,.9]],'icon-allow-overlap':true,'icon-ignore-placement':true}});
-      for(const [tier,minzoom,size] of [[0,11,12],[1,7,13],[2,5,14]]) add({id:tier===0?'great-wall-label':'great-wall-label-'+tier,source:'great-wall-points',type:'symbol',minzoom,filter:['all',['==',['get','landmarkTier'],tier],['==',['get','labelRepresentative'],true]],layout:{'text-field':en()?['coalesce',['get','nameEn'],['get','name']]:['get','name'],'text-size':size,'text-offset':[0,1.2],'text-variable-anchor':['top','bottom','left','right'],'text-padding':4,'symbol-sort-key':tier===0?2:2-tier,'text-allow-overlap':false},paint:{'text-color':color,'text-halo-color':'#fff','text-halo-width':1.5}});
+      add({id:'great-wall-point',source:'great-wall-points',type:'symbol',layout:{'icon-image':['concat','great-wall-icon-',['get','iconKey'],['case',['==',['get','visited'],true],'-visited','']],'icon-size':['interpolate',['linear'],['zoom'],3,['match',['get','landmarkTier'],2,.65,1,.575,.5],9,['match',['get','landmarkTier'],2,.91,1,.805,.7],14,['match',['get','landmarkTier'],2,1.17,1,1.035,.9]],'icon-allow-overlap':true,'icon-ignore-placement':true}});
+      for(const [tier,minzoom,size] of [[0,11,12],[1,7,13],[2,5,14]]) add({id:tier===0?'great-wall-label':'great-wall-label-'+tier,source:'great-wall-points',type:'symbol',minzoom,filter:['all',['==',['get','landmarkTier'],tier],['==',['get','labelRepresentative'],true]],layout:{'text-field':['concat',['case',['==',['get','visited'],true],'✓ ',''],en()?['coalesce',['get','nameEn'],['get','name']]:['get','name']],'text-size':size,'text-offset':[0,1.2],'text-variable-anchor':['top','bottom','left','right'],'text-padding':4,'symbol-sort-key':tier===0?2:2-tier,'text-allow-overlap':false},paint:{'text-color':color,'text-halo-color':'#fff','text-halo-width':1.5}});
       status(historyError); legend(); config.front();
       if(!bound.has(map)) {bound.add(map);const hits=e=>{const ids=['great-wall-point','great-wall-label','great-wall-label-1','great-wall-label-2','great-wall-line','great-wall-approximate','great-wall-area','great-wall-history-line'].filter(id=>map.getLayer(id));const found=ids.length?map.queryRenderedFeatures([[e.point.x-12,e.point.y-12],[e.point.x+12,e.point.y+12]],{layers:ids}):[];return found.sort((a,b)=>Number(a.properties.source==='wikipedia-kmz')-Number(b.properties.source==='wikipedia-kmz'));};
-        map.on('mousemove',e=>{if(!config.state().mapOverlays?.greatWall)return;const f=hits(e)[0];hover?.remove();hover=null;if(f){map.getCanvas().style.cursor='pointer';hover=new maplibregl.Popup({closeButton:false,closeOnClick:false,offset:10,maxWidth:'220px',className:'great-wall-hover'}).setLngLat(e.lngLat).setHTML(html(f,false)).addTo(map);}else if(map.getCanvas().style.cursor==='pointer')map.getCanvas().style.cursor='';});
+        map.on('mousemove',e=>{if(!hasVisibleFeatures())return;const f=hits(e)[0];hover?.remove();hover=null;if(f){map.getCanvas().style.cursor='pointer';hover=new maplibregl.Popup({closeButton:false,closeOnClick:false,offset:10,maxWidth:'220px',className:'great-wall-hover'}).setLngLat(e.lngLat).setHTML(html(f,false)).addTo(map);}else if(map.getCanvas().style.cursor==='pointer')map.getCanvas().style.cursor='';});
         map.on('mouseout',()=>{hover?.remove();hover=null;});
-        map.on('click',e=>{if(!config.state().mapOverlays?.greatWall)return;const f=hits(e)[0];if(!f)return;pinned?.remove();hover?.remove();pinned=new maplibregl.Popup({offset:10,maxWidth:'340px',className:'great-wall-pinned'}).setLngLat(e.lngLat).setHTML(html(f,true)).addTo(map);});
+        map.on('click',e=>{if(!hasVisibleFeatures())return;const f=hits(e)[0];if(!f)return;pinned?.remove();hover?.remove();pinned=new maplibregl.Popup({offset:10,maxWidth:'340px',className:'great-wall-pinned'}).setLngLat(e.lngLat).setHTML(html(f,true)).addTo(map);});
       }
     };
-    if(data&&(!config.state().mapOverlays?.greatWallHistory||historyData))apply();else {status(en()?'Loading…':'加载中…');loadView().then(apply).catch(()=>{if(token===revision)status(en()?'Load failed — toggle to retry':'加载失败，请重新开启重试');});}
+    if(data&&(!config.state().mapOverlays?.greatWallHistory||historyData))apply();else {status(en()?'Loading…':'加载中…');loadView().then(apply).catch(error=>{console.warn('Great Wall render failed',error);if(token===revision)status(en()?'Load failed — toggle to retry':'加载失败，请重新开启重试');});}
   }
   function leaflet(map,group) {
-    leafletLabelCleanup?.();leafletLabelCleanup=null;leafletGroup?.remove();leafletGroup=null;if(!config.state().mapOverlays?.greatWall)return;
-    const apply=()=>{if(!config.state().mapOverlays?.greatWall||group!==config.leafletGroup())return;
+    leafletLabelCleanup?.();leafletLabelCleanup=null;leafletGroup?.remove();leafletGroup=null;if(!hasVisibleFeatures())return;
+    const apply=()=>{if(!hasVisibleFeatures()||group!==config.leafletGroup())return;
       if(!map.getPane('greatWallPane'))map.createPane('greatWallPane').style.zIndex='390';
       if(!map.getPane('greatWallHistoryPane'))map.createPane('greatWallHistoryPane').style.zIndex='389';
       leafletGroup=L.layerGroup().addTo(group);
       L.geoJSON(historyFeatures(),{pane:'greatWallHistoryPane',style:f=>({color:eras[f.properties.dynasty]?.[2]||'#795548',weight:4,opacity:0.5,dashArray:'0.1 8',lineCap:'round',lineJoin:'round'}),onEachFeature:(f,l)=>l.bindTooltip(html(f,false)).bindPopup(html(f,true),{maxWidth:340})}).addTo(leafletGroup);
       const landmarkLabels=[];
-      L.geoJSON(filtered(),{pane:'greatWallPane',style:f=>({color:detailColor(f.properties),weight:2,dashArray:f.properties.approximate?'6 4':null,fillOpacity:.08}),pointToLayer:(f,ll)=>{const size=f.properties.landmarkTier===2?26:f.properties.landmarkTier===1?23:20;return L.marker(ll,{pane:'greatWallPane',icon:L.divIcon({className:'great-wall-marker',html:iconSvg(f.properties.category,detailColor(f.properties)),iconSize:[size,size],iconAnchor:[size/2,size/2]})});},onEachFeature:(f,l)=>{l.bindTooltip(html(f,false)).bindPopup(html(f,true),{maxWidth:340});if(f.properties.landmarkTier&&f.properties.labelRepresentative)landmarkLabels.push({f,l});}}).addTo(leafletGroup);
+      L.geoJSON(filtered(),{pane:'greatWallPane',style:f=>({color:detailColor(f.properties),weight:2,dashArray:f.properties.approximate?'6 4':null,fillOpacity:.08}),pointToLayer:(f,ll)=>{const size=f.properties.landmarkTier===2?26:f.properties.landmarkTier===1?23:20;return L.marker(ll,{pane:'greatWallPane',icon:L.divIcon({className:'great-wall-marker',html:root.HistoricalPeriods.visitedSvg(iconSvg(f.properties.category,detailColor(f.properties)),f.properties.visited),iconSize:[size,size],iconAnchor:[size/2,size/2]})});},onEachFeature:(f,l)=>{l.bindTooltip(html(f,false)).bindPopup(html(f,true),{maxWidth:340});if(f.geometry.type==='Point'&&(f.properties.landmarkTier||f.properties.visited)&&f.properties.labelRepresentative)landmarkLabels.push({f,l});}}).addTo(leafletGroup);
       const updateLabels=()=>{
         const placed=[];
         for(const {f,l} of landmarkLabels.sort((a,b)=>b.f.properties.landmarkTier-a.f.properties.landmarkTier)) {
-          const p=f.properties,xy=map.latLngToContainerPoint(l.getLatLng()),name=en()?(p.nameEn||p.name):p.name,width=Math.max(60,String(name).length*14);
-          const visible=map.getZoom()>=(p.landmarkTier===2?5:7)&&map.getBounds().contains(l.getLatLng())&&!placed.some(b=>Math.abs(b.x-xy.x)<(b.width+width)/2&&Math.abs(b.y-xy.y)<32);
+          const p=f.properties,xy=map.latLngToContainerPoint(l.getLatLng()),name=(p.visited?'✓ ':'')+(en()?(p.nameEn||p.name):p.name),width=Math.max(60,String(name).length*14);
+          const visible=map.getZoom()>=(p.landmarkTier===2?5:p.landmarkTier===1?7:11)&&map.getBounds().contains(l.getLatLng())&&!placed.some(b=>Math.abs(b.x-xy.x)<(b.width+width)/2&&Math.abs(b.y-xy.y)<32);
           l.unbindTooltip();l.bindTooltip(visible?`<span style="color:${detailColor(p)};font-size:${p.landmarkTier===2?14:13}px">${esc(name)}</span>`:html(f,false),{permanent:visible,direction:'top'});if(visible){l.openTooltip();placed.push({x:xy.x,y:xy.y,width});}
         }
       };
@@ -200,6 +204,6 @@
   function init(options) {config=options;document.getElementById('showGreatWallOnMap').addEventListener('change',e=>{config.state().mapOverlays.greatWall=e.target.checked;clear();config.save();config.render();});document.getElementById('greatWallCategories').addEventListener('change',e=>{const k=e.target.dataset.wallCategory,all=e.target.hasAttribute('data-wall-all');if(!k&&!all)return;const o=config.state().mapOverlays;o.greatWallCategories=all?Object.fromEntries(Object.keys(categories).map(key=>[key,e.target.checked])):{...o.greatWallCategories,[k]:e.target.checked};clear();config.save();config.render();});}
   const originalInit=init;
   function bindEraControls() {document.getElementById('greatWallHistoryEras').addEventListener('change',e=>{const key=e.target.dataset.wallEra;if(!Object.hasOwn(eras,key))return;const overlays=config.state().mapOverlays;overlays.greatWallHistoryEras={...overlays.greatWallHistoryEras,[key]:e.target.checked};clear();config.save();config.render();});}
-  init=function(options){originalInit(options);bindEraControls();const selectAll=document.getElementById('greatWallSelectAll');selectAll.addEventListener('click',e=>e.stopPropagation());selectAll.addEventListener('change',e=>{config.state().mapOverlays.greatWallCategories=Object.fromEntries(Object.keys(categories).map(key=>[key,e.target.checked]));clear();config.save();config.render();});const historyToggle=document.getElementById('showGreatWallHistory');historyToggle.addEventListener('click',e=>e.stopPropagation());historyToggle.addEventListener('change',e=>{config.state().mapOverlays.greatWallHistory=e.target.checked;historyError='';clear();config.save();config.render();});};
+  init=function(options){originalInit(options);document.addEventListener("click",e=>{const button=e.target.closest?.("[data-wall-checkin]");if(!button)return;e.preventDefault();e.stopPropagation();const key=button.dataset.wallCheckin,marks=new Set(config.state().checklistMarks||[]);if(marks.has(key))marks.delete(key);else marks.add(key);config.state().checklistMarks=[...marks];config.saveCheckins();clear();config.render();});bindEraControls();const selectAll=document.getElementById('greatWallSelectAll');selectAll.addEventListener('click',e=>e.stopPropagation());selectAll.addEventListener('change',e=>{config.state().mapOverlays.greatWallCategories=Object.fromEntries(Object.keys(categories).map(key=>[key,e.target.checked]));clear();config.save();config.render();});const historyToggle=document.getElementById('showGreatWallHistory');historyToggle.addEventListener('click',e=>e.stopPropagation());historyToggle.addEventListener('change',e=>{config.state().mapOverlays.greatWallHistory=e.target.checked;historyError='';clear();config.save();config.render();});};
   root.GreatWall={init,legend,sync,leaflet,categories};
 })(globalThis);

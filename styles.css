@@ -7643,8 +7643,8 @@ button:hover {
 .geology-detail-popup .leaflet-popup-content { width:min(320px,calc(100vw - 96px)) !important; }
 .geology-detail-popup .leaflet-popup-content .geology-detail { width:100%; }
 .geology-detail-header { flex-wrap:wrap; }
-.geology-detail-tabs { overflow-x:auto; scrollbar-width:thin; }
-.geology-detail-tabs button { min-width:58px; white-space:nowrap; flex-shrink:0; font-size:11px; }
+.geology-detail-tabs { min-width:0; }
+.geology-detail-tabs button { flex:1 1 0; min-width:0; white-space:normal; overflow-wrap:anywhere; font-size:12px; line-height:1.5; }
 
 
 .geology-age-heading[hidden], #geologyAttribution[hidden] { display:none !important; }

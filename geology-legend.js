@@ -190,7 +190,7 @@
           : (en ? "No geology data is available here." : "此处暂无地质数据。")));
       if (displayed.length > 1) body.append(node("p", en ? "Overlapping displayed units / boundary." : "此处位于重叠地质单元或边界。"));
       for (const [i,group] of groups.entries()) {
-        const button = node("button", group.label + (group.current ? (en ? ' · Current' : ' · 当前') : !displayed.length && i === selectedIndex ? (en ? ' · Selected mode' : ' · 已选模式') : '')); button.type="button"; button.setAttribute("role","tab"); button.id = 'geology-tab-'+request+'-'+i;
+        const button = node("button", group.label); button.type="button"; button.setAttribute("role","tab"); button.id = 'geology-tab-'+request+'-'+i;
         panels[i].id='geology-panel-'+request+'-'+i; panels[i].setAttribute("role","tabpanel"); panels[i].setAttribute("aria-labelledby",button.id); button.setAttribute("aria-controls",panels[i].id);
         const select = () => { buttons.forEach((b,j)=>{b.setAttribute("aria-selected",String(i===j)); b.tabIndex=i===j?0:-1; panels[j].hidden=i!==j;}); if (leaflet) popup.update(); else popup.setDOMContent(content); };
         button.addEventListener("click",select);

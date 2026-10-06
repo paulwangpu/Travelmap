@@ -15,7 +15,7 @@ const mapControlsStorageKey = "travel-map-controls-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "2.2.3";
+const appVersion = "2.2.4";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 339;
@@ -9969,7 +9969,8 @@ function mapLayerOrder(layer) {
   if (id.startsWith("great-wall-") && layer.type !== "symbol") return 60;
   if (source === "imported-paths" || id.startsWith("flight-routes")) return 70;
   if (id === "earthquake-points" || id === "volcano-points") return 80;
-  if (/^(map-points|ancient-capital|imperial-tomb|great-wall-(point|label)|visited-area)/.test(id)) return 90;
+  if (/^(ancient-capital|imperial-tomb|great-wall-(point|label))/.test(id)) return 100;
+  if (/^(map-points|visited-area)/.test(id)) return 90;
   return 40;
 }
 
@@ -11437,7 +11438,7 @@ function renderLeafletLayers() {
         const title = mapCheckinTitle(visit.place);
         const subtitle = mapCheckinSubtitle(visit.place);
         const historical=historicalCheckinTheme(visit.place);
-        const marker = historical ? L.marker([displayLat,displayLng],{icon:L.divIcon({className:'imperial-tomb-marker',html:HistoricalPeriods.visitedSvg(historical.svg,true),iconSize:[18,18],iconAnchor:[9,9]})}).bindTooltip('✓ '+title) : L.circleMarker([displayLat, displayLng], {
+        const marker = historical ? L.marker([displayLat,displayLng],{zIndexOffset:1000,icon:L.divIcon({className:'imperial-tomb-marker',html:HistoricalPeriods.visitedSvg(historical.svg,true),iconSize:[18,18],iconAnchor:[9,9]})}).bindTooltip('✓ '+title) : L.circleMarker([displayLat, displayLng], {
           radius: 4,
           color: "#111827",
           weight: 2,
@@ -11455,7 +11456,7 @@ function renderLeafletLayers() {
 
   checklistOverlayPlaces().forEach((entry) => {
     const [displayLng, displayLat] = mapDisplayCoordinate(entry.lng, entry.lat);
-    const marker = entry.key === "chinaAncientCapitals" ? L.marker([displayLat, displayLng], {icon: L.divIcon({className: "imperial-tomb-marker", html: HistoricalPeriods.visitedSvg(HistoricalPeriods.capitalSvg(HistoricalPeriods.capitalTheme(ancientCapitalMapMeta(entry.item), state.mapOverlays?.ancientCapitalPeriods).color), entry.done), iconSize: [18,18], iconAnchor: [9,9]})}) : L.circleMarker([displayLat, displayLng], {
+    const marker = entry.key === "chinaAncientCapitals" ? L.marker([displayLat, displayLng], {zIndexOffset:1000,icon: L.divIcon({className: "imperial-tomb-marker", html: HistoricalPeriods.visitedSvg(HistoricalPeriods.capitalSvg(HistoricalPeriods.capitalTheme(ancientCapitalMapMeta(entry.item), state.mapOverlays?.ancientCapitalPeriods).color), entry.done), iconSize: [18,18], iconAnchor: [9,9]})}) : L.circleMarker([displayLat, displayLng], {
       radius: entry.done ? 4 : 3,
       color: entry.done ? "#111827" : "rgba(17, 24, 39, 0.5)",
       weight: entry.done ? 2 : 1,
@@ -16140,7 +16141,7 @@ function showPage(pageId, targetId = "") {
 
 setLoadingDebug("读取本地快速状态", "pending");
 GreatWall.init({ state: () => state, language: () => currentLanguage, map: () => mapLibreMap,
-  leafletGroup: () => leafletLayers, front: bringMapLibrePointLayersToFront,
+  leafletGroup: () => leafletLayers, front: bringMapLibrePointLayersToFront, saveCheckins: saveState,
   save: saveUiStateSoon, render: () => { renderMapControls(); renderGeoMap(); } });
 ImperialTombs.init({ state: () => state, language: () => currentLanguage, fetch: fetchJson,
   isVisited: item => isChecklistItemDone("imperialTombs", item.name),
@@ -16920,7 +16921,7 @@ if ("serviceWorker" in navigator && location.protocol !== "file:") {
     });
   });
   window.addEventListener("load", () => {
-navigator.serviceWorker.register("./sw.js?v=844", { updateViaCache: "none" })
+navigator.serviceWorker.register("./sw.js?v=850", { updateViaCache: "none" })
       .then((registration) => registration.update())
       .catch((error) => console.warn("Service Worker registration failed", error));
   });
