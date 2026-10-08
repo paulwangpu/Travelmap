@@ -15,7 +15,7 @@ const mapControlsStorageKey = "travel-map-controls-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "2.2.5";
+const appVersion = "2.2.6";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 339;
@@ -850,7 +850,7 @@ function t(key) {
 }
 
 function defaultMapOverlays() {
-return { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, geology: false, countryBorders: false, ethnicRegions: false, ethnicRegionsOpacity: 45, arcgisWater: false, arcgisWaterEsri: true, arcgisWaterHydroRivers: true, earthquakes: false, volcanoes: false, china5a: false, chinaAncientCapitals: false, imperialTombs: false, imperialTombsIncludeFeudalKings: true, imperialTombsOnlyVisitableChambers: false, imperialTombsEra: "", greatWall: false, greatWallHistory: false, worldHeritage: false, highAltitude: false };
+return { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, geology: false, countryBorders: false, ethnicRegionsSource: "greg", languageColorMode: "affinity", ethnicRegions: false, ethnicRegionsOpacity: 45, arcgisWater: false, arcgisWaterEsri: true, arcgisWaterHydroRivers: true, earthquakes: false, volcanoes: false, china5a: false, chinaAncientCapitals: false, imperialTombs: false, imperialTombsIncludeFeudalKings: true, imperialTombsOnlyVisitableChambers: false, imperialTombsEra: "", greatWall: false, greatWallHistory: false, worldHeritage: false, highAltitude: false };
 }
 
 function normalizeMapOverlays(overlays = {}) {
@@ -874,7 +874,9 @@ function normalizeMapOverlays(overlays = {}) {
     geologyOpacity: Number.isFinite(Number(overlays.geologyOpacity)) ? Math.max(0, Math.min(100, Number(overlays.geologyOpacity))) : 65,
     railwayMode: overlays.railwayMode === "raster" ? "raster" : "vector",
     countryBorders: Boolean(overlays.countryBorders),
-    ethnicRegionsSource: overlays.ethnicRegionsSource === "greg" ? "greg" : "geoepr",
+    ethnicRegionsSource: ["geoepr", "language"].includes(overlays.ethnicRegionsSource) ? overlays.ethnicRegionsSource : "greg",
+    languageHiddenFamilies: Array.isArray(overlays.languageHiddenFamilies) ? [...new Set(overlays.languageHiddenFamilies.filter(key => typeof key === "string"))] : [],
+    languageColorMode: overlays.languageColorMode === "language" ? "language" : "affinity",
     ethnicRegions: Boolean(overlays.ethnicRegions),
     ethnicRegionsOpacity: Number.isFinite(Number(overlays.ethnicRegionsOpacity)) ? Math.max(0, Math.min(100, Number(overlays.ethnicRegionsOpacity))) : 45,
     arcgisWater: Boolean(overlays.arcgisWater ?? overlays.hydroRivers),

@@ -1,0 +1,5200 @@
+{
+  "source": "Wikidata Query Service, P1394 exact Glottolog code match; zh/zh-hans labels",
+  "retrieved": "2026-10-07",
+  "license": "CC0",
+  "added": 865,
+  "translated": 1149,
+  "total": 4062,
+  "entries": [
+    {
+      "code": "abkh1244",
+      "original": "Abkhaz",
+      "zh": "阿布哈兹语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "acha1249",
+      "original": "Longchuan Achang",
+      "zh": "阿昌语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "adyg1241",
+      "original": "West Circassian",
+      "zh": "阿迪格语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "adze1240",
+      "original": "Adzera",
+      "zh": "阿茨拉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "afro1254",
+      "original": "Afro-Seminole Creole",
+      "zh": "非洲塞米诺尔克尔奥尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "aghu1253",
+      "original": "Aghul",
+      "zh": "阿古尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "agua1253",
+      "original": "Aguaruna",
+      "zh": "阿瓜鲁纳语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "aheu1239",
+      "original": "Thavung",
+      "zh": "他文语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ahte1237",
+      "original": "Ahtena",
+      "zh": "阿特纳语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "aima1241",
+      "original": "Aimaq",
+      "zh": "艾马克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ainu1251",
+      "original": "Ainu (China)",
+      "zh": "艾努语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ajab1235",
+      "original": "Aja (Benin)",
+      "zh": "阿扎语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ajas1235",
+      "original": "Aja (South Sudan)",
+      "zh": "阿扎语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "akeu1235",
+      "original": "Akeu",
+      "zh": "阿克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "akha1245",
+      "original": "Akha",
+      "zh": "阿卡语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "akla1240",
+      "original": "Aklanon",
+      "zh": "阿卡兰语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "alag1248",
+      "original": "Alagwa",
+      "zh": "阿拉瓜语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "alak1253",
+      "original": "Alak",
+      "zh": "阿拉克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "alge1239",
+      "original": "Algerian Arabic",
+      "zh": "阿尔及利亚阿拉伯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "alge1240",
+      "original": "Algerian Saharan Arabic",
+      "zh": "阿尔及利亚撒哈拉阿拉伯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "aluo1235",
+      "original": "Aluo",
+      "zh": "阿罗语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "alur1250",
+      "original": "Alur",
+      "zh": "阿卢尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ambu1247",
+      "original": "Ambulas",
+      "zh": "阿贝兰语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "amdo1237",
+      "original": "Amdo Tibetan",
+      "zh": "安多方言",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "amis1246",
+      "original": "Amis",
+      "zh": "阿美语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "anaa1238",
+      "original": "Anaang",
+      "zh": "阿南语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "andi1255",
+      "original": "Andi",
+      "zh": "安迪语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "anem1249",
+      "original": "Anem",
+      "zh": "阿内姆语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "anga1288",
+      "original": "Angami Naga",
+      "zh": "安加米语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "anga1293",
+      "original": "Angal",
+      "zh": "门第语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ango1254",
+      "original": "Angor",
+      "zh": "安哥尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "anua1242",
+      "original": "Anuak",
+      "zh": "阿努阿克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "aona1235",
+      "original": "Ao Naga",
+      "zh": "奥语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "apal1257",
+      "original": "Apalaí",
+      "zh": "阿帕莱语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "apia1248",
+      "original": "Apiaká",
+      "zh": "阿皮阿卡语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "arao1248",
+      "original": "Araona",
+      "zh": "阿拉奥纳语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "arch1244",
+      "original": "Archi",
+      "zh": "阿奇语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "arem1240",
+      "original": "Arem",
+      "zh": "阿雷姆语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "arhu1242",
+      "original": "Arhuaco",
+      "zh": "阿倮哥语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "arik1262",
+      "original": "Arikara",
+      "zh": "阿里卡拉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "asha1243",
+      "original": "Asháninka",
+      "zh": "阿什宁卡语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ashk1246",
+      "original": "Ashkun",
+      "zh": "阿什昆语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "assi1247",
+      "original": "Assiniboine",
+      "zh": "阿西尼博因语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "asur1254",
+      "original": "Asuri",
+      "zh": "阿苏尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "atay1247",
+      "original": "Atayal",
+      "zh": "泰雅语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "avar1256",
+      "original": "Avar",
+      "zh": "阿瓦尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "awac1238",
+      "original": "Lavia-Awalai-Damangnuo Awa",
+      "zh": "阿佤方言",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "awac1239",
+      "original": "Awa-Cuaiquer",
+      "zh": "阿瓦语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "awee1242",
+      "original": "Aweer",
+      "zh": "阿维尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ayor1240",
+      "original": "Ayoreo",
+      "zh": "扎穆科语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "azha1235",
+      "original": "Azha",
+      "zh": "阿扎语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bagh1251",
+      "original": "Bagheli",
+      "zh": "巴哥里语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "baha1259",
+      "original": "Baharna Arabic",
+      "zh": "巴林阿拉伯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "baha1260",
+      "original": "Bahamas Creole English",
+      "zh": "巴哈马克里奥尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bahn1262",
+      "original": "Bahnar",
+      "zh": "巴拿语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "baim1244",
+      "original": "Baima",
+      "zh": "白马语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bakh1245",
+      "original": "Bakhtiari",
+      "zh": "巴赫蒂亚语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bala1315",
+      "original": "Balantak",
+      "zh": "巴兰塔克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "balt1258",
+      "original": "Balti",
+      "zh": "巴尔蒂语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bang1354",
+      "original": "Bobangi",
+      "zh": "班吉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bang1363",
+      "original": "Bangime",
+      "zh": "班吉梅语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bang1365",
+      "original": "Bangka",
+      "zh": "邦加马来语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bang1368",
+      "original": "Banggai",
+      "zh": "邦盖语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bang1369",
+      "original": "Bangru",
+      "zh": "崩如语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bani1255",
+      "original": "Baniwa do Icana",
+      "zh": "卡鲁语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bant1281",
+      "original": "Bantawa",
+      "zh": "班塔瓦语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bant1286",
+      "original": "Bantik",
+      "zh": "班迪语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "baou1238",
+      "original": "Baoulé",
+      "zh": "巴乌莱语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bara1357",
+      "original": "Baraamu",
+      "zh": "巴拉姆语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bara1361",
+      "original": "Barambu",
+      "zh": "巴兰布语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bare1276",
+      "original": "Baré",
+      "zh": "巴瑞语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "barg1252",
+      "original": "Bargam",
+      "zh": "巴尔加姆语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bari1284",
+      "original": "Bari",
+      "zh": "巴里语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "basa1284",
+      "original": "Basa (Cameroon)",
+      "zh": "巴萨语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "basa1286",
+      "original": "Basap",
+      "zh": "巴萨普语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bask1236",
+      "original": "Basketo",
+      "zh": "巴斯克托语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bass1258",
+      "original": "Bassari-Tanda",
+      "zh": "巴萨里语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bata1288",
+      "original": "Batak Simalungun",
+      "zh": "巴塔克西马隆贡语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bata1289",
+      "original": "Batak Toba",
+      "zh": "多巴巴塔克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bata1292",
+      "original": "Batak Alas-Kluet",
+      "zh": "阿拉斯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bata1293",
+      "original": "Batak Karo",
+      "zh": "卡罗语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bate1262",
+      "original": "Batek",
+      "zh": "巴特克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bath1244",
+      "original": "Bathari",
+      "zh": "拜特赫尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "baub1235",
+      "original": "Bau-Jagoi Bidayuh",
+      "zh": "查格依",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bemb1257",
+      "original": "Bemba (Zambia)",
+      "zh": "本巴语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "beng1280",
+      "original": "Bengali",
+      "zh": "孟加拉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "beri1254",
+      "original": "Berik",
+      "zh": "贝力克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bero1242",
+      "original": "Berom",
+      "zh": "比罗姆语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "besi1244",
+      "original": "Besisi",
+      "zh": "马赫梅里语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "beta1252",
+      "original": "Betawi",
+      "zh": "巴达维语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bezh1248",
+      "original": "Bezhta",
+      "zh": "贝吉塔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bhil1251",
+      "original": "Bhili",
+      "zh": "比尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "biaf1240",
+      "original": "Biafada",
+      "zh": "比亚法达语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "biak1248",
+      "original": "Biak",
+      "zh": "比亚克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bign1238",
+      "original": "Big Nambas",
+      "zh": "Big Nambas语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bili1260",
+      "original": "Bilin",
+      "zh": "比林语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bilu1245",
+      "original": "Bilua",
+      "zh": "比鲁阿语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bima1247",
+      "original": "Bima",
+      "zh": "比马语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bint1246",
+      "original": "Bintulu",
+      "zh": "民都鲁方言",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "birh1242",
+      "original": "Birhor",
+      "zh": "比尔霍尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bish1244",
+      "original": "Bishnupriya Manipuri",
+      "zh": "比什努普里亚-曼尼普尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bisu1244",
+      "original": "Bisu",
+      "zh": "毕苏语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bitt1240",
+      "original": "Bit",
+      "zh": "布兴语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "biyo1243",
+      "original": "Biyo",
+      "zh": "碧约语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "blan1242",
+      "original": "Blang",
+      "zh": "布朗语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "boan1242",
+      "original": "Boano (Maluku)",
+      "zh": "博阿诺语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "boan1243",
+      "original": "Boano (Sulawesi)",
+      "zh": "博亚诺语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bodo1267",
+      "original": "Bodo Gadaba",
+      "zh": "古托布语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bodo1269",
+      "original": "Bodo-Mech",
+      "zh": "博多语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bolo1266",
+      "original": "Bolon",
+      "zh": "博隆语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "boly1239",
+      "original": "Bolyu",
+      "zh": "巴琉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bona1250",
+      "original": "Bonan",
+      "zh": "保安语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bond1245",
+      "original": "Bondo",
+      "zh": "雷莫语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bond1247",
+      "original": "Bondei",
+      "zh": "邦代伊语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bora1263",
+      "original": "Bora",
+      "zh": "博拉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bora1271",
+      "original": "Borana-Arsi-Guji Oromo",
+      "zh": "波拉纳语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bouy1240",
+      "original": "Bouyei",
+      "zh": "布依语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "brah1256",
+      "original": "Brahui",
+      "zh": "布拉灰语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bube1242",
+      "original": "Bube",
+      "zh": "布比语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "buga1247",
+      "original": "Bugan",
+      "zh": "布赓语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bugu1246",
+      "original": "Bugun",
+      "zh": "布贡语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bulu1251",
+      "original": "Bulu (Cameroon)",
+      "zh": "布卢语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "buma1247",
+      "original": "Bumang",
+      "zh": "布芒语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bumt1240",
+      "original": "Bumthangkha",
+      "zh": "布姆唐语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bund1253",
+      "original": "Bundeli",
+      "zh": "本德利语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bunu1267",
+      "original": "Bunun",
+      "zh": "布农语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "bura1292",
+      "original": "Bura-Pabir",
+      "zh": "布拉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "buru1296",
+      "original": "Burushaski",
+      "zh": "布鲁夏斯基语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "butu1244",
+      "original": "Butuanon",
+      "zh": "武端语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "caij1234",
+      "original": "Caijia",
+      "zh": "蔡家话",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "cand1248",
+      "original": "Candoshi-Shapra",
+      "zh": "坎多锡语族",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "caol1238",
+      "original": "Cao Lan",
+      "zh": "山泽语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "capi1239",
+      "original": "Capiznon",
+      "zh": "卡皮塞尼奥语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "caro1242",
+      "original": "Carolinian",
+      "zh": "卡罗莱纳文",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "carr1249",
+      "original": "Central Carrier",
+      "zh": "达凯尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "cent1989",
+      "original": "Central Khmer",
+      "zh": "高棉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "cent2004",
+      "original": "Central Bai",
+      "zh": "白语中部方言",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "cent2050",
+      "original": "Central Kanuri",
+      "zh": "中卡努里语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "cent2100",
+      "original": "Kadazan Dusun",
+      "zh": "中部杜顺语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "cent2127",
+      "original": "Central Alaskan Yupik",
+      "zh": "中阿拉斯加尤皮克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "cent2128",
+      "original": "Central Siberian Yupik",
+      "zh": "中西伯利亚尤皮克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "cham1318",
+      "original": "Chamicuro",
+      "zh": "查米库罗语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "chav1241",
+      "original": "Chavacano",
+      "zh": "查瓦卡诺语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "chep1245",
+      "original": "Chepang",
+      "zh": "切彭语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ches1238",
+      "original": "Chesu",
+      "zh": "车苏语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "chew1245",
+      "original": "Chewong",
+      "zh": "彻翁语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "chha1249",
+      "original": "Chhattisgarhi",
+      "zh": "切蒂斯格尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "chil1280",
+      "original": "Chilcotin-Nicola",
+      "zh": "奇尔科廷语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "chin1476",
+      "original": "China Buriat",
+      "zh": "中国布里亚特语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "chip1262",
+      "original": "Chipaya",
+      "zh": "奇巴亚语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "chit1275",
+      "original": "Chittagonian",
+      "zh": "吉大港语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "chok1245",
+      "original": "Chokwe",
+      "zh": "乔奎语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "chol1282",
+      "original": "Chol",
+      "zh": "乔尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "chon1284",
+      "original": "Chong of Chanthaburi",
+      "zh": "仲语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "chon1285",
+      "original": "Choni",
+      "zh": "卓尼语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "chop1243",
+      "original": "Chopi",
+      "zh": "丘皮语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "chor1273",
+      "original": "Ch'orti'",
+      "zh": "渚庐递语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "chra1242",
+      "original": "Chrau",
+      "zh": "遮罗语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "chru1239",
+      "original": "Chru",
+      "zh": "朱鲁语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "chuj1250",
+      "original": "Chuj",
+      "zh": "祖赫语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "chuk1273",
+      "original": "Chukchi",
+      "zh": "楚科奇语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "chut1247",
+      "original": "Chut",
+      "zh": "哲语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ciac1237",
+      "original": "Cia-Cia",
+      "zh": "吉阿吉阿语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "cofa1242",
+      "original": "Cofán",
+      "zh": "阿依语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "colo1256",
+      "original": "Tsafiki",
+      "zh": "萨菲吉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "coon1239",
+      "original": "Côông",
+      "zh": "贡语 (越南)",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "creo1235",
+      "original": "Guyanese Creole English",
+      "zh": "圭亚那克里奥尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "crow1244",
+      "original": "Crow",
+      "zh": "克罗语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "cube1242",
+      "original": "Cubeo",
+      "zh": "库比奥语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "culi1244",
+      "original": "Culina",
+      "zh": "库利纳语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "cuyo1237",
+      "original": "Cuyonon",
+      "zh": "库约语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "dagb1246",
+      "original": "Dagbani",
+      "zh": "达巴尼语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "daha1245",
+      "original": "Dahalo",
+      "zh": "达哈罗语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "daii1240",
+      "original": "Dai",
+      "zh": "戴语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "dakp1242",
+      "original": "Dakpakha",
+      "zh": "达旺门巴语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "dame1241",
+      "original": "Dameli",
+      "zh": "达梅利语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "dana1252",
+      "original": "Danau",
+      "zh": "达脑语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "dann1241",
+      "original": "Dan",
+      "zh": "但语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "darg1241",
+      "original": "North-Central Dargwa",
+      "zh": "达尔格瓦语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "daur1238",
+      "original": "Dagur",
+      "zh": "达斡尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "dawe1237",
+      "original": "Dawera-Daweloor",
+      "zh": "达韦拉-达韦洛尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "dayy1236",
+      "original": "Day",
+      "zh": "代语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "defa1248",
+      "original": "Defaka",
+      "zh": "Defaka语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "dehu1237",
+      "original": "Dehu",
+      "zh": "德雷胡语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "dend1243",
+      "original": "Dendi (Benin)",
+      "zh": "登迪语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "deni1241",
+      "original": "Deni",
+      "zh": "丹尼语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "dera1245",
+      "original": "Dera (Indonesia)",
+      "zh": "德拉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "dewo1238",
+      "original": "Dewoin",
+      "zh": "代沃因语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "dhao1237",
+      "original": "Dhao",
+      "zh": "恩道语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "dhim1246",
+      "original": "Dhimal",
+      "zh": "狄摩语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "dhun1238",
+      "original": "Dhundari",
+      "zh": "敦达尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "dido1241",
+      "original": "Tsez",
+      "zh": "切兹语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "diga1241",
+      "original": "Tawra",
+      "zh": "达让语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "dima1251",
+      "original": "Dimasa",
+      "zh": "迪马萨语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "diri1252",
+      "original": "Diriku-Shambyu",
+      "zh": "迪利库语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "dong1285",
+      "original": "Dongxiang",
+      "zh": "东乡语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "doya1240",
+      "original": "Doyayo",
+      "zh": "多瓦悠语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "drun1238",
+      "original": "Drung",
+      "zh": "独龙语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "dumi1241",
+      "original": "Dumi",
+      "zh": "杜米语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "dump1243",
+      "original": "Dumpu",
+      "zh": "敦普",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "dung1253",
+      "original": "Dungan",
+      "zh": "东干语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "duri1242",
+      "original": "Duri",
+      "zh": "杜里语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "east2304",
+      "original": "Eastern Balochi",
+      "zh": "东俾路支语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "east2337",
+      "original": "East Yugur",
+      "zh": "东部裕固语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "east2426",
+      "original": "Eastern Maninkakan",
+      "zh": "东部马宁卡语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "east2440",
+      "original": "East Makian",
+      "zh": "塔巴语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "east2563",
+      "original": "Eastern Cham",
+      "zh": "东部占语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "east2690",
+      "original": "Eastern Egyptian Bedawi Arabic",
+      "zh": "西北阿拉伯半岛阿拉伯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "egaa1242",
+      "original": "Ega",
+      "zh": "艾嘉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "egyp1253",
+      "original": "Egyptian Arabic",
+      "zh": "埃及阿拉伯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ekar1243",
+      "original": "Ekari",
+      "zh": "伊卡利语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ekit1246",
+      "original": "Ekit",
+      "zh": "埃克特语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ennn1243",
+      "original": "En",
+      "zh": "恩语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ersu1241",
+      "original": "Ersu",
+      "zh": "尔苏语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "esan1238",
+      "original": "Esan",
+      "zh": "埃桑语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "esim1238",
+      "original": "Esimbi",
+      "zh": "埃辛比语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "even1259",
+      "original": "Evenki",
+      "zh": "鄂温克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "even1260",
+      "original": "Even",
+      "zh": "鄂温语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "eyak1241",
+      "original": "Eyak",
+      "zh": "埃雅克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "faiw1243",
+      "original": "Faiwol",
+      "zh": "范沃语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "fang1246",
+      "original": "Fang (Equatorial Guinea)",
+      "zh": "芳语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "fare1241",
+      "original": "Farefare",
+      "zh": "弗拉弗拉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "fass1245",
+      "original": "Momu-Fas",
+      "zh": "法斯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "fipa1238",
+      "original": "Fipa",
+      "zh": "Fipa语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "furr1244",
+      "original": "Fur",
+      "zh": "富尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "gahr1239",
+      "original": "Bunan",
+      "zh": "布南语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "gali1262",
+      "original": "Galibi Carib",
+      "zh": "卡利纳语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ganz1246",
+      "original": "Ganza",
+      "zh": "甘扎语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "garh1243",
+      "original": "Garhwali",
+      "zh": "嘉华语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "garo1247",
+      "original": "Garo",
+      "zh": "加罗语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "gata1239",
+      "original": "Gata'",
+      "zh": "格塔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "gawa1247",
+      "original": "Gawar-Bati",
+      "zh": "加瓦尔-巴蒂语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "gela1264",
+      "original": "Gelao Mulao",
+      "zh": "木佬语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "geme1244",
+      "original": "Geme",
+      "zh": "盖梅语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "genn1243",
+      "original": "Gen",
+      "zh": "格恩语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "gepo1234",
+      "original": "Gepo",
+      "zh": "峨颇语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ghod1238",
+      "original": "Godoberi",
+      "zh": "戈德贝里语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "gila1241",
+      "original": "Gilaki",
+      "zh": "吉拉基语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "gily1242",
+      "original": "Amur Nivkh",
+      "zh": "尼夫赫语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "gimi1243",
+      "original": "Gimi (Eastern Highlands)",
+      "zh": "几密语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "goan1235",
+      "original": "Goan Konkani",
+      "zh": "果阿孔卡尼语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "gong1251",
+      "original": "Gongduk",
+      "zh": "工德语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "gonj1241",
+      "original": "Gonja",
+      "zh": "贡加语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "gour1243",
+      "original": "Gourmanchéma",
+      "zh": "古利曼切马语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "gowr1239",
+      "original": "Gowro",
+      "zh": "戈瓦罗语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "grom1238",
+      "original": "Groma",
+      "zh": "卓木语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "guan1269",
+      "original": "Kotiria",
+      "zh": "瓦纳诺语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "guhu1244",
+      "original": "Guhu-Samane",
+      "zh": "古湖-珊曼语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "guia1246",
+      "original": "Guianese Creole French",
+      "zh": "圭亚那克里奥尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "guiq1238",
+      "original": "Guiqiong",
+      "zh": "贵琼语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "guja1253",
+      "original": "Gujari",
+      "zh": "古贾里语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "gulf1241",
+      "original": "Gulf Arabic",
+      "zh": "海湾阿拉伯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "gumu1244",
+      "original": "Northern Gumuz",
+      "zh": "古穆兹语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "gura1251",
+      "original": "Gurani",
+      "zh": "戈拉尼语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "guro1248",
+      "original": "Guro",
+      "zh": "古罗语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "guru1261",
+      "original": "Gurung",
+      "zh": "古隆语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "gwic1235",
+      "original": "Gwich'in",
+      "zh": "哥威迅语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "haaa1252",
+      "original": "Ha",
+      "zh": "哈语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hado1235",
+      "original": "Hadothi",
+      "zh": "哈多蒂语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hadr1236",
+      "original": "Hadrami Arabic",
+      "zh": "哈德拉毛阿拉伯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hadz1240",
+      "original": "Hadza",
+      "zh": "哈扎语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hain1238",
+      "original": "Hainanese",
+      "zh": "海南闽语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "haio1238",
+      "original": "Hai//om-Akhoe",
+      "zh": "海奥姆人",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hait1244",
+      "original": "Haitian",
+      "zh": "海地克里奥尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "halh1238",
+      "original": "Halh Mongolian",
+      "zh": "喀尔喀蒙古语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hang1260",
+      "original": "Hangaza",
+      "zh": "汉加扎语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hani1248",
+      "original": "Hani",
+      "zh": "哈尼语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hann1241",
+      "original": "Han",
+      "zh": "汗语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hano1246",
+      "original": "Hano",
+      "zh": "拉格语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hanu1241",
+      "original": "Hanunoo",
+      "zh": "哈努诺语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hars1241",
+      "original": "Harsusi",
+      "zh": "哈尔苏西语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "haru1244",
+      "original": "Haruku",
+      "zh": "哈鲁库语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hebr1245",
+      "original": "Modern Hebrew",
+      "zh": "现代希伯来语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hela1238",
+      "original": "Lamjung-Melamchi Yolmo",
+      "zh": "约尔莫语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "helo1243",
+      "original": "Helong",
+      "zh": "赫龙语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hida1246",
+      "original": "Hidatsa",
+      "zh": "希达沙语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hija1235",
+      "original": "Hijazi Arabic",
+      "zh": "汉志阿拉伯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hiww1237",
+      "original": "Hiw",
+      "zh": "希乌语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hixk1239",
+      "original": "Hixkaryána",
+      "zh": "希卡利亚纳语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hlai1239",
+      "original": "Hlai",
+      "zh": "黎语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hler1235",
+      "original": "Hlersu",
+      "zh": "山苏语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hmar1241",
+      "original": "Hmar",
+      "zh": "和马语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hoby1242",
+      "original": "Hobyót",
+      "zh": "霍卜约特语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "holi1241",
+      "original": "Holikachuk",
+      "zh": "霍利卡楚克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "homs1234",
+      "original": "Western Armenian",
+      "zh": "哈姆辛方言",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "honi1244",
+      "original": "Honi",
+      "zh": "豪尼语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hooo1248",
+      "original": "Ho",
+      "zh": "霍语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hopi1249",
+      "original": "Hopi",
+      "zh": "霍皮语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hpon1238",
+      "original": "Hpon",
+      "zh": "蓬语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hrus1242",
+      "original": "Hruso",
+      "zh": "鲁苏语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "huli1244",
+      "original": "Huli",
+      "zh": "胡里语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "hunz1247",
+      "original": "Hunzib",
+      "zh": "洪兹布语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "iaai1238",
+      "original": "Iaai",
+      "zh": "Iaai语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ibal1244",
+      "original": "Ibaloi",
+      "zh": "伊瓦洛伊语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "iban1267",
+      "original": "Ibanag",
+      "zh": "伊巴纳格语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "idom1241",
+      "original": "Idoma",
+      "zh": "伊多马语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "idum1241",
+      "original": "Idu",
+      "zh": "义都语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "igal1242",
+      "original": "Igala",
+      "zh": "伊加拉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "indu1241",
+      "original": "Indus Kohistani",
+      "zh": "印度科希斯坦语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "inth1238",
+      "original": "Intha-Danu",
+      "zh": "因塔-达努语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "iran1262",
+      "original": "Iranun",
+      "zh": "伊拉努语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "iraq1241",
+      "original": "Iraqw",
+      "zh": "伊拉库语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "irig1242",
+      "original": "Iriga Bicolano",
+      "zh": "林科纳达语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "itel1242",
+      "original": "West Itelmen",
+      "zh": "伊捷尔缅语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ixil1251",
+      "original": "Ixil",
+      "zh": "伊克西尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "jahh1242",
+      "original": "Jah Hut",
+      "zh": "贾胡特语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "jalk1242",
+      "original": "Jalkunan",
+      "zh": "贾尔库南语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "jama1261",
+      "original": "Madi",
+      "zh": "贾玛玛蒂语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "jebe1250",
+      "original": "Jebero",
+      "zh": "赫维罗语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "jeha1242",
+      "original": "Jehai",
+      "zh": "嘉海语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "jehh1245",
+      "original": "Jeh",
+      "zh": "叶语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "jica1244",
+      "original": "Jicarilla Apache",
+      "zh": "希卡里亚语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "jire1238",
+      "original": "Jirel",
+      "zh": "几热尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "juan1238",
+      "original": "Juang",
+      "zh": "朱昂",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "juho1239",
+      "original": "South-Eastern Ju",
+      "zh": "穹瓦西语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "juku1254",
+      "original": "Jukun Takum",
+      "zh": "朱昆语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kabi1261",
+      "original": "Kabiyé",
+      "zh": "卡比耶语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kach1277",
+      "original": "Kachchi",
+      "zh": "喀奇语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kach1280",
+      "original": "Southern Jinghpaw",
+      "zh": "景颇语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kadi1248",
+      "original": "Kadiwéu",
+      "zh": "卡都维欧语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kadu1253",
+      "original": "Kaduo",
+      "zh": "卡多语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kaga1256",
+      "original": "Kagayanen",
+      "zh": "巴拉望语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kair1263",
+      "original": "Kairiru",
+      "zh": "卡瑞鲁语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kala1372",
+      "original": "Chitral Kalasha",
+      "zh": "卡拉什语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kala1373",
+      "original": "Gawri",
+      "zh": "卡拉米语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kala1377",
+      "original": "Kala Lagaw Ya",
+      "zh": "卡劳拉高亚语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kala1381",
+      "original": "Kalabari",
+      "zh": "卡拉巴里语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kala1384",
+      "original": "Kalanga",
+      "zh": "卡兰加语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kala1397",
+      "original": "Kalam",
+      "zh": "Kalam 语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kali1308",
+      "original": "Kalispel-Pend d'Oreille",
+      "zh": "萨利什-斯波坎-卡利斯佩尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kalm1243",
+      "original": "Oirad-Kalmyk-Darkhat",
+      "zh": "卫拉特语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kamb1297",
+      "original": "Kamba (Kenya)",
+      "zh": "坎巴语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kamm1249",
+      "original": "Kam",
+      "zh": "宁沃姆语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kamo1255",
+      "original": "Kamoro",
+      "zh": "卡莫罗语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kana1281",
+      "original": "Kanauji",
+      "zh": "卡瑙杰语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kana1283",
+      "original": "Kanashi",
+      "zh": "卡纳西语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kana1286",
+      "original": "Kanakanavu",
+      "zh": "卡那卡那富语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kang1281",
+      "original": "Kangjia",
+      "zh": "康家语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kara1462",
+      "original": "Taiga Sayan Turkic",
+      "zh": "图法语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "karb1241",
+      "original": "Hills Karbi",
+      "zh": "卡尔比语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kari1254",
+      "original": "Kariri",
+      "zh": "卡里里人",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kari1311",
+      "original": "Karitiâna",
+      "zh": "卡利吉亚纳语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "karo1294",
+      "original": "Karon",
+      "zh": "卡龙语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kase1253",
+      "original": "Kasem",
+      "zh": "卡塞纳语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kasu1251",
+      "original": "Kasua",
+      "zh": "卡苏阿语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kath1251",
+      "original": "Thou-Kathu",
+      "zh": "嘎苏话",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kati1270",
+      "original": "Katë",
+      "zh": "卡蒂语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kats1235",
+      "original": "Katso",
+      "zh": "卡卓语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kava1241",
+      "original": "Kavalan",
+      "zh": "噶玛兰语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "keda1251",
+      "original": "Kedah-Perak Malay",
+      "zh": "吉打马来语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kekc1242",
+      "original": "Q'eqchi'",
+      "zh": "凯克其语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kele1257",
+      "original": "Kélé",
+      "zh": "克勒语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kena1236",
+      "original": "Kenaboi",
+      "zh": "克纳博伊语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kens1248",
+      "original": "Kensiu",
+      "zh": "肯修语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kett1243",
+      "original": "Ket",
+      "zh": "凯特语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "khak1248",
+      "original": "Khakas",
+      "zh": "哈卡斯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kham1281",
+      "original": "Khamnigan Mongol",
+      "zh": "哈米尼干语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kham1282",
+      "original": "Khams Tibetan",
+      "zh": "康方言",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kham1290",
+      "original": "Khamti",
+      "zh": "坎底语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "khan1272",
+      "original": "Khandesi",
+      "zh": "坎德什语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "khan1274",
+      "original": "Kháng",
+      "zh": "抗语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "khar1287",
+      "original": "Kharia",
+      "zh": "卡利亚语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "khin1240",
+      "original": "Khinalug",
+      "zh": "奇纳鲁格语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "khmu1256",
+      "original": "Khmu",
+      "zh": "克木语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "khor1269",
+      "original": "Khorasan Turkic",
+      "zh": "呼罗珊突厥语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "khow1242",
+      "original": "Khowar",
+      "zh": "科瓦语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "khum1248",
+      "original": "Khumi Chin",
+      "zh": "库米语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "khun1259",
+      "original": "Khün",
+      "zh": "傣痕语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kich1262",
+      "original": "K'iche'",
+      "zh": "基切语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kili1267",
+      "original": "Kilivila",
+      "zh": "基里维纳语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kina1250",
+      "original": "Kinaray-a",
+      "zh": "基那来阿语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kirg1245",
+      "original": "Kirghiz",
+      "zh": "柯尔克孜语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kisa1266",
+      "original": "Kisar",
+      "zh": "基萨尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kobo1249",
+      "original": "Kobon",
+      "zh": "柯本语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "koda1236",
+      "original": "Koda",
+      "zh": "科达语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "koda1255",
+      "original": "Kodava",
+      "zh": "科达瓦语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "koho1244",
+      "original": "Koho",
+      "zh": "格贺语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kokb1239",
+      "original": "Kok Borok",
+      "zh": "科克博罗克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kome1238",
+      "original": "Komering",
+      "zh": "科梅林语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "komi1268",
+      "original": "Komi-Zyrian",
+      "zh": "科米-兹梁语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "konk1269",
+      "original": "Konkomba",
+      "zh": "孔空芭语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kono1268",
+      "original": "Kono (Sierra Leone)",
+      "zh": "科诺语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kork1243",
+      "original": "Korku",
+      "zh": "科尔库语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "koro1298",
+      "original": "Koromfé",
+      "zh": "科罗姆费语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "korw1242",
+      "original": "Korwa",
+      "zh": "科尔瓦语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kory1246",
+      "original": "Koryak",
+      "zh": "科里亚克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kota1274",
+      "original": "Kota (Gabon)",
+      "zh": "Kota语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "koya1251",
+      "original": "Koya",
+      "zh": "科亚语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "koyr1242",
+      "original": "Koyraboro Senni Songhai",
+      "zh": "科依罗玻罗‧散尼语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "koyu1237",
+      "original": "Koyukon",
+      "zh": "科育空语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kron1241",
+      "original": "Krongo",
+      "zh": "克隆戈语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kuan1248",
+      "original": "Kuanua",
+      "zh": "库阿努阿语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kuco1235",
+      "original": "Kucong",
+      "zh": "苦聪话",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kuii1252",
+      "original": "Kui (India)",
+      "zh": "奎语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kulo1237",
+      "original": "Pazeh-Kahabu",
+      "zh": "巴宰-噶哈巫语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kuma1273",
+      "original": "Kumaoni",
+      "zh": "古毛恩语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kuna1268",
+      "original": "Kunama",
+      "zh": "库纳马语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kups1238",
+      "original": "Kupsabiny",
+      "zh": "萨比尼语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kura1250",
+      "original": "Kuranko",
+      "zh": "库兰科语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kuri1259",
+      "original": "Kuria",
+      "zh": "库里亚语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kusa1250",
+      "original": "Kusaal",
+      "zh": "库萨尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kuyy1240",
+      "original": "Kuy",
+      "zh": "Suay人",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kwad1244",
+      "original": "Kwadi",
+      "zh": "Kwadi语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kwan1273",
+      "original": "Kwangali",
+      "zh": "卡纳利语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "kxoe1243",
+      "original": "Kxoe",
+      "zh": "Khwe语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lach1248",
+      "original": "Lachi",
+      "zh": "拉基语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lada1244",
+      "original": "Leh Ladakhi",
+      "zh": "拉达克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ladi1250",
+      "original": "Ladin",
+      "zh": "拉迪恩语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lagh1245",
+      "original": "Laghuu",
+      "zh": "拉余语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "laha1250",
+      "original": "Laha (Viet Nam)",
+      "zh": "拉哈语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lahu1253",
+      "original": "Lahu",
+      "zh": "拉祜语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lakk1238",
+      "original": "Lakkia",
+      "zh": "拉珈语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lakk1252",
+      "original": "Lak",
+      "zh": "拉克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lala1264",
+      "original": "Lala-Bisa",
+      "zh": "Bisa人",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lame1256",
+      "original": "Lamet",
+      "zh": "拉墨语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lamu1257",
+      "original": "Lamu",
+      "zh": "拉姆语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lano1248",
+      "original": "Lanoh",
+      "zh": "拉诺语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "laom1237",
+      "original": "Laomian",
+      "zh": "老缅语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lari1255",
+      "original": "Larike-Wakasihu",
+      "zh": "瓦卡西胡语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lash1243",
+      "original": "Lashi",
+      "zh": "勒期语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lave1249",
+      "original": "Brao",
+      "zh": "布劳语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lawi1235",
+      "original": "Lawi",
+      "zh": "拉维语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lazz1240",
+      "original": "Laz",
+      "zh": "拉兹语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "leco1242",
+      "original": "Leco",
+      "zh": "离戈语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lefa1242",
+      "original": "Lefa",
+      "zh": "勒法语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lele1266",
+      "original": "Lele (Guinea)",
+      "zh": "勒勒语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lend1245",
+      "original": "Lendu",
+      "zh": "兰度语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lenj1248",
+      "original": "Lenje",
+      "zh": "伦杰语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lepc1244",
+      "original": "Lepcha",
+      "zh": "绒巴语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lezg1247",
+      "original": "Lezgian",
+      "zh": "列兹金语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "libe1240",
+      "original": "Kru Pidgin English",
+      "zh": "利比里亚克里奥尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "liby1240",
+      "original": "Libyan Arabic",
+      "zh": "利比亚口语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "limb1266",
+      "original": "Limbu",
+      "zh": "林布语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lioo1240",
+      "original": "Li'o",
+      "zh": "立欧语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lipo1242",
+      "original": "Lipo",
+      "zh": "里泼土语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lisu1250",
+      "original": "Lisu",
+      "zh": "傈僳语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lolo1259",
+      "original": "Lolopo",
+      "zh": "彝语中部方言",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lonc1237",
+      "original": "Loncong",
+      "zh": "伦从语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lonw1238",
+      "original": "Lonwolwol",
+      "zh": "伦沃沃语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lowe1425",
+      "original": "Lower Tanana",
+      "zh": "下塔纳纳语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lowl1260",
+      "original": "Lowland Oaxaca Chontal",
+      "zh": "低地琼塔尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "luch1239",
+      "original": "Luchazi",
+      "zh": "卢查齐语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "luhu1243",
+      "original": "Luhu-Piru",
+      "zh": "鲁胡语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "lukp1238",
+      "original": "Lukpa",
+      "zh": "卢克帕语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "luok1236",
+      "original": "Luo (Kenya and Tanzania)",
+      "zh": "卢欧语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "luuu1242",
+      "original": "Lü",
+      "zh": "傣仂语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "luxe1241",
+      "original": "Moselle Franconian",
+      "zh": "莫泽法兰克尼亚语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "luya1241",
+      "original": "Luyi",
+      "zh": "卢亚纳语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "maan1238",
+      "original": "Ma'anyan",
+      "zh": "马安扬语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "maan1239",
+      "original": "Maang",
+      "zh": "末昂语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "madi1260",
+      "original": "Ma'di",
+      "zh": "马氐语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "magu1243",
+      "original": "Maguindanao",
+      "zh": "马京达瑙语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "maha1287",
+      "original": "Mahasu Pahari",
+      "zh": "马哈苏帕哈里语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "maho1248",
+      "original": "Mahongwe",
+      "zh": "马洪圭语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mail1248",
+      "original": "Mailu",
+      "zh": "迈鲁",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "makc1235",
+      "original": "Mak (China)",
+      "zh": "莫语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mala1481",
+      "original": "Manado Malay",
+      "zh": "万鸦老话",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "male1282",
+      "original": "Maleng",
+      "zh": "马伦语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mall1246",
+      "original": "Mal",
+      "zh": "马勒语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "malo1243",
+      "original": "Tamambo",
+      "zh": "它玛姆波语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "malv1243",
+      "original": "Malvi",
+      "zh": "摩腊婆语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mama1271",
+      "original": "Mamara Senoufo",
+      "zh": "明扬卡语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mamb1296",
+      "original": "Mambwe-Lungu",
+      "zh": "曼布韦",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mand1419",
+      "original": "Mandjak",
+      "zh": "曼贾克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mand1436",
+      "original": "Mandinka",
+      "zh": "曼丁戈语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mand1440",
+      "original": "Mandara",
+      "zh": "塔巴尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mand1446",
+      "original": "Mandan",
+      "zh": "曼丹语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mang1378",
+      "original": "Mang",
+      "zh": "莽语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mani1297",
+      "original": "Manipa",
+      "zh": "马尼帕语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mank1251",
+      "original": "Mankanya",
+      "zh": "曼卡尼亚语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "many1258",
+      "original": "Manyika",
+      "zh": "马尼卡方言",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "maon1241",
+      "original": "Maonan",
+      "zh": "毛南语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "maor1244",
+      "original": "Maore Comorian",
+      "zh": "马约特语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "maor1246",
+      "original": "Maori",
+      "zh": "毛利语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mapu1245",
+      "original": "Mapudungun",
+      "zh": "马普切语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mara1404",
+      "original": "Maranao",
+      "zh": "马拉瑙语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mark1256",
+      "original": "Marka",
+      "zh": "马尔卡语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "maro1244",
+      "original": "Marovo",
+      "zh": "马罗沃语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "maru1249",
+      "original": "Maru",
+      "zh": "浪速语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "masi1266",
+      "original": "Masiwang",
+      "zh": "马西望语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mayo1264",
+      "original": "Mayo",
+      "zh": "马约语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mban1264",
+      "original": "Mbangala",
+      "zh": "姆班加拉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mbun1249",
+      "original": "Mbunda",
+      "zh": "Mbunda语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mbya1239",
+      "original": "Mbyá Guaraní",
+      "zh": "姆比亚瓜拉尼语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "meen1242",
+      "original": "Me'en",
+      "zh": "梅恩语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mehr1241",
+      "original": "Mehri",
+      "zh": "迈赫拉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "melp1238",
+      "original": "Melpa",
+      "zh": "美尔帕语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mend1266",
+      "original": "Mende (Sierra Leone)",
+      "zh": "门德语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "meno1252",
+      "original": "Menominee",
+      "zh": "梅诺米尼语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mewa1249",
+      "original": "Mewari",
+      "zh": "梅瓦尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "miju1243",
+      "original": "Kman",
+      "zh": "格曼语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mikm1235",
+      "original": "Mi'kmaq",
+      "zh": "米克马克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "milt1241",
+      "original": "Miltu",
+      "zh": "米尔图语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mind1253",
+      "original": "Min Dong Chinese",
+      "zh": "闽东语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ming1252",
+      "original": "Mingrelian",
+      "zh": "明格列尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "minz1235",
+      "original": "Min Zhong Chinese",
+      "zh": "闽中语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "miqi1235",
+      "original": "Miqie",
+      "zh": "密察语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mlab1235",
+      "original": "Mlabri",
+      "zh": "姆拉布里语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "moco1246",
+      "original": "Mocoví",
+      "zh": "莫科维语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mode1248",
+      "original": "Modern Greek",
+      "zh": "现代希腊语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "moha1256",
+      "original": "Mohave",
+      "zh": "莫哈维语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "moke1242",
+      "original": "Moken",
+      "zh": "莫肯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mokk1243",
+      "original": "Mok",
+      "zh": "莫克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mokl1243",
+      "original": "Moklen",
+      "zh": "莫克伦语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mong1330",
+      "original": "Mongolia Buriat",
+      "zh": "蒙古布里亚特语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mong1342",
+      "original": "Mongondow",
+      "zh": "蒙贡多语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mong1344",
+      "original": "Mwakai",
+      "zh": "蒙古语（新几内亚）",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "monn1252",
+      "original": "Mon",
+      "zh": "孟语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mono1268",
+      "original": "Monom",
+      "zh": "莫侬语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mono1270",
+      "original": "Mono (Democratic Republic of Congo)",
+      "zh": "刚果莫诺语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mono1273",
+      "original": "Mono-Alu",
+      "zh": "大洋洲莫诺语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mopa1243",
+      "original": "Mopan",
+      "zh": "磨潘语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "moro1289",
+      "original": "Marori",
+      "zh": "摩洛利语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "motu1246",
+      "original": "Motu",
+      "zh": "莫图语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mpii1239",
+      "original": "Mpi",
+      "zh": "姆毕语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "muda1235",
+      "original": "Muda",
+      "zh": "木达语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mula1253",
+      "original": "Mulam",
+      "zh": "仫佬语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mund1320",
+      "original": "Mundari",
+      "zh": "蒙达里语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mund1330",
+      "original": "Mundurukú",
+      "zh": "Mundurukú语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "munj1244",
+      "original": "Munji",
+      "zh": "门吉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "muon1246",
+      "original": "Muong",
+      "zh": "芒语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "murl1244",
+      "original": "Murle",
+      "zh": "穆尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "muru1274",
+      "original": "Murui Huitoto",
+      "zh": "穆瑞胡图图语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "muss1246",
+      "original": "Mussau-Emira",
+      "zh": "穆绍-埃米拉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "mwan1247",
+      "original": "Mwani",
+      "zh": "姆瓦尼语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "naas1242",
+      "original": "Naasioi",
+      "zh": "纳希奥伊语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nafa1258",
+      "original": "Nafanan",
+      "zh": "纳凡拉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nafu1238",
+      "original": "Nafusi",
+      "zh": "纳夫西语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nalu1239",
+      "original": "Naluo Yi",
+      "zh": "纳若语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nama1264",
+      "original": "Nama (Namibia)",
+      "zh": "纳马语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "namu1246",
+      "original": "Namuyi",
+      "zh": "纳木依语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nana1257",
+      "original": "Nanai",
+      "zh": "赫哲语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "naro1249",
+      "original": "Naro",
+      "zh": "纳柔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "naro1251",
+      "original": "Narom",
+      "zh": "纳洛姆语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "naxi1245",
+      "original": "Naxi",
+      "zh": "纳西语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ndam1251",
+      "original": "Ndam",
+      "zh": "恩丹语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ndau1241",
+      "original": "Ndau",
+      "zh": "恩道方言",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ndyu1242",
+      "original": "Aukan",
+      "zh": "恩久卡语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nene1249",
+      "original": "Tundra Nenets",
+      "zh": "冻原涅涅茨语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "newa1246",
+      "original": "Kathmandu Valley Newari",
+      "zh": "尼瓦尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nezp1238",
+      "original": "Nez Perce",
+      "zh": "内兹珀斯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ngad1261",
+      "original": "Ngad'a",
+      "zh": "恩加达语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ngan1291",
+      "original": "Nganasan",
+      "zh": "恩加纳桑语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ngan1304",
+      "original": "Ngando (Central African Republic)",
+      "zh": "Kota语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nguo1239",
+      "original": "Nguôn",
+      "zh": "源语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ngwe1238",
+      "original": "Ngwe",
+      "zh": "Ngwe语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ngwo1241",
+      "original": "Ngwo",
+      "zh": "恩沃语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nhen1239",
+      "original": "Nhengatu",
+      "zh": "亚马逊通用语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "niha1238",
+      "original": "Nihali",
+      "zh": "尼哈利语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "niii1240",
+      "original": "Nii",
+      "zh": "尼语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nisg1240",
+      "original": "Nisga'a",
+      "zh": "尼斯迦语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nisi1238",
+      "original": "Nisi (China)",
+      "zh": "尼斯彝语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "niva1238",
+      "original": "Nivaclé",
+      "zh": "尼瓦克莱语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nkhu1238",
+      "original": "Nkhumbi",
+      "zh": "恩昆比语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nobi1240",
+      "original": "Nobiin",
+      "zh": "诺宾语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "noon1242",
+      "original": "Noon",
+      "zh": "诺恩语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nort2641",
+      "original": "Northern Kurdish",
+      "zh": "北库尔德语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nort2686",
+      "original": "Northern Altai",
+      "zh": "北阿尔泰语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nort2690",
+      "original": "Northern Uzbek",
+      "zh": "北乌兹别克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nort2722",
+      "original": "Northern Qiang",
+      "zh": "羌语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nort2732",
+      "original": "Northern Tujia",
+      "zh": "北部土家语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nort2795",
+      "original": "Zimbabwean Ndebele",
+      "zh": "北恩德贝莱语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nort2954",
+      "original": "Northern Paiute",
+      "zh": "北派伍特语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nort3139",
+      "original": "Levantine Arabic",
+      "zh": "黎凡特阿拉伯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nort3142",
+      "original": "North Mesopotamian Arabic",
+      "zh": "北美索不达米亚阿拉伯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nucl1418",
+      "original": "Bassa",
+      "zh": "巴萨语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nucl1440",
+      "original": "Masalit",
+      "zh": "马撒利特语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nucl1620",
+      "original": "Wahgi",
+      "zh": "瓦基语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nucl1695",
+      "original": "Bole",
+      "zh": "博乐语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nung1282",
+      "original": "Nung (Myanmar)",
+      "zh": "阿侬语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nung1283",
+      "original": "Nung (Viet Nam)",
+      "zh": "侬语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nupe1254",
+      "original": "Nupe-Nupe-Tako",
+      "zh": "努佩语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nusa1245",
+      "original": "Nusa Laut",
+      "zh": "劳特岛语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nusu1239",
+      "original": "Nusu",
+      "zh": "怒苏语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nyah1249",
+      "original": "Nyaheun",
+      "zh": "洪语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nyah1250",
+      "original": "Nyahkur",
+      "zh": "涅固尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nyis1236",
+      "original": "Nyishi-Hill Miri",
+      "zh": "尼希语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "nyun1248",
+      "original": "Nyungwe",
+      "zh": "尼温圭语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "odia1239",
+      "original": "Odiai",
+      "zh": "布萨语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "oduu1239",
+      "original": "O'du",
+      "zh": "俄都语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ogea1238",
+      "original": "Ogea",
+      "zh": "奥盖阿语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "oira1263",
+      "original": "Oirata",
+      "zh": "奥伊拉塔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "omah1247",
+      "original": "Omaha-Ponca",
+      "zh": "奥马哈-庞卡语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "oman1239",
+      "original": "Omani Arabic",
+      "zh": "阿曼阿拉伯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "oran1259",
+      "original": "Orang Seletar",
+      "zh": "实里达语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "oroc1248",
+      "original": "Oroch",
+      "zh": "奥罗奇语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "orok1269",
+      "original": "Orokaiva",
+      "zh": "欧罗开巴语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "oroo1241",
+      "original": "Oro",
+      "zh": "奥罗语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "oroq1238",
+      "original": "Oroqen",
+      "zh": "鄂伦春语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "otda1235",
+      "original": "Ot Danum",
+      "zh": "奥图·大能语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ouji1238",
+      "original": "Wenzhou",
+      "zh": "温州话",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "paci1278",
+      "original": "Pacific Gulf Yupik",
+      "zh": "阿鲁提克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "paco1243",
+      "original": "Pacoh",
+      "zh": "帕戈语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "paez1247",
+      "original": "Páez",
+      "zh": "纳萨语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "paha1251",
+      "original": "Pahari Potwari",
+      "zh": "帕哈里-波特瓦里语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "pahn1237",
+      "original": "Pa-Hng",
+      "zh": "巴哼语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "paiw1248",
+      "original": "Paiwan",
+      "zh": "排湾语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "palu1252",
+      "original": "Palu'e",
+      "zh": "帕卢厄语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "pamb1243",
+      "original": "Pambia",
+      "zh": "潘比亚语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "pamo1252",
+      "original": "Pamona",
+      "zh": "帕莫纳语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "paok1235",
+      "original": "Pa'o Karen",
+      "zh": "勃欧语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "para1299",
+      "original": "Parachi",
+      "zh": "帕拉奇语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "para1301",
+      "original": "South Wa",
+      "zh": "巴饶克方言",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "para1316",
+      "original": "Paraujano",
+      "zh": "阿努语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "pare1266",
+      "original": "Gorum-Parenga",
+      "zh": "戈鲁姆语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "patp1243",
+      "original": "Patpatar",
+      "zh": "帕特帕塔尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "paum1247",
+      "original": "Paumari",
+      "zh": "帕乌玛利语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "payn1244",
+      "original": "Manat",
+      "zh": "马纳特语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "pear1247",
+      "original": "Pear",
+      "zh": "比尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "pela1242",
+      "original": "Pela",
+      "zh": "波拉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "pemo1248",
+      "original": "Pemon",
+      "zh": "佩蒙语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "peri1253",
+      "original": "Peripheral Mongolian",
+      "zh": "内蒙古方言",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "peve1243",
+      "original": "Peve",
+      "zh": "裴韦语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "phak1238",
+      "original": "Phake",
+      "zh": "帕基语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "phan1254",
+      "original": "Phana'",
+      "zh": "帕那语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "phua1239",
+      "original": "Phuan",
+      "zh": "潘语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "phuk1235",
+      "original": "Phukha",
+      "zh": "夫卡语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "phuo1238",
+      "original": "Phuong",
+      "zh": "方语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "phut1244",
+      "original": "Phu Thai",
+      "zh": "普泰语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "phut1246",
+      "original": "Phuthi",
+      "zh": "普地语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "pipi1250",
+      "original": "Pipil",
+      "zh": "纳瓦特语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "pira1253",
+      "original": "Pirahã",
+      "zh": "皮拉罕语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "pnar1238",
+      "original": "Pnar",
+      "zh": "布那语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "poch1243",
+      "original": "Pochuri Naga",
+      "zh": "波丘里语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "pras1239",
+      "original": "Prasun",
+      "zh": "瓦什瓦里语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "puin1248",
+      "original": "Puinave",
+      "zh": "Puinave语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "pula1262",
+      "original": "Pular",
+      "zh": "葡拉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "pume1238",
+      "original": "Pumé",
+      "zh": "雅鲁罗语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "puoc1238",
+      "original": "Ksingmul",
+      "zh": "欣门语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "puri1258",
+      "original": "Purik-Sham-Nubra",
+      "zh": "藏回语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "puyu1239",
+      "original": "Puyuma",
+      "zh": "卑南语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "qabi1235",
+      "original": "Pubiao-Qabiao",
+      "zh": "普标语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "qanj1241",
+      "original": "Q'anjob'al",
+      "zh": "根合巴文",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "qash1240",
+      "original": "Qashqa'i",
+      "zh": "卡什加语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "quey1238",
+      "original": "Queyu",
+      "zh": "却域语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "rabh1238",
+      "original": "Rabha",
+      "zh": "拉巴语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "rade1240",
+      "original": "Rade",
+      "zh": "埃地语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "rajb1243",
+      "original": "Rajbanshi",
+      "zh": "拉杰班希语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "rakh1245",
+      "original": "Rakhine",
+      "zh": "若开语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "raoo1244",
+      "original": "Rao",
+      "zh": "饶语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "rawa1265",
+      "original": "Rawang",
+      "zh": "侬日旺语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "reja1240",
+      "original": "Rejang",
+      "zh": "勒姜语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "rere1240",
+      "original": "Rerep",
+      "zh": "瑞瑞普语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "resi1247",
+      "original": "Resígaro",
+      "zh": "嗨唽嘎吺语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "reye1240",
+      "original": "Reyesano",
+      "zh": "奇里瓦语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "riun1237",
+      "original": "Riung",
+      "zh": "里翁语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "rong1268",
+      "original": "Ronga",
+      "zh": "龙加语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "rong1269",
+      "original": "Rongga",
+      "zh": "荣加语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "roto1249",
+      "original": "Rotokas",
+      "zh": "罗托卡特语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ruka1240",
+      "original": "Rukai",
+      "zh": "鲁凯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "russ1264",
+      "original": "Russia Buriat",
+      "zh": "俄罗斯布里亚特语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "rutu1240",
+      "original": "Rutul",
+      "zh": "鲁图尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "saar1237",
+      "original": "Saaroa",
+      "zh": "拉阿鲁哇语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sadr1248",
+      "original": "Sadri",
+      "zh": "萨德里语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "saek1240",
+      "original": "Saek",
+      "zh": "石语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "said1239",
+      "original": "Saidi Arabic",
+      "zh": "萨伊德阿拉伯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sais1237",
+      "original": "Saisiyat",
+      "zh": "赛夏语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sala1264",
+      "original": "Salar",
+      "zh": "撒拉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sama1295",
+      "original": "Samatao",
+      "zh": "撒慕语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sama1296",
+      "original": "Samatu",
+      "zh": "撒马堵语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "same1240",
+      "original": "Samei",
+      "zh": "撒梅语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sana1295",
+      "original": "Sanaani Arabic",
+      "zh": "萨那阿拉伯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sani1269",
+      "original": "Sani",
+      "zh": "撒尼语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "saoc1239",
+      "original": "Sa'och",
+      "zh": "萨奥基语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sars1236",
+      "original": "Sarsi",
+      "zh": "楚蒂纳语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "saru1245",
+      "original": "Sarua",
+      "zh": "萨鲁阿语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "saur1248",
+      "original": "Saurashtra",
+      "zh": "萨乌拉施特拉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sawa1247",
+      "original": "Sawai",
+      "zh": "沙瓦伊语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "seba1251",
+      "original": "Sebat Bet Gurage",
+      "zh": "塞巴特贝特语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "seda1262",
+      "original": "Sedang",
+      "zh": "色当语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "seek1238",
+      "original": "Seeku",
+      "zh": "森布拉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sela1259",
+      "original": "Selaru",
+      "zh": "塞拉鲁语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sema1265",
+      "original": "Semaq Beri",
+      "zh": "塞莫克贝里语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sema1266",
+      "original": "Semai",
+      "zh": "塞迈语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "seme1247",
+      "original": "Semelai",
+      "zh": "塞米莱语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "semn1249",
+      "original": "Semnani-Biyabuneki",
+      "zh": "塞姆纳尼语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "senh1238",
+      "original": "Senhaja De Srair",
+      "zh": "森哈加语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sera1259",
+      "original": "Saraiki",
+      "zh": "色莱基语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sere1260",
+      "original": "Sereer",
+      "zh": "塞雷尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "seri1257",
+      "original": "Seri",
+      "zh": "塞里语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sgaw1245",
+      "original": "S'gaw Karen",
+      "zh": "斯高克伦语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sheh1240",
+      "original": "Jibbali",
+      "zh": "山地语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sher1255",
+      "original": "Solu-Khumbu Sherpa",
+      "zh": "夏尔巴语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sher1257",
+      "original": "Sherdukpen",
+      "zh": "舍朱奔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "shin1264",
+      "original": "Shina",
+      "zh": "希尼亚语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ship1254",
+      "original": "Shipibo-Conibo",
+      "zh": "Shipibo语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "shix1238",
+      "original": "Shixing",
+      "zh": "史兴语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "shor1247",
+      "original": "Mrassu Shor-Tutal",
+      "zh": "索尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "shos1248",
+      "original": "Shoshoni",
+      "zh": "Sosoni' 语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "shug1248",
+      "original": "Shughni",
+      "zh": "舒格南语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "shus1248",
+      "original": "Shuswap",
+      "zh": "舒什瓦普语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sika1262",
+      "original": "Sika",
+      "zh": "西卡语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sikk1242",
+      "original": "Sikkimese",
+      "zh": "锡金语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "siks1238",
+      "original": "Siksika",
+      "zh": "黑脚语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "simb1255",
+      "original": "Simbari",
+      "zh": "辛巴里语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sime1241",
+      "original": "Simeulue",
+      "zh": "锡默卢语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sina1266",
+      "original": "Sinaugoro",
+      "zh": "西瑙高罗语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "siny1243",
+      "original": "Sinyar",
+      "zh": "西尼亚尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sion1247",
+      "original": "Siona-Tetete",
+      "zh": "西奥纳语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "siwi1239",
+      "original": "Siwi",
+      "zh": "西瓦语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "siwu1238",
+      "original": "Siwu",
+      "zh": "Siwu语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "skol1241",
+      "original": "Skolt Saami",
+      "zh": "斯科尔特萨米语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sons1242",
+      "original": "Sonsorol",
+      "zh": "松索罗尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "soqo1240",
+      "original": "Soqotri",
+      "zh": "索科特拉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sout1528",
+      "original": "Serbian-Croatian-Bosnian",
+      "zh": "塞尔维亚-克罗地亚语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sout2647",
+      "original": "Southern Luri",
+      "zh": "南卢尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sout2697",
+      "original": "South Azerbaijani",
+      "zh": "南阿塞拜疆语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sout2739",
+      "original": "Southern Tujia",
+      "zh": "孟兹语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sout2746",
+      "original": "Southern Thai",
+      "zh": "南部泰语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sout2750",
+      "original": "Southern Yukaghir",
+      "zh": "科雷马尤卡吉尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sout2856",
+      "original": "Nafsan",
+      "zh": "南埃法特语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sout2869",
+      "original": "Southwest Tanna",
+      "zh": "西南塔纳岛语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sout2994",
+      "original": "Southern Nambikuára",
+      "zh": "南比夸拉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "souu1238",
+      "original": "Sou",
+      "zh": "苏语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "spit1240",
+      "original": "Spiti Bhoti",
+      "zh": "藏语斯比迪方言",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "stod1241",
+      "original": "Stod Bhoti",
+      "zh": "藏语上蕃方言",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "suda1236",
+      "original": "Sudanese Arabic",
+      "zh": "苏丹阿拉伯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "suii1243",
+      "original": "Sui",
+      "zh": "水语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sulu1241",
+      "original": "Eastern Puroik",
+      "zh": "苏龙语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sumb1241",
+      "original": "Sumbawa",
+      "zh": "松巴哇语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sumi1235",
+      "original": "Sumi Naga",
+      "zh": "Sema语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sunw1242",
+      "original": "Sunwar",
+      "zh": "松瓦尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "supy1237",
+      "original": "Supyire Senoufo",
+      "zh": "苏皮雷语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "surs1246",
+      "original": "Sursurunga",
+      "zh": "Sursurunga语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "svan1243",
+      "original": "Svan",
+      "zh": "斯凡语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "sylh1242",
+      "original": "Sylheti",
+      "zh": "锡尔赫特语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "taba1259",
+      "original": "Tabasaran",
+      "zh": "塔巴萨兰语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "taba1264",
+      "original": "Tabasco Zoque",
+      "zh": "阿亚帕涅科语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "taba1266",
+      "original": "Tabasco Chontal",
+      "zh": "钱塔尔玛雅语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tach1249",
+      "original": "Chaouia of the Aures",
+      "zh": "沙维雅语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "taia1239",
+      "original": "Taiap",
+      "zh": "太浦语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "taid1247",
+      "original": "Tai Dam",
+      "zh": "傣担语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "taid1249",
+      "original": "Tai Daeng-Meuay",
+      "zh": "泰丹语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "taid1250",
+      "original": "Tai Dón",
+      "zh": "傣端语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tain1252",
+      "original": "Tai Nüa",
+      "zh": "傣那语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "talu1238",
+      "original": "Lavu-Yongsheng-Talu",
+      "zh": "拉乌语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "taly1247",
+      "original": "North-Central Talysh",
+      "zh": "塔利希语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tamp1251",
+      "original": "Tampuan",
+      "zh": "坦普温语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tana1289",
+      "original": "Dena'ina",
+      "zh": "德纳伊纳语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tana1290",
+      "original": "Tanacross",
+      "zh": "塔纳克罗斯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tang1347",
+      "original": "Movono",
+      "zh": "坦戈亚语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tang1372",
+      "original": "Tanglang-Toloza",
+      "zh": "堂郎语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tang1373",
+      "original": "Tangwang",
+      "zh": "唐汪话",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tari1263",
+      "original": "Tarifiyt-Beni-Iznasen-Eastern Middle Atlas Berber",
+      "zh": "里夫语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "taro1264",
+      "original": "Seediq",
+      "zh": "赛德克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tasm1246",
+      "original": "Tasmate",
+      "zh": "塔斯玛特语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "taua1242",
+      "original": "Tauade",
+      "zh": "塔瓦德语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "taus1251",
+      "original": "Tausug",
+      "zh": "陶苏格语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "taus1253",
+      "original": "Taushiro",
+      "zh": "陶希洛语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tavo1242",
+      "original": "Tavoyan",
+      "zh": "土瓦方言",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tayy1238",
+      "original": "Tày",
+      "zh": "岱依语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tbol1240",
+      "original": "Tboli",
+      "zh": "特波里语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tehu1242",
+      "original": "Tehuelche",
+      "zh": "特维尔切语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "teke1275",
+      "original": "Latege",
+      "zh": "北部特克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "teke1278",
+      "original": "Teke-Eboo-Nzikou",
+      "zh": "中部特克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "teke1280",
+      "original": "Teke-Kukuya",
+      "zh": "喀麦隆地区语言",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tele1256",
+      "original": "Telefol",
+      "zh": "特里福语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tema1243",
+      "original": "Oued Righ",
+      "zh": "莱赫干谷柏柏尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "temi1246",
+      "original": "Temiar",
+      "zh": "特米亚尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tenn1245",
+      "original": "T'en",
+      "zh": "佯僙语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tera1251",
+      "original": "Tera",
+      "zh": "特拉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tern1247",
+      "original": "Ternate",
+      "zh": "特尔纳特语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "thak1245",
+      "original": "Thakali",
+      "zh": "塔卡利语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "than1259",
+      "original": "Thangmi",
+      "zh": "唐米语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "thao1240",
+      "original": "Thao",
+      "zh": "邵语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ticu1245",
+      "original": "Ticuna",
+      "zh": "提库纳语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tido1248",
+      "original": "Tidore",
+      "zh": "蒂多雷语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tiko1237",
+      "original": "Tikopia",
+      "zh": "蒂科皮亚语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tina1246",
+      "original": "Tinani",
+      "zh": "提兰语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tina1248",
+      "original": "Tinà Sambal",
+      "zh": "三描语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tind1238",
+      "original": "Tindi",
+      "zh": "廷地语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tini1245",
+      "original": "Tinigua",
+      "zh": "提尼瓜语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tiru1241",
+      "original": "Tiruray",
+      "zh": "蒂鲁雷语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "toba1269",
+      "original": "Toba",
+      "zh": "科姆语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "todr1244",
+      "original": "Todrah",
+      "zh": "祖查语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "toho1245",
+      "original": "Tohono O'odham",
+      "zh": "奥奥萨姆语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tola1247",
+      "original": "Tolaki",
+      "zh": "托拉吉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "toll1241",
+      "original": "Tol",
+      "zh": "希卡克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tolo1255",
+      "original": "Tolomako",
+      "zh": "多罗马科语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tong1308",
+      "original": "Maniq",
+      "zh": "汤加语 (南亚语系)",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tong1318",
+      "original": "Tonga (Zambia)",
+      "zh": "汤加语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tora1261",
+      "original": "Toraja-Sa'dan",
+      "zh": "托拉查-萨达语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "toto1302",
+      "original": "Toto",
+      "zh": "投投语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "touo1238",
+      "original": "Touo",
+      "zh": "多沃语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "treg1243",
+      "original": "Tregami",
+      "zh": "特雷加米语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tsak1249",
+      "original": "Tsakhur",
+      "zh": "查胡尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tsat1238",
+      "original": "Tsat",
+      "zh": "回辉话",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tsha1245",
+      "original": "Tshangla",
+      "zh": "仓洛语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tsou1248",
+      "original": "Tsou",
+      "zh": "邹语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tswa1255",
+      "original": "Tswa",
+      "zh": "茨瓦语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tuba1278",
+      "original": "Tübatulabal",
+      "zh": "土巴图拉巴语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tuca1252",
+      "original": "Tucano",
+      "zh": "巨嘴鸟语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tulu1258",
+      "original": "Tulu",
+      "zh": "图卢语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tuma1248",
+      "original": "Tumari Kanuri",
+      "zh": "图马里卡努里语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tuni1259",
+      "original": "Tunisian Arabic",
+      "zh": "突尼斯阿拉伯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tunu1234",
+      "original": "Tunumiisiut",
+      "zh": "东格陵兰语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tupi1273",
+      "original": "Tupinambá",
+      "zh": "图皮语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "turk1303",
+      "original": "Khalaj Turkic",
+      "zh": "卡拉吉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "turk1308",
+      "original": "Turkana",
+      "zh": "图尔卡纳语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "turo1239",
+      "original": "Turoyo",
+      "zh": "图罗尤语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tuyu1244",
+      "original": "Tuyuca",
+      "zh": "图尤卡语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tzel1254",
+      "original": "Tzeltal",
+      "zh": "泽套语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "tzot1259",
+      "original": "Tzotzil",
+      "zh": "索西语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "uabm1237",
+      "original": "Uab Meto",
+      "zh": "瓦布梅托语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "udih1248",
+      "original": "Udihe",
+      "zh": "乌德盖语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ugon1239",
+      "original": "Ugong",
+      "zh": "贡语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "ulch1241",
+      "original": "Ulch",
+      "zh": "乌尔奇语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "uppe1437",
+      "original": "Upper Tanana",
+      "zh": "上塔纳纳语言",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "uppe1438",
+      "original": "Upper Kuskokwim",
+      "zh": "上卡斯科奎姆语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "uppe1455",
+      "original": "Upper Guinea Crioulo",
+      "zh": "几内亚比绍克里奥尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "urak1238",
+      "original": "Urak Lawoi'",
+      "zh": "乌拉拉握语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "urav1235",
+      "original": "Ura (Vanuatu)",
+      "zh": "乌拉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "urho1239",
+      "original": "Urhobo",
+      "zh": "乌尔霍博语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "uruu1244",
+      "original": "Uru",
+      "zh": "乌鲁语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "uspa1245",
+      "original": "Uspanteco",
+      "zh": "乌斯潘特克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "utes1238",
+      "original": "Ute-Southern Paiute",
+      "zh": "犹特语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "uuuu1243",
+      "original": "U",
+      "zh": "乌语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "valm1241",
+      "original": "Walman",
+      "zh": "瓦尔曼语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "vaoo1237",
+      "original": "Vao-Vovo",
+      "zh": "Vao语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "vinz1238",
+      "original": "Vinza",
+      "zh": "温扎语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "waig1243",
+      "original": "Nuristani Kalasha",
+      "zh": "卡拉沙阿拉语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "wail1242",
+      "original": "Ale",
+      "zh": "阿留申语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "wakh1245",
+      "original": "Wakhi",
+      "zh": "瓦罕语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "wane1241",
+      "original": "Waneci",
+      "zh": "瓦内西语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "waor1240",
+      "original": "Waorani",
+      "zh": "瓦奥语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "wara1300",
+      "original": "Waray (Philippines)",
+      "zh": "瓦瑞语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "wara1303",
+      "original": "Warao",
+      "zh": "哇捞语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "warj1242",
+      "original": "War-Jaintia",
+      "zh": "瓦尔语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "waxi1236",
+      "original": "Waxianghua",
+      "zh": "瓦乡话",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "waya1269",
+      "original": "Wayana",
+      "zh": "瓦亚那语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "wayu1243",
+      "original": "Wayuu",
+      "zh": "瓦尤语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "west2369",
+      "original": "Western Farsi",
+      "zh": "西波斯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "west2402",
+      "original": "West Yugur",
+      "zh": "西部裕固语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "west2600",
+      "original": "West Makian",
+      "zh": "西马基安语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "west2615",
+      "original": "Western Apache",
+      "zh": "西阿帕奇语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "whit1267",
+      "original": "Duoluo Gelao",
+      "zh": "白仡佬语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "woli1241",
+      "original": "Wolio",
+      "zh": "窝里沃语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "wudi1238",
+      "original": "Wuding-Luquan Yi",
+      "zh": "武定-禄劝方言",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "wutu1241",
+      "original": "Wutunhua",
+      "zh": "五屯话",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "xaas1235",
+      "original": "Xaasongaxango",
+      "zh": "哈松凯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "xara1244",
+      "original": "Xârâcùù",
+      "zh": "杭朗奇语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "xava1240",
+      "original": "Xavánte",
+      "zh": "夏凡特语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "xibe1242",
+      "original": "Xibe",
+      "zh": "锡伯语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "yagu1244",
+      "original": "Yagua",
+      "zh": "亚瓜语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "yaka1277",
+      "original": "Yakan",
+      "zh": "雅坎语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "yako1252",
+      "original": "Yakoma",
+      "zh": "亚科马语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "yaku1245",
+      "original": "Sakha",
+      "zh": "雅库特语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "yalu1240",
+      "original": "Yalunka",
+      "zh": "雅隆卡语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "yamd1240",
+      "original": "Yamdena",
+      "zh": "扬德纳语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "yami1254",
+      "original": "Yami",
+      "zh": "达悟语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "yazg1240",
+      "original": "Yazgulyam",
+      "zh": "亚兹古拉姆语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "yele1255",
+      "original": "Yele",
+      "zh": "耶里多涅语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "yeyi1239",
+      "original": "Yeyi",
+      "zh": "耶依语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "yidg1240",
+      "original": "Yidgha",
+      "zh": "义得嘎语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "yine1238",
+      "original": "Yine",
+      "zh": "皮洛语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "yoyy1238",
+      "original": "Yoy",
+      "zh": "Yoy语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "yuro1248",
+      "original": "Yurok",
+      "zh": "尤罗克语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "zagh1240",
+      "original": "Beria",
+      "zh": "札加瓦语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "zaiw1241",
+      "original": "Zaiwa",
+      "zh": "载瓦语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "zakh1243",
+      "original": "Zakhring",
+      "zh": "扎话",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "zand1248",
+      "original": "Zande",
+      "zh": "赞德语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "zang1248",
+      "original": "Zangskari",
+      "zh": "桑斯嘎语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "zarm1239",
+      "original": "Zarma-Kaado",
+      "zh": "查尔马语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "zauz1238",
+      "original": "Zauzou",
+      "zh": "柔若语",
+      "source": "Wikidata P1394"
+    },
+    {
+      "code": "zhab1238",
+      "original": "Zhaba",
+      "zh": "扎坝语",
+      "source": "Wikidata P1394"
+    }
+  ]
+}

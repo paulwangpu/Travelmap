@@ -692,7 +692,7 @@ Regionally based|区域聚居
 Statewide|全国分布
 Urban|城市聚居
 `);
-  const indianNames = {Assamese:'阿萨姆人',Bengali:'孟加拉人',Gujarati:'古吉拉特人',Hindi:'印地语族群',Kannada:'卡纳达人',Malyalam:'马拉雅拉姆人',Marathi:'马拉地人',Oriya:'奥里亚人',Punjabi:'旁遮普人','Punjabi-Sikhs':'旁遮普锡克人',Tamil:'泰米尔人',Telugu:'泰卢固人'};
+  const indianNames = {Assamese:'阿萨姆人',Bengali:'孟加拉人',Gujarati:'古吉拉特人',Hindi:'印地语族群',Kannada:'卡纳达人',Malyalam:'马拉雅拉姆人',Marathi:'马拉地人',Oriya:'奥迪亚人',Punjabi:'旁遮普人','Punjabi-Sikhs':'旁遮普锡克人',Tamil:'泰米尔人',Telugu:'泰卢固人'};
   function group(name, country) {
     name = String(name ?? '').trim();
     if (name === 'Koreans' && country === 'China') return '朝鲜族';
@@ -702,5 +702,19 @@ Urban|城市聚居
     if (match && indianNames[match[1]]) return `${indianNames[match[1]]}（不含表列种姓、表列部落${match[2].includes('OBC') ? '及其他落后阶层' : ''}）`;
     return name;
   }
-  return {country:name => countries[name] || name, group, type:name => types[name] || name};
+  function shortGroup(name,country) {
+    if(name==='Scheduled Castes')return '表列种姓';
+    if(name==='Scheduled Tribes')return '表列部落';
+    const match=String(name).match(/^(.+?) \((?:non-|Non |Non-)(SC\/ST(?:\/OBCs| OBCs)?)\)$/);
+    if(match && indianNames[match[1]])return indianNames[match[1]];
+    return group(name,country);
+  }
+  function explanation(name) {
+    if(name==='Scheduled Castes')return '印度法律列明的种姓类别，涵盖多个群体，不是单一民族。';
+    if(name==='Scheduled Tribes')return '印度法律列明的部落类别，涵盖多个民族。';
+    if(/non-|Non |Non-/.test(name) && /SC\/ST/.test(name))return '这是语言群体的研究分组；不含表列种姓、表列部落'+(name.includes('OBC')?'和其他落后阶层':'')+'。';
+    if(name==='Other Muslims')return '数据源将未单独列出的穆斯林群体合在此项；这是宗教分组。';
+    return '';
+  }
+  return {country:name => countries[name] || name, group, shortGroup, explanation, type:name => types[name] || name};
 })();

@@ -6,7 +6,7 @@
     <title>我的全球旅行地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" />
-<link rel="stylesheet" href="styles.css?v=238" />
+<link rel="stylesheet" href="styles.css?v=242" />
   </head>
   <body>
     <div class="app-shell map-first-shell">
@@ -35,7 +35,7 @@
             <strong data-i18n="privacyTitle">本地保存</strong>
             <p data-i18n="privacyText">数据只保存在本机浏览器里，不会自动上传或公开。如需备份请导出。</p>
           </div>
-          <div class="app-version" id="appVersion">v2.2.5</div>
+          <div class="app-version" id="appVersion">v2.2.6</div>
         </div>
       </aside>
 
@@ -236,8 +236,10 @@
                 </aside>
                 <aside class="population-density-legend" id="ethnicRegionsLegend" hidden>
                   <strong data-i18n="overlayEthnicRegions">民族聚居区</strong>
-                  <label class="geology-provider-control"><span id="ethnicRegionsSourceLabel">来源</span><select id="ethnicRegionsSource" aria-label="民族数据来源"><option value="geoepr">GeoEPR · 2021</option><option value="greg">GREG · 1964</option></select></label>
+                  <label class="geology-provider-control"><span id="ethnicRegionsSourceLabel">来源</span><select id="ethnicRegionsSource" aria-label="民族数据来源"><option value="greg">GREG · 民族分布（1964 年地图集）</option><option value="geoepr">GeoEPR · 政治相关族群分布（2021）</option><option value="language">Glottography · 语言分布（2007 年地图集）</option></select></label>
                   <label class="population-density-opacity"><span data-i18n="populationDensityOpacity">透明度</span><input id="ethnicRegionsOpacity" type="range" min="0" max="100" value="45" /><output id="ethnicRegionsOpacityValue">45%</output></label>
+                  <div id="languageColorControl" hidden><label class="geology-provider-control"><span id="languageColorLabel">配色</span><select id="languageColorMode" aria-label="语言配色"><option value="affinity">按亲缘</option><option value="language">按语言</option></select></label><small id="languageColorNote">同语系同主色，按分类树细分相近色；不代表彼此能听懂。</small></div>
+                  <div id="languageLegend" hidden><strong id="languageFamilyLegendTitle">语系配色</strong><label class="language-family-select-all"><input id="languageFamilyAll" type="checkbox" checked /><span id="languageFamilyAllText">全选</span></label><div id="languageFamilyLegend" class="language-family-keys"></div><a id="languageLegendLink" href="outputs/language-legend/index.html" target="_blank" rel="noopener">查看语言配色图例 ↗</a></div>
                   <small id="ethnicRegionsNote">展示 GeoEPR 收录的 2021 年政治相关族群聚居范围，并非完整世界民族分布；部分国家和族群未收录，空白不表示无人居住。</small>
                   <small id="ethnicRegionsStatus" role="status"></small>
                   <button id="ethnicRegionsRetry" type="button" hidden>重试</button>
@@ -462,10 +464,10 @@
 <script src="geology-providers.js?v=12"></script>
 <script src="geology-auto.js?v=11"></script>
 <script src="geology-legend.js?v=31"></script>
-<script src="ethnic-translations.js?v=4"></script>
+<script src="ethnic-translations.js?v=5"></script>
 <script src="ethnic-kin.js?v=1"></script>
 <script src="greg-translations.js?v=3"></script>
-<script src="ethnic-regions.js?v=13"></script>
-<script src="app.js?v=822"></script>
+<script src="ethnic-regions.js?v=52"></script>
+<script src="app.js?v=827"></script>
   </body>
 </html>

@@ -1,0 +1,211 @@
+{
+  "acha1249": {
+    "zh": "阿昌语（陇川）",
+    "kind": "curated"
+  },
+  "axiy1235": {
+    "zh": "阿细语",
+    "kind": "curated"
+  },
+  "azhe1235": {
+    "zh": "阿哲语",
+    "kind": "curated"
+  },
+  "minb1236": {
+    "zh": "闽北语",
+    "kind": "curated"
+  },
+  "huzh1238": {
+    "zh": "土族语（互助）",
+    "kind": "curated"
+  },
+  "minh1238": {
+    "zh": "土族语（民和）",
+    "kind": "curated"
+  },
+  "hbru1241": {
+    "zh": "藏语（舟曲）",
+    "kind": "curated"
+  },
+  "amdo1237": {
+    "zh": "藏语（安多）",
+    "kind": "curated"
+  },
+  "kham1282": {
+    "zh": "藏语（康）",
+    "kind": "curated"
+  },
+  "gela1261": {
+    "zh": "仡佬语",
+    "kind": "curated",
+    "note": "原地图集的合并分类；仡佬语内部包含多个差异较大的语言变体。"
+  },
+  "ruch1235": {
+    "zh": "德昂语（布雷）",
+    "kind": "curated"
+  },
+  "ngoc1235": {
+    "zh": "阿昌语（缅甸变体）",
+    "kind": "curated",
+    "note": "原名 Ngochang；数据源将其与陇川阿昌语分开记录，不合并语言标识或颜色。"
+  },
+  "deor1238": {
+    "zh": "迪奥里语",
+    "kind": "curated"
+  },
+  "dzal1238": {
+    "zh": "扎拉卡语",
+    "kind": "curated"
+  },
+  "huml1238": {
+    "zh": "洪拉语",
+    "kind": "curated"
+  },
+  "galo1242": {
+    "zh": "伽罗语",
+    "kind": "curated"
+  },
+  "saja1240": {
+    "zh": "米吉语",
+    "kind": "curated"
+  },
+  "apat1240": {
+    "zh": "阿帕塔尼语",
+    "kind": "transliteration"
+  },
+  "hung1275": {
+    "zh": "洪语",
+    "kind": "transliteration",
+    "note": "原名 Hung，南亚语系语言；此中文名称为音译，不表示汉语方言。"
+  },
+  "kurt1248": {
+    "zh": "库尔托语",
+    "kind": "transliteration"
+  },
+  "lhom1239": {
+    "zh": "洛米语",
+    "kind": "transliteration"
+  },
+  "misi1242": {
+    "zh": "米辛—帕达姆—米里—米尼翁语群",
+    "kind": "transliteration",
+    "note": "原地图集把这些相关语言变体合并记录，并非单一民族名称。"
+  },
+  "nisi1239": {
+    "zh": "达夫拉语",
+    "kind": "transliteration",
+    "note": "原地图集的旧分类。其 ISO 语言条目后来分为尼希语和塔金语；此处保留原地图集范围。"
+  },
+  "rian1261": {
+    "zh": "日昂语",
+    "kind": "transliteration"
+  },
+  "nort2722": {
+    "zh": "羌语（北部）",
+    "kind": "curated"
+  },
+  "sout2739": {
+    "zh": "土家语（南部）",
+    "kind": "curated"
+  },
+  "nort2732": {
+    "zh": "土家语（北部）",
+    "kind": "curated"
+  },
+  "kore1280": {
+    "zh": "朝鲜语",
+    "kind": "curated"
+  },
+  "awac1238": {
+    "zh": "佤语（阿佤）",
+    "kind": "curated"
+  },
+  "para1301": {
+    "zh": "佤语（巴饶克）",
+    "kind": "curated"
+  },
+  "uuuu1243": {
+    "zh": "布朗语（乌方言）",
+    "kind": "curated"
+  },
+  "biyo1243": {
+    "zh": "哈尼语（碧约）",
+    "kind": "curated"
+  },
+  "kadu1253": {
+    "zh": "哈尼语（卡多）",
+    "kind": "curated"
+  },
+  "akeu1235": {
+    "zh": "哈尼语（阿科）",
+    "kind": "curated"
+  },
+  "akha1245": {
+    "zh": "哈尼语（阿卡）",
+    "kind": "curated"
+  },
+  "honi1244": {
+    "zh": "哈尼语（和尼）",
+    "kind": "curated"
+  },
+  "lolo1259": {
+    "zh": "彝语（中部）",
+    "kind": "curated"
+  },
+  "sich1238": {
+    "zh": "彝语（凉山）",
+    "kind": "curated"
+  },
+  "yoyy1238": {
+    "zh": "佑语",
+    "kind": "transliteration"
+  },
+  "bula1260": {
+    "zh": "布朗语群",
+    "kind": "curated"
+  },
+  "jiar1240": {
+    "zh": "嘉绒语（北部）",
+    "kind": "curated"
+  },
+  "hbro1238": {
+    "zh": "安多藏语（牧区）",
+    "kind": "curated"
+  },
+  "rong1262": {
+    "zh": "安多藏语（农区）",
+    "kind": "curated"
+  },
+  "tsho1241": {
+    "zh": "藏语（措勤）",
+    "kind": "curated"
+  },
+  "mnga1238": {
+    "zh": "藏语（阿里）",
+    "kind": "curated"
+  },
+  "ruth1234": {
+    "zh": "藏语（日土）",
+    "kind": "curated"
+  },
+  "gart1234": {
+    "zh": "藏语（噶尔）",
+    "kind": "curated"
+  },
+  "pura1259": {
+    "zh": "藏语（普兰）",
+    "kind": "curated"
+  },
+  "alta1279": {
+    "zh": "蒙古语（土尔扈特，阿尔泰）",
+    "kind": "curated"
+  },
+  "yong1278": {
+    "zh": "傣语（永仁）",
+    "kind": "curated"
+  },
+  "khow1243": {
+    "zh": "蒙古语（杜尔伯特，科布多）",
+    "kind": "curated"
+  }
+}
