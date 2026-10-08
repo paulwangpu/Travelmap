@@ -7171,7 +7171,7 @@ button:hover {
 }
 
 .map-control-panel:not(.collapsed) .map-action-group {
-  grid-template-columns: 60px minmax(0, 1fr) minmax(0, 1fr) !important;
+  grid-template-columns: 88px minmax(0, 1fr) minmax(0, 1fr) !important;
   width: 100% !important;
   min-width: 0 !important;
   max-width: 100% !important;
@@ -7677,3 +7677,19 @@ button:hover {
   .map-first-shell .nav a { font-weight:600 !important; line-height:1.25 !important; }
   html[lang="en"] .map-first-shell .nav a { font-size:10px !important; white-space:normal !important; overflow-wrap:anywhere; }
 }
+
+#ethnicRegionsRetry { font-size: 12px; padding: 3px 8px; min-height: 0; width: auto; align-self: flex-start; }
+#ethnicRegionsRetry[hidden] { display: none; }
+
+#ethnicRegionsLegend { pointer-events: auto; }
+#ethnicRegionsLegend a { color: #176b52; cursor: pointer; }
+
+
+.map-top-toggle-pair { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:2px; width:88px; min-width:0; }
+.map-control-panel:not(.collapsed) .map-action-group .map-top-toggle-pair .map-mode-toggle { width:100% !important; min-width:0 !important; max-width:none !important; padding-inline:1px !important; gap:3px !important; font-size:11px !important; display:flex !important; align-items:center !important; justify-content:center !important; white-space:nowrap; }
+.map-top-toggle-pair input[type="checkbox"] { width:8px; height:8px; margin:0; flex-shrink:0; }
+
+.map-control-panel:not(.collapsed) .map-action-group .map-add-point-button { padding-inline:2px !important; white-space:nowrap; }
+
+
+.ethnic-region-label { background:none; border:0; box-shadow:none; color:#24352d; font-size:12px; text-shadow:0 1px 2px white,1px 0 2px white,-1px 0 2px white; pointer-events:none; }

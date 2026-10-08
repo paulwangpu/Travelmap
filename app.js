@@ -15,7 +15,7 @@ const mapControlsStorageKey = "travel-map-controls-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "2.2.4";
+const appVersion = "2.2.5";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 339;
@@ -385,6 +385,11 @@ const translations = {
     railwayLegendOwnerChange: "管理分界",
     railwayLegendNote: "完整图例由 OpenRailwayMap 官方实时生成，内容与标准铁路瓦片一致。",
     railwayLegendOfficial: "单独打开",
+    overlayCountryBorders: "国界",
+    overlayEthnicShort: "民族",
+    overlayPopulationShort: "人口",
+    overlayEthnicRegions: "民族聚居区",
+    ethnicRegionsNote: "GeoEPR 2021 · 仅涵盖研究收录族群；区域可重叠，不代表人口占比或精确边界。按官方跨境族群对应固定配色；合并族群单独着色，弹窗显示关联。相近颜色不代表同族。部分族群无通行译名时保留原名。",
     overlayArcgisWater: "水系",
     arcgisWaterLegendTitle: "水系",
     arcgisWaterEsriSource: "ArcGIS 水面与名称",
@@ -650,6 +655,11 @@ const translations = {
     railwayLegendOwnerChange: "Owner boundary",
     railwayLegendNote: "The full legend is generated live by OpenRailwayMap and matches its standard railway tiles.",
     railwayLegendOfficial: "Open separately",
+    overlayCountryBorders: "Borders",
+    overlayEthnicShort: "Ethnicity",
+    overlayPopulationShort: "Population",
+    overlayEthnicRegions: "Ethnic settlement areas",
+    ethnicRegionsNote: "GeoEPR 2021 · Research-covered groups only; areas may overlap. Not population shares or precise boundaries. Fixed colors by EPR-TEK cross-border kin; umbrella records have separate colors and list their kin links. Similar colors do not imply the same group. Some original names are retained.",
     overlayArcgisWater: "Waterways",
     arcgisWaterLegendTitle: "Waterways",
     arcgisWaterEsriSource: "ArcGIS areas and names",
@@ -840,7 +850,7 @@ function t(key) {
 }
 
 function defaultMapOverlays() {
-return { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, geology: false, arcgisWater: false, arcgisWaterEsri: true, arcgisWaterHydroRivers: true, earthquakes: false, volcanoes: false, china5a: false, chinaAncientCapitals: false, imperialTombs: false, imperialTombsIncludeFeudalKings: true, imperialTombsOnlyVisitableChambers: false, imperialTombsEra: "", greatWall: false, greatWallHistory: false, worldHeritage: false, highAltitude: false };
+return { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, geology: false, countryBorders: false, ethnicRegions: false, ethnicRegionsOpacity: 45, arcgisWater: false, arcgisWaterEsri: true, arcgisWaterHydroRivers: true, earthquakes: false, volcanoes: false, china5a: false, chinaAncientCapitals: false, imperialTombs: false, imperialTombsIncludeFeudalKings: true, imperialTombsOnlyVisitableChambers: false, imperialTombsEra: "", greatWall: false, greatWallHistory: false, worldHeritage: false, highAltitude: false };
 }
 
 function normalizeMapOverlays(overlays = {}) {
@@ -863,6 +873,10 @@ function normalizeMapOverlays(overlays = {}) {
     geologySource: GeologyProviders.normalizeMode(overlays.geologySource),
     geologyOpacity: Number.isFinite(Number(overlays.geologyOpacity)) ? Math.max(0, Math.min(100, Number(overlays.geologyOpacity))) : 65,
     railwayMode: overlays.railwayMode === "raster" ? "raster" : "vector",
+    countryBorders: Boolean(overlays.countryBorders),
+    ethnicRegionsSource: overlays.ethnicRegionsSource === "greg" ? "greg" : "geoepr",
+    ethnicRegions: Boolean(overlays.ethnicRegions),
+    ethnicRegionsOpacity: Number.isFinite(Number(overlays.ethnicRegionsOpacity)) ? Math.max(0, Math.min(100, Number(overlays.ethnicRegionsOpacity))) : 45,
     arcgisWater: Boolean(overlays.arcgisWater ?? overlays.hydroRivers),
     arcgisWaterEsri: overlays.arcgisWaterEsri !== false,
     arcgisWaterHydroRivers: overlays.arcgisWaterHydroRivers !== false,
@@ -4070,7 +4084,7 @@ let state = {
   populationDensityOpacity: 50,
   map3d: false,
   detectedMapProvider: "",
-  mapOverlays: { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, geology: false, arcgisWater: false, earthquakes: false, volcanoes: false, china5a: false, chinaAncientCapitals: false, worldHeritage: false, highAltitude: false },
+  mapOverlays: { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, geology: false, countryBorders: false, ethnicRegions: false, ethnicRegionsOpacity: 45, arcgisWater: false, earthquakes: false, volcanoes: false, china5a: false, chinaAncientCapitals: false, worldHeritage: false, highAltitude: false },
   earthquakeMinMagnitude: 5,
   earthquakeStartYear: null,
   earthquakeEndYear: null,
@@ -6460,6 +6474,7 @@ function setLanguage(language) {
   const viewState = captureLanguageSwitchViewState();
   GeologyLegend.closeDetail();
   currentLanguage = language === "en" ? "en" : "zh";
+  EthnicRegions.refreshLanguage();
   localStorage.setItem(languageStorageKey, currentLanguage);
   applyLanguage();
   renderLanguageSensitiveViews();
@@ -8365,6 +8380,7 @@ function renderMapLibreMap() {
         && mapLibreMap.queryRenderedFeatures(event.point, { layers: npsLayers })
           .some((feature) => Boolean(feature.properties?.itemId));
       if (selectableNpsFeature) return;
+      if (EthnicRegions.click(mapLibreMap, event)) return;
       if (handleGeologyClick(event.lngLat.lng, event.lngLat.lat, event.point)) return;
       handleMapCanvasClick(event.lngLat.lng, event.lngLat.lat, event.originalEvent);
     });
@@ -9806,7 +9822,9 @@ function renderMapLibreLayers() {
     // and transport overlays visible while a newly selected basemap or
     // boundary level is loading.
     syncMapLibrePopulationDensityOverlay(overlays.populationDensity);
-    syncMapLibreArcgisWaterOverlay(overlays.arcgisWater);
+    syncCountryBorders();
+  EthnicRegions.sync(mapLibreMap);
+  syncMapLibreArcgisWaterOverlay(overlays.arcgisWater);
     syncMapLibreGeologyOverlay(overlays.geology);
   syncMapLibreRailwayOverlay(overlays.railways);
     syncMapLibreHazardOverlays(overlays);
@@ -9937,6 +9955,8 @@ function renderMapLibreLayers() {
     bindMapLibreFlightRouteHandlers();
   }
   syncMapLibrePopulationDensityOverlay(overlays.populationDensity);
+  syncCountryBorders();
+  EthnicRegions.sync(mapLibreMap);
   syncMapLibreArcgisWaterOverlay(overlays.arcgisWater);
   syncMapLibreGeologyOverlay(overlays.geology);
   syncMapLibreRailwayOverlay(overlays.railways);
@@ -9955,8 +9975,39 @@ function renderMapLibreLayers() {
   clearLoadingDebugSoon();
 }
 
+let unifiedCountryBorders = null;
+let unifiedCountryBordersPromise = null;
+function loadUnifiedCountryBorders() {
+  if (unifiedCountryBorders) return Promise.resolve(unifiedCountryBorders);
+  if (!unifiedCountryBordersPromise) unifiedCountryBordersPromise = fetchJson("data/country-borders-unified.geojson?v=4").then(data => {
+    if (data?.type !== "FeatureCollection" || !data.features?.length) throw new Error("Invalid global boundary data");
+    unifiedCountryBorders = data;
+    if (state.mapOverlays?.countryBorders) scheduleGeoMapRender();
+    return data;
+  }).catch(error => {
+    console.warn("Unified country borders", error);
+    showToast(currentLanguage === "en" ? "Country borders failed to load; toggle Borders to retry." : "统一国界加载失败，可重新勾选国界重试。");
+    return null;
+  }).finally(() => { unifiedCountryBordersPromise = null; });
+  return unifiedCountryBordersPromise;
+}
+function syncCountryBorders() {
+  if (!mapLibreMap || !mapLibreStyleReady) return;
+  const enabled = Boolean(state.mapOverlays?.countryBorders);
+  if (!enabled) {
+    if (mapLibreMap.getLayer("country-borders-line")) mapLibreMap.setLayoutProperty("country-borders-line", "visibility", "none");
+    return;
+  }
+  if (!unifiedCountryBorders) { loadUnifiedCountryBorders(); return; }
+  if (!mapLibreMap.getSource("country-borders")) mapLibreMap.addSource("country-borders", {type:"geojson",data:unifiedCountryBorders,attribution:"Natural Earth · China POV · 1:50m · Admin 0 · v5.1.2 · Public domain"});
+  if (!mapLibreMap.getLayer("country-borders-line")) mapLibreMap.addLayer({id:"country-borders-line",type:"line",source:"country-borders",paint:{"line-color":"#475569","line-width":1.2,"line-opacity":0.85}});
+  mapLibreMap.setLayoutProperty("country-borders-line", "visibility", "visible");
+}
+
 function mapLayerOrder(layer) {
   const id = layer.id, source = String(layer.source || "");
+  if (id === "country-borders-line") return 65;
+  if (id.startsWith("ethnic-regions-label-")) return 75;
   if (layer.type === "background" || id === "basemap" || id.startsWith("esri-relief-")) return 0;
   if (id === "population-density") return 10;
   if (id === "geology-overview") return 11;
@@ -11176,6 +11227,12 @@ function renderLeafletLayers() {
     leafletMap.createPane("coveragePane").style.zIndex = "300";
   }
   leafletLayers = L.layerGroup().addTo(leafletMap);
+  EthnicRegions.sync(null, leafletLayers);
+  if (overlays.countryBorders) {
+    if (!unifiedCountryBorders) loadUnifiedCountryBorders();
+    if (!leafletMap.getPane("countryBordersPane")) leafletMap.createPane("countryBordersPane").style.zIndex = "460";
+    L.geoJSON(unifiedCountryBorders || emptyFeatureCollection(), {pane:"countryBordersPane", interactive:false, style:{color:"#475569",weight:1.2,opacity:0.85,fill:false}}).addTo(leafletLayers);
+  }
   if (overlays.geology) {
     if (!leafletMap.getPane("geologyPane")) {
       const pane = leafletMap.createPane("geologyPane");
@@ -15943,7 +16000,9 @@ function renderMapControls() {
   GreatWall.legend();
   ImperialTombs.legend();
   renderAncientCapitalLegend();
-  if (overlayLegends) overlayLegends.hidden = !overlays.chinaAncientCapitals && !overlays.imperialTombs && !overlays.greatWall && !showSeafloorAgeLegend && !showSeafloorContourLegend && !overlays.populationDensity && !overlays.geology && !overlays.railways && !overlays.arcgisWater && !overlays.earthquakes && !overlays.volcanoes;
+  $("#showCountryBordersOnMap").checked = Boolean(overlays.countryBorders);
+  EthnicRegions.controls();
+  if (overlayLegends) overlayLegends.hidden = !overlays.ethnicRegions && !overlays.chinaAncientCapitals && !overlays.imperialTombs && !overlays.greatWall && !showSeafloorAgeLegend && !showSeafloorContourLegend && !overlays.populationDensity && !overlays.geology && !overlays.railways && !overlays.arcgisWater && !overlays.earthquakes && !overlays.volcanoes;
   if (show3d) show3d.checked = Boolean(state.map3d);
   if (showChina5a) showChina5a.checked = Boolean(overlays.china5a);
   if (showAncientCapitals) showAncientCapitals.checked = Boolean(overlays.chinaAncientCapitals);
@@ -16140,6 +16199,7 @@ function showPage(pageId, targetId = "") {
 }
 
 setLoadingDebug("读取本地快速状态", "pending");
+EthnicRegions.init({map: () => mapLibreMap, state: () => state, language: () => currentLanguage, save: saveUiStateSoon, front: bringMapLibrePointLayersToFront, render: () => { renderMapControls(); renderGeoMap(); }});
 GreatWall.init({ state: () => state, language: () => currentLanguage, map: () => mapLibreMap,
   leafletGroup: () => leafletLayers, front: bringMapLibrePointLayersToFront, saveCheckins: saveState,
   save: saveUiStateSoon, render: () => { renderMapControls(); renderGeoMap(); } });
@@ -16537,6 +16597,12 @@ $("#railwayMode")?.addEventListener("change", (event) => {
   renderMapControls();
   if (mapLibreMap && mapLibreStyleReady) syncMapLibreRailwayOverlay(state.mapOverlays.railways);
   else renderGeoMap();
+});
+$("#showCountryBordersOnMap")?.addEventListener("change", (event) => {
+  state.mapOverlays = {...defaultMapOverlays(), ...(state.mapOverlays || {}), countryBorders:event.target.checked};
+  saveUiStateSoon();
+  renderMapControls();
+  renderGeoMap();
 });
 $("#showArcgisWaterOnMap")?.addEventListener("change", (event) => {
   state.mapOverlays = { ...defaultMapOverlays(), ...(state.mapOverlays || {}) };

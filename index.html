@@ -6,7 +6,7 @@
     <title>我的全球旅行地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" />
-<link rel="stylesheet" href="styles.css?v=228" />
+<link rel="stylesheet" href="styles.css?v=238" />
   </head>
   <body>
     <div class="app-shell map-first-shell">
@@ -35,7 +35,7 @@
             <strong data-i18n="privacyTitle">本地保存</strong>
             <p data-i18n="privacyText">数据只保存在本机浏览器里，不会自动上传或公开。如需备份请导出。</p>
           </div>
-          <div class="app-version" id="appVersion">v2.2.4</div>
+          <div class="app-version" id="appVersion">v2.2.5</div>
         </div>
       </aside>
 
@@ -83,10 +83,10 @@
                   <input id="mapBaseOpacity" type="range" min="0" max="100" step="1" value="100" aria-label="底图透明度" />
                   <span class="map-opacity-number"><input id="mapBaseOpacityNumber" type="number" min="0" max="100" step="1" value="100" inputmode="numeric" aria-label="底图透明度百分比" /><span aria-hidden="true">%</span></span>
                 </div>
-                <label class="map-mode-toggle">
-                  <input id="show3dMap" type="checkbox" />
-                  <span data-i18n="overlay3d">3D</span>
-                </label>
+                <div class="map-top-toggle-pair">
+                  <label class="map-mode-toggle"><input id="show3dMap" type="checkbox" /><span data-i18n="overlay3d">3D</span></label>
+                  <label class="map-mode-toggle"><input id="showCountryBordersOnMap" type="checkbox" title="统一全球国界 · 中国视角 · 1:5000万 · Natural Earth" /><span data-i18n="overlayCountryBorders">国界</span></label>
+                </div>
                 <button id="addMapPoint" class="map-add-point-button" type="button" data-i18n="addMapPointCompact">添加打卡</button>
                 <button id="addMapPath" class="map-add-point-button" type="button" data-i18n="addMapPathCompact">添加路径</button>
               </div>
@@ -106,7 +106,10 @@
                 <label><input id="showHighAltitudeOnMap" type="checkbox" /> <span data-i18n="overlayHighAltitude">高海拔挑战</span></label>
               </div>
               <div class="map-overlay-toggles map-thematic-overlays">
-                <label><input id="showPopulationDensityOnMap" type="checkbox" /> <span data-i18n="providerPopulation">人口密度</span></label>
+                <div class="hazard-toggle-pair compact-toggle-pair">
+                  <label><input id="showEthnicRegionsOnMap" type="checkbox" /> <span data-i18n="overlayEthnicShort">民族</span></label>
+                  <label><input id="showPopulationDensityOnMap" type="checkbox" /> <span data-i18n="overlayPopulationShort">人口</span></label>
+                </div>
                 <div class="hazard-toggle-pair compact-toggle-pair">
                   <label><input id="showRailwaysOnMap" type="checkbox" /> <span data-i18n="overlayRailways">铁路</span></label>
                   <label><input id="showGeologyOnMap" type="checkbox" /> <span data-i18n="overlayGeology">地质</span></label>
@@ -230,6 +233,15 @@
                   <div class="population-density-scale" aria-hidden="true"></div>
                   <div class="population-density-labels"><span>20</span><span>400</span><span>2k</span><span>10k</span><span>50k</span><span>200k+</span></div>
                   <small data-i18n="populationDensityUnit">人 / km² · GHSL</small>
+                </aside>
+                <aside class="population-density-legend" id="ethnicRegionsLegend" hidden>
+                  <strong data-i18n="overlayEthnicRegions">民族聚居区</strong>
+                  <label class="geology-provider-control"><span id="ethnicRegionsSourceLabel">来源</span><select id="ethnicRegionsSource" aria-label="民族数据来源"><option value="geoepr">GeoEPR · 2021</option><option value="greg">GREG · 1964</option></select></label>
+                  <label class="population-density-opacity"><span data-i18n="populationDensityOpacity">透明度</span><input id="ethnicRegionsOpacity" type="range" min="0" max="100" value="45" /><output id="ethnicRegionsOpacityValue">45%</output></label>
+                  <small id="ethnicRegionsNote">展示 GeoEPR 收录的 2021 年政治相关族群聚居范围，并非完整世界民族分布；部分国家和族群未收录，空白不表示无人居住。</small>
+                  <small id="ethnicRegionsStatus" role="status"></small>
+                  <button id="ethnicRegionsRetry" type="button" hidden>重试</button>
+                  <a id="ethnicRegionsSourceLink" href="https://www.arcgis.com/home/item.html?id=c969daf5655c41fbbe9ae0140989efeb" target="_blank" rel="noopener">GeoEPR · 数据与预览 ↗</a> <a id="ethnicKinSourceLink" href="https://icr.ethz.ch/data/epr/tek/" target="_blank" rel="noopener">EPR-TEK · 跨境对应 ↗</a>
                 </aside>
                 <aside class="arcgis-water-legend" id="arcgisWaterLegend" hidden>
                   <strong data-i18n="arcgisWaterLegendTitle">水系</strong>
@@ -450,6 +462,10 @@
 <script src="geology-providers.js?v=12"></script>
 <script src="geology-auto.js?v=11"></script>
 <script src="geology-legend.js?v=31"></script>
-<script src="app.js?v=807"></script>
+<script src="ethnic-translations.js?v=4"></script>
+<script src="ethnic-kin.js?v=1"></script>
+<script src="greg-translations.js?v=3"></script>
+<script src="ethnic-regions.js?v=13"></script>
+<script src="app.js?v=822"></script>
   </body>
 </html>
