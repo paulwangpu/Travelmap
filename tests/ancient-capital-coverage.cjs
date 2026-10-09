@@ -29,7 +29,7 @@ for (const site of data.items.filter(x=>x.coordinatePrecision)) {
   assert(site.records.every(x=>/^https:\/\//.test(x['来源URL'])));
 }
 // Records retain their political identity while sourced coordinates and site associations evolve.
-const original=JSON.parse(execFileSync('git',['show','HEAD:data/china-ancient-capitals.json'],{cwd:require('node:path').resolve(__dirname,'..'),encoding:'utf8'}));
+const original=JSON.parse(execFileSync('git',['show','HEAD:data/china-ancient-capitals.json'],{cwd:require('node:path').resolve(__dirname,'..'),encoding:'utf8',maxBuffer:16*1024*1024}));
 for(const record of original.recordItems) {
  const retained=data.recordItems.find(x=>x.sourceOrder===record.sourceOrder);
  assert(retained,record.name);
