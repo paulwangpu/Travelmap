@@ -1,0 +1,70 @@
+{
+  "source": "OSM API map snapshot",
+  "bbox": [
+    103.841,
+    13.425,
+    103.878,
+    13.463
+  ],
+  "date": "2026-10-09",
+  "features": 121,
+  "counts": {
+    "walls": 33,
+    "temples": 49,
+    "platforms": 2,
+    "water": 37
+  },
+  "skipped": [
+    {
+      "id": "6644694",
+      "name": "Preah Khan",
+      "reason": "'447536493'"
+    }
+  ],
+  "translations": {
+    "Angkor Thom": "吴哥城",
+    "Bayon": "巴戎寺",
+    "Baphuon temple": "巴芳寺",
+    "Phimeanakas": "空中宫殿",
+    "Angkor Thom Royal Palace": "吴哥王宫",
+    "Royal Palace of Angkor Thom": "吴哥王宫围区",
+    "Terrace of the Elephants": "战象平台",
+    "Elephant terrace": "战象平台构件",
+    "Terrace of the Leper King": "癞王平台",
+    "South Khleang temple": "南仓",
+    "North Khleang temple": "北仓",
+    "North Khleang": "北仓围区",
+    "Prasat Suor Prat": "十二塔庙",
+    "Preah Pithu": "圣琵琶寺群",
+    "Preah Pithu site": "圣琵琶寺群",
+    "Preah Pithu Group": "圣琵琶寺群围区",
+    "Preah Pithu X": "圣琵琶寺群 · X寺",
+    "Preah Palilay": "普利莱寺",
+    "Tep Pranam": "提琶南寺",
+    "Angkor Thom West Gate": "吴哥城西门",
+    "Angkor Thom South Gate": "吴哥城南门",
+    "Angkor Thom North Gate": "吴哥城北门",
+    "Victory Gate": "吴哥城胜利门",
+    "East gate - Gate of the dead": "吴哥城东门（亡者门）",
+    "Prasat Chrung Northwest": "西北角寺",
+    "Prasat Chrung Northeast": "东北角寺",
+    "Prasat Chrung Southeast": "东南角寺",
+    "Prasat Chrung Southwest": "西南角寺",
+    "Mangalartha": "曼加拉尔塔寺",
+    "Prasat Top West": "西托普寺",
+    "Prasat Daun Mea": "道梅寺",
+    "Kandork Yeak temple": "甘多耶寺",
+    "Prasat Khleang Khang Cheung Toch": "北仓小寺",
+    "Kor Sak temple": "哥萨寺",
+    "Prasat Chorm": "琼寺遗迹",
+    "Sâk Krâop temple": "萨克克罗普寺",
+    "Wat Preah Angkong Chum": "普利安贡寺",
+    "Wat Preah Vihear Bram Pi Lveng": "十二间佛殿",
+    "Srah Bros": "王宫男池",
+    "Sras Srei": "王宫女池",
+    "Srah Andong": "王宫安东池",
+    "Boeung Thom": "班通池",
+    "Trapeang Daun Meas": "道梅池",
+    "Tak Neang": "塔克娘河"
+  }
+}

@@ -15,10 +15,10 @@ const mapControlsStorageKey = "travel-map-controls-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "2.2.6";
+const appVersion = "2.2.7";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
-const chinaAncientCapitalTotal = 339;
+const chinaAncientCapitalTotal = 341;
 const worldHeritageCatalogTotal = 1248;
 const usNpsUnitTotal = 433;
 const dataCacheVersion = "20261001-gvp-reference";
@@ -886,6 +886,23 @@ function normalizeMapOverlays(overlays = {}) {
     volcanoes: Boolean(overlays.volcanoes),
     china5a: Boolean(overlays.china5a),
     chinaAncientCapitals: Boolean(overlays.chinaAncientCapitals),
+    ancientCapitalWalls: Boolean(overlays.ancientCapitalWalls),
+    ancientCapitalWallLegendOpen: overlays.ancientCapitalWallLegendOpen !== false,
+    ancientCapitalTangWalls: overlays.ancientCapitalTangWalls !== false,
+    ancientCapitalMingQingWalls: overlays.ancientCapitalMingQingWalls !== false,
+    ancientCapitalSixDynastyWalls: overlays.ancientCapitalSixDynastyWalls !== false,
+    ancientCapitalHanWeiWalls: overlays.ancientCapitalHanWeiWalls !== false,
+    ancientCapitalShangWalls: overlays.ancientCapitalShangWalls !== false,
+    ancientCapitalZhouWalls: overlays.ancientCapitalZhouWalls !== false,
+    ancientCapitalQinHanWalls: overlays.ancientCapitalQinHanWalls !== false,
+    ancientCapitalLiaoJinWalls: overlays.ancientCapitalLiaoJinWalls !== false,
+    ancientCapitalYuanWalls: overlays.ancientCapitalYuanWalls !== false,
+    ancientCapitalSouthernTangWalls: overlays.ancientCapitalSouthernTangWalls !== false,
+    beijingCapitalEvolution: overlays.beijingCapitalEvolution !== false,
+    beijingCapitalStage: ["yan","ji","youzhou","liao","jin","yuan","mingqing"].includes(overlays.beijingCapitalStage) ? overlays.beijingCapitalStage : 'all',
+    luoyangCapitalEvolution: overlays.luoyangCapitalEvolution !== false,
+    luoyangCapitalStage: ['zhou','han','weijin','northernwei','suitang','mingqing'].includes(overlays.luoyangCapitalStage) ? overlays.luoyangCapitalStage : 'all',
+    ancientCapitalWallYear: [1400,1537,1648,1708,1787,1866].includes(Number(overlays.ancientCapitalWallYear)) ? Number(overlays.ancientCapitalWallYear) : 1866,
     ancientCapitalPeriods: HistoricalPeriods.periodSelection(overlays.ancientCapitalPeriods && typeof overlays.ancientCapitalPeriods === "object" ? overlays.ancientCapitalPeriods : {}),
     worldHeritage: Boolean(overlays.worldHeritage),
     highAltitude: Boolean(overlays.highAltitude),
@@ -1250,6 +1267,37 @@ const arcgisWaterGlyphsUrl = `${arcgisWaterServiceUrl}/resources/fonts/{fontstac
 const arcgisWaterAttribution = "Esri, TomTom, Garmin, FAO, NOAA, USGS, © OpenStreetMap contributors, GIS User Community";
 const arcgisWaterLayerPrefix = "arcgis-water-";
 const arcgisWaterNameOverrides = new Map([
+  ["huang", { zh: "黄河", en: "Yellow River" }],
+  ["huang he", { zh: "黄河", en: "Yellow River" }],
+  ["yellow", { zh: "黄河", en: "Yellow River" }],
+  ["wei", { zh: "渭河", en: "Wei River" }],
+  ["wei he", { zh: "渭河", en: "Wei River" }],
+  ["feng", { zh: "沣河", en: "Feng River" }],
+  ["feng he", { zh: "沣河", en: "Feng River" }],
+  ["jing", { zh: "泾河", en: "Jing River" }],
+  ["jing he", { zh: "泾河", en: "Jing River" }],
+  ["luo", { zh: "洛河", en: "Luo River" }],
+  ["luo he", { zh: "洛河", en: "Luo River" }],
+  ["yi", { zh: "伊河", en: "Yi River" }],
+  ["yi he", { zh: "伊河", en: "Yi River" }],
+  ["jian", { zh: "涧河", en: "Jian River" }],
+  ["jian he", { zh: "涧河", en: "Jian River" }],
+  ["chan", { zh: "瀍河", en: "Chan River" }],
+  ["chan he", { zh: "瀍河", en: "Chan River" }],
+  ["ba", { zh: "灞河", en: "Ba River" }],
+  ["ba he", { zh: "灞河", en: "Ba River" }],
+  ["zhu", { zh: "珠江", en: "Pearl River" }],
+  ["pearl", { zh: "珠江", en: "Pearl River" }],
+  ["huai", { zh: "淮河", en: "Huai River" }],
+  ["hai", { zh: "海河", en: "Hai River" }],
+  ["han", { zh: "汉江", en: "Han River" }],
+  ["nile", { zh: "尼罗河", en: "Nile River" }],
+  ["amazon", { zh: "亚马孙河", en: "Amazon River" }],
+  ["danube", { zh: "多瑙河", en: "Danube River" }],
+  ["rhine", { zh: "莱茵河", en: "Rhine River" }],
+  ["volga", { zh: "伏尔加河", en: "Volga River" }],
+  ["mekong", { zh: "湄公河", en: "Mekong River" }],
+  ["ganges", { zh: "恒河", en: "Ganges River" }],
   ["yangtze", { zh: "长江", en: "Yangtze River" }],
   ["yangtze kiang", { zh: "长江", en: "Yangtze River" }],
   ["chang", { zh: "长江", en: "Yangtze River" }],
@@ -1376,7 +1424,7 @@ function isGaodeProvider(provider = activeMapProvider()) {
 }
 
 function isCoordinateInChina(lng, lat) {
-  return Number.isFinite(lng) && Number.isFinite(lat) && lng >= 72.004 && lng <= 137.8347 && lat >= 0.8293 && lat <= 55.8271;
+  return GcjRegion.contains(lng, lat);
 }
 
 function transformLatForChina(lng, lat) {
@@ -5613,7 +5661,7 @@ const checklistCanonicalPlaces = [
   { id: "cn-pingyao", aliases: ["平遥古城", "平遥古城景区"] },
   { id: "cn-suzhou-gardens", aliases: ["苏州古典园林", "苏州市园林", "Classical Gardens of Suzhou"] },
   { id: "cn-summer-palace", aliases: ["颐和园", "颐和园景区", "北京皇家园林-颐和园", "Summer Palace, an Imperial Garden in Beijing"] },
-  { id: "cn-temple-of-heaven", aliases: ["天坛", "天坛公园"] },
+  { id: "cn-temple-of-heaven", aliases: ["天坛", "天坛公园", "北京皇家祭坛—天坛", "北京皇家祭坛-天坛", "Temple of Heaven: an Imperial Sacrificial Altar in Beijing"] },
   { id: "cn-dazu-rock-carvings", aliases: ["大足石刻", "大足石刻景区"] },
   { id: "cn-wuyishan", aliases: ["武夷山", "武夷山景区", "武夷山 · 黄岗山 · 2160m"] },
   { id: "cn-qingcheng-dujiangyan", aliases: ["青城山-都江堰", "青城山—都江堰", "青城山都江堰", "青城山—都江堰旅游景区", "青城山都江堰旅游", "青城山", "都江堰景区", "青城山 · 老君阁/彭祖峰 · 1260m", "Mount Qingcheng and the Dujiangyan Irrigation System"] },
@@ -7003,7 +7051,7 @@ function refreshInferredLocationsForCountry(countryId) {
 function loadCatalogData() {
   if (catalogDataPromise) return catalogDataPromise;
   catalogDataRequested = true;
-  catalogDataPromise = fetchJson("data/world-heritage.json")
+  catalogDataPromise = fetchJson("data/world-heritage.json?v=3")
     .then((data) => {
       if (!data?.byCountry || !data?.coordinates) throw new Error("invalid world heritage catalog");
       const byCountry = {};
@@ -7297,7 +7345,7 @@ function loadUsNpsBoundaries() {
 
 function loadChinaAncientCapitals() {
   if (chinaAncientCapitalsPromise) return chinaAncientCapitalsPromise;
-  chinaAncientCapitalsPromise = fetchJson("data/china-ancient-capitals.json?v=3")
+  chinaAncientCapitalsPromise = fetchJson("data/china-ancient-capitals.json?v=32")
     .then(async (base) => {
       try {
         const supplement = await fetchJson("data/western-regions-36.json?v=2");
@@ -7314,7 +7362,7 @@ function loadChinaAncientCapitals() {
       fixedChecklistTotals.chinaAncientCapitals = data.recordItems?.length || data.recordCount || chinaAncientCapitalTotal;
       chinaAncientCapitalCoordinates = {};
       chinaAncientCapitalMeta = {};
-      const mergedSiteByCoordinate = new Map();
+      const mergedSiteByKey = new Map();
       const recordItems = Array.isArray(data.recordItems) && data.recordItems.length ? data.recordItems : [];
       checklistCatalog.chinaAncientCapitals.items = (recordItems.length ? recordItems : items).map((item) => item.name);
       items.forEach((item) => {
@@ -7327,13 +7375,11 @@ function loadChinaAncientCapitals() {
           isMergedSite: true,
         };
         chinaAncientCapitalMeta[canonicalPlaceKey(item.name)] = mergedMeta;
-        mergedSiteByCoordinate.set(ancientCapitalCoordinateKey(item.lng, item.lat), mergedMeta);
+        mergedSiteByKey.set(mergedMeta.siteKey, mergedMeta);
       });
       recordItems.forEach((item) => {
         if (!item?.name) return;
-        const mergedSite = Number.isFinite(item.lng) && Number.isFinite(item.lat)
-          ? mergedSiteByCoordinate.get(ancientCapitalCoordinateKey(item.lng, item.lat))
-          : null;
+        const mergedSite = mergedSiteByKey.get(item.siteKey) || null;
         const normalizedItem = mergedSite ? {
           ...item,
           siteKey: mergedSite.siteKey,
@@ -8382,6 +8428,10 @@ function renderMapLibreMap() {
         && mapLibreMap.queryRenderedFeatures(event.point, { layers: npsLayers })
           .some((feature) => Boolean(feature.properties?.itemId));
       if (selectableNpsFeature) return;
+      if (BeijingCapitalEvolution.click(mapLibreMap,event)) return;
+      if (LuoyangCapitalEvolution.click(mapLibreMap,event)) return;
+      if (AngkorSites.click(mapLibreMap,event)) return;
+      if (AncientCapitalWalls.click(mapLibreMap,event)) return;
       if (EthnicRegions.click(mapLibreMap, event)) return;
       if (handleGeologyClick(event.lngLat.lng, event.lngLat.lat, event.point)) return;
       handleMapCanvasClick(event.lngLat.lng, event.lngLat.lat, event.originalEvent);
@@ -8723,6 +8773,14 @@ function clearMapLibreArcgisWaterHover() {
   arcgisWaterHoverPopup = null;
 }
 
+function localizedWaterDebugText(value) {
+  if (currentLanguage === 'en') return value;
+  const names = { Point:'点', MultiPoint:'多点', LineString:'线', MultiLineString:'多线', Polygon:'面', MultiPolygon:'多面', _name:'原始名称', _name_en:'英文名称', _name_local:'当地名称', _name_zh:'中文名称', _name_zh_s:'简体中文名称', _name_zh_cn:'简体中文名称', name:'名称', name_en:'英文名称', name_zh:'中文名称', 'name:en':'英文名称', 'name:zh':'中文名称', _symbol:'符号编号', _minzoom:'最小缩放级别', _maxzoom:'最大缩放级别', _label_class:'标签类别' };
+  if (typeof value !== 'string') return value;
+  if (names[value]) return names[value];
+  return value.replace(/^Water line/, '水系线').replace(/^Water area/, '水域面').replace(/small scale/g, '小比例尺').replace(/medium scale/g, '中比例尺').replace(/large scale/g, '大比例尺').replace(/\/label/g, ' · 标签');
+}
+
 function mapLibreArcgisWaterDebugHtml(feature) {
   const hovered = feature?._travelHoverTarget || feature;
   const rows = [
@@ -8738,7 +8796,7 @@ function mapLibreArcgisWaterDebugHtml(feature) {
       ...Object.entries(feature.properties || {}).sort(([left], [right]) => left.localeCompare(right)).map(([key, value]) => [`label.${key}`, value])
     );
   }
-  return `<div class="arcgis-water-debug-fields">${rows.map(([key, value]) => `<div><b>${escapeHtml(key)}</b><span>${escapeHtml(typeof value === "string" ? value : JSON.stringify(value))}</span></div>`).join("")}</div>`;
+  return `<div class="arcgis-water-debug-fields">${rows.map(([key, value]) => `<div><b>${escapeHtml(localizedWaterDebugText(key))}</b><span>${escapeHtml(localizedWaterDebugText(typeof value === "string" ? value : JSON.stringify(value)))}</span></div>`).join("")}</div>`;
 }
 
 function handleMapLibreArcgisWaterHover(event) {
@@ -9826,6 +9884,10 @@ function renderMapLibreLayers() {
     syncMapLibrePopulationDensityOverlay(overlays.populationDensity);
     syncCountryBorders();
   EthnicRegions.sync(mapLibreMap);
+  AncientCapitalWalls.sync(mapLibreMap);
+  AngkorSites.sync(mapLibreMap);
+  LuoyangCapitalEvolution.sync(mapLibreMap);
+  BeijingCapitalEvolution.sync(mapLibreMap);
   syncMapLibreArcgisWaterOverlay(overlays.arcgisWater);
     syncMapLibreGeologyOverlay(overlays.geology);
   syncMapLibreRailwayOverlay(overlays.railways);
@@ -9959,6 +10021,10 @@ function renderMapLibreLayers() {
   syncMapLibrePopulationDensityOverlay(overlays.populationDensity);
   syncCountryBorders();
   EthnicRegions.sync(mapLibreMap);
+  AncientCapitalWalls.sync(mapLibreMap);
+  AngkorSites.sync(mapLibreMap);
+  LuoyangCapitalEvolution.sync(mapLibreMap);
+  BeijingCapitalEvolution.sync(mapLibreMap);
   syncMapLibreArcgisWaterOverlay(overlays.arcgisWater);
   syncMapLibreGeologyOverlay(overlays.geology);
   syncMapLibreRailwayOverlay(overlays.railways);
@@ -10009,6 +10075,9 @@ function syncCountryBorders() {
 function mapLayerOrder(layer) {
   const id = layer.id, source = String(layer.source || "");
   if (id === "country-borders-line") return 65;
+  if(id.startsWith('ancient-capital-wall-'))return 66;
+  if(id.startsWith('beijing-evolution-'))return id.endsWith('labels')?76:67;
+  if(id.startsWith('luoyang-evolution-'))return id.endsWith('labels')?76:67;
   if (id.startsWith("ethnic-regions-label-")) return 75;
   if (layer.type === "background" || id === "basemap" || id.startsWith("esri-relief-")) return 0;
   if (id === "population-density") return 10;
@@ -10531,6 +10600,7 @@ function checklistOverlayPlaces() {
     ].filter(Boolean)));
   const allOverlayItems = keys.flatMap(checklistOverlayEntriesFor);
   const rawItems = allOverlayItems.map(({ key, item, group, itemKey, legacyKey, title, subtitle }) => {
+    if (key === "worldHeritage" && item.id === "whc-668" && AngkorSites.capital().features.length) return null;
     const coords = checklistCoordinateFor(item, key === "china5a" ? group : "");
     if (!coords || !Number.isFinite(coords[0]) || !Number.isFinite(coords[1])) return null;
     const done = isChecklistItemDone(key, item, group);
@@ -10646,6 +10716,8 @@ function invalidateUnifiedParkHeritageIndex() {
 }
 
 function checklistMergeKeyForEntry(entry) {
+  const sharedBeijingPlace = checklistCanonicalKey(entry.item);
+  if (["place:cn-summer-palace", "place:cn-temple-of-heaven"].includes(sharedBeijingPlace)) return sharedBeijingPlace;
   const entityId = parkHeritageEntityId(entry.key, entry.item);
   if (entityId) return entityId;
   return checklistCanonicalKey(entry.item)
@@ -10857,6 +10929,9 @@ function renderAncientCapitalDetail(key, item, capitalMeta, done) {
     <p class="eyebrow">${checklistCatalog[key]?.label || t("checklistFallback")}</p>
     <h3>${escapeHtml(currentPlace)}</h3>
     ${westernRegionInfo(capitalMeta)}
+    ${ancientCapitalBoundaryRelations(capitalMeta)}
+    ${ancientCapitalResearchMaps(capitalMeta)}
+    ${capitalMeta.siteOrganization ? `<section class="capital-meta-line"><strong>${currentLanguage === "en" ? "Site grouping" : "城址归组"}</strong><p>${escapeHtml(capitalMeta.siteOrganization.decision)}</p></section>` : ""}
     <div class="capital-facts">
       <section>
         <header><strong>${currentLanguage === "en" ? "Capital records" : "都城记录"}</strong><em>${recordsLabel}</em></header>
@@ -10870,9 +10945,36 @@ function renderAncientCapitalDetail(key, item, capitalMeta, done) {
     <button class="detail-action" data-checklist-map="${key}" data-item="${item}" type="button">${done ? t("unvisit") : t("markVisited")}</button>`;
 }
 
+function ancientCapitalBoundaryRelations(item) {
+ const relations=item?.boundaryRelations||[];
+ if(!relations.length&&!item?.boundaryRelationNote)return item?.boundaryAudit?'<section class="capital-meta-line"><strong>对应城址范围</strong><p>'+escapeHtml(item.boundaryAudit.status)+'</p></section>':'';
+ const groups=new Map();for(const r of relations){const key=r.control+' · '+r.city+(r.kind?' · '+r.kind:'');if(!groups.has(key))groups.set(key,[]);const names=groups.get(key);if(!names.includes(r.name))names.push(r.name);}
+ return '<section class="capital-meta-line"><strong>对应城址范围</strong>'+[...groups].map(([key,names])=>'<p>'+escapeHtml(key)+'：'+escapeHtml(names.join('、'))+'</p>').join('')+'<p>'+escapeHtml(item.boundaryRelationNote||'在城墙范围中勾选对应朝代查看。宫城、都城及保护范围分别保留；城址参照点不一定是宫城中心。')+'</p></section>';
+}
+
+function ancientCapitalResearchMaps(item) {
+ if(item?.historicalSources?.length)return '<section class="capital-meta-line"><p>'+escapeHtml(item.coordinatePrecision||'')+'</p>'+item.historicalSources.map(s=>'<a href="'+escapeHtml(s.url)+'" target="_blank" rel="noopener">'+escapeHtml(s.title)+' ↗</a>').join('<br>')+'</section>';
+ if(item?.historicalStages?.length)return '<section class="capital-meta-line"><strong>北京分期城址资料</strong>'+item.historicalStages.map(s=>'<p><b>'+escapeHtml(s.name)+'</b><br>'+escapeHtml(s.boundaryStatus)+'<br>'+escapeHtml(s.summary)+'<br>'+s.sources.map(r=>'<a href="'+escapeHtml(r.url)+'" target="_blank" rel="noopener">'+escapeHtml(r.title)+' ↗</a>').join('<br>')+'</p>').join('')+'</section>';
+ const name=ancientCapitalCurrentDisplayName(item)||item?.name||'';
+ if(name.includes('汉长安城'))return '<section class="capital-meta-line"><p>汉长安城（未央宫前殿参照）。原粗略点位已更正到前殿遗址标绘范围内；此点用作城址定位，不表示全城中心，也不表示各政权时期均使用同一前殿。宫墙展示线和构件范围可在城墙范围的秦汉选项查看。</p><a href="https://www.openstreetmap.org/way/821525295" target="_blank" rel="noopener">前殿遗址标绘来源 ↗</a></section>';
+ if(name.includes('丰镐'))return '<section class="capital-meta-line"><p>西周宗周由丰京、镐京共同构成：丰京在沣河西岸，镐京在东岸。此点采用丰镐遗址车马坑展示地点作参照，不是两京中心。公开考古资料记载，在已调查工作区域尚未发现城垣；已接入原图标示的1992年一般保护范围参考线，由城墙范围的周选项控制。低分辨率原图按村落参照近似配准，斗门辅助偏差约663米，非现行法定边界或古城墙；重点保护范围和考古遗存分布面尚未接入。</p><a href="https://www.cssn.cn/lsx/lsx_kgx/202210/t20221024_5552703.shtml" target="_blank" rel="noopener">丰镐遗址考古成果 ↗</a> · <a href="https://www.openstreetmap.org/node/7617487194" target="_blank" rel="noopener">参照点来源 ↗</a></section>';
+ if(name.includes('咸阳'))return '<section class="capital-meta-line"><p>秦咸阳宫遗址参照。点位位于六号宫殿遗址标绘范围内，原现代咸阳市区参照点已更正。该点不表示完整秦咸阳城的中心；所接入保护区及宫殿构件也不等于全城边界。</p><a href="https://www.openstreetmap.org/way/1236884831" target="_blank" rel="noopener">宫殿遗址标绘来源 ↗</a></section>';
+ if(name.includes('洛邑遗址'))return '<section class="capital-meta-line"><p>西周洛邑（祭祀遗址参照）。点位位于河南林业职业学院中州校区院内（中州东路2号），仅为校园参照点，并非祭祀坑精确位置或都城中心。遗址闭合范围尚未接入。</p><a href="https://www.lykgyjy.cn/wenwubaohu/664.html" target="_blank" rel="noopener">洛阳市考古研究院 · 祭祀遗址资料 ↗</a></section>';
+ const maps={
+ '洛阳':['隋唐洛阳城遗址实测图','https://www.chnmuseum.cn/fw/jyhdyy/202604/t20260416_279032.shtml','已接入东周王城、汉魏遗迹及隋唐城垣参考线；分别按周、汉魏、隋唐查看'],
+ '西安':['唐长安城数位新图','https://sinica.maps.arcgis.com/apps/webappviewer/index.html?id=61abf0934c964550bebc1278536a6070','已接入在线城墙、宫城构件；开启城墙范围并放大查看'],
+ '北京':['元大都城图','https://swj.beijing.gov.cn/bmxx/shms/swhxc/202311/t20231101_3292289.html','元末外郭城研究复原范围已接入，采用1368年城址记录'],
+ '南京':['六朝建康复原图','https://nbxc.nanjing.gov.cn/xcdt/202605/t20260528_5848078.html','已接入六朝、南唐都城及宫城推测范围；另有明皇城和明宫城范围，按对应朝代查看']
+ };
+ const city=Object.keys(maps).find(c=>name.includes(c));if(!city)return '';
+ const [title,url,status]=maps[city];return '<section class="capital-meta-line"><a href="'+url+'" target="_blank" rel="noopener">'+title+' ↗</a><p>'+status+'</p></section>';
+}
+
 function ancientCapitalDetailRecords(capitalMeta) {
   if (Array.isArray(capitalMeta?.records) && capitalMeta.records.length) {
     return capitalMeta.records.map((record) => ({
+      siteReference: chinaAncientCapitals.recordItems?.find(item => item.sourceOrder === record.sourceOrder)?.siteReference,
+      boundaryRelations: chinaAncientCapitals.recordItems?.find(item => item.sourceOrder === record.sourceOrder)?.boundaryRelations || [],
       era: HistoricalPeriods.capitalPeriod(record),
       ancientName: record["古称"] || capitalMeta.ancientName || capitalMeta.name,
       dynasty: record["政权/国号"] || capitalMeta.dynasty,
@@ -10882,6 +10984,8 @@ function ancientCapitalDetailRecords(capitalMeta) {
     }));
   }
   return [{
+    siteReference: capitalMeta?.siteReference,
+    boundaryRelations: capitalMeta?.boundaryRelations || [],
     era: ancientCapitalPrimaryEra(capitalMeta),
     ancientName: capitalMeta?.ancientName || capitalMeta?.name,
     dynasty: capitalMeta?.dynasty || compactMapLabelValues(capitalMeta?.dynasties, 2, "、"),
@@ -10928,6 +11032,8 @@ function renderAncientCapitalRecordList(records) {
       <span class="wide"><b>${labels.years}</b><em>${escapeHtml(record.years || t("none"))}</em></span>
       <span><b>${labels.capitalType}</b><em>${escapeHtml(record.capitalType || t("none"))}</em></span>
       <span><b>${labels.confidence}</b><em>${escapeHtml(record.confidence || t("none"))}</em></span>
+      ${record.siteReference ? `<span class="wide" title="${escapeHtml(record.siteReference.note || "")}"><b>${currentLanguage === "en" ? "Site reference" : "城址参照"}</b><em>${escapeHtml(record.siteReference.name)} · ${escapeHtml(record.siteReference.kind)}</em></span>` : ""}
+      <span class="wide"><b>${currentLanguage === "en" ? "Extents" : "对应范围"}</b><em>${record.boundaryRelations?.length ? `<details><summary>${record.boundaryRelations.length} ${currentLanguage === "en" ? "linked extents" : "项（按本条朝代）"}</summary>${escapeHtml([...new Set(record.boundaryRelations.map(r => r.name + (r.kind ? "（" + r.kind + "）" : "")))].join("、"))}</details>` : (currentLanguage === "en" ? "No extent linked for this record" : "本条朝代暂无对应范围")}</em></span>
     </article>`).join("")}</div>`;
 }
 
@@ -11230,6 +11336,10 @@ function renderLeafletLayers() {
   }
   leafletLayers = L.layerGroup().addTo(leafletMap);
   EthnicRegions.sync(null, leafletLayers);
+  AncientCapitalWalls.sync(null,leafletLayers);
+  AngkorSites.sync(null,leafletLayers);
+  LuoyangCapitalEvolution.sync(null,leafletLayers);
+  BeijingCapitalEvolution.sync(null,leafletLayers);
   if (overlays.countryBorders) {
     if (!unifiedCountryBorders) loadUnifiedCountryBorders();
     if (!leafletMap.getPane("countryBordersPane")) leafletMap.createPane("countryBordersPane").style.zIndex = "460";
@@ -13582,7 +13692,7 @@ function ancientCapitalMapSubtitle(item) {
       : (position === "site" ? "遗址参照，身份见说明" : position === "inferred" ? "推测位置，非都城确址" : position === "pending" ? "地望待考" : "概略地望");
     return `${currentLanguage === "en" ? "36 Western Kingdoms" : "西域三十六国"} · ${status}`;
   }
-  const eras = uniqueTextValues((item?.eras || []).map(ancientCapitalDisplayEra))
+  const eras = HistoricalPeriods.capitalPeriods(item || {})
     .sort((a,b) => HistoricalPeriods.keys.indexOf(a) - HistoricalPeriods.keys.indexOf(b)).join("、");
   const recordCount = Number(item?.recordCount) || (Array.isArray(item?.records) ? item.records.length : 0);
   const count = recordCount > 1
@@ -15841,11 +15951,14 @@ function renderAncientCapitalLegend() {
  const parent=document.getElementById("mapOverlayLegends"); if(!parent)return;
  let el=document.getElementById("ancientCapitalLegend");
  if(!el){el=document.createElement("section");el.id="ancientCapitalLegend";el.className="great-wall-legend imperial-tombs-legend";parent.appendChild(el);
- el.addEventListener("click",event=>{if(event.target.matches("[data-capital-all]"))event.stopPropagation();});
- el.addEventListener("change",event=>{const input=event.target;if(!input.hasAttribute("data-capital-all")&&!input.hasAttribute("data-capital-period"))return;const selection=state.mapOverlays.ancientCapitalPeriods ||= {};if(input.hasAttribute("data-capital-all"))el.querySelectorAll("[data-capital-period]:not(:disabled)").forEach(box=>{selection[box.dataset.capitalPeriod]=input.checked;});else selection[input.dataset.capitalPeriod]=input.checked;mapPointRenderRevision+=1;saveUiStateSoon();renderMapControls();renderGeoMap();});}
+ el.addEventListener("toggle",event=>{const details=event.target;if(!details.matches?.(".capital-wall-section")||!details.isConnected)return;if(state.mapOverlays.ancientCapitalWallLegendOpen===details.open)return;state.mapOverlays.ancientCapitalWallLegendOpen=details.open;saveUiStateSoon();},true);
+ el.addEventListener("click",event=>{if(event.target.matches("[data-capital-all],[data-capital-walls]"))event.stopPropagation();});
+ el.addEventListener("change",event=>{const input=event.target;if(input.hasAttribute('data-beijing-evolution')||input.hasAttribute('data-beijing-stage')){if(input.hasAttribute('data-beijing-evolution'))state.mapOverlays.beijingCapitalEvolution=input.checked;else state.mapOverlays.beijingCapitalStage=input.value;saveUiStateSoon();renderMapControls();renderGeoMap();return;}if(input.hasAttribute('data-luoyang-evolution')||input.hasAttribute('data-luoyang-stage')){if(input.hasAttribute('data-luoyang-evolution'))state.mapOverlays.luoyangCapitalEvolution=input.checked;else state.mapOverlays.luoyangCapitalStage=input.value;saveUiStateSoon();renderMapControls();renderGeoMap();return;}if(input.hasAttribute('data-capital-research-family')){state.mapOverlays[input.dataset.capitalResearchFamily]=input.checked;saveUiStateSoon();renderMapControls();renderGeoMap();return;}if(input.hasAttribute('data-capital-mingqing-walls')){state.mapOverlays.ancientCapitalMingQingWalls=input.checked;saveUiStateSoon();renderMapControls();renderGeoMap();return;}if(input.hasAttribute('data-capital-tang-walls')){state.mapOverlays.ancientCapitalTangWalls=input.checked;saveUiStateSoon();renderMapControls();renderGeoMap();return;}if(input.hasAttribute('data-capital-walls')||input.hasAttribute('data-capital-wall-year')){if(input.hasAttribute('data-capital-walls'))state.mapOverlays.ancientCapitalWalls=input.checked;else state.mapOverlays.ancientCapitalWallYear=Number(input.value);saveUiStateSoon();renderMapControls();renderGeoMap();return;}if(!input.hasAttribute("data-capital-all")&&!input.hasAttribute("data-capital-period"))return;const selection=state.mapOverlays.ancientCapitalPeriods ||= {};if(input.hasAttribute("data-capital-all"))el.querySelectorAll("[data-capital-period]:not(:disabled)").forEach(box=>{selection[box.dataset.capitalPeriod]=input.checked;});else selection[input.dataset.capitalPeriod]=input.checked;mapPointRenderRevision+=1;saveUiStateSoon();renderMapControls();renderGeoMap();});}
  el.hidden=!state.mapOverlays.chinaAncientCapitals;if(el.hidden)return;
- const items=chinaAncientCapitals.items||[],keys=HistoricalPeriods.keys,available=keys.filter(key=>items.some(item=>HistoricalPeriods.capitalPeriods(item).includes(key))),selection=state.mapOverlays.ancientCapitalPeriods||{},open=el.querySelector("details")?.open!==false;
+ const items=chinaAncientCapitals.items||[],keys=HistoricalPeriods.keys,available=keys.filter(key=>items.some(item=>HistoricalPeriods.capitalPeriods(item).includes(key))),selection=state.mapOverlays.ancientCapitalPeriods||{},open=el.querySelector("details")?.open!==false,wallOpen=el.querySelector(".capital-wall-section")?.open??(state.mapOverlays.ancientCapitalWallLegendOpen!==false);
+ if(state.mapOverlays.ancientCapitalWallLegendOpen!==wallOpen){state.mapOverlays.ancientCapitalWallLegendOpen=wallOpen;saveUiStateSoon();}
  el.innerHTML='<strong>'+ (currentLanguage==="en"?"Ancient capitals":"古都")+'</strong><details class="great-wall-section" '+(open?'open':'')+'><summary><input type="checkbox" data-capital-all aria-label="全选古都朝代"><i class="wall-disclosure" aria-hidden="true"></i><span>朝代 · 全选</span></summary><div class="tomb-legend-options">'+keys.map(key=>'<label'+(!available.includes(key)?' title="暂无条目"':'')+'><input type="checkbox" data-capital-period="'+key+'" '+(!available.includes(key)?'disabled':selection[key]!==false?'checked':'')+'>'+HistoricalPeriods.legendIcon(HistoricalPeriods.capitalSvg('#fff'),HistoricalPeriods.colors[key])+'<span>'+key+'</span></label>').join('')+'</div></details>';
+ el.innerHTML+='<details class="great-wall-section capital-wall-section" '+(wallOpen?'open':'')+'><summary><input type="checkbox" data-capital-walls '+(state.mapOverlays.ancientCapitalWalls?'checked':'')+'><i class="wall-disclosure" aria-hidden="true"></i><span>'+(currentLanguage==="en"?'City wall extents':'城墙范围')+'</span></summary><div class="capital-wall-controls"><label><input type="checkbox" data-capital-research-family="ancientCapitalShangWalls" '+(state.mapOverlays.ancientCapitalShangWalls!==false?'checked':'')+'>夏商</label><label><input type="checkbox" data-capital-research-family="ancientCapitalZhouWalls" '+(state.mapOverlays.ancientCapitalZhouWalls!==false?'checked':'')+'>周</label><label><input type="checkbox" data-capital-research-family="ancientCapitalQinHanWalls" '+(state.mapOverlays.ancientCapitalQinHanWalls!==false?'checked':'')+'>秦汉</label><label><input type="checkbox" data-capital-research-family="ancientCapitalHanWeiWalls" '+(state.mapOverlays.ancientCapitalHanWeiWalls!==false?'checked':'')+'>魏晋南北朝</label><label><input type="checkbox" data-capital-tang-walls '+(state.mapOverlays.ancientCapitalTangWalls!==false?'checked':'')+'>'+(currentLanguage==='en'?'Sui/Tang':'隋唐')+'</label><label><input type="checkbox" data-capital-research-family="ancientCapitalSouthernTangWalls" '+(state.mapOverlays.ancientCapitalSouthernTangWalls!==false?'checked':'')+'>五代十国</label><label><input type="checkbox" data-capital-research-family="ancientCapitalLiaoJinWalls" '+(state.mapOverlays.ancientCapitalLiaoJinWalls!==false?'checked':'')+'>宋辽金西夏</label><label><input type="checkbox" data-capital-research-family="ancientCapitalYuanWalls" '+(state.mapOverlays.ancientCapitalYuanWalls!==false?'checked':'')+'>元</label><label><input type="checkbox" data-capital-mingqing-walls '+(state.mapOverlays.ancientCapitalMingQingWalls!==false?'checked':'')+'>'+(currentLanguage==='en'?'Ming/Qing':'明清')+'</label><select data-capital-wall-year aria-label="明清城墙范围年份">'+AncientCapitalWalls.years.map(y=>'<option value="'+y+'" '+(y===(state.mapOverlays.ancientCapitalWallYear||1866)?'selected':'')+'>'+y+' 年</option>').join('')+'</select><small>明清：3356 条记录，按年份筛选。隋唐：唐幽州四至参考轮廓及现存寺院参照、长安城墙及坊里等；洛阳实测图城垣参考线、城门及保护展示构件，不受明清年份影响。秦汉：未央宫展示线、石渠阁、秦咸阳宫殿与保护区标绘，不代表完整城界。二里头：遗址标绘范围。东周王城：保护区划外缘参考线。新郑郑韩故城、洛阳汉魏、郑州商城：现存遗迹地图标绘。南京六朝、南唐：官方规划推测范围，近似配准。开封：周选项含魏大梁地望推定；五代旧城沿革参照与宋东京里城共用一个图件轮廓，不重复叠面；宋辽金西夏含北宋外城、里城和宫城图件参考。杭州吴越海塘、南宋德寿宫与府治，安阳殷墟宫庙、王陵及洹北商城，大同北魏明堂与辽金寺院，成都金沙与东华门多期遗存也分别接入。邺城在河北临漳，与安阳殷墟分开。北京：宋辽金选项含辽南京天宁寺塔现存建筑及金中都地下文物埋藏区参考范围；元选项含元末外郭城复原轮廓及现代城垣遗址公园展示范围，点击区分资料性质。放大后点击查看资料。</small></div></details>';
  const all=el.querySelector('[data-capital-all]'),count=available.filter(key=>selection[key]!==false).length;all.checked=available.length>0&&count===available.length;all.indeterminate=count>0&&count<available.length;all.disabled=!available.length;
 }
 
@@ -16201,6 +16314,9 @@ function showPage(pageId, targetId = "") {
 }
 
 setLoadingDebug("读取本地快速状态", "pending");
+LuoyangCapitalEvolution.init({state:()=>state,language:()=>currentLanguage,front:bringMapLibrePointLayersToFront,error:()=>showToast('洛阳分期城址资料加载失败，请重新勾选重试。')});
+AngkorSites.init({zoom:()=>leafletMap?.getZoom()||13,state:()=>state,language:()=>currentLanguage,front:bringMapLibrePointLayersToFront,error:()=>showToast(currentLanguage==='en'?'Angkor data failed to load; toggle to retry.':'吴哥城数据加载失败，请重新勾选重试。'),changed:()=>{saveUiStateSoon();renderMapControls();renderGeoMap();},focus:(center,zoom)=>{if(mapLibreMap)mapLibreMap.flyTo({center,zoom});else if(leafletMap)leafletMap.setView([center[1],center[0]],zoom);}});
+AncientCapitalWalls.init({state:()=>state,language:()=>currentLanguage,front:bringMapLibrePointLayersToFront,error:()=>showToast(currentLanguage==='en'?'Historical wall extents failed to load; toggle to retry.':'古城墙范围加载失败，请重新勾选重试。')});
 EthnicRegions.init({map: () => mapLibreMap, state: () => state, language: () => currentLanguage, save: saveUiStateSoon, front: bringMapLibrePointLayersToFront, render: () => { renderMapControls(); renderGeoMap(); }});
 GreatWall.init({ state: () => state, language: () => currentLanguage, map: () => mapLibreMap,
   leafletGroup: () => leafletLayers, front: bringMapLibrePointLayersToFront, saveCheckins: saveState,
@@ -16719,8 +16835,7 @@ $("#showAncientCapitalsOnMap")?.addEventListener("change", (event) => {
   const refresh = () => {
     checklistOverlayCache.signature = "";
     renderMapControls();
-    if (mapLibreMap) renderMapLibreMarkers();
-    else renderGeoMap();
+    renderGeoMap();
   };
   if (event.target.checked) loadChinaAncientCapitals().finally(refresh);
   else refresh();
@@ -16831,6 +16946,12 @@ $("#leafletMap").addEventListener("click", (event) => {
     closeMapPopupsAndDetail();
     return;
   }
+  const relatedCapital = event.target.closest("[data-capital-related-site]");
+  if (relatedCapital) {
+    const name = relatedCapital.dataset.capitalRelatedSite, meta = ancientCapitalMergedMeta(ancientCapitalMapMeta(name));
+    if (meta) renderAncientCapitalDetail("chinaAncientCapitals", name, meta, isChecklistItemDone("chinaAncientCapitals", name));
+    return;
+  }
   const checklistButton = event.target.closest("[data-checklist-map]");
   if (checklistButton) {
     toggleChecklistItem(checklistButton.dataset.checklistMap, checklistButton.dataset.item);
@@ -16849,6 +16970,12 @@ $("#mapDetail").addEventListener("click", (event) => {
   if (event.target.closest("[data-cancel-map-point]")) {
     setMapAddMode(false);
     closeMapPopupsAndDetail();
+    return;
+  }
+  const relatedCapital = event.target.closest("[data-capital-related-site]");
+  if (relatedCapital) {
+    const name = relatedCapital.dataset.capitalRelatedSite, meta = ancientCapitalMergedMeta(ancientCapitalMapMeta(name));
+    if (meta) renderAncientCapitalDetail("chinaAncientCapitals", name, meta, isChecklistItemDone("chinaAncientCapitals", name));
     return;
   }
   const checklistButton = event.target.closest("[data-checklist-map]");
@@ -17013,3 +17140,5 @@ document.querySelectorAll("[data-region-view]").forEach((button) => {
     renderGeoMap();
   });
 });
+
+BeijingCapitalEvolution.init({state:()=>state,language:()=>currentLanguage,catalogStageIds:()=> (chinaAncientCapitals.items||[]).flatMap(i=>(i.historicalStages||[]).map(s=>s.id)),front:bringMapLibrePointLayersToFront,error:()=>showToast("北京分期城址资料加载失败，请重新勾选重试。")});

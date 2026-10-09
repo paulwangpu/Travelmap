@@ -1,0 +1,13 @@
+const assert=require('node:assert/strict'),fs=require('node:fs');
+const read=p=>JSON.parse(fs.readFileSync(p,'utf8')),catalog=read('data/china-ancient-capitals.json'),research=read('data/ancient-capital-research-extents.geojson'),report=read('docs/handan-capital-supplements.json');
+const site=catalog.items.find(s=>s.name==='邯郸'),record=catalog.recordItems.find(r=>r.sourceOrder===48);
+assert.equal(site.siteKey,'ancient-site:邯郸:36.62560,114.53910');assert.equal(record.siteKey,site.siteKey);assert.equal(record.capitalYears,'-386—-228');assert.equal(site.records[0]['都城年代（原文）'],record.capitalYears);assert.equal(site.records[0].sourceOrder,48);
+assert.deepEqual([site.lng,site.lat],report.sitePoint.current);assert.deepEqual([record.lng,record.lat],report.sitePoint.current);
+const features=report.addedFeatureIds.map(id=>research.features.find(f=>f.properties.sourceId===id));assert.equal(features.length,11);assert.ok(features.every(Boolean));assert.equal(new Set(features.map(f=>f.properties.sourceId)).size,11);
+for(const f of features){assert.equal(f.properties.period,'周');assert.equal(f.properties.capitalSiteKey,site.siteKey);assert.ok(record.boundaryRelations.some(b=>b.id===f.properties.sourceId));assert.ok(f.properties.sourceUrl.startsWith('https://'));}
+const get=id=>research.features.find(f=>f.properties.sourceId===id),inside=(p,r)=>{let hit=false;for(let i=0,j=r.length-1;i<r.length;j=i++){const a=r[i],b=r[j];if((a[1]>p[1])!==(b[1]>p[1])&&p[0]<(b[0]-a[0])*(p[1]-a[1])/(b[1]-a[1])+a[0])hit=!hit;}return hit;};
+assert.ok(inside([site.lng,site.lat],get('handan-zhao-west-city').geometry.coordinates[0]));
+for(const name of ['west','east','north']){const f=get('handan-zhao-'+name+'-city');assert.equal(f.geometry.type,'Polygon');assert.deepEqual(f.geometry.coordinates[0][0],f.geometry.coordinates[0].at(-1));assert.match(f.properties.note,/近似配准/);if(name!=='west')assert.equal(f.properties.inferredBoundary,true);}
+for(const id of [584857492,585861056,584857421,488781902])assert.deepEqual(get('osm-way-'+id).geometry,report.sourceGeometries[id]);
+assert.equal(get('osm-relation-18293823').properties.label,undefined);assert.match(get('osm-relation-18293823').properties.note,/现代/);assert.equal(get('osm-way-142769371').geometry.type,'Point');assert.match(site.boundaryRelationNote,/南垣/);assert.ok(features.every(f=>!(f.properties.sourceName.includes('大北城')&&f.geometry.type==='Polygon')),'No invented whole Dabeicheng rectangle');
+assert.ok(report.residualMeters.every(n=>n<21));assert.equal(catalog.recordItems.length,309);console.log('PASS: Handan point/identity, Zhao chronology, three city extents, underground walls and unchanged OSM geometry');

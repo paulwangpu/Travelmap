@@ -1,0 +1,39 @@
+{
+  "sharedReference": "ancient-site:幽州:39.89500,116.35000",
+  "sharedStages": [
+    "蓟城",
+    "唐幽州",
+    "辽南京"
+  ],
+  "splitRecordOrders": {
+    "shared": [
+      21,
+      88,
+      152,
+      203,
+      217
+    ],
+    "jin": [
+      225
+    ]
+  },
+  "note": "广安门一带区域参照点，蓟城地望仍有讨论；共享点不表示各朝代城界、宫城中心相同。",
+  "liaoSupplement": {
+    "research": true,
+    "osm": true,
+    "city": "北京",
+    "family": "beijingjin",
+    "period": "宋辽金西夏",
+    "sourceId": "beijing-liao-tianning-tower",
+    "sourceName": "辽南京 · 天宁寺塔（现存建筑）",
+    "label": "天宁寺塔（辽）",
+    "capitalSiteName": "幽州",
+    "fixedLandmark": true,
+    "sourceUrl": "https://www.openstreetmap.org/way/532863319",
+    "referenceUrl": "https://www.beijing.gov.cn/renwen/rwzyd/qxdw/gdshyqyxc/tnst/202309/t20230920_3263131.html",
+    "sourceTitle": "天宁寺塔现存建筑 OSM 标绘；年代据北京市政府文物资料",
+    "status": "现存建筑地图范围 · 非寺院保护区或辽南京城界",
+    "note": "天宁寺塔是辽代建筑、辽南京城址的重要参照。采用现存塔身建筑标绘范围，非考古测量。明清曾修整基座与塔刹；不把现代天宁寺范围当作辽代全寺范围。"
+  },
+  "cityOutline": "待可靠图件配准；不复用金中都保护区或唐幽州推定线。"
+}

@@ -1,0 +1,25 @@
+{
+  "checkedDate": "2026-10-08",
+  "sources": [
+    {
+      "url": "https://ytsc.rootinhenan.gov.cn/sitesources/ytsc/page_pc/ytyy/articleb894a9a3fd2647f3bca749a2cfeec85c.html",
+      "title": "洛阳：恰是太阳升起的地方",
+      "assessment": "2018年文化宣传文，非边界依据；未含测绘图、坐标或配准方法"
+    },
+    {
+      "url": "https://xhslink.cn/o/6c4VIXaUDoz",
+      "title": "汉魏洛阳故城",
+      "author": "也想不出来",
+      "assessment": "考古公开课个人笔记；注明钱国祥等来源，可追索原图，不直接作为测绘数据"
+    },
+    {
+      "url": "https://xhslink.cn/o/bv4nKzd3ri",
+      "title": "从地图看中国六大古都的前世今生",
+      "author": "查理MAP工作室",
+      "assessment": "再绘科普比较图；当前可见文字和首图未见边界数据、年代分期或配准依据，不直接描成shape"
+    }
+  ],
+  "adoptedPrimary": "https://www.ecsponline.com/goods.php?id=236109",
+  "newGeometry": null,
+  "geometryStatus": "新参考线与原有城墙重叠，已撤下。"
+}

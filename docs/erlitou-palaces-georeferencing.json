@@ -1,0 +1,181 @@
+{
+  "source": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/18/{y}/{x}",
+  "bbox": [
+    112.685,
+    34.689,
+    112.695,
+    34.697
+  ],
+  "imageSR": 4326,
+  "pixelSpace": [
+    768,
+    768
+  ],
+  "method": "按18级公开卫星瓦片可辨认的展示台基边缘重新逐角描绘；Web Mercator瓦片坐标直接转WGS84，各宫殿分别对齐自己的长边",
+  "identificationSource": "https://www.gooood.cn/en/erlitou-site-museum-of-the-xia-capital-china-by-rurban-studio.htm",
+  "archaeologicalBackground": "https://www.chnmus.net/clzl/2011-12/20/content_3917.htm",
+  "traces": [
+    [
+      [
+        111,
+        330
+      ],
+      [
+        268,
+        308
+      ],
+      [
+        273,
+        337
+      ],
+      [
+        355,
+        324
+      ],
+      [
+        375,
+        492
+      ],
+      [
+        267,
+        510
+      ],
+      [
+        271,
+        535
+      ],
+      [
+        235,
+        541
+      ],
+      [
+        230,
+        516
+      ],
+      [
+        144,
+        531
+      ]
+    ],
+    [
+      [
+        515,
+        37
+      ],
+      [
+        632,
+        19
+      ],
+      [
+        658,
+        185
+      ],
+      [
+        540,
+        206
+      ]
+    ]
+  ],
+  "exportedExtent": {
+    "xmin": 112.685,
+    "ymin": 34.68899999999999,
+    "xmax": 112.69500000000001,
+    "ymax": 34.696999999999996,
+    "spatialReference": {
+      "wkid": 4326,
+      "latestWkid": 4326
+    }
+  },
+  "previousTraces": [
+    [
+      [
+        597,
+        672
+      ],
+      [
+        728,
+        651
+      ],
+      [
+        722,
+        625
+      ],
+      [
+        767,
+        607
+      ],
+      [
+        795,
+        615
+      ],
+      [
+        801,
+        661
+      ],
+      [
+        814,
+        764
+      ],
+      [
+        827,
+        795
+      ],
+      [
+        744,
+        811
+      ],
+      [
+        747,
+        826
+      ],
+      [
+        703,
+        834
+      ],
+      [
+        697,
+        819
+      ],
+      [
+        622,
+        829
+      ],
+      [
+        610,
+        773
+      ]
+    ],
+    [
+      [
+        946,
+        478
+      ],
+      [
+        1045,
+        465
+      ],
+      [
+        1065,
+        581
+      ],
+      [
+        966,
+        596
+      ]
+    ]
+  ],
+  "previousPixelSpace": [
+    1600,
+    1280
+  ],
+  "tileReference": {
+    "zoom": 18,
+    "minX": 213129,
+    "minY": 104106,
+    "tileSize": 256,
+    "rows": 3,
+    "columns": 3,
+    "sourceUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/18/{y}/{x}"
+  },
+  "revisionNote": "排除北侧现代遮棚与外圈步道；不是整组shape统一旋转。"
+}

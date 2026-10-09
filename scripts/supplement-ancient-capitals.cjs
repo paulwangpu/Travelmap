@@ -38,6 +38,11 @@ for (const [name,dynasty,era,ancient,years,regime,confidence,url,note,lat,lng,ad
   data.recordItems.push({name:`${name} · ${ancient} · ${dynasty}`,siteName:name,ancientName:ancient,dynasty,era,admin:site.admin,capitalType:type,capitalYears:years,regimeYears:regime,confidence,categoryCode:'P',sourceOrder:order,siteKey:site.siteKey,lat:site.lat,lng:site.lng,parentName:site.name,currentPlace:site.currentPlace,currentKey:site.currentKey,sourceUrl:url,note});
   added.push({name,dynasty,years,confidence,url,note});
 }
+// An already-complete supplement must preserve later audits, sources and migrations.
+if (!added.length) {
+  console.log(`Added 0 records; ${data.recordCount} records / ${data.siteCount} sites.`);
+  process.exit(0);
+}
 data.recordCount = data.recordItemCount = data.recordItems.length;
 data.siteCount = data.items.length;
 data.coverageAudit = {date:'2026-10-04',basis:'在原历代政权都城目录上补查先秦方国、古蜀及已有地点的缺失建都阶段；不是仅限十大古都，也不声称穷尽所有诸侯国、封国和短期政权。',addedRecords:12,addedSites:8};

@@ -1,0 +1,14 @@
+{
+  "checkedDate": "2026-10-08",
+  "referencePoint": {
+    "name": "丰镐遗址车马坑",
+    "wgs84": [
+      108.7135989,
+      34.2049638
+    ],
+    "source": "https://www.openstreetmap.org/node/7617487194"
+  },
+  "archaeologicalSource": "https://www.cssn.cn/lsx/lsx_kgx/202210/t20221024_5552703.shtml",
+  "geometryStatus": "已接入2条1992年一般保护范围历史参考线；近似配准，非现行法定范围。",
+  "preservedKey": "ancient-site:丰镐遗址:34.24000,108.73000"
+}

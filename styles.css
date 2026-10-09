@@ -7716,3 +7716,12 @@ button:hover {
 .language-family-select-all { display:flex; align-items:center; gap:5px; font-size:12px; margin-top:5px; }
 .language-family-key input, .language-family-select-all input { width:12px; height:12px; margin:0; flex-shrink:0; }
 .language-family-key { cursor:pointer; }
+
+.capital-wall-controls{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-top:4px;padding-left:17px}.capital-wall-controls label{display:flex;align-items:center;gap:4px;font:inherit;margin:0;cursor:pointer}.capital-wall-controls select{font:inherit;padding:2px 4px;width:78px;min-width:0;max-width:78px;flex:0 0 78px}.capital-wall-controls small{width:100%;color:#64748b;line-height:1.5}
+
+.luoyang-evolution-controls{border-top:1px solid #dbe4df;padding-top:8px}.luoyang-evolution-controls button{font:inherit;padding:2px 6px;border:1px solid #bdcfc5;background:transparent;border-radius:4px;cursor:pointer}
+
+#ancientCapitalLegend .capital-wall-cities{display:flex;flex-wrap:wrap;gap:3px;width:100%}#ancientCapitalLegend .capital-wall-cities button{font:inherit;line-height:1.4;min-width:0;min-height:0;width:auto;margin:0;padding:1px 5px;border:1px solid #bdcfc5;border-radius:4px;background:transparent;color:inherit;cursor:pointer}#ancientCapitalLegend .capital-wall-cities button:hover{background:#e8f0ec}#ancientCapitalLegend .capital-wall-cities button:disabled{opacity:.4;cursor:default}
+
+
+.angkor-site-label{text-align:center;background:transparent;border:0;box-shadow:none;text-shadow:0 0 3px white,0 0 3px white}.angkor-capital-icon svg{width:20px;height:20px}

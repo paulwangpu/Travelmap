@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "stages": [
+    {
+      "id": "zhou",
+      "name": "东周",
+      "period": "周",
+      "siteId": "wangcheng",
+      "siteName": "东周王城",
+      "coordinates": [
+        112.415253,
+        34.667751
+      ],
+      "coordinateKind": "王城公园位置参照（非古城中心）",
+      "boundaryStatus": "保护区划参考线已接入；分期完整城界未接入",
+      "summary": "此点位于今王城公园，用来参照东周王城所在区域，不表示王城中心或全部范围。“城墙范围 → 周”可查看王城保护区划外缘的近似配准参考线；它不是古城墙实测轮廓，也不表示线内全部属于保护范围。王城与成周应分别查看，目前未接入东周完整城界。",
+      "sources": [
+        {
+          "title": "东周王城考古研究",
+          "url": "https://www.nopss.gov.cn/n1/2021/1026/c373410-32264810.html"
+        },
+        {
+          "title": "东周城址考古与王城平面图",
+          "url": "https://www.hnswwkgyjy.cn/NewsView.php?News_ID=2844"
+        },
+        {
+          "title": "洛阳官方规划中的王城与成周建都分段",
+          "url": "https://oss.ly.gov.cn/lyswhgdhlyj/upload/20240723/297ed34a90d832350190dd810af40005.pdf"
+        },
+        {
+          "title": "王城公园定位依据（高德，坐标已转换）",
+          "url": "https://www.amap.com/place/B017B00FD8"
+        },
+        {
+          "title": "王城保护区划图（PDF第114页）",
+          "url": "https://oss.ly.gov.cn/luoyang_xigongqu/ueditor/upload/file/20251029/1761707495019000846.pdf#page=114"
+        }
+      ],
+      "additionalSites": [
+        {
+          "siteId": "hanwei",
+          "siteName": "东周成周 · 汉魏故城一带",
+          "coordinates": [
+            112.621389,
+            34.731111
+          ],
+          "coordinateKind": "汉魏故城区域参照点（非东周成周确址或中心）",
+          "boundaryStatus": "东周成周城界未接入",
+          "summary": "此点表示东周成周所在的汉魏故城一带，与涧河两岸的东周王城不同。它借用遗址区域参照位置，不表示东周城门、宫殿或古城中心；附近已加入的汉魏城垣不能据此认定为东周城墙。",
+          "sources": [
+            {
+              "title": "洛阳官方规划中的王城与成周建都分段",
+              "url": "https://oss.ly.gov.cn/lyswhgdhlyj/upload/20240723/297ed34a90d832350190dd810af40005.pdf"
+            }
+          ]
+        }
+      ],
+      "coordinateSource": {
+        "url": "https://www.amap.com/place/B017B00FD8",
+        "sourceCoordinateSystem": "GCJ-02",
+        "sourceCoordinates": [
+          112.421575,
+          34.666822
+        ],
+        "coordinateSystem": "WGS84",
+        "conversion": "项目现有 gcjToWgs 五次迭代逆转换"
+      }
+    },
+    {
+      "id": "han",
+      "name": "东汉",
+      "period": "秦汉",
+      "siteId": "hanwei",
+      "siteName": "汉魏洛阳城遗址",
+      "coordinates": [
+        112.621389,
+        34.731111
+      ],
+      "coordinateKind": "汉魏故城区域参照点（非分期古城中心）",
+      "boundaryStatus": "已接入旧城遗迹参照，未接入东汉完整复原城界",
+      "summary": "东汉洛阳城的城圈较北魏扩建后的整个都城小；汉晋旧城后来成为北魏内城。汉魏选项以现存构件标绘参照旧城，同时另绘北魏外郭三侧研究参考线；外郭不属于东汉，东汉南、北宫未作完整实测复原。",
+      "sources": [
+        {
+          "title": "洛阳官方历史沿革",
+          "url": "https://www.ly.gov.cn/2013/06-24/74500.html"
+        },
+        {
+          "title": "汉魏洛阳城世界遗产位置与地图",
+          "url": "https://whc.unesco.org/en/list/1442/maps/"
+        },
+        {
+          "title": "已接入遗迹示例：OSM 城垣原始记录",
+          "url": "https://www.openstreetmap.org/way/1198845647"
+        }
+      ]
+    },
+    {
+      "id": "weijin",
+      "name": "曹魏西晋",
+      "period": "魏晋南北朝",
+      "siteId": "hanwei",
+      "siteName": "汉魏洛阳城遗址",
+      "coordinates": [
+        112.621389,
+        34.731111
+      ],
+      "coordinateKind": "汉魏故城区域参照点（非分期古城中心）",
+      "boundaryStatus": "部分现存遗迹已接入；该阶段完整城界未接入",
+      "summary": "曹魏、西晋洛阳城位于汉魏故城区域。与东汉、北魏共用参照点只是为了定位遗址，不表示城界相同。“城墙范围 → 汉魏”显示现存遗迹的地图标绘，宫城、城门及城墙的时代仍须逐项核对，未接入曹魏或西晋的完整城界。",
+      "sources": [
+        {
+          "title": "太极殿遗址的考古分期",
+          "url": "https://lykgyjy.museumcloud.com.cn/xueshu/739.html"
+        },
+        {
+          "title": "宫城调查与结构研究",
+          "url": "https://iwate-u.repo.nii.ac.jp/record/14433/files/arhs-v5p1-22.pdf"
+        },
+        {
+          "title": "已接入遗迹示例：OSM 城垣原始记录",
+          "url": "https://www.openstreetmap.org/way/1198845647"
+        }
+      ]
+    },
+    {
+      "id": "northernwei",
+      "name": "北魏",
+      "period": "魏晋南北朝",
+      "siteId": "hanwei",
+      "siteName": "汉魏洛阳城遗址",
+      "coordinates": [
+        112.621389,
+        34.731111
+      ],
+      "coordinateKind": "汉魏故城区域参照点（非分期古城中心）",
+      "boundaryStatus": "已接入外郭三侧参考，未接入完整实测城界",
+      "summary": "北魏沿用汉晋旧城作为内城，并向外增筑郭城。“汉魏”选项已有内城和宫城遗迹构件，新增北、东、西侧外郭图示参考线，便于与汉晋旧城比较；南侧不补连，不称完整实测城界。",
+      "sources": [
+        {
+          "title": "汉魏故城内城与宫城研究图（PDF 第52页）",
+          "url": "https://ygx.sxu.edu.cn/db/%E5%AD%A6%E4%BD%8D/D01539783.pdf#page=52"
+        },
+        {
+          "title": "汉魏洛阳城世界遗产地图",
+          "url": "https://whc.unesco.org/en/list/1442/maps/"
+        },
+        {
+          "title": "已接入遗迹示例：OSM 城垣原始记录",
+          "url": "https://www.openstreetmap.org/way/1198845647"
+        },
+        {
+          "title": "北魏外郭城研究图（PDF第56页）",
+          "url": "https://ygx.sxu.edu.cn/db/%E5%AD%A6%E4%BD%8D/D01923213.pdf#page=56"
+        }
+      ]
+    },
+    {
+      "id": "suitang",
+      "name": "隋唐",
+      "period": "隋唐",
+      "siteId": "suitang",
+      "siteName": "隋唐洛阳城 · 定鼎门",
+      "coordinates": [
+        112.460556,
+        34.632778
+      ],
+      "coordinateKind": "定鼎门遗址参考位置",
+      "boundaryStatus": "城垣参考线和部分遗址构件已接入；完整分期城界未接入",
+      "summary": "此点定位于定鼎门遗址，不是全城中心。“城墙范围 → 隋唐”可查看外郭城北、东、南侧及宫城区、皇城部分城垣的实测图近似配准参考线，还有应天门、玄武门、含嘉仓、天街等构件标绘。明堂、天堂和部分城门几何表示现代保护展示建筑；未闭合补画外郭城缺失西墙，也未复原隋唐各阶段完整宫城、皇城范围。",
+      "sources": [
+        {
+          "title": "隋唐洛阳城考古与布局",
+          "url": "https://www.ndrc.gov.cn/xwdt/ztzl/dyhgjwhgy/202209/t20220921_1335875.html"
+        },
+        {
+          "title": "定鼎门世界遗产位置与地图",
+          "url": "https://whc.unesco.org/en/list/1442/maps/"
+        },
+        {
+          "title": "隋唐洛阳城实测图及考古报告图目",
+          "url": "https://www.ecsponline.com/goods.php?id=180546"
+        },
+        {
+          "title": "隋唐洛阳城遗址实测图（国博）",
+          "url": "https://www.chnmuseum.cn/fw/jyhdyy/202604/t20260416_279032.shtml"
+        }
+      ]
+    },
+    {
+      "id": "mingqing",
+      "name": "明清",
+      "period": "明清",
+      "siteId": "mingqing",
+      "siteName": "明清洛阳城",
+      "coordinateKind": "所选年份城界内参照点（非古城中心）",
+      "boundaryStatus": "明清重建城界已接入（由城墙范围开关控制）",
+      "summary": "“城墙范围 → 明清”可查看所选年份的 CCWAD 重建城界。此标记根据同年份的城界定位在范围内，不表示古城中心；关闭明清城墙显示时，参照点仍可保留。该范围不能用于说明汉唐洛阳城界。",
+      "sources": [
+        {
+          "title": "CCWAD 明清城墙范围数据",
+          "url": "https://doi.org/10.6084/m9.figshare.14112968.v3"
+        }
+      ],
+      "coordinates": [
+        112.481,
+        34.684
+      ]
+    }
+  ],
+  "note": "阶段标记用于比较城址所在区域。东周、隋唐完整城界尚未接入；汉魏已接入23个现存遗迹标绘，未分别复原各阶段城界；明清采用 CCWAD 所选年份的重建范围。范围与参照点分别控制。"
+}

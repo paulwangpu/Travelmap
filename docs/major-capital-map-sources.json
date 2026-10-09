@@ -1,0 +1,77 @@
+{
+  "checkedDate": "2026-10-08",
+  "note": "查找结果，不等于已接入范围。公开展示不等于授权复制。需核实分期、配准控制点和复用许可。",
+  "sources": [
+    {
+      "city": "洛阳",
+      "period": "东周",
+      "title": "东周王城平面图（引自《洛阳发掘报告》）",
+      "url": "https://www.hnswwkgyjy.cn/NewsView.php?News_ID=2844",
+      "status": "公开图件；尚未配准"
+    },
+    {
+      "city": "洛阳",
+      "period": "隋唐",
+      "title": "隋唐洛阳城遗址实测图（《隋唐洛阳城：1959－2001年考古发掘报告》第一册第5页）",
+      "url": "https://www.chnmuseum.cn/fw/jyhdyy/202604/t20260416_279032.shtml",
+      "status": "国博公开图件；尚未配准"
+    },
+    {
+      "city": "洛阳",
+      "period": "汉魏",
+      "title": "汉魏故城内城与宫城研究图（PDF第52页）",
+      "url": "https://ygx.sxu.edu.cn/db/%E5%AD%A6%E4%BD%8D/D01539783.pdf#page=52",
+      "status": "此前已检查图件；无直接地理控制点，不能套用于所有汉魏分期"
+    },
+    {
+      "city": "西安",
+      "period": "隋唐",
+      "title": "唐长安城数位新图与GIS平台",
+      "url": "https://gis.rchss.sinica.edu.tw/paper_20240116/",
+      "preview": "https://sinica.maps.arcgis.com/apps/webappviewer/index.html?id=61abf0934c964550bebc1278536a6070",
+      "status": "已接入公开 ArcGIS 查询服务的城墙与宫城构件；不将原始几何打包分发。无明确开放许可证；服务不可用时仍显示明清数据。"
+    },
+    {
+      "city": "西安",
+      "period": "汉",
+      "title": "刘庆柱：中国古代都城考古学史述论，图4汉长安城平面图",
+      "url": "https://www.ecsponline.com/yz/BFAE4ADD64EF44D128788B1684011CEE6000.pdf",
+      "status": "出版社公开PDF；尚未配准"
+    },
+    {
+      "city": "北京",
+      "period": "元",
+      "title": "元大都城图",
+      "url": "https://swj.beijing.gov.cn/bmxx/shms/swhxc/202311/t20231101_3292289.html",
+      "status": "官方公开复原图，需与城垣、水关锚点核对"
+    },
+    {
+      "city": "北京",
+      "period": "金",
+      "title": "金中都考古工作回顾、认识与展望",
+      "url": "https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/11149382/2021111616122610392.pdf",
+      "status": "考古来源及复原研究线索；不是直接可用shape"
+    },
+    {
+      "city": "南京",
+      "period": "六朝",
+      "title": "郭湖生《六朝建康》复原图，附孙吴都建业图",
+      "url": "https://nbxc.nanjing.gov.cn/xcdt/202605/t20260528_5848078.html",
+      "status": "官方展示复原图；宫城、都城、外郭须分别处理，尚未配准"
+    },
+    {
+      "city": "南京",
+      "period": "六朝／南唐／明",
+      "title": "南京历史文化名城保护规划",
+      "url": "https://ghj.nanjing.gov.cn/pqgs/ghbzpqgs/202603/P020260309306736868178.pdf",
+      "status": "搜索发现规划内有六朝宫城推测范围；PDF正文获取失败，尚待核实"
+    },
+    {
+      "city": "南京",
+      "period": "六朝、南唐",
+      "title": "南京历史文化名城保护规划公众意见稿：推测宫城、都城范围",
+      "url": "https://ghj.nanjing.gov.cn/pqgs/ghbzpqgs/202603/P020260309306736868178.pdf#page=19",
+      "status": "已接入4个近似配准推测范围；独立地标校验约113米，不是考古实测城墙"
+    }
+  ]
+}

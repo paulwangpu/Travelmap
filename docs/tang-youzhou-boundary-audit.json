@@ -1,0 +1,205 @@
+{
+  "source": "https://ivantsoi.myds.me/web/schoolebook/pdf/016047.pdf",
+  "reference": "https://wwj.beijing.gov.cn/bjww/362760/362770/743974740/index.html",
+  "method": "历史地理研究四至与OSM现代地标概略对应，不进行示意图仿射伪精确配准",
+  "osmSources": [
+    "output/youzhou-north-osm.xml",
+    "output/youzhou-south-osm.xml"
+  ],
+  "lines": [
+    [
+      "北界（唐后期推定）",
+      [
+        [
+          116.3308,
+          39.9005
+        ],
+        [
+          116.365,
+          39.90115
+        ]
+      ]
+    ],
+    [
+      "西界（推定）",
+      [
+        [
+          116.3308,
+          39.9005
+        ],
+        [
+          116.3303,
+          39.88203
+        ],
+        [
+          116.33015,
+          39.8764
+        ]
+      ]
+    ],
+    [
+      "东界（推定）",
+      [
+        [
+          116.365,
+          39.90115
+        ],
+        [
+          116.3651,
+          39.892
+        ],
+        [
+          116.3652,
+          39.883
+        ],
+        [
+          116.3653,
+          39.877
+        ]
+      ]
+    ],
+    [
+      "南界（四至概略参照）",
+      [
+        [
+          116.33015,
+          39.8764
+        ],
+        [
+          116.3438,
+          39.8763
+        ],
+        [
+          116.3554,
+          39.87666
+        ],
+        [
+          116.3653,
+          39.877
+        ]
+      ]
+    ],
+    [
+      "早期北界（研究推定）",
+      [
+        [
+          116.3308,
+          39.9005
+        ],
+        [
+          116.3632,
+          39.8918
+        ]
+      ]
+    ]
+  ],
+  "northWallPhases": "早期斜向老墙根；后期东端北移至头发胡同，此为研究推定",
+  "southUncertainty": "书中里人街与旅游概述白纸坊界线不完全一致；保留概略参照性质",
+  "noMeasuredCoordinates": "西北土城台和古城墙均无实测WGS84坐标，不标注精度值",
+  "southRevision": {
+    "reference": "现代里仁街，OSM way 42676069",
+    "coordinates": [
+      [
+        116.33015,
+        39.8744391
+      ],
+      [
+        116.3578546,
+        39.8744391
+      ],
+      [
+        116.3579503,
+        39.8744406
+      ],
+      [
+        116.3591474,
+        39.8744594
+      ],
+      [
+        116.3614974,
+        39.8744499
+      ],
+      [
+        116.3622958,
+        39.8744427
+      ],
+      [
+        116.3631481,
+        39.8744351
+      ],
+      [
+        116.3648221,
+        39.8744426
+      ],
+      [
+        116.3650862,
+        39.8744454
+      ],
+      [
+        116.3653,
+        39.8744454
+      ]
+    ],
+    "note": "按《北京古代城市与宫殿》所述姚家井以北里人街一线，改以现代里仁街位置作概略参照，替换前次白纸坊街参照。东段采用OSM里仁街坐标，西段向文献推定西界延伸；现代街线及延长段均非古城墙实测。原文与现代地名对应仍属历史地理研究参照，不据此判断具体建筑是否在唐城内。"
+  },
+  "supplement": [
+    {
+      "id": "youzhou-detail-fayuan",
+      "name": "唐幽州 · 悯忠寺（今法源寺）",
+      "source": "https://www.openstreetmap.org/way/30834367",
+      "reference": "https://yllhj.beijing.gov.cn/ztxx/lhysh/sh/202402/t20240207_3559168.shtml",
+      "geometryKind": "Polygon",
+      "status": "现存遗迹范围参照 · 非唐代寺院边界"
+    },
+    {
+      "id": "youzhou-detail-chongxiao",
+      "name": "唐幽州 · 崇孝寺（今崇效寺遗迹）",
+      "source": "https://www.openstreetmap.org/way/1324451735",
+      "reference": "https://wwj.beijing.gov.cn/bjww/resource/cms/article/362762/515625/2018052316183784183.pdf",
+      "geometryKind": "Polygon",
+      "status": "现存遗迹范围参照 · 非唐代寺院边界"
+    },
+    {
+      "id": "youzhou-detail-changchun",
+      "name": "唐幽州 · 分县线参照（长椿街）",
+      "source": "https://www.openstreetmap.org/way/127844313",
+      "reference": "https://wwj.beijing.gov.cn/bjww/362760/362770/743974740/index.html",
+      "geometryKind": "LineString",
+      "status": "现代道路参照 · 非唐代街道实测"
+    },
+    {
+      "id": "youzhou-detail-guangan",
+      "name": "唐幽州 · 分县线参照（广安门内大街）",
+      "source": "https://www.openstreetmap.org/way/161802246",
+      "reference": "https://wwj.beijing.gov.cn/bjww/362760/362770/743974740/index.html",
+      "geometryKind": "LineString",
+      "status": "现代道路参照 · 非唐代街道实测"
+    },
+    {
+      "id": "youzhou-detail-nanxiange",
+      "name": "唐幽州 · 分县线参照（南线阁街）",
+      "source": "https://www.openstreetmap.org/way/30838092",
+      "reference": "https://wwj.beijing.gov.cn/bjww/362760/362770/743974740/index.html",
+      "geometryKind": "LineString",
+      "status": "现代道路参照 · 非唐代街道实测"
+    }
+  ],
+  "pending": "子城、26坊及城门尚无独立核验配准几何，不按名称或推测距离虚构完整多边形。现代闹市口段尚未接入。",
+  "removedReferenceLines": {
+    "reason": "按用户要求删除零散的推定城界及现代道路参考线，保留寺院现存范围。",
+    "ids": [
+      "beijing-tang-youzhou-0",
+      "beijing-tang-youzhou-1",
+      "beijing-tang-youzhou-2",
+      "beijing-tang-youzhou-3",
+      "beijing-tang-youzhou-4",
+      "youzhou-detail-changchun",
+      "youzhou-detail-guangan",
+      "youzhou-detail-nanxiange"
+    ]
+  },
+  "restoredOutline": {
+    "id": "beijing-youzhou-outline-reference",
+    "note": "四至边线合并为闭合轮廓，早期斜北界及三条现代分县道路参考线仍不显示。"
+  }
+}

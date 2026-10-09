@@ -3,13 +3,20 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const api = require('../basemap-alignment.js');
 const app = fs.readFileSync(require.resolve('../app.js'), 'utf8');
-const context = {};
+const context = {GcjRegion:require('../gcj-region.js')};
 vm.runInNewContext(app.slice(app.indexOf('function isCoordinateInChina('), app.indexOf('function mapDisplayCoordinate(')), context);
 const convert = context.wgsToGcj;
+const angkorPixel=api.pixel(103.8589,13.4413,15),angkorGrid=api.grid(15,Math.floor(angkorPixel[0]/256),Math.floor(angkorPixel[1]/256),convert);
+assert.ok(angkorGrid.points.every(p=>Math.abs(p.x-Math.floor(angkorPixel[0]/256)*256-p.u)<.001&&Math.abs(p.y-Math.floor(angkorPixel[1]/256)*256-p.v)<.001),'Foreign Google tiles must take the unchanged tile path');
 const beijing = convert(116.397389, 39.908722);
 assert.ok(Math.abs(beijing[0] - 116.403633) < 0.00001);
 assert.ok(Math.abs(beijing[1] - 39.910125) < 0.00001);
 assert.deepEqual(Array.from(convert(-73.98, 40.75)), [-73.98, 40.75]);
+for(const p of [[103.8589,13.4413],[103.866,13.412],[103.967,13.599],[104.23,13.475],[103.974,13.343],[100.5018,13.7563],[105.8342,21.0278],[96.1951,16.8661],[106.9057,47.8864],[127,37.5665],[121.5654,25.033],[114.1694,22.3193],[113.5439,22.1987]]){
+ assert.deepEqual(Array.from(convert(...p)),p,'Foreign / non-GCJ coordinate must remain unchanged: '+p);
+ assert.deepEqual(Array.from(context.gcjToWgs(...p)),p);
+}
+for(const p of [[121.4737,31.2304],[102.8329,24.8801],[110.3312,20.0319],[87.6168,43.8256],[91.117,29.647]])assert.notDeepEqual(Array.from(convert(...p)),p,'Retain mainland correction: '+p);
 for (const z of [0, 7, 12, 18]) {
   const p = api.pixel(116.397389, 39.908722, z);
   const ll = api.coordinate(...p, z);

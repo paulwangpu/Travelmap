@@ -6,8 +6,8 @@ const original=catalog.recordItems.find(x=>x.name==='幽州');
 // The normalized name index has already been overwritten by the individual record.
 ctx.chinaAncientCapitalMeta['幽州']=original;
 const merged=ctx.ancientCapitalMergedMeta(original),records=ctx.ancientCapitalDetailRecords(merged);
-assert.equal(records.length,3);assert.deepEqual(Array.from(records,x=>x.dynasty),['大燕（安史）','燕（刘守光）','辽']);
-assert.equal(ctx.ancientCapitalMapSubtitle(merged),'隋唐、五代十国、宋辽金西夏 · 3 条记录');
+assert.equal(records.length,5);assert.deepEqual(Array.from(records,x=>x.dynasty),['燕','前燕','大燕（安史）','燕（刘守光）','辽']);
+assert.equal(ctx.ancientCapitalMapSubtitle(merged),'周、魏晋南北朝、隋唐、五代十国、宋辽金西夏 · 5 条记录');
 assert(app.includes('ancientCapitalMergedMeta(chinaAncientCapitalMeta[canonicalPlaceKey(item)])'));
 for(const record of catalog.recordItems.filter(x=>x.siteKey)){const site=catalog.items.find(x=>x.siteKey===record.siteKey);if(site)assert.equal(ctx.ancientCapitalDetailRecords(ctx.ancientCapitalMergedMeta(record)).length,site.records.length);}
 console.log('PASS: all merged capital records survive same-name index collisions and full eras are displayed');

@@ -1,0 +1,24 @@
+{
+  "id": "whc-668",
+  "name": "吴哥窟",
+  "previousCoordinates": [
+    103.8333,
+    13.43333
+  ],
+  "coordinates": [
+    103.866592,
+    13.4124901
+  ],
+  "reference": {
+    "kind": "representative-site",
+    "name": "吴哥寺（小吴哥）",
+    "originalCatalogCoordinates": [
+      103.8333,
+      13.43333
+    ],
+    "sourceUrl": "https://www.openstreetmap.org/way/1113380295",
+    "heritageUrl": "https://whc.unesco.org/en/list/668/",
+    "note": "世界遗产吴哥包含吴哥寺、吴哥城及其他遗迹，此地图点采用吴哥寺的代表位置，不表示整个遗产范围中心。"
+  },
+  "checkedDate": "2026-10-09"
+}

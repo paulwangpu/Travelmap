@@ -1,7 +1,7 @@
 (function(root){
  'use strict';
  // One palette for both categories; reserve check-in red and separate adjacent periods.
- const colors={'传说':'#806600','夏商':'#96512b','周':'#728600','秦汉':'#bd9200','魏晋南北朝':'#5146bd','隋唐':'#d57816','五代十国':'#278eae','宋辽金西夏':'#086838','元':'#176bd1','明':'#783c86','清':'#379b27','近现代':'#343c46'};
+ const colors={'传说':'#806600','夏商':'#96512b','周':'#728600','秦汉':'#bd9200','魏晋南北朝':'#5146bd','隋唐':'#d57816','五代十国':'#278eae','宋辽金西夏':'#007f86','元':'#176bd1','明':'#783c86','清':'#379b27','近现代':'#343c46'};
  const displayPeriod=k=>['传说时代','史前','传说与史前'].includes(k)?'传说':['西周','东周','春秋','战国','春秋战国'].includes(k)?'周':k;
  function periodSelection(saved={}){return {...saved,'传说':saved['传说']??(saved['传说时代']!==false||saved['史前']!==false),'周':saved['周']??(saved['西周']!==false||(saved['春秋战国']??(saved['春秋']!==false||saved['战国']!==false)))};}
  const keys=Object.keys(colors);
@@ -29,7 +29,7 @@
  function capitalPeriod(x){return displayPeriod(classifyCapitalPeriod(x));}
  function tombPeriod(x){return displayPeriod(x.era==='先秦'?(x.preqinPeriod||fromYear(x.sortYear)):x.era==='明清'?capitalPeriod(x):x.era==='秦汉至五代'?'秦汉':x.era);}
  function capitalPeriods(x){return [...new Set((x.records?.length?x.records:[x]).map(capitalPeriod))].sort((a,b)=>keys.indexOf(a)-keys.indexOf(b));}
- function capitalTheme(x,selection={}){const periods=capitalPeriods(x),key=periods.find(k=>selection[k]!==false)||periods[0];return {key,color:colors[key],icon:'ancient-capital-'+key};}
+ function capitalTheme(x,selection={}){const periods=capitalPeriods(x),key=(periods.includes(x.mapReferencePeriod)&&selection[x.mapReferencePeriod]!==false?x.mapReferencePeriod:null)||periods.find(k=>selection[k]!==false)||periods[0];return {key,color:colors[key],icon:'ancient-capital-'+key};}
  const capitalSvg=c=>`<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="${c}" stroke="#26313a" stroke-width=".7" stroke-linejoin="round"><path d="M2 8 5 4h10l3 4ZM4 9h12v8h-4v-5H8v5H4ZM2 17h16v2H2Z"/></g></svg>`;
  function capitalImage(color){const size=40,data=new Uint8Array(size*size*4),rgb=color.slice(1).match(/../g).map(v=>parseInt(v,16));const inside=(x,y)=>(y>=4&&y<=8&&x>=5-(y-4)*.75&&x<=15+(y-4)*.75)||(y>=9&&y<=17&&x>=4&&x<=16&&!(x>8&&x<12&&y>12))||(y>=17&&y<=19&&x>=2&&x<=18);for(let y=0;y<size;y++)for(let x=0;x<size;x++){const xx=(x+.5)/2,yy=(y+.5)/2,on=inside(xx,yy),near=[[-.6,0],[.6,0],[0,-.6],[0,.6]].map(([a,b])=>inside(xx+a,yy+b));const c=on?(near.every(Boolean)?rgb:[38,49,58]):near.some(Boolean)?[255,255,255]:null;if(c)data.set([...c,255],(y*size+x)*4);}return {width:size,height:size,data};}
  function legendIcon(svg,color){return `<i class="tomb-era-icon" style="--era-color:${color}" aria-hidden="true">${svg.replace(/stroke="#26313a"/g,'stroke="#fff"')}</i>`;}

@@ -1,0 +1,25 @@
+{
+  "checkedDate": "2026-10-08",
+  "cities": [
+    {
+      "name": "郑州商城",
+      "status": "内城14条原始几何；新增外郭4条研究线，其中2条为推测虚线，未闭合填充",
+      "reference": "docs/zhengzhou-wall-coverage.json"
+    },
+    {
+      "name": "偃师商城",
+      "status": "已接入大城、小城、宫城、Ⅱ号建筑群考古图示参考及池苑现存展示范围",
+      "archaeologicalMap": "https://kaogu.cssn.cn/xsqy/kycg/xslw/202405/W020240524351324650728.pdf",
+      "publisherPreview": "https://www.ecsponline.com/yz/B62FF98C046A14E21BC352866B118A736000.pdf",
+      "osmChecked": "https://api.openstreetmap.org/api/0.6/map?bbox=112.765,34.715,112.805,34.75",
+      "excluded": [
+        {
+          "sourceId": "osm-way-1068982733",
+          "reason": "现代商城植物园边界，不能作为商代城界"
+        }
+      ],
+      "limitations": "按论文图一逐点描绘，以宫城现存展示区四角及卫星底图近似配准；四角是展示参照，非考古测量控制点，远端城垣误差可能更大。大城、小城、宫城是不同建设阶段，不表示各阶段三重城垣均同时使用。南侧按原图布局参考围合，不保证南墙现存。Ⅲ号建筑群旧图围垣已被后续发掘否定，未接入该旧围垣；现代植物园未作为商代城界。",
+      "reference": "docs/yanshi-shang-georeferencing.json"
+    }
+  ]
+}

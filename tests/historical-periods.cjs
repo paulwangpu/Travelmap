@@ -46,3 +46,8 @@ const html=context.renderImperialTombChecklist();
 for(const era of ['传说','夏商','周','明','清'])assert(html.includes('<strong>'+era+'</strong>'),era);
 assert(!html.includes('<strong>先秦</strong>'));assert(!html.includes('<strong>秦汉至五代</strong>'));
 console.log('PASS: all 328 capitals / 278 tomb records classified, 36 Western kingdoms, signed years, missing starts, political continuity and shared checklist groups');
+
+const luoyi=capitals.items.find(x=>x.name==='洛邑遗址');assert.equal(H.capitalPeriod(luoyi.records[0]),'周');
+const subtitleContext={HistoricalPeriods:H,currentLanguage:'zh'};vm.createContext(subtitleContext);vm.runInContext(app.slice(app.indexOf('function ancientCapitalMapSubtitle('),app.indexOf('function ancientCapitalMetaForPlace(')),subtitleContext);assert.equal(subtitleContext.ancientCapitalMapSubtitle(luoyi),'周','West Zhou Luoyi subtitle must use actual records rather than the broad Xia/Shang/Zhou source category');
+
+const earlyRecords=capitals.items.flatMap(site=>(site.records||[]).filter(r=>/上古|夏商周/.test(r['时代'])).map(record=>({site,record})));assert.equal(earlyRecords.length,17);for(const {site,record} of earlyRecords){const expected=/周/.test(record['政权/国号'])?'周':'夏商';assert.equal(H.capitalPeriod(record),expected,site.name);assert.equal(H.capitalTheme({records:[record]}).color,H.colors[expected],site.name);}

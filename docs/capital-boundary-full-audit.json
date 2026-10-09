@@ -1,0 +1,4033 @@
+{
+  "checkedDate": "2026-10-09",
+  "scope": {
+    "sites": 155,
+    "records": 309,
+    "researchExtents": 230,
+    "mingQingRecords": 3356
+  },
+  "errors": [],
+  "duplicateGeometries": [],
+  "sites": [
+    {
+      "site": "登封王城岗",
+      "siteKey": "ancient-site:登封王城岗:34.44600,113.04900",
+      "coordinates": [
+        113.049,
+        34.446
+      ],
+      "periods": [
+        "夏商"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "禹州瓦店",
+      "siteKey": "ancient-site:禹州瓦店:34.08750,113.48880",
+      "coordinates": [
+        113.4888,
+        34.0875
+      ],
+      "periods": [
+        "夏商"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "新密新砦",
+      "siteKey": "ancient-site:新密新砦:34.47300,113.39500",
+      "coordinates": [
+        113.395,
+        34.473
+      ],
+      "periods": [
+        "夏商"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "二里头遗址",
+      "siteKey": "ancient-site:二里头遗址:34.69580,112.69080",
+      "coordinates": [
+        112.6908,
+        34.6958
+      ],
+      "periods": [
+        "夏商"
+      ],
+      "relations": [
+        {
+          "id": "osm-way-851367302",
+          "name": "二里头遗址标绘范围",
+          "period": "夏商",
+          "pointInside": true
+        },
+        {
+          "id": "erlitou-palace-1",
+          "name": "二里头 · 1号宫殿基址",
+          "period": "夏商",
+          "pointInside": false
+        },
+        {
+          "id": "erlitou-palace-2",
+          "name": "二里头 · 2号宫殿基址",
+          "period": "夏商",
+          "pointInside": false
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "济源",
+      "siteKey": "ancient-site:济源:35.06700,112.60200",
+      "coordinates": [
+        112.602,
+        35.067
+      ],
+      "periods": [
+        "夏商"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "开封",
+      "siteKey": "ancient-site:开封:34.79730,114.30760",
+      "coordinates": [
+        114.3466983,
+        34.8094053
+      ],
+      "periods": [
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏",
+        "元"
+      ],
+      "relations": [
+        {
+          "id": "kaifeng-song-outer",
+          "name": "宋东京城 · 外城（图件参考）",
+          "period": "宋辽金西夏",
+          "pointInside": true
+        },
+        {
+          "id": "kaifeng-song-inner",
+          "name": "宋东京城 · 里城（图件参考）",
+          "period": "宋辽金西夏",
+          "pointInside": true
+        },
+        {
+          "id": "kaifeng-song-palace",
+          "name": "宋东京城 · 宫城（图件参考）",
+          "period": "宋辽金西夏",
+          "pointInside": true
+        },
+        {
+          "id": "ccwad-54",
+          "name": "开封（明清城界）",
+          "period": "明清",
+          "pointInside": true
+        },
+        {
+          "id": "kaifeng-song-inner",
+          "name": "宋东京城 · 里城（图件参考）",
+          "period": "五代十国",
+          "pointInside": true
+        },
+        {
+          "id": "kaifeng-song-inner",
+          "name": "宋东京城 · 里城（图件参考）",
+          "period": "隋唐",
+          "pointInside": true
+        }
+      ],
+      "status": "已建立范围对应",
+      "note": "按时期关联城池、宫区或遗址展示范围；参考线与现代展示范围均保留来源和性质说明，不能当作对应朝代的完整实测城界。"
+    },
+    {
+      "site": "郑州商城",
+      "siteKey": "ancient-site:郑州商城:34.74650,113.68300",
+      "coordinates": [
+        113.683,
+        34.7465
+      ],
+      "periods": [
+        "夏商"
+      ],
+      "relations": [
+        {
+          "id": "osm-way-730973822",
+          "name": "郑州商城内城南侧城墙遗迹（地图标绘）",
+          "period": "夏商",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-731174581",
+          "name": "郑州商城内城南侧城墙遗迹（地图标绘）",
+          "period": "夏商",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-731174584",
+          "name": "郑州商城内城南侧城墙遗迹（地图标绘）",
+          "period": "夏商",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-731174585",
+          "name": "郑州商城内城南侧城墙遗迹（地图标绘）",
+          "period": "夏商",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-731262038",
+          "name": "郑州商城内城东侧城墙遗迹（地图标绘）",
+          "period": "夏商",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-731262039",
+          "name": "郑州商城内城南侧城墙遗迹（地图标绘）",
+          "period": "夏商",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1369417269",
+          "name": "郑州商城内城东侧城墙遗迹（地图标绘）",
+          "period": "夏商",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1371019236",
+          "name": "郑州商城内城 · 商城北城墙遗址人民广场段",
+          "period": "夏商",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1371019237",
+          "name": "郑州商城内城 · 商城城墙遗址紫荆山公园残留段",
+          "period": "夏商",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1371019238",
+          "name": "郑州商城内城东侧城墙遗迹（地图标绘）",
+          "period": "夏商",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1371019239",
+          "name": "郑州商城内城东侧城墙遗迹（地图标绘）",
+          "period": "夏商",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1371019240",
+          "name": "郑州商城内城东侧城墙遗迹（地图标绘）",
+          "period": "夏商",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1371019241",
+          "name": "郑州商城内城东侧城墙遗迹（地图标绘）",
+          "period": "夏商",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1373271225",
+          "name": "郑州商城内城西侧城墙遗迹（地图标绘）",
+          "period": "夏商",
+          "pointInside": false
+        },
+        {
+          "id": "zhengzhou-shang-outer-west-south",
+          "name": "郑州商城 · 外郭西、南墙（图示参考）",
+          "period": "夏商",
+          "pointInside": null
+        },
+        {
+          "id": "zhengzhou-shang-outer-south-east",
+          "name": "郑州商城 · 外郭南墙东段（图示参考）",
+          "period": "夏商",
+          "pointInside": null
+        },
+        {
+          "id": "zhengzhou-shang-outer-northwest-inferred",
+          "name": "郑州商城 · 外郭西北侧（研究推测）",
+          "period": "夏商",
+          "pointInside": null
+        },
+        {
+          "id": "zhengzhou-shang-outer-east-inferred",
+          "name": "郑州商城 · 外郭东侧（研究推测）",
+          "period": "夏商",
+          "pointInside": null
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "内城为原地图标绘墙段；外郭另补西南、南部墙线参考和西北、东侧研究推测虚线，按夏商查看。外郭北部与古湖泊屏障不能凭空接成闭合城墙。"
+    },
+    {
+      "site": "偃师商城",
+      "siteKey": "ancient-site:偃师商城:34.72750,112.78500",
+      "coordinates": [
+        112.7630645397989,
+        34.718298910900444
+      ],
+      "periods": [
+        "夏商"
+      ],
+      "relations": [
+        {
+          "id": "yanshi-shang-outer",
+          "name": "偃师商城（大城）",
+          "period": "夏商",
+          "pointInside": true
+        },
+        {
+          "id": "yanshi-shang-small",
+          "name": "偃师商城（小城）",
+          "period": "夏商",
+          "pointInside": true
+        },
+        {
+          "id": "yanshi-shang-palace",
+          "name": "偃师商城（宫城）",
+          "period": "夏商",
+          "pointInside": true
+        },
+        {
+          "id": "yanshi-shang-storage2",
+          "name": "偃师商城（Ⅱ号建筑群）",
+          "period": "夏商",
+          "pointInside": false
+        },
+        {
+          "id": "yanshi-shang-pool-display",
+          "name": "偃师商城（池苑基址）",
+          "period": "夏商",
+          "pointInside": false
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "夏商选项显示大城、小城、宫城及Ⅱ号建筑群的考古图示参考范围，池苑为现存展示范围；不同阶段范围不应理解为同时存在。旧图Ⅲ号建筑群围垣已被后续发掘否定，未添加。"
+    },
+    {
+      "site": "安阳殷墟",
+      "siteKey": "ancient-site:安阳殷墟:36.13000,114.31000",
+      "coordinates": [
+        114.3182791,
+        36.1223643
+      ],
+      "periods": [
+        "夏商"
+      ],
+      "relations": [
+        {
+          "id": "osm-way-503150800",
+          "name": "殷墟宫殿宗庙遗址（展示区）",
+          "period": "夏商",
+          "pointInside": true
+        },
+        {
+          "id": "osm-way-503149933",
+          "name": "殷墟王陵遗址（展示区）",
+          "period": "夏商",
+          "pointInside": false
+        },
+        {
+          "id": "anyang-huanbei-city-reference",
+          "name": "洹北商城（图件参考）",
+          "period": "夏商",
+          "pointInside": false
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "按时期关联城池、宫区或遗址展示范围；参考线与现代展示范围均保留来源和性质说明，不能当作对应朝代的完整实测城界。"
+    },
+    {
+      "site": "邢台",
+      "siteKey": "ancient-site:邢台:37.07060,114.50480",
+      "coordinates": [
+        114.5048,
+        37.0706
+      ],
+      "periods": [
+        "夏商",
+        "魏晋南北朝"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "郯城",
+      "siteKey": "ancient-site:郯城:34.61400,118.36700",
+      "coordinates": [
+        118.367,
+        34.614
+      ],
+      "periods": [
+        "夏商"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "曲阜",
+      "siteKey": "ancient-site:曲阜:35.58100,116.98600",
+      "coordinates": [
+        116.986,
+        35.581
+      ],
+      "periods": [
+        "夏商"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "丰镐遗址",
+      "siteKey": "ancient-site:丰镐遗址:34.24000,108.73000",
+      "coordinates": [
+        108.7135989,
+        34.2049638
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [
+        {
+          "id": "fenghao-1992-general-protection-0",
+          "name": "丰京 · 1992年一般保护范围参考线",
+          "period": "周",
+          "pointInside": true
+        },
+        {
+          "id": "fenghao-1992-general-protection-1",
+          "name": "镐京 · 1992年一般保护范围参考线",
+          "period": "周",
+          "pointInside": false
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "洛邑遗址",
+      "siteKey": "ancient-site:洛邑遗址:34.70500,112.60000",
+      "coordinates": [
+        112.4945,
+        34.6892
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "洛阳",
+      "siteKey": "ancient-site:洛阳:34.61970,112.45400",
+      "coordinates": [
+        112.454,
+        34.6197
+      ],
+      "periods": [
+        "周",
+        "秦汉",
+        "魏晋南北朝",
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏"
+      ],
+      "relations": [
+        {
+          "id": "osm-way-1060279199",
+          "name": "汉魏洛阳古城北魏宫城城垣",
+          "period": "魏晋南北朝",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1198845647",
+          "name": "汉魏洛阳故城城垣",
+          "period": "魏晋南北朝",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1198845648",
+          "name": "汉魏洛阳故城城垣",
+          "period": "魏晋南北朝",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1198845649",
+          "name": "汉魏洛阳故城永宁寺址",
+          "period": "魏晋南北朝",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1198845650",
+          "name": "汉魏洛阳故城城垣",
+          "period": "魏晋南北朝",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1198845651",
+          "name": "汉魏洛阳故城（金墉城）城垣",
+          "period": "魏晋南北朝",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1198845652",
+          "name": "汉魏洛阳故城金墉城",
+          "period": "魏晋南北朝",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1198895106",
+          "name": "汉魏洛阳故城城垣",
+          "period": "魏晋南北朝",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1198895107",
+          "name": "汉魏洛阳故城城垣",
+          "period": "魏晋南北朝",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1198895108",
+          "name": "汉魏洛阳故城城垣",
+          "period": "魏晋南北朝",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1198895109",
+          "name": "汉魏洛阳故城城垣",
+          "period": "魏晋南北朝",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1198895110",
+          "name": "汉魏洛阳故城城垣",
+          "period": "魏晋南北朝",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1198895112",
+          "name": "汉魏洛阳故城大夏门遗址",
+          "period": "魏晋南北朝",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1198895115",
+          "name": "汉魏洛阳故城城垣",
+          "period": "魏晋南北朝",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1207091784",
+          "name": "汉魏洛阳故城城垣",
+          "period": "魏晋南北朝",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1207091785",
+          "name": "汉魏洛阳故城城垣",
+          "period": "魏晋南北朝",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1207091786",
+          "name": "汉魏洛阳故城城垣",
+          "period": "魏晋南北朝",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1207091787",
+          "name": "汉魏洛阳故城城垣",
+          "period": "魏晋南北朝",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1207091788",
+          "name": "汉魏洛阳故城城垣",
+          "period": "魏晋南北朝",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1207091789",
+          "name": "汉魏洛阳故城城垣",
+          "period": "魏晋南北朝",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1207091790",
+          "name": "汉魏洛阳故城城垣",
+          "period": "魏晋南北朝",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1207091791",
+          "name": "汉魏洛阳故城城垣",
+          "period": "魏晋南北朝",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1207091792",
+          "name": "汉魏洛阳故城城垣",
+          "period": "魏晋南北朝",
+          "pointInside": false
+        },
+        {
+          "id": "wangcheng-protection-reference",
+          "name": "东周王城保护区划外缘（参考）",
+          "period": "周",
+          "pointInside": false
+        },
+        {
+          "id": "suitang-luoyang-survey-0",
+          "name": "隋唐洛阳城 · 外郭城北、东、南侧测绘参考线",
+          "period": "隋唐",
+          "pointInside": null
+        },
+        {
+          "id": "suitang-luoyang-survey-1",
+          "name": "隋唐洛阳城 · 宫城区北侧城垣测绘参考线",
+          "period": "隋唐",
+          "pointInside": null
+        },
+        {
+          "id": "suitang-luoyang-survey-2",
+          "name": "隋唐洛阳城 · 宫城、东城南侧城垣测绘参考线",
+          "period": "隋唐",
+          "pointInside": null
+        },
+        {
+          "id": "suitang-luoyang-survey-3",
+          "name": "隋唐洛阳城 · 皇城南侧城垣测绘参考线",
+          "period": "隋唐",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-389370423",
+          "name": "隋唐洛阳城 · 天堂",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-389370519",
+          "name": "隋唐洛阳城 · 明堂",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-865951589",
+          "name": "隋唐洛阳城 · 应天门",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1207094406",
+          "name": "隋唐洛阳城 · 含嘉仓遗址",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1417204157",
+          "name": "隋唐洛阳城 · 隋唐洛阳城天街址",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1447130747",
+          "name": "隋唐洛阳城 · 玄武门遗址",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-387176287",
+          "name": "隋唐洛阳城 · 定鼎门片区城墙标绘",
+          "period": "隋唐",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-387176288",
+          "name": "隋唐洛阳城 · 定鼎门片区城墙标绘",
+          "period": "隋唐",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-387176289",
+          "name": "隋唐洛阳城 · 定鼎门片区城墙标绘",
+          "period": "隋唐",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-387176290",
+          "name": "隋唐洛阳城 · 定鼎门片区城墙标绘",
+          "period": "隋唐",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-387176568",
+          "name": "隋唐洛阳城 · 定鼎门遗址",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1084209059",
+          "name": "隋唐洛阳城 · 定鼎门片区城墙标绘",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1203892879",
+          "name": "隋唐洛阳城 · 隋唐洛阳城天街",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1207094398",
+          "name": "隋唐洛阳城 · 定鼎门片区城墙标绘",
+          "period": "隋唐",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1207094399",
+          "name": "隋唐洛阳城 · 定鼎门片区城墙标绘",
+          "period": "隋唐",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1207094405",
+          "name": "隋唐洛阳城 · 定鼎门片区城墙标绘",
+          "period": "隋唐",
+          "pointInside": null
+        },
+        {
+          "id": "suitang-luoyang-survey-4",
+          "name": "隋唐洛阳城 · 宫城西侧城垣测绘参考线",
+          "period": "隋唐",
+          "pointInside": null
+        },
+        {
+          "id": "suitang-luoyang-survey-5",
+          "name": "隋唐洛阳城 · 宫城东侧城垣测绘参考线",
+          "period": "隋唐",
+          "pointInside": null
+        },
+        {
+          "id": "suitang-luoyang-survey-6",
+          "name": "隋唐洛阳城 · 含嘉仓城西侧城垣测绘参考线",
+          "period": "隋唐",
+          "pointInside": null
+        },
+        {
+          "id": "suitang-luoyang-survey-7",
+          "name": "隋唐洛阳城 · 皇城西侧城垣测绘参考线",
+          "period": "隋唐",
+          "pointInside": null
+        },
+        {
+          "id": "suitang-luoyang-survey-8",
+          "name": "隋唐洛阳城 · 北部西侧城垣测绘参考线",
+          "period": "隋唐",
+          "pointInside": null
+        },
+        {
+          "id": "suitang-luoyang-survey-9",
+          "name": "隋唐洛阳城 · 东城东侧城垣测绘参考线",
+          "period": "隋唐",
+          "pointInside": null
+        },
+        {
+          "id": "suitang-luoyang-survey-10",
+          "name": "隋唐洛阳城 · 皇城东侧城垣测绘参考线",
+          "period": "隋唐",
+          "pointInside": null
+        },
+        {
+          "id": "suitang-luoyang-survey-11",
+          "name": "隋唐洛阳城 · 含嘉仓城南侧城垣测绘参考线",
+          "period": "隋唐",
+          "pointInside": null
+        },
+        {
+          "id": "suitang-luoyang-survey-12",
+          "name": "隋唐洛阳城 · 宫城区东侧分隔城垣测绘参考线",
+          "period": "隋唐",
+          "pointInside": null
+        },
+        {
+          "id": "suitang-luoyang-survey-13",
+          "name": "隋唐洛阳城 · 北部内侧城垣测绘参考线",
+          "period": "隋唐",
+          "pointInside": null
+        },
+        {
+          "id": "hanwei-northernwei-outer-0",
+          "name": "北魏洛阳外郭城 · 北、东侧图示参考线",
+          "period": "魏晋南北朝",
+          "pointInside": null
+        },
+        {
+          "id": "hanwei-northernwei-outer-1",
+          "name": "北魏洛阳外郭城 · 西侧图示参考线",
+          "period": "魏晋南北朝",
+          "pointInside": null
+        },
+        {
+          "id": "hanwei-inner-south-inferred",
+          "name": "北魏洛阳内城 · 南墙推测线",
+          "period": "魏晋南北朝",
+          "pointInside": null
+        },
+        {
+          "id": "hanwei-northernwei-south-inferred",
+          "name": "北魏洛阳外郭城 · 南部推测线",
+          "period": "魏晋南北朝",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1198845647",
+          "name": "汉晋旧城 · 汉魏洛阳故城城垣",
+          "period": "秦汉",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1198845648",
+          "name": "汉晋旧城 · 汉魏洛阳故城城垣",
+          "period": "秦汉",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1198845650",
+          "name": "汉晋旧城 · 汉魏洛阳故城城垣",
+          "period": "秦汉",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1198895106",
+          "name": "汉晋旧城 · 汉魏洛阳故城城垣",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1198895107",
+          "name": "汉晋旧城 · 汉魏洛阳故城城垣",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1198895108",
+          "name": "汉晋旧城 · 汉魏洛阳故城城垣",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1198895109",
+          "name": "汉晋旧城 · 汉魏洛阳故城城垣",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1198895110",
+          "name": "汉晋旧城 · 汉魏洛阳故城城垣",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1198895115",
+          "name": "汉晋旧城 · 汉魏洛阳故城城垣",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1207091784",
+          "name": "汉晋旧城 · 汉魏洛阳故城城垣",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1207091785",
+          "name": "汉晋旧城 · 汉魏洛阳故城城垣",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1207091786",
+          "name": "汉晋旧城 · 汉魏洛阳故城城垣",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1207091787",
+          "name": "汉晋旧城 · 汉魏洛阳故城城垣",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1207091788",
+          "name": "汉晋旧城 · 汉魏洛阳故城城垣",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1207091789",
+          "name": "汉晋旧城 · 汉魏洛阳故城城垣",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1207091790",
+          "name": "汉晋旧城 · 汉魏洛阳故城城垣",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1207091791",
+          "name": "汉晋旧城 · 汉魏洛阳故城城垣",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1207091792",
+          "name": "汉晋旧城 · 汉魏洛阳故城城垣",
+          "period": "秦汉",
+          "pointInside": false
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "按记录所属朝代对应范围；同城不同朝代、宫城与外郭城分别保留。现代城市参照点不代表每一期古都中心。"
+    },
+    {
+      "site": "临淄",
+      "siteKey": "ancient-site:临淄:36.82600,118.30900",
+      "coordinates": [
+        118.309,
+        36.826
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "曲阜鲁故城",
+      "siteKey": "ancient-site:曲阜鲁故城:35.59500,116.99500",
+      "coordinates": [
+        116.995,
+        35.595
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "北京",
+      "siteKey": "ancient-site:北京:39.90420,116.40740",
+      "coordinates": [
+        116.4074,
+        39.9042
+      ],
+      "periods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "relations": [
+        {
+          "id": "ccwad-4",
+          "name": "北京（明清城墙）",
+          "period": "明清",
+          "pointInside": true
+        },
+        {
+          "id": "ccwad-5",
+          "name": "北京（明清城墙）",
+          "period": "明清",
+          "pointInside": false
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "对应明清城墙所选年份范围；近现代记录沿用此城市参照点。蓟城／幽州／辽南京、金中都与元大都分别显示。"
+    },
+    {
+      "site": "燕下都",
+      "siteKey": "ancient-site:燕下都:39.34600,115.53000",
+      "coordinates": [
+        115.53,
+        39.346
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "辽阳",
+      "siteKey": "ancient-site:辽阳:41.26940,123.17280",
+      "coordinates": [
+        123.1728,
+        41.2694
+      ],
+      "periods": [
+        "周",
+        "宋辽金西夏",
+        "清"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "翼城",
+      "siteKey": "ancient-site:翼城:35.73900,111.71900",
+      "coordinates": [
+        111.719,
+        35.739
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "闻喜",
+      "siteKey": "ancient-site:闻喜:35.35600,111.22400",
+      "coordinates": [
+        111.224,
+        35.356
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "侯马",
+      "siteKey": "ancient-site:侯马:35.61900,111.37200",
+      "coordinates": [
+        111.372,
+        35.619
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "宝鸡",
+      "siteKey": "ancient-site:宝鸡:34.36190,107.23730",
+      "coordinates": [
+        107.2373,
+        34.3619
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "雍城",
+      "siteKey": "ancient-site:雍城:34.52100,107.40000",
+      "coordinates": [
+        107.4,
+        34.521
+      ],
+      "periods": [
+        "周",
+        "五代十国"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "栎阳",
+      "siteKey": "ancient-site:栎阳:34.65400,109.22600",
+      "coordinates": [
+        109.226,
+        34.654
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "咸阳",
+      "siteKey": "ancient-site:咸阳:34.32960,108.70930",
+      "coordinates": [
+        108.8625,
+        34.416
+      ],
+      "periods": [
+        "周",
+        "秦汉"
+      ],
+      "relations": [
+        {
+          "id": "osm-way-1236884831",
+          "name": "秦咸阳宫正殿六号宫殿遗址",
+          "period": "秦汉",
+          "pointInside": true
+        },
+        {
+          "id": "osm-way-1236884832",
+          "name": "秦咸阳宫府库遗址",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1263385448",
+          "name": "秦咸阳城遗址保护区",
+          "period": "秦汉",
+          "pointInside": false
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "按记录所属朝代对应范围；同城不同朝代、宫城与外郭城分别保留。现代城市参照点不代表每一期古都中心。"
+    },
+    {
+      "site": "华县",
+      "siteKey": "ancient-site:华县:34.51200,109.77100",
+      "coordinates": [
+        109.771,
+        34.512
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "新郑",
+      "siteKey": "ancient-site:新郑:34.39600,113.74100",
+      "coordinates": [
+        113.741,
+        34.396
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [
+        {
+          "id": "osm-way-1378859552",
+          "name": "郑韩故城城墙遗迹",
+          "period": "周",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1378859553",
+          "name": "郑韩故城城墙遗迹",
+          "period": "周",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1378859554",
+          "name": "郑韩故城城墙遗迹",
+          "period": "周",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1378859555",
+          "name": "郑韩故城城墙遗迹",
+          "period": "周",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1378859556",
+          "name": "郑韩故城城墙遗迹",
+          "period": "周",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1378859557",
+          "name": "郑韩故城城墙遗迹",
+          "period": "周",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1378859563",
+          "name": "郑韩故城城墙遗迹",
+          "period": "周",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1378859564",
+          "name": "郑韩故城城墙遗迹",
+          "period": "周",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1378859565",
+          "name": "郑韩故城城墙遗迹",
+          "period": "周",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1378859566",
+          "name": "郑韩故城城墙遗迹",
+          "period": "周",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1378859567",
+          "name": "郑韩故城城墙遗迹",
+          "period": "周",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1378859568",
+          "name": "郑韩故城城墙遗迹",
+          "period": "周",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1378859569",
+          "name": "郑韩故城城墙遗迹",
+          "period": "周",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1378859576",
+          "name": "郑韩故城城墙遗迹",
+          "period": "周",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1378859577",
+          "name": "郑韩故城城墙遗迹",
+          "period": "周",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1378859578",
+          "name": "郑韩故城城墙遗迹",
+          "period": "周",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1378859579",
+          "name": "郑韩故城城墙遗迹",
+          "period": "周",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1378859580",
+          "name": "郑韩故城城墙遗迹",
+          "period": "周",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1378859581",
+          "name": "郑韩故城城墙遗迹",
+          "period": "周",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1378859582",
+          "name": "郑韩故城城墙遗迹",
+          "period": "周",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1378859583",
+          "name": "郑韩故城城墙遗迹",
+          "period": "周",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1378859585",
+          "name": "郑韩故城城墙遗迹",
+          "period": "周",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1378899484",
+          "name": "郑韩故城城墙遗迹",
+          "period": "周",
+          "pointInside": null
+        }
+      ],
+      "status": "已建立范围对应",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "淇县",
+      "siteKey": "ancient-site:淇县:35.60700,114.19700",
+      "coordinates": [
+        114.197,
+        35.607
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "濮阳",
+      "siteKey": "ancient-site:濮阳:35.76270,115.02930",
+      "coordinates": [
+        115.0293,
+        35.7627
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "商丘宋国故城",
+      "siteKey": "ancient-site:商丘宋国故城:34.38100,115.65400",
+      "coordinates": [
+        115.654,
+        34.381
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "淮阳",
+      "siteKey": "ancient-site:淮阳:33.73300,114.88600",
+      "coordinates": [
+        114.886,
+        33.733
+      ],
+      "periods": [
+        "周",
+        "秦汉"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "上蔡",
+      "siteKey": "ancient-site:上蔡:33.26300,114.26400",
+      "coordinates": [
+        114.264,
+        33.263
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "凤台",
+      "siteKey": "ancient-site:凤台:32.70900,116.71100",
+      "coordinates": [
+        116.711,
+        32.709
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "郢都纪南城",
+      "siteKey": "ancient-site:郢都纪南城:30.42000,112.19000",
+      "coordinates": [
+        112.19,
+        30.42
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "寿春",
+      "siteKey": "ancient-site:寿春:32.57300,116.78600",
+      "coordinates": [
+        116.786,
+        32.573
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "苏州",
+      "siteKey": "ancient-site:苏州:31.29890,120.58530",
+      "coordinates": [
+        120.62232848,
+        31.306346084
+      ],
+      "periods": [
+        "周",
+        "元"
+      ],
+      "relations": [
+        {
+          "id": "osm-way-685088107",
+          "name": "盘门（元代遗构）",
+          "period": "元",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-685088107",
+          "name": "盘门（元代遗构）",
+          "period": "明",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-685088107",
+          "name": "盘门（元代遗构）",
+          "period": "清",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1268353039",
+          "name": "胥门北侧城墙（现状）",
+          "period": "明",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1268353039",
+          "name": "胥门北侧城墙（现状）",
+          "period": "清",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1268353040",
+          "name": "胥门北侧城墙（现状）",
+          "period": "明",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1268353040",
+          "name": "胥门北侧城墙（现状）",
+          "period": "清",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-783426393",
+          "name": "阊门（修缮展示）",
+          "period": "明",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-783426393",
+          "name": "阊门（修缮展示）",
+          "period": "清",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-783426392",
+          "name": "阊门北侧城墙（修缮段）",
+          "period": "明",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-783426392",
+          "name": "阊门北侧城墙（修缮段）",
+          "period": "清",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-802089939",
+          "name": "金门（近代城门）",
+          "period": "明",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-802089939",
+          "name": "金门（近代城门）",
+          "period": "清",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-502015159",
+          "name": "相门北侧城墙（重建段）",
+          "period": "明",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-502015159",
+          "name": "相门北侧城墙（重建段）",
+          "period": "清",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1145006306",
+          "name": "娄门（重建城墙）",
+          "period": "明",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1145006306",
+          "name": "娄门（重建城墙）",
+          "period": "清",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1145006307",
+          "name": "齐门（重建城墙）",
+          "period": "明",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1145006307",
+          "name": "齐门（重建城墙）",
+          "period": "清",
+          "pointInside": false
+        },
+        {
+          "id": "osm-relation-15476072",
+          "name": "盘门两翼城墙（现状标绘）",
+          "period": "元",
+          "pointInside": false
+        },
+        {
+          "id": "osm-relation-15476072",
+          "name": "盘门两翼城墙（现状标绘）",
+          "period": "明",
+          "pointInside": false
+        },
+        {
+          "id": "osm-relation-15476072",
+          "name": "盘门两翼城墙（现状标绘）",
+          "period": "清",
+          "pointInside": false
+        },
+        {
+          "id": "osm-node-8034431020",
+          "name": "相门（重建城门定位）",
+          "period": "明",
+          "pointInside": null
+        },
+        {
+          "id": "osm-node-8034431020",
+          "name": "相门（重建城门定位）",
+          "period": "清",
+          "pointInside": null
+        },
+        {
+          "id": "suzhou-zicheng-street-reference",
+          "name": "苏州子城（道路四至参照）",
+          "period": "元",
+          "pointInside": true
+        },
+        {
+          "id": "suzhou-zicheng-street-reference",
+          "name": "苏州子城（道路四至参照）",
+          "period": "宋辽金西夏",
+          "pointInside": true
+        },
+        {
+          "id": "ccwad-1",
+          "name": "苏州（明清城界）",
+          "period": "明清",
+          "pointInside": true
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "吴国姑苏与张吴平江保留同城列表，但分期资料性质分别注明。子城道路四至只对应宋元地望，盘门为多期遗构，其他构件区分原存、修缮和重建。明清整体城界继续使用已有CCWAD记录，不套为春秋吴都或元末全城边界。"
+    },
+    {
+      "site": "诸暨",
+      "siteKey": "ancient-site:诸暨:29.71360,120.23600",
+      "coordinates": [
+        120.236,
+        29.7136
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "绍兴",
+      "siteKey": "ancient-site:绍兴:30.03030,120.58020",
+      "coordinates": [
+        120.5802,
+        30.0303
+      ],
+      "periods": [
+        "周",
+        "五代十国",
+        "明"
+      ],
+      "relations": [
+        {
+          "id": "ccwad-64",
+          "name": "绍兴（明清城墙）",
+          "period": "明清",
+          "pointInside": false
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "按记录所属朝代对应范围；同城不同朝代、宫城与外郭城分别保留。现代城市参照点不代表每一期古都中心。"
+    },
+    {
+      "site": "临汾",
+      "siteKey": "ancient-site:临汾:36.08800,111.51900",
+      "coordinates": [
+        111.519,
+        36.088
+      ],
+      "periods": [
+        "周",
+        "魏晋南北朝"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "晋阳",
+      "siteKey": "ancient-site:晋阳:37.70500,112.44000",
+      "coordinates": [
+        112.44,
+        37.705
+      ],
+      "periods": [
+        "周",
+        "魏晋南北朝",
+        "五代十国"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "邯郸",
+      "siteKey": "ancient-site:邯郸:36.62560,114.53910",
+      "coordinates": [
+        114.434708009,
+        36.575902213
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [
+        {
+          "id": "handan-zhao-west-city",
+          "name": "赵王城·西城（图示范围）",
+          "period": "周",
+          "pointInside": true
+        },
+        {
+          "id": "handan-zhao-north-city",
+          "name": "赵王城·北城（图示范围）",
+          "period": "周",
+          "pointInside": false
+        },
+        {
+          "id": "handan-zhao-east-city",
+          "name": "赵王城·东城（图示范围）",
+          "period": "周",
+          "pointInside": false
+        },
+        {
+          "id": "handan-zhao-east-visible-wall",
+          "name": "赵王城·东城南垣及东南段（图示）",
+          "period": "周",
+          "pointInside": null
+        },
+        {
+          "id": "handan-zhao-north-visible-wall",
+          "name": "赵王城·北城西垣地上段（图示）",
+          "period": "周",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-584857492",
+          "name": "赵王城·龙台（现状土基）",
+          "period": "周",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-585861056",
+          "name": "赵王城·北城西侧土基（现状）",
+          "period": "周",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-584857421",
+          "name": "赵王城·北城东部土基（现状）",
+          "period": "周",
+          "pointInside": false
+        },
+        {
+          "id": "osm-relation-18293823",
+          "name": "赵王城遗址公园·现代展示区",
+          "period": "周",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-488781902",
+          "name": "武灵丛台（现存修缮建筑）",
+          "period": "周",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-142769371",
+          "name": "大北城·赵苑地区参照",
+          "period": "周",
+          "pointInside": null
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "赵邯郸故城分赵王城、大北城两部分；王城再分西、东、北三城。图示轮廓、现状土基与现代公园分别注明。大北城南垣战国、汉代存在多期变化，不以一个规则方框代替；本次只补充地区参照及现存丛台，不新增汉代中央政权都城记录。"
+    },
+    {
+      "site": "安邑",
+      "siteKey": "ancient-site:安邑:35.02600,111.05400",
+      "coordinates": [
+        111.054,
+        35.026
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "大梁",
+      "siteKey": "ancient-site:大梁:34.79700,114.30700",
+      "coordinates": [
+        114.33991821624805,
+        34.80560885746216
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [
+        {
+          "id": "kaifeng-wei-daliang-reference",
+          "name": "魏大梁城（地望推定）",
+          "period": "周",
+          "pointInside": true
+        }
+      ],
+      "status": "已建立范围对应",
+      "note": "按时期关联城池、宫区或遗址展示范围；参考线与现代展示范围均保留来源和性质说明，不能当作对应朝代的完整实测城界。"
+    },
+    {
+      "site": "徐州",
+      "siteKey": "ancient-site:徐州:34.20580,117.28410",
+      "coordinates": [
+        117.2841,
+        34.2058
+      ],
+      "periods": [
+        "秦汉"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "南郑",
+      "siteKey": "ancient-site:南郑:33.00400,106.94200",
+      "coordinates": [
+        106.942,
+        33.004
+      ],
+      "periods": [
+        "秦汉"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "汉长安城",
+      "siteKey": "ancient-site:汉长安城:34.36000,108.86000",
+      "coordinates": [
+        108.8586759,
+        34.3042414
+      ],
+      "periods": [
+        "秦汉",
+        "魏晋南北朝"
+      ],
+      "relations": [
+        {
+          "id": "osm-way-821525299",
+          "name": "汉长安城未央宫宫墙展示线",
+          "period": "秦汉",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-821525300",
+          "name": "汉长安城未央宫宫墙展示线",
+          "period": "秦汉",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-821525301",
+          "name": "汉长安城未央宫宫墙展示线",
+          "period": "秦汉",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-821525302",
+          "name": "汉长安城未央宫宫墙展示线",
+          "period": "秦汉",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-821525304",
+          "name": "汉长安城未央宫宫墙展示线",
+          "period": "秦汉",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1265896607",
+          "name": "汉长安城石渠阁遗址",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-821525294",
+          "name": "汉长安城未央宫 · 中央官署遗址",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-821525295",
+          "name": "汉长安城未央宫 · 前殿遗址",
+          "period": "秦汉",
+          "pointInside": true
+        },
+        {
+          "id": "osm-way-821525296",
+          "name": "汉长安城未央宫宫墙展示线",
+          "period": "秦汉",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-821525297",
+          "name": "汉长安城未央宫宫墙展示线",
+          "period": "秦汉",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-821525298",
+          "name": "汉长安城未央宫宫墙展示线",
+          "period": "秦汉",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-821525303",
+          "name": "汉长安城未央宫宫墙展示线",
+          "period": "秦汉",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-821525306",
+          "name": "汉长安城未央宫宫墙展示线",
+          "period": "秦汉",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-821525311",
+          "name": "汉长安城未央宫 · 少府遗址",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-821525312",
+          "name": "汉长安城未央宫 · 椒房殿遗址",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1265896606",
+          "name": "汉长安城未央宫 · 沧池遗址",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "han-palaces-plan2005-0",
+          "name": "汉长安 · 长乐宫（东宫）图示宫区",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "han-palaces-plan2005-1",
+          "name": "汉长安 · 桂宫图示宫区",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "han-palaces-plan2005-2",
+          "name": "汉长安 · 北宫图示宫区",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "han-palaces-plan2005-3",
+          "name": "汉长安 · 明光宫图示宫区",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "han-palaces-plan2005-4",
+          "name": "汉长安 · 建章宫图示宫区",
+          "period": "秦汉",
+          "pointInside": false
+        },
+        {
+          "id": "han-changan-outer-plan2005",
+          "name": "汉长安城 · 外郭城图示轮廓",
+          "period": "秦汉",
+          "pointInside": true
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "按记录所属朝代对应范围；同城不同朝代、宫城与外郭城分别保留。现代城市参照点不代表每一期古都中心。"
+    },
+    {
+      "site": "宛城",
+      "siteKey": "ancient-site:宛城:32.99000,112.52800",
+      "coordinates": [
+        112.528,
+        32.99
+      ],
+      "periods": [
+        "秦汉"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "成都",
+      "siteKey": "ancient-site:成都:30.57280,104.06680",
+      "coordinates": [
+        104.0649,
+        30.6642
+      ],
+      "periods": [
+        "周",
+        "秦汉",
+        "魏晋南北朝",
+        "五代十国",
+        "明"
+      ],
+      "relations": [
+        {
+          "id": "ccwad-60",
+          "name": "成都（明清城墙）",
+          "period": "明清",
+          "pointInside": true
+        },
+        {
+          "id": "osm-way-1204383950",
+          "name": "成都东华门遗址（多期展示区）",
+          "period": "魏晋南北朝",
+          "pointInside": true
+        },
+        {
+          "id": "osm-way-1204383950",
+          "name": "成都东华门遗址（多期展示区）",
+          "period": "秦汉",
+          "pointInside": true
+        },
+        {
+          "id": "osm-way-1204383950",
+          "name": "成都东华门遗址（多期展示区）",
+          "period": "隋唐",
+          "pointInside": true
+        },
+        {
+          "id": "osm-way-1204383950",
+          "name": "成都东华门遗址（多期展示区）",
+          "period": "五代十国",
+          "pointInside": true
+        },
+        {
+          "id": "osm-way-1204383950",
+          "name": "成都东华门遗址（多期展示区）",
+          "period": "宋辽金西夏",
+          "pointInside": true
+        },
+        {
+          "id": "osm-way-1204383950",
+          "name": "成都东华门遗址（多期展示区）",
+          "period": "明",
+          "pointInside": true
+        },
+        {
+          "id": "osm-way-1204383950",
+          "name": "成都东华门遗址（多期展示区）",
+          "period": "清",
+          "pointInside": true
+        }
+      ],
+      "status": "已建立范围对应",
+      "note": "按时期关联城池、宫区或遗址展示范围；参考线与现代展示范围均保留来源和性质说明，不能当作对应朝代的完整实测城界。"
+    },
+    {
+      "site": "许都",
+      "siteKey": "ancient-site:许都:34.08000,113.82000",
+      "coordinates": [
+        113.82,
+        34.08
+      ],
+      "periods": [
+        "秦汉",
+        "魏晋南北朝"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "邺城",
+      "siteKey": "ancient-site:邺城:36.34000,114.10000",
+      "coordinates": [
+        114.4000798,
+        36.276837900000004
+      ],
+      "periods": [
+        "魏晋南北朝"
+      ],
+      "relations": [
+        {
+          "id": "osm-way-587955768",
+          "name": "邺北城铜雀三台（展示区）",
+          "period": "魏晋南北朝",
+          "pointInside": true
+        },
+        {
+          "id": "osm-way-1051814589",
+          "name": "邺南城城垣（残段标绘）",
+          "period": "魏晋南北朝",
+          "pointInside": null
+        }
+      ],
+      "status": "已建立范围对应",
+      "note": "按时期关联城池、宫区或遗址展示范围；参考线与现代展示范围均保留来源和性质说明，不能当作对应朝代的完整实测城界。"
+    },
+    {
+      "site": "亳州",
+      "siteKey": "ancient-site:亳州:33.84460,115.77930",
+      "coordinates": [
+        115.7793,
+        33.8446
+      ],
+      "periods": [
+        "魏晋南北朝",
+        "元"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "南京",
+      "siteKey": "ancient-site:南京:32.06030,118.79690",
+      "coordinates": [
+        118.7969,
+        32.0603
+      ],
+      "periods": [
+        "魏晋南北朝",
+        "五代十国",
+        "宋辽金西夏",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "relations": [
+        {
+          "id": "nanjing-plan-detail-0",
+          "name": "六朝宫城推测范围",
+          "period": "魏晋南北朝",
+          "pointInside": false
+        },
+        {
+          "id": "nanjing-plan-detail-1",
+          "name": "六朝都城推测范围",
+          "period": "魏晋南北朝",
+          "pointInside": false
+        },
+        {
+          "id": "nanjing-plan-detail-2",
+          "name": "南唐宫城推测范围",
+          "period": "五代十国",
+          "pointInside": false
+        },
+        {
+          "id": "nanjing-plan-detail-3",
+          "name": "南唐都城推测范围",
+          "period": "五代十国",
+          "pointInside": false
+        },
+        {
+          "id": "nanjing-plan-detail-4",
+          "name": "明皇城推测范围",
+          "period": "明",
+          "pointInside": false
+        },
+        {
+          "id": "nanjing-plan-detail-5",
+          "name": "明宫城范围",
+          "period": "明",
+          "pointInside": false
+        },
+        {
+          "id": "ccwad-0",
+          "name": "南京（明清城墙）",
+          "period": "明清",
+          "pointInside": true
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "按记录所属朝代对应范围；同城不同朝代、宫城与外郭城分别保留。现代城市参照点不代表每一期古都中心。"
+    },
+    {
+      "site": "武昌",
+      "siteKey": "ancient-site:武昌:30.55300,114.31600",
+      "coordinates": [
+        114.316,
+        30.553
+      ],
+      "periods": [
+        "魏晋南北朝",
+        "元"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "离石",
+      "siteKey": "ancient-site:离石:37.51700,111.15100",
+      "coordinates": [
+        111.151,
+        37.517
+      ],
+      "periods": [
+        "魏晋南北朝"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "武威",
+      "siteKey": "ancient-site:武威:37.92830,102.63780",
+      "coordinates": [
+        102.6378,
+        37.9283
+      ],
+      "periods": [
+        "魏晋南北朝"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "朝阳",
+      "siteKey": "ancient-site:朝阳:41.57370,120.45040",
+      "coordinates": [
+        120.4504,
+        41.5737
+      ],
+      "periods": [
+        "魏晋南北朝"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "定州",
+      "siteKey": "ancient-site:定州:38.51600,114.99000",
+      "coordinates": [
+        114.99,
+        38.516
+      ],
+      "periods": [
+        "魏晋南北朝"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "长子",
+      "siteKey": "ancient-site:长子:36.12200,112.87700",
+      "coordinates": [
+        112.877,
+        36.122
+      ],
+      "periods": [
+        "魏晋南北朝"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "滑县",
+      "siteKey": "ancient-site:滑县:35.57500,114.51900",
+      "coordinates": [
+        114.519,
+        35.575
+      ],
+      "periods": [
+        "魏晋南北朝"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "榆中",
+      "siteKey": "ancient-site:榆中:35.84300,104.11200",
+      "coordinates": [
+        104.112,
+        35.843
+      ],
+      "periods": [
+        "魏晋南北朝"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "兰州",
+      "siteKey": "ancient-site:兰州:36.06110,103.83430",
+      "coordinates": [
+        103.8343,
+        36.0611
+      ],
+      "periods": [
+        "魏晋南北朝",
+        "隋唐"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "靖远",
+      "siteKey": "ancient-site:靖远:36.57100,104.68600",
+      "coordinates": [
+        104.686,
+        36.571
+      ],
+      "periods": [
+        "魏晋南北朝"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "临夏",
+      "siteKey": "ancient-site:临夏:35.60100,103.21100",
+      "coordinates": [
+        103.211,
+        35.601
+      ],
+      "periods": [
+        "魏晋南北朝"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "乐都",
+      "siteKey": "ancient-site:乐都:36.48200,102.40100",
+      "coordinates": [
+        102.401,
+        36.482
+      ],
+      "periods": [
+        "魏晋南北朝"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "西宁",
+      "siteKey": "ancient-site:西宁:36.61710,101.77820",
+      "coordinates": [
+        101.7782,
+        36.6171
+      ],
+      "periods": [
+        "魏晋南北朝"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "敦煌",
+      "siteKey": "ancient-site:敦煌:40.14210,94.66190",
+      "coordinates": [
+        94.6619,
+        40.1421
+      ],
+      "periods": [
+        "魏晋南北朝"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "酒泉",
+      "siteKey": "ancient-site:酒泉:39.73200,98.49400",
+      "coordinates": [
+        98.494,
+        39.732
+      ],
+      "periods": [
+        "魏晋南北朝"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "广固",
+      "siteKey": "ancient-site:广固:36.72700,118.57400",
+      "coordinates": [
+        118.574,
+        36.727
+      ],
+      "periods": [
+        "魏晋南北朝"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "统万城",
+      "siteKey": "ancient-site:统万城:37.99000,108.85000",
+      "coordinates": [
+        108.85,
+        37.99
+      ],
+      "periods": [
+        "魏晋南北朝"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "盛乐",
+      "siteKey": "ancient-site:盛乐:40.47700,111.77900",
+      "coordinates": [
+        111.779,
+        40.477
+      ],
+      "periods": [
+        "魏晋南北朝"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "平城遗址",
+      "siteKey": "ancient-site:平城遗址:40.09000,113.30000",
+      "coordinates": [
+        113.3,
+        40.09
+      ],
+      "periods": [
+        "魏晋南北朝"
+      ],
+      "relations": [
+        {
+          "id": "osm-way-711555376",
+          "name": "北魏平城明堂（公园展示区）",
+          "period": "魏晋南北朝",
+          "pointInside": false
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "按时期关联城池、宫区或遗址展示范围；参考线与现代展示范围均保留来源和性质说明，不能当作对应朝代的完整实测城界。"
+    },
+    {
+      "site": "江陵",
+      "siteKey": "ancient-site:江陵:30.35000,112.19000",
+      "coordinates": [
+        112.19,
+        30.35
+      ],
+      "periods": [
+        "魏晋南北朝",
+        "隋唐",
+        "五代十国"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "大兴城",
+      "siteKey": "ancient-site:大兴城:34.26000,108.95000",
+      "coordinates": [
+        108.95,
+        34.26
+      ],
+      "periods": [
+        "隋唐"
+      ],
+      "relations": [
+        {
+          "id": "tang-changan-online",
+          "name": "唐长安城墙、宫城及坊里构件",
+          "period": "隋唐",
+          "pointInside": null
+        }
+      ],
+      "status": "已建立范围对应",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "扬州",
+      "siteKey": "ancient-site:扬州:32.39420,119.41290",
+      "coordinates": [
+        119.4125837,
+        32.42313315
+      ],
+      "periods": [
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏"
+      ],
+      "relations": [
+        {
+          "id": "yangzhou-tang-zicheng-plan2024",
+          "name": "唐扬州子城（图件参考）",
+          "period": "隋唐",
+          "pointInside": true
+        },
+        {
+          "id": "yangzhou-tang-zicheng-plan2024",
+          "name": "唐扬州子城（图件参考）",
+          "period": "五代十国",
+          "pointInside": true
+        },
+        {
+          "id": "yangzhou-tang-luocheng-plan2024",
+          "name": "唐扬州罗城（图件参考）",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "yangzhou-tang-luocheng-plan2024",
+          "name": "唐扬州罗城（图件参考）",
+          "period": "五代十国",
+          "pointInside": false
+        },
+        {
+          "id": "yangzhou-song-baoyou-plan2024",
+          "name": "南宋宝祐城（图件参考）",
+          "period": "宋辽金西夏",
+          "pointInside": true
+        },
+        {
+          "id": "yangzhou-song-jiacheng-plan2024",
+          "name": "宋扬州夹城（图件参考）",
+          "period": "宋辽金西夏",
+          "pointInside": false
+        },
+        {
+          "id": "yangzhou-song-dacheng-plan2024",
+          "name": "宋扬州大城（图件参考）",
+          "period": "宋辽金西夏",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-235461827",
+          "name": "宋夹城（现公园范围）",
+          "period": "宋辽金西夏",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1319432253",
+          "name": "宋夹城北门（展示建筑）",
+          "period": "宋辽金西夏",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1319432259",
+          "name": "宋夹城南门（展示建筑）",
+          "period": "宋辽金西夏",
+          "pointInside": false
+        },
+        {
+          "id": "osm-node-3213641568",
+          "name": "宋大城北门遗址（定位参照）",
+          "period": "宋辽金西夏",
+          "pointInside": null
+        },
+        {
+          "id": "osm-way-1319465137",
+          "name": "蜀冈唐城遗址（现展示区）",
+          "period": "隋唐",
+          "pointInside": true
+        },
+        {
+          "id": "osm-way-1319465137",
+          "name": "蜀冈唐城遗址（现展示区）",
+          "period": "五代十国",
+          "pointInside": true
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "蜀冈上江都宫／唐子城、蜀冈下唐罗城、宋堡城／宝祐城、夹城和大城分别保留。图件范围、现代展示区与城门点各注明性质。1128—1129年行在记录不关联后建的宝祐城或夹城。"
+    },
+    {
+      "site": "朔州",
+      "siteKey": "ancient-site:朔州:39.33160,112.43290",
+      "coordinates": [
+        112.4329,
+        39.3316
+      ],
+      "periods": [
+        "隋唐"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "朔方",
+      "siteKey": "ancient-site:朔方:38.28000,109.74000",
+      "coordinates": [
+        109.74,
+        38.28
+      ],
+      "periods": [
+        "隋唐"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "乐寿",
+      "siteKey": "ancient-site:乐寿:38.19000,116.12000",
+      "coordinates": [
+        116.12,
+        38.19
+      ],
+      "periods": [
+        "隋唐"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "巩义",
+      "siteKey": "ancient-site:巩义:34.74900,112.98200",
+      "coordinates": [
+        112.982,
+        34.749
+      ],
+      "periods": [
+        "隋唐"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "豫章",
+      "siteKey": "ancient-site:豫章:28.68200,115.85790",
+      "coordinates": [
+        115.8579,
+        28.682
+      ],
+      "periods": [
+        "隋唐",
+        "五代十国"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "毗陵",
+      "siteKey": "ancient-site:毗陵:31.81070,119.97410",
+      "coordinates": [
+        119.9741,
+        31.8107
+      ],
+      "periods": [
+        "隋唐"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "幽州",
+      "siteKey": "ancient-site:幽州:39.89500,116.35000",
+      "coordinates": [
+        116.35,
+        39.895
+      ],
+      "periods": [
+        "周",
+        "魏晋南北朝",
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏"
+      ],
+      "relations": [
+        {
+          "id": "youzhou-detail-fayuan",
+          "name": "唐幽州 · 悯忠寺（今法源寺）",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "youzhou-detail-chongxiao",
+          "name": "唐幽州 · 崇孝寺（今崇效寺遗迹）",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "beijing-liao-tianning-tower",
+          "name": "辽南京 · 天宁寺塔（现存建筑）",
+          "period": "宋辽金西夏",
+          "pointInside": false
+        },
+        {
+          "id": "beijing-youzhou-outline-reference",
+          "name": "唐幽州城 · 四至推定轮廓",
+          "period": "隋唐",
+          "pointInside": true
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "按记录所属朝代对应范围；同城不同朝代、宫城与外郭城分别保留。现代城市参照点不代表每一期古都中心。"
+    },
+    {
+      "site": "五女山城",
+      "siteKey": "ancient-site:五女山城:41.32300,125.42100",
+      "coordinates": [
+        125.421,
+        41.323
+      ],
+      "periods": [
+        "秦汉"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "集安国内城",
+      "siteKey": "ancient-site:集安国内城:41.12500,126.19500",
+      "coordinates": [
+        126.195,
+        41.125
+      ],
+      "periods": [
+        "秦汉"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "集安丸都山城",
+      "siteKey": "ancient-site:集安丸都山城:41.15800,126.15000",
+      "coordinates": [
+        126.15,
+        41.158
+      ],
+      "periods": [
+        "秦汉"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "平壤",
+      "siteKey": "ancient-site:平壤:39.03920,125.76250",
+      "coordinates": [
+        125.7625,
+        39.0392
+      ],
+      "periods": [
+        "魏晋南北朝"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "吐鲁番",
+      "siteKey": "ancient-site:吐鲁番:42.95130,89.18950",
+      "coordinates": [
+        89.1895,
+        42.9513
+      ],
+      "periods": [
+        "魏晋南北朝",
+        "隋唐"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "龟兹",
+      "siteKey": "ancient-site:龟兹:41.71700,82.96200",
+      "coordinates": [
+        82.962,
+        41.717
+      ],
+      "periods": [
+        "秦汉"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "于阗",
+      "siteKey": "ancient-site:于阗:37.11200,79.91300",
+      "coordinates": [
+        79.913,
+        37.112
+      ],
+      "periods": [
+        "秦汉"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "焉耆",
+      "siteKey": "ancient-site:焉耆:42.05900,86.57400",
+      "coordinates": [
+        86.574,
+        42.059
+      ],
+      "periods": [
+        "秦汉"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "喀什",
+      "siteKey": "ancient-site:喀什:39.47040,75.98980",
+      "coordinates": [
+        75.9898,
+        39.4704
+      ],
+      "periods": [
+        "秦汉",
+        "清"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "拉萨",
+      "siteKey": "ancient-site:拉萨:29.65200,91.17210",
+      "coordinates": [
+        91.1721,
+        29.652
+      ],
+      "periods": [
+        "隋唐"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "巍山",
+      "siteKey": "ancient-site:巍山:25.22700,100.30700",
+      "coordinates": [
+        100.307,
+        25.227
+      ],
+      "periods": [
+        "隋唐"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "太和城",
+      "siteKey": "ancient-site:太和城:25.64000,100.22000",
+      "coordinates": [
+        100.22,
+        25.64
+      ],
+      "periods": [
+        "隋唐"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "羊苴咩城",
+      "siteKey": "ancient-site:羊苴咩城:25.70000,100.16000",
+      "coordinates": [
+        100.16,
+        25.7
+      ],
+      "periods": [
+        "隋唐",
+        "宋辽金西夏"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "敦化",
+      "siteKey": "ancient-site:敦化:43.37270,128.23200",
+      "coordinates": [
+        128.232,
+        43.3727
+      ],
+      "periods": [
+        "隋唐"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "和龙",
+      "siteKey": "ancient-site:和龙:42.54670,129.01000",
+      "coordinates": [
+        129.01,
+        42.5467
+      ],
+      "periods": [
+        "隋唐"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "宁安上京",
+      "siteKey": "ancient-site:宁安上京:44.11500,129.21000",
+      "coordinates": [
+        129.14307152,
+        44.13247373
+      ],
+      "periods": [
+        "隋唐",
+        "宋辽金西夏"
+      ],
+      "relations": [
+        {
+          "id": "bohai-shangjing-plan2020-0",
+          "name": "外郭城（图示参考）",
+          "period": "隋唐",
+          "pointInside": true
+        },
+        {
+          "id": "bohai-shangjing-plan2020-1",
+          "name": "宫城（图示参考）",
+          "period": "隋唐",
+          "pointInside": true
+        },
+        {
+          "id": "bohai-shangjing-plan2020-2",
+          "name": "皇城（图示参考）",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "bohai-shangjing-plan2020-3",
+          "name": "圆璧城（图示参考）",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "bohai-shangjing-plan2020-4",
+          "name": "西掖城（图示参考）",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "bohai-shangjing-plan2020-5",
+          "name": "东掖城（图示参考）",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "bohai-shangjing-plan2020-6",
+          "name": "皇城内部西侧分隔线（图示参考）",
+          "period": "隋唐",
+          "pointInside": null
+        },
+        {
+          "id": "bohai-shangjing-plan2020-7",
+          "name": "皇城内部东侧分隔线（图示参考）",
+          "period": "隋唐",
+          "pointInside": null
+        },
+        {
+          "id": "bohai-shangjing-plan2020-8",
+          "name": "1号佛寺建筑遗址（图示参考）",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "bohai-shangjing-plan2020-9",
+          "name": "2号佛寺建筑遗址（图示参考）",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "bohai-shangjing-plan2020-10",
+          "name": "3号佛寺建筑遗址（图示参考）",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "bohai-shangjing-plan2020-11",
+          "name": "4号佛寺建筑遗址（图示参考）",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "bohai-shangjing-plan2020-12",
+          "name": "5号佛寺建筑遗址（图示参考）",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "bohai-shangjing-plan2020-13",
+          "name": "6号佛寺建筑遗址（图示参考）",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "bohai-shangjing-plan2020-14",
+          "name": "7号佛寺建筑遗址（图示参考）",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "bohai-shangjing-plan2020-15",
+          "name": "8号佛寺建筑遗址（图示参考）",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "bohai-shangjing-plan2020-16",
+          "name": "9号佛寺建筑遗址（图示参考）",
+          "period": "隋唐",
+          "pointInside": false
+        },
+        {
+          "id": "bohai-shangjing-plan2020-17",
+          "name": "10号佛寺建筑遗址（图示参考）",
+          "period": "隋唐",
+          "pointInside": false
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "按记录所属朝代对应范围；同城不同朝代、宫城与外郭城分别保留。现代城市参照点不代表每一期古都中心。"
+    },
+    {
+      "site": "珲春",
+      "siteKey": "ancient-site:珲春:42.86250,130.36500",
+      "coordinates": [
+        130.365,
+        42.8625
+      ],
+      "periods": [
+        "隋唐"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "鄂尔浑河谷",
+      "siteKey": "ancient-site:鄂尔浑河谷:47.20000,102.85000",
+      "coordinates": [
+        102.85,
+        47.2
+      ],
+      "periods": [
+        "魏晋南北朝",
+        "隋唐"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "斡耳朵八里",
+      "siteKey": "ancient-site:斡耳朵八里:47.19800,102.83300",
+      "coordinates": [
+        102.833,
+        47.198
+      ],
+      "periods": [
+        "隋唐"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "杭州",
+      "siteKey": "ancient-site:杭州:30.27410,120.15510",
+      "coordinates": [
+        120.1556755,
+        30.2431572
+      ],
+      "periods": [
+        "五代十国",
+        "宋辽金西夏"
+      ],
+      "relations": [
+        {
+          "id": "osm-way-516639265",
+          "name": "吴越海塘遗址（标绘）",
+          "period": "五代十国",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1060426556",
+          "name": "南宋德寿宫（遗址区）",
+          "period": "宋辽金西夏",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1408713275",
+          "name": "南宋临安府治遗址",
+          "period": "宋辽金西夏",
+          "pointInside": true
+        },
+        {
+          "id": "osm-way-1408713276",
+          "name": "南宋恭圣仁烈皇后宅遗址",
+          "period": "宋辽金西夏",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1408713277",
+          "name": "南宋御街遗址（展示区）",
+          "period": "宋辽金西夏",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-1107037587",
+          "name": "南宋皇城圣果寺遗址（标绘）",
+          "period": "宋辽金西夏",
+          "pointInside": false
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "按时期关联城池、宫区或遗址展示范围；参考线与现代展示范围均保留来源和性质说明，不能当作对应朝代的完整实测城界。"
+    },
+    {
+      "site": "福州",
+      "siteKey": "ancient-site:福州:26.07450,119.29650",
+      "coordinates": [
+        119.2965,
+        26.0745
+      ],
+      "periods": [
+        "五代十国",
+        "宋辽金西夏",
+        "明",
+        "近现代"
+      ],
+      "relations": [
+        {
+          "id": "ccwad-151",
+          "name": "福州（明清城墙）",
+          "period": "明清",
+          "pointInside": false
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "按记录所属朝代对应范围；同城不同朝代、宫城与外郭城分别保留。现代城市参照点不代表每一期古都中心。"
+    },
+    {
+      "site": "建瓯",
+      "siteKey": "ancient-site:建瓯:27.02270,118.30490",
+      "coordinates": [
+        118.3049,
+        27.0227
+      ],
+      "periods": [
+        "五代十国"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "长沙",
+      "siteKey": "ancient-site:长沙:28.22820,112.93880",
+      "coordinates": [
+        112.9388,
+        28.2282
+      ],
+      "periods": [
+        "五代十国"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "广州",
+      "siteKey": "ancient-site:广州:23.12910,113.26440",
+      "coordinates": [
+        113.2644,
+        23.1291
+      ],
+      "periods": [
+        "五代十国",
+        "宋辽金西夏",
+        "明",
+        "近现代"
+      ],
+      "relations": [
+        {
+          "id": "ccwad-2020",
+          "name": "广州（明清城墙）",
+          "period": "明清",
+          "pointInside": true
+        }
+      ],
+      "status": "已建立范围对应",
+      "note": "按记录所属朝代对应范围；同城不同朝代、宫城与外郭城分别保留。现代城市参照点不代表每一期古都中心。"
+    },
+    {
+      "site": "商丘",
+      "siteKey": "ancient-site:商丘:34.41400,115.65600",
+      "coordinates": [
+        115.656,
+        34.414
+      ],
+      "periods": [
+        "宋辽金西夏"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "大名",
+      "siteKey": "ancient-site:大名:36.28500,115.14700",
+      "coordinates": [
+        115.147,
+        36.285
+      ],
+      "periods": [
+        "宋辽金西夏"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "上京临潢",
+      "siteKey": "ancient-site:上京临潢:43.55700,119.34300",
+      "coordinates": [
+        119.390217,
+        43.962786
+      ],
+      "periods": [
+        "宋辽金西夏"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "中京大定",
+      "siteKey": "ancient-site:中京大定:41.60000,119.33000",
+      "coordinates": [
+        119.33,
+        41.6
+      ],
+      "periods": [
+        "宋辽金西夏"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "西京大同",
+      "siteKey": "ancient-site:西京大同:40.07680,113.30010",
+      "coordinates": [
+        113.2880405,
+        40.0913355
+      ],
+      "periods": [
+        "宋辽金西夏"
+      ],
+      "relations": [
+        {
+          "id": "osm-way-366451679",
+          "name": "辽金西京华严寺（现寺院范围）",
+          "period": "宋辽金西夏",
+          "pointInside": true
+        },
+        {
+          "id": "osm-way-366497911",
+          "name": "辽金西京善化寺（现寺院范围）",
+          "period": "宋辽金西夏",
+          "pointInside": false
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "按时期关联城池、宫区或遗址展示范围；参考线与现代展示范围均保留来源和性质说明，不能当作对应朝代的完整实测城界。"
+    },
+    {
+      "site": "兴庆府",
+      "siteKey": "ancient-site:兴庆府:38.48720,106.23090",
+      "coordinates": [
+        106.2309,
+        38.4872
+      ],
+      "periods": [
+        "宋辽金西夏"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "会宁府",
+      "siteKey": "ancient-site:会宁府:45.54000,126.97000",
+      "coordinates": [
+        126.97,
+        45.54
+      ],
+      "periods": [
+        "宋辽金西夏"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "汝南",
+      "siteKey": "ancient-site:汝南:33.00600,114.36200",
+      "coordinates": [
+        114.362,
+        33.006
+      ],
+      "periods": [
+        "宋辽金西夏"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "哈拉和林",
+      "siteKey": "ancient-site:哈拉和林:47.19750,102.82380",
+      "coordinates": [
+        102.8238,
+        47.1975
+      ],
+      "periods": [
+        "元",
+        "明"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "上都",
+      "siteKey": "ancient-site:上都:42.35700,116.18400",
+      "coordinates": [
+        116.184,
+        42.357
+      ],
+      "periods": [
+        "元",
+        "明"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "元大都",
+      "siteKey": "ancient-site:元大都:39.94000,116.41000",
+      "coordinates": [
+        116.41,
+        39.94
+      ],
+      "periods": [
+        "元"
+      ],
+      "relations": [
+        {
+          "id": "osm-way-232724483",
+          "name": "元大都城垣遗址公园 · 现代展示范围",
+          "period": "元",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-232724485",
+          "name": "元大都城垣遗址公园 · 现代展示范围",
+          "period": "元",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-232724487",
+          "name": "元大都城垣遗址公园 · 现代展示范围",
+          "period": "元",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-232724490",
+          "name": "元大都城垣遗址公园 · 现代展示范围",
+          "period": "元",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-232724492",
+          "name": "元大都城垣遗址公园 · 现代展示范围",
+          "period": "元",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-990439597",
+          "name": "元大都城垣遗址公园 · 现代展示范围",
+          "period": "元",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-990439598",
+          "name": "元大都城垣遗址公园 · 现代展示范围",
+          "period": "元",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-990439599",
+          "name": "元大都城垣遗址公园 · 现代展示范围",
+          "period": "元",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-990439600",
+          "name": "元大都城垣遗址公园 · 现代展示范围",
+          "period": "元",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-990439601",
+          "name": "元大都城垣遗址公园 · 现代展示范围",
+          "period": "元",
+          "pointInside": false
+        },
+        {
+          "id": "osm-way-990439602",
+          "name": "元大都城垣遗址公园 · 现代展示范围",
+          "period": "元",
+          "pointInside": false
+        },
+        {
+          "id": "beijing-yuan-outer-1368",
+          "name": "元大都 · 外郭城复原范围",
+          "period": "元",
+          "pointInside": true
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "张北",
+      "siteKey": "ancient-site:张北:41.15900,114.72000",
+      "coordinates": [
+        114.72,
+        41.159
+      ],
+      "periods": [
+        "元",
+        "近现代"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "蕲水",
+      "siteKey": "ancient-site:蕲水:30.45100,115.26500",
+      "coordinates": [
+        115.265,
+        30.451
+      ],
+      "periods": [
+        "元"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "汉阳",
+      "siteKey": "ancient-site:汉阳:30.55000,114.22000",
+      "coordinates": [
+        114.22,
+        30.55
+      ],
+      "periods": [
+        "元"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "九江",
+      "siteKey": "ancient-site:九江:29.70500,116.00190",
+      "coordinates": [
+        116.0019,
+        29.705
+      ],
+      "periods": [
+        "元"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "高邮",
+      "siteKey": "ancient-site:高邮:32.78100,119.45500",
+      "coordinates": [
+        119.455,
+        32.781
+      ],
+      "periods": [
+        "元"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "重庆",
+      "siteKey": "ancient-site:重庆:29.56300,106.55160",
+      "coordinates": [
+        106.5516,
+        29.563
+      ],
+      "periods": [
+        "周",
+        "元",
+        "近现代"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "凤阳",
+      "siteKey": "ancient-site:凤阳:32.87500,117.56100",
+      "coordinates": [
+        117.561,
+        32.875
+      ],
+      "periods": [
+        "明"
+      ],
+      "relations": [
+        {
+          "id": "ccwad-1493",
+          "name": "凤阳（明清城墙）",
+          "period": "明清",
+          "pointInside": false
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "古都点为明中都；凤阳府城范围是另一城址，两者不能合并。"
+    },
+    {
+      "site": "应昌",
+      "siteKey": "ancient-site:应昌:43.35000,117.52000",
+      "coordinates": [
+        117.52,
+        43.35
+      ],
+      "periods": [
+        "明"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "西安",
+      "siteKey": "ancient-site:西安:34.34160,108.93980",
+      "coordinates": [
+        108.9398,
+        34.3416
+      ],
+      "periods": [
+        "明"
+      ],
+      "relations": [
+        {
+          "id": "ccwad-1117",
+          "name": "西安（明清城墙）",
+          "period": "明清",
+          "pointInside": false
+        },
+        {
+          "id": "ccwad-1118",
+          "name": "西安（明清城墙）",
+          "period": "明清",
+          "pointInside": false
+        },
+        {
+          "id": "ccwad-1119",
+          "name": "西安（明清城墙）",
+          "period": "明清",
+          "pointInside": false
+        },
+        {
+          "id": "ccwad-1120",
+          "name": "西安（明清城墙）",
+          "period": "明清",
+          "pointInside": false
+        },
+        {
+          "id": "ccwad-1121",
+          "name": "西安（明清城墙）",
+          "period": "明清",
+          "pointInside": false
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "肇庆",
+      "siteKey": "ancient-site:肇庆:23.04700,112.46500",
+      "coordinates": [
+        112.465,
+        23.047
+      ],
+      "periods": [
+        "明"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "桂林",
+      "siteKey": "ancient-site:桂林:25.27420,110.29910",
+      "coordinates": [
+        110.2991,
+        25.2742
+      ],
+      "periods": [
+        "明"
+      ],
+      "relations": [
+        {
+          "id": "ccwad-2176",
+          "name": "桂林（明清城墙）",
+          "period": "明清",
+          "pointInside": false
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "安龙",
+      "siteKey": "ancient-site:安龙:25.09900,105.44300",
+      "coordinates": [
+        105.443,
+        25.099
+      ],
+      "periods": [
+        "明"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "昆明",
+      "siteKey": "ancient-site:昆明:25.03890,102.71830",
+      "coordinates": [
+        102.7183,
+        25.0389
+      ],
+      "periods": [
+        "明"
+      ],
+      "relations": [
+        {
+          "id": "ccwad-803",
+          "name": "昆明（明清城墙）",
+          "period": "明清",
+          "pointInside": false
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "厦门",
+      "siteKey": "ancient-site:厦门:24.47980,118.08940",
+      "coordinates": [
+        118.0894,
+        24.4798
+      ],
+      "periods": [
+        "明"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "赫图阿拉",
+      "siteKey": "ancient-site:赫图阿拉:41.87500,124.82900",
+      "coordinates": [
+        124.829,
+        41.875
+      ],
+      "periods": [
+        "清"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "沈阳",
+      "siteKey": "ancient-site:沈阳:41.80570,123.43150",
+      "coordinates": [
+        123.4315,
+        41.8057
+      ],
+      "periods": [
+        "清"
+      ],
+      "relations": [
+        {
+          "id": "ccwad-523",
+          "name": "沈阳（明清城墙）",
+          "period": "明清",
+          "pointInside": false
+        },
+        {
+          "id": "ccwad-524",
+          "name": "沈阳（明清城墙）",
+          "period": "明清",
+          "pointInside": true
+        }
+      ],
+      "status": "区域参照点与部分范围不重合；宫城、保护区或不同朝代不能据此强行合并",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "衡阳",
+      "siteKey": "ancient-site:衡阳:26.89300,112.57200",
+      "coordinates": [
+        112.572,
+        26.893
+      ],
+      "periods": [
+        "清"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "金田",
+      "siteKey": "ancient-site:金田:23.39100,110.10900",
+      "coordinates": [
+        110.109,
+        23.391
+      ],
+      "periods": [
+        "清"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "永安",
+      "siteKey": "ancient-site:永安:23.19000,110.07000",
+      "coordinates": [
+        110.07,
+        23.19
+      ],
+      "periods": [
+        "清"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "桂平",
+      "siteKey": "ancient-site:桂平:23.39410,110.07940",
+      "coordinates": [
+        110.0794,
+        23.3941
+      ],
+      "periods": [
+        "清"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "大理杜文秀",
+      "siteKey": "ancient-site:大理杜文秀:25.60650,100.26760",
+      "coordinates": [
+        100.2676,
+        25.6065
+      ],
+      "periods": [
+        "清"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "武汉",
+      "siteKey": "ancient-site:武汉:30.59280,114.30550",
+      "coordinates": [
+        114.3055,
+        30.5928
+      ],
+      "periods": [
+        "近现代"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "瑞金",
+      "siteKey": "ancient-site:瑞金:25.88500,116.02700",
+      "coordinates": [
+        116.027,
+        25.885
+      ],
+      "periods": [
+        "近现代"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "延安",
+      "siteKey": "ancient-site:延安:36.58530,109.48980",
+      "coordinates": [
+        109.4898,
+        36.5853
+      ],
+      "periods": [
+        "近现代"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "长春",
+      "siteKey": "ancient-site:长春:43.81710,125.32350",
+      "coordinates": [
+        125.3235,
+        43.8171
+      ],
+      "periods": [
+        "近现代"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "张家口",
+      "siteKey": "ancient-site:张家口:40.76750,114.88630",
+      "coordinates": [
+        114.8863,
+        40.7675
+      ],
+      "periods": [
+        "近现代"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "通州",
+      "siteKey": "ancient-site:通州:39.90900,116.65700",
+      "coordinates": [
+        116.657,
+        39.909
+      ],
+      "periods": [
+        "近现代"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+    },
+    {
+      "site": "三星堆遗址",
+      "siteKey": "ancient-site:三星堆遗址:30.99500,104.20000",
+      "coordinates": [
+        104.2,
+        30.995
+      ],
+      "periods": [
+        "夏商"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "区域参照点，非宫殿确址"
+    },
+    {
+      "site": "金沙遗址",
+      "siteKey": "ancient-site:金沙遗址:30.68300,104.01200",
+      "coordinates": [
+        104.01041000000001,
+        30.684315599999998
+      ],
+      "periods": [
+        "夏商"
+      ],
+      "relations": [
+        {
+          "id": "osm-way-418288880",
+          "name": "古蜀金沙遗址（博物馆展示区）",
+          "period": "夏商",
+          "pointInside": true
+        },
+        {
+          "id": "osm-way-418288880",
+          "name": "古蜀金沙遗址（博物馆展示区）",
+          "period": "周",
+          "pointInside": true
+        }
+      ],
+      "status": "已建立范围对应",
+      "note": "按时期关联城池、宫区或遗址展示范围；参考线与现代展示范围均保留来源和性质说明，不能当作对应朝代的完整实测城界。"
+    },
+    {
+      "site": "郫邑（杜鹃城候选）",
+      "siteKey": "ancient-site:郫邑（杜鹃城候选）:30.81000,103.88700",
+      "coordinates": [
+        103.887,
+        30.81
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "区域参照点，非宫殿确址"
+    },
+    {
+      "site": "莒国故城",
+      "siteKey": "ancient-site:莒国故城:35.58000,118.83500",
+      "coordinates": [
+        118.835,
+        35.58
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "区域参照点，非宫殿确址"
+    },
+    {
+      "site": "中山国灵寿故城",
+      "siteKey": "ancient-site:中山国灵寿故城:38.33300,114.20700",
+      "coordinates": [
+        114.207,
+        38.333
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "区域参照点，非宫殿确址"
+    },
+    {
+      "site": "琅琊（越都说）",
+      "siteKey": "ancient-site:琅琊（越都说）:35.65200,119.91200",
+      "coordinates": [
+        119.912,
+        35.652
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "区域参照点，非宫殿确址"
+    },
+    {
+      "site": "黄国故城",
+      "siteKey": "ancient-site:黄国故城:32.09100,114.98800",
+      "coordinates": [
+        114.988,
+        32.091
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "区域参照点，非宫殿确址"
+    },
+    {
+      "site": "薛国故城",
+      "siteKey": "ancient-site:薛国故城:34.89800,117.16400",
+      "coordinates": [
+        117.164,
+        34.898
+      ],
+      "periods": [
+        "周"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "区域参照点，非宫殿确址"
+    },
+    {
+      "site": "金中都",
+      "siteKey": "ancient-site:金中都:39.87500,116.34000",
+      "coordinates": [
+        116.34,
+        39.875
+      ],
+      "periods": [
+        "宋辽金西夏"
+      ],
+      "relations": [
+        {
+          "id": "beijing-jin-buriedarea-2019",
+          "name": "金中都城址地下文物埋藏区（二期）· 道路四至参考线",
+          "period": "宋辽金西夏",
+          "pointInside": true
+        }
+      ],
+      "status": "已建立范围对应",
+      "note": "按记录所属朝代对应范围；同城不同朝代、宫城与外郭城分别保留。现代城市参照点不代表每一期古都中心。"
+    },
+    {
+      "site": "老丘（国都里参照）",
+      "siteKey": "ancient-site:老丘:34.8274554,114.592359",
+      "coordinates": [
+        114.592359,
+        34.8274554
+      ],
+      "periods": [
+        "夏商"
+      ],
+      "relations": [],
+      "status": "未接入对应范围",
+      "note": "夏代老丘地望位于开封东北国都里一带，考古认定及完整城界仍需核实，不能使用宋东京或明清开封范围。"
+    }
+  ],
+  "limitations": "全量数据对应和几何检查，不等于逐城考古测绘验证。未接入范围、点与部分形状不重合均列出，不自动吸附点位或合并朝代。"
+}

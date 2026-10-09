@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "stages": [
+    {
+      "id": "yan",
+      "name": "西周燕都",
+      "period": "周",
+      "siteId": "yan",
+      "siteName": "西周燕都遗址区域",
+      "coordinates": [
+        116.046389,
+        39.614167
+      ],
+      "coordinateKind": "官方保护规划中心坐标参照（非城址中心实测）",
+      "boundaryStatus": "保护范围及内城残墙参考线已接入；最新外城完整范围未接入",
+      "summary": "按官方2020—2035年保护规划中心坐标更正点位。保护范围和内城北墙、东西侧残段由城墙范围的周选项控制。原规划早于2024—2025年外城发现，不代表最新完整城界。",
+      "sources": [
+        {
+          "title": "城址依据与资料",
+          "url": "https://www.beijing.gov.cn/ywdt/gqrd/202503/t20250312_4033007.html"
+        }
+      ]
+    },
+    {
+      "id": "ji",
+      "name": "蓟城",
+      "period": "周",
+      "siteId": "ancient-site:幽州:39.89500,116.35000",
+      "siteName": "蓟城／幽州／辽南京",
+      "coordinates": [
+        116.35,
+        39.895
+      ],
+      "coordinateKind": "区域参照点（非精确测量）",
+      "boundaryStatus": "城界待配准",
+      "summary": "蓟城位于广安门一带，后发展为幽州。此点表示区域位置，不代表各时期共用一个城界。",
+      "sources": [
+        {
+          "title": "城址依据与资料",
+          "url": "https://www.beijing.gov.cn/zhengce/zfwj/zfwj/bgtwj/201905/t20190523_74704.html"
+        }
+      ]
+    },
+    {
+      "id": "youzhou",
+      "name": "唐幽州城",
+      "period": "隋唐",
+      "siteId": "ancient-site:幽州:39.89500,116.35000",
+      "siteName": "蓟城／幽州／辽南京",
+      "coordinates": [
+        116.35,
+        39.895
+      ],
+      "coordinateKind": "区域参照点（非精确测量）",
+      "boundaryStatus": "四至推定轮廓及现存寺院参照已接入",
+      "summary": "恢复原有四至参考轮廓，保留法源寺、崇效寺现存遗迹范围。城界是文献研究推定，寺院是现存范围，均非唐代实测范围；零散的分县道路参考线不显示。",
+      "sources": [
+        {
+          "title": "幽州城历史地理研究（PDF第19页）",
+          "url": "https://ivantsoi.myds.me/web/schoolebook/pdf/016047.pdf"
+        },
+        {
+          "title": "唐幽州城北市考古资料",
+          "url": "https://wwj.beijing.gov.cn/bjww/362760/362770/743974740/index.html"
+        }
+      ]
+    },
+    {
+      "id": "liao",
+      "name": "辽南京",
+      "period": "宋辽金西夏",
+      "siteId": "ancient-site:幽州:39.89500,116.35000",
+      "siteName": "蓟城／幽州／辽南京",
+      "coordinates": [
+        116.35,
+        39.895
+      ],
+      "coordinateKind": "区域参照点（非精确测量）",
+      "boundaryStatus": "天宁寺塔现存建筑范围已接入；全城轮廓待可靠图件配准",
+      "summary": "辽南京（燕京、析津府）于938年设为辽的陪都，在幽州旧城基础上发展。资料所述四至约为北至白云观北、头发胡同一线，东至校场五条、烂缦胡同一线，南至白纸坊东西街一线，西至白云观西土城台至小红庙一线。四至地望是研究参考，未据此拼接现代道路生成城墙。已补充辽代天宁寺塔的现存建筑标绘；塔及寺院保护范围均不代表辽南京全城。",
+      "sources": [
+        {
+          "title": "北京市文旅资料 · 陪都燕京与城址四至",
+          "url": "https://www.visitbeijing.com.cn/article/47QkJbqvFn1"
+        },
+        {
+          "title": "北京市政府 · 天宁寺塔与辽南京城址",
+          "url": "https://www.beijing.gov.cn/renwen/rwzyd/qxdw/gdshyqyxc/tnst/202309/t20230920_3263131.html"
+        },
+        {
+          "title": "北京市文物局 · 天宁寺塔保护区划",
+          "url": "https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742741/548075/index.html"
+        }
+      ]
+    },
+    {
+      "id": "jin",
+      "name": "金中都",
+      "period": "宋辽金西夏",
+      "siteId": "ancient-site:金中都:39.87500,116.34000",
+      "siteName": "金中都",
+      "coordinates": [
+        116.34,
+        39.875
+      ],
+      "coordinateKind": "区域参照点（非精确测量）",
+      "boundaryStatus": "地下文物埋藏区道路四至范围已接入；不是外城城墙",
+      "summary": "金中都于1153年成为金朝都城，在辽南京基础上改扩建。宋辽金选项显示2019年地下文物埋藏区（二期）的道路四至参考范围；此保护管理范围不能当作金代城墙。",
+      "sources": [
+        {
+          "title": "城址依据与资料",
+          "url": "https://www.beijing.gov.cn/renwen/sy/whkb/202101/t20210113_2218649.html"
+        }
+      ]
+    },
+    {
+      "id": "yuan",
+      "name": "元大都",
+      "period": "元",
+      "siteId": "ancient-site:元大都:39.94000,116.41000",
+      "siteName": "元大都",
+      "coordinates": [
+        116.41,
+        39.94
+      ],
+      "coordinateKind": "区域参照点（非精确测量）",
+      "boundaryStatus": "已接入元末外郭城研究复原范围",
+      "summary": "城墙范围的元选项显示元末外郭城复原轮廓，采用CCWAD北京1368年记录，并对照中轴线申遗历史地图及北土城遗迹。现代遗址公园展示范围另有说明，不能视为古城墙。",
+      "sources": [
+        {
+          "title": "城址依据与资料",
+          "url": "https://www.beijing.gov.cn/zhengce/zfwj/zfwj/bgtwj/201905/t20190523_74704.html"
+        },
+        {
+          "title": "元大都城图（北京市水务局）",
+          "url": "https://swj.beijing.gov.cn/bmxx/shms/swhxc/202311/t20231101_3292289.html"
+        },
+        {
+          "title": "元大都历史地图（北京中轴线申遗团队）",
+          "url": "https://www.bjaxiscloud.com.cn/mobile/history/evolution/index.html"
+        }
+      ]
+    },
+    {
+      "id": "mingqing",
+      "name": "明清北京",
+      "period": "明清",
+      "siteId": "ancient-site:北京:39.90420,116.40740",
+      "siteName": "北京（明清至近现代）",
+      "coordinates": [
+        116.4074,
+        39.9042
+      ],
+      "coordinateKind": "区域参照点（非精确测量）",
+      "boundaryStatus": "已接入重建范围",
+      "summary": "显示所选年份的 CCWAD 明清城墙围合范围，不套用于元大都。",
+      "sources": [
+        {
+          "title": "城址依据与资料",
+          "url": "https://doi.org/10.6084/m9.figshare.14112968.v3"
+        }
+      ]
+    }
+  ],
+  "note": "各时期范围按其资料分别显示，研究复原线、保护范围及现存遗迹不等同。"
+}

@@ -28,17 +28,28 @@ for (const site of data.items.filter(x=>x.coordinatePrecision)) {
   assert.match(site.coordinatePrecision,/参照/);
   assert(site.records.every(x=>/^https:\/\//.test(x['来源URL'])));
 }
-// Every original key and original record remains intact, including saved check-ins.
+// Records retain their political identity while sourced coordinates and site associations evolve.
 const original=JSON.parse(execFileSync('git',['show','HEAD:data/china-ancient-capitals.json'],{cwd:require('node:path').resolve(__dirname,'..'),encoding:'utf8'}));
-for(const record of original.recordItems) assert.deepEqual(data.recordItems.find(x=>x.sourceOrder===record.sourceOrder),record);
+for(const record of original.recordItems) {
+ const retained=data.recordItems.find(x=>x.sourceOrder===record.sourceOrder);
+ assert(retained,record.name);
+ for(const key of ['sourceOrder','dynasty','era','capitalType','capitalYears','regimeYears','categoryCode']){
+  if(record.sourceOrder===48&&key==='capitalYears'){
+   assert.equal(retained.capitalYears,'-386—-228');
+   const raw=data.items.find(s=>s.siteKey===retained.siteKey).records.find(r=>r.sourceOrder===48);
+   assert.equal(raw.originalImportedCapitalYears,'-386—-222');assert.match(raw['核实来源URL'],/wenwu\.hebei\.gov\.cn/);
+  }else assert.equal(retained[key],record[key],record.name+' '+key);
+ }
+}
 for(const site of original.items) {
   const retained=data.items.find(x=>x.siteKey===site.siteKey);
-  for(const key of ['name','lat','lng','currentKey','currentPlace']) assert.equal(retained[key],site[key]);
-  assert.deepEqual(retained.records.slice(0,site.records.length),site.records);
+  assert(retained,'Original saved check-in site key must survive: '+site.name);
+  assert.equal(retained.currentKey,site.currentKey);
+  for(const record of site.records)assert(data.items.some(i=>i.records.some(r=>r.sourceOrder===record.sourceOrder&&r['政权/国号']===record['政权/国号'])),'Original raw political record must survive site consolidation');
 }
 const merged=merge(data,require('../data/western-regions-36.json'));
-assert.equal(merged.recordCount,339);
-assert.equal(merged.siteCount,185);
+assert.equal(merged.recordCount,data.recordCount+32);
+assert.equal(merged.siteCount,data.siteCount+32);
 assert.deepEqual(merge(merged,require('../data/western-regions-36.json')),merged);
 const before=fs.readFileSync(require.resolve('../data/china-ancient-capitals.json'),'utf8');
 execFileSync(process.execPath,['scripts/supplement-ancient-capitals.cjs'],{cwd:require('node:path').resolve(__dirname,'..')});

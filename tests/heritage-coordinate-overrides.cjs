@@ -20,3 +20,7 @@ assert.deepEqual(china5aCoordinates["慕田峪长城旅游景区（八达岭-慕
 assert.match(appSource, /"八达岭-慕田峪长城": \[40\.354244, 116\.006841, "北京"\]/);
 
 console.log("PASS: Summer Palace and Great Wall coordinates are corrected across web and mini-program data");
+const heritage=JSON.parse(fs.readFileSync(path.join(root,'data/world-heritage.json'),'utf8')),angkor=heritage.items.find(x=>x.id==='whc-668'),miniAngkor=miniProgramChecklist.worldHeritage.find(x=>x.id==='whc-668');
+assert.deepEqual([angkor.lat,angkor.lng],[13.4124901,103.866592]);assert.deepEqual(heritage.coordinates['吴哥窟'].slice(0,2),[angkor.lat,angkor.lng]);assert.deepEqual([miniAngkor.latitude,miniAngkor.longitude],[angkor.lat,angkor.lng]);assert.deepEqual(angkor.coordinateReference.originalCatalogCoordinates,[103.8333,13.43333]);assert.equal(angkor.idNo,'668');assert.equal(angkor.name,'吴哥窟');assert.equal(angkor.dateInscribed,'1992');assert.match(angkor.coordinateReference.note,/代表位置/);
+const temple=JSON.parse(fs.readFileSync(path.join(root,'data/angkor/surroundings.geojson'),'utf8')).features.find(f=>f.properties.nameEn==='Angkor Wat');assert.deepEqual([angkor.lng,angkor.lat],temple.properties.labelCoordinates);
+console.log('PASS: Angkor heritage point matches Angkor Wat across web/mini-program and retains identity and source coordinates');
