@@ -80,11 +80,16 @@
       return tile(providers[match[1]], ...match.slice(2).map(Number), transform, controller.signal).then(data => ({ data }));
     });
   }
+  const correctedPaths = new WeakMap();
   function pathGeometry(place, inverse) {
     const geometry = place?.importedGeometry;
     if (!geometry || !['LineString', 'MultiLineString'].includes(geometry.type) || String(place.pathCoordinateSystem || '').toLowerCase() === 'wgs84') return geometry;
+    const cached = correctedPaths.get(geometry);
+    if (cached?.inverse === inverse && cached.coordinates === geometry.coordinates) return cached.result;
     const point = p => [...inverse(Number(p[0]), Number(p[1])), ...p.slice(2)];
-    return { ...geometry, coordinates: geometry.type === 'LineString' ? geometry.coordinates.map(point) : geometry.coordinates.map(line => line.map(point)) };
+    const result = { ...geometry, coordinates: geometry.type === 'LineString' ? geometry.coordinates.map(point) : geometry.coordinates.map(line => line.map(point)) };
+    correctedPaths.set(geometry, { inverse, coordinates: geometry.coordinates, result });
+    return result;
   }
   const api = { shifted, pixel, coordinate, grid, tile, register, pathGeometry };
   root.BasemapAlignment = api;

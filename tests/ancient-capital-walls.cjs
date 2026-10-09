@@ -16,6 +16,13 @@ const map={getSource:id=>sources.get(id),getLayer:id=>layers.get(id),getStyle:()
 (async()=>{
  for(const capital of [false,true])for(const walls of [false,true])for(const era of [false,true]){Object.assign(state.mapOverlays,{chinaAncientCapitals:capital,ancientCapitalWalls:walls,ancientCapitalWallYear:1866,ancientCapitalPeriods:{明:era,清:era}});await AncientCapitalWalls.sync(map);if(capital&&walls){assert.equal(layers.get('ancient-capital-wall-fill').layout.visibility,'visible');assert.ok(sources.get('ancient-capital-walls').data.features.filter(f=>!f.properties.early&&!f.properties.research).every(f=>f.properties.begin<=1866&&f.properties.end>=1866));}else if(layers.has('ancient-capital-wall-fill'))assert.equal(layers.get('ancient-capital-wall-fill').layout.visibility,'none');}
  state.mapOverlays.chinaAncientCapitals=true;state.mapOverlays.ancientCapitalWalls=true;state.mapOverlays.ancientCapitalWallYear=1400;await AncientCapitalWalls.sync(map);assert.ok(sources.get('ancient-capital-walls').data.features.filter(f=>!f.properties.early&&!f.properties.research).every(f=>f.properties.begin<=1400&&f.properties.end>=1400));
+ const unchanged=sources.get('ancient-capital-walls').data;let uploads=0;
+ for(const s of sources.values())s.setData=function(d){uploads++;this.data=d;};
+ await AncientCapitalWalls.sync(map);assert.equal(uploads,0,'Unchanged refresh must not re-upload historical geometry');
+ state.mapOverlays.ancientCapitalWalls=false;await AncientCapitalWalls.sync(map);
+ state.mapOverlays.ancientCapitalWalls=true;await AncientCapitalWalls.sync(map);
+ assert.ok(uploads>0,'Re-enabling restores data and visibility');assert.equal(layers.get('ancient-capital-wall-fill').layout.visibility,'visible');
+ uploads=0;sources.delete('ancient-capital-walls');await AncientCapitalWalls.sync(map);assert.ok(sources.has('ancient-capital-walls'),'Recreate source after style replacement');assert.ok(uploads>0);
  assert.deepEqual(layers.get('ancient-capital-wall-research-labels').paint['text-color'],['get','color']);
  assert.deepEqual(layers.get('ancient-capital-wall-city-labels').paint['text-color'],['get','color']);
  const named=sources.get('ancient-capital-walls-labels').data.features.filter(f=>!f.properties.research&&!f.properties.early);

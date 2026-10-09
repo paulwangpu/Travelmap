@@ -6377,7 +6377,8 @@ function openMapClickCheckinForm(lng, lat) {
 }
 
 async function createMapClickCheckin({ name, lng, lat }) {
-  await ensureBoundaryLayersForPoint(null, lng, lat);
+  // Save and show the point immediately; administrative detail can arrive later.
+  const boundaryReady = ensureBoundaryLayersForPoint(null, lng, lat);
   const point = inferMapClickPoint(lng, lat);
   const id = `map-click-${Date.now()}`;
   const finalName = String(name || "").trim() || mapClickPointName();
@@ -6399,7 +6400,6 @@ async function createMapClickCheckin({ name, lng, lat }) {
   state.focusPlaceId = id;
   ensureCheckinOverlayVisible();
   upsertVisit(id, 1, { tripId: "map-click", save: false });
-  recomputeCoverage();
   invalidateMapGeoJsonCacheOnly();
   invalidateMapPointRenderCache();
   saveState();
@@ -6408,6 +6408,17 @@ async function createMapClickCheckin({ name, lng, lat }) {
   renderPlaceDetail(id);
   renderAfterCheckinChange();
   showToast(`${finalName} ${t("mapPointAdded")}`);
+  boundaryReady.then(() => {
+    const savedPlace = getPlace(id);
+    if (!savedPlace) return;
+    const resolved = inferMapClickPoint(lng, lat);
+    if (savedPlace.country === resolved.countryId && savedPlace.unit === resolved.regionName && savedPlace.subunit === resolved.subregionName) return;
+    Object.assign(savedPlace, { country: resolved.countryId, unit: resolved.regionName, subunit: resolved.subregionName });
+    recomputeCoverage();
+    saveState();
+    renderAfterCheckinChange();
+    if (state.focusPlaceId === id && !$("#mapDetail")?.classList.contains("hidden")) renderPlaceDetail(id);
+  }).catch(error => console.warn("Check-in administrative detail", error));
 }
 
 function handleMapCanvasClick(lng, lat, originalEvent = null) {
@@ -6538,6 +6549,10 @@ function refreshMapLabelsForLanguage() {
   if (mapLibreMap && mapLibreStyleReady) {
     syncMapLibreArcgisWaterOverlay(Boolean(state.mapOverlays?.arcgisWater));
     syncMapLibreRailwayOverlay(Boolean(state.mapOverlays?.railways));
+    AncientCapitalWalls.sync(mapLibreMap);
+    AngkorSites.sync(mapLibreMap);
+    LuoyangCapitalEvolution.sync(mapLibreMap);
+    BeijingCapitalEvolution.sync(mapLibreMap);
   }
   if (mapLibreMap && mapLibreStyleReady && mapLibreMap.getSource("map-points")) {
     renderMapLibreMarkers();
@@ -13681,7 +13696,9 @@ function compactMapLabelValues(values, limit = 3, separator = " · ") {
 
 function ancientCapitalMapTitle(item) {
   if (item?.westernRegion && item.westernRegion.position !== "existing") return currentLanguage === "en" ? item.westernRegion.nameEn : item.westernRegion.name;
-  return ancientCapitalCurrentDisplayName(item) || item?.name || "";
+  const name = ancientCapitalCurrentDisplayName(item) || item?.name || "";
+  const translated = checklistItemDisplayName("chinaAncientCapitals", name);
+  return currentLanguage === "en" && translated === name ? chinaProvinceEnglishNames[name] || chineseToPinyinTitle(name) : translated;
 }
 
 function ancientCapitalMapSubtitle(item) {
@@ -15881,9 +15898,11 @@ function renderAfterCheckinChange() {
   if (pendingCheckinRender) return;
   pendingCheckinRender = window.requestAnimationFrame(() => {
     pendingCheckinRender = null;
-    renderMetrics();
-    renderDashboardAchievements();
-    renderNextStops();
+    if (document.querySelector('[data-page="dashboard"]')?.classList.contains("active")) {
+      renderMetrics();
+      renderDashboardAchievements();
+      renderNextStops();
+    }
     if (document.querySelector('[data-page="checkins"]')?.classList.contains("active")) renderCheckinsPage();
     if (document.querySelector('[data-page="achievements"]')?.classList.contains("active")) renderAchievements();
     if (document.querySelector('[data-page="imports"]')?.classList.contains("active")) renderDataInventory();

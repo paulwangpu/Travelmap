@@ -12,11 +12,14 @@ assert.equal(surroundings.features.length,23);for(const name of ['吴哥寺（�
 for(const f of surroundings.features){assert.deepEqual(f.geometry,imported.sourceGeometries[f.properties.id]);assert.match(f.properties.name,/[\u3400-\u9fff]/);}
 const state={mapOverlays:{chinaAncientCapitals:true,ancientCapitalWalls:true,ancientCapitalPeriods:{},angkorSites:false,angkorEfeo:false}};
 global.fetch=async u=>({ok:true,json:async()=>u.includes('surroundings.geojson')?surroundings:u.includes('osm.geojson')?osm:efeo});
-AngkorSites.init({state:()=>state,language:()=> 'zh',error:()=>{throw Error('Load failure')}});
+let language='zh';
+AngkorSites.init({state:()=>state,language:()=>language,error:()=>{throw Error('Load failure')}});
 const sources=new Map(),layers=new Map(),images=new Map(),map={hasImage:id=>images.has(id),addImage:(id,v)=>images.set(id,v),getSource:id=>sources.get(id),getLayer:id=>layers.get(id),getStyle:()=>({layers:[]}),addSource:(id,s)=>sources.set(id,{...s,setData(d){this.data=d}}),addLayer:l=>layers.set(l.id,l),setLayoutProperty:(id,k,v)=>{layers.get(id).layout||={};layers.get(id).layout[k]=v;}};
 (async()=>{
  await AngkorSites.sync(map);assert.equal(AngkorSites.collection().features.length,147);assert.equal(sources.get('angkor-capital').data.features.length,1);
- assert.equal(layers.get('angkor-capital-point').minzoom,4);assert.equal(layers.get('angkor-labels').minzoom,13);assert.ok(layers.get('angkor-city-fill').paint['fill-opacity']>.1);
+ language='en';await AngkorSites.sync(map);assert.equal(sources.get('angkor-capital').data.features[0].properties.displayName,'Angkor Thom');
+ language='zh';await AngkorSites.sync(map);assert.equal(sources.get('angkor-capital').data.features[0].properties.displayName,'吴哥城');
+ assert.equal(layers.get('angkor-capital-point').minzoom,0);assert.equal(layers.get('angkor-labels').minzoom,13);assert.ok(layers.get('angkor-city-fill').paint['fill-opacity']>.1);
  assert.ok(!sources.get('angkor-site-labels').data.features.some(f=>f.properties.role==='city-extent'),'One main city label and icon');
  state.mapOverlays.ancientCapitalWalls=false;await AngkorSites.sync(map);assert.equal(AngkorSites.collection().features.length,0);assert.equal(AngkorSites.capital().features.length,1,'Capital icon independent of wall control');
  state.mapOverlays.ancientCapitalWalls=true;state.mapOverlays.ancientCapitalPeriods={'宋辽金西夏':false,元:false,明:false};await AngkorSites.sync(map);assert.ok(AngkorSites.collection().features.some(f=>f.properties.name==='神牛寺'));assert.ok(!AngkorSites.collection().features.some(f=>f.properties.name==='女王宫'));
