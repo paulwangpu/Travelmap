@@ -15,7 +15,7 @@ const mapControlsStorageKey = "travel-map-controls-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "2.3.0";
+const appVersion = "2.3.1";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 341;
@@ -2433,6 +2433,11 @@ const checklistItemEnglishNames = {
 };
 
 const checklistItemDetailLabels = {
+  worldHeritage: {
+    "哈图莎：希泰首都": { zh: "哈图莎：赫梯首都", en: "Hattusha: the Hittite Capital" },
+    Aphrodisias: { zh: "阿佛洛狄西亚斯", en: "Aphrodisias" },
+    "Pergamon and its Multi-Layered Cultural Landscape": { zh: "帕加马及其多层文化景观", en: "Pergamon and its Multi-Layered Cultural Landscape" },
+  },
   threeMountains: {
     黄山: { zh: "黄山 · 莲花峰 · 1864m", en: "Mount Huangshan · Lotus Peak · 1864m" },
     庐山: { zh: "庐山 · 汉阳峰 · 1474m", en: "Mount Lu · Hanyang Peak · 1474m" },
@@ -6553,6 +6558,8 @@ function refreshMapLabelsForLanguage() {
     syncMapLibreRailwayOverlay(Boolean(state.mapOverlays?.railways));
     AncientCapitalWalls.sync(mapLibreMap);
     AngkorSites.sync(mapLibreMap);
+    PompeiiSites.sync(mapLibreMap);
+    ClassicalSites.sync(mapLibreMap);
     LuoyangCapitalEvolution.sync(mapLibreMap);
     BeijingCapitalEvolution.sync(mapLibreMap);
   }
@@ -8448,6 +8455,8 @@ function renderMapLibreMap() {
       if (BeijingCapitalEvolution.click(mapLibreMap,event)) return;
       if (LuoyangCapitalEvolution.click(mapLibreMap,event)) return;
       if (AngkorSites.click(mapLibreMap,event)) return;
+      if (PompeiiSites.click(mapLibreMap,event)) return;
+      if (ClassicalSites.click(mapLibreMap,event)) return;
       if (AncientCapitalWalls.click(mapLibreMap,event)) return;
       if (EthnicRegions.click(mapLibreMap, event)) return;
       if (handleGeologyClick(event.lngLat.lng, event.lngLat.lat, event.point)) return;
@@ -9903,6 +9912,8 @@ function renderMapLibreLayers() {
   EthnicRegions.sync(mapLibreMap);
   AncientCapitalWalls.sync(mapLibreMap);
   AngkorSites.sync(mapLibreMap);
+    PompeiiSites.sync(mapLibreMap);
+    ClassicalSites.sync(mapLibreMap);
   LuoyangCapitalEvolution.sync(mapLibreMap);
   BeijingCapitalEvolution.sync(mapLibreMap);
   syncMapLibreArcgisWaterOverlay(overlays.arcgisWater);
@@ -10040,6 +10051,8 @@ function renderMapLibreLayers() {
   EthnicRegions.sync(mapLibreMap);
   AncientCapitalWalls.sync(mapLibreMap);
   AngkorSites.sync(mapLibreMap);
+    PompeiiSites.sync(mapLibreMap);
+    ClassicalSites.sync(mapLibreMap);
   LuoyangCapitalEvolution.sync(mapLibreMap);
   BeijingCapitalEvolution.sync(mapLibreMap);
   syncMapLibreArcgisWaterOverlay(overlays.arcgisWater);
@@ -10580,10 +10593,12 @@ function showMapLibrePointPopup(feature, lngLat) {
   const button = props.kind === "checkin"
     ? `<button class="popup-action" data-unvisit="${escapeHtml(props.placeId)}" type="button">${t("unvisit")}</button>`
     : `<button class="popup-action" data-checklist-map="${escapeHtml(props.checklistKey)}" data-item="${escapeHtml(props.item)}" type="button">${props.done ? t("unvisit") : t("markVisited")}</button>`;
+  const siteKey = props.checklistKey === 'worldHeritage' ? ClassicalSites.heritageKey(props.item) : '';
+  const archaeologicalButton = siteKey === 'hattusa' ? `<br><button type="button" class="popup-action" data-classical-focus="hattusa">${currentLanguage === 'en' ? 'Explore archaeological details' : '查看遗址细节'}</button>` : '';
   document.querySelectorAll(".maplibregl-popup").forEach((popup) => popup.remove());
   new maplibregl.Popup({ offset: 12, closeButton: false })
     .setLngLat(popupLngLat)
-    .setHTML(mapPopupHtml(`<strong>${title}</strong><br>${subtitle}<br>${button}`))
+    .setHTML(mapPopupHtml(`<strong>${title}</strong><br>${subtitle}<br>${button}${archaeologicalButton}`))
     .addTo(mapLibreMap);
 }
 
@@ -10933,6 +10948,7 @@ function renderChecklistMapDetail(key, item) {
       <div><dt>${currentLanguage === "en" ? "Boundary" : "边界"}</dt><dd>${npsUnit.hasBoundary ? (currentLanguage === "en" ? "Available" : "可显示") : (currentLanguage === "en" ? "Not available" : "暂无")}</dd></div>` : ""}
       <div><dt>${t("status")}</dt><dd>${done ? t("checked") : t("unvisited")}</dd></div>
     </dl>
+    ${key === "worldHeritage" && ClassicalSites.heritageKey(item) ? `<button type="button" class="popup-action" data-classical-focus="${escapeHtml(ClassicalSites.heritageKey(item))}">${currentLanguage === "en" ? "Explore archaeological details" : "查看遗址细节"}</button>` : ""}
     <button class="detail-action" data-checklist-map="${escapeHtml(key)}" data-item="${escapeHtml(item)}" type="button">${done ? t("unvisit") : t("markVisited")}</button>`;
 }
 
@@ -11373,6 +11389,8 @@ function renderLeafletLayers() {
   EthnicRegions.sync(null, leafletLayers);
   AncientCapitalWalls.sync(null,leafletLayers);
   AngkorSites.sync(null,leafletLayers);
+  PompeiiSites.sync(null,leafletLayers);
+  ClassicalSites.sync(null,leafletLayers);
   LuoyangCapitalEvolution.sync(null,leafletLayers);
   BeijingCapitalEvolution.sync(null,leafletLayers);
   if (overlays.countryBorders) {
@@ -16366,6 +16384,8 @@ function showPage(pageId, targetId = "") {
 setLoadingDebug("读取本地快速状态", "pending");
 LuoyangCapitalEvolution.init({state:()=>state,language:()=>currentLanguage,front:bringMapLibrePointLayersToFront,error:()=>showToast('洛阳分期城址资料加载失败，请重新勾选重试。')});
 AngkorSites.init({zoom:()=>leafletMap?.getZoom()||13,state:()=>state,language:()=>currentLanguage,front:bringMapLibrePointLayersToFront,error:()=>showToast(currentLanguage==='en'?'Angkor data failed to load; toggle to retry.':'吴哥城数据加载失败，请重新勾选重试。'),changed:()=>{saveUiStateSoon();renderMapControls();renderGeoMap();},focus:(center,zoom)=>{if(mapLibreMap)mapLibreMap.flyTo({center,zoom});else if(leafletMap)leafletMap.setView([center[1],center[0]],zoom);}});
+ClassicalSites.init({mergedMarkerVisible:key=>key==='hattusa'&&(state.mapOverlays?.worldHeritage||(state.mapOverlays?.checkins&&locatedVisitedPlaces().some(v=>ClassicalSites.heritageKey(v.place.name)==='hattusa'))),isVisited:item=>isChecklistItemDone('worldHeritage',item),state:()=>state,language:()=>currentLanguage,zoom:()=>leafletMap?.getZoom()||13,front:bringMapLibrePointLayersToFront,changed:()=>{saveUiStateSoon();renderMapControls();scheduleGeoMapRender();},focus:(center,zoom)=>{if(mapLibreMap)mapLibreMap.flyTo({center,zoom});else if(leafletMap)leafletMap.setView([center[1],center[0]],zoom);}});
+PompeiiSites.init({state:()=>state,language:()=>currentLanguage,zoom:()=>leafletMap?.getZoom()||13,front:bringMapLibrePointLayersToFront});
 AncientCapitalWalls.init({state:()=>state,language:()=>currentLanguage,front:bringMapLibrePointLayersToFront,error:()=>showToast(currentLanguage==='en'?'Historical wall extents failed to load; toggle to retry.':'古城墙范围加载失败，请重新勾选重试。')});
 EthnicRegions.init({map: () => mapLibreMap, state: () => state, language: () => currentLanguage, save: saveUiStateSoon, front: bringMapLibrePointLayersToFront, render: () => { renderMapControls(); renderGeoMap(); }});
 GreatWall.init({ state: () => state, language: () => currentLanguage, map: () => mapLibreMap,

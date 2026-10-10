@@ -1,0 +1,1423 @@
+{
+  "site": {
+    "key": "hattusa",
+    "name": "哈图莎（赫梯首都）",
+    "enName": "Hattusha (Hittite capital)",
+    "center": [
+      34.62056,
+      40.01389
+    ],
+    "heritageId": "whc-377",
+    "period": "夏商",
+    "periodLabel": "赫梯时期／青铜时代",
+    "referenceUrl": "https://www.dainst.org/en/research/projects/noslug/2280",
+    "tentative": false,
+    "checklistItem": "哈图莎：希泰首都",
+    "mergedHeritageMarker": true
+  },
+  "georeferencing": {
+    "source": "https://www.dainst.org/en/research/projects/noslug/2280",
+    "imageSource": "https://www.dainst.org/_assets/2/5/csm_Raum_Zeit_2_f2fe30b4a9.jpg",
+    "controlPoints": [
+      {
+        "name": "狮门",
+        "pixel": [
+          110,
+          877
+        ],
+        "coordinate": [
+          34.61011525833333,
+          40.010068425
+        ],
+        "residualMeters": 15.252754173149974
+      },
+      {
+        "name": "王门",
+        "pixel": [
+          679,
+          916
+        ],
+        "coordinate": [
+          34.62273930526315,
+          40.009218947368424
+        ],
+        "residualMeters": 22.09552077809699
+      },
+      {
+        "name": "狮身人面像门",
+        "pixel": [
+          414,
+          1075
+        ],
+        "coordinate": [
+          34.61673318,
+          40.006179020000005
+        ],
+        "residualMeters": 24.916689838970807
+      },
+      {
+        "name": "大神庙",
+        "pixel": [
+          340,
+          285
+        ],
+        "coordinate": [
+          34.615522317647056,
+          40.02003143529412
+        ],
+        "residualMeters": 13.357390506964872
+      },
+      {
+        "name": "王宫区",
+        "pixel": [
+          550,
+          515
+        ],
+        "coordinate": [
+          34.619664877272726,
+          40.015968345454546
+        ],
+        "residualMeters": 21.128989905122435
+      }
+    ],
+    "method": "Affine least-squares fit to three gates, Great Temple and Büyükkale palace area in a local metric plane; manual DAI city outline includes natural cliff edges and uncertain sections.",
+    "coefficients": [
+      [
+        -1022.5563656882666,
+        1.8693315281489042,
+        -0.02666199355839493
+      ],
+      [
+        1236.8383412214737,
+        -0.0414642490306516,
+        -1.921317514038332
+      ]
+    ],
+    "sourcePixels": [
+      [
+        290,
+        176
+      ],
+      [
+        307,
+        154
+      ],
+      [
+        345,
+        145
+      ],
+      [
+        376,
+        163
+      ],
+      [
+        390,
+        158
+      ],
+      [
+        459,
+        134
+      ],
+      [
+        489,
+        107
+      ],
+      [
+        531,
+        78
+      ],
+      [
+        567,
+        48
+      ],
+      [
+        609,
+        37
+      ],
+      [
+        649,
+        40
+      ],
+      [
+        652,
+        67
+      ],
+      [
+        640,
+        83
+      ],
+      [
+        613,
+        114
+      ],
+      [
+        587,
+        139
+      ],
+      [
+        568,
+        165
+      ],
+      [
+        573,
+        200
+      ],
+      [
+        570,
+        235
+      ],
+      [
+        541,
+        273
+      ],
+      [
+        533,
+        305
+      ],
+      [
+        569,
+        326
+      ],
+      [
+        592,
+        355
+      ],
+      [
+        607,
+        382
+      ],
+      [
+        632,
+        408
+      ],
+      [
+        654,
+        431
+      ],
+      [
+        656,
+        460
+      ],
+      [
+        668,
+        481
+      ],
+      [
+        680,
+        510
+      ],
+      [
+        681,
+        541
+      ],
+      [
+        700,
+        577
+      ],
+      [
+        717,
+        583
+      ],
+      [
+        717,
+        618
+      ],
+      [
+        712,
+        650
+      ],
+      [
+        707,
+        698
+      ],
+      [
+        688,
+        741
+      ],
+      [
+        685,
+        782
+      ],
+      [
+        683,
+        813
+      ],
+      [
+        682,
+        866
+      ],
+      [
+        683,
+        910
+      ],
+      [
+        672,
+        943
+      ],
+      [
+        646,
+        976
+      ],
+      [
+        610,
+        1005
+      ],
+      [
+        548,
+        1039
+      ],
+      [
+        484,
+        1067
+      ],
+      [
+        439,
+        1091
+      ],
+      [
+        412,
+        1095
+      ],
+      [
+        376,
+        1095
+      ],
+      [
+        341,
+        1082
+      ],
+      [
+        294,
+        1056
+      ],
+      [
+        237,
+        1024
+      ],
+      [
+        197,
+        997
+      ],
+      [
+        164,
+        965
+      ],
+      [
+        139,
+        929
+      ],
+      [
+        118,
+        902
+      ],
+      [
+        110,
+        877
+      ],
+      [
+        102,
+        846
+      ],
+      [
+        93,
+        809
+      ],
+      [
+        99,
+        771
+      ],
+      [
+        99,
+        727
+      ],
+      [
+        94,
+        697
+      ],
+      [
+        111,
+        656
+      ],
+      [
+        108,
+        621
+      ],
+      [
+        110,
+        581
+      ],
+      [
+        114,
+        539
+      ],
+      [
+        127,
+        502
+      ],
+      [
+        146,
+        473
+      ],
+      [
+        167,
+        450
+      ],
+      [
+        173,
+        418
+      ],
+      [
+        205,
+        391
+      ],
+      [
+        233,
+        372
+      ],
+      [
+        244,
+        351
+      ],
+      [
+        261,
+        346
+      ],
+      [
+        277,
+        326
+      ],
+      [
+        278,
+        310
+      ],
+      [
+        261,
+        293
+      ],
+      [
+        241,
+        275
+      ],
+      [
+        236,
+        266
+      ],
+      [
+        254,
+        246
+      ],
+      [
+        281,
+        226
+      ],
+      [
+        290,
+        207
+      ],
+      [
+        291,
+        190
+      ],
+      [
+        290,
+        176
+      ]
+    ],
+    "ring": [
+      [
+        34.614309748887464,
+        40.02196498227212
+      ],
+      [
+        34.61468936111641,
+        40.022338357165
+      ],
+      [
+        34.61552534214576,
+        40.022479537691076
+      ],
+      [
+        34.616199401707284,
+        40.022157321494774
+      ],
+      [
+        34.616507921403034,
+        40.02223840385269
+      ],
+      [
+        34.61802828172689,
+        40.022626928710345
+      ],
+      [
+        34.61869448821589,
+        40.023081758439126
+      ],
+      [
+        34.619624425371676,
+        40.02356663725199
+      ],
+      [
+        34.620423122632424,
+        40.02407101034268
+      ],
+      [
+        34.621347430842945,
+        40.0242452197767
+      ],
+      [
+        34.62222351011352,
+        40.02417854242759
+      ],
+      [
+        34.62228084300273,
+        40.02371142092538
+      ],
+      [
+        34.622012734267386,
+        40.0234397401022
+      ],
+      [
+        34.62141105320878,
+        40.02291475529973
+      ],
+      [
+        34.62083317390097,
+        40.022492954478885
+      ],
+      [
+        34.620408459923894,
+        40.022051286902226
+      ],
+      [
+        34.62050714193105,
+        40.021445345164565
+      ],
+      [
+        34.62043042045259,
+        40.020842383250766
+      ],
+      [
+        34.619782699488304,
+        40.02019732753471
+      ],
+      [
+        34.61959728898887,
+        40.01964800624063
+      ],
+      [
+        34.620380037571366,
+        40.0192721494246
+      ],
+      [
+        34.62087525373627,
+        40.01876305954287
+      ],
+      [
+        34.62119569185391,
+        40.01829146830487
+      ],
+      [
+        34.62173569704777,
+        40.01783341169697
+      ],
+      [
+        34.62221086409206,
+        40.01742825075283
+      ],
+      [
+        34.6222456461072,
+        40.016926982908736
+      ],
+      [
+        34.62250218423283,
+        40.01656006556429
+      ],
+      [
+        34.622756220605,
+        40.01605507294037
+      ],
+      [
+        34.622768451746076,
+        40.01551965875438
+      ],
+      [
+        34.62317377713389,
+        40.01489124291502
+      ],
+      [
+        34.623544633225755,
+        40.0147813543297
+      ],
+      [
+        34.6235336880544,
+        40.014177274981954
+      ],
+      [
+        34.62341405386208,
+        40.01362683625393
+      ],
+      [
+        34.623289416162855,
+        40.012800246966925
+      ],
+      [
+        34.62285938595969,
+        40.01206516942136
+      ],
+      [
+        34.62278078816614,
+        40.01135865104795
+      ],
+      [
+        34.62272724300011,
+        40.01082435429591
+      ],
+      [
+        34.62268874344778,
+        40.009909978047304
+      ],
+      [
+        34.6226969092395,
+        40.00915019153215
+      ],
+      [
+        34.62244540971378,
+        40.008584728262086
+      ],
+      [
+        34.62186502865251,
+        40.00802485216175
+      ],
+      [
+        34.62106664411094,
+        40.007537738481
+      ],
+      [
+        34.61969663464518,
+        40.00697401217811
+      ],
+      [
+        34.61828465062311,
+        40.0065145872908
+      ],
+      [
+        34.61729050075612,
+        40.00611712296156
+      ],
+      [
+        34.61669726311541,
+        40.00605814222735
+      ],
+      [
+        34.6159079474301,
+        40.00607155143473
+      ],
+      [
+        34.61514462252986,
+        40.006308960493286
+      ],
+      [
+        34.61412225775054,
+        40.0067752116168
+      ],
+      [
+        34.612882514929275,
+        40.007348743979755
+      ],
+      [
+        34.61201394091906,
+        40.00782964716733
+      ],
+      [
+        34.61130040855467,
+        40.00839424005869
+      ],
+      [
+        34.61076353055263,
+        40.00902489076594
+      ],
+      [
+        34.61031153982077,
+        40.009498716871846
+      ],
+      [
+        34.61014395431469,
+        40.0099331819441
+      ],
+      [
+        34.609978245123685,
+        40.010471203475966
+      ],
+      [
+        34.609792486812076,
+        40.01111315394543
+      ],
+      [
+        34.60993592275519,
+        40.01176677665509
+      ],
+      [
+        34.60994968239918,
+        40.012526190692256
+      ],
+      [
+        34.60984943679611,
+        40.01304583538024
+      ],
+      [
+        34.610234990689506,
+        40.0137471390619
+      ],
+      [
+        34.61018015955375,
+        40.01435233584359
+      ],
+      [
+        34.61023651919241,
+        40.01504196728505
+      ],
+      [
+        34.61033735514085,
+        40.01576537259042
+      ],
+      [
+        34.6106339564147,
+        40.016399128544265
+      ],
+      [
+        34.611059608549326,
+        40.01689257435073
+      ],
+      [
+        34.61152723524027,
+        40.017281718741614
+      ],
+      [
+        34.611668794868294,
+        40.01783178499166
+      ],
+      [
+        34.61237885222869,
+        40.018285869764476
+      ],
+      [
+        34.61299870609282,
+        40.01860336916974
+      ],
+      [
+        34.61324645298836,
+        40.018961719520576
+      ],
+      [
+        34.613620748991224,
+        40.01904168444455
+      ],
+      [
+        34.6139778103461,
+        40.019380912995544
+      ],
+      [
+        34.61400473928871,
+        40.019656691076534
+      ],
+      [
+        34.613637323107845,
+        40.019956433171146
+      ],
+      [
+        34.61320444333905,
+        40.02027455210964
+      ],
+      [
+        34.61309763063317,
+        40.02043174918897
+      ],
+      [
+        34.61349854285945,
+        40.020770232783995
+      ],
+      [
+        34.61409678400707,
+        40.02110536407718
+      ],
+      [
+        34.61430005459284,
+        40.02142994056411
+      ],
+      [
+        34.61432729625463,
+        40.02172297805504
+      ],
+      [
+        34.614309748887464,
+        40.02196498227212
+      ]
+    ],
+    "limitations": "Not a measured complete wall circuit; natural cliff edges and missing wall sections are reconstructed references."
+  },
+  "added": [
+    {
+      "id": "hattusa-way-114570703",
+      "name": "布于克卡莱王宫区（公开标绘）",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/114570703",
+      "note": "公开王宫区片区轮廓，不能据此填补各宫殿房间。此处为布于克卡莱王宫区，不是整座哈图莎城界。"
+    },
+    {
+      "id": "hattusa-way-114570769",
+      "name": "布于克卡亚山城片区（公开标绘）",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/114570769",
+      "note": "公开遗迹矢量，包含部分修复与展示形态，不等于考古实测台基或法定保护范围。"
+    },
+    {
+      "id": "hattusa-way-1210999807",
+      "name": "大神庙（第一神庙）",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1210999807",
+      "note": "公开遗迹矢量，包含部分修复与展示形态，不等于考古实测台基或法定保护范围。"
+    },
+    {
+      "id": "hattusa-way-1418922497",
+      "name": "大神庙区入口",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1418922497",
+      "note": "公开遗迹矢量，包含部分修复与展示形态，不等于考古实测台基或法定保护范围。"
+    },
+    {
+      "id": "hattusa-way-1418922499",
+      "name": "大神庙 · 狮形石盆",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1418922499",
+      "note": "公开遗迹矢量，包含部分修复与展示形态，不等于考古实测台基或法定保护范围。"
+    },
+    {
+      "id": "hattusa-way-1418938369",
+      "name": "大神庙 · 内庭院",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1418938369",
+      "note": "公开遗迹矢量，包含部分修复与展示形态，不等于考古实测台基或法定保护范围。"
+    },
+    {
+      "id": "hattusa-way-1418938370",
+      "name": "大神庙 · 祭祀室遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1418938370",
+      "note": "公开遗迹矢量，包含部分修复与展示形态，不等于考古实测台基或法定保护范围。"
+    },
+    {
+      "id": "hattusa-way-1418938371",
+      "name": "大神庙 · 祭祀室遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1418938371",
+      "note": "公开遗迹矢量，包含部分修复与展示形态，不等于考古实测台基或法定保护范围。"
+    },
+    {
+      "id": "hattusa-way-1418938372",
+      "name": "大神庙 · 神庙门",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1418938372",
+      "note": "公开遗迹矢量，包含部分修复与展示形态，不等于考古实测台基或法定保护范围。"
+    },
+    {
+      "id": "hattusa-relation-16174053",
+      "name": "哈图莎狮门",
+      "geometry": "MultiPolygon",
+      "source": "https://www.openstreetmap.org/relation/16174053",
+      "note": "公开遗迹矢量，包含部分修复与展示形态，不等于考古实测台基或法定保护范围。"
+    },
+    {
+      "id": "hattusa-relation-16174056",
+      "name": "哈图莎王门",
+      "geometry": "MultiPolygon",
+      "source": "https://www.openstreetmap.org/relation/16174056",
+      "note": "公开遗迹矢量，包含部分修复与展示形态，不等于考古实测台基或法定保护范围。"
+    },
+    {
+      "id": "hattusa-relation-16174054",
+      "name": "下城西门",
+      "geometry": "MultiPolygon",
+      "source": "https://www.openstreetmap.org/relation/16174054",
+      "note": "公开遗迹矢量，包含部分修复与展示形态，不等于考古实测台基或法定保护范围。"
+    },
+    {
+      "id": "hattusa-relation-16174055",
+      "name": "狮身人面像门",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/relation/16174055",
+      "note": "公开遗迹矢量，包含部分修复与展示形态，不等于考古实测台基或法定保护范围。"
+    },
+    {
+      "id": "hattusa-way-1418962955",
+      "name": "耶尔卡珀防御土台",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1418962955",
+      "note": "公开遗迹矢量，包含部分修复与展示形态，不等于考古实测台基或法定保护范围。"
+    },
+    {
+      "id": "hattusa-way-369086256",
+      "name": "耶尔卡珀地下通道",
+      "geometry": "LineString",
+      "source": "https://www.openstreetmap.org/way/369086256",
+      "note": "公开遗迹矢量，包含部分修复与展示形态，不等于考古实测台基或法定保护范围。"
+    },
+    {
+      "id": "hattusa-node-9392977330",
+      "name": "坡上住宅遗址",
+      "geometry": "Point",
+      "source": "https://www.openstreetmap.org/node/9392977330",
+      "note": "公开遗迹矢量，包含部分修复与展示形态，不等于考古实测台基或法定保护范围。"
+    },
+    {
+      "id": "hattusa-node-9392977331",
+      "name": "大神庙 · 绿石",
+      "geometry": "Point",
+      "source": "https://www.openstreetmap.org/node/9392977331",
+      "note": "现存绿石地点；用途和意义有不同解释，不据此认定特定祭祀功能。"
+    },
+    {
+      "id": "hattusa-node-11132377170",
+      "name": "尼尚塔什岩刻铭文",
+      "geometry": "Point",
+      "source": "https://www.openstreetmap.org/node/11132377170",
+      "note": "公开遗迹矢量，包含部分修复与展示形态，不等于考古实测台基或法定保护范围。"
+    },
+    {
+      "id": "hattusa-node-610607807",
+      "name": "亚兹勒卡亚岩刻圣所",
+      "geometry": "Point",
+      "source": "https://www.openstreetmap.org/node/610607807",
+      "note": "位于城外的岩刻圣所，单独保留地点；不能把它并入城内大神庙或城区范围。"
+    },
+    {
+      "id": "hattusa-node-7945418689",
+      "name": "奥斯曼卡亚岩墓区（参照）",
+      "geometry": "Point",
+      "source": "https://www.openstreetmap.org/node/7945418689",
+      "note": "公开遗迹矢量，包含部分修复与展示形态，不等于考古实测台基或法定保护范围。"
+    },
+    {
+      "id": "hattusa-node-13039815850",
+      "name": "亚兹勒卡亚 · B室岩刻参照点",
+      "geometry": "Point",
+      "source": "https://www.openstreetmap.org/node/13039815850",
+      "note": "公开节点的照片索引与A室／B室相关，仅作岩刻地点参照，不代表浮雕或室内轮廓实测范围。"
+    },
+    {
+      "id": "hattusa-node-13039815855",
+      "name": "亚兹勒卡亚 · A室岩刻参照点",
+      "geometry": "Point",
+      "source": "https://www.openstreetmap.org/node/13039815855",
+      "note": "公开节点的照片索引与A室／B室相关，仅作岩刻地点参照，不代表浮雕或室内轮廓实测范围。"
+    },
+    {
+      "id": "hattusa-way-369087238",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "LineString",
+      "source": "https://www.openstreetmap.org/way/369087238",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1192997156",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1192997156",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1192997157",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1192997157",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1192997158",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1192997158",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1192997159",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1192997159",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1192997160",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1192997160",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161096",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161096",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161097",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161097",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161098",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161098",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161099",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161099",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161100",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161100",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161101",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161101",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161102",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161102",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161103",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161103",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161104",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161104",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161105",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161105",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161106",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161106",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161107",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161107",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161108",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161108",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161109",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161109",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161110",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161110",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161111",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161111",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161112",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161112",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161113",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161113",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161114",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161114",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161115",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161115",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161116",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161116",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161117",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161117",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161118",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161118",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161119",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161119",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161120",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161120",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193161121",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193161121",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1193174703",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1193174703",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-way-1418962958",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "LineString",
+      "source": "https://www.openstreetmap.org/way/1418962958",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-relation-16140306",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/relation/16140306",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-relation-16140307",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/relation/16140307",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-relation-16140364",
+      "name": "哈图莎 · 分区城墙遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/relation/16140364",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-relation-16140366",
+      "name": "哈图莎 · 城墙与塔楼遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/relation/16140366",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-relation-16140376",
+      "name": "哈图莎 · 地下通道城墙遗迹",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/relation/16140376",
+      "note": "保留公开城墙、塔楼及分区墙体矢量。开放线保持开放；已修复段可能包含现代重建，统一按赫梯遗存时期分组，不冒充完整原始城墙实测。"
+    },
+    {
+      "id": "hattusa-dai-city-reference",
+      "name": "哈图莎城界（总图参照）",
+      "geometry": "Polygon",
+      "source": "https://www.dainst.org/en/research/projects/noslug/2280",
+      "note": "依据德国考古研究院赫梯时期总图与城门、大神庙、王宫区配准描摹。包含自然崖边防线及缺失墙段，用虚线标注；配准控制点残差约13–25米，局部未核对区域误差可能更大。不是整圈现存墙体实测线或世界遗产法定边界。"
+    }
+  ],
+  "limits": [
+    "OSM Hattusa总对象仅是分散遗址块，未当作城界",
+    "上下城公共quarter多边形未当作完整上下城范围",
+    "城外岩刻圣所不并入城内大神庙",
+    "现代储水罐、咖啡馆和办公建筑未当古迹",
+    "城界为总图配准参照，保留推测状态",
+    "南堡分开标注弗里吉亚堡垒及赫梯祭祀室；新增点来自Vici公开坐标，未冒充完整建筑轮廓。",
+    "南堡补入三段OSM普通wall墙线，未强行连接开放端点，各段分期未逐段核实。"
+  ],
+  "additionalPoints": [
+    {
+      "id": "hattusa-vici-24115",
+      "name": "南堡（居内伊卡莱）",
+      "enName": "Southern Fort (Güney Kale / Südburg)",
+      "coordinates": [
+        34.618511,
+        40.013191
+      ],
+      "role": "fortress",
+      "period": "周",
+      "source": "https://vici.org/vici/24115/",
+      "coordinateLicense": "CC0",
+      "reference": "https://publications.dainst.org/books/dai/catalog/book/2090"
+    },
+    {
+      "id": "hattusa-vici-24141",
+      "name": "南堡 · 第一祭祀室",
+      "enName": "Southern Fort · Chamber I",
+      "coordinates": [
+        34.618713,
+        40.012527
+      ],
+      "role": "temple",
+      "period": "夏商",
+      "source": "https://vici.org/vici/24141/",
+      "coordinateLicense": "CC0",
+      "reference": "https://publications.dainst.org/books/dai/catalog/book/2090"
+    },
+    {
+      "id": "hattusa-vici-24117",
+      "name": "南堡 · 象形文字室（第二室）",
+      "enName": "Southern Fort · Hieroglyph Chamber (Chamber II)",
+      "coordinates": [
+        34.619354,
+        40.013245
+      ],
+      "role": "temple",
+      "period": "夏商",
+      "source": "https://vici.org/vici/24117/",
+      "coordinateLicense": "CC0",
+      "reference": "https://publications.dainst.org/books/dai/catalog/book/2090"
+    },
+    {
+      "id": "hattusa-vici-24140",
+      "name": "第三十一神庙",
+      "enName": "Temple 31",
+      "coordinates": [
+        34.619194,
+        40.013996
+      ],
+      "role": "temple",
+      "period": "夏商",
+      "source": "https://vici.org/vici/24140/",
+      "coordinateLicense": "CC0",
+      "reference": "https://publications.dainst.org/books/dai/catalog/book/2090"
+    },
+    {
+      "id": "hattusa-vici-24110",
+      "name": "萨勒卡莱（黄堡）",
+      "enName": "Sarıkale (Yellow Fortress)",
+      "coordinates": [
+        34.615101,
+        40.012558
+      ],
+      "role": "fortress",
+      "period": "夏商",
+      "source": "https://vici.org/vici/24110/",
+      "coordinateLicense": "CC0",
+      "reference": "https://publications.dainst.org/books/dai/catalog/book/2090"
+    },
+    {
+      "id": "hattusa-vici-25605",
+      "name": "第七神庙",
+      "enName": "Temple VII",
+      "coordinates": [
+        34.615929,
+        40.012459
+      ],
+      "role": "temple",
+      "period": "夏商",
+      "source": "https://vici.org/vici/25605/",
+      "coordinateLicense": "CC0",
+      "reference": "https://publications.dainst.org/books/dai/catalog/book/2090"
+    },
+    {
+      "id": "hattusa-vici-25613",
+      "name": "东部圣池（第一池）",
+      "enName": "Eastern Sacred Pond I",
+      "coordinates": [
+        34.619579,
+        40.012623
+      ],
+      "role": "water",
+      "period": "夏商",
+      "source": "https://vici.org/vici/25613/",
+      "coordinateLicense": "CC0",
+      "reference": "https://publications.dainst.org/books/dai/catalog/book/2090"
+    }
+  ],
+  "southernFortWalls": [
+    {
+      "id": "hattusa-way-369118841",
+      "source": "https://www.openstreetmap.org/way/369118841",
+      "coordinates": [
+        [
+          34.6181314,
+          40.0131195
+        ],
+        [
+          34.6182544,
+          40.0130522
+        ],
+        [
+          34.6184126,
+          40.0129906
+        ],
+        [
+          34.6185253,
+          40.0129351
+        ],
+        [
+          34.6187698,
+          40.0128504
+        ],
+        [
+          34.6189656,
+          40.0131216
+        ],
+        [
+          34.6190407,
+          40.0131811
+        ],
+        [
+          34.6190859,
+          40.013194
+        ],
+        [
+          34.6192817,
+          40.0132084
+        ],
+        [
+          34.6193997,
+          40.0133665
+        ]
+      ],
+      "sourceTag": "barrier=wall",
+      "geometry": "LineString"
+    },
+    {
+      "id": "hattusa-way-369118847",
+      "source": "https://www.openstreetmap.org/way/369118847",
+      "coordinates": [
+        [
+          34.6185726,
+          40.0134275
+        ],
+        [
+          34.6184315,
+          40.0133568
+        ],
+        [
+          34.6184174,
+          40.0133708
+        ],
+        [
+          34.6183486,
+          40.0133373
+        ],
+        [
+          34.6183592,
+          40.0133239
+        ],
+        [
+          34.6181958,
+          40.0132161
+        ],
+        [
+          34.6180804,
+          40.0131606
+        ]
+      ],
+      "sourceTag": "barrier=wall",
+      "geometry": "LineString"
+    },
+    {
+      "id": "hattusa-way-369118884",
+      "source": "https://www.openstreetmap.org/way/369118884",
+      "coordinates": [
+        [
+          34.6182253,
+          40.0131811
+        ],
+        [
+          34.6183808,
+          40.0132818
+        ],
+        [
+          34.6186111,
+          40.0134035
+        ],
+        [
+          34.618686,
+          40.0134629
+        ]
+      ],
+      "sourceTag": "barrier=wall",
+      "geometry": "LineString"
+    }
+  ],
+  "markerMerge": {
+    "heritageId": "whc-377",
+    "checklistItem": "哈图莎：希泰首都",
+    "coordinateSource": "data/world-heritage.json",
+    "center": [
+      34.62056,
+      40.01389
+    ],
+    "behavior": "Use World Heritage/check-in marker when visible; retain wall-layer fallback otherwise, with check-in and detail actions."
+  }
+}

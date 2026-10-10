@@ -1,0 +1,570 @@
+{
+  "site": {
+    "key": "istanbul",
+    "name": "古伊斯坦布尔／君士坦丁堡",
+    "enName": "Historic Istanbul / Constantinople",
+    "center": [
+      28.9798,
+      41.0083
+    ],
+    "heritageId": "whc-356",
+    "period": "魏晋南北朝",
+    "periodLabel": "东罗马／拜占庭／奥斯曼",
+    "referenceUrl": "https://whc.unesco.org/en/list/356/",
+    "tentative": false
+  },
+  "added": [
+    {
+      "id": "istanbul-way-109862851",
+      "name": "圣索菲亚大教堂／清真寺",
+      "geometry": "Polygon",
+      "period": "魏晋南北朝",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/way/109862851",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-relation-4742554",
+      "name": "圣伊琳娜教堂",
+      "geometry": "Polygon",
+      "period": "魏晋南北朝",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/relation/4742554",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-1184924695",
+      "name": "地下水宫（大教堂蓄水池）",
+      "geometry": "Polygon",
+      "period": "魏晋南北朝",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/way/1184924695",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-1154702450",
+      "name": "狄奥多西蓄水池",
+      "geometry": "Polygon",
+      "period": "魏晋南北朝",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/way/1154702450",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-node-13820927801",
+      "name": "居尔哈内蓄水池（地点参照）",
+      "geometry": "Point",
+      "period": "魏晋南北朝",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/node/13820927801",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-23276526",
+      "name": "瓦伦斯引水桥",
+      "geometry": "Polygon",
+      "period": "魏晋南北朝",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/way/23276526",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-321386212",
+      "name": "君士坦丁堡竞技场残迹",
+      "geometry": "LineString",
+      "period": "魏晋南北朝",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/way/321386212",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-1120852417",
+      "name": "狄奥多西方尖碑",
+      "geometry": "Polygon",
+      "period": "魏晋南北朝",
+      "note": "古埃及方尖碑于390年在君士坦丁堡竞技场重新竖立；按在此地的东罗马阶段配色，不把原产地和原制作年代混为一谈。",
+      "source": "https://www.openstreetmap.org/way/1120852417",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-1120852418",
+      "name": "砌筑方尖碑",
+      "geometry": "Polygon",
+      "period": "宋辽金西夏",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/way/1120852418",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-node-415157636",
+      "name": "蛇柱",
+      "geometry": "Point",
+      "period": "魏晋南北朝",
+      "note": "源自德尔斐的古希腊纪念物，后移入君士坦丁堡竞技场；此点表示现存位置。",
+      "source": "https://www.openstreetmap.org/node/415157636",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-node-1908677124",
+      "name": "米利翁里程碑遗迹",
+      "geometry": "Point",
+      "period": "魏晋南北朝",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/node/1908677124",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-1153684927",
+      "name": "君士坦丁纪念柱",
+      "geometry": "Polygon",
+      "period": "魏晋南北朝",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/way/1153684927",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-node-4695996389",
+      "name": "哥特人纪念柱",
+      "geometry": "Point",
+      "period": "魏晋南北朝",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/node/4695996389",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-node-13615790287",
+      "name": "劳苏斯宫遗迹（地点参照）",
+      "geometry": "Point",
+      "period": "魏晋南北朝",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/node/13615790287",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-1075801479",
+      "name": "安提奥库斯宫遗迹",
+      "geometry": "Polygon",
+      "period": "魏晋南北朝",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/way/1075801479",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-1184851395",
+      "name": "布科莱翁宫遗迹",
+      "geometry": "Polygon",
+      "period": "魏晋南北朝",
+      "note": "大皇宫体系南部的现存遗迹；已受铁路、滨海道路及后世建筑影响，不能以这部分代替整个大皇宫范围。",
+      "source": "https://www.openstreetmap.org/way/1184851395",
+      "reference": "https://kulturelmiras.ibb.istanbul/boukoleon-bukoleon-sarayi/"
+    },
+    {
+      "id": "istanbul-way-1482368832",
+      "name": "布科莱翁宫墙残迹",
+      "geometry": "LineString",
+      "period": "魏晋南北朝",
+      "note": "大皇宫体系南部的现存遗迹；已受铁路、滨海道路及后世建筑影响，不能以这部分代替整个大皇宫范围。",
+      "source": "https://www.openstreetmap.org/way/1482368832",
+      "reference": "https://kulturelmiras.ibb.istanbul/boukoleon-bukoleon-sarayi/"
+    },
+    {
+      "id": "istanbul-way-1482368833",
+      "name": "布科莱翁宫塔楼遗迹",
+      "geometry": "Polygon",
+      "period": "魏晋南北朝",
+      "note": "大皇宫体系南部的现存遗迹；已受铁路、滨海道路及后世建筑影响，不能以这部分代替整个大皇宫范围。",
+      "source": "https://www.openstreetmap.org/way/1482368833",
+      "reference": "https://kulturelmiras.ibb.istanbul/boukoleon-bukoleon-sarayi/"
+    },
+    {
+      "id": "istanbul-way-303179753",
+      "name": "圣塞尔吉乌斯与巴克斯教堂（小圣索菲亚）",
+      "geometry": "Polygon",
+      "period": "魏晋南北朝",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/way/303179753",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-137519649",
+      "name": "全能基督修道院（泽伊雷克清真寺）",
+      "geometry": "Polygon",
+      "period": "宋辽金西夏",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/way/137519649",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-relation-7614527",
+      "name": "科拉教堂／卡里耶清真寺",
+      "geometry": "Polygon",
+      "period": "元",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/relation/7614527",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-node-6373152085",
+      "name": "阿内马斯监狱遗址（地点参照）",
+      "geometry": "Point",
+      "period": "宋辽金西夏",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/node/6373152085",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-23272338",
+      "name": "君士坦丁堡金门门址",
+      "geometry": "Polygon",
+      "period": "魏晋南北朝",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/way/23272338",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-23272340",
+      "name": "君士坦丁堡金门门址",
+      "geometry": "Polygon",
+      "period": "魏晋南北朝",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/way/23272340",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-23272324",
+      "name": "贝尔格莱德门",
+      "geometry": "Polygon",
+      "period": "魏晋南北朝",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/way/23272324",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-23272326",
+      "name": "贝尔格莱德门",
+      "geometry": "Polygon",
+      "period": "魏晋南北朝",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/way/23272326",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-23261412",
+      "name": "雷吉翁门",
+      "geometry": "Polygon",
+      "period": "魏晋南北朝",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/way/23261412",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-23261419",
+      "name": "雷吉翁门",
+      "geometry": "Polygon",
+      "period": "魏晋南北朝",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/way/23261419",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-node-13064870222",
+      "name": "阿德里安堡门（埃迪尔内门）",
+      "geometry": "Point",
+      "period": "魏晋南北朝",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/node/13064870222",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-node-5787843345",
+      "name": "卡利加里亚门",
+      "geometry": "Point",
+      "period": "宋辽金西夏",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/node/5787843345",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-1035943038",
+      "name": "七塔堡",
+      "geometry": "Polygon",
+      "period": "明",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/way/1035943038",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-335415778",
+      "name": "托普卡帕宫（现存宫区）",
+      "geometry": "Polygon",
+      "period": "明",
+      "note": "奥斯曼宫区现存矢量，始建于15世纪并经历多期扩建；各建筑颜色按对应营建时期分组，不表示中国政权归属。",
+      "source": "https://www.openstreetmap.org/way/335415778",
+      "reference": "https://www.millisaraylar.gov.tr/Lokasyon/2/Topkapi-Sarayi?culture=en"
+    },
+    {
+      "id": "istanbul-way-335364925",
+      "name": "托普卡帕宫 · 帝国门",
+      "geometry": "Polygon",
+      "period": "明",
+      "note": "奥斯曼宫区现存矢量，始建于15世纪并经历多期扩建；各建筑颜色按对应营建时期分组，不表示中国政权归属。",
+      "source": "https://www.openstreetmap.org/way/335364925",
+      "reference": "https://www.millisaraylar.gov.tr/Lokasyon/2/Topkapi-Sarayi?culture=en"
+    },
+    {
+      "id": "istanbul-way-335402649",
+      "name": "托普卡帕宫 · 礼敬门",
+      "geometry": "Polygon",
+      "period": "明",
+      "note": "奥斯曼宫区现存矢量，始建于15世纪并经历多期扩建；各建筑颜色按对应营建时期分组，不表示中国政权归属。",
+      "source": "https://www.openstreetmap.org/way/335402649",
+      "reference": "https://www.millisaraylar.gov.tr/Lokasyon/2/Topkapi-Sarayi?culture=en"
+    },
+    {
+      "id": "istanbul-way-32396111",
+      "name": "托普卡帕宫 · 幸福门",
+      "geometry": "Polygon",
+      "period": "明",
+      "note": "奥斯曼宫区现存矢量，始建于15世纪并经历多期扩建；各建筑颜色按对应营建时期分组，不表示中国政权归属。",
+      "source": "https://www.openstreetmap.org/way/32396111",
+      "reference": "https://www.millisaraylar.gov.tr/Lokasyon/2/Topkapi-Sarayi?culture=en"
+    },
+    {
+      "id": "istanbul-way-103907772",
+      "name": "托普卡帕宫 · 帝国议事厅",
+      "geometry": "Polygon",
+      "period": "明",
+      "note": "奥斯曼宫区现存矢量，始建于15世纪并经历多期扩建；各建筑颜色按对应营建时期分组，不表示中国政权归属。",
+      "source": "https://www.openstreetmap.org/way/103907772",
+      "reference": "https://www.millisaraylar.gov.tr/Lokasyon/2/Topkapi-Sarayi?culture=en"
+    },
+    {
+      "id": "istanbul-way-103907818",
+      "name": "托普卡帕宫 · 接见厅",
+      "geometry": "Polygon",
+      "period": "明",
+      "note": "奥斯曼宫区现存矢量，始建于15世纪并经历多期扩建；各建筑颜色按对应营建时期分组，不表示中国政权归属。",
+      "source": "https://www.openstreetmap.org/way/103907818",
+      "reference": "https://www.millisaraylar.gov.tr/Lokasyon/2/Topkapi-Sarayi?culture=en"
+    },
+    {
+      "id": "istanbul-way-32396096",
+      "name": "托普卡帕宫 · 宫廷厨房",
+      "geometry": "Polygon",
+      "period": "明",
+      "note": "奥斯曼宫区现存矢量，始建于15世纪并经历多期扩建；各建筑颜色按对应营建时期分组，不表示中国政权归属。",
+      "source": "https://www.openstreetmap.org/way/32396096",
+      "reference": "https://www.millisaraylar.gov.tr/Lokasyon/2/Topkapi-Sarayi?culture=en"
+    },
+    {
+      "id": "istanbul-way-32396231",
+      "name": "托普卡帕宫 · 艾哈迈德三世图书馆",
+      "geometry": "Polygon",
+      "period": "清",
+      "note": "奥斯曼宫区现存矢量，始建于15世纪并经历多期扩建；各建筑颜色按对应营建时期分组，不表示中国政权归属。",
+      "source": "https://www.openstreetmap.org/way/32396231",
+      "reference": "https://www.millisaraylar.gov.tr/Lokasyon/2/Topkapi-Sarayi?culture=en"
+    },
+    {
+      "id": "istanbul-way-32396296",
+      "name": "托普卡帕宫 · 巴格达亭",
+      "geometry": "Polygon",
+      "period": "明",
+      "note": "奥斯曼宫区现存矢量，始建于15世纪并经历多期扩建；各建筑颜色按对应营建时期分组，不表示中国政权归属。",
+      "source": "https://www.openstreetmap.org/way/32396296",
+      "reference": "https://www.millisaraylar.gov.tr/Lokasyon/2/Topkapi-Sarayi?culture=en"
+    },
+    {
+      "id": "istanbul-way-32396254",
+      "name": "托普卡帕宫 · 大亭（梅吉迪耶亭）",
+      "geometry": "Polygon",
+      "period": "清",
+      "note": "奥斯曼宫区现存矢量，始建于15世纪并经历多期扩建；各建筑颜色按对应营建时期分组，不表示中国政权归属。",
+      "source": "https://www.openstreetmap.org/way/32396254",
+      "reference": "https://www.millisaraylar.gov.tr/Lokasyon/2/Topkapi-Sarayi?culture=en"
+    },
+    {
+      "id": "istanbul-relation-18055570",
+      "name": "苏丹艾哈迈德清真寺（蓝色清真寺）",
+      "geometry": "Polygon",
+      "period": "明",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/relation/18055570",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-relation-1564032",
+      "name": "苏莱曼尼耶清真寺",
+      "geometry": "Polygon",
+      "period": "明",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/relation/1564032",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-relation-8120955",
+      "name": "易卜拉欣帕夏宫（现博物馆）",
+      "geometry": "Polygon",
+      "period": "明",
+      "note": "公开现存建筑或遗迹矢量，可能包含后世修复和改建；不等于最初建筑台基实测范围。",
+      "source": "https://www.openstreetmap.org/relation/8120955",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-32394781",
+      "name": "布拉赫奈城墙遗迹",
+      "geometry": "Polygon",
+      "period": "宋辽金西夏",
+      "note": "保留公开矢量的分段墙体、塔楼及后世修复形态；开放线不闭合、不填充，断口不补造。多道防线分别保留，不将外墙、内墙当作同一重复对象。",
+      "source": "https://www.openstreetmap.org/way/32394781",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-862488177",
+      "name": "狄奥多西陆墙遗迹",
+      "geometry": "Polygon",
+      "period": "魏晋南北朝",
+      "note": "保留公开矢量的分段墙体、塔楼及后世修复形态；开放线不闭合、不填充，断口不补造。多道防线分别保留，不将外墙、内墙当作同一重复对象。",
+      "source": "https://www.openstreetmap.org/way/862488177",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-827491210",
+      "name": "托普卡帕宫 · 苏丹围墙",
+      "geometry": "Polygon",
+      "period": "明",
+      "note": "保留公开矢量的分段墙体、塔楼及后世修复形态；开放线不闭合、不填充，断口不补造。多道防线分别保留，不将外墙、内墙当作同一重复对象。",
+      "source": "https://www.openstreetmap.org/way/827491210",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-112174338",
+      "name": "君士坦丁堡海墙遗迹",
+      "geometry": "LineString",
+      "period": "魏晋南北朝",
+      "note": "保留公开矢量的分段墙体、塔楼及后世修复形态；开放线不闭合、不填充，断口不补造。多道防线分别保留，不将外墙、内墙当作同一重复对象。",
+      "source": "https://www.openstreetmap.org/way/112174338",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-963913184",
+      "name": "狄奥多西陆墙遗迹",
+      "geometry": "LineString",
+      "period": "魏晋南北朝",
+      "note": "保留公开矢量的分段墙体、塔楼及后世修复形态；开放线不闭合、不填充，断口不补造。多道防线分别保留，不将外墙、内墙当作同一重复对象。",
+      "source": "https://www.openstreetmap.org/way/963913184",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-1478722706",
+      "name": "狄奥多西陆墙遗迹",
+      "geometry": "LineString",
+      "period": "魏晋南北朝",
+      "note": "保留公开矢量的分段墙体、塔楼及后世修复形态；开放线不闭合、不填充，断口不补造。多道防线分别保留，不将外墙、内墙当作同一重复对象。",
+      "source": "https://www.openstreetmap.org/way/1478722706",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-1478722712",
+      "name": "狄奥多西陆墙遗迹",
+      "geometry": "LineString",
+      "period": "魏晋南北朝",
+      "note": "保留公开矢量的分段墙体、塔楼及后世修复形态；开放线不闭合、不填充，断口不补造。多道防线分别保留，不将外墙、内墙当作同一重复对象。",
+      "source": "https://www.openstreetmap.org/way/1478722712",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-23276324",
+      "name": "狄奥多西陆墙遗迹",
+      "geometry": "LineString",
+      "period": "魏晋南北朝",
+      "note": "保留公开矢量的分段墙体、塔楼及后世修复形态；开放线不闭合、不填充，断口不补造。多道防线分别保留，不将外墙、内墙当作同一重复对象。",
+      "source": "https://www.openstreetmap.org/way/23276324",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-23276385",
+      "name": "狄奥多西陆墙遗迹",
+      "geometry": "LineString",
+      "period": "魏晋南北朝",
+      "note": "保留公开矢量的分段墙体、塔楼及后世修复形态；开放线不闭合、不填充，断口不补造。多道防线分别保留，不将外墙、内墙当作同一重复对象。",
+      "source": "https://www.openstreetmap.org/way/23276385",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-23276390",
+      "name": "狄奥多西陆墙遗迹",
+      "geometry": "LineString",
+      "period": "魏晋南北朝",
+      "note": "保留公开矢量的分段墙体、塔楼及后世修复形态；开放线不闭合、不填充，断口不补造。多道防线分别保留，不将外墙、内墙当作同一重复对象。",
+      "source": "https://www.openstreetmap.org/way/23276390",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-23276399",
+      "name": "狄奥多西陆墙遗迹",
+      "geometry": "LineString",
+      "period": "魏晋南北朝",
+      "note": "保留公开矢量的分段墙体、塔楼及后世修复形态；开放线不闭合、不填充，断口不补造。多道防线分别保留，不将外墙、内墙当作同一重复对象。",
+      "source": "https://www.openstreetmap.org/way/23276399",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-23261420",
+      "name": "狄奥多西陆墙遗迹",
+      "geometry": "LineString",
+      "period": "魏晋南北朝",
+      "note": "保留公开矢量的分段墙体、塔楼及后世修复形态；开放线不闭合、不填充，断口不补造。多道防线分别保留，不将外墙、内墙当作同一重复对象。",
+      "source": "https://www.openstreetmap.org/way/23261420",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-23273457",
+      "name": "狄奥多西陆墙遗迹",
+      "geometry": "LineString",
+      "period": "魏晋南北朝",
+      "note": "保留公开矢量的分段墙体、塔楼及后世修复形态；开放线不闭合、不填充，断口不补造。多道防线分别保留，不将外墙、内墙当作同一重复对象。",
+      "source": "https://www.openstreetmap.org/way/23273457",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-1478722718",
+      "name": "狄奥多西陆墙遗迹",
+      "geometry": "LineString",
+      "period": "魏晋南北朝",
+      "note": "保留公开矢量的分段墙体、塔楼及后世修复形态；开放线不闭合、不填充，断口不补造。多道防线分别保留，不将外墙、内墙当作同一重复对象。",
+      "source": "https://www.openstreetmap.org/way/1478722718",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-1478722719",
+      "name": "狄奥多西陆墙遗迹",
+      "geometry": "LineString",
+      "period": "魏晋南北朝",
+      "note": "保留公开矢量的分段墙体、塔楼及后世修复形态；开放线不闭合、不填充，断口不补造。多道防线分别保留，不将外墙、内墙当作同一重复对象。",
+      "source": "https://www.openstreetmap.org/way/1478722719",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    },
+    {
+      "id": "istanbul-way-25512790",
+      "name": "竞技场地望（今苏丹艾哈迈德广场）",
+      "geometry": "Polygon",
+      "period": "魏晋南北朝",
+      "note": "这是现广场的公开轮廓，作为古竞技场地望参照；不是原始赛道或古竞技场精确边界。",
+      "source": "https://www.openstreetmap.org/way/25512790",
+      "reference": "https://whc.unesco.org/en/list/356/"
+    }
+  ],
+  "limits": [
+    "并非整座君士坦丁堡完整城界",
+    "大皇宫仅接入现存布科莱翁等遗迹，不补造全宫区",
+    "竞技场地望采用现广场范围并明确注明",
+    "建筑包含后世改建，朝代色仅表示同时期分组"
+  ],
+  "sources": [
+    "https://whc.unesco.org/en/list/356/",
+    "https://whc.unesco.org/en/list/356/maps/",
+    "https://www.millisaraylar.gov.tr/Lokasyon/2/Topkapi-Sarayi?culture=en",
+    "https://kulturelmiras.ibb.istanbul/boukoleon-bukoleon-sarayi/"
+  ]
+}

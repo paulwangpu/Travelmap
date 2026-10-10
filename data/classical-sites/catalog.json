@@ -1,0 +1,175 @@
+{
+  "sites": [
+    {
+      "key": "aphrodisias",
+      "name": "阿佛洛狄西亚斯",
+      "enName": "Aphrodisias",
+      "center": [
+        28.7231,
+        37.7085
+      ],
+      "heritageId": "whc-1519",
+      "period": "秦汉",
+      "periodLabel": "希腊化／罗马／晚期古代",
+      "referenceUrl": "https://aphrodisias-excavations.com/visitor-map/",
+      "tentative": false
+    },
+    {
+      "key": "ephesus",
+      "name": "以弗所",
+      "enName": "Ephesus",
+      "center": [
+        27.3411,
+        37.9406
+      ],
+      "heritageId": "whc-1018",
+      "period": "秦汉",
+      "periodLabel": "希腊化／罗马／拜占庭",
+      "referenceUrl": "https://www.oeaw.ac.at/en/oeai/institute/branches/ephesos/research-history",
+      "tentative": false
+    },
+    {
+      "key": "hierapolis",
+      "name": "赫拉波利斯与帕穆克卡莱",
+      "enName": "Hierapolis–Pamukkale",
+      "center": [
+        29.1245,
+        37.9258
+      ],
+      "heritageId": "whc-485",
+      "period": "秦汉",
+      "periodLabel": "希腊化／罗马／拜占庭",
+      "referenceUrl": "https://whc.unesco.org/en/list/485/",
+      "tentative": false
+    },
+    {
+      "key": "pergamon",
+      "name": "帕加马",
+      "enName": "Pergamon",
+      "center": [
+        27.1843,
+        39.131
+      ],
+      "heritageId": "whc-1457",
+      "period": "秦汉",
+      "periodLabel": "希腊化／罗马／拜占庭",
+      "referenceUrl": "https://whc.unesco.org/en/list/1457/",
+      "tentative": false
+    },
+    {
+      "key": "troy",
+      "name": "特洛伊",
+      "enName": "Troy",
+      "center": [
+        26.2384,
+        39.9577
+      ],
+      "heritageId": "whc-849",
+      "period": "夏商",
+      "periodLabel": "青铜时代至希腊、罗马时期，多层城址",
+      "referenceUrl": "https://whc.unesco.org/en/list/849/",
+      "tentative": false
+    },
+    {
+      "key": "perge",
+      "name": "佩尔盖",
+      "enName": "Perge",
+      "center": [
+        30.854,
+        36.961
+      ],
+      "heritageId": null,
+      "period": "秦汉",
+      "periodLabel": "希腊化／罗马／晚期古代",
+      "referenceUrl": "https://whc.unesco.org/en/tentativelists/5411/",
+      "tentative": true
+    },
+    {
+      "key": "aspendos",
+      "name": "阿斯潘多斯",
+      "enName": "Aspendos",
+      "center": [
+        31.172,
+        36.939
+      ],
+      "heritageId": null,
+      "period": "秦汉",
+      "periodLabel": "希腊化／罗马",
+      "referenceUrl": "https://whc.unesco.org/en/tentativelists/6036/",
+      "tentative": true
+    },
+    {
+      "key": "athens",
+      "name": "古雅典城与卫城",
+      "enName": "Ancient Athens and Acropolis",
+      "center": [
+        23.7264,
+        37.9741
+      ],
+      "heritageId": "whc-404",
+      "period": "周",
+      "periodLabel": "古典希腊／希腊化／罗马／晚期古代",
+      "referenceUrl": "https://www.ascsa.edu.gr/uploads/media/hesperia/hesp.80.1.0071.pdf",
+      "tentative": false
+    },
+    {
+      "key": "rome",
+      "name": "古罗马核心区",
+      "enName": "Ancient Rome core",
+      "center": [
+        12.4875,
+        41.89
+      ],
+      "heritageId": "whc-91",
+      "period": "秦汉",
+      "periodLabel": "罗马共和国／罗马帝国／晚期古代",
+      "referenceUrl": "https://colosseo.it/en/",
+      "tentative": false
+    },
+    {
+      "key": "istanbul",
+      "name": "古伊斯坦布尔／君士坦丁堡",
+      "enName": "Historic Istanbul / Constantinople",
+      "center": [
+        28.9798,
+        41.0083
+      ],
+      "heritageId": "whc-356",
+      "period": "魏晋南北朝",
+      "periodLabel": "东罗马／拜占庭／奥斯曼",
+      "referenceUrl": "https://whc.unesco.org/en/list/356/",
+      "tentative": false
+    },
+    {
+      "key": "hattusa",
+      "name": "哈图莎（赫梯首都）",
+      "enName": "Hattusha (Hittite capital)",
+      "center": [
+        34.62056,
+        40.01389
+      ],
+      "heritageId": "whc-377",
+      "period": "夏商",
+      "periodLabel": "赫梯时期／青铜时代",
+      "referenceUrl": "https://www.dainst.org/en/research/projects/noslug/2280",
+      "tentative": false,
+      "checklistItem": "哈图莎：希泰首都",
+      "mergedHeritageMarker": true
+    }
+  ],
+  "counts": {
+    "aphrodisias": 16,
+    "ephesus": 32,
+    "hierapolis": 41,
+    "pergamon": 24,
+    "troy": 4,
+    "perge": 28,
+    "aspendos": 15,
+    "athens": 33,
+    "rome": 34,
+    "istanbul": 60,
+    "hattusa": 72
+  },
+  "source": "© OpenStreetMap contributors · ODbL",
+  "reviewedAt": "2026-10-10"
+}
