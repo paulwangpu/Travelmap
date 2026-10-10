@@ -1,0 +1,204 @@
+{
+  "addedCount": 27,
+  "features": [
+    {
+      "id": "yuan-northern-osm-way-478464684",
+      "name": "上都 · 外城城垣范围",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/478464684",
+      "reference": "https://whc.unesco.org/en/list/1389/"
+    },
+    {
+      "id": "yuan-northern-osm-way-510175896",
+      "name": "上都 · 皇城城垣",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/510175896",
+      "reference": "https://whc.unesco.org/en/list/1389/"
+    },
+    {
+      "id": "yuan-northern-osm-way-1107685436",
+      "name": "上都 · 宫城城垣",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1107685436",
+      "reference": "https://whc.unesco.org/en/list/1389/"
+    },
+    {
+      "id": "yuan-northern-osm-way-1107685433",
+      "name": "上都 · 华严寺遗址",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1107685433",
+      "reference": "https://whc.unesco.org/en/list/1389/"
+    },
+    {
+      "id": "yuan-northern-osm-way-1107685434",
+      "name": "上都 · 穆清阁遗址",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1107685434",
+      "reference": "https://whc.unesco.org/en/list/1389/"
+    },
+    {
+      "id": "yuan-northern-osm-way-1107685435",
+      "name": "上都 · 大安阁基址",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1107685435",
+      "reference": "https://whc.unesco.org/en/list/1389/"
+    },
+    {
+      "id": "yuan-northern-osm-way-1107691460",
+      "name": "上都 · 乾元寺遗址",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1107691460",
+      "reference": "https://whc.unesco.org/en/list/1389/"
+    },
+    {
+      "id": "yuan-northern-osm-node-10135050203",
+      "name": "上都 · 皇城复仁门",
+      "geometry": "Point",
+      "source": "https://www.openstreetmap.org/node/10135050203",
+      "reference": "https://whc.unesco.org/en/list/1389/"
+    },
+    {
+      "id": "yuan-northern-osm-node-10135050212",
+      "name": "上都 · 宫城御天门",
+      "geometry": "Point",
+      "source": "https://www.openstreetmap.org/node/10135050212",
+      "reference": "https://whc.unesco.org/en/list/1389/"
+    },
+    {
+      "id": "yuan-northern-osm-node-10135050214",
+      "name": "上都 · 元上都明德门",
+      "geometry": "Point",
+      "source": "https://www.openstreetmap.org/node/10135050214",
+      "reference": "https://whc.unesco.org/en/list/1389/"
+    },
+    {
+      "id": "yuan-northern-osm-node-10135101740",
+      "name": "上都 · 外城南门",
+      "geometry": "Point",
+      "source": "https://www.openstreetmap.org/node/10135101740",
+      "reference": "https://whc.unesco.org/en/list/1389/"
+    },
+    {
+      "id": "yuan-northern-osm-node-10135101741",
+      "name": "上都 · 外城北门（东）",
+      "geometry": "Point",
+      "source": "https://www.openstreetmap.org/node/10135101741",
+      "reference": "https://whc.unesco.org/en/list/1389/"
+    },
+    {
+      "id": "yuan-northern-osm-node-10135101742",
+      "name": "上都 · 外城北门（西）",
+      "geometry": "Point",
+      "source": "https://www.openstreetmap.org/node/10135101742",
+      "reference": "https://whc.unesco.org/en/list/1389/"
+    },
+    {
+      "id": "yuan-northern-osm-node-10135101743",
+      "name": "上都 · 外城西门",
+      "geometry": "Point",
+      "source": "https://www.openstreetmap.org/node/10135101743",
+      "reference": "https://whc.unesco.org/en/list/1389/"
+    },
+    {
+      "id": "yuan-northern-osm-node-10135101744",
+      "name": "上都 · 皇城西门",
+      "geometry": "Point",
+      "source": "https://www.openstreetmap.org/node/10135101744",
+      "reference": "https://whc.unesco.org/en/list/1389/"
+    },
+    {
+      "id": "yuan-northern-osm-node-10135101745",
+      "name": "上都 · 皇城小西门",
+      "geometry": "Point",
+      "source": "https://www.openstreetmap.org/node/10135101745",
+      "reference": "https://whc.unesco.org/en/list/1389/"
+    },
+    {
+      "id": "yuan-northern-osm-node-10135101746",
+      "name": "上都 · 皇城小东门",
+      "geometry": "Point",
+      "source": "https://www.openstreetmap.org/node/10135101746",
+      "reference": "https://whc.unesco.org/en/list/1389/"
+    },
+    {
+      "id": "yuan-northern-osm-node-10135101747",
+      "name": "上都 · 皇城东门",
+      "geometry": "Point",
+      "source": "https://www.openstreetmap.org/node/10135101747",
+      "reference": "https://whc.unesco.org/en/list/1389/"
+    },
+    {
+      "id": "yuan-northern-osm-node-10135101748",
+      "name": "上都 · 宫城东华门",
+      "geometry": "Point",
+      "source": "https://www.openstreetmap.org/node/10135101748",
+      "reference": "https://whc.unesco.org/en/list/1389/"
+    },
+    {
+      "id": "yuan-northern-osm-node-10135101749",
+      "name": "上都 · 宫城西华门",
+      "geometry": "Point",
+      "source": "https://www.openstreetmap.org/node/10135101749",
+      "reference": "https://whc.unesco.org/en/list/1389/"
+    },
+    {
+      "id": "yuan-northern-osm-way-361424956",
+      "name": "元中都 · 宫城城垣参照",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/361424956",
+      "reference": "https://www.hbswwkg.com/2021-05/06/content_8495068.html"
+    },
+    {
+      "id": "yuan-northern-osm-way-671297755",
+      "name": "应昌城 · 外城城垣",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/671297755",
+      "reference": "https://kg.lsxy.ruc.edu.cn/images/2020-05/3dd2a261e43b41b9a4d16d1e6c562466.pdf"
+    },
+    {
+      "id": "yuan-northern-osm-way-1546355466",
+      "name": "应昌城 · 西门瓮城",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1546355466",
+      "reference": "https://kg.lsxy.ruc.edu.cn/images/2020-05/3dd2a261e43b41b9a4d16d1e6c562466.pdf"
+    },
+    {
+      "id": "yuan-northern-osm-way-1546355468",
+      "name": "应昌城 · 东门瓮城",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/1546355468",
+      "reference": "https://kg.lsxy.ruc.edu.cn/images/2020-05/3dd2a261e43b41b9a4d16d1e6c562466.pdf"
+    },
+    {
+      "id": "yuan-northern-osm-way-245259484",
+      "name": "和林 · 古城遗址标绘范围",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/245259484",
+      "reference": "https://www.iak.uni-bonn.de/de/institut/abteilungen/vor-und-fruehgeschichtliche-archaeologie/projekte-1/karakorum"
+    },
+    {
+      "id": "yuan-northern-osm-way-397170802",
+      "name": "和林 · 大寺院遗址（旧称窝阔台宫殿）",
+      "geometry": "Polygon",
+      "source": "https://www.openstreetmap.org/way/397170802",
+      "reference": "https://www.dainst.org/forschung/projekte/noslug/4924"
+    },
+    {
+      "id": "yuan-northern-osm-node-479377679",
+      "name": "和林 · 石龟遗存",
+      "geometry": "Point",
+      "source": "https://www.openstreetmap.org/node/479377679",
+      "reference": "https://www.iak.uni-bonn.de/de/institut/abteilungen/vor-und-fruehgeschichtliche-archaeologie/projekte-1/karakorum"
+    }
+  ],
+  "excluded": [
+    "应昌重复外城面1485870713、现代围栏1231764413、城外堡寨1539698377",
+    "元中都现代遗址公园587721252，不替代外城",
+    "和林额尔德尼昭为16世纪寺院，不当作元代宫城"
+  ],
+  "limits": [
+    "元中都外城、皇城和应昌内城尚缺可靠分层矢量",
+    "和林标绘为遗址范围而非完整实测城垣",
+    "北元沿用城址共用元、明及同期筛选，不重复几何"
+  ]
+}

@@ -2773,8 +2773,8 @@
       }
     },
     {
-      "lat": 39.346,
-      "lng": 115.53,
+      "lat": 39.2955999,
+      "lng": 115.5660224,
       "admin": "河北省保定市易县",
       "siteNames": [
         "燕下都"
@@ -2806,7 +2806,7 @@
           "今称/遗址名": "燕下都",
           "今属行政区": "河北省保定市易县",
           "置信度": "高",
-          "备注/争议": null,
+          "备注/争议": "燕昭王时期主要是既有城池增建完成；2023年研究认为战国末期赵国曾占据武阳，横隔墙属于晚期改造，不能视作燕国原始宫城界。",
           "来源编号": "S1",
           "来源URL": "https://zh.wikipedia.org/wiki/中国首都",
           "都城类别码": "S",
@@ -2826,15 +2826,101 @@
       "currentKey": "ancient-site:燕下都:39.34600,115.53000",
       "siteKey": "ancient-site:燕下都:39.34600,115.53000",
       "boundaryAudit": {
-        "status": "当前朝代暂无已接入的对应范围",
-        "pointKind": "城址／城市参照点",
-        "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+        "status": "已关联东城图示范围、西城残墙及台基参照",
+        "pointKind": "东城武阳台基址参照",
+        "note": "范围资料性质分别标明；西城缺失南垣未强行闭合。"
       },
       "siteOrganization": {
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [
+        {
+          "id": "yanxiadu-east-city",
+          "name": "燕下都·东城（图示范围）",
+          "period": "周",
+          "control": "周",
+          "kind": "城址图示范围"
+        },
+        {
+          "id": "yanxiadu-west-visible-wall",
+          "name": "燕下都·西城北、西及南垣残段（图示）",
+          "period": "周",
+          "control": "周",
+          "kind": "城墙图示线"
+        },
+        {
+          "id": "yanxiadu-late-cross-wall",
+          "name": "燕下都·东城横隔墙（晚期改造）",
+          "period": "周",
+          "control": "周",
+          "kind": "城墙图示线"
+        },
+        {
+          "id": "yanxiadu-zhanggong",
+          "name": "燕下都·张公台（图示参照）",
+          "period": "周",
+          "control": "周",
+          "kind": "遗迹／墓区图示参照"
+        },
+        {
+          "id": "yanxiadu-wangjing",
+          "name": "燕下都·望景台（图示参照）",
+          "period": "周",
+          "control": "周",
+          "kind": "遗迹／墓区图示参照"
+        },
+        {
+          "id": "yanxiadu-xuliang",
+          "name": "燕下都·虚粮冢墓区（图示参照）",
+          "period": "周",
+          "control": "周",
+          "kind": "遗迹／墓区图示参照"
+        },
+        {
+          "id": "yanxiadu-jiunutai",
+          "name": "燕下都·九女台墓区（图示参照）",
+          "period": "周",
+          "control": "周",
+          "kind": "遗迹／墓区图示参照"
+        },
+        {
+          "id": "yanxiadu-yunliang",
+          "name": "燕下都·运粮河古河道（图示）",
+          "period": "周",
+          "control": "周",
+          "kind": "古河道图示"
+        },
+        {
+          "id": "yanxiadu-wuyang",
+          "name": "燕下都·武阳台基址（现状参照）",
+          "period": "周",
+          "control": "周",
+          "kind": "台基现状参照"
+        },
+        {
+          "id": "yanxiadu-laomu",
+          "name": "燕下都·老姆台基址（现状参照）",
+          "period": "周",
+          "control": "周",
+          "kind": "台基现状参照"
+        }
+      ],
+      "locationReference": {
+        "name": "武阳台基址参照",
+        "coordinates": [
+          115.5660224,
+          39.2955999
+        ],
+        "originalCoordinates": [
+          115.53,
+          39.346
+        ],
+        "coordinateSystem": "WGS84",
+        "sourceUrl": "https://peking.bjd.com.cn/content/s6a95908be4b03fa51a83a10d.html",
+        "referenceUrl": "https://wenwu.hebei.gov.cn/system/2023/11/01/030261130.shtml",
+        "note": "校核至燕下都东城武阳台基址；原参照点偏北，近易县县城。保留原siteKey以兼容已有打卡。"
+      }
     },
     {
       "lat": 41.2694,
@@ -2968,15 +3054,28 @@
       "currentKey": "ancient-site:辽阳:41.26940,123.17280",
       "siteKey": "ancient-site:辽阳:41.26940,123.17280",
       "boundaryAudit": {
-        "status": "当前朝代暂无已接入的对应范围",
-        "pointKind": "城址／城市参照点",
-        "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+        "status": "部分遗存已接入，完整城界仍需考古图件配准",
+        "pointKind": "既有城市／城址参照点",
+        "note": "辽五京核查：已接入现状遗存与展示范围，性质逐项区分；未取得完整城界者不以明清城墙、现代公园或后金城址替代。"
       },
       "siteOrganization": {
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [
+        {
+          "id": "liao-five-way-621979376",
+          "city": "辽阳",
+          "name": "辽东京辽阳府 · 白塔（现存建筑）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现存古塔"
+        }
+      ],
+      "boundaryRelationNote": "辽五京核查：已接入现状遗存与展示范围，性质逐项区分；未取得完整城界者不以明清城墙、现代公园或后金城址替代。",
+      "historicalSources": [
+        "https://whly.ln.gov.cn/whly/wlzt/lnww/zdwwbhdw/6E53874C8CAA4274A71F945B40058AF5/index.shtml"
+      ]
     },
     {
       "lat": 35.739,
@@ -3104,7 +3203,8 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapDisplayName": "绛"
     },
     {
       "lat": 35.619,
@@ -3168,7 +3268,8 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapDisplayName": "新田"
     },
     {
       "lat": 34.3619,
@@ -3553,7 +3654,8 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapDisplayName": "棫林"
     },
     {
       "lat": 34.396,
@@ -3883,7 +3985,8 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapDisplayName": "朝歌"
     },
     {
       "lat": 35.7627,
@@ -4241,7 +4344,8 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapDisplayName": "州来"
     },
     {
       "lat": 30.42,
@@ -4759,7 +4863,8 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapDisplayName": "埤中"
     },
     {
       "lat": 30.0303,
@@ -5518,7 +5623,8 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapDisplayName": "彭城"
     },
     {
       "lat": 33.004,
@@ -7348,7 +7454,8 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapDisplayName": "左国城"
     },
     {
       "lat": 37.9283,
@@ -7446,7 +7553,8 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapDisplayName": "姑臧"
     },
     {
       "lat": 41.5737,
@@ -7544,7 +7652,8 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapDisplayName": "龙城"
     },
     {
       "lat": 38.516,
@@ -8044,7 +8153,8 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapDisplayName": "枹罕"
     },
     {
       "lat": 36.482,
@@ -8188,7 +8298,8 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapDisplayName": "西平"
     },
     {
       "lat": 40.1421,
@@ -8383,8 +8494,8 @@
       "boundaryRelations": []
     },
     {
-      "lat": 37.99,
-      "lng": 108.85,
+      "lat": 38.00076199053286,
+      "lng": 108.8519811630249,
       "admin": "陕西省榆林市靖边县",
       "siteNames": [
         "统万城"
@@ -8444,7 +8555,126 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [
+        {
+          "id": "tongwan-west-city",
+          "name": "统万城 · 西城",
+          "period": "魏晋南北朝",
+          "control": "魏晋南北朝",
+          "kind": "城垣／遗存参照",
+          "city": "统万城"
+        },
+        {
+          "id": "tongwan-east-city-reference",
+          "name": "统万城 · 东城（影像参照）",
+          "period": "五代十国",
+          "control": "五代十国",
+          "kind": "城垣／遗存参照",
+          "city": "统万城"
+        },
+        {
+          "id": "tongwan-west-gate-reference",
+          "name": "统万城 · 西门遗址（参照）",
+          "period": "魏晋南北朝",
+          "control": "魏晋南北朝",
+          "kind": "城垣／遗存参照",
+          "city": "统万城"
+        },
+        {
+          "id": "tongwan-southwest-corner-reference",
+          "name": "统万城 · 西南隅台（参照）",
+          "period": "魏晋南北朝",
+          "control": "魏晋南北朝",
+          "kind": "城垣／遗存参照",
+          "city": "统万城"
+        }
+      ],
+      "locationReference": {
+        "name": "统万城西城城内参照",
+        "coordinates": [
+          108.8519811630249,
+          38.00076199053286
+        ],
+        "originalCoordinates": [
+          108.85,
+          37.99
+        ],
+        "coordinateSystem": "WGS84",
+        "note": "旧点偏到遗址南侧，移回西城内；非永安宫或城门中心。"
+      },
+      "relatedMapViews": [
+        {
+          "name": "统万城 · 西城",
+          "period": "魏晋南北朝",
+          "coordinates": [
+            108.8519811630249,
+            38.00076199053286
+          ],
+          "zoom": 15
+        },
+        {
+          "name": "统万城 · 东城（影像参照）",
+          "period": "五代十国",
+          "coordinates": [
+            108.8519811630249,
+            38.00076199053286
+          ],
+          "zoom": 15
+        },
+        {
+          "name": "统万城 · 西门遗址（参照）",
+          "period": "魏晋南北朝",
+          "coordinates": [
+            108.84820461273193,
+            38.000508359583996
+          ],
+          "zoom": 15
+        },
+        {
+          "name": "统万城 · 西南隅台（参照）",
+          "period": "魏晋南北朝",
+          "coordinates": [
+            108.84723901748657,
+            37.99900346457768
+          ],
+          "zoom": 15
+        }
+      ],
+      "historicalStages": [
+        {
+          "name": "大夏 · 西城",
+          "boundaryStatus": "已接入城墙公开矢量，保留马面及角台",
+          "summary": "西城是赫连勃勃大夏都城的主要营建部分。此次按实际城墙轮廓填充，不用现代遗址公园范围代替古城。西门和西南隅台另设地点参照。",
+          "sources": [
+            {
+              "title": "考古发掘者邢福来 · 统万城考古",
+              "url": "https://www.cssn.cn/dfpd/djbd/202506/t20250619_5880189.shtml"
+            }
+          ]
+        },
+        {
+          "name": "唐末五代 · 东城",
+          "boundaryStatus": "影像参照范围；损毁墙线采用虚线",
+          "summary": "东、西城不能直接视为同时兴建。考古资料将东城营建推定为唐末五代，与夏州、定难军时期有关；按隋唐或五代选项显示同一范围。",
+          "sources": [
+            {
+              "title": "统万城考古访谈",
+              "url": "https://www.cssn.cn/dfpd/djbd/202506/t20250619_5880189.shtml"
+            }
+          ]
+        },
+        {
+          "name": "宫殿与外郭城",
+          "boundaryStatus": "尚缺可核对的完整几何，未补造",
+          "summary": "文献与研究讨论西城宫殿、永安台及更大的外郭城。宫殿名称与遗址对应存在推定，外郭墙线保存有限；此次不据文字尺寸画规则宫城，也不把公园或博物馆轮廓当古代建筑。",
+          "sources": [
+            {
+              "title": "统万城遗址公园 · 宫殿营建研究介绍",
+              "url": "https://www.tongwanchengyizhi.com/portal/news/detail/id/31.html"
+            }
+          ]
+        }
+      ]
     },
     {
       "lat": 40.477,
@@ -9236,7 +9466,8 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapDisplayName": "马邑"
     },
     {
       "lat": 38.28,
@@ -9898,11 +10129,99 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [
+        {
+          "id": "goguryeo-osm-6035717228",
+          "name": "五女山城 · 哨所遗址",
+          "period": "秦汉",
+          "control": "秦汉",
+          "kind": "遗存地点参照",
+          "city": "五女山城"
+        },
+        {
+          "id": "goguryeo-osm-6035717229",
+          "name": "五女山城 · 城墙遗址",
+          "period": "秦汉",
+          "control": "秦汉",
+          "kind": "遗存地点参照",
+          "city": "五女山城"
+        },
+        {
+          "id": "goguryeo-osm-6035717232",
+          "name": "五女山城 · 点将台",
+          "period": "秦汉",
+          "control": "秦汉",
+          "kind": "遗存地点参照",
+          "city": "五女山城"
+        },
+        {
+          "id": "goguryeo-osm-6035717233",
+          "name": "五女山城 · 三号大型建筑基址",
+          "period": "秦汉",
+          "control": "秦汉",
+          "kind": "遗存地点参照",
+          "city": "五女山城"
+        }
+      ],
+      "historicalStages": [
+        {
+          "name": "高句丽 · 城址与相关遗存",
+          "boundaryStatus": "实存线段／公开遗址矢量／地点参照分别标注",
+          "summary": "早期都城相关山城。此次补入城墙、哨所、建筑基址及点将台的位置参照，完整城垣轮廓尚未接入。",
+          "sources": [
+            {
+              "title": "UNESCO · 高句丽王城、王陵及贵族墓葬",
+              "url": "https://whc.unesco.org/en/list/1135/"
+            },
+            {
+              "title": "UNESCO · 遗产地图与组成部分",
+              "url": "https://whc.unesco.org/en/list/1135/maps/"
+            }
+          ]
+        }
+      ],
+      "relatedMapViews": [
+        {
+          "name": "五女山城 · 哨所遗址",
+          "coordinates": [
+            125.419769,
+            41.321347
+          ],
+          "zoom": 15,
+          "period": "秦汉"
+        },
+        {
+          "name": "五女山城 · 城墙遗址",
+          "coordinates": [
+            125.4209981,
+            41.3193295
+          ],
+          "zoom": 15,
+          "period": "秦汉"
+        },
+        {
+          "name": "五女山城 · 点将台",
+          "coordinates": [
+            125.4183246,
+            41.3190536
+          ],
+          "zoom": 15,
+          "period": "秦汉"
+        },
+        {
+          "name": "五女山城 · 三号大型建筑基址",
+          "coordinates": [
+            125.4162846,
+            41.3197197
+          ],
+          "zoom": 15,
+          "period": "秦汉"
+        }
+      ]
     },
     {
-      "lat": 41.125,
-      "lng": 126.195,
+      "lat": 41.1207,
+      "lng": 126.1777,
       "admin": "吉林省通化市集安市",
       "siteNames": [
         "集安国内城"
@@ -9962,7 +10281,164 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [
+        {
+          "id": "goguryeo-osm-919975550",
+          "name": "国内城 · 城墙遗存",
+          "period": "秦汉",
+          "control": "秦汉",
+          "kind": "城墙／遗址范围",
+          "city": "集安国内城"
+        },
+        {
+          "id": "goguryeo-osm-919975551",
+          "name": "国内城 · 城墙遗存",
+          "period": "秦汉",
+          "control": "秦汉",
+          "kind": "城墙／遗址范围",
+          "city": "集安国内城"
+        },
+        {
+          "id": "goguryeo-osm-919975552",
+          "name": "国内城 · 城墙遗存",
+          "period": "秦汉",
+          "control": "秦汉",
+          "kind": "城墙／遗址范围",
+          "city": "集安国内城"
+        },
+        {
+          "id": "goguryeo-osm-919975553",
+          "name": "国内城 · 城墙遗存",
+          "period": "秦汉",
+          "control": "秦汉",
+          "kind": "城墙／遗址范围",
+          "city": "集安国内城"
+        },
+        {
+          "id": "goguryeo-osm-919975554",
+          "name": "国内城 · 城墙遗存",
+          "period": "秦汉",
+          "control": "秦汉",
+          "kind": "城墙／遗址范围",
+          "city": "集安国内城"
+        },
+        {
+          "id": "goguryeo-osm-919975555",
+          "name": "国内城 · 城墙遗存",
+          "period": "秦汉",
+          "control": "秦汉",
+          "kind": "城墙／遗址范围",
+          "city": "集安国内城"
+        },
+        {
+          "id": "goguryeo-osm-919975556",
+          "name": "国内城 · 城墙遗存",
+          "period": "秦汉",
+          "control": "秦汉",
+          "kind": "城墙／遗址范围",
+          "city": "集安国内城"
+        },
+        {
+          "id": "goguryeo-osm-1339972158",
+          "name": "国内城 · 城墙遗存",
+          "period": "秦汉",
+          "control": "秦汉",
+          "kind": "城墙／遗址范围",
+          "city": "集安国内城"
+        },
+        {
+          "id": "goguryeo-osm-8542980091",
+          "name": "好太王碑",
+          "period": "魏晋南北朝",
+          "control": "魏晋南北朝",
+          "kind": "遗存地点参照",
+          "city": "集安国内城"
+        },
+        {
+          "id": "goguryeo-osm-249585692",
+          "name": "将军坟",
+          "period": "魏晋南北朝",
+          "control": "魏晋南北朝",
+          "kind": "城墙／遗址范围",
+          "city": "集安国内城"
+        },
+        {
+          "id": "goguryeo-osm-254077889",
+          "name": "太王陵",
+          "period": "魏晋南北朝",
+          "control": "魏晋南北朝",
+          "kind": "城墙／遗址范围",
+          "city": "集安国内城"
+        }
+      ],
+      "historicalStages": [
+        {
+          "name": "高句丽 · 城址与相关遗存",
+          "boundaryStatus": "实存线段／公开遗址矢量／地点参照分别标注",
+          "summary": "平原城与丸都山城组成相互配合的都城体系；此次接入现有分段城墙及附近碑刻、王陵。王陵不属于国内城城内建筑。",
+          "sources": [
+            {
+              "title": "UNESCO · 高句丽王城、王陵及贵族墓葬",
+              "url": "https://whc.unesco.org/en/list/1135/"
+            },
+            {
+              "title": "UNESCO · 遗产地图与组成部分",
+              "url": "https://whc.unesco.org/en/list/1135/maps/"
+            }
+          ]
+        }
+      ],
+      "relatedMapViews": [
+        {
+          "name": "国内城 · 城墙遗存",
+          "coordinates": [
+            126.1744258,
+            41.1220174
+          ],
+          "zoom": 15,
+          "period": "秦汉"
+        },
+        {
+          "name": "好太王碑",
+          "coordinates": [
+            126.2139997,
+            41.1448819
+          ],
+          "zoom": 15,
+          "period": "魏晋南北朝"
+        },
+        {
+          "name": "将军坟",
+          "coordinates": [
+            126.2260171,
+            41.1577
+          ],
+          "zoom": 15,
+          "period": "魏晋南北朝"
+        },
+        {
+          "name": "太王陵",
+          "coordinates": [
+            126.2103818,
+            41.1425604
+          ],
+          "zoom": 15,
+          "period": "魏晋南北朝"
+        }
+      ],
+      "locationReference": {
+        "name": "国内城城内参照",
+        "coordinates": [
+          126.1777,
+          41.1207
+        ],
+        "originalCoordinates": [
+          126.195,
+          41.125
+        ],
+        "coordinateSystem": "WGS84",
+        "note": "从偏东的区域点更正到现有城墙围合区，稳定标识不变。"
+      }
     },
     {
       "lat": 41.158,
@@ -10026,7 +10502,47 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "historicalStages": [
+        {
+          "name": "高句丽 · 山城与国内城",
+          "boundaryStatus": "具体遗址；完整城垣矢量尚未接入",
+          "summary": "丸都山城与山下的国内城相互配合，组成平原城与山城结合的都城体系。山城兼具防御与王都功能，不只是普通军事据点。城墙利用山脊和险要地形修筑，不能用规则四边形代替。",
+          "sources": [
+            {
+              "title": "UNESCO · 高句丽王城与墓葬",
+              "url": "https://whc.unesco.org/en/list/1135/"
+            }
+          ]
+        },
+        {
+          "name": "高句丽 · 宫殿与城内设施",
+          "boundaryStatus": "已有文献说明；各建筑基址尚缺可核对坐标",
+          "summary": "吉林省地方志资料列有宫殿址、瞭望台址、戍卒驻地及蓄水池等遗存。宫殿说明山城具有居住和理政功能；瞭望台、驻地和蓄水设施反映守城与供水需求。此次补充详情，不凭文字尺寸推造建筑范围。",
+          "sources": [
+            {
+              "title": "吉林省地方志 · 丸都山城遗存",
+              "url": "https://dfz.jl.gov.cn/zsjl/202205/t20220510_8446731.html"
+            },
+            {
+              "title": "吉林省政府 · 集安遗址介绍",
+              "url": "https://www.jl.gov.cn/yaowen/202507/t20250701_3475651.html"
+            }
+          ]
+        },
+        {
+          "name": "高句丽 · 世界遗产及地图范围",
+          "boundaryStatus": "世界遗产组成部分；展示区不等于古城墙",
+          "summary": "丸都山城是“高句丽王城、王陵及贵族墓葬”世界遗产的组成部分。城址、城内遗迹与山下墓群应分别理解；公开地图中的南侧墓群展示区不能代替完整山城范围。目前古都图标仍是城址参照点，不表示城门或宫殿的精确位置。",
+          "sources": [
+            {
+              "title": "UNESCO · 组成部分与地图",
+              "url": "https://whc.unesco.org/en/list/1135/maps/"
+            }
+          ]
+        }
+      ],
+      "relatedMapViews": []
     },
     {
       "lat": 39.0392,
@@ -10090,7 +10606,146 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [
+        {
+          "id": "goguryeo-osm-42918691",
+          "name": "大城山城 · 城墙",
+          "period": "魏晋南北朝",
+          "control": "魏晋南北朝",
+          "kind": "城墙／遗址范围",
+          "city": "平壤"
+        },
+        {
+          "id": "goguryeo-osm-42918692",
+          "name": "安鹤宫遗址",
+          "period": "魏晋南北朝",
+          "control": "魏晋南北朝",
+          "kind": "城墙／遗址范围",
+          "city": "平壤"
+        },
+        {
+          "id": "goguryeo-osm-1222100886",
+          "name": "大城山城 · 南门（复建）",
+          "period": "魏晋南北朝",
+          "control": "魏晋南北朝",
+          "kind": "城墙／遗址范围",
+          "city": "平壤"
+        },
+        {
+          "id": "goguryeo-unesco-tongmyong",
+          "name": "东明王陵与真坡里墓群（位置参照）",
+          "period": "魏晋南北朝",
+          "control": "魏晋南北朝",
+          "kind": "遗存地点参照",
+          "city": "平壤"
+        },
+        {
+          "id": "goguryeo-unesco-kangso",
+          "name": "江西三墓（位置参照）",
+          "period": "魏晋南北朝",
+          "control": "魏晋南北朝",
+          "kind": "遗存地点参照",
+          "city": "平壤"
+        },
+        {
+          "id": "goguryeo-unesco-tokhung",
+          "name": "德兴里古墓（位置参照）",
+          "period": "魏晋南北朝",
+          "control": "魏晋南北朝",
+          "kind": "遗存地点参照",
+          "city": "平壤"
+        },
+        {
+          "id": "goguryeo-unesco-anak3",
+          "name": "安岳三号墓（位置参照）",
+          "period": "魏晋南北朝",
+          "control": "魏晋南北朝",
+          "kind": "遗存地点参照",
+          "city": "平壤"
+        }
+      ],
+      "historicalStages": [
+        {
+          "name": "高句丽 · 城址与相关遗存",
+          "boundaryStatus": "实存线段／公开遗址矢量／地点参照分别标注",
+          "summary": "晚期都城地区，补入大城山城、安鹤宫及相关墓葬。大城山城墙线未闭合；安鹤宫年代与早期平壤城对应关系仍需区分研究观点。",
+          "sources": [
+            {
+              "title": "北京大学 · 高句丽考古讲座",
+              "url": "https://archaeology.pku.edu.cn/info/1031/41775.htm"
+            },
+            {
+              "title": "UNESCO · 遗产地图与组成部分",
+              "url": "https://whc.unesco.org/en/list/1091/maps/"
+            }
+          ]
+        }
+      ],
+      "relatedMapViews": [
+        {
+          "name": "大城山城 · 城墙",
+          "coordinates": [
+            125.8338905,
+            39.0867897
+          ],
+          "zoom": 15,
+          "period": "魏晋南北朝"
+        },
+        {
+          "name": "安鹤宫遗址",
+          "coordinates": [
+            125.8349665,
+            39.0646031
+          ],
+          "zoom": 15,
+          "period": "魏晋南北朝"
+        },
+        {
+          "name": "大城山城 · 南门（复建）",
+          "coordinates": [
+            125.829302,
+            39.0751831
+          ],
+          "zoom": 15,
+          "period": "魏晋南北朝"
+        },
+        {
+          "name": "东明王陵与真坡里墓群（位置参照）",
+          "coordinates": [
+            125.92972222222222,
+            38.88944444444444
+          ],
+          "zoom": 15,
+          "period": "魏晋南北朝"
+        },
+        {
+          "name": "江西三墓（位置参照）",
+          "coordinates": [
+            125.42500000000001,
+            38.96472222222223
+          ],
+          "zoom": 15,
+          "period": "魏晋南北朝"
+        },
+        {
+          "name": "德兴里古墓（位置参照）",
+          "coordinates": [
+            125.44694166666667,
+            38.96083055555556
+          ],
+          "zoom": 15,
+          "period": "魏晋南北朝"
+        },
+        {
+          "name": "安岳三号墓（位置参照）",
+          "coordinates": [
+            125.50749722222223,
+            38.44027777777777
+          ],
+          "zoom": 15,
+          "period": "魏晋南北朝"
+        }
+      ]
     },
     {
       "lat": 42.9513,
@@ -10575,7 +11230,8 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapDisplayName": "蒙舍"
     },
     {
       "lat": 25.64,
@@ -10757,7 +11413,7 @@
           "今称/遗址名": "敦化",
           "今属行政区": "吉林省延边州敦化市",
           "置信度": "中",
-          "备注/争议": null,
+          "备注/争议": "渤海早期旧国地望仍有争论；敦化为地区参照，敖东城与永胜已发掘遗存主要为金代。",
           "来源编号": "S1",
           "来源URL": "https://zh.wikipedia.org/wiki/中国首都",
           "都城类别码": "P",
@@ -10773,23 +11429,103 @@
       "sourceEra": "边疆与并立政权",
       "sourceSite": "敦化",
       "sourceAncientName": "旧国",
-      "currentPlace": "敦化",
+      "currentPlace": "吉林敦化地区",
       "currentKey": "ancient-site:敦化:43.37270,128.23200",
       "siteKey": "ancient-site:敦化:43.37270,128.23200",
       "boundaryAudit": {
-        "status": "当前朝代暂无已接入的对应范围",
-        "pointKind": "城址／城市参照点",
-        "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+        "status": "接入相关山城地点，完整城墙未接入",
+        "pointKind": "旧国地望地区参照",
+        "note": "渤海早期旧国地望仍有争论；敦化为地区参照，敖东城与永胜已发掘遗存主要为金代。"
       },
       "siteOrganization": {
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [
+        {
+          "id": "dunhua-chengshanzi-reference",
+          "name": "城山子山城（地点参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "相关遗址地点参照",
+          "city": "敦化"
+        }
+      ],
+      "mapDisplayName": "渤海旧国（敦化地区参照）",
+      "coordinatePrecision": "现有古都点为敦化地区参照，不表示已经确认的渤海王城中心。敖东城、永胜遗址的发掘年代与早期旧国认定需分开。",
+      "boundaryRelationNote": "城山子山城仅接入地点参照，未取得可靠全城墙线。敖东城、永胜金代遗存尚未接入几何；不把残墙长度或房址平面直接换算成渤海都城范围。",
+      "historicalStages": [
+        {
+          "name": "敖东城 · 城墙与房址",
+          "boundaryStatus": "城墙残段有文献记录，尚缺本次可核对的墙线坐标",
+          "summary": "2002、2003年发掘发现城墙、房址、灰坑、沟及铁器、陶瓷和钱币；发掘区遗存被判定为金代晚期。传统敖东城即渤海旧国的说法不能据此视为已证实。",
+          "sources": [
+            {
+              "title": "吉林大学王培新 · 考古调查与发掘综述",
+              "url": "https://eprints.lib.hokudai.ac.jp/repo/huscap/all/48124/Symposium%202008.pdf"
+            },
+            {
+              "title": "中国社会科学院 · 早期城址地望研究",
+              "url": "https://www.cass.cn/xueshuchengguo/xscg_lsyjy/202111/t20211124_5376637.shtml"
+            }
+          ]
+        },
+        {
+          "name": "永胜遗址 · 一号建筑基址",
+          "boundaryStatus": "大型建筑址已发掘，精确建筑轮廓尚未配准",
+          "summary": "过去曾以高等级建筑材料推测早期王城；后续发掘报告将一号建筑基址归为金代，并讨论寺院性质。不能直接命名为渤海宫殿。",
+          "sources": [
+            {
+              "title": "吉林大学考古综述 · 永胜遗址发掘",
+              "url": "https://eprints.lib.hokudai.ac.jp/repo/huscap/all/48124/Symposium%202008.pdf"
+            }
+          ]
+        },
+        {
+          "name": "城山子山城",
+          "boundaryStatus": "接入遗址地点参照；城墙、城门和房址不凭文字尺寸推造",
+          "summary": "位于敦化西南，是渤海早期城址研究的相关山城。与文献东牟山或旧国的对应关系仍有不同观点；山城本身与王都身份分开表达。",
+          "sources": [
+            {
+              "title": "中国社会科学院 · 东牟山地望辨",
+              "url": "https://www.cass.cn/xueshuchengguo/xscg_lsyjy/202111/t20211124_5376637.shtml"
+            }
+          ]
+        },
+        {
+          "name": "六顶山古墓群",
+          "boundaryStatus": "王室墓群已有陵墓目录记录；墓区与单墓位置需分别核定",
+          "summary": "渤海早期王室贵族墓地，贞惠公主墓铭提供重要年代和身份资料。墓群不是王城范围，现代六鼎山景区与正觉寺范围也不是古代陵区。",
+          "sources": [
+            {
+              "title": "吉林省地方志 · 六顶山古墓群",
+              "url": "https://dfz.jl.gov.cn/ybjl/201106/t20110607_5217088.html"
+            }
+          ]
+        }
+      ],
+      "relatedMapViews": [
+        {
+          "name": "敦化地区参照",
+          "coordinates": [
+            128.232,
+            43.3727
+          ],
+          "zoom": 12
+        },
+        {
+          "name": "城山子山城参照点",
+          "coordinates": [
+            128.14681694,
+            43.29041194
+          ],
+          "zoom": 14
+        }
+      ]
     },
     {
-      "lat": 42.5467,
-      "lng": 129.01,
+      "lat": 42.7111298708153,
+      "lng": 129.1485856672448,
       "admin": "吉林省延边州和龙市",
       "siteNames": [
         "和龙"
@@ -10837,7 +11573,7 @@
       "sourceEra": "边疆与并立政权",
       "sourceSite": "和龙",
       "sourceAncientName": "中京显德府",
-      "currentPlace": "和龙",
+      "currentPlace": "吉林和龙 · 西古城遗址",
       "currentKey": "ancient-site:和龙:42.54670,129.01000",
       "siteKey": "ancient-site:和龙:42.54670,129.01000",
       "boundaryAudit": {
@@ -10849,7 +11585,38 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [
+        {
+          "id": "bohai-other-xigu-inner",
+          "name": "渤海中京显德府 · 西古城内城",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "城址范围／遗存参照",
+          "city": "和龙"
+        },
+        {
+          "id": "bohai-other-xigu-outer-inferred",
+          "name": "渤海中京显德府 · 西古城外城（尺寸推定）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "城址范围／遗存参照",
+          "city": "和龙"
+        }
+      ],
+      "locationReference": {
+        "name": "西古城内城参照",
+        "coordinates": [
+          129.1485856672448,
+          42.7111298708153
+        ],
+        "originalCoordinates": [
+          129.01,
+          42.5467
+        ],
+        "coordinateSystem": "WGS84",
+        "note": "从现代城市区域参照点更正至渤海京城遗址；原siteKey不变。"
+      },
+      "mapDisplayName": "渤海中京显德府"
     },
     {
       "lat": 44.13247373,
@@ -10936,7 +11703,7 @@
       "sourceEra": "边疆与并立政权",
       "sourceSite": "宁安上京",
       "sourceAncientName": "上京龙泉府",
-      "currentPlace": "渤海上京龙泉府（宫城区参照）",
+      "currentPlace": "黑龙江宁安 · 上京龙泉府遗址",
       "currentKey": "ancient-site:宁安上京:44.11500,129.21000",
       "siteKey": "ancient-site:宁安上京:44.11500,129.21000",
       "coordinateNote": "随城址详图重新配准调整到宫城范围内；保留原打卡键。",
@@ -11085,6 +11852,86 @@
           "control": "隋唐",
           "kind": "宫区或遗址构件",
           "city": "渤海上京龙泉府"
+        },
+        {
+          "id": "site-refinement-bohai-palace-1",
+          "name": "渤海上京 · 第1号宫殿（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-palace-2",
+          "name": "渤海上京 · 第2号宫殿（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-palace-3",
+          "name": "渤海上京 · 第3号宫殿（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-palace-4",
+          "name": "渤海上京 · 第4号宫殿（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-palace-5",
+          "name": "渤海上京 · 第5号宫殿（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-gate-south",
+          "name": "渤海上京 · 宫城南门（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-gate-north",
+          "name": "渤海上京 · 宫城北门（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-gate-east",
+          "name": "渤海上京 · 宫城东门（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-gate-west",
+          "name": "渤海上京 · 宫城西门（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-gate-imperial-south",
+          "name": "渤海上京 · 皇城南门（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
         }
       ],
       "boundaryRelationNote": "按记录所属朝代对应范围；同城不同朝代、宫城与外郭城分别保留。现代城市参照点不代表每一期古都中心。",
@@ -11097,11 +11944,12 @@
       "siteOrganization": {
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
-      }
+      },
+      "mapDisplayName": "渤海上京龙泉府"
     },
     {
-      "lat": 42.8625,
-      "lng": 130.365,
+      "lat": 42.85864867829999,
+      "lng": 130.2830672264099,
       "admin": "吉林省延边州珲春市",
       "siteNames": [
         "珲春"
@@ -11149,7 +11997,7 @@
       "sourceEra": "边疆与并立政权",
       "sourceSite": "珲春",
       "sourceAncientName": "东京龙原府",
-      "currentPlace": "珲春",
+      "currentPlace": "吉林珲春 · 八连城遗址",
       "currentKey": "ancient-site:珲春:42.86250,130.36500",
       "siteKey": "ancient-site:珲春:42.86250,130.36500",
       "boundaryAudit": {
@@ -11161,7 +12009,46 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [
+        {
+          "id": "bohai-other-balian-outer",
+          "name": "渤海东京龙原府 · 八连城外城",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "城址范围／遗存参照",
+          "city": "珲春"
+        },
+        {
+          "id": "bohai-other-balian-inner",
+          "name": "渤海东京龙原府 · 八连城内城（影像参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "城址范围／遗存参照",
+          "city": "珲春"
+        },
+        {
+          "id": "bohai-other-balian-inner-south",
+          "name": "渤海东京 · 八连城内城南门（参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "城址范围／遗存参照",
+          "city": "珲春"
+        }
+      ],
+      "locationReference": {
+        "name": "八连城内城参照",
+        "coordinates": [
+          130.2830672264099,
+          42.85864867829999
+        ],
+        "originalCoordinates": [
+          130.365,
+          42.8625
+        ],
+        "coordinateSystem": "WGS84",
+        "note": "从现代城市区域参照点更正至渤海京城遗址；原siteKey不变。"
+      },
+      "mapDisplayName": "渤海东京龙原府"
     },
     {
       "lat": 47.2,
@@ -11386,13 +12273,6 @@
         "pointKind": "南宋临安府治遗址为杭州历史城区定位参照；不是吴越王宫或南宋皇城确址。",
         "note": "按时期关联城池、宫区或遗址展示范围；参考线与现代展示范围均保留来源和性质说明，不能当作对应朝代的完整实测城界。"
       },
-      "historicalSources": [
-        {
-          "title": "杭州市人大：南宋皇城大遗址保护调研",
-          "url": "https://z.hangzhou.com.cn/2021/rddssbchy/content/content_8082761.html",
-          "note": "吴越西府和南宋临安府按阶段保留；皇城、德寿宫和府治不同。杭州临安区衣锦城不代替杭州市区吴越西府。"
-        }
-      ],
       "mapReferencePeriod": "宋辽金西夏",
       "boundaryRelations": [
         {
@@ -11442,6 +12322,54 @@
           "control": "宋辽金西夏",
           "kind": "遗址或现代展示",
           "city": "杭州"
+        },
+        {
+          "id": "hangzhou-osm-765317553",
+          "name": "南宋临安 · 太庙墙基",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "遗迹地点",
+          "city": "杭州"
+        },
+        {
+          "id": "hangzhou-osm-1550545898",
+          "name": "南宋临安 · 太庙遗迹区（公开标绘）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "公开遗迹区参照",
+          "city": "杭州"
+        },
+        {
+          "id": "hangzhou-osm-1254131846",
+          "name": "南宋临安 · 钱塘门遗址",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "遗迹地点",
+          "city": "杭州"
+        },
+        {
+          "id": "hangzhou-osm-11542293992",
+          "name": "吴越 · 梵天寺经幢",
+          "period": "五代十国",
+          "control": "五代十国",
+          "kind": "遗迹地点",
+          "city": "杭州"
+        },
+        {
+          "id": "hangzhou-osm-12441248872",
+          "name": "吴越 · 天龙寺造像",
+          "period": "五代十国",
+          "control": "五代十国",
+          "kind": "遗迹地点",
+          "city": "杭州"
+        },
+        {
+          "id": "hangzhou-osm-13990093737",
+          "name": "吴越 · 郊坛遗址（参照）",
+          "period": "五代十国",
+          "control": "五代十国",
+          "kind": "遗迹地点",
+          "city": "杭州"
         }
       ],
       "boundaryRelationNote": "按时期关联城池、宫区或遗址展示范围；参考线与现代展示范围均保留来源和性质说明，不能当作对应朝代的完整实测城界。",
@@ -11449,7 +12377,177 @@
       "siteOrganization": {
         "decision": "吴越钱塘与南宋临安同城列表；海塘、宫苑和府治分别对应，非两朝完整城界。",
         "verification": "已有分期依据或明确待核事项"
-      }
+      },
+      "historicalStages": [
+        {
+          "name": "吴越 · 钱塘西府",
+          "boundaryStatus": "已有海塘范围，新增经幢、造像与郊坛遗迹点",
+          "summary": "吴越钱塘西府与今杭州临安区衣锦城是不同地点。钱镠在凤凰山下营建子城，城垣多次扩展；此次保留海塘标绘，补入梵天寺经幢、天龙寺造像和郊坛参照点，均不代替王宫范围。",
+          "sources": [
+            {
+              "title": "杭州网 · 凤凰山吴越遗迹与子城",
+              "url": "https://hznews.hangzhou.com.cn/wghz/content/2019-03/19/content_7164050.htm"
+            }
+          ]
+        },
+        {
+          "name": "南宋 · 临安府与皇城",
+          "boundaryStatus": "皇城考古范围有依据，完整配准轮廓尚未接入",
+          "summary": "临安外城、凤凰山皇城、府治及德寿宫是不同层级和地点。现有古都点采用临安府治遗址参照，不能解释为皇宫中心。皇城东西南北四至需用考古图件核对，不按现代山体、公园或道路简单围合。",
+          "sources": [
+            {
+              "title": "杭州市人大 · 皇城考古与四至勘探",
+              "url": "https://z.hangzhou.com.cn/2021/rddssbchy/content/content_8082761.html"
+            },
+            {
+              "title": "临安城遗址 · 皇城与钱塘门",
+              "url": "https://z.hangzhou.com.cn/2022/syjy/content/content_8420727.html"
+            }
+          ]
+        },
+        {
+          "name": "南宋 · 德寿宫、太庙与城门",
+          "boundaryStatus": "遗址区、遗迹点与现代展示范围分别标注",
+          "summary": "德寿宫是高宗退位后的宫苑，与凤凰山皇城不同。新增太庙墙基及遗迹区参照、钱塘门遗址；保留恭圣仁烈皇后宅与御街展示区。2025年德寿宫东侧城墙发掘有新收获，尚未取得可对应坐标的实测墙线，因此不把德寿宫东墙或现代围墙作为临安外城墙。",
+          "sources": [
+            {
+              "title": "德寿宫遗址 · 发掘遗迹",
+              "url": "https://z.hangzhou.com.cn/2021/syjy/content/content_8215918.html"
+            },
+            {
+              "title": "浙江社科 · 临安城考古与太庙",
+              "url": "https://www.zjskw.gov.cn/art/2024/8/29/art_1229515903_60324.html"
+            }
+          ]
+        }
+      ],
+      "historicalSourcesArchive": [
+        {
+          "title": "杭州市人大：南宋皇城大遗址保护调研",
+          "url": "https://z.hangzhou.com.cn/2021/rddssbchy/content/content_8082761.html",
+          "note": "吴越西府和南宋临安府按阶段保留；皇城、德寿宫和府治不同。杭州临安区衣锦城不代替杭州市区吴越西府。"
+        }
+      ],
+      "relatedMapViews": [
+        {
+          "name": "定位吴越遗迹",
+          "period": "五代十国",
+          "coordinates": [
+            120.156,
+            30.222
+          ],
+          "zoom": 14
+        },
+        {
+          "name": "吴越海塘遗址（标绘）",
+          "period": "五代十国",
+          "coordinates": [
+            120.1691125,
+            30.2327078
+          ],
+          "zoom": 16
+        },
+        {
+          "name": "南宋德寿宫（遗址区）",
+          "period": "宋辽金西夏",
+          "coordinates": [
+            120.1684422,
+            30.2421499
+          ],
+          "zoom": 16
+        },
+        {
+          "name": "南宋临安府治遗址",
+          "period": "宋辽金西夏",
+          "coordinates": [
+            120.1554861,
+            30.2432524
+          ],
+          "zoom": 16
+        },
+        {
+          "name": "南宋恭圣仁烈皇后宅遗址",
+          "period": "宋辽金西夏",
+          "coordinates": [
+            120.1565528,
+            30.2404813
+          ],
+          "zoom": 16
+        },
+        {
+          "name": "南宋御街遗址（展示区）",
+          "period": "宋辽金西夏",
+          "coordinates": [
+            120.1663492,
+            30.24481
+          ],
+          "zoom": 16
+        },
+        {
+          "name": "南宋皇城圣果寺遗址（标绘）",
+          "period": "宋辽金西夏",
+          "coordinates": [
+            120.1540003,
+            30.222726
+          ],
+          "zoom": 16
+        },
+        {
+          "name": "南宋临安 · 太庙墙基",
+          "period": "宋辽金西夏",
+          "coordinates": [
+            120.1648646,
+            30.2351485
+          ],
+          "zoom": 16
+        },
+        {
+          "name": "南宋临安 · 太庙遗迹区（公开标绘）",
+          "period": "宋辽金西夏",
+          "coordinates": [
+            120.1649759,
+            30.2353731
+          ],
+          "zoom": 16
+        },
+        {
+          "name": "南宋临安 · 钱塘门遗址",
+          "period": "宋辽金西夏",
+          "coordinates": [
+            120.1532486,
+            30.2602726
+          ],
+          "zoom": 16
+        },
+        {
+          "name": "吴越 · 梵天寺经幢",
+          "period": "五代十国",
+          "coordinates": [
+            120.1625681,
+            30.2200264
+          ],
+          "zoom": 16
+        },
+        {
+          "name": "吴越 · 天龙寺造像",
+          "period": "五代十国",
+          "coordinates": [
+            120.1435421,
+            30.213554
+          ],
+          "zoom": 16
+        },
+        {
+          "name": "吴越 · 郊坛遗址（参照）",
+          "period": "五代十国",
+          "coordinates": [
+            120.143543,
+            30.2145021
+          ],
+          "zoom": 16
+        }
+      ],
+      "mapDisplayName": "杭州（吴越／南宋）"
     },
     {
       "lat": 26.0745,
@@ -11664,7 +12762,8 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapDisplayName": "建州"
     },
     {
       "lat": 28.2282,
@@ -12028,7 +13127,8 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapDisplayName": "北京大名府"
     },
     {
       "lat": 43.962786,
@@ -12089,19 +13189,57 @@
         "https://commons.wikimedia.org/wiki/Category:Liao_Shangjing_site"
       ],
       "boundaryAudit": {
-        "status": "当前朝代暂无已接入的对应范围",
-        "pointKind": "城址／城市参照点",
-        "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+        "status": "部分遗存已接入，完整城界仍需考古图件配准",
+        "pointKind": "既有城市／城址参照点",
+        "note": "辽五京核查：已接入现状遗存与展示范围，性质逐项区分；未取得完整城界者不以明清城墙、现代公园或后金城址替代。"
       },
       "siteOrganization": {
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [
+        {
+          "id": "liao-five-way-416533409",
+          "city": "上京临潢",
+          "name": "辽上京 · 皇城（现状城垣范围参照）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "皇城范围参照"
+        },
+        {
+          "id": "liao-five-node-14257340705",
+          "city": "上京临潢",
+          "name": "辽上京 · 西山坡佛寺遗址",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "遗址参照点"
+        },
+        {
+          "id": "liao-five-node-14257340706",
+          "city": "上京临潢",
+          "name": "辽上京 · 乾德门（西门参照）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "门址参照点"
+        },
+        {
+          "id": "liao-five-node-6366690521",
+          "city": "上京临潢",
+          "name": "辽上京周边 · 北塔",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "古塔参照点"
+        }
+      ],
+      "boundaryRelationNote": "辽五京核查：已接入现状遗存与展示范围，性质逐项区分；未取得完整城界者不以明清城墙、现代公园或后金城址替代。",
+      "historicalSources": [
+        "https://www.neac.gov.cn/seac/c103391/202306/1165318.shtml"
+      ],
+      "mapDisplayName": "辽上京临潢府"
     },
     {
-      "lat": 41.6,
-      "lng": 119.33,
+      "lat": 41.5697196125,
+      "lng": 119.1554531375,
       "admin": "内蒙古自治区赤峰市宁城县",
       "siteNames": [
         "中京大定"
@@ -12171,15 +13309,70 @@
       "currentKey": "ancient-site:中京大定:41.60000,119.33000",
       "siteKey": "ancient-site:中京大定:41.60000,119.33000",
       "boundaryAudit": {
-        "status": "当前朝代暂无已接入的对应范围",
-        "pointKind": "城址／城市参照点",
-        "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+        "status": "部分遗存已接入，完整城界仍需考古图件配准",
+        "pointKind": "大明塔遗址参照点",
+        "note": "辽五京核查：已接入现状遗存与展示范围，性质逐项区分；未取得完整城界者不以明清城墙、现代公园或后金城址替代。"
       },
       "siteOrganization": {
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [
+        {
+          "id": "liao-five-way-1026574600",
+          "city": "中京大定",
+          "name": "辽中京 · 大明塔遗址公园（现展示区）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现代展示区"
+        },
+        {
+          "id": "liao-five-way-1026574598",
+          "city": "中京大定",
+          "name": "辽中京 · 大明塔（释迦佛舍利塔）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现存古塔"
+        },
+        {
+          "id": "liao-five-node-13731517948",
+          "city": "中京大定",
+          "name": "辽中京遗址 · 小塔（辽金遗存参照）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "古塔参照点"
+        },
+        {
+          "id": "liao-five-node-13731517949",
+          "city": "中京大定",
+          "name": "辽中京周边 · 半截塔",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "古塔参照点"
+        }
+      ],
+      "locationReference": {
+        "name": "辽中京大明塔参照",
+        "coordinates": [
+          119.1554531375,
+          41.5697196125
+        ],
+        "originalCoordinates": [
+          119.33,
+          41.6
+        ],
+        "coordinateSystem": "WGS84",
+        "sourceUrls": [
+          "https://www.ningchengxian.gov.cn/zjnc/lyzy/201703/t20170323_1113918.html",
+          "https://www.openstreetmap.org/way/1026574598"
+        ],
+        "note": "原区域点偏东约15公里，更正至遗址内大明塔；不是宫城或全城中心。"
+      },
+      "boundaryRelationNote": "辽五京核查：已接入现状遗存与展示范围，性质逐项区分；未取得完整城界者不以明清城墙、现代公园或后金城址替代。",
+      "historicalSources": [
+        "https://www.ningchengxian.gov.cn/zjnc/lyzy/201703/t20170323_1113918.html"
+      ],
+      "mapDisplayName": "辽金中京大定府"
     },
     {
       "lat": 40.0913355,
@@ -12253,16 +13446,17 @@
       "currentKey": "ancient-site:西京大同:40.07680,113.30010",
       "siteKey": "ancient-site:西京大同:40.07680,113.30010",
       "boundaryAudit": {
-        "status": "已接入对应时期遗址／参考范围；完整城界仍按资料程度区分",
-        "pointKind": "辽金西京华严寺现寺院范围为历史城区定位参照；不代表辽金宫城中心。",
-        "note": "按时期关联城池、宫区或遗址展示范围；参考线与现代展示范围均保留来源和性质说明，不能当作对应朝代的完整实测城界。"
+        "status": "部分遗存已接入，完整城界仍需考古图件配准",
+        "pointKind": "既有城市／城址参照点",
+        "note": "辽五京核查：已接入现状遗存与展示范围，性质逐项区分；未取得完整城界者不以明清城墙、现代公园或后金城址替代。"
       },
       "historicalSources": [
         {
           "title": "大同市政府：历史文化名城保护规划解读",
           "url": "https://www.dt.gov.cn/dtszf/gsgg/201503/81b3b58715de46fea719e6b4089c17cd.shtml",
           "note": "大同为辽金西京，华严寺与善化寺保留辽金建筑；现寺院边界不能代表辽金完整城界。"
-        }
+        },
+        "https://www.pingcheng.gov.cn/pcqrmzfz/wmdt/202009/914428d5ff3544d5b089166caa96ffd7.shtml"
       ],
       "boundaryRelations": [
         {
@@ -12280,18 +13474,67 @@
           "control": "宋辽金西夏",
           "kind": "遗址或现代展示",
           "city": "大同"
+        },
+        {
+          "id": "liao-five-way-1193258833",
+          "city": "西京大同",
+          "name": "辽金西京 · 华严寺大雄宝殿（现存建筑）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现存殿阁"
+        },
+        {
+          "id": "liao-five-way-1193265713",
+          "city": "西京大同",
+          "name": "辽金西京 · 华严寺薄伽教藏殿（现存建筑）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现存殿阁"
+        },
+        {
+          "id": "liao-five-way-1358507433",
+          "city": "西京大同",
+          "name": "辽金西京 · 善化寺天王殿（现存建筑）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现存殿阁"
+        },
+        {
+          "id": "liao-five-way-1358507434",
+          "city": "西京大同",
+          "name": "辽金西京 · 善化寺三圣殿（现存建筑）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现存殿阁"
+        },
+        {
+          "id": "liao-five-way-1358507435",
+          "city": "西京大同",
+          "name": "辽金西京 · 善化寺大雄宝殿（现存建筑）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现存殿阁"
+        },
+        {
+          "id": "liao-five-way-1358507436",
+          "city": "西京大同",
+          "name": "辽金西京 · 善化寺普贤阁（现存建筑）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现存殿阁"
         }
       ],
-      "boundaryRelationNote": "按时期关联城池、宫区或遗址展示范围；参考线与现代展示范围均保留来源和性质说明，不能当作对应朝代的完整实测城界。",
+      "boundaryRelationNote": "辽五京核查：已接入现状遗存与展示范围，性质逐项区分；未取得完整城界者不以明清城墙、现代公园或后金城址替代。",
       "coordinatePrecision": "辽金西京华严寺现寺院范围为历史城区定位参照；不代表辽金宫城中心。",
       "siteOrganization": {
         "decision": "辽金西京合并，现寺院范围单独说明，不以明清大同城墙确定辽金城界。",
         "verification": "已有分期依据或明确待核事项"
-      }
+      },
+      "mapDisplayName": "辽金西京大同府"
     },
     {
-      "lat": 38.4872,
-      "lng": 106.2309,
+      "lat": 38.46305628750001,
+      "lng": 106.2652709125,
       "admin": "宁夏回族自治区银川市",
       "siteNames": [
         "兴庆府"
@@ -12343,19 +13586,62 @@
       "currentKey": "ancient-site:兴庆府:38.48720,106.23090",
       "siteKey": "ancient-site:兴庆府:38.48720,106.23090",
       "boundaryAudit": {
-        "status": "当前朝代暂无已接入的对应范围",
-        "pointKind": "城址／城市参照点",
-        "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+        "status": "对应遗存与范围已部分接入",
+        "pointKind": "明确参照对象的遗址定位点",
+        "note": "原区域坐标已更正；展示用地、现存建筑及城垣衔接面分别说明资料性质。"
       },
       "siteOrganization": {
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [
+        {
+          "id": "ljx-osm-way-423097097",
+          "name": "西夏兴庆府 · 承天寺（现寺院范围）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现状遗址／建筑范围",
+          "city": "兴庆府"
+        },
+        {
+          "id": "ljx-osm-way-628248642",
+          "name": "西夏兴庆府参照 · 承天寺塔（清代重建）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现状遗址／建筑范围",
+          "city": "兴庆府"
+        },
+        {
+          "id": "ljx-osm-way-627365400",
+          "name": "西夏兴庆府周边参照 · 海宝塔（现存塔）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现状遗址／建筑范围",
+          "city": "兴庆府"
+        }
+      ],
+      "locationReference": {
+        "name": "西夏兴庆府承天寺塔参照",
+        "coordinates": [
+          106.2652709125,
+          38.46305628750001
+        ],
+        "originalCoordinates": [
+          106.2309,
+          38.4872
+        ],
+        "coordinateSystem": "WGS84",
+        "sourceUrls": [
+          "https://www.openstreetmap.org/way/628248642",
+          "https://www.yinchuan.gov.cn/sshc/lyjd/zdwbcs/202303/t20230301_3980381.html"
+        ],
+        "note": "更正原区域参照点至可核对的历史遗址参照处；不表示全城中心，原siteKey/currentKey保持不变。"
+      },
+      "mapDisplayName": "西夏兴庆府"
     },
     {
-      "lat": 45.54,
-      "lng": 126.97,
+      "lat": 45.4894965,
+      "lng": 126.9727109,
       "admin": "黑龙江省哈尔滨市阿城区",
       "siteNames": [
         "会宁府"
@@ -12407,15 +13693,74 @@
       "currentKey": "ancient-site:会宁府:45.54000,126.97000",
       "siteKey": "ancient-site:会宁府:45.54000,126.97000",
       "boundaryAudit": {
-        "status": "当前朝代暂无已接入的对应范围",
-        "pointKind": "城址／城市参照点",
-        "note": "点位是否落在宫城内不能单独判定古都点错误；需核实点的参照对象。"
+        "status": "对应遗存与范围已部分接入",
+        "pointKind": "明确参照对象的遗址定位点",
+        "note": "原区域坐标已更正；展示用地、现存建筑及城垣衔接面分别说明资料性质。"
       },
       "siteOrganization": {
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [
+        {
+          "id": "ljx-jin-shangjing-north",
+          "name": "金上京 · 北城（城垣衔接参照）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "城垣衔接推定",
+          "city": "会宁府"
+        },
+        {
+          "id": "ljx-jin-shangjing-south",
+          "name": "金上京 · 南城（城垣衔接参照）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "城垣衔接推定",
+          "city": "会宁府"
+        },
+        {
+          "id": "ljx-jin-shangjing-surviving-walls",
+          "name": "金上京 · 残存城垣（原始分段）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现状遗址／建筑范围",
+          "city": "会宁府"
+        },
+        {
+          "id": "ljx-osm-way-1182463844",
+          "name": "金上京 · 皇城（现遗址展示区）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现状遗址／建筑范围",
+          "city": "会宁府"
+        },
+        {
+          "id": "ljx-osm-node-6366690591",
+          "name": "金上京周边 · 皇帝寨（地点参照）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "地点参照",
+          "city": "会宁府"
+        }
+      ],
+      "locationReference": {
+        "name": "金上京皇城遗址参照",
+        "coordinates": [
+          126.9727109,
+          45.4894965
+        ],
+        "originalCoordinates": [
+          126.97,
+          45.54
+        ],
+        "coordinateSystem": "WGS84",
+        "sourceUrls": [
+          "https://www.openstreetmap.org/node/6366690686",
+          "https://www.hljszw.org.cn/news/4611.html"
+        ],
+        "note": "更正原区域参照点至可核对的历史遗址参照处；不表示全城中心，原siteKey/currentKey保持不变。"
+      },
+      "mapDisplayName": "金上京会宁府"
     },
     {
       "lat": 33.006,
@@ -12479,11 +13824,12 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapDisplayName": "蔡州"
     },
     {
-      "lat": 47.1975,
-      "lng": 102.8238,
+      "lat": 47.2095974,
+      "lng": 102.8475721,
       "admin": "蒙古国前杭爱省",
       "siteNames": [
         "哈拉和林"
@@ -12565,7 +13911,45 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [
+        {
+          "id": "yuan-northern-osm-way-245259484",
+          "name": "和林 · 古城遗址标绘范围",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "哈拉和林"
+        },
+        {
+          "id": "yuan-northern-osm-way-397170802",
+          "name": "和林 · 大寺院遗址（旧称窝阔台宫殿）",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "哈拉和林"
+        },
+        {
+          "id": "yuan-northern-osm-node-479377679",
+          "name": "和林 · 石龟遗存",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "哈拉和林"
+        }
+      ],
+      "locationReference": {
+        "name": "和林古城遗址参照",
+        "coordinates": [
+          102.8475721,
+          47.2095974
+        ],
+        "originalCoordinates": [
+          102.8238,
+          47.1975
+        ],
+        "coordinateSystem": "WGS84",
+        "note": "改至已核查遗址参照；保留原持久化标识。"
+      }
     },
     {
       "lat": 42.357,
@@ -12651,7 +14035,169 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [
+        {
+          "id": "yuan-northern-osm-way-478464684",
+          "name": "上都 · 外城城垣范围",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-way-510175896",
+          "name": "上都 · 皇城城垣",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-way-1107685436",
+          "name": "上都 · 宫城城垣",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-way-1107685433",
+          "name": "上都 · 华严寺遗址",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-way-1107685434",
+          "name": "上都 · 穆清阁遗址",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-way-1107685435",
+          "name": "上都 · 大安阁基址",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-way-1107691460",
+          "name": "上都 · 乾元寺遗址",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135050203",
+          "name": "上都 · 皇城复仁门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135050212",
+          "name": "上都 · 宫城御天门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135050214",
+          "name": "上都 · 元上都明德门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101740",
+          "name": "上都 · 外城南门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101741",
+          "name": "上都 · 外城北门（东）",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101742",
+          "name": "上都 · 外城北门（西）",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101743",
+          "name": "上都 · 外城西门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101744",
+          "name": "上都 · 皇城西门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101745",
+          "name": "上都 · 皇城小西门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101746",
+          "name": "上都 · 皇城小东门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101747",
+          "name": "上都 · 皇城东门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101748",
+          "name": "上都 · 宫城东华门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101749",
+          "name": "上都 · 宫城西华门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        }
+      ],
+      "mapDisplayName": "元上都"
     },
     {
       "lat": 39.94,
@@ -12845,8 +14391,8 @@
       }
     },
     {
-      "lat": 41.159,
-      "lng": 114.72,
+      "lat": 41.2931793,
+      "lng": 114.6212824,
       "admin": "河北省张家口市张北县",
       "siteNames": [
         "张北"
@@ -12916,7 +14462,7 @@
       "sourceEra": "元及元末",
       "sourceSite": "张北",
       "sourceAncientName": "中都",
-      "currentPlace": "张北",
+      "currentPlace": "河北张北 · 元中都遗址",
       "currentKey": "ancient-site:张北:41.15900,114.72000",
       "siteKey": "ancient-site:张北:41.15900,114.72000",
       "boundaryAudit": {
@@ -12928,7 +14474,30 @@
         "decision": "元中都与原表桑根达来记录不应按同一点判断同城；后者位置和身份待核。",
         "verification": "已有分期依据或明确待核事项"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [
+        {
+          "id": "yuan-northern-osm-way-361424956",
+          "name": "元中都 · 宫城城垣参照",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "张北"
+        }
+      ],
+      "locationReference": {
+        "name": "元中都宫城遗址参照",
+        "coordinates": [
+          114.6212824,
+          41.2931793
+        ],
+        "originalCoordinates": [
+          114.72,
+          41.159
+        ],
+        "coordinateSystem": "WGS84",
+        "note": "改至已核查遗址参照；保留原持久化标识。"
+      },
+      "mapDisplayName": "元中都"
     },
     {
       "lat": 30.451,
@@ -13120,7 +14689,8 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapDisplayName": "江州"
     },
     {
       "lat": 32.781,
@@ -13289,8 +14859,8 @@
       "boundaryRelations": []
     },
     {
-      "lat": 32.875,
-      "lng": 117.561,
+      "lat": 32.87695,
+      "lng": 117.54155,
       "admin": "安徽省滁州市凤阳县",
       "siteNames": [
         "凤阳"
@@ -13338,7 +14908,7 @@
       "sourceEra": "明清及同期",
       "sourceSite": "凤阳",
       "sourceAncientName": "中都凤阳府",
-      "currentPlace": "凤阳",
+      "currentPlace": "安徽凤阳 · 明中都遗址",
       "currentKey": "ancient-site:凤阳:32.87500,117.56100",
       "siteKey": "ancient-site:凤阳:32.87500,117.56100",
       "boundaryRelationNote": "古都点为明中都；凤阳府城范围是另一城址，两者不能合并。",
@@ -13350,21 +14920,79 @@
           "control": "明清",
           "kind": "明清重建城界",
           "city": "凤阳"
+        },
+        {
+          "id": "site-refinement-osm-way-395991692",
+          "name": "明中都 · 西南现存城垣",
+          "period": "明",
+          "control": "明",
+          "kind": "局部遗存参照",
+          "city": "凤阳"
+        },
+        {
+          "id": "site-refinement-osm-way-1218976259",
+          "name": "明中都 · 午门遗址",
+          "period": "明",
+          "control": "明",
+          "kind": "局部遗存参照",
+          "city": "凤阳"
+        },
+        {
+          "id": "site-refinement-osm-way-1303337026",
+          "name": "明中都 · 西侧建筑遗存（公开标绘）",
+          "period": "明",
+          "control": "明",
+          "kind": "局部遗存参照",
+          "city": "凤阳"
+        },
+        {
+          "id": "site-refinement-osm-way-1303337027",
+          "name": "明中都 · 中轴北段建筑遗存（公开标绘）",
+          "period": "明",
+          "control": "明",
+          "kind": "局部遗存参照",
+          "city": "凤阳"
+        },
+        {
+          "id": "site-refinement-osm-way-1303337045",
+          "name": "明中都 · 东侧建筑遗存（公开标绘）",
+          "period": "明",
+          "control": "明",
+          "kind": "局部遗存参照",
+          "city": "凤阳"
         }
       ],
       "boundaryAudit": {
         "status": "已建立按朝代对应的范围",
-        "pointKind": "城址／城市参照点",
+        "pointKind": "明中都宫城遗址参照",
         "note": "古都点为明中都；凤阳府城范围是另一城址，两者不能合并。"
       },
       "siteOrganization": {
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
-      }
+      },
+      "locationReference": {
+        "name": "明中都宫城遗址内参照",
+        "coordinates": [
+          117.54155,
+          32.87695
+        ],
+        "originalCoordinates": [
+          117.561,
+          32.875
+        ],
+        "coordinateSystem": "WGS84",
+        "sourceUrls": [
+          "https://www.dpm.org.cn/learing_detail/257548.html",
+          "https://www.openstreetmap.org/way/1218976259"
+        ],
+        "note": "古都点移至明中都宫城内，后世凤阳府城范围仍独立显示；保留原siteKey/currentKey。"
+      },
+      "mapDisplayName": "明中都"
     },
     {
-      "lat": 43.35,
-      "lng": 117.52,
+      "lat": 43.2547,
+      "lng": 116.46208,
       "admin": "内蒙古自治区赤峰市克什克腾旗",
       "siteNames": [
         "应昌"
@@ -13424,7 +15052,45 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [
+        {
+          "id": "yuan-northern-osm-way-671297755",
+          "name": "应昌城 · 外城城垣",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "应昌"
+        },
+        {
+          "id": "yuan-northern-osm-way-1546355466",
+          "name": "应昌城 · 西门瓮城",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "应昌"
+        },
+        {
+          "id": "yuan-northern-osm-way-1546355468",
+          "name": "应昌城 · 东门瓮城",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "应昌"
+        }
+      ],
+      "locationReference": {
+        "name": "应昌城外城内部参照",
+        "coordinates": [
+          116.46208,
+          43.2547
+        ],
+        "originalCoordinates": [
+          117.52,
+          43.35
+        ],
+        "coordinateSystem": "WGS84",
+        "note": "改至已核查遗址参照；保留原持久化标识。"
+      }
     },
     {
       "lat": 34.3416,
@@ -14129,7 +15795,8 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapDisplayName": "衡州"
     },
     {
       "lat": 23.391,
@@ -14257,7 +15924,8 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapDisplayName": "永安州"
     },
     {
       "lat": 23.3941,
@@ -14321,7 +15989,8 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapDisplayName": "秀京"
     },
     {
       "lat": 25.6065,
@@ -14834,7 +16503,24 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [
+        {
+          "id": "site-refinement-osm-way-418286621",
+          "name": "三星堆 · 南部局部遗址标绘",
+          "period": "夏商",
+          "control": "夏商",
+          "kind": "局部遗存参照",
+          "city": "三星堆遗址"
+        },
+        {
+          "id": "site-refinement-osm-node-11638009417",
+          "name": "三星堆 · 城墙遗存参照点",
+          "period": "夏商",
+          "control": "夏商",
+          "kind": "局部遗存参照",
+          "city": "三星堆遗址"
+        }
+      ]
     },
     {
       "name": "金沙遗址",
@@ -16583,21 +18269,97 @@
       "categoryCode": "S",
       "sourceOrder": 22,
       "siteKey": "ancient-site:燕下都:39.34600,115.53000",
-      "lat": 39.346,
-      "lng": 115.53,
+      "lat": 39.2955999,
+      "lng": 115.5660224,
       "parentName": "燕下都",
       "currentPlace": "燕下都",
       "currentKey": "ancient-site:燕下都:39.34600,115.53000",
       "boundaryAudit": {
-        "status": "本条朝代暂无已接入的对应范围",
-        "pointKind": "城市／城址区域参照",
-        "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
+        "status": "已关联东城图示范围、西城残墙及台基参照",
+        "pointKind": "东城武阳台基址参照",
+        "note": "范围资料性质分别标明；西城缺失南垣未强行闭合。"
       },
       "siteReference": {
-        "name": "燕下都",
-        "kind": "城市／城址区域参照",
-        "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+        "name": "燕下都·武阳台基址参照",
+        "kind": "遗址基址参照",
+        "coordinates": [
+          115.5660224,
+          39.2955999
+        ],
+        "note": "校核至燕下都东城武阳台基址；原参照点偏北，近易县县城。保留原siteKey以兼容已有打卡。"
+      },
+      "boundaryRelations": [
+        {
+          "id": "yanxiadu-east-city",
+          "name": "燕下都·东城（图示范围）",
+          "period": "周",
+          "control": "周",
+          "kind": "城址图示范围"
+        },
+        {
+          "id": "yanxiadu-west-visible-wall",
+          "name": "燕下都·西城北、西及南垣残段（图示）",
+          "period": "周",
+          "control": "周",
+          "kind": "城墙图示线"
+        },
+        {
+          "id": "yanxiadu-late-cross-wall",
+          "name": "燕下都·东城横隔墙（晚期改造）",
+          "period": "周",
+          "control": "周",
+          "kind": "城墙图示线"
+        },
+        {
+          "id": "yanxiadu-zhanggong",
+          "name": "燕下都·张公台（图示参照）",
+          "period": "周",
+          "control": "周",
+          "kind": "遗迹／墓区图示参照"
+        },
+        {
+          "id": "yanxiadu-wangjing",
+          "name": "燕下都·望景台（图示参照）",
+          "period": "周",
+          "control": "周",
+          "kind": "遗迹／墓区图示参照"
+        },
+        {
+          "id": "yanxiadu-xuliang",
+          "name": "燕下都·虚粮冢墓区（图示参照）",
+          "period": "周",
+          "control": "周",
+          "kind": "遗迹／墓区图示参照"
+        },
+        {
+          "id": "yanxiadu-jiunutai",
+          "name": "燕下都·九女台墓区（图示参照）",
+          "period": "周",
+          "control": "周",
+          "kind": "遗迹／墓区图示参照"
+        },
+        {
+          "id": "yanxiadu-yunliang",
+          "name": "燕下都·运粮河古河道（图示）",
+          "period": "周",
+          "control": "周",
+          "kind": "古河道图示"
+        },
+        {
+          "id": "yanxiadu-wuyang",
+          "name": "燕下都·武阳台基址（现状参照）",
+          "period": "周",
+          "control": "周",
+          "kind": "台基现状参照"
+        },
+        {
+          "id": "yanxiadu-laomu",
+          "name": "燕下都·老姆台基址（现状参照）",
+          "period": "周",
+          "control": "周",
+          "kind": "台基现状参照"
+        }
+      ]
     },
     {
       "name": "襄平 · 辽阳",
@@ -16687,7 +18449,8 @@
         "name": "闻喜",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "绛"
     },
     {
       "name": "新田 · 侯马",
@@ -16717,7 +18480,8 @@
         "name": "侯马",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "新田"
     },
     {
       "name": "平阳 · 宝鸡",
@@ -16869,7 +18633,8 @@
         "name": "华县",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "棫林"
     },
     {
       "name": "新郑 · 新郑 · 郑",
@@ -17115,7 +18880,8 @@
         "name": "淇县",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "朝歌"
     },
     {
       "name": "帝丘 · 濮阳",
@@ -17265,7 +19031,8 @@
         "name": "凤台",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "州来"
     },
     {
       "name": "郢·纪南城 · 郢都纪南城",
@@ -17423,7 +19190,8 @@
         "name": "诸暨",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "埤中"
     },
     {
       "name": "会稽 · 绍兴",
@@ -18043,7 +19811,8 @@
         "name": "徐州",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "彭城"
     },
     {
       "name": "南郑",
@@ -20615,7 +22384,8 @@
         "name": "离石",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "左国城"
     },
     {
       "name": "平阳 · 临汾 · 汉赵/前赵",
@@ -20778,7 +22548,8 @@
         "name": "武威",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "姑臧"
     },
     {
       "name": "龙城 · 朝阳 · 前燕",
@@ -20808,7 +22579,8 @@
         "name": "朝阳",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "龙城"
     },
     {
       "name": "蓟 · 北京 · 前燕",
@@ -21014,7 +22786,8 @@
         "name": "朝阳",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "龙城"
     },
     {
       "name": "长子",
@@ -21256,7 +23029,8 @@
         "name": "临夏",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "枹罕"
     },
     {
       "name": "姑臧 · 武威 · 后凉",
@@ -21286,7 +23060,8 @@
         "name": "武威",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "姑臧"
     },
     {
       "name": "乐都 · 乐都 · 南凉",
@@ -21346,7 +23121,8 @@
         "name": "西宁",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "西平"
     },
     {
       "name": "乐都 · 乐都 · 南凉",
@@ -21466,7 +23242,8 @@
         "name": "武威",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "姑臧"
     },
     {
       "name": "滑台 · 滑县 · 南燕",
@@ -21556,7 +23333,8 @@
         "name": "朝阳",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "龙城"
     },
     {
       "name": "统万城",
@@ -21572,8 +23350,8 @@
       "categoryCode": "P",
       "sourceOrder": 112,
       "siteKey": "ancient-site:统万城:37.99000,108.85000",
-      "lat": 37.99,
-      "lng": 108.85,
+      "lat": 38.00076199053286,
+      "lng": 108.8519811630249,
       "parentName": "统万城",
       "currentPlace": "统万城",
       "currentKey": "ancient-site:统万城:37.99000,108.85000",
@@ -21583,10 +23361,39 @@
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
       },
       "siteReference": {
-        "name": "统万城",
-        "kind": "城市／城址区域参照",
-        "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+        "name": "统万城西城城内参照",
+        "coordinates": [
+          108.8519811630249,
+          38.00076199053286
+        ],
+        "kind": "城内参照"
+      },
+      "boundaryRelations": [
+        {
+          "id": "tongwan-west-city",
+          "name": "统万城 · 西城",
+          "period": "魏晋南北朝",
+          "control": "魏晋南北朝",
+          "kind": "城垣／遗存参照",
+          "city": "统万城"
+        },
+        {
+          "id": "tongwan-west-gate-reference",
+          "name": "统万城 · 西门遗址（参照）",
+          "period": "魏晋南北朝",
+          "control": "魏晋南北朝",
+          "kind": "城垣／遗存参照",
+          "city": "统万城"
+        },
+        {
+          "id": "tongwan-southwest-corner-reference",
+          "name": "统万城 · 西南隅台（参照）",
+          "period": "魏晋南北朝",
+          "control": "魏晋南北朝",
+          "kind": "城垣／遗存参照",
+          "city": "统万城"
+        }
+      ]
     },
     {
       "name": "长安 · 汉长安城 · 胡夏",
@@ -22913,7 +24720,8 @@
         "name": "朔州",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "马邑"
     },
     {
       "name": "朔方",
@@ -25121,7 +26929,41 @@
         "name": "五女山城",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "boundaryRelations": [
+        {
+          "id": "goguryeo-osm-6035717228",
+          "name": "五女山城 · 哨所遗址",
+          "period": "秦汉",
+          "control": "秦汉",
+          "kind": "遗存地点参照",
+          "city": "五女山城"
+        },
+        {
+          "id": "goguryeo-osm-6035717229",
+          "name": "五女山城 · 城墙遗址",
+          "period": "秦汉",
+          "control": "秦汉",
+          "kind": "遗存地点参照",
+          "city": "五女山城"
+        },
+        {
+          "id": "goguryeo-osm-6035717232",
+          "name": "五女山城 · 点将台",
+          "period": "秦汉",
+          "control": "秦汉",
+          "kind": "遗存地点参照",
+          "city": "五女山城"
+        },
+        {
+          "id": "goguryeo-osm-6035717233",
+          "name": "五女山城 · 三号大型建筑基址",
+          "period": "秦汉",
+          "control": "秦汉",
+          "kind": "遗存地点参照",
+          "city": "五女山城"
+        }
+      ]
     },
     {
       "name": "国内城 · 集安国内城",
@@ -25137,8 +26979,8 @@
       "categoryCode": "P",
       "sourceOrder": 157,
       "siteKey": "ancient-site:集安国内城:41.12500,126.19500",
-      "lat": 41.125,
-      "lng": 126.195,
+      "lat": 41.1207,
+      "lng": 126.1777,
       "parentName": "集安国内城",
       "currentPlace": "集安国内城",
       "currentKey": "ancient-site:集安国内城:41.12500,126.19500",
@@ -25148,10 +26990,79 @@
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
       },
       "siteReference": {
-        "name": "集安国内城",
-        "kind": "城市／城址区域参照",
-        "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+        "name": "国内城城内参照",
+        "coordinates": [
+          126.1777,
+          41.1207
+        ],
+        "kind": "城内参照"
+      },
+      "boundaryRelations": [
+        {
+          "id": "goguryeo-osm-919975550",
+          "name": "国内城 · 城墙遗存",
+          "period": "秦汉",
+          "control": "秦汉",
+          "kind": "城墙／遗址范围",
+          "city": "集安国内城"
+        },
+        {
+          "id": "goguryeo-osm-919975551",
+          "name": "国内城 · 城墙遗存",
+          "period": "秦汉",
+          "control": "秦汉",
+          "kind": "城墙／遗址范围",
+          "city": "集安国内城"
+        },
+        {
+          "id": "goguryeo-osm-919975552",
+          "name": "国内城 · 城墙遗存",
+          "period": "秦汉",
+          "control": "秦汉",
+          "kind": "城墙／遗址范围",
+          "city": "集安国内城"
+        },
+        {
+          "id": "goguryeo-osm-919975553",
+          "name": "国内城 · 城墙遗存",
+          "period": "秦汉",
+          "control": "秦汉",
+          "kind": "城墙／遗址范围",
+          "city": "集安国内城"
+        },
+        {
+          "id": "goguryeo-osm-919975554",
+          "name": "国内城 · 城墙遗存",
+          "period": "秦汉",
+          "control": "秦汉",
+          "kind": "城墙／遗址范围",
+          "city": "集安国内城"
+        },
+        {
+          "id": "goguryeo-osm-919975555",
+          "name": "国内城 · 城墙遗存",
+          "period": "秦汉",
+          "control": "秦汉",
+          "kind": "城墙／遗址范围",
+          "city": "集安国内城"
+        },
+        {
+          "id": "goguryeo-osm-919975556",
+          "name": "国内城 · 城墙遗存",
+          "period": "秦汉",
+          "control": "秦汉",
+          "kind": "城墙／遗址范围",
+          "city": "集安国内城"
+        },
+        {
+          "id": "goguryeo-osm-1339972158",
+          "name": "国内城 · 城墙遗存",
+          "period": "秦汉",
+          "control": "秦汉",
+          "kind": "城墙／遗址范围",
+          "city": "集安国内城"
+        }
+      ]
     },
     {
       "name": "丸都山城 · 集安丸都山城",
@@ -25181,7 +27092,8 @@
         "name": "集安丸都山城",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "boundaryRelations": []
     },
     {
       "name": "平壤",
@@ -25211,7 +27123,65 @@
         "name": "平壤",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "boundaryRelations": [
+        {
+          "id": "goguryeo-osm-42918691",
+          "name": "大城山城 · 城墙",
+          "period": "魏晋南北朝",
+          "control": "魏晋南北朝",
+          "kind": "城墙／遗址范围",
+          "city": "平壤"
+        },
+        {
+          "id": "goguryeo-osm-42918692",
+          "name": "安鹤宫遗址",
+          "period": "魏晋南北朝",
+          "control": "魏晋南北朝",
+          "kind": "城墙／遗址范围",
+          "city": "平壤"
+        },
+        {
+          "id": "goguryeo-osm-1222100886",
+          "name": "大城山城 · 南门（复建）",
+          "period": "魏晋南北朝",
+          "control": "魏晋南北朝",
+          "kind": "城墙／遗址范围",
+          "city": "平壤"
+        },
+        {
+          "id": "goguryeo-unesco-tongmyong",
+          "name": "东明王陵与真坡里墓群（位置参照）",
+          "period": "魏晋南北朝",
+          "control": "魏晋南北朝",
+          "kind": "遗存地点参照",
+          "city": "平壤"
+        },
+        {
+          "id": "goguryeo-unesco-kangso",
+          "name": "江西三墓（位置参照）",
+          "period": "魏晋南北朝",
+          "control": "魏晋南北朝",
+          "kind": "遗存地点参照",
+          "city": "平壤"
+        },
+        {
+          "id": "goguryeo-unesco-tokhung",
+          "name": "德兴里古墓（位置参照）",
+          "period": "魏晋南北朝",
+          "control": "魏晋南北朝",
+          "kind": "遗存地点参照",
+          "city": "平壤"
+        },
+        {
+          "id": "goguryeo-unesco-anak3",
+          "name": "安岳三号墓（位置参照）",
+          "period": "魏晋南北朝",
+          "control": "魏晋南北朝",
+          "kind": "遗存地点参照",
+          "city": "平壤"
+        }
+      ]
     },
     {
       "name": "高昌 · 吐鲁番",
@@ -25451,7 +27421,8 @@
         "name": "巍山",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "蒙舍"
     },
     {
       "name": "太和城",
@@ -25530,7 +27501,7 @@
       "lat": 43.3727,
       "lng": 128.232,
       "parentName": "敦化",
-      "currentPlace": "敦化",
+      "currentPlace": "吉林敦化地区",
       "currentKey": "ancient-site:敦化:43.37270,128.23200",
       "boundaryAudit": {
         "status": "本条朝代暂无已接入的对应范围",
@@ -25538,10 +27509,25 @@
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
       },
       "siteReference": {
-        "name": "敦化",
-        "kind": "城市／城址区域参照",
-        "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+        "name": "敦化地区参照",
+        "kind": "地望待考",
+        "coordinates": [
+          128.232,
+          43.3727
+        ],
+        "note": "渤海早期旧国地望仍有争论；敦化为地区参照，敖东城与永胜已发掘遗存主要为金代。"
+      },
+      "displayName": "渤海旧国（敦化地区参照）",
+      "boundaryRelations": [
+        {
+          "id": "dunhua-chengshanzi-reference",
+          "name": "城山子山城（地点参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "相关遗址地点参照",
+          "city": "敦化"
+        }
+      ]
     },
     {
       "name": "中京显德府 · 和龙",
@@ -25557,10 +27543,10 @@
       "categoryCode": "P",
       "sourceOrder": 171,
       "siteKey": "ancient-site:和龙:42.54670,129.01000",
-      "lat": 42.5467,
-      "lng": 129.01,
+      "lat": 42.7111298708153,
+      "lng": 129.1485856672448,
       "parentName": "和龙",
-      "currentPlace": "和龙",
+      "currentPlace": "吉林和龙 · 西古城遗址",
       "currentKey": "ancient-site:和龙:42.54670,129.01000",
       "boundaryAudit": {
         "status": "本条朝代暂无已接入的对应范围",
@@ -25568,10 +27554,32 @@
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
       },
       "siteReference": {
-        "name": "和龙",
-        "kind": "城市／城址区域参照",
-        "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+        "name": "西古城内城参照",
+        "coordinates": [
+          129.1485856672448,
+          42.7111298708153
+        ],
+        "kind": "渤海城址遗存参照"
+      },
+      "boundaryRelations": [
+        {
+          "id": "bohai-other-xigu-inner",
+          "name": "渤海中京显德府 · 西古城内城",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "城址范围／遗存参照",
+          "city": "和龙"
+        },
+        {
+          "id": "bohai-other-xigu-outer-inferred",
+          "name": "渤海中京显德府 · 西古城外城（尺寸推定）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "城址范围／遗存参照",
+          "city": "和龙"
+        }
+      ],
+      "displayName": "渤海中京显德府"
     },
     {
       "name": "上京龙泉府 · 宁安上京 · 渤海国",
@@ -25590,7 +27598,7 @@
       "lat": 44.13247373,
       "lng": 129.14307152,
       "parentName": "宁安上京",
-      "currentPlace": "渤海上京龙泉府（宫城区参照）",
+      "currentPlace": "黑龙江宁安 · 上京龙泉府遗址",
       "currentKey": "ancient-site:宁安上京:44.11500,129.21000",
       "coordinateNote": "随城址详图重新配准调整到宫城范围内；保留原打卡键。",
       "coordinateSource": "https://www.hlj.gov.cn/hlj/c108411/202110/31182525/files/a5a0b47f8f709901864104e4cf2bb558.pdf#page=67",
@@ -25738,6 +27746,86 @@
           "control": "隋唐",
           "kind": "宫区或遗址构件",
           "city": "渤海上京龙泉府"
+        },
+        {
+          "id": "site-refinement-bohai-palace-1",
+          "name": "渤海上京 · 第1号宫殿（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-palace-2",
+          "name": "渤海上京 · 第2号宫殿（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-palace-3",
+          "name": "渤海上京 · 第3号宫殿（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-palace-4",
+          "name": "渤海上京 · 第4号宫殿（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-palace-5",
+          "name": "渤海上京 · 第5号宫殿（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-gate-south",
+          "name": "渤海上京 · 宫城南门（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-gate-north",
+          "name": "渤海上京 · 宫城北门（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-gate-east",
+          "name": "渤海上京 · 宫城东门（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-gate-west",
+          "name": "渤海上京 · 宫城西门（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-gate-imperial-south",
+          "name": "渤海上京 · 皇城南门（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
         }
       ],
       "boundaryAudit": {
@@ -25750,7 +27838,8 @@
         "name": "渤海上京龙泉府（宫城区参照）",
         "kind": "有说明的参照点",
         "note": "宫城区域参照（卫星影像对照，非实测中心）"
-      }
+      },
+      "displayName": "渤海上京龙泉府"
     },
     {
       "name": "东京龙原府 · 珲春",
@@ -25766,10 +27855,10 @@
       "categoryCode": "P",
       "sourceOrder": 173,
       "siteKey": "ancient-site:珲春:42.86250,130.36500",
-      "lat": 42.8625,
-      "lng": 130.365,
+      "lat": 42.85864867829999,
+      "lng": 130.2830672264099,
       "parentName": "珲春",
-      "currentPlace": "珲春",
+      "currentPlace": "吉林珲春 · 八连城遗址",
       "currentKey": "ancient-site:珲春:42.86250,130.36500",
       "boundaryAudit": {
         "status": "本条朝代暂无已接入的对应范围",
@@ -25777,10 +27866,40 @@
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
       },
       "siteReference": {
-        "name": "珲春",
-        "kind": "城市／城址区域参照",
-        "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+        "name": "八连城内城参照",
+        "coordinates": [
+          130.2830672264099,
+          42.85864867829999
+        ],
+        "kind": "渤海城址遗存参照"
+      },
+      "boundaryRelations": [
+        {
+          "id": "bohai-other-balian-outer",
+          "name": "渤海东京龙原府 · 八连城外城",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "城址范围／遗存参照",
+          "city": "珲春"
+        },
+        {
+          "id": "bohai-other-balian-inner",
+          "name": "渤海东京龙原府 · 八连城内城（影像参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "城址范围／遗存参照",
+          "city": "珲春"
+        },
+        {
+          "id": "bohai-other-balian-inner-south",
+          "name": "渤海东京 · 八连城内城南门（参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "城址范围／遗存参照",
+          "city": "珲春"
+        }
+      ],
+      "displayName": "渤海东京龙原府"
     },
     {
       "name": "上京龙泉府 · 宁安上京 · 渤海国",
@@ -25799,7 +27918,7 @@
       "lat": 44.13247373,
       "lng": 129.14307152,
       "parentName": "宁安上京",
-      "currentPlace": "渤海上京龙泉府（宫城区参照）",
+      "currentPlace": "黑龙江宁安 · 上京龙泉府遗址",
       "currentKey": "ancient-site:宁安上京:44.11500,129.21000",
       "coordinateNote": "随城址详图重新配准调整到宫城范围内；保留原打卡键。",
       "coordinateSource": "https://www.hlj.gov.cn/hlj/c108411/202110/31182525/files/a5a0b47f8f709901864104e4cf2bb558.pdf#page=67",
@@ -25947,6 +28066,86 @@
           "control": "隋唐",
           "kind": "宫区或遗址构件",
           "city": "渤海上京龙泉府"
+        },
+        {
+          "id": "site-refinement-bohai-palace-1",
+          "name": "渤海上京 · 第1号宫殿（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-palace-2",
+          "name": "渤海上京 · 第2号宫殿（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-palace-3",
+          "name": "渤海上京 · 第3号宫殿（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-palace-4",
+          "name": "渤海上京 · 第4号宫殿（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-palace-5",
+          "name": "渤海上京 · 第5号宫殿（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-gate-south",
+          "name": "渤海上京 · 宫城南门（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-gate-north",
+          "name": "渤海上京 · 宫城北门（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-gate-east",
+          "name": "渤海上京 · 宫城东门（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-gate-west",
+          "name": "渤海上京 · 宫城西门（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
+        },
+        {
+          "id": "site-refinement-bohai-gate-imperial-south",
+          "name": "渤海上京 · 皇城南门（图示参照）",
+          "period": "隋唐",
+          "control": "隋唐",
+          "kind": "局部遗存参照",
+          "city": "宁安上京"
         }
       ],
       "boundaryAudit": {
@@ -25959,7 +28158,8 @@
         "name": "渤海上京龙泉府（宫城区参照）",
         "kind": "有说明的参照点",
         "note": "宫城区域参照（卫星影像对照，非实测中心）"
-      }
+      },
+      "displayName": "渤海上京龙泉府"
     },
     {
       "name": "于都斤山 · 鄂尔浑河谷 · 东突厥",
@@ -26659,6 +28859,30 @@
           "control": "五代十国",
           "kind": "遗址或现代展示",
           "city": "杭州"
+        },
+        {
+          "id": "hangzhou-osm-11542293992",
+          "name": "吴越 · 梵天寺经幢",
+          "period": "五代十国",
+          "control": "五代十国",
+          "kind": "遗迹地点",
+          "city": "杭州"
+        },
+        {
+          "id": "hangzhou-osm-12441248872",
+          "name": "吴越 · 天龙寺造像",
+          "period": "五代十国",
+          "control": "五代十国",
+          "kind": "遗迹地点",
+          "city": "杭州"
+        },
+        {
+          "id": "hangzhou-osm-13990093737",
+          "name": "吴越 · 郊坛遗址（参照）",
+          "period": "五代十国",
+          "control": "五代十国",
+          "kind": "遗迹地点",
+          "city": "杭州"
         }
       ],
       "coordinatePrecision": "南宋临安府治遗址为杭州历史城区定位参照；不是吴越王宫或南宋皇城确址。",
@@ -26666,7 +28890,8 @@
         "name": "杭州",
         "kind": "有说明的参照点",
         "note": "南宋临安府治遗址为杭州历史城区定位参照；不是吴越王宫或南宋皇城确址。"
-      }
+      },
+      "displayName": "吴越钱塘西府 · 杭州"
     },
     {
       "name": "越州 · 绍兴",
@@ -26756,7 +28981,8 @@
         "name": "建瓯",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "建州"
     },
     {
       "name": "江陵府 · 荆南江陵",
@@ -27170,7 +29396,8 @@
         "name": "大名",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "北京大名府"
     },
     {
       "name": "南京应天府 · 商丘",
@@ -27348,6 +29575,30 @@
           "control": "宋辽金西夏",
           "kind": "遗址或现代展示",
           "city": "杭州"
+        },
+        {
+          "id": "hangzhou-osm-765317553",
+          "name": "南宋临安 · 太庙墙基",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "遗迹地点",
+          "city": "杭州"
+        },
+        {
+          "id": "hangzhou-osm-1550545898",
+          "name": "南宋临安 · 太庙遗迹区（公开标绘）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "公开遗迹区参照",
+          "city": "杭州"
+        },
+        {
+          "id": "hangzhou-osm-1254131846",
+          "name": "南宋临安 · 钱塘门遗址",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "遗迹地点",
+          "city": "杭州"
         }
       ],
       "coordinatePrecision": "南宋临安府治遗址为杭州历史城区定位参照；不是吴越王宫或南宋皇城确址。",
@@ -27355,7 +29606,8 @@
         "name": "杭州",
         "kind": "有说明的参照点",
         "note": "南宋临安府治遗址为杭州历史城区定位参照；不是吴越王宫或南宋皇城确址。"
-      }
+      },
+      "displayName": "南宋临安府 · 杭州"
     },
     {
       "name": "福州 · 福州 · 南宋",
@@ -27442,15 +29694,50 @@
         "https://commons.wikimedia.org/wiki/Category:Liao_Shangjing_site"
       ],
       "boundaryAudit": {
-        "status": "本条朝代暂无已接入的对应范围",
-        "pointKind": "城市／城址区域参照",
-        "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
+        "status": "部分遗存已接入，完整城界仍需考古图件配准",
+        "pointKind": "既有城市／城址参照点",
+        "note": "辽五京核查：已接入现状遗存与展示范围，性质逐项区分；未取得完整城界者不以明清城墙、现代公园或后金城址替代。"
       },
       "siteReference": {
         "name": "上京临潢",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "boundaryRelations": [
+        {
+          "id": "liao-five-way-416533409",
+          "city": "上京临潢",
+          "name": "辽上京 · 皇城（现状城垣范围参照）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "皇城范围参照"
+        },
+        {
+          "id": "liao-five-node-14257340705",
+          "city": "上京临潢",
+          "name": "辽上京 · 西山坡佛寺遗址",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "遗址参照点"
+        },
+        {
+          "id": "liao-five-node-14257340706",
+          "city": "上京临潢",
+          "name": "辽上京 · 乾德门（西门参照）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "门址参照点"
+        },
+        {
+          "id": "liao-five-node-6366690521",
+          "city": "上京临潢",
+          "name": "辽上京周边 · 北塔",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "古塔参照点"
+        }
+      ],
+      "displayName": "辽上京临潢府"
     },
     {
       "name": "大定府 · 中京大定 · 辽",
@@ -27466,21 +29753,60 @@
       "categoryCode": "S",
       "sourceOrder": 216,
       "siteKey": "ancient-site:中京大定:41.60000,119.33000",
-      "lat": 41.6,
-      "lng": 119.33,
+      "lat": 41.5697196125,
+      "lng": 119.1554531375,
       "parentName": "中京大定",
       "currentPlace": "中京大定",
       "currentKey": "ancient-site:中京大定:41.60000,119.33000",
       "boundaryAudit": {
-        "status": "本条朝代暂无已接入的对应范围",
-        "pointKind": "城市／城址区域参照",
-        "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
+        "status": "部分遗存已接入，完整城界仍需考古图件配准",
+        "pointKind": "大明塔遗址参照点",
+        "note": "辽五京核查：已接入现状遗存与展示范围，性质逐项区分；未取得完整城界者不以明清城墙、现代公园或后金城址替代。"
       },
       "siteReference": {
-        "name": "中京大定",
-        "kind": "城市／城址区域参照",
-        "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+        "name": "辽中京大明塔参照",
+        "kind": "现存古塔定位参照",
+        "coordinates": [
+          119.1554531375,
+          41.5697196125
+        ],
+        "note": "原区域点偏东约15公里，更正至遗址内大明塔；不是宫城或全城中心。"
+      },
+      "boundaryRelations": [
+        {
+          "id": "liao-five-way-1026574600",
+          "city": "中京大定",
+          "name": "辽中京 · 大明塔遗址公园（现展示区）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现代展示区"
+        },
+        {
+          "id": "liao-five-way-1026574598",
+          "city": "中京大定",
+          "name": "辽中京 · 大明塔（释迦佛舍利塔）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现存古塔"
+        },
+        {
+          "id": "liao-five-node-13731517948",
+          "city": "中京大定",
+          "name": "辽中京遗址 · 小塔（辽金遗存参照）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "古塔参照点"
+        },
+        {
+          "id": "liao-five-node-13731517949",
+          "city": "中京大定",
+          "name": "辽中京周边 · 半截塔",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "古塔参照点"
+        }
+      ],
+      "displayName": "辽中京大定府"
     },
     {
       "name": "析津府 · 南京析津",
@@ -27543,14 +29869,23 @@
       "currentPlace": "辽阳",
       "currentKey": "ancient-site:辽阳:41.26940,123.17280",
       "boundaryAudit": {
-        "status": "本条朝代暂无已接入的对应范围",
-        "pointKind": "城市／城址区域参照",
-        "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
+        "status": "部分遗存已接入，完整城界仍需考古图件配准",
+        "pointKind": "既有城市／城址参照点",
+        "note": "辽五京核查：已接入现状遗存与展示范围，性质逐项区分；未取得完整城界者不以明清城墙、现代公园或后金城址替代。"
       },
       "legacySiteKeys": [
         "ancient-site:东京辽阳:41.26940,123.17280"
       ],
-      "boundaryRelations": [],
+      "boundaryRelations": [
+        {
+          "id": "liao-five-way-621979376",
+          "city": "辽阳",
+          "name": "辽东京辽阳府 · 白塔（现存建筑）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现存古塔"
+        }
+      ],
       "siteReference": {
         "name": "辽阳",
         "kind": "城市／城址区域参照",
@@ -27577,9 +29912,9 @@
       "currentPlace": "西京大同",
       "currentKey": "ancient-site:西京大同:40.07680,113.30010",
       "boundaryAudit": {
-        "status": "已按本条朝代建立对应；范围性质见各条说明",
-        "pointKind": "有说明的参照点",
-        "note": "辽金西京华严寺现寺院范围为历史城区定位参照；不代表辽金宫城中心。"
+        "status": "部分遗存已接入，完整城界仍需考古图件配准",
+        "pointKind": "既有城市／城址参照点",
+        "note": "辽五京核查：已接入现状遗存与展示范围，性质逐项区分；未取得完整城界者不以明清城墙、现代公园或后金城址替代。"
       },
       "boundaryRelations": [
         {
@@ -27597,6 +29932,54 @@
           "control": "宋辽金西夏",
           "kind": "遗址或现代展示",
           "city": "大同"
+        },
+        {
+          "id": "liao-five-way-1193258833",
+          "city": "西京大同",
+          "name": "辽金西京 · 华严寺大雄宝殿（现存建筑）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现存殿阁"
+        },
+        {
+          "id": "liao-five-way-1193265713",
+          "city": "西京大同",
+          "name": "辽金西京 · 华严寺薄伽教藏殿（现存建筑）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现存殿阁"
+        },
+        {
+          "id": "liao-five-way-1358507433",
+          "city": "西京大同",
+          "name": "辽金西京 · 善化寺天王殿（现存建筑）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现存殿阁"
+        },
+        {
+          "id": "liao-five-way-1358507434",
+          "city": "西京大同",
+          "name": "辽金西京 · 善化寺三圣殿（现存建筑）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现存殿阁"
+        },
+        {
+          "id": "liao-five-way-1358507435",
+          "city": "西京大同",
+          "name": "辽金西京 · 善化寺大雄宝殿（现存建筑）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现存殿阁"
+        },
+        {
+          "id": "liao-five-way-1358507436",
+          "city": "西京大同",
+          "name": "辽金西京 · 善化寺普贤阁（现存建筑）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现存殿阁"
         }
       ],
       "coordinatePrecision": "辽金西京华严寺现寺院范围为历史城区定位参照；不代表辽金宫城中心。",
@@ -27604,7 +29987,8 @@
         "name": "西京大同",
         "kind": "有说明的参照点",
         "note": "辽金西京华严寺现寺院范围为历史城区定位参照；不代表辽金宫城中心。"
-      }
+      },
+      "displayName": "辽西京大同府"
     },
     {
       "name": "天福城 · 宁安上京",
@@ -27623,7 +30007,7 @@
       "lat": 44.13247373,
       "lng": 129.14307152,
       "parentName": "宁安上京",
-      "currentPlace": "渤海上京龙泉府（宫城区参照）",
+      "currentPlace": "黑龙江宁安 · 上京龙泉府遗址",
       "currentKey": "ancient-site:宁安上京:44.11500,129.21000",
       "coordinateNote": "随城址详图重新配准调整到宫城范围内；保留原打卡键。",
       "coordinateSource": "https://www.hlj.gov.cn/hlj/c108411/202110/31182525/files/a5a0b47f8f709901864104e4cf2bb558.pdf#page=67",
@@ -27637,7 +30021,9 @@
         "name": "渤海上京龙泉府（宫城区参照）",
         "kind": "有说明的参照点",
         "note": "宫城区域参照（卫星影像对照，非实测中心）"
-      }
+      },
+      "boundaryRelations": [],
+      "displayName": "东丹天福城"
     },
     {
       "name": "辽阳",
@@ -27683,21 +30069,52 @@
       "categoryCode": "P",
       "sourceOrder": 222,
       "siteKey": "ancient-site:兴庆府:38.48720,106.23090",
-      "lat": 38.4872,
-      "lng": 106.2309,
+      "lat": 38.46305628750001,
+      "lng": 106.2652709125,
       "parentName": "兴庆府",
       "currentPlace": "兴庆府",
       "currentKey": "ancient-site:兴庆府:38.48720,106.23090",
       "boundaryAudit": {
-        "status": "本条朝代暂无已接入的对应范围",
-        "pointKind": "城市／城址区域参照",
-        "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
+        "status": "对应遗存与范围已部分接入",
+        "pointKind": "明确参照对象的遗址定位点",
+        "note": "原区域坐标已更正；展示用地、现存建筑及城垣衔接面分别说明资料性质。"
       },
       "siteReference": {
-        "name": "兴庆府",
-        "kind": "城市／城址区域参照",
-        "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+        "name": "西夏兴庆府承天寺塔参照",
+        "kind": "遗址参照",
+        "coordinates": [
+          106.2652709125,
+          38.46305628750001
+        ],
+        "note": "更正原区域参照点至可核对的历史遗址参照处；不表示全城中心，原siteKey/currentKey保持不变。"
+      },
+      "boundaryRelations": [
+        {
+          "id": "ljx-osm-way-423097097",
+          "name": "西夏兴庆府 · 承天寺（现寺院范围）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现状遗址／建筑范围",
+          "city": "兴庆府"
+        },
+        {
+          "id": "ljx-osm-way-628248642",
+          "name": "西夏兴庆府参照 · 承天寺塔（清代重建）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现状遗址／建筑范围",
+          "city": "兴庆府"
+        },
+        {
+          "id": "ljx-osm-way-627365400",
+          "name": "西夏兴庆府周边参照 · 海宝塔（现存塔）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现状遗址／建筑范围",
+          "city": "兴庆府"
+        }
+      ],
+      "displayName": "西夏兴庆府"
     },
     {
       "name": "羊苴咩城 · 羊苴咩城 · 大理国",
@@ -27743,21 +30160,68 @@
       "categoryCode": "P",
       "sourceOrder": 224,
       "siteKey": "ancient-site:会宁府:45.54000,126.97000",
-      "lat": 45.54,
-      "lng": 126.97,
+      "lat": 45.4894965,
+      "lng": 126.9727109,
       "parentName": "会宁府",
       "currentPlace": "会宁府",
       "currentKey": "ancient-site:会宁府:45.54000,126.97000",
       "boundaryAudit": {
-        "status": "本条朝代暂无已接入的对应范围",
-        "pointKind": "城市／城址区域参照",
-        "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
+        "status": "对应遗存与范围已部分接入",
+        "pointKind": "明确参照对象的遗址定位点",
+        "note": "原区域坐标已更正；展示用地、现存建筑及城垣衔接面分别说明资料性质。"
       },
       "siteReference": {
-        "name": "会宁府",
-        "kind": "城市／城址区域参照",
-        "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+        "name": "金上京皇城遗址参照",
+        "kind": "遗址参照",
+        "coordinates": [
+          126.9727109,
+          45.4894965
+        ],
+        "note": "更正原区域参照点至可核对的历史遗址参照处；不表示全城中心，原siteKey/currentKey保持不变。"
+      },
+      "boundaryRelations": [
+        {
+          "id": "ljx-jin-shangjing-north",
+          "name": "金上京 · 北城（城垣衔接参照）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "城垣衔接推定",
+          "city": "会宁府"
+        },
+        {
+          "id": "ljx-jin-shangjing-south",
+          "name": "金上京 · 南城（城垣衔接参照）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "城垣衔接推定",
+          "city": "会宁府"
+        },
+        {
+          "id": "ljx-jin-shangjing-surviving-walls",
+          "name": "金上京 · 残存城垣（原始分段）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现状遗址／建筑范围",
+          "city": "会宁府"
+        },
+        {
+          "id": "ljx-osm-way-1182463844",
+          "name": "金上京 · 皇城（现遗址展示区）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现状遗址／建筑范围",
+          "city": "会宁府"
+        },
+        {
+          "id": "ljx-osm-node-6366690591",
+          "name": "金上京周边 · 皇帝寨（地点参照）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "地点参照",
+          "city": "会宁府"
+        }
+      ],
+      "displayName": "金上京会宁府"
     },
     {
       "name": "中都大兴府 · 北京",
@@ -27859,7 +30323,8 @@
         "name": "汝南",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "蔡州"
     },
     {
       "name": "辽阳府 · 辽阳",
@@ -27881,15 +30346,25 @@
       "currentPlace": "辽阳",
       "currentKey": "ancient-site:辽阳:41.26940,123.17280",
       "boundaryAudit": {
-        "status": "本条朝代暂无已接入的对应范围",
-        "pointKind": "城市／城址区域参照",
-        "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
+        "status": "部分遗存已接入，完整城界仍需考古图件配准",
+        "pointKind": "既有城市／城址参照点",
+        "note": "辽五京核查：已接入现状遗存与展示范围，性质逐项区分；未取得完整城界者不以明清城墙、现代公园或后金城址替代。"
       },
       "siteReference": {
         "name": "辽阳",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "boundaryRelations": [
+        {
+          "id": "liao-five-way-621979376",
+          "city": "辽阳",
+          "name": "辽东京辽阳府 · 白塔（现存建筑）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现存古塔"
+        }
+      ]
     },
     {
       "name": "大定府 · 中京大定 · 金",
@@ -27905,21 +30380,60 @@
       "categoryCode": "S",
       "sourceOrder": 229,
       "siteKey": "ancient-site:中京大定:41.60000,119.33000",
-      "lat": 41.6,
-      "lng": 119.33,
+      "lat": 41.5697196125,
+      "lng": 119.1554531375,
       "parentName": "中京大定",
       "currentPlace": "中京大定",
       "currentKey": "ancient-site:中京大定:41.60000,119.33000",
       "boundaryAudit": {
-        "status": "本条朝代暂无已接入的对应范围",
-        "pointKind": "城市／城址区域参照",
-        "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
+        "status": "部分遗存已接入，完整城界仍需考古图件配准",
+        "pointKind": "大明塔遗址参照点",
+        "note": "辽五京核查：已接入现状遗存与展示范围，性质逐项区分；未取得完整城界者不以明清城墙、现代公园或后金城址替代。"
       },
       "siteReference": {
-        "name": "中京大定",
-        "kind": "城市／城址区域参照",
-        "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+        "name": "辽中京大明塔参照",
+        "kind": "现存古塔定位参照",
+        "coordinates": [
+          119.1554531375,
+          41.5697196125
+        ],
+        "note": "原区域点偏东约15公里，更正至遗址内大明塔；不是宫城或全城中心。"
+      },
+      "boundaryRelations": [
+        {
+          "id": "liao-five-way-1026574600",
+          "city": "中京大定",
+          "name": "辽中京 · 大明塔遗址公园（现展示区）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现代展示区"
+        },
+        {
+          "id": "liao-five-way-1026574598",
+          "city": "中京大定",
+          "name": "辽中京 · 大明塔（释迦佛舍利塔）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现存古塔"
+        },
+        {
+          "id": "liao-five-node-13731517948",
+          "city": "中京大定",
+          "name": "辽中京遗址 · 小塔（辽金遗存参照）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "古塔参照点"
+        },
+        {
+          "id": "liao-five-node-13731517949",
+          "city": "中京大定",
+          "name": "辽中京周边 · 半截塔",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "古塔参照点"
+        }
+      ],
+      "displayName": "金中京大定府"
     },
     {
       "name": "哈拉和林",
@@ -27935,8 +30449,8 @@
       "categoryCode": "P",
       "sourceOrder": 230,
       "siteKey": "ancient-site:哈拉和林:47.19750,102.82380",
-      "lat": 47.1975,
-      "lng": 102.8238,
+      "lat": 47.2095974,
+      "lng": 102.8475721,
       "parentName": "哈拉和林",
       "currentPlace": "哈拉和林",
       "currentKey": "ancient-site:哈拉和林:47.19750,102.82380",
@@ -27946,10 +30460,39 @@
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
       },
       "siteReference": {
-        "name": "哈拉和林",
-        "kind": "城市／城址区域参照",
-        "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+        "name": "和林古城遗址参照",
+        "coordinates": [
+          102.8475721,
+          47.2095974
+        ],
+        "kind": "遗址参照"
+      },
+      "boundaryRelations": [
+        {
+          "id": "yuan-northern-osm-way-245259484",
+          "name": "和林 · 古城遗址标绘范围",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "哈拉和林"
+        },
+        {
+          "id": "yuan-northern-osm-way-397170802",
+          "name": "和林 · 大寺院遗址（旧称窝阔台宫殿）",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "哈拉和林"
+        },
+        {
+          "id": "yuan-northern-osm-node-479377679",
+          "name": "和林 · 石龟遗存",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "哈拉和林"
+        }
+      ]
     },
     {
       "name": "开平府·上都 · 上都",
@@ -27979,7 +30522,170 @@
         "name": "上都",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "boundaryRelations": [
+        {
+          "id": "yuan-northern-osm-way-478464684",
+          "name": "上都 · 外城城垣范围",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-way-510175896",
+          "name": "上都 · 皇城城垣",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-way-1107685436",
+          "name": "上都 · 宫城城垣",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-way-1107685433",
+          "name": "上都 · 华严寺遗址",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-way-1107685434",
+          "name": "上都 · 穆清阁遗址",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-way-1107685435",
+          "name": "上都 · 大安阁基址",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-way-1107691460",
+          "name": "上都 · 乾元寺遗址",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135050203",
+          "name": "上都 · 皇城复仁门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135050212",
+          "name": "上都 · 宫城御天门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135050214",
+          "name": "上都 · 元上都明德门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101740",
+          "name": "上都 · 外城南门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101741",
+          "name": "上都 · 外城北门（东）",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101742",
+          "name": "上都 · 外城北门（西）",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101743",
+          "name": "上都 · 外城西门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101744",
+          "name": "上都 · 皇城西门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101745",
+          "name": "上都 · 皇城小西门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101746",
+          "name": "上都 · 皇城小东门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101747",
+          "name": "上都 · 皇城东门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101748",
+          "name": "上都 · 宫城东华门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101749",
+          "name": "上都 · 宫城西华门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        }
+      ],
+      "displayName": "元上都"
     },
     {
       "name": "大都 · 元大都",
@@ -28123,10 +30829,10 @@
       "categoryCode": "S",
       "sourceOrder": 233,
       "siteKey": "ancient-site:张北:41.15900,114.72000",
-      "lat": 41.159,
-      "lng": 114.72,
+      "lat": 41.2931793,
+      "lng": 114.6212824,
       "parentName": "张北",
-      "currentPlace": "张北",
+      "currentPlace": "河北张北 · 元中都遗址",
       "currentKey": "ancient-site:张北:41.15900,114.72000",
       "boundaryAudit": {
         "status": "本条朝代暂无已接入的对应范围",
@@ -28134,10 +30840,24 @@
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
       },
       "siteReference": {
-        "name": "张北",
-        "kind": "城市／城址区域参照",
-        "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+        "name": "元中都宫城遗址参照",
+        "coordinates": [
+          114.6212824,
+          41.2931793
+        ],
+        "kind": "遗址参照"
+      },
+      "boundaryRelations": [
+        {
+          "id": "yuan-northern-osm-way-361424956",
+          "name": "元中都 · 宫城城垣参照",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "张北"
+        }
+      ],
+      "displayName": "元中都"
     },
     {
       "name": "亳州 · 亳州",
@@ -28293,7 +31013,8 @@
         "name": "九江",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "江州"
     },
     {
       "name": "武昌 · 武昌 · 陈汉",
@@ -28518,10 +31239,10 @@
       "categoryCode": "S",
       "sourceOrder": 244,
       "siteKey": "ancient-site:凤阳:32.87500,117.56100",
-      "lat": 32.875,
-      "lng": 117.561,
+      "lat": 32.87695,
+      "lng": 117.54155,
       "parentName": "凤阳",
-      "currentPlace": "凤阳",
+      "currentPlace": "安徽凤阳 · 明中都遗址",
       "currentKey": "ancient-site:凤阳:32.87500,117.56100",
       "boundaryRelationNote": "古都点为明中都；凤阳府城范围是另一城址，两者不能合并。",
       "boundaryRelations": [
@@ -28532,6 +31253,46 @@
           "control": "明清",
           "kind": "明清重建城界",
           "city": "凤阳"
+        },
+        {
+          "id": "site-refinement-osm-way-395991692",
+          "name": "明中都 · 西南现存城垣",
+          "period": "明",
+          "control": "明",
+          "kind": "局部遗存参照",
+          "city": "凤阳"
+        },
+        {
+          "id": "site-refinement-osm-way-1218976259",
+          "name": "明中都 · 午门遗址",
+          "period": "明",
+          "control": "明",
+          "kind": "局部遗存参照",
+          "city": "凤阳"
+        },
+        {
+          "id": "site-refinement-osm-way-1303337026",
+          "name": "明中都 · 西侧建筑遗存（公开标绘）",
+          "period": "明",
+          "control": "明",
+          "kind": "局部遗存参照",
+          "city": "凤阳"
+        },
+        {
+          "id": "site-refinement-osm-way-1303337027",
+          "name": "明中都 · 中轴北段建筑遗存（公开标绘）",
+          "period": "明",
+          "control": "明",
+          "kind": "局部遗存参照",
+          "city": "凤阳"
+        },
+        {
+          "id": "site-refinement-osm-way-1303337045",
+          "name": "明中都 · 东侧建筑遗存（公开标绘）",
+          "period": "明",
+          "control": "明",
+          "kind": "局部遗存参照",
+          "city": "凤阳"
         }
       ],
       "boundaryAudit": {
@@ -28540,10 +31301,15 @@
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
       },
       "siteReference": {
-        "name": "凤阳",
-        "kind": "城市／城址区域参照",
-        "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+        "name": "明中都宫城遗址内参照",
+        "kind": "宫城遗址参照",
+        "coordinates": [
+          117.54155,
+          32.87695
+        ],
+        "note": "古都点移至明中都宫城内，后世凤阳府城范围仍独立显示；保留原siteKey/currentKey。"
+      },
+      "displayName": "明中都"
     },
     {
       "name": "顺天府·北京 · 北京",
@@ -28677,7 +31443,170 @@
         "name": "上都",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "boundaryRelations": [
+        {
+          "id": "yuan-northern-osm-way-478464684",
+          "name": "上都 · 外城城垣范围",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-way-510175896",
+          "name": "上都 · 皇城城垣",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-way-1107685436",
+          "name": "上都 · 宫城城垣",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-way-1107685433",
+          "name": "上都 · 华严寺遗址",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-way-1107685434",
+          "name": "上都 · 穆清阁遗址",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-way-1107685435",
+          "name": "上都 · 大安阁基址",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-way-1107691460",
+          "name": "上都 · 乾元寺遗址",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135050203",
+          "name": "上都 · 皇城复仁门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135050212",
+          "name": "上都 · 宫城御天门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135050214",
+          "name": "上都 · 元上都明德门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101740",
+          "name": "上都 · 外城南门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101741",
+          "name": "上都 · 外城北门（东）",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101742",
+          "name": "上都 · 外城北门（西）",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101743",
+          "name": "上都 · 外城西门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101744",
+          "name": "上都 · 皇城西门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101745",
+          "name": "上都 · 皇城小西门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101746",
+          "name": "上都 · 皇城小东门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101747",
+          "name": "上都 · 皇城东门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101748",
+          "name": "上都 · 宫城东华门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        },
+        {
+          "id": "yuan-northern-osm-node-10135101749",
+          "name": "上都 · 宫城西华门",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "上都"
+        }
+      ],
+      "displayName": "北元上都"
     },
     {
       "name": "应昌",
@@ -28693,8 +31622,8 @@
       "categoryCode": "P",
       "sourceOrder": 248,
       "siteKey": "ancient-site:应昌:43.35000,117.52000",
-      "lat": 43.35,
-      "lng": 117.52,
+      "lat": 43.2547,
+      "lng": 116.46208,
       "parentName": "应昌",
       "currentPlace": "应昌",
       "currentKey": "ancient-site:应昌:43.35000,117.52000",
@@ -28704,10 +31633,39 @@
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
       },
       "siteReference": {
-        "name": "应昌",
-        "kind": "城市／城址区域参照",
-        "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+        "name": "应昌城外城内部参照",
+        "coordinates": [
+          116.46208,
+          43.2547
+        ],
+        "kind": "遗址参照"
+      },
+      "boundaryRelations": [
+        {
+          "id": "yuan-northern-osm-way-671297755",
+          "name": "应昌城 · 外城城垣",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "应昌"
+        },
+        {
+          "id": "yuan-northern-osm-way-1546355466",
+          "name": "应昌城 · 西门瓮城",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "应昌"
+        },
+        {
+          "id": "yuan-northern-osm-way-1546355468",
+          "name": "应昌城 · 东门瓮城",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "应昌"
+        }
+      ]
     },
     {
       "name": "和林一带 · 哈拉和林",
@@ -28723,8 +31681,8 @@
       "categoryCode": "O",
       "sourceOrder": 249,
       "siteKey": "ancient-site:哈拉和林:47.19750,102.82380",
-      "lat": 47.1975,
-      "lng": 102.8238,
+      "lat": 47.2095974,
+      "lng": 102.8475721,
       "parentName": "哈拉和林",
       "currentPlace": "哈拉和林",
       "currentKey": "ancient-site:哈拉和林:47.19750,102.82380",
@@ -28734,10 +31692,39 @@
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
       },
       "siteReference": {
-        "name": "哈拉和林",
-        "kind": "城市／城址区域参照",
-        "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+        "name": "和林古城遗址参照",
+        "coordinates": [
+          102.8475721,
+          47.2095974
+        ],
+        "kind": "遗址参照"
+      },
+      "boundaryRelations": [
+        {
+          "id": "yuan-northern-osm-way-245259484",
+          "name": "和林 · 古城遗址标绘范围",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "哈拉和林"
+        },
+        {
+          "id": "yuan-northern-osm-way-397170802",
+          "name": "和林 · 大寺院遗址（旧称窝阔台宫殿）",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址范围标绘",
+          "city": "哈拉和林"
+        },
+        {
+          "id": "yuan-northern-osm-node-479377679",
+          "name": "和林 · 石龟遗存",
+          "period": "元",
+          "control": "元",
+          "kind": "遗址点位",
+          "city": "哈拉和林"
+        }
+      ]
     },
     {
       "name": "西京长安 · 西安",
@@ -29567,7 +32554,8 @@
         "name": "衡阳",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "衡州"
     },
     {
       "name": "金田",
@@ -29627,7 +32615,8 @@
         "name": "永安",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "永安州"
     },
     {
       "name": "天京",
@@ -29700,7 +32689,8 @@
         "name": "桂平",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "秀京"
     },
     {
       "name": "大理 · 大理杜文秀",
@@ -30330,7 +33320,8 @@
         "name": "桑根达来（原表位置待核）",
         "kind": "位置待核",
         "note": "原表古称为桑根达来，却沿用张北点位；不应与元中都自动对应，待核地望及政权记录。"
-      }
+      },
+      "displayName": "桑根达来"
     },
     {
       "name": "北京 · 北京 · 中华人民共和国",
@@ -30425,7 +33416,25 @@
         "name": "三星堆遗址",
         "kind": "有说明的参照点",
         "note": "区域参照点，非宫殿确址"
-      }
+      },
+      "boundaryRelations": [
+        {
+          "id": "site-refinement-osm-way-418286621",
+          "name": "三星堆 · 南部局部遗址标绘",
+          "period": "夏商",
+          "control": "夏商",
+          "kind": "局部遗存参照",
+          "city": "三星堆遗址"
+        },
+        {
+          "id": "site-refinement-osm-node-11638009417",
+          "name": "三星堆 · 城墙遗存参照点",
+          "period": "夏商",
+          "control": "夏商",
+          "kind": "局部遗存参照",
+          "city": "三星堆遗址"
+        }
+      ]
     },
     {
       "name": "金沙遗址 · 古称未定 · 古蜀（金沙时期）",
@@ -30596,7 +33605,8 @@
         "name": "建瓯",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "displayName": "建州"
     },
     {
       "name": "莒国故城 · 莒 · 莒",
@@ -30793,6 +33803,54 @@
           "control": "宋辽金西夏",
           "kind": "遗址或现代展示",
           "city": "大同"
+        },
+        {
+          "id": "liao-five-way-1193258833",
+          "city": "西京大同",
+          "name": "辽金西京 · 华严寺大雄宝殿（现存建筑）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现存殿阁"
+        },
+        {
+          "id": "liao-five-way-1193265713",
+          "city": "西京大同",
+          "name": "辽金西京 · 华严寺薄伽教藏殿（现存建筑）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现存殿阁"
+        },
+        {
+          "id": "liao-five-way-1358507433",
+          "city": "西京大同",
+          "name": "辽金西京 · 善化寺天王殿（现存建筑）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现存殿阁"
+        },
+        {
+          "id": "liao-five-way-1358507434",
+          "city": "西京大同",
+          "name": "辽金西京 · 善化寺三圣殿（现存建筑）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现存殿阁"
+        },
+        {
+          "id": "liao-five-way-1358507435",
+          "city": "西京大同",
+          "name": "辽金西京 · 善化寺大雄宝殿（现存建筑）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现存殿阁"
+        },
+        {
+          "id": "liao-five-way-1358507436",
+          "city": "西京大同",
+          "name": "辽金西京 · 善化寺普贤阁（现存建筑）",
+          "period": "宋辽金西夏",
+          "control": "宋辽金西夏",
+          "kind": "现存殿阁"
         }
       ],
       "coordinatePrecision": "辽金西京华严寺现寺院范围为历史城区定位参照；不代表辽金宫城中心。",
@@ -30802,10 +33860,11 @@
         "note": "辽金西京华严寺现寺院范围为历史城区定位参照；不代表辽金宫城中心。"
       },
       "boundaryAudit": {
-        "status": "已按本条朝代建立对应；范围性质见各条说明",
-        "pointKind": "有说明的参照点",
-        "note": "辽金西京华严寺现寺院范围为历史城区定位参照；不代表辽金宫城中心。"
-      }
+        "status": "部分遗存已接入，完整城界仍需考古图件配准",
+        "pointKind": "既有城市／城址参照点",
+        "note": "辽五京核查：已接入现状遗存与展示范围，性质逐项区分；未取得完整城界者不以明清城墙、现代公园或后金城址替代。"
+      },
+      "displayName": "金西京大同府"
     },
     {
       "name": "东都江都府 · 扬州 · 南唐",

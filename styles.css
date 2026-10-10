@@ -7707,21 +7707,113 @@ button:hover {
 .language-legend-swatch { display:inline-block; width:24px; height:12px; border:1px solid rgba(0,0,0,.15); border-radius:2px; flex-shrink:0; }
 .language-legend-members { margin-left:15px; padding-left:8px; border-left:1px solid #dbe3dd; }
 
-.language-family-keys { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px 9px; max-height:190px; overflow:auto; margin:7px 0; overscroll-behavior:contain; }
+.language-family-keys { display:grid; grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr); gap:6px 6px; max-height:190px; overflow:auto; margin:7px 0; overscroll-behavior:contain; }
 .language-family-keys[hidden] { display:none; }
-.language-family-key { display:flex; align-items:center; gap:5px; min-width:0; font-size:11px; line-height:1.4; }
-.language-family-key i { width:22px; height:12px; flex-shrink:0; border-radius:2px; border:1px solid rgba(0,0,0,.15); }
+.language-family-key { display:flex; align-items:center; gap:4px; min-width:0; font-size:11px; line-height:1.4; }
+.language-family-key i { width:20px; height:12px; flex-shrink:0; border-radius:2px; border:1px solid rgba(0,0,0,.15); }
 .language-family-key span { overflow-wrap:anywhere; min-width:0; }
+:lang(zh-CN) .language-family-key span { white-space:nowrap; overflow-wrap:normal; }
 
 .language-family-select-all { display:flex; align-items:center; gap:5px; font-size:12px; margin-top:5px; }
 .language-family-key input, .language-family-select-all input { width:12px; height:12px; margin:0; flex-shrink:0; }
 .language-family-key { cursor:pointer; }
 
-.capital-wall-controls{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-top:4px;padding-left:17px}.capital-wall-controls label{display:flex;align-items:center;gap:4px;font:inherit;margin:0;cursor:pointer}.capital-wall-controls select{font:inherit;padding:2px 4px;width:78px;min-width:0;max-width:78px;flex:0 0 78px}.capital-wall-controls small{width:100%;color:#64748b;line-height:1.5}
+.capital-wall-controls{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-top:4px;padding-left:17px}.capital-wall-controls label{display:flex;align-items:center;gap:4px;font:inherit;margin:0;cursor:pointer;white-space:nowrap}.capital-wall-year-group{display:inline-flex;align-items:center;flex-wrap:nowrap;gap:4px;flex:0 0 auto;white-space:nowrap}.capital-wall-controls select{font:inherit;padding:2px 2px;width:70px;min-width:0;max-width:70px;flex:0 0 70px}.capital-wall-controls small{width:100%;color:#64748b;line-height:1.5}
+.capital-wall-controls{gap:3px 5px}.capital-wall-controls label,.capital-wall-year-group{gap:3px;min-height:16px}.capital-wall-controls label{font-weight:400}.capital-wall-controls select{box-sizing:border-box;height:16px;min-height:16px;padding:0 2px;line-height:normal}.capital-wall-color{display:inline-block;box-sizing:border-box;flex:0 0 8px;width:8px;height:8px;border:2px solid var(--wall-period-color);border-radius:2px;background:color-mix(in srgb,var(--wall-period-color) 20%,transparent)}
 
 .luoyang-evolution-controls{border-top:1px solid #dbe4df;padding-top:8px}.luoyang-evolution-controls button{font:inherit;padding:2px 6px;border:1px solid #bdcfc5;background:transparent;border-radius:4px;cursor:pointer}
 
 #ancientCapitalLegend .capital-wall-cities{display:flex;flex-wrap:wrap;gap:3px;width:100%}#ancientCapitalLegend .capital-wall-cities button{font:inherit;line-height:1.4;min-width:0;min-height:0;width:auto;margin:0;padding:1px 5px;border:1px solid #bdcfc5;border-radius:4px;background:transparent;color:inherit;cursor:pointer}#ancientCapitalLegend .capital-wall-cities button:hover{background:#e8f0ec}#ancientCapitalLegend .capital-wall-cities button:disabled{opacity:.4;cursor:default}
 
+/* Shared map legend presentation; historical grids keep their compact density. */
+.map-overlay-legends {
+  --legend-title-size:14px;
+  --legend-body-size:12px;
+  --legend-caption-size:12px;
+  --legend-compact-size:12px;
+  --legend-row-height:18px;
+  --legend-control-height:22px;
+}
+.map-overlay-legends > :is(aside,section) {
+  box-sizing:border-box; min-width:0; max-width:100%;
+  padding:8px 10px; border:1px solid rgba(18,54,45,.16); border-radius:8px;
+  background:rgba(255,255,255,.92); color:#12362d;
+  font-family:var(--font-ui); font-size:var(--legend-body-size); line-height:1.4;
+  box-shadow:0 8px 20px rgba(24,32,28,.15); pointer-events:auto;
+}
+.map-overlay-legends > :is(aside,section) > strong {
+  display:block; margin:0 0 6px; font-size:var(--legend-title-size); font-weight:700; line-height:1.2;
+}
+.map-overlay-legends :is(small,.railway-legend-hint,.railway-legend-note) {
+  font-size:var(--legend-caption-size); line-height:1.4; color:#53655f;
+}
+.map-overlay-legends > :is(aside,section) > small { display:block; margin-top:4px; }
+.map-overlay-legends a { font-size:var(--legend-caption-size); line-height:1.4; color:#176b52; pointer-events:auto; }
+.map-overlay-legends input[type="checkbox"] { box-sizing:border-box; width:13px; height:13px; min-height:0; margin:0; flex:0 0 13px; cursor:pointer; }
+.map-overlay-legends input[type="range"] { box-sizing:border-box; width:100%; height:14px; min-height:14px; padding:0; margin:0; cursor:pointer; }
+.map-overlay-legends select {
+  box-sizing:border-box; height:var(--legend-control-height); min-height:var(--legend-control-height);
+  font-size:var(--legend-body-size); line-height:1.2; padding:0 3px;
+  border:1px solid #d9dee4; border-radius:5px; background:white; color:#334155;
+}
+.map-overlay-legends .geology-provider-control { gap:6px; margin:4px 0; font-size:var(--legend-body-size); }
+.map-overlay-legends .population-density-opacity { min-height:var(--legend-row-height); margin:4px 0 6px; font-size:var(--legend-compact-size); line-height:1.2; }
+.map-overlay-legends .population-density-opacity output { font-size:var(--legend-compact-size); font-weight:600; text-align:right; font-variant-numeric:tabular-nums; }
+.map-overlay-legends :is(.arcgis-water-source-toggles label,.language-family-key,.language-family-select-all,.volcano-filter) {
+  min-height:var(--legend-row-height); gap:4px; font-size:var(--legend-body-size); line-height:1.4;
+}
+.map-overlay-legends :is(.tomb-legend-options label,.capital-wall-controls label,#greatWallCategories label,#greatWallHistoryEras label) {
+  min-height:var(--legend-row-height); font-size:var(--legend-compact-size); line-height:1.2;
+}
+.map-overlay-legends .capital-wall-year-group { min-height:var(--legend-row-height); }
+.map-overlay-legends .capital-wall-controls select {
+  height:var(--legend-row-height); min-height:var(--legend-row-height); font-size:var(--legend-compact-size);
+}
+.map-overlay-legends button { font-family:inherit; font-size:var(--legend-caption-size); line-height:1.3; }
+.map-overlay-legends :is(.population-density-scale,.seafloor-age-scale) { height:7px; border-radius:999px; }
+.map-overlay-legends .language-family-key i { width:20px; height:12px; }
+.map-overlay-legends label { font-weight:400; }
+.map-overlay-legends label > input[type="checkbox"] { order:-1; }
+.map-overlay-legends .hazard-legend label { font-size:var(--legend-body-size); min-height:var(--legend-row-height); margin-top:4px; }
+.map-overlay-legends .language-family-select-all { font-weight:600; }
+.map-overlay-legends #railwayLegendScope { height:var(--legend-control-height); min-height:var(--legend-control-height); font-size:var(--legend-body-size); }
+.map-overlay-legends #railwayMode { height:var(--legend-control-height); min-height:var(--legend-control-height); padding:0 3px; font-size:var(--legend-body-size); }
+.map-overlay-legends #railwayVectorLegend :is(small,a) { font-size:var(--legend-caption-size); line-height:1.4; }
+#mapOverlayLegends input:is([type="checkbox"],[type="range"]) { accent-color:#176b52; }
+
 
 .angkor-site-label{text-align:center;background:transparent;border:0;box-shadow:none;text-shadow:0 0 3px white,0 0 3px white}.angkor-capital-icon svg{width:20px;height:20px}
+
+/* Detailed legend entries share the compact dynasty text size. */
+#mapOverlayLegends :is(
+  .tomb-legend-options label,.tomb-legend-scope label,.tomb-legend-symbols,
+  .capital-wall-controls label,#greatWallCategories label,#greatWallHistoryEras label,
+  .great-wall-history-toggle,.arcgis-water-source-toggles label,.arcgis-water-legend-item,
+  .language-family-key,.language-family-select-all,.language-legend-row,.language-legend-family summary,
+  .railway-legend-items,.railway-legend-item,.railway-legend-section,.railway-legend-section b,
+  .railway-vector-legend-captions span,.seafloor-contour-row,.seafloor-contour-boundaries span,
+  .geology-age-row,.volcano-legend-items,.hazard-legend label
+) { font-size:var(--legend-compact-size); line-height:1.4; }
+
+/* Readable legend text with content-sized columns and indivisible year controls. */
+#mapOverlayLegends :is(.great-wall-section > summary,#greatWallCategorySummary,.railway-legend-details summary,#railwayVectorLegendDetails summary,.geology-age-heading,#languageFamilyLegendTitle) {font-size:12px;line-height:1.4;}
+#mapOverlayLegends :is(p,.population-density-labels,.seafloor-age-labels,.geology-age-range) {font-size:12px;line-height:1.4;}
+#mapOverlayLegends :is(.tomb-legend-options,#greatWallCategories,#greatWallHistoryEras) {grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:3px 6px;}
+#mapOverlayLegends .tomb-legend-scope {grid-template-columns:1fr;gap:3px;}
+#mapOverlayLegends .language-family-keys {grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:4px;}
+#mapOverlayLegends .language-family-key {gap:3px;}
+#mapOverlayLegends .language-family-key i {width:14px;}
+#mapOverlayLegends .capital-wall-controls {gap:3px 7px;}
+#mapOverlayLegends .capital-wall-year-group {flex-wrap:nowrap;}
+#mapOverlayLegends .capital-wall-controls select {width:76px;max-width:76px;flex-basis:76px;}
+#mapOverlayLegends .seafloor-contour-boundaries {flex-wrap:wrap;}
+#mapOverlayLegends :is(.railway-legend-section,.volcano-legend-items) {column-gap:6px;}
+
+#mapOverlayLegends > :is(aside,section) > strong {font-size:var(--legend-title-size);}
+#mapOverlayLegends .language-family-keys {overflow-x:hidden;}
+#mapOverlayLegends .railway-legend-items {grid-template-columns:minmax(0,1fr);}
+#mapOverlayLegends :is(.population-density-opacity label,.population-density-opacity output,.earthquake-magnitude-keys) {font-size:12px;}
+
+#mapOverlayLegends .capital-wall-notes {width:100%;min-width:0;}
+#mapOverlayLegends .capital-wall-notes > summary {cursor:pointer;color:#176b52;font-size:12px;line-height:18px;}
+#mapOverlayLegends .capital-wall-notes > small {display:block;margin-top:4px;}

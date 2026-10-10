@@ -1,0 +1,1082 @@
+{
+  "added": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            126.1744258,
+            41.1220174
+          ],
+          [
+            126.1757303,
+            41.1227044
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "秦汉",
+        "city": "集安国内城",
+        "sourceId": "goguryeo-osm-919975550",
+        "sourceName": "国内城 · 城墙遗存",
+        "label": "国内城 · 城墙遗存",
+        "sourceUrl": "https://www.openstreetmap.org/way/919975550",
+        "referenceUrl": "https://whc.unesco.org/en/list/1135/",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗址参照",
+        "note": "保留OSM分段城墙原始线形，不跨城门缺口强行连接。秦汉开关对应既有国内城建都记录，不代表全部现存墙体均属最初建都年代。",
+        "capitalSiteKey": "ancient-site:集安国内城:41.12500,126.19500",
+        "capitalSiteName": "集安国内城",
+        "capitalSiteDisplayName": "集安国内城"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            126.1742985,
+            41.1219469
+          ],
+          [
+            126.1730757,
+            41.121288
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "秦汉",
+        "city": "集安国内城",
+        "sourceId": "goguryeo-osm-919975551",
+        "sourceName": "国内城 · 城墙遗存",
+        "label": "国内城 · 城墙遗存",
+        "sourceUrl": "https://www.openstreetmap.org/way/919975551",
+        "referenceUrl": "https://whc.unesco.org/en/list/1135/",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗址参照",
+        "note": "保留OSM分段城墙原始线形，不跨城门缺口强行连接。秦汉开关对应既有国内城建都记录，不代表全部现存墙体均属最初建都年代。",
+        "capitalSiteKey": "ancient-site:集安国内城:41.12500,126.19500",
+        "capitalSiteName": "集安国内城",
+        "capitalSiteDisplayName": "集安国内城"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            126.173007,
+            41.1212546
+          ],
+          [
+            126.1727371,
+            41.1211031
+          ],
+          [
+            126.1724973,
+            41.1209464
+          ],
+          [
+            126.1725685,
+            41.1208719
+          ],
+          [
+            126.1727668,
+            41.12084
+          ],
+          [
+            126.1730768,
+            41.1205446
+          ],
+          [
+            126.1734665,
+            41.1202206
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "秦汉",
+        "city": "集安国内城",
+        "sourceId": "goguryeo-osm-919975552",
+        "sourceName": "国内城 · 城墙遗存",
+        "label": "国内城 · 城墙遗存",
+        "sourceUrl": "https://www.openstreetmap.org/way/919975552",
+        "referenceUrl": "https://whc.unesco.org/en/list/1135/",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗址参照",
+        "note": "保留OSM分段城墙原始线形，不跨城门缺口强行连接。秦汉开关对应既有国内城建都记录，不代表全部现存墙体均属最初建都年代。",
+        "capitalSiteKey": "ancient-site:集安国内城:41.12500,126.19500",
+        "capitalSiteName": "集安国内城",
+        "capitalSiteDisplayName": "集安国内城"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            126.1741701,
+            41.1195409
+          ],
+          [
+            126.1742163,
+            41.1191997
+          ],
+          [
+            126.1743134,
+            41.1190655
+          ],
+          [
+            126.1746512,
+            41.1185959
+          ],
+          [
+            126.1749131,
+            41.1182338
+          ],
+          [
+            126.1750614,
+            41.1180431
+          ],
+          [
+            126.1752777,
+            41.117866
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "秦汉",
+        "city": "集安国内城",
+        "sourceId": "goguryeo-osm-919975553",
+        "sourceName": "国内城 · 城墙遗存",
+        "label": "国内城 · 城墙遗存",
+        "sourceUrl": "https://www.openstreetmap.org/way/919975553",
+        "referenceUrl": "https://whc.unesco.org/en/list/1135/",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗址参照",
+        "note": "保留OSM分段城墙原始线形，不跨城门缺口强行连接。秦汉开关对应既有国内城建都记录，不代表全部现存墙体均属最初建都年代。",
+        "capitalSiteKey": "ancient-site:集安国内城:41.12500,126.19500",
+        "capitalSiteName": "集安国内城",
+        "capitalSiteDisplayName": "集安国内城"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            126.1758592,
+            41.1175405
+          ],
+          [
+            126.176611,
+            41.1168952
+          ],
+          [
+            126.1771101,
+            41.1165215
+          ],
+          [
+            126.1774213,
+            41.1163521
+          ],
+          [
+            126.177828,
+            41.1162314
+          ],
+          [
+            126.1784319,
+            41.1166701
+          ],
+          [
+            126.1792453,
+            41.1172016
+          ],
+          [
+            126.17992,
+            41.1176635
+          ],
+          [
+            126.1803298,
+            41.117942
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "秦汉",
+        "city": "集安国内城",
+        "sourceId": "goguryeo-osm-919975554",
+        "sourceName": "国内城 · 城墙遗存",
+        "label": "国内城 · 城墙遗存",
+        "sourceUrl": "https://www.openstreetmap.org/way/919975554",
+        "referenceUrl": "https://whc.unesco.org/en/list/1135/",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗址参照",
+        "note": "保留OSM分段城墙原始线形，不跨城门缺口强行连接。秦汉开关对应既有国内城建都记录，不代表全部现存墙体均属最初建都年代。",
+        "capitalSiteKey": "ancient-site:集安国内城:41.12500,126.19500",
+        "capitalSiteName": "集安国内城",
+        "capitalSiteDisplayName": "集安国内城"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            126.1818575,
+            41.1190691
+          ],
+          [
+            126.1822816,
+            41.1194002
+          ],
+          [
+            126.1835451,
+            41.1204453
+          ],
+          [
+            126.184175,
+            41.1209999
+          ],
+          [
+            126.1834603,
+            41.1216467
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "秦汉",
+        "city": "集安国内城",
+        "sourceId": "goguryeo-osm-919975555",
+        "sourceName": "国内城 · 城墙遗存",
+        "label": "国内城 · 城墙遗存",
+        "sourceUrl": "https://www.openstreetmap.org/way/919975555",
+        "referenceUrl": "https://whc.unesco.org/en/list/1135/",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗址参照",
+        "note": "保留OSM分段城墙原始线形，不跨城门缺口强行连接。秦汉开关对应既有国内城建都记录，不代表全部现存墙体均属最初建都年代。",
+        "capitalSiteKey": "ancient-site:集安国内城:41.12500,126.19500",
+        "capitalSiteName": "集安国内城",
+        "capitalSiteDisplayName": "集安国内城"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            126.1810151,
+            41.1239138
+          ],
+          [
+            126.1802542,
+            41.1244843
+          ],
+          [
+            126.1798897,
+            41.1246229
+          ],
+          [
+            126.1794048,
+            41.1245483
+          ],
+          [
+            126.1790155,
+            41.1244523
+          ],
+          [
+            126.1778334,
+            41.1238125
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "秦汉",
+        "city": "集安国内城",
+        "sourceId": "goguryeo-osm-919975556",
+        "sourceName": "国内城 · 城墙遗存",
+        "label": "国内城 · 城墙遗存",
+        "sourceUrl": "https://www.openstreetmap.org/way/919975556",
+        "referenceUrl": "https://whc.unesco.org/en/list/1135/",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗址参照",
+        "note": "保留OSM分段城墙原始线形，不跨城门缺口强行连接。秦汉开关对应既有国内城建都记录，不代表全部现存墙体均属最初建都年代。",
+        "capitalSiteKey": "ancient-site:集安国内城:41.12500,126.19500",
+        "capitalSiteName": "集安国内城",
+        "capitalSiteDisplayName": "集安国内城"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            126.180526,
+            41.1180717
+          ],
+          [
+            126.181752,
+            41.1189797
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "秦汉",
+        "city": "集安国内城",
+        "sourceId": "goguryeo-osm-1339972158",
+        "sourceName": "国内城 · 城墙遗存",
+        "label": "国内城 · 城墙遗存",
+        "sourceUrl": "https://www.openstreetmap.org/way/1339972158",
+        "referenceUrl": "https://whc.unesco.org/en/list/1135/",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗址参照",
+        "note": "保留OSM分段城墙原始线形，不跨城门缺口强行连接。秦汉开关对应既有国内城建都记录，不代表全部现存墙体均属最初建都年代。",
+        "capitalSiteKey": "ancient-site:集安国内城:41.12500,126.19500",
+        "capitalSiteName": "集安国内城",
+        "capitalSiteDisplayName": "集安国内城"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.2139997,
+          41.1448819
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "city": "集安国内城",
+        "sourceId": "goguryeo-osm-8542980091",
+        "sourceName": "好太王碑",
+        "label": "好太王碑",
+        "sourceUrl": "https://www.openstreetmap.org/node/8542980091",
+        "referenceUrl": "https://whc.unesco.org/en/list/1135/",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗址参照",
+        "note": "414年碑刻；中文采用通行名好太王碑（广开土王碑）。",
+        "capitalSiteKey": "ancient-site:集安国内城:41.12500,126.19500",
+        "capitalSiteName": "集安国内城",
+        "capitalSiteDisplayName": "集安国内城",
+        "sitePoint": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.2260171,
+              41.1577
+            ],
+            [
+              126.2262769,
+              41.1579238
+            ],
+            [
+              126.2265814,
+              41.1577235
+            ],
+            [
+              126.2263215,
+              41.1574996
+            ],
+            [
+              126.2260171,
+              41.1577
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "city": "集安国内城",
+        "sourceId": "goguryeo-osm-249585692",
+        "sourceName": "将军坟",
+        "label": "将军坟",
+        "sourceUrl": "https://www.openstreetmap.org/way/249585692",
+        "referenceUrl": "https://whc.unesco.org/en/list/1135/",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗址参照",
+        "note": "保留墓冢轮廓。OSM称长寿王陵，墓主认定不作为确定事实，显示通行名将军坟。",
+        "capitalSiteKey": "ancient-site:集安国内城:41.12500,126.19500",
+        "capitalSiteName": "集安国内城",
+        "capitalSiteDisplayName": "集安国内城"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.2103818,
+              41.1425604
+            ],
+            [
+              126.2106674,
+              41.1426067
+            ],
+            [
+              126.2109115,
+              41.1425933
+            ],
+            [
+              126.2110252,
+              41.1425365
+            ],
+            [
+              126.2111036,
+              41.1422487
+            ],
+            [
+              126.2110987,
+              41.141989
+            ],
+            [
+              126.210882,
+              41.1419161
+            ],
+            [
+              126.2105302,
+              41.1418427
+            ],
+            [
+              126.2103278,
+              41.1418685
+            ],
+            [
+              126.2102067,
+              41.142042
+            ],
+            [
+              126.2101136,
+              41.1422819
+            ],
+            [
+              126.2101283,
+              41.142448
+            ],
+            [
+              126.2103818,
+              41.1425604
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "city": "集安国内城",
+        "sourceId": "goguryeo-osm-254077889",
+        "sourceName": "太王陵",
+        "label": "太王陵",
+        "sourceUrl": "https://www.openstreetmap.org/way/254077889",
+        "referenceUrl": "https://whc.unesco.org/en/list/1135/",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗址参照",
+        "note": "保留墓冢轮廓，不将周边现代景区边界作为墓葬范围。",
+        "capitalSiteKey": "ancient-site:集安国内城:41.12500,126.19500",
+        "capitalSiteName": "集安国内城",
+        "capitalSiteDisplayName": "集安国内城"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          125.419769,
+          41.321347
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "秦汉",
+        "city": "五女山城",
+        "sourceId": "goguryeo-osm-6035717228",
+        "sourceName": "五女山城 · 哨所遗址",
+        "label": "五女山城 · 哨所遗址",
+        "sourceUrl": "https://www.openstreetmap.org/node/6035717228",
+        "referenceUrl": "https://whc.unesco.org/en/list/1135/",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗址参照",
+        "note": "具体遗迹地点参照；不是建筑范围或完整城墙线，未将山峰或景区道路当作城址。",
+        "capitalSiteKey": "ancient-site:五女山城:41.32300,125.42100",
+        "capitalSiteName": "五女山城",
+        "capitalSiteDisplayName": "五女山城",
+        "sitePoint": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          125.4209981,
+          41.3193295
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "秦汉",
+        "city": "五女山城",
+        "sourceId": "goguryeo-osm-6035717229",
+        "sourceName": "五女山城 · 城墙遗址",
+        "label": "五女山城 · 城墙遗址",
+        "sourceUrl": "https://www.openstreetmap.org/node/6035717229",
+        "referenceUrl": "https://whc.unesco.org/en/list/1135/",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗址参照",
+        "note": "具体遗迹地点参照；不是建筑范围或完整城墙线，未将山峰或景区道路当作城址。",
+        "capitalSiteKey": "ancient-site:五女山城:41.32300,125.42100",
+        "capitalSiteName": "五女山城",
+        "capitalSiteDisplayName": "五女山城",
+        "sitePoint": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          125.4183246,
+          41.3190536
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "秦汉",
+        "city": "五女山城",
+        "sourceId": "goguryeo-osm-6035717232",
+        "sourceName": "五女山城 · 点将台",
+        "label": "五女山城 · 点将台",
+        "sourceUrl": "https://www.openstreetmap.org/node/6035717232",
+        "referenceUrl": "https://whc.unesco.org/en/list/1135/",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗址参照",
+        "note": "具体遗迹地点参照；不是建筑范围或完整城墙线，未将山峰或景区道路当作城址。",
+        "capitalSiteKey": "ancient-site:五女山城:41.32300,125.42100",
+        "capitalSiteName": "五女山城",
+        "capitalSiteDisplayName": "五女山城",
+        "sitePoint": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          125.4162846,
+          41.3197197
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "秦汉",
+        "city": "五女山城",
+        "sourceId": "goguryeo-osm-6035717233",
+        "sourceName": "五女山城 · 三号大型建筑基址",
+        "label": "五女山城 · 三号大型建筑基址",
+        "sourceUrl": "https://www.openstreetmap.org/node/6035717233",
+        "referenceUrl": "https://whc.unesco.org/en/list/1135/",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗址参照",
+        "note": "具体遗迹地点参照；不是建筑范围或完整城墙线，未将山峰或景区道路当作城址。",
+        "capitalSiteKey": "ancient-site:五女山城:41.32300,125.42100",
+        "capitalSiteName": "五女山城",
+        "capitalSiteDisplayName": "五女山城",
+        "sitePoint": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            125.8338905,
+            39.0867897
+          ],
+          [
+            125.8339935,
+            39.0871228
+          ],
+          [
+            125.8341651,
+            39.0876557
+          ],
+          [
+            125.8344913,
+            39.0880088
+          ],
+          [
+            125.8358817,
+            39.0878556
+          ],
+          [
+            125.8367057,
+            39.0876957
+          ],
+          [
+            125.8380189,
+            39.0873826
+          ],
+          [
+            125.8390661,
+            39.0869496
+          ],
+          [
+            125.8401819,
+            39.0863366
+          ],
+          [
+            125.8408685,
+            39.0858503
+          ],
+          [
+            125.8413663,
+            39.0846711
+          ],
+          [
+            125.8420873,
+            39.083765
+          ],
+          [
+            125.84321,
+            39.0827271
+          ],
+          [
+            125.8436151,
+            39.0823526
+          ],
+          [
+            125.8445936,
+            39.081633
+          ],
+          [
+            125.845881,
+            39.0813798
+          ],
+          [
+            125.847529,
+            39.0812466
+          ],
+          [
+            125.8487306,
+            39.080567
+          ],
+          [
+            125.8499837,
+            39.0798141
+          ],
+          [
+            125.8509622,
+            39.0793144
+          ],
+          [
+            125.8512454,
+            39.0785948
+          ],
+          [
+            125.851563,
+            39.078215
+          ],
+          [
+            125.8511167,
+            39.0775021
+          ],
+          [
+            125.8504129,
+            39.0774488
+          ],
+          [
+            125.8500095,
+            39.077682
+          ],
+          [
+            125.8475633,
+            39.076516
+          ],
+          [
+            125.8463188,
+            39.0754165
+          ],
+          [
+            125.8445592,
+            39.0734908
+          ],
+          [
+            125.8442588,
+            39.0725913
+          ],
+          [
+            125.8435464,
+            39.072478
+          ],
+          [
+            125.8424821,
+            39.0723914
+          ],
+          [
+            125.8408857,
+            39.0720915
+          ],
+          [
+            125.8385667,
+            39.0716661
+          ],
+          [
+            125.8376486,
+            39.0716488
+          ],
+          [
+            125.8361602,
+            39.0718428
+          ],
+          [
+            125.8343025,
+            39.0720915
+          ],
+          [
+            125.8320966,
+            39.0722381
+          ],
+          [
+            125.8305517,
+            39.0723447
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "city": "平壤",
+        "sourceId": "goguryeo-osm-42918691",
+        "sourceName": "大城山城 · 城墙",
+        "label": "大城山城 · 城墙",
+        "sourceUrl": "https://www.openstreetmap.org/way/42918691",
+        "referenceUrl": "https://whc.unesco.org/en/list/1091/maps/",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗址参照",
+        "note": "公开矢量的开放城墙线，保持开放，不补造缺失的西侧闭合边。",
+        "capitalSiteKey": "ancient-site:平壤:39.03920,125.76250",
+        "capitalSiteName": "平壤",
+        "capitalSiteDisplayName": "平壤"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              125.8349665,
+              39.0646031
+            ],
+            [
+              125.8377959,
+              39.0646112
+            ],
+            [
+              125.8373666,
+              39.0591098
+            ],
+            [
+              125.8338885,
+              39.0590832
+            ],
+            [
+              125.8303972,
+              39.0590565
+            ],
+            [
+              125.8309121,
+              39.064608
+            ],
+            [
+              125.8349665,
+              39.0646031
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "city": "平壤",
+        "sourceId": "goguryeo-osm-42918692",
+        "sourceName": "安鹤宫遗址",
+        "label": "安鹤宫遗址",
+        "sourceUrl": "https://www.openstreetmap.org/way/42918692",
+        "referenceUrl": "https://whc.unesco.org/en/list/1091/maps/",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗址参照",
+        "note": "遗址范围公开矢量。安鹤宫年代及与427年平壤都城的对应关系有学术讨论，不将现代平壤范围作为古都范围。",
+        "capitalSiteKey": "ancient-site:平壤:39.03920,125.76250",
+        "capitalSiteName": "平壤",
+        "capitalSiteDisplayName": "平壤"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              125.829302,
+              39.0751831
+            ],
+            [
+              125.8293601,
+              39.0751164
+            ],
+            [
+              125.8295001,
+              39.07519
+            ],
+            [
+              125.8295095,
+              39.0751792
+            ],
+            [
+              125.8295629,
+              39.0752073
+            ],
+            [
+              125.8294936,
+              39.0752868
+            ],
+            [
+              125.8295705,
+              39.075327
+            ],
+            [
+              125.8294094,
+              39.0755128
+            ],
+            [
+              125.8293319,
+              39.0754723
+            ],
+            [
+              125.829257,
+              39.0755584
+            ],
+            [
+              125.8292035,
+              39.0755303
+            ],
+            [
+              125.8292112,
+              39.0755215
+            ],
+            [
+              125.8290712,
+              39.075448
+            ],
+            [
+              125.8291412,
+              39.0753677
+            ],
+            [
+              125.8292812,
+              39.0754412
+            ],
+            [
+              125.829442,
+              39.0752566
+            ],
+            [
+              125.829302,
+              39.0751831
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "city": "平壤",
+        "sourceId": "goguryeo-osm-1222100886",
+        "sourceName": "大城山城 · 南门（复建）",
+        "label": "大城山城 · 南门（复建）",
+        "sourceUrl": "https://www.openstreetmap.org/way/1222100886",
+        "referenceUrl": "https://whc.unesco.org/en/list/1091/maps/",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗址参照",
+        "note": "当前复建南门建筑轮廓，不是原始高句丽门楼台基实测范围。",
+        "capitalSiteKey": "ancient-site:平壤:39.03920,125.76250",
+        "capitalSiteName": "平壤",
+        "capitalSiteDisplayName": "平壤"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          125.92972222222222,
+          38.88944444444444
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "city": "平壤",
+        "sourceId": "goguryeo-unesco-tongmyong",
+        "sourceName": "东明王陵与真坡里墓群（位置参照）",
+        "label": "东明王陵与真坡里墓群（位置参照）",
+        "sourceUrl": "https://whc.unesco.org/en/list/1091/maps/",
+        "referenceUrl": "https://whc.unesco.org/en/list/1091/maps/",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗址参照",
+        "note": "采用UNESCO遗产组成部分公布坐标；表示墓葬或墓群位置，不表示保护范围，也不确定墓主身份。与平壤关联为相关遗存，不表示位于都城城垣内。",
+        "capitalSiteKey": "ancient-site:平壤:39.03920,125.76250",
+        "capitalSiteName": "平壤",
+        "capitalSiteDisplayName": "平壤",
+        "sitePoint": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          125.42500000000001,
+          38.96472222222223
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "city": "平壤",
+        "sourceId": "goguryeo-unesco-kangso",
+        "sourceName": "江西三墓（位置参照）",
+        "label": "江西三墓（位置参照）",
+        "sourceUrl": "https://whc.unesco.org/en/list/1091/maps/",
+        "referenceUrl": "https://whc.unesco.org/en/list/1091/maps/",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗址参照",
+        "note": "采用UNESCO遗产组成部分公布坐标；表示墓葬或墓群位置，不表示保护范围，也不确定墓主身份。与平壤关联为相关遗存，不表示位于都城城垣内。",
+        "capitalSiteKey": "ancient-site:平壤:39.03920,125.76250",
+        "capitalSiteName": "平壤",
+        "capitalSiteDisplayName": "平壤",
+        "sitePoint": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          125.44694166666667,
+          38.96083055555556
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "city": "平壤",
+        "sourceId": "goguryeo-unesco-tokhung",
+        "sourceName": "德兴里古墓（位置参照）",
+        "label": "德兴里古墓（位置参照）",
+        "sourceUrl": "https://whc.unesco.org/en/list/1091/maps/",
+        "referenceUrl": "https://whc.unesco.org/en/list/1091/maps/",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗址参照",
+        "note": "采用UNESCO遗产组成部分公布坐标；表示墓葬或墓群位置，不表示保护范围，也不确定墓主身份。与平壤关联为相关遗存，不表示位于都城城垣内。",
+        "capitalSiteKey": "ancient-site:平壤:39.03920,125.76250",
+        "capitalSiteName": "平壤",
+        "capitalSiteDisplayName": "平壤",
+        "sitePoint": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          125.50749722222223,
+          38.44027777777777
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "city": "平壤",
+        "sourceId": "goguryeo-unesco-anak3",
+        "sourceName": "安岳三号墓（位置参照）",
+        "label": "安岳三号墓（位置参照）",
+        "sourceUrl": "https://whc.unesco.org/en/list/1091/maps/",
+        "referenceUrl": "https://whc.unesco.org/en/list/1091/maps/",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗址参照",
+        "note": "采用UNESCO遗产组成部分公布坐标；表示墓葬或墓群位置，不表示保护范围，也不确定墓主身份。与平壤关联为相关遗存，不表示位于都城城垣内。",
+        "capitalSiteKey": "ancient-site:平壤:39.03920,125.76250",
+        "capitalSiteName": "平壤",
+        "capitalSiteDisplayName": "平壤",
+        "sitePoint": true
+      }
+    }
+  ],
+  "limits": [
+    "丸都完整城墙未取得可靠矢量",
+    "五女山只接入遗迹点，不补造完整轮廓",
+    "大城山城保持开放墙线",
+    "安鹤宫保留年代对应讨论",
+    "墓群参照不表示古都范围"
+  ],
+  "sources": [
+    "https://whc.unesco.org/en/list/1135/",
+    "https://whc.unesco.org/en/list/1091/maps/",
+    "https://archaeology.pku.edu.cn/info/1031/41775.htm",
+    "https://www.sinoss.net/uploadfile/2014/0811/20140811033331454.pdf"
+  ]
+}

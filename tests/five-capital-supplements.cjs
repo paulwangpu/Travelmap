@@ -12,7 +12,7 @@ const ye=catalog.items.find(x=>x.name==='邺城');assert.match(ye.admin,/河北.
 const chengdu=catalog.items.find(x=>x.name==='成都');assert.ok(chengdu.lat>30.65&&chengdu.lat<30.68,'Chengdu historical reference must not stay in Tianfu New Area');
 const xiang=catalog.recordItems.find(x=>x.sourceOrder===10);assert.deepEqual(xiang.boundaryRelations,[],'Uncertain Xiang must not inherit late-Shang palace footprints');
 const closed=read('docs/closed-capital-extents-fill.json').converted;
-for(const record of closed){const f=byId(record.id);assert.equal(f.geometry.type,'Polygon');assert.deepEqual(f.geometry.coordinates[0],record.originalGeometry.coordinates,'Filling must preserve every original boundary coordinate');}
+for(const record of closed){const f=byId(record.id);assert.equal(f.geometry.type,'Polygon');const expected=JSON.parse(JSON.stringify(record.originalGeometry.coordinates));if(record.id==='bohai-shangjing-plan2020-0'){const correction=read('docs/bohai-north-wall-correction.json');assert.deepEqual(expected.slice(5,8),correction.oldVertices);expected.splice(5,3,...correction.newVertices);}assert.deepEqual(f.geometry.coordinates[0],expected,'Preserve original coordinates except the documented north-wall correction');}
 assert.equal(byId('beijing-youzhou-outline-reference').geometry.type,'Polygon');assert.equal(byId('beijing-youzhou-outline-reference').properties.inferredBoundary,true);
 assert.equal(byId('hanwei-inner-south-inferred').geometry.type,'LineString');
 assert.equal(byId('osm-way-1051814589').geometry.type,'LineString');
@@ -22,7 +22,7 @@ const state={mapOverlays:{chinaAncientCapitals:true,ancientCapitalWalls:true,...
 global.fetch=async url=>({ok:true,json:async()=>String(url).includes('research-extents')?research:{type:'FeatureCollection',features:[]}});
 const map={getSource:()=>undefined,getLayer:()=>undefined,getStyle:()=>({layers:[]}),addSource:()=>{},addLayer:()=>{},setLayoutProperty:()=>{}};
 (async()=>{
- AncientCapitalWalls.init({state:()=>state});await AncientCapitalWalls.sync(map);
+ AncientCapitalWalls.init({state:()=>state,language:()=>'zh'});await AncientCapitalWalls.sync(map);
  assert.equal(AncientCapitalWalls.collection().features.length,0);
  state.mapOverlays.ancientCapitalSouthernTangWalls=true;
  let f=AncientCapitalWalls.collection().features;

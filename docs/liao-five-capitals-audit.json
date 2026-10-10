@@ -1,0 +1,134 @@
+{
+  "scope": "辽五京，北京辽南京保留既有资料，本次补充其余四京",
+  "addedCount": 15,
+  "features": [
+    {
+      "sourceId": "liao-five-way-416533409",
+      "name": "辽上京 · 皇城（现状城垣范围参照）",
+      "kind": "皇城范围参照",
+      "sourceUrl": "https://www.openstreetmap.org/way/416533409",
+      "referenceUrl": "https://www.neac.gov.cn/seac/c103391/202306/1165318.shtml"
+    },
+    {
+      "sourceId": "liao-five-node-14257340705",
+      "name": "辽上京 · 西山坡佛寺遗址",
+      "kind": "遗址参照点",
+      "sourceUrl": "https://www.openstreetmap.org/node/14257340705",
+      "referenceUrl": "https://www.neac.gov.cn/seac/c103391/202306/1165318.shtml"
+    },
+    {
+      "sourceId": "liao-five-node-14257340706",
+      "name": "辽上京 · 乾德门（西门参照）",
+      "kind": "门址参照点",
+      "sourceUrl": "https://www.openstreetmap.org/node/14257340706",
+      "referenceUrl": "https://www.neac.gov.cn/seac/c103391/202306/1165318.shtml"
+    },
+    {
+      "sourceId": "liao-five-node-6366690521",
+      "name": "辽上京周边 · 北塔",
+      "kind": "古塔参照点",
+      "sourceUrl": "https://www.openstreetmap.org/node/6366690521",
+      "referenceUrl": "https://www.blzq.gov.cn/zjzq/lswh/202002/t20200229_1915635.html"
+    },
+    {
+      "sourceId": "liao-five-way-1026574600",
+      "name": "辽中京 · 大明塔遗址公园（现展示区）",
+      "kind": "现代展示区",
+      "sourceUrl": "https://www.openstreetmap.org/way/1026574600",
+      "referenceUrl": "https://www.ningchengxian.gov.cn/zjnc/lyzy/201703/t20170323_1113918.html"
+    },
+    {
+      "sourceId": "liao-five-way-1026574598",
+      "name": "辽中京 · 大明塔（释迦佛舍利塔）",
+      "kind": "现存古塔",
+      "sourceUrl": "https://www.openstreetmap.org/way/1026574598",
+      "referenceUrl": "https://www.ningchengxian.gov.cn/zjnc/lyzy/201703/t20170323_1113918.html"
+    },
+    {
+      "sourceId": "liao-five-node-13731517948",
+      "name": "辽中京遗址 · 小塔（辽金遗存参照）",
+      "kind": "古塔参照点",
+      "sourceUrl": "https://www.openstreetmap.org/node/13731517948",
+      "referenceUrl": "https://www.ningchengxian.gov.cn/zjnc/lyzy/201703/t20170323_1113918.html"
+    },
+    {
+      "sourceId": "liao-five-node-13731517949",
+      "name": "辽中京周边 · 半截塔",
+      "kind": "古塔参照点",
+      "sourceUrl": "https://www.openstreetmap.org/node/13731517949",
+      "referenceUrl": "https://www.ningchengxian.gov.cn/zjnc/lyzy/201703/t20170323_1113918.html"
+    },
+    {
+      "sourceId": "liao-five-way-621979376",
+      "name": "辽东京辽阳府 · 白塔（现存建筑）",
+      "kind": "现存古塔",
+      "sourceUrl": "https://www.openstreetmap.org/way/621979376",
+      "referenceUrl": "https://whly.ln.gov.cn/whly/wlzt/lnww/zdwwbhdw/6E53874C8CAA4274A71F945B40058AF5/index.shtml"
+    },
+    {
+      "sourceId": "liao-five-way-1193258833",
+      "name": "辽金西京 · 华严寺大雄宝殿（现存建筑）",
+      "kind": "现存殿阁",
+      "sourceUrl": "https://www.openstreetmap.org/way/1193258833",
+      "referenceUrl": "https://www.dt.gov.cn/english/placestovisit/202501/ed041cbc2944459891140a2e12429c7d.shtml"
+    },
+    {
+      "sourceId": "liao-five-way-1193265713",
+      "name": "辽金西京 · 华严寺薄伽教藏殿（现存建筑）",
+      "kind": "现存殿阁",
+      "sourceUrl": "https://www.openstreetmap.org/way/1193265713",
+      "referenceUrl": "https://www.dt.gov.cn/english/placestovisit/202501/ed041cbc2944459891140a2e12429c7d.shtml"
+    },
+    {
+      "sourceId": "liao-five-way-1358507433",
+      "name": "辽金西京 · 善化寺天王殿（现存建筑）",
+      "kind": "现存殿阁",
+      "sourceUrl": "https://www.openstreetmap.org/way/1358507433",
+      "referenceUrl": "https://www.pingcheng.gov.cn/pcqrmzfz/wmdt/202009/914428d5ff3544d5b089166caa96ffd7.shtml"
+    },
+    {
+      "sourceId": "liao-five-way-1358507434",
+      "name": "辽金西京 · 善化寺三圣殿（现存建筑）",
+      "kind": "现存殿阁",
+      "sourceUrl": "https://www.openstreetmap.org/way/1358507434",
+      "referenceUrl": "https://www.pingcheng.gov.cn/pcqrmzfz/wmdt/202009/914428d5ff3544d5b089166caa96ffd7.shtml"
+    },
+    {
+      "sourceId": "liao-five-way-1358507435",
+      "name": "辽金西京 · 善化寺大雄宝殿（现存建筑）",
+      "kind": "现存殿阁",
+      "sourceUrl": "https://www.openstreetmap.org/way/1358507435",
+      "referenceUrl": "https://www.pingcheng.gov.cn/pcqrmzfz/wmdt/202009/914428d5ff3544d5b089166caa96ffd7.shtml"
+    },
+    {
+      "sourceId": "liao-five-way-1358507436",
+      "name": "辽金西京 · 善化寺普贤阁（现存建筑）",
+      "kind": "现存殿阁",
+      "sourceUrl": "https://www.openstreetmap.org/way/1358507436",
+      "referenceUrl": "https://www.pingcheng.gov.cn/pcqrmzfz/wmdt/202009/914428d5ff3544d5b089166caa96ffd7.shtml"
+    }
+  ],
+  "zhongjingCorrection": {
+    "name": "辽中京大明塔参照",
+    "coordinates": [
+      119.1554531375,
+      41.5697196125
+    ],
+    "originalCoordinates": [
+      119.33,
+      41.6
+    ],
+    "coordinateSystem": "WGS84",
+    "sourceUrls": [
+      "https://www.ningchengxian.gov.cn/zjnc/lyzy/201703/t20170323_1113918.html",
+      "https://www.openstreetmap.org/way/1026574598"
+    ],
+    "note": "原区域点偏东约15公里，更正至遗址内大明塔；不是宫城或全城中心。"
+  },
+  "limits": {
+    "上京": "皇城现状面已接入，南部汉城及宫城精确边界未取得。",
+    "中京": "展示区、三塔定位已接入；外城、内城、宫城未把示意图强行配准。",
+    "东京": "白塔已接入；后金东京城和明城墙不作为辽东京范围。",
+    "西京": "保留现寺院范围，新增六座辽金殿阁；明清大同城垣不作为辽代城界。"
+  }
+}

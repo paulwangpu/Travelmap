@@ -6414,6 +6414,12 @@
       "url": "https://wglj.gz.gov.cn/attachment/7/7950/7950132/10610966.pdf",
       "accessedAt": "2026-10-04",
       "note": "记载青岗北坡位置、德陵认定的推断过程及随葬品早年被盗空；不据此推断康陵盗掘情况。"
+    },
+    {
+      "id": "koguryo-taewang-osm-outline",
+      "title": "太王陵墓冢公开矢量轮廓（OSM way 254077889）",
+      "url": "https://www.openstreetmap.org/way/254077889",
+      "note": "用于墓冢范围与位置对齐，非考古实测界址或墓主认定依据。"
     }
   ],
   "items": [
@@ -36189,29 +36195,29 @@
       "sourceIds": [
         "koguryo-law",
         "koguryo-nomination",
-        "koguryo-taewang-survey"
+        "koguryo-taewang-survey",
+        "koguryo-taewang-osm-outline"
       ],
       "coordinates": {
-        "lat": 41.142,
-        "lng": 126.21,
+        "lat": 41.14224448333333,
+        "lng": 126.21061473333333,
         "crs": "WGS84",
         "status": "estimated_wgs84",
-        "sourceId": "koguryo-taewang-survey",
-        "target": "以太王陵实体作集安王陵群代表点",
-        "original": "N41°8′30.7″ E126°12′35.5″",
-        "method": "机构公开DMS坐标换算后取三位小数；按WGS84约定作为区域参考，未声称现场实测",
-        "sourceDatumExplicit": false,
+        "sourceId": "koguryo-taewang-osm-outline",
+        "target": "集安王陵群代表点（太王陵墓冢）",
+        "original": "OSM way 254077889 的WGS84墓冢轮廓",
+        "method": "取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测",
+        "sourceDatumExplicit": true,
         "precision": {
-          "sourceUnit": "arcsecond",
-          "resolutionDegrees": 0.001,
+          "sourceUnit": "public_vector",
           "horizontalAccuracyMeters": null
         },
-        "limitation": "集安不同墓区跨度数公里，点位仅表示太王陵，不代表其余十一陵位置；原始来源未明示基准与测量误差，不作为墓室中心或入口。",
+        "limitation": "采用太王陵墓冢参照点代表陵群；其他王陵分散于不同墓区，不表示全群中心或范围。",
         "estimate": {
-          "basis": "机构记录名称、墓号与地望互核；保留原始坐标供复核",
-          "extent": "集安不同墓区跨度数公里，点位仅表示太王陵，不代表其余十一陵位置",
-          "confidence": "regional",
-          "reviewedAt": "2026-10-04"
+          "basis": "OSM墓冢轮廓与太王陵名称、既有YM0541资料互核",
+          "extent": "太王陵墓冢公开矢量范围",
+          "confidence": "site",
+          "reviewedAt": "2026-10-09"
         }
       },
       "mapEligible": true,
@@ -36274,10 +36280,26 @@
         "label": "集安高句丽王陵群参考（太王陵代表点）",
         "reason": "只表示属于该陵群，不表示单陵与太王陵同址。",
         "coordinates": {
-          "lat": 41.142,
-          "lng": 126.21,
+          "lat": 41.14224448333333,
+          "lng": 126.21061473333333,
           "crs": "WGS84",
-          "sourceId": "koguryo-taewang-survey"
+          "status": "estimated_wgs84",
+          "sourceId": "koguryo-taewang-osm-outline",
+          "target": "集安王陵群代表点（太王陵墓冢）",
+          "original": "OSM way 254077889 的WGS84墓冢轮廓",
+          "method": "取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测",
+          "sourceDatumExplicit": true,
+          "precision": {
+            "sourceUnit": "public_vector",
+            "horizontalAccuracyMeters": null
+          },
+          "limitation": "采用太王陵墓冢参照点代表陵群；其他王陵分散于不同墓区，不表示全群中心或范围。",
+          "estimate": {
+            "basis": "OSM墓冢轮廓与太王陵名称、既有YM0541资料互核",
+            "extent": "太王陵墓冢公开矢量范围",
+            "confidence": "site",
+            "reviewedAt": "2026-10-09"
+          }
         }
       },
       "chronology": {
@@ -36334,33 +36356,33 @@
       "sourceIds": [
         "koguryo-law",
         "koguryo-nomination",
-        "koguryo-taewang-survey"
+        "koguryo-taewang-survey",
+        "koguryo-taewang-osm-outline"
       ],
       "coordinates": {
-        "lat": 41.142,
-        "lng": 126.21,
+        "lat": 41.14224448333333,
+        "lng": 126.21061473333333,
         "crs": "WGS84",
         "status": "estimated_wgs84",
-        "sourceId": "koguryo-taewang-survey",
-        "target": "太王陵实体周边区域参考",
-        "original": "N41°8′30.7″ E126°12′35.5″",
-        "method": "机构公开DMS坐标换算后取三位小数；按WGS84约定作为区域参考，未声称现场实测",
-        "sourceDatumExplicit": false,
+        "sourceId": "koguryo-taewang-osm-outline",
+        "target": "太王陵墓冢轮廓内参照点",
+        "original": "OSM way 254077889 的WGS84墓冢轮廓",
+        "method": "取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测",
+        "sourceDatumExplicit": true,
         "precision": {
-          "sourceUnit": "arcsecond",
-          "resolutionDegrees": 0.001,
+          "sourceUnit": "public_vector",
           "horizontalAccuracyMeters": null
         },
-        "limitation": "太王陵及周边约500米；原始来源未明示基准与测量误差，不作为墓室中心或入口。",
+        "limitation": "公开墓冢矢量内参照点，不是墓室、入口或法定保护界址；不能据此确定墓主。",
         "estimate": {
-          "basis": "机构记录名称、墓号与地望互核；保留原始坐标供复核",
-          "extent": "太王陵及周边约500米",
-          "confidence": "regional",
-          "reviewedAt": "2026-10-04"
+          "basis": "OSM墓冢轮廓与太王陵名称、既有YM0541资料互核",
+          "extent": "太王陵墓冢公开矢量范围",
+          "confidence": "site",
+          "reviewedAt": "2026-10-09"
         }
       },
       "mapEligible": true,
-      "mapReason": "太王陵实体周边区域参考",
+      "mapReason": "太王陵墓冢轮廓内参照点",
       "reviewTasks": [
         "补核现场实测坐标、基准及入口；区域参考不证明墓主身份"
       ],
@@ -36389,6 +36411,34 @@
         "scope": "墓室",
         "sourceIds": [],
         "reviewedAt": "2026-10-03"
+      },
+      "previousLocationReference": {
+        "lat": 41.142,
+        "lng": 126.21,
+        "crs": "WGS84",
+        "status": "estimated_wgs84",
+        "sourceId": "koguryo-taewang-survey",
+        "target": "太王陵实体周边区域参考",
+        "original": "N41°8′30.7″ E126°12′35.5″",
+        "method": "机构公开DMS坐标换算后取三位小数；按WGS84约定作为区域参考，未声称现场实测",
+        "sourceDatumExplicit": false,
+        "precision": {
+          "sourceUnit": "arcsecond",
+          "resolutionDegrees": 0.001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "太王陵及周边约500米；原始来源未明示基准与测量误差，不作为墓室中心或入口。",
+        "estimate": {
+          "basis": "机构记录名称、墓号与地望互核；保留原始坐标供复核",
+          "extent": "太王陵及周边约500米",
+          "confidence": "regional",
+          "reviewedAt": "2026-10-04"
+        }
+      },
+      "boundaryReference": {
+        "sourceId": "goguryeo-osm-254077889",
+        "url": "https://www.openstreetmap.org/way/254077889",
+        "kind": "墓冢公开矢量，非保护范围"
       }
     },
     {
@@ -36428,10 +36478,26 @@
         "label": "集安高句丽王陵群参考（太王陵代表点）",
         "reason": "只表示属于该陵群，不表示单陵与太王陵同址。",
         "coordinates": {
-          "lat": 41.142,
-          "lng": 126.21,
+          "lat": 41.14224448333333,
+          "lng": 126.21061473333333,
           "crs": "WGS84",
-          "sourceId": "koguryo-taewang-survey"
+          "status": "estimated_wgs84",
+          "sourceId": "koguryo-taewang-osm-outline",
+          "target": "集安王陵群代表点（太王陵墓冢）",
+          "original": "OSM way 254077889 的WGS84墓冢轮廓",
+          "method": "取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测",
+          "sourceDatumExplicit": true,
+          "precision": {
+            "sourceUnit": "public_vector",
+            "horizontalAccuracyMeters": null
+          },
+          "limitation": "采用太王陵墓冢参照点代表陵群；其他王陵分散于不同墓区，不表示全群中心或范围。",
+          "estimate": {
+            "basis": "OSM墓冢轮廓与太王陵名称、既有YM0541资料互核",
+            "extent": "太王陵墓冢公开矢量范围",
+            "confidence": "site",
+            "reviewedAt": "2026-10-09"
+          }
         }
       },
       "chronology": {
@@ -36498,10 +36564,26 @@
         "label": "集安高句丽王陵群参考（太王陵代表点）",
         "reason": "只表示属于该陵群，不表示单陵与太王陵同址。",
         "coordinates": {
-          "lat": 41.142,
-          "lng": 126.21,
+          "lat": 41.14224448333333,
+          "lng": 126.21061473333333,
           "crs": "WGS84",
-          "sourceId": "koguryo-taewang-survey"
+          "status": "estimated_wgs84",
+          "sourceId": "koguryo-taewang-osm-outline",
+          "target": "集安王陵群代表点（太王陵墓冢）",
+          "original": "OSM way 254077889 的WGS84墓冢轮廓",
+          "method": "取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测",
+          "sourceDatumExplicit": true,
+          "precision": {
+            "sourceUnit": "public_vector",
+            "horizontalAccuracyMeters": null
+          },
+          "limitation": "采用太王陵墓冢参照点代表陵群；其他王陵分散于不同墓区，不表示全群中心或范围。",
+          "estimate": {
+            "basis": "OSM墓冢轮廓与太王陵名称、既有YM0541资料互核",
+            "extent": "太王陵墓冢公开矢量范围",
+            "confidence": "site",
+            "reviewedAt": "2026-10-09"
+          }
         }
       },
       "chronology": {
@@ -36566,10 +36648,26 @@
         "label": "集安高句丽王陵群参考（太王陵代表点）",
         "reason": "只表示属于该陵群，不表示单陵与太王陵同址。",
         "coordinates": {
-          "lat": 41.142,
-          "lng": 126.21,
+          "lat": 41.14224448333333,
+          "lng": 126.21061473333333,
           "crs": "WGS84",
-          "sourceId": "koguryo-taewang-survey"
+          "status": "estimated_wgs84",
+          "sourceId": "koguryo-taewang-osm-outline",
+          "target": "集安王陵群代表点（太王陵墓冢）",
+          "original": "OSM way 254077889 的WGS84墓冢轮廓",
+          "method": "取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测",
+          "sourceDatumExplicit": true,
+          "precision": {
+            "sourceUnit": "public_vector",
+            "horizontalAccuracyMeters": null
+          },
+          "limitation": "采用太王陵墓冢参照点代表陵群；其他王陵分散于不同墓区，不表示全群中心或范围。",
+          "estimate": {
+            "basis": "OSM墓冢轮廓与太王陵名称、既有YM0541资料互核",
+            "extent": "太王陵墓冢公开矢量范围",
+            "confidence": "site",
+            "reviewedAt": "2026-10-09"
+          }
         }
       },
       "chronology": {
@@ -36622,10 +36720,26 @@
         "label": "集安高句丽王陵群参考（太王陵代表点）",
         "reason": "只表示属于该陵群，不表示单陵与太王陵同址。",
         "coordinates": {
-          "lat": 41.142,
-          "lng": 126.21,
+          "lat": 41.14224448333333,
+          "lng": 126.21061473333333,
           "crs": "WGS84",
-          "sourceId": "koguryo-taewang-survey"
+          "status": "estimated_wgs84",
+          "sourceId": "koguryo-taewang-osm-outline",
+          "target": "集安王陵群代表点（太王陵墓冢）",
+          "original": "OSM way 254077889 的WGS84墓冢轮廓",
+          "method": "取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测",
+          "sourceDatumExplicit": true,
+          "precision": {
+            "sourceUnit": "public_vector",
+            "horizontalAccuracyMeters": null
+          },
+          "limitation": "采用太王陵墓冢参照点代表陵群；其他王陵分散于不同墓区，不表示全群中心或范围。",
+          "estimate": {
+            "basis": "OSM墓冢轮廓与太王陵名称、既有YM0541资料互核",
+            "extent": "太王陵墓冢公开矢量范围",
+            "confidence": "site",
+            "reviewedAt": "2026-10-09"
+          }
         }
       },
       "chronology": {
@@ -36678,10 +36792,26 @@
         "label": "集安高句丽王陵群参考（太王陵代表点）",
         "reason": "只表示属于该陵群，不表示单陵与太王陵同址。",
         "coordinates": {
-          "lat": 41.142,
-          "lng": 126.21,
+          "lat": 41.14224448333333,
+          "lng": 126.21061473333333,
           "crs": "WGS84",
-          "sourceId": "koguryo-taewang-survey"
+          "status": "estimated_wgs84",
+          "sourceId": "koguryo-taewang-osm-outline",
+          "target": "集安王陵群代表点（太王陵墓冢）",
+          "original": "OSM way 254077889 的WGS84墓冢轮廓",
+          "method": "取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测",
+          "sourceDatumExplicit": true,
+          "precision": {
+            "sourceUnit": "public_vector",
+            "horizontalAccuracyMeters": null
+          },
+          "limitation": "采用太王陵墓冢参照点代表陵群；其他王陵分散于不同墓区，不表示全群中心或范围。",
+          "estimate": {
+            "basis": "OSM墓冢轮廓与太王陵名称、既有YM0541资料互核",
+            "extent": "太王陵墓冢公开矢量范围",
+            "confidence": "site",
+            "reviewedAt": "2026-10-09"
+          }
         }
       },
       "chronology": {
@@ -36734,10 +36864,26 @@
         "label": "集安高句丽王陵群参考（太王陵代表点）",
         "reason": "只表示属于该陵群，不表示单陵与太王陵同址。",
         "coordinates": {
-          "lat": 41.142,
-          "lng": 126.21,
+          "lat": 41.14224448333333,
+          "lng": 126.21061473333333,
           "crs": "WGS84",
-          "sourceId": "koguryo-taewang-survey"
+          "status": "estimated_wgs84",
+          "sourceId": "koguryo-taewang-osm-outline",
+          "target": "集安王陵群代表点（太王陵墓冢）",
+          "original": "OSM way 254077889 的WGS84墓冢轮廓",
+          "method": "取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测",
+          "sourceDatumExplicit": true,
+          "precision": {
+            "sourceUnit": "public_vector",
+            "horizontalAccuracyMeters": null
+          },
+          "limitation": "采用太王陵墓冢参照点代表陵群；其他王陵分散于不同墓区，不表示全群中心或范围。",
+          "estimate": {
+            "basis": "OSM墓冢轮廓与太王陵名称、既有YM0541资料互核",
+            "extent": "太王陵墓冢公开矢量范围",
+            "confidence": "site",
+            "reviewedAt": "2026-10-09"
+          }
         }
       },
       "chronology": {
@@ -36790,10 +36936,26 @@
         "label": "集安高句丽王陵群参考（太王陵代表点）",
         "reason": "只表示属于该陵群，不表示单陵与太王陵同址。",
         "coordinates": {
-          "lat": 41.142,
-          "lng": 126.21,
+          "lat": 41.14224448333333,
+          "lng": 126.21061473333333,
           "crs": "WGS84",
-          "sourceId": "koguryo-taewang-survey"
+          "status": "estimated_wgs84",
+          "sourceId": "koguryo-taewang-osm-outline",
+          "target": "集安王陵群代表点（太王陵墓冢）",
+          "original": "OSM way 254077889 的WGS84墓冢轮廓",
+          "method": "取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测",
+          "sourceDatumExplicit": true,
+          "precision": {
+            "sourceUnit": "public_vector",
+            "horizontalAccuracyMeters": null
+          },
+          "limitation": "采用太王陵墓冢参照点代表陵群；其他王陵分散于不同墓区，不表示全群中心或范围。",
+          "estimate": {
+            "basis": "OSM墓冢轮廓与太王陵名称、既有YM0541资料互核",
+            "extent": "太王陵墓冢公开矢量范围",
+            "confidence": "site",
+            "reviewedAt": "2026-10-09"
+          }
         }
       },
       "chronology": {
@@ -36846,10 +37008,26 @@
         "label": "集安高句丽王陵群参考（太王陵代表点）",
         "reason": "只表示属于该陵群，不表示单陵与太王陵同址。",
         "coordinates": {
-          "lat": 41.142,
-          "lng": 126.21,
+          "lat": 41.14224448333333,
+          "lng": 126.21061473333333,
           "crs": "WGS84",
-          "sourceId": "koguryo-taewang-survey"
+          "status": "estimated_wgs84",
+          "sourceId": "koguryo-taewang-osm-outline",
+          "target": "集安王陵群代表点（太王陵墓冢）",
+          "original": "OSM way 254077889 的WGS84墓冢轮廓",
+          "method": "取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测",
+          "sourceDatumExplicit": true,
+          "precision": {
+            "sourceUnit": "public_vector",
+            "horizontalAccuracyMeters": null
+          },
+          "limitation": "采用太王陵墓冢参照点代表陵群；其他王陵分散于不同墓区，不表示全群中心或范围。",
+          "estimate": {
+            "basis": "OSM墓冢轮廓与太王陵名称、既有YM0541资料互核",
+            "extent": "太王陵墓冢公开矢量范围",
+            "confidence": "site",
+            "reviewedAt": "2026-10-09"
+          }
         }
       },
       "chronology": {
@@ -36902,10 +37080,26 @@
         "label": "集安高句丽王陵群参考（太王陵代表点）",
         "reason": "只表示属于该陵群，不表示单陵与太王陵同址。",
         "coordinates": {
-          "lat": 41.142,
-          "lng": 126.21,
+          "lat": 41.14224448333333,
+          "lng": 126.21061473333333,
           "crs": "WGS84",
-          "sourceId": "koguryo-taewang-survey"
+          "status": "estimated_wgs84",
+          "sourceId": "koguryo-taewang-osm-outline",
+          "target": "集安王陵群代表点（太王陵墓冢）",
+          "original": "OSM way 254077889 的WGS84墓冢轮廓",
+          "method": "取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测",
+          "sourceDatumExplicit": true,
+          "precision": {
+            "sourceUnit": "public_vector",
+            "horizontalAccuracyMeters": null
+          },
+          "limitation": "采用太王陵墓冢参照点代表陵群；其他王陵分散于不同墓区，不表示全群中心或范围。",
+          "estimate": {
+            "basis": "OSM墓冢轮廓与太王陵名称、既有YM0541资料互核",
+            "extent": "太王陵墓冢公开矢量范围",
+            "confidence": "site",
+            "reviewedAt": "2026-10-09"
+          }
         }
       },
       "chronology": {
@@ -36958,10 +37152,26 @@
         "label": "集安高句丽王陵群参考（太王陵代表点）",
         "reason": "只表示属于该陵群，不表示单陵与太王陵同址。",
         "coordinates": {
-          "lat": 41.142,
-          "lng": 126.21,
+          "lat": 41.14224448333333,
+          "lng": 126.21061473333333,
           "crs": "WGS84",
-          "sourceId": "koguryo-taewang-survey"
+          "status": "estimated_wgs84",
+          "sourceId": "koguryo-taewang-osm-outline",
+          "target": "集安王陵群代表点（太王陵墓冢）",
+          "original": "OSM way 254077889 的WGS84墓冢轮廓",
+          "method": "取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测",
+          "sourceDatumExplicit": true,
+          "precision": {
+            "sourceUnit": "public_vector",
+            "horizontalAccuracyMeters": null
+          },
+          "limitation": "采用太王陵墓冢参照点代表陵群；其他王陵分散于不同墓区，不表示全群中心或范围。",
+          "estimate": {
+            "basis": "OSM墓冢轮廓与太王陵名称、既有YM0541资料互核",
+            "extent": "太王陵墓冢公开矢量范围",
+            "confidence": "site",
+            "reviewedAt": "2026-10-09"
+          }
         }
       },
       "chronology": {

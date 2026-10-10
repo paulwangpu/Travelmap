@@ -1,0 +1,133 @@
+{
+  "changes": [
+    {
+      "site": "闻喜",
+      "displayName": "绛"
+    },
+    {
+      "site": "侯马",
+      "displayName": "新田"
+    },
+    {
+      "site": "华县",
+      "displayName": "棫林"
+    },
+    {
+      "site": "淇县",
+      "displayName": "朝歌"
+    },
+    {
+      "site": "凤台",
+      "displayName": "州来"
+    },
+    {
+      "site": "诸暨",
+      "displayName": "埤中"
+    },
+    {
+      "site": "徐州",
+      "displayName": "彭城"
+    },
+    {
+      "site": "离石",
+      "displayName": "左国城"
+    },
+    {
+      "site": "武威",
+      "displayName": "姑臧"
+    },
+    {
+      "site": "朝阳",
+      "displayName": "龙城"
+    },
+    {
+      "site": "临夏",
+      "displayName": "枹罕"
+    },
+    {
+      "site": "西宁",
+      "displayName": "西平"
+    },
+    {
+      "site": "朔州",
+      "displayName": "马邑"
+    },
+    {
+      "site": "巍山",
+      "displayName": "蒙舍"
+    },
+    {
+      "site": "和龙",
+      "displayName": "渤海中京显德府"
+    },
+    {
+      "site": "宁安上京",
+      "displayName": "渤海上京龙泉府"
+    },
+    {
+      "site": "珲春",
+      "displayName": "渤海东京龙原府"
+    },
+    {
+      "site": "建瓯",
+      "displayName": "建州"
+    },
+    {
+      "site": "大名",
+      "displayName": "北京大名府"
+    },
+    {
+      "site": "上京临潢",
+      "displayName": "辽上京临潢府"
+    },
+    {
+      "site": "中京大定",
+      "displayName": "辽金中京大定府"
+    },
+    {
+      "site": "西京大同",
+      "displayName": "辽金西京大同府"
+    },
+    {
+      "site": "兴庆府",
+      "displayName": "西夏兴庆府"
+    },
+    {
+      "site": "会宁府",
+      "displayName": "金上京会宁府"
+    },
+    {
+      "site": "汝南",
+      "displayName": "蔡州"
+    },
+    {
+      "site": "上都",
+      "displayName": "元上都"
+    },
+    {
+      "site": "张北",
+      "displayName": "元中都"
+    },
+    {
+      "site": "九江",
+      "displayName": "江州"
+    },
+    {
+      "site": "凤阳",
+      "displayName": "明中都"
+    },
+    {
+      "site": "衡阳",
+      "displayName": "衡州"
+    },
+    {
+      "site": "永安",
+      "displayName": "永安州"
+    },
+    {
+      "site": "桂平",
+      "displayName": "秀京"
+    }
+  ],
+  "note": "显示字段与持久化名称、siteKey、currentKey分离；多朝代同城未自动用一个古名覆盖所有记录，考古地望争议不自动换成传说古名。"
+}

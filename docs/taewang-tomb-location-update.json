@@ -1,0 +1,54 @@
+{
+  "id": "koguryo-ym0541",
+  "previous": {
+    "lat": 41.142,
+    "lng": 126.21,
+    "crs": "WGS84",
+    "status": "estimated_wgs84",
+    "sourceId": "koguryo-taewang-survey",
+    "target": "太王陵实体周边区域参考",
+    "original": "N41°8′30.7″ E126°12′35.5″",
+    "method": "机构公开DMS坐标换算后取三位小数；按WGS84约定作为区域参考，未声称现场实测",
+    "sourceDatumExplicit": false,
+    "precision": {
+      "sourceUnit": "arcsecond",
+      "resolutionDegrees": 0.001,
+      "horizontalAccuracyMeters": null
+    },
+    "limitation": "太王陵及周边约500米；原始来源未明示基准与测量误差，不作为墓室中心或入口。",
+    "estimate": {
+      "basis": "机构记录名称、墓号与地望互核；保留原始坐标供复核",
+      "extent": "太王陵及周边约500米",
+      "confidence": "regional",
+      "reviewedAt": "2026-10-04"
+    }
+  },
+  "current": {
+    "lat": 41.14224448333333,
+    "lng": 126.21061473333333,
+    "crs": "WGS84",
+    "status": "estimated_wgs84",
+    "sourceId": "koguryo-taewang-osm-outline",
+    "target": "太王陵墓冢轮廓内参照点",
+    "original": "OSM way 254077889 的WGS84墓冢轮廓",
+    "method": "取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测",
+    "sourceDatumExplicit": true,
+    "precision": {
+      "sourceUnit": "public_vector",
+      "horizontalAccuracyMeters": null
+    },
+    "limitation": "公开墓冢矢量内参照点，不是墓室、入口或法定保护界址；不能据此确定墓主。",
+    "estimate": {
+      "basis": "OSM墓冢轮廓与太王陵名称、既有YM0541资料互核",
+      "extent": "太王陵墓冢公开矢量范围",
+      "confidence": "site",
+      "reviewedAt": "2026-10-09"
+    }
+  },
+  "boundary": {
+    "sourceId": "goguryeo-osm-254077889",
+    "url": "https://www.openstreetmap.org/way/254077889",
+    "kind": "墓冢公开矢量，非保护范围"
+  },
+  "group": "koguryo-jian-kings"
+}

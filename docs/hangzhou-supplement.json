@@ -1,0 +1,215 @@
+{
+  "added": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.1648646,
+          30.2351485
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "宋辽金西夏",
+        "city": "杭州",
+        "sourceId": "hangzhou-osm-765317553",
+        "sourceName": "南宋临安 · 太庙墙基",
+        "label": "南宋临安 · 太庙墙基",
+        "sourceUrl": "https://www.openstreetmap.org/node/765317553",
+        "referenceUrl": "https://z.hangzhou.com.cn/2022/syjy/content/content_8420727.html",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗迹地点参照",
+        "note": "太庙墙基遗迹地点，不以广场或附近现代房屋作为太庙全范围。",
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "sitePoint": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.1649759,
+              30.2353731
+            ],
+            [
+              120.1649672,
+              30.2353086
+            ],
+            [
+              120.1650043,
+              30.2353049
+            ],
+            [
+              120.1650006,
+              30.2352776
+            ],
+            [
+              120.1650954,
+              30.2352681
+            ],
+            [
+              120.1650856,
+              30.235195
+            ],
+            [
+              120.1653024,
+              30.2351733
+            ],
+            [
+              120.1653378,
+              30.235437
+            ],
+            [
+              120.1651176,
+              30.2354591
+            ],
+            [
+              120.1651043,
+              30.2353602
+            ],
+            [
+              120.1649759,
+              30.2353731
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "宋辽金西夏",
+        "city": "杭州",
+        "sourceId": "hangzhou-osm-1550545898",
+        "sourceName": "南宋临安 · 太庙遗迹区（公开标绘）",
+        "label": "南宋临安 · 太庙遗迹区（公开标绘）",
+        "sourceUrl": "https://www.openstreetmap.org/way/1550545898",
+        "referenceUrl": "https://z.hangzhou.com.cn/2022/syjy/content/content_8420727.html",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗迹地点参照",
+        "note": "太庙遗迹区附近公开考古遗址矢量，原始对象未注明名称；按与太庙墙基和广场地望对应作为遗迹区参照，不是太庙完整范围或发掘界址。",
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.1532486,
+          30.2602726
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "宋辽金西夏",
+        "city": "杭州",
+        "sourceId": "hangzhou-osm-1254131846",
+        "sourceName": "南宋临安 · 钱塘门遗址",
+        "label": "南宋临安 · 钱塘门遗址",
+        "sourceUrl": "https://www.openstreetmap.org/node/1254131846",
+        "referenceUrl": "https://z.hangzhou.com.cn/2022/syjy/content/content_8420727.html",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗迹地点参照",
+        "note": "考古城门遗址位置参照；当前地面展示不能代替完整门楼形制，未强行连接为全城墙。",
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "sitePoint": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.1625681,
+          30.2200264
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "五代十国",
+        "city": "杭州",
+        "sourceId": "hangzhou-osm-11542293992",
+        "sourceName": "吴越 · 梵天寺经幢",
+        "label": "吴越 · 梵天寺经幢",
+        "sourceUrl": "https://www.openstreetmap.org/node/11542293992",
+        "referenceUrl": "https://hznews.hangzhou.com.cn/wghz/content/2019-03/19/content_7164050.htm",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗迹地点参照",
+        "note": "965年吴越遗存。经幢地点独立标注，不将现代寺院建筑当作吴越王宫。",
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "sitePoint": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.1435421,
+          30.213554
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "五代十国",
+        "city": "杭州",
+        "sourceId": "hangzhou-osm-12441248872",
+        "sourceName": "吴越 · 天龙寺造像",
+        "label": "吴越 · 天龙寺造像",
+        "sourceUrl": "https://www.openstreetmap.org/node/12441248872",
+        "referenceUrl": "https://hznews.hangzhou.com.cn/wghz/content/2019-03/19/content_7164050.htm",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗迹地点参照",
+        "note": "吴越时期造像遗存地点，位于慈云岭；不等于吴越宫城范围。",
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "sitePoint": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.143543,
+          30.2145021
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "五代十国",
+        "city": "杭州",
+        "sourceId": "hangzhou-osm-13990093737",
+        "sourceName": "吴越 · 郊坛遗址（参照）",
+        "label": "吴越 · 郊坛遗址（参照）",
+        "sourceUrl": "https://www.openstreetmap.org/node/13990093737",
+        "referenceUrl": "https://hznews.hangzhou.com.cn/wghz/content/2019-03/19/content_7164050.htm",
+        "coordinateSystem": "WGS84",
+        "status": "公开矢量／遗迹地点参照",
+        "note": "凤凰山与玉皇山地区吴越祭祀相关遗址地点参照，未取得可核对祭坛范围，不借用八卦田边界。",
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "sitePoint": true
+      }
+    }
+  ],
+  "limits": [
+    "太庙遗迹区矢量原始名称缺失，明确公开标绘参照",
+    "皇城与吴越王宫完整几何尚未接入",
+    "德寿宫东侧城墙新发掘未伪造坐标",
+    "衣锦城不代替钱塘西府"
+  ]
+}

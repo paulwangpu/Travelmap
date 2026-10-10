@@ -1,0 +1,186 @@
+{
+  "added": [
+    {
+      "id": "site-refinement-osm-way-418286621",
+      "name": "三星堆 · 南部局部遗址标绘",
+      "source": "https://www.openstreetmap.org/way/418286621",
+      "reference": "https://www.wochmoc.org.cn/contents/32/2374.html",
+      "note": "OSM仅标绘南部一小片遗址，原数据注明实际遗址远大于此；不称为全城或祭祀坑精确范围。三星堆全城及月亮湾、青关山分区需考古图件进一步核实。"
+    },
+    {
+      "id": "site-refinement-osm-node-11638009417",
+      "name": "三星堆 · 城墙遗存参照点",
+      "source": "https://www.openstreetmap.org/node/11638009417",
+      "reference": "https://www.wochmoc.org.cn/contents/32/2374.html",
+      "note": "保留OSM城墙地点，点不表示墙长、城门或全城中心。"
+    },
+    {
+      "id": "site-refinement-osm-way-457394939",
+      "name": "石峁 · 东部遗址片区（公开标绘）",
+      "source": "https://www.openstreetmap.org/way/457394939",
+      "reference": "https://www.cssn.cn/lsx/lsx_kgx/202210/t20221024_5552637.shtml",
+      "note": "公开遗址面位于城址东部，仅表示局部标绘；不作为400余万平方米全城、内城或外城范围。遗址属新石器时代晚期，使用史前色，不标成商代城址。"
+    },
+    {
+      "id": "site-refinement-osm-way-1249381000",
+      "name": "石峁 · 皇城台片区（标绘参照）",
+      "source": "https://www.openstreetmap.org/way/1249381000",
+      "reference": "https://www.cssn.cn/lsx/lsx_kgx/202210/t20221024_5552637.shtml",
+      "note": "皇城台所在台地的公开遗址面；外围边缘为标绘参照，不等同皇城台宫殿建筑或石墙实测轮廓。现代考古遗址公园用地不接入为古城界。"
+    },
+    {
+      "id": "site-refinement-osm-way-395991692",
+      "name": "明中都 · 西南现存城垣",
+      "source": "https://www.openstreetmap.org/way/395991692",
+      "reference": "https://www.dpm.org.cn/learing_detail/257548.html",
+      "note": "保留OSM城垣原始折线与厚度轮廓。此面只是残存城墙带，不是全宫城范围；与已有凤阳府城明清范围分开。"
+    },
+    {
+      "id": "site-refinement-osm-way-1218976259",
+      "name": "明中都 · 午门遗址",
+      "source": "https://www.openstreetmap.org/way/1218976259",
+      "reference": "https://www.dpm.org.cn/learing_detail/257548.html",
+      "note": "保留午门遗址公开轮廓；与明中都宫城及后世凤阳府城区分。"
+    },
+    {
+      "id": "site-refinement-osm-way-1303337026",
+      "name": "明中都 · 西侧建筑遗存（公开标绘）",
+      "source": "https://www.openstreetmap.org/way/1303337026",
+      "reference": "https://www.dpm.org.cn/learing_detail/257548.html",
+      "note": "OSM未提供具体殿名，按位置标识建筑遗存；未自行命名奉天殿、文华殿或武英殿，现代公园管理范围不代替宫城。"
+    },
+    {
+      "id": "site-refinement-osm-way-1303337027",
+      "name": "明中都 · 中轴北段建筑遗存（公开标绘）",
+      "source": "https://www.openstreetmap.org/way/1303337027",
+      "reference": "https://www.dpm.org.cn/learing_detail/257548.html",
+      "note": "OSM未提供具体殿名，按位置标识建筑遗存；未自行命名奉天殿、文华殿或武英殿，现代公园管理范围不代替宫城。"
+    },
+    {
+      "id": "site-refinement-osm-way-1303337045",
+      "name": "明中都 · 东侧建筑遗存（公开标绘）",
+      "source": "https://www.openstreetmap.org/way/1303337045",
+      "reference": "https://www.dpm.org.cn/learing_detail/257548.html",
+      "note": "OSM未提供具体殿名，按位置标识建筑遗存；未自行命名奉天殿、文华殿或武英殿，现代公园管理范围不代替宫城。"
+    },
+    {
+      "id": "site-refinement-bohai-palace-1",
+      "name": "渤海上京 · 第1号宫殿（图示参照）",
+      "source": "https://www.hlj.gov.cn/hlj/c108411/202110/31182525/files/a5a0b47f8f709901864104e4cf2bb558.pdf#page=67",
+      "reference": "https://wlt.hlj.gov.cn/wlt/c114161/202005/c00_31102124.shtml",
+      "note": "依据官方2020—2040保护规划宫城详图，以宫城四角套合既有卫星核对范围，人工描绘图示建筑／城门。小构件受图件与配准误差影响，非考古实测台基，不作精确导航。"
+    },
+    {
+      "id": "site-refinement-bohai-palace-2",
+      "name": "渤海上京 · 第2号宫殿（图示参照）",
+      "source": "https://www.hlj.gov.cn/hlj/c108411/202110/31182525/files/a5a0b47f8f709901864104e4cf2bb558.pdf#page=67",
+      "reference": "https://wlt.hlj.gov.cn/wlt/c114161/202005/c00_31102124.shtml",
+      "note": "依据官方2020—2040保护规划宫城详图，以宫城四角套合既有卫星核对范围，人工描绘图示建筑／城门。小构件受图件与配准误差影响，非考古实测台基，不作精确导航。"
+    },
+    {
+      "id": "site-refinement-bohai-palace-3",
+      "name": "渤海上京 · 第3号宫殿（图示参照）",
+      "source": "https://www.hlj.gov.cn/hlj/c108411/202110/31182525/files/a5a0b47f8f709901864104e4cf2bb558.pdf#page=67",
+      "reference": "https://wlt.hlj.gov.cn/wlt/c114161/202005/c00_31102124.shtml",
+      "note": "依据官方2020—2040保护规划宫城详图，以宫城四角套合既有卫星核对范围，人工描绘图示建筑／城门。小构件受图件与配准误差影响，非考古实测台基，不作精确导航。"
+    },
+    {
+      "id": "site-refinement-bohai-palace-4",
+      "name": "渤海上京 · 第4号宫殿（图示参照）",
+      "source": "https://www.hlj.gov.cn/hlj/c108411/202110/31182525/files/a5a0b47f8f709901864104e4cf2bb558.pdf#page=67",
+      "reference": "https://wlt.hlj.gov.cn/wlt/c114161/202005/c00_31102124.shtml",
+      "note": "依据官方2020—2040保护规划宫城详图，以宫城四角套合既有卫星核对范围，人工描绘图示建筑／城门。小构件受图件与配准误差影响，非考古实测台基，不作精确导航。"
+    },
+    {
+      "id": "site-refinement-bohai-palace-5",
+      "name": "渤海上京 · 第5号宫殿（图示参照）",
+      "source": "https://www.hlj.gov.cn/hlj/c108411/202110/31182525/files/a5a0b47f8f709901864104e4cf2bb558.pdf#page=67",
+      "reference": "https://wlt.hlj.gov.cn/wlt/c114161/202005/c00_31102124.shtml",
+      "note": "依据官方2020—2040保护规划宫城详图，以宫城四角套合既有卫星核对范围，人工描绘图示建筑／城门。小构件受图件与配准误差影响，非考古实测台基，不作精确导航。"
+    },
+    {
+      "id": "site-refinement-bohai-gate-south",
+      "name": "渤海上京 · 宫城南门（图示参照）",
+      "source": "https://www.hlj.gov.cn/hlj/c108411/202110/31182525/files/a5a0b47f8f709901864104e4cf2bb558.pdf#page=67",
+      "note": "依据官方2020—2040保护规划宫城详图，以宫城四角套合既有卫星核对范围，人工描绘图示建筑／城门。小构件受图件与配准误差影响，非考古实测台基，不作精确导航。"
+    },
+    {
+      "id": "site-refinement-bohai-gate-north",
+      "name": "渤海上京 · 宫城北门（图示参照）",
+      "source": "https://www.hlj.gov.cn/hlj/c108411/202110/31182525/files/a5a0b47f8f709901864104e4cf2bb558.pdf#page=67",
+      "note": "依据官方2020—2040保护规划宫城详图，以宫城四角套合既有卫星核对范围，人工描绘图示建筑／城门。小构件受图件与配准误差影响，非考古实测台基，不作精确导航。"
+    },
+    {
+      "id": "site-refinement-bohai-gate-east",
+      "name": "渤海上京 · 宫城东门（图示参照）",
+      "source": "https://www.hlj.gov.cn/hlj/c108411/202110/31182525/files/a5a0b47f8f709901864104e4cf2bb558.pdf#page=67",
+      "note": "依据官方2020—2040保护规划宫城详图，以宫城四角套合既有卫星核对范围，人工描绘图示建筑／城门。小构件受图件与配准误差影响，非考古实测台基，不作精确导航。"
+    },
+    {
+      "id": "site-refinement-bohai-gate-west",
+      "name": "渤海上京 · 宫城西门（图示参照）",
+      "source": "https://www.hlj.gov.cn/hlj/c108411/202110/31182525/files/a5a0b47f8f709901864104e4cf2bb558.pdf#page=67",
+      "note": "依据官方2020—2040保护规划宫城详图，以宫城四角套合既有卫星核对范围，人工描绘图示建筑／城门。小构件受图件与配准误差影响，非考古实测台基，不作精确导航。"
+    },
+    {
+      "id": "site-refinement-bohai-gate-imperial-south",
+      "name": "渤海上京 · 皇城南门（图示参照）",
+      "source": "https://www.hlj.gov.cn/hlj/c108411/202110/31182525/files/a5a0b47f8f709901864104e4cf2bb558.pdf#page=67",
+      "note": "依据官方2020—2040保护规划宫城详图，以宫城四角套合既有卫星核对范围，人工描绘图示建筑／城门。小构件受图件与配准误差影响，非考古实测台基，不作精确导航。"
+    }
+  ],
+  "bohaiInsetGeoreference": {
+    "image": "保护规划第67页，1888×1335渲染",
+    "src": [
+      [
+        188,
+        224
+      ],
+      [
+        372,
+        199
+      ],
+      [
+        399,
+        429
+      ],
+      [
+        223,
+        458
+      ]
+    ],
+    "dst": [
+      [
+        129.1385303,
+        44.13544474
+      ],
+      [
+        129.14673686,
+        44.13603759
+      ],
+      [
+        129.14747894,
+        44.12954681
+      ],
+      [
+        129.13953996,
+        44.12886579
+      ]
+    ],
+    "h": [
+      -0.0044405452483651,
+      -0.004476545547087525,
+      129.13088033094314,
+      -0.0015330327648803326,
+      -0.0015565293910673316,
+      44.14168039297898,
+      -0.00003472203660654779,
+      -0.000034647024912726533
+    ]
+  },
+  "limits": [
+    "三星堆全城、月亮湾、青关山尚无可靠分层几何",
+    "石峁外城、内城未以现代公园外缘替代；史前遗存归入早期城址控制",
+    "明中都未以现代遗址公园代替完整宫城／皇城"
+  ]
+}

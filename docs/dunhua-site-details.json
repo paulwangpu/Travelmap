@@ -1,0 +1,69 @@
+{
+  "name": "渤海旧国（敦化地区参照）",
+  "stages": [
+    {
+      "name": "敖东城 · 城墙与房址",
+      "boundaryStatus": "城墙残段有文献记录，尚缺本次可核对的墙线坐标",
+      "summary": "2002、2003年发掘发现城墙、房址、灰坑、沟及铁器、陶瓷和钱币；发掘区遗存被判定为金代晚期。传统敖东城即渤海旧国的说法不能据此视为已证实。",
+      "sources": [
+        {
+          "title": "吉林大学王培新 · 考古调查与发掘综述",
+          "url": "https://eprints.lib.hokudai.ac.jp/repo/huscap/all/48124/Symposium%202008.pdf"
+        },
+        {
+          "title": "中国社会科学院 · 早期城址地望研究",
+          "url": "https://www.cass.cn/xueshuchengguo/xscg_lsyjy/202111/t20211124_5376637.shtml"
+        }
+      ]
+    },
+    {
+      "name": "永胜遗址 · 一号建筑基址",
+      "boundaryStatus": "大型建筑址已发掘，精确建筑轮廓尚未配准",
+      "summary": "过去曾以高等级建筑材料推测早期王城；后续发掘报告将一号建筑基址归为金代，并讨论寺院性质。不能直接命名为渤海宫殿。",
+      "sources": [
+        {
+          "title": "吉林大学考古综述 · 永胜遗址发掘",
+          "url": "https://eprints.lib.hokudai.ac.jp/repo/huscap/all/48124/Symposium%202008.pdf"
+        }
+      ]
+    },
+    {
+      "name": "城山子山城",
+      "boundaryStatus": "接入遗址地点参照；城墙、城门和房址不凭文字尺寸推造",
+      "summary": "位于敦化西南，是渤海早期城址研究的相关山城。与文献东牟山或旧国的对应关系仍有不同观点；山城本身与王都身份分开表达。",
+      "sources": [
+        {
+          "title": "中国社会科学院 · 东牟山地望辨",
+          "url": "https://www.cass.cn/xueshuchengguo/xscg_lsyjy/202111/t20211124_5376637.shtml"
+        }
+      ]
+    },
+    {
+      "name": "六顶山古墓群",
+      "boundaryStatus": "王室墓群已有陵墓目录记录；墓区与单墓位置需分别核定",
+      "summary": "渤海早期王室贵族墓地，贞惠公主墓铭提供重要年代和身份资料。墓群不是王城范围，现代六鼎山景区与正觉寺范围也不是古代陵区。",
+      "sources": [
+        {
+          "title": "吉林省地方志 · 六顶山古墓群",
+          "url": "https://dfz.jl.gov.cn/ybjl/201106/t20110607_5217088.html"
+        }
+      ]
+    }
+  ],
+  "mapped": [
+    {
+      "id": "dunhua-chengshanzi-reference",
+      "coordinates": [
+        128.14681694,
+        43.29041194
+      ],
+      "precision": "公开地点参照，非墙线"
+    }
+  ],
+  "unresolved": [
+    "敖东城残存墙线的精确几何",
+    "永胜一号建筑台基的可靠配准",
+    "城山子完整城墙与构件",
+    "六顶山各墓区实测边界"
+  ]
+}

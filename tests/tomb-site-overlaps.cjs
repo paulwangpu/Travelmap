@@ -9,7 +9,18 @@ for(const zoom of [4,10])assert(!api.mappedItems(catalog,'',zoom).some(x=>exclud
 assert.equal(catalog.totalRecords,catalog.items.length);
 assert.equal(catalog.mapCandidateIds.length,catalog.items.filter(x=>x.mapEligible).length);
 const original=JSON.parse(execFileSync('git',['show','HEAD:data/imperial-tombs/catalog.json'],{cwd:path.resolve(__dirname,'..'),encoding:'utf8',maxBuffer:8*1024*1024}));
-for(const record of original.items.filter(x=>!excluded.includes(x.id)&&x.id!=='cheshi-goubei'))assert.deepEqual(catalog.items.find(x=>x.id===record.id),record,record.id);
+for(const record of original.items.filter(x=>!excluded.includes(x.id)&&x.id!=='cheshi-goubei')){
+ const current=JSON.parse(JSON.stringify(catalog.items.find(x=>x.id===record.id))),previous=JSON.parse(JSON.stringify(record));
+ if(['koguryo-jian-kings','koguryo-ym0541'].includes(record.id)){
+  assert.equal(current.coordinates.sourceId,'koguryo-taewang-osm-outline');
+  for(const key of ['coordinates','sourceIds','mapReason','previousLocationReference','boundaryReference']){delete current[key];delete previous[key];}
+ }
+ if(current.locationReference?.parentId==='koguryo-jian-kings'&&current.locationReference.coordinates){
+  assert.equal(current.locationReference.coordinates.lng,catalog.items.find(x=>x.id==='koguryo-jian-kings').coordinates.lng);
+  delete current.locationReference.coordinates;delete previous.locationReference.coordinates;
+ }
+ assert.deepEqual(current,previous,record.id);
+}
 const copy=JSON.parse(JSON.stringify(catalog.items));require('../scripts/clean-tomb-site-overlaps.cjs')({items:copy,dir:path.dirname(require.resolve('../data/imperial-tombs/catalog.json'))});assert.deepEqual(copy,catalog.items);
 const capitals=require('../data/china-ancient-capitals.json');
 for(const name of ['金沙遗址','三星堆遗址','二里头遗址'])assert(capitals.items.some(x=>x.name===name));

@@ -1,0 +1,73 @@
+{
+  "added": [
+    {
+      "id": "bohai-other-xigu-inner",
+      "name": "渤海中京显德府 · 西古城内城",
+      "note": "保留OSM原始轮廓；约190×310米，对应内城，不是630×730米外城。",
+      "source": "https://www.openstreetmap.org/way/309702691",
+      "reference": "https://www.hlj.gov.cn/hlj/c108411/202110/31182525/files/a5a0b47f8f709901864104e4cf2bb558.pdf"
+    },
+    {
+      "id": "bohai-other-xigu-outer-inferred",
+      "name": "渤海中京显德府 · 西古城外城（尺寸推定）",
+      "note": "根据公布的外城630×730米、内城北墙距外城北墙70米及OSM内城方向推算；中轴对称是假设，采用虚线。不是现存城墙实测轮廓；卫星影像有云遮，未声称完成全城影像确认。",
+      "source": "https://www.hlj.gov.cn/hlj/c108411/202110/31182525/files/a5a0b47f8f709901864104e4cf2bb558.pdf",
+      "reference": "https://www.hlj.gov.cn/hlj/c108411/202110/31182525/files/a5a0b47f8f709901864104e4cf2bb558.pdf"
+    },
+    {
+      "id": "bohai-other-balian-outer",
+      "name": "渤海东京龙原府 · 八连城外城",
+      "note": "保留原始外城轮廓；与卫星四周遗存边线对照。内外二重城分别标绘，不添加史料未证实的更大外郭城。",
+      "source": "https://www.openstreetmap.org/way/688569789",
+      "reference": "https://dfz.jl.gov.cn/ybjl/201106/t20110607_5217092.html"
+    },
+    {
+      "id": "bohai-other-balian-inner",
+      "name": "渤海东京龙原府 · 八连城内城（影像参照）",
+      "note": "沿公开WGS84卫星影像可辨认的内城边缘标绘，约218×318米，与地方志尺寸相符。不是考古实测界址；农业改造与保护展示可能影响边缘。",
+      "source": "https://dfz.jl.gov.cn/ybjl/201106/t20110607_5217092.html",
+      "reference": "https://dfz.jl.gov.cn/ybjl/201106/t20110607_5217092.html"
+    },
+    {
+      "id": "bohai-other-balian-inner-south",
+      "name": "渤海东京 · 八连城内城南门（参照）",
+      "note": "内城南墙中轴处的城门遗址参照，不据此推造门楼范围。",
+      "source": "https://dfz.jl.gov.cn/ybjl/201106/t20110607_5217092.html",
+      "reference": "https://dfz.jl.gov.cn/ybjl/201106/t20110607_5217092.html"
+    }
+  ],
+  "balianInner": {
+    "pixels": [
+      [
+        546,
+        482
+      ],
+      [
+        797,
+        480
+      ],
+      [
+        797,
+        844
+      ],
+      [
+        546,
+        845
+      ],
+      [
+        546,
+        482
+      ]
+    ],
+    "imagery": {
+      "zoom": 17,
+      "x0": 112968,
+      "y0": 48230
+    }
+  },
+  "unresolved": [
+    "西京鸭绿府定位与完整城垣尚无可靠几何",
+    "南京南海府青海土城尚未获得可核对界址",
+    "敦化敖东城残存墙线与早期都城对应关系尚需核实"
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "addedCount": 11,
+  "features": [
+    {
+      "id": "ljx-jin-shangjing-north",
+      "name": "金上京 · 北城（城垣衔接参照）",
+      "type": "Polygon",
+      "sourceUrls": [
+        "https://www.openstreetmap.org/way/1353818675",
+        "https://www.openstreetmap.org/way/1353818676",
+        "https://www.openstreetmap.org/way/1353818677",
+        "https://www.openstreetmap.org/way/1353818678",
+        "https://www.openstreetmap.org/way/1353818679",
+        "https://www.openstreetmap.org/way/1353818680",
+        "https://www.openstreetmap.org/way/1353818681",
+        "https://www.openstreetmap.org/way/1353818682"
+      ],
+      "referenceUrl": "https://www.hljszw.org.cn/news/4611.html"
+    },
+    {
+      "id": "ljx-jin-shangjing-south",
+      "name": "金上京 · 南城（城垣衔接参照）",
+      "type": "Polygon",
+      "sourceUrls": [
+        "https://www.openstreetmap.org/way/1353818675",
+        "https://www.openstreetmap.org/way/1353818676",
+        "https://www.openstreetmap.org/way/1353818677",
+        "https://www.openstreetmap.org/way/1353818678",
+        "https://www.openstreetmap.org/way/1353818679",
+        "https://www.openstreetmap.org/way/1353818680",
+        "https://www.openstreetmap.org/way/1353818681",
+        "https://www.openstreetmap.org/way/1353818682"
+      ],
+      "referenceUrl": "https://www.hljszw.org.cn/news/4611.html"
+    },
+    {
+      "id": "ljx-jin-shangjing-surviving-walls",
+      "name": "金上京 · 残存城垣（原始分段）",
+      "type": "MultiLineString",
+      "sourceUrls": [
+        "https://www.openstreetmap.org/way/1353818675",
+        "https://www.openstreetmap.org/way/1353818676",
+        "https://www.openstreetmap.org/way/1353818677",
+        "https://www.openstreetmap.org/way/1353818678",
+        "https://www.openstreetmap.org/way/1353818679",
+        "https://www.openstreetmap.org/way/1353818680",
+        "https://www.openstreetmap.org/way/1353818681",
+        "https://www.openstreetmap.org/way/1353818682"
+      ],
+      "referenceUrl": "https://www.hljszw.org.cn/news/4611.html"
+    },
+    {
+      "id": "ljx-osm-way-1182463844",
+      "name": "金上京 · 皇城（现遗址展示区）",
+      "type": "Polygon",
+      "sourceUrls": [
+        "https://www.openstreetmap.org/way/1182463844"
+      ],
+      "referenceUrl": "https://www.hljszw.org.cn/news/4611.html"
+    },
+    {
+      "id": "ljx-osm-node-6366690591",
+      "name": "金上京周边 · 皇帝寨（地点参照）",
+      "type": "Point",
+      "sourceUrls": [
+        "https://www.openstreetmap.org/node/6366690591"
+      ],
+      "referenceUrl": "https://www.hljszw.org.cn/news/4611.html"
+    },
+    {
+      "id": "ljx-osm-way-423097097",
+      "name": "西夏兴庆府 · 承天寺（现寺院范围）",
+      "type": "Polygon",
+      "sourceUrls": [
+        "https://www.openstreetmap.org/way/423097097"
+      ],
+      "referenceUrl": "https://www.yinchuan.gov.cn/sshc/lyjd/zdwbcs/202303/t20230301_3980381.html"
+    },
+    {
+      "id": "ljx-osm-way-628248642",
+      "name": "西夏兴庆府参照 · 承天寺塔（清代重建）",
+      "type": "Polygon",
+      "sourceUrls": [
+        "https://www.openstreetmap.org/way/628248642"
+      ],
+      "referenceUrl": "https://www.yinchuan.gov.cn/sshc/lyjd/zdwbcs/202303/t20230301_3980381.html"
+    },
+    {
+      "id": "ljx-osm-way-627365400",
+      "name": "西夏兴庆府周边参照 · 海宝塔（现存塔）",
+      "type": "Polygon",
+      "sourceUrls": [
+        "https://www.openstreetmap.org/way/627365400"
+      ],
+      "referenceUrl": "https://dsyjs.yinchuan.gov.cn/dsyj/ycsl/201707/t20170714_270739.htm"
+    },
+    {
+      "id": "ljx-osm-way-1007172895",
+      "name": "辽义州 · 奉国寺（现寺院范围）",
+      "type": "Polygon",
+      "sourceUrls": [
+        "https://www.openstreetmap.org/way/1007172895"
+      ],
+      "referenceUrl": "https://whly.ln.gov.cn/whly/wlzt/lnww/zdwwbhdw/ACD2713E45A94C4F83CC43CF61F34AED/index.shtml"
+    },
+    {
+      "id": "ljx-osm-way-1007172894",
+      "name": "辽义州 · 奉国寺大雄殿（辽代现存建筑）",
+      "type": "Polygon",
+      "sourceUrls": [
+        "https://www.openstreetmap.org/way/1007172894"
+      ],
+      "referenceUrl": "https://whly.ln.gov.cn/whly/wlzt/lnww/zdwwbhdw/ACD2713E45A94C4F83CC43CF61F34AED/index.shtml"
+    },
+    {
+      "id": "ljx-osm-way-1279670572",
+      "name": "黑水城沿用址（现城垣为元代扩筑）",
+      "type": "Polygon",
+      "sourceUrls": [
+        "https://www.openstreetmap.org/way/1279670572"
+      ],
+      "referenceUrl": "https://nmgqq.com.cn/quqinggailan/yingxiangjilu/caoyuansichouzhilu/2024-01-02/30566.html"
+    }
+  ],
+  "coordinateCorrections": [
+    {
+      "name": "金上京皇城遗址参照",
+      "coordinates": [
+        126.9727109,
+        45.4894965
+      ],
+      "originalCoordinates": [
+        126.97,
+        45.54
+      ],
+      "coordinateSystem": "WGS84",
+      "sourceUrls": [
+        "https://www.openstreetmap.org/node/6366690686",
+        "https://www.hljszw.org.cn/news/4611.html"
+      ],
+      "note": "更正原区域参照点至可核对的历史遗址参照处；不表示全城中心，原siteKey/currentKey保持不变。"
+    },
+    {
+      "name": "西夏兴庆府承天寺塔参照",
+      "coordinates": [
+        106.2652709125,
+        38.46305628750001
+      ],
+      "originalCoordinates": [
+        106.2309,
+        38.4872
+      ],
+      "coordinateSystem": "WGS84",
+      "sourceUrls": [
+        "https://www.openstreetmap.org/way/628248642",
+        "https://www.yinchuan.gov.cn/sshc/lyjd/zdwbcs/202303/t20230301_3980381.html"
+      ],
+      "note": "更正原区域参照点至可核对的历史遗址参照处；不表示全城中心，原siteKey/currentKey保持不变。"
+    }
+  ],
+  "unresolved": [
+    "西平府：旧城定位及分期未有可靠矢量，未以现代灵武或吴忠城墙代替。",
+    "省嵬城：确认重要性，但本批未取得可靠城垣几何。",
+    "兴庆府：完整西夏城界未接入，现代兴庆老城行政／历史街区面不替代西夏城界。",
+    "黑水城：西夏旧城与元扩建城分期未精确拆面，现存外圈明确标为元代扩筑。"
+  ]
+}
