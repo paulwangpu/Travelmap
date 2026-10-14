@@ -54,6 +54,7 @@
   const natureKeys=()=>Object.keys(colors);
   const eraChecked=k=>typeof eraSelection()==='object'?(eraSelection()[k]??(['夏商','周'].includes(k)?eraSelection()['先秦']:['明','清'].includes(k)?eraSelection()['明清']:undefined))!==false:!era()||root.HistoricalPeriods.displayPeriod(era())===k||(era()==='先秦'&&['传说','夏商','周'].includes(k))||(era()==='明清'&&['明','清'].includes(k));
   const removePopups=()=>{hover?.remove();pinned?.remove();hover=pinned=null;};
+  const isItemVisible=(item,zoom=10)=>enabled()&&mappedItems(data||{items:[item]},eraSelection(),zoom,natureSelection(),preqinSelection(),includeFeudalKings(),onlyVisitableChambers()).some(x=>x.id===item.id);
   async function load() {
     if(data)return data;if(pending)return pending;
     pending=config.fetch('data/imperial-tombs/catalog.json?v=64').then(c=>{
@@ -165,6 +166,6 @@
     const f=map.queryRenderedFeatures([[e.point.x-7,e.point.y-7],[e.point.x+7,e.point.y+7]],{layers:['imperial-tomb-point']})[0];
     if(!f)return false;if(e.originalEvent)e.originalEvent._travelMapHandled=true;const x=data?.items.find(item=>item.id===f.properties.id);if(!x)return false;showDetail(x.id);showPopup(map,x);return true;
   }
-  root.ImperialTombs={init,legend,sync,leaflet,mappedItems,geojson,handleClick,compareChecklistItems,dynastyTheme,markerSvg,markerImage,dynastyColors,isFeudalKing,catalogItems:()=>data?.items||[]};
+  root.ImperialTombs={init,legend,sync,leaflet,mappedItems,geojson,handleClick,compareChecklistItems,dynastyTheme,markerSvg,markerImage,dynastyColors,isFeudalKing,isItemVisible,catalogItems:()=>data?.items||[]};
   if(typeof module!=='undefined')module.exports={mappedItems,geojson,compareChecklistItems,dynastyTheme,markerSvg,markerImage,dynastyColors,popupContent,isFeudalKing,hasVisitableChamber};
 })(globalThis);

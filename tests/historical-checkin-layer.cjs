@@ -16,9 +16,9 @@ for(const name of ['classicalCapitalMarkerTheme','historicalCheckinTheme','place
 const first=ctx.mapLibrePointGeoJson({checkins:true}).features;
 assert.equal(first.length,3);
 const capitalPoint=first.find(x=>x.properties.title==='北京').properties;
-assert.equal(capitalPoint.checklistKey,'chinaAncientCapitals');assert.equal(capitalPoint.capitalIcon,'ancient-capital-明-visited');assert.equal(capitalPoint.capitalLabel,'✓ 北京');assert.equal(capitalPoint.color,periods.colors.明);
+assert.equal(capitalPoint.capitalIcon,undefined);assert.equal(capitalPoint.color,'#dc2626');
 const tombPoint=first.find(x=>x.properties.title==='明孝陵').properties;
-assert.equal(tombPoint.checklistKey,'imperialTombs');assert.equal(tombPoint.capitalIcon,'imperial-mausoleum-明-visited');assert.equal(tombPoint.color,periods.colors.明);
+assert.equal(tombPoint.capitalIcon,undefined);assert.equal(tombPoint.color,'#dc2626');
 assert(!first.find(x=>x.properties.title==='普通打卡').properties.capitalIcon);
 ctx.state.mapOverlays={chinaAncientCapitals:true,imperialTombs:true};
 const second=ctx.mapLibrePointGeoJson({checkins:true}).features;
@@ -27,4 +27,4 @@ assert.equal(second[0].properties.title,'普通打卡');
 assert.equal(ctx.mapLibrePointGeoJson({checkins:false}).features.length,0);
 let cityStateBuilds=0;ctx.ClassicalSites.siteFeatures=()=>{cityStateBuilds++;return {features:[]};};ctx.checklistOverlayPlaces=()=>Array.from({length:1200},(_,i)=>({key:'worldHeritage',item:'遗产'+i,lng:i%180,lat:20,title:'遗产'+i}));ctx.checklistMergeKeyForEntry=()=>'';ctx.checklistCatalog={worldHeritage:{label:'世界遗产'}};ctx.t=x=>x;ctx.checklistOverlayColor=()=> '#64748b';
 assert.equal(ctx.mapLibrePointGeoJson({checkins:false}).features.length,1200);assert.equal(cityStateBuilds,1,'A large heritage catalog shares a single city/check-in state computation');
-console.log('PASS: My check-ins uses visited capital/tomb symbols, keeps ordinary circles and avoids duplicate category points');
+console.log('PASS: My check-ins uses red circles; selected categories own their symbols and suppress duplicate pins');

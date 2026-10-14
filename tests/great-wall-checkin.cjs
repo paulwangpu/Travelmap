@@ -24,6 +24,8 @@ context.GreatWall.setData({features:[point,other,duplicate]});
 state.mapOverlays.greatWall=true;assert.equal(context.GreatWall.filtered().features.length,2,'same-name nearby duplicate hidden; distant namesake retained');
 state.mapOverlays.greatWall=false;state.mapOverlays.checkins=true;
 assert(context.GreatWall.hasVisibleFeatures());assert.equal(context.GreatWall.filtered().features.length,1);
+assert.equal(context.GreatWall.filtered().features[0].properties.categoryVisible,false);assert.equal(context.GreatWall.filtered().features[0].properties.displayColor,'#d9480f');
+assert.equal(context.GreatWall.filtered().features[0].properties.title,'同名关隘','Ordinary check-in labels omit the category check mark');
 state.mapOverlays.checkins=false;assert(!context.GreatWall.hasVisibleFeatures());assert.equal(context.GreatWall.filtered().features.length,0);
 state.mapOverlays.greatWall=true;assert.equal(context.GreatWall.filtered().features.length,2);
 handler(event);assert(!context.GreatWall.visited(point));assert.equal(saves,2);assert.equal(renders,2);

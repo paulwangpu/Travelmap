@@ -10413,6 +10413,8 @@ function mapLibreMarkerRenderSignature(overlays) {
     china5a: Boolean(overlays.china5a),
     chinaAncientCapitals: Boolean(overlays.chinaAncientCapitals),
     worldHeritage: Boolean(overlays.worldHeritage),
+    imperialTombs: Boolean(overlays.imperialTombs),
+    imperialTombSelection: [overlays.imperialTombsEras,overlays.imperialTombsEra,overlays.imperialTombsIncludeFeudalKings,overlays.imperialTombsOnlyVisitableChambers],
     highAltitude: Boolean(overlays.highAltitude),
     revision: mapPointRenderRevision,
     historicalFeatures: typeof HistoricalFeatureVisits==='undefined' ? '' : visitedPlaces().map(({place})=>{
@@ -10476,7 +10478,8 @@ function mapLibrePointGeoJson(overlays) {
       });
   }
   checklistOverlayPlaces().forEach((entry) => {
-    const classicalTheme=entry.key==='worldHeritage'?classicalCapitalMarkerTheme(entry.item, classicalFeatures):null;
+    const classicalCandidate=entry.key==='worldHeritage'&&overlays.chinaAncientCapitals?classicalCapitalMarkerTheme(entry.item, classicalFeatures):null;
+    const classicalTheme=classicalCandidate?.icon?classicalCandidate:null;
     const capitalMeta=entry.key==='chinaAncientCapitals'?ancientCapitalMapMeta(entry.item):null;
     const foreignHover=capitalMeta?foreignCapitalHoverMeta(capitalMeta):null;
     const [displayLng, displayLat] = mapDisplayCoordinate(entry.lng, entry.lat);
@@ -10539,6 +10542,7 @@ function ensureHistoricalCheckinCatalogs() {
   if(!chinaAncientCapitalsPromise)loadChinaAncientCapitals().then(refresh).catch(()=>{});
   if(!imperialTombChecklistPromise)loadImperialTombChecklist().then(refresh).catch(()=>{});
   if(!ClassicalSites.catalogReady?.())ClassicalSites.ensureCatalog?.().catch(()=>{});
+  if(!catalogDataPromise)loadCatalogData().then(refresh).catch(()=>{});
 }
 
 function ancientCapitalIconVisible(meta) {
@@ -10592,11 +10596,12 @@ function classicalCapitalMarkerTheme(name, features) {
 function historicalCheckinTheme(place, classicalFeatures) {
   if(place?.historicalFeatureId)return null;
   const capital=ancientCapitalMetaForPlace(place);
-  if(capital)return {...HistoricalPeriods.capitalTheme(capital),key:'chinaAncientCapitals',svg:HistoricalPeriods.capitalSvg(HistoricalPeriods.capitalTheme(capital).color)};
-  const classical=classicalCapitalMarkerTheme(place?.name, classicalFeatures);if(classical)return classical;
+  if(capital&&state.mapOverlays?.chinaAncientCapitals&&HistoricalPeriods.capitalPeriods(capital).some(k=>state.mapOverlays.ancientCapitalPeriods?.[k]!==false))return {...HistoricalPeriods.capitalTheme(capital,state.mapOverlays.ancientCapitalPeriods),key:'chinaAncientCapitals',svg:HistoricalPeriods.capitalSvg(HistoricalPeriods.capitalTheme(capital,state.mapOverlays.ancientCapitalPeriods).color)};
+  const classical=state.mapOverlays?.chinaAncientCapitals?classicalCapitalMarkerTheme(place?.name, classicalFeatures):null;if(classical?.icon)return classical;
   const name=canonicalPlaceKey(place?.name);
   const tomb=imperialTombMapIndex.get(name)||(ImperialTombs.catalogItems?.()||[]).find(x=>[x.name,...(x.aliases||[])].some(alias=>canonicalPlaceKey(alias)===name));
-  if(!tomb)return null;
+  if(!tomb||!state.mapOverlays?.imperialTombs)return null;
+  if(ImperialTombs.isItemVisible?.(tomb,typeof mapLibreMap==='undefined'?10:mapLibreMap?.getZoom()??leafletMap?.getZoom()??10)===false)return null;
   const theme=ImperialTombs.dynastyTheme(tomb);
   return {...theme,key:'imperialTombs',svg:ImperialTombs.markerSvg(theme.color)};
 }
@@ -10671,60 +10676,17 @@ function addMapLibrePointLayers(sourceId) {
       },
     });
   }
-  if (!mapLibreMap.getLayer("map-points-label")) {
-    mapLibreMap.addLayer({
-      id: "map-points-label",
-      type: "symbol",
-      source: sourceId,
-      filter: ["all",["!=",["get","classicalCapital"],true],["!", ["in", ["get", "checklistKey"], ["literal", ["chinaAncientCapitals","imperialTombs"]]]]],
-      minzoom: 5,
-      maxzoom: 8.5,
-      layout: {
-        "text-field": ["get", "title"],
-        "text-font": ["Open Sans Regular", "Arial Unicode MS Regular"],
-        "text-size": 12,
-        "text-variable-anchor": ["top", "bottom", "left", "right"],
-        "text-radial-offset": 0.75,
-        "text-max-width": 12,
-        "text-padding": 1,
-        "text-optional": true,
-      },
-      paint: {
-        "text-color": "#111827",
-        "text-halo-color": "#ffffff",
-        "text-halo-width": 1.05,
-        "text-halo-blur": 0.05,
-        "text-opacity": ["interpolate", ["linear"], ["zoom"], 4.8, 0, 5, 1],
-      },
-    });
-  }
-  if (!mapLibreMap.getLayer("map-points-label-full")) {
-    mapLibreMap.addLayer({
-      id: "map-points-label-full",
-      type: "symbol",
-      source: sourceId,
-      filter: ["all",["!=",["get","classicalCapital"],true],["!", ["in", ["get", "checklistKey"], ["literal", ["chinaAncientCapitals","imperialTombs"]]]]],
-      minzoom: 8.5,
-      layout: {
-        "text-field": ["get", "title"],
-        "text-font": ["Open Sans Regular", "Arial Unicode MS Regular"],
-        "text-size": 12,
-        "text-offset": [0, 1.15],
-        "text-anchor": "top",
-        "text-max-width": 12,
-        "text-padding": 1,
-        "text-allow-overlap": true,
-        "text-ignore-placement": true,
-        "text-optional": true,
-      },
-      paint: {
-        "text-color": "#111827",
-        "text-halo-color": "#ffffff",
-        "text-halo-width": 1.05,
-        "text-halo-blur": 0.05,
-      },
-    });
-  }
+  const filter=["all",["!=",["get","classicalCapital"],true],["!",["in",["get","checklistKey"],["literal",["chinaAncientCapitals","imperialTombs"]]]]];
+  for(const spec of mapCheckinLabelLayers(sourceId,filter))if(!mapLibreMap.getLayer(spec.id))mapLibreMap.addLayer(spec);
+}
+
+function mapCheckinLabelLayers(sourceId,filter,ids=['map-points-label','map-points-label-full']) {
+  const base={'text-field':['get','title'],'text-font':['Open Sans Regular','Arial Unicode MS Regular'],'text-size':12,'text-max-width':12,'text-padding':1,'text-optional':true};
+  const paint={'text-color':'#111827','text-halo-color':'#ffffff','text-halo-width':1.05,'text-halo-blur':.05};
+  return [
+    {id:ids[0],type:'symbol',source:sourceId,filter,minzoom:5,maxzoom:8.5,layout:{...base,'text-variable-anchor':['top','bottom','left','right'],'text-radial-offset':.75},paint:{...paint,'text-opacity':['interpolate',['linear'],['zoom'],4.8,0,5,1]}},
+    {id:ids[1],type:'symbol',source:sourceId,filter,minzoom:8.5,layout:{...base,'text-offset':[0,1.15],'text-anchor':'top','text-allow-overlap':true,'text-ignore-placement':true},paint}
+  ];
 }
 
 let ancientCapitalHoverPopup = null;
@@ -10840,10 +10802,11 @@ function checklistOverlayPlaces() {
   const rawItems = allOverlayItems.map(({ key, item, group, itemKey, legacyKey, title, subtitle }) => {
     if (["worldHeritage","china5a"].includes(key) && [item,item?.name,item?.nameZh,item?.nameEn,checklistItemDisplayName(key,item)].some(n=>checklistCanonicalKey(n)==="place:cn-qin-mausoleum") && qinTombMarkerVisible()) return null;
     const owner=key==='worldHeritage'?ownedHeritageCapitalMeta(item):null;
-    if(owner&&state.mapOverlays?.chinaAncientCapitals)return null;
+    if(owner&&state.mapOverlays?.chinaAncientCapitals&&ancientCapitalIconVisible(owner))return null;
     const coords = checklistCoordinateFor(item, key === "china5a" ? group : "");
     if (!coords || !Number.isFinite(coords[0]) || !Number.isFinite(coords[1])) return null;
     const ownerMeta=key==='chinaAncientCapitals'?ancientCapitalMapMeta(item):null;
+    if(ownerMeta&&!ancientCapitalIconVisible(ownerMeta))return null;
     const done = ownerMeta?.checkinItem ? isChecklistItemDone(ownerMeta.checkinChecklistKey,ownerMeta.checkinItem) : isChecklistItemDone(key, item, group);
     if (seen.has(itemKey) && !done) return null;
     if (seen.has(legacyKey) && !done) return null;
@@ -11113,6 +11076,7 @@ function placeBelongsToActiveChecklistOverlay(place, classicalFeatures) {
   const historical=historicalCheckinTheme(place, classicalFeatures);
   if(historical?.key==='imperialTombs'&&state.mapOverlays?.imperialTombs)return true;
   if(historical?.key==='chinaAncientCapitals'&&state.mapOverlays?.chinaAncientCapitals)return true;
+  if(place.checklistKey==='chinaAncientCapitals'&&state.mapOverlays?.chinaAncientCapitals&&!historical)return false;
   const activeKeys = activeChecklistOverlayKeys();
   if (!activeKeys.length) return false;
   if (place.checklistOnly && activeKeys.includes(place.checklistKey)) return true;
@@ -11896,7 +11860,8 @@ function renderLeafletLayers() {
   }
 
   checklistOverlayPlaces().forEach((entry) => {
-    const classicalTheme=entry.key==='worldHeritage'?classicalCapitalMarkerTheme(entry.item):null;
+    const classicalCandidate=entry.key==='worldHeritage'&&overlays.chinaAncientCapitals?classicalCapitalMarkerTheme(entry.item):null;
+    const classicalTheme=classicalCandidate?.icon?classicalCandidate:null;
     const [displayLng, displayLat] = mapDisplayCoordinate(entry.lng, entry.lat);
     const marker = entry.key === "chinaAncientCapitals" || classicalTheme ? L.marker([displayLat, displayLng], {zIndexOffset:1000,icon: L.divIcon({className: "imperial-tomb-marker", html: (classicalTheme ? Boolean(classicalTheme.icon) : ancientCapitalIconVisible(ancientCapitalMapMeta(entry.item))) ? HistoricalPeriods.visitedSvg(classicalTheme ? classicalTheme.svg : HistoricalPeriods.capitalSvg(HistoricalPeriods.capitalTheme(ancientCapitalMapMeta(entry.item), state.mapOverlays?.ancientCapitalPeriods).color), entry.done) : "", iconSize: [18,18], iconAnchor: [9,9]})}) : L.circleMarker([displayLat, displayLng], {
       radius: entry.done ? 4 : 3,
@@ -16633,7 +16598,7 @@ ClassicalSites.init({hoverContent:ancientCapitalHoverContent,hoverEnabled:()=>!m
 PompeiiSites.init({state:()=>state,language:()=>currentLanguage,zoom:()=>leafletMap?.getZoom()||13,front:bringMapLibrePointLayersToFront});
 AncientCapitalWalls.init({zoom:()=>leafletMap?.getZoom()||13,state:()=>state,language:()=>currentLanguage,front:bringMapLibrePointLayersToFront,error:()=>showToast(currentLanguage==='en'?'Historical wall extents failed to load; toggle to retry.':'古城墙范围加载失败，请重新勾选重试。')});
 EthnicRegions.init({map: () => mapLibreMap, state: () => state, language: () => currentLanguage, save: saveUiStateSoon, front: bringMapLibrePointLayersToFront, render: () => { renderMapControls(); renderGeoMap(); }});
-GreatWall.init({ state: () => state, language: () => currentLanguage, map: () => mapLibreMap,
+GreatWall.init({ checkinLabelLayers:mapCheckinLabelLayers,state: () => state, language: () => currentLanguage, map: () => mapLibreMap,
   leafletGroup: () => leafletLayers, front: bringMapLibrePointLayersToFront, saveCheckins: saveState,
   save: saveUiStateSoon, render: () => { renderMapControls(); renderGeoMap(); } });
 ImperialTombs.init({ state: () => state, language: () => currentLanguage, fetch: fetchJson,
@@ -16975,6 +16940,7 @@ $("#showCheckinsOnMap")?.addEventListener("change", (event) => {
   saveUiStateSoon();
   if (mapLibreMap && mapLibreStyleReady) {
     renderMapLibreMarkers();
+    GreatWall.sync(mapLibreMap);
     bringMapLibrePointLayersToFront();
   } else {
     renderGeoMap();
@@ -17178,7 +17144,12 @@ $("#showWorldHeritageOnMap")?.addEventListener("change", (event) => {
   saveUiStateSoon();
   const refresh = () => {
     checklistOverlayCache.signature = "";
-    if (mapLibreMap) renderMapLibreMarkers();
+    invalidateMapPointRenderCache();
+    if (mapLibreMap && mapLibreStyleReady) {
+      renderMapLibreMarkers();
+      CapitalMapLayers.sync(mapLibreMap);
+      GreatWall.sync(mapLibreMap);
+    }
     else renderGeoMap();
   };
   if (event.target.checked) loadCatalogData().finally(refresh);
