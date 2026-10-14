@@ -1,0 +1,433 @@
+{
+  "rootsAdded": 11,
+  "recordsAdded": 15,
+  "sitesAdded": 22,
+  "featuresAdded": 56,
+  "originalOSMObjects": 92,
+  "allPreviousDataPreserved": true,
+  "kyiv": "Not added to present-day Russia; belongs to Ukraine",
+  "cities": [
+    {
+      "key": "washington-dc",
+      "name": "华盛顿哥伦比亚特区",
+      "country": "美国",
+      "identity": "capital",
+      "identityLabel": "美国首都",
+      "years": "1800—今",
+      "source": "https://www.senate.gov/about/historic-buildings-spaces/meeting-places.htm",
+      "detailCount": 2,
+      "polygonCount": 2,
+      "wallCount": 0,
+      "status": "1800年起为联邦首都。国会大厦与白宫是具体政治建筑，未有证据表明华盛顿存在传统完整环城墙；本轮不绘制市界作城郭。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "sourceObjects": [
+        "https://www.openstreetmap.org/way/66418809",
+        "https://www.openstreetmap.org/relation/19761182"
+      ]
+    },
+    {
+      "key": "philadelphia",
+      "name": "费城",
+      "country": "美国",
+      "identity": "capital",
+      "identityLabel": "美国历届国会驻地／联邦首都",
+      "years": "1790—1800",
+      "source": "https://www.senate.gov/about/historic-buildings-spaces/meeting-places.htm",
+      "detailCount": 1,
+      "polygonCount": 1,
+      "wallCount": 0,
+      "status": "本轮记录1790—1800年联邦首都；独立厅还见证独立宣言与制宪。独立厅世界遗产是具体建筑，不合并为整座费城的打卡身份。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "sourceObjects": [
+        "https://www.openstreetmap.org/way/25271595"
+      ]
+    },
+    {
+      "key": "new-york",
+      "name": "纽约",
+      "country": "美国",
+      "identity": "capital",
+      "identityLabel": "美国邦联国会驻地／联邦首都",
+      "years": "1785—1788；1789—1790",
+      "source": "https://history.house.gov/People/Continental-Congress/Meeting-Places/",
+      "detailCount": 2,
+      "polygonCount": 2,
+      "wallCount": 0,
+      "status": "邦联国会1785—1788年驻纽约，联邦首都期为1789—1790年，分列记录。现联邦大厅建筑为19世纪后建，1789年就职时建筑已不存。克林顿堡是港口堡垒，不是纽约完整城墙。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "sourceObjects": [
+        "https://www.openstreetmap.org/way/109337830",
+        "https://www.openstreetmap.org/relation/3695755"
+      ]
+    },
+    {
+      "key": "annapolis",
+      "name": "安纳波利斯",
+      "country": "美国",
+      "identity": "capital",
+      "identityLabel": "美国邦联国会临时驻地",
+      "years": "1783—1784",
+      "source": "https://history.state.gov/departmenthistory/buildings/section9",
+      "detailCount": 1,
+      "polygonCount": 1,
+      "wallCount": 0,
+      "status": "1783—1784年为邦联国会临时驻地，非之后联邦政府的正式永久首都。州议会大厦是国会驻地参照，不等于城界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "sourceObjects": [
+        "https://www.openstreetmap.org/way/50319294"
+      ]
+    },
+    {
+      "key": "boston",
+      "name": "波士顿",
+      "country": "美国",
+      "identity": "administrative-capital",
+      "identityLabel": "马萨诸塞殖民地／省及州首府",
+      "years": "1630—今",
+      "source": "https://www.sec.state.ma.us/divisions/cis/historical/misc-facts.htm",
+      "detailCount": 2,
+      "polygonCount": 2,
+      "wallCount": 0,
+      "status": "马萨诸塞殖民地／省及州首府，身份为地方行政中心，不另列国家都城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "sourceObjects": [
+        "https://www.openstreetmap.org/way/29608515",
+        "https://www.openstreetmap.org/way/29718019"
+      ]
+    },
+    {
+      "key": "williamsburg",
+      "name": "威廉斯堡",
+      "country": "美国",
+      "identity": "administrative-capital",
+      "identityLabel": "弗吉尼亚殖民地及早期州首府",
+      "years": "1699—1780",
+      "source": "https://www.williamsburgva.gov/DocumentCenter/View/1026/01---Introduction-PDF",
+      "detailCount": 2,
+      "polygonCount": 2,
+      "wallCount": 0,
+      "status": "总督宫与议会大厦是现状复建建筑。殖民历史区、宫院和规划街区不自动作为完整古城墙。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "sourceObjects": [
+        "https://www.openstreetmap.org/way/296923201",
+        "https://www.openstreetmap.org/way/296923435"
+      ]
+    },
+    {
+      "key": "jamestown",
+      "name": "詹姆斯敦",
+      "country": "美国",
+      "identity": "administrative-capital",
+      "identityLabel": "弗吉尼亚殖民地政治中心／首府",
+      "years": "1607—1699",
+      "source": "https://www.nps.gov/jame/learn/historyculture/a-short-history-of-jamestown.htm",
+      "detailCount": 2,
+      "polygonCount": 2,
+      "wallCount": 0,
+      "status": "詹姆斯堡范围与1607年考古区分列原始几何，包含现状复建标绘；不能作为整个殖民首府城界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "sourceObjects": [
+        "https://www.openstreetmap.org/way/301682170",
+        "https://www.openstreetmap.org/way/363588038"
+      ]
+    },
+    {
+      "key": "charleston",
+      "name": "查尔斯顿",
+      "country": "美国",
+      "identity": "administrative-capital",
+      "identityLabel": "南卡罗来纳殖民地及早期州首府",
+      "years": "1670—1788；现城址主要自1680年起",
+      "source": "https://home.nps.gov/places/charleston-sc.htm",
+      "detailCount": 3,
+      "polygonCount": 2,
+      "wallCount": 2,
+      "status": "1670年的最初查尔斯镇与1680年后现老城位置不同。平克尼堡为1809年起建设的港防堡垒，不是殖民地首府的全城范围。殖民城墙仍待可靠定位。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "sourceObjects": [
+        "https://www.openstreetmap.org/way/1377775060",
+        "https://www.openstreetmap.org/way/491702219",
+        "https://www.openstreetmap.org/way/1377675366",
+        "https://www.openstreetmap.org/way/1377775061"
+      ]
+    },
+    {
+      "key": "savannah",
+      "name": "萨凡纳",
+      "country": "美国",
+      "identity": "administrative-capital",
+      "identityLabel": "乔治亚殖民地及早期州首府",
+      "years": "1733—1780年代（后期驻地有迁移）",
+      "source": "https://tile.loc.gov/storage-services/master/pnp/habshaer/ga/ga0400/ga0413/data/ga0413data.pdf",
+      "detailCount": 1,
+      "polygonCount": 1,
+      "wallCount": 0,
+      "status": "春山防御工事是现代复建示意。未经官方资料确认的普通barrier=city_wall对象未采纳为军事城墙。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "sourceObjects": [
+        "https://www.openstreetmap.org/way/130174093"
+      ]
+    },
+    {
+      "key": "st-augustine",
+      "name": "圣奥古斯丁",
+      "country": "美国",
+      "identity": "administrative-capital",
+      "identityLabel": "西班牙佛罗里达殖民行政中心",
+      "years": "1565—1821（含英属时期）",
+      "source": "https://www.nps.gov/casa/learn/historyculture/index.htm",
+      "detailCount": 2,
+      "polygonCount": 1,
+      "wallCount": 1,
+      "status": "圣马科斯堡建于1672—1695年；库博防线显示原始现状复建段，不强行闭合为全城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "sourceObjects": [
+        "https://www.openstreetmap.org/relation/1972715",
+        "https://www.openstreetmap.org/way/146056095"
+      ]
+    },
+    {
+      "key": "santa-fe",
+      "name": "圣菲",
+      "country": "美国",
+      "identity": "administrative-capital",
+      "identityLabel": "新墨西哥殖民地、领地及州首府",
+      "years": "1610—今",
+      "source": "https://www.nps.gov/places/santa-fe-plaza.htm",
+      "detailCount": 1,
+      "polygonCount": 1,
+      "wallCount": 0,
+      "status": "新墨西哥殖民地、领地及州首府，身份为地方行政中心，不另列国家都城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "sourceObjects": [
+        "https://www.openstreetmap.org/way/310833338"
+      ]
+    },
+    {
+      "key": "san-juan",
+      "name": "圣胡安（波多黎各）",
+      "country": "美国",
+      "identity": "administrative-capital",
+      "identityLabel": "西班牙波多黎各殖民首府／现领地首府",
+      "years": "1521—今（现城址）",
+      "source": "https://whc.unesco.org/en/list/266/",
+      "detailCount": 12,
+      "polygonCount": 11,
+      "wallCount": 4,
+      "status": "现老圣胡安城址自1521年；更早首府卡帕拉为另一城址，不并入。城墙与港防堡垒、总督宫分别表达；世界遗产保护区不作为全城边界。波多黎各按美国领地注明，不视为美国国家首都。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "sourceObjects": [
+        "https://www.openstreetmap.org/way/142863669",
+        "https://www.openstreetmap.org/way/203588975",
+        "https://www.openstreetmap.org/way/561634537",
+        "https://www.openstreetmap.org/way/561634538",
+        "https://www.openstreetmap.org/way/1024680662",
+        "https://www.openstreetmap.org/way/1024680663",
+        "https://www.openstreetmap.org/way/1024680664",
+        "https://www.openstreetmap.org/way/1024680666",
+        "https://www.openstreetmap.org/way/1024680667",
+        "https://www.openstreetmap.org/way/1396452817",
+        "https://www.openstreetmap.org/relation/3501975",
+        "https://www.openstreetmap.org/way/119438993",
+        "https://www.openstreetmap.org/way/119438994",
+        "https://www.openstreetmap.org/way/308896766",
+        "https://www.openstreetmap.org/way/700234944",
+        "https://www.openstreetmap.org/way/704106796",
+        "https://www.openstreetmap.org/way/704106802",
+        "https://www.openstreetmap.org/way/704106804",
+        "https://www.openstreetmap.org/way/1396452803",
+        "https://www.openstreetmap.org/way/1396452804",
+        "https://www.openstreetmap.org/way/1396452805",
+        "https://www.openstreetmap.org/way/1396452806",
+        "https://www.openstreetmap.org/way/1396452807",
+        "https://www.openstreetmap.org/way/1396452808"
+      ]
+    },
+    {
+      "key": "new-orleans",
+      "name": "新奥尔良",
+      "country": "美国",
+      "identity": "administrative-capital",
+      "identityLabel": "法国／西班牙路易斯安那殖民首府",
+      "years": "1722—1803（殖民首府；后为领地及早期州首府）",
+      "source": "https://www.nps.gov/jela/learn/historyculture/early-europeans-in-louisiana.htm",
+      "detailCount": 1,
+      "polygonCount": 1,
+      "wallCount": 0,
+      "status": "法国／西班牙路易斯安那殖民首府，身份为地方行政中心，不另列国家都城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "sourceObjects": [
+        "https://www.openstreetmap.org/way/329364483"
+      ]
+    },
+    {
+      "key": "novgorod",
+      "name": "大诺夫哥罗德",
+      "country": "俄罗斯",
+      "identity": "capital",
+      "identityLabel": "诺夫哥罗德共和国都城",
+      "years": "1136—1478",
+      "source": "https://whc.unesco.org/en/list/604/",
+      "detailCount": 3,
+      "polygonCount": 2,
+      "wallCount": 1,
+      "status": "记录诺夫哥罗德共和国时期；克里姆林现存15世纪城防经历后期修缮，不反推为早期全城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "sourceObjects": [
+        "https://www.openstreetmap.org/way/26333895",
+        "https://www.openstreetmap.org/way/252586719",
+        "https://www.openstreetmap.org/way/252586725",
+        "https://www.openstreetmap.org/way/252586728",
+        "https://www.openstreetmap.org/way/252586729",
+        "https://www.openstreetmap.org/way/252586731",
+        "https://www.openstreetmap.org/way/252586733",
+        "https://www.openstreetmap.org/way/252586735",
+        "https://www.openstreetmap.org/way/252586736",
+        "https://www.openstreetmap.org/way/252586740"
+      ]
+    },
+    {
+      "key": "vladimir",
+      "name": "弗拉基米尔",
+      "country": "俄罗斯",
+      "identity": "capital",
+      "identityLabel": "弗拉基米尔—苏兹达尔公国都城",
+      "years": "1157—14世纪",
+      "source": "https://whc.unesco.org/en/list/633/",
+      "detailCount": 1,
+      "polygonCount": 1,
+      "wallCount": 0,
+      "status": "金门是12世纪城防遗存，不从一个城门反推完整古城。与苏兹达尔共属系列遗产，两个城市及组件不因WHC编号相同而自动合并。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "sourceObjects": [
+        "https://www.openstreetmap.org/relation/5612148"
+      ]
+    },
+    {
+      "key": "suzdal",
+      "name": "苏兹达尔",
+      "country": "俄罗斯",
+      "identity": "capital",
+      "identityLabel": "苏兹达尔王公中心／早期公国都城",
+      "years": "12世纪前期—1157",
+      "source": "https://historyrussia.org/proekty/nashi-prioritety/1000-letie-osnovaniya-g-suzdalya.html",
+      "detailCount": 3,
+      "polygonCount": 2,
+      "wallCount": 2,
+      "status": "12世纪前期苏兹达尔为公国中心，1157年都城迁弗拉基米尔。克里姆林范围与救世主—叶夫菲米修道院围墙分别表达；修道院不是全城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "sourceObjects": [
+        "https://www.openstreetmap.org/relation/7563754",
+        "https://www.openstreetmap.org/relation/10953973",
+        "https://www.openstreetmap.org/way/127684406"
+      ]
+    },
+    {
+      "key": "moscow",
+      "name": "莫斯科",
+      "country": "俄罗斯",
+      "identity": "capital",
+      "identityLabel": "莫斯科大公国、沙皇俄国及现代国家首都",
+      "years": "14世纪—1547；1547—1712；1918—1991；1991—今",
+      "source": "https://whc.unesco.org/en/list/545/",
+      "detailCount": 6,
+      "polygonCount": 4,
+      "wallCount": 2,
+      "status": "1712年后中央首都主要在圣彼得堡，18世纪早期曾短暂回迁莫斯科，未将1712—1918年写成连续莫斯科首都期。1918年中央政府返回。克里姆林是核心城堡，基泰城墙是另一城防体系，均不等同现代莫斯科市界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "sourceObjects": [
+        "https://www.openstreetmap.org/relation/225033",
+        "https://www.openstreetmap.org/relation/1360641",
+        "https://www.openstreetmap.org/relation/7679578",
+        "https://www.openstreetmap.org/relation/1359233",
+        "https://www.openstreetmap.org/way/185298684",
+        "https://www.openstreetmap.org/way/228118828",
+        "https://www.openstreetmap.org/way/1213525445",
+        "https://www.openstreetmap.org/way/93803735",
+        "https://www.openstreetmap.org/way/142774566",
+        "https://www.openstreetmap.org/way/417884277",
+        "https://www.openstreetmap.org/way/637102990",
+        "https://www.openstreetmap.org/way/1211530235",
+        "https://www.openstreetmap.org/way/1211530236",
+        "https://www.openstreetmap.org/way/1211530237",
+        "https://www.openstreetmap.org/way/1211530238",
+        "https://www.openstreetmap.org/way/397241272",
+        "https://www.openstreetmap.org/way/397241273",
+        "https://www.openstreetmap.org/way/417600982",
+        "https://www.openstreetmap.org/way/417611411",
+        "https://www.openstreetmap.org/way/417612928",
+        "https://www.openstreetmap.org/way/417884566",
+        "https://www.openstreetmap.org/way/615173812"
+      ]
+    },
+    {
+      "key": "st-petersburg",
+      "name": "圣彼得堡",
+      "country": "俄罗斯",
+      "identity": "capital",
+      "identityLabel": "俄罗斯帝国首都",
+      "years": "1712—1728；1730年代—1918",
+      "source": "https://www.encspb.ru/object/2804019776?lc=en",
+      "detailCount": 4,
+      "polygonCount": 4,
+      "wallCount": 0,
+      "status": "1712—1918年间为首都，但1728年至1730年代初有迁回莫斯科的中断；恢复年份资料存在1730／1732差异，以1730年代表达。彼得保罗要塞为1703年起的独立要塞，冬宫不是全城范围。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "sourceObjects": [
+        "https://www.openstreetmap.org/relation/227969",
+        "https://www.openstreetmap.org/relation/2594679",
+        "https://www.openstreetmap.org/relation/2594690",
+        "https://www.openstreetmap.org/relation/69424"
+      ]
+    },
+    {
+      "key": "sigtuna",
+      "name": "锡格蒂纳",
+      "country": "瑞典",
+      "identity": "capital",
+      "identityLabel": "瑞典早期王都／王权中心",
+      "years": "约980—12世纪",
+      "source": "https://visitsweden.com/where-to-go/middle-sweden/uppland/sigtuna/",
+      "detailCount": 3,
+      "polygonCount": 3,
+      "wallCount": 0,
+      "status": "官方旅游资料称早期旧都；约980年建立，早期王权中心时期采用约980—12世纪。无法可靠定位王廷或完整城墙，现有教堂遗址不替代宫城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "sourceObjects": [
+        "https://www.openstreetmap.org/way/22981135",
+        "https://www.openstreetmap.org/way/67567186",
+        "https://www.openstreetmap.org/way/1301154115"
+      ]
+    },
+    {
+      "key": "gamla-uppsala",
+      "name": "老乌普萨拉",
+      "country": "瑞典",
+      "identity": "royal-centre",
+      "identityLabel": "瑞典早期王权与宗教中心（都城制度待核）",
+      "years": "铁器时代—中世纪早期",
+      "source": "https://www.raa.se/publicerat/br2008_2.pdf",
+      "detailCount": 2,
+      "polygonCount": 2,
+      "wallCount": 0,
+      "status": "铁器时代王权、宗教与王冢中心，不能等同现代意义的统一国都。考古遗址与王冢区仅为现状范围，未伪造城墙或王宫。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "sourceObjects": [
+        "https://www.openstreetmap.org/way/25830011",
+        "https://www.openstreetmap.org/way/374931055"
+      ]
+    },
+    {
+      "key": "uppsala",
+      "name": "乌普萨拉",
+      "country": "瑞典",
+      "identity": "royal-residence",
+      "identityLabel": "瑞典王室驻地／宗教与教育中心",
+      "years": "16世纪起的王室驻地",
+      "source": "https://www.raa.se/app/uploads/2016/12/uppsala-riksintresset.pdf",
+      "detailCount": 1,
+      "polygonCount": 1,
+      "wallCount": 0,
+      "status": "现代乌普萨拉与老乌普萨拉是不同城址。城堡为16世纪起王室驻地；不单凭宫殿认定国家首都。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "sourceObjects": [
+        "https://www.openstreetmap.org/way/24433739"
+      ]
+    },
+    {
+      "key": "stockholm",
+      "name": "斯德哥尔摩",
+      "country": "瑞典",
+      "identity": "capital",
+      "identityLabel": "瑞典首都",
+      "years": "1634—今",
+      "source": "https://stadsarkivet.stockholm/skola/boka-skolvisning/alla-vara-skolvisningar/stormaktstidens-stockholm/",
+      "detailCount": 1,
+      "polygonCount": 1,
+      "wallCount": 0,
+      "status": "中世纪逐步成为政治中心，1634年行政改革明确首都地位；本轮国家首都记录采用1634—今。现王宫主要为18世纪建筑，不是完整中世纪城界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "sourceObjects": [
+        "https://www.openstreetmap.org/relation/34394"
+      ]
+    }
+  ]
+}

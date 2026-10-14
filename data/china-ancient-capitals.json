@@ -1,8 +1,8 @@
 {
   "source": "中国历代政权都城_古今地名与坐标.xlsx 都城总表",
   "generatedAt": "2026-07-23",
-  "recordCount": 540,
-  "siteCount": 331,
+  "recordCount": 557,
+  "siteCount": 343,
   "skippedCount": 0,
   "items": [
     {
@@ -37617,6 +37617,1636 @@
         }
       ],
       "recordCount": 1
+    },
+    {
+      "siteKey": "ancient-site:world-saigon",
+      "currentKey": "ancient-site:world-saigon",
+      "currentPlace": "胡志明市／西贡",
+      "name": "胡志明市／西贡",
+      "enName": "Ho Chi Minh City / Saigon",
+      "lat": 10.77713435,
+      "lng": 106.69589565,
+      "admin": "越南·胡志明市",
+      "country": "越南",
+      "confidence": "高",
+      "sourceOrder": 547,
+      "siteNames": [
+        "胡志明市／西贡",
+        "胡志明市",
+        "胡志明",
+        "西贡",
+        "嘉定",
+        "Saigon",
+        "Ho Chi Minh City",
+        "Gia Định"
+      ],
+      "ancientNames": [
+        "西贡",
+        "嘉定"
+      ],
+      "aliases": [
+        "胡志明市",
+        "胡志明",
+        "西贡",
+        "嘉定",
+        "Saigon",
+        "Ho Chi Minh City",
+        "Gia Định"
+      ],
+      "dynasties": [
+        "阮福映政权（统一前）",
+        "越南共和国"
+      ],
+      "eras": [
+        "清",
+        "近现代"
+      ],
+      "capitalPeriods": [
+        "清",
+        "近现代"
+      ],
+      "mapReferencePeriod": "近现代",
+      "capitalTypes": [
+        "统一前王廷／政治中心",
+        "国家首都"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "records": [
+        {
+          "时代": "清",
+          "政权/国号": "阮福映政权（统一前）",
+          "政权年代（原文）": "1790—1802",
+          "都城性质": "统一前王廷／政治中心",
+          "都城年代（原文）": "1790—1802",
+          "古称": "西贡／嘉定",
+          "今称/遗址名": "胡志明市／西贡",
+          "今属行政区": "越南·胡志明市",
+          "置信度": "高",
+          "备注/争议": "嘉定于1790—1802年为阮福映统一越南前的王廷驻地（Gia Định kinh）；1802年统一后国都在顺化。西贡为1955—1975年越南共和国首都。1698年地方治所及后来的行省首府不另列国家都城。古都根点采用独立宫现代首都核心参照，不代表嘉定城郭中心或完整城界。",
+          "来源URL": "https://hcmcpv.org.vn/cap-uy-chi-tiet/quan-1/so-luoc-lich-su-quan-1-1198574211",
+          "都城类别码": "P",
+          "sourceOrder": 547,
+          "coordinatePrecision": "根点定位于独立宫现代政治核心参照，不表示1790年嘉定城郭中心、实测墙界或完整城市范围。",
+          "boundaryAudit": {
+            "status": "嘉定城郭完整分期城界待核；仅接入独立宫现状建筑、院区围栏和嘉定城墙发现路口参照。",
+            "note": "1790年龟城／八卦城与1835—1837年前后重建的凤城为不同城址阶段，均已毁。原始OSM未找到可证实的历史城墙线；现代行政区与宫院围栏不作为嘉定城界。档案网页标称1859年图，所链接图片标题为1795年，年代对应待核，未据此绘制城郭。",
+            "featureCount": 3,
+            "areaCount": 0,
+            "wallCount": 0,
+            "palaceCount": 2,
+            "openWallCount": 0
+          }
+        },
+        {
+          "时代": "近现代",
+          "政权/国号": "越南共和国",
+          "政权年代（原文）": "1955—1975",
+          "都城性质": "国家首都",
+          "都城年代（原文）": "1955—1975",
+          "古称": "西贡／嘉定",
+          "今称/遗址名": "胡志明市／西贡",
+          "今属行政区": "越南·胡志明市",
+          "置信度": "高",
+          "备注/争议": "嘉定于1790—1802年为阮福映统一越南前的王廷驻地（Gia Định kinh）；1802年统一后国都在顺化。西贡为1955—1975年越南共和国首都。1698年地方治所及后来的行省首府不另列国家都城。古都根点采用独立宫现代首都核心参照，不代表嘉定城郭中心或完整城界。",
+          "来源URL": "https://hcmcpv.org.vn/cap-uy-chi-tiet/quan-1/so-luoc-lich-su-quan-1-1198574211",
+          "都城类别码": "P",
+          "sourceOrder": 548,
+          "coordinatePrecision": "根点定位于独立宫现代政治核心参照，不表示1790年嘉定城郭中心、实测墙界或完整城市范围。",
+          "boundaryAudit": {
+            "status": "嘉定城郭完整分期城界待核；仅接入独立宫现状建筑、院区围栏和嘉定城墙发现路口参照。",
+            "note": "1790年龟城／八卦城与1835—1837年前后重建的凤城为不同城址阶段，均已毁。原始OSM未找到可证实的历史城墙线；现代行政区与宫院围栏不作为嘉定城界。档案网页标称1859年图，所链接图片标题为1795年，年代对应待核，未据此绘制城郭。",
+            "featureCount": 3,
+            "areaCount": 0,
+            "wallCount": 0,
+            "palaceCount": 2,
+            "openWallCount": 0
+          }
+        }
+      ],
+      "recordCount": 2,
+      "sourceEra": "清",
+      "sourceSite": "胡志明市／西贡",
+      "sourceAncientName": "西贡／嘉定",
+      "classicalSiteKey": "saigon",
+      "coordinatePrecision": "根点定位于独立宫现代政治核心参照，不表示1790年嘉定城郭中心、实测墙界或完整城市范围。",
+      "historicalSources": [
+        {
+          "title": "第一郡官方历史资料",
+          "url": "https://hcmcpv.org.vn/cap-uy-chi-tiet/quan-1/so-luoc-lich-su-quan-1-1198574211"
+        },
+        {
+          "title": "胡志明市规划部门：嘉定城沿革",
+          "url": "https://qhkt.hochiminhcity.gov.vn/luoc-su-quy-hoach-tphcm.html"
+        },
+        {
+          "title": "独立宫官方历史",
+          "url": "https://dinhdoclap.gov.vn/en/history-of-the-independent-palace/"
+        }
+      ],
+      "relatedMapViews": [
+        {
+          "name": "独立宫／统一宫",
+          "coordinates": [
+            106.69589565,
+            10.77713435
+          ],
+          "zoom": 16,
+          "period": "近现代"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "嘉定城郭完整分期城界待核；仅接入独立宫现状建筑、院区围栏和嘉定城墙发现路口参照。",
+        "note": "1790年龟城／八卦城与1835—1837年前后重建的凤城为不同城址阶段，均已毁。原始OSM未找到可证实的历史城墙线；现代行政区与宫院围栏不作为嘉定城界。档案网页标称1859年图，所链接图片标题为1795年，年代对应待核，未据此绘制城郭。",
+        "featureCount": 3,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 2,
+        "openWallCount": 0
+      },
+      "siteReference": {
+        "name": "独立宫／统一宫",
+        "coordinates": [
+          106.69589565,
+          10.77713435
+        ],
+        "kind": "现代首都核心参照点",
+        "note": "根点定位于独立宫现代政治核心参照，不表示1790年嘉定城郭中心、实测墙界或完整城市范围。"
+      }
+    },
+    {
+      "siteKey": "ancient-site:world-washington-dc",
+      "currentKey": "ancient-site:world-washington-dc",
+      "currentPlace": "华盛顿哥伦比亚特区",
+      "name": "华盛顿哥伦比亚特区",
+      "enName": "Washington, D.C.",
+      "lng": -77.0091,
+      "lat": 38.8898,
+      "admin": "美国",
+      "country": "美国",
+      "confidence": "高",
+      "sourceOrder": 549,
+      "siteNames": [
+        "华盛顿哥伦比亚特区",
+        "Washington, D.C."
+      ],
+      "ancientNames": [
+        "华盛顿哥伦比亚特区"
+      ],
+      "aliases": [
+        "Washington, D.C.",
+        "Washington, D.C.",
+        "Washington DC",
+        "华盛顿"
+      ],
+      "dynasties": [
+        "美国"
+      ],
+      "eras": [
+        "清",
+        "近现代"
+      ],
+      "capitalPeriods": [
+        "清",
+        "近现代"
+      ],
+      "mapReferencePeriod": "近现代",
+      "capitalTypes": [
+        "美国首都"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "records": [
+        {
+          "时代": "清",
+          "政权/国号": "美国",
+          "政权年代（原文）": "1800—今",
+          "都城性质": "美国首都",
+          "都城年代（原文）": "1800—今",
+          "古称": "华盛顿哥伦比亚特区",
+          "今称/遗址名": "华盛顿哥伦比亚特区",
+          "今属行政区": "美国",
+          "置信度": "高",
+          "备注/争议": "1800年起为联邦首都。国会大厦与白宫是具体政治建筑，未有证据表明华盛顿存在传统完整环城墙；本轮不绘制市界作城郭。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+          "来源URL": "https://www.senate.gov/about/historic-buildings-spaces/meeting-places.htm",
+          "都城类别码": "P",
+          "sourceOrder": 549,
+          "coordinatePrecision": "根点采用华盛顿哥伦比亚特区历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+          "boundaryAudit": {
+            "status": "1800年起为联邦首都。国会大厦与白宫是具体政治建筑，未有证据表明华盛顿存在传统完整环城墙；本轮不绘制市界作城郭。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+            "featureCount": 2,
+            "areaCount": 2,
+            "wallCount": 0,
+            "palaceCount": 2,
+            "openWallCount": 0
+          }
+        }
+      ],
+      "recordCount": 1,
+      "sourceEra": "清",
+      "sourceSite": "华盛顿哥伦比亚特区",
+      "sourceAncientName": "华盛顿哥伦比亚特区",
+      "classicalSiteKey": "washington-dc",
+      "coordinatePrecision": "根点采用华盛顿哥伦比亚特区历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "华盛顿哥伦比亚特区",
+        "coordinates": [
+          -77.0091,
+          38.8898
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用华盛顿哥伦比亚特区历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://www.senate.gov/about/historic-buildings-spaces/meeting-places.htm"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://www.senate.gov/about/historic-buildings-spaces/meeting-places.htm"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "1800年起为联邦首都。国会大厦与白宫是具体政治建筑，未有证据表明华盛顿存在传统完整环城墙；本轮不绘制市界作城郭。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 2,
+        "areaCount": 2,
+        "wallCount": 0,
+        "palaceCount": 2,
+        "openWallCount": 0
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "washington-dc-way-66418809",
+          "name": "美国国会大厦",
+          "control": "中国对应朝代：清",
+          "city": "华盛顿哥伦比亚特区",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/66418809"
+        },
+        {
+          "sourceId": "washington-dc-relation-19761182",
+          "name": "白宫（现状建筑）",
+          "control": "中国对应朝代：清",
+          "city": "华盛顿哥伦比亚特区",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/19761182"
+        }
+      ]
+    },
+    {
+      "siteKey": "ancient-site:world-philadelphia",
+      "currentKey": "ancient-site:world-philadelphia",
+      "currentPlace": "费城",
+      "name": "费城",
+      "enName": "Philadelphia",
+      "lng": -75.1502,
+      "lat": 39.9489,
+      "admin": "美国",
+      "country": "美国",
+      "confidence": "高",
+      "sourceOrder": 550,
+      "siteNames": [
+        "费城",
+        "Philadelphia"
+      ],
+      "ancientNames": [
+        "费城"
+      ],
+      "aliases": [
+        "Philadelphia"
+      ],
+      "dynasties": [
+        "美国"
+      ],
+      "eras": [
+        "清"
+      ],
+      "capitalPeriods": [
+        "清"
+      ],
+      "capitalTypes": [
+        "美国历届国会驻地／联邦首都"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "records": [
+        {
+          "时代": "清",
+          "政权/国号": "美国",
+          "政权年代（原文）": "1790—1800",
+          "都城性质": "美国历届国会驻地／联邦首都",
+          "都城年代（原文）": "1790—1800",
+          "古称": "费城",
+          "今称/遗址名": "费城",
+          "今属行政区": "美国",
+          "置信度": "高",
+          "备注/争议": "本轮记录1790—1800年联邦首都；独立厅还见证独立宣言与制宪。独立厅世界遗产是具体建筑，不合并为整座费城的打卡身份。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+          "来源URL": "https://www.senate.gov/about/historic-buildings-spaces/meeting-places.htm",
+          "都城类别码": "P",
+          "sourceOrder": 550,
+          "coordinatePrecision": "根点采用费城历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+          "boundaryAudit": {
+            "status": "本轮记录1790—1800年联邦首都；独立厅还见证独立宣言与制宪。独立厅世界遗产是具体建筑，不合并为整座费城的打卡身份。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+            "featureCount": 1,
+            "areaCount": 1,
+            "wallCount": 0,
+            "palaceCount": 0,
+            "openWallCount": 0
+          }
+        }
+      ],
+      "recordCount": 1,
+      "sourceEra": "清",
+      "sourceSite": "费城",
+      "sourceAncientName": "费城",
+      "classicalSiteKey": "philadelphia",
+      "coordinatePrecision": "根点采用费城历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "费城",
+        "coordinates": [
+          -75.1502,
+          39.9489
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用费城历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://www.senate.gov/about/historic-buildings-spaces/meeting-places.htm"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://www.senate.gov/about/historic-buildings-spaces/meeting-places.htm"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "本轮记录1790—1800年联邦首都；独立厅还见证独立宣言与制宪。独立厅世界遗产是具体建筑，不合并为整座费城的打卡身份。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "philadelphia-way-25271595",
+          "name": "独立厅",
+          "control": "中国对应朝代：清",
+          "city": "费城",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/25271595"
+        }
+      ]
+    },
+    {
+      "siteKey": "ancient-site:world-new-york",
+      "currentKey": "ancient-site:world-new-york",
+      "currentPlace": "纽约",
+      "name": "纽约",
+      "enName": "New York City",
+      "lng": -74.0103,
+      "lat": 40.7072,
+      "admin": "美国",
+      "country": "美国",
+      "confidence": "高",
+      "sourceOrder": 551,
+      "siteNames": [
+        "纽约",
+        "New York City"
+      ],
+      "ancientNames": [
+        "纽约"
+      ],
+      "aliases": [
+        "New York City"
+      ],
+      "dynasties": [
+        "美国邦联",
+        "美国"
+      ],
+      "eras": [
+        "清"
+      ],
+      "capitalPeriods": [
+        "清"
+      ],
+      "capitalTypes": [
+        "美国邦联国会驻地／联邦首都"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "records": [
+        {
+          "时代": "清",
+          "政权/国号": "美国邦联",
+          "政权年代（原文）": "1785—1788",
+          "都城性质": "美国邦联国会驻地／联邦首都",
+          "都城年代（原文）": "1785—1788",
+          "古称": "纽约",
+          "今称/遗址名": "纽约",
+          "今属行政区": "美国",
+          "置信度": "高",
+          "备注/争议": "邦联国会1785—1788年驻纽约，联邦首都期为1789—1790年，分列记录。现联邦大厅建筑为19世纪后建，1789年就职时建筑已不存。克林顿堡是港口堡垒，不是纽约完整城墙。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+          "来源URL": "https://history.house.gov/People/Continental-Congress/Meeting-Places/",
+          "都城类别码": "P",
+          "sourceOrder": 551,
+          "coordinatePrecision": "根点采用纽约历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+          "boundaryAudit": {
+            "status": "邦联国会1785—1788年驻纽约，联邦首都期为1789—1790年，分列记录。现联邦大厅建筑为19世纪后建，1789年就职时建筑已不存。克林顿堡是港口堡垒，不是纽约完整城墙。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+            "featureCount": 2,
+            "areaCount": 2,
+            "wallCount": 0,
+            "palaceCount": 0,
+            "openWallCount": 0
+          }
+        },
+        {
+          "时代": "清",
+          "政权/国号": "美国",
+          "政权年代（原文）": "1789—1790",
+          "都城性质": "美国邦联国会驻地／联邦首都",
+          "都城年代（原文）": "1789—1790",
+          "古称": "纽约",
+          "今称/遗址名": "纽约",
+          "今属行政区": "美国",
+          "置信度": "高",
+          "备注/争议": "邦联国会1785—1788年驻纽约，联邦首都期为1789—1790年，分列记录。现联邦大厅建筑为19世纪后建，1789年就职时建筑已不存。克林顿堡是港口堡垒，不是纽约完整城墙。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+          "来源URL": "https://history.house.gov/People/Continental-Congress/Meeting-Places/",
+          "都城类别码": "P",
+          "sourceOrder": 552,
+          "coordinatePrecision": "根点采用纽约历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+          "boundaryAudit": {
+            "status": "邦联国会1785—1788年驻纽约，联邦首都期为1789—1790年，分列记录。现联邦大厅建筑为19世纪后建，1789年就职时建筑已不存。克林顿堡是港口堡垒，不是纽约完整城墙。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+            "featureCount": 2,
+            "areaCount": 2,
+            "wallCount": 0,
+            "palaceCount": 0,
+            "openWallCount": 0
+          }
+        }
+      ],
+      "recordCount": 2,
+      "sourceEra": "清",
+      "sourceSite": "纽约",
+      "sourceAncientName": "纽约",
+      "classicalSiteKey": "new-york",
+      "coordinatePrecision": "根点采用纽约历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "纽约",
+        "coordinates": [
+          -74.0103,
+          40.7072
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用纽约历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://history.house.gov/People/Continental-Congress/Meeting-Places/"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://history.house.gov/People/Continental-Congress/Meeting-Places/"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "邦联国会1785—1788年驻纽约，联邦首都期为1789—1790年，分列记录。现联邦大厅建筑为19世纪后建，1789年就职时建筑已不存。克林顿堡是港口堡垒，不是纽约完整城墙。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 2,
+        "areaCount": 2,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "new-york-way-109337830",
+          "name": "联邦大厅（现存后建建筑）",
+          "control": "中国对应朝代：清",
+          "city": "纽约",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/109337830"
+        },
+        {
+          "sourceId": "new-york-relation-3695755",
+          "name": "克林顿堡",
+          "control": "中国对应朝代：清",
+          "city": "纽约",
+          "kind": "mapped_current_fortified_enclosure",
+          "sourceUrl": "https://www.openstreetmap.org/relation/3695755"
+        }
+      ]
+    },
+    {
+      "siteKey": "ancient-site:world-annapolis",
+      "currentKey": "ancient-site:world-annapolis",
+      "currentPlace": "安纳波利斯",
+      "name": "安纳波利斯",
+      "enName": "Annapolis",
+      "lng": -76.4913,
+      "lat": 38.9788,
+      "admin": "美国",
+      "country": "美国",
+      "confidence": "高",
+      "sourceOrder": 553,
+      "siteNames": [
+        "安纳波利斯",
+        "Annapolis"
+      ],
+      "ancientNames": [
+        "安纳波利斯"
+      ],
+      "aliases": [
+        "Annapolis"
+      ],
+      "dynasties": [
+        "美国邦联"
+      ],
+      "eras": [
+        "清"
+      ],
+      "capitalPeriods": [
+        "清"
+      ],
+      "capitalTypes": [
+        "美国邦联国会临时驻地"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "records": [
+        {
+          "时代": "清",
+          "政权/国号": "美国邦联",
+          "政权年代（原文）": "1783—1784",
+          "都城性质": "美国邦联国会临时驻地",
+          "都城年代（原文）": "1783—1784",
+          "古称": "安纳波利斯",
+          "今称/遗址名": "安纳波利斯",
+          "今属行政区": "美国",
+          "置信度": "高",
+          "备注/争议": "1783—1784年为邦联国会临时驻地，非之后联邦政府的正式永久首都。州议会大厦是国会驻地参照，不等于城界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+          "来源URL": "https://history.state.gov/departmenthistory/buildings/section9",
+          "都城类别码": "P",
+          "sourceOrder": 553,
+          "coordinatePrecision": "根点采用安纳波利斯历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+          "boundaryAudit": {
+            "status": "1783—1784年为邦联国会临时驻地，非之后联邦政府的正式永久首都。州议会大厦是国会驻地参照，不等于城界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+            "featureCount": 1,
+            "areaCount": 1,
+            "wallCount": 0,
+            "palaceCount": 1,
+            "openWallCount": 0
+          }
+        }
+      ],
+      "recordCount": 1,
+      "sourceEra": "清",
+      "sourceSite": "安纳波利斯",
+      "sourceAncientName": "安纳波利斯",
+      "classicalSiteKey": "annapolis",
+      "coordinatePrecision": "根点采用安纳波利斯历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "安纳波利斯",
+        "coordinates": [
+          -76.4913,
+          38.9788
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用安纳波利斯历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://history.state.gov/departmenthistory/buildings/section9"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://history.state.gov/departmenthistory/buildings/section9"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "1783—1784年为邦联国会临时驻地，非之后联邦政府的正式永久首都。州议会大厦是国会驻地参照，不等于城界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "annapolis-way-50319294",
+          "name": "马里兰州议会大厦",
+          "control": "中国对应朝代：清",
+          "city": "安纳波利斯",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/50319294"
+        }
+      ]
+    },
+    {
+      "siteKey": "ancient-site:world-novgorod",
+      "currentKey": "ancient-site:world-novgorod",
+      "currentPlace": "大诺夫哥罗德",
+      "name": "大诺夫哥罗德",
+      "enName": "Veliky Novgorod",
+      "lng": 31.2765,
+      "lat": 58.5213,
+      "admin": "俄罗斯",
+      "country": "俄罗斯",
+      "confidence": "高",
+      "sourceOrder": 554,
+      "siteNames": [
+        "大诺夫哥罗德",
+        "Veliky Novgorod"
+      ],
+      "ancientNames": [
+        "大诺夫哥罗德"
+      ],
+      "aliases": [
+        "Veliky Novgorod",
+        "诺夫哥罗德及其周围的历史古迹",
+        "Historic Monuments of Novgorod and Surroundings"
+      ],
+      "dynasties": [
+        "诺夫哥罗德共和国"
+      ],
+      "eras": [
+        "宋辽金西夏",
+        "元",
+        "明"
+      ],
+      "capitalPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明"
+      ],
+      "capitalTypes": [
+        "诺夫哥罗德共和国都城"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "records": [
+        {
+          "时代": "宋辽金西夏",
+          "政权/国号": "诺夫哥罗德共和国",
+          "政权年代（原文）": "1136—1478",
+          "都城性质": "诺夫哥罗德共和国都城",
+          "都城年代（原文）": "1136—1478",
+          "古称": "大诺夫哥罗德",
+          "今称/遗址名": "大诺夫哥罗德",
+          "今属行政区": "俄罗斯",
+          "置信度": "高",
+          "备注/争议": "记录诺夫哥罗德共和国时期；克里姆林现存15世纪城防经历后期修缮，不反推为早期全城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+          "来源URL": "https://whc.unesco.org/en/list/604/",
+          "都城类别码": "P",
+          "sourceOrder": 554,
+          "coordinatePrecision": "根点采用大诺夫哥罗德历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+          "boundaryAudit": {
+            "status": "记录诺夫哥罗德共和国时期；克里姆林现存15世纪城防经历后期修缮，不反推为早期全城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+            "featureCount": 3,
+            "areaCount": 2,
+            "wallCount": 1,
+            "palaceCount": 1,
+            "openWallCount": 1
+          }
+        }
+      ],
+      "recordCount": 1,
+      "sourceEra": "宋辽金西夏",
+      "sourceSite": "大诺夫哥罗德",
+      "sourceAncientName": "大诺夫哥罗德",
+      "classicalSiteKey": "novgorod",
+      "coordinatePrecision": "根点采用大诺夫哥罗德历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "大诺夫哥罗德",
+        "coordinates": [
+          31.2765,
+          58.5213
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用大诺夫哥罗德历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://whc.unesco.org/en/list/604/"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://whc.unesco.org/en/list/604/"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "记录诺夫哥罗德共和国时期；克里姆林现存15世纪城防经历后期修缮，不反推为早期全城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 3,
+        "areaCount": 2,
+        "wallCount": 1,
+        "palaceCount": 1,
+        "openWallCount": 1
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "novgorod-way-26333895",
+          "name": "诺夫哥罗德克里姆林城堡范围",
+          "control": "中国对应朝代：明",
+          "city": "大诺夫哥罗德",
+          "kind": "mapped_current_fortified_enclosure",
+          "sourceUrl": "https://www.openstreetmap.org/way/26333895"
+        },
+        {
+          "sourceId": "novgorod-way-252586719",
+          "name": "大主教宫",
+          "control": "中国对应朝代：清",
+          "city": "大诺夫哥罗德",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/252586719"
+        },
+        {
+          "sourceId": "novgorod-wall-group-novgorod-way-252586725",
+          "name": "诺夫哥罗德克里姆林城墙（现存标绘段）",
+          "control": "中国对应朝代：明",
+          "city": "大诺夫哥罗德",
+          "kind": "原始开放墙线（未补闭合）",
+          "sourceUrl": "https://www.openstreetmap.org/way/252586725"
+        }
+      ]
+    },
+    {
+      "siteKey": "ancient-site:world-vladimir",
+      "currentKey": "ancient-site:world-vladimir",
+      "currentPlace": "弗拉基米尔",
+      "name": "弗拉基米尔",
+      "enName": "Vladimir",
+      "lng": 40.4061,
+      "lat": 56.1261,
+      "admin": "俄罗斯",
+      "country": "俄罗斯",
+      "confidence": "高",
+      "sourceOrder": 555,
+      "siteNames": [
+        "弗拉基米尔",
+        "Vladimir"
+      ],
+      "ancientNames": [
+        "弗拉基米尔"
+      ],
+      "aliases": [
+        "Vladimir"
+      ],
+      "dynasties": [
+        "弗拉基米尔—苏兹达尔公国"
+      ],
+      "eras": [
+        "宋辽金西夏",
+        "元",
+        "明"
+      ],
+      "capitalPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明"
+      ],
+      "capitalTypes": [
+        "弗拉基米尔—苏兹达尔公国都城"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "records": [
+        {
+          "时代": "宋辽金西夏",
+          "政权/国号": "弗拉基米尔—苏兹达尔公国",
+          "政权年代（原文）": "1157—14世纪",
+          "都城性质": "弗拉基米尔—苏兹达尔公国都城",
+          "都城年代（原文）": "1157—14世纪",
+          "古称": "弗拉基米尔",
+          "今称/遗址名": "弗拉基米尔",
+          "今属行政区": "俄罗斯",
+          "置信度": "高",
+          "备注/争议": "金门是12世纪城防遗存，不从一个城门反推完整古城。与苏兹达尔共属系列遗产，两个城市及组件不因WHC编号相同而自动合并。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+          "来源URL": "https://whc.unesco.org/en/list/633/",
+          "都城类别码": "P",
+          "sourceOrder": 555,
+          "coordinatePrecision": "根点采用弗拉基米尔历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+          "boundaryAudit": {
+            "status": "金门是12世纪城防遗存，不从一个城门反推完整古城。与苏兹达尔共属系列遗产，两个城市及组件不因WHC编号相同而自动合并。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+            "featureCount": 1,
+            "areaCount": 1,
+            "wallCount": 0,
+            "palaceCount": 0,
+            "openWallCount": 0
+          }
+        }
+      ],
+      "recordCount": 1,
+      "sourceEra": "宋辽金西夏",
+      "sourceSite": "弗拉基米尔",
+      "sourceAncientName": "弗拉基米尔",
+      "classicalSiteKey": "vladimir",
+      "coordinatePrecision": "根点采用弗拉基米尔历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "弗拉基米尔",
+        "coordinates": [
+          40.4061,
+          56.1261
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用弗拉基米尔历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://whc.unesco.org/en/list/633/"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://whc.unesco.org/en/list/633/"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "金门是12世纪城防遗存，不从一个城门反推完整古城。与苏兹达尔共属系列遗产，两个城市及组件不因WHC编号相同而自动合并。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "vladimir-relation-5612148",
+          "name": "金门",
+          "control": "中国对应朝代：宋辽金西夏",
+          "city": "弗拉基米尔",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/5612148"
+        }
+      ]
+    },
+    {
+      "siteKey": "ancient-site:world-suzdal",
+      "currentKey": "ancient-site:world-suzdal",
+      "currentPlace": "苏兹达尔",
+      "name": "苏兹达尔",
+      "enName": "Suzdal",
+      "lng": 40.4414,
+      "lat": 56.4166,
+      "admin": "俄罗斯",
+      "country": "俄罗斯",
+      "confidence": "高",
+      "sourceOrder": 556,
+      "siteNames": [
+        "苏兹达尔",
+        "Suzdal"
+      ],
+      "ancientNames": [
+        "苏兹达尔"
+      ],
+      "aliases": [
+        "Suzdal"
+      ],
+      "dynasties": [
+        "罗斯托夫—苏兹达尔公国"
+      ],
+      "eras": [
+        "宋辽金西夏"
+      ],
+      "capitalPeriods": [
+        "宋辽金西夏"
+      ],
+      "capitalTypes": [
+        "苏兹达尔王公中心／早期公国都城"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "records": [
+        {
+          "时代": "宋辽金西夏",
+          "政权/国号": "罗斯托夫—苏兹达尔公国",
+          "政权年代（原文）": "12世纪前期—1157",
+          "都城性质": "苏兹达尔王公中心／早期公国都城",
+          "都城年代（原文）": "12世纪前期—1157",
+          "古称": "苏兹达尔",
+          "今称/遗址名": "苏兹达尔",
+          "今属行政区": "俄罗斯",
+          "置信度": "高",
+          "备注/争议": "12世纪前期苏兹达尔为公国中心，1157年都城迁弗拉基米尔。克里姆林范围与救世主—叶夫菲米修道院围墙分别表达；修道院不是全城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+          "来源URL": "https://historyrussia.org/proekty/nashi-prioritety/1000-letie-osnovaniya-g-suzdalya.html",
+          "都城类别码": "P",
+          "sourceOrder": 556,
+          "coordinatePrecision": "根点采用苏兹达尔历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+          "boundaryAudit": {
+            "status": "12世纪前期苏兹达尔为公国中心，1157年都城迁弗拉基米尔。克里姆林范围与救世主—叶夫菲米修道院围墙分别表达；修道院不是全城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+            "featureCount": 3,
+            "areaCount": 2,
+            "wallCount": 2,
+            "palaceCount": 0,
+            "openWallCount": 1
+          }
+        }
+      ],
+      "recordCount": 1,
+      "sourceEra": "宋辽金西夏",
+      "sourceSite": "苏兹达尔",
+      "sourceAncientName": "苏兹达尔",
+      "classicalSiteKey": "suzdal",
+      "coordinatePrecision": "根点采用苏兹达尔历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "苏兹达尔",
+        "coordinates": [
+          40.4414,
+          56.4166
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用苏兹达尔历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://historyrussia.org/proekty/nashi-prioritety/1000-letie-osnovaniya-g-suzdalya.html"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://historyrussia.org/proekty/nashi-prioritety/1000-letie-osnovaniya-g-suzdalya.html"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "12世纪前期苏兹达尔为公国中心，1157年都城迁弗拉基米尔。克里姆林范围与救世主—叶夫菲米修道院围墙分别表达；修道院不是全城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 3,
+        "areaCount": 2,
+        "wallCount": 2,
+        "palaceCount": 0,
+        "openWallCount": 1
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "suzdal-relation-7563754",
+          "name": "苏兹达尔克里姆林现状围合范围",
+          "control": "中国对应朝代：清",
+          "city": "苏兹达尔",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/7563754"
+        },
+        {
+          "sourceId": "suzdal-relation-10953973",
+          "name": "圣救世主—叶夫菲米修道院围墙范围",
+          "control": "中国对应朝代：清",
+          "city": "苏兹达尔",
+          "kind": "mapped_existing_wall",
+          "sourceUrl": "https://www.openstreetmap.org/relation/10953973"
+        },
+        {
+          "sourceId": "suzdal-way-127684406",
+          "name": "苏兹达尔克里姆林内围墙（现存标绘段）",
+          "control": "中国对应朝代：清",
+          "city": "苏兹达尔",
+          "kind": "原始开放墙线（未补闭合）",
+          "sourceUrl": "https://www.openstreetmap.org/way/127684406"
+        }
+      ]
+    },
+    {
+      "siteKey": "ancient-site:world-moscow",
+      "currentKey": "ancient-site:world-moscow",
+      "currentPlace": "莫斯科",
+      "name": "莫斯科",
+      "enName": "Moscow",
+      "lng": 37.6175,
+      "lat": 55.7517,
+      "admin": "俄罗斯",
+      "country": "俄罗斯",
+      "confidence": "高",
+      "sourceOrder": 557,
+      "siteNames": [
+        "莫斯科",
+        "Moscow"
+      ],
+      "ancientNames": [
+        "莫斯科"
+      ],
+      "aliases": [
+        "Moscow",
+        "莫斯科克里姆林宫和红场",
+        "Kremlin and Red Square, Moscow"
+      ],
+      "dynasties": [
+        "莫斯科大公国",
+        "俄罗斯沙皇国",
+        "苏维埃俄国／苏联",
+        "俄罗斯联邦"
+      ],
+      "eras": [
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "capitalPeriods": [
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "mapReferencePeriod": "近现代",
+      "capitalTypes": [
+        "莫斯科大公国、沙皇俄国及现代国家首都"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "records": [
+        {
+          "时代": "元",
+          "政权/国号": "莫斯科大公国",
+          "政权年代（原文）": "14世纪—1547",
+          "都城性质": "莫斯科大公国、沙皇俄国及现代国家首都",
+          "都城年代（原文）": "14世纪—1547",
+          "古称": "莫斯科",
+          "今称/遗址名": "莫斯科",
+          "今属行政区": "俄罗斯",
+          "置信度": "高",
+          "备注/争议": "1712年后中央首都主要在圣彼得堡，18世纪早期曾短暂回迁莫斯科，未将1712—1918年写成连续莫斯科首都期。1918年中央政府返回。克里姆林是核心城堡，基泰城墙是另一城防体系，均不等同现代莫斯科市界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+          "来源URL": "https://whc.unesco.org/en/list/545/",
+          "都城类别码": "P",
+          "sourceOrder": 557,
+          "coordinatePrecision": "根点采用莫斯科历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+          "boundaryAudit": {
+            "status": "1712年后中央首都主要在圣彼得堡，18世纪早期曾短暂回迁莫斯科，未将1712—1918年写成连续莫斯科首都期。1918年中央政府返回。克里姆林是核心城堡，基泰城墙是另一城防体系，均不等同现代莫斯科市界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+            "featureCount": 6,
+            "areaCount": 4,
+            "wallCount": 2,
+            "palaceCount": 3,
+            "openWallCount": 2
+          }
+        },
+        {
+          "时代": "明",
+          "政权/国号": "俄罗斯沙皇国",
+          "政权年代（原文）": "1547—1712",
+          "都城性质": "莫斯科大公国、沙皇俄国及现代国家首都",
+          "都城年代（原文）": "1547—1712",
+          "古称": "莫斯科",
+          "今称/遗址名": "莫斯科",
+          "今属行政区": "俄罗斯",
+          "置信度": "高",
+          "备注/争议": "1712年后中央首都主要在圣彼得堡，18世纪早期曾短暂回迁莫斯科，未将1712—1918年写成连续莫斯科首都期。1918年中央政府返回。克里姆林是核心城堡，基泰城墙是另一城防体系，均不等同现代莫斯科市界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+          "来源URL": "https://whc.unesco.org/en/list/545/",
+          "都城类别码": "P",
+          "sourceOrder": 558,
+          "coordinatePrecision": "根点采用莫斯科历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+          "boundaryAudit": {
+            "status": "1712年后中央首都主要在圣彼得堡，18世纪早期曾短暂回迁莫斯科，未将1712—1918年写成连续莫斯科首都期。1918年中央政府返回。克里姆林是核心城堡，基泰城墙是另一城防体系，均不等同现代莫斯科市界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+            "featureCount": 6,
+            "areaCount": 4,
+            "wallCount": 2,
+            "palaceCount": 3,
+            "openWallCount": 2
+          }
+        },
+        {
+          "时代": "近现代",
+          "政权/国号": "苏维埃俄国／苏联",
+          "政权年代（原文）": "1918—1991",
+          "都城性质": "莫斯科大公国、沙皇俄国及现代国家首都",
+          "都城年代（原文）": "1918—1991",
+          "古称": "莫斯科",
+          "今称/遗址名": "莫斯科",
+          "今属行政区": "俄罗斯",
+          "置信度": "高",
+          "备注/争议": "1712年后中央首都主要在圣彼得堡，18世纪早期曾短暂回迁莫斯科，未将1712—1918年写成连续莫斯科首都期。1918年中央政府返回。克里姆林是核心城堡，基泰城墙是另一城防体系，均不等同现代莫斯科市界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+          "来源URL": "https://whc.unesco.org/en/list/545/",
+          "都城类别码": "P",
+          "sourceOrder": 559,
+          "coordinatePrecision": "根点采用莫斯科历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+          "boundaryAudit": {
+            "status": "1712年后中央首都主要在圣彼得堡，18世纪早期曾短暂回迁莫斯科，未将1712—1918年写成连续莫斯科首都期。1918年中央政府返回。克里姆林是核心城堡，基泰城墙是另一城防体系，均不等同现代莫斯科市界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+            "featureCount": 6,
+            "areaCount": 4,
+            "wallCount": 2,
+            "palaceCount": 3,
+            "openWallCount": 2
+          }
+        },
+        {
+          "时代": "近现代",
+          "政权/国号": "俄罗斯联邦",
+          "政权年代（原文）": "1991—今",
+          "都城性质": "莫斯科大公国、沙皇俄国及现代国家首都",
+          "都城年代（原文）": "1991—今",
+          "古称": "莫斯科",
+          "今称/遗址名": "莫斯科",
+          "今属行政区": "俄罗斯",
+          "置信度": "高",
+          "备注/争议": "1712年后中央首都主要在圣彼得堡，18世纪早期曾短暂回迁莫斯科，未将1712—1918年写成连续莫斯科首都期。1918年中央政府返回。克里姆林是核心城堡，基泰城墙是另一城防体系，均不等同现代莫斯科市界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+          "来源URL": "https://whc.unesco.org/en/list/545/",
+          "都城类别码": "P",
+          "sourceOrder": 560,
+          "coordinatePrecision": "根点采用莫斯科历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+          "boundaryAudit": {
+            "status": "1712年后中央首都主要在圣彼得堡，18世纪早期曾短暂回迁莫斯科，未将1712—1918年写成连续莫斯科首都期。1918年中央政府返回。克里姆林是核心城堡，基泰城墙是另一城防体系，均不等同现代莫斯科市界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+            "featureCount": 6,
+            "areaCount": 4,
+            "wallCount": 2,
+            "palaceCount": 3,
+            "openWallCount": 2
+          }
+        }
+      ],
+      "recordCount": 4,
+      "sourceEra": "元",
+      "sourceSite": "莫斯科",
+      "sourceAncientName": "莫斯科",
+      "classicalSiteKey": "moscow",
+      "coordinatePrecision": "根点采用莫斯科历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "莫斯科",
+        "coordinates": [
+          37.6175,
+          55.7517
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用莫斯科历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://whc.unesco.org/en/list/545/"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://kremlin-architectural-ensemble.kreml.ru/en-Us/architecture/view/"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "1712年后中央首都主要在圣彼得堡，18世纪早期曾短暂回迁莫斯科，未将1712—1918年写成连续莫斯科首都期。1918年中央政府返回。克里姆林是核心城堡，基泰城墙是另一城防体系，均不等同现代莫斯科市界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 6,
+        "areaCount": 4,
+        "wallCount": 2,
+        "palaceCount": 3,
+        "openWallCount": 2
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "moscow-relation-225033",
+          "name": "大克里姆林宫",
+          "control": "中国对应朝代：清",
+          "city": "莫斯科",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/225033"
+        },
+        {
+          "sourceId": "moscow-relation-1360641",
+          "name": "莫斯科克里姆林城堡范围",
+          "control": "中国对应朝代：清",
+          "city": "莫斯科",
+          "kind": "mapped_current_fortified_enclosure",
+          "sourceUrl": "https://www.openstreetmap.org/relation/1360641"
+        },
+        {
+          "sourceId": "moscow-relation-7679578",
+          "name": "多棱宫",
+          "control": "中国对应朝代：明",
+          "city": "莫斯科",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/7679578"
+        },
+        {
+          "sourceId": "moscow-relation-1359233",
+          "name": "克里姆林参议院建筑",
+          "control": "中国对应朝代：清",
+          "city": "莫斯科",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/1359233"
+        },
+        {
+          "sourceId": "moscow-wall-group-moscow-way-185298684",
+          "name": "莫斯科历史城墙（现存标绘段）",
+          "control": "中国对应朝代：明",
+          "city": "莫斯科",
+          "kind": "原始开放墙线（未补闭合）",
+          "sourceUrl": "https://www.openstreetmap.org/way/142774566"
+        },
+        {
+          "sourceId": "moscow-wall-group-moscow-way-397241272",
+          "name": "基泰城城墙（现存／复建标绘段）",
+          "control": "中国对应朝代：明",
+          "city": "莫斯科",
+          "kind": "原始开放墙线（未补闭合）",
+          "sourceUrl": "https://www.openstreetmap.org/way/397241272"
+        }
+      ]
+    },
+    {
+      "siteKey": "ancient-site:world-st-petersburg",
+      "currentKey": "ancient-site:world-st-petersburg",
+      "currentPlace": "圣彼得堡",
+      "name": "圣彼得堡",
+      "enName": "St. Petersburg",
+      "lng": 30.3155,
+      "lat": 59.939,
+      "admin": "俄罗斯",
+      "country": "俄罗斯",
+      "confidence": "高",
+      "sourceOrder": 561,
+      "siteNames": [
+        "圣彼得堡",
+        "St. Petersburg"
+      ],
+      "ancientNames": [
+        "圣彼得堡"
+      ],
+      "aliases": [
+        "St. Petersburg",
+        "圣彼得堡历史中心及其相关古迹群",
+        "Historic Centre of Saint Petersburg and Related Groups of Monuments"
+      ],
+      "dynasties": [
+        "俄罗斯沙皇国／帝国"
+      ],
+      "eras": [
+        "清"
+      ],
+      "capitalPeriods": [
+        "清"
+      ],
+      "capitalTypes": [
+        "俄罗斯帝国首都"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "records": [
+        {
+          "时代": "清",
+          "政权/国号": "俄罗斯沙皇国／帝国",
+          "政权年代（原文）": "1712—1728；1730年代—1918",
+          "都城性质": "俄罗斯帝国首都",
+          "都城年代（原文）": "1712—1728；1730年代—1918",
+          "古称": "圣彼得堡",
+          "今称/遗址名": "圣彼得堡",
+          "今属行政区": "俄罗斯",
+          "置信度": "高",
+          "备注/争议": "1712—1918年间为首都，但1728年至1730年代初有迁回莫斯科的中断；恢复年份资料存在1730／1732差异，以1730年代表达。彼得保罗要塞为1703年起的独立要塞，冬宫不是全城范围。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+          "来源URL": "https://www.encspb.ru/object/2804019776?lc=en",
+          "都城类别码": "P",
+          "sourceOrder": 561,
+          "coordinatePrecision": "根点采用圣彼得堡历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+          "boundaryAudit": {
+            "status": "1712—1918年间为首都，但1728年至1730年代初有迁回莫斯科的中断；恢复年份资料存在1730／1732差异，以1730年代表达。彼得保罗要塞为1703年起的独立要塞，冬宫不是全城范围。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+            "featureCount": 4,
+            "areaCount": 4,
+            "wallCount": 0,
+            "palaceCount": 1,
+            "openWallCount": 0
+          }
+        }
+      ],
+      "recordCount": 1,
+      "sourceEra": "清",
+      "sourceSite": "圣彼得堡",
+      "sourceAncientName": "圣彼得堡",
+      "classicalSiteKey": "st-petersburg",
+      "coordinatePrecision": "根点采用圣彼得堡历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "圣彼得堡",
+        "coordinates": [
+          30.3155,
+          59.939
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用圣彼得堡历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://www.encspb.ru/object/2804019776?lc=en"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://www.spbmuseum.ru/themuseum/museum_complex/peterpaul_fortress/?lang_ui=en"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "1712—1918年间为首都，但1728年至1730年代初有迁回莫斯科的中断；恢复年份资料存在1730／1732差异，以1730年代表达。彼得保罗要塞为1703年起的独立要塞，冬宫不是全城范围。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 4,
+        "areaCount": 4,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "st-petersburg-relation-227969",
+          "name": "彼得保罗要塞",
+          "control": "中国对应朝代：清",
+          "city": "圣彼得堡",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/227969"
+        },
+        {
+          "sourceId": "st-petersburg-relation-2594679",
+          "name": "约安前堡",
+          "control": "中国对应朝代：清",
+          "city": "圣彼得堡",
+          "kind": "mapped_current_fortified_enclosure",
+          "sourceUrl": "https://www.openstreetmap.org/relation/2594679"
+        },
+        {
+          "sourceId": "st-petersburg-relation-2594690",
+          "name": "阿列克谢前堡",
+          "control": "中国对应朝代：清",
+          "city": "圣彼得堡",
+          "kind": "mapped_current_fortified_enclosure",
+          "sourceUrl": "https://www.openstreetmap.org/relation/2594690"
+        },
+        {
+          "sourceId": "st-petersburg-relation-69424",
+          "name": "冬宫",
+          "control": "中国对应朝代：清",
+          "city": "圣彼得堡",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/69424"
+        }
+      ]
+    },
+    {
+      "siteKey": "ancient-site:world-sigtuna",
+      "currentKey": "ancient-site:world-sigtuna",
+      "currentPlace": "锡格蒂纳",
+      "name": "锡格蒂纳",
+      "enName": "Sigtuna",
+      "lng": 17.7225,
+      "lat": 59.6169,
+      "admin": "瑞典",
+      "country": "瑞典",
+      "confidence": "高",
+      "sourceOrder": 562,
+      "siteNames": [
+        "锡格蒂纳",
+        "Sigtuna"
+      ],
+      "ancientNames": [
+        "锡格蒂纳"
+      ],
+      "aliases": [
+        "Sigtuna"
+      ],
+      "dynasties": [
+        "瑞典早期王国"
+      ],
+      "eras": [
+        "宋辽金西夏"
+      ],
+      "capitalPeriods": [
+        "宋辽金西夏"
+      ],
+      "capitalTypes": [
+        "瑞典早期王都／王权中心"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "records": [
+        {
+          "时代": "宋辽金西夏",
+          "政权/国号": "瑞典早期王国",
+          "政权年代（原文）": "约980—12世纪",
+          "都城性质": "瑞典早期王都／王权中心",
+          "都城年代（原文）": "约980—12世纪",
+          "古称": "锡格蒂纳",
+          "今称/遗址名": "锡格蒂纳",
+          "今属行政区": "瑞典",
+          "置信度": "高",
+          "备注/争议": "官方旅游资料称早期旧都；约980年建立，早期王权中心时期采用约980—12世纪。无法可靠定位王廷或完整城墙，现有教堂遗址不替代宫城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+          "来源URL": "https://visitsweden.com/where-to-go/middle-sweden/uppland/sigtuna/",
+          "都城类别码": "P",
+          "sourceOrder": 562,
+          "coordinatePrecision": "根点采用锡格蒂纳历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+          "boundaryAudit": {
+            "status": "官方旅游资料称早期旧都；约980年建立，早期王权中心时期采用约980—12世纪。无法可靠定位王廷或完整城墙，现有教堂遗址不替代宫城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+            "featureCount": 3,
+            "areaCount": 3,
+            "wallCount": 0,
+            "palaceCount": 0,
+            "openWallCount": 0
+          }
+        }
+      ],
+      "recordCount": 1,
+      "sourceEra": "宋辽金西夏",
+      "sourceSite": "锡格蒂纳",
+      "sourceAncientName": "锡格蒂纳",
+      "classicalSiteKey": "sigtuna",
+      "coordinatePrecision": "根点采用锡格蒂纳历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "锡格蒂纳",
+        "coordinates": [
+          17.7225,
+          59.6169
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用锡格蒂纳历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://visitsweden.com/where-to-go/middle-sweden/uppland/sigtuna/"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://visitsweden.com/where-to-go/middle-sweden/uppland/sigtuna/"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "官方旅游资料称早期旧都；约980年建立，早期王权中心时期采用约980—12世纪。无法可靠定位王廷或完整城墙，现有教堂遗址不替代宫城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 3,
+        "areaCount": 3,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "sigtuna-way-22981135",
+          "name": "圣彼得教堂遗址",
+          "control": "中国对应朝代：宋辽金西夏",
+          "city": "锡格蒂纳",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/22981135"
+        },
+        {
+          "sourceId": "sigtuna-way-67567186",
+          "name": "圣奥拉夫教堂遗址",
+          "control": "中国对应朝代：宋辽金西夏",
+          "city": "锡格蒂纳",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/67567186"
+        },
+        {
+          "sourceId": "sigtuna-way-1301154115",
+          "name": "圣劳伦斯教堂遗址",
+          "control": "中国对应朝代：宋辽金西夏",
+          "city": "锡格蒂纳",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/1301154115"
+        }
+      ]
+    },
+    {
+      "siteKey": "ancient-site:world-stockholm",
+      "currentKey": "ancient-site:world-stockholm",
+      "currentPlace": "斯德哥尔摩",
+      "name": "斯德哥尔摩",
+      "enName": "Stockholm",
+      "lng": 18.0716,
+      "lat": 59.3268,
+      "admin": "瑞典",
+      "country": "瑞典",
+      "confidence": "高",
+      "sourceOrder": 563,
+      "siteNames": [
+        "斯德哥尔摩",
+        "Stockholm"
+      ],
+      "ancientNames": [
+        "斯德哥尔摩"
+      ],
+      "aliases": [
+        "Stockholm"
+      ],
+      "dynasties": [
+        "瑞典王国"
+      ],
+      "eras": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "capitalPeriods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "mapReferencePeriod": "近现代",
+      "capitalTypes": [
+        "瑞典首都"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "records": [
+        {
+          "时代": "明",
+          "政权/国号": "瑞典王国",
+          "政权年代（原文）": "1634—今",
+          "都城性质": "瑞典首都",
+          "都城年代（原文）": "1634—今",
+          "古称": "斯德哥尔摩",
+          "今称/遗址名": "斯德哥尔摩",
+          "今属行政区": "瑞典",
+          "置信度": "高",
+          "备注/争议": "中世纪逐步成为政治中心，1634年行政改革明确首都地位；本轮国家首都记录采用1634—今。现王宫主要为18世纪建筑，不是完整中世纪城界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+          "来源URL": "https://stadsarkivet.stockholm/skola/boka-skolvisning/alla-vara-skolvisningar/stormaktstidens-stockholm/",
+          "都城类别码": "P",
+          "sourceOrder": 563,
+          "coordinatePrecision": "根点采用斯德哥尔摩历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+          "boundaryAudit": {
+            "status": "中世纪逐步成为政治中心，1634年行政改革明确首都地位；本轮国家首都记录采用1634—今。现王宫主要为18世纪建筑，不是完整中世纪城界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+            "featureCount": 1,
+            "areaCount": 1,
+            "wallCount": 0,
+            "palaceCount": 1,
+            "openWallCount": 0
+          }
+        }
+      ],
+      "recordCount": 1,
+      "sourceEra": "明",
+      "sourceSite": "斯德哥尔摩",
+      "sourceAncientName": "斯德哥尔摩",
+      "classicalSiteKey": "stockholm",
+      "coordinatePrecision": "根点采用斯德哥尔摩历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "斯德哥尔摩",
+        "coordinates": [
+          18.0716,
+          59.3268
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用斯德哥尔摩历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://stadsarkivet.stockholm/skola/boka-skolvisning/alla-vara-skolvisningar/stormaktstidens-stockholm/"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://stadsarkivet.stockholm/skola/boka-skolvisning/alla-vara-skolvisningar/stormaktstidens-stockholm/"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "中世纪逐步成为政治中心，1634年行政改革明确首都地位；本轮国家首都记录采用1634—今。现王宫主要为18世纪建筑，不是完整中世纪城界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "stockholm-relation-34394",
+          "name": "斯德哥尔摩王宫",
+          "control": "中国对应朝代：清",
+          "city": "斯德哥尔摩",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/34394"
+        }
+      ]
     }
   ],
   "skipped": [],
@@ -73197,9 +74827,2001 @@
         "note": "历史城址或现存王宫参照点，不表示完整历史城界。"
       },
       "boundaryRelations": []
+    },
+    {
+      "siteKey": "ancient-site:world-saigon",
+      "currentKey": "ancient-site:world-saigon",
+      "currentPlace": "胡志明市／西贡",
+      "name": "胡志明市／西贡 · 阮福映政权（统一前）",
+      "enName": "Ho Chi Minh City / Saigon",
+      "lat": 10.77713435,
+      "lng": 106.69589565,
+      "admin": "越南·胡志明市",
+      "country": "越南",
+      "confidence": "高",
+      "sourceOrder": 547,
+      "siteNames": [
+        "胡志明市／西贡",
+        "胡志明市",
+        "胡志明",
+        "西贡",
+        "嘉定",
+        "Saigon",
+        "Ho Chi Minh City",
+        "Gia Định"
+      ],
+      "ancientNames": [
+        "西贡",
+        "嘉定"
+      ],
+      "aliases": [
+        "胡志明市",
+        "胡志明",
+        "西贡",
+        "嘉定",
+        "Saigon",
+        "Ho Chi Minh City",
+        "Gia Định"
+      ],
+      "dynasties": [
+        "阮福映政权（统一前）",
+        "越南共和国"
+      ],
+      "eras": [
+        "清",
+        "近现代"
+      ],
+      "capitalPeriods": [
+        "清",
+        "近现代"
+      ],
+      "mapReferencePeriod": "近现代",
+      "capitalTypes": [
+        "统一前王廷／政治中心",
+        "国家首都"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "recordCount": 2,
+      "sourceEra": "清",
+      "sourceSite": "胡志明市／西贡",
+      "sourceAncientName": "西贡／嘉定",
+      "classicalSiteKey": "saigon",
+      "coordinatePrecision": "根点定位于独立宫现代政治核心参照，不表示1790年嘉定城郭中心、实测墙界或完整城市范围。",
+      "historicalSources": [
+        {
+          "title": "第一郡官方历史资料",
+          "url": "https://hcmcpv.org.vn/cap-uy-chi-tiet/quan-1/so-luoc-lich-su-quan-1-1198574211"
+        },
+        {
+          "title": "胡志明市规划部门：嘉定城沿革",
+          "url": "https://qhkt.hochiminhcity.gov.vn/luoc-su-quy-hoach-tphcm.html"
+        },
+        {
+          "title": "独立宫官方历史",
+          "url": "https://dinhdoclap.gov.vn/en/history-of-the-independent-palace/"
+        }
+      ],
+      "relatedMapViews": [
+        {
+          "name": "独立宫／统一宫",
+          "coordinates": [
+            106.69589565,
+            10.77713435
+          ],
+          "zoom": 16,
+          "period": "近现代"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "嘉定城郭完整分期城界待核；仅接入独立宫现状建筑、院区围栏和嘉定城墙发现路口参照。",
+        "note": "1790年龟城／八卦城与1835—1837年前后重建的凤城为不同城址阶段，均已毁。原始OSM未找到可证实的历史城墙线；现代行政区与宫院围栏不作为嘉定城界。档案网页标称1859年图，所链接图片标题为1795年，年代对应待核，未据此绘制城郭。",
+        "featureCount": 3,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 2,
+        "openWallCount": 0
+      },
+      "siteName": "胡志明市／西贡",
+      "ancientName": "西贡／嘉定",
+      "dynasty": "阮福映政权（统一前）",
+      "era": "清",
+      "capitalType": "统一前王廷／政治中心",
+      "capitalYears": "1790—1802",
+      "regimeYears": "1790—1802",
+      "categoryCode": "P",
+      "parentName": "胡志明市／西贡",
+      "sourceUrl": "https://hcmcpv.org.vn/cap-uy-chi-tiet/quan-1/so-luoc-lich-su-quan-1-1198574211",
+      "note": "嘉定于1790—1802年为阮福映统一越南前的王廷驻地（Gia Định kinh）；1802年统一后国都在顺化。西贡为1955—1975年越南共和国首都。1698年地方治所及后来的行省首府不另列国家都城。古都根点采用独立宫现代首都核心参照，不代表嘉定城郭中心或完整城界。",
+      "siteReference": {
+        "name": "独立宫／统一宫",
+        "coordinates": [
+          106.69589565,
+          10.77713435
+        ],
+        "kind": "现代首都核心参照点",
+        "note": "根点定位于独立宫现代政治核心参照，不表示1790年嘉定城郭中心、实测墙界或完整城市范围。"
+      }
+    },
+    {
+      "siteKey": "ancient-site:world-saigon",
+      "currentKey": "ancient-site:world-saigon",
+      "currentPlace": "胡志明市／西贡",
+      "name": "胡志明市／西贡 · 越南共和国",
+      "enName": "Ho Chi Minh City / Saigon",
+      "lat": 10.77713435,
+      "lng": 106.69589565,
+      "admin": "越南·胡志明市",
+      "country": "越南",
+      "confidence": "高",
+      "sourceOrder": 548,
+      "siteNames": [
+        "胡志明市／西贡",
+        "胡志明市",
+        "胡志明",
+        "西贡",
+        "嘉定",
+        "Saigon",
+        "Ho Chi Minh City",
+        "Gia Định"
+      ],
+      "ancientNames": [
+        "西贡",
+        "嘉定"
+      ],
+      "aliases": [
+        "胡志明市",
+        "胡志明",
+        "西贡",
+        "嘉定",
+        "Saigon",
+        "Ho Chi Minh City",
+        "Gia Định"
+      ],
+      "dynasties": [
+        "阮福映政权（统一前）",
+        "越南共和国"
+      ],
+      "eras": [
+        "清",
+        "近现代"
+      ],
+      "capitalPeriods": [
+        "清",
+        "近现代"
+      ],
+      "mapReferencePeriod": "近现代",
+      "capitalTypes": [
+        "统一前王廷／政治中心",
+        "国家首都"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "recordCount": 2,
+      "sourceEra": "清",
+      "sourceSite": "胡志明市／西贡",
+      "sourceAncientName": "西贡／嘉定",
+      "classicalSiteKey": "saigon",
+      "coordinatePrecision": "根点定位于独立宫现代政治核心参照，不表示1790年嘉定城郭中心、实测墙界或完整城市范围。",
+      "historicalSources": [
+        {
+          "title": "第一郡官方历史资料",
+          "url": "https://hcmcpv.org.vn/cap-uy-chi-tiet/quan-1/so-luoc-lich-su-quan-1-1198574211"
+        },
+        {
+          "title": "胡志明市规划部门：嘉定城沿革",
+          "url": "https://qhkt.hochiminhcity.gov.vn/luoc-su-quy-hoach-tphcm.html"
+        },
+        {
+          "title": "独立宫官方历史",
+          "url": "https://dinhdoclap.gov.vn/en/history-of-the-independent-palace/"
+        }
+      ],
+      "relatedMapViews": [
+        {
+          "name": "独立宫／统一宫",
+          "coordinates": [
+            106.69589565,
+            10.77713435
+          ],
+          "zoom": 16,
+          "period": "近现代"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "嘉定城郭完整分期城界待核；仅接入独立宫现状建筑、院区围栏和嘉定城墙发现路口参照。",
+        "note": "1790年龟城／八卦城与1835—1837年前后重建的凤城为不同城址阶段，均已毁。原始OSM未找到可证实的历史城墙线；现代行政区与宫院围栏不作为嘉定城界。档案网页标称1859年图，所链接图片标题为1795年，年代对应待核，未据此绘制城郭。",
+        "featureCount": 3,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 2,
+        "openWallCount": 0
+      },
+      "siteName": "胡志明市／西贡",
+      "ancientName": "西贡／嘉定",
+      "dynasty": "越南共和国",
+      "era": "近现代",
+      "capitalType": "国家首都",
+      "capitalYears": "1955—1975",
+      "regimeYears": "1955—1975",
+      "categoryCode": "P",
+      "parentName": "胡志明市／西贡",
+      "sourceUrl": "https://hcmcpv.org.vn/cap-uy-chi-tiet/quan-1/so-luoc-lich-su-quan-1-1198574211",
+      "note": "嘉定于1790—1802年为阮福映统一越南前的王廷驻地（Gia Định kinh）；1802年统一后国都在顺化。西贡为1955—1975年越南共和国首都。1698年地方治所及后来的行省首府不另列国家都城。古都根点采用独立宫现代首都核心参照，不代表嘉定城郭中心或完整城界。",
+      "siteReference": {
+        "name": "独立宫／统一宫",
+        "coordinates": [
+          106.69589565,
+          10.77713435
+        ],
+        "kind": "现代首都核心参照点",
+        "note": "根点定位于独立宫现代政治核心参照，不表示1790年嘉定城郭中心、实测墙界或完整城市范围。"
+      }
+    },
+    {
+      "siteKey": "ancient-site:world-washington-dc",
+      "currentKey": "ancient-site:world-washington-dc",
+      "currentPlace": "华盛顿哥伦比亚特区",
+      "name": "华盛顿哥伦比亚特区 · 美国",
+      "enName": "Washington, D.C.",
+      "lng": -77.0091,
+      "lat": 38.8898,
+      "admin": "美国",
+      "country": "美国",
+      "confidence": "高",
+      "sourceOrder": 549,
+      "siteNames": [
+        "华盛顿哥伦比亚特区",
+        "Washington, D.C."
+      ],
+      "ancientNames": [
+        "华盛顿哥伦比亚特区"
+      ],
+      "aliases": [
+        "Washington, D.C.",
+        "Washington, D.C.",
+        "Washington DC",
+        "华盛顿"
+      ],
+      "dynasties": [
+        "美国"
+      ],
+      "eras": [
+        "清",
+        "近现代"
+      ],
+      "capitalPeriods": [
+        "清",
+        "近现代"
+      ],
+      "mapReferencePeriod": "近现代",
+      "capitalTypes": [
+        "美国首都"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "recordCount": 1,
+      "sourceEra": "清",
+      "sourceSite": "华盛顿哥伦比亚特区",
+      "sourceAncientName": "华盛顿哥伦比亚特区",
+      "classicalSiteKey": "washington-dc",
+      "coordinatePrecision": "根点采用华盛顿哥伦比亚特区历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "华盛顿哥伦比亚特区",
+        "coordinates": [
+          -77.0091,
+          38.8898
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用华盛顿哥伦比亚特区历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://www.senate.gov/about/historic-buildings-spaces/meeting-places.htm"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://www.senate.gov/about/historic-buildings-spaces/meeting-places.htm"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "1800年起为联邦首都。国会大厦与白宫是具体政治建筑，未有证据表明华盛顿存在传统完整环城墙；本轮不绘制市界作城郭。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 2,
+        "areaCount": 2,
+        "wallCount": 0,
+        "palaceCount": 2,
+        "openWallCount": 0
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "washington-dc-way-66418809",
+          "name": "美国国会大厦",
+          "control": "中国对应朝代：清",
+          "city": "华盛顿哥伦比亚特区",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/66418809"
+        },
+        {
+          "sourceId": "washington-dc-relation-19761182",
+          "name": "白宫（现状建筑）",
+          "control": "中国对应朝代：清",
+          "city": "华盛顿哥伦比亚特区",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/19761182"
+        }
+      ],
+      "siteName": "华盛顿哥伦比亚特区",
+      "ancientName": "华盛顿哥伦比亚特区",
+      "dynasty": "美国",
+      "era": "清",
+      "capitalType": "美国首都",
+      "capitalYears": "1800—今",
+      "regimeYears": "1800—今",
+      "categoryCode": "P",
+      "parentName": "华盛顿哥伦比亚特区",
+      "sourceUrl": "https://www.senate.gov/about/historic-buildings-spaces/meeting-places.htm",
+      "note": "1800年起为联邦首都。国会大厦与白宫是具体政治建筑，未有证据表明华盛顿存在传统完整环城墙；本轮不绘制市界作城郭。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。"
+    },
+    {
+      "siteKey": "ancient-site:world-philadelphia",
+      "currentKey": "ancient-site:world-philadelphia",
+      "currentPlace": "费城",
+      "name": "费城 · 美国",
+      "enName": "Philadelphia",
+      "lng": -75.1502,
+      "lat": 39.9489,
+      "admin": "美国",
+      "country": "美国",
+      "confidence": "高",
+      "sourceOrder": 550,
+      "siteNames": [
+        "费城",
+        "Philadelphia"
+      ],
+      "ancientNames": [
+        "费城"
+      ],
+      "aliases": [
+        "Philadelphia"
+      ],
+      "dynasties": [
+        "美国"
+      ],
+      "eras": [
+        "清"
+      ],
+      "capitalPeriods": [
+        "清"
+      ],
+      "capitalTypes": [
+        "美国历届国会驻地／联邦首都"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "recordCount": 1,
+      "sourceEra": "清",
+      "sourceSite": "费城",
+      "sourceAncientName": "费城",
+      "classicalSiteKey": "philadelphia",
+      "coordinatePrecision": "根点采用费城历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "费城",
+        "coordinates": [
+          -75.1502,
+          39.9489
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用费城历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://www.senate.gov/about/historic-buildings-spaces/meeting-places.htm"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://www.senate.gov/about/historic-buildings-spaces/meeting-places.htm"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "本轮记录1790—1800年联邦首都；独立厅还见证独立宣言与制宪。独立厅世界遗产是具体建筑，不合并为整座费城的打卡身份。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "philadelphia-way-25271595",
+          "name": "独立厅",
+          "control": "中国对应朝代：清",
+          "city": "费城",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/25271595"
+        }
+      ],
+      "siteName": "费城",
+      "ancientName": "费城",
+      "dynasty": "美国",
+      "era": "清",
+      "capitalType": "美国历届国会驻地／联邦首都",
+      "capitalYears": "1790—1800",
+      "regimeYears": "1790—1800",
+      "categoryCode": "P",
+      "parentName": "费城",
+      "sourceUrl": "https://www.senate.gov/about/historic-buildings-spaces/meeting-places.htm",
+      "note": "本轮记录1790—1800年联邦首都；独立厅还见证独立宣言与制宪。独立厅世界遗产是具体建筑，不合并为整座费城的打卡身份。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。"
+    },
+    {
+      "siteKey": "ancient-site:world-new-york",
+      "currentKey": "ancient-site:world-new-york",
+      "currentPlace": "纽约",
+      "name": "纽约 · 美国邦联",
+      "enName": "New York City",
+      "lng": -74.0103,
+      "lat": 40.7072,
+      "admin": "美国",
+      "country": "美国",
+      "confidence": "高",
+      "sourceOrder": 551,
+      "siteNames": [
+        "纽约",
+        "New York City"
+      ],
+      "ancientNames": [
+        "纽约"
+      ],
+      "aliases": [
+        "New York City"
+      ],
+      "dynasties": [
+        "美国邦联",
+        "美国"
+      ],
+      "eras": [
+        "清"
+      ],
+      "capitalPeriods": [
+        "清"
+      ],
+      "capitalTypes": [
+        "美国邦联国会驻地／联邦首都"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "recordCount": 2,
+      "sourceEra": "清",
+      "sourceSite": "纽约",
+      "sourceAncientName": "纽约",
+      "classicalSiteKey": "new-york",
+      "coordinatePrecision": "根点采用纽约历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "纽约",
+        "coordinates": [
+          -74.0103,
+          40.7072
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用纽约历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://history.house.gov/People/Continental-Congress/Meeting-Places/"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://history.house.gov/People/Continental-Congress/Meeting-Places/"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "邦联国会1785—1788年驻纽约，联邦首都期为1789—1790年，分列记录。现联邦大厅建筑为19世纪后建，1789年就职时建筑已不存。克林顿堡是港口堡垒，不是纽约完整城墙。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 2,
+        "areaCount": 2,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "new-york-way-109337830",
+          "name": "联邦大厅（现存后建建筑）",
+          "control": "中国对应朝代：清",
+          "city": "纽约",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/109337830"
+        },
+        {
+          "sourceId": "new-york-relation-3695755",
+          "name": "克林顿堡",
+          "control": "中国对应朝代：清",
+          "city": "纽约",
+          "kind": "mapped_current_fortified_enclosure",
+          "sourceUrl": "https://www.openstreetmap.org/relation/3695755"
+        }
+      ],
+      "siteName": "纽约",
+      "ancientName": "纽约",
+      "dynasty": "美国邦联",
+      "era": "清",
+      "capitalType": "美国邦联国会驻地／联邦首都",
+      "capitalYears": "1785—1788",
+      "regimeYears": "1785—1788",
+      "categoryCode": "P",
+      "parentName": "纽约",
+      "sourceUrl": "https://history.house.gov/People/Continental-Congress/Meeting-Places/",
+      "note": "邦联国会1785—1788年驻纽约，联邦首都期为1789—1790年，分列记录。现联邦大厅建筑为19世纪后建，1789年就职时建筑已不存。克林顿堡是港口堡垒，不是纽约完整城墙。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。"
+    },
+    {
+      "siteKey": "ancient-site:world-new-york",
+      "currentKey": "ancient-site:world-new-york",
+      "currentPlace": "纽约",
+      "name": "纽约 · 美国",
+      "enName": "New York City",
+      "lng": -74.0103,
+      "lat": 40.7072,
+      "admin": "美国",
+      "country": "美国",
+      "confidence": "高",
+      "sourceOrder": 552,
+      "siteNames": [
+        "纽约",
+        "New York City"
+      ],
+      "ancientNames": [
+        "纽约"
+      ],
+      "aliases": [
+        "New York City"
+      ],
+      "dynasties": [
+        "美国邦联",
+        "美国"
+      ],
+      "eras": [
+        "清"
+      ],
+      "capitalPeriods": [
+        "清"
+      ],
+      "capitalTypes": [
+        "美国邦联国会驻地／联邦首都"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "recordCount": 2,
+      "sourceEra": "清",
+      "sourceSite": "纽约",
+      "sourceAncientName": "纽约",
+      "classicalSiteKey": "new-york",
+      "coordinatePrecision": "根点采用纽约历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "纽约",
+        "coordinates": [
+          -74.0103,
+          40.7072
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用纽约历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://history.house.gov/People/Continental-Congress/Meeting-Places/"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://history.house.gov/People/Continental-Congress/Meeting-Places/"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "邦联国会1785—1788年驻纽约，联邦首都期为1789—1790年，分列记录。现联邦大厅建筑为19世纪后建，1789年就职时建筑已不存。克林顿堡是港口堡垒，不是纽约完整城墙。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 2,
+        "areaCount": 2,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "new-york-way-109337830",
+          "name": "联邦大厅（现存后建建筑）",
+          "control": "中国对应朝代：清",
+          "city": "纽约",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/109337830"
+        },
+        {
+          "sourceId": "new-york-relation-3695755",
+          "name": "克林顿堡",
+          "control": "中国对应朝代：清",
+          "city": "纽约",
+          "kind": "mapped_current_fortified_enclosure",
+          "sourceUrl": "https://www.openstreetmap.org/relation/3695755"
+        }
+      ],
+      "siteName": "纽约",
+      "ancientName": "纽约",
+      "dynasty": "美国",
+      "era": "清",
+      "capitalType": "美国邦联国会驻地／联邦首都",
+      "capitalYears": "1789—1790",
+      "regimeYears": "1789—1790",
+      "categoryCode": "P",
+      "parentName": "纽约",
+      "sourceUrl": "https://history.house.gov/People/Continental-Congress/Meeting-Places/",
+      "note": "邦联国会1785—1788年驻纽约，联邦首都期为1789—1790年，分列记录。现联邦大厅建筑为19世纪后建，1789年就职时建筑已不存。克林顿堡是港口堡垒，不是纽约完整城墙。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。"
+    },
+    {
+      "siteKey": "ancient-site:world-annapolis",
+      "currentKey": "ancient-site:world-annapolis",
+      "currentPlace": "安纳波利斯",
+      "name": "安纳波利斯 · 美国邦联",
+      "enName": "Annapolis",
+      "lng": -76.4913,
+      "lat": 38.9788,
+      "admin": "美国",
+      "country": "美国",
+      "confidence": "高",
+      "sourceOrder": 553,
+      "siteNames": [
+        "安纳波利斯",
+        "Annapolis"
+      ],
+      "ancientNames": [
+        "安纳波利斯"
+      ],
+      "aliases": [
+        "Annapolis"
+      ],
+      "dynasties": [
+        "美国邦联"
+      ],
+      "eras": [
+        "清"
+      ],
+      "capitalPeriods": [
+        "清"
+      ],
+      "capitalTypes": [
+        "美国邦联国会临时驻地"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "recordCount": 1,
+      "sourceEra": "清",
+      "sourceSite": "安纳波利斯",
+      "sourceAncientName": "安纳波利斯",
+      "classicalSiteKey": "annapolis",
+      "coordinatePrecision": "根点采用安纳波利斯历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "安纳波利斯",
+        "coordinates": [
+          -76.4913,
+          38.9788
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用安纳波利斯历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://history.state.gov/departmenthistory/buildings/section9"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://history.state.gov/departmenthistory/buildings/section9"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "1783—1784年为邦联国会临时驻地，非之后联邦政府的正式永久首都。州议会大厦是国会驻地参照，不等于城界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "annapolis-way-50319294",
+          "name": "马里兰州议会大厦",
+          "control": "中国对应朝代：清",
+          "city": "安纳波利斯",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/50319294"
+        }
+      ],
+      "siteName": "安纳波利斯",
+      "ancientName": "安纳波利斯",
+      "dynasty": "美国邦联",
+      "era": "清",
+      "capitalType": "美国邦联国会临时驻地",
+      "capitalYears": "1783—1784",
+      "regimeYears": "1783—1784",
+      "categoryCode": "P",
+      "parentName": "安纳波利斯",
+      "sourceUrl": "https://history.state.gov/departmenthistory/buildings/section9",
+      "note": "1783—1784年为邦联国会临时驻地，非之后联邦政府的正式永久首都。州议会大厦是国会驻地参照，不等于城界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。"
+    },
+    {
+      "siteKey": "ancient-site:world-novgorod",
+      "currentKey": "ancient-site:world-novgorod",
+      "currentPlace": "大诺夫哥罗德",
+      "name": "大诺夫哥罗德 · 诺夫哥罗德共和国",
+      "enName": "Veliky Novgorod",
+      "lng": 31.2765,
+      "lat": 58.5213,
+      "admin": "俄罗斯",
+      "country": "俄罗斯",
+      "confidence": "高",
+      "sourceOrder": 554,
+      "siteNames": [
+        "大诺夫哥罗德",
+        "Veliky Novgorod"
+      ],
+      "ancientNames": [
+        "大诺夫哥罗德"
+      ],
+      "aliases": [
+        "Veliky Novgorod",
+        "诺夫哥罗德及其周围的历史古迹",
+        "Historic Monuments of Novgorod and Surroundings"
+      ],
+      "dynasties": [
+        "诺夫哥罗德共和国"
+      ],
+      "eras": [
+        "宋辽金西夏",
+        "元",
+        "明"
+      ],
+      "capitalPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明"
+      ],
+      "capitalTypes": [
+        "诺夫哥罗德共和国都城"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "recordCount": 1,
+      "sourceEra": "宋辽金西夏",
+      "sourceSite": "大诺夫哥罗德",
+      "sourceAncientName": "大诺夫哥罗德",
+      "classicalSiteKey": "novgorod",
+      "coordinatePrecision": "根点采用大诺夫哥罗德历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "大诺夫哥罗德",
+        "coordinates": [
+          31.2765,
+          58.5213
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用大诺夫哥罗德历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://whc.unesco.org/en/list/604/"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://whc.unesco.org/en/list/604/"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "记录诺夫哥罗德共和国时期；克里姆林现存15世纪城防经历后期修缮，不反推为早期全城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 3,
+        "areaCount": 2,
+        "wallCount": 1,
+        "palaceCount": 1,
+        "openWallCount": 1
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "novgorod-way-26333895",
+          "name": "诺夫哥罗德克里姆林城堡范围",
+          "control": "中国对应朝代：明",
+          "city": "大诺夫哥罗德",
+          "kind": "mapped_current_fortified_enclosure",
+          "sourceUrl": "https://www.openstreetmap.org/way/26333895"
+        },
+        {
+          "sourceId": "novgorod-way-252586719",
+          "name": "大主教宫",
+          "control": "中国对应朝代：清",
+          "city": "大诺夫哥罗德",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/252586719"
+        },
+        {
+          "sourceId": "novgorod-wall-group-novgorod-way-252586725",
+          "name": "诺夫哥罗德克里姆林城墙（现存标绘段）",
+          "control": "中国对应朝代：明",
+          "city": "大诺夫哥罗德",
+          "kind": "原始开放墙线（未补闭合）",
+          "sourceUrl": "https://www.openstreetmap.org/way/252586725"
+        }
+      ],
+      "siteName": "大诺夫哥罗德",
+      "ancientName": "大诺夫哥罗德",
+      "dynasty": "诺夫哥罗德共和国",
+      "era": "宋辽金西夏",
+      "capitalType": "诺夫哥罗德共和国都城",
+      "capitalYears": "1136—1478",
+      "regimeYears": "1136—1478",
+      "categoryCode": "P",
+      "parentName": "大诺夫哥罗德",
+      "sourceUrl": "https://whc.unesco.org/en/list/604/",
+      "note": "记录诺夫哥罗德共和国时期；克里姆林现存15世纪城防经历后期修缮，不反推为早期全城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。"
+    },
+    {
+      "siteKey": "ancient-site:world-vladimir",
+      "currentKey": "ancient-site:world-vladimir",
+      "currentPlace": "弗拉基米尔",
+      "name": "弗拉基米尔 · 弗拉基米尔—苏兹达尔公国",
+      "enName": "Vladimir",
+      "lng": 40.4061,
+      "lat": 56.1261,
+      "admin": "俄罗斯",
+      "country": "俄罗斯",
+      "confidence": "高",
+      "sourceOrder": 555,
+      "siteNames": [
+        "弗拉基米尔",
+        "Vladimir"
+      ],
+      "ancientNames": [
+        "弗拉基米尔"
+      ],
+      "aliases": [
+        "Vladimir"
+      ],
+      "dynasties": [
+        "弗拉基米尔—苏兹达尔公国"
+      ],
+      "eras": [
+        "宋辽金西夏",
+        "元",
+        "明"
+      ],
+      "capitalPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明"
+      ],
+      "capitalTypes": [
+        "弗拉基米尔—苏兹达尔公国都城"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "recordCount": 1,
+      "sourceEra": "宋辽金西夏",
+      "sourceSite": "弗拉基米尔",
+      "sourceAncientName": "弗拉基米尔",
+      "classicalSiteKey": "vladimir",
+      "coordinatePrecision": "根点采用弗拉基米尔历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "弗拉基米尔",
+        "coordinates": [
+          40.4061,
+          56.1261
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用弗拉基米尔历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://whc.unesco.org/en/list/633/"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://whc.unesco.org/en/list/633/"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "金门是12世纪城防遗存，不从一个城门反推完整古城。与苏兹达尔共属系列遗产，两个城市及组件不因WHC编号相同而自动合并。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "vladimir-relation-5612148",
+          "name": "金门",
+          "control": "中国对应朝代：宋辽金西夏",
+          "city": "弗拉基米尔",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/5612148"
+        }
+      ],
+      "siteName": "弗拉基米尔",
+      "ancientName": "弗拉基米尔",
+      "dynasty": "弗拉基米尔—苏兹达尔公国",
+      "era": "宋辽金西夏",
+      "capitalType": "弗拉基米尔—苏兹达尔公国都城",
+      "capitalYears": "1157—14世纪",
+      "regimeYears": "1157—14世纪",
+      "categoryCode": "P",
+      "parentName": "弗拉基米尔",
+      "sourceUrl": "https://whc.unesco.org/en/list/633/",
+      "note": "金门是12世纪城防遗存，不从一个城门反推完整古城。与苏兹达尔共属系列遗产，两个城市及组件不因WHC编号相同而自动合并。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。"
+    },
+    {
+      "siteKey": "ancient-site:world-suzdal",
+      "currentKey": "ancient-site:world-suzdal",
+      "currentPlace": "苏兹达尔",
+      "name": "苏兹达尔 · 罗斯托夫—苏兹达尔公国",
+      "enName": "Suzdal",
+      "lng": 40.4414,
+      "lat": 56.4166,
+      "admin": "俄罗斯",
+      "country": "俄罗斯",
+      "confidence": "高",
+      "sourceOrder": 556,
+      "siteNames": [
+        "苏兹达尔",
+        "Suzdal"
+      ],
+      "ancientNames": [
+        "苏兹达尔"
+      ],
+      "aliases": [
+        "Suzdal"
+      ],
+      "dynasties": [
+        "罗斯托夫—苏兹达尔公国"
+      ],
+      "eras": [
+        "宋辽金西夏"
+      ],
+      "capitalPeriods": [
+        "宋辽金西夏"
+      ],
+      "capitalTypes": [
+        "苏兹达尔王公中心／早期公国都城"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "recordCount": 1,
+      "sourceEra": "宋辽金西夏",
+      "sourceSite": "苏兹达尔",
+      "sourceAncientName": "苏兹达尔",
+      "classicalSiteKey": "suzdal",
+      "coordinatePrecision": "根点采用苏兹达尔历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "苏兹达尔",
+        "coordinates": [
+          40.4414,
+          56.4166
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用苏兹达尔历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://historyrussia.org/proekty/nashi-prioritety/1000-letie-osnovaniya-g-suzdalya.html"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://historyrussia.org/proekty/nashi-prioritety/1000-letie-osnovaniya-g-suzdalya.html"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "12世纪前期苏兹达尔为公国中心，1157年都城迁弗拉基米尔。克里姆林范围与救世主—叶夫菲米修道院围墙分别表达；修道院不是全城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 3,
+        "areaCount": 2,
+        "wallCount": 2,
+        "palaceCount": 0,
+        "openWallCount": 1
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "suzdal-relation-7563754",
+          "name": "苏兹达尔克里姆林现状围合范围",
+          "control": "中国对应朝代：清",
+          "city": "苏兹达尔",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/7563754"
+        },
+        {
+          "sourceId": "suzdal-relation-10953973",
+          "name": "圣救世主—叶夫菲米修道院围墙范围",
+          "control": "中国对应朝代：清",
+          "city": "苏兹达尔",
+          "kind": "mapped_existing_wall",
+          "sourceUrl": "https://www.openstreetmap.org/relation/10953973"
+        },
+        {
+          "sourceId": "suzdal-way-127684406",
+          "name": "苏兹达尔克里姆林内围墙（现存标绘段）",
+          "control": "中国对应朝代：清",
+          "city": "苏兹达尔",
+          "kind": "原始开放墙线（未补闭合）",
+          "sourceUrl": "https://www.openstreetmap.org/way/127684406"
+        }
+      ],
+      "siteName": "苏兹达尔",
+      "ancientName": "苏兹达尔",
+      "dynasty": "罗斯托夫—苏兹达尔公国",
+      "era": "宋辽金西夏",
+      "capitalType": "苏兹达尔王公中心／早期公国都城",
+      "capitalYears": "12世纪前期—1157",
+      "regimeYears": "12世纪前期—1157",
+      "categoryCode": "P",
+      "parentName": "苏兹达尔",
+      "sourceUrl": "https://historyrussia.org/proekty/nashi-prioritety/1000-letie-osnovaniya-g-suzdalya.html",
+      "note": "12世纪前期苏兹达尔为公国中心，1157年都城迁弗拉基米尔。克里姆林范围与救世主—叶夫菲米修道院围墙分别表达；修道院不是全城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。"
+    },
+    {
+      "siteKey": "ancient-site:world-moscow",
+      "currentKey": "ancient-site:world-moscow",
+      "currentPlace": "莫斯科",
+      "name": "莫斯科 · 莫斯科大公国",
+      "enName": "Moscow",
+      "lng": 37.6175,
+      "lat": 55.7517,
+      "admin": "俄罗斯",
+      "country": "俄罗斯",
+      "confidence": "高",
+      "sourceOrder": 557,
+      "siteNames": [
+        "莫斯科",
+        "Moscow"
+      ],
+      "ancientNames": [
+        "莫斯科"
+      ],
+      "aliases": [
+        "Moscow",
+        "莫斯科克里姆林宫和红场",
+        "Kremlin and Red Square, Moscow"
+      ],
+      "dynasties": [
+        "莫斯科大公国",
+        "俄罗斯沙皇国",
+        "苏维埃俄国／苏联",
+        "俄罗斯联邦"
+      ],
+      "eras": [
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "capitalPeriods": [
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "mapReferencePeriod": "近现代",
+      "capitalTypes": [
+        "莫斯科大公国、沙皇俄国及现代国家首都"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "recordCount": 4,
+      "sourceEra": "元",
+      "sourceSite": "莫斯科",
+      "sourceAncientName": "莫斯科",
+      "classicalSiteKey": "moscow",
+      "coordinatePrecision": "根点采用莫斯科历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "莫斯科",
+        "coordinates": [
+          37.6175,
+          55.7517
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用莫斯科历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://whc.unesco.org/en/list/545/"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://kremlin-architectural-ensemble.kreml.ru/en-Us/architecture/view/"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "1712年后中央首都主要在圣彼得堡，18世纪早期曾短暂回迁莫斯科，未将1712—1918年写成连续莫斯科首都期。1918年中央政府返回。克里姆林是核心城堡，基泰城墙是另一城防体系，均不等同现代莫斯科市界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 6,
+        "areaCount": 4,
+        "wallCount": 2,
+        "palaceCount": 3,
+        "openWallCount": 2
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "moscow-relation-225033",
+          "name": "大克里姆林宫",
+          "control": "中国对应朝代：清",
+          "city": "莫斯科",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/225033"
+        },
+        {
+          "sourceId": "moscow-relation-1360641",
+          "name": "莫斯科克里姆林城堡范围",
+          "control": "中国对应朝代：清",
+          "city": "莫斯科",
+          "kind": "mapped_current_fortified_enclosure",
+          "sourceUrl": "https://www.openstreetmap.org/relation/1360641"
+        },
+        {
+          "sourceId": "moscow-relation-7679578",
+          "name": "多棱宫",
+          "control": "中国对应朝代：明",
+          "city": "莫斯科",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/7679578"
+        },
+        {
+          "sourceId": "moscow-relation-1359233",
+          "name": "克里姆林参议院建筑",
+          "control": "中国对应朝代：清",
+          "city": "莫斯科",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/1359233"
+        },
+        {
+          "sourceId": "moscow-wall-group-moscow-way-185298684",
+          "name": "莫斯科历史城墙（现存标绘段）",
+          "control": "中国对应朝代：明",
+          "city": "莫斯科",
+          "kind": "原始开放墙线（未补闭合）",
+          "sourceUrl": "https://www.openstreetmap.org/way/142774566"
+        },
+        {
+          "sourceId": "moscow-wall-group-moscow-way-397241272",
+          "name": "基泰城城墙（现存／复建标绘段）",
+          "control": "中国对应朝代：明",
+          "city": "莫斯科",
+          "kind": "原始开放墙线（未补闭合）",
+          "sourceUrl": "https://www.openstreetmap.org/way/397241272"
+        }
+      ],
+      "siteName": "莫斯科",
+      "ancientName": "莫斯科",
+      "dynasty": "莫斯科大公国",
+      "era": "元",
+      "capitalType": "莫斯科大公国、沙皇俄国及现代国家首都",
+      "capitalYears": "14世纪—1547",
+      "regimeYears": "14世纪—1547",
+      "categoryCode": "P",
+      "parentName": "莫斯科",
+      "sourceUrl": "https://whc.unesco.org/en/list/545/",
+      "note": "1712年后中央首都主要在圣彼得堡，18世纪早期曾短暂回迁莫斯科，未将1712—1918年写成连续莫斯科首都期。1918年中央政府返回。克里姆林是核心城堡，基泰城墙是另一城防体系，均不等同现代莫斯科市界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。"
+    },
+    {
+      "siteKey": "ancient-site:world-moscow",
+      "currentKey": "ancient-site:world-moscow",
+      "currentPlace": "莫斯科",
+      "name": "莫斯科 · 俄罗斯沙皇国",
+      "enName": "Moscow",
+      "lng": 37.6175,
+      "lat": 55.7517,
+      "admin": "俄罗斯",
+      "country": "俄罗斯",
+      "confidence": "高",
+      "sourceOrder": 558,
+      "siteNames": [
+        "莫斯科",
+        "Moscow"
+      ],
+      "ancientNames": [
+        "莫斯科"
+      ],
+      "aliases": [
+        "Moscow",
+        "莫斯科克里姆林宫和红场",
+        "Kremlin and Red Square, Moscow"
+      ],
+      "dynasties": [
+        "莫斯科大公国",
+        "俄罗斯沙皇国",
+        "苏维埃俄国／苏联",
+        "俄罗斯联邦"
+      ],
+      "eras": [
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "capitalPeriods": [
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "mapReferencePeriod": "近现代",
+      "capitalTypes": [
+        "莫斯科大公国、沙皇俄国及现代国家首都"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "recordCount": 4,
+      "sourceEra": "元",
+      "sourceSite": "莫斯科",
+      "sourceAncientName": "莫斯科",
+      "classicalSiteKey": "moscow",
+      "coordinatePrecision": "根点采用莫斯科历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "莫斯科",
+        "coordinates": [
+          37.6175,
+          55.7517
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用莫斯科历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://whc.unesco.org/en/list/545/"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://kremlin-architectural-ensemble.kreml.ru/en-Us/architecture/view/"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "1712年后中央首都主要在圣彼得堡，18世纪早期曾短暂回迁莫斯科，未将1712—1918年写成连续莫斯科首都期。1918年中央政府返回。克里姆林是核心城堡，基泰城墙是另一城防体系，均不等同现代莫斯科市界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 6,
+        "areaCount": 4,
+        "wallCount": 2,
+        "palaceCount": 3,
+        "openWallCount": 2
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "moscow-relation-225033",
+          "name": "大克里姆林宫",
+          "control": "中国对应朝代：清",
+          "city": "莫斯科",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/225033"
+        },
+        {
+          "sourceId": "moscow-relation-1360641",
+          "name": "莫斯科克里姆林城堡范围",
+          "control": "中国对应朝代：清",
+          "city": "莫斯科",
+          "kind": "mapped_current_fortified_enclosure",
+          "sourceUrl": "https://www.openstreetmap.org/relation/1360641"
+        },
+        {
+          "sourceId": "moscow-relation-7679578",
+          "name": "多棱宫",
+          "control": "中国对应朝代：明",
+          "city": "莫斯科",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/7679578"
+        },
+        {
+          "sourceId": "moscow-relation-1359233",
+          "name": "克里姆林参议院建筑",
+          "control": "中国对应朝代：清",
+          "city": "莫斯科",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/1359233"
+        },
+        {
+          "sourceId": "moscow-wall-group-moscow-way-185298684",
+          "name": "莫斯科历史城墙（现存标绘段）",
+          "control": "中国对应朝代：明",
+          "city": "莫斯科",
+          "kind": "原始开放墙线（未补闭合）",
+          "sourceUrl": "https://www.openstreetmap.org/way/142774566"
+        },
+        {
+          "sourceId": "moscow-wall-group-moscow-way-397241272",
+          "name": "基泰城城墙（现存／复建标绘段）",
+          "control": "中国对应朝代：明",
+          "city": "莫斯科",
+          "kind": "原始开放墙线（未补闭合）",
+          "sourceUrl": "https://www.openstreetmap.org/way/397241272"
+        }
+      ],
+      "siteName": "莫斯科",
+      "ancientName": "莫斯科",
+      "dynasty": "俄罗斯沙皇国",
+      "era": "明",
+      "capitalType": "莫斯科大公国、沙皇俄国及现代国家首都",
+      "capitalYears": "1547—1712",
+      "regimeYears": "1547—1712",
+      "categoryCode": "P",
+      "parentName": "莫斯科",
+      "sourceUrl": "https://whc.unesco.org/en/list/545/",
+      "note": "1712年后中央首都主要在圣彼得堡，18世纪早期曾短暂回迁莫斯科，未将1712—1918年写成连续莫斯科首都期。1918年中央政府返回。克里姆林是核心城堡，基泰城墙是另一城防体系，均不等同现代莫斯科市界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。"
+    },
+    {
+      "siteKey": "ancient-site:world-moscow",
+      "currentKey": "ancient-site:world-moscow",
+      "currentPlace": "莫斯科",
+      "name": "莫斯科 · 苏维埃俄国／苏联",
+      "enName": "Moscow",
+      "lng": 37.6175,
+      "lat": 55.7517,
+      "admin": "俄罗斯",
+      "country": "俄罗斯",
+      "confidence": "高",
+      "sourceOrder": 559,
+      "siteNames": [
+        "莫斯科",
+        "Moscow"
+      ],
+      "ancientNames": [
+        "莫斯科"
+      ],
+      "aliases": [
+        "Moscow",
+        "莫斯科克里姆林宫和红场",
+        "Kremlin and Red Square, Moscow"
+      ],
+      "dynasties": [
+        "莫斯科大公国",
+        "俄罗斯沙皇国",
+        "苏维埃俄国／苏联",
+        "俄罗斯联邦"
+      ],
+      "eras": [
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "capitalPeriods": [
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "mapReferencePeriod": "近现代",
+      "capitalTypes": [
+        "莫斯科大公国、沙皇俄国及现代国家首都"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "recordCount": 4,
+      "sourceEra": "元",
+      "sourceSite": "莫斯科",
+      "sourceAncientName": "莫斯科",
+      "classicalSiteKey": "moscow",
+      "coordinatePrecision": "根点采用莫斯科历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "莫斯科",
+        "coordinates": [
+          37.6175,
+          55.7517
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用莫斯科历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://whc.unesco.org/en/list/545/"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://kremlin-architectural-ensemble.kreml.ru/en-Us/architecture/view/"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "1712年后中央首都主要在圣彼得堡，18世纪早期曾短暂回迁莫斯科，未将1712—1918年写成连续莫斯科首都期。1918年中央政府返回。克里姆林是核心城堡，基泰城墙是另一城防体系，均不等同现代莫斯科市界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 6,
+        "areaCount": 4,
+        "wallCount": 2,
+        "palaceCount": 3,
+        "openWallCount": 2
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "moscow-relation-225033",
+          "name": "大克里姆林宫",
+          "control": "中国对应朝代：清",
+          "city": "莫斯科",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/225033"
+        },
+        {
+          "sourceId": "moscow-relation-1360641",
+          "name": "莫斯科克里姆林城堡范围",
+          "control": "中国对应朝代：清",
+          "city": "莫斯科",
+          "kind": "mapped_current_fortified_enclosure",
+          "sourceUrl": "https://www.openstreetmap.org/relation/1360641"
+        },
+        {
+          "sourceId": "moscow-relation-7679578",
+          "name": "多棱宫",
+          "control": "中国对应朝代：明",
+          "city": "莫斯科",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/7679578"
+        },
+        {
+          "sourceId": "moscow-relation-1359233",
+          "name": "克里姆林参议院建筑",
+          "control": "中国对应朝代：清",
+          "city": "莫斯科",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/1359233"
+        },
+        {
+          "sourceId": "moscow-wall-group-moscow-way-185298684",
+          "name": "莫斯科历史城墙（现存标绘段）",
+          "control": "中国对应朝代：明",
+          "city": "莫斯科",
+          "kind": "原始开放墙线（未补闭合）",
+          "sourceUrl": "https://www.openstreetmap.org/way/142774566"
+        },
+        {
+          "sourceId": "moscow-wall-group-moscow-way-397241272",
+          "name": "基泰城城墙（现存／复建标绘段）",
+          "control": "中国对应朝代：明",
+          "city": "莫斯科",
+          "kind": "原始开放墙线（未补闭合）",
+          "sourceUrl": "https://www.openstreetmap.org/way/397241272"
+        }
+      ],
+      "siteName": "莫斯科",
+      "ancientName": "莫斯科",
+      "dynasty": "苏维埃俄国／苏联",
+      "era": "近现代",
+      "capitalType": "莫斯科大公国、沙皇俄国及现代国家首都",
+      "capitalYears": "1918—1991",
+      "regimeYears": "1918—1991",
+      "categoryCode": "P",
+      "parentName": "莫斯科",
+      "sourceUrl": "https://whc.unesco.org/en/list/545/",
+      "note": "1712年后中央首都主要在圣彼得堡，18世纪早期曾短暂回迁莫斯科，未将1712—1918年写成连续莫斯科首都期。1918年中央政府返回。克里姆林是核心城堡，基泰城墙是另一城防体系，均不等同现代莫斯科市界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。"
+    },
+    {
+      "siteKey": "ancient-site:world-moscow",
+      "currentKey": "ancient-site:world-moscow",
+      "currentPlace": "莫斯科",
+      "name": "莫斯科 · 俄罗斯联邦",
+      "enName": "Moscow",
+      "lng": 37.6175,
+      "lat": 55.7517,
+      "admin": "俄罗斯",
+      "country": "俄罗斯",
+      "confidence": "高",
+      "sourceOrder": 560,
+      "siteNames": [
+        "莫斯科",
+        "Moscow"
+      ],
+      "ancientNames": [
+        "莫斯科"
+      ],
+      "aliases": [
+        "Moscow",
+        "莫斯科克里姆林宫和红场",
+        "Kremlin and Red Square, Moscow"
+      ],
+      "dynasties": [
+        "莫斯科大公国",
+        "俄罗斯沙皇国",
+        "苏维埃俄国／苏联",
+        "俄罗斯联邦"
+      ],
+      "eras": [
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "capitalPeriods": [
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "mapReferencePeriod": "近现代",
+      "capitalTypes": [
+        "莫斯科大公国、沙皇俄国及现代国家首都"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "recordCount": 4,
+      "sourceEra": "元",
+      "sourceSite": "莫斯科",
+      "sourceAncientName": "莫斯科",
+      "classicalSiteKey": "moscow",
+      "coordinatePrecision": "根点采用莫斯科历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "莫斯科",
+        "coordinates": [
+          37.6175,
+          55.7517
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用莫斯科历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://whc.unesco.org/en/list/545/"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://kremlin-architectural-ensemble.kreml.ru/en-Us/architecture/view/"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "1712年后中央首都主要在圣彼得堡，18世纪早期曾短暂回迁莫斯科，未将1712—1918年写成连续莫斯科首都期。1918年中央政府返回。克里姆林是核心城堡，基泰城墙是另一城防体系，均不等同现代莫斯科市界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 6,
+        "areaCount": 4,
+        "wallCount": 2,
+        "palaceCount": 3,
+        "openWallCount": 2
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "moscow-relation-225033",
+          "name": "大克里姆林宫",
+          "control": "中国对应朝代：清",
+          "city": "莫斯科",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/225033"
+        },
+        {
+          "sourceId": "moscow-relation-1360641",
+          "name": "莫斯科克里姆林城堡范围",
+          "control": "中国对应朝代：清",
+          "city": "莫斯科",
+          "kind": "mapped_current_fortified_enclosure",
+          "sourceUrl": "https://www.openstreetmap.org/relation/1360641"
+        },
+        {
+          "sourceId": "moscow-relation-7679578",
+          "name": "多棱宫",
+          "control": "中国对应朝代：明",
+          "city": "莫斯科",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/7679578"
+        },
+        {
+          "sourceId": "moscow-relation-1359233",
+          "name": "克里姆林参议院建筑",
+          "control": "中国对应朝代：清",
+          "city": "莫斯科",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/1359233"
+        },
+        {
+          "sourceId": "moscow-wall-group-moscow-way-185298684",
+          "name": "莫斯科历史城墙（现存标绘段）",
+          "control": "中国对应朝代：明",
+          "city": "莫斯科",
+          "kind": "原始开放墙线（未补闭合）",
+          "sourceUrl": "https://www.openstreetmap.org/way/142774566"
+        },
+        {
+          "sourceId": "moscow-wall-group-moscow-way-397241272",
+          "name": "基泰城城墙（现存／复建标绘段）",
+          "control": "中国对应朝代：明",
+          "city": "莫斯科",
+          "kind": "原始开放墙线（未补闭合）",
+          "sourceUrl": "https://www.openstreetmap.org/way/397241272"
+        }
+      ],
+      "siteName": "莫斯科",
+      "ancientName": "莫斯科",
+      "dynasty": "俄罗斯联邦",
+      "era": "近现代",
+      "capitalType": "莫斯科大公国、沙皇俄国及现代国家首都",
+      "capitalYears": "1991—今",
+      "regimeYears": "1991—今",
+      "categoryCode": "P",
+      "parentName": "莫斯科",
+      "sourceUrl": "https://whc.unesco.org/en/list/545/",
+      "note": "1712年后中央首都主要在圣彼得堡，18世纪早期曾短暂回迁莫斯科，未将1712—1918年写成连续莫斯科首都期。1918年中央政府返回。克里姆林是核心城堡，基泰城墙是另一城防体系，均不等同现代莫斯科市界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。"
+    },
+    {
+      "siteKey": "ancient-site:world-st-petersburg",
+      "currentKey": "ancient-site:world-st-petersburg",
+      "currentPlace": "圣彼得堡",
+      "name": "圣彼得堡 · 俄罗斯沙皇国／帝国",
+      "enName": "St. Petersburg",
+      "lng": 30.3155,
+      "lat": 59.939,
+      "admin": "俄罗斯",
+      "country": "俄罗斯",
+      "confidence": "高",
+      "sourceOrder": 561,
+      "siteNames": [
+        "圣彼得堡",
+        "St. Petersburg"
+      ],
+      "ancientNames": [
+        "圣彼得堡"
+      ],
+      "aliases": [
+        "St. Petersburg",
+        "圣彼得堡历史中心及其相关古迹群",
+        "Historic Centre of Saint Petersburg and Related Groups of Monuments"
+      ],
+      "dynasties": [
+        "俄罗斯沙皇国／帝国"
+      ],
+      "eras": [
+        "清"
+      ],
+      "capitalPeriods": [
+        "清"
+      ],
+      "capitalTypes": [
+        "俄罗斯帝国首都"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "recordCount": 1,
+      "sourceEra": "清",
+      "sourceSite": "圣彼得堡",
+      "sourceAncientName": "圣彼得堡",
+      "classicalSiteKey": "st-petersburg",
+      "coordinatePrecision": "根点采用圣彼得堡历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "圣彼得堡",
+        "coordinates": [
+          30.3155,
+          59.939
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用圣彼得堡历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://www.encspb.ru/object/2804019776?lc=en"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://www.spbmuseum.ru/themuseum/museum_complex/peterpaul_fortress/?lang_ui=en"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "1712—1918年间为首都，但1728年至1730年代初有迁回莫斯科的中断；恢复年份资料存在1730／1732差异，以1730年代表达。彼得保罗要塞为1703年起的独立要塞，冬宫不是全城范围。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 4,
+        "areaCount": 4,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "st-petersburg-relation-227969",
+          "name": "彼得保罗要塞",
+          "control": "中国对应朝代：清",
+          "city": "圣彼得堡",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/227969"
+        },
+        {
+          "sourceId": "st-petersburg-relation-2594679",
+          "name": "约安前堡",
+          "control": "中国对应朝代：清",
+          "city": "圣彼得堡",
+          "kind": "mapped_current_fortified_enclosure",
+          "sourceUrl": "https://www.openstreetmap.org/relation/2594679"
+        },
+        {
+          "sourceId": "st-petersburg-relation-2594690",
+          "name": "阿列克谢前堡",
+          "control": "中国对应朝代：清",
+          "city": "圣彼得堡",
+          "kind": "mapped_current_fortified_enclosure",
+          "sourceUrl": "https://www.openstreetmap.org/relation/2594690"
+        },
+        {
+          "sourceId": "st-petersburg-relation-69424",
+          "name": "冬宫",
+          "control": "中国对应朝代：清",
+          "city": "圣彼得堡",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/69424"
+        }
+      ],
+      "siteName": "圣彼得堡",
+      "ancientName": "圣彼得堡",
+      "dynasty": "俄罗斯沙皇国／帝国",
+      "era": "清",
+      "capitalType": "俄罗斯帝国首都",
+      "capitalYears": "1712—1728；1730年代—1918",
+      "regimeYears": "1712—1728；1730年代—1918",
+      "categoryCode": "P",
+      "parentName": "圣彼得堡",
+      "sourceUrl": "https://www.encspb.ru/object/2804019776?lc=en",
+      "note": "1712—1918年间为首都，但1728年至1730年代初有迁回莫斯科的中断；恢复年份资料存在1730／1732差异，以1730年代表达。彼得保罗要塞为1703年起的独立要塞，冬宫不是全城范围。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。"
+    },
+    {
+      "siteKey": "ancient-site:world-sigtuna",
+      "currentKey": "ancient-site:world-sigtuna",
+      "currentPlace": "锡格蒂纳",
+      "name": "锡格蒂纳 · 瑞典早期王国",
+      "enName": "Sigtuna",
+      "lng": 17.7225,
+      "lat": 59.6169,
+      "admin": "瑞典",
+      "country": "瑞典",
+      "confidence": "高",
+      "sourceOrder": 562,
+      "siteNames": [
+        "锡格蒂纳",
+        "Sigtuna"
+      ],
+      "ancientNames": [
+        "锡格蒂纳"
+      ],
+      "aliases": [
+        "Sigtuna"
+      ],
+      "dynasties": [
+        "瑞典早期王国"
+      ],
+      "eras": [
+        "宋辽金西夏"
+      ],
+      "capitalPeriods": [
+        "宋辽金西夏"
+      ],
+      "capitalTypes": [
+        "瑞典早期王都／王权中心"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "recordCount": 1,
+      "sourceEra": "宋辽金西夏",
+      "sourceSite": "锡格蒂纳",
+      "sourceAncientName": "锡格蒂纳",
+      "classicalSiteKey": "sigtuna",
+      "coordinatePrecision": "根点采用锡格蒂纳历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "锡格蒂纳",
+        "coordinates": [
+          17.7225,
+          59.6169
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用锡格蒂纳历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://visitsweden.com/where-to-go/middle-sweden/uppland/sigtuna/"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://visitsweden.com/where-to-go/middle-sweden/uppland/sigtuna/"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "官方旅游资料称早期旧都；约980年建立，早期王权中心时期采用约980—12世纪。无法可靠定位王廷或完整城墙，现有教堂遗址不替代宫城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 3,
+        "areaCount": 3,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "sigtuna-way-22981135",
+          "name": "圣彼得教堂遗址",
+          "control": "中国对应朝代：宋辽金西夏",
+          "city": "锡格蒂纳",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/22981135"
+        },
+        {
+          "sourceId": "sigtuna-way-67567186",
+          "name": "圣奥拉夫教堂遗址",
+          "control": "中国对应朝代：宋辽金西夏",
+          "city": "锡格蒂纳",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/67567186"
+        },
+        {
+          "sourceId": "sigtuna-way-1301154115",
+          "name": "圣劳伦斯教堂遗址",
+          "control": "中国对应朝代：宋辽金西夏",
+          "city": "锡格蒂纳",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/1301154115"
+        }
+      ],
+      "siteName": "锡格蒂纳",
+      "ancientName": "锡格蒂纳",
+      "dynasty": "瑞典早期王国",
+      "era": "宋辽金西夏",
+      "capitalType": "瑞典早期王都／王权中心",
+      "capitalYears": "约980—12世纪",
+      "regimeYears": "约980—12世纪",
+      "categoryCode": "P",
+      "parentName": "锡格蒂纳",
+      "sourceUrl": "https://visitsweden.com/where-to-go/middle-sweden/uppland/sigtuna/",
+      "note": "官方旅游资料称早期旧都；约980年建立，早期王权中心时期采用约980—12世纪。无法可靠定位王廷或完整城墙，现有教堂遗址不替代宫城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。"
+    },
+    {
+      "siteKey": "ancient-site:world-stockholm",
+      "currentKey": "ancient-site:world-stockholm",
+      "currentPlace": "斯德哥尔摩",
+      "name": "斯德哥尔摩 · 瑞典王国",
+      "enName": "Stockholm",
+      "lng": 18.0716,
+      "lat": 59.3268,
+      "admin": "瑞典",
+      "country": "瑞典",
+      "confidence": "高",
+      "sourceOrder": 563,
+      "siteNames": [
+        "斯德哥尔摩",
+        "Stockholm"
+      ],
+      "ancientNames": [
+        "斯德哥尔摩"
+      ],
+      "aliases": [
+        "Stockholm"
+      ],
+      "dynasties": [
+        "瑞典王国"
+      ],
+      "eras": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "capitalPeriods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "mapReferencePeriod": "近现代",
+      "capitalTypes": [
+        "瑞典首都"
+      ],
+      "categoryCodes": [
+        "P"
+      ],
+      "categoryLabels": [
+        "主要都城"
+      ],
+      "recordCount": 1,
+      "sourceEra": "明",
+      "sourceSite": "斯德哥尔摩",
+      "sourceAncientName": "斯德哥尔摩",
+      "classicalSiteKey": "stockholm",
+      "coordinatePrecision": "根点采用斯德哥尔摩历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。",
+      "siteReference": {
+        "name": "斯德哥尔摩",
+        "coordinates": [
+          18.0716,
+          59.3268
+        ],
+        "kind": "历史政治核心参照点",
+        "note": "根点采用斯德哥尔摩历史政治核心参照坐标，不表示完整城郭、宫城、行政区或世界遗产保护范围。"
+      },
+      "historicalSources": [
+        {
+          "title": "身份依据",
+          "url": "https://stadsarkivet.stockholm/skola/boka-skolvisning/alla-vara-skolvisningar/stormaktstidens-stockholm/"
+        },
+        {
+          "title": "城防与遗存依据",
+          "url": "https://stadsarkivet.stockholm/skola/boka-skolvisning/alla-vara-skolvisningar/stormaktstidens-stockholm/"
+        }
+      ],
+      "boundaryAudit": {
+        "status": "中世纪逐步成为政治中心，1634年行政改革明确首都地位；本轮国家首都记录采用1634—今。现王宫主要为18世纪建筑，不是完整中世纪城界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0
+      },
+      "boundaryRelations": [
+        {
+          "sourceId": "stockholm-relation-34394",
+          "name": "斯德哥尔摩王宫",
+          "control": "中国对应朝代：清",
+          "city": "斯德哥尔摩",
+          "kind": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/34394"
+        }
+      ],
+      "siteName": "斯德哥尔摩",
+      "ancientName": "斯德哥尔摩",
+      "dynasty": "瑞典王国",
+      "era": "明",
+      "capitalType": "瑞典首都",
+      "capitalYears": "1634—今",
+      "regimeYears": "1634—今",
+      "categoryCode": "P",
+      "parentName": "斯德哥尔摩",
+      "sourceUrl": "https://stadsarkivet.stockholm/skola/boka-skolvisning/alla-vara-skolvisningar/stormaktstidens-stockholm/",
+      "note": "中世纪逐步成为政治中心，1634年行政改革明确首都地位；本轮国家首都记录采用1634—今。现王宫主要为18世纪建筑，不是完整中世纪城界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。"
     }
   ],
-  "recordItemCount": 540,
+  "recordItemCount": 557,
   "coverageAudit": {
     "date": "2026-10-04",
     "basis": "在原历代政权都城目录上补查先秦方国、古蜀及已有地点的缺失建都阶段；不是仅限十大古都，也不声称穷尽所有诸侯国、封国和短期政权。",

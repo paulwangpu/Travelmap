@@ -6,7 +6,7 @@ let failing=true;
 const ctx={chinaAncientCapitalsPromise:null,chinaAncientCapitals:{},chinaAncientCapitalCoordinates:{},chinaAncientCapitalMeta:{},
   fixedChecklistTotals:{},checklistCatalog:{chinaAncientCapitals:{items:[]}},checklistOverlayCache:{signature:'old'},
   fetchJson:async url=>{if(failing)throw Error('server unavailable');return url.includes('western-regions')?supplement:base;},
-  WesternRegions:require('../western-regions.js'),chinaAncientCapitalTotal:572,
+  WesternRegions:require('../western-regions.js'),chinaAncientCapitalTotal:589,
   canonicalPlaceKey:x=>String(x),ancientCapitalCoordinateKey:(lng,lat)=>`${lng},${lat}`,
   ancientCapitalCurrentDisplayName:x=>x.currentPlace||x.name,isMapPageActive:()=>false,state:{},console:{warn:()=>{}}};
 vm.createContext(ctx);vm.runInContext(source.slice(start,end),ctx);
@@ -14,8 +14,8 @@ vm.createContext(ctx);vm.runInContext(source.slice(start,end),ctx);
   await ctx.loadChinaAncientCapitals();
   assert.equal(ctx.chinaAncientCapitalsPromise,null,'failed requests can retry');
   failing=false;await ctx.loadChinaAncientCapitals();
-  assert.equal(ctx.chinaAncientCapitals.recordCount,572);
-  assert.equal(ctx.checklistCatalog.chinaAncientCapitals.items.length,572);
+  assert.equal(ctx.chinaAncientCapitals.recordCount,589);
+  assert.equal(ctx.checklistCatalog.chinaAncientCapitals.items.length,589);
   assert.equal(Object.keys(ctx.chinaAncientCapitalMeta).length>0,true);
   for(const record of base.recordItems.filter(r=>r.aliases?.length))for(const alias of record.aliases){
     assert.equal(ctx.chinaAncientCapitalMeta[alias]?.siteKey,record.siteKey,'Corrected names retain old check-in identity');

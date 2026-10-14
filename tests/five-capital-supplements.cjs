@@ -5,7 +5,7 @@ const catalog=read('data/china-ancient-capitals.json'),research=read('data/ancie
 const byId=id=>research.features.find(f=>f.properties.sourceId===id);
 assert.equal(doc.addedFeatureIds.length,17);
 for(const id of doc.addedFeatureIds){const f=byId(id);assert.ok(f&&f.properties.capitalSiteKey&&/^https:\/\//.test(f.properties.sourceUrl));assert.ok(f.geometry.coordinates.flat(Infinity).every(Number.isFinite));assert.ok(catalog.items.some(i=>i.siteKey===f.properties.capitalSiteKey));}
-assert.equal(new Set(catalog.recordItems.map(r=>r.sourceOrder)).size,540);
+assert.equal(new Set(catalog.recordItems.map(r=>r.sourceOrder)).size,557);
 assert.equal(catalog.recordItems.length,catalog.recordCount);
 const datong=catalog.items.find(x=>x.name==='西京大同');assert.deepEqual(datong.records.map(x=>x['政权/国号']),['辽','金']);
 const ye=catalog.items.find(x=>x.name==='邺城');assert.match(ye.admin,/河北.*临漳/);assert.ok(ye.lng>114.38&&ye.lng<114.43&&ye.lat>36.27&&ye.lat<36.34);

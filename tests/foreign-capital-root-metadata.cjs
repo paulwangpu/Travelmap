@@ -2,7 +2,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('nod
 const capitals=require('../data/china-ancient-capitals.json');
 const catalog=require('../data/classical-sites/catalog.json');
 const foreign=capitals.items.filter(item=>(item.classicalSiteKey&&item.country!=='中国')||['平壤','鄂尔浑河谷','斡耳朵八里','哈拉和林'].includes(item.currentPlace));
-assert.equal(foreign.length,175);
+assert.equal(foreign.length,187);
 for(const item of foreign){
   assert(item.coordinatePrecision,`${item.currentPlace}: missing coordinatePrecision`);
   assert.match(item.coordinatePrecision,/不表示|不能解释/);

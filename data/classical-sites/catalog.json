@@ -8577,6 +8577,1063 @@
         ]
       ],
       "focusMaxZoom": 16
+    },
+    {
+      "key": "saigon",
+      "name": "胡志明市／西贡",
+      "enName": "Ho Chi Minh City / Saigon",
+      "aliases": [
+        "胡志明市",
+        "胡志明",
+        "西贡",
+        "嘉定",
+        "Saigon",
+        "Ho Chi Minh City",
+        "Gia Định"
+      ],
+      "center": [
+        106.69589565,
+        10.77713435
+      ],
+      "date": 1790,
+      "start": 1790,
+      "end": 1975,
+      "period": "近现代",
+      "capitalPeriods": [
+        "清",
+        "近现代"
+      ],
+      "mapReferencePeriod": "近现代",
+      "regime": "阮福映王廷／越南共和国",
+      "periodLabel": "嘉定王廷与西贡共和国首都",
+      "enPeriodLabel": "Gia Dinh court and Republic of Vietnam capital",
+      "historicalIdentity": "capital",
+      "identityLabel": "阮福映王廷；越南共和国首都",
+      "identityEnLabel": "Nguyen Anh court; capital of the Republic of Vietnam",
+      "capitalSiteKey": "ancient-site:world-saigon",
+      "bbox": [
+        106.689,
+        10.773,
+        106.711,
+        10.795
+      ],
+      "referenceUrl": "https://hcmcpv.org.vn/cap-uy-chi-tiet/quan-1/so-luoc-lich-su-quan-1-1198574211",
+      "boundaryAudit": {
+        "status": "嘉定城郭完整分期城界待核；仅接入独立宫现状建筑、院区围栏和嘉定城墙发现路口参照。",
+        "note": "1790年龟城／八卦城与1835—1837年前后重建的凤城为不同城址阶段，均已毁。原始OSM未找到可证实的历史城墙线；现代行政区与宫院围栏不作为嘉定城界。档案网页标称1859年图，所链接图片标题为1795年，年代对应待核，未据此绘制城郭。",
+        "featureCount": 3,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 2,
+        "openWallCount": 0
+      },
+      "identitySourceUrl": "https://hcmcpv.org.vn/cap-uy-chi-tiet/quan-1/so-luoc-lich-su-quan-1-1198574211"
+    },
+    {
+      "key": "washington-dc",
+      "name": "华盛顿哥伦比亚特区",
+      "enName": "Washington, D.C.",
+      "aliases": [
+        "Washington, D.C.",
+        "Washington, D.C.",
+        "Washington DC",
+        "华盛顿"
+      ],
+      "center": [
+        -77.0091,
+        38.8898
+      ],
+      "bbox": [
+        -77.0271,
+        38.8718,
+        -76.9911,
+        38.9078
+      ],
+      "date": 1800,
+      "period": "清",
+      "capitalPeriods": [
+        "清",
+        "近现代"
+      ],
+      "periodLabel": "美国首都",
+      "regime": "美国",
+      "historicalIdentity": "capital",
+      "identityLabel": "美国首都",
+      "identityEnLabel": "US national capital",
+      "identitySourceUrl": "https://www.senate.gov/about/historic-buildings-spaces/meeting-places.htm",
+      "referenceUrl": "https://www.senate.gov/about/historic-buildings-spaces/meeting-places.htm",
+      "note": "1800年起为联邦首都。国会大厦与白宫是具体政治建筑，未有证据表明华盛顿存在传统完整环城墙；本轮不绘制市界作城郭。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "enNote": "US national capital. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open.",
+      "boundaryAudit": {
+        "status": "1800年起为联邦首都。国会大厦与白宫是具体政治建筑，未有证据表明华盛顿存在传统完整环城墙；本轮不绘制市界作城郭。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 2,
+        "areaCount": 2,
+        "wallCount": 0,
+        "palaceCount": 2,
+        "openWallCount": 0
+      },
+      "historicalYears": "1800—今",
+      "capitalSiteKey": "ancient-site:world-washington-dc",
+      "mapReferencePeriod": "近现代",
+      "identityNote": "时期：1800—今。1800年起为联邦首都。国会大厦与白宫是具体政治建筑，未有证据表明华盛顿存在传统完整环城墙；本轮不绘制市界作城郭。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "identityEnNote": "US national capital. Period: 1800—present. US national capital. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open."
+    },
+    {
+      "key": "philadelphia",
+      "name": "费城",
+      "enName": "Philadelphia",
+      "aliases": [
+        "Philadelphia"
+      ],
+      "center": [
+        -75.1502,
+        39.9489
+      ],
+      "bbox": [
+        -75.1682,
+        39.9309,
+        -75.1322,
+        39.9669
+      ],
+      "date": 1790,
+      "period": "清",
+      "capitalPeriods": [
+        "清"
+      ],
+      "periodLabel": "美国历届国会驻地／联邦首都",
+      "regime": "美国",
+      "historicalIdentity": "capital",
+      "identityLabel": "美国历届国会驻地／联邦首都",
+      "identityEnLabel": "Seat of Congress and US federal capital",
+      "identitySourceUrl": "https://www.senate.gov/about/historic-buildings-spaces/meeting-places.htm",
+      "referenceUrl": "https://www.senate.gov/about/historic-buildings-spaces/meeting-places.htm",
+      "note": "本轮记录1790—1800年联邦首都；独立厅还见证独立宣言与制宪。独立厅世界遗产是具体建筑，不合并为整座费城的打卡身份。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "enNote": "Seat of Congress and US federal capital. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open.",
+      "boundaryAudit": {
+        "status": "本轮记录1790—1800年联邦首都；独立厅还见证独立宣言与制宪。独立厅世界遗产是具体建筑，不合并为整座费城的打卡身份。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0
+      },
+      "historicalYears": "1790—1800",
+      "capitalSiteKey": "ancient-site:world-philadelphia",
+      "identityNote": "时期：1790—1800。本轮记录1790—1800年联邦首都；独立厅还见证独立宣言与制宪。独立厅世界遗产是具体建筑，不合并为整座费城的打卡身份。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "identityEnNote": "Seat of Congress and US federal capital. Period: 1790—1800. Seat of Congress and US federal capital. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open."
+    },
+    {
+      "key": "new-york",
+      "name": "纽约",
+      "enName": "New York City",
+      "aliases": [
+        "New York City"
+      ],
+      "center": [
+        -74.0103,
+        40.7072
+      ],
+      "bbox": [
+        -74.0283,
+        40.6892,
+        -73.9923,
+        40.7252
+      ],
+      "date": 1785,
+      "period": "清",
+      "capitalPeriods": [
+        "清"
+      ],
+      "periodLabel": "美国邦联国会驻地／联邦首都",
+      "regime": "美国邦联／美国",
+      "historicalIdentity": "capital",
+      "identityLabel": "美国邦联国会驻地／联邦首都",
+      "identityEnLabel": "Confederation Congress seat and US federal capital",
+      "identitySourceUrl": "https://history.house.gov/People/Continental-Congress/Meeting-Places/",
+      "referenceUrl": "https://history.house.gov/People/Continental-Congress/Meeting-Places/",
+      "note": "邦联国会1785—1788年驻纽约，联邦首都期为1789—1790年，分列记录。现联邦大厅建筑为19世纪后建，1789年就职时建筑已不存。克林顿堡是港口堡垒，不是纽约完整城墙。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "enNote": "Confederation Congress seat and US federal capital. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open.",
+      "boundaryAudit": {
+        "status": "邦联国会1785—1788年驻纽约，联邦首都期为1789—1790年，分列记录。现联邦大厅建筑为19世纪后建，1789年就职时建筑已不存。克林顿堡是港口堡垒，不是纽约完整城墙。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 2,
+        "areaCount": 2,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0
+      },
+      "historicalYears": "1785—1788；1789—1790",
+      "capitalSiteKey": "ancient-site:world-new-york",
+      "identityNote": "时期：1785—1788；1789—1790。邦联国会1785—1788年驻纽约，联邦首都期为1789—1790年，分列记录。现联邦大厅建筑为19世纪后建，1789年就职时建筑已不存。克林顿堡是港口堡垒，不是纽约完整城墙。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "identityEnNote": "Confederation Congress seat and US federal capital. Period: 1785—1788；1789—1790. Confederation Congress seat and US federal capital. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open."
+    },
+    {
+      "key": "annapolis",
+      "name": "安纳波利斯",
+      "enName": "Annapolis",
+      "aliases": [
+        "Annapolis"
+      ],
+      "center": [
+        -76.4913,
+        38.9788
+      ],
+      "bbox": [
+        -76.5093,
+        38.9608,
+        -76.4733,
+        38.9968
+      ],
+      "date": 1783,
+      "period": "清",
+      "capitalPeriods": [
+        "清"
+      ],
+      "periodLabel": "美国邦联国会临时驻地",
+      "regime": "美国邦联",
+      "historicalIdentity": "capital",
+      "identityLabel": "美国邦联国会临时驻地",
+      "identityEnLabel": "Temporary seat of the Confederation Congress",
+      "identitySourceUrl": "https://history.state.gov/departmenthistory/buildings/section9",
+      "referenceUrl": "https://history.state.gov/departmenthistory/buildings/section9",
+      "note": "1783—1784年为邦联国会临时驻地，非之后联邦政府的正式永久首都。州议会大厦是国会驻地参照，不等于城界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "enNote": "Temporary seat of the Confederation Congress. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open.",
+      "boundaryAudit": {
+        "status": "1783—1784年为邦联国会临时驻地，非之后联邦政府的正式永久首都。州议会大厦是国会驻地参照，不等于城界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0
+      },
+      "historicalYears": "1783—1784",
+      "capitalSiteKey": "ancient-site:world-annapolis",
+      "identityNote": "时期：1783—1784。1783—1784年为邦联国会临时驻地，非之后联邦政府的正式永久首都。州议会大厦是国会驻地参照，不等于城界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "identityEnNote": "Temporary seat of the Confederation Congress. Period: 1783—1784. Temporary seat of the Confederation Congress. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open."
+    },
+    {
+      "key": "boston",
+      "name": "波士顿",
+      "enName": "Boston",
+      "aliases": [
+        "Boston"
+      ],
+      "center": [
+        -71.0578,
+        42.3588
+      ],
+      "bbox": [
+        -71.0758,
+        42.3408,
+        -71.0398,
+        42.3768
+      ],
+      "date": 1630,
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "periodLabel": "马萨诸塞殖民地／省及州首府",
+      "regime": "马萨诸塞殖民地／省及州首府",
+      "historicalIdentity": "administrative-capital",
+      "identityLabel": "马萨诸塞殖民地／省及州首府",
+      "identityEnLabel": "Massachusetts colonial and state capital",
+      "identitySourceUrl": "https://www.sec.state.ma.us/divisions/cis/historical/misc-facts.htm",
+      "referenceUrl": "https://www.sec.state.ma.us/divisions/cis/historical/misc-facts.htm",
+      "note": "马萨诸塞殖民地／省及州首府，身份为地方行政中心，不另列国家都城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "enNote": "Massachusetts colonial and state capital. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open.",
+      "boundaryAudit": {
+        "status": "马萨诸塞殖民地／省及州首府，身份为地方行政中心，不另列国家都城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 2,
+        "areaCount": 2,
+        "wallCount": 0,
+        "palaceCount": 2,
+        "openWallCount": 0
+      },
+      "historicalYears": "1630—今",
+      "identityNote": "时期：1630—今。马萨诸塞殖民地／省及州首府，身份为地方行政中心，不另列国家都城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "identityEnNote": "Massachusetts colonial and state capital. Period: 1630—present. Massachusetts colonial and state capital. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open."
+    },
+    {
+      "key": "williamsburg",
+      "name": "威廉斯堡",
+      "enName": "Williamsburg",
+      "aliases": [
+        "Williamsburg"
+      ],
+      "center": [
+        -76.6971,
+        37.2781
+      ],
+      "bbox": [
+        -76.7151,
+        37.2601,
+        -76.6791,
+        37.2961
+      ],
+      "date": 1699,
+      "period": "清",
+      "capitalPeriods": [
+        "清"
+      ],
+      "periodLabel": "弗吉尼亚殖民地及早期州首府",
+      "regime": "弗吉尼亚殖民地及早期州首府",
+      "historicalIdentity": "administrative-capital",
+      "identityLabel": "弗吉尼亚殖民地及早期州首府",
+      "identityEnLabel": "Colonial and early state capital of Virginia",
+      "identitySourceUrl": "https://www.williamsburgva.gov/DocumentCenter/View/1026/01---Introduction-PDF",
+      "referenceUrl": "https://www.williamsburgva.gov/DocumentCenter/View/1026/01---Introduction-PDF",
+      "note": "总督宫与议会大厦是现状复建建筑。殖民历史区、宫院和规划街区不自动作为完整古城墙。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "enNote": "Colonial and early state capital of Virginia. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open.",
+      "boundaryAudit": {
+        "status": "总督宫与议会大厦是现状复建建筑。殖民历史区、宫院和规划街区不自动作为完整古城墙。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 2,
+        "areaCount": 2,
+        "wallCount": 0,
+        "palaceCount": 2,
+        "openWallCount": 0
+      },
+      "historicalYears": "1699—1780",
+      "identityNote": "时期：1699—1780。总督宫与议会大厦是现状复建建筑。殖民历史区、宫院和规划街区不自动作为完整古城墙。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "identityEnNote": "Colonial and early state capital of Virginia. Period: 1699—1780. Colonial and early state capital of Virginia. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open."
+    },
+    {
+      "key": "jamestown",
+      "name": "詹姆斯敦",
+      "enName": "Jamestown",
+      "aliases": [
+        "Jamestown"
+      ],
+      "center": [
+        -76.7782,
+        37.208
+      ],
+      "bbox": [
+        -76.7962,
+        37.19,
+        -76.7602,
+        37.226
+      ],
+      "date": 1607,
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清"
+      ],
+      "periodLabel": "弗吉尼亚殖民地政治中心／首府",
+      "regime": "弗吉尼亚殖民地政治中心／首府",
+      "historicalIdentity": "administrative-capital",
+      "identityLabel": "弗吉尼亚殖民地政治中心／首府",
+      "identityEnLabel": "Political centre and capital of colonial Virginia",
+      "identitySourceUrl": "https://www.nps.gov/jame/learn/historyculture/a-short-history-of-jamestown.htm",
+      "referenceUrl": "https://www.nps.gov/jame/learn/historyculture/a-short-history-of-jamestown.htm",
+      "note": "詹姆斯堡范围与1607年考古区分列原始几何，包含现状复建标绘；不能作为整个殖民首府城界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "enNote": "Political centre and capital of colonial Virginia. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open.",
+      "boundaryAudit": {
+        "status": "詹姆斯堡范围与1607年考古区分列原始几何，包含现状复建标绘；不能作为整个殖民首府城界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 2,
+        "areaCount": 2,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0
+      },
+      "historicalYears": "1607—1699",
+      "identityNote": "时期：1607—1699。詹姆斯堡范围与1607年考古区分列原始几何，包含现状复建标绘；不能作为整个殖民首府城界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "identityEnNote": "Political centre and capital of colonial Virginia. Period: 1607—1699. Political centre and capital of colonial Virginia. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open."
+    },
+    {
+      "key": "charleston",
+      "name": "查尔斯顿",
+      "enName": "Charleston",
+      "aliases": [
+        "Charleston"
+      ],
+      "center": [
+        -79.9306,
+        32.7765
+      ],
+      "bbox": [
+        -79.9486,
+        32.7585,
+        -79.9126,
+        32.7945
+      ],
+      "date": 1670,
+      "period": "清",
+      "capitalPeriods": [
+        "清"
+      ],
+      "periodLabel": "南卡罗来纳殖民地及早期州首府",
+      "regime": "南卡罗来纳殖民地及早期州首府",
+      "historicalIdentity": "administrative-capital",
+      "identityLabel": "南卡罗来纳殖民地及早期州首府",
+      "identityEnLabel": "Colonial and early state capital of South Carolina",
+      "identitySourceUrl": "https://home.nps.gov/places/charleston-sc.htm",
+      "referenceUrl": "https://home.nps.gov/places/charleston-sc.htm",
+      "note": "1670年的最初查尔斯镇与1680年后现老城位置不同。平克尼堡为1809年起建设的港防堡垒，不是殖民地首府的全城范围。殖民城墙仍待可靠定位。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "enNote": "Colonial and early state capital of South Carolina. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open.",
+      "boundaryAudit": {
+        "status": "1670年的最初查尔斯镇与1680年后现老城位置不同。平克尼堡为1809年起建设的港防堡垒，不是殖民地首府的全城范围。殖民城墙仍待可靠定位。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 3,
+        "areaCount": 2,
+        "wallCount": 2,
+        "palaceCount": 0,
+        "openWallCount": 1
+      },
+      "historicalYears": "1670—1788；现城址主要自1680年起",
+      "identityNote": "时期：1670—1788；现城址主要自1680年起。1670年的最初查尔斯镇与1680年后现老城位置不同。平克尼堡为1809年起建设的港防堡垒，不是殖民地首府的全城范围。殖民城墙仍待可靠定位。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "identityEnNote": "Colonial and early state capital of South Carolina. Period: 1670–1788; present city site mainly from 1680. Colonial and early state capital of South Carolina. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open."
+    },
+    {
+      "key": "savannah",
+      "name": "萨凡纳",
+      "enName": "Savannah",
+      "aliases": [
+        "Savannah"
+      ],
+      "center": [
+        -81.0915,
+        32.0809
+      ],
+      "bbox": [
+        -81.1095,
+        32.0629,
+        -81.0735,
+        32.0989
+      ],
+      "date": 1733,
+      "period": "清",
+      "capitalPeriods": [
+        "清"
+      ],
+      "periodLabel": "乔治亚殖民地及早期州首府",
+      "regime": "乔治亚殖民地及早期州首府",
+      "historicalIdentity": "administrative-capital",
+      "identityLabel": "乔治亚殖民地及早期州首府",
+      "identityEnLabel": "Colonial and early state capital of Georgia",
+      "identitySourceUrl": "https://tile.loc.gov/storage-services/master/pnp/habshaer/ga/ga0400/ga0413/data/ga0413data.pdf",
+      "referenceUrl": "https://tile.loc.gov/storage-services/master/pnp/habshaer/ga/ga0400/ga0413/data/ga0413data.pdf",
+      "note": "春山防御工事是现代复建示意。未经官方资料确认的普通barrier=city_wall对象未采纳为军事城墙。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "enNote": "Colonial and early state capital of Georgia. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open.",
+      "boundaryAudit": {
+        "status": "春山防御工事是现代复建示意。未经官方资料确认的普通barrier=city_wall对象未采纳为军事城墙。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0
+      },
+      "historicalYears": "1733—1780年代（后期驻地有迁移）",
+      "identityNote": "时期：1733—1780年代（后期驻地有迁移）。春山防御工事是现代复建示意。未经官方资料确认的普通barrier=city_wall对象未采纳为军事城墙。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "identityEnNote": "Colonial and early state capital of Georgia. Period: 1733–1780s; later government seats moved. Colonial and early state capital of Georgia. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open."
+    },
+    {
+      "key": "st-augustine",
+      "name": "圣奥古斯丁",
+      "enName": "St. Augustine",
+      "aliases": [
+        "St. Augustine"
+      ],
+      "center": [
+        -81.3115,
+        29.8979
+      ],
+      "bbox": [
+        -81.3295,
+        29.8799,
+        -81.2935,
+        29.9159
+      ],
+      "date": 1565,
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清"
+      ],
+      "periodLabel": "西班牙佛罗里达殖民行政中心",
+      "regime": "西班牙佛罗里达殖民行政中心",
+      "historicalIdentity": "administrative-capital",
+      "identityLabel": "西班牙佛罗里达殖民行政中心",
+      "identityEnLabel": "Administrative centre of Spanish Florida",
+      "identitySourceUrl": "https://www.nps.gov/casa/learn/historyculture/index.htm",
+      "referenceUrl": "https://www.nps.gov/casa/learn/historyculture/index.htm",
+      "note": "圣马科斯堡建于1672—1695年；库博防线显示原始现状复建段，不强行闭合为全城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "enNote": "Administrative centre of Spanish Florida. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open.",
+      "boundaryAudit": {
+        "status": "圣马科斯堡建于1672—1695年；库博防线显示原始现状复建段，不强行闭合为全城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 2,
+        "areaCount": 1,
+        "wallCount": 1,
+        "palaceCount": 0,
+        "openWallCount": 1
+      },
+      "historicalYears": "1565—1821（含英属时期）",
+      "identityNote": "时期：1565—1821（含英属时期）。圣马科斯堡建于1672—1695年；库博防线显示原始现状复建段，不强行闭合为全城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "identityEnNote": "Administrative centre of Spanish Florida. Period: 1565–1821; including British rule. Administrative centre of Spanish Florida. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open."
+    },
+    {
+      "key": "santa-fe",
+      "name": "圣菲",
+      "enName": "Santa Fe",
+      "aliases": [
+        "Santa Fe"
+      ],
+      "center": [
+        -105.9378,
+        35.6875
+      ],
+      "bbox": [
+        -105.9558,
+        35.6695,
+        -105.9198,
+        35.7055
+      ],
+      "date": 1610,
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "periodLabel": "新墨西哥殖民地、领地及州首府",
+      "regime": "新墨西哥殖民地、领地及州首府",
+      "historicalIdentity": "administrative-capital",
+      "identityLabel": "新墨西哥殖民地、领地及州首府",
+      "identityEnLabel": "Colonial, territorial and state capital of New Mexico",
+      "identitySourceUrl": "https://www.nps.gov/places/santa-fe-plaza.htm",
+      "referenceUrl": "https://www.nps.gov/places/santa-fe-plaza.htm",
+      "note": "新墨西哥殖民地、领地及州首府，身份为地方行政中心，不另列国家都城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "enNote": "Colonial, territorial and state capital of New Mexico. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open.",
+      "boundaryAudit": {
+        "status": "新墨西哥殖民地、领地及州首府，身份为地方行政中心，不另列国家都城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0
+      },
+      "historicalYears": "1610—今",
+      "identityNote": "时期：1610—今。新墨西哥殖民地、领地及州首府，身份为地方行政中心，不另列国家都城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "identityEnNote": "Colonial, territorial and state capital of New Mexico. Period: 1610—present. Colonial, territorial and state capital of New Mexico. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open."
+    },
+    {
+      "key": "san-juan",
+      "name": "圣胡安（波多黎各）",
+      "enName": "San Juan, Puerto Rico",
+      "aliases": [
+        "San Juan, Puerto Rico",
+        "波多黎各的古堡与圣胡安历史遗址",
+        "La Fortaleza and San Juan National Historic Site in Puerto Rico"
+      ],
+      "center": [
+        -66.1188,
+        18.4677
+      ],
+      "bbox": [
+        -66.1368,
+        18.4497,
+        -66.10079999999999,
+        18.4857
+      ],
+      "date": 1521,
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "periodLabel": "西班牙波多黎各殖民首府／现领地首府",
+      "regime": "西班牙波多黎各殖民首府／现领地首府",
+      "historicalIdentity": "administrative-capital",
+      "identityLabel": "西班牙波多黎各殖民首府／现领地首府",
+      "identityEnLabel": "Spanish colonial and present territorial capital of Puerto Rico",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/266/",
+      "referenceUrl": "https://whc.unesco.org/en/list/266/",
+      "note": "现老圣胡安城址自1521年；更早首府卡帕拉为另一城址，不并入。城墙与港防堡垒、总督宫分别表达；世界遗产保护区不作为全城边界。波多黎各按美国领地注明，不视为美国国家首都。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "enNote": "Spanish colonial and present territorial capital of Puerto Rico. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open.",
+      "boundaryAudit": {
+        "status": "现老圣胡安城址自1521年；更早首府卡帕拉为另一城址，不并入。城墙与港防堡垒、总督宫分别表达；世界遗产保护区不作为全城边界。波多黎各按美国领地注明，不视为美国国家首都。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 12,
+        "areaCount": 11,
+        "wallCount": 4,
+        "palaceCount": 1,
+        "openWallCount": 1
+      },
+      "historicalYears": "1521—今（现城址）",
+      "whc": 266,
+      "heritageId": "whc-266",
+      "checklistItem": "波多黎各的古堡与圣胡安历史遗址",
+      "identityNote": "时期：1521—今（现城址）。现老圣胡安城址自1521年；更早首府卡帕拉为另一城址，不并入。城墙与港防堡垒、总督宫分别表达；世界遗产保护区不作为全城边界。波多黎各按美国领地注明，不视为美国国家首都。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "identityEnNote": "Spanish colonial and present territorial capital of Puerto Rico. Period: 1521–present at the current city site. Spanish colonial and present territorial capital of Puerto Rico. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open."
+    },
+    {
+      "key": "new-orleans",
+      "name": "新奥尔良",
+      "enName": "New Orleans",
+      "aliases": [
+        "New Orleans"
+      ],
+      "center": [
+        -90.063,
+        29.9575
+      ],
+      "bbox": [
+        -90.081,
+        29.9395,
+        -90.045,
+        29.9755
+      ],
+      "date": 1722,
+      "period": "清",
+      "capitalPeriods": [
+        "清"
+      ],
+      "periodLabel": "法国／西班牙路易斯安那殖民首府",
+      "regime": "法国／西班牙路易斯安那殖民首府",
+      "historicalIdentity": "administrative-capital",
+      "identityLabel": "法国／西班牙路易斯安那殖民首府",
+      "identityEnLabel": "Capital of colonial French and Spanish Louisiana",
+      "identitySourceUrl": "https://www.nps.gov/jela/learn/historyculture/early-europeans-in-louisiana.htm",
+      "referenceUrl": "https://www.nps.gov/jela/learn/historyculture/early-europeans-in-louisiana.htm",
+      "note": "法国／西班牙路易斯安那殖民首府，身份为地方行政中心，不另列国家都城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "enNote": "Capital of colonial French and Spanish Louisiana. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open.",
+      "boundaryAudit": {
+        "status": "法国／西班牙路易斯安那殖民首府，身份为地方行政中心，不另列国家都城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0
+      },
+      "historicalYears": "1722—1803（殖民首府；后为领地及早期州首府）",
+      "identityNote": "时期：1722—1803（殖民首府；后为领地及早期州首府）。法国／西班牙路易斯安那殖民首府，身份为地方行政中心，不另列国家都城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "identityEnNote": "Capital of colonial French and Spanish Louisiana. Period: 1722–1803 as colonial capital; later territorial and early state capital. Capital of colonial French and Spanish Louisiana. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open."
+    },
+    {
+      "key": "novgorod",
+      "name": "大诺夫哥罗德",
+      "enName": "Veliky Novgorod",
+      "aliases": [
+        "Veliky Novgorod",
+        "诺夫哥罗德及其周围的历史古迹",
+        "Historic Monuments of Novgorod and Surroundings"
+      ],
+      "center": [
+        31.2765,
+        58.5213
+      ],
+      "bbox": [
+        31.258499999999998,
+        58.503299999999996,
+        31.2945,
+        58.5393
+      ],
+      "date": 1136,
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明"
+      ],
+      "periodLabel": "诺夫哥罗德共和国都城",
+      "regime": "诺夫哥罗德共和国",
+      "historicalIdentity": "capital",
+      "identityLabel": "诺夫哥罗德共和国都城",
+      "identityEnLabel": "Capital of the Novgorod Republic",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/604/",
+      "referenceUrl": "https://whc.unesco.org/en/list/604/",
+      "note": "记录诺夫哥罗德共和国时期；克里姆林现存15世纪城防经历后期修缮，不反推为早期全城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "enNote": "Capital of the Novgorod Republic. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open.",
+      "boundaryAudit": {
+        "status": "记录诺夫哥罗德共和国时期；克里姆林现存15世纪城防经历后期修缮，不反推为早期全城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 3,
+        "areaCount": 2,
+        "wallCount": 1,
+        "palaceCount": 1,
+        "openWallCount": 1
+      },
+      "historicalYears": "1136—1478",
+      "whc": 604,
+      "heritageId": "whc-604",
+      "checklistItem": "诺夫哥罗德及其周围的历史古迹",
+      "capitalSiteKey": "ancient-site:world-novgorod",
+      "identityNote": "时期：1136—1478。记录诺夫哥罗德共和国时期；克里姆林现存15世纪城防经历后期修缮，不反推为早期全城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "identityEnNote": "Capital of the Novgorod Republic. Period: 1136—1478. Capital of the Novgorod Republic. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open."
+    },
+    {
+      "key": "vladimir",
+      "name": "弗拉基米尔",
+      "enName": "Vladimir",
+      "aliases": [
+        "Vladimir"
+      ],
+      "center": [
+        40.4061,
+        56.1261
+      ],
+      "bbox": [
+        40.3881,
+        56.1081,
+        40.4241,
+        56.1441
+      ],
+      "date": 1157,
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明"
+      ],
+      "periodLabel": "弗拉基米尔—苏兹达尔公国都城",
+      "regime": "弗拉基米尔—苏兹达尔公国",
+      "historicalIdentity": "capital",
+      "identityLabel": "弗拉基米尔—苏兹达尔公国都城",
+      "identityEnLabel": "Capital of the Vladimir–Suzdal Principality",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/633/",
+      "referenceUrl": "https://whc.unesco.org/en/list/633/",
+      "note": "金门是12世纪城防遗存，不从一个城门反推完整古城。与苏兹达尔共属系列遗产，两个城市及组件不因WHC编号相同而自动合并。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "enNote": "Capital of the Vladimir–Suzdal Principality. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open.",
+      "boundaryAudit": {
+        "status": "金门是12世纪城防遗存，不从一个城门反推完整古城。与苏兹达尔共属系列遗产，两个城市及组件不因WHC编号相同而自动合并。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0
+      },
+      "historicalYears": "1157—14世纪",
+      "whc": 633,
+      "heritageId": "whc-633",
+      "capitalSiteKey": "ancient-site:world-vladimir",
+      "identityNote": "时期：1157—14世纪。金门是12世纪城防遗存，不从一个城门反推完整古城。与苏兹达尔共属系列遗产，两个城市及组件不因WHC编号相同而自动合并。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "identityEnNote": "Capital of the Vladimir–Suzdal Principality. Period: 1157–14th century. Capital of the Vladimir–Suzdal Principality. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open."
+    },
+    {
+      "key": "suzdal",
+      "name": "苏兹达尔",
+      "enName": "Suzdal",
+      "aliases": [
+        "Suzdal"
+      ],
+      "center": [
+        40.4414,
+        56.4166
+      ],
+      "bbox": [
+        40.4234,
+        56.3986,
+        40.4594,
+        56.4346
+      ],
+      "date": 1157,
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏"
+      ],
+      "periodLabel": "苏兹达尔王公中心／早期公国都城",
+      "regime": "罗斯托夫—苏兹达尔公国",
+      "historicalIdentity": "capital",
+      "identityLabel": "苏兹达尔王公中心／早期公国都城",
+      "identityEnLabel": "Early princely capital of Suzdal",
+      "identitySourceUrl": "https://historyrussia.org/proekty/nashi-prioritety/1000-letie-osnovaniya-g-suzdalya.html",
+      "referenceUrl": "https://whc.unesco.org/en/list/633/",
+      "note": "12世纪前期苏兹达尔为公国中心，1157年都城迁弗拉基米尔。克里姆林范围与救世主—叶夫菲米修道院围墙分别表达；修道院不是全城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "enNote": "Early princely capital of Suzdal. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open.",
+      "boundaryAudit": {
+        "status": "12世纪前期苏兹达尔为公国中心，1157年都城迁弗拉基米尔。克里姆林范围与救世主—叶夫菲米修道院围墙分别表达；修道院不是全城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 3,
+        "areaCount": 2,
+        "wallCount": 2,
+        "palaceCount": 0,
+        "openWallCount": 1
+      },
+      "historicalYears": "12世纪前期—1157",
+      "whc": 633,
+      "heritageId": "whc-633",
+      "capitalSiteKey": "ancient-site:world-suzdal",
+      "identityNote": "时期：12世纪前期—1157。12世纪前期苏兹达尔为公国中心，1157年都城迁弗拉基米尔。克里姆林范围与救世主—叶夫菲米修道院围墙分别表达；修道院不是全城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "identityEnNote": "Early princely capital of Suzdal. Period: early 12th century–1157. Early princely capital of Suzdal. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open."
+    },
+    {
+      "key": "moscow",
+      "name": "莫斯科",
+      "enName": "Moscow",
+      "aliases": [
+        "Moscow",
+        "莫斯科克里姆林宫和红场",
+        "Kremlin and Red Square, Moscow"
+      ],
+      "center": [
+        37.6175,
+        55.7517
+      ],
+      "bbox": [
+        37.5995,
+        55.7337,
+        37.6355,
+        55.7697
+      ],
+      "date": 1547,
+      "period": "元",
+      "capitalPeriods": [
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "periodLabel": "莫斯科大公国、沙皇俄国及现代国家首都",
+      "regime": "莫斯科大公国／俄罗斯沙皇国／苏维埃俄国／苏联／俄罗斯联邦",
+      "historicalIdentity": "capital",
+      "identityLabel": "莫斯科大公国、沙皇俄国及现代国家首都",
+      "identityEnLabel": "Capital of Muscovy, the Russian state and modern successor states",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/545/",
+      "referenceUrl": "https://whc.unesco.org/en/list/545/",
+      "note": "1712年后中央首都主要在圣彼得堡，18世纪早期曾短暂回迁莫斯科，未将1712—1918年写成连续莫斯科首都期。1918年中央政府返回。克里姆林是核心城堡，基泰城墙是另一城防体系，均不等同现代莫斯科市界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "enNote": "Capital of Muscovy, the Russian state and modern successor states. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open.",
+      "boundaryAudit": {
+        "status": "1712年后中央首都主要在圣彼得堡，18世纪早期曾短暂回迁莫斯科，未将1712—1918年写成连续莫斯科首都期。1918年中央政府返回。克里姆林是核心城堡，基泰城墙是另一城防体系，均不等同现代莫斯科市界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 6,
+        "areaCount": 4,
+        "wallCount": 2,
+        "palaceCount": 3,
+        "openWallCount": 2
+      },
+      "historicalYears": "14世纪—1547；1547—1712；1918—1991；1991—今",
+      "whc": 545,
+      "heritageId": "whc-545",
+      "checklistItem": "莫斯科克里姆林宫和红场",
+      "capitalSiteKey": "ancient-site:world-moscow",
+      "mapReferencePeriod": "近现代",
+      "identityNote": "时期：14世纪—1547；1547—1712；1918—1991；1991—今。1712年后中央首都主要在圣彼得堡，18世纪早期曾短暂回迁莫斯科，未将1712—1918年写成连续莫斯科首都期。1918年中央政府返回。克里姆林是核心城堡，基泰城墙是另一城防体系，均不等同现代莫斯科市界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "identityEnNote": "Capital of Muscovy, the Russian state and modern successor states. Period: 14th century–1547; 1547–1712; 1918–1991; 1991–present. Capital of Muscovy, the Russian state and modern successor states. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open."
+    },
+    {
+      "key": "st-petersburg",
+      "name": "圣彼得堡",
+      "enName": "St. Petersburg",
+      "aliases": [
+        "St. Petersburg",
+        "圣彼得堡历史中心及其相关古迹群",
+        "Historic Centre of Saint Petersburg and Related Groups of Monuments"
+      ],
+      "center": [
+        30.3155,
+        59.939
+      ],
+      "bbox": [
+        30.2975,
+        59.921,
+        30.3335,
+        59.957
+      ],
+      "date": 1712,
+      "period": "清",
+      "capitalPeriods": [
+        "清"
+      ],
+      "periodLabel": "俄罗斯帝国首都",
+      "regime": "俄罗斯沙皇国／帝国",
+      "historicalIdentity": "capital",
+      "identityLabel": "俄罗斯帝国首都",
+      "identityEnLabel": "Capital of the Russian Empire",
+      "identitySourceUrl": "https://www.encspb.ru/object/2804019776?lc=en",
+      "referenceUrl": "https://www.encspb.ru/object/2804019776?lc=en",
+      "note": "1712—1918年间为首都，但1728年至1730年代初有迁回莫斯科的中断；恢复年份资料存在1730／1732差异，以1730年代表达。彼得保罗要塞为1703年起的独立要塞，冬宫不是全城范围。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "enNote": "Capital of the Russian Empire. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open.",
+      "boundaryAudit": {
+        "status": "1712—1918年间为首都，但1728年至1730年代初有迁回莫斯科的中断；恢复年份资料存在1730／1732差异，以1730年代表达。彼得保罗要塞为1703年起的独立要塞，冬宫不是全城范围。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 4,
+        "areaCount": 4,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0
+      },
+      "historicalYears": "1712—1728；1730年代—1918",
+      "whc": 540,
+      "heritageId": "whc-540",
+      "checklistItem": "圣彼得堡历史中心及其相关古迹群",
+      "capitalSiteKey": "ancient-site:world-st-petersburg",
+      "identityNote": "时期：1712—1728；1730年代—1918。1712—1918年间为首都，但1728年至1730年代初有迁回莫斯科的中断；恢复年份资料存在1730／1732差异，以1730年代表达。彼得保罗要塞为1703年起的独立要塞，冬宫不是全城范围。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "identityEnNote": "Capital of the Russian Empire. Period: 1712–1728; 1730s–1918. Capital of the Russian Empire. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open."
+    },
+    {
+      "key": "sigtuna",
+      "name": "锡格蒂纳",
+      "enName": "Sigtuna",
+      "aliases": [
+        "Sigtuna"
+      ],
+      "center": [
+        17.7225,
+        59.6169
+      ],
+      "bbox": [
+        17.7045,
+        59.5989,
+        17.7405,
+        59.6349
+      ],
+      "date": 980,
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏"
+      ],
+      "periodLabel": "瑞典早期王都／王权中心",
+      "regime": "瑞典早期王国",
+      "historicalIdentity": "capital",
+      "identityLabel": "瑞典早期王都／王权中心",
+      "identityEnLabel": "Early Swedish royal town and political centre",
+      "identitySourceUrl": "https://visitsweden.com/where-to-go/middle-sweden/uppland/sigtuna/",
+      "referenceUrl": "https://visitsweden.com/where-to-go/middle-sweden/uppland/sigtuna/",
+      "note": "官方旅游资料称早期旧都；约980年建立，早期王权中心时期采用约980—12世纪。无法可靠定位王廷或完整城墙，现有教堂遗址不替代宫城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "enNote": "Early Swedish royal town and political centre. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open.",
+      "boundaryAudit": {
+        "status": "官方旅游资料称早期旧都；约980年建立，早期王权中心时期采用约980—12世纪。无法可靠定位王廷或完整城墙，现有教堂遗址不替代宫城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 3,
+        "areaCount": 3,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0
+      },
+      "historicalYears": "约980—12世纪",
+      "capitalSiteKey": "ancient-site:world-sigtuna",
+      "identityNote": "时期：约980—12世纪。官方旅游资料称早期旧都；约980年建立，早期王权中心时期采用约980—12世纪。无法可靠定位王廷或完整城墙，现有教堂遗址不替代宫城。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "identityEnNote": "Early Swedish royal town and political centre. Period: approximately 980–12th century. Early Swedish royal town and political centre. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open."
+    },
+    {
+      "key": "gamla-uppsala",
+      "name": "老乌普萨拉",
+      "enName": "Gamla Uppsala",
+      "aliases": [
+        "Gamla Uppsala"
+      ],
+      "center": [
+        17.6331,
+        59.8983
+      ],
+      "bbox": [
+        17.615099999999998,
+        59.8803,
+        17.6511,
+        59.9163
+      ],
+      "date": 550,
+      "period": "魏晋南北朝",
+      "capitalPeriods": [
+        "魏晋南北朝"
+      ],
+      "periodLabel": "瑞典早期王权与宗教中心（都城制度待核）",
+      "regime": "瑞典早期王权与宗教中心（都城制度待核）",
+      "historicalIdentity": "royal-centre",
+      "identityLabel": "瑞典早期王权与宗教中心（都城制度待核）",
+      "identityEnLabel": "Early Swedish royal and religious centre; capital status unverified",
+      "identitySourceUrl": "https://www.raa.se/publicerat/br2008_2.pdf",
+      "referenceUrl": "https://www.raa.se/publicerat/br2008_2.pdf",
+      "note": "铁器时代王权、宗教与王冢中心，不能等同现代意义的统一国都。考古遗址与王冢区仅为现状范围，未伪造城墙或王宫。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "enNote": "Early Swedish royal and religious centre; capital status unverified. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open.",
+      "boundaryAudit": {
+        "status": "铁器时代王权、宗教与王冢中心，不能等同现代意义的统一国都。考古遗址与王冢区仅为现状范围，未伪造城墙或王宫。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 2,
+        "areaCount": 2,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0
+      },
+      "historicalYears": "铁器时代—中世纪早期",
+      "identityNote": "时期：铁器时代—中世纪早期。铁器时代王权、宗教与王冢中心，不能等同现代意义的统一国都。考古遗址与王冢区仅为现状范围，未伪造城墙或王宫。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "identityEnNote": "Early Swedish royal and religious centre; capital status unverified. Period: Iron Age–early Middle Ages. Early Swedish royal and religious centre; capital status unverified. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open."
+    },
+    {
+      "key": "uppsala",
+      "name": "乌普萨拉",
+      "enName": "Uppsala",
+      "aliases": [
+        "Uppsala"
+      ],
+      "center": [
+        17.6357,
+        59.8532
+      ],
+      "bbox": [
+        17.6177,
+        59.8352,
+        17.6537,
+        59.8712
+      ],
+      "date": 1549,
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清"
+      ],
+      "periodLabel": "瑞典王室驻地／宗教与教育中心",
+      "regime": "瑞典王室驻地／宗教与教育中心",
+      "historicalIdentity": "royal-residence",
+      "identityLabel": "瑞典王室驻地／宗教与教育中心",
+      "identityEnLabel": "Swedish royal residence and religious centre",
+      "identitySourceUrl": "https://www.raa.se/app/uploads/2016/12/uppsala-riksintresset.pdf",
+      "referenceUrl": "https://www.raa.se/app/uploads/2016/12/uppsala-riksintresset.pdf",
+      "note": "现代乌普萨拉与老乌普萨拉是不同城址。城堡为16世纪起王室驻地；不单凭宫殿认定国家首都。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "enNote": "Swedish royal residence and religious centre. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open.",
+      "boundaryAudit": {
+        "status": "现代乌普萨拉与老乌普萨拉是不同城址。城堡为16世纪起王室驻地；不单凭宫殿认定国家首都。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0
+      },
+      "historicalYears": "16世纪起的王室驻地",
+      "identityNote": "时期：16世纪起的王室驻地。现代乌普萨拉与老乌普萨拉是不同城址。城堡为16世纪起王室驻地；不单凭宫殿认定国家首都。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "identityEnNote": "Swedish royal residence and religious centre. Period: royal residence from the 16th century. Swedish royal residence and religious centre. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open."
+    },
+    {
+      "key": "stockholm",
+      "name": "斯德哥尔摩",
+      "enName": "Stockholm",
+      "aliases": [
+        "Stockholm"
+      ],
+      "center": [
+        18.0716,
+        59.3268
+      ],
+      "bbox": [
+        18.0536,
+        59.3088,
+        18.0896,
+        59.3448
+      ],
+      "date": 1634,
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "periodLabel": "瑞典首都",
+      "regime": "瑞典王国",
+      "historicalIdentity": "capital",
+      "identityLabel": "瑞典首都",
+      "identityEnLabel": "Capital of Sweden",
+      "identitySourceUrl": "https://stadsarkivet.stockholm/skola/boka-skolvisning/alla-vara-skolvisningar/stormaktstidens-stockholm/",
+      "referenceUrl": "https://www.visitstockholm.com/o/the-royal-palace/",
+      "note": "中世纪逐步成为政治中心，1634年行政改革明确首都地位；本轮国家首都记录采用1634—今。现王宫主要为18世纪建筑，不是完整中世纪城界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "enNote": "Capital of Sweden. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open.",
+      "boundaryAudit": {
+        "status": "中世纪逐步成为政治中心，1634年行政改革明确首都地位；本轮国家首都记录采用1634—今。现王宫主要为18世纪建筑，不是完整中世纪城界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0
+      },
+      "historicalYears": "1634—今",
+      "capitalSiteKey": "ancient-site:world-stockholm",
+      "mapReferencePeriod": "近现代",
+      "identityNote": "时期：1634—今。中世纪逐步成为政治中心，1634年行政改革明确首都地位；本轮国家首都记录采用1634—今。现王宫主要为18世纪建筑，不是完整中世纪城界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
+      "identityEnNote": "Capital of Sweden. Period: 1634—present. Capital of Sweden. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open."
     }
   ],
   "counts": {
@@ -8778,8 +9835,161 @@
     "bali-tabanan": 0,
     "bali-bangli": 0,
     "bali-negara": 0,
-    "bali-ubud": 1
+    "bali-ubud": 1,
+    "saigon": 3,
+    "washington-dc": 2,
+    "philadelphia": 1,
+    "new-york": 2,
+    "annapolis": 1,
+    "boston": 2,
+    "williamsburg": 2,
+    "jamestown": 2,
+    "charleston": 3,
+    "savannah": 1,
+    "st-augustine": 2,
+    "santa-fe": 1,
+    "san-juan": 12,
+    "new-orleans": 1,
+    "novgorod": 3,
+    "vladimir": 1,
+    "suzdal": 3,
+    "moscow": 6,
+    "st-petersburg": 4,
+    "sigtuna": 3,
+    "gamla-uppsala": 2,
+    "uppsala": 1,
+    "stockholm": 1
   },
   "source": "© OpenStreetMap contributors · ODbL",
-  "reviewedAt": "2026-10-10"
+  "reviewedAt": "2026-10-10",
+  "checkinAliases": {
+    "萨尔茨堡市历史中心": "salzburg",
+    "Historic Centre of the City of Salzburg": "salzburg",
+    "格拉茨城历史中心与埃根博格城堡": "graz",
+    "City of Graz – Historic Centre and Schloss Eggenberg": "graz",
+    "维也纳历史中心": "vienna",
+    "Historic Centre of Vienna": "vienna",
+    "吴哥窟": "angkor",
+    "Angkor": "angkor",
+    "Temple Zone of Sambor Prei Kuk, Archaeological Site of Ancient Ishanapura": "sambor-prei-kuk",
+    "贡开：林迦之城（荣耀之城）考古遗址": "koh-ker",
+    "Koh Ker: Archaeological Site of Ancient Lingapura or Chok Gargyar": "koh-ker",
+    "Historic Monuments and Sites in Kaesong": "kaesong",
+    "凡尔赛宫及其园林": "versailles",
+    "Palace and Park of Versailles": "versailles",
+    "阿尔勒城的古罗马建筑": "arles",
+    "Arles, Roman and Romanesque Monuments": "arles",
+    "南锡的斯坦尼斯拉斯广场、卡里埃勒广场和阿莱昂斯广场": "nancy",
+    "Place Stanislas, Place de la Carrière and Place d'Alliance in Nancy": "nancy",
+    "巴黎塞纳河畔": "paris",
+    "Paris, Banks of the Seine": "paris",
+    "兰斯圣母大教堂、圣雷米修道院和圣安东尼宫殿": "reims",
+    "Cathedral of Notre-Dame, Former Abbey of Saint-Rémi and Palace of Tau, Reims": "reims",
+    "亚琛大教堂": "aachen",
+    "Aachen Cathedral": "aachen",
+    "特里尔的古罗马建筑、圣彼得大教堂和圣玛利亚教堂": "trier",
+    "Roman Monuments, Cathedral of St Peter and Church of Our Lady in Trier": "trier",
+    "古典魏玛": "weimar",
+    "Classical Weimar": "weimar",
+    "什未林住宅区": "schwerin",
+    "Schwerin Residence Ensemble": "schwerin",
+    "雅典卫城": "athens",
+    "Acropolis, Athens": "athens",
+    "罗得中世纪古城": "rhodes",
+    "Medieval City of Rhodes": "rhodes",
+    "米斯特拉斯考古遗址": "mystras",
+    "Archaeological Site of Mystras": "mystras",
+    "科孚古城": "corfu",
+    "Old Town of Corfu": "corfu",
+    "布达佩斯（多瑙河两岸、布达城堡区和安德拉什大街）": "budapest",
+    "Budapest, including the Banks of the Danube, the Buda Castle Quarter and Andrássy Avenue": "budapest",
+    "日惹的宇宙中轴线及其历史地标": "yogyakarta",
+    "The Cosmological Axis of Yogyakarta and its Historic Landmarks": "yogyakarta",
+    "佛罗伦萨历史中心": "florence",
+    "Historic Centre of Florence": "florence",
+    "威尼斯及泻湖": "venice",
+    "Venice and its Lagoon": "venice",
+    "比萨大教堂广场": "pisa",
+    "Piazza del Duomo, Pisa": "pisa",
+    "锡耶纳历史中心": "siena",
+    "Historic Centre of Siena": "siena",
+    "那不勒斯历史中心": "naples",
+    "Historic Centre of Naples": "naples",
+    "文艺复兴城市费拉拉城以及波河三角洲": "ferrara",
+    "Ferrara, City of the Renaissance, and its Po Delta": "ferrara",
+    "拉文纳早期基督教名胜": "ravenna",
+    "Early Christian Monuments of Ravenna": "ravenna",
+    "萨沃王宫": "turin",
+    "Residences of the Royal House of Savoy": "turin",
+    "摩德纳的大教堂、市民塔和大广场": "modena",
+    "Cathedral, Torre Civica and Piazza Grande, Modena": "modena",
+    "乌尔比诺历史中心": "urbino",
+    "Historic Centre of Urbino": "urbino",
+    "庞培、赫库兰尼姆和托雷安农齐亚塔考古区": "pompeii",
+    "Archaeological Areas of Pompei, Herculaneum and Torre Annunziata": "pompeii",
+    "热那亚的新街和罗利宫殿体系": "genoa",
+    "Genoa: Le Strade Nuove and the system of the Palazzi dei Rolli": "genoa",
+    "Mantua and Sabbioneta": "mantua",
+    "Arab-Norman Palermo and the Cathedral Churches of Cefalú and Monreale": "palermo",
+    "古京都遗址（京都、宇治和大津城）": "kyoto",
+    "Historic Monuments of Ancient Kyoto(Kyoto, Uji and Otsu Cities)": "kyoto",
+    "古奈良的历史遗迹": "nara",
+    "Historic Monuments of Ancient Nara": "nara",
+    "琉球王国时期的遗迹": "shuri",
+    "Gusuku Sites and Related Properties of the Kingdom of Ryukyu": "shuri",
+    "Melaka and George Town, Historic Cities of the Straits of Malacca": "melaka",
+    "帕伦克古城和国家公园": "palenque",
+    "Pre-Hispanic City and National Park of Palenque": "palenque",
+    "墨西哥城与赫霍奇米尔科历史中心": "tenochtitlan",
+    "Historic Centre of Mexico City and Xochimilco": "tenochtitlan",
+    "特奥蒂瓦坎": "teotihuacan",
+    "Pre-Hispanic City of Teotihuacan": "teotihuacan",
+    "奇琴伊察古城": "chichenitza",
+    "Pre-Hispanic City of Chichen-Itza": "chichenitza",
+    "非斯的阿拉伯人聚居区": "fez",
+    "Medina of Fez": "fez",
+    "马拉柯什的阿拉伯人聚居区": "marrakesh",
+    "Medina of Marrakesh": "marrakesh",
+    "历史名城梅克内斯": "meknes",
+    "Historic City of Meknes": "meknes",
+    "瓦卢比利斯考古遗址": "volubilis",
+    "Archaeological Site of Volubilis": "volubilis",
+    "Rabat, Modern Capital and Historic City: a Shared Heritage": "rabat",
+    "辛格尔运河以内的阿姆斯特丹17世纪同心圆型运河区": "amsterdam",
+    "Seventeenth-Century Canal Ring Area of Amsterdam inside the Singelgracht": "amsterdam",
+    "科斯科古城": "cusco",
+    "City of Cuzco": "cusco",
+    "马丘比丘古神庙": "machupicchu",
+    "Historic Sanctuary of Machu Picchu": "machupicchu",
+    "昌昌城考古地区": "chanchan",
+    "Chan Chan Archaeological Zone": "chanchan",
+    "庆州历史区": "gyeongju",
+    "Gyeongju Historic Areas": "gyeongju",
+    "格拉纳达的艾勒汉卜拉、赫内拉利费和阿尔巴济": "granada",
+    "Alhambra, Generalife and Albayzín, Granada": "granada",
+    "Cathedral, Alcázar and Archivo de Indias in Seville": "seville",
+    "西贴古镇及相关陀罗钵地古迹": "sithep",
+    "The Ancient Town of Si Thep and its Associated Dvaravati Monuments": "sithep",
+    "伊斯坦布尔历史区域": "istanbul",
+    "Historic Areas of Istanbul": "istanbul",
+    "哈图莎：希泰首都": "hattusa",
+    "Hattusha: the Hittite Capital": "hattusa",
+    "赫拉波利斯和帕穆克卡莱": "hierapolis",
+    "Hierapolis-Pamukkale": "hierapolis",
+    "特洛伊考古遗址": "troy",
+    "Archaeological Site of Troy": "troy",
+    "以弗所": "ephesus",
+    "Ephesus": "ephesus",
+    "Bursa and Cumalıkızık: the Birth of the Ottoman Empire": "bursa",
+    "Pergamon and its Multi-Layered Cultural Landscape": "pergamon",
+    "Aphrodisias": "aphrodisias",
+    "顺化历史建筑群": "hue",
+    "Complex of Hué Monuments": "hue",
+    "河内升龙皇城": "thanglong",
+    "Central Sector of the Imperial Citadel of Thang Long - Hanoi": "thanglong",
+    "胡朝时期的城堡": "ho-citadel",
+    "Citadel of the Ho Dynasty": "ho-citadel",
+    "罗马历史中心，享受治外法权的罗马教廷建筑和缪拉圣保罗弗利": "rome",
+    "Historic Centre of Rome, the Properties of the Holy See in that City Enjoying Extraterritorial Rights and San Paolo Fuori le Mura": "rome"
+  }
 }

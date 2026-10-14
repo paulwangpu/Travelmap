@@ -15,10 +15,10 @@ const mapControlsStorageKey = "travel-map-controls-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "2.3.2";
+const appVersion = "2.3.3";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
-const chinaAncientCapitalTotal = 540;
+const chinaAncientCapitalTotal = 557;
 const worldHeritageCatalogTotal = 1248;
 const usNpsUnitTotal = 433;
 const dataCacheVersion = "20261001-gvp-reference";
@@ -7409,7 +7409,7 @@ function loadUsNpsBoundaries() {
 
 function loadChinaAncientCapitals() {
   if (chinaAncientCapitalsPromise) return chinaAncientCapitalsPromise;
-  chinaAncientCapitalsPromise = fetchJson("data/china-ancient-capitals.json?v=81")
+  chinaAncientCapitalsPromise = fetchJson("data/china-ancient-capitals.json?v=83")
     .then(async (base) => {
       try {
         const supplement = await fetchJson("data/western-regions-36.json?v=8");
@@ -10538,6 +10538,7 @@ function ensureHistoricalCheckinCatalogs() {
   const refresh=()=>{invalidateMapPointRenderCache();if(isMapPageActive())scheduleGeoMapRender();};
   if(!chinaAncientCapitalsPromise)loadChinaAncientCapitals().then(refresh).catch(()=>{});
   if(!imperialTombChecklistPromise)loadImperialTombChecklist().then(refresh).catch(()=>{});
+  if(!ClassicalSites.catalogReady?.())ClassicalSites.ensureCatalog?.().catch(()=>{});
 }
 
 function ancientCapitalIconVisible(meta) {
@@ -10583,6 +10584,7 @@ async function toggleClassicalCityVisit(site) {
 }
 
 function classicalCapitalMarkerTheme(name, features) {
+ const metadata=ClassicalSites.markerTheme?.(name,typeof state!=='undefined'&&state.mapOverlays?.chinaAncientCapitals?state.mapOverlays.ancientCapitalPeriods||{}:{});if(metadata)return metadata;
  const key=ClassicalSites.heritageKey(name);if(!key)return null;const f=(features||ClassicalSites.siteFeatures().features).find(f=>f.properties.siteKey===key);
  if(!f)return null;const p=f.properties;return {name:p.displayName,subtitle:p.identityLabel,correspondingPeriod:p.historicalIdentity==='capital'?p.period:'',color:p.color,icon:p.capitalIcon.replace(/-visited$/,''),svg:ClassicalSites.markerSvg(p.markerKind,p.color),key:'chinaAncientCapitals',markerKind:p.markerKind};
 }
