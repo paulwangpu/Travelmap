@@ -1,0 +1,314 @@
+{
+  "reviewedAt": "2026-10-13",
+  "cities": [
+    {
+      "key": "cordoba",
+      "features": 5,
+      "roles": [
+        "site",
+        "wall",
+        "palace"
+      ],
+      "boundaryStatus": "接入1条闭合OSM城墙way并按面填充；其闭合范围及年代尚未独立核实，不标作完整全城边界。",
+      "sourceUrls": [
+        "https://www.spain.info/en/destination/cordoba/"
+      ],
+      "actualWallFeatures": 0,
+      "actualWallClosedPolygons": 0,
+      "actualWallOpenLines": 0,
+      "wallGroups": 1,
+      "sourceWallWays": 1,
+      "wallLabels": 1,
+      "closedWallGroups": 1,
+      "openWallGroups": 0
+    },
+    {
+      "key": "toledo",
+      "features": 6,
+      "roles": [
+        "site",
+        "wall",
+        "palace"
+      ],
+      "boundaryStatus": "45条原始way合并为4组；开线只按共享端点串接，闭合遗存填面；完整分期城界仍待核。",
+      "sourceUrls": [
+        "https://www.spain.info/en/destination/toledo/"
+      ],
+      "actualWallFeatures": 45,
+      "actualWallClosedPolygons": 16,
+      "actualWallOpenLines": 29,
+      "wallGroups": 4,
+      "sourceWallWays": 45,
+      "wallLabels": 3,
+      "closedWallGroups": 3,
+      "openWallGroups": 1
+    },
+    {
+      "key": "valladolid",
+      "features": 1,
+      "roles": [
+        "site",
+        "palace",
+        "wall"
+      ],
+      "boundaryStatus": "未查到城墙线或闭合墙界；移除王宫重复点和无几何的城门占位点。",
+      "sourceUrls": [
+        "https://www.spain.info/en/destination/valladolid/"
+      ],
+      "actualWallFeatures": 0,
+      "actualWallClosedPolygons": 0,
+      "actualWallOpenLines": 0,
+      "wallGroups": 0,
+      "sourceWallWays": 0,
+      "wallLabels": 0,
+      "closedWallGroups": 0,
+      "openWallGroups": 0
+    },
+    {
+      "key": "bangkok",
+      "features": 4,
+      "roles": [
+        "palace",
+        "wall"
+      ],
+      "boundaryStatus": "3条way均位于大皇宫范围内，合并为一个名称组；不能代表曼谷早期全城城墙。",
+      "sourceUrls": [
+        "https://www.royalgrandpalace.th/en"
+      ],
+      "actualWallFeatures": 3,
+      "actualWallClosedPolygons": 1,
+      "actualWallOpenLines": 2,
+      "wallGroups": 2,
+      "sourceWallWays": 3,
+      "wallLabels": 1,
+      "closedWallGroups": 1,
+      "openWallGroups": 1
+    },
+    {
+      "key": "ayutthaya",
+      "features": 5,
+      "roles": [
+        "site",
+        "wall",
+        "palace"
+      ],
+      "boundaryStatus": "9条原始way合并为一组墙线及一组闭合遗存面；城岛或UNESCO保护范围不等于全城墙界。",
+      "sourceUrls": [
+        "https://whc.unesco.org/en/list/576/"
+      ],
+      "actualWallFeatures": 6,
+      "actualWallClosedPolygons": 0,
+      "actualWallOpenLines": 6,
+      "wallGroups": 2,
+      "sourceWallWays": 9,
+      "wallLabels": 1,
+      "closedWallGroups": 1,
+      "openWallGroups": 1
+    },
+    {
+      "key": "sukhothai",
+      "features": 4,
+      "roles": [
+        "site",
+        "wall",
+        "palace"
+      ],
+      "boundaryStatus": "11条开放way合并；未补接为闭合城界。",
+      "sourceUrls": [
+        "https://whc.unesco.org/en/list/574/"
+      ],
+      "actualWallFeatures": 11,
+      "actualWallClosedPolygons": 0,
+      "actualWallOpenLines": 11,
+      "wallGroups": 1,
+      "sourceWallWays": 11,
+      "wallLabels": 1,
+      "closedWallGroups": 0,
+      "openWallGroups": 1
+    },
+    {
+      "key": "chiangmai",
+      "features": 9,
+      "roles": [
+        "site",
+        "wall",
+        "palace"
+      ],
+      "boundaryStatus": "14条way合并为6个名称组，含内城墙遗存及角楼／城门闭合面；外城防未覆盖。",
+      "sourceUrls": [
+        "https://thai.tourismthailand.org/Destinations/Provinces/chiang-mai/101"
+      ],
+      "actualWallFeatures": 14,
+      "actualWallClosedPolygons": 14,
+      "actualWallOpenLines": 0,
+      "wallGroups": 6,
+      "sourceWallWays": 14,
+      "wallLabels": 6,
+      "closedWallGroups": 6,
+      "openWallGroups": 0
+    },
+    {
+      "key": "sithep",
+      "features": 2,
+      "roles": [
+        "site",
+        "wall"
+      ],
+      "boundaryStatus": "移除与古城根点同坐标的内外城墙占位点；未接入真实墙线。",
+      "sourceUrls": [
+        "https://whc.unesco.org/en/list/1662/"
+      ],
+      "actualWallFeatures": 0,
+      "actualWallClosedPolygons": 0,
+      "actualWallOpenLines": 0,
+      "wallGroups": 0,
+      "sourceWallWays": 0,
+      "wallLabels": 0,
+      "closedWallGroups": 0,
+      "openWallGroups": 0
+    },
+    {
+      "key": "aigai",
+      "features": 2,
+      "roles": [
+        "site",
+        "palace",
+        "wall"
+      ],
+      "boundaryStatus": "1条开放OSM墙线；范围和时期未证实为完整城界。",
+      "sourceUrls": [
+        "https://www.visitgreece.gr/en/experiences/architecture/picturesque-villages/archaeological-site-of-aigai/"
+      ],
+      "actualWallFeatures": 1,
+      "actualWallClosedPolygons": 0,
+      "actualWallOpenLines": 1,
+      "wallGroups": 1,
+      "sourceWallWays": 1,
+      "wallLabels": 1,
+      "closedWallGroups": 0,
+      "openWallGroups": 1
+    },
+    {
+      "key": "pella",
+      "features": 3,
+      "roles": [
+        "site",
+        "wall",
+        "palace"
+      ],
+      "boundaryStatus": "未查到直接城墙way；移除与古城根点重合的城墙占位点。",
+      "sourceUrls": [
+        "https://www.visitgreece.gr/en/experiences/architecture/pella/"
+      ],
+      "actualWallFeatures": 0,
+      "actualWallClosedPolygons": 0,
+      "actualWallOpenLines": 0,
+      "wallGroups": 0,
+      "sourceWallWays": 0,
+      "wallLabels": 0,
+      "closedWallGroups": 0,
+      "openWallGroups": 0
+    },
+    {
+      "key": "nafplio",
+      "features": 5,
+      "roles": [
+        "site",
+        "wall",
+        "palace"
+      ],
+      "boundaryStatus": "18条原始way合并为3个名称组；城墙、堡垒遗存分别标注，不代替完整城界。",
+      "sourceUrls": [
+        "https://www.visitgreece.gr/en/mainland/Peloponnese/Nafplio"
+      ],
+      "actualWallFeatures": 18,
+      "actualWallClosedPolygons": 2,
+      "actualWallOpenLines": 16,
+      "wallGroups": 3,
+      "sourceWallWays": 18,
+      "wallLabels": 2,
+      "closedWallGroups": 2,
+      "openWallGroups": 1
+    },
+    {
+      "key": "madrid",
+      "features": 5,
+      "roles": [
+        "palace",
+        "site",
+        "wall"
+      ],
+      "boundaryStatus": "5条原始way合并为4个名称组，均为开放遗段；无完整城墙环线。",
+      "sourceUrls": [
+        "https://www.patrimonionacional.es/en/royal-sites/royal-palace-madrid"
+      ],
+      "actualWallFeatures": 5,
+      "actualWallClosedPolygons": 0,
+      "actualWallOpenLines": 5,
+      "wallGroups": 4,
+      "sourceWallWays": 5,
+      "wallLabels": 4,
+      "closedWallGroups": 0,
+      "openWallGroups": 4
+    },
+    {
+      "key": "barcelona",
+      "features": 5,
+      "roles": [
+        "wall",
+        "palace"
+      ],
+      "boundaryStatus": "19条原始way合并为3组；罗马墙与其他墙段分组，完整分期城界缺失。",
+      "sourceUrls": [
+        "https://www.barcelona.cat/culturapopular/en/heritage"
+      ],
+      "actualWallFeatures": 19,
+      "actualWallClosedPolygons": 1,
+      "actualWallOpenLines": 18,
+      "wallGroups": 3,
+      "sourceWallWays": 19,
+      "wallLabels": 2,
+      "closedWallGroups": 1,
+      "openWallGroups": 2
+    },
+    {
+      "key": "athens",
+      "features": 33,
+      "wallGroups": 0,
+      "sourceWallWays": 0,
+      "wallLabels": 0,
+      "closedWallGroups": 0,
+      "openWallGroups": 0,
+      "boundaryStatus": "保留既有考古图示复原线和城门遗址点；Kerameikos小范围未检到明确city_wall标签的way，未将院墙作为古城墙。"
+    }
+  ],
+  "note": "新增要素为官方遗址或城防参照点，未用任意多边形替代完整城界。",
+  "wallGeometryMethod": "按显示中文名分组；只将坐标端点完全相同的开放OSM way串接，断开的线留在同一MultiLineString；闭合way保留闭合并转为填充面。每组保留所有原始OSM way id、tag和链接。",
+  "wallQueryGaps": [
+    "cordoba：Overpass超时，OSM map接口因节点数超限拒绝",
+    "valladolid：公开OSM范围查询未返回带城墙标签的线",
+    "pella：公开OSM范围查询未返回带城墙标签的线"
+  ],
+  "auditFindings": {
+    "groups": 27,
+    "sourceWays": 126,
+    "uniqueWallLabels": 22,
+    "removedPointPlaceholders": [
+      "巴利亚多利德重复王宫点",
+      "巴利亚多利德无矢量城门点",
+      "马德里无几何托莱多门点",
+      "斯贴与古城根点重合的内外城墙点"
+    ],
+    "correctedPoints": [
+      "科尔多瓦古城根点从错误的马德里附近坐标移至科尔多瓦古城核心",
+      "科尔多瓦罗马桥点恢复为桥梁遗址点，不再称作城墙范围",
+      "蒙锥克城堡分类从城墙改为城堡点"
+    ]
+  },
+  "coverageLimits": [
+    "曼谷历史全城城墙线未查到；目前三条OSM way属于大皇宫范围。",
+    "清迈内城有遗存点线，外城防缺少可核实的完整原始几何；扩大查询超时。",
+    "巴利亚多利德和佩拉缺少直接标注城墙的OSM几何。",
+    "斯贴只保留考古遗址点位；不以世界遗产区代替古城界。"
+  ]
+}

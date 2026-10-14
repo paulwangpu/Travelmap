@@ -1,0 +1,248 @@
+{
+  "scope": "西班牙、泰国、希腊13处既有条目增量审计；不代表三国整体已完善",
+  "removedPointIds": [
+    "classical-detail-cordoba-1366",
+    "classical-detail-toledo-1367",
+    "classical-detail-valladolid-1368",
+    "classical-detail-ayutthaya-1369",
+    "classical-detail-sukhothai-1370",
+    "classical-detail-chiangmai-1371",
+    "classical-detail-sithep-1372",
+    "classical-detail-aigai-1373",
+    "classical-detail-pella-1374",
+    "classical-detail-nafplio-1375",
+    "classical-detail-bangkok-1376",
+    "classical-detail-madrid-1378",
+    "classical-detail-barcelona-1381",
+    "classical-detail-cordoba-landmark-0",
+    "classical-detail-cordoba-landmark-1",
+    "classical-detail-cordoba-landmark-2",
+    "classical-detail-toledo-landmark-4",
+    "classical-detail-bangkok-landmark-9",
+    "classical-detail-ayutthaya-landmark-11",
+    "classical-detail-ayutthaya-landmark-12",
+    "classical-detail-sukhothai-landmark-14",
+    "classical-detail-sukhothai-landmark-15",
+    "classical-detail-chiangmai-landmark-17",
+    "classical-detail-chiangmai-landmark-18",
+    "classical-detail-sithep-landmark-20",
+    "classical-detail-pella-landmark-24",
+    "classical-detail-pella-landmark-25",
+    "classical-detail-nafplio-landmark-27",
+    "classical-detail-barcelona-landmark-31"
+  ],
+  "addedFeatures": 326,
+  "counts": {
+    "cordoba": 11,
+    "toledo": 4,
+    "madrid": 2,
+    "valladolid": 2,
+    "barcelona": 2,
+    "bangkok": 15,
+    "ayutthaya": 149,
+    "sukhothai": 14,
+    "chiangmai": 5,
+    "sithep": 9,
+    "aigai": 100,
+    "pella": 3,
+    "nafplio": 10
+  },
+  "totalFeatures": 1720,
+  "preservedOldNonPointGeometries": 1264,
+  "correctedRootCoordinates": {
+    "sukhothai": [
+      99.7038,
+      17.0167
+    ],
+    "sithep": [
+      101.1511,
+      15.46582
+    ],
+    "aigai": [
+      22.3221,
+      40.4779
+    ],
+    "pella": [
+      22.518,
+      40.754
+    ]
+  },
+  "cityBoundaryStatus": {
+    "sukhothai": "Six mapped wall segments, six explicitly documented gap joins; reference only",
+    "sithep": "Original moat remnants only; full phased boundary pending verification",
+    "chiangmai": "Mapped wall and moat parts; complete inner/outer circuits pending verification"
+  },
+  "sites": [
+    {
+      "key": "cordoba",
+      "name": "科尔多瓦",
+      "identity": "科尔多瓦酋长国及哈里发国都城",
+      "identitySource": "https://www.spain.info/en/destination/cordoba/",
+      "chinaCorrespondingPeriods": [
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏"
+      ],
+      "addedGeometryCount": 11,
+      "pending": "罗马、伊斯兰及后世完整分期城郭"
+    },
+    {
+      "key": "toledo",
+      "name": "托莱多",
+      "identity": "西哥特王国及卡斯蒂利亚政治中心",
+      "identitySource": "https://www.spain.info/en/destination/toledo/",
+      "chinaCorrespondingPeriods": [
+        "隋唐",
+        "魏晋南北朝"
+      ],
+      "addedGeometryCount": 4,
+      "pending": "完整分期城郭和阿尔卡萨宫城外围"
+    },
+    {
+      "key": "madrid",
+      "name": "马德里",
+      "identity": "西班牙都城",
+      "identitySource": "https://www.patrimonionacional.es/en/royal-sites/royal-palace-madrid",
+      "chinaCorrespondingPeriods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "addedGeometryCount": 2,
+      "pending": "完整分期城郭"
+    },
+    {
+      "key": "valladolid",
+      "name": "巴利亚多利德",
+      "identity": "西班牙王廷阶段性首都",
+      "identitySource": "https://www.spain.info/en/destination/valladolid/",
+      "chinaCorrespondingPeriods": [
+        "明"
+      ],
+      "addedGeometryCount": 2,
+      "pending": "完整分期城郭"
+    },
+    {
+      "key": "barcelona",
+      "name": "巴塞罗那",
+      "identity": "加泰罗尼亚及阿拉贡联合王国政治中心",
+      "identitySource": "https://www.barcelona.cat/culturapopular/en/heritage",
+      "chinaCorrespondingPeriods": [
+        "宋辽金西夏"
+      ],
+      "addedGeometryCount": 2,
+      "pending": "完整罗马及中世纪城郭"
+    },
+    {
+      "key": "bangkok",
+      "name": "曼谷",
+      "identity": "暹罗／泰国都城",
+      "identitySource": "https://www.royalgrandpalace.th/en",
+      "chinaCorrespondingPeriods": [
+        "清",
+        "近现代"
+      ],
+      "addedGeometryCount": 15,
+      "pending": "完整早期曼谷城防及吞武里分期城界"
+    },
+    {
+      "key": "ayutthaya",
+      "name": "大城／阿瑜陀耶",
+      "identity": "阿瑜陀耶王国都城",
+      "identitySource": "https://whc.unesco.org/en/list/576/",
+      "chinaCorrespondingPeriods": [
+        "明",
+        "元",
+        "清"
+      ],
+      "addedGeometryCount": 149,
+      "pending": "城島外歷代城界；王宮範圍不能代替全城"
+    },
+    {
+      "key": "sukhothai",
+      "name": "素可泰",
+      "identity": "素可泰王国都城",
+      "identitySource": "https://whc.unesco.org/en/list/574/",
+      "chinaCorrespondingPeriods": [
+        "元",
+        "宋辽金西夏",
+        "明"
+      ],
+      "addedGeometryCount": 14,
+      "pending": "城门缺口实际墙界、外城防；现填充面仅为墙段补接参考"
+    },
+    {
+      "key": "chiangmai",
+      "name": "清迈",
+      "identity": "兰纳王国都城",
+      "identitySource": "https://thai.tourismthailand.org/Destinations/Provinces/chiang-mai/101",
+      "chinaCorrespondingPeriods": [
+        "元",
+        "明",
+        "清"
+      ],
+      "addedGeometryCount": 5,
+      "pending": "完整外城和分期墙界"
+    },
+    {
+      "key": "sithep",
+      "name": "斯贴",
+      "identity": "陀罗钵地时期古城（都城身份未确定）",
+      "identitySource": "https://whc.unesco.org/en/list/1662/",
+      "chinaCorrespondingPeriods": [],
+      "addedGeometryCount": 9,
+      "pending": "内外双城完整分期墙界；现为局部原始护城壕",
+      "classification": "ancient-city",
+      "note": "历史年代和中国对应朝代仍用于遗迹详情及城墙时期；不再作为古都朝代筛选条件。"
+    },
+    {
+      "key": "aigai",
+      "name": "埃盖",
+      "identity": "马其顿王国早期都城",
+      "identitySource": "https://www.visitgreece.gr/en/experiences/architecture/picturesque-villages/archaeological-site-of-aigai/",
+      "chinaCorrespondingPeriods": [
+        "周"
+      ],
+      "addedGeometryCount": 100,
+      "pending": "完整城郭；宫殿不能代替全城"
+    },
+    {
+      "key": "pella",
+      "name": "佩拉",
+      "identity": "马其顿王国都城",
+      "identitySource": "https://www.visitgreece.gr/en/experiences/architecture/pella/",
+      "chinaCorrespondingPeriods": [
+        "周",
+        "秦汉"
+      ],
+      "addedGeometryCount": 3,
+      "pending": "完整城郭；现代发掘区不能代替全城"
+    },
+    {
+      "key": "nafplio",
+      "name": "纳夫普利翁",
+      "identity": "希腊王国首都（早期）",
+      "identitySource": "https://www.visitgreece.gr/en/mainland/Peloponnese/Nafplio",
+      "chinaCorrespondingPeriods": [
+        "清"
+      ],
+      "addedGeometryCount": 10,
+      "pending": "不同时期城区城郭，堡垒已接入原始范围"
+    }
+  ],
+  "visualReview": {
+    "screenshots": "output/capital-depth-review/browser-*.png",
+    "cities": [
+      "cordoba",
+      "madrid",
+      "ayutthaya",
+      "bangkok",
+      "sukhothai",
+      "aigai",
+      "nafplio",
+      "sithep"
+    ],
+    "notes": "宫殿、堡垒范围与底图位置吻合；密集建筑不标注；底图自带外语名称独立存在。"
+  },
+  "geometryPreservation": "所有原有非点几何深度比较一致，包括孔洞和开放墙段。"
+}

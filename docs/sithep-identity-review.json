@@ -1,0 +1,133 @@
+{
+  "classification": "ancient-city",
+  "label": "陀罗钵地时期古城（都城身份未确定）",
+  "reason": "具有护城壕环绕的内外双城及大型宗教遗迹。UNESCO资料没有明确认定其为国家或王国首都，按普通古城收录；完整分期城界待核。",
+  "source": "https://whc.unesco.org/en/list/1662/",
+  "preservedHeritageId": "whc-1662",
+  "preservedHeritageCoordinates": [
+    101.1511,
+    15.46582
+  ],
+  "preservedGeometryCount": 9,
+  "removedCapitalRoots": [
+    {
+      "siteKey": "ancient-site:sithep",
+      "currentKey": "ancient-site:sithep",
+      "currentPlace": "斯贴",
+      "lat": 15.46582,
+      "lng": 101.1511,
+      "admin": "泰国 · 斯贴",
+      "confidence": "中",
+      "sourceOrder": 443,
+      "name": "斯贴",
+      "enName": "Si Thep",
+      "siteNames": [
+        "斯贴"
+      ],
+      "ancientNames": [
+        "斯贴"
+      ],
+      "dynasties": [
+        "陀罗钵地时期政治中心"
+      ],
+      "eras": [
+        "隋唐",
+        "魏晋南北朝",
+        "五代十国"
+      ],
+      "capitalTypes": [
+        "陀罗钵地时期政治中心"
+      ],
+      "records": [
+        {
+          "时代": "隋唐",
+          "政权/国号": "陀罗钵地时期政治中心",
+          "政权年代（原文）": "",
+          "都城性质": "陀罗钵地时期政治中心",
+          "都城年代（原文）": "6—10世纪",
+          "古称": "斯贴",
+          "今称/遗址名": "斯贴",
+          "今属行政区": "泰国 · 斯贴",
+          "置信度": "中",
+          "备注/争议": "陀罗钵地时期政治中心；完整分期城界待核。",
+          "来源URL": "https://whc.unesco.org/en/list/1662/",
+          "都城类别码": "P",
+          "sourceOrder": 443
+        }
+      ],
+      "recordCount": 1,
+      "sourceEra": "隋唐",
+      "sourceSite": "斯贴",
+      "sourceAncientName": "斯贴",
+      "classicalSiteKey": "sithep",
+      "mapReferencePeriod": "隋唐",
+      "hoverIdentity": "陀罗钵地时期政治中心",
+      "enHoverIdentity": "Dvaravati political centre",
+      "coordinatePrecision": "城市／遗址参照点；不表示完整城界。",
+      "historicalSources": [
+        {
+          "title": "官方资料",
+          "url": "https://whc.unesco.org/en/list/1662/"
+        }
+      ],
+      "checkinChecklistKey": "chinaAncientCapitals",
+      "checkinItem": "",
+      "boundaryAudit": {
+        "status": "完整分期城界待核",
+        "pointKind": "历史城市参照点",
+        "note": "仅接入有来源的实际遗址参照点，不以世界遗产区代替城界。"
+      },
+      "relatedMapViews": [
+        {
+          "name": "斯贴历史遗址",
+          "coordinates": [
+            101.1511,
+            15.46582
+          ],
+          "zoom": 14
+        }
+      ]
+    }
+  ],
+  "removedCapitalRecords": [
+    {
+      "siteKey": "ancient-site:sithep",
+      "currentKey": "ancient-site:sithep",
+      "currentPlace": "斯贴",
+      "lat": 15.46582,
+      "lng": 101.1511,
+      "admin": "泰国 · 斯贴",
+      "confidence": "中",
+      "sourceOrder": 443,
+      "name": "斯贴 · 陀罗钵地时期政治中心",
+      "siteName": "斯贴",
+      "ancientName": "斯贴",
+      "dynasty": "陀罗钵地时期政治中心",
+      "era": "隋唐",
+      "capitalType": "陀罗钵地时期政治中心",
+      "capitalYears": "6—10世纪",
+      "regimeYears": "",
+      "categoryCode": "P",
+      "parentName": "斯贴",
+      "sourceUrl": "https://whc.unesco.org/en/list/1662/",
+      "note": "陀罗钵地时期政治中心；完整分期城界待核。",
+      "classicalSiteKey": "sithep",
+      "checkinChecklistKey": "chinaAncientCapitals",
+      "checkinItem": "",
+      "boundaryAudit": {
+        "status": "完整分期城界待核",
+        "pointKind": "历史城市参照点",
+        "note": "仅接入有来源的实际遗址参照点，不以世界遗产区代替城界。"
+      },
+      "siteReference": {
+        "name": "斯贴",
+        "coordinates": [
+          101.1511,
+          15.46582
+        ],
+        "kind": "历史城市参照点",
+        "note": "不表示完整城界"
+      }
+    }
+  ]
+}

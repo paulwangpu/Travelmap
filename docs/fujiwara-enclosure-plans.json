@@ -1,0 +1,175 @@
+{
+  "source": "https://www.city.kashihara.nara.jp/material/files/group/21/fujiwara_202507-nintei.pdf",
+  "cityFigure": 12,
+  "cityPdfPage": 61,
+  "palaceFigure": 17,
+  "palacePdfPage": 74,
+  "anchor": {
+    "id": "fujiwara-way-601591439",
+    "coordinates": [
+      135.81245001666665,
+      34.501216166666666
+    ],
+    "cityPixel": [
+      778,
+      595
+    ],
+    "kind": "发掘中门现状几何近似中心与图上东侧中点；非测量控制点"
+  },
+  "cityScaleBarPixels": [
+    [
+      749,
+      1178
+    ],
+    [
+      955,
+      1178
+    ]
+  ],
+  "cityScaleBarMeters": 2000,
+  "cityPixelRing": [
+    [
+      449,
+      334
+    ],
+    [
+      993,
+      334
+    ],
+    [
+      993,
+      820
+    ],
+    [
+      449,
+      820
+    ],
+    [
+      449,
+      334
+    ]
+  ],
+  "palaceWallDimensionsMeters": [
+    925,
+    907
+  ],
+  "palaceAllotmentMeters": 1044,
+  "added": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.77763248,
+              34.5239792
+            ],
+            [
+              135.83520312,
+              34.5239792
+            ],
+            [
+              135.83520312,
+              34.48159286
+            ],
+            [
+              135.77763248,
+              34.48159286
+            ],
+            [
+              135.77763248,
+              34.5239792
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "藤原京",
+        "sourceId": "fujiwara-kyo-official-research-grid",
+        "sourceName": "藤原京研究范围（图示参考）",
+        "label": "藤原京研究范围（图示参考）",
+        "sourceUrl": "https://www.city.kashihara.nara.jp/material/files/group/21/fujiwara_202507-nintei.pdf",
+        "sourceTitle": "橿原市《特别史迹藤原宫址保存活用计划》（2025）图12，PDF第61页",
+        "referenceUrl": "https://www.city.kashihara.nara.jp/kanko_bunka_sports/rekishi_bunkazai/6/6/11386.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方重要遗迹研究区及条坊图示参考，非完整实测城界",
+        "note": "描绘图12浅蓝色“重要遗迹藤原京址”叠加条坊格网的外缘，用于全城尺度参照；它兼有考古管理含义，不等于全部确认城墙或各期建成区。规划正文采用约5.3公里东西宽、约4.7公里南北范围，并说明更大南北范围仍有研究分歧。以原图2公里比例尺和宫东面中门遗址定位近似配准；只有一个定位参照，比例尺、图示门位和方向误差均可能传递到远端，未取得独立边界精度。",
+        "capitalSiteKey": "ancient-site:world-fujiwara",
+        "capitalSiteName": "藤原京",
+        "capitalSiteDisplayName": "藤原京",
+        "inferredBoundary": true,
+        "labelInsideBoundary": true,
+        "labelCoordinates": [
+          135.79361256,
+          34.52258376
+        ],
+        "boundaryKind": "archaeological-research-grid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.80236722,
+              34.50529001
+            ],
+            [
+              135.81245002,
+              34.50529001
+            ],
+            [
+              135.81245002,
+              34.49714233
+            ],
+            [
+              135.80236722,
+              34.49714233
+            ],
+            [
+              135.80236722,
+              34.50529001
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "藤原京",
+        "sourceId": "fujiwara-palace-dimension-reference",
+        "sourceName": "藤原宫宫墙范围（尺寸定位参考）",
+        "label": "藤原宫宫墙范围（尺寸参考）",
+        "sourceUrl": "https://www.city.kashihara.nara.jp/material/files/group/21/fujiwara_202507-nintei.pdf",
+        "sourceTitle": "橿原市《特别史迹藤原宫址保存活用计划》（2025），PDF第74页正文及图17",
+        "referenceUrl": "https://www.city.kashihara.nara.jp/kanko_bunka_sports/rekishi_bunkazai/6/6/11386.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方宫墙尺寸及发掘门址派生参考，非原始测绘面",
+        "note": "官方正文区分约1044米见方敷地与约925×907米宫墙。这里按925×907米宫墙尺寸，以OSM东面中门遗址近似中心为东墙中点、原图北向为方向生成参考面；不是现代遗址公园外框，也不是直接取得的实测闭合宫墙。门址中心、原图方向和总体矩形假定均带有误差；原始西面大垣、东面中门、西面南门和朝堂院南门几何保留。不能把此面当作法定保护用地或精确宫墙界址。",
+        "capitalSiteKey": "ancient-site:world-fujiwara",
+        "capitalSiteName": "藤原京",
+        "capitalSiteDisplayName": "藤原京",
+        "inferredBoundary": true,
+        "labelInsideBoundary": true,
+        "labelCoordinates": [
+          135.80740862,
+          34.50494416
+        ],
+        "boundaryKind": "dimension-anchored-palace-reference",
+        "referenceDimensionsMeters": [
+          925,
+          907
+        ],
+        "anchorFeatureId": "fujiwara-way-601591439"
+      }
+    }
+  ],
+  "limits": "单点与比例尺/尺寸定位参考；不具备独立界址精度。重要遗迹研究格网、宫墙派生范围、现代公园分别表示。"
+}

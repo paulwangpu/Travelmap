@@ -1,0 +1,547 @@
+{
+  "addedCapitalRoots": 9,
+  "addedCapitalRecords": 16,
+  "addedGeometry": 13,
+  "originalGeometryPreserved": 1915,
+  "heritageUnchanged": true,
+  "totals": {
+    "roots": 291,
+    "records": 495,
+    "sites": 153,
+    "features": 1928
+  },
+  "sites": [
+    {
+      "key": "gorkha",
+      "name": "廓尔喀",
+      "enName": "Gorkha",
+      "country": "尼泊尔",
+      "center": [
+        84.62923,
+        28.00456
+      ],
+      "eras": [
+        "明",
+        "清"
+      ],
+      "identity": "沙阿王朝廓尔喀王国都城",
+      "enIdentity": "Capital of the Shah Kingdom of Gorkha",
+      "periods": [
+        [
+          "廓尔喀王国（沙阿王朝）",
+          "1559—1768／1769",
+          "明"
+        ]
+      ],
+      "source": "https://cn.nepalembassy.gov.np/pages/history-of-nepal/",
+      "otherSources": [
+        "https://gdco.gov.np/",
+        "https://ntb.gov.np/en/gorkha"
+      ],
+      "note": "1768年攻取加德满都，1769年完成谷地诸王国征服；迁都口径按1768／1769说明。山顶宫殿与下宫分别表达，完整城防和主宫墙界待核。",
+      "geometry": [
+        {
+          "id": "hc-gorkha-relation-4839941",
+          "type": "Polygon",
+          "scope": "mapped_building",
+          "name": "廓尔喀下宫（现博物馆）"
+        },
+        {
+          "id": "hc-gorkha-node-1330352604",
+          "type": "Point",
+          "scope": "mapped_remains",
+          "name": "杜尼帕蒂王宫圣地"
+        },
+        {
+          "id": "hc-gorkha-node-1330353540",
+          "type": "Point",
+          "scope": "mapped_remains",
+          "name": "廓尔喀下堡遗址"
+        },
+        {
+          "id": "hc-gorkha-node-1330353593",
+          "type": "Point",
+          "scope": "mapped_remains",
+          "name": "廓尔喀上堡遗址"
+        }
+      ],
+      "remaining": "完整分期城郭、宫城及未取得几何的墙段待核"
+    },
+    {
+      "key": "jinghong",
+      "name": "景洪",
+      "enName": "Jinghong / Chiang Rung",
+      "country": "中国",
+      "center": [
+        100.8,
+        22.002
+      ],
+      "eras": [
+        "宋辽金西夏",
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "identity": "勐泐地方政权中心；后为车里土司治所",
+      "enIdentity": "Centre of the Mueang Lue polity; later Cheli tusi seat",
+      "periods": [
+        [
+          "景陇金殿国（勐泐）",
+          "1180—元代土司建制前（具体转换年份另核）",
+          "宋辽金西夏"
+        ],
+        [
+          "车里世袭土司政权",
+          "元代—1950（治所沿革和各阶段身份分别理解）",
+          "元"
+        ]
+      ],
+      "source": "https://www.neac.gov.cn/seac/ztzl/daiz/lsyg.shtml",
+      "otherSources": [
+        "https://www.ynxc.gov.cn/uploadfile/s61/2024/0419/20240419094628477.pdf"
+      ],
+      "aliases": [
+        "景陇",
+        "景龙",
+        "景昽",
+        "景兰",
+        "勐泐",
+        "景陇金殿国"
+      ],
+      "note": "按国家民委资料记录以景洪为中心的勐泐地方政权，元明清及民国的土司治所阶段另列；不把1180—1950全部说成独立王国。根点为景洪城区参照，金殿、王宫和历代城郭确界待核。曼听公园仅是历史御园的现状范围。",
+      "geometry": [
+        {
+          "id": "hc-jinghong-way-288655553",
+          "type": "Polygon",
+          "scope": "current_garden",
+          "name": "曼听御花园（现状园区）"
+        }
+      ],
+      "remaining": "完整分期城郭、宫城及未取得几何的墙段待核"
+    },
+    {
+      "key": "guge",
+      "name": "古格王都札不让",
+      "enName": "Tsaparang / Guge royal city",
+      "country": "中国",
+      "center": [
+        79.6698574,
+        31.4653415
+      ],
+      "eras": [
+        "五代十国",
+        "宋辽金西夏",
+        "元",
+        "明"
+      ],
+      "identity": "古格王国都城",
+      "enIdentity": "Capital of the Kingdom of Guge",
+      "periods": [
+        [
+          "古格王国",
+          "约10世纪—1630（建都起年待核）",
+          "宋辽金西夏"
+        ]
+      ],
+      "source": "https://zhada.gov.cn/info/1026/3861.htm",
+      "otherSources": [
+        "https://www.cac.gov.cn/2016-01/14/c_1117772185.htm"
+      ],
+      "aliases": [
+        "札不让",
+        "札布让",
+        "扎布让",
+        "古格"
+      ],
+      "note": "古格王国王都遗址；王朝形成、建都与王城不断扩建的年代不能等同。保留现状遗址标绘，不宣称某一期宫城、寺院和洞窟分区已完整核定。",
+      "geometry": [
+        {
+          "id": "hc-guge-way-148107487",
+          "type": "Polygon",
+          "scope": "modern_archaeological_extent",
+          "name": "古格王都遗址（现状标绘）"
+        }
+      ],
+      "remaining": "完整分期城郭、宫城及未取得几何的墙段待核"
+    },
+    {
+      "key": "mongmao",
+      "name": "勐卯／麓川（瑞丽地区）",
+      "enName": "Mong Mao / Ruili region",
+      "country": "中国",
+      "center": [
+        97.8553641,
+        24.0204435
+      ],
+      "eras": [
+        "元",
+        "明"
+      ],
+      "identity": "勐卯／麓川地方政权王都地区",
+      "enIdentity": "Royal-seat region of the Mong Mao / Luchuan polity",
+      "periods": [
+        [
+          "勐卯／麓川地方政权",
+          "约14世纪—1440年代（姐兰、广贺罕等王都分址待核）",
+          "元"
+        ]
+      ],
+      "source": "https://www.neac.gov.cn/seac/ztzl/daiz/lsyg.shtml",
+      "otherSources": [
+        "https://www.rl.gov.cn/slyj/Web/_F0_0_6GUKVL1D77B5C0C54C894CB8B0.htm"
+      ],
+      "aliases": [
+        "麓川",
+        "勐卯",
+        "孟卯"
+      ],
+      "confidence": "中",
+      "note": "根点仅为现代瑞丽地区参照，不代表已精确定位姐兰或广贺罕王宫；不同王都不能合画为一座城。接入的平麓城东门属明代后期城防，不作为14世纪麓川宫城证据。",
+      "geometry": [
+        {
+          "id": "hc-mongmao-way-1525684236",
+          "type": "Polygon",
+          "scope": "mapped_remains",
+          "name": "平麓城东门（现存／修复）"
+        }
+      ],
+      "remaining": "完整分期城郭、宫城及未取得几何的墙段待核"
+    },
+    {
+      "key": "fusi",
+      "name": "伏俟城",
+      "enName": "Fusi city",
+      "country": "中国",
+      "center": [
+        99.581372,
+        37.025774
+      ],
+      "eras": [
+        "魏晋南北朝",
+        "隋唐"
+      ],
+      "identity": "吐谷浑王都",
+      "enIdentity": "Royal capital of Tuyuhun",
+      "periods": [
+        [
+          "吐谷浑",
+          "北朝—唐初（具体建都起年及间断待核）",
+          "魏晋南北朝"
+        ]
+      ],
+      "source": "https://big5.china.com.cn/gate/big5/cul.china.com.cn/2022-12/12/content_42200935.htm",
+      "otherSources": [
+        "https://www.gov.cn/gbgl/75e17ff291d418f8f758d508087cd8b/files/6250670fc770465787b85d705d4b12f9.pdf"
+      ],
+      "note": "中国社会科学院考古学者仝涛介绍2020年调查、完整周边城墙和C14北朝至隋代证据；遗址延续与各时期王都身份分别理解。OSM闭合现状遗址区不冒充历代实测城界。",
+      "geometry": [
+        {
+          "id": "hc-fusi-way-1190949793",
+          "type": "Polygon",
+          "scope": "modern_archaeological_extent",
+          "name": "伏俟城遗址（现状标绘）"
+        }
+      ],
+      "remaining": "完整分期城郭、宫城及未取得几何的墙段待核"
+    },
+    {
+      "key": "trakieu",
+      "name": "茶峤",
+      "enName": "Tra Kieu / Simhapura",
+      "country": "越南",
+      "center": [
+        108.234,
+        15.8217
+      ],
+      "eras": [
+        "魏晋南北朝",
+        "隋唐"
+      ],
+      "identity": "占婆辛哈普拉王都",
+      "enIdentity": "Champa royal capital of Simhapura",
+      "periods": [
+        [
+          "占婆（辛哈普拉阶段）",
+          "约4—8世纪（起讫及林邑地望存在争论）",
+          "魏晋南北朝"
+        ]
+      ],
+      "source": "https://vietnam.travel/cn/things-to-do/vietnams-cham-legacy",
+      "otherSources": [
+        "https://dltm.vnptit3.vn/en/detailtravelplace/?id=1226",
+        "https://artsandculture.google.com/story/da-nang-museum-of-cham-sculpture-tra-kieu-gallery-quang-binh-tourism-department/owUB_HowG4G_KQ"
+      ],
+      "aliases": [
+        "茶峤城",
+        "茶乔",
+        "Trà Kiệu",
+        "Simhapura",
+        "辛哈普拉"
+      ],
+      "note": "越南官方旅游资料将辛哈普拉（茶峤）与美山宗教中心区分。根点为古城区域参照；仅接入有发表坐标的实际东端考古探方，完整城郭及宫城历史图配准待核，不用现存教堂范围代替占城王宫。",
+      "geometry": [
+        {
+          "id": "hc-trakieu-published-east-excavation",
+          "type": "Point",
+          "scope": "archaeological_location",
+          "name": "茶峤东端考古探方"
+        }
+      ],
+      "remaining": "完整分期城郭、宫城及未取得几何的墙段待核"
+    },
+    {
+      "key": "dongduong",
+      "name": "同阳",
+      "enName": "Dong Duong / Indrapura",
+      "country": "越南",
+      "center": [
+        108.2943955,
+        15.6753292
+      ],
+      "eras": [
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏"
+      ],
+      "identity": "占婆因陀罗补罗王都",
+      "enIdentity": "Champa royal capital of Indrapura",
+      "periods": [
+        [
+          "占婆（因陀罗补罗阶段）",
+          "875—10世纪末（迁都具体年份有不同说法）",
+          "隋唐"
+        ]
+      ],
+      "source": "https://iars.vass.gov.vn/tin-hoat-dong-khoa-hoc/hoi-thao-khoa-hoc-quoc-gia-nghien-cuu-bao-ton-va-phat-huy-gia-tri-di-san-van-hoa-phat-giao-dong-duong-568352",
+      "aliases": [
+        "东阳",
+        "同阳佛院",
+        "Đồng Dương",
+        "Indrapura",
+        "因陀罗补罗"
+      ],
+      "note": "越南社会科学院说明875年建佛院于因陀罗补罗王都、晚10世纪迁往阇槃。佛院与政治都城范围分别表达；不把佛院遗址点或保护区当作完整城郭。",
+      "geometry": [
+        {
+          "id": "hc-dongduong-node-11784634072",
+          "type": "Point",
+          "scope": "archaeological_location",
+          "name": "同阳佛院遗址"
+        }
+      ],
+      "remaining": "完整分期城郭、宫城及未取得几何的墙段待核"
+    },
+    {
+      "key": "doban",
+      "name": "阇槃",
+      "enName": "Vijaya / Do Ban",
+      "country": "越南",
+      "center": [
+        109.070964,
+        13.9264868
+      ],
+      "eras": [
+        "宋辽金西夏",
+        "元",
+        "明",
+        "清"
+      ],
+      "identity": "占婆毗阇耶王都；后为西山王朝皇帝城",
+      "enIdentity": "Champa capital of Vijaya; later Tay Son imperial city",
+      "periods": [
+        [
+          "占婆（毗阇耶阶段）",
+          "约10世纪末—1471",
+          "宋辽金西夏"
+        ],
+        [
+          "西山王朝（阮岳）",
+          "1776—1793（1778年称帝）；后续驻城与战事另述",
+          "清"
+        ]
+      ],
+      "source": "https://baotanglichsu.vn/vi/Articles/3127/11176/thanh-hoang-dje-va-nhung-ton-nghi.html",
+      "otherSources": [
+        "https://iars.vass.gov.vn/tin-hoat-dong-khoa-hoc/hoi-thao-khoa-hoc-quoc-gia-nghien-cuu-bao-ton-va-phat-huy-gia-tri-di-san-van-hoa-phat-giao-dong-duong-568352",
+        "https://baobinhdinh.vn/viewer.aspx?mabb=51754&macm=48&macmp=48"
+      ],
+      "aliases": [
+        "阇盘",
+        "阇槃城",
+        "佛誓城",
+        "毗阇耶",
+        "Vijaya",
+        "Đồ Bàn",
+        "Hoang De citadel",
+        "皇帝城"
+      ],
+      "note": "占城王都、西山阮岳王都及阮朝利用分期说明。接入皇帝城核心遗址及仙翼塔实际范围；现代核心遗址区不能代替占城全城、全部内城或紫禁城。名为皇帝城的OSM住宅道路不作为城墙。",
+      "geometry": [
+        {
+          "id": "hc-doban-way-252581205",
+          "type": "Polygon",
+          "scope": "modern_archaeological_extent",
+          "name": "皇帝城核心遗址（现状标绘）"
+        },
+        {
+          "id": "hc-doban-way-1228555415",
+          "type": "Polygon",
+          "scope": "religious_precinct",
+          "name": "仙翼塔遗址范围"
+        }
+      ],
+      "remaining": "完整分期城郭、宫城及未取得几何的墙段待核"
+    },
+    {
+      "key": "panduranga",
+      "name": "宾童龙（潘郎地区）",
+      "enName": "Panduranga / Phan Rang region",
+      "country": "越南",
+      "center": [
+        108.978,
+        11.578
+      ],
+      "eras": [
+        "明",
+        "清"
+      ],
+      "identity": "占婆宾童龙后期政权中心",
+      "enIdentity": "Centre of the late Champa polity of Panduranga",
+      "periods": [
+        [
+          "占婆（宾童龙后期）",
+          "15世纪后期—17世纪末（后续顺城镇阶段及王廷分址另核）",
+          "明"
+        ]
+      ],
+      "source": "https://khanhhoa360.vn/en/Articles/313/library-of-artifacts",
+      "otherSources": [
+        "https://publications.asia.si.edu/publications/seaceramics/time/chronologies.php",
+        "https://vietnam.travel/things-to-do/vietnams-cham-legacy"
+      ],
+      "aliases": [
+        "宾童龙",
+        "潘郎",
+        "Phan Rang",
+        "Panduranga"
+      ],
+      "confidence": "中",
+      "note": "根点仅为潘郎地区政治中心参照，不能理解为已定位晚期王宫；后续顺城镇及潘里王廷不得混同为同一城址。波克朗加莱塔群是宗教遗址，不是王宫或完整城界。",
+      "geometry": [
+        {
+          "id": "hc-panduranga-way-804729100",
+          "type": "Polygon",
+          "scope": "religious_precinct",
+          "name": "波克朗加莱塔群（现状圣区）"
+        }
+      ],
+      "remaining": "完整分期城郭、宫城及未取得几何的墙段待核"
+    }
+  ],
+  "existingCityPhases": [
+    "羊苴咩城：大长和、大天兴、大义宁、大中国高氏",
+    "加德满都：沙阿王朝"
+  ],
+  "excludedGeometry": [
+    "OSM way1446452500 皇帝城：住宅道路",
+    "OSM way340926506 廓尔喀：未核实用途的现代围墙",
+    "OSM way1008910630 瑞丽：现代看守所围墙",
+    "波克朗加莱周边现代围墙：不作为宾童龙城墙",
+    "茶峤现存教堂：不作为占城王宫"
+  ],
+  "pendingChineseCandidates": [
+    {
+      "name": "夜郎",
+      "reason": "候选都邑地望争议，不能把可乐遗址直接当作已确定王都"
+    },
+    {
+      "name": "自杞、罗殿",
+      "reason": "政权身份与候选都址需逐条考证，无可靠精确城界"
+    },
+    {
+      "name": "播州、永顺、唐崖及孟连等土司治所",
+      "reason": "需以实际土司政治中心身份另核，不因有土司府直接认作独立国都"
+    }
+  ],
+  "pendingChampaCandidates": [
+    {
+      "name": "迦乌笪罗（芽庄）",
+      "reason": "地方中心与独立王都分期需核，婆那加寺不能代替政治王都"
+    },
+    {
+      "name": "顺城镇及潘里晚期王廷",
+      "reason": "与宾童龙潘郎地区分址，王廷迁驻和范围未核"
+    },
+    {
+      "name": "成垒、洲沙、城湖等古城",
+      "reason": "城郭遗址身份与王都身份不能自动等同，先核政治性质"
+    }
+  ],
+  "validation": {
+    "fullRegressionFailures": 0,
+    "syntaxChecks": [
+      "app.js",
+      "classical-sites.js",
+      "historical-periods.js",
+      "ancient-capital-walls.js"
+    ],
+    "diffCheck": true,
+    "preservedOriginalGeometry": 1915,
+    "preservedWorldHeritageData": true,
+    "browser": [
+      {
+        "key": "sithep",
+        "geometries": 9,
+        "standalone": 0
+      },
+      {
+        "key": "gorkha",
+        "geometries": 4,
+        "standalone": 0
+      },
+      {
+        "key": "jinghong",
+        "geometries": 1,
+        "standalone": 0
+      },
+      {
+        "key": "guge",
+        "geometries": 1,
+        "standalone": 0
+      },
+      {
+        "key": "fusi",
+        "geometries": 1,
+        "standalone": 0
+      },
+      {
+        "key": "doban",
+        "geometries": 2,
+        "standalone": 0
+      },
+      {
+        "legacyShortNameDone": true
+      },
+      {
+        "language": "en",
+        "gorkhaHover": {
+          "identity": "Capital of the Shah Kingdom of Gorkha",
+          "period": "明"
+        },
+        "jinghongHover": null
+      },
+      {
+        "periodsOffDetails": 1928,
+        "newRootsHidden": true
+      },
+      {
+        "wallsOff": 0
+      },
+      {
+        "sithepWithoutHeritage": 1,
+        "sithepVisited": true
+      }
+    ]
+  }
+}

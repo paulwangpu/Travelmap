@@ -1,0 +1,1062 @@
+{
+  "addedCapitalRoots": 29,
+  "addedCapitalRecords": 34,
+  "addedGeometry": 76,
+  "migratedAngkorGeometry": 147,
+  "originalGeometryPreserved": 2111,
+  "worldHeritageUnchanged": true,
+  "originalAngkorFilesRetained": true,
+  "newWallWays": 78,
+  "totals": {
+    "roots": 320,
+    "records": 529,
+    "sites": 187,
+    "features": 2334
+  },
+  "sites": [
+    {
+      "key": "vienna",
+      "name": "维也纳",
+      "country": "奥地利",
+      "identity": "奥地利公国、帝国及共和国都城",
+      "classification": "capital",
+      "periods": [
+        [
+          "巴本堡／哈布斯堡奥地利",
+          "约1150／1156—1804（宫廷迁驻与政权改制分列）",
+          [
+            "宋辽金西夏",
+            "元",
+            "明",
+            "清"
+          ]
+        ],
+        [
+          "奥地利帝国／奥匈帝国",
+          "1804—1918",
+          [
+            "清",
+            "近现代"
+          ]
+        ],
+        [
+          "奥地利共和国",
+          "1918—1938；1945年以来",
+          [
+            "近现代"
+          ]
+        ]
+      ],
+      "source": "https://www.wien.gv.at/en/education/history-of-vienna",
+      "note": "神圣罗马帝国没有统一固定首都；维也纳作为哈布斯堡主要宫廷所在地另述，不把帝国全史都归为维也纳国都。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 3,
+      "status": "已接入原始城墙段与实际构件；完整分期城界待核"
+    },
+    {
+      "key": "salzburg",
+      "name": "萨尔茨堡",
+      "country": "奥地利",
+      "identity": "萨尔茨堡采邑总主教国都城",
+      "classification": "capital",
+      "periods": [
+        [
+          "萨尔茨堡采邑总主教国",
+          "中世纪—1803（独立地位形成分期待核）",
+          [
+            "宋辽金西夏",
+            "元",
+            "明",
+            "清"
+          ]
+        ]
+      ],
+      "source": "https://www.salzburg.info/en/salzburg/city-of-churches",
+      "note": "主教宗教驻地与兼有世俗统治权的政权阶段分开理解。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 4,
+      "status": "已接入原始城墙段与实际构件；完整分期城界待核"
+    },
+    {
+      "key": "graz",
+      "name": "格拉茨",
+      "country": "奥地利",
+      "identity": "内奥地利哈布斯堡领地都城",
+      "classification": "capital",
+      "periods": [
+        [
+          "内奥地利哈布斯堡领地",
+          "1564—1619（此前驻跸阶段另述）",
+          [
+            "明"
+          ]
+        ]
+      ],
+      "source": "https://www.habsburger.net/en/chapter/graz-bulwark-faith",
+      "note": "不是现代奥地利共和国的首都；收录的是哈布斯堡分领内奥地利的政治中心。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 5,
+      "status": "已接入原始城墙段与实际构件；完整分期城界待核"
+    },
+    {
+      "key": "innsbruck",
+      "name": "因斯布鲁克",
+      "country": "奥地利",
+      "identity": "蒂罗尔伯爵领政府与宫廷所在地",
+      "classification": "royal-residence",
+      "periods": [
+        [
+          "蒂罗尔伯爵领／哈布斯堡宫廷",
+          "1420年起宫廷迁驻；并非固定帝国首都",
+          [
+            "明",
+            "清"
+          ]
+        ]
+      ],
+      "source": "https://www.innsbruck.info/en/sightseeing/history/history.html",
+      "note": "按政府与宫廷所在地表达；不因有霍夫堡便声称是神圣罗马帝国固定首都。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 2,
+      "status": "实际宫殿、城堡或寺庙组件已接入；完整分期城界待核"
+    },
+    {
+      "key": "wiener-neustadt",
+      "name": "维也纳新城",
+      "country": "奥地利",
+      "identity": "腓特烈三世主要驻跸城市",
+      "classification": "royal-residence",
+      "periods": [
+        [
+          "哈布斯堡皇室",
+          "约1440年起主要驻跸；并非固定帝国首都",
+          [
+            "明"
+          ]
+        ]
+      ],
+      "source": "https://www.milak.at/st-georgs-kathedrale/bistum-wiener-neustadt",
+      "note": "驻跸与统治活动不等同独立政权都城；采用普通古城图标。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 2,
+      "status": "已接入原始城墙段与实际构件；完整分期城界待核"
+    },
+    {
+      "key": "sambor-prei-kuk",
+      "name": "三波坡雷古／伊奢那补罗",
+      "country": "柬埔寨",
+      "identity": "真腊伊奢那补罗王都",
+      "classification": "capital",
+      "periods": [
+        [
+          "真腊（伊奢那补罗）",
+          "约6世纪末—7世纪（王都分期与寺庙延续不同）",
+          [
+            "隋唐"
+          ]
+        ]
+      ],
+      "source": "https://whc.unesco.org/en/list/1532/",
+      "note": "寺庙区在护城城市遗迹东侧；方形寺院围墙不能冒充全城。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 5,
+      "status": "已接入原始城墙段与实际构件；完整分期城界待核"
+    },
+    {
+      "key": "koh-ker",
+      "name": "贡开／凌伽补罗",
+      "country": "柬埔寨",
+      "identity": "高棉帝国贡开王都",
+      "classification": "capital",
+      "periods": [
+        [
+          "高棉帝国（贡开）",
+          "921—928竞争王都；928—944唯一都城",
+          [
+            "五代十国"
+          ]
+        ]
+      ],
+      "source": "https://whc.unesco.org/en/list/1667/",
+      "note": "寺庙圣区、拉哈尔水库与整座历史城市分别表达。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 3,
+      "status": "实际宫殿、城堡或寺庙组件已接入；完整分期城界待核"
+    },
+    {
+      "key": "angkor-borei",
+      "name": "吴哥波雷",
+      "country": "柬埔寨",
+      "identity": "扶南时期王都候选／重要政治中心",
+      "classification": "uncertain-capital",
+      "periods": [
+        [
+          "扶南",
+          "约1—6世纪（王都性质与分期存在学术讨论）",
+          [
+            "秦汉",
+            "魏晋南北朝"
+          ]
+        ]
+      ],
+      "source": "https://whc.unesco.org/en/tentativelists/6455",
+      "note": "柬埔寨预备名单提名称为扶南古都；其他研究保持可能性表述，按王都候选明确标注，非正式世界遗产。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 0,
+      "status": "历史身份已核；未取得可靠城墙／宫城矢量，完整分期城界待核"
+    },
+    {
+      "key": "longvek",
+      "name": "洛韦／隆维克",
+      "country": "柬埔寨",
+      "identity": "后吴哥时期柬埔寨王都",
+      "classification": "capital",
+      "periods": [
+        [
+          "柬埔寨王国（洛韦）",
+          "1528／1529—1594（建都口径有差异）",
+          [
+            "明"
+          ]
+        ]
+      ],
+      "source": "https://www.jstage.jst.go.jp/article/sea1971/1998/27/1998_27_48/_article/-char/en",
+      "note": "OSM古城研究标绘注明来源为Cambodian Archaeological Lidar Initiative；研究范围与实测墙体不同。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 2,
+      "status": "已接入原始闭合城郭／王城或明确标注的研究范围；其他分期城界待核"
+    },
+    {
+      "key": "oudong",
+      "name": "乌栋",
+      "country": "柬埔寨",
+      "identity": "柬埔寨乌栋王都",
+      "classification": "capital",
+      "periods": [
+        [
+          "柬埔寨王国（乌栋）",
+          "17世纪初—1866（1601／1618及迁都年份口径不同）",
+          [
+            "明",
+            "清"
+          ]
+        ]
+      ],
+      "source": "https://www.tourismcambodia.com/travelguides/provinces/kandal/what-to-see/157_.htm",
+      "note": "山丘王室墓塔与山下王都范围不同；不把墓塔山当作完整宫城。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 0,
+      "status": "历史身份已核；未取得可靠城墙／宫城矢量，完整分期城界待核"
+    },
+    {
+      "key": "phnom-penh",
+      "name": "金边",
+      "country": "柬埔寨",
+      "identity": "柬埔寨王国及后续国家首都",
+      "classification": "capital",
+      "periods": [
+        [
+          "柬埔寨（金边早期王都）",
+          "15世纪中叶短期王都（起讫口径待核）",
+          [
+            "明"
+          ]
+        ],
+        [
+          "柬埔寨（金边再定都）",
+          "1866年以来（不同政体另述）",
+          [
+            "清",
+            "近现代"
+          ]
+        ]
+      ],
+      "source": "https://www.tourismcambodia.org/provinces/44/phnom-penh-capital-city",
+      "note": "现存王宫主要为19世纪及后续建设，不倒推为15世纪完整王宫。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 5,
+      "status": "实际宫殿、城堡或寺庙组件已接入；完整分期城界待核"
+    },
+    {
+      "key": "yogyakarta",
+      "name": "日惹",
+      "country": "印度尼西亚",
+      "identity": "日惹苏丹国都城；印尼临时首都",
+      "classification": "capital",
+      "periods": [
+        [
+          "日惹苏丹国",
+          "1755年以来（1945年后为共和国特殊地区王室）",
+          [
+            "清",
+            "近现代"
+          ]
+        ],
+        [
+          "印度尼西亚共和国（临时首都）",
+          "1946—1949",
+          [
+            "近现代"
+          ]
+        ]
+      ],
+      "source": "https://kebudayaan.kemdikbud.go.id/bpcbyogyakarta/keraton-yogyakarta/",
+      "note": "王宫内层Cepuri与外层Baluwarti王城分别理解；行政区界不作为王城墙界。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 7,
+      "status": "已接入原始城墙段与实际构件；完整分期城界待核"
+    },
+    {
+      "key": "surakarta",
+      "name": "梭罗／苏拉卡尔塔",
+      "country": "印度尼西亚",
+      "identity": "苏拉卡尔塔苏南国都城",
+      "classification": "capital",
+      "periods": [
+        [
+          "马打蓝苏拉卡尔塔宫廷／苏南国",
+          "1745年迁驻；1755年分国后延续（当代礼仪阶段另述）",
+          [
+            "清",
+            "近现代"
+          ]
+        ]
+      ],
+      "source": "https://kebudayaan.kemdikbud.go.id/bpcbyogyakarta/keraton-yogyakarta/",
+      "note": "王城外墙Baluwarti和宫殿建筑分别表达，不用整个梭罗市行政范围代替城郭。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 4,
+      "status": "已接入原始闭合城郭／王城或明确标注的研究范围；其他分期城界待核"
+    },
+    {
+      "key": "kotagede",
+      "name": "科塔格德",
+      "country": "印度尼西亚",
+      "identity": "伊斯兰马打蓝早期都城",
+      "classification": "capital",
+      "periods": [
+        [
+          "伊斯兰马打蓝王国",
+          "16世纪末—17世纪初（迁往克尔塔口径另核）",
+          [
+            "明"
+          ]
+        ]
+      ],
+      "source": "https://www.kratonjogja.id/tata-rakiting/5-benteng-keraton-yogyakarta/",
+      "note": "古清真寺和王陵组件不等于王宮或完整马打蓝城界。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 1,
+      "status": "实际宫殿、城堡或寺庙组件已接入；完整分期城界待核"
+    },
+    {
+      "key": "trowulan",
+      "name": "特罗乌兰",
+      "country": "印度尼西亚",
+      "identity": "满者伯夷王都遗址",
+      "classification": "capital",
+      "periods": [
+        [
+          "满者伯夷",
+          "约13世纪末—15世纪末（末期王廷迁驻待核）",
+          [
+            "元",
+            "明"
+          ]
+        ]
+      ],
+      "source": "https://www.indonesia.travel/id/id/destination/java/east-java/kawasan-trowulan",
+      "note": "遗存城门、寺庙、居住区、水池和运河分别接入；完整历代全城界待核。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 6,
+      "status": "已接入原始闭合城郭／王城或明确标注的研究范围；其他分期城界待核"
+    },
+    {
+      "key": "palembang",
+      "name": "巨港",
+      "country": "印度尼西亚",
+      "identity": "室利佛逝政治中心及巨港苏丹国都城",
+      "classification": "capital",
+      "periods": [
+        [
+          "室利佛逝（巨港阶段）",
+          "约7—11世纪（与占碑等中心的迁移另核）",
+          [
+            "隋唐",
+            "五代十国",
+            "宋辽金西夏"
+          ]
+        ],
+        [
+          "巨港达鲁萨兰苏丹国",
+          "1659—1823",
+          [
+            "清"
+          ]
+        ]
+      ],
+      "source": "https://www.indonesia.travel/id/id/travel-ideas/adventure/palembang",
+      "note": "库托贝萨克为晚期苏丹国王城遗存，不作为室利佛逝7世纪城界。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 1,
+      "status": "已接入原始城墙段与实际构件；完整分期城界待核"
+    },
+    {
+      "key": "banten",
+      "name": "万丹旧城",
+      "country": "印度尼西亚",
+      "identity": "万丹苏丹国都城",
+      "classification": "capital",
+      "periods": [
+        [
+          "万丹苏丹国",
+          "16世纪—1813（成立年份1526／1552口径分开理解）",
+          [
+            "明",
+            "清"
+          ]
+        ]
+      ],
+      "source": "https://kebudayaan.kemdikbud.go.id/bpcbbanten/sejarah-dan-kebudayaan-banten-bagian-2/",
+      "note": "苏罗索万王宫城、凯邦宫及斯皮尔韦克殖民堡垒分别表达。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 3,
+      "status": "实际宫殿、城堡或寺庙组件已接入；完整分期城界待核"
+    },
+    {
+      "key": "cirebon",
+      "name": "井里汶",
+      "country": "印度尼西亚",
+      "identity": "井里汶苏丹国及分立王廷中心",
+      "classification": "capital",
+      "periods": [
+        [
+          "井里汶苏丹国及卡塞普汉／卡诺曼等王廷",
+          "15世纪后期起（1677分廷及殖民从属阶段另述）",
+          [
+            "明",
+            "清",
+            "近现代"
+          ]
+        ]
+      ],
+      "source": "https://kebudayaan.kemdikbud.go.id/bpnbjabar/lawatan-sejarah-daerah-2014/",
+      "note": "现状宫殿建筑轮廓不代表整座井里汶古城；分立王廷共用城市根点。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 2,
+      "status": "实际宫殿、城堡或寺庙组件已接入；完整分期城界待核"
+    },
+    {
+      "key": "banda-aceh",
+      "name": "班达亚齐",
+      "country": "印度尼西亚",
+      "identity": "亚齐达鲁萨兰苏丹国都城",
+      "classification": "capital",
+      "periods": [
+        [
+          "亚齐达鲁萨兰苏丹国",
+          "16世纪初—20世纪初（战争与最终从属分期另核）",
+          [
+            "明",
+            "清",
+            "近现代"
+          ]
+        ]
+      ],
+      "source": "https://kesbangpol.bandaacehkota.go.id/2022/04/22/sejarah-kota-banda-aceh/",
+      "note": "古农安与宾托科普为王家园林遗存，不把公园边界称为全城。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 2,
+      "status": "实际宫殿、城堡或寺庙组件已接入；完整分期城界待核"
+    },
+    {
+      "key": "ternate",
+      "name": "特尔纳特",
+      "country": "印度尼西亚",
+      "identity": "特尔纳特苏丹国王都",
+      "classification": "capital",
+      "periods": [
+        [
+          "特尔纳特苏丹国",
+          "15世纪以来（前伊斯兰、殖民及当代礼仪阶段分别理解）",
+          [
+            "明",
+            "清",
+            "近现代"
+          ]
+        ]
+      ],
+      "source": "https://www.indonesia.travel/id/id/destination/maluku-papua/north-maluku/ternate-and-tidore---memorial-museum-of-the-sultanate-of-ternate",
+      "note": "托卢科和奥兰治堡等外国势力城堡不能自动当作苏丹宫城；现存王宫1813年建。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 2,
+      "status": "已接入原始城墙段与实际构件；完整分期城界待核"
+    },
+    {
+      "key": "tidore",
+      "name": "蒂多雷",
+      "country": "印度尼西亚",
+      "identity": "蒂多雷苏丹国王都",
+      "classification": "capital",
+      "periods": [
+        [
+          "蒂多雷苏丹国",
+          "15世纪以来（自主统治、殖民从属与礼仪阶段另述）",
+          [
+            "明",
+            "清",
+            "近现代"
+          ]
+        ]
+      ],
+      "source": "https://www.indonesia.travel/ru/ru/news-update/tidore-festival-2017-preserving-tidore-island-s-precious-historic-maritime-heritage",
+      "note": "托雷堡为殖民时期堡垒构件，不称其为整个蒂多雷王城。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 1,
+      "status": "实际宫殿、城堡或寺庙组件已接入；完整分期城界待核"
+    },
+    {
+      "key": "gowa",
+      "name": "戈瓦／松巴奥普",
+      "country": "印度尼西亚",
+      "identity": "戈瓦—塔洛松巴奥普王都",
+      "classification": "capital",
+      "periods": [
+        [
+          "戈瓦—塔洛（松巴奥普阶段）",
+          "1510—1669（1667条约与1669毁城分开）",
+          [
+            "明",
+            "清"
+          ]
+        ]
+      ],
+      "source": "https://disbudpar.sulselprov.go.id/index.php/page/budaya/180/benteng-somba-opu",
+      "note": "原始墙段、堡垒遗址现状标绘与全王都范围不同；现代民族建筑展示园不能代替古宫殿。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 3,
+      "status": "已接入原始闭合城郭／王城或明确标注的研究范围；其他分期城界待核"
+    },
+    {
+      "key": "pagaruyung",
+      "name": "帕加鲁永",
+      "country": "印度尼西亚",
+      "identity": "米南加保帕加鲁永王国中心",
+      "classification": "capital",
+      "periods": [
+        [
+          "帕加鲁永王国",
+          "约14—19世纪（政治中心沿革和结束年份另核）",
+          [
+            "元",
+            "明",
+            "清"
+          ]
+        ]
+      ],
+      "source": "https://museum.kemenbud.go.id/museum/profile/istano%2Bbasa%2Bpagaruyung",
+      "note": "现存大宫是异址重建展示建筑；原宫在Bukit Batu Patah，现状轮廓不作为古代宫城界。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 1,
+      "status": "实际宫殿、城堡或寺庙组件已接入；完整分期城界待核"
+    },
+    {
+      "key": "jakarta",
+      "name": "雅加达",
+      "country": "印度尼西亚",
+      "identity": "印度尼西亚首都；此前巴达维亚殖民政府所在地",
+      "classification": "capital",
+      "periods": [
+        [
+          "印度尼西亚共和国（雅加达）",
+          "1945—1946；1949／1950后恢复（迁都依法定实施另述）",
+          [
+            "近现代"
+          ]
+        ]
+      ],
+      "source": "https://jakarta.go.id/index.php/sejarah-jakarta",
+      "note": "巴达维亚为殖民政府所在地，不能把其1619年建城等同独立国家建都。努山塔拉2028政治首都目标不倒填为已实现。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 1,
+      "status": "实际宫殿、城堡或寺庙组件已接入；完整分期城界待核"
+    },
+    {
+      "key": "melaka",
+      "name": "马六甲古城",
+      "country": "马来西亚",
+      "identity": "马六甲苏丹国都城",
+      "classification": "capital",
+      "periods": [
+        [
+          "马六甲苏丹国",
+          "约1400—1511",
+          [
+            "明"
+          ]
+        ]
+      ],
+      "source": "https://whc.unesco.org/en/list/1223/",
+      "note": "圣地亚哥门和堡垒残存建筑为1511年后葡萄牙、荷兰阶段，不能倒推为苏丹国城界。马六甲与乔治市遗产共有编号，不将原乔治市世界遗产根点搬来马六甲。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 6,
+      "status": "圣地亚哥门和堡垒残存建筑为1511年后葡萄牙、荷兰阶段，不能倒推为苏丹国城界。马六甲与乔治市遗产共有编号，不将原乔治市世界遗产根点搬来马六甲。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。"
+    },
+    {
+      "key": "johor-lama",
+      "name": "柔佛旧都",
+      "country": "马来西亚",
+      "identity": "柔佛苏丹国分期王都",
+      "classification": "capital",
+      "periods": [
+        [
+          "柔佛苏丹国（柔佛旧都）",
+          "1540—1564；1574—1587",
+          [
+            "明"
+          ]
+        ]
+      ],
+      "source": "https://www.jmm.gov.my/en/kota-johor-lama-historical-complex",
+      "note": "依据博物馆局分列两段建都，1587毁城；17世纪尝试重建及短期驻留不自动认作连续都城。旧堡轮廓未取得可靠矢量。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 0,
+      "status": "历史身份已核；未取得可靠城墙／宫城矢量，完整分期城界待核"
+    },
+    {
+      "key": "pekan",
+      "name": "北根",
+      "country": "马来西亚",
+      "identity": "彭亨苏丹王室治所",
+      "classification": "royal-residence",
+      "periods": [
+        [
+          "彭亨苏丹王室",
+          "19世纪以来王室治所（完整行政都城分期待核）",
+          [
+            "清",
+            "近现代"
+          ]
+        ]
+      ],
+      "source": "https://ebrochures.malaysia.travel/en/malaysia-travel-guide/pahang/",
+      "note": "王室治所与现代行政首府关丹不同；目前按普通王室历史城市收录。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 1,
+      "status": "实际宫殿、城堡或寺庙组件已接入；完整分期城界待核"
+    },
+    {
+      "key": "kuala-kangsar",
+      "name": "江沙",
+      "country": "马来西亚",
+      "identity": "霹雳苏丹王室治所",
+      "classification": "royal-residence",
+      "periods": [
+        [
+          "霹雳苏丹王室",
+          "19世纪以来（王室治所与行政首府怡保不同）",
+          [
+            "清",
+            "近现代"
+          ]
+        ]
+      ],
+      "source": "https://ptg.perak.gov.my/portal/web/kuala-kangsar/sejarah-daerah?inheritRedirect=true",
+      "note": "按王室治所明确收录，不能把现代州行政首府都称作江沙。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 2,
+      "status": "实际宫殿、城堡或寺庙组件已接入；完整分期城界待核"
+    },
+    {
+      "key": "alor-setar",
+      "name": "亚罗士打",
+      "country": "马来西亚",
+      "identity": "吉打苏丹国政治中心",
+      "classification": "capital",
+      "periods": [
+        [
+          "吉打苏丹国（亚罗士打）",
+          "1735年以来（1909从属及当代州政府阶段另述）",
+          [
+            "清",
+            "近现代"
+          ]
+        ]
+      ],
+      "source": "https://pbt.kedah.gov.my/index.php/info-alor-setar-mbas/",
+      "note": "吉打河口城堡是亚罗士打外围防御堡垒，不是亚罗士打整城，也不新增王都根点。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 3,
+      "status": "实际宫殿、城堡或寺庙组件已接入；完整分期城界待核"
+    },
+    {
+      "key": "kota-bharu",
+      "name": "哥打巴鲁",
+      "country": "马来西亚",
+      "identity": "吉兰丹苏丹国政治中心",
+      "classification": "capital",
+      "periods": [
+        [
+          "吉兰丹苏丹国（哥打巴鲁）",
+          "1844年以来（当代州和王室身份另述）",
+          [
+            "清",
+            "近现代"
+          ]
+        ]
+      ],
+      "source": "https://ipim.jmm.gov.my/sites/default/files/file1p1m/Buku%20Teks%20Sejarah%20Tingkatan%202.pdf",
+      "note": "大议事宫兼王室和政务功能，不能把其单座建筑轮廓叫作哥打巴鲁全城。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 2,
+      "status": "实际宫殿、城堡或寺庙组件已接入；完整分期城界待核"
+    },
+    {
+      "key": "kuala-terengganu",
+      "name": "瓜拉登嘉楼",
+      "country": "马来西亚",
+      "identity": "登嘉楼苏丹国政治中心",
+      "classification": "capital",
+      "periods": [
+        [
+          "登嘉楼苏丹国",
+          "18世纪起（都城确切起年和迁驻分期待核）",
+          [
+            "清",
+            "近现代"
+          ]
+        ]
+      ],
+      "source": "https://mbkt.gov.my/ms/pelawat/destinasi-menarik/istana-maziah",
+      "note": "玛兹雅宫现状建筑与武吉布特里防御山丘不同；完整环城边界待核。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 1,
+      "status": "实际宫殿、城堡或寺庙组件已接入；完整分期城界待核"
+    },
+    {
+      "key": "seri-menanti",
+      "name": "神安池",
+      "country": "马来西亚",
+      "identity": "森美兰王国王都",
+      "classification": "capital",
+      "periods": [
+        [
+          "森美兰王国",
+          "1773年以来（当代王室治所与行政首府芙蓉不同）",
+          [
+            "清",
+            "近现代"
+          ]
+        ]
+      ],
+      "source": "https://ipim.jmm.gov.my/sites/default/files/file1p1m/Buku%20Teks%20Sejarah%20Tingkatan%202.pdf",
+      "note": "旧王宫现状建筑，不作为整座18世纪王都界。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 1,
+      "status": "实际宫殿、城堡或寺庙组件已接入；完整分期城界待核"
+    },
+    {
+      "key": "kuala-lumpur",
+      "name": "吉隆坡",
+      "country": "马来西亚",
+      "identity": "马来亚联邦及马来西亚首都",
+      "classification": "capital",
+      "periods": [
+        [
+          "马来亚联邦／马来西亚",
+          "1957独立后；1963马来西亚成立后延续",
+          [
+            "近现代"
+          ]
+        ]
+      ],
+      "source": "https://www.dbkl.gov.my/latar-belakang",
+      "note": "1896殖民保护体制的联邦行政中心与1957独立国家首都不同；布城为联邦行政中心，不另当作历史国家首都。没有证据绘制环城墙。完整分期城郭及尚未定位的宫城墙界待核；建筑、寺庙围区和现代保护区不代替全城。",
+      "geometryCount": 1,
+      "status": "实际宫殿、城堡或寺庙组件已接入；完整分期城界待核"
+    },
+    {
+      "key": "angkor",
+      "name": "吴哥城",
+      "country": "柬埔寨",
+      "identity": "高棉帝国都城",
+      "classification": "capital",
+      "periods": [
+        [
+          "高棉帝国（吴哥地区）",
+          "约9—15世纪；吴哥城主体12世纪末形成；贡开时期迁都另列",
+          [
+            "隋唐",
+            "五代十国",
+            "宋辽金西夏",
+            "元",
+            "明"
+          ]
+        ]
+      ],
+      "source": "https://whc.unesco.org/en/list/668/",
+      "note": "完整保留原吴哥图层147项几何、孔洞、EFEO参考围界和各自来源；吴哥寺世界遗产锚点坐标、标识与打卡身份保持。周边早期王廷遗址分址，不把整片遗产保护区视为全城。",
+      "geometryCount": 144,
+      "status": "已接入原始闭合城郭／王城或明确标注的研究范围；其他分期城界待核"
+    },
+    {
+      "key": "roluos",
+      "name": "罗洛士／诃利诃罗补罗",
+      "country": "柬埔寨",
+      "identity": "早期高棉帝国都城",
+      "classification": "capital",
+      "periods": [
+        [
+          "高棉帝国（诃利诃罗补罗）",
+          "约9世纪—9世纪末迁往耶输陀罗补罗",
+          [
+            "隋唐"
+          ]
+        ]
+      ],
+      "source": "https://apsaraauthority.gov.kh/2021/08/09/phnom-bakheng/",
+      "note": "罗洛士是诃利诃罗补罗旧都，与后来的吴哥城分址。复用既有神牛寺、巴孔寺、罗洛寺原始几何，不把寺庙围区或整个遗产范围当作完整城郭。",
+      "geometryCount": 3,
+      "status": "实际宫殿、城堡或寺庙组件已接入；完整分期城界待核"
+    }
+  ],
+  "geometryReview": {
+    "addedGeometry": 223,
+    "migratedAngkor": 147,
+    "newGeometry": 76,
+    "newWallWays": 78,
+    "errors": [],
+    "bySite": {
+      "vienna": 3,
+      "salzburg": 4,
+      "graz": 5,
+      "innsbruck": 2,
+      "wiener-neustadt": 2,
+      "sambor-prei-kuk": 5,
+      "koh-ker": 3,
+      "angkor-borei": 0,
+      "longvek": 2,
+      "oudong": 0,
+      "phnom-penh": 5,
+      "yogyakarta": 7,
+      "surakarta": 4,
+      "kotagede": 1,
+      "trowulan": 6,
+      "palembang": 1,
+      "banten": 3,
+      "cirebon": 2,
+      "banda-aceh": 2,
+      "ternate": 2,
+      "tidore": 1,
+      "gowa": 3,
+      "pagaruyung": 1,
+      "jakarta": 1,
+      "melaka": 0,
+      "johor-lama": 0,
+      "pekan": 1,
+      "kuala-kangsar": 2,
+      "alor-setar": 3,
+      "kota-bharu": 2,
+      "kuala-terengganu": 1,
+      "seri-menanti": 1,
+      "kuala-lumpur": 1,
+      "angkor": 144,
+      "roluos": 3
+    },
+    "geometryTypes": {
+      "Polygon": 172,
+      "MultiPolygon": 7,
+      "MultiLineString": 9,
+      "LineString": 35
+    }
+  },
+  "validation": {
+    "regressionFailures": 0,
+    "syntaxChecksPassed": true,
+    "diffCheckPassed": true,
+    "originalCapitalRootsAndRecordsDeepComparison": true,
+    "worldHeritageDeepComparison": true,
+    "originalGeometryDeepComparison": 2111,
+    "geometryValidity": {
+      "originalGeometryPreserved": 2111,
+      "newGeometryValid": 76,
+      "labelAnchorsImproved": 67,
+      "errors": []
+    },
+    "browser": {
+      "results": [
+        {
+          "key": "vienna",
+          "details": 3,
+          "legacyLayers": 0
+        },
+        {
+          "key": "salzburg",
+          "details": 4,
+          "legacyLayers": 0
+        },
+        {
+          "key": "angkor",
+          "details": 144,
+          "legacyLayers": 0
+        },
+        {
+          "key": "longvek",
+          "details": 2,
+          "legacyLayers": 0
+        },
+        {
+          "key": "phnom-penh",
+          "details": 5,
+          "legacyLayers": 0
+        },
+        {
+          "key": "surakarta",
+          "details": 4,
+          "legacyLayers": 0
+        },
+        {
+          "key": "yogyakarta",
+          "details": 7,
+          "legacyLayers": 0
+        },
+        {
+          "key": "banten",
+          "details": 3,
+          "legacyLayers": 0
+        },
+        {
+          "key": "alor-setar",
+          "details": 3,
+          "legacyLayers": 0
+        },
+        {
+          "key": "seri-menanti",
+          "details": 1,
+          "legacyLayers": 0
+        },
+        {
+          "angkorCityYuanFallback": "元"
+        },
+        {
+          "allDynastiesOffDetails": 2334,
+          "ordinaryIcons": 18
+        },
+        {
+          "wallsOffDetails": 0
+        },
+        {
+          "zoom": 5,
+          "rootNameMinZoom": [
+            {
+              "id": "ancient-capital-wall-root-labels",
+              "minzoom": 7
+            },
+            {
+              "id": "ancient-capital-wall-detail-labels",
+              "minzoom": 12
+            },
+            {
+              "id": "ancient-capital-wall-ward-labels",
+              "minzoom": 12
+            },
+            {
+              "id": "ancient-capital-wall-city-labels",
+              "minzoom": 12
+            }
+          ]
+        },
+        {
+          "zoom": 11,
+          "rootNameMinZoom": [
+            {
+              "id": "ancient-capital-wall-root-labels",
+              "minzoom": 7
+            },
+            {
+              "id": "ancient-capital-wall-detail-labels",
+              "minzoom": 12
+            },
+            {
+              "id": "ancient-capital-wall-ward-labels",
+              "minzoom": 12
+            },
+            {
+              "id": "ancient-capital-wall-city-labels",
+              "minzoom": 12
+            }
+          ]
+        },
+        {
+          "zoom": 12,
+          "rootNameMinZoom": [
+            {
+              "id": "ancient-capital-wall-root-labels",
+              "minzoom": 7
+            },
+            {
+              "id": "ancient-capital-wall-detail-labels",
+              "minzoom": 12
+            },
+            {
+              "id": "ancient-capital-wall-ward-labels",
+              "minzoom": 12
+            },
+            {
+              "id": "ancient-capital-wall-city-labels",
+              "minzoom": 12
+            }
+          ]
+        },
+        {
+          "zoom": 15,
+          "rootNameMinZoom": [
+            {
+              "id": "ancient-capital-wall-root-labels",
+              "minzoom": 7
+            },
+            {
+              "id": "ancient-capital-wall-detail-labels",
+              "minzoom": 12
+            },
+            {
+              "id": "ancient-capital-wall-ward-labels",
+              "minzoom": 12
+            },
+            {
+              "id": "ancient-capital-wall-city-labels",
+              "minzoom": 12
+            }
+          ]
+        },
+        {
+          "zoom": 17,
+          "rootNameMinZoom": [
+            {
+              "id": "ancient-capital-wall-root-labels",
+              "minzoom": 7
+            },
+            {
+              "id": "ancient-capital-wall-detail-labels",
+              "minzoom": 12
+            },
+            {
+              "id": "ancient-capital-wall-ward-labels",
+              "minzoom": 12
+            },
+            {
+              "id": "ancient-capital-wall-city-labels",
+              "minzoom": 12
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    "visualReview": [
+      "angkor",
+      "surakarta",
+      "alor-setar",
+      "salzburg"
+    ],
+    "visualLimitation": "部分在线底图瓦片未完整加载；覆盖层填充、墙线和标签已核验。",
+    "screenshotDirectory": "output/acim-capitals",
+    "heritageOwnershipAliasTestsPassed": true,
+    "globalSourceCreditsRetainedInBothRenderers": true,
+    "finalResourceVersions": {
+      "app": 988,
+      "classicalSites": 68,
+      "classicalData": 53,
+      "capitalData": 79,
+      "serviceWorker": 1188,
+      "published": "2.3.1"
+    }
+  },
+  "pending": {
+    "cityBoundaries": [
+      "维也纳完整各期城郭和Linienwall",
+      "萨尔茨堡历期完整两岸城郭",
+      "伊奢那补罗西侧城市区完整城界（现有为寺院围墙）",
+      "吴哥波雷扶南时期分期城郭",
+      "乌栋山下王都与宫城",
+      "柔佛旧都两段王都和旧堡完整墙界",
+      "日惹外层Baluwarti缺失墙段及内外墙完整分期",
+      "特罗乌兰完整满者伯夷全城及宮城",
+      "亚齐、特尔纳特和蒂多雷各期宫城"
+    ],
+    "otherPoliticalCentres": [
+      "吉打官方列出的亚罗士打之前七个治所：需分别核地望和城防",
+      "印尼克尔塔、普莱雷德、卡尔塔苏拉等马打蓝迁都城址：需独立核证几何",
+      "印尼占碑、谏义里、信诃沙里、古戴及巴厘诸王都：后续逐城审核",
+      "柬埔寨荔枝山等早期王都候选：需核政治身份及实际城界"
+    ]
+  }
+}

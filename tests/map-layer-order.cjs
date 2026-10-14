@@ -7,6 +7,9 @@ const before=(a,b)=>assert(layers.findIndex(x=>x.id===a)<layers.findIndex(x=>x.i
 layers.push({id:'geology',type:'raster'},{id:'geology-overview',type:'fill'});
 ctx.bringMapLibrePointLayersToFront();before('basemap','population-density');before('population-density','geology-overview');before('geology-overview','geology');before('geology','visited-subadmin-fill');before('population-density','visited-subadmin-fill');before('admin-country-context-fill','visited-subadmin-fill');before('visited-subadmin-fill','arcgis-water-area');before('arcgis-water-area','arcgis-water-line');before('arcgis-water-line','orm-track');before('orm-track','imported-shapes-path-line');
 for(const id of ['imperial-tomb-point','imperial-tomb-label','ancient-capital-point','ancient-capital-label','great-wall-point','great-wall-label'])before('imported-shapes-path-line',id);
+for(const id of ['angkor-capital-label','angkor-labels','pompeii-labels','classical-sites-labels'])layers.push({id,type:'symbol'});
+layers.push({id:'country-borders-line',type:'line'});ctx.bringMapLibrePointLayersToFront();
+for(const id of ['angkor-capital-label','angkor-labels','pompeii-labels','classical-sites-labels'])before('country-borders-line',id);
 const firstMoves=moves;ctx.bringMapLibrePointLayersToFront();assert.equal(moves,firstMoves,'unchanged ordering must not trigger moves');
 layers.push({id:'map-points-circle',type:'circle'},{id:'map-points-label',type:'symbol'});ctx.bringMapLibrePointLayersToFront();
 for(const id of ['imperial-tomb-point','ancient-capital-point','great-wall-point'])before('map-points-label',id);

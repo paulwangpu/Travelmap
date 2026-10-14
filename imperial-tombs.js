@@ -152,7 +152,7 @@
     const members=visitMembers(catalog,x);
     const action=item=>`<button class="popup-action" aria-pressed="${Boolean(isVisited(item))}" data-checklist-map="imperialTombs" data-item="${esc(item.name)}" type="button">${isVisited(item)?(en()?'Visited':'已去过'):(en()?'Mark visited':'标记去过')}</button>`;
     const body=members.length===1&&members[0].id===x.id?`<div class="tomb-popup-single">${action(x)}</div>`:`<div class="tomb-popup-list">${members.sort(compareChecklistItems).map(item=>`<div class="tomb-popup-row"><span>${esc(item.mapLabel||item.name)}</span>${action(item)}</div>`).join('')}</div>`;
-    return `<div class="tomb-popup"><strong>${esc(x.mapLabel||x.name)}</strong><p class="tomb-popup-location">${esc(x.admin)}</p>${body}</div>`;
+    return `<div class="tomb-popup"><strong>${esc(x.mapLabel||x.name)}</strong><p class="tomb-popup-location">${esc(x.admin)}</p>${body}${x.id==='qin-first'?'<p>世界遗产 · 秦始皇陵及兵马俑</p><button type="button" class="popup-action" data-checklist-map="worldHeritage" data-item="秦始皇陵及兵马俑">世界遗产打卡</button>':''}</div>`;
   }
   function showPopup(map,x) {
     removePopups();

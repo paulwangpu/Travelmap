@@ -1,0 +1,43 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const vm=require('node:vm');
+const capitals=require('../data/china-ancient-capitals.json');
+const catalog=require('../data/classical-sites/catalog.json');
+const details=JSON.parse(fs.readFileSync('data/classical-sites/sites.geojson','utf8'));
+const HistoricalPeriods=require('../historical-periods.js');
+
+const root=capitals.items.find(x=>x.siteKey==='ancient-site:world-ankara');
+assert(root,'Ankara capital root is missing');
+assert.deepEqual([root.lng,root.lat],[32.86543,39.94149]);
+assert.equal(root.recordCount,2);
+assert.deepEqual(root.records.map(x=>x['时代']),['周','近现代']);
+assert.match(root.hoverIdentity,/加拉太古都.*土耳其共和国首都/);
+assert.equal(root.mapReferencePeriod,'近现代');
+assert.match(root.coordinatePrecision,/不表示.*城界/);
+assert.match(root.boundaryAudit.status,/未形成完整城郭面/);
+assert.equal(root.boundaryRelations.length,8);
+assert(!root.heritageId,'Tentative List entry must not be treated as inscribed World Heritage');
+
+const site=catalog.sites.find(x=>x.key==='ankara');
+assert(site?.tentative);
+assert.equal(site.capitalSiteKey,root.siteKey);
+assert.deepEqual(site.capitalPeriods,['周','近现代']);
+const features=details.features.filter(x=>x.properties.siteKey==='ankara');
+assert.equal(features.length,10);
+assert.equal(features.filter(x=>x.properties.role==='wall').length,7);
+assert.equal(features.filter(x=>x.properties.role==='wall'&&x.geometry.type==='LineString'&&!x.properties.originalClosed).length,6);
+assert(features.filter(x=>x.properties.role==='wall').every(x=>x.properties.sourceUrl.includes('openstreetmap.org/way/')));
+assert(features.filter(x=>x.properties.role==='wall').every(x=>/开放线保持开放|原始OSM/.test(x.properties.note)));
+assert(features.some(x=>x.properties.id==='ankara-akkale-way-874846724'&&x.geometry.type==='Polygon'));
+assert(features.some(x=>x.properties.id==='ankara-castle-node-3058034430'&&x.properties.sourceUrl.endsWith('/3058034430')));
+assert(features.every(x=>/不是|不表示|不等于|不作为|不据此/.test(x.properties.note)));
+assert(features.every(x=>!/中国对应朝代|年代对应中国朝代/.test(x.properties.periodLabel||'')));
+
+const app=fs.readFileSync(require.resolve('../app.js'),'utf8');
+const start=app.indexOf('function foreignCapitalHoverMeta('),end=app.indexOf('\nfunction ensureHistoricalCheckinCatalogs(',start);
+const context={HistoricalPeriods,state:{mapOverlays:{ancientCapitalPeriods:{}}}};
+vm.createContext(context);vm.runInContext(app.slice(start,end),context);
+const hover=context.foreignCapitalHoverMeta(root);
+assert.equal(hover.identity,'加拉太古都／土耳其共和国首都');
+assert.equal(hover.period,'近现代');
+console.log('PASS: Ankara ancient and modern capital identities, official reference point and non-inferred boundary scope');

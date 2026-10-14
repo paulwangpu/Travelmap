@@ -1,0 +1,1004 @@
+{
+  "sites": [
+    "coloa",
+    "thanglong",
+    "ho-citadel",
+    "hue"
+  ],
+  "addedClassical": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "coloa-way-776437155",
+        "siteKey": "coloa",
+        "siteName": "古螺城",
+        "siteEnName": "Co Loa",
+        "name": "古螺核心祭祀景区（现状范围）",
+        "enName": "古螺核心祭祀景区（现状范围）",
+        "originalName": "",
+        "role": "area",
+        "period": "清",
+        "periodLabel": "越南历史遗存与现状标绘",
+        "heritageId": "",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/776437155",
+        "referenceUrl": "https://thanhcoloa.vn/gioi-thieu",
+        "note": "保留原始OSM几何；这是后世祭祀建筑或核心景区，不是古代王宫或内城完整墙界。古螺三重城郭另作参考标绘；不能将寺庙外框当成全城。年代颜色表示后世现存建筑关联，非瓯雒时期原始建筑。",
+        "label": true,
+        "boundaryLabel": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8737461,
+              21.1133827
+            ],
+            [
+              105.8735652,
+              21.1133912
+            ],
+            [
+              105.8733438,
+              21.1133977
+            ],
+            [
+              105.8733063,
+              21.1136354
+            ],
+            [
+              105.8733002,
+              21.1144555
+            ],
+            [
+              105.8736616,
+              21.1145137
+            ],
+            [
+              105.8737193,
+              21.1143248
+            ],
+            [
+              105.8737387,
+              21.1142071
+            ],
+            [
+              105.8737691,
+              21.1138095
+            ],
+            [
+              105.8737589,
+              21.1136254
+            ],
+            [
+              105.8737461,
+              21.1133827
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "coloa-way-776437158",
+        "siteKey": "coloa",
+        "siteName": "古螺城",
+        "siteEnName": "Co Loa",
+        "name": "古螺亭（御朝遗规亭，现状）",
+        "enName": "古螺亭（御朝遗规亭，现状）",
+        "originalName": "",
+        "role": "public",
+        "period": "清",
+        "periodLabel": "越南历史遗存与现状标绘",
+        "heritageId": "",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/776437158",
+        "referenceUrl": "https://thanhcoloa.vn/gioi-thieu",
+        "note": "保留原始OSM几何；这是后世祭祀建筑或核心景区，不是古代王宫或内城完整墙界。古螺三重城郭另作参考标绘；不能将寺庙外框当成全城。年代颜色表示后世现存建筑关联，非瓯雒时期原始建筑。",
+        "label": true,
+        "boundaryLabel": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8733844,
+              21.1136436
+            ],
+            [
+              105.8733946,
+              21.1138276
+            ],
+            [
+              105.87351,
+              21.113822
+            ],
+            [
+              105.8735143,
+              21.1138991
+            ],
+            [
+              105.8736525,
+              21.1138924
+            ],
+            [
+              105.8736482,
+              21.1138153
+            ],
+            [
+              105.8737691,
+              21.1138095
+            ],
+            [
+              105.8737589,
+              21.1136254
+            ],
+            [
+              105.8733844,
+              21.1136436
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "coloa-way-776437157",
+        "siteKey": "coloa",
+        "siteName": "古螺城",
+        "siteEnName": "Co Loa",
+        "name": "宝山寺（古螺寺，现状）",
+        "enName": "宝山寺（古螺寺，现状）",
+        "originalName": "",
+        "role": "temple",
+        "period": "清",
+        "periodLabel": "越南历史遗存与现状标绘",
+        "heritageId": "",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/776437157",
+        "referenceUrl": "https://thanhcoloa.vn/gioi-thieu",
+        "note": "保留原始OSM几何；这是后世祭祀建筑或核心景区，不是古代王宫或内城完整墙界。古螺三重城郭另作参考标绘；不能将寺庙外框当成全城。年代颜色表示后世现存建筑关联，非瓯雒时期原始建筑。",
+        "label": true,
+        "boundaryLabel": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.873443,
+              21.1141246
+            ],
+            [
+              105.8735904,
+              21.1141211
+            ],
+            [
+              105.8735845,
+              21.1139057
+            ],
+            [
+              105.8734372,
+              21.1139092
+            ],
+            [
+              105.873443,
+              21.1141246
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ho-citadel-way-242169982",
+        "siteKey": "ho-citadel",
+        "siteName": "胡朝城（西都）",
+        "siteEnName": "Citadel of the Ho Dynasty",
+        "name": "胡朝城内城（石城现状范围）",
+        "enName": "胡朝城内城（石城现状范围）",
+        "originalName": "",
+        "role": "area",
+        "period": "明",
+        "periodLabel": "越南历史遗存与现状标绘",
+        "heritageId": "whc-1358",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/242169982",
+        "referenceUrl": "https://whc.unesco.org/en/list/1358/",
+        "note": "保留原始OSM节点和闭合性，结合UNESCO资料识别现存内城及城门。内城始建于1397年，晚陈朝迁都与胡朝时期分别列入古都记录。石城内包含昔日宫殿与官署，但本范围不是单独宫殿围墙，也不是包括罗城外郭的整个城市。现状修复不代表全为1397年原物；保护区、内城、外郭和南郊坛分别理解。",
+        "label": true,
+        "boundaryLabel": true,
+        "labelName": "胡朝内城\n（现状石城）"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.6023486,
+              20.0813629
+            ],
+            [
+              105.6058986,
+              20.0833935
+            ],
+            [
+              105.608082,
+              20.0799767
+            ],
+            [
+              105.6101563,
+              20.0766251
+            ],
+            [
+              105.6030704,
+              20.0726363
+            ],
+            [
+              105.6009041,
+              20.0759262
+            ],
+            [
+              105.5987364,
+              20.0793209
+            ],
+            [
+              105.6023486,
+              20.0813629
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ho-citadel-way-641694093",
+        "siteKey": "ho-citadel",
+        "siteName": "胡朝城（西都）",
+        "siteEnName": "Citadel of the Ho Dynasty",
+        "name": "胡朝城南门",
+        "enName": "胡朝城南门",
+        "originalName": "",
+        "role": "gate",
+        "period": "明",
+        "periodLabel": "越南历史遗存与现状标绘",
+        "heritageId": "whc-1358",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/641694093",
+        "referenceUrl": "https://whc.unesco.org/en/list/1358/",
+        "note": "保留原始OSM节点和闭合性，结合UNESCO资料识别现存内城及城门。内城始建于1397年，晚陈朝迁都与胡朝时期分别列入古都记录。石城内包含昔日宫殿与官署，但本范围不是单独宫殿围墙，也不是包括罗城外郭的整个城市。现状修复不代表全为1397年原物；保护区、内城、外郭和南郊坛分别理解。",
+        "label": true,
+        "boundaryLabel": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.6064654,
+              20.0745661
+            ],
+            [
+              105.6065407,
+              20.0744509
+            ],
+            [
+              105.6066715,
+              20.0745263
+            ],
+            [
+              105.6068095,
+              20.0746058
+            ],
+            [
+              105.6067343,
+              20.074721
+            ],
+            [
+              105.6065988,
+              20.074643
+            ],
+            [
+              105.6064654,
+              20.0745661
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ho-citadel-way-641694094",
+        "siteKey": "ho-citadel",
+        "siteName": "胡朝城（西都）",
+        "siteEnName": "Citadel of the Ho Dynasty",
+        "name": "胡朝城东门",
+        "enName": "胡朝城东门",
+        "originalName": "",
+        "role": "gate",
+        "period": "明",
+        "periodLabel": "越南历史遗存与现状标绘",
+        "heritageId": "whc-1358",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/641694094",
+        "referenceUrl": "https://whc.unesco.org/en/list/1358/",
+        "note": "保留原始OSM节点和闭合性，结合UNESCO资料识别现存内城及城门。内城始建于1397年，晚陈朝迁都与胡朝时期分别列入古都记录。石城内包含昔日宫殿与官署，但本范围不是单独宫殿围墙，也不是包括罗城外郭的整个城市。现状修复不代表全为1397年原物；保护区、内城、外郭和南郊坛分别理解。",
+        "label": true,
+        "boundaryLabel": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.6079871,
+              20.0800476
+            ],
+            [
+              105.6080433,
+              20.0799559
+            ],
+            [
+              105.6080854,
+              20.0798873
+            ],
+            [
+              105.6081798,
+              20.0799384
+            ],
+            [
+              105.6081379,
+              20.0800066
+            ],
+            [
+              105.6080814,
+              20.0800986
+            ],
+            [
+              105.6079871,
+              20.0800476
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ho-citadel-way-641694095",
+        "siteKey": "ho-citadel",
+        "siteName": "胡朝城（西都）",
+        "siteEnName": "Citadel of the Ho Dynasty",
+        "name": "胡朝城北门",
+        "enName": "胡朝城北门",
+        "originalName": "",
+        "role": "gate",
+        "period": "明",
+        "periodLabel": "越南历史遗存与现状标绘",
+        "heritageId": "whc-1358",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/641694095",
+        "referenceUrl": "https://whc.unesco.org/en/list/1358/",
+        "note": "保留原始OSM节点和闭合性，结合UNESCO资料识别现存内城及城门。内城始建于1397年，晚陈朝迁都与胡朝时期分别列入古都记录。石城内包含昔日宫殿与官署，但本范围不是单独宫殿围墙，也不是包括罗城外郭的整个城市。现状修复不代表全为1397年原物；保护区、内城、外郭和南郊坛分别理解。",
+        "label": true,
+        "boundaryLabel": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.6022443,
+              20.0813492
+            ],
+            [
+              105.6022977,
+              20.0812732
+            ],
+            [
+              105.602378,
+              20.081323
+            ],
+            [
+              105.6024649,
+              20.081377
+            ],
+            [
+              105.6024115,
+              20.081453
+            ],
+            [
+              105.6023229,
+              20.081398
+            ],
+            [
+              105.6022443,
+              20.0813492
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ho-citadel-way-641694096",
+        "siteKey": "ho-citadel",
+        "siteName": "胡朝城（西都）",
+        "siteEnName": "Citadel of the Ho Dynasty",
+        "name": "胡朝城西门",
+        "enName": "胡朝城西门",
+        "originalName": "",
+        "role": "gate",
+        "period": "明",
+        "periodLabel": "越南历史遗存与现状标绘",
+        "heritageId": "whc-1358",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/641694096",
+        "referenceUrl": "https://whc.unesco.org/en/list/1358/",
+        "note": "保留原始OSM节点和闭合性，结合UNESCO资料识别现存内城及城门。内城始建于1397年，晚陈朝迁都与胡朝时期分别列入古都记录。石城内包含昔日宫殿与官署，但本范围不是单独宫殿围墙，也不是包括罗城外郭的整个城市。现状修复不代表全为1397年原物；保护区、内城、外郭和南郊坛分别理解。",
+        "label": true,
+        "boundaryLabel": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.6008133,
+              20.0759905
+            ],
+            [
+              105.6008998,
+              20.0760371
+            ],
+            [
+              105.6009512,
+              20.0759529
+            ],
+            [
+              105.601003,
+              20.075868
+            ],
+            [
+              105.6009164,
+              20.0758214
+            ],
+            [
+              105.6008657,
+              20.0759045
+            ],
+            [
+              105.6008133,
+              20.0759905
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ho-citadel-namgiao-official-plan-point",
+        "siteKey": "ho-citadel",
+        "siteName": "胡朝城（西都）",
+        "siteEnName": "Citadel of the Ho Dynasty",
+        "name": "胡朝南郊坛（地图参照点）",
+        "enName": "Nam Giao Altar (map reference point)",
+        "originalName": "",
+        "role": "public",
+        "period": "明",
+        "periodLabel": "越南历史遗存与现状标绘",
+        "heritageId": "whc-1358",
+        "tentative": false,
+        "sourceUrl": "https://whc.unesco.org/en/list/1358/maps/",
+        "referenceUrl": "https://whc.unesco.org/en/list/1358/",
+        "note": "采用UNESCO公布的南郊坛遗产组成部分参照坐标；这是位置点，不是坛址范围面或法定遗产边界，独立于内城及罗城土垣。",
+        "label": true,
+        "boundaryLabel": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.62110833333332,
+          20.045555555555556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "thanglong-way-184959290",
+        "siteKey": "thanglong",
+        "siteName": "升龙皇城",
+        "siteEnName": "Thang Long",
+        "name": "河内旗台（阮朝现存范围）",
+        "enName": "Hanoi Flag Tower (Nguyen-period remains)",
+        "originalName": "",
+        "role": "public",
+        "period": "清",
+        "periodLabel": "越南历史遗存与现状标绘",
+        "heritageId": "whc-1328",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/184959290",
+        "referenceUrl": "https://hoangthanhthanglong.vn/khu-di-tich-trung-tam-hoang-thanh-thang-long/",
+        "note": "阮朝河内城现存旗台范围，保留原始OSM几何。它与较早的李陈黎皇城不是同一年代的完整城界；对应已有1888年阮朝城郭参考图。1805年前后的城墙拆建、宫殿遗址与现状开放区分别理解。",
+        "label": true,
+        "boundaryLabel": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.8400427,
+              21.0327529
+            ],
+            [
+              105.8396526,
+              21.0327973
+            ],
+            [
+              105.8396085,
+              21.0324277
+            ],
+            [
+              105.8399943,
+              21.0323837
+            ],
+            [
+              105.8400427,
+              21.0327529
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "addedResearch": [
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "明",
+        "city": "胡朝城",
+        "capitalSiteKey": "ancient-site:world-ho-citadel",
+        "capitalSiteName": "胡朝城（西都）",
+        "capitalSiteDisplayName": "胡朝城（西都）",
+        "sourceUrl": "https://whc.unesco.org/uploads/nominations/1358.pdf",
+        "referenceUrl": "https://whc.unesco.org/en/list/1358/",
+        "sourceTitle": "UNESCO胡朝城提名文件末页 Map 1（PDF第829页）",
+        "coordinateSystem": "WGS84",
+        "status": "官方地图配准后的遗存段走向参考，非原始测绘矢量",
+        "note": "描绘地图中红色罗城土垣遗产组成部分的轴线，以图中内城四边中点与现存四门近似中心作仿射配准；红色内城提名范围和黄色缓冲区未当成城墙。地图概化、中点选择和现状门址存在误差，拟合残差只检查配准，不表示历史墙界精度。这只是现存并列入遗产的罗城土垣段，不是外郭全部闭合城界。",
+        "inferredBoundary": true,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          105.6153124,
+          20.09889961
+        ],
+        "sourceId": "ho-la-thanh-outer-wall-plan",
+        "sourceName": "胡朝罗城土垣遗存段（图示参考）",
+        "label": "罗城土垣遗存段\n（图示参考）"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.609721,
+            20.10062411
+          ],
+          [
+            105.61162957,
+            20.10019575
+          ],
+          [
+            105.61371812,
+            20.09932968
+          ],
+          [
+            105.61564572,
+            20.09853584
+          ],
+          [
+            105.61780523,
+            20.09781638
+          ],
+          [
+            105.62004331,
+            20.09709734
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "五代十国"
+        ],
+        "city": "古螺城",
+        "capitalSiteKey": "ancient-site:world-coloa",
+        "capitalSiteName": "古螺城",
+        "capitalSiteDisplayName": "古螺城",
+        "sourceUrl": "https://thanhcoloa.vn/en/archaeological-survey-at-co-loa-vestige-site-by-geophysical-methods",
+        "referenceUrl": "https://thanhcoloa.vn/gioi-thieu",
+        "sourceTitle": "古螺城管理机构公布的2017年三重城郭调查航片；与公开定位影像比对",
+        "coordinateSystem": "WGS84",
+        "status": "三重城郭形态与现状影像比对参考，非测绘墙界",
+        "note": "依据管理机构公布的三重城郭结构与航片，结合具有坐标的公开影像辨识围合或可见段的大致走向；尚未取得考古测绘墙界，林带、道路和现状边缘也不能逐段等同于古城墙。本图只用于城郭层级及大致位置参照，不用于面积、界址或单期城墙年代判断。内城面不等于现代祭祀景区；中城、外城尚不能完整核实的部分保留开放线，不推造闭合外城。古螺历经瓯雒、吴权及后世变化，现存三郭不可一概归为同一建造年代。",
+        "inferredBoundary": true,
+        "labelInsideBoundary": true,
+        "sourceId": "coloa-inner-rampart-reference",
+        "sourceName": "古螺内城（围合参考）",
+        "label": "古螺内城\n（围合参考）",
+        "labelCoordinates": [
+          105.87378502,
+          21.11526933
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.87108135,
+              21.11542946
+            ],
+            [
+              105.87243319,
+              21.11552955
+            ],
+            [
+              105.87408543,
+              21.1155896
+            ],
+            [
+              105.87548018,
+              21.1155896
+            ],
+            [
+              105.87644577,
+              21.11552955
+            ],
+            [
+              105.8765316,
+              21.1144086
+            ],
+            [
+              105.87655306,
+              21.11338772
+            ],
+            [
+              105.87655306,
+              21.11224674
+            ],
+            [
+              105.87565184,
+              21.11210661
+            ],
+            [
+              105.87436438,
+              21.11202655
+            ],
+            [
+              105.87290525,
+              21.11196649
+            ],
+            [
+              105.87170362,
+              21.11190644
+            ],
+            [
+              105.87112427,
+              21.11188642
+            ],
+            [
+              105.87110281,
+              21.1132476
+            ],
+            [
+              105.87108135,
+              21.11444863
+            ],
+            [
+              105.87108135,
+              21.11542946
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "五代十国"
+        ],
+        "city": "古螺城",
+        "capitalSiteKey": "ancient-site:world-coloa",
+        "capitalSiteName": "古螺城",
+        "capitalSiteDisplayName": "古螺城",
+        "sourceUrl": "https://thanhcoloa.vn/en/archaeological-survey-at-co-loa-vestige-site-by-geophysical-methods",
+        "referenceUrl": "https://thanhcoloa.vn/gioi-thieu",
+        "sourceTitle": "古螺城管理机构公布的2017年三重城郭调查航片；与公开定位影像比对",
+        "coordinateSystem": "WGS84",
+        "status": "三重城郭形态与现状影像比对参考，非测绘墙界",
+        "note": "依据管理机构公布的三重城郭结构与航片，结合具有坐标的公开影像辨识围合或可见段的大致走向；尚未取得考古测绘墙界，林带、道路和现状边缘也不能逐段等同于古城墙。本图只用于城郭层级及大致位置参照，不用于面积、界址或单期城墙年代判断。内城面不等于现代祭祀景区；中城、外城尚不能完整核实的部分保留开放线，不推造闭合外城。古螺历经瓯雒、吴权及后世变化，现存三郭不可一概归为同一建造年代。",
+        "inferredBoundary": true,
+        "labelInsideBoundary": false,
+        "sourceId": "coloa-middle-rampart-reference",
+        "sourceName": "古螺中城可辨识段（走向参考）",
+        "label": "古螺中城可辨识段\n（走向参考）",
+        "labelCoordinates": [
+          105.86541653,
+          21.11933271
+        ]
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              105.86824894,
+              21.12337597
+            ],
+            [
+              105.86689711,
+              21.12163458
+            ],
+            [
+              105.86539507,
+              21.11943279
+            ],
+            [
+              105.86378574,
+              21.11701079
+            ],
+            [
+              105.86247683,
+              21.11462878
+            ],
+            [
+              105.86251974,
+              21.1139482
+            ],
+            [
+              105.86455822,
+              21.11378807
+            ],
+            [
+              105.86648941,
+              21.11356788
+            ],
+            [
+              105.86794853,
+              21.11268712
+            ],
+            [
+              105.86992264,
+              21.11134595
+            ],
+            [
+              105.87271214,
+              21.11098564
+            ],
+            [
+              105.87627411,
+              21.11160618
+            ],
+            [
+              105.87848425,
+              21.11244691
+            ],
+            [
+              105.88153124,
+              21.11364794
+            ],
+            [
+              105.88417053,
+              21.11416839
+            ]
+          ],
+          [
+            [
+              105.86824894,
+              21.12337597
+            ],
+            [
+              105.87206841,
+              21.12363618
+            ],
+            [
+              105.87490082,
+              21.12385635
+            ],
+            [
+              105.8776474,
+              21.12413657
+            ],
+            [
+              105.88013649,
+              21.12453689
+            ],
+            [
+              105.88303328,
+              21.12479709
+            ],
+            [
+              105.88494301,
+              21.12475706
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "五代十国"
+        ],
+        "city": "古螺城",
+        "capitalSiteKey": "ancient-site:world-coloa",
+        "capitalSiteName": "古螺城",
+        "capitalSiteDisplayName": "古螺城",
+        "sourceUrl": "https://thanhcoloa.vn/en/archaeological-survey-at-co-loa-vestige-site-by-geophysical-methods",
+        "referenceUrl": "https://thanhcoloa.vn/gioi-thieu",
+        "sourceTitle": "古螺城管理机构公布的2017年三重城郭调查航片；与公开定位影像比对",
+        "coordinateSystem": "WGS84",
+        "status": "三重城郭形态与现状影像比对参考，非测绘墙界",
+        "note": "依据管理机构公布的三重城郭结构与航片，结合具有坐标的公开影像辨识围合或可见段的大致走向；尚未取得考古测绘墙界，林带、道路和现状边缘也不能逐段等同于古城墙。本图只用于城郭层级及大致位置参照，不用于面积、界址或单期城墙年代判断。内城面不等于现代祭祀景区；中城、外城尚不能完整核实的部分保留开放线，不推造闭合外城。古螺历经瓯雒、吴权及后世变化，现存三郭不可一概归为同一建造年代。",
+        "inferredBoundary": true,
+        "labelInsideBoundary": false,
+        "sourceId": "coloa-outer-rampart-reference",
+        "sourceName": "古螺外城西段（走向参考）",
+        "label": "古螺外城西段\n（走向参考）",
+        "labelCoordinates": [
+          105.86123228,
+          21.11855207
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            105.86335659,
+            21.12579787
+          ],
+          [
+            105.86226225,
+            21.12473704
+          ],
+          [
+            105.86187601,
+            21.12233514
+          ],
+          [
+            105.86148977,
+            21.12073385
+          ],
+          [
+            105.86108208,
+            21.11853205
+          ],
+          [
+            105.86054564,
+            21.11645032
+          ],
+          [
+            105.85992336,
+            21.11466882
+          ],
+          [
+            105.86080313,
+            21.11358789
+          ],
+          [
+            105.86322784,
+            21.11236684
+          ],
+          [
+            105.86496592,
+            21.1116262
+          ],
+          [
+            105.86629629,
+            21.11044516
+          ]
+        ]
+      }
+    }
+  ],
+  "hoPlanControls": [
+    [
+      "641694095",
+      [
+        925,
+        791
+      ]
+    ],
+    [
+      "641694094",
+      [
+        996,
+        810
+      ]
+    ],
+    [
+      "641694093",
+      [
+        975,
+        884
+      ]
+    ],
+    [
+      "641694096",
+      [
+        902,
+        865
+      ]
+    ]
+  ],
+  "hoPlanMatrix": [
+    [
+      0.00007857144128104608,
+      4.2549639888338533e-7
+    ],
+    [
+      0.0000038079506468058355,
+      -0.00007309520232365307
+    ],
+    [
+      105.52670324950364,
+      20.138779693948656
+    ]
+  ],
+  "hoPlanRegistrationResidualMeters": [
+    4.3,
+    4.4,
+    4.2,
+    4.2
+  ],
+  "hoLimits": "Registration residuals are not historical boundary accuracy. Only the named extant outer-wall segment is represented; no complete outer circuit is invented.",
+  "coloaSource": "https://thanhcoloa.vn/en/archaeological-survey-at-co-loa-vestige-site-by-geophysical-methods",
+  "coloaImagery": {
+    "zoom": 16,
+    "tileOrigin": [
+      52039,
+      28831
+    ],
+    "tileSize": 256,
+    "source": "Esri World Imagery; reference imagery only, not historic wall survey"
+  },
+  "coloaLimits": "Only a coarse inner-enclosure reference face and partial middle/outer trajectories. No surveyed full-city boundary; imagery and tree belts are not automatically ancient walls.",
+  "thanglongLimits": "The existing 1888 Nguyen outline is preserved. Earlier Ly/Tran/Le city, imperial and forbidden enclosures remain distinct and incompletely known.",
+  "hueLimits": "Preserve all three extents and raw open wall ways. Purple-city schematic caveat remains.",
+  "counts": {
+    "capitalSites": 185,
+    "capitalRecords": 341,
+    "classicalSites": 40,
+    "classicalFeatures": 719,
+    "researchFeatures": 804
+  }
+}

@@ -17,8 +17,33 @@
       "lat": 39.03,
       "lng": 88.17,
       "position": "region",
-      "note": "前77年楼兰更名鄯善并迁都扜泥。此点是若羌附近的地望示意，不是罗布泊楼兰故城，也不是现代鄯善县。",
-      "sourceUrl": "https://www.xjrq.gov.cn/rqxrmzf/c108794/201709/01eca25655974153a56dedcb0c9c4523.shtml"
+      "note": "前77年楼兰更名为鄯善。《汉书》记王治扜泥城，但其具体城址及与楼兰故城的关系仍有不同考证。此点仅为若羌附近的地望参照，不是已核实的城址中心，也不是现代鄯善县；暂未接入可确认为扜泥的城墙或建筑范围。罗布泊西北的楼兰故城（LA遗址）另有独立点位及遗迹细节，可点击下方按钮定位。",
+      "sourceUrl": "https://www.xjrq.gov.cn/rqxrmzf/c108794/201709/01eca25655974153a56dedcb0c9c4523.shtml",
+      "referenceUrls": [
+        "https://www.nxkg.org.cn/silukaogu/168.html",
+        "https://www.xjrq.gov.cn/rqxrmzf/c108794/201412/602fbd471a534fbf900507566ef950a6.shtml",
+        "https://culture.people.com.cn/n1/2019/0317/c1013-30979636.html"
+      ],
+      "relatedMapViews": [
+        {
+          "name": "楼兰故城",
+          "coordinates": [
+            89.9145,
+            40.5155
+          ],
+          "zoom": 16,
+          "period": "秦汉"
+        },
+        {
+          "name": "鄯善扜泥参照点",
+          "coordinates": [
+            88.17,
+            39.03
+          ],
+          "zoom": 12,
+          "period": "秦汉"
+        }
+      ]
     },
     {
       "id": "qiemo",
@@ -36,12 +61,16 @@
       "nameEn": "Jingjue (Niya)",
       "capital": "精绝城",
       "area": "民丰县尼雅遗址",
-      "lat": 37.822685,
-      "lng": 82.771896,
+      "lat": 37.976167,
+      "lng": 82.720806,
       "position": "site",
-      "note": "用尼雅遗址公开坐标表示遗址位置，不表示已测定汉代王宫或都城边界。",
+      "note": "以日本国立情报学研究所DSR地名集的尼雅佛塔公开坐标作为遗址群核心参照。尼雅为沿古尼雅河道分散的汉晋聚落、寺院、墓葬与农业遗迹，南北延伸约25—27千米，不是一座已测定完整外郭的城市。此点不是精绝王宫或王治确址，原来的遗址概略点与佛塔核心参照分开记录。",
       "sourceUrl": "https://www.chnmuseum.cn/yj/xscg/xslw/201812/t20181224_33102.shtml",
-      "coordinateUrl": "https://zh.wikipedia.org/wiki/尼雅遗址"
+      "coordinateUrl": "https://dsr.nii.ac.jp/digital-maps/dsr/place-names/0756.html.en",
+      "referenceUrls": [
+        "https://igsnrr.cas.cn/cbkx/kpyd/kcsj/94nyx/202009/t20200910_5693321.html",
+        "https://dsr.nii.ac.jp/digital-maps/dsr/place-names/0756.html.en"
+      ]
     },
     {
       "id": "yumi",
@@ -91,10 +120,13 @@
       "name": "莎车",
       "nameEn": "Shache (Yarkand)",
       "capital": "莎车城",
-      "area": "莎车县一带",
-      "lat": 38.42,
-      "lng": 77.25,
-      "position": "region"
+      "area": "莎车老城／叶尔羌历史城区",
+      "lat": 38.4168,
+      "lng": 77.2552,
+      "position": "region",
+      "sourceUrl": "https://www.shache.gov.cn/scx/c107961/202308/821f25ee7e3249be86560696e795fd71.shtml",
+      "coordinateUrl": "https://www.openstreetmap.org/way/958776273",
+      "note": "莎车老城历史城区参照，邻近叶尔羌汗国王陵与阿勒屯清真寺；不将明清遗存或现代重建王宫认定为汉代莎车城。汉代莎车国、元代察合台时期、明代东察合台及叶尔羌汗国、清代叶尔羌办事大臣与莎车州分别保留历史关联。"
     },
     {
       "id": "ruoqiang",
@@ -170,11 +202,34 @@
       "nameEn": "Puli",
       "capital": "蒲犁谷",
       "area": "塔什库尔干河谷／石头城一带",
-      "lat": 37.78,
-      "lng": 75.23,
+      "lat": 37.78275,
+      "lng": 75.2339,
       "position": "region",
-      "note": "使用塔什库尔干附近参照点；现存石头城主要遗存并非全为汉代，不能等同汉代王城的精确位置。",
-      "sourceUrl": "https://aah.bucea.edu.cn/yjsj/xmsj/123746.htm"
+      "note": "采用塔什库尔干石头城内公开遗址区参照点，关联蒲犁谷地望，不认定为汉代王治确址。汉代属蒲犁国地望，晋唐时期与朅盘陀国及葱岭守捉相关，清代在旧址叠建蒲犁厅城；现存多期遗迹不能全部称为汉代城墙。",
+      "sourceUrl": "https://aah.bucea.edu.cn/yjsj/xmsj/123746.htm",
+      "coordinateUrl": "https://www.openstreetmap.org/way/1429963577",
+      "historicalStages": [
+        {
+          "period": "秦汉",
+          "name": "蒲犁国 · 蒲犁谷",
+          "note": "河谷地望参照，汉代王治尚未确址。"
+        },
+        {
+          "period": "魏晋南北朝",
+          "name": "朅盘陀国",
+          "note": "石头城与晋唐时期朅盘陀都城相关。"
+        },
+        {
+          "period": "隋唐",
+          "name": "葱岭守捉",
+          "note": "唐开元时期在故朅盘陀国设守捉，现存遗迹多期叠压。"
+        },
+        {
+          "period": "清",
+          "name": "蒲犁厅城",
+          "note": "在早期石头城遗址上叠建，不能将其外形反推为汉代城界。"
+        }
+      ]
     },
     {
       "id": "yinai",
@@ -205,10 +260,41 @@
       "name": "捐毒",
       "nameEn": "Juandu",
       "capital": "衍敦谷",
-      "area": "乌恰县一带",
-      "lat": 39.72,
-      "lng": 75.26,
-      "position": "region"
+      "area": "乌恰县西部／伊尔克什坦附近候选区域",
+      "lat": 39.7,
+      "lng": 74,
+      "position": "inferred",
+      "sourceUrl": "https://depts.washington.edu/silkroad/texts/weilue/notes7_10.html",
+      "primaryUrl": "https://www.chinese-classics.org/read/history/han-shu/han-shu-096",
+      "referenceUrls": [
+        "https://contents.nahf.or.kr/item/level.do?levelId=jo.k_0002_0096_0270_0010",
+        "https://www.visitbeijing.com.cn/article/47QlQbzRmiw"
+      ],
+      "note": "王治记为衍敦谷，具体位置尚未核实。本次采用伊尔克什坦附近、克孜勒苏河上游候选地望，以一位小数的区域示意点表示；不是口岸建筑、城址或国界范围。另有乌恰西北、乌鲁克恰提（老乌恰）及阿赖谷地等说法，不能将其与现代乌恰县城直接等同。《汉书》记居民随水草而居，暂未找到可核对的捐毒城墙矢量。",
+      "noteEn": "Yandun Valley is recorded as the royal seat, but its exact location is unverified. The marker follows the proposed Irkeshtam / upper Qizil Su region and is deliberately rounded to one decimal place. It is neither a surveyed city nor a border/port boundary. Northwestern Ulugqat, old Ulugqat and the Alai Valley are alternative proposals. No verified city-wall geometry has been found.",
+      "documentedFacts": {
+        "source": "汉书·西域传",
+        "sourceEn": "Hanshu, Western Regions",
+        "royalSeat": "衍敦谷",
+        "royalSeatEn": "Yandun Valley",
+        "households": 380,
+        "population": 1100,
+        "menAbleToBearArms": 500
+      },
+      "locationHypotheses": [
+        {
+          "name": "伊尔克什坦附近／克孜勒苏河上游",
+          "nameEn": "Irkeshtam / upper Qizil Su",
+          "status": "当前采用的区域参照说",
+          "source": "https://depts.washington.edu/silkroad/texts/weilue/notes7_10.html"
+        },
+        {
+          "name": "乌鲁克恰提（老乌恰）一带",
+          "nameEn": "Old Ulugqat area",
+          "status": "地方史候选，非考古确址",
+          "source": "https://www.visitbeijing.com.cn/article/47QlQbzRmiw"
+        }
+      ]
     },
     {
       "id": "shule",
@@ -217,7 +303,9 @@
       "capital": "疏勒城",
       "area": "喀什一带",
       "position": "existing",
-      "existingRegime": "疏勒国"
+      "existingRegime": "疏勒国",
+      "sourceUrl": "https://www.cssn.cn/kgxc/kgxc_kgsb/202207/t20220728_5431113.shtml",
+      "note": "复用喀什原有古都条目。疏勒国、唐代疏勒镇及后世喀什噶尔需分期区分；现状喀什古城范围不是汉唐完整城界。盘橐城现为1994年原址兴建的纪念公园，汗诺依等候选城址不据此等同现代喀什老城。"
     },
     {
       "id": "weitou",

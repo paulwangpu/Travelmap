@@ -1,0 +1,759 @@
+{
+  "added": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.2570556,
+              38.4183153
+            ],
+            [
+              77.2581929,
+              38.4183237
+            ],
+            [
+              77.2583967,
+              38.4182438
+            ],
+            [
+              77.2587535,
+              38.4182565
+            ],
+            [
+              77.2592202,
+              38.4170039
+            ],
+            [
+              77.258937,
+              38.4169392
+            ],
+            [
+              77.2590327,
+              38.4166822
+            ],
+            [
+              77.2591489,
+              38.4167088
+            ],
+            [
+              77.2591957,
+              38.4165832
+            ],
+            [
+              77.2590618,
+              38.4165526
+            ],
+            [
+              77.2591546,
+              38.4163035
+            ],
+            [
+              77.2572541,
+              38.4156905
+            ],
+            [
+              77.2563395,
+              38.4156632
+            ],
+            [
+              77.256318,
+              38.4159658
+            ],
+            [
+              77.2561732,
+              38.4159532
+            ],
+            [
+              77.2560713,
+              38.4162306
+            ],
+            [
+              77.2557306,
+              38.4161717
+            ],
+            [
+              77.255787,
+              38.4158439
+            ],
+            [
+              77.255626,
+              38.4156253
+            ],
+            [
+              77.2549877,
+              38.4156358
+            ],
+            [
+              77.2549716,
+              38.416054
+            ],
+            [
+              77.2551942,
+              38.4161192
+            ],
+            [
+              77.2550279,
+              38.4166992
+            ],
+            [
+              77.2546846,
+              38.4166761
+            ],
+            [
+              77.2546926,
+              38.4169913
+            ],
+            [
+              77.2553015,
+              38.4170145
+            ],
+            [
+              77.2556582,
+              38.417315
+            ],
+            [
+              77.2556367,
+              38.4174558
+            ],
+            [
+              77.2561195,
+              38.4178677
+            ],
+            [
+              77.2562858,
+              38.417895
+            ],
+            [
+              77.2570556,
+              38.4183153
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "明",
+        "city": "莎车",
+        "sourceId": "shache-kashgar-osm-958776273",
+        "sourceName": "叶尔羌汗国王陵",
+        "label": "叶尔羌汗国王陵",
+        "sourceUrl": "https://www.openstreetmap.org/way/958776273",
+        "referenceUrl": "https://www.shache.gov.cn/scx/c108015/202101/62f9758693cf4fa488aee2870fe2bb8a.shtml",
+        "coordinateSystem": "WGS84",
+        "status": "公开陵园范围",
+        "note": "叶尔羌汗国王陵现状公开多边形，与皇陵图层的同名王陵对应；不代表汗国王城。",
+        "capitalSiteKey": "western-region:shache",
+        "capitalSiteName": "莎车",
+        "capitalSiteDisplayName": "莎车／叶尔羌"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.2543001,
+              38.4160081
+            ],
+            [
+              77.2543017,
+              38.4156103
+            ],
+            [
+              77.254595,
+              38.4156131
+            ],
+            [
+              77.2545833,
+              38.4160128
+            ],
+            [
+              77.2543001,
+              38.4160081
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "明",
+        "city": "莎车",
+        "sourceId": "shache-kashgar-osm-1047130119",
+        "sourceName": "阿勒屯清真寺",
+        "label": "阿勒屯清真寺",
+        "sourceUrl": "https://www.openstreetmap.org/way/1047130119",
+        "referenceUrl": "https://www.shache.gov.cn/scx/c107961/202308/821f25ee7e3249be86560696e795fd71.shtml",
+        "coordinateSystem": "WGS84",
+        "status": "公开宗教建筑现状范围",
+        "note": "位于王陵邻近历史城区，保留公开建筑轮廓；不要与位置不同的莎车加满清真寺混淆。",
+        "capitalSiteKey": "western-region:shache",
+        "capitalSiteName": "莎车",
+        "capitalSiteDisplayName": "莎车／叶尔羌",
+        "periods": [
+          "明",
+          "清"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.2537871,
+              38.4160895
+            ],
+            [
+              77.2537932,
+              38.4151553
+            ],
+            [
+              77.2535067,
+              38.4151577
+            ],
+            [
+              77.2535005,
+              38.4152277
+            ],
+            [
+              77.2530199,
+              38.4152229
+            ],
+            [
+              77.2530106,
+              38.4152832
+            ],
+            [
+              77.252721,
+              38.4152929
+            ],
+            [
+              77.2527144,
+              38.4153352
+            ],
+            [
+              77.2524847,
+              38.4153416
+            ],
+            [
+              77.2524806,
+              38.4153719
+            ],
+            [
+              77.2522855,
+              38.4153719
+            ],
+            [
+              77.2522306,
+              38.4154388
+            ],
+            [
+              77.2522245,
+              38.4160854
+            ],
+            [
+              77.2522916,
+              38.4161539
+            ],
+            [
+              77.2532653,
+              38.4161587
+            ],
+            [
+              77.2533202,
+              38.4160711
+            ],
+            [
+              77.2537871,
+              38.4160895
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "明",
+        "city": "莎车",
+        "sourceId": "shache-kashgar-osm-1445636707",
+        "sourceName": "叶尔羌汗王宫（重建展示）",
+        "label": "叶尔羌汗王宫（重建展示）",
+        "sourceUrl": "https://www.openstreetmap.org/way/1445636707",
+        "referenceUrl": "https://www.shache.gov.cn/scx/c107961/202308/821f25ee7e3249be86560696e795fd71.shtml",
+        "coordinateSystem": "WGS84",
+        "status": "现代重建展示建筑",
+        "note": "现存王宫为历史文化旅游展示重建建筑，不是原王宫考古基址；按叶尔羌汗国主题关联明代筛选，使用固定地标黑色。",
+        "capitalSiteKey": "western-region:shache",
+        "capitalSiteName": "莎车",
+        "capitalSiteDisplayName": "莎车／叶尔羌",
+        "fixedLandmark": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.9865405,
+              39.4749735
+            ],
+            [
+              75.98819,
+              39.4751432
+            ],
+            [
+              75.9886942,
+              39.475549
+            ],
+            [
+              75.9897157,
+              39.4769169
+            ],
+            [
+              75.9915101,
+              39.4767195
+            ],
+            [
+              75.9915598,
+              39.4752501
+            ],
+            [
+              75.9924568,
+              39.474811
+            ],
+            [
+              75.9938172,
+              39.4742776
+            ],
+            [
+              75.9945037,
+              39.4738482
+            ],
+            [
+              75.9962976,
+              39.4710075
+            ],
+            [
+              75.9973013,
+              39.4708555
+            ],
+            [
+              75.9973964,
+              39.4703683
+            ],
+            [
+              75.9965723,
+              39.4703634
+            ],
+            [
+              75.995348,
+              39.4682017
+            ],
+            [
+              75.9950019,
+              39.4679204
+            ],
+            [
+              75.9933721,
+              39.4678443
+            ],
+            [
+              75.9934653,
+              39.4681086
+            ],
+            [
+              75.9919615,
+              39.4680389
+            ],
+            [
+              75.9918559,
+              39.4687587
+            ],
+            [
+              75.9903381,
+              39.4687031
+            ],
+            [
+              75.9903746,
+              39.4682922
+            ],
+            [
+              75.9901928,
+              39.4682698
+            ],
+            [
+              75.9902095,
+              39.4681245
+            ],
+            [
+              75.9897635,
+              39.4681294
+            ],
+            [
+              75.9897249,
+              39.4678778
+            ],
+            [
+              75.9868869,
+              39.4677342
+            ],
+            [
+              75.9867087,
+              39.4714579
+            ],
+            [
+              75.9865405,
+              39.4749735
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "清",
+        "city": "喀什",
+        "sourceId": "shache-kashgar-osm-1279200258",
+        "sourceName": "喀什古城（现状范围参照）",
+        "label": "喀什古城（现状范围参照）",
+        "sourceUrl": "https://www.openstreetmap.org/way/1279200258",
+        "referenceUrl": "https://www.cssn.cn/kgxc/kgxc_kgsb/202207/t20220728_5431113.shtml",
+        "coordinateSystem": "WGS84",
+        "status": "现状历史城区／非古代城墙实测",
+        "note": "保留OSM现状古城范围，包含修复展示街区。不是汉代疏勒城、唐代疏勒镇或清代城垣的完整实测轮廓。",
+        "capitalSiteKey": "ancient-site:喀什:39.47040,75.98980",
+        "capitalSiteName": "喀什",
+        "capitalSiteDisplayName": "喀什／疏勒",
+        "inferredBoundary": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.0010166,
+              39.46917
+            ],
+            [
+              76.0015953,
+              39.4692038
+            ],
+            [
+              76.0023104,
+              39.470581
+            ],
+            [
+              76.0010228,
+              39.4712435
+            ],
+            [
+              75.9994248,
+              39.4707892
+            ],
+            [
+              75.9977672,
+              39.4709135
+            ],
+            [
+              75.9977378,
+              39.4707226
+            ],
+            [
+              75.9978789,
+              39.4697542
+            ],
+            [
+              75.9985506,
+              39.4697827
+            ],
+            [
+              75.9994356,
+              39.4696288
+            ],
+            [
+              76.0006173,
+              39.4694805
+            ],
+            [
+              76.0010166,
+              39.46917
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "明",
+        "city": "喀什",
+        "sourceId": "shache-kashgar-osm-1279200488",
+        "sourceName": "高台民居（现状范围）",
+        "label": "高台民居（现状范围）",
+        "sourceUrl": "https://www.openstreetmap.org/way/1279200488",
+        "referenceUrl": "https://www.kstq.gov.cn/kashi/lyjd/201302/2bb8eff29b494b5f9f4bd9eedad21a52.shtml",
+        "coordinateSystem": "WGS84",
+        "status": "历史民居片区现状范围",
+        "note": "历史民居聚落的现状片区，包含后期变化；不是宫城或古城外郭，未据此补出古城墙。",
+        "capitalSiteKey": "ancient-site:喀什:39.47040,75.98980",
+        "capitalSiteName": "喀什",
+        "capitalSiteDisplayName": "喀什／疏勒",
+        "periods": [
+          "明",
+          "清"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.9837526,
+              39.4715061
+            ],
+            [
+              75.9832866,
+              39.4726958
+            ],
+            [
+              75.9832787,
+              39.472716
+            ],
+            [
+              75.9833954,
+              39.4727342
+            ],
+            [
+              75.9834662,
+              39.4727453
+            ],
+            [
+              75.9843397,
+              39.4729253
+            ],
+            [
+              75.9843957,
+              39.4729369
+            ],
+            [
+              75.984503,
+              39.4729147
+            ],
+            [
+              75.9845342,
+              39.4729088
+            ],
+            [
+              75.9846455,
+              39.4729227
+            ],
+            [
+              75.9848624,
+              39.4722881
+            ],
+            [
+              75.9848784,
+              39.4722882
+            ],
+            [
+              75.9849149,
+              39.4721967
+            ],
+            [
+              75.9848922,
+              39.4721894
+            ],
+            [
+              75.9849219,
+              39.4720986
+            ],
+            [
+              75.9844204,
+              39.4718129
+            ],
+            [
+              75.9839515,
+              39.4715529
+            ],
+            [
+              75.9837526,
+              39.4715061
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "明",
+        "city": "喀什",
+        "sourceId": "shache-kashgar-osm-183318111",
+        "sourceName": "艾提尕尔清真寺",
+        "label": "艾提尕尔清真寺",
+        "sourceUrl": "https://www.openstreetmap.org/way/183318111",
+        "referenceUrl": "https://www.kashi.gov.cn/ksdqxzgs/c106707/202307/28cd99dc43a244619788bda878887922.shtml",
+        "coordinateSystem": "WGS84",
+        "status": "公开宗教建筑现状范围",
+        "note": "始建于1442年，后经扩建、修缮；保留建筑群公开轮廓，不视为明代原始平面。",
+        "capitalSiteKey": "ancient-site:喀什:39.47040,75.98980",
+        "capitalSiteName": "喀什",
+        "capitalSiteDisplayName": "喀什／疏勒",
+        "periods": [
+          "明",
+          "清"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.9923651,
+              39.4592211
+            ],
+            [
+              75.992491,
+              39.4589188
+            ],
+            [
+              75.9922719,
+              39.458863
+            ],
+            [
+              75.992132,
+              39.4591689
+            ],
+            [
+              75.9923651,
+              39.4592211
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "宋辽金西夏",
+        "city": "喀什",
+        "sourceId": "shache-kashgar-osm-1444791783",
+        "sourceName": "玉素甫·哈斯·哈吉甫墓（现存建筑）",
+        "label": "玉素甫·哈斯·哈吉甫墓（现存建筑）",
+        "sourceUrl": "https://www.openstreetmap.org/way/1444791783",
+        "referenceUrl": "https://www.cssn.cn/kgxc/kgxc_kgsb/202207/t20220728_5431113.shtml",
+        "coordinateSystem": "WGS84",
+        "status": "人物陵墓现状建筑",
+        "note": "与11世纪《福乐智慧》作者相关的现存纪念性陵墓建筑；按人物年代归组，公开形状不是11世纪墓室实测。",
+        "capitalSiteKey": "ancient-site:喀什:39.47040,75.98980",
+        "capitalSiteName": "喀什",
+        "capitalSiteDisplayName": "喀什／疏勒"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.0009738,
+              39.4533458
+            ],
+            [
+              76.0008617,
+              39.4532845
+            ],
+            [
+              76.0005488,
+              39.4526787
+            ],
+            [
+              76.0005768,
+              39.4518746
+            ],
+            [
+              76.0027624,
+              39.4516221
+            ],
+            [
+              76.0047705,
+              39.4520549
+            ],
+            [
+              76.0041842,
+              39.4540006
+            ],
+            [
+              76.0009738,
+              39.4533458
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "秦汉",
+        "city": "喀什",
+        "sourceId": "shache-kashgar-osm-1535117460",
+        "sourceName": "盘橐城（现状纪念公园）",
+        "label": "盘橐城（现状纪念公园）",
+        "sourceUrl": "https://www.openstreetmap.org/way/1535117460",
+        "referenceUrl": "https://kstq.gov.cn/kashi/lyjd/201302/62ccf41af71a4dc4aec979c3a116d52f.shtml",
+        "coordinateSystem": "WGS84",
+        "status": "现代纪念公园／古址位置参照",
+        "note": "1994年在盘橐城遗址上兴建的班超纪念公园现状范围；不代表汉代疏勒国宫城的考古实测边界，按班超与古址关联归组。",
+        "capitalSiteKey": "ancient-site:喀什:39.47040,75.98980",
+        "capitalSiteName": "喀什",
+        "capitalSiteDisplayName": "喀什／疏勒",
+        "inferredBoundary": true
+      }
+    }
+  ],
+  "shacheReference": "https://www.shache.gov.cn/scx/c107961/202308/821f25ee7e3249be86560696e795fd71.shtml",
+  "kashgarReference": "https://www.cssn.cn/kgxc/kgxc_kgsb/202207/t20220728_5431113.shtml",
+  "point": {
+    "shache": [
+      77.2552,
+      38.4168
+    ],
+    "kashgar": [
+      75.9898,
+      39.4704
+    ]
+  },
+  "limits": [
+    "不将汉代疏勒与昌吉奇台石城子疏勒军事要塞混为一址",
+    "莎车阿勒屯清真寺不是莎车加满清真寺",
+    "古城及纪念公园现状面不冒充古代城界",
+    "现存叶尔羌王宫为重建展示建筑",
+    "尚未接入未经核实的汗诺依、莎车汉代城界与唐疏勒完整城界"
+  ],
+  "license": "OpenStreetMap contributors · ODbL"
+}

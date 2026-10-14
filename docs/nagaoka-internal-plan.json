@@ -1,0 +1,5627 @@
+{
+  "source": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+  "pdfPage": 20,
+  "numberingSource": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+  "method": "Trace published grid; street-interpolated subdivisions are schematic, not surveyed. Exclude palace, northern irregular strip and unverified town numbering.",
+  "majorRoads": 23,
+  "wards": 68,
+  "minorSegments": 57,
+  "added": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.68013602,
+            34.95245832
+          ],
+          [
+            135.68013602,
+            34.90682149
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-road-v-0",
+        "sourceName": "西四坊大路",
+        "label": "西四坊大路",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.68013602,
+          34.9195421
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.68605535,
+            34.95245832
+          ],
+          [
+            135.68605535,
+            34.90682149
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-road-v-1",
+        "sourceName": "西三坊大路",
+        "label": "西三坊大路",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.68605535,
+          34.9195421
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.69197468,
+            34.95245832
+          ],
+          [
+            135.69197468,
+            34.90682149
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-road-v-2",
+        "sourceName": "西二坊大路",
+        "label": "西二坊大路",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.69197468,
+          34.9195421
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.69781402,
+            34.95245832
+          ],
+          [
+            135.69781402,
+            34.90682149
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-road-v-3",
+        "sourceName": "西一坊大路",
+        "label": "西一坊大路",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.69781402,
+          34.9195421
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.70341339,
+            34.94098354
+          ],
+          [
+            135.70341339,
+            34.90682149
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-road-v-4",
+        "sourceName": "朱雀大路",
+        "label": "朱雀大路",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.70341339,
+          34.9195421
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.70893277,
+            34.95245832
+          ],
+          [
+            135.70893277,
+            34.90682149
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-road-v-5",
+        "sourceName": "东一坊大路",
+        "label": "东一坊大路",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.70893277,
+          34.9195421
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.71493209,
+            34.95245832
+          ],
+          [
+            135.71493209,
+            34.90682149
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-road-v-6",
+        "sourceName": "东二坊大路",
+        "label": "东二坊大路",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71493209,
+          34.9195421
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.72085142,
+            34.95245832
+          ],
+          [
+            135.72085142,
+            34.90682149
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-road-v-7",
+        "sourceName": "东三坊大路",
+        "label": "东三坊大路",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72085142,
+          34.9195421
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.72669076,
+            34.95245832
+          ],
+          [
+            135.72669076,
+            34.90682149
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-road-v-8",
+        "sourceName": "东四坊大路",
+        "label": "东四坊大路",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72669076,
+          34.9195421
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.7006937,
+            34.94098354
+          ],
+          [
+            135.7006937,
+            34.90682149
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-road-v-516",
+        "sourceName": "西一坊坊间大路",
+        "label": "西一坊坊间大路",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.7006937,
+          34.90806732
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.70621308,
+            34.94098354
+          ],
+          [
+            135.70621308,
+            34.90682149
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-road-v-585",
+        "sourceName": "东一坊坊间大路",
+        "label": "东一坊坊间大路",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.70621308,
+          34.90806732
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.68013602,
+              34.95245832
+            ],
+            [
+              135.72669076,
+              34.95245832
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-road-h-506",
+        "sourceName": "北京极大路",
+        "label": "北京极大路",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71861168,
+          34.95245832
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.68013602,
+              34.95029451
+            ],
+            [
+              135.69781402,
+              34.95029451
+            ]
+          ],
+          [
+            [
+              135.70893277,
+              34.95029451
+            ],
+            [
+              135.72669076,
+              34.95029451
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-road-h-539",
+        "sourceName": "北一条大路",
+        "label": "北一条大路",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71861168,
+          34.95029451
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.68013602,
+              34.94537675
+            ],
+            [
+              135.69781402,
+              34.94537675
+            ]
+          ],
+          [
+            [
+              135.70893277,
+              34.94537675
+            ],
+            [
+              135.72669076,
+              34.94537675
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-road-h-614",
+        "sourceName": "一条大路",
+        "label": "一条大路",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71861168,
+          34.94537675
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.68013602,
+              34.94308179
+            ],
+            [
+              135.69781402,
+              34.94308179
+            ]
+          ],
+          [
+            [
+              135.70893277,
+              34.94308179
+            ],
+            [
+              135.72669076,
+              34.94308179
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-road-h-649",
+        "sourceName": "二条条间大路",
+        "label": "二条条间大路",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71861168,
+          34.94308179
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.68013602,
+              34.94098354
+            ],
+            [
+              135.72669076,
+              34.94098354
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-road-h-681",
+        "sourceName": "二条大路",
+        "label": "二条大路",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71861168,
+          34.94098354
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.68013602,
+              34.93593464
+            ],
+            [
+              135.72669076,
+              34.93593464
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-road-h-758",
+        "sourceName": "三条大路",
+        "label": "三条大路",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71861168,
+          34.93593464
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.68013602,
+              34.93108245
+            ],
+            [
+              135.72669076,
+              34.93108245
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-road-h-832",
+        "sourceName": "四条大路",
+        "label": "四条大路",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71861168,
+          34.93108245
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.68013602,
+              34.92616469
+            ],
+            [
+              135.72669076,
+              34.92616469
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-road-h-907",
+        "sourceName": "五条大路",
+        "label": "五条大路",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71861168,
+          34.92616469
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.68013602,
+              34.9213125
+            ],
+            [
+              135.72669076,
+              34.9213125
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-road-h-981",
+        "sourceName": "六条大路",
+        "label": "六条大路",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71861168,
+          34.9213125
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.68013602,
+              34.91639473
+            ],
+            [
+              135.72669076,
+              34.91639473
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-road-h-1056",
+        "sourceName": "七条大路",
+        "label": "七条大路",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71861168,
+          34.91639473
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.68013602,
+              34.91160811
+            ],
+            [
+              135.72669076,
+              34.91160811
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-road-h-1129",
+        "sourceName": "八条大路",
+        "label": "八条大路",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71861168,
+          34.91160811
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.68013602,
+              34.90682149
+            ],
+            [
+              135.72669076,
+              34.90682149
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-road-h-1202",
+        "sourceName": "九条大路",
+        "label": "九条大路",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71861168,
+          34.90682149
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.68013602,
+              34.95029451
+            ],
+            [
+              135.68605535,
+              34.95029451
+            ],
+            [
+              135.68605535,
+              34.94537675
+            ],
+            [
+              135.68013602,
+              34.94537675
+            ],
+            [
+              135.68013602,
+              34.95029451
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-0-0",
+        "sourceName": "右京\n一条四坊",
+        "label": "右京\n一条四坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.68309568,
+          34.94783563
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.68605535,
+              34.95029451
+            ],
+            [
+              135.69197468,
+              34.95029451
+            ],
+            [
+              135.69197468,
+              34.94537675
+            ],
+            [
+              135.68605535,
+              34.94537675
+            ],
+            [
+              135.68605535,
+              34.95029451
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-0-1",
+        "sourceName": "右京\n一条三坊",
+        "label": "右京\n一条三坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.68901502,
+          34.94783563
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.69197468,
+              34.95029451
+            ],
+            [
+              135.69781402,
+              34.95029451
+            ],
+            [
+              135.69781402,
+              34.94537675
+            ],
+            [
+              135.69197468,
+              34.94537675
+            ],
+            [
+              135.69197468,
+              34.95029451
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-0-2",
+        "sourceName": "右京\n一条二坊",
+        "label": "右京\n一条二坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.69489435,
+          34.94783563
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.70893277,
+              34.95029451
+            ],
+            [
+              135.71493209,
+              34.95029451
+            ],
+            [
+              135.71493209,
+              34.94537675
+            ],
+            [
+              135.70893277,
+              34.94537675
+            ],
+            [
+              135.70893277,
+              34.95029451
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-0-5",
+        "sourceName": "左京\n一条二坊",
+        "label": "左京\n一条二坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71193243,
+          34.94783563
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.71493209,
+              34.95029451
+            ],
+            [
+              135.72085142,
+              34.95029451
+            ],
+            [
+              135.72085142,
+              34.94537675
+            ],
+            [
+              135.71493209,
+              34.94537675
+            ],
+            [
+              135.71493209,
+              34.95029451
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-0-6",
+        "sourceName": "左京\n一条三坊",
+        "label": "左京\n一条三坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71789176,
+          34.94783563
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.72085142,
+              34.95029451
+            ],
+            [
+              135.72669076,
+              34.95029451
+            ],
+            [
+              135.72669076,
+              34.94537675
+            ],
+            [
+              135.72085142,
+              34.94537675
+            ],
+            [
+              135.72085142,
+              34.95029451
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-0-7",
+        "sourceName": "左京\n一条四坊",
+        "label": "左京\n一条四坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72377109,
+          34.94783563
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.68013602,
+              34.94537675
+            ],
+            [
+              135.68605535,
+              34.94537675
+            ],
+            [
+              135.68605535,
+              34.94098354
+            ],
+            [
+              135.68013602,
+              34.94098354
+            ],
+            [
+              135.68013602,
+              34.94537675
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-1-0",
+        "sourceName": "右京\n二条四坊",
+        "label": "右京\n二条四坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.68309568,
+          34.94318014
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.68605535,
+              34.94537675
+            ],
+            [
+              135.69197468,
+              34.94537675
+            ],
+            [
+              135.69197468,
+              34.94098354
+            ],
+            [
+              135.68605535,
+              34.94098354
+            ],
+            [
+              135.68605535,
+              34.94537675
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-1-1",
+        "sourceName": "右京\n二条三坊",
+        "label": "右京\n二条三坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.68901502,
+          34.94318014
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.69197468,
+              34.94537675
+            ],
+            [
+              135.69781402,
+              34.94537675
+            ],
+            [
+              135.69781402,
+              34.94098354
+            ],
+            [
+              135.69197468,
+              34.94098354
+            ],
+            [
+              135.69197468,
+              34.94537675
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-1-2",
+        "sourceName": "右京\n二条二坊",
+        "label": "右京\n二条二坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.69489435,
+          34.94318014
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.70893277,
+              34.94537675
+            ],
+            [
+              135.71493209,
+              34.94537675
+            ],
+            [
+              135.71493209,
+              34.94098354
+            ],
+            [
+              135.70893277,
+              34.94098354
+            ],
+            [
+              135.70893277,
+              34.94537675
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-1-5",
+        "sourceName": "左京\n二条二坊",
+        "label": "左京\n二条二坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71193243,
+          34.94318014
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.71493209,
+              34.94537675
+            ],
+            [
+              135.72085142,
+              34.94537675
+            ],
+            [
+              135.72085142,
+              34.94098354
+            ],
+            [
+              135.71493209,
+              34.94098354
+            ],
+            [
+              135.71493209,
+              34.94537675
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-1-6",
+        "sourceName": "左京\n二条三坊",
+        "label": "左京\n二条三坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71789176,
+          34.94318014
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.72085142,
+              34.94537675
+            ],
+            [
+              135.72669076,
+              34.94537675
+            ],
+            [
+              135.72669076,
+              34.94098354
+            ],
+            [
+              135.72085142,
+              34.94098354
+            ],
+            [
+              135.72085142,
+              34.94537675
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-1-7",
+        "sourceName": "左京\n二条四坊",
+        "label": "左京\n二条四坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72377109,
+          34.94318014
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.68013602,
+              34.94098354
+            ],
+            [
+              135.68605535,
+              34.94098354
+            ],
+            [
+              135.68605535,
+              34.93593464
+            ],
+            [
+              135.68013602,
+              34.93593464
+            ],
+            [
+              135.68013602,
+              34.94098354
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-2-0",
+        "sourceName": "右京\n三条四坊",
+        "label": "右京\n三条四坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.68309568,
+          34.93845909
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.68605535,
+              34.94098354
+            ],
+            [
+              135.69197468,
+              34.94098354
+            ],
+            [
+              135.69197468,
+              34.93593464
+            ],
+            [
+              135.68605535,
+              34.93593464
+            ],
+            [
+              135.68605535,
+              34.94098354
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-2-1",
+        "sourceName": "右京\n三条三坊",
+        "label": "右京\n三条三坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.68901502,
+          34.93845909
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.69197468,
+              34.94098354
+            ],
+            [
+              135.69781402,
+              34.94098354
+            ],
+            [
+              135.69781402,
+              34.93593464
+            ],
+            [
+              135.69197468,
+              34.93593464
+            ],
+            [
+              135.69197468,
+              34.94098354
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-2-2",
+        "sourceName": "右京\n三条二坊",
+        "label": "右京\n三条二坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.69489435,
+          34.93845909
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.69781402,
+              34.94098354
+            ],
+            [
+              135.70341339,
+              34.94098354
+            ],
+            [
+              135.70341339,
+              34.93593464
+            ],
+            [
+              135.69781402,
+              34.93593464
+            ],
+            [
+              135.69781402,
+              34.94098354
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-2-3",
+        "sourceName": "右京\n三条一坊",
+        "label": "右京\n三条一坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.70061371,
+          34.93845909
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.70341339,
+              34.94098354
+            ],
+            [
+              135.70893277,
+              34.94098354
+            ],
+            [
+              135.70893277,
+              34.93593464
+            ],
+            [
+              135.70341339,
+              34.93593464
+            ],
+            [
+              135.70341339,
+              34.94098354
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-2-4",
+        "sourceName": "左京\n三条一坊",
+        "label": "左京\n三条一坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.70617308,
+          34.93845909
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.70893277,
+              34.94098354
+            ],
+            [
+              135.71493209,
+              34.94098354
+            ],
+            [
+              135.71493209,
+              34.93593464
+            ],
+            [
+              135.70893277,
+              34.93593464
+            ],
+            [
+              135.70893277,
+              34.94098354
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-2-5",
+        "sourceName": "左京\n三条二坊",
+        "label": "左京\n三条二坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71193243,
+          34.93845909
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.71493209,
+              34.94098354
+            ],
+            [
+              135.72085142,
+              34.94098354
+            ],
+            [
+              135.72085142,
+              34.93593464
+            ],
+            [
+              135.71493209,
+              34.93593464
+            ],
+            [
+              135.71493209,
+              34.94098354
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-2-6",
+        "sourceName": "左京\n三条三坊",
+        "label": "左京\n三条三坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71789176,
+          34.93845909
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.72085142,
+              34.94098354
+            ],
+            [
+              135.72669076,
+              34.94098354
+            ],
+            [
+              135.72669076,
+              34.93593464
+            ],
+            [
+              135.72085142,
+              34.93593464
+            ],
+            [
+              135.72085142,
+              34.94098354
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-2-7",
+        "sourceName": "左京\n三条四坊",
+        "label": "左京\n三条四坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72377109,
+          34.93845909
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.68013602,
+              34.93593464
+            ],
+            [
+              135.68605535,
+              34.93593464
+            ],
+            [
+              135.68605535,
+              34.93108245
+            ],
+            [
+              135.68013602,
+              34.93108245
+            ],
+            [
+              135.68013602,
+              34.93593464
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-3-0",
+        "sourceName": "右京\n四条四坊",
+        "label": "右京\n四条四坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.68309568,
+          34.93350855
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.68605535,
+              34.93593464
+            ],
+            [
+              135.69197468,
+              34.93593464
+            ],
+            [
+              135.69197468,
+              34.93108245
+            ],
+            [
+              135.68605535,
+              34.93108245
+            ],
+            [
+              135.68605535,
+              34.93593464
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-3-1",
+        "sourceName": "右京\n四条三坊",
+        "label": "右京\n四条三坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.68901502,
+          34.93350855
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.69197468,
+              34.93593464
+            ],
+            [
+              135.69781402,
+              34.93593464
+            ],
+            [
+              135.69781402,
+              34.93108245
+            ],
+            [
+              135.69197468,
+              34.93108245
+            ],
+            [
+              135.69197468,
+              34.93593464
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-3-2",
+        "sourceName": "右京\n四条二坊",
+        "label": "右京\n四条二坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.69489435,
+          34.93350855
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.69781402,
+              34.93593464
+            ],
+            [
+              135.70341339,
+              34.93593464
+            ],
+            [
+              135.70341339,
+              34.93108245
+            ],
+            [
+              135.69781402,
+              34.93108245
+            ],
+            [
+              135.69781402,
+              34.93593464
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-3-3",
+        "sourceName": "右京\n四条一坊",
+        "label": "右京\n四条一坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.70061371,
+          34.93350855
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.70341339,
+              34.93593464
+            ],
+            [
+              135.70893277,
+              34.93593464
+            ],
+            [
+              135.70893277,
+              34.93108245
+            ],
+            [
+              135.70341339,
+              34.93108245
+            ],
+            [
+              135.70341339,
+              34.93593464
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-3-4",
+        "sourceName": "左京\n四条一坊",
+        "label": "左京\n四条一坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.70617308,
+          34.93350855
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.70893277,
+              34.93593464
+            ],
+            [
+              135.71493209,
+              34.93593464
+            ],
+            [
+              135.71493209,
+              34.93108245
+            ],
+            [
+              135.70893277,
+              34.93108245
+            ],
+            [
+              135.70893277,
+              34.93593464
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-3-5",
+        "sourceName": "左京\n四条二坊",
+        "label": "左京\n四条二坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71193243,
+          34.93350855
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.71493209,
+              34.93593464
+            ],
+            [
+              135.72085142,
+              34.93593464
+            ],
+            [
+              135.72085142,
+              34.93108245
+            ],
+            [
+              135.71493209,
+              34.93108245
+            ],
+            [
+              135.71493209,
+              34.93593464
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-3-6",
+        "sourceName": "左京\n四条三坊",
+        "label": "左京\n四条三坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71789176,
+          34.93350855
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.72085142,
+              34.93593464
+            ],
+            [
+              135.72669076,
+              34.93593464
+            ],
+            [
+              135.72669076,
+              34.93108245
+            ],
+            [
+              135.72085142,
+              34.93108245
+            ],
+            [
+              135.72085142,
+              34.93593464
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-3-7",
+        "sourceName": "左京\n四条四坊",
+        "label": "左京\n四条四坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72377109,
+          34.93350855
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.68013602,
+              34.93108245
+            ],
+            [
+              135.68605535,
+              34.93108245
+            ],
+            [
+              135.68605535,
+              34.92616469
+            ],
+            [
+              135.68013602,
+              34.92616469
+            ],
+            [
+              135.68013602,
+              34.93108245
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-4-0",
+        "sourceName": "右京\n五条四坊",
+        "label": "右京\n五条四坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.68309568,
+          34.92862357
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.68605535,
+              34.93108245
+            ],
+            [
+              135.69197468,
+              34.93108245
+            ],
+            [
+              135.69197468,
+              34.92616469
+            ],
+            [
+              135.68605535,
+              34.92616469
+            ],
+            [
+              135.68605535,
+              34.93108245
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-4-1",
+        "sourceName": "右京\n五条三坊",
+        "label": "右京\n五条三坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.68901502,
+          34.92862357
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.69197468,
+              34.93108245
+            ],
+            [
+              135.69781402,
+              34.93108245
+            ],
+            [
+              135.69781402,
+              34.92616469
+            ],
+            [
+              135.69197468,
+              34.92616469
+            ],
+            [
+              135.69197468,
+              34.93108245
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-4-2",
+        "sourceName": "右京\n五条二坊",
+        "label": "右京\n五条二坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.69489435,
+          34.92862357
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.69781402,
+              34.93108245
+            ],
+            [
+              135.70341339,
+              34.93108245
+            ],
+            [
+              135.70341339,
+              34.92616469
+            ],
+            [
+              135.69781402,
+              34.92616469
+            ],
+            [
+              135.69781402,
+              34.93108245
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-4-3",
+        "sourceName": "右京\n五条一坊",
+        "label": "右京\n五条一坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.70061371,
+          34.92862357
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.70341339,
+              34.93108245
+            ],
+            [
+              135.70893277,
+              34.93108245
+            ],
+            [
+              135.70893277,
+              34.92616469
+            ],
+            [
+              135.70341339,
+              34.92616469
+            ],
+            [
+              135.70341339,
+              34.93108245
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-4-4",
+        "sourceName": "左京\n五条一坊",
+        "label": "左京\n五条一坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.70617308,
+          34.92862357
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.70893277,
+              34.93108245
+            ],
+            [
+              135.71493209,
+              34.93108245
+            ],
+            [
+              135.71493209,
+              34.92616469
+            ],
+            [
+              135.70893277,
+              34.92616469
+            ],
+            [
+              135.70893277,
+              34.93108245
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-4-5",
+        "sourceName": "左京\n五条二坊",
+        "label": "左京\n五条二坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71193243,
+          34.92862357
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.71493209,
+              34.93108245
+            ],
+            [
+              135.72085142,
+              34.93108245
+            ],
+            [
+              135.72085142,
+              34.92616469
+            ],
+            [
+              135.71493209,
+              34.92616469
+            ],
+            [
+              135.71493209,
+              34.93108245
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-4-6",
+        "sourceName": "左京\n五条三坊",
+        "label": "左京\n五条三坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71789176,
+          34.92862357
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.72085142,
+              34.93108245
+            ],
+            [
+              135.72669076,
+              34.93108245
+            ],
+            [
+              135.72669076,
+              34.92616469
+            ],
+            [
+              135.72085142,
+              34.92616469
+            ],
+            [
+              135.72085142,
+              34.93108245
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-4-7",
+        "sourceName": "左京\n五条四坊",
+        "label": "左京\n五条四坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72377109,
+          34.92862357
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.68013602,
+              34.92616469
+            ],
+            [
+              135.68605535,
+              34.92616469
+            ],
+            [
+              135.68605535,
+              34.9213125
+            ],
+            [
+              135.68013602,
+              34.9213125
+            ],
+            [
+              135.68013602,
+              34.92616469
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-5-0",
+        "sourceName": "右京\n六条四坊",
+        "label": "右京\n六条四坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.68309568,
+          34.92373859
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.68605535,
+              34.92616469
+            ],
+            [
+              135.69197468,
+              34.92616469
+            ],
+            [
+              135.69197468,
+              34.9213125
+            ],
+            [
+              135.68605535,
+              34.9213125
+            ],
+            [
+              135.68605535,
+              34.92616469
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-5-1",
+        "sourceName": "右京\n六条三坊",
+        "label": "右京\n六条三坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.68901502,
+          34.92373859
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.69197468,
+              34.92616469
+            ],
+            [
+              135.69781402,
+              34.92616469
+            ],
+            [
+              135.69781402,
+              34.9213125
+            ],
+            [
+              135.69197468,
+              34.9213125
+            ],
+            [
+              135.69197468,
+              34.92616469
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-5-2",
+        "sourceName": "右京\n六条二坊",
+        "label": "右京\n六条二坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.69489435,
+          34.92373859
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.69781402,
+              34.92616469
+            ],
+            [
+              135.70341339,
+              34.92616469
+            ],
+            [
+              135.70341339,
+              34.9213125
+            ],
+            [
+              135.69781402,
+              34.9213125
+            ],
+            [
+              135.69781402,
+              34.92616469
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-5-3",
+        "sourceName": "右京\n六条一坊",
+        "label": "右京\n六条一坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.70061371,
+          34.92373859
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.70341339,
+              34.92616469
+            ],
+            [
+              135.70893277,
+              34.92616469
+            ],
+            [
+              135.70893277,
+              34.9213125
+            ],
+            [
+              135.70341339,
+              34.9213125
+            ],
+            [
+              135.70341339,
+              34.92616469
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-5-4",
+        "sourceName": "左京\n六条一坊",
+        "label": "左京\n六条一坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.70617308,
+          34.92373859
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.70893277,
+              34.92616469
+            ],
+            [
+              135.71493209,
+              34.92616469
+            ],
+            [
+              135.71493209,
+              34.9213125
+            ],
+            [
+              135.70893277,
+              34.9213125
+            ],
+            [
+              135.70893277,
+              34.92616469
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-5-5",
+        "sourceName": "左京\n六条二坊",
+        "label": "左京\n六条二坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71193243,
+          34.92373859
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.71493209,
+              34.92616469
+            ],
+            [
+              135.72085142,
+              34.92616469
+            ],
+            [
+              135.72085142,
+              34.9213125
+            ],
+            [
+              135.71493209,
+              34.9213125
+            ],
+            [
+              135.71493209,
+              34.92616469
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-5-6",
+        "sourceName": "左京\n六条三坊",
+        "label": "左京\n六条三坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71789176,
+          34.92373859
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.72085142,
+              34.92616469
+            ],
+            [
+              135.72669076,
+              34.92616469
+            ],
+            [
+              135.72669076,
+              34.9213125
+            ],
+            [
+              135.72085142,
+              34.9213125
+            ],
+            [
+              135.72085142,
+              34.92616469
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-5-7",
+        "sourceName": "左京\n六条四坊",
+        "label": "左京\n六条四坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72377109,
+          34.92373859
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.68013602,
+              34.9213125
+            ],
+            [
+              135.68605535,
+              34.9213125
+            ],
+            [
+              135.68605535,
+              34.91639473
+            ],
+            [
+              135.68013602,
+              34.91639473
+            ],
+            [
+              135.68013602,
+              34.9213125
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-6-0",
+        "sourceName": "右京\n七条四坊",
+        "label": "右京\n七条四坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.68309568,
+          34.91885362
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.68605535,
+              34.9213125
+            ],
+            [
+              135.69197468,
+              34.9213125
+            ],
+            [
+              135.69197468,
+              34.91639473
+            ],
+            [
+              135.68605535,
+              34.91639473
+            ],
+            [
+              135.68605535,
+              34.9213125
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-6-1",
+        "sourceName": "右京\n七条三坊",
+        "label": "右京\n七条三坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.68901502,
+          34.91885362
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.69197468,
+              34.9213125
+            ],
+            [
+              135.69781402,
+              34.9213125
+            ],
+            [
+              135.69781402,
+              34.91639473
+            ],
+            [
+              135.69197468,
+              34.91639473
+            ],
+            [
+              135.69197468,
+              34.9213125
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-6-2",
+        "sourceName": "右京\n七条二坊",
+        "label": "右京\n七条二坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.69489435,
+          34.91885362
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.69781402,
+              34.9213125
+            ],
+            [
+              135.70341339,
+              34.9213125
+            ],
+            [
+              135.70341339,
+              34.91639473
+            ],
+            [
+              135.69781402,
+              34.91639473
+            ],
+            [
+              135.69781402,
+              34.9213125
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-6-3",
+        "sourceName": "右京\n七条一坊",
+        "label": "右京\n七条一坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.70061371,
+          34.91885362
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.70341339,
+              34.9213125
+            ],
+            [
+              135.70893277,
+              34.9213125
+            ],
+            [
+              135.70893277,
+              34.91639473
+            ],
+            [
+              135.70341339,
+              34.91639473
+            ],
+            [
+              135.70341339,
+              34.9213125
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-6-4",
+        "sourceName": "左京\n七条一坊",
+        "label": "左京\n七条一坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.70617308,
+          34.91885362
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.70893277,
+              34.9213125
+            ],
+            [
+              135.71493209,
+              34.9213125
+            ],
+            [
+              135.71493209,
+              34.91639473
+            ],
+            [
+              135.70893277,
+              34.91639473
+            ],
+            [
+              135.70893277,
+              34.9213125
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-6-5",
+        "sourceName": "左京\n七条二坊",
+        "label": "左京\n七条二坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71193243,
+          34.91885362
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.71493209,
+              34.9213125
+            ],
+            [
+              135.72085142,
+              34.9213125
+            ],
+            [
+              135.72085142,
+              34.91639473
+            ],
+            [
+              135.71493209,
+              34.91639473
+            ],
+            [
+              135.71493209,
+              34.9213125
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-6-6",
+        "sourceName": "左京\n七条三坊",
+        "label": "左京\n七条三坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71789176,
+          34.91885362
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.72085142,
+              34.9213125
+            ],
+            [
+              135.72669076,
+              34.9213125
+            ],
+            [
+              135.72669076,
+              34.91639473
+            ],
+            [
+              135.72085142,
+              34.91639473
+            ],
+            [
+              135.72085142,
+              34.9213125
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-6-7",
+        "sourceName": "左京\n七条四坊",
+        "label": "左京\n七条四坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72377109,
+          34.91885362
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.68013602,
+              34.91639473
+            ],
+            [
+              135.68605535,
+              34.91639473
+            ],
+            [
+              135.68605535,
+              34.91160811
+            ],
+            [
+              135.68013602,
+              34.91160811
+            ],
+            [
+              135.68013602,
+              34.91639473
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-7-0",
+        "sourceName": "右京\n八条四坊",
+        "label": "右京\n八条四坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.68309568,
+          34.91400142
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.68605535,
+              34.91639473
+            ],
+            [
+              135.69197468,
+              34.91639473
+            ],
+            [
+              135.69197468,
+              34.91160811
+            ],
+            [
+              135.68605535,
+              34.91160811
+            ],
+            [
+              135.68605535,
+              34.91639473
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-7-1",
+        "sourceName": "右京\n八条三坊",
+        "label": "右京\n八条三坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.68901502,
+          34.91400142
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.69197468,
+              34.91639473
+            ],
+            [
+              135.69781402,
+              34.91639473
+            ],
+            [
+              135.69781402,
+              34.91160811
+            ],
+            [
+              135.69197468,
+              34.91160811
+            ],
+            [
+              135.69197468,
+              34.91639473
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-7-2",
+        "sourceName": "右京\n八条二坊",
+        "label": "右京\n八条二坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.69489435,
+          34.91400142
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.69781402,
+              34.91639473
+            ],
+            [
+              135.70341339,
+              34.91639473
+            ],
+            [
+              135.70341339,
+              34.91160811
+            ],
+            [
+              135.69781402,
+              34.91160811
+            ],
+            [
+              135.69781402,
+              34.91639473
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-7-3",
+        "sourceName": "右京\n八条一坊",
+        "label": "右京\n八条一坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.70061371,
+          34.91400142
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.70341339,
+              34.91639473
+            ],
+            [
+              135.70893277,
+              34.91639473
+            ],
+            [
+              135.70893277,
+              34.91160811
+            ],
+            [
+              135.70341339,
+              34.91160811
+            ],
+            [
+              135.70341339,
+              34.91639473
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-7-4",
+        "sourceName": "左京\n八条一坊",
+        "label": "左京\n八条一坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.70617308,
+          34.91400142
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.70893277,
+              34.91639473
+            ],
+            [
+              135.71493209,
+              34.91639473
+            ],
+            [
+              135.71493209,
+              34.91160811
+            ],
+            [
+              135.70893277,
+              34.91160811
+            ],
+            [
+              135.70893277,
+              34.91639473
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-7-5",
+        "sourceName": "左京\n八条二坊",
+        "label": "左京\n八条二坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71193243,
+          34.91400142
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.71493209,
+              34.91639473
+            ],
+            [
+              135.72085142,
+              34.91639473
+            ],
+            [
+              135.72085142,
+              34.91160811
+            ],
+            [
+              135.71493209,
+              34.91160811
+            ],
+            [
+              135.71493209,
+              34.91639473
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-7-6",
+        "sourceName": "左京\n八条三坊",
+        "label": "左京\n八条三坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71789176,
+          34.91400142
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.72085142,
+              34.91639473
+            ],
+            [
+              135.72669076,
+              34.91639473
+            ],
+            [
+              135.72669076,
+              34.91160811
+            ],
+            [
+              135.72085142,
+              34.91160811
+            ],
+            [
+              135.72085142,
+              34.91639473
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-7-7",
+        "sourceName": "左京\n八条四坊",
+        "label": "左京\n八条四坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72377109,
+          34.91400142
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.68013602,
+              34.91160811
+            ],
+            [
+              135.68605535,
+              34.91160811
+            ],
+            [
+              135.68605535,
+              34.90682149
+            ],
+            [
+              135.68013602,
+              34.90682149
+            ],
+            [
+              135.68013602,
+              34.91160811
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-8-0",
+        "sourceName": "右京\n九条四坊",
+        "label": "右京\n九条四坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.68309568,
+          34.9092148
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.68605535,
+              34.91160811
+            ],
+            [
+              135.69197468,
+              34.91160811
+            ],
+            [
+              135.69197468,
+              34.90682149
+            ],
+            [
+              135.68605535,
+              34.90682149
+            ],
+            [
+              135.68605535,
+              34.91160811
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-8-1",
+        "sourceName": "右京\n九条三坊",
+        "label": "右京\n九条三坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.68901502,
+          34.9092148
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.69197468,
+              34.91160811
+            ],
+            [
+              135.69781402,
+              34.91160811
+            ],
+            [
+              135.69781402,
+              34.90682149
+            ],
+            [
+              135.69197468,
+              34.90682149
+            ],
+            [
+              135.69197468,
+              34.91160811
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-8-2",
+        "sourceName": "右京\n九条二坊",
+        "label": "右京\n九条二坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.69489435,
+          34.9092148
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.69781402,
+              34.91160811
+            ],
+            [
+              135.70341339,
+              34.91160811
+            ],
+            [
+              135.70341339,
+              34.90682149
+            ],
+            [
+              135.69781402,
+              34.90682149
+            ],
+            [
+              135.69781402,
+              34.91160811
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-8-3",
+        "sourceName": "右京\n九条一坊",
+        "label": "右京\n九条一坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.70061371,
+          34.9092148
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.70341339,
+              34.91160811
+            ],
+            [
+              135.70893277,
+              34.91160811
+            ],
+            [
+              135.70893277,
+              34.90682149
+            ],
+            [
+              135.70341339,
+              34.90682149
+            ],
+            [
+              135.70341339,
+              34.91160811
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-8-4",
+        "sourceName": "左京\n九条一坊",
+        "label": "左京\n九条一坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.70617308,
+          34.9092148
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.70893277,
+              34.91160811
+            ],
+            [
+              135.71493209,
+              34.91160811
+            ],
+            [
+              135.71493209,
+              34.90682149
+            ],
+            [
+              135.70893277,
+              34.90682149
+            ],
+            [
+              135.70893277,
+              34.91160811
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-8-5",
+        "sourceName": "左京\n九条二坊",
+        "label": "左京\n九条二坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71193243,
+          34.9092148
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.71493209,
+              34.91160811
+            ],
+            [
+              135.72085142,
+              34.91160811
+            ],
+            [
+              135.72085142,
+              34.90682149
+            ],
+            [
+              135.71493209,
+              34.90682149
+            ],
+            [
+              135.71493209,
+              34.91160811
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-8-6",
+        "sourceName": "左京\n九条三坊",
+        "label": "左京\n九条三坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71789176,
+          34.9092148
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.72085142,
+              34.91160811
+            ],
+            [
+              135.72669076,
+              34.91160811
+            ],
+            [
+              135.72669076,
+              34.90682149
+            ],
+            [
+              135.72085142,
+              34.90682149
+            ],
+            [
+              135.72085142,
+              34.91160811
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-ward-8-7",
+        "sourceName": "左京\n九条四坊",
+        "label": "左京\n九条四坊",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72377109,
+          34.9092148
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.68161585,
+              34.95245832
+            ],
+            [
+              135.68161585,
+              34.90682149
+            ]
+          ],
+          [
+            [
+              135.68309568,
+              34.95245832
+            ],
+            [
+              135.68309568,
+              34.90682149
+            ]
+          ],
+          [
+            [
+              135.68457552,
+              34.95245832
+            ],
+            [
+              135.68457552,
+              34.90682149
+            ]
+          ],
+          [
+            [
+              135.68753518,
+              34.95245832
+            ],
+            [
+              135.68753518,
+              34.90682149
+            ]
+          ],
+          [
+            [
+              135.68901502,
+              34.95245832
+            ],
+            [
+              135.68901502,
+              34.90682149
+            ]
+          ],
+          [
+            [
+              135.69049485,
+              34.95245832
+            ],
+            [
+              135.69049485,
+              34.90682149
+            ]
+          ],
+          [
+            [
+              135.69343452,
+              34.95245832
+            ],
+            [
+              135.69343452,
+              34.90682149
+            ]
+          ],
+          [
+            [
+              135.69489435,
+              34.95245832
+            ],
+            [
+              135.69489435,
+              34.90682149
+            ]
+          ],
+          [
+            [
+              135.69635419,
+              34.95245832
+            ],
+            [
+              135.69635419,
+              34.90682149
+            ]
+          ],
+          [
+            [
+              135.69921386,
+              34.94098354
+            ],
+            [
+              135.69921386,
+              34.90682149
+            ]
+          ],
+          [
+            [
+              135.70061371,
+              34.94098354
+            ],
+            [
+              135.70061371,
+              34.90682149
+            ]
+          ],
+          [
+            [
+              135.70201355,
+              34.94098354
+            ],
+            [
+              135.70201355,
+              34.90682149
+            ]
+          ],
+          [
+            [
+              135.70479324,
+              34.94098354
+            ],
+            [
+              135.70479324,
+              34.90682149
+            ]
+          ],
+          [
+            [
+              135.70617308,
+              34.94098354
+            ],
+            [
+              135.70617308,
+              34.90682149
+            ]
+          ],
+          [
+            [
+              135.70755292,
+              34.94098354
+            ],
+            [
+              135.70755292,
+              34.90682149
+            ]
+          ],
+          [
+            [
+              135.7104326,
+              34.95245832
+            ],
+            [
+              135.7104326,
+              34.90682149
+            ]
+          ],
+          [
+            [
+              135.71193243,
+              34.95245832
+            ],
+            [
+              135.71193243,
+              34.90682149
+            ]
+          ],
+          [
+            [
+              135.71343226,
+              34.95245832
+            ],
+            [
+              135.71343226,
+              34.90682149
+            ]
+          ],
+          [
+            [
+              135.71641192,
+              34.95245832
+            ],
+            [
+              135.71641192,
+              34.90682149
+            ]
+          ],
+          [
+            [
+              135.71789176,
+              34.95245832
+            ],
+            [
+              135.71789176,
+              34.90682149
+            ]
+          ],
+          [
+            [
+              135.71937159,
+              34.95245832
+            ],
+            [
+              135.71937159,
+              34.90682149
+            ]
+          ],
+          [
+            [
+              135.72231126,
+              34.95245832
+            ],
+            [
+              135.72231126,
+              34.90682149
+            ]
+          ],
+          [
+            [
+              135.72377109,
+              34.95245832
+            ],
+            [
+              135.72377109,
+              34.90682149
+            ]
+          ],
+          [
+            [
+              135.72523093,
+              34.95245832
+            ],
+            [
+              135.72523093,
+              34.90682149
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.94906507
+            ],
+            [
+              135.69781402,
+              34.94906507
+            ]
+          ],
+          [
+            [
+              135.70893277,
+              34.94906507
+            ],
+            [
+              135.72669076,
+              34.94906507
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.94783563
+            ],
+            [
+              135.69781402,
+              34.94783563
+            ]
+          ],
+          [
+            [
+              135.70893277,
+              34.94783563
+            ],
+            [
+              135.72669076,
+              34.94783563
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.94660619
+            ],
+            [
+              135.69781402,
+              34.94660619
+            ]
+          ],
+          [
+            [
+              135.70893277,
+              34.94660619
+            ],
+            [
+              135.72669076,
+              34.94660619
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.94427844
+            ],
+            [
+              135.69781402,
+              34.94427844
+            ]
+          ],
+          [
+            [
+              135.70893277,
+              34.94427844
+            ],
+            [
+              135.72669076,
+              34.94427844
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.94318014
+            ],
+            [
+              135.69781402,
+              34.94318014
+            ]
+          ],
+          [
+            [
+              135.70893277,
+              34.94318014
+            ],
+            [
+              135.72669076,
+              34.94318014
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.94208184
+            ],
+            [
+              135.69781402,
+              34.94208184
+            ]
+          ],
+          [
+            [
+              135.70893277,
+              34.94208184
+            ],
+            [
+              135.72669076,
+              34.94208184
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.93972132
+            ],
+            [
+              135.72669076,
+              34.93972132
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.93845909
+            ],
+            [
+              135.72669076,
+              34.93845909
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.93719687
+            ],
+            [
+              135.72669076,
+              34.93719687
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.93472159
+            ],
+            [
+              135.72669076,
+              34.93472159
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.93350855
+            ],
+            [
+              135.72669076,
+              34.93350855
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.9322955
+            ],
+            [
+              135.72669076,
+              34.9322955
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.92985301
+            ],
+            [
+              135.72669076,
+              34.92985301
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.92862357
+            ],
+            [
+              135.72669076,
+              34.92862357
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.92739413
+            ],
+            [
+              135.72669076,
+              34.92739413
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.92495164
+            ],
+            [
+              135.72669076,
+              34.92495164
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.92373859
+            ],
+            [
+              135.72669076,
+              34.92373859
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.92252554
+            ],
+            [
+              135.72669076,
+              34.92252554
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.92008306
+            ],
+            [
+              135.72669076,
+              34.92008306
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.91885362
+            ],
+            [
+              135.72669076,
+              34.91885362
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.91762418
+            ],
+            [
+              135.72669076,
+              34.91762418
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.91519808
+            ],
+            [
+              135.72669076,
+              34.91519808
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.91400142
+            ],
+            [
+              135.72669076,
+              34.91400142
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.91280477
+            ],
+            [
+              135.72669076,
+              34.91280477
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.91041146
+            ],
+            [
+              135.72669076,
+              34.91041146
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.9092148
+            ],
+            [
+              135.72669076,
+              34.9092148
+            ]
+          ],
+          [
+            [
+              135.68013602,
+              34.90801815
+            ],
+            [
+              135.72669076,
+              34.90801815
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-minor-road-grid",
+        "sourceName": "长冈京小路格网（图示参考）",
+        "label": "",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/site/rekishi/1299.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方条坊复原图配准参考，非实测遗迹界线",
+        "note": "按向日市保存活用计划图1-1的黑色条坊格网提取；沿用全城图的单点、比例尺和近似北向配准，不能宣称测绘精度。条由北向南、坊自朱雀大路向东西编号；宫域内不套用居住坊格网。名称采用中文；町级编号及单个宅地功能未确定，未虚构。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.69141474,
+          34.92006666
+        ],
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "detailKind": "小路示意",
+        "planReference": true
+      }
+    }
+  ]
+}

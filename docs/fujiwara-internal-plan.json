@@ -1,0 +1,511 @@
+{
+  "source": "https://www.city.kashihara.nara.jp/material/files/group/21/fujiwara_202507-nintei.pdf",
+  "pdfPage": 74,
+  "figure": 17,
+  "wallPixelFrame": [
+    623,
+    287,
+    984,
+    639
+  ],
+  "method": "Nest schematic drawn partitions in dimension-reference enclosure; preserve archaeological geometries independently. Internal proportions are not survey accuracy.",
+  "added": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.80563505,
+              34.50466505
+            ],
+            [
+              135.80895875,
+              34.50466505
+            ],
+            [
+              135.80895875,
+              34.50121617
+            ],
+            [
+              135.80563505,
+              34.50121617
+            ],
+            [
+              135.80563505,
+              34.50466505
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "藤原京",
+        "sourceId": "fujiwara-layout-north-sector",
+        "sourceName": "藤原宫北部宫区",
+        "label": "北部宫区",
+        "sourceUrl": "https://www.city.kashihara.nara.jp/material/files/group/21/fujiwara_202507-nintei.pdf",
+        "sourceTitle": "橿原市《特别史迹藤原宫址保存活用计划》（2025）图17，PDF第74页",
+        "referenceUrl": "https://www.city.kashihara.nara.jp/kanko_bunka_sports/rekishi_bunkazai/6/6/11386.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方宫内复原示意图嵌套参考，非实测遗迹界线",
+        "note": "按保存活用计划图17的宫内框线描绘，将图中宫墙框归一到已接入的925×907米宫墙尺寸参考面。原图用于建筑布局说明，内部构件比例有概化；此嵌套不能提供界址精度，也不能取代发掘遗迹矢量。北部宫区图框包括内里和大极殿院，不将其冒充独立寝宫围墙；东、西官署未指定未经证实的机构名称。图示朝堂院南缘与现有南门矢量存在约百米偏差，原始门址保留，不能按示意图移动遗迹。",
+        "capitalSiteKey": "ancient-site:world-fujiwara",
+        "capitalSiteName": "藤原京",
+        "capitalSiteDisplayName": "藤原京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.8072969,
+          34.50294061
+        ],
+        "referenceDimensionsMeters": [
+          925,
+          907
+        ],
+        "anchorFeatureId": "fujiwara-way-601591439",
+        "capitalPlanDetail": true,
+        "planReference": true,
+        "detailKind": "宫内布局参考"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.80664054,
+              34.50262813
+            ],
+            [
+              135.80798119,
+              34.50262813
+            ],
+            [
+              135.80798119,
+              34.50121617
+            ],
+            [
+              135.80664054,
+              34.50121617
+            ],
+            [
+              135.80664054,
+              34.50262813
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "藤原京",
+        "sourceId": "fujiwara-layout-daigokuden",
+        "sourceName": "藤原宫大极殿院",
+        "label": "大极殿院",
+        "sourceUrl": "https://www.city.kashihara.nara.jp/material/files/group/21/fujiwara_202507-nintei.pdf",
+        "sourceTitle": "橿原市《特别史迹藤原宫址保存活用计划》（2025）图17，PDF第74页",
+        "referenceUrl": "https://www.city.kashihara.nara.jp/kanko_bunka_sports/rekishi_bunkazai/6/6/11386.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方宫内复原示意图嵌套参考，非实测遗迹界线",
+        "note": "按保存活用计划图17的宫内框线描绘，将图中宫墙框归一到已接入的925×907米宫墙尺寸参考面。原图用于建筑布局说明，内部构件比例有概化；此嵌套不能提供界址精度，也不能取代发掘遗迹矢量。北部宫区图框包括内里和大极殿院，不将其冒充独立寝宫围墙；东、西官署未指定未经证实的机构名称。图示朝堂院南缘与现有南门矢量存在约百米偏差，原始门址保留，不能按示意图移动遗迹。",
+        "capitalSiteKey": "ancient-site:world-fujiwara",
+        "capitalSiteName": "藤原京",
+        "capitalSiteDisplayName": "藤原京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.80731086,
+          34.50192215
+        ],
+        "referenceDimensionsMeters": [
+          925,
+          907
+        ],
+        "anchorFeatureId": "fujiwara-way-601591439",
+        "capitalPlanDetail": true,
+        "planReference": true,
+        "detailKind": "宫内布局参考"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.80591435,
+              34.50121617
+            ],
+            [
+              135.80862358,
+              34.50121617
+            ],
+            [
+              135.80862358,
+              34.49834596
+            ],
+            [
+              135.80591435,
+              34.49834596
+            ],
+            [
+              135.80591435,
+              34.50121617
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "藤原京",
+        "sourceId": "fujiwara-layout-chodoin",
+        "sourceName": "藤原宫朝堂院",
+        "label": "朝堂院",
+        "sourceUrl": "https://www.city.kashihara.nara.jp/material/files/group/21/fujiwara_202507-nintei.pdf",
+        "sourceTitle": "橿原市《特别史迹藤原宫址保存活用计划》（2025）图17，PDF第74页",
+        "referenceUrl": "https://www.city.kashihara.nara.jp/kanko_bunka_sports/rekishi_bunkazai/6/6/11386.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方宫内复原示意图嵌套参考，非实测遗迹界线",
+        "note": "按保存活用计划图17的宫内框线描绘，将图中宫墙框归一到已接入的925×907米宫墙尺寸参考面。原图用于建筑布局说明，内部构件比例有概化；此嵌套不能提供界址精度，也不能取代发掘遗迹矢量。北部宫区图框包括内里和大极殿院，不将其冒充独立寝宫围墙；东、西官署未指定未经证实的机构名称。图示朝堂院南缘与现有南门矢量存在约百米偏差，原始门址保留，不能按示意图移动遗迹。",
+        "capitalSiteKey": "ancient-site:world-fujiwara",
+        "capitalSiteName": "藤原京",
+        "capitalSiteDisplayName": "藤原京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.80726897,
+          34.49978107
+        ],
+        "referenceDimensionsMeters": [
+          925,
+          907
+        ],
+        "anchorFeatureId": "fujiwara-way-601591439",
+        "capitalPlanDetail": true,
+        "planReference": true,
+        "detailKind": "宫内布局参考"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.80236722,
+              34.50121617
+            ],
+            [
+              135.80440612,
+              34.50121617
+            ],
+            [
+              135.80440612,
+              34.49885519
+            ],
+            [
+              135.80236722,
+              34.49885519
+            ],
+            [
+              135.80236722,
+              34.50121617
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "藤原京",
+        "sourceId": "fujiwara-layout-west-office-n",
+        "sourceName": "藤原宫西侧官署区（北）",
+        "label": "西侧官署（北）",
+        "sourceUrl": "https://www.city.kashihara.nara.jp/material/files/group/21/fujiwara_202507-nintei.pdf",
+        "sourceTitle": "橿原市《特别史迹藤原宫址保存活用计划》（2025）图17，PDF第74页",
+        "referenceUrl": "https://www.city.kashihara.nara.jp/kanko_bunka_sports/rekishi_bunkazai/6/6/11386.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方宫内复原示意图嵌套参考，非实测遗迹界线",
+        "note": "按保存活用计划图17的宫内框线描绘，将图中宫墙框归一到已接入的925×907米宫墙尺寸参考面。原图用于建筑布局说明，内部构件比例有概化；此嵌套不能提供界址精度，也不能取代发掘遗迹矢量。北部宫区图框包括内里和大极殿院，不将其冒充独立寝宫围墙；东、西官署未指定未经证实的机构名称。图示朝堂院南缘与现有南门矢量存在约百米偏差，原始门址保留，不能按示意图移动遗迹。",
+        "capitalSiteKey": "ancient-site:world-fujiwara",
+        "capitalSiteName": "藤原京",
+        "capitalSiteDisplayName": "藤原京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.80338667,
+          34.50003568
+        ],
+        "referenceDimensionsMeters": [
+          925,
+          907
+        ],
+        "anchorFeatureId": "fujiwara-way-601591439",
+        "capitalPlanDetail": true,
+        "planReference": true,
+        "detailKind": "宫内布局参考"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.80236722,
+              34.49885519
+            ],
+            [
+              135.80440612,
+              34.49885519
+            ],
+            [
+              135.80440612,
+              34.49714233
+            ],
+            [
+              135.80236722,
+              34.49714233
+            ],
+            [
+              135.80236722,
+              34.49885519
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "藤原京",
+        "sourceId": "fujiwara-layout-west-office-s",
+        "sourceName": "藤原宫西侧官署区（南）",
+        "label": "西侧官署（南）",
+        "sourceUrl": "https://www.city.kashihara.nara.jp/material/files/group/21/fujiwara_202507-nintei.pdf",
+        "sourceTitle": "橿原市《特别史迹藤原宫址保存活用计划》（2025）图17，PDF第74页",
+        "referenceUrl": "https://www.city.kashihara.nara.jp/kanko_bunka_sports/rekishi_bunkazai/6/6/11386.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方宫内复原示意图嵌套参考，非实测遗迹界线",
+        "note": "按保存活用计划图17的宫内框线描绘，将图中宫墙框归一到已接入的925×907米宫墙尺寸参考面。原图用于建筑布局说明，内部构件比例有概化；此嵌套不能提供界址精度，也不能取代发掘遗迹矢量。北部宫区图框包括内里和大极殿院，不将其冒充独立寝宫围墙；东、西官署未指定未经证实的机构名称。图示朝堂院南缘与现有南门矢量存在约百米偏差，原始门址保留，不能按示意图移动遗迹。",
+        "capitalSiteKey": "ancient-site:world-fujiwara",
+        "capitalSiteName": "藤原京",
+        "capitalSiteDisplayName": "藤原京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.80338667,
+          34.49799876
+        ],
+        "referenceDimensionsMeters": [
+          925,
+          907
+        ],
+        "anchorFeatureId": "fujiwara-way-601591439",
+        "capitalPlanDetail": true,
+        "planReference": true,
+        "detailKind": "宫内布局参考"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.80932184,
+              34.50346141
+            ],
+            [
+              135.81007595,
+              34.50346141
+            ],
+            [
+              135.81007595,
+              34.50272071
+            ],
+            [
+              135.80932184,
+              34.50272071
+            ],
+            [
+              135.80932184,
+              34.50346141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "藤原京",
+        "sourceId": "fujiwara-layout-east-court-n",
+        "sourceName": "藤原宫东侧官署院落（北）",
+        "label": "东侧院落（北）",
+        "sourceUrl": "https://www.city.kashihara.nara.jp/material/files/group/21/fujiwara_202507-nintei.pdf",
+        "sourceTitle": "橿原市《特别史迹藤原宫址保存活用计划》（2025）图17，PDF第74页",
+        "referenceUrl": "https://www.city.kashihara.nara.jp/kanko_bunka_sports/rekishi_bunkazai/6/6/11386.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方宫内复原示意图嵌套参考，非实测遗迹界线",
+        "note": "按保存活用计划图17的宫内框线描绘，将图中宫墙框归一到已接入的925×907米宫墙尺寸参考面。原图用于建筑布局说明，内部构件比例有概化；此嵌套不能提供界址精度，也不能取代发掘遗迹矢量。北部宫区图框包括内里和大极殿院，不将其冒充独立寝宫围墙；东、西官署未指定未经证实的机构名称。图示朝堂院南缘与现有南门矢量存在约百米偏差，原始门址保留，不能按示意图移动遗迹。",
+        "capitalSiteKey": "ancient-site:world-fujiwara",
+        "capitalSiteName": "藤原京",
+        "capitalSiteDisplayName": "藤原京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.8096989,
+          34.50309106
+        ],
+        "referenceDimensionsMeters": [
+          925,
+          907
+        ],
+        "anchorFeatureId": "fujiwara-way-601591439",
+        "capitalPlanDetail": true,
+        "planReference": true,
+        "detailKind": "宫内布局参考"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.80932184,
+              34.50265127
+            ],
+            [
+              135.81007595,
+              34.50265127
+            ],
+            [
+              135.81007595,
+              34.50200316
+            ],
+            [
+              135.80932184,
+              34.50200316
+            ],
+            [
+              135.80932184,
+              34.50265127
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "藤原京",
+        "sourceId": "fujiwara-layout-east-court-m",
+        "sourceName": "藤原宫东侧官署院落（中）",
+        "label": "东侧院落（中）",
+        "sourceUrl": "https://www.city.kashihara.nara.jp/material/files/group/21/fujiwara_202507-nintei.pdf",
+        "sourceTitle": "橿原市《特别史迹藤原宫址保存活用计划》（2025）图17，PDF第74页",
+        "referenceUrl": "https://www.city.kashihara.nara.jp/kanko_bunka_sports/rekishi_bunkazai/6/6/11386.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方宫内复原示意图嵌套参考，非实测遗迹界线",
+        "note": "按保存活用计划图17的宫内框线描绘，将图中宫墙框归一到已接入的925×907米宫墙尺寸参考面。原图用于建筑布局说明，内部构件比例有概化；此嵌套不能提供界址精度，也不能取代发掘遗迹矢量。北部宫区图框包括内里和大极殿院，不将其冒充独立寝宫围墙；东、西官署未指定未经证实的机构名称。图示朝堂院南缘与现有南门矢量存在约百米偏差，原始门址保留，不能按示意图移动遗迹。",
+        "capitalSiteKey": "ancient-site:world-fujiwara",
+        "capitalSiteName": "藤原京",
+        "capitalSiteDisplayName": "藤原京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.8096989,
+          34.50232722
+        ],
+        "referenceDimensionsMeters": [
+          925,
+          907
+        ],
+        "anchorFeatureId": "fujiwara-way-601591439",
+        "capitalPlanDetail": true,
+        "planReference": true,
+        "detailKind": "宫内布局参考"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.80932184,
+              34.50193372
+            ],
+            [
+              135.81007595,
+              34.50193372
+            ],
+            [
+              135.81007595,
+              34.5013319
+            ],
+            [
+              135.80932184,
+              34.5013319
+            ],
+            [
+              135.80932184,
+              34.50193372
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "藤原京",
+        "sourceId": "fujiwara-layout-east-court-s",
+        "sourceName": "藤原宫东侧官署院落（南）",
+        "label": "东侧院落（南）",
+        "sourceUrl": "https://www.city.kashihara.nara.jp/material/files/group/21/fujiwara_202507-nintei.pdf",
+        "sourceTitle": "橿原市《特别史迹藤原宫址保存活用计划》（2025）图17，PDF第74页",
+        "referenceUrl": "https://www.city.kashihara.nara.jp/kanko_bunka_sports/rekishi_bunkazai/6/6/11386.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方宫内复原示意图嵌套参考，非实测遗迹界线",
+        "note": "按保存活用计划图17的宫内框线描绘，将图中宫墙框归一到已接入的925×907米宫墙尺寸参考面。原图用于建筑布局说明，内部构件比例有概化；此嵌套不能提供界址精度，也不能取代发掘遗迹矢量。北部宫区图框包括内里和大极殿院，不将其冒充独立寝宫围墙；东、西官署未指定未经证实的机构名称。图示朝堂院南缘与现有南门矢量存在约百米偏差，原始门址保留，不能按示意图移动遗迹。",
+        "capitalSiteKey": "ancient-site:world-fujiwara",
+        "capitalSiteName": "藤原京",
+        "capitalSiteDisplayName": "藤原京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.8096989,
+          34.50163281
+        ],
+        "referenceDimensionsMeters": [
+          925,
+          907
+        ],
+        "anchorFeatureId": "fujiwara-way-601591439",
+        "capitalPlanDetail": true,
+        "planReference": true,
+        "detailKind": "宫内布局参考"
+      }
+    }
+  ],
+  "labelNote": "宫内标签采用简短中文，完整名称、来源和精度限制保留在详情中。"
+}

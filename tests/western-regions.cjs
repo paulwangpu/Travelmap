@@ -11,7 +11,7 @@ assert.equal(data.recordItems.length,base.recordItems.length+newEntries);
 assert.equal(data.items.length,base.items.length+newEntries);
 assert.equal(data.westernRegions.mapped,36);
 assert.equal(data.westernRegions.pending,0);
-assert.equal(data.westernRegions.inferred,16);
+assert.equal(data.westernRegions.inferred,17);
 for(const entry of supplement.entries.filter(e=>e.position==='inferred')) {
   assert.ok(Number.isFinite(entry.lat)&&Number.isFinite(entry.lng));
   assert.ok(entry.lat>=-90&&entry.lat<=90&&entry.lng>=-180&&entry.lng<=180);
@@ -34,4 +34,4 @@ context.currentLanguage='zh';assert.match(context.ancientCapitalMapSubtitle(infe
 assert.match(app,/fixedChecklistTotals.chinaAncientCapitals = data.recordItems/);
 assert.match(app,/保留原古都目录/);
 const html=fs.readFileSync(require.resolve('../index.html'),'utf8');assert.ok(html.indexOf('western-regions.js')<html.indexOf('app.js?v='));
-console.log(`PASS: 36 mapped kingdoms/16 inferred, ${data.recordCount} records/${data.siteCount} points, existing-key preservation, inference warnings, repeat merges, localized labels and fallback`);
+console.log(`PASS: 36 mapped kingdoms/17 inferred, ${data.recordCount} records/${data.siteCount} points, existing-key preservation, inference warnings, repeat merges, localized labels and fallback`);

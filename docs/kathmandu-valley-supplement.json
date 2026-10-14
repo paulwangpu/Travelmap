@@ -1,0 +1,2569 @@
+{
+  "sources": [
+    "https://whc.unesco.org/en/list/121/",
+    "https://whc.unesco.org/en/list/121/maps/"
+  ],
+  "limitations": "现状OSM构件，非完整古城城墙；建筑具体年代、名称及修复分期需持续核对。",
+  "added": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.3074781,
+              27.7052369
+            ],
+            [
+              85.3074608,
+              27.7051687
+            ],
+            [
+              85.3073991,
+              27.7050918
+            ],
+            [
+              85.3073717,
+              27.7050746
+            ],
+            [
+              85.3072412,
+              27.7050662
+            ],
+            [
+              85.3072115,
+              27.7049887
+            ],
+            [
+              85.3071767,
+              27.7049598
+            ],
+            [
+              85.3070911,
+              27.7048997
+            ],
+            [
+              85.3069529,
+              27.7047574
+            ],
+            [
+              85.3067878,
+              27.704591
+            ],
+            [
+              85.3067473,
+              27.7045961
+            ],
+            [
+              85.3067192,
+              27.7045336
+            ],
+            [
+              85.3066955,
+              27.704542
+            ],
+            [
+              85.3066873,
+              27.7045273
+            ],
+            [
+              85.3066786,
+              27.7045116
+            ],
+            [
+              85.3066361,
+              27.7044418
+            ],
+            [
+              85.3066093,
+              27.7044546
+            ],
+            [
+              85.3066005,
+              27.7044412
+            ],
+            [
+              85.3065525,
+              27.7043371
+            ],
+            [
+              85.3064905,
+              27.7042751
+            ],
+            [
+              85.3064094,
+              27.7043233
+            ],
+            [
+              85.3064045,
+              27.7043081
+            ],
+            [
+              85.3063544,
+              27.7041724
+            ],
+            [
+              85.3063639,
+              27.7041697
+            ],
+            [
+              85.3063563,
+              27.7041478
+            ],
+            [
+              85.3063506,
+              27.7041491
+            ],
+            [
+              85.3063336,
+              27.704089
+            ],
+            [
+              85.3063256,
+              27.7040642
+            ],
+            [
+              85.3063223,
+              27.704054
+            ],
+            [
+              85.3064272,
+              27.7040341
+            ],
+            [
+              85.3063997,
+              27.7039202
+            ],
+            [
+              85.3063925,
+              27.7039216
+            ],
+            [
+              85.3063866,
+              27.7038979
+            ],
+            [
+              85.3063796,
+              27.7038696
+            ],
+            [
+              85.3065878,
+              27.7038312
+            ],
+            [
+              85.3065521,
+              27.7036457
+            ],
+            [
+              85.3066251,
+              27.7036325
+            ],
+            [
+              85.3066506,
+              27.7037637
+            ],
+            [
+              85.3066594,
+              27.7038053
+            ],
+            [
+              85.3067074,
+              27.7037971
+            ],
+            [
+              85.3074556,
+              27.7036599
+            ],
+            [
+              85.3074628,
+              27.7034526
+            ],
+            [
+              85.3071805,
+              27.7034906
+            ],
+            [
+              85.3071054,
+              27.7035013
+            ],
+            [
+              85.3071031,
+              27.7034948
+            ],
+            [
+              85.3070918,
+              27.7034478
+            ],
+            [
+              85.3075346,
+              27.7033804
+            ],
+            [
+              85.3075795,
+              27.7033738
+            ],
+            [
+              85.3075806,
+              27.7034415
+            ],
+            [
+              85.3075749,
+              27.7035727
+            ],
+            [
+              85.3075705,
+              27.7036978
+            ],
+            [
+              85.307731,
+              27.7037022
+            ],
+            [
+              85.3078197,
+              27.7036983
+            ],
+            [
+              85.3080764,
+              27.7037112
+            ],
+            [
+              85.3081938,
+              27.7036869
+            ],
+            [
+              85.3081911,
+              27.7036619
+            ],
+            [
+              85.3090143,
+              27.7035688
+            ],
+            [
+              85.3090035,
+              27.7035831
+            ],
+            [
+              85.3089949,
+              27.7035985
+            ],
+            [
+              85.3089887,
+              27.7036148
+            ],
+            [
+              85.3089849,
+              27.7036317
+            ],
+            [
+              85.3089836,
+              27.7036489
+            ],
+            [
+              85.3089839,
+              27.7036524
+            ],
+            [
+              85.3089849,
+              27.703666
+            ],
+            [
+              85.3089887,
+              27.7036829
+            ],
+            [
+              85.3089949,
+              27.7036992
+            ],
+            [
+              85.308943,
+              27.7037215
+            ],
+            [
+              85.3088162,
+              27.7037313
+            ],
+            [
+              85.308166,
+              27.7037813
+            ],
+            [
+              85.3079665,
+              27.7037967
+            ],
+            [
+              85.3079571,
+              27.7037468
+            ],
+            [
+              85.3074012,
+              27.7038199
+            ],
+            [
+              85.3073958,
+              27.7037931
+            ],
+            [
+              85.3070854,
+              27.7038519
+            ],
+            [
+              85.3070746,
+              27.703824
+            ],
+            [
+              85.3065449,
+              27.7039178
+            ],
+            [
+              85.3065876,
+              27.7040944
+            ],
+            [
+              85.3066035,
+              27.7040917
+            ],
+            [
+              85.3066343,
+              27.704238
+            ],
+            [
+              85.3065851,
+              27.7042695
+            ],
+            [
+              85.3067633,
+              27.7044873
+            ],
+            [
+              85.3067955,
+              27.7045258
+            ],
+            [
+              85.306842,
+              27.7045126
+            ],
+            [
+              85.3068496,
+              27.7045446
+            ],
+            [
+              85.3069577,
+              27.7045246
+            ],
+            [
+              85.3069578,
+              27.7045492
+            ],
+            [
+              85.3071155,
+              27.7045222
+            ],
+            [
+              85.3071068,
+              27.7044812
+            ],
+            [
+              85.3073574,
+              27.7044442
+            ],
+            [
+              85.3074701,
+              27.7048872
+            ],
+            [
+              85.3076628,
+              27.7048589
+            ],
+            [
+              85.3077205,
+              27.7050592
+            ],
+            [
+              85.3076614,
+              27.7050713
+            ],
+            [
+              85.3076888,
+              27.7051948
+            ],
+            [
+              85.307598,
+              27.7052133
+            ],
+            [
+              85.3074781,
+              27.7052369
+            ]
+          ],
+          [
+            [
+              85.3072792,
+              27.7045704
+            ],
+            [
+              85.3073071,
+              27.7046977
+            ],
+            [
+              85.3071608,
+              27.7047228
+            ],
+            [
+              85.3071329,
+              27.7045955
+            ],
+            [
+              85.3072792,
+              27.7045704
+            ]
+          ],
+          [
+            [
+              85.3071149,
+              27.7046944
+            ],
+            [
+              85.3071272,
+              27.7047437
+            ],
+            [
+              85.30707,
+              27.7047548
+            ],
+            [
+              85.3070578,
+              27.7047055
+            ],
+            [
+              85.3071149,
+              27.7046944
+            ]
+          ],
+          [
+            [
+              85.3070825,
+              27.7047944
+            ],
+            [
+              85.3071328,
+              27.7047855
+            ],
+            [
+              85.3071279,
+              27.7047637
+            ],
+            [
+              85.3070776,
+              27.7047726
+            ],
+            [
+              85.3070825,
+              27.7047944
+            ]
+          ],
+          [
+            [
+              85.3072608,
+              27.7048401
+            ],
+            [
+              85.3072402,
+              27.7047633
+            ],
+            [
+              85.3071602,
+              27.7047802
+            ],
+            [
+              85.3071656,
+              27.7048005
+            ],
+            [
+              85.3071584,
+              27.704802
+            ],
+            [
+              85.3071678,
+              27.704837
+            ],
+            [
+              85.3071759,
+              27.7048353
+            ],
+            [
+              85.3071817,
+              27.7048567
+            ],
+            [
+              85.3072608,
+              27.7048401
+            ]
+          ],
+          [
+            [
+              85.307369,
+              27.7048253
+            ],
+            [
+              85.3073462,
+              27.704734
+            ],
+            [
+              85.3072448,
+              27.7047538
+            ],
+            [
+              85.3072676,
+              27.7048451
+            ],
+            [
+              85.307369,
+              27.7048253
+            ]
+          ],
+          [
+            [
+              85.3074658,
+              27.7049217
+            ],
+            [
+              85.3073582,
+              27.7049462
+            ],
+            [
+              85.3073856,
+              27.7050408
+            ],
+            [
+              85.3074932,
+              27.7050164
+            ],
+            [
+              85.3074658,
+              27.7049217
+            ]
+          ],
+          [
+            [
+              85.3075526,
+              27.7049368
+            ],
+            [
+              85.307613,
+              27.7049232
+            ],
+            [
+              85.3076004,
+              27.7048797
+            ],
+            [
+              85.30754,
+              27.7048934
+            ],
+            [
+              85.3075526,
+              27.7049368
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "kathmandu-relation-21498033",
+        "siteKey": "kathmandu",
+        "siteName": "加德满都杜巴广场",
+        "siteEnName": "Kathmandu Durbar Square",
+        "name": "杜巴广场现状范围",
+        "enName": "Basantapur Durbar Square",
+        "originalName": "वसन्तपुर दरबार क्षेत्र",
+        "role": "area",
+        "period": "明",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/relation/21498033",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.3063796,
+              27.7038696
+            ],
+            [
+              85.3065878,
+              27.7038312
+            ],
+            [
+              85.3065521,
+              27.7036457
+            ],
+            [
+              85.3065447,
+              27.7036104
+            ],
+            [
+              85.3064993,
+              27.703618
+            ],
+            [
+              85.3064625,
+              27.7036242
+            ],
+            [
+              85.3064664,
+              27.7036466
+            ],
+            [
+              85.3064012,
+              27.7036571
+            ],
+            [
+              85.3063835,
+              27.7036599
+            ],
+            [
+              85.3063805,
+              27.7036451
+            ],
+            [
+              85.3063709,
+              27.7036466
+            ],
+            [
+              85.3063355,
+              27.7036523
+            ],
+            [
+              85.3063796,
+              27.7038696
+            ]
+          ],
+          [
+            [
+              85.3064903,
+              27.7037652
+            ],
+            [
+              85.3064779,
+              27.7037036
+            ],
+            [
+              85.3064755,
+              27.703704
+            ],
+            [
+              85.3064127,
+              27.7037139
+            ],
+            [
+              85.3064252,
+              27.7037755
+            ],
+            [
+              85.3064903,
+              27.7037652
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "kathmandu-relation-2688997",
+        "siteKey": "kathmandu",
+        "siteName": "加德满都杜巴广场",
+        "siteEnName": "Kathmandu Durbar Square",
+        "name": "库玛丽宫",
+        "enName": "Kumari House",
+        "originalName": "Kumari House",
+        "role": "palace",
+        "period": "清",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/relation/2688997",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.3077745,
+              27.7051481
+            ],
+            [
+              85.3082436,
+              27.7050546
+            ],
+            [
+              85.3081441,
+              27.7046569
+            ],
+            [
+              85.3076712,
+              27.7047486
+            ],
+            [
+              85.3077745,
+              27.7051481
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "kathmandu-way-1414600808",
+        "siteKey": "kathmandu",
+        "siteName": "加德满都杜巴广场",
+        "siteEnName": "Kathmandu Durbar Square",
+        "name": "塔莱珠神庙",
+        "enName": "Taleju Temple",
+        "originalName": "Taleju Temple",
+        "role": "temple",
+        "period": "明",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/1414600808",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.3056942,
+              27.7040491
+            ],
+            [
+              85.3059073,
+              27.7040107
+            ],
+            [
+              85.3058631,
+              27.7038184
+            ],
+            [
+              85.30565,
+              27.7038568
+            ],
+            [
+              85.3056942,
+              27.7040491
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "kathmandu-way-183558418",
+        "siteKey": "kathmandu",
+        "siteName": "加德满都杜巴广场",
+        "siteEnName": "Kathmandu Durbar Square",
+        "name": "独木庙（卡斯塔曼达普）",
+        "enName": "Kasthamandap",
+        "originalName": "Kasthamandap",
+        "role": "temple",
+        "period": "明",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/183558418",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.3072792,
+              27.7045704
+            ],
+            [
+              85.3073071,
+              27.7046977
+            ],
+            [
+              85.3071608,
+              27.7047228
+            ],
+            [
+              85.3071329,
+              27.7045955
+            ],
+            [
+              85.3072792,
+              27.7045704
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "kathmandu-way-169429518",
+        "siteKey": "kathmandu",
+        "siteName": "加德满都杜巴广场",
+        "siteEnName": "Kathmandu Durbar Square",
+        "name": "贾格纳特神庙",
+        "enName": "Jagan Nath Temple",
+        "originalName": "Jagan Nath Temple",
+        "role": "temple",
+        "period": "明",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/169429518",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.3065485,
+              27.7043426
+            ],
+            [
+              85.3063977,
+              27.7043899
+            ],
+            [
+              85.306435,
+              27.7044831
+            ],
+            [
+              85.3065859,
+              27.7044357
+            ],
+            [
+              85.3065485,
+              27.7043426
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "kathmandu-way-185882281",
+        "siteKey": "kathmandu",
+        "siteName": "加德满都杜巴广场",
+        "siteEnName": "Kathmandu Durbar Square",
+        "name": "湿婆帕尔瓦蒂神庙",
+        "enName": "Shiva Parvati Temple",
+        "originalName": "Shiva Parvati Temple",
+        "role": "temple",
+        "period": "清",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/185882281",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.3071149,
+              27.7046944
+            ],
+            [
+              85.3071272,
+              27.7047437
+            ],
+            [
+              85.30707,
+              27.7047548
+            ],
+            [
+              85.3070578,
+              27.7047055
+            ],
+            [
+              85.3071149,
+              27.7046944
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "kathmandu-way-196261745",
+        "siteKey": "kathmandu",
+        "siteName": "加德满都杜巴广场",
+        "siteEnName": "Kathmandu Durbar Square",
+        "name": "黑拜拉布神像",
+        "enName": "Kal Bhairab Temple",
+        "originalName": "Kal Bhairab Temple",
+        "role": "temple",
+        "period": "明",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/196261745",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.3069223,
+              27.7038754
+            ],
+            [
+              85.3066359,
+              27.7039243
+            ],
+            [
+              85.3065704,
+              27.7039355
+            ],
+            [
+              85.3065536,
+              27.7039384
+            ],
+            [
+              85.3065876,
+              27.7040944
+            ],
+            [
+              85.3066035,
+              27.7040917
+            ],
+            [
+              85.3066343,
+              27.704238
+            ],
+            [
+              85.3066378,
+              27.7042546
+            ],
+            [
+              85.3066513,
+              27.7042524
+            ],
+            [
+              85.306663,
+              27.7042504
+            ],
+            [
+              85.3067061,
+              27.7042433
+            ],
+            [
+              85.3066921,
+              27.7041789
+            ],
+            [
+              85.3066714,
+              27.7040791
+            ],
+            [
+              85.3066657,
+              27.704058
+            ],
+            [
+              85.3066711,
+              27.7040571
+            ],
+            [
+              85.3068117,
+              27.704033
+            ],
+            [
+              85.3069967,
+              27.7040014
+            ],
+            [
+              85.3070373,
+              27.7039944
+            ],
+            [
+              85.307015,
+              27.7038919
+            ],
+            [
+              85.307006,
+              27.7038503
+            ],
+            [
+              85.3070051,
+              27.7038461
+            ],
+            [
+              85.3069191,
+              27.7038603
+            ],
+            [
+              85.3069223,
+              27.7038754
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "kathmandu-way-247501389",
+        "siteKey": "kathmandu",
+        "siteName": "加德满都杜巴广场",
+        "siteEnName": "Kathmandu Durbar Square",
+        "name": "加迪拜塔克宫",
+        "enName": "Gaddi Baithak",
+        "originalName": "Gaddi Baithak",
+        "role": "palace",
+        "period": "近现代",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/247501389",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.3061973,
+              27.7039144
+            ],
+            [
+              85.3063175,
+              27.7038935
+            ],
+            [
+              85.3063273,
+              27.7038918
+            ],
+            [
+              85.3063518,
+              27.7040022
+            ],
+            [
+              85.3062218,
+              27.7040249
+            ],
+            [
+              85.3062198,
+              27.7040157
+            ],
+            [
+              85.3061973,
+              27.7039144
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "kathmandu-way-1414593331",
+        "siteKey": "kathmandu",
+        "siteName": "加德满都杜巴广场",
+        "siteEnName": "Kathmandu Durbar Square",
+        "name": "三界毗湿奴神庙",
+        "enName": "Trailokya Mohan Mandir",
+        "originalName": "Trailokya Mohan Mandir",
+        "role": "temple",
+        "period": "明",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/1414593331",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.3074492,
+          27.704099
+        ]
+      },
+      "properties": {
+        "id": "kathmandu-node-11365076769",
+        "siteKey": "kathmandu",
+        "siteName": "加德满都杜巴广场",
+        "siteEnName": "Kathmandu Durbar Square",
+        "name": "哈努曼多卡王宫入口",
+        "enName": "Hanuman Dhoka",
+        "originalName": "Hanuman Dhoka",
+        "role": "gate",
+        "period": "明",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/node/11365076769",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.3075388,
+          27.7042318
+        ]
+      },
+      "properties": {
+        "id": "kathmandu-node-6348676385",
+        "siteKey": "kathmandu",
+        "siteName": "加德满都杜巴广场",
+        "siteEnName": "Kathmandu Durbar Square",
+        "name": "纳萨尔庭院",
+        "enName": "Nasal Chowk",
+        "originalName": "Nasal Chowk",
+        "role": "public",
+        "period": "明",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/node/6348676385",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.3075665,
+          27.7045724
+        ]
+      },
+      "properties": {
+        "id": "kathmandu-node-7371671476",
+        "siteKey": "kathmandu",
+        "siteName": "加德满都杜巴广场",
+        "siteEnName": "Kathmandu Durbar Square",
+        "name": "莫汉庭院",
+        "enName": "Mohan Chowk",
+        "originalName": "Mohan Chowk",
+        "role": "public",
+        "period": "明",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/node/7371671476",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.3078016,
+          27.7040078
+        ]
+      },
+      "properties": {
+        "id": "kathmandu-node-6348849285",
+        "siteKey": "kathmandu",
+        "siteName": "加德满都杜巴广场",
+        "siteEnName": "Kathmandu Durbar Square",
+        "name": "洛汉庭院",
+        "enName": "Lohan Chowk",
+        "originalName": "Lohan Chowk",
+        "role": "public",
+        "period": "清",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/node/6348849285",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.3067192,
+              27.7045336
+            ],
+            [
+              85.3066955,
+              27.704542
+            ],
+            [
+              85.3066451,
+              27.7045599
+            ],
+            [
+              85.3066733,
+              27.7046223
+            ],
+            [
+              85.3067473,
+              27.7045961
+            ],
+            [
+              85.3067192,
+              27.7045336
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "kathmandu-way-183563646",
+        "siteKey": "kathmandu",
+        "siteName": "加德满都杜巴广场",
+        "siteEnName": "Kathmandu Durbar Square",
+        "name": "塔莱珠大钟",
+        "enName": "Taleju Bell",
+        "originalName": "Taleju Bell",
+        "role": "public",
+        "period": "清",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/183563646",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.3252393,
+              27.6735993
+            ],
+            [
+              85.3251783,
+              27.6733307
+            ],
+            [
+              85.3251868,
+              27.6733289
+            ],
+            [
+              85.3252733,
+              27.6733111
+            ],
+            [
+              85.3253605,
+              27.6732931
+            ],
+            [
+              85.3253571,
+              27.67328
+            ],
+            [
+              85.3254425,
+              27.6732611
+            ],
+            [
+              85.3255195,
+              27.6735348
+            ],
+            [
+              85.3252393,
+              27.6735993
+            ]
+          ],
+          [
+            [
+              85.3252942,
+              27.6735103
+            ],
+            [
+              85.3252609,
+              27.6733851
+            ],
+            [
+              85.3253932,
+              27.6733575
+            ],
+            [
+              85.3254264,
+              27.6734827
+            ],
+            [
+              85.3252942,
+              27.6735103
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "patan-relation-1652064",
+        "siteKey": "patan",
+        "siteName": "帕坦杜巴广场",
+        "siteEnName": "Patan Durbar Square",
+        "name": "帕坦王宫北院（马尼凯沙尔庭院）",
+        "enName": "Mani Keshar Chowk",
+        "originalName": "Mani Keshar Chowk",
+        "role": "palace",
+        "period": "明",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/relation/1652064",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.3253354,
+          27.6734438
+        ]
+      },
+      "properties": {
+        "id": "patan-node-1904110313",
+        "siteKey": "patan",
+        "siteName": "帕坦杜巴广场",
+        "siteEnName": "Patan Durbar Square",
+        "name": "帕坦博物馆（王宫）",
+        "enName": "Patan Museum",
+        "originalName": "Patan Museum",
+        "role": "palace",
+        "period": "明",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/node/1904110313",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.3251098,
+              27.6727595
+            ],
+            [
+              85.3250909,
+              27.6726908
+            ],
+            [
+              85.3251637,
+              27.6726751
+            ],
+            [
+              85.3251826,
+              27.6727437
+            ],
+            [
+              85.3251098,
+              27.6727595
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "patan-way-199772294",
+        "siteKey": "patan",
+        "siteName": "帕坦杜巴广场",
+        "siteEnName": "Patan Durbar Square",
+        "name": "孙达里庭院",
+        "enName": "Sundari Chowk",
+        "originalName": "Sundari Chowk",
+        "role": "public",
+        "period": "明",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/199772294",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.3249134,
+              27.6737014
+            ],
+            [
+              85.3248757,
+              27.6735766
+            ],
+            [
+              85.3250149,
+              27.6735437
+            ],
+            [
+              85.3250526,
+              27.6736684
+            ],
+            [
+              85.3249134,
+              27.6737014
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "patan-way-120443307",
+        "siteKey": "patan",
+        "siteName": "帕坦杜巴广场",
+        "siteEnName": "Patan Durbar Square",
+        "name": "克里希纳神庙",
+        "enName": "Krishna Mandir",
+        "originalName": "Krishna Mandir",
+        "role": "temple",
+        "period": "明",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/120443307",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.3252916,
+              27.6731043
+            ],
+            [
+              85.3252947,
+              27.6731144
+            ],
+            [
+              85.3253342,
+              27.6732603
+            ],
+            [
+              85.3253283,
+              27.6732614
+            ],
+            [
+              85.3252636,
+              27.6732757
+            ],
+            [
+              85.3251611,
+              27.6732976
+            ],
+            [
+              85.3251541,
+              27.6732991
+            ],
+            [
+              85.3251115,
+              27.6731425
+            ],
+            [
+              85.3251185,
+              27.673141
+            ],
+            [
+              85.3251233,
+              27.67314
+            ],
+            [
+              85.325221,
+              27.6731191
+            ],
+            [
+              85.3252916,
+              27.6731043
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "patan-way-120443289",
+        "siteKey": "patan",
+        "siteName": "帕坦杜巴广场",
+        "siteEnName": "Patan Durbar Square",
+        "name": "塔莱珠神庙",
+        "enName": "Taleju Temple",
+        "originalName": "तलेजु",
+        "role": "temple",
+        "period": "明",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/120443289",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.3250165,
+              27.6732397
+            ],
+            [
+              85.3249902,
+              27.6731561
+            ],
+            [
+              85.3248957,
+              27.6731795
+            ],
+            [
+              85.3249221,
+              27.6732631
+            ],
+            [
+              85.3250165,
+              27.6732397
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "patan-way-120443315",
+        "siteKey": "patan",
+        "siteName": "帕坦杜巴广场",
+        "siteEnName": "Patan Durbar Square",
+        "name": "哈里尚卡尔神庙",
+        "enName": "Hari Shankar Temple",
+        "originalName": "हरी शंकर",
+        "role": "temple",
+        "period": "清",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/120443315",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.3248554,
+              27.6729616
+            ],
+            [
+              85.3248978,
+              27.6729515
+            ],
+            [
+              85.3249175,
+              27.6729214
+            ],
+            [
+              85.3249119,
+              27.672903
+            ],
+            [
+              85.3249063,
+              27.6728846
+            ],
+            [
+              85.3248722,
+              27.672867
+            ],
+            [
+              85.3248298,
+              27.6728771
+            ],
+            [
+              85.3248108,
+              27.6729074
+            ],
+            [
+              85.3248164,
+              27.6729258
+            ],
+            [
+              85.324822,
+              27.6729442
+            ],
+            [
+              85.3248554,
+              27.6729616
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "patan-way-326385650",
+        "siteKey": "patan",
+        "siteName": "帕坦杜巴广场",
+        "siteEnName": "Patan Durbar Square",
+        "name": "八角克里希纳神庙",
+        "enName": "Chyasim Deval",
+        "originalName": "Chyasim Deval",
+        "role": "temple",
+        "period": "清",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/326385650",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.3251415,
+              27.6739366
+            ],
+            [
+              85.3252535,
+              27.6739085
+            ],
+            [
+              85.3252217,
+              27.6738092
+            ],
+            [
+              85.3251119,
+              27.6738368
+            ],
+            [
+              85.3251415,
+              27.6739366
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "patan-way-326472980",
+        "siteKey": "patan",
+        "siteName": "帕坦杜巴广场",
+        "siteEnName": "Patan Durbar Square",
+        "name": "比姆森神庙",
+        "enName": "Bhimsenthan Temple",
+        "originalName": "Bhimsenthan Temple",
+        "role": "temple",
+        "period": "清",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/326472980",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.3251979,
+              27.6736858
+            ],
+            [
+              85.3251995,
+              27.6736908
+            ],
+            [
+              85.3251917,
+              27.6736927
+            ],
+            [
+              85.3251941,
+              27.6737003
+            ],
+            [
+              85.3252019,
+              27.6736984
+            ],
+            [
+              85.3252036,
+              27.6737039
+            ],
+            [
+              85.3251934,
+              27.6737064
+            ],
+            [
+              85.3251925,
+              27.6737066
+            ],
+            [
+              85.3252052,
+              27.6737471
+            ],
+            [
+              85.3250931,
+              27.6737746
+            ],
+            [
+              85.3250619,
+              27.6736751
+            ],
+            [
+              85.3251739,
+              27.6736475
+            ],
+            [
+              85.3251868,
+              27.6736885
+            ],
+            [
+              85.3251877,
+              27.6736883
+            ],
+            [
+              85.3251979,
+              27.6736858
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "patan-way-328903213",
+        "siteKey": "patan",
+        "siteName": "帕坦杜巴广场",
+        "siteEnName": "Patan Durbar Square",
+        "name": "毗湿瓦纳特神庙",
+        "enName": "Viswonath Temple",
+        "originalName": "Viswonath Temple",
+        "role": "temple",
+        "period": "明",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/328903213",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.3246301,
+              27.6750632
+            ],
+            [
+              85.324422,
+              27.6751925
+            ],
+            [
+              85.3245044,
+              27.6752966
+            ],
+            [
+              85.3245737,
+              27.6753842
+            ],
+            [
+              85.3247819,
+              27.6752549
+            ],
+            [
+              85.3247075,
+              27.6751609
+            ],
+            [
+              85.3246301,
+              27.6750632
+            ]
+          ],
+          [
+            [
+              85.3246114,
+              27.6751576
+            ],
+            [
+              85.3245285,
+              27.6752091
+            ],
+            [
+              85.3245925,
+              27.6752898
+            ],
+            [
+              85.3246754,
+              27.6752383
+            ],
+            [
+              85.3246114,
+              27.6751576
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "patan-relation-4624856",
+        "siteKey": "patan",
+        "siteName": "帕坦杜巴广场",
+        "siteEnName": "Patan Durbar Square",
+        "name": "金庙（希兰亚瓦尔纳寺）",
+        "enName": "Hiranya Varna Mahavihar",
+        "originalName": "हिरण्यवर्ण महाविहार",
+        "role": "temple",
+        "period": "宋辽金西夏",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/relation/4624856",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.3251336,
+          27.6727221
+        ]
+      },
+      "properties": {
+        "id": "patan-node-10034234966",
+        "siteKey": "patan",
+        "siteName": "帕坦杜巴广场",
+        "siteEnName": "Patan Durbar Square",
+        "name": "图沙石泉",
+        "enName": "Tusha Hiti",
+        "originalName": "Tusha Hiti",
+        "role": "water",
+        "period": "明",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/node/10034234966",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.3253105,
+          27.6726844
+        ]
+      },
+      "properties": {
+        "id": "patan-node-10034234967",
+        "siteKey": "patan",
+        "siteName": "帕坦杜巴广场",
+        "siteEnName": "Patan Durbar Square",
+        "name": "班达尔卡尔石泉",
+        "enName": "Bhandarkhal Hiti",
+        "originalName": "Bhandarkhal Hiti",
+        "role": "water",
+        "period": "明",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/node/10034234967",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.3255348,
+          27.6735225
+        ]
+      },
+      "properties": {
+        "id": "patan-node-10034234987",
+        "siteKey": "patan",
+        "siteName": "帕坦杜巴广场",
+        "siteEnName": "Patan Durbar Square",
+        "name": "曼加石泉",
+        "enName": "Manga Hiti",
+        "originalName": "Manga Hiti",
+        "role": "water",
+        "period": "隋唐",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/node/10034234987",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.3250167,
+          27.6732932
+        ]
+      },
+      "properties": {
+        "id": "patan-node-2097740385",
+        "siteKey": "patan",
+        "siteName": "帕坦杜巴广场",
+        "siteEnName": "Patan Durbar Square",
+        "name": "约加纳伦德拉马拉王柱像",
+        "enName": "King Yog Narendra Malla Column",
+        "originalName": "King Yog Narendra Malla Column",
+        "role": "public",
+        "period": "清",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/node/2097740385",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.427892,
+              27.6722199
+            ],
+            [
+              85.4276221,
+              27.6723007
+            ],
+            [
+              85.4274663,
+              27.6723862
+            ],
+            [
+              85.4273213,
+              27.6723971
+            ],
+            [
+              85.4273205,
+              27.6724503
+            ],
+            [
+              85.4271057,
+              27.6724565
+            ],
+            [
+              85.4270991,
+              27.672367
+            ],
+            [
+              85.4273424,
+              27.6723479
+            ],
+            [
+              85.4274821,
+              27.6722932
+            ],
+            [
+              85.4274925,
+              27.6722638
+            ],
+            [
+              85.4276496,
+              27.672248
+            ],
+            [
+              85.4276609,
+              27.6720899
+            ],
+            [
+              85.4278612,
+              27.6720791
+            ],
+            [
+              85.427905,
+              27.6720052
+            ],
+            [
+              85.4283272,
+              27.6719315
+            ],
+            [
+              85.4283668,
+              27.671972
+            ],
+            [
+              85.4285559,
+              27.6719334
+            ],
+            [
+              85.428595,
+              27.6720837
+            ],
+            [
+              85.4290219,
+              27.6719715
+            ],
+            [
+              85.4291094,
+              27.6723241
+            ],
+            [
+              85.4290453,
+              27.6723061
+            ],
+            [
+              85.4287953,
+              27.6723042
+            ],
+            [
+              85.4288217,
+              27.6721493
+            ],
+            [
+              85.4284874,
+              27.672151
+            ],
+            [
+              85.4284159,
+              27.6721564
+            ],
+            [
+              85.427892,
+              27.6722199
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "bhaktapur-way-1192827651",
+        "siteKey": "bhaktapur",
+        "siteName": "巴德岗杜巴广场",
+        "siteEnName": "Bhaktapur Durbar Square",
+        "name": "杜巴广场现状范围",
+        "enName": "Bhaktapur Durbar Square",
+        "originalName": "Bhaktapur Durbar Square",
+        "role": "area",
+        "period": "明",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/1192827651",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.4286156,
+          27.6721722
+        ]
+      },
+      "properties": {
+        "id": "bhaktapur-node-11365076869",
+        "siteKey": "bhaktapur",
+        "siteName": "巴德岗杜巴广场",
+        "siteEnName": "Bhaktapur Durbar Square",
+        "name": "五十五窗宫",
+        "enName": "55 Window Palace",
+        "originalName": "55 Window Palace",
+        "role": "palace",
+        "period": "清",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/node/11365076869",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.4293155,
+              27.6715563
+            ],
+            [
+              85.4292225,
+              27.6713298
+            ],
+            [
+              85.4294295,
+              27.6712631
+            ],
+            [
+              85.4295225,
+              27.6714897
+            ],
+            [
+              85.4293155,
+              27.6715563
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "bhaktapur-way-85470341",
+        "siteKey": "bhaktapur",
+        "siteName": "巴德岗杜巴广场",
+        "siteEnName": "Bhaktapur Durbar Square",
+        "name": "五层塔（尼亚塔波拉神庙）",
+        "enName": "Nyatapola Temple",
+        "originalName": "Nyatapola Temple",
+        "role": "temple",
+        "period": "清",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/85470341",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.4294136,
+              27.6711819
+            ],
+            [
+              85.4293805,
+              27.6710322
+            ],
+            [
+              85.4295263,
+              27.671007
+            ],
+            [
+              85.4295594,
+              27.6711566
+            ],
+            [
+              85.4294136,
+              27.6711819
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "bhaktapur-way-185746728",
+        "siteKey": "bhaktapur",
+        "siteName": "巴德岗杜巴广场",
+        "siteEnName": "Bhaktapur Durbar Square",
+        "name": "拜拉布纳特神庙",
+        "enName": "Bhairabnath Temple",
+        "originalName": "Bhairabnath Temple",
+        "role": "temple",
+        "period": "清",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/185746728",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.4286627,
+              27.672129
+            ],
+            [
+              85.4287257,
+              27.6721243
+            ],
+            [
+              85.4287216,
+              27.6720807
+            ],
+            [
+              85.4286586,
+              27.6720854
+            ],
+            [
+              85.4286627,
+              27.672129
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "bhaktapur-way-211082584",
+        "siteKey": "bhaktapur",
+        "siteName": "巴德岗杜巴广场",
+        "siteEnName": "Bhaktapur Durbar Square",
+        "name": "悉地拉克希米神庙",
+        "enName": "Siddhi Laxmi Temple",
+        "originalName": "Siddhi Laxmi Temple",
+        "role": "temple",
+        "period": "明",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/211082584",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.4288001,
+              27.672509
+            ],
+            [
+              85.4287941,
+              27.6723146
+            ],
+            [
+              85.429013,
+              27.6723096
+            ],
+            [
+              85.4290156,
+              27.6723987
+            ],
+            [
+              85.429021,
+              27.6725044
+            ],
+            [
+              85.4288001,
+              27.672509
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "bhaktapur-way-185750794",
+        "siteKey": "bhaktapur",
+        "siteName": "巴德岗杜巴广场",
+        "siteEnName": "Bhaktapur Durbar Square",
+        "name": "法西德加神庙",
+        "enName": "Shilu Mahadev (Fasidega)",
+        "originalName": "Shilu Mahadev (Fasidega)",
+        "role": "temple",
+        "period": "清",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/185750794",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.4284728,
+              27.6721198
+            ],
+            [
+              85.4284901,
+              27.6721325
+            ],
+            [
+              85.4285375,
+              27.6721284
+            ],
+            [
+              85.4285517,
+              27.6721129
+            ],
+            [
+              85.4285469,
+              27.6720708
+            ],
+            [
+              85.4285296,
+              27.6720582
+            ],
+            [
+              85.4284823,
+              27.6720624
+            ],
+            [
+              85.4284681,
+              27.6720778
+            ],
+            [
+              85.4284728,
+              27.6721198
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "bhaktapur-way-495632745",
+        "siteKey": "bhaktapur",
+        "siteName": "巴德岗杜巴广场",
+        "siteEnName": "Bhaktapur Durbar Square",
+        "name": "八角亭",
+        "enName": "Chyasing Mandap",
+        "originalName": "Chyasing Mandap",
+        "role": "public",
+        "period": "清",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/495632745",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.428449,
+          27.671866
+        ]
+      },
+      "properties": {
+        "id": "bhaktapur-node-12293366201",
+        "siteKey": "bhaktapur",
+        "siteName": "巴德岗杜巴广场",
+        "siteEnName": "Bhaktapur Durbar Square",
+        "name": "帕舒帕蒂纳特神庙",
+        "enName": "Pashupatinath Temple",
+        "originalName": "Pashupatinath Temple",
+        "role": "temple",
+        "period": "明",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/node/12293366201",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.4282441,
+          27.672552
+        ]
+      },
+      "properties": {
+        "id": "bhaktapur-node-12289962101",
+        "siteKey": "bhaktapur",
+        "siteName": "巴德岗杜巴广场",
+        "siteEnName": "Bhaktapur Durbar Square",
+        "name": "王宫主庭院",
+        "enName": "Mul chowk",
+        "originalName": "Mul chowk",
+        "role": "public",
+        "period": "明",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/node/12289962101",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.4284866,
+          27.6723335
+        ]
+      },
+      "properties": {
+        "id": "bhaktapur-node-12289963601",
+        "siteKey": "bhaktapur",
+        "siteName": "巴德岗杜巴广场",
+        "siteEnName": "Bhaktapur Durbar Square",
+        "name": "坦图王宫遗址",
+        "enName": "Thanthu Dubar",
+        "originalName": "Thanthu Dubar",
+        "role": "palace",
+        "period": "明",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/node/12289963601",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.4273281,
+          27.6723594
+        ]
+      },
+      "properties": {
+        "id": "bhaktapur-node-990795854",
+        "siteKey": "bhaktapur",
+        "siteName": "巴德岗杜巴广场",
+        "siteEnName": "Bhaktapur Durbar Square",
+        "name": "白门",
+        "enName": "White Gate",
+        "originalName": "White Gate",
+        "role": "gate",
+        "period": "明",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/node/990795854",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.427743,
+          27.669897
+        ]
+      },
+      "properties": {
+        "id": "bhaktapur-node-12287948902",
+        "siteKey": "bhaktapur",
+        "siteName": "巴德岗杜巴广场",
+        "siteEnName": "Bhaktapur Durbar Square",
+        "name": "陶器广场",
+        "enName": "Pottery Square (Talako Tole)",
+        "originalName": "Pottery Square (Talako Tole)",
+        "role": "public",
+        "period": "明",
+        "periodLabel": "马拉王朝及后世修建／修复",
+        "heritageId": "whc-121",
+        "tentative": false,
+        "sourceUrl": "https://www.openstreetmap.org/node/12287948902",
+        "referenceUrl": "https://whc.unesco.org/en/list/121/",
+        "note": "公开现状标绘，包含历代修建及震后重建部分；朝代颜色为年代对照，不表示尼泊尔属于该中国王朝。广场范围不等于古城城墙或UNESCO法定边界。",
+        "label": true
+      }
+    }
+  ]
+}

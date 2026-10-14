@@ -1,0 +1,1280 @@
+{
+  "reviewedAt": "2026-10-13",
+  "scope": "Five-country candidate review; original geometry only; no publishing",
+  "cities": [
+    {
+      "key": "paris",
+      "name": "巴黎",
+      "enName": "Paris",
+      "country": "法国",
+      "center": [
+        2.337,
+        48.8605
+      ],
+      "heritageNumber": 600,
+      "identity": "法兰克及法国都城",
+      "enIdentity": "Frankish and French capital",
+      "records": [
+        [
+          "法兰克王国",
+          "约508—511"
+        ],
+        [
+          "法兰西王国",
+          "12世纪—1792（王廷曾迁驻凡尔赛）"
+        ],
+        [
+          "法国历代共和国与帝国",
+          "1792年至今（有战时迁驻）"
+        ]
+      ],
+      "source": "https://whc.unesco.org/en/list/600/",
+      "classification": "capital",
+      "geometryCount": 4,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "toulouse",
+      "name": "图卢兹",
+      "enName": "Toulouse",
+      "country": "法国",
+      "center": [
+        1.4442,
+        43.6047
+      ],
+      "heritageNumber": null,
+      "identity": "西哥特王国都城",
+      "enIdentity": "Capital of the Visigothic kingdom",
+      "records": [
+        [
+          "西哥特王国",
+          "418—507"
+        ]
+      ],
+      "source": "https://metropole.toulouse.fr/sortir/patrimoine/histoire-de-toulouse",
+      "classification": "capital",
+      "geometryCount": 4,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "soissons",
+      "name": "苏瓦松",
+      "enName": "Soissons",
+      "country": "法国",
+      "center": [
+        3.328,
+        49.381
+      ],
+      "heritageNumber": null,
+      "identity": "墨洛温法兰克王国都城",
+      "enIdentity": "Merovingian Frankish royal capital",
+      "records": [
+        [
+          "克洛维的法兰克王国",
+          "486—约508"
+        ],
+        [
+          "墨洛温苏瓦松王国",
+          "511—558；561年再次分封"
+        ]
+      ],
+      "source": "https://www.soissons.fr/sortir-et-bouger/culture-et-patrimoine/clovis-le-retour-du-roi/",
+      "classification": "capital",
+      "geometryCount": 6,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "reims",
+      "name": "兰斯",
+      "enName": "Reims",
+      "country": "法国",
+      "center": [
+        4.0317,
+        49.2583
+      ],
+      "heritageNumber": 601,
+      "identity": "奥斯特拉西亚早期王都",
+      "enIdentity": "Early royal seat of Austrasia",
+      "records": [
+        [
+          "墨洛温奥斯特拉西亚王国",
+          "511年起，6世纪前期"
+        ]
+      ],
+      "source": "https://musee-archeologienationale.fr/actualite/austrasie",
+      "classification": "capital",
+      "geometryCount": 3,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "orleans",
+      "name": "奥尔良",
+      "enName": "Orléans",
+      "country": "法国",
+      "center": [
+        1.908,
+        47.901
+      ],
+      "heritageNumber": null,
+      "identity": "墨洛温奥尔良王国都城",
+      "enIdentity": "Merovingian royal capital",
+      "records": [
+        [
+          "克洛多米尔的奥尔良王国",
+          "511—524"
+        ]
+      ],
+      "source": "https://www.orleans.fr/fileadmin/orleans/MEDIA/kiosque/ville_art_histoire/vdh_aufildelaville.pdf",
+      "classification": "capital",
+      "geometryCount": 4,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "arles",
+      "name": "阿尔勒",
+      "enName": "Arles",
+      "country": "法国",
+      "center": [
+        4.6278,
+        43.6766
+      ],
+      "heritageNumber": 164,
+      "identity": "阿尔勒王国名义都城与加冕中心",
+      "enIdentity": "Nominal capital and coronation centre of the Kingdom of Arles",
+      "records": [
+        [
+          "阿尔勒王国（名义王都）",
+          "11世纪—12世纪"
+        ]
+      ],
+      "source": "https://patrimoine.ville-arles.fr/index.php?idx=11&obj=edifice&quartier=15&site=0",
+      "classification": "capital",
+      "geometryCount": 5,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "rouen",
+      "name": "鲁昂",
+      "enName": "Rouen",
+      "country": "法国",
+      "center": [
+        1.094,
+        49.443
+      ],
+      "heritageNumber": null,
+      "identity": "诺曼底公国都城",
+      "enIdentity": "Capital of the Duchy of Normandy",
+      "records": [
+        [
+          "诺曼底公国",
+          "911—1204"
+        ]
+      ],
+      "source": "https://rouen.fr/moyen-age",
+      "classification": "capital",
+      "geometryCount": 1,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "dijon",
+      "name": "第戎",
+      "enName": "Dijon",
+      "country": "法国",
+      "center": [
+        5.042,
+        47.322
+      ],
+      "heritageNumber": null,
+      "identity": "勃艮第公国都城",
+      "enIdentity": "Capital of the Duchy of Burgundy",
+      "records": [
+        [
+          "勃艮第公国",
+          "11世纪—1477"
+        ]
+      ],
+      "source": "https://www.destinationdijon.com/destination/best-of/dijon-capitale-de-la-bourgogne/",
+      "classification": "capital",
+      "geometryCount": 3,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "nancy",
+      "name": "南锡",
+      "enName": "Nancy",
+      "country": "法国",
+      "center": [
+        6.181,
+        48.698
+      ],
+      "heritageNumber": 229,
+      "identity": "洛林公国都城",
+      "enIdentity": "Capital of the Duchy of Lorraine",
+      "records": [
+        [
+          "洛林公国",
+          "11世纪—1766（间有占领）"
+        ]
+      ],
+      "source": "https://www.nancy.fr/culture/patrimoine/renaissance",
+      "classification": "capital",
+      "geometryCount": 3,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "aix-en-provence",
+      "name": "普罗旺斯地区艾克斯",
+      "enName": "Aix-en-Provence",
+      "country": "法国",
+      "center": [
+        5.45,
+        43.53
+      ],
+      "heritageNumber": null,
+      "identity": "普罗旺斯伯国政治中心",
+      "enIdentity": "Political centre of the County of Provence",
+      "records": [
+        [
+          "普罗旺斯伯国",
+          "12世纪—1481"
+        ]
+      ],
+      "source": "https://www.aixenprovence.fr/Palais-Comtal",
+      "classification": "capital",
+      "geometryCount": 2,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "versailles",
+      "name": "凡尔赛",
+      "enName": "Versailles",
+      "country": "法国",
+      "center": [
+        2.12,
+        48.805
+      ],
+      "heritageNumber": 83,
+      "identity": "法国王廷及政府驻地",
+      "enIdentity": "French court and government seat",
+      "records": [
+        [
+          "法兰西王国",
+          "1682—1789"
+        ]
+      ],
+      "source": "https://en.chateauversailles.fr/discover/history/key-dates/versailles-capital-kingdom-1682",
+      "classification": "government-seat",
+      "geometryCount": 1,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "trier",
+      "name": "特里尔",
+      "enName": "Trier",
+      "country": "德国",
+      "center": [
+        6.6431,
+        49.7567
+      ],
+      "heritageNumber": 367,
+      "identity": "罗马帝国西部帝都",
+      "enIdentity": "Western Roman imperial residence",
+      "records": [
+        [
+          "罗马帝国西部皇廷",
+          "3世纪末—4世纪末"
+        ]
+      ],
+      "source": "https://whc.unesco.org/en/list/367/",
+      "classification": "capital",
+      "geometryCount": 4,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "aachen",
+      "name": "亚琛",
+      "enName": "Aachen",
+      "country": "德国",
+      "center": [
+        6.0839,
+        50.7753
+      ],
+      "heritageNumber": 3,
+      "identity": "加洛林王朝主要宫廷中心",
+      "enIdentity": "Principal Carolingian court centre",
+      "records": [
+        [
+          "查理曼及加洛林王朝",
+          "8世纪末—9世纪"
+        ]
+      ],
+      "source": "https://whc.unesco.org/en/list/3/",
+      "classification": "capital",
+      "geometryCount": 12,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "berlin",
+      "name": "柏林",
+      "enName": "Berlin",
+      "country": "德国",
+      "center": [
+        13.401,
+        52.517
+      ],
+      "heritageNumber": null,
+      "identity": "普鲁士及德国都城",
+      "enIdentity": "Prussian and German capital",
+      "records": [
+        [
+          "普鲁士王国",
+          "1701—1918"
+        ],
+        [
+          "德意志帝国",
+          "1871—1918"
+        ],
+        [
+          "德国国家政权",
+          "1919—1945；1990年至今"
+        ],
+        [
+          "德意志民主共和国（东柏林）",
+          "1949—1990"
+        ]
+      ],
+      "source": "https://www.berlin.de/berlin-im-ueberblick/en/history/",
+      "classification": "capital",
+      "geometryCount": 1,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "bonn",
+      "name": "波恩",
+      "enName": "Bonn",
+      "country": "德国",
+      "center": [
+        7.103,
+        50.733
+      ],
+      "heritageNumber": null,
+      "identity": "德意志联邦共和国原首都",
+      "enIdentity": "Former federal capital of Germany",
+      "records": [
+        [
+          "德意志联邦共和国",
+          "1949—1990（主要政府机构至1999年迁移）"
+        ]
+      ],
+      "source": "https://www.bonn.de/service-bieten/aktuelles-zahlen-fakten/geschichte-zukunft.php?loc=en",
+      "classification": "capital",
+      "geometryCount": 2,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "munich",
+      "name": "慕尼黑",
+      "enName": "Munich",
+      "country": "德国",
+      "center": [
+        11.579,
+        48.141
+      ],
+      "heritageNumber": null,
+      "identity": "巴伐利亚公国、选侯国及王国都城",
+      "enIdentity": "Bavarian ducal, electoral and royal capital",
+      "records": [
+        [
+          "巴伐利亚公国及选侯国",
+          "1508—1806"
+        ],
+        [
+          "巴伐利亚王国",
+          "1806—1918"
+        ]
+      ],
+      "source": "https://www.residenz-muenchen.de/deutsch/residenz/index.htm",
+      "classification": "capital",
+      "geometryCount": 2,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "dresden",
+      "name": "德累斯顿",
+      "enName": "Dresden",
+      "country": "德国",
+      "center": [
+        13.737,
+        51.053
+      ],
+      "heritageNumber": null,
+      "identity": "萨克森公国、选侯国及王国都城",
+      "enIdentity": "Saxon ducal, electoral and royal capital",
+      "records": [
+        [
+          "阿尔贝廷萨克森公国及选侯国",
+          "1485—1806"
+        ],
+        [
+          "萨克森王国",
+          "1806—1918"
+        ]
+      ],
+      "source": "https://www.dresden.de/media/pdf/statistik/pdfBrFaktumdt18_Net.pdf",
+      "classification": "capital",
+      "geometryCount": 7,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "stuttgart",
+      "name": "斯图加特",
+      "enName": "Stuttgart",
+      "country": "德国",
+      "center": [
+        9.179,
+        48.777
+      ],
+      "heritageNumber": null,
+      "identity": "符腾堡公国及王国都城",
+      "enIdentity": "Capital of Württemberg",
+      "records": [
+        [
+          "符腾堡公国",
+          "1495—1806（宫廷曾迁驻路德维希堡）"
+        ],
+        [
+          "符腾堡王国",
+          "1806—1918"
+        ]
+      ],
+      "source": "https://www.landesmuseum-stuttgart.de/en/museum/old-castle",
+      "classification": "capital",
+      "geometryCount": 2,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "karlsruhe",
+      "name": "卡尔斯鲁厄",
+      "enName": "Karlsruhe",
+      "country": "德国",
+      "center": [
+        8.404,
+        49.014
+      ],
+      "heritageNumber": null,
+      "identity": "巴登藩侯国及大公国都城",
+      "enIdentity": "Baden margravial and grand-ducal capital",
+      "records": [
+        [
+          "巴登-杜拉赫藩侯国及巴登",
+          "1718—1806"
+        ],
+        [
+          "巴登大公国",
+          "1806—1918"
+        ]
+      ],
+      "source": "https://stadtgeschichte.karlsruhe.de/materialien-zur-stadtgeschichte/einstiege-in-die-stadtgeschichte/kurze-stadtgeschichte",
+      "classification": "capital",
+      "geometryCount": 1,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "hanover",
+      "name": "汉诺威",
+      "enName": "Hanover",
+      "country": "德国",
+      "center": [
+        9.734,
+        52.37
+      ],
+      "heritageNumber": null,
+      "identity": "卡伦贝格、汉诺威选侯国及王国都城",
+      "enIdentity": "Calenberg and Hanoverian capital",
+      "records": [
+        [
+          "卡伦贝格公国及汉诺威选侯国",
+          "1636—1803"
+        ],
+        [
+          "汉诺威王国",
+          "1814—1866"
+        ]
+      ],
+      "source": "https://www.hannover.de/Tourismus/Hannover-für-Reiseveranstalter/Angebote-für-Reiseveranstalter/Reisen-auf-den-Spuren-der-Welfen/Schloss-Marienburg/Die-Welfen-und-Hannover",
+      "classification": "capital",
+      "geometryCount": 2,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "schwerin",
+      "name": "什未林",
+      "enName": "Schwerin",
+      "country": "德国",
+      "center": [
+        11.419,
+        53.625
+      ],
+      "heritageNumber": 1705,
+      "identity": "梅克伦堡-什未林大公国都城",
+      "enIdentity": "Capital of Mecklenburg-Schwerin",
+      "records": [
+        [
+          "梅克伦堡-什未林大公国",
+          "1815—1918"
+        ]
+      ],
+      "source": "https://whc.unesco.org/en/list/1705/",
+      "classification": "capital",
+      "geometryCount": 1,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "weimar",
+      "name": "魏玛",
+      "enName": "Weimar",
+      "country": "德国",
+      "center": [
+        11.333,
+        50.98
+      ],
+      "heritageNumber": 846,
+      "identity": "萨克森-魏玛及魏玛-艾森纳赫都城",
+      "enIdentity": "Capital of Saxe-Weimar and Saxe-Weimar-Eisenach",
+      "records": [
+        [
+          "恩斯特系萨克森／萨克森-魏玛",
+          "1547—1809"
+        ],
+        [
+          "萨克森-魏玛-艾森纳赫公国及大公国",
+          "1809—1918"
+        ]
+      ],
+      "source": "https://stadt.weimar.de/de/datei/anzeigen/id/19861%2C48/faltblatt_2023.pdf",
+      "classification": "capital",
+      "geometryCount": 3,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "amsterdam",
+      "name": "阿姆斯特丹",
+      "enName": "Amsterdam",
+      "country": "荷兰",
+      "center": [
+        4.8915,
+        52.373
+      ],
+      "heritageNumber": 1349,
+      "identity": "荷兰王国首都",
+      "enIdentity": "Capital of the Kingdom of the Netherlands",
+      "records": [
+        [
+          "荷兰王国（路易·波拿巴）",
+          "1808—1810"
+        ],
+        [
+          "尼德兰王国",
+          "1814年至今"
+        ]
+      ],
+      "source": "https://www.amsterdam.nl/stadsarchief/stukken/macht/hoofdstad/",
+      "classification": "capital",
+      "geometryCount": 4,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "the-hague",
+      "name": "海牙",
+      "enName": "The Hague",
+      "country": "荷兰",
+      "center": [
+        4.313,
+        52.0797
+      ],
+      "heritageNumber": null,
+      "identity": "荷兰政府与议会所在地",
+      "enIdentity": "Seat of Dutch government and parliament",
+      "records": [
+        [
+          "荷兰共和国及尼德兰王国",
+          "16世纪末至今（间有迁驻）"
+        ]
+      ],
+      "source": "https://www.amsterdam.nl/stadsarchief/stukken/macht/hoofdstad/",
+      "classification": "government-seat",
+      "geometryCount": 1,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "utrecht",
+      "name": "乌得勒支",
+      "enName": "Utrecht",
+      "country": "荷兰",
+      "center": [
+        5.122,
+        52.091
+      ],
+      "heritageNumber": null,
+      "identity": "乌得勒支主教领政治中心",
+      "enIdentity": "Political centre of the Prince-Bishopric of Utrecht",
+      "records": [
+        [
+          "乌得勒支主教领",
+          "11世纪—1528（世俗领地中心）"
+        ]
+      ],
+      "source": "https://erfgoed.utrecht.nl/verhalen/de-utrechtse-stadsverdediging",
+      "classification": "capital",
+      "geometryCount": 3,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "arnhem",
+      "name": "阿纳姆",
+      "enName": "Arnhem",
+      "country": "荷兰",
+      "center": [
+        5.906,
+        51.979
+      ],
+      "heritageNumber": null,
+      "identity": "海尔德公国主要驻地与行政中心",
+      "enIdentity": "Principal residence and administrative centre of Guelders",
+      "records": [
+        [
+          "海尔德公国",
+          "15世纪—1543"
+        ]
+      ],
+      "source": "https://www.canonvannederland.nl/nl/gelderland/gelderland/van-graafschap-tot-hertogdom",
+      "classification": "royal-residence",
+      "geometryCount": 2,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "groningen",
+      "name": "格罗宁根",
+      "enName": "Groningen",
+      "country": "荷兰",
+      "center": [
+        6.567,
+        53.219
+      ],
+      "heritageNumber": null,
+      "identity": "中世纪自治城市",
+      "enIdentity": "Medieval self-governing city",
+      "records": [
+        [
+          "格罗宁根自治城市",
+          "中世纪末—16世纪"
+        ]
+      ],
+      "source": "https://www.visitgroningen.nl/en/blogs/hotel-corps-de-garde",
+      "classification": "ancient-city",
+      "geometryCount": 2,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "esztergom",
+      "name": "埃斯泰尔戈姆",
+      "enName": "Esztergom",
+      "country": "匈牙利",
+      "center": [
+        18.736,
+        47.797
+      ],
+      "heritageNumber": null,
+      "identity": "阿尔帕德王朝早期王都",
+      "enIdentity": "Early Árpád royal seat",
+      "records": [
+        [
+          "匈牙利王国（阿尔帕德王朝）",
+          "10世纪末—1256（1198年起逐步转为主教中心）"
+        ]
+      ],
+      "source": "https://mnm.hu/en/museums/esztergom",
+      "classification": "capital",
+      "geometryCount": 20,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "szekesfehervar",
+      "name": "塞克什白堡",
+      "enName": "Székesfehérvár",
+      "country": "匈牙利",
+      "center": [
+        18.4108,
+        47.186
+      ],
+      "heritageNumber": null,
+      "identity": "匈牙利中世纪王都及加冕中心",
+      "enIdentity": "Medieval Hungarian royal and coronation centre",
+      "records": [
+        [
+          "匈牙利王国",
+          "11世纪—1543（加冕、安葬及议事中心）"
+        ]
+      ],
+      "source": "https://visithungary.com/documents/2/21/213/213f657cf7a412195cd90f398565217c0f17bac.pdf",
+      "classification": "capital",
+      "geometryCount": 6,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "visegrad",
+      "name": "维谢格拉德",
+      "enName": "Visegrád",
+      "country": "匈牙利",
+      "center": [
+        18.973,
+        47.79
+      ],
+      "heritageNumber": null,
+      "identity": "匈牙利王国王都",
+      "enIdentity": "Royal capital of Hungary",
+      "records": [
+        [
+          "匈牙利王国（安茹王朝）",
+          "1323—14世纪后期"
+        ]
+      ],
+      "source": "https://visithungary.com/articles/visegrad-citadel",
+      "classification": "capital",
+      "geometryCount": 18,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "budapest",
+      "name": "布达／布达佩斯",
+      "enName": "Buda / Budapest",
+      "country": "匈牙利",
+      "center": [
+        19.04,
+        47.498
+      ],
+      "heritageNumber": 400,
+      "identity": "匈牙利王国及现代国家都城",
+      "enIdentity": "Hungarian royal and national capital",
+      "records": [
+        [
+          "匈牙利王国（布达）",
+          "13世纪中叶—1541（与其他王廷中心并存）"
+        ],
+        [
+          "匈牙利王国及共和国（布达佩斯）",
+          "1873年至今（间有战时迁驻）"
+        ]
+      ],
+      "source": "https://whc.unesco.org/en/list/400/",
+      "classification": "capital",
+      "geometryCount": 34,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "debrecen",
+      "name": "德布勒森",
+      "enName": "Debrecen",
+      "country": "匈牙利",
+      "center": [
+        21.625,
+        47.532
+      ],
+      "heritageNumber": null,
+      "identity": "匈牙利临时首都",
+      "enIdentity": "Temporary capital of Hungary",
+      "records": [
+        [
+          "匈牙利革命政府",
+          "1849"
+        ],
+        [
+          "匈牙利临时国民政府",
+          "1944—1945"
+        ]
+      ],
+      "source": "https://visitdebrecen.com/hot-now/10-things-you-didnt-know-about-debrecen/",
+      "classification": "capital",
+      "geometryCount": 2,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "milan",
+      "name": "米兰",
+      "enName": "Milan",
+      "country": "意大利",
+      "center": [
+        9.179,
+        45.464
+      ],
+      "heritageNumber": null,
+      "identity": "罗马帝都及米兰公国都城",
+      "enIdentity": "Roman imperial and Milanese ducal capital",
+      "records": [
+        [
+          "罗马帝国西部皇廷",
+          "286—402"
+        ],
+        [
+          "米兰公国",
+          "1395—1499；1500—1535（多次复位）"
+        ],
+        [
+          "意大利王国（拿破仑）",
+          "1805—1814"
+        ]
+      ],
+      "source": "https://www2.comune.milano.it/web/museo-archeologico-milano/scopri-il-museo/le-torri-romane-e-il-monastero-maggiore/la-torre-poligonale-e-le-mura",
+      "classification": "capital",
+      "geometryCount": 6,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "ravenna",
+      "name": "拉文纳",
+      "enName": "Ravenna",
+      "country": "意大利",
+      "center": [
+        12.1966,
+        44.4175
+      ],
+      "heritageNumber": 788,
+      "identity": "西罗马及东哥特王国都城",
+      "enIdentity": "Western Roman and Ostrogothic capital",
+      "records": [
+        [
+          "西罗马帝国",
+          "402—476"
+        ],
+        [
+          "奥多亚塞及东哥特王国",
+          "476—540"
+        ],
+        [
+          "拜占庭拉文纳总督区",
+          "6世纪末—751"
+        ]
+      ],
+      "source": "https://whc.unesco.org/en/list/788/",
+      "classification": "capital",
+      "geometryCount": 14,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "venice",
+      "name": "威尼斯",
+      "enName": "Venice",
+      "country": "意大利",
+      "center": [
+        12.34,
+        45.434
+      ],
+      "heritageNumber": 394,
+      "identity": "威尼斯共和国都城",
+      "enIdentity": "Capital of the Venetian Republic",
+      "records": [
+        [
+          "威尼斯共和国（里亚尔托）",
+          "9世纪初—1797"
+        ]
+      ],
+      "source": "https://whc.unesco.org/en/list/394/",
+      "classification": "capital",
+      "geometryCount": 3,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "naples",
+      "name": "那不勒斯",
+      "enName": "Naples",
+      "country": "意大利",
+      "center": [
+        14.251,
+        40.839
+      ],
+      "heritageNumber": 726,
+      "identity": "那不勒斯公国、王国及两西西里都城",
+      "enIdentity": "Neapolitan and Two Sicilies capital",
+      "records": [
+        [
+          "那不勒斯公国",
+          "7世纪—1137"
+        ],
+        [
+          "安茹及阿拉贡那不勒斯王国",
+          "1266—1501"
+        ],
+        [
+          "波旁那不勒斯王国",
+          "1734—1806"
+        ],
+        [
+          "两西西里王国",
+          "1816—1860"
+        ]
+      ],
+      "source": "https://whc.unesco.org/en/list/726/",
+      "classification": "capital",
+      "geometryCount": 2,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "florence",
+      "name": "佛罗伦萨",
+      "enName": "Florence",
+      "country": "意大利",
+      "center": [
+        11.2558,
+        43.7696
+      ],
+      "heritageNumber": 174,
+      "identity": "佛罗伦萨共和国、托斯卡纳及意大利都城",
+      "enIdentity": "Florentine, Tuscan and Italian capital",
+      "records": [
+        [
+          "佛罗伦萨共和国",
+          "12世纪—1532（间有政权变化）"
+        ],
+        [
+          "佛罗伦萨公国／托斯卡纳大公国",
+          "1532—1859（拿破仑时期有中断）"
+        ],
+        [
+          "意大利王国",
+          "1865—1871"
+        ]
+      ],
+      "source": "https://whc.unesco.org/en/list/174/",
+      "classification": "capital",
+      "geometryCount": 12,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "siena",
+      "name": "锡耶纳",
+      "enName": "Siena",
+      "country": "意大利",
+      "center": [
+        11.3308,
+        43.3188
+      ],
+      "heritageNumber": 717,
+      "identity": "锡耶纳共和国都城",
+      "enIdentity": "Capital of the Republic of Siena",
+      "records": [
+        [
+          "锡耶纳共和国",
+          "12世纪—1555"
+        ]
+      ],
+      "source": "https://whc.unesco.org/en/list/717/",
+      "classification": "capital",
+      "geometryCount": 86,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "turin",
+      "name": "都灵",
+      "enName": "Turin",
+      "country": "意大利",
+      "center": [
+        7.6869,
+        45.0703
+      ],
+      "heritageNumber": 823,
+      "identity": "萨伏依、撒丁及意大利王国都城",
+      "enIdentity": "Savoyard, Sardinian and Italian capital",
+      "records": [
+        [
+          "萨伏依公国",
+          "1563—1720"
+        ],
+        [
+          "撒丁王国",
+          "1720—1861（法国统治时期中断）"
+        ],
+        [
+          "意大利王国",
+          "1861—1865"
+        ]
+      ],
+      "source": "https://whc.unesco.org/en/list/823/",
+      "classification": "capital",
+      "geometryCount": 5,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "palermo",
+      "name": "巴勒莫",
+      "enName": "Palermo",
+      "country": "意大利",
+      "center": [
+        13.3615,
+        38.1157
+      ],
+      "heritageNumber": 1487,
+      "identity": "西西里王国都城",
+      "enIdentity": "Capital of the Kingdom of Sicily",
+      "records": [
+        [
+          "西西里王国",
+          "1130年起（中世纪王廷中心）"
+        ]
+      ],
+      "source": "https://whc.unesco.org/en/list/1487/",
+      "classification": "capital",
+      "geometryCount": 3,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "genoa",
+      "name": "热那亚",
+      "enName": "Genoa",
+      "country": "意大利",
+      "center": [
+        8.9463,
+        44.4056
+      ],
+      "heritageNumber": 1211,
+      "identity": "热那亚共和国都城",
+      "enIdentity": "Capital of the Republic of Genoa",
+      "records": [
+        [
+          "热那亚共和国",
+          "11世纪—1797（间有外来统治）"
+        ]
+      ],
+      "source": "https://www.italia.it/en/liguria/genoa/guide-history-facts",
+      "classification": "capital",
+      "geometryCount": 2,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "pisa",
+      "name": "比萨",
+      "enName": "Pisa",
+      "country": "意大利",
+      "center": [
+        10.4017,
+        43.7228
+      ],
+      "heritageNumber": 395,
+      "identity": "比萨共和国都城",
+      "enIdentity": "Capital of the Republic of Pisa",
+      "records": [
+        [
+          "比萨共和国",
+          "11世纪—1406；1494—1509"
+        ]
+      ],
+      "source": "https://turismo.pisa.it/en/eventi/Regatta-of-the-Ancient-Maritime-Republics",
+      "classification": "capital",
+      "geometryCount": 7,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "lucca",
+      "name": "卢卡",
+      "enName": "Lucca",
+      "country": "意大利",
+      "center": [
+        10.5027,
+        43.843
+      ],
+      "heritageNumber": null,
+      "identity": "卢卡共和国及公国都城",
+      "enIdentity": "Capital of the Republic and Duchy of Lucca",
+      "records": [
+        [
+          "卢卡共和国",
+          "12世纪—1799（间有领主统治）"
+        ],
+        [
+          "卢卡和皮翁比诺亲王国",
+          "1805—1814"
+        ],
+        [
+          "卢卡公国",
+          "1815—1847"
+        ]
+      ],
+      "source": "https://turismo.lucca.it/luoghi/lucca/2000-anni-di-storia-e-arte/lucca-capitale/",
+      "classification": "capital",
+      "geometryCount": 71,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "mantua",
+      "name": "曼托瓦",
+      "enName": "Mantua",
+      "country": "意大利",
+      "center": [
+        10.7914,
+        45.1564
+      ],
+      "heritageNumber": 1287,
+      "identity": "贡扎加曼托瓦侯国及公国都城",
+      "enIdentity": "Gonzaga margravial and ducal capital",
+      "records": [
+        [
+          "贡扎加领地及曼托瓦侯国",
+          "1328—1530"
+        ],
+        [
+          "曼托瓦公国",
+          "1530—1707"
+        ]
+      ],
+      "source": "https://whc.unesco.org/en/list/1287/",
+      "classification": "capital",
+      "geometryCount": 3,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "ferrara",
+      "name": "费拉拉",
+      "enName": "Ferrara",
+      "country": "意大利",
+      "center": [
+        11.6198,
+        44.837
+      ],
+      "heritageNumber": 733,
+      "identity": "埃斯特费拉拉领地及公国都城",
+      "enIdentity": "Este and Ferrarese ducal capital",
+      "records": [
+        [
+          "埃斯特费拉拉领地及公国",
+          "13世纪—1598"
+        ]
+      ],
+      "source": "https://whc.unesco.org/en/list/733/",
+      "classification": "capital",
+      "geometryCount": 2,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "urbino",
+      "name": "乌尔比诺",
+      "enName": "Urbino",
+      "country": "意大利",
+      "center": [
+        12.636,
+        43.7262
+      ],
+      "heritageNumber": 828,
+      "identity": "乌尔比诺公国都城",
+      "enIdentity": "Capital of the Duchy of Urbino",
+      "records": [
+        [
+          "乌尔比诺公国",
+          "1443—1631"
+        ]
+      ],
+      "source": "https://whc.unesco.org/en/list/828/",
+      "classification": "capital",
+      "geometryCount": 21,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "modena",
+      "name": "摩德纳",
+      "enName": "Modena",
+      "country": "意大利",
+      "center": [
+        10.9252,
+        44.6471
+      ],
+      "heritageNumber": 827,
+      "identity": "埃斯特摩德纳公国都城",
+      "enIdentity": "Capital of the Duchy of Modena",
+      "records": [
+        [
+          "摩德纳和雷焦公国",
+          "1598—1859（1796—1814中断）"
+        ]
+      ],
+      "source": "https://www.visitmodena.it/it/scopri-modena/arte-e-cultura/palazzi-storici-e-castelli/palazzo-ducale-accademia-militare",
+      "classification": "capital",
+      "geometryCount": 1,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "parma",
+      "name": "帕尔马",
+      "enName": "Parma",
+      "country": "意大利",
+      "center": [
+        10.3279,
+        44.8015
+      ],
+      "heritageNumber": null,
+      "identity": "帕尔马公国都城",
+      "enIdentity": "Capital of the Duchy of Parma",
+      "records": [
+        [
+          "帕尔马和皮亚琴察公国",
+          "1545—1859（19世纪初中断）"
+        ]
+      ],
+      "source": "https://parmawelcome.it/en/place/a-brief-history-of-the-city/",
+      "classification": "capital",
+      "geometryCount": 2,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "amalfi",
+      "name": "阿马尔菲",
+      "enName": "Amalfi",
+      "country": "意大利",
+      "center": [
+        14.6027,
+        40.634
+      ],
+      "heritageNumber": null,
+      "identity": "阿马尔菲海上共和国及公国都城",
+      "enIdentity": "Amalfitan maritime republic and ducal capital",
+      "records": [
+        [
+          "阿马尔菲共和国及公国",
+          "9世纪—11世纪末"
+        ]
+      ],
+      "source": "https://www.italia.it/en/campania/things-to-do/the-amalfi-coast",
+      "classification": "capital",
+      "geometryCount": 1,
+      "boundaryStatus": "完整分期城界待核"
+    },
+    {
+      "key": "salerno",
+      "name": "萨莱诺",
+      "enName": "Salerno",
+      "country": "意大利",
+      "center": [
+        14.759,
+        40.685
+      ],
+      "heritageNumber": null,
+      "identity": "伦巴第及诺曼亲王国都城",
+      "enIdentity": "Lombard and Norman princely capital",
+      "records": [
+        [
+          "伦巴第萨莱诺亲王国",
+          "839—1076"
+        ],
+        [
+          "诺曼统治下的萨莱诺",
+          "1076—12世纪前期"
+        ]
+      ],
+      "source": "https://cultura.comune.salerno.it/itinerari/salerno-normanna/",
+      "classification": "capital",
+      "geometryCount": 1,
+      "boundaryStatus": "完整分期城界待核"
+    }
+  ],
+  "existingSpecialCases": {
+    "rome": "保留既有罗马71项几何与根点，不重复生成。",
+    "pompeii": "保留庞贝普通古城及其独立遗址数据，不生成古都根点。"
+  }
+}

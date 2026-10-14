@@ -1,0 +1,230 @@
+{
+  "reviewed": [
+    {
+      "id": "whc-1223",
+      "name": "Melaka and George Town, Historic Cities of the Straits of Malacca",
+      "before": [
+        100.3458,
+        5.421389
+      ],
+      "after": [
+        100.3458,
+        5.421389
+      ],
+      "decision": "保留原代表坐标；系列或区域遗产不把该点当作每座建筑的准确位置。",
+      "sourceUrl": "https://whc.unesco.org/en/list/1223/maps/"
+    },
+    {
+      "id": "whc-678",
+      "name": "顺化历史建筑群",
+      "before": [
+        107.5778,
+        16.46944
+      ],
+      "after": [
+        107.5778,
+        16.46944
+      ],
+      "decision": "保留原代表坐标；系列或区域遗产不把该点当作每座建筑的准确位置。",
+      "sourceUrl": "https://whc.unesco.org/en/list/678/maps/"
+    },
+    {
+      "id": "whc-1328",
+      "name": "河内升龙皇城",
+      "before": [
+        105.8386,
+        21.03752
+      ],
+      "after": [
+        105.8386,
+        21.03752
+      ],
+      "decision": "保留原代表坐标；系列或区域遗产不把该点当作每座建筑的准确位置。",
+      "sourceUrl": "https://whc.unesco.org/en/list/1328/maps/"
+    },
+    {
+      "id": "whc-1278",
+      "name": "Historic Monuments and Sites in Kaesong",
+      "before": [
+        126.5081,
+        37.98167
+      ],
+      "after": [
+        126.54244305555555,
+        37.985911111111115
+      ],
+      "decision": "浏览代表点采用UNESCO满月台与瞻星台组成区，其他城墙、学校与陵墓分布在开城周边。",
+      "sourceUrl": "https://whc.unesco.org/en/list/1278/maps/"
+    },
+    {
+      "id": "whc-976",
+      "name": "庆州历史区",
+      "before": [
+        129.2267,
+        35.78889
+      ],
+      "after": [
+        129.223,
+        35.829
+      ],
+      "decision": "浏览代表点采用已核对公开矢量的月城区域，其他南山、古墓、寺院与山城不在同一点。",
+      "sourceUrl": "https://whc.unesco.org/en/list/976/maps/"
+    },
+    {
+      "id": "whc-1477",
+      "name": "百济遗址区",
+      "before": [
+        127.1272,
+        36.46194
+      ],
+      "after": [
+        127.1272,
+        36.46194
+      ],
+      "decision": "保留原代表坐标；系列或区域遗产不把该点当作每座建筑的准确位置。",
+      "sourceUrl": "https://whc.unesco.org/en/list/1477/maps/"
+    },
+    {
+      "id": "whc-688",
+      "name": "古京都遗址（京都、宇治和大津城）",
+      "before": [
+        135.7694,
+        34.98056
+      ],
+      "after": [
+        135.7485333333333,
+        35.014133333333334
+      ],
+      "decision": "浏览代表点采用UNESCO二条城组成区坐标；遗产还包括京都、宇治、大津其他组成区。",
+      "sourceUrl": "https://whc.unesco.org/en/list/688/maps/"
+    },
+    {
+      "id": "whc-870",
+      "name": "古奈良的历史遗迹",
+      "before": [
+        135.8394,
+        34.67556
+      ],
+      "after": [
+        135.83971944444446,
+        34.68888888888888
+      ],
+      "decision": "浏览代表点采用UNESCO东大寺组成区坐标；古奈良包含八处资产，不能以此点代替全部资产范围。",
+      "sourceUrl": "https://whc.unesco.org/en/list/870/maps/"
+    },
+    {
+      "id": "whc-414",
+      "name": "特奥蒂瓦坎",
+      "before": [
+        -98.8417,
+        19.69167
+      ],
+      "after": [
+        -98.8417,
+        19.69167
+      ],
+      "decision": "保留原代表坐标；系列或区域遗产不把该点当作每座建筑的准确位置。",
+      "sourceUrl": "https://whc.unesco.org/en/list/414/maps/"
+    },
+    {
+      "id": "whc-412",
+      "name": "墨西哥城与赫霍奇米尔科历史中心",
+      "before": [
+        -99.1328,
+        19.41833
+      ],
+      "after": [
+        -99.13300833333332,
+        19.433480555555555
+      ],
+      "decision": "浏览代表点采用UNESCO墨西哥城历史中心组成区；赫霍奇米尔科是另处组成区。",
+      "sourceUrl": "https://whc.unesco.org/en/list/412/maps/"
+    },
+    {
+      "id": "whc-411",
+      "name": "帕伦克古城和国家公园",
+      "before": [
+        -92.05,
+        17.48333
+      ],
+      "after": [
+        -92.05,
+        17.48333
+      ],
+      "decision": "保留原代表坐标；系列或区域遗产不把该点当作每座建筑的准确位置。",
+      "sourceUrl": "https://whc.unesco.org/en/list/411/maps/"
+    },
+    {
+      "id": "whc-483",
+      "name": "奇琴伊察古城",
+      "before": [
+        -88.5687,
+        20.68274
+      ],
+      "after": [
+        -88.5687,
+        20.68274
+      ],
+      "decision": "保留原代表坐标；系列或区域遗产不把该点当作每座建筑的准确位置。",
+      "sourceUrl": "https://whc.unesco.org/en/list/483/maps/"
+    },
+    {
+      "id": "whc-273",
+      "name": "科斯科古城",
+      "before": [
+        -71.98,
+        -13.5173
+      ],
+      "after": [
+        -71.98,
+        -13.5173
+      ],
+      "decision": "保留原代表坐标；系列或区域遗产不把该点当作每座建筑的准确位置。",
+      "sourceUrl": "https://whc.unesco.org/en/list/273/maps/"
+    },
+    {
+      "id": "whc-366",
+      "name": "昌昌城考古地区",
+      "before": [
+        -79.0747,
+        -8.10784
+      ],
+      "after": [
+        -79.0747,
+        -8.10784
+      ],
+      "decision": "保留原代表坐标；系列或区域遗产不把该点当作每座建筑的准确位置。",
+      "sourceUrl": "https://whc.unesco.org/en/list/366/maps/"
+    },
+    {
+      "id": "whc-274",
+      "name": "马丘比丘古神庙",
+      "before": [
+        -72.5334,
+        -13.1849
+      ],
+      "after": [
+        -72.545,
+        -13.163
+      ],
+      "decision": "浏览代表点位于马丘比丘建筑遗址核心区；UNESCO原坐标表示更大的历史保护区，保留于originalCoordinates，不认为原坐标是建筑坐标。",
+      "sourceUrl": "https://whc.unesco.org/en/list/274/maps/"
+    },
+    {
+      "id": "whc-972",
+      "name": "琉球王国时期的遗迹",
+      "before": [
+        127.6828,
+        26.20861
+      ],
+      "after": [
+        127.6828,
+        26.20861
+      ],
+      "decision": "保留原代表坐标；系列或区域遗产不把该点当作每座建筑的准确位置。",
+      "sourceUrl": "https://whc.unesco.org/en/list/972/maps/"
+    }
+  ],
+  "changed": 6,
+  "limits": "浏览代表点与原始保护区代表坐标区分；不改变世界遗产ID、名称与打卡身份。奈良的八处资产在官方地理表中以七个组成区定位表示（春日大社和原始林合并）。"
+}

@@ -1,0 +1,1186 @@
+{
+  "caution": "仅盘点现有几何与元数据，不将role=area自动认定为完整古城。缺完整城界需逐城查证，不用保护区或寺庙外框代替。",
+  "sites": [
+    {
+      "key": "kathmandu",
+      "name": "加德满都杜巴广场",
+      "capitalSiteKey": "ancient-site:kathmandu",
+      "featureCount": 14,
+      "areas": [
+        {
+          "id": "kathmandu-relation-21498033",
+          "name": "杜巴广场现状范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/relation/21498033"
+        }
+      ],
+      "walls": [],
+      "palaceCount": 2,
+      "researchExtentCount": 0,
+      "researchNames": [],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "patan",
+      "name": "帕坦杜巴广场",
+      "capitalSiteKey": "ancient-site:patan",
+      "featureCount": 14,
+      "areas": [],
+      "walls": [],
+      "palaceCount": 2,
+      "researchExtentCount": 0,
+      "researchNames": [],
+      "status": "当前缺范围面，待可靠来源"
+    },
+    {
+      "key": "bhaktapur",
+      "name": "巴德岗杜巴广场",
+      "capitalSiteKey": "ancient-site:bhaktapur",
+      "featureCount": 12,
+      "areas": [
+        {
+          "id": "bhaktapur-way-1192827651",
+          "name": "杜巴广场现状范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/1192827651"
+        }
+      ],
+      "walls": [],
+      "palaceCount": 2,
+      "researchExtentCount": 0,
+      "researchNames": [],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "melaka",
+      "name": "马六甲古城",
+      "capitalSiteKey": "ancient-site:world-melaka",
+      "featureCount": 6,
+      "areas": [],
+      "walls": [],
+      "palaceCount": 1,
+      "researchExtentCount": 0,
+      "researchNames": [],
+      "status": "当前缺范围面，待可靠来源"
+    },
+    {
+      "key": "hue",
+      "name": "顺化皇城",
+      "capitalSiteKey": "ancient-site:world-hue",
+      "featureCount": 23,
+      "areas": [
+        {
+          "id": "hue-way-1509320731",
+          "name": "顺化京城范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/1509320731"
+        },
+        {
+          "id": "hue-imperial-city-reference",
+          "name": "顺化皇城范围（门口补接）",
+          "geometry": "Polygon",
+          "boundaryKind": "gate-gap-reference",
+          "sourceUrl": "https://www.openstreetmap.org/way/531016856"
+        },
+        {
+          "id": "hue-purple-city-plan-reference",
+          "name": "紫禁城范围（图示参考）",
+          "geometry": "Polygon",
+          "boundaryKind": "georeferenced-schematic",
+          "sourceUrl": "https://whc.unesco.org/archive/advisory_body_evaluation/678.pdf"
+        }
+      ],
+      "walls": [
+        {
+          "id": "hue-way-531016856",
+          "name": "皇城原始墙线（1）",
+          "geometry": "LineString"
+        },
+        {
+          "id": "hue-way-531031532",
+          "name": "皇城原始墙线（2）",
+          "geometry": "LineString"
+        },
+        {
+          "id": "hue-way-531031608",
+          "name": "皇城原始墙线（3）",
+          "geometry": "LineString"
+        }
+      ],
+      "palaceCount": 11,
+      "researchExtentCount": 0,
+      "researchNames": [],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "thanglong",
+      "name": "升龙皇城",
+      "capitalSiteKey": "ancient-site:world-thanglong",
+      "featureCount": 10,
+      "areas": [
+        {
+          "id": "thanglong-relation-21425205",
+          "name": "升龙皇城中央遗址现状开放区",
+          "geometry": "Polygon",
+          "boundaryKind": "modern-site-area",
+          "sourceUrl": "https://www.openstreetmap.org/relation/21425205"
+        },
+        {
+          "id": "thanglong-relation-21404421",
+          "name": "黄耀街18号考古区现状范围",
+          "geometry": "Polygon",
+          "boundaryKind": "modern-archaeological-area",
+          "sourceUrl": "https://www.openstreetmap.org/relation/21404421"
+        }
+      ],
+      "walls": [],
+      "palaceCount": 1,
+      "researchExtentCount": 1,
+      "researchNames": [
+        "阮朝河内城（1888年图示参考）"
+      ],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "kaesong",
+      "name": "开城",
+      "capitalSiteKey": "ancient-site:world-kaesong",
+      "featureCount": 2,
+      "areas": [],
+      "walls": [],
+      "palaceCount": 1,
+      "researchExtentCount": 7,
+      "researchNames": [
+        "开城外城范围（图示参考）",
+        "开城内城范围（图示参考）",
+        "开城早期城垣范围（图示参考）",
+        "开城外城图示存留墙段",
+        "开城内城图示存留墙段",
+        "开城早期城垣图示存留墙段",
+        "开城南大门"
+      ],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "gyeongju",
+      "name": "庆州（月城）",
+      "capitalSiteKey": "ancient-site:world-gyeongju",
+      "featureCount": 5,
+      "areas": [
+        {
+          "id": "gyeongju-way-42437237",
+          "name": "月城遗址区",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/42437237"
+        }
+      ],
+      "walls": [],
+      "palaceCount": 0,
+      "researchExtentCount": 0,
+      "researchNames": [],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "gongju",
+      "name": "公州（熊津）",
+      "capitalSiteKey": "ancient-site:world-gongju",
+      "featureCount": 6,
+      "areas": [
+        {
+          "id": "gongju-way-157482752",
+          "name": "公山城范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/157482752"
+        }
+      ],
+      "walls": [],
+      "palaceCount": 1,
+      "researchExtentCount": 0,
+      "researchNames": [],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "buyeo",
+      "name": "扶余（泗沘）",
+      "capitalSiteKey": "ancient-site:world-buyeo",
+      "featureCount": 4,
+      "areas": [
+        {
+          "id": "buyeo-way-38023729",
+          "name": "扶苏山城范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/38023729"
+        }
+      ],
+      "walls": [],
+      "palaceCount": 1,
+      "researchExtentCount": 0,
+      "researchNames": [],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "seoul",
+      "name": "汉阳（首尔）",
+      "capitalSiteKey": "ancient-site:world-seoul",
+      "featureCount": 9,
+      "areas": [
+        {
+          "id": "seoul-relation-5501517",
+          "name": "景福宫现状范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/relation/5501517"
+        }
+      ],
+      "walls": [],
+      "palaceCount": 5,
+      "researchExtentCount": 0,
+      "researchNames": [],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "kyoto",
+      "name": "京都（平安京）",
+      "capitalSiteKey": "ancient-site:world-kyoto",
+      "featureCount": 35,
+      "areas": [
+        {
+          "id": "kyoto-way-554879249",
+          "name": "京都御所（后世宫址，现状范围）",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/554879249"
+        },
+        {
+          "id": "kyoto-way-551409599",
+          "name": "仙洞御所现状范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/551409599"
+        },
+        {
+          "id": "kyoto-way-57111281",
+          "name": "二条城现状范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/57111281"
+        }
+      ],
+      "walls": [
+        {
+          "id": "kyoto-way-378094998",
+          "name": "现存石垣参考线",
+          "geometry": "LineString"
+        },
+        {
+          "id": "kyoto-way-378094993",
+          "name": "现存石垣参考线",
+          "geometry": "LineString"
+        },
+        {
+          "id": "kyoto-way-378082278",
+          "name": "现存石垣参考线",
+          "geometry": "LineString"
+        },
+        {
+          "id": "kyoto-way-378082541",
+          "name": "现存石垣参考线",
+          "geometry": "LineString"
+        }
+      ],
+      "palaceCount": 5,
+      "researchExtentCount": 107,
+      "researchNames": [
+        "平安京规划范围（图示参考）",
+        "平安宫大内里范围（图示参考）",
+        "西京极大路",
+        "木辻大路",
+        "道祖大路",
+        "西大宫大路",
+        "朱雀大路",
+        "大宫大路",
+        "西洞院大路",
+        "东洞院大路",
+        "东京极大路",
+        "皇嘉门大路",
+        "壬生大路",
+        "一条大路",
+        "土御门大路",
+        "中御门大路",
+        "二条大路",
+        "三条大路",
+        "四条大路",
+        "五条大路",
+        "六条大路",
+        "七条大路",
+        "八条大路",
+        "九条大路",
+        "右京\n北边四坊",
+        "右京\n北边三坊",
+        "右京\n北边二坊",
+        "左京\n北边二坊",
+        "左京\n北边三坊",
+        "左京\n北边四坊",
+        "右京\n一条四坊",
+        "右京\n一条三坊",
+        "右京\n一条二坊",
+        "左京\n一条二坊",
+        "左京\n一条三坊",
+        "左京\n一条四坊",
+        "右京\n二条四坊",
+        "右京\n二条三坊",
+        "右京\n二条二坊",
+        "左京\n二条二坊",
+        "左京\n二条三坊",
+        "左京\n二条四坊",
+        "右京\n三条四坊",
+        "右京\n三条三坊",
+        "右京\n三条二坊",
+        "右京\n三条一坊",
+        "左京\n三条一坊",
+        "左京\n三条二坊",
+        "左京\n三条三坊",
+        "左京\n三条四坊",
+        "右京\n四条四坊",
+        "右京\n四条三坊",
+        "右京\n四条二坊",
+        "右京\n四条一坊",
+        "左京\n四条一坊",
+        "左京\n四条二坊",
+        "左京\n四条三坊",
+        "左京\n四条四坊",
+        "右京\n五条四坊",
+        "右京\n五条三坊",
+        "右京\n五条二坊",
+        "右京\n五条一坊",
+        "左京\n五条一坊",
+        "左京\n五条二坊",
+        "左京\n五条三坊",
+        "左京\n五条四坊",
+        "右京\n六条四坊",
+        "右京\n六条三坊",
+        "右京\n六条二坊",
+        "右京\n六条一坊",
+        "左京\n六条一坊",
+        "左京\n六条二坊",
+        "左京\n六条三坊",
+        "左京\n六条四坊",
+        "右京\n七条四坊",
+        "右京\n七条三坊",
+        "右京\n七条二坊",
+        "右京\n七条一坊",
+        "左京\n七条一坊",
+        "左京\n七条二坊",
+        "左京\n七条三坊",
+        "左京\n七条四坊",
+        "右京\n八条四坊",
+        "右京\n八条三坊",
+        "右京\n八条二坊",
+        "右京\n八条一坊",
+        "左京\n八条一坊",
+        "左京\n八条二坊",
+        "左京\n八条三坊",
+        "左京\n八条四坊",
+        "右京\n九条四坊",
+        "右京\n九条三坊",
+        "右京\n九条二坊",
+        "右京\n九条一坊",
+        "左京\n九条一坊",
+        "左京\n九条二坊",
+        "左京\n九条三坊",
+        "左京\n九条四坊",
+        "平安京小路格网（图示参考）",
+        "西市",
+        "东市",
+        "西寺布局范围",
+        "东寺布局范围",
+        "神泉苑布局范围",
+        "平安宫内里",
+        "平安宫朝堂院",
+        "平安宫丰乐院"
+      ],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "nara",
+      "name": "奈良（平城京）",
+      "capitalSiteKey": "ancient-site:world-nara",
+      "featureCount": 43,
+      "areas": [
+        {
+          "id": "nara-way-426778267",
+          "name": "平城宫遗址公园范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/426778267"
+        },
+        {
+          "id": "nara-way-1134669589",
+          "name": "东大寺现状境内范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/1134669589"
+        },
+        {
+          "id": "nara-way-218642880",
+          "name": "元兴寺现状范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/218642880"
+        },
+        {
+          "id": "nara-way-208682432",
+          "name": "药师寺现状范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/208682432"
+        },
+        {
+          "id": "nara-way-218644927",
+          "name": "唐招提寺现状范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/218644927"
+        },
+        {
+          "id": "nara-way-1134481286",
+          "name": "春日大社现状范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/1134481286"
+        }
+      ],
+      "walls": [],
+      "palaceCount": 8,
+      "researchExtentCount": 69,
+      "researchNames": [
+        "平城京规划范围（复原）"
+      ],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "teotihuacan",
+      "name": "特奥蒂瓦坎",
+      "capitalSiteKey": "ancient-site:world-teotihuacan",
+      "featureCount": 11,
+      "areas": [
+        {
+          "id": "teotihuacan-way-558067645",
+          "name": "特奥蒂瓦坎遗址区范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/558067645"
+        }
+      ],
+      "walls": [
+        {
+          "id": "teotihuacan-way-157051104",
+          "name": "城堡区墙体",
+          "geometry": "Polygon"
+        }
+      ],
+      "palaceCount": 6,
+      "researchExtentCount": 0,
+      "researchNames": [],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "tenochtitlan",
+      "name": "特诺奇蒂特兰",
+      "capitalSiteKey": "ancient-site:world-tenochtitlan",
+      "featureCount": 6,
+      "areas": [
+        {
+          "id": "tenochtitlan-way-1040120541",
+          "name": "大神庙考古遗址区",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/1040120541"
+        }
+      ],
+      "walls": [],
+      "palaceCount": 0,
+      "researchExtentCount": 0,
+      "researchNames": [],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "palenque",
+      "name": "帕伦克",
+      "capitalSiteKey": "ancient-site:world-palenque",
+      "featureCount": 11,
+      "areas": [
+        {
+          "id": "palenque-way-27638749",
+          "name": "帕伦克遗址区范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/27638749"
+        }
+      ],
+      "walls": [],
+      "palaceCount": 1,
+      "researchExtentCount": 0,
+      "researchNames": [],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "chichenitza",
+      "name": "奇琴伊察",
+      "capitalSiteKey": "ancient-site:world-chichenitza",
+      "featureCount": 12,
+      "areas": [
+        {
+          "id": "chichenitza-way-49475802",
+          "name": "奇琴伊察遗址区范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/49475802"
+        }
+      ],
+      "walls": [],
+      "palaceCount": 1,
+      "researchExtentCount": 0,
+      "researchNames": [],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "cusco",
+      "name": "库斯科",
+      "capitalSiteKey": "ancient-site:world-cusco",
+      "featureCount": 7,
+      "areas": [
+        {
+          "id": "cusco-way-83130621",
+          "name": "萨克塞华曼遗址区",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/83130621"
+        }
+      ],
+      "walls": [],
+      "palaceCount": 2,
+      "researchExtentCount": 0,
+      "researchNames": [],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "chanchan",
+      "name": "昌昌古城",
+      "capitalSiteKey": "ancient-site:world-chanchan",
+      "featureCount": 12,
+      "areas": [
+        {
+          "id": "chanchan-way-26324339",
+          "name": "昌昌古城遗址区范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/26324339"
+        }
+      ],
+      "walls": [],
+      "palaceCount": 10,
+      "researchExtentCount": 0,
+      "researchNames": [],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "machupicchu",
+      "name": "马丘比丘",
+      "capitalSiteKey": "ancient-site:world-machupicchu",
+      "featureCount": 8,
+      "areas": [
+        {
+          "id": "machupicchu-way-157376572",
+          "name": "马丘比丘遗址区范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/157376572"
+        }
+      ],
+      "walls": [],
+      "palaceCount": 1,
+      "researchExtentCount": 0,
+      "researchNames": [],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "kamakura",
+      "name": "镰仓",
+      "capitalSiteKey": "ancient-site:world-kamakura",
+      "featureCount": 8,
+      "areas": [],
+      "walls": [],
+      "palaceCount": 1,
+      "researchExtentCount": 6,
+      "researchNames": [
+        "若宫大路（现状路径）",
+        "龟谷坂切通（现状路径）",
+        "若宫大路（现状路径）",
+        "段葛参道（现状路径）",
+        "朝比奈切通（现状路径）",
+        "大佛切通古道（现状路径）"
+      ],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "edo",
+      "name": "江户城（东京）",
+      "capitalSiteKey": "ancient-site:world-edo",
+      "featureCount": 19,
+      "areas": [
+        {
+          "id": "edo-relation-1968066",
+          "name": "江户城核心现状范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/relation/1968066"
+        },
+        {
+          "id": "edo-relation-5415394",
+          "name": "本丸、二之丸与三之丸现状园区",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/relation/5415394"
+        }
+      ],
+      "walls": [
+        {
+          "id": "edo-way-1154268298",
+          "name": "现存石垣参考线",
+          "geometry": "LineString"
+        },
+        {
+          "id": "edo-way-364218303",
+          "name": "现存石垣参考线",
+          "geometry": "LineString"
+        },
+        {
+          "id": "edo-way-617151994",
+          "name": "现存石垣参考线",
+          "geometry": "LineString"
+        },
+        {
+          "id": "edo-way-371634133",
+          "name": "现存石垣参考线",
+          "geometry": "LineString"
+        },
+        {
+          "id": "edo-way-371633762",
+          "name": "现存石垣参考线",
+          "geometry": "LineString"
+        }
+      ],
+      "palaceCount": 0,
+      "researchExtentCount": 7,
+      "researchNames": [
+        "半藏壕（现状水域）",
+        "千鸟之渊（现状水域）",
+        "中道灌壕（现状水域）",
+        "上道灌壕（现状水域）",
+        "天神壕（现状水域）",
+        "白鸟壕（现状水域）",
+        "下道灌壕（现状水域）"
+      ],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "fujiwara",
+      "name": "藤原京",
+      "capitalSiteKey": "ancient-site:world-fujiwara",
+      "featureCount": 6,
+      "areas": [
+        {
+          "id": "fujiwara-way-426531398",
+          "name": "藤原宫遗址现状范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/426531398"
+        }
+      ],
+      "walls": [
+        {
+          "id": "fujiwara-way-1292583062",
+          "name": "藤原宫西面大垣遗址",
+          "geometry": "Polygon"
+        }
+      ],
+      "palaceCount": 0,
+      "researchExtentCount": 115,
+      "researchNames": [
+        "藤原京研究范围（图示参考）",
+        "藤原宫宫墙范围（尺寸定位参考）",
+        "藤原宫北部宫区",
+        "藤原宫大极殿院",
+        "藤原宫朝堂院",
+        "藤原宫西侧官署区（北）",
+        "藤原宫西侧官署区（南）",
+        "藤原宫东侧官署院落（北）",
+        "藤原宫东侧官署院落（中）",
+        "藤原宫东侧官署院落（南）",
+        "右京\n一条四坊",
+        "右京\n一条三坊",
+        "右京\n一条二坊",
+        "右京\n一条一坊",
+        "左京\n一条一坊",
+        "左京\n一条二坊",
+        "左京\n一条三坊",
+        "左京\n一条四坊",
+        "右京\n二条四坊",
+        "右京\n二条三坊",
+        "右京\n二条二坊",
+        "右京\n二条一坊",
+        "左京\n二条一坊",
+        "左京\n二条二坊",
+        "左京\n二条三坊",
+        "左京\n二条四坊",
+        "右京\n三条四坊",
+        "右京\n三条三坊",
+        "左京\n三条三坊",
+        "左京\n三条四坊",
+        "右京\n四条四坊",
+        "右京\n四条三坊",
+        "左京\n四条三坊",
+        "左京\n四条四坊",
+        "右京\n五条四坊",
+        "右京\n五条三坊",
+        "左京\n五条三坊",
+        "左京\n五条四坊",
+        "右京\n六条四坊",
+        "右京\n六条三坊",
+        "左京\n六条三坊",
+        "左京\n六条四坊",
+        "右京\n七条四坊",
+        "右京\n七条三坊",
+        "右京\n七条二坊",
+        "右京\n七条一坊",
+        "左京\n七条一坊",
+        "左京\n七条二坊",
+        "左京\n七条三坊",
+        "左京\n七条四坊",
+        "右京\n八条四坊",
+        "右京\n八条三坊",
+        "右京\n八条二坊",
+        "右京\n八条一坊",
+        "左京\n八条一坊",
+        "左京\n八条二坊",
+        "左京\n八条三坊",
+        "左京\n八条四坊",
+        "右京\n九条四坊",
+        "右京\n九条三坊",
+        "右京\n九条二坊",
+        "右京\n九条一坊",
+        "左京\n九条一坊",
+        "左京\n九条二坊",
+        "左京\n九条三坊",
+        "左京\n九条四坊",
+        "右京\n十条四坊",
+        "右京\n十条三坊",
+        "右京\n十条二坊",
+        "右京\n十条一坊",
+        "左京\n十条一坊",
+        "左京\n十条二坊",
+        "左京\n十条三坊",
+        "左京\n十条四坊",
+        "右京\n十一条四坊",
+        "右京\n十一条三坊",
+        "右京\n十一条二坊",
+        "右京\n十一条一坊",
+        "左京\n十一条一坊",
+        "左京\n十一条二坊",
+        "左京\n十一条三坊",
+        "左京\n十一条四坊",
+        "右京\n十二条四坊",
+        "右京\n十二条三坊",
+        "右京\n十二条二坊",
+        "右京\n十二条一坊",
+        "左京\n十二条一坊",
+        "左京\n十二条二坊",
+        "左京\n十二条三坊",
+        "左京\n十二条四坊",
+        "西京极大路",
+        "西三坊大路",
+        "西二坊大路",
+        "西一坊大路",
+        "西一坊大路",
+        "朱雀大路",
+        "朱雀大路",
+        "东一坊大路",
+        "东一坊大路",
+        "东二坊大路",
+        "东三坊大路",
+        "东京极大路",
+        "北京极大路",
+        "一条大路",
+        "二条大路",
+        "三条大路",
+        "四条大路",
+        "五条大路",
+        "六条大路",
+        "七条大路",
+        "八条大路",
+        "九条大路",
+        "十条大路",
+        "十一条大路",
+        "南京极大路"
+      ],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "nagaoka",
+      "name": "长冈京",
+      "capitalSiteKey": "ancient-site:world-nagaoka",
+      "featureCount": 5,
+      "areas": [],
+      "walls": [
+        {
+          "id": "nagaoka-way-186320744",
+          "name": "长冈宫筑地墙遗址",
+          "geometry": "Polygon"
+        }
+      ],
+      "palaceCount": 1,
+      "researchExtentCount": 98,
+      "researchNames": [
+        "长冈京规划范围（图示参考）",
+        "长冈宫宫域（图示参考）",
+        "西四坊大路",
+        "西三坊大路",
+        "西二坊大路",
+        "西一坊大路",
+        "朱雀大路",
+        "东一坊大路",
+        "东二坊大路",
+        "东三坊大路",
+        "东四坊大路",
+        "西一坊坊间大路",
+        "东一坊坊间大路",
+        "北京极大路",
+        "北一条大路",
+        "一条大路",
+        "二条条间大路",
+        "二条大路",
+        "三条大路",
+        "四条大路",
+        "五条大路",
+        "六条大路",
+        "七条大路",
+        "八条大路",
+        "九条大路",
+        "右京\n一条四坊",
+        "右京\n一条三坊",
+        "右京\n一条二坊",
+        "左京\n一条二坊",
+        "左京\n一条三坊",
+        "左京\n一条四坊",
+        "右京\n二条四坊",
+        "右京\n二条三坊",
+        "右京\n二条二坊",
+        "左京\n二条二坊",
+        "左京\n二条三坊",
+        "左京\n二条四坊",
+        "右京\n三条四坊",
+        "右京\n三条三坊",
+        "右京\n三条二坊",
+        "右京\n三条一坊",
+        "左京\n三条一坊",
+        "左京\n三条二坊",
+        "左京\n三条三坊",
+        "左京\n三条四坊",
+        "右京\n四条四坊",
+        "右京\n四条三坊",
+        "右京\n四条二坊",
+        "右京\n四条一坊",
+        "左京\n四条一坊",
+        "左京\n四条二坊",
+        "左京\n四条三坊",
+        "左京\n四条四坊",
+        "右京\n五条四坊",
+        "右京\n五条三坊",
+        "右京\n五条二坊",
+        "右京\n五条一坊",
+        "左京\n五条一坊",
+        "左京\n五条二坊",
+        "左京\n五条三坊",
+        "左京\n五条四坊",
+        "右京\n六条四坊",
+        "右京\n六条三坊",
+        "右京\n六条二坊",
+        "右京\n六条一坊",
+        "左京\n六条一坊",
+        "左京\n六条二坊",
+        "左京\n六条三坊",
+        "左京\n六条四坊",
+        "右京\n七条四坊",
+        "右京\n七条三坊",
+        "右京\n七条二坊",
+        "右京\n七条一坊",
+        "左京\n七条一坊",
+        "左京\n七条二坊",
+        "左京\n七条三坊",
+        "左京\n七条四坊",
+        "右京\n八条四坊",
+        "右京\n八条三坊",
+        "右京\n八条二坊",
+        "右京\n八条一坊",
+        "左京\n八条一坊",
+        "左京\n八条二坊",
+        "左京\n八条三坊",
+        "左京\n八条四坊",
+        "右京\n九条四坊",
+        "右京\n九条三坊",
+        "右京\n九条二坊",
+        "右京\n九条一坊",
+        "左京\n九条一坊",
+        "左京\n九条二坊",
+        "左京\n九条三坊",
+        "左京\n九条四坊",
+        "长冈京小路格网（图示参考）",
+        "长冈宫第一次内里（推定）",
+        "长冈宫第二次内里",
+        "长冈宫大极殿院",
+        "长冈宫朝堂院"
+      ],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "naniwa",
+      "name": "难波京（难波宫）",
+      "capitalSiteKey": "ancient-site:world-naniwa",
+      "featureCount": 5,
+      "areas": [
+        {
+          "id": "naniwa-way-44506237",
+          "name": "难波宫遗址现状范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/44506237"
+        }
+      ],
+      "walls": [],
+      "palaceCount": 3,
+      "researchExtentCount": 5,
+      "researchNames": [
+        "难波宫宫域推定范围（图示参考）",
+        "前期难波宫内里北院（图示参考）",
+        "后期难波宫内里（图示参考）",
+        "前期难波宫朝堂院主院（图示参考）",
+        "后期难波宫朝堂院主院（图示参考）"
+      ],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "asuka",
+      "name": "飞鸟宫都",
+      "capitalSiteKey": "ancient-site:world-asuka",
+      "featureCount": 6,
+      "areas": [
+        {
+          "id": "asuka-way-516813148",
+          "name": "飞鸟宫遗址现状范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/516813148"
+        },
+        {
+          "id": "asuka-way-813386514",
+          "name": "飞鸟寺现状范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/813386514"
+        },
+        {
+          "id": "asuka-way-402546839",
+          "name": "橘寺现状范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/402546839"
+        }
+      ],
+      "walls": [],
+      "palaceCount": 0,
+      "researchExtentCount": 0,
+      "researchNames": [],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "shuri",
+      "name": "首里城",
+      "capitalSiteKey": "ancient-site:world-shuri",
+      "featureCount": 15,
+      "areas": [
+        {
+          "id": "shuri-way-380509890",
+          "name": "首里城现状公园范围",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/380509890"
+        }
+      ],
+      "walls": [
+        {
+          "id": "shuri-way-233878048",
+          "name": "现存石垣参考线",
+          "geometry": "LineString"
+        },
+        {
+          "id": "shuri-way-536611929",
+          "name": "现存石垣参考线",
+          "geometry": "LineString"
+        },
+        {
+          "id": "shuri-way-168659901",
+          "name": "现存石垣参考线",
+          "geometry": "LineString"
+        },
+        {
+          "id": "shuri-way-547233167",
+          "name": "现存石垣参考线",
+          "geometry": "LineString"
+        },
+        {
+          "id": "shuri-way-380508010",
+          "name": "现存石垣参考线",
+          "geometry": "LineString"
+        }
+      ],
+      "palaceCount": 1,
+      "researchExtentCount": 2,
+      "researchNames": [
+        "首里城内郭（图示参考）",
+        "首里城外围（内外郭，图示参考）"
+      ],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "coloa",
+      "name": "古螺城",
+      "capitalSiteKey": "ancient-site:world-coloa",
+      "featureCount": 3,
+      "areas": [
+        {
+          "id": "coloa-way-776437155",
+          "name": "古螺核心祭祀景区（现状范围）",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/776437155"
+        }
+      ],
+      "walls": [],
+      "palaceCount": 0,
+      "researchExtentCount": 3,
+      "researchNames": [
+        "古螺内城（围合参考）",
+        "古螺中城可辨识段（走向参考）",
+        "古螺外城西段（走向参考）"
+      ],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "ho-citadel",
+      "name": "胡朝城（西都）",
+      "capitalSiteKey": "ancient-site:world-ho-citadel",
+      "featureCount": 6,
+      "areas": [
+        {
+          "id": "ho-citadel-way-242169982",
+          "name": "胡朝城内城（石城现状范围）",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/242169982"
+        }
+      ],
+      "walls": [],
+      "palaceCount": 0,
+      "researchExtentCount": 1,
+      "researchNames": [
+        "胡朝罗城土垣遗存段（图示参考）"
+      ],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    },
+    {
+      "key": "bursa",
+      "name": "布尔萨",
+      "capitalSiteKey": "ancient-site:world-bursa",
+      "featureCount": 24,
+      "areas": [
+        {
+          "id": "bursa-way-1009347298",
+          "name": "希萨尔考古公园（现状遗址区）",
+          "geometry": "Polygon",
+          "boundaryKind": "待逐项核定",
+          "sourceUrl": "https://www.openstreetmap.org/way/1009347298"
+        }
+      ],
+      "walls": [
+        {
+          "id": "bursa-wall-way-253507002",
+          "name": "希萨尔城墙（现存及修复段）",
+          "geometry": "LineString"
+        },
+        {
+          "id": "bursa-wall-way-253509247",
+          "name": "希萨尔城墙（现存及修复段）",
+          "geometry": "LineString"
+        },
+        {
+          "id": "bursa-wall-way-1009347301",
+          "name": "希萨尔城墙（现存及修复段）",
+          "geometry": "LineString"
+        },
+        {
+          "id": "bursa-wall-way-1009347302",
+          "name": "希萨尔城墙（现存及修复段）",
+          "geometry": "LineString"
+        },
+        {
+          "id": "bursa-wall-way-1009347303",
+          "name": "希萨尔城墙（现存及修复段）",
+          "geometry": "LineString"
+        },
+        {
+          "id": "bursa-wall-way-1271781057",
+          "name": "希萨尔城墙（现存及修复段）",
+          "geometry": "LineString"
+        }
+      ],
+      "palaceCount": 0,
+      "researchExtentCount": 0,
+      "researchNames": [],
+      "status": "有范围几何，仍须核查性质及是否覆盖全城"
+    }
+  ],
+  "mySon": {
+    "sourceUrl": "https://whc.unesco.org/en/list/949/",
+    "nature": "UNESCO称美山为占婆的宗教和政治中心；寺庙圣区不等于完整城市范围，不能以未找到城界否定其政治中心性质。",
+    "implementationStatus": "现有世界遗产点whc-949；尚无古都根点或圣区矢量，不增设无几何详情"
+  },
+  "thangLongHistoricalMaps": {
+    "sourceUrl": "https://trungbayonline.hoangthanhthanglong.vn/DocLap/Index",
+    "maps": [
+      {
+        "year": 1490,
+        "url": "https://trungbayonline.hoangthanhthanglong.vn/Content/DocLap/images/topic1/p6.png"
+      },
+      {
+        "year": 1873,
+        "url": "https://trungbayonline.hoangthanhthanglong.vn/Content/DocLap/images/topic1/p7.1.png",
+        "observedSize": [
+          600,
+          726
+        ]
+      },
+      {
+        "year": 1888,
+        "url": "https://trungbayonline.hoangthanhthanglong.vn/Content/DocLap/images/topic1/p7.2.png"
+      }
+    ],
+    "status": "已找到官方展览图；1873年展示图分辨率不足以可靠识别多组同名控制点，不据此生成历代城界。提名PDF约149MB，网页提取超限且本地下载DNS失败，待获取可用高分辨率图后配准。"
+  }
+}

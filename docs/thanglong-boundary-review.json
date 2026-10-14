@@ -1,0 +1,30 @@
+{
+  "referenceUrl": "https://hoangthanhthanglong.vn/khu-di-tich-trung-tam-hoang-thanh-thang-long/",
+  "modernAreaIds": [
+    "thanglong-relation-21425205",
+    "thanglong-relation-21404421"
+  ],
+  "archaeologySourceMembers": [
+    "1559808651",
+    "1559827039",
+    "1559827040",
+    "1559827041",
+    "1304386634",
+    "1559827047",
+    "1559827042",
+    "1559827043"
+  ],
+  "historicalBoundaryStatus": "已补阮朝1888年河内城图示参考；李、陈、黎时期城界继续核验，不沿用阮朝范围",
+  "historicalPeriods": [
+    {
+      "period": "李陈黎诸朝",
+      "scope": "京城、皇城、紫禁城，范围历经变化"
+    },
+    {
+      "period": "阮朝1805年以后",
+      "scope": "较小沃邦式河内城，与旧皇城区分"
+    }
+  ],
+  "historyMapSource": "https://trungbayonline.hoangthanhthanglong.vn/DocLap/Index",
+  "historicalPlanSource": "docs/thanglong-nguyen-historic-plan.json"
+}

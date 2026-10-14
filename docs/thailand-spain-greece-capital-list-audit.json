@@ -1,0 +1,989 @@
+{
+  "scope": "现有全部三国条目与首批候选审计；不是穷尽所有希腊城邦、泰法和地方王国",
+  "existingCapitalCount": {
+    "Thailand": 4,
+    "Spain": 5,
+    "Greece": 4
+  },
+  "implementedCorrections": [
+    "cordoba",
+    "toledo",
+    "valladolid",
+    "barcelona",
+    "chiangmai",
+    "nafplio",
+    "athens"
+  ],
+  "preserved": {
+    "geometry": true,
+    "heritage": true,
+    "siteKeys": true,
+    "sourceOrders": true,
+    "oldRecordNamesAsAliases": true
+  },
+  "statusCounts": {
+    "已收录／保留": 6,
+    "已收录／已修正": 7,
+    "已收录／普通古城": 1,
+    "已补录／城郭详见实施清单": 32,
+    "待核候选": 42,
+    "普通古城候选": 2,
+    "已核实／记录缺漏": 1,
+    "行政／政治身份待核": 4,
+    "已核实政治中心／分期待补": 2,
+    "已核实宫殿中心／都城身份待核": 5
+  },
+  "rows": [
+    {
+      "country": "泰国",
+      "name": "大城／阿瑜陀耶",
+      "status": "已收录／保留",
+      "identity": "阿瑜陀耶王国都城",
+      "years": "1350—1767",
+      "source": "https://whc.unesco.org/en/list/576/",
+      "note": "阿瑜陀耶王国都城。完整分期城界待核。"
+    },
+    {
+      "country": "泰国",
+      "name": "素可泰",
+      "status": "已收录／保留",
+      "identity": "素可泰王国都城",
+      "years": "13—15世纪",
+      "source": "https://whc.unesco.org/en/list/574/",
+      "note": "素可泰王国都城。完整分期城界待核。"
+    },
+    {
+      "country": "泰国",
+      "name": "清迈",
+      "status": "已收录／已修正",
+      "identity": "兰纳王国都城；后为附属政权中心",
+      "years": "1296—1558（独立兰纳阶段）；后续附属政权阶段另述",
+      "source": "https://whc.unesco.org/en/tentativelists/6003/",
+      "note": "1296年建都；1558年后缅属阶段与18世纪后暹罗附属政权阶段分开说明，不笼统写为独立兰纳复都。完整内外城分期范围待核。"
+    },
+    {
+      "country": "泰国",
+      "name": "斯贴",
+      "status": "已收录／普通古城",
+      "identity": "陀罗钵地时期古城（都城身份未确定）",
+      "years": "约6—10世纪",
+      "source": "https://whc.unesco.org/en/list/1662/",
+      "note": "具有护城壕环绕的内外双城及大型宗教遗迹。UNESCO资料没有明确认定其为国家或王国首都，按普通古城收录；完整分期城界待核。"
+    },
+    {
+      "country": "泰国",
+      "name": "曼谷",
+      "status": "已收录／保留",
+      "identity": "暹罗／泰国都城",
+      "years": "1782年至今",
+      "source": "https://www.royalgrandpalace.th/en",
+      "note": "暹罗／泰国都城。完整分期城界待核。"
+    },
+    {
+      "country": "西班牙",
+      "name": "科尔多瓦",
+      "status": "已收录／已修正",
+      "identity": "科尔多瓦酋长国及哈里发国都城",
+      "years": "756—1031（酋长国756—929；哈里发国929—1031）",
+      "source": "https://www.spain.info/export/sites/segtur/.content/Folletos/folletos/andalusia-muslim-travelers.pdf",
+      "note": "独立酋长国及哈里发国阶段按756—1031年表达，不将此前行省首府时期混作独立国都。麦地那·阿扎哈拉为另址王廷城市，已有遗迹几何，迁驻记录仍需补齐；两个世界遗产打卡身份保持独立。"
+    },
+    {
+      "country": "西班牙",
+      "name": "托莱多",
+      "status": "已收录／已修正",
+      "identity": "西哥特王国都城；托莱多泰法都城",
+      "years": "6世纪—711；11世纪—1085（泰法阶段）",
+      "source": "https://tesauros.cultura.gob.es/tesauros/tesauros/alfabetico/t?termino=https%3A%2F%2Ftesauros.cultura.gob.es%2Ftesauros%2Ftoponimiahistorica%2F1216925&tesauro=https%3A%2F%2Ftesauros%2Ftoponimiahistorica",
+      "note": "西哥特及泰法阶段分别表达；后世卡斯蒂利亚王廷驻地不等同全时期唯一固定首都。完整分期城界待核。"
+    },
+    {
+      "country": "西班牙",
+      "name": "巴利亚多利德",
+      "status": "已收录／已修正",
+      "identity": "西班牙王国首都（1601—1606）",
+      "years": "1601—1606",
+      "source": "https://www.info.valladolid.es/blog/wp-content/uploads/2020/11/Monumental-paginado.pdf",
+      "note": "仅将1601—1606年的首都阶段计入；其他短期王廷驻地不自动计为首都。完整分期城界待核。"
+    },
+    {
+      "country": "西班牙",
+      "name": "马德里",
+      "status": "已收录／保留",
+      "identity": "西班牙都城",
+      "years": "1561年至今（短期迁驻除外）",
+      "source": "https://www.patrimonionacional.es/en/royal-sites/royal-palace-madrid",
+      "note": "西班牙都城。完整分期城界待核。"
+    },
+    {
+      "country": "西班牙",
+      "name": "巴塞罗那",
+      "status": "已收录／已修正",
+      "identity": "巴塞罗那伯国都城；阿拉贡王权行政中心",
+      "years": "中世纪伯国阶段；1317年起王权行政机构驻地",
+      "source": "https://www.barcelona.cat/museuhistoria/sites/default/files/llibret_bcn_capital_med_eng.pdf",
+      "note": "巴塞罗那为伯国都城，后为阿拉贡复合王权的重要行政中心。中世纪王廷具有巡驻性质，不能表述为阿拉贡王国全时期唯一固定首都。现代加泰罗尼亚自治区首府身份另行区分。"
+    },
+    {
+      "country": "希腊",
+      "name": "雅典",
+      "status": "已收录／已修正",
+      "identity": "雅典城邦都城；近代希腊首都",
+      "years": "古代城邦阶段；1834年至今",
+      "source": "https://whc.unesco.org/en/list/404/",
+      "note": "古代按独立城邦政治中心收录；1834年至今为近代希腊首都。两阶段须分开表达，不把罗马等外来统治全时期当作独立都城。既有33项遗迹原样保留。"
+    },
+    {
+      "country": "希腊",
+      "name": "埃盖",
+      "status": "已收录／保留",
+      "identity": "马其顿王国早期都城",
+      "years": "约前7世纪—前4世纪",
+      "source": "https://www.visitgreece.gr/en/experiences/architecture/picturesque-villages/archaeological-site-of-aigai/",
+      "note": "马其顿王国早期都城。完整分期城界待核。"
+    },
+    {
+      "country": "希腊",
+      "name": "佩拉",
+      "status": "已收录／保留",
+      "identity": "马其顿王国都城",
+      "years": "约前4世纪—前168年",
+      "source": "https://www.visitgreece.gr/en/experiences/architecture/pella/",
+      "note": "马其顿王国都城。完整分期城界待核。"
+    },
+    {
+      "country": "希腊",
+      "name": "纳夫普利翁",
+      "status": "已收录／已修正",
+      "identity": "近代希腊国家早期首都",
+      "years": "1827年定为首都；1829—1834年政府驻地",
+      "source": "https://www.visitgreece.gr/en/mainland/Peloponnese/Nafplio",
+      "note": "官方旅游资料按1827—1834年首都口径表达；埃伊纳在1828—1829年为政府驻地。1832年前不能称作希腊王国首都，1832年后才是王国阶段。首都指定与实际政府驻地的年代需区分。"
+    },
+    {
+      "country": "泰国",
+      "name": "吞武里",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "吞武里王国都城",
+      "years": "1767—1782",
+      "source": "https://www.lib.kmutt.ac.th/en/king-taksin-chapter17/",
+      "note": "现有吞武里王宫几何归在曼谷条目；吞武里与曼谷隔河、城址与时期不同，不能视为已有独立都城记录。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "泰国",
+      "name": "南奔",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "哈里奔猜王国都城；孟莱短期驻地",
+      "years": "约8—13世纪；1292年前后阶段另核",
+      "source": "https://whc.unesco.org/en/tentativelists/6003/",
+      "note": "建国早期年代有差异；旅游文案将并入兰纳写为12世纪，与提名材料1292年不同，不照抄精确终年。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "泰国",
+      "name": "清莱",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "孟莱王权迁都过程中的都城",
+      "years": "13世纪",
+      "source": "https://whc.unesco.org/en/tentativelists/6003/",
+      "note": "不把后来的现代省会阶段都列为国都。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "泰国",
+      "name": "魏功甘（Wiang Kum Kam）",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "孟莱建清迈前的都城",
+      "years": "13世纪末，1296年前",
+      "source": "https://whc.unesco.org/en/tentativelists/6003/",
+      "note": "位于今清迈以南，独立城址，不与清迈旧城根点混同。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "泰国",
+      "name": "清盛／恩扬",
+      "status": "待核候选",
+      "identity": "早期恩扬政权与后世清盛城分期候选",
+      "years": "未确定",
+      "source": "https://whc.unesco.org/en/tentativelists/6003/",
+      "note": "不能把恩扬旧都、后建清盛城和缅属东兰纳中心合成同一无年代国都；城址对应待核。"
+    },
+    {
+      "country": "泰国",
+      "name": "帕尧",
+      "status": "待核候选",
+      "identity": "帕尧地方王权中心候选",
+      "years": "未确定",
+      "source": "https://whc.unesco.org/en/tentativelists/6003/",
+      "note": "提名材料提及帕尧国王；建国年代、独立阶段和城址仍需专门核证。"
+    },
+    {
+      "country": "泰国",
+      "name": "南邦",
+      "status": "待核候选",
+      "identity": "哈里奔猜／兰纳地方中心候选",
+      "years": "未确定",
+      "source": "https://whc.unesco.org/en/tentativelists/6003/",
+      "note": "须区分附属城市与独立或附属公国驻地。"
+    },
+    {
+      "country": "泰国",
+      "name": "难府／南府",
+      "status": "待核候选",
+      "identity": "难府地方政权都城候选",
+      "years": "未确定",
+      "source": "https://whc.unesco.org/en/tentativelists/6003/",
+      "note": "须与早期普阿、普片城址分别表达。"
+    },
+    {
+      "country": "泰国",
+      "name": "普阿",
+      "status": "待核候选",
+      "identity": "难府政权早期都城候选",
+      "years": "未确定",
+      "source": "https://whc.unesco.org/en/tentativelists/6003/",
+      "note": "不同城址，具体王都记录及年代待核。"
+    },
+    {
+      "country": "泰国",
+      "name": "洛布里",
+      "status": "待核候选",
+      "identity": "罗斛政治中心及那莱王廷驻地候选",
+      "years": "未确定",
+      "source": "https://whc.unesco.org/en/tentativelists/6003/",
+      "note": "罗斛独立阶段与阿瑜陀耶时期驻宫不能混为连续国都。"
+    },
+    {
+      "country": "泰国",
+      "name": "佛统",
+      "status": "待核候选",
+      "identity": "陀罗钵地政治中心候选",
+      "years": "未确定",
+      "source": "https://whc.unesco.org/en/tentativelists/6003/",
+      "note": "首都说涉及佛统或乌通，官方材料也有不同说法，未证实唯一首都。"
+    },
+    {
+      "country": "泰国",
+      "name": "乌通",
+      "status": "待核候选",
+      "identity": "陀罗钵地政治中心候选",
+      "years": "未确定",
+      "source": "https://whc.unesco.org/en/tentativelists/6003/",
+      "note": "不能因名称而认定为阿瑜陀耶乌通王的都城。"
+    },
+    {
+      "country": "泰国",
+      "name": "素攀武里",
+      "status": "待核候选",
+      "identity": "地方政治中心候选",
+      "years": "未确定",
+      "source": "https://whc.unesco.org/en/tentativelists/6003/",
+      "note": "独立苏攀武里政权及年代待核。"
+    },
+    {
+      "country": "泰国",
+      "name": "洛坤",
+      "status": "待核候选",
+      "identity": "单马令／洛坤王权中心候选",
+      "years": "未确定",
+      "source": "https://whc.unesco.org/en/tentativelists/6003/",
+      "note": "需要专门核对铭文、政权阶段与城址年代。"
+    },
+    {
+      "country": "泰国",
+      "name": "芳县（Fang）",
+      "status": "待核候选",
+      "identity": "孟莱行政驻地候选",
+      "years": "未确定",
+      "source": "https://whc.unesco.org/en/tentativelists/6003/",
+      "note": "提名材料列作过去行政中心；不能直接提升为已证实国家首都。"
+    },
+    {
+      "country": "泰国",
+      "name": "清孔",
+      "status": "待核候选",
+      "identity": "孟莱行政驻地候选",
+      "years": "未确定",
+      "source": "https://whc.unesco.org/en/tentativelists/6003/",
+      "note": "与独立都城身份需分开核实。"
+    },
+    {
+      "country": "泰国",
+      "name": "彭世洛",
+      "status": "待核候选",
+      "identity": "王廷迁驻及素可泰晚期中心候选",
+      "years": "未确定",
+      "source": "https://whc.unesco.org/en/tentativelists/6003/",
+      "note": "实际政府迁驻、陪都与全王国首都年代待核。"
+    },
+    {
+      "country": "泰国",
+      "name": "西萨查那莱",
+      "status": "普通古城候选",
+      "identity": "素可泰宗教及陶瓷生产中心",
+      "years": "素可泰时期",
+      "source": "https://whc.unesco.org/en/list/574/",
+      "note": "该来源不证明其为独立王国首都；不因同属世界遗产而生成古都图标。"
+    },
+    {
+      "country": "泰国",
+      "name": "甘烹碧",
+      "status": "普通古城候选",
+      "identity": "素可泰边防重镇",
+      "years": "素可泰时期",
+      "source": "https://whc.unesco.org/en/list/574/",
+      "note": "该来源不证明其为独立王国首都；不因同属世界遗产而生成古都图标。"
+    },
+    {
+      "country": "西班牙",
+      "name": "莱昂",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "莱昂王国都城",
+      "years": "中世纪",
+      "source": "https://www.spain.info/en/destination/leon/",
+      "note": "身份已支持；未核实完整起止年份的条目只写世纪，不编造精确年代。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "西班牙",
+      "name": "奥维耶多",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "阿斯图里亚斯王国都城",
+      "years": "中世纪",
+      "source": "https://www.spain.info/en/destination/oviedo/",
+      "note": "身份已支持；未核实完整起止年份的条目只写世纪，不编造精确年代。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "西班牙",
+      "name": "坎加斯－德奥尼斯",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "阿斯图里亚斯王国早期都城",
+      "years": "8世纪",
+      "source": "https://www.turismoasturias.es/en/covadonga/historica",
+      "note": "身份已支持；未核实完整起止年份的条目只写世纪，不编造精确年代。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "西班牙",
+      "name": "普拉维亚",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "阿斯图里亚斯王国迁都地",
+      "years": "774年迁驻；完整终年待核",
+      "source": "https://www.turismoasturias.es/en/descubre/cultura/prerromanico/santianes-de-pravia",
+      "note": "身份已支持；未核实完整起止年份的条目只写世纪，不编造精确年代。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "西班牙",
+      "name": "潘普洛纳",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "潘普洛纳／纳瓦拉王国都城",
+      "years": "9世纪起；独立王国阶段至1512年前后",
+      "source": "https://www.pamplona.es/pamplona2100",
+      "note": "身份已支持；未核实完整起止年份的条目只写世纪，不编造精确年代。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "西班牙",
+      "name": "纳赫拉",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "纳赫拉－潘普洛纳王国中心",
+      "years": "10—11世纪，完整分期待核",
+      "source": "https://lariojaturismo.com/noticia/gonzalez-menorca-destaca-la-trayectoria-de-el/8851ddaf-f566-482a-a44f-5774dfe01c70",
+      "note": "身份已支持；未核实完整起止年份的条目只写世纪，不编造精确年代。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "西班牙",
+      "name": "哈卡",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "阿拉贡王国早期都城",
+      "years": "11世纪",
+      "source": "https://www.turismodearagon.com/en/ficha/jaca/",
+      "note": "身份已支持；未核实完整起止年份的条目只写世纪，不编造精确年代。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "西班牙",
+      "name": "萨拉戈萨",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "萨拉戈萨泰法都城；后世阿拉贡阶段另核",
+      "years": "11世纪泰法阶段",
+      "source": "https://www.zaragoza.es/ciudad/turismo/en/profesionales/sala-prensa/curiosidades-historias-leyendas.htm",
+      "note": "身份已支持；未核实完整起止年份的条目只写世纪，不编造精确年代。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "西班牙",
+      "name": "塞维利亚",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "阿巴德王朝泰法都城",
+      "years": "11世纪",
+      "source": "https://www.turismosevilla.org/sites/default/files/2026-03/Sevilla_Guia_Legado_Andalusi_Rutas_gastronomia_cultura_2025_0.pdf",
+      "note": "身份已支持；未核实完整起止年份的条目只写世纪，不编造精确年代。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "西班牙",
+      "name": "格拉纳达",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "齐里德泰法及纳斯里德王国都城",
+      "years": "11世纪；1238—1492纳斯里德阶段",
+      "source": "https://www.alhambra-patronato.es/descubrir/alhambra-y-generalife/historia",
+      "note": "身份已支持；未核实完整起止年份的条目只写世纪，不编造精确年代。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "西班牙",
+      "name": "瓦伦西亚",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "泰法都城；西班牙共和国短期政府所在地",
+      "years": "中世纪；1936年11月—1937年10月",
+      "source": "https://www.visitvalencia.com/que-hacer-valencia/cultura-valenciana/historia",
+      "note": "身份已支持；未核实完整起止年份的条目只写世纪，不编造精确年代。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "西班牙",
+      "name": "穆尔西亚",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "独立穆尔西亚泰法政治中心",
+      "years": "12—13世纪分期待核",
+      "source": "https://www.turismodemurcia.es/es/centro-de-visitantes-la-muralla",
+      "note": "身份已支持；未核实完整起止年份的条目只写世纪，不编造精确年代。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "西班牙",
+      "name": "阿尔梅里亚",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "阿尔梅里亚泰法都城",
+      "years": "11世纪",
+      "source": "https://www.turismodealmeria.org/wp-content/uploads/2022/03/almeria-guia-eca.pdf",
+      "note": "身份已支持；未核实完整起止年份的条目只写世纪，不编造精确年代。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "西班牙",
+      "name": "巴达霍斯",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "阿夫塔斯王朝泰法都城",
+      "years": "11世纪",
+      "source": "https://www.uam.es/fyl/facultad/departamentos/estudios-arabes-islamicos-estudios-orientales/ruta-almoravides",
+      "note": "身份已支持；未核实完整起止年份的条目只写世纪，不编造精确年代。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "西班牙",
+      "name": "丹尼亚",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "丹尼亚泰法都城",
+      "years": "11世纪",
+      "source": "https://denia.net/descubre/patrimonio-y-cultura/historia/",
+      "note": "身份已支持；未核实完整起止年份的条目只写世纪，不编造精确年代。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "西班牙",
+      "name": "托尔托萨",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "托尔托萨泰法都城",
+      "years": "11世纪",
+      "source": "https://www.spain.info/en/places-of-interest/sant-joan-o-suda-castle/",
+      "note": "身份已支持；未核实完整起止年份的条目只写世纪，不编造精确年代。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "西班牙",
+      "name": "莱里达／莱达",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "莱里达独立泰法都城",
+      "years": "11世纪独立阶段",
+      "source": "https://tesauros.cultura.gob.es/tesauros/toponimiahistorica/1216579.html",
+      "note": "身份已支持；未核实完整起止年份的条目只写世纪，不编造精确年代。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "西班牙",
+      "name": "阿尔瓦拉辛",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "阿尔瓦拉辛泰法都城",
+      "years": "11世纪",
+      "source": "https://www.spain.info/es/destino/albarracin/",
+      "note": "身份已支持；未核实完整起止年份的条目只写世纪，不编造精确年代。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "西班牙",
+      "name": "阿尔普恩特",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "阿尔普恩特泰法都城",
+      "years": "11世纪",
+      "source": "https://turisme.dival.es/destino/alpuente/",
+      "note": "身份已支持；未核实完整起止年份的条目只写世纪，不编造精确年代。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "西班牙",
+      "name": "麦地那·阿扎哈拉",
+      "status": "已核实／记录缺漏",
+      "identity": "另址哈里发王廷城市",
+      "years": "10—11世纪",
+      "source": "https://whc.unesco.org/en/list/1560/",
+      "note": "已有几何归在科尔多瓦；缺少明确的另址王廷迁驻记录，两个遗产独立打卡项须保留。"
+    },
+    {
+      "country": "西班牙",
+      "name": "布尔戈斯",
+      "status": "待核候选",
+      "identity": "卡斯蒂利亚伯国及王廷中心候选",
+      "years": "未确定",
+      "source": "",
+      "note": "独立伯国与王国巡驻王廷阶段分别核实，不把“卡斯蒂利亚之首”口号当连续国家首都。"
+    },
+    {
+      "country": "西班牙",
+      "name": "韦斯卡",
+      "status": "待核候选",
+      "identity": "阿拉贡早期王权中心候选",
+      "years": "未确定",
+      "source": "",
+      "note": "需核对1096年后王廷阶段与都城性质。"
+    },
+    {
+      "country": "西班牙",
+      "name": "马拉加",
+      "status": "待核候选",
+      "identity": "哈穆德及后续泰法都城候选",
+      "years": "未确定",
+      "source": "",
+      "note": "都城身份有历史支持；精确分期及直接机构资料仍待核。"
+    },
+    {
+      "country": "西班牙",
+      "name": "马略卡岛帕尔马",
+      "status": "待核候选",
+      "identity": "马略卡泰法及王国中心候选",
+      "years": "未确定",
+      "source": "",
+      "note": "需区分马略卡岛王廷、佩皮尼昂陆上王廷及阿拉贡附属阶段。"
+    },
+    {
+      "country": "西班牙",
+      "name": "阿尔霍纳",
+      "status": "待核候选",
+      "identity": "纳斯里德政权起始驻地候选",
+      "years": "未确定",
+      "source": "",
+      "note": "1232年称王与1238年迁格拉纳达须区分，起始短期都城身份待核。"
+    },
+    {
+      "country": "西班牙",
+      "name": "莫龙－德拉弗龙特拉",
+      "status": "待核候选",
+      "identity": "莫龙泰法驻地候选",
+      "years": "未确定",
+      "source": "",
+      "note": "官方资料有泰法驻堡记载，独立阶段具体年代待核。"
+    },
+    {
+      "country": "西班牙",
+      "name": "龙达",
+      "status": "待核候选",
+      "identity": "龙达泰法候选",
+      "years": "未确定",
+      "source": "",
+      "note": "独立泰法阶段待逐城核证。"
+    },
+    {
+      "country": "西班牙",
+      "name": "卡尔莫纳",
+      "status": "待核候选",
+      "identity": "卡尔莫纳泰法候选",
+      "years": "未确定",
+      "source": "",
+      "note": "独立泰法阶段待逐城核证。"
+    },
+    {
+      "country": "西班牙",
+      "name": "阿尔科斯－德拉弗龙特拉",
+      "status": "待核候选",
+      "identity": "阿尔科斯泰法候选",
+      "years": "未确定",
+      "source": "",
+      "note": "独立泰法阶段待逐城核证。"
+    },
+    {
+      "country": "西班牙",
+      "name": "阿尔赫西拉斯",
+      "status": "待核候选",
+      "identity": "哈穆德及阿尔赫西拉斯泰法候选",
+      "years": "未确定",
+      "source": "",
+      "note": "与马拉加王权阶段不可随意混同。"
+    },
+    {
+      "country": "西班牙",
+      "name": "涅夫拉",
+      "status": "待核候选",
+      "identity": "涅夫拉泰法候选",
+      "years": "未确定",
+      "source": "",
+      "note": "各次独立泰法阶段待核。"
+    },
+    {
+      "country": "西班牙",
+      "name": "韦尔瓦",
+      "status": "待核候选",
+      "identity": "韦尔瓦泰法候选",
+      "years": "未确定",
+      "source": "",
+      "note": "独立小泰法及合并过程待核。"
+    },
+    {
+      "country": "西班牙",
+      "name": "梅里达",
+      "status": "行政／政治身份待核",
+      "identity": "罗马或迦太基行政及政治中心候选",
+      "years": "分期待核",
+      "source": "",
+      "note": "一般行省首府使用普通古城；独立政权或短期政府所在地需另有证据，不能直接按国家首都处理。"
+    },
+    {
+      "country": "西班牙",
+      "name": "塔拉戈纳",
+      "status": "行政／政治身份待核",
+      "identity": "罗马或迦太基行政及政治中心候选",
+      "years": "分期待核",
+      "source": "",
+      "note": "一般行省首府使用普通古城；独立政权或短期政府所在地需另有证据，不能直接按国家首都处理。"
+    },
+    {
+      "country": "西班牙",
+      "name": "卡塔赫纳",
+      "status": "行政／政治身份待核",
+      "identity": "罗马或迦太基行政及政治中心候选",
+      "years": "分期待核",
+      "source": "",
+      "note": "一般行省首府使用普通古城；独立政权或短期政府所在地需另有证据，不能直接按国家首都处理。"
+    },
+    {
+      "country": "希腊",
+      "name": "斯巴达",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "独立斯巴达城邦政治中心",
+      "years": "古希腊时期",
+      "source": "https://www.visitgreece.gr/el/mainland/Peloponnes/sparta",
+      "note": "独立城邦、半自治政权与全希腊国家首都分开标明；不是都叫“希腊国都”。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "希腊",
+      "name": "科林斯",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "独立科林斯城邦；后为罗马行省首府",
+      "years": "古希腊独立阶段与罗马阶段分开",
+      "source": "https://www.visitgreece.gr/en/blog/travel-tips/uncover-ancient-corinth-and-acrocorinth-in-the-peloponnese",
+      "note": "独立城邦、半自治政权与全希腊国家首都分开标明；不是都叫“希腊国都”。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "希腊",
+      "name": "麦西尼",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "独立麦西尼城邦",
+      "years": "前4世纪起，后续独立阶段待核",
+      "source": "https://www.visitgreece.gr/inspirations/top-10-hidden-gems-of-the-peloponnese",
+      "note": "独立城邦、半自治政权与全希腊国家首都分开标明；不是都叫“希腊国都”。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "希腊",
+      "name": "埃伊纳",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "近代希腊短期首都／政府所在地；古代城邦另核",
+      "years": "1828—1829",
+      "source": "https://www.visitgreece.gr/en/experiences/leisure/shopping/a-journey-through-history-with-kapodistria-s-buildings",
+      "note": "独立城邦、半自治政权与全希腊国家首都分开标明；不是都叫“希腊国都”。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "希腊",
+      "name": "阿尔塔／安布拉基亚",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "伊庇鲁斯古代王权及中世纪专制国都城",
+      "years": "古代及中世纪分期待核",
+      "source": "https://www.visitgreece.gr/el/islands/ionian-islands/arta",
+      "note": "独立城邦、半自治政权与全希腊国家首都分开标明；不是都叫“希腊国都”。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "希腊",
+      "name": "罗得",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "医院骑士团统治中心；古代城邦另核",
+      "years": "1309—1523",
+      "source": "https://whc.unesco.org/en/list/493/",
+      "note": "独立城邦、半自治政权与全希腊国家首都分开标明；不是都叫“希腊国都”。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "希腊",
+      "name": "米斯特拉斯",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "摩里亚半自治专制国都城",
+      "years": "1349—1460",
+      "source": "https://www.visitpeloponnese.com/en/prdct/city-state-mystras",
+      "note": "独立城邦、半自治政权与全希腊国家首都分开标明；不是都叫“希腊国都”。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "希腊",
+      "name": "克基拉／科孚",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "七岛共和国及后续伊奥尼亚国家首都",
+      "years": "1800—1807；1815—1864",
+      "source": "https://www.classicist.org/workspace/pdf/Classicist8_content.pdf",
+      "note": "独立城邦、半自治政权与全希腊国家首都分开标明；不是都叫“希腊国都”。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "希腊",
+      "name": "哈尼亚／基多尼亚",
+      "status": "已补录／城郭详见实施清单",
+      "identity": "克里特自治政权首都；古代阶段另核",
+      "years": "1898—1913",
+      "source": "https://chaniahistory.gr/en/cretan-state/",
+      "note": "独立城邦、半自治政权与全希腊国家首都分开标明；不是都叫“希腊国都”。",
+      "previousStatus": "已核实遗漏"
+    },
+    {
+      "country": "希腊",
+      "name": "迈锡尼",
+      "status": "已核实政治中心／分期待补",
+      "identity": "迈锡尼文明宫殿政权中心",
+      "years": "晚青铜时代",
+      "source": "https://whc.unesco.org/en/list/941/",
+      "note": "不得以传说王名或统一“迈锡尼帝国”作为历史定论；宫殿政权与古典城邦口径不同。"
+    },
+    {
+      "country": "希腊",
+      "name": "梯林斯",
+      "status": "已核实政治中心／分期待补",
+      "identity": "迈锡尼文明宫殿政权中心",
+      "years": "晚青铜时代",
+      "source": "https://whc.unesco.org/en/list/941/",
+      "note": "不得以传说王名或统一“迈锡尼帝国”作为历史定论；宫殿政权与古典城邦口径不同。"
+    },
+    {
+      "country": "希腊",
+      "name": "底比斯",
+      "status": "待核候选",
+      "identity": "独立城邦／地区政权中心候选",
+      "years": "独立阶段待核",
+      "source": "",
+      "note": "有古城不等于所有时期都是独立城邦；需确认独立时期与对应城址后补录。"
+    },
+    {
+      "country": "希腊",
+      "name": "阿尔戈斯",
+      "status": "待核候选",
+      "identity": "独立城邦／地区政权中心候选",
+      "years": "独立阶段待核",
+      "source": "",
+      "note": "有古城不等于所有时期都是独立城邦；需确认独立时期与对应城址后补录。"
+    },
+    {
+      "country": "希腊",
+      "name": "麦加拉",
+      "status": "待核候选",
+      "identity": "独立城邦／地区政权中心候选",
+      "years": "独立阶段待核",
+      "source": "",
+      "note": "有古城不等于所有时期都是独立城邦；需确认独立时期与对应城址后补录。"
+    },
+    {
+      "country": "希腊",
+      "name": "西库昂",
+      "status": "待核候选",
+      "identity": "独立城邦／地区政权中心候选",
+      "years": "独立阶段待核",
+      "source": "",
+      "note": "有古城不等于所有时期都是独立城邦；需确认独立时期与对应城址后补录。"
+    },
+    {
+      "country": "希腊",
+      "name": "曼蒂尼亚",
+      "status": "待核候选",
+      "identity": "独立城邦／地区政权中心候选",
+      "years": "独立阶段待核",
+      "source": "",
+      "note": "有古城不等于所有时期都是独立城邦；需确认独立时期与对应城址后补录。"
+    },
+    {
+      "country": "希腊",
+      "name": "特吉亚",
+      "status": "待核候选",
+      "identity": "独立城邦／地区政权中心候选",
+      "years": "独立阶段待核",
+      "source": "",
+      "note": "有古城不等于所有时期都是独立城邦；需确认独立时期与对应城址后补录。"
+    },
+    {
+      "country": "希腊",
+      "name": "埃利斯",
+      "status": "待核候选",
+      "identity": "独立城邦／地区政权中心候选",
+      "years": "独立阶段待核",
+      "source": "",
+      "note": "有古城不等于所有时期都是独立城邦；需确认独立时期与对应城址后补录。"
+    },
+    {
+      "country": "希腊",
+      "name": "埃雷特里亚",
+      "status": "待核候选",
+      "identity": "独立城邦／地区政权中心候选",
+      "years": "独立阶段待核",
+      "source": "",
+      "note": "有古城不等于所有时期都是独立城邦；需确认独立时期与对应城址后补录。"
+    },
+    {
+      "country": "希腊",
+      "name": "哈尔基斯",
+      "status": "待核候选",
+      "identity": "独立城邦／地区政权中心候选",
+      "years": "独立阶段待核",
+      "source": "",
+      "note": "有古城不等于所有时期都是独立城邦；需确认独立时期与对应城址后补录。"
+    },
+    {
+      "country": "希腊",
+      "name": "拉里萨",
+      "status": "待核候选",
+      "identity": "独立城邦／地区政权中心候选",
+      "years": "独立阶段待核",
+      "source": "",
+      "note": "有古城不等于所有时期都是独立城邦；需确认独立时期与对应城址后补录。"
+    },
+    {
+      "country": "希腊",
+      "name": "斐赖",
+      "status": "待核候选",
+      "identity": "独立城邦／地区政权中心候选",
+      "years": "独立阶段待核",
+      "source": "",
+      "note": "有古城不等于所有时期都是独立城邦；需确认独立时期与对应城址后补录。"
+    },
+    {
+      "country": "希腊",
+      "name": "萨摩斯",
+      "status": "待核候选",
+      "identity": "独立城邦／地区政权中心候选",
+      "years": "独立阶段待核",
+      "source": "",
+      "note": "有古城不等于所有时期都是独立城邦；需确认独立时期与对应城址后补录。"
+    },
+    {
+      "country": "希腊",
+      "name": "科斯",
+      "status": "待核候选",
+      "identity": "独立城邦／地区政权中心候选",
+      "years": "独立阶段待核",
+      "source": "",
+      "note": "有古城不等于所有时期都是独立城邦；需确认独立时期与对应城址后补录。"
+    },
+    {
+      "country": "希腊",
+      "name": "米蒂利尼",
+      "status": "待核候选",
+      "identity": "独立城邦／地区政权中心候选",
+      "years": "独立阶段待核",
+      "source": "",
+      "note": "有古城不等于所有时期都是独立城邦；需确认独立时期与对应城址后补录。"
+    },
+    {
+      "country": "希腊",
+      "name": "希俄斯",
+      "status": "待核候选",
+      "identity": "独立城邦／地区政权中心候选",
+      "years": "独立阶段待核",
+      "source": "",
+      "note": "有古城不等于所有时期都是独立城邦；需确认独立时期与对应城址后补录。"
+    },
+    {
+      "country": "希腊",
+      "name": "戈尔廷",
+      "status": "行政／政治身份待核",
+      "identity": "罗马克里特与昔兰尼加行省首府；早期城邦阶段待核",
+      "years": "罗马阶段及早期阶段分开",
+      "source": "",
+      "note": "不能仅据行省首府身份生成古都图标。"
+    },
+    {
+      "country": "希腊",
+      "name": "约阿尼纳",
+      "status": "待核候选",
+      "identity": "中世纪地区政权及阿里帕夏统治中心候选",
+      "years": "中世纪及18—19世纪",
+      "source": "",
+      "note": "中世纪专制国、奥斯曼行政首府及阿里帕夏事实自治阶段分别核实。"
+    },
+    {
+      "country": "希腊",
+      "name": "塞萨洛尼基",
+      "status": "待核候选",
+      "identity": "拉丁塞萨洛尼基王国及其他中世纪政权中心候选",
+      "years": "13世纪阶段待核",
+      "source": "https://thessaloniki.travel/useful-information/history-of-thessaloniki/",
+      "note": "现代地区首府及罗马行政中心不能自动当国都；拉丁王国阶段应专项补证。"
+    },
+    {
+      "country": "希腊",
+      "name": "克诺索斯",
+      "status": "已核实宫殿中心／都城身份待核",
+      "identity": "米诺斯宫殿行政中心",
+      "years": "约前1900—前1100年遗产整体跨度；各城分期待核",
+      "source": "https://whc.unesco.org/en/list/1733/",
+      "note": "UNESCO认定行政、经济、宗教中心，不等于证实统一米诺斯王国的首都；六处遗产包括哈尼亚的基多尼亚，不能新增重复根点。"
+    },
+    {
+      "country": "希腊",
+      "name": "费斯托斯",
+      "status": "已核实宫殿中心／都城身份待核",
+      "identity": "米诺斯宫殿行政中心",
+      "years": "约前1900—前1100年遗产整体跨度；各城分期待核",
+      "source": "https://whc.unesco.org/en/list/1733/",
+      "note": "UNESCO认定行政、经济、宗教中心，不等于证实统一米诺斯王国的首都；六处遗产包括哈尼亚的基多尼亚，不能新增重复根点。"
+    },
+    {
+      "country": "希腊",
+      "name": "马利亚",
+      "status": "已核实宫殿中心／都城身份待核",
+      "identity": "米诺斯宫殿行政中心",
+      "years": "约前1900—前1100年遗产整体跨度；各城分期待核",
+      "source": "https://whc.unesco.org/en/list/1733/",
+      "note": "UNESCO认定行政、经济、宗教中心，不等于证实统一米诺斯王国的首都；六处遗产包括哈尼亚的基多尼亚，不能新增重复根点。"
+    },
+    {
+      "country": "希腊",
+      "name": "扎克罗斯",
+      "status": "已核实宫殿中心／都城身份待核",
+      "identity": "米诺斯宫殿行政中心",
+      "years": "约前1900—前1100年遗产整体跨度；各城分期待核",
+      "source": "https://whc.unesco.org/en/list/1733/",
+      "note": "UNESCO认定行政、经济、宗教中心，不等于证实统一米诺斯王国的首都；六处遗产包括哈尼亚的基多尼亚，不能新增重复根点。"
+    },
+    {
+      "country": "希腊",
+      "name": "佐明索斯",
+      "status": "已核实宫殿中心／都城身份待核",
+      "identity": "米诺斯宫殿行政中心",
+      "years": "约前1900—前1100年遗产整体跨度；各城分期待核",
+      "source": "https://whc.unesco.org/en/list/1733/",
+      "note": "UNESCO认定行政、经济、宗教中心，不等于证实统一米诺斯王国的首都；六处遗产包括哈尼亚的基多尼亚，不能新增重复根点。"
+    }
+  ],
+  "implementationReport": "docs/confirmed-three-country-capital-additions.json"
+}

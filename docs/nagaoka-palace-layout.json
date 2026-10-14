@@ -1,0 +1,304 @@
+{
+  "source": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+  "pdfPage": 22,
+  "figure": "1-3",
+  "originPixel": [
+    606,
+    1009
+  ],
+  "originCoordinates": [
+    135.7033334,
+    34.9432785
+  ],
+  "scaleBarPixels": [
+    [
+      755,
+      1453
+    ],
+    [
+      977,
+      1453
+    ]
+  ],
+  "scaleBarMeters": 300,
+  "checks": [
+    {
+      "id": "nagaoka-way-216969116",
+      "pixel": [
+        610,
+        1044
+      ],
+      "existingCoordinates": [
+        135.70315507142857,
+        34.942829671428576
+      ],
+      "mappedCoordinates": [
+        135.70339264,
+        34.94285362
+      ],
+      "displacementMeters": 21.8,
+      "kind": "图示构件与现存遗址公园近似中心，非测量控制点"
+    },
+    {
+      "id": "nagaoka-way-52381469",
+      "pixel": [
+        760,
+        961
+      ],
+      "existingCoordinates": [
+        135.7055165875,
+        34.9438340375
+      ],
+      "mappedCoordinates": [
+        135.70561401,
+        34.94386119
+      ],
+      "displacementMeters": 9.4,
+      "kind": "图示构件与现存遗址公园近似中心，非测量控制点"
+    }
+  ],
+  "added": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.69983844,
+              34.94412825
+            ],
+            [
+              135.70145264,
+              34.94412825
+            ],
+            [
+              135.70145264,
+              34.94279293
+            ],
+            [
+              135.69983844,
+              34.94279293
+            ],
+            [
+              135.69983844,
+              34.94412825
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-layout-first-dairi",
+        "sourceName": "长冈宫第一次内里（推定）",
+        "label": "第一次内里\n（推定）",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-3（PDF第22页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/soshiki/33/2824.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方推定内里区图示参考，非实测墙界",
+        "note": "按向日市保存活用计划图1-3的红色复原框线描绘宫内院落，图中浅蓝色保护计划范围和蓝色指定史迹边界不作为院墙。第一次内里在原图明确标为推定，第二次内里为另一处东侧宫内区。采用300米比例尺、近似北向和大极殿遗址参照点配准，并以阁门遗址及内里现状公园近似位置作核对；只作图示布局参考，不以检查偏差宣称墙界精度。图1-1全宫域南北端未定；原始公园、阁门、筑地墙几何保留。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.70064554,
+          34.94346059
+        ],
+        "boundaryKind": "palace-layout-reference",
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "planReference": true,
+        "detailKind": "宫内布局参考",
+        "layoutUncertain": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.70549553,
+              34.94410398
+            ],
+            [
+              135.70731706,
+              34.94410398
+            ],
+            [
+              135.70731706,
+              34.94264725
+            ],
+            [
+              135.70549553,
+              34.94264725
+            ],
+            [
+              135.70549553,
+              34.94410398
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-layout-second-dairi",
+        "sourceName": "长冈宫第二次内里",
+        "label": "第二次内里",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-3（PDF第22页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/soshiki/33/2824.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方宫内遗迹布局图配准参考，非实测完整院墙",
+        "note": "按向日市保存活用计划图1-3的红色复原框线描绘宫内院落，图中浅蓝色保护计划范围和蓝色指定史迹边界不作为院墙。第一次内里在原图明确标为推定，第二次内里为另一处东侧宫内区。采用300米比例尺、近似北向和大极殿遗址参照点配准，并以阁门遗址及内里现状公园近似位置作核对；只作图示布局参考，不以检查偏差宣称墙界精度。图1-1全宫域南北端未定；原始公园、阁门、筑地墙几何保留。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.7064063,
+          34.94337561
+        ],
+        "boundaryKind": "palace-layout-reference",
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "planReference": true,
+        "detailKind": "宫内布局参考",
+        "layoutUncertain": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.70308164,
+              34.94381263
+            ],
+            [
+              135.70405905,
+              34.94381263
+            ],
+            [
+              135.70405905,
+              34.9428779
+            ],
+            [
+              135.70308164,
+              34.9428779
+            ],
+            [
+              135.70308164,
+              34.94381263
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-layout-daigokuden-court",
+        "sourceName": "长冈宫大极殿院",
+        "label": "大极殿院",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-3（PDF第22页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/soshiki/33/2824.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方宫内遗迹布局图配准参考，非实测完整院墙",
+        "note": "按向日市保存活用计划图1-3的红色复原框线描绘宫内院落，图中浅蓝色保护计划范围和蓝色指定史迹边界不作为院墙。第一次内里在原图明确标为推定，第二次内里为另一处东侧宫内区。采用300米比例尺、近似北向和大极殿遗址参照点配准，并以阁门遗址及内里现状公园近似位置作核对；只作图示布局参考，不以检查偏差宣称墙界精度。图1-1全宫域南北端未定；原始公园、阁门、筑地墙几何保留。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.70357035,
+          34.94334527
+        ],
+        "boundaryKind": "palace-layout-reference",
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "planReference": true,
+        "detailKind": "宫内布局参考",
+        "layoutUncertain": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.70263737,
+              34.94286576
+            ],
+            [
+              135.70437004,
+              34.94286576
+            ],
+            [
+              135.70437004,
+              34.94140904
+            ],
+            [
+              135.70263737,
+              34.94140904
+            ],
+            [
+              135.70263737,
+              34.94286576
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-layout-chodoin-court",
+        "sourceName": "长冈宫朝堂院",
+        "label": "朝堂院",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-3（PDF第22页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/soshiki/33/2824.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方宫内遗迹布局图配准参考，非实测完整院墙",
+        "note": "按向日市保存活用计划图1-3的红色复原框线描绘宫内院落，图中浅蓝色保护计划范围和蓝色指定史迹边界不作为院墙。第一次内里在原图明确标为推定，第二次内里为另一处东侧宫内区。采用300米比例尺、近似北向和大极殿遗址参照点配准，并以阁门遗址及内里现状公园近似位置作核对；只作图示布局参考，不以检查偏差宣称墙界精度。图1-1全宫域南北端未定；原始公园、阁门、筑地墙几何保留。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.70350371,
+          34.9421374
+        ],
+        "boundaryKind": "palace-layout-reference",
+        "northSouthUncertain": false,
+        "capitalPlanDetail": true,
+        "planReference": true,
+        "detailKind": "宫内布局参考",
+        "layoutUncertain": false
+      }
+    }
+  ],
+  "limits": "Single approximate origin, scale and north orientation; extra park/gate checks do not establish court-wall accuracy. First Dairi is explicitly presumed.",
+  "labelNote": "宫内标签采用简短中文，完整名称、来源和精度限制保留在详情中。"
+}

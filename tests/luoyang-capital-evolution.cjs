@@ -26,13 +26,13 @@ const sources=new Map(),layers=new Map();const map={hasImage:()=>true,addImage:(
  const park=f.find(x=>x.properties.siteId==='wangcheng').geometry.coordinates;assert.ok(park[0]>112.414&&park[0]<112.418&&park[1]>34.666&&park[1]<34.67,'Wangcheng reference must fall in the park, using WGS84 rather than GCJ-02');
  state.mapOverlays.luoyangCapitalStage='han';await LuoyangCapitalEvolution.sync(map);
  f=sources.get('luoyang-capital-evolution').data.features;assert.equal(f.length,1);assert.ok(f[0].geometry.coordinates[0]>112.6,'Eastern Han is at Han/Wei ruins, not the modern civic center');
- state.mapOverlays.ancientCapitalPeriods['秦汉']=false;await LuoyangCapitalEvolution.sync(map);assert.equal(sources.get('luoyang-capital-evolution').data.features.length,0);
+ state.mapOverlays.ancientCapitalPeriods['秦汉']=false;await LuoyangCapitalEvolution.sync(map);assert.equal(sources.get('luoyang-capital-evolution').data.features.length,1,'Legend only filters capital icons');
 
  function inRing(p,r){let inside=false;for(let i=0,j=r.length-1;i<r.length;j=i++){const a=r[i],b=r[j];if((a[1]>p[1])!==(b[1]>p[1])&&p[0]<(b[0]-a[0])*(p[1]-a[1])/(b[1]-a[1])+a[0])inside=!inside;}return inside;}
  function contains(p,g){return (g.type==='Polygon'?[g.coordinates]:g.coordinates).some(r=>inRing(p,r[0])&&!r.slice(1).some(h=>inRing(p,h)));}
  state.mapOverlays.luoyangCapitalStage='mingqing';
  for(const year of [1400,1537,1648,1708,1787,1866]){state.mapOverlays.ancientCapitalWallYear=year;await LuoyangCapitalEvolution.sync(map);const features=sources.get('luoyang-capital-evolution').data.features,point=features.find(f=>f.geometry.type==='Point'),polygons=walls.features.filter(f=>f.properties.city==='洛阳'&&f.properties.year===year);assert.ok(point&&polygons.some(f=>contains(point.geometry.coordinates,f.geometry)),'Ming/Qing marker must be inside the selected '+year+' extent');}
- state.mapOverlays.luoyangCapitalEvolution=false;await LuoyangCapitalEvolution.sync(map);assert.equal(layers.get('luoyang-evolution-points').layout.visibility,'none');
+ state.mapOverlays.chinaAncientCapitals=false;await LuoyangCapitalEvolution.sync(map);assert.equal(layers.get('luoyang-evolution-points').layout.visibility,'none');
  assert.equal(fetches,2,'Switching stages should reuse cached data');
  console.log('PASS: Luoyang stages, site migration, shared markers, extent provenance and filtering');
 })().catch(e=>{console.error(e);process.exitCode=1});

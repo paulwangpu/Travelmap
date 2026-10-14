@@ -1,0 +1,6325 @@
+{
+  "source": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+  "numberingSource": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+  "palaceLayoutSource": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/image_nenpyou/toshi03_2.gif",
+  "pdfPage": 7,
+  "majorRoads": 22,
+  "wards": 74,
+  "minorSegments": 59,
+  "functionalAreas": 5,
+  "palaceAreas": 3,
+  "pixelColumns": [
+    359,
+    417,
+    474,
+    531,
+    593,
+    654,
+    711,
+    770,
+    828
+  ],
+  "pixelRows": [
+    309,
+    342,
+    402,
+    458,
+    517,
+    573,
+    631,
+    687,
+    743,
+    800,
+    858
+  ],
+  "added": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.71875241,
+            35.02686074
+          ],
+          [
+            135.71852282,
+            34.97916038
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-road-v-0",
+        "sourceName": "西京极大路",
+        "label": "西京极大路",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.71860688,
+          34.99662445
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.72490435,
+            35.02684087
+          ],
+          [
+            135.72467477,
+            34.97914051
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-road-v-1",
+        "sourceName": "木辻大路",
+        "label": "木辻大路",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72475882,
+          34.99660458
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.73095024,
+            35.02682134
+          ],
+          [
+            135.73072065,
+            34.97912099
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-road-v-2",
+        "sourceName": "道祖大路",
+        "label": "道祖大路",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.7308047,
+          34.99658505
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.73699612,
+            35.02680181
+          ],
+          [
+            135.73676653,
+            34.97910146
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-road-v-3",
+        "sourceName": "西大宫大路",
+        "label": "西大宫大路",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.73685059,
+          34.99656552
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.74351003,
+            35.01383458
+          ],
+          [
+            135.74334275,
+            34.97908022
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-road-v-4",
+        "sourceName": "朱雀大路",
+        "label": "朱雀大路",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.74342681,
+          34.99654429
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.75004249,
+            35.02675968
+          ],
+          [
+            135.7498129,
+            34.97905933
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-road-v-5",
+        "sourceName": "大宫大路",
+        "label": "大宫大路",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.74989696,
+          34.99652339
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.75608837,
+            35.02674015
+          ],
+          [
+            135.75585878,
+            34.9790398
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-road-v-6",
+        "sourceName": "西洞院大路",
+        "label": "西洞院大路",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75594284,
+          34.99650386
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.76234639,
+            35.02671994
+          ],
+          [
+            135.7621168,
+            34.97901959
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-road-v-7",
+        "sourceName": "东洞院大路",
+        "label": "东洞院大路",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.76220086,
+          34.99648365
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.76849834,
+            35.02670007
+          ],
+          [
+            135.76826875,
+            34.97899972
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-road-v-8",
+        "sourceName": "东京极大路",
+        "label": "东京极大路",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.76835281,
+          34.99646378
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.74022192,
+            35.0138452
+          ],
+          [
+            135.74005464,
+            34.97909084
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-road-v-562",
+        "sourceName": "皇嘉门大路",
+        "label": "皇嘉门大路",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.74006844,
+          34.98195808
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.74669207,
+            35.0138243
+          ],
+          [
+            135.74652479,
+            34.97906995
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-road-v-623",
+        "sourceName": "壬生大路",
+        "label": "壬生大路",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.74653859,
+          34.98193718
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.71875241,
+              35.02686074
+            ],
+            [
+              135.76849834,
+              35.02670007
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-road-h-0",
+        "sourceName": "一条大路",
+        "label": "一条大路",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75927041,
+          35.02672988
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.71873861,
+              35.0239935
+            ],
+            [
+              135.73698232,
+              35.02393458
+            ]
+          ],
+          [
+            [
+              135.75002869,
+              35.02389244
+            ],
+            [
+              135.76848454,
+              35.02383284
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-road-h-1",
+        "sourceName": "土御门大路",
+        "label": "土御门大路",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75925661,
+          35.02386264
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.71871351,
+              35.01878035
+            ],
+            [
+              135.73695722,
+              35.01872143
+            ]
+          ],
+          [
+            [
+              135.7500036,
+              35.01867929
+            ],
+            [
+              135.76845945,
+              35.01861969
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-road-h-2",
+        "sourceName": "中御门大路",
+        "label": "中御门大路",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75923152,
+          35.01864949
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.7186901,
+              35.01391474
+            ],
+            [
+              135.76843603,
+              35.01375408
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-road-h-3",
+        "sourceName": "二条大路",
+        "label": "二条大路",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.7592081,
+          35.01378388
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.71866542,
+              35.00878847
+            ],
+            [
+              135.76841135,
+              35.00862781
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-road-h-4",
+        "sourceName": "三条大路",
+        "label": "三条大路",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75918343,
+          35.00865761
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.718642,
+              35.00392286
+            ],
+            [
+              135.76838794,
+              35.0037622
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-road-h-5",
+        "sourceName": "四条大路",
+        "label": "四条大路",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75916001,
+          35.003792
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.71861775,
+              34.99888348
+            ],
+            [
+              135.76836368,
+              34.99872282
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-road-h-6",
+        "sourceName": "五条大路",
+        "label": "五条大路",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75913576,
+          34.99875262
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.71859433,
+              34.99401787
+            ],
+            [
+              135.76834026,
+              34.99385721
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-road-h-7",
+        "sourceName": "六条大路",
+        "label": "六条大路",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75911234,
+          34.99388701
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.71857091,
+              34.98915226
+            ],
+            [
+              135.76831684,
+              34.9889916
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-road-h-8",
+        "sourceName": "七条大路",
+        "label": "七条大路",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75908892,
+          34.9890214
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.71854707,
+              34.98419976
+            ],
+            [
+              135.76829301,
+              34.9840391
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-road-h-9",
+        "sourceName": "八条大路",
+        "label": "八条大路",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75906508,
+          34.9840689
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.71852282,
+              34.97916038
+            ],
+            [
+              135.76826875,
+              34.97899972
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-road-h-10",
+        "sourceName": "九条大路",
+        "label": "九条大路",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75904083,
+          34.97902952
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "道路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.71875241,
+              35.02686074
+            ],
+            [
+              135.72490435,
+              35.02684087
+            ],
+            [
+              135.72489055,
+              35.02397363
+            ],
+            [
+              135.71873861,
+              35.0239935
+            ],
+            [
+              135.71875241,
+              35.02686074
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-0-0",
+        "sourceName": "右京\n北边四坊",
+        "label": "右京\n北边四坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72182148,
+          35.02541718
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.72490435,
+              35.02684087
+            ],
+            [
+              135.73095024,
+              35.02682134
+            ],
+            [
+              135.73093644,
+              35.02395411
+            ],
+            [
+              135.72489055,
+              35.02397363
+            ],
+            [
+              135.72490435,
+              35.02684087
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-0-1",
+        "sourceName": "右京\n北边三坊",
+        "label": "右京\n北边三坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.7279204,
+          35.02539749
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.73095024,
+              35.02682134
+            ],
+            [
+              135.73699612,
+              35.02680181
+            ],
+            [
+              135.73698232,
+              35.02393458
+            ],
+            [
+              135.73093644,
+              35.02395411
+            ],
+            [
+              135.73095024,
+              35.02682134
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-0-2",
+        "sourceName": "右京\n北边二坊",
+        "label": "右京\n北边二坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.73396628,
+          35.02537796
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.75004249,
+              35.02675968
+            ],
+            [
+              135.75608837,
+              35.02674015
+            ],
+            [
+              135.75607457,
+              35.02387292
+            ],
+            [
+              135.75002869,
+              35.02389244
+            ],
+            [
+              135.75004249,
+              35.02675968
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-0-5",
+        "sourceName": "左京\n北边二坊",
+        "label": "左京\n北边二坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75305853,
+          35.0253163
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.75608837,
+              35.02674015
+            ],
+            [
+              135.76234639,
+              35.02671994
+            ],
+            [
+              135.76233259,
+              35.02385271
+            ],
+            [
+              135.75607457,
+              35.02387292
+            ],
+            [
+              135.75608837,
+              35.02674015
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-0-6",
+        "sourceName": "左京\n北边三坊",
+        "label": "左京\n北边三坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75921048,
+          35.02529643
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.76234639,
+              35.02671994
+            ],
+            [
+              135.76849834,
+              35.02670007
+            ],
+            [
+              135.76848454,
+              35.02383284
+            ],
+            [
+              135.76233259,
+              35.02385271
+            ],
+            [
+              135.76234639,
+              35.02671994
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-0-7",
+        "sourceName": "左京\n北边四坊",
+        "label": "左京\n北边四坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.76541546,
+          35.02527639
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.71873861,
+              35.0239935
+            ],
+            [
+              135.72489055,
+              35.02397363
+            ],
+            [
+              135.72486546,
+              35.01876048
+            ],
+            [
+              135.71871351,
+              35.01878035
+            ],
+            [
+              135.71873861,
+              35.0239935
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-1-0",
+        "sourceName": "右京\n一条四坊",
+        "label": "右京\n一条四坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72180203,
+          35.02137699
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.72489055,
+              35.02397363
+            ],
+            [
+              135.73093644,
+              35.02395411
+            ],
+            [
+              135.73091134,
+              35.01874095
+            ],
+            [
+              135.72486546,
+              35.01876048
+            ],
+            [
+              135.72489055,
+              35.02397363
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-1-1",
+        "sourceName": "右京\n一条三坊",
+        "label": "右京\n一条三坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72790095,
+          35.02135729
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.73093644,
+              35.02395411
+            ],
+            [
+              135.73698232,
+              35.02393458
+            ],
+            [
+              135.73695722,
+              35.01872143
+            ],
+            [
+              135.73091134,
+              35.01874095
+            ],
+            [
+              135.73093644,
+              35.02395411
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-1-2",
+        "sourceName": "右京\n一条二坊",
+        "label": "右京\n一条二坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.73394683,
+          35.02133777
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.75002869,
+              35.02389244
+            ],
+            [
+              135.75607457,
+              35.02387292
+            ],
+            [
+              135.75604948,
+              35.01865977
+            ],
+            [
+              135.7500036,
+              35.01867929
+            ],
+            [
+              135.75002869,
+              35.02389244
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-1-5",
+        "sourceName": "左京\n一条二坊",
+        "label": "左京\n一条二坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75303909,
+          35.0212761
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.75607457,
+              35.02387292
+            ],
+            [
+              135.76233259,
+              35.02385271
+            ],
+            [
+              135.7623075,
+              35.01863955
+            ],
+            [
+              135.75604948,
+              35.01865977
+            ],
+            [
+              135.75607457,
+              35.02387292
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-1-6",
+        "sourceName": "左京\n一条三坊",
+        "label": "左京\n一条三坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75919103,
+          35.02125624
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.76233259,
+              35.02385271
+            ],
+            [
+              135.76848454,
+              35.02383284
+            ],
+            [
+              135.76845945,
+              35.01861969
+            ],
+            [
+              135.7623075,
+              35.01863955
+            ],
+            [
+              135.76233259,
+              35.02385271
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-1-7",
+        "sourceName": "左京\n一条四坊",
+        "label": "左京\n一条四坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.76539602,
+          35.0212362
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.71871351,
+              35.01878035
+            ],
+            [
+              135.72486546,
+              35.01876048
+            ],
+            [
+              135.72484204,
+              35.01389487
+            ],
+            [
+              135.7186901,
+              35.01391474
+            ],
+            [
+              135.71871351,
+              35.01878035
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-2-0",
+        "sourceName": "右京\n二条四坊",
+        "label": "右京\n二条四坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72177778,
+          35.01633761
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.72486546,
+              35.01876048
+            ],
+            [
+              135.73091134,
+              35.01874095
+            ],
+            [
+              135.73088793,
+              35.01387534
+            ],
+            [
+              135.72484204,
+              35.01389487
+            ],
+            [
+              135.72486546,
+              35.01876048
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-2-1",
+        "sourceName": "右京\n二条三坊",
+        "label": "右京\n二条三坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72787669,
+          35.01631791
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.73091134,
+              35.01874095
+            ],
+            [
+              135.73695722,
+              35.01872143
+            ],
+            [
+              135.73693381,
+              35.01385582
+            ],
+            [
+              135.73088793,
+              35.01387534
+            ],
+            [
+              135.73091134,
+              35.01874095
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-2-2",
+        "sourceName": "右京\n二条二坊",
+        "label": "右京\n二条二坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.73392257,
+          35.01629838
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.7500036,
+              35.01867929
+            ],
+            [
+              135.75604948,
+              35.01865977
+            ],
+            [
+              135.75602606,
+              35.01379416
+            ],
+            [
+              135.74998018,
+              35.01381368
+            ],
+            [
+              135.7500036,
+              35.01867929
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-2-5",
+        "sourceName": "左京\n二条二坊",
+        "label": "左京\n二条二坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75301483,
+          35.01623672
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.75604948,
+              35.01865977
+            ],
+            [
+              135.7623075,
+              35.01863955
+            ],
+            [
+              135.76228408,
+              35.01377394
+            ],
+            [
+              135.75602606,
+              35.01379416
+            ],
+            [
+              135.75604948,
+              35.01865977
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-2-6",
+        "sourceName": "左京\n二条三坊",
+        "label": "左京\n二条三坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75916678,
+          35.01621685
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.7623075,
+              35.01863955
+            ],
+            [
+              135.76845945,
+              35.01861969
+            ],
+            [
+              135.76843603,
+              35.01375408
+            ],
+            [
+              135.76228408,
+              35.01377394
+            ],
+            [
+              135.7623075,
+              35.01863955
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-2-7",
+        "sourceName": "左京\n二条四坊",
+        "label": "左京\n二条四坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.76537176,
+          35.01619681
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.7186901,
+              35.01391474
+            ],
+            [
+              135.72484204,
+              35.01389487
+            ],
+            [
+              135.72481737,
+              35.0087686
+            ],
+            [
+              135.71866542,
+              35.00878847
+            ],
+            [
+              135.7186901,
+              35.01391474
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-3-0",
+        "sourceName": "右京\n三条四坊",
+        "label": "右京\n三条四坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72175373,
+          35.01134167
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.72484204,
+              35.01389487
+            ],
+            [
+              135.73088793,
+              35.01387534
+            ],
+            [
+              135.73086325,
+              35.00874908
+            ],
+            [
+              135.72481737,
+              35.0087686
+            ],
+            [
+              135.72484204,
+              35.01389487
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-3-1",
+        "sourceName": "右京\n三条三坊",
+        "label": "右京\n三条三坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72785265,
+          35.01132197
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.73088793,
+              35.01387534
+            ],
+            [
+              135.73693381,
+              35.01385582
+            ],
+            [
+              135.73690913,
+              35.00872955
+            ],
+            [
+              135.73086325,
+              35.00874908
+            ],
+            [
+              135.73088793,
+              35.01387534
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-3-2",
+        "sourceName": "右京\n三条二坊",
+        "label": "右京\n三条二坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.73389853,
+          35.01130245
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.73693381,
+              35.01385582
+            ],
+            [
+              135.74351003,
+              35.01383458
+            ],
+            [
+              135.74348535,
+              35.00870831
+            ],
+            [
+              135.73690913,
+              35.00872955
+            ],
+            [
+              135.73693381,
+              35.01385582
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-3-3",
+        "sourceName": "右京\n三条一坊",
+        "label": "右京\n三条一坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.74020958,
+          35.01128206
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.74351003,
+              35.01383458
+            ],
+            [
+              135.74998018,
+              35.01381368
+            ],
+            [
+              135.74995551,
+              35.00868741
+            ],
+            [
+              135.74348535,
+              35.00870831
+            ],
+            [
+              135.74351003,
+              35.01383458
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-3-4",
+        "sourceName": "左京\n三条一坊",
+        "label": "左京\n三条一坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.74673277,
+          35.011261
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.74998018,
+              35.01381368
+            ],
+            [
+              135.75602606,
+              35.01379416
+            ],
+            [
+              135.75600139,
+              35.00866789
+            ],
+            [
+              135.74995551,
+              35.00868741
+            ],
+            [
+              135.74998018,
+              35.01381368
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-3-5",
+        "sourceName": "左京\n三条二坊",
+        "label": "左京\n三条二坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75299078,
+          35.01124078
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.75602606,
+              35.01379416
+            ],
+            [
+              135.76228408,
+              35.01377394
+            ],
+            [
+              135.7622594,
+              35.00864768
+            ],
+            [
+              135.75600139,
+              35.00866789
+            ],
+            [
+              135.75602606,
+              35.01379416
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-3-6",
+        "sourceName": "左京\n三条三坊",
+        "label": "左京\n三条三坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75914273,
+          35.01122092
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.76228408,
+              35.01377394
+            ],
+            [
+              135.76843603,
+              35.01375408
+            ],
+            [
+              135.76841135,
+              35.00862781
+            ],
+            [
+              135.7622594,
+              35.00864768
+            ],
+            [
+              135.76228408,
+              35.01377394
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-3-7",
+        "sourceName": "左京\n三条四坊",
+        "label": "左京\n三条四坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.76534772,
+          35.01120088
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.71866542,
+              35.00878847
+            ],
+            [
+              135.72481737,
+              35.0087686
+            ],
+            [
+              135.72479395,
+              35.00390299
+            ],
+            [
+              135.718642,
+              35.00392286
+            ],
+            [
+              135.71866542,
+              35.00878847
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-4-0",
+        "sourceName": "右京\n四条四坊",
+        "label": "右京\n四条四坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72172969,
+          35.00634573
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.72481737,
+              35.0087686
+            ],
+            [
+              135.73086325,
+              35.00874908
+            ],
+            [
+              135.73083983,
+              35.00388347
+            ],
+            [
+              135.72479395,
+              35.00390299
+            ],
+            [
+              135.72481737,
+              35.0087686
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-4-1",
+        "sourceName": "右京\n四条三坊",
+        "label": "右京\n四条三坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.7278286,
+          35.00632603
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.73086325,
+              35.00874908
+            ],
+            [
+              135.73690913,
+              35.00872955
+            ],
+            [
+              135.73688571,
+              35.00386394
+            ],
+            [
+              135.73083983,
+              35.00388347
+            ],
+            [
+              135.73086325,
+              35.00874908
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-4-2",
+        "sourceName": "右京\n四条二坊",
+        "label": "右京\n四条二坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.73387448,
+          35.00630651
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.73690913,
+              35.00872955
+            ],
+            [
+              135.74348535,
+              35.00870831
+            ],
+            [
+              135.74346194,
+              35.0038427
+            ],
+            [
+              135.73688571,
+              35.00386394
+            ],
+            [
+              135.73690913,
+              35.00872955
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-4-3",
+        "sourceName": "右京\n四条一坊",
+        "label": "右京\n四条一坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.74018553,
+          35.00628613
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.74348535,
+              35.00870831
+            ],
+            [
+              135.74995551,
+              35.00868741
+            ],
+            [
+              135.74993209,
+              35.0038218
+            ],
+            [
+              135.74346194,
+              35.0038427
+            ],
+            [
+              135.74348535,
+              35.00870831
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-4-4",
+        "sourceName": "左京\n四条一坊",
+        "label": "左京\n四条一坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.74670872,
+          35.00626506
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.74995551,
+              35.00868741
+            ],
+            [
+              135.75600139,
+              35.00866789
+            ],
+            [
+              135.75597797,
+              35.00380228
+            ],
+            [
+              135.74993209,
+              35.0038218
+            ],
+            [
+              135.74995551,
+              35.00868741
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-4-5",
+        "sourceName": "左京\n四条二坊",
+        "label": "左京\n四条二坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75296674,
+          35.00624485
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.75600139,
+              35.00866789
+            ],
+            [
+              135.7622594,
+              35.00864768
+            ],
+            [
+              135.76223599,
+              35.00378207
+            ],
+            [
+              135.75597797,
+              35.00380228
+            ],
+            [
+              135.75600139,
+              35.00866789
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-4-6",
+        "sourceName": "左京\n四条三坊",
+        "label": "左京\n四条三坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75911869,
+          35.00622498
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.7622594,
+              35.00864768
+            ],
+            [
+              135.76841135,
+              35.00862781
+            ],
+            [
+              135.76838794,
+              35.0037622
+            ],
+            [
+              135.76223599,
+              35.00378207
+            ],
+            [
+              135.7622594,
+              35.00864768
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-4-7",
+        "sourceName": "左京\n四条四坊",
+        "label": "左京\n四条四坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.76532367,
+          35.00620494
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.718642,
+              35.00392286
+            ],
+            [
+              135.72479395,
+              35.00390299
+            ],
+            [
+              135.7247697,
+              34.99886361
+            ],
+            [
+              135.71861775,
+              34.99888348
+            ],
+            [
+              135.718642,
+              35.00392286
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-5-0",
+        "sourceName": "右京\n五条四坊",
+        "label": "右京\n五条四坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72170585,
+          35.00139324
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.72479395,
+              35.00390299
+            ],
+            [
+              135.73083983,
+              35.00388347
+            ],
+            [
+              135.73081558,
+              34.99884408
+            ],
+            [
+              135.7247697,
+              34.99886361
+            ],
+            [
+              135.72479395,
+              35.00390299
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-5-1",
+        "sourceName": "右京\n五条三坊",
+        "label": "右京\n五条三坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72780477,
+          35.00137354
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.73083983,
+              35.00388347
+            ],
+            [
+              135.73688571,
+              35.00386394
+            ],
+            [
+              135.73686146,
+              34.99882456
+            ],
+            [
+              135.73081558,
+              34.99884408
+            ],
+            [
+              135.73083983,
+              35.00388347
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-5-2",
+        "sourceName": "右京\n五条二坊",
+        "label": "右京\n五条二坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.73385065,
+          35.00135401
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.73688571,
+              35.00386394
+            ],
+            [
+              135.74346194,
+              35.0038427
+            ],
+            [
+              135.74343768,
+              34.99880332
+            ],
+            [
+              135.73686146,
+              34.99882456
+            ],
+            [
+              135.73688571,
+              35.00386394
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-5-3",
+        "sourceName": "右京\n五条一坊",
+        "label": "右京\n五条一坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.7401617,
+          35.00133363
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.74346194,
+              35.0038427
+            ],
+            [
+              135.74993209,
+              35.0038218
+            ],
+            [
+              135.74990783,
+              34.99878242
+            ],
+            [
+              135.74343768,
+              34.99880332
+            ],
+            [
+              135.74346194,
+              35.0038427
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-5-4",
+        "sourceName": "左京\n五条一坊",
+        "label": "左京\n五条一坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.74668488,
+          35.00131256
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.74993209,
+              35.0038218
+            ],
+            [
+              135.75597797,
+              35.00380228
+            ],
+            [
+              135.75595371,
+              34.9987629
+            ],
+            [
+              135.74990783,
+              34.99878242
+            ],
+            [
+              135.74993209,
+              35.0038218
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-5-5",
+        "sourceName": "左京\n五条二坊",
+        "label": "左京\n五条二坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.7529429,
+          35.00129235
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.75597797,
+              35.00380228
+            ],
+            [
+              135.76223599,
+              35.00378207
+            ],
+            [
+              135.76221173,
+              34.99874269
+            ],
+            [
+              135.75595371,
+              34.9987629
+            ],
+            [
+              135.75597797,
+              35.00380228
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-5-6",
+        "sourceName": "左京\n五条三坊",
+        "label": "左京\n五条三坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75909485,
+          35.00127248
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.76223599,
+              35.00378207
+            ],
+            [
+              135.76838794,
+              35.0037622
+            ],
+            [
+              135.76836368,
+              34.99872282
+            ],
+            [
+              135.76221173,
+              34.99874269
+            ],
+            [
+              135.76223599,
+              35.00378207
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-5-7",
+        "sourceName": "左京\n五条四坊",
+        "label": "左京\n五条四坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.76529983,
+          35.00125244
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.71861775,
+              34.99888348
+            ],
+            [
+              135.7247697,
+              34.99886361
+            ],
+            [
+              135.72474628,
+              34.993998
+            ],
+            [
+              135.71859433,
+              34.99401787
+            ],
+            [
+              135.71861775,
+              34.99888348
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-6-0",
+        "sourceName": "右京\n六条四坊",
+        "label": "右京\n六条四坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72168201,
+          34.99644074
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.7247697,
+              34.99886361
+            ],
+            [
+              135.73081558,
+              34.99884408
+            ],
+            [
+              135.73079216,
+              34.99397847
+            ],
+            [
+              135.72474628,
+              34.993998
+            ],
+            [
+              135.7247697,
+              34.99886361
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-6-1",
+        "sourceName": "右京\n六条三坊",
+        "label": "右京\n六条三坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72778093,
+          34.99642104
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.73081558,
+              34.99884408
+            ],
+            [
+              135.73686146,
+              34.99882456
+            ],
+            [
+              135.73683804,
+              34.99395895
+            ],
+            [
+              135.73079216,
+              34.99397847
+            ],
+            [
+              135.73081558,
+              34.99884408
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-6-2",
+        "sourceName": "右京\n六条二坊",
+        "label": "右京\n六条二坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.73382681,
+          34.99640152
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.73686146,
+              34.99882456
+            ],
+            [
+              135.74343768,
+              34.99880332
+            ],
+            [
+              135.74341426,
+              34.99393771
+            ],
+            [
+              135.73683804,
+              34.99395895
+            ],
+            [
+              135.73686146,
+              34.99882456
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-6-3",
+        "sourceName": "右京\n六条一坊",
+        "label": "右京\n六条一坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.74013786,
+          34.99638113
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.74343768,
+              34.99880332
+            ],
+            [
+              135.74990783,
+              34.99878242
+            ],
+            [
+              135.74988441,
+              34.99391681
+            ],
+            [
+              135.74341426,
+              34.99393771
+            ],
+            [
+              135.74343768,
+              34.99880332
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-6-4",
+        "sourceName": "左京\n六条一坊",
+        "label": "左京\n六条一坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.74666105,
+          34.99636007
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.74990783,
+              34.99878242
+            ],
+            [
+              135.75595371,
+              34.9987629
+            ],
+            [
+              135.7559303,
+              34.99389729
+            ],
+            [
+              135.74988441,
+              34.99391681
+            ],
+            [
+              135.74990783,
+              34.99878242
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-6-5",
+        "sourceName": "左京\n六条二坊",
+        "label": "左京\n六条二坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75291906,
+          34.99633985
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.75595371,
+              34.9987629
+            ],
+            [
+              135.76221173,
+              34.99874269
+            ],
+            [
+              135.76218831,
+              34.99387708
+            ],
+            [
+              135.7559303,
+              34.99389729
+            ],
+            [
+              135.75595371,
+              34.9987629
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-6-6",
+        "sourceName": "左京\n六条三坊",
+        "label": "左京\n六条三坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75907101,
+          34.99631999
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.76221173,
+              34.99874269
+            ],
+            [
+              135.76836368,
+              34.99872282
+            ],
+            [
+              135.76834026,
+              34.99385721
+            ],
+            [
+              135.76218831,
+              34.99387708
+            ],
+            [
+              135.76221173,
+              34.99874269
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-6-7",
+        "sourceName": "左京\n六条四坊",
+        "label": "左京\n六条四坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.765276,
+          34.99629995
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.71859433,
+              34.99401787
+            ],
+            [
+              135.72474628,
+              34.993998
+            ],
+            [
+              135.72472286,
+              34.98913239
+            ],
+            [
+              135.71857091,
+              34.98915226
+            ],
+            [
+              135.71859433,
+              34.99401787
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-7-0",
+        "sourceName": "右京\n七条四坊",
+        "label": "右京\n七条四坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72165859,
+          34.99157513
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.72474628,
+              34.993998
+            ],
+            [
+              135.73079216,
+              34.99397847
+            ],
+            [
+              135.73076874,
+              34.98911286
+            ],
+            [
+              135.72472286,
+              34.98913239
+            ],
+            [
+              135.72474628,
+              34.993998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-7-1",
+        "sourceName": "右京\n七条三坊",
+        "label": "右京\n七条三坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72775751,
+          34.99155543
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.73079216,
+              34.99397847
+            ],
+            [
+              135.73683804,
+              34.99395895
+            ],
+            [
+              135.73681462,
+              34.98909334
+            ],
+            [
+              135.73076874,
+              34.98911286
+            ],
+            [
+              135.73079216,
+              34.99397847
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-7-2",
+        "sourceName": "右京\n七条二坊",
+        "label": "右京\n七条二坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.73380339,
+          34.99153591
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.73683804,
+              34.99395895
+            ],
+            [
+              135.74341426,
+              34.99393771
+            ],
+            [
+              135.74339084,
+              34.9890721
+            ],
+            [
+              135.73681462,
+              34.98909334
+            ],
+            [
+              135.73683804,
+              34.99395895
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-7-3",
+        "sourceName": "右京\n七条一坊",
+        "label": "右京\n七条一坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.74011444,
+          34.99151552
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.74341426,
+              34.99393771
+            ],
+            [
+              135.74988441,
+              34.99391681
+            ],
+            [
+              135.749861,
+              34.9890512
+            ],
+            [
+              135.74339084,
+              34.9890721
+            ],
+            [
+              135.74341426,
+              34.99393771
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-7-4",
+        "sourceName": "左京\n七条一坊",
+        "label": "左京\n七条一坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.74663763,
+          34.99149446
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.74988441,
+              34.99391681
+            ],
+            [
+              135.7559303,
+              34.99389729
+            ],
+            [
+              135.75590688,
+              34.98903168
+            ],
+            [
+              135.749861,
+              34.9890512
+            ],
+            [
+              135.74988441,
+              34.99391681
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-7-5",
+        "sourceName": "左京\n七条二坊",
+        "label": "左京\n七条二坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75289565,
+          34.99147425
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.7559303,
+              34.99389729
+            ],
+            [
+              135.76218831,
+              34.99387708
+            ],
+            [
+              135.76216489,
+              34.98901147
+            ],
+            [
+              135.75590688,
+              34.98903168
+            ],
+            [
+              135.7559303,
+              34.99389729
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-7-6",
+        "sourceName": "左京\n七条三坊",
+        "label": "左京\n七条三坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75904759,
+          34.99145438
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.76218831,
+              34.99387708
+            ],
+            [
+              135.76834026,
+              34.99385721
+            ],
+            [
+              135.76831684,
+              34.9889916
+            ],
+            [
+              135.76216489,
+              34.98901147
+            ],
+            [
+              135.76218831,
+              34.99387708
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-7-7",
+        "sourceName": "左京\n七条四坊",
+        "label": "左京\n七条四坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.76525258,
+          34.99143434
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.71857091,
+              34.98915226
+            ],
+            [
+              135.72472286,
+              34.98913239
+            ],
+            [
+              135.72469902,
+              34.9841799
+            ],
+            [
+              135.71854707,
+              34.98419976
+            ],
+            [
+              135.71857091,
+              34.98915226
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-8-0",
+        "sourceName": "右京\n八条四坊",
+        "label": "右京\n八条四坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72163497,
+          34.98666608
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.72472286,
+              34.98913239
+            ],
+            [
+              135.73076874,
+              34.98911286
+            ],
+            [
+              135.7307449,
+              34.98416037
+            ],
+            [
+              135.72469902,
+              34.9841799
+            ],
+            [
+              135.72472286,
+              34.98913239
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-8-1",
+        "sourceName": "右京\n八条三坊",
+        "label": "右京\n八条三坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72773388,
+          34.98664638
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.73076874,
+              34.98911286
+            ],
+            [
+              135.73681462,
+              34.98909334
+            ],
+            [
+              135.73679078,
+              34.98414084
+            ],
+            [
+              135.7307449,
+              34.98416037
+            ],
+            [
+              135.73076874,
+              34.98911286
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-8-2",
+        "sourceName": "右京\n八条二坊",
+        "label": "右京\n八条二坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.73377976,
+          34.98662685
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.73681462,
+              34.98909334
+            ],
+            [
+              135.74339084,
+              34.9890721
+            ],
+            [
+              135.74336701,
+              34.9841196
+            ],
+            [
+              135.73679078,
+              34.98414084
+            ],
+            [
+              135.73681462,
+              34.98909334
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-8-3",
+        "sourceName": "右京\n八条一坊",
+        "label": "右京\n八条一坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.74009081,
+          34.98660647
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.74339084,
+              34.9890721
+            ],
+            [
+              135.749861,
+              34.9890512
+            ],
+            [
+              135.74983716,
+              34.98409871
+            ],
+            [
+              135.74336701,
+              34.9841196
+            ],
+            [
+              135.74339084,
+              34.9890721
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-8-4",
+        "sourceName": "左京\n八条一坊",
+        "label": "左京\n八条一坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.746614,
+          34.9865854
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.749861,
+              34.9890512
+            ],
+            [
+              135.75590688,
+              34.98903168
+            ],
+            [
+              135.75588304,
+              34.98407918
+            ],
+            [
+              135.74983716,
+              34.98409871
+            ],
+            [
+              135.749861,
+              34.9890512
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-8-5",
+        "sourceName": "左京\n八条二坊",
+        "label": "左京\n八条二坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75287202,
+          34.98656519
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.75590688,
+              34.98903168
+            ],
+            [
+              135.76216489,
+              34.98901147
+            ],
+            [
+              135.76214106,
+              34.98405897
+            ],
+            [
+              135.75588304,
+              34.98407918
+            ],
+            [
+              135.75590688,
+              34.98903168
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-8-6",
+        "sourceName": "左京\n八条三坊",
+        "label": "左京\n八条三坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75902397,
+          34.98654532
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.76216489,
+              34.98901147
+            ],
+            [
+              135.76831684,
+              34.9889916
+            ],
+            [
+              135.76829301,
+              34.9840391
+            ],
+            [
+              135.76214106,
+              34.98405897
+            ],
+            [
+              135.76216489,
+              34.98901147
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-8-7",
+        "sourceName": "左京\n八条四坊",
+        "label": "左京\n八条四坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.76522895,
+          34.98652528
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.71854707,
+              34.98419976
+            ],
+            [
+              135.72469902,
+              34.9841799
+            ],
+            [
+              135.72467477,
+              34.97914051
+            ],
+            [
+              135.71852282,
+              34.97916038
+            ],
+            [
+              135.71854707,
+              34.98419976
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-9-0",
+        "sourceName": "右京\n九条四坊",
+        "label": "右京\n九条四坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72161092,
+          34.98167014
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.72469902,
+              34.9841799
+            ],
+            [
+              135.7307449,
+              34.98416037
+            ],
+            [
+              135.73072065,
+              34.97912099
+            ],
+            [
+              135.72467477,
+              34.97914051
+            ],
+            [
+              135.72469902,
+              34.9841799
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-9-1",
+        "sourceName": "右京\n九条三坊",
+        "label": "右京\n九条三坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72770984,
+          34.98165044
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.7307449,
+              34.98416037
+            ],
+            [
+              135.73679078,
+              34.98414084
+            ],
+            [
+              135.73676653,
+              34.97910146
+            ],
+            [
+              135.73072065,
+              34.97912099
+            ],
+            [
+              135.7307449,
+              34.98416037
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-9-2",
+        "sourceName": "右京\n九条二坊",
+        "label": "右京\n九条二坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.73375572,
+          34.98163092
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.73679078,
+              34.98414084
+            ],
+            [
+              135.74336701,
+              34.9841196
+            ],
+            [
+              135.74334275,
+              34.97908022
+            ],
+            [
+              135.73676653,
+              34.97910146
+            ],
+            [
+              135.73679078,
+              34.98414084
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-9-3",
+        "sourceName": "右京\n九条一坊",
+        "label": "右京\n九条一坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.74006677,
+          34.98161053
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.74336701,
+              34.9841196
+            ],
+            [
+              135.74983716,
+              34.98409871
+            ],
+            [
+              135.7498129,
+              34.97905933
+            ],
+            [
+              135.74334275,
+              34.97908022
+            ],
+            [
+              135.74336701,
+              34.9841196
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-9-4",
+        "sourceName": "左京\n九条一坊",
+        "label": "左京\n九条一坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.74658995,
+          34.98158947
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.74983716,
+              34.98409871
+            ],
+            [
+              135.75588304,
+              34.98407918
+            ],
+            [
+              135.75585878,
+              34.9790398
+            ],
+            [
+              135.7498129,
+              34.97905933
+            ],
+            [
+              135.74983716,
+              34.98409871
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-9-5",
+        "sourceName": "左京\n九条二坊",
+        "label": "左京\n九条二坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75284797,
+          34.98156925
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.75588304,
+              34.98407918
+            ],
+            [
+              135.76214106,
+              34.98405897
+            ],
+            [
+              135.7621168,
+              34.97901959
+            ],
+            [
+              135.75585878,
+              34.9790398
+            ],
+            [
+              135.75588304,
+              34.98407918
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-9-6",
+        "sourceName": "左京\n九条三坊",
+        "label": "左京\n九条三坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75899992,
+          34.98154939
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.76214106,
+              34.98405897
+            ],
+            [
+              135.76829301,
+              34.9840391
+            ],
+            [
+              135.76826875,
+              34.97899972
+            ],
+            [
+              135.7621168,
+              34.97901959
+            ],
+            [
+              135.76214106,
+              34.98405897
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-ward-9-7",
+        "sourceName": "左京\n九条四坊",
+        "label": "左京\n九条四坊",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.7652049,
+          34.98152935
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.72029039,
+              35.02685577
+            ],
+            [
+              135.72006081,
+              34.97915542
+            ]
+          ],
+          [
+            [
+              135.72182838,
+              35.0268508
+            ],
+            [
+              135.72159879,
+              34.97915045
+            ]
+          ],
+          [
+            [
+              135.72336637,
+              35.02684583
+            ],
+            [
+              135.72313678,
+              34.97914548
+            ]
+          ],
+          [
+            [
+              135.72641583,
+              35.02683598
+            ],
+            [
+              135.72618624,
+              34.97913563
+            ]
+          ],
+          [
+            [
+              135.7279273,
+              35.0268311
+            ],
+            [
+              135.72769771,
+              34.97913075
+            ]
+          ],
+          [
+            [
+              135.72943877,
+              35.02682622
+            ],
+            [
+              135.72920918,
+              34.97912587
+            ]
+          ],
+          [
+            [
+              135.73246171,
+              35.02681646
+            ],
+            [
+              135.73223212,
+              34.97911611
+            ]
+          ],
+          [
+            [
+              135.73397318,
+              35.02681158
+            ],
+            [
+              135.73374359,
+              34.97911122
+            ]
+          ],
+          [
+            [
+              135.73548465,
+              35.0268067
+            ],
+            [
+              135.73525506,
+              34.97910634
+            ]
+          ],
+          [
+            [
+              135.73857786,
+              35.01385051
+            ],
+            [
+              135.73841058,
+              34.97909615
+            ]
+          ],
+          [
+            [
+              135.74022192,
+              35.0138452
+            ],
+            [
+              135.74005464,
+              34.97909084
+            ]
+          ],
+          [
+            [
+              135.74186597,
+              35.01383989
+            ],
+            [
+              135.7416987,
+              34.97908553
+            ]
+          ],
+          [
+            [
+              135.74512757,
+              35.01382935
+            ],
+            [
+              135.74496029,
+              34.979075
+            ]
+          ],
+          [
+            [
+              135.7467451,
+              35.01382413
+            ],
+            [
+              135.74657783,
+              34.97906977
+            ]
+          ],
+          [
+            [
+              135.74836264,
+              35.01381891
+            ],
+            [
+              135.74819537,
+              34.97906455
+            ]
+          ],
+          [
+            [
+              135.75155396,
+              35.0267548
+            ],
+            [
+              135.75132437,
+              34.97905444
+            ]
+          ],
+          [
+            [
+              135.75306543,
+              35.02674992
+            ],
+            [
+              135.75283584,
+              34.97904956
+            ]
+          ],
+          [
+            [
+              135.7545769,
+              35.02674503
+            ],
+            [
+              135.75434731,
+              34.97904468
+            ]
+          ],
+          [
+            [
+              135.75765288,
+              35.0267351
+            ],
+            [
+              135.75742329,
+              34.97903475
+            ]
+          ],
+          [
+            [
+              135.75921738,
+              35.02673005
+            ],
+            [
+              135.75898779,
+              34.97902969
+            ]
+          ],
+          [
+            [
+              135.76078188,
+              35.02672499
+            ],
+            [
+              135.7605523,
+              34.97902464
+            ]
+          ],
+          [
+            [
+              135.76388438,
+              35.02671497
+            ],
+            [
+              135.76365479,
+              34.97901462
+            ]
+          ],
+          [
+            [
+              135.76542236,
+              35.02671001
+            ],
+            [
+              135.76519278,
+              34.97900965
+            ]
+          ],
+          [
+            [
+              135.76696035,
+              35.02670504
+            ],
+            [
+              135.76673076,
+              34.97900469
+            ]
+          ],
+          [
+            [
+              135.71874551,
+              35.02542712
+            ],
+            [
+              135.73698922,
+              35.0253682
+            ]
+          ],
+          [
+            [
+              135.75003559,
+              35.02532606
+            ],
+            [
+              135.76849144,
+              35.02526646
+            ]
+          ],
+          [
+            [
+              135.71873233,
+              35.02269021
+            ],
+            [
+              135.73697604,
+              35.02263129
+            ]
+          ],
+          [
+            [
+              135.75002242,
+              35.02258916
+            ],
+            [
+              135.76847826,
+              35.02252955
+            ]
+          ],
+          [
+            [
+              135.71872606,
+              35.02138692
+            ],
+            [
+              135.73696977,
+              35.021328
+            ]
+          ],
+          [
+            [
+              135.75001614,
+              35.02128587
+            ],
+            [
+              135.76847199,
+              35.02122626
+            ]
+          ],
+          [
+            [
+              135.71871979,
+              35.02008364
+            ],
+            [
+              135.7369635,
+              35.02002471
+            ]
+          ],
+          [
+            [
+              135.75000987,
+              35.01998258
+            ],
+            [
+              135.76846572,
+              35.01992297
+            ]
+          ],
+          [
+            [
+              135.71870766,
+              35.01756395
+            ],
+            [
+              135.73695137,
+              35.01750502
+            ]
+          ],
+          [
+            [
+              135.74999774,
+              35.01746289
+            ],
+            [
+              135.76845359,
+              35.01740328
+            ]
+          ],
+          [
+            [
+              135.7187018,
+              35.01634754
+            ],
+            [
+              135.73694552,
+              35.01628862
+            ]
+          ],
+          [
+            [
+              135.74999189,
+              35.01624649
+            ],
+            [
+              135.76844774,
+              35.01618688
+            ]
+          ],
+          [
+            [
+              135.71869595,
+              35.01513114
+            ],
+            [
+              135.73693966,
+              35.01507222
+            ]
+          ],
+          [
+            [
+              135.74998604,
+              35.01503008
+            ],
+            [
+              135.76844188,
+              35.01497048
+            ]
+          ],
+          [
+            [
+              135.71868393,
+              35.01263317
+            ],
+            [
+              135.76842986,
+              35.01247251
+            ]
+          ],
+          [
+            [
+              135.71867776,
+              35.0113516
+            ],
+            [
+              135.76842369,
+              35.01119094
+            ]
+          ],
+          [
+            [
+              135.71867159,
+              35.01007004
+            ],
+            [
+              135.76841752,
+              35.00990938
+            ]
+          ],
+          [
+            [
+              135.71865957,
+              35.00757207
+            ],
+            [
+              135.7684055,
+              35.00741141
+            ]
+          ],
+          [
+            [
+              135.71865371,
+              35.00635567
+            ],
+            [
+              135.76839964,
+              35.006195
+            ]
+          ],
+          [
+            [
+              135.71864786,
+              35.00513926
+            ],
+            [
+              135.76839379,
+              35.0049786
+            ]
+          ],
+          [
+            [
+              135.71863594,
+              35.00266302
+            ],
+            [
+              135.76838187,
+              35.00250235
+            ]
+          ],
+          [
+            [
+              135.71862988,
+              35.00140317
+            ],
+            [
+              135.76837581,
+              35.00124251
+            ]
+          ],
+          [
+            [
+              135.71862381,
+              35.00014332
+            ],
+            [
+              135.76836974,
+              34.99998266
+            ]
+          ],
+          [
+            [
+              135.71861189,
+              34.99766708
+            ],
+            [
+              135.76835783,
+              34.99750641
+            ]
+          ],
+          [
+            [
+              135.71860604,
+              34.99645067
+            ],
+            [
+              135.76835197,
+              34.99629001
+            ]
+          ],
+          [
+            [
+              135.71860018,
+              34.99523427
+            ],
+            [
+              135.76834612,
+              34.99507361
+            ]
+          ],
+          [
+            [
+              135.71858847,
+              34.99280147
+            ],
+            [
+              135.76833441,
+              34.9926408
+            ]
+          ],
+          [
+            [
+              135.71858262,
+              34.99158506
+            ],
+            [
+              135.76832855,
+              34.9914244
+            ]
+          ],
+          [
+            [
+              135.71857677,
+              34.99036866
+            ],
+            [
+              135.7683227,
+              34.990208
+            ]
+          ],
+          [
+            [
+              135.71856495,
+              34.98791414
+            ],
+            [
+              135.76831088,
+              34.98775347
+            ]
+          ],
+          [
+            [
+              135.71855899,
+              34.98667601
+            ],
+            [
+              135.76830492,
+              34.98651535
+            ]
+          ],
+          [
+            [
+              135.71855303,
+              34.98543789
+            ],
+            [
+              135.76829896,
+              34.98527723
+            ]
+          ],
+          [
+            [
+              135.71854101,
+              34.98293992
+            ],
+            [
+              135.76828694,
+              34.98277926
+            ]
+          ],
+          [
+            [
+              135.71853495,
+              34.98168007
+            ],
+            [
+              135.76828088,
+              34.98151941
+            ]
+          ],
+          [
+            [
+              135.71852888,
+              34.98042023
+            ],
+            [
+              135.76827481,
+              34.98025957
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-minor-road-grid",
+        "sourceName": "平安京小路格网（图示参考）",
+        "label": "",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.72505068,
+          34.99112974
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "小路示意",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.73184071,
+              34.99145536
+            ],
+            [
+              135.73671984,
+              34.9914396
+            ],
+            [
+              135.73670186,
+              34.98770351
+            ],
+            [
+              135.73182273,
+              34.98771926
+            ],
+            [
+              135.73184071,
+              34.99145536
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-west-market",
+        "sourceName": "西市",
+        "label": "西市",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.73427129,
+          34.98957943
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "功能区图示",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.74987229,
+              34.99139712
+            ],
+            [
+              135.75453928,
+              34.99138205
+            ],
+            [
+              135.7545213,
+              34.98764596
+            ],
+            [
+              135.7498543,
+              34.98766103
+            ],
+            [
+              135.74987229,
+              34.99139712
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-east-market",
+        "sourceName": "东市",
+        "label": "东市",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75219679,
+          34.98952154
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "功能区图示",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.73677907,
+              34.98170804
+            ],
+            [
+              135.73996112,
+              34.98169776
+            ],
+            [
+              135.73994983,
+              34.97935184
+            ],
+            [
+              135.73676778,
+              34.97936212
+            ],
+            [
+              135.73677907,
+              34.98170804
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-west-temple",
+        "sourceName": "西寺布局范围",
+        "label": "西寺布局范围",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.73836445,
+          34.98052994
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "功能区图示",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.74653734,
+              34.98167652
+            ],
+            [
+              135.74982545,
+              34.9816659
+            ],
+            [
+              135.74981416,
+              34.97931998
+            ],
+            [
+              135.74652605,
+              34.9793306
+            ],
+            [
+              135.74653734,
+              34.98167652
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-east-temple",
+        "sourceName": "东寺布局范围",
+        "label": "东寺布局范围",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.74817575,
+          34.98049825
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "功能区图示",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.74998018,
+              35.01381368
+            ],
+            [
+              135.75316222,
+              35.0138034
+            ],
+            [
+              135.75313713,
+              35.00859025
+            ],
+            [
+              135.74995509,
+              35.00860053
+            ],
+            [
+              135.74998018,
+              35.01381368
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-shinsenen",
+        "sourceName": "神泉苑布局范围",
+        "label": "神泉苑布局范围",
+        "sourceUrl": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116792/1_3_1.pdf",
+        "sourceTitle": "京都市历史景观规划 · 图1-5平安时代院政以前（PDF第7页，原图出自《京都的历史》）",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按京都市图1-5条坊格网描绘，并以京都市都市史03条坊图核对条、坊编号和宫内布局。沿用东寺、下鸭神社双点配准，缺乏独立界址精度。北边坊与一至九条分开，宫域内不套用市坊；坊是规划区划，不宣称全部是住宅或全部建成。町级名称及未识别宅地功能不虚构。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.75155866,
+          35.01120197
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "功能区图示",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.74433656,
+              35.0228196
+            ],
+            [
+              135.74651095,
+              35.02281258
+            ],
+            [
+              135.74649631,
+              35.01977064
+            ],
+            [
+              135.74432192,
+              35.01977766
+            ],
+            [
+              135.74433656,
+              35.0228196
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-palace-dairi",
+        "sourceName": "平安宫内里",
+        "label": "平安宫内里",
+        "sourceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/image_nenpyou/toshi03_2.gif",
+        "sourceTitle": "京都市都市史03 · 平安京条坊图",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按官方条坊图的宫内框线提取内里、朝堂院或丰乐院，并将其宫域外框归一到已配准的图1-5大内里范围。两张概化图的嵌套只提供布局参考，不是考古测绘界线；不将原图小建筑画成实测建筑。现存京都御所是另一处位置，原始几何保留。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.74541643,
+          35.02129512
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "宫内布局参考",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.74230946,
+              35.01867798
+            ],
+            [
+              135.74498564,
+              35.01866934
+            ],
+            [
+              135.74496501,
+              35.01438297
+            ],
+            [
+              135.74228883,
+              35.01439161
+            ],
+            [
+              135.74230946,
+              35.01867798
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-palace-chodoin",
+        "sourceName": "平安宫朝堂院",
+        "label": "朝堂院",
+        "sourceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/image_nenpyou/toshi03_2.gif",
+        "sourceTitle": "京都市都市史03 · 平安京条坊图",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按官方条坊图的宫内框线提取内里、朝堂院或丰乐院，并将其宫域外框归一到已配准的图1-5大内里范围。两张概化图的嵌套只提供布局参考，不是考古测绘界线；不将原图小建筑画成实测建筑。现存京都御所是另一处位置，原始几何保留。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.74363723,
+          35.01653047
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "宫内布局参考",
+        "planReference": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.73979987,
+              35.01854781
+            ],
+            [
+              135.74180701,
+              35.01854133
+            ],
+            [
+              135.74178704,
+              35.01439323
+            ],
+            [
+              135.73977991,
+              35.01439971
+            ],
+            [
+              135.73979987,
+              35.01854781
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "京都",
+        "sourceId": "kyoto-heian-palace-burakuin",
+        "sourceName": "平安宫丰乐院",
+        "label": "丰乐院",
+        "sourceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/image_nenpyou/toshi03_2.gif",
+        "sourceTitle": "京都市都市史03 · 平安京条坊图",
+        "referenceUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/htmlsheet/toshi03",
+        "coordinateSystem": "WGS84",
+        "status": "官方平安京条坊图配准参考，非实测遗迹界线",
+        "note": "按官方条坊图的宫内框线提取内里、朝堂院或丰乐院，并将其宫域外框归一到已配准的图1-5大内里范围。两张概化图的嵌套只提供布局参考，不是考古测绘界线；不将原图小建筑画成实测建筑。现存京都御所是另一处位置，原始几何保留。",
+        "capitalSiteKey": "ancient-site:world-kyoto",
+        "capitalSiteName": "京都（平安京）",
+        "capitalSiteDisplayName": "京都（平安京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.74079346,
+          35.01647052
+        ],
+        "capitalPlanDetail": true,
+        "detailKind": "宫内布局参考",
+        "planReference": true
+      }
+    }
+  ],
+  "labelNote": "宫内标签采用简短中文，完整名称、来源和精度限制保留在详情中。"
+}

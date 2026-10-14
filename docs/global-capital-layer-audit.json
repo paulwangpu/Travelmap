@@ -1,0 +1,268 @@
+{
+  "physicalSource": "global-capital-sites",
+  "independentCitySourcesRemaining": 0,
+  "mergedProviders": [
+    "AncientCapitalWalls",
+    "ClassicalSites",
+    "PompeiiSites",
+    "LuoyangCapitalEvolution",
+    "BeijingCapitalEvolution"
+  ],
+  "retiredProvider": "AngkorSites（上轮已迁入ClassicalSites，未重新加载）",
+  "renderFeatures": 9102,
+  "geometryDataFilesModified": false,
+  "cityRootAndWorldHeritageDataModified": false,
+  "preserved": [
+    "唐长安里坊、道路与标签规则",
+    "奈良及其他规划图示参考",
+    "明清独立年份与旧时期叠放顺序",
+    "开放墙段、闭合面、多面与孔洞",
+    "世界遗产和古都打卡身份",
+    "各来源许可与出处",
+    "各历史阶段定位与说明"
+  ],
+  "changes": [
+    "所有应用同步和点击入口统一由CapitalMapLayers调度",
+    "MapLibre使用一个实际源，内部样式视图以globalSourceId区分",
+    "Leaflet由一个全局父图层组织同样数据与详情",
+    "北京、洛阳分期点图标和名称统一遵循全局朝代选择",
+    "删除庞贝额外独立名称标签，根点名称沿用全局规则",
+    "取消北京、洛阳旧独立总开关的渲染作用",
+    "稳定数据跳过重复上传；关闭再开启恢复缓存集合"
+  ],
+  "browser": {
+    "results": [
+      {
+        "key": "changan",
+        "audit": {
+          "sourceId": "global-capital-sites",
+          "providers": [
+            "pompeii-sites",
+            "pompeii-site-labels",
+            "pompeii-city",
+            "luoyang-capital-evolution",
+            "beijing-capital-evolution",
+            "classical-sites",
+            "classical-sites-labels",
+            "classical-sites-names",
+            "ancient-capital-walls",
+            "ancient-capital-walls-ward-labels",
+            "ancient-capital-walls-labels",
+            "ancient-capital-walls-luoyang-labels",
+            "ancient-capital-walls-plan-labels"
+          ],
+          "features": 9102,
+          "uploads": 3,
+          "legacyPhysicalSources": []
+        }
+      },
+      {
+        "key": "luoyang",
+        "audit": {
+          "sourceId": "global-capital-sites",
+          "providers": [
+            "pompeii-sites",
+            "pompeii-site-labels",
+            "pompeii-city",
+            "luoyang-capital-evolution",
+            "beijing-capital-evolution",
+            "classical-sites",
+            "classical-sites-labels",
+            "classical-sites-names",
+            "ancient-capital-walls",
+            "ancient-capital-walls-ward-labels",
+            "ancient-capital-walls-labels",
+            "ancient-capital-walls-luoyang-labels",
+            "ancient-capital-walls-plan-labels"
+          ],
+          "features": 9102,
+          "uploads": 4,
+          "legacyPhysicalSources": []
+        }
+      },
+      {
+        "key": "beijing",
+        "audit": {
+          "sourceId": "global-capital-sites",
+          "providers": [
+            "pompeii-sites",
+            "pompeii-site-labels",
+            "pompeii-city",
+            "luoyang-capital-evolution",
+            "beijing-capital-evolution",
+            "classical-sites",
+            "classical-sites-labels",
+            "classical-sites-names",
+            "ancient-capital-walls",
+            "ancient-capital-walls-ward-labels",
+            "ancient-capital-walls-labels",
+            "ancient-capital-walls-luoyang-labels",
+            "ancient-capital-walls-plan-labels"
+          ],
+          "features": 9102,
+          "uploads": 5,
+          "legacyPhysicalSources": []
+        }
+      },
+      {
+        "key": "pompeii",
+        "audit": {
+          "sourceId": "global-capital-sites",
+          "providers": [
+            "pompeii-sites",
+            "pompeii-site-labels",
+            "pompeii-city",
+            "luoyang-capital-evolution",
+            "beijing-capital-evolution",
+            "classical-sites",
+            "classical-sites-labels",
+            "classical-sites-names",
+            "ancient-capital-walls",
+            "ancient-capital-walls-ward-labels",
+            "ancient-capital-walls-labels",
+            "ancient-capital-walls-luoyang-labels",
+            "ancient-capital-walls-plan-labels"
+          ],
+          "features": 9102,
+          "uploads": 6,
+          "legacyPhysicalSources": []
+        }
+      },
+      {
+        "key": "angkor",
+        "audit": {
+          "sourceId": "global-capital-sites",
+          "providers": [
+            "pompeii-sites",
+            "pompeii-site-labels",
+            "pompeii-city",
+            "luoyang-capital-evolution",
+            "beijing-capital-evolution",
+            "classical-sites",
+            "classical-sites-labels",
+            "classical-sites-names",
+            "ancient-capital-walls",
+            "ancient-capital-walls-ward-labels",
+            "ancient-capital-walls-labels",
+            "ancient-capital-walls-luoyang-labels",
+            "ancient-capital-walls-plan-labels"
+          ],
+          "features": 9102,
+          "uploads": 7,
+          "legacyPhysicalSources": []
+        }
+      },
+      {
+        "key": "surakarta",
+        "audit": {
+          "sourceId": "global-capital-sites",
+          "providers": [
+            "pompeii-sites",
+            "pompeii-site-labels",
+            "pompeii-city",
+            "luoyang-capital-evolution",
+            "beijing-capital-evolution",
+            "classical-sites",
+            "classical-sites-labels",
+            "classical-sites-names",
+            "ancient-capital-walls",
+            "ancient-capital-walls-ward-labels",
+            "ancient-capital-walls-labels",
+            "ancient-capital-walls-luoyang-labels",
+            "ancient-capital-walls-plan-labels"
+          ],
+          "features": 9102,
+          "uploads": 8,
+          "legacyPhysicalSources": []
+        }
+      },
+      {
+        "dynastiesOffRootHidden": true,
+        "detailsRemain": 2334
+      },
+      {
+        "wallsOffRemainingSources": [
+          "luoyang-capital-evolution",
+          "beijing-capital-evolution",
+          "classical-sites-names"
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "probe": {
+    "result": {
+      "initial": {
+        "sourceId": "global-capital-sites",
+        "providers": [
+          "pompeii-sites",
+          "pompeii-site-labels",
+          "pompeii-city",
+          "luoyang-capital-evolution",
+          "beijing-capital-evolution",
+          "classical-sites",
+          "classical-sites-labels",
+          "classical-sites-names",
+          "ancient-capital-walls",
+          "ancient-capital-walls-ward-labels",
+          "ancient-capital-walls-labels",
+          "ancient-capital-walls-luoyang-labels",
+          "ancient-capital-walls-plan-labels"
+        ],
+        "features": 9102,
+        "uploads": 1,
+        "legacyPhysicalSources": []
+      },
+      "warm": {
+        "additionalUploads": 0,
+        "averageMs": 17
+      },
+      "off": 0,
+      "restored": {
+        "sourceId": "global-capital-sites",
+        "providers": [
+          "pompeii-sites",
+          "pompeii-site-labels",
+          "pompeii-city",
+          "luoyang-capital-evolution",
+          "beijing-capital-evolution",
+          "classical-sites",
+          "classical-sites-labels",
+          "classical-sites-names",
+          "ancient-capital-walls",
+          "ancient-capital-walls-ward-labels",
+          "ancient-capital-walls-labels",
+          "ancient-capital-walls-luoyang-labels",
+          "ancient-capital-walls-plan-labels"
+        ],
+        "features": 9102,
+        "uploads": 3,
+        "legacyPhysicalSources": []
+      },
+      "sameLanguage": true
+    },
+    "errors": []
+  },
+  "versions": {
+    "app": 990,
+    "globalRenderer": 2,
+    "pompeii": 7,
+    "luoyang": 21,
+    "beijing": 19,
+    "serviceWorker": 1190,
+    "published": "2.3.1"
+  },
+  "validation": {
+    "fullRegressionFailures": 0,
+    "syntaxChecksPassed": true,
+    "diffCheckPassed": true,
+    "visualReview": [
+      "changan",
+      "luoyang",
+      "beijing",
+      "pompeii",
+      "angkor",
+      "surakarta"
+    ]
+  }
+}

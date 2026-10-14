@@ -1,0 +1,1835 @@
+{
+  "addedFeatures": 183,
+  "retainedOriginalGeometry": 1928,
+  "addedOsmWallWays": 92,
+  "officialHistoricalFeatures": 118,
+  "officialEnclosedCircuitCount": 6,
+  "counts": {
+    "sites": 153,
+    "features": 2111,
+    "capitalRoots": 291,
+    "capitalRecords": 495
+  },
+  "countries": {
+    "法国": {
+      "reviewedCities": 11,
+      "citiesWithAdditions": 9,
+      "newGeometry": 28,
+      "wallWays": 56
+    },
+    "德国": {
+      "reviewedCities": 11,
+      "citiesWithAdditions": 8,
+      "newGeometry": 23,
+      "wallWays": 28
+    },
+    "荷兰": {
+      "reviewedCities": 5,
+      "citiesWithAdditions": 3,
+      "newGeometry": 128,
+      "wallWays": 1
+    },
+    "匈牙利": {
+      "reviewedCities": 5,
+      "citiesWithAdditions": 3,
+      "newGeometry": 4,
+      "wallWays": 7
+    }
+  },
+  "cities": [
+    {
+      "key": "paris",
+      "name": "巴黎",
+      "country": "法国",
+      "before": 4,
+      "added": 7,
+      "after": 11,
+      "newOsmWallWays": 15,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [
+        {
+          "id": "four-paris-way-1531518591",
+          "name": "巴黎城门（名称待核）",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        },
+        {
+          "id": "four-paris-wall-宋辽金西夏-lines",
+          "name": "巴黎城墙遗存（现存标绘）",
+          "type": "MultiLineString",
+          "scope": "original_open_wall_chains"
+        },
+        {
+          "id": "four-paris-wall-宋辽金西夏-polygons",
+          "name": "巴黎城墙遗存（现存标绘）",
+          "type": "MultiPolygon",
+          "scope": "mapped_wall_fabric"
+        },
+        {
+          "id": "four-paris-wall-明-lines",
+          "name": "巴黎城墙遗存（现存标绘）",
+          "type": "MultiLineString",
+          "scope": "original_open_wall_chains"
+        },
+        {
+          "id": "four-paris-wall-近现代-lines",
+          "name": "巴黎城墙遗存（现存标绘）",
+          "type": "MultiLineString",
+          "scope": "original_open_wall_chains"
+        },
+        {
+          "id": "four-paris-wall-近现代-polygons",
+          "name": "巴黎城墙遗存（现存标绘）",
+          "type": "MultiPolygon",
+          "scope": "mapped_wall_fabric"
+        },
+        {
+          "id": "four-paris-wall-清-lines",
+          "name": "巴黎城墙遗存（现存标绘）",
+          "type": "MultiLineString",
+          "scope": "original_open_wall_chains"
+        }
+      ],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "toulouse",
+      "name": "图卢兹",
+      "country": "法国",
+      "before": 4,
+      "added": 2,
+      "after": 6,
+      "newOsmWallWays": 12,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [
+        {
+          "id": "four-toulouse-wall-秦汉-lines",
+          "name": "图卢兹城墙遗存（现存标绘）",
+          "type": "MultiLineString",
+          "scope": "original_open_wall_chains"
+        },
+        {
+          "id": "four-toulouse-wall-秦汉-polygons",
+          "name": "图卢兹城墙遗存（现存标绘）",
+          "type": "MultiPolygon",
+          "scope": "mapped_wall_fabric"
+        }
+      ],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "soissons",
+      "name": "苏瓦松",
+      "country": "法国",
+      "before": 6,
+      "added": 1,
+      "after": 7,
+      "newOsmWallWays": 6,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [
+        {
+          "id": "four-soissons-wall-魏晋南北朝-lines",
+          "name": "苏瓦松城墙遗存（现存标绘）",
+          "type": "MultiLineString",
+          "scope": "original_open_wall_chains"
+        }
+      ],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "reims",
+      "name": "兰斯",
+      "country": "法国",
+      "before": 3,
+      "added": 2,
+      "after": 5,
+      "newOsmWallWays": 2,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [
+        {
+          "id": "four-reims-way-532059156",
+          "name": "教士会门",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        },
+        {
+          "id": "four-reims-wall-近现代-lines",
+          "name": "兰斯城墙遗存（现存标绘）",
+          "type": "MultiLineString",
+          "scope": "original_open_wall_chains"
+        }
+      ],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "orleans",
+      "name": "奥尔良",
+      "country": "法国",
+      "before": 4,
+      "added": 0,
+      "after": 4,
+      "newOsmWallWays": 0,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "arles",
+      "name": "阿尔勒",
+      "country": "法国",
+      "before": 5,
+      "added": 4,
+      "after": 9,
+      "newOsmWallWays": 16,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [
+        {
+          "id": "four-arles-way-1308675629",
+          "name": "奥古斯都门",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        },
+        {
+          "id": "four-arles-relation-13102892",
+          "name": "骑兵门",
+          "type": "MultiPolygon",
+          "scope": "mapped_surviving_remains"
+        },
+        {
+          "id": "four-arles-wall-近现代-lines",
+          "name": "阿尔勒城墙遗存（现存标绘）",
+          "type": "MultiLineString",
+          "scope": "original_open_wall_chains"
+        },
+        {
+          "id": "four-arles-wall-近现代-polygons",
+          "name": "阿尔勒城墙遗存（现存标绘）",
+          "type": "MultiPolygon",
+          "scope": "mapped_wall_fabric"
+        }
+      ],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "rouen",
+      "name": "鲁昂",
+      "country": "法国",
+      "before": 1,
+      "added": 2,
+      "after": 3,
+      "newOsmWallWays": 2,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [
+        {
+          "id": "four-rouen-way-64181280",
+          "name": "鲁昂王堡主塔（现存遗迹）",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        },
+        {
+          "id": "four-rouen-wall-近现代-lines",
+          "name": "鲁昂城墙遗存（现存标绘）",
+          "type": "MultiLineString",
+          "scope": "original_open_wall_chains"
+        }
+      ],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "dijon",
+      "name": "第戎",
+      "country": "法国",
+      "before": 3,
+      "added": 1,
+      "after": 4,
+      "newOsmWallWays": 3,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [
+        {
+          "id": "four-dijon-wall-近现代-lines",
+          "name": "第戎城墙遗存（现存标绘）",
+          "type": "MultiLineString",
+          "scope": "original_open_wall_chains"
+        }
+      ],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "nancy",
+      "name": "南锡",
+      "country": "法国",
+      "before": 3,
+      "added": 8,
+      "after": 11,
+      "newOsmWallWays": 0,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [
+        {
+          "id": "four-nancy-way-45064261",
+          "name": "城堡门（圣母门）",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        },
+        {
+          "id": "four-nancy-way-45064267",
+          "name": "城堡门（圣母门）",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        },
+        {
+          "id": "four-nancy-way-43159462",
+          "name": "埃雷纪念门",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        },
+        {
+          "id": "four-nancy-way-41051479",
+          "name": "斯坦尼斯拉斯门",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        },
+        {
+          "id": "four-nancy-way-44390636",
+          "name": "德西耶纪念门",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        },
+        {
+          "id": "four-nancy-way-58406509",
+          "name": "圣凯瑟琳门",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        },
+        {
+          "id": "four-nancy-way-58416039",
+          "name": "圣乔治门",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        },
+        {
+          "id": "four-nancy-way-203267364",
+          "name": "圣尼古拉门",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        }
+      ],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "aix-en-provence",
+      "name": "普罗旺斯地区艾克斯",
+      "country": "法国",
+      "before": 2,
+      "added": 0,
+      "after": 2,
+      "newOsmWallWays": 0,
+      "closedOfficialCircuits": [],
+      "status": "保留已有实际遗迹；未取得可靠城防矢量，不绘制推测环城墙",
+      "newGeometry": [],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "versailles",
+      "name": "凡尔赛",
+      "country": "法国",
+      "before": 1,
+      "added": 1,
+      "after": 2,
+      "newOsmWallWays": 0,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [
+        {
+          "id": "four-versailles-relation-6697688",
+          "name": "圣安东尼王园门",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        }
+      ],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "trier",
+      "name": "特里尔",
+      "country": "德国",
+      "before": 4,
+      "added": 2,
+      "after": 6,
+      "newOsmWallWays": 8,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [
+        {
+          "id": "four-trier-way-445483744",
+          "name": "卡斯蒂尔门",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        },
+        {
+          "id": "four-trier-wall-近现代-lines",
+          "name": "特里尔城墙遗存（现存标绘）",
+          "type": "MultiLineString",
+          "scope": "original_open_wall_chains"
+        }
+      ],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "aachen",
+      "name": "亚琛",
+      "country": "德国",
+      "before": 12,
+      "added": 2,
+      "after": 14,
+      "newOsmWallWays": 2,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [
+        {
+          "id": "four-aachen-relation-2565094",
+          "name": "蓬特门",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        },
+        {
+          "id": "four-aachen-wall-宋辽金西夏-polygons",
+          "name": "亚琛城墙遗存（现存标绘）",
+          "type": "MultiPolygon",
+          "scope": "mapped_wall_fabric"
+        }
+      ],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "berlin",
+      "name": "柏林",
+      "country": "德国",
+      "before": 1,
+      "added": 3,
+      "after": 4,
+      "newOsmWallWays": 5,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [
+        {
+          "id": "four-berlin-wall-清-lines",
+          "name": "柏林城墙遗存（现存标绘）",
+          "type": "MultiLineString",
+          "scope": "original_open_wall_chains"
+        },
+        {
+          "id": "four-berlin-wall-清-polygons",
+          "name": "柏林城墙遗存（现存标绘）",
+          "type": "MultiPolygon",
+          "scope": "mapped_wall_fabric"
+        },
+        {
+          "id": "four-berlin-wall-宋辽金西夏-lines",
+          "name": "柏林城墙遗存（现存标绘）",
+          "type": "MultiLineString",
+          "scope": "original_open_wall_chains"
+        }
+      ],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "bonn",
+      "name": "波恩",
+      "country": "德国",
+      "before": 2,
+      "added": 4,
+      "after": 6,
+      "newOsmWallWays": 5,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [
+        {
+          "id": "four-bonn-way-209118448",
+          "name": "科布伦茨门（选侯宫门）",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        },
+        {
+          "id": "four-bonn-way-710008893",
+          "name": "施托肯门",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        },
+        {
+          "id": "four-bonn-way-1223165122",
+          "name": "星门（现状重组）",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        },
+        {
+          "id": "four-bonn-wall-近现代-lines",
+          "name": "波恩城墙遗存（现存标绘）",
+          "type": "MultiLineString",
+          "scope": "original_open_wall_chains"
+        }
+      ],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "munich",
+      "name": "慕尼黑",
+      "country": "德国",
+      "before": 2,
+      "added": 7,
+      "after": 9,
+      "newOsmWallWays": 1,
+      "closedOfficialCircuits": [
+        "four-munich-plan-first",
+        "four-munich-plan-second",
+        "four-munich-plan-bastions"
+      ],
+      "status": "已接入有依据的官方复原／图示城郭；其他分期城界仍待核",
+      "newGeometry": [
+        {
+          "id": "four-munich-relation-6035286",
+          "name": "伊萨尔门",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        },
+        {
+          "id": "four-munich-way-52103816",
+          "name": "卡尔门",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        },
+        {
+          "id": "four-munich-way-337782843",
+          "name": "森德林门",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        },
+        {
+          "id": "four-munich-wall-元-polygons",
+          "name": "慕尼黑城墙遗存（现存标绘）",
+          "type": "MultiPolygon",
+          "scope": "mapped_wall_fabric"
+        },
+        {
+          "id": "four-munich-plan-first",
+          "name": "慕尼黑第一道城郭（官方图示参考）",
+          "type": "Polygon",
+          "scope": "official_diagram_reference"
+        },
+        {
+          "id": "four-munich-plan-second",
+          "name": "慕尼黑第二道城郭（官方图示参考）",
+          "type": "Polygon",
+          "scope": "official_diagram_reference"
+        },
+        {
+          "id": "four-munich-plan-bastions",
+          "name": "慕尼黑17世纪棱堡城郭（官方图示参考）",
+          "type": "Polygon",
+          "scope": "official_diagram_reference"
+        }
+      ],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "dresden",
+      "name": "德累斯顿",
+      "country": "德国",
+      "before": 7,
+      "added": 2,
+      "after": 9,
+      "newOsmWallWays": 2,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [
+        {
+          "id": "four-dresden-way-76196047",
+          "name": "乔治宫门",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        },
+        {
+          "id": "four-dresden-wall-明-polygons",
+          "name": "德累斯顿城墙遗存（现存标绘）",
+          "type": "MultiPolygon",
+          "scope": "mapped_wall_fabric"
+        }
+      ],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "stuttgart",
+      "name": "斯图加特",
+      "country": "德国",
+      "before": 2,
+      "added": 2,
+      "after": 4,
+      "newOsmWallWays": 3,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [
+        {
+          "id": "four-stuttgart-way-364203905",
+          "name": "斯图加特城门（名称待核）",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        },
+        {
+          "id": "four-stuttgart-wall-宋辽金西夏-lines",
+          "name": "斯图加特城墙遗存（现存标绘）",
+          "type": "MultiLineString",
+          "scope": "original_open_wall_chains"
+        }
+      ],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "karlsruhe",
+      "name": "卡尔斯鲁厄",
+      "country": "德国",
+      "before": 1,
+      "added": 0,
+      "after": 1,
+      "newOsmWallWays": 0,
+      "closedOfficialCircuits": [],
+      "status": "保留已有实际遗迹；未取得可靠城防矢量，不绘制推测环城墙",
+      "newGeometry": [],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "hanover",
+      "name": "汉诺威",
+      "country": "德国",
+      "before": 2,
+      "added": 0,
+      "after": 2,
+      "newOsmWallWays": 0,
+      "closedOfficialCircuits": [],
+      "status": "保留已有实际遗迹；未取得可靠城防矢量，不绘制推测环城墙",
+      "newGeometry": [],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "schwerin",
+      "name": "什未林",
+      "country": "德国",
+      "before": 1,
+      "added": 0,
+      "after": 1,
+      "newOsmWallWays": 0,
+      "closedOfficialCircuits": [],
+      "status": "保留已有实际遗迹；未取得可靠城防矢量，不绘制推测环城墙",
+      "newGeometry": [],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "weimar",
+      "name": "魏玛",
+      "country": "德国",
+      "before": 3,
+      "added": 1,
+      "after": 4,
+      "newOsmWallWays": 2,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [
+        {
+          "id": "four-weimar-wall-宋辽金西夏-lines",
+          "name": "魏玛城墙遗存（现存标绘）",
+          "type": "MultiLineString",
+          "scope": "original_open_wall_chains"
+        }
+      ],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "amsterdam",
+      "name": "阿姆斯特丹",
+      "country": "荷兰",
+      "before": 4,
+      "added": 0,
+      "after": 4,
+      "newOsmWallWays": 0,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "the-hague",
+      "name": "海牙",
+      "country": "荷兰",
+      "before": 1,
+      "added": 5,
+      "after": 6,
+      "newOsmWallWays": 0,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [
+        {
+          "id": "four-the-hague-way-58616682",
+          "name": "毛里茨宫廷门",
+          "type": "Polygon",
+          "scope": "mapped_court_gate"
+        },
+        {
+          "id": "four-the-hague-way-58617251",
+          "name": "执政宫廷门",
+          "type": "Polygon",
+          "scope": "mapped_court_gate"
+        },
+        {
+          "id": "four-the-hague-way-58617259",
+          "name": "内廷门",
+          "type": "Polygon",
+          "scope": "mapped_court_gate"
+        },
+        {
+          "id": "four-the-hague-way-140254386",
+          "name": "宫廷门",
+          "type": "Polygon",
+          "scope": "mapped_court_gate"
+        },
+        {
+          "id": "four-the-hague-way-626655741",
+          "name": "海牙城门（名称待核）",
+          "type": "Polygon",
+          "scope": "mapped_court_gate"
+        }
+      ],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "utrecht",
+      "name": "乌得勒支",
+      "country": "荷兰",
+      "before": 3,
+      "added": 121,
+      "after": 124,
+      "newOsmWallWays": 0,
+      "closedOfficialCircuits": [
+        "four-utrecht-enclosed-city-1670",
+        "four-utrecht-enclosed-city-1550",
+        "four-utrecht-enclosed-city-1200"
+      ],
+      "status": "已接入有依据的官方复原／图示城郭；其他分期城界仍待核",
+      "newGeometry": [
+        {
+          "id": "four-utrecht-official-1670-1",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-2",
+          "name": "乌得勒支韦尔德门（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-3",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-4",
+          "name": "乌得勒支沃尔芬堡（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-5",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-6",
+          "name": "乌得勒支卢卡斯堡垒（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-7",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-8",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-9",
+          "name": "乌得勒支玛丽亚堡垒（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-10",
+          "name": "乌得勒支莱佩伦堡（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-11",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-12",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-13",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-14",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-15",
+          "name": "乌得勒支晨星堡（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-16",
+          "name": "乌得勒支太阳堡（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-17",
+          "name": "乌得勒支马嫩堡（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-18",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-19",
+          "name": "乌得勒支星堡（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-20",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-21",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-22",
+          "name": "乌得勒支弗雷登堡（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-23",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-24",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-25",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-26",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-27",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-28",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-29",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-30",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-31",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-32",
+          "name": "乌得勒支圣凯瑟琳门（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-33",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-34",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-35",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-36",
+          "name": "乌得勒支白衣女门（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-37",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-38",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-39",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-40",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-41",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-42",
+          "name": "乌得勒支贝吉嫩堡垒（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-43",
+          "name": "乌得勒支城门（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-44",
+          "name": "乌得勒支城防墙体（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1670-45",
+          "name": "乌得勒支城防墙体（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-enclosed-city-1670",
+          "name": "乌得勒支1670专题城郭（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_reconstructed_enclosed_circuit"
+        },
+        {
+          "id": "four-utrecht-official-1550-1",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-2",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-3",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-4",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-5",
+          "name": "乌得勒支城防墙体（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-6",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-7",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-8",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-9",
+          "name": "乌得勒支圣凯瑟琳门（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-10",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-11",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-12",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-13",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-14",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-15",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-16",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-17",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-18",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-19",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-20",
+          "name": "乌得勒支城防墙体（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-21",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-22",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-23",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-24",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-25",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-26",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-27",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-28",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-29",
+          "name": "乌得勒支莱佩伦堡（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-30",
+          "name": "乌得勒支莱佩伦堡（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-31",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-32",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-33",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-34",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-35",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-36",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-37",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-38",
+          "name": "乌得勒支韦尔德门（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-39",
+          "name": "乌得勒支弗雷登堡（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-40",
+          "name": "乌得勒支晨星堡（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-41",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-42",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-43",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-44",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-45",
+          "name": "乌得勒支白衣女门（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-46",
+          "name": "乌得勒支太阳堡（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-47",
+          "name": "乌得勒支马嫩堡（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-48",
+          "name": "乌得勒支城门（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-49",
+          "name": "乌得勒支星堡（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-50",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-51",
+          "name": "乌得勒支城防墙体（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-52",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-53",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1550-54",
+          "name": "乌得勒支城防墙体（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-enclosed-city-1550",
+          "name": "乌得勒支1550专题城郭（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_reconstructed_enclosed_circuit"
+        },
+        {
+          "id": "four-utrecht-official-1200-1",
+          "name": "乌得勒支白衣女门（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1200-2",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1200-3",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1200-4",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1200-5",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1200-6",
+          "name": "乌得勒支城门（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1200-7",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1200-8",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1200-9",
+          "name": "乌得勒支托尔斯泰赫门（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1200-10",
+          "name": "乌得勒支韦尔德门（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1200-11",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1200-12",
+          "name": "乌得勒支圣凯瑟琳门（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1200-13",
+          "name": "乌得勒支托尔斯泰赫门（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1200-14",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1200-15",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1200-16",
+          "name": "乌得勒支韦尔德门（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1200-17",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1200-18",
+          "name": "乌得勒支城防塔（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-official-1200-19",
+          "name": "乌得勒支城防墙体（官方复原参考）",
+          "type": "MultiPolygon",
+          "scope": "official_historical_reconstruction"
+        },
+        {
+          "id": "four-utrecht-enclosed-city-1200",
+          "name": "乌得勒支1200专题城郭（官方复原参考）",
+          "type": "Polygon",
+          "scope": "official_reconstructed_enclosed_circuit"
+        }
+      ],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "arnhem",
+      "name": "阿纳姆",
+      "country": "荷兰",
+      "before": 2,
+      "added": 0,
+      "after": 2,
+      "newOsmWallWays": 0,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "groningen",
+      "name": "格罗宁根",
+      "country": "荷兰",
+      "before": 2,
+      "added": 2,
+      "after": 4,
+      "newOsmWallWays": 1,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [
+        {
+          "id": "four-groningen-way-996828828",
+          "name": "格罗宁根城门（名称待核）",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        },
+        {
+          "id": "four-groningen-wall-元-lines",
+          "name": "格罗宁根城墙遗存（现存标绘）",
+          "type": "MultiLineString",
+          "scope": "original_open_wall_chains"
+        }
+      ],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "esztergom",
+      "name": "埃斯泰尔戈姆",
+      "country": "匈牙利",
+      "before": 20,
+      "added": 1,
+      "after": 21,
+      "newOsmWallWays": 7,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [
+        {
+          "id": "four-esztergom-wall-宋辽金西夏-lines",
+          "name": "埃斯泰尔戈姆城墙遗存（现存标绘）",
+          "type": "MultiLineString",
+          "scope": "original_open_wall_chains"
+        }
+      ],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "szekesfehervar",
+      "name": "塞克什白堡",
+      "country": "匈牙利",
+      "before": 6,
+      "added": 0,
+      "after": 6,
+      "newOsmWallWays": 0,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "visegrad",
+      "name": "维谢格拉德",
+      "country": "匈牙利",
+      "before": 18,
+      "added": 1,
+      "after": 19,
+      "newOsmWallWays": 0,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [
+        {
+          "id": "four-visegrad-way-121240965",
+          "name": "维谢格拉德下堡所罗门塔（今博物馆）",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        }
+      ],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "budapest",
+      "name": "布达／布达佩斯",
+      "country": "匈牙利",
+      "before": 34,
+      "added": 2,
+      "after": 36,
+      "newOsmWallWays": 0,
+      "closedOfficialCircuits": [],
+      "status": "现存城墙、城门或堡垒已接入；完整分期城郭待核",
+      "newGeometry": [
+        {
+          "id": "four-budapest-way-1385658763",
+          "name": "布达大圆堡门塔",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        },
+        {
+          "id": "four-budapest-way-829110605",
+          "name": "盖勒特山城堡（现存／修复）",
+          "type": "Polygon",
+          "scope": "mapped_surviving_remains"
+        }
+      ],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    },
+    {
+      "key": "debrecen",
+      "name": "德布勒森",
+      "country": "匈牙利",
+      "before": 2,
+      "added": 0,
+      "after": 2,
+      "newOsmWallWays": 0,
+      "closedOfficialCircuits": [],
+      "status": "保留已有实际遗迹；未取得可靠城防矢量，不绘制推测环城墙",
+      "newGeometry": [],
+      "remaining": "完整其他分期城郭、已拆城墙定位与未取得原始矢量的城防构件仍待核"
+    }
+  ],
+  "geometryReview": {
+    "features": 183,
+    "osmWalls": 92,
+    "official": [
+      {
+        "year": "1670",
+        "features": 45,
+        "closedInteriorCount": 1
+      },
+      {
+        "year": "1550",
+        "features": 54,
+        "closedInteriorCount": 1
+      },
+      {
+        "year": "1200",
+        "features": 19,
+        "closedInteriorCount": 1
+      }
+    ],
+    "deferredOfficialLayer": {
+      "service": "1500_muur",
+      "features": 57,
+      "reason": "服务名1500与官方14世纪标题有矛盾；暂不接入，待核具体年代。"
+    },
+    "errors": [],
+    "excluded": [
+      [
+        "way",
+        "129746961",
+        "王室园林围界，不作为城市防御城墙"
+      ],
+      [
+        "way",
+        "446637390",
+        "冷战边境墙，不作为古城城墙"
+      ],
+      [
+        "way",
+        "1080465562",
+        "冷战边境墙，不作为古城城墙"
+      ],
+      [
+        "way",
+        "31118372",
+        "王室园林围界，不作为城市防御城墙"
+      ],
+      [
+        "way",
+        "129746960",
+        "王室园林围界，不作为城市防御城墙"
+      ],
+      [
+        "way",
+        "136167206",
+        "王室园林围界，不作为城市防御城墙"
+      ],
+      [
+        "way",
+        "136167213",
+        "王室园林围界，不作为城市防御城墙"
+      ],
+      [
+        "way",
+        "529569066",
+        "王室园林围界，不作为城市防御城墙"
+      ],
+      [
+        "way",
+        "713966727",
+        "王室园林围界，不作为城市防御城墙"
+      ],
+      [
+        "way",
+        "1355952651",
+        "王室园林围界，不作为城市防御城墙"
+      ],
+      [
+        "way",
+        "1355952652",
+        "王室园林围界，不作为城市防御城墙"
+      ],
+      [
+        "way",
+        "1355952653",
+        "王室园林围界，不作为城市防御城墙"
+      ],
+      [
+        "way",
+        "1355952654",
+        "王室园林围界，不作为城市防御城墙"
+      ],
+      [
+        "way",
+        "1355952655",
+        "王室园林围界，不作为城市防御城墙"
+      ],
+      [
+        "way",
+        "1355952657",
+        "王室园林围界，不作为城市防御城墙"
+      ],
+      [
+        "way",
+        "1355952663",
+        "王室园林围界，不作为城市防御城墙"
+      ]
+    ]
+  },
+  "munichRegistration": {
+    "controls": [
+      {
+        "name": "Karlstor",
+        "pixel": [
+          126,
+          191
+        ],
+        "xy": [
+          11.566765626315789,
+          48.13901263289474
+        ]
+      },
+      {
+        "name": "Sendlinger Tor",
+        "pixel": [
+          139,
+          321
+        ],
+        "xy": [
+          11.567657125714286,
+          48.13404557714286
+        ]
+      },
+      {
+        "name": "Isartor",
+        "pixel": [
+          408,
+          286
+        ],
+        "xy": [
+          11.58177666,
+          48.13512773555556
+        ]
+      },
+      {
+        "name": "Altes Rathaus",
+        "pixel": [
+          299,
+          255
+        ],
+        "xy": [
+          11.577049115789473,
+          48.136787821052636
+        ]
+      }
+    ],
+    "independentCheck": {
+      "name": "Jungfernturm wall remains",
+      "pixel": [
+        254,
+        107
+      ],
+      "xy": [
+        11.5741817,
+        48.14213428
+      ],
+      "differenceMeters": 25.40234458439164,
+      "note": "Independent wall-remains anchor check; not wall-boundary accuracy."
+    },
+    "fit": [
+      [
+        0.00005396724418452902,
+        -4.869231259604305e-7
+      ],
+      [
+        -1.7194389174274294e-7,
+        -0.00003873639858303912
+      ],
+      [
+        11.560243355846405,
+        48.14655912090328
+      ]
+    ],
+    "precision": "Diagram reference only; not surveyed boundary accuracy"
+  },
+  "heritageUnchanged": true,
+  "validation": {
+    "originalGeometryDeepComparison": 1928,
+    "capitalRecordsAndRootIdentityUnchanged": true,
+    "worldHeritageDeepComparisonUnchanged": true,
+    "fullRegressionFailures": 0,
+    "supplementRegressionPassed": true,
+    "browser": {
+      "results": [
+        {
+          "key": "munich",
+          "features": 9
+        },
+        {
+          "key": "trier",
+          "features": 6
+        },
+        {
+          "key": "paris",
+          "features": 11
+        },
+        {
+          "key": "nancy",
+          "features": 11
+        },
+        {
+          "key": "utrecht",
+          "features": 124
+        },
+        {
+          "key": "amsterdam",
+          "features": 4
+        },
+        {
+          "key": "budapest",
+          "features": 36
+        },
+        {
+          "key": "visegrad",
+          "features": 19
+        },
+        {
+          "utrechtOnlyPeriods": [
+            "宋辽金西夏"
+          ]
+        },
+        {
+          "periodsOffKeepsDetails": 2111
+        },
+        {
+          "wallsOff": 0
+        }
+      ],
+      "errors": []
+    },
+    "visualReview": [
+      "munich",
+      "utrecht",
+      "nancy",
+      "budapest"
+    ],
+    "visualLimitation": "部分底图瓦片未完整加载；已核验覆盖层几何、填充与标签。截图保存在output/four-country-walls。",
+    "officialRawGeometryAndAttributesVerified": 118
+  }
+}

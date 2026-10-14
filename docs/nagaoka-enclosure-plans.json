@@ -1,0 +1,195 @@
+{
+  "source": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+  "pdfPage": 20,
+  "figure": "1-1",
+  "rasterSize": [
+    1191,
+    1684
+  ],
+  "method": "Original 2-km scale plus approximate coordinate-north orientation and one mapped archaeological landmark; no independently surveyed boundary accuracy.",
+  "origin": {
+    "pixel": [
+      549,
+      646
+    ],
+    "coordinates": [
+      135.7033334,
+      34.9432785
+    ],
+    "source": "https://www.openstreetmap.org/node/4003695106",
+    "kind": "现状遗址参照点，图上近似中心"
+  },
+  "scaleBarPixels": [
+    [
+      720,
+      1387
+    ],
+    [
+      994,
+      1387
+    ]
+  ],
+  "scaleBarMeters": 2000,
+  "metersPerPixel": 7.299270072992701,
+  "pixelRings": {
+    "nagaoka-kyo-official-plan": [
+      [
+        259,
+        506
+      ],
+      [
+        841,
+        506
+      ],
+      [
+        841,
+        1215
+      ],
+      [
+        259,
+        1215
+      ],
+      [
+        259,
+        506
+      ]
+    ],
+    "nagaoka-palace-official-plan": [
+      [
+        480,
+        506
+      ],
+      [
+        619,
+        506
+      ],
+      [
+        619,
+        681
+      ],
+      [
+        480,
+        681
+      ],
+      [
+        480,
+        506
+      ]
+    ]
+  },
+  "added": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.68013602,
+              34.95245832
+            ],
+            [
+              135.72669076,
+              34.95245832
+            ],
+            [
+              135.72669076,
+              34.90596908
+            ],
+            [
+              135.68013602,
+              34.90596908
+            ],
+            [
+              135.68013602,
+              34.95245832
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-kyo-official-plan",
+        "sourceName": "长冈京规划范围（图示参考）",
+        "label": "长冈京规划范围（图示参考）",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/soshiki/33/2824.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方规划图配准后的图示参考，非实测界址",
+        "note": "全城条坊格网外缘，非围绕全城的实测城墙；图示规划范围不等于各阶段全部建成区。 采用原图2公里比例尺、近似北向及大极殿遗址定位参照配准；仅有一个平移参照，外缘远离参照点，方向、图像概化和比例尺读数误差可能累积，未取得独立边界精度。保留原有各处遗址公园、建筑和筑地墙矢量。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": true,
+        "labelInsideBoundary": true,
+        "labelCoordinates": [
+          135.69101479,
+          34.9514092
+        ],
+        "boundaryKind": "city-plan",
+        "northSouthUncertain": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.69781402,
+              34.95245832
+            ],
+            [
+              135.70893277,
+              34.95245832
+            ],
+            [
+              135.70893277,
+              34.94098354
+            ],
+            [
+              135.69781402,
+              34.94098354
+            ],
+            [
+              135.69781402,
+              34.95245832
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "长冈京",
+        "sourceId": "nagaoka-palace-official-plan",
+        "sourceName": "长冈宫宫域（图示参考）",
+        "label": "长冈宫宫域（图示参考）",
+        "sourceUrl": "https://www.city.muko.kyoto.jp/uploaded/attachment/13443.pdf",
+        "sourceTitle": "向日市《史迹长冈宫址保存活用计划》图1-1（PDF第20页）",
+        "referenceUrl": "https://www.city.muko.kyoto.jp/soshiki/33/2824.html",
+        "coordinateSystem": "WGS84",
+        "status": "官方规划图配准后的图示参考，非实测界址",
+        "note": "按图1-1蓝色宫域描绘。官方图1-3与第五章明确说明宫址南北两端尚未确定；这里显示此图的概化假定范围，不将网页约1.0×1.6公里的概述强行套用到另一图件。 采用原图2公里比例尺、近似北向及大极殿遗址定位参照配准；仅有一个平移参照，外缘远离参照点，方向、图像概化和比例尺读数误差可能累积，未取得独立边界精度。保留原有各处遗址公园、建筑和筑地墙矢量。 现有筑地墙遗址的南段伸出此图示宫域南缘，进一步说明该南界不可视为已确定实测边界；墙线保持原位，不裁切。",
+        "capitalSiteKey": "ancient-site:world-nagaoka",
+        "capitalSiteName": "长冈京",
+        "capitalSiteDisplayName": "长冈京",
+        "inferredBoundary": true,
+        "labelInsideBoundary": true,
+        "labelCoordinates": [
+          135.70341339,
+          34.9514092
+        ],
+        "boundaryKind": "palace-plan",
+        "northSouthUncertain": true
+      }
+    }
+  ],
+  "limits": "仅图示参考；单点与比例尺配准缺乏独立多点精度核验。宫域南北端未定；不自动改造成实测墙界。"
+}

@@ -1,0 +1,29 @@
+{
+  "status": "阮朝1888年城界参考已接入；李、陈、黎时期京城、皇城及禁城仍不可作为统一实测闭合城界",
+  "primaryResearch": [
+    {
+      "author": "Phan Huy Lê",
+      "publisher": "河内国家大学社会科学与人文大学历史系",
+      "url": "https://his.ussh.vnu.edu.vn/vi/news/le-huu-quan/vi-tri-khu-di-tich-khao-co-hoc-18-hoang-dieu-trong-cau-truc-thanh-thang-long-ha-noi-qua-cac-thoi-ki-lich-su-gs-phan-huy-le-5692.html",
+      "finding": "文章比较四种不同城址解释，区分京城、皇城和禁城；1490年的皇城扩建、1516年尚不明晰的扩建、1749年缩城不可合并成一条通用城界。",
+      "figure3": "https://his.ussh.vnu.edu.vn/uploads/his/news/2023_08/image_64.png",
+      "figure4": "https://his.ussh.vnu.edu.vn/uploads/his/news/2023_08/image_66.png",
+      "figureLimits": "图3是文章讨论的研究方案之一，其西侧墙线被图片边缘截断；图4是历史结构示意，不具备现代道路坐标基准。不能以任意接边四边形补成完整皇城。"
+    },
+    {
+      "authors": "Theanh Dinh, Xiaogeng Ren",
+      "title": "Collineation measurement: A method for constructing the imperial citadel of Thang Long in harmony with nature",
+      "year": 2022,
+      "doi": "10.1016/j.foar.2022.04.010",
+      "url": "https://journal.hep.com.cn/foar/EN/10.1016/j.foar.2022.04.010",
+      "localResearchCopy": "output/thanglong-collineation-study.pdf",
+      "scope": "宫城轴线、自然地形与考古布局研究；不能把地形轴线分析外框当作历代全城墙界。"
+    }
+  ],
+  "preservedGeometry": [
+    "中央遗址现状开放区 relation 21425205",
+    "黄耀街18号考古区现状范围 relation 21404421",
+    "阮朝1888年河内城图示参考 thanglong-nguyen-citadel-1888-plan"
+  ],
+  "nextEvidenceNeeded": "独立明确年代、完整墙线及多个可识别控制点的复原图；优先考古机构原始布局图或完整历史图，避免仅凭宽泛道路描述构造皇城四边形。"
+}

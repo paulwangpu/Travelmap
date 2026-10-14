@@ -1,0 +1,4272 @@
+{
+  "source": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+  "numberingSource": "https://www.nabunken.go.jp/nabunkenblog/2015/03/tanken89.html",
+  "added": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.77737093,
+              34.69747722
+            ],
+            [
+              135.77724443,
+              34.69531327
+            ]
+          ],
+          [
+            [
+              135.77696977,
+              34.6906144
+            ],
+            [
+              135.77478687,
+              34.65327081
+            ]
+          ],
+          [
+            [
+              135.78333782,
+              34.69739489
+            ],
+            [
+              135.78075376,
+              34.65318848
+            ]
+          ],
+          [
+            [
+              135.78902684,
+              34.69521258
+            ],
+            [
+              135.78656566,
+              34.6531083
+            ]
+          ],
+          [
+            [
+              135.7943669,
+              34.6857336
+            ],
+            [
+              135.79245506,
+              34.65302704
+            ]
+          ],
+          [
+            [
+              135.8002563,
+              34.68565234
+            ],
+            [
+              135.79834446,
+              34.65294578
+            ]
+          ],
+          [
+            [
+              135.80642398,
+              34.69033178
+            ],
+            [
+              135.80423747,
+              34.65292635
+            ]
+          ],
+          [
+            [
+              135.81247441,
+              34.69433218
+            ],
+            [
+              135.81004937,
+              34.65284617
+            ]
+          ],
+          [
+            [
+              135.81820638,
+              34.69023109
+            ],
+            [
+              135.81710409,
+              34.67137381
+            ]
+          ],
+          [
+            [
+              135.82409578,
+              34.69014983
+            ],
+            [
+              135.82300072,
+              34.67141621
+            ]
+          ],
+          [
+            [
+              135.82990768,
+              34.69006965
+            ],
+            [
+              135.82881262,
+              34.67133602
+            ]
+          ],
+          [
+            [
+              135.77143614,
+              34.69545528
+            ],
+            [
+              135.80731497,
+              34.69496026
+            ]
+          ],
+          [
+            [
+              135.77115786,
+              34.69069459
+            ],
+            [
+              135.78874856,
+              34.69045189
+            ]
+          ],
+          [
+            [
+              135.80618427,
+              34.69021133
+            ],
+            [
+              135.83563125,
+              34.68980505
+            ]
+          ],
+          [
+            [
+              135.7709643,
+              34.68605649
+            ],
+            [
+              135.8353602,
+              34.68516801
+            ]
+          ],
+          [
+            [
+              135.77068963,
+              34.68135762
+            ],
+            [
+              135.83508553,
+              34.68046915
+            ]
+          ],
+          [
+            [
+              135.77041496,
+              34.67665876
+            ],
+            [
+              135.82899896,
+              34.67585047
+            ]
+          ],
+          [
+            [
+              135.77021778,
+              34.67195883
+            ],
+            [
+              135.81702299,
+              34.67131305
+            ]
+          ],
+          [
+            [
+              135.76994312,
+              34.66725997
+            ],
+            [
+              135.81674832,
+              34.66661419
+            ]
+          ],
+          [
+            [
+              135.76974594,
+              34.66256003
+            ],
+            [
+              135.8150013,
+              34.66193564
+            ]
+          ],
+          [
+            [
+              135.76947488,
+              34.657923
+            ],
+            [
+              135.81620259,
+              34.65727829
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-main-road-grid",
+        "sourceName": "平城京主要街道（复原参考）",
+        "label": false,
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": null,
+        "naraPlanDetail": true,
+        "planKind": "road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            135.79436329,
+            34.68567177
+          ],
+          [
+            135.79245145,
+            34.65296521
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-suzaku-avenue",
+        "sourceName": "朱雀大路（复原参考）",
+        "label": "朱雀大路（复原参考）",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.79322847,
+          34.66625805
+        ],
+        "naraPlanDetail": true,
+        "planKind": "road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.78321494,
+              34.69529277
+            ],
+            [
+              135.78902684,
+              34.69521258
+            ],
+            [
+              135.78874856,
+              34.69045189
+            ],
+            [
+              135.78293665,
+              34.69053208
+            ],
+            [
+              135.78321494,
+              34.69529277
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-1-2",
+        "sourceName": "右京一条二坊",
+        "label": "右京一条二坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.78598175,
+          34.69287233
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.80669503,
+              34.69496881
+            ],
+            [
+              135.81250693,
+              34.69488862
+            ],
+            [
+              135.81222865,
+              34.69012793
+            ],
+            [
+              135.80641675,
+              34.69020812
+            ],
+            [
+              135.80669503,
+              34.69496881
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-1-6",
+        "sourceName": "左京一条三坊",
+        "label": "左京一条三坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.80946184,
+          34.69254837
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.81250693,
+              34.69488862
+            ],
+            [
+              135.81847382,
+              34.6948063
+            ],
+            [
+              135.81819554,
+              34.69004561
+            ],
+            [
+              135.81222865,
+              34.69012793
+            ],
+            [
+              135.81250693,
+              34.69488862
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-1-7",
+        "sourceName": "左京一条四坊",
+        "label": "左京一条四坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.81535124,
+          34.69246712
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.77108037,
+              34.69069566
+            ],
+            [
+              135.77696977,
+              34.6906144
+            ],
+            [
+              135.77669871,
+              34.68597737
+            ],
+            [
+              135.77080931,
+              34.68605862
+            ],
+            [
+              135.77108037,
+              34.69069566
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-2-0",
+        "sourceName": "右京二条四坊",
+        "label": "右京二条四坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.77388954,
+          34.68833651
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.77696977,
+              34.6906144
+            ],
+            [
+              135.78293665,
+              34.69053208
+            ],
+            [
+              135.7826656,
+              34.68589504
+            ],
+            [
+              135.77669871,
+              34.68597737
+            ],
+            [
+              135.77696977,
+              34.6906144
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-2-1",
+        "sourceName": "右京二条三坊",
+        "label": "右京二条三坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.77981768,
+          34.68825472
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.78293665,
+              34.69053208
+            ],
+            [
+              135.78874856,
+              34.69045189
+            ],
+            [
+              135.7884775,
+              34.68581485
+            ],
+            [
+              135.7826656,
+              34.68589504
+            ],
+            [
+              135.78293665,
+              34.69053208
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-2-2",
+        "sourceName": "右京二条二坊",
+        "label": "右京二条二坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.78570708,
+          34.68817347
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.80641675,
+              34.69020812
+            ],
+            [
+              135.81222865,
+              34.69012793
+            ],
+            [
+              135.8119576,
+              34.6854909
+            ],
+            [
+              135.80614569,
+              34.68557109
+            ],
+            [
+              135.80641675,
+              34.69020812
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-2-6",
+        "sourceName": "左京二条三坊",
+        "label": "左京二条三坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.80918717,
+          34.68784951
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.81222865,
+              34.69012793
+            ],
+            [
+              135.81819554,
+              34.69004561
+            ],
+            [
+              135.81792449,
+              34.68540857
+            ],
+            [
+              135.8119576,
+              34.6854909
+            ],
+            [
+              135.81222865,
+              34.69012793
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-2-7",
+        "sourceName": "左京二条四坊",
+        "label": "左京二条四坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.81507657,
+          34.68776825
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.81819554,
+              34.69004561
+            ],
+            [
+              135.82408494,
+              34.68996435
+            ],
+            [
+              135.82381388,
+              34.68532732
+            ],
+            [
+              135.81792449,
+              34.68540857
+            ],
+            [
+              135.81819554,
+              34.69004561
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-2-8",
+        "sourceName": "左京二条五坊（外京）",
+        "label": "左京二条五坊（外京）",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.82100471,
+          34.68768646
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.82408494,
+              34.68996435
+            ],
+            [
+              135.82989684,
+              34.68988416
+            ],
+            [
+              135.82962579,
+              34.68524713
+            ],
+            [
+              135.82381388,
+              34.68532732
+            ],
+            [
+              135.82408494,
+              34.68996435
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-2-9",
+        "sourceName": "左京二条六坊（外京）",
+        "label": "左京二条六坊（外京）",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.82685536,
+          34.68760574
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.82989684,
+              34.68988416
+            ],
+            [
+              135.83570874,
+              34.68980398
+            ],
+            [
+              135.83543769,
+              34.68516694
+            ],
+            [
+              135.82962579,
+              34.68524713
+            ],
+            [
+              135.82989684,
+              34.68988416
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-2-10",
+        "sourceName": "左京二条七坊（外京）",
+        "label": "左京二条七坊（外京）",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.83266727,
+          34.68752555
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.77080931,
+              34.68605862
+            ],
+            [
+              135.77669871,
+              34.68597737
+            ],
+            [
+              135.77642404,
+              34.6812785
+            ],
+            [
+              135.77053465,
+              34.68135976
+            ],
+            [
+              135.77080931,
+              34.68605862
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-3-0",
+        "sourceName": "右京三条四坊",
+        "label": "右京三条四坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.77361668,
+          34.68366856
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.77669871,
+              34.68597737
+            ],
+            [
+              135.7826656,
+              34.68589504
+            ],
+            [
+              135.78239093,
+              34.68119618
+            ],
+            [
+              135.77642404,
+              34.6812785
+            ],
+            [
+              135.77669871,
+              34.68597737
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-3-1",
+        "sourceName": "右京三条三坊",
+        "label": "右京三条三坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.77954482,
+          34.68358677
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.7826656,
+              34.68589504
+            ],
+            [
+              135.7884775,
+              34.68581485
+            ],
+            [
+              135.78820284,
+              34.68111599
+            ],
+            [
+              135.78239093,
+              34.68119618
+            ],
+            [
+              135.7826656,
+              34.68589504
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-3-2",
+        "sourceName": "右京三条二坊",
+        "label": "右京三条二坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.78543422,
+          34.68350552
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.7884775,
+              34.68581485
+            ],
+            [
+              135.7943669,
+              34.6857336
+            ],
+            [
+              135.79409223,
+              34.68103474
+            ],
+            [
+              135.78820284,
+              34.68111599
+            ],
+            [
+              135.7884775,
+              34.68581485
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-3-3",
+        "sourceName": "右京三条一坊",
+        "label": "右京三条一坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.79128487,
+          34.6834248
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.7943669,
+              34.6857336
+            ],
+            [
+              135.8002563,
+              34.68565234
+            ],
+            [
+              135.79998163,
+              34.68095348
+            ],
+            [
+              135.79409223,
+              34.68103474
+            ],
+            [
+              135.7943669,
+              34.6857336
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-3-4",
+        "sourceName": "左京三条一坊",
+        "label": "左京三条一坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.79717426,
+          34.68334354
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.8002563,
+              34.68565234
+            ],
+            [
+              135.80614569,
+              34.68557109
+            ],
+            [
+              135.80587102,
+              34.68087222
+            ],
+            [
+              135.79998163,
+              34.68095348
+            ],
+            [
+              135.8002563,
+              34.68565234
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-3-5",
+        "sourceName": "左京三条二坊",
+        "label": "左京三条二坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.80306366,
+          34.68326228
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.80614569,
+              34.68557109
+            ],
+            [
+              135.8119576,
+              34.6854909
+            ],
+            [
+              135.81168293,
+              34.68079204
+            ],
+            [
+              135.80587102,
+              34.68087222
+            ],
+            [
+              135.80614569,
+              34.68557109
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-3-6",
+        "sourceName": "左京三条三坊",
+        "label": "左京三条三坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.80891431,
+          34.68318156
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.8119576,
+              34.6854909
+            ],
+            [
+              135.81792449,
+              34.68540857
+            ],
+            [
+              135.81764982,
+              34.68070971
+            ],
+            [
+              135.81168293,
+              34.68079204
+            ],
+            [
+              135.8119576,
+              34.6854909
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-3-7",
+        "sourceName": "左京三条四坊",
+        "label": "左京三条四坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.81480371,
+          34.6831003
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.81792449,
+              34.68540857
+            ],
+            [
+              135.82381388,
+              34.68532732
+            ],
+            [
+              135.82353921,
+              34.68062845
+            ],
+            [
+              135.81764982,
+              34.68070971
+            ],
+            [
+              135.81792449,
+              34.68540857
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-3-8",
+        "sourceName": "左京三条五坊（外京）",
+        "label": "左京三条五坊（外京）",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.82073185,
+          34.68301851
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.82381388,
+              34.68532732
+            ],
+            [
+              135.82962579,
+              34.68524713
+            ],
+            [
+              135.82935112,
+              34.68054827
+            ],
+            [
+              135.82353921,
+              34.68062845
+            ],
+            [
+              135.82381388,
+              34.68532732
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-3-9",
+        "sourceName": "左京三条六坊（外京）",
+        "label": "左京三条六坊（外京）",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.8265825,
+          34.68293779
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.77053465,
+              34.68135976
+            ],
+            [
+              135.77642404,
+              34.6812785
+            ],
+            [
+              135.77614937,
+              34.67657964
+            ],
+            [
+              135.77025998,
+              34.6766609
+            ],
+            [
+              135.77053465,
+              34.68135976
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-4-0",
+        "sourceName": "右京四条四坊",
+        "label": "右京四条四坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.77334201,
+          34.6789697
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.77642404,
+              34.6812785
+            ],
+            [
+              135.78239093,
+              34.68119618
+            ],
+            [
+              135.78211626,
+              34.67649732
+            ],
+            [
+              135.77614937,
+              34.67657964
+            ],
+            [
+              135.77642404,
+              34.6812785
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-4-1",
+        "sourceName": "右京四条三坊",
+        "label": "右京四条三坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.77927015,
+          34.67888791
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.78239093,
+              34.68119618
+            ],
+            [
+              135.78820284,
+              34.68111599
+            ],
+            [
+              135.78792817,
+              34.67641713
+            ],
+            [
+              135.78211626,
+              34.67649732
+            ],
+            [
+              135.78239093,
+              34.68119618
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-4-2",
+        "sourceName": "右京四条二坊",
+        "label": "右京四条二坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.78515955,
+          34.67880665
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.78820284,
+              34.68111599
+            ],
+            [
+              135.79409223,
+              34.68103474
+            ],
+            [
+              135.79381756,
+              34.67633587
+            ],
+            [
+              135.78792817,
+              34.67641713
+            ],
+            [
+              135.78820284,
+              34.68111599
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-4-3",
+        "sourceName": "右京四条一坊",
+        "label": "右京四条一坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.7910102,
+          34.67872593
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.79409223,
+              34.68103474
+            ],
+            [
+              135.79998163,
+              34.68095348
+            ],
+            [
+              135.79970696,
+              34.67625462
+            ],
+            [
+              135.79381756,
+              34.67633587
+            ],
+            [
+              135.79409223,
+              34.68103474
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-4-4",
+        "sourceName": "左京四条一坊",
+        "label": "左京四条一坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.7968996,
+          34.67864468
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.79998163,
+              34.68095348
+            ],
+            [
+              135.80587102,
+              34.68087222
+            ],
+            [
+              135.80559636,
+              34.67617336
+            ],
+            [
+              135.79970696,
+              34.67625462
+            ],
+            [
+              135.79998163,
+              34.68095348
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-4-5",
+        "sourceName": "左京四条二坊",
+        "label": "左京四条二坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.80278899,
+          34.67856342
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.80587102,
+              34.68087222
+            ],
+            [
+              135.81168293,
+              34.68079204
+            ],
+            [
+              135.81140826,
+              34.67609317
+            ],
+            [
+              135.80559636,
+              34.67617336
+            ],
+            [
+              135.80587102,
+              34.68087222
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-4-6",
+        "sourceName": "左京四条三坊",
+        "label": "左京四条三坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.80863964,
+          34.6784827
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.81168293,
+              34.68079204
+            ],
+            [
+              135.81764982,
+              34.68070971
+            ],
+            [
+              135.81737515,
+              34.67601085
+            ],
+            [
+              135.81140826,
+              34.67609317
+            ],
+            [
+              135.81168293,
+              34.68079204
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-4-7",
+        "sourceName": "左京四条四坊",
+        "label": "左京四条四坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.81452904,
+          34.67840144
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.81764982,
+              34.68070971
+            ],
+            [
+              135.82353921,
+              34.68062845
+            ],
+            [
+              135.82326454,
+              34.67592959
+            ],
+            [
+              135.81737515,
+              34.67601085
+            ],
+            [
+              135.81764982,
+              34.68070971
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-4-8",
+        "sourceName": "左京四条五坊（外京）",
+        "label": "左京四条五坊（外京）",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.82045718,
+          34.67831965
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.82353921,
+              34.68062845
+            ],
+            [
+              135.82935112,
+              34.68054827
+            ],
+            [
+              135.82907645,
+              34.6758494
+            ],
+            [
+              135.82326454,
+              34.67592959
+            ],
+            [
+              135.82353921,
+              34.68062845
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-4-9",
+        "sourceName": "左京四条六坊（外京）",
+        "label": "左京四条六坊（外京）",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.82630783,
+          34.67823893
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.77025998,
+              34.6766609
+            ],
+            [
+              135.77614937,
+              34.67657964
+            ],
+            [
+              135.7758747,
+              34.67188078
+            ],
+            [
+              135.76998531,
+              34.67196204
+            ],
+            [
+              135.77025998,
+              34.6766609
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-5-0",
+        "sourceName": "右京五条四坊",
+        "label": "右京五条四坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.77306734,
+          34.67427084
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.77614937,
+              34.67657964
+            ],
+            [
+              135.78211626,
+              34.67649732
+            ],
+            [
+              135.78184159,
+              34.67179845
+            ],
+            [
+              135.7758747,
+              34.67188078
+            ],
+            [
+              135.77614937,
+              34.67657964
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-5-1",
+        "sourceName": "右京五条三坊",
+        "label": "右京五条三坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.77899548,
+          34.67418905
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.78792817,
+              34.67641713
+            ],
+            [
+              135.79381756,
+              34.67633587
+            ],
+            [
+              135.79354289,
+              34.67163701
+            ],
+            [
+              135.7876535,
+              34.67171827
+            ],
+            [
+              135.78792817,
+              34.67641713
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-5-3",
+        "sourceName": "右京五条一坊",
+        "label": "右京五条一坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.79073553,
+          34.67402707
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.79381756,
+              34.67633587
+            ],
+            [
+              135.79970696,
+              34.67625462
+            ],
+            [
+              135.79943229,
+              34.67155575
+            ],
+            [
+              135.79354289,
+              34.67163701
+            ],
+            [
+              135.79381756,
+              34.67633587
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-5-4",
+        "sourceName": "左京五条一坊",
+        "label": "左京五条一坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.79662493,
+          34.67394581
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.79970696,
+              34.67625462
+            ],
+            [
+              135.80559636,
+              34.67617336
+            ],
+            [
+              135.80532169,
+              34.6714745
+            ],
+            [
+              135.79943229,
+              34.67155575
+            ],
+            [
+              135.79970696,
+              34.67625462
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-5-5",
+        "sourceName": "左京五条二坊",
+        "label": "左京五条二坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.80251432,
+          34.67386456
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.80559636,
+              34.67617336
+            ],
+            [
+              135.81140826,
+              34.67609317
+            ],
+            [
+              135.81113359,
+              34.67139431
+            ],
+            [
+              135.80532169,
+              34.6714745
+            ],
+            [
+              135.80559636,
+              34.67617336
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-5-6",
+        "sourceName": "左京五条三坊",
+        "label": "左京五条三坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.80836497,
+          34.67378384
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.81140826,
+              34.67609317
+            ],
+            [
+              135.81737515,
+              34.67601085
+            ],
+            [
+              135.81710048,
+              34.67131198
+            ],
+            [
+              135.81113359,
+              34.67139431
+            ],
+            [
+              135.81140826,
+              34.67609317
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-5-7",
+        "sourceName": "左京五条四坊",
+        "label": "左京五条四坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.81425437,
+          34.67370258
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.81737515,
+              34.67601085
+            ],
+            [
+              135.82326454,
+              34.67592959
+            ],
+            [
+              135.82298988,
+              34.67123073
+            ],
+            [
+              135.81710048,
+              34.67131198
+            ],
+            [
+              135.81737515,
+              34.67601085
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-5-8",
+        "sourceName": "左京五条五坊（外京）",
+        "label": "左京五条五坊（外京）",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.82018251,
+          34.67362079
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.82326454,
+              34.67592959
+            ],
+            [
+              135.82907645,
+              34.6758494
+            ],
+            [
+              135.82880178,
+              34.67115054
+            ],
+            [
+              135.82298988,
+              34.67123073
+            ],
+            [
+              135.82326454,
+              34.67592959
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-5-9",
+        "sourceName": "左京五条六坊（外京）",
+        "label": "左京五条六坊（外京）",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.82603316,
+          34.67354007
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.76998531,
+              34.67196204
+            ],
+            [
+              135.7758747,
+              34.67188078
+            ],
+            [
+              135.77560004,
+              34.66718192
+            ],
+            [
+              135.76971064,
+              34.66726317
+            ],
+            [
+              135.76998531,
+              34.67196204
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-6-0",
+        "sourceName": "右京六条四坊",
+        "label": "右京六条四坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.77279267,
+          34.66957198
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.7758747,
+              34.67188078
+            ],
+            [
+              135.78184159,
+              34.67179845
+            ],
+            [
+              135.78156692,
+              34.66709959
+            ],
+            [
+              135.77560004,
+              34.66718192
+            ],
+            [
+              135.7758747,
+              34.67188078
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-6-1",
+        "sourceName": "右京六条三坊",
+        "label": "右京六条三坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.77872081,
+          34.66949019
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.7876535,
+              34.67171827
+            ],
+            [
+              135.79354289,
+              34.67163701
+            ],
+            [
+              135.79326823,
+              34.66693815
+            ],
+            [
+              135.78737883,
+              34.6670194
+            ],
+            [
+              135.7876535,
+              34.67171827
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-6-3",
+        "sourceName": "右京六条一坊",
+        "label": "右京六条一坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.79046086,
+          34.66932821
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.79354289,
+              34.67163701
+            ],
+            [
+              135.79943229,
+              34.67155575
+            ],
+            [
+              135.79915762,
+              34.66685689
+            ],
+            [
+              135.79326823,
+              34.66693815
+            ],
+            [
+              135.79354289,
+              34.67163701
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-6-4",
+        "sourceName": "左京六条一坊",
+        "label": "左京六条一坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.79635026,
+          34.66924695
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.79943229,
+              34.67155575
+            ],
+            [
+              135.80532169,
+              34.6714745
+            ],
+            [
+              135.80504702,
+              34.66677563
+            ],
+            [
+              135.79915762,
+              34.66685689
+            ],
+            [
+              135.79943229,
+              34.67155575
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-6-5",
+        "sourceName": "左京六条二坊",
+        "label": "左京六条二坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.80223965,
+          34.66916569
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.80532169,
+              34.6714745
+            ],
+            [
+              135.81113359,
+              34.67139431
+            ],
+            [
+              135.81085892,
+              34.66669545
+            ],
+            [
+              135.80504702,
+              34.66677563
+            ],
+            [
+              135.80532169,
+              34.6714745
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-6-6",
+        "sourceName": "左京六条三坊",
+        "label": "左京六条三坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.8080903,
+          34.66908497
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.76971064,
+              34.66726317
+            ],
+            [
+              135.77560004,
+              34.66718192
+            ],
+            [
+              135.77532537,
+              34.66248305
+            ],
+            [
+              135.76943597,
+              34.66256431
+            ],
+            [
+              135.76971064,
+              34.66726317
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-7-0",
+        "sourceName": "右京七条四坊",
+        "label": "右京七条四坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.772518,
+          34.66487311
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.77560004,
+              34.66718192
+            ],
+            [
+              135.78156692,
+              34.66709959
+            ],
+            [
+              135.78129226,
+              34.66240073
+            ],
+            [
+              135.77532537,
+              34.66248305
+            ],
+            [
+              135.77560004,
+              34.66718192
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-7-1",
+        "sourceName": "右京七条三坊",
+        "label": "右京七条三坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.77844615,
+          34.66479132
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.78156692,
+              34.66709959
+            ],
+            [
+              135.78737883,
+              34.6670194
+            ],
+            [
+              135.78710416,
+              34.66232054
+            ],
+            [
+              135.78129226,
+              34.66240073
+            ],
+            [
+              135.78156692,
+              34.66709959
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-7-2",
+        "sourceName": "右京七条二坊",
+        "label": "右京七条二坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.78433554,
+          34.66471007
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.78737883,
+              34.6670194
+            ],
+            [
+              135.79326823,
+              34.66693815
+            ],
+            [
+              135.79299356,
+              34.66223928
+            ],
+            [
+              135.78710416,
+              34.66232054
+            ],
+            [
+              135.78737883,
+              34.6670194
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-7-3",
+        "sourceName": "右京七条一坊",
+        "label": "右京七条一坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.79018619,
+          34.66462934
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.79326823,
+              34.66693815
+            ],
+            [
+              135.79915762,
+              34.66685689
+            ],
+            [
+              135.79888295,
+              34.66215803
+            ],
+            [
+              135.79299356,
+              34.66223928
+            ],
+            [
+              135.79326823,
+              34.66693815
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-7-4",
+        "sourceName": "左京七条一坊",
+        "label": "左京七条一坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.79607559,
+          34.66454809
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.79915762,
+              34.66685689
+            ],
+            [
+              135.80504702,
+              34.66677563
+            ],
+            [
+              135.80477235,
+              34.66207677
+            ],
+            [
+              135.79888295,
+              34.66215803
+            ],
+            [
+              135.79915762,
+              34.66685689
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-7-5",
+        "sourceName": "左京七条二坊",
+        "label": "左京七条二坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.80196499,
+          34.66446683
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.80504702,
+              34.66677563
+            ],
+            [
+              135.81085892,
+              34.66669545
+            ],
+            [
+              135.81058425,
+              34.66199658
+            ],
+            [
+              135.80477235,
+              34.66207677
+            ],
+            [
+              135.80504702,
+              34.66677563
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-7-6",
+        "sourceName": "左京七条三坊",
+        "label": "左京七条三坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.80781564,
+          34.66438611
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.76943597,
+              34.66256431
+            ],
+            [
+              135.77532537,
+              34.66248305
+            ],
+            [
+              135.77505431,
+              34.65784602
+            ],
+            [
+              135.76916492,
+              34.65792727
+            ],
+            [
+              135.76943597,
+              34.66256431
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-8-0",
+        "sourceName": "右京八条四坊",
+        "label": "右京八条四坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.77224514,
+          34.66020516
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.77532537,
+              34.66248305
+            ],
+            [
+              135.78129226,
+              34.66240073
+            ],
+            [
+              135.7810212,
+              34.65776369
+            ],
+            [
+              135.77505431,
+              34.65784602
+            ],
+            [
+              135.77532537,
+              34.66248305
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-8-1",
+        "sourceName": "右京八条三坊",
+        "label": "右京八条三坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.77817328,
+          34.66012337
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.78710416,
+              34.66232054
+            ],
+            [
+              135.79299356,
+              34.66223928
+            ],
+            [
+              135.7927225,
+              34.65760225
+            ],
+            [
+              135.78683311,
+              34.65768351
+            ],
+            [
+              135.78710416,
+              34.66232054
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-8-3",
+        "sourceName": "右京八条一坊",
+        "label": "右京八条一坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.78991333,
+          34.6599614
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.79299356,
+              34.66223928
+            ],
+            [
+              135.79888295,
+              34.66215803
+            ],
+            [
+              135.7986119,
+              34.65752099
+            ],
+            [
+              135.7927225,
+              34.65760225
+            ],
+            [
+              135.79299356,
+              34.66223928
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-8-4",
+        "sourceName": "左京八条一坊",
+        "label": "左京八条一坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.79580273,
+          34.65988014
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.79888295,
+              34.66215803
+            ],
+            [
+              135.80477235,
+              34.66207677
+            ],
+            [
+              135.80450129,
+              34.65743974
+            ],
+            [
+              135.7986119,
+              34.65752099
+            ],
+            [
+              135.79888295,
+              34.66215803
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-8-5",
+        "sourceName": "左京八条二坊",
+        "label": "左京八条二坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.80169212,
+          34.65979888
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.81058425,
+              34.66199658
+            ],
+            [
+              135.81655114,
+              34.66191426
+            ],
+            [
+              135.81628009,
+              34.65727722
+            ],
+            [
+              135.8103132,
+              34.65735955
+            ],
+            [
+              135.81058425,
+              34.66199658
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-8-7",
+        "sourceName": "左京八条四坊",
+        "label": "左京八条四坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.81343217,
+          34.6596369
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.76916492,
+              34.65792727
+            ],
+            [
+              135.77505431,
+              34.65784602
+            ],
+            [
+              135.77478326,
+              34.65320898
+            ],
+            [
+              135.76889386,
+              34.65329024
+            ],
+            [
+              135.76916492,
+              34.65792727
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-9-0",
+        "sourceName": "右京九条四坊",
+        "label": "右京九条四坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.77197409,
+          34.65556813
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.77505431,
+              34.65784602
+            ],
+            [
+              135.7810212,
+              34.65776369
+            ],
+            [
+              135.78075015,
+              34.65312666
+            ],
+            [
+              135.77478326,
+              34.65320898
+            ],
+            [
+              135.77505431,
+              34.65784602
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-9-1",
+        "sourceName": "右京九条三坊",
+        "label": "右京九条三坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.77790223,
+          34.65548634
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.78683311,
+              34.65768351
+            ],
+            [
+              135.7927225,
+              34.65760225
+            ],
+            [
+              135.79245145,
+              34.65296521
+            ],
+            [
+              135.78656205,
+              34.65304647
+            ],
+            [
+              135.78683311,
+              34.65768351
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-9-3",
+        "sourceName": "右京九条一坊",
+        "label": "右京九条一坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.78964228,
+          34.65532436
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.7927225,
+              34.65760225
+            ],
+            [
+              135.7986119,
+              34.65752099
+            ],
+            [
+              135.79834084,
+              34.65288396
+            ],
+            [
+              135.79245145,
+              34.65296521
+            ],
+            [
+              135.7927225,
+              34.65760225
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-9-4",
+        "sourceName": "左京九条一坊",
+        "label": "左京九条一坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.79553167,
+          34.6552431
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.7986119,
+              34.65752099
+            ],
+            [
+              135.80450129,
+              34.65743974
+            ],
+            [
+              135.80423024,
+              34.6528027
+            ],
+            [
+              135.79834084,
+              34.65288396
+            ],
+            [
+              135.7986119,
+              34.65752099
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-9-5",
+        "sourceName": "左京九条二坊",
+        "label": "左京九条二坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.80142107,
+          34.65516185
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.80450129,
+              34.65743974
+            ],
+            [
+              135.8103132,
+              34.65735955
+            ],
+            [
+              135.81004214,
+              34.65272251
+            ],
+            [
+              135.80423024,
+              34.6528027
+            ],
+            [
+              135.80450129,
+              34.65743974
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-9-6",
+        "sourceName": "左京九条三坊",
+        "label": "左京九条三坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.80727172,
+          34.65508112
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              135.8103132,
+              34.65735955
+            ],
+            [
+              135.81628009,
+              34.65727722
+            ],
+            [
+              135.81600903,
+              34.65264019
+            ],
+            [
+              135.81004214,
+              34.65272251
+            ],
+            [
+              135.8103132,
+              34.65735955
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "隋唐",
+        "city": "奈良",
+        "sourceId": "nara-plan-ward-9-7",
+        "sourceName": "左京九条四坊",
+        "label": "左京九条四坊",
+        "sourceUrl": "https://www.nabunken.go.jp/news/docs/20250218press.pdf",
+        "sourceTitle": "奈良文化财研究所 · 2025年图1平城京条坊图",
+        "referenceUrl": "https://www.nabunken.go.jp/org/tojo/",
+        "coordinateSystem": "WGS84",
+        "status": "条坊图派生复原参考，非逐段实测",
+        "note": "沿用全城复原图的近似配准。主要街道按原图红色条坊线提取；街坊按官方条、坊编号规则标识，未虚构各坪名称、宅院或建筑功能。占用宫城、寺院及市场的主要格网单元保守省略。拟合误差与全城范围相同，不能作精确界址。",
+        "capitalSiteKey": "ancient-site:world-nara",
+        "capitalSiteName": "奈良（平城京）",
+        "capitalSiteDisplayName": "奈良（平城京）",
+        "inferredBoundary": false,
+        "labelInsideBoundary": false,
+        "labelCoordinates": [
+          135.81316112,
+          34.65499987
+        ],
+        "naraPlanDetail": true,
+        "planKind": "ward"
+      }
+    }
+  ],
+  "roadPixelSegments": [
+    [
+      [
+        222,
+        549
+      ],
+      [
+        222,
+        584
+      ]
+    ],
+    [
+      [
+        222,
+        660
+      ],
+      [
+        222,
+        1264
+      ]
+    ],
+    [
+      [
+        299,
+        549
+      ],
+      [
+        299,
+        1264
+      ]
+    ],
+    [
+      [
+        374,
+        583
+      ],
+      [
+        374,
+        1264
+      ]
+    ],
+    [
+      [
+        450,
+        735
+      ],
+      [
+        450,
+        1264
+      ]
+    ],
+    [
+      [
+        526,
+        735
+      ],
+      [
+        526,
+        1264
+      ]
+    ],
+    [
+      [
+        602,
+        658
+      ],
+      [
+        602,
+        1263
+      ]
+    ],
+    [
+      [
+        677,
+        592
+      ],
+      [
+        677,
+        1263
+      ]
+    ],
+    [
+      [
+        754,
+        657
+      ],
+      [
+        754,
+        962
+      ]
+    ],
+    [
+      [
+        830,
+        657
+      ],
+      [
+        830,
+        960
+      ]
+    ],
+    [
+      [
+        905,
+        657
+      ],
+      [
+        905,
+        960
+      ]
+    ],
+    [
+      [
+        147,
+        583
+      ],
+      [
+        610,
+        583
+      ]
+    ],
+    [
+      [
+        147,
+        660
+      ],
+      [
+        374,
+        660
+      ]
+    ],
+    [
+      [
+        599,
+        660
+      ],
+      [
+        979,
+        660
+      ]
+    ],
+    [
+      [
+        148,
+        735
+      ],
+      [
+        979,
+        735
+      ]
+    ],
+    [
+      [
+        148,
+        811
+      ],
+      [
+        979,
+        811
+      ]
+    ],
+    [
+      [
+        148,
+        887
+      ],
+      [
+        904,
+        887
+      ]
+    ],
+    [
+      [
+        149,
+        963
+      ],
+      [
+        753,
+        963
+      ]
+    ],
+    [
+      [
+        149,
+        1039
+      ],
+      [
+        753,
+        1039
+      ]
+    ],
+    [
+      [
+        150,
+        1115
+      ],
+      [
+        734,
+        1115
+      ]
+    ],
+    [
+      [
+        150,
+        1190
+      ],
+      [
+        753,
+        1190
+      ]
+    ]
+  ],
+  "omittedOccupiedGridCells": [
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      3,
+      10
+    ],
+    [
+      4,
+      10
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      5,
+      10
+    ],
+    [
+      6,
+      2
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      7
+    ],
+    [
+      8,
+      2
+    ],
+    [
+      8,
+      6
+    ],
+    [
+      9,
+      2
+    ]
+  ],
+  "limits": "条坊复原格网，非实测道路宽度、坊墙或每期宅院界。宫城、寺院、市场占用区域保守省略，街坊编号依据北起条次及朱雀大道东西坊次。"
+}

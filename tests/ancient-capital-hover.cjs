@@ -2,12 +2,13 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('nod
 const app=fs.readFileSync(require.resolve('../app.js'),'utf8');
 const start=app.indexOf('function ancientCapitalHoverContent('),end=app.indexOf('\nfunction bindMapLibrePointHandlers()',start);
 const escapeHtml=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const context={escapeHtml};vm.runInNewContext(app.slice(start,end),context);
+const context={escapeHtml,currentLanguage:'zh'};vm.runInNewContext(app.slice(start,end),context);
 assert.equal(context.ancientCapitalHoverContent({title:'长安',subtitle:'汉 · 唐'}),'<strong>长安</strong><small>汉 · 唐</small>');
+assert.equal(context.ancientCapitalHoverContent({classicalCapital:true,capitalOverviewLabel:'君士坦丁堡',subtitle:'东罗马、奥斯曼帝国都城',correspondingPeriod:'魏晋南北朝'}),'<strong>君士坦丁堡</strong><small>东罗马、奥斯曼帝国都城</small><small>中国对应朝代：魏晋南北朝</small>');
 assert.equal(context.ancientCapitalHoverContent({item:'<img>'}),'<strong>&lt;img&gt;</strong>');
 assert.match(app,/hasChecklistHover\(f.properties\?\.checklistKey\)/);
 assert.match(app,/className:'ancient-capital-hover'/);
-assert.match(app,/className: hasChecklistHover\(entry.key\) \? 'ancient-capital-tooltip'/);
+assert.match(app,/className: hasChecklistHover\(entry.key\)\|\|classicalTheme \? 'ancient-capital-tooltip'/);
 const keyStart=app.indexOf('function hasChecklistHover('),keyEnd=app.indexOf('\nfunction clearAncientCapitalHover()',keyStart);
 vm.runInNewContext(app.slice(keyStart,keyEnd),context);
 for(const key of ['chinaAncientCapitals','china5a','usNationalParks','worldHeritage','chinaHighAltitude'])assert.equal(context.hasChecklistHover(key),true);

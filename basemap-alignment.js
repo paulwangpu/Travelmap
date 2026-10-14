@@ -5,15 +5,75 @@
   function tileUrl(provider, z, x, y) {
     return provider.tileUrl ? provider.tileUrl(z, x, y) : provider.tiles[Math.abs(x + y) % provider.tiles.length].replace('{z}', z).replace('{x}', x).replace('{y}', y);
   }
-  const tileCache = new Map();
-  async function readTile(url, signal) {
-    if (tileCache.has(url)) return tileCache.get(url);
-    const response = await fetch(url, { signal });
-    if (!response.ok) throw new Error('Basemap tile HTTP ' + response.status);
-    const data = await response.arrayBuffer();
-    tileCache.set(url, data);
-    if (tileCache.size > 64) tileCache.delete(tileCache.keys().next().value);
-    return data;
+  const tileCache = new Map(), pendingTiles = new Map(), queue = [];
+  let activeRequests = 0;
+  const abortError = () => new DOMException('Tile request cancelled', 'AbortError');
+  function acquire(signal) {
+    return new Promise((resolve, reject) => {
+      const job = { start() {
+        signal.removeEventListener('abort', cancel);
+        activeRequests++;
+        resolve(() => { activeRequests--; drain(); });
+      } };
+      const cancel = () => { const i = queue.indexOf(job); if (i >= 0) queue.splice(i, 1); reject(abortError()); };
+      if (signal.aborted) return reject(abortError());
+      signal.addEventListener('abort', cancel, { once: true });
+      queue.push(job); drain();
+    });
+  }
+  function drain() { while (activeRequests < 16 && queue.length) queue.shift().start(); }
+  function tileUrls(provider, z, x, y) {
+    const first = tileUrl(provider, z, x, y);
+    return [...new Set([first, ...(provider.tileUrl ? [] : provider.tiles.map(url => url.replace('{z}', z).replace('{x}', x).replace('{y}', y)))])];
+  }
+  async function download(urls, signal) {
+    let lastError;
+      for (let attempt = 0; attempt < Math.min(3, urls.length + 1); attempt++) {
+        if (signal.aborted) throw abortError();
+        const release = await acquire(signal);
+        const controller = new AbortController(), cancel = () => controller.abort();
+        signal.addEventListener('abort', cancel, { once: true });
+        const timer = setTimeout(cancel, 3500);
+        try {
+          const response = await fetch(urls[attempt % urls.length], { signal: controller.signal });
+          if (!response.ok) throw new Error('Basemap tile HTTP ' + response.status);
+          const type = response.headers?.get('content-type');
+          if (type && !/image\/|application\/octet-stream/i.test(type)) throw new Error('Invalid basemap tile response');
+          const data = await response.arrayBuffer();
+          if (!data.byteLength) throw new Error('Empty basemap tile');
+          return data;
+        } catch (error) { if (signal.aborted) throw abortError(); lastError = error; }
+        finally { clearTimeout(timer); signal.removeEventListener('abort', cancel); release(); }
+      }
+    throw lastError;
+  }
+  function readTile(urls, signal) {
+    if (signal?.aborted) return Promise.reject(abortError());
+    const key = urls[0];
+    if (tileCache.has(key)) return Promise.resolve(tileCache.get(key));
+    let entry = pendingTiles.get(key);
+    if (!entry) {
+      entry = { controller: new AbortController(), users: 0 };
+      pendingTiles.set(key, entry);
+      entry.promise = download(urls, entry.controller.signal).then(data => {
+        tileCache.set(key, data);
+        if (tileCache.size > 128) tileCache.delete(tileCache.keys().next().value);
+        return data;
+      }).finally(() => { if (pendingTiles.get(key) === entry) pendingTiles.delete(key); });
+    }
+    entry.users++;
+    return new Promise((resolve, reject) => {
+      let finished = false;
+      const finish = (error, data) => {
+        if (finished) return; finished = true;
+        signal?.removeEventListener('abort', cancel);
+        if (--entry.users === 0 && pendingTiles.get(key) === entry) { pendingTiles.delete(key); entry.controller.abort(); }
+        if (error) reject(error); else resolve(data);
+      };
+      const cancel = () => finish(abortError());
+      signal?.addEventListener('abort', cancel, { once: true });
+      entry.promise.then(data => finish(null, data), error => finish(error));
+    });
   }
   function pixel(lng, lat, z) {
     const n = size * 2 ** z, sin = Math.sin(lat * Math.PI / 180);
@@ -50,8 +110,7 @@
   async function tile(provider, z, x, y, transform, signal) {
     const { steps, points } = grid(z, x, y, transform);
     if (points.every(p => Math.abs(p.x - x * size - p.u) < 0.001 && Math.abs(p.y - y * size - p.v) < 0.001)) {
-      const url = tileUrl(provider, z, x, y);
-      return (await readTile(url, signal)).slice(0);
+      return (await readTile(tileUrls(provider, z, x, y), signal)).slice(0);
     }
     const minX = Math.floor(Math.min(...points.map(p => p.x)) / size), maxX = Math.floor((Math.max(...points.map(p => p.x)) - 1e-6) / size);
     const minY = Math.floor(Math.min(...points.map(p => p.y)) / size), maxY = Math.floor((Math.max(...points.map(p => p.y)) - 1e-6) / size);
@@ -60,8 +119,7 @@
     for (let ty = minY; ty <= maxY; ty++) for (let tx = minX; tx <= maxX; tx++) {
       const n = 2 ** z, nx = ((tx % n) + n) % n;
       if (ty < 0 || ty >= n) continue;
-      const url = tileUrl(provider, z, nx, ty);
-      jobs.push(readTile(url, signal).then(data => createImageBitmap(new Blob([data]))).then(image => {
+      jobs.push(readTile(tileUrls(provider, z, nx, ty), signal).then(data => createImageBitmap(new Blob([data]))).then(image => {
         ctx.drawImage(image, (tx - minX) * size, (ty - minY) * size, size, size); image.close();
       }));
     }

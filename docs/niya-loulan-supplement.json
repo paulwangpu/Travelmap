@@ -1,0 +1,1498 @@
+{
+  "added": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.9145629,
+              40.5152561
+            ],
+            [
+              89.9142183,
+              40.5149344
+            ],
+            [
+              89.9146541,
+              40.514523
+            ],
+            [
+              89.9138005,
+              40.5139225
+            ],
+            [
+              89.9133968,
+              40.5140642
+            ],
+            [
+              89.9129087,
+              40.5141693
+            ],
+            [
+              89.9122535,
+              40.5150328
+            ],
+            [
+              89.9130783,
+              40.5155793
+            ],
+            [
+              89.9130354,
+              40.5156252
+            ],
+            [
+              89.9133774,
+              40.5157516
+            ],
+            [
+              89.9145716,
+              40.5162384
+            ],
+            [
+              89.9147312,
+              40.5165122
+            ],
+            [
+              89.9147822,
+              40.5165836
+            ],
+            [
+              89.9152013,
+              40.5168277
+            ],
+            [
+              89.9157337,
+              40.5166605
+            ],
+            [
+              89.9159121,
+              40.5160029
+            ],
+            [
+              89.9149545,
+              40.5155319
+            ],
+            [
+              89.9145629,
+              40.5152561
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "魏晋南北朝"
+        ],
+        "city": "楼兰故城",
+        "sourceId": "niya-loulan-way-977283249",
+        "sourceName": "楼兰故城（公开保护区参照）",
+        "label": "楼兰故城（公开保护区参照）",
+        "sourceUrl": "https://www.openstreetmap.org/way/977283249",
+        "referenceUrl": "https://www.nxkg.org.cn/silukaogu/168.html",
+        "coordinateSystem": "WGS84",
+        "status": "公开遗址标绘／汉晋多期遗存",
+        "note": "原OSM对象同时标为保护区及围栏，保留其公开范围。此面不是逐段考古实测城墙，也不是整个楼兰国疆域；真实遗迹墙线另行标注。",
+        "capitalSiteKey": "western-region:shanshan",
+        "capitalSiteName": "鄯善（楼兰）",
+        "capitalSiteDisplayName": "楼兰故城／鄯善",
+        "inferredBoundary": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.9150972,
+              40.5165306
+            ],
+            [
+              89.9150307,
+              40.5164993
+            ],
+            [
+              89.9150734,
+              40.5164469
+            ],
+            [
+              89.9151399,
+              40.5164782
+            ],
+            [
+              89.9150972,
+              40.5165306
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝",
+          "秦汉"
+        ],
+        "city": "楼兰故城",
+        "sourceId": "niya-loulan-way-1540185963",
+        "sourceName": "楼兰佛塔",
+        "label": "楼兰佛塔",
+        "sourceUrl": "https://www.openstreetmap.org/way/1540185963",
+        "referenceUrl": "https://www.nxkg.org.cn/silukaogu/168.html",
+        "coordinateSystem": "WGS84",
+        "status": "公开遗址标绘／汉晋多期遗存",
+        "note": "公开塔基轮廓，与已有佛塔节点吻合，采用面标绘，不重复叠加同一佛塔节点。现存汉晋佛教遗迹，保护修缮不等于完整原貌。",
+        "capitalSiteKey": "western-region:shanshan",
+        "capitalSiteName": "鄯善（楼兰）",
+        "capitalSiteDisplayName": "楼兰故城／鄯善"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          89.9138461,
+          40.515304
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "魏晋南北朝"
+        ],
+        "city": "楼兰故城",
+        "sourceId": "niya-loulan-node-14023608964",
+        "sourceName": "楼兰 · 三间房",
+        "label": "楼兰 · 三间房",
+        "sourceUrl": "https://www.openstreetmap.org/node/14023608964",
+        "referenceUrl": "https://www.nxkg.org.cn/silukaogu/168.html",
+        "coordinateSystem": "WGS84",
+        "status": "公开遗址标绘／汉晋多期遗存",
+        "note": "公开三间房地点参照。官署功能及相关建筑有研究讨论；未用任意矩形补出房室基址。",
+        "capitalSiteKey": "western-region:shanshan",
+        "capitalSiteName": "鄯善（楼兰）",
+        "capitalSiteDisplayName": "楼兰故城／鄯善",
+        "sitePoint": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.9124742,
+              40.5149905
+            ],
+            [
+              89.9124929,
+              40.5149528
+            ],
+            [
+              89.9124695,
+              40.5149431
+            ],
+            [
+              89.9124413,
+              40.514964
+            ],
+            [
+              89.9124446,
+              40.51499
+            ],
+            [
+              89.9124742,
+              40.5149905
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "魏晋南北朝"
+        ],
+        "city": "楼兰故城",
+        "sourceId": "niya-loulan-way-1540185971",
+        "sourceName": "楼兰 · 城墙遗迹",
+        "label": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/1540185971",
+        "referenceUrl": "https://www.nxkg.org.cn/silukaogu/168.html",
+        "coordinateSystem": "WGS84",
+        "status": "公开遗址标绘／汉晋多期遗存",
+        "note": "保留OSM城墙遗迹的原始墙体占地轮廓；局部闭合面表示墙体厚度，不是整座古城范围。不把围栏当古城墙，不连接各段缺失部分。",
+        "capitalSiteKey": "western-region:shanshan",
+        "capitalSiteName": "鄯善（楼兰）",
+        "capitalSiteDisplayName": "楼兰故城／鄯善"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.9170306,
+              40.5151802
+            ],
+            [
+              89.9170178,
+              40.5151827
+            ],
+            [
+              89.9170017,
+              40.5151669
+            ],
+            [
+              89.9170192,
+              40.5151297
+            ],
+            [
+              89.9170634,
+              40.5151394
+            ],
+            [
+              89.9170306,
+              40.5151802
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "魏晋南北朝"
+        ],
+        "city": "楼兰故城",
+        "sourceId": "niya-loulan-way-1540185978",
+        "sourceName": "楼兰 · 城墙遗迹",
+        "label": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/1540185978",
+        "referenceUrl": "https://www.nxkg.org.cn/silukaogu/168.html",
+        "coordinateSystem": "WGS84",
+        "status": "公开遗址标绘／汉晋多期遗存",
+        "note": "保留OSM城墙遗迹的原始墙体占地轮廓；局部闭合面表示墙体厚度，不是整座古城范围。不把围栏当古城墙，不连接各段缺失部分。",
+        "capitalSiteKey": "western-region:shanshan",
+        "capitalSiteName": "鄯善（楼兰）",
+        "capitalSiteDisplayName": "楼兰故城／鄯善"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.914001,
+              40.5172315
+            ],
+            [
+              89.9140158,
+              40.5172126
+            ],
+            [
+              89.9140513,
+              40.5172202
+            ],
+            [
+              89.914109,
+              40.5172417
+            ],
+            [
+              89.9140909,
+              40.5172666
+            ],
+            [
+              89.9140352,
+              40.5172519
+            ],
+            [
+              89.914001,
+              40.5172315
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "魏晋南北朝"
+        ],
+        "city": "楼兰故城",
+        "sourceId": "niya-loulan-way-1540185983",
+        "sourceName": "楼兰 · 城墙遗迹",
+        "label": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/1540185983",
+        "referenceUrl": "https://www.nxkg.org.cn/silukaogu/168.html",
+        "coordinateSystem": "WGS84",
+        "status": "公开遗址标绘／汉晋多期遗存",
+        "note": "保留OSM城墙遗迹的原始墙体占地轮廓；局部闭合面表示墙体厚度，不是整座古城范围。不把围栏当古城墙，不连接各段缺失部分。",
+        "capitalSiteKey": "western-region:shanshan",
+        "capitalSiteName": "鄯善（楼兰）",
+        "capitalSiteDisplayName": "楼兰故城／鄯善"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.9137945,
+              40.5171861
+            ],
+            [
+              89.9137335,
+              40.5171575
+            ],
+            [
+              89.9136838,
+              40.517128
+            ],
+            [
+              89.9136731,
+              40.5171137
+            ],
+            [
+              89.9136832,
+              40.5170943
+            ],
+            [
+              89.9137227,
+              40.5170928
+            ],
+            [
+              89.9137757,
+              40.5171157
+            ],
+            [
+              89.9138441,
+              40.5171341
+            ],
+            [
+              89.9138877,
+              40.5171616
+            ],
+            [
+              89.9139373,
+              40.5171846
+            ],
+            [
+              89.9139272,
+              40.5172029
+            ],
+            [
+              89.9138796,
+              40.5171937
+            ],
+            [
+              89.913832,
+              40.5171922
+            ],
+            [
+              89.9137945,
+              40.5171861
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "魏晋南北朝"
+        ],
+        "city": "楼兰故城",
+        "sourceId": "niya-loulan-way-1540185984",
+        "sourceName": "楼兰 · 城墙遗迹",
+        "label": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/1540185984",
+        "referenceUrl": "https://www.nxkg.org.cn/silukaogu/168.html",
+        "coordinateSystem": "WGS84",
+        "status": "公开遗址标绘／汉晋多期遗存",
+        "note": "保留OSM城墙遗迹的原始墙体占地轮廓；局部闭合面表示墙体厚度，不是整座古城范围。不把围栏当古城墙，不连接各段缺失部分。",
+        "capitalSiteKey": "western-region:shanshan",
+        "capitalSiteName": "鄯善（楼兰）",
+        "capitalSiteDisplayName": "楼兰故城／鄯善"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.913362,
+              40.516971
+            ],
+            [
+              89.9134518,
+              40.5169873
+            ],
+            [
+              89.9134706,
+              40.5170107
+            ],
+            [
+              89.9134465,
+              40.5170576
+            ],
+            [
+              89.9134116,
+              40.5170617
+            ],
+            [
+              89.9133646,
+              40.5170321
+            ],
+            [
+              89.9133727,
+              40.5170148
+            ],
+            [
+              89.9133459,
+              40.5169944
+            ],
+            [
+              89.9133465,
+              40.5169786
+            ],
+            [
+              89.913362,
+              40.516971
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "魏晋南北朝"
+        ],
+        "city": "楼兰故城",
+        "sourceId": "niya-loulan-way-1540185985",
+        "sourceName": "楼兰 · 城墙遗迹",
+        "label": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/1540185985",
+        "referenceUrl": "https://www.nxkg.org.cn/silukaogu/168.html",
+        "coordinateSystem": "WGS84",
+        "status": "公开遗址标绘／汉晋多期遗存",
+        "note": "保留OSM城墙遗迹的原始墙体占地轮廓；局部闭合面表示墙体厚度，不是整座古城范围。不把围栏当古城墙，不连接各段缺失部分。",
+        "capitalSiteKey": "western-region:shanshan",
+        "capitalSiteName": "鄯善（楼兰）",
+        "capitalSiteDisplayName": "楼兰故城／鄯善"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.9164827,
+              40.5159647
+            ],
+            [
+              89.9164425,
+              40.5160218
+            ],
+            [
+              89.9163982,
+              40.5160447
+            ],
+            [
+              89.9163727,
+              40.5160325
+            ],
+            [
+              89.9163774,
+              40.5159938
+            ],
+            [
+              89.9164143,
+              40.5159331
+            ],
+            [
+              89.9164492,
+              40.5159183
+            ],
+            [
+              89.9164727,
+              40.5158775
+            ],
+            [
+              89.9165015,
+              40.5158582
+            ],
+            [
+              89.9165203,
+              40.515877
+            ],
+            [
+              89.9164874,
+              40.5159265
+            ],
+            [
+              89.9164827,
+              40.5159647
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "魏晋南北朝"
+        ],
+        "city": "楼兰故城",
+        "sourceId": "niya-loulan-way-1540185986",
+        "sourceName": "楼兰 · 城墙遗迹",
+        "label": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/1540185986",
+        "referenceUrl": "https://www.nxkg.org.cn/silukaogu/168.html",
+        "coordinateSystem": "WGS84",
+        "status": "公开遗址标绘／汉晋多期遗存",
+        "note": "保留OSM城墙遗迹的原始墙体占地轮廓；局部闭合面表示墙体厚度，不是整座古城范围。不把围栏当古城墙，不连接各段缺失部分。",
+        "capitalSiteKey": "western-region:shanshan",
+        "capitalSiteName": "鄯善（楼兰）",
+        "capitalSiteDisplayName": "楼兰故城／鄯善"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.9153656,
+              40.5143263
+            ],
+            [
+              89.915375,
+              40.5143349
+            ],
+            [
+              89.9153696,
+              40.5143462
+            ],
+            [
+              89.9153354,
+              40.5143385
+            ],
+            [
+              89.9152972,
+              40.5143222
+            ],
+            [
+              89.9152804,
+              40.5143036
+            ],
+            [
+              89.9152841,
+              40.5143005
+            ],
+            [
+              89.9153136,
+              40.51431
+            ],
+            [
+              89.9153307,
+              40.5143117
+            ],
+            [
+              89.9153656,
+              40.5143263
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "魏晋南北朝"
+        ],
+        "city": "楼兰故城",
+        "sourceId": "niya-loulan-way-1540185988",
+        "sourceName": "楼兰 · 城墙遗迹",
+        "label": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/1540185988",
+        "referenceUrl": "https://www.nxkg.org.cn/silukaogu/168.html",
+        "coordinateSystem": "WGS84",
+        "status": "公开遗址标绘／汉晋多期遗存",
+        "note": "保留OSM城墙遗迹的原始墙体占地轮廓；局部闭合面表示墙体厚度，不是整座古城范围。不把围栏当古城墙，不连接各段缺失部分。",
+        "capitalSiteKey": "western-region:shanshan",
+        "capitalSiteName": "鄯善（楼兰）",
+        "capitalSiteDisplayName": "楼兰故城／鄯善"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.9158306,
+              40.5145564
+            ],
+            [
+              89.9158048,
+              40.5145424
+            ],
+            [
+              89.9157867,
+              40.5145208
+            ],
+            [
+              89.9157609,
+              40.5145016
+            ],
+            [
+              89.9157096,
+              40.51448
+            ],
+            [
+              89.9156663,
+              40.5144733
+            ],
+            [
+              89.9156214,
+              40.5144563
+            ],
+            [
+              89.9155865,
+              40.514429
+            ],
+            [
+              89.9155644,
+              40.5144196
+            ],
+            [
+              89.9155503,
+              40.5144106
+            ],
+            [
+              89.9155292,
+              40.5143961
+            ],
+            [
+              89.9155205,
+              40.5143829
+            ],
+            [
+              89.9155352,
+              40.5143711
+            ],
+            [
+              89.9155942,
+              40.5143874
+            ],
+            [
+              89.9157116,
+              40.5144466
+            ],
+            [
+              89.9157592,
+              40.5144614
+            ],
+            [
+              89.9157934,
+              40.5144563
+            ],
+            [
+              89.9158309,
+              40.5144624
+            ],
+            [
+              89.9158604,
+              40.5144971
+            ],
+            [
+              89.9159067,
+              40.5145215
+            ],
+            [
+              89.9159724,
+              40.5145429
+            ],
+            [
+              89.9160117,
+              40.5145636
+            ],
+            [
+              89.9159899,
+              40.5145901
+            ],
+            [
+              89.9159131,
+              40.5145763
+            ],
+            [
+              89.9158725,
+              40.5145643
+            ],
+            [
+              89.9158306,
+              40.5145564
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "魏晋南北朝"
+        ],
+        "city": "楼兰故城",
+        "sourceId": "niya-loulan-way-1540192751",
+        "sourceName": "楼兰 · 城墙遗迹",
+        "label": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/1540192751",
+        "referenceUrl": "https://www.nxkg.org.cn/silukaogu/168.html",
+        "coordinateSystem": "WGS84",
+        "status": "公开遗址标绘／汉晋多期遗存",
+        "note": "保留OSM城墙遗迹的原始墙体占地轮廓；局部闭合面表示墙体厚度，不是整座古城范围。不把围栏当古城墙，不连接各段缺失部分。",
+        "capitalSiteKey": "western-region:shanshan",
+        "capitalSiteName": "鄯善（楼兰）",
+        "capitalSiteDisplayName": "楼兰故城／鄯善"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.9142055,
+              40.5169954
+            ],
+            [
+              89.9142297,
+              40.5170189
+            ],
+            [
+              89.9142793,
+              40.5170291
+            ],
+            [
+              89.9142873,
+              40.5170056
+            ],
+            [
+              89.9142779,
+              40.5169791
+            ],
+            [
+              89.914227,
+              40.5169628
+            ],
+            [
+              89.9142055,
+              40.5169954
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "魏晋南北朝"
+        ],
+        "city": "楼兰故城",
+        "sourceId": "niya-loulan-way-1540189915",
+        "sourceName": "楼兰 · 房址遗迹（公开标绘）",
+        "label": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/1540189915",
+        "referenceUrl": "https://www.nxkg.org.cn/silukaogu/168.html",
+        "coordinateSystem": "WGS84",
+        "status": "公开遗址标绘／汉晋多期遗存",
+        "note": "未命名的公开房址遗迹轮廓；没有充分依据赋予王宫、官署或寺庙名称。",
+        "capitalSiteKey": "western-region:shanshan",
+        "capitalSiteName": "鄯善（楼兰）",
+        "capitalSiteDisplayName": "楼兰故城／鄯善"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.9152543,
+              40.5162339
+            ],
+            [
+              89.9153401,
+              40.5162991
+            ],
+            [
+              89.9156083,
+              40.5162981
+            ],
+            [
+              89.9156861,
+              40.5162022
+            ],
+            [
+              89.9156351,
+              40.5160952
+            ],
+            [
+              89.9154179,
+              40.5160126
+            ],
+            [
+              89.9152771,
+              40.5160136
+            ],
+            [
+              89.9152435,
+              40.5160983
+            ],
+            [
+              89.9152543,
+              40.5162339
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "魏晋南北朝"
+        ],
+        "city": "楼兰故城",
+        "sourceId": "niya-loulan-way-1540189916",
+        "sourceName": "楼兰 · 房址遗迹（公开标绘）",
+        "label": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/1540189916",
+        "referenceUrl": "https://www.nxkg.org.cn/silukaogu/168.html",
+        "coordinateSystem": "WGS84",
+        "status": "公开遗址标绘／汉晋多期遗存",
+        "note": "未命名的公开房址遗迹轮廓；没有充分依据赋予王宫、官署或寺庙名称。",
+        "capitalSiteKey": "western-region:shanshan",
+        "capitalSiteName": "鄯善（楼兰）",
+        "capitalSiteDisplayName": "楼兰故城／鄯善"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.9149284,
+              40.5165193
+            ],
+            [
+              89.9150732,
+              40.5165785
+            ],
+            [
+              89.9152073,
+              40.5165601
+            ],
+            [
+              89.9152797,
+              40.5164949
+            ],
+            [
+              89.91521,
+              40.5163888
+            ],
+            [
+              89.9150598,
+              40.5163521
+            ],
+            [
+              89.9149632,
+              40.5164174
+            ],
+            [
+              89.9149284,
+              40.5165193
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "魏晋南北朝"
+        ],
+        "city": "楼兰故城",
+        "sourceId": "niya-loulan-way-1540189917",
+        "sourceName": "楼兰 · 房址遗迹（公开标绘）",
+        "label": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/1540189917",
+        "referenceUrl": "https://www.nxkg.org.cn/silukaogu/168.html",
+        "coordinateSystem": "WGS84",
+        "status": "公开遗址标绘／汉晋多期遗存",
+        "note": "未命名的公开房址遗迹轮廓；没有充分依据赋予王宫、官署或寺庙名称。",
+        "capitalSiteKey": "western-region:shanshan",
+        "capitalSiteName": "鄯善（楼兰）",
+        "capitalSiteDisplayName": "楼兰故城／鄯善"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.914868,
+              40.5151521
+            ],
+            [
+              89.9150477,
+              40.5150012
+            ],
+            [
+              89.9149565,
+              40.5149543
+            ],
+            [
+              89.9148466,
+              40.5149615
+            ],
+            [
+              89.914699,
+              40.5148932
+            ],
+            [
+              89.9146092,
+              40.5149146
+            ],
+            [
+              89.9147446,
+              40.5150481
+            ],
+            [
+              89.9147661,
+              40.5151175
+            ],
+            [
+              89.914868,
+              40.5151521
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "魏晋南北朝"
+        ],
+        "city": "楼兰故城",
+        "sourceId": "niya-loulan-way-1540189918",
+        "sourceName": "楼兰 · 房址遗迹（公开标绘）",
+        "label": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/1540189918",
+        "referenceUrl": "https://www.nxkg.org.cn/silukaogu/168.html",
+        "coordinateSystem": "WGS84",
+        "status": "公开遗址标绘／汉晋多期遗存",
+        "note": "未命名的公开房址遗迹轮廓；没有充分依据赋予王宫、官署或寺庙名称。",
+        "capitalSiteKey": "western-region:shanshan",
+        "capitalSiteName": "鄯善（楼兰）",
+        "capitalSiteDisplayName": "楼兰故城／鄯善"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.9131903,
+              40.5143395
+            ],
+            [
+              89.9132708,
+              40.5142233
+            ],
+            [
+              89.9135631,
+              40.5143151
+            ],
+            [
+              89.9137267,
+              40.514103
+            ],
+            [
+              89.9139065,
+              40.514209
+            ],
+            [
+              89.9139333,
+              40.5144578
+            ],
+            [
+              89.9141157,
+              40.5145863
+            ],
+            [
+              89.9140808,
+              40.5147392
+            ],
+            [
+              89.9138689,
+              40.5146556
+            ],
+            [
+              89.9137026,
+              40.5145455
+            ],
+            [
+              89.9134317,
+              40.5145251
+            ],
+            [
+              89.9132788,
+              40.5144558
+            ],
+            [
+              89.9131903,
+              40.5143395
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "魏晋南北朝"
+        ],
+        "city": "楼兰故城",
+        "sourceId": "niya-loulan-way-1540189919",
+        "sourceName": "楼兰 · 房址遗迹（公开标绘）",
+        "label": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/1540189919",
+        "referenceUrl": "https://www.nxkg.org.cn/silukaogu/168.html",
+        "coordinateSystem": "WGS84",
+        "status": "公开遗址标绘／汉晋多期遗存",
+        "note": "未命名的公开房址遗迹轮廓；没有充分依据赋予王宫、官署或寺庙名称。",
+        "capitalSiteKey": "western-region:shanshan",
+        "capitalSiteName": "鄯善（楼兰）",
+        "capitalSiteDisplayName": "楼兰故城／鄯善"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.9127638,
+              40.5148758
+            ],
+            [
+              89.9129784,
+              40.5146678
+            ],
+            [
+              89.9132198,
+              40.514782
+            ],
+            [
+              89.9134237,
+              40.5149778
+            ],
+            [
+              89.9137241,
+              40.5150104
+            ],
+            [
+              89.9138394,
+              40.5151796
+            ],
+            [
+              89.9139896,
+              40.5152531
+            ],
+            [
+              89.9142873,
+              40.5152
+            ],
+            [
+              89.9144295,
+              40.5153815
+            ],
+            [
+              89.9143007,
+              40.5155304
+            ],
+            [
+              89.9137321,
+              40.5155344
+            ],
+            [
+              89.9129918,
+              40.5153387
+            ],
+            [
+              89.9127638,
+              40.5148758
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "魏晋南北朝"
+        ],
+        "city": "楼兰故城",
+        "sourceId": "niya-loulan-way-1540189920",
+        "sourceName": "楼兰 · 房址遗迹（公开标绘）",
+        "label": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/1540189920",
+        "referenceUrl": "https://www.nxkg.org.cn/silukaogu/168.html",
+        "coordinateSystem": "WGS84",
+        "status": "公开遗址标绘／汉晋多期遗存",
+        "note": "未命名的公开房址遗迹轮廓；没有充分依据赋予王宫、官署或寺庙名称。",
+        "capitalSiteKey": "western-region:shanshan",
+        "capitalSiteName": "鄯善（楼兰）",
+        "capitalSiteDisplayName": "楼兰故城／鄯善"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.9125117,
+              40.5157679
+            ],
+            [
+              89.9125989,
+              40.5156813
+            ],
+            [
+              89.9127075,
+              40.5157373
+            ],
+            [
+              89.9127062,
+              40.5157812
+            ],
+            [
+              89.9126673,
+              40.5157924
+            ],
+            [
+              89.9125868,
+              40.5157995
+            ],
+            [
+              89.9125117,
+              40.5157679
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "魏晋南北朝"
+        ],
+        "city": "楼兰故城",
+        "sourceId": "niya-loulan-way-1540189921",
+        "sourceName": "楼兰 · 房址遗迹（公开标绘）",
+        "label": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/1540189921",
+        "referenceUrl": "https://www.nxkg.org.cn/silukaogu/168.html",
+        "coordinateSystem": "WGS84",
+        "status": "公开遗址标绘／汉晋多期遗存",
+        "note": "未命名的公开房址遗迹轮廓；没有充分依据赋予王宫、官署或寺庙名称。",
+        "capitalSiteKey": "western-region:shanshan",
+        "capitalSiteName": "鄯善（楼兰）",
+        "capitalSiteDisplayName": "楼兰故城／鄯善"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            89.9091911,
+            40.5184809
+          ],
+          [
+            89.9094915,
+            40.518489
+          ],
+          [
+            89.9097758,
+            40.5184605
+          ],
+          [
+            89.910095,
+            40.5183728
+          ],
+          [
+            89.9102184,
+            40.5181791
+          ],
+          [
+            89.9104464,
+            40.5178998
+          ],
+          [
+            89.9107361,
+            40.5177713
+          ],
+          [
+            89.911176,
+            40.5176408
+          ],
+          [
+            89.9115837,
+            40.5174287
+          ],
+          [
+            89.911817,
+            40.5171086
+          ],
+          [
+            89.9119699,
+            40.5170087
+          ],
+          [
+            89.9123078,
+            40.5164561
+          ],
+          [
+            89.9126699,
+            40.5161666
+          ],
+          [
+            89.9128899,
+            40.516087
+          ],
+          [
+            89.9130696,
+            40.5159586
+          ],
+          [
+            89.9134129,
+            40.5158097
+          ],
+          [
+            89.9140084,
+            40.5156364
+          ],
+          [
+            89.9143973,
+            40.5155895
+          ],
+          [
+            89.914585,
+            40.5156017
+          ],
+          [
+            89.9151885,
+            40.5155324
+          ],
+          [
+            89.9157277,
+            40.5155345
+          ],
+          [
+            89.9158859,
+            40.5155039
+          ],
+          [
+            89.9160737,
+            40.5153407
+          ],
+          [
+            89.9163741,
+            40.5152062
+          ],
+          [
+            89.9165055,
+            40.5150655
+          ],
+          [
+            89.9169293,
+            40.5148024
+          ],
+          [
+            89.9175891,
+            40.51457
+          ],
+          [
+            89.9180907,
+            40.514468
+          ]
+        ]
+      },
+      "properties": {
+        "research": true,
+        "osm": true,
+        "family": "period",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "魏晋南北朝"
+        ],
+        "city": "楼兰故城",
+        "sourceId": "niya-loulan-way-1540185995",
+        "sourceName": "楼兰 · 古水道",
+        "label": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/1540185995",
+        "referenceUrl": "https://www.nxkg.org.cn/silukaogu/168.html",
+        "coordinateSystem": "WGS84",
+        "status": "公开古水道线／河道参照",
+        "note": "公开古水道现状线，作为水系参照用蓝色标注；不依据河道长度推定楼兰城界。",
+        "capitalSiteKey": "western-region:shanshan",
+        "capitalSiteName": "鄯善（楼兰）",
+        "capitalSiteDisplayName": "楼兰故城／鄯善",
+        "waterFeature": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          82.720806,
+          37.976167
+        ]
+      },
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "魏晋南北朝"
+        ],
+        "city": "尼雅遗址",
+        "sourceId": "niya-dsr-0756",
+        "sourceName": "尼雅佛塔（公开坐标参照）",
+        "label": "尼雅佛塔",
+        "sourceUrl": "https://dsr.nii.ac.jp/digital-maps/dsr/place-names/0756.html.en",
+        "sourceTitle": "日本国立情报学研究所 · DSR地名集",
+        "referenceUrl": "https://igsnrr.cas.cn/cbkx/kpyd/kcsj/94nyx/202009/t20200910_5693321.html",
+        "coordinateSystem": "WGS84（来源公开地名集）",
+        "status": "佛塔位置参照／非遗址群边界",
+        "note": "采用DSR-0756公开坐标；资料中佛塔经纬度有差异，此为地名集位置参照而非测绘精度保证。尼雅沿古河道散布，不根据25—27千米乘7千米描述生成矩形城界；宫殿、墓地、古桥等须取得逐址配准资料后再补面。",
+        "sitePoint": true,
+        "capitalSiteKey": "western-region:jingjue",
+        "capitalSiteName": "精绝",
+        "capitalSiteDisplayName": "精绝／尼雅遗址"
+      }
+    }
+  ],
+  "previousNiyaReference": {
+    "lat": 37.822685,
+    "lng": 82.771896,
+    "coordinateUrl": "https://zh.wikipedia.org/wiki/尼雅遗址"
+  },
+  "niyaAnchor": [
+    82.720806,
+    37.976167
+  ],
+  "sourceNiya": "https://dsr.nii.ac.jp/digital-maps/dsr/place-names/0756.html.en",
+  "sourceNiyaDistribution": "https://igsnrr.cas.cn/cbkx/kpyd/kcsj/94nyx/202009/t20200910_5693321.html",
+  "sourceLoulan": "https://www.nxkg.org.cn/silukaogu/168.html",
+  "limits": [
+    "楼兰故城LA与LE等编号城址分开",
+    "楼兰公开保护区面不等于实测城墙",
+    "鄯善扜泥参照点保持在若羌一带，不移到罗布泊",
+    "尼雅分散遗址群不生成矩形范围",
+    "楼兰未核实城门节点、普通围栏与现代建筑未导入"
+  ],
+  "license": "OSM contributors · ODbL; Niya point attributed to NII Digital Silk Road Gazetteer"
+}

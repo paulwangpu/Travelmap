@@ -23,9 +23,9 @@ const sources=new Map(),layers=new Map();const map={hasImage:()=>true,addImage:(
  assert.ok(f.every(x=>x.geometry.type==='Point'));
  state.mapOverlays.beijingCapitalStage='jin';await BeijingCapitalEvolution.sync(map);
  f=sources.get('beijing-capital-evolution').data.features;assert.equal(f.length,1);assert.ok(f[0].geometry.coordinates[0]>116.3&&f[0].geometry.coordinates[1]<39.9,'Jin Zhongdu reference lies southwest of Yuan Dadu');
- state.mapOverlays.ancientCapitalPeriods['宋辽金西夏']=false;await BeijingCapitalEvolution.sync(map);assert.equal(sources.get('beijing-capital-evolution').data.features.length,0);
- state.mapOverlays.beijingCapitalEvolution=false;await BeijingCapitalEvolution.sync(map);assert.equal(layers.get('beijing-evolution-points').layout.visibility,'none');
- state.mapOverlays.beijingCapitalEvolution=true;state.mapOverlays.beijingCapitalStage='all';state.mapOverlays.ancientCapitalPeriods={};
+ state.mapOverlays.ancientCapitalPeriods['宋辽金西夏']=false;await BeijingCapitalEvolution.sync(map);assert.equal(sources.get('beijing-capital-evolution').data.features.length,1,'Legend only filters capital icons');
+ state.mapOverlays.chinaAncientCapitals=false;await BeijingCapitalEvolution.sync(map);assert.equal(layers.get('beijing-evolution-points').layout.visibility,'none');
+ state.mapOverlays.chinaAncientCapitals=true;state.mapOverlays.beijingCapitalStage='all';state.mapOverlays.ancientCapitalPeriods={};
  const catalog=require('../data/china-ancient-capitals.json');
  const covered=catalog.items.flatMap(i=>(i.historicalStages||[]).map(s=>s.id));
  BeijingCapitalEvolution.init({state:()=>state,catalogStageIds:()=>covered});await BeijingCapitalEvolution.sync(map);

@@ -1,0 +1,133 @@
+{
+  "officialSource": "https://whc.unesco.org/en/list/870/maps/",
+  "changes": [
+    {
+      "id": "nara-unesco-component-1",
+      "name": "东大寺",
+      "originalCoordinates": [
+        135.83971944444446,
+        34.68888888888888
+      ],
+      "displayCoordinates": [
+        135.83986822,
+        34.68884072
+      ],
+      "anchorId": "nara-way-43558119",
+      "anchorName": "东大寺大佛殿（1709年重建）",
+      "anchorSource": "https://www.openstreetmap.org/way/43558119"
+    },
+    {
+      "id": "nara-unesco-component-2",
+      "name": "兴福寺",
+      "originalCoordinates": [
+        135.83333055555556,
+        34.683055555555555
+      ],
+      "displayCoordinates": [
+        135.83113273,
+        34.68321933
+      ],
+      "anchorId": "nara-way-158203506",
+      "anchorName": "兴福寺中金堂（现代重建）",
+      "anchorSource": "https://www.openstreetmap.org/way/158203506"
+    },
+    {
+      "id": "nara-unesco-component-3",
+      "name": "春日大社／春日山原始林",
+      "originalCoordinates": [
+        135.84833055555558,
+        34.68138888888889
+      ],
+      "displayCoordinates": [
+        135.84853642,
+        34.6815749
+      ],
+      "anchorId": "nara-way-1134481290",
+      "anchorName": "春日大社第一殿",
+      "anchorSource": "https://www.openstreetmap.org/way/1134481290"
+    },
+    {
+      "id": "nara-unesco-component-4",
+      "name": "元兴寺",
+      "originalCoordinates": [
+        135.83110833333333,
+        34.67777777777778
+      ],
+      "displayCoordinates": [
+        135.83121202,
+        34.67765651
+      ],
+      "anchorId": "nara-way-218642880",
+      "anchorName": "元兴寺现状范围",
+      "anchorSource": "https://www.openstreetmap.org/way/218642880"
+    },
+    {
+      "id": "nara-unesco-component-5",
+      "name": "药师寺",
+      "originalCoordinates": [
+        135.78416666666666,
+        34.668330555555556
+      ],
+      "displayCoordinates": [
+        135.78426366,
+        34.6683687
+      ],
+      "anchorId": "nara-way-293509288",
+      "anchorName": "药师寺金堂（现代重建）",
+      "anchorSource": "https://www.openstreetmap.org/way/293509288"
+    },
+    {
+      "id": "nara-unesco-component-6",
+      "name": "唐招提寺",
+      "originalCoordinates": [
+        135.78471944444445,
+        34.675555555555555
+      ],
+      "displayCoordinates": [
+        135.78545162,
+        34.67573123
+      ],
+      "anchorId": "nara-way-218644927",
+      "anchorName": "唐招提寺现状范围",
+      "anchorSource": "https://www.openstreetmap.org/way/218644927"
+    },
+    {
+      "id": "nara-unesco-component-7",
+      "name": "平城宫遗址",
+      "originalCoordinates": [
+        135.79694166666667,
+        34.691941666666665
+      ],
+      "displayCoordinates": [
+        135.7971866,
+        34.69206882
+      ],
+      "anchorId": "nara-way-378249366",
+      "anchorName": "第二次大极殿遗址",
+      "anchorSource": "https://www.openstreetmap.org/way/378249366"
+    }
+  ],
+  "scope": "八处资产／七个官方地理分组；一个世界遗产打卡身份。保留原始坐标与OSM面、孔洞，仅使用独立显示定位。",
+  "focusBounds": [
+    [
+      135.778,
+      34.662
+    ],
+    [
+      135.892,
+      34.705
+    ]
+  ],
+  "labelAdjustments": [
+    "nara-way-378249366",
+    "nara-way-43558119",
+    "nara-way-158203506",
+    "nara-way-218642880",
+    "nara-way-218644927",
+    "nara-way-293509288",
+    "nara-way-1134481290",
+    "nara-way-360648242",
+    "nara-way-1134481289",
+    "nara-way-1134481288"
+  ]
+}

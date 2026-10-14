@@ -1,0 +1,56 @@
+{
+  "entry": {
+    "id": "juandu",
+    "name": "捐毒",
+    "nameEn": "Juandu",
+    "capital": "衍敦谷",
+    "area": "乌恰县西部／伊尔克什坦附近候选区域",
+    "lat": 39.7,
+    "lng": 74,
+    "position": "inferred",
+    "sourceUrl": "https://depts.washington.edu/silkroad/texts/weilue/notes7_10.html",
+    "primaryUrl": "https://www.chinese-classics.org/read/history/han-shu/han-shu-096",
+    "referenceUrls": [
+      "https://contents.nahf.or.kr/item/level.do?levelId=jo.k_0002_0096_0270_0010",
+      "https://www.visitbeijing.com.cn/article/47QlQbzRmiw"
+    ],
+    "note": "王治记为衍敦谷，具体位置尚未核实。本次采用伊尔克什坦附近、克孜勒苏河上游候选地望，以一位小数的区域示意点表示；不是口岸建筑、城址或国界范围。另有乌恰西北、乌鲁克恰提（老乌恰）及阿赖谷地等说法，不能将其与现代乌恰县城直接等同。《汉书》记居民随水草而居，暂未找到可核对的捐毒城墙矢量。",
+    "noteEn": "Yandun Valley is recorded as the royal seat, but its exact location is unverified. The marker follows the proposed Irkeshtam / upper Qizil Su region and is deliberately rounded to one decimal place. It is neither a surveyed city nor a border/port boundary. Northwestern Ulugqat, old Ulugqat and the Alai Valley are alternative proposals. No verified city-wall geometry has been found.",
+    "documentedFacts": {
+      "source": "汉书·西域传",
+      "sourceEn": "Hanshu, Western Regions",
+      "royalSeat": "衍敦谷",
+      "royalSeatEn": "Yandun Valley",
+      "households": 380,
+      "population": 1100,
+      "menAbleToBearArms": 500
+    },
+    "locationHypotheses": [
+      {
+        "name": "伊尔克什坦附近／克孜勒苏河上游",
+        "nameEn": "Irkeshtam / upper Qizil Su",
+        "status": "当前采用的区域参照说",
+        "source": "https://depts.washington.edu/silkroad/texts/weilue/notes7_10.html"
+      },
+      {
+        "name": "乌鲁克恰提（老乌恰）一带",
+        "nameEn": "Old Ulugqat area",
+        "status": "地方史候选，非考古确址",
+        "source": "https://www.visitbeijing.com.cn/article/47QlQbzRmiw"
+      }
+    ]
+  },
+  "previousReference": {
+    "lat": 39.72,
+    "lng": 75.26,
+    "position": "region"
+  },
+  "decision": "Replace modern county-seat reference with deliberately coarse Irkeshtam-region hypothesis; not a surveyed capital location.",
+  "geometryStatus": "No verified wall polygon/line added",
+  "sources": [
+    "https://depts.washington.edu/silkroad/texts/weilue/notes7_10.html",
+    "https://www.chinese-classics.org/read/history/han-shu/han-shu-096",
+    "https://contents.nahf.or.kr/item/level.do?levelId=jo.k_0002_0096_0270_0010",
+    "https://www.visitbeijing.com.cn/article/47QlQbzRmiw"
+  ]
+}
