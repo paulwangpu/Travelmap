@@ -6992,7 +6992,7 @@
         "日惹的宇宙中轴线及其历史地标",
         "The Cosmological Axis of Yogyakarta and its Historic Landmarks"
       ],
-      "wallBoundaryReview": "已接入原始城墙段与实际构件；完整分期城界待核",
+      "wallBoundaryReview": "已接入原始城墙段与实际构件；完整分期城界待核；塔曼萨里水宫现状游览范围已接入，不等同完整历史园林或旅游村界",
       "focusBounds": [
         [
           110.3540129,
@@ -8028,6 +8028,555 @@
       ],
       "focusMaxZoom": 16,
       "capitalSiteKey": "ancient-site:roluos"
+    },
+    {
+      "key": "bali-samprangan",
+      "name": "桑普朗甘",
+      "enName": "Samprangan",
+      "capitalName": "桑普朗甘",
+      "capitalEnName": "Samprangan",
+      "country": "印度尼西亚",
+      "countryEn": "Indonesia",
+      "center": [
+        115.342,
+        -8.547
+      ],
+      "period": "元",
+      "periodLabel": "克雷斯纳·克帕基桑王朝王廷",
+      "enPeriodLabel": "Royal seat of the Kresna Kepakisan dynasty",
+      "capitalPeriods": [
+        "元",
+        "明"
+      ],
+      "referenceUrl": "https://kebudayaan.kemdikbud.go.id/bpcbbali/inventarisasi-di-pura-agung-kenter-gumi-bagian-1/",
+      "historicalIdentity": "capital",
+      "identityLabel": "克雷斯纳·克帕基桑王朝王廷",
+      "identityEnLabel": "Royal seat of the Kresna Kepakisan dynasty",
+      "identityNote": "属满者伯夷影响下的巴厘王廷；始年1350／1352及迁往格尔格尔年代存在资料差异。根点为桑普朗甘城址参照点，旧王宫未取得可靠矢量。",
+      "identityEnNote": "Historical status and present-day remains are distinguished. Complete dated city walls and palace circuits remain unverified; modern administrative or temple boundaries do not stand for the historical city.",
+      "identitySourceUrl": "https://kebudayaan.kemdikbud.go.id/bpcbbali/inventarisasi-di-pura-agung-kenter-gumi-bagian-1/",
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "aliases": [
+        "桑普朗甘",
+        "Samprangan"
+      ],
+      "wallBoundaryReview": "历史身份已核；王宫矢量及完整分期城界待核",
+      "focusBounds": [
+        [
+          115.336,
+          -8.552000000000001
+        ],
+        [
+          115.348,
+          -8.542
+        ]
+      ],
+      "focusMaxZoom": 16,
+      "capitalSiteKey": "ancient-site:bali-samprangan"
+    },
+    {
+      "key": "bali-gelgel",
+      "name": "格尔格尔",
+      "enName": "Gelgel",
+      "capitalName": "格尔格尔",
+      "capitalEnName": "Gelgel",
+      "country": "印度尼西亚",
+      "countryEn": "Indonesia",
+      "center": [
+        115.403,
+        -8.558
+      ],
+      "period": "明",
+      "periodLabel": "格尔格尔王国都城",
+      "enPeriodLabel": "Capital of the Gelgel kingdom",
+      "capitalPeriods": [
+        "明",
+        "清"
+      ],
+      "referenceUrl": "https://gelgel.desa.id/artikel/2018/8/7/sejarah-desa-gelgel",
+      "historicalIdentity": "capital",
+      "identityLabel": "格尔格尔王国都城",
+      "identityEnLabel": "Capital of the Gelgel kingdom",
+      "identityNote": "与桑普朗甘及克隆孔分址。王廷旧址、王朝终结及反叛者占据阶段须区别；达萨尔布阿纳庙只作为关联遗存，不是宫城。",
+      "identityEnNote": "Historical status and present-day remains are distinguished. Complete dated city walls and palace circuits remain unverified; modern administrative or temple boundaries do not stand for the historical city.",
+      "identitySourceUrl": "https://gelgel.desa.id/artikel/2018/8/7/sejarah-desa-gelgel",
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "aliases": [
+        "格尔格尔",
+        "Gelgel"
+      ],
+      "wallBoundaryReview": "已接入实际建筑／现状围区；完整分期城墙、宫城边界待核",
+      "focusBounds": [
+        [
+          115.397,
+          -8.563
+        ],
+        [
+          115.409,
+          -8.552999999999999
+        ]
+      ],
+      "focusMaxZoom": 16,
+      "capitalSiteKey": "ancient-site:bali-gelgel"
+    },
+    {
+      "key": "bali-klungkung",
+      "name": "克隆孔／塞马拉普拉",
+      "enName": "Klungkung / Semarapura",
+      "capitalName": "克隆孔／塞马拉普拉",
+      "capitalEnName": "Klungkung / Semarapura",
+      "country": "印度尼西亚",
+      "countryEn": "Indonesia",
+      "center": [
+        115.4034,
+        -8.5355
+      ],
+      "period": "清",
+      "periodLabel": "克隆孔王国都城",
+      "enPeriodLabel": "Capital of the Klungkung kingdom",
+      "capitalPeriods": [
+        "清"
+      ],
+      "referenceUrl": "https://www.klungkungkab.go.id/halaman/detail/sejarah-kerajaan",
+      "historicalIdentity": "capital",
+      "identityLabel": "克隆孔王国都城",
+      "identityEnLabel": "Capital of the Klungkung kingdom",
+      "identityNote": "当地官方记1686年迁都、1908年荷兰征服。现存司法亭和吉利园浮亭为王宫组件；司法亭营建1686／约1700年的官方叙述存在差异。",
+      "identityEnNote": "Historical status and present-day remains are distinguished. Complete dated city walls and palace circuits remain unverified; modern administrative or temple boundaries do not stand for the historical city.",
+      "identitySourceUrl": "https://www.klungkungkab.go.id/halaman/detail/sejarah-kerajaan",
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "aliases": [
+        "克隆孔／塞马拉普拉",
+        "Klungkung / Semarapura",
+        "克隆孔",
+        "塞马拉普拉",
+        "Semarapura"
+      ],
+      "wallBoundaryReview": "已接入实际建筑／现状围区；完整分期城墙、宫城边界待核",
+      "focusBounds": [
+        [
+          115.3974,
+          -8.540500000000002
+        ],
+        [
+          115.4094,
+          -8.5305
+        ]
+      ],
+      "focusMaxZoom": 16,
+      "capitalSiteKey": "ancient-site:bali-klungkung"
+    },
+    {
+      "key": "bali-gianyar",
+      "name": "吉安雅",
+      "enName": "Gianyar",
+      "capitalName": "吉安雅",
+      "capitalEnName": "Gianyar",
+      "country": "印度尼西亚",
+      "countryEn": "Indonesia",
+      "center": [
+        115.32965,
+        -8.54142
+      ],
+      "period": "清",
+      "periodLabel": "吉安雅王国都城",
+      "enPeriodLabel": "Capital of the Gianyar kingdom",
+      "capitalPeriods": [
+        "清"
+      ],
+      "referenceUrl": "https://gianyarkab.go.id/informasi-publik/berita/peringatan-hari-jadi-ke-242-kota-gianyar-perdalam-rasa-bangga-sebagai-masyarakat-gianyar",
+      "historicalIdentity": "capital",
+      "identityLabel": "吉安雅王国都城",
+      "identityEnLabel": "Capital of the Gianyar kingdom",
+      "identityNote": "1771年王宫设立为官方城史依据。根点参照现王宫关联宗教建筑的位置，不代表王宫完整范围；没有误用搜索返回的乌布或佩利亚坦王宫。",
+      "identityEnNote": "Historical status and present-day remains are distinguished. Complete dated city walls and palace circuits remain unverified; modern administrative or temple boundaries do not stand for the historical city.",
+      "identitySourceUrl": "https://gianyarkab.go.id/informasi-publik/berita/peringatan-hari-jadi-ke-242-kota-gianyar-perdalam-rasa-bangga-sebagai-masyarakat-gianyar",
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "aliases": [
+        "吉安雅",
+        "Gianyar"
+      ],
+      "wallBoundaryReview": "历史身份已核；王宫矢量及完整分期城界待核",
+      "focusBounds": [
+        [
+          115.32365,
+          -8.546420000000001
+        ],
+        [
+          115.33565,
+          -8.53642
+        ]
+      ],
+      "focusMaxZoom": 16,
+      "capitalSiteKey": "ancient-site:bali-gianyar"
+    },
+    {
+      "key": "bali-mengwi",
+      "name": "孟威",
+      "enName": "Mengwi",
+      "capitalName": "孟威",
+      "capitalEnName": "Mengwi",
+      "country": "印度尼西亚",
+      "countryEn": "Indonesia",
+      "center": [
+        115.16728,
+        -8.54656
+      ],
+      "period": "明",
+      "periodLabel": "孟威王国都城",
+      "enPeriodLabel": "Capital of the Mengwi kingdom",
+      "capitalPeriods": [
+        "明",
+        "清"
+      ],
+      "referenceUrl": "https://disbud.badungkab.go.id/pura-taman-ayun-260716135453",
+      "historicalIdentity": "capital",
+      "identityLabel": "孟威王国都城",
+      "identityEnLabel": "Capital of the Mengwi kingdom",
+      "identityNote": "塔曼阿云为王室庙宇，官方记1632—1634年营建。本轮仅表达OSM现状公园面，不作为王宫、王城或整个世界遗产范围。孟威王国始年及政治中心早期迁驻仍待核。",
+      "identityEnNote": "Historical status and present-day remains are distinguished. Complete dated city walls and palace circuits remain unverified; modern administrative or temple boundaries do not stand for the historical city.",
+      "identitySourceUrl": "https://disbud.badungkab.go.id/pura-taman-ayun-260716135453",
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "aliases": [
+        "孟威",
+        "Mengwi"
+      ],
+      "wallBoundaryReview": "已接入实际建筑／现状围区；完整分期城墙、宫城边界待核",
+      "focusBounds": [
+        [
+          115.16128,
+          -8.55156
+        ],
+        [
+          115.17328,
+          -8.541559999999999
+        ]
+      ],
+      "focusMaxZoom": 16,
+      "capitalSiteKey": "ancient-site:bali-mengwi"
+    },
+    {
+      "key": "bali-denpasar",
+      "name": "登巴萨",
+      "enName": "Denpasar",
+      "capitalName": "登巴萨",
+      "capitalEnName": "Denpasar",
+      "country": "印度尼西亚",
+      "countryEn": "Indonesia",
+      "center": [
+        115.21774569388955,
+        -8.651110150000001
+      ],
+      "period": "清",
+      "periodLabel": "巴东王国都城",
+      "enPeriodLabel": "Capital of the Badung kingdom",
+      "capitalPeriods": [
+        "清"
+      ],
+      "referenceUrl": "https://denpasarkota.go.id/page/sejarah",
+      "historicalIdentity": "capital",
+      "identityLabel": "巴东王国都城",
+      "identityEnLabel": "Capital of the Badung kingdom",
+      "identityNote": "1788年建成的旧王宫于1906年战争中毁坏。现王宫及佩梅楚坦王宫几何表达现状与后期重建，不复原旧宫城；巴东多个王廷节点共用本城根点。",
+      "identityEnNote": "Historical status and present-day remains are distinguished. Complete dated city walls and palace circuits remain unverified; modern administrative or temple boundaries do not stand for the historical city.",
+      "identitySourceUrl": "https://denpasarkota.go.id/page/sejarah",
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "aliases": [
+        "登巴萨",
+        "Denpasar"
+      ],
+      "wallBoundaryReview": "已接入实际建筑／现状围区；完整分期城墙、宫城边界待核",
+      "focusBounds": [
+        [
+          115.21174569388955,
+          -8.656110150000002
+        ],
+        [
+          115.22374569388955,
+          -8.64611015
+        ]
+      ],
+      "focusMaxZoom": 16,
+      "capitalSiteKey": "ancient-site:bali-denpasar"
+    },
+    {
+      "key": "bali-karangasem",
+      "name": "卡朗阿森／阿姆拉普拉",
+      "enName": "Karangasem / Amlapura",
+      "capitalName": "卡朗阿森／阿姆拉普拉",
+      "capitalEnName": "Karangasem / Amlapura",
+      "country": "印度尼西亚",
+      "countryEn": "Indonesia",
+      "center": [
+        115.61630101474088,
+        -8.44387395
+      ],
+      "period": "清",
+      "periodLabel": "卡朗阿森王国都城",
+      "enPeriodLabel": "Capital of the Karangasem kingdom",
+      "capitalPeriods": [
+        "清"
+      ],
+      "referenceUrl": "https://disparda.baliprov.go.id/karangasem-agung-palace",
+      "historicalIdentity": "capital",
+      "identityLabel": "卡朗阿森王国都城",
+      "identityEnLabel": "Capital of the Karangasem kingdom",
+      "identityNote": "独立王国与1894年后的殖民间接统治地位分开说明。城名1970年改阿姆拉普拉；两座现王宫范围不代表全城或整个历代宫城。17世纪较早迁驻阶段待核。",
+      "identityEnNote": "Historical status and present-day remains are distinguished. Complete dated city walls and palace circuits remain unverified; modern administrative or temple boundaries do not stand for the historical city.",
+      "identitySourceUrl": "https://disparda.baliprov.go.id/karangasem-agung-palace",
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "aliases": [
+        "卡朗阿森／阿姆拉普拉",
+        "Karangasem / Amlapura",
+        "卡朗阿森",
+        "阿姆拉普拉",
+        "Amlapura"
+      ],
+      "wallBoundaryReview": "已接入实际建筑／现状围区；完整分期城墙、宫城边界待核",
+      "focusBounds": [
+        [
+          115.61030101474088,
+          -8.448873950000001
+        ],
+        [
+          115.62230101474088,
+          -8.43887395
+        ]
+      ],
+      "focusMaxZoom": 16,
+      "capitalSiteKey": "ancient-site:bali-karangasem"
+    },
+    {
+      "key": "bali-singaraja",
+      "name": "新加坡拉／辛加拉惹",
+      "enName": "Singaraja",
+      "capitalName": "新加坡拉／辛加拉惹",
+      "capitalEnName": "Singaraja",
+      "country": "印度尼西亚",
+      "countryEn": "Indonesia",
+      "center": [
+        115.091,
+        -8.112
+      ],
+      "period": "明",
+      "periodLabel": "布勒伦王国都城",
+      "enPeriodLabel": "Capital of the Buleleng kingdom",
+      "capitalPeriods": [
+        "明",
+        "清"
+      ],
+      "referenceUrl": "https://bulelengkab.go.id/informasi/detail/profil/30_sejarah-kota-singaraja",
+      "historicalIdentity": "capital",
+      "identityLabel": "布勒伦王国都城",
+      "identityEnLabel": "Capital of the Buleleng kingdom",
+      "identityNote": "官方城史记1604年建立新王宫并迁驻；1849年战争与后期殖民行政中心身份分开。根点为城址参照，原王宫和完整城防尚无可靠矢量。",
+      "identityEnNote": "Historical status and present-day remains are distinguished. Complete dated city walls and palace circuits remain unverified; modern administrative or temple boundaries do not stand for the historical city.",
+      "identitySourceUrl": "https://bulelengkab.go.id/informasi/detail/profil/30_sejarah-kota-singaraja",
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "aliases": [
+        "新加坡拉／辛加拉惹",
+        "Singaraja",
+        "新加坡拉",
+        "辛加拉惹"
+      ],
+      "wallBoundaryReview": "历史身份已核；王宫矢量及完整分期城界待核",
+      "focusBounds": [
+        [
+          115.085,
+          -8.117
+        ],
+        [
+          115.097,
+          -8.107
+        ]
+      ],
+      "focusMaxZoom": 16,
+      "capitalSiteKey": "ancient-site:bali-singaraja"
+    },
+    {
+      "key": "bali-tabanan",
+      "name": "塔巴南",
+      "enName": "Tabanan",
+      "capitalName": "塔巴南",
+      "capitalEnName": "Tabanan",
+      "country": "印度尼西亚",
+      "countryEn": "Indonesia",
+      "center": [
+        115.125,
+        -8.54
+      ],
+      "period": "清",
+      "periodLabel": "塔巴南王国都城",
+      "enPeriodLabel": "Capital of the Tabanan kingdom",
+      "capitalPeriods": [
+        "清"
+      ],
+      "referenceUrl": "https://disbud.tabanankab.go.id/2021/08/",
+      "historicalIdentity": "capital",
+      "identityLabel": "塔巴南王国都城",
+      "identityEnLabel": "Capital of the Tabanan kingdom",
+      "identityNote": "官方王国史追溯1352—1906，但王国创立年代不直接作为迁入现城址的年代。早期布查甘王廷和后来的塔巴南城址须区别，暂不冒充已定位早期宫址。",
+      "identityEnNote": "Historical status and present-day remains are distinguished. Complete dated city walls and palace circuits remain unverified; modern administrative or temple boundaries do not stand for the historical city.",
+      "identitySourceUrl": "https://disbud.tabanankab.go.id/2021/08/",
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "aliases": [
+        "塔巴南",
+        "Tabanan"
+      ],
+      "wallBoundaryReview": "历史身份已核；王宫矢量及完整分期城界待核",
+      "focusBounds": [
+        [
+          115.119,
+          -8.545
+        ],
+        [
+          115.131,
+          -8.534999999999998
+        ]
+      ],
+      "focusMaxZoom": 16,
+      "capitalSiteKey": "ancient-site:bali-tabanan"
+    },
+    {
+      "key": "bali-bangli",
+      "name": "邦利",
+      "enName": "Bangli",
+      "capitalName": "邦利",
+      "capitalEnName": "Bangli",
+      "country": "印度尼西亚",
+      "countryEn": "Indonesia",
+      "center": [
+        115.354,
+        -8.454
+      ],
+      "period": "清",
+      "periodLabel": "邦利王国都城",
+      "enPeriodLabel": "Capital of the Bangli kingdom",
+      "capitalPeriods": [
+        "清"
+      ],
+      "referenceUrl": "https://kebudayaan.kemdikbud.go.id/bpnbbali/kediaman-raja-dan-bangsawan-bali/",
+      "historicalIdentity": "capital",
+      "identityLabel": "邦利王国都城",
+      "identityEnLabel": "Capital of the Bangli kingdom",
+      "identityNote": "确为巴厘地方王国王廷；不能把现代邦利行政区、多处寺庙或其他同名王宫当成全城。王宫围区及确切都城起讫仍待核。",
+      "identityEnNote": "Historical status and present-day remains are distinguished. Complete dated city walls and palace circuits remain unverified; modern administrative or temple boundaries do not stand for the historical city.",
+      "identitySourceUrl": "https://kebudayaan.kemdikbud.go.id/bpnbbali/kediaman-raja-dan-bangsawan-bali/",
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "aliases": [
+        "邦利",
+        "Bangli"
+      ],
+      "wallBoundaryReview": "历史身份已核；王宫矢量及完整分期城界待核",
+      "focusBounds": [
+        [
+          115.348,
+          -8.459000000000001
+        ],
+        [
+          115.36,
+          -8.449
+        ]
+      ],
+      "focusMaxZoom": 16,
+      "capitalSiteKey": "ancient-site:bali-bangli"
+    },
+    {
+      "key": "bali-negara",
+      "name": "内加拉",
+      "enName": "Negara",
+      "capitalName": "内加拉",
+      "capitalEnName": "Negara",
+      "country": "印度尼西亚",
+      "countryEn": "Indonesia",
+      "center": [
+        114.626,
+        -8.365
+      ],
+      "period": "清",
+      "periodLabel": "占布拉纳王国都城",
+      "enPeriodLabel": "Capital of the Jembrana kingdom",
+      "capitalPeriods": [
+        "清"
+      ],
+      "referenceUrl": "https://jembranakab.go.id/index.php/sejarah",
+      "historicalIdentity": "capital",
+      "identityLabel": "占布拉纳王国都城",
+      "identityEnLabel": "Capital of the Jembrana kingdom",
+      "identityNote": "官方区分较早占布拉纳旧王廷和19世纪初新建内加拉王宫。本轮仅建内加拉根点；旧王廷尚待独立定位，不合并两处宫址。",
+      "identityEnNote": "Historical status and present-day remains are distinguished. Complete dated city walls and palace circuits remain unverified; modern administrative or temple boundaries do not stand for the historical city.",
+      "identitySourceUrl": "https://jembranakab.go.id/index.php/sejarah",
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "aliases": [
+        "内加拉",
+        "Negara"
+      ],
+      "wallBoundaryReview": "历史身份已核；王宫矢量及完整分期城界待核",
+      "focusBounds": [
+        [
+          114.62,
+          -8.370000000000001
+        ],
+        [
+          114.632,
+          -8.36
+        ]
+      ],
+      "focusMaxZoom": 16,
+      "capitalSiteKey": "ancient-site:bali-negara"
+    },
+    {
+      "key": "bali-ubud",
+      "name": "乌布",
+      "enName": "Ubud",
+      "capitalName": "乌布",
+      "capitalEnName": "Ubud",
+      "country": "印度尼西亚",
+      "countryEn": "Indonesia",
+      "center": [
+        115.262707,
+        -8.506723
+      ],
+      "period": "清",
+      "periodLabel": "乌布地方王室治所",
+      "enPeriodLabel": "Local royal seat of Ubud",
+      "capitalPeriods": [],
+      "referenceUrl": "https://repo.isi-dps.ac.id/976/1/Komodifikasi_Obyek_Wisata_Puri_Saren_Agung_Ubud%2C_bagian_I.pdf",
+      "historicalIdentity": "royal-residence",
+      "identityLabel": "乌布地方王室治所",
+      "identityEnLabel": "Local royal seat of Ubud",
+      "identityNote": "萨伦王宫作为地方王室治所接入普通古城。与吉安雅、苏卡瓦蒂的政治隶属关系及独立性仍须分别核证，不仅因有王宫生成古都图标。",
+      "identityEnNote": "Historical status and present-day remains are distinguished. Complete dated city walls and palace circuits remain unverified; modern administrative or temple boundaries do not stand for the historical city.",
+      "identitySourceUrl": "https://repo.isi-dps.ac.id/976/1/Komodifikasi_Obyek_Wisata_Puri_Saren_Agung_Ubud%2C_bagian_I.pdf",
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "aliases": [
+        "乌布",
+        "Ubud"
+      ],
+      "wallBoundaryReview": "已接入实际建筑／现状围区；完整分期城墙、宫城边界待核",
+      "focusBounds": [
+        [
+          115.256707,
+          -8.511723
+        ],
+        [
+          115.268707,
+          -8.501722999999998
+        ]
+      ],
+      "focusMaxZoom": 16
     }
   ],
   "counts": {
@@ -8044,7 +8593,7 @@
     "hattusa": 72,
     "ankara": 10,
     "fez": 64,
-    "marrakesh": 35,
+    "marrakesh": 36,
     "meknes": 66,
     "rabat": 28,
     "tangier": 6,
@@ -8195,7 +8744,7 @@
     "longvek": 2,
     "oudong": 0,
     "phnom-penh": 5,
-    "yogyakarta": 7,
+    "yogyakarta": 8,
     "surakarta": 4,
     "kotagede": 1,
     "trowulan": 6,
@@ -8217,7 +8766,19 @@
     "seri-menanti": 1,
     "kuala-lumpur": 1,
     "angkor": 144,
-    "roluos": 3
+    "roluos": 3,
+    "bali-samprangan": 0,
+    "bali-gelgel": 1,
+    "bali-klungkung": 2,
+    "bali-gianyar": 0,
+    "bali-mengwi": 3,
+    "bali-denpasar": 2,
+    "bali-karangasem": 2,
+    "bali-singaraja": 0,
+    "bali-tabanan": 0,
+    "bali-bangli": 0,
+    "bali-negara": 0,
+    "bali-ubud": 1
   },
   "source": "© OpenStreetMap contributors · ODbL",
   "reviewedAt": "2026-10-10"

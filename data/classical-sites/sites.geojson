@@ -344328,6 +344328,1534 @@
         "labelMinZoom": 13,
         "boundaryLabel": false
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "yogyakarta-tamansari-way-549662633",
+        "siteKey": "yogyakarta",
+        "siteName": "日惹",
+        "siteEnName": "Yogyakarta",
+        "name": "塔曼萨里水宫（现状游览范围）",
+        "enName": "Taman Sari Water Castle (mapped visitor precinct)",
+        "role": "palace",
+        "period": "清",
+        "periodLabel": "1758—1765年营建；现状游览范围",
+        "enPeriodLabel": "Built 1758–1765; mapped present-day visitor precinct",
+        "geometryScope": "mapped_current_visitor_precinct",
+        "sourceUrl": "https://www.openstreetmap.org/way/549662633",
+        "referenceUrl": "https://www.kratonjogja.id/tata-rakiting/13-tamansari/",
+        "osmTags": {
+          "addr:city": "Yogyakarta",
+          "addr:postcode": "55133",
+          "area": "yes",
+          "name": "Taman Sari Water Castle",
+          "name:jv": "ꦠꦩꦤ꧀ ꦱꦫꦶ",
+          "start_date": "1765/9",
+          "tourism": "attraction",
+          "wikidata": "Q3135945",
+          "wikimedia_commons": "Category:Taman Sari (Yogyakarta)",
+          "wikipedia": "id:Taman Sari Yogyakarta",
+          "wikipedia:en": "Taman Sari (Yogyakarta)"
+        },
+        "note": "日惹王室园林与水宫遗存。原始闭合面表达现状游览范围，不是完整历史园林、现代旅游村或日惹王城边界；历史园林还包括现已成为居民区的湖池及其他遗迹。",
+        "enNote": "Royal garden and water-castle remains of Yogyakarta. The original closed polygon represents the mapped current visitor precinct, not the complete historical garden, tourist village or city circuit. Former lakes and other remains extend into present-day residential areas.",
+        "label": true,
+        "labelMinZoom": 12,
+        "boundaryLabel": false,
+        "labelCoordinates": [
+          110.35955,
+          -7.81015
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              110.3588656,
+              -7.8103098
+            ],
+            [
+              110.3588851,
+              -7.8101344
+            ],
+            [
+              110.3588094,
+              -7.8101229
+            ],
+            [
+              110.3587231,
+              -7.8101157
+            ],
+            [
+              110.3586924,
+              -7.8101031
+            ],
+            [
+              110.3585616,
+              -7.8099694
+            ],
+            [
+              110.3585734,
+              -7.8099104
+            ],
+            [
+              110.3585867,
+              -7.8098438
+            ],
+            [
+              110.3586346,
+              -7.8098153
+            ],
+            [
+              110.3587678,
+              -7.8097292
+            ],
+            [
+              110.3588683,
+              -7.8097503
+            ],
+            [
+              110.3589588,
+              -7.8097622
+            ],
+            [
+              110.3589811,
+              -7.8096228
+            ],
+            [
+              110.35932,
+              -7.8096921
+            ],
+            [
+              110.3592942,
+              -7.8098467
+            ],
+            [
+              110.3593694,
+              -7.8098582
+            ],
+            [
+              110.3594587,
+              -7.8099774
+            ],
+            [
+              110.3594784,
+              -7.8098639
+            ],
+            [
+              110.3596919,
+              -7.8099101
+            ],
+            [
+              110.3596797,
+              -7.810087
+            ],
+            [
+              110.3596662,
+              -7.8102226
+            ],
+            [
+              110.359428,
+              -7.8101968
+            ],
+            [
+              110.3594327,
+              -7.8101429
+            ],
+            [
+              110.3593169,
+              -7.8102244
+            ],
+            [
+              110.3590709,
+              -7.8101833
+            ],
+            [
+              110.3590471,
+              -7.8103328
+            ],
+            [
+              110.3588656,
+              -7.8103098
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bali-gelgel-way-764495045",
+        "siteKey": "bali-gelgel",
+        "siteName": "格尔格尔",
+        "siteEnName": "Gelgel",
+        "name": "达萨尔布阿纳庙（现状围区）",
+        "enName": "Pura Dasar Buana Gelgel mapped precinct",
+        "role": "temple",
+        "period": "明",
+        "wallPeriods": [
+          "明",
+          "清"
+        ],
+        "periodLabel": "王廷关联庙宇；现状围区，墙体分期待核",
+        "enPeriodLabel": "Mapped present-day fabric; historical construction and later rebuilding are distinguished",
+        "geometryScope": "mapped_current_temple_precinct",
+        "sourceUrl": "https://www.openstreetmap.org/way/764495045",
+        "referenceUrl": "https://gelgel.desa.id/artikel/2018/8/7/sejarah-desa-gelgel",
+        "osmTags": {
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "layer": "1",
+          "name": "Pura Dasar Buana Gelgel",
+          "religion": "hindu"
+        },
+        "note": "原始寺庙现状围区，仅为格尔格尔关联宗教遗存，不是旧王宫或全城界。",
+        "enNote": "Historical status and present-day remains are distinguished. Complete dated city walls and palace circuits remain unverified; modern administrative or temple boundaries do not stand for the historical city. Original OSM geometry is retained; the mapped object is not a complete city circuit.",
+        "label": true,
+        "labelMinZoom": 15,
+        "boundaryLabel": false,
+        "labelCoordinates": [
+          115.40794805083905,
+          -8.5553491
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.407708,
+              -8.5545115
+            ],
+            [
+              115.4084346,
+              -8.5547233
+            ],
+            [
+              115.4082969,
+              -8.5551165
+            ],
+            [
+              115.4082892,
+              -8.5557556
+            ],
+            [
+              115.4084154,
+              -8.5559296
+            ],
+            [
+              115.4083466,
+              -8.5561867
+            ],
+            [
+              115.4074824,
+              -8.5559901
+            ],
+            [
+              115.4074174,
+              -8.5558653
+            ],
+            [
+              115.4077271,
+              -8.5549993
+            ],
+            [
+              115.4077462,
+              -8.5548329
+            ],
+            [
+              115.407708,
+              -8.5545115
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bali-klungkung-way-240887759",
+        "siteKey": "bali-klungkung",
+        "siteName": "克隆孔／塞马拉普拉",
+        "siteEnName": "Klungkung / Semarapura",
+        "name": "克尔塔戈萨司法亭（现存／修复）",
+        "enName": "Kerta Gosa judicial pavilion",
+        "role": "building",
+        "period": "清",
+        "wallPeriods": [
+          "清"
+        ],
+        "periodLabel": "17世纪末以来；现存／修复构件",
+        "enPeriodLabel": "Royal-palace component; surviving or restored footprint",
+        "geometryScope": "mapped_surviving_building",
+        "sourceUrl": "https://www.openstreetmap.org/way/240887759",
+        "referenceUrl": "https://e-museum.klungkungkab.go.id/kerta-gosa/",
+        "osmTags": {
+          "building": "yes",
+          "wikidata": "Q6394777",
+          "wikimedia_commons": "Category:Kerta Gosa",
+          "wikipedia": "en:Kertha Gosa Pavilion"
+        },
+        "note": "原始建筑轮廓，保留现存／修复形态，不作为完整王宫或全城范围。",
+        "enNote": "Historical status and present-day remains are distinguished. Complete dated city walls and palace circuits remain unverified; modern administrative or temple boundaries do not stand for the historical city. Original OSM geometry is retained; the mapped object is not a complete city circuit.",
+        "label": true,
+        "labelMinZoom": 15,
+        "boundaryLabel": false,
+        "labelCoordinates": [
+          115.40358854561433,
+          -8.5354145
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.4035419,
+              -8.5353569
+            ],
+            [
+              115.4035353,
+              -8.5354412
+            ],
+            [
+              115.4035335,
+              -8.5354643
+            ],
+            [
+              115.4036352,
+              -8.5354721
+            ],
+            [
+              115.4036436,
+              -8.5353646
+            ],
+            [
+              115.4035419,
+              -8.5353569
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bali-klungkung-way-240887756",
+        "siteKey": "bali-klungkung",
+        "siteName": "克隆孔／塞马拉普拉",
+        "siteEnName": "Klungkung / Semarapura",
+        "name": "吉利园浮亭（现存／修复）",
+        "enName": "Bale Kambang / Taman Gili pavilion",
+        "role": "building",
+        "period": "清",
+        "wallPeriods": [
+          "清"
+        ],
+        "periodLabel": "17世纪末以来；现存／修复构件",
+        "enPeriodLabel": "Royal-palace component; surviving or restored footprint",
+        "geometryScope": "mapped_surviving_building",
+        "sourceUrl": "https://www.openstreetmap.org/way/240887756",
+        "referenceUrl": "https://e-museum.klungkungkab.go.id/kerta-gosa/",
+        "osmTags": {
+          "building": "temple",
+          "historic": "yes",
+          "image": "https://photos.app.goo.gl/UYG9eC7MLRuqdGqh8",
+          "tourism": "attraction",
+          "wikidata": "Q107366851",
+          "wikimedia_commons": "Category:Bale Kambang"
+        },
+        "note": "原始建筑轮廓，保留现存／修复形态，不作为完整王宫或全城范围。",
+        "enNote": "Historical status and present-day remains are distinguished. Complete dated city walls and palace circuits remain unverified; modern administrative or temple boundaries do not stand for the historical city. Original OSM geometry is retained; the mapped object is not a complete city circuit.",
+        "label": true,
+        "labelMinZoom": 15,
+        "boundaryLabel": false,
+        "labelCoordinates": [
+          115.40334634999999,
+          -8.5356852
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.403274,
+              -8.535773
+            ],
+            [
+              115.4034033,
+              -8.5357835
+            ],
+            [
+              115.4034187,
+              -8.5355974
+            ],
+            [
+              115.4033773,
+              -8.535594
+            ],
+            [
+              115.4033554,
+              -8.5355923
+            ],
+            [
+              115.40334,
+              -8.535591
+            ],
+            [
+              115.4032894,
+              -8.5355869
+            ],
+            [
+              115.403274,
+              -8.535773
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bali-mengwi-way-130632434",
+        "siteKey": "bali-mengwi",
+        "siteName": "孟威",
+        "siteEnName": "Mengwi",
+        "name": "塔曼阿云王室庙园（现状公园范围）",
+        "enName": "Taman Ayun mapped present-day park extent",
+        "role": "temple",
+        "period": "明",
+        "wallPeriods": [
+          "明",
+          "清"
+        ],
+        "periodLabel": "1632—1634年建庙；现状公园面",
+        "enPeriodLabel": "Royal temple built 1632–1634; present-day mapped park",
+        "geometryScope": "mapped_current_park_extent",
+        "sourceUrl": "https://www.openstreetmap.org/way/130632434",
+        "referenceUrl": "https://disbud.badungkab.go.id/pura-taman-ayun-260716135453",
+        "osmTags": {
+          "leisure": "park"
+        },
+        "note": "原始OSM公园范围，不是古代王宫、城墙或全城范围。",
+        "enNote": "Historical status and present-day remains are distinguished. Complete dated city walls and palace circuits remain unverified; modern administrative or temple boundaries do not stand for the historical city. Original OSM geometry is retained; the mapped object is not a complete city circuit.",
+        "label": true,
+        "labelMinZoom": 15,
+        "boundaryLabel": false,
+        "labelCoordinates": [
+          115.17245757841533,
+          -8.54204305
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.1724897,
+              -8.539986
+            ],
+            [
+              115.1722351,
+              -8.5400083
+            ],
+            [
+              115.1721255,
+              -8.5402872
+            ],
+            [
+              115.1718964,
+              -8.5406473
+            ],
+            [
+              115.1718602,
+              -8.5411241
+            ],
+            [
+              115.1714855,
+              -8.5424165
+            ],
+            [
+              115.1715398,
+              -8.5429231
+            ],
+            [
+              115.1714311,
+              -8.543898
+            ],
+            [
+              115.1731484,
+              -8.5441001
+            ],
+            [
+              115.173029,
+              -8.5435451
+            ],
+            [
+              115.1730391,
+              -8.5430812
+            ],
+            [
+              115.173363,
+              -8.54189
+            ],
+            [
+              115.1734327,
+              -8.5416187
+            ],
+            [
+              115.1733576,
+              -8.5409577
+            ],
+            [
+              115.1732399,
+              -8.5402179
+            ],
+            [
+              115.1724897,
+              -8.539986
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bali-denpasar-way-372204845",
+        "siteKey": "bali-denpasar",
+        "siteName": "登巴萨",
+        "siteEnName": "Denpasar",
+        "name": "登巴萨王宫（现状）",
+        "enName": "Puri Agung Denpasar mapped present-day precinct",
+        "role": "palace",
+        "period": "清",
+        "wallPeriods": [
+          "清",
+          "近现代"
+        ],
+        "periodLabel": "历史王室遗存；现状及后期修复／重建",
+        "enPeriodLabel": "Mapped present-day fabric; historical construction and later rebuilding are distinguished",
+        "geometryScope": "mapped_current_palace_precinct",
+        "sourceUrl": "https://www.openstreetmap.org/way/372204845",
+        "referenceUrl": "https://denpasarkota.go.id/page/sejarah",
+        "osmTags": {
+          "addr:city": "Denpasar",
+          "addr:street": "Jalan Veteran",
+          "landuse": "residential",
+          "name": "Puri Agung Denpasar"
+        },
+        "note": "原始OSM现状王宫标绘面，包含后世修复或重建；不作为已测定历史宫城或全城界。旧登巴萨宫1906年毁坏；本面不复原旧宫范围。",
+        "enNote": "Historical status and present-day remains are distinguished. Complete dated city walls and palace circuits remain unverified; modern administrative or temple boundaries do not stand for the historical city. Original OSM geometry is retained; the mapped object is not a complete city circuit.",
+        "label": true,
+        "labelMinZoom": 12,
+        "boundaryLabel": false,
+        "labelCoordinates": [
+          115.21774569388955,
+          -8.651110150000001
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.2173853,
+              -8.6508226
+            ],
+            [
+              115.2176802,
+              -8.6508361
+            ],
+            [
+              115.2177037,
+              -8.6507283
+            ],
+            [
+              115.2179158,
+              -8.6507324
+            ],
+            [
+              115.2179077,
+              -8.650877
+            ],
+            [
+              115.2181252,
+              -8.6508931
+            ],
+            [
+              115.2181318,
+              -8.6509553
+            ],
+            [
+              115.218529,
+              -8.6509941
+            ],
+            [
+              115.2185195,
+              -8.6511262
+            ],
+            [
+              115.2181313,
+              -8.6510981
+            ],
+            [
+              115.2181211,
+              -8.6512348
+            ],
+            [
+              115.217987,
+              -8.6512227
+            ],
+            [
+              115.217991,
+              -8.6511644
+            ],
+            [
+              115.2178467,
+              -8.6511524
+            ],
+            [
+              115.2178203,
+              -8.651492
+            ],
+            [
+              115.2173304,
+              -8.6514719
+            ],
+            [
+              115.2173853,
+              -8.6508226
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bali-denpasar-way-327028248",
+        "siteKey": "bali-denpasar",
+        "siteName": "登巴萨",
+        "siteEnName": "Denpasar",
+        "name": "佩梅楚坦王宫（现状）",
+        "enName": "Puri Pemecutan mapped present-day precinct",
+        "role": "palace",
+        "period": "清",
+        "wallPeriods": [
+          "清",
+          "近现代"
+        ],
+        "periodLabel": "历史王室遗存；现状及后期修复／重建",
+        "enPeriodLabel": "Mapped present-day fabric; historical construction and later rebuilding are distinguished",
+        "geometryScope": "mapped_current_palace_precinct",
+        "sourceUrl": "https://www.openstreetmap.org/way/327028248",
+        "referenceUrl": "https://denpasarkota.go.id/page/sejarah",
+        "osmTags": {
+          "barrier": "wall",
+          "landuse": "residential",
+          "name": "Puri Pemecutan"
+        },
+        "note": "原始OSM现状王宫标绘面，包含后世修复或重建；不作为已测定历史宫城或全城界。旧登巴萨宫1906年毁坏；本面不复原旧宫范围。",
+        "enNote": "Historical status and present-day remains are distinguished. Complete dated city walls and palace circuits remain unverified; modern administrative or temple boundaries do not stand for the historical city. Original OSM geometry is retained; the mapped object is not a complete city circuit.",
+        "label": true,
+        "labelMinZoom": 12,
+        "boundaryLabel": false,
+        "labelCoordinates": [
+          115.21050229173409,
+          -8.6579499
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.2100611,
+              -8.6575954
+            ],
+            [
+              115.2102465,
+              -8.6576258
+            ],
+            [
+              115.21032,
+              -8.6576378
+            ],
+            [
+              115.2103106,
+              -8.6576935
+            ],
+            [
+              115.2105225,
+              -8.6577333
+            ],
+            [
+              115.210535,
+              -8.6576656
+            ],
+            [
+              115.2105574,
+              -8.6575441
+            ],
+            [
+              115.2105587,
+              -8.657537
+            ],
+            [
+              115.2108336,
+              -8.6575742
+            ],
+            [
+              115.2107907,
+              -8.6578871
+            ],
+            [
+              115.2110267,
+              -8.6579083
+            ],
+            [
+              115.2110093,
+              -8.6581496
+            ],
+            [
+              115.210995,
+              -8.658147
+            ],
+            [
+              115.2108953,
+              -8.6581391
+            ],
+            [
+              115.21088,
+              -8.6583628
+            ],
+            [
+              115.2105627,
+              -8.6583392
+            ],
+            [
+              115.2101054,
+              -8.658306
+            ],
+            [
+              115.210088,
+              -8.6583006
+            ],
+            [
+              115.2100464,
+              -8.6582875
+            ],
+            [
+              115.2099874,
+              -8.6582411
+            ],
+            [
+              115.2099579,
+              -8.6581787
+            ],
+            [
+              115.2099525,
+              -8.6581138
+            ],
+            [
+              115.2099525,
+              -8.6580965
+            ],
+            [
+              115.2099525,
+              -8.6580753
+            ],
+            [
+              115.2100453,
+              -8.6576653
+            ],
+            [
+              115.2100611,
+              -8.6575954
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bali-karangasem-way-204904036",
+        "siteKey": "bali-karangasem",
+        "siteName": "卡朗阿森／阿姆拉普拉",
+        "siteEnName": "Karangasem / Amlapura",
+        "name": "卡朗阿森旧王宫（现状）",
+        "enName": "Puri Gede mapped precinct",
+        "role": "palace",
+        "period": "清",
+        "wallPeriods": [
+          "清",
+          "近现代"
+        ],
+        "periodLabel": "历史王室遗存；现状及后期修复／重建",
+        "enPeriodLabel": "Mapped present-day fabric; historical construction and later rebuilding are distinguished",
+        "geometryScope": "mapped_current_palace_precinct",
+        "sourceUrl": "https://www.openstreetmap.org/way/204904036",
+        "referenceUrl": "https://disparda.baliprov.go.id/karangasem-agung-palace",
+        "osmTags": {
+          "access": "private",
+          "barrier": "wall",
+          "castle_type": "palace",
+          "historic": "castle",
+          "landuse": "residential",
+          "name": "Puri Gede"
+        },
+        "note": "原始OSM现状王宫标绘面，包含后世修复或重建；不作为已测定历史宫城或全城界。",
+        "enNote": "Historical status and present-day remains are distinguished. Complete dated city walls and palace circuits remain unverified; modern administrative or temple boundaries do not stand for the historical city. Original OSM geometry is retained; the mapped object is not a complete city circuit.",
+        "label": true,
+        "labelMinZoom": 12,
+        "boundaryLabel": false,
+        "labelCoordinates": [
+          115.61549449345603,
+          -8.443380099999999
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.6146662,
+              -8.4435392
+            ],
+            [
+              115.6150344,
+              -8.4435153
+            ],
+            [
+              115.6150371,
+              -8.4435551
+            ],
+            [
+              115.615192,
+              -8.4435455
+            ],
+            [
+              115.615275,
+              -8.4435367
+            ],
+            [
+              115.6153044,
+              -8.4435362
+            ],
+            [
+              115.6152907,
+              -8.4433983
+            ],
+            [
+              115.6152791,
+              -8.4432814
+            ],
+            [
+              115.6152138,
+              -8.4426249
+            ],
+            [
+              115.6156389,
+              -8.4425949
+            ],
+            [
+              115.6157232,
+              -8.4436766
+            ],
+            [
+              115.6157501,
+              -8.4440225
+            ],
+            [
+              115.6151314,
+              -8.4440987
+            ],
+            [
+              115.6151258,
+              -8.4441097
+            ],
+            [
+              115.6147313,
+              -8.4441653
+            ],
+            [
+              115.6147009,
+              -8.4438429
+            ],
+            [
+              115.6146814,
+              -8.4436804
+            ],
+            [
+              115.6146662,
+              -8.4435392
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bali-karangasem-way-204904050",
+        "siteKey": "bali-karangasem",
+        "siteName": "卡朗阿森／阿姆拉普拉",
+        "siteEnName": "Karangasem / Amlapura",
+        "name": "卡朗阿森大王宫（现状）",
+        "enName": "Puri Agung Karangasem mapped precinct",
+        "role": "palace",
+        "period": "清",
+        "wallPeriods": [
+          "清",
+          "近现代"
+        ],
+        "periodLabel": "历史王室遗存；现状及后期修复／重建",
+        "enPeriodLabel": "Mapped present-day fabric; historical construction and later rebuilding are distinguished",
+        "geometryScope": "mapped_current_palace_precinct",
+        "sourceUrl": "https://www.openstreetmap.org/way/204904050",
+        "referenceUrl": "https://disparda.baliprov.go.id/karangasem-agung-palace",
+        "osmTags": {
+          "access": "yes",
+          "castle_type": "palace",
+          "historic": "castle",
+          "landuse": "residential",
+          "name": "Puri Agung Karangasem"
+        },
+        "note": "原始OSM现状王宫标绘面，包含后世修复或重建；不作为已测定历史宫城或全城界。",
+        "enNote": "Historical status and present-day remains are distinguished. Complete dated city walls and palace circuits remain unverified; modern administrative or temple boundaries do not stand for the historical city. Original OSM geometry is retained; the mapped object is not a complete city circuit.",
+        "label": true,
+        "labelMinZoom": 12,
+        "boundaryLabel": false,
+        "labelCoordinates": [
+          115.61630101474088,
+          -8.44387395
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.6160444,
+              -8.4449805
+            ],
+            [
+              115.6167307,
+              -8.4448915
+            ],
+            [
+              115.6167012,
+              -8.444603
+            ],
+            [
+              115.6167607,
+              -8.4446005
+            ],
+            [
+              115.6167307,
+              -8.4442481
+            ],
+            [
+              115.6167,
+              -8.4438708
+            ],
+            [
+              115.6168019,
+              -8.4438601
+            ],
+            [
+              115.6169037,
+              -8.4438321
+            ],
+            [
+              115.6167938,
+              -8.4428544
+            ],
+            [
+              115.6166618,
+              -8.4428696
+            ],
+            [
+              115.6166522,
+              -8.4427674
+            ],
+            [
+              115.6164676,
+              -8.4427925
+            ],
+            [
+              115.615823,
+              -8.4428335
+            ],
+            [
+              115.6158982,
+              -8.4438519
+            ],
+            [
+              115.6159368,
+              -8.4440901
+            ],
+            [
+              115.6160444,
+              -8.4449805
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bali-ubud-way-284575978",
+        "siteKey": "bali-ubud",
+        "siteName": "乌布",
+        "siteEnName": "Ubud",
+        "name": "乌布萨伦王宫（现状）",
+        "enName": "Puri Saren Agung mapped precinct",
+        "role": "palace",
+        "period": "清",
+        "wallPeriods": [
+          "清",
+          "近现代"
+        ],
+        "periodLabel": "历史王室遗存；现状及后期修复／重建",
+        "enPeriodLabel": "Mapped present-day fabric; historical construction and later rebuilding are distinguished",
+        "geometryScope": "mapped_current_palace_precinct",
+        "sourceUrl": "https://www.openstreetmap.org/way/284575978",
+        "referenceUrl": "https://repo.isi-dps.ac.id/976/1/Komodifikasi_Obyek_Wisata_Puri_Saren_Agung_Ubud%2C_bagian_I.pdf",
+        "osmTags": {
+          "addr:city": "Ubud, Kecamatan Gianyar, Kabupaten Gianyar, Bali, Indonesia",
+          "addr:postcode": "80571",
+          "addr:street": "Jalan Raya Ubud",
+          "castle_type": "palace",
+          "historic": "castle",
+          "image": "https://photos.app.goo.gl/Q8YD7jimhcu4A9bF7",
+          "name": "Puri Saren Agung",
+          "name:en": "Puri Saren Agung Ubud Palace",
+          "name:zh": "烏布皇宮;乌布皇宫",
+          "opening_hours": "09:00-18:00,09:00-19:00",
+          "tourism": "attraction",
+          "url": "https://youtu.be/DVnm-nIhz7w",
+          "wikidata": "Q19646466",
+          "wikimedia_commons": "Category:Puri Saren Agung",
+          "wikipedia": "en:Ubud Palace"
+        },
+        "note": "原始OSM现状王宫标绘面，包含后世修复或重建；不作为已测定历史宫城或全城界。",
+        "enNote": "Historical status and present-day remains are distinguished. Complete dated city walls and palace circuits remain unverified; modern administrative or temple boundaries do not stand for the historical city. Original OSM geometry is retained; the mapped object is not a complete city circuit.",
+        "label": true,
+        "labelMinZoom": 12,
+        "boundaryLabel": false,
+        "labelCoordinates": [
+          115.2627070653565,
+          -8.50672315
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.2625644,
+              -8.5065123
+            ],
+            [
+              115.2629564,
+              -8.5066634
+            ],
+            [
+              115.2628497,
+              -8.506934
+            ],
+            [
+              115.2624577,
+              -8.506783
+            ],
+            [
+              115.2625644,
+              -8.5065123
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "siteKey": "bali-mengwi",
+        "siteName": "孟威",
+        "siteEnName": "Mengwi",
+        "role": "wall",
+        "period": "近现代",
+        "periodLabel": "现状标绘；墙体具体分期待核",
+        "enPeriodLabel": "Present-day mapped walls; construction phases remain unverified",
+        "geometryScope": "mapped_current_temple_walls",
+        "referenceUrl": "https://disbud.badungkab.go.id/pura-taman-ayun-260716135453",
+        "note": "位于塔曼阿云现状庙园内的原始围墙，不是孟威全城或王宫墙界。不能由1634年建庙直接推定现墙年代。开放段不补接；闭合小围墙范围按原始环填充。",
+        "enNote": "Original walls within the present-day Taman Ayun park, not the city or palace circuit. The temple foundation date does not date the mapped fabric. Open chains remain open; a closed local enclosure retains its original ring.",
+        "label": true,
+        "labelMinZoom": 15,
+        "boundaryLabel": false,
+        "id": "bali-mengwi-interior-open-walls",
+        "name": "塔曼阿云庙园内围墙（现状开放段）",
+        "enName": "Taman Ayun internal walls (mapped open sections)",
+        "sourceUrl": "https://www.openstreetmap.org/way/500264208",
+        "sourceWays": [
+          {
+            "id": "500264208",
+            "url": "https://www.openstreetmap.org/way/500264208",
+            "tags": {
+              "barrier": "wall",
+              "height": "2",
+              "wall": "dry_stone"
+            }
+          },
+          {
+            "id": "500264211",
+            "url": "https://www.openstreetmap.org/way/500264211",
+            "tags": {
+              "barrier": "wall",
+              "height": "2",
+              "wall": "dry_stone"
+            }
+          },
+          {
+            "id": "501516186",
+            "url": "https://www.openstreetmap.org/way/501516186",
+            "tags": {
+              "barrier": "wall",
+              "height": "2",
+              "wall": "dry_stone"
+            }
+          },
+          {
+            "id": "501516187",
+            "url": "https://www.openstreetmap.org/way/501516187",
+            "tags": {
+              "barrier": "wall",
+              "height": "2",
+              "wall": "dry_stone"
+            }
+          },
+          {
+            "id": "501516188",
+            "url": "https://www.openstreetmap.org/way/501516188",
+            "tags": {
+              "barrier": "wall",
+              "height": "1"
+            }
+          },
+          {
+            "id": "501516189",
+            "url": "https://www.openstreetmap.org/way/501516189",
+            "tags": {
+              "barrier": "wall",
+              "height": "1"
+            }
+          },
+          {
+            "id": "501525708",
+            "url": "https://www.openstreetmap.org/way/501525708",
+            "tags": {
+              "barrier": "wall",
+              "height": "1.5",
+              "wall": "dry_stone"
+            }
+          }
+        ],
+        "sourceWayCount": 7,
+        "labelGroupKey": "bali-mengwi-interior-open"
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              115.1722718,
+              -8.5420633
+            ],
+            [
+              115.1722388,
+              -8.5422274
+            ],
+            [
+              115.1724206,
+              -8.5422586
+            ]
+          ],
+          [
+            [
+              115.1724206,
+              -8.5422586
+            ],
+            [
+              115.1726233,
+              -8.5422916
+            ],
+            [
+              115.1727946,
+              -8.5414299
+            ],
+            [
+              115.1724166,
+              -8.54136
+            ],
+            [
+              115.1722773,
+              -8.5420474
+            ]
+          ],
+          [
+            [
+              115.1723286,
+              -8.5427069
+            ],
+            [
+              115.1723441,
+              -8.5427094
+            ],
+            [
+              115.1725717,
+              -8.5427554
+            ]
+          ],
+          [
+            [
+              115.1723286,
+              -8.5427069
+            ],
+            [
+              115.1720523,
+              -8.5426528
+            ]
+          ],
+          [
+            [
+              115.1721768,
+              -8.5435874
+            ],
+            [
+              115.1719166,
+              -8.5435257
+            ],
+            [
+              115.1720167,
+              -8.5426653
+            ],
+            [
+              115.1718827,
+              -8.5426424
+            ],
+            [
+              115.1720788,
+              -8.5415884
+            ],
+            [
+              115.1722759,
+              -8.5413285
+            ],
+            [
+              115.1723255,
+              -8.5409996
+            ]
+          ],
+          [
+            [
+              115.1722364,
+              -8.5436006
+            ],
+            [
+              115.1726482,
+              -8.5436868
+            ],
+            [
+              115.1727514,
+              -8.543088
+            ]
+          ],
+          [
+            [
+              115.172197,
+              -8.5437917
+            ],
+            [
+              115.1724666,
+              -8.5438586
+            ],
+            [
+              115.1729865,
+              -8.5439709
+            ],
+            [
+              115.1730319,
+              -8.5439807
+            ],
+            [
+              115.1731029,
+              -8.543976
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "siteKey": "bali-mengwi",
+        "siteName": "孟威",
+        "siteEnName": "Mengwi",
+        "role": "wall",
+        "period": "近现代",
+        "periodLabel": "现状标绘；墙体具体分期待核",
+        "enPeriodLabel": "Present-day mapped walls; construction phases remain unverified",
+        "geometryScope": "mapped_current_temple_walls",
+        "referenceUrl": "https://disbud.badungkab.go.id/pura-taman-ayun-260716135453",
+        "note": "位于塔曼阿云现状庙园内的原始围墙，不是孟威全城或王宫墙界。不能由1634年建庙直接推定现墙年代。开放段不补接；闭合小围墙范围按原始环填充。",
+        "enNote": "Original walls within the present-day Taman Ayun park, not the city or palace circuit. The temple foundation date does not date the mapped fabric. Open chains remain open; a closed local enclosure retains its original ring.",
+        "label": true,
+        "labelMinZoom": 15,
+        "boundaryLabel": false,
+        "id": "bali-mengwi-wall-way-501516190",
+        "name": "塔曼阿云庙园内闭合围墙范围（现状）",
+        "enName": "Taman Ayun mapped closed internal enclosure",
+        "sourceUrl": "https://www.openstreetmap.org/way/501516190",
+        "osmTags": {
+          "barrier": "wall",
+          "height": "2",
+          "wall": "dry_stone"
+        },
+        "labelCoordinates": [
+          115.172494925,
+          -8.54308605
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.1724313,
+              -8.5429343
+            ],
+            [
+              115.1723815,
+              -8.5432061
+            ],
+            [
+              115.1725586,
+              -8.5432378
+            ],
+            [
+              115.1726083,
+              -8.542966
+            ],
+            [
+              115.1724313,
+              -8.5429343
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -7.9861065,
+              31.6316936
+            ],
+            [
+              -7.9861814,
+              31.6318067
+            ],
+            [
+              -7.9863177,
+              31.6317342
+            ],
+            [
+              -7.9864445,
+              31.6316949
+            ],
+            [
+              -7.9864671,
+              31.6316376
+            ],
+            [
+              -7.9862557,
+              31.6316611
+            ],
+            [
+              -7.9862544,
+              31.6315412
+            ],
+            [
+              -7.9862542,
+              31.6315175
+            ],
+            [
+              -7.9864058,
+              31.6315238
+            ],
+            [
+              -7.9864095,
+              31.6314805
+            ],
+            [
+              -7.9862559,
+              31.6314739
+            ],
+            [
+              -7.9862548,
+              31.6315063
+            ],
+            [
+              -7.9860993,
+              31.631505
+            ],
+            [
+              -7.9860904,
+              31.6314224
+            ],
+            [
+              -7.986003,
+              31.6314241
+            ],
+            [
+              -7.9859998,
+              31.6313961
+            ],
+            [
+              -7.9859843,
+              31.6312924
+            ],
+            [
+              -7.9858392,
+              31.6314389
+            ],
+            [
+              -7.9856675,
+              31.6314503
+            ],
+            [
+              -7.9856957,
+              31.6316502
+            ],
+            [
+              -7.9858181,
+              31.6316359
+            ],
+            [
+              -7.9858207,
+              31.631674
+            ],
+            [
+              -7.9860229,
+              31.631652
+            ],
+            [
+              -7.9860298,
+              31.6316977
+            ],
+            [
+              -7.9861065,
+              31.6316936
+            ]
+          ],
+          [
+            [
+              -7.9861797,
+              31.6315897
+            ],
+            [
+              -7.9861188,
+              31.6315934
+            ],
+            [
+              -7.9861232,
+              31.6316465
+            ],
+            [
+              -7.9861841,
+              31.6316428
+            ],
+            [
+              -7.9861797,
+              31.6315897
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "marrakesh-museum-relation-4627685",
+        "siteKey": "marrakesh",
+        "siteName": "马拉喀什",
+        "siteEnName": "Marrakesh",
+        "name": "马拉喀什博物馆（迈内比府邸）",
+        "labelName": "马拉喀什博物馆",
+        "enName": "Marrakech Museum (Dar Mnebhi)",
+        "enLabelName": "Marrakech Museum",
+        "aliases": [
+          "马拉喀什博物馆",
+          "Marrakech Museum",
+          "Marrakesh Museum",
+          "Musée de Marrakech",
+          "Dar Mnebhi",
+          "Dar Menebhi"
+        ],
+        "role": "building",
+        "period": "清",
+        "wallPeriods": [
+          "清",
+          "近现代"
+        ],
+        "periodLabel": "19世纪末—20世纪初府邸；现状博物馆",
+        "enPeriodLabel": "Late-19th / early-20th-century residence; present-day museum",
+        "geometryScope": "mapped_current_building_footprint",
+        "sourceUrl": "https://www.openstreetmap.org/relation/4627685",
+        "referenceUrl": "https://visitmarrakech.com/en/the-7-must-see-museums-of-marrakech-al-bahja/",
+        "osmTags": {
+          "building": "yes",
+          "fee": "yes",
+          "name": "Musée de Marrakech متحف مراكش",
+          "name:ar": "متحف مراكش",
+          "name:en": "Marrakech Museum",
+          "name:fr": "Musée de Marrakech",
+          "name:ko": "마라케시 박물관",
+          "opening_hours": "09:00-18:30",
+          "phone": "+212 244418",
+          "tourism": "museum",
+          "type": "multipolygon",
+          "website": "https://marrakechmuseum.com",
+          "wikidata": "Q3090631",
+          "wikipedia": "ar:متحف مراكش"
+        },
+        "note": "设于迈内比府邸，位于老城本·优素福广场。保留原始建筑外环及院落孔洞；这是一处独立博物馆及历史府邸，不是马拉喀什古都根点、王宫城界或整个麦地那世界遗产。",
+        "enNote": "Museum in Dar Mnebhi at Ben Youssef Square. Original building ring and courtyard hole are retained. This individual museum and historic residence is separate from the capital root, palace circuit and the entire Medina World Heritage property.",
+        "label": true,
+        "labelMinZoom": 12,
+        "boundaryLabel": false,
+        "labelCoordinates": [
+          -7.986041503402047,
+          31.6315119
+        ],
+        "visitAliases": [
+          "马拉喀什博物馆",
+          "Marrakech Museum",
+          "Marrakesh Museum",
+          "Musée de Marrakech",
+          "Dar Mnebhi",
+          "Dar Menebhi",
+          "马拉喀什博物馆（迈内比府邸）",
+          "Marrakech Museum (Dar Mnebhi)"
+        ]
+      }
     }
   ]
 }

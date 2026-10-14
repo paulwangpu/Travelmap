@@ -1,0 +1,247 @@
+{
+  "addedCapitalRoots": 11,
+  "addedCapitalRecords": 11,
+  "addedOrdinaryCities": 1,
+  "addedPolygons": 10,
+  "originalFeaturesPreserved": 2335,
+  "originalRootsPreserved": 320,
+  "worldHeritageUnchanged": true,
+  "completeHistoricalCityWallsAdded": 0,
+  "rows": [
+    {
+      "key": "bali-samprangan",
+      "name": "桑普朗甘",
+      "classification": "capital",
+      "identity": "克雷斯纳·克帕基桑王朝王廷",
+      "years": "约1350年代—14世纪末（迁都年待核）",
+      "correspondingChinesePeriods": [
+        "元",
+        "明"
+      ],
+      "source": "https://kebudayaan.kemdikbud.go.id/bpcbbali/inventarisasi-di-pura-agung-kenter-gumi-bagian-1/",
+      "note": "属满者伯夷影响下的巴厘王廷；始年1350／1352及迁往格尔格尔年代存在资料差异。根点为桑普朗甘城址参照点，旧王宫未取得可靠矢量。",
+      "status": "历史身份已核；王宫矢量及完整分期城界待核",
+      "geometryCount": 0,
+      "center": [
+        115.342,
+        -8.547
+      ]
+    },
+    {
+      "key": "bali-gelgel",
+      "name": "格尔格尔",
+      "classification": "capital",
+      "identity": "格尔格尔王国都城",
+      "years": "约14世纪末—1686（末期及迁驻年代有异说）",
+      "correspondingChinesePeriods": [
+        "明",
+        "清"
+      ],
+      "source": "https://gelgel.desa.id/artikel/2018/8/7/sejarah-desa-gelgel",
+      "note": "与桑普朗甘及克隆孔分址。王廷旧址、王朝终结及反叛者占据阶段须区别；达萨尔布阿纳庙只作为关联遗存，不是宫城。",
+      "status": "已接入实际建筑／现状围区；完整分期城墙、宫城边界待核",
+      "geometryCount": 1,
+      "center": [
+        115.403,
+        -8.558
+      ]
+    },
+    {
+      "key": "bali-klungkung",
+      "name": "克隆孔／塞马拉普拉",
+      "classification": "capital",
+      "identity": "克隆孔王国都城",
+      "years": "1686—1908",
+      "correspondingChinesePeriods": [
+        "清"
+      ],
+      "source": "https://www.klungkungkab.go.id/halaman/detail/sejarah-kerajaan",
+      "note": "当地官方记1686年迁都、1908年荷兰征服。现存司法亭和吉利园浮亭为王宫组件；司法亭营建1686／约1700年的官方叙述存在差异。",
+      "status": "已接入实际建筑／现状围区；完整分期城墙、宫城边界待核",
+      "geometryCount": 2,
+      "center": [
+        115.4034,
+        -8.5355
+      ]
+    },
+    {
+      "key": "bali-gianyar",
+      "name": "吉安雅",
+      "classification": "capital",
+      "identity": "吉安雅王国都城",
+      "years": "1771年起（殖民间接统治时期地位须区分）",
+      "correspondingChinesePeriods": [
+        "清"
+      ],
+      "source": "https://gianyarkab.go.id/informasi-publik/berita/peringatan-hari-jadi-ke-242-kota-gianyar-perdalam-rasa-bangga-sebagai-masyarakat-gianyar",
+      "note": "1771年王宫设立为官方城史依据。根点参照现王宫关联宗教建筑的位置，不代表王宫完整范围；没有误用搜索返回的乌布或佩利亚坦王宫。",
+      "status": "历史身份已核；王宫矢量及完整分期城界待核",
+      "geometryCount": 0,
+      "center": [
+        115.32965,
+        -8.54142
+      ]
+    },
+    {
+      "key": "bali-mengwi",
+      "name": "孟威",
+      "classification": "capital",
+      "identity": "孟威王国都城",
+      "years": "17—19世纪（王国1891年覆亡）",
+      "correspondingChinesePeriods": [
+        "明",
+        "清"
+      ],
+      "source": "https://disbud.badungkab.go.id/pura-taman-ayun-260716135453",
+      "note": "塔曼阿云为王室庙宇，官方记1632—1634年营建。本轮仅表达OSM现状公园面，不作为王宫、王城或整个世界遗产范围。孟威王国始年及政治中心早期迁驻仍待核。",
+      "status": "已接入实际建筑／现状围区；完整分期城墙、宫城边界待核",
+      "geometryCount": 3,
+      "center": [
+        115.16728,
+        -8.54656
+      ]
+    },
+    {
+      "key": "bali-denpasar",
+      "name": "登巴萨",
+      "classification": "capital",
+      "identity": "巴东王国都城",
+      "years": "1788—1906",
+      "correspondingChinesePeriods": [
+        "清"
+      ],
+      "source": "https://denpasarkota.go.id/page/sejarah",
+      "note": "1788年建成的旧王宫于1906年战争中毁坏。现王宫及佩梅楚坦王宫几何表达现状与后期重建，不复原旧宫城；巴东多个王廷节点共用本城根点。",
+      "status": "已接入实际建筑／现状围区；完整分期城墙、宫城边界待核",
+      "geometryCount": 2,
+      "center": [
+        115.21774569388955,
+        -8.651110150000001
+      ]
+    },
+    {
+      "key": "bali-karangasem",
+      "name": "卡朗阿森／阿姆拉普拉",
+      "classification": "capital",
+      "identity": "卡朗阿森王国都城",
+      "years": "17世纪—1894（其后为殖民间接统治王廷）",
+      "correspondingChinesePeriods": [
+        "清"
+      ],
+      "source": "https://disparda.baliprov.go.id/karangasem-agung-palace",
+      "note": "独立王国与1894年后的殖民间接统治地位分开说明。城名1970年改阿姆拉普拉；两座现王宫范围不代表全城或整个历代宫城。17世纪较早迁驻阶段待核。",
+      "status": "已接入实际建筑／现状围区；完整分期城墙、宫城边界待核",
+      "geometryCount": 2,
+      "center": [
+        115.61630101474088,
+        -8.44387395
+      ]
+    },
+    {
+      "key": "bali-singaraja",
+      "name": "新加坡拉／辛加拉惹",
+      "classification": "capital",
+      "identity": "布勒伦王国都城",
+      "years": "1604年起；1849年征服后地位改变",
+      "correspondingChinesePeriods": [
+        "明",
+        "清"
+      ],
+      "source": "https://bulelengkab.go.id/informasi/detail/profil/30_sejarah-kota-singaraja",
+      "note": "官方城史记1604年建立新王宫并迁驻；1849年战争与后期殖民行政中心身份分开。根点为城址参照，原王宫和完整城防尚无可靠矢量。",
+      "status": "历史身份已核；王宫矢量及完整分期城界待核",
+      "geometryCount": 0,
+      "center": [
+        115.091,
+        -8.112
+      ]
+    },
+    {
+      "key": "bali-tabanan",
+      "name": "塔巴南",
+      "classification": "capital",
+      "identity": "塔巴南王国都城",
+      "years": "至少18—19世纪至1906（更早迁都分期待核）",
+      "correspondingChinesePeriods": [
+        "清"
+      ],
+      "source": "https://disbud.tabanankab.go.id/2021/08/",
+      "note": "官方王国史追溯1352—1906，但王国创立年代不直接作为迁入现城址的年代。早期布查甘王廷和后来的塔巴南城址须区别，暂不冒充已定位早期宫址。",
+      "status": "历史身份已核；王宫矢量及完整分期城界待核",
+      "geometryCount": 0,
+      "center": [
+        115.125,
+        -8.54
+      ]
+    },
+    {
+      "key": "bali-bangli",
+      "name": "邦利",
+      "classification": "capital",
+      "identity": "邦利王国都城",
+      "years": "至少18—19世纪（更早及殖民转型分期待核）",
+      "correspondingChinesePeriods": [
+        "清"
+      ],
+      "source": "https://kebudayaan.kemdikbud.go.id/bpnbbali/kediaman-raja-dan-bangsawan-bali/",
+      "note": "确为巴厘地方王国王廷；不能把现代邦利行政区、多处寺庙或其他同名王宫当成全城。王宫围区及确切都城起讫仍待核。",
+      "status": "历史身份已核；王宫矢量及完整分期城界待核",
+      "geometryCount": 0,
+      "center": [
+        115.354,
+        -8.454
+      ]
+    },
+    {
+      "key": "bali-negara",
+      "name": "内加拉",
+      "classification": "capital",
+      "identity": "占布拉纳王国都城",
+      "years": "19世纪初起；1849年签约后政治地位改变",
+      "correspondingChinesePeriods": [
+        "清"
+      ],
+      "source": "https://jembranakab.go.id/index.php/sejarah",
+      "note": "官方区分较早占布拉纳旧王廷和19世纪初新建内加拉王宫。本轮仅建内加拉根点；旧王廷尚待独立定位，不合并两处宫址。",
+      "status": "历史身份已核；王宫矢量及完整分期城界待核",
+      "geometryCount": 0,
+      "center": [
+        114.626,
+        -8.365
+      ]
+    },
+    {
+      "key": "bali-ubud",
+      "name": "乌布",
+      "classification": "royal-residence",
+      "identity": "乌布地方王室治所",
+      "years": "19世纪以来（王室驻地，非已证实独立国家首都）",
+      "correspondingChinesePeriods": [
+        "清",
+        "近现代"
+      ],
+      "source": "https://repo.isi-dps.ac.id/976/1/Komodifikasi_Obyek_Wisata_Puri_Saren_Agung_Ubud%2C_bagian_I.pdf",
+      "note": "萨伦王宫作为地方王室治所接入普通古城。与吉安雅、苏卡瓦蒂的政治隶属关系及独立性仍须分别核证，不仅因有王宫生成古都图标。",
+      "status": "已接入实际建筑／现状围区；完整分期城墙、宫城边界待核",
+      "geometryCount": 1,
+      "center": [
+        115.262707,
+        -8.506723
+      ]
+    }
+  ],
+  "pending": [
+    "全部条目的完整分期城墙及历史宫城墙界",
+    "桑普朗甘旧宫、格尔格尔旧宫、吉安雅、孟威、新加坡拉、塔巴南、邦利、内加拉王宫可靠矢量",
+    "早期巴厘佩真／贝杜鲁政治中心及王宫边界",
+    "占布拉纳旧王廷、苏卡瓦蒂、帕扬安、锡德门、塔曼巴厘等须逐址核证"
+  ],
+  "totals": {
+    "roots": 331,
+    "records": 540,
+    "sites": 199,
+    "features": 2346
+  },
+  "addedOpenWallFeatures": 1,
+  "addedOpenWallWays": 7
+}
