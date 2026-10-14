@@ -16184,7 +16184,10 @@ function renderAfterCheckinChange() {
     if (document.querySelector('[data-page="achievements"]')?.classList.contains("active")) renderAchievements();
     if (document.querySelector('[data-page="imports"]')?.classList.contains("active")) renderDataInventory();
     if (isMapPageActive()) {
-      if (mapLibreMap && mapLibreStyleReady) renderMapLibreMarkers();
+      if (mapLibreMap && mapLibreStyleReady) {
+        renderMapLibreMarkers();
+        CapitalMapLayers.sync(mapLibreMap);
+      }
       scheduleCoverageMapRefresh();
     }
   });
