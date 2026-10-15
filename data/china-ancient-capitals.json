@@ -284,7 +284,10 @@
       "siteOrganization": {
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
-      }
+      },
+      "mapOverviewName": "二里头遗址",
+      "mapOverviewEnName": "Erlitou site",
+      "mapDisplayEnName": "Erlitou site"
     },
     {
       "lat": 35.067,
@@ -950,7 +953,10 @@
       "siteOrganization": {
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
-      }
+      },
+      "mapOverviewName": "偃师商城",
+      "mapOverviewEnName": "Yanshi Shang city",
+      "mapDisplayEnName": "Yanshi Shang city"
     },
     {
       "lat": 36.1223643,
@@ -1066,7 +1072,10 @@
       "siteOrganization": {
         "decision": "晚商殷墟、洹北商城及商相地望分别说明；商相待核，不共用已知展示区作城界。",
         "verification": "已有分期依据或明确待核事项"
-      }
+      },
+      "mapOverviewName": "殷墟",
+      "mapOverviewEnName": "Yinxu",
+      "mapDisplayEnName": "Yinxu, Anyang"
     },
     {
       "lat": 37.0706,
@@ -1362,7 +1371,10 @@
       "siteOrganization": {
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
-      }
+      },
+      "mapOverviewName": "丰镐遗址",
+      "mapOverviewEnName": "Fenghao site",
+      "mapDisplayEnName": "Fenghao site (chariot-pit reference)"
     },
     {
       "lat": 34.6892,
@@ -1429,7 +1441,10 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapOverviewName": "西周洛邑（参照）",
+      "mapOverviewEnName": "Western Zhou Luoyi (reference)",
+      "mapDisplayEnName": "Western Zhou Luoyi (ritual-site reference)"
     },
     {
       "lat": 34.6197,
@@ -2770,7 +2785,10 @@
       "siteOrganization": {
         "decision": "明清及近现代记录合并；蓟城幽州辽南京、金中都、元大都保持独立城址。",
         "verification": "已有分期依据或明确待核事项"
-      }
+      },
+      "mapOverviewName": "北京",
+      "mapOverviewEnName": "Beijing",
+      "mapDisplayEnName": "Beijing (Ming, Qing and modern periods)"
     },
     {
       "lat": 39.2955999,
@@ -3480,7 +3498,10 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapOverviewName": "栎阳",
+      "mapOverviewEnName": "Yueyang",
+      "mapDisplayEnName": "Yueyang"
     },
     {
       "lat": 34.416,
@@ -5559,7 +5580,10 @@
       "siteOrganization": {
         "decision": "与唐宋开封分开，地望推定轮廓不等于发掘确认城界。",
         "verification": "已有分期依据或明确待核事项"
-      }
+      },
+      "mapOverviewName": "大梁",
+      "mapOverviewEnName": "Daliang",
+      "mapDisplayEnName": "Daliang"
     },
     {
       "lat": 34.2058,
@@ -6161,7 +6185,10 @@
       "siteOrganization": {
         "decision": "汉魏诸政权沿用地区保留合并；秦汉宫区范围仅对应秦汉，不套用各后期政权。",
         "verification": "已有分期依据或明确待核事项"
-      }
+      },
+      "mapOverviewName": "汉长安城",
+      "mapOverviewEnName": "Han Chang’an city",
+      "mapDisplayEnName": "Han Chang’an city (Weiyang front hall reference)"
     },
     {
       "lat": 32.99,
@@ -7862,7 +7889,10 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapOverviewName": "滑县",
+      "mapOverviewEnName": "Huaxian",
+      "mapDisplayEnName": "Huaxian"
     },
     {
       "lat": 35.843,
@@ -8858,7 +8888,10 @@
       "siteOrganization": {
         "decision": "北魏平城与辽金西京分开；明堂现代公园不是北魏完整城界。",
         "verification": "已有分期依据或明确待核事项"
-      }
+      },
+      "mapOverviewName": "平城遗址",
+      "mapOverviewEnName": "Pingcheng site",
+      "mapDisplayEnName": "Pingcheng site"
     },
     {
       "lat": 30.35,
@@ -9139,7 +9172,10 @@
       "siteOrganization": {
         "decision": "隋大兴与唐长安合并；与汉长安、秦咸阳、明西安分别保留。",
         "verification": "已有分期依据或明确待核事项"
-      }
+      },
+      "mapOverviewName": "隋唐长安城",
+      "mapOverviewEnName": "Sui–Tang Chang’an city",
+      "mapDisplayEnName": "Sui–Tang Chang’an city"
     },
     {
       "lat": 32.42313315,
@@ -10065,7 +10101,10 @@
       "siteOrganization": {
         "decision": "蓟城／幽州／辽南京保留共同区域参照；唐四至推定轮廓仅对应隋唐，不证明蓟城与辽城墙完全重合。",
         "verification": "已有分期依据或明确待核事项"
-      }
+      },
+      "mapOverviewName": "蓟城／幽州／辽南京",
+      "mapOverviewEnName": "Ji city / Youzhou / Liao Nanjing",
+      "mapDisplayEnName": "Ji city / Youzhou / Liao Nanjing"
     },
     {
       "lat": 41.323,
@@ -12645,7 +12684,10 @@
           "zoom": 16
         }
       ],
-      "mapDisplayName": "杭州（吴越／南宋）"
+      "mapDisplayName": "杭州（吴越／南宋）",
+      "mapOverviewName": "杭州",
+      "mapOverviewEnName": "Hangzhou",
+      "mapDisplayEnName": "Hangzhou (Wuyue / Southern Song)"
     },
     {
       "lat": 26.0745,
@@ -13628,7 +13670,10 @@
         "decision": "辽金西京合并，现寺院范围单独说明，不以明清大同城墙确定辽金城界。",
         "verification": "已有分期依据或明确待核事项"
       },
-      "mapDisplayName": "辽金西京大同府"
+      "mapDisplayName": "辽金西京大同府",
+      "mapOverviewName": "辽金西京大同府",
+      "mapOverviewEnName": "Liao–Jin Western Capital, Datong",
+      "mapDisplayEnName": "Liao–Jin Western Capital, Datong"
     },
     {
       "lat": 38.46305628750001,
@@ -14493,7 +14538,10 @@
       "siteOrganization": {
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
-      }
+      },
+      "mapOverviewName": "元大都",
+      "mapOverviewEnName": "Yuan Dadu",
+      "mapDisplayEnName": "Yuan Dadu"
     },
     {
       "lat": 41.2931793,
@@ -16543,7 +16591,10 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapOverviewName": "通州",
+      "mapOverviewEnName": "Tongzhou",
+      "mapDisplayEnName": "Tongzhou"
     },
     {
       "name": "三星堆遗址",
@@ -16715,7 +16766,10 @@
       "siteOrganization": {
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
-      }
+      },
+      "mapOverviewName": "金沙遗址",
+      "mapOverviewEnName": "Jinsha site",
+      "mapDisplayEnName": "Jinsha site"
     },
     {
       "name": "郫邑（杜鹃城候选）",
@@ -16780,7 +16834,10 @@
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
       },
-      "boundaryRelations": []
+      "boundaryRelations": [],
+      "mapOverviewName": "郫邑（候选址）",
+      "mapOverviewEnName": "Pi (candidate site)",
+      "mapDisplayEnName": "Pi (Dujuan City candidate)"
     },
     {
       "name": "莒国故城",
@@ -17202,7 +17259,10 @@
       "siteOrganization": {
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
-      }
+      },
+      "mapOverviewName": "金中都",
+      "mapOverviewEnName": "Jin Zhongdu",
+      "mapDisplayEnName": "Jin Zhongdu"
     },
     {
       "lat": 34.8274554,
@@ -17277,7 +17337,10 @@
       "siteOrganization": {
         "decision": "保留现有城市／遗址归组；朝代记录分别保留",
         "verification": "全量数据关系检查；未完成逐城考古定位复核"
-      }
+      },
+      "mapOverviewName": "老丘（参照址）",
+      "mapOverviewEnName": "Laoqiu (reference site)",
+      "mapDisplayEnName": "Laoqiu (Guoduli reference)"
     },
     {
       "lat": 40.5155,
@@ -39396,7 +39459,10 @@
         "name": "二里头遗址",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "二里头遗址",
+      "mapOverviewEnName": "Erlitou site",
+      "mapDisplayEnName": "Erlitou site"
     },
     {
       "name": "原 · 济源",
@@ -39469,7 +39535,10 @@
         "name": "老丘（国都里参照）",
         "kind": "有说明的参照点",
         "note": "国都里村现代村落参照，非夏代城址中心或实测界址。"
-      }
+      },
+      "mapOverviewName": "老丘（参照址）",
+      "mapOverviewEnName": "Laoqiu (reference site)",
+      "mapDisplayEnName": "Laoqiu (Guoduli reference)"
     },
     {
       "name": "亳 · 郑州商城",
@@ -39721,7 +39790,10 @@
         "name": "偃师商城",
         "kind": "有说明的参照点",
         "note": "宫城现存展示区区域参照点；由考古布局图与卫星展示边线近似配准，不表示全城中心或实测坐标。"
-      }
+      },
+      "mapOverviewName": "偃师商城",
+      "mapOverviewEnName": "Yanshi Shang city",
+      "mapDisplayEnName": "Yanshi Shang city"
     },
     {
       "name": "嚣 · 郑州商城",
@@ -39930,7 +40002,10 @@
         "name": "商代相（地望待核）",
         "kind": "地望待核",
         "note": "不以晚商殷墟展示区或洹北商城确定“相”的城界。"
-      }
+      },
+      "mapOverviewName": "殷墟",
+      "mapOverviewEnName": "Yinxu",
+      "mapDisplayEnName": "Yinxu, Anyang"
     },
     {
       "name": "邢 · 邢台",
@@ -40077,7 +40152,10 @@
         "name": "安阳殷墟",
         "kind": "有说明的参照点",
         "note": "晚商殷墟宫殿宗庙展示区为定位参照；早期“相”地望另行待核。"
-      }
+      },
+      "mapOverviewName": "殷墟",
+      "mapOverviewEnName": "Yinxu",
+      "mapDisplayEnName": "Yinxu, Anyang"
     },
     {
       "name": "宗周·镐京 · 丰镐遗址",
@@ -40128,7 +40206,10 @@
         "name": "丰镐遗址（车马坑参照）",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "丰镐遗址",
+      "mapOverviewEnName": "Fenghao site",
+      "mapDisplayEnName": "Fenghao site (chariot-pit reference)"
     },
     {
       "name": "成周·洛邑 · 洛邑遗址",
@@ -40161,7 +40242,10 @@
         "name": "西周洛邑（祭祀遗址参照）",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "西周洛邑（参照）",
+      "mapOverviewEnName": "Western Zhou Luoyi (reference)",
+      "mapDisplayEnName": "Western Zhou Luoyi (ritual-site reference)"
     },
     {
       "name": "雒邑·王城 · 洛阳",
@@ -40327,7 +40411,10 @@
         "name": "蓟城／幽州／辽南京",
         "kind": "有说明的参照点",
         "note": "广安门一带区域参照点，蓟城地望仍有讨论；共享点不表示各朝代城界、宫城中心相同。"
-      }
+      },
+      "mapOverviewName": "蓟城／幽州／辽南京",
+      "mapOverviewEnName": "Ji city / Youzhou / Liao Nanjing",
+      "mapDisplayEnName": "Ji city / Youzhou / Liao Nanjing"
     },
     {
       "name": "武阳·燕下都 · 燕下都",
@@ -40645,7 +40732,10 @@
         "name": "栎阳",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "栎阳",
+      "mapOverviewEnName": "Yueyang",
+      "mapDisplayEnName": "Yueyang"
     },
     {
       "name": "咸阳 · 咸阳 · 秦",
@@ -41767,7 +41857,10 @@
         "name": "大梁",
         "kind": "有说明的参照点",
         "note": "魏大梁城研究示意框的区域参照点；采用保角等比例近似定位，非考古确认的都城中心。"
-      }
+      },
+      "mapOverviewName": "大梁",
+      "mapOverviewEnName": "Daliang",
+      "mapDisplayEnName": "Daliang"
     },
     {
       "name": "咸阳 · 咸阳 · 秦帝国",
@@ -42126,7 +42219,10 @@
         "name": "汉长安城（未央宫前殿参照）",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "汉长安城",
+      "mapOverviewEnName": "Han Chang’an city",
+      "mapDisplayEnName": "Han Chang’an city (Weiyang front hall reference)"
     },
     {
       "name": "雒阳 · 洛阳 · 西汉",
@@ -42370,7 +42466,10 @@
         "name": "汉长安城（未央宫前殿参照）",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "汉长安城",
+      "mapOverviewEnName": "Han Chang’an city",
+      "mapDisplayEnName": "Han Chang’an city (Weiyang front hall reference)"
     },
     {
       "name": "宛 · 宛城",
@@ -42644,7 +42743,10 @@
         "name": "汉长安城（未央宫前殿参照）",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "汉长安城",
+      "mapOverviewEnName": "Han Chang’an city",
+      "mapDisplayEnName": "Han Chang’an city (Weiyang front hall reference)"
     },
     {
       "name": "长安 · 汉长安城 · 赤眉汉",
@@ -42854,7 +42956,10 @@
         "name": "汉长安城（未央宫前殿参照）",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "汉长安城",
+      "mapOverviewEnName": "Han Chang’an city",
+      "mapDisplayEnName": "Han Chang’an city (Weiyang front hall reference)"
     },
     {
       "name": "成都 · 成都 · 成家",
@@ -43286,7 +43391,10 @@
         "name": "汉长安城（未央宫前殿参照）",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "汉长安城",
+      "mapOverviewEnName": "Han Chang’an city",
+      "mapDisplayEnName": "Han Chang’an city (Weiyang front hall reference)"
     },
     {
       "name": "长安 · 汉长安城 · 东汉",
@@ -43496,7 +43604,10 @@
         "name": "汉长安城（未央宫前殿参照）",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "汉长安城",
+      "mapOverviewEnName": "Han Chang’an city",
+      "mapDisplayEnName": "Han Chang’an city (Weiyang front hall reference)"
     },
     {
       "name": "许 · 许都",
@@ -43849,7 +43960,10 @@
         "name": "汉长安城（未央宫前殿参照）",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "汉长安城",
+      "mapOverviewEnName": "Han Chang’an city",
+      "mapDisplayEnName": "Han Chang’an city (Weiyang front hall reference)"
     },
     {
       "name": "谯 · 亳州",
@@ -44298,7 +44412,10 @@
         "name": "汉长安城（未央宫前殿参照）",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "汉长安城",
+      "mapOverviewEnName": "Han Chang’an city",
+      "mapDisplayEnName": "Han Chang’an city (Weiyang front hall reference)"
     },
     {
       "name": "建康 · 南京 · 东晋",
@@ -44521,7 +44638,10 @@
         "name": "汉长安城（未央宫前殿参照）",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "汉长安城",
+      "mapOverviewEnName": "Han Chang’an city",
+      "mapDisplayEnName": "Han Chang’an city (Weiyang front hall reference)"
     },
     {
       "name": "襄国 · 邢台",
@@ -44686,7 +44806,10 @@
         "name": "蓟城／幽州／辽南京",
         "kind": "有说明的参照点",
         "note": "广安门一带区域参照点，蓟城地望仍有讨论；共享点不表示各朝代城界、宫城中心相同。"
-      }
+      },
+      "mapOverviewName": "蓟城／幽州／辽南京",
+      "mapOverviewEnName": "Ji city / Youzhou / Liao Nanjing",
+      "mapDisplayEnName": "Ji city / Youzhou / Liao Nanjing"
     },
     {
       "name": "邺 · 邺城 · 前燕",
@@ -44800,7 +44923,10 @@
         "name": "汉长安城（未央宫前殿参照）",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "汉长安城",
+      "mapOverviewEnName": "Han Chang’an city",
+      "mapDisplayEnName": "Han Chang’an city (Weiyang front hall reference)"
     },
     {
       "name": "中山 · 定州",
@@ -44923,7 +45049,10 @@
         "name": "汉长安城（未央宫前殿参照）",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "汉长安城",
+      "mapOverviewEnName": "Han Chang’an city",
+      "mapDisplayEnName": "Han Chang’an city (Weiyang front hall reference)"
     },
     {
       "name": "滑台 · 滑县 · 翟魏",
@@ -44953,7 +45082,10 @@
         "name": "滑县",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "滑县",
+      "mapOverviewEnName": "Huaxian",
+      "mapDisplayEnName": "Huaxian"
     },
     {
       "name": "勇士川 · 榆中",
@@ -45347,7 +45479,10 @@
         "name": "滑县",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "滑县",
+      "mapOverviewEnName": "Huaxian",
+      "mapDisplayEnName": "Huaxian"
     },
     {
       "name": "广固",
@@ -45499,7 +45634,10 @@
         "name": "汉长安城（未央宫前殿参照）",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "汉长安城",
+      "mapOverviewEnName": "Han Chang’an city",
+      "mapDisplayEnName": "Han Chang’an city (Weiyang front hall reference)"
     },
     {
       "name": "盛乐 · 盛乐 · 代",
@@ -45559,7 +45697,10 @@
         "name": "平城遗址",
         "kind": "有说明的参照点",
         "note": "大同历史城区的区域参照点；北魏宫城和京城的完整边界未定，参照点不表示已确认宫城中心。"
-      }
+      },
+      "mapOverviewName": "平城遗址",
+      "mapOverviewEnName": "Pingcheng site",
+      "mapDisplayEnName": "Pingcheng site"
     },
     {
       "name": "盛乐 · 盛乐 · 北魏",
@@ -45629,7 +45770,10 @@
         "name": "平城遗址",
         "kind": "有说明的参照点",
         "note": "大同历史城区的区域参照点；北魏宫城和京城的完整边界未定，参照点不表示已确认宫城中心。"
-      }
+      },
+      "mapOverviewName": "平城遗址",
+      "mapOverviewEnName": "Pingcheng site",
+      "mapDisplayEnName": "Pingcheng site"
     },
     {
       "name": "洛阳 · 洛阳 · 北魏",
@@ -46263,7 +46407,10 @@
         "name": "汉长安城（未央宫前殿参照）",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "汉长安城",
+      "mapOverviewEnName": "Han Chang’an city",
+      "mapDisplayEnName": "Han Chang’an city (Weiyang front hall reference)"
     },
     {
       "name": "邺 · 邺城 · 北齐",
@@ -46374,7 +46521,10 @@
         "name": "汉长安城（未央宫前殿参照）",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "汉长安城",
+      "mapOverviewEnName": "Han Chang’an city",
+      "mapDisplayEnName": "Han Chang’an city (Weiyang front hall reference)"
     },
     {
       "name": "大兴 · 大兴城",
@@ -46414,7 +46564,10 @@
         "name": "隋唐长安城",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "隋唐长安城",
+      "mapOverviewEnName": "Sui–Tang Chang’an city",
+      "mapDisplayEnName": "Sui–Tang Chang’an city"
     },
     {
       "name": "洛阳 · 洛阳 · 隋",
@@ -47335,7 +47488,10 @@
         "name": "隋唐长安城",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "隋唐长安城",
+      "mapOverviewEnName": "Sui–Tang Chang’an city",
+      "mapDisplayEnName": "Sui–Tang Chang’an city"
     },
     {
       "name": "洛阳 · 洛阳 · 唐",
@@ -47927,7 +48083,10 @@
         "name": "隋唐长安城",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "隋唐长安城",
+      "mapOverviewEnName": "Sui–Tang Chang’an city",
+      "mapDisplayEnName": "Sui–Tang Chang’an city"
     },
     {
       "name": "长安 · 大兴城 · 唐（复辟）",
@@ -47967,7 +48126,10 @@
         "name": "隋唐长安城",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "隋唐长安城",
+      "mapOverviewEnName": "Sui–Tang Chang’an city",
+      "mapDisplayEnName": "Sui–Tang Chang’an city"
     },
     {
       "name": "洛阳 · 洛阳 · 唐（复辟）",
@@ -48852,7 +49014,10 @@
         "name": "蓟城／幽州／辽南京",
         "kind": "有说明的参照点",
         "note": "广安门一带区域参照点，蓟城地望仍有讨论；共享点不表示各朝代城界、宫城中心相同。"
-      }
+      },
+      "mapOverviewName": "蓟城／幽州／辽南京",
+      "mapOverviewEnName": "Ji city / Youzhou / Liao Nanjing",
+      "mapDisplayEnName": "Ji city / Youzhou / Liao Nanjing"
     },
     {
       "name": "长安 · 大兴城 · 秦（朱泚）",
@@ -48892,7 +49057,10 @@
         "name": "隋唐长安城",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "隋唐长安城",
+      "mapOverviewEnName": "Sui–Tang Chang’an city",
+      "mapDisplayEnName": "Sui–Tang Chang’an city"
     },
     {
       "name": "汴州",
@@ -48973,7 +49141,10 @@
         "name": "隋唐长安城",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "隋唐长安城",
+      "mapOverviewEnName": "Sui–Tang Chang’an city",
+      "mapDisplayEnName": "Sui–Tang Chang’an city"
     },
     {
       "name": "卒本/纥升骨 · 五女山城",
@@ -50965,7 +51136,10 @@
         "kind": "有说明的参照点",
         "note": "南宋临安府治遗址为杭州历史城区定位参照；不是吴越王宫或南宋皇城确址。"
       },
-      "displayName": "吴越钱塘西府 · 杭州"
+      "displayName": "吴越钱塘西府 · 杭州",
+      "mapOverviewName": "杭州",
+      "mapOverviewEnName": "Hangzhou",
+      "mapDisplayEnName": "Hangzhou (Wuyue / Southern Song)"
     },
     {
       "name": "越州 · 绍兴",
@@ -51293,7 +51467,10 @@
         "name": "蓟城／幽州／辽南京",
         "kind": "有说明的参照点",
         "note": "广安门一带区域参照点，蓟城地望仍有讨论；共享点不表示各朝代城界、宫城中心相同。"
-      }
+      },
+      "mapOverviewName": "蓟城／幽州／辽南京",
+      "mapOverviewEnName": "Ji city / Youzhou / Liao Nanjing",
+      "mapDisplayEnName": "Ji city / Youzhou / Liao Nanjing"
     },
     {
       "name": "凤翔 · 雍城",
@@ -51681,7 +51858,10 @@
         "kind": "有说明的参照点",
         "note": "南宋临安府治遗址为杭州历史城区定位参照；不是吴越王宫或南宋皇城确址。"
       },
-      "displayName": "南宋临安府 · 杭州"
+      "displayName": "南宋临安府 · 杭州",
+      "mapOverviewName": "杭州",
+      "mapOverviewEnName": "Hangzhou",
+      "mapDisplayEnName": "Hangzhou (Wuyue / Southern Song)"
     },
     {
       "name": "福州 · 福州 · 南宋",
@@ -51921,7 +52101,10 @@
         "name": "蓟城／幽州／辽南京",
         "kind": "有说明的参照点",
         "note": "广安门一带区域参照点，蓟城地望仍有讨论；共享点不表示各朝代城界、宫城中心相同。"
-      }
+      },
+      "mapOverviewName": "蓟城／幽州／辽南京",
+      "mapOverviewEnName": "Ji city / Youzhou / Liao Nanjing",
+      "mapDisplayEnName": "Ji city / Youzhou / Liao Nanjing"
     },
     {
       "name": "辽阳府 · 东京辽阳",
@@ -52062,7 +52245,10 @@
         "kind": "有说明的参照点",
         "note": "辽金西京华严寺现寺院范围为历史城区定位参照；不代表辽金宫城中心。"
       },
-      "displayName": "辽西京大同府"
+      "displayName": "辽西京大同府",
+      "mapOverviewName": "辽金西京大同府",
+      "mapOverviewEnName": "Liao–Jin Western Capital, Datong",
+      "mapDisplayEnName": "Liao–Jin Western Capital, Datong"
     },
     {
       "name": "天福城 · 宁安上京",
@@ -52335,7 +52521,10 @@
         "name": "金中都",
         "kind": "有说明的参照点",
         "note": "金中都城址区域参照点，非宫城中心或考古测量点。"
-      }
+      },
+      "mapOverviewName": "金中都",
+      "mapOverviewEnName": "Jin Zhongdu",
+      "mapDisplayEnName": "Jin Zhongdu"
     },
     {
       "name": "南京开封府 · 开封",
@@ -52887,7 +53076,10 @@
         "name": "元大都",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "元大都",
+      "mapOverviewEnName": "Yuan Dadu",
+      "mapDisplayEnName": "Yuan Dadu"
     },
     {
       "name": "中都 · 张北",
@@ -53431,7 +53623,10 @@
         "name": "北京（明清至近现代）",
         "kind": "有说明的参照点",
         "note": "明清北京及近现代首都的城市区域参照点；不包含蓟城、幽州、辽南京、金中都或元大都记录。"
-      }
+      },
+      "mapOverviewName": "北京",
+      "mapOverviewEnName": "Beijing",
+      "mapDisplayEnName": "Beijing (Ming, Qing and modern periods)"
     },
     {
       "name": "应天府·南京 · 南京",
@@ -53918,7 +54113,10 @@
         "name": "北京（明清至近现代）",
         "kind": "有说明的参照点",
         "note": "明清北京及近现代首都的城市区域参照点；不包含蓟城、幽州、辽南京、金中都或元大都记录。"
-      }
+      },
+      "mapOverviewName": "北京",
+      "mapOverviewEnName": "Beijing",
+      "mapDisplayEnName": "Beijing (Ming, Qing and modern periods)"
     },
     {
       "name": "成都 · 成都 · 大西",
@@ -54550,7 +54748,10 @@
         "name": "北京（明清至近现代）",
         "kind": "有说明的参照点",
         "note": "明清北京及近现代首都的城市区域参照点；不包含蓟城、幽州、辽南京、金中都或元大都记录。"
-      }
+      },
+      "mapOverviewName": "北京",
+      "mapOverviewEnName": "Beijing",
+      "mapDisplayEnName": "Beijing (Ming, Qing and modern periods)"
     },
     {
       "name": "盛京 · 沈阳 · 清",
@@ -54884,7 +55085,10 @@
         "name": "北京（明清至近现代）",
         "kind": "有说明的参照点",
         "note": "明清北京及近现代首都的城市区域参照点；不包含蓟城、幽州、辽南京、金中都或元大都记录。"
-      }
+      },
+      "mapOverviewName": "北京",
+      "mapOverviewEnName": "Beijing",
+      "mapDisplayEnName": "Beijing (Ming, Qing and modern periods)"
     },
     {
       "name": "广州 · 广州 · 中华民国护法军政府",
@@ -55184,7 +55388,10 @@
         "name": "北京（明清至近现代）",
         "kind": "有说明的参照点",
         "note": "明清北京及近现代首都的城市区域参照点；不包含蓟城、幽州、辽南京、金中都或元大都记录。"
-      }
+      },
+      "mapOverviewName": "北京",
+      "mapOverviewEnName": "Beijing",
+      "mapDisplayEnName": "Beijing (Ming, Qing and modern periods)"
     },
     {
       "name": "新京 · 长春",
@@ -55244,7 +55451,10 @@
         "name": "北京（明清至近现代）",
         "kind": "有说明的参照点",
         "note": "明清北京及近现代首都的城市区域参照点；不包含蓟城、幽州、辽南京、金中都或元大都记录。"
-      }
+      },
+      "mapOverviewName": "北京",
+      "mapOverviewEnName": "Beijing",
+      "mapDisplayEnName": "Beijing (Ming, Qing and modern periods)"
     },
     {
       "name": "南京 · 南京 · 中华民国维新政府",
@@ -55364,7 +55574,10 @@
         "name": "通州",
         "kind": "城市／城址区域参照",
         "note": "现有坐标为区域参照；未逐一核实宫城或各朝都城中心。"
-      }
+      },
+      "mapOverviewName": "通州",
+      "mapOverviewEnName": "Tongzhou",
+      "mapDisplayEnName": "Tongzhou"
     },
     {
       "name": "桑根达来 · 张北",
@@ -55425,7 +55638,10 @@
         "name": "北京（明清至近现代）",
         "kind": "有说明的参照点",
         "note": "明清北京及近现代首都的城市区域参照点；不包含蓟城、幽州、辽南京、金中都或元大都记录。"
-      }
+      },
+      "mapOverviewName": "北京",
+      "mapOverviewEnName": "Beijing",
+      "mapDisplayEnName": "Beijing (Ming, Qing and modern periods)"
     },
     {
       "name": "成都 · 成都 · 蜀（开明时期）",
@@ -55551,7 +55767,10 @@
         "name": "金沙遗址",
         "kind": "有说明的参照点",
         "note": "金沙遗址博物馆展示区中心参照，不是已确定的古蜀王宫中心。"
-      }
+      },
+      "mapOverviewName": "金沙遗址",
+      "mapOverviewEnName": "Jinsha site",
+      "mapDisplayEnName": "Jinsha site"
     },
     {
       "name": "郫邑（杜鹃城候选） · 郫邑 · 蜀（杜宇时期）",
@@ -55583,7 +55802,10 @@
         "name": "郫邑（杜鹃城候选）",
         "kind": "有说明的参照点",
         "note": "区域参照点，非宫殿确址"
-      }
+      },
+      "mapOverviewName": "郫邑（候选址）",
+      "mapOverviewEnName": "Pi (candidate site)",
+      "mapDisplayEnName": "Pi (Dujuan City candidate)"
     },
     {
       "name": "重庆 · 江州 · 巴",
@@ -55938,7 +56160,10 @@
         "pointKind": "既有城市／城址参照点",
         "note": "辽五京核查：已接入现状遗存与展示范围，性质逐项区分；未取得完整城界者不以明清城墙、现代公园或后金城址替代。"
       },
-      "displayName": "金西京大同府"
+      "displayName": "金西京大同府",
+      "mapOverviewName": "辽金西京大同府",
+      "mapOverviewEnName": "Liao–Jin Western Capital, Datong",
+      "mapDisplayEnName": "Liao–Jin Western Capital, Datong"
     },
     {
       "name": "东都江都府 · 扬州 · 南唐",

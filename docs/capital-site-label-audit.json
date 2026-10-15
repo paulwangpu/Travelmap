@@ -1,0 +1,155 @@
+{
+  "policy": "Specific city site; never replace by administrative parent",
+  "rootCount": 343,
+  "recordCount": 557,
+  "affected": [
+    {
+      "siteKey": "ancient-site:二里头遗址:34.69580,112.69080",
+      "fullName": "二里头遗址",
+      "mapOverviewName": "二里头遗址",
+      "mapOverviewEnName": "Erlitou site",
+      "mapDisplayEnName": "Erlitou site"
+    },
+    {
+      "siteKey": "ancient-site:偃师商城:34.72750,112.78500",
+      "fullName": "偃师商城",
+      "mapOverviewName": "偃师商城",
+      "mapOverviewEnName": "Yanshi Shang city",
+      "mapDisplayEnName": "Yanshi Shang city"
+    },
+    {
+      "siteKey": "ancient-site:安阳殷墟:36.13000,114.31000",
+      "fullName": "安阳殷墟",
+      "mapOverviewName": "殷墟",
+      "mapOverviewEnName": "Yinxu",
+      "mapDisplayEnName": "Yinxu, Anyang"
+    },
+    {
+      "siteKey": "ancient-site:丰镐遗址:34.24000,108.73000",
+      "fullName": "丰镐遗址（车马坑参照）",
+      "mapOverviewName": "丰镐遗址",
+      "mapOverviewEnName": "Fenghao site",
+      "mapDisplayEnName": "Fenghao site (chariot-pit reference)"
+    },
+    {
+      "siteKey": "ancient-site:洛邑遗址:34.70500,112.60000",
+      "fullName": "西周洛邑（祭祀遗址参照）",
+      "mapOverviewName": "西周洛邑（参照）",
+      "mapOverviewEnName": "Western Zhou Luoyi (reference)",
+      "mapDisplayEnName": "Western Zhou Luoyi (ritual-site reference)"
+    },
+    {
+      "siteKey": "ancient-site:北京:39.90420,116.40740",
+      "fullName": "北京（明清至近现代）",
+      "mapOverviewName": "北京",
+      "mapOverviewEnName": "Beijing",
+      "mapDisplayEnName": "Beijing (Ming, Qing and modern periods)"
+    },
+    {
+      "siteKey": "ancient-site:栎阳:34.65400,109.22600",
+      "fullName": "栎阳",
+      "mapOverviewName": "栎阳",
+      "mapOverviewEnName": "Yueyang",
+      "mapDisplayEnName": "Yueyang"
+    },
+    {
+      "siteKey": "ancient-site:大梁:34.79700,114.30700",
+      "fullName": "大梁",
+      "mapOverviewName": "大梁",
+      "mapOverviewEnName": "Daliang",
+      "mapDisplayEnName": "Daliang"
+    },
+    {
+      "siteKey": "ancient-site:汉长安城:34.36000,108.86000",
+      "fullName": "汉长安城（未央宫前殿参照）",
+      "mapOverviewName": "汉长安城",
+      "mapOverviewEnName": "Han Chang’an city",
+      "mapDisplayEnName": "Han Chang’an city (Weiyang front hall reference)"
+    },
+    {
+      "siteKey": "ancient-site:滑县:35.57500,114.51900",
+      "fullName": "滑县",
+      "mapOverviewName": "滑县",
+      "mapOverviewEnName": "Huaxian",
+      "mapDisplayEnName": "Huaxian"
+    },
+    {
+      "siteKey": "ancient-site:平城遗址:40.09000,113.30000",
+      "fullName": "平城遗址",
+      "mapOverviewName": "平城遗址",
+      "mapOverviewEnName": "Pingcheng site",
+      "mapDisplayEnName": "Pingcheng site"
+    },
+    {
+      "siteKey": "ancient-site:大兴城:34.26000,108.95000",
+      "fullName": "隋唐长安城",
+      "mapOverviewName": "隋唐长安城",
+      "mapOverviewEnName": "Sui–Tang Chang’an city",
+      "mapDisplayEnName": "Sui–Tang Chang’an city"
+    },
+    {
+      "siteKey": "ancient-site:幽州:39.89500,116.35000",
+      "fullName": "蓟城／幽州／辽南京",
+      "mapOverviewName": "蓟城／幽州／辽南京",
+      "mapOverviewEnName": "Ji city / Youzhou / Liao Nanjing",
+      "mapDisplayEnName": "Ji city / Youzhou / Liao Nanjing"
+    },
+    {
+      "siteKey": "ancient-site:杭州:30.27410,120.15510",
+      "fullName": "杭州（吴越／南宋）",
+      "mapOverviewName": "杭州",
+      "mapOverviewEnName": "Hangzhou",
+      "mapDisplayEnName": "Hangzhou (Wuyue / Southern Song)"
+    },
+    {
+      "siteKey": "ancient-site:西京大同:40.07680,113.30010",
+      "fullName": "辽金西京大同府",
+      "mapOverviewName": "辽金西京大同府",
+      "mapOverviewEnName": "Liao–Jin Western Capital, Datong",
+      "mapDisplayEnName": "Liao–Jin Western Capital, Datong"
+    },
+    {
+      "siteKey": "ancient-site:元大都:39.94000,116.41000",
+      "fullName": "元大都",
+      "mapOverviewName": "元大都",
+      "mapOverviewEnName": "Yuan Dadu",
+      "mapDisplayEnName": "Yuan Dadu"
+    },
+    {
+      "siteKey": "ancient-site:通州:39.90900,116.65700",
+      "fullName": "通州",
+      "mapOverviewName": "通州",
+      "mapOverviewEnName": "Tongzhou",
+      "mapDisplayEnName": "Tongzhou"
+    },
+    {
+      "siteKey": "ancient-site:金沙遗址:30.68300,104.01200",
+      "fullName": "金沙遗址",
+      "mapOverviewName": "金沙遗址",
+      "mapOverviewEnName": "Jinsha site",
+      "mapDisplayEnName": "Jinsha site"
+    },
+    {
+      "siteKey": "ancient-site:郫邑（杜鹃城候选）:30.81000,103.88700",
+      "fullName": "郫邑（杜鹃城候选）",
+      "mapOverviewName": "郫邑（候选址）",
+      "mapOverviewEnName": "Pi (candidate site)",
+      "mapDisplayEnName": "Pi (Dujuan City candidate)"
+    },
+    {
+      "siteKey": "ancient-site:金中都:39.87500,116.34000",
+      "fullName": "金中都",
+      "mapOverviewName": "金中都",
+      "mapOverviewEnName": "Jin Zhongdu",
+      "mapDisplayEnName": "Jin Zhongdu"
+    },
+    {
+      "siteKey": "ancient-site:老丘:34.8274554,114.592359",
+      "fullName": "老丘（国都里参照）",
+      "mapOverviewName": "老丘（参照址）",
+      "mapOverviewEnName": "Laoqiu (reference site)",
+      "mapDisplayEnName": "Laoqiu (Guoduli reference)"
+    }
+  ],
+  "identitiesAndGeometryUnchanged": true
+}
