@@ -9634,6 +9634,3171 @@
       "mapReferencePeriod": "近现代",
       "identityNote": "时期：1634—今。中世纪逐步成为政治中心，1634年行政改革明确首都地位；本轮国家首都记录采用1634—今。现王宫主要为18世纪建筑，不是完整中世纪城界。 完整分期城界待核；原始闭合几何仅代表各自城堡、围墙或建筑，开放墙线保持开放。",
       "identityEnNote": "Capital of Sweden. Period: 1634—present. Capital of Sweden. Whole-city boundaries remain unverified. Original closed geometry represents the named building or fortified enclosure only; open walls remain open."
+    },
+    {
+      "key": "memphis",
+      "name": "孟菲斯",
+      "enName": "Memphis",
+      "capitalName": "孟菲斯",
+      "capitalEnName": "Memphis",
+      "country": "埃及",
+      "countryEn": "Egypt",
+      "center": [
+        31.254,
+        29.851
+      ],
+      "period": "传说",
+      "capitalPeriods": [
+        "传说",
+        "夏商"
+      ],
+      "periodLabel": "古埃及早王朝与古王国都城",
+      "enPeriodLabel": "Early Dynastic and Old Kingdom capital of Egypt",
+      "historicalIdentity": "capital",
+      "identityLabel": "古埃及早王朝与古王国都城",
+      "identityEnLabel": "Early Dynastic and Old Kingdom capital of Egypt",
+      "identityNote": "米特拉希纳为孟菲斯城址参照；金字塔墓地不是城市或宫城边界。早期起讫采用约数，后世行政中心地位不写成连续都城期。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/86/",
+      "referenceUrl": "https://whc.unesco.org/en/list/86/",
+      "aliases": [
+        "孟菲斯",
+        "Memphis"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入宫堡或遗址围区；完整分期城界待核",
+      "focusBounds": [
+        [
+          31.2490031,
+          29.8423685
+        ],
+        [
+          31.2657467,
+          29.8665979
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [
+        "whc-86"
+      ],
+      "capitalSiteKey": "ancient-site:world-memphis"
+    },
+    {
+      "key": "thebes",
+      "name": "底比斯",
+      "enName": "Thebes / Waset",
+      "capitalName": "底比斯",
+      "capitalEnName": "Thebes / Waset",
+      "country": "埃及",
+      "countryEn": "Egypt",
+      "center": [
+        32.64,
+        25.703
+      ],
+      "period": "夏商",
+      "capitalPeriods": [
+        "夏商"
+      ],
+      "periodLabel": "古埃及中王国与新王国王都",
+      "enPeriodLabel": "Royal capital of Middle and New Kingdom Egypt",
+      "historicalIdentity": "capital",
+      "identityLabel": "古埃及中王国与新王国王都",
+      "identityEnLabel": "Royal capital of Middle and New Kingdom Egypt",
+      "identityNote": "底比斯今分布于卢克索两岸；卡尔纳克和卢克索神庙围墙不等于整座都城城墙，西岸墓地不当作全城范围。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/87/",
+      "referenceUrl": "https://whc.unesco.org/en/list/87/",
+      "aliases": [
+        "底比斯",
+        "Thebes / Waset"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入原始墙段及遗迹；完整分期城界待核",
+      "focusBounds": [
+        [
+          32.6365198,
+          25.6967554
+        ],
+        [
+          32.663981,
+          25.7242643
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [
+        "whc-87"
+      ],
+      "capitalSiteKey": "ancient-site:world-thebes"
+    },
+    {
+      "key": "amarna",
+      "name": "阿赫塔顿／阿玛尔纳",
+      "enName": "Akhetaten / Amarna",
+      "capitalName": "阿赫塔顿／阿玛尔纳",
+      "capitalEnName": "Akhetaten / Amarna",
+      "country": "埃及",
+      "countryEn": "Egypt",
+      "center": [
+        30.9,
+        27.65
+      ],
+      "period": "夏商",
+      "capitalPeriods": [
+        "夏商"
+      ],
+      "periodLabel": "古埃及第十八王朝都城",
+      "enPeriodLabel": "Capital of Egypt under Akhenaten",
+      "historicalIdentity": "capital",
+      "identityLabel": "古埃及第十八王朝都城",
+      "identityEnLabel": "Capital of Egypt under Akhenaten",
+      "identityNote": "阿赫塔顿与底比斯分址。接入大王宫及北宫遗迹轮廓；边界碑所界定的宗教领地不等于连续城墙，不绘制虚构环城墙。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://egymonuments.gov.eg/collections/amarna/",
+      "referenceUrl": "https://egymonuments.gov.eg/collections/amarna/",
+      "aliases": [
+        "阿赫塔顿／阿玛尔纳",
+        "Akhetaten / Amarna"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入宫堡或遗址围区；完整分期城界待核",
+      "focusBounds": [
+        [
+          30.8919914,
+          27.6436091
+        ],
+        [
+          30.9061258,
+          27.6721829
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-amarna"
+    },
+    {
+      "key": "pi-ramesses",
+      "name": "皮拉美西斯",
+      "enName": "Pi-Ramesses",
+      "capitalName": "皮拉美西斯",
+      "capitalEnName": "Pi-Ramesses",
+      "country": "埃及",
+      "countryEn": "Egypt",
+      "center": [
+        31.834,
+        30.798
+      ],
+      "period": "夏商",
+      "capitalPeriods": [
+        "夏商"
+      ],
+      "periodLabel": "古埃及拉美西斯时期都城",
+      "enPeriodLabel": "Ramesside capital of Egypt",
+      "historicalIdentity": "capital",
+      "identityLabel": "古埃及拉美西斯时期都城",
+      "identityEnLabel": "Ramesside capital of Egypt",
+      "identityNote": "根点参照坎提尔考古城址；不能用后来搬运构件的塔尼斯遗址代替此城。完整宫城与城墙矢量待核。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://www.ucl.ac.uk/museums-static/digitalegypt/chronology/ramsesii.html",
+      "referenceUrl": "https://www.ucl.ac.uk/museums-static/digitalegypt/chronology/ramsesii.html",
+      "aliases": [
+        "皮拉美西斯",
+        "Pi-Ramesses"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "历史身份及城址已核，可靠城墙与宫城矢量待核",
+      "focusBounds": [
+        [
+          31.8325,
+          30.796499999999998
+        ],
+        [
+          31.8355,
+          30.7995
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-pi-ramesses"
+    },
+    {
+      "key": "tanis",
+      "name": "塔尼斯",
+      "enName": "Tanis",
+      "capitalName": "塔尼斯",
+      "capitalEnName": "Tanis",
+      "country": "埃及",
+      "countryEn": "Egypt",
+      "center": [
+        31.88,
+        30.978
+      ],
+      "period": "夏商",
+      "capitalPeriods": [
+        "夏商",
+        "周"
+      ],
+      "periodLabel": "古埃及第二十一王朝都城",
+      "enPeriodLabel": "Capital of Egypt during the Twenty-first Dynasty",
+      "historicalIdentity": "capital",
+      "identityLabel": "古埃及第二十一王朝都城",
+      "identityEnLabel": "Capital of Egypt during the Twenty-first Dynasty",
+      "identityNote": "与皮拉美西斯分址。考古区和阿蒙神庙围区均不代表完整都城城郭；第二十二王朝早期中心布巴斯提斯不合并于此。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://egymonuments.gov.eg/historical-periods/third-intermediate-period/",
+      "referenceUrl": "https://egymonuments.gov.eg/historical-periods/third-intermediate-period/",
+      "aliases": [
+        "塔尼斯",
+        "Tanis"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入宫堡或遗址围区；完整分期城界待核",
+      "focusBounds": [
+        [
+          31.8738606,
+          30.959424
+        ],
+        [
+          31.8930742,
+          30.9855799
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-tanis"
+    },
+    {
+      "key": "alexandria",
+      "name": "亚历山大里亚",
+      "enName": "Alexandria",
+      "capitalName": "亚历山大里亚",
+      "capitalEnName": "Alexandria",
+      "country": "埃及",
+      "countryEn": "Egypt",
+      "center": [
+        29.895,
+        31.201
+      ],
+      "period": "周",
+      "capitalPeriods": [
+        "周",
+        "秦汉"
+      ],
+      "periodLabel": "托勒密王国都城",
+      "enPeriodLabel": "Capital of Ptolemaic Egypt",
+      "historicalIdentity": "capital",
+      "identityLabel": "托勒密王国都城",
+      "identityEnLabel": "Capital of Ptolemaic Egypt",
+      "identityNote": "公元前331年建城与托勒密王国都城时期分开；罗马、拜占庭时期行政首府身份另行说明。凯特贝堡为15世纪海防堡垒，不是古代王宫或整城城界。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://egymonuments.gov.eg/collections/alexandria/",
+      "referenceUrl": "https://egymonuments.gov.eg/collections/alexandria/",
+      "aliases": [
+        "亚历山大里亚",
+        "Alexandria"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入原始墙段及遗迹；完整分期城界待核",
+      "focusBounds": [
+        [
+          29.8832223,
+          31.1995
+        ],
+        [
+          29.9154892,
+          31.2159016
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-alexandria"
+    },
+    {
+      "key": "fustat",
+      "name": "福斯塔特",
+      "enName": "Fustat",
+      "capitalName": "福斯塔特",
+      "capitalEnName": "Fustat",
+      "country": "埃及",
+      "countryEn": "Egypt",
+      "center": [
+        31.234,
+        30.006
+      ],
+      "period": "隋唐",
+      "capitalPeriods": [],
+      "periodLabel": "早期伊斯兰埃及行政首府",
+      "enPeriodLabel": "Administrative capital of early Islamic Egypt",
+      "historicalIdentity": "provincial-capital",
+      "identityLabel": "早期伊斯兰埃及行政首府",
+      "identityEnLabel": "Administrative capital of early Islamic Egypt",
+      "identityNote": "福斯塔特、阿斯卡尔、卡塔伊与法蒂玛开罗是不同城址。早期行政首府按普通古城收录；不因官方称capital而自动视作独立国家都城。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://egymonuments.gov.eg/en/archaeological-sites/al-fustat-old-cairo/",
+      "referenceUrl": "https://egymonuments.gov.eg/en/archaeological-sites/al-fustat-old-cairo/",
+      "aliases": [
+        "福斯塔特",
+        "Fustat"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "历史身份及城址已核，可靠城墙与宫城矢量待核",
+      "focusBounds": [
+        [
+          31.2325,
+          30.0045
+        ],
+        [
+          31.235500000000002,
+          30.0075
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": []
+    },
+    {
+      "key": "cairo",
+      "name": "开罗",
+      "enName": "Cairo / al-Qahira",
+      "capitalName": "开罗",
+      "capitalEnName": "Cairo / al-Qahira",
+      "country": "埃及",
+      "countryEn": "Egypt",
+      "center": [
+        31.261,
+        30.038
+      ],
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明"
+      ],
+      "periodLabel": "法蒂玛、阿尤布与马穆鲁克都城",
+      "enPeriodLabel": "Capital of the Fatimid, Ayyubid and Mamluk states",
+      "historicalIdentity": "capital",
+      "identityLabel": "法蒂玛、阿尤布与马穆鲁克都城",
+      "identityEnLabel": "Capital of the Fatimid, Ayyubid and Mamluk states",
+      "identityNote": "法蒂玛北墙、阿尤布东墙与萨拉丁城堡分别表达；城堡范围不是整个开罗。珠宝宫为19世纪建筑，不追溯为法蒂玛宫殿。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://egymonuments.gov.eg/collections/historical-cairo/",
+      "referenceUrl": "https://egymonuments.gov.eg/monuments/the-walls-of-cairo/",
+      "aliases": [
+        "开罗",
+        "Cairo / al-Qahira"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入原始墙段及遗迹；完整分期城界待核",
+      "focusBounds": [
+        [
+          31.2564521,
+          30.0250622
+        ],
+        [
+          31.2743662,
+          30.0579563
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [
+        "whc-89"
+      ],
+      "capitalSiteKey": "ancient-site:world-cairo"
+    },
+    {
+      "key": "shahjahanabad",
+      "name": "沙贾汗纳巴德",
+      "enName": "Shahjahanabad / Old Delhi",
+      "capitalName": "沙贾汗纳巴德",
+      "capitalEnName": "Shahjahanabad / Old Delhi",
+      "country": "印度",
+      "countryEn": "India",
+      "center": [
+        77.233,
+        28.655
+      ],
+      "period": "清",
+      "capitalPeriods": [
+        "清"
+      ],
+      "periodLabel": "莫卧儿帝国都城",
+      "enPeriodLabel": "Capital of the Mughal Empire",
+      "historicalIdentity": "capital",
+      "identityLabel": "莫卧儿帝国都城",
+      "identityEnLabel": "Capital of the Mughal Empire",
+      "identityNote": "沙贾汗纳巴德与新德里及德里其他历代城址不同；红堡为宫城，萨利姆加尔为相邻较早堡垒，不把红堡等同整座旧德里。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/231/",
+      "referenceUrl": "https://whc.unesco.org/en/list/231/",
+      "aliases": [
+        "沙贾汗纳巴德",
+        "Shahjahanabad / Old Delhi"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入原始墙段及遗迹；完整分期城界待核",
+      "focusBounds": [
+        [
+          77.22239870000001,
+          28.6391615
+        ],
+        [
+          77.2473064,
+          28.664587
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [
+        "whc-231"
+      ],
+      "capitalSiteKey": "ancient-site:world-shahjahanabad"
+    },
+    {
+      "key": "agra",
+      "name": "阿格拉",
+      "enName": "Agra",
+      "capitalName": "阿格拉",
+      "capitalEnName": "Agra",
+      "country": "印度",
+      "countryEn": "India",
+      "center": [
+        78.021,
+        27.18
+      ],
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清"
+      ],
+      "periodLabel": "洛迪王朝与莫卧儿帝国都城",
+      "enPeriodLabel": "Capital of the Lodi dynasty and Mughal Empire",
+      "historicalIdentity": "capital",
+      "identityLabel": "洛迪王朝与莫卧儿帝国都城",
+      "identityEnLabel": "Capital of the Lodi dynasty and Mughal Empire",
+      "identityNote": "阿格拉堡为宫城，泰姬陵为陵墓，不以陵园或世界遗产缓冲区替代城市城郭。与法泰赫普尔西克里及拉合尔迁都阶段分开。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/251/",
+      "referenceUrl": "https://whc.unesco.org/en/list/251/",
+      "aliases": [
+        "阿格拉",
+        "Agra"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入宫堡或遗址围区；完整分期城界待核",
+      "focusBounds": [
+        [
+          78.01629620000001,
+          27.1747394
+        ],
+        [
+          78.0257891,
+          27.1849039
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [
+        "whc-251",
+        "whc-252"
+      ],
+      "capitalSiteKey": "ancient-site:world-agra"
+    },
+    {
+      "key": "fatehpur-sikri",
+      "name": "法泰赫普尔西克里",
+      "enName": "Fatehpur Sikri",
+      "capitalName": "法泰赫普尔西克里",
+      "capitalEnName": "Fatehpur Sikri",
+      "country": "印度",
+      "countryEn": "India",
+      "center": [
+        77.6665,
+        27.09753
+      ],
+      "period": "明",
+      "capitalPeriods": [
+        "明"
+      ],
+      "periodLabel": "莫卧儿帝国阿克巴时期都城",
+      "enPeriodLabel": "Mughal capital under Akbar",
+      "historicalIdentity": "capital",
+      "identityLabel": "莫卧儿帝国阿克巴时期都城",
+      "identityEnLabel": "Mughal capital under Akbar",
+      "identityNote": "三面城墙与宫廷、宗教核心分开；UNESCO核心区不是整座都城。本轮墙线有原始门口缺口，不擅自闭合。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/255/",
+      "referenceUrl": "https://whc.unesco.org/en/list/255/",
+      "aliases": [
+        "法泰赫普尔西克里",
+        "Fatehpur Sikri",
+        "法塔赫布尔西格里"
+      ],
+      "sharedCapitalCheckin": true,
+      "tentative": false,
+      "wallBoundaryReview": "已接入原始墙段及遗迹；完整分期城界待核",
+      "focusBounds": [
+        [
+          77.6392809,
+          27.0807198
+        ],
+        [
+          77.68063479999999,
+          27.1067121
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "heritageId": "whc-255",
+      "checklistItem": "法塔赫布尔西格里",
+      "capitalSiteKey": "ancient-site:world-fatehpur-sikri"
+    },
+    {
+      "key": "hampi",
+      "name": "亨比／毗奢耶那伽罗",
+      "enName": "Hampi / Vijayanagara",
+      "capitalName": "亨比／毗奢耶那伽罗",
+      "capitalEnName": "Hampi / Vijayanagara",
+      "country": "印度",
+      "countryEn": "India",
+      "center": [
+        76.47167,
+        15.31444
+      ],
+      "period": "元",
+      "capitalPeriods": [
+        "元",
+        "明"
+      ],
+      "periodLabel": "毗奢耶那伽罗帝国都城",
+      "enPeriodLabel": "Capital of the Vijayanagara Empire",
+      "historicalIdentity": "capital",
+      "identityLabel": "毗奢耶那伽罗帝国都城",
+      "identityEnLabel": "Capital of the Vijayanagara Empire",
+      "identityNote": "广域防御体系、皇家核心、寺庙核心分别表达。世界遗产区不能代替历代完整城界；宫殿遗址与城防墙线保持原始几何。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/241/",
+      "referenceUrl": "https://whc.unesco.org/en/list/241/",
+      "aliases": [
+        "亨比／毗奢耶那伽罗",
+        "Hampi / Vijayanagara",
+        "汉皮古迹群",
+        "Group of Monuments at Hampi"
+      ],
+      "sharedCapitalCheckin": true,
+      "tentative": false,
+      "wallBoundaryReview": "已接入原始墙段及遗迹；完整分期城界待核",
+      "focusBounds": [
+        [
+          76.46697110000001,
+          15.3110613
+        ],
+        [
+          76.48215529999999,
+          15.3273156
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "heritageId": "whc-241",
+      "checklistItem": "汉皮古迹群",
+      "capitalSiteKey": "ancient-site:world-hampi"
+    },
+    {
+      "key": "jaipur",
+      "name": "斋浦尔",
+      "enName": "Jaipur",
+      "capitalName": "斋浦尔",
+      "capitalEnName": "Jaipur",
+      "country": "印度",
+      "countryEn": "India",
+      "center": [
+        75.82186,
+        26.92428
+      ],
+      "period": "清",
+      "capitalPeriods": [
+        "清",
+        "近现代"
+      ],
+      "periodLabel": "斋浦尔王国都城",
+      "enPeriodLabel": "Capital of the Jaipur kingdom",
+      "historicalIdentity": "capital",
+      "identityLabel": "斋浦尔王国都城",
+      "identityEnLabel": "Capital of the Jaipur kingdom",
+      "identityNote": "平原新城与早期安贝尔分址；城市宫殿、纳哈加尔堡和环城墙不是同一边界。保留现存城门和开放墙段。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/1605/",
+      "referenceUrl": "https://whc.unesco.org/en/list/1605/",
+      "aliases": [
+        "斋浦尔",
+        "Jaipur",
+        "Jaipur City, Rajasthan"
+      ],
+      "sharedCapitalCheckin": true,
+      "tentative": false,
+      "wallBoundaryReview": "已接入原始墙段及遗迹；完整分期城界待核",
+      "focusBounds": [
+        [
+          75.8087321,
+          26.9137316
+        ],
+        [
+          75.82660109999999,
+          26.9448636
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "heritageId": "whc-1605",
+      "checklistItem": "Jaipur City, Rajasthan",
+      "capitalSiteKey": "ancient-site:world-jaipur"
+    },
+    {
+      "key": "amber",
+      "name": "琥珀城／安贝尔",
+      "enName": "Amber / Amer",
+      "capitalName": "琥珀城／安贝尔",
+      "capitalEnName": "Amber / Amer",
+      "country": "印度",
+      "countryEn": "India",
+      "center": [
+        75.851,
+        26.986
+      ],
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明",
+        "清"
+      ],
+      "periodLabel": "卡奇瓦哈王朝安贝尔都城",
+      "enPeriodLabel": "Capital of the Kachhwaha rulers of Amber",
+      "historicalIdentity": "capital",
+      "identityLabel": "卡奇瓦哈王朝安贝尔都城",
+      "identityEnLabel": "Capital of the Kachhwaha rulers of Amber",
+      "identityNote": "安贝尔堡及周围山地防御墙线与1727年新建斋浦尔分开。串联遗产“拉贾斯坦山地堡垒”保留独立打卡身份。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/247/",
+      "referenceUrl": "https://whc.unesco.org/en/list/247/",
+      "aliases": [
+        "琥珀城／安贝尔",
+        "Amber / Amer"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入原始墙段及遗迹；完整分期城界待核",
+      "focusBounds": [
+        [
+          75.8251616,
+          26.9511404
+        ],
+        [
+          75.86456869999999,
+          27.0066685
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [
+        "whc-247"
+      ],
+      "capitalSiteKey": "ancient-site:world-amber"
+    },
+    {
+      "key": "golconda",
+      "name": "戈尔康达",
+      "enName": "Golconda",
+      "capitalName": "戈尔康达",
+      "capitalEnName": "Golconda",
+      "country": "印度",
+      "countryEn": "India",
+      "center": [
+        78.403,
+        17.383
+      ],
+      "period": "明",
+      "capitalPeriods": [
+        "明"
+      ],
+      "periodLabel": "库特布沙希苏丹国都城",
+      "enPeriodLabel": "Capital of the Qutb Shahi sultanate",
+      "historicalIdentity": "capital",
+      "identityLabel": "库特布沙希苏丹国都城",
+      "identityEnLabel": "Capital of the Qutb Shahi sultanate",
+      "identityNote": "戈尔康达堡城与1591年建立的海得拉巴分址；城堡围区和外圈城防分层，不把王陵区当作宫城。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/tentativelists/5573/",
+      "referenceUrl": "https://whc.unesco.org/en/tentativelists/5573/",
+      "aliases": [
+        "戈尔康达",
+        "Golconda"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入原始墙段及遗迹；完整分期城界待核",
+      "focusBounds": [
+        [
+          78.3931268,
+          17.3735552
+        ],
+        [
+          78.41699899999999,
+          17.3950852
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-golconda"
+    },
+    {
+      "key": "hyderabad",
+      "name": "海得拉巴",
+      "enName": "Hyderabad",
+      "capitalName": "海得拉巴",
+      "capitalEnName": "Hyderabad",
+      "country": "印度",
+      "countryEn": "India",
+      "center": [
+        78.474,
+        17.36
+      ],
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "periodLabel": "库特布沙希与海得拉巴土邦都城",
+      "enPeriodLabel": "Capital of the Qutb Shahi and Asaf Jahi states",
+      "historicalIdentity": "capital",
+      "identityLabel": "库特布沙希与海得拉巴土邦都城",
+      "identityEnLabel": "Capital of the Qutb Shahi and Asaf Jahi states",
+      "identityNote": "1763年前阿萨夫贾赫王廷主要在奥兰加巴德，不能把1724年王朝建立直接当作迁都本城。乔马哈拉宫和旧宫为实际宫殿范围，完整城墙待核。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/tentativelists/5573/",
+      "referenceUrl": "https://whc.unesco.org/en/tentativelists/5573/",
+      "aliases": [
+        "海得拉巴",
+        "Hyderabad"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入宫堡或遗址围区；完整分期城界待核",
+      "focusBounds": [
+        [
+          78.46940470000001,
+          17.354149
+        ],
+        [
+          78.48500709999999,
+          17.3682536
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-hyderabad"
+    },
+    {
+      "key": "bijapur",
+      "name": "比贾布尔",
+      "enName": "Bijapur / Vijayapura",
+      "capitalName": "比贾布尔",
+      "capitalEnName": "Bijapur / Vijayapura",
+      "country": "印度",
+      "countryEn": "India",
+      "center": [
+        75.737,
+        16.829
+      ],
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清"
+      ],
+      "periodLabel": "阿迪勒沙希苏丹国都城",
+      "enPeriodLabel": "Capital of the Adil Shahi sultanate",
+      "historicalIdentity": "capital",
+      "identityLabel": "阿迪勒沙希苏丹国都城",
+      "identityEnLabel": "Capital of the Adil Shahi sultanate",
+      "identityNote": "比贾布尔城郭与内堡分层；原始墙段包含现存和遗迹状态，未补连城门或缺失部分，不把圆顶陵墓当宫殿。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/tentativelists/5887/",
+      "referenceUrl": "https://whc.unesco.org/en/tentativelists/5887/",
+      "aliases": [
+        "比贾布尔",
+        "Bijapur / Vijayapura"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入原始墙段及遗迹；完整分期城界待核",
+      "focusBounds": [
+        [
+          75.70685540000001,
+          16.8128212
+        ],
+        [
+          75.7409629,
+          16.8414569
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-bijapur"
+    },
+    {
+      "key": "bidar",
+      "name": "比达尔",
+      "enName": "Bidar",
+      "capitalName": "比达尔",
+      "capitalEnName": "Bidar",
+      "country": "印度",
+      "countryEn": "India",
+      "center": [
+        77.53,
+        17.925
+      ],
+      "period": "明",
+      "capitalPeriods": [
+        "明"
+      ],
+      "periodLabel": "巴赫曼尼与巴里德沙希都城",
+      "enPeriodLabel": "Capital of the Bahmani and Barid Shahi states",
+      "historicalIdentity": "capital",
+      "identityLabel": "巴赫曼尼与巴里德沙希都城",
+      "identityEnLabel": "Capital of the Bahmani and Barid Shahi states",
+      "identityNote": "比达尔堡为宫堡围区；塔赫特宫与朗吉纳宫轮廓分别接入，不用堡区代替全部历史城区。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://bidar.nic.in/en/tourist-place/bidar-fort/",
+      "referenceUrl": "https://bidar.nic.in/en/tourist-place/bidar-fort/",
+      "aliases": [
+        "比达尔",
+        "Bidar"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入宫堡或遗址围区；完整分期城界待核",
+      "focusBounds": [
+        [
+          77.51971030000001,
+          17.9176542
+        ],
+        [
+          77.534284,
+          17.9331003
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-bidar"
+    },
+    {
+      "key": "daulatabad",
+      "name": "道拉塔巴德",
+      "enName": "Devagiri / Daulatabad",
+      "capitalName": "道拉塔巴德",
+      "capitalEnName": "Devagiri / Daulatabad",
+      "country": "印度",
+      "countryEn": "India",
+      "center": [
+        75.212,
+        19.944
+      ],
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏",
+        "元"
+      ],
+      "periodLabel": "雅达瓦王国与图格鲁克短期都城",
+      "enPeriodLabel": "Yadava capital and short-lived Tughlaq capital",
+      "historicalIdentity": "capital",
+      "identityLabel": "雅达瓦王国与图格鲁克短期都城",
+      "identityEnLabel": "Yadava capital and short-lived Tughlaq capital",
+      "identityNote": "德瓦吉里与道拉塔巴德是同城异名；内堡和外圈防御墙分开。不能用单一堡顶轮廓代表多重都城城防。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://divcomcsn.maharashtra.gov.in/en/about-department/introduction/",
+      "referenceUrl": "https://chhatrapatisambhajinagar.maharashtra.gov.in/en/tourist-place/daultabad/",
+      "aliases": [
+        "道拉塔巴德",
+        "Devagiri / Daulatabad"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入原始墙段及遗迹；完整分期城界待核",
+      "focusBounds": [
+        [
+          75.2103471,
+          19.9310103
+        ],
+        [
+          75.2260501,
+          19.9548998
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-daulatabad"
+    },
+    {
+      "key": "pataliputra",
+      "name": "华氏城／波吒厘子城",
+      "enName": "Pataliputra",
+      "capitalName": "华氏城／波吒厘子城",
+      "capitalEnName": "Pataliputra",
+      "country": "印度",
+      "countryEn": "India",
+      "center": [
+        85.18,
+        25.602
+      ],
+      "period": "周",
+      "capitalPeriods": [
+        "周",
+        "秦汉"
+      ],
+      "periodLabel": "难陀与孔雀王朝都城",
+      "enPeriodLabel": "Capital of the Nanda and Maurya dynasties",
+      "historicalIdentity": "capital",
+      "identityLabel": "难陀与孔雀王朝都城",
+      "identityEnLabel": "Capital of the Nanda and Maurya dynasties",
+      "identityNote": "库姆拉哈尔为华氏城宫廷公共建筑遗址参照，现代考古公园范围不能当全城城界；木栅城墙位置须考古图核对。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://patna.nic.in/tourist-place/kumhrar-park/",
+      "referenceUrl": "https://patna.nic.in/tourist-place/kumhrar-park/",
+      "aliases": [
+        "华氏城／波吒厘子城",
+        "Pataliputra"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入宫堡或遗址围区；完整分期城界待核",
+      "focusBounds": [
+        [
+          85.17850000000001,
+          25.5962175
+        ],
+        [
+          85.1880178,
+          25.6035
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-pataliputra"
+    },
+    {
+      "key": "mysore",
+      "name": "迈索尔",
+      "enName": "Mysore / Mysuru",
+      "capitalName": "迈索尔",
+      "capitalEnName": "Mysore / Mysuru",
+      "country": "印度",
+      "countryEn": "India",
+      "center": [
+        76.655,
+        12.305
+      ],
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "periodLabel": "迈索尔沃德亚尔王朝都城",
+      "enPeriodLabel": "Capital of the Wadiyar kingdom of Mysore",
+      "historicalIdentity": "capital",
+      "identityLabel": "迈索尔沃德亚尔王朝都城",
+      "identityEnLabel": "Capital of the Wadiyar kingdom of Mysore",
+      "identityNote": "现存迈索尔宫主要为19世纪末至20世纪初重建；不得将现宫轮廓视为14世纪宫城或完整都城边界。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://mysore.nic.in/en/history/",
+      "referenceUrl": "https://mysore.nic.in/en/history/",
+      "aliases": [
+        "迈索尔",
+        "Mysore / Mysuru"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入宫堡或遗址围区；完整分期城界待核",
+      "focusBounds": [
+        [
+          76.65128610000001,
+          12.3013963
+        ],
+        [
+          76.660861,
+          12.3091126
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-mysore"
+    },
+    {
+      "key": "srirangapatna",
+      "name": "斯里兰加帕特纳",
+      "enName": "Srirangapatna",
+      "capitalName": "斯里兰加帕特纳",
+      "capitalEnName": "Srirangapatna",
+      "country": "印度",
+      "countryEn": "India",
+      "center": [
+        76.679,
+        12.424
+      ],
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清"
+      ],
+      "periodLabel": "迈索尔王国都城",
+      "enPeriodLabel": "Capital of the kingdom of Mysore",
+      "historicalIdentity": "capital",
+      "identityLabel": "迈索尔王国都城",
+      "identityEnLabel": "Capital of the kingdom of Mysore",
+      "identityNote": "城墙、河岛与蒂普夏宫分别表达；自然河岛不自动作为完整城墙边界。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://karnatakatourism.org/en/destinations/srirangapatna",
+      "referenceUrl": "https://karnatakatourism.org/en/destinations/srirangapatna",
+      "aliases": [
+        "斯里兰加帕特纳",
+        "Srirangapatna"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入原始墙段及遗迹；完整分期城界待核",
+      "focusBounds": [
+        [
+          76.6724186,
+          12.4160231
+        ],
+        [
+          76.6919995,
+          12.4284367
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-srirangapatna"
+    },
+    {
+      "key": "lahore",
+      "name": "拉合尔",
+      "enName": "Lahore",
+      "capitalName": "拉合尔",
+      "capitalEnName": "Lahore",
+      "country": "巴基斯坦",
+      "countryEn": "Pakistan",
+      "center": [
+        74.313,
+        31.584
+      ],
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清"
+      ],
+      "periodLabel": "莫卧儿与锡克帝国都城",
+      "enPeriodLabel": "Capital of the Mughal and Sikh empires",
+      "historicalIdentity": "capital",
+      "identityLabel": "莫卧儿与锡克帝国都城",
+      "identityEnLabel": "Capital of the Mughal and Sikh empires",
+      "identityNote": "拉合尔堡为宫堡；旧城围墙与现存、修复城门分开。夏利马尔花园为另一个遗产组件，不与整座古都强制合并打卡。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/171/",
+      "referenceUrl": "https://whc.unesco.org/en/list/171/",
+      "aliases": [
+        "拉合尔",
+        "Lahore"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入原始墙段及遗迹；完整分期城界待核",
+      "focusBounds": [
+        [
+          74.31046760000001,
+          31.580377
+        ],
+        [
+          74.32802869999999,
+          31.5919143
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [
+        "whc-171"
+      ],
+      "capitalSiteKey": "ancient-site:world-lahore"
+    },
+    {
+      "key": "peshawar",
+      "name": "白沙瓦",
+      "enName": "Peshawar / Purushapura",
+      "capitalName": "白沙瓦",
+      "capitalEnName": "Peshawar / Purushapura",
+      "country": "巴基斯坦",
+      "countryEn": "Pakistan",
+      "center": [
+        71.572,
+        34.011
+      ],
+      "period": "秦汉",
+      "capitalPeriods": [
+        "秦汉",
+        "魏晋南北朝"
+      ],
+      "periodLabel": "贵霜帝国王都",
+      "enPeriodLabel": "Royal capital of the Kushan Empire",
+      "historicalIdentity": "capital",
+      "identityLabel": "贵霜帝国王都",
+      "identityEnLabel": "Royal capital of the Kushan Empire",
+      "identityNote": "布路沙布逻与白沙瓦同城异名。巴拉希萨尔堡为后世持续修筑的堡垒，不能当作贵霜宫城原貌。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://www.metmuseum.org/es/essays/kushan-empire-ca-second-century-b-c-third-century-a-d",
+      "referenceUrl": "https://www.metmuseum.org/es/essays/kushan-empire-ca-second-century-b-c-third-century-a-d",
+      "aliases": [
+        "白沙瓦",
+        "Peshawar / Purushapura"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入宫堡或遗址围区；完整分期城界待核",
+      "focusBounds": [
+        [
+          71.56679360000001,
+          34.0095
+        ],
+        [
+          71.5735,
+          34.0154664
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-peshawar"
+    },
+    {
+      "key": "thatta",
+      "name": "塔塔",
+      "enName": "Thatta",
+      "capitalName": "塔塔",
+      "capitalEnName": "Thatta",
+      "country": "巴基斯坦",
+      "countryEn": "Pakistan",
+      "center": [
+        67.924,
+        24.751
+      ],
+      "period": "元",
+      "capitalPeriods": [
+        "元",
+        "明"
+      ],
+      "periodLabel": "信德萨马、阿尔贡与塔尔汗王都",
+      "enPeriodLabel": "Capital of the Samma, Arghun and Tarkhan dynasties",
+      "historicalIdentity": "capital",
+      "identityLabel": "信德萨马、阿尔贡与塔尔汗王都",
+      "identityEnLabel": "Capital of the Samma, Arghun and Tarkhan dynasties",
+      "identityNote": "马克里为城外王室和社会墓地，保留世界遗产独立身份，不作为塔塔城郭。完整城墙与宫城矢量待核。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/143/",
+      "referenceUrl": "https://whc.unesco.org/en/list/143/",
+      "aliases": [
+        "塔塔",
+        "Thatta"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "历史身份及城址已核，可靠城墙与宫城矢量待核",
+      "focusBounds": [
+        [
+          67.92250000000001,
+          24.7495
+        ],
+        [
+          67.9255,
+          24.7525
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [
+        "whc-143"
+      ],
+      "capitalSiteKey": "ancient-site:world-thatta"
+    },
+    {
+      "key": "taxila-bhir",
+      "name": "塔克西拉·比尔丘",
+      "enName": "Taxila — Bhir Mound",
+      "capitalName": "塔克西拉·比尔丘",
+      "capitalEnName": "Taxila — Bhir Mound",
+      "country": "巴基斯坦",
+      "countryEn": "Pakistan",
+      "center": [
+        72.819,
+        33.746
+      ],
+      "period": "周",
+      "capitalPeriods": [
+        "周",
+        "秦汉"
+      ],
+      "periodLabel": "犍陀罗塔克西拉早期王都",
+      "enPeriodLabel": "Early capital city of Taxila in Gandhara",
+      "historicalIdentity": "capital",
+      "identityLabel": "犍陀罗塔克西拉早期王都",
+      "identityEnLabel": "Early capital city of Taxila in Gandhara",
+      "identityNote": "比尔丘与锡尔卡普、锡尔苏克是不同城址；现代遗址区只作考古范围，不直接当完整古代城郭。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://doam.gov.pk/public/world-heritage-sites/13",
+      "referenceUrl": "https://doam.gov.pk/public/world-heritage-sites/13",
+      "aliases": [
+        "塔克西拉·比尔丘",
+        "Taxila — Bhir Mound"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入宫堡或遗址围区；完整分期城界待核",
+      "focusBounds": [
+        [
+          72.8168174,
+          33.7406712
+        ],
+        [
+          72.82569299999999,
+          33.7475
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [
+        "whc-139"
+      ],
+      "capitalSiteKey": "ancient-site:world-taxila-bhir"
+    },
+    {
+      "key": "taxila-sirkap",
+      "name": "塔克西拉锡尔卡普",
+      "enName": "Taxila — Sirkap",
+      "capitalName": "塔克西拉锡尔卡普",
+      "capitalEnName": "Taxila — Sirkap",
+      "country": "巴基斯坦",
+      "countryEn": "Pakistan",
+      "center": [
+        72.831,
+        33.756
+      ],
+      "period": "秦汉",
+      "capitalPeriods": [
+        "秦汉"
+      ],
+      "periodLabel": "塔克西拉印度帕提亚王都",
+      "enPeriodLabel": "Indo-Parthian royal capital at Taxila",
+      "historicalIdentity": "capital",
+      "identityLabel": "塔克西拉印度帕提亚王都",
+      "identityEnLabel": "Indo-Parthian royal capital at Taxila",
+      "identityNote": "锡尔卡普城墙约5.5公里，包含丘陵卫城；发掘区仅为部分城市，不把规则发掘区边界冒充完整城墙。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://doam.gov.pk/public/sites/9756",
+      "referenceUrl": "https://doam.gov.pk/public/sites/9756",
+      "aliases": [
+        "塔克西拉锡尔卡普",
+        "Taxila — Sirkap"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入宫堡或遗址围区；完整分期城界待核",
+      "focusBounds": [
+        [
+          72.825174,
+          33.751247
+        ],
+        [
+          72.8328088,
+          33.7595857
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [
+        "whc-139"
+      ],
+      "capitalSiteKey": "ancient-site:world-taxila-sirkap"
+    },
+    {
+      "key": "taxila-sirsukh",
+      "name": "塔克西拉锡尔苏克",
+      "enName": "Taxila — Sirsukh",
+      "capitalName": "塔克西拉锡尔苏克",
+      "capitalEnName": "Taxila — Sirsukh",
+      "country": "巴基斯坦",
+      "countryEn": "Pakistan",
+      "center": [
+        72.85,
+        33.781
+      ],
+      "period": "秦汉",
+      "capitalPeriods": [],
+      "periodLabel": "贵霜时期塔克西拉后期城址",
+      "enPeriodLabel": "Later Kushan-period city of Taxila",
+      "historicalIdentity": "archaeological-city",
+      "identityLabel": "贵霜时期塔克西拉后期城址",
+      "identityEnLabel": "Later Kushan-period city of Taxila",
+      "identityNote": "官方称塔克西拉有连续都城城址，但本城是否代表帝国王廷仍待进一步核证，暂按普通考古古城显示。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://doam.gov.pk/public/world-heritage-sites/13",
+      "referenceUrl": "https://doam.gov.pk/public/world-heritage-sites/13",
+      "aliases": [
+        "塔克西拉锡尔苏克",
+        "Taxila — Sirsukh"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入宫堡或遗址围区；完整分期城界待核",
+      "focusBounds": [
+        [
+          72.8461515,
+          33.770553
+        ],
+        [
+          72.85149999999999,
+          33.7825
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [
+        "whc-139"
+      ]
+    },
+    {
+      "key": "rohtas",
+      "name": "罗赫达斯堡",
+      "enName": "Rohtas Fort",
+      "capitalName": "罗赫达斯堡",
+      "capitalEnName": "Rohtas Fort",
+      "country": "巴基斯坦",
+      "countryEn": "Pakistan",
+      "center": [
+        73.579,
+        32.963
+      ],
+      "period": "明",
+      "capitalPeriods": [],
+      "periodLabel": "苏尔王朝军事堡垒",
+      "enPeriodLabel": "Military fortress of the Sur dynasty",
+      "historicalIdentity": "fortress",
+      "identityLabel": "苏尔王朝军事堡垒",
+      "identityEnLabel": "Military fortress of the Sur dynasty",
+      "identityNote": "军事堡垒不等于国家首都；城墙与堡内结构可显示，但不生成古都根点。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/586/",
+      "referenceUrl": "https://whc.unesco.org/en/list/586/",
+      "aliases": [
+        "罗赫达斯堡",
+        "Rohtas Fort",
+        "罗赫达斯要塞"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入原始墙段及遗迹；完整分期城界待核",
+      "focusBounds": [
+        [
+          73.567053,
+          32.9586167
+        ],
+        [
+          73.59039,
+          32.9717189
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "heritageId": "whc-586",
+      "checklistItem": "罗赫达斯要塞"
+    },
+    {
+      "key": "mohenjo-daro",
+      "name": "摩亨佐达罗",
+      "enName": "Mohenjo-daro",
+      "capitalName": "摩亨佐达罗",
+      "capitalEnName": "Mohenjo-daro",
+      "country": "巴基斯坦",
+      "countryEn": "Pakistan",
+      "center": [
+        68.139,
+        27.325
+      ],
+      "period": "传说",
+      "capitalPeriods": [],
+      "periodLabel": "印度河文明城市，政权都城身份未定",
+      "enPeriodLabel": "Indus city; capital status unconfirmed",
+      "historicalIdentity": "archaeological-city",
+      "identityLabel": "印度河文明城市，政权都城身份未定",
+      "identityEnLabel": "Indus city; capital status unconfirmed",
+      "identityNote": "上城、下城与现代遗址保护范围需要区别；没有确认王宫或统一国家首都身份，使用普通古城分类。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/138/",
+      "referenceUrl": "https://whc.unesco.org/en/list/138/",
+      "aliases": [
+        "摩亨佐达罗",
+        "Mohenjo-daro",
+        "摩亨佐达罗考古遗迹",
+        "Archaeological Ruins at Moenjodaro"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入宫堡或遗址围区；完整分期城界待核",
+      "focusBounds": [
+        [
+          68.12989590000001,
+          27.318928
+        ],
+        [
+          68.14247339999999,
+          27.33067
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "heritageId": "whc-138",
+      "checklistItem": "摩亨佐达罗考古遗迹"
+    },
+    {
+      "key": "babylon",
+      "name": "巴比伦",
+      "enName": "Babylon",
+      "capitalName": "巴比伦",
+      "capitalEnName": "Babylon",
+      "country": "伊拉克",
+      "countryEn": "Iraq",
+      "center": [
+        44.42083,
+        32.54197
+      ],
+      "period": "夏商",
+      "capitalPeriods": [
+        "夏商",
+        "周"
+      ],
+      "periodLabel": "古巴比伦与新巴比伦王国都城",
+      "enPeriodLabel": "Capital of the Old and Neo-Babylonian kingdoms",
+      "historicalIdentity": "capital",
+      "identityLabel": "古巴比伦与新巴比伦王国都城",
+      "identityEnLabel": "Capital of the Old and Neo-Babylonian kingdoms",
+      "identityNote": "内城双墙、外城墙和南宫分别表达，保留20世纪修复、复建说明；不接入萨达姆现代宫殿充作古代王宫。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/278/",
+      "referenceUrl": "https://whc.unesco.org/en/list/278/",
+      "aliases": [
+        "巴比伦",
+        "Babylon"
+      ],
+      "sharedCapitalCheckin": true,
+      "tentative": false,
+      "wallBoundaryReview": "已接入原始闭合墙界参考及现存遗迹；其他分期完整城界待核",
+      "focusBounds": [
+        [
+          44.4187204,
+          32.5272347
+        ],
+        [
+          44.4554733,
+          32.5711924
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "heritageId": "whc-278",
+      "checklistItem": "巴比伦",
+      "capitalSiteKey": "ancient-site:world-babylon"
+    },
+    {
+      "key": "ashur",
+      "name": "亚述／阿淑尔",
+      "enName": "Ashur / Assur",
+      "capitalName": "亚述／阿淑尔",
+      "capitalEnName": "Ashur / Assur",
+      "country": "伊拉克",
+      "countryEn": "Iraq",
+      "center": [
+        43.26111,
+        35.45667
+      ],
+      "period": "夏商",
+      "capitalPeriods": [
+        "夏商",
+        "周"
+      ],
+      "periodLabel": "亚述帝国早期都城",
+      "enPeriodLabel": "Early capital of the Assyrian Empire",
+      "historicalIdentity": "capital",
+      "identityLabel": "亚述帝国早期都城",
+      "identityEnLabel": "Early capital of the Assyrian Empire",
+      "identityNote": "神庙、旧宫、新宫和王储宫分层；考古区不是所有时期完整城界，现存遗迹含近现代保护修复。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/1130/",
+      "referenceUrl": "https://whc.unesco.org/en/list/1130/",
+      "aliases": [
+        "亚述／阿淑尔",
+        "Ashur / Assur",
+        "亚述古城",
+        "Ashur(Qal'at Sherqat)"
+      ],
+      "sharedCapitalCheckin": true,
+      "tentative": false,
+      "wallBoundaryReview": "已接入宫堡或遗址围区；完整分期城界待核",
+      "focusBounds": [
+        [
+          43.252935,
+          35.4540297
+        ],
+        [
+          43.2668163,
+          35.4627815
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "heritageId": "whc-1130",
+      "checklistItem": "亚述古城",
+      "capitalSiteKey": "ancient-site:world-ashur"
+    },
+    {
+      "key": "nimrud",
+      "name": "尼姆鲁德／卡尔胡",
+      "enName": "Nimrud / Kalhu",
+      "capitalName": "尼姆鲁德／卡尔胡",
+      "capitalEnName": "Nimrud / Kalhu",
+      "country": "伊拉克",
+      "countryEn": "Iraq",
+      "center": [
+        43.328,
+        36.099
+      ],
+      "period": "周",
+      "capitalPeriods": [
+        "周"
+      ],
+      "periodLabel": "新亚述帝国都城",
+      "enPeriodLabel": "Capital of the Neo-Assyrian Empire",
+      "historicalIdentity": "capital",
+      "identityLabel": "新亚述帝国都城",
+      "identityEnLabel": "Capital of the Neo-Assyrian Empire",
+      "identityNote": "卡尔胡与尼姆鲁德为同一城址；西北宫为实际宫殿遗址，不把旧发掘边界当完整城墙。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://archeologie.culture.gouv.fr/mossoul-museum/en/nimrud-0",
+      "referenceUrl": "https://archeologie.culture.gouv.fr/mossoul-museum/en/nimrud-0",
+      "aliases": [
+        "尼姆鲁德／卡尔胡",
+        "Nimrud / Kalhu"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入宫堡或遗址围区；完整分期城界待核",
+      "focusBounds": [
+        [
+          43.3254709,
+          36.0968482
+        ],
+        [
+          43.3295652,
+          36.1013219
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-nimrud"
+    },
+    {
+      "key": "dur-sharrukin",
+      "name": "杜尔沙鲁金",
+      "enName": "Dur-Sharrukin / Khorsabad",
+      "capitalName": "杜尔沙鲁金",
+      "capitalEnName": "Dur-Sharrukin / Khorsabad",
+      "country": "伊拉克",
+      "countryEn": "Iraq",
+      "center": [
+        43.229,
+        36.511
+      ],
+      "period": "周",
+      "capitalPeriods": [
+        "周"
+      ],
+      "periodLabel": "新亚述萨尔贡二世短期都城",
+      "enPeriodLabel": "Short-lived Assyrian capital of Sargon II",
+      "historicalIdentity": "capital",
+      "identityLabel": "新亚述萨尔贡二世短期都城",
+      "identityEnLabel": "Short-lived Assyrian capital of Sargon II",
+      "identityNote": "城市开建、正式启用与迁离年份分别说明；本轮原始墙线保持开放，不能因历史上近方形而随意补成四边形。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://archeologie.culture.gouv.fr/mossoul-museum/en/khorsabad",
+      "referenceUrl": "https://archeologie.culture.gouv.fr/mossoul-museum/en/khorsabad",
+      "aliases": [
+        "杜尔沙鲁金",
+        "Dur-Sharrukin / Khorsabad"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入原始墙段及遗迹；完整分期城界待核",
+      "focusBounds": [
+        [
+          43.219526,
+          36.4912547
+        ],
+        [
+          43.2497419,
+          36.5160603
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-dur-sharrukin"
+    },
+    {
+      "key": "nineveh",
+      "name": "尼尼微",
+      "enName": "Nineveh",
+      "capitalName": "尼尼微",
+      "capitalEnName": "Nineveh",
+      "country": "伊拉克",
+      "countryEn": "Iraq",
+      "center": [
+        43.154,
+        36.36
+      ],
+      "period": "周",
+      "capitalPeriods": [
+        "周"
+      ],
+      "periodLabel": "新亚述帝国都城",
+      "enPeriodLabel": "Capital of the Neo-Assyrian Empire",
+      "historicalIdentity": "capital",
+      "identityLabel": "新亚述帝国都城",
+      "identityEnLabel": "Capital of the Neo-Assyrian Empire",
+      "identityNote": "库云吉克与奈比优努斯宫区分开。保留原始城墙遗段和宫殿标绘，不以现代摩苏尔市界替代古城。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://www.britishmuseum.org/collection/galleries/assyria-nineveh",
+      "referenceUrl": "https://www.britishmuseum.org/collection/galleries/assyria-nineveh",
+      "aliases": [
+        "尼尼微",
+        "Nineveh"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入原始墙段及遗迹；完整分期城界待核",
+      "focusBounds": [
+        [
+          43.1496633,
+          36.3348474
+        ],
+        [
+          43.1797704,
+          36.3642415
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-nineveh"
+    },
+    {
+      "key": "ur",
+      "name": "乌尔",
+      "enName": "Ur",
+      "capitalName": "乌尔",
+      "capitalEnName": "Ur",
+      "country": "伊拉克",
+      "countryEn": "Iraq",
+      "center": [
+        46.103,
+        30.961
+      ],
+      "period": "传说",
+      "capitalPeriods": [
+        "传说",
+        "夏商"
+      ],
+      "periodLabel": "苏美尔城邦与乌尔第三王朝都城",
+      "enPeriodLabel": "Sumerian city-state and Ur III imperial capital",
+      "historicalIdentity": "capital",
+      "identityLabel": "苏美尔城邦与乌尔第三王朝都城",
+      "identityEnLabel": "Sumerian city-state and Ur III imperial capital",
+      "identityNote": "城址、宗教核心和塔庙范围分别表达。遗址标绘区不作为测定完整城郭；中国对应“传说”仅表示中国同期分组，不表示本地史料为传说。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://archeologie.culture.gouv.fr/en/glossary/ur",
+      "referenceUrl": "https://archeologie.culture.gouv.fr/en/glossary/ur",
+      "aliases": [
+        "乌尔",
+        "Ur"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入宫堡或遗址围区；完整分期城界待核",
+      "focusBounds": [
+        [
+          46.1012945,
+          30.9595
+        ],
+        [
+          46.1049675,
+          30.9645987
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [
+        "whc-1481"
+      ],
+      "capitalSiteKey": "ancient-site:world-ur"
+    },
+    {
+      "key": "uruk",
+      "name": "乌鲁克",
+      "enName": "Uruk / Warka",
+      "capitalName": "乌鲁克",
+      "capitalEnName": "Uruk / Warka",
+      "country": "伊拉克",
+      "countryEn": "Iraq",
+      "center": [
+        45.636,
+        31.323
+      ],
+      "period": "传说",
+      "capitalPeriods": [
+        "传说"
+      ],
+      "periodLabel": "苏美尔乌鲁克城邦都城",
+      "enPeriodLabel": "Capital of the Sumerian city-state of Uruk",
+      "historicalIdentity": "capital",
+      "identityLabel": "苏美尔乌鲁克城邦都城",
+      "identityEnLabel": "Capital of the Sumerian city-state of Uruk",
+      "identityNote": "闭合城墙标绘可生成明确注明原始闭合墙线所围的参考面；不宣称吉尔伽美什为考古证实的筑墙者。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://www.metmuseum.org/it/essays/uruk-the-first-city",
+      "referenceUrl": "https://www.metmuseum.org/it/essays/uruk-the-first-city",
+      "aliases": [
+        "乌鲁克",
+        "Uruk / Warka"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入原始闭合墙界参考及现存遗迹；其他分期完整城界待核",
+      "focusBounds": [
+        [
+          45.6230899,
+          31.3081393
+        ],
+        [
+          45.6535772,
+          31.3385337
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [
+        "whc-1481"
+      ],
+      "capitalSiteKey": "ancient-site:world-uruk"
+    },
+    {
+      "key": "hatra",
+      "name": "哈特拉",
+      "enName": "Hatra",
+      "capitalName": "哈特拉",
+      "capitalEnName": "Hatra",
+      "country": "伊拉克",
+      "countryEn": "Iraq",
+      "center": [
+        42.71833,
+        35.58806
+      ],
+      "period": "秦汉",
+      "capitalPeriods": [
+        "秦汉",
+        "魏晋南北朝"
+      ],
+      "periodLabel": "哈特拉王国都城",
+      "enPeriodLabel": "Capital of the kingdom of Hatra",
+      "historicalIdentity": "capital",
+      "identityLabel": "哈特拉王国都城",
+      "identityEnLabel": "Capital of the kingdom of Hatra",
+      "identityNote": "圆形内外城防与中央圣区不同；仅接入原始闭合墙线，不以圣区范围冒充整个城市。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/277/",
+      "referenceUrl": "https://whc.unesco.org/en/list/277/",
+      "aliases": [
+        "哈特拉",
+        "Hatra"
+      ],
+      "sharedCapitalCheckin": true,
+      "tentative": false,
+      "wallBoundaryReview": "已接入原始闭合墙界参考及现存遗迹；其他分期完整城界待核",
+      "focusBounds": [
+        [
+          42.705544,
+          35.5771726
+        ],
+        [
+          42.7294919,
+          35.59776
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "heritageId": "whc-277",
+      "checklistItem": "哈特拉",
+      "capitalSiteKey": "ancient-site:world-hatra"
+    },
+    {
+      "key": "ctesiphon",
+      "name": "泰西封",
+      "enName": "Ctesiphon",
+      "capitalName": "泰西封",
+      "capitalEnName": "Ctesiphon",
+      "country": "伊拉克",
+      "countryEn": "Iraq",
+      "center": [
+        44.581,
+        33.094
+      ],
+      "period": "秦汉",
+      "capitalPeriods": [
+        "秦汉",
+        "魏晋南北朝",
+        "隋唐"
+      ],
+      "periodLabel": "帕提亚与萨珊王朝王都",
+      "enPeriodLabel": "Royal capital of the Parthian and Sasanian empires",
+      "historicalIdentity": "capital",
+      "identityLabel": "帕提亚与萨珊王朝王都",
+      "identityEnLabel": "Royal capital of the Parthian and Sasanian empires",
+      "identityNote": "泰西封为多城组成的都会区；塔克基斯拉宫殿拱厅仅是一个宫殿遗存，不代表全部都会或宫城边界。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://www.metmuseum.org/pt/essays/ctesiphon",
+      "referenceUrl": "https://www.metmuseum.org/pt/essays/ctesiphon",
+      "aliases": [
+        "泰西封",
+        "Ctesiphon"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入宫堡或遗址围区；完整分期城界待核",
+      "focusBounds": [
+        [
+          44.5740619,
+          33.0896775
+        ],
+        [
+          44.5908753,
+          33.0988705
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-ctesiphon"
+    },
+    {
+      "key": "samarra",
+      "name": "萨迈拉",
+      "enName": "Samarra",
+      "capitalName": "萨迈拉",
+      "capitalEnName": "Samarra",
+      "country": "伊拉克",
+      "countryEn": "Iraq",
+      "center": [
+        43.82354,
+        34.34099
+      ],
+      "period": "隋唐",
+      "capitalPeriods": [
+        "隋唐"
+      ],
+      "periodLabel": "阿拔斯哈里发国都城",
+      "enPeriodLabel": "Capital of the Abbasid Caliphate",
+      "historicalIdentity": "capital",
+      "identityLabel": "阿拔斯哈里发国都城",
+      "identityEnLabel": "Capital of the Abbasid Caliphate",
+      "identityNote": "都城沿底格里斯河延展，宫城、清真寺围墙和军事围区分开；不以某个闭合围区代表完整线性都会。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/276/",
+      "referenceUrl": "https://whc.unesco.org/en/list/276/",
+      "aliases": [
+        "萨迈拉",
+        "Samarra",
+        "萨迈拉古城",
+        "Samarra Archaeological City"
+      ],
+      "sharedCapitalCheckin": true,
+      "tentative": false,
+      "wallBoundaryReview": "已接入原始墙段及遗迹；完整分期城界待核",
+      "focusBounds": [
+        [
+          43.806066799999996,
+          34.129778
+        ],
+        [
+          43.9029959,
+          34.34249
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "heritageId": "whc-276",
+      "checklistItem": "萨迈拉古城",
+      "capitalSiteKey": "ancient-site:world-samarra"
+    },
+    {
+      "key": "baghdad",
+      "name": "巴格达",
+      "enName": "Baghdad",
+      "capitalName": "巴格达",
+      "capitalEnName": "Baghdad",
+      "country": "伊拉克",
+      "countryEn": "Iraq",
+      "center": [
+        44.373,
+        33.339
+      ],
+      "period": "隋唐",
+      "capitalPeriods": [
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏"
+      ],
+      "periodLabel": "阿拔斯哈里发国都城",
+      "enPeriodLabel": "Capital of the Abbasid Caliphate",
+      "historicalIdentity": "capital",
+      "identityLabel": "阿拔斯哈里发国都城",
+      "identityEnLabel": "Capital of the Abbasid Caliphate",
+      "identityNote": "阿拔斯圆城旧址与后世东岸城区不同；未取得可靠圆城墙矢量，不绘制猜测圆形城界。现存后期宫殿与残墙另行标注。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/276/",
+      "referenceUrl": "https://whc.unesco.org/en/list/276/",
+      "aliases": [
+        "巴格达",
+        "Baghdad"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入原始墙段及遗迹；完整分期城界待核",
+      "focusBounds": [
+        [
+          44.3715,
+          33.3365906
+        ],
+        [
+          44.3919528,
+          33.3480845
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-baghdad"
+    },
+    {
+      "key": "erbil",
+      "name": "埃尔比勒",
+      "enName": "Erbil / Arbela",
+      "capitalName": "埃尔比勒",
+      "capitalEnName": "Erbil / Arbela",
+      "country": "伊拉克",
+      "countryEn": "Iraq",
+      "center": [
+        44.009,
+        36.191
+      ],
+      "period": "秦汉",
+      "capitalPeriods": [],
+      "periodLabel": "古代政治与宗教中心、历史城堡",
+      "enPeriodLabel": "Historic political and religious centre with a citadel",
+      "historicalIdentity": "political-centre",
+      "identityLabel": "古代政治与宗教中心、历史城堡",
+      "identityEnLabel": "Historic political and religious centre with a citadel",
+      "identityNote": "UNESCO证实古代政治与宗教中心及长期连续居住，但不能仅据城堡将所有时期认定为国家首都。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/1437/",
+      "referenceUrl": "https://whc.unesco.org/en/list/1437/",
+      "aliases": [
+        "埃尔比勒",
+        "Erbil / Arbela",
+        "Erbil Citadel"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入宫堡或遗址围区；完整分期城界待核",
+      "focusBounds": [
+        [
+          44.0053677,
+          36.1882645
+        ],
+        [
+          44.0131582,
+          36.1945506
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "heritageId": "whc-1437",
+      "checklistItem": "Erbil Citadel"
+    },
+    {
+      "key": "jerusalem-old-city",
+      "name": "耶路撒冷旧城",
+      "enName": "Jerusalem — Old City",
+      "capitalName": "耶路撒冷旧城",
+      "capitalEnName": "Jerusalem — Old City",
+      "country": "耶路撒冷",
+      "countryEn": "Jerusalem",
+      "center": [
+        35.23167,
+        31.77778
+      ],
+      "period": "周",
+      "capitalPeriods": [
+        "周",
+        "宋辽金西夏"
+      ],
+      "periodLabel": "犹大王国与十字军耶路撒冷王国都城",
+      "enPeriodLabel": "Capital of Judah and the Crusader kingdom of Jerusalem",
+      "historicalIdentity": "capital",
+      "identityLabel": "犹大王国与十字军耶路撒冷王国都城",
+      "identityEnLabel": "Capital of Judah and the Crusader kingdom of Jerusalem",
+      "identityNote": "旧城现存墙界主要为16世纪奥斯曼时期，不等于铁器时代犹大王城。古代南部城址与现旧城分期说明；地域按具体历史城址表示。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/148/",
+      "referenceUrl": "https://whc.unesco.org/en/list/148/",
+      "aliases": [
+        "耶路撒冷旧城",
+        "Jerusalem — Old City",
+        "耶路撒冷古城及其城墙",
+        "Old City of Jerusalem and its Walls"
+      ],
+      "sharedCapitalCheckin": true,
+      "tentative": false,
+      "wallBoundaryReview": "已接入原始闭合墙界参考及现存遗迹；其他分期完整城界待核",
+      "focusBounds": [
+        [
+          35.2241897,
+          31.7713225
+        ],
+        [
+          35.2390555,
+          31.7852524
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "heritageId": "whc-148",
+      "checklistItem": "耶路撒冷古城及其城墙",
+      "capitalSiteKey": "ancient-site:world-jerusalem-old-city"
+    },
+    {
+      "key": "acre",
+      "name": "阿卡／阿克",
+      "enName": "Acre / Akko",
+      "capitalName": "阿卡／阿克",
+      "capitalEnName": "Acre / Akko",
+      "country": "以色列",
+      "countryEn": "Israel",
+      "center": [
+        35.06889,
+        32.92167
+      ],
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏",
+        "元"
+      ],
+      "periodLabel": "十字军耶路撒冷王国后期都城",
+      "enPeriodLabel": "Capital of the later Crusader kingdom of Jerusalem",
+      "historicalIdentity": "capital",
+      "identityLabel": "十字军耶路撒冷王国后期都城",
+      "identityEnLabel": "Capital of the later Crusader kingdom of Jerusalem",
+      "identityNote": "1104年征服不等于成为首都；采用1191—1291。现存城防主要为18—19世纪奥斯曼建筑，与地下十字军遗存分开。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/1042/",
+      "referenceUrl": "https://whc.unesco.org/en/list/1042/",
+      "aliases": [
+        "阿卡／阿克",
+        "Acre / Akko",
+        "阿克古城",
+        "Old City of Acre"
+      ],
+      "sharedCapitalCheckin": true,
+      "tentative": false,
+      "wallBoundaryReview": "已接入原始墙段及遗迹；完整分期城界待核",
+      "focusBounds": [
+        [
+          35.0643303,
+          32.9175276
+        ],
+        [
+          35.0753548,
+          32.926547
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "heritageId": "whc-1042",
+      "checklistItem": "阿克古城",
+      "capitalSiteKey": "ancient-site:world-acre"
+    },
+    {
+      "key": "hazor",
+      "name": "夏琐",
+      "enName": "Hazor",
+      "capitalName": "夏琐",
+      "capitalEnName": "Hazor",
+      "country": "以色列",
+      "countryEn": "Israel",
+      "center": [
+        35.569,
+        33.018
+      ],
+      "period": "夏商",
+      "capitalPeriods": [
+        "夏商"
+      ],
+      "periodLabel": "青铜时代迦南夏琐城邦王都",
+      "enPeriodLabel": "Royal capital of the Canaanite city-state of Hazor",
+      "historicalIdentity": "capital",
+      "identityLabel": "青铜时代迦南夏琐城邦王都",
+      "identityEnLabel": "Royal capital of the Canaanite city-state of Hazor",
+      "identityNote": "迦南宫殿与铁器时代堡垒、城门分期；后来的北国以色列行政中心身份不另立国家首都记录。现代公园范围不是青铜时代全城。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://archaeology.huji.ac.il/tel-hazor",
+      "referenceUrl": "https://archaeology.huji.ac.il/tel-hazor",
+      "aliases": [
+        "夏琐",
+        "Hazor"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入宫堡或遗址围区；完整分期城界待核",
+      "focusBounds": [
+        [
+          35.564157,
+          33.0148107
+        ],
+        [
+          35.5705,
+          33.0195
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [
+        "whc-1108"
+      ],
+      "capitalSiteKey": "ancient-site:world-hazor"
+    },
+    {
+      "key": "megiddo",
+      "name": "米吉多",
+      "enName": "Megiddo",
+      "capitalName": "米吉多",
+      "capitalEnName": "Megiddo",
+      "country": "以色列",
+      "countryEn": "Israel",
+      "center": [
+        35.183,
+        32.585
+      ],
+      "period": "传说",
+      "capitalPeriods": [
+        "传说",
+        "夏商"
+      ],
+      "periodLabel": "青铜时代迦南米吉多城邦都城",
+      "enPeriodLabel": "Capital of the Canaanite city-state of Megiddo",
+      "historicalIdentity": "capital",
+      "identityLabel": "青铜时代迦南米吉多城邦都城",
+      "identityEnLabel": "Capital of the Canaanite city-state of Megiddo",
+      "identityNote": "宫殿、城门和城防跨多个地层，不将有争议的建筑统一认定为所罗门时期。北国及亚述行政中心身份与城邦阶段区分。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://www.parks.org.il/wp-content/uploads/2018/01/megido-en-broshur.pdf",
+      "referenceUrl": "https://www.parks.org.il/wp-content/uploads/2018/01/megido-en-broshur.pdf",
+      "aliases": [
+        "米吉多",
+        "Megiddo"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "历史身份及城址已核，可靠城墙与宫城矢量待核",
+      "focusBounds": [
+        [
+          35.1815,
+          32.5835
+        ],
+        [
+          35.1845,
+          32.5865
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [
+        "whc-1108"
+      ],
+      "capitalSiteKey": "ancient-site:world-megiddo"
+    },
+    {
+      "key": "caesarea",
+      "name": "凯撒利亚",
+      "enName": "Caesarea Maritima",
+      "capitalName": "凯撒利亚",
+      "capitalEnName": "Caesarea Maritima",
+      "country": "以色列",
+      "countryEn": "Israel",
+      "center": [
+        34.892,
+        32.501
+      ],
+      "period": "秦汉",
+      "capitalPeriods": [],
+      "periodLabel": "罗马与拜占庭时期行省首府",
+      "enPeriodLabel": "Roman and Byzantine provincial capital",
+      "historicalIdentity": "provincial-capital",
+      "identityLabel": "罗马与拜占庭时期行省首府",
+      "identityEnLabel": "Roman and Byzantine provincial capital",
+      "identityNote": "希律宫殿与后期十字军城墙分开；有王宫不等于整个古城为独立国家首都。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://en.parks.org.il/reserve-park/caesarea-national-park/",
+      "referenceUrl": "https://en.parks.org.il/reserve-park/caesarea-national-park/",
+      "aliases": [
+        "凯撒利亚",
+        "Caesarea Maritima"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入原始墙段及遗迹；完整分期城界待核",
+      "focusBounds": [
+        [
+          34.8877947,
+          32.495319
+        ],
+        [
+          34.8953384,
+          32.5062874
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": []
+    },
+    {
+      "key": "masada",
+      "name": "马萨达",
+      "enName": "Masada",
+      "capitalName": "马萨达",
+      "capitalEnName": "Masada",
+      "country": "以色列",
+      "countryEn": "Israel",
+      "center": [
+        35.353,
+        31.315
+      ],
+      "period": "秦汉",
+      "capitalPeriods": [],
+      "periodLabel": "希律王室堡垒与围城遗址",
+      "enPeriodLabel": "Herodian royal fortress and siege site",
+      "historicalIdentity": "fortress",
+      "identityLabel": "希律王室堡垒与围城遗址",
+      "identityEnLabel": "Herodian royal fortress and siege site",
+      "identityNote": "山顶堡垒、北宫、西宫和罗马围城营垒分别表达；不因有王宫认定为国家首都。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/1040/",
+      "referenceUrl": "https://whc.unesco.org/en/list/1040/",
+      "aliases": [
+        "马萨达",
+        "Masada"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入宫堡或遗址围区；完整分期城界待核",
+      "focusBounds": [
+        [
+          35.3474828,
+          31.3110714
+        ],
+        [
+          35.3660369,
+          31.3227687
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "heritageId": "whc-1040",
+      "checklistItem": "马萨达"
+    },
+    {
+      "key": "beer-sheba",
+      "name": "贝尔谢巴古城",
+      "enName": "Tel Beer Sheba",
+      "capitalName": "贝尔谢巴古城",
+      "capitalEnName": "Tel Beer Sheba",
+      "country": "以色列",
+      "countryEn": "Israel",
+      "center": [
+        34.841,
+        31.245
+      ],
+      "period": "周",
+      "capitalPeriods": [],
+      "periodLabel": "铁器时代区域行政城址",
+      "enPeriodLabel": "Iron Age regional administrative town",
+      "historicalIdentity": "provincial-capital",
+      "identityLabel": "铁器时代区域行政城址",
+      "identityEnLabel": "Iron Age regional administrative town",
+      "identityNote": "采用贝尔谢巴古城遗址，不使用现代城市行政范围，也不视为犹大国家首都。",
+      "identityEnNote": "Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/1108/",
+      "referenceUrl": "https://whc.unesco.org/en/list/1108/",
+      "aliases": [
+        "贝尔谢巴古城",
+        "Tel Beer Sheba"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入宫堡或遗址围区；完整分期城界待核",
+      "focusBounds": [
+        [
+          34.8380491,
+          31.2425812
+        ],
+        [
+          34.8437364,
+          31.2485042
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [
+        "whc-1108"
+      ]
+    },
+    {
+      "key": "dholavira",
+      "name": "多拉维拉",
+      "enName": "Dholavira",
+      "capitalName": "多拉维拉",
+      "capitalEnName": "Dholavira",
+      "country": "印度",
+      "countryEn": "India",
+      "center": [
+        70.2133,
+        23.88841
+      ],
+      "period": "夏商",
+      "capitalPeriods": [],
+      "periodLabel": "约前3000—前1500年，多阶段发展",
+      "enPeriodLabel": "Approximately 3000–1500 BCE, multiple phases",
+      "historicalIdentity": "archaeological-city",
+      "identityLabel": "哈拉帕文明城市与区域中心，都城身份未定",
+      "identityEnLabel": "Harappan city and regional centre; capital status unconfirmed",
+      "identityNote": "内堡Castle、堡区Bailey、中城与外城分别表达；不能将内堡直接称为王宫。外城东南侧图示涉及现代堤坝，故保留开放墙线，不补绘完整外城闭合面。图示配准范围非实测墙界。",
+      "identityEnNote": "Castle, Bailey, Middle Town and outer walls are distinguished. The Castle is not asserted to be a royal palace. The southeastern layout includes a modern bund, so the outer wall remains open. Diagram references are not surveyed boundaries.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/1645/",
+      "referenceUrl": "https://whc.unesco.org/en/list/1645/",
+      "aliases": [
+        "多拉维拉",
+        "Dholavira",
+        "多拉维拉：哈拉帕文明古城",
+        "Dholavira: a Harappan City"
+      ],
+      "tentative": false,
+      "sharedCapitalCheckin": false,
+      "wallBoundaryReview": "原始外城开放墙线、内堡与蓄水遗迹已接入；中城及堡区有图示参考面；完整外城闭合墙界待核",
+      "focusMaxZoom": 16,
+      "heritageId": "whc-1645",
+      "checklistItem": "多拉维拉：哈拉帕文明古城",
+      "focusBounds": [
+        [
+          70.20458479999999,
+          23.8839134
+        ],
+        [
+          70.21880560000001,
+          23.8935914
+        ]
+      ]
+    },
+    {
+      "key": "harappa",
+      "name": "哈拉帕",
+      "enName": "Harappa",
+      "capitalName": "哈拉帕",
+      "capitalEnName": "Harappa",
+      "country": "巴基斯坦",
+      "countryEn": "Pakistan",
+      "center": [
+        72.8650273,
+        30.6292436
+      ],
+      "period": "传说",
+      "capitalPeriods": [],
+      "periodLabel": "约前3300—前1300年；成熟期约前2600—前1900年",
+      "enPeriodLabel": "Approximately 3300–1300 BCE; mature phase approximately 2600–1900 BCE",
+      "historicalIdentity": "archaeological-city",
+      "identityLabel": "哈拉帕文明大型城市，都城身份未定",
+      "identityEnLabel": "Major Harappan urban centre; capital status unconfirmed",
+      "identityNote": "多处遗址丘各自有围墙，并非一个已确认的环城墙系统。南侧现代复原城墙和门须与原始遗迹区别；F丘大型建筑旧称粮仓，功能存在争议。当前未接入未经可靠定位的城墙线。",
+      "identityEnNote": "Separate walled mounds must not be conflated with a verified single city circuit. Modern reconstructed walls and gates differ from ancient fabric. The traditional Granary identification at Mound F is disputed. Reliably located wall traces remain to be added.",
+      "identitySourceUrl": "https://whc.unesco.org/en/tentativelists/1878/",
+      "referenceUrl": "https://whc.unesco.org/en/tentativelists/1878/",
+      "aliases": [
+        "哈拉帕",
+        "Harappa"
+      ],
+      "tentative": true,
+      "sharedCapitalCheckin": false,
+      "wallBoundaryReview": "已接入遗址总标绘与F丘建筑等分区；古代墙线及现代复原门墙的可靠定位待核",
+      "focusMaxZoom": 16,
+      "focusBounds": [
+        [
+          72.85980459999999,
+          30.624511700000003
+        ],
+        [
+          72.87315070000001,
+          30.635337699999997
+        ]
+      ]
+    },
+    {
+      "key": "lothal",
+      "name": "洛塔尔",
+      "enName": "Lothal",
+      "capitalName": "洛塔尔",
+      "capitalEnName": "Lothal",
+      "country": "印度",
+      "countryEn": "India",
+      "center": [
+        72.2493077,
+        22.522677
+      ],
+      "period": "夏商",
+      "capitalPeriods": [],
+      "periodLabel": "约前2400—前1600年",
+      "enPeriodLabel": "Approximately 2400–1600 BCE",
+      "historicalIdentity": "archaeological-city",
+      "identityLabel": "哈拉帕文明港口与工商业城市，都城身份未定",
+      "identityEnLabel": "Harappan port and craft town; capital status unconfirmed",
+      "identityNote": "防洪外墙、上城台地和大型池体不可混同。上城由抬高台地界定，并非另有围墙的皇城；池体通常解释为船坞。布局图的Site Boundary只作图示参考，不冒充已经核定的防洪墙线。无名OSM墙段未确认性质，暂不接入。",
+      "identityEnNote": "Flood-defence walls, the raised acropolis and the large basin are distinct. The upper town is bounded by platforms rather than a separate fortification wall. The basin is commonly interpreted as a dockyard. The diagram’s Site Boundary is a layout reference, not a verified flood-defence wall trace; unverified unnamed OSM walls are excluded.",
+      "identitySourceUrl": "https://whc.unesco.org/en/tentativelists/5918/",
+      "referenceUrl": "https://whc.unesco.org/en/tentativelists/5918/",
+      "aliases": [
+        "洛塔尔",
+        "Lothal"
+      ],
+      "tentative": true,
+      "sharedCapitalCheckin": false,
+      "wallBoundaryReview": "已接入闭合池体和布局／上城台地图示参考；防洪城墙的准确矢量待核",
+      "focusMaxZoom": 16,
+      "focusBounds": [
+        [
+          72.24681487,
+          22.521060600000002
+        ],
+        [
+          72.2507983,
+          22.524931929999997
+        ]
+      ]
+    },
+    {
+      "key": "rakhigarhi",
+      "name": "拉基加里",
+      "enName": "Rakhigarhi",
+      "capitalName": "拉基加里",
+      "capitalEnName": "Rakhigarhi",
+      "country": "印度",
+      "countryEn": "India",
+      "center": [
+        76.1124322,
+        29.2916289
+      ],
+      "period": "传说",
+      "capitalPeriods": [],
+      "periodLabel": "早期及成熟哈拉帕阶段；成熟期约前2600—前1900年",
+      "enPeriodLabel": "Early and Mature Harappan phases; mature phase approximately 2600–1900 BCE",
+      "historicalIdentity": "archaeological-city",
+      "identityLabel": "哈拉帕文明大型聚落，都城身份未定",
+      "identityEnLabel": "Major Harappan settlement; capital status unconfirmed",
+      "identityNote": "现接入RGR-1、RGR-2、RGR-3三个已有原始几何的遗址丘，不等于聚落全部范围。考古报告记录城防调查，但可靠完整墙线尚未取得，不能连接遗址丘来推测围城。",
+      "identityEnNote": "RGR-1, RGR-2 and RGR-3 are mapped separately and do not represent the complete settlement. Reports describe fortification investigations, but no reliable complete wall geometry has been obtained. Mounds are not joined to invent a circuit.",
+      "identitySourceUrl": "https://ignca.gov.in/Asi_data/85200.pdf",
+      "referenceUrl": "https://ignca.gov.in/Asi_data/85200.pdf",
+      "aliases": [
+        "拉基加里",
+        "Rakhigarhi",
+        "拉基加希",
+        "Rakhigarhi Archaeological Site"
+      ],
+      "tentative": false,
+      "sharedCapitalCheckin": false,
+      "wallBoundaryReview": "已接入三个独立遗址丘；完整聚落、分期城墙及其他遗址丘待核",
+      "focusMaxZoom": 16,
+      "focusBounds": [
+        [
+          76.10905749999999,
+          29.2890923
+        ],
+        [
+          76.11626120000001,
+          29.2952238
+        ]
+      ]
+    },
+    {
+      "key": "kalibangan",
+      "name": "卡利班甘",
+      "enName": "Kalibangan",
+      "capitalName": "卡利班甘",
+      "capitalEnName": "Kalibangan",
+      "country": "印度",
+      "countryEn": "India",
+      "center": [
+        74.1293,
+        29.4737
+      ],
+      "period": "传说",
+      "capitalPeriods": [],
+      "periodLabel": "早期及成熟哈拉帕阶段；分期城墙不可混用",
+      "enPeriodLabel": "Early and Mature Harappan phases; dated fortifications must be distinguished",
+      "historicalIdentity": "archaeological-city",
+      "identityLabel": "哈拉帕文明有城防城市，都城身份未定",
+      "identityEnLabel": "Fortified Harappan city; capital status unconfirmed",
+      "identityNote": "考古报告区分西侧上城KLB-1、东侧下城KLB-2及其他遗迹。现有OSM总范围并非各阶段城墙；未将保护区边界当成全城，也未用任意四边形补围上城。",
+      "identityEnNote": "Excavation reports distinguish the western citadel KLB-1, eastern Lower Town KLB-2 and other remains. The available OSM extent is not the dated fortification circuit. No protection boundary or arbitrary quadrilateral is used as city walls.",
+      "identitySourceUrl": "https://asi.nic.in/admin/publications/ePublicationReportsDetails/download/60",
+      "referenceUrl": "https://asi.nic.in/admin/publications/ePublicationReportsDetails/download/60",
+      "aliases": [
+        "卡利班甘",
+        "Kalibangan"
+      ],
+      "tentative": false,
+      "sharedCapitalCheckin": false,
+      "wallBoundaryReview": "已接入遗址总标绘；上城、下城分期墙线与祭祀区可靠定位待核",
+      "focusMaxZoom": 16,
+      "focusBounds": [
+        [
+          74.1250237,
+          29.470936400000003
+        ],
+        [
+          74.13369300000001,
+          29.4765679
+        ]
+      ]
+    },
+    {
+      "key": "thinis",
+      "name": "提尼斯（位置待考）",
+      "enName": "Thinis (location uncertain)",
+      "capitalName": "提尼斯（位置待考）",
+      "capitalEnName": "Thinis (location uncertain)",
+      "country": "埃及",
+      "countryEn": "Egypt",
+      "center": [
+        31.8911758,
+        26.337437
+      ],
+      "period": "传说",
+      "capitalPeriods": [
+        "传说"
+      ],
+      "periodLabel": "传统早期王权中心／王都（地位与城址待考）",
+      "enPeriodLabel": "Traditional early royal center / capital; status and site debated",
+      "historicalIdentity": "capital",
+      "identityLabel": "传统早期王权中心／王都（地位与城址待考）",
+      "identityEnLabel": "Traditional early royal center / capital; status and site debated",
+      "identityNote": "与塔尼斯Tanis完全不同。文献中的提尼斯／Tjenu为早王朝王族故地及上埃及第八诺姆中心；全国都城身份与孟菲斯、阿拜多斯的关系仍有争议。城址尚未发现，本点仅用吉尔贾地区地名索引提示大致区域，不能解释为已发现城址、候选遗迹、王宫或城墙；中国对应时代为史前，沿用全局“传说”分组。",
+      "identityEnNote": "Distinct from Tanis. Textually attested early royal homeland and nome center; its national-capital status and relation to Memphis and Abydos are debated. The city has not been located. The Girga place index is only a regional locator, not an excavated site, candidate monument, palace or wall.",
+      "identitySourceUrl": "https://abidus.journals.ekb.eg/article_343563_604f9b57d4613a82f1aa2776d9b00ff1.pdf",
+      "referenceUrl": "https://abidus.journals.ekb.eg/article_343563_604f9b57d4613a82f1aa2776d9b00ff1.pdf",
+      "aliases": [
+        "提尼斯（位置待考）",
+        "Thinis (location uncertain)",
+        "Thinis",
+        "This",
+        "Tjenu",
+        "Tjeni",
+        "提尼斯",
+        "提斯",
+        "蒂尼斯"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": true,
+      "wallBoundaryReview": "历史身份已补录；具体城址及全部城界待考",
+      "focusBounds": [
+        [
+          31.8791758,
+          26.325437
+        ],
+        [
+          31.9031758,
+          26.349437
+        ]
+      ],
+      "focusMaxZoom": 11,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-thinis"
+    },
+    {
+      "key": "itjtawy",
+      "name": "伊奇塔维（位置待考）",
+      "enName": "Itjtawy (location uncertain)",
+      "capitalName": "伊奇塔维（位置待考）",
+      "capitalEnName": "Itjtawy (location uncertain)",
+      "country": "埃及",
+      "countryEn": "Egypt",
+      "center": [
+        31.230728303550293,
+        29.58880037278107
+      ],
+      "period": "夏商",
+      "capitalPeriods": [
+        "夏商"
+      ],
+      "periodLabel": "古埃及中王国都城（城址待考）",
+      "enPeriodLabel": "Middle Kingdom capital of Egypt; location unconfirmed",
+      "historicalIdentity": "capital",
+      "identityLabel": "古埃及中王国都城（城址待考）",
+      "identityEnLabel": "Middle Kingdom capital of Egypt; location unconfirmed",
+      "identityNote": "阿蒙涅姆赫特一世建立的王都，通常认为在利什特附近；具体城址未确认。本点为现代利什特地域索引，不是王宫、金字塔或已经发掘的城市中心；不将附近王陵当作都城城界。",
+      "identityEnNote": "Royal capital founded by Amenemhat I, generally placed near Lisht but not securely located. This is a regional Lisht locator, not an excavated city, pyramid or palace. Nearby royal cemeteries do not define its city limits.",
+      "identitySourceUrl": "https://egymonuments.gov.eg/historical-periods/middle-kingdom/",
+      "referenceUrl": "https://egymonuments.gov.eg/historical-periods/middle-kingdom/",
+      "aliases": [
+        "伊奇塔维（位置待考）",
+        "Itjtawy (location uncertain)",
+        "伊奇塔维",
+        "伊特塔维",
+        "伊特杰塔维",
+        "Itjtawy",
+        "Itj-Tawy",
+        "Itj-tawi"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": true,
+      "wallBoundaryReview": "历史身份已补录；具体城址及全部城界待考",
+      "focusBounds": [
+        [
+          31.218728303550293,
+          29.57680037278107
+        ],
+        [
+          31.242728303550294,
+          29.60080037278107
+        ]
+      ],
+      "focusMaxZoom": 11,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-itjtawy"
+    },
+    {
+      "key": "nekhen",
+      "name": "涅肯／希拉孔波利斯",
+      "enName": "Nekhen / Hierakonpolis",
+      "capitalName": "涅肯／希拉孔波利斯",
+      "capitalEnName": "Nekhen / Hierakonpolis",
+      "country": "埃及",
+      "countryEn": "Egypt",
+      "center": [
+        32.77944,
+        25.09722
+      ],
+      "period": "传说",
+      "capitalPeriods": [
+        "传说"
+      ],
+      "periodLabel": "前王朝上埃及地方王国中心",
+      "enPeriodLabel": "Capital of an early Upper Egyptian kingdom",
+      "historicalIdentity": "capital",
+      "identityLabel": "前王朝上埃及地方王国中心",
+      "identityEnLabel": "Capital of an early Upper Egyptian kingdom",
+      "identityNote": "考古队确认其为前王朝大型城市和早期地方王国中心；不能把所有前王朝埃及统一视为已建立的单一国家。所谓“堡垒”为卡塞凯姆威仪式围区，不能直接解释为军事城堡或全城外墙。中国对应史前，使用现有“传说”组。",
+      "identityEnNote": "The expedition identifies a Predynastic city and an early regional kingdom. This does not imply a unified Egyptian state throughout the period. The so-called Fort is a royal ceremonial enclosure, not an established military fort or complete city circuit.",
+      "identitySourceUrl": "https://www.hierakonpolis-online.org/index.php/take-a-tour",
+      "referenceUrl": "https://www.hierakonpolis-online.org/index.php/take-a-tour",
+      "aliases": [
+        "涅肯／希拉孔波利斯",
+        "Nekhen / Hierakonpolis",
+        "涅肯",
+        "尼肯",
+        "希拉孔波利斯",
+        "赫拉孔波利斯",
+        "Nekhen",
+        "Hierakonpolis"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入现状遗迹标绘；完整分期城界待核",
+      "focusBounds": [
+        [
+          32.76744,
+          25.08522
+        ],
+        [
+          32.79144,
+          25.10922
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-nekhen"
+    },
+    {
+      "key": "herakleopolis",
+      "name": "赫拉克利奥波利斯",
+      "enName": "Herakleopolis Magna",
+      "capitalName": "赫拉克利奥波利斯",
+      "capitalEnName": "Herakleopolis Magna",
+      "country": "埃及",
+      "countryEn": "Egypt",
+      "center": [
+        30.9345621,
+        29.0855154
+      ],
+      "period": "传说",
+      "capitalPeriods": [
+        "传说",
+        "夏商"
+      ],
+      "periodLabel": "古埃及第九、十王朝都城",
+      "enPeriodLabel": "Capital of Egypt during Dynasties 9–10",
+      "historicalIdentity": "capital",
+      "identityLabel": "古埃及第九、十王朝都城",
+      "identityEnLabel": "Capital of Egypt during Dynasties 9–10",
+      "identityNote": "第一中间期北方王朝中心，与底比斯政权并立；不将后世诺姆首府身份等同全国都城。两处现代考古标绘区均不代表完整城界或已核定王宫。",
+      "identityEnNote": "Northern dynastic center in the First Intermediate Period, competing with Thebes. Its later nome-capital role is distinct. Modern mapped excavation areas do not define a complete city or royal palace.",
+      "identitySourceUrl": "https://egymonuments.gov.eg/historical-periods/first-intermediate-period/",
+      "referenceUrl": "https://egymonuments.gov.eg/historical-periods/first-intermediate-period/",
+      "aliases": [
+        "赫拉克利奥波利斯",
+        "Herakleopolis Magna",
+        "Herakleopolis",
+        "Heracleopolis Magna",
+        "Henen-nesut",
+        "Ehnasya"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入现状遗迹标绘；完整分期城界待核",
+      "focusBounds": [
+        [
+          30.9225621,
+          29.073515399999998
+        ],
+        [
+          30.9465621,
+          29.0975154
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-herakleopolis"
+    },
+    {
+      "key": "avaris",
+      "name": "阿瓦里斯",
+      "enName": "Avaris / Tell el-Dabʿa",
+      "capitalName": "阿瓦里斯",
+      "capitalEnName": "Avaris / Tell el-Dabʿa",
+      "country": "埃及",
+      "countryEn": "Egypt",
+      "center": [
+        31.822848,
+        30.7860137
+      ],
+      "period": "夏商",
+      "capitalPeriods": [
+        "夏商"
+      ],
+      "periodLabel": "古埃及喜克索斯王朝都城",
+      "enPeriodLabel": "Capital of the Hyksos kingdom",
+      "historicalIdentity": "capital",
+      "identityLabel": "古埃及喜克索斯王朝都城",
+      "identityEnLabel": "Capital of the Hyksos kingdom",
+      "identityNote": "阿瓦里斯位于泰勒达巴，与北侧坎提尔的皮拉美西斯分址。OSM旧名Avaris/Ramesses不得用于合并两座都城。约260公顷为研究中的城市规模，不据此画圆或任意围城；完整城郭及宫城矢量待核。",
+      "identityEnNote": "Avaris at Tell el-Dabʿa is distinct from Pi-Ramesses at Qantir to the north. The conflated OSM label Avaris/Ramesses must not merge these capitals. Published city-area estimates are not a basis for an invented perimeter.",
+      "identitySourceUrl": "https://www.oeaw.ac.at/en/oeai/research/prehistory-wana-archaeology/archaeology-in-egypt-and-sudan/landscape-and-cityscape",
+      "referenceUrl": "https://www.oeaw.ac.at/en/oeai/research/prehistory-wana-archaeology/archaeology-in-egypt-and-sudan/landscape-and-cityscape",
+      "aliases": [
+        "阿瓦里斯",
+        "Avaris / Tell el-Dabʿa",
+        "阿瓦瑞斯",
+        "Avaris",
+        "Auaris",
+        "Tell el-Daba",
+        "Tell el-Dabʿa"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "完整分期城界及宫城矢量待核",
+      "focusBounds": [
+        [
+          31.810848,
+          30.7740137
+        ],
+        [
+          31.834848,
+          30.798013700000002
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-avaris"
+    },
+    {
+      "key": "bubastis",
+      "name": "布巴斯提斯",
+      "enName": "Bubastis / Tell Basta",
+      "capitalName": "布巴斯提斯",
+      "capitalEnName": "Bubastis / Tell Basta",
+      "country": "埃及",
+      "countryEn": "Egypt",
+      "center": [
+        31.51401636363636,
+        30.57294968181818
+      ],
+      "period": "周",
+      "capitalPeriods": [
+        "周"
+      ],
+      "periodLabel": "古埃及第二十二王朝都城",
+      "enPeriodLabel": "Capital of Egypt during Dynasty 22",
+      "historicalIdentity": "capital",
+      "identityLabel": "古埃及第二十二王朝都城",
+      "identityEnLabel": "Capital of Egypt during Dynasty 22",
+      "identityNote": "埃及文物部将其列为第二十二王朝都城；同时保留多政治中心与塔尼斯王陵的区别。现代巴斯特神庙考古区不是全城或阿蒙涅姆赫特三世宫殿边界；未核实宫殿矢量不造面。",
+      "identityEnNote": "The ministry identifies a Dynasty 22 capital; this does not imply an exclusive court throughout that dynasty. The mapped archaeological area is not the complete city or the palace of Amenemhat III.",
+      "identitySourceUrl": "https://egymonuments.gov.eg/archaeological-sites/tal-basta/",
+      "referenceUrl": "https://egymonuments.gov.eg/archaeological-sites/tal-basta/",
+      "aliases": [
+        "布巴斯提斯",
+        "Bubastis / Tell Basta",
+        "Bubastis",
+        "Tell Basta",
+        "Per-Bastet",
+        "布巴斯提斯／泰勒巴斯塔"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入现状遗迹标绘；完整分期城界待核",
+      "focusBounds": [
+        [
+          31.50201636363636,
+          30.56094968181818
+        ],
+        [
+          31.526016363636362,
+          30.58494968181818
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-bubastis"
+    },
+    {
+      "key": "sais",
+      "name": "塞易斯",
+      "enName": "Sais / Sa el-Hagar",
+      "capitalName": "塞易斯",
+      "capitalEnName": "Sais / Sa el-Hagar",
+      "country": "埃及",
+      "countryEn": "Egypt",
+      "center": [
+        30.766667,
+        30.964722
+      ],
+      "period": "周",
+      "capitalPeriods": [
+        "周"
+      ],
+      "periodLabel": "古埃及塞易斯诸王朝都城",
+      "enPeriodLabel": "Capital of Egypt under the Saite dynasties",
+      "historicalIdentity": "capital",
+      "identityLabel": "古埃及塞易斯诸王朝都城",
+      "identityEnLabel": "Capital of Egypt under the Saite dynasties",
+      "identityNote": "第二十四王朝地方王权、第26王朝统一国家和第28王朝复国阶段分列；不把宗教中心身份延长为连续都城期。古城位于今萨埃尔哈加尔，根点为古城地域参照；神庙、王宫与王陵精确边界待核。",
+      "identityEnNote": "Separate the local western Delta kings, the national Dynasty 26 capital and the Dynasty 28 restoration. Later religious importance does not imply continuous capital status. The ancient urban area is at Sa el-Hagar; precise palace, temple and royal-tomb boundaries remain unverified.",
+      "identitySourceUrl": "https://sais.webspace.durham.ac.uk/overview/",
+      "referenceUrl": "https://sais.webspace.durham.ac.uk/overview/",
+      "aliases": [
+        "塞易斯",
+        "Sais / Sa el-Hagar",
+        "Sais",
+        "Saïs",
+        "Sa el-Hagar",
+        "塞伊斯",
+        "赛伊斯"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "完整分期城界及宫城矢量待核",
+      "focusBounds": [
+        [
+          30.754667,
+          30.952721999999998
+        ],
+        [
+          30.778667000000002,
+          30.976722
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-sais"
+    },
+    {
+      "key": "mendes",
+      "name": "门德斯",
+      "enName": "Mendes / Tell el-Rubʿ",
+      "capitalName": "门德斯",
+      "capitalEnName": "Mendes / Tell el-Rubʿ",
+      "country": "埃及",
+      "countryEn": "Egypt",
+      "center": [
+        31.5170889,
+        30.9562518
+      ],
+      "period": "周",
+      "capitalPeriods": [
+        "周"
+      ],
+      "periodLabel": "古埃及第二十九王朝都城",
+      "enPeriodLabel": "Capital of Egypt during Dynasty 29",
+      "historicalIdentity": "capital",
+      "identityLabel": "古埃及第二十九王朝都城",
+      "identityEnLabel": "Capital of Egypt during Dynasty 29",
+      "identityNote": "考古负责人确认其曾为古埃及首都；第29王朝都城阶段与更长的诺姆首府和宗教中心时期区分。泰勒鲁卜遗址与南邻Thmuis不合并；现状考古区不代表完整城墙。",
+      "identityEnNote": "The excavation director identifies Mendes as a former capital. Dynasty 29 capital status is distinct from its longer provincial and religious roles. Tell el-Rubʿ is not merged with neighboring Thmuis, and the mapped site area is not the city-wall circuit.",
+      "identitySourceUrl": "https://www.psu.edu/news/research/story/land-pharoahs",
+      "referenceUrl": "https://www.psu.edu/news/research/story/land-pharoahs",
+      "aliases": [
+        "门德斯",
+        "Mendes / Tell el-Rubʿ",
+        "Mendes",
+        "Tell el-Rub",
+        "Tell el-Rubʿ",
+        "Djedet",
+        "孟德斯"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入现状遗迹标绘；完整分期城界待核",
+      "focusBounds": [
+        [
+          31.5050889,
+          30.9442518
+        ],
+        [
+          31.5290889,
+          30.9682518
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-mendes"
+    },
+    {
+      "key": "sebennytos",
+      "name": "塞本尼托斯",
+      "enName": "Sebennytos / Samannud",
+      "capitalName": "塞本尼托斯",
+      "capitalEnName": "Sebennytos / Samannud",
+      "country": "埃及",
+      "countryEn": "Egypt",
+      "center": [
+        31.233232529936302,
+        30.967324772611466
+      ],
+      "period": "周",
+      "capitalPeriods": [
+        "周"
+      ],
+      "periodLabel": "古埃及第三十王朝都城",
+      "enPeriodLabel": "Capital of Egypt during Dynasty 30",
+      "historicalIdentity": "capital",
+      "identityLabel": "古埃及第三十王朝都城",
+      "identityEnLabel": "Capital of Egypt during Dynasty 30",
+      "identityNote": "文物部明确第三十王朝都城为今萨曼努德的塞本尼托斯。根点采用所在历史城区的地域参照，不能解释为已确认的王宫或城墙位置；完整分期城界待核。",
+      "identityEnNote": "The ministry identifies Sebennytos, modern Samannud, as the Dynasty 30 capital. Its urban-area locator does not identify an excavated palace or wall. Complete dated city boundaries remain unverified.",
+      "identitySourceUrl": "https://egymonuments.gov.eg/en/historical-periods/late-period/",
+      "referenceUrl": "https://egymonuments.gov.eg/en/historical-periods/late-period/",
+      "aliases": [
+        "塞本尼托斯",
+        "Sebennytos / Samannud",
+        "Sebennytos",
+        "Sebennytus",
+        "Samannud",
+        "Samanoud",
+        "塞本尼图斯"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "完整分期城界及宫城矢量待核",
+      "focusBounds": [
+        [
+          31.2212325299363,
+          30.955324772611466
+        ],
+        [
+          31.245232529936303,
+          30.979324772611466
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-sebennytos"
+    },
+    {
+      "key": "leontopolis",
+      "name": "莱昂托波利斯",
+      "enName": "Leontopolis / Tell el-Muqdam",
+      "capitalName": "莱昂托波利斯",
+      "capitalEnName": "Leontopolis / Tell el-Muqdam",
+      "country": "埃及",
+      "countryEn": "Egypt",
+      "center": [
+        31.3542098,
+        30.682516
+      ],
+      "period": "周",
+      "capitalPeriods": [
+        "周"
+      ],
+      "periodLabel": "第三中间期三角洲地方王国中心",
+      "enPeriodLabel": "Royal center of a regional Delta kingdom",
+      "historicalIdentity": "capital",
+      "identityLabel": "第三中间期三角洲地方王国中心",
+      "identityEnLabel": "Royal center of a regional Delta kingdom",
+      "identityNote": "伯克利考古项目将其列为第三中间期地方王国中心，但第二十三王朝王廷归属仍有争议；不表述为全埃及唯一首都。与同名泰勒耶胡迪耶／奥尼亚斯神庙所在地分开。完整城界和宫城待核。",
+      "identityEnNote": "The Berkeley project identifies a regional Delta kingdom; identification with the Dynasty 23 court remains debated. Do not present it as the sole capital of all Egypt. Distinct from the similarly named Tell el-Yehudiya / Onias temple site.",
+      "identitySourceUrl": "https://arf.berkeley.edu/archaeology-news/arf-newsletter-1995-v2-2",
+      "referenceUrl": "https://arf.berkeley.edu/archaeology-news/arf-newsletter-1995-v2-2",
+      "aliases": [
+        "莱昂托波利斯",
+        "Leontopolis / Tell el-Muqdam",
+        "Leontopolis",
+        "Tell el-Muqdam",
+        "Tell el-Moqdam",
+        "Taremu"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "完整分期城界及宫城矢量待核",
+      "focusBounds": [
+        [
+          31.3422098,
+          30.670516
+        ],
+        [
+          31.3662098,
+          30.694516
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": [],
+      "capitalSiteKey": "ancient-site:world-leontopolis"
+    },
+    {
+      "key": "buto",
+      "name": "布托",
+      "enName": "Buto / Tell el-Faraʿin",
+      "capitalName": "布托",
+      "capitalEnName": "Buto / Tell el-Faraʿin",
+      "country": "埃及",
+      "countryEn": "Egypt",
+      "center": [
+        30.7444913,
+        31.1963959
+      ],
+      "period": "传说",
+      "capitalPeriods": [],
+      "periodLabel": "早期王室庄园与宗教中心；传统王都身份未定",
+      "enPeriodLabel": "Early royal estate and religious center; traditional capital status unconfirmed",
+      "historicalIdentity": "ancient-city",
+      "identityLabel": "早期王室庄园与宗教中心；传统王都身份未定",
+      "identityEnLabel": "Early royal estate and religious center; traditional capital status unconfirmed",
+      "identityNote": "DAI研究确认第一至第二王朝带行政、经济与仪式功能的王室庄园及宫殿式建筑；这不等同证实布托是独立国家首都。保留传统下埃及王权关联，先按普通古城收录，仍遵循对应时期legend。遗址区和宫殿式建筑范围不得当作全城或已证实皇城。",
+      "identityEnNote": "DAI identifies a Dynasty 1–2 royal estate with administrative and economic functions and a palace-like complex. This does not establish an independent national capital. Retain the traditional Lower Egyptian royal association as uncertain and classify as an ordinary ancient city, still controlled by its corresponding period.",
+      "identitySourceUrl": "https://publications.dainst.org/journals/efb/article/view/1712",
+      "referenceUrl": "https://publications.dainst.org/journals/efb/article/view/1712",
+      "aliases": [
+        "布托",
+        "Buto / Tell el-Faraʿin",
+        "Buto",
+        "Tell el-Farain",
+        "Tell el-Faraʿin",
+        "Pe and Dep"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入现状遗迹标绘；完整分期城界待核",
+      "focusBounds": [
+        [
+          30.7324913,
+          31.1843959
+        ],
+        [
+          30.7564913,
+          31.2083959
+        ]
+      ],
+      "focusMaxZoom": 15,
+      "relatedHeritageIds": []
+    },
+    {
+      "key": "qata-i",
+      "name": "卡塔伊",
+      "enName": "al-Qata’i",
+      "capitalName": "卡塔伊",
+      "capitalEnName": "al-Qata’i",
+      "country": "埃及",
+      "countryEn": "Egypt",
+      "center": [
+        31.249956728571426,
+        30.028634885714286
+      ],
+      "period": "隋唐",
+      "capitalPeriods": [
+        "隋唐"
+      ],
+      "periodLabel": "图伦王朝都城",
+      "enPeriodLabel": "Capital of the Tulunid dynasty",
+      "historicalIdentity": "capital",
+      "identityLabel": "图伦王朝都城",
+      "identityEnLabel": "Capital of the Tulunid dynasty",
+      "identityNote": "图伦王朝都城，与福斯塔特、阿斯卡尔及969年建立的法蒂玛开罗分址。图伦王朝868—905年；本记录为9世纪后期至905年的都城阶段，不把王朝起年直接当作建城年。根点以伊本·图伦清真寺所在历史核心作区域参照；不是已确认王宫位置。现仅接入清真寺建筑外缘及庭院孔洞，不代表全城、宫城或城墙；完整分期城界和宫殿遗存范围待核。",
+      "identityEnNote": "Tulunid capital, distinct from Fustat, al-Askar and Fatimid Cairo founded in 969. The dynasty lasted 868–905; this record covers the late ninth-century capital phase to 905 without equating dynastic accession with city foundation. The root references the historic mosque core, not a verified royal palace. The mosque footprint and courtyard hole are preserved; they are not city, palace or wall boundaries. Complete dated city and palace limits remain unverified.",
+      "identitySourceUrl": "https://egymonuments.gov.eg/collections/historical-cairo/",
+      "referenceUrl": "https://egymonuments.gov.eg/collections/historical-cairo/",
+      "aliases": [
+        "卡塔伊",
+        "al-Qata’i",
+        "al-Qata'i",
+        "al-Qatai",
+        "卡塔依"
+      ],
+      "sharedCapitalCheckin": false,
+      "tentative": false,
+      "wallBoundaryReview": "已接入清真寺原始建筑面；完整城郭及宫城范围待核",
+      "focusBounds": [
+        [
+          31.245,
+          30.024
+        ],
+        [
+          31.255,
+          30.034
+        ]
+      ],
+      "focusMaxZoom": 16,
+      "relatedHeritageIds": [
+        "whc-89"
+      ],
+      "capitalSiteKey": "ancient-site:world-qata-i"
     }
   ],
   "counts": {
@@ -9858,7 +13023,73 @@
     "sigtuna": 3,
     "gamla-uppsala": 2,
     "uppsala": 1,
-    "stockholm": 1
+    "stockholm": 1,
+    "memphis": 1,
+    "thebes": 4,
+    "amarna": 5,
+    "pi-ramesses": 0,
+    "tanis": 1,
+    "alexandria": 2,
+    "fustat": 0,
+    "cairo": 8,
+    "shahjahanabad": 11,
+    "agra": 3,
+    "fatehpur-sikri": 3,
+    "hampi": 6,
+    "jaipur": 7,
+    "amber": 6,
+    "golconda": 2,
+    "hyderabad": 3,
+    "bijapur": 3,
+    "bidar": 3,
+    "daulatabad": 2,
+    "pataliputra": 1,
+    "mysore": 1,
+    "srirangapatna": 2,
+    "lahore": 6,
+    "peshawar": 1,
+    "thatta": 0,
+    "taxila-bhir": 1,
+    "taxila-sirkap": 1,
+    "taxila-sirsukh": 1,
+    "rohtas": 2,
+    "mohenjo-daro": 2,
+    "babylon": 4,
+    "ashur": 4,
+    "nimrud": 1,
+    "dur-sharrukin": 1,
+    "nineveh": 3,
+    "ur": 1,
+    "uruk": 2,
+    "hatra": 1,
+    "ctesiphon": 1,
+    "samarra": 5,
+    "baghdad": 3,
+    "erbil": 1,
+    "jerusalem-old-city": 2,
+    "acre": 2,
+    "hazor": 2,
+    "megiddo": 0,
+    "caesarea": 2,
+    "masada": 6,
+    "beer-sheba": 1,
+    "dholavira": 8,
+    "harappa": 3,
+    "lothal": 3,
+    "rakhigarhi": 3,
+    "kalibangan": 1,
+    "thinis": 0,
+    "itjtawy": 0,
+    "nekhen": 1,
+    "herakleopolis": 2,
+    "avaris": 0,
+    "bubastis": 1,
+    "sais": 0,
+    "mendes": 1,
+    "sebennytos": 0,
+    "leontopolis": 0,
+    "buto": 2,
+    "qata-i": 1
   },
   "source": "© OpenStreetMap contributors · ODbL",
   "reviewedAt": "2026-10-10",

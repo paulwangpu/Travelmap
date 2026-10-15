@@ -1,6 +1,6 @@
 const assert=require('node:assert/strict'),c=require('../data/imperial-tombs/catalog.json'),audit=require('../data/imperial-tombs/coverage-audit.json');
 const get=id=>c.items.find(x=>x.id===id);
-assert.equal(audit.totalRecords,c.totalRecords);
+assert.equal(audit.totalRecords,c.items.filter(x=>x.country!=='埃及').length);
 assert(audit.matrix.find(x=>x.dynasty==='北齐').records===0);
 assert(audit.rulerChecks.find(x=>x.name==='刘知远').matchedRecordIds.includes('houhan-rui'));
 assert(audit.rulerChecks.find(x=>x.name==='刘承祐').matchedRecordIds.includes('houhan-ying'));

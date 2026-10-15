@@ -1,0 +1,2411 @@
+{
+  "scope": "埃及、印度、巴基斯坦、伊拉克、以色列；耶路撒冷按具体历史城址单列地域，不据此判定现今主权。",
+  "addedRoots": 41,
+  "addedRecords": 52,
+  "addedSites": 49,
+  "addedFeatures": 129,
+  "counts": {
+    "roots": 384,
+    "records": 609,
+    "sites": 271,
+    "features": 2535
+  },
+  "baselineCounts": {
+    "roots": 343,
+    "records": 557,
+    "sites": 222,
+    "features": 2406
+  },
+  "preservation": {
+    "originalRootsDeepEqual": true,
+    "originalRecordsDeepEqual": true,
+    "originalCatalogSitesDeepEqual": true,
+    "originalGeometriesDeepEqual": true,
+    "worldHeritageUnchanged": true,
+    "originalGeometrySha256": "bae6b5d5b9179ba7efb14cb6b300ab944593fd3fcb10783eb1941349cbeefc46"
+  },
+  "countries": [
+    {
+      "country": "埃及",
+      "sites": 8,
+      "roots": 7,
+      "features": 21
+    },
+    {
+      "country": "印度",
+      "sites": 14,
+      "roots": 14,
+      "features": 53
+    },
+    {
+      "country": "巴基斯坦",
+      "sites": 8,
+      "roots": 5,
+      "features": 13
+    },
+    {
+      "country": "伊拉克",
+      "sites": 12,
+      "roots": 11,
+      "features": 27
+    },
+    {
+      "country": "耶路撒冷",
+      "sites": 1,
+      "roots": 1,
+      "features": 2
+    },
+    {
+      "country": "以色列",
+      "sites": 6,
+      "roots": 3,
+      "features": 13
+    }
+  ],
+  "rows": [
+    {
+      "key": "memphis",
+      "name": "孟菲斯",
+      "enName": "Memphis",
+      "country": "埃及",
+      "classification": "capital",
+      "identity": "古埃及早王朝与古王国都城",
+      "records": [
+        {
+          "regime": "古埃及早王朝与古王国",
+          "years": "约前3100—前2180；后世部分时期兼任行政中心",
+          "periods": [
+            "传说",
+            "夏商"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/list/86/",
+      "additionalSources": [],
+      "status": "已接入宫堡或遗址围区；完整分期城界待核",
+      "note": "米特拉希纳为孟菲斯城址参照；金字塔墓地不是城市或宫城边界。早期起讫采用约数，后世行政中心地位不写成连续都城期。",
+      "center": [
+        31.254,
+        29.851
+      ],
+      "heritageId": null,
+      "geometryCount": 1,
+      "wallCount": 0,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "memphis-way-653703867",
+          "scope": "mapped_archaeological_extent",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "thebes",
+      "name": "底比斯",
+      "enName": "Thebes / Waset",
+      "country": "埃及",
+      "classification": "capital",
+      "identity": "古埃及中王国与新王国王都",
+      "records": [
+        {
+          "regime": "古埃及中王国与新王国",
+          "years": "约前2055—前1070间若干阶段（非连续都城期）",
+          "periods": [
+            "夏商"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/list/87/",
+      "additionalSources": [],
+      "status": "已接入原始墙段及遗迹；完整分期城界待核",
+      "note": "底比斯今分布于卢克索两岸；卡尔纳克和卢克索神庙围墙不等于整座都城城墙，西岸墓地不当作全城范围。",
+      "center": [
+        32.64,
+        25.703
+      ],
+      "heritageId": null,
+      "geometryCount": 4,
+      "wallCount": 2,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "thebes-relation-14358790",
+          "scope": "temple_precinct",
+          "type": "Polygon"
+        },
+        {
+          "id": "thebes-way-1079039494",
+          "scope": "temple_precinct",
+          "type": "Polygon"
+        },
+        {
+          "id": "thebes-way-115784217",
+          "scope": "temple_enclosure_wall",
+          "type": "Polygon"
+        },
+        {
+          "id": "thebes-way-115784221",
+          "scope": "temple_enclosure_wall",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "amarna",
+      "name": "阿赫塔顿／阿玛尔纳",
+      "enName": "Akhetaten / Amarna",
+      "country": "埃及",
+      "classification": "capital",
+      "identity": "古埃及第十八王朝都城",
+      "records": [
+        {
+          "regime": "古埃及第十八王朝阿肯那顿王廷",
+          "years": "约前14世纪中叶（王朝绝对年代有不同体系）",
+          "periods": [
+            "夏商"
+          ]
+        }
+      ],
+      "source": "https://egymonuments.gov.eg/collections/amarna/",
+      "additionalSources": [],
+      "status": "已接入宫堡或遗址围区；完整分期城界待核",
+      "note": "阿赫塔顿与底比斯分址。接入大王宫及北宫遗迹轮廓；边界碑所界定的宗教领地不等于连续城墙，不绘制虚构环城墙。",
+      "center": [
+        30.9,
+        27.65
+      ],
+      "heritageId": null,
+      "geometryCount": 5,
+      "wallCount": 0,
+      "palaceCount": 3,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "amarna-way-556425031",
+          "scope": "palace_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "amarna-way-126614279",
+          "scope": "palace_component_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "amarna-way-126614280",
+          "scope": "palace_component_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "amarna-way-126614282",
+          "scope": "palace_component_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "amarna-way-126613336",
+          "scope": "temple_precinct",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "pi-ramesses",
+      "name": "皮拉美西斯",
+      "enName": "Pi-Ramesses",
+      "country": "埃及",
+      "classification": "capital",
+      "identity": "古埃及拉美西斯时期都城",
+      "records": [
+        {
+          "regime": "古埃及第十九、二十王朝",
+          "years": "约前1279—前1070（拉美西斯时期）",
+          "periods": [
+            "夏商"
+          ]
+        }
+      ],
+      "source": "https://www.ucl.ac.uk/museums-static/digitalegypt/chronology/ramsesii.html",
+      "additionalSources": [],
+      "status": "历史身份及城址已核，可靠城墙与宫城矢量待核",
+      "note": "根点参照坎提尔考古城址；不能用后来搬运构件的塔尼斯遗址代替此城。完整宫城与城墙矢量待核。",
+      "center": [
+        31.834,
+        30.798
+      ],
+      "heritageId": null,
+      "geometryCount": 0,
+      "wallCount": 0,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": []
+    },
+    {
+      "key": "tanis",
+      "name": "塔尼斯",
+      "enName": "Tanis",
+      "country": "埃及",
+      "classification": "capital",
+      "identity": "古埃及第二十一王朝都城",
+      "records": [
+        {
+          "regime": "古埃及第二十一王朝",
+          "years": "约前1069—前945",
+          "periods": [
+            "夏商",
+            "周"
+          ]
+        }
+      ],
+      "source": "https://egymonuments.gov.eg/historical-periods/third-intermediate-period/",
+      "additionalSources": [],
+      "status": "已接入宫堡或遗址围区；完整分期城界待核",
+      "note": "与皮拉美西斯分址。考古区和阿蒙神庙围区均不代表完整都城城郭；第二十二王朝早期中心布巴斯提斯不合并于此。",
+      "center": [
+        31.88,
+        30.978
+      ],
+      "heritageId": null,
+      "geometryCount": 1,
+      "wallCount": 0,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "tanis-way-188053938",
+          "scope": "mapped_archaeological_extent",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "alexandria",
+      "name": "亚历山大里亚",
+      "enName": "Alexandria",
+      "country": "埃及",
+      "classification": "capital",
+      "identity": "托勒密王国都城",
+      "records": [
+        {
+          "regime": "托勒密王国",
+          "years": "约前305—前30",
+          "periods": [
+            "周",
+            "秦汉"
+          ]
+        }
+      ],
+      "source": "https://egymonuments.gov.eg/collections/alexandria/",
+      "additionalSources": [],
+      "status": "已接入原始墙段及遗迹；完整分期城界待核",
+      "note": "公元前331年建城与托勒密王国都城时期分开；罗马、拜占庭时期行政首府身份另行说明。凯特贝堡为15世纪海防堡垒，不是古代王宫或整城城界。",
+      "center": [
+        29.895,
+        31.201
+      ],
+      "heritageId": null,
+      "geometryCount": 2,
+      "wallCount": 1,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "alexandria-relation-8410048",
+          "scope": "fortified_enclosure",
+          "type": "Polygon"
+        },
+        {
+          "id": "alexandria-way-602131244",
+          "scope": "surviving_wall_footprint",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "fustat",
+      "name": "福斯塔特",
+      "enName": "Fustat",
+      "country": "埃及",
+      "classification": "provincial-capital",
+      "identity": "早期伊斯兰埃及行政首府",
+      "records": [
+        {
+          "regime": "正统、倭马亚与阿拔斯治下的埃及",
+          "years": "641年起（行政首府，并非独立国家都城）",
+          "periods": [
+            "隋唐"
+          ]
+        }
+      ],
+      "source": "https://egymonuments.gov.eg/en/archaeological-sites/al-fustat-old-cairo/",
+      "additionalSources": [],
+      "status": "历史身份及城址已核，可靠城墙与宫城矢量待核",
+      "note": "福斯塔特、阿斯卡尔、卡塔伊与法蒂玛开罗是不同城址。早期行政首府按普通古城收录；不因官方称capital而自动视作独立国家都城。",
+      "center": [
+        31.234,
+        30.006
+      ],
+      "heritageId": null,
+      "geometryCount": 0,
+      "wallCount": 0,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": []
+    },
+    {
+      "key": "cairo",
+      "name": "开罗",
+      "enName": "Cairo / al-Qahira",
+      "country": "埃及",
+      "classification": "capital",
+      "identity": "法蒂玛、阿尤布与马穆鲁克都城",
+      "records": [
+        {
+          "regime": "法蒂玛王朝",
+          "years": "969—1171",
+          "periods": [
+            "宋辽金西夏"
+          ]
+        },
+        {
+          "regime": "阿尤布王朝埃及王廷",
+          "years": "1171—1250",
+          "periods": [
+            "宋辽金西夏"
+          ]
+        },
+        {
+          "regime": "马穆鲁克苏丹国",
+          "years": "1250—1517",
+          "periods": [
+            "宋辽金西夏",
+            "元",
+            "明"
+          ]
+        }
+      ],
+      "source": "https://egymonuments.gov.eg/collections/historical-cairo/",
+      "additionalSources": [
+        "https://egymonuments.gov.eg/monuments/the-walls-of-cairo/"
+      ],
+      "status": "已接入原始墙段及遗迹；完整分期城界待核",
+      "note": "法蒂玛北墙、阿尤布东墙与萨拉丁城堡分别表达；城堡范围不是整个开罗。珠宝宫为19世纪建筑，不追溯为法蒂玛宫殿。",
+      "center": [
+        31.261,
+        30.038
+      ],
+      "heritageId": null,
+      "geometryCount": 8,
+      "wallCount": 2,
+      "palaceCount": 3,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "cairo-way-24908286",
+          "scope": "fortified_enclosure",
+          "type": "Polygon"
+        },
+        {
+          "id": "cairo-way-1234924074",
+          "scope": "palace_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "cairo-way-1316037821",
+          "scope": "mapped_current_building",
+          "type": "Polygon"
+        },
+        {
+          "id": "cairo-relation-16886994",
+          "scope": "mapped_current_building",
+          "type": "Polygon"
+        },
+        {
+          "id": "cairo-way-34204554",
+          "scope": "surviving_city_gate",
+          "type": "Polygon"
+        },
+        {
+          "id": "cairo-way-1253190280",
+          "scope": "surviving_city_gate",
+          "type": "Polygon"
+        },
+        {
+          "id": "cairo-wall-group-open-walls",
+          "scope": "open_wall_segments",
+          "type": "MultiLineString"
+        },
+        {
+          "id": "cairo-way-1475401194",
+          "scope": "surviving_wall_footprint",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "shahjahanabad",
+      "name": "沙贾汗纳巴德",
+      "enName": "Shahjahanabad / Old Delhi",
+      "country": "印度",
+      "classification": "capital",
+      "identity": "莫卧儿帝国都城",
+      "records": [
+        {
+          "regime": "莫卧儿帝国",
+          "years": "1648—1857（后期实际控制范围缩小）",
+          "periods": [
+            "清"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/list/231/",
+      "additionalSources": [],
+      "status": "已接入原始墙段及遗迹；完整分期城界待核",
+      "note": "沙贾汗纳巴德与新德里及德里其他历代城址不同；红堡为宫城，萨利姆加尔为相邻较早堡垒，不把红堡等同整座旧德里。",
+      "center": [
+        77.233,
+        28.655
+      ],
+      "heritageId": null,
+      "geometryCount": 11,
+      "wallCount": 7,
+      "palaceCount": 1,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "shahjahanabad-way-264863907",
+          "scope": "fortified_palace_enclosure",
+          "type": "Polygon"
+        },
+        {
+          "id": "shahjahanabad-way-80431096",
+          "scope": "fortified_enclosure",
+          "type": "Polygon"
+        },
+        {
+          "id": "shahjahanabad-way-80429907",
+          "scope": "fort_gate",
+          "type": "Polygon"
+        },
+        {
+          "id": "shahjahanabad-way-973086049",
+          "scope": "surviving_city_gate",
+          "type": "Polygon"
+        },
+        {
+          "id": "shahjahanabad-way-265972476",
+          "scope": "open_wall_segments",
+          "type": "LineString"
+        },
+        {
+          "id": "shahjahanabad-wall-group-open-walls",
+          "scope": "open_wall_segments",
+          "type": "MultiLineString"
+        },
+        {
+          "id": "shahjahanabad-way-973077710",
+          "scope": "surviving_wall_footprint",
+          "type": "Polygon"
+        },
+        {
+          "id": "shahjahanabad-way-320351011",
+          "scope": "surviving_wall_footprint",
+          "type": "Polygon"
+        },
+        {
+          "id": "shahjahanabad-way-320353009",
+          "scope": "surviving_wall_footprint",
+          "type": "Polygon"
+        },
+        {
+          "id": "shahjahanabad-way-320351009",
+          "scope": "surviving_wall_footprint",
+          "type": "Polygon"
+        },
+        {
+          "id": "shahjahanabad-way-320353005",
+          "scope": "surviving_wall_footprint",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "agra",
+      "name": "阿格拉",
+      "enName": "Agra",
+      "country": "印度",
+      "classification": "capital",
+      "identity": "洛迪王朝与莫卧儿帝国都城",
+      "records": [
+        {
+          "regime": "洛迪王朝",
+          "years": "1504—1526",
+          "periods": [
+            "明"
+          ]
+        },
+        {
+          "regime": "莫卧儿帝国",
+          "years": "1526—1540、1555—1571、1598—1648（分段迁驻）",
+          "periods": [
+            "明",
+            "清"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/list/251/",
+      "additionalSources": [],
+      "status": "已接入宫堡或遗址围区；完整分期城界待核",
+      "note": "阿格拉堡为宫城，泰姬陵为陵墓，不以陵园或世界遗产缓冲区替代城市城郭。与法泰赫普尔西克里及拉合尔迁都阶段分开。",
+      "center": [
+        78.021,
+        27.18
+      ],
+      "heritageId": null,
+      "geometryCount": 3,
+      "wallCount": 0,
+      "palaceCount": 3,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "agra-way-310318567",
+          "scope": "fortified_palace_enclosure",
+          "type": "Polygon"
+        },
+        {
+          "id": "agra-way-803411492",
+          "scope": "mapped_current_building",
+          "type": "Polygon"
+        },
+        {
+          "id": "agra-way-490321400",
+          "scope": "mapped_current_building",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "fatehpur-sikri",
+      "name": "法泰赫普尔西克里",
+      "enName": "Fatehpur Sikri",
+      "country": "印度",
+      "classification": "capital",
+      "identity": "莫卧儿帝国阿克巴时期都城",
+      "records": [
+        {
+          "regime": "莫卧儿帝国",
+          "years": "1571—1585",
+          "periods": [
+            "明"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/list/255/",
+      "additionalSources": [],
+      "status": "已接入原始墙段及遗迹；完整分期城界待核",
+      "note": "三面城墙与宫廷、宗教核心分开；UNESCO核心区不是整座都城。本轮墙线有原始门口缺口，不擅自闭合。",
+      "center": [
+        77.6665,
+        27.09753
+      ],
+      "heritageId": "whc-255",
+      "geometryCount": 3,
+      "wallCount": 1,
+      "palaceCount": 1,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "fatehpur-sikri-relation-6761059",
+          "scope": "fortified_palace_enclosure",
+          "type": "Polygon"
+        },
+        {
+          "id": "fatehpur-sikri-relation-6761058",
+          "scope": "religious_precinct",
+          "type": "Polygon"
+        },
+        {
+          "id": "fatehpur-sikri-wall-group-open-walls",
+          "scope": "open_wall_segments",
+          "type": "MultiLineString"
+        }
+      ]
+    },
+    {
+      "key": "hampi",
+      "name": "亨比／毗奢耶那伽罗",
+      "enName": "Hampi / Vijayanagara",
+      "country": "印度",
+      "classification": "capital",
+      "identity": "毗奢耶那伽罗帝国都城",
+      "records": [
+        {
+          "regime": "毗奢耶那伽罗帝国",
+          "years": "14世纪—1565",
+          "periods": [
+            "元",
+            "明"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/list/241/",
+      "additionalSources": [],
+      "status": "已接入原始墙段及遗迹；完整分期城界待核",
+      "note": "广域防御体系、皇家核心、寺庙核心分别表达。世界遗产区不能代替历代完整城界；宫殿遗址与城防墙线保持原始几何。",
+      "center": [
+        76.47167,
+        15.31444
+      ],
+      "heritageId": "whc-241",
+      "geometryCount": 6,
+      "wallCount": 1,
+      "palaceCount": 3,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "hampi-way-1364452913",
+          "scope": "palace_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "hampi-way-1364452914",
+          "scope": "palace_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "hampi-way-931092275",
+          "scope": "mapped_current_building",
+          "type": "Polygon"
+        },
+        {
+          "id": "hampi-way-929272470",
+          "scope": "temple_precinct",
+          "type": "Polygon"
+        },
+        {
+          "id": "hampi-way-129325631",
+          "scope": "city_gate_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "hampi-wall-group-open-walls",
+          "scope": "open_wall_segments",
+          "type": "MultiLineString"
+        }
+      ]
+    },
+    {
+      "key": "jaipur",
+      "name": "斋浦尔",
+      "enName": "Jaipur",
+      "country": "印度",
+      "classification": "capital",
+      "identity": "斋浦尔王国都城",
+      "records": [
+        {
+          "regime": "斋浦尔王国",
+          "years": "1727—1949",
+          "periods": [
+            "清",
+            "近现代"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/list/1605/",
+      "additionalSources": [],
+      "status": "已接入原始墙段及遗迹；完整分期城界待核",
+      "note": "平原新城与早期安贝尔分址；城市宫殿、纳哈加尔堡和环城墙不是同一边界。保留现存城门和开放墙段。",
+      "center": [
+        75.82186,
+        26.92428
+      ],
+      "heritageId": "whc-1605",
+      "geometryCount": 7,
+      "wallCount": 5,
+      "palaceCount": 1,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "jaipur-way-455720627",
+          "scope": "mapped_current_palace_precinct",
+          "type": "Polygon"
+        },
+        {
+          "id": "jaipur-relation-2181610",
+          "scope": "fortified_enclosure",
+          "type": "Polygon"
+        },
+        {
+          "id": "jaipur-wall-group-open-walls",
+          "scope": "open_wall_segments",
+          "type": "MultiLineString"
+        },
+        {
+          "id": "jaipur-way-43250088",
+          "scope": "surviving_wall_footprint",
+          "type": "Polygon"
+        },
+        {
+          "id": "jaipur-way-627340469",
+          "scope": "surviving_wall_footprint",
+          "type": "Polygon"
+        },
+        {
+          "id": "jaipur-way-627340468",
+          "scope": "surviving_wall_footprint",
+          "type": "Polygon"
+        },
+        {
+          "id": "jaipur-way-627340467",
+          "scope": "surviving_wall_footprint",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "amber",
+      "name": "琥珀城／安贝尔",
+      "enName": "Amber / Amer",
+      "country": "印度",
+      "classification": "capital",
+      "identity": "卡奇瓦哈王朝安贝尔都城",
+      "records": [
+        {
+          "regime": "卡奇瓦哈王朝安贝尔王国",
+          "years": "约13世纪—1727（早期迁驻年代待核）",
+          "periods": [
+            "宋辽金西夏",
+            "元",
+            "明",
+            "清"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/list/247/",
+      "additionalSources": [],
+      "status": "已接入原始墙段及遗迹；完整分期城界待核",
+      "note": "安贝尔堡及周围山地防御墙线与1727年新建斋浦尔分开。串联遗产“拉贾斯坦山地堡垒”保留独立打卡身份。",
+      "center": [
+        75.851,
+        26.986
+      ],
+      "heritageId": null,
+      "geometryCount": 6,
+      "wallCount": 4,
+      "palaceCount": 1,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "amber-relation-2591473",
+          "scope": "fortified_palace_enclosure",
+          "type": "Polygon"
+        },
+        {
+          "id": "amber-way-370166571",
+          "scope": "city_gate_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "amber-wall-group-open-walls",
+          "scope": "open_wall_segments",
+          "type": "MultiLineString"
+        },
+        {
+          "id": "amber-way-733240327",
+          "scope": "surviving_wall_footprint",
+          "type": "Polygon"
+        },
+        {
+          "id": "amber-way-705826154",
+          "scope": "surviving_wall_footprint",
+          "type": "Polygon"
+        },
+        {
+          "id": "amber-way-705826168",
+          "scope": "surviving_wall_footprint",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "golconda",
+      "name": "戈尔康达",
+      "enName": "Golconda",
+      "country": "印度",
+      "classification": "capital",
+      "identity": "库特布沙希苏丹国都城",
+      "records": [
+        {
+          "regime": "库特布沙希苏丹国",
+          "years": "1518—1591（迁驻海得拉巴后仍为要塞）",
+          "periods": [
+            "明"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/tentativelists/5573/",
+      "additionalSources": [],
+      "status": "已接入原始墙段及遗迹；完整分期城界待核",
+      "note": "戈尔康达堡城与1591年建立的海得拉巴分址；城堡围区和外圈城防分层，不把王陵区当作宫城。",
+      "center": [
+        78.403,
+        17.383
+      ],
+      "heritageId": null,
+      "geometryCount": 2,
+      "wallCount": 1,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "golconda-relation-9128913",
+          "scope": "inner_citadel_enclosure",
+          "type": "Polygon"
+        },
+        {
+          "id": "golconda-wall-group-open-walls",
+          "scope": "open_wall_segments",
+          "type": "MultiLineString"
+        }
+      ]
+    },
+    {
+      "key": "hyderabad",
+      "name": "海得拉巴",
+      "enName": "Hyderabad",
+      "country": "印度",
+      "classification": "capital",
+      "identity": "库特布沙希与海得拉巴土邦都城",
+      "records": [
+        {
+          "regime": "库特布沙希苏丹国",
+          "years": "1591—1687",
+          "periods": [
+            "明",
+            "清"
+          ]
+        },
+        {
+          "regime": "阿萨夫贾赫王朝海得拉巴土邦",
+          "years": "1763—1948",
+          "periods": [
+            "清",
+            "近现代"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/tentativelists/5573/",
+      "additionalSources": [],
+      "status": "已接入宫堡或遗址围区；完整分期城界待核",
+      "note": "1763年前阿萨夫贾赫王廷主要在奥兰加巴德，不能把1724年王朝建立直接当作迁都本城。乔马哈拉宫和旧宫为实际宫殿范围，完整城墙待核。",
+      "center": [
+        78.474,
+        17.36
+      ],
+      "heritageId": null,
+      "geometryCount": 3,
+      "wallCount": 0,
+      "palaceCount": 3,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "hyderabad-way-116031164",
+          "scope": "mapped_current_palace_precinct",
+          "type": "Polygon"
+        },
+        {
+          "id": "hyderabad-way-116030267",
+          "scope": "mapped_current_building",
+          "type": "Polygon"
+        },
+        {
+          "id": "hyderabad-way-238192345",
+          "scope": "mapped_current_palace_precinct",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "bijapur",
+      "name": "比贾布尔",
+      "enName": "Bijapur / Vijayapura",
+      "country": "印度",
+      "classification": "capital",
+      "identity": "阿迪勒沙希苏丹国都城",
+      "records": [
+        {
+          "regime": "阿迪勒沙希苏丹国",
+          "years": "1490—1686",
+          "periods": [
+            "明",
+            "清"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/tentativelists/5887/",
+      "additionalSources": [],
+      "status": "已接入原始墙段及遗迹；完整分期城界待核",
+      "note": "比贾布尔城郭与内堡分层；原始墙段包含现存和遗迹状态，未补连城门或缺失部分，不把圆顶陵墓当宫殿。",
+      "center": [
+        75.737,
+        16.829
+      ],
+      "heritageId": null,
+      "geometryCount": 3,
+      "wallCount": 3,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "bijapur-wall-group-open-walls",
+          "scope": "open_wall_segments",
+          "type": "MultiLineString"
+        },
+        {
+          "id": "bijapur-way-140357732",
+          "scope": "surviving_wall_footprint",
+          "type": "Polygon"
+        },
+        {
+          "id": "bijapur-way-92289697",
+          "scope": "surviving_wall_footprint",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "bidar",
+      "name": "比达尔",
+      "enName": "Bidar",
+      "country": "印度",
+      "classification": "capital",
+      "identity": "巴赫曼尼与巴里德沙希都城",
+      "records": [
+        {
+          "regime": "巴赫曼尼苏丹国",
+          "years": "1427—1527",
+          "periods": [
+            "明"
+          ]
+        },
+        {
+          "regime": "巴里德沙希政权",
+          "years": "1527—1619",
+          "periods": [
+            "明"
+          ]
+        }
+      ],
+      "source": "https://bidar.nic.in/en/tourist-place/bidar-fort/",
+      "additionalSources": [],
+      "status": "已接入宫堡或遗址围区；完整分期城界待核",
+      "note": "比达尔堡为宫堡围区；塔赫特宫与朗吉纳宫轮廓分别接入，不用堡区代替全部历史城区。",
+      "center": [
+        77.53,
+        17.925
+      ],
+      "heritageId": null,
+      "geometryCount": 3,
+      "wallCount": 0,
+      "palaceCount": 2,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "bidar-way-548416060",
+          "scope": "mapped_fortress_extent",
+          "type": "Polygon"
+        },
+        {
+          "id": "bidar-way-507066741",
+          "scope": "palace_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "bidar-way-507066743",
+          "scope": "mapped_current_building",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "daulatabad",
+      "name": "道拉塔巴德",
+      "enName": "Devagiri / Daulatabad",
+      "country": "印度",
+      "classification": "capital",
+      "identity": "雅达瓦王国与图格鲁克短期都城",
+      "records": [
+        {
+          "regime": "德瓦吉里雅达瓦王国",
+          "years": "约1187—1318",
+          "periods": [
+            "宋辽金西夏",
+            "元"
+          ]
+        },
+        {
+          "regime": "德里苏丹国图格鲁克王朝",
+          "years": "1327—1335前后（迁都措施与回迁分期）",
+          "periods": [
+            "元"
+          ]
+        }
+      ],
+      "source": "https://divcomcsn.maharashtra.gov.in/en/about-department/introduction/",
+      "additionalSources": [
+        "https://chhatrapatisambhajinagar.maharashtra.gov.in/en/tourist-place/daultabad/"
+      ],
+      "status": "已接入原始墙段及遗迹；完整分期城界待核",
+      "note": "德瓦吉里与道拉塔巴德是同城异名；内堡和外圈防御墙分开。不能用单一堡顶轮廓代表多重都城城防。",
+      "center": [
+        75.212,
+        19.944
+      ],
+      "heritageId": null,
+      "geometryCount": 2,
+      "wallCount": 1,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "daulatabad-way-1246827867",
+          "scope": "fortified_enclosure",
+          "type": "Polygon"
+        },
+        {
+          "id": "daulatabad-wall-group-open-walls",
+          "scope": "open_wall_segments",
+          "type": "MultiLineString"
+        }
+      ]
+    },
+    {
+      "key": "pataliputra",
+      "name": "华氏城／波吒厘子城",
+      "enName": "Pataliputra",
+      "country": "印度",
+      "classification": "capital",
+      "identity": "难陀与孔雀王朝都城",
+      "records": [
+        {
+          "regime": "难陀、孔雀王朝",
+          "years": "约前4—前2世纪（前185年孔雀王朝终结）",
+          "periods": [
+            "周",
+            "秦汉"
+          ]
+        }
+      ],
+      "source": "https://patna.nic.in/tourist-place/kumhrar-park/",
+      "additionalSources": [],
+      "status": "已接入宫堡或遗址围区；完整分期城界待核",
+      "note": "库姆拉哈尔为华氏城宫廷公共建筑遗址参照，现代考古公园范围不能当全城城界；木栅城墙位置须考古图核对。",
+      "center": [
+        85.18,
+        25.602
+      ],
+      "heritageId": null,
+      "geometryCount": 1,
+      "wallCount": 0,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "pataliputra-way-387137623",
+          "scope": "modern_excavation_park",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "mysore",
+      "name": "迈索尔",
+      "enName": "Mysore / Mysuru",
+      "country": "印度",
+      "classification": "capital",
+      "identity": "迈索尔沃德亚尔王朝都城",
+      "records": [
+        {
+          "regime": "迈索尔沃德亚尔王朝",
+          "years": "1399—1610；1799—1947（中间迁都斯里兰加帕特纳）",
+          "periods": [
+            "明",
+            "清",
+            "近现代"
+          ]
+        }
+      ],
+      "source": "https://mysore.nic.in/en/history/",
+      "additionalSources": [],
+      "status": "已接入宫堡或遗址围区；完整分期城界待核",
+      "note": "现存迈索尔宫主要为19世纪末至20世纪初重建；不得将现宫轮廓视为14世纪宫城或完整都城边界。",
+      "center": [
+        76.655,
+        12.305
+      ],
+      "heritageId": null,
+      "geometryCount": 1,
+      "wallCount": 0,
+      "palaceCount": 1,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "mysore-way-656323590",
+          "scope": "mapped_current_palace_precinct",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "srirangapatna",
+      "name": "斯里兰加帕特纳",
+      "enName": "Srirangapatna",
+      "country": "印度",
+      "classification": "capital",
+      "identity": "迈索尔王国都城",
+      "records": [
+        {
+          "regime": "迈索尔王国与海德尔·阿里、蒂普王廷",
+          "years": "1610—1799",
+          "periods": [
+            "明",
+            "清"
+          ]
+        }
+      ],
+      "source": "https://karnatakatourism.org/en/destinations/srirangapatna",
+      "additionalSources": [],
+      "status": "已接入原始墙段及遗迹；完整分期城界待核",
+      "note": "城墙、河岛与蒂普夏宫分别表达；自然河岛不自动作为完整城墙边界。",
+      "center": [
+        76.679,
+        12.424
+      ],
+      "heritageId": null,
+      "geometryCount": 2,
+      "wallCount": 1,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "srirangapatna-way-95800935",
+          "scope": "temple_precinct",
+          "type": "Polygon"
+        },
+        {
+          "id": "srirangapatna-wall-group-open-walls",
+          "scope": "open_wall_segments",
+          "type": "MultiLineString"
+        }
+      ]
+    },
+    {
+      "key": "lahore",
+      "name": "拉合尔",
+      "enName": "Lahore",
+      "country": "巴基斯坦",
+      "classification": "capital",
+      "identity": "莫卧儿与锡克帝国都城",
+      "records": [
+        {
+          "regime": "莫卧儿帝国阿克巴王廷",
+          "years": "1585—1598",
+          "periods": [
+            "明"
+          ]
+        },
+        {
+          "regime": "锡克帝国",
+          "years": "1799—1849",
+          "periods": [
+            "清"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/list/171/",
+      "additionalSources": [
+        "https://whc.unesco.org/en/list/255/"
+      ],
+      "status": "已接入原始墙段及遗迹；完整分期城界待核",
+      "note": "拉合尔堡为宫堡；旧城围墙与现存、修复城门分开。夏利马尔花园为另一个遗产组件，不与整座古都强制合并打卡。",
+      "center": [
+        74.313,
+        31.584
+      ],
+      "heritageId": null,
+      "geometryCount": 6,
+      "wallCount": 1,
+      "palaceCount": 3,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "lahore-way-105841051",
+          "scope": "fortified_palace_enclosure",
+          "type": "Polygon"
+        },
+        {
+          "id": "lahore-way-605420150",
+          "scope": "mapped_current_building",
+          "type": "Polygon"
+        },
+        {
+          "id": "lahore-way-604910486",
+          "scope": "mapped_current_building",
+          "type": "Polygon"
+        },
+        {
+          "id": "lahore-way-605803675",
+          "scope": "fort_gate",
+          "type": "Polygon"
+        },
+        {
+          "id": "lahore-way-468148454",
+          "scope": "surviving_city_gate",
+          "type": "Polygon"
+        },
+        {
+          "id": "lahore-way-904500946",
+          "scope": "open_wall_segments",
+          "type": "LineString"
+        }
+      ]
+    },
+    {
+      "key": "peshawar",
+      "name": "白沙瓦",
+      "enName": "Peshawar / Purushapura",
+      "country": "巴基斯坦",
+      "classification": "capital",
+      "identity": "贵霜帝国王都",
+      "records": [
+        {
+          "regime": "贵霜帝国",
+          "years": "约2—3世纪（多都制，非唯一首都）",
+          "periods": [
+            "秦汉",
+            "魏晋南北朝"
+          ]
+        }
+      ],
+      "source": "https://www.metmuseum.org/es/essays/kushan-empire-ca-second-century-b-c-third-century-a-d",
+      "additionalSources": [],
+      "status": "已接入宫堡或遗址围区；完整分期城界待核",
+      "note": "布路沙布逻与白沙瓦同城异名。巴拉希萨尔堡为后世持续修筑的堡垒，不能当作贵霜宫城原貌。",
+      "center": [
+        71.572,
+        34.011
+      ],
+      "heritageId": null,
+      "geometryCount": 1,
+      "wallCount": 0,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "peshawar-relation-11550518",
+          "scope": "fortified_enclosure",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "thatta",
+      "name": "塔塔",
+      "enName": "Thatta",
+      "country": "巴基斯坦",
+      "classification": "capital",
+      "identity": "信德萨马、阿尔贡与塔尔汗王都",
+      "records": [
+        {
+          "regime": "萨马王朝",
+          "years": "14世纪中叶—1524",
+          "periods": [
+            "元",
+            "明"
+          ]
+        },
+        {
+          "regime": "阿尔贡、塔尔汗王朝",
+          "years": "1524—1592",
+          "periods": [
+            "明"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/list/143/",
+      "additionalSources": [],
+      "status": "历史身份及城址已核，可靠城墙与宫城矢量待核",
+      "note": "马克里为城外王室和社会墓地，保留世界遗产独立身份，不作为塔塔城郭。完整城墙与宫城矢量待核。",
+      "center": [
+        67.924,
+        24.751
+      ],
+      "heritageId": null,
+      "geometryCount": 0,
+      "wallCount": 0,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": []
+    },
+    {
+      "key": "taxila-bhir",
+      "name": "塔克西拉·比尔丘",
+      "enName": "Taxila — Bhir Mound",
+      "country": "巴基斯坦",
+      "classification": "capital",
+      "identity": "犍陀罗塔克西拉早期王都",
+      "records": [
+        {
+          "regime": "犍陀罗地方王廷，比尔丘阶段",
+          "years": "约前6—前2世纪（政治隶属多次变化）",
+          "periods": [
+            "周",
+            "秦汉"
+          ]
+        }
+      ],
+      "source": "https://doam.gov.pk/public/world-heritage-sites/13",
+      "additionalSources": [],
+      "status": "已接入宫堡或遗址围区；完整分期城界待核",
+      "note": "比尔丘与锡尔卡普、锡尔苏克是不同城址；现代遗址区只作考古范围，不直接当完整古代城郭。",
+      "center": [
+        72.819,
+        33.746
+      ],
+      "heritageId": null,
+      "geometryCount": 1,
+      "wallCount": 0,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "taxila-bhir-way-495843829",
+          "scope": "mapped_archaeological_extent",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "taxila-sirkap",
+      "name": "塔克西拉锡尔卡普",
+      "enName": "Taxila — Sirkap",
+      "country": "巴基斯坦",
+      "classification": "capital",
+      "identity": "塔克西拉印度帕提亚王都",
+      "records": [
+        {
+          "regime": "印度帕提亚王廷；前后为希腊、塞种及贵霜时期城市",
+          "years": "约公元1世纪；本城约前2世纪—公元1世纪沿用",
+          "periods": [
+            "秦汉"
+          ]
+        }
+      ],
+      "source": "https://doam.gov.pk/public/sites/9756",
+      "additionalSources": [
+        "https://whc.unesco.org/document/163117"
+      ],
+      "status": "已接入宫堡或遗址围区；完整分期城界待核",
+      "note": "锡尔卡普城墙约5.5公里，包含丘陵卫城；发掘区仅为部分城市，不把规则发掘区边界冒充完整城墙。",
+      "center": [
+        72.831,
+        33.756
+      ],
+      "heritageId": null,
+      "geometryCount": 1,
+      "wallCount": 0,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "taxila-sirkap-way-495843825",
+          "scope": "mapped_archaeological_extent",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "taxila-sirsukh",
+      "name": "塔克西拉锡尔苏克",
+      "enName": "Taxila — Sirsukh",
+      "country": "巴基斯坦",
+      "classification": "archaeological-city",
+      "identity": "贵霜时期塔克西拉后期城址",
+      "records": [
+        {
+          "regime": "贵霜时期后期塔克西拉",
+          "years": "约公元1—5世纪；王廷政治层级待核",
+          "periods": [
+            "秦汉",
+            "魏晋南北朝"
+          ]
+        }
+      ],
+      "source": "https://doam.gov.pk/public/world-heritage-sites/13",
+      "additionalSources": [],
+      "status": "已接入宫堡或遗址围区；完整分期城界待核",
+      "note": "官方称塔克西拉有连续都城城址，但本城是否代表帝国王廷仍待进一步核证，暂按普通考古古城显示。",
+      "center": [
+        72.85,
+        33.781
+      ],
+      "heritageId": null,
+      "geometryCount": 1,
+      "wallCount": 0,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "taxila-sirsukh-way-495843814",
+          "scope": "mapped_archaeological_extent",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "rohtas",
+      "name": "罗赫达斯堡",
+      "enName": "Rohtas Fort",
+      "country": "巴基斯坦",
+      "classification": "fortress",
+      "identity": "苏尔王朝军事堡垒",
+      "records": [
+        {
+          "regime": "苏尔王朝及后续驻防",
+          "years": "16世纪起（非已核实国家都城）",
+          "periods": [
+            "明"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/list/586/",
+      "additionalSources": [],
+      "status": "已接入原始墙段及遗迹；完整分期城界待核",
+      "note": "军事堡垒不等于国家首都；城墙与堡内结构可显示，但不生成古都根点。",
+      "center": [
+        73.579,
+        32.963
+      ],
+      "heritageId": "whc-586",
+      "geometryCount": 2,
+      "wallCount": 1,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "rohtas-relation-3881907",
+          "scope": "fortified_enclosure",
+          "type": "Polygon"
+        },
+        {
+          "id": "rohtas-wall-group-open-walls",
+          "scope": "open_wall_segments",
+          "type": "MultiLineString"
+        }
+      ]
+    },
+    {
+      "key": "mohenjo-daro",
+      "name": "摩亨佐达罗",
+      "enName": "Mohenjo-daro",
+      "country": "巴基斯坦",
+      "classification": "archaeological-city",
+      "identity": "印度河文明城市，政权都城身份未定",
+      "records": [
+        {
+          "regime": "印度河文明",
+          "years": "约前3千纪（政治组织与王都身份未定）",
+          "periods": [
+            "传说",
+            "夏商"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/list/138/",
+      "additionalSources": [],
+      "status": "已接入宫堡或遗址围区；完整分期城界待核",
+      "note": "上城、下城与现代遗址保护范围需要区别；没有确认王宫或统一国家首都身份，使用普通古城分类。",
+      "center": [
+        68.139,
+        27.325
+      ],
+      "heritageId": "whc-138",
+      "geometryCount": 1,
+      "wallCount": 0,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "mohenjo-daro-way-841738149",
+          "scope": "mapped_archaeological_extent",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "babylon",
+      "name": "巴比伦",
+      "enName": "Babylon",
+      "country": "伊拉克",
+      "classification": "capital",
+      "identity": "古巴比伦与新巴比伦王国都城",
+      "records": [
+        {
+          "regime": "古巴比伦王国",
+          "years": "约前19—前16世纪",
+          "periods": [
+            "夏商"
+          ]
+        },
+        {
+          "regime": "新巴比伦帝国",
+          "years": "前626—前539",
+          "periods": [
+            "周"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/list/278/",
+      "additionalSources": [],
+      "status": "已接入内外城墙遗迹带与宫殿标绘；完整分期城郭待核",
+      "note": "内城双墙、外城墙和南宫分别表达，保留20世纪修复、复建说明；不接入萨达姆现代宫殿充作古代王宫。",
+      "center": [
+        44.42083,
+        32.54197
+      ],
+      "heritageId": "whc-278",
+      "geometryCount": 4,
+      "wallCount": 2,
+      "palaceCount": 1,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "babylon-way-552821959",
+          "scope": "mapped_wall_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "babylon-way-901146569",
+          "scope": "mapped_wall_footprint",
+          "type": "Polygon"
+        },
+        {
+          "id": "babylon-relation-13261225",
+          "scope": "palace_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "babylon-way-1229757668",
+          "scope": "restored_gate",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "ashur",
+      "name": "亚述／阿淑尔",
+      "enName": "Ashur / Assur",
+      "country": "伊拉克",
+      "classification": "capital",
+      "identity": "亚述帝国早期都城",
+      "records": [
+        {
+          "regime": "中亚述及早期新亚述王廷",
+          "years": "约前14—前9世纪",
+          "periods": [
+            "夏商",
+            "周"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/list/1130/",
+      "additionalSources": [],
+      "status": "已接入宫堡或遗址围区；完整分期城界待核",
+      "note": "神庙、旧宫、新宫和王储宫分层；考古区不是所有时期完整城界，现存遗迹含近现代保护修复。",
+      "center": [
+        43.26111,
+        35.45667
+      ],
+      "heritageId": "whc-1130",
+      "geometryCount": 4,
+      "wallCount": 0,
+      "palaceCount": 3,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "ashur-way-620413631",
+          "scope": "palace_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "ashur-way-1067547835",
+          "scope": "palace_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "ashur-way-1067791860",
+          "scope": "palace_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "ashur-way-554861132",
+          "scope": "temple_precinct",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "nimrud",
+      "name": "尼姆鲁德／卡尔胡",
+      "enName": "Nimrud / Kalhu",
+      "country": "伊拉克",
+      "classification": "capital",
+      "identity": "新亚述帝国都城",
+      "records": [
+        {
+          "regime": "新亚述帝国",
+          "years": "前879—前706",
+          "periods": [
+            "周"
+          ]
+        }
+      ],
+      "source": "https://archeologie.culture.gouv.fr/mossoul-museum/en/nimrud-0",
+      "additionalSources": [],
+      "status": "已接入宫堡或遗址围区；完整分期城界待核",
+      "note": "卡尔胡与尼姆鲁德为同一城址；西北宫为实际宫殿遗址，不把旧发掘边界当完整城墙。",
+      "center": [
+        43.328,
+        36.099
+      ],
+      "heritageId": null,
+      "geometryCount": 1,
+      "wallCount": 0,
+      "palaceCount": 1,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "nimrud-way-345277919",
+          "scope": "palace_remains",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "dur-sharrukin",
+      "name": "杜尔沙鲁金",
+      "enName": "Dur-Sharrukin / Khorsabad",
+      "country": "伊拉克",
+      "classification": "capital",
+      "identity": "新亚述萨尔贡二世短期都城",
+      "records": [
+        {
+          "regime": "新亚述帝国萨尔贡二世王廷",
+          "years": "前706—前705（前717年开始营建）",
+          "periods": [
+            "周"
+          ]
+        }
+      ],
+      "source": "https://archeologie.culture.gouv.fr/mossoul-museum/en/khorsabad",
+      "additionalSources": [],
+      "status": "已接入原始墙段及遗迹；完整分期城界待核",
+      "note": "城市开建、正式启用与迁离年份分别说明；本轮原始墙线保持开放，不能因历史上近方形而随意补成四边形。",
+      "center": [
+        43.229,
+        36.511
+      ],
+      "heritageId": null,
+      "geometryCount": 1,
+      "wallCount": 1,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "dur-sharrukin-wall-group-open-walls",
+          "scope": "open_wall_segments",
+          "type": "MultiLineString"
+        }
+      ]
+    },
+    {
+      "key": "nineveh",
+      "name": "尼尼微",
+      "enName": "Nineveh",
+      "country": "伊拉克",
+      "classification": "capital",
+      "identity": "新亚述帝国都城",
+      "records": [
+        {
+          "regime": "新亚述帝国",
+          "years": "前705—前612",
+          "periods": [
+            "周"
+          ]
+        }
+      ],
+      "source": "https://www.britishmuseum.org/collection/galleries/assyria-nineveh",
+      "additionalSources": [],
+      "status": "已接入原始墙段及遗迹；完整分期城界待核",
+      "note": "库云吉克与奈比优努斯宫区分开。保留原始城墙遗段和宫殿标绘，不以现代摩苏尔市界替代古城。",
+      "center": [
+        43.154,
+        36.36
+      ],
+      "heritageId": null,
+      "geometryCount": 3,
+      "wallCount": 1,
+      "palaceCount": 2,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "nineveh-way-199371233",
+          "scope": "open_wall_segments",
+          "type": "LineString"
+        },
+        {
+          "id": "nineveh-way-844196434",
+          "scope": "palace_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "nineveh-way-1132948193",
+          "scope": "palace_remains",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "ur",
+      "name": "乌尔",
+      "enName": "Ur",
+      "country": "伊拉克",
+      "classification": "capital",
+      "identity": "苏美尔城邦与乌尔第三王朝都城",
+      "records": [
+        {
+          "regime": "乌尔城邦与乌尔第三王朝",
+          "years": "前3千纪；乌尔第三王朝约前2112—前2004",
+          "periods": [
+            "传说",
+            "夏商"
+          ]
+        }
+      ],
+      "source": "https://archeologie.culture.gouv.fr/en/glossary/ur",
+      "additionalSources": [],
+      "status": "已接入宫堡或遗址围区；完整分期城界待核",
+      "note": "城址、宗教核心和塔庙范围分别表达。遗址标绘区不作为测定完整城郭；中国对应“传说”仅表示中国同期分组，不表示本地史料为传说。",
+      "center": [
+        46.103,
+        30.961
+      ],
+      "heritageId": null,
+      "geometryCount": 1,
+      "wallCount": 0,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "ur-way-1060285722",
+          "scope": "temple_precinct",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "uruk",
+      "name": "乌鲁克",
+      "enName": "Uruk / Warka",
+      "country": "伊拉克",
+      "classification": "capital",
+      "identity": "苏美尔乌鲁克城邦都城",
+      "records": [
+        {
+          "regime": "乌鲁克城邦",
+          "years": "约前4—前3千纪（不以史诗人物确定精确年代）",
+          "periods": [
+            "传说"
+          ]
+        }
+      ],
+      "source": "https://www.metmuseum.org/it/essays/uruk-the-first-city",
+      "additionalSources": [],
+      "status": "已接入原始闭合墙界参考及现存遗迹；其他分期完整城界待核",
+      "note": "闭合城墙标绘可生成明确注明原始闭合墙线所围的参考面；不宣称吉尔伽美什为考古证实的筑墙者。",
+      "center": [
+        45.636,
+        31.323
+      ],
+      "heritageId": null,
+      "geometryCount": 2,
+      "wallCount": 1,
+      "palaceCount": 0,
+      "completeWallReference": true,
+      "geometrySources": [
+        {
+          "id": "uruk-way-1311535414",
+          "scope": "temple_precinct",
+          "type": "Polygon"
+        },
+        {
+          "id": "uruk-way-1046022672",
+          "scope": "closed_wall_reference",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "hatra",
+      "name": "哈特拉",
+      "enName": "Hatra",
+      "country": "伊拉克",
+      "classification": "capital",
+      "identity": "哈特拉王国都城",
+      "records": [
+        {
+          "regime": "哈特拉王国",
+          "years": "约公元1—3世纪（帕提亚影响下）",
+          "periods": [
+            "秦汉",
+            "魏晋南北朝"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/list/277/",
+      "additionalSources": [],
+      "status": "已接入原始闭合墙界参考及现存遗迹；其他分期完整城界待核",
+      "note": "圆形内外城防与中央圣区不同；仅接入原始闭合墙线，不以圣区范围冒充整个城市。",
+      "center": [
+        42.71833,
+        35.58806
+      ],
+      "heritageId": "whc-277",
+      "geometryCount": 1,
+      "wallCount": 1,
+      "palaceCount": 0,
+      "completeWallReference": true,
+      "geometrySources": [
+        {
+          "id": "hatra-way-199307526",
+          "scope": "closed_wall_reference",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "ctesiphon",
+      "name": "泰西封",
+      "enName": "Ctesiphon",
+      "country": "伊拉克",
+      "classification": "capital",
+      "identity": "帕提亚与萨珊王朝王都",
+      "records": [
+        {
+          "regime": "帕提亚帝国王廷",
+          "years": "约前2世纪末—224",
+          "periods": [
+            "秦汉",
+            "魏晋南北朝"
+          ]
+        },
+        {
+          "regime": "萨珊帝国",
+          "years": "224—637",
+          "periods": [
+            "魏晋南北朝",
+            "隋唐"
+          ]
+        }
+      ],
+      "source": "https://www.metmuseum.org/pt/essays/ctesiphon",
+      "additionalSources": [],
+      "status": "已接入宫堡或遗址围区；完整分期城界待核",
+      "note": "泰西封为多城组成的都会区；塔克基斯拉宫殿拱厅仅是一个宫殿遗存，不代表全部都会或宫城边界。",
+      "center": [
+        44.581,
+        33.094
+      ],
+      "heritageId": null,
+      "geometryCount": 1,
+      "wallCount": 0,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "ctesiphon-relation-12107331",
+          "scope": "mapped_archaeological_extent",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "samarra",
+      "name": "萨迈拉",
+      "enName": "Samarra",
+      "country": "伊拉克",
+      "classification": "capital",
+      "identity": "阿拔斯哈里发国都城",
+      "records": [
+        {
+          "regime": "阿拔斯哈里发国",
+          "years": "836—892",
+          "periods": [
+            "隋唐"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/list/276/",
+      "additionalSources": [
+        "https://www.bisi.ac.uk/publication/archaeological-atlas-of-samarra-samarra-studies-ii/"
+      ],
+      "status": "已接入原始墙段及遗迹；完整分期城界待核",
+      "note": "都城沿底格里斯河延展，宫城、清真寺围墙和军事围区分开；不以某个闭合围区代表完整线性都会。",
+      "center": [
+        43.82354,
+        34.34099
+      ],
+      "heritageId": "whc-276",
+      "geometryCount": 5,
+      "wallCount": 3,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "samarra-way-393905437",
+          "scope": "fortified_enclosure_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "samarra-way-1232333692",
+          "scope": "religious_precinct",
+          "type": "Polygon"
+        },
+        {
+          "id": "samarra-wall-group-open-walls",
+          "scope": "open_wall_segments",
+          "type": "MultiLineString"
+        },
+        {
+          "id": "samarra-way-890137715",
+          "scope": "surviving_wall_footprint",
+          "type": "Polygon"
+        },
+        {
+          "id": "samarra-way-888490983",
+          "scope": "surviving_wall_footprint",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "baghdad",
+      "name": "巴格达",
+      "enName": "Baghdad",
+      "country": "伊拉克",
+      "classification": "capital",
+      "identity": "阿拔斯哈里发国都城",
+      "records": [
+        {
+          "regime": "阿拔斯哈里发国",
+          "years": "762—836；892—1258（中间迁都萨迈拉）",
+          "periods": [
+            "隋唐",
+            "五代十国",
+            "宋辽金西夏"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/list/276/",
+      "additionalSources": [],
+      "status": "已接入原始墙段及遗迹；完整分期城界待核",
+      "note": "阿拔斯圆城旧址与后世东岸城区不同；未取得可靠圆城墙矢量，不绘制猜测圆形城界。现存后期宫殿与残墙另行标注。",
+      "center": [
+        44.373,
+        33.339
+      ],
+      "heritageId": null,
+      "geometryCount": 3,
+      "wallCount": 1,
+      "palaceCount": 1,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "baghdad-relation-17330251",
+          "scope": "palace_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "baghdad-relation-1244584",
+          "scope": "mapped_current_building",
+          "type": "Polygon"
+        },
+        {
+          "id": "baghdad-way-1069456353",
+          "scope": "surviving_wall_footprint",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "erbil",
+      "name": "埃尔比勒",
+      "enName": "Erbil / Arbela",
+      "country": "伊拉克",
+      "classification": "political-centre",
+      "identity": "古代政治与宗教中心、历史城堡",
+      "records": [
+        {
+          "regime": "古代阿尔贝拉及后世城堡",
+          "years": "多时期；具体独立王都身份待核",
+          "periods": [
+            "秦汉",
+            "魏晋南北朝"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/list/1437/",
+      "additionalSources": [],
+      "status": "已接入宫堡或遗址围区；完整分期城界待核",
+      "note": "UNESCO证实古代政治与宗教中心及长期连续居住，但不能仅据城堡将所有时期认定为国家首都。",
+      "center": [
+        44.009,
+        36.191
+      ],
+      "heritageId": "whc-1437",
+      "geometryCount": 1,
+      "wallCount": 0,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "erbil-way-34133277",
+          "scope": "fortified_enclosure",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "jerusalem-old-city",
+      "name": "耶路撒冷旧城",
+      "enName": "Jerusalem — Old City",
+      "country": "耶路撒冷",
+      "classification": "capital",
+      "identity": "犹大王国与十字军耶路撒冷王国都城",
+      "records": [
+        {
+          "regime": "犹大王国",
+          "years": "约前10世纪—前586（早期王城范围有学术争议）",
+          "periods": [
+            "周"
+          ]
+        },
+        {
+          "regime": "十字军耶路撒冷王国",
+          "years": "1099—1187；1229—1244（分段控制）",
+          "periods": [
+            "宋辽金西夏"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/list/148/",
+      "additionalSources": [
+        "https://imj.org.il/en/exhibitions/melisende-queen-jerusalem"
+      ],
+      "status": "已接入原始闭合墙界参考及现存遗迹；其他分期完整城界待核",
+      "note": "旧城现存墙界主要为16世纪奥斯曼时期，不等于铁器时代犹大王城。古代南部城址与现旧城分期说明；地域按具体历史城址表示。",
+      "center": [
+        35.23167,
+        31.77778
+      ],
+      "heritageId": "whc-148",
+      "geometryCount": 2,
+      "wallCount": 1,
+      "palaceCount": 0,
+      "completeWallReference": true,
+      "geometrySources": [
+        {
+          "id": "jerusalem-old-city-relation-5862586",
+          "scope": "closed_wall_reference",
+          "type": "Polygon"
+        },
+        {
+          "id": "jerusalem-old-city-relation-136164",
+          "scope": "fortified_enclosure",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "acre",
+      "name": "阿卡／阿克",
+      "enName": "Acre / Akko",
+      "country": "以色列",
+      "classification": "capital",
+      "identity": "十字军耶路撒冷王国后期都城",
+      "records": [
+        {
+          "regime": "十字军耶路撒冷王国",
+          "years": "1191—1291",
+          "periods": [
+            "宋辽金西夏",
+            "元"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/list/1042/",
+      "additionalSources": [
+        "https://whc.unesco.org/document/1295"
+      ],
+      "status": "已接入原始墙段及遗迹；完整分期城界待核",
+      "note": "1104年征服不等于成为首都；采用1191—1291。现存城防主要为18—19世纪奥斯曼建筑，与地下十字军遗存分开。",
+      "center": [
+        35.06889,
+        32.92167
+      ],
+      "heritageId": "whc-1042",
+      "geometryCount": 2,
+      "wallCount": 1,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "acre-relation-11205783",
+          "scope": "fortified_enclosure",
+          "type": "Polygon"
+        },
+        {
+          "id": "acre-wall-group-open-walls",
+          "scope": "open_wall_segments",
+          "type": "MultiLineString"
+        }
+      ]
+    },
+    {
+      "key": "hazor",
+      "name": "夏琐",
+      "enName": "Hazor",
+      "country": "以色列",
+      "classification": "capital",
+      "identity": "青铜时代迦南夏琐城邦王都",
+      "records": [
+        {
+          "regime": "迦南夏琐城邦",
+          "years": "前2千纪（上、下城，毁灭年代有不同解释）",
+          "periods": [
+            "夏商"
+          ]
+        }
+      ],
+      "source": "https://archaeology.huji.ac.il/tel-hazor",
+      "additionalSources": [],
+      "status": "已接入宫堡或遗址围区；完整分期城界待核",
+      "note": "迦南宫殿与铁器时代堡垒、城门分期；后来的北国以色列行政中心身份不另立国家首都记录。现代公园范围不是青铜时代全城。",
+      "center": [
+        35.569,
+        33.018
+      ],
+      "heritageId": null,
+      "geometryCount": 2,
+      "wallCount": 0,
+      "palaceCount": 1,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "hazor-way-734139848",
+          "scope": "palace_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "hazor-way-734139836",
+          "scope": "fortified_enclosure_remains",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "megiddo",
+      "name": "米吉多",
+      "enName": "Megiddo",
+      "country": "以色列",
+      "classification": "capital",
+      "identity": "青铜时代迦南米吉多城邦都城",
+      "records": [
+        {
+          "regime": "迦南米吉多城邦",
+          "years": "前3—前2千纪",
+          "periods": [
+            "传说",
+            "夏商"
+          ]
+        }
+      ],
+      "source": "https://www.parks.org.il/wp-content/uploads/2018/01/megido-en-broshur.pdf",
+      "additionalSources": [],
+      "status": "历史身份及城址已核，可靠城墙与宫城矢量待核",
+      "note": "宫殿、城门和城防跨多个地层，不将有争议的建筑统一认定为所罗门时期。北国及亚述行政中心身份与城邦阶段区分。",
+      "center": [
+        35.183,
+        32.585
+      ],
+      "heritageId": null,
+      "geometryCount": 0,
+      "wallCount": 0,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": []
+    },
+    {
+      "key": "caesarea",
+      "name": "凯撒利亚",
+      "enName": "Caesarea Maritima",
+      "country": "以色列",
+      "classification": "provincial-capital",
+      "identity": "罗马与拜占庭时期行省首府",
+      "records": [
+        {
+          "regime": "罗马、拜占庭行省行政中心",
+          "years": "约公元1—7世纪；十字军城防为后期",
+          "periods": [
+            "秦汉",
+            "魏晋南北朝",
+            "隋唐"
+          ]
+        }
+      ],
+      "source": "https://en.parks.org.il/reserve-park/caesarea-national-park/",
+      "additionalSources": [],
+      "status": "已接入原始墙段及遗迹；完整分期城界待核",
+      "note": "希律宫殿与后期十字军城墙分开；有王宫不等于整个古城为独立国家首都。",
+      "center": [
+        34.892,
+        32.501
+      ],
+      "heritageId": null,
+      "geometryCount": 2,
+      "wallCount": 1,
+      "palaceCount": 1,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "caesarea-way-96066573",
+          "scope": "palace_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "caesarea-wall-group-open-walls",
+          "scope": "open_wall_segments",
+          "type": "MultiLineString"
+        }
+      ]
+    },
+    {
+      "key": "masada",
+      "name": "马萨达",
+      "enName": "Masada",
+      "country": "以色列",
+      "classification": "fortress",
+      "identity": "希律王室堡垒与围城遗址",
+      "records": [
+        {
+          "regime": "希律时期王室军事堡垒",
+          "years": "约前1世纪—公元1世纪（非王国都城）",
+          "periods": [
+            "秦汉"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/list/1040/",
+      "additionalSources": [],
+      "status": "已接入宫堡或遗址围区；完整分期城界待核",
+      "note": "山顶堡垒、北宫、西宫和罗马围城营垒分别表达；不因有王宫认定为国家首都。",
+      "center": [
+        35.353,
+        31.315
+      ],
+      "heritageId": "whc-1040",
+      "geometryCount": 6,
+      "wallCount": 0,
+      "palaceCount": 2,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "masada-way-751256375",
+          "scope": "palace_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "masada-way-737549501",
+          "scope": "palace_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "masada-way-32231475",
+          "scope": "mapped_fortress_extent",
+          "type": "Polygon"
+        },
+        {
+          "id": "masada-way-87684125",
+          "scope": "roman_siege_camp",
+          "type": "Polygon"
+        },
+        {
+          "id": "masada-way-87684136",
+          "scope": "roman_siege_camp",
+          "type": "Polygon"
+        },
+        {
+          "id": "masada-way-87684153",
+          "scope": "roman_siege_camp",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "beer-sheba",
+      "name": "贝尔谢巴古城",
+      "enName": "Tel Beer Sheba",
+      "country": "以色列",
+      "classification": "provincial-capital",
+      "identity": "铁器时代区域行政城址",
+      "records": [
+        {
+          "regime": "犹大王国区域行政中心",
+          "years": "约前10—前8世纪",
+          "periods": [
+            "周"
+          ]
+        }
+      ],
+      "source": "https://whc.unesco.org/en/list/1108/",
+      "additionalSources": [],
+      "status": "已接入宫堡或遗址围区；完整分期城界待核",
+      "note": "采用贝尔谢巴古城遗址，不使用现代城市行政范围，也不视为犹大国家首都。",
+      "center": [
+        34.841,
+        31.245
+      ],
+      "heritageId": null,
+      "geometryCount": 1,
+      "wallCount": 0,
+      "palaceCount": 0,
+      "completeWallReference": false,
+      "geometrySources": [
+        {
+          "id": "beer-sheba-way-96320718",
+          "scope": "mapped_archaeological_extent",
+          "type": "Polygon"
+        }
+      ]
+    }
+  ],
+  "pendingCandidates": [
+    "埃及：阿瓦里斯、赫拉克利奥波利斯、伊提塔维、布巴斯提斯、塞易斯及阿尔卡塔伊的城址与政权阶段；不得只按王朝建立年份确定迁都。",
+    "印度：德里其他独立城址（拉尔科特、锡里、图格鲁克巴德、菲罗兹沙阿巴德）、新德里、拉杰吉尔、卡瑙杰、乌贾因、马图拉、坦贾武尔、甘伽孔达乔拉普拉姆、甘吉布勒姆、马杜赖、普纳、赖加德、萨塔拉、奇托尔、焦特布尔、乌代布尔、曼杜及高尔等须继续逐城核证和接入。",
+    "巴基斯坦：木尔坦、曼苏拉、乌德班达／洪德、罽宾诸王廷及塔克西拉锡尔苏克政治层级；需分别核证，不将军事堡垒自动升为都城。",
+    "伊拉克：阿卡德地望待考，基什、拉尔萨、拉格什／吉尔苏、伊辛、埃什努纳、杜尔库里加尔祖、塞琉西亚、库法及巴士拉等仍需单独核证，现阶段未伪造根点或城界。",
+    "以色列及邻近地域：亚拉得等城邦须继续核证；撒马利亚／塞巴斯蒂耶和得撒位于约旦河西岸，不默认为现今以色列境内。",
+    "已收录各城的未接入完整分期城界、宫城外墙及未取得矢量的主要宫殿，见逐城status与note。"
+  ]
+}

@@ -18,7 +18,7 @@ const idbStateKey = "state";
 const appVersion = "2.3.3";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
-const chinaAncientCapitalTotal = 557;
+const chinaAncientCapitalTotal = 622;
 const worldHeritageCatalogTotal = 1248;
 const usNpsUnitTotal = 433;
 const dataCacheVersion = "20261001-gvp-reference";
@@ -7409,7 +7409,7 @@ function loadUsNpsBoundaries() {
 
 function loadChinaAncientCapitals() {
   if (chinaAncientCapitalsPromise) return chinaAncientCapitalsPromise;
-  chinaAncientCapitalsPromise = fetchJson("data/china-ancient-capitals.json?v=84")
+  chinaAncientCapitalsPromise = fetchJson("data/china-ancient-capitals.json?v=88")
     .then(async (base) => {
       try {
         const supplement = await fetchJson("data/western-regions-36.json?v=8");
@@ -11153,7 +11153,7 @@ function renderChecklistMapDetail(key, item) {
 function renderAncientCapitalDetail(key, item, capitalMeta, done) {
   $("#mapDetail").classList.remove("hidden");
   $("#mapDetail").classList.add("ancient-capital-detail");
-  const currentPlace = ancientCapitalCurrentDisplayName(capitalMeta) || item;
+  const currentPlace = currentLanguage === "en" && capitalMeta?.enName ? capitalMeta.enName : ancientCapitalCurrentDisplayName(capitalMeta) || item;
   const records = ancientCapitalDetailRecords(capitalMeta);
   const recordsLabel = currentLanguage === "en" ? `${records.length} records` : `${records.length} 条`;
   $("#mapDetail").innerHTML = `
@@ -11201,9 +11201,9 @@ function focusAncientCapitalRelatedPlace(name,index) {
 
 function ancientCapitalResearchMaps(item) {
  const relatedViews=item?.relatedMapViews||[];
- const classicalButton=item?.classicalSiteKey?'<p><button type="button" class="popup-action" data-classical-focus="'+escapeHtml(item.classicalSiteKey)+'">'+(currentLanguage==='en'?'Show palace and temple details':'查看宫殿与寺庙细节')+'</button></p>':'';
+ const classicalButton=item?.classicalSiteKey?'<p><button type="button" class="popup-action" data-classical-focus="'+escapeHtml(item.classicalSiteKey)+'">'+(item.locationStatus==='regional_unlocated'?(currentLanguage==='en'?'View location notes':'查看定位说明'):(currentLanguage==='en'?'Show palace and temple details':'查看宫殿与寺庙细节'))+'</button></p>':'';
  const relatedButtons=classicalButton+(relatedViews.length?'<p><button type="button" class="popup-action" data-capital-related-view="'+escapeHtml(item.name)+'" data-view-index="-1">'+(currentLanguage==='en'?'Show related places':'查看相关地点')+'</button> '+relatedViews.map((v,i)=>'<button type="button" class="popup-action" data-capital-related-view="'+escapeHtml(item.name)+'" data-view-index="'+i+'">'+escapeHtml(v.name)+'</button>').join(' ')+'</p>':'');
- if(item?.historicalSources?.length)return '<section class="capital-meta-line">'+relatedButtons+'<p>'+escapeHtml(item.coordinatePrecision||'')+'</p>'+item.historicalSources.map(s=>'<a href="'+escapeHtml(s.url)+'" target="_blank" rel="noopener">'+escapeHtml(s.title)+' ↗</a>').join('<br>')+'</section>';
+ if(item?.historicalSources?.length)return '<section class="capital-meta-line">'+relatedButtons+'<p>'+escapeHtml(currentLanguage==='en'?(item.enCoordinatePrecision||item.coordinatePrecision||''):(item.coordinatePrecision||''))+'</p>'+item.historicalSources.map(s=>'<a href="'+escapeHtml(s.url)+'" target="_blank" rel="noopener">'+escapeHtml(s.title)+' ↗</a>').join('<br>')+'</section>';
  if(item?.historicalStages?.length)return '<section class="capital-meta-line"><strong>城址与遗存资料</strong>'+relatedButtons+item.historicalStages.map(s=>'<p><b>'+escapeHtml(s.name)+'</b><br>'+escapeHtml(s.boundaryStatus)+'<br>'+escapeHtml(s.summary)+'<br>'+s.sources.map(r=>'<a href="'+escapeHtml(r.url)+'" target="_blank" rel="noopener">'+escapeHtml(r.title)+' ↗</a>').join('<br>')+'</p>').join('')+'</section>';
  const name=ancientCapitalCurrentDisplayName(item)||item?.name||'';
  if(name.includes('汉长安城'))return '<section class="capital-meta-line"><p>汉长安城（未央宫前殿参照）。原粗略点位已更正到前殿遗址标绘范围内；此点用作城址定位，不表示全城中心，也不表示各政权时期均使用同一前殿。宫墙展示线和构件范围可在城墙范围的秦汉选项查看。</p><a href="https://www.openstreetmap.org/way/821525295" target="_blank" rel="noopener">前殿遗址标绘来源 ↗</a></section>';
@@ -11277,7 +11277,7 @@ function renderAncientCapitalRecordList(records) {
       confidence: "置信度",
     };
   return `<div class="ancient-capital-record-list">${records.map((record) => `
-    <article class="ancient-capital-record">
+    <article class="ancient-capital-record${record.foreignEra ? " foreign-capital-record" : ""}">
       <span><b>${record.foreignEra ? (currentLanguage === "en" ? "Corresponding Chinese period" : "中国对应朝代") : labels.era}</b><em>${escapeHtml(record.era || t("none"))}</em></span>
       <span><b>${labels.ancientName}</b><em>${escapeHtml(record.ancientName || t("none"))}</em></span>
       <span><b>${labels.dynasty}</b><em>${escapeHtml(record.dynasty || t("none"))}</em></span>
@@ -13211,7 +13211,7 @@ function renderDataInventory() {
 
 function loadImperialTombChecklist() {
   if (imperialTombChecklistPromise) return imperialTombChecklistPromise;
-  imperialTombChecklistPromise = fetchJson("data/imperial-tombs/catalog.json?v=64").then(catalog => {
+  imperialTombChecklistPromise = fetchJson("data/imperial-tombs/catalog.json?v=68").then(catalog => {
     if (!Array.isArray(catalog.items)) throw new Error("Invalid imperial tomb catalog");
     imperialTombMapIndex=new Map(catalog.items.flatMap(item=>[item.name,...(item.aliases||[])].map(name=>[canonicalPlaceKey(name),item])));
     const parents = new Set(catalog.items.map(item => item.parentId).filter(Boolean));
@@ -13250,11 +13250,11 @@ function renderImperialTombChecklist() {
           return Array.from(sections, ([section, rows]) => `<section class="imperial-tomb-subsection">${section ? `<h4>${escapeHtml(section)}<span>${rows.filter(item => isChecklistItemDone(key, item.name)).length}/${rows.length}</span></h4>` : ""}<div class="imperial-tomb-card-grid">${rows.map(item => {
           const checked = isChecklistItemDone(key, item.name);
           return `<button type="button" class="imperial-tomb-card ${checked ? "done" : ""}" data-checklist="${key}" data-item="${escapeHtml(item.name)}">
-            <span class="imperial-tomb-card-head"><strong>${escapeHtml(item.mapLabel || item.name)}</strong><span class="us-park-card-status">${checked ? t("checked") : t("unvisited")}</span></span>
-            <span class="imperial-tomb-card-owner">${escapeHtml(item.occupants.join("、") || (en ? "Tomb group" : "陵群"))}</span>
-            <span class="imperial-tomb-card-lifetime">${escapeHtml(item.lifespanText || (en ? "Dates pending" : "生卒待核"))}</span>
-            ${item.periodText ? `<span class="imperial-tomb-card-lifetime">${escapeHtml(item.periodText)}</span>` : ""}
-            <span class="imperial-tomb-card-location">${escapeHtml(item.admin)}</span>
+            <span class="imperial-tomb-card-head"><strong>${escapeHtml(en ? item.enName || item.mapLabel || item.name : item.mapLabel || item.name)}</strong><span class="us-park-card-status">${checked ? t("checked") : t("unvisited")}</span></span>
+            ${item.correspondingChinesePeriod ? `<span class="imperial-tomb-card-lifetime">${escapeHtml((en ? "Corresponding Chinese period: " : "中国对应朝代：") + (en ? item.enCorrespondingChinesePeriodLabel : item.correspondingChinesePeriodLabel))}</span>` : ""}<span class="imperial-tomb-card-owner">${escapeHtml((en ? item.enOccupants || item.occupants : item.occupants).join("、") || (en ? "Tomb group" : "陵群"))}</span>
+            <span class="imperial-tomb-card-lifetime">${escapeHtml((en ? item.enLifespanText : null) || item.lifespanText || (en ? "Dates pending" : "生卒待核"))}</span>
+            ${item.periodText ? `<span class="imperial-tomb-card-lifetime">${escapeHtml(en ? item.enPeriodText || item.periodText : item.periodText)}</span>` : ""}
+            <span class="imperial-tomb-card-location">${escapeHtml(en ? item.enAdmin || item.admin : item.admin)}</span>
             <span class="imperial-tomb-card-tags">${item.preqinClassification ? `<span class="tomb-dynasty-tag" style="--tomb-dynasty-color:${ImperialTombs.dynastyTheme(item).color}">${escapeHtml(item.preqinClassification.country)}</span>` : ""}<span>${item.locationReference ? (en ? "Cemetery reference · estimated" : "陵区参考定位（估）") : item.coordinates?.status === "estimated_wgs84" ? (en ? "Estimated location" : "估计位置") : item.mapEligible ? (en ? "Regional location" : "区域代表定位") : (en ? "Location pending" : "位置待核")}</span></span>
           </button>`;
         }).join("")}</div></section>`).join("");
@@ -17439,7 +17439,7 @@ if ("serviceWorker" in navigator && location.protocol !== "file:") {
     });
   });
   window.addEventListener("load", () => {
-navigator.serviceWorker.register("./sw.js?v=850", { updateViaCache: "none" })
+navigator.serviceWorker.register("./sw.js?v=858", { updateViaCache: "none" })
       .then((registration) => registration.update())
       .catch((error) => console.warn("Service Worker registration failed", error));
   });

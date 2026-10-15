@@ -7853,3 +7853,7 @@ button:hover {
 #mapOverlayLegends .capital-wall-notes > small {display:block;margin-top:4px;}
 
 #mapOverlayLegends .capital-wall-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:3px 6px}#mapOverlayLegends .capital-wall-notes{grid-column:1/-1}#mapOverlayLegends .capital-wall-controls label{min-height:var(--legend-row-height);gap:3px}
+
+/* Long foreign-period labels need room in the narrow map detail drawer. */
+.map-drawer .foreign-capital-record { grid-template-columns:minmax(0,1fr); }
+.map-drawer .foreign-capital-record b { flex:0 0 38%; overflow-wrap:anywhere; }

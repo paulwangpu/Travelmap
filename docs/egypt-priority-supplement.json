@@ -1,0 +1,473 @@
+{
+  "date": "2026-10-15",
+  "baseline": {
+    "tombs": 479,
+    "tombSources": 851,
+    "capitalRoots": 394,
+    "capitalRecords": 621,
+    "sites": 287,
+    "features": 2561
+  },
+  "preservation": {
+    "tombs": "8c728c087221a3f20fbd36c500978bfdd39365911543c514e7bf92fec5063e51",
+    "tombSources": "ebeaba39335434df6928710c19f6844b1d5070718ef40a963223474091fe4d5f",
+    "capitalRoots": "d22560258de460763a600800b17565a70b8a5c3f9199b756e1c080a552168fef",
+    "capitalRecords": "688fc995184df3f39ff7ea2938f6afc2a4f0c7e363b6d0821219d1b6dd86a555",
+    "sites": "9f263bc6a212d09a4cc007a9d5c52a24d05ecee52d94ec5491f6928e21524597",
+    "features": "7582e3ca20bd039363e7d1ee4e7ddaa0e4acca26576be4d0a641be956604612e"
+  },
+  "rows": [
+    {
+      "id": "eg-kv22",
+      "geometrySha256": "ede24262dde01c96ee2d0b23845bbea0f1dd1863764289ae345b02655ed97abb",
+      "originalTags": {
+        "building": "yes",
+        "historic": "tomb",
+        "name": "VW22",
+        "wikidata": "Q2480865",
+        "wikimedia_commons": "Category:WV22",
+        "wikipedia": "ar:مقبرة 22"
+      },
+      "excludedNode": null
+    },
+    {
+      "id": "eg-kv18",
+      "geometrySha256": "15b552e37a979039374ab714eae50da7e8f3c8967d59cd12163eafd3c025c7e8",
+      "originalTags": {
+        "building": "yes",
+        "historic": "tomb",
+        "name": "KV18",
+        "wikidata": "Q1719122",
+        "wikimedia_commons": "Category:KV18",
+        "wikipedia": "ar:مقبرة 18"
+      },
+      "excludedNode": null
+    },
+    {
+      "id": "eg-kv4",
+      "geometrySha256": "718f2c03b18b831fd0412706f0cc660a393c718c96c4225dd58bb4c1aca2ac57",
+      "originalTags": {
+        "building": "yes",
+        "historic": "tomb",
+        "name": "KV-4",
+        "wikidata": "Q591894",
+        "wikimedia_commons": "Category:KV4",
+        "wikipedia": "ar:مقبرة 4"
+      },
+      "excludedNode": "1047984082"
+    },
+    {
+      "id": "eg-amarna-ta26",
+      "geometrySha256": "821b2379e539205f9f64214a6d2d32950a0d3f835f8bfa14ce2f3a1579bdb596",
+      "originalTags": {
+        "archaeological_site": "necropolis",
+        "heritage": "1",
+        "historic": "archaeological_site",
+        "name": "Royal Tomb of Eknathon",
+        "name:hu": "Ehnaton fáraó sírja",
+        "tomb": "rock-cut",
+        "tourism": "attraction",
+        "wikipedia": "en:Amarna"
+      },
+      "excludedNode": null
+    }
+  ],
+  "georeferences": {
+    "targets": {
+      "narmer": {
+        "lng": 31.9080752,
+        "lat": 26.17570771,
+        "pixel": [
+          569,
+          366
+        ],
+        "method": "affine_fit_official_archaeological_plan",
+        "sourceImage": "umm-full-plan.png"
+      },
+      "aha": {
+        "lng": 31.90822648,
+        "lat": 26.17564666,
+        "pixel": [
+          585,
+          395
+        ],
+        "method": "affine_fit_official_archaeological_plan",
+        "sourceImage": "umm-full-plan.png"
+      },
+      "senebkay": {
+        "lng": 31.92438285,
+        "lat": 26.17141998,
+        "method": "relative_reference_from_S10_and_published_scale_true_north",
+        "anchor": [
+          31.9242167,
+          26.17128972
+        ],
+        "offsetMetres": [
+          16.6,
+          14.5
+        ]
+      },
+      "tt358": {
+        "lng": 32.60733333,
+        "lat": 25.7385,
+        "method": "northern_portico_region_reference_from_original_plan_and_geographic_imagery",
+        "pixel": [
+          700,
+          300
+        ],
+        "bbox": [
+          32.605,
+          25.7365,
+          32.609,
+          25.7395
+        ],
+        "size": [
+          1200,
+          900
+        ]
+      }
+    },
+    "controlPoints": [
+      {
+        "id": "eg-peribsen",
+        "pixel": [
+          391,
+          298
+        ],
+        "coordinates": [
+          31.90727485,
+          26.17547258
+        ]
+      },
+      {
+        "id": "eg-djer",
+        "pixel": [
+          471,
+          426
+        ],
+        "coordinates": [
+          31.9079027,
+          26.1752649
+        ]
+      },
+      {
+        "id": "eg-djet",
+        "pixel": [
+          360,
+          456
+        ],
+        "coordinates": [
+          31.9076058,
+          26.1748076
+        ]
+      },
+      {
+        "id": "eg-den",
+        "pixel": [
+          320,
+          554
+        ],
+        "coordinates": [
+          31.90780972,
+          26.17439725
+        ]
+      },
+      {
+        "id": "eg-merneith",
+        "pixel": [
+          290,
+          454
+        ],
+        "coordinates": [
+          31.90736187,
+          26.17462972
+        ]
+      },
+      {
+        "id": "eg-adjib",
+        "pixel": [
+          300,
+          385
+        ],
+        "coordinates": [
+          31.9071242,
+          26.1750269
+        ]
+      },
+      {
+        "id": "eg-semerkhet",
+        "pixel": [
+          325,
+          640
+        ],
+        "coordinates": [
+          31.90807165,
+          26.174134
+        ]
+      },
+      {
+        "id": "eg-qaa",
+        "pixel": [
+          271,
+          652
+        ],
+        "coordinates": [
+          31.9079757,
+          26.17393635
+        ]
+      }
+    ],
+    "fitResidualsMetres": [
+      5.93,
+      2.86,
+      5.28,
+      1.63,
+      5.62,
+      10.09,
+      3.01,
+      3.7
+    ],
+    "warning": "Residuals describe fit to regional source points, not measured tomb accuracy. No full tomb boundaries derived."
+  },
+  "mosqueGeometrySha256": "a2c6ce9065cbee2167b5dfe45aeff9c64a7b12f0e72c7221cc7979739dd296c1",
+  "addedTombIds": [
+    "eg-narmer",
+    "eg-aha",
+    "eg-kv22",
+    "eg-kv18",
+    "eg-kv4",
+    "eg-amarna-ta26",
+    "eg-senebkay",
+    "eg-meritamun-tt358"
+  ],
+  "addedCapitalKeys": [
+    "qata-i"
+  ],
+  "counts": {
+    "tombs": 487,
+    "mappedTombs": 364,
+    "egyptianTombs": 84,
+    "capitalRoots": 395,
+    "capitalRecords": 622,
+    "sites": 288,
+    "features": 2562
+  },
+  "tombs": [
+    {
+      "id": "eg-narmer",
+      "name": "纳尔迈王陵（B17／B18）",
+      "en": "Tomb attributed to Narmer (B17/B18)",
+      "people": [
+        "纳尔迈（归属有讨论）"
+      ],
+      "enPeople": [
+        "Narmer (attribution discussed)"
+      ],
+      "parent": "eg-group-abydos",
+      "dynasty": "早王朝第一王朝初期",
+      "enDynasty": "Beginning of Dynasty 1",
+      "period": "传说",
+      "years": "约前3150—前3050年；采用宽泛分期",
+      "enYears": "Approximately 3150–3050 BCE; broad chronology",
+      "year": -3100,
+      "point": "narmer",
+      "sources": [
+        "egypt-priority-early",
+        "egypt-priority-umm-plan"
+      ],
+      "note": "B17与B18按同一王陵组合收录；纳尔迈归属依据早期王陵目录与墓区图，保留归属及绝对年代讨论，不拆成两个重复打卡点。",
+      "enNote": "B17 and B18 form one cataloged royal-tomb complex. The attribution to Narmer and absolute chronology retain their scholarly uncertainty; the chambers are not duplicate check-ins."
+    },
+    {
+      "id": "eg-aha",
+      "name": "阿哈王陵（B10／B15／B19）",
+      "en": "Tomb of Aha (B10/B15/B19)",
+      "people": [
+        "荷尔－阿哈"
+      ],
+      "enPeople": [
+        "Hor-Aha"
+      ],
+      "parent": "eg-group-abydos",
+      "dynasty": "早王朝第一王朝",
+      "enDynasty": "Early Dynastic Period, Dynasty 1",
+      "period": "传说",
+      "years": "约前3100—前3000年；采用宽泛分期",
+      "enYears": "Approximately 3100–3000 BCE; broad chronology",
+      "year": -3050,
+      "point": "aha",
+      "sources": [
+        "egypt-priority-early",
+        "egypt-priority-umm-plan"
+      ],
+      "note": "B10、B15、B19作为阿哈王陵组合共用一条实体记录；点为墓区图配准参照，不表示三座墓室的精确中心或完整围界。",
+      "enNote": "B10, B15 and B19 share one physical-complex record. The interpreted map point is not a surveyed chamber center or complete enclosure."
+    },
+    {
+      "id": "eg-kv22",
+      "name": "阿蒙霍特普三世陵（KV22／WV22）",
+      "en": "Tomb of Amenhotep III (KV22/WV22)",
+      "people": [
+        "阿蒙霍特普三世"
+      ],
+      "enPeople": [
+        "Amenhotep III"
+      ],
+      "parent": "eg-group-kings",
+      "dynasty": "新王国第十八王朝",
+      "enDynasty": "New Kingdom, Dynasty 18",
+      "period": "夏商",
+      "years": "约前14世纪；营建与安葬阶段",
+      "enYears": "Approximately 14th century BCE; construction and burial phase",
+      "year": -1390,
+      "way": "823896503",
+      "sources": [
+        "egypt-priority-plan-eg-kv22"
+      ],
+      "note": "位于帝王谷西谷，KV22与WV22是同一墓。原始OSM建筑名VW22疑为字母倒置，按墓谷与考古墓号核对后规范显示；建筑标绘参照不等于墓室入口。",
+      "enNote": "KV22 and WV22 denote the same tomb in the Western Valley. The original mapped name VW22 appears transposed; the display follows the archaeological tomb number. The building reference is not a surveyed entrance."
+    },
+    {
+      "id": "eg-kv18",
+      "name": "拉美西斯十世营建墓（KV18）",
+      "en": "Tomb prepared for Ramesses X (KV18)",
+      "people": [
+        "拉美西斯十世（营建，未安葬）"
+      ],
+      "enPeople": [
+        "Ramesses X (commission; not buried here)"
+      ],
+      "parent": "eg-group-kings",
+      "dynasty": "新王国第二十王朝",
+      "enDynasty": "New Kingdom, Dynasty 20",
+      "period": "夏商",
+      "years": "约前12世纪末—前11世纪初；未完工营建阶段",
+      "enYears": "Late 12th–early 11th century BCE; unfinished construction",
+      "year": -1100,
+      "way": "813714511",
+      "nature": "unknown",
+      "sources": [
+        "egypt-priority-kv18-use",
+        "egypt-priority-plan-eg-kv18"
+      ],
+      "note": "未完工且没有用于王室安葬；作为有据王陵营建遗迹接入，不标为实际安葬。后世设施及利用不改变其原营建性质。",
+      "enNote": "Unfinished and never used for a royal burial. Included as an attested royal-tomb construction, not an actual burial; later installations do not establish royal interment."
+    },
+    {
+      "id": "eg-kv4",
+      "name": "拉美西斯十一世营建墓（KV4）",
+      "en": "Tomb prepared for Ramesses XI (KV4)",
+      "people": [
+        "拉美西斯十一世（营建，未安葬）"
+      ],
+      "enPeople": [
+        "Ramesses XI (commission; not buried here)"
+      ],
+      "parent": "eg-group-kings",
+      "dynasty": "新王国第二十王朝",
+      "enDynasty": "New Kingdom, Dynasty 20",
+      "period": "夏商",
+      "years": "约前12世纪末—前11世纪；未完工，后世复用",
+      "enYears": "Late 12th–11th century BCE; unfinished with later reuse",
+      "year": -1090,
+      "way": "813717252",
+      "nature": "unknown",
+      "sources": [
+        "egypt-priority-kv4-use",
+        "egypt-priority-plan-eg-kv4"
+      ],
+      "note": "拉美西斯十一世未安葬于此。保留未完工及后续作业、复用性质，不因传统墓名认定存在其实际安葬。排除偏离原始墓体约80米的同名OSM点，采用原始墓体面参照。",
+      "enNote": "Ramesses XI was not buried here. The unfinished tomb and subsequent work/reuse are distinguished from actual royal burial. A displaced same-name OSM node is excluded in favor of the mapped tomb structure."
+    },
+    {
+      "id": "eg-amarna-ta26",
+      "name": "阿肯那顿王室墓（TA26）",
+      "en": "Royal Tomb of Akhenaten (TA26)",
+      "people": [
+        "阿肯那顿",
+        "梅凯塔顿公主"
+      ],
+      "enPeople": [
+        "Akhenaten",
+        "Princess Meketaten"
+      ],
+      "parent": null,
+      "dynasty": "新王国第十八王朝阿玛尔纳时期",
+      "enDynasty": "New Kingdom, Dynasty 18, Amarna Period",
+      "period": "夏商",
+      "years": "约前14世纪中后期；阿玛尔纳时期",
+      "enYears": "Mid-to-late 14th century BCE; Amarna Period",
+      "year": -1350,
+      "way": "556558418",
+      "sources": [
+        "egypt-priority-ta26"
+      ],
+      "note": "位于阿玛尔纳东部王家谷，不属于卢克索帝王谷。考古队根据石棺及随葬残件讨论阿肯那顿在此安葬，梅凯塔顿墓室有据；未将提伊、娜芙蒂蒂拟用空间写成确定安葬。与阿玛尔纳古都独立打卡。",
+      "enNote": "In the Royal Wadi east of Amarna, not the Valley of the Kings at Luxor. Sarcophagus and funerary remains support Akhenaten’s burial; Meketaten is attested. Spaces possibly planned for Tiye or Nefertiti are not treated as confirmed burials. Independent from the Amarna capital check-in."
+    },
+    {
+      "id": "eg-senebkay",
+      "name": "塞内布凯王陵（CS9）",
+      "en": "Tomb of Senebkay (CS9)",
+      "people": [
+        "塞内布凯"
+      ],
+      "enPeople": [
+        "Senebkay"
+      ],
+      "parent": null,
+      "dynasty": "第二中间期阿拜多斯地方王朝",
+      "enDynasty": "Second Intermediate Period, local Abydos dynasty",
+      "period": "夏商",
+      "years": "约前1650—前1600年；地方王朝宽泛分期",
+      "enYears": "Approximately 1650–1600 BCE; broad local-dynasty chronology",
+      "year": -1650,
+      "point": "senebkay",
+      "sources": [
+        "egypt-priority-senebkay",
+        "egypt-priority-senebkay-project"
+      ],
+      "note": "南阿拜多斯CS9墓，铭文及遗骸支持墓主认定。不同于乌姆卡伯早王朝陵群，也不是邻近S10墓；依据发掘图比例尺、真北及S10地理参照估计选点，未接入未经核准的墓室边界。",
+      "enNote": "CS9 in South Abydos, identified by inscriptions and human remains. Distinct from Early Dynastic Umm el-Qaab and neighboring S10. Position is interpreted from the excavation plan, true north, scale and S10 geographic reference; no surveyed tomb boundary is asserted."
+    },
+    {
+      "id": "eg-meritamun-tt358",
+      "name": "梅丽特阿蒙王后陵（TT358）",
+      "en": "Tomb of Queen Ahmose-Meritamun (TT358)",
+      "people": [
+        "阿赫摩斯－梅丽特阿蒙王后"
+      ],
+      "enPeople": [
+        "Queen Ahmose-Meritamun"
+      ],
+      "parent": null,
+      "dynasty": "新王国第十八王朝初期",
+      "enDynasty": "Early New Kingdom, Dynasty 18",
+      "period": "夏商",
+      "years": "约前16世纪；第十八王朝初期",
+      "enYears": "Approximately 16th century BCE; early Dynasty 18",
+      "year": -1550,
+      "point": "tt358",
+      "sources": [
+        "egypt-priority-tt358",
+        "egypt-priority-tt358-plan"
+      ],
+      "note": "位于代尔巴哈里哈特谢普苏特神庙北柱廊外侧山谷，不属于王后谷。墓主为第十八王朝阿赫摩斯－梅丽特阿蒙，不与拉美西斯二世同名女儿混淆。点仅按1932年原始发掘图与地理影像对照定位北柱廊外侧区域，具体入口及墓室中心待核。",
+      "enNote": "Outside the northern portico of Hatshepsut’s temple at Deir el-Bahri, not the Valley of the Queens. The early Dynasty 18 queen is distinct from Ramesses II’s similarly named daughter. This regional reference follows the 1932 excavation plan and geographic imagery; the exact entrance and chamber center remain unverified."
+    }
+  ],
+  "capital": {
+    "name": "卡塔伊",
+    "enName": "al-Qata’i",
+    "identity": "图伦王朝都城",
+    "years": "9世纪后期—905年（王朝868—905年；建城时间另计）",
+    "note": "图伦王朝都城，与福斯塔特、阿斯卡尔及969年建立的法蒂玛开罗分址。图伦王朝868—905年；本记录为9世纪后期至905年的都城阶段，不把王朝起年直接当作建城年。根点以伊本·图伦清真寺所在历史核心作区域参照；不是已确认王宫位置。现仅接入清真寺建筑外缘及庭院孔洞，不代表全城、宫城或城墙；完整分期城界和宫殿遗存范围待核。",
+    "enNote": "Tulunid capital, distinct from Fustat, al-Askar and Fatimid Cairo founded in 969. The dynasty lasted 868–905; this record covers the late ninth-century capital phase to 905 without equating dynastic accession with city foundation. The root references the historic mosque core, not a verified royal palace. The mosque footprint and courtyard hole are preserved; they are not city, palace or wall boundaries. Complete dated city and palace limits remain unverified.",
+    "sources": [
+      "https://egymonuments.gov.eg/collections/historical-cairo/",
+      "https://egymonuments.gov.eg/monuments/ahmad-ibn-tulun-mosque/"
+    ],
+    "completeCityBoundary": false,
+    "completePalaceBoundary": false
+  }
+}

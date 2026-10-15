@@ -1,0 +1,386 @@
+{
+  "scope": "印度河文明六处古城；政治身份未确定，不新增古都记录",
+  "addedSites": 5,
+  "enhancedSites": 6,
+  "addedFeatures": 19,
+  "addedCapitalRoots": 0,
+  "addedCapitalRecords": 0,
+  "counts": {
+    "sites": 276,
+    "features": 2554
+  },
+  "baselineCounts": {
+    "sites": 271,
+    "features": 2535
+  },
+  "preservation": {
+    "geometrySha256": "818327416fa87a481f33f26fe9f3426ec0e1b16b0a8a13787506aa5c76b12c66",
+    "catalogSitesSha256": "ae75b1b8bfa497f3cc6c1fdc36d7d11e0f3fb80eeab1231bc897743f193cbaf3",
+    "capitalCatalogSha256": "58eca4b2bab8804a4e58c33aa344ce83e3ff1217021a94dcf399173a0b9f74f2",
+    "worldHeritageSha256": "70697e07f2b5497e81d95765927f28bcda602bfaad4029f20017ac142b174cae"
+  },
+  "sources": {
+    "georeferences": [
+      {
+        "key": "dholavira-layout",
+        "page": 19,
+        "controls": [
+          {
+            "pixel": [
+              562,
+              385
+            ],
+            "coordinate": [
+              70.212527,
+              23.8875058
+            ]
+          },
+          {
+            "pixel": [
+              627,
+              385
+            ],
+            "coordinate": [
+              70.2139887,
+              23.8876179
+            ]
+          },
+          {
+            "pixel": [
+              627,
+              442
+            ],
+            "coordinate": [
+              70.2140807,
+              23.8866147
+            ]
+          },
+          {
+            "pixel": [
+              562,
+              442
+            ],
+            "coordinate": [
+              70.212619,
+              23.8865026
+            ]
+          },
+          {
+            "pixel": [
+              478,
+              236
+            ],
+            "coordinate": [
+              70.210704,
+              23.8900351
+            ]
+          },
+          {
+            "pixel": [
+              654,
+              236
+            ],
+            "coordinate": [
+              70.2141111,
+              23.8903265
+            ]
+          },
+          {
+            "pixel": [
+              425,
+              188
+            ],
+            "coordinate": [
+              70.2094093,
+              23.8909044
+            ]
+          },
+          {
+            "pixel": [
+              811,
+              184
+            ],
+            "coordinate": [
+              70.2170469,
+              23.8916696
+            ]
+          },
+          {
+            "pixel": [
+              428,
+              490
+            ],
+            "coordinate": [
+              70.209931,
+              23.8852528
+            ]
+          }
+        ],
+        "affine": [
+          [
+            0.000020034424079490794,
+            0.000001925956815959996
+          ],
+          [
+            0.0000019129859706397063,
+            -0.000018323203772544032
+          ],
+          [
+            70.2005603986359,
+            23.893468248033713
+          ]
+        ],
+        "fittingResidualMeters": [
+          3.1399534810805894,
+          13.157707021563732,
+          12.174110919831765,
+          7.326314329353033,
+          12.133438301168534,
+          8.558695607471385,
+          7.3833711649903915,
+          11.517384881625174,
+          15.83238399441979
+        ],
+        "warning": "拟合残差仅反映选定控制点的一致性，不代表边界精度；原图、OSM参照与人工描绘均有不确定性。"
+      },
+      {
+        "key": "lothal-layout",
+        "page": 16,
+        "controls": [
+          {
+            "pixel": [
+              743,
+              205
+            ],
+            "coordinate": [
+              72.249681,
+              22.5238297
+            ]
+          },
+          {
+            "pixel": [
+              807,
+              216
+            ],
+            "coordinate": [
+              72.2500444,
+              22.5237598
+            ]
+          },
+          {
+            "pixel": [
+              772,
+              505
+            ],
+            "coordinate": [
+              72.2501983,
+              22.5218222
+            ]
+          },
+          {
+            "pixel": [
+              712,
+              496
+            ],
+            "coordinate": [
+              72.2497826,
+              22.5218657
+            ]
+          }
+        ],
+        "affine": [
+          [
+            0.000006079190723034942,
+            1.6378748632161502e-7
+          ],
+          [
+            0.000001131975255380827,
+            -0.0000067083126044775286
+          ],
+          [
+            72.24491309163332,
+            22.525079922322515
+          ]
+        ],
+        "fittingResidualMeters": [
+          1.954852412870684,
+          1.9641533740268946,
+          2.0999023912540093,
+          2.0906014440512157
+        ],
+        "warning": "拟合残差仅反映选定控制点的一致性，不代表边界精度；原图、OSM参照与人工描绘均有不确定性。"
+      }
+    ],
+    "officialDholaviraPlan": "https://whc.unesco.org/en/documents/189006/"
+  },
+  "rows": [
+    {
+      "key": "dholavira",
+      "name": "多拉维拉",
+      "identity": "哈拉帕文明城市与区域中心，都城身份未定",
+      "years": "约前3000—前1500年，多阶段发展",
+      "status": "原始外城开放墙线、内堡与蓄水遗迹已接入；中城及堡区有图示参考面；完整外城闭合墙界待核",
+      "note": "内堡Castle、堡区Bailey、中城与外城分别表达；不能将内堡直接称为王宫。外城东南侧图示涉及现代堤坝，故保留开放墙线，不补绘完整外城闭合面。图示配准范围非实测墙界。",
+      "source": "https://whc.unesco.org/en/list/1645/",
+      "addedFeatures": [
+        {
+          "id": "dholavira-way-1202220945",
+          "scope": "mapped_citadel_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "dholavira-way-1202220944",
+          "scope": "reservoir_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "dholavira-way-1202220947",
+          "scope": "open_wall_segments",
+          "type": "LineString"
+        },
+        {
+          "id": "dholavira-way-1202220946",
+          "scope": "open_wall_segments",
+          "type": "LineString"
+        },
+        {
+          "id": "dholavira-way-1202220941",
+          "scope": "open_wall_segments",
+          "type": "LineString"
+        },
+        {
+          "id": "dholavira-plan-middle",
+          "scope": "georeferenced_plan_reference",
+          "type": "Polygon"
+        },
+        {
+          "id": "dholavira-plan-bailey",
+          "scope": "georeferenced_plan_reference",
+          "type": "Polygon"
+        },
+        {
+          "id": "dholavira-plan-ceremonial",
+          "scope": "georeferenced_plan_reference",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "harappa",
+      "name": "哈拉帕",
+      "identity": "哈拉帕文明大型城市，都城身份未定",
+      "years": "约前3300—前1300年；成熟期约前2600—前1900年",
+      "status": "已接入遗址总标绘与F丘建筑等分区；古代墙线及现代复原门墙的可靠定位待核",
+      "note": "多处遗址丘各自有围墙，并非一个已确认的环城墙系统。南侧现代复原城墙和门须与原始遗迹区别；F丘大型建筑旧称粮仓，功能存在争议。当前未接入未经可靠定位的城墙线。",
+      "source": "https://whc.unesco.org/en/tentativelists/1878/",
+      "addedFeatures": [
+        {
+          "id": "harappa-way-542132577",
+          "scope": "mapped_archaeological_extent",
+          "type": "Polygon"
+        },
+        {
+          "id": "harappa-way-1293089152",
+          "scope": "excavated_building_extent",
+          "type": "Polygon"
+        },
+        {
+          "id": "harappa-way-1293089158",
+          "scope": "excavated_remains_extent",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "lothal",
+      "name": "洛塔尔",
+      "identity": "哈拉帕文明港口与工商业城市，都城身份未定",
+      "years": "约前2400—前1600年",
+      "status": "已接入闭合池体和布局／上城台地图示参考；防洪城墙的准确矢量待核",
+      "note": "防洪外墙、上城台地和大型池体不可混同。上城由抬高台地界定，并非另有围墙的皇城；池体通常解释为船坞。布局图的Site Boundary只作图示参考，不冒充已经核定的防洪墙线。无名OSM墙段未确认性质，暂不接入。",
+      "source": "https://whc.unesco.org/en/tentativelists/5918/",
+      "addedFeatures": [
+        {
+          "id": "lothal-way-1505135469",
+          "scope": "mapped_basin_remains",
+          "type": "Polygon"
+        },
+        {
+          "id": "lothal-plan-layout",
+          "scope": "georeferenced_plan_reference",
+          "type": "Polygon"
+        },
+        {
+          "id": "lothal-plan-upper",
+          "scope": "georeferenced_plan_reference",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "rakhigarhi",
+      "name": "拉基加里",
+      "identity": "哈拉帕文明大型聚落，都城身份未定",
+      "years": "早期及成熟哈拉帕阶段；成熟期约前2600—前1900年",
+      "status": "已接入三个独立遗址丘；完整聚落、分期城墙及其他遗址丘待核",
+      "note": "现接入RGR-1、RGR-2、RGR-3三个已有原始几何的遗址丘，不等于聚落全部范围。考古报告记录城防调查，但可靠完整墙线尚未取得，不能连接遗址丘来推测围城。",
+      "source": "https://ignca.gov.in/Asi_data/85200.pdf",
+      "addedFeatures": [
+        {
+          "id": "rakhigarhi-way-1264574372",
+          "scope": "mapped_archaeological_mound",
+          "type": "Polygon"
+        },
+        {
+          "id": "rakhigarhi-way-1264576403",
+          "scope": "mapped_archaeological_mound",
+          "type": "Polygon"
+        },
+        {
+          "id": "rakhigarhi-way-1264577307",
+          "scope": "mapped_archaeological_mound",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "kalibangan",
+      "name": "卡利班甘",
+      "identity": "哈拉帕文明有城防城市，都城身份未定",
+      "years": "早期及成熟哈拉帕阶段；分期城墙不可混用",
+      "status": "已接入遗址总标绘；上城、下城分期墙线与祭祀区可靠定位待核",
+      "note": "考古报告区分西侧上城KLB-1、东侧下城KLB-2及其他遗迹。现有OSM总范围并非各阶段城墙；未将保护区边界当成全城，也未用任意四边形补围上城。",
+      "source": "https://asi.nic.in/admin/publications/ePublicationReportsDetails/download/60",
+      "addedFeatures": [
+        {
+          "id": "kalibangan-way-194062675",
+          "scope": "mapped_archaeological_extent",
+          "type": "Polygon"
+        }
+      ]
+    },
+    {
+      "key": "mohenjo-daro",
+      "name": "摩亨佐达罗",
+      "identity": "印度河文明城市，都城身份未定",
+      "status": "保留原有遗址面，新增大浴池原始参照点；上城与完整外城墙界仍待核",
+      "source": "https://www.harappa.com/content/ancient-indus-valley-metropolis-2",
+      "addedFeatures": [
+        {
+          "id": "mohenjo-daro-node-5759938121",
+          "scope": "mapped_monument_point",
+          "type": "Point"
+        }
+      ]
+    }
+  ],
+  "excluded": [
+    "多拉维拉东南侧现代堤坝，不用作古城外墙",
+    "多拉维拉OSM遗址总范围不是外城墙，且与现有细节重复，本轮不接入地图",
+    "洛塔尔无名称且无古代身份的OSM墙段，不归作城防",
+    "洛塔尔布局图Site Boundary不改称已核实防洪墙线",
+    "哈拉帕现代复原门墙不当作原始古城墙",
+    "卡利班甘与拉基加里的现代遗址范围／遗址丘不改称城郭",
+    "摩亨佐达罗不依据遗址总范围反推完整外墙，不以大浴池认定王宫"
+  ]
+}

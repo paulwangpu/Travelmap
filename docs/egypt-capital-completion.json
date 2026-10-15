@@ -1,0 +1,530 @@
+{
+  "reviewedAt": "2026-10-15",
+  "addedCapitalRoots": 10,
+  "addedCapitalRecords": 12,
+  "addedSites": 11,
+  "addedFeatures": 7,
+  "baseline": {
+    "capitalRoots": 384,
+    "capitalRecords": 609,
+    "sites": 276,
+    "features": 2554
+  },
+  "counts": {
+    "capitalRoots": 394,
+    "capitalRecords": 621,
+    "sites": 287,
+    "features": 2561
+  },
+  "preservation": {
+    "capitalRoots": "519bc778a4569a40ba70d479380a444b58719a3770e3b290b365b5284eebea15",
+    "capitalRecords": "fb1caabe19b7c0df4f9be60967ba1157e73866dc8cf3f521c4244204baf9d54a",
+    "sites": "eb94efe00795dd4be85e183de4803a096dc0607132e754d923eae96143d67da2",
+    "geometry": "8c6ef25040a2d3f687f4a9259a7742bb76053025ac60e6097b8c00fdcf6e0e7b"
+  },
+  "rows": [
+    {
+      "key": "thinis",
+      "name": "提尼斯（位置待考）",
+      "enName": "Thinis (location uncertain)",
+      "identity": "传统早期王权中心／王都（地位与城址待考）",
+      "enIdentity": "Traditional early royal center / capital; status and site debated",
+      "records": [
+        {
+          "regime": "古埃及前王朝至早王朝提尼斯传统",
+          "years": "约前4千纪末—前3千纪初；传统关联时期，非已核实连续都城期",
+          "periods": [
+            "传说"
+          ]
+        }
+      ],
+      "center": [
+        31.8911758,
+        26.337437
+      ],
+      "source": "https://abidus.journals.ekb.eg/article_343563_604f9b57d4613a82f1aa2776d9b00ff1.pdf",
+      "note": "与塔尼斯Tanis完全不同。文献中的提尼斯／Tjenu为早王朝王族故地及上埃及第八诺姆中心；全国都城身份与孟菲斯、阿拜多斯的关系仍有争议。城址尚未发现，本点仅用吉尔贾地区地名索引提示大致区域，不能解释为已发现城址、候选遗迹、王宫或城墙；中国对应时代为史前，沿用全局“传说”分组。",
+      "classification": "capital",
+      "tentative": true,
+      "regional": true,
+      "coordinateSource": "https://www.openstreetmap.org/node/299573543",
+      "additionalSources": [
+        "https://www.britishmuseum.org/collection/term/x51761"
+      ],
+      "aliases": [
+        "Thinis",
+        "This",
+        "Tjenu",
+        "Tjeni",
+        "提尼斯",
+        "提斯",
+        "蒂尼斯"
+      ],
+      "enNote": "Distinct from Tanis. Textually attested early royal homeland and nome center; its national-capital status and relation to Memphis and Abydos are debated. The city has not been located. The Girga place index is only a regional locator, not an excavated site, candidate monument, palace or wall.",
+      "coordinateStatus": "地域提示，非已定位古城",
+      "boundaryStatus": "完整分期城界与宫城尚待核；现状遗址区不替代城界",
+      "featureIds": []
+    },
+    {
+      "key": "itjtawy",
+      "name": "伊奇塔维（位置待考）",
+      "enName": "Itjtawy (location uncertain)",
+      "identity": "古埃及中王国都城（城址待考）",
+      "enIdentity": "Middle Kingdom capital of Egypt; location unconfirmed",
+      "records": [
+        {
+          "regime": "古埃及第十二至第十三王朝",
+          "years": "约前20—前17世纪；迁都和弃都年代存在不同体系",
+          "periods": [
+            "夏商"
+          ]
+        }
+      ],
+      "center": [
+        31.230728303550293,
+        29.58880037278107
+      ],
+      "source": "https://egymonuments.gov.eg/historical-periods/middle-kingdom/",
+      "note": "阿蒙涅姆赫特一世建立的王都，通常认为在利什特附近；具体城址未确认。本点为现代利什特地域索引，不是王宫、金字塔或已经发掘的城市中心；不将附近王陵当作都城城界。",
+      "classification": "capital",
+      "tentative": true,
+      "regional": true,
+      "coordinateSource": "https://www.openstreetmap.org/way/325880019",
+      "aliases": [
+        "伊奇塔维",
+        "伊特塔维",
+        "伊特杰塔维",
+        "Itjtawy",
+        "Itj-Tawy",
+        "Itj-tawi"
+      ],
+      "enNote": "Royal capital founded by Amenemhat I, generally placed near Lisht but not securely located. This is a regional Lisht locator, not an excavated city, pyramid or palace. Nearby royal cemeteries do not define its city limits.",
+      "coordinateStatus": "地域提示，非已定位古城",
+      "boundaryStatus": "完整分期城界与宫城尚待核；现状遗址区不替代城界",
+      "featureIds": []
+    },
+    {
+      "key": "nekhen",
+      "name": "涅肯／希拉孔波利斯",
+      "enName": "Nekhen / Hierakonpolis",
+      "identity": "前王朝上埃及地方王国中心",
+      "enIdentity": "Capital of an early Upper Egyptian kingdom",
+      "records": [
+        {
+          "regime": "古埃及前王朝涅肯王权",
+          "years": "约前3600—前3100年间的早期王权中心；非统一埃及连续都城",
+          "periods": [
+            "传说"
+          ]
+        }
+      ],
+      "center": [
+        32.77944,
+        25.09722
+      ],
+      "source": "https://www.hierakonpolis-online.org/index.php/take-a-tour",
+      "note": "考古队确认其为前王朝大型城市和早期地方王国中心；不能把所有前王朝埃及统一视为已建立的单一国家。所谓“堡垒”为卡塞凯姆威仪式围区，不能直接解释为军事城堡或全城外墙。中国对应史前，使用现有“传说”组。",
+      "classification": "capital",
+      "coordinateSource": "https://www.ucl.ac.uk/museums-static/digitalegypt/hierakonpolis/index.html",
+      "aliases": [
+        "涅肯",
+        "尼肯",
+        "希拉孔波利斯",
+        "赫拉孔波利斯",
+        "Nekhen",
+        "Hierakonpolis"
+      ],
+      "additionalSources": [
+        "https://www.hierakonpolis-online.org/index.php/explore-the-fort"
+      ],
+      "enNote": "The expedition identifies a Predynastic city and an early regional kingdom. This does not imply a unified Egyptian state throughout the period. The so-called Fort is a royal ceremonial enclosure, not an established military fort or complete city circuit.",
+      "coordinateStatus": "历史城址所在区域参照",
+      "boundaryStatus": "完整分期城界与宫城尚待核；现状遗址区不替代城界",
+      "featureIds": [
+        "egypt-supp-nekhen-way-1323416897"
+      ]
+    },
+    {
+      "key": "herakleopolis",
+      "name": "赫拉克利奥波利斯",
+      "enName": "Herakleopolis Magna",
+      "identity": "古埃及第九、十王朝都城",
+      "enIdentity": "Capital of Egypt during Dynasties 9–10",
+      "records": [
+        {
+          "regime": "古埃及第九至第十王朝",
+          "years": "约前22—前21世纪；绝对年代和王朝分期存在差异",
+          "periods": [
+            "传说",
+            "夏商"
+          ]
+        }
+      ],
+      "center": [
+        30.9345621,
+        29.0855154
+      ],
+      "source": "https://egymonuments.gov.eg/historical-periods/first-intermediate-period/",
+      "note": "第一中间期北方王朝中心，与底比斯政权并立；不将后世诺姆首府身份等同全国都城。两处现代考古标绘区均不代表完整城界或已核定王宫。",
+      "classification": "capital",
+      "coordinateSource": "https://www.openstreetmap.org/node/5017183546",
+      "additionalSources": [
+        "https://www.man.es/man/estudio/proyectos-investigacion/egipto/heracleopolis.html"
+      ],
+      "aliases": [
+        "Herakleopolis",
+        "Heracleopolis Magna",
+        "Henen-nesut",
+        "Ehnasya",
+        "赫拉克利奥波利斯"
+      ],
+      "enNote": "Northern dynastic center in the First Intermediate Period, competing with Thebes. Its later nome-capital role is distinct. Modern mapped excavation areas do not define a complete city or royal palace.",
+      "coordinateStatus": "历史城址所在区域参照",
+      "boundaryStatus": "完整分期城界与宫城尚待核；现状遗址区不替代城界",
+      "featureIds": [
+        "egypt-supp-herakleopolis-way-1284875153",
+        "egypt-supp-herakleopolis-way-1284875154"
+      ]
+    },
+    {
+      "key": "avaris",
+      "name": "阿瓦里斯",
+      "enName": "Avaris / Tell el-Dabʿa",
+      "identity": "古埃及喜克索斯王朝都城",
+      "enIdentity": "Capital of the Hyksos kingdom",
+      "records": [
+        {
+          "regime": "古埃及第十五王朝（喜克索斯）",
+          "years": "约前1650—前1550年；采用约略王朝阶段",
+          "periods": [
+            "夏商"
+          ]
+        }
+      ],
+      "center": [
+        31.822848,
+        30.7860137
+      ],
+      "source": "https://www.oeaw.ac.at/en/oeai/research/prehistory-wana-archaeology/archaeology-in-egypt-and-sudan/landscape-and-cityscape",
+      "note": "阿瓦里斯位于泰勒达巴，与北侧坎提尔的皮拉美西斯分址。OSM旧名Avaris/Ramesses不得用于合并两座都城。约260公顷为研究中的城市规模，不据此画圆或任意围城；完整城郭及宫城矢量待核。",
+      "classification": "capital",
+      "coordinateSource": "https://www.openstreetmap.org/node/10754375782",
+      "aliases": [
+        "阿瓦里斯",
+        "阿瓦瑞斯",
+        "Avaris",
+        "Auaris",
+        "Tell el-Daba",
+        "Tell el-Dabʿa"
+      ],
+      "enNote": "Avaris at Tell el-Dabʿa is distinct from Pi-Ramesses at Qantir to the north. The conflated OSM label Avaris/Ramesses must not merge these capitals. Published city-area estimates are not a basis for an invented perimeter.",
+      "coordinateStatus": "历史城址所在区域参照",
+      "boundaryStatus": "完整分期城界与宫城尚待核；现状遗址区不替代城界",
+      "featureIds": []
+    },
+    {
+      "key": "bubastis",
+      "name": "布巴斯提斯",
+      "enName": "Bubastis / Tell Basta",
+      "identity": "古埃及第二十二王朝都城",
+      "enIdentity": "Capital of Egypt during Dynasty 22",
+      "records": [
+        {
+          "regime": "古埃及第二十二王朝",
+          "years": "约前945—前715年（官方王朝分期；不表示全期均唯一王廷所在地）",
+          "periods": [
+            "周"
+          ]
+        }
+      ],
+      "center": [
+        31.51401636363636,
+        30.57294968181818
+      ],
+      "source": "https://egymonuments.gov.eg/archaeological-sites/tal-basta/",
+      "note": "埃及文物部将其列为第二十二王朝都城；同时保留多政治中心与塔尼斯王陵的区别。现代巴斯特神庙考古区不是全城或阿蒙涅姆赫特三世宫殿边界；未核实宫殿矢量不造面。",
+      "classification": "capital",
+      "coordinateSource": "https://www.openstreetmap.org/way/1155242985",
+      "aliases": [
+        "Bubastis",
+        "Tell Basta",
+        "Per-Bastet",
+        "布巴斯提斯",
+        "布巴斯提斯／泰勒巴斯塔"
+      ],
+      "enNote": "The ministry identifies a Dynasty 22 capital; this does not imply an exclusive court throughout that dynasty. The mapped archaeological area is not the complete city or the palace of Amenemhat III.",
+      "coordinateStatus": "历史城址所在区域参照",
+      "boundaryStatus": "完整分期城界与宫城尚待核；现状遗址区不替代城界",
+      "featureIds": [
+        "egypt-supp-bubastis-way-1155242985"
+      ]
+    },
+    {
+      "key": "sais",
+      "name": "塞易斯",
+      "enName": "Sais / Sa el-Hagar",
+      "identity": "古埃及塞易斯诸王朝都城",
+      "enIdentity": "Capital of Egypt under the Saite dynasties",
+      "records": [
+        {
+          "regime": "古埃及第二十四王朝／西三角洲王权",
+          "years": "约前8世纪后期（地方王权，不称同时控制全埃及）",
+          "periods": [
+            "周"
+          ]
+        },
+        {
+          "regime": "古埃及第二十六王朝",
+          "years": "前664—前525年",
+          "periods": [
+            "周"
+          ]
+        },
+        {
+          "regime": "古埃及第二十八王朝",
+          "years": "前404—前399年",
+          "periods": [
+            "周"
+          ]
+        }
+      ],
+      "center": [
+        30.766667,
+        30.964722
+      ],
+      "source": "https://sais.webspace.durham.ac.uk/overview/",
+      "note": "第二十四王朝地方王权、第26王朝统一国家和第28王朝复国阶段分列；不把宗教中心身份延长为连续都城期。古城位于今萨埃尔哈加尔，根点为古城地域参照；神庙、王宫与王陵精确边界待核。",
+      "classification": "capital",
+      "coordinateSource": "https://www.openstreetmap.org/node/768566451",
+      "additionalSources": [
+        "https://sais.webspace.durham.ac.uk/intro/",
+        "https://egymonuments.gov.eg/en/historical-periods/late-period/"
+      ],
+      "aliases": [
+        "Sais",
+        "Saïs",
+        "Sa el-Hagar",
+        "塞易斯",
+        "塞伊斯",
+        "赛伊斯"
+      ],
+      "enNote": "Separate the local western Delta kings, the national Dynasty 26 capital and the Dynasty 28 restoration. Later religious importance does not imply continuous capital status. The ancient urban area is at Sa el-Hagar; precise palace, temple and royal-tomb boundaries remain unverified.",
+      "coordinateStatus": "历史城址所在区域参照",
+      "boundaryStatus": "完整分期城界与宫城尚待核；现状遗址区不替代城界",
+      "featureIds": []
+    },
+    {
+      "key": "mendes",
+      "name": "门德斯",
+      "enName": "Mendes / Tell el-Rubʿ",
+      "identity": "古埃及第二十九王朝都城",
+      "enIdentity": "Capital of Egypt during Dynasty 29",
+      "records": [
+        {
+          "regime": "古埃及第二十九王朝",
+          "years": "约前399—前380年",
+          "periods": [
+            "周"
+          ]
+        }
+      ],
+      "center": [
+        31.5170889,
+        30.9562518
+      ],
+      "source": "https://www.psu.edu/news/research/story/land-pharoahs",
+      "note": "考古负责人确认其曾为古埃及首都；第29王朝都城阶段与更长的诺姆首府和宗教中心时期区分。泰勒鲁卜遗址与南邻Thmuis不合并；现状考古区不代表完整城墙。",
+      "classification": "capital",
+      "coordinateSource": "https://www.openstreetmap.org/node/4808905977",
+      "additionalSources": [
+        "https://catalogue.bnf.fr/ark:/12148/cb17841497w",
+        "https://egymonuments.gov.eg/en/historical-periods/late-period/"
+      ],
+      "aliases": [
+        "Mendes",
+        "Tell el-Rub",
+        "Tell el-Rubʿ",
+        "Djedet",
+        "门德斯",
+        "孟德斯"
+      ],
+      "enNote": "The excavation director identifies Mendes as a former capital. Dynasty 29 capital status is distinct from its longer provincial and religious roles. Tell el-Rubʿ is not merged with neighboring Thmuis, and the mapped site area is not the city-wall circuit.",
+      "coordinateStatus": "历史城址所在区域参照",
+      "boundaryStatus": "完整分期城界与宫城尚待核；现状遗址区不替代城界",
+      "featureIds": [
+        "egypt-supp-mendes-way-648257739"
+      ]
+    },
+    {
+      "key": "sebennytos",
+      "name": "塞本尼托斯",
+      "enName": "Sebennytos / Samannud",
+      "identity": "古埃及第三十王朝都城",
+      "enIdentity": "Capital of Egypt during Dynasty 30",
+      "records": [
+        {
+          "regime": "古埃及第三十王朝",
+          "years": "前380—前343年",
+          "periods": [
+            "周"
+          ]
+        }
+      ],
+      "center": [
+        31.233232529936302,
+        30.967324772611466
+      ],
+      "source": "https://egymonuments.gov.eg/en/historical-periods/late-period/",
+      "note": "文物部明确第三十王朝都城为今萨曼努德的塞本尼托斯。根点采用所在历史城区的地域参照，不能解释为已确认的王宫或城墙位置；完整分期城界待核。",
+      "classification": "capital",
+      "coordinateSource": "https://www.openstreetmap.org/way/762904850",
+      "aliases": [
+        "Sebennytos",
+        "Sebennytus",
+        "Samannud",
+        "Samanoud",
+        "塞本尼托斯",
+        "塞本尼图斯"
+      ],
+      "enNote": "The ministry identifies Sebennytos, modern Samannud, as the Dynasty 30 capital. Its urban-area locator does not identify an excavated palace or wall. Complete dated city boundaries remain unverified.",
+      "coordinateStatus": "历史城址所在区域参照",
+      "boundaryStatus": "完整分期城界与宫城尚待核；现状遗址区不替代城界",
+      "featureIds": []
+    },
+    {
+      "key": "leontopolis",
+      "name": "莱昂托波利斯",
+      "enName": "Leontopolis / Tell el-Muqdam",
+      "identity": "第三中间期三角洲地方王国中心",
+      "enIdentity": "Royal center of a regional Delta kingdom",
+      "records": [
+        {
+          "regime": "古埃及第三中间期泰勒穆克达姆地方王权",
+          "years": "约前8世纪；与第二十三王朝的具体对应存在争议",
+          "periods": [
+            "周"
+          ]
+        }
+      ],
+      "center": [
+        31.3542098,
+        30.682516
+      ],
+      "source": "https://arf.berkeley.edu/archaeology-news/arf-newsletter-1995-v2-2",
+      "note": "伯克利考古项目将其列为第三中间期地方王国中心，但第二十三王朝王廷归属仍有争议；不表述为全埃及唯一首都。与同名泰勒耶胡迪耶／奥尼亚斯神庙所在地分开。完整城界和宫城待核。",
+      "classification": "capital",
+      "coordinateSource": "https://www.openstreetmap.org/node/1962507224",
+      "additionalSources": [
+        "https://egyptartefacts.griffith.ox.ac.uk/node/1176/"
+      ],
+      "aliases": [
+        "Leontopolis",
+        "Tell el-Muqdam",
+        "Tell el-Moqdam",
+        "Taremu",
+        "莱昂托波利斯"
+      ],
+      "enNote": "The Berkeley project identifies a regional Delta kingdom; identification with the Dynasty 23 court remains debated. Do not present it as the sole capital of all Egypt. Distinct from the similarly named Tell el-Yehudiya / Onias temple site.",
+      "coordinateStatus": "历史城址所在区域参照",
+      "boundaryStatus": "完整分期城界与宫城尚待核；现状遗址区不替代城界",
+      "featureIds": []
+    },
+    {
+      "key": "buto",
+      "name": "布托",
+      "enName": "Buto / Tell el-Faraʿin",
+      "identity": "早期王室庄园与宗教中心；传统王都身份未定",
+      "enIdentity": "Early royal estate and religious center; traditional capital status unconfirmed",
+      "records": [
+        {
+          "regime": "古埃及早王朝王室庄园与宗教中心",
+          "years": "第一至第二王朝遗迹；传统前王朝王都身份未确认",
+          "periods": [
+            "传说"
+          ]
+        }
+      ],
+      "center": [
+        30.7444913,
+        31.1963959
+      ],
+      "source": "https://publications.dainst.org/journals/efb/article/view/1712",
+      "note": "DAI研究确认第一至第二王朝带行政、经济与仪式功能的王室庄园及宫殿式建筑；这不等同证实布托是独立国家首都。保留传统下埃及王权关联，先按普通古城收录，仍遵循对应时期legend。遗址区和宫殿式建筑范围不得当作全城或已证实皇城。",
+      "classification": "ancient-city",
+      "coordinateSource": "https://www.openstreetmap.org/node/5062456966",
+      "aliases": [
+        "Buto",
+        "Tell el-Farain",
+        "Tell el-Faraʿin",
+        "Pe and Dep",
+        "布托"
+      ],
+      "enNote": "DAI identifies a Dynasty 1–2 royal estate with administrative and economic functions and a palace-like complex. This does not establish an independent national capital. Retain the traditional Lower Egyptian royal association as uncertain and classify as an ordinary ancient city, still controlled by its corresponding period.",
+      "coordinateStatus": "历史城址所在区域参照",
+      "boundaryStatus": "完整分期城界与宫城尚待核；现状遗址区不替代城界",
+      "featureIds": [
+        "egypt-supp-buto-way-1323417424",
+        "egypt-supp-buto-way-1323417425"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "key": "abydos-early",
+      "reason": "早王朝王陵已入皇陵；不据王陵自动确认同址全国都城，早期政治中心身份仍需独立核证。"
+    },
+    {
+      "key": "xois",
+      "reason": "第十四王朝传统来源与阿瓦里斯等现代考古研究存在分歧，暂不生成确定古都根点。"
+    },
+    {
+      "key": "nekhen-way-322696610",
+      "reason": "原OSM称Hebenu且指向异地城市，名称与身份冲突，不接入。"
+    },
+    {
+      "key": "nekhen-city-wall-ways",
+      "reason": "公开city_wall标签不足确认年代及军事功能；所谓Fort为仪式围区，不直接接入全城墙。"
+    },
+    {
+      "key": "itjtawy-pyramid",
+      "reason": "利什特王陵已入皇陵，不重复当作失落都城或王宫。"
+    }
+  ],
+  "sourceGeometryChecks": [
+    {
+      "id": "egypt-supp-nekhen-way-1323416897",
+      "sourceUrl": "https://www.openstreetmap.org/way/1323416897",
+      "geometrySha256": "f8fbd04dd860af1e78f35aa7cb4f2dd1f48484dce8829976a9540979747299d4"
+    },
+    {
+      "id": "egypt-supp-herakleopolis-way-1284875153",
+      "sourceUrl": "https://www.openstreetmap.org/way/1284875153",
+      "geometrySha256": "a020f531376f5b18ee62b93381a94f6b8b1bd3b30e995d05dca3266fe625307c"
+    },
+    {
+      "id": "egypt-supp-herakleopolis-way-1284875154",
+      "sourceUrl": "https://www.openstreetmap.org/way/1284875154",
+      "geometrySha256": "f334a396b767173396c62e609092a7fe7f4fa89548a07336d887bde0fa8ff2f0"
+    },
+    {
+      "id": "egypt-supp-bubastis-way-1155242985",
+      "sourceUrl": "https://www.openstreetmap.org/way/1155242985",
+      "geometrySha256": "65965f7a6e84aff219209080811d99718cbefed8d96ceed03bf7ec13578759b6"
+    },
+    {
+      "id": "egypt-supp-mendes-way-648257739",
+      "sourceUrl": "https://www.openstreetmap.org/way/648257739",
+      "geometrySha256": "b8ad526cbef075ba26aff06349d6bb0bfd6a624da936d064ec301e3126e76567"
+    },
+    {
+      "id": "egypt-supp-buto-way-1323417424",
+      "sourceUrl": "https://www.openstreetmap.org/way/1323417424",
+      "geometrySha256": "f5e8072b297592c7bd682c536c790c660a2e2be4932811fc649f6f14b5765982"
+    },
+    {
+      "id": "egypt-supp-buto-way-1323417425",
+      "sourceUrl": "https://www.openstreetmap.org/way/1323417425",
+      "geometrySha256": "7fe6bb66b4e2d4e5ec2a7987c62da7f02000bf9fc6f84aeac0d6d81eb7668d03"
+    }
+  ]
+}

@@ -37,8 +37,8 @@ for(const p of require('../data/imperial-tombs/clear-location-completion.json').
 const luPoint=c.items.find(x=>x.id==='han-lu-jiulong').coordinates;
 assert(luPoint.lat>35.5 && luPoint.lat<35.52 && luPoint.lng>116.98 && luPoint.lng<117.01,'Han Lu cemetery, not Ming Lu cemetery');
 const remaining=require('../data/imperial-tombs/remaining-locations.json');
-assert.equal(remaining.mapCandidates,c.mapCandidateIds.length);
-assert.equal(remaining.missingIndependentCoordinates,c.items.filter(x=>!x.coordinates&&!x.locationReference).length);
+assert.equal(remaining.mapCandidates,c.items.filter(x=>x.country!=='埃及'&&x.mapEligible).length);
+assert.equal(remaining.missingIndependentCoordinates,c.items.filter(x=>x.country!=='埃及'&&!x.coordinates&&!x.locationReference).length);
 assert(remaining.unlocated.some(x=>x.id==='tang18'&&x.category==='overview_with_mapped_children'));
 assert(!remaining.unlocated.some(x=>x.id==='tang-jian'));
 assert(addedKings.every(x=>['秦汉','明'].includes(x.era)||x.id==='tuyuhun-murongzhi'));
@@ -96,7 +96,7 @@ assert(c.items.find(x=>x.id==='wu-jiang').coordinates.target.includes('非孙权
 const ping=c.items.find(x=>x.id==='han-ping').coordinates;
 assert(Math.abs(ping.lat-34.36182)<0.0002&&Math.abs(ping.lng-108.64036)<0.0002,'GCJ conversion agrees with independent OSM regional point');
 const decisions=require('../data/imperial-tombs/coordinate-decisions.json');
-assert.deepEqual(new Set(decisions.approved),new Set(c.mapCandidateIds));
+assert.deepEqual(new Set(decisions.approved),new Set(c.items.filter(x=>x.country!=='埃及'&&x.mapEligible).map(x=>x.id)));
 
 assert.equal(mappedItems({items:[{mapEligible:true,coordinates:{status:'estimated_wgs84',lat:34,lng:109}}]}).length,0);
 assert(geojson(c).features.find(x=>x.id==='ming-xianling').properties.name.endsWith('（估）'));

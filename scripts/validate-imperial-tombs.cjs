@@ -39,7 +39,7 @@ for(const x of c.items) {
   if(x.coordinates) {
     const p=x.coordinates;
     assert.equal(p.crs,'WGS84');assert(['datum_pending','verified_wgs84','estimated_wgs84'].includes(p.status));
-    assert(p.lat>18&&p.lat<54&&p.lng>73&&p.lng<135,'point outside China envelope');
+    if(x.country==='埃及')assert(p.lat>21&&p.lat<33&&p.lng>24&&p.lng<37,'Egypt tomb outside country envelope');else assert(p.lat>18&&p.lat<54&&p.lng>73&&p.lng<135,'existing point outside China envelope');
     assert(sources.has(p.sourceId));assert(p.original&&p.target&&p.limitation);
     assert.equal(p.precision.horizontalAccuracyMeters,null,'no invented accuracy');
   }
@@ -96,7 +96,7 @@ assert.equal(byId.get('wuyue-qian').disturbance.status,'documentary_record');
 assert.equal(byId.get('shu-hui').disturbance.status,'unknown');
 assert.equal(byId.get('tubo-kings').recordType,'group');
 assert.equal(c.items.filter(x=>x.id.startsWith('tubo-')).length,1,'no invented individual tomb assignment');
-for(const x of c.items.filter(x=>x.era==='传说时代')) {
+for(const x of c.items.filter(x=>x.era==='传说时代'&&x.country!=='埃及')) {
   assert.equal(x.nature,'commemorative');assert.equal(x.recognition,'traditional');
 }
 // Cross-check generated human deliverables and every record's audit section.

@@ -1,0 +1,1357 @@
+{
+  "reviewedAt": "2026-10-15",
+  "added": 76,
+  "singles": 68,
+  "groups": 8,
+  "pyramids": 27,
+  "counts": {
+    "records": 479,
+    "mapCandidates": 356
+  },
+  "preservation": {
+    "originalItems": 403,
+    "originalSources": 745,
+    "itemsSha256": "0ae45d5cdbba2c9584429e01d2d39c5195a4208237a34a6f45036082180493a1",
+    "sourcesSha256": "14e70ad66eab1539f42700bacb110b21cbb42b54f52e8472ebfb75dfd4be4d6f"
+  },
+  "rows": [
+    {
+      "id": "eg-khufu",
+      "name": "胡夫金字塔",
+      "kind": "pyramid",
+      "group": false,
+      "parent": "eg-group-giza",
+      "period": "传说",
+      "localPeriod": "古埃及 · 古王国第四王朝；约前2589—前2566年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-khufu"
+      ],
+      "coordinateSource": "eg-geo-osm-way-4420397",
+      "notes": "胡夫王室金字塔；在位年代作为约略营建时代，不将其写成精确开工、完工或安葬年。"
+    },
+    {
+      "id": "eg-khafre",
+      "name": "哈夫拉金字塔",
+      "kind": "pyramid",
+      "group": false,
+      "parent": "eg-group-giza",
+      "period": "传说",
+      "localPeriod": "古埃及 · 古王国第四王朝；约前2600—前2500年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-khafre"
+      ],
+      "coordinateSource": "eg-geo-osm-way-4420396",
+      "notes": "吉萨第二座大金字塔；王陵与河谷庙、狮身人面像分别区分。"
+    },
+    {
+      "id": "eg-menkaure",
+      "name": "孟卡拉金字塔",
+      "kind": "pyramid",
+      "group": false,
+      "parent": "eg-group-giza",
+      "period": "传说",
+      "localPeriod": "古埃及 · 古王国第四王朝；约前2532—前2503年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-menkaure"
+      ],
+      "coordinateSource": "eg-geo-osm-way-4420398",
+      "notes": "吉萨第三座大金字塔；王陵建筑群在国王去世后仍有续建。"
+    },
+    {
+      "id": "eg-djoser",
+      "name": "左塞尔阶梯金字塔",
+      "kind": "pyramid",
+      "group": false,
+      "parent": "eg-group-saqqara",
+      "period": "传说",
+      "localPeriod": "古埃及 · 古王国第三王朝；约前2700—前2600年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-djoser"
+      ],
+      "coordinateSource": "eg-geo-osm-way-33909574",
+      "notes": "采用约前27世纪，避免把不同年代体系混为精确年份；南墓是另有象征意义的组成，不另认作第二座实际安葬陵。"
+    },
+    {
+      "id": "eg-userkaf",
+      "name": "乌塞尔卡夫金字塔",
+      "kind": "pyramid",
+      "group": false,
+      "parent": "eg-group-saqqara",
+      "period": "传说",
+      "localPeriod": "古埃及 · 古王国第五王朝；约前2500—前2400年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-userkaf"
+      ],
+      "coordinateSource": "eg-geo-osm-way-98441708",
+      "notes": "第五王朝王陵；不与阿布古拉布太阳神庙混同。"
+    },
+    {
+      "id": "eg-unas",
+      "name": "乌纳斯金字塔",
+      "kind": "pyramid",
+      "group": false,
+      "parent": "eg-group-saqqara",
+      "period": "传说",
+      "localPeriod": "古埃及 · 古王国第五王朝；约前2375—前2345年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-unas"
+      ],
+      "coordinateSource": "eg-geo-osm-way-98441709",
+      "notes": "现存最早刻写金字塔文的王陵之一；正文保留王朝和实际年代。"
+    },
+    {
+      "id": "eg-teti",
+      "name": "特提金字塔",
+      "kind": "pyramid",
+      "group": false,
+      "parent": "eg-group-saqqara",
+      "period": "传说",
+      "localPeriod": "古埃及 · 古王国第六王朝；约前2400—前2300年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-teti"
+      ],
+      "coordinateSource": "eg-geo-osm-way-41765792",
+      "notes": "第六王朝初期的王陵；不把周围官员墓归作本陵。"
+    },
+    {
+      "id": "eg-djedkare",
+      "name": "杰德卡拉金字塔",
+      "kind": "pyramid",
+      "group": false,
+      "parent": "eg-group-saqqara",
+      "period": "传说",
+      "localPeriod": "古埃及 · 古王国第五王朝；约前2500—前2300年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-djedkare"
+      ],
+      "coordinateSource": "eg-geo-osm-way-58169337",
+      "notes": "南萨卡拉王陵，与乌塞尔卡夫等北部陵址分别定位。"
+    },
+    {
+      "id": "eg-pepi-i",
+      "name": "佩皮一世金字塔",
+      "kind": "pyramid",
+      "group": false,
+      "parent": "eg-group-saqqara",
+      "period": "传说",
+      "localPeriod": "古埃及 · 古王国第六王朝；约前2350—前2181年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-saqqara",
+        "egypt-pepi-i"
+      ],
+      "coordinateSource": "eg-geo-osm-way-102555367",
+      "notes": "第六王朝王室金字塔，采用王朝年代范围作约略分期，不假造精确建陵年份。"
+    },
+    {
+      "id": "eg-merenre-i",
+      "name": "梅伦拉一世金字塔",
+      "kind": "pyramid",
+      "group": false,
+      "parent": "eg-group-saqqara",
+      "period": "传说",
+      "localPeriod": "古埃及 · 古王国第六王朝；约前2350—前2181年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-saqqara",
+        "egypt-merenre"
+      ],
+      "coordinateSource": "eg-geo-osm-way-102555366",
+      "notes": "第六王朝王室金字塔，采用王朝年代范围作约略分期，不假造精确建陵年份。"
+    },
+    {
+      "id": "eg-pepi-ii",
+      "name": "佩皮二世金字塔",
+      "kind": "pyramid",
+      "group": false,
+      "parent": "eg-group-saqqara",
+      "period": "传说",
+      "localPeriod": "古埃及 · 古王国第六王朝；约前2350—前2181年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-saqqara",
+        "egypt-pepi-ii"
+      ],
+      "coordinateSource": "eg-geo-osm-way-244850247",
+      "notes": "第六王朝王室金字塔，采用王朝年代范围作约略分期，不假造精确建陵年份。"
+    },
+    {
+      "id": "eg-shepseskaf",
+      "name": "谢普塞斯卡夫陵（法老石凳）",
+      "kind": "mastaba",
+      "group": false,
+      "parent": "eg-group-saqqara",
+      "period": "传说",
+      "localPeriod": "古埃及 · 古王国第四王朝；约前2550—前2450年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-saqqara",
+        "egypt-pyramid-map"
+      ],
+      "coordinateSource": "eg-geo-osm-way-244850246",
+      "notes": "王室马斯塔巴式陵墓，不将其称为金字塔；独立于佩皮二世陵。"
+    },
+    {
+      "id": "eg-sekhemkhet",
+      "name": "塞赫姆赫特未完工金字塔",
+      "kind": "pyramid",
+      "group": false,
+      "parent": "eg-group-saqqara",
+      "period": "传说",
+      "localPeriod": "古埃及 · 古王国第三王朝；约前2700—前2600年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-saqqara",
+        "egypt-pyramid-map"
+      ],
+      "coordinateSource": "eg-geo-osm-way-102555364",
+      "notes": "未完工王室金字塔；不以空石棺或建筑归属证明国王实际葬于此处。"
+    },
+    {
+      "id": "eg-sneferu-bent",
+      "name": "斯尼夫鲁曲折金字塔",
+      "kind": "pyramid",
+      "group": false,
+      "parent": null,
+      "period": "传说",
+      "localPeriod": "古埃及 · 古王国第四王朝；约前2650—前2550年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-dahshur"
+      ],
+      "coordinateSource": "eg-geo-osm-way-39918834",
+      "notes": "同一国王的不同陵墓建筑按城址分别建档；斯尼夫鲁实际安葬在哪座金字塔仍有争议。"
+    },
+    {
+      "id": "eg-sneferu-red",
+      "name": "斯尼夫鲁红金字塔",
+      "kind": "pyramid",
+      "group": false,
+      "parent": null,
+      "period": "传说",
+      "localPeriod": "古埃及 · 古王国第四王朝；约前2650—前2550年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-dahshur"
+      ],
+      "coordinateSource": "eg-geo-osm-way-39918835",
+      "notes": "同一国王的不同陵墓建筑按城址分别建档；斯尼夫鲁实际安葬在哪座金字塔仍有争议。"
+    },
+    {
+      "id": "eg-amenemhat-ii",
+      "name": "阿蒙涅姆赫特二世白金字塔",
+      "kind": "pyramid",
+      "group": false,
+      "parent": null,
+      "period": "夏商",
+      "localPeriod": "古埃及 · 中王国第十二王朝；约前1950—前1850年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-dahshur"
+      ],
+      "coordinateSource": "eg-geo-osm-way-73176950",
+      "notes": "达舒尔中王国砖石王陵；不与阿蒙涅姆赫特三世黑金字塔合并。"
+    },
+    {
+      "id": "eg-senusret-iii-dahshur",
+      "name": "森乌塞尔特三世金字塔（达舒尔）",
+      "kind": "pyramid",
+      "group": false,
+      "parent": null,
+      "period": "夏商",
+      "localPeriod": "古埃及 · 中王国第十二王朝；约前1878—前1840年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-sen3"
+      ],
+      "coordinateSource": "eg-geo-osm-way-73177590",
+      "notes": "大都会博物馆发掘资料认为无遗体及石棺洁净可能说明此处并未实际安葬国王；另有阿拜多斯地下陵墓，分别保留。"
+    },
+    {
+      "id": "eg-amenemhat-iii-black",
+      "name": "阿蒙涅姆赫特三世黑金字塔",
+      "kind": "pyramid",
+      "group": false,
+      "parent": null,
+      "period": "夏商",
+      "localPeriod": "古埃及 · 中王国第十二王朝；约前1900—前1800年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-dahshur"
+      ],
+      "coordinateSource": "eg-geo-osm-way-39918837",
+      "notes": "王室陵墓建筑，与哈瓦拉金字塔为不同实体；不能因同一墓主而合并打卡。"
+    },
+    {
+      "id": "eg-sahure",
+      "name": "萨胡拉金字塔",
+      "kind": "pyramid",
+      "group": false,
+      "parent": "eg-group-abusir",
+      "period": "传说",
+      "localPeriod": "古埃及 · 古王国第五王朝；约前2500—前2300年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-abusir"
+      ],
+      "coordinateSource": "eg-geo-osm-way-48808535",
+      "notes": "阿布西尔第五王朝王陵；名称中的未完工形制不自动表示没有发生安葬。"
+    },
+    {
+      "id": "eg-neferirkare",
+      "name": "内弗尔伊尔卡拉金字塔",
+      "kind": "pyramid",
+      "group": false,
+      "parent": "eg-group-abusir",
+      "period": "传说",
+      "localPeriod": "古埃及 · 古王国第五王朝；约前2500—前2300年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-abusir"
+      ],
+      "coordinateSource": "eg-geo-osm-way-48808492",
+      "notes": "阿布西尔第五王朝王陵；名称中的未完工形制不自动表示没有发生安葬。"
+    },
+    {
+      "id": "eg-nyuserre",
+      "name": "尼乌塞拉金字塔",
+      "kind": "pyramid",
+      "group": false,
+      "parent": "eg-group-abusir",
+      "period": "传说",
+      "localPeriod": "古埃及 · 古王国第五王朝；约前2500—前2300年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-abusir"
+      ],
+      "coordinateSource": "eg-geo-osm-way-48808533",
+      "notes": "阿布西尔第五王朝王陵；名称中的未完工形制不自动表示没有发生安葬。"
+    },
+    {
+      "id": "eg-neferefre",
+      "name": "内弗尔弗拉未完工金字塔",
+      "kind": "pyramid",
+      "group": false,
+      "parent": "eg-group-abusir",
+      "period": "传说",
+      "localPeriod": "古埃及 · 古王国第五王朝；约前2500—前2300年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-abusir"
+      ],
+      "coordinateSource": "eg-geo-osm-way-98450488",
+      "notes": "阿布西尔第五王朝王陵；名称中的未完工形制不自动表示没有发生安葬。"
+    },
+    {
+      "id": "eg-sneferu-meidum",
+      "name": "梅杜姆金字塔",
+      "kind": "pyramid",
+      "group": false,
+      "parent": null,
+      "period": "传说",
+      "localPeriod": "古埃及 · 古王国第四王朝；约前2650—前2550年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-dahshur",
+        "egypt-meidum"
+      ],
+      "coordinateSource": "eg-geo-osm-way-89034641",
+      "notes": "通常与斯尼夫鲁联系，早期工程是否属于胡尼有争议；实际安葬位置未定，不标作已经确认的遗体墓。"
+    },
+    {
+      "id": "eg-djedefre",
+      "name": "杰德夫拉金字塔",
+      "kind": "pyramid",
+      "group": false,
+      "parent": null,
+      "period": "传说",
+      "localPeriod": "古埃及 · 古王国第四王朝；约前2600—前2500年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-djedefre"
+      ],
+      "coordinateSource": "eg-geo-osm-way-163410612",
+      "notes": "阿布拉瓦什王陵遗址，不与吉萨胡夫陵合并。"
+    },
+    {
+      "id": "eg-amenemhat-i",
+      "name": "阿蒙涅姆赫特一世金字塔",
+      "kind": "pyramid",
+      "group": false,
+      "parent": "eg-group-lisht",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 中王国第十二王朝；约前1981—前1952年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-amenemhat-i"
+      ],
+      "coordinateSource": "eg-geo-osm-way-711889183",
+      "notes": "利什特北侧王陵；与南侧森乌塞尔特一世陵分别表达。"
+    },
+    {
+      "id": "eg-senusret-i",
+      "name": "森乌塞尔特一世金字塔",
+      "kind": "pyramid",
+      "group": false,
+      "parent": "eg-group-lisht",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 中王国第十二王朝；约前2000—前1900年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-lisht"
+      ],
+      "coordinateSource": "eg-geo-osm-way-83492628",
+      "notes": "大都会博物馆发掘的利什特南侧金字塔建筑群。"
+    },
+    {
+      "id": "eg-senusret-ii",
+      "name": "森乌塞尔特二世金字塔（拉洪）",
+      "kind": "pyramid",
+      "group": false,
+      "parent": null,
+      "period": "夏商",
+      "localPeriod": "古埃及 · 中王国第十二王朝；约前1900—前1800年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-lahun"
+      ],
+      "coordinateSource": "eg-geo-osm-way-89036414",
+      "notes": "拉洪王陵，不用附近卡洪聚落或博物馆代表陵址。"
+    },
+    {
+      "id": "eg-amenemhat-iii-hawara",
+      "name": "阿蒙涅姆赫特三世金字塔（哈瓦拉）",
+      "kind": "pyramid",
+      "group": false,
+      "parent": null,
+      "period": "夏商",
+      "localPeriod": "古埃及 · 中王国第十二王朝；约前1900—前1800年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-hawara"
+      ],
+      "coordinateSource": "eg-geo-osm-way-89036022",
+      "notes": "哈瓦拉王陵与南侧葬祭建筑遗址分别看待；不把后期罗马墓地并作法老陵。"
+    },
+    {
+      "id": "eg-kv1",
+      "name": "拉美西斯七世陵（KV1）",
+      "kind": "rock-cut",
+      "group": false,
+      "parent": "eg-group-kings",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第20王朝；约前1200—前1100年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-kings",
+        "egypt-tmp-map"
+      ],
+      "coordinateSource": "eg-geo-osm-way-116646291",
+      "notes": "帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。"
+    },
+    {
+      "id": "eg-kv2",
+      "name": "拉美西斯四世陵（KV2）",
+      "kind": "rock-cut",
+      "group": false,
+      "parent": "eg-group-kings",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第20王朝；约前1200—前1100年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-kings",
+        "egypt-tmp-map"
+      ],
+      "coordinateSource": "eg-geo-osm-way-813722273",
+      "notes": "帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。"
+    },
+    {
+      "id": "eg-kv6",
+      "name": "拉美西斯九世陵（KV6）",
+      "kind": "rock-cut",
+      "group": false,
+      "parent": "eg-group-kings",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第20王朝；约前1200—前1100年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-kings",
+        "egypt-tmp-map"
+      ],
+      "coordinateSource": "eg-geo-osm-way-813718171",
+      "notes": "帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。"
+    },
+    {
+      "id": "eg-kv7",
+      "name": "拉美西斯二世陵（KV7）",
+      "kind": "rock-cut",
+      "group": false,
+      "parent": "eg-group-kings",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第19王朝；约前1300—前1200年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-kings",
+        "egypt-tmp-map"
+      ],
+      "coordinateSource": "eg-geo-osm-way-813718173",
+      "notes": "帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。"
+    },
+    {
+      "id": "eg-kv8",
+      "name": "麦伦普塔陵（KV8）",
+      "kind": "rock-cut",
+      "group": false,
+      "parent": "eg-group-kings",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第19王朝；约前1250—前1200年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-kings",
+        "egypt-tmp-map"
+      ],
+      "coordinateSource": "eg-geo-osm-way-813719783",
+      "notes": "帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。"
+    },
+    {
+      "id": "eg-kv9",
+      "name": "拉美西斯五世与六世陵（KV9）",
+      "kind": "rock-cut",
+      "group": false,
+      "parent": "eg-group-kings",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第20王朝；约前1200—前1100年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-kings",
+        "egypt-tmp-map"
+      ],
+      "coordinateSource": "eg-geo-osm-way-813718170",
+      "notes": "拉美西斯五世与六世先后使用同一墓址，按一个陵墓实体记录。"
+    },
+    {
+      "id": "eg-kv10",
+      "name": "阿蒙麦西斯陵（KV10）",
+      "kind": "rock-cut",
+      "group": false,
+      "parent": "eg-group-kings",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第19王朝；约前1250—前1150年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-kings",
+        "egypt-tmp-map"
+      ],
+      "coordinateSource": "eg-geo-osm-way-813722280",
+      "notes": "帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。"
+    },
+    {
+      "id": "eg-kv11",
+      "name": "拉美西斯三世陵（KV11）",
+      "kind": "rock-cut",
+      "group": false,
+      "parent": "eg-group-kings",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第20王朝；约前1200—前1100年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-kings",
+        "egypt-tmp-map"
+      ],
+      "coordinateSource": "eg-geo-osm-way-813717255",
+      "notes": "帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。"
+    },
+    {
+      "id": "eg-kv14",
+      "name": "塔沃斯蕾特与塞特纳赫特陵（KV14）",
+      "kind": "rock-cut",
+      "group": false,
+      "parent": "eg-group-kings",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第19王朝至第二十王朝；约前1250—前1150年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-kings",
+        "egypt-tmp-map"
+      ],
+      "coordinateSource": "eg-geo-osm-way-813832362",
+      "notes": "同一墓址先后被塔沃斯蕾特与塞特纳赫特使用，按一个陵墓实体记录，不重复创建两个点。"
+    },
+    {
+      "id": "eg-kv15",
+      "name": "塞提二世陵（KV15）",
+      "kind": "rock-cut",
+      "group": false,
+      "parent": "eg-group-kings",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第19王朝；约前1250—前1150年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-kings",
+        "egypt-tmp-map"
+      ],
+      "coordinateSource": "eg-geo-osm-way-813832366",
+      "notes": "帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。"
+    },
+    {
+      "id": "eg-kv16",
+      "name": "拉美西斯一世陵（KV16）",
+      "kind": "rock-cut",
+      "group": false,
+      "parent": "eg-group-kings",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第19王朝；约前1300—前1250年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-kings",
+        "egypt-tmp-map"
+      ],
+      "coordinateSource": "eg-geo-osm-way-813718169",
+      "notes": "帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。"
+    },
+    {
+      "id": "eg-kv17",
+      "name": "塞提一世陵（KV17）",
+      "kind": "rock-cut",
+      "group": false,
+      "parent": "eg-group-kings",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第19王朝；约前1300—前1250年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-kings",
+        "egypt-tmp-map"
+      ],
+      "coordinateSource": "eg-geo-osm-way-813717250",
+      "notes": "帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。"
+    },
+    {
+      "id": "eg-kv20",
+      "name": "哈特谢普苏特与图特摩斯一世陵（KV20）",
+      "kind": "rock-cut",
+      "group": false,
+      "parent": "eg-group-kings",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第18王朝；约前1500—前1400年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-kings",
+        "egypt-tmp-map"
+      ],
+      "coordinateSource": "eg-geo-osm-way-813950034",
+      "notes": "此墓与国王、女王相关；不将代尔巴哈里的哈特谢普苏特葬祭庙当作此陵。"
+    },
+    {
+      "id": "eg-kv34",
+      "name": "图特摩斯三世陵（KV34）",
+      "kind": "rock-cut",
+      "group": false,
+      "parent": "eg-group-kings",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第18王朝；约前1500—前1400年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-kings",
+        "egypt-tmp-map"
+      ],
+      "coordinateSource": "eg-geo-osm-way-813832367",
+      "notes": "帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。"
+    },
+    {
+      "id": "eg-kv35",
+      "name": "阿蒙霍特普二世陵（KV35）",
+      "kind": "rock-cut",
+      "group": false,
+      "parent": "eg-group-kings",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第18王朝；约前1450—前1350年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-kings",
+        "egypt-tmp-map"
+      ],
+      "coordinateSource": "eg-geo-osm-way-813950039",
+      "notes": "原王陵后被用来存放迁移的王室木乃伊；不把所有迁入者都认作此墓的原设计墓主。"
+    },
+    {
+      "id": "eg-kv43",
+      "name": "图特摩斯四世陵（KV43）",
+      "kind": "rock-cut",
+      "group": false,
+      "parent": "eg-group-kings",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第18王朝；约前1450—前1350年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-kings",
+        "egypt-tmp-map"
+      ],
+      "coordinateSource": "eg-geo-osm-way-813947193",
+      "notes": "帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。"
+    },
+    {
+      "id": "eg-kv47",
+      "name": "西普塔陵（KV47）",
+      "kind": "rock-cut",
+      "group": false,
+      "parent": "eg-group-kings",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第19王朝；约前1250—前1150年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-kings",
+        "egypt-tmp-map"
+      ],
+      "coordinateSource": "eg-geo-osm-way-813717254",
+      "notes": "帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。"
+    },
+    {
+      "id": "eg-kv57",
+      "name": "霍伦海布陵（KV57）",
+      "kind": "rock-cut",
+      "group": false,
+      "parent": "eg-group-kings",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第18王朝；约前1350—前1250年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-kings",
+        "egypt-tmp-map"
+      ],
+      "coordinateSource": "eg-geo-osm-way-813722274",
+      "notes": "帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。"
+    },
+    {
+      "id": "eg-kv62",
+      "name": "图坦卡蒙陵（KV62）",
+      "kind": "rock-cut",
+      "group": false,
+      "parent": "eg-group-kings",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第18王朝；约前1336—前1327年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-tut",
+        "egypt-tmp-map"
+      ],
+      "coordinateSource": "eg-geo-osm-way-813832374",
+      "notes": "第十八王朝王陵；发现时相对完整不等于从未受到古代盗扰；博物馆藏品不替代陵墓实体。"
+    },
+    {
+      "id": "eg-kv23",
+      "name": "阿伊陵（WV23）",
+      "kind": "rock-cut",
+      "group": false,
+      "parent": "eg-group-kings",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第18王朝；约前1350—前1250年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-kings",
+        "egypt-tmp-map"
+      ],
+      "coordinateSource": "eg-geo-osm-way-814144093",
+      "notes": "帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。"
+    },
+    {
+      "id": "eg-nefertari",
+      "name": "奈费尔塔里王后陵（QV66）",
+      "kind": "rock-cut",
+      "group": false,
+      "parent": "eg-group-queens",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第十九王朝；约前1300—前1200年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-qv66",
+        "egypt-nefertari"
+      ],
+      "coordinateSource": "eg-geo-osm-way-1239469213",
+      "notes": "王后谷独立王室墓葬；不采用将QV墓号误写为KV或把奈费尔塔里与QV55混配的社区对象。"
+    },
+    {
+      "id": "eg-tuya",
+      "name": "图雅王后陵（QV80）",
+      "kind": "rock-cut",
+      "group": false,
+      "parent": "eg-group-queens",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第十九王朝；约前1300—前1200年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-qv80"
+      ],
+      "coordinateSource": "eg-geo-osm-way-1239469211",
+      "notes": "王后谷独立王室墓葬；不采用将QV墓号误写为KV或把奈费尔塔里与QV55混配的社区对象。"
+    },
+    {
+      "id": "eg-tyti",
+      "name": "提蒂王后陵（QV52）",
+      "kind": "rock-cut",
+      "group": false,
+      "parent": "eg-group-queens",
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第二十王朝；约前1200—前1100年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-qv52"
+      ],
+      "coordinateSource": "eg-geo-osm-way-1240796868",
+      "notes": "王后谷独立王室墓葬；不采用将QV墓号误写为KV或把奈费尔塔里与QV55混配的社区对象。"
+    },
+    {
+      "id": "eg-den",
+      "name": "登王陵（阿拜多斯T墓）",
+      "kind": "early-royal",
+      "group": false,
+      "parent": "eg-group-abydos",
+      "period": "传说",
+      "localPeriod": "古埃及 · 早王朝第一王朝；约前3100—前2650年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-abydos",
+        "egypt-abydos-plan"
+      ],
+      "coordinateSource": "eg-geo-osm-way-1074615331",
+      "notes": "乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。"
+    },
+    {
+      "id": "eg-djer",
+      "name": "哲尔王陵（阿拜多斯O墓）",
+      "kind": "early-royal",
+      "group": false,
+      "parent": "eg-group-abydos",
+      "period": "传说",
+      "localPeriod": "古埃及 · 早王朝第一王朝；约前3100—前2650年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-abydos",
+        "egypt-abydos-plan"
+      ],
+      "coordinateSource": "eg-geo-osm-node-9856557976",
+      "notes": "乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。"
+    },
+    {
+      "id": "eg-djet",
+      "name": "杰特王陵（阿拜多斯Z墓）",
+      "kind": "early-royal",
+      "group": false,
+      "parent": "eg-group-abydos",
+      "period": "传说",
+      "localPeriod": "古埃及 · 早王朝第一王朝；约前3100—前2650年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-abydos",
+        "egypt-abydos-plan"
+      ],
+      "coordinateSource": "eg-geo-osm-node-9856557971",
+      "notes": "乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。"
+    },
+    {
+      "id": "eg-adjib",
+      "name": "阿涅德吉布王陵（阿拜多斯X墓）",
+      "kind": "early-royal",
+      "group": false,
+      "parent": "eg-group-abydos",
+      "period": "传说",
+      "localPeriod": "古埃及 · 早王朝第一王朝；约前3100—前2650年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-abydos",
+        "egypt-abydos-plan"
+      ],
+      "coordinateSource": "eg-geo-osm-node-9856557970",
+      "notes": "乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。"
+    },
+    {
+      "id": "eg-semerkhet",
+      "name": "瑟莫赫特王陵（阿拜多斯U墓）",
+      "kind": "early-royal",
+      "group": false,
+      "parent": "eg-group-abydos",
+      "period": "传说",
+      "localPeriod": "古埃及 · 早王朝第一王朝；约前3100—前2650年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-abydos",
+        "egypt-abydos-plan"
+      ],
+      "coordinateSource": "eg-geo-osm-way-1074615332",
+      "notes": "乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。"
+    },
+    {
+      "id": "eg-qaa",
+      "name": "卡阿王陵（阿拜多斯Q墓）",
+      "kind": "early-royal",
+      "group": false,
+      "parent": "eg-group-abydos",
+      "period": "传说",
+      "localPeriod": "古埃及 · 早王朝第一王朝；约前3100—前2650年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-abydos",
+        "egypt-abydos-plan"
+      ],
+      "coordinateSource": "eg-geo-osm-way-1074615333",
+      "notes": "乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。"
+    },
+    {
+      "id": "eg-merneith",
+      "name": "梅丽特奈特王陵（阿拜多斯Y墓）",
+      "kind": "early-royal",
+      "group": false,
+      "parent": "eg-group-abydos",
+      "period": "传说",
+      "localPeriod": "古埃及 · 早王朝第一王朝；约前3100—前2650年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-abydos",
+        "egypt-abydos-plan"
+      ],
+      "coordinateSource": "eg-geo-osm-way-1074615334",
+      "notes": "乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。"
+    },
+    {
+      "id": "eg-peribsen",
+      "name": "佩里布森王陵（阿拜多斯P墓）",
+      "kind": "early-royal",
+      "group": false,
+      "parent": "eg-group-abydos",
+      "period": "传说",
+      "localPeriod": "古埃及 · 早王朝第二王朝；约前3100—前2650年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-abydos",
+        "egypt-abydos-plan"
+      ],
+      "coordinateSource": "eg-geo-osm-way-1074615335",
+      "notes": "乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。"
+    },
+    {
+      "id": "eg-khasekhemwy",
+      "name": "卡塞凯姆威王陵（阿拜多斯V墓）",
+      "kind": "early-royal",
+      "group": false,
+      "parent": "eg-group-abydos",
+      "period": "传说",
+      "localPeriod": "古埃及 · 早王朝第二王朝；约前3100—前2650年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-abydos",
+        "egypt-abydos-plan"
+      ],
+      "coordinateSource": "eg-geo-osm-way-1074615330",
+      "notes": "乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。"
+    },
+    {
+      "id": "eg-senusret-iii-abydos",
+      "name": "森乌塞尔特三世陵（阿拜多斯）",
+      "kind": "subterranean",
+      "group": false,
+      "parent": null,
+      "period": "夏商",
+      "localPeriod": "古埃及 · 中王国第十二王朝；约前1878—前1840年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-sen3",
+        "egypt-south-abydos"
+      ],
+      "coordinateSource": "eg-geo-osm-way-628065792",
+      "notes": "阿拜多斯地下王陵，与达舒尔金字塔分别记录；实际安葬推定与已找到遗体分开表述。"
+    },
+    {
+      "id": "eg-group-giza",
+      "name": "吉萨金字塔王陵群",
+      "kind": "necropolis",
+      "group": true,
+      "parent": null,
+      "period": "传说",
+      "localPeriod": "古埃及 · 古王国王室陵墓；约前2600—前2500年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-giza"
+      ],
+      "coordinateSource": "eg-geo-eg-group-giza",
+      "notes": "用于小比例尺汇总本轮已收录子陵，不声称是完整名录或陵区实测范围；放大后显示子陵，打卡成员仅为本目录已收录实体。"
+    },
+    {
+      "id": "eg-group-saqqara",
+      "name": "萨卡拉古王国王陵群",
+      "kind": "necropolis",
+      "group": true,
+      "parent": null,
+      "period": "传说",
+      "localPeriod": "古埃及 · 古王国王室陵墓；约前2700—前2181年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-saqqara"
+      ],
+      "coordinateSource": "eg-geo-eg-group-saqqara",
+      "notes": "用于小比例尺汇总本轮已收录子陵，不声称是完整名录或陵区实测范围；放大后显示子陵，打卡成员仅为本目录已收录实体。"
+    },
+    {
+      "id": "eg-group-abusir",
+      "name": "阿布西尔金字塔王陵群",
+      "kind": "necropolis",
+      "group": true,
+      "parent": null,
+      "period": "传说",
+      "localPeriod": "古埃及 · 古王国王室陵墓；约前2500—前2300年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-abusir"
+      ],
+      "coordinateSource": "eg-geo-eg-group-abusir",
+      "notes": "用于小比例尺汇总本轮已收录子陵，不声称是完整名录或陵区实测范围；放大后显示子陵，打卡成员仅为本目录已收录实体。"
+    },
+    {
+      "id": "eg-group-lisht",
+      "name": "利什特王陵群",
+      "kind": "necropolis",
+      "group": true,
+      "parent": null,
+      "period": "夏商",
+      "localPeriod": "古埃及 · 中王国第十二王朝；约前2000—前1900年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-lisht"
+      ],
+      "coordinateSource": "eg-geo-eg-group-lisht",
+      "notes": "用于小比例尺汇总本轮已收录子陵，不声称是完整名录或陵区实测范围；放大后显示子陵，打卡成员仅为本目录已收录实体。"
+    },
+    {
+      "id": "eg-group-kings",
+      "name": "帝王谷王陵群",
+      "kind": "necropolis",
+      "group": true,
+      "parent": null,
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第十八至第二十王朝；约前1500—前1100年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-kings"
+      ],
+      "coordinateSource": "eg-geo-eg-group-kings",
+      "notes": "用于小比例尺汇总本轮已收录子陵，不声称是完整名录或陵区实测范围；放大后显示子陵，打卡成员仅为本目录已收录实体。"
+    },
+    {
+      "id": "eg-group-queens",
+      "name": "王后谷王室墓群",
+      "kind": "necropolis",
+      "group": true,
+      "parent": null,
+      "period": "夏商",
+      "localPeriod": "古埃及 · 新王国第十九至第二十王朝；约前1300—前1100年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-nefertari"
+      ],
+      "coordinateSource": "eg-geo-eg-group-queens",
+      "notes": "用于小比例尺汇总本轮已收录子陵，不声称是完整名录或陵区实测范围；放大后显示子陵，打卡成员仅为本目录已收录实体。"
+    },
+    {
+      "id": "eg-group-abydos",
+      "name": "乌姆·卡阿布早王朝王陵群",
+      "kind": "necropolis",
+      "group": true,
+      "parent": null,
+      "period": "传说",
+      "localPeriod": "古埃及 · 早王朝第一至第二王朝；约前3100—前2650年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-abydos"
+      ],
+      "coordinateSource": "eg-geo-eg-group-abydos",
+      "notes": "用于小比例尺汇总本轮已收录子陵，不声称是完整名录或陵区实测范围；放大后显示子陵，打卡成员仅为本目录已收录实体。"
+    },
+    {
+      "id": "eg-tanis-royal",
+      "name": "塔尼斯王陵群",
+      "kind": "necropolis",
+      "group": true,
+      "parent": null,
+      "period": "周",
+      "localPeriod": "古埃及 · 第三中间期第二十一至第二十二王朝；约前1039—前730年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-tanis",
+        "egypt-tanis-museum"
+      ],
+      "coordinateSource": "egypt-tanis-geographic",
+      "notes": "王陵始建按普苏森尼斯一世时期约前1039年起，不把前1069年的王朝起点当作陵群始建年；包含复用、迁葬及墓主认定更新，现只建陵群参照点，逐墓独立位置待核。",
+      "locationStatus": "official_projected_map"
+    },
+    {
+      "id": "eg-tanis-nrt-i",
+      "name": "奥索尔孔二世墓（NRT I）",
+      "kind": "rock_or_built_royal_tomb",
+      "group": false,
+      "parent": "eg-tanis-royal",
+      "period": "周",
+      "localPeriod": "第二十一至第二十二王朝；约前11—前8世纪；复用分期范围，非精确建墓年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-tanis",
+        "egypt-tanis-2024",
+        "egypt-tanis-geographic"
+      ],
+      "coordinateSource": "egypt-tanis-geographic",
+      "locationStatus": "estimated_from_official_orthophoto",
+      "notes": "墓葬存在早期建造与后续扩建复用；最新考古队说明将舍顺克三世的最终安葬置于此墓前室，不按旧资料直接放入Ⅴ号墓。"
+    },
+    {
+      "id": "eg-tanis-nrt-ii",
+      "name": "塔尼斯Ⅱ号王墓（墓主未定）（NRT II）",
+      "kind": "rock_or_built_royal_tomb",
+      "group": false,
+      "parent": "eg-tanis-royal",
+      "period": "周",
+      "localPeriod": "第二十二王朝；约前10—前8世纪；王朝分期范围，非精确建墓年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-tanis",
+        "egypt-tanis-2024",
+        "egypt-tanis-geographic"
+      ],
+      "coordinateSource": "egypt-tanis-geographic",
+      "locationStatus": "estimated_from_official_orthophoto",
+      "notes": "2024年考古平面图将此墓标为匿名，并对帕米一世提出问号；不采用早期塔克洛特一世的确定归属。"
+    },
+    {
+      "id": "eg-tanis-nrt-iii",
+      "name": "普苏森尼斯一世墓（NRT III）",
+      "kind": "rock_or_built_royal_tomb",
+      "group": false,
+      "parent": "eg-tanis-royal",
+      "period": "周",
+      "localPeriod": "第二十一至第二十二王朝；约前1039年起营建，后续迁葬复用（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-tanis",
+        "egypt-tanis-2024",
+        "egypt-tanis-geographic"
+      ],
+      "coordinateSource": "egypt-tanis-geographic",
+      "locationStatus": "estimated_from_official_orthophoto",
+      "notes": "包含普苏森尼斯一世及阿蒙涅莫佩的安葬，前室后来安置多位国王的遗骸；2024年图件也标有穆特诺杰梅特／阿蒙涅莫佩的复用关系。将同一实体墓作为一条记录，不按每位国王重复造点。"
+    },
+    {
+      "id": "eg-tanis-nrt-iv",
+      "name": "塔尼斯Ⅳ号王墓（墓主未定）（NRT IV）",
+      "kind": "rock_or_built_royal_tomb",
+      "group": false,
+      "parent": "eg-tanis-royal",
+      "period": "周",
+      "localPeriod": "第二十一王朝；约前11—前10世纪；王朝分期范围，非精确建墓年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-tanis",
+        "egypt-tanis-2024",
+        "egypt-tanis-geographic"
+      ],
+      "coordinateSource": "egypt-tanis-geographic",
+      "locationStatus": "estimated_from_official_orthophoto",
+      "notes": "2024年考古队平面图将Ⅳ号墓标为第二十一王朝匿名墓；不据较早目录直接认定为阿蒙涅莫佩原陵。"
+    },
+    {
+      "id": "eg-tanis-nrt-v",
+      "name": "舍顺克三世营建墓（NRT V）",
+      "kind": "rock_or_built_royal_tomb",
+      "group": false,
+      "parent": "eg-tanis-royal",
+      "period": "周",
+      "localPeriod": "第二十二王朝；约前9—前8世纪；营建及使用分期（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-tanis",
+        "egypt-tanis-2024",
+        "egypt-tanis-geographic"
+      ],
+      "coordinateSource": "egypt-tanis-geographic",
+      "locationStatus": "estimated_from_official_orthophoto",
+      "notes": "传统名称为舍顺克三世墓；考古队现说明其由三世准备但未供三世最终安葬，后由舍顺克四世使用。名称、营建者与实际安葬者分开表述。"
+    },
+    {
+      "id": "eg-tanis-nrt-vi",
+      "name": "塔尼斯Ⅵ号王墓（墓主未定）（NRT VI）",
+      "kind": "rock_or_built_royal_tomb",
+      "group": false,
+      "parent": "eg-tanis-royal",
+      "period": "周",
+      "localPeriod": "第二十二王朝；约前10—前8世纪；王朝分期范围，非精确建墓年（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-tanis",
+        "egypt-tanis-2024",
+        "egypt-tanis-geographic"
+      ],
+      "coordinateSource": "egypt-tanis-geographic",
+      "locationStatus": "estimated_from_official_orthophoto",
+      "notes": "2024年考古队平面图将Ⅵ号墓标为第二十二王朝匿名墓，不用推测人物姓名替代墓号。"
+    },
+    {
+      "id": "eg-tanis-nrt-vii",
+      "name": "塔尼斯Ⅶ号王墓（墓主未定）（NRT VII）",
+      "kind": "rock_or_built_royal_tomb",
+      "group": false,
+      "parent": "eg-tanis-royal",
+      "period": "周",
+      "localPeriod": "第二十一至第二十二王朝；普苏森尼斯一世之后、奥索尔孔二世之前；约前11—前9世纪的相对分期（营建／使用时代，不是生卒年）",
+      "sources": [
+        "egypt-tanis",
+        "egypt-tanis-2024",
+        "egypt-tanis-geographic"
+      ],
+      "coordinateSource": "egypt-tanis-geographic",
+      "locationStatus": "estimated_from_official_orthophoto",
+      "notes": "2024年图件标为匿名墓，相对年代晚于普苏森尼斯一世、早于奥索尔孔二世；不把斯门代斯等推测墓主写成定论。"
+    }
+  ],
+  "excluded": [
+    {
+      "id": "osm-way-1240260881",
+      "reason": "位于王后谷但误称KV62，不能认作图坦卡蒙墓。"
+    },
+    {
+      "id": "osm-node-11595331869",
+      "reason": "名称、墓号QV55、项目链接与奈费尔塔里QV66不一致。"
+    },
+    {
+      "id": "osm-node-768779096",
+      "reason": "森乌塞尔特三世名称点与已命名金字塔几何相距较远；采用独立原始金字塔几何而非复制该点。"
+    },
+    {
+      "id": "vici-70080",
+      "reason": "Vici候选点位于遗址东侧，与法国考古队对陵群在阿蒙围区西南部的描述不符，暂不入图。",
+      "rejectedCoordinate": {
+        "lat": 30.974449,
+        "lng": 31.891794
+      },
+      "sourceUrl": "https://vici.org/vici/70080/?lang=en",
+      "archaeologicalSource": "https://www.chronocarto.ens.fr/wpchrono/projet/tanis/"
+    }
+  ],
+  "limitations": [
+    "原始TMP测绘坐标为当地网格，未未经转换当作WGS84。",
+    "不把世界遗产孟菲斯或底比斯总范围、神庙、现代博物馆木乃伊位置当作单陵。",
+    "集团条目只汇总已收录成员，记录总数不是实体墓数。",
+    "本轮复用现有皇陵点层；未绘制未经核证的陵园或地下墓室范围。"
+  ],
+  "validatedSourceCount": 849,
+  "mappedEgyptianRecords": 76,
+  "pendingEgyptianRecords": 0,
+  "tanisSupplement": {
+    "records": 7,
+    "locatedExistingGroup": true,
+    "sourceCRS": "EPSG:32636",
+    "targetCRS": "EPSG:4326",
+    "officialMapUrl": "https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7",
+    "reproduction": {
+      "sourceCRS": "EPSG:32636",
+      "targetCRS": "EPSG:4326",
+      "software": "pyproj 3.8.0",
+      "group": {
+        "easting": 393111.16,
+        "northing": 3427599.92,
+        "lng": 31.88064853,
+        "lat": 30.97708589
+      },
+      "tombs": [
+        {
+          "tomb": "I",
+          "pixel": [
+            750,
+            850
+          ],
+          "image": "tanis-official-core.png",
+          "bbox": [
+            393085,
+            3427580,
+            393120,
+            3427618
+          ],
+          "size": [
+            1200,
+            1303
+          ],
+          "easting": 393106.875,
+          "northing": 3427593.21105142,
+          "lng": 31.88060437,
+          "lat": 30.97702497
+        },
+        {
+          "tomb": "II",
+          "pixel": [
+            940,
+            975
+          ],
+          "image": "tanis-official-core.png",
+          "bbox": [
+            393085,
+            3427580,
+            393120,
+            3427618
+          ],
+          "size": [
+            1200,
+            1303
+          ],
+          "easting": 393112.4166666667,
+          "northing": 3427589.565617805,
+          "lng": 31.88066278,
+          "lat": 30.97699259
+        },
+        {
+          "tomb": "III",
+          "pixel": [
+            630,
+            500
+          ],
+          "image": "tanis-official-core.png",
+          "bbox": [
+            393085,
+            3427580,
+            393120,
+            3427618
+          ],
+          "size": [
+            1200,
+            1303
+          ],
+          "easting": 393103.375,
+          "northing": 3427603.418265541,
+          "lng": 31.88056665,
+          "lat": 30.97711674
+        },
+        {
+          "tomb": "IV",
+          "pixel": [
+            205,
+            450
+          ],
+          "image": "tanis-official-core.png",
+          "bbox": [
+            393085,
+            3427580,
+            393120,
+            3427618
+          ],
+          "size": [
+            1200,
+            1303
+          ],
+          "easting": 393090.9791666667,
+          "northing": 3427604.876438987,
+          "lng": 31.88043671,
+          "lat": 30.97712877
+        },
+        {
+          "tomb": "VI",
+          "pixel": [
+            225,
+            980
+          ],
+          "image": "tanis-official-core.png",
+          "bbox": [
+            393085,
+            3427580,
+            393120,
+            3427618
+          ],
+          "size": [
+            1200,
+            1303
+          ],
+          "easting": 393091.5625,
+          "northing": 3427589.4198004603,
+          "lng": 31.88044444,
+          "lat": 30.97698938
+        },
+        {
+          "tomb": "VII",
+          "pixel": [
+            590,
+            1055
+          ],
+          "image": "tanis-official-core.png",
+          "bbox": [
+            393085,
+            3427580,
+            393120,
+            3427618
+          ],
+          "size": [
+            1200,
+            1303
+          ],
+          "easting": 393102.2083333333,
+          "northing": 3427587.2325402917,
+          "lng": 31.88055614,
+          "lat": 30.97697061
+        },
+        {
+          "tomb": "V",
+          "pixel": [
+            185,
+            390
+          ],
+          "image": "tanis-official-necropolis-wms.png",
+          "bbox": [
+            393061.13,
+            3427546.67,
+            393161.19,
+            3427653.17
+          ],
+          "size": [
+            1000,
+            1064
+          ],
+          "easting": 393079.6411,
+          "northing": 3427614.1333458647,
+          "lng": 31.88031702,
+          "lat": 30.97721125
+        }
+      ]
+    },
+    "preservation": {
+      "baselineItems": 472,
+      "unchangedExcept": [
+        "eg-tanis-royal"
+      ],
+      "sha256Unchanged": "6b0e553c30b1901f2189d61a300efb5e74b9dfdd6fe19b2a3885965994999c4b"
+    }
+  }
+}
