@@ -1,0 +1,591 @@
+{
+  "date": "2026-10-17",
+  "scope": "底格里斯河—幼发拉底河两河流域（含叙利亚上游），分批逐城核验；不声称穷尽所有城邦、附属王廷及后世地方政权。",
+  "baseline": {
+    "roots": 395,
+    "records": 622,
+    "sites": 288,
+    "features": 2573
+  },
+  "preservation": {
+    "roots": "3bb8831b7811a1e28b2c7d31749073d855b143c9b028f74e8c4429e97956b052",
+    "records": "2a83da360ac33324887f0d8ad4257639a2a9bb25adbf6ae38ca1b14baeb87973",
+    "sites": "bf7662394fe67d6d22910b368f6cdb30b1ed8cd0bea94cedee0aa96b5adc70d9",
+    "features": "7e778dd3d1f835226be8f25999a3dd3943cc2155e43ce51431ed18762a46b0d6",
+    "worldHeritage": "5f15e3d2a722ed2c15ce57201ac8739f2fd90437e07569ab9515bbfe36de3a09"
+  },
+  "addedRoots": 10,
+  "addedRecords": 10,
+  "addedSites": 10,
+  "addedFeatures": 13,
+  "addedCityWallCircuits": 0,
+  "counts": {
+    "roots": 405,
+    "records": 632,
+    "sites": 298,
+    "features": 2586
+  },
+  "existing": [
+    {
+      "key": "babylon",
+      "name": "巴比伦",
+      "status": "existing_preserved",
+      "identity": "古巴比伦与新巴比伦王国都城",
+      "source": "https://whc.unesco.org/en/list/278/",
+      "geometryCount": 9,
+      "boundaryReview": "已接入原始闭合墙界参考及现存遗迹；其他分期完整城界待核"
+    },
+    {
+      "key": "ashur",
+      "name": "亚述／阿淑尔",
+      "status": "existing_preserved",
+      "identity": "亚述帝国早期都城",
+      "source": "https://whc.unesco.org/en/list/1130/",
+      "geometryCount": 4,
+      "boundaryReview": "已接入宫堡或遗址围区；完整分期城界待核"
+    },
+    {
+      "key": "nimrud",
+      "name": "尼姆鲁德／卡尔胡",
+      "status": "existing_preserved",
+      "identity": "新亚述帝国都城",
+      "source": "https://archeologie.culture.gouv.fr/mossoul-museum/en/nimrud-0",
+      "geometryCount": 1,
+      "boundaryReview": "已接入宫堡或遗址围区；完整分期城界待核"
+    },
+    {
+      "key": "dur-sharrukin",
+      "name": "杜尔沙鲁金",
+      "status": "existing_preserved",
+      "identity": "新亚述萨尔贡二世短期都城",
+      "source": "https://archeologie.culture.gouv.fr/mossoul-museum/en/khorsabad",
+      "geometryCount": 1,
+      "boundaryReview": "已接入原始墙段及遗迹；完整分期城界待核"
+    },
+    {
+      "key": "nineveh",
+      "name": "尼尼微",
+      "status": "existing_preserved",
+      "identity": "新亚述帝国都城",
+      "source": "https://www.britishmuseum.org/collection/galleries/assyria-nineveh",
+      "geometryCount": 3,
+      "boundaryReview": "已接入原始墙段及遗迹；完整分期城界待核"
+    },
+    {
+      "key": "ur",
+      "name": "乌尔",
+      "status": "existing_preserved",
+      "identity": "苏美尔城邦与乌尔第三王朝都城",
+      "source": "https://archeologie.culture.gouv.fr/en/glossary/ur",
+      "geometryCount": 5,
+      "boundaryReview": "已接入宫堡或遗址围区；完整分期城界待核"
+    },
+    {
+      "key": "uruk",
+      "name": "乌鲁克",
+      "status": "existing_preserved",
+      "identity": "苏美尔乌鲁克城邦都城",
+      "source": "https://www.metmuseum.org/it/essays/uruk-the-first-city",
+      "geometryCount": 4,
+      "boundaryReview": "已接入原始闭合墙界参考及现存遗迹；其他分期完整城界待核"
+    },
+    {
+      "key": "hatra",
+      "name": "哈特拉",
+      "status": "existing_preserved",
+      "identity": "哈特拉王国都城",
+      "source": "https://whc.unesco.org/en/list/277/",
+      "geometryCount": 1,
+      "boundaryReview": "已接入原始闭合墙界参考及现存遗迹；其他分期完整城界待核"
+    },
+    {
+      "key": "ctesiphon",
+      "name": "泰西封",
+      "status": "existing_preserved",
+      "identity": "帕提亚与萨珊王朝王都",
+      "source": "https://www.metmuseum.org/pt/essays/ctesiphon",
+      "geometryCount": 1,
+      "boundaryReview": "已接入宫堡或遗址围区；完整分期城界待核"
+    },
+    {
+      "key": "samarra",
+      "name": "萨迈拉",
+      "status": "existing_preserved",
+      "identity": "阿拔斯哈里发国都城",
+      "source": "https://whc.unesco.org/en/list/276/",
+      "geometryCount": 5,
+      "boundaryReview": "已接入原始墙段及遗迹；完整分期城界待核"
+    },
+    {
+      "key": "baghdad",
+      "name": "巴格达",
+      "status": "existing_preserved",
+      "identity": "阿拔斯哈里发国都城",
+      "source": "https://whc.unesco.org/en/list/276/",
+      "geometryCount": 3,
+      "boundaryReview": "已接入原始墙段及遗迹；完整分期城界待核"
+    },
+    {
+      "key": "erbil",
+      "name": "埃尔比勒",
+      "status": "existing_preserved",
+      "identity": "古代政治与宗教中心、历史城堡",
+      "source": "https://whc.unesco.org/en/list/1437/",
+      "geometryCount": 1,
+      "boundaryReview": "已接入宫堡或遗址围区；完整分期城界待核"
+    }
+  ],
+  "rows": [
+    {
+      "key": "kish",
+      "name": "基什",
+      "enName": "Kish",
+      "country": "伊拉克",
+      "center": [
+        44.5852547,
+        32.5519776
+      ],
+      "identity": "苏美尔基什城邦都城",
+      "enIdentity": "Capital of the Sumerian city-state of Kish",
+      "regime": "基什城邦",
+      "years": "约前3千纪，不采用王表神话君主的精确年代",
+      "periods": [
+        "传说"
+      ],
+      "source": "https://umdb.um.u-tokyo.ac.jp/DKoukoga/iraq/recordlist.php?-max=all&-skip=0",
+      "note": "基什由乌海米尔、因加拉等多个遗址丘组成。早王朝城邦与后世神庙分期表达；原始OSM的castle_wall只是数十米建筑墙段，身份不足，不作为全城墙接入。完整分期城界待核。",
+      "enNote": "Kish comprises several mounds including Uhaimir and Ingharra. The dated city-state is distinguished from later temples. Unidentified short OSM castle_wall traces are excluded rather than promoted to a city circuit.",
+      "status": "added_confirmed_capital",
+      "features": [
+        {
+          "id": "kish-way-545656327",
+          "name": "乌海米尔遗址丘（基什西部）",
+          "scope": "mapped_archaeological_extent",
+          "geometrySha256": "85c1eedee1aef4284e995d50262e27b8f6e4a9fef0cb67f03925ce32c0779d89",
+          "sourceUrl": "https://www.openstreetmap.org/way/545656327"
+        },
+        {
+          "id": "kish-way-192582431",
+          "name": "因加拉遗址丘（基什东部）",
+          "scope": "mapped_archaeological_extent",
+          "geometrySha256": "a7f286c5d4ccbb124489b130d0b691e6ebcf11020198d2f7c437d6e737ce9687",
+          "sourceUrl": "https://www.openstreetmap.org/way/192582431"
+        }
+      ],
+      "fullCityWall": "pending_verified_vector_or_georeference",
+      "palaceStatus": "not_mapped"
+    },
+    {
+      "key": "isin",
+      "name": "伊辛",
+      "enName": "Isin / Ishan Bahriyat",
+      "country": "伊拉克",
+      "center": [
+        45.268871,
+        31.8857857
+      ],
+      "identity": "伊辛第一王朝都城",
+      "enIdentity": "Capital of the First Dynasty of Isin",
+      "regime": "伊辛第一王朝",
+      "years": "约前20—前18世纪",
+      "periods": [
+        "夏商"
+      ],
+      "source": "https://www.vorderas-archaeologie.uni-muenchen.de/forschung/abgeschl_projekte/isin/index.html",
+      "note": "慕尼黑大学确认其为公元前2千纪初独立王都。古拉神庙圣区围墙不等于全城墙；东南部建筑仅被提出可能为宫殿，不作确定王宫。伊辛第二王朝名称不等于全期都城位于伊辛。完整分期城界待核。",
+      "enNote": "LMU identifies an independent capital in the early second millennium BCE. The Gula temple enclosure is not the city wall; a proposed southeastern palace remains uncertain. The later dynastic name does not establish continuous residence at Isin.",
+      "status": "added_confirmed_capital",
+      "features": [
+        {
+          "id": "isin-way-1117714628",
+          "name": "伊辛遗址区（标绘参考）",
+          "scope": "mapped_archaeological_extent",
+          "geometrySha256": "543dd92bbd09893156772ca51f3a31c7feb443a7f5b5bd2c1685272917f3f749",
+          "sourceUrl": "https://www.openstreetmap.org/way/1117714628"
+        }
+      ],
+      "fullCityWall": "pending_verified_vector_or_georeference",
+      "palaceStatus": "not_mapped"
+    },
+    {
+      "key": "larsa",
+      "name": "拉尔萨",
+      "enName": "Larsa / Tell es-Senkereh",
+      "country": "伊拉克",
+      "center": [
+        45.8535432,
+        31.2819081
+      ],
+      "identity": "拉尔萨王国都城",
+      "enIdentity": "Capital of the kingdom of Larsa",
+      "regime": "拉尔萨王国",
+      "years": "约前2025—前1763（采用中年表，早期独立阶段有讨论）",
+      "periods": [
+        "夏商"
+      ],
+      "source": "https://archeologie.culture.gouv.fr/larsa/fr",
+      "note": "法国文化部确认都城身份；CNRS团队已识别约5376米城防走向。已有城墙研究不等于已取得可直接上图的测绘矢量。努尔阿达德宫未完全发掘，部分入口与外立面不明。完整城墙图件配准待核。",
+      "enNote": "The French Ministry of Culture identifies a capital; CNRS reports a 5,376 m wall trace. This research does not supply an immediately usable surveyed vector. Nur-Adad palace is incompletely excavated, with entrances and facades still unknown.",
+      "status": "added_confirmed_capital",
+      "features": [
+        {
+          "id": "larsa-way-1424112754",
+          "name": "拉尔萨遗址区（非城墙界）",
+          "scope": "mapped_archaeological_extent",
+          "geometrySha256": "c52074e771ac92ad3d0d0d41824f11e65be31d268cc9e20bb4a57237ab436a39",
+          "sourceUrl": "https://www.openstreetmap.org/way/1424112754"
+        }
+      ],
+      "fullCityWall": "pending_verified_vector_or_georeference",
+      "palaceStatus": "not_mapped"
+    },
+    {
+      "key": "eshnunna",
+      "name": "埃什努纳",
+      "enName": "Eshnunna / Tell Asmar",
+      "country": "伊拉克",
+      "center": [
+        44.7287402,
+        33.4851753
+      ],
+      "identity": "埃什努纳王国都城",
+      "enIdentity": "Capital of the independent kingdom of Eshnunna",
+      "regime": "埃什努纳王国",
+      "years": "约前20—前18世纪（独立王国阶段）",
+      "periods": [
+        "夏商"
+      ],
+      "source": "https://isac.uchicago.edu/sites/oi.uchicago.edu/files/uploads/shared/docs/oip43.pdf",
+      "note": "芝加哥大学发掘报告明确区分乌尔第三王朝属城与后来独立公国都城。统治者宫殿及舒辛神庙为不同建筑；未取得可靠轮廓前不绘制随意宫城。完整分期城界待核。",
+      "enNote": "The excavation report distinguishes provincial Eshnunna under Ur III from the later independent capital. The Rulers Palace and Shu-Sin temple are separate buildings; neither a palace circuit nor a city wall is invented.",
+      "status": "added_confirmed_capital",
+      "features": [
+        {
+          "id": "eshnunna-way-307249233",
+          "name": "埃什努纳遗址区（泰勒阿斯马尔）",
+          "scope": "mapped_archaeological_extent",
+          "geometrySha256": "0cf60fd805d5a6ab933f4f8139025a9cdced4b47d12b58b85e697f462dd5a38d",
+          "sourceUrl": "https://www.openstreetmap.org/way/307249233"
+        }
+      ],
+      "fullCityWall": "pending_verified_vector_or_georeference",
+      "palaceStatus": "not_mapped"
+    },
+    {
+      "key": "lagash",
+      "name": "拉格什",
+      "enName": "Lagash / Tell al-Hiba",
+      "country": "伊拉克",
+      "center": [
+        46.4123113,
+        31.4198727
+      ],
+      "identity": "苏美尔拉格什城邦政治中心",
+      "enIdentity": "Political capital of the Sumerian state of Lagash",
+      "regime": "拉格什城邦",
+      "years": "约前3千纪中叶（早王朝时期）",
+      "periods": [
+        "传说"
+      ],
+      "source": "https://www.penn.museum/research/project.php?pid=219",
+      "note": "拉格什政体包含拉格什、吉尔苏及尼纳等城址，此根点仅为Tell al-Hiba。宾夕法尼亚大学已发掘神庙及行政建筑；不把政体疆域当成此城城界，亦不将其与吉尔苏合并。完整分期城界待核。",
+      "enNote": "The state of Lagash comprised distinct cities. This root is Tell al-Hiba only, separate from Girsu; the polity territory is not a city boundary. Penn excavations identify temples and administrative buildings.",
+      "status": "added_confirmed_capital",
+      "features": [
+        {
+          "id": "lagash-way-1272837412",
+          "name": "拉格什遗址区（希巴丘）",
+          "scope": "mapped_archaeological_extent",
+          "geometrySha256": "47ac615c1d23f995fa4741f8bf9210948c5421fcd7cd11d3234fe7f4a6b640ae",
+          "sourceUrl": "https://www.openstreetmap.org/way/1272837412"
+        }
+      ],
+      "fullCityWall": "pending_verified_vector_or_georeference",
+      "palaceStatus": "not_mapped"
+    },
+    {
+      "key": "girsu",
+      "name": "吉尔苏",
+      "enName": "Girsu / Tello",
+      "country": "伊拉克",
+      "center": [
+        46.1788985,
+        31.5623554
+      ],
+      "identity": "拉格什王国王廷与政治中心",
+      "enIdentity": "Royal and political capital of the state of Lagash",
+      "regime": "拉格什王国吉尔苏王廷",
+      "years": "约前3千纪中后期（含古地亚时期；不假定连续迁都年表）",
+      "periods": [
+        "传说"
+      ],
+      "source": "https://www.britishmuseum.org/our-work/international/iraq-scheme/tello",
+      "note": "与Tell al-Hiba分址。大英博物馆确认王宫、宁吉尔苏神庙等遗存；不能把所有“宫殿丘”旧解均当成确定宫殿，现代保护范围不作为全城墙。完整分期城界待核。",
+      "enNote": "Separate from Tell al-Hiba. British Museum research identifies royal and sacred remains; older interpretations of the Mound of the Palace are not all adopted as established palaces. Modern site limits do not establish the ancient city wall.",
+      "status": "added_confirmed_capital",
+      "features": [
+        {
+          "id": "girsu-way-307334507",
+          "name": "吉尔苏遗址区（特洛）",
+          "scope": "mapped_archaeological_extent",
+          "geometrySha256": "d865379b3301b17fa73d2b85e5b2db3e49331f898b9eb5df8cf90265586aefde",
+          "sourceUrl": "https://www.openstreetmap.org/way/307334507"
+        }
+      ],
+      "fullCityWall": "pending_verified_vector_or_georeference",
+      "palaceStatus": "not_mapped"
+    },
+    {
+      "key": "dur-kurigalzu",
+      "name": "杜尔库里加尔祖",
+      "enName": "Dur-Kurigalzu / Aqar Quf",
+      "country": "伊拉克",
+      "center": [
+        44.2022543,
+        33.3537591
+      ],
+      "identity": "巴比伦加喜特王朝王都",
+      "enIdentity": "Royal capital of Kassite Babylonia",
+      "regime": "巴比伦加喜特王朝",
+      "years": "约前14—前12世纪（建城后王都阶段）",
+      "periods": [
+        "夏商"
+      ],
+      "source": "https://whc.unesco.org/en/tentativelists/6797/",
+      "note": "UNESCO预备名单资料明确其为王都，有塔庙、王宫及宗教建筑。塔庙台基不等于王宫或完整城郭；预备名单不是正式世界遗产，不新增虚假的世界遗产合并身份。完整城墙与王宫围界待核。",
+      "enNote": "The UNESCO Tentative List identifies the Kassite royal capital with ziggurat, palaces and temples. A ziggurat footprint is not a palace or city circuit; tentative listing is not World Heritage inscription.",
+      "status": "added_confirmed_capital",
+      "features": [
+        {
+          "id": "dur-kurigalzu-way-331568741",
+          "name": "杜尔库里加尔祖塔庙（现存及修复）",
+          "scope": "mapped_ziggurat_core",
+          "geometrySha256": "fba431e3b3e338e52a1b5121ec5034bccfcef2a950e46193a4ce94a5abe6522b",
+          "sourceUrl": "https://www.openstreetmap.org/way/331568741"
+        }
+      ],
+      "fullCityWall": "pending_verified_vector_or_georeference",
+      "palaceStatus": "not_mapped"
+    },
+    {
+      "key": "seleucia-tigris",
+      "name": "底格里斯河畔塞琉西亚",
+      "enName": "Seleucia on the Tigris",
+      "country": "伊拉克",
+      "center": [
+        44.5206719,
+        33.0941564
+      ],
+      "identity": "塞琉古王朝早期都城与东方王廷",
+      "enIdentity": "Early Seleucid capital and eastern royal centre",
+      "regime": "塞琉古王朝东方王廷",
+      "years": "约前4世纪末—前3世纪（早期及东方王廷阶段）",
+      "periods": [
+        "周"
+      ],
+      "source": "https://www.centroscavitorino.it/en/siti-di-scavo/seleucia-2/",
+      "note": "与邻近泰西封及萨珊新城韦赫阿尔达希尔分址。都城地位不延伸为整个帕提亚时期；档案馆、广场和住宅区不能混称王宫。原始OSM保护区边界不作为历史城墙。完整分期城界待核。",
+      "enNote": "Distinct from Ctesiphon and Veh Ardashir. Royal-capital status is not extended to the entire Parthian period. Archives and residential remains are not palaces; modern protected-area limits are not ancient walls.",
+      "status": "added_confirmed_capital",
+      "features": [
+        {
+          "id": "seleucia-tigris-way-353551437",
+          "name": "塞琉西亚遗址区（非全城墙界）",
+          "scope": "mapped_archaeological_extent",
+          "geometrySha256": "a31e9666f841cc3f37405bc670291b4bea4059a68f6296cfe2646d18f0f49cfb",
+          "sourceUrl": "https://www.openstreetmap.org/way/353551437"
+        }
+      ],
+      "fullCityWall": "pending_verified_vector_or_georeference",
+      "palaceStatus": "not_mapped"
+    },
+    {
+      "key": "mari",
+      "name": "马里",
+      "enName": "Mari / Tell Hariri",
+      "country": "叙利亚",
+      "center": [
+        40.8885732,
+        34.5503486
+      ],
+      "identity": "马里城邦与王国都城",
+      "enIdentity": "Capital of the city-state and kingdom of Mari",
+      "regime": "马里城邦及王国",
+      "years": "约前3千纪中叶—前18世纪（含中断与重建阶段）",
+      "periods": [
+        "传说",
+        "夏商"
+      ],
+      "source": "https://archeologie.culture.gouv.fr/mari/fr",
+      "note": "法国文化部确认其为两河流域都城。外堤、内城防与王宫圣区不同，不能依据约2.9千米直径画一个圆代替城墙。王宫遗迹与城址标绘分开；完整双重城防矢量待核。",
+      "enNote": "The official French mission identifies Mari as a Mesopotamian capital. Outer flood defences, inner city fortifications and the sacred palace enclosure are distinct; no circular boundary is invented from a published diameter.",
+      "status": "added_confirmed_capital",
+      "features": [
+        {
+          "id": "mari-way-226857776",
+          "name": "马里遗址区（非完整双重城防）",
+          "scope": "mapped_archaeological_extent",
+          "geometrySha256": "f3fe846292dd550d0794cebb087c1ec6ab9f4a9f263a74c1e1cbda90db4901e0",
+          "sourceUrl": "https://www.openstreetmap.org/way/226857776"
+        },
+        {
+          "id": "mari-way-964056563",
+          "name": "马里大王宫遗址（标绘范围）",
+          "scope": "mapped_palace_remains",
+          "geometrySha256": "40395fb0a94f7fb070118e5f144f9c7b70c798e2933d816b74139727d3528673",
+          "sourceUrl": "https://www.openstreetmap.org/way/964056563"
+        },
+        {
+          "id": "mari-way-858246882",
+          "name": "马里伊什塔尔神庙遗址",
+          "scope": "mapped_temple_remains",
+          "geometrySha256": "e9fff055c8190effb7093cbf0cea4fdb6f221b2da458c04348bff84dd1152751",
+          "sourceUrl": "https://www.openstreetmap.org/way/858246882"
+        }
+      ],
+      "fullCityWall": "pending_verified_vector_or_georeference",
+      "palaceStatus": "mapped_remains"
+    },
+    {
+      "key": "kufa",
+      "name": "库法",
+      "enName": "Kufa",
+      "country": "伊拉克",
+      "center": [
+        44.4,
+        32.03
+      ],
+      "identity": "正统哈里发阿里时期都城",
+      "enIdentity": "Capital under the Rashidun caliph Ali",
+      "regime": "正统哈里发阿里政权",
+      "years": "656—661",
+      "periods": [
+        "隋唐"
+      ],
+      "source": "https://site.unibo.it/eduu/en/work-package-1-archaeological-cultural-and-environmental-research/results/libricino-kufa-eng-nuovo-font.pdf/@@download/file/Libricino%20Kufa%20eng%20nuovo%20font.pdf",
+      "note": "建城、驻军城与656—661年都城阶段分开。现存大清真寺含后世修建；总督宫遗址不等于整个城市，后来的地区首府身份不延长为国家都城。完整早期城界待核。",
+      "enNote": "The foundation as a garrison town is separate from its capital phase in 656–661. The mosque includes later rebuilding; the governor palace is not the whole city. Later administrative roles are not treated as a continuous national capital.",
+      "status": "added_confirmed_capital",
+      "features": [
+        {
+          "id": "kufa-way-1154992443",
+          "name": "库法总督宫遗址（含后世改建）",
+          "scope": "mapped_palace_remains",
+          "geometrySha256": "d20f76df13179fa3fbec07b64fe97a39ac8170aa4302c972375464f63f3c4c58",
+          "sourceUrl": "https://www.openstreetmap.org/way/1154992443"
+        }
+      ],
+      "fullCityWall": "pending_verified_vector_or_georeference",
+      "palaceStatus": "mapped_remains"
+    }
+  ],
+  "withheld": [
+    {
+      "key": "akkad",
+      "name": "阿卡德／阿加德",
+      "status": "confirmed_capital_unlocated",
+      "periods": [
+        "传说"
+      ],
+      "years": "约前24—前22世纪（年代体系存在差异）",
+      "source": "https://www.getty.edu/vow/TGNFullDisplay?english=N&find=1002023&nation=&place=&subjectid=7032822",
+      "note": "帝国都城身份明确，具体城址仍未知。无地图根点、无推测围墙。"
+    },
+    {
+      "key": "basra",
+      "name": "巴士拉",
+      "status": "administrative_centre_not_promoted",
+      "source": "https://www.iranicaonline.org/articles/basra/",
+      "note": "驻军城、地区行政首府与国家都城分开；未找到足以确定本轮国家都城阶段的证据，且早期城址与现代巴士拉不完全重合。"
+    },
+    {
+      "key": "nippur",
+      "name": "尼普尔",
+      "status": "religious_centre_not_promoted",
+      "source": "https://www.metmuseum.org/art/collection/search/324915",
+      "note": "宗教中心不自动等于独立国家都城；王室建设与政治首都身份分开。"
+    },
+    {
+      "key": "eridu",
+      "name": "埃里都",
+      "status": "political_capital_identity_pending",
+      "source": "https://whc.unesco.org/en/list/1481/",
+      "note": "考古城市及宗教中心可证；王表洪水前王权传说不能直接作为已核实的政治都城年表。"
+    },
+    {
+      "key": "umma",
+      "name": "乌玛",
+      "status": "next_identity_and_geometry_review",
+      "source": "https://www.metmuseum.org/exhibitions/listings/2003/art-of-the-first-cities",
+      "note": "城邦政治中心的逐期年代与两个相邻城址仍需细分核对；本轮不以泛称城市清单补齐地图。"
+    },
+    {
+      "key": "terqa",
+      "name": "特尔卡",
+      "status": "confirmed_capital_geometry_pending",
+      "source": "https://archeologie.culture.gouv.fr/proche-orient/fr/ashara-et-sa-region",
+      "note": "法国文化部确认哈纳王国王都；具体王廷阶段和城防几何待下一项核验。"
+    },
+    {
+      "key": "nagar",
+      "name": "纳加尔／泰勒布拉克",
+      "status": "confirmed_capital_geometry_pending",
+      "source": "https://www.cambridge.org/core/journals/antiquity-project-gallery/article/recent-finds-from-the-northern-mesopotamian-city-of-tell-brak/E98B0311181DD15374DEAD2D4D1DF281",
+      "note": "发掘团队确认前3千纪中叶王都；米坦尼时期建筑不能直接当成同一期宫城。"
+    },
+    {
+      "key": "urkesh",
+      "name": "乌尔凯什／泰勒莫赞",
+      "status": "confirmed_capital_geometry_pending",
+      "source": "https://urkesh.org/urkesh_at_a_glance/en.htm",
+      "note": "发掘团队确认胡里安王国都城；已知图普基什宫殿需核对原始范围与分期。"
+    },
+    {
+      "key": "shubat-enlil",
+      "name": "舒巴特恩利尔／泰勒莱兰",
+      "status": "identity_chronology_and_geometry_pending",
+      "source": "https://iris.unito.it/bitstream/2318/1859249/4/Palmisano-2018.pdf",
+      "note": "沙姆希阿达德一世政治中心及早期舍赫纳时期需分别核对。"
+    },
+    {
+      "key": "harran",
+      "name": "哈兰",
+      "status": "identity_chronology_and_geometry_pending",
+      "source": "https://www.ktb.gov.tr/EN-120287/turkiye-on-the-world-heritage-list.html",
+      "note": "上两河流域土耳其境内城址；亚述末期与倭马亚晚期都城阶段应分别核证，不能将整段城市史当成连续都城。"
+    }
+  ],
+  "exclusions": [
+    {
+      "ids": [
+        888587176,
+        888587177,
+        888587178,
+        888587179,
+        888587180,
+        888587181
+      ],
+      "reason": "基什短小建筑墙线身份不足，不当成城市墙界",
+      "source": "https://scholar.harvard.edu/files/jasonur/files/ur_2021_saoc_71_sherds_to_landscapes_kish.pdf"
+    },
+    {
+      "ids": [
+        889504512
+      ],
+      "reason": "塞琉西亚重复保护区对象不当成全城墙界"
+    },
+    {
+      "ids": [
+        904889215
+      ],
+      "reason": "阿卡尔库夫现代纪念物不当成古代王宫"
+    }
+  ],
+  "larsaWallResearch": {
+    "source": "https://umrtemps.cnrs.fr/terrain/larsa/",
+    "reportedLengthMeters": 5376,
+    "vectorStatus": "not_obtained",
+    "openPaper": "https://hal.science/hal-05272647",
+    "downloadResult": "公开存档下载返回HTML防护页，未取得可检查图件；没有依据文字长度或遗址轮廓伪画城墙"
+  }
+}

@@ -6,7 +6,7 @@ assert.ok(data.features.every(f=>f.properties.sourceIds.length&&f.properties.are
 assert.ok(!data.features.some(f=>f.properties.city.includes('辽上京')));
 const beijing=data.features.find(f=>f.properties.city==='北京'&&f.properties.begin<=1866&&f.properties.end>=1866);
 assert.ok(beijing.geometry.coordinates.flat(2).every(p=>p[0]>116&&p[0]<117&&p[1]>39&&p[1]<41));
-const state={mapOverlays:{chinaAncientCapitals:true,ancientCapitalWalls:true,ancientCapitalWallYear:1866,ancientCapitalPeriods:{},ancientCapitalLiaoJinWalls:false,ancientCapitalYuanWalls:false,ancientCapitalQinHanWalls:false,ancientCapitalZhouWalls:false,ancientCapitalHanWeiWalls:false,ancientCapitalShangWalls:false,ancientCapitalSixDynastyWalls:false,ancientCapitalSouthernTangWalls:false}};
+const state={mapOverlays:{chinaAncientCapitals:true,ancientCapitalWalls:true,ancientCapitalWallYear:1866,ancientCapitalPeriods:{},ancientCapitalLiaoJinWalls:false,ancientCapitalYuanWalls:false,ancientCapitalQinHanWalls:false,ancientCapitalZhouWalls:false,ancientCapitalHanWeiWalls:false,ancientCapitalLegendaryWalls:false,ancientCapitalShangWalls:false,ancientCapitalSixDynastyWalls:false,ancientCapitalSouthernTangWalls:false}};
 const tang={type:"FeatureCollection",features:[{type:"Feature",properties:{Name:"南城牆",layer:"fx-1城牆雙鉤線"},geometry:beijing.geometry},{type:"Feature",properties:{Name:"朱雀門",layer:"fx-3城門"},geometry:beijing.geometry}]};
 tang.features.push({type:'Feature',properties:{Name:'含光殿線',layer:'fx-2宮城、皇城'},geometry:{type:'Polygon',coordinates:[[[1,0],[1,4],[0,4],[0,0],[-.001,0],[-.001,4.001],[1.001,4.001],[1.001,0],[1,0]]]}});
 global.fetch=async url=>({ok:true,json:async()=>String(url).startsWith("https:")?(decodeURIComponent(String(url)).includes("02唐長安")?tang:{type:"FeatureCollection",features:[]}):String(url).includes("research-extents")?JSON.parse(fs.readFileSync("data/ancient-capital-research-extents.geojson")):data});
@@ -56,7 +56,7 @@ const map={getSource:id=>sources.get(id),getLayer:id=>layers.get(id),getStyle:()
  await AncientCapitalWalls.sync(map);
  const colorFeatures=sources.get('ancient-capital-walls').data.features;
  assert.ok(colorFeatures.filter(f=>f.properties.research).every(f=>f.properties.color===(f.properties.waterFeature?'#277caa':f.properties.fixedLandmark?'#111111':HistoricalPeriods.colors[f.properties.period])));
- const jin=colorFeatures.find(f=>f.properties.sourceId==='beijing-jin-buriedarea-2019');assert.equal(jin.properties.color,HistoricalPeriods.colors['宋辽金西夏']);
+ assert(!colorFeatures.some(f=>f.properties.sourceId==='beijing-jin-buriedarea-2019'));const jin=colorFeatures.find(f=>f.properties.sourceId==='beijing-jin-reconstruction-outer');assert.equal(jin.properties.color,HistoricalPeriods.colors['宋辽金西夏']);
  for(const label of sources.get('ancient-capital-walls-labels').data.features)assert.ok(/^#[0-9a-f]{6}$/i.test(label.properties.color));
  const queries=[];let popup;
  global.maplibregl={Popup:class{setLngLat(){return this}setHTML(h){popup=h;return this}addTo(){return this}}};

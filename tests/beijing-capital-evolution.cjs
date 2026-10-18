@@ -6,7 +6,7 @@ assert.deepEqual(data.stages.map(s=>s.id),BeijingCapitalEvolution.ids);
 assert.ok(data.stages.every(s=>s.sources.length&&s.coordinates.length===2));
 assert.equal(data.stages.find(s=>s.id==='ji').boundaryStatus,'城界待配准');
 assert.ok(data.stages.find(s=>s.id==='liao').boundaryStatus.includes('天宁寺塔'));
-assert.ok(data.stages.find(s=>s.id==='jin').boundaryStatus.includes('不是外城城墙'));
+assert.ok(data.stages.find(s=>s.id==='jin').boundaryStatus.includes('五处考古锚点联合校准待完成'));
 const state={mapOverlays:{chinaAncientCapitals:true,beijingCapitalEvolution:true,beijingCapitalStage:'all',ancientCapitalWallYear:1866,ancientCapitalPeriods:{}}};
 let fetches=0;global.fetch=async url=>{fetches++;return {ok:true,json:async()=>url.includes('beijing-capital-evolution.json')?data:walls}};
 BeijingCapitalEvolution.init({state:()=>state,language:()=> 'zh'});

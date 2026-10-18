@@ -1,0 +1,297 @@
+{
+  "date": "2026-10-16",
+  "baselineFeatures": 812,
+  "baselineSha256": "6b754808214c03af930ead0aaedb65a1c3b6c23696acd0f3928230c66b7c0e81",
+  "capitalCatalogSha256": "47113d3bc5a15f552f8ab0fd67cbcb72a2e4330a82c4fc2b1be8b06413b2580c",
+  "added": [
+    {
+      "id": "beijing-mingqing-way-25109960",
+      "name": "正阳门城楼",
+      "geometry": "Polygon",
+      "geometrySha256": "bd2514c2eefc88b8f3ad4e17fa1430e12d630214ef55a59c7de82d90373cc60e",
+      "source": "https://www.openstreetmap.org/way/25109960",
+      "reference": "https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738090/wwgs/623147/index.html",
+      "historicalBegin": 1420,
+      "status": "现存／历代修缮建筑 · 原始实体标绘"
+    },
+    {
+      "id": "beijing-mingqing-way-439956436",
+      "name": "正阳门箭楼",
+      "geometry": "Polygon",
+      "geometrySha256": "ed8781a8b4177685322e9a960de29d578678afb2ee215f347183edf427021a03",
+      "source": "https://www.openstreetmap.org/way/439956436",
+      "reference": "https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738090/wwgs/623147/index.html",
+      "historicalBegin": 1439,
+      "status": "现存／历代修缮建筑 · 原始实体标绘"
+    },
+    {
+      "id": "beijing-mingqing-way-26514845",
+      "name": "德胜门箭楼",
+      "geometry": "Polygon",
+      "geometrySha256": "2390f7939b196fa7df9dab0ac8ad66819574fbcb998fe08049dc0aadd9bdb28e",
+      "source": "https://www.openstreetmap.org/way/26514845",
+      "reference": "https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742737/523418/index.html",
+      "historicalBegin": 1439,
+      "status": "现存／历代修缮建筑 · 原始实体标绘"
+    },
+    {
+      "id": "beijing-mingqing-way-228041535",
+      "name": "永定门城楼（2004年复建）",
+      "geometry": "Polygon",
+      "geometrySha256": "36a19524f76277345528e0f275ad952efef3482ef70738be2bd0387241bfcb3f",
+      "source": "https://www.openstreetmap.org/way/228041535",
+      "reference": "https://www.beijing.gov.cn/renwen/rwzyd/qxdw/zmzhzhpgj/ydm/202309/t20230919_3262110.html",
+      "historicalBegin": 1553,
+      "status": "现代复建 · 2004年城楼，不是明清原构"
+    },
+    {
+      "id": "beijing-mingqing-way-488647832",
+      "name": "北京内城东南角楼",
+      "geometry": "Polygon",
+      "geometrySha256": "73e60cffb0971656d19433decc1d3335049ab5799540fceab84a9afea470ae6a",
+      "source": "https://www.openstreetmap.org/way/488647832",
+      "reference": "https://www.beijing.gov.cn/renwen/rwzyd/gdwh/mcqwwgjgy/202107/t20210705_2429407.html",
+      "historicalBegin": 1436,
+      "status": "现存／历代修缮建筑 · 原始实体标绘"
+    },
+    {
+      "id": "beijing-mingqing-way-638156366",
+      "name": "午门",
+      "geometry": "Polygon",
+      "geometrySha256": "331640337bf51fbc01afec1aad4f3077f9ce025c7835f3f66844187b12ac7190",
+      "source": "https://www.openstreetmap.org/way/638156366",
+      "reference": "https://www.dpm.org.cn/explore/buildings.html",
+      "historicalBegin": 1420,
+      "status": "现存／历代修缮建筑 · 原始实体标绘"
+    },
+    {
+      "id": "beijing-mingqing-way-638741722",
+      "name": "神武门",
+      "geometry": "Polygon",
+      "geometrySha256": "e5f178ac87efe08fe9b19153e1bd12d570c1513e5ca232ec81008ae293945844",
+      "source": "https://www.openstreetmap.org/way/638741722",
+      "reference": "https://www.dpm.org.cn/explore/buildings.html",
+      "historicalBegin": 1420,
+      "status": "现存／历代修缮建筑 · 原始实体标绘"
+    },
+    {
+      "id": "beijing-mingqing-way-40343947",
+      "name": "东华门",
+      "geometry": "Polygon",
+      "geometrySha256": "11b91a32c05562234580c8e7557ff5a0c904af68edf5c5723d154d587f415e34",
+      "source": "https://www.openstreetmap.org/way/40343947",
+      "reference": "https://www.dpm.org.cn/explore/buildings.html",
+      "historicalBegin": 1420,
+      "status": "现存／历代修缮建筑 · 原始实体标绘"
+    },
+    {
+      "id": "beijing-mingqing-way-40343948",
+      "name": "西华门",
+      "geometry": "Polygon",
+      "geometrySha256": "0db4751b54ae5e81a802ae58c3eb2eac267c14c950c373b038a36757f54035b1",
+      "source": "https://www.openstreetmap.org/way/40343948",
+      "reference": "https://www.dpm.org.cn/explore/buildings.html",
+      "historicalBegin": 1420,
+      "status": "现存／历代修缮建筑 · 原始实体标绘"
+    },
+    {
+      "id": "beijing-mingqing-relation-8847697",
+      "name": "天安门",
+      "geometry": "Polygon",
+      "geometrySha256": "1d6da576a406675932f3e57a166772444eaed11ece79701f273a88fded4d2afe",
+      "source": "https://www.openstreetmap.org/relation/8847697",
+      "reference": "https://whc.unesco.org/en/list/1714/",
+      "historicalBegin": 1420,
+      "status": "皇城南门 · 历代重建及近现代修缮"
+    },
+    {
+      "id": "beijing-mingqing-way-25097188",
+      "name": "端门",
+      "geometry": "Polygon",
+      "geometrySha256": "70f4d2c2c3a1d9c8680f0f403ebadacbddbf7dcfa592a29f6a336430065a3d14",
+      "source": "https://www.openstreetmap.org/way/25097188",
+      "reference": "https://www.dpm.org.cn/explore/buildings.html",
+      "historicalBegin": 1420,
+      "status": "现存／历代修缮建筑 · 原始实体标绘"
+    },
+    {
+      "id": "beijing-mingqing-relation-9511883",
+      "name": "紫禁城宫城范围",
+      "geometry": "Polygon",
+      "geometrySha256": "18bd3b367bc98559ed78ad64eb2e044be5f8a3bfe0cb7f3a651a83ca11806405",
+      "source": "https://www.openstreetmap.org/relation/9511883",
+      "reference": "https://www.dpm.org.cn/explore/buildings.html",
+      "historicalBegin": 1420,
+      "status": "宫城现状围合参照 · 原始闭合关系"
+    },
+    {
+      "id": "beijing-mingqing-way-984088890",
+      "name": "明内城南墙遗存",
+      "geometry": "Polygon",
+      "geometrySha256": "77d9c350f1b1d503ffdb9cac17195079102dda7f18394827d704388e85506b77",
+      "source": "https://www.openstreetmap.org/way/984088890",
+      "reference": "https://wwj.beijing.gov.cn/bjww/362771/362779/dqpqgzdwwbhdw/523514/index.html",
+      "historicalBegin": 1420,
+      "status": "现存／历代修缮建筑 · 原始实体标绘"
+    },
+    {
+      "id": "beijing-mingqing-way-30835267",
+      "name": "明内城东墙遗存",
+      "geometry": "LineString",
+      "geometrySha256": "aabffa73e2f8db21c06fe0e4b2b6065e1a5cff57bc1784062e0b3de166dfae88",
+      "source": "https://www.openstreetmap.org/way/30835267",
+      "reference": "https://wwj.beijing.gov.cn/bjww/362771/362779/dqpqgzdwwbhdw/523514/index.html",
+      "historicalBegin": 1420,
+      "status": "现存／历代修缮建筑 · 原始实体标绘"
+    },
+    {
+      "id": "beijing-mingqing-way-33680941",
+      "name": "西便门附近内城残墙",
+      "geometry": "MultiLineString",
+      "geometrySha256": "308ed61ab8758f9310c142a713286cc8e47dc84296846bdd2571e08608e32c1c",
+      "source": "https://www.openstreetmap.org/way/33680941",
+      "reference": "https://wwj.beijing.gov.cn/bjww/362771/362779/dqpqgzdwwbhdw/523514/index.html",
+      "historicalBegin": 1420,
+      "status": "现存／历代修缮建筑 · 原始实体标绘"
+    },
+    {
+      "id": "beijing-mingqing-node-10701234724",
+      "name": "左安门值房遗存",
+      "geometry": "Point",
+      "geometrySha256": "1253e8d3182b45bf2ff61ed35d9a53317c7d0d5083547077dd5ff6a4c58f5523",
+      "source": "https://www.openstreetmap.org/node/10701234724",
+      "reference": "https://wwj.beijing.gov.cn/bjww/362771/362779/dqpqgzdwwbhdw/523514/index.html",
+      "historicalBegin": 1553,
+      "status": "现存／历代修缮建筑 · 原始实体标绘"
+    },
+    {
+      "id": "beijing-mingqing-way-638308745",
+      "name": "太和门",
+      "geometry": "Polygon",
+      "geometrySha256": "cb53d8cf876dd9db0b80e05f1cbb0f1905d61be8f6a21ab506cac53436296e7f",
+      "source": "https://www.openstreetmap.org/way/638308745",
+      "reference": "https://www.dpm.org.cn/explore/buildings.html",
+      "historicalBegin": 1420,
+      "status": "现存／历代修缮建筑 · 原始实体标绘"
+    },
+    {
+      "id": "beijing-mingqing-way-638807674",
+      "name": "乾清门",
+      "geometry": "Polygon",
+      "geometrySha256": "9ef36b0dfc388031ba1e4234eb8ee580e01b1401330fd18ca713da738f05e910",
+      "source": "https://www.openstreetmap.org/way/638807674",
+      "reference": "https://www.dpm.org.cn/explore/buildings.html",
+      "historicalBegin": 1420,
+      "status": "现存／历代修缮建筑 · 原始实体标绘"
+    },
+    {
+      "id": "beijing-mingqing-way-638449347",
+      "name": "太和殿",
+      "geometry": "Polygon",
+      "geometrySha256": "54eb8667406179bb48ab064d687ff39fa473178ff6014253a0058039cfa6380d",
+      "source": "https://www.openstreetmap.org/way/638449347",
+      "reference": "https://www.dpm.org.cn/subject_600/buildingdetails/253792.html",
+      "historicalBegin": 1420,
+      "status": "现存／历代修缮建筑 · 原始实体标绘"
+    },
+    {
+      "id": "beijing-mingqing-relation-8854349",
+      "name": "中和殿",
+      "geometry": "Polygon",
+      "geometrySha256": "eea2216b60804e0d16b318c40733c0b6c06f085d5994f3a138ebd36ac8f737d1",
+      "source": "https://www.openstreetmap.org/relation/8854349",
+      "reference": "https://www.dpm.org.cn/explore/buildings.html",
+      "historicalBegin": 1420,
+      "status": "现存／历代修缮建筑 · 原始实体标绘"
+    },
+    {
+      "id": "beijing-mingqing-way-638473398",
+      "name": "保和殿",
+      "geometry": "Polygon",
+      "geometrySha256": "bba5d4d814799d0e93753337d3e16c38a1c148864146a19aeac592b767086151",
+      "source": "https://www.openstreetmap.org/way/638473398",
+      "reference": "https://www.dpm.org.cn/explore/buildings.html",
+      "historicalBegin": 1420,
+      "status": "现存／历代修缮建筑 · 原始实体标绘"
+    },
+    {
+      "id": "beijing-mingqing-way-638981317",
+      "name": "乾清宫",
+      "geometry": "Polygon",
+      "geometrySha256": "931e204c884b64e4b54ba55f8ca1fde3cd9cf2b57f9397615472d1949dd50d12",
+      "source": "https://www.openstreetmap.org/way/638981317",
+      "reference": "https://www.dpm.org.cn/explore/building/236472.html",
+      "historicalBegin": 1420,
+      "status": "现存／历代修缮建筑 · 原始实体标绘"
+    },
+    {
+      "id": "beijing-mingqing-way-638981229",
+      "name": "交泰殿",
+      "geometry": "Polygon",
+      "geometrySha256": "1de508a10ec52d09d8b86d1ff19c57aa8f1bc2fdb41d0bf7c99af34c4164600d",
+      "source": "https://www.openstreetmap.org/way/638981229",
+      "reference": "https://www.dpm.org.cn/explore/building/236467.html",
+      "historicalBegin": 1420,
+      "status": "现存／历代修缮建筑 · 原始实体标绘"
+    },
+    {
+      "id": "beijing-mingqing-way-639012193",
+      "name": "坤宁宫",
+      "geometry": "Polygon",
+      "geometrySha256": "db8f3c26cdf2666833ea2661e2b1380da8b417cbb77cde1409f735866111564a",
+      "source": "https://www.openstreetmap.org/way/639012193",
+      "reference": "https://www.dpm.org.cn/subject_600/buildingdetails/253791.html",
+      "historicalBegin": 1420,
+      "status": "现存／历代修缮建筑 · 原始实体标绘"
+    }
+  ],
+  "unmapped": [
+    {
+      "kind": "已拆内城城门",
+      "names": [
+        "崇文门",
+        "宣武门",
+        "朝阳门",
+        "阜成门",
+        "东直门",
+        "西直门",
+        "安定门"
+      ],
+      "status": "身份已核证；准确门址及历史建筑范围待可靠历史图或考古矢量，不使用地铁站或现代桥中心代替。"
+    },
+    {
+      "kind": "已拆外城城门",
+      "names": [
+        "左安门",
+        "右安门",
+        "广渠门",
+        "广安门",
+        "东便门",
+        "西便门"
+      ],
+      "status": "身份已核证；左安门值房、西便门残墙是附近独立遗存，不冒充完整旧城门。"
+    },
+    {
+      "kind": "皇城旧门与完整皇城",
+      "names": [
+        "东安门",
+        "西安门",
+        "地安门"
+      ],
+      "status": "原始几何尚不足，不按现道路或现代公园任意圈合皇城。"
+    }
+  ],
+  "count": 24,
+  "totalFeatures": 837,
+  "counts": {
+    "Polygon": 21,
+    "LineString": 1,
+    "MultiLineString": 1,
+    "Point": 1
+  },
+  "previousBaseline": {
+    "count": 813,
+    "sha256": "3bf0bb3202950a14b24ac3d5e53e01a219818589ec221792006d42b096caf640",
+    "removedFeature": "beijing-preming-way-679979928"
+  }
+}

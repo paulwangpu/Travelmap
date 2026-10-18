@@ -1,0 +1,925 @@
+{
+  "date": "2026-10-15",
+  "baselineFeatures": 804,
+  "preservation": {
+    "featuresSha256": "a091b6f8c29ce9e97d544dd858189edadc1236525217f5dbe5690996a96253cd",
+    "capitalCatalogSha256": "47113d3bc5a15f552f8ab0fd67cbcb72a2e4330a82c4fc2b1be8b06413b2580c"
+  },
+  "added": [
+    {
+      "sourceId": "beijing-preming-jin-watergate",
+      "name": "金中都南城墙水关遗址",
+      "parent": "金中都",
+      "period": "宋辽金西夏",
+      "periods": [
+        "宋辽金西夏"
+      ],
+      "geometry": "Point",
+      "geometryScope": "in_situ_watergate_display_reference",
+      "source": "https://www.openstreetmap.org/way/1498792122",
+      "reference": "https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738090/wwgs/326091358/index.html",
+      "note": "水关位于金中都南城墙下、丰宜门与景风门之间，沟通城内水系与城外护城河；不是城内独立宫殿，也不属于较小的辽南京城界。以原始OSM保护建筑位置标为遗址参照点，不将现代博物馆建筑轮廓冒作金代涵洞或城墙范围。",
+      "geometrySha256": "bb35bbeb834e03dc24e2bee4756e1de187f41f0edb28998f6f590ab4f058c371",
+      "sourceBuildingGeometrySha256": "f3c3941009f699b98e995f4a7222596ef0c227c581175027add969bcf859bf89"
+    },
+    {
+      "sourceId": "beijing-preming-way-1021040770",
+      "name": "妙应寺白塔（元）",
+      "parent": "元大都",
+      "period": "元",
+      "periods": [
+        "元"
+      ],
+      "geometry": "Polygon",
+      "geometryScope": "standing_yuan_dagoba_footprint",
+      "source": "https://www.openstreetmap.org/way/1021040770",
+      "reference": "https://www.beijing.gov.cn/renwen/rwzyd/qgzdwwbhdw/mysbt/202210/t20221027_2846092.html",
+      "note": "白塔自1271年营建，为阿尼哥参与设计的元代遗构；采用原始塔身建筑面。妙应寺现存殿宇多经明清重建，不将整个现代寺院标作元代建筑群；不同于北海清代白塔。",
+      "geometrySha256": "5bfb70f7a748899dbb416b77e4f9d7a37cc858c4d91a0413d9e187c6a90e5708",
+      "originalObject": {
+        "type": "way",
+        "id": "1021040770",
+        "file": "miaoying.xml"
+      }
+    },
+    {
+      "sourceId": "beijing-preming-way-561198196",
+      "name": "万宁桥（元，历代修缮）",
+      "parent": "元大都",
+      "period": "元",
+      "periods": [
+        "元"
+      ],
+      "geometry": "LineString",
+      "geometryScope": "original_mapped_bridge_centerline",
+      "source": "https://www.openstreetmap.org/way/561198196",
+      "reference": "https://swj.beijing.gov.cn/bmxx/shms/swhxc/202402/t20240218_3564838.html",
+      "note": "1285年始建，1330年石构重建，与澄清闸构成通惠河枢纽；采用原始桥上线段，不强行扩成桥台面或闸区。桥体有后世修缮，不把今天整条地安门外大街当作元代道路。",
+      "geometrySha256": "61aeb0e29cfdabd23a2d3c8d9be4273c273bd9f3146feac86a5aa01e23e709bf",
+      "originalObject": {
+        "type": "way",
+        "id": "561198196",
+        "file": "wanning-correct.xml"
+      }
+    },
+    {
+      "sourceId": "beijing-preming-way-232729444",
+      "name": "白云观（唐金元沿革，现状院区）",
+      "parent": "幽州",
+      "period": "宋辽金西夏",
+      "periods": [
+        "隋唐",
+        "宋辽金西夏",
+        "元"
+      ],
+      "geometry": "Polygon",
+      "geometryScope": "modern_compound_reference_at_early_site",
+      "source": "https://www.openstreetmap.org/way/232729444",
+      "reference": "https://s.visitbeijing.com.cn/line/931",
+      "note": "源于唐天长观及金元宫观沿革；现状院区及主要殿宇经过明清建设。此面只辅助查找历史场址、唐石雕与元代书刻背景，不宣称是唐金元寺界或完整原构，更不是皇城。",
+      "geometrySha256": "ef482e27edbcb215372eb2e9668d2120f99294950b0100190f1474b2f46ff2b2",
+      "originalObject": {
+        "type": "way",
+        "id": "232729444",
+        "file": "named-sites.xml"
+      }
+    },
+    {
+      "sourceId": "beijing-preming-way-30834367",
+      "name": "法源寺／悯忠寺（唐创，现状院区）",
+      "parent": "幽州",
+      "period": "隋唐",
+      "periods": [
+        "隋唐",
+        "宋辽金西夏",
+        "元"
+      ],
+      "geometry": "Polygon",
+      "geometryScope": "modern_compound_reference_at_early_site",
+      "source": "https://www.openstreetmap.org/way/30834367",
+      "reference": "https://japanese.beijing.gov.cn/beijinginfo/facts/religion/202012/t20201215_2164678.html",
+      "note": "唐代创建的悯忠寺，辽金元时期持续有历史活动；现法源寺殿宇与院区主要经明清重建。原始现状面只作场址参照，不称唐代寺界或唐代建筑群。",
+      "geometrySha256": "0b1e361b12471359de58704519c46e527d9e95129ba201b2435295766df9bfda",
+      "originalObject": {
+        "type": "way",
+        "id": "30834367",
+        "file": "named-sites.xml"
+      }
+    },
+    {
+      "sourceId": "beijing-preming-way-24825402",
+      "name": "北京孔庙（元创，现状院区）",
+      "parent": "元大都",
+      "period": "元",
+      "periods": [
+        "元"
+      ],
+      "geometry": "Polygon",
+      "geometryScope": "modern_compound_reference_at_early_site",
+      "source": "https://www.openstreetmap.org/way/24825402",
+      "reference": "https://www.bjsupervision.gov.cn/lzdt/202101/t20210105_72320.html",
+      "note": "1302年开始营建，保存元明清进士题名碑等实物。大成殿等现存建筑经后世重建，院区原始面不是元代孔庙实测范围，不称现存完整元代建筑群。",
+      "geometrySha256": "3206a7743496d13755b24e9d92b59ca6fdb10026059c255dcaa47d5a3eff0903",
+      "originalObject": {
+        "type": "way",
+        "id": "24825402",
+        "file": "named-sites.xml"
+      }
+    },
+    {
+      "sourceId": "beijing-preming-way-30784273",
+      "name": "国子监（元创，现状院区）",
+      "parent": "元大都",
+      "period": "元",
+      "periods": [
+        "元"
+      ],
+      "geometry": "Polygon",
+      "geometryScope": "modern_compound_reference_at_early_site",
+      "source": "https://www.openstreetmap.org/way/30784273",
+      "reference": "https://www.bjdch.gov.cn/mldc/whxx/jdhc/202008/t20200827_2975796.html",
+      "note": "1306年创建，元明清国家学府及教育管理机构沿革。现存辟雍等主要建筑为明清建设，不标作元代原构；保留现状院区面，供历史场址查找。",
+      "geometrySha256": "0a280295f7bda5f791c55d9068f4dd6e5764c01791ef16df9c41979c08fbff69",
+      "originalObject": {
+        "type": "way",
+        "id": "30784273",
+        "file": "named-sites.xml"
+      }
+    },
+    {
+      "sourceId": "beijing-preming-node-9573089505",
+      "name": "万松老人塔（元塔、清代包砌）",
+      "parent": "元大都",
+      "period": "元",
+      "periods": [
+        "元"
+      ],
+      "geometry": "Point",
+      "geometryScope": "standing_pagoda_with_later_casing_point",
+      "source": "https://www.openstreetmap.org/node/9573089505",
+      "reference": "https://wwj.beijing.gov.cn/bjww/362771/362779/dqpqgzdwwbhdw/523511/index.html",
+      "note": "始建于元代，明清多次修葺；1986年修缮发现清代包砌内保存的元塔。保留实际塔点，不将院落书店或整条砖塔胡同作为元代塔界。",
+      "geometrySha256": "565689c8f316b61364d72fe463b7c5bd3bd1c4bf166f95287a7446c62bb57419",
+      "originalObject": {
+        "type": "node",
+        "id": "9573089505",
+        "file": "wansong.xml"
+      }
+    }
+  ],
+  "sources": [
+    "https://www.openstreetmap.org/way/679979928",
+    "https://wwj.beijing.gov.cn/bjww/362679/362680/482911/xxgkgzdt/1784611/index.html",
+    "https://www.openstreetmap.org/way/1498792122",
+    "https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738090/wwgs/326091358/index.html",
+    "https://www.openstreetmap.org/way/1021040770",
+    "https://www.beijing.gov.cn/renwen/rwzyd/qgzdwwbhdw/mysbt/202210/t20221027_2846092.html",
+    "https://www.openstreetmap.org/way/561198196",
+    "https://swj.beijing.gov.cn/bmxx/shms/swhxc/202402/t20240218_3564838.html",
+    "https://www.openstreetmap.org/way/232729444",
+    "https://s.visitbeijing.com.cn/line/931",
+    "https://www.openstreetmap.org/way/30834367",
+    "https://japanese.beijing.gov.cn/beijinginfo/facts/religion/202012/t20201215_2164678.html",
+    "https://www.openstreetmap.org/way/24825402",
+    "https://www.bjsupervision.gov.cn/lzdt/202101/t20210105_72320.html",
+    "https://www.openstreetmap.org/way/30784273",
+    "https://www.bjdch.gov.cn/mldc/whxx/jdhc/202008/t20200827_2975796.html",
+    "https://www.openstreetmap.org/node/9573089505",
+    "https://wwj.beijing.gov.cn/bjww/362771/362779/dqpqgzdwwbhdw/523511/index.html"
+  ],
+  "unmapped": [
+    {
+      "site": "金中都",
+      "kind": "完整分期外城、皇城、宫城",
+      "reason": "取得官方平面示意图，但缺少可靠独立配准。试配准控制点残差过大且部分地标对应不确定，未接入拟合面；既有现代埋藏区保留原性质。",
+      "sources": [
+        "https://wwj.beijing.gov.cn/bjww/362760/362770/326133141/index.html",
+        "https://www.beijing.gov.cn/renwen/sy/whkb/202101/t20210113_2218649.html"
+      ]
+    },
+    {
+      "site": "金中都",
+      "kind": "高楼村、凤凰嘴、万泉寺三处残墙及护城河",
+      "reason": "考古性质已确认；现公开原始OSM未提供可可靠对应的墙体几何，官网公园总图图件受访问限制。未用现代道路、绿化带或公园边界替代墙体。",
+      "sources": [
+        "https://www.beijing.gov.cn/renwen/sy/whkb/202101/t20210113_2218649.html",
+        "https://www.bjft.gov.cn/xwdt/jcdt/bmdt/202605/t20260519_213252.shtml"
+      ]
+    },
+    {
+      "site": "灵严寺大殿、张坊唐塔等",
+      "kind": "其他明代以前遗存",
+      "reason": "仍需补足可交叉核对的原址几何及逐项建筑断代；未凭寺名生成不明年代的建筑面。",
+      "sources": [
+        "https://wwj.beijing.gov.cn/bjww/362771/362782/dqphdwbdwdbhfwjjkdd/548772/index.html"
+      ]
+    }
+  ],
+  "georeference": {
+    "sourceUrl": "https://wwj.beijing.gov.cn/bjww/resource/cms/article/362762/515604/2018071114320631049.pdf",
+    "title": "王世仁《蓟丘别议》，北京文博文丛2016年第4辑，图三（印刷第5页／PDF第11页）",
+    "image": "liao-map-crop.png",
+    "controls": [
+      [
+        "天长观／白云观地域参照",
+        [
+          478,
+          204
+        ],
+        [
+          116.33772355,
+          39.89936727
+        ]
+      ],
+      [
+        "天宁寺塔",
+        [
+          480,
+          414
+        ],
+        [
+          116.339785,
+          39.893743
+        ]
+      ],
+      [
+        "悯忠寺旧址原始标绘参照",
+        [
+          1152,
+          858
+        ],
+        [
+          116.3634182,
+          39.88236724
+        ]
+      ],
+      [
+        "广安门桥道路交叉参照",
+        [
+          602,
+          631
+        ],
+        [
+          116.342834,
+          39.88825
+        ]
+      ]
+    ],
+    "affine": [
+      [
+        0.00003493765086128598,
+        2.319256782252051e-7
+      ],
+      [
+        0.0000023904052519896357,
+        -0.000026153622661964637
+      ],
+      [
+        116.3209933142496,
+        39.904551052627376
+      ]
+    ],
+    "residualsMeters": [
+      39.34,
+      88.72,
+      10.81,
+      60.19
+    ],
+    "warning": "控制点为地域参照；残差只描述图件套合一致性，不是城墙精度。作者的子城与蓟丘解释为假说，不是考古实测。",
+    "polygons": {
+      "liao-outer": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              116.32787768,
+              39.9019013
+            ],
+            [
+              116.33833985,
+              39.9021801
+            ],
+            [
+              116.34218299,
+              39.90220561
+            ],
+            [
+              116.3575197,
+              39.90269997
+            ],
+            [
+              116.368001,
+              39.90276954
+            ],
+            [
+              116.36931683,
+              39.88990289
+            ],
+            [
+              116.36991408,
+              39.88948814
+            ],
+            [
+              116.36953307,
+              39.8890669
+            ],
+            [
+              116.37056813,
+              39.88271459
+            ],
+            [
+              116.37095814,
+              39.88227229
+            ],
+            [
+              116.3707829,
+              39.88151221
+            ],
+            [
+              116.37157009,
+              39.87557697
+            ],
+            [
+              116.36135248,
+              39.87529978
+            ],
+            [
+              116.36022822,
+              39.87497829
+            ],
+            [
+              116.34993118,
+              39.87480525
+            ],
+            [
+              116.34504947,
+              39.87466817
+            ],
+            [
+              116.33107919,
+              39.87452309
+            ],
+            [
+              116.33012265,
+              39.88116379
+            ],
+            [
+              116.32972307,
+              39.8817107
+            ],
+            [
+              116.33005958,
+              39.88223632
+            ],
+            [
+              116.32940589,
+              39.88785842
+            ],
+            [
+              116.32904603,
+              39.88835325
+            ],
+            [
+              116.32928968,
+              39.88874741
+            ],
+            [
+              116.32895355,
+              39.89204254
+            ],
+            [
+              116.32865254,
+              39.89227607
+            ],
+            [
+              116.32860823,
+              39.89429082
+            ],
+            [
+              116.32825315,
+              39.89473335
+            ],
+            [
+              116.32831512,
+              39.89711518
+            ],
+            [
+              116.32788539,
+              39.89760955
+            ],
+            [
+              116.32822668,
+              39.89808287
+            ],
+            [
+              116.32777287,
+              39.9019006
+            ],
+            [
+              116.32787768,
+              39.9019013
+            ]
+          ]
+        ]
+      },
+      "liao-subcity": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              116.3375892,
+              39.88553132
+            ],
+            [
+              116.34877311,
+              39.88594577
+            ],
+            [
+              116.3500336,
+              39.8748321
+            ],
+            [
+              116.33841609,
+              39.8745718
+            ],
+            [
+              116.3375892,
+              39.88553132
+            ]
+          ]
+        ]
+      }
+    }
+  },
+  "totalFeatures": 813,
+  "counts": {
+    "Polygon": 6,
+    "Point": 2,
+    "LineString": 1
+  },
+  "reviewDate": "2026-10-16",
+  "withdrawn": [
+    {
+      "sourceId": "beijing-preming-liao-outer",
+      "name": "辽南京城郭（研究复原）",
+      "parent": "幽州",
+      "period": "宋辽金西夏",
+      "periods": [
+        "宋辽金西夏"
+      ],
+      "geometry": "Polygon",
+      "geometryScope": "georeferenced_research_reconstruction",
+      "source": "https://wwj.beijing.gov.cn/bjww/resource/cms/article/362762/515604/2018071114320631049.pdf",
+      "reference": "https://www.beijing.gov.cn/renwen/rwzyd/qgzdwwbhdw/tnst/202210/t20221027_2846179.html",
+      "note": "按王世仁《蓟丘别议》图三所绘外郭轮廓配准，保留图中不规则轮廓，不以道路四至随意画方框。图示参考，非实测墙界；控制点为遗址／道路地域参照，拟合残差不代表城界精度。不是已发现的现存城墙，不作为精确遗址定位。",
+      "geometrySha256": "3d3868034a5f04c4a6e2a59aaf54d0298ec99b4fa906964d30a781e42893a236",
+      "reason": "北向、尺度与墙界配准尚缺独立验证，撤出生产图层；原图及拟合几何留作研究。"
+    },
+    {
+      "sourceId": "beijing-preming-liao-subcity",
+      "name": "辽南京子城（复原假说）",
+      "parent": "幽州",
+      "period": "宋辽金西夏",
+      "periods": [
+        "宋辽金西夏"
+      ],
+      "geometry": "Polygon",
+      "geometryScope": "hypothetical_inner_settlement_reference",
+      "source": "https://wwj.beijing.gov.cn/bjww/resource/cms/article/362762/515604/2018071114320631049.pdf",
+      "reference": "https://wwj.beijing.gov.cn/bjww/362760/362770/326133141/index.html",
+      "note": "王世仁在图三标出的子城及其与蓟丘的关系属于研究假说。不可当作已核定的辽南京皇城、宫城或西周都城边界。图示参考，非实测墙界；控制点为遗址／道路地域参照，拟合残差不代表城界精度。不是已发现的现存城墙，不作为精确遗址定位。",
+      "geometrySha256": "4f354c36fa054566eb7d448a8f27a87feae7a4930163d4f102a218c1143d763e",
+      "reason": "北向、尺度与墙界配准尚缺独立验证，撤出生产图层；原图及拟合几何留作研究。"
+    },
+    {
+      "sourceId": "beijing-preming-way-656283742",
+      "name": "镇岗塔（辽金断代有争议）",
+      "parent": "金中都",
+      "period": "宋辽金西夏",
+      "periods": [
+        "宋辽金西夏"
+      ],
+      "geometry": "Polygon",
+      "geometryScope": "standing_pagoda_footprint",
+      "source": "https://www.openstreetmap.org/way/656283742",
+      "reference": "https://img.dpm.org.cn/Uploads/File/2024/09/09/u66de63ff336bf.pdf",
+      "note": "采用现存塔身原始轮廓。常见断代为金，故宫学术研究提出辽代可能；不编造精确建年，不把周边山岗或保护范围当塔体。",
+      "geometrySha256": "7a4122d3459bcea09cc44062775b0c042f5bb926c2f725ba07032cf57f77cc99",
+      "originalObject": {
+        "type": "way",
+        "id": "656283742",
+        "file": "named-sites.xml"
+      },
+      "reason": "按用户要求移出远郊遗迹，缩小北京城址图层收录范围。"
+    },
+    {
+      "sourceId": "beijing-preming-way-497788379",
+      "name": "居庸关云台（元）",
+      "parent": "元大都",
+      "period": "元",
+      "periods": [
+        "元"
+      ],
+      "geometry": "Polygon",
+      "geometryScope": "surviving_yuan_platform_footprint",
+      "source": "https://www.openstreetmap.org/way/497788379",
+      "reference": "https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742737/523226/index.html",
+      "note": "元代过街塔的汉白玉台基，塔身早已不存；现存券洞有浮雕、六体文字经咒与题记。保留云台原始建筑面，不与周围明代关城混为一体。",
+      "geometrySha256": "684e07cc19ab49f90a323d298eb08ba1a908be9b8b8ba1c3cdeee760e3134e6d",
+      "originalObject": {
+        "type": "way",
+        "id": "497788379",
+        "file": "named-sites.xml"
+      },
+      "reason": "按用户要求移出远郊遗迹，缩小北京城址图层收录范围。"
+    },
+    {
+      "sourceId": "beijing-preming-way-955329621",
+      "name": "戒台寺法均衣钵塔（辽金）",
+      "parent": "幽州",
+      "period": "宋辽金西夏",
+      "periods": [
+        "宋辽金西夏"
+      ],
+      "geometry": "Polygon",
+      "geometryScope": "standing_pagoda_footprint",
+      "source": "https://www.openstreetmap.org/way/955329621",
+      "reference": "https://img.dpm.org.cn/Uploads/File/2024/09/09/u66de63ff336bf.pdf",
+      "note": "采用独立衣钵塔原始面。传统资料与原始OSM标1075年，故宫研究提出金大定以前的形制断代；保留讨论，不将现寺院全部殿阁标为辽构。邻近法均墓塔曾于明正统十三年重建，本轮不把其现存塔体冒作辽代原构。",
+      "geometrySha256": "0bb2a3b2960f5e879ba2e5b5bd564abda400b3435b810502ce6cf786aa44b22d",
+      "originalObject": {
+        "type": "way",
+        "id": "955329621",
+        "file": "jietai.xml"
+      },
+      "reason": "按用户要求移出远郊遗迹，缩小北京城址图层收录范围。"
+    },
+    {
+      "sourceId": "beijing-preming-way-27035564",
+      "name": "卢沟桥（金，历代修缮）",
+      "parent": "金中都",
+      "period": "宋辽金西夏",
+      "periods": [
+        "宋辽金西夏"
+      ],
+      "geometry": "LineString",
+      "geometryScope": "original_mapped_bridge_centerline",
+      "source": "https://www.openstreetmap.org/way/27035564",
+      "reference": "https://www.beijing.gov.cn/ywdt/gqrd/202607/t20260708_4752193.html",
+      "note": "金代1189年开工、1192年建成，后经明清及现代修缮。保留桥体原始开放线；与明代宛平城分期，不把现存全部石材都断为金代。",
+      "geometrySha256": "5317acc5ff57beaf78048fd236a5c99355c0aa5f9c8e3c3f19e529c32546a022",
+      "originalObject": {
+        "type": "way",
+        "id": "27035564",
+        "file": "lugou.xml"
+      },
+      "reason": "按用户要求移出远郊遗迹，缩小北京城址图层收录范围。"
+    },
+    {
+      "sourceId": "beijing-preming-node-1978624860",
+      "name": "良乡昊天塔（辽）",
+      "parent": "幽州",
+      "period": "宋辽金西夏",
+      "periods": [
+        "宋辽金西夏"
+      ],
+      "geometry": "Point",
+      "geometryScope": "standing_pagoda_point",
+      "source": "https://www.openstreetmap.org/node/1978624860",
+      "reference": "https://img.dpm.org.cn/Uploads/File/2024/09/09/u66de63ff336bf.pdf",
+      "note": "现存辽代楼阁式砖塔的原始实体点；约略断代据建筑研究，不编造塔体面或精确建造年。此塔在辽南京近畿，不是辽南京城内宫殿或城门。",
+      "geometrySha256": "7a2e0077418a8db8a4a5f737243bd85b8c7da72aa172ad63ba654e62eb49c050",
+      "originalObject": {
+        "type": "node",
+        "id": "1978624860",
+        "file": "named-sites.xml"
+      },
+      "reason": "按用户要求移出远郊遗迹，缩小北京城址图层收录范围。"
+    },
+    {
+      "sourceId": "beijing-preming-node-4893017731",
+      "name": "云居寺北塔（辽，历代修缮）",
+      "parent": "幽州",
+      "period": "宋辽金西夏",
+      "periods": [
+        "宋辽金西夏"
+      ],
+      "geometry": "Point",
+      "geometryScope": "standing_pagoda_point",
+      "source": "https://www.openstreetmap.org/node/4893017731",
+      "reference": "https://wwj.beijing.gov.cn/bjww/362760/362767/2021nwhhzrycr/wwbh/10998897/index.html",
+      "note": "北塔是保存下来的辽代古塔，与战毁后重建的南塔分别看待。原始点是塔体参照，不用全寺现代院区替代古塔、唐塔群或隋唐刻经洞范围。",
+      "geometrySha256": "b03c26ae3ee7ffd50a2ebc3e68870eb27898e4dee707faff82445d085d68c057",
+      "originalObject": {
+        "type": "node",
+        "id": "4893017731",
+        "file": "named-sites.xml"
+      },
+      "reason": "按用户要求移出远郊遗迹，缩小北京城址图层收录范围。"
+    },
+    {
+      "sourceId": "beijing-preming-yinshan-seven",
+      "name": "银山塔林七塔遗迹",
+      "parent": "金中都",
+      "period": "宋辽金西夏",
+      "periods": [
+        "宋辽金西夏",
+        "元"
+      ],
+      "geometry": "MultiPoint",
+      "geometryScope": "surviving_pagoda_group_points",
+      "source": "https://www.openstreetmap.org/node/9638818491",
+      "reference": "https://www.visitbeijing.com.cn/article/4Dh4mKxtPp3",
+      "note": "采用七座实际塔体的原始点，整体展示而不将现代景区圈作古寺范围。通常称五座金塔、两座元塔，个别塔的断代及寺名仍有学术讨论；未据无名OSM点猜配塔主姓名。",
+      "geometrySha256": "51b5e1218ae3c3320850d333b22d1be482be981f70261bc9d6657f4888572a2e",
+      "reason": "按用户要求移出远郊遗迹，缩小北京城址图层收录范围。"
+    },
+    {
+      "sourceId": "beijing-preming-node-10310095882",
+      "name": "应公长老寿塔（元）",
+      "parent": "元大都",
+      "period": "元",
+      "periods": [
+        "元"
+      ],
+      "geometry": "Point",
+      "geometryScope": "standing_monastic_pagoda_point",
+      "source": "https://www.openstreetmap.org/node/10310095882",
+      "reference": "https://www.bjfsh.gov.cn/zjfs/lswh/wwbh/201912/t20191231_39988514.shtml",
+      "note": "原天开寺塔院内的僧塔。房山区文旅局记载建于元大德五年（1301），部分旧目录作辽，资料存在断代差异；按有明确纪年的元代条目显示。保留原始实体点，不把复建寺院当作元代遗构，不纳入皇陵。",
+      "geometrySha256": "242b2a13ad6e7792d63853c6e7f2562f619a7bf9d263102f91ac2b9c7c83486d",
+      "originalObject": {
+        "type": "node",
+        "id": "10310095882",
+        "file": "named-sites.xml"
+      },
+      "reason": "按用户要求移出远郊遗迹，缩小北京城址图层收录范围。"
+    },
+    {
+      "sourceId": "beijing-preming-way-470060238",
+      "name": "十字寺遗址（辽元沿革）",
+      "parent": "元大都",
+      "period": "元",
+      "periods": [
+        "宋辽金西夏",
+        "元"
+      ],
+      "geometry": "Polygon",
+      "geometryScope": "mapped_ruins_extent",
+      "source": "https://www.openstreetmap.org/way/470060238",
+      "reference": "https://wwj.beijing.gov.cn/bjww/362771/362779/dlpqgzdwwbhdw/523466/index.html",
+      "note": "遗址保存殿基、石构件和碑刻，官方认定为元代景教寺址。明代重刻辽960年碑不等于现存一通完整辽碑；元1365年碑及后续修补亦需分辨。保留原始遗址面，不由东晋始建传说推造早期建筑轮廓。",
+      "geometrySha256": "807beba9ff8645f3ac898e112a3076a78cdedc1a06ab8c50008e2e4f63d06b65",
+      "originalObject": {
+        "type": "way",
+        "id": "470060238",
+        "file": "named-sites.xml"
+      },
+      "reason": "按用户要求移出远郊遗迹，缩小北京城址图层收录范围。"
+    }
+  ],
+  "archivedReconstruction": {
+    "sourceUrl": "https://wwj.beijing.gov.cn/bjww/resource/cms/article/362762/515604/2018071114320631049.pdf",
+    "title": "王世仁《蓟丘别议》，北京文博文丛2016年第4辑，图三（印刷第5页／PDF第11页）",
+    "image": "liao-map-crop.png",
+    "controls": [
+      [
+        "天长观／白云观地域参照",
+        [
+          478,
+          204
+        ],
+        [
+          116.33772355,
+          39.89936727
+        ]
+      ],
+      [
+        "天宁寺塔",
+        [
+          480,
+          414
+        ],
+        [
+          116.339785,
+          39.893743
+        ]
+      ],
+      [
+        "悯忠寺旧址原始标绘参照",
+        [
+          1152,
+          858
+        ],
+        [
+          116.3634182,
+          39.88236724
+        ]
+      ],
+      [
+        "广安门桥道路交叉参照",
+        [
+          602,
+          631
+        ],
+        [
+          116.342834,
+          39.88825
+        ]
+      ]
+    ],
+    "affine": [
+      [
+        0.00003493765086128598,
+        2.319256782252051e-7
+      ],
+      [
+        0.0000023904052519896357,
+        -0.000026153622661964637
+      ],
+      [
+        116.3209933142496,
+        39.904551052627376
+      ]
+    ],
+    "residualsMeters": [
+      39.34,
+      88.72,
+      10.81,
+      60.19
+    ],
+    "warning": "控制点为地域参照；残差只描述图件套合一致性，不是城墙精度。作者的子城与蓟丘解释为假说，不是考古实测。",
+    "polygons": {
+      "liao-outer": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              116.32787768,
+              39.9019013
+            ],
+            [
+              116.33833985,
+              39.9021801
+            ],
+            [
+              116.34218299,
+              39.90220561
+            ],
+            [
+              116.3575197,
+              39.90269997
+            ],
+            [
+              116.368001,
+              39.90276954
+            ],
+            [
+              116.36931683,
+              39.88990289
+            ],
+            [
+              116.36991408,
+              39.88948814
+            ],
+            [
+              116.36953307,
+              39.8890669
+            ],
+            [
+              116.37056813,
+              39.88271459
+            ],
+            [
+              116.37095814,
+              39.88227229
+            ],
+            [
+              116.3707829,
+              39.88151221
+            ],
+            [
+              116.37157009,
+              39.87557697
+            ],
+            [
+              116.36135248,
+              39.87529978
+            ],
+            [
+              116.36022822,
+              39.87497829
+            ],
+            [
+              116.34993118,
+              39.87480525
+            ],
+            [
+              116.34504947,
+              39.87466817
+            ],
+            [
+              116.33107919,
+              39.87452309
+            ],
+            [
+              116.33012265,
+              39.88116379
+            ],
+            [
+              116.32972307,
+              39.8817107
+            ],
+            [
+              116.33005958,
+              39.88223632
+            ],
+            [
+              116.32940589,
+              39.88785842
+            ],
+            [
+              116.32904603,
+              39.88835325
+            ],
+            [
+              116.32928968,
+              39.88874741
+            ],
+            [
+              116.32895355,
+              39.89204254
+            ],
+            [
+              116.32865254,
+              39.89227607
+            ],
+            [
+              116.32860823,
+              39.89429082
+            ],
+            [
+              116.32825315,
+              39.89473335
+            ],
+            [
+              116.32831512,
+              39.89711518
+            ],
+            [
+              116.32788539,
+              39.89760955
+            ],
+            [
+              116.32822668,
+              39.89808287
+            ],
+            [
+              116.32777287,
+              39.9019006
+            ],
+            [
+              116.32787768,
+              39.9019013
+            ]
+          ]
+        ]
+      },
+      "liao-subcity": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              116.3375892,
+              39.88553132
+            ],
+            [
+              116.34877311,
+              39.88594577
+            ],
+            [
+              116.3500336,
+              39.8748321
+            ],
+            [
+              116.33841609,
+              39.8745718
+            ],
+            [
+              116.3375892,
+              39.88553132
+            ]
+          ]
+        ]
+      }
+    }
+  },
+  "followUp": "2026-10-16：金中都外郭/皇城/宫城及太液池的后续研究复原、旧埋藏区撤显，见 docs/jin-reconstruction-review.md；本文件保留本批原始审计。",
+  "removedByUser": [
+    {
+      "sourceId": "beijing-preming-way-679979928",
+      "reason": "用户要求移除宫苑标绘参考",
+      "archive": "output/beijing-calibration-gates/removed-palace-reference.geojson"
+    }
+  ]
+}

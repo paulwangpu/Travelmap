@@ -1,8 +1,8 @@
 {
-  "reviewedAt": "2026-10-04",
+  "reviewedAt": "2026-10-16",
   "policy": "政权目录空白不等于无陵；人物无匹配不等于无墓；有一条不等于完整。先用君主工作名单和公布文保名录反查，再据原址证据定位。",
-  "totalRecords": 403,
-  "totalMapCandidates": 280,
+  "totalRecords": 429,
+  "totalMapCandidates": 294,
   "matrix": [
     {
       "era": "传说时代",
@@ -218,14 +218,15 @@
     {
       "era": "先秦",
       "dynasty": "吴",
-      "records": 1,
-      "singleRecords": 1,
+      "records": 2,
+      "singleRecords": 2,
       "mapCandidates": 1,
       "sharedLocations": 0,
-      "unlocated": 0,
-      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "unlocated": 1,
+      "status": "增量补充，有遗存与候选比定分别标注，未宣称完整覆盖",
       "recordIds": [
-        "wu-helv"
+        "wu-helv",
+        "wu-yangxingmi-xing"
       ]
     },
     {
@@ -498,12 +499,12 @@
     {
       "era": "秦汉",
       "dynasty": "西汉",
-      "records": 14,
-      "singleRecords": 13,
-      "mapCandidates": 13,
+      "records": 15,
+      "singleRecords": 14,
+      "mapCandidates": 14,
       "sharedLocations": 0,
       "unlocated": 1,
-      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "status": "本轮PDF查漏补入；未宣称君主及遗址完整覆盖",
       "recordIds": [
         "han-west",
         "han-chang",
@@ -518,7 +519,8 @@
         "han-yi",
         "han-kang",
         "han-haihun",
-        "han-zhongshan-huai"
+        "han-zhongshan-huai",
+        "han-wannian-taishang"
       ]
     },
     {
@@ -604,17 +606,18 @@
     {
       "era": "魏晋南北朝",
       "dynasty": "曹魏",
-      "records": 4,
-      "singleRecords": 4,
+      "records": 5,
+      "singleRecords": 5,
       "mapCandidates": 3,
       "sharedLocations": 0,
-      "unlocated": 1,
-      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "unlocated": 2,
+      "status": "增量补充，有遗存与候选比定分别标注，未宣称完整覆盖",
       "recordIds": [
         "wei-gao",
         "wei-xizhu-m2",
         "wei-shouyang",
-        "wei-gaoping-rudian"
+        "wei-gaoping-rudian",
+        "wei-caosong-candidate"
       ]
     },
     {
@@ -674,30 +677,34 @@
     {
       "era": "魏晋南北朝",
       "dynasty": "刘宋",
-      "records": 1,
-      "singleRecords": 1,
+      "records": 2,
+      "singleRecords": 2,
       "mapCandidates": 1,
       "sharedLocations": 0,
-      "unlocated": 0,
-      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "unlocated": 1,
+      "status": "增量补充，有遗存与候选比定分别标注，未宣称完整覆盖",
       "recordIds": [
-        "southern-song-chuning"
+        "southern-song-chuning",
+        "song-liuqiao-xingning"
       ]
     },
     {
       "era": "魏晋南北朝",
       "dynasty": "南齐",
-      "records": 4,
-      "singleRecords": 2,
-      "mapCandidates": 1,
+      "records": 7,
+      "singleRecords": 5,
+      "mapCandidates": 4,
       "sharedLocations": 2,
       "unlocated": 1,
-      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "status": "增量补充，有遗存与候选比定分别标注，未宣称完整覆盖",
       "recordIds": [
         "southern-danyang",
         "qi-taian",
         "qi-shizi-zhaojia-region",
-        "qi-xuan-yongan"
+        "qi-xuan-yongan",
+        "qi-qianai-jingan",
+        "qi-xiantangwan-xiuan",
+        "qi-sanchengxiang-xingan"
       ]
     },
     {
@@ -873,13 +880,15 @@
     {
       "era": "魏晋南北朝",
       "dynasty": "西凉",
-      "records": 0,
-      "singleRecords": 0,
-      "mapCandidates": 0,
+      "records": 1,
+      "singleRecords": 1,
+      "mapCandidates": 1,
       "sharedLocations": 0,
       "unlocated": 0,
-      "status": "目录空白，需查君主与考古名录",
-      "recordIds": []
+      "status": "增量补充，有遗存与候选比定分别标注，未宣称完整覆盖",
+      "recordIds": [
+        "xiliang-xiaotushan-candidate"
+      ]
     },
     {
       "era": "魏晋南北朝",
@@ -986,12 +995,12 @@
     {
       "era": "隋唐",
       "dynasty": "唐",
-      "records": 22,
-      "singleRecords": 21,
-      "mapCandidates": 21,
-      "sharedLocations": 0,
-      "unlocated": 1,
-      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "records": 29,
+      "singleRecords": 27,
+      "mapCandidates": 25,
+      "sharedLocations": 2,
+      "unlocated": 2,
+      "status": "本轮PDF查漏补入；未宣称君主及遗址完整覆盖",
       "recordIds": [
         "tang18",
         "tang-xian",
@@ -1014,7 +1023,14 @@
         "tang-jing2",
         "tang-shun",
         "tang-gong",
-        "tang-hui-rang"
+        "tang-hui-rang",
+        "tang-zuling-longyao",
+        "tang-zuling-jianchu",
+        "tang-zuling-qiyun",
+        "tang-yongkang-ancestor",
+        "tang-xingning-ancestor",
+        "tang-zhaozong-he",
+        "tang-ai-wen"
       ]
     },
     {
@@ -1044,14 +1060,15 @@
     {
       "era": "五代十国",
       "dynasty": "后唐",
-      "records": 1,
-      "singleRecords": 1,
+      "records": 2,
+      "singleRecords": 2,
       "mapCandidates": 1,
       "sharedLocations": 0,
-      "unlocated": 0,
-      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "unlocated": 1,
+      "status": "增量补充，有遗存与候选比定分别标注，未宣称完整覆盖",
       "recordIds": [
-        "later-tang-hui"
+        "later-tang-hui",
+        "later-tang-jianji"
       ]
     },
     {
@@ -1101,14 +1118,15 @@
     {
       "era": "五代十国",
       "dynasty": "吴",
-      "records": 1,
-      "singleRecords": 1,
+      "records": 2,
+      "singleRecords": 2,
       "mapCandidates": 1,
       "sharedLocations": 0,
-      "unlocated": 0,
-      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "unlocated": 1,
+      "status": "增量补充，有遗存与候选比定分别标注，未宣称完整覆盖",
       "recordIds": [
-        "wu-helv"
+        "wu-helv",
+        "wu-yangxingmi-xing"
       ]
     },
     {
@@ -1182,16 +1200,17 @@
     {
       "era": "五代十国",
       "dynasty": "南汉",
-      "records": 3,
-      "singleRecords": 2,
+      "records": 4,
+      "singleRecords": 3,
       "mapCandidates": 2,
       "sharedLocations": 0,
-      "unlocated": 1,
-      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "unlocated": 2,
+      "status": "增量补充，有遗存与候选比定分别标注，未宣称完整覆盖",
       "recordIds": [
         "nanhan2",
         "nanhan-de",
-        "nanhan-kang"
+        "nanhan-kang",
+        "nanhan-zhao"
       ]
     },
     {
@@ -1413,12 +1432,12 @@
     {
       "era": "明清",
       "dynasty": "明",
-      "records": 19,
-      "singleRecords": 18,
-      "mapCandidates": 19,
+      "records": 20,
+      "singleRecords": 19,
+      "mapCandidates": 20,
       "sharedLocations": 0,
       "unlocated": 0,
-      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "status": "增量补充，有遗存与候选比定分别标注，未宣称完整覆盖",
       "recordIds": [
         "ming13",
         "ming-chang",
@@ -1438,21 +1457,24 @@
         "ming-xianling",
         "ming-zu",
         "ming-huang",
-        "ming-jingtai"
+        "ming-jingtai",
+        "ming-dong-zhubiao"
       ]
     },
     {
       "era": "明清",
       "dynasty": "南明",
-      "records": 2,
-      "singleRecords": 2,
+      "records": 4,
+      "singleRecords": 4,
       "mapCandidates": 2,
       "sharedLocations": 0,
-      "unlocated": 0,
-      "status": "已有条目，君主及遗址覆盖未判定完整",
+      "unlocated": 2,
+      "status": "本轮PDF查漏补入；未宣称君主及遗址完整覆盖",
       "recordIds": [
         "ming-luwang",
-        "ming-shaowu"
+        "ming-shaowu",
+        "nanming-hongguang",
+        "nanming-yongli-duyun"
       ]
     },
     {
@@ -1775,14 +1797,28 @@
     {
       "era": "秦汉",
       "dynasty": "西汉",
-      "records": 1,
-      "singleRecords": 1,
-      "mapCandidates": 1,
+      "records": 15,
+      "singleRecords": 14,
+      "mapCandidates": 14,
       "sharedLocations": 0,
-      "unlocated": 0,
-      "status": "汉代封国王陵核查；普通宗室及列侯不自动纳入",
+      "unlocated": 1,
+      "status": "本轮PDF查漏补入；未宣称君主及遗址完整覆盖",
       "recordIds": [
-        "han-zhongshan-huai"
+        "han-west",
+        "han-chang",
+        "han-an",
+        "han-ba",
+        "han-yang",
+        "han-mao",
+        "han-ping",
+        "han-du",
+        "han-wei",
+        "han-yan",
+        "han-yi",
+        "han-kang",
+        "han-haihun",
+        "han-zhongshan-huai",
+        "han-wannian-taishang"
       ]
     },
     {
@@ -2118,8 +2154,10 @@
       "dynasty": "吴",
       "name": "杨行密",
       "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
-      "matchedRecordIds": [],
-      "status": "未匹配陵墓记录，主动查葬地文献"
+      "matchedRecordIds": [
+        "wu-yangxingmi-xing"
+      ],
+      "status": "已有陵名或候选实体记录，原址待核"
     },
     {
       "dynasty": "吴",
@@ -2309,8 +2347,10 @@
       "dynasty": "南汉",
       "name": "刘晟",
       "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
-      "matchedRecordIds": [],
-      "status": "未匹配陵墓记录，主动查葬地文献"
+      "matchedRecordIds": [
+        "nanhan-zhao"
+      ],
+      "status": "已有陵名或候选实体记录，原址待核"
     },
     {
       "dynasty": "南汉",
@@ -2540,8 +2580,10 @@
       "dynasty": "南明",
       "name": "朱由崧",
       "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
-      "matchedRecordIds": [],
-      "status": "未匹配陵墓记录，主动查葬地文献"
+      "matchedRecordIds": [
+        "nanming-hongguang"
+      ],
+      "status": "已有陵名或传统条目，位置待核"
     },
     {
       "dynasty": "南明",
@@ -2563,8 +2605,10 @@
       "dynasty": "南明",
       "name": "朱由榔",
       "rosterStatus": "工作核查名单，世系及异名继续核对；含监国，非全国君主全集",
-      "matchedRecordIds": [],
-      "status": "未匹配陵墓记录，主动查葬地文献"
+      "matchedRecordIds": [
+        "nanming-yongli-duyun"
+      ],
+      "status": "已有陵名或传统条目，位置待核"
     },
     {
       "dynasty": "南明",
@@ -2737,5 +2781,9 @@
       "status": "待检索与核实",
       "mapEligible": false
     }
+  ],
+  "supplementAudit": "../../../docs/imperial-tomb-pdf-supplement.json",
+  "supplementAudits": [
+    "../../../docs/imperial-tomb-next-supplement.json"
   ]
 }

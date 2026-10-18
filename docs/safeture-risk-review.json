@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-17",
+  "source": "https://globe.safeture.com/assets/geojson/country_risk_assessment.geojson",
+  "sourceSha256": "077a1f92e2b8a476d8239d4f8ae9db773b236d450be814c2649bdaf86a03af44",
+  "totalAreas": 177,
+  "ratedAreas": 167,
+  "originalGeometryAndRiskValuesPreserved": true,
+  "unrated": [
+    "W. Sahara",
+    "Falkland Is.",
+    "Norway",
+    "Fr. S. Antarctic Lands",
+    "France",
+    "Taiwan",
+    "Antarctica",
+    "N. Cyprus",
+    "Somaliland",
+    "Kosovo"
+  ],
+  "regressionScripts": 176,
+  "regressionFailures": 0,
+  "browser": {
+    "errors": [],
+    "features": 177,
+    "rated": 167,
+    "labels": 167,
+    "renderedLabels": 71,
+    "underCoverage": true,
+    "unchangedCoverage": true,
+    "bilingual": true,
+    "opacity": true,
+    "metricSwitchCleanup": true,
+    "screenshots": 2
+  },
+  "release": "2.3.3",
+  "published": false
+}

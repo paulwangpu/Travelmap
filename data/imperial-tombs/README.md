@@ -14,16 +14,16 @@
 
 | 时代 | 记录 | 单陵 | 陵群 | 地图代表点 | 基准待核 | 无坐标 |
 |---|---:|---:|---:|---:|---:|---:|
-| 传说时代 | 14 | 12 | 2 | 12 | 0 | 2 |
+| 传说时代 | 50 | 44 | 6 | 48 | 0 | 2 |
 | 先秦 | 63 | 33 | 30 | 43 | 0 | 20 |
-| 秦汉 | 73 | 57 | 16 | 67 | 0 | 5 |
+| 秦汉 | 74 | 58 | 16 | 68 | 0 | 5 |
 | 秦汉至五代 | 1 | 0 | 1 | 0 | 0 | 1 |
-| 魏晋南北朝 | 42 | 39 | 3 | 24 | 0 | 18 |
-| 隋唐 | 34 | 25 | 9 | 28 | 0 | 6 |
-| 五代十国 | 21 | 17 | 4 | 15 | 0 | 6 |
+| 魏晋南北朝 | 49 | 45 | 4 | 28 | 0 | 21 |
+| 隋唐 | 42 | 32 | 10 | 32 | 0 | 10 |
+| 五代十国 | 24 | 20 | 4 | 15 | 0 | 9 |
 | 宋辽金西夏 | 61 | 54 | 7 | 30 | 0 | 31 |
-| 元 | 3 | 3 | 0 | 3 | 0 | 0 |
-| 明 | 70 | 63 | 7 | 38 | 0 | 32 |
+| 元 | 6 | 6 | 0 | 6 | 0 | 0 |
+| 明 | 74 | 67 | 7 | 40 | 0 | 34 |
 | 清 | 19 | 16 | 3 | 18 | 0 | 1 |
 | 近现代 | 2 | 2 | 0 | 2 | 0 | 0 |
 
@@ -534,3 +534,43 @@
 | eg-amarna-ta26 | 阿肯那顿王室墓（TA26） | 古埃及 · 新王国第十八王朝阿玛尔纳时期 | 夏商 | 埃及 · 阿玛尔纳 · 王家谷 |
 | eg-senebkay | 塞内布凯王陵（CS9） | 古埃及 · 第二中间期阿拜多斯地方王朝 | 夏商 | 埃及 · 阿拜多斯 · 南部王陵区 |
 | eg-meritamun-tt358 | 梅丽特阿蒙王后陵（TT358） | 古埃及 · 新王国第十八王朝初期 | 夏商 | 埃及 · 卢克索西岸 · 代尔巴哈里 |
+
+## 2026-10-16：用户帝陵PDF增量补充
+
+新增14条记录：8处区域地图点、2条关联陵区子陵、4条位置待核；原487条记录及来源完整保留。坐标不从PDF批量复制，原始OSM与区域估计分别注明。
+
+| ID | 名称 | 政权 | 性质 | 点位 | 来源 |
+|---|---|---|---|---|---|
+| han-wannian-taishang | 汉太上皇万年陵 | 西汉 | 追尊陵（实葬性质另见证据） | 34.6927238, 109.2148995 / verified_wgs84 | [富平一核两轴五区：汉太上皇陵](https://www.ndrc.gov.cn/fggz/nyncjj/zdjs/201708/t20170822_1095423.html)、用户提供《历代帝陵位置和简介》55页（本地资料线索）、[原始OSM node 14289913204](https://www.openstreetmap.org/node/14289913204) |
+| tang-zuling-longyao | 隆尧唐祖陵 | 唐（追尊） | 陵群或混合性质 | 37.293724133333335, 114.76588121666664 / verified_wgs84 | [隆尧唐祖陵保护提案答复](https://whly.hebei.gov.cn/c/2017-08-15/557355.html)、[原始OSM way 1560105903](https://www.openstreetmap.org/way/1560105903) |
+| tang-zuling-jianchu | 唐建初陵 | 唐（追尊） | 追尊陵（实葬性质另见证据） | 关联隆尧唐祖陵，非单墓坐标 | [隆尧唐祖陵保护提案答复](https://whly.hebei.gov.cn/c/2017-08-15/557355.html) |
+| tang-zuling-qiyun | 唐启运陵 | 唐（追尊） | 追尊陵（实葬性质另见证据） | 关联隆尧唐祖陵，非单墓坐标 | [隆尧唐祖陵保护提案答复](https://whly.hebei.gov.cn/c/2017-08-15/557355.html) |
+| tang-yongkang-ancestor | 唐永康陵 | 唐（追尊） | 追尊陵（实葬性质另见证据） | 34.76897, 108.97743 / estimated_wgs84 | [咸阳市志：永康陵与兴宁陵](https://dfz.shaanxi.gov.cn/zslm/fzzlk/xbsxsxz/xbsxz/xys_16200/201405/P020240923612271781799.pdf)、[永康陵公开地理索引](https://zh.wikipedia.org/wiki/永康陵) |
+| tang-xingning-ancestor | 唐兴宁陵 | 唐（追尊） | 追尊陵（实葬性质另见证据） | 34.4260947, 108.8864299 / verified_wgs84 | [咸阳市志：永康陵与兴宁陵](https://dfz.shaanxi.gov.cn/zslm/fzzlk/xbsxsxz/xbsxz/xys_16200/201405/P020240923612271781799.pdf)、[原始OSM node 9399120964](https://www.openstreetmap.org/node/9399120964) |
+| xia-mingyuzhen-rui | 明玉珍睿陵 | 大夏（明玉珍） | 实际墓葬 | 29.5756823, 106.5721565 / verified_wgs84 | [重庆历史政德人物：明玉珍](https://dfz.cq.gov.cn/zqlswh/rwby_417819/202311/t20231102_12510537.html)、[原始OSM way 1379109699](https://www.openstreetmap.org/way/1379109699) |
+| chenhan-chenyouliang | 大汉陈友谅墓 | 大汉（陈友谅） | 祭祀纪念陵 | 30.5478624, 114.2903169 / verified_wgs84 | [武汉市政府公报：陈友谅墓](https://www.wuhan.gov.cn/zwgk/xxgk/zfgb/202401/P020240123605785889502.pdf)、[原始OSM node 12167226000](https://www.openstreetmap.org/node/12167226000) |
+| dashun-lizicheng-tongshan | 通山李自成墓（闯王陵） | 大顺 | 祭祀纪念陵 | 29.3959194, 114.5708611 / estimated_wgs84 | [咸宁市旅游业十三五发展规划：李自成墓](https://wlj.xianning.gov.cn/xxgk/fdzdgknr/ghjh/202111/P020250610591659936426.pdf)、[通山李自成墓公开地理索引与归属争议](https://zh.wikipedia.org/wiki/李自成墓_(通山县)) |
+| tang-zhaozong-he | 唐昭宗和陵 | 唐 | 实际墓葬 | 34.639704, 112.7957689 / verified_wgs84 | [巫山一段云：唐昭宗生平及和陵](https://dfz.cq.gov.cn/zqlswh/ldmr/202501/t20250123_14199164.html)、[原始OSM node 10973517404](https://www.openstreetmap.org/node/10973517404) |
+| tang-ai-wen | 唐哀帝温陵（陵址待核） | 唐 | 实际墓葬 | 位置待核，不上图 | [新唐书卷十：哀帝本纪](https://zh.wikisource.org/wiki/新唐書/卷010)、用户提供《历代帝陵位置和简介》55页（本地资料线索） |
+| yan-shisiming | 史思明墓（遗址待定位） | 大燕（史思明） | 实际墓葬 | 位置待核，不上图 | [史思明墓的发现与发掘](https://wwj.beijing.gov.cn/bjww/362760/362765/652806/index.html)、[2023年工单办理：史思明墓现场情况](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/326050307/index.html) |
+| nanming-hongguang | 南明弘光陵（陵址待核） | 南明 | 性质未明 | 位置待核，不上图 | 用户提供《历代帝陵位置和简介》55页（本地资料线索） |
+| nanming-yongli-duyun | 都匀明永历皇帝陵（传统认定） | 南明 | 祭祀纪念陵 | 位置待核，不上图 | [都匀文物古迹概况中的永历皇帝陵](https://www.qiannan.gov.cn/zwgk/zdlygk/sthj/sthjaqjg/202107/P020220529230801250780.pdf)、用户提供《历代帝陵位置和简介》55页（本地资料线索） |
+
+## 2026-10-16：第二批帝陵查漏
+
+新增12条，6处遗存区域点、6条原址待核。原501条记录及来源完整保留；未把墓主候选认定为确证，不复制PDF未知基准坐标。
+
+| ID | 名称 | 政权 | 位置状态 | 来源 |
+|---|---|---|---|---|
+| ming-dong-zhubiao | 明东陵（朱标陵） | 明（追尊） | 32.05831012, 118.83628151999999 / verified_wgs84 | [走遍钟山：明东陵原址考古与朱标](https://zschina.nanjing.gov.cn/lyzx/202309/t20230904_4002039.html)、[原始OSM way 803406635](https://www.openstreetmap.org/way/803406635) |
+| nanhan-zhao | 南汉昭陵（原址待定位） | 南汉 | 原址待核，不上图 | [广州黄埔考古：石马村南汉昭陵](https://www.hp.gov.cn/xwzx/mtxx/content/post_8967207.html)、[以南汉昭陵、德陵出土青瓷为线索](https://www.dpm.org.cn/Uploads/File/2024/07/18/u6698e32c9ab84.pdf) |
+| wei-cao-family-cemetery | 亳州曹氏宗族墓群 | 东汉、曹魏（追尊关联） | 原址待核，不上图 | [曹氏宗族墓群](https://www.qcdj.gov.cn/e/action/ShowInfo.php?classid=59&id=8762)、[亳县曹操宗族墓葬](https://www.wuhouci.net.cn/uploads/1/file/public/201802/20180202100357_ae824mefkc.pdf) |
+| wei-caosong-candidate | 曹嵩墓（候选墓址待核） | 曹魏（追尊） | 原址待核，不上图 | [曹氏宗族墓群](https://www.qcdj.gov.cn/e/action/ShowInfo.php?classid=59&id=8762)、[亳县曹操宗族墓葬](https://www.wuhouci.net.cn/uploads/1/file/public/201802/20180202100357_ae824mefkc.pdf)、用户提供《历代帝陵位置和简介》55页（本地研究线索） |
+| qi-qianai-jingan | 前艾庙石刻（景安陵传统比定） | 南齐 | 32.014918, 119.687359 / estimated_wgs84 | [南京・丹陽南朝陵墓有角石獣調査報告（一）](https://hannan-u.repo.nii.ac.jp/record/173/files/n001941.pdf)、[加强丹阳南朝帝王陵墓保护建议](https://www.jszx.gov.cn/wylz/zxta/2020ta/202205/t20220525_55098.html)、[齐武帝萧赜景安陵石刻公开地图索引](https://www.sinorelic.com/relicPoint/1418205506769653760) |
+| qi-xiantangwan-xiuan | 仙塘湾南朝大墓（修安陵推定） | 南齐 | 32.062263, 119.678603 / estimated_wgs84 | [南京・丹陽南朝陵墓有角石獣調査報告（一）](https://hannan-u.repo.nii.ac.jp/record/173/files/n001941.pdf)、[丹阳胡桥仙塘湾大墓三维模型及南朝陵墓研究](https://www.dpm.org.cn/Uploads/File/2022/12/30/u63aeddb32c579.pdf)、[加强丹阳南朝帝王陵墓保护建议](https://www.jszx.gov.cn/wylz/zxta/2020ta/202205/t20220525_55098.html)、[齐景帝萧道生修安陵石刻公开地图索引](https://www.sinorelic.com/relicPoint/1418435226186682368) |
+| qi-sanchengxiang-xingan | 三城巷石刻（兴安陵传统比定） | 南齐（传统比定） | 32.012495, 119.653016 / estimated_wgs84 | [南京・丹陽南朝陵墓有角石獣調査報告（一）](https://hannan-u.repo.nii.ac.jp/record/173/files/n001941.pdf)、[丹阳胡桥仙塘湾大墓三维模型及南朝陵墓研究](https://www.dpm.org.cn/Uploads/File/2022/12/30/u63aeddb32c579.pdf)、[齐明帝萧鸾兴安陵石刻公开地图索引](https://www.sinorelic.com/relicPoint/1418402455590408192) |
+| later-tang-jianji | 后唐建极陵（李克用墓） | 后唐（追尊） | 原址待核，不上图 | [Ancient genomic profile of the Shatuo Turkic leader Li Keyong](https://www.sciencedirect.com/science/article/pii/S1673852726001475)、[旧五代史卷四十：建极陵在代州雁门县](https://zh.wikisource.org/zh-hans/舊五代史/卷40)、用户提供《历代帝陵位置和简介》55页（本地研究线索） |
+| wu-yangxingmi-xing | 吴兴陵（杨行密墓，地望待核） | 吴（追尊） | 原址待核，不上图 | [兴陵（南吴）地望与旧志线索](https://zh.wikipedia.org/wiki/興陵_(南吳))、用户提供《历代帝陵位置和简介》55页（本地研究线索） |
+| song-liuqiao-xingning | 刘宋兴宁陵（刘皇墓） | 刘宋（追尊） | 原址待核，不上图 | [南朝宋孝懿皇后萧文寿与兴宁陵](https://www.jsw.com.cn/2024/1205/1877862.shtml)、用户提供《历代帝陵位置和简介》55页（本地研究线索） |
+| xiliang-xiaotushan-candidate | 小土山墓（西凉建世陵候选） | 西凉（候选归属） | 39.771091, 98.420543 / estimated_wgs84 | [小土山墓与西凉画像文化研究](https://www.wrs.waseda.jp/sp-r/admin/print/number/2023Q-021)、[酒泉小土山墓遗址概况](https://meta.librarydata.cn/metainfo?metaID=292220020220001659)、[果园墓群-小土山墓葬公开地图索引](https://www.sinorelic.com/relicPoint/1708709417219919872) |
+| yuan-zhangshicheng-old | 张士诚墓旧址（传统认定） | 大周／吴（张士诚） | 31.3138912, 120.7301773 / verified_wgs84 | [张吴王墓：旧址与迁建记载](https://www.sipac.gov.cn/szdaglzx/yqfzrwls/202102/5730622c995f4724ac8066c601f8a72c.shtml)、[苏州工业园区地名规划2024—2035](https://www.sipac.gov.cn/szgyyq/ggxx/202411/619c4163312d4101a64688bc389f61f0/files/07f812c1e69e4453b3f24722e6ce4cac.pdf)、[原始OSM node 8013316235](https://www.openstreetmap.org/node/8013316235) |

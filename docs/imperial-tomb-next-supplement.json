@@ -1,0 +1,163 @@
+{
+  "date": "2026-10-16",
+  "baseline": {
+    "items": 501,
+    "itemsSha256": "725002cf041243da638ba0b3612af697bd3491086d50992485986a302f7bde66",
+    "sources": 887,
+    "sourcesSha256": "21d7482a42e65b2e03f39039981086921e2eafdaac0fa722037f8aec608cbd79"
+  },
+  "addedRecords": 12,
+  "addedMapPoints": 6,
+  "pendingLocations": 6,
+  "records": [
+    {
+      "id": "ming-dong-zhubiao",
+      "name": "明东陵（朱标陵）",
+      "mapEligible": true,
+      "coordinateStatus": "verified_wgs84",
+      "parentId": null,
+      "sourceIds": [
+        "next-mingdong-official",
+        "next-geo-osm-way-803406635"
+      ]
+    },
+    {
+      "id": "nanhan-zhao",
+      "name": "南汉昭陵（原址待定位）",
+      "mapEligible": false,
+      "coordinateStatus": "unlocated",
+      "parentId": null,
+      "sourceIds": [
+        "next-nanhan-zhao-excavation",
+        "next-nanhan-zhao-research"
+      ]
+    },
+    {
+      "id": "wei-cao-family-cemetery",
+      "name": "亳州曹氏宗族墓群",
+      "mapEligible": false,
+      "coordinateStatus": "unlocated",
+      "parentId": null,
+      "sourceIds": [
+        "next-cao-cemetery-official",
+        "next-cao-cemetery-report"
+      ]
+    },
+    {
+      "id": "wei-caosong-candidate",
+      "name": "曹嵩墓（候选墓址待核）",
+      "mapEligible": false,
+      "coordinateStatus": "unlocated",
+      "parentId": "wei-cao-family-cemetery",
+      "sourceIds": [
+        "next-cao-cemetery-official",
+        "next-cao-cemetery-report",
+        "pdf-imperial-supplement-20261016"
+      ]
+    },
+    {
+      "id": "qi-qianai-jingan",
+      "name": "前艾庙石刻（景安陵传统比定）",
+      "mapEligible": true,
+      "coordinateStatus": "estimated_wgs84",
+      "parentId": "southern-danyang",
+      "sourceIds": [
+        "next-danyang-field-study",
+        "next-danyang-protection",
+        "next-geo-sinorelic-1418205506769653760"
+      ]
+    },
+    {
+      "id": "qi-xiantangwan-xiuan",
+      "name": "仙塘湾南朝大墓（修安陵推定）",
+      "mapEligible": true,
+      "coordinateStatus": "estimated_wgs84",
+      "parentId": "southern-danyang",
+      "sourceIds": [
+        "next-danyang-field-study",
+        "next-xiantangwan-archaeology",
+        "next-danyang-protection",
+        "next-geo-sinorelic-1418435226186682368"
+      ]
+    },
+    {
+      "id": "qi-sanchengxiang-xingan",
+      "name": "三城巷石刻（兴安陵传统比定）",
+      "mapEligible": true,
+      "coordinateStatus": "estimated_wgs84",
+      "parentId": "southern-danyang",
+      "sourceIds": [
+        "next-danyang-field-study",
+        "next-xiantangwan-archaeology",
+        "next-geo-sinorelic-1418402455590408192"
+      ]
+    },
+    {
+      "id": "later-tang-jianji",
+      "name": "后唐建极陵（李克用墓）",
+      "mapEligible": false,
+      "coordinateStatus": "unlocated",
+      "parentId": null,
+      "sourceIds": [
+        "next-likeyong-genomic-study",
+        "next-likeyong-annals",
+        "pdf-imperial-supplement-20261016"
+      ]
+    },
+    {
+      "id": "wu-yangxingmi-xing",
+      "name": "吴兴陵（杨行密墓，地望待核）",
+      "mapEligible": false,
+      "coordinateStatus": "unlocated",
+      "parentId": null,
+      "sourceIds": [
+        "next-yangxingmi-historical-lead",
+        "pdf-imperial-supplement-20261016"
+      ]
+    },
+    {
+      "id": "song-liuqiao-xingning",
+      "name": "刘宋兴宁陵（刘皇墓）",
+      "mapEligible": false,
+      "coordinateStatus": "unlocated",
+      "parentId": null,
+      "sourceIds": [
+        "next-liuqiao-local-history",
+        "pdf-imperial-supplement-20261016"
+      ]
+    },
+    {
+      "id": "xiliang-xiaotushan-candidate",
+      "name": "小土山墓（西凉建世陵候选）",
+      "mapEligible": true,
+      "coordinateStatus": "estimated_wgs84",
+      "parentId": null,
+      "sourceIds": [
+        "next-xiaotushan-scholarship",
+        "next-xiaotushan-local-record",
+        "next-geo-sinorelic-1708709417219919872"
+      ]
+    },
+    {
+      "id": "yuan-zhangshicheng-old",
+      "name": "张士诚墓旧址（传统认定）",
+      "mapEligible": true,
+      "coordinateStatus": "verified_wgs84",
+      "parentId": null,
+      "sourceIds": [
+        "next-zhangshicheng-archives",
+        "next-zhangshicheng-placeplan",
+        "next-geo-osm-node-8013316235"
+      ]
+    }
+  ],
+  "geographicEvidence": "原始OSM实际遗存或公开高德地图遗存索引；原站JS与原始API保存在output/tomb-next-supplement。高德推断基准转WGS84的点仅为区域估计，不将小数位当精度。",
+  "rejectedReferences": [
+    "不将曹氏墓群整体坐标设在张园或董园单墓",
+    "南汉昭陵不采用番禺博物馆或PDF错误区域",
+    "修安陵不采用指向其他墓区的百科点",
+    "小土山遗存不使用相距明显的PDF点",
+    "吴山庙与百花公主墓不当杨行密墓",
+    "张士诚旧址不替代迁建墓庙"
+  ]
+}

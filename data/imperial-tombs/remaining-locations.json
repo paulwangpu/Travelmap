@@ -1,10 +1,10 @@
 {
-  "reviewedAt": "2026-10-04",
-  "totalRecords": 403,
-  "mapCandidates": 280,
-  "missingIndependentCoordinates": 44,
+  "reviewedAt": "2026-10-16",
+  "totalRecords": 429,
+  "mapCandidates": 294,
+  "missingIndependentCoordinates": 54,
   "overviewsWithMappedChildren": 10,
-  "sharedCemeteryReferences": 78,
+  "sharedCemeteryReferences": 80,
   "unlocated": [
     {
       "id": "qin-gong-group",
@@ -103,10 +103,13 @@
       "admin": "江苏省镇江市丹阳市",
       "category": "overview_with_mapped_children",
       "mappedChildren": [
-        "liang-jian"
+        "liang-jian",
+        "qi-qianai-jingan",
+        "qi-xiantangwan-xiuan",
+        "qi-sanchengxiang-xingan"
       ],
       "reason": null,
-      "nextStep": "保留总览及所属关系；用已有子陵位置浏览，不任取一个子陵作为整体中心。"
+      "nextStep": "前艾、仙塘湾、三城巷已各有遗存区域点；总览不采用某一子陵作为整片陵区中心。"
     },
     {
       "id": "tang18",
@@ -469,6 +472,96 @@
       "mappedChildren": [],
       "reason": null,
       "nextStep": "从文保保护图或现场地理资料配准陵区；不同坐标索引存在冲突，不使用城址或景区中心替代"
+    },
+    {
+      "id": "tang-ai-wen",
+      "name": "唐哀帝温陵（陵址待核）",
+      "admin": "史载济阴、定陶一带；现代陵址未确认",
+      "category": "unresolved_site_or_entity",
+      "mappedChildren": [],
+      "reason": "具体陵址及坐标基准待核；不采用PDF未知基准点或城市中心",
+      "nextStep": "补核原址平面、坐标基准和当前保存情况"
+    },
+    {
+      "id": "yan-shisiming",
+      "name": "史思明墓（遗址待定位）",
+      "admin": "北京市丰台区王佐镇原林家坟村西一带",
+      "category": "unresolved_site_or_entity",
+      "mappedChildren": [],
+      "reason": "具体陵址及坐标基准待核；不采用PDF未知基准点或城市中心",
+      "nextStep": "补核原址平面、坐标基准和当前保存情况"
+    },
+    {
+      "id": "nanming-hongguang",
+      "name": "南明弘光陵（陵址待核）",
+      "admin": "洛阳孟津葬地线索；具体陵址待核",
+      "category": "unresolved_site_or_entity",
+      "mappedChildren": [],
+      "reason": "具体陵址及坐标基准待核；不采用PDF未知基准点或城市中心",
+      "nextStep": "查南明葬地原始文献、孟津文物档案；排除与后唐徽陵混用"
+    },
+    {
+      "id": "nanming-yongli-duyun",
+      "name": "都匀明永历皇帝陵（传统认定）",
+      "admin": "贵州省黔南布依族苗族自治州都匀市匀东镇高塘山一带",
+      "category": "unresolved_site_or_entity",
+      "mappedChildren": [],
+      "reason": "具体陵址及坐标基准待核；不采用PDF未知基准点或城市中心",
+      "nextStep": "补核原址平面、坐标基准和当前保存情况"
+    },
+    {
+      "id": "nanhan-zhao",
+      "name": "南汉昭陵（原址待定位）",
+      "admin": "广东省广州市黄埔区原石马村、石牛山山麓一带",
+      "category": "unresolved_site_or_entity",
+      "mappedChildren": [],
+      "reason": "原址坐标未核；不采用PDF未知基准点、村镇中心或藏品馆位置",
+      "nextStep": "核对原墓、石刻及现存展示区位置；完善原址测绘资料"
+    },
+    {
+      "id": "wei-cao-family-cemetery",
+      "name": "亳州曹氏宗族墓群",
+      "admin": "安徽省亳州市魏武大道两侧多个分散墓区",
+      "category": "unresolved_site_or_entity",
+      "mappedChildren": [],
+      "reason": "原址坐标未核；不采用PDF未知基准点、村镇中心或藏品馆位置",
+      "nextStep": "核对原墓、石刻及现存展示区位置；完善原址测绘资料"
+    },
+    {
+      "id": "wei-caosong-candidate",
+      "name": "曹嵩墓（候选墓址待核）",
+      "admin": "安徽省亳州市曹氏宗族墓群；董园等具体墓号对应待核",
+      "category": "unresolved_site_or_entity",
+      "mappedChildren": [],
+      "reason": "原址坐标未核；不采用PDF未知基准点、村镇中心或藏品馆位置",
+      "nextStep": "核对原墓、石刻及现存展示区位置；完善原址测绘资料"
+    },
+    {
+      "id": "later-tang-jianji",
+      "name": "后唐建极陵（李克用墓）",
+      "admin": "山西省忻州市代县阳明堡镇七里铺村北",
+      "category": "unresolved_site_or_entity",
+      "mappedChildren": [],
+      "reason": "原址坐标未核；不采用PDF未知基准点、村镇中心或藏品馆位置",
+      "nextStep": "核对墓室原址测绘、发掘年份及当前保存情况"
+    },
+    {
+      "id": "wu-yangxingmi-xing",
+      "name": "吴兴陵（杨行密墓，地望待核）",
+      "admin": "安徽省合肥市长丰县吴山镇传统地望；旧籍异说待核",
+      "category": "unresolved_site_or_entity",
+      "mappedChildren": [],
+      "reason": "原址坐标未核；不采用PDF未知基准点、村镇中心或藏品馆位置",
+      "nextStep": "核对原墓、石刻及现存展示区位置；完善原址测绘资料"
+    },
+    {
+      "id": "song-liuqiao-xingning",
+      "name": "刘宋兴宁陵（刘皇墓）",
+      "admin": "江苏省镇江市京口区谏壁雩山、张家荡一带",
+      "category": "unresolved_site_or_entity",
+      "mappedChildren": [],
+      "reason": "原址坐标未核；不采用PDF未知基准点、村镇中心或藏品馆位置",
+      "nextStep": "核对原墓、石刻及现存展示区位置；完善原址测绘资料"
     }
   ]
 }

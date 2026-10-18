@@ -1,0 +1,963 @@
+{
+  "date": "2026-10-16",
+  "beforeCount": 861,
+  "removed": [
+    {
+      "id": "beijing-outer-gates-guangan",
+      "sha256": "6e0a3fc1a13db7fd87ce0be050a51ba5f8cb2da88883f4b004f19a58b88c3253"
+    },
+    {
+      "id": "beijing-outer-gates-guangqu",
+      "sha256": "95fbcb60f9da2f50a7f7269106637354b301092ef4a913e12ba9e3639ea5cebe"
+    },
+    {
+      "id": "beijing-outer-gates-youan",
+      "sha256": "7f649c5e647f9f07df50a985cfb146b4a3621e8c428871baa3bf380ef1be3874"
+    },
+    {
+      "id": "beijing-outer-gates-dongbian",
+      "sha256": "99b968dece23efabda5071bcd15d00db99886b126b351e60a68c931574c1619c"
+    },
+    {
+      "id": "beijing-outer-gates-xibian",
+      "sha256": "73d504a22f2916717449fba88aa93599c77c9136206e99898b881e046bde3ef3"
+    },
+    {
+      "id": "beijing-outer-gates-zuoan",
+      "sha256": "1ef1c217a8bcdf5e605bed42782b40e837805a3415837bd1a359e40e80453fc6"
+    }
+  ],
+  "boundaryFeatures": [
+    {
+      "sourceId": "beijing-yuan-outer-1368",
+      "sha256": "cf1509f94a0b367de1e3e64eea6106a71a910756b87eb4100876937eb38cf3e9"
+    },
+    {
+      "sourceId": 4,
+      "sha256": "5eaac9d755964057a461984db7d055b2519c95a0972e43c1d3a2ae5066eddf3e"
+    },
+    {
+      "sourceId": 5,
+      "sha256": "ee25375ba23888042c7483959da6ff10ef62afe04916c6bfb95409ce3e011cc1"
+    }
+  ],
+  "added": [
+    {
+      "id": "beijing-boundary-gate-yuan-jiande",
+      "name": "健德门",
+      "previousCoordinates": [
+        116.3734,
+        39.974017230168194
+      ],
+      "coordinates": [
+        116.3753744,
+        39.9755371
+      ],
+      "shiftMeters": 239,
+      "kind": "street_junction_reference",
+      "roads": [
+        "北土城西路",
+        "G6辅路"
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/144929519",
+      "geometrySha256": "5f71255465a36ca6ee15dacda0adda83755c32ee762cc08813a31b7f6cce2abc"
+    },
+    {
+      "id": "beijing-boundary-gate-yuan-anzhen",
+      "name": "安贞门",
+      "previousCoordinates": [
+        116.4028,
+        39.974272678048656
+      ],
+      "coordinates": [
+        116.4009986,
+        39.9756475
+      ],
+      "shiftMeters": 217,
+      "kind": "street_junction_reference",
+      "roads": [
+        "北土城东路",
+        "安定路"
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/22760069",
+      "geometrySha256": "7b017bf325afa0246cbd467a920b476c8e06a264647c6cacf0594db08c1a7534"
+    },
+    {
+      "id": "beijing-boundary-gate-yuan-guangxi",
+      "name": "光熙门",
+      "previousCoordinates": [
+        116.42687239508197,
+        39.964
+      ],
+      "coordinates": [
+        116.4255869,
+        39.9580802
+      ],
+      "shiftMeters": 668,
+      "kind": "street_junction_reference",
+      "roads": [
+        "和平里北街",
+        "柳芳北街"
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/42502409",
+      "geometrySha256": "0e69a1f9fc2bae2e2ccffdb7bb13691551d342a0fe2a0c434aa60e8201c2eeee"
+    },
+    {
+      "id": "beijing-boundary-gate-yuan-chongren",
+      "name": "崇仁门",
+      "previousCoordinates": [
+        116.42758878852459,
+        39.941
+      ],
+      "coordinates": [
+        116.42740895,
+        39.9394169
+      ],
+      "shiftMeters": 177,
+      "kind": "street_junction_reference",
+      "roads": [
+        "东直门内大街",
+        "东直门外大街"
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/26812214",
+      "geometrySha256": "9292d033e29d2d27c6145b23396fa0b6edf047bb410a6c6469186fb0ef7a7405"
+    },
+    {
+      "id": "beijing-boundary-gate-yuan-qihua",
+      "name": "齐化门",
+      "previousCoordinates": [
+        116.42818059180328,
+        39.922
+      ],
+      "coordinates": [
+        116.4283021,
+        39.923276099999995
+      ],
+      "shiftMeters": 142,
+      "kind": "street_junction_reference",
+      "roads": [
+        "朝阳门内大街",
+        "朝阳门外大街"
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/34104260",
+      "geometrySha256": "02c23d66f5b27cae0976b4ded85f83e472b26857645337386de26898758533b2"
+    },
+    {
+      "id": "beijing-boundary-gate-yuan-wenming",
+      "name": "文明门",
+      "previousCoordinates": [
+        116.417,
+        39.905998721073075
+      ],
+      "coordinates": [
+        116.4117214711817,
+        39.90592624917529
+      ],
+      "shiftMeters": 450,
+      "kind": "historical_street_axis_intersection",
+      "roads": [
+        "崇文门内大街",
+        "Yuan south-wall reference"
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/127843742",
+      "geometrySha256": "c9172a8ed7760e42e48032aaba2b7bcee79c5b6d89d0b27ee29527add33790a2"
+    },
+    {
+      "id": "beijing-boundary-gate-yuan-lizheng",
+      "name": "丽正门",
+      "previousCoordinates": [
+        116.3912,
+        39.90564449832897
+      ],
+      "coordinates": [
+        116.39136700922742,
+        39.9056467912928
+      ],
+      "shiftMeters": 14,
+      "kind": "historical_street_axis_intersection",
+      "roads": [
+        "元南墙参考线",
+        "天安门—正阳门中轴建筑轴线"
+      ],
+      "sourceUrl": "https://doi.org/10.6084/m9.figshare.14112968.v3",
+      "geometrySha256": "ed4c86136a42d928b1e40ab977a40d608a26c55a76acfad31e03528363cac896"
+    },
+    {
+      "id": "beijing-boundary-gate-yuan-shuncheng",
+      "name": "顺承门",
+      "previousCoordinates": [
+        116.3684,
+        39.90533146427604
+      ],
+      "coordinates": [
+        116.36773528291357,
+        39.905322338000445
+      ],
+      "shiftMeters": 57,
+      "kind": "historical_street_axis_intersection",
+      "roads": [
+        "宣武门内大街",
+        "Yuan south-wall reference"
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/30042374",
+      "geometrySha256": "1efed48be695269c6edcad7e9f3230fabc55260a5e3962ed0060bdbdd643e5ff"
+    },
+    {
+      "id": "beijing-boundary-gate-yuan-suqing",
+      "name": "肃清门",
+      "previousCoordinates": [
+        116.3482530499425,
+        39.963
+      ],
+      "coordinates": [
+        116.3490707,
+        39.9566624
+      ],
+      "shiftMeters": 709,
+      "kind": "street_junction_reference",
+      "roads": [
+        "学院南路",
+        "西土城路"
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/24399537",
+      "geometrySha256": "ba19c2ed154312f6ac49a8e55be6cfd88a2605da5c14ea3421f73f233e1ac845"
+    },
+    {
+      "id": "beijing-boundary-gate-yuan-heyi",
+      "name": "和义门",
+      "previousCoordinates": [
+        116.34936395403136,
+        39.941
+      ],
+      "coordinates": [
+        116.3497738,
+        39.9390799
+      ],
+      "shiftMeters": 217,
+      "kind": "street_junction_reference",
+      "roads": [
+        "西直门内大街",
+        "西直门外大街"
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/23351520",
+      "geometrySha256": "92f995d3c0ec67a24f50b9eb42ec219267937c0bfff7a2a057c8e704a5ad6d5c"
+    },
+    {
+      "id": "beijing-boundary-gate-yuan-pingze",
+      "name": "平则门",
+      "previousCoordinates": [
+        116.350323371199,
+        39.922
+      ],
+      "coordinates": [
+        116.35003085,
+        39.9223452
+      ],
+      "shiftMeters": 46,
+      "kind": "street_junction_reference",
+      "roads": [
+        "阜成门内大街",
+        "阜成门外大街"
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/30065021",
+      "geometrySha256": "97f250699f108de42d48f26162d56d9f64e8242dbb428e3f2d3879633acd64cb"
+    },
+    {
+      "id": "beijing-boundary-gate-inner-desheng",
+      "name": "德胜门",
+      "previousCoordinates": [
+        116.3733,
+        39.94738973113839
+      ],
+      "coordinates": [
+        116.373319055,
+        39.94836586999999
+      ],
+      "shiftMeters": 109,
+      "kind": "standing_gate_building_reference",
+      "roads": [],
+      "sourceUrl": "https://www.openstreetmap.org/way/26514845",
+      "geometrySha256": "968b2c33c1a3d485193cc9f3c36b4dce8c784b5fc1938910a35d3cadae399b9e"
+    },
+    {
+      "id": "beijing-boundary-gate-inner-anding",
+      "name": "安定门",
+      "previousCoordinates": [
+        116.4028,
+        39.94782648638634
+      ],
+      "coordinates": [
+        116.40172444999999,
+        39.9475061
+      ],
+      "shiftMeters": 98,
+      "kind": "street_junction_reference",
+      "roads": [
+        "安定门内大街",
+        "安定门外大街"
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/142098681",
+      "geometrySha256": "3a1e835fa830fb8616dd9b2dbd4fc3f5e48d4d05ea80cb061802cfa6fd340b13"
+    },
+    {
+      "id": "beijing-boundary-gate-inner-dongzhi",
+      "name": "东直门",
+      "previousCoordinates": [
+        116.42762734339851,
+        39.9408
+      ],
+      "coordinates": [
+        116.42740895,
+        39.9394169
+      ],
+      "shiftMeters": 155,
+      "kind": "street_junction_reference",
+      "roads": [
+        "东直门内大街",
+        "东直门外大街"
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/26812214",
+      "geometrySha256": "9292d033e29d2d27c6145b23396fa0b6edf047bb410a6c6469186fb0ef7a7405"
+    },
+    {
+      "id": "beijing-boundary-gate-inner-chaoyang",
+      "name": "朝阳门",
+      "previousCoordinates": [
+        116.42832526706454,
+        39.922
+      ],
+      "coordinates": [
+        116.4283021,
+        39.923276099999995
+      ],
+      "shiftMeters": 142,
+      "kind": "street_junction_reference",
+      "roads": [
+        "朝阳门内大街",
+        "朝阳门外大街"
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/34104260",
+      "geometrySha256": "02c23d66f5b27cae0976b4ded85f83e472b26857645337386de26898758533b2"
+    },
+    {
+      "id": "beijing-boundary-gate-inner-chongwen",
+      "name": "崇文门",
+      "previousCoordinates": [
+        116.417,
+        39.899962266651194
+      ],
+      "coordinates": [
+        116.4123152,
+        39.8997998
+      ],
+      "shiftMeters": 400,
+      "kind": "street_junction_reference",
+      "roads": [
+        "崇文门内大街",
+        "崇文门外大街"
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/127843742",
+      "geometrySha256": "f8ac9b7f4dec04c7c6b5f497f7eaceb28f73ac1ba9b7836c880507cccf352a17"
+    },
+    {
+      "id": "beijing-boundary-gate-inner-zhengyang",
+      "name": "正阳门",
+      "previousCoordinates": [
+        116.3913,
+        39.89931249356644
+      ],
+      "coordinates": [
+        116.39161823333335,
+        39.89917021666667
+      ],
+      "shiftMeters": 31,
+      "kind": "standing_gate_building_reference",
+      "roads": [],
+      "sourceUrl": "https://www.openstreetmap.org/way/25109960",
+      "geometrySha256": "885bdd6e2824a074baf44bdf57455954fba4b2be9802fe88b8613525bca1c800"
+    },
+    {
+      "id": "beijing-boundary-gate-inner-xuanwu",
+      "name": "宣武门",
+      "previousCoordinates": [
+        116.3684,
+        39.89873351288002
+      ],
+      "coordinates": [
+        116.3680123,
+        39.898358900000005
+      ],
+      "shiftMeters": 53,
+      "kind": "street_junction_reference",
+      "roads": [
+        "宣武门内大街",
+        "宣武门外大街"
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/30042374",
+      "geometrySha256": "5be741d86476ff8987c271b2ad347a9e372335406f9089c3ab07619c6312e204"
+    },
+    {
+      "id": "beijing-boundary-gate-inner-xizhi",
+      "name": "西直门",
+      "previousCoordinates": [
+        116.34943189981274,
+        39.9404
+      ],
+      "coordinates": [
+        116.3497738,
+        39.9390799
+      ],
+      "shiftMeters": 150,
+      "kind": "street_junction_reference",
+      "roads": [
+        "西直门内大街",
+        "西直门外大街"
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/23351520",
+      "geometrySha256": "92f995d3c0ec67a24f50b9eb42ec219267937c0bfff7a2a057c8e704a5ad6d5c"
+    },
+    {
+      "id": "beijing-boundary-gate-inner-fucheng",
+      "name": "阜成门",
+      "previousCoordinates": [
+        116.35036654400749,
+        39.922
+      ],
+      "coordinates": [
+        116.35003085,
+        39.9223452
+      ],
+      "shiftMeters": 48,
+      "kind": "street_junction_reference",
+      "roads": [
+        "阜成门内大街",
+        "阜成门外大街"
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/30065021",
+      "geometrySha256": "97f250699f108de42d48f26162d56d9f64e8242dbb428e3f2d3879633acd64cb"
+    },
+    {
+      "id": "beijing-boundary-gate-outer-guangan",
+      "name": "广安门",
+      "previousCoordinates": [
+        116.34470284151917,
+        39.8883
+      ],
+      "coordinates": [
+        116.34212595,
+        39.8883227
+      ],
+      "shiftMeters": 220,
+      "kind": "street_junction_reference",
+      "roads": [
+        "广安门内大街",
+        "广安门外大街"
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/29293482",
+      "geometrySha256": "adefa047e8fdaf94a9cd8cd196741776fc27fcb737e4e87fac269c3c833408b7"
+    },
+    {
+      "id": "beijing-boundary-gate-outer-guangqu",
+      "name": "广渠门",
+      "previousCoordinates": [
+        116.4370105206719,
+        39.8923
+      ],
+      "coordinates": [
+        116.43875225,
+        39.89217695
+      ],
+      "shiftMeters": 149,
+      "kind": "street_junction_reference",
+      "roads": [
+        "广渠门内大街",
+        "广渠门外大街"
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/29309201",
+      "geometrySha256": "b2f69e3b000afa742eb312d7e2352e9d8bef8e9b6e0e5dd59fa1305a0b947330"
+    },
+    {
+      "id": "beijing-boundary-gate-outer-youan",
+      "name": "右安门",
+      "previousCoordinates": [
+        116.3579,
+        39.86897670763586
+      ],
+      "coordinates": [
+        116.35805045000001,
+        39.8678582
+      ],
+      "shiftMeters": 125,
+      "kind": "street_junction_reference",
+      "roads": [
+        "右安门内大街",
+        "右安门外大街"
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/127464430",
+      "geometrySha256": "211a885e52e9c07721b472d805c87de820f7e7b3b3d3cad42f3c935543617e01"
+    },
+    {
+      "id": "beijing-boundary-gate-outer-yongding",
+      "name": "永定门",
+      "previousCoordinates": [
+        116.3931,
+        39.87105522597945
+      ],
+      "coordinates": [
+        116.39311372307694,
+        39.87106398461538
+      ],
+      "shiftMeters": 2,
+      "kind": "standing_gate_building_reference",
+      "roads": [],
+      "sourceUrl": "https://www.openstreetmap.org/way/228041535",
+      "geometrySha256": "91558371ca70b0888cbf6fd473554af919fa5c187378931f129da18c110cbb1e"
+    },
+    {
+      "id": "beijing-boundary-gate-outer-zuoan",
+      "name": "左安门",
+      "previousCoordinates": [
+        116.4332,
+        39.87101739909617
+      ],
+      "coordinates": [
+        116.4330839,
+        39.8697132
+      ],
+      "shiftMeters": 146,
+      "kind": "street_junction_reference",
+      "roads": [
+        "左安门内大街",
+        "左安门桥"
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/175380431",
+      "geometrySha256": "3ad75fc774ce518ee62aa6f2e2ed25c80a8c570a379c6143f66d82f3370b54da"
+    },
+    {
+      "id": "beijing-boundary-gate-outer-xibian",
+      "name": "西便门",
+      "previousCoordinates": [
+        116.34935,
+        39.89823292777827
+      ],
+      "coordinates": [
+        116.3465941,
+        39.8998865
+      ],
+      "shiftMeters": 299,
+      "kind": "street_junction_reference",
+      "roads": [
+        "西便门内大街",
+        "西便门外大街"
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/42674667",
+      "geometrySha256": "7ec2ff5f3785721abd82818a3db09f184ba041d4aaf4abad71b493c5d6c64400"
+    },
+    {
+      "id": "beijing-boundary-gate-outer-dongbian",
+      "name": "东便门",
+      "previousCoordinates": [
+        116.432,
+        39.900371985223394
+      ],
+      "coordinates": [
+        116.42905305,
+        39.89966435
+      ],
+      "shiftMeters": 263,
+      "kind": "street_junction_reference",
+      "roads": [
+        "崇文门东大街",
+        "东二环"
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/121782622",
+      "geometrySha256": "a28ac4164e808ce32a1b5f314262ecd2853768cffdfc843417815c01184891cd"
+    }
+  ],
+  "precision": "路口、实物及历史街道轴线参照；原多边形边线投影已停用",
+  "capitalCatalogSha256": "47113d3bc5a15f552f8ab0fd67cbcb72a2e4330a82c4fc2b1be8b06413b2580c",
+  "preservedCount": 855,
+  "preservedSha256": "351cd83a47c4587b7891f20792375b59a1ed3e48ec156d4ff36442ae1a65e0a7",
+  "totalFeatures": 882,
+  "supersededBy": "beijing-gate-junctions.json",
+  "previousOnBoundary": [
+    {
+      "id": "beijing-boundary-gate-yuan-jiande",
+      "name": "健德门",
+      "phase": "yuan",
+      "side": "north",
+      "coordinates": [
+        116.3734,
+        39.974017230168194
+      ],
+      "boundarySourceId": "beijing-yuan-outer-1368",
+      "segment": 0,
+      "fraction": 0.3258834572161265,
+      "geometrySha256": "66182464228a0f66fd6552be49cf52159402af4fd3d1174d02dae37a2db91fc7"
+    },
+    {
+      "id": "beijing-boundary-gate-yuan-anzhen",
+      "name": "安贞门",
+      "phase": "yuan",
+      "side": "north",
+      "coordinates": [
+        116.4028,
+        39.974272678048656
+      ],
+      "boundarySourceId": "beijing-yuan-outer-1368",
+      "segment": 0,
+      "fraction": 0.6988000710317193,
+      "geometrySha256": "97152ace32a6f2e576d23442493b575a22ba8387fae599e048762858604a9cdd"
+    },
+    {
+      "id": "beijing-boundary-gate-yuan-guangxi",
+      "name": "光熙门",
+      "phase": "yuan",
+      "side": "east",
+      "coordinates": [
+        116.42687239508197,
+        39.964
+      ],
+      "boundarySourceId": "beijing-yuan-outer-1368",
+      "segment": 1,
+      "fraction": 0.1533811475410376,
+      "geometrySha256": "b0e35d2b33498e58a25c504e0896d5f7512f9c5a8bab07bd20da6c759cf58769"
+    },
+    {
+      "id": "beijing-boundary-gate-yuan-chongren",
+      "name": "崇仁门",
+      "phase": "yuan",
+      "side": "east",
+      "coordinates": [
+        116.42758878852459,
+        39.941
+      ],
+      "boundarySourceId": "beijing-yuan-outer-1368",
+      "segment": 1,
+      "fraction": 0.49003220140514997,
+      "geometrySha256": "01c82ea042c8502c946e8a176da7ff4cfd75be7e535bcd559cc1a9e4983b0287"
+    },
+    {
+      "id": "beijing-boundary-gate-yuan-qihua",
+      "name": "齐化门",
+      "phase": "yuan",
+      "side": "east",
+      "coordinates": [
+        116.42818059180328,
+        39.922
+      ],
+      "boundarySourceId": "beijing-yuan-outer-1368",
+      "segment": 1,
+      "fraction": 0.7681352459017172,
+      "geometrySha256": "3ef9a9bb679023fdea5891530156140357d1f92b4532569b324076d99117cfce"
+    },
+    {
+      "id": "beijing-boundary-gate-yuan-wenming",
+      "name": "文明门",
+      "phase": "yuan",
+      "side": "south",
+      "coordinates": [
+        116.417,
+        39.905998721073075
+      ],
+      "boundarySourceId": "beijing-yuan-outer-1368",
+      "segment": 2,
+      "fraction": 0.15063808921635946,
+      "geometrySha256": "60590eca935b109f1cb1f2f364f7bcc8750bb7ed058c01c47f66dbe6199ccaa3"
+    },
+    {
+      "id": "beijing-boundary-gate-yuan-lizheng",
+      "name": "丽正门",
+      "phase": "yuan",
+      "side": "south",
+      "coordinates": [
+        116.3912,
+        39.90564449832897
+      ],
+      "boundarySourceId": "beijing-yuan-outer-1368",
+      "segment": 2,
+      "fraction": 0.4835542020982238,
+      "geometrySha256": "fd9fa9a6bf023be6cd44c2edef08eaacae921c741b21f2add6374ea0091bcf8c"
+    },
+    {
+      "id": "beijing-boundary-gate-yuan-shuncheng",
+      "name": "顺承门",
+      "phase": "yuan",
+      "side": "south",
+      "coordinates": [
+        116.3684,
+        39.90533146427604
+      ],
+      "boundarySourceId": "beijing-yuan-outer-1368",
+      "segment": 2,
+      "fraction": 0.7777591390635965,
+      "geometrySha256": "38bb069dae9689566988a9bf4995fc20bcd07c0214ed5b3b342c130e0e90f85c"
+    },
+    {
+      "id": "beijing-boundary-gate-yuan-suqing",
+      "name": "肃清门",
+      "phase": "yuan",
+      "side": "west",
+      "coordinates": [
+        116.3482530499425,
+        39.963
+      ],
+      "boundarySourceId": "beijing-yuan-outer-1368",
+      "segment": 3,
+      "fraction": 0.8428798090219968,
+      "geometrySha256": "b1d6d51be901964bb9d7e153184f61ebedefebf62a0daf721df3d37c0943df4b"
+    },
+    {
+      "id": "beijing-boundary-gate-yuan-heyi",
+      "name": "和义门",
+      "phase": "yuan",
+      "side": "west",
+      "coordinates": [
+        116.34936395403136,
+        39.941
+      ],
+      "boundarySourceId": "beijing-yuan-outer-1368",
+      "segment": 3,
+      "fraction": 0.5226422509789392,
+      "geometrySha256": "5525129b528cb21a5bbb29db4323bd5040369c0832a9b6c3ea746fb4d8bbbdf9"
+    },
+    {
+      "id": "beijing-boundary-gate-yuan-pingze",
+      "name": "平则门",
+      "phase": "yuan",
+      "side": "west",
+      "coordinates": [
+        116.350323371199,
+        39.922
+      ],
+      "boundarySourceId": "beijing-yuan-outer-1368",
+      "segment": 3,
+      "fraction": 0.24607345085074545,
+      "geometrySha256": "2a6c05269e36e772a114fd10ff272fbdec950820d676de038a4b0f478720485f"
+    },
+    {
+      "id": "beijing-boundary-gate-inner-desheng",
+      "name": "德胜门",
+      "phase": "inner",
+      "side": "north",
+      "coordinates": [
+        116.3733,
+        39.94738973113839
+      ],
+      "boundarySourceId": 4,
+      "segment": 3,
+      "fraction": 0.11767490450855696,
+      "geometrySha256": "72da420b313283b6d092661dfbb4cdb93f66d790fcb74069165f544b61dca223"
+    },
+    {
+      "id": "beijing-boundary-gate-inner-anding",
+      "name": "安定门",
+      "phase": "inner",
+      "side": "north",
+      "coordinates": [
+        116.4028,
+        39.94782648638634
+      ],
+      "boundarySourceId": 4,
+      "segment": 3,
+      "fraction": 0.5992132153700879,
+      "geometrySha256": "166bda7a09ebaf6b8fd420981a58bc9448234218191dec5170f261da5ddd8486"
+    },
+    {
+      "id": "beijing-boundary-gate-inner-dongzhi",
+      "name": "东直门",
+      "phase": "inner",
+      "side": "east",
+      "coordinates": [
+        116.42762734339851,
+        39.9408
+      ],
+      "boundarySourceId": 4,
+      "segment": 4,
+      "fraction": 0.1542121408149773,
+      "geometrySha256": "e8f452a9e3bf3ea4842d575b8832e314335e2cea47d2d63bb1e96e7be853f9ea"
+    },
+    {
+      "id": "beijing-boundary-gate-inner-chaoyang",
+      "name": "朝阳门",
+      "phase": "inner",
+      "side": "east",
+      "coordinates": [
+        116.42832526706454,
+        39.922
+      ],
+      "boundarySourceId": 4,
+      "segment": 4,
+      "fraction": 0.5465244882202444,
+      "geometrySha256": "c63e346ea4fc7624338762b7bc0f2cb88f9f1762c39d0b2100a4861eedbeae90"
+    },
+    {
+      "id": "beijing-boundary-gate-inner-chongwen",
+      "name": "崇文门",
+      "phase": "inner",
+      "side": "south",
+      "coordinates": [
+        116.417,
+        39.899962266651194
+      ],
+      "boundarySourceId": 4,
+      "segment": 5,
+      "fraction": 0.15641680204215958,
+      "geometrySha256": "7250bd9c7df1337a9dfc67bdbaca4749cb9a6837d18cd52ddd70b6876aa60331"
+    },
+    {
+      "id": "beijing-boundary-gate-inner-zhengyang",
+      "name": "正阳门",
+      "phase": "inner",
+      "side": "south",
+      "coordinates": [
+        116.3913,
+        39.89931249356644
+      ],
+      "boundarySourceId": 4,
+      "segment": 5,
+      "fraction": 0.48776462700799833,
+      "geometrySha256": "6c9749021b3a8935a0f1b2ad88c1f9b6b4a53b65cb862b7b9810a1971bb34e77"
+    },
+    {
+      "id": "beijing-boundary-gate-inner-xuanwu",
+      "name": "宣武门",
+      "phase": "inner",
+      "side": "south",
+      "coordinates": [
+        116.3684,
+        39.89873351288002
+      ],
+      "boundarySourceId": 4,
+      "segment": 5,
+      "fraction": 0.7830122998375659,
+      "geometrySha256": "15027d24e4517ddc0a66f59d0de12f1cf542b90d9d39b2ad62a1356b57442302"
+    },
+    {
+      "id": "beijing-boundary-gate-inner-xizhi",
+      "name": "西直门",
+      "phase": "inner",
+      "side": "west",
+      "coordinates": [
+        116.34943189981274,
+        39.9404
+      ],
+      "boundarySourceId": 4,
+      "segment": 6,
+      "fraction": 0.9852996254680237,
+      "geometrySha256": "32089fab5de85e9ed5e0fbf2eadd9f9ee99bdbc10cc0e5cf2b7546803322c42a"
+    },
+    {
+      "id": "beijing-boundary-gate-inner-fucheng",
+      "name": "阜成门",
+      "phase": "inner",
+      "side": "west",
+      "coordinates": [
+        116.35036654400749,
+        39.922
+      ],
+      "boundarySourceId": 4,
+      "segment": 6,
+      "fraction": 0.5545880149811659,
+      "geometrySha256": "939af550729eefec3161dab6a46f2c8a4a0d3a33db767ae91b1e5f94afcea342"
+    },
+    {
+      "id": "beijing-boundary-gate-outer-guangan",
+      "name": "广安门",
+      "phase": "outer",
+      "side": "west",
+      "coordinates": [
+        116.34470284151917,
+        39.8883
+      ],
+      "boundarySourceId": 5,
+      "segment": 9,
+      "fraction": 0.42451060836955606,
+      "geometrySha256": "d5a4aefa8512ef16cd7843d9afae3d7e7da2788277ccec2006f318c2b6e7a368"
+    },
+    {
+      "id": "beijing-boundary-gate-outer-guangqu",
+      "name": "广渠门",
+      "phase": "outer",
+      "side": "east",
+      "coordinates": [
+        116.4370105206719,
+        39.8923
+      ],
+      "boundarySourceId": 5,
+      "segment": 2,
+      "fraction": 0.10469036493765234,
+      "geometrySha256": "bc7a4e68e09115c2f18320ab165ed91db54670d70fa32254b511278031da6d0c"
+    },
+    {
+      "id": "beijing-boundary-gate-outer-youan",
+      "name": "右安门",
+      "phase": "outer",
+      "side": "south",
+      "coordinates": [
+        116.3579,
+        39.86897670763586
+      ],
+      "boundarySourceId": 5,
+      "segment": 7,
+      "fraction": 0.6632830704126437,
+      "geometrySha256": "eb0d147628095c3f6e25c89208accbdfef466a3bdf7752d6b5bf86ac47683a33"
+    },
+    {
+      "id": "beijing-boundary-gate-outer-yongding",
+      "name": "永定门",
+      "phase": "outer",
+      "side": "south",
+      "coordinates": [
+        116.3931,
+        39.87105522597945
+      ],
+      "boundarySourceId": 5,
+      "segment": 6,
+      "fraction": 0.6891106807685872,
+      "geometrySha256": "8c6a1cfea31c6d03aec7ec64a659f2a25cfee45a4af14c607da09f82fe560f84"
+    },
+    {
+      "id": "beijing-boundary-gate-outer-zuoan",
+      "name": "左安门",
+      "phase": "outer",
+      "side": "south",
+      "coordinates": [
+        116.4332,
+        39.87101739909617
+      ],
+      "boundarySourceId": 5,
+      "segment": 5,
+      "fraction": 0.17537295301023745,
+      "geometrySha256": "7c52efd202bf00af4fab94170ab4be6eeece452cbbd984c6a31725598069098c"
+    },
+    {
+      "id": "beijing-boundary-gate-outer-xibian",
+      "name": "西便门",
+      "phase": "outer",
+      "side": "north",
+      "coordinates": [
+        116.34935,
+        39.89823292777827
+      ],
+      "boundarySourceId": 5,
+      "segment": 0,
+      "fraction": 0.048111392847766894,
+      "geometrySha256": "c180687a8b8149992a81ba9b30df57434612c205155a936dc77451d34b1aaf67"
+    },
+    {
+      "id": "beijing-boundary-gate-outer-dongbian",
+      "name": "东便门",
+      "phase": "outer",
+      "side": "north",
+      "coordinates": [
+        116.432,
+        39.900371985223394
+      ],
+      "boundarySourceId": 5,
+      "segment": 0,
+      "fraction": 0.9514295706916945,
+      "geometrySha256": "04065cbd126d2b3c17205c847344b829e7fc920e2d1d6b70898d9f91ff91e2dd"
+    }
+  ]
+}

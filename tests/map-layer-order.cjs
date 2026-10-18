@@ -15,4 +15,13 @@ layers.push({id:'map-points-circle',type:'circle'},{id:'map-points-label',type:'
 for(const id of ['imperial-tomb-point','ancient-capital-point','great-wall-point'])before('map-points-label',id);
 layers.push({id:'visited-regions-fill',type:'fill'},{id:'arcgis-water-late-label',type:'symbol'});ctx.bringMapLibrePointLayersToFront();before('visited-regions-fill','arcgis-water-area');before('arcgis-water-late-label','imperial-tomb-label');
 assert(app.includes('createPane("coveragePane").style.zIndex = "300"'));assert(app.includes('pane.style.zIndex = "450"'));
+layers.push({id:'gallup-safety-fill',type:'fill'},{id:'gallup-safety-line',type:'line'},{id:'visited-countries-fill',type:'fill'});
+ctx.bringMapLibrePointLayersToFront();
+for(const id of ['gallup-safety-fill','gallup-safety-line']){before('basemap',id);before(id,'population-density');before(id,'visited-countries-fill');before(id,'visited-regions-fill');before(id,'visited-subadmin-fill');}
+layers=layers.filter(l=>l.id!=='visited-countries-fill');layers.push({id:'visited-countries-fill',type:'fill'});ctx.bringMapLibrePointLayersToFront();before('gallup-safety-line','visited-countries-fill');
+const html=fs.readFileSync(require.resolve('../index.html'),'utf8'),options=[...html.matchAll(/<option value="([^"]+)" data-i18n="provider/g)].map(m=>m[1]);
+assert.deepEqual(options.slice(options.indexOf('dem')-3,options.indexOf('dem')),['safetureRisk','gallupSafety','gallupLawOrder']);
+for(const type of ['fill','line','label'])layers.push({id:'safeture-risk-'+type,type:type==='label'?'symbol':type});ctx.bringMapLibrePointLayersToFront();
+for(const type of ['fill','line','label']){before('basemap','safeture-risk-'+type);before('safeture-risk-'+type,'visited-countries-fill');before('safeture-risk-'+type,'visited-subadmin-fill');}
+for(const id of ['safeture-risk-country-fill','safeture-risk-country-line','safeture-risk-country-label','safeture-risk-display-fill'])layers.push({id,type:id.endsWith('label')?'symbol':'fill'});ctx.bringMapLibrePointLayersToFront();before('safeture-risk-display-fill','safeture-risk-country-fill');for(const id of ['safeture-risk-country-fill','safeture-risk-country-line','safeture-risk-country-label']){before(id,'safeture-risk-fill');before(id,'visited-countries-fill');}layers.reverse();ctx.bringMapLibrePointLayersToFront();before('safeture-risk-display-fill','safeture-risk-country-fill');before('safeture-risk-country-fill','safeture-risk-fill');before('safeture-risk-label','visited-countries-fill');
 console.log('PASS: boundary redraws, async water, historic markers, stable overlay order and Leaflet panes');

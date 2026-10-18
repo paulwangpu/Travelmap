@@ -1,0 +1,174 @@
+{
+  "date": "2026-10-16",
+  "scope": "用户PDF查漏增量；仅独立核对的实体上图，位置待核不造点",
+  "baseline": {
+    "items": 487,
+    "itemsSha256": "94abc886e62d03a0d928fa0b44dca092103693866ba19b659f201373dc230681",
+    "sources": 867,
+    "sourcesSha256": "ad9e7ee783374422304cff04d6cf04dbddc006a58353d557eba1548874ce8e4e"
+  },
+  "addedRecords": 14,
+  "addedMapPoints": 8,
+  "sharedLocationChildren": 2,
+  "pendingLocations": 4,
+  "records": [
+    {
+      "id": "han-wannian-taishang",
+      "name": "汉太上皇万年陵",
+      "mapEligible": true,
+      "locationKind": "verified_wgs84",
+      "parentId": null,
+      "sourceIds": [
+        "supp-wannian-official",
+        "pdf-imperial-supplement-20261016",
+        "supp-geo-osm-node-14289913204"
+      ]
+    },
+    {
+      "id": "tang-zuling-longyao",
+      "name": "隆尧唐祖陵",
+      "mapEligible": true,
+      "locationKind": "verified_wgs84",
+      "parentId": null,
+      "sourceIds": [
+        "supp-tang-zuling-official",
+        "supp-geo-osm-way-1560105903"
+      ]
+    },
+    {
+      "id": "tang-zuling-jianchu",
+      "name": "唐建初陵",
+      "mapEligible": false,
+      "locationKind": "shared_cemetery",
+      "parentId": "tang-zuling-longyao",
+      "sourceIds": [
+        "supp-tang-zuling-official"
+      ]
+    },
+    {
+      "id": "tang-zuling-qiyun",
+      "name": "唐启运陵",
+      "mapEligible": false,
+      "locationKind": "shared_cemetery",
+      "parentId": "tang-zuling-longyao",
+      "sourceIds": [
+        "supp-tang-zuling-official"
+      ]
+    },
+    {
+      "id": "tang-yongkang-ancestor",
+      "name": "唐永康陵",
+      "mapEligible": true,
+      "locationKind": "estimated_wgs84",
+      "parentId": null,
+      "sourceIds": [
+        "supp-tang-ancestors-gazetteer",
+        "supp-geo-yongkang-index"
+      ]
+    },
+    {
+      "id": "tang-xingning-ancestor",
+      "name": "唐兴宁陵",
+      "mapEligible": true,
+      "locationKind": "verified_wgs84",
+      "parentId": null,
+      "sourceIds": [
+        "supp-tang-ancestors-gazetteer",
+        "supp-geo-osm-node-9399120964"
+      ]
+    },
+    {
+      "id": "xia-mingyuzhen-rui",
+      "name": "明玉珍睿陵",
+      "mapEligible": true,
+      "locationKind": "verified_wgs84",
+      "parentId": null,
+      "sourceIds": [
+        "supp-mingyuzhen-official",
+        "supp-geo-osm-way-1379109699"
+      ]
+    },
+    {
+      "id": "chenhan-chenyouliang",
+      "name": "大汉陈友谅墓",
+      "mapEligible": true,
+      "locationKind": "verified_wgs84",
+      "parentId": null,
+      "sourceIds": [
+        "supp-chenyouliang-official",
+        "supp-geo-osm-node-12167226000"
+      ]
+    },
+    {
+      "id": "dashun-lizicheng-tongshan",
+      "name": "通山李自成墓（闯王陵）",
+      "mapEligible": true,
+      "locationKind": "estimated_wgs84",
+      "parentId": null,
+      "sourceIds": [
+        "supp-lizicheng-official",
+        "supp-geo-lizicheng-index"
+      ]
+    },
+    {
+      "id": "tang-zhaozong-he",
+      "name": "唐昭宗和陵",
+      "mapEligible": true,
+      "locationKind": "verified_wgs84",
+      "parentId": null,
+      "sourceIds": [
+        "supp-tang-zhaozong-history",
+        "supp-geo-osm-node-10973517404"
+      ]
+    },
+    {
+      "id": "tang-ai-wen",
+      "name": "唐哀帝温陵（陵址待核）",
+      "mapEligible": false,
+      "locationKind": "unlocated",
+      "parentId": null,
+      "sourceIds": [
+        "supp-tang-aileng-text",
+        "pdf-imperial-supplement-20261016"
+      ]
+    },
+    {
+      "id": "yan-shisiming",
+      "name": "史思明墓（遗址待定位）",
+      "mapEligible": false,
+      "locationKind": "unlocated",
+      "parentId": null,
+      "sourceIds": [
+        "supp-shisiming-excavation",
+        "supp-shisiming-status"
+      ]
+    },
+    {
+      "id": "nanming-hongguang",
+      "name": "南明弘光陵（陵址待核）",
+      "mapEligible": false,
+      "locationKind": "unlocated",
+      "parentId": null,
+      "sourceIds": [
+        "pdf-imperial-supplement-20261016"
+      ]
+    },
+    {
+      "id": "nanming-yongli-duyun",
+      "name": "都匀明永历皇帝陵（传统认定）",
+      "mapEligible": false,
+      "locationKind": "unlocated",
+      "parentId": null,
+      "sourceIds": [
+        "supp-yongli-official-context",
+        "pdf-imperial-supplement-20261016"
+      ]
+    }
+  ],
+  "rejectedCoordinates": [
+    "PDF未知基准坐标未批量导入",
+    "陈友谅墓采用原始OSM实体，拒绝PDF偏离点",
+    "弘光陵不采用后唐明宗徽陵",
+    "起辇谷重复占位坐标全部不导入"
+  ]
+}

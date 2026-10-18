@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-17",
+  "source": "https://globe.safeture.com/assets/geojson/riskline_advisory_simplified_description.geojson",
+  "sourceSha256": "2cc9b2e752bc841db5d8630a1991b2f299569a36b9012daeff28e02222636c6e",
+  "regions": 110,
+  "excludedNationalAdvisories": 43,
+  "geometryAndLevelsPreserved": true,
+  "localPalette": [
+    "#9fc9b7",
+    "#c7d8a5",
+    "#f2d695",
+    "#e9a174",
+    "#c96b78"
+  ],
+  "mapLabels": [
+    "极低",
+    "低",
+    "中",
+    "高",
+    "极高"
+  ],
+  "name": "Safeture 旅游风险",
+  "menuOrder": [
+    "safetureRisk",
+    "gallupSafety",
+    "gallupLawOrder",
+    "dem"
+  ],
+  "summaryCount": 110,
+  "maxSummaryWords": 155,
+  "htmlEmbedded": false,
+  "regressionScripts": 177,
+  "regressionFailures": 0,
+  "regionalBrowser": {
+    "errors": [],
+    "features": 110,
+    "labels": 110,
+    "renderedLabels": 27,
+    "wordLabels": true,
+    "underCoverage": true,
+    "unchangedCoverage": true,
+    "bilingual": true,
+    "opacity": true,
+    "metricSwitchCleanup": true,
+    "screenshots": 3
+  },
+  "summaryBrowser": {
+    "target": "safeture-regional-24",
+    "originalSummary": true,
+    "physicalClick": true,
+    "lazyLoad": true,
+    "summaryRequests": 1,
+    "bilingual": true,
+    "closeAndSwitchCleanup": true,
+    "errors": [],
+    "screenshots": 2
+  },
+  "release": "2.3.3",
+  "published": false
+}

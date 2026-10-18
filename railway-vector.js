@@ -38,7 +38,7 @@ const RailwayVector = (() => {
     throw new Error('Unsupported constant railway expression: ' + op);
   }
   async function loadStyle() {
-    if (!stylePromise) stylePromise = fetch('./vendor/openrailwaymap/style.json?v=1').then(response => {
+    if (!stylePromise) stylePromise = fetch('./vendor/openrailwaymap/style.json?v=2').then(response => {
       if (!response.ok) throw new Error('Railway style HTTP ' + response.status);
       return response.json();
     }).catch(error => { stylePromise = null; throw error; });
@@ -76,9 +76,12 @@ const RailwayVector = (() => {
     installed.delete(map);
   }
   async function install(map, language) {
+    const previous = installed.get(map);
+    if (isCurrent(map, language)) return previous.promise || previous;
     remove(map);
-    const record = { cancelled: false };
+    const record = { cancelled: false, language, errors: new Map() };
     installed.set(map, record);
+    const work = (async () => {
     const adapted = adaptStyle(await loadStyle(), language);
     if (record.cancelled) return;
     // Use the existing glyph service; upstream fonts have no cross-origin support.
@@ -108,8 +111,24 @@ const RailwayVector = (() => {
     for (const [id, source] of Object.entries(adapted.sources)) map.addSource(id, source);
     for (const layer of adapted.layers) map.addLayer(layer);
     record.layers = adapted.layers.map(layer => layer.id);
+    record.sources = Object.keys(adapted.sources);
     return record;
+    })();
+    record.promise = work;
+    try { return await work; }
+    catch (error) { if (installed.get(map) === record) remove(map); throw error; }
+    finally { record.promise = null; }
   }
+  function isCurrent(map, language) {
+    const r=installed.get(map);
+    if(!r||r.cancelled||r.language!==language)return false;
+    if(r.promise)return true;
+    return Boolean(r.layers?.length&&r.layers.every(id=>map.getLayer(id))&&r.sources?.every(id=>map.getSource?map.getSource(id):map.getStyle()?.sources?.[id]));
+  }
+  function resourceKey(e){const t=e.tile?.tileID?.canonical||e.coord?.canonical||e.tile?.tileID||e.coord;return e.sourceId+':'+(t?.z!==undefined?[t.z,t.x,t.y].join('/'):'metadata');}
+  function resourceError(map,e){const r=installed.get(map);if(!r||r.cancelled||!String(e.sourceId||'').startsWith('orm-'))return false;r.errors.set(resourceKey(e),e.error?.message||'Resource unavailable');return true;}
+  function resourceLoaded(map,e){const r=installed.get(map);if(!r||r.cancelled||!String(e.sourceId||'').startsWith('orm-'))return false;if(e.sourceDataType!=='metadata'&&!e.tile&&!e.coord)return false;return r.errors.delete(resourceKey(e));}
+  function health(map){return {failed:installed.get(map)?.errors?.size||0};}
   function query(map, point) {
     const layers = (installed.get(map)?.layers || []).filter(id => map.getLayer(id));
     if (!layers.length) return null;
@@ -313,5 +332,5 @@ const RailwayVector = (() => {
       console.warn('Vector railway legend unavailable', error);
     }
   }
-  return { install, remove, query, resolveStationName, adaptStyle, constant, origin, legend, legendRows, translateLegend, featureDistance };
+  return { install, remove, isCurrent, resourceError, resourceLoaded, health, query, resolveStationName, adaptStyle, constant, origin, legend, legendRows, translateLegend, featureDistance };
 })();

@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-16",
+  "baselineCount": 836,
+  "baselineSha256": "9c7fb4a8ef1a5d23df0bb5f7aafd557a662effb0ad040e5c98ac422bb0f1a51b",
+  "capitalCatalogSha256": "47113d3bc5a15f552f8ab0fd67cbcb72a2e4330a82c4fc2b1be8b06413b2580c",
+  "source": "https://m.bjnews.com.cn/detail/1700885268129887.html",
+  "official": "https://www.beijing.gov.cn/ywdt/gzdt/202405/t20240513_3677445.html",
+  "originalParts": [
+    {
+      "id": "1381402729",
+      "source": "https://www.openstreetmap.org/way/1381402729",
+      "geometrySha256": "65814c309f14f8cc3382755c375e6b928581bf62f3d808f6f913ac8e2d60f17e"
+    },
+    {
+      "id": "891189263",
+      "source": "https://www.openstreetmap.org/way/891189263",
+      "geometrySha256": "21827863477c61a7ab231f503c8954145e2798bb061d59e030ec5dca44070f50"
+    },
+    {
+      "id": "891189264",
+      "source": "https://www.openstreetmap.org/way/891189264",
+      "geometrySha256": "bb155025858b4f0421b72b24b3a0a2acdffbf5c62adb1c9d049e9c54616d16f2"
+    },
+    {
+      "id": "926722393",
+      "source": "https://www.openstreetmap.org/way/926722393",
+      "geometrySha256": "68fc503c3b29eea4516a861c52932dcef3c8b99c987071a2d4f91a15b81e22ad"
+    },
+    {
+      "id": "891189265",
+      "source": "https://www.openstreetmap.org/way/891189265",
+      "geometrySha256": "a228f8dbaa18298e2d7e9b3c3b648a47934ed5e1e3bdbe15a1da60af24472279"
+    }
+  ],
+  "missing": [
+    "公园规划全界和当前竣工开放范围",
+    "凤凰嘴、高楼村、万泉寺残墙的精确本体轮廓",
+    "端礼门基址准确矢量；不能使用现代景风门站或丽泽门景观代替"
+  ],
+  "id": "beijing-jin-park-parcels-reference",
+  "geometrySha256": "47dbe961c436a4b00827ccd6d477f8851b20fa278a9fb78ac084523779200119",
+  "totalFeatures": 838,
+  "followUp": "2026-10-16：金中都外郭/皇城/宫城及太液池的后续研究复原、旧埋藏区撤显，见 docs/jin-reconstruction-review.md；本文件保留本批原始审计。",
+  "previousBaseline": {
+    "count": 837,
+    "sha256": "76c486c100e96e27e7bf19aa1e34815b94919c8bdfc82ba3eb1f92157a231d55",
+    "removedFeature": "beijing-preming-way-679979928"
+  }
+}

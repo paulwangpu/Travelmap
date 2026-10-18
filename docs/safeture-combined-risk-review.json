@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-17",
+  "countryFeatures": 177,
+  "ratedCountries": 167,
+  "regionalFeatures": 110,
+  "neutralLandFeatures": 258,
+  "originalGeometryAndLevelsPreserved": true,
+  "precedence": [
+    "neutral grey land",
+    "national overall rating",
+    "Regional assessment (highest Regional category in overlaps)",
+    "My coverage"
+  ],
+  "regionalOverridesEvenLowerCategory": true,
+  "nationalLabelsHiddenInsideRegional": true,
+  "summary": "Regional hover previews and click details retained; national fallback never borrows regional Summary",
+  "regressionScripts": 178,
+  "regressionFailures": 0,
+  "browser": {
+    "errors": [],
+    "countryFeatures": 177,
+    "landFeatures": 258,
+    "regionalOverridesHigherCountry": {
+      "coords": [
+        36.536141642538304,
+        15.1872
+      ],
+      "regional": 3,
+      "country": 4
+    },
+    "franceNoData": null,
+    "features": 110,
+    "labels": 110,
+    "renderedLabels": 27,
+    "wordLabels": true,
+    "underCoverage": true,
+    "unchangedCoverage": true,
+    "bilingual": true,
+    "opacity": true,
+    "metricSwitchCleanup": true,
+    "screenshots": 3
+  },
+  "release": "2.3.3",
+  "published": false
+}

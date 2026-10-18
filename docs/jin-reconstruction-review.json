@@ -1,0 +1,870 @@
+{
+  "date": "2026-10-16",
+  "baselineCount": 837,
+  "baselineSha256": "674559883f5e038aed7c2a796500d126f67989661d99ffa3b56b35ee0d49a0f4",
+  "capitalCatalogSha256": "47113d3bc5a15f552f8ab0fd67cbcb72a2e4330a82c4fc2b1be8b06413b2580c",
+  "georeferencing": {
+    "source": "https://www.dpm.org.cn/Uploads/File/2018/06/01/u5b1123e2b179b.pdf",
+    "citation": "刘未《辽金燕京城研究史——城市考古方法论的思考》，故宫博物院院刊2016年第2期，印刷页90/PDF14，图十四（徐苹芳2012）",
+    "image": "page14-figure2.png",
+    "controls": [
+      [
+        "白云观地域",
+        [
+          515,
+          125
+        ],
+        [
+          116.33772355,
+          39.89936727
+        ]
+      ],
+      [
+        "广安门桥路口",
+        [
+          641,
+          416
+        ],
+        [
+          116.342834,
+          39.88825
+        ]
+      ],
+      [
+        "法源寺现状院区",
+        [
+          1040,
+          566
+        ],
+        [
+          116.36386907,
+          39.88397043
+        ]
+      ],
+      [
+        "万寿公园现状",
+        [
+          1057,
+          727
+        ],
+        [
+          116.36250161,
+          39.87826546
+        ]
+      ],
+      [
+        "鱼藻池遗址地块",
+        [
+          535,
+          746
+        ],
+        [
+          116.33964824,
+          39.877193
+        ]
+      ],
+      [
+        "南墙水关",
+        [
+          800,
+          1207
+        ],
+        [
+          116.35262428333334,
+          39.86140798333333
+        ]
+      ]
+    ],
+    "residualsMeters": [
+      52.3,
+      103.9,
+      109.6,
+      97,
+      25.3,
+      23.1
+    ],
+    "leaveOneOutMeters": [
+      137.6,
+      140,
+      221.1,
+      181.2,
+      45.7,
+      79.4
+    ],
+    "accuracyWarning": "地标地域参照及示意底图有不确定性，拟合残差与留一检核均不等于遗址墙界精度；这是考古研究复原图的地理配准，不是新考古测量或2024端礼门实测图。",
+    "transform": [
+      [
+        0.00004658145179148484,
+        7.515712002023235e-7
+      ],
+      [
+        0.0000016012424672980133,
+        -0.00003503756020150162
+      ],
+      [
+        116.3132368578925,
+        39.90294886252868
+      ]
+    ],
+    "polygons": {
+      "outer": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              116.31685391,
+              39.90132418
+            ],
+            [
+              116.3264609,
+              39.90123374
+            ],
+            [
+              116.32663601,
+              39.90148201
+            ],
+            [
+              116.32794029,
+              39.90150305
+            ],
+            [
+              116.32833216,
+              39.90108861
+            ],
+            [
+              116.34007869,
+              39.90110282
+            ],
+            [
+              116.34020242,
+              39.90145545
+            ],
+            [
+              116.34132038,
+              39.90147349
+            ],
+            [
+              116.34152272,
+              39.90112612
+            ],
+            [
+              116.35574767,
+              39.90096994
+            ],
+            [
+              116.35591478,
+              39.90139339
+            ],
+            [
+              116.35721906,
+              39.90141444
+            ],
+            [
+              116.35747439,
+              39.90092767
+            ],
+            [
+              116.36725489,
+              39.90112054
+            ],
+            [
+              116.36737702,
+              39.90150821
+            ],
+            [
+              116.36840182,
+              39.90152474
+            ],
+            [
+              116.3687503,
+              39.90103948
+            ],
+            [
+              116.37280289,
+              39.90110486
+            ],
+            [
+              116.37338589,
+              39.90058832
+            ],
+            [
+              116.37396088,
+              39.88902667
+            ],
+            [
+              116.37458725,
+              39.88858096
+            ],
+            [
+              116.37466906,
+              39.88781088
+            ],
+            [
+              116.37408432,
+              39.88734562
+            ],
+            [
+              116.37414793,
+              39.8828936
+            ],
+            [
+              116.37477751,
+              39.88237781
+            ],
+            [
+              116.37476616,
+              39.88160623
+            ],
+            [
+              116.37427778,
+              39.8810724
+            ],
+            [
+              116.37492483,
+              39.86793406
+            ],
+            [
+              116.37545804,
+              39.86748684
+            ],
+            [
+              116.37549006,
+              39.86678609
+            ],
+            [
+              116.37499848,
+              39.86632234
+            ],
+            [
+              116.37523561,
+              39.86215362
+            ],
+            [
+              116.37450312,
+              39.86186129
+            ],
+            [
+              116.35932877,
+              39.86137102
+            ],
+            [
+              116.35902032,
+              39.86098034
+            ],
+            [
+              116.35785578,
+              39.86096155
+            ],
+            [
+              116.35755868,
+              39.86134246
+            ],
+            [
+              116.34456245,
+              39.86113277
+            ],
+            [
+              116.34439374,
+              39.86074435
+            ],
+            [
+              116.34332237,
+              39.86072706
+            ],
+            [
+              116.34302527,
+              39.86110797
+            ],
+            [
+              116.33049646,
+              39.86087076
+            ],
+            [
+              116.3301896,
+              39.86044505
+            ],
+            [
+              116.32916481,
+              39.86042851
+            ],
+            [
+              116.32886611,
+              39.86084445
+            ],
+            [
+              116.31959159,
+              39.8608
+            ],
+            [
+              116.3187837,
+              39.8611376
+            ],
+            [
+              116.31852386,
+              39.86376316
+            ],
+            [
+              116.31790869,
+              39.86396362
+            ],
+            [
+              116.31787346,
+              39.86473444
+            ],
+            [
+              116.31841323,
+              39.86516391
+            ],
+            [
+              116.31733603,
+              39.88057443
+            ],
+            [
+              116.31671446,
+              39.88091503
+            ],
+            [
+              116.31667763,
+              39.8817209
+            ],
+            [
+              116.31725597,
+              39.88232631
+            ],
+            [
+              116.31711389,
+              39.88849517
+            ],
+            [
+              116.31644574,
+              39.88883502
+            ],
+            [
+              116.31641371,
+              39.88953578
+            ],
+            [
+              116.31704984,
+              39.88989667
+            ],
+            [
+              116.31685391,
+              39.90132418
+            ]
+          ]
+        ]
+      },
+      "imperial": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              116.33022235,
+              39.88726907
+            ],
+            [
+              116.34684552,
+              39.88767753
+            ],
+            [
+              116.34791166,
+              39.87352912
+            ],
+            [
+              116.33091904,
+              39.87304457
+            ],
+            [
+              116.33022235,
+              39.88726907
+            ]
+          ]
+        ]
+      },
+      "palace": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              116.33697346,
+              39.88744812
+            ],
+            [
+              116.34684552,
+              39.88767753
+            ],
+            [
+              116.34755385,
+              39.87625829
+            ],
+            [
+              116.33786811,
+              39.87603189
+            ],
+            [
+              116.33697346,
+              39.88744812
+            ]
+          ]
+        ]
+      },
+      "pool": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              116.33902013,
+              39.87836466
+            ],
+            [
+              116.33944257,
+              39.87830135
+            ],
+            [
+              116.33991639,
+              39.87813368
+            ],
+            [
+              116.3401605,
+              39.87789218
+            ],
+            [
+              116.34027128,
+              39.87750827
+            ],
+            [
+              116.34034989,
+              39.87680827
+            ],
+            [
+              116.34027114,
+              39.87649142
+            ],
+            [
+              116.34009282,
+              39.87631323
+            ],
+            [
+              116.33972337,
+              39.87623714
+            ],
+            [
+              116.33907123,
+              39.87622662
+            ],
+            [
+              116.33864719,
+              39.87632497
+            ],
+            [
+              116.33845446,
+              39.87646211
+            ],
+            [
+              116.33839347,
+              39.8767767
+            ],
+            [
+              116.33846421,
+              39.87726873
+            ],
+            [
+              116.33835023,
+              39.87772271
+            ],
+            [
+              116.33842738,
+              39.87807459
+            ],
+            [
+              116.33869726,
+              39.87828933
+            ],
+            [
+              116.33902013,
+              39.87836466
+            ]
+          ]
+        ]
+      }
+    },
+    "gates": [
+      {
+        "name": "会城门",
+        "enName": "Huicheng Gate",
+        "pixel": [
+          305,
+          58
+        ],
+        "coordinates": [
+          116.32753707,
+          39.90114591
+        ]
+      },
+      {
+        "name": "通玄门",
+        "enName": "Tongxuan Gate",
+        "pixel": [
+          592,
+          64
+        ],
+        "coordinates": [
+          116.34091556,
+          39.90115139
+        ]
+      },
+      {
+        "name": "崇智门",
+        "enName": "Chongzhi Gate",
+        "pixel": [
+          930,
+          77
+        ],
+        "coordinates": [
+          116.3566809,
+          39.90094993
+        ]
+      },
+      {
+        "name": "光泰门",
+        "enName": "Guangtai Gate",
+        "pixel": [
+          1173,
+          78
+        ],
+        "coordinates": [
+          116.3680018,
+          39.90109753
+        ]
+      },
+      {
+        "name": "施仁门",
+        "enName": "Shiren Gate",
+        "pixel": [
+          1297,
+          452
+        ],
+        "coordinates": [
+          116.37437676,
+          39.88808667
+        ]
+      },
+      {
+        "name": "宣曜门",
+        "enName": "Xuanyao Gate",
+        "pixel": [
+          1297,
+          626
+        ],
+        "coordinates": [
+          116.37465538,
+          39.88199014
+        ]
+      },
+      {
+        "name": "阳春门",
+        "enName": "Yangchun Gate",
+        "pixel": [
+          1295,
+          1051
+        ],
+        "coordinates": [
+          116.37524274,
+          39.86709767
+        ]
+      },
+      {
+        "name": "景风门",
+        "enName": "Jingfeng Gate",
+        "pixel": [
+          929,
+          1207
+        ],
+        "coordinates": [
+          116.35844373,
+          39.86135674
+        ]
+      },
+      {
+        "name": "丰宜门",
+        "enName": "Fengyi Gate",
+        "pixel": [
+          615,
+          1207
+        ],
+        "coordinates": [
+          116.34381715,
+          39.86112074
+        ]
+      },
+      {
+        "name": "端礼门",
+        "enName": "Duanli Gate",
+        "pixel": [
+          313,
+          1209
+        ],
+        "coordinates": [
+          116.32975275,
+          39.86082369
+        ]
+      },
+      {
+        "name": "丽泽门",
+        "enName": "Lize Gate",
+        "pixel": [
+          70,
+          1102
+        ],
+        "coordinates": [
+          116.31826213,
+          39.86439008
+        ]
+      },
+      {
+        "name": "颢华门",
+        "enName": "Haohua Gate",
+        "pixel": [
+          65,
+          619
+        ],
+        "coordinates": [
+          116.31725582,
+          39.88130946
+        ]
+      },
+      {
+        "name": "彰义门",
+        "enName": "Zhangyi Gate",
+        "pixel": [
+          68,
+          396
+        ],
+        "coordinates": [
+          116.31703849,
+          39.8891251
+        ]
+      }
+    ],
+    "yuzaoSite": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            116.3384818,
+            39.8784222
+          ],
+          [
+            116.3385607,
+            39.8762518
+          ],
+          [
+            116.3398067,
+            39.876289
+          ],
+          [
+            116.3398112,
+            39.8763751
+          ],
+          [
+            116.3406658,
+            39.8763838
+          ],
+          [
+            116.3407294,
+            39.8770242
+          ],
+          [
+            116.3406485,
+            39.8783757
+          ],
+          [
+            116.3384818,
+            39.8784222
+          ]
+        ]
+      ]
+    }
+  },
+  "added": [
+    {
+      "id": "beijing-jin-reconstruction-outer",
+      "name": "金中都外郭城（考古研究复原）",
+      "type": "Polygon",
+      "geometrySha256": "bafc0640d7276ff951bdec17714b41c03211d373d217396c9e5ae7653b77a9d9",
+      "inferredBoundary": true,
+      "source": "https://www.dpm.org.cn/Uploads/File/2018/06/01/u5b1123e2b179b.pdf",
+      "reference": "https://www.bjwmb.gov.cn/xcsxwhrc/rcfc/10112925.html"
+    },
+    {
+      "id": "beijing-jin-reconstruction-imperial",
+      "name": "金中都皇城（研究复原）",
+      "type": "Polygon",
+      "geometrySha256": "b6a932df8d4dc5048cb26696ba400e2179070baf0df5713c614165f0f3379636",
+      "inferredBoundary": true,
+      "source": "https://www.dpm.org.cn/Uploads/File/2018/06/01/u5b1123e2b179b.pdf",
+      "reference": "https://www.bjwmb.gov.cn/xcsxwhrc/rcfc/10112925.html"
+    },
+    {
+      "id": "beijing-jin-reconstruction-palace",
+      "name": "金中都宫城（研究复原）",
+      "type": "Polygon",
+      "geometrySha256": "049499107b99c2ec5dc89ec9b51e46a54f7fb76a5f943da9a208744d069d52c4",
+      "inferredBoundary": true,
+      "source": "https://www.dpm.org.cn/Uploads/File/2018/06/01/u5b1123e2b179b.pdf",
+      "reference": "https://www.bjwmb.gov.cn/xcsxwhrc/rcfc/10112925.html"
+    },
+    {
+      "id": "beijing-jin-reconstruction-taiye-site",
+      "name": "金中都太液池遗址（鱼藻池，地块参照）",
+      "type": "Polygon",
+      "geometrySha256": "c34026c33e7dc77d10771f918528d05896d699ada58b4adc18f974a9f26c8471",
+      "inferredBoundary": false,
+      "source": "https://www.openstreetmap.org/way/908425771",
+      "reference": "https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742741/548099/index.html"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-huicheng-gate",
+      "name": "会城门（研究门址）",
+      "type": "Point",
+      "geometrySha256": "65290470529de7308111a788f82ef38e6070da9499a4c8ff305d25cab63abbef",
+      "inferredBoundary": true,
+      "source": "https://www.dpm.org.cn/Uploads/File/2018/06/01/u5b1123e2b179b.pdf",
+      "reference": "https://www.bjwmb.gov.cn/xcsxwhrc/rcfc/10112925.html"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-tongxuan-gate",
+      "name": "通玄门（研究门址）",
+      "type": "Point",
+      "geometrySha256": "a7a848db1a6a221ff982a6f2f7ebb38e0ac945fc41a13fcedddd27b27219477a",
+      "inferredBoundary": true,
+      "source": "https://www.dpm.org.cn/Uploads/File/2018/06/01/u5b1123e2b179b.pdf",
+      "reference": "https://www.bjwmb.gov.cn/xcsxwhrc/rcfc/10112925.html"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-chongzhi-gate",
+      "name": "崇智门（研究门址）",
+      "type": "Point",
+      "geometrySha256": "5b42394a55896cfef868393935b263692c39d73b34f8a5621c8afa31290a89c7",
+      "inferredBoundary": true,
+      "source": "https://www.dpm.org.cn/Uploads/File/2018/06/01/u5b1123e2b179b.pdf",
+      "reference": "https://www.bjwmb.gov.cn/xcsxwhrc/rcfc/10112925.html"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-guangtai-gate",
+      "name": "光泰门（研究门址）",
+      "type": "Point",
+      "geometrySha256": "0638d8eacfbd3555aacd3d6e1221a616e7b3671945926ca9d001c81958761b53",
+      "inferredBoundary": true,
+      "source": "https://www.dpm.org.cn/Uploads/File/2018/06/01/u5b1123e2b179b.pdf",
+      "reference": "https://www.bjwmb.gov.cn/xcsxwhrc/rcfc/10112925.html"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-shiren-gate",
+      "name": "施仁门（研究门址）",
+      "type": "Point",
+      "geometrySha256": "d62c28a6d4b912dec8d96e9fb2551cf0d5c7d7ba572d4751b053cd158ca4be1a",
+      "inferredBoundary": true,
+      "source": "https://www.dpm.org.cn/Uploads/File/2018/06/01/u5b1123e2b179b.pdf",
+      "reference": "https://www.bjwmb.gov.cn/xcsxwhrc/rcfc/10112925.html"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-xuanyao-gate",
+      "name": "宣曜门（研究门址）",
+      "type": "Point",
+      "geometrySha256": "f9f93ada007e272825ce16aa5445c8bb8fc692312a5ca279776ebd1368f6ae30",
+      "inferredBoundary": true,
+      "source": "https://www.dpm.org.cn/Uploads/File/2018/06/01/u5b1123e2b179b.pdf",
+      "reference": "https://www.bjwmb.gov.cn/xcsxwhrc/rcfc/10112925.html"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-yangchun-gate",
+      "name": "阳春门（研究门址）",
+      "type": "Point",
+      "geometrySha256": "12400fde43d39e1c12a3bb803f288a47dfa792bc07684cd0f1616f474e059b97",
+      "inferredBoundary": true,
+      "source": "https://www.dpm.org.cn/Uploads/File/2018/06/01/u5b1123e2b179b.pdf",
+      "reference": "https://www.bjwmb.gov.cn/xcsxwhrc/rcfc/10112925.html"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-jingfeng-gate",
+      "name": "景风门（研究门址）",
+      "type": "Point",
+      "geometrySha256": "ebf63ec3f3ee53f5708b40850d7e2ab55884ea624931cd0dad19ad6048ed25f8",
+      "inferredBoundary": true,
+      "source": "https://www.dpm.org.cn/Uploads/File/2018/06/01/u5b1123e2b179b.pdf",
+      "reference": "https://www.bjwmb.gov.cn/xcsxwhrc/rcfc/10112925.html"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-fengyi-gate",
+      "name": "丰宜门（研究门址）",
+      "type": "Point",
+      "geometrySha256": "2aa5d2213c72d03aeeea46e01f6e29e85ef14c6b407db3293446d76703fc17f0",
+      "inferredBoundary": true,
+      "source": "https://www.dpm.org.cn/Uploads/File/2018/06/01/u5b1123e2b179b.pdf",
+      "reference": "https://www.bjwmb.gov.cn/xcsxwhrc/rcfc/10112925.html"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-duanli-gate",
+      "name": "端礼门（研究门址）",
+      "type": "Point",
+      "geometrySha256": "55216b3ed618c683b6daaa467f6569eae370ff3209c9a2d5b056a08a08aa16ea",
+      "inferredBoundary": true,
+      "source": "https://www.dpm.org.cn/Uploads/File/2018/06/01/u5b1123e2b179b.pdf",
+      "reference": "https://www.beijing.gov.cn/ywdt/yaowen/202412/t20241201_3953445.html"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-lize-gate",
+      "name": "丽泽门（研究门址）",
+      "type": "Point",
+      "geometrySha256": "4aeb1df1f98779006f5cec3f6ee0501177b4e7f981b0fb651391f74b53635941",
+      "inferredBoundary": true,
+      "source": "https://www.dpm.org.cn/Uploads/File/2018/06/01/u5b1123e2b179b.pdf",
+      "reference": "https://www.bjwmb.gov.cn/xcsxwhrc/rcfc/10112925.html"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-haohua-gate",
+      "name": "颢华门（研究门址）",
+      "type": "Point",
+      "geometrySha256": "c0bffd5b29ece0382350f721b2a7cca243de32c990d549df7b63dab404cc7a81",
+      "inferredBoundary": true,
+      "source": "https://www.dpm.org.cn/Uploads/File/2018/06/01/u5b1123e2b179b.pdf",
+      "reference": "https://www.bjwmb.gov.cn/xcsxwhrc/rcfc/10112925.html"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-zhangyi-gate",
+      "name": "彰义门（研究门址）",
+      "type": "Point",
+      "geometrySha256": "735f42f2227ad1f06868b266bf4c49feff58b8c37911b8df42ed5cb142590002",
+      "inferredBoundary": true,
+      "source": "https://www.dpm.org.cn/Uploads/File/2018/06/01/u5b1123e2b179b.pdf",
+      "reference": "https://www.bjwmb.gov.cn/xcsxwhrc/rcfc/10112925.html"
+    }
+  ],
+  "withdrawnFromRendering": [
+    "beijing-jin-buriedarea-2019"
+  ],
+  "missing": [
+    "早晚两期鱼藻池岸线的原始考古测绘矢量",
+    "2019—2024新发掘的墙体、端礼门、道路和宫殿区的独立测量轮廓；旧研究门址不等于新测量坐标",
+    "宫城与同乐园不同复原方案之间的差异，不能视为已解决"
+  ],
+  "totalFeatures": 855,
+  "removedByUser": [
+    {
+      "id": "beijing-jin-reconstruction-yuzao-water",
+      "name": "鱼藻池水面（研究图示）",
+      "type": "Polygon",
+      "geometrySha256": "c864364af5b742461cd6ae6afa06fe3168874084bfebe6b987baaed0760b555c",
+      "inferredBoundary": true,
+      "source": "https://www.dpm.org.cn/Uploads/File/2018/06/01/u5b1123e2b179b.pdf",
+      "reference": "https://www.bjxch.gov.cn/xcfw/whfw/xxxq/pnidpv958667.html",
+      "reason": "2026-10-16 用户要求去掉鱼藻池水面；保留太液池遗址地块。"
+    }
+  ],
+  "previousBaseline": {
+    "count": 838,
+    "sha256": "0602d43fb8a62dea5468d2f50834fc470e4c4f706fcb39b00a8e14b119e93988",
+    "removedFeature": "beijing-preming-way-679979928"
+  }
+}

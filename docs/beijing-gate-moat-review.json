@@ -1,0 +1,202 @@
+{
+  "date": "2026-10-16",
+  "reference": "用户提供的内九外七方位示意图；只用于城内侧与城肩关系，不直接配准其像素；元北门另据土城沟原始河线，光熙门据历史街道及旧东墙走廊复核。",
+  "boundarySha256": "df3e604a84a16f03e3237b7f6bf1ddf098c5e87762e770f597e6be66d4b54b60",
+  "changed": [
+    {
+      "id": "beijing-boundary-gate-outer-zuoan",
+      "name": "左安门",
+      "previousCoordinates": [
+        116.4330839,
+        39.8697132
+      ],
+      "coordinates": [
+        116.4330839,
+        39.87115704838673
+      ],
+      "moatSourceId": "30888447",
+      "moatLandwardSide": "north",
+      "bankReference": [
+        116.4330839,
+        39.87074663455166
+      ],
+      "geometrySha256": "7ec2ec0c0c8b4fc50f46a7d600c4ccba5fbbbf6568e3624c226fcf792577fd35",
+      "waterGeometrySha256": "972cee7989977ac13b092c0f1dd23eabad236393629182054a5734e45998eae1",
+      "placementKind": "landward_moat_reference"
+    },
+    {
+      "id": "beijing-boundary-gate-outer-youan",
+      "name": "右安门",
+      "previousCoordinates": [
+        116.35805045000001,
+        39.8678582
+      ],
+      "coordinates": [
+        116.35805045000001,
+        39.86912222117607
+      ],
+      "moatSourceId": "205894622",
+      "moatLandwardSide": "north",
+      "bankReference": [
+        116.35805045000001,
+        39.868701343457566
+      ],
+      "geometrySha256": "cb7c449bacce0e532eecf03ca4500921b715dd79e8a3b395c50f03186761aa15",
+      "waterGeometrySha256": "132cddda701d7cd82a966c7d3c8cee78ad19629336dc751993cdb9b4439d18f2",
+      "placementKind": "landward_moat_reference"
+    },
+    {
+      "id": "beijing-boundary-gate-outer-guangan",
+      "name": "广安门",
+      "previousCoordinates": [
+        116.34212595,
+        39.8883227
+      ],
+      "coordinates": [
+        116.3448792582288,
+        39.8883227
+      ],
+      "moatSourceId": "30047873",
+      "moatLandwardSide": "east",
+      "bankReference": [
+        116.34350915918195,
+        39.8883227
+      ],
+      "geometrySha256": "a1db752e53323c9565981eb6cffd68c98b4c3d94859af164588fd96f5d351ce5",
+      "waterGeometrySha256": "e5f5208414f6e62626caf133cf24a9148dff2905e3dac065f96cf2ac79812f8b",
+      "placementKind": "landward_moat_reference"
+    },
+    {
+      "id": "beijing-boundary-gate-outer-guangqu",
+      "name": "广渠门",
+      "previousCoordinates": [
+        116.43875225,
+        39.89217695
+      ],
+      "coordinates": [
+        116.43685146119306,
+        39.89217695
+      ],
+      "moatSourceId": "30887681",
+      "moatLandwardSide": "west",
+      "bankReference": [
+        116.43718976159877,
+        39.89217695
+      ],
+      "geometrySha256": "f529f996ba4becc7a5f7a0ba6db7d84eb44491af2d0c698ce1f0c00b38c51988",
+      "waterGeometrySha256": "be4b0dc6f4e51715c7390862bd5dd2c81aa7d6483e9b7a4a40fcbba4c45ac23b",
+      "placementKind": "landward_moat_reference"
+    },
+    {
+      "id": "beijing-boundary-gate-outer-dongbian",
+      "name": "东便门",
+      "previousCoordinates": [
+        116.42905305,
+        39.89966435
+      ],
+      "coordinates": [
+        116.43023208953682,
+        39.90015
+      ],
+      "moatSourceId": "30887681",
+      "moatLandwardSide": "west",
+      "bankReference": [
+        116.43052517277245,
+        39.90015
+      ],
+      "geometrySha256": "54742beffe5d82c5eb1dec86b2c6c23e109a7daa3f0dc4eb6c504a830824d312",
+      "waterGeometrySha256": "be4b0dc6f4e51715c7390862bd5dd2c81aa7d6483e9b7a4a40fcbba4c45ac23b",
+      "placementKind": "landward_moat_reference"
+    },
+    {
+      "id": "beijing-boundary-gate-outer-xibian",
+      "name": "西便门",
+      "previousCoordinates": [
+        116.3465941,
+        39.8998865
+      ],
+      "coordinates": [
+        116.35045,
+        39.89812665010613
+      ],
+      "moatSourceId": "597880426",
+      "moatLandwardSide": "south",
+      "bankReference": [
+        116.35045,
+        39.900217515188686
+      ],
+      "geometrySha256": "5f8da4550aba246de8286aca71b146c2e6877ee596c7629905eace184da96b1b",
+      "waterGeometrySha256": "977658d72adf8ce4865db8342c15e1204b9e0d8d63eba15f72120c2b41415e69",
+      "placementKind": "landward_moat_reference"
+    },
+    {
+      "id": "beijing-boundary-gate-yuan-jiande",
+      "name": "健德门",
+      "previousCoordinates": [
+        116.3753744,
+        39.9755371
+      ],
+      "coordinates": [
+        116.3753744,
+        39.97389963846798
+      ],
+      "moatSourceId": "742492700",
+      "moatLandwardSide": "south",
+      "bankReference": [
+        116.3753744,
+        39.974463283342324
+      ],
+      "referenceKind": "covered_channel_centreline",
+      "geometrySha256": "ff6b41b02f90c1abb4838c2bd799095d1692ea651d9b91b097b414efd13c743f",
+      "waterGeometrySha256": "c3177ca04ef40df56a382246fec9089ff39b7835abd8664021df0465a494585a",
+      "placementKind": "landward_moat_reference"
+    },
+    {
+      "id": "beijing-boundary-gate-yuan-anzhen",
+      "name": "安贞门",
+      "previousCoordinates": [
+        116.4009986,
+        39.9756475
+      ],
+      "coordinates": [
+        116.4009986,
+        39.97412227954208
+      ],
+      "moatSourceId": "759030960",
+      "moatLandwardSide": "south",
+      "bankReference": [
+        116.4009986,
+        39.97487842327668
+      ],
+      "referenceKind": "covered_channel_centreline",
+      "geometrySha256": "640a6c73568c7b676c1a4fd7710b5cc242c065ac065bd77c3f338d031a0c52a5",
+      "waterGeometrySha256": "db6b15f2a268833ca34fa195276c11f239e7f9997b36df0c23a734e8e39896a2",
+      "placementKind": "landward_moat_reference"
+    },
+    {
+      "id": "beijing-boundary-gate-yuan-guangxi",
+      "name": "光熙门",
+      "previousCoordinates": [
+        116.4255869,
+        39.9580802
+      ],
+      "coordinates": [
+        116.42687976899305,
+        39.95811755
+      ],
+      "moatSourceId": "328506002",
+      "moatLandwardSide": "west",
+      "bankReference": [
+        116.42837321069074,
+        39.95811755
+      ],
+      "referenceKind": "water_polygon_bank",
+      "geometrySha256": "39b8bbf2527f3da556cc31dd97b65c2fdf2c920915bcdf256a177714ea7c8a78",
+      "waterGeometrySha256": "d1a064d5948c53ffb2793f810d0fdb6d9f264b529e0bbb74ce102083aa71ff0c",
+      "placementKind": "historical_street_axis_intersection"
+    }
+  ],
+  "preservedCount": 873,
+  "preservedSha256": "e75d87dacd191d1a189ca52b9931ccc082bd17c9507f0f471bda3e58d12f4937",
+  "yuanBoundarySha256": "a4904852a44d4cc659cc2bf74c823539efccd67b232bb97d8deb8cbcc5264462"
+}

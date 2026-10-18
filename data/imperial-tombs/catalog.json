@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "researchedAt": "2026-10-15",
+  "researchedAt": "2026-10-16",
   "status": "research_catalog_not_exhaustive",
   "scope": "中国历代君主陵、先秦王陵、汉代诸侯国王陵与明代藩王陵、地方政权及地方世袭统治者王陵、高句丽在朝鲜境内的关联王陵、传说祭祀陵与有独立墓葬依据的王族候选墓地；单陵优先、陵群兜底。都邑、宫殿及仅供王陵探索的区域不纳入皇陵目录，不以现代民族名称替代历史政权归属。 增量纳入埃及有文献与实体位置依据的金字塔、法老及王室陵墓；中国对应时代仅用于统一筛选，不替代埃及政权与考古年代。",
   "countPolicy": "记录数不是实际陵墓总数：陵群与子陵不能相加；单陵按实体而非墓主人数统计；同名异陵以稳定ID区分。有实际墓地的王族归属候选保留争议说明；都邑探索条目移出目录并存档于excluded-settlement-sites.json。",
@@ -29,7 +29,7 @@
     "surface_theft": "有地面文物盗窃记录",
     "mixed": "陵群，逐陵情况不同"
   },
-  "totalRecords": 487,
+  "totalRecords": 513,
   "summary": {
     "传说时代": {
       "records": 50,
@@ -48,10 +48,10 @@
       "missingCoordinates": 20
     },
     "秦汉": {
-      "records": 73,
-      "singles": 57,
+      "records": 74,
+      "singles": 58,
       "groups": 16,
-      "mapCandidates": 67,
+      "mapCandidates": 68,
       "sourcePointsPendingDatum": 0,
       "missingCoordinates": 5
     },
@@ -64,28 +64,28 @@
       "missingCoordinates": 1
     },
     "魏晋南北朝": {
-      "records": 42,
-      "singles": 39,
-      "groups": 3,
-      "mapCandidates": 24,
-      "sourcePointsPendingDatum": 0,
-      "missingCoordinates": 18
-    },
-    "隋唐": {
-      "records": 34,
-      "singles": 25,
-      "groups": 9,
+      "records": 49,
+      "singles": 45,
+      "groups": 4,
       "mapCandidates": 28,
       "sourcePointsPendingDatum": 0,
-      "missingCoordinates": 6
+      "missingCoordinates": 21
+    },
+    "隋唐": {
+      "records": 42,
+      "singles": 32,
+      "groups": 10,
+      "mapCandidates": 32,
+      "sourcePointsPendingDatum": 0,
+      "missingCoordinates": 10
     },
     "五代十国": {
-      "records": 21,
-      "singles": 17,
+      "records": 24,
+      "singles": 20,
       "groups": 4,
       "mapCandidates": 15,
       "sourcePointsPendingDatum": 0,
-      "missingCoordinates": 6
+      "missingCoordinates": 9
     },
     "宋辽金西夏": {
       "records": 61,
@@ -96,20 +96,20 @@
       "missingCoordinates": 31
     },
     "元": {
-      "records": 3,
-      "singles": 3,
+      "records": 6,
+      "singles": 6,
       "groups": 0,
-      "mapCandidates": 3,
+      "mapCandidates": 6,
       "sourcePointsPendingDatum": 0,
       "missingCoordinates": 0
     },
     "明": {
-      "records": 70,
-      "singles": 63,
+      "records": 74,
+      "singles": 67,
       "groups": 7,
-      "mapCandidates": 38,
+      "mapCandidates": 40,
       "sourcePointsPendingDatum": 0,
-      "missingCoordinates": 32
+      "missingCoordinates": 34
     },
     "清": {
       "records": 19,
@@ -508,7 +508,21 @@
     "eg-kv4",
     "eg-amarna-ta26",
     "eg-senebkay",
-    "eg-meritamun-tt358"
+    "eg-meritamun-tt358",
+    "han-wannian-taishang",
+    "tang-zuling-longyao",
+    "tang-yongkang-ancestor",
+    "tang-xingning-ancestor",
+    "xia-mingyuzhen-rui",
+    "chenhan-chenyouliang",
+    "dashun-lizicheng-tongshan",
+    "tang-zhaozong-he",
+    "ming-dong-zhubiao",
+    "qi-qianai-jingan",
+    "qi-xiantangwan-xiuan",
+    "qi-sanchengxiang-xingan",
+    "xiliang-xiaotushan-candidate",
+    "yuan-zhangshicheng-old"
   ],
   "coverageGaps": [
     {
@@ -7447,6 +7461,342 @@
       "publisher": "OpenStreetMap contributors",
       "url": "https://www.openstreetmap.org/way/556558418",
       "accessedAt": "2026-10-15"
+    },
+    {
+      "id": "pdf-imperial-supplement-20261016",
+      "title": "用户提供《历代帝陵位置和简介》55页",
+      "publisher": "用户提供的研究线索，具体结论另核",
+      "url": "",
+      "accessedAt": "2026-10-16",
+      "note": "仅为查漏线索；不采纳文档未说明基准的坐标，不将文字简介自动视为考古确认。"
+    },
+    {
+      "id": "supp-wannian-official",
+      "title": "富平一核两轴五区：汉太上皇陵",
+      "publisher": "国家发展和改革委员会／渭南市发改委",
+      "url": "https://www.ndrc.gov.cn/fggz/nyncjj/zdjs/201708/t20170822_1095423.html",
+      "accessedAt": "2026-10-16",
+      "note": "官方旅游资源名录支持富平汉太上皇陵实体；不提供墓室坐标。"
+    },
+    {
+      "id": "supp-tang-zuling-official",
+      "title": "隆尧唐祖陵保护提案答复",
+      "publisher": "河北省文化和旅游厅",
+      "url": "https://whly.hebei.gov.cn/c/2017-08-15/557355.html",
+      "accessedAt": "2026-10-16",
+      "note": "明确建初陵、启运陵共茔及2010—2015年调查勘探发掘。"
+    },
+    {
+      "id": "supp-tang-ancestors-gazetteer",
+      "title": "咸阳市志：永康陵与兴宁陵",
+      "publisher": "咸阳市地方志编纂委员会／陕西省地方志办公室",
+      "url": "https://dfz.shaanxi.gov.cn/zslm/fzzlk/xbsxsxz/xbsxz/xys_16200/201405/P020240923612271781799.pdf",
+      "accessedAt": "2026-10-16",
+      "note": "记李虎坟园在侯家堡西南、李昞坟园在后排村北；历史政权按唐追尊祖陵归类。"
+    },
+    {
+      "id": "supp-mingyuzhen-official",
+      "title": "重庆历史政德人物：明玉珍",
+      "publisher": "重庆市地方志办公室",
+      "url": "https://dfz.cq.gov.cn/zqlswh/rwby_417819/202311/t20231102_12510537.html",
+      "accessedAt": "2026-10-16",
+      "note": "1982年原址发现墓葬，出土玄宫碑；明姓不等同明朝。"
+    },
+    {
+      "id": "supp-chenyouliang-official",
+      "title": "武汉市政府公报：陈友谅墓",
+      "publisher": "武汉市人民政府／文物管理办公室",
+      "url": "https://www.wuhan.gov.cn/zwgk/xxgk/zfgb/202401/P020240123605785889502.pdf",
+      "accessedAt": "2026-10-16",
+      "note": "核对文保实体，不据文保名录断定遗骸真实性。"
+    },
+    {
+      "id": "supp-lizicheng-official",
+      "title": "咸宁市旅游业十三五发展规划：李自成墓",
+      "publisher": "咸宁市文化和旅游局",
+      "url": "https://wlj.xianning.gov.cn/xxgk/fdzdgknr/ghjh/202111/P020250610591659936426.pdf",
+      "accessedAt": "2026-10-16",
+      "note": "证实通山县现存墓园；墓主身份争议仍独立保留。"
+    },
+    {
+      "id": "supp-shisiming-excavation",
+      "title": "史思明墓的发现与发掘",
+      "publisher": "北京市文物局",
+      "url": "https://wwj.beijing.gov.cn/bjww/362760/362765/652806/index.html",
+      "accessedAt": "2026-10-16",
+      "note": "1981年清理及玉册等出土实物，原墓与藏品馆分开。"
+    },
+    {
+      "id": "supp-shisiming-status",
+      "title": "2023年工单办理：史思明墓现场情况",
+      "publisher": "北京市文物局",
+      "url": "https://wwj.beijing.gov.cn/bjww/362679/362680/482911/326050307/index.html",
+      "accessedAt": "2026-10-16",
+      "note": "墓葬已破坏殆尽，现场具体点位不能以现代地名中心替代。"
+    },
+    {
+      "id": "supp-tang-zhaozong-history",
+      "title": "巫山一段云：唐昭宗生平及和陵",
+      "publisher": "重庆市地方志办公室",
+      "url": "https://dfz.cq.gov.cn/zqlswh/ldmr/202501/t20250123_14199164.html",
+      "accessedAt": "2026-10-16",
+      "note": "支持唐昭宗及葬和陵史实；现代位置另引原始OSM。"
+    },
+    {
+      "id": "supp-tang-aileng-text",
+      "title": "新唐书卷十：哀帝本纪",
+      "publisher": "欧阳修、宋祁等／维基文库",
+      "url": "https://zh.wikisource.org/wiki/新唐書/卷010",
+      "accessedAt": "2026-10-16",
+      "note": "史载唐哀帝遇害和葬地沿革；温陵名称与现代位置继续核对。"
+    },
+    {
+      "id": "supp-yongli-official-context",
+      "title": "都匀文物古迹概况中的永历皇帝陵",
+      "publisher": "黔南州政府公开环境影响报告",
+      "url": "https://www.qiannan.gov.cn/zwgk/zdlygk/sthj/sthjaqjg/202107/P020220529230801250780.pdf",
+      "accessedAt": "2026-10-16",
+      "note": "只能支持都匀有此名文物；不采用报告中“明十四陵”等概括，不证明墓主或遗骸归属。"
+    },
+    {
+      "id": "supp-geo-osm-node-14289913204",
+      "title": "原始OSM node 14289913204",
+      "publisher": "OpenStreetMap contributors",
+      "url": "https://www.openstreetmap.org/node/14289913204",
+      "accessedAt": "2026-10-16",
+      "note": "原始WGS84区域参考；与历史实体资料交叉核对，非测绘地宫坐标。"
+    },
+    {
+      "id": "supp-geo-osm-node-9399120964",
+      "title": "原始OSM node 9399120964",
+      "publisher": "OpenStreetMap contributors",
+      "url": "https://www.openstreetmap.org/node/9399120964",
+      "accessedAt": "2026-10-16",
+      "note": "原始WGS84区域参考；与历史实体资料交叉核对，非测绘地宫坐标。"
+    },
+    {
+      "id": "supp-geo-osm-way-1560105903",
+      "title": "原始OSM way 1560105903",
+      "publisher": "OpenStreetMap contributors",
+      "url": "https://www.openstreetmap.org/way/1560105903",
+      "accessedAt": "2026-10-16",
+      "note": "原始WGS84区域参考；与历史实体资料交叉核对，非测绘地宫坐标。"
+    },
+    {
+      "id": "supp-geo-osm-way-1379109699",
+      "title": "原始OSM way 1379109699",
+      "publisher": "OpenStreetMap contributors",
+      "url": "https://www.openstreetmap.org/way/1379109699",
+      "accessedAt": "2026-10-16",
+      "note": "原始WGS84区域参考；与历史实体资料交叉核对，非测绘地宫坐标。"
+    },
+    {
+      "id": "supp-geo-osm-node-12167226000",
+      "title": "原始OSM node 12167226000",
+      "publisher": "OpenStreetMap contributors",
+      "url": "https://www.openstreetmap.org/node/12167226000",
+      "accessedAt": "2026-10-16",
+      "note": "原始WGS84区域参考；与历史实体资料交叉核对，非测绘地宫坐标。"
+    },
+    {
+      "id": "supp-geo-osm-node-10973517404",
+      "title": "原始OSM node 10973517404",
+      "publisher": "OpenStreetMap contributors",
+      "url": "https://www.openstreetmap.org/node/10973517404",
+      "accessedAt": "2026-10-16",
+      "note": "原始WGS84区域参考；与历史实体资料交叉核对，非测绘地宫坐标。"
+    },
+    {
+      "id": "supp-geo-yongkang-index",
+      "title": "永康陵公开地理索引",
+      "publisher": "维基百科坐标索引；地望以咸阳市志核对",
+      "url": "https://zh.wikipedia.org/wiki/永康陵",
+      "accessedAt": "2026-10-16",
+      "note": "只采用所在地理区域估计，未核定墓室坐标。"
+    },
+    {
+      "id": "supp-geo-lizicheng-index",
+      "title": "通山李自成墓公开地理索引与归属争议",
+      "publisher": "维基百科坐标索引；实体以咸宁官方资料核对",
+      "url": "https://zh.wikipedia.org/wiki/李自成墓_(通山县)",
+      "accessedAt": "2026-10-16",
+      "note": "有墓园实体不代表李自成遗骸已确认；索引只作区域估计。"
+    },
+    {
+      "id": "next-mingdong-official",
+      "title": "走遍钟山：明东陵原址考古与朱标",
+      "publisher": "南京市中山陵园管理局",
+      "url": "https://zschina.nanjing.gov.cn/lyzx/202309/t20230904_4002039.html",
+      "accessedAt": "2026-10-16",
+      "note": "明确遗址位置、现存台基排水设施及朱标1355—1392年生卒，帝号追尊和后世降格分开。"
+    },
+    {
+      "id": "next-nanhan-zhao-excavation",
+      "title": "广州黄埔考古：石马村南汉昭陵",
+      "publisher": "广州市黄埔区人民政府／区文化广电旅游局",
+      "url": "https://www.hp.gov.cn/xwzx/mtxx/content/post_8967207.html",
+      "accessedAt": "2026-10-16",
+      "note": "明确1954年原萝岗联和街石马村发掘；不以番禺南汉二陵博物馆替代原墓。"
+    },
+    {
+      "id": "next-nanhan-zhao-research",
+      "title": "以南汉昭陵、德陵出土青瓷为线索",
+      "publisher": "彭晓云／故宫博物院刊载研究",
+      "url": "https://www.dpm.org.cn/Uploads/File/2024/07/18/u6698e32c9ab84.pdf",
+      "accessedAt": "2026-10-16",
+      "note": "纪年砖与墓主比定的考古依据；本轮未从藏品所在地推原墓坐标。"
+    },
+    {
+      "id": "next-cao-cemetery-official",
+      "title": "曹氏宗族墓群",
+      "publisher": "谯城区官方资料",
+      "url": "https://www.qcdj.gov.cn/e/action/ShowInfo.php?classid=59&id=8762",
+      "accessedAt": "2026-10-16",
+      "note": "墓群分布于多个墓区，不是一个连续陵园；涉及曹魏追尊祖先的相关墓葬不等于全体宗族墓都是帝陵。"
+    },
+    {
+      "id": "next-cao-cemetery-report",
+      "title": "亳县曹操宗族墓葬",
+      "publisher": "安徽省亳县博物馆／《文物》1978年第8期，武侯祠网站存档",
+      "url": "https://www.wuhouci.net.cn/uploads/1/file/public/201802/20180202100357_ae824mefkc.pdf",
+      "accessedAt": "2026-10-16",
+      "note": "考古墓葬实体和墓主身份推定分别保留，不能把曹嵩姓名直接等同确定的单墓编号。"
+    },
+    {
+      "id": "next-danyang-field-study",
+      "title": "南京・丹陽南朝陵墓有角石獣調査報告（一）",
+      "publisher": "阪南大学研究机构库／实地调查报告",
+      "url": "https://hannan-u.repo.nii.ac.jp/record/173/files/n001941.pdf",
+      "accessedAt": "2026-10-16",
+      "note": "前艾、仙塘湾与三城巷是不同石刻或墓葬遗址，传统陵号不等于墓主已经确证。"
+    },
+    {
+      "id": "next-xiantangwan-archaeology",
+      "title": "丹阳胡桥仙塘湾大墓三维模型及南朝陵墓研究",
+      "publisher": "故宫博物院研究资料",
+      "url": "https://www.dpm.org.cn/Uploads/File/2022/12/30/u63aeddb32c579.pdf",
+      "accessedAt": "2026-10-16",
+      "note": "发掘墓体与修安陵的推定区别；三城巷、金家村等名号对应有不同方案，不简单互换地理点。"
+    },
+    {
+      "id": "next-danyang-protection",
+      "title": "加强丹阳南朝帝王陵墓保护建议",
+      "publisher": "江苏省政协",
+      "url": "https://www.jszx.gov.cn/wylz/zxta/2020ta/202205/t20220525_55098.html",
+      "accessedAt": "2026-10-16",
+      "note": "明确修安陵墓葬遗存、石刻及保护现状，历史归属仍另核。"
+    },
+    {
+      "id": "next-likeyong-genomic-study",
+      "title": "Ancient genomic profile of the Shatuo Turkic leader Li Keyong",
+      "publisher": "Yu et al., Journal of Genetics and Genomics 53 (2026), 1210–1222",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1673852726001475",
+      "accessedAt": "2026-10-16",
+      "note": "墓葬出土人骨古基因组研究；采用856—908年生卒；不根据现代民族或外貌作无证据推断。"
+    },
+    {
+      "id": "next-likeyong-annals",
+      "title": "旧五代史卷四十：建极陵在代州雁门县",
+      "publisher": "薛居正等／维基文库古籍",
+      "url": "https://zh.wikisource.org/zh-hans/舊五代史/卷40",
+      "accessedAt": "2026-10-16",
+      "note": "史载太祖建极陵所在州县；不能据州县名定位墓室。"
+    },
+    {
+      "id": "next-liuqiao-local-history",
+      "title": "南朝宋孝懿皇后萧文寿与兴宁陵",
+      "publisher": "镇江金山网地方历史研究",
+      "url": "https://www.jsw.com.cn/2024/1205/1877862.shtml",
+      "accessedAt": "2026-10-16",
+      "note": "刘皇墓及谏壁雩山地望；与唐代李昞兴宁陵分开，合茔不等于同穴。"
+    },
+    {
+      "id": "next-xiaotushan-scholarship",
+      "title": "小土山墓与西凉画像文化研究",
+      "publisher": "早稻田大学研究报告",
+      "url": "https://www.wrs.waseda.jp/sp-r/admin/print/number/2023Q-021",
+      "accessedAt": "2026-10-16",
+      "note": "小土山墓真实存在，墓主常被解释为李暠，但身份有疑问，不能写成考古确认建世陵。"
+    },
+    {
+      "id": "next-xiaotushan-local-record",
+      "title": "酒泉小土山墓遗址概况",
+      "publisher": "地方文献／知识细颗粒资源库",
+      "url": "https://meta.librarydata.cn/metainfo?metaID=292220020220001659",
+      "accessedAt": "2026-10-16",
+      "note": "墓葬位于丁家闸5号墓约800米附近，不能采用错误的市区中心。"
+    },
+    {
+      "id": "next-zhangshicheng-archives",
+      "title": "张吴王墓：旧址与迁建记载",
+      "publisher": "苏州工业园区档案管理中心",
+      "url": "https://www.sipac.gov.cn/szdaglzx/yqfzrwls/202102/5730622c995f4724ac8066c601f8a72c.shtml",
+      "accessedAt": "2026-10-16",
+      "note": "记旧址及墓庙迁建玉皇宫；旧址、迁建纪念设施和遗骸归属分开。"
+    },
+    {
+      "id": "next-zhangshicheng-placeplan",
+      "title": "苏州工业园区地名规划2024—2035",
+      "publisher": "苏州工业园区社会事业局",
+      "url": "https://www.sipac.gov.cn/szgyyq/ggxx/202411/619c4163312d4101a64688bc389f61f0/files/07f812c1e69e4453b3f24722e6ce4cac.pdf",
+      "accessedAt": "2026-10-16",
+      "note": "张士诚墓作为南施街附近历史遗存地名使用；不与迁建玉皇宫共用坐标。"
+    },
+    {
+      "id": "next-yangxingmi-historical-lead",
+      "title": "兴陵（南吴）地望与旧志线索",
+      "publisher": "公开陵墓地名索引；待旧志和文保档案复核",
+      "url": "https://zh.wikipedia.org/wiki/興陵_(南吳)",
+      "accessedAt": "2026-10-16",
+      "note": "吴山传统地望与其他旧籍说法并列，不作为考古墓主确证或现代坐标依据。"
+    },
+    {
+      "id": "next-geo-osm-way-803406635",
+      "title": "原始OSM way 803406635",
+      "publisher": "OpenStreetMap contributors",
+      "url": "https://www.openstreetmap.org/way/803406635",
+      "accessedAt": "2026-10-16",
+      "note": "WGS84原始几何，仅作指定实体区域参考，非入口或地宫实测坐标。"
+    },
+    {
+      "id": "next-geo-osm-node-8013316235",
+      "title": "原始OSM node 8013316235",
+      "publisher": "OpenStreetMap contributors",
+      "url": "https://www.openstreetmap.org/node/8013316235",
+      "accessedAt": "2026-10-16",
+      "note": "WGS84原始几何，仅作指定实体区域参考，非入口或地宫实测坐标。"
+    },
+    {
+      "id": "next-geo-sinorelic-1418205506769653760",
+      "title": "齐武帝萧赜景安陵石刻公开地图索引",
+      "publisher": "华夏古迹图／原站高德地图",
+      "url": "https://www.sinorelic.com/relicPoint/1418205506769653760",
+      "accessedAt": "2026-10-16",
+      "note": "仅作实际遗存的区域参考；坐标按原站高德AMap用法推断基准后转换，未宣称测绘精度。"
+    },
+    {
+      "id": "next-geo-sinorelic-1418435226186682368",
+      "title": "齐景帝萧道生修安陵石刻公开地图索引",
+      "publisher": "华夏古迹图／原站高德地图",
+      "url": "https://www.sinorelic.com/relicPoint/1418435226186682368",
+      "accessedAt": "2026-10-16",
+      "note": "仅作实际遗存的区域参考；坐标按原站高德AMap用法推断基准后转换，未宣称测绘精度。"
+    },
+    {
+      "id": "next-geo-sinorelic-1418402455590408192",
+      "title": "齐明帝萧鸾兴安陵石刻公开地图索引",
+      "publisher": "华夏古迹图／原站高德地图",
+      "url": "https://www.sinorelic.com/relicPoint/1418402455590408192",
+      "accessedAt": "2026-10-16",
+      "note": "仅作实际遗存的区域参考；坐标按原站高德AMap用法推断基准后转换，未宣称测绘精度。"
+    },
+    {
+      "id": "next-geo-sinorelic-1708709417219919872",
+      "title": "果园墓群-小土山墓葬公开地图索引",
+      "publisher": "华夏古迹图／原站高德地图",
+      "url": "https://www.sinorelic.com/relicPoint/1708709417219919872",
+      "accessedAt": "2026-10-16",
+      "note": "仅作实际遗存的区域参考；坐标按原站高德AMap用法推断基准后转换，未宣称测绘精度。"
     }
   ],
   "items": [
@@ -48085,6 +48435,2382 @@
       "relatedHeritageIds": [],
       "mapLabel": "梅丽特阿蒙王后陵\n（TT358）",
       "enMapLabel": "Tomb of Queen Ahmose-Meritamun\n(TT358)"
+    },
+    {
+      "id": "han-wannian-taishang",
+      "name": "汉太上皇万年陵",
+      "enName": "Wannian Mausoleum of Liu Taigong",
+      "aliases": [
+        "万年陵",
+        "汉太上皇陵",
+        "汉太公陵"
+      ],
+      "era": "秦汉",
+      "dynasty": "西汉",
+      "enDynasty": "Western Han",
+      "occupants": [
+        "汉太上皇刘太公"
+      ],
+      "enOccupants": [
+        "Liu Taigong, father of Emperor Gaozu"
+      ],
+      "admin": "陕西省渭南市富平县姚村一带",
+      "enAdmin": "Fuping, Shaanxi",
+      "adminStatus": "按机构资料地望描述；现行基层行政区待进一步核对",
+      "recordType": "single",
+      "parentId": null,
+      "nature": "posthumous",
+      "recognition": "documented",
+      "evidence": "官方资料将汉太上皇陵列为富平历史资源；所附资料称万年陵。作为刘邦父亲的皇室陵墓单列，非汉高祖长陵。",
+      "enEvidence": "Official sources identify the Han Taishanghuang tomb in Fuping. It is distinct from Emperor Gaozu’s Changling.",
+      "disputes": [
+        "太上皇是皇室尊号，不能直接等同生前在位皇帝；具体合葬者和姓名异文另核。"
+      ],
+      "sourceIds": [
+        "supp-wannian-official",
+        "pdf-imperial-supplement-20261016",
+        "supp-geo-osm-node-14289913204"
+      ],
+      "coordinates": {
+        "lat": 34.6927238,
+        "lng": 109.2148995,
+        "crs": "WGS84",
+        "status": "verified_wgs84",
+        "sourceId": "supp-geo-osm-node-14289913204",
+        "target": "汉太上皇陵封土所在区域参考",
+        "original": "34.6927238, 109.2148995; original OSM WGS84",
+        "method": "原始OSM节点或陵区几何的区域代表点，结合机构文献核对实体",
+        "verificationScope": "历史实体及区域位置参考，不提供地宫、墓道或入口实测位置",
+        "sourceDatumExplicit": true,
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.000001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "原始OSM区域参考点，不代表地宫中心或入口，未提供实测误差。"
+      },
+      "mapEligible": true,
+      "mapReason": "历史实体与区域位置已有依据，性质及估计限制见详情",
+      "reviewTasks": [
+        "补核原址平面、坐标基准和当前保存情况"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "未将墓主卒年自动作为建陵或迁葬年份"
+      },
+      "biographies": [
+        {
+          "label": "汉太上皇刘太公",
+          "birthYear": null,
+          "deathYear": null,
+          "status": "unresolved",
+          "lifespanText": "生卒待核",
+          "sourceIds": []
+        }
+      ],
+      "lifespanText": "生卒待核",
+      "enLifespanText": "Lifespan awaiting verification",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；不将展厅或纪念墓园视为原地宫。",
+        "enNote": "Original burial-chamber access has not been verified."
+      },
+      "supplementAudit": "pdf-imperial-supplement-20261016",
+      "rulerCategory": "imperial_ancestor",
+      "periodText": "西汉；皇室祖先陵墓，非在位皇帝陵",
+      "enPeriodText": "Western Han; imperial-ancestor tomb, not a reigning emperor’s mausoleum",
+      "enDisputes": [
+        "Official sources identify the Han Taishanghuang tomb in Fuping. It is distinct from Emperor Gaozu’s Changling.",
+        "Location references are not surveyed burial-chamber positions. Unresolved attributions are retained."
+      ]
+    },
+    {
+      "id": "tang-zuling-longyao",
+      "name": "隆尧唐祖陵",
+      "enName": "Longyao Tang Ancestral Cemetery",
+      "aliases": [
+        "唐祖陵",
+        "大唐帝陵",
+        "隆尧唐陵"
+      ],
+      "era": "隋唐",
+      "dynasty": "唐（追尊）",
+      "enDynasty": "Tang, posthumous ancestral honours",
+      "occupants": [],
+      "enOccupants": [],
+      "admin": "河北省邢台市隆尧县魏家庄镇王尹村北",
+      "enAdmin": "Longyao, Hebei",
+      "adminStatus": "按机构资料地望描述；现行基层行政区待进一步核对",
+      "recordType": "group",
+      "parentId": null,
+      "nature": "mixed",
+      "recognition": "documented",
+      "evidence": "河北省文旅厅明确建初、启运两陵共茔及考古调查。仅采用共同陵区区域点，单陵中心不明。",
+      "enEvidence": "Official documentation identifies the shared cemetery of Jianchu and Qiyun, supported by archaeological investigation.",
+      "disputes": [
+        "陵园区域几何不是单陵墓室轮廓；不据现代围墙认定唐代陵园完整边界。"
+      ],
+      "sourceIds": [
+        "supp-tang-zuling-official",
+        "supp-geo-osm-way-1560105903"
+      ],
+      "coordinates": {
+        "lat": 37.293724133333335,
+        "lng": 114.76588121666664,
+        "crs": "WGS84",
+        "status": "verified_wgs84",
+        "sourceId": "supp-geo-osm-way-1560105903",
+        "target": "隆尧唐祖陵共同陵园区域参考；非两座单陵墓室",
+        "original": "37.293724133333335, 114.76588121666664; original OSM WGS84",
+        "method": "原始OSM节点或陵区几何的区域代表点，结合机构文献核对实体",
+        "verificationScope": "历史实体及区域位置参考，不提供地宫、墓道或入口实测位置",
+        "sourceDatumExplicit": true,
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.000001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "原始OSM区域参考点，不代表地宫中心或入口，未提供实测误差。"
+      },
+      "mapEligible": true,
+      "mapReason": "历史实体与区域位置已有依据，性质及估计限制见详情",
+      "reviewTasks": [
+        "补核原址平面、坐标基准和当前保存情况"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "未将墓主卒年自动作为建陵或迁葬年份"
+      },
+      "biographies": [],
+      "lifespanText": "见建初陵、启运陵子记录",
+      "enLifespanText": "See the two constituent ancestral tomb records",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；不将展厅或纪念墓园视为原地宫。",
+        "enNote": "Original burial-chamber access has not been verified."
+      },
+      "supplementAudit": "pdf-imperial-supplement-20261016",
+      "enDisputes": [
+        "Official documentation identifies the shared cemetery of Jianchu and Qiyun, supported by archaeological investigation.",
+        "Location references are not surveyed burial-chamber positions. Unresolved attributions are retained."
+      ]
+    },
+    {
+      "id": "tang-zuling-jianchu",
+      "name": "唐建初陵",
+      "enName": "Jianchu Mausoleum",
+      "aliases": [
+        "建初陵"
+      ],
+      "era": "隋唐",
+      "dynasty": "唐（追尊）",
+      "enDynasty": "Tang, posthumous ancestral honours",
+      "occupants": [
+        "唐献祖李熙（追尊）"
+      ],
+      "enOccupants": [
+        "Li Xi, posthumously honoured ancestor"
+      ],
+      "admin": "河北省邢台市隆尧县魏家庄镇王尹村北",
+      "enAdmin": "Longyao, Hebei",
+      "adminStatus": "按机构资料地望描述；现行基层行政区待进一步核对",
+      "recordType": "single",
+      "parentId": "tang-zuling-longyao",
+      "nature": "posthumous",
+      "recognition": "documented",
+      "evidence": "机构资料确认两陵共茔，但本轮未取得各单陵独立地理中心；保留单陵档案，共用所属陵区浏览。",
+      "enEvidence": "One of the two documented tombs in the shared ancestral cemetery; its independent position is unverified.",
+      "disputes": [
+        "不得把共同陵园点复制为本陵墓室坐标。"
+      ],
+      "sourceIds": [
+        "supp-tang-zuling-official"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "所属陵区已有参考；单陵独立坐标待核",
+      "reviewTasks": [
+        "补核原址平面、坐标基准和当前保存情况"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "未将墓主卒年自动作为建陵或迁葬年份"
+      },
+      "biographies": [
+        {
+          "label": "唐献祖李熙（追尊）",
+          "birthYear": null,
+          "deathYear": null,
+          "status": "unresolved",
+          "lifespanText": "生卒待核",
+          "sourceIds": []
+        }
+      ],
+      "lifespanText": "生卒待核",
+      "enLifespanText": "Lifespan awaiting verification",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；不将展厅或纪念墓园视为原地宫。",
+        "enNote": "Original burial-chamber access has not been verified."
+      },
+      "supplementAudit": "pdf-imperial-supplement-20261016",
+      "rulerCategory": "posthumous_emperor",
+      "enNatureLabel": "Posthumously honoured ancestral tomb",
+      "locationReference": {
+        "parentId": "tang-zuling-longyao",
+        "target": "隆尧唐祖陵共同陵区；不是单陵坐标",
+        "basis": "河北文旅厅两陵共茔说明及原始OSM共同陵园",
+        "coordinates": {
+          "lat": 37.293724133333335,
+          "lng": 114.76588121666664,
+          "crs": "WGS84",
+          "status": "verified_wgs84",
+          "sourceId": "supp-geo-osm-way-1560105903",
+          "target": "隆尧唐祖陵共同陵园区域参考；非两座单陵墓室",
+          "original": "37.293724133333335, 114.76588121666664; original OSM WGS84",
+          "method": "原始OSM节点或陵区几何的区域代表点，结合机构文献核对实体",
+          "verificationScope": "历史实体及区域位置参考，不提供地宫、墓道或入口实测位置",
+          "sourceDatumExplicit": true,
+          "precision": {
+            "sourceUnit": "degree",
+            "resolutionDegrees": 0.000001,
+            "horizontalAccuracyMeters": null
+          },
+          "limitation": "原始OSM区域参考点，不代表地宫中心或入口，未提供实测误差。"
+        },
+        "limitation": "单墓位置未核，共同陵区不生成两个重复地图点。"
+      },
+      "enDisputes": [
+        "One of the two documented tombs in the shared ancestral cemetery; its independent position is unverified.",
+        "Location references are not surveyed burial-chamber positions. Unresolved attributions are retained."
+      ]
+    },
+    {
+      "id": "tang-zuling-qiyun",
+      "name": "唐启运陵",
+      "enName": "Qiyun Mausoleum",
+      "aliases": [
+        "启运陵"
+      ],
+      "era": "隋唐",
+      "dynasty": "唐（追尊）",
+      "enDynasty": "Tang, posthumous ancestral honours",
+      "occupants": [
+        "唐懿祖李天赐（追尊；异写李天锡）"
+      ],
+      "enOccupants": [
+        "Li Tianci, posthumously honoured ancestor"
+      ],
+      "admin": "河北省邢台市隆尧县魏家庄镇王尹村北",
+      "enAdmin": "Longyao, Hebei",
+      "adminStatus": "按机构资料地望描述；现行基层行政区待进一步核对",
+      "recordType": "single",
+      "parentId": "tang-zuling-longyao",
+      "nature": "posthumous",
+      "recognition": "documented",
+      "evidence": "机构资料确认两陵共茔，但本轮未取得各单陵独立地理中心；保留单陵档案，共用所属陵区浏览。",
+      "enEvidence": "One of the two documented tombs in the shared ancestral cemetery; its independent position is unverified.",
+      "disputes": [
+        "不得把共同陵园点复制为本陵墓室坐标。"
+      ],
+      "sourceIds": [
+        "supp-tang-zuling-official"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "所属陵区已有参考；单陵独立坐标待核",
+      "reviewTasks": [
+        "补核原址平面、坐标基准和当前保存情况"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "未将墓主卒年自动作为建陵或迁葬年份"
+      },
+      "biographies": [
+        {
+          "label": "唐懿祖李天赐（追尊；异写李天锡）",
+          "birthYear": null,
+          "deathYear": null,
+          "status": "unresolved",
+          "lifespanText": "生卒待核",
+          "sourceIds": []
+        }
+      ],
+      "lifespanText": "生卒待核",
+      "enLifespanText": "Lifespan awaiting verification",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；不将展厅或纪念墓园视为原地宫。",
+        "enNote": "Original burial-chamber access has not been verified."
+      },
+      "supplementAudit": "pdf-imperial-supplement-20261016",
+      "rulerCategory": "posthumous_emperor",
+      "enNatureLabel": "Posthumously honoured ancestral tomb",
+      "locationReference": {
+        "parentId": "tang-zuling-longyao",
+        "target": "隆尧唐祖陵共同陵区；不是单陵坐标",
+        "basis": "河北文旅厅两陵共茔说明及原始OSM共同陵园",
+        "coordinates": {
+          "lat": 37.293724133333335,
+          "lng": 114.76588121666664,
+          "crs": "WGS84",
+          "status": "verified_wgs84",
+          "sourceId": "supp-geo-osm-way-1560105903",
+          "target": "隆尧唐祖陵共同陵园区域参考；非两座单陵墓室",
+          "original": "37.293724133333335, 114.76588121666664; original OSM WGS84",
+          "method": "原始OSM节点或陵区几何的区域代表点，结合机构文献核对实体",
+          "verificationScope": "历史实体及区域位置参考，不提供地宫、墓道或入口实测位置",
+          "sourceDatumExplicit": true,
+          "precision": {
+            "sourceUnit": "degree",
+            "resolutionDegrees": 0.000001,
+            "horizontalAccuracyMeters": null
+          },
+          "limitation": "原始OSM区域参考点，不代表地宫中心或入口，未提供实测误差。"
+        },
+        "limitation": "单墓位置未核，共同陵区不生成两个重复地图点。"
+      },
+      "enDisputes": [
+        "One of the two documented tombs in the shared ancestral cemetery; its independent position is unverified.",
+        "Location references are not surveyed burial-chamber positions. Unresolved attributions are retained."
+      ]
+    },
+    {
+      "id": "tang-yongkang-ancestor",
+      "name": "唐永康陵",
+      "enName": "Yongkang Ancestral Mausoleum",
+      "aliases": [
+        "永康陵",
+        "李虎墓"
+      ],
+      "era": "隋唐",
+      "dynasty": "唐（追尊）",
+      "enDynasty": "Tang, posthumous ancestral honours",
+      "occupants": [
+        "唐太祖李虎（追尊）"
+      ],
+      "enOccupants": [
+        "Li Hu, posthumously honoured Taizu"
+      ],
+      "admin": "陕西省咸阳市三原县陵前镇侯家堡西南",
+      "enAdmin": "Sanyuan, Shaanxi",
+      "adminStatus": "按机构资料地望描述；现行基层行政区待进一步核对",
+      "recordType": "single",
+      "parentId": null,
+      "nature": "posthumous",
+      "recognition": "documented",
+      "evidence": "咸阳市志记永康陵为李虎坟园，在侯家堡西南。按唐追尊祖陵归类，不以人物初葬时期取代营陵制度。",
+      "enEvidence": "The Xianyang gazetteer locates Li Hu’s ancestral tomb southwest of Houjiabao.",
+      "disputes": [
+        "采用区域估计点；未取得墓室或封土实测坐标。"
+      ],
+      "sourceIds": [
+        "supp-tang-ancestors-gazetteer",
+        "supp-geo-yongkang-index"
+      ],
+      "coordinates": {
+        "lat": 34.76897,
+        "lng": 108.97743,
+        "crs": "WGS84",
+        "status": "estimated_wgs84",
+        "sourceId": "supp-geo-yongkang-index",
+        "target": "侯家堡西南唐永康陵区域估计",
+        "original": "34.76897000,108.97743000; public geographic index",
+        "method": "采用公开地理索引作为所属陵址区域估计，与机构文献地望核对；不从PDF未知基准坐标反算",
+        "verificationScope": "历史实体及区域位置参考，不提供地宫、墓道或入口实测位置",
+        "sourceDatumExplicit": false,
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.000001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "估计位置：公开索引非测绘点，仅作所在陵址周边约500米区域浏览；500米为核查范围，不是坐标误差，也不是保护边界。",
+        "estimate": {
+          "basis": "公开WGS84地理索引与机构陵址地望交叉参考，单墓测绘待核",
+          "extent": "索引点周边约500米区域；研究核查范围，非保护边界或测绘误差",
+          "confidence": "regional",
+          "reviewedAt": "2026-10-16"
+        }
+      },
+      "mapEligible": true,
+      "mapReason": "历史实体与区域位置已有依据，性质及估计限制见详情",
+      "reviewTasks": [
+        "补核原址平面、坐标基准和当前保存情况"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "未将墓主卒年自动作为建陵或迁葬年份"
+      },
+      "biographies": [
+        {
+          "label": "唐太祖李虎（追尊）",
+          "birthYear": null,
+          "deathYear": null,
+          "status": "unresolved",
+          "lifespanText": "生卒待核",
+          "sourceIds": []
+        }
+      ],
+      "lifespanText": "生卒待核",
+      "enLifespanText": "Lifespan awaiting verification",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；不将展厅或纪念墓园视为原地宫。",
+        "enNote": "Original burial-chamber access has not been verified."
+      },
+      "supplementAudit": "pdf-imperial-supplement-20261016",
+      "rulerCategory": "posthumous_emperor",
+      "enNatureLabel": "Posthumously honoured ancestral tomb",
+      "periodText": "李虎墓；唐代追尊祖陵",
+      "enPeriodText": "Li Hu’s tomb; ancestral mausoleum honoured under Tang",
+      "enDisputes": [
+        "The Xianyang gazetteer locates Li Hu’s ancestral tomb southwest of Houjiabao.",
+        "Location references are not surveyed burial-chamber positions. Unresolved attributions are retained."
+      ]
+    },
+    {
+      "id": "tang-xingning-ancestor",
+      "name": "唐兴宁陵",
+      "enName": "Xingning Ancestral Mausoleum",
+      "aliases": [
+        "兴宁陵",
+        "李昞墓",
+        "李昺墓"
+      ],
+      "era": "隋唐",
+      "dynasty": "唐（追尊）",
+      "enDynasty": "Tang, posthumous ancestral honours",
+      "occupants": [
+        "唐世祖李昞（追尊；异写李昺）"
+      ],
+      "enOccupants": [
+        "Li Bing, posthumously honoured Shizu"
+      ],
+      "admin": "陕西省咸阳市渭城区正阳街道后排村北",
+      "enAdmin": "Weicheng, Xianyang, Shaanxi",
+      "adminStatus": "按机构资料地望描述；现行基层行政区待进一步核对",
+      "recordType": "single",
+      "parentId": null,
+      "nature": "posthumous",
+      "recognition": "documented",
+      "evidence": "咸阳市志记兴宁陵为李昞坟园，位于后排村北。与刘宋刘翘兴宁陵为同名异陵。",
+      "enEvidence": "The Xianyang gazetteer identifies Li Bing’s tomb north of Houpai; it is distinct from the Liu Song tomb of the same name.",
+      "disputes": [],
+      "sourceIds": [
+        "supp-tang-ancestors-gazetteer",
+        "supp-geo-osm-node-9399120964"
+      ],
+      "coordinates": {
+        "lat": 34.4260947,
+        "lng": 108.8864299,
+        "crs": "WGS84",
+        "status": "verified_wgs84",
+        "sourceId": "supp-geo-osm-node-9399120964",
+        "target": "唐兴宁陵原址区域参考",
+        "original": "34.4260947, 108.8864299; original OSM WGS84",
+        "method": "原始OSM节点或陵区几何的区域代表点，结合机构文献核对实体",
+        "verificationScope": "历史实体及区域位置参考，不提供地宫、墓道或入口实测位置",
+        "sourceDatumExplicit": true,
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.000001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "原始OSM区域参考点，不代表地宫中心或入口，未提供实测误差。"
+      },
+      "mapEligible": true,
+      "mapReason": "历史实体与区域位置已有依据，性质及估计限制见详情",
+      "reviewTasks": [
+        "补核原址平面、坐标基准和当前保存情况"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "未将墓主卒年自动作为建陵或迁葬年份"
+      },
+      "biographies": [
+        {
+          "label": "唐世祖李昞（追尊；异写李昺）",
+          "birthYear": null,
+          "deathYear": null,
+          "status": "unresolved",
+          "lifespanText": "生卒待核",
+          "sourceIds": []
+        }
+      ],
+      "lifespanText": "生卒待核",
+      "enLifespanText": "Lifespan awaiting verification",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；不将展厅或纪念墓园视为原地宫。",
+        "enNote": "Original burial-chamber access has not been verified."
+      },
+      "supplementAudit": "pdf-imperial-supplement-20261016",
+      "rulerCategory": "posthumous_emperor",
+      "enNatureLabel": "Posthumously honoured ancestral tomb",
+      "periodText": "李昞墓；唐代追尊祖陵",
+      "enPeriodText": "Li Bing’s tomb; ancestral mausoleum honoured under Tang",
+      "enDisputes": []
+    },
+    {
+      "id": "xia-mingyuzhen-rui",
+      "name": "明玉珍睿陵",
+      "enName": "Rui Mausoleum of Ming Yuzhen",
+      "aliases": [
+        "睿陵",
+        "明玉珍墓"
+      ],
+      "era": "元",
+      "dynasty": "大夏（明玉珍）",
+      "enDynasty": "Daxia of Ming Yuzhen",
+      "occupants": [
+        "大夏太祖明玉珍"
+      ],
+      "enOccupants": [
+        "Ming Yuzhen, founder of Daxia"
+      ],
+      "admin": "重庆市江北嘴明玉珍睿陵原址及陈列馆",
+      "enAdmin": "Jiangbeizui, Chongqing",
+      "adminStatus": "按机构资料地望描述；现行基层行政区待进一步核对",
+      "recordType": "single",
+      "parentId": null,
+      "nature": "actual_burial",
+      "recognition": "archaeological",
+      "evidence": "地方志记1982年发现明玉珍墓，玄宫碑等出土材料支持墓主认定。明是墓主姓氏，大夏政权属于元末，不能分到明朝。",
+      "enEvidence": "The tomb discovered in 1982 is supported by its inscribed burial stele. Ming is the ruler’s surname; Daxia belongs to the late Yuan context.",
+      "disputes": [
+        "墓葬与陈列馆区域参考，不将馆内展陈等同原地宫开放。"
+      ],
+      "sourceIds": [
+        "supp-mingyuzhen-official",
+        "supp-geo-osm-way-1379109699"
+      ],
+      "coordinates": {
+        "lat": 29.5756823,
+        "lng": 106.5721565,
+        "crs": "WGS84",
+        "status": "verified_wgs84",
+        "sourceId": "supp-geo-osm-way-1379109699",
+        "target": "明玉珍睿陵及原址陈列馆所在区域",
+        "original": "29.5756823, 106.5721565; original OSM WGS84",
+        "method": "原始OSM节点或陵区几何的区域代表点，结合机构文献核对实体",
+        "verificationScope": "历史实体及区域位置参考，不提供地宫、墓道或入口实测位置",
+        "sourceDatumExplicit": true,
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.000001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "原始OSM区域参考点，不代表地宫中心或入口，未提供实测误差。"
+      },
+      "mapEligible": true,
+      "mapReason": "历史实体与区域位置已有依据，性质及估计限制见详情",
+      "reviewTasks": [
+        "补核原址平面、坐标基准和当前保存情况"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "未将墓主卒年自动作为建陵或迁葬年份"
+      },
+      "biographies": [
+        {
+          "label": "大夏太祖明玉珍",
+          "birthYear": null,
+          "deathYear": null,
+          "status": "unresolved",
+          "lifespanText": "生卒待核",
+          "sourceIds": []
+        }
+      ],
+      "lifespanText": "生卒待核",
+      "enLifespanText": "Lifespan awaiting verification",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；不将展厅或纪念墓园视为原地宫。",
+        "enNote": "Original burial-chamber access has not been verified."
+      },
+      "supplementAudit": "pdf-imperial-supplement-20261016",
+      "periodText": "14世纪，元末大夏政权",
+      "enPeriodText": "14th century; Daxia in the late Yuan period",
+      "enDisputes": [
+        "The tomb discovered in 1982 is supported by its inscribed burial stele. Ming is the ruler’s surname; Daxia belongs to the late Yuan context.",
+        "Location references are not surveyed burial-chamber positions. Unresolved attributions are retained."
+      ]
+    },
+    {
+      "id": "chenhan-chenyouliang",
+      "name": "大汉陈友谅墓",
+      "enName": "Tomb of Chen Youliang",
+      "aliases": [
+        "陈友谅墓"
+      ],
+      "era": "元",
+      "dynasty": "大汉（陈友谅）",
+      "enDynasty": "Chen Han",
+      "occupants": [
+        "陈友谅"
+      ],
+      "enOccupants": [
+        "Chen Youliang"
+      ],
+      "admin": "湖北省武汉市武昌区蛇山、长江大桥武昌桥头一带",
+      "enAdmin": "Snake Hill, Wuchang, Wuhan",
+      "adminStatus": "按机构资料地望描述；现行基层行政区待进一步核对",
+      "recordType": "single",
+      "parentId": null,
+      "nature": "commemorative",
+      "recognition": "traditional",
+      "evidence": "文物资料记载蛇山陈友谅墓，现存为后世修复墓园。保留墓葬传统与修复性质，不凭墓园存在确认遗骸。",
+      "enEvidence": "A documented memorial grave on Snake Hill, subsequently repaired. The surviving monument does not itself establish the presence of the ruler’s remains.",
+      "disputes": [
+        "遗骸及原墓真实性须与现存墓园实体区分。",
+        "所附PDF位置未说明坐标基准且与原始OSM实体相距明显，本轮不采用该坐标。"
+      ],
+      "sourceIds": [
+        "supp-chenyouliang-official",
+        "supp-geo-osm-node-12167226000"
+      ],
+      "coordinates": {
+        "lat": 30.5478624,
+        "lng": 114.2903169,
+        "crs": "WGS84",
+        "status": "verified_wgs84",
+        "sourceId": "supp-geo-osm-node-12167226000",
+        "target": "大汉陈友谅墓现存修复墓园参考",
+        "original": "30.5478624, 114.2903169; original OSM WGS84",
+        "method": "原始OSM节点或陵区几何的区域代表点，结合机构文献核对实体",
+        "verificationScope": "历史实体及区域位置参考，不提供地宫、墓道或入口实测位置",
+        "sourceDatumExplicit": true,
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.000001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "原始OSM区域参考点，不代表地宫中心或入口，未提供实测误差。"
+      },
+      "mapEligible": true,
+      "mapReason": "历史实体与区域位置已有依据，性质及估计限制见详情",
+      "reviewTasks": [
+        "补核原址平面、坐标基准和当前保存情况"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "未将墓主卒年自动作为建陵或迁葬年份"
+      },
+      "biographies": [
+        {
+          "label": "陈友谅",
+          "birthYear": null,
+          "deathYear": null,
+          "status": "unresolved",
+          "lifespanText": "生卒待核",
+          "sourceIds": []
+        }
+      ],
+      "lifespanText": "生卒待核",
+      "enLifespanText": "Lifespan awaiting verification",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；不将展厅或纪念墓园视为原地宫。",
+        "enNote": "Original burial-chamber access has not been verified."
+      },
+      "supplementAudit": "pdf-imperial-supplement-20261016",
+      "periodText": "元末陈汉政权；墓园经后世修复",
+      "enPeriodText": "Late Yuan Chen Han; surviving repaired memorial grave",
+      "enDisputes": [
+        "A documented memorial grave on Snake Hill, subsequently repaired. The surviving monument does not itself establish the presence of the ruler’s remains.",
+        "Location references are not surveyed burial-chamber positions. Unresolved attributions are retained."
+      ]
+    },
+    {
+      "id": "dashun-lizicheng-tongshan",
+      "name": "通山李自成墓（闯王陵）",
+      "enName": "Tomb of Li Zicheng, Tongshan",
+      "aliases": [
+        "闯王陵",
+        "通山闯王陵",
+        "李自成墓（通山）"
+      ],
+      "era": "明",
+      "dynasty": "大顺",
+      "enDynasty": "Dashun",
+      "occupants": [
+        "李自成（墓主归属有争议）"
+      ],
+      "enOccupants": [
+        "Li Zicheng (attribution disputed)"
+      ],
+      "admin": "湖北省咸宁市通山县闯王镇高湖村小月山一带",
+      "enAdmin": "Gao Hu, Tongshan, Hubei",
+      "adminStatus": "按机构资料地望描述；现行基层行政区待进一步核对",
+      "recordType": "single",
+      "parentId": null,
+      "nature": "commemorative",
+      "recognition": "traditional",
+      "evidence": "咸宁官方资料确认通山李自成墓园实体。将墓园传统认定与李自成遗骸归属分开，保留争议。",
+      "enEvidence": "Official local records identify the existing Tongshan tomb complex, while attribution of the burial remains disputed.",
+      "disputes": [
+        "通山、通城及湖南夹山等说法不能合并成一个已确认实葬点。",
+        "本点对应通山现存墓园，不表示墓主已获考古确认。"
+      ],
+      "sourceIds": [
+        "supp-lizicheng-official",
+        "supp-geo-lizicheng-index"
+      ],
+      "coordinates": {
+        "lat": 29.3959194,
+        "lng": 114.5708611,
+        "crs": "WGS84",
+        "status": "estimated_wgs84",
+        "sourceId": "supp-geo-lizicheng-index",
+        "target": "通山闯王陵现存墓园区域估计",
+        "original": "29°23′45.31″N 114°34′15.10″E; public geographic index",
+        "method": "采用公开地理索引作为所属陵址区域估计，与机构文献地望核对；不从PDF未知基准坐标反算",
+        "verificationScope": "历史实体及区域位置参考，不提供地宫、墓道或入口实测位置",
+        "sourceDatumExplicit": false,
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.000001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "估计位置：公开索引非测绘点，仅作所在陵址周边约500米区域浏览；500米为核查范围，不是坐标误差，也不是保护边界。",
+        "estimate": {
+          "basis": "公开WGS84地理索引与机构陵址地望交叉参考，单墓测绘待核",
+          "extent": "索引点周边约500米区域；研究核查范围，非保护边界或测绘误差",
+          "confidence": "regional",
+          "reviewedAt": "2026-10-16"
+        }
+      },
+      "mapEligible": true,
+      "mapReason": "历史实体与区域位置已有依据，性质及估计限制见详情",
+      "reviewTasks": [
+        "补核原址平面、坐标基准和当前保存情况"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "未将墓主卒年自动作为建陵或迁葬年份"
+      },
+      "biographies": [
+        {
+          "label": "李自成（墓主归属有争议）",
+          "birthYear": null,
+          "deathYear": null,
+          "status": "unresolved",
+          "lifespanText": "生卒待核",
+          "sourceIds": []
+        }
+      ],
+      "lifespanText": "生卒待核",
+      "enLifespanText": "Lifespan awaiting verification",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；不将展厅或纪念墓园视为原地宫。",
+        "enNote": "Original burial-chamber access has not been verified."
+      },
+      "supplementAudit": "pdf-imperial-supplement-20261016",
+      "periodText": "明末大顺政权；现存墓园经后世修建",
+      "enPeriodText": "Dashun at the end of Ming; subsequently developed memorial complex",
+      "enDisputes": [
+        "Official local records identify the existing Tongshan tomb complex, while attribution of the burial remains disputed.",
+        "Location references are not surveyed burial-chamber positions. Unresolved attributions are retained."
+      ]
+    },
+    {
+      "id": "tang-zhaozong-he",
+      "name": "唐昭宗和陵",
+      "enName": "He Mausoleum of Emperor Zhaozong",
+      "aliases": [
+        "唐和陵",
+        "唐昭宗陵"
+      ],
+      "era": "隋唐",
+      "dynasty": "唐",
+      "enDynasty": "Tang",
+      "occupants": [
+        "唐昭宗李晔"
+      ],
+      "enOccupants": [
+        "Emperor Zhaozong, Li Ye"
+      ],
+      "admin": "河南省洛阳市偃师区顾县镇曲家寨村南一带",
+      "enAdmin": "South of Qujiazhai, Yanshi, Luoyang",
+      "adminStatus": "按机构资料地望描述；现行基层行政区待进一步核对",
+      "recordType": "single",
+      "parentId": null,
+      "nature": "actual_burial",
+      "recognition": "documented",
+      "evidence": "史载昭宗葬和陵，原始OSM有曲家寨附近独立陵址点。与陕西唐十八陵及四川后蜀和陵分开记录。",
+      "enEvidence": "Historical accounts identify Zhaozong’s Heling; an original OSM point locates the site near Qujiazhai, distinct from the Later Shu mausoleum.",
+      "disputes": [
+        "本点是原址区域参考，不将地面现状描述为完整保留的原唐代陵园。"
+      ],
+      "sourceIds": [
+        "supp-tang-zhaozong-history",
+        "supp-geo-osm-node-10973517404"
+      ],
+      "coordinates": {
+        "lat": 34.639704,
+        "lng": 112.7957689,
+        "crs": "WGS84",
+        "status": "verified_wgs84",
+        "sourceId": "supp-geo-osm-node-10973517404",
+        "target": "曲家寨村南唐昭宗和陵区域参考",
+        "original": "34.639704, 112.7957689; original OSM WGS84",
+        "method": "原始OSM节点或陵区几何的区域代表点，结合机构文献核对实体",
+        "verificationScope": "历史实体及区域位置参考，不提供地宫、墓道或入口实测位置",
+        "sourceDatumExplicit": true,
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.000001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "原始OSM区域参考点，不代表地宫中心或入口，未提供实测误差。"
+      },
+      "mapEligible": true,
+      "mapReason": "历史实体与区域位置已有依据，性质及估计限制见详情",
+      "reviewTasks": [
+        "补核原址平面、坐标基准和当前保存情况"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "未将墓主卒年自动作为建陵或迁葬年份"
+      },
+      "biographies": [
+        {
+          "label": "唐昭宗李晔",
+          "birthYear": null,
+          "deathYear": null,
+          "status": "unresolved",
+          "lifespanText": "生卒待核",
+          "sourceIds": []
+        }
+      ],
+      "lifespanText": "生卒待核",
+      "enLifespanText": "Lifespan awaiting verification",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；不将展厅或纪念墓园视为原地宫。",
+        "enNote": "Original burial-chamber access has not been verified."
+      },
+      "supplementAudit": "pdf-imperial-supplement-20261016",
+      "periodText": "唐末；昭宗陵墓",
+      "enPeriodText": "Late Tang; mausoleum of Emperor Zhaozong",
+      "enDisputes": [
+        "Historical accounts identify Zhaozong’s Heling; an original OSM point locates the site near Qujiazhai, distinct from the Later Shu mausoleum.",
+        "Location references are not surveyed burial-chamber positions. Unresolved attributions are retained."
+      ]
+    },
+    {
+      "id": "tang-ai-wen",
+      "name": "唐哀帝温陵（陵址待核）",
+      "enName": "Wen Mausoleum of Emperor Ai (unlocated)",
+      "aliases": [
+        "温陵",
+        "唐温陵",
+        "唐哀帝陵"
+      ],
+      "era": "隋唐",
+      "dynasty": "唐",
+      "enDynasty": "Tang",
+      "occupants": [
+        "唐哀帝李柷"
+      ],
+      "enOccupants": [
+        "Emperor Ai, Li Zhu"
+      ],
+      "admin": "史载济阴、定陶一带；现代陵址未确认",
+      "enAdmin": "Historical Dingtao region; exact site unconfirmed",
+      "adminStatus": "按机构资料地望描述；现行基层行政区待进一步核对",
+      "recordType": "single",
+      "parentId": null,
+      "nature": "actual_burial",
+      "recognition": "traditional",
+      "evidence": "所附资料载唐哀帝葬温陵，定陶地望与现代墓址对应仍需原始文献及考古核查。先保留陵名记录，不采纳位置不明的数值坐标。",
+      "enEvidence": "A documented historical tomb-name lead in the Dingtao region. No independently verified modern location is asserted.",
+      "disputes": [
+        "史载陵名与现代陵址不是同一证据层级；未确认实体不得用定陶城区或其他汉墓替代。"
+      ],
+      "sourceIds": [
+        "supp-tang-aileng-text",
+        "pdf-imperial-supplement-20261016"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "具体陵址及坐标基准待核；不采用PDF未知基准点或城市中心",
+      "reviewTasks": [
+        "补核原址平面、坐标基准和当前保存情况"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "未将墓主卒年自动作为建陵或迁葬年份"
+      },
+      "biographies": [
+        {
+          "label": "唐哀帝李柷",
+          "birthYear": null,
+          "deathYear": null,
+          "status": "unresolved",
+          "lifespanText": "生卒待核",
+          "sourceIds": []
+        }
+      ],
+      "lifespanText": "生卒待核",
+      "enLifespanText": "Lifespan awaiting verification",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；不将展厅或纪念墓园视为原地宫。",
+        "enNote": "Original burial-chamber access has not been verified."
+      },
+      "supplementAudit": "pdf-imperial-supplement-20261016",
+      "enDisputes": [
+        "A documented historical tomb-name lead in the Dingtao region. No independently verified modern location is asserted.",
+        "Location references are not surveyed burial-chamber positions. Unresolved attributions are retained."
+      ]
+    },
+    {
+      "id": "yan-shisiming",
+      "name": "史思明墓（遗址待定位）",
+      "enName": "Tomb of Shi Siming (site awaiting georeference)",
+      "aliases": [
+        "史思明墓"
+      ],
+      "era": "隋唐",
+      "dynasty": "大燕（史思明）",
+      "enDynasty": "Yan of Shi Siming",
+      "occupants": [
+        "史思明"
+      ],
+      "enOccupants": [
+        "Shi Siming"
+      ],
+      "admin": "北京市丰台区王佐镇原林家坟村西一带",
+      "enAdmin": "West of former Linjiafen village, Wangzuo, Fengtai, Beijing",
+      "adminStatus": "按机构资料地望描述；现行基层行政区待进一步核对",
+      "recordType": "single",
+      "parentId": null,
+      "nature": "actual_burial",
+      "recognition": "archaeological",
+      "evidence": "1981年清理与出土玉册等支持墓葬身份。北京市文物局2023年说明原墓已破坏殆尽，现场点位需进一步核定。",
+      "enEvidence": "Excavation and inscribed jade tablets support the attribution. The heritage authority states that the tomb was largely destroyed; a modern site coordinate is not verified.",
+      "disputes": [
+        "藏品所在首都博物馆不是原墓址。",
+        "不将王佐镇、林家坟村中心或所附PDF未明基准点作为墓室位置。"
+      ],
+      "sourceIds": [
+        "supp-shisiming-excavation",
+        "supp-shisiming-status"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "具体陵址及坐标基准待核；不采用PDF未知基准点或城市中心",
+      "reviewTasks": [
+        "补核原址平面、坐标基准和当前保存情况"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "未将墓主卒年自动作为建陵或迁葬年份"
+      },
+      "biographies": [
+        {
+          "label": "史思明",
+          "birthYear": null,
+          "deathYear": null,
+          "status": "unresolved",
+          "lifespanText": "生卒待核",
+          "sourceIds": []
+        }
+      ],
+      "lifespanText": "生卒待核",
+      "enLifespanText": "Lifespan awaiting verification",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；不将展厅或纪念墓园视为原地宫。",
+        "enNote": "Original burial-chamber access has not been verified."
+      },
+      "supplementAudit": "pdf-imperial-supplement-20261016",
+      "periodText": "8世纪，大燕政权；1981年考古清理",
+      "enPeriodText": "8th-century Yan regime; excavated in 1981",
+      "locationReview": {
+        "reviewedAt": "2026-10-16",
+        "status": "unlocated",
+        "reason": "官方明确遗存损毁及现场点位待核",
+        "nextStep": "核对1981年发掘档案、旧地籍及原村址",
+        "sourceIds": [
+          "supp-shisiming-status"
+        ]
+      },
+      "enDisputes": [
+        "Excavation and inscribed jade tablets support the attribution. The heritage authority states that the tomb was largely destroyed; a modern site coordinate is not verified.",
+        "Location references are not surveyed burial-chamber positions. Unresolved attributions are retained."
+      ]
+    },
+    {
+      "id": "nanming-hongguang",
+      "name": "南明弘光陵（陵址待核）",
+      "enName": "Hongguang Tomb (unlocated)",
+      "aliases": [
+        "弘光陵"
+      ],
+      "era": "明",
+      "dynasty": "南明",
+      "enDynasty": "Southern Ming",
+      "occupants": [
+        "弘光帝朱由崧"
+      ],
+      "enOccupants": [
+        "Hongguang Emperor, Zhu Yousong"
+      ],
+      "admin": "洛阳孟津葬地线索；具体陵址待核",
+      "enAdmin": "Mengjin, Luoyang; burial-site lead unconfirmed",
+      "adminStatus": "按机构资料地望描述；现行基层行政区待进一步核对",
+      "recordType": "single",
+      "parentId": null,
+      "nature": "unknown",
+      "recognition": "traditional",
+      "evidence": "所附资料记弘光陵位于孟津，但本轮未取得独立原墓地理依据。给定参考位置附近出现后唐明宗徽陵实体，不能挪用该墓点。",
+      "enEvidence": "The supplied document gives a Mengjin burial lead, but no independent tomb location is verified. A nearby mapped Later Tang tomb must not be reused.",
+      "disputes": [
+        "不是后唐明宗徽陵；不得复制后唐陵墓位置以补齐南明帝陵。"
+      ],
+      "sourceIds": [
+        "pdf-imperial-supplement-20261016"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "具体陵址及坐标基准待核；不采用PDF未知基准点或城市中心",
+      "reviewTasks": [
+        "查南明葬地原始文献、孟津文物档案；排除与后唐徽陵混用"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "未将墓主卒年自动作为建陵或迁葬年份"
+      },
+      "biographies": [
+        {
+          "label": "弘光帝朱由崧",
+          "birthYear": null,
+          "deathYear": null,
+          "status": "unresolved",
+          "lifespanText": "生卒待核",
+          "sourceIds": []
+        }
+      ],
+      "lifespanText": "生卒待核",
+      "enLifespanText": "Lifespan awaiting verification",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；不将展厅或纪念墓园视为原地宫。",
+        "enNote": "Original burial-chamber access has not been verified."
+      },
+      "supplementAudit": "pdf-imperial-supplement-20261016",
+      "enDisputes": [
+        "The supplied document gives a Mengjin burial lead, but no independent tomb location is verified. A nearby mapped Later Tang tomb must not be reused.",
+        "Location references are not surveyed burial-chamber positions. Unresolved attributions are retained."
+      ]
+    },
+    {
+      "id": "nanming-yongli-duyun",
+      "name": "都匀明永历皇帝陵（传统认定）",
+      "enName": "Yongli Emperor Memorial Tomb, Duyun",
+      "aliases": [
+        "永历陵",
+        "都匀桂王坟",
+        "明永历皇帝陵"
+      ],
+      "era": "明",
+      "dynasty": "南明",
+      "enDynasty": "Southern Ming",
+      "occupants": [
+        "永历帝朱由榔（传统归属）"
+      ],
+      "enOccupants": [
+        "Yongli Emperor, Zhu Youlang (traditional attribution)"
+      ],
+      "admin": "贵州省黔南布依族苗族自治州都匀市匀东镇高塘山一带",
+      "enAdmin": "Gaotangshan area, Yundong, Duyun, Guizhou",
+      "adminStatus": "按机构资料地望描述；现行基层行政区待进一步核对",
+      "recordType": "single",
+      "parentId": null,
+      "nature": "commemorative",
+      "recognition": "traditional",
+      "evidence": "公开资料列有都匀永历皇帝陵，但实际遗骸、衣冠冢性质与营建沿革存在不同说法。未获得可核对的原始地图实体，本轮不采用所附PDF未说明基准坐标。",
+      "enEvidence": "Public records identify the named monument in Duyun, while the burial contents and attribution remain disputed. Its independent map location is still pending.",
+      "disputes": [
+        "文保实体存在不代表永历帝遗骸归属已考古确认。",
+        "不将广西等地无实据衣冠冢线索并成同一墓，不采纳“明十四陵”概括。"
+      ],
+      "sourceIds": [
+        "supp-yongli-official-context",
+        "pdf-imperial-supplement-20261016"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "具体陵址及坐标基准待核；不采用PDF未知基准点或城市中心",
+      "reviewTasks": [
+        "补核原址平面、坐标基准和当前保存情况"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "未将墓主卒年自动作为建陵或迁葬年份"
+      },
+      "biographies": [
+        {
+          "label": "永历帝朱由榔（传统归属）",
+          "birthYear": null,
+          "deathYear": null,
+          "status": "unresolved",
+          "lifespanText": "生卒待核",
+          "sourceIds": []
+        }
+      ],
+      "lifespanText": "生卒待核",
+      "enLifespanText": "Lifespan awaiting verification",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；不将展厅或纪念墓园视为原地宫。",
+        "enNote": "Original burial-chamber access has not been verified."
+      },
+      "supplementAudit": "pdf-imperial-supplement-20261016",
+      "enDisputes": [
+        "Public records identify the named monument in Duyun, while the burial contents and attribution remain disputed. Its independent map location is still pending.",
+        "Location references are not surveyed burial-chamber positions. Unresolved attributions are retained."
+      ]
+    },
+    {
+      "id": "ming-dong-zhubiao",
+      "name": "明东陵（朱标陵）",
+      "enName": "Ming Dongling, Tomb of Zhu Biao",
+      "aliases": [
+        "明东陵",
+        "懿文太子陵",
+        "朱标墓"
+      ],
+      "era": "明",
+      "dynasty": "明（追尊）",
+      "enDynasty": "Ming, posthumous imperial honours",
+      "occupants": [
+        "朱标（懿文太子，曾追尊兴宗）"
+      ],
+      "enOccupants": [
+        "Zhu Biao, crown prince and posthumously honoured emperor"
+      ],
+      "admin": "江苏省南京市明孝陵陵宫东侧明东陵遗址",
+      "enAdmin": "East of Ming Xiaoling, Nanjing",
+      "adminStatus": "机构或实地研究地望，现行基层区划仍待核",
+      "recordType": "single",
+      "parentId": null,
+      "nature": "posthumous",
+      "recognition": "archaeological",
+      "evidence": "管理机构确认朱标陵寝及原址台基、道路和排水遗迹。按太子初葬及追尊帝陵身份记录，保留靖难后降格沿革。",
+      "enEvidence": "The site authority identifies Zhu Biao’s tomb and excavated foundations, paths and drainage. His original crown-prince status and subsequent imperial honours are distinguished.",
+      "disputes": [
+        "以太子享殿原始遗迹几何作区域参考，不将其轮廓当作完整陵园界或地宫。"
+      ],
+      "sourceIds": [
+        "next-mingdong-official",
+        "next-geo-osm-way-803406635"
+      ],
+      "coordinates": {
+        "lat": 32.05831012,
+        "lng": 118.83628151999999,
+        "crs": "WGS84",
+        "status": "verified_wgs84",
+        "sourceId": "next-geo-osm-way-803406635",
+        "target": "明东陵太子享殿基址所在区域，非地宫中心",
+        "original": "32.05831012, 118.83628151999999; original OSM",
+        "sourceDatumExplicit": true,
+        "method": "原始OSM地理实体及机构资料交叉核对；采用对应遗迹几何区域代表点",
+        "verificationScope": "遗址实体、地望和地图基准的区域参考；不定位墓室或证明墓主",
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.000001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "原始OSM遗迹区域参考点；不是墓室、入口或完整古代陵园中心，未提供实测误差。"
+      },
+      "mapEligible": true,
+      "mapReason": "遗迹区域位置有据；估计基准和归属限制见详情",
+      "reviewTasks": [
+        "核对原墓、石刻及现存展示区位置；完善原址测绘资料"
+      ],
+      "chronology": {
+        "sortYear": 1392,
+        "basis": "机构资料墓主卒年，仅用于清单排序，不表示建陵或发掘年"
+      },
+      "biographies": [
+        {
+          "label": "朱标（懿文太子，曾追尊兴宗）",
+          "birthYear": 1355,
+          "deathYear": 1392,
+          "lifespanText": "1355—1392年",
+          "status": "institution_biography",
+          "sourceIds": [
+            "next-mingdong-official"
+          ]
+        }
+      ],
+      "lifespanText": "1355—1392年",
+      "enLifespanText": "1355–1392 CE",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；石刻、遗址或展厅不等于原地宫可进入。",
+        "enNote": "Original chamber access is unverified; remains or museum displays do not establish access."
+      },
+      "supplementAudit": "imperial-tomb-next-supplement-20261016",
+      "rulerCategory": "posthumous_emperor",
+      "periodText": "1392年朱标葬；建文时追尊，永乐时复称太子陵",
+      "enPeriodText": "Zhu Biao buried in 1392; later elevated and reduced in status",
+      "enDisputes": [
+        "The site authority identifies Zhu Biao’s tomb and excavated foundations, paths and drainage. His original crown-prince status and subsequent imperial honours are distinguished.",
+        "The reference is not a surveyed chamber position; disputed identifications are retained."
+      ]
+    },
+    {
+      "id": "nanhan-zhao",
+      "name": "南汉昭陵（原址待定位）",
+      "enName": "Southern Han Zhaoling (original site unlocated)",
+      "aliases": [
+        "南汉中宗昭陵",
+        "刘晟墓"
+      ],
+      "era": "五代十国",
+      "dynasty": "南汉",
+      "enDynasty": "Southern Han",
+      "occupants": [
+        "南汉中宗刘晟"
+      ],
+      "enOccupants": [
+        "Liu Sheng, Emperor Zhongzong"
+      ],
+      "admin": "广东省广州市黄埔区原石马村、石牛山山麓一带",
+      "enAdmin": "Former Shima village, Huangpu, Guangzhou",
+      "adminStatus": "机构或实地研究地望，现行基层区划仍待核",
+      "recordType": "single",
+      "parentId": null,
+      "nature": "actual_burial",
+      "recognition": "attributed",
+      "evidence": "1954年发掘的石马村南汉墓，以纪年砖及文献推定为刘晟昭陵。原址与已迁入博物馆的石像生分开记录。",
+      "enEvidence": "The excavated Southern Han tomb at Shima was attributed to Liu Sheng from dated bricks and historical sources. The original site and relocated sculptures are kept distinct.",
+      "disputes": [
+        "原墓已不复完整保存，位置需发掘档案或旧地籍配准。",
+        "所附PDF坐标不在机构资料所述黄埔石马原址地域，本轮拒绝采用；南汉二陵博物馆也不是昭陵原址。"
+      ],
+      "sourceIds": [
+        "next-nanhan-zhao-excavation",
+        "next-nanhan-zhao-research"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "原址坐标未核；不采用PDF未知基准点、村镇中心或藏品馆位置",
+      "reviewTasks": [
+        "核对原墓、石刻及现存展示区位置；完善原址测绘资料"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "尚无独立建陵或迁葬年份核对，不以墓主卒年代替"
+      },
+      "biographies": [
+        {
+          "label": "南汉中宗刘晟",
+          "birthYear": null,
+          "deathYear": null,
+          "lifespanText": "生卒待核",
+          "status": "unresolved",
+          "sourceIds": []
+        }
+      ],
+      "lifespanText": "生卒待核",
+      "enLifespanText": "Lifespan awaiting verification",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；石刻、遗址或展厅不等于原地宫可进入。",
+        "enNote": "Original chamber access is unverified; remains or museum displays do not establish access."
+      },
+      "supplementAudit": "imperial-tomb-next-supplement-20261016",
+      "periodText": "10世纪南汉；1954年考古发掘",
+      "enPeriodText": "10th-century Southern Han; excavated in 1954",
+      "enDisputes": [
+        "The excavated Southern Han tomb at Shima was attributed to Liu Sheng from dated bricks and historical sources. The original site and relocated sculptures are kept distinct.",
+        "The reference is not a surveyed chamber position; disputed identifications are retained."
+      ]
+    },
+    {
+      "id": "wei-cao-family-cemetery",
+      "name": "亳州曹氏宗族墓群",
+      "enName": "Cao Family Cemetery, Bozhou",
+      "aliases": [
+        "曹操宗族墓群",
+        "曹氏宗族墓群"
+      ],
+      "era": "魏晋南北朝",
+      "dynasty": "东汉、曹魏（追尊关联）",
+      "enDynasty": "Eastern Han; links to Cao Wei imperial ancestors",
+      "occupants": [],
+      "enOccupants": [],
+      "admin": "安徽省亳州市魏武大道两侧多个分散墓区",
+      "enAdmin": "Multiple cemetery areas along Weiwu Avenue, Bozhou",
+      "adminStatus": "机构或实地研究地望，现行基层区划仍待核",
+      "recordType": "group",
+      "parentId": null,
+      "nature": "mixed",
+      "recognition": "archaeological",
+      "evidence": "考古资料记录董园、张园、元宝坑等多个墓区。收录与曹魏追尊祖先有关的陵墓研究关系，不把整个宗族墓群都认定为帝陵。",
+      "enEvidence": "Excavated tombs occur in several separate cemetery areas. Imperial-ancestor associations do not make every family tomb an imperial mausoleum.",
+      "disputes": [
+        "墓区分散，不以城市中心或其中一处墓替代整片墓群。",
+        "墓群含非皇家宗族成员，不能按墓葬总数统计帝陵数量。"
+      ],
+      "sourceIds": [
+        "next-cao-cemetery-official",
+        "next-cao-cemetery-report"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "原址坐标未核；不采用PDF未知基准点、村镇中心或藏品馆位置",
+      "reviewTasks": [
+        "核对原墓、石刻及现存展示区位置；完善原址测绘资料"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "尚无独立建陵或迁葬年份核对，不以墓主卒年代替"
+      },
+      "biographies": [],
+      "lifespanText": "陵群，见相关墓葬记录",
+      "enLifespanText": "Cemetery; see constituent records",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；石刻、遗址或展厅不等于原地宫可进入。",
+        "enNote": "Original chamber access is unverified; remains or museum displays do not establish access."
+      },
+      "supplementAudit": "imperial-tomb-next-supplement-20261016",
+      "rulerCategory": "imperial_ancestor_related_cemetery",
+      "enDisputes": [
+        "Excavated tombs occur in several separate cemetery areas. Imperial-ancestor associations do not make every family tomb an imperial mausoleum.",
+        "The reference is not a surveyed chamber position; disputed identifications are retained."
+      ]
+    },
+    {
+      "id": "wei-caosong-candidate",
+      "name": "曹嵩墓（候选墓址待核）",
+      "enName": "Candidate Tomb of Cao Song",
+      "aliases": [
+        "曹嵩墓"
+      ],
+      "era": "魏晋南北朝",
+      "dynasty": "曹魏（追尊）",
+      "enDynasty": "Cao Wei, posthumous ancestral honours",
+      "occupants": [
+        "曹嵩（曹操之父，追尊太皇帝）"
+      ],
+      "enOccupants": [
+        "Cao Song, posthumously honoured imperial ancestor"
+      ],
+      "admin": "安徽省亳州市曹氏宗族墓群；董园等具体墓号对应待核",
+      "enAdmin": "Cao family cemetery, Bozhou; exact tomb identification unresolved",
+      "adminStatus": "机构或实地研究地望，现行基层区划仍待核",
+      "recordType": "single",
+      "parentId": "wei-cao-family-cemetery",
+      "nature": "posthumous",
+      "recognition": "attributed",
+      "evidence": "官方及考古材料支持曹氏宗族墓葬与曹嵩关联，但具体墓区、墓号和人物认定需区分。保留追尊祖先候选档案，不照搬“董园一号墓即曹嵩”的确定式说法。",
+      "enEvidence": "The family cemetery and Cao Song association are documented, but the exact tomb assignment requires separate verification.",
+      "disputes": [
+        "董园、张园以及一号、二号墓在不同转述中存在混用，不能直接复制任一墓区坐标。",
+        "与河南安阳曹操高陵是不同实体。"
+      ],
+      "sourceIds": [
+        "next-cao-cemetery-official",
+        "next-cao-cemetery-report",
+        "pdf-imperial-supplement-20261016"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "原址坐标未核；不采用PDF未知基准点、村镇中心或藏品馆位置",
+      "reviewTasks": [
+        "核对原墓、石刻及现存展示区位置；完善原址测绘资料"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "尚无独立建陵或迁葬年份核对，不以墓主卒年代替"
+      },
+      "biographies": [
+        {
+          "label": "曹嵩（曹操之父，追尊太皇帝）",
+          "birthYear": null,
+          "deathYear": null,
+          "lifespanText": "生卒待核",
+          "status": "unresolved",
+          "sourceIds": []
+        }
+      ],
+      "lifespanText": "生卒待核",
+      "enLifespanText": "Lifespan awaiting verification",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；石刻、遗址或展厅不等于原地宫可进入。",
+        "enNote": "Original chamber access is unverified; remains or museum displays do not establish access."
+      },
+      "supplementAudit": "imperial-tomb-next-supplement-20261016",
+      "rulerCategory": "posthumous_emperor",
+      "enDisputes": [
+        "The family cemetery and Cao Song association are documented, but the exact tomb assignment requires separate verification.",
+        "The reference is not a surveyed chamber position; disputed identifications are retained."
+      ]
+    },
+    {
+      "id": "qi-qianai-jingan",
+      "name": "前艾庙石刻（景安陵传统比定）",
+      "enName": "Qian’ai Sculptures (traditionally Jing’an Mausoleum)",
+      "aliases": [
+        "景安陵",
+        "南齐景安陵",
+        "齐武帝萧赜景安陵石刻"
+      ],
+      "era": "魏晋南北朝",
+      "dynasty": "南齐",
+      "enDynasty": "Southern Qi",
+      "occupants": [
+        "齐武帝萧赜（传统陵号对应）"
+      ],
+      "enOccupants": [
+        "Xiao Ze, Emperor Wu (traditional attribution)"
+      ],
+      "admin": "江苏省丹阳市前艾田家村附近",
+      "enAdmin": "Near Tianjia village, Qian’ai, Danyang",
+      "adminStatus": "机构或实地研究地望，现行基层区划仍待核",
+      "recordType": "single",
+      "parentId": "southern-danyang",
+      "nature": "actual_burial",
+      "recognition": "attributed",
+      "evidence": "实地调查记录前艾石刻；通常比定为萧赜景安陵。地图对应现存石兽所在地域，不把神道石刻点当作已确定墓室中心。",
+      "enEvidence": "Field surveys document the Qian’ai sculptures, traditionally associated with Xiao Ze’s Jing’an Mausoleum. The reference locates the sculptures, not a verified burial chamber.",
+      "disputes": [
+        "陵号归属存在研究异说；石兽的历史移动不能用于推算确定墓室位置。"
+      ],
+      "sourceIds": [
+        "next-danyang-field-study",
+        "next-danyang-protection",
+        "next-geo-sinorelic-1418205506769653760"
+      ],
+      "coordinates": {
+        "lat": 32.014918,
+        "lng": 119.687359,
+        "crs": "WGS84",
+        "status": "estimated_wgs84",
+        "sourceId": "next-geo-sinorelic-1418205506769653760",
+        "target": "齐武帝萧赜景安陵石刻遗存所在区域（估计）",
+        "original": "GCJ-02 inferred from original AMap.Marker use: 119.692375,32.01284",
+        "sourceDatumExplicit": false,
+        "method": "依公开地图的高德AMap原始使用方式判断GCJ-02，迭代反算WGS84后作区域估计，非现场测量",
+        "verificationScope": "遗址实体、地望和地图基准的区域参考；不定位墓室或证明墓主",
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.000001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "估计位置：原站直接将经纬度用于高德AMap.Marker，按GCJ-02转换；遗存周边约500米仅为研究核查范围，不是实测误差或保护边界。",
+        "estimate": {
+          "basis": "公开遗存地图索引，原站高德JS中AMap.Marker直接使用longitude/latitude；结合机构地望，按GCJ-02转换WGS84",
+          "extent": "指定遗存周边约500米研究核查范围，非保护范围、误差或陵园界线",
+          "confidence": "regional",
+          "reviewedAt": "2026-10-16"
+        },
+        "sourceRecordId": "1418205506769653760",
+        "sourceCoordinate": {
+          "crs": "GCJ-02 (inferred from original AMap implementation)",
+          "lng": 119.692375,
+          "lat": 32.01284
+        }
+      },
+      "mapEligible": true,
+      "mapReason": "遗迹区域位置有据；估计基准和归属限制见详情",
+      "reviewTasks": [
+        "核对原墓、石刻及现存展示区位置；完善原址测绘资料"
+      ],
+      "chronology": {
+        "sortYear": 493,
+        "basis": "机构资料墓主卒年，仅用于清单排序，不表示建陵或发掘年"
+      },
+      "biographies": [
+        {
+          "label": "齐武帝萧赜（传统陵号对应）",
+          "birthYear": 440,
+          "deathYear": 493,
+          "lifespanText": "440—493年",
+          "status": "institution_biography",
+          "sourceIds": [
+            "next-geo-sinorelic-1418205506769653760"
+          ]
+        }
+      ],
+      "lifespanText": "440—493年",
+      "enLifespanText": "440–493 CE",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；石刻、遗址或展厅不等于原地宫可进入。",
+        "enNote": "Original chamber access is unverified; remains or museum displays do not establish access."
+      },
+      "supplementAudit": "imperial-tomb-next-supplement-20261016",
+      "periodText": "南齐；现存神道石刻，陵主传统比定",
+      "enPeriodText": "Southern Qi sculptures; traditional mausoleum attribution",
+      "enDisputes": [
+        "Field surveys document the Qian’ai sculptures, traditionally associated with Xiao Ze’s Jing’an Mausoleum. The reference locates the sculptures, not a verified burial chamber.",
+        "The reference is not a surveyed chamber position; disputed identifications are retained."
+      ]
+    },
+    {
+      "id": "qi-xiantangwan-xiuan",
+      "name": "仙塘湾南朝大墓（修安陵推定）",
+      "enName": "Xiantangwan Tomb (attributed Xiu’an Mausoleum)",
+      "aliases": [
+        "修安陵",
+        "南齐修安陵",
+        "齐景帝修安陵石刻"
+      ],
+      "era": "魏晋南北朝",
+      "dynasty": "南齐",
+      "enDynasty": "Southern Qi",
+      "occupants": [
+        "齐景帝萧道生（追尊，墓主推定）"
+      ],
+      "enOccupants": [
+        "Xiao Daosheng, posthumously honoured emperor (attributed)"
+      ],
+      "admin": "江苏省丹阳市胡桥仙塘湾、仙泉路附近",
+      "enAdmin": "Xiantangwan area near Xianquan Road, Danyang",
+      "adminStatus": "机构或实地研究地望，现行基层区划仍待核",
+      "recordType": "single",
+      "parentId": "southern-danyang",
+      "nature": "posthumous",
+      "recognition": "attributed",
+      "evidence": "仙塘湾有科学发掘的南朝大型墓葬及神道石刻，通常推定为萧道生修安陵。地图采用该遗存独立索引，不复制狮子湾—赵家湾陵区点。",
+      "enEvidence": "An excavated Southern Dynasties tomb and sculptures are commonly attributed to Xiao Daosheng’s Xiu’an Mausoleum. Its reference is independent of the Shiziwan–Zhaojiawan cemetery.",
+      "disputes": [
+        "墓体实际存在与墓主身份推定分开；不声称铭文已确证墓主。",
+        "公开索引存在明显位置差异；未采用指向其他墓区的百科坐标。"
+      ],
+      "sourceIds": [
+        "next-danyang-field-study",
+        "next-xiantangwan-archaeology",
+        "next-danyang-protection",
+        "next-geo-sinorelic-1418435226186682368"
+      ],
+      "coordinates": {
+        "lat": 32.062263,
+        "lng": 119.678603,
+        "crs": "WGS84",
+        "status": "estimated_wgs84",
+        "sourceId": "next-geo-sinorelic-1418435226186682368",
+        "target": "齐景帝萧道生修安陵石刻遗存所在区域（估计）",
+        "original": "GCJ-02 inferred from original AMap.Marker use: 119.68361,32.060158",
+        "sourceDatumExplicit": false,
+        "method": "依公开地图的高德AMap原始使用方式判断GCJ-02，迭代反算WGS84后作区域估计，非现场测量",
+        "verificationScope": "遗址实体、地望和地图基准的区域参考；不定位墓室或证明墓主",
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.000001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "估计位置：原站直接将经纬度用于高德AMap.Marker，按GCJ-02转换；遗存周边约500米仅为研究核查范围，不是实测误差或保护边界。",
+        "estimate": {
+          "basis": "公开遗存地图索引，原站高德JS中AMap.Marker直接使用longitude/latitude；结合机构地望，按GCJ-02转换WGS84",
+          "extent": "指定遗存周边约500米研究核查范围，非保护范围、误差或陵园界线",
+          "confidence": "regional",
+          "reviewedAt": "2026-10-16"
+        },
+        "sourceRecordId": "1418435226186682368",
+        "sourceCoordinate": {
+          "crs": "GCJ-02 (inferred from original AMap implementation)",
+          "lng": 119.68361,
+          "lat": 32.060158
+        }
+      },
+      "mapEligible": true,
+      "mapReason": "遗迹区域位置有据；估计基准和归属限制见详情",
+      "reviewTasks": [
+        "核对原墓、石刻及现存展示区位置；完善原址测绘资料"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "尚无独立建陵或迁葬年份核对，不以墓主卒年代替"
+      },
+      "biographies": [
+        {
+          "label": "齐景帝萧道生（追尊，墓主推定）",
+          "birthYear": null,
+          "deathYear": null,
+          "lifespanText": "生卒待核",
+          "status": "unresolved",
+          "sourceIds": []
+        }
+      ],
+      "lifespanText": "生卒待核",
+      "enLifespanText": "Lifespan awaiting verification",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；石刻、遗址或展厅不等于原地宫可进入。",
+        "enNote": "Original chamber access is unverified; remains or museum displays do not establish access."
+      },
+      "supplementAudit": "imperial-tomb-next-supplement-20261016",
+      "rulerCategory": "posthumous_emperor",
+      "periodText": "南朝大墓与石刻；修安陵为学术推定",
+      "enPeriodText": "Southern Dynasties tomb and sculptures; attributed to Xiu’an",
+      "enDisputes": [
+        "An excavated Southern Dynasties tomb and sculptures are commonly attributed to Xiao Daosheng’s Xiu’an Mausoleum. Its reference is independent of the Shiziwan–Zhaojiawan cemetery.",
+        "The reference is not a surveyed chamber position; disputed identifications are retained."
+      ]
+    },
+    {
+      "id": "qi-sanchengxiang-xingan",
+      "name": "三城巷石刻（兴安陵传统比定）",
+      "enName": "Sanchengxiang Sculptures (traditionally Xing’an Mausoleum)",
+      "aliases": [
+        "兴安陵",
+        "南齐兴安陵",
+        "齐明帝兴安陵石刻"
+      ],
+      "era": "魏晋南北朝",
+      "dynasty": "南齐（传统比定）",
+      "enDynasty": "Southern Qi (traditional attribution)",
+      "occupants": [
+        "齐明帝萧鸾（传统陵号对应）"
+      ],
+      "enOccupants": [
+        "Xiao Luan, Emperor Ming (traditional attribution)"
+      ],
+      "admin": "江苏省丹阳市荆林三城巷北",
+      "enAdmin": "North of Sanchengxiang, Jinglin, Danyang",
+      "adminStatus": "机构或实地研究地望，现行基层区划仍待核",
+      "recordType": "single",
+      "parentId": "southern-danyang",
+      "nature": "actual_burial",
+      "recognition": "attributed",
+      "evidence": "三城巷现存石兽一般按兴安陵石刻称呼；具体墓主和相邻齐梁陵园对应有异说。保留此独立石刻实体，不将其与梁建陵合并。",
+      "enEvidence": "The surviving Sanchengxiang sculptures are conventionally called Xing’an. Their ruler attribution and relation to nearby Qi–Liang tombs remain disputed.",
+      "disputes": [
+        "另有梁陵等归属意见；不能仅按石刻所在区域认定萧鸾墓已获证实。",
+        "与相邻梁文帝建陵是分别记录的地理遗存，不按人物或相近地名合并。"
+      ],
+      "sourceIds": [
+        "next-danyang-field-study",
+        "next-xiantangwan-archaeology",
+        "next-geo-sinorelic-1418402455590408192"
+      ],
+      "coordinates": {
+        "lat": 32.012495,
+        "lng": 119.653016,
+        "crs": "WGS84",
+        "status": "estimated_wgs84",
+        "sourceId": "next-geo-sinorelic-1418402455590408192",
+        "target": "齐明帝萧鸾兴安陵石刻遗存所在区域（估计）",
+        "original": "GCJ-02 inferred from original AMap.Marker use: 119.65798,32.010353",
+        "sourceDatumExplicit": false,
+        "method": "依公开地图的高德AMap原始使用方式判断GCJ-02，迭代反算WGS84后作区域估计，非现场测量",
+        "verificationScope": "遗址实体、地望和地图基准的区域参考；不定位墓室或证明墓主",
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.000001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "估计位置：原站直接将经纬度用于高德AMap.Marker，按GCJ-02转换；遗存周边约500米仅为研究核查范围，不是实测误差或保护边界。",
+        "estimate": {
+          "basis": "公开遗存地图索引，原站高德JS中AMap.Marker直接使用longitude/latitude；结合机构地望，按GCJ-02转换WGS84",
+          "extent": "指定遗存周边约500米研究核查范围，非保护范围、误差或陵园界线",
+          "confidence": "regional",
+          "reviewedAt": "2026-10-16"
+        },
+        "sourceRecordId": "1418402455590408192",
+        "sourceCoordinate": {
+          "crs": "GCJ-02 (inferred from original AMap implementation)",
+          "lng": 119.65798,
+          "lat": 32.010353
+        }
+      },
+      "mapEligible": true,
+      "mapReason": "遗迹区域位置有据；估计基准和归属限制见详情",
+      "reviewTasks": [
+        "核对原墓、石刻及现存展示区位置；完善原址测绘资料"
+      ],
+      "chronology": {
+        "sortYear": 498,
+        "basis": "机构资料墓主卒年，仅用于清单排序，不表示建陵或发掘年"
+      },
+      "biographies": [
+        {
+          "label": "齐明帝萧鸾（传统陵号对应）",
+          "birthYear": 452,
+          "deathYear": 498,
+          "lifespanText": "452—498年",
+          "status": "institution_biography",
+          "sourceIds": [
+            "next-geo-sinorelic-1418402455590408192"
+          ]
+        }
+      ],
+      "lifespanText": "452—498年",
+      "enLifespanText": "452–498 CE",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；石刻、遗址或展厅不等于原地宫可进入。",
+        "enNote": "Original chamber access is unverified; remains or museum displays do not establish access."
+      },
+      "supplementAudit": "imperial-tomb-next-supplement-20261016",
+      "periodText": "南朝石刻；兴安陵属传统名称",
+      "enPeriodText": "Southern Dynasties sculptures; Xing’an is the conventional identification",
+      "enDisputes": [
+        "The surviving Sanchengxiang sculptures are conventionally called Xing’an. Their ruler attribution and relation to nearby Qi–Liang tombs remain disputed.",
+        "The reference is not a surveyed chamber position; disputed identifications are retained."
+      ]
+    },
+    {
+      "id": "later-tang-jianji",
+      "name": "后唐建极陵（李克用墓）",
+      "enName": "Jianji Mausoleum of Li Keyong",
+      "aliases": [
+        "建极陵",
+        "李克用墓",
+        "晋王李克用墓"
+      ],
+      "era": "五代十国",
+      "dynasty": "后唐（追尊）",
+      "enDynasty": "Later Tang, posthumous imperial honours",
+      "occupants": [
+        "李克用（晋王，追尊太祖）"
+      ],
+      "enOccupants": [
+        "Li Keyong, Prince of Jin and posthumously honoured Taizu"
+      ],
+      "admin": "山西省忻州市代县阳明堡镇七里铺村北",
+      "enAdmin": "North of Qilipu, Yangmingbu, Dai County, Shanxi",
+      "adminStatus": "机构或实地研究地望，现行基层区划仍待核",
+      "recordType": "single",
+      "parentId": null,
+      "nature": "posthumous",
+      "recognition": "archaeological",
+      "evidence": "史籍记建极陵位于代州雁门县，现代墓葬研究采用李克用墓出土材料。保留晋王初葬与后唐追尊身份，发掘年度转述差异不强行定值。",
+      "enEvidence": "Historical records place Jianji in Dai County, and modern research uses material from Li Keyong’s tomb. Original princely burial and Later Tang ancestral honours are distinguished.",
+      "disputes": [
+        "原址地理位置需发掘档案核对，不使用七里铺村中心或PDF未知基准坐标。"
+      ],
+      "sourceIds": [
+        "next-likeyong-genomic-study",
+        "next-likeyong-annals",
+        "pdf-imperial-supplement-20261016"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "原址坐标未核；不采用PDF未知基准点、村镇中心或藏品馆位置",
+      "reviewTasks": [
+        "核对墓室原址测绘、发掘年份及当前保存情况"
+      ],
+      "chronology": {
+        "sortYear": 908,
+        "basis": "机构资料墓主卒年，仅用于清单排序，不表示建陵或发掘年"
+      },
+      "biographies": [
+        {
+          "label": "李克用（晋王，追尊太祖）",
+          "birthYear": 856,
+          "deathYear": 908,
+          "lifespanText": "856—908年",
+          "status": "institution_biography",
+          "sourceIds": [
+            "next-likeyong-genomic-study"
+          ]
+        }
+      ],
+      "lifespanText": "856—908年",
+      "enLifespanText": "856–908 CE",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；石刻、遗址或展厅不等于原地宫可进入。",
+        "enNote": "Original chamber access is unverified; remains or museum displays do not establish access."
+      },
+      "supplementAudit": "imperial-tomb-next-supplement-20261016",
+      "rulerCategory": "posthumous_emperor",
+      "enDisputes": [
+        "Historical records place Jianji in Dai County, and modern research uses material from Li Keyong’s tomb. Original princely burial and Later Tang ancestral honours are distinguished.",
+        "The reference is not a surveyed chamber position; disputed identifications are retained."
+      ]
+    },
+    {
+      "id": "wu-yangxingmi-xing",
+      "name": "吴兴陵（杨行密墓，地望待核）",
+      "enName": "Xing Mausoleum of Yang Xingmi (location unresolved)",
+      "aliases": [
+        "杨行密墓",
+        "吴兴陵"
+      ],
+      "era": "五代十国",
+      "dynasty": "吴（追尊）",
+      "enDynasty": "Wu, posthumous imperial honours",
+      "occupants": [
+        "吴太祖杨行密（追尊）"
+      ],
+      "enOccupants": [
+        "Yang Xingmi, posthumously honoured founder of Wu"
+      ],
+      "admin": "安徽省合肥市长丰县吴山镇传统地望；旧籍异说待核",
+      "enAdmin": "Traditional Wushan locality, Changfeng; competing historical accounts unresolved",
+      "adminStatus": "机构或实地研究地望，现行基层区划仍待核",
+      "recordType": "single",
+      "parentId": null,
+      "nature": "posthumous",
+      "recognition": "traditional",
+      "evidence": "地方传统以吴山庙附近地望关联杨行密兴陵，旧籍和现代实体对应仍需原始资料核查；不把吴山庙或百花公主墓当作杨行密墓。",
+      "enEvidence": "Local tradition associates Xingling with the Wushan area, but its exact historical and modern location requires verification.",
+      "disputes": [
+        "庙宇、祭祀遗存、地方传统与君主实葬不同，不据吴山庙所在地生成皇陵点。"
+      ],
+      "sourceIds": [
+        "next-yangxingmi-historical-lead",
+        "pdf-imperial-supplement-20261016"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "原址坐标未核；不采用PDF未知基准点、村镇中心或藏品馆位置",
+      "reviewTasks": [
+        "核对原墓、石刻及现存展示区位置；完善原址测绘资料"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "尚无独立建陵或迁葬年份核对，不以墓主卒年代替"
+      },
+      "biographies": [
+        {
+          "label": "吴太祖杨行密（追尊）",
+          "birthYear": null,
+          "deathYear": null,
+          "lifespanText": "生卒待核",
+          "status": "unresolved",
+          "sourceIds": []
+        }
+      ],
+      "lifespanText": "生卒待核",
+      "enLifespanText": "Lifespan awaiting verification",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；石刻、遗址或展厅不等于原地宫可进入。",
+        "enNote": "Original chamber access is unverified; remains or museum displays do not establish access."
+      },
+      "supplementAudit": "imperial-tomb-next-supplement-20261016",
+      "rulerCategory": "posthumous_emperor",
+      "enDisputes": [
+        "Local tradition associates Xingling with the Wushan area, but its exact historical and modern location requires verification.",
+        "The reference is not a surveyed chamber position; disputed identifications are retained."
+      ]
+    },
+    {
+      "id": "song-liuqiao-xingning",
+      "name": "刘宋兴宁陵（刘皇墓）",
+      "enName": "Xingning Mausoleum of Liu Qiao",
+      "aliases": [
+        "刘皇墓",
+        "刘宋兴宁陵",
+        "刘翘墓"
+      ],
+      "era": "魏晋南北朝",
+      "dynasty": "刘宋（追尊）",
+      "enDynasty": "Liu Song, posthumous imperial honours",
+      "occupants": [
+        "刘翘（追尊）",
+        "赵安宗",
+        "萧文寿（同茔关系，墓穴另核）"
+      ],
+      "enOccupants": [
+        "Liu Qiao (posthumously honoured)",
+        "Zhao Anzong",
+        "Xiao Wenshou (shared cemetery; chamber arrangement unverified)"
+      ],
+      "admin": "江苏省镇江市京口区谏壁雩山、张家荡一带",
+      "enAdmin": "Yushan and Zhangjiadang area, Jianbi, Zhenjiang",
+      "adminStatus": "机构或实地研究地望，现行基层区划仍待核",
+      "recordType": "single",
+      "parentId": null,
+      "nature": "posthumous",
+      "recognition": "traditional",
+      "evidence": "地方历史研究联系刘皇墓、刘翘与两位皇后兴宁陵，地望在谏壁雩山。保留同茔与不同墓穴的区别，不与陕西唐兴宁陵合并。",
+      "enEvidence": "Local historical research associates Liu Qiao and the two empresses with the Yushan cemetery at Jianbi. This is distinct from the Tang Xingning Mausoleum in Shaanxi.",
+      "disputes": [
+        "同一陵号与同一茔域不证明三人同穴；单墓位置及具体合葬关系待核。"
+      ],
+      "sourceIds": [
+        "next-liuqiao-local-history",
+        "pdf-imperial-supplement-20261016"
+      ],
+      "coordinates": null,
+      "mapEligible": false,
+      "mapReason": "原址坐标未核；不采用PDF未知基准点、村镇中心或藏品馆位置",
+      "reviewTasks": [
+        "核对原墓、石刻及现存展示区位置；完善原址测绘资料"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "尚无独立建陵或迁葬年份核对，不以墓主卒年代替"
+      },
+      "biographies": [
+        {
+          "label": "刘翘（追尊）",
+          "birthYear": null,
+          "deathYear": null,
+          "lifespanText": "生卒待核",
+          "status": "unresolved",
+          "sourceIds": []
+        },
+        {
+          "label": "赵安宗",
+          "birthYear": null,
+          "deathYear": null,
+          "lifespanText": "生卒待核",
+          "status": "unresolved",
+          "sourceIds": []
+        },
+        {
+          "label": "萧文寿（同茔关系，墓穴另核）",
+          "birthYear": null,
+          "deathYear": null,
+          "lifespanText": "生卒待核",
+          "status": "unresolved",
+          "sourceIds": []
+        }
+      ],
+      "lifespanText": "生卒待核",
+      "enLifespanText": "Lifespan awaiting verification",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；石刻、遗址或展厅不等于原地宫可进入。",
+        "enNote": "Original chamber access is unverified; remains or museum displays do not establish access."
+      },
+      "supplementAudit": "imperial-tomb-next-supplement-20261016",
+      "rulerCategory": "posthumous_emperor",
+      "enDisputes": [
+        "Local historical research associates Liu Qiao and the two empresses with the Yushan cemetery at Jianbi. This is distinct from the Tang Xingning Mausoleum in Shaanxi.",
+        "The reference is not a surveyed chamber position; disputed identifications are retained."
+      ]
+    },
+    {
+      "id": "xiliang-xiaotushan-candidate",
+      "name": "小土山墓（西凉建世陵候选）",
+      "enName": "Xiaotushan Tomb (candidate Jianshi Mausoleum)",
+      "aliases": [
+        "西凉建世陵候选",
+        "小土山墓葬",
+        "李暠墓候选"
+      ],
+      "era": "魏晋南北朝",
+      "dynasty": "西凉（候选归属）",
+      "enDynasty": "Western Liang (candidate attribution)",
+      "occupants": [
+        "李暠（候选墓主，未确证）"
+      ],
+      "enOccupants": [
+        "Li Gao (candidate occupant, unconfirmed)"
+      ],
+      "admin": "甘肃省酒泉市肃州区果园镇张家屯庄、丁家闸墓区附近",
+      "enAdmin": "Zhangjiatunzhuang near Dingjiazha, Guoyuan, Jiuquan",
+      "adminStatus": "机构或实地研究地望，现行基层区划仍待核",
+      "recordType": "single",
+      "parentId": null,
+      "nature": "actual_burial",
+      "recognition": "attributed",
+      "evidence": "小土山大型墓葬有发掘研究支持，部分研究将其与李暠建世陵联系，墓主身份仍有疑问。采用遗址本名，不把候选比定表述为定论。",
+      "enEvidence": "The excavated Xiaotushan tomb is sometimes identified with Li Gao’s Jianshi Mausoleum, but that identification remains debated.",
+      "disputes": [
+        "墓葬存在得到考古支持，不等于墓主已确定为李暠。",
+        "所附PDF参考坐标与实际小土山遗存地图索引相距明显，本轮未采用PDF点。"
+      ],
+      "sourceIds": [
+        "next-xiaotushan-scholarship",
+        "next-xiaotushan-local-record",
+        "next-geo-sinorelic-1708709417219919872"
+      ],
+      "coordinates": {
+        "lat": 39.771091,
+        "lng": 98.420543,
+        "crs": "WGS84",
+        "status": "estimated_wgs84",
+        "sourceId": "next-geo-sinorelic-1708709417219919872",
+        "target": "果园墓群-小土山墓葬遗存所在区域（估计）",
+        "original": "GCJ-02 inferred from original AMap.Marker use: 98.42136,39.772076",
+        "sourceDatumExplicit": false,
+        "method": "依公开地图的高德AMap原始使用方式判断GCJ-02，迭代反算WGS84后作区域估计，非现场测量",
+        "verificationScope": "遗址实体、地望和地图基准的区域参考；不定位墓室或证明墓主",
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.000001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "估计位置：原站直接将经纬度用于高德AMap.Marker，按GCJ-02转换；遗存周边约500米仅为研究核查范围，不是实测误差或保护边界。",
+        "estimate": {
+          "basis": "公开遗存地图索引，原站高德JS中AMap.Marker直接使用longitude/latitude；结合机构地望，按GCJ-02转换WGS84",
+          "extent": "指定遗存周边约500米研究核查范围，非保护范围、误差或陵园界线",
+          "confidence": "regional",
+          "reviewedAt": "2026-10-16"
+        },
+        "sourceRecordId": "1708709417219919872",
+        "sourceCoordinate": {
+          "crs": "GCJ-02 (inferred from original AMap implementation)",
+          "lng": 98.42136,
+          "lat": 39.772076
+        }
+      },
+      "mapEligible": true,
+      "mapReason": "遗迹区域位置有据；估计基准和归属限制见详情",
+      "reviewTasks": [
+        "核对原墓、石刻及现存展示区位置；完善原址测绘资料"
+      ],
+      "chronology": {
+        "sortYear": null,
+        "basis": "尚无独立建陵或迁葬年份核对，不以墓主卒年代替"
+      },
+      "biographies": [
+        {
+          "label": "李暠（候选墓主，未确证）",
+          "birthYear": null,
+          "deathYear": null,
+          "lifespanText": "生卒待核",
+          "status": "unresolved",
+          "sourceIds": []
+        }
+      ],
+      "lifespanText": "生卒待核",
+      "enLifespanText": "Lifespan awaiting verification",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；石刻、遗址或展厅不等于原地宫可进入。",
+        "enNote": "Original chamber access is unverified; remains or museum displays do not establish access."
+      },
+      "supplementAudit": "imperial-tomb-next-supplement-20261016",
+      "rulerCategory": "royal_burial_candidate",
+      "periodText": "魏晋十六国高等级墓；西凉归属待考",
+      "enPeriodText": "High-status Wei–Jin/Sixteen Kingdoms tomb; Western Liang attribution debated",
+      "enDisputes": [
+        "The excavated Xiaotushan tomb is sometimes identified with Li Gao’s Jianshi Mausoleum, but that identification remains debated.",
+        "The reference is not a surveyed chamber position; disputed identifications are retained."
+      ]
+    },
+    {
+      "id": "yuan-zhangshicheng-old",
+      "name": "张士诚墓旧址（传统认定）",
+      "enName": "Former Zhang Shicheng Tomb Site",
+      "aliases": [
+        "张士诚墓",
+        "张吴王墓",
+        "张王坟"
+      ],
+      "era": "元",
+      "dynasty": "大周／吴（张士诚）",
+      "enDynasty": "Zhang Shicheng’s Zhou / Wu",
+      "occupants": [
+        "张士诚（传统墓主）"
+      ],
+      "enOccupants": [
+        "Zhang Shicheng (traditional attribution)"
+      ],
+      "admin": "江苏省苏州工业园区南施街、方洲路附近旧墓地域",
+      "enAdmin": "Former tomb locality near Nanshi Street and Fangzhou Road, Suzhou",
+      "adminStatus": "机构或实地研究地望，现行基层区划仍待核",
+      "recordType": "single",
+      "parentId": null,
+      "nature": "commemorative",
+      "recognition": "traditional",
+      "evidence": "园区档案记旧墓及后来的墓庙迁建，地名规划仍记录旧墓地域。此点对应原始OSM标绘的旧址，不把迁建玉皇宫位置当作原墓。",
+      "enEvidence": "Local archives describe the old tomb and subsequent relocated memorial complex. This point marks the former locality, not the rebuilt Yuhuanggong complex.",
+      "disputes": [
+        "衣冠冢、遗骸与原墓真实性另核；不因有墓碑认定遗体已确认。",
+        "迁建墓庙、玉皇宫和旧址地名是不同空间记录，不能合并为一个准确墓室位置。"
+      ],
+      "sourceIds": [
+        "next-zhangshicheng-archives",
+        "next-zhangshicheng-placeplan",
+        "next-geo-osm-node-8013316235"
+      ],
+      "coordinates": {
+        "lat": 31.3138912,
+        "lng": 120.7301773,
+        "crs": "WGS84",
+        "status": "verified_wgs84",
+        "sourceId": "next-geo-osm-node-8013316235",
+        "target": "南施街附近张士诚墓旧址地域；非迁建玉皇宫",
+        "original": "31.3138912, 120.7301773; original OSM",
+        "sourceDatumExplicit": true,
+        "method": "原始OSM地理实体及机构资料交叉核对；采用对应遗迹几何区域代表点",
+        "verificationScope": "遗址实体、地望和地图基准的区域参考；不定位墓室或证明墓主",
+        "precision": {
+          "sourceUnit": "degree",
+          "resolutionDegrees": 0.000001,
+          "horizontalAccuracyMeters": null
+        },
+        "limitation": "原始OSM遗迹区域参考点；不是墓室、入口或完整古代陵园中心，未提供实测误差。"
+      },
+      "mapEligible": true,
+      "mapReason": "遗迹区域位置有据；估计基准和归属限制见详情",
+      "reviewTasks": [
+        "核对原墓、石刻及现存展示区位置；完善原址测绘资料"
+      ],
+      "chronology": {
+        "sortYear": 1367,
+        "basis": "机构资料墓主卒年，仅用于清单排序，不表示建陵或发掘年"
+      },
+      "biographies": [
+        {
+          "label": "张士诚（传统墓主）",
+          "birthYear": 1321,
+          "deathYear": 1367,
+          "lifespanText": "1321—1367年",
+          "status": "institution_biography",
+          "sourceIds": [
+            "next-zhangshicheng-archives"
+          ]
+        }
+      ],
+      "lifespanText": "1321—1367年",
+      "enLifespanText": "1321–1367 CE",
+      "disturbance": {
+        "status": "unknown",
+        "label": "尚未核查",
+        "evidence": "",
+        "scope": "墓室",
+        "sourceIds": [],
+        "reviewedAt": "2026-10-16"
+      },
+      "visitorAccess": {
+        "status": "unverified",
+        "originalChamber": false,
+        "note": "未核实原地宫开放；石刻、遗址或展厅不等于原地宫可进入。",
+        "enNote": "Original chamber access is unverified; remains or museum displays do not establish access."
+      },
+      "supplementAudit": "imperial-tomb-next-supplement-20261016",
+      "periodText": "元末张士诚政权；原墓及后世纪念沿革",
+      "enPeriodText": "Late Yuan Zhou/Wu regime; former tomb and later memorial history",
+      "enDisputes": [
+        "Local archives describe the old tomb and subsequent relocated memorial complex. This point marks the former locality, not the rebuilt Yuhuanggong complex.",
+        "The reference is not a surveyed chamber position; disputed identifications are retained."
+      ]
     }
   ]
 }

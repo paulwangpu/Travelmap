@@ -5,7 +5,7 @@ const catalog=read('data/china-ancient-capitals.json'),research=read('data/ancie
 const byId=id=>research.features.find(f=>f.properties.sourceId===id);
 assert.equal(doc.addedFeatureIds.length,17);
 for(const id of doc.addedFeatureIds){const f=byId(id);assert.ok(f&&f.properties.capitalSiteKey&&/^https:\/\//.test(f.properties.sourceUrl));assert.ok(f.geometry.coordinates.flat(Infinity).every(Number.isFinite));assert.ok(catalog.items.some(i=>i.siteKey===f.properties.capitalSiteKey));}
-assert.equal(new Set(catalog.recordItems.map(r=>r.sourceOrder)).size,622);
+assert.equal(new Set(catalog.recordItems.map(r=>r.sourceOrder)).size,748);
 assert.equal(catalog.recordItems.length,catalog.recordCount);
 const datong=catalog.items.find(x=>x.name==='西京大同');assert.deepEqual(datong.records.map(x=>x['政权/国号']),['辽','金']);
 const ye=catalog.items.find(x=>x.name==='邺城');assert.match(ye.admin,/河北.*临漳/);assert.ok(ye.lng>114.38&&ye.lng<114.43&&ye.lat>36.27&&ye.lat<36.34);
@@ -17,7 +17,7 @@ assert.equal(byId('beijing-youzhou-outline-reference').geometry.type,'Polygon');
 assert.equal(byId('hanwei-inner-south-inferred').geometry.type,'LineString');
 assert.equal(byId('osm-way-1051814589').geometry.type,'LineString');
 assert.notEqual(H.colors['宋辽金西夏'],H.colors['清']);assert.equal(H.colors['宋辽金西夏'],'#007f86');
-const keys=['ancientCapitalShangWalls','ancientCapitalZhouWalls','ancientCapitalQinHanWalls','ancientCapitalHanWeiWalls','ancientCapitalSouthernTangWalls','ancientCapitalTangWalls','ancientCapitalLiaoJinWalls','ancientCapitalYuanWalls','ancientCapitalMingQingWalls'];
+const keys=['ancientCapitalLegendaryWalls','ancientCapitalShangWalls','ancientCapitalZhouWalls','ancientCapitalQinHanWalls','ancientCapitalHanWeiWalls','ancientCapitalSouthernTangWalls','ancientCapitalTangWalls','ancientCapitalLiaoJinWalls','ancientCapitalYuanWalls','ancientCapitalMingQingWalls'];
 const state={mapOverlays:{chinaAncientCapitals:true,ancientCapitalWalls:true,...Object.fromEntries(keys.map(k=>[k,false]))}};
 global.fetch=async url=>({ok:true,json:async()=>String(url).includes('research-extents')?research:{type:'FeatureCollection',features:[]}});
 const map={getSource:()=>undefined,getLayer:()=>undefined,getStyle:()=>({layers:[]}),addSource:()=>{},addLayer:()=>{},setLayoutProperty:()=>{}};

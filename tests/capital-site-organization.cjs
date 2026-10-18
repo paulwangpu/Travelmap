@@ -1,6 +1,6 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),H=require('../historical-periods.js');
 const d=require('../data/china-ancient-capitals.json'),g=JSON.parse(fs.readFileSync('data/ancient-capital-research-extents.geojson'));
-assert.equal(d.items.length,395);assert.equal(d.recordItems.length,622);
+assert.equal(d.items.length,508);assert.equal(d.recordItems.length,748);
 for(const r of d.recordItems){const s=d.items.find(s=>s.siteKey===r.siteKey);assert(s,r.name);assert(s.records.some(raw=>raw.sourceOrder===r.sourceOrder));assert(r.siteReference?.name);for(const b of r.boundaryRelations||[]){assert(b.kind);assert(!['汉魏','六朝','南唐','宋辽金'].includes(b.control));const f=g.features.find(f=>f.properties.sourceId===b.id);if(f)assert((f.properties.periods||[f.properties.period]).includes(H.capitalPeriod(r)),r.name+' selector');}}
 for(const order of [40,192,197,218,234,240,261,272])assert(d.recordItems.find(r=>r.sourceOrder===order).legacySiteKeys.length);
 const get=n=>d.recordItems.find(r=>r.sourceOrder===n);

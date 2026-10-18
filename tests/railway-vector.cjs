@@ -24,7 +24,7 @@ const viewRows = context.adapter.legendRows(adapted,catalog,4,[mainLine]);
 assert(viewRows.some(row=>row.legend === 'Main line'));
 assert(!viewRows.some(row=>row.legend === 'Highspeed main line'),'view keys exclude unobserved types');
 assert(overview.some(row=>row.samples.length>1),'upstream variants are retained');
-assert(adapted.layers.length > 30);
+assert(adapted.layers.length > 30);assert.equal(Object.keys(adapted.sources).length,8);assert(!Object.values(adapted.sources).some(x=>x.url.endsWith('/railway_line_high')||x.url.endsWith('/points_of_interest')||x.url.includes('standard_railway_turntables')));
 assert(adapted.layers.every(layer => layer.id.startsWith('orm-') && adapted.sources[layer.source]));
 assert(!JSON.stringify(adapted).includes('global-state'));
 assert(!Object.keys(adapted.sources).some(id => /historical|dem|search|route_stops/.test(id)));
@@ -63,6 +63,19 @@ async function interactions() {
   };
   await context.adapter.install(fake,'zh');
   assert.equal(fake.layers.length,adapted.layers.length);
+  const keptLayer=fake.layers[0],keptSource=Object.values(fake.sources)[0];
+  await context.adapter.install(fake,'zh');await context.adapter.install(fake,'zh');
+  assert.equal(fake.layers[0],keptLayer,'unchanged sync preserves layer objects');
+  assert.equal(Object.values(fake.sources)[0],keptSource,'unchanged sync preserves source and tile cache');
+  assert(context.adapter.isCurrent(fake,'zh'));assert(!context.adapter.isCurrent(fake,'en'));
+  const failure={sourceId:'orm-high',coord:{canonical:{z:10,x:2,y:3}},error:{message:'HTTP 503'}};
+  assert(context.adapter.resourceError(fake,failure));assert.equal(context.adapter.health(fake).failed,1);
+  assert(!context.adapter.resourceLoaded(fake,{sourceId:'orm-high',sourceDataType:'metadata'}));
+  assert(!context.adapter.resourceLoaded(fake,{sourceId:'orm-high',coord:{canonical:{z:10,x:2,y:4}},sourceDataType:'content'}));
+  assert.equal(context.adapter.health(fake).failed,1);
+  assert(context.adapter.resourceLoaded(fake,{...failure,sourceDataType:'content'}));assert.equal(context.adapter.health(fake).failed,0);
+  fake.layers=[];fake.sources={};await context.adapter.install(fake,'zh');assert.equal(fake.layers.length,adapted.layers.length);
+
   assert(context.adapter.query(fake,{x:50,y:12}));
   assert.equal(context.adapter.query(fake,{x:50,y:13}),null);
   const originalQuery = fake.queryRenderedFeatures;
@@ -73,6 +86,7 @@ async function interactions() {
   context.adapter.remove(fake);
   assert.equal(fake.layers.length,0);
   assert.equal(Object.keys(fake.sources).length,0);
+  const concurrent=await Promise.all([context.adapter.install(fake,'en'),context.adapter.install(fake,'en')]);assert.equal(concurrent[0],concurrent[1]);context.adapter.remove(fake);
   const pending = context.adapter.install(fake,'en');
   context.adapter.remove(fake);
   await pending;

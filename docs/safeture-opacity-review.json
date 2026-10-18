@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-17",
+  "exclusiveDisplayAsset": "data/safeture-display-20261017.geojson",
+  "browser": {
+    "alpha": 0.4,
+    "cases": [
+      {
+        "name": "Regional High over national Critical",
+        "actual": [
+          237,
+          212,
+          195
+        ],
+        "expected": [
+          237,
+          211,
+          194
+        ],
+        "background": [
+          239,
+          244,
+          246
+        ],
+        "originalHitLevels": [
+          4
+        ]
+      },
+      {
+        "name": "Unrated France",
+        "actual": [
+          225,
+          229,
+          233
+        ],
+        "expected": [
+          225,
+          229,
+          232
+        ],
+        "background": [
+          235,
+          240,
+          241
+        ],
+        "originalHitLevels": [
+          null
+        ]
+      }
+    ],
+    "coverageUnchanged": true,
+    "cleanup": true,
+    "errors": []
+  },
+  "originalAssessmentsUnchanged": true,
+  "release": "2.3.3",
+  "published": false
+}

@@ -1,0 +1,621 @@
+{
+  "date": "2026-10-17",
+  "baseline": {
+    "roots": 504,
+    "records": 744,
+    "sites": 418,
+    "features": 2755
+  },
+  "preservation": {
+    "roots": "1f767f288a41c9bcd657306c8852a04a4aa313c3f1c9f6395bb0db0fbc65d3fd",
+    "records": "c380345a58009f99d85903a0e50f135ee9776e7aa2026956983b99e31c590b89",
+    "sites": "691906aed47d35f73ef89fea5ee325e50b6b55bb761c64e87de8a269b90ae638",
+    "features": "fbf39314efd19495cea498f75313177011fc8239cb491e236288a4d22f55fab7",
+    "heritage": "70697e07f2b5497e81d95765927f28bcda602bfaad4029f20017ac142b174cae",
+    "tombs": "314a18c57babd62aa76c8987c38e44b6ec251e1e2a588db310ac0d46f20a0d91"
+  },
+  "counts": {
+    "roots": 508,
+    "records": 748,
+    "sites": 425,
+    "features": 2782
+  },
+  "added": {
+    "roots": 4,
+    "records": 4,
+    "sites": 7,
+    "features": 27
+  },
+  "rows": [
+    {
+      "key": "liangzhu",
+      "name": "良渚古城",
+      "enName": "Liangzhu Ancient City",
+      "country": "中国",
+      "countryEn": "China",
+      "center": [
+        119.98610836271021,
+        30.395301500000002
+      ],
+      "capital": true,
+      "identity": "良渚早期区域国家都邑",
+      "enIdentity": "Political centre of the early regional state of Liangzhu",
+      "years": "约前3300—前2300年；文化年代与城墙各期营建年代分开",
+      "periods": [
+        "传说"
+      ],
+      "source": "https://whc.unesco.org/en/list/1592/",
+      "relatedHeritageIds": [
+        "whc-1592"
+      ],
+      "tombIds": [
+        "early-liangzhu"
+      ],
+      "note": "古城、莫角山宫殿区、城墙及外城台地分别表达；四组世界遗产组成区不合并成一圈城墙。反山王族墓地复用既有皇陵条目，既有区域参考点不等于墓地中心。",
+      "features": [
+        {
+          "id": "early-liangzhu-way-618290539",
+          "name": "扁担山外城台地",
+          "geometrySha256": "80f105f2e24790856c65c944fc4281bfa7f5db6e35e5dbb1b0a12a6fe39f18a3",
+          "sourceUrl": "https://www.openstreetmap.org/way/618290539",
+          "scope": "outer_city_terrace"
+        },
+        {
+          "id": "early-liangzhu-way-618290540",
+          "name": "和尚地外城台地",
+          "geometrySha256": "d5b884f8beae184a8e7176287ff75947108dd528e2c679dc35ca22aa612704b1",
+          "sourceUrl": "https://www.openstreetmap.org/way/618290540",
+          "scope": "outer_city_terrace"
+        },
+        {
+          "id": "early-liangzhu-way-618290541",
+          "name": "里山—郑村外城台地",
+          "geometrySha256": "d4360b0d2ec2509d300934d9fd5af0cc2f88757d8d64e9f4caba5363fc78dd0b",
+          "sourceUrl": "https://www.openstreetmap.org/way/618290541",
+          "scope": "outer_city_terrace"
+        },
+        {
+          "id": "early-liangzhu-way-618290542",
+          "name": "卞家山外城台地",
+          "geometrySha256": "846982dea01bd05340a99fd41d8e832194c67d5a1a0c2953e896cdbf3d057030",
+          "sourceUrl": "https://www.openstreetmap.org/way/618290542",
+          "scope": "outer_city_terrace"
+        },
+        {
+          "id": "early-liangzhu-relation-9757343",
+          "name": "良渚南城墙墙体标绘",
+          "geometrySha256": "fe203e67e471728330a57e9521e32b5a81f65830f8b3a7b6fc1f0f867de5903a",
+          "sourceUrl": "https://www.openstreetmap.org/relation/9757343",
+          "scope": "wall_footprint"
+        },
+        {
+          "id": "early-liangzhu-relation-9757350",
+          "name": "良渚东城墙墙体标绘",
+          "geometrySha256": "e9592c96f389cb37f8f5341262aad7e7c1e7ce71ceebf666fef75c8289383096",
+          "sourceUrl": "https://www.openstreetmap.org/relation/9757350",
+          "scope": "wall_footprint"
+        },
+        {
+          "id": "early-liangzhu-relation-9757354",
+          "name": "良渚北城墙墙体标绘",
+          "geometrySha256": "c029fd84c29217715879ac7adfa39e69daa323cbf31451e0e8540bfbcbb676bf",
+          "sourceUrl": "https://www.openstreetmap.org/relation/9757354",
+          "scope": "wall_footprint"
+        },
+        {
+          "id": "early-liangzhu-relation-9757374",
+          "name": "良渚西城墙墙体标绘",
+          "geometrySha256": "70293e7e6d1a8f2215a4c8aaa5c14e80b7aded2d15b41ee2562a44fae97e2a17",
+          "sourceUrl": "https://www.openstreetmap.org/relation/9757374",
+          "scope": "wall_footprint"
+        },
+        {
+          "id": "early-liangzhu-relation-9760777",
+          "name": "莫角山宫殿区标绘",
+          "geometrySha256": "f781e9a1d8b022fe7cfb21dc11a066bc759087d8ea19612d28b53c37818ad5f8",
+          "sourceUrl": "https://www.openstreetmap.org/relation/9760777",
+          "scope": "mapped_palace_platform"
+        },
+        {
+          "id": "early-group-liangzhu-fengshan",
+          "name": "凤山外城台地群",
+          "geometrySha256": "b3d9013bdceda3e9bdd4fa7378d2cfc5f947d7fdad0b042a23fdd322d39ba0ee",
+          "sourceUrl": "https://www.openstreetmap.org/way/618290543",
+          "scope": "outer_city_terrace"
+        }
+      ],
+      "status": "已接入原始墙体或开放墙段；完整分期城界待核",
+      "relatedTombs": [
+        {
+          "id": "early-liangzhu",
+          "name": "良渚反山王族墓地",
+          "enName": "Fanshan elite cemetery",
+          "note": "古城组成区数公里范围；参考坐标不等于反山中心。 统一作为WGS84近似区域点标估，不能用于墓室导航。"
+        }
+      ]
+    },
+    {
+      "key": "taosi",
+      "name": "陶寺",
+      "enName": "Taosi",
+      "country": "中国",
+      "countryEn": "China",
+      "center": [
+        111.49858,
+        35.88219
+      ],
+      "capital": true,
+      "identity": "陶寺早期国家都邑（国号未定）",
+      "enIdentity": "Capital of an early state at Taosi; historical name unconfirmed",
+      "years": "约前2300—前1900年，早中晚期有变化",
+      "periods": [
+        "传说",
+        "夏商"
+      ],
+      "source": "https://www.mct.gov.cn/whzx/qgwhxxlb/sx/202411/t20241113_956251.htm",
+      "tombIds": [
+        "early-taosi"
+      ],
+      "note": "已确认城址、宫城及王族墓地不等于已确认尧本人或尧陵；不能用观象台参考坐标代替王族墓地中心，完整分期城界待核。",
+      "features": [
+        {
+          "id": "early-taosi-node-12381661830",
+          "name": "陶寺观象台遗址参照点",
+          "geometrySha256": "64fc04dcbc33a1be28a39b1814d4a6d2382df076991449c92c0ac5b95a738744",
+          "sourceUrl": "https://www.openstreetmap.org/node/12381661830",
+          "scope": "archaeological_reference_point"
+        }
+      ],
+      "status": "已核实际遗址点；可靠城郭及宫城几何待核",
+      "relatedTombs": [
+        {
+          "id": "early-taosi",
+          "name": "陶寺王族墓地",
+          "enName": "Taosi royal-family cemetery",
+          "note": "同一陶寺遗址约数公里范围；早中期王族墓地单独坐标待核。 统一作为WGS84近似区域点标估，不能用于墓室导航。"
+        }
+      ]
+    },
+    {
+      "key": "shimao",
+      "name": "石峁",
+      "enName": "Shimao",
+      "country": "中国",
+      "countryEn": "China",
+      "center": [
+        110.32555,
+        38.56573
+      ],
+      "capital": true,
+      "identity": "石峁区域政体都邑（国号未定）",
+      "enIdentity": "Political centre of the Shimao regional polity; historical name unconfirmed",
+      "years": "约前2300—前1800年",
+      "periods": [
+        "传说",
+        "夏商"
+      ],
+      "source": "https://www.ndrc.gov.cn/xwdt/ztzl/dyhgjwhgy/202207/t20220712_1330419_ext.html",
+      "tombIds": [
+        "early-shimao"
+      ],
+      "note": "皇城台、内城、外城有考古依据；本轮公开矢量仅为局部标绘，不用现代遗址公园或高家堡城墙替代三重城界，不将皇城台高等级墓地指认为黄帝陵。",
+      "features": [
+        {
+          "id": "early-shimao-way-457394938",
+          "name": "石峁城墙原始标绘段（分区待核）",
+          "geometrySha256": "009562b9b6f5071c2e1e6c16c49f630fd6103a54b7f8ebcd8a9a20fe1f79e27c",
+          "sourceUrl": "https://www.openstreetmap.org/way/457394938",
+          "scope": "open_wall_segments"
+        },
+        {
+          "id": "early-shimao-way-457394939",
+          "name": "石峁局部遗址标绘（非全城界）",
+          "geometrySha256": "f20b9c78d52425b804a5b5329dd9b2e32796060867a2f304e95b61aaab611497",
+          "sourceUrl": "https://www.openstreetmap.org/way/457394939",
+          "scope": "mapped_archaeological_extent"
+        }
+      ],
+      "status": "已接入原始墙体或开放墙段；完整分期城界待核",
+      "relatedTombs": [
+        {
+          "id": "early-shimao",
+          "name": "石峁皇城台高等级墓地（王族候选）",
+          "enName": "Shimao Huangchengtai elite cemetery",
+          "note": "遗址约数公里；皇城台墓地位于台顶西部，尚未配准单墓位置。 统一作为WGS84近似区域点标估，不能用于墓室导航。"
+        }
+      ]
+    },
+    {
+      "key": "chengtoushan",
+      "name": "城头山",
+      "enName": "Chengtoushan",
+      "country": "中国",
+      "countryEn": "China",
+      "center": [
+        111.6555548,
+        29.6924613
+      ],
+      "capital": false,
+      "identity": "新石器时代有城垣聚落，具体政权与都城身份未定",
+      "enIdentity": "Neolithic fortified settlement; capital status unconfirmed",
+      "years": "约6000年前已有城垣，后世多次修筑",
+      "periods": [
+        "传说"
+      ],
+      "source": "https://wwj.hunan.gov.cn/wwj/c100310/c100350/202507/t20250721_33748864.html",
+      "note": "现代考古遗址公园范围包含展示和配套设施，不能当作史前城墙。只接入实际遗址定位；古城墙与壕沟几何待核。",
+      "features": [
+        {
+          "id": "early-chengtoushan-root-point",
+          "name": "城头山遗址定位",
+          "geometrySha256": "35fcb02e2fd3719bda9f76d27459482da84d81dc156edbc2d7559a21131fdf17",
+          "sourceUrl": "https://www.openstreetmap.org/node/8455140741",
+          "scope": "archaeological_reference_point"
+        }
+      ],
+      "status": "已核实际遗址点；可靠城郭及宫城几何待核",
+      "relatedTombs": []
+    },
+    {
+      "key": "eridu",
+      "name": "埃利都",
+      "enName": "Eridu",
+      "country": "伊拉克",
+      "countryEn": "Iraq",
+      "center": [
+        45.996,
+        30.8158
+      ],
+      "capital": false,
+      "identity": "苏美尔早期城市与重要宗教中心；不据王表传说确定早期都城年表",
+      "enIdentity": "Early Sumerian city and religious centre; legendary king-list chronology is not archaeological dating",
+      "years": "前4—前3千纪城市化阶段；更早聚落和后期神庙另分",
+      "periods": [
+        "传说"
+      ],
+      "source": "https://whc.unesco.org/en/list/1481/",
+      "relatedHeritageIds": [
+        "whc-1481"
+      ],
+      "note": "作为两河南部串联遗产的一个组成遗址单独表达，不与乌尔、乌鲁克或整个湿地遗产合并打卡；遗址丘与神庙台地不代表完整城界。",
+      "features": [
+        {
+          "id": "early-eridu-way-694065002",
+          "name": "埃利都北部遗址丘标绘",
+          "geometrySha256": "9a3cd5ee8c5b4ea32086c1bc511b0bbc553b03c13a8eae00602dc8a304cc8638",
+          "sourceUrl": "https://www.openstreetmap.org/way/694065002",
+          "scope": "mapped_archaeological_extent"
+        },
+        {
+          "id": "early-eridu-way-851753386",
+          "name": "埃利都遗址标绘区（非完整城界）",
+          "geometrySha256": "04aebe5a4080be2a9e7d9704b47e2be9f4a6110a1a4916b38953df2b3509850e",
+          "sourceUrl": "https://www.openstreetmap.org/way/851753386",
+          "scope": "mapped_archaeological_extent"
+        },
+        {
+          "id": "early-eridu-way-1420154972",
+          "name": "埃利都神庙台地标绘（非单栋建筑界）",
+          "geometrySha256": "ab113f7325f8b6e4c9dd1529059c11ba54fc6db2897c733da59857b871779ce6",
+          "sourceUrl": "https://www.openstreetmap.org/way/1420154972",
+          "scope": "mapped_temple_mound"
+        }
+      ],
+      "status": "已接入实际遗址／建筑面；完整分期城界待核",
+      "relatedTombs": []
+    },
+    {
+      "key": "shahr-i-sokhta",
+      "name": "沙赫尔苏赫特（焚城）",
+      "enName": "Shahr-i Sokhta (Burnt City)",
+      "country": "伊朗",
+      "countryEn": "Iran",
+      "center": [
+        61.32778,
+        30.59389
+      ],
+      "capital": false,
+      "identity": "青铜时代城市与区域中心，具体国号和王都身份未定",
+      "enIdentity": "Bronze Age city and regional centre; named kingdom and royal-capital identity unconfirmed",
+      "years": "约前3200—前1800年，四个主要阶段",
+      "periods": [
+        "传说",
+        "夏商"
+      ],
+      "source": "https://whc.unesco.org/en/list/1456/",
+      "heritageId": "whc-1456",
+      "note": "居住、手工业、纪念性建筑和墓地分区有考古依据；不把遗产保护范围当成环城墙，不把全部墓地当成皇陵。",
+      "features": [
+        {
+          "id": "early-group-burnt-city-excavations",
+          "name": "焚城已标绘发掘区（分区名称待核）",
+          "geometrySha256": "e41e904ffc830e3068fd6f04e8d43e20317d3f2f0be8613c450cb76d4010a93c",
+          "sourceUrl": "https://www.openstreetmap.org/way/402040667",
+          "scope": "mapped_excavation_areas"
+        }
+      ],
+      "status": "已接入实际遗址／建筑面；完整分期城界待核",
+      "relatedTombs": []
+    },
+    {
+      "key": "caral",
+      "name": "卡拉尔圣城",
+      "enName": "Sacred City of Caral-Supe",
+      "country": "秘鲁",
+      "countryEn": "Peru",
+      "center": [
+        -77.5214,
+        -10.8917
+      ],
+      "capital": true,
+      "identity": "卡拉尔文明政治与祭祀中心（官方称中心都城）",
+      "enIdentity": "Political and ceremonial capital of the Caral civilization",
+      "years": "约前3000—前1800年",
+      "periods": [
+        "传说",
+        "夏商"
+      ],
+      "source": "https://zonacaral.gob.pe/es/ruta-caral/",
+      "heritageId": "whc-1269",
+      "note": "平台建筑和下沉广场为已核城市构件，不将平台建筑一概称为王宫或陵墓；文明范围、遗产保护范围不等于环城墙。",
+      "features": [
+        {
+          "id": "early-caral-way-156255349",
+          "name": "卡拉尔遗址标绘区（非城墙界）",
+          "geometrySha256": "b85e8dee66c0632a2ba4e09634e711954208b198ecaadc7b564cc0ab299c45cd",
+          "sourceUrl": "https://www.openstreetmap.org/way/156255349",
+          "scope": "mapped_archaeological_extent"
+        },
+        {
+          "id": "early-caral-way-184350531",
+          "name": "廊室平台建筑",
+          "geometrySha256": "243cfd0cd213c7fb6a19dde16124c15942f2809a86cf3965df2faac159e8f383",
+          "sourceUrl": "https://www.openstreetmap.org/way/184350531",
+          "scope": "mapped_monument"
+        },
+        {
+          "id": "early-caral-way-184350532",
+          "name": "采石场平台建筑",
+          "geometrySha256": "f0599703ad9f7df4dd29412a8865c15f559edee8edd0e914b7fec1db89fbff7d",
+          "sourceUrl": "https://www.openstreetmap.org/way/184350532",
+          "scope": "mapped_monument"
+        },
+        {
+          "id": "early-caral-way-184350533",
+          "name": "小平台建筑",
+          "geometrySha256": "adc44a406fbf192ac2509619e63665a6e8a4a1f2282129539c185e132c90b186",
+          "sourceUrl": "https://www.openstreetmap.org/way/184350533",
+          "scope": "mapped_monument"
+        },
+        {
+          "id": "early-caral-way-184350534",
+          "name": "瓦恩卡平台建筑",
+          "geometrySha256": "5221e612cd3617a11ae4f943dfdc4ae191922c44166c5df01b5267604e89552a",
+          "sourceUrl": "https://www.openstreetmap.org/way/184350534",
+          "scope": "mapped_monument"
+        },
+        {
+          "id": "early-caral-way-184350535",
+          "name": "大平台建筑",
+          "geometrySha256": "79c2cf3e4feb8791b1c989e5d1ae0365536196c77b6fd8a5e6bfac966560cad6",
+          "sourceUrl": "https://www.openstreetmap.org/way/184350535",
+          "scope": "mapped_monument"
+        },
+        {
+          "id": "early-caral-way-551337979",
+          "name": "中央平台建筑",
+          "geometrySha256": "91c67f38fea514b8f7b2fdae5371a9c596a4cd09d1786a65d5c39fc4e5e19d42",
+          "sourceUrl": "https://www.openstreetmap.org/way/551337979",
+          "scope": "mapped_monument"
+        },
+        {
+          "id": "early-caral-way-551337984",
+          "name": "圆形剧场神庙",
+          "geometrySha256": "87eb55c258ec6393204a2e404f93d7f316409d130a91a6dd99993ca5aa230d06",
+          "sourceUrl": "https://www.openstreetmap.org/way/551337984",
+          "scope": "mapped_temple_remains"
+        },
+        {
+          "id": "early-caral-way-551343422",
+          "name": "圆形祭坛神庙",
+          "geometrySha256": "25d3f8039166a372eb7f3a15290eb50902cf8225bb8f432175aa5c0fe3633b55",
+          "sourceUrl": "https://www.openstreetmap.org/way/551343422",
+          "scope": "mapped_temple_remains"
+        }
+      ],
+      "status": "已接入实际遗址／建筑面；完整分期城界待核",
+      "relatedTombs": []
+    }
+  ],
+  "baselineRestores": {
+    "dholavira": {
+      "key": "dholavira",
+      "name": "多拉维拉",
+      "enName": "Dholavira",
+      "capitalName": "多拉维拉",
+      "capitalEnName": "Dholavira",
+      "country": "印度",
+      "countryEn": "India",
+      "center": [
+        70.2133,
+        23.88841
+      ],
+      "period": "夏商",
+      "capitalPeriods": [],
+      "periodLabel": "约前3000—前1500年，多阶段发展",
+      "enPeriodLabel": "Approximately 3000–1500 BCE, multiple phases",
+      "historicalIdentity": "archaeological-city",
+      "identityLabel": "哈拉帕文明城市与区域中心，都城身份未定",
+      "identityEnLabel": "Harappan city and regional centre; capital status unconfirmed",
+      "identityNote": "内堡Castle、堡区Bailey、中城与外城分别表达；不能将内堡直接称为王宫。外城东南侧图示涉及现代堤坝，故保留开放墙线，不补绘完整外城闭合面。图示配准范围非实测墙界。",
+      "identityEnNote": "Castle, Bailey, Middle Town and outer walls are distinguished. The Castle is not asserted to be a royal palace. The southeastern layout includes a modern bund, so the outer wall remains open. Diagram references are not surveyed boundaries.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/1645/",
+      "referenceUrl": "https://whc.unesco.org/en/list/1645/",
+      "aliases": [
+        "多拉维拉",
+        "Dholavira",
+        "多拉维拉：哈拉帕文明古城",
+        "Dholavira: a Harappan City"
+      ],
+      "tentative": false,
+      "sharedCapitalCheckin": false,
+      "wallBoundaryReview": "原始外城开放墙线、内堡与蓄水遗迹已接入；中城及堡区有图示参考面；完整外城闭合墙界待核",
+      "focusMaxZoom": 16,
+      "heritageId": "whc-1645",
+      "checklistItem": "多拉维拉：哈拉帕文明古城",
+      "focusBounds": [
+        [
+          70.20458479999999,
+          23.8839134
+        ],
+        [
+          70.21880560000001,
+          23.8935914
+        ]
+      ]
+    }
+  },
+  "permittedChanges": [
+    {
+      "key": "dholavira",
+      "fields": [
+        "capitalPeriods",
+        "urbanPeriods",
+        "identityNote",
+        "identityEnNote"
+      ],
+      "source": "https://whc.unesco.org/en/list/1645/",
+      "reason": "Add the evidenced pre-Xia urban phase without redating existing geometry."
+    }
+  ],
+  "tombPolicy": "Three existing cemetery IDs and all tomb records, coordinates and visit identities remain unchanged. Related-detail actions do not check in or move any item.",
+  "limitations": [
+    "No modern archaeological park is used as an ancient city circuit.",
+    "Taosi and Chengtoushan retain sourced actual points because reliable city-wall vectors were unavailable.",
+    "Shimao includes only a partial wall trace and a small mapped archaeological area, not the full 4 km² circuit.",
+    "Liangzhu wall bodies, palace platform and outer-city terraces are distinct; no gate gaps were joined."
+  ],
+  "excluded": [
+    {
+      "site": "liangzhu",
+      "ids": [
+        433832804,
+        8869354
+      ],
+      "reason": "Modern archaeological park limits are not a prehistoric city circuit."
+    },
+    {
+      "site": "taosi",
+      "ids": [
+        1338532819,
+        1551063495,
+        1551063496
+      ],
+      "reason": "Modern park, school and later Guandi building are not Taosi city walls or palaces."
+    },
+    {
+      "site": "shimao",
+      "ids": [
+        458427815,
+        458427821,
+        1249380999
+      ],
+      "reason": "Gaojia Fortress walls and modern Shimao park limits cannot substitute for the ancient city."
+    },
+    {
+      "site": "chengtoushan",
+      "ids": [
+        1053516124,
+        1053516137
+      ],
+      "reason": "Modern park boundary and museum building are not ancient city fortifications."
+    }
+  ],
+  "geometrySummary": {
+    "rawSourceObjects": 34,
+    "displayFeatures": 27,
+    "wallGroups": 5,
+    "closedWallBodyFeatures": 4,
+    "openWallFeatures": 1,
+    "completeCityWallCircuits": 0
+  },
+  "validation": {
+    "regressionScripts": 186,
+    "regressionFailures": 0,
+    "syntax": [
+      "app.js",
+      "classical-sites.js",
+      "imperial-tombs.js",
+      "ancient-capital-walls.js",
+      "sw.js"
+    ],
+    "release": "2.3.3",
+    "diffCheck": "passed",
+    "newGeometryTopology": "27 valid geometries, zero invalid",
+    "browser": {
+      "places": 8,
+      "relatedCemeteryLinks": [
+        {
+          "key": "liangzhu",
+          "visitsUnchanged": true,
+          "tombOverlayUnchanged": true,
+          "heading": "良渚反山王族墓地"
+        },
+        {
+          "key": "taosi",
+          "visitsUnchanged": true,
+          "tombOverlayUnchanged": true,
+          "heading": "陶寺王族墓地"
+        },
+        {
+          "key": "shimao",
+          "visitsUnchanged": true,
+          "tombOverlayUnchanged": true,
+          "heading": "石峁皇城台高等级墓地（王族候选）"
+        }
+      ],
+      "independentVisits": {
+        "marked": true,
+        "rootUnchanged": true,
+        "tombUnchanged": true,
+        "restored": true
+      },
+      "controls": {
+        "allOff": true,
+        "earlyDholavira": true,
+        "wallsOff": true,
+        "legacy": []
+      },
+      "zooms": [
+        {
+          "zoom": 5,
+          "roots": 109,
+          "labels": 0
+        },
+        {
+          "zoom": 11,
+          "roots": 1,
+          "labels": 0
+        },
+        {
+          "zoom": 12,
+          "roots": 1,
+          "labels": 2
+        },
+        {
+          "zoom": 15,
+          "roots": 1,
+          "labels": 4
+        },
+        {
+          "zoom": 17,
+          "roots": 1,
+          "labels": 0
+        }
+      ],
+      "pageErrors": 0,
+      "report": "output/early-cities/browser-results.json",
+      "note": "An initial fast scripted sequence triggered the previously observed MapLibre placement error. The final settled run had no page errors; the engine itself was not changed."
+    }
+  }
+}

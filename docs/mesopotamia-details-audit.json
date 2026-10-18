@@ -1,0 +1,425 @@
+{
+  "date": "2026-10-17",
+  "baseline": {
+    "features": 2562,
+    "sites": 288,
+    "roots": 395,
+    "records": 622
+  },
+  "addedFeatures": 11,
+  "counts": {
+    "features": 2573,
+    "sites": 288,
+    "roots": 395,
+    "records": 622
+  },
+  "rows": [
+    {
+      "key": "babylon",
+      "before": 4,
+      "after": 9,
+      "added": [
+        {
+          "id": "babylon-way-270483610",
+          "name": "埃特曼安基塔庙遗址",
+          "source": "https://www.openstreetmap.org/way/270483610",
+          "reference": "https://whc.unesco.org/document/168481",
+          "geometrySha256": "cbb1905fdc648799181d210e74a524700edf0815d7d8f4fbd2be46b88cc5ad23"
+        },
+        {
+          "id": "babylon-way-898486937",
+          "name": "巴比尔丘（夏宫遗址区）",
+          "source": "https://www.openstreetmap.org/way/898486937",
+          "reference": "https://whc.unesco.org/document/168481",
+          "geometrySha256": "a1fdb42c0b88135ff0b3ed8ed2ad9d06eff858981594f332413ea0082aef2ede"
+        },
+        {
+          "id": "babylon-relation-16832642",
+          "name": "巴比伦南宫（遗迹及复建）",
+          "source": "https://www.openstreetmap.org/relation/16832642",
+          "reference": "https://whc.unesco.org/document/168481",
+          "geometrySha256": "9b06ae886f106a93aa5871720feb392dea7111dac7f373c7a924687e66ef5760",
+          "originalGeometrySha256": "5399025aefc1a14f886928684021a2dcc81bb8e85a6db7d3475db6bc6d6a4b0b"
+        },
+        {
+          "id": "babylon-relation-16802644",
+          "name": "宁玛赫神庙（遗迹及复建）",
+          "source": "https://www.openstreetmap.org/relation/16802644",
+          "reference": "https://whc.unesco.org/document/168481",
+          "geometrySha256": "01c5fae52cebea1a04bf2582862ae3c88f99ef0873ca9aecde05eb6af5ef5bfd"
+        },
+        {
+          "id": "babylon-relation-16846149",
+          "name": "巴比伦希腊式剧场（复建现状）",
+          "source": "https://www.openstreetmap.org/relation/16846149",
+          "reference": "https://whc.unesco.org/document/168481",
+          "geometrySha256": "433d1f129c1fd3ba9e0bf0bf5eb81feff1ad4714a57775ba091102f62f8960b3"
+        }
+      ]
+    },
+    {
+      "key": "ur",
+      "before": 1,
+      "after": 5,
+      "added": [
+        {
+          "id": "ur-way-553034300",
+          "name": "埃努玛赫神殿",
+          "source": "https://www.openstreetmap.org/way/553034300",
+          "reference": "https://whc.unesco.org/document/169034",
+          "geometrySha256": "7376ba043bf07612acefb88519067fd901b17fc769b8b1501500c5b9329242cc"
+        },
+        {
+          "id": "ur-way-553036117",
+          "name": "吉帕尔神庙与祭司居所",
+          "source": "https://www.openstreetmap.org/way/553036117",
+          "reference": "https://whc.unesco.org/document/169034",
+          "geometrySha256": "38b789976c625de1b5e5ddb4ea52f919d00da09add995500cabfc6ea46f51e1e"
+        },
+        {
+          "id": "ur-way-881928490",
+          "name": "乌尔王家墓地",
+          "source": "https://www.openstreetmap.org/way/881928490",
+          "reference": "https://www.penn.museum/sites/expedition/ur-and-its-treasures/",
+          "geometrySha256": "1395e0c2c19dcbe5162c83ef54003cf01f6436934f45b6a97f61bed9361b2fc5"
+        },
+        {
+          "id": "ur-way-1543061469",
+          "name": "乌尔居址发掘区（现状标绘）",
+          "source": "https://www.openstreetmap.org/way/1543061469",
+          "reference": "https://www.penn.museum/sites/expedition/city-of-the-moon/",
+          "geometrySha256": "b0b227860ae114085eeebf2dfd9f3e68a1ae34a1affa7eeb648683f69d13818d"
+        }
+      ]
+    },
+    {
+      "key": "uruk",
+      "before": 2,
+      "after": 4,
+      "added": [
+        {
+          "id": "uruk-way-1311535415",
+          "name": "埃安纳塔庙（现存台基）",
+          "source": "https://www.openstreetmap.org/way/1311535415",
+          "reference": "https://www.dainst.org/forschung/projekte/noslug/2604",
+          "geometrySha256": "eccc1e5641e6f0c0d7400b5bcc4d64c305408555feabf8d7ca5afbe064e23fc0"
+        },
+        {
+          "id": "uruk-way-313911301",
+          "name": "白庙遗迹（阿努塔庙顶部）",
+          "source": "https://www.openstreetmap.org/way/313911301",
+          "reference": "https://doi.org/10.34780/5ea1-clce",
+          "geometrySha256": "c090c4ad65620bf84a73a809f721bfacfa087d1d9280817a809ab68e3d9ac707"
+        }
+      ]
+    }
+  ],
+  "corrections": [
+    {
+      "id": "babylon-relation-13261225",
+      "from": "巴比伦南宫遗址",
+      "to": "纳布神庙（沙·哈雷）",
+      "reason": "Eniggidrukalamasuma is a Nabu temple, not the Southern Palace.",
+      "geometryAndFeatureIdPreserved": true,
+      "checkinsNotMovedToNewPalace": true
+    }
+  ],
+  "baselineRestores": {
+    "featureProperties": {
+      "babylon-relation-13261225": {
+        "id": "babylon-relation-13261225",
+        "siteKey": "babylon",
+        "siteName": "巴比伦",
+        "siteEnName": "Babylon",
+        "name": "巴比伦南宫遗址",
+        "enName": "Babylon Southern Palace",
+        "originalName": "Eniggidrukalamasuma",
+        "role": "palace",
+        "period": "周",
+        "periodLabel": "新巴比伦王宫遗迹；含20世纪修复／复建",
+        "enPeriodLabel": "Mapped historical remains or present fabric; local dates and scope are recorded separately.",
+        "geometryScope": "palace_remains",
+        "sourceUrl": "https://www.openstreetmap.org/relation/13261225",
+        "sourceUrls": [
+          "https://www.openstreetmap.org/relation/13261225"
+        ],
+        "referenceUrl": "https://whc.unesco.org/en/list/278/",
+        "note": "新巴比伦王宫遗迹；含20世纪修复／复建。内城双墙、外城墙和南宫分别表达，保留20世纪修复、复建说明；不接入萨达姆现代宫殿充作古代王宫。 原始OSM几何仅代表本项对象；不声明测绘精度。",
+        "enNote": "Mapped palace remains; surviving, damaged and restored fabric are distinguished. Historical capital status and mapped remains are distinguished. Complete dated city and palace circuits remain unverified except for explicitly identified closed wall references. Archaeological parks, temple precincts and World Heritage boundaries do not stand for city walls.",
+        "label": true,
+        "labelMinZoom": 12,
+        "boundaryLabel": false,
+        "labelCoordinates": [
+          44.423471274570986,
+          32.53971625
+        ],
+        "sourceTags": {
+          "building": "yes",
+          "historic": "archaeological_site",
+          "historic:civilization": "babylonian",
+          "name": "Eniggidrukalamasuma",
+          "type": "multipolygon"
+        },
+        "originalMembers": [
+          {
+            "type": "way",
+            "id": "986889120",
+            "role": "inner",
+            "geometry": {
+              "type": "LineString",
+              "coordinates": [
+                [
+                  44.423294,
+                  32.5398085
+                ],
+                [
+                  44.4233904,
+                  32.5398105
+                ],
+                [
+                  44.4233943,
+                  32.539676
+                ],
+                [
+                  44.4232979,
+                  32.539674
+                ],
+                [
+                  44.423294,
+                  32.5398085
+                ]
+              ]
+            }
+          },
+          {
+            "type": "way",
+            "id": "552092998",
+            "role": "outer",
+            "geometry": {
+              "type": "LineString",
+              "coordinates": [
+                [
+                  44.4231994,
+                  32.53987
+                ],
+                [
+                  44.4235476,
+                  32.5398728
+                ],
+                [
+                  44.4235512,
+                  32.5395625
+                ],
+                [
+                  44.4232029,
+                  32.5395597
+                ],
+                [
+                  44.4231994,
+                  32.53987
+                ]
+              ]
+            }
+          },
+          {
+            "type": "way",
+            "id": "986889117",
+            "role": "inner",
+            "geometry": {
+              "type": "LineString",
+              "coordinates": [
+                [
+                  44.4234595,
+                  32.539697
+                ],
+                [
+                  44.4235286,
+                  32.5396975
+                ],
+                [
+                  44.4235295,
+                  32.5396169
+                ],
+                [
+                  44.4234603,
+                  32.5396164
+                ],
+                [
+                  44.4234595,
+                  32.539697
+                ]
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "rootBoundaryRelations": {
+      "ancient-site:world-babylon": [
+        {
+          "id": "babylon-way-552821959",
+          "name": "巴比伦内城双墙遗迹",
+          "city": "巴比伦",
+          "control": "中国对应朝代：周",
+          "kind": "mapped_wall_remains",
+          "sourceUrl": "https://www.openstreetmap.org/way/552821959"
+        },
+        {
+          "id": "babylon-way-901146569",
+          "name": "巴比伦外城墙遗迹带（现状标绘）",
+          "city": "巴比伦",
+          "control": "中国对应朝代：周",
+          "kind": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/901146569"
+        },
+        {
+          "id": "babylon-relation-13261225",
+          "name": "巴比伦南宫遗址",
+          "city": "巴比伦",
+          "control": "中国对应朝代：周",
+          "kind": "palace_remains",
+          "sourceUrl": "https://www.openstreetmap.org/relation/13261225"
+        },
+        {
+          "id": "babylon-way-1229757668",
+          "name": "伊什塔尔门遗址",
+          "city": "巴比伦",
+          "control": "中国对应朝代：周",
+          "kind": "restored_gate",
+          "sourceUrl": "https://www.openstreetmap.org/way/1229757668"
+        }
+      ],
+      "ancient-site:world-ur": [
+        {
+          "id": "ur-way-1060285722",
+          "name": "乌尔大塔庙",
+          "city": "乌尔",
+          "control": "中国对应朝代：夏商",
+          "kind": "temple_precinct",
+          "sourceUrl": "https://www.openstreetmap.org/way/1060285722"
+        }
+      ],
+      "ancient-site:world-uruk": [
+        {
+          "id": "uruk-way-1311535414",
+          "name": "乌鲁克埃安纳圣区",
+          "city": "乌鲁克",
+          "control": "中国对应朝代：传说",
+          "kind": "temple_precinct",
+          "sourceUrl": "https://www.openstreetmap.org/way/1311535414"
+        },
+        {
+          "id": "uruk-way-1046022672",
+          "name": "乌鲁克城墙（闭合墙界参考）",
+          "city": "乌鲁克",
+          "control": "中国对应朝代：传说",
+          "kind": "closed_wall_reference",
+          "sourceUrl": "https://www.openstreetmap.org/way/1046022672"
+        }
+      ]
+    },
+    "siteFocusBounds": {
+      "ur": [
+        [
+          46.1012945,
+          30.9595
+        ],
+        [
+          46.1049675,
+          30.9645987
+        ]
+      ]
+    }
+  },
+  "preservation": {
+    "allExistingGeometrySha256": "1e7623b2bc0da5d09251a0cb17fae99cf6712b7ff706e1675aac06273c1655f2",
+    "existingGeometryUnchanged": true,
+    "unrelatedFeaturesUnchanged": true,
+    "rootIdsNamesCoordinatesRecordsUnchanged": true,
+    "heritageFileSha256": "5f15e3d2a722ed2c15ce57201ac8739f2fd90437e07569ab9515bbfe36de3a09",
+    "baselineFeaturesSha256": "1cf98afa0cf0695458aa5c0950e1af952950763f580e395e9de3ac35d0f2314b",
+    "baselineSitesSha256": "dc36362b2116fa39eb358c0f8ef39ae9cc96f58c023e293bde59f53049a59dcd",
+    "baselineRootsSha256": "0cc4f3c9e4938e7eee5d25063d48e2a732ad762efbc8e028f80e707cff2c2a14"
+  },
+  "pending": [
+    "Ur: complete dated city wall, holy precinct enclosure, E-hursag palace, E-dublalmah temple and Ur III mausolea need authoritative geometric confirmation. The protected-area polygons are not city walls.",
+    "Uruk: full Anu platform, Bit Resh, Irigal, Gareus temple and Sinkashid palace require source-backed geometry. The unnamed White Temple polygon is checked against the DAI printed UTM38 grid, not presented as a measured platform.",
+    "Babylon: Processional Way, Northern Palace, Esagila temple and complete outer-city circuit need additional source-backed geometry. No hanging-garden reconstruction or modern Saddam palace is added."
+  ],
+  "release": "2.3.3",
+  "published": false,
+  "sourceSnapshots": [
+    {
+      "key": "babylon",
+      "path": "output/five-country-capitals/babylon.xml",
+      "sha256": "ca396c02b4490c5fb105684f2c82e74dffc04efdb5be1654fc45025aefa146b8"
+    },
+    {
+      "key": "ur",
+      "path": "output/five-country-capitals/ur.xml",
+      "sha256": "86322b90cf527a63cb38b3c1704c0f25797959346b9d58cb0074ee0e27eff576"
+    },
+    {
+      "key": "uruk",
+      "path": "output/five-country-capitals/uruk.xml",
+      "sha256": "87e0b8e5d83106001fda1d218d74e162d23186f038da5f32d9ba5fcca228c7b8"
+    }
+  ],
+  "sourceTopologyReview": {
+    "id": "babylon-relation-16832642",
+    "strictGISValidity": false,
+    "reason": "Source self-touch at 44.4222742,32.5416404",
+    "action": "Derived valid display Polygon from original edges; all 34 original courtyard rings and all 35 source members retained as originalGeometry/originalMembers. 32 valid interior display rings after resolving touching courtyards; non-area artifacts retained separately."
+  },
+  "whiteTemplePositionCheck": {
+    "source": "https://doi.org/10.34780/5ea1-clce",
+    "page": 121,
+    "figure": 11,
+    "crs": "WGS84 UTM zone 38N",
+    "osmSummitApproxUTM": [
+      560407.92,
+      3465629.21
+    ],
+    "figureApproxUTM": [
+      560409,
+      3465623
+    ],
+    "scope": "Position/identity cross-check only, not a geometric fit or survey-accuracy claim."
+  },
+  "validation": {
+    "regressionScripts": 181,
+    "regressionFailures": 0,
+    "sourcePolygonCount": 11,
+    "sourceInteriorRings": 39,
+    "displayInteriorRings": 37,
+    "browser": {
+      "screenshots": [
+        "output/mesopotamia-details/babylon-z13.png",
+        "output/mesopotamia-details/babylon-z17.png",
+        "output/mesopotamia-details/ur-z17.png",
+        "output/mesopotamia-details/uruk-z13.png",
+        "output/mesopotamia-details/uruk-z17.png"
+      ],
+      "counts": {
+        "babylon": 9,
+        "ur": 5,
+        "uruk": 4
+      },
+      "nabuCorrect": true,
+      "palaceSeparate": true,
+      "englishWhiteTemple": true,
+      "remainsWithIconsOff": 18,
+      "wallsOff": 0,
+      "legacyPhysicalSources": [],
+      "errors": []
+    },
+    "syntaxChecks": [
+      "app.js",
+      "classical-sites.js",
+      "ancient-capital-walls.js",
+      "sw.js"
+    ],
+    "diffCheck": true,
+    "releaseVersion": "2.3.3"
+  }
+}

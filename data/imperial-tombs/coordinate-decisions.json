@@ -1,5 +1,5 @@
 {
-  "reviewedAt": "2026-10-03",
+  "reviewedAt": "2026-10-16",
   "policy": "明确白名单；新增索引不自动批准；历史性质独立核查",
   "approved": [
     "legend-huangdi",
@@ -281,7 +281,21 @@
     "koguryo-tongmyong",
     "koguryo-kangso",
     "koguryo-honam-sasin",
-    "tang-hui-rang"
+    "tang-hui-rang",
+    "han-wannian-taishang",
+    "tang-zuling-longyao",
+    "tang-yongkang-ancestor",
+    "tang-xingning-ancestor",
+    "xia-mingyuzhen-rui",
+    "chenhan-chenyouliang",
+    "dashun-lizicheng-tongshan",
+    "tang-zhaozong-he",
+    "ming-dong-zhubiao",
+    "qi-qianai-jingan",
+    "qi-xiantangwan-xiuan",
+    "qi-sanchengxiang-xingan",
+    "xiliang-xiaotushan-candidate",
+    "yuan-zhangshicheng-old"
   ],
   "wikidataApproved": [
     "chen-wanan",
@@ -1297,6 +1311,76 @@
       "id": "tang-hui-rang",
       "sourceId": "tang-hui-amap",
       "method": "按高德官方基准说明，使用项目迭代反解将GCJ-02转换为WGS84；核对原址博物馆名称和地址"
+    },
+    {
+      "id": "han-wannian-taishang",
+      "sourceId": "supp-geo-osm-node-14289913204",
+      "method": "原始OSM节点或陵区几何的区域代表点，结合机构文献核对实体"
+    },
+    {
+      "id": "tang-zuling-longyao",
+      "sourceId": "supp-geo-osm-way-1560105903",
+      "method": "原始OSM节点或陵区几何的区域代表点，结合机构文献核对实体"
+    },
+    {
+      "id": "tang-yongkang-ancestor",
+      "sourceId": "supp-geo-yongkang-index",
+      "method": "采用公开地理索引作为所属陵址区域估计，与机构文献地望核对；不从PDF未知基准坐标反算"
+    },
+    {
+      "id": "tang-xingning-ancestor",
+      "sourceId": "supp-geo-osm-node-9399120964",
+      "method": "原始OSM节点或陵区几何的区域代表点，结合机构文献核对实体"
+    },
+    {
+      "id": "xia-mingyuzhen-rui",
+      "sourceId": "supp-geo-osm-way-1379109699",
+      "method": "原始OSM节点或陵区几何的区域代表点，结合机构文献核对实体"
+    },
+    {
+      "id": "chenhan-chenyouliang",
+      "sourceId": "supp-geo-osm-node-12167226000",
+      "method": "原始OSM节点或陵区几何的区域代表点，结合机构文献核对实体"
+    },
+    {
+      "id": "dashun-lizicheng-tongshan",
+      "sourceId": "supp-geo-lizicheng-index",
+      "method": "采用公开地理索引作为所属陵址区域估计，与机构文献地望核对；不从PDF未知基准坐标反算"
+    },
+    {
+      "id": "tang-zhaozong-he",
+      "sourceId": "supp-geo-osm-node-10973517404",
+      "method": "原始OSM节点或陵区几何的区域代表点，结合机构文献核对实体"
+    },
+    {
+      "id": "ming-dong-zhubiao",
+      "sourceId": "next-geo-osm-way-803406635",
+      "method": "原始OSM地理实体及机构资料交叉核对；采用对应遗迹几何区域代表点"
+    },
+    {
+      "id": "qi-qianai-jingan",
+      "sourceId": "next-geo-sinorelic-1418205506769653760",
+      "method": "依公开地图的高德AMap原始使用方式判断GCJ-02，迭代反算WGS84后作区域估计，非现场测量"
+    },
+    {
+      "id": "qi-xiantangwan-xiuan",
+      "sourceId": "next-geo-sinorelic-1418435226186682368",
+      "method": "依公开地图的高德AMap原始使用方式判断GCJ-02，迭代反算WGS84后作区域估计，非现场测量"
+    },
+    {
+      "id": "qi-sanchengxiang-xingan",
+      "sourceId": "next-geo-sinorelic-1418402455590408192",
+      "method": "依公开地图的高德AMap原始使用方式判断GCJ-02，迭代反算WGS84后作区域估计，非现场测量"
+    },
+    {
+      "id": "xiliang-xiaotushan-candidate",
+      "sourceId": "next-geo-sinorelic-1708709417219919872",
+      "method": "依公开地图的高德AMap原始使用方式判断GCJ-02，迭代反算WGS84后作区域估计，非现场测量"
+    },
+    {
+      "id": "yuan-zhangshicheng-old",
+      "sourceId": "next-geo-osm-node-8013316235",
+      "method": "原始OSM地理实体及机构资料交叉核对；采用对应遗迹几何区域代表点"
     }
   ],
   "rejected": {

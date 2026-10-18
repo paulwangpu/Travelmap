@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   color-scheme: light;
   --bg: #eef2ef;
   --ink: #18201c;
@@ -7814,6 +7814,28 @@ button:hover {
 .map-overlay-legends #railwayMode { height:var(--legend-control-height); min-height:var(--legend-control-height); padding:0 3px; font-size:var(--legend-body-size); }
 .map-overlay-legends #railwayVectorLegend :is(small,a) { font-size:var(--legend-caption-size); line-height:1.4; }
 #mapOverlayLegends input:is([type="checkbox"],[type="range"]) { accent-color:#176b52; }
+#gallupSafetyLegend small { display:block; margin:4px 0; }
+.gallup-scale { height:10px; border-radius:3px; margin-top:7px; }
+.gallup-scale-labels { display:flex; justify-content:space-between; font-size:11px; color:#475569; }
+.gallup-no-data { display:inline-block; width:10px; height:10px; background:#d1d5db; }
+#safetureRiskLegend small { display:block; margin:4px 0; }
+.safeture-risk-keys { display:flex; flex-wrap:wrap; gap:5px 10px; margin:7px 0; font-size:12px; }
+.safeture-risk-keys span { display:flex; align-items:center; gap:4px; }
+.safeture-risk-keys i { width:12px; height:12px; border-radius:2px; }
+.safeture-value-label { white-space:nowrap; }
+#mapDetail .safeture-detail-heading { font-size:17px; line-height:1.45; overflow-wrap:anywhere; }
+.safeture-detail-level { display:inline-block; border-radius:4px; padding:3px 10px; font-size:13px; color:#172b30; }
+.safeture-detail-summary { font-size:13px; line-height:1.75; color:#334155; overflow-wrap:anywhere; }
+.safeture-detail-summary p { margin:0 0 10px; }
+.safeture-detail-nav { display:flex; justify-content:space-between; align-items:center; gap:8px; margin:14px 0; }
+.safeture-detail-nav button { padding:6px 10px; font-size:12px; }
+.safeture-detail-nav button:disabled { opacity:.4; cursor:default; }
+.safeture-hover-title { display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; margin:3px 0; }
+.safeture-hover-summary { border-top:1px solid #e2e8f0; margin:6px 0; padding-top:5px; }
+.safeture-hover-summary p { margin:3px 0 0; line-height:1.55; white-space:normal; }
+.safeture-leaflet-hover { max-width:320px; white-space:normal; font-size:12px; }
+.gallup-tooltip { pointer-events:none; font-size:12px; line-height:1.6; }
+.gallup-value-label { background:none; border:0; text-align:center; font:700 13px/20px Arial,sans-serif; color:#101820; text-shadow:0 2px 1px white,0 -2px 1px white,2px 0 1px white,-2px 0 1px white,1px 1px 2px white,-1px -1px 2px white; pointer-events:none; }
 
 
 .angkor-site-label{text-align:center;background:transparent;border:0;box-shadow:none;text-shadow:0 0 3px white,0 0 3px white}.angkor-capital-icon svg{width:20px;height:20px}

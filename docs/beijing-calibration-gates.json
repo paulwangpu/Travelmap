@@ -1,0 +1,193 @@
+{
+  "date": "2026-10-16",
+  "originalCount": 855,
+  "originalSha256": "d83eeda0997c3accc04f216503efa89413b20fe06e4a9fdb5ad2eb158f4a6c95",
+  "removed": [
+    {
+      "id": "beijing-preming-way-679979928",
+      "reason": "用户要求移除宫苑标绘参考",
+      "featureSha256": "5aca77417f81f031a183ea0a8f51d85ce3fe058375942ea9a816becd00795e02"
+    }
+  ],
+  "added": [
+    {
+      "id": "beijing-outer-gates-guangan",
+      "name": "广安门旧址（位置参考）",
+      "type": "Point",
+      "geometrySha256": "0fdf7f63040b73890f33592c166fe33fb4cc1a2807ed1765cd051012757b6304",
+      "source": "https://www.beijing.gov.cn/zhengce/zhengcefagui/202510/W020251021410803045626.pdf",
+      "reference": "https://www.beijing.gov.cn/renwen/sy/bq/qsbj/zxzp/202112/t20211217_2563753.html",
+      "coordinates": [
+        116.3424229,
+        39.88826288
+      ]
+    },
+    {
+      "id": "beijing-outer-gates-guangqu",
+      "name": "广渠门旧址（位置参考）",
+      "type": "Point",
+      "geometrySha256": "08292e430163a376a957300f1d532b09a2daa7c449b698cf7c94a5db792b652b",
+      "source": "https://www.beijing.gov.cn/zhengce/zhengcefagui/202510/W020251021410803045626.pdf",
+      "reference": "https://www.beijing.gov.cn/renwen/sy/whkb/201903/t20190321_1865472.html",
+      "coordinates": [
+        116.4380672084507,
+        39.892337773239454
+      ]
+    },
+    {
+      "id": "beijing-outer-gates-youan",
+      "name": "右安门旧址（位置参考）",
+      "type": "Point",
+      "geometrySha256": "e932a2488e28be57d39341c76e577539723b478d93f0435d7540ea68ca85a01c",
+      "source": "https://www.beijing.gov.cn/zhengce/zhengcefagui/202510/W020251021410803045626.pdf",
+      "reference": "https://www.beijing.gov.cn/renwen/sy/whkb/201903/t20190321_1865472.html",
+      "coordinates": [
+        116.35789394999999,
+        39.867799340000005
+      ]
+    },
+    {
+      "id": "beijing-outer-gates-dongbian",
+      "name": "东便门旧址（位置参考）",
+      "type": "Point",
+      "geometrySha256": "82448328537136452f2f247116852a65ac7dba4263fc2bdb3c6c1213fd123584",
+      "source": "https://www.beijing.gov.cn/zhengce/zhengcefagui/202510/W020251021410803045626.pdf",
+      "reference": "https://www.beijing.gov.cn/renwen/sy/whkb/201903/t20190321_1865472.html",
+      "coordinates": [
+        116.42985426666664,
+        39.89948241333333
+      ]
+    },
+    {
+      "id": "beijing-outer-gates-xibian",
+      "name": "西便门旧址（位置参考）",
+      "type": "Point",
+      "geometrySha256": "701e7cc1b036b61d930fa6651762091ba15136465aeff4dcb41bc4ecbf342881",
+      "source": "https://www.beijing.gov.cn/zhengce/zhengcefagui/202510/W020251021410803045626.pdf",
+      "reference": "https://www.beijing.gov.cn/renwen/sy/whkb/201903/t20190321_1865472.html",
+      "coordinates": [
+        116.34935763600002,
+        39.897466568000006
+      ]
+    },
+    {
+      "id": "beijing-outer-gates-zuoan",
+      "name": "左安门旧址（位置参考）",
+      "type": "Point",
+      "geometrySha256": "f4287ddc18e1d60e15c6b13d07d7757a0cf38bf03abcd7467ef59b7f5227ed9c",
+      "source": "https://www.beijing.gov.cn/zhengce/zhengcefagui/202510/W020251021410803045626.pdf",
+      "reference": "https://www.beijing.gov.cn/renwen/sy/whkb/201903/t20190321_1865472.html",
+      "coordinates": [
+        116.43318341475411,
+        39.86917384590164
+      ]
+    },
+    {
+      "id": "beijing-outer-gates-zuoan-corner-rebuilt",
+      "name": "左安门角楼（现代复建）",
+      "type": "Polygon",
+      "geometrySha256": "d6e9ee9d3c5eab6be2930c95e6369fd450b85d4b20fd0fd82f3b4b72a3b4c2d3",
+      "source": "https://www.openstreetmap.org/way/1268263386",
+      "reference": "https://www.beijing.gov.cn/renwen/sy/whkb/201803/t20180308_1863253.html"
+    }
+  ],
+  "changed": [
+    {
+      "id": "beijing-jin-reconstruction-outer",
+      "geometryChanged": false,
+      "previousPropertiesSha256": "fa4c842ec5d91a589eb06d473e9716141264541eae274d99c12633c801531a27"
+    },
+    {
+      "id": "beijing-jin-reconstruction-imperial",
+      "geometryChanged": false,
+      "previousPropertiesSha256": "3b4416c2c2fd873e3a6bb5b30e2436e6db60dcc67a190e8c2ed83fa9a265a655"
+    },
+    {
+      "id": "beijing-jin-reconstruction-palace",
+      "geometryChanged": false,
+      "previousPropertiesSha256": "0c894b148f2f0586a2e9565b6fc6411b9ca285d12492f7140744783c7c7de361"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-huicheng-gate",
+      "geometryChanged": false,
+      "previousPropertiesSha256": "3d8ff13102b4e006e1367ed1f66a5b1159b54588b7a9dd738c6fa48713dfd2e6"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-tongxuan-gate",
+      "geometryChanged": false,
+      "previousPropertiesSha256": "53365f0a3e196a09e1b4fcea83d43b75db18973e0dcad690f5e48f990be56255"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-chongzhi-gate",
+      "geometryChanged": false,
+      "previousPropertiesSha256": "c3511e2beb376b8848ca7ce0698e2330d3de21068a75c860cbf669bca7058673"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-guangtai-gate",
+      "geometryChanged": false,
+      "previousPropertiesSha256": "bb18bee13771e6aa96935e4614622efb5fecd256838317e064ecf305a9c0c881"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-shiren-gate",
+      "geometryChanged": false,
+      "previousPropertiesSha256": "9efdab636bf8205a0717d5a78d3f02c671cc6d99d90f05bab02060318b4e6e37"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-xuanyao-gate",
+      "geometryChanged": false,
+      "previousPropertiesSha256": "084a85d56419421e047b2b01cce681eb306abc53ddd39cae16fcfe3d0c652aad"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-yangchun-gate",
+      "geometryChanged": false,
+      "previousPropertiesSha256": "7668badfda125abb64e37e748fb4abd33f47ab6631220b80f70e29ab36a729c3"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-jingfeng-gate",
+      "geometryChanged": false,
+      "previousPropertiesSha256": "c09a54b6586c049947baefd7a7457f43b0281155d655489be7534a0bb7783392"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-fengyi-gate",
+      "geometryChanged": false,
+      "previousPropertiesSha256": "a9b1cbc109e094746fdc6fed4c236071c2c636ba99e47842256220615d77f460"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-duanli-gate",
+      "geometryChanged": false,
+      "previousPropertiesSha256": "98385d7a9504e65d3a8cc026c69083460f5e5d937068801fd478755cd9ca2557"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-lize-gate",
+      "geometryChanged": false,
+      "previousPropertiesSha256": "e45891ae798d53490430f912a2890e1a36861b420ee645bc14a3b4a6bafea75b"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-haohua-gate",
+      "geometryChanged": false,
+      "previousPropertiesSha256": "8d9f5a38dce91f321707f52d0eaad9a2ee1ffa208e6ded98a24a65d3ab4f7660"
+    },
+    {
+      "id": "beijing-jin-reconstruction-gate-zhangyi-gate",
+      "geometryChanged": false,
+      "previousPropertiesSha256": "1f23698b61c46115f0056ab2a1be8a32138df362db84d67b73a5203abdb648c2"
+    }
+  ],
+  "calibration": {
+    "completed": false,
+    "geometryMoved": false,
+    "anchors": [
+      "高楼村西城墙：未取得测绘控制点",
+      "万泉寺南城墙：未取得测绘控制点",
+      "凤凰嘴南城墙：未取得遗迹中心线坐标",
+      "水关：仍为现代保护建筑中心参照",
+      "端礼门：旧图点不是2024发掘坐标"
+    ],
+    "newResearch": "https://xbna.pku.edu.cn/fileup/0479-8023/HTML/2026-1-114.html",
+    "newResearchUse": "图1及正文用于丽泽西南城垣地域复核，不将标注框、取样区、公园地块或地层剖面误作城墙轮廓",
+    "rejectedGateFit": "官方照明规划图标直接拟合存在数百米偏移，未用于生产数据"
+  },
+  "unchangedCount": 838,
+  "unchangedSha256": "265a29894646a44512a179a6601bc6b7f6dcda3eafe1c3e769889735547dec99",
+  "totalFeatures": 861
+}
