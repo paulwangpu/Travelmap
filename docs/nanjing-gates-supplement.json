@@ -1,0 +1,375 @@
+{
+  "date": "2026-10-21",
+  "beforeCount": 15,
+  "afterCount": 20,
+  "beforeFeatures": [
+    {
+      "sourceId": "nanjing-osm-ming-citywall-lines",
+      "sha256": "e6b424edcc2836f6acd36d9480c88a963bdaa7fc24331a9b97762fced2d2e3dd"
+    },
+    {
+      "sourceId": "nanjing-osm-ming-wall-bodies",
+      "sha256": "b17beaf5b5fce082ac14b88ade2d3677f14b4eb6cf95b8870cccd5eea5c842da"
+    },
+    {
+      "sourceId": "nanjing-osm-relation-20427375",
+      "sha256": "c368715d3da906a58c1ec396e83f6838f65b5a9ff0c2c2c51b0ff79b54495657"
+    },
+    {
+      "sourceId": "nanjing-osm-way-446638898",
+      "sha256": "fad43647de779c8ac0af944f4e2708808513ffc74816f644aba00a52744e5cc2"
+    },
+    {
+      "sourceId": "nanjing-osm-way-791233540",
+      "sha256": "274973f5ae8eff386585f1ae3a106ce12564c7b2b0f581da2ef0040da23243ca"
+    },
+    {
+      "sourceId": "nanjing-osm-way-319997028",
+      "sha256": "173d3ac8725848e139415d672da23e307009c5fc67b5e8eb53d5b278592e65a4"
+    },
+    {
+      "sourceId": "nanjing-osm-way-625734601",
+      "sha256": "0bfe7a77bca0171d4fd6410a87f10004d1615c66d1b0ec39b6f32aac3fce1ec8"
+    },
+    {
+      "sourceId": "nanjing-osm-way-461035550",
+      "sha256": "e02b0c453eed3739538693c5aa8ff80bdc9953ea1fdf9e2a3c977760774c0c3c"
+    },
+    {
+      "sourceId": "nanjing-osm-relation-11308636",
+      "sha256": "8f92f2fd985ff537ca30df01f9c9014d0517caa80f91414e62822ad9d127cb3b"
+    },
+    {
+      "sourceId": "nanjing-archaeology-display-1061577687",
+      "sha256": "8929a2458a5cfbee0cb494a082838454d466a526caabccc320dfaf7030d9736d"
+    },
+    {
+      "sourceId": "nanjing-archaeology-display-94327966",
+      "sha256": "792f05b4e3864d06ef2c86fc52ccf01a15d2cc4d62f3d8d052d478f16c60c3e7"
+    },
+    {
+      "sourceId": "nanjing-plan-detail-4",
+      "sha256": "0d759fa2154549968d01c0af78bd9d7eddc94a88a12d8f1ed1ae64912eae3fd2"
+    },
+    {
+      "sourceId": "nanjing-plan-detail-5",
+      "sha256": "d3b13bdd3620e11b5a31481183c67c733e647e3ce3613873762fdc9d724a9b32"
+    },
+    {
+      "sourceId": "nanjing-water-way-88806258",
+      "sha256": "7f0c4099eb09ce1d55c12263beff47ba2218db62223752ac8a1943561e96d6b7"
+    },
+    {
+      "sourceId": "nanjing-water-way-697970987",
+      "sha256": "9400849364ae180787021ffe3bf529432498c8be7ba706c4af548d35269d6edd"
+    }
+  ],
+  "addedFeatures": [
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "period": "明",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingGateSupplement": true,
+        "sourceId": "nanjing-osm-node-5907900964",
+        "sourceName": "清凉门（现存门洞参照）",
+        "label": "清凉门",
+        "labelMinZoom": 12,
+        "sitePoint": true,
+        "sourceTitle": "南京城门：历史身份、现状与定位说明",
+        "sourceUrl": "https://www.openstreetmap.org/node/5907900964",
+        "referenceUrl": "https://dawww.nju.edu.cn/info/1171/72781.htm",
+        "osm": true,
+        "sourceIds": [
+          "node/5907900964"
+        ],
+        "status": "现存城门通道位置参照 · 非完整门基轮廓",
+        "note": "明代京城十三门之一。采用原始OSM通道节点，不采用附近同名艺术装置；与南京大学档案馆文章所列清凉门内口位置相互核对。该文未说明坐标基准，不能据两点接近声称测量精度。未取得可核实的完整门基矢量。"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.75202,
+          32.0497575
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "period": "明",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingGateSupplement": true,
+        "sourceId": "nanjing-gate-shence-location",
+        "sourceName": "神策门（门址位置参照）",
+        "label": "神策门",
+        "labelMinZoom": 12,
+        "sitePoint": true,
+        "sourceTitle": "南京城门：历史身份、现状与定位说明",
+        "sourceUrl": "./sources/nanjing.html#gates",
+        "referenceUrl": "https://zh.wikipedia.org/wiki/神策门",
+        "status": "现存城门位置参照 · 非门基测绘边界",
+        "identitySource": "https://dag.nanjing.gov.cn/dawh/dags/202507/P020250701384673287176.pdf",
+        "coordinateSource": "https://zh.wikipedia.org/wiki/神策门",
+        "note": "明代京城十三门之一。官方城墙资料核实历史身份；点位采用神策门条目的公开坐标，非考古测量点。周边原始城墙段另行保留；不将神策门公园用地作为城门或瓮城范围。完整门基与瓮城轮廓待核。"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.781825,
+          32.09051944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "period": "明",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingGateSupplement": true,
+        "sourceId": "nanjing-osm-node-5833639986",
+        "sourceName": "太平门（现状位置参照）",
+        "label": "太平门",
+        "labelMinZoom": 12,
+        "sitePoint": true,
+        "sourceTitle": "南京城门：历史身份、现状与定位说明",
+        "sourceUrl": "https://www.openstreetmap.org/node/5833639986",
+        "referenceUrl": "https://dag.nanjing.gov.cn/dawh/dags/202507/P020250701384673287176.pdf",
+        "osm": true,
+        "sourceIds": [
+          "node/5833639986"
+        ],
+        "status": "城门地段现状位置参照 · 非明代原门基轮廓",
+        "note": "明代京城十三门之一。点位沿用OSM太平门观景节点，只作现状位置参照，不表示原门基实测中心，不补画缺少依据的瓮城边界。明代分类表达城门沿革，不能据此将后世修复建筑定为明代原构。"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.8078746,
+          32.0600263
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "period": "明",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingGateSupplement": true,
+        "sourceId": "nanjing-osm-way-859591128",
+        "sourceName": "朝阳门地段／中山门（近代改建现状）",
+        "label": "中山门\n（朝阳门地段）",
+        "labelMinZoom": 12,
+        "sitePoint": false,
+        "sourceTitle": "南京城门：历史身份、现状与定位说明",
+        "sourceUrl": "https://www.openstreetmap.org/way/859591128",
+        "referenceUrl": "https://dfz.nanjing.gov.cn/gzdt/202607/t20260703_5871076.html",
+        "osm": true,
+        "sourceIds": [
+          "way/859591128"
+        ],
+        "status": "原始OSM现状门体轮廓 · 近代改建，非明代原门形制",
+        "note": "此地段对应明代朝阳门沿革。1928年拆除朝阳门瓮城并改建三孔中山门。所显示面仅为当前门体原始OSM轮廓，保留闭合填充；不是原明代朝阳门或瓮城边界。明代筛选表示历史城门地段关联，现存形制为近代改建。旧门精确门基及其与现门的位置关系仍待考古图核实。"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.8221628,
+              32.0405894
+            ],
+            [
+              118.8220271,
+              32.040597
+            ],
+            [
+              118.8220379,
+              32.0407361
+            ],
+            [
+              118.8220452,
+              32.0408297
+            ],
+            [
+              118.8220476,
+              32.0408614
+            ],
+            [
+              118.8220544,
+              32.0409485
+            ],
+            [
+              118.8220664,
+              32.0411031
+            ],
+            [
+              118.822202,
+              32.0410956
+            ],
+            [
+              118.8221903,
+              32.0409447
+            ],
+            [
+              118.8221834,
+              32.0408555
+            ],
+            [
+              118.8221805,
+              32.0408175
+            ],
+            [
+              118.8221731,
+              32.0407221
+            ],
+            [
+              118.8221628,
+              32.0405894
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "period": "明",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingGateSupplement": true,
+        "sourceId": "nanjing-osm-node-5335246224",
+        "sourceName": "东水关（现存遗迹参照）",
+        "label": "东水关",
+        "labelMinZoom": 12,
+        "sitePoint": true,
+        "sourceTitle": "南京城门：历史身份、现状与定位说明",
+        "sourceUrl": "https://www.openstreetmap.org/node/5335246224",
+        "referenceUrl": "https://wlj.nanjing.gov.cn/ztzl/mcq/gzqk/202404/t20240426_4644502.html",
+        "osm": true,
+        "sourceIds": [
+          "node/5335246224"
+        ],
+        "status": "水关遗迹原始OSM位置参照 · 非遗址公园边界",
+        "note": "秦淮河东入城水关，沿革早于明代，明代城防继续沿用、修缮。此处按明代城防关联显示，不能理解为始建于明代。保留原始遗迹节点，不将东水关遗址公园用地作为水关建筑或城墙范围。"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.7931805,
+          32.0250904
+        ]
+      }
+    }
+  ],
+  "originalMingThirteen": [
+    {
+      "name": "朝阳门",
+      "status": "added",
+      "sourceId": "nanjing-osm-way-859591128",
+      "note": "中山门现状门体；原门及瓮城范围待核"
+    },
+    {
+      "name": "正阳门",
+      "status": "pending",
+      "sourceId": null,
+      "note": "光华门旧址精确定位待考古图；光华门堡垒为民国设施，未冒充明代门基"
+    },
+    {
+      "name": "通济门",
+      "status": "pending",
+      "sourceId": null,
+      "note": "官方工程坐标与现有地标位置存在疑问，待核对原图坐标基准"
+    },
+    {
+      "name": "聚宝门",
+      "status": "existing",
+      "sourceId": "nanjing-osm-relation-11308636",
+      "note": "中华门城堡原始面及孔洞保留"
+    },
+    {
+      "name": "三山门",
+      "status": "pending",
+      "sourceId": null,
+      "note": "水西门广场节点不足以证明原城门中心，待门址图"
+    },
+    {
+      "name": "石城门",
+      "status": "existing",
+      "sourceId": "nanjing-osm-way-625734601",
+      "note": "汉西门遗迹原始几何保留"
+    },
+    {
+      "name": "清凉门",
+      "status": "added",
+      "sourceId": "nanjing-osm-node-5907900964",
+      "note": "现存门洞节点；完整门基待核"
+    },
+    {
+      "name": "定淮门",
+      "status": "pending",
+      "sourceId": null,
+      "note": "未获得可靠原门址坐标，未以现代同名道路替代"
+    },
+    {
+      "name": "仪凤门",
+      "status": "existing",
+      "sourceId": "nanjing-osm-way-461035550",
+      "note": "修复现状原始轮廓保留"
+    },
+    {
+      "name": "钟阜门",
+      "status": "pending",
+      "sourceId": null,
+      "note": "小北门曾被地图误标为钟阜门，不能替代原门址"
+    },
+    {
+      "name": "金川门",
+      "status": "pending",
+      "sourceId": null,
+      "note": "未获得可靠原门址坐标，未以地名或泵站替代"
+    },
+    {
+      "name": "神策门",
+      "status": "added",
+      "sourceId": "nanjing-gate-shence-location",
+      "note": "城门公开位置参照；瓮城和门基待核"
+    },
+    {
+      "name": "太平门",
+      "status": "added",
+      "sourceId": "nanjing-osm-node-5833639986",
+      "note": "现状节点；原明代门基待核"
+    }
+  ],
+  "sources": [
+    "https://dag.nanjing.gov.cn/dawh/dags/202507/P020250701384673287176.pdf",
+    "https://dawww.nju.edu.cn/info/1171/72781.htm",
+    "https://dfz.nanjing.gov.cn/gzdt/202408/t20240813_4738320.html"
+  ],
+  "note": "Five incremental features; one original modern gate-body polygon and four location references. No park boundary or invented gate footprint. Existing 15 features deeply preserved."
+}

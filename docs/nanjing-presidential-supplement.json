@@ -1,0 +1,474 @@
+{
+  "date": "2026-10-21",
+  "beforeCount": 33,
+  "afterCount": 37,
+  "beforeFeatures": [
+    {
+      "sourceId": "nanjing-osm-ming-citywall-lines",
+      "sha256": "e6b424edcc2836f6acd36d9480c88a963bdaa7fc24331a9b97762fced2d2e3dd"
+    },
+    {
+      "sourceId": "nanjing-osm-ming-wall-bodies",
+      "sha256": "b17beaf5b5fce082ac14b88ade2d3677f14b4eb6cf95b8870cccd5eea5c842da"
+    },
+    {
+      "sourceId": "nanjing-osm-relation-20427375",
+      "sha256": "c368715d3da906a58c1ec396e83f6838f65b5a9ff0c2c2c51b0ff79b54495657"
+    },
+    {
+      "sourceId": "nanjing-osm-way-446638898",
+      "sha256": "fad43647de779c8ac0af944f4e2708808513ffc74816f644aba00a52744e5cc2"
+    },
+    {
+      "sourceId": "nanjing-osm-way-791233540",
+      "sha256": "274973f5ae8eff386585f1ae3a106ce12564c7b2b0f581da2ef0040da23243ca"
+    },
+    {
+      "sourceId": "nanjing-osm-way-319997028",
+      "sha256": "173d3ac8725848e139415d672da23e307009c5fc67b5e8eb53d5b278592e65a4"
+    },
+    {
+      "sourceId": "nanjing-osm-way-625734601",
+      "sha256": "0bfe7a77bca0171d4fd6410a87f10004d1615c66d1b0ec39b6f32aac3fce1ec8"
+    },
+    {
+      "sourceId": "nanjing-osm-way-461035550",
+      "sha256": "e02b0c453eed3739538693c5aa8ff80bdc9953ea1fdf9e2a3c977760774c0c3c"
+    },
+    {
+      "sourceId": "nanjing-osm-relation-11308636",
+      "sha256": "8f92f2fd985ff537ca30df01f9c9014d0517caa80f91414e62822ad9d127cb3b"
+    },
+    {
+      "sourceId": "nanjing-archaeology-display-1061577687",
+      "sha256": "8929a2458a5cfbee0cb494a082838454d466a526caabccc320dfaf7030d9736d"
+    },
+    {
+      "sourceId": "nanjing-archaeology-display-94327966",
+      "sha256": "792f05b4e3864d06ef2c86fc52ccf01a15d2cc4d62f3d8d052d478f16c60c3e7"
+    },
+    {
+      "sourceId": "nanjing-plan-detail-4",
+      "sha256": "0d759fa2154549968d01c0af78bd9d7eddc94a88a12d8f1ed1ae64912eae3fd2"
+    },
+    {
+      "sourceId": "nanjing-plan-detail-5",
+      "sha256": "d3b13bdd3620e11b5a31481183c67c733e647e3ce3613873762fdc9d724a9b32"
+    },
+    {
+      "sourceId": "nanjing-water-way-88806258",
+      "sha256": "7f0c4099eb09ce1d55c12263beff47ba2218db62223752ac8a1943561e96d6b7"
+    },
+    {
+      "sourceId": "nanjing-water-way-697970987",
+      "sha256": "9400849364ae180787021ffe3bf529432498c8be7ba706c4af548d35269d6edd"
+    },
+    {
+      "sourceId": "nanjing-osm-node-5907900964",
+      "sha256": "599a06ac039df8835bd205d8f2e33ad39558243a647de15ace91b5237f619572"
+    },
+    {
+      "sourceId": "nanjing-gate-shence-location",
+      "sha256": "6cd572cf40502e315b495d1f7b6c7e98aab7a837089c4decbbf60642b32ca0b1"
+    },
+    {
+      "sourceId": "nanjing-osm-node-5833639986",
+      "sha256": "8b8f7c52debbad93b11a1132318d3f23a7030db663f09da29f6829404069803a"
+    },
+    {
+      "sourceId": "nanjing-osm-way-859591128",
+      "sha256": "d7cf57334db6ecc469806e97a2b06537ef15edf5bf5e1774adff3070c3b1bd93"
+    },
+    {
+      "sourceId": "nanjing-osm-node-5335246224",
+      "sha256": "65c9d89b3d8bcbde93fe243bc8d39bb0f148095a7957aff27ac9362dd3fde197"
+    },
+    {
+      "sourceId": "nanjing-stone-survey-wall-directions",
+      "sha256": "3bc6dda0b61a15325f2fc6d678b93ddd3afa318880f8c70b416649c2de1373d4"
+    },
+    {
+      "sourceId": "nanjing-stone-tg1-reference",
+      "sha256": "b8a1eecf61fadc8d5fc3b0fee746f431cd027f8272780bd26d0b7157a2264bd1"
+    },
+    {
+      "sourceId": "nanjing-jiankang-dasimamen-reference",
+      "sha256": "319460f65746a8e37e0e72d3a0c1306ad9e086961f025261e59d82f902f31b03"
+    },
+    {
+      "sourceId": "nanjing-jiankang-xuanyangmen-reference",
+      "sha256": "ff4f75e24bad37ade11cc3cabebdfc9bb092f87bc92e99242536bea8a380b07e"
+    },
+    {
+      "sourceId": "nanjing-nantang-east-north-moat",
+      "sha256": "6636590e1cfc9be123d7a553be4a64f9ebc750f23567d61df12375ddc3d9776b"
+    },
+    {
+      "sourceId": "nanjing-nantang-palace-moat-reference",
+      "sha256": "1a28ba0c761e60f12131734d5d298c2be441deac8c874d64f9dc7323fc6f66b5"
+    },
+    {
+      "sourceId": "nanjing-nantang-north-gate-reference",
+      "sha256": "08a77661b45dd79de06cca55eb48eb116d710bbd2d63a65bce59abde493eb537"
+    },
+    {
+      "sourceId": "nanjing-nantang-east-gate-reference",
+      "sha256": "25c299747d94808a4d3eeccc2ddc68a06f6551822559830ef58fdeb54b20ee14"
+    },
+    {
+      "sourceId": "nanjing-nantang-south-gate-reference",
+      "sha256": "9c5d53691cd4b5249be5ae784742af68e5fcac78dc62f2327a9dfc30577cf985"
+    },
+    {
+      "sourceId": "nanjing-nantang-west-gate-reference",
+      "sha256": "99ca73c8a36f1c765c987880492b0d3a9e82043564cdc2bb632bd503c7ca7d5b"
+    },
+    {
+      "sourceId": "nanjing-nantang-palace-south-gate-reference",
+      "sha256": "400008843a2acb39dfe1cf73e8b9b50bb67a771683bd2509543593d905f01ba1"
+    },
+    {
+      "sourceId": "nanjing-nantang-north-wall-vicinity",
+      "sha256": "761a98b5aac1b9da1e634fff3f10b0ec305ea7ec69772ab3d23b64e9a29b2fbc"
+    },
+    {
+      "sourceId": "nanjing-qing-fengrunmen",
+      "sha256": "fb4a1e8565b6a7b5db0a2048a8950df910f04221463377fdb2a77c10cefaaa7c"
+    }
+  ],
+  "capitalCatalogSha256": "3f2044bed7858fa21b18c1adb044fe91bd31ad39e169d5a709ac53ad3bef6324",
+  "existingCapitalRecords": [
+    {
+      "regime": "太平天国",
+      "capitalYears": "1853—1864"
+    },
+    {
+      "regime": "中华民国临时政府",
+      "capitalYears": "1912—1912"
+    },
+    {
+      "regime": "中华民国国民政府",
+      "capitalYears": "1927—1937"
+    },
+    {
+      "regime": "中华民国维新政府",
+      "capitalYears": "1938—1940"
+    },
+    {
+      "regime": "汪精卫国民政府",
+      "capitalYears": "1940—1945"
+    },
+    {
+      "regime": "中华民国政府",
+      "capitalYears": "1946—1949"
+    }
+  ],
+  "addedFeatures": [
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingModernCapital": true,
+        "sourceId": "nanjing-presidential-way-62353727",
+        "sourceName": "天王府遗址／总统府建筑群（现状保护区）",
+        "enSourceName": "Tianwang Palace site / Presidential Palace (present protected area)",
+        "label": "天王府遗址／总统府\n（现状保护区）",
+        "period": "清",
+        "periods": [
+          "清",
+          "近现代"
+        ],
+        "inferredBoundary": true,
+        "fillOpacity": 0.035,
+        "periodNames": {
+          "清": "天王府遗址\n（现状保护区参照）",
+          "近现代": "总统府建筑群\n（现状保护区）"
+        },
+        "labelMinZoom": 12,
+        "osm": true,
+        "sourceUrl": "https://www.openstreetmap.org/way/62353727",
+        "sourceIds": [
+          "way/62353727"
+        ],
+        "referenceUrl": "https://dsb.nanjing.gov.cn/yzyj/201311/t20131114_2083939.html",
+        "backgroundUrl": "./sources/nanjing.html#modern-capitals",
+        "status": "现代文保展示区原始标绘 · 非完整天王府或古城范围",
+        "note": "太平天国于1853年定都天京，天王府设在此地；1864年主体宫殿被焚，后来重建两江总督署。1912年为临时大总统府，之后为国民政府和总统府所在地。此面是OSM所标现状文保展示区，不是完整太平天国天王府或历期宫城、国都边界，不能据现保护区反推1853年宫殿范围。"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.7932596,
+              32.0478767
+            ],
+            [
+              118.7912473,
+              32.0479194
+            ],
+            [
+              118.7907389,
+              32.0456459
+            ],
+            [
+              118.7914507,
+              32.0455307
+            ],
+            [
+              118.7914375,
+              32.0450861
+            ],
+            [
+              118.7914114,
+              32.0449608
+            ],
+            [
+              118.7918942,
+              32.0448409
+            ],
+            [
+              118.7920272,
+              32.0447484
+            ],
+            [
+              118.7921861,
+              32.0447823
+            ],
+            [
+              118.792542,
+              32.0447761
+            ],
+            [
+              118.7926371,
+              32.044729
+            ],
+            [
+              118.7926714,
+              32.0446329
+            ],
+            [
+              118.7931154,
+              32.0445211
+            ],
+            [
+              118.7937042,
+              32.0465333
+            ],
+            [
+              118.7937748,
+              32.0474566
+            ],
+            [
+              118.7933846,
+              32.0475252
+            ],
+            [
+              118.7933153,
+              32.0476791
+            ],
+            [
+              118.7932596,
+              32.0478767
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingModernCapital": true,
+        "sourceId": "nanjing-presidential-way-321096461",
+        "sourceName": "总统府门楼（1929年建筑现状）",
+        "enSourceName": "Presidential Palace front gate (1929)",
+        "label": "总统府门楼",
+        "period": "近现代",
+        "labelMinZoom": 14,
+        "osm": true,
+        "sourceUrl": "https://www.openstreetmap.org/way/321096461",
+        "sourceIds": [
+          "way/321096461"
+        ],
+        "referenceUrl": "https://dfz.nanjing.gov.cn/gzdt/202511/t20251117_5691522.html",
+        "backgroundUrl": "./sources/nanjing.html#modern-capitals",
+        "status": "现存历史建筑原始OSM轮廓 · 非完整宫城",
+        "note": "现门楼于1929年重建。此为原始OSM门楼轮廓，不是太平天国天王府原门楼或明代宫门。旧天王府与总督署入口的沿革在资料中分开说明。"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.7921961,
+              32.0448775
+            ],
+            [
+              118.7921942,
+              32.0448194
+            ],
+            [
+              118.7923395,
+              32.0448158
+            ],
+            [
+              118.7925084,
+              32.0448117
+            ],
+            [
+              118.7925104,
+              32.0448698
+            ],
+            [
+              118.7923421,
+              32.0448739
+            ],
+            [
+              118.7921961,
+              32.0448775
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingModernCapital": true,
+        "sourceId": "nanjing-presidential-way-625069539",
+        "sourceName": "孙中山临时大总统办公室（建筑现状）",
+        "enSourceName": "Sun Yat-sen provisional presidential office",
+        "label": "临时大总统办公室",
+        "period": "近现代",
+        "labelMinZoom": 14,
+        "osm": true,
+        "sourceUrl": "https://www.openstreetmap.org/way/625069539",
+        "sourceIds": [
+          "way/625069539"
+        ],
+        "referenceUrl": "https://dsb.nanjing.gov.cn/yzyj/201311/t20131114_2083939.html",
+        "backgroundUrl": "./sources/nanjing.html#modern-capitals",
+        "status": "现存历史建筑原始OSM轮廓 · 非完整宫城",
+        "note": "1912年孙中山在南京就任临时大总统，办公室位于此处建筑群。采用原始OSM建筑轮廓；这是一处政权中枢建筑，不另设古都根点，不把办公室建筑范围当作全城范围。"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.7909141,
+              32.0463416
+            ],
+            [
+              118.7908789,
+              32.0462128
+            ],
+            [
+              118.7912277,
+              32.0461442
+            ],
+            [
+              118.7912629,
+              32.046273
+            ],
+            [
+              118.7909141,
+              32.0463416
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingModernCapital": true,
+        "sourceId": "nanjing-presidential-way-321096452",
+        "sourceName": "子超楼（国民政府及总统办公楼现状）",
+        "enSourceName": "Zichao Building",
+        "label": "子超楼",
+        "period": "近现代",
+        "labelMinZoom": 14,
+        "osm": true,
+        "sourceUrl": "https://www.openstreetmap.org/way/321096452",
+        "sourceIds": [
+          "way/321096452"
+        ],
+        "referenceUrl": "https://dfz.nanjing.gov.cn/gzdt/202404/t20240424_4215576.html",
+        "backgroundUrl": "./sources/nanjing.html#modern-capitals",
+        "status": "现存历史建筑原始OSM轮廓 · 非完整宫城",
+        "note": "采用原始OSM子超楼建筑轮廓，为国民政府及后来总统办公的相关遗存。民国时期建筑与太平天国天王府分期开列，不将此楼倒定为太平天国宫殿。"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.7922541,
+              32.0469452
+            ],
+            [
+              118.7922476,
+              32.0467445
+            ],
+            [
+              118.7923867,
+              32.0467413
+            ],
+            [
+              118.7924287,
+              32.0467403
+            ],
+            [
+              118.7925846,
+              32.0467367
+            ],
+            [
+              118.792591,
+              32.0469374
+            ],
+            [
+              118.7922541,
+              32.0469452
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "note": "No new capital root or capital record. Palace / office details belong to the existing Nanjing root. Current protected area is not a full historical Tianwang palace boundary.",
+  "validation": {
+    "regressions": 202,
+    "failures": 0,
+    "browser": {
+      "modernOff": true,
+      "sharedOnce": true,
+      "allOff": true
+    },
+    "release": "2.3.4",
+    "published": false
+  }
+}

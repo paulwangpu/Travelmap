@@ -1,0 +1,1547 @@
+{
+  "checkedDate": "2026-10-20",
+  "scope": "加拿大国家／联合省首都及有据殖民地首府；不把普通省府混称国家都城。",
+  "baseline": {
+    "roots": 508,
+    "records": 748,
+    "sites": 425,
+    "features": 2782
+  },
+  "added": {
+    "roots": 6,
+    "records": 13,
+    "sites": 16,
+    "features": 103
+  },
+  "counts": {
+    "roots": 514,
+    "records": 761,
+    "sites": 441,
+    "features": 2885
+  },
+  "preservation": {
+    "roots": "0b7401ae41cdd82855f17452fb787105d174616cb4e43a6063632eda898692ac",
+    "records": "4f8858f4166142d30fb72ea02abbcdd23697de631812860c6a8fcba6cbf2e668",
+    "sites": "625c10bf3b870d28240b36ffe84c3000199d685b115b28d36a6d4e15bee80a51",
+    "features": "f111354aa476a9c0df9226001810dd1a525f1d9597e2d0e0630bd2825e51314a",
+    "heritage": "70697e07f2b5497e81d95765927f28bcda602bfaad4029f20017ac142b174cae"
+  },
+  "rows": [
+    {
+      "key": "canada-ottawa",
+      "osmKey": "ottawa",
+      "name": "渥太华",
+      "enName": "Ottawa",
+      "center": [
+        -75.699,
+        45.4248
+      ],
+      "identity": "capital",
+      "identityLabel": "加拿大首都",
+      "identityEnLabel": "Capital of Canada",
+      "url": "https://www.canada.ca/en/privy-council/services/about-cabinet/cabinet-then-now.html",
+      "terms": [
+        [
+          1866,
+          1867,
+          "加拿大联合省",
+          "加拿大联合省首都"
+        ],
+        [
+          1867,
+          null,
+          "加拿大",
+          "加拿大首都"
+        ]
+      ],
+      "note": "1857年选定，1866年政府迁入，1867年联邦成立后为加拿大首都。国会山不是宫城或环城墙。",
+      "enNote": "Chosen in 1857; government moved in 1866; federal capital since 1867. Parliament Hill is not a walled palace or city enclosure.",
+      "years": "1866—1867、1867—今",
+      "periods": [
+        "清",
+        "近现代"
+      ],
+      "boundaryStatus": "已接入实际城防或建筑；完整分期城界待核。",
+      "features": [
+        {
+          "id": "canada-ottawa-way-68588665",
+          "name": "加拿大国会中央大楼（现状建筑）",
+          "type": "Polygon",
+          "scope": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/68588665",
+          "geometrySha256": "cbcd74901d08e32a3e5369b46c9a8ac41a5515eae01611073c582d3dc1fde6e9",
+          "referenceUrl": "https://www.canada.ca/en/privy-council/services/about-cabinet/cabinet-then-now.html"
+        },
+        {
+          "id": "canada-ottawa-way-68588556",
+          "name": "加拿大国会西区大楼",
+          "type": "Polygon",
+          "scope": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/68588556",
+          "geometrySha256": "d7eca2b57402ed580d4d2b7b62ac2364ff6743edb0614fbed35b438c7add12ff",
+          "referenceUrl": "https://www.canada.ca/en/privy-council/services/about-cabinet/cabinet-then-now.html"
+        },
+        {
+          "id": "canada-ottawa-relation-2187815",
+          "name": "加拿大国会东区大楼",
+          "type": "Polygon",
+          "scope": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/2187815",
+          "geometrySha256": "a5dfaa3638472db52f4959897f38aba3caeb1d49ea63077203593763534a2979",
+          "referenceUrl": "https://www.canada.ca/en/privy-council/services/about-cabinet/cabinet-then-now.html"
+        }
+      ]
+    },
+    {
+      "key": "canada-quebec",
+      "osmKey": "quebec",
+      "name": "魁北克城",
+      "enName": "Québec City",
+      "center": [
+        -71.2106,
+        46.80944
+      ],
+      "identity": "capital",
+      "identityLabel": "新法兰西首府／加拿大联合省首都",
+      "identityEnLabel": "Capital of New France and the Province of Canada",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1637",
+      "terms": [
+        [
+          1608,
+          1763,
+          "新法兰西",
+          "殖民地首府"
+        ],
+        [
+          1763,
+          1791,
+          "英属魁北克省",
+          "殖民地首府"
+        ],
+        [
+          1791,
+          1841,
+          "下加拿大",
+          "殖民地首府"
+        ],
+        [
+          1852,
+          1856,
+          "加拿大联合省",
+          "轮驻首都"
+        ],
+        [
+          1860,
+          1866,
+          "加拿大联合省",
+          "轮驻首都"
+        ]
+      ],
+      "note": "同一城址分列殖民地与联合省首都时期。只接入实物城防段及圣路易堡宫遗迹；世界遗产区不作全城墙。圣路易门等含19世纪改建。",
+      "enNote": "Colonial and united-province periods are separate. Surviving fortifications and Saint-Louis ruins are distinct from the UNESCO property; gates include later rebuilding.",
+      "years": "1608—1763、1763—1791、1791—1841、1852—1856、1860—1866",
+      "periods": [
+        "明",
+        "清"
+      ],
+      "boundaryStatus": "已接入实际城防或建筑；完整分期城界待核。",
+      "features": [
+        {
+          "id": "canada-quebec-way-148301142",
+          "name": "圣路易堡与总督宫遗迹",
+          "type": "Polygon",
+          "scope": "mapped_archaeological_remains",
+          "sourceUrl": "https://www.openstreetmap.org/way/148301142",
+          "geometrySha256": "f81e5aeb6f08c7a772bfe5e6b805677ca09e64dc2a1cb44a24231916b27d7027",
+          "referenceUrl": "https://www.pc.gc.ca/fr/lhn-nhs/qc/saintlouisforts"
+        },
+        {
+          "id": "canada-quebec-way-319131864",
+          "name": "波塔斯棱堡",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/319131864",
+          "geometrySha256": "7e49635e02c962e6b271c9e0d455a63d0cd50780746cd175dd00ac620f87c922",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-392156880",
+          "name": "里士满棱堡",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/392156880",
+          "geometrySha256": "8b2d5dd9031f0073afe493a12eef8d2900b9764323871df50dba1971590b89aa",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-392156882",
+          "name": "第二三角堡",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/392156882",
+          "geometrySha256": "24b0d7927735c6c2e5f73026bd1a8880c0212708d22dae58f48a208e6686004e",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-392156885",
+          "name": "第三三角堡",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/392156885",
+          "geometrySha256": "49032a3705edf8157ecfe6ceebb2155bd777ca2264283ee648c0930cb424f67f",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-392156886",
+          "name": "第一三角堡",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/392156886",
+          "geometrySha256": "c265c31a9ca13c3a8c35e37b974934ef05ba56255e54b4816f8d36fbc912f308",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-392156888",
+          "name": "新月堡",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/392156888",
+          "geometrySha256": "7535ee602d9949fbae34d382090a282701704d050eac540a8d1caa022e8c4706",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-392312497",
+          "name": "魁北克城防墙体",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/392312497",
+          "geometrySha256": "90913ac02683d2ca12ab0a18ae12f8805616a98d467916b6f15f3c58b778c679",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-392312499",
+          "name": "魁北克城防墙体",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/392312499",
+          "geometrySha256": "f9cd1ff28fe6ab792fca71a9522ac075c11ae863f962be352cc488d25df05ebc",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-392319994",
+          "name": "第六棱堡",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/392319994",
+          "geometrySha256": "0fad1adb2035337202426a99201cbb182a968fa4464848ef95a53a280f590f2c",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-392335696",
+          "name": "皇家炮台城墙",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/392335696",
+          "geometrySha256": "9b7fda40068b8cf3922f46108b1966078cd639d6f1a2db3569fc33c6e73fcf4b",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-392340458",
+          "name": "圣路易棱堡",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/392340458",
+          "geometrySha256": "0da4a73194463690b41573576a83155c7436480c8a87612f17145c18904cb984",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-392494237",
+          "name": "圣厄休拉棱堡",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/392494237",
+          "geometrySha256": "b619a1c162b8249d083e3aaad4d4be220670dd014f28211c839cdba138bacad0",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-392494252",
+          "name": "圣让棱堡",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/392494252",
+          "geometrySha256": "64b7f64c28e59d0c5c90d09023bf52d0a7e45ea473b8f5e48c14bb2713f3bb8f",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553473328",
+          "name": "国王棱堡",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553473328",
+          "geometrySha256": "5d10faca40e0b28ba2d1237ef76a59d2b489346a63d6951f0a88c48f06af4b95",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553473333",
+          "name": "曼恩棱堡",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553473333",
+          "geometrySha256": "ba12e96e41cd6f84b0b78951559834e1e1731e9081689090005d3f6f33217257",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553473334",
+          "name": "威尔士亲王棱堡",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553473334",
+          "geometrySha256": "eb6215be90f1c83bea785c11b7262c5698f607be2c451f432055818837048d1f",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553473335",
+          "name": "魁北克城防墙体",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553473335",
+          "geometrySha256": "8934889a74c7104ed650b8a52a613c4e280cb64642acc32fe0f95ecd499b74bd",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553473336",
+          "name": "达尔豪西棱堡",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553473336",
+          "geometrySha256": "56c6871b03d69b5e490892ff041713e9a8380249c6389e9728602f1bb36f89e8",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553473337",
+          "name": "魁北克城防墙体",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553473337",
+          "geometrySha256": "73b7dbd5bc64e4321661112b563907bf7228b057c2a8a59115ea7a07d38227a9",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553473339",
+          "name": "魁北克城防墙体",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553473339",
+          "geometrySha256": "2f3b623556237bdc1e79868efc064c61c3a96ab895725d86b8a236aaf6df4e14",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553473340",
+          "name": "魁北克城防墙体",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553473340",
+          "geometrySha256": "fa320128d5c424948845a68ae6af055cee7e8ae98214ad9f83a328cfcf1d8fc8",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553495954",
+          "name": "魁北克城防墙体",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553495954",
+          "geometrySha256": "c117f764a356146e97f50bc79d552f70675f28a368cdb13b257dfe7058d927a5",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553495955",
+          "name": "魁北克城防墙体",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553495955",
+          "geometrySha256": "e3d4fc5810820e421870a792f8c45aecf9d66146de50d864bf786cf78336e34d",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553495959",
+          "name": "魁北克城防墙体",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553495959",
+          "geometrySha256": "220c3a41383ef899f294b20795996253db6f069070902446d5380b27cc53d159",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553495960",
+          "name": "魁北克城防墙体",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553495960",
+          "geometrySha256": "e419603b7b1fa0dd948c2b9f2dfddc2421c3d6707fc65456c8d062429e0f7adc",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553495965",
+          "name": "魁北克城防墙体",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553495965",
+          "geometrySha256": "5c08ae687cfd91b96945e2923a66f247f00929dec09f8c3bd56c9e0dc6c79e0b",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553495966",
+          "name": "魁北克城防墙体",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553495966",
+          "geometrySha256": "18b5815cdcb1ecb6e7a17c7c5a0fde8bdad3d6a449e8aa5c8e627e4a503c091a",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553495967",
+          "name": "魁北克城防墙体",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553495967",
+          "geometrySha256": "d20184c87f41d50823b0735a31c9c35ded88b46179da321d1f25192b691adfe8",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553495968",
+          "name": "魁北克城防墙体",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553495968",
+          "geometrySha256": "ad8ce755e655198e8e99088ac14f7fc6d802a03b679fc035082171c7bcfd3965",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553623813",
+          "name": "魁北克城防墙体",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553623813",
+          "geometrySha256": "1fa85afcf09af2c41804e49312e8d52d92c3c08112b41f781b9b6c82b7e521ff",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553623814",
+          "name": "魁北克城防墙体",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553623814",
+          "geometrySha256": "638b82b69bdbd18e175caff960f212bdc84eef93f95394eaffdd62f923febd8d",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553623815",
+          "name": "魁北克城防墙体",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553623815",
+          "geometrySha256": "d1132514bee421ee26cf9d0c466157990bd21da72c9fefc8d610d074a416615f",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553623816",
+          "name": "魁北克城防墙体",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553623816",
+          "geometrySha256": "5ae6dab6190f7901b8e67bca7d33c903b8c499546abe6cc0315f630f905dd63b",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553645531",
+          "name": "魁北克城防墙体",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553645531",
+          "geometrySha256": "655ffee491bd220353805734495e7de27ea5061c1a9aa16cda6abe9955f0f1eb",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553645532",
+          "name": "魁北克城防墙体",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553645532",
+          "geometrySha256": "8a6e75906b381301361d25241a37592173d7e8ed57557b8cdcd3a0ba45e9ae90",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553645533",
+          "name": "魁北克城防墙体",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553645533",
+          "geometrySha256": "1ff3703b9e199552b8c99d66f2ff0347a395dfae952f40309debf25a5d3763ef",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553645534",
+          "name": "魁北克城防墙体",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553645534",
+          "geometrySha256": "263ffbf2009b64b80d6dfff7b045123456e3fd766fe485e5cb52eeb4ec9db0d5",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553645535",
+          "name": "魁北克城防墙体",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553645535",
+          "geometrySha256": "75bc1238e0b0e6dc71a87031a302ebb9c535b1a4e5bbb8fc30499090b87fa6b5",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553645536",
+          "name": "魁北克城防墙体",
+          "type": "Polygon",
+          "scope": "mapped_wall_footprint",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553645536",
+          "geometrySha256": "ee74df9bca7498ad72ff1ce52c70c4eadf2a3d86f27f79a27cba7a5b962765ae",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553473338",
+          "name": "城堡门（现存门体）",
+          "type": "Polygon",
+          "scope": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553473338",
+          "geometrySha256": "dc8c42d22b5807ab983d7de4ed188bb365c21cba12fa626bda0016154fa075f5",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553495952",
+          "name": "圣路易门（现存门体）",
+          "type": "Polygon",
+          "scope": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553495952",
+          "geometrySha256": "1b18a539e52b9f673e62d20e1b7e6373538332e5427d0d0296c1fd5646c34e31",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553495958",
+          "name": "肯特门（现存门体）",
+          "type": "Polygon",
+          "scope": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553495958",
+          "geometrySha256": "3594b8294a948589e82fed1506f7688db797ce957dbc49ae1a18477a431aff5c",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-way-1553495961",
+          "name": "圣让门（现存门体）",
+          "type": "Polygon",
+          "scope": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/1553495961",
+          "geometrySha256": "be00491d67ea44d04c079e2ad450376b6ba0fe09dffc9c432a0ff3d22b713031",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=680"
+        },
+        {
+          "id": "canada-quebec-relation-196002",
+          "name": "魁北克省议会大厦（后建建筑）",
+          "type": "Polygon",
+          "scope": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/196002",
+          "geometrySha256": "4b76e0478ab74f6e9645bf10222036c5a33e9394865a8e826c37f77557ee2fd6",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1637"
+        }
+      ],
+      "additionalSources": [
+        "https://whc.unesco.org/en/list/300/",
+        "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1974"
+      ]
+    },
+    {
+      "key": "canada-kingston",
+      "osmKey": "kingston",
+      "name": "金斯顿",
+      "enName": "Kingston",
+      "center": [
+        -76.4951,
+        44.2225
+      ],
+      "identity": "capital",
+      "identityLabel": "加拿大联合省首都",
+      "identityEnLabel": "Capital of the Province of Canada",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1637",
+      "terms": [
+        [
+          1841,
+          1843,
+          "加拿大联合省",
+          "首都"
+        ]
+      ],
+      "note": "联合省议会最初在当时的医院举行。亨利堡、弗雷德里克塔和绍尔塔属于港防体系，不能围成全城墙。",
+      "enNote": "First united-province parliament met in the then hospital. Fort Henry and harbour towers are separate defences, not a city circuit.",
+      "years": "1841—1843",
+      "periods": [
+        "清"
+      ],
+      "boundaryStatus": "已接入实际城防或建筑；完整分期城界待核。",
+      "features": [
+        {
+          "id": "canada-kingston-way-197094943",
+          "name": "默尼塔",
+          "type": "Polygon",
+          "scope": "mapped_fort_enclosure",
+          "sourceUrl": "https://www.openstreetmap.org/way/197094943",
+          "geometrySha256": "a3efd4bdf5799ce7caa57260a8f4124a2ff5b89a2dad0b0b8575b482df3d2927",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1741"
+        },
+        {
+          "id": "canada-kingston-way-204165773",
+          "name": "弗雷德里克塔",
+          "type": "Polygon",
+          "scope": "mapped_fort_enclosure",
+          "sourceUrl": "https://www.openstreetmap.org/way/204165773",
+          "geometrySha256": "b7dbd173a93bb961f92e283d10cea2c3d91a5d9cc06707bb6b572e301626e143",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1741"
+        },
+        {
+          "id": "canada-kingston-way-388502926",
+          "name": "绍尔塔",
+          "type": "Polygon",
+          "scope": "mapped_fort_enclosure",
+          "sourceUrl": "https://www.openstreetmap.org/way/388502926",
+          "geometrySha256": "cf7f6c9d81252a3289ab115c180fe24f55008f7f21e3788cece8833ef7fa100b",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1741"
+        },
+        {
+          "id": "canada-kingston-way-388503847",
+          "name": "亨利堡城防墙体",
+          "type": "LineString",
+          "scope": "original_open_wall",
+          "sourceUrl": "https://www.openstreetmap.org/way/388503847",
+          "geometrySha256": "2815eaf096268acbc2bf0458de70030180b3ef95ceffb355a79691676f8f1280",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=393"
+        },
+        {
+          "id": "canada-kingston-way-995914151",
+          "name": "亨利堡城防墙体",
+          "type": "LineString",
+          "scope": "original_open_wall",
+          "sourceUrl": "https://www.openstreetmap.org/way/995914151",
+          "geometrySha256": "a21d0bc1c9c41f30f4d453ba4d32a7d432c6f86bf42235d5a703c06093edcc05",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=393"
+        },
+        {
+          "id": "canada-kingston-way-995914152",
+          "name": "亨利堡城防墙体",
+          "type": "LineString",
+          "scope": "original_open_wall",
+          "sourceUrl": "https://www.openstreetmap.org/way/995914152",
+          "geometrySha256": "03504130903c3089913879ca7205c82818032613f4a60819a03e48d688dea8e2",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=393"
+        },
+        {
+          "id": "canada-kingston-relation-286910",
+          "name": "亨利堡（现存标绘）",
+          "type": "Polygon",
+          "scope": "mapped_fort_enclosure",
+          "sourceUrl": "https://www.openstreetmap.org/relation/286910",
+          "geometrySha256": "22f885bc1770396e11650058d233a2a192728d2ecf45e9bd3fb775a129aa3dc7",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=393"
+        }
+      ]
+    },
+    {
+      "key": "canada-montreal",
+      "osmKey": "montreal",
+      "name": "蒙特利尔",
+      "enName": "Montréal",
+      "center": [
+        -73.5567,
+        45.5003
+      ],
+      "identity": "capital",
+      "identityLabel": "加拿大联合省首都",
+      "identityEnLabel": "Capital of the Province of Canada",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1637",
+      "terms": [
+        [
+          1844,
+          1849,
+          "加拿大联合省",
+          "政府与议会所在地"
+        ]
+      ],
+      "note": "1849年议会大厦被焚；旧议会遗址与早期殖民城墙不是同一年代。未接入现代广场作为古代城郭。",
+      "enNote": "Parliament burned in 1849. The former parliament site and colonial walls belong to different phases; a modern square is not a city boundary.",
+      "years": "1844—1849",
+      "periods": [
+        "清"
+      ],
+      "boundaryStatus": "已接入实际城防或建筑；完整分期城界待核。",
+      "features": [
+        {
+          "id": "canada-montreal-way-108705301",
+          "name": "蒙特利尔旧城墙遗迹",
+          "type": "LineString",
+          "scope": "original_open_wall",
+          "sourceUrl": "https://www.openstreetmap.org/way/108705301",
+          "geometrySha256": "29010767214067d17780821cc83673796f424dd608fbf4f18c67503c392c8ad1",
+          "referenceUrl": "https://www.patrimoine-culturel.gouv.qc.ca/rpcq/detail.do?id=116983&methode=consulter&type=bien"
+        },
+        {
+          "id": "canada-montreal-way-108705326",
+          "name": "蒙特利尔旧城墙遗迹",
+          "type": "LineString",
+          "scope": "original_open_wall",
+          "sourceUrl": "https://www.openstreetmap.org/way/108705326",
+          "geometrySha256": "7619a04c4f0f39f0144b481db3f2136b5c2292f7c44380fa7d90f0969e828ed3",
+          "referenceUrl": "https://www.patrimoine-culturel.gouv.qc.ca/rpcq/detail.do?id=116983&methode=consulter&type=bien"
+        }
+      ]
+    },
+    {
+      "key": "canada-toronto",
+      "osmKey": "toronto",
+      "name": "多伦多（约克）",
+      "enName": "Toronto (York)",
+      "center": [
+        -79.387,
+        43.645
+      ],
+      "identity": "capital",
+      "identityLabel": "上加拿大首府／加拿大联合省首都",
+      "identityEnLabel": "Upper Canada capital and Province of Canada capital",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1637",
+      "terms": [
+        [
+          1797,
+          1841,
+          "上加拿大",
+          "殖民地首府"
+        ],
+        [
+          1850,
+          1851,
+          "加拿大联合省",
+          "轮驻首都"
+        ],
+        [
+          1856,
+          1859,
+          "加拿大联合省",
+          "轮驻首都"
+        ]
+      ],
+      "note": "现多伦多城址，约克为旧称。联合省年份按加拿大公园局议会会期记录；旧议会不在今天安大略省议会大厦。约克堡是独立防御据点。",
+      "enNote": "York is the former name of this city. United-province dates follow Parks Canada parliamentary sessions; the old legislature is not the modern Ontario legislature. Fort York is a separate defence.",
+      "years": "1797—1841、1850—1851、1856—1859",
+      "periods": [
+        "清"
+      ],
+      "boundaryStatus": "已接入实际城防或建筑；完整分期城界待核。",
+      "features": [
+        {
+          "id": "canada-toronto-way-1416813033",
+          "name": "约克堡（现存堡垒标绘）",
+          "type": "Polygon",
+          "scope": "mapped_fort_enclosure",
+          "sourceUrl": "https://www.openstreetmap.org/way/1416813033",
+          "geometrySha256": "afaeb05329bf18b5525e5e48a83901e7d1b44da545c02685c96c613e5d3d2c9e",
+          "referenceUrl": "https://www.toronto.ca/explore-enjoy/history-art-culture/museums/fort-york-national-historic-site/"
+        }
+      ]
+    },
+    {
+      "key": "canada-stjohns",
+      "osmKey": "stjohns",
+      "name": "圣约翰斯",
+      "enName": "St. John’s",
+      "center": [
+        -52.7006,
+        47.5708
+      ],
+      "identity": "capital",
+      "identityLabel": "纽芬兰自治领首都",
+      "identityEnLabel": "Capital of the Dominion of Newfoundland",
+      "url": "https://www.assembly.nl.ca/VisitLearn/History.aspx",
+      "terms": [
+        [
+          1907,
+          1949,
+          "纽芬兰自治领",
+          "自治领首都"
+        ]
+      ],
+      "note": "纽芬兰1907年取得自治领称号，1934年暂停责任政府、改行委员会政府，1949年加入加拿大；不混称当时的加拿大国家首都。汤森堡的可靠遗迹墙界尚待核，未把同名现代道路接入为城墙。",
+      "enNote": "Dominion status from 1907; responsible government suspended in 1934; joined Canada in 1949. It was not Canada’s federal capital. Fort Townshend wall geometry remains unverified; the modern road of the same name is excluded.",
+      "years": "1907—1949",
+      "periods": [
+        "清",
+        "近现代"
+      ],
+      "boundaryStatus": "已接入实际城防或建筑；完整分期城界待核。",
+      "features": [
+        {
+          "id": "canada-stjohns-way-39248018",
+          "name": "纽芬兰总督府",
+          "type": "Polygon",
+          "scope": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/39248018",
+          "geometrySha256": "b9317796560ddef9a0b32b49766fd5bc2adb4bb4beae3f3538a9a58dd25b4854",
+          "referenceUrl": "https://www.releases.gov.nl.ca/releases/2009/exec/1030n11.htm"
+        }
+      ],
+      "additionalSources": [
+        "https://www.gov.nl.ca/publicat/royalcomm/Final.pdf",
+        "https://www.releases.gov.nl.ca/releases/1999/exec/0331n02.htm"
+      ]
+    },
+    {
+      "key": "canada-newark",
+      "osmKey": "newark",
+      "name": "纽瓦克（滨湖尼亚加拉）",
+      "enName": "Newark (Niagara-on-the-Lake)",
+      "center": [
+        -79.0616,
+        43.2498
+      ],
+      "identity": "administrative-capital",
+      "identityLabel": "上加拿大殖民地首府",
+      "identityEnLabel": "Capital of colonial Upper Canada",
+      "url": "https://www.notlmuseum.ca/blog/title/the-saga-of-naming-our-town/",
+      "terms": [
+        [
+          1792,
+          1796,
+          "上加拿大",
+          "殖民地首府"
+        ]
+      ],
+      "note": "今滨湖尼亚加拉，不能与美国纽瓦克混淆。按博物馆资料列1792—1796；其后政府迁约克，约克首届议会于1797年召开。乔治堡非全城。",
+      "enNote": "Now Niagara-on-the-Lake, distinct from Newark in the US. Museum dates are 1792–1796; parliament in York opened in 1797. Fort George is not a whole-city boundary.",
+      "years": "1792—1796",
+      "periods": [
+        "清"
+      ],
+      "boundaryStatus": "已接入实际城防或建筑；完整分期城界待核。",
+      "features": [
+        {
+          "id": "canada-newark-way-179550763",
+          "name": "乔治堡（现存与复建堡垒）",
+          "type": "Polygon",
+          "scope": "mapped_fort_enclosure",
+          "sourceUrl": "https://www.openstreetmap.org/way/179550763",
+          "geometrySha256": "48b2806d83c8935d6dfad5be48ee10ae84112c1f4d253d18cb36d0bfa7b3ae8f",
+          "referenceUrl": "https://www.notlmuseum.ca/blog/title/the-saga-of-naming-our-town/"
+        },
+        {
+          "id": "canada-newark-way-363538163",
+          "name": "海军厅（现存建筑）",
+          "type": "Polygon",
+          "scope": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/363538163",
+          "geometrySha256": "3e68513bb673122823fa1da89593a75d2f8eb0a94058acae0a2d5756d2ad9046",
+          "referenceUrl": "https://www.notlmuseum.ca/blog/title/the-saga-of-naming-our-town/"
+        }
+      ]
+    },
+    {
+      "key": "canada-annapolis",
+      "osmKey": "annapolis",
+      "name": "安纳波利斯罗亚尔",
+      "enName": "Annapolis Royal",
+      "center": [
+        -65.5195,
+        44.7409
+      ],
+      "identity": "administrative-capital",
+      "identityLabel": "阿卡迪亚／新斯科舍殖民地首府",
+      "identityEnLabel": "Capital of colonial Acadia and Nova Scotia",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=254",
+      "terms": [
+        [
+          1632,
+          1710,
+          "法属阿卡迪亚",
+          "殖民地首府（间有中断）"
+        ],
+        [
+          1710,
+          1749,
+          "英属新斯科舍",
+          "殖民地首府"
+        ]
+      ],
+      "note": "现安妮堡所在城址，不与1605年在河口另一侧的皇家港居址混为一处。首府地位有战争与迁驻中断；现堡土垒以1702—1708年工事为核心。",
+      "enNote": "Fort Anne townsite, distinct from the 1605 Port-Royal Habitation across the basin. Capital status was interrupted by warfare and relocation; present earthworks centre on the 1702–1708 fort.",
+      "years": "1632—1710、1710—1749",
+      "periods": [
+        "明",
+        "清"
+      ],
+      "boundaryStatus": "已接入实际城防或建筑；完整分期城界待核。",
+      "features": [
+        {
+          "id": "canada-annapolis-way-1500333205",
+          "name": "安妮堡现存土垒",
+          "type": "LineString",
+          "scope": "original_open_earthwork",
+          "sourceUrl": "https://www.openstreetmap.org/way/1500333205",
+          "geometrySha256": "e9e211a56f969ba7417028fe677cbfa735b935ea3ceb952d8094e0609ad90778",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=254"
+        },
+        {
+          "id": "canada-annapolis-way-1500333206",
+          "name": "安妮堡现存土垒",
+          "type": "LineString",
+          "scope": "original_open_earthwork",
+          "sourceUrl": "https://www.openstreetmap.org/way/1500333206",
+          "geometrySha256": "54685cc456f97bccb0ad87187137f704ced91eae185d738bf78c34484333785b",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=254"
+        },
+        {
+          "id": "canada-annapolis-way-1500333207",
+          "name": "安妮堡现存土垒",
+          "type": "LineString",
+          "scope": "original_open_earthwork",
+          "sourceUrl": "https://www.openstreetmap.org/way/1500333207",
+          "geometrySha256": "381dc8d6da055add1dda11165c7b7521702950a9ce3b7d51db87229262fefc20",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=254"
+        },
+        {
+          "id": "canada-annapolis-way-1500333208",
+          "name": "安妮堡现存土垒",
+          "type": "LineString",
+          "scope": "original_open_earthwork",
+          "sourceUrl": "https://www.openstreetmap.org/way/1500333208",
+          "geometrySha256": "2666843de85b5fdde6230080ba8f49d803f66164cb3b12be0e18296e1c2e43c1",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=254"
+        },
+        {
+          "id": "canada-annapolis-way-1500333209",
+          "name": "安妮堡现存土垒",
+          "type": "LineString",
+          "scope": "original_open_earthwork",
+          "sourceUrl": "https://www.openstreetmap.org/way/1500333209",
+          "geometrySha256": "b63d38b7d1d2e16cc8c3c5443d153fee0ab03a3fad0ddb1a2713b5ded205be9e",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=254"
+        },
+        {
+          "id": "canada-annapolis-way-1500333210",
+          "name": "安妮堡现存土垒",
+          "type": "LineString",
+          "scope": "original_open_earthwork",
+          "sourceUrl": "https://www.openstreetmap.org/way/1500333210",
+          "geometrySha256": "da35e24a3d7aed6336f7250f66b7a3df397f845a41f5857e5de51ea2a817f214",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=254"
+        },
+        {
+          "id": "canada-annapolis-way-1500333211",
+          "name": "安妮堡现存土垒",
+          "type": "LineString",
+          "scope": "original_open_earthwork",
+          "sourceUrl": "https://www.openstreetmap.org/way/1500333211",
+          "geometrySha256": "f26d6af4663848e44dea28e077a8dcebca418d53517bc65edaf8fd057278c4a8",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=254"
+        },
+        {
+          "id": "canada-annapolis-way-224753548",
+          "name": "安妮堡军官营房",
+          "type": "Polygon",
+          "scope": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/224753548",
+          "geometrySha256": "d83a82b02b6c5f26b54f025c9a96beeac2d9db7f28fe478c4ff196a32af24138",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=254"
+        },
+        {
+          "id": "canada-annapolis-way-224753549",
+          "name": "安妮堡贝里棱堡火药库",
+          "type": "Polygon",
+          "scope": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/224753549",
+          "geometrySha256": "ebe8dfb635721fd01a8bfba85ad924ec76005bb20334a140c6257d167cae1b23",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=254"
+        },
+        {
+          "id": "canada-annapolis-way-224783015",
+          "name": "安妮堡出击门",
+          "type": "LineString",
+          "scope": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/224783015",
+          "geometrySha256": "28e35a98990ff3b1e50919c09f05566cd18b098e331661972cb8509ebcf0484d",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=254"
+        }
+      ]
+    },
+    {
+      "key": "canada-louisbourg",
+      "osmKey": "louisbourg",
+      "name": "路易斯堡",
+      "enName": "Louisbourg",
+      "center": [
+        -59.986,
+        45.8925
+      ],
+      "identity": "administrative-capital",
+      "identityLabel": "法属皇家岛殖民地首府",
+      "identityEnLabel": "Capital of French Île Royale",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303",
+      "terms": [
+        [
+          1713,
+          1745,
+          "法属皇家岛",
+          "殖民地首府"
+        ],
+        [
+          1749,
+          1758,
+          "法属皇家岛",
+          "殖民地首府"
+        ]
+      ],
+      "note": "1745年与1758年被英军攻占，1760年拆毁工事；1961年起复建部分城镇。接入原始墙线和复建建筑，管理范围不当作完整古城墙。",
+      "enNote": "Captured in 1745 and 1758; defences demolished in 1760; partial reconstruction began in 1961. Original mapped walls and reconstructed structures are distinct from the administrative site boundary.",
+      "years": "1713—1745、1749—1758",
+      "periods": [
+        "清"
+      ],
+      "boundaryStatus": "已接入实际城防或建筑；完整分期城界待核。",
+      "features": [
+        {
+          "id": "canada-louisbourg-way-106991050",
+          "name": "路易斯堡城防墙段（含复建）",
+          "type": "LineString",
+          "scope": "original_open_wall",
+          "sourceUrl": "https://www.openstreetmap.org/way/106991050",
+          "geometrySha256": "0d74ccdda064f50c08ddf3410bf4f2d6c9222374d09bd4dd766105b69ff30819",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303"
+        },
+        {
+          "id": "canada-louisbourg-way-406363144",
+          "name": "路易斯堡城防墙段（含复建）",
+          "type": "LineString",
+          "scope": "original_open_wall",
+          "sourceUrl": "https://www.openstreetmap.org/way/406363144",
+          "geometrySha256": "0306c5533c73d28f305669c471d14359bc59939a11e9621d942acd55f7cc8152",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303"
+        },
+        {
+          "id": "canada-louisbourg-way-406363145",
+          "name": "路易斯堡城防墙段（含复建）",
+          "type": "LineString",
+          "scope": "original_open_wall",
+          "sourceUrl": "https://www.openstreetmap.org/way/406363145",
+          "geometrySha256": "e14a794c3a25c8e21329e9014da5b1f4c2336c2b679fdb61a2231ee3dd3effc2",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303"
+        },
+        {
+          "id": "canada-louisbourg-way-406363146",
+          "name": "路易斯堡城防墙段（含复建）",
+          "type": "LineString",
+          "scope": "original_open_wall",
+          "sourceUrl": "https://www.openstreetmap.org/way/406363146",
+          "geometrySha256": "9ccbd027db0bdd74262d085289f4128b09af3c4c42eccbf27c384a4b393ee17e",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303"
+        },
+        {
+          "id": "canada-louisbourg-way-406363147",
+          "name": "路易斯堡城防墙段（含复建）",
+          "type": "LineString",
+          "scope": "original_open_wall",
+          "sourceUrl": "https://www.openstreetmap.org/way/406363147",
+          "geometrySha256": "1e96d8a9b1522abc3acf68adae8d4c89231364fa18509212cbbec0b31e38f2b2",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303"
+        },
+        {
+          "id": "canada-louisbourg-way-406363149",
+          "name": "路易斯堡城防墙段（含复建）",
+          "type": "LineString",
+          "scope": "original_open_wall",
+          "sourceUrl": "https://www.openstreetmap.org/way/406363149",
+          "geometrySha256": "1a8bad429bb6893496caa1d95720c62284cbb3f508ad204a942a27b0a5ae7e7e",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303"
+        },
+        {
+          "id": "canada-louisbourg-way-406363151",
+          "name": "路易斯堡城防墙段（含复建）",
+          "type": "LineString",
+          "scope": "original_open_wall",
+          "sourceUrl": "https://www.openstreetmap.org/way/406363151",
+          "geometrySha256": "0c9a9963080cc79de7e1ed957da38a468b7de4d90c3fe895577e86c659da55ca",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303"
+        },
+        {
+          "id": "canada-louisbourg-way-406445045",
+          "name": "路易斯堡城防墙段（含复建）",
+          "type": "LineString",
+          "scope": "original_open_wall",
+          "sourceUrl": "https://www.openstreetmap.org/way/406445045",
+          "geometrySha256": "3c907bacc3c1acc523232e99c52799dae0117efb9214ad30ae2b7d3a88e71229",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303"
+        },
+        {
+          "id": "canada-louisbourg-way-406445046",
+          "name": "路易斯堡城防墙段（含复建）",
+          "type": "LineString",
+          "scope": "original_open_wall",
+          "sourceUrl": "https://www.openstreetmap.org/way/406445046",
+          "geometrySha256": "b0023136a8c5774170c20cf539635ca43af29a640664eec80e2abc3a7d6805c4",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303"
+        },
+        {
+          "id": "canada-louisbourg-way-406449824",
+          "name": "路易斯堡城防墙段（含复建）",
+          "type": "LineString",
+          "scope": "original_open_wall",
+          "sourceUrl": "https://www.openstreetmap.org/way/406449824",
+          "geometrySha256": "6a0f02b01ff2b397d2315dfe597c5e50ac3bd3304f8bda9026b352790080c73f",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303"
+        },
+        {
+          "id": "canada-louisbourg-way-406449828",
+          "name": "路易斯堡城防墙段（含复建）",
+          "type": "LineString",
+          "scope": "original_open_wall",
+          "sourceUrl": "https://www.openstreetmap.org/way/406449828",
+          "geometrySha256": "8d1f0154fe14a2527f6db53964e51d0c0b84a00793a37344b27473fc1ed74b46",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303"
+        },
+        {
+          "id": "canada-louisbourg-way-885575908",
+          "name": "路易斯堡城防墙段（含复建）",
+          "type": "LineString",
+          "scope": "original_open_wall",
+          "sourceUrl": "https://www.openstreetmap.org/way/885575908",
+          "geometrySha256": "ed5861aa85a9c9d6a9a9b5200b2c13198f62443c36daf9dd0fd6546f41e8964f",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303"
+        },
+        {
+          "id": "canada-louisbourg-way-885575909",
+          "name": "路易斯堡城防墙段（含复建）",
+          "type": "LineString",
+          "scope": "original_open_wall",
+          "sourceUrl": "https://www.openstreetmap.org/way/885575909",
+          "geometrySha256": "6e631271b4f533b99c9ee01f99a963b2768fcd2bf06ebaa28c62b0e282ae10f5",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303"
+        },
+        {
+          "id": "canada-louisbourg-way-885691204",
+          "name": "路易斯堡城防墙段（含复建）",
+          "type": "LineString",
+          "scope": "original_open_wall",
+          "sourceUrl": "https://www.openstreetmap.org/way/885691204",
+          "geometrySha256": "6b46e9b5f3e866bcc115129c97f2eb5acb5bedc2c35761cf5c0f54cbe26f48e2",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303"
+        },
+        {
+          "id": "canada-louisbourg-way-885691205",
+          "name": "路易斯堡城防墙段（含复建）",
+          "type": "LineString",
+          "scope": "original_open_wall",
+          "sourceUrl": "https://www.openstreetmap.org/way/885691205",
+          "geometrySha256": "560c13455943136acb3e26c7713570494318ddf9e98c34f18ceede933a71776c",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303"
+        },
+        {
+          "id": "canada-louisbourg-way-885691206",
+          "name": "路易斯堡城防墙段（含复建）",
+          "type": "LineString",
+          "scope": "original_open_wall",
+          "sourceUrl": "https://www.openstreetmap.org/way/885691206",
+          "geometrySha256": "91003066749757920c5317b5656fb1aca8799ef212de016f3fcac74a5a339a1d",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303"
+        },
+        {
+          "id": "canada-louisbourg-way-885691207",
+          "name": "路易斯堡城防墙段（含复建）",
+          "type": "LineString",
+          "scope": "original_open_wall",
+          "sourceUrl": "https://www.openstreetmap.org/way/885691207",
+          "geometrySha256": "306c8f9d7f690bb8e8954a53d3b4a08faddd1e46d1020d68b4ce3c7c978ebf81",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303"
+        },
+        {
+          "id": "canada-louisbourg-way-885691208",
+          "name": "路易斯堡城防墙段（含复建）",
+          "type": "LineString",
+          "scope": "original_open_wall",
+          "sourceUrl": "https://www.openstreetmap.org/way/885691208",
+          "geometrySha256": "295ae1eef957fcd346e487e56aeb1184dc3d1fce95d9d13654214a0c1ea8d553",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303"
+        },
+        {
+          "id": "canada-louisbourg-way-962754074",
+          "name": "路易斯堡城防墙段（含复建）",
+          "type": "LineString",
+          "scope": "original_open_wall",
+          "sourceUrl": "https://www.openstreetmap.org/way/962754074",
+          "geometrySha256": "e68edf63672d7703b07e7852d08776813968587f082a0d0afcfd12fe55455037",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303"
+        },
+        {
+          "id": "canada-louisbourg-way-106990540",
+          "name": "路易斯堡国王棱堡（复建）",
+          "type": "Polygon",
+          "scope": "mapped_fort_enclosure",
+          "sourceUrl": "https://www.openstreetmap.org/way/106990540",
+          "geometrySha256": "27f41b9d9489e111e3859dbf67cba5bd10f42106fa53b51f7398d34154e57bc7",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303"
+        },
+        {
+          "id": "canada-louisbourg-way-406360942",
+          "name": "路易斯堡行政官邸（复建）",
+          "type": "Polygon",
+          "scope": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/406360942",
+          "geometrySha256": "9cbc61f5b4d8fa54e85bcbcc329098ff6ba6ce0bcf1a02dc7be14a1512f1060a",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303"
+        },
+        {
+          "id": "canada-louisbourg-way-885691191",
+          "name": "弗雷德里克门（复建）",
+          "type": "Polygon",
+          "scope": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/885691191",
+          "geometrySha256": "8d9d0264618d07ef8bed3d733d9258b7d063a0a42246e215cf6c95f29ed140d7",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303"
+        }
+      ]
+    },
+    {
+      "key": "canada-halifax",
+      "osmKey": "halifax",
+      "name": "哈利法克斯",
+      "enName": "Halifax",
+      "center": [
+        -63.5808,
+        44.6475
+      ],
+      "identity": "administrative-capital",
+      "identityLabel": "新斯科舍殖民地首府",
+      "identityEnLabel": "Capital of colonial Nova Scotia",
+      "url": "https://www.parks.canada.ca/lhn-nhs/ns/halifax/culture/histoire-history/citadelles-4-citadels",
+      "terms": [
+        [
+          1749,
+          1867,
+          "新斯科舍殖民地",
+          "殖民地首府"
+        ]
+      ],
+      "note": "1749年建城并形成政府与军事核心。现星形堡为第四代工事，不等于1749年全城木栅范围。",
+      "enNote": "Founded in 1749 as a colonial government and military centre. The present star fort is the fourth citadel, not the 1749 town palisade.",
+      "years": "1749—1867",
+      "periods": [
+        "清"
+      ],
+      "boundaryStatus": "已接入实际城防或建筑；完整分期城界待核。",
+      "features": [
+        {
+          "id": "canada-halifax-way-1112256004",
+          "name": "哈利法克斯星形堡",
+          "type": "Polygon",
+          "scope": "mapped_fort_enclosure",
+          "sourceUrl": "https://www.openstreetmap.org/way/1112256004",
+          "geometrySha256": "b7229b601ed70da821f2ce29b06b93be77851106342d5c4bd55de9a6983953ca",
+          "referenceUrl": "https://www.parks.canada.ca/lhn-nhs/ns/halifax/culture/histoire-history/citadelles-4-citadels"
+        },
+        {
+          "id": "canada-halifax-way-553574574",
+          "name": "新斯科舍省议会大厦",
+          "type": "Polygon",
+          "scope": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/553574574",
+          "geometrySha256": "a5ad1a69a0cff65d2421ba958c83f4acc51a38cc3ee69e70f3298de114c9a483",
+          "referenceUrl": "https://www.parks.canada.ca/lhn-nhs/ns/halifax/culture/histoire-history/citadelles-4-citadels"
+        },
+        {
+          "id": "canada-halifax-way-96322792",
+          "name": "新斯科舍总督府",
+          "type": "Polygon",
+          "scope": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/96322792",
+          "geometrySha256": "333a0afe2101b215d264ccd9381259d2435131bd3aeac2f03f82b0be5c97d6b3",
+          "referenceUrl": "https://www.parks.canada.ca/lhn-nhs/ns/halifax/culture/histoire-history/citadelles-4-citadels"
+        }
+      ]
+    },
+    {
+      "key": "canada-fredericton",
+      "osmKey": "fredericton",
+      "name": "弗雷德里克顿",
+      "enName": "Fredericton",
+      "center": [
+        -66.638,
+        45.96
+      ],
+      "identity": "administrative-capital",
+      "identityLabel": "新不伦瑞克殖民地首府",
+      "identityEnLabel": "Capital of colonial New Brunswick",
+      "url": "https://www.fredericton.ca/fr/propos-de-fredericton/histoire-et-patrimone-de-la-ville",
+      "terms": [
+        [
+          1785,
+          1867,
+          "新不伦瑞克殖民地",
+          "殖民地首府"
+        ]
+      ],
+      "note": "1785年成为首府。驻军区和后来议会建筑不等于全城城墙。",
+      "enNote": "Capital from 1785. The garrison compound and later legislature do not define a walled city.",
+      "years": "1785—1867",
+      "periods": [
+        "清"
+      ],
+      "boundaryStatus": "已接入实际城防或建筑；完整分期城界待核。",
+      "features": [
+        {
+          "id": "canada-fredericton-relation-20501988",
+          "name": "新不伦瑞克议会大厦（后建建筑）",
+          "type": "Polygon",
+          "scope": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/20501988",
+          "geometrySha256": "1018698f64a293363b5dfe384aa6ab8ac40b23870e3641f924b2671d21d36e7d",
+          "referenceUrl": "https://www.fredericton.ca/fr/propos-de-fredericton/histoire-et-patrimone-de-la-ville"
+        },
+        {
+          "id": "canada-fredericton-relation-16004301",
+          "name": "弗雷德里克顿驻军卫所",
+          "type": "Polygon",
+          "scope": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/16004301",
+          "geometrySha256": "55d4637871e6ab975c8f2f0f77fb5ea9305bfeed6eec06b617effedbdfdef0ef",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=170"
+        }
+      ]
+    },
+    {
+      "key": "canada-charlottetown",
+      "osmKey": "charlottetown",
+      "name": "夏洛特敦",
+      "enName": "Charlottetown",
+      "center": [
+        -63.1264,
+        46.234
+      ],
+      "identity": "administrative-capital",
+      "identityLabel": "圣约翰岛／爱德华王子岛殖民地首府",
+      "identityEnLabel": "Capital of colonial St John’s Island / Prince Edward Island",
+      "url": "https://www.charlottetown.ca/resident_services/heritage/city_history",
+      "terms": [
+        [
+          1768,
+          1873,
+          "圣约翰岛／爱德华王子岛殖民地",
+          "殖民地首府"
+        ]
+      ],
+      "note": "1764年勘测选址、1768年规划；1864年会议在省议会大楼举行，不等于当时加拿大国家首都。此前行政驻地拉茹瓦港另列。",
+      "enNote": "Surveyed in 1764 and laid out in 1768. Hosting the 1864 conference did not make it Canada’s national capital. Earlier Port-la-Joye is separate.",
+      "years": "1768—1873",
+      "periods": [
+        "清"
+      ],
+      "boundaryStatus": "已接入实际城防或建筑；完整分期城界待核。",
+      "features": [
+        {
+          "id": "canada-charlottetown-way-28325869",
+          "name": "爱德华王子岛省议会大厦",
+          "type": "Polygon",
+          "scope": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/28325869",
+          "geometrySha256": "e1f9df8f74494dd2c9f0b63cca55bce188f5e5cbf3d98d5bc097c8aa14592704",
+          "referenceUrl": "https://www.charlottetown.ca/resident_services/heritage/city_history"
+        },
+        {
+          "id": "canada-charlottetown-way-1085313661",
+          "name": "爱德华王子岛总督府",
+          "type": "Polygon",
+          "scope": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/way/1085313661",
+          "geometrySha256": "d1eecbfe1136b5c873d2a9e7e1e70aaf3c48071bb2f6eb7f619bbddf79a1971c",
+          "referenceUrl": "https://www.charlottetown.ca/resident_services/heritage/city_history"
+        }
+      ]
+    },
+    {
+      "key": "canada-newwestminster",
+      "osmKey": "newwestminster",
+      "name": "新威斯敏斯特",
+      "enName": "New Westminster",
+      "center": [
+        -122.9026,
+        49.2161
+      ],
+      "identity": "administrative-capital",
+      "identityLabel": "不列颠哥伦比亚殖民地首府",
+      "identityEnLabel": "Capital of colonial British Columbia",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1641",
+      "terms": [
+        [
+          1859,
+          1868,
+          "不列颠哥伦比亚殖民地",
+          "殖民地首府"
+        ]
+      ],
+      "note": "1859—1868年首府，后迁维多利亚。可靠殖民政府建筑或城墙几何尚缺；不把后建监狱门楼“总督城堡”误作总督宫。",
+      "enNote": "Colonial capital 1859–1868, then moved to Victoria. Colonial-government and wall geometry remains unverified; the later prison gatehouse called Governor’s Castle is not a governor’s palace.",
+      "years": "1859—1868",
+      "periods": [
+        "清"
+      ],
+      "boundaryStatus": "历史身份已核实；殖民政府遗存与完整城界几何待核。",
+      "features": []
+    },
+    {
+      "key": "canada-victoria",
+      "osmKey": "victoria",
+      "name": "维多利亚",
+      "enName": "Victoria",
+      "center": [
+        -123.3707,
+        48.4193
+      ],
+      "identity": "administrative-capital",
+      "identityLabel": "温哥华岛／不列颠哥伦比亚殖民地首府",
+      "identityEnLabel": "Capital of colonial Vancouver Island and British Columbia",
+      "url": "https://www.leg.bc.ca/learn/discover-your-legislature/1868-victoria-named-capital-city",
+      "terms": [
+        [
+          1849,
+          1866,
+          "温哥华岛殖民地",
+          "殖民地首府"
+        ],
+        [
+          1868,
+          1871,
+          "不列颠哥伦比亚殖民地",
+          "殖民地首府"
+        ]
+      ],
+      "note": "1866—1868年联合殖民地首府在新威斯敏斯特，1868年迁回本城。现省议会大厦为后建建筑，不是早期维多利亚堡围墙。",
+      "enNote": "United-colony government was in New Westminster in 1866–1868, then moved here in 1868. The current legislature is later construction, not Fort Victoria’s stockade.",
+      "years": "1849—1866、1868—1871",
+      "periods": [
+        "清"
+      ],
+      "boundaryStatus": "已接入实际城防或建筑；完整分期城界待核。",
+      "features": [
+        {
+          "id": "canada-victoria-relation-1371742",
+          "name": "不列颠哥伦比亚省议会大厦（后建建筑）",
+          "type": "Polygon",
+          "scope": "mapped_current_building",
+          "sourceUrl": "https://www.openstreetmap.org/relation/1371742",
+          "geometrySha256": "953c31b029e8aa27b95e893e919ca72e590999695b784ecba5adfd6947ad7bb3",
+          "referenceUrl": "https://www.leg.bc.ca/learn/discover-your-legislature/1868-victoria-named-capital-city"
+        }
+      ]
+    },
+    {
+      "key": "canada-portlajoye",
+      "osmKey": "portlajoye",
+      "name": "拉茹瓦港",
+      "enName": "Port-la-Joye",
+      "center": [
+        -63.1348,
+        46.196
+      ],
+      "identity": "administrative-capital",
+      "identityLabel": "圣约翰岛殖民行政驻地",
+      "identityEnLabel": "Colonial government seat of Île Saint-Jean",
+      "url": "https://www.pc.gc.ca/culture/designation/lieu-site/skmaqn",
+      "terms": [
+        [
+          1720,
+          1768,
+          "法属／英属圣约翰岛",
+          "殖民行政驻地"
+        ]
+      ],
+      "note": "所属皇家岛殖民地的上级首府在路易斯堡；岛上行政驻地不等同独立国家首都。阿默斯特堡遗迹标绘不等于整个聚落或国家历史遗址管理区。",
+      "enNote": "Island government seat subordinate to Île Royale, whose capital was Louisbourg. Mapped Fort Amherst remains are not the entire settlement or managed national historic site.",
+      "years": "1720—1768",
+      "periods": [
+        "清"
+      ],
+      "boundaryStatus": "已接入实际城防或建筑；完整分期城界待核。",
+      "features": [
+        {
+          "id": "canada-portlajoye-way-223711511",
+          "name": "阿默斯特堡遗迹标绘",
+          "type": "Polygon",
+          "scope": "mapped_archaeological_remains",
+          "sourceUrl": "https://www.openstreetmap.org/way/223711511",
+          "geometrySha256": "b6976914267546207bf32c9460f7bef9219500453b0799237af01451e666d1e8",
+          "referenceUrl": "https://www.pc.gc.ca/culture/designation/lieu-site/skmaqn"
+        }
+      ]
+    },
+    {
+      "key": "canada-placentia",
+      "osmKey": "placentia",
+      "name": "普拉森舍（普莱桑斯）",
+      "enName": "Placentia (Plaisance)",
+      "center": [
+        -53.9715,
+        47.2458
+      ],
+      "identity": "administrative-capital",
+      "identityLabel": "法属纽芬兰殖民地首府",
+      "identityEnLabel": "Capital of French Newfoundland",
+      "url": "https://www.heritage.nf.ca/articles/exploration/french-settlement-placentia.php",
+      "terms": [
+        [
+          1662,
+          1713,
+          "法属纽芬兰",
+          "殖民地首府"
+        ]
+      ],
+      "note": "法属普莱桑斯，1713年乌得勒支条约后退出；皇家堡与其他堡址分别表达，不代替聚落完整范围。",
+      "enNote": "French Plaisance, abandoned under the 1713 Treaty of Utrecht. Fort Royal and other fort sites do not define the full settlement.",
+      "years": "1662—1713",
+      "periods": [
+        "清"
+      ],
+      "boundaryStatus": "已接入实际城防或建筑；完整分期城界待核。",
+      "features": [
+        {
+          "id": "canada-placentia-way-630377795",
+          "name": "皇家堡遗迹",
+          "type": "Polygon",
+          "scope": "mapped_archaeological_remains",
+          "sourceUrl": "https://www.openstreetmap.org/way/630377795",
+          "geometrySha256": "e6a5b1cf398f4981bf61c3e9e4c507dd483e45f101f8c4147f183bd93cf6ebc1",
+          "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=230"
+        }
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "name": "现代其他省／地区首府",
+      "reason": "本轮未把现代省府身份自动提升为政权古都。"
+    },
+    {
+      "name": "原住民聚落或联盟中心",
+      "reason": "政治身份和具体城址须另据原住民及考古资料核证，不据规模或殖民叙事臆定。"
+    },
+    {
+      "name": "路易斯堡国家历史遗址管理范围",
+      "reason": "OSM way 106990421带boundary=administrative；不作古城墙范围。"
+    },
+    {
+      "name": "新威斯敏斯特总督城堡",
+      "reason": "后建监狱门楼，不作殖民总督宫。"
+    },
+    {
+      "name": "里多运河世界遗产整体",
+      "reason": "串联遗产跨城，不合并到渥太华或金斯顿。"
+    }
+  ]
+}

@@ -1,0 +1,1192 @@
+{
+  "date": "2026-10-21",
+  "beforeCount": 20,
+  "afterCount": 33,
+  "beforeFeatures": [
+    {
+      "sourceId": "nanjing-osm-ming-citywall-lines",
+      "sha256": "e6b424edcc2836f6acd36d9480c88a963bdaa7fc24331a9b97762fced2d2e3dd"
+    },
+    {
+      "sourceId": "nanjing-osm-ming-wall-bodies",
+      "sha256": "b17beaf5b5fce082ac14b88ade2d3677f14b4eb6cf95b8870cccd5eea5c842da"
+    },
+    {
+      "sourceId": "nanjing-osm-relation-20427375",
+      "sha256": "c368715d3da906a58c1ec396e83f6838f65b5a9ff0c2c2c51b0ff79b54495657"
+    },
+    {
+      "sourceId": "nanjing-osm-way-446638898",
+      "sha256": "fad43647de779c8ac0af944f4e2708808513ffc74816f644aba00a52744e5cc2"
+    },
+    {
+      "sourceId": "nanjing-osm-way-791233540",
+      "sha256": "274973f5ae8eff386585f1ae3a106ce12564c7b2b0f581da2ef0040da23243ca"
+    },
+    {
+      "sourceId": "nanjing-osm-way-319997028",
+      "sha256": "173d3ac8725848e139415d672da23e307009c5fc67b5e8eb53d5b278592e65a4"
+    },
+    {
+      "sourceId": "nanjing-osm-way-625734601",
+      "sha256": "0bfe7a77bca0171d4fd6410a87f10004d1615c66d1b0ec39b6f32aac3fce1ec8"
+    },
+    {
+      "sourceId": "nanjing-osm-way-461035550",
+      "sha256": "e02b0c453eed3739538693c5aa8ff80bdc9953ea1fdf9e2a3c977760774c0c3c"
+    },
+    {
+      "sourceId": "nanjing-osm-relation-11308636",
+      "sha256": "8f92f2fd985ff537ca30df01f9c9014d0517caa80f91414e62822ad9d127cb3b"
+    },
+    {
+      "sourceId": "nanjing-archaeology-display-1061577687",
+      "sha256": "8929a2458a5cfbee0cb494a082838454d466a526caabccc320dfaf7030d9736d"
+    },
+    {
+      "sourceId": "nanjing-archaeology-display-94327966",
+      "sha256": "792f05b4e3864d06ef2c86fc52ccf01a15d2cc4d62f3d8d052d478f16c60c3e7"
+    },
+    {
+      "sourceId": "nanjing-plan-detail-4",
+      "sha256": "0d759fa2154549968d01c0af78bd9d7eddc94a88a12d8f1ed1ae64912eae3fd2"
+    },
+    {
+      "sourceId": "nanjing-plan-detail-5",
+      "sha256": "d3b13bdd3620e11b5a31481183c67c733e647e3ce3613873762fdc9d724a9b32"
+    },
+    {
+      "sourceId": "nanjing-water-way-88806258",
+      "sha256": "7f0c4099eb09ce1d55c12263beff47ba2218db62223752ac8a1943561e96d6b7"
+    },
+    {
+      "sourceId": "nanjing-water-way-697970987",
+      "sha256": "9400849364ae180787021ffe3bf529432498c8be7ba706c4af548d35269d6edd"
+    },
+    {
+      "sourceId": "nanjing-osm-node-5907900964",
+      "sha256": "599a06ac039df8835bd205d8f2e33ad39558243a647de15ace91b5237f619572"
+    },
+    {
+      "sourceId": "nanjing-gate-shence-location",
+      "sha256": "6cd572cf40502e315b495d1f7b6c7e98aab7a837089c4decbbf60642b32ca0b1"
+    },
+    {
+      "sourceId": "nanjing-osm-node-5833639986",
+      "sha256": "8b8f7c52debbad93b11a1132318d3f23a7030db663f09da29f6829404069803a"
+    },
+    {
+      "sourceId": "nanjing-osm-way-859591128",
+      "sha256": "d7cf57334db6ecc469806e97a2b06537ef15edf5bf5e1774adff3070c3b1bd93"
+    },
+    {
+      "sourceId": "nanjing-osm-node-5335246224",
+      "sha256": "65c9d89b3d8bcbde93fe243bc8d39bb0f148095a7957aff27ac9362dd3fde197"
+    }
+  ],
+  "addedFeatures": [
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-stone-survey-wall-directions",
+        "sourceName": "石头城城垣遗迹走向（勘探图示参考）",
+        "label": "石头城城垣\n（勘探图示）",
+        "period": "魏晋南北朝",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingOtherPeriods": true,
+        "labelMinZoom": 14,
+        "sitePoint": false,
+        "sourceUrl": "./sources/nanjing.html#other-periods",
+        "referenceUrl": "https://dnwh.njmuseum.org.cn/file/pdf/2012/201202/20120206.pdf",
+        "sourceTitle": "南京其他时期城防：依据与缺项",
+        "periods": [
+          "魏晋南北朝",
+          "隋唐"
+        ],
+        "inferredBoundary": true,
+        "lineWidth": 2,
+        "status": "勘探报告描述及地形图配准 · 图示参考，非实测墙界",
+        "note": "依据贺云翱、岳汉《南京石头城遗址1998—1999年勘探试掘简报》（《东南文化》2012年第2期）第38页图二及城垣调查描述，沿山脊概括北垣东西两段、东垣北段与西垣北段走向。原图为调查地形图，线条是据报告解释的墙垣走向，不是直接获取的考古墙体矢量；以清凉门和道路交会地段作近似配准。保留虎踞路等缺口，不以等高线围城。后续考古确认多时期修筑，隋唐仍有补筑；各段分期不能由本图逐段判定。",
+        "periodNotes": {
+          "隋唐": "隋唐筛选仅表示遗址存在后期补筑记录，不表示所有参考线均为隋唐新建城墙。"
+        },
+        "labelCoordinates": [
+          118.75528845,
+          32.05311209
+        ]
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              118.74809297,
+              32.05362807
+            ],
+            [
+              118.74885403,
+              32.05329437
+            ],
+            [
+              118.74972098,
+              32.05314958
+            ],
+            [
+              118.75059125,
+              32.05303278
+            ],
+            [
+              118.75098746,
+              32.05285752
+            ]
+          ],
+          [
+            [
+              118.75206105,
+              32.05290717
+            ],
+            [
+              118.75260144,
+              32.05324276
+            ],
+            [
+              118.75334266,
+              32.05288247
+            ],
+            [
+              118.75432575,
+              32.05329335
+            ],
+            [
+              118.75528845,
+              32.05311209
+            ],
+            [
+              118.75658825,
+              32.05309999
+            ],
+            [
+              118.75741189,
+              32.05259126
+            ]
+          ],
+          [
+            [
+              118.75741189,
+              32.05259126
+            ],
+            [
+              118.75763283,
+              32.05220475
+            ],
+            [
+              118.75770001,
+              32.05164755
+            ],
+            [
+              118.75767628,
+              32.05102743
+            ]
+          ],
+          [
+            [
+              118.75021142,
+              32.05306524
+            ],
+            [
+              118.75031801,
+              32.05227844
+            ],
+            [
+              118.75031732,
+              32.05157151
+            ],
+            [
+              118.7503777,
+              32.05081694
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-stone-tg1-reference",
+        "sourceName": "石头城东北角城垣探沟（TG1图示参照）",
+        "label": "石头城东北角探沟",
+        "period": "魏晋南北朝",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingOtherPeriods": true,
+        "labelMinZoom": 15,
+        "sitePoint": true,
+        "sourceUrl": "./sources/nanjing.html#other-periods",
+        "referenceUrl": "https://dnwh.njmuseum.org.cn/file/pdf/2012/201202/20120206.pdf",
+        "sourceTitle": "南京其他时期城防：依据与缺项",
+        "inferredBoundary": true,
+        "status": "1998—1999年TG1调查位置图示参考 · 非精确探方边界",
+        "note": "按原报告图二TG1标识定位东北角城垣探沟，用于查看城垣调查背景。后来在北垣发现城门，但本点不冒充后来城门的精确位置，也不为其虚构门名或门基轮廓。"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.75739497,
+          32.05216852
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-jiankang-dasimamen-reference",
+        "sourceName": "建康大司马门（研究推定地段）",
+        "label": "大司马门\n（研究推定）",
+        "period": "魏晋南北朝",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingOtherPeriods": true,
+        "labelMinZoom": 12,
+        "sitePoint": true,
+        "sourceUrl": "./sources/nanjing.html#other-periods",
+        "referenceUrl": "https://m.thepaper.cn/newsDetail_forward_31120700",
+        "sourceTitle": "南京其他时期城防：依据与缺项",
+        "inferredBoundary": true,
+        "status": "张学锋研究方案的现代街巷参照 · 门址未经考古确认",
+        "note": "作者以文昌巷西口附近推定宫城南门大司马门。点位采用原始OSM文昌巷西端作地段参照，不是出土门址；与明故宫午门、清代西安门等无关。研究仍有不同方案，不能据此补画其门基或确定完整宫城。"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.7884592,
+          32.0397197
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-jiankang-xuanyangmen-reference",
+        "sourceName": "建康宣阳门／白门（研究推定地段）",
+        "label": "宣阳门\n（研究推定）",
+        "period": "魏晋南北朝",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingOtherPeriods": true,
+        "labelMinZoom": 12,
+        "sitePoint": true,
+        "sourceUrl": "./sources/nanjing.html#other-periods",
+        "referenceUrl": "https://m.thepaper.cn/newsDetail_forward_31120700",
+        "sourceTitle": "南京其他时期城防：依据与缺项",
+        "inferredBoundary": true,
+        "status": "研究推定的太平南路／马府街交会地段 · 非考古门址",
+        "note": "采用张学锋文中太平南路与马府西街交界附近的推定方案，以对应现代路口作参照。宣阳门又称白门，是都城南门；与朱雀门及梁代西街新作国门分开。原门基未定位，不能把街口当作已经发掘的门址。"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.7860502,
+          32.0321991
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-nantang-east-north-moat",
+        "sourceName": "杨吴南唐东、北城濠（现存水道参照）",
+        "label": "杨吴南唐城濠\n（现存水道参照）",
+        "period": "五代十国",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingOtherPeriods": true,
+        "labelMinZoom": 14,
+        "sitePoint": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/237043958",
+        "referenceUrl": "https://ghj.nanjing.gov.cn/ghbz/ztgh/202504/P020250421305043260549.pdf",
+        "sourceTitle": "南京其他时期城防：依据与缺项",
+        "osm": true,
+        "waterFeature": true,
+        "sourceIds": [
+          "way/237175230",
+          "way/237043958"
+        ],
+        "periods": [
+          "五代十国",
+          "宋辽金西夏",
+          "元"
+        ],
+        "status": "原始开放水道中心线 · 历史城濠格局参照",
+        "note": "采用两条原始OSM现存水道，表达杨吴、南唐城濠格局保留的部分；宋元沿用同一城址。现代水道中心线不是古代岸线或城墙。缺失的北城濠西段、城墙及水门不补接，不以水道围合成完整城界。",
+        "periodNames": {
+          "宋辽金西夏": "宋建康府城濠\n（现存水道参照）",
+          "元": "元集庆路城濠\n（现存水道参照）"
+        },
+        "labelCoordinates": [
+          118.7966275,
+          32.0359083
+        ]
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              118.7855439,
+              32.0509544
+            ],
+            [
+              118.7867184,
+              32.050745
+            ],
+            [
+              118.7900905,
+              32.0501439
+            ]
+          ],
+          [
+            [
+              118.7900905,
+              32.0501439
+            ],
+            [
+              118.7920795,
+              32.049738
+            ],
+            [
+              118.7949259,
+              32.049076
+            ],
+            [
+              118.799235,
+              32.0481167
+            ],
+            [
+              118.7996009,
+              32.0480799
+            ],
+            [
+              118.7997199,
+              32.0479984
+            ],
+            [
+              118.799739,
+              32.0479853
+            ],
+            [
+              118.799801,
+              32.0477942
+            ],
+            [
+              118.7996868,
+              32.0473064
+            ],
+            [
+              118.7996342,
+              32.046932
+            ],
+            [
+              118.7996004,
+              32.0462087
+            ],
+            [
+              118.7994083,
+              32.0448578
+            ],
+            [
+              118.7984664,
+              32.0415906
+            ],
+            [
+              118.7973925,
+              32.0378582
+            ],
+            [
+              118.7966275,
+              32.0359083
+            ],
+            [
+              118.7957923,
+              32.0329635
+            ],
+            [
+              118.7954961,
+              32.0319192
+            ],
+            [
+              118.7952955,
+              32.0307947
+            ],
+            [
+              118.7955508,
+              32.0293239
+            ],
+            [
+              118.7955911,
+              32.0286782
+            ],
+            [
+              118.795516,
+              32.0282848
+            ],
+            [
+              118.795296,
+              32.027905
+            ],
+            [
+              118.7946216,
+              32.0272231
+            ],
+            [
+              118.7939923,
+              32.0270667
+            ],
+            [
+              118.7933354,
+              32.0270187
+            ],
+            [
+              118.7932033,
+              32.0269553
+            ],
+            [
+              118.7931394,
+              32.0268428
+            ],
+            [
+              118.792836,
+              32.0257791
+            ],
+            [
+              118.7926796,
+              32.0252306
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-nantang-palace-moat-reference",
+        "sourceName": "南唐宫城护龙河（现存水道参照）",
+        "label": "南唐护龙河\n（现存水道参照）",
+        "period": "五代十国",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingOtherPeriods": true,
+        "labelMinZoom": 14,
+        "sitePoint": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/62381498",
+        "referenceUrl": "https://www.nanjing.gov.cn/msxx/202602/t20260202_5785175.html",
+        "sourceTitle": "南京其他时期城防：依据与缺项",
+        "osm": true,
+        "waterFeature": true,
+        "sourceIds": [
+          "way/62381498"
+        ],
+        "status": "现存水道原始中心线 · 宫城位置参照",
+        "note": "官方资料记述内桥与张府园一带宫城、护龙河的关系。此线只显示现存水道原始位置，未将现代河段等同完整古护龙河，也未以水道闭合宫城。"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7785631,
+            32.0313951
+          ],
+          [
+            118.776646,
+            32.0319862
+          ],
+          [
+            118.7741339,
+            32.0326902
+          ],
+          [
+            118.7728039,
+            32.0331867
+          ],
+          [
+            118.7712618,
+            32.0337625
+          ],
+          [
+            118.7707307,
+            32.0340601
+          ],
+          [
+            118.7702149,
+            32.034466
+          ],
+          [
+            118.7697896,
+            32.0346828
+          ],
+          [
+            118.7694984,
+            32.0348026
+          ],
+          [
+            118.7691698,
+            32.0349328
+          ],
+          [
+            118.76891,
+            32.0350766
+          ],
+          [
+            118.7687037,
+            32.0352136
+          ],
+          [
+            118.7685105,
+            32.0354022
+          ],
+          [
+            118.7682421,
+            32.0357176
+          ],
+          [
+            118.7677944,
+            32.0364257
+          ],
+          [
+            118.7676826,
+            32.0365474
+          ],
+          [
+            118.7668571,
+            32.0370814
+          ],
+          [
+            118.7662033,
+            32.0373109
+          ],
+          [
+            118.7656863,
+            32.0374511
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-nantang-north-gate-reference",
+        "sourceName": "南唐北门（北门桥南端地段参照）",
+        "label": "南唐北门",
+        "period": "五代十国",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingOtherPeriods": true,
+        "labelMinZoom": 12,
+        "sitePoint": true,
+        "sourceUrl": "./sources/nanjing.html#other-periods",
+        "referenceUrl": "https://dfz.nanjing.gov.cn/gzdt/202404/t20240411_4206994.html",
+        "sourceTitle": "南京其他时期城防：依据与缺项",
+        "periods": [
+          "五代十国",
+          "宋辽金西夏",
+          "元"
+        ],
+        "inferredBoundary": true,
+        "status": "文献记载的城门地段参照 · 非原门基测绘",
+        "note": "官方记载北以玄武桥、今北门桥为限。以原始OSM北门桥街道南端作门外桥址地段参照，不是古门基中心；此北门与玄武湖边清末丰润门、明宫城后宰门均不同。",
+        "periodNames": {
+          "宋辽金西夏": "宋府城门地段\n（南唐北门）",
+          "元": "元城门地段\n（南唐北门）"
+        },
+        "periodNotes": {
+          "宋辽金西夏": "宋代府城沿用南唐城址，标签为前代门址地段参照，不推定宋代原名与形制。",
+          "元": "元代集庆路城沿用既有城址，未取得本门元代门基，不据前代记录认定元代形制。"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.7839914,
+          32.0498473
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-nantang-east-gate-reference",
+        "sourceName": "南唐东门（大中桥西端地段参照）",
+        "label": "南唐东门",
+        "period": "五代十国",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingOtherPeriods": true,
+        "labelMinZoom": 12,
+        "sitePoint": true,
+        "sourceUrl": "./sources/nanjing.html#other-periods",
+        "referenceUrl": "https://dfz.nanjing.gov.cn/gzdt/202404/t20240411_4206994.html",
+        "sourceTitle": "南京其他时期城防：依据与缺项",
+        "periods": [
+          "五代十国",
+          "宋辽金西夏",
+          "元"
+        ],
+        "inferredBoundary": true,
+        "status": "文献记载的城门地段参照 · 非原门基测绘",
+        "note": "官方记载东以白下桥、今大中桥为限。采用原始桥线西端作门址地段参照，不以现代桥面作为古代城门轮廓。南唐东门后来废除，不能与明代正阳门混同。",
+        "periodNames": {
+          "宋辽金西夏": "宋府城门地段\n（南唐东门）",
+          "元": "元城门地段\n（南唐东门）"
+        },
+        "periodNotes": {
+          "宋辽金西夏": "宋代府城沿用南唐城址，标签为前代门址地段参照，不推定宋代原名与形制。",
+          "元": "元代集庆路城沿用既有城址，未取得本门元代门基，不据前代记录认定元代形制。"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.7952824,
+          32.028507
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-nantang-south-gate-reference",
+        "sourceName": "南唐南门（后世中华门地段参照）",
+        "label": "南唐南门",
+        "period": "五代十国",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingOtherPeriods": true,
+        "labelMinZoom": 12,
+        "sitePoint": true,
+        "sourceUrl": "./sources/nanjing.html#other-periods",
+        "referenceUrl": "https://dfz.nanjing.gov.cn/gzdt/202404/t20240411_4206994.html",
+        "sourceTitle": "南京其他时期城防：依据与缺项",
+        "periods": [
+          "五代十国",
+          "宋辽金西夏",
+          "元"
+        ],
+        "inferredBoundary": true,
+        "status": "文献记载的城门地段参照 · 非原门基测绘",
+        "note": "官方记载南唐南门地段为后世聚宝门、今中华门。仅借后世城堡位置作地段参照，不把现存明代城堡、瓮城及孔洞倒定为南唐遗构；南唐原门基及范围待考古图。",
+        "periodNames": {
+          "宋辽金西夏": "宋府城门地段\n（南唐南门）",
+          "元": "元城门地段\n（南唐南门）"
+        },
+        "periodNotes": {
+          "宋辽金西夏": "宋代府城沿用南唐城址，标签为前代门址地段参照，不推定宋代原名与形制。",
+          "元": "元代集庆路城沿用既有城址，未取得本门元代门基，不据前代记录认定元代形制。"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.776487334375,
+          32.014417462500006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-nantang-west-gate-reference",
+        "sourceName": "南唐大西门（后世汉西门地段参照）",
+        "label": "南唐大西门",
+        "period": "五代十国",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingOtherPeriods": true,
+        "labelMinZoom": 12,
+        "sitePoint": true,
+        "sourceUrl": "./sources/nanjing.html#other-periods",
+        "referenceUrl": "https://dfz.nanjing.gov.cn/gzdt/202404/t20240411_4206994.html",
+        "sourceTitle": "南京其他时期城防：依据与缺项",
+        "periods": [
+          "五代十国",
+          "宋辽金西夏",
+          "元"
+        ],
+        "inferredBoundary": true,
+        "status": "文献记载的城门地段参照 · 非原门基测绘",
+        "note": "官方文献确认汉西门南唐大西门沿革。借现存后世遗迹作地段参照，原南唐门址形制及门基范围待核；不将明代原始面作为南唐建筑。",
+        "periodNames": {
+          "宋辽金西夏": "宋府城门地段\n（南唐大西门）",
+          "元": "元城门地段\n（南唐大西门）"
+        },
+        "periodNotes": {
+          "宋辽金西夏": "宋代府城沿用南唐城址，标签为前代门址地段参照，不推定宋代原名与形制。",
+          "元": "元代集庆路城沿用既有城址，未取得本门元代门基，不据前代记录认定元代形制。"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          null,
+          null
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-nantang-palace-south-gate-reference",
+        "sourceName": "南唐宫城南门地段（内桥参照）",
+        "label": "南唐宫城南门\n（内桥参照）",
+        "period": "五代十国",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingOtherPeriods": true,
+        "labelMinZoom": 12,
+        "sitePoint": true,
+        "sourceUrl": "./sources/nanjing.html#other-periods",
+        "referenceUrl": "https://www.nanjing.gov.cn/msxx/202602/t20260202_5785175.html",
+        "sourceTitle": "南京其他时期城防：依据与缺项",
+        "inferredBoundary": true,
+        "status": "文献宫城轴线及桥址参照 · 非已发掘门基",
+        "note": "内桥北侧为南唐宫城入口地段，南接御街。采用现存内桥北端作参照，不给未证实的门名，不将桥梁轮廓或张府园现代街区围成宫城。"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.7787976,
+          32.0314174
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-nantang-north-wall-vicinity",
+        "sourceName": "南唐北城墙考古地段（鸡鹅巷参照）",
+        "label": "南唐北城墙\n（考古地段参照）",
+        "period": "五代十国",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingOtherPeriods": true,
+        "labelMinZoom": 14,
+        "sitePoint": true,
+        "sourceUrl": "./sources/nanjing.html#other-periods",
+        "referenceUrl": "https://www.xwzf.gov.cn/xwqzfmhwzwapb/xwzx/bmdt/202604/t20260409_5820809.html",
+        "sourceTitle": "南京其他时期城防：依据与缺项",
+        "inferredBoundary": true,
+        "status": "官方确认的考古地段参照 · 墙体精确轮廓待核",
+        "note": "玄武区政府确认2021年在临鸡鹅巷地块发现南唐都城北城墙，并建设遗址公园。以鸡鹅巷西端附近指示考古地段，不把道路当城墙、不将公园用地当原城界。未取得原始发掘墙线，暂不补画其长度、厚度或闭合面。"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.7841735,
+          32.0506985
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-qing-fengrunmen",
+        "sourceName": "丰润门／玄武门（晚清开辟、后世改建）",
+        "label": "丰润门／玄武门",
+        "period": "清",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingOtherPeriods": true,
+        "labelMinZoom": 12,
+        "sitePoint": false,
+        "sourceUrl": "https://www.openstreetmap.org/way/940335843",
+        "referenceUrl": "https://dfz.nanjing.gov.cn/gzdt/202409/t20240930_4778236.html",
+        "sourceTitle": "南京其他时期城防：依据与缺项",
+        "osm": true,
+        "sourceIds": [
+          "way/940335843"
+        ],
+        "status": "原始OSM现状门体轮廓 · 晚清开辟，后世扩建现状",
+        "note": "清末南洋劝业会时期为通达玄武湖开辟丰润门，后来改名玄武门并扩建。官方资料有1909年始辟记载；当前三孔门体现状不能视为晚清单孔门原貌。本面保留原始闭合填充，不与明宫城玄武门或南唐北门混同。"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.7823302,
+              32.0727255
+            ],
+            [
+              118.7823839,
+              32.072502
+            ],
+            [
+              118.7824399,
+              32.0725117
+            ],
+            [
+              118.7824099,
+              32.072635
+            ],
+            [
+              118.7823856,
+              32.0727351
+            ],
+            [
+              118.7823302,
+              32.0727255
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "periodReuse": {
+    "nanjing-osm-ming-citywall-lines": {
+      "periods": [
+        "明",
+        "清"
+      ],
+      "nanjingPeriodReuse": true,
+      "periodNotes": {
+        "清": "清代沿用、修缮明代城防地段；现状几何含后世修复，不代表每一段均为清代原构。与明代共用同一要素和独立遗迹打卡，不重复生成图标。"
+      }
+    },
+    "nanjing-osm-ming-wall-bodies": {
+      "periods": [
+        "明",
+        "清"
+      ],
+      "nanjingPeriodReuse": true,
+      "periodNotes": {
+        "清": "清代沿用、修缮明代城防地段；现状几何含后世修复，不代表每一段均为清代原构。与明代共用同一要素和独立遗迹打卡，不重复生成图标。"
+      }
+    },
+    "nanjing-osm-relation-20427375": {
+      "periods": [
+        "明",
+        "清"
+      ],
+      "nanjingPeriodReuse": true,
+      "periodNotes": {
+        "清": "清代沿用、修缮明代城防地段；现状几何含后世修复，不代表每一段均为清代原构。与明代共用同一要素和独立遗迹打卡，不重复生成图标。"
+      }
+    },
+    "nanjing-osm-relation-11308636": {
+      "periods": [
+        "明",
+        "清"
+      ],
+      "nanjingPeriodReuse": true,
+      "periodNotes": {
+        "清": "清代沿用、修缮明代城防地段；现状几何含后世修复，不代表每一段均为清代原构。与明代共用同一要素和独立遗迹打卡，不重复生成图标。"
+      }
+    },
+    "nanjing-osm-way-625734601": {
+      "periods": [
+        "明",
+        "清"
+      ],
+      "nanjingPeriodReuse": true,
+      "periodNotes": {
+        "清": "清代沿用、修缮明代城防地段；现状几何含后世修复，不代表每一段均为清代原构。与明代共用同一要素和独立遗迹打卡，不重复生成图标。"
+      }
+    },
+    "nanjing-osm-way-461035550": {
+      "periods": [
+        "明",
+        "清"
+      ],
+      "nanjingPeriodReuse": true,
+      "periodNotes": {
+        "清": "清代沿用、修缮明代城防地段；现状几何含后世修复，不代表每一段均为清代原构。与明代共用同一要素和独立遗迹打卡，不重复生成图标。"
+      }
+    },
+    "nanjing-osm-node-5907900964": {
+      "periods": [
+        "明",
+        "清"
+      ],
+      "nanjingPeriodReuse": true,
+      "periodNotes": {
+        "清": "清代沿用、修缮明代城防地段；现状几何含后世修复，不代表每一段均为清代原构。与明代共用同一要素和独立遗迹打卡，不重复生成图标。"
+      }
+    },
+    "nanjing-gate-shence-location": {
+      "periods": [
+        "明",
+        "清"
+      ],
+      "nanjingPeriodReuse": true,
+      "periodNotes": {
+        "清": "清代沿用、修缮明代城防地段；现状几何含后世修复，不代表每一段均为清代原构。与明代共用同一要素和独立遗迹打卡，不重复生成图标。"
+      }
+    },
+    "nanjing-osm-node-5833639986": {
+      "periods": [
+        "明",
+        "清"
+      ],
+      "nanjingPeriodReuse": true,
+      "periodNotes": {
+        "清": "清代沿用、修缮明代城防地段；现状几何含后世修复，不代表每一段均为清代原构。与明代共用同一要素和独立遗迹打卡，不重复生成图标。"
+      }
+    }
+  },
+  "stoneFit": {
+    "sourceUrl": "https://dnwh.njmuseum.org.cn/file/pdf/2012/201202/20120206.pdf",
+    "page": 38,
+    "figure": 2,
+    "pixelSpace": "output/nanjing-stone-survey-map.png, crop of report page rendered at scale 4",
+    "controls": [
+      {
+        "name": "清凉门现存通道",
+        "pixel": [
+          275,
+          448
+        ],
+        "wgs84": [
+          118.75202,
+          32.0497575
+        ],
+        "source": "https://www.openstreetmap.org/node/5907900964"
+      },
+      {
+        "name": "虎踞路／广州路交会地段",
+        "pixel": [
+          395,
+          395
+        ],
+        "wgs84": [
+          118.75409,
+          32.05033
+        ],
+        "source": "OSM ways 422925239, 52458399; junction reference, not archaeological control"
+      }
+    ],
+    "method": "Two-point similarity, approximate landscape control; no claimed survey accuracy",
+    "traces": [
+      {
+        "name": "北垣西段走向",
+        "pixels": [
+          [
+            12,
+            198
+          ],
+          [
+            60,
+            217
+          ],
+          [
+            113,
+            222
+          ],
+          [
+            166,
+            225
+          ],
+          [
+            191,
+            235
+          ]
+        ]
+      },
+      {
+        "name": "北垣东段走向",
+        "pixels": [
+          [
+            255,
+            225
+          ],
+          [
+            285,
+            198
+          ],
+          [
+            332,
+            219
+          ],
+          [
+            388,
+            184
+          ],
+          [
+            447,
+            191
+          ],
+          [
+            525,
+            184
+          ],
+          [
+            578,
+            215
+          ]
+        ]
+      },
+      {
+        "name": "东垣北段走向",
+        "pixels": [
+          [
+            578,
+            215
+          ],
+          [
+            594,
+            241
+          ],
+          [
+            602,
+            280
+          ],
+          [
+            605,
+            324
+          ]
+        ]
+      },
+      {
+        "name": "西垣北段走向",
+        "pixels": [
+          [
+            143,
+            225
+          ],
+          [
+            155,
+            280
+          ],
+          [
+            160,
+            330
+          ],
+          [
+            169,
+            383
+          ]
+        ]
+      }
+    ],
+    "independentCheck": {
+      "name": "清凉寺址／今清凉寺（非同一测量标志）",
+      "pixel": [
+        475,
+        335
+      ],
+      "projected": [
+        118.75551107,
+        32.05105694
+      ],
+      "modernReference": [
+        118.7562351,
+        32.0515055
+      ],
+      "note": "只作地段核对；现代寺院节点与原图寺址不作同一测量标志"
+    },
+    "render": {
+      "engine": "pypdfium2",
+      "pageIndex": 1,
+      "scale": 4,
+      "cropFractions": [
+        0.52,
+        0.7,
+        0.94,
+        0.955
+      ],
+      "screenY": "down, inverted to north-positive before similarity fit"
+    }
+  },
+  "pending": [
+    {
+      "period": "魏晋南北朝",
+      "items": "完整建康城与台城分期墙界、朱雀门具体位置、东阳门/西明门/广莫门等门址；西街梁代国门原门基及相连墙线，石头城后期北垣城门精确门基",
+      "reason": "有历史或考古依据，但未取得可靠公开定位图或矢量；不以现代同名地物替代。"
+    },
+    {
+      "period": "隋唐",
+      "items": "蒋州、上元县城分期城界、唐代城门",
+      "reason": "石头城后期修筑不等于取得完整隋唐城界。"
+    },
+    {
+      "period": "五代十国",
+      "items": "南唐完整城郭、宫城、龙光门及水门精确门基、鸡鹅巷发掘墙线",
+      "reason": "已有地段与现存水道，不等于实测完整边界。"
+    },
+    {
+      "period": "宋辽金西夏/元",
+      "items": "宋建康府及元集庆路完整分期墙线、各门当期名称与门基",
+      "reason": "文献记载沿用城址不能证明各段形制全同。"
+    },
+    {
+      "period": "清",
+      "items": "江宁满城完整墙线及北安门、小门，草场门与后湖小门精确门址",
+      "reason": "未以明皇城主体面代替满城，未以同名现代地标猜定门址。"
+    }
+  ],
+  "validation": {
+    "regressions": 201,
+    "failures": 0,
+    "browser": {
+      "sharedOnce": true,
+      "allOff": true
+    },
+    "release": "2.3.4",
+    "screenshots": [
+      "output/nanjing-other-stone-check.png",
+      "output/nanjing-other-nantang-check.png",
+      "output/nanjing-other-song-check.png",
+      "output/nanjing-other-qing-check.png"
+    ]
+  }
+}

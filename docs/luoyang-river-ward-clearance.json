@@ -1,0 +1,2293 @@
+{
+  "date": "2026-10-21",
+  "baseline": 1052,
+  "baselineSha256": "9b6a14ae5d297f05e0060f923d9a6831984a06b0766bf70a0b3dec330cec73ab",
+  "before": [
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-000",
+        "sourceName": "修义坊（复原图示）",
+        "label": "修义坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.49017626,
+          34.69736452
+        ],
+        "sourceFigureBox": [
+          627,
+          60,
+          688,
+          109
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.48739427,
+              34.69476825
+            ],
+            [
+              112.49353839,
+              34.69559255
+            ],
+            [
+              112.49295366,
+              34.69999527
+            ],
+            [
+              112.4868187,
+              34.699102
+            ],
+            [
+              112.48739427,
+              34.69476825
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-001",
+        "sourceName": "丰财坊（复原图示）",
+        "label": "丰财坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.49609239,
+          34.69831658
+        ],
+        "sourceFigureBox": [
+          709,
+          56,
+          746,
+          109
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.49423208,
+              34.69568562
+            ],
+            [
+              112.49857416,
+              34.69626816
+            ],
+            [
+              112.49794928,
+              34.70097326
+            ],
+            [
+              112.49361402,
+              34.7003393
+            ],
+            [
+              112.49423208,
+              34.69568562
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-002",
+        "sourceName": "审教坊（复原图示）",
+        "label": "审教坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.50152924,
+          34.69920505
+        ],
+        "sourceFigureBox": [
+          756,
+          52,
+          806,
+          109
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.49948042,
+              34.69638974
+            ],
+            [
+              112.50424104,
+              34.69702843
+            ],
+            [
+              112.50357413,
+              34.70205003
+            ],
+            [
+              112.49882138,
+              34.70135201
+            ],
+            [
+              112.49948042,
+              34.69638974
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-003",
+        "sourceName": "通远坊（复原图示）",
+        "label": "通远坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.50704474,
+          34.7002207
+        ],
+        "sourceFigureBox": [
+          814,
+          46,
+          866,
+          108
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.50492213,
+              34.69721643
+            ],
+            [
+              112.5098769,
+              34.69788236
+            ],
+            [
+              112.50916303,
+              34.70325755
+            ],
+            [
+              112.5042169,
+              34.70252645
+            ],
+            [
+              112.50492213,
+              34.69721643
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-004",
+        "sourceName": "道政坊（复原图示）",
+        "label": "道政坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.47622724,
+          34.69488665
+        ],
+        "sourceFigureBox": [
+          488,
+          73,
+          548,
+          109
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.47312406,
+              34.69285375
+            ],
+            [
+              112.4797523,
+              34.693743
+            ],
+            [
+              112.47932669,
+              34.69694762
+            ],
+            [
+              112.47270591,
+              34.69600224
+            ],
+            [
+              112.47312406,
+              34.69285375
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-005",
+        "sourceName": "进德坊（复原图示）",
+        "label": "进德坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.48337585,
+          34.69616554
+        ],
+        "sourceFigureBox": [
+          558,
+          66,
+          618,
+          109
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.48055646,
+              34.69385088
+            ],
+            [
+              112.48670058,
+              34.69467518
+            ],
+            [
+              112.48619118,
+              34.69851076
+            ],
+            [
+              112.48005518,
+              34.69762532
+            ],
+            [
+              112.48055646,
+              34.69385088
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-006",
+        "sourceName": "道光坊（复原图示）",
+        "label": "道光坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.47675704,
+          34.69089749
+        ],
+        "sourceFigureBox": [
+          488,
+          117,
+          548,
+          165
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.4736589,
+              34.6888266
+            ],
+            [
+              112.48029668,
+              34.68964407
+            ],
+            [
+              112.47985128,
+              34.69299774
+            ],
+            [
+              112.4732213,
+              34.69212154
+            ],
+            [
+              112.4736589,
+              34.6888266
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-007",
+        "sourceName": "履顺坊（复原图示）",
+        "label": "履顺坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.48395349,
+          34.69181613
+        ],
+        "sourceFigureBox": [
+          558,
+          117,
+          618,
+          165
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.48110199,
+              34.68974325
+            ],
+            [
+              112.48725495,
+              34.69050101
+            ],
+            [
+              112.48680137,
+              34.69391624
+            ],
+            [
+              112.48065565,
+              34.69310404
+            ],
+            [
+              112.48110199,
+              34.68974325
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-008",
+        "sourceName": "敦厚坊（复原图示）",
+        "label": "敦厚坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.49074671,
+          34.69268331
+        ],
+        "sourceFigureBox": [
+          627,
+          117,
+          687,
+          165
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.48794964,
+              34.69058656
+            ],
+            [
+              112.49400173,
+              34.6913319
+            ],
+            [
+              112.49354022,
+              34.69480683
+            ],
+            [
+              112.48749524,
+              34.69400794
+            ],
+            [
+              112.48794964,
+              34.69058656
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-009",
+        "sourceName": "殖业坊（复原图示）",
+        "label": "殖业坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.49678637,
+          34.69354084
+        ],
+        "sourceFigureBox": [
+          710,
+          116,
+          746,
+          164
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.49490517,
+              34.69151691
+            ],
+            [
+              112.49913587,
+              34.69203873
+            ],
+            [
+              112.49866508,
+              34.69558362
+            ],
+            [
+              112.49443938,
+              34.69502411
+            ],
+            [
+              112.49490517,
+              34.69151691
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-010",
+        "sourceName": "毓德坊（复原图示）",
+        "label": "毓德坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.5021421,
+          34.69422569
+        ],
+        "sourceFigureBox": [
+          755,
+          116,
+          806,
+          164
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.49994807,
+              34.6921389
+            ],
+            [
+              112.50481077,
+              34.69273867
+            ],
+            [
+              112.50433325,
+              34.69633413
+            ],
+            [
+              112.49947631,
+              34.69569104
+            ],
+            [
+              112.49994807,
+              34.6921389
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-011",
+        "sourceName": "兴艺坊（复原图示）",
+        "label": "兴艺坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.50774577,
+          34.69494224
+        ],
+        "sourceFigureBox": [
+          814,
+          116,
+          866,
+          164
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.50550544,
+              34.69282436
+            ],
+            [
+              112.51046738,
+              34.69343637
+            ],
+            [
+              112.50998317,
+              34.69708222
+            ],
+            [
+              112.5050271,
+              34.696426
+            ],
+            [
+              112.50550544,
+              34.69282436
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-012",
+        "sourceName": "清化坊（复原图示）",
+        "label": "清化坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.47735692,
+          34.68680397
+        ],
+        "sourceFigureBox": [
+          488,
+          174,
+          549,
+          222
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.47422292,
+              34.68457979
+            ],
+            [
+              112.48098154,
+              34.68533392
+            ],
+            [
+              112.48048651,
+              34.68906131
+            ],
+            [
+              112.4737367,
+              34.68824084
+            ],
+            [
+              112.47422292,
+              34.68457979
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-013",
+        "sourceName": "思恭坊（复原图示）",
+        "label": "思恭坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.48450324,
+          34.68767679
+        ],
+        "sourceFigureBox": [
+          558,
+          174,
+          618,
+          221
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.48166695,
+              34.68548935
+            ],
+            [
+              112.48782906,
+              34.6861782
+            ],
+            [
+              112.48733559,
+              34.68989385
+            ],
+            [
+              112.48118134,
+              34.68914577
+            ],
+            [
+              112.48166695,
+              34.68548935
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-014",
+        "sourceName": "北市（复原图示）",
+        "label": "北市",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "market",
+        "labelCoordinates": [
+          112.49130621,
+          34.68847049
+        ],
+        "sourceFigureBox": [
+          627,
+          174,
+          687,
+          221
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.48852478,
+              34.68625597
+            ],
+            [
+              112.49458587,
+              34.68693353
+            ],
+            [
+              112.49408377,
+              34.69071413
+            ],
+            [
+              112.48803042,
+              34.68997831
+            ],
+            [
+              112.48852478,
+              34.68625597
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-015",
+        "sourceName": "立行坊（复原图示）",
+        "label": "立行坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.49730706,
+          34.6891706
+        ],
+        "sourceFigureBox": [
+          710,
+          174,
+          745,
+          221
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.49550031,
+              34.68703575
+            ],
+            [
+              112.49961971,
+              34.68749625
+            ],
+            [
+              112.49911119,
+              34.69132524
+            ],
+            [
+              112.49499704,
+              34.69082514
+            ],
+            [
+              112.49550031,
+              34.68703575
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-016",
+        "sourceName": "德懋坊（复原图示）",
+        "label": "德懋坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.50267708,
+          34.6898327
+        ],
+        "sourceFigureBox": [
+          755,
+          173,
+          805,
+          221
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.50055083,
+              34.68760034
+            ],
+            [
+              112.50532539,
+              34.68813408
+            ],
+            [
+              112.50480022,
+              34.69208842
+            ],
+            [
+              112.50003186,
+              34.69150796
+            ],
+            [
+              112.50055083,
+              34.68760034
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-017",
+        "sourceName": "教业坊（复原图示）",
+        "label": "教业坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.50833661,
+          34.69049349
+        ],
+        "sourceFigureBox": [
+          814,
+          173,
+          866,
+          221
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.50611661,
+              34.68822253
+            ],
+            [
+              112.51108605,
+              34.68877805
+            ],
+            [
+              112.51055338,
+              34.69278877
+            ],
+            [
+              112.5055904,
+              34.69218462
+            ],
+            [
+              112.50611661,
+              34.68822253
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-018",
+        "sourceName": "立德坊（复原图示）",
+        "label": "立德坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.47797542,
+          34.68214695
+        ],
+        "sourceFigureBox": [
+          489,
+          247,
+          548,
+          294
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.47494654,
+              34.67997787
+            ],
+            [
+              112.48149431,
+              34.68062642
+            ],
+            [
+              112.48100004,
+              34.68434807
+            ],
+            [
+              112.47446078,
+              34.68363543
+            ],
+            [
+              112.47494654,
+              34.67997787
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-019",
+        "sourceName": "归义坊（复原图示）",
+        "label": "归义坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.48513339,
+          34.682932
+        ],
+        "sourceFigureBox": [
+          558,
+          246,
+          618,
+          294
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.48230217,
+              34.68070644
+            ],
+            [
+              112.48847457,
+              34.68131781
+            ],
+            [
+              112.48796051,
+              34.68518841
+            ],
+            [
+              112.48179631,
+              34.68451534
+            ],
+            [
+              112.48230217,
+              34.68070644
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-020",
+        "sourceName": "景行坊（复原图示）",
+        "label": "景行坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.49199811,
+          34.68364673
+        ],
+        "sourceFigureBox": [
+          627,
+          246,
+          688,
+          294
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.48917145,
+              34.68138684
+            ],
+            [
+              112.49534385,
+              34.68199821
+            ],
+            [
+              112.49482068,
+              34.68593748
+            ],
+            [
+              112.48865647,
+              34.68526441
+            ],
+            [
+              112.48917145,
+              34.68138684
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-021",
+        "sourceName": "时邕坊（复原图示）",
+        "label": "时邕坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.49799511,
+          34.68431303
+        ],
+        "sourceFigureBox": [
+          708,
+          246,
+          747,
+          293
+        ],
+        "nameReviewNote": "图中字形或异写按常用坊名规范化；不据此证明坊名在各阶段完全相同。",
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.49599663,
+              34.68214615
+            ],
+            [
+              112.50050966,
+              34.68259411
+            ],
+            [
+              112.49999065,
+              34.68650199
+            ],
+            [
+              112.49548349,
+              34.68600985
+            ],
+            [
+              112.49599663,
+              34.68214615
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-022",
+        "sourceName": "毓财坊（复原图示）",
+        "label": "毓财坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.50338401,
+          34.68487467
+        ],
+        "sourceFigureBox": [
+          755,
+          246,
+          806,
+          293
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.50120652,
+              34.68266328
+            ],
+            [
+              112.50608457,
+              34.68314748
+            ],
+            [
+              112.50555832,
+              34.68710992
+            ],
+            [
+              112.50068661,
+              34.68657798
+            ],
+            [
+              112.50120652,
+              34.68266328
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-023",
+        "sourceName": "积德坊（复原图示）",
+        "label": "积德坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.50905287,
+          34.68546549
+        ],
+        "sourceFigureBox": [
+          815,
+          246,
+          866,
+          293
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.50687716,
+              34.68322615
+            ],
+            [
+              112.51175904,
+              34.68371073
+            ],
+            [
+              112.51122541,
+              34.68772871
+            ],
+            [
+              112.50634988,
+              34.68719635
+            ],
+            [
+              112.50687716,
+              34.68322615
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-024",
+        "sourceName": "温雒坊（复原图示）",
+        "label": "温雒坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.50938731,
+          34.67954429
+        ],
+        "sourceFigureBox": [
+          790,
+          301,
+          866,
+          349
+        ],
+        "nameReviewNote": "图中字形或异写按常用坊名规范化；不据此证明坊名在各阶段完全相同。",
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.50687559,
+              34.67719142
+            ],
+            [
+              112.5124614,
+              34.67766276
+            ],
+            [
+              112.51189519,
+              34.68192612
+            ],
+            [
+              112.50631707,
+              34.68139686
+            ],
+            [
+              112.50687559,
+              34.67719142
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-025",
+        "sourceName": "承福坊（复原图示）",
+        "label": "承福坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.47820283,
+          34.6766373
+        ],
+        "sourceFigureBox": [
+          489,
+          302,
+          548,
+          349
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.47585441,
+              34.67457379
+            ],
+            [
+              112.48104123,
+              34.67501147
+            ],
+            [
+              112.48054788,
+              34.67872617
+            ],
+            [
+              112.4753678,
+              34.67823776
+            ],
+            [
+              112.47585441,
+              34.67457379
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-026",
+        "sourceName": "玉鸡坊（复原图示）",
+        "label": "玉鸡坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.4841339,
+          34.67716712
+        ],
+        "sourceFigureBox": [
+          558,
+          302,
+          618,
+          349
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.48173946,
+              34.67507038
+            ],
+            [
+              112.48702603,
+              34.67551647
+            ],
+            [
+              112.4865249,
+              34.67928972
+            ],
+            [
+              112.4812452,
+              34.67879192
+            ],
+            [
+              112.48173946,
+              34.67507038
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-027",
+        "sourceName": "铜驼坊（复原图示）",
+        "label": "铜驼坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.49026433,
+          34.67771476
+        ],
+        "sourceFigureBox": [
+          627,
+          302,
+          688,
+          349
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.48752476,
+              34.67555856
+            ],
+            [
+              112.49350955,
+              34.67606357
+            ],
+            [
+              112.49300001,
+              34.67990023
+            ],
+            [
+              112.48702299,
+              34.67933668
+            ],
+            [
+              112.48752476,
+              34.67555856
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "early": true,
+        "city": "洛阳",
+        "family": "luoyang-plan-reference",
+        "period": "隋唐",
+        "sourceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+        "sourceTitle": "故宫博物院院刊2021年第1期第79页图九、图十；引2014年考古报告",
+        "referenceUrl": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+        "status": "考古报告复原图配准 · 图示参考，非实测边界",
+        "note": "据2014年考古报告里坊复原图及文献复原影像（故宫博物院院刊2021年第1期第79页图九、图十）作分区图示参考。坊名和小区对照图九，位置对照图十；图十继承既有测绘参考线的近似配准，另核对应天门。图示不能代表实测坊墙、法定保护界或任一具体年份同时存在的全部布局；内部寺宅不据此生成精确点位。 本轮撤销门址两点旋转；外郭南墙方向以定鼎门片区现状OSM长墙段核对，复原影像四个对应城角严格接入同一外郭参考线，南、东边界不再单独拟合。宫区以考古报告图中的对应墙线分区匹配。OSM现状/保护展示标绘与考古图配准均非独立实测地面控制，未移动原始遗址构件。 原提取表的水平坊行按原图斜向城界归一，不将其越墙部分保留为历史坊界。 南北向以现状天街址标绘中线作方向参照，固定南墙方向进行微调；原始天街构件未移动，仍非考古测量控制。 坊列改用固定南墙方向与天街方向的斜坐标格网，撤去四点投影带入的列线倾斜；仅为里坊布局图示，不断言所有实测坊墙均平行。",
+        "coordinateSystem": "WGS84",
+        "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+        "capitalSiteName": "洛阳",
+        "capitalSiteDisplayName": "隋唐洛阳城",
+        "luoyangPlanDetail": true,
+        "planReference": true,
+        "sourceId": "luoyang-plan-ward-028",
+        "sourceName": "上林坊（复原图示）",
+        "label": "上林坊",
+        "capitalPlanDetail": true,
+        "detailKind": "坊里名称",
+        "planKind": "ward",
+        "labelCoordinates": [
+          112.49978394,
+          34.67856515
+        ],
+        "sourceFigureBox": [
+          709,
+          302,
+          780,
+          349
+        ],
+        "luoyangCalibration": "2026-10-21-wall-constrained",
+        "calibrationAudit": "docs/luoyang-wall-constrained-calibration.json"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.49390854,
+              34.67609723
+            ],
+            [
+              112.50617737,
+              34.6771325
+            ],
+            [
+              112.50565137,
+              34.68109307
+            ],
+            [
+              112.49339848,
+              34.6799378
+            ],
+            [
+              112.49390854,
+              34.67609723
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "changed": 29,
+  "added": 3,
+  "total": 1055,
+  "oldBottom": 4463.245296709395,
+  "marginMeters": 45,
+  "bankReference": "luoyang-north-water-ancient-luo, northern bank",
+  "constraints": {
+    "fixed": "existing exterior north wall, all original archaeological/OSM geometries, Tianjie, river and bridge references",
+    "method": "Shared monotone north/south grid adjustment between the unchanged northern reference wall and the current user-drawing river bank. This is schematic topology, not excavation or survey accuracy."
+  },
+  "beforeOverlaps": [
+    {
+      "bridge": "新中桥",
+      "ward": "承福坊",
+      "wardId": "luoyang-plan-ward-025"
+    },
+    {
+      "bridge": "会通桥",
+      "ward": "铜驼坊",
+      "wardId": "luoyang-plan-ward-027"
+    }
+  ],
+  "westRows": [
+    {
+      "id": "luoyang-west-detail-partitions",
+      "name": "西侧宫苑内部四处分隔线",
+      "pixelLines": [
+        [
+          [
+            398,
+            348
+          ],
+          [
+            426,
+            632
+          ]
+        ],
+        [
+          [
+            544,
+            338
+          ],
+          [
+            571,
+            622
+          ]
+        ],
+        [
+          [
+            354,
+            503
+          ],
+          [
+            607,
+            480
+          ]
+        ],
+        [
+          [
+            421,
+            631
+          ],
+          [
+            614,
+            612
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "luoyang-west-detail-north-courts",
+      "name": "西侧宫苑北部院落轮廓",
+      "pixelLines": [
+        [
+          [
+            348,
+            353
+          ],
+          [
+            388,
+            349
+          ],
+          [
+            395,
+            421
+          ],
+          [
+            355,
+            426
+          ],
+          [
+            348,
+            353
+          ]
+        ],
+        [
+          [
+            408,
+            350
+          ],
+          [
+            532,
+            340
+          ],
+          [
+            539,
+            414
+          ],
+          [
+            416,
+            427
+          ],
+          [
+            408,
+            350
+          ]
+        ],
+        [
+          [
+            545,
+            340
+          ],
+          [
+            588,
+            335
+          ],
+          [
+            603,
+            411
+          ],
+          [
+            552,
+            419
+          ],
+          [
+            545,
+            340
+          ]
+        ],
+        [
+          [
+            416,
+            437
+          ],
+          [
+            526,
+            426
+          ],
+          [
+            533,
+            486
+          ],
+          [
+            423,
+            496
+          ],
+          [
+            416,
+            437
+          ]
+        ],
+        [
+          [
+            535,
+            426
+          ],
+          [
+            580,
+            421
+          ],
+          [
+            589,
+            478
+          ],
+          [
+            541,
+            483
+          ],
+          [
+            535,
+            426
+          ]
+        ],
+        [
+          [
+            423,
+            507
+          ],
+          [
+            535,
+            497
+          ],
+          [
+            546,
+            614
+          ],
+          [
+            434,
+            625
+          ],
+          [
+            423,
+            507
+          ]
+        ],
+        [
+          [
+            546,
+            497
+          ],
+          [
+            593,
+            491
+          ],
+          [
+            610,
+            608
+          ],
+          [
+            557,
+            614
+          ],
+          [
+            546,
+            497
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "luoyang-west-detail-south-courts",
+      "name": "西侧宫苑南部院落轮廓",
+      "pixelLines": [
+        [
+          [
+            316,
+            641
+          ],
+          [
+            383,
+            634
+          ],
+          [
+            392,
+            720
+          ],
+          [
+            325,
+            729
+          ],
+          [
+            316,
+            641
+          ]
+        ],
+        [
+          [
+            462,
+            569
+          ],
+          [
+            531,
+            562
+          ],
+          [
+            539,
+            613
+          ],
+          [
+            467,
+            622
+          ],
+          [
+            462,
+            569
+          ]
+        ],
+        [
+          [
+            471,
+            637
+          ],
+          [
+            544,
+            629
+          ],
+          [
+            552,
+            716
+          ],
+          [
+            480,
+            724
+          ],
+          [
+            471,
+            637
+          ]
+        ],
+        [
+          [
+            400,
+            677
+          ],
+          [
+            432,
+            673
+          ],
+          [
+            436,
+            702
+          ],
+          [
+            404,
+            706
+          ],
+          [
+            400,
+            677
+          ]
+        ],
+        [
+          [
+            405,
+            712
+          ],
+          [
+            438,
+            708
+          ],
+          [
+            440,
+            720
+          ],
+          [
+            407,
+            724
+          ],
+          [
+            405,
+            712
+          ]
+        ],
+        [
+          [
+            410,
+            733
+          ],
+          [
+            444,
+            729
+          ],
+          [
+            448,
+            772
+          ],
+          [
+            414,
+            777
+          ],
+          [
+            410,
+            733
+          ]
+        ]
+      ]
+    }
+  ],
+  "afterSha256": "9d12c124c314e1e2cc3e4daf03f9baa3d7c69e00733c9069dc501192bdd21c88",
+  "unchanged": 1023
+}

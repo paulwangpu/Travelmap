@@ -19292,6 +19292,758 @@
       "heritageId": "whc-1269",
       "checklistItem": "Sacred City of Caral-Supe",
       "sharedCapitalCheckin": true
+    },
+    {
+      "key": "canada-ottawa",
+      "name": "渥太华",
+      "enName": "Ottawa",
+      "aliases": [
+        "渥太华",
+        "Ottawa"
+      ],
+      "center": [
+        -75.699,
+        45.4248
+      ],
+      "bbox": [
+        -75.724,
+        45.3998,
+        -75.67399999999999,
+        45.449799999999996
+      ],
+      "country": "加拿大",
+      "countryId": "ca",
+      "date": 1866,
+      "period": "清",
+      "capitalPeriods": [
+        "清",
+        "近现代"
+      ],
+      "periodLabel": "加拿大首都",
+      "regime": "加拿大联合省／加拿大",
+      "historicalIdentity": "capital",
+      "identityLabel": "加拿大首都",
+      "identityEnLabel": "Capital of Canada",
+      "identitySourceUrl": "https://www.canada.ca/en/privy-council/services/about-cabinet/cabinet-then-now.html",
+      "referenceUrl": "https://www.canada.ca/en/privy-council/services/about-cabinet/cabinet-then-now.html",
+      "historicalYears": "1866—1867、1867—今",
+      "note": "1857年选定，1866年政府迁入，1867年联邦成立后为加拿大首都。国会山不是宫城或环城墙。 已接入实际城防或建筑；完整分期城界待核。",
+      "enNote": "Chosen in 1857; government moved in 1866; federal capital since 1867. Parliament Hill is not a walled palace or city enclosure. Complete phased city boundaries remain unverified.",
+      "identityNote": "1857年选定，1866年政府迁入，1867年联邦成立后为加拿大首都。国会山不是宫城或环城墙。",
+      "identityEnNote": "Chosen in 1857; government moved in 1866; federal capital since 1867. Parliament Hill is not a walled palace or city enclosure.",
+      "boundaryAudit": {
+        "status": "已接入实际城防或建筑；完整分期城界待核。",
+        "featureCount": 3,
+        "areaCount": 3,
+        "wallCount": 0,
+        "palaceCount": 3,
+        "openWallCount": 0
+      },
+      "capitalSiteKey": "ancient-site:world-canada-ottawa"
+    },
+    {
+      "key": "canada-quebec",
+      "name": "魁北克城",
+      "enName": "Québec City",
+      "aliases": [
+        "魁北克城",
+        "Québec City",
+        "魁北克古城区",
+        "Historic District of Old Québec",
+        "Historic District of Old Québec"
+      ],
+      "center": [
+        -71.2106,
+        46.80944
+      ],
+      "bbox": [
+        -71.2316,
+        46.7867,
+        -71.18159999999999,
+        46.8367
+      ],
+      "country": "加拿大",
+      "countryId": "ca",
+      "date": 1608,
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清"
+      ],
+      "periodLabel": "新法兰西首府／加拿大联合省首都",
+      "regime": "新法兰西／英属魁北克省／下加拿大／加拿大联合省",
+      "historicalIdentity": "capital",
+      "identityLabel": "新法兰西首府／加拿大联合省首都",
+      "identityEnLabel": "Capital of New France and the Province of Canada",
+      "identitySourceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1637",
+      "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1637",
+      "historicalYears": "1608—1763、1763—1791、1791—1841、1852—1856、1860—1866",
+      "note": "同一城址分列殖民地与联合省首都时期。只接入实物城防段及圣路易堡宫遗迹；世界遗产区不作全城墙。圣路易门等含19世纪改建。 已接入实际城防或建筑；完整分期城界待核。",
+      "enNote": "Colonial and united-province periods are separate. Surviving fortifications and Saint-Louis ruins are distinct from the UNESCO property; gates include later rebuilding. Complete phased city boundaries remain unverified.",
+      "identityNote": "同一城址分列殖民地与联合省首都时期。只接入实物城防段及圣路易堡宫遗迹；世界遗产区不作全城墙。圣路易门等含19世纪改建。",
+      "identityEnNote": "Colonial and united-province periods are separate. Surviving fortifications and Saint-Louis ruins are distinct from the UNESCO property; gates include later rebuilding.",
+      "boundaryAudit": {
+        "status": "已接入实际城防或建筑；完整分期城界待核。",
+        "featureCount": 45,
+        "areaCount": 45,
+        "wallCount": 39,
+        "palaceCount": 2,
+        "openWallCount": 0
+      },
+      "heritageId": "whc-300",
+      "checklistItem": "Historic District of Old Québec",
+      "capitalSiteKey": "ancient-site:world-canada-quebec",
+      "sharedCapitalCheckin": true
+    },
+    {
+      "key": "canada-kingston",
+      "name": "金斯顿",
+      "enName": "Kingston",
+      "aliases": [
+        "金斯顿",
+        "Kingston"
+      ],
+      "center": [
+        -76.4951,
+        44.2225
+      ],
+      "bbox": [
+        -76.5201,
+        44.1975,
+        -76.47009999999999,
+        44.247499999999995
+      ],
+      "country": "加拿大",
+      "countryId": "ca",
+      "date": 1841,
+      "period": "清",
+      "capitalPeriods": [
+        "清"
+      ],
+      "periodLabel": "加拿大联合省首都",
+      "regime": "加拿大联合省",
+      "historicalIdentity": "capital",
+      "identityLabel": "加拿大联合省首都",
+      "identityEnLabel": "Capital of the Province of Canada",
+      "identitySourceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1637",
+      "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1637",
+      "historicalYears": "1841—1843",
+      "note": "联合省议会最初在当时的医院举行。亨利堡、弗雷德里克塔和绍尔塔属于港防体系，不能围成全城墙。 已接入实际城防或建筑；完整分期城界待核。",
+      "enNote": "First united-province parliament met in the then hospital. Fort Henry and harbour towers are separate defences, not a city circuit. Complete phased city boundaries remain unverified.",
+      "identityNote": "联合省议会最初在当时的医院举行。亨利堡、弗雷德里克塔和绍尔塔属于港防体系，不能围成全城墙。",
+      "identityEnNote": "First united-province parliament met in the then hospital. Fort Henry and harbour towers are separate defences, not a city circuit.",
+      "boundaryAudit": {
+        "status": "已接入实际城防或建筑；完整分期城界待核。",
+        "featureCount": 7,
+        "areaCount": 4,
+        "wallCount": 3,
+        "palaceCount": 0,
+        "openWallCount": 3
+      },
+      "capitalSiteKey": "ancient-site:world-canada-kingston"
+    },
+    {
+      "key": "canada-montreal",
+      "name": "蒙特利尔",
+      "enName": "Montréal",
+      "aliases": [
+        "蒙特利尔",
+        "Montréal"
+      ],
+      "center": [
+        -73.5567,
+        45.5003
+      ],
+      "bbox": [
+        -73.58170000000001,
+        45.475300000000004,
+        -73.5317,
+        45.5253
+      ],
+      "country": "加拿大",
+      "countryId": "ca",
+      "date": 1844,
+      "period": "清",
+      "capitalPeriods": [
+        "清"
+      ],
+      "periodLabel": "加拿大联合省首都",
+      "regime": "加拿大联合省",
+      "historicalIdentity": "capital",
+      "identityLabel": "加拿大联合省首都",
+      "identityEnLabel": "Capital of the Province of Canada",
+      "identitySourceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1637",
+      "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1637",
+      "historicalYears": "1844—1849",
+      "note": "1849年议会大厦被焚；旧议会遗址与早期殖民城墙不是同一年代。未接入现代广场作为古代城郭。 已接入实际城防或建筑；完整分期城界待核。",
+      "enNote": "Parliament burned in 1849. The former parliament site and colonial walls belong to different phases; a modern square is not a city boundary. Complete phased city boundaries remain unverified.",
+      "identityNote": "1849年议会大厦被焚；旧议会遗址与早期殖民城墙不是同一年代。未接入现代广场作为古代城郭。",
+      "identityEnNote": "Parliament burned in 1849. The former parliament site and colonial walls belong to different phases; a modern square is not a city boundary.",
+      "boundaryAudit": {
+        "status": "已接入实际城防或建筑；完整分期城界待核。",
+        "featureCount": 2,
+        "areaCount": 0,
+        "wallCount": 2,
+        "palaceCount": 0,
+        "openWallCount": 2
+      },
+      "capitalSiteKey": "ancient-site:world-canada-montreal"
+    },
+    {
+      "key": "canada-toronto",
+      "name": "多伦多（约克）",
+      "enName": "Toronto (York)",
+      "aliases": [
+        "多伦多（约克）",
+        "Toronto (York)"
+      ],
+      "center": [
+        -79.387,
+        43.645
+      ],
+      "bbox": [
+        -79.412,
+        43.620000000000005,
+        -79.362,
+        43.67
+      ],
+      "country": "加拿大",
+      "countryId": "ca",
+      "date": 1797,
+      "period": "清",
+      "capitalPeriods": [
+        "清"
+      ],
+      "periodLabel": "上加拿大首府／加拿大联合省首都",
+      "regime": "上加拿大／加拿大联合省",
+      "historicalIdentity": "capital",
+      "identityLabel": "上加拿大首府／加拿大联合省首都",
+      "identityEnLabel": "Upper Canada capital and Province of Canada capital",
+      "identitySourceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1637",
+      "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1637",
+      "historicalYears": "1797—1841、1850—1851、1856—1859",
+      "note": "现多伦多城址，约克为旧称。联合省年份按加拿大公园局议会会期记录；旧议会不在今天安大略省议会大厦。约克堡是独立防御据点。 已接入实际城防或建筑；完整分期城界待核。",
+      "enNote": "York is the former name of this city. United-province dates follow Parks Canada parliamentary sessions; the old legislature is not the modern Ontario legislature. Fort York is a separate defence. Complete phased city boundaries remain unverified.",
+      "identityNote": "现多伦多城址，约克为旧称。联合省年份按加拿大公园局议会会期记录；旧议会不在今天安大略省议会大厦。约克堡是独立防御据点。",
+      "identityEnNote": "York is the former name of this city. United-province dates follow Parks Canada parliamentary sessions; the old legislature is not the modern Ontario legislature. Fort York is a separate defence.",
+      "boundaryAudit": {
+        "status": "已接入实际城防或建筑；完整分期城界待核。",
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0
+      },
+      "capitalSiteKey": "ancient-site:world-canada-toronto"
+    },
+    {
+      "key": "canada-stjohns",
+      "name": "圣约翰斯",
+      "enName": "St. John’s",
+      "aliases": [
+        "圣约翰斯",
+        "St. John’s"
+      ],
+      "center": [
+        -52.7006,
+        47.5708
+      ],
+      "bbox": [
+        -52.7256,
+        47.5458,
+        -52.6756,
+        47.5958
+      ],
+      "country": "加拿大",
+      "countryId": "ca",
+      "date": 1907,
+      "period": "清",
+      "capitalPeriods": [
+        "清",
+        "近现代"
+      ],
+      "periodLabel": "纽芬兰自治领首都",
+      "regime": "纽芬兰自治领",
+      "historicalIdentity": "capital",
+      "identityLabel": "纽芬兰自治领首都",
+      "identityEnLabel": "Capital of the Dominion of Newfoundland",
+      "identitySourceUrl": "https://www.assembly.nl.ca/VisitLearn/History.aspx",
+      "referenceUrl": "https://www.assembly.nl.ca/VisitLearn/History.aspx",
+      "historicalYears": "1907—1949",
+      "note": "纽芬兰1907年取得自治领称号，1934年暂停责任政府、改行委员会政府，1949年加入加拿大；不混称当时的加拿大国家首都。汤森堡的可靠遗迹墙界尚待核，未把同名现代道路接入为城墙。 已接入实际城防或建筑；完整分期城界待核。",
+      "enNote": "Dominion status from 1907; responsible government suspended in 1934; joined Canada in 1949. It was not Canada’s federal capital. Fort Townshend wall geometry remains unverified; the modern road of the same name is excluded. Complete phased city boundaries remain unverified.",
+      "identityNote": "纽芬兰1907年取得自治领称号，1934年暂停责任政府、改行委员会政府，1949年加入加拿大；不混称当时的加拿大国家首都。汤森堡的可靠遗迹墙界尚待核，未把同名现代道路接入为城墙。",
+      "identityEnNote": "Dominion status from 1907; responsible government suspended in 1934; joined Canada in 1949. It was not Canada’s federal capital. Fort Townshend wall geometry remains unverified; the modern road of the same name is excluded.",
+      "boundaryAudit": {
+        "status": "已接入实际城防或建筑；完整分期城界待核。",
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0
+      },
+      "capitalSiteKey": "ancient-site:world-canada-stjohns"
+    },
+    {
+      "key": "canada-newark",
+      "name": "纽瓦克（滨湖尼亚加拉）",
+      "enName": "Newark (Niagara-on-the-Lake)",
+      "aliases": [
+        "纽瓦克（滨湖尼亚加拉）",
+        "Newark (Niagara-on-the-Lake)"
+      ],
+      "center": [
+        -79.0616,
+        43.2498
+      ],
+      "bbox": [
+        -79.0866,
+        43.2248,
+        -79.03659999999999,
+        43.2748
+      ],
+      "country": "加拿大",
+      "countryId": "ca",
+      "date": 1792,
+      "period": "清",
+      "capitalPeriods": [
+        "清"
+      ],
+      "periodLabel": "上加拿大殖民地首府",
+      "regime": "上加拿大",
+      "historicalIdentity": "administrative-capital",
+      "identityLabel": "上加拿大殖民地首府",
+      "identityEnLabel": "Capital of colonial Upper Canada",
+      "identitySourceUrl": "https://www.notlmuseum.ca/blog/title/the-saga-of-naming-our-town/",
+      "referenceUrl": "https://www.notlmuseum.ca/blog/title/the-saga-of-naming-our-town/",
+      "historicalYears": "1792—1796",
+      "note": "今滨湖尼亚加拉，不能与美国纽瓦克混淆。按博物馆资料列1792—1796；其后政府迁约克，约克首届议会于1797年召开。乔治堡非全城。 已接入实际城防或建筑；完整分期城界待核。",
+      "enNote": "Now Niagara-on-the-Lake, distinct from Newark in the US. Museum dates are 1792–1796; parliament in York opened in 1797. Fort George is not a whole-city boundary. Complete phased city boundaries remain unverified.",
+      "identityNote": "今滨湖尼亚加拉，不能与美国纽瓦克混淆。按博物馆资料列1792—1796；其后政府迁约克，约克首届议会于1797年召开。乔治堡非全城。",
+      "identityEnNote": "Now Niagara-on-the-Lake, distinct from Newark in the US. Museum dates are 1792–1796; parliament in York opened in 1797. Fort George is not a whole-city boundary.",
+      "boundaryAudit": {
+        "status": "已接入实际城防或建筑；完整分期城界待核。",
+        "featureCount": 2,
+        "areaCount": 2,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0
+      }
+    },
+    {
+      "key": "canada-annapolis",
+      "name": "安纳波利斯罗亚尔",
+      "enName": "Annapolis Royal",
+      "aliases": [
+        "安纳波利斯罗亚尔",
+        "Annapolis Royal"
+      ],
+      "center": [
+        -65.5195,
+        44.7409
+      ],
+      "bbox": [
+        -65.5445,
+        44.715900000000005,
+        -65.49449999999999,
+        44.7659
+      ],
+      "country": "加拿大",
+      "countryId": "ca",
+      "date": 1632,
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清"
+      ],
+      "periodLabel": "阿卡迪亚／新斯科舍殖民地首府",
+      "regime": "法属阿卡迪亚／英属新斯科舍",
+      "historicalIdentity": "administrative-capital",
+      "identityLabel": "阿卡迪亚／新斯科舍殖民地首府",
+      "identityEnLabel": "Capital of colonial Acadia and Nova Scotia",
+      "identitySourceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=254",
+      "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=254",
+      "historicalYears": "1632—1710、1710—1749",
+      "note": "现安妮堡所在城址，不与1605年在河口另一侧的皇家港居址混为一处。首府地位有战争与迁驻中断；现堡土垒以1702—1708年工事为核心。 已接入实际城防或建筑；完整分期城界待核。",
+      "enNote": "Fort Anne townsite, distinct from the 1605 Port-Royal Habitation across the basin. Capital status was interrupted by warfare and relocation; present earthworks centre on the 1702–1708 fort. Complete phased city boundaries remain unverified.",
+      "identityNote": "现安妮堡所在城址，不与1605年在河口另一侧的皇家港居址混为一处。首府地位有战争与迁驻中断；现堡土垒以1702—1708年工事为核心。",
+      "identityEnNote": "Fort Anne townsite, distinct from the 1605 Port-Royal Habitation across the basin. Capital status was interrupted by warfare and relocation; present earthworks centre on the 1702–1708 fort.",
+      "boundaryAudit": {
+        "status": "已接入实际城防或建筑；完整分期城界待核。",
+        "featureCount": 10,
+        "areaCount": 2,
+        "wallCount": 7,
+        "palaceCount": 1,
+        "openWallCount": 7
+      }
+    },
+    {
+      "key": "canada-louisbourg",
+      "name": "路易斯堡",
+      "enName": "Louisbourg",
+      "aliases": [
+        "路易斯堡",
+        "Louisbourg"
+      ],
+      "center": [
+        -59.986,
+        45.8925
+      ],
+      "bbox": [
+        -60.010999999999996,
+        45.8675,
+        -59.961,
+        45.9175
+      ],
+      "country": "加拿大",
+      "countryId": "ca",
+      "date": 1713,
+      "period": "清",
+      "capitalPeriods": [
+        "清"
+      ],
+      "periodLabel": "法属皇家岛殖民地首府",
+      "regime": "法属皇家岛",
+      "historicalIdentity": "administrative-capital",
+      "identityLabel": "法属皇家岛殖民地首府",
+      "identityEnLabel": "Capital of French Île Royale",
+      "identitySourceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303",
+      "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303",
+      "historicalYears": "1713—1745、1749—1758",
+      "note": "1745年与1758年被英军攻占，1760年拆毁工事；1961年起复建部分城镇。接入原始墙线和复建建筑，管理范围不当作完整古城墙。 已接入实际城防或建筑；完整分期城界待核。",
+      "enNote": "Captured in 1745 and 1758; defences demolished in 1760; partial reconstruction began in 1961. Original mapped walls and reconstructed structures are distinct from the administrative site boundary. Complete phased city boundaries remain unverified.",
+      "identityNote": "1745年与1758年被英军攻占，1760年拆毁工事；1961年起复建部分城镇。接入原始墙线和复建建筑，管理范围不当作完整古城墙。",
+      "identityEnNote": "Captured in 1745 and 1758; defences demolished in 1760; partial reconstruction began in 1961. Original mapped walls and reconstructed structures are distinct from the administrative site boundary.",
+      "boundaryAudit": {
+        "status": "已接入实际城防或建筑；完整分期城界待核。",
+        "featureCount": 22,
+        "areaCount": 3,
+        "wallCount": 19,
+        "palaceCount": 1,
+        "openWallCount": 19
+      }
+    },
+    {
+      "key": "canada-halifax",
+      "name": "哈利法克斯",
+      "enName": "Halifax",
+      "aliases": [
+        "哈利法克斯",
+        "Halifax"
+      ],
+      "center": [
+        -63.5808,
+        44.6475
+      ],
+      "bbox": [
+        -63.6058,
+        44.6225,
+        -63.555800000000005,
+        44.6725
+      ],
+      "country": "加拿大",
+      "countryId": "ca",
+      "date": 1749,
+      "period": "清",
+      "capitalPeriods": [
+        "清"
+      ],
+      "periodLabel": "新斯科舍殖民地首府",
+      "regime": "新斯科舍殖民地",
+      "historicalIdentity": "administrative-capital",
+      "identityLabel": "新斯科舍殖民地首府",
+      "identityEnLabel": "Capital of colonial Nova Scotia",
+      "identitySourceUrl": "https://www.parks.canada.ca/lhn-nhs/ns/halifax/culture/histoire-history/citadelles-4-citadels",
+      "referenceUrl": "https://www.parks.canada.ca/lhn-nhs/ns/halifax/culture/histoire-history/citadelles-4-citadels",
+      "historicalYears": "1749—1867",
+      "note": "1749年建城并形成政府与军事核心。现星形堡为第四代工事，不等于1749年全城木栅范围。 已接入实际城防或建筑；完整分期城界待核。",
+      "enNote": "Founded in 1749 as a colonial government and military centre. The present star fort is the fourth citadel, not the 1749 town palisade. Complete phased city boundaries remain unverified.",
+      "identityNote": "1749年建城并形成政府与军事核心。现星形堡为第四代工事，不等于1749年全城木栅范围。",
+      "identityEnNote": "Founded in 1749 as a colonial government and military centre. The present star fort is the fourth citadel, not the 1749 town palisade.",
+      "boundaryAudit": {
+        "status": "已接入实际城防或建筑；完整分期城界待核。",
+        "featureCount": 3,
+        "areaCount": 3,
+        "wallCount": 0,
+        "palaceCount": 2,
+        "openWallCount": 0
+      }
+    },
+    {
+      "key": "canada-fredericton",
+      "name": "弗雷德里克顿",
+      "enName": "Fredericton",
+      "aliases": [
+        "弗雷德里克顿",
+        "Fredericton"
+      ],
+      "center": [
+        -66.638,
+        45.96
+      ],
+      "bbox": [
+        -66.66300000000001,
+        45.935,
+        -66.613,
+        45.985
+      ],
+      "country": "加拿大",
+      "countryId": "ca",
+      "date": 1785,
+      "period": "清",
+      "capitalPeriods": [
+        "清"
+      ],
+      "periodLabel": "新不伦瑞克殖民地首府",
+      "regime": "新不伦瑞克殖民地",
+      "historicalIdentity": "administrative-capital",
+      "identityLabel": "新不伦瑞克殖民地首府",
+      "identityEnLabel": "Capital of colonial New Brunswick",
+      "identitySourceUrl": "https://www.fredericton.ca/fr/propos-de-fredericton/histoire-et-patrimone-de-la-ville",
+      "referenceUrl": "https://www.fredericton.ca/fr/propos-de-fredericton/histoire-et-patrimone-de-la-ville",
+      "historicalYears": "1785—1867",
+      "note": "1785年成为首府。驻军区和后来议会建筑不等于全城城墙。 已接入实际城防或建筑；完整分期城界待核。",
+      "enNote": "Capital from 1785. The garrison compound and later legislature do not define a walled city. Complete phased city boundaries remain unverified.",
+      "identityNote": "1785年成为首府。驻军区和后来议会建筑不等于全城城墙。",
+      "identityEnNote": "Capital from 1785. The garrison compound and later legislature do not define a walled city.",
+      "boundaryAudit": {
+        "status": "已接入实际城防或建筑；完整分期城界待核。",
+        "featureCount": 2,
+        "areaCount": 2,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0
+      }
+    },
+    {
+      "key": "canada-charlottetown",
+      "name": "夏洛特敦",
+      "enName": "Charlottetown",
+      "aliases": [
+        "夏洛特敦",
+        "Charlottetown"
+      ],
+      "center": [
+        -63.1264,
+        46.234
+      ],
+      "bbox": [
+        -63.151399999999995,
+        46.209,
+        -63.1014,
+        46.259
+      ],
+      "country": "加拿大",
+      "countryId": "ca",
+      "date": 1768,
+      "period": "清",
+      "capitalPeriods": [
+        "清"
+      ],
+      "periodLabel": "圣约翰岛／爱德华王子岛殖民地首府",
+      "regime": "圣约翰岛／爱德华王子岛殖民地",
+      "historicalIdentity": "administrative-capital",
+      "identityLabel": "圣约翰岛／爱德华王子岛殖民地首府",
+      "identityEnLabel": "Capital of colonial St John’s Island / Prince Edward Island",
+      "identitySourceUrl": "https://www.charlottetown.ca/resident_services/heritage/city_history",
+      "referenceUrl": "https://www.charlottetown.ca/resident_services/heritage/city_history",
+      "historicalYears": "1768—1873",
+      "note": "1764年勘测选址、1768年规划；1864年会议在省议会大楼举行，不等于当时加拿大国家首都。此前行政驻地拉茹瓦港另列。 已接入实际城防或建筑；完整分期城界待核。",
+      "enNote": "Surveyed in 1764 and laid out in 1768. Hosting the 1864 conference did not make it Canada’s national capital. Earlier Port-la-Joye is separate. Complete phased city boundaries remain unverified.",
+      "identityNote": "1764年勘测选址、1768年规划；1864年会议在省议会大楼举行，不等于当时加拿大国家首都。此前行政驻地拉茹瓦港另列。",
+      "identityEnNote": "Surveyed in 1764 and laid out in 1768. Hosting the 1864 conference did not make it Canada’s national capital. Earlier Port-la-Joye is separate.",
+      "boundaryAudit": {
+        "status": "已接入实际城防或建筑；完整分期城界待核。",
+        "featureCount": 2,
+        "areaCount": 2,
+        "wallCount": 0,
+        "palaceCount": 2,
+        "openWallCount": 0
+      }
+    },
+    {
+      "key": "canada-newwestminster",
+      "name": "新威斯敏斯特",
+      "enName": "New Westminster",
+      "aliases": [
+        "新威斯敏斯特",
+        "New Westminster"
+      ],
+      "center": [
+        -122.9026,
+        49.2161
+      ],
+      "bbox": [
+        -122.92760000000001,
+        49.1911,
+        -122.8776,
+        49.241099999999996
+      ],
+      "country": "加拿大",
+      "countryId": "ca",
+      "date": 1859,
+      "period": "清",
+      "capitalPeriods": [
+        "清"
+      ],
+      "periodLabel": "不列颠哥伦比亚殖民地首府",
+      "regime": "不列颠哥伦比亚殖民地",
+      "historicalIdentity": "administrative-capital",
+      "identityLabel": "不列颠哥伦比亚殖民地首府",
+      "identityEnLabel": "Capital of colonial British Columbia",
+      "identitySourceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1641",
+      "referenceUrl": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1641",
+      "historicalYears": "1859—1868",
+      "note": "1859—1868年首府，后迁维多利亚。可靠殖民政府建筑或城墙几何尚缺；不把后建监狱门楼“总督城堡”误作总督宫。 历史身份已核实；殖民政府遗存与完整城界几何待核。",
+      "enNote": "Colonial capital 1859–1868, then moved to Victoria. Colonial-government and wall geometry remains unverified; the later prison gatehouse called Governor’s Castle is not a governor’s palace. Complete phased city boundaries remain unverified.",
+      "identityNote": "1859—1868年首府，后迁维多利亚。可靠殖民政府建筑或城墙几何尚缺；不把后建监狱门楼“总督城堡”误作总督宫。",
+      "identityEnNote": "Colonial capital 1859–1868, then moved to Victoria. Colonial-government and wall geometry remains unverified; the later prison gatehouse called Governor’s Castle is not a governor’s palace.",
+      "boundaryAudit": {
+        "status": "历史身份已核实；殖民政府遗存与完整城界几何待核。",
+        "featureCount": 0,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0
+      }
+    },
+    {
+      "key": "canada-victoria",
+      "name": "维多利亚",
+      "enName": "Victoria",
+      "aliases": [
+        "维多利亚",
+        "Victoria"
+      ],
+      "center": [
+        -123.3707,
+        48.4193
+      ],
+      "bbox": [
+        -123.3957,
+        48.3943,
+        -123.3457,
+        48.4443
+      ],
+      "country": "加拿大",
+      "countryId": "ca",
+      "date": 1849,
+      "period": "清",
+      "capitalPeriods": [
+        "清"
+      ],
+      "periodLabel": "温哥华岛／不列颠哥伦比亚殖民地首府",
+      "regime": "温哥华岛殖民地／不列颠哥伦比亚殖民地",
+      "historicalIdentity": "administrative-capital",
+      "identityLabel": "温哥华岛／不列颠哥伦比亚殖民地首府",
+      "identityEnLabel": "Capital of colonial Vancouver Island and British Columbia",
+      "identitySourceUrl": "https://www.leg.bc.ca/learn/discover-your-legislature/1868-victoria-named-capital-city",
+      "referenceUrl": "https://www.leg.bc.ca/learn/discover-your-legislature/1868-victoria-named-capital-city",
+      "historicalYears": "1849—1866、1868—1871",
+      "note": "1866—1868年联合殖民地首府在新威斯敏斯特，1868年迁回本城。现省议会大厦为后建建筑，不是早期维多利亚堡围墙。 已接入实际城防或建筑；完整分期城界待核。",
+      "enNote": "United-colony government was in New Westminster in 1866–1868, then moved here in 1868. The current legislature is later construction, not Fort Victoria’s stockade. Complete phased city boundaries remain unverified.",
+      "identityNote": "1866—1868年联合殖民地首府在新威斯敏斯特，1868年迁回本城。现省议会大厦为后建建筑，不是早期维多利亚堡围墙。",
+      "identityEnNote": "United-colony government was in New Westminster in 1866–1868, then moved here in 1868. The current legislature is later construction, not Fort Victoria’s stockade.",
+      "boundaryAudit": {
+        "status": "已接入实际城防或建筑；完整分期城界待核。",
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0
+      }
+    },
+    {
+      "key": "canada-portlajoye",
+      "name": "拉茹瓦港",
+      "enName": "Port-la-Joye",
+      "aliases": [
+        "拉茹瓦港",
+        "Port-la-Joye"
+      ],
+      "center": [
+        -63.1348,
+        46.196
+      ],
+      "bbox": [
+        -63.1598,
+        46.171,
+        -63.1098,
+        46.221
+      ],
+      "country": "加拿大",
+      "countryId": "ca",
+      "date": 1720,
+      "period": "清",
+      "capitalPeriods": [
+        "清"
+      ],
+      "periodLabel": "圣约翰岛殖民行政驻地",
+      "regime": "法属／英属圣约翰岛",
+      "historicalIdentity": "administrative-capital",
+      "identityLabel": "圣约翰岛殖民行政驻地",
+      "identityEnLabel": "Colonial government seat of Île Saint-Jean",
+      "identitySourceUrl": "https://www.pc.gc.ca/culture/designation/lieu-site/skmaqn",
+      "referenceUrl": "https://www.pc.gc.ca/culture/designation/lieu-site/skmaqn",
+      "historicalYears": "1720—1768",
+      "note": "所属皇家岛殖民地的上级首府在路易斯堡；岛上行政驻地不等同独立国家首都。阿默斯特堡遗迹标绘不等于整个聚落或国家历史遗址管理区。 已接入实际城防或建筑；完整分期城界待核。",
+      "enNote": "Island government seat subordinate to Île Royale, whose capital was Louisbourg. Mapped Fort Amherst remains are not the entire settlement or managed national historic site. Complete phased city boundaries remain unverified.",
+      "identityNote": "所属皇家岛殖民地的上级首府在路易斯堡；岛上行政驻地不等同独立国家首都。阿默斯特堡遗迹标绘不等于整个聚落或国家历史遗址管理区。",
+      "identityEnNote": "Island government seat subordinate to Île Royale, whose capital was Louisbourg. Mapped Fort Amherst remains are not the entire settlement or managed national historic site.",
+      "boundaryAudit": {
+        "status": "已接入实际城防或建筑；完整分期城界待核。",
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0
+      }
+    },
+    {
+      "key": "canada-placentia",
+      "name": "普拉森舍（普莱桑斯）",
+      "enName": "Placentia (Plaisance)",
+      "aliases": [
+        "普拉森舍（普莱桑斯）",
+        "Placentia (Plaisance)"
+      ],
+      "center": [
+        -53.9715,
+        47.2458
+      ],
+      "bbox": [
+        -53.9965,
+        47.220800000000004,
+        -53.9465,
+        47.2708
+      ],
+      "country": "加拿大",
+      "countryId": "ca",
+      "date": 1662,
+      "period": "清",
+      "capitalPeriods": [
+        "清"
+      ],
+      "periodLabel": "法属纽芬兰殖民地首府",
+      "regime": "法属纽芬兰",
+      "historicalIdentity": "administrative-capital",
+      "identityLabel": "法属纽芬兰殖民地首府",
+      "identityEnLabel": "Capital of French Newfoundland",
+      "identitySourceUrl": "https://www.heritage.nf.ca/articles/exploration/french-settlement-placentia.php",
+      "referenceUrl": "https://www.heritage.nf.ca/articles/exploration/french-settlement-placentia.php",
+      "historicalYears": "1662—1713",
+      "note": "法属普莱桑斯，1713年乌得勒支条约后退出；皇家堡与其他堡址分别表达，不代替聚落完整范围。 已接入实际城防或建筑；完整分期城界待核。",
+      "enNote": "French Plaisance, abandoned under the 1713 Treaty of Utrecht. Fort Royal and other fort sites do not define the full settlement. Complete phased city boundaries remain unverified.",
+      "identityNote": "法属普莱桑斯，1713年乌得勒支条约后退出；皇家堡与其他堡址分别表达，不代替聚落完整范围。",
+      "identityEnNote": "French Plaisance, abandoned under the 1713 Treaty of Utrecht. Fort Royal and other fort sites do not define the full settlement.",
+      "boundaryAudit": {
+        "status": "已接入实际城防或建筑；完整分期城界待核。",
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0
+      }
     }
   ],
   "counts": {
@@ -19719,7 +20471,23 @@
     "chengtoushan": 1,
     "eridu": 3,
     "shahr-i-sokhta": 1,
-    "caral": 9
+    "caral": 9,
+    "canada-ottawa": 3,
+    "canada-quebec": 45,
+    "canada-kingston": 7,
+    "canada-montreal": 2,
+    "canada-toronto": 1,
+    "canada-stjohns": 1,
+    "canada-newark": 2,
+    "canada-annapolis": 10,
+    "canada-louisbourg": 22,
+    "canada-halifax": 3,
+    "canada-fredericton": 2,
+    "canada-charlottetown": 2,
+    "canada-newwestminster": 0,
+    "canada-victoria": 1,
+    "canada-portlajoye": 1,
+    "canada-placentia": 1
   },
   "source": "© OpenStreetMap contributors · ODbL",
   "reviewedAt": "2026-10-10",
@@ -19851,6 +20619,10 @@
     "胡朝时期的城堡": "ho-citadel",
     "Citadel of the Ho Dynasty": "ho-citadel",
     "罗马历史中心，享受治外法权的罗马教廷建筑和缪拉圣保罗弗利": "rome",
-    "Historic Centre of Rome, the Properties of the Holy See in that City Enjoying Extraterritorial Rights and San Paolo Fuori le Mura": "rome"
+    "Historic Centre of Rome, the Properties of the Holy See in that City Enjoying Extraterritorial Rights and San Paolo Fuori le Mura": "rome",
+    "魁北克城": "canada-quebec",
+    "Québec City": "canada-quebec",
+    "魁北克古城区": "canada-quebec",
+    "Historic District of Old Québec": "canada-quebec"
   }
 }

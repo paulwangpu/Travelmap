@@ -2,7 +2,7 @@ const assert=require('node:assert/strict'),fs=require('fs'),c=require('../data/c
 const root=k=>a.items.find(s=>s.classicalSiteKey===k),site=k=>c.sites.find(s=>s.key===k);
 assert.equal(root('cordoba').records[0]['都城年代（原文）'],'756—1031（酋长国756—929；哈里发国929—1031）');assert.match(root('toledo').hoverIdentity,/泰法/);assert(root('toledo').eras.includes('宋辽金西夏'));assert.equal(root('valladolid').records[0]['都城年代（原文）'],'1601—1606');
 assert.match(site('barcelona').identityLabel,/伯国/);assert.match(site('barcelona').identityNote,/唯一固定首都/);assert(root('barcelona').eras.includes('元'));assert.match(site('nafplio').identityNote,/1832/);assert(!site('nafplio').identityLabel.includes('王国'));assert(site('athens').capitalPeriods.includes('清'));assert(site('athens').identityNote.includes('1834'));
-assert.equal(a.items.length,508);assert.equal(a.recordItems.length,748);assert.equal(c.sites.length,425);assert.equal(JSON.parse(fs.readFileSync('data/classical-sites/sites.geojson')).features.length,2782);
+assert.equal(a.items.length,514);assert.equal(a.recordItems.length,761);assert.equal(c.sites.length,441);assert.equal(JSON.parse(fs.readFileSync('data/classical-sites/sites.geojson')).features.length,2885);
 for(const k of report.implementedCorrections.filter(k=>k!=='athens')){const r=a.recordItems.find(r=>r.classicalSiteKey===k);assert(r.name.endsWith(site(k).identityLabel));assert(r.sourceOrder);}
 for(const name of ['吞武里','南奔','清莱','魏功甘（Wiang Kum Kam）','莱昂','奥维耶多','格拉纳达','潘普洛纳','斯巴达','科林斯','埃伊纳','米斯特拉斯'])assert(report.rows.some(r=>r.name===name&&r.previousStatus==='已核实遗漏'));
 assert.equal(site('sithep').historicalIdentity,'ancient-city');assert.equal(report.rows.find(r=>r.name==='西萨查那莱').status,'普通古城候选');assert.equal(report.rows.find(r=>r.name==='佛统').status,'待核候选');

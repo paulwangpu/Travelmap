@@ -1,0 +1,1318 @@
+{
+  "date": "2026-10-21",
+  "beforeCount": 37,
+  "afterCount": 41,
+  "beforeFeatures": [
+    {
+      "sourceId": "nanjing-osm-ming-citywall-lines",
+      "sha256": "e6b424edcc2836f6acd36d9480c88a963bdaa7fc24331a9b97762fced2d2e3dd"
+    },
+    {
+      "sourceId": "nanjing-osm-ming-wall-bodies",
+      "sha256": "b17beaf5b5fce082ac14b88ade2d3677f14b4eb6cf95b8870cccd5eea5c842da"
+    },
+    {
+      "sourceId": "nanjing-osm-relation-20427375",
+      "sha256": "c368715d3da906a58c1ec396e83f6838f65b5a9ff0c2c2c51b0ff79b54495657"
+    },
+    {
+      "sourceId": "nanjing-osm-way-446638898",
+      "sha256": "fad43647de779c8ac0af944f4e2708808513ffc74816f644aba00a52744e5cc2"
+    },
+    {
+      "sourceId": "nanjing-osm-way-791233540",
+      "sha256": "274973f5ae8eff386585f1ae3a106ce12564c7b2b0f581da2ef0040da23243ca"
+    },
+    {
+      "sourceId": "nanjing-osm-way-319997028",
+      "sha256": "173d3ac8725848e139415d672da23e307009c5fc67b5e8eb53d5b278592e65a4"
+    },
+    {
+      "sourceId": "nanjing-osm-way-625734601",
+      "sha256": "0bfe7a77bca0171d4fd6410a87f10004d1615c66d1b0ec39b6f32aac3fce1ec8"
+    },
+    {
+      "sourceId": "nanjing-osm-way-461035550",
+      "sha256": "e02b0c453eed3739538693c5aa8ff80bdc9953ea1fdf9e2a3c977760774c0c3c"
+    },
+    {
+      "sourceId": "nanjing-osm-relation-11308636",
+      "sha256": "8f92f2fd985ff537ca30df01f9c9014d0517caa80f91414e62822ad9d127cb3b"
+    },
+    {
+      "sourceId": "nanjing-archaeology-display-1061577687",
+      "sha256": "8929a2458a5cfbee0cb494a082838454d466a526caabccc320dfaf7030d9736d"
+    },
+    {
+      "sourceId": "nanjing-archaeology-display-94327966",
+      "sha256": "792f05b4e3864d06ef2c86fc52ccf01a15d2cc4d62f3d8d052d478f16c60c3e7"
+    },
+    {
+      "sourceId": "nanjing-plan-detail-4",
+      "sha256": "0d759fa2154549968d01c0af78bd9d7eddc94a88a12d8f1ed1ae64912eae3fd2"
+    },
+    {
+      "sourceId": "nanjing-plan-detail-5",
+      "sha256": "d3b13bdd3620e11b5a31481183c67c733e647e3ce3613873762fdc9d724a9b32"
+    },
+    {
+      "sourceId": "nanjing-water-way-88806258",
+      "sha256": "7f0c4099eb09ce1d55c12263beff47ba2218db62223752ac8a1943561e96d6b7"
+    },
+    {
+      "sourceId": "nanjing-water-way-697970987",
+      "sha256": "9400849364ae180787021ffe3bf529432498c8be7ba706c4af548d35269d6edd"
+    },
+    {
+      "sourceId": "nanjing-osm-node-5907900964",
+      "sha256": "599a06ac039df8835bd205d8f2e33ad39558243a647de15ace91b5237f619572"
+    },
+    {
+      "sourceId": "nanjing-gate-shence-location",
+      "sha256": "6cd572cf40502e315b495d1f7b6c7e98aab7a837089c4decbbf60642b32ca0b1"
+    },
+    {
+      "sourceId": "nanjing-osm-node-5833639986",
+      "sha256": "8b8f7c52debbad93b11a1132318d3f23a7030db663f09da29f6829404069803a"
+    },
+    {
+      "sourceId": "nanjing-osm-way-859591128",
+      "sha256": "d7cf57334db6ecc469806e97a2b06537ef15edf5bf5e1774adff3070c3b1bd93"
+    },
+    {
+      "sourceId": "nanjing-osm-node-5335246224",
+      "sha256": "65c9d89b3d8bcbde93fe243bc8d39bb0f148095a7957aff27ac9362dd3fde197"
+    },
+    {
+      "sourceId": "nanjing-stone-survey-wall-directions",
+      "sha256": "3bc6dda0b61a15325f2fc6d678b93ddd3afa318880f8c70b416649c2de1373d4"
+    },
+    {
+      "sourceId": "nanjing-stone-tg1-reference",
+      "sha256": "b8a1eecf61fadc8d5fc3b0fee746f431cd027f8272780bd26d0b7157a2264bd1"
+    },
+    {
+      "sourceId": "nanjing-jiankang-dasimamen-reference",
+      "sha256": "319460f65746a8e37e0e72d3a0c1306ad9e086961f025261e59d82f902f31b03"
+    },
+    {
+      "sourceId": "nanjing-jiankang-xuanyangmen-reference",
+      "sha256": "ff4f75e24bad37ade11cc3cabebdfc9bb092f87bc92e99242536bea8a380b07e"
+    },
+    {
+      "sourceId": "nanjing-nantang-east-north-moat",
+      "sha256": "6636590e1cfc9be123d7a553be4a64f9ebc750f23567d61df12375ddc3d9776b"
+    },
+    {
+      "sourceId": "nanjing-nantang-palace-moat-reference",
+      "sha256": "1a28ba0c761e60f12131734d5d298c2be441deac8c874d64f9dc7323fc6f66b5"
+    },
+    {
+      "sourceId": "nanjing-nantang-north-gate-reference",
+      "sha256": "08a77661b45dd79de06cca55eb48eb116d710bbd2d63a65bce59abde493eb537"
+    },
+    {
+      "sourceId": "nanjing-nantang-east-gate-reference",
+      "sha256": "25c299747d94808a4d3eeccc2ddc68a06f6551822559830ef58fdeb54b20ee14"
+    },
+    {
+      "sourceId": "nanjing-nantang-south-gate-reference",
+      "sha256": "9c5d53691cd4b5249be5ae784742af68e5fcac78dc62f2327a9dfc30577cf985"
+    },
+    {
+      "sourceId": "nanjing-nantang-west-gate-reference",
+      "sha256": "99ca73c8a36f1c765c987880492b0d3a9e82043564cdc2bb632bd503c7ca7d5b"
+    },
+    {
+      "sourceId": "nanjing-nantang-palace-south-gate-reference",
+      "sha256": "400008843a2acb39dfe1cf73e8b9b50bb67a771683bd2509543593d905f01ba1"
+    },
+    {
+      "sourceId": "nanjing-nantang-north-wall-vicinity",
+      "sha256": "761a98b5aac1b9da1e634fff3f10b0ec305ea7ec69772ab3d23b64e9a29b2fbc"
+    },
+    {
+      "sourceId": "nanjing-qing-fengrunmen",
+      "sha256": "fb4a1e8565b6a7b5db0a2048a8950df910f04221463377fdb2a77c10cefaaa7c"
+    },
+    {
+      "sourceId": "nanjing-presidential-way-62353727",
+      "sha256": "7b27004dfee09b827a9dce604615abfe4559fb2d3d3a29d9bfb6314b22e2e8c5"
+    },
+    {
+      "sourceId": "nanjing-presidential-way-321096461",
+      "sha256": "6be804229c45465da0af1f932e5e6e22e33b2854283a964ff7bf7f833e05e164"
+    },
+    {
+      "sourceId": "nanjing-presidential-way-625069539",
+      "sha256": "3008353b064fa3b0725dd9251ad4813c976dc529ff0feb93ae29a55d8a0fdffa"
+    },
+    {
+      "sourceId": "nanjing-presidential-way-321096452",
+      "sha256": "9c8d30dbb1c809c546e5ad542cafd8cd5a4929197739df8feb07b4ceacb9e66b"
+    }
+  ],
+  "addedFeatures": [
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "period": "明",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingOuterWall": true,
+        "sourceId": "nanjing-ming-outer-roadbase-reference",
+        "sourceName": "明外郭仙鹤门、沧波门段走向（沿旧墙基道路参照）",
+        "label": "明外郭\n（沿旧墙基道路参照）",
+        "labelMinZoom": 13,
+        "sitePoint": false,
+        "inferredBoundary": true,
+        "sourceUrl": "https://www.openstreetmap.org/way/160519135",
+        "sourceTitle": "南京明外郭：走向、门址与缺项",
+        "osm": true,
+        "sourceIds": [
+          "way/160519135",
+          "way/167237584",
+          "way/167237587",
+          "way/411830393",
+          "way/411830397",
+          "way/413677924",
+          "way/606763961",
+          "way/777281495",
+          "way/1425203310",
+          "way/777281481",
+          "way/777281486",
+          "way/1063919187",
+          "way/255219170"
+        ],
+        "referenceUrl": "https://dfz.nanjing.gov.cn/gzdt/202402/t20240220_4170002.html",
+        "lineWidth": 1.8,
+        "labelCoordinates": [
+          118.910142,
+          32.0837927
+        ],
+        "status": "现代道路原始开放线 · 有文献依据的外郭走向参照，非实测墙体",
+        "note": "官方方志记述燕西线多段以明外郭城垣为路基，仙鹤门、沧波门附近仍保留这一沿革。本要素保留所取得的原始OSM燕西线路段，合并一个名称显示并保留分段和缺口；它们是现代道路中心线，只作旧墙基地段走向参照，不是明代城墙墙体或精确中线。没有将整个现代百里风光带边界当成明外郭，也不把这些片段强行闭合、填充为完整外城。"
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              118.8796022,
+              32.0270204
+            ],
+            [
+              118.8792104,
+              32.0268703
+            ],
+            [
+              118.8788884,
+              32.0267567
+            ],
+            [
+              118.8784807,
+              32.0266793
+            ],
+            [
+              118.8779577,
+              32.0266203
+            ],
+            [
+              118.8774266,
+              32.0265657
+            ],
+            [
+              118.8769144,
+              32.0265634
+            ],
+            [
+              118.8748624,
+              32.0265862
+            ],
+            [
+              118.8737662,
+              32.026601
+            ]
+          ],
+          [
+            [
+              118.8866016,
+              32.0296208
+            ],
+            [
+              118.886057,
+              32.029275
+            ]
+          ],
+          [
+            [
+              118.886057,
+              32.029275
+            ],
+            [
+              118.8856059,
+              32.0291392
+            ]
+          ],
+          [
+            [
+              118.8801782,
+              32.0272427
+            ],
+            [
+              118.8796022,
+              32.0270204
+            ]
+          ],
+          [
+            [
+              118.8848499,
+              32.0289033
+            ],
+            [
+              118.8832497,
+              32.028353
+            ],
+            [
+              118.8828053,
+              32.0282023
+            ],
+            [
+              118.8824451,
+              32.0280801
+            ],
+            [
+              118.8801782,
+              32.0272427
+            ]
+          ],
+          [
+            [
+              118.8855051,
+              32.029106
+            ],
+            [
+              118.8848499,
+              32.0289033
+            ]
+          ],
+          [
+            [
+              118.8900788,
+              32.0336514
+            ],
+            [
+              118.8898309,
+              32.033295
+            ],
+            [
+              118.889513,
+              32.0328888
+            ],
+            [
+              118.8894674,
+              32.0328409
+            ],
+            [
+              118.8892901,
+              32.0326547
+            ],
+            [
+              118.8886628,
+              32.0319318
+            ],
+            [
+              118.8880485,
+              32.0312707
+            ],
+            [
+              118.8879275,
+              32.0311358
+            ],
+            [
+              118.8869921,
+              32.0299807
+            ],
+            [
+              118.886901,
+              32.0298682
+            ]
+          ],
+          [
+            [
+              118.8737662,
+              32.026601
+            ],
+            [
+              118.8724901,
+              32.0265778
+            ],
+            [
+              118.8713246,
+              32.026552
+            ],
+            [
+              118.8709367,
+              32.0265221
+            ]
+          ],
+          [
+            [
+              118.886901,
+              32.0298682
+            ],
+            [
+              118.8866016,
+              32.0296208
+            ]
+          ],
+          [
+            [
+              118.8999648,
+              32.0908984
+            ],
+            [
+              118.8998913,
+              32.0909609
+            ],
+            [
+              118.899458,
+              32.0913469
+            ],
+            [
+              118.89876,
+              32.0920407
+            ],
+            [
+              118.8985271,
+              32.0922722
+            ],
+            [
+              118.8983722,
+              32.0924183
+            ],
+            [
+              118.8980015,
+              32.0926954
+            ],
+            [
+              118.8976259,
+              32.092963
+            ],
+            [
+              118.8970683,
+              32.0933604
+            ],
+            [
+              118.895952,
+              32.0941029
+            ],
+            [
+              118.8950607,
+              32.0946783
+            ],
+            [
+              118.894692,
+              32.0949496
+            ],
+            [
+              118.8943798,
+              32.0951441
+            ],
+            [
+              118.8938123,
+              32.0955109
+            ],
+            [
+              118.8919229,
+              32.0967884
+            ],
+            [
+              118.8879768,
+              32.0994564
+            ],
+            [
+              118.886891,
+              32.1001697
+            ],
+            [
+              118.8866508,
+              32.1003096
+            ],
+            [
+              118.886361,
+              32.1004156
+            ],
+            [
+              118.8861331,
+              32.1004672
+            ],
+            [
+              118.8859615,
+              32.100549
+            ],
+            [
+              118.8858863,
+              32.1006644
+            ],
+            [
+              118.8856575,
+              32.1021197
+            ]
+          ],
+          [
+            [
+              118.9023131,
+              32.0887476
+            ],
+            [
+              118.9010387,
+              32.0898426
+            ],
+            [
+              118.9005556,
+              32.0903348
+            ],
+            [
+              118.9003855,
+              32.0904912
+            ]
+          ],
+          [
+            [
+              118.9147138,
+              32.0796817
+            ],
+            [
+              118.9125837,
+              32.0820734
+            ],
+            [
+              118.9124188,
+              32.082245
+            ],
+            [
+              118.9122847,
+              32.0823814
+            ],
+            [
+              118.9121263,
+              32.0825199
+            ],
+            [
+              118.911999,
+              32.0826177
+            ],
+            [
+              118.9116289,
+              32.0828598
+            ],
+            [
+              118.9107428,
+              32.083397
+            ],
+            [
+              118.910142,
+              32.0837927
+            ],
+            [
+              118.9090083,
+              32.0845584
+            ],
+            [
+              118.9086927,
+              32.0847707
+            ],
+            [
+              118.908115,
+              32.0851364
+            ],
+            [
+              118.9079302,
+              32.0852293
+            ],
+            [
+              118.9070697,
+              32.0857146
+            ],
+            [
+              118.906515,
+              32.0860364
+            ],
+            [
+              118.9047537,
+              32.087024
+            ],
+            [
+              118.9037405,
+              32.0876679
+            ],
+            [
+              118.9023131,
+              32.0887476
+            ]
+          ],
+          [
+            [
+              118.9003855,
+              32.0904912
+            ],
+            [
+              118.8999648,
+              32.0908984
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "period": "明",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingOuterWall": true,
+        "sourceId": "nanjing-ming-outer-xianhe-gate",
+        "sourceName": "仙鹤门（文枢西路交会地段参考）",
+        "label": "仙鹤门\n（门址推定）",
+        "labelMinZoom": 12,
+        "sitePoint": true,
+        "inferredBoundary": true,
+        "sourceUrl": "./sources/nanjing.html#outer",
+        "sourceTitle": "南京明外郭：走向、门址与缺项",
+        "referenceUrl": "https://dfz.nanjing.gov.cn/gzdt/202506/t20250618_5588690.html",
+        "sourceIds": [
+          "way/255219170",
+          "way/1342311755"
+        ],
+        "status": "官方文章推测的路口地段参照 · 非已发掘门基",
+        "note": "市志办文章依据旧地图、旧村门坡和地形推测门址约在燕西线与文枢西路交会处。采用两条原始OSM道路的平面交会位置作参照；现代道路有立交或下穿并不表示已发现古门基。未用仙鹤门地铁站或公园中心替代原城门，门楼及门基精确范围待核。"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.90018102,
+          32.09068912
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "period": "明",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingOuterWall": true,
+        "sourceId": "nanjing-ming-outer-yaofang-reference",
+        "sourceName": "姚坊门遗址地段（现公园参照）",
+        "label": "姚坊门遗址地段\n（公园参照）",
+        "labelMinZoom": 12,
+        "sitePoint": true,
+        "inferredBoundary": true,
+        "sourceUrl": "./sources/nanjing.html#outer",
+        "sourceTitle": "南京明外郭：走向、门址与缺项",
+        "referenceUrl": "https://dfz.nanjing.gov.cn/gzdt/202409/t20240904_4757301.html",
+        "sourceIds": [
+          "way/965539234"
+        ],
+        "status": "原门址附近现代遗址公园位置参照 · 非原门基中心",
+        "note": "官方记载姚坊门原址附近于2016年建成遗址公园，并有夯土墙考古发现。本点采用原始OSM所标同名公园位置，只作展示地段参照，不把现代公园用地作为瓮城范围。官方还指向仙尧路与太龙路交会地段，本轮未能从原始OSM核实同一历史路口，因此不把公园中心声称为原城门的精确位置；原门基、瓮城及公园位置关系仍待发掘图复核。"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.87458694444445,
+          32.107266522222226
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "period": "明",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingOuterWall": true,
+        "sourceId": "nanjing-ming-outer-cangbo-reference",
+        "sourceName": "沧波门故址地段（荔枝广场参照）",
+        "label": "沧波门故址地段\n（位置参照）",
+        "labelMinZoom": 12,
+        "sitePoint": true,
+        "inferredBoundary": true,
+        "sourceUrl": "./sources/nanjing.html#outer",
+        "sourceTitle": "南京明外郭：走向、门址与缺项",
+        "referenceUrl": "https://dfz.nanjing.gov.cn/gzdt/202507/t20250724_5614434.html",
+        "sourceIds": [
+          "way/924830118"
+        ],
+        "status": "官方所述故址区域的现代地标参照 · 非已确定门基",
+        "note": "官方文章指出沧波门故址区域现为公园绿地和荔枝广场一带，并结合大门西、小门西地名讨论其位置。本点仅借原始OSM荔枝广场地块位置指示这一地段，不把商业地块当门址或城郭范围，也不使用附近同名铁路车站的坐标冒充古门。原门基及城墙接续的精确位置仍待可靠考古图。"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.88054515454546,
+          32.02495557272727
+        ]
+      }
+    }
+  ],
+  "roadSegments": [
+    {
+      "type": "way",
+      "id": 160519135,
+      "tags": {
+        "highway": "unclassified",
+        "name": "燕西线"
+      },
+      "coordinates": [
+        [
+          118.8796022,
+          32.0270204
+        ],
+        [
+          118.8792104,
+          32.0268703
+        ],
+        [
+          118.8788884,
+          32.0267567
+        ],
+        [
+          118.8784807,
+          32.0266793
+        ],
+        [
+          118.8779577,
+          32.0266203
+        ],
+        [
+          118.8774266,
+          32.0265657
+        ],
+        [
+          118.8769144,
+          32.0265634
+        ],
+        [
+          118.8748624,
+          32.0265862
+        ],
+        [
+          118.8737662,
+          32.026601
+        ]
+      ],
+      "members": []
+    },
+    {
+      "type": "way",
+      "id": 167237584,
+      "tags": {
+        "bridge": "yes",
+        "highway": "unclassified",
+        "layer": "1",
+        "name": "燕西线"
+      },
+      "coordinates": [
+        [
+          118.8866016,
+          32.0296208
+        ],
+        [
+          118.886057,
+          32.029275
+        ]
+      ],
+      "members": []
+    },
+    {
+      "type": "way",
+      "id": 167237587,
+      "tags": {
+        "highway": "unclassified",
+        "name": "燕西线"
+      },
+      "coordinates": [
+        [
+          118.886057,
+          32.029275
+        ],
+        [
+          118.8856059,
+          32.0291392
+        ]
+      ],
+      "members": []
+    },
+    {
+      "type": "way",
+      "id": 411830393,
+      "tags": {
+        "bridge": "yes",
+        "highway": "unclassified",
+        "layer": "1",
+        "name": "燕西线"
+      },
+      "coordinates": [
+        [
+          118.8801782,
+          32.0272427
+        ],
+        [
+          118.8796022,
+          32.0270204
+        ]
+      ],
+      "members": []
+    },
+    {
+      "type": "way",
+      "id": 411830397,
+      "tags": {
+        "highway": "unclassified",
+        "name": "燕西线"
+      },
+      "coordinates": [
+        [
+          118.8848499,
+          32.0289033
+        ],
+        [
+          118.8832497,
+          32.028353
+        ],
+        [
+          118.8828053,
+          32.0282023
+        ],
+        [
+          118.8824451,
+          32.0280801
+        ],
+        [
+          118.8801782,
+          32.0272427
+        ]
+      ],
+      "members": []
+    },
+    {
+      "type": "way",
+      "id": 413677924,
+      "tags": {
+        "bridge": "yes",
+        "highway": "unclassified",
+        "layer": "1",
+        "name": "燕西线"
+      },
+      "coordinates": [
+        [
+          118.8855051,
+          32.029106
+        ],
+        [
+          118.8848499,
+          32.0289033
+        ]
+      ],
+      "members": []
+    },
+    {
+      "type": "way",
+      "id": 606763961,
+      "tags": {
+        "highway": "unclassified",
+        "name": "燕西线"
+      },
+      "coordinates": [
+        [
+          118.8900788,
+          32.0336514
+        ],
+        [
+          118.8898309,
+          32.033295
+        ],
+        [
+          118.889513,
+          32.0328888
+        ],
+        [
+          118.8894674,
+          32.0328409
+        ],
+        [
+          118.8892901,
+          32.0326547
+        ],
+        [
+          118.8886628,
+          32.0319318
+        ],
+        [
+          118.8880485,
+          32.0312707
+        ],
+        [
+          118.8879275,
+          32.0311358
+        ],
+        [
+          118.8869921,
+          32.0299807
+        ],
+        [
+          118.886901,
+          32.0298682
+        ]
+      ],
+      "members": []
+    },
+    {
+      "type": "way",
+      "id": 777281495,
+      "tags": {
+        "highway": "unclassified",
+        "name": "燕西线"
+      },
+      "coordinates": [
+        [
+          118.8737662,
+          32.026601
+        ],
+        [
+          118.8724901,
+          32.0265778
+        ],
+        [
+          118.8713246,
+          32.026552
+        ],
+        [
+          118.8709367,
+          32.0265221
+        ]
+      ],
+      "members": []
+    },
+    {
+      "type": "way",
+      "id": 1425203310,
+      "tags": {
+        "highway": "unclassified",
+        "name": "燕西线"
+      },
+      "coordinates": [
+        [
+          118.886901,
+          32.0298682
+        ],
+        [
+          118.8866016,
+          32.0296208
+        ]
+      ],
+      "members": []
+    },
+    {
+      "type": "way",
+      "id": 777281481,
+      "tags": {
+        "highway": "residential",
+        "name": "燕西线"
+      },
+      "coordinates": [
+        [
+          118.8999648,
+          32.0908984
+        ],
+        [
+          118.8998913,
+          32.0909609
+        ],
+        [
+          118.899458,
+          32.0913469
+        ],
+        [
+          118.89876,
+          32.0920407
+        ],
+        [
+          118.8985271,
+          32.0922722
+        ],
+        [
+          118.8983722,
+          32.0924183
+        ],
+        [
+          118.8980015,
+          32.0926954
+        ],
+        [
+          118.8976259,
+          32.092963
+        ],
+        [
+          118.8970683,
+          32.0933604
+        ],
+        [
+          118.895952,
+          32.0941029
+        ],
+        [
+          118.8950607,
+          32.0946783
+        ],
+        [
+          118.894692,
+          32.0949496
+        ],
+        [
+          118.8943798,
+          32.0951441
+        ],
+        [
+          118.8938123,
+          32.0955109
+        ],
+        [
+          118.8919229,
+          32.0967884
+        ],
+        [
+          118.8879768,
+          32.0994564
+        ],
+        [
+          118.886891,
+          32.1001697
+        ],
+        [
+          118.8866508,
+          32.1003096
+        ],
+        [
+          118.886361,
+          32.1004156
+        ],
+        [
+          118.8861331,
+          32.1004672
+        ],
+        [
+          118.8859615,
+          32.100549
+        ],
+        [
+          118.8858863,
+          32.1006644
+        ],
+        [
+          118.8856575,
+          32.1021197
+        ]
+      ],
+      "members": []
+    },
+    {
+      "type": "way",
+      "id": 777281486,
+      "tags": {
+        "highway": "secondary",
+        "name": "燕西线"
+      },
+      "coordinates": [
+        [
+          118.9023131,
+          32.0887476
+        ],
+        [
+          118.9010387,
+          32.0898426
+        ],
+        [
+          118.9005556,
+          32.0903348
+        ],
+        [
+          118.9003855,
+          32.0904912
+        ]
+      ],
+      "members": []
+    },
+    {
+      "type": "way",
+      "id": 1063919187,
+      "tags": {
+        "highway": "secondary",
+        "name": "燕西线"
+      },
+      "coordinates": [
+        [
+          118.9147138,
+          32.0796817
+        ],
+        [
+          118.9125837,
+          32.0820734
+        ],
+        [
+          118.9124188,
+          32.082245
+        ],
+        [
+          118.9122847,
+          32.0823814
+        ],
+        [
+          118.9121263,
+          32.0825199
+        ],
+        [
+          118.911999,
+          32.0826177
+        ],
+        [
+          118.9116289,
+          32.0828598
+        ],
+        [
+          118.9107428,
+          32.083397
+        ],
+        [
+          118.910142,
+          32.0837927
+        ],
+        [
+          118.9090083,
+          32.0845584
+        ],
+        [
+          118.9086927,
+          32.0847707
+        ],
+        [
+          118.908115,
+          32.0851364
+        ],
+        [
+          118.9079302,
+          32.0852293
+        ],
+        [
+          118.9070697,
+          32.0857146
+        ],
+        [
+          118.906515,
+          32.0860364
+        ],
+        [
+          118.9047537,
+          32.087024
+        ],
+        [
+          118.9037405,
+          32.0876679
+        ],
+        [
+          118.9023131,
+          32.0887476
+        ]
+      ],
+      "members": []
+    },
+    {
+      "type": "way",
+      "id": 255219170,
+      "tags": {
+        "bridge": "yes",
+        "highway": "residential",
+        "layer": "1"
+      },
+      "coordinates": [
+        [
+          118.9003855,
+          32.0904912
+        ],
+        [
+          118.8999648,
+          32.0908984
+        ]
+      ]
+    }
+  ],
+  "gateJunction": {
+    "coordinates": [
+      118.90018102,
+      32.09068912
+    ],
+    "sourceIds": [
+      "way/255219170",
+      "way/1342311755"
+    ]
+  },
+  "gateAudit": [
+    {
+      "name": "观音门",
+      "status": "历史身份已核，门址几何待核",
+      "branch": "外郭门名清单",
+      "source": "https://dfz.nanjing.gov.cn/gzdt/202409/t20240904_4757301.html"
+    },
+    {
+      "name": "姚坊门",
+      "status": "仅地段参照，精确门基待核",
+      "branch": "外郭门名清单",
+      "source": "https://dfz.nanjing.gov.cn/gzdt/202409/t20240904_4757301.html"
+    },
+    {
+      "name": "仙鹤门",
+      "status": "仅地段参照，精确门基待核",
+      "branch": "外郭门名清单",
+      "source": "https://dfz.nanjing.gov.cn/gzdt/202409/t20240904_4757301.html"
+    },
+    {
+      "name": "麒麟门",
+      "status": "历史身份已核，门址几何待核",
+      "branch": "外郭门名清单",
+      "source": "https://dfz.nanjing.gov.cn/gzdt/202409/t20240904_4757301.html"
+    },
+    {
+      "name": "沧波门",
+      "status": "仅地段参照，精确门基待核",
+      "branch": "外郭门名清单",
+      "source": "https://dfz.nanjing.gov.cn/gzdt/202409/t20240904_4757301.html"
+    },
+    {
+      "name": "高桥门",
+      "status": "历史身份已核，门址几何待核",
+      "branch": "外郭门名清单",
+      "source": "https://dfz.nanjing.gov.cn/gzdt/202409/t20240904_4757301.html"
+    },
+    {
+      "name": "上坊门",
+      "status": "历史身份已核，门址几何待核",
+      "branch": "外郭门名清单",
+      "source": "https://dfz.nanjing.gov.cn/gzdt/202409/t20240904_4757301.html"
+    },
+    {
+      "name": "双桥门",
+      "status": "历史身份已核，门址几何待核",
+      "branch": "丁字墙支线",
+      "source": "https://dfz.nanjing.gov.cn/gzdt/202409/t20240904_4757301.html"
+    },
+    {
+      "name": "夹岗门",
+      "status": "历史身份已核，门址几何待核",
+      "branch": "外郭门名清单",
+      "source": "https://dfz.nanjing.gov.cn/gzdt/202409/t20240904_4757301.html"
+    },
+    {
+      "name": "凤台门",
+      "status": "历史身份已核，门址几何待核",
+      "branch": "外郭门名清单",
+      "source": "https://dfz.nanjing.gov.cn/gzdt/202409/t20240904_4757301.html"
+    },
+    {
+      "name": "大安德门",
+      "status": "历史身份已核，门址几何待核",
+      "branch": "外郭门名清单",
+      "source": "https://dfz.nanjing.gov.cn/gzdt/202409/t20240904_4757301.html"
+    },
+    {
+      "name": "小安德门",
+      "status": "历史身份已核，门址几何待核",
+      "branch": "外郭门名清单",
+      "source": "https://dfz.nanjing.gov.cn/gzdt/202409/t20240904_4757301.html"
+    },
+    {
+      "name": "驯象门",
+      "status": "历史身份已核，门址几何待核",
+      "branch": "外郭门名清单",
+      "source": "https://dfz.nanjing.gov.cn/gzdt/202409/t20240904_4757301.html"
+    },
+    {
+      "name": "江东门",
+      "status": "历史身份已核，门址几何待核",
+      "branch": "外郭门名清单",
+      "source": "https://dfz.nanjing.gov.cn/gzdt/202409/t20240904_4757301.html"
+    },
+    {
+      "name": "石城关",
+      "status": "历史身份已核，门址几何待核",
+      "branch": "外郭门名清单",
+      "source": "https://dfz.nanjing.gov.cn/gzdt/202409/t20240904_4757301.html"
+    },
+    {
+      "name": "外金川门",
+      "status": "历史身份已核，门址几何待核",
+      "branch": "外郭门名清单",
+      "source": "https://dfz.nanjing.gov.cn/gzdt/202409/t20240904_4757301.html"
+    },
+    {
+      "name": "上元门",
+      "status": "历史身份已核，门址几何待核",
+      "branch": "外郭门名清单",
+      "source": "https://dfz.nanjing.gov.cn/gzdt/202409/t20240904_4757301.html"
+    },
+    {
+      "name": "佛宁门",
+      "status": "历史身份已核，门址几何待核",
+      "branch": "外郭门名清单",
+      "source": "https://dfz.nanjing.gov.cn/gzdt/202409/t20240904_4757301.html"
+    }
+  ],
+  "sources": {
+    "general": "https://dfz.nanjing.gov.cn/gzdt/202409/t20240904_4757301.html",
+    "xianhe": "https://dfz.nanjing.gov.cn/gzdt/202506/t20250618_5588690.html",
+    "cangbo": "https://dfz.nanjing.gov.cn/gzdt/202507/t20250724_5614434.html",
+    "road": "https://dfz.nanjing.gov.cn/gzdt/202402/t20240220_4170002.html"
+  },
+  "exclusions": [
+    {
+      "sourceId": "node/8280728429",
+      "reason": "沧波门铁路车站，不是古城门"
+    },
+    {
+      "sourceId": "way/965539234",
+      "reason": "姚坊门现代公园面不作为瓮城或完整古城界，仅取地段参照点"
+    },
+    {
+      "sourceId": "way/924830118",
+      "reason": "荔枝广场现代地块不作为古门或城界，仅取官方所述区域的位置参照点"
+    }
+  ],
+  "unresolved": "未获得完整明外郭原始矢量或可可靠配准的全线考古图。本次只有局部走向与门址地段，未生成完整闭合外郭面，丁字墙也未以现代全路段冒充原墙线。",
+  "validation": {
+    "regressions": 203,
+    "failures": 0,
+    "browser": {
+      "mingOff": true,
+      "allOff": true
+    },
+    "release": "2.3.4",
+    "published": false
+  }
+}

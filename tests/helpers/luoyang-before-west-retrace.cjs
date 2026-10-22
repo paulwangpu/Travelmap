@@ -1,0 +1,1 @@
+module.exports=function(data){data=require('./luoyang-before-west-straight.cjs')(data);const fs=require('fs'),a=JSON.parse(fs.readFileSync('docs/luoyang-west-source-review.json')),before=new Map(a.before.map(f=>[f.properties.sourceId,f]));return {...data,features:data.features.map(f=>before.get(f.properties.sourceId)||f)};};

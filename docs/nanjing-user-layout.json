@@ -1,0 +1,3683 @@
+{
+  "date": "2026-10-22",
+  "request": "红色是六朝，黑色是南唐，原来的建康去掉",
+  "beforeCount": 65,
+  "afterCount": 69,
+  "beforeFeatures": [
+    {
+      "sourceId": "nanjing-osm-ming-citywall-lines",
+      "sha256": "e6b424edcc2836f6acd36d9480c88a963bdaa7fc24331a9b97762fced2d2e3dd"
+    },
+    {
+      "sourceId": "nanjing-osm-ming-wall-bodies",
+      "sha256": "b17beaf5b5fce082ac14b88ade2d3677f14b4eb6cf95b8870cccd5eea5c842da"
+    },
+    {
+      "sourceId": "nanjing-osm-relation-20427375",
+      "sha256": "c368715d3da906a58c1ec396e83f6838f65b5a9ff0c2c2c51b0ff79b54495657"
+    },
+    {
+      "sourceId": "nanjing-osm-way-446638898",
+      "sha256": "fad43647de779c8ac0af944f4e2708808513ffc74816f644aba00a52744e5cc2"
+    },
+    {
+      "sourceId": "nanjing-osm-way-791233540",
+      "sha256": "274973f5ae8eff386585f1ae3a106ce12564c7b2b0f581da2ef0040da23243ca"
+    },
+    {
+      "sourceId": "nanjing-osm-way-319997028",
+      "sha256": "173d3ac8725848e139415d672da23e307009c5fc67b5e8eb53d5b278592e65a4"
+    },
+    {
+      "sourceId": "nanjing-osm-way-625734601",
+      "sha256": "0bfe7a77bca0171d4fd6410a87f10004d1615c66d1b0ec39b6f32aac3fce1ec8"
+    },
+    {
+      "sourceId": "nanjing-osm-way-461035550",
+      "sha256": "e02b0c453eed3739538693c5aa8ff80bdc9953ea1fdf9e2a3c977760774c0c3c"
+    },
+    {
+      "sourceId": "nanjing-osm-relation-11308636",
+      "sha256": "8f92f2fd985ff537ca30df01f9c9014d0517caa80f91414e62822ad9d127cb3b"
+    },
+    {
+      "sourceId": "nanjing-archaeology-display-1061577687",
+      "sha256": "8929a2458a5cfbee0cb494a082838454d466a526caabccc320dfaf7030d9736d"
+    },
+    {
+      "sourceId": "nanjing-archaeology-display-94327966",
+      "sha256": "792f05b4e3864d06ef2c86fc52ccf01a15d2cc4d62f3d8d052d478f16c60c3e7"
+    },
+    {
+      "sourceId": "nanjing-plan-detail-4",
+      "sha256": "0d759fa2154549968d01c0af78bd9d7eddc94a88a12d8f1ed1ae64912eae3fd2"
+    },
+    {
+      "sourceId": "nanjing-plan-detail-5",
+      "sha256": "d3b13bdd3620e11b5a31481183c67c733e647e3ce3613873762fdc9d724a9b32"
+    },
+    {
+      "sourceId": "nanjing-water-way-88806258",
+      "sha256": "7f0c4099eb09ce1d55c12263beff47ba2218db62223752ac8a1943561e96d6b7"
+    },
+    {
+      "sourceId": "nanjing-water-way-697970987",
+      "sha256": "9400849364ae180787021ffe3bf529432498c8be7ba706c4af548d35269d6edd"
+    },
+    {
+      "sourceId": "nanjing-osm-node-5907900964",
+      "sha256": "599a06ac039df8835bd205d8f2e33ad39558243a647de15ace91b5237f619572"
+    },
+    {
+      "sourceId": "nanjing-gate-shence-location",
+      "sha256": "6cd572cf40502e315b495d1f7b6c7e98aab7a837089c4decbbf60642b32ca0b1"
+    },
+    {
+      "sourceId": "nanjing-osm-node-5833639986",
+      "sha256": "8b8f7c52debbad93b11a1132318d3f23a7030db663f09da29f6829404069803a"
+    },
+    {
+      "sourceId": "nanjing-osm-way-859591128",
+      "sha256": "d7cf57334db6ecc469806e97a2b06537ef15edf5bf5e1774adff3070c3b1bd93"
+    },
+    {
+      "sourceId": "nanjing-osm-node-5335246224",
+      "sha256": "65c9d89b3d8bcbde93fe243bc8d39bb0f148095a7957aff27ac9362dd3fde197"
+    },
+    {
+      "sourceId": "nanjing-stone-survey-wall-directions",
+      "sha256": "3bc6dda0b61a15325f2fc6d678b93ddd3afa318880f8c70b416649c2de1373d4"
+    },
+    {
+      "sourceId": "nanjing-stone-tg1-reference",
+      "sha256": "b8a1eecf61fadc8d5fc3b0fee746f431cd027f8272780bd26d0b7157a2264bd1"
+    },
+    {
+      "sourceId": "nanjing-jiankang-dasimamen-reference",
+      "sha256": "319460f65746a8e37e0e72d3a0c1306ad9e086961f025261e59d82f902f31b03"
+    },
+    {
+      "sourceId": "nanjing-jiankang-xuanyangmen-reference",
+      "sha256": "ff4f75e24bad37ade11cc3cabebdfc9bb092f87bc92e99242536bea8a380b07e"
+    },
+    {
+      "sourceId": "nanjing-nantang-east-north-moat",
+      "sha256": "6636590e1cfc9be123d7a553be4a64f9ebc750f23567d61df12375ddc3d9776b"
+    },
+    {
+      "sourceId": "nanjing-nantang-palace-moat-reference",
+      "sha256": "1a28ba0c761e60f12131734d5d298c2be441deac8c874d64f9dc7323fc6f66b5"
+    },
+    {
+      "sourceId": "nanjing-nantang-north-gate-reference",
+      "sha256": "08a77661b45dd79de06cca55eb48eb116d710bbd2d63a65bce59abde493eb537"
+    },
+    {
+      "sourceId": "nanjing-nantang-east-gate-reference",
+      "sha256": "25c299747d94808a4d3eeccc2ddc68a06f6551822559830ef58fdeb54b20ee14"
+    },
+    {
+      "sourceId": "nanjing-nantang-south-gate-reference",
+      "sha256": "9c5d53691cd4b5249be5ae784742af68e5fcac78dc62f2327a9dfc30577cf985"
+    },
+    {
+      "sourceId": "nanjing-nantang-west-gate-reference",
+      "sha256": "99ca73c8a36f1c765c987880492b0d3a9e82043564cdc2bb632bd503c7ca7d5b"
+    },
+    {
+      "sourceId": "nanjing-nantang-palace-south-gate-reference",
+      "sha256": "400008843a2acb39dfe1cf73e8b9b50bb67a771683bd2509543593d905f01ba1"
+    },
+    {
+      "sourceId": "nanjing-nantang-north-wall-vicinity",
+      "sha256": "761a98b5aac1b9da1e634fff3f10b0ec305ea7ec69772ab3d23b64e9a29b2fbc"
+    },
+    {
+      "sourceId": "nanjing-qing-fengrunmen",
+      "sha256": "fb4a1e8565b6a7b5db0a2048a8950df910f04221463377fdb2a77c10cefaaa7c"
+    },
+    {
+      "sourceId": "nanjing-presidential-way-62353727",
+      "sha256": "7b27004dfee09b827a9dce604615abfe4559fb2d3d3a29d9bfb6314b22e2e8c5"
+    },
+    {
+      "sourceId": "nanjing-presidential-way-321096461",
+      "sha256": "6be804229c45465da0af1f932e5e6e22e33b2854283a964ff7bf7f833e05e164"
+    },
+    {
+      "sourceId": "nanjing-presidential-way-625069539",
+      "sha256": "3008353b064fa3b0725dd9251ad4813c976dc529ff0feb93ae29a55d8a0fdffa"
+    },
+    {
+      "sourceId": "nanjing-presidential-way-321096452",
+      "sha256": "9c8d30dbb1c809c546e5ad542cafd8cd5a4929197739df8feb07b4ceacb9e66b"
+    },
+    {
+      "sourceId": "nanjing-ming-outer-roadbase-reference",
+      "sha256": "2e854113ae32cf7e5d9d26896adf107cafcad720c1d43fdf2b2f1078fdf839e2"
+    },
+    {
+      "sourceId": "nanjing-ming-outer-xianhe-gate",
+      "sha256": "cc55f99ac9e8160043672c53b0f36ecc1b815c468c14d1892639c17b378611dd"
+    },
+    {
+      "sourceId": "nanjing-ming-outer-yaofang-reference",
+      "sha256": "bf0c2fff708d41f75078e37a0c238105372f94ab5cf28ab1d3a591d419e13e7d"
+    },
+    {
+      "sourceId": "nanjing-ming-outer-cangbo-reference",
+      "sha256": "237d715a1d7894da84e1d8b7f376648e59b214ccda6950be49d7239dc4cb360a"
+    },
+    {
+      "sourceId": "nanjing-nantang-buried-north-moat",
+      "sha256": "ab962d8e41b7d7e1634579560961399d4d3573f92bdbfdc0ae04d601763627c5"
+    },
+    {
+      "sourceId": "nanjing-jiankang-southern-capital-study",
+      "sha256": "fa61b3886abebea63669aba437b99f548297c158e4253c16d9ac1165b6c6f17a"
+    },
+    {
+      "sourceId": "nanjing-jiankang-palace-study",
+      "sha256": "51d378868eee5493644a3feab8fc85080c963af931ea343fade56205cbad53fe"
+    },
+    {
+      "sourceId": "nanjing-changgan-platform",
+      "sha256": "45a3a9b732fec59e84fdcf4ecbf0f21673abd4645824863a751fb1a992fae9df"
+    },
+    {
+      "sourceId": "nanjing-changgan-ditches",
+      "sha256": "43583a5950a5971bb61d02e32914c2693e316a8593d915c2df62c09eabe3d9c7"
+    },
+    {
+      "sourceId": "nanjing-changgan-wall-discovery",
+      "sha256": "935d967d91f96449e6f51e2da35ad9fb1cfced09b807630fc0091ced4caac97f"
+    },
+    {
+      "sourceId": "nanjing-changgan-southern-road",
+      "sha256": "472aaadb8f8c2452c0c389e3b0c62add0e1cfeda347c9e896e5af053ba92cae7"
+    },
+    {
+      "sourceId": "nanjing-nantang-palace-study",
+      "sha256": "12cba61a085f431a91fb43c114a2048c1889700ab3630cd43ee4c9ba52d59897"
+    },
+    {
+      "sourceId": "nanjing-ming-outer-overview-lines",
+      "sha256": "b3738f536351784517eedf195212cc322d2d997533023e556967b2cc5160c042"
+    },
+    {
+      "sourceId": "nanjing-ming-outer-overview-gate-0",
+      "sha256": "abe5e6564c025166dc241b868288061d1eeca8507efaf19beb4762e99d4d4b83"
+    },
+    {
+      "sourceId": "nanjing-ming-outer-overview-gate-3",
+      "sha256": "ef0c055b6ec492fcfa60bbbc933542a866933e4f66c4a9de2ca9ad9a4ea4d874"
+    },
+    {
+      "sourceId": "nanjing-ming-outer-overview-gate-5",
+      "sha256": "f5f785e915ee052d873e2fbb86b03bd3b273758866b69cf07db9d289147d3206"
+    },
+    {
+      "sourceId": "nanjing-ming-outer-overview-gate-6",
+      "sha256": "2d8318a4cb2c8ad94358d02191d06feb783c4b7760c4abc1af728686bb934f24"
+    },
+    {
+      "sourceId": "nanjing-ming-outer-overview-gate-7",
+      "sha256": "429d5215afdf7c9872db9999f4791f892bc05eebcf20528ff43f285a5e5514ac"
+    },
+    {
+      "sourceId": "nanjing-ming-outer-overview-gate-8",
+      "sha256": "5c8abb2ef707ec17659e538591575c7b024984568ecd11c670c69836a413e7d5"
+    },
+    {
+      "sourceId": "nanjing-ming-outer-overview-gate-9",
+      "sha256": "c7b2c0c0b9029e0ea5812f07474080a56d98b59543e094a7e89342796223de41"
+    },
+    {
+      "sourceId": "nanjing-ming-outer-overview-gate-10",
+      "sha256": "ea87c869026ea0f462a151cd694d47f6963236c35cc9d00b87e1a7d9e6cc14cf"
+    },
+    {
+      "sourceId": "nanjing-ming-outer-overview-gate-11",
+      "sha256": "6fcb66c20ad9a4885ac8cd9edfc80eb5c8ec4039c9251ea74e28b6fe04026b25"
+    },
+    {
+      "sourceId": "nanjing-ming-outer-overview-gate-12",
+      "sha256": "61a661035dd88cbd7103fb911ae0fd500257ca479f7be705481ba06a904fffcf"
+    },
+    {
+      "sourceId": "nanjing-ming-outer-overview-gate-13",
+      "sha256": "39b9c4b7eb76af13b33a5bf7783ce20a89d19583e1ca4d42c095b457305abfd9"
+    },
+    {
+      "sourceId": "nanjing-ming-outer-overview-gate-14",
+      "sha256": "7840265814598581df0cfb0c1fa0ab0d50a6697a0e15613c23fac1d663fc17ab"
+    },
+    {
+      "sourceId": "nanjing-ming-outer-overview-gate-15",
+      "sha256": "6bbce3fb4541c626e922ed8292ae278b27afb267df9c6ef7d20ce6ac9ce502a4"
+    },
+    {
+      "sourceId": "nanjing-ming-outer-overview-gate-16",
+      "sha256": "53754e25abc19b190121e325e74782a1aa379cb64d3d31cd200b2a0dfacb0b98"
+    },
+    {
+      "sourceId": "nanjing-ming-outer-overview-gate-17",
+      "sha256": "db2bca2f19738522190951f76954c86da2fcdb7b5b00e041ce7cfc72c970752b"
+    }
+  ],
+  "retiredDisplayIds": [
+    "nanjing-jiankang-southern-capital-study",
+    "nanjing-jiankang-palace-study",
+    "nanjing-nantang-palace-study",
+    "nanjing-jiankang-dasimamen-reference",
+    "nanjing-jiankang-xuanyangmen-reference"
+  ],
+  "retirementReason": "用户要求以所附图替换旧建康范围；同时撤下同旧方案配套、未经考古确认的两处推定门点，避免继续混用方案。原始要素保留，考古展示及实存遗迹不撤除。",
+  "registration": {
+    "method": "SIFT correspondences with OSM raster tiles; RANSAC affine in Web Mercator pixels",
+    "matrix": [
+      [
+        0.7926752227034025,
+        -8.624872586294166e-7,
+        320.09463867211025
+      ],
+      [
+        0.000005000251820059382,
+        0.7923780852892155,
+        273.258325713301
+      ]
+    ],
+    "tileMetadata": {
+      "zoom": 15,
+      "x0": 27192,
+      "y0": 13300,
+      "width": 1792,
+      "height": 1792,
+      "tiles": 49
+    },
+    "matchCount": 4982,
+    "inlierCount": 4745,
+    "inlierMedianPixels": 0.09880166500806808,
+    "inlierMaxPixels": 1.913652777671814,
+    "imageSize": [
+      1438,
+      1572
+    ],
+    "pixelTraces": {
+      "sixCity": [
+        [
+          821,
+          110
+        ],
+        [
+          1293,
+          248
+        ],
+        [
+          1139,
+          835
+        ],
+        [
+          639,
+          711
+        ],
+        [
+          821,
+          110
+        ]
+      ],
+      "sixPalace": [
+        [
+          902,
+          164
+        ],
+        [
+          1179,
+          247
+        ],
+        [
+          1078,
+          521
+        ],
+        [
+          811,
+          440
+        ],
+        [
+          902,
+          164
+        ]
+      ],
+      "nantangPalace": [
+        [
+          772,
+          542
+        ],
+        [
+          958,
+          583
+        ],
+        [
+          882,
+          772
+        ],
+        [
+          710,
+          730
+        ],
+        [
+          772,
+          542
+        ]
+      ],
+      "nantangCity": [
+        [
+          381,
+          21
+        ],
+        [
+          642,
+          81
+        ],
+        [
+          1118,
+          118
+        ],
+        [
+          1336,
+          200
+        ],
+        [
+          1191,
+          757
+        ],
+        [
+          1230,
+          835
+        ],
+        [
+          1211,
+          893
+        ],
+        [
+          1165,
+          913
+        ],
+        [
+          1097,
+          1345
+        ],
+        [
+          1077,
+          1451
+        ],
+        [
+          1040,
+          1528
+        ],
+        [
+          925,
+          1533
+        ],
+        [
+          875,
+          1457
+        ],
+        [
+          714,
+          1402
+        ],
+        [
+          507,
+          1325
+        ],
+        [
+          435,
+          1340
+        ],
+        [
+          397,
+          1343
+        ],
+        [
+          215,
+          1277
+        ],
+        [
+          264,
+          1114
+        ],
+        [
+          291,
+          908
+        ],
+        [
+          285,
+          871
+        ],
+        [
+          291,
+          726
+        ],
+        [
+          269,
+          624
+        ],
+        [
+          250,
+          505
+        ],
+        [
+          229,
+          421
+        ],
+        [
+          212,
+          366
+        ],
+        [
+          217,
+          313
+        ],
+        [
+          175,
+          287
+        ],
+        [
+          161,
+          257
+        ],
+        [
+          381,
+          21
+        ]
+      ]
+    },
+    "matches": [
+      {
+        "sourcePixel": [
+          931.9534301757812,
+          456.343994140625
+        ],
+        "mosaicPixel": [
+          1059.0572509765625,
+          634.9684448242188
+        ],
+        "errorPixels": 0.25118523836135864
+      },
+      {
+        "sourcePixel": [
+          1054.8526611328125,
+          387.02313232421875
+        ],
+        "mosaicPixel": [
+          1156.2763671875,
+          579.9523315429688
+        ],
+        "errorPixels": 0.0332401841878891
+      },
+      {
+        "sourcePixel": [
+          993.4228515625,
+          763.909912109375
+        ],
+        "mosaicPixel": [
+          1107.3675537109375,
+          878.911865234375
+        ],
+        "errorPixels": 0.3913187086582184
+      },
+      {
+        "sourcePixel": [
+          1038.810791015625,
+          1235.7310791015625
+        ],
+        "mosaicPixel": [
+          1143.462890625,
+          1252.4322509765625
+        ],
+        "errorPixels": 0.07035921514034271
+      },
+      {
+        "sourcePixel": [
+          983.8739624023438,
+          1337.015380859375
+        ],
+        "mosaicPixel": [
+          1099.9708251953125,
+          1332.7186279296875
+        ],
+        "errorPixels": 0.0370468832552433
+      },
+      {
+        "sourcePixel": [
+          78.6693115234375,
+          979.3543701171875
+        ],
+        "mosaicPixel": [
+          382.47735595703125,
+          1049.1151123046875
+        ],
+        "errorPixels": 0.16429054737091064
+      },
+      {
+        "sourcePixel": [
+          895.8566284179688,
+          69.08736419677734
+        ],
+        "mosaicPixel": [
+          1030.1700439453125,
+          328.037841796875
+        ],
+        "errorPixels": 0.057403434067964554
+      },
+      {
+        "sourcePixel": [
+          109.00609588623047,
+          411.0603942871094
+        ],
+        "mosaicPixel": [
+          406.6772155761719,
+          599.0425415039062
+        ],
+        "errorPixels": 0.18931040167808533
+      },
+      {
+        "sourcePixel": [
+          701.9407958984375,
+          910.7405395507812
+        ],
+        "mosaicPixel": [
+          876.5473022460938,
+          994.8226928710938
+        ],
+        "errorPixels": 0.09952006489038467
+      },
+      {
+        "sourcePixel": [
+          146.39892578125,
+          1410.828857421875
+        ],
+        "mosaicPixel": [
+          436.1759338378906,
+          1391.24853515625
+        ],
+        "errorPixels": 0.08734343945980072
+      },
+      {
+        "sourcePixel": [
+          162.84841918945312,
+          1392.490234375
+        ],
+        "mosaicPixel": [
+          449.3019104003906,
+          1376.788330078125
+        ],
+        "errorPixels": 0.194118931889534
+      },
+      {
+        "sourcePixel": [
+          177.54080200195312,
+          330.38775634765625
+        ],
+        "mosaicPixel": [
+          460.87933349609375,
+          535.0595703125
+        ],
+        "errorPixels": 0.053443972021341324
+      },
+      {
+        "sourcePixel": [
+          195.87142944335938,
+          1495.67822265625
+        ],
+        "mosaicPixel": [
+          475.31585693359375,
+          1458.216064453125
+        ],
+        "errorPixels": 0.19003070890903473
+      },
+      {
+        "sourcePixel": [
+          882.1387939453125,
+          432.517333984375
+        ],
+        "mosaicPixel": [
+          1019.1791381835938,
+          615.9555053710938
+        ],
+        "errorPixels": 0.1665421426296234
+      },
+      {
+        "sourcePixel": [
+          937.7133178710938,
+          1089.232177734375
+        ],
+        "mosaicPixel": [
+          1063.512451171875,
+          1136.376220703125
+        ],
+        "errorPixels": 0.12038014829158783
+      },
+      {
+        "sourcePixel": [
+          276.445068359375,
+          1120.31982421875
+        ],
+        "mosaicPixel": [
+          539.2163696289062,
+          1160.789794921875
+        ],
+        "errorPixels": 0.18696017563343048
+      },
+      {
+        "sourcePixel": [
+          301.6824951171875,
+          565.144287109375
+        ],
+        "mosaicPixel": [
+          559.0594482421875,
+          720.9812622070312
+        ],
+        "errorPixels": 0.1915365308523178
+      },
+      {
+        "sourcePixel": [
+          643.3295288085938,
+          912.099365234375
+        ],
+        "mosaicPixel": [
+          830.1138305664062,
+          995.8994140625
+        ],
+        "errorPixels": 0.112981416285038
+      },
+      {
+        "sourcePixel": [
+          348.7571105957031,
+          1127.856201171875
+        ],
+        "mosaicPixel": [
+          596.6511840820312,
+          1166.927978515625
+        ],
+        "errorPixels": 0.10836607962846756
+      },
+      {
+        "sourcePixel": [
+          917.7593994140625,
+          402.4728088378906
+        ],
+        "mosaicPixel": [
+          1047.587646484375,
+          592.1864013671875
+        ],
+        "errorPixels": 0.015321769751608372
+      },
+      {
+        "sourcePixel": [
+          914.048583984375,
+          1153.5594482421875
+        ],
+        "mosaicPixel": [
+          1044.5887451171875,
+          1187.482666015625
+        ],
+        "errorPixels": 0.171573206782341
+      },
+      {
+        "sourcePixel": [
+          624.7349243164062,
+          528.5193481445312
+        ],
+        "mosaicPixel": [
+          815.274658203125,
+          692.0628662109375
+        ],
+        "errorPixels": 0.03447011485695839
+      },
+      {
+        "sourcePixel": [
+          407.3976135253906,
+          283.5210876464844
+        ],
+        "mosaicPixel": [
+          643.0657958984375,
+          497.91546630859375
+        ],
+        "errorPixels": 0.03742296248674393
+      },
+      {
+        "sourcePixel": [
+          615.9169921875,
+          649.6424560546875
+        ],
+        "mosaicPixel": [
+          808.2633666992188,
+          788.0143432617188
+        ],
+        "errorPixels": 0.0536964051425457
+      },
+      {
+        "sourcePixel": [
+          432.5835876464844,
+          587.072021484375
+        ],
+        "mosaicPixel": [
+          663.087646484375,
+          738.483154296875
+        ],
+        "errorPixels": 0.1031494140625
+      },
+      {
+        "sourcePixel": [
+          444.2408142089844,
+          331.70318603515625
+        ],
+        "mosaicPixel": [
+          672.1722412109375,
+          536.1113891601562
+        ],
+        "errorPixels": 0.06300108134746552
+      },
+      {
+        "sourcePixel": [
+          454.2929382324219,
+          1077.9920654296875
+        ],
+        "mosaicPixel": [
+          680.2130126953125,
+          1127.4169921875
+        ],
+        "errorPixels": 0.024368243291974068
+      },
+      {
+        "sourcePixel": [
+          595.2783813476562,
+          723.8947143554688
+        ],
+        "mosaicPixel": [
+          792.0391235351562,
+          846.8342895507812
+        ],
+        "errorPixels": 0.08649458736181259
+      },
+      {
+        "sourcePixel": [
+          861.0111694335938,
+          1158.57958984375
+        ],
+        "mosaicPixel": [
+          1002.6724853515625,
+          1191.4708251953125
+        ],
+        "errorPixels": 0.1910991221666336
+      },
+      {
+        "sourcePixel": [
+          583.2435913085938,
+          343.2439270019531
+        ],
+        "mosaicPixel": [
+          782.4618530273438,
+          545.2434692382812
+        ],
+        "errorPixels": 0.04491644352674484
+      },
+      {
+        "sourcePixel": [
+          505.8424377441406,
+          386.9612731933594
+        ],
+        "mosaicPixel": [
+          721.11572265625,
+          580.019775390625
+        ],
+        "errorPixels": 0.14890943467617035
+      },
+      {
+        "sourcePixel": [
+          516.3103637695312,
+          1285.4376220703125
+        ],
+        "mosaicPixel": [
+          728.8570556640625,
+          1291.8831787109375
+        ],
+        "errorPixels": 0.5077368021011353
+      },
+      {
+        "sourcePixel": [
+          528.1766967773438,
+          248.58322143554688
+        ],
+        "mosaicPixel": [
+          738.7237548828125,
+          470.2450866699219
+        ],
+        "errorPixels": 0.04491226375102997
+      },
+      {
+        "sourcePixel": [
+          559.013671875,
+          445.9124450683594
+        ],
+        "mosaicPixel": [
+          763.5259399414062,
+          626.7554321289062
+        ],
+        "errorPixels": 0.3550676107406616
+      },
+      {
+        "sourcePixel": [
+          820.3546752929688,
+          934.5481567382812
+        ],
+        "mosaicPixel": [
+          970.3877563476562,
+          1013.510009765625
+        ],
+        "errorPixels": 0.26850274205207825
+      },
+      {
+        "sourcePixel": [
+          1093.628173828125,
+          1553.0091552734375
+        ],
+        "mosaicPixel": [
+          1186.9090576171875,
+          1503.780517578125
+        ],
+        "errorPixels": 0.09320417791604996
+      },
+      {
+        "sourcePixel": [
+          1118.1732177734375,
+          1418.85693359375
+        ],
+        "mosaicPixel": [
+          1206.4422607421875,
+          1397.6051025390625
+        ],
+        "errorPixels": 0.0700710192322731
+      },
+      {
+        "sourcePixel": [
+          1140.261962890625,
+          1298.238525390625
+        ],
+        "mosaicPixel": [
+          1224.3897705078125,
+          1301.54541015625
+        ],
+        "errorPixels": 0.6035171747207642
+      },
+      {
+        "sourcePixel": [
+          1174.8994140625,
+          474.9347229003906
+        ],
+        "mosaicPixel": [
+          1251.1710205078125,
+          649.6166381835938
+        ],
+        "errorPixels": 0.238090381026268
+      },
+      {
+        "sourcePixel": [
+          1220.8978271484375,
+          1333.6893310546875
+        ],
+        "mosaicPixel": [
+          1287.8729248046875,
+          1330.0279541015625
+        ],
+        "errorPixels": 0.022939477115869522
+      },
+      {
+        "sourcePixel": [
+          1263.6939697265625,
+          1109.4449462890625
+        ],
+        "mosaicPixel": [
+          1321.7288818359375,
+          1152.3765869140625
+        ],
+        "errorPixels": 0.06473664194345474
+      },
+      {
+        "sourcePixel": [
+          1297.15234375,
+          1447.320068359375
+        ],
+        "mosaicPixel": [
+          1348.2181396484375,
+          1420.15869140625
+        ],
+        "errorPixels": 0.11810862272977829
+      },
+      {
+        "sourcePixel": [
+          1334.529541015625,
+          1226.8350830078125
+        ],
+        "mosaicPixel": [
+          1377.9656982421875,
+          1245.3594970703125
+        ],
+        "errorPixels": 0.03280762955546379
+      },
+      {
+        "sourcePixel": [
+          1372.521728515625,
+          1462.9931640625
+        ],
+        "mosaicPixel": [
+          1407.9635009765625,
+          1432.6097412109375
+        ],
+        "errorPixels": 0.13785246014595032
+      },
+      {
+        "sourcePixel": [
+          1414.3927001953125,
+          936.0994262695312
+        ],
+        "mosaicPixel": [
+          1441.26171875,
+          1014.8701782226562
+        ],
+        "errorPixels": 0.140522301197052
+      },
+      {
+        "sourcePixel": [
+          669.385498046875,
+          479.32012939453125
+        ],
+        "mosaicPixel": [
+          850.8162231445312,
+          653.156982421875
+        ],
+        "errorPixels": 0.14897862076759338
+      },
+      {
+        "sourcePixel": [
+          1374.2818603515625,
+          517.4014282226562
+        ],
+        "mosaicPixel": [
+          1409.520263671875,
+          683.1925659179688
+        ],
+        "errorPixels": 0.08371585607528687
+      },
+      {
+        "sourcePixel": [
+          700.2823486328125,
+          1066.490234375
+        ],
+        "mosaicPixel": [
+          875.1906127929688,
+          1118.2608642578125
+        ],
+        "errorPixels": 0.06445454061031342
+      },
+      {
+        "sourcePixel": [
+          1340.303955078125,
+          1386.8560791015625
+        ],
+        "mosaicPixel": [
+          1382.6507568359375,
+          1372.1583251953125
+        ],
+        "errorPixels": 0.1333768367767334
+      },
+      {
+        "sourcePixel": [
+          293.1416015625,
+          1046.9224853515625
+        ],
+        "mosaicPixel": [
+          552.3804931640625,
+          1102.8309326171875
+        ],
+        "errorPixels": 0.08035490661859512
+      },
+      {
+        "sourcePixel": [
+          1309.14111328125,
+          824.1248168945312
+        ],
+        "mosaicPixel": [
+          1357.629638671875,
+          926.296142578125
+        ],
+        "errorPixels": 0.18830294907093048
+      },
+      {
+        "sourcePixel": [
+          988.2649536132812,
+          1466.44384765625
+        ],
+        "mosaicPixel": [
+          1103.483154296875,
+          1435.2593994140625
+        ],
+        "errorPixels": 0.024798307567834854
+      },
+      {
+        "sourcePixel": [
+          993.613037109375,
+          444.0843505859375
+        ],
+        "mosaicPixel": [
+          1107.703857421875,
+          625.1870727539062
+        ],
+        "errorPixels": 0.04117250069975853
+      },
+      {
+        "sourcePixel": [
+          15.408845901489258,
+          498.67236328125
+        ],
+        "mosaicPixel": [
+          332.47039794921875,
+          668.1419067382812
+        ],
+        "errorPixels": 0.30092090368270874
+      },
+      {
+        "sourcePixel": [
+          389.1742248535156,
+          1059.381103515625
+        ],
+        "mosaicPixel": [
+          628.611328125,
+          1112.713623046875
+        ],
+        "errorPixels": 0.03683207556605339
+      },
+      {
+        "sourcePixel": [
+          758.170166015625,
+          1369.2923583984375
+        ],
+        "mosaicPixel": [
+          921.1080322265625,
+          1358.20263671875
+        ],
+        "errorPixels": 0.06498648226261139
+      },
+      {
+        "sourcePixel": [
+          1100.0010986328125,
+          743.7537231445312
+        ],
+        "mosaicPixel": [
+          1191.9224853515625,
+          862.52490234375
+        ],
+        "errorPixels": 0.13637226819992065
+      },
+      {
+        "sourcePixel": [
+          613.466796875,
+          454.0136413574219
+        ],
+        "mosaicPixel": [
+          806.253173828125,
+          632.9111938476562
+        ],
+        "errorPixels": 0.15736569464206696
+      },
+      {
+        "sourcePixel": [
+          1183.4454345703125,
+          588.9654541015625
+        ],
+        "mosaicPixel": [
+          1258.117431640625,
+          740.0049438476562
+        ],
+        "errorPixels": 0.08638068288564682
+      },
+      {
+        "sourcePixel": [
+          449.2999572753906,
+          443.4720764160156
+        ],
+        "mosaicPixel": [
+          676.282470703125,
+          624.697998046875
+        ],
+        "errorPixels": 0.05597775802016258
+      },
+      {
+        "sourcePixel": [
+          598.2896728515625,
+          510.0672912597656
+        ],
+        "mosaicPixel": [
+          794.3463134765625,
+          677.3727416992188
+        ],
+        "errorPixels": 0.05481436103582382
+      },
+      {
+        "sourcePixel": [
+          193.32090759277344,
+          1016.3121948242188
+        ],
+        "mosaicPixel": [
+          473.36871337890625,
+          1078.652099609375
+        ],
+        "errorPixels": 0.09569130837917328
+      },
+      {
+        "sourcePixel": [
+          707.0548095703125,
+          227.1830291748047
+        ],
+        "mosaicPixel": [
+          880.5111083984375,
+          453.1194763183594
+        ],
+        "errorPixels": 0.16444751620292664
+      },
+      {
+        "sourcePixel": [
+          952.4207153320312,
+          257.08453369140625
+        ],
+        "mosaicPixel": [
+          1074.9930419921875,
+          477.0219421386719
+        ],
+        "errorPixels": 0.07980985939502716
+      },
+      {
+        "sourcePixel": [
+          1343.511474609375,
+          1325.4676513671875
+        ],
+        "mosaicPixel": [
+          1385.0140380859375,
+          1323.5465087890625
+        ],
+        "errorPixels": 0.0487678162753582
+      },
+      {
+        "sourcePixel": [
+          953.2547607421875,
+          932.3805541992188
+        ],
+        "mosaicPixel": [
+          1075.6632080078125,
+          1012.0933837890625
+        ],
+        "errorPixels": 0.061242446303367615
+      },
+      {
+        "sourcePixel": [
+          1317.251708984375,
+          136.75820922851562
+        ],
+        "mosaicPixel": [
+          1364.1070556640625,
+          381.55078125
+        ],
+        "errorPixels": 0.1605466902256012
+      },
+      {
+        "sourcePixel": [
+          853.515869140625,
+          47.52427673339844
+        ],
+        "mosaicPixel": [
+          996.66845703125,
+          311.00830078125
+        ],
+        "errorPixels": 0.08945963531732559
+      }
+    ],
+    "geometry": {
+      "sixCity": [
+        [
+          118.781900063,
+          32.050846442
+        ],
+        [
+          118.797956521,
+          32.04686883
+        ],
+        [
+          118.792717738,
+          32.029948031
+        ],
+        [
+          118.775708778,
+          32.033522799
+        ],
+        [
+          118.781900063,
+          32.050846442
+        ]
+      ],
+      "sixPalace": [
+        [
+          118.784655513,
+          32.049290024
+        ],
+        [
+          118.794078477,
+          32.046897674
+        ],
+        [
+          118.790642656,
+          32.038999777
+        ],
+        [
+          118.781559872,
+          32.041334681
+        ],
+        [
+          118.784655513,
+          32.049290024
+        ]
+      ],
+      "nantangPalace": [
+        [
+          118.780233169,
+          32.038394489
+        ],
+        [
+          118.786560502,
+          32.037212584
+        ],
+        [
+          118.783975132,
+          32.031764262
+        ],
+        [
+          118.77812405,
+          32.032975063
+        ],
+        [
+          118.780233169,
+          32.038394489
+        ]
+      ],
+      "nantangCity": [
+        [
+          118.766932177,
+          32.053411646
+        ],
+        [
+          118.775810855,
+          32.051682309
+        ],
+        [
+          118.7841735,
+          32.0506985
+        ],
+        [
+          118.7900905,
+          32.0499639
+        ],
+        [
+          118.7920795,
+          32.049558
+        ],
+        [
+          118.7949259,
+          32.048896
+        ],
+        [
+          118.799235,
+          32.0479367
+        ],
+        [
+          118.794486673,
+          32.032196625
+        ],
+        [
+          118.79581337,
+          32.029948015
+        ],
+        [
+          118.795167027,
+          32.028275944
+        ],
+        [
+          118.793602201,
+          32.027699368
+        ],
+        [
+          118.791288966,
+          32.015244271
+        ],
+        [
+          118.790608604,
+          32.012187901
+        ],
+        [
+          118.789349937,
+          32.009967648
+        ],
+        [
+          118.785437875,
+          32.009823494
+        ],
+        [
+          118.783736981,
+          32.012014932
+        ],
+        [
+          118.778260097,
+          32.013600832
+        ],
+        [
+          118.771218388,
+          32.015821041
+        ],
+        [
+          118.768769097,
+          32.015388557
+        ],
+        [
+          118.767476415,
+          32.015302065
+        ],
+        [
+          118.761285154,
+          32.01720507
+        ],
+        [
+          118.762952039,
+          32.021904657
+        ],
+        [
+          118.763870531,
+          32.027843673
+        ],
+        [
+          118.763666424,
+          32.028910351
+        ],
+        [
+          118.763870537,
+          32.033090449
+        ],
+        [
+          118.763122147,
+          32.036030823
+        ],
+        [
+          118.76247581,
+          32.039461138
+        ],
+        [
+          118.761761437,
+          32.041882461
+        ],
+        [
+          118.761183134,
+          32.043467817
+        ],
+        [
+          118.761353226,
+          32.044995494
+        ],
+        [
+          118.759924474,
+          32.045744919
+        ],
+        [
+          118.759448224,
+          32.046609626
+        ],
+        [
+          118.766932177,
+          32.053411646
+        ]
+      ]
+    },
+    "validation": {
+      "heldOutCount": 949,
+      "heldOutMedianPixels": 0.09432694333270543,
+      "heldOut95Pixels": 0.3252545357201019,
+      "sourceInlierBounds": [
+        [
+          6.21012020111084,
+          6.874607563018799
+        ],
+        [
+          1430.8499755859375,
+          1566.620849609375
+        ]
+      ],
+      "occupiedGridCells": 16
+    },
+    "fullMatchEvidence": "output/nanjing-registration-cv.json",
+    "tileSource": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+    "revision": "2026-10-22 direct basemap registration",
+    "displacementFromWithdrawnFitMeters": {
+      "min": 44.61018636388036,
+      "max": 418.3674925244332
+    }
+  },
+  "newFeatures": [
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-user-layout-six-city",
+        "sourceName": "六朝都城（用户参考图配准）",
+        "label": "六朝都城",
+        "period": "魏晋南北朝",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingUserLayout": true,
+        "inferredBoundary": true,
+        "referenceInk": "red",
+        "referenceShape": "sixCity",
+        "sourceUrl": "./sources/nanjing.html#user-layout",
+        "referenceUrl": "./sources/nanjing-user-layout.png",
+        "sourceTitle": "用户提供的六朝／南唐范围叠图",
+        "status": "用户参考图配准 · 图示参考，非实测墙界",
+        "note": "依用户2026-10-22提供的底图叠图描绘；红色两圈分别按六朝都城、宫城接入，黑色两圈分别按南唐都城、宫城接入。原图未提供作者、绘制年代和考古精度，不能升级为考古实测范围。已撤回存在偏移的手工路口配准；改以原图底图与OSM标准栅格图块直接匹配，在Web Mercator像素坐标中仿射配准，保留匹配点、描线、矩阵及叠图核验。底图匹配残差不代表历史城墙精度。直边保留为直边，南唐外城折线依原图保留。原有考古遗迹、现存水道及明代城防未因图示范围移动；旧建康范围和配套推定门点已撤下显示。图中颜色仅用于识别历史时期，地图继续使用既有朝代配色及统一城墙控制。",
+        "labelMinZoom": 11,
+        "labelCoordinates": [
+          118.78911057152311,
+          32.04893841162532
+        ],
+        "labelInsideBoundary": true,
+        "fillOpacity": 0.04,
+        "lineOpacity": 0.8,
+        "lineWidth": 1.6,
+        "enSourceName": "Six Dynasties capital (user reference image)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.781900063,
+              32.050846442
+            ],
+            [
+              118.797956521,
+              32.04686883
+            ],
+            [
+              118.792717738,
+              32.029948031
+            ],
+            [
+              118.775708778,
+              32.033522799
+            ],
+            [
+              118.781900063,
+              32.050846442
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-user-layout-six-palace",
+        "sourceName": "六朝宫城（用户参考图配准）",
+        "label": "六朝宫城",
+        "period": "魏晋南北朝",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingUserLayout": true,
+        "inferredBoundary": true,
+        "referenceInk": "red",
+        "referenceShape": "sixPalace",
+        "sourceUrl": "./sources/nanjing.html#user-layout",
+        "referenceUrl": "./sources/nanjing-user-layout.png",
+        "sourceTitle": "用户提供的六朝／南唐范围叠图",
+        "status": "用户参考图配准 · 图示参考，非实测墙界",
+        "note": "依用户2026-10-22提供的底图叠图描绘；红色两圈分别按六朝都城、宫城接入，黑色两圈分别按南唐都城、宫城接入。原图未提供作者、绘制年代和考古精度，不能升级为考古实测范围。已撤回存在偏移的手工路口配准；改以原图底图与OSM标准栅格图块直接匹配，在Web Mercator像素坐标中仿射配准，保留匹配点、描线、矩阵及叠图核验。底图匹配残差不代表历史城墙精度。直边保留为直边，南唐外城折线依原图保留。原有考古遗迹、现存水道及明代城防未因图示范围移动；旧建康范围和配套推定门点已撤下显示。图中颜色仅用于识别历史时期，地图继续使用既有朝代配色及统一城墙控制。",
+        "labelMinZoom": 12,
+        "labelCoordinates": [
+          118.78611616146964,
+          32.04028537429985
+        ],
+        "labelInsideBoundary": true,
+        "fillOpacity": 0.04,
+        "lineOpacity": 0.8,
+        "lineWidth": 1.6,
+        "enSourceName": "Six Dynasties palace (user reference image)",
+        "labelSouthWall": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.784655513,
+              32.049290024
+            ],
+            [
+              118.794078477,
+              32.046897674
+            ],
+            [
+              118.790642656,
+              32.038999777
+            ],
+            [
+              118.781559872,
+              32.041334681
+            ],
+            [
+              118.784655513,
+              32.049290024
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-user-layout-nantang-city",
+        "sourceName": "南唐都城（用户参考图配准）",
+        "label": "南唐都城",
+        "period": "五代十国",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingUserLayout": true,
+        "inferredBoundary": true,
+        "referenceInk": "black",
+        "referenceShape": "nantangCity",
+        "sourceUrl": "./sources/nanjing.html#user-layout",
+        "referenceUrl": "./sources/nanjing-user-layout.png",
+        "sourceTitle": "用户提供的六朝／南唐范围叠图",
+        "status": "用户参考图配准及北濠内侧示意修正 · 非实测墙界",
+        "note": "依用户2026-10-22提供的底图叠图描绘；红色两圈分别按六朝都城、宫城接入，黑色两圈分别按南唐都城、宫城接入。原图未提供作者、绘制年代和考古精度，不能升级为考古实测范围。已撤回存在偏移的手工路口配准；改以原图底图与OSM标准栅格图块直接匹配，在Web Mercator像素坐标中仿射配准，保留匹配点、描线、矩阵及叠图核验。底图匹配残差不代表历史城墙精度。直边保留为直边，南唐外城折线依原图保留。原有考古遗迹、现存水道及明代城防未因图示范围移动；旧建康范围和配套推定门点已撤下显示。图中颜色仅用于识别历史时期，地图继续使用既有朝代配色及统一城墙控制。 北界修正：原图配准北边线局部落在现存北濠以北，现存北濠段改在其南侧表达城内一侧，西侧已埋濠地段仍沿原图。仅以现代水道中心线向南约20米作示意分离，不表示古岸线、墙基位置或墙濠间距；其余轮廓、考古点与水道不变。 北门与北城墙考古地段合并后，北边线经过既有考古地段参照点；此处采用原点坐标，不移动考古地段，其余顶点保持不变。门址与墙址的同址关系未经发掘证实。",
+        "labelMinZoom": 11,
+        "labelCoordinates": [
+          118.77091268436658,
+          32.05251532611578
+        ],
+        "labelInsideBoundary": true,
+        "fillOpacity": 0.04,
+        "lineOpacity": 0.8,
+        "lineWidth": 1.6,
+        "enSourceName": "Southern Tang capital (user reference image)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.766932177,
+              32.053411646
+            ],
+            [
+              118.775810855,
+              32.051682309
+            ],
+            [
+              118.7841735,
+              32.0506985
+            ],
+            [
+              118.7900905,
+              32.0499639
+            ],
+            [
+              118.7920795,
+              32.049558
+            ],
+            [
+              118.7949259,
+              32.048896
+            ],
+            [
+              118.799235,
+              32.0479367
+            ],
+            [
+              118.794486673,
+              32.032196625
+            ],
+            [
+              118.79581337,
+              32.029948015
+            ],
+            [
+              118.795167027,
+              32.028275944
+            ],
+            [
+              118.793602201,
+              32.027699368
+            ],
+            [
+              118.791288966,
+              32.015244271
+            ],
+            [
+              118.790608604,
+              32.012187901
+            ],
+            [
+              118.789349937,
+              32.009967648
+            ],
+            [
+              118.785437875,
+              32.009823494
+            ],
+            [
+              118.783736981,
+              32.012014932
+            ],
+            [
+              118.778260097,
+              32.013600832
+            ],
+            [
+              118.771218388,
+              32.015821041
+            ],
+            [
+              118.768769097,
+              32.015388557
+            ],
+            [
+              118.767476415,
+              32.015302065
+            ],
+            [
+              118.761285154,
+              32.01720507
+            ],
+            [
+              118.762952039,
+              32.021904657
+            ],
+            [
+              118.763870531,
+              32.027843673
+            ],
+            [
+              118.763666424,
+              32.028910351
+            ],
+            [
+              118.763870537,
+              32.033090449
+            ],
+            [
+              118.763122147,
+              32.036030823
+            ],
+            [
+              118.76247581,
+              32.039461138
+            ],
+            [
+              118.761761437,
+              32.041882461
+            ],
+            [
+              118.761183134,
+              32.043467817
+            ],
+            [
+              118.761353226,
+              32.044995494
+            ],
+            [
+              118.759924474,
+              32.045744919
+            ],
+            [
+              118.759448224,
+              32.046609626
+            ],
+            [
+              118.766932177,
+              32.053411646
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-user-layout-nantang-palace",
+        "sourceName": "南唐宫城（用户参考图配准）",
+        "label": "南唐宫城",
+        "period": "五代十国",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingUserLayout": true,
+        "inferredBoundary": true,
+        "referenceInk": "black",
+        "referenceShape": "nantangPalace",
+        "sourceUrl": "./sources/nanjing.html#user-layout",
+        "referenceUrl": "./sources/nanjing-user-layout.png",
+        "sourceTitle": "用户提供的六朝／南唐范围叠图",
+        "status": "用户参考图配准 · 图示参考，非实测墙界",
+        "note": "依用户2026-10-22提供的底图叠图描绘；红色两圈分别按六朝都城、宫城接入，黑色两圈分别按南唐都城、宫城接入。原图未提供作者、绘制年代和考古精度，不能升级为考古实测范围。已撤回存在偏移的手工路口配准；改以原图底图与OSM标准栅格图块直接匹配，在Web Mercator像素坐标中仿射配准，保留匹配点、描线、矩阵及叠图核验。底图匹配残差不代表历史城墙精度。直边保留为直边，南唐外城折线依原图保留。原有考古遗迹、现存水道及明代城防未因图示范围移动；旧建康范围和配套推定门点已撤下显示。图中颜色仅用于识别历史时期，地图继续使用既有朝代配色及统一城墙控制。 原图黑色内圈下边与红色外圈南边邻接，按图中端点补成其自身轮廓，不将红线借作另一条实测宫墙。",
+        "labelMinZoom": 12,
+        "labelCoordinates": [
+          118.78306557099694,
+          32.03774449300838
+        ],
+        "labelInsideBoundary": true,
+        "fillOpacity": 0.04,
+        "lineOpacity": 0.8,
+        "lineWidth": 1.6,
+        "enSourceName": "Southern Tang palace (user reference image)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.780233169,
+              32.038394489
+            ],
+            [
+              118.786560502,
+              32.037212584
+            ],
+            [
+              118.783975132,
+              32.031764262
+            ],
+            [
+              118.77812405,
+              32.032975063
+            ],
+            [
+              118.780233169,
+              32.038394489
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "sourceImage": "sources/nanjing-user-layout.png",
+  "modernJunctionEvidence": [
+    {
+      "names": [
+        "升州路",
+        "中华路"
+      ],
+      "coordinates": [
+        118.7795481,
+        32.0251048
+      ],
+      "node": "4420129292",
+      "ways": [
+        61857813,
+        61857816
+      ]
+    },
+    {
+      "names": [
+        "升州路",
+        "建康路"
+      ],
+      "coordinates": [
+        118.7795481,
+        32.0251048
+      ],
+      "node": "4420129292",
+      "ways": [
+        61857813,
+        158584959
+      ]
+    },
+    {
+      "names": [
+        "升州路",
+        "中山南路"
+      ],
+      "coordinates": [
+        118.776795,
+        32.0260453
+      ],
+      "node": "4420129293",
+      "ways": [
+        61857813,
+        159145986
+      ]
+    },
+    {
+      "names": [
+        "升州路",
+        "中华路"
+      ],
+      "coordinates": [
+        118.7795481,
+        32.0251048
+      ],
+      "node": "4420129292",
+      "ways": [
+        61857813,
+        444545554
+      ]
+    },
+    {
+      "names": [
+        "升州路",
+        "中山南路"
+      ],
+      "coordinates": [
+        118.776795,
+        32.0260453
+      ],
+      "node": "4420129293",
+      "ways": [
+        61857813,
+        1126672834
+      ]
+    },
+    {
+      "names": [
+        "升州路",
+        "中华路"
+      ],
+      "coordinates": [
+        118.7795481,
+        32.0251048
+      ],
+      "node": "4420129292",
+      "ways": [
+        61857813,
+        1523561677
+      ]
+    },
+    {
+      "names": [
+        "中华路",
+        "建康路"
+      ],
+      "coordinates": [
+        118.7795481,
+        32.0251048
+      ],
+      "node": "4420129292",
+      "ways": [
+        61857816,
+        158584959
+      ]
+    },
+    {
+      "names": [
+        "建邺路",
+        "白下路"
+      ],
+      "coordinates": [
+        118.7788682,
+        32.0316998
+      ],
+      "node": "305195686",
+      "ways": [
+        61862483,
+        159145987
+      ]
+    },
+    {
+      "names": [
+        "建邺路",
+        "中山南路"
+      ],
+      "coordinates": [
+        118.7788682,
+        32.0316998
+      ],
+      "node": "305195686",
+      "ways": [
+        61862483,
+        1117583854
+      ]
+    },
+    {
+      "names": [
+        "建邺路",
+        "中山南路"
+      ],
+      "coordinates": [
+        118.7788682,
+        32.0316998
+      ],
+      "node": "305195686",
+      "ways": [
+        61862483,
+        1126672833
+      ]
+    },
+    {
+      "names": [
+        "太平南路",
+        "白下路"
+      ],
+      "coordinates": [
+        118.7855482,
+        32.0305811
+      ],
+      "node": "4414643354",
+      "ways": [
+        106972914,
+        775717139
+      ]
+    },
+    {
+      "names": [
+        "建康路",
+        "白下路"
+      ],
+      "coordinates": [
+        118.7946838,
+        32.0286086
+      ],
+      "node": "4414643350",
+      "ways": [
+        142491929,
+        1126672835
+      ]
+    },
+    {
+      "names": [
+        "升州路",
+        "中山南路"
+      ],
+      "coordinates": [
+        118.776795,
+        32.0260453
+      ],
+      "node": "4420129293",
+      "ways": [
+        146375069,
+        159145986
+      ]
+    },
+    {
+      "names": [
+        "升州路",
+        "中山南路"
+      ],
+      "coordinates": [
+        118.776795,
+        32.0260453
+      ],
+      "node": "4420129293",
+      "ways": [
+        146375069,
+        1126672834
+      ]
+    },
+    {
+      "names": [
+        "太平南路",
+        "建康路"
+      ],
+      "coordinates": [
+        118.7838493,
+        32.0252299
+      ],
+      "node": "770961910",
+      "ways": [
+        147399819,
+        158584959
+      ]
+    },
+    {
+      "names": [
+        "建康路",
+        "中华路"
+      ],
+      "coordinates": [
+        118.7795481,
+        32.0251048
+      ],
+      "node": "4420129292",
+      "ways": [
+        158584959,
+        444545554
+      ]
+    },
+    {
+      "names": [
+        "建康路",
+        "中华路"
+      ],
+      "coordinates": [
+        118.7795481,
+        32.0251048
+      ],
+      "node": "4420129292",
+      "ways": [
+        158584959,
+        1523561677
+      ]
+    },
+    {
+      "names": [
+        "白下路",
+        "中华路"
+      ],
+      "coordinates": [
+        118.7810673,
+        32.0310859
+      ],
+      "node": "4414643356",
+      "ways": [
+        159145987,
+        780905306
+      ]
+    },
+    {
+      "names": [
+        "白下路",
+        "中山南路"
+      ],
+      "coordinates": [
+        118.7788682,
+        32.0316998
+      ],
+      "node": "305195686",
+      "ways": [
+        159145987,
+        1117583854
+      ]
+    },
+    {
+      "names": [
+        "白下路",
+        "中山南路"
+      ],
+      "coordinates": [
+        118.7788682,
+        32.0316998
+      ],
+      "node": "305195686",
+      "ways": [
+        159145987,
+        1126672833
+      ]
+    },
+    {
+      "names": [
+        "太平南路",
+        "白下路"
+      ],
+      "coordinates": [
+        118.7855482,
+        32.0305811
+      ],
+      "node": "4414643354",
+      "ways": [
+        165486155,
+        775717139
+      ]
+    },
+    {
+      "names": [
+        "中华路",
+        "长乐路"
+      ],
+      "coordinates": [
+        118.7782537,
+        32.0205819
+      ],
+      "node": "305195112",
+      "ways": [
+        158584958,
+        422959068
+      ]
+    },
+    {
+      "names": [
+        "中华路",
+        "长乐路"
+      ],
+      "coordinates": [
+        118.7782537,
+        32.0205819
+      ],
+      "node": "305195112",
+      "ways": [
+        158584958,
+        443958502
+      ]
+    },
+    {
+      "names": [
+        "中华路",
+        "长乐路"
+      ],
+      "coordinates": [
+        118.7782537,
+        32.0205819
+      ],
+      "node": "305195112",
+      "ways": [
+        165486081,
+        422959068
+      ]
+    },
+    {
+      "names": [
+        "中华路",
+        "长乐路"
+      ],
+      "coordinates": [
+        118.7782537,
+        32.0205819
+      ],
+      "node": "305195112",
+      "ways": [
+        165486081,
+        443958502
+      ]
+    },
+    {
+      "names": [
+        "中山南路",
+        "集庆路"
+      ],
+      "coordinates": [
+        118.7753136,
+        32.021468
+      ],
+      "node": "305195106",
+      "ways": [
+        323774006,
+        422195826
+      ]
+    },
+    {
+      "names": [
+        "中山南路",
+        "长乐路"
+      ],
+      "coordinates": [
+        118.7753136,
+        32.021468
+      ],
+      "node": "305195106",
+      "ways": [
+        323774006,
+        422959068
+      ]
+    },
+    {
+      "names": [
+        "集庆路",
+        "集庆路新桥"
+      ],
+      "coordinates": [
+        118.7738716,
+        32.0210964
+      ],
+      "node": "936898184",
+      "ways": [
+        422195826,
+        422195834
+      ]
+    },
+    {
+      "names": [
+        "集庆路",
+        "长乐路"
+      ],
+      "coordinates": [
+        118.7753136,
+        32.021468
+      ],
+      "node": "305195106",
+      "ways": [
+        422195826,
+        422959068
+      ]
+    },
+    {
+      "names": [
+        "集庆路",
+        "中山南路"
+      ],
+      "coordinates": [
+        118.7753136,
+        32.021468
+      ],
+      "node": "305195106",
+      "ways": [
+        422195826,
+        788487956
+      ]
+    },
+    {
+      "names": [
+        "集庆路",
+        "中山南路"
+      ],
+      "coordinates": [
+        118.7753136,
+        32.021468
+      ],
+      "node": "305195106",
+      "ways": [
+        422195826,
+        1126672840
+      ]
+    },
+    {
+      "names": [
+        "集庆路",
+        "集庆路新桥"
+      ],
+      "coordinates": [
+        118.7734254,
+        32.0209945
+      ],
+      "node": "4219129444",
+      "ways": [
+        422195828,
+        422195834
+      ]
+    },
+    {
+      "names": [
+        "长乐路",
+        "中华路"
+      ],
+      "coordinates": [
+        118.7782537,
+        32.0205819
+      ],
+      "node": "305195112",
+      "ways": [
+        422959068,
+        1523561677
+      ]
+    },
+    {
+      "names": [
+        "长乐路",
+        "中山南路"
+      ],
+      "coordinates": [
+        118.7753136,
+        32.021468
+      ],
+      "node": "305195106",
+      "ways": [
+        422959068,
+        788487956
+      ]
+    },
+    {
+      "names": [
+        "长乐路",
+        "中山南路"
+      ],
+      "coordinates": [
+        118.7753136,
+        32.021468
+      ],
+      "node": "305195106",
+      "ways": [
+        422959068,
+        1126672840
+      ]
+    },
+    {
+      "names": [
+        "长乐路",
+        "中华路"
+      ],
+      "coordinates": [
+        118.7782537,
+        32.0205819
+      ],
+      "node": "305195112",
+      "ways": [
+        422959068,
+        1556385599
+      ]
+    },
+    {
+      "names": [
+        "长乐路",
+        "中华路"
+      ],
+      "coordinates": [
+        118.7782537,
+        32.0205819
+      ],
+      "node": "305195112",
+      "ways": [
+        443958502,
+        1523561677
+      ]
+    },
+    {
+      "names": [
+        "长乐路",
+        "中华路"
+      ],
+      "coordinates": [
+        118.7782537,
+        32.0205819
+      ],
+      "node": "305195112",
+      "ways": [
+        443958502,
+        1556385599
+      ]
+    }
+  ],
+  "previousRegistration": {
+    "reason": "Withdrawn: manually estimated modern junctions produced visible map displacement",
+    "registration": {
+      "source": "User-provided annotated OSM-background image, 2026-10-22",
+      "imageSize": [
+        1438,
+        1572
+      ],
+      "controls": [
+        {
+          "name": "新街口中山路—中山东路",
+          "pixel": [
+            725,
+            347
+          ],
+          "wgs84": [
+            118.77886,
+            32.04374
+          ],
+          "projected": [
+            118.778667078,
+            32.043558007
+          ],
+          "fitResidualMeters": 27.24181987121776
+        },
+        {
+          "name": "中山东路—太平南北路",
+          "pixel": [
+            1037,
+            383
+          ],
+          "wgs84": [
+            118.78949,
+            32.04309
+          ],
+          "projected": [
+            118.789467392,
+            32.043038656
+          ],
+          "fitResidualMeters": 6.101068222863764
+        },
+        {
+          "name": "内桥北端地段",
+          "pixel": [
+            702,
+            750
+          ],
+          "wgs84": [
+            118.7787976,
+            32.0314174
+          ],
+          "projected": [
+            118.779353107,
+            32.031792258
+          ],
+          "fitResidualMeters": 67.01689721595055
+        },
+        {
+          "name": "升州路—中华路",
+          "pixel": [
+            676,
+            971
+          ],
+          "wgs84": [
+            118.7795481,
+            32.0251048
+          ],
+          "projected": [
+            118.779271548,
+            32.025317409
+          ],
+          "fitResidualMeters": 35.237858834278335
+        },
+        {
+          "name": "长乐路—中华路",
+          "pixel": [
+            626,
+            1143
+          ],
+          "wgs84": [
+            118.7782537,
+            32.0205819
+          ],
+          "projected": [
+            118.778190274,
+            32.02022777
+          ],
+          "fitResidualMeters": 39.8738464466547
+        }
+      ],
+      "method": "Affine georeferencing against modern road junctions; source has no published author, date or survey accuracy. User attribution: red=Six Dynasties, black=Southern Tang.",
+      "matrix": [
+        [
+          0.000034194791325016485,
+          0.000001692966788250068
+        ],
+        [
+          0.0000036538693838628067,
+          -0.000029098785387968173
+        ],
+        [
+          118.75260796186095,
+          32.052427884351985
+        ]
+      ],
+      "pixelTraces": {
+        "sixCity": [
+          [
+            821,
+            110
+          ],
+          [
+            1293,
+            248
+          ],
+          [
+            1139,
+            835
+          ],
+          [
+            639,
+            711
+          ],
+          [
+            821,
+            110
+          ]
+        ],
+        "sixPalace": [
+          [
+            902,
+            164
+          ],
+          [
+            1179,
+            247
+          ],
+          [
+            1078,
+            521
+          ],
+          [
+            811,
+            440
+          ],
+          [
+            902,
+            164
+          ]
+        ],
+        "nantangPalace": [
+          [
+            772,
+            542
+          ],
+          [
+            958,
+            583
+          ],
+          [
+            882,
+            772
+          ],
+          [
+            710,
+            730
+          ],
+          [
+            772,
+            542
+          ]
+        ],
+        "nantangCity": [
+          [
+            381,
+            21
+          ],
+          [
+            642,
+            81
+          ],
+          [
+            1118,
+            118
+          ],
+          [
+            1336,
+            200
+          ],
+          [
+            1191,
+            757
+          ],
+          [
+            1230,
+            835
+          ],
+          [
+            1211,
+            893
+          ],
+          [
+            1165,
+            913
+          ],
+          [
+            1097,
+            1345
+          ],
+          [
+            1077,
+            1451
+          ],
+          [
+            1040,
+            1528
+          ],
+          [
+            925,
+            1533
+          ],
+          [
+            875,
+            1457
+          ],
+          [
+            714,
+            1402
+          ],
+          [
+            507,
+            1325
+          ],
+          [
+            435,
+            1340
+          ],
+          [
+            397,
+            1343
+          ],
+          [
+            215,
+            1277
+          ],
+          [
+            264,
+            1114
+          ],
+          [
+            291,
+            908
+          ],
+          [
+            285,
+            871
+          ],
+          [
+            291,
+            726
+          ],
+          [
+            269,
+            624
+          ],
+          [
+            250,
+            505
+          ],
+          [
+            229,
+            421
+          ],
+          [
+            212,
+            366
+          ],
+          [
+            217,
+            313
+          ],
+          [
+            175,
+            287
+          ],
+          [
+            161,
+            257
+          ],
+          [
+            381,
+            21
+          ]
+        ]
+      },
+      "geometry": {
+        "sixCity": [
+          [
+            118.781083811,
+            32.050616944
+          ],
+          [
+            118.797727987,
+            32.047400392
+          ],
+          [
+            118.79460681,
+            32.030058688
+          ],
+          [
+            118.777056335,
+            32.032820454
+          ],
+          [
+            118.781083811,
+            32.050616944
+          ]
+        ],
+        "sixPalace": [
+          [
+            118.784050898,
+            32.04918274
+          ],
+          [
+            118.793826127,
+            32.047236492
+          ],
+          [
+            118.791373613,
+            32.039092435
+          ],
+          [
+            118.78194764,
+            32.040997415
+          ],
+          [
+            118.784050898,
+            32.04918274
+          ]
+        ],
+        "nantangPalace": [
+          [
+            118.780986738,
+            32.037963313
+          ],
+          [
+            118.787496778,
+            32.037085155
+          ],
+          [
+            118.785588555,
+            32.031456819
+          ],
+          [
+            118.779553588,
+            32.032387777
+          ],
+          [
+            118.780986738,
+            32.037963313
+          ]
+        ],
+        "nantangCity": [
+          [
+            118.765712909,
+            32.05246183
+          ],
+          [
+            118.774856981,
+            32.051157767
+          ],
+          [
+            118.791268895,
+            32.050886965
+          ],
+          [
+            118.799022977,
+            32.048869931
+          ],
+          [
+            118.796099937,
+            32.032416427
+          ],
+          [
+            118.797718536,
+            32.030212748
+          ],
+          [
+            118.79728076,
+            32.028492852
+          ],
+          [
+            118.795780877,
+            32.027833
+          ],
+          [
+            118.795034102,
+            32.015147203
+          ],
+          [
+            118.794737517,
+            32.012028872
+          ],
+          [
+            118.793753657,
+            32.009725626
+          ],
+          [
+            118.789839526,
+            32.009385441
+          ],
+          [
+            118.787852092,
+            32.0115123
+          ],
+          [
+            118.782145768,
+            32.012840166
+          ],
+          [
+            118.774786098,
+            32.014730328
+          ],
+          [
+            118.772378881,
+            32.014171952
+          ],
+          [
+            118.771090441,
+            32.014020323
+          ],
+          [
+            118.764625833,
+            32.015632723
+          ],
+          [
+            118.765705797,
+            32.020458781
+          ],
+          [
+            118.76587636,
+            32.026498841
+          ],
+          [
+            118.765535998,
+            32.027565338
+          ],
+          [
+            118.765211355,
+            32.031794819
+          ],
+          [
+            118.764086375,
+            32.03472565
+          ],
+          [
+            118.763001864,
+            32.038156239
+          ],
+          [
+            118.761976848,
+            32.040564985
+          ],
+          [
+            118.761194574,
+            32.042136638
+          ],
+          [
+            118.761171893,
+            32.043687338
+          ],
+          [
+            118.759640711,
+            32.044372802
+          ],
+          [
+            118.759052368,
+            32.045222064
+          ],
+          [
+            118.765712909,
+            32.05246183
+          ]
+        ]
+      }
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "research": true,
+          "city": "南京",
+          "sourceId": "nanjing-user-layout-six-city",
+          "sourceName": "六朝都城（用户参考图配准）",
+          "label": "六朝都城\n（图示参考）",
+          "period": "魏晋南北朝",
+          "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+          "capitalSiteName": "南京",
+          "capitalSiteDisplayName": "南京",
+          "nanjingHistoricalDetail": true,
+          "nanjingUserLayout": true,
+          "inferredBoundary": true,
+          "referenceInk": "red",
+          "referenceShape": "sixCity",
+          "sourceUrl": "./sources/nanjing.html#user-layout",
+          "referenceUrl": "./sources/nanjing-user-layout.png",
+          "sourceTitle": "用户提供的六朝／南唐范围叠图",
+          "status": "用户参考图配准 · 图示参考，非实测墙界",
+          "note": "依用户2026-10-22提供的底图叠图描绘；红色两圈分别按六朝都城、宫城接入，黑色两圈分别按南唐都城、宫城接入。原图未提供作者、绘制年代和考古精度，不能升级为考古实测范围。使用现代路口作近似配准，五个控制点、原图像素描线、变换矩阵及核对结果已留存；拟合残差不是墙界精度。直边保留为直边，南唐外城折线依原图保留。原有考古遗迹、现存水道及明代城防未因图示范围移动；旧建康范围和配套推定门点已撤下显示。图中颜色仅用于识别历史时期，地图继续使用既有朝代配色及统一城墙控制。",
+          "labelMinZoom": 11,
+          "labelCoordinates": [
+            118.78857369020001,
+            32.049049495599995
+          ],
+          "labelInsideBoundary": true,
+          "fillOpacity": 0.04,
+          "lineOpacity": 0.8,
+          "lineWidth": 1.6,
+          "enSourceName": "Six Dynasties capital (user reference image)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                118.781083811,
+                32.050616944
+              ],
+              [
+                118.797727987,
+                32.047400392
+              ],
+              [
+                118.79460681,
+                32.030058688
+              ],
+              [
+                118.777056335,
+                32.032820454
+              ],
+              [
+                118.781083811,
+                32.050616944
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "research": true,
+          "city": "南京",
+          "sourceId": "nanjing-user-layout-six-palace",
+          "sourceName": "六朝宫城（用户参考图配准）",
+          "label": "六朝宫城\n（图示参考）",
+          "period": "魏晋南北朝",
+          "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+          "capitalSiteName": "南京",
+          "capitalSiteDisplayName": "南京",
+          "nanjingHistoricalDetail": true,
+          "nanjingUserLayout": true,
+          "inferredBoundary": true,
+          "referenceInk": "red",
+          "referenceShape": "sixPalace",
+          "sourceUrl": "./sources/nanjing.html#user-layout",
+          "referenceUrl": "./sources/nanjing-user-layout.png",
+          "sourceTitle": "用户提供的六朝／南唐范围叠图",
+          "status": "用户参考图配准 · 图示参考，非实测墙界",
+          "note": "依用户2026-10-22提供的底图叠图描绘；红色两圈分别按六朝都城、宫城接入，黑色两圈分别按南唐都城、宫城接入。原图未提供作者、绘制年代和考古精度，不能升级为考古实测范围。使用现代路口作近似配准，五个控制点、原图像素描线、变换矩阵及核对结果已留存；拟合残差不是墙界精度。直边保留为直边，南唐外城折线依原图保留。原有考古遗迹、现存水道及明代城防未因图示范围移动；旧建康范围和配套推定门点已撤下显示。图中颜色仅用于识别历史时期，地图继续使用既有朝代配色及统一城墙控制。",
+          "labelMinZoom": 12,
+          "labelCoordinates": [
+            118.78666062650001,
+            32.040164925000006
+          ],
+          "labelInsideBoundary": true,
+          "fillOpacity": 0.04,
+          "lineOpacity": 0.8,
+          "lineWidth": 1.6,
+          "enSourceName": "Six Dynasties palace (user reference image)",
+          "labelSouthWall": true
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                118.784050898,
+                32.04918274
+              ],
+              [
+                118.793826127,
+                32.047236492
+              ],
+              [
+                118.791373613,
+                32.039092435
+              ],
+              [
+                118.78194764,
+                32.040997415
+              ],
+              [
+                118.784050898,
+                32.04918274
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "research": true,
+          "city": "南京",
+          "sourceId": "nanjing-user-layout-nantang-city",
+          "sourceName": "南唐都城（用户参考图配准）",
+          "label": "南唐都城\n（图示参考）",
+          "period": "五代十国",
+          "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+          "capitalSiteName": "南京",
+          "capitalSiteDisplayName": "南京",
+          "nanjingHistoricalDetail": true,
+          "nanjingUserLayout": true,
+          "inferredBoundary": true,
+          "referenceInk": "black",
+          "referenceShape": "nantangCity",
+          "sourceUrl": "./sources/nanjing.html#user-layout",
+          "referenceUrl": "./sources/nanjing-user-layout.png",
+          "sourceTitle": "用户提供的六朝／南唐范围叠图",
+          "status": "用户参考图配准 · 图示参考，非实测墙界",
+          "note": "依用户2026-10-22提供的底图叠图描绘；红色两圈分别按六朝都城、宫城接入，黑色两圈分别按南唐都城、宫城接入。原图未提供作者、绘制年代和考古精度，不能升级为考古实测范围。使用现代路口作近似配准，五个控制点、原图像素描线、变换矩阵及核对结果已留存；拟合残差不是墙界精度。直边保留为直边，南唐外城折线依原图保留。原有考古遗迹、现存水道及明代城防未因图示范围移动；旧建康范围和配套推定门点已撤下显示。图中颜色仅用于识别历史时期，地图继续使用既有朝代配色及统一城墙控制。",
+          "labelMinZoom": 11,
+          "labelCoordinates": [
+            118.76982774140001,
+            32.05175500165
+          ],
+          "labelInsideBoundary": true,
+          "fillOpacity": 0.04,
+          "lineOpacity": 0.8,
+          "lineWidth": 1.6,
+          "enSourceName": "Southern Tang capital (user reference image)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                118.765712909,
+                32.05246183
+              ],
+              [
+                118.774856981,
+                32.051157767
+              ],
+              [
+                118.791268895,
+                32.050886965
+              ],
+              [
+                118.799022977,
+                32.048869931
+              ],
+              [
+                118.796099937,
+                32.032416427
+              ],
+              [
+                118.797718536,
+                32.030212748
+              ],
+              [
+                118.79728076,
+                32.028492852
+              ],
+              [
+                118.795780877,
+                32.027833
+              ],
+              [
+                118.795034102,
+                32.015147203
+              ],
+              [
+                118.794737517,
+                32.012028872
+              ],
+              [
+                118.793753657,
+                32.009725626
+              ],
+              [
+                118.789839526,
+                32.009385441
+              ],
+              [
+                118.787852092,
+                32.0115123
+              ],
+              [
+                118.782145768,
+                32.012840166
+              ],
+              [
+                118.774786098,
+                32.014730328
+              ],
+              [
+                118.772378881,
+                32.014171952
+              ],
+              [
+                118.771090441,
+                32.014020323
+              ],
+              [
+                118.764625833,
+                32.015632723
+              ],
+              [
+                118.765705797,
+                32.020458781
+              ],
+              [
+                118.76587636,
+                32.026498841
+              ],
+              [
+                118.765535998,
+                32.027565338
+              ],
+              [
+                118.765211355,
+                32.031794819
+              ],
+              [
+                118.764086375,
+                32.03472565
+              ],
+              [
+                118.763001864,
+                32.038156239
+              ],
+              [
+                118.761976848,
+                32.040564985
+              ],
+              [
+                118.761194574,
+                32.042136638
+              ],
+              [
+                118.761171893,
+                32.043687338
+              ],
+              [
+                118.759640711,
+                32.044372802
+              ],
+              [
+                118.759052368,
+                32.045222064
+              ],
+              [
+                118.765712909,
+                32.05246183
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "research": true,
+          "city": "南京",
+          "sourceId": "nanjing-user-layout-nantang-palace",
+          "sourceName": "南唐宫城（用户参考图配准）",
+          "label": "南唐宫城\n（图示参考）",
+          "period": "五代十国",
+          "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+          "capitalSiteName": "南京",
+          "capitalSiteDisplayName": "南京",
+          "nanjingHistoricalDetail": true,
+          "nanjingUserLayout": true,
+          "inferredBoundary": true,
+          "referenceInk": "black",
+          "referenceShape": "nantangPalace",
+          "sourceUrl": "./sources/nanjing.html#user-layout",
+          "referenceUrl": "./sources/nanjing-user-layout.png",
+          "sourceTitle": "用户提供的六朝／南唐范围叠图",
+          "status": "用户参考图配准 · 图示参考，非实测墙界",
+          "note": "依用户2026-10-22提供的底图叠图描绘；红色两圈分别按六朝都城、宫城接入，黑色两圈分别按南唐都城、宫城接入。原图未提供作者、绘制年代和考古精度，不能升级为考古实测范围。使用现代路口作近似配准，五个控制点、原图像素描线、变换矩阵及核对结果已留存；拟合残差不是墙界精度。直边保留为直边，南唐外城折线依原图保留。原有考古遗迹、现存水道及明代城防未因图示范围移动；旧建康范围和配套推定门点已撤下显示。图中颜色仅用于识别历史时期，地图继续使用既有朝代配色及统一城墙控制。 原图黑色内圈下边与红色外圈南边邻接，按图中端点补成其自身轮廓，不将红线借作另一条实测宫墙。",
+          "labelMinZoom": 12,
+          "labelCoordinates": [
+            118.783916256,
+            32.0374481419
+          ],
+          "labelInsideBoundary": true,
+          "fillOpacity": 0.04,
+          "lineOpacity": 0.8,
+          "lineWidth": 1.6,
+          "enSourceName": "Southern Tang palace (user reference image)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                118.780986738,
+                32.037963313
+              ],
+              [
+                118.787496778,
+                32.037085155
+              ],
+              [
+                118.785588555,
+                32.031456819
+              ],
+              [
+                118.779553588,
+                32.032387777
+              ],
+              [
+                118.780986738,
+                32.037963313
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "northEdgeCorrection": {
+    "date": "2026-10-22",
+    "beforeFeature": {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-user-layout-nantang-city",
+        "sourceName": "南唐都城（用户参考图配准）",
+        "label": "南唐都城",
+        "period": "五代十国",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingUserLayout": true,
+        "inferredBoundary": true,
+        "referenceInk": "black",
+        "referenceShape": "nantangCity",
+        "sourceUrl": "./sources/nanjing.html#user-layout",
+        "referenceUrl": "./sources/nanjing-user-layout.png",
+        "sourceTitle": "用户提供的六朝／南唐范围叠图",
+        "status": "用户参考图配准 · 图示参考，非实测墙界",
+        "note": "依用户2026-10-22提供的底图叠图描绘；红色两圈分别按六朝都城、宫城接入，黑色两圈分别按南唐都城、宫城接入。原图未提供作者、绘制年代和考古精度，不能升级为考古实测范围。已撤回存在偏移的手工路口配准；改以原图底图与OSM标准栅格图块直接匹配，在Web Mercator像素坐标中仿射配准，保留匹配点、描线、矩阵及叠图核验。底图匹配残差不代表历史城墙精度。直边保留为直边，南唐外城折线依原图保留。原有考古遗迹、现存水道及明代城防未因图示范围移动；旧建康范围和配套推定门点已撤下显示。图中颜色仅用于识别历史时期，地图继续使用既有朝代配色及统一城墙控制。",
+        "labelMinZoom": 11,
+        "labelCoordinates": [
+          118.77091268436658,
+          32.05251532611578
+        ],
+        "labelInsideBoundary": true,
+        "fillOpacity": 0.04,
+        "lineOpacity": 0.8,
+        "lineWidth": 1.6,
+        "enSourceName": "Southern Tang capital (user reference image)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.766932177,
+              32.053411646
+            ],
+            [
+              118.775810855,
+              32.051682309
+            ],
+            [
+              118.792003388,
+              32.050615811
+            ],
+            [
+              118.799419294,
+              32.048252329
+            ],
+            [
+              118.794486673,
+              32.032196625
+            ],
+            [
+              118.79581337,
+              32.029948015
+            ],
+            [
+              118.795167027,
+              32.028275944
+            ],
+            [
+              118.793602201,
+              32.027699368
+            ],
+            [
+              118.791288966,
+              32.015244271
+            ],
+            [
+              118.790608604,
+              32.012187901
+            ],
+            [
+              118.789349937,
+              32.009967648
+            ],
+            [
+              118.785437875,
+              32.009823494
+            ],
+            [
+              118.783736981,
+              32.012014932
+            ],
+            [
+              118.778260097,
+              32.013600832
+            ],
+            [
+              118.771218388,
+              32.015821041
+            ],
+            [
+              118.768769097,
+              32.015388557
+            ],
+            [
+              118.767476415,
+              32.015302065
+            ],
+            [
+              118.761285154,
+              32.01720507
+            ],
+            [
+              118.762952039,
+              32.021904657
+            ],
+            [
+              118.763870531,
+              32.027843673
+            ],
+            [
+              118.763666424,
+              32.028910351
+            ],
+            [
+              118.763870537,
+              32.033090449
+            ],
+            [
+              118.763122147,
+              32.036030823
+            ],
+            [
+              118.76247581,
+              32.039461138
+            ],
+            [
+              118.761761437,
+              32.041882461
+            ],
+            [
+              118.761183134,
+              32.043467817
+            ],
+            [
+              118.761353226,
+              32.044995494
+            ],
+            [
+              118.759924474,
+              32.045744919
+            ],
+            [
+              118.759448224,
+              32.046609626
+            ],
+            [
+              118.766932177,
+              32.053411646
+            ]
+          ]
+        ]
+      }
+    },
+    "reason": "Original source-image north boundary lay north of the modern northern moat; represent the city-side relationship south of the moat, without claiming excavation coordinates.",
+    "referenceMoatSourceId": "nanjing-nantang-east-north-moat",
+    "schematicLatitudeOffsetDegrees": -0.00018,
+    "limitation": "Schematic separation only, not historical bank, wall footprint or moat-to-wall distance"
+  },
+  "northGateMerge": {
+    "date": "2026-10-22",
+    "gateBefore": {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-nantang-north-gate-reference",
+        "sourceName": "南唐北门（北门桥南端地段参照）",
+        "label": "南唐北门",
+        "period": "五代十国",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingOtherPeriods": true,
+        "labelMinZoom": 12,
+        "sitePoint": true,
+        "sourceUrl": "./sources/nanjing.html#other-periods",
+        "referenceUrl": "https://dfz.nanjing.gov.cn/gzdt/202404/t20240411_4206994.html",
+        "sourceTitle": "南京其他时期城防：依据与缺项",
+        "periods": [
+          "五代十国",
+          "宋辽金西夏",
+          "元"
+        ],
+        "inferredBoundary": true,
+        "status": "文献记载的城门地段参照 · 非原门基测绘",
+        "note": "官方记载北以玄武桥、今北门桥为限。以原始OSM北门桥街道南端作门外桥址地段参照，不是古门基中心；此北门与玄武湖边清末丰润门、明宫城后宰门均不同。",
+        "periodNames": {
+          "宋辽金西夏": "宋府城门地段\n（南唐北门）",
+          "元": "元城门地段\n（南唐北门）"
+        },
+        "periodNotes": {
+          "宋辽金西夏": "宋代府城沿用南唐城址，标签为前代门址地段参照，不推定宋代原名与形制。",
+          "元": "元代集庆路城沿用既有城址，未取得本门元代门基，不据前代记录认定元代形制。"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.7839914,
+          32.0498473
+        ]
+      }
+    },
+    "wallBefore": {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-nantang-north-wall-vicinity",
+        "sourceName": "南唐北城墙考古地段（鸡鹅巷参照）",
+        "label": "南唐北城墙\n（考古地段参照）",
+        "period": "五代十国",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingOtherPeriods": true,
+        "labelMinZoom": 14,
+        "sitePoint": true,
+        "sourceUrl": "./sources/nanjing.html#other-periods",
+        "referenceUrl": "https://www.xwzf.gov.cn/xwqzfmhwzwapb/xwzx/bmdt/202604/t20260409_5820809.html",
+        "sourceTitle": "南京其他时期城防：依据与缺项",
+        "inferredBoundary": true,
+        "status": "官方确认的考古地段参照 · 墙体精确轮廓待核",
+        "note": "玄武区政府确认2021年在临鸡鹅巷地块发现南唐都城北城墙，并建设遗址公园。以鸡鹅巷西端附近指示考古地段，不把道路当城墙、不将公园用地当原城界。未取得原始发掘墙线，暂不补画其长度、厚度或闭合面。"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.7841735,
+          32.0506985
+        ]
+      }
+    },
+    "cityBefore": {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-user-layout-nantang-city",
+        "sourceName": "南唐都城（用户参考图配准）",
+        "label": "南唐都城",
+        "period": "五代十国",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingUserLayout": true,
+        "inferredBoundary": true,
+        "referenceInk": "black",
+        "referenceShape": "nantangCity",
+        "sourceUrl": "./sources/nanjing.html#user-layout",
+        "referenceUrl": "./sources/nanjing-user-layout.png",
+        "sourceTitle": "用户提供的六朝／南唐范围叠图",
+        "status": "用户参考图配准及北濠内侧示意修正 · 非实测墙界",
+        "note": "依用户2026-10-22提供的底图叠图描绘；红色两圈分别按六朝都城、宫城接入，黑色两圈分别按南唐都城、宫城接入。原图未提供作者、绘制年代和考古精度，不能升级为考古实测范围。已撤回存在偏移的手工路口配准；改以原图底图与OSM标准栅格图块直接匹配，在Web Mercator像素坐标中仿射配准，保留匹配点、描线、矩阵及叠图核验。底图匹配残差不代表历史城墙精度。直边保留为直边，南唐外城折线依原图保留。原有考古遗迹、现存水道及明代城防未因图示范围移动；旧建康范围和配套推定门点已撤下显示。图中颜色仅用于识别历史时期，地图继续使用既有朝代配色及统一城墙控制。 北界修正：原图配准北边线局部落在现存北濠以北，现存北濠段改在其南侧表达城内一侧，西侧已埋濠地段仍沿原图。仅以现代水道中心线向南约20米作示意分离，不表示古岸线、墙基位置或墙濠间距；其余轮廓、考古点与水道不变。",
+        "labelMinZoom": 11,
+        "labelCoordinates": [
+          118.77091268436658,
+          32.05251532611578
+        ],
+        "labelInsideBoundary": true,
+        "fillOpacity": 0.04,
+        "lineOpacity": 0.8,
+        "lineWidth": 1.6,
+        "enSourceName": "Southern Tang capital (user reference image)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.766932177,
+              32.053411646
+            ],
+            [
+              118.775810855,
+              32.051682309
+            ],
+            [
+              118.7855439,
+              32.0507744
+            ],
+            [
+              118.7900905,
+              32.0499639
+            ],
+            [
+              118.7920795,
+              32.049558
+            ],
+            [
+              118.7949259,
+              32.048896
+            ],
+            [
+              118.799235,
+              32.0479367
+            ],
+            [
+              118.794486673,
+              32.032196625
+            ],
+            [
+              118.79581337,
+              32.029948015
+            ],
+            [
+              118.795167027,
+              32.028275944
+            ],
+            [
+              118.793602201,
+              32.027699368
+            ],
+            [
+              118.791288966,
+              32.015244271
+            ],
+            [
+              118.790608604,
+              32.012187901
+            ],
+            [
+              118.789349937,
+              32.009967648
+            ],
+            [
+              118.785437875,
+              32.009823494
+            ],
+            [
+              118.783736981,
+              32.012014932
+            ],
+            [
+              118.778260097,
+              32.013600832
+            ],
+            [
+              118.771218388,
+              32.015821041
+            ],
+            [
+              118.768769097,
+              32.015388557
+            ],
+            [
+              118.767476415,
+              32.015302065
+            ],
+            [
+              118.761285154,
+              32.01720507
+            ],
+            [
+              118.762952039,
+              32.021904657
+            ],
+            [
+              118.763870531,
+              32.027843673
+            ],
+            [
+              118.763666424,
+              32.028910351
+            ],
+            [
+              118.763870537,
+              32.033090449
+            ],
+            [
+              118.763122147,
+              32.036030823
+            ],
+            [
+              118.76247581,
+              32.039461138
+            ],
+            [
+              118.761761437,
+              32.041882461
+            ],
+            [
+              118.761183134,
+              32.043467817
+            ],
+            [
+              118.761353226,
+              32.044995494
+            ],
+            [
+              118.759924474,
+              32.045744919
+            ],
+            [
+              118.759448224,
+              32.046609626
+            ],
+            [
+              118.766932177,
+              32.053411646
+            ]
+          ]
+        ]
+      }
+    },
+    "mergedDisplay": {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.7841735,
+          32.0506985
+        ]
+      },
+      "properties": {
+        "sourceName": "南唐北门及北城墙考古地段",
+        "label": "南唐北门\n北城墙考古地段",
+        "labelMinZoom": 12,
+        "referenceUrl": "https://www.xwzf.gov.cn/xwqzfmhwzwapb/xwzx/bmdt/202604/t20260409_5820809.html",
+        "status": "北门文献地段与北城墙考古地段合并展示 · 非门基实测",
+        "note": "按用户要求，将原北门桥参照点与北城墙考古地段合并，展示位置采用既有鸡鹅巷北城墙考古地段坐标。北门身份依据市志办关于玄武桥、今北门桥的文献记载；北城墙发现依据玄武区政府2021年考古地段介绍。合并是地图展示整合，不表示发掘已确认此处就是北门门基，现有点仍为考古地段参照，非测绘坐标。北门文献来源：https://dfz.nanjing.gov.cn/gzdt/202404/t20240411_4206994.html",
+        "periodNames": {
+          "宋辽金西夏": "宋府城北门地段\n南唐北城墙考古地段",
+          "元": "元城北门地段\n南唐北城墙考古地段"
+        }
+      }
+    },
+    "point": [
+      118.7841735,
+      32.0506985
+    ],
+    "retiredDisplayId": "nanjing-nantang-north-wall-vicinity"
+  }
+}

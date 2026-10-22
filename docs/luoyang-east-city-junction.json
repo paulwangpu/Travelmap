@@ -1,0 +1,150 @@
+{
+  "checkedDate": "2026-10-21",
+  "featureId": "luoyang-plan-east-city",
+  "issue": "东城参考面西界误用考古图x=361宫区内部隔线，应为x=384含嘉仓城西界向南延线，导致西北角伸入玄武城东端与东夹城侧。",
+  "sourceUrl": "https://sites.lynu.edu.cn/hlwh/info/1023/1576.htm",
+  "referenceSource": "docs/suitang-luoyang-georeferencing.json；含嘉仓城南墙、西墙及皇城东墙参考线",
+  "before": {
+    "type": "Feature",
+    "properties": {
+      "research": true,
+      "early": true,
+      "city": "洛阳",
+      "family": "luoyang-plan-reference",
+      "period": "隋唐",
+      "sourceUrl": "https://www.chnmuseum.cn/fw/jyhdyy/202604/t20260416_279032.shtml",
+      "sourceTitle": "国博公开2014年考古报告测绘图；附故宫图九布局对照",
+      "referenceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+      "status": "考古报告复原图配准 · 图示参考，非实测边界",
+      "note": "依据国博公开考古报告图件及故宫图九可辨认的围合关系，沿用原有两点配准生成闭合布局参考面；断口与局部缺线按图示连接，原始开放参考线完整保留。宫城核心区不包括北侧园苑；大内仅表示图示内部布局。不是原始闭合OSM墙线、实测墙界、保护区或隋唐各期一致范围。",
+      "coordinateSystem": "WGS84",
+      "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+      "capitalSiteName": "洛阳",
+      "capitalSiteDisplayName": "隋唐洛阳城",
+      "luoyangPlanDetail": true,
+      "planReference": true,
+      "sourceId": "luoyang-plan-east-city",
+      "sourceName": "东城（图示参考）",
+      "label": "东城",
+      "detailKind": "宫城区布局参考",
+      "inferredBoundary": true,
+      "fillOpacity": 0.035,
+      "labelCoordinates": [
+        112.46750488,
+        34.68422649
+      ]
+    },
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            112.46203847,
+            34.68961494
+          ],
+          [
+            112.47118328,
+            34.69055887
+          ],
+          [
+            112.47298462,
+            34.67875056
+          ],
+          [
+            112.46381313,
+            34.67798157
+          ],
+          [
+            112.46203847,
+            34.68961494
+          ]
+        ]
+      ]
+    }
+  },
+  "after": {
+    "type": "Feature",
+    "properties": {
+      "research": true,
+      "early": true,
+      "city": "洛阳",
+      "family": "luoyang-plan-reference",
+      "period": "隋唐",
+      "sourceUrl": "https://www.chnmuseum.cn/fw/jyhdyy/202604/t20260416_279032.shtml",
+      "sourceTitle": "国博公开2014年考古报告测绘图；附故宫图九布局对照",
+      "referenceUrl": "https://www.dpm.org.cn/Uploads/File/2021/01/20/u6007f09329708.pdf#page=12",
+      "status": "考古报告复原图配准 · 图示参考，非实测边界",
+      "note": "依据国博公开考古报告图件及故宫图九可辨认的围合关系，沿用原有两点配准生成闭合布局参考面；断口与局部缺线按图示连接，原始开放参考线完整保留。宫城核心区不包括北侧园苑；大内仅表示图示内部布局。不是原始闭合OSM墙线、实测墙界、保护区或隋唐各期一致范围。 东城西界按含嘉仓城西墙向南延续，北接含嘉仓城南墙，西南接皇城东北角；已纠正误接宫区内部x=361分隔线的多余凸入。仍为图示参考，原始开放墙线不变。",
+      "coordinateSystem": "WGS84",
+      "capitalSiteKey": "ancient-site:洛阳:34.61970,112.45400",
+      "capitalSiteName": "洛阳",
+      "capitalSiteDisplayName": "隋唐洛阳城",
+      "luoyangPlanDetail": true,
+      "planReference": true,
+      "sourceId": "luoyang-plan-east-city",
+      "sourceName": "东城（图示参考）",
+      "label": "东城",
+      "detailKind": "宫城区布局参考",
+      "inferredBoundary": true,
+      "fillOpacity": 0.035,
+      "labelCoordinates": [
+        112.4687344,
+        34.68430898
+      ]
+    },
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            112.46448418,
+            34.68986739
+          ],
+          [
+            112.47118328,
+            34.69055887
+          ],
+          [
+            112.47298462,
+            34.67875056
+          ],
+          [
+            112.46628552,
+            34.67805908
+          ],
+          [
+            112.46448418,
+            34.68986739
+          ]
+        ]
+      ]
+    }
+  },
+  "correctedDiagramPixels": [
+    [
+      384,
+      169
+    ],
+    [
+      447,
+      169
+    ],
+    [
+      447,
+      304
+    ],
+    [
+      384,
+      304
+    ]
+  ],
+  "otherFeatureCount": 1010,
+  "otherFeaturesSha256": "ee6cb3a57232d543440ed36fa648b09095f164bfcc407b990b0ea6e350f1b1f5",
+  "afterSha256": "f34f2d34bd26ae814034c0eb1a6a80728be39913fbd13a7c8c455c1f1c2343f2",
+  "preservedSourceLines": [
+    "suitang-luoyang-survey-6",
+    "suitang-luoyang-survey-9",
+    "suitang-luoyang-survey-10",
+    "suitang-luoyang-survey-11"
+  ]
+}

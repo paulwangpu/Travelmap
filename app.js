@@ -12,13 +12,14 @@ const depthColors = {
 const storageKey = "travel-map-state-v1";
 const languageStorageKey = "travel-map-language";
 const mapControlsStorageKey = "travel-map-controls-collapsed";
+const navigationStorageKey = "travel-map-navigation-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "2.3.4";
+const appVersion = "2.3.5";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
-const chinaAncientCapitalTotal = 748;
+const chinaAncientCapitalTotal = 761;
 const worldHeritageCatalogTotal = 1248;
 const usNpsUnitTotal = 433;
 const dataCacheVersion = "20261001-gvp-reference";
@@ -170,6 +171,7 @@ let mapPathRedoStack = [];
 let mapPathBoxSelection = null;
 let mapPathBoxSelectionBound = false;
 let mapControlsCollapsed = localStorage.getItem(mapControlsStorageKey) === "1";
+let navigationCollapsed = localStorage.getItem(navigationStorageKey) === "1";
 let importManagerQuery = "";
 let importManagerSort = "newest";
 let manualCheckinPage = 0;
@@ -909,6 +911,7 @@ function normalizeMapOverlays(overlays = {}) {
     ancientCapitalQinHanWalls: overlays.ancientCapitalQinHanWalls !== false,
     ancientCapitalLiaoJinWalls: overlays.ancientCapitalLiaoJinWalls !== false,
     ancientCapitalYuanWalls: overlays.ancientCapitalYuanWalls !== false,
+    ancientCapitalModernWalls: overlays.ancientCapitalModernWalls !== false,
     ancientCapitalSouthernTangWalls: overlays.ancientCapitalSouthernTangWalls !== false,
     beijingCapitalEvolution: overlays.beijingCapitalEvolution !== false,
     beijingCapitalStage: ["yan","ji","youzhou","liao","jin","yuan","mingqing"].includes(overlays.beijingCapitalStage) ? overlays.beijingCapitalStage : 'all',
@@ -6554,6 +6557,26 @@ function syncImportGuideOpenState(force = false) {
   }, 0);
 }
 
+function renderNavigationVisibility() {
+  const shell=document.querySelector('.app-shell'),sidebar=$('#appNavigation'),button=$('#toggleNavigation');
+  if(!shell||!sidebar||!button)return;
+  shell.classList.toggle('navigation-collapsed',navigationCollapsed);
+  sidebar.hidden=navigationCollapsed;
+  button.setAttribute('aria-expanded',String(!navigationCollapsed));
+  const label=currentLanguage==='en'?(navigationCollapsed?'Show navigation':'Hide navigation'):(navigationCollapsed?'显示导航栏':'隐藏导航栏');
+  button.setAttribute('aria-label',label);button.title=label;
+  button.querySelector('span').textContent=navigationCollapsed?'☰':'‹';
+}
+
+function toggleNavigationVisibility() {
+  const focusInSidebar=$('#appNavigation')?.contains(document.activeElement);
+  navigationCollapsed=!navigationCollapsed;
+  localStorage.setItem(navigationStorageKey,navigationCollapsed?'1':'0');
+  renderNavigationVisibility();
+  if(navigationCollapsed&&focusInSidebar)$('#toggleNavigation').focus({preventScroll:true});
+  requestAnimationFrame(scheduleActiveMapResize);
+}
+
 function applyLanguage() {
   document.documentElement.lang = currentLanguage === "en" ? "en" : "zh-CN";
   document.title = t("appName");
@@ -6569,6 +6592,7 @@ function applyLanguage() {
     button.textContent = button.dataset.language === "en" ? "EN" : "中";
   });
   syncImportGuideOpenState();
+  renderNavigationVisibility();
   renderMapControls();
 }
 
@@ -7440,7 +7464,7 @@ function loadUsNpsBoundaries() {
 
 function loadChinaAncientCapitals() {
   if (chinaAncientCapitalsPromise) return chinaAncientCapitalsPromise;
-  chinaAncientCapitalsPromise = fetchJson("data/china-ancient-capitals.json?v=92")
+  chinaAncientCapitalsPromise = fetchJson("data/china-ancient-capitals.json?v=93")
     .then(async (base) => {
       try {
         const supplement = await fetchJson("data/western-regions-36.json?v=8");
@@ -11246,7 +11270,7 @@ function ancientCapitalBoundaryRelations(item) {
  const tombEnglish=typeof currentLanguage!=='undefined'&&currentLanguage==='en';
  const tombLinks=(item?.relatedTombs||[]).length?'<section class="capital-meta-line"><strong>'+(tombEnglish?'Related existing cemeteries':'关联既有皇陵条目')+'</strong><p>'+item.relatedTombs.map(t=>'<button type="button" class="popup-action" data-related-tomb="'+escapeHtml(t.id)+'">'+escapeHtml(tombEnglish?t.enName:t.name)+'</button>').join(' ')+'</p><small>'+(tombEnglish?'City and cemetery visits stay independent; regional reference points are not exact cemetery positions.':'城址与墓地独立打卡；区域参考点不等于墓地精确位置。')+'</small></section>':'';
  const added=typeof AncientCapitalWalls==='undefined'?[]:AncientCapitalWalls.relationsForCapital?.(item?.siteKey)||[];
- const relations=[...(item?.boundaryRelations||[]),...added].filter(r=>r.id!=='beijing-jin-buriedarea-2019');
+ const relations=(typeof AncientCapitalWalls==='undefined'?[...(item?.boundaryRelations||[]),...added]:(AncientCapitalWalls.reviewRelations?.([...(item?.boundaryRelations||[]),...added])||[...(item?.boundaryRelations||[]),...added])).filter(r=>r.id!=='beijing-jin-buriedarea-2019');
  if(!relations.length&&!item?.boundaryRelationNote)return item?.boundaryAudit?'<section class="capital-meta-line"><strong>对应城址范围</strong><p>'+escapeHtml(item.boundaryAudit.status)+'</p></section>'+tombLinks:tombLinks;
  const groups=new Map();for(const r of relations){let control=String(r.control||'').trim();const legacy=control.match(/^(.+?)代城墙$/);if(legacy)control='中国对应朝代：'+legacy[1];control=control.replace(/中国对应朝代：?传说/g,'中国对应朝代：夏以前');const key=[control,r.city,r.kind].filter(Boolean).join(' · ');if(!groups.has(key))groups.set(key,[]);const names=groups.get(key);if(r.name&&!names.includes(r.name))names.push(r.name);}
  return '<section class="capital-meta-line"><strong>对应城址范围</strong>'+[...groups].map(([key,names])=>'<p>'+escapeHtml(key)+'：'+escapeHtml(names.join('、'))+'</p>').join('')+'<p>'+escapeHtml(item.boundaryRelationNote||'在城墙范围中勾选对应朝代查看。宫城、都城及保护范围分别保留；城址参照点不一定是宫城中心。')+'</p></section>'+tombLinks;
@@ -11290,7 +11314,7 @@ function ancientCapitalResearchMaps(item) {
 }
 
 function ancientCapitalDetailRecords(capitalMeta) {
-  const related=(original,period)=>[...(original||[]).filter(r=>r.id!=='beijing-jin-buriedarea-2019'),...(typeof AncientCapitalWalls==='undefined'?[]:AncientCapitalWalls.relationsForCapital?.(capitalMeta?.siteKey)||[]).filter(r=>!period||r.period===period)];
+  const related=(original,period)=>{const rows=[...(original||[]),...(typeof AncientCapitalWalls==='undefined'?[]:AncientCapitalWalls.relationsForCapital?.(capitalMeta?.siteKey)||[]).filter(r=>!period||r.period===period)].filter(r=>r.id!=='beijing-jin-buriedarea-2019');return typeof AncientCapitalWalls==='undefined'?rows:(AncientCapitalWalls.reviewRelations?.(rows)||rows);};
   if (Array.isArray(capitalMeta?.records) && capitalMeta.records.length) {
     return capitalMeta.records.map((record) => ({
       siteReference: chinaAncientCapitals.recordItems?.find(item => item.sourceOrder === record.sourceOrder)?.siteReference,
@@ -16302,7 +16326,7 @@ function isMapPageActive() {
   return document.querySelector('[data-page="world"]')?.classList.contains("active");
 }
 
-const capitalWallSelectionKeys = ['ancientCapitalLegendaryWalls','ancientCapitalShangWalls','ancientCapitalZhouWalls','ancientCapitalQinHanWalls','ancientCapitalHanWeiWalls','ancientCapitalTangWalls','ancientCapitalSouthernTangWalls','ancientCapitalLiaoJinWalls','ancientCapitalYuanWalls','ancientCapitalMingWalls','ancientCapitalQingWalls'];
+const capitalWallSelectionKeys = ['ancientCapitalLegendaryWalls','ancientCapitalShangWalls','ancientCapitalZhouWalls','ancientCapitalQinHanWalls','ancientCapitalHanWeiWalls','ancientCapitalTangWalls','ancientCapitalSouthernTangWalls','ancientCapitalLiaoJinWalls','ancientCapitalYuanWalls','ancientCapitalMingWalls','ancientCapitalQingWalls','ancientCapitalModernWalls'];
 function updateCapitalWallSelection(key,checked) {
  const overlays=state.mapOverlays;
  if(key==='ancientCapitalWalls')capitalWallSelectionKeys.forEach(child=>{overlays[child]=checked;});
@@ -16323,8 +16347,9 @@ function renderAncientCapitalLegend() {
  const items=chinaAncientCapitals.items||[],keys=HistoricalPeriods.keys,available=keys.filter(key=>items.some(item=>HistoricalPeriods.capitalPeriods(item).includes(key))),selection=state.mapOverlays.ancientCapitalPeriods||{},open=el.querySelector("details")?.open!==false,wallOpen=el.querySelector(".capital-wall-section")?.open??(state.mapOverlays.ancientCapitalWallLegendOpen!==false),wallNotesOpen=el.querySelector(".capital-wall-notes")?.open===true;
  if(state.mapOverlays.ancientCapitalWallLegendOpen!==wallOpen){state.mapOverlays.ancientCapitalWallLegendOpen=wallOpen;saveUiStateSoon();}
  el.innerHTML='<strong>'+ (currentLanguage==="en"?"Ancient capitals":"古都")+'</strong><details class="great-wall-section" '+(open?'open':'')+'><summary><input type="checkbox" data-capital-all aria-label="全选古都朝代"><i class="wall-disclosure" aria-hidden="true"></i><span>朝代 · 全选</span></summary><div class="tomb-legend-options">'+keys.map(key=>'<label'+(!available.includes(key)?' title="暂无条目"':'')+'><input type="checkbox" data-capital-period="'+key+'" '+(!available.includes(key)?'disabled':selection[key]!==false?'checked':'')+'>'+HistoricalPeriods.legendIcon(HistoricalPeriods.capitalSvg('#fff'),HistoricalPeriods.colors[key])+'<span>'+(key==='传说'?(currentLanguage==='en'?'Legendary / Pre-Xia':'传说／夏以前'):key)+'</span></label>').join('')+'</div></details>';
- el.innerHTML+='<details class="great-wall-section capital-wall-section" '+(wallOpen?'open':'')+'><summary><input type="checkbox" data-capital-walls '+(state.mapOverlays.ancientCapitalWalls?'checked':'')+'><i class="wall-disclosure" aria-hidden="true"></i><span>'+(currentLanguage==="en"?'City wall extents':'城墙范围')+'</span></summary><div class="capital-wall-controls"><label><input type="checkbox" data-capital-research-family="ancientCapitalLegendaryWalls" '+(state.mapOverlays.ancientCapitalLegendaryWalls!==false?'checked':'')+'>'+(currentLanguage==='en'?'Legendary / Pre-Xia':'传说／夏以前')+'</label><label><input type="checkbox" data-capital-research-family="ancientCapitalShangWalls" '+(state.mapOverlays.ancientCapitalShangWalls!==false?'checked':'')+'>夏商</label><label><input type="checkbox" data-capital-research-family="ancientCapitalZhouWalls" '+(state.mapOverlays.ancientCapitalZhouWalls!==false?'checked':'')+'>周</label><label><input type="checkbox" data-capital-research-family="ancientCapitalQinHanWalls" '+(state.mapOverlays.ancientCapitalQinHanWalls!==false?'checked':'')+'>秦汉</label><label><input type="checkbox" data-capital-research-family="ancientCapitalHanWeiWalls" '+(state.mapOverlays.ancientCapitalHanWeiWalls!==false?'checked':'')+'>魏晋南北朝</label><label><input type="checkbox" data-capital-tang-walls '+(state.mapOverlays.ancientCapitalTangWalls!==false?'checked':'')+'>'+(currentLanguage==='en'?'Sui/Tang':'隋唐')+'</label><label><input type="checkbox" data-capital-research-family="ancientCapitalSouthernTangWalls" '+(state.mapOverlays.ancientCapitalSouthernTangWalls!==false?'checked':'')+'>五代十国</label><label><input type="checkbox" data-capital-research-family="ancientCapitalLiaoJinWalls" '+(state.mapOverlays.ancientCapitalLiaoJinWalls!==false?'checked':'')+'>宋辽金西夏</label><label><input type="checkbox" data-capital-research-family="ancientCapitalYuanWalls" '+(state.mapOverlays.ancientCapitalYuanWalls!==false?'checked':'')+'>元</label>'+[['明','ancientCapitalMingWalls','ancientCapitalMingWallYear',1537],['清','ancientCapitalQingWalls','ancientCapitalQingWallYear',1866]].map(([period,control,key,fallback])=>'<span class="capital-wall-year-group"><label><input type="checkbox" data-capital-research-family="'+control+'" '+(state.mapOverlays[control]!==false?'checked':'')+'>'+period+'</label><select data-capital-wall-year="'+key+'" aria-label="'+period+'代城墙年份">'+AncientCapitalWalls.years.filter(y=>period==='明'?y<1644:y>=1644).map(y=>'<option value="'+y+'" '+(y===(state.mapOverlays[key]||fallback)?'selected':'')+'>'+y+' 年</option>').join('')+'</select></span>').join('')+'<details class="capital-wall-notes" '+(wallNotesOpen?'open':'')+'><summary>'+(currentLanguage==='en'?'Notes':'说明')+'</summary><small>'+(currentLanguage==='en'?'Foreign remains use corresponding Chinese periods; Pre-Xia does not imply legendary foreign history. Mapped archaeological areas are not necessarily city walls. ':'国外遗迹按中国对应年代筛选；“传说／夏以前”不表示外国历史属于传说。遗址区不等于城墙范围。')+'明清：3356 条记录，按年份筛选。隋唐：唐幽州四至参考轮廓及现存寺院参照、长安城墙及坊里等；洛阳实测图城垣参考线、城门及保护展示构件，不受明清年份影响。秦汉：未央宫展示线、石渠阁、秦咸阳宫殿与保护区标绘，不代表完整城界。二里头：遗址标绘范围。东周王城：保护区划外缘参考线。新郑郑韩故城、洛阳汉魏、郑州商城：现存遗迹地图标绘。南京六朝、南唐：官方规划推测范围，近似配准。开封：周选项含魏大梁地望推定；五代旧城沿革参照与宋东京里城共用一个图件轮廓，不重复叠面；宋辽金西夏含北宋外城、里城和宫城图件参考。杭州吴越海塘、南宋德寿宫与府治，安阳殷墟宫庙、王陵及洹北商城，大同北魏明堂与辽金寺院，成都金沙与东华门多期遗存也分别接入。邺城在河北临漳，与安阳殷墟分开。北京：宋辽金选项含辽南京天宁寺塔现存建筑及金中都地下文物埋藏区参考范围；元选项含元末外郭城复原轮廓及现代城垣遗址公园展示范围，点击区分资料性质。放大后点击查看资料。</small></details></div></details>';
- const wallPeriods={ancientCapitalLegendaryWalls:'传说',ancientCapitalMingWalls:'明',ancientCapitalQingWalls:'清',ancientCapitalShangWalls:'夏商',ancientCapitalZhouWalls:'周',ancientCapitalQinHanWalls:'秦汉',ancientCapitalHanWeiWalls:'魏晋南北朝',ancientCapitalSouthernTangWalls:'五代十国',ancientCapitalLiaoJinWalls:'宋辽金西夏',ancientCapitalYuanWalls:'元'};
+ el.innerHTML+='<details class="great-wall-section capital-wall-section" '+(wallOpen?'open':'')+'><summary><input type="checkbox" data-capital-walls '+(state.mapOverlays.ancientCapitalWalls?'checked':'')+'><i class="wall-disclosure" aria-hidden="true"></i><span>'+(currentLanguage==="en"?'City wall extents':'城墙范围')+'</span></summary><div class="capital-wall-controls"><label><input type="checkbox" data-capital-research-family="ancientCapitalLegendaryWalls" '+(state.mapOverlays.ancientCapitalLegendaryWalls!==false?'checked':'')+'>'+(currentLanguage==='en'?'Legendary / Pre-Xia':'传说／夏以前')+'</label><label><input type="checkbox" data-capital-research-family="ancientCapitalShangWalls" '+(state.mapOverlays.ancientCapitalShangWalls!==false?'checked':'')+'>夏商</label><label><input type="checkbox" data-capital-research-family="ancientCapitalZhouWalls" '+(state.mapOverlays.ancientCapitalZhouWalls!==false?'checked':'')+'>周</label><label><input type="checkbox" data-capital-research-family="ancientCapitalQinHanWalls" '+(state.mapOverlays.ancientCapitalQinHanWalls!==false?'checked':'')+'>秦汉</label><label><input type="checkbox" data-capital-research-family="ancientCapitalHanWeiWalls" '+(state.mapOverlays.ancientCapitalHanWeiWalls!==false?'checked':'')+'>魏晋南北朝</label><label><input type="checkbox" data-capital-tang-walls '+(state.mapOverlays.ancientCapitalTangWalls!==false?'checked':'')+'>'+(currentLanguage==='en'?'Sui/Tang':'隋唐')+'</label><label><input type="checkbox" data-capital-research-family="ancientCapitalSouthernTangWalls" '+(state.mapOverlays.ancientCapitalSouthernTangWalls!==false?'checked':'')+'>五代十国</label><label><input type="checkbox" data-capital-research-family="ancientCapitalLiaoJinWalls" '+(state.mapOverlays.ancientCapitalLiaoJinWalls!==false?'checked':'')+'>宋辽金西夏</label><label><input type="checkbox" data-capital-research-family="ancientCapitalYuanWalls" '+(state.mapOverlays.ancientCapitalYuanWalls!==false?'checked':'')+'>元</label>'+[['明','ancientCapitalMingWalls','ancientCapitalMingWallYear',1537],['清','ancientCapitalQingWalls','ancientCapitalQingWallYear',1866]].map(([period,control,key,fallback])=>'<span class="capital-wall-year-group"><label><input type="checkbox" data-capital-research-family="'+control+'" '+(state.mapOverlays[control]!==false?'checked':'')+'>'+period+'</label><select data-capital-wall-year="'+key+'" aria-label="'+period+'代城墙年份">'+AncientCapitalWalls.years.filter(y=>period==='明'?y<1644:y>=1644).map(y=>'<option value="'+y+'" '+(y===(state.mapOverlays[key]||fallback)?'selected':'')+'>'+y+' 年</option>').join('')+'</select></span>').join('')+'<details class="capital-wall-notes" '+(wallNotesOpen?'open':'')+'><summary>'+(currentLanguage==='en'?'Notes':'说明')+'</summary><small>'+(currentLanguage==='en'?'Foreign remains use corresponding Chinese periods; Pre-Xia does not imply legendary foreign history. Mapped archaeological areas are not necessarily city walls. ':'国外遗迹按中国对应年代筛选；“传说／夏以前”不表示外国历史属于传说。遗址区不等于城墙范围。')+'明清：3356 条记录，按年份筛选。隋唐：唐幽州四至参考轮廓及现存寺院参照、长安城墙及坊里等；洛阳实测图城垣参考线、城门及保护展示构件，不受明清年份影响。秦汉：未央宫展示线、石渠阁、秦咸阳宫殿与保护区标绘，不代表完整城界。二里头：遗址标绘范围。东周王城：保护区划外缘参考线。新郑郑韩故城、洛阳汉魏、郑州商城：现存遗迹地图标绘。南京：现存明城墙、宫门采用原始OSM标绘；宫城和皇城主体为遗址约束复原参考。六朝、南唐原先错位的全域推测面已撤下，保留实际遗址展示地点，完整城界待核。开封：周选项含魏大梁地望推定；五代旧城沿革参照与宋东京里城共用一个图件轮廓，不重复叠面；宋辽金西夏含北宋外城、里城和宫城图件参考。杭州吴越海塘、南宋德寿宫与府治，安阳殷墟宫庙、王陵及洹北商城，大同北魏明堂与辽金寺院，成都金沙与东华门多期遗存也分别接入。邺城在河北临漳，与安阳殷墟分开。北京：宋辽金选项含辽南京天宁寺塔现存建筑及金中都地下文物埋藏区参考范围；元选项含元末外郭城复原轮廓及现代城垣遗址公园展示范围，点击区分资料性质。放大后点击查看资料。</small></details></div></details>';
+ el.querySelector('.capital-wall-controls .capital-wall-notes').insertAdjacentHTML('beforebegin','<label><input type="checkbox" data-capital-research-family="ancientCapitalModernWalls" '+(state.mapOverlays.ancientCapitalModernWalls!==false?'checked':'')+'>'+(currentLanguage==='en'?'Modern':'近现代')+'</label>');
+ const wallPeriods={ancientCapitalLegendaryWalls:'传说',ancientCapitalMingWalls:'明',ancientCapitalQingWalls:'清',ancientCapitalShangWalls:'夏商',ancientCapitalZhouWalls:'周',ancientCapitalQinHanWalls:'秦汉',ancientCapitalHanWeiWalls:'魏晋南北朝',ancientCapitalSouthernTangWalls:'五代十国',ancientCapitalLiaoJinWalls:'宋辽金西夏',ancientCapitalYuanWalls:'元',ancientCapitalModernWalls:'近现代'};
  el.querySelectorAll('.capital-wall-controls label').forEach(label=>{const input=label.querySelector('input'),period=input.hasAttribute('data-capital-tang-walls')?'隋唐':input.hasAttribute('data-capital-mingqing-walls')?((state.mapOverlays.ancientCapitalWallYear||1866)<1644?'明':'清'):wallPeriods[input.dataset.capitalResearchFamily];if(!period)return;label.style.setProperty('--wall-period-color',HistoricalPeriods.colors[period]);input.insertAdjacentHTML('afterend','<i class="capital-wall-color" aria-hidden="true"></i>');});
  const wallAll=el.querySelector('[data-capital-walls]'),wallCount=state.mapOverlays.ancientCapitalWalls?capitalWallSelectionKeys.filter(key=>state.mapOverlays[key]!==false).length:0;wallAll.checked=wallCount===capitalWallSelectionKeys.length;wallAll.indeterminate=wallCount>0&&wallCount<capitalWallSelectionKeys.length;
  const all=el.querySelector('[data-capital-all]'),count=available.filter(key=>selection[key]!==false).length;all.checked=available.length>0&&count===available.length;all.indeterminate=count>0&&count<available.length;all.disabled=!available.length;
@@ -17482,6 +17507,7 @@ $("#refreshBoundaries")?.addEventListener("click", () => {
   });
   showToast("正在重新加载边界数据");
 });
+$("#toggleNavigation")?.addEventListener("click", toggleNavigationVisibility);
 document.querySelectorAll(".nav a").forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
@@ -17527,7 +17553,7 @@ if ("serviceWorker" in navigator && location.protocol !== "file:") {
     });
   });
   window.addEventListener("load", () => {
-navigator.serviceWorker.register("./sw.js?v=908", { updateViaCache: "none" })
+navigator.serviceWorker.register("./sw.js?v=946", { updateViaCache: "none" })
       .then((registration) => registration.update())
       .catch((error) => console.warn("Service Worker registration failed", error));
   });

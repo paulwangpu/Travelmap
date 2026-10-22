@@ -1,0 +1,4847 @@
+{
+  "date": "2026-10-22",
+  "beforeCount": 41,
+  "beforeFeatures": [
+    {
+      "sourceId": "nanjing-osm-ming-citywall-lines",
+      "sha256": "e6b424edcc2836f6acd36d9480c88a963bdaa7fc24331a9b97762fced2d2e3dd"
+    },
+    {
+      "sourceId": "nanjing-osm-ming-wall-bodies",
+      "sha256": "b17beaf5b5fce082ac14b88ade2d3677f14b4eb6cf95b8870cccd5eea5c842da"
+    },
+    {
+      "sourceId": "nanjing-osm-relation-20427375",
+      "sha256": "c368715d3da906a58c1ec396e83f6838f65b5a9ff0c2c2c51b0ff79b54495657"
+    },
+    {
+      "sourceId": "nanjing-osm-way-446638898",
+      "sha256": "fad43647de779c8ac0af944f4e2708808513ffc74816f644aba00a52744e5cc2"
+    },
+    {
+      "sourceId": "nanjing-osm-way-791233540",
+      "sha256": "274973f5ae8eff386585f1ae3a106ce12564c7b2b0f581da2ef0040da23243ca"
+    },
+    {
+      "sourceId": "nanjing-osm-way-319997028",
+      "sha256": "173d3ac8725848e139415d672da23e307009c5fc67b5e8eb53d5b278592e65a4"
+    },
+    {
+      "sourceId": "nanjing-osm-way-625734601",
+      "sha256": "0bfe7a77bca0171d4fd6410a87f10004d1615c66d1b0ec39b6f32aac3fce1ec8"
+    },
+    {
+      "sourceId": "nanjing-osm-way-461035550",
+      "sha256": "e02b0c453eed3739538693c5aa8ff80bdc9953ea1fdf9e2a3c977760774c0c3c"
+    },
+    {
+      "sourceId": "nanjing-osm-relation-11308636",
+      "sha256": "8f92f2fd985ff537ca30df01f9c9014d0517caa80f91414e62822ad9d127cb3b"
+    },
+    {
+      "sourceId": "nanjing-archaeology-display-1061577687",
+      "sha256": "8929a2458a5cfbee0cb494a082838454d466a526caabccc320dfaf7030d9736d"
+    },
+    {
+      "sourceId": "nanjing-archaeology-display-94327966",
+      "sha256": "792f05b4e3864d06ef2c86fc52ccf01a15d2cc4d62f3d8d052d478f16c60c3e7"
+    },
+    {
+      "sourceId": "nanjing-plan-detail-4",
+      "sha256": "0d759fa2154549968d01c0af78bd9d7eddc94a88a12d8f1ed1ae64912eae3fd2"
+    },
+    {
+      "sourceId": "nanjing-plan-detail-5",
+      "sha256": "d3b13bdd3620e11b5a31481183c67c733e647e3ce3613873762fdc9d724a9b32"
+    },
+    {
+      "sourceId": "nanjing-water-way-88806258",
+      "sha256": "7f0c4099eb09ce1d55c12263beff47ba2218db62223752ac8a1943561e96d6b7"
+    },
+    {
+      "sourceId": "nanjing-water-way-697970987",
+      "sha256": "9400849364ae180787021ffe3bf529432498c8be7ba706c4af548d35269d6edd"
+    },
+    {
+      "sourceId": "nanjing-osm-node-5907900964",
+      "sha256": "599a06ac039df8835bd205d8f2e33ad39558243a647de15ace91b5237f619572"
+    },
+    {
+      "sourceId": "nanjing-gate-shence-location",
+      "sha256": "6cd572cf40502e315b495d1f7b6c7e98aab7a837089c4decbbf60642b32ca0b1"
+    },
+    {
+      "sourceId": "nanjing-osm-node-5833639986",
+      "sha256": "8b8f7c52debbad93b11a1132318d3f23a7030db663f09da29f6829404069803a"
+    },
+    {
+      "sourceId": "nanjing-osm-way-859591128",
+      "sha256": "d7cf57334db6ecc469806e97a2b06537ef15edf5bf5e1774adff3070c3b1bd93"
+    },
+    {
+      "sourceId": "nanjing-osm-node-5335246224",
+      "sha256": "65c9d89b3d8bcbde93fe243bc8d39bb0f148095a7957aff27ac9362dd3fde197"
+    },
+    {
+      "sourceId": "nanjing-stone-survey-wall-directions",
+      "sha256": "3bc6dda0b61a15325f2fc6d678b93ddd3afa318880f8c70b416649c2de1373d4"
+    },
+    {
+      "sourceId": "nanjing-stone-tg1-reference",
+      "sha256": "b8a1eecf61fadc8d5fc3b0fee746f431cd027f8272780bd26d0b7157a2264bd1"
+    },
+    {
+      "sourceId": "nanjing-jiankang-dasimamen-reference",
+      "sha256": "319460f65746a8e37e0e72d3a0c1306ad9e086961f025261e59d82f902f31b03"
+    },
+    {
+      "sourceId": "nanjing-jiankang-xuanyangmen-reference",
+      "sha256": "ff4f75e24bad37ade11cc3cabebdfc9bb092f87bc92e99242536bea8a380b07e"
+    },
+    {
+      "sourceId": "nanjing-nantang-east-north-moat",
+      "sha256": "6636590e1cfc9be123d7a553be4a64f9ebc750f23567d61df12375ddc3d9776b"
+    },
+    {
+      "sourceId": "nanjing-nantang-palace-moat-reference",
+      "sha256": "1a28ba0c761e60f12131734d5d298c2be441deac8c874d64f9dc7323fc6f66b5"
+    },
+    {
+      "sourceId": "nanjing-nantang-north-gate-reference",
+      "sha256": "08a77661b45dd79de06cca55eb48eb116d710bbd2d63a65bce59abde493eb537"
+    },
+    {
+      "sourceId": "nanjing-nantang-east-gate-reference",
+      "sha256": "25c299747d94808a4d3eeccc2ddc68a06f6551822559830ef58fdeb54b20ee14"
+    },
+    {
+      "sourceId": "nanjing-nantang-south-gate-reference",
+      "sha256": "9c5d53691cd4b5249be5ae784742af68e5fcac78dc62f2327a9dfc30577cf985"
+    },
+    {
+      "sourceId": "nanjing-nantang-west-gate-reference",
+      "sha256": "99ca73c8a36f1c765c987880492b0d3a9e82043564cdc2bb632bd503c7ca7d5b"
+    },
+    {
+      "sourceId": "nanjing-nantang-palace-south-gate-reference",
+      "sha256": "400008843a2acb39dfe1cf73e8b9b50bb67a771683bd2509543593d905f01ba1"
+    },
+    {
+      "sourceId": "nanjing-nantang-north-wall-vicinity",
+      "sha256": "761a98b5aac1b9da1e634fff3f10b0ec305ea7ec69772ab3d23b64e9a29b2fbc"
+    },
+    {
+      "sourceId": "nanjing-qing-fengrunmen",
+      "sha256": "fb4a1e8565b6a7b5db0a2048a8950df910f04221463377fdb2a77c10cefaaa7c"
+    },
+    {
+      "sourceId": "nanjing-presidential-way-62353727",
+      "sha256": "7b27004dfee09b827a9dce604615abfe4559fb2d3d3a29d9bfb6314b22e2e8c5"
+    },
+    {
+      "sourceId": "nanjing-presidential-way-321096461",
+      "sha256": "6be804229c45465da0af1f932e5e6e22e33b2854283a964ff7bf7f833e05e164"
+    },
+    {
+      "sourceId": "nanjing-presidential-way-625069539",
+      "sha256": "3008353b064fa3b0725dd9251ad4813c976dc529ff0feb93ae29a55d8a0fdffa"
+    },
+    {
+      "sourceId": "nanjing-presidential-way-321096452",
+      "sha256": "9c8d30dbb1c809c546e5ad542cafd8cd5a4929197739df8feb07b4ceacb9e66b"
+    },
+    {
+      "sourceId": "nanjing-ming-outer-roadbase-reference",
+      "sha256": "2e854113ae32cf7e5d9d26896adf107cafcad720c1d43fdf2b2f1078fdf839e2"
+    },
+    {
+      "sourceId": "nanjing-ming-outer-xianhe-gate",
+      "sha256": "cc55f99ac9e8160043672c53b0f36ecc1b815c468c14d1892639c17b378611dd"
+    },
+    {
+      "sourceId": "nanjing-ming-outer-yaofang-reference",
+      "sha256": "bf0c2fff708d41f75078e37a0c238105372f94ab5cf28ab1d3a591d419e13e7d"
+    },
+    {
+      "sourceId": "nanjing-ming-outer-cangbo-reference",
+      "sha256": "237d715a1d7894da84e1d8b7f376648e59b214ccda6950be49d7239dc4cb360a"
+    }
+  ],
+  "waterCorrections": {
+    "nanjing-water-way-697970987": {
+      "originalSha256": "9400849364ae180787021ffe3bf529432498c8be7ba706c4af548d35269d6edd",
+      "rawWays": [
+        {
+          "id": 88806179,
+          "tags": {
+            "boat": "no",
+            "name": "明御河",
+            "waterway": "river"
+          },
+          "nodes": [
+            "10023808118",
+            "10023808117",
+            "1030573059",
+            "1030573053",
+            "1030573145",
+            "1030573111",
+            "1030573116",
+            "1030573101",
+            "13661769417"
+          ],
+          "coordinates": [
+            [
+              118.7957923,
+              32.0329635
+            ],
+            [
+              118.7970119,
+              32.0327547
+            ],
+            [
+              118.7973978,
+              32.0326911
+            ],
+            [
+              118.8014104,
+              32.0316542
+            ],
+            [
+              118.8023653,
+              32.0315723
+            ],
+            [
+              118.8027837,
+              32.0315996
+            ],
+            [
+              118.803878,
+              32.0319089
+            ],
+            [
+              118.8049616,
+              32.0316997
+            ],
+            [
+              118.8051127,
+              32.0316101
+            ]
+          ]
+        },
+        {
+          "id": 1490584193,
+          "tags": {
+            "boat": "no",
+            "layer": "-1",
+            "name": "明御河",
+            "tunnel": "culvert",
+            "waterway": "river"
+          },
+          "nodes": [
+            "13661769417",
+            "10023646016"
+          ],
+          "coordinates": [
+            [
+              118.8051127,
+              32.0316101
+            ],
+            [
+              118.8052352,
+              32.0315374
+            ]
+          ]
+        },
+        {
+          "id": 1490584192,
+          "tags": {
+            "boat": "no",
+            "name": "明御河",
+            "waterway": "river"
+          },
+          "nodes": [
+            "10023646016",
+            "1030573133",
+            "10023646015",
+            "1030573055",
+            "10023646014",
+            "1030573113",
+            "1030573097",
+            "1030573137",
+            "1030573122",
+            "1030573075",
+            "1030573081",
+            "1030573160"
+          ],
+          "coordinates": [
+            [
+              118.8052352,
+              32.0315374
+            ],
+            [
+              118.8054134,
+              32.0313514
+            ],
+            [
+              118.8056492,
+              32.0310465
+            ],
+            [
+              118.8058077,
+              32.0309409
+            ],
+            [
+              118.8060019,
+              32.0308701
+            ],
+            [
+              118.8062598,
+              32.0308361
+            ],
+            [
+              118.8093277,
+              32.0307087
+            ],
+            [
+              118.8106152,
+              32.0306451
+            ],
+            [
+              118.8109049,
+              32.0307633
+            ],
+            [
+              118.8110551,
+              32.0308724
+            ],
+            [
+              118.8111731,
+              32.031118
+            ],
+            [
+              118.8113839,
+              32.0336638
+            ]
+          ]
+        },
+        {
+          "id": 697970986,
+          "tags": {
+            "boat": "no",
+            "layer": "-1",
+            "name": "明御河",
+            "tunnel": "culvert",
+            "waterway": "river"
+          },
+          "nodes": [
+            "1030573160",
+            "6554954227"
+          ],
+          "coordinates": [
+            [
+              118.8113839,
+              32.0336638
+            ],
+            [
+              118.8114245,
+              32.0340232
+            ]
+          ]
+        },
+        {
+          "id": 697970987,
+          "tags": {
+            "boat": "no",
+            "name": "明御河",
+            "name:zh": "明御河",
+            "name:zh-Hans": "明御河",
+            "name:zh-Hant": "明御河",
+            "waterway": "river"
+          },
+          "nodes": [
+            "6554954227",
+            "1030573148",
+            "1030573120",
+            "1030573088",
+            "1030573161",
+            "1030573094",
+            "1030573079",
+            "1030573072",
+            "13908997119",
+            "7412638952",
+            "7412638953",
+            "1030574634"
+          ],
+          "coordinates": [
+            [
+              118.8114245,
+              32.0340232
+            ],
+            [
+              118.8114545,
+              32.0343137
+            ],
+            [
+              118.8094243,
+              32.0344828
+            ],
+            [
+              118.8092312,
+              32.0347011
+            ],
+            [
+              118.8092097,
+              32.0352014
+            ],
+            [
+              118.8097032,
+              32.038903
+            ],
+            [
+              118.8097998,
+              32.0404218
+            ],
+            [
+              118.8096281,
+              32.0406673
+            ],
+            [
+              118.8094488,
+              32.0408039
+            ],
+            [
+              118.8089829,
+              32.0409801
+            ],
+            [
+              118.8080316,
+              32.0412613
+            ],
+            [
+              118.8079764,
+              32.0420861
+            ]
+          ]
+        },
+        {
+          "id": 88806180,
+          "tags": {
+            "waterway": "river"
+          },
+          "nodes": [
+            "1030573148",
+            "6554954229"
+          ],
+          "coordinates": [
+            [
+              118.8114545,
+              32.0343137
+            ],
+            [
+              118.8115075,
+              32.0343115
+            ]
+          ]
+        },
+        {
+          "id": 697970989,
+          "tags": {
+            "layer": "-1",
+            "tunnel": "culvert",
+            "waterway": "river"
+          },
+          "nodes": [
+            "6554954229",
+            "6554954228"
+          ],
+          "coordinates": [
+            [
+              118.8115075,
+              32.0343115
+            ],
+            [
+              118.8119107,
+              32.0342949
+            ]
+          ]
+        },
+        {
+          "id": 697970988,
+          "tags": {
+            "waterway": "river"
+          },
+          "nodes": [
+            "6554954228",
+            "1030573099",
+            "1030573057",
+            "1030573136",
+            "1030573077",
+            "1030573158",
+            "7242008632",
+            "7242008635"
+          ],
+          "coordinates": [
+            [
+              118.8119107,
+              32.0342949
+            ],
+            [
+              118.8122782,
+              32.0342646
+            ],
+            [
+              118.8130023,
+              32.0342225
+            ],
+            [
+              118.8146814,
+              32.0340372
+            ],
+            [
+              118.8156189,
+              32.0339337
+            ],
+            [
+              118.8168486,
+              32.0338462
+            ],
+            [
+              118.8178519,
+              32.0338017
+            ],
+            [
+              118.8179619,
+              32.0337968
+            ]
+          ]
+        },
+        {
+          "id": 776186820,
+          "tags": {
+            "layer": "-1",
+            "tunnel": "culvert",
+            "waterway": "river"
+          },
+          "nodes": [
+            "7242008635",
+            "7242008634"
+          ],
+          "coordinates": [
+            [
+              118.8179619,
+              32.0337968
+            ],
+            [
+              118.8180894,
+              32.0337912
+            ]
+          ]
+        },
+        {
+          "id": 776186819,
+          "tags": {
+            "waterway": "river"
+          },
+          "nodes": [
+            "7242008634",
+            "7242008633",
+            "1030573114"
+          ],
+          "coordinates": [
+            [
+              118.8180894,
+              32.0337912
+            ],
+            [
+              118.8182214,
+              32.0337853
+            ],
+            [
+              118.8203355,
+              32.0336916
+            ]
+          ]
+        }
+      ]
+    },
+    "nanjing-water-way-88806258": {
+      "originalSha256": "7f0c4099eb09ce1d55c12263beff47ba2218db62223752ac8a1943561e96d6b7",
+      "rawWays": [
+        {
+          "id": 88806258,
+          "tags": {
+            "name": "清溪河",
+            "name:zh": "清溪河",
+            "name:zh-Hans": "清溪河",
+            "name:zh-Hant": "清溪河",
+            "waterway": "river"
+          },
+          "nodes": [
+            "1030574634",
+            "1030574633",
+            "1030574640",
+            "1030574632",
+            "1030574635",
+            "1030574636",
+            "1030574629",
+            "1030574637",
+            "1030574639",
+            "1030574631",
+            "1030574630"
+          ],
+          "coordinates": [
+            [
+              118.8079764,
+              32.0420861
+            ],
+            [
+              118.8082661,
+              32.0442141
+            ],
+            [
+              118.8085558,
+              32.0473879
+            ],
+            [
+              118.8113126,
+              32.0472152
+            ],
+            [
+              118.8129541,
+              32.0471333
+            ],
+            [
+              118.8142523,
+              32.0470242
+            ],
+            [
+              118.8172027,
+              32.0466241
+            ],
+            [
+              118.8176104,
+              32.0465513
+            ],
+            [
+              118.817664,
+              32.0463603
+            ],
+            [
+              118.8175997,
+              32.0453964
+            ],
+            [
+              118.8171598,
+              32.0415313
+            ]
+          ]
+        },
+        {
+          "id": 88806178,
+          "tags": {
+            "waterway": "river"
+          },
+          "nodes": [
+            "8985309493",
+            "1030573058",
+            "1030573118",
+            "1030573157",
+            "1030573135",
+            "1030573069",
+            "1030573134"
+          ],
+          "coordinates": [
+            [
+              118.8160403,
+              32.037648
+            ],
+            [
+              118.8159983,
+              32.0379343
+            ],
+            [
+              118.8158884,
+              32.0380799
+            ],
+            [
+              118.8157824,
+              32.0382823
+            ],
+            [
+              118.8158401,
+              32.0387029
+            ],
+            [
+              118.8161513,
+              32.0387393
+            ],
+            [
+              118.8163511,
+              32.0407754
+            ]
+          ]
+        },
+        {
+          "id": 970855301,
+          "tags": {
+            "layer": "-1",
+            "tunnel": "culvert",
+            "waterway": "river"
+          },
+          "nodes": [
+            "1030573096",
+            "8985309493"
+          ],
+          "coordinates": [
+            [
+              118.8160386,
+              32.0375626
+            ],
+            [
+              118.8160403,
+              32.037648
+            ]
+          ]
+        },
+        {
+          "id": 970855302,
+          "tags": {
+            "waterway": "river"
+          },
+          "nodes": [
+            "8985309497",
+            "1030573096"
+          ],
+          "coordinates": [
+            [
+              118.8159907,
+              32.0365521
+            ],
+            [
+              118.8160386,
+              32.0375626
+            ]
+          ]
+        },
+        {
+          "id": 970855305,
+          "tags": {
+            "layer": "-1",
+            "tunnel": "culvert",
+            "waterway": "river"
+          },
+          "nodes": [
+            "8985309496",
+            "8985309497"
+          ],
+          "coordinates": [
+            [
+              118.8159867,
+              32.0364521
+            ],
+            [
+              118.8159907,
+              32.0365521
+            ]
+          ]
+        },
+        {
+          "id": 970855306,
+          "tags": {
+            "waterway": "river"
+          },
+          "nodes": [
+            "8985309495",
+            "1030573159",
+            "1030573163",
+            "1030573080",
+            "8985309496"
+          ],
+          "coordinates": [
+            [
+              118.8156621,
+              32.0352879
+            ],
+            [
+              118.8156685,
+              32.0358676
+            ],
+            [
+              118.815757,
+              32.036054
+            ],
+            [
+              118.8159689,
+              32.0361563
+            ],
+            [
+              118.8159867,
+              32.0364521
+            ]
+          ]
+        },
+        {
+          "id": 970855303,
+          "tags": {
+            "layer": "-1",
+            "tunnel": "culvert",
+            "waterway": "river"
+          },
+          "nodes": [
+            "8985309494",
+            "8985309495"
+          ],
+          "coordinates": [
+            [
+              118.8156594,
+              32.0351014
+            ],
+            [
+              118.8156621,
+              32.0352879
+            ]
+          ]
+        },
+        {
+          "id": 970855304,
+          "tags": {
+            "waterway": "river"
+          },
+          "nodes": [
+            "1030573077",
+            "1030573090",
+            "8985309494"
+          ],
+          "coordinates": [
+            [
+              118.8156189,
+              32.0339337
+            ],
+            [
+              118.815635,
+              32.0345272
+            ],
+            [
+              118.8156594,
+              32.0351014
+            ]
+          ]
+        }
+      ]
+    },
+    "nanjing-nantang-palace-moat-reference": {
+      "originalSha256": "1a28ba0c761e60f12131734d5d298c2be441deac8c874d64f9dc7323fc6f66b5",
+      "rawWays": [
+        {
+          "id": 62381498,
+          "tags": {
+            "name": "内秦淮河中段（运渎）",
+            "name:zh": "内秦淮河中段（运渎）",
+            "name:zh-Hans": "内秦淮河中段（运渎）",
+            "name:zh-Hant": "內秦淮河中段（運瀆）",
+            "waterway": "river"
+          },
+          "nodes": [
+            "13610761021",
+            "779165935",
+            "779165936",
+            "4624563232",
+            "779165937",
+            "4438809103",
+            "4438809104",
+            "4438809105",
+            "10020275427",
+            "1039201381",
+            "10020275426",
+            "10020275425",
+            "4438809102",
+            "10020275428",
+            "779165938",
+            "1039201357",
+            "1039201310",
+            "4438809106",
+            "9523919174"
+          ],
+          "coordinates": [
+            [
+              118.7785631,
+              32.0313951
+            ],
+            [
+              118.776646,
+              32.0319862
+            ],
+            [
+              118.7741339,
+              32.0326902
+            ],
+            [
+              118.7728039,
+              32.0331867
+            ],
+            [
+              118.7712618,
+              32.0337625
+            ],
+            [
+              118.7707307,
+              32.0340601
+            ],
+            [
+              118.7702149,
+              32.034466
+            ],
+            [
+              118.7697896,
+              32.0346828
+            ],
+            [
+              118.7694984,
+              32.0348026
+            ],
+            [
+              118.7691698,
+              32.0349328
+            ],
+            [
+              118.76891,
+              32.0350766
+            ],
+            [
+              118.7687037,
+              32.0352136
+            ],
+            [
+              118.7685105,
+              32.0354022
+            ],
+            [
+              118.7682421,
+              32.0357176
+            ],
+            [
+              118.7677944,
+              32.0364257
+            ],
+            [
+              118.7676826,
+              32.0365474
+            ],
+            [
+              118.7668571,
+              32.0370814
+            ],
+            [
+              118.7662033,
+              32.0373109
+            ],
+            [
+              118.7656863,
+              32.0374511
+            ]
+          ]
+        },
+        {
+          "id": 1484425970,
+          "tags": {
+            "layer": "-1",
+            "name": "内秦淮河中段（运渎）",
+            "name:zh": "内秦淮河中段（运渎）",
+            "name:zh-Hans": "内秦淮河中段（运渎）",
+            "name:zh-Hant": "內秦淮河中段（運瀆）",
+            "tunnel": "yes",
+            "waterway": "river"
+          },
+          "nodes": [
+            "779165934",
+            "13610761021"
+          ],
+          "coordinates": [
+            [
+              118.7790236,
+              32.0312495
+            ],
+            [
+              118.7785631,
+              32.0313951
+            ]
+          ]
+        },
+        {
+          "id": 1484425971,
+          "tags": {
+            "name": "内秦淮河中段（运渎）",
+            "name:zh": "内秦淮河中段（运渎）",
+            "name:zh-Hans": "内秦淮河中段（运渎）",
+            "name:zh-Hant": "內秦淮河中段（運瀆）",
+            "waterway": "river"
+          },
+          "nodes": [
+            "779165917",
+            "779165930",
+            "1095950172",
+            "13899007011",
+            "779165931",
+            "779165932",
+            "1085634363",
+            "779165933",
+            "779165934"
+          ],
+          "coordinates": [
+            [
+              118.789444,
+              32.0247405
+            ],
+            [
+              118.7892132,
+              32.0253571
+            ],
+            [
+              118.7888715,
+              32.0260474
+            ],
+            [
+              118.7880653,
+              32.0265664
+            ],
+            [
+              118.7870433,
+              32.0272244
+            ],
+            [
+              118.7839361,
+              32.0298586
+            ],
+            [
+              118.7833987,
+              32.0302007
+            ],
+            [
+              118.7822663,
+              32.0304222
+            ],
+            [
+              118.7790236,
+              32.0312495
+            ]
+          ]
+        },
+        {
+          "id": 1033780956,
+          "tags": {
+            "layer": "-1",
+            "name": "内秦淮河中段(运渎)",
+            "tunnel": "culvert",
+            "waterway": "river"
+          },
+          "nodes": [
+            "9523919174",
+            "9523919173"
+          ],
+          "coordinates": [
+            [
+              118.7656863,
+              32.0374511
+            ],
+            [
+              118.7655644,
+              32.0374841
+            ]
+          ]
+        },
+        {
+          "id": 1033780955,
+          "tags": {
+            "name": "内秦淮河中段(运渎)",
+            "waterway": "river"
+          },
+          "nodes": [
+            "9523919173",
+            "1039201334",
+            "9523919172"
+          ],
+          "coordinates": [
+            [
+              118.7655644,
+              32.0374841
+            ],
+            [
+              118.764721,
+              32.0377128
+            ],
+            [
+              118.7644782,
+              32.0377933
+            ]
+          ]
+        },
+        {
+          "id": 1033780954,
+          "tags": {
+            "layer": "-1",
+            "name": "内秦淮河中段(运渎)",
+            "tunnel": "culvert",
+            "waterway": "river"
+          },
+          "nodes": [
+            "9523919172",
+            "9523919171"
+          ],
+          "coordinates": [
+            [
+              118.7644782,
+              32.0377933
+            ],
+            [
+              118.7630037,
+              32.0381198
+            ]
+          ]
+        },
+        {
+          "id": 1033780953,
+          "tags": {
+            "name": "内秦淮河中段(运渎)",
+            "waterway": "river"
+          },
+          "nodes": [
+            "9523919171",
+            "2001550771",
+            "779165885"
+          ],
+          "coordinates": [
+            [
+              118.7630037,
+              32.0381198
+            ],
+            [
+              118.7628042,
+              32.0381894
+            ],
+            [
+              118.7625353,
+              32.0382694
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "newFeatures": [
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-nantang-buried-north-moat",
+        "sourceName": "南唐北濠西段已埋地段（推测示意）",
+        "label": "北濠已埋地段\n（推测）",
+        "period": "五代十国",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingEarlyCompletion": true,
+        "inferredBoundary": true,
+        "labelMinZoom": 15,
+        "sourceUrl": "./sources/nanjing.html#early-completion",
+        "referenceUrl": "https://ghj.nanjing.gov.cn/ghbz/ztgh/202504/P020250421305043260549.pdf",
+        "sourceTitle": "南京城防、水系与早期城址复核",
+        "status": "已埋北濠通道研究示意 · 非现存河道／非实测古河线",
+        "fillOpacity": 0.035,
+        "lineOpacity": 0.6,
+        "periods": [
+          "五代十国",
+          "宋辽金西夏",
+          "元"
+        ],
+        "waterFeature": true,
+        "labelCoordinates": [
+          118.7814,
+          32.05108
+        ],
+        "note": "南京历史文化名城保护规划明确洪武北路至中山路段原护城河已掩埋。本线只串联现存北濠西端、北门桥附近与中山路所指地段，表达大致通道；中间折点不是测量点，古河弯曲与宽度待考，不标为现存水道，也不据此推导城墙或完整城界。"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7855439,
+            32.0509544
+          ],
+          [
+            118.7824,
+            32.051
+          ],
+          [
+            118.77935,
+            32.05125
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-jiankang-southern-capital-study",
+        "sourceName": "建康都城（南朝研究范围）",
+        "label": "建康都城\n（南朝推测范围）",
+        "period": "魏晋南北朝",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingEarlyCompletion": true,
+        "inferredBoundary": true,
+        "labelMinZoom": 12,
+        "sourceUrl": "./sources/nanjing.html#early-completion",
+        "referenceUrl": "https://history.nju.edu.cn/03/c0/c28503a459712/page.htm",
+        "sourceTitle": "南京城防、水系与早期城址复核",
+        "status": "研究推测范围 · 非实测墙界",
+        "fillOpacity": 0.035,
+        "lineOpacity": 0.7,
+        "labelCoordinates": [
+          118.786,
+          32.0502
+        ],
+        "historicalYears": "南朝时期（420—589年，布局分期有变化）",
+        "note": "依据南京大学历史学院转载贺云翱所述南朝建康大致范围：北至珠江路南侧、西在估衣廊与明瓦廊一线、南至建邺路与白下路北侧、东在内秦淮河西侧。现代道路及现河道只用于落实地段，并非直接古墙控制点，边线不代表逐段考古墙界。本面表达都城核心研究范围，不含全部竹篱外郭、卫星城、长干里或石头城，也不外推为孙吴至陈各期完全相同的城墙。台城另列，明清现墙用于识别后世边界，未倒推为六朝城墙。张学锋等对于北部苑囿及整体布局有不同复原方案。",
+        "sourceIds": [
+          "way/89545382",
+          "way/94494930",
+          "way/237043958"
+        ],
+        "enSourceName": "Jiankang capital: Southern Dynasties study extent",
+        "labelInsideBoundary": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.7823242,
+              32.0506895
+            ],
+            [
+              118.7900905,
+              32.0501439
+            ],
+            [
+              118.799235,
+              32.0481167
+            ],
+            [
+              118.7984664,
+              32.0415906
+            ],
+            [
+              118.7957923,
+              32.0329635
+            ],
+            [
+              118.7752738,
+              32.0327152
+            ],
+            [
+              118.7784427,
+              32.0400225
+            ],
+            [
+              118.7807646,
+              32.04742
+            ],
+            [
+              118.7823242,
+              32.0506895
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-jiankang-palace-study",
+        "sourceName": "建康宫城／台城（考古约束推测范围）",
+        "label": "建康宫城／台城\n（推测范围）",
+        "period": "魏晋南北朝",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingEarlyCompletion": true,
+        "inferredBoundary": true,
+        "labelMinZoom": 12,
+        "sourceUrl": "./sources/nanjing.html#early-completion",
+        "referenceUrl": "https://news.sina.com.cn/o/2008-06-13/064414012325s.shtml",
+        "sourceTitle": "南京城防、水系与早期城址复核",
+        "status": "研究推测范围 · 非实测墙界",
+        "fillOpacity": 0.035,
+        "lineOpacity": 0.7,
+        "labelCoordinates": [
+          118.7848,
+          32.0452
+        ],
+        "historicalYears": "东晋、南朝（宫城多重墙垣及分期存在争议）",
+        "note": "采用网巾市—邓府巷以东、游府西街—文昌巷以北、如意里—长江后街以南、利济巷一带以西的已发表地段范围解释，并核对六朝博物馆原址墙垣、南京图书馆墙角、游府西街及利济巷等考古发现。围合面是据考古地段和文献描述绘制的研究包络，不把馆址中心当墙线控制点，也不表示各边、宫殿或所有时期均已发掘。六朝道路、墙壕存在北偏东约25°的考古记录，但不能据此把所有现代道路或整座宫城强制转成同一角度。张学锋与王志高等对墙垣层次、北界及尺寸解释不同，待正式总图继续细化。玄武湖旁明台城不属于此宫城。",
+        "sourceIds": [
+          "way/91205109",
+          "way/99978916",
+          "way/96779087",
+          "way/91828645",
+          "way/89637282"
+        ],
+        "enSourceName": "Jiankang palace: archaeology-constrained inferred extent",
+        "labelInsideBoundary": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.78312,
+              32.04099
+            ],
+            [
+              118.79165,
+              32.03885
+            ],
+            [
+              118.7955,
+              32.04842
+            ],
+            [
+              118.79043,
+              32.04864
+            ],
+            [
+              118.78635,
+              32.04929
+            ],
+            [
+              118.78312,
+              32.04099
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-changgan-platform",
+        "sourceName": "长干古城中心台地（图示参考）",
+        "label": "长干古城\n中心台地（图示）",
+        "period": "夏商",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingEarlyCompletion": true,
+        "inferredBoundary": true,
+        "labelMinZoom": 14,
+        "sourceUrl": "./sources/nanjing.html#changgan",
+        "referenceUrl": "https://www.nanjing.gov.cn/zgnjsjb/jrtt/202312/t20231220_4125564.html",
+        "sourceTitle": "南京城防、水系与早期城址复核",
+        "status": "发掘位置示意图配准 · 图示参考，非实测遗迹界",
+        "fillOpacity": 0.035,
+        "lineOpacity": 0.7,
+        "historicalYears": "晚商至西周，湖熟文化区域性中心聚落",
+        "note": "依据南京市考古研究院公布、新华日报交汇点报道附图的西街遗址平面示意，参照今河道转折作近似配准。原图是位置示意图，配准仅用于对应地段，不能将拟合残差声称为遗迹范围精度；商周长干古城不等于越国始建城址，也不增造为已证实王国都城。 台地参考轮廓只覆盖示意图土色核心，不代表完整城郭或文保管控线；已发现多期环壕，西北缺失墙垣不补成实测城墙。",
+        "periods": [
+          "夏商",
+          "周"
+        ],
+        "labelCoordinates": [
+          118.7722,
+          32.0129
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.7713576,
+              32.01344234
+            ],
+            [
+              118.77196703,
+              32.01350846
+            ],
+            [
+              118.77246411,
+              32.01339715
+            ],
+            [
+              118.77279891,
+              32.01319803
+            ],
+            [
+              118.77291076,
+              32.01287595
+            ],
+            [
+              118.77288616,
+              32.0125372
+            ],
+            [
+              118.77274872,
+              32.0122797
+            ],
+            [
+              118.77248707,
+              32.01211247
+            ],
+            [
+              118.77192083,
+              32.01203706
+            ],
+            [
+              118.77141913,
+              32.01207705
+            ],
+            [
+              118.77127608,
+              32.0122656
+            ],
+            [
+              118.77126285,
+              32.01267603
+            ],
+            [
+              118.7713576,
+              32.01344234
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-changgan-ditches",
+        "sourceName": "长干古城商周环壕（图示参考）",
+        "label": "商周环壕\n（图示参考）",
+        "period": "夏商",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingEarlyCompletion": true,
+        "inferredBoundary": true,
+        "labelMinZoom": 16,
+        "sourceUrl": "./sources/nanjing.html#changgan",
+        "referenceUrl": "https://www.nanjing.gov.cn/zgnjsjb/jrtt/202312/t20231220_4125564.html",
+        "sourceTitle": "南京城防、水系与早期城址复核",
+        "status": "发掘位置示意图配准 · 图示参考，非实测遗迹界",
+        "fillOpacity": 0.035,
+        "lineOpacity": 0.7,
+        "historicalYears": "晚商至西周，湖熟文化区域性中心聚落",
+        "note": "依据南京市考古研究院公布、新华日报交汇点报道附图的西街遗址平面示意，参照今河道转折作近似配准。原图是位置示意图，配准仅用于对应地段，不能将拟合残差声称为遗迹范围精度；商周长干古城不等于越国始建城址，也不增造为已证实王国都城。 本图可辨的三条环壕走向分别保留开放，不闭合；官方文字提及五道不同时期环壕，不能将可见三线误称全部五道、同一期城濠或现代河道。",
+        "periods": [
+          "夏商",
+          "周"
+        ],
+        "waterFeature": true,
+        "labelCoordinates": [
+          118.77217686,
+          32.01189214
+        ]
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              118.77110156,
+              32.01207086
+            ],
+            [
+              118.77138418,
+              32.01198815
+            ],
+            [
+              118.77186391,
+              32.01195727
+            ],
+            [
+              118.77232779,
+              32.01198896
+            ],
+            [
+              118.7726531,
+              32.01215564
+            ],
+            [
+              118.77286032,
+              32.01246606
+            ],
+            [
+              118.77296606,
+              32.01284871
+            ],
+            [
+              118.77296481,
+              32.01311632
+            ]
+          ],
+          [
+            [
+              118.77092018,
+              32.01183158
+            ],
+            [
+              118.77123163,
+              32.0117843
+            ],
+            [
+              118.77163334,
+              32.01179869
+            ],
+            [
+              118.77217686,
+              32.01189214
+            ],
+            [
+              118.77263712,
+              32.01209334
+            ],
+            [
+              118.77286332,
+              32.01243036
+            ],
+            [
+              118.77290614,
+              32.01280463
+            ],
+            [
+              118.77289428,
+              32.01307233
+            ]
+          ],
+          [
+            [
+              118.77120155,
+              32.01201648
+            ],
+            [
+              118.7716487,
+              32.0119948
+            ],
+            [
+              118.77213455,
+              32.01201738
+            ],
+            [
+              118.77257957,
+              32.01214736
+            ],
+            [
+              118.77278667,
+              32.0123329
+            ],
+            [
+              118.7728597,
+              32.01259987
+            ],
+            [
+              118.77290626,
+              32.01292951
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-changgan-wall-discovery",
+        "sourceName": "长干古城东北夯土墙基发现地段（图示参考）",
+        "label": "夯土墙基发现地段\n（图示）",
+        "period": "夏商",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingEarlyCompletion": true,
+        "inferredBoundary": true,
+        "labelMinZoom": 17,
+        "sourceUrl": "./sources/nanjing.html#changgan",
+        "referenceUrl": "https://www.nanjing.gov.cn/zgnjsjb/jrtt/202312/t20231220_4125564.html",
+        "sourceTitle": "南京城防、水系与早期城址复核",
+        "status": "发掘位置示意图配准 · 图示参考，非实测遗迹界",
+        "fillOpacity": 0.035,
+        "lineOpacity": 0.7,
+        "historicalYears": "晚商至西周，湖熟文化区域性中心聚落",
+        "note": "依据南京市考古研究院公布、新华日报交汇点报道附图的西街遗址平面示意，参照今河道转折作近似配准。原图是位置示意图，配准仅用于对应地段，不能将拟合残差声称为遗迹范围精度；商周长干古城不等于越国始建城址，也不增造为已证实王国都城。 官方确认东北部保存墙基与约2米门道；原示意图只标墙基发现地段，不能分辨门道中心及墙体外缘，因此使用地段点，未绘制虚构2米门基或墙体面。",
+        "periods": [
+          "夏商",
+          "周"
+        ],
+        "sitePoint": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.77324905,
+          32.01314064
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "南京",
+        "sourceId": "nanjing-changgan-southern-road",
+        "sourceName": "西街遗址南朝道路（图示参考）",
+        "label": "南朝道路遗迹\n（图示）",
+        "period": "魏晋南北朝",
+        "capitalSiteKey": "ancient-site:南京:32.06030,118.79690",
+        "capitalSiteName": "南京",
+        "capitalSiteDisplayName": "南京",
+        "nanjingHistoricalDetail": true,
+        "nanjingEarlyCompletion": true,
+        "inferredBoundary": true,
+        "labelMinZoom": 15,
+        "sourceUrl": "./sources/nanjing.html#changgan",
+        "referenceUrl": "https://www.nanjing.gov.cn/xxgkn/jytabljggk/2024njytabl/shirddbjy/202411/t20241114_5009246.html",
+        "sourceTitle": "南京城防、水系与早期城址复核",
+        "status": "南朝道路发掘地段图示配准 · 非实测路面边界",
+        "fillOpacity": 0.035,
+        "lineOpacity": 0.7,
+        "historicalYears": "南朝（梁代国门及御道另有后续发现）",
+        "note": "按同一西街发掘位置示意图中标出的南朝道路，配准其可见走向，原图未绘精确路面边界。2024年专家认定西街新发现门址为梁代“新作国门”，属于外郭城南门；本旧图不能精确定位后续门基，故未把道路端点或商周墙基地段冒充梁代国门，也未将其与都城宣阳门、朱雀门混为一处。",
+        "waterFeature": false,
+        "labelCoordinates": [
+          118.77288004,
+          32.01172554
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.77211819,
+            32.01082224
+          ],
+          [
+            118.77242478,
+            32.01121209
+          ],
+          [
+            118.77288004,
+            32.01172554
+          ],
+          [
+            118.77321771,
+            32.01212403
+          ],
+          [
+            118.77356675,
+            32.01251351
+          ]
+        ]
+      }
+    }
+  ],
+  "sources": {
+    "range": "https://history.nju.edu.cn/03/c0/c28503a459712/page.htm",
+    "excavation": "https://news.sina.com.cn/o/2008-06-13/064414012325s.shtml",
+    "dispute": "https://m.thepaper.cn/newsDetail_forward_31120700",
+    "changgan": "https://www.nanjing.gov.cn/zgnjsjb/jrtt/202312/t20231220_4125564.html",
+    "changganReport": "https://dnwh.cbpt.cnki.net/portal/journal/portal/client/paper/3dafd92cc7f3a3b2fe7fc54e74ab1fb0",
+    "nationalGate": "https://www.nanjing.gov.cn/xxgkn/jytabljggk/2024njytabl/shirddbjy/202411/t20241114_5009246.html",
+    "water": "https://ghj.nanjing.gov.cn/ghbz/ztgh/202504/P020250421305043260549.pdf"
+  },
+  "changganFit": {
+    "source": "https://m.thepaper.cn/baijiahao_25714733",
+    "image": "output/nanjing-changgan-plan.jpg",
+    "pixelSize": [
+      677,
+      649
+    ],
+    "method": "Affine fit to four modern river bends; source is a schematic excavation location map, not surveyed cadastral geometry. Residuals describe fit consistency only.",
+    "controls": [
+      {
+        "name": "南侧河道转折",
+        "pixel": [
+          216,
+          440
+        ],
+        "wgs84": [
+          118.7716713,
+          32.0101755
+        ],
+        "osmNode": 7238181558
+      },
+      {
+        "name": "中段河道转折",
+        "pixel": [
+          337,
+          425
+        ],
+        "wgs84": [
+          118.7731036,
+          32.0104029
+        ],
+        "osmNode": 7238181562
+      },
+      {
+        "name": "东侧河道转折",
+        "pixel": [
+          446,
+          326
+        ],
+        "wgs84": [
+          118.7740048,
+          32.011158
+        ],
+        "osmNode": 7238181571
+      },
+      {
+        "name": "北侧河道地段",
+        "pixel": [
+          420,
+          107
+        ],
+        "wgs84": [
+          118.7736601,
+          32.0131776
+        ],
+        "osmNode": 7238189485
+      }
+    ],
+    "matrix": [
+      [
+        0.000010610729234569431,
+        -9.119917471825062e-8
+      ],
+      [
+        7.489571297591979e-7,
+        -0.00000892642044129921
+      ],
+      [
+        118.7691027572171,
+        32.01415747634088
+      ]
+    ],
+    "pixelTraces": {
+      "platform": [
+        [
+          207,
+          78
+        ],
+        [
+          265,
+          70
+        ],
+        [
+          311,
+          82
+        ],
+        [
+          341,
+          104
+        ],
+        [
+          349,
+          140
+        ],
+        [
+          344,
+          178
+        ],
+        [
+          329,
+          207
+        ],
+        [
+          303,
+          226
+        ],
+        [
+          249,
+          235
+        ],
+        [
+          202,
+          231
+        ],
+        [
+          190,
+          210
+        ],
+        [
+          192,
+          164
+        ],
+        [
+          207,
+          78
+        ]
+      ],
+      "ditches": [
+        [
+          [
+            172,
+            232
+          ],
+          [
+            198,
+            241
+          ],
+          [
+            243,
+            244
+          ],
+          [
+            287,
+            240
+          ],
+          [
+            319,
+            221
+          ],
+          [
+            341,
+            186
+          ],
+          [
+            354,
+            143
+          ],
+          [
+            356,
+            113
+          ]
+        ],
+        [
+          [
+            153,
+            259
+          ],
+          [
+            182,
+            264
+          ],
+          [
+            220,
+            262
+          ],
+          [
+            272,
+            251
+          ],
+          [
+            317,
+            228
+          ],
+          [
+            341,
+            190
+          ],
+          [
+            348,
+            148
+          ],
+          [
+            349,
+            118
+          ]
+        ],
+        [
+          [
+            181,
+            238
+          ],
+          [
+            223,
+            240
+          ],
+          [
+            269,
+            237
+          ],
+          [
+            312,
+            222
+          ],
+          [
+            333,
+            201
+          ],
+          [
+            342,
+            171
+          ],
+          [
+            349,
+            134
+          ]
+        ]
+      ],
+      "wall": [
+        [
+          374,
+          118
+        ],
+        [
+          386,
+          116
+        ],
+        [
+          384,
+          102
+        ]
+      ],
+      "gate": [
+        383,
+        110
+      ],
+      "southernRoad": [
+        [
+          258,
+          371
+        ],
+        [
+          290,
+          327
+        ],
+        [
+          337,
+          269
+        ],
+        [
+          372,
+          224
+        ],
+        [
+          408,
+          180
+        ]
+      ]
+    },
+    "geometry": {
+      "platform": [
+        [
+          118.7713576,
+          32.01344234
+        ],
+        [
+          118.77196703,
+          32.01350846
+        ],
+        [
+          118.77246411,
+          32.01339715
+        ],
+        [
+          118.77279891,
+          32.01319803
+        ],
+        [
+          118.77291076,
+          32.01287595
+        ],
+        [
+          118.77288616,
+          32.0125372
+        ],
+        [
+          118.77274872,
+          32.0122797
+        ],
+        [
+          118.77248707,
+          32.01211247
+        ],
+        [
+          118.77192083,
+          32.01203706
+        ],
+        [
+          118.77141913,
+          32.01207705
+        ],
+        [
+          118.77127608,
+          32.0122656
+        ],
+        [
+          118.77126285,
+          32.01267603
+        ],
+        [
+          118.7713576,
+          32.01344234
+        ]
+      ],
+      "ditches": [
+        [
+          [
+            118.77110156,
+            32.01207086
+          ],
+          [
+            118.77138418,
+            32.01198815
+          ],
+          [
+            118.77186391,
+            32.01195727
+          ],
+          [
+            118.77232779,
+            32.01198896
+          ],
+          [
+            118.7726531,
+            32.01215564
+          ],
+          [
+            118.77286032,
+            32.01246606
+          ],
+          [
+            118.77296606,
+            32.01284871
+          ],
+          [
+            118.77296481,
+            32.01311632
+          ]
+        ],
+        [
+          [
+            118.77092018,
+            32.01183158
+          ],
+          [
+            118.77123163,
+            32.0117843
+          ],
+          [
+            118.77163334,
+            32.01179869
+          ],
+          [
+            118.77217686,
+            32.01189214
+          ],
+          [
+            118.77263712,
+            32.01209334
+          ],
+          [
+            118.77286332,
+            32.01243036
+          ],
+          [
+            118.77290614,
+            32.01280463
+          ],
+          [
+            118.77289428,
+            32.01307233
+          ]
+        ],
+        [
+          [
+            118.77120155,
+            32.01201648
+          ],
+          [
+            118.7716487,
+            32.0119948
+          ],
+          [
+            118.77213455,
+            32.01201738
+          ],
+          [
+            118.77257957,
+            32.01214736
+          ],
+          [
+            118.77278667,
+            32.0123329
+          ],
+          [
+            118.7728597,
+            32.01259987
+          ],
+          [
+            118.77290626,
+            32.01292951
+          ]
+        ]
+      ],
+      "wall": [
+        [
+          118.77315955,
+          32.01307005
+        ],
+        [
+          118.77328538,
+          32.01308681
+        ],
+        [
+          118.77325367,
+          32.01321196
+        ]
+      ],
+      "gate": [
+        118.77324905,
+        32.01314064
+      ],
+      "southernRoad": [
+        [
+          118.77211819,
+          32.01082224
+        ],
+        [
+          118.77242478,
+          32.01121209
+        ],
+        [
+          118.77288004,
+          32.01172554
+        ],
+        [
+          118.77321771,
+          32.01212403
+        ],
+        [
+          118.77356675,
+          32.01251351
+        ]
+      ]
+    }
+  },
+  "osmHistoricTraceReview": [
+    {
+      "id": 1497591591,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7931805,
+            32.0250904
+          ],
+          [
+            118.792692,
+            32.0228627
+          ],
+          [
+            118.7919095,
+            32.0200188
+          ],
+          [
+            118.7915514,
+            32.0182799
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349663,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7894313,
+            32.0117597
+          ],
+          [
+            118.789136,
+            32.0107417
+          ],
+          [
+            118.7889463,
+            32.0097069
+          ],
+          [
+            118.7882288,
+            32.0097486
+          ],
+          [
+            118.7874625,
+            32.0098909
+          ],
+          [
+            118.7864375,
+            32.0100108
+          ],
+          [
+            118.7853273,
+            32.0100139
+          ],
+          [
+            118.7844797,
+            32.0108872
+          ],
+          [
+            118.783954,
+            32.0116332
+          ],
+          [
+            118.7831386,
+            32.0121427
+          ],
+          [
+            118.7818833,
+            32.0125429
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349656,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.8212997,
+            32.0328818
+          ],
+          [
+            118.8205973,
+            32.0305434
+          ],
+          [
+            118.8203464,
+            32.0292012
+          ],
+          [
+            118.8202253,
+            32.0282019
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349657,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.8202253,
+            32.0282019
+          ],
+          [
+            118.8202664,
+            32.0271354
+          ],
+          [
+            118.8199867,
+            32.026383
+          ],
+          [
+            118.8197971,
+            32.0256643
+          ],
+          [
+            118.8182343,
+            32.0250075
+          ],
+          [
+            118.8175367,
+            32.0246751
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349658,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.8175367,
+            32.0246751
+          ],
+          [
+            118.8156854,
+            32.0242334
+          ],
+          [
+            118.8148579,
+            32.0241909
+          ],
+          [
+            118.8137864,
+            32.0239882
+          ],
+          [
+            118.8129995,
+            32.0238055
+          ],
+          [
+            118.8126675,
+            32.0237896
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349667,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.764285,
+            32.027976
+          ],
+          [
+            118.764327,
+            32.0284685
+          ],
+          [
+            118.7643969,
+            32.0314219
+          ],
+          [
+            118.7644612,
+            32.0346425
+          ],
+          [
+            118.7641582,
+            32.0364573
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349668,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7641582,
+            32.0364573
+          ],
+          [
+            118.762543,
+            32.0411301
+          ],
+          [
+            118.7607858,
+            32.0443299
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349635,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7787397,
+            32.0906371
+          ],
+          [
+            118.7792262,
+            32.0908061
+          ],
+          [
+            118.7802805,
+            32.0909682
+          ],
+          [
+            118.7808877,
+            32.0907577
+          ],
+          [
+            118.7815682,
+            32.0907487
+          ],
+          [
+            118.7821571,
+            32.0906298
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls",
+        "surface": "paving_stones"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349636,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7821571,
+            32.0906298
+          ],
+          [
+            118.78294,
+            32.0904455
+          ],
+          [
+            118.7830498,
+            32.0904196
+          ],
+          [
+            118.7831959,
+            32.0897321
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls",
+        "surface": "paving_stones"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349637,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7831959,
+            32.0897321
+          ],
+          [
+            118.7833545,
+            32.0890581
+          ],
+          [
+            118.7835208,
+            32.0886036
+          ],
+          [
+            118.7834852,
+            32.0883917
+          ],
+          [
+            118.7828725,
+            32.0877403
+          ],
+          [
+            118.7824441,
+            32.0875752
+          ],
+          [
+            118.7814609,
+            32.0875355
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349638,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7814609,
+            32.0875355
+          ],
+          [
+            118.7812762,
+            32.0856563
+          ],
+          [
+            118.7812579,
+            32.0853815
+          ],
+          [
+            118.7811237,
+            32.0833648
+          ],
+          [
+            118.7811065,
+            32.0822914
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349639,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7811065,
+            32.0822914
+          ],
+          [
+            118.7810881,
+            32.0807974
+          ],
+          [
+            118.7811471,
+            32.0802202
+          ],
+          [
+            118.7814255,
+            32.0781152
+          ],
+          [
+            118.7816955,
+            32.0758868
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349640,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7816955,
+            32.0758868
+          ],
+          [
+            118.7819491,
+            32.0744134
+          ],
+          [
+            118.7824459,
+            32.0722502
+          ],
+          [
+            118.7829851,
+            32.070047
+          ],
+          [
+            118.7831374,
+            32.0693366
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349684,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7498601,
+            32.0896137
+          ],
+          [
+            118.7509741,
+            32.0890851
+          ],
+          [
+            118.7532034,
+            32.089669
+          ],
+          [
+            118.7558235,
+            32.0902168
+          ],
+          [
+            118.758066,
+            32.0910097
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349685,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.758066,
+            32.0910097
+          ],
+          [
+            118.7586329,
+            32.0914301
+          ],
+          [
+            118.7593408,
+            32.0918939
+          ],
+          [
+            118.7622193,
+            32.0923736
+          ],
+          [
+            118.7645693,
+            32.0920698
+          ],
+          [
+            118.7662398,
+            32.0915421
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349686,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7662398,
+            32.0915421
+          ],
+          [
+            118.7677688,
+            32.0909504
+          ],
+          [
+            118.7703359,
+            32.0906065
+          ],
+          [
+            118.7738751,
+            32.0904626
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349687,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7738751,
+            32.0904626
+          ],
+          [
+            118.7763425,
+            32.0905603
+          ],
+          [
+            118.7787389,
+            32.0906034
+          ],
+          [
+            118.7802805,
+            32.0909682
+          ],
+          [
+            118.7808877,
+            32.0907577
+          ],
+          [
+            118.7815682,
+            32.0907487
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349688,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7815682,
+            32.0907487
+          ],
+          [
+            118.7816272,
+            32.0909487
+          ],
+          [
+            118.7825284,
+            32.0908715
+          ],
+          [
+            118.7827001,
+            32.0910442
+          ],
+          [
+            118.7830166,
+            32.0909987
+          ],
+          [
+            118.78294,
+            32.0904455
+          ],
+          [
+            118.7830498,
+            32.0904196
+          ],
+          [
+            118.7832848,
+            32.0893399
+          ],
+          [
+            118.7835121,
+            32.0884476
+          ],
+          [
+            118.7830725,
+            32.0879261
+          ],
+          [
+            118.7828725,
+            32.0877403
+          ],
+          [
+            118.7824441,
+            32.0875752
+          ],
+          [
+            118.7814609,
+            32.0875355
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls",
+        "surface": "paving_stones"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349689,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7814609,
+            32.0875355
+          ],
+          [
+            118.7812579,
+            32.0853815
+          ],
+          [
+            118.7811237,
+            32.0833648
+          ],
+          [
+            118.7811065,
+            32.0822914
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349690,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7831374,
+            32.0693366
+          ],
+          [
+            118.7824459,
+            32.0722502
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349691,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7824459,
+            32.0722502
+          ],
+          [
+            118.7816955,
+            32.0758868
+          ],
+          [
+            118.7812525,
+            32.0794377
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349692,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7812525,
+            32.0794377
+          ],
+          [
+            118.7811065,
+            32.0822914
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349642,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7889592,
+            32.0671283
+          ],
+          [
+            118.7907592,
+            32.0652921
+          ],
+          [
+            118.7914206,
+            32.0647556
+          ],
+          [
+            118.7921136,
+            32.0641935
+          ],
+          [
+            118.7938234,
+            32.0640359
+          ],
+          [
+            118.7964677,
+            32.0636962
+          ],
+          [
+            118.7997962,
+            32.0631683
+          ],
+          [
+            118.8005441,
+            32.0635962
+          ],
+          [
+            118.8015122,
+            32.0636414
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349644,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.807886,
+            32.060414
+          ],
+          [
+            118.8080726,
+            32.0605569
+          ],
+          [
+            118.8089099,
+            32.060466
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349646,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.8126149,
+            32.0603899
+          ],
+          [
+            118.8150707,
+            32.0605207
+          ],
+          [
+            118.8160276,
+            32.0606947
+          ],
+          [
+            118.8169138,
+            32.060673
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349648,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.8184847,
+            32.059463
+          ],
+          [
+            118.8180395,
+            32.0589935
+          ],
+          [
+            118.8171658,
+            32.0582458
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349677,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7414651,
+            32.0776306
+          ],
+          [
+            118.7415557,
+            32.0780441
+          ],
+          [
+            118.741388,
+            32.0788813
+          ],
+          [
+            118.741445,
+            32.0800054
+          ],
+          [
+            118.7413309,
+            32.0808724
+          ],
+          [
+            118.741658,
+            32.0815588
+          ],
+          [
+            118.7425084,
+            32.0820406
+          ],
+          [
+            118.7426795,
+            32.0823745
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349678,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7426795,
+            32.0823745
+          ],
+          [
+            118.7426376,
+            32.0829387
+          ],
+          [
+            118.742921,
+            32.0834262
+          ],
+          [
+            118.7429143,
+            32.0842874
+          ],
+          [
+            118.7424246,
+            32.0847678
+          ],
+          [
+            118.7423206,
+            32.0849781
+          ],
+          [
+            118.7426711,
+            32.0854513
+          ],
+          [
+            118.7426728,
+            32.0861875
+          ],
+          [
+            118.742373,
+            32.086522
+          ],
+          [
+            118.7416763,
+            32.0868379
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349679,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7416763,
+            32.0868379
+          ],
+          [
+            118.7415456,
+            32.0870629
+          ],
+          [
+            118.7416043,
+            32.0878629
+          ],
+          [
+            118.7415338,
+            32.0884389
+          ],
+          [
+            118.7415178,
+            32.0894152
+          ],
+          [
+            118.7418205,
+            32.0898039
+          ],
+          [
+            118.7424628,
+            32.0902352
+          ],
+          [
+            118.7425357,
+            32.090459
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349680,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7425357,
+            32.090459
+          ],
+          [
+            118.7421645,
+            32.0921777
+          ],
+          [
+            118.7422716,
+            32.0925592
+          ],
+          [
+            118.7422594,
+            32.0930688
+          ],
+          [
+            118.7421931,
+            32.0933307
+          ],
+          [
+            118.7423342,
+            32.0934409
+          ],
+          [
+            118.7422393,
+            32.0939247
+          ],
+          [
+            118.7419483,
+            32.0940152
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349681,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7419483,
+            32.0940152
+          ],
+          [
+            118.7413743,
+            32.0949094
+          ],
+          [
+            118.7408245,
+            32.0950502
+          ],
+          [
+            118.7402384,
+            32.0950696
+          ],
+          [
+            118.7400133,
+            32.0948151
+          ],
+          [
+            118.7395403,
+            32.0951457
+          ],
+          [
+            118.7397003,
+            32.0953449
+          ],
+          [
+            118.7395062,
+            32.0959648
+          ],
+          [
+            118.7395518,
+            32.0961216
+          ],
+          [
+            118.7393701,
+            32.096444
+          ],
+          [
+            118.7409065,
+            32.0971882
+          ],
+          [
+            118.7419566,
+            32.0976128
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349682,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7419566,
+            32.0976128
+          ],
+          [
+            118.742891,
+            32.0979442
+          ],
+          [
+            118.7441784,
+            32.0978896
+          ],
+          [
+            118.7452809,
+            32.0981632
+          ],
+          [
+            118.7456122,
+            32.0980621
+          ],
+          [
+            118.7458214,
+            32.0978803
+          ],
+          [
+            118.7462841,
+            32.0973884
+          ],
+          [
+            118.7464303,
+            32.0969794
+          ],
+          [
+            118.7466558,
+            32.0964466
+          ],
+          [
+            118.747002,
+            32.0956414
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349683,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.747002,
+            32.0956414
+          ],
+          [
+            118.7479576,
+            32.094234
+          ],
+          [
+            118.7488013,
+            32.0918883
+          ],
+          [
+            118.7491712,
+            32.0911524
+          ],
+          [
+            118.7498601,
+            32.0896137
+          ],
+          [
+            118.7498764,
+            32.0895774
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349650,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.8180268,
+            32.0544872
+          ],
+          [
+            118.8205396,
+            32.0539237
+          ],
+          [
+            118.8232933,
+            32.0531346
+          ],
+          [
+            118.8229936,
+            32.0515844
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349652,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.82572,
+            32.0480257
+          ],
+          [
+            118.826383,
+            32.047253
+          ],
+          [
+            118.825649,
+            32.0458696
+          ],
+          [
+            118.8246557,
+            32.0444394
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349654,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.8219502,
+            32.040058
+          ],
+          [
+            118.8217782,
+            32.0375765
+          ],
+          [
+            118.8217413,
+            32.0370436
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349661,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7915514,
+            32.0182799
+          ],
+          [
+            118.791047,
+            32.0165393
+          ],
+          [
+            118.7906059,
+            32.0158088
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349662,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7906059,
+            32.0158088
+          ],
+          [
+            118.7894313,
+            32.0117597
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349669,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7607858,
+            32.0443299
+          ],
+          [
+            118.7584751,
+            32.0464601
+          ],
+          [
+            118.7563066,
+            32.0478088
+          ],
+          [
+            118.7549283,
+            32.0482699
+          ],
+          [
+            118.7537803,
+            32.048379
+          ],
+          [
+            118.753673,
+            32.0481971
+          ],
+          [
+            118.7525228,
+            32.0493471
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349670,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7525228,
+            32.0493471
+          ],
+          [
+            118.7523341,
+            32.049575
+          ],
+          [
+            118.7516134,
+            32.0499147
+          ],
+          [
+            118.7510769,
+            32.0504019
+          ],
+          [
+            118.7502887,
+            32.0508937
+          ],
+          [
+            118.7502066,
+            32.0510282
+          ],
+          [
+            118.7498606,
+            32.0510599
+          ],
+          [
+            118.7488972,
+            32.0518764
+          ],
+          [
+            118.7486759,
+            32.0519647
+          ],
+          [
+            118.7477737,
+            32.0529597
+          ],
+          [
+            118.7475367,
+            32.0530019
+          ],
+          [
+            118.7473284,
+            32.0534268
+          ],
+          [
+            118.7472207,
+            32.0534615
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349671,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7472207,
+            32.0534615
+          ],
+          [
+            118.7474504,
+            32.0557423
+          ],
+          [
+            118.7475226,
+            32.0564272
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349672,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7475226,
+            32.0564272
+          ],
+          [
+            118.7474197,
+            32.0567668
+          ],
+          [
+            118.7474427,
+            32.0569657
+          ],
+          [
+            118.7481239,
+            32.0573461
+          ],
+          [
+            118.7489755,
+            32.0577967
+          ],
+          [
+            118.7483054,
+            32.0588899
+          ],
+          [
+            118.7485575,
+            32.0591065
+          ],
+          [
+            118.7488464,
+            32.0593447
+          ],
+          [
+            118.7489736,
+            32.0598574
+          ],
+          [
+            118.7480491,
+            32.0613131
+          ],
+          [
+            118.7459476,
+            32.060877
+          ],
+          [
+            118.7459026,
+            32.0615252
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349673,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7459026,
+            32.0615252
+          ],
+          [
+            118.7454831,
+            32.0649203
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    },
+    {
+      "id": 1375349674,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.7454831,
+            32.0649203
+          ],
+          [
+            118.7454305,
+            32.0653985
+          ],
+          [
+            118.7437127,
+            32.0681053
+          ],
+          [
+            118.7430664,
+            32.0696013
+          ]
+        ]
+      },
+      "tags": {
+        "historic": "citywalls"
+      },
+      "decision": "暂不作为现存明城墙接入",
+      "reason": "只有historic=citywalls，无barrier=city_wall、年代或考古来源；部分线段与现存明城墙明显错位。编辑来源为osm notes/local knowledge，不足以将整批线段认定为实存墙体或同一期城墙。"
+    }
+  ],
+  "osmTraceChangeset": {
+    "id": 164600569,
+    "created_at": "2025-04-06T16:51:59Z",
+    "open": false,
+    "comments_count": 0,
+    "changes_count": 136,
+    "created_count": 108,
+    "modified_count": 25,
+    "deleted_count": 3,
+    "closed_at": "2025-04-06T16:52:01Z",
+    "min_lat": 32.0097069,
+    "min_lon": 118.728584,
+    "max_lat": 32.0982362,
+    "max_lon": 118.8432993,
+    "uid": 22716534,
+    "user": "djh123",
+    "tags": {
+      "changesets_count": "1",
+      "comment": "南京老城区",
+      "created_by": "iD 2.32.0",
+      "hashtags": "#historic;#name;#wikidata",
+      "host": "https://www.openstreetmap.org/edit",
+      "imagery_used": "Bing Maps Aerial;OpenStreetMap (Standard)",
+      "locale": "zh-CN",
+      "resolved:disconnected_way:highway": "1",
+      "source": "osm notes;local knowledge",
+      "warnings:outdated_tags:noncanonical_brand": "1"
+    }
+  },
+  "northMoatTerminalWays": [
+    {
+      "type": "way",
+      "id": 237175230,
+      "timestamp": "2020-10-13T04:25:56Z",
+      "version": 4,
+      "changeset": 92384267,
+      "user": "Hervé TUC",
+      "uid": 922338,
+      "nodes": [
+        2451230787,
+        7995299361,
+        2452391777
+      ],
+      "tags": {
+        "waterway": "river"
+      }
+    }
+  ],
+  "afterCount": 48,
+  "displayCorrections": {
+    "nanjing-water-way-697970987": {
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              118.7957923,
+              32.0329635
+            ],
+            [
+              118.7970119,
+              32.0327547
+            ],
+            [
+              118.7973978,
+              32.0326911
+            ],
+            [
+              118.8014104,
+              32.0316542
+            ],
+            [
+              118.8023653,
+              32.0315723
+            ],
+            [
+              118.8027837,
+              32.0315996
+            ],
+            [
+              118.803878,
+              32.0319089
+            ],
+            [
+              118.8049616,
+              32.0316997
+            ],
+            [
+              118.8051127,
+              32.0316101
+            ]
+          ],
+          [
+            [
+              118.8051127,
+              32.0316101
+            ],
+            [
+              118.8052352,
+              32.0315374
+            ]
+          ],
+          [
+            [
+              118.8052352,
+              32.0315374
+            ],
+            [
+              118.8054134,
+              32.0313514
+            ],
+            [
+              118.8056492,
+              32.0310465
+            ],
+            [
+              118.8058077,
+              32.0309409
+            ],
+            [
+              118.8060019,
+              32.0308701
+            ],
+            [
+              118.8062598,
+              32.0308361
+            ],
+            [
+              118.8093277,
+              32.0307087
+            ],
+            [
+              118.8106152,
+              32.0306451
+            ],
+            [
+              118.8109049,
+              32.0307633
+            ],
+            [
+              118.8110551,
+              32.0308724
+            ],
+            [
+              118.8111731,
+              32.031118
+            ],
+            [
+              118.8113839,
+              32.0336638
+            ]
+          ],
+          [
+            [
+              118.8113839,
+              32.0336638
+            ],
+            [
+              118.8114245,
+              32.0340232
+            ]
+          ],
+          [
+            [
+              118.8114245,
+              32.0340232
+            ],
+            [
+              118.8114545,
+              32.0343137
+            ],
+            [
+              118.8094243,
+              32.0344828
+            ],
+            [
+              118.8092312,
+              32.0347011
+            ],
+            [
+              118.8092097,
+              32.0352014
+            ],
+            [
+              118.8097032,
+              32.038903
+            ],
+            [
+              118.8097998,
+              32.0404218
+            ],
+            [
+              118.8096281,
+              32.0406673
+            ],
+            [
+              118.8094488,
+              32.0408039
+            ],
+            [
+              118.8089829,
+              32.0409801
+            ],
+            [
+              118.8080316,
+              32.0412613
+            ],
+            [
+              118.8079764,
+              32.0420861
+            ]
+          ],
+          [
+            [
+              118.8114545,
+              32.0343137
+            ],
+            [
+              118.8115075,
+              32.0343115
+            ]
+          ],
+          [
+            [
+              118.8115075,
+              32.0343115
+            ],
+            [
+              118.8119107,
+              32.0342949
+            ]
+          ],
+          [
+            [
+              118.8119107,
+              32.0342949
+            ],
+            [
+              118.8122782,
+              32.0342646
+            ],
+            [
+              118.8130023,
+              32.0342225
+            ],
+            [
+              118.8146814,
+              32.0340372
+            ],
+            [
+              118.8156189,
+              32.0339337
+            ],
+            [
+              118.8168486,
+              32.0338462
+            ],
+            [
+              118.8178519,
+              32.0338017
+            ],
+            [
+              118.8179619,
+              32.0337968
+            ]
+          ],
+          [
+            [
+              118.8179619,
+              32.0337968
+            ],
+            [
+              118.8180894,
+              32.0337912
+            ]
+          ],
+          [
+            [
+              118.8180894,
+              32.0337912
+            ],
+            [
+              118.8182214,
+              32.0337853
+            ],
+            [
+              118.8203355,
+              32.0336916
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sourceName": "明御河及南侧相接水道（现存河道参照）",
+        "label": "现存明御河",
+        "labelCoordinates": [
+          118.8073,
+          32.032
+        ],
+        "note": "补齐竺桥方向接入段、南侧明御河及其与西侧御河、东侧水道的原始连接，共10条OSM开放分段；涵洞仍按地下水路表达。保留原坐标和原始端点，不把现河道中心线当成明代岸线，不把河网强行围成完整皇城。宫城东、北侧玉带河另列；两者不是同一条单独的环河。",
+        "status": "原始OSM现存水道中心线 · 包含有标记的涵洞，非明代实测岸线",
+        "sourceIds": [
+          "way/88806179",
+          "way/1490584193",
+          "way/1490584192",
+          "way/697970986",
+          "way/697970987",
+          "way/88806180",
+          "way/697970989",
+          "way/697970988",
+          "way/776186820",
+          "way/776186819"
+        ],
+        "nanjingWaterCompletion": true,
+        "historicalFeatureId": "ancient-capital-walls:geometry-8da39056c6da2666"
+      }
+    },
+    "nanjing-water-way-88806258": {
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              118.8079764,
+              32.0420861
+            ],
+            [
+              118.8082661,
+              32.0442141
+            ],
+            [
+              118.8085558,
+              32.0473879
+            ],
+            [
+              118.8113126,
+              32.0472152
+            ],
+            [
+              118.8129541,
+              32.0471333
+            ],
+            [
+              118.8142523,
+              32.0470242
+            ],
+            [
+              118.8172027,
+              32.0466241
+            ],
+            [
+              118.8176104,
+              32.0465513
+            ],
+            [
+              118.817664,
+              32.0463603
+            ],
+            [
+              118.8175997,
+              32.0453964
+            ],
+            [
+              118.8171598,
+              32.0415313
+            ]
+          ],
+          [
+            [
+              118.8160403,
+              32.037648
+            ],
+            [
+              118.8159983,
+              32.0379343
+            ],
+            [
+              118.8158884,
+              32.0380799
+            ],
+            [
+              118.8157824,
+              32.0382823
+            ],
+            [
+              118.8158401,
+              32.0387029
+            ],
+            [
+              118.8161513,
+              32.0387393
+            ],
+            [
+              118.8163511,
+              32.0407754
+            ]
+          ],
+          [
+            [
+              118.8160386,
+              32.0375626
+            ],
+            [
+              118.8160403,
+              32.037648
+            ]
+          ],
+          [
+            [
+              118.8159907,
+              32.0365521
+            ],
+            [
+              118.8160386,
+              32.0375626
+            ]
+          ],
+          [
+            [
+              118.8159867,
+              32.0364521
+            ],
+            [
+              118.8159907,
+              32.0365521
+            ]
+          ],
+          [
+            [
+              118.8156621,
+              32.0352879
+            ],
+            [
+              118.8156685,
+              32.0358676
+            ],
+            [
+              118.815757,
+              32.036054
+            ],
+            [
+              118.8159689,
+              32.0361563
+            ],
+            [
+              118.8159867,
+              32.0364521
+            ]
+          ],
+          [
+            [
+              118.8156594,
+              32.0351014
+            ],
+            [
+              118.8156621,
+              32.0352879
+            ]
+          ],
+          [
+            [
+              118.8156189,
+              32.0339337
+            ],
+            [
+              118.815635,
+              32.0345272
+            ],
+            [
+              118.8156594,
+              32.0351014
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "label": "现存玉带河",
+        "labelCoordinates": [
+          118.8131,
+          32.0471
+        ],
+        "note": "补齐宫城东侧向南的原始水道及涵洞，共8条原始OSM分段。东华门以南、清溪路及南端相接水路保留现状坐标；原始中心线不连续处仍留缺口，未跨越未标绘地段补线。水道中心线不等于宫墙或古岸线。",
+        "status": "原始OSM现存水道中心线 · 东北西侧宫濠格局参照",
+        "sourceIds": [
+          "way/88806258",
+          "way/88806178",
+          "way/970855301",
+          "way/970855302",
+          "way/970855305",
+          "way/970855306",
+          "way/970855303",
+          "way/970855304"
+        ],
+        "nanjingWaterCompletion": true,
+        "historicalFeatureId": "ancient-capital-walls:geometry-f4a375ad2a87b045"
+      }
+    },
+    "nanjing-nantang-palace-moat-reference": {
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              118.7785631,
+              32.0313951
+            ],
+            [
+              118.776646,
+              32.0319862
+            ],
+            [
+              118.7741339,
+              32.0326902
+            ],
+            [
+              118.7728039,
+              32.0331867
+            ],
+            [
+              118.7712618,
+              32.0337625
+            ],
+            [
+              118.7707307,
+              32.0340601
+            ],
+            [
+              118.7702149,
+              32.034466
+            ],
+            [
+              118.7697896,
+              32.0346828
+            ],
+            [
+              118.7694984,
+              32.0348026
+            ],
+            [
+              118.7691698,
+              32.0349328
+            ],
+            [
+              118.76891,
+              32.0350766
+            ],
+            [
+              118.7687037,
+              32.0352136
+            ],
+            [
+              118.7685105,
+              32.0354022
+            ],
+            [
+              118.7682421,
+              32.0357176
+            ],
+            [
+              118.7677944,
+              32.0364257
+            ],
+            [
+              118.7676826,
+              32.0365474
+            ],
+            [
+              118.7668571,
+              32.0370814
+            ],
+            [
+              118.7662033,
+              32.0373109
+            ],
+            [
+              118.7656863,
+              32.0374511
+            ]
+          ],
+          [
+            [
+              118.7790236,
+              32.0312495
+            ],
+            [
+              118.7785631,
+              32.0313951
+            ]
+          ],
+          [
+            [
+              118.789444,
+              32.0247405
+            ],
+            [
+              118.7892132,
+              32.0253571
+            ],
+            [
+              118.7888715,
+              32.0260474
+            ],
+            [
+              118.7880653,
+              32.0265664
+            ],
+            [
+              118.7870433,
+              32.0272244
+            ],
+            [
+              118.7839361,
+              32.0298586
+            ],
+            [
+              118.7833987,
+              32.0302007
+            ],
+            [
+              118.7822663,
+              32.0304222
+            ],
+            [
+              118.7790236,
+              32.0312495
+            ]
+          ],
+          [
+            [
+              118.7656863,
+              32.0374511
+            ],
+            [
+              118.7655644,
+              32.0374841
+            ]
+          ],
+          [
+            [
+              118.7655644,
+              32.0374841
+            ],
+            [
+              118.764721,
+              32.0377128
+            ],
+            [
+              118.7644782,
+              32.0377933
+            ]
+          ],
+          [
+            [
+              118.7644782,
+              32.0377933
+            ],
+            [
+              118.7630037,
+              32.0381198
+            ]
+          ],
+          [
+            [
+              118.7630037,
+              32.0381198
+            ],
+            [
+              118.7628042,
+              32.0381894
+            ],
+            [
+              118.7625353,
+              32.0382694
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "sourceName": "南唐城内运渎与内桥水道（现存水道参照）",
+        "label": "运渎／内桥水道\n（现状参照）",
+        "labelCoordinates": [
+          118.7786,
+          32.0314
+        ],
+        "note": "原先只选了内桥以西的一条OSM水道，却将整段命名为宫城护龙河，容易误读。本版补齐运渎现存主支及涵洞共7段，至东侧内秦淮河及西侧水关方向；只将内桥一带作为南唐宫城定位参照，不把整条运渎等同宫濠，不据此闭合宫城。",
+        "status": "原始现存水道中心线 · 运渎及南唐宫城定位参照，非完整护龙河",
+        "sourceIds": [
+          "way/62381498",
+          "way/1484425970",
+          "way/1484425971",
+          "way/1033780956",
+          "way/1033780955",
+          "way/1033780954",
+          "way/1033780953"
+        ],
+        "nanjingWaterCompletion": true,
+        "historicalFeatureId": "ancient-capital-walls:geometry-3c3c01b45f47c37e"
+      }
+    },
+    "nanjing-nantang-east-north-moat": {
+      "properties": {
+        "note": "现存北濠与东濠由way/237175230和way/237043958完整原始水道表达；已查询北濠西端节点的全部所属way，没有遗漏的相连水道。官方规划说明洪武北路至中山路段原城濠已掩埋，另以虚线示意其地段。现代中心线不是古代岸线或墙线；现存、已埋地段分开，不伪造完整现存环濠。",
+        "nanjingWaterCompletion": true,
+        "historicalFeatureId": "ancient-capital-walls:geometry-8f4a92a4e93a7fbc"
+      }
+    }
+  },
+  "studyRangeControls": {
+    "city": [
+      [
+        118.7823242,
+        32.0506895
+      ],
+      [
+        118.7900905,
+        32.0501439
+      ],
+      [
+        118.799235,
+        32.0481167
+      ],
+      [
+        118.7984664,
+        32.0415906
+      ],
+      [
+        118.7957923,
+        32.0329635
+      ],
+      [
+        118.7752738,
+        32.0327152
+      ],
+      [
+        118.7784427,
+        32.0400225
+      ],
+      [
+        118.7807646,
+        32.04742
+      ]
+    ],
+    "palace": [
+      [
+        118.78312,
+        32.04099
+      ],
+      [
+        118.79165,
+        32.03885
+      ],
+      [
+        118.7955,
+        32.04842
+      ],
+      [
+        118.79043,
+        32.04864
+      ],
+      [
+        118.78635,
+        32.04929
+      ]
+    ],
+    "streets": [
+      {
+        "id": 89545382,
+        "tags": {
+          "highway": "residential",
+          "name": "估衣廊",
+          "oneway": "no"
+        },
+        "coordinates": [
+          [
+            118.7823242,
+            32.0506895
+          ],
+          [
+            118.7820445,
+            32.0502073
+          ],
+          [
+            118.7816499,
+            32.0493265
+          ],
+          [
+            118.7815617,
+            32.0491297
+          ],
+          [
+            118.7807646,
+            32.04742
+          ]
+        ],
+        "nodes": [
+          "1038065159",
+          "1038065158",
+          "1155833083",
+          "1038065163",
+          "1038065160"
+        ]
+      },
+      {
+        "id": 89637250,
+        "tags": {
+          "highway": "residential",
+          "name": "游府西街",
+          "name:en": "Youfu West Street",
+          "name:zh": "游府西街",
+          "name:zh-Hans": "游府西街",
+          "name:zh-Hant": "遊府西街",
+          "name:zh-Latn-pinyin": "Yóufŭ Xījiē"
+        },
+        "coordinates": [
+          [
+            118.7884592,
+            32.0397197
+          ],
+          [
+            118.787476,
+            32.0400036
+          ],
+          [
+            118.7865755,
+            32.0402515
+          ],
+          [
+            118.7857951,
+            32.0404228
+          ],
+          [
+            118.7851659,
+            32.0405493
+          ],
+          [
+            118.7846609,
+            32.0406535
+          ],
+          [
+            118.7837003,
+            32.0408518
+          ],
+          [
+            118.7834074,
+            32.0409122
+          ],
+          [
+            118.7830396,
+            32.0409744
+          ],
+          [
+            118.7825249,
+            32.0410734
+          ],
+          [
+            118.7824073,
+            32.041096
+          ]
+        ],
+        "nodes": [
+          "1038854203",
+          "4345423958",
+          "1038854181",
+          "3304018794",
+          "1038854225",
+          "2327837594",
+          "1155831131",
+          "1038854179",
+          "4330284134",
+          "13884515471",
+          "1038854215"
+        ]
+      },
+      {
+        "id": 89637282,
+        "tags": {
+          "highway": "living_street",
+          "name": "长江后街",
+          "name:zh": "长江后街",
+          "name:zh-Hans": "长江后街",
+          "name:zh-Hant": "長江後街"
+        },
+        "coordinates": [
+          [
+            118.7904258,
+            32.0486406
+          ],
+          [
+            118.7906433,
+            32.0486042
+          ],
+          [
+            118.7912974,
+            32.0485558
+          ],
+          [
+            118.7928597,
+            32.0485255
+          ],
+          [
+            118.7934056,
+            32.0485149
+          ]
+        ],
+        "nodes": [
+          "4415897110",
+          "7994695804",
+          "666941376",
+          "7994695811",
+          "1038857351"
+        ]
+      },
+      {
+        "id": 91205109,
+        "tags": {
+          "highway": "living_street",
+          "name": "网巾市",
+          "oneway": "yes"
+        },
+        "coordinates": [
+          [
+            118.7852601,
+            32.046316
+          ],
+          [
+            118.7856975,
+            32.0477859
+          ],
+          [
+            118.7860297,
+            32.0488988
+          ],
+          [
+            118.7861969,
+            32.0494754
+          ]
+        ],
+        "nodes": [
+          "1058327571",
+          "1120932546",
+          "1155842390",
+          "1058327569"
+        ]
+      },
+      {
+        "id": 91828645,
+        "tags": {
+          "highway": "living_street",
+          "name": "如意里",
+          "oneway": "yes"
+        },
+        "coordinates": [
+          [
+            118.7904258,
+            32.0486406
+          ],
+          [
+            118.7897611,
+            32.0488213
+          ],
+          [
+            118.7872515,
+            32.0492819
+          ],
+          [
+            118.7861969,
+            32.0494754
+          ]
+        ],
+        "nodes": [
+          "4415897110",
+          "1038857363",
+          "8040149936",
+          "1058327569"
+        ]
+      },
+      {
+        "id": 94494930,
+        "tags": {
+          "highway": "residential",
+          "name": "明瓦廊",
+          "name:en": "Mingwalang",
+          "name:zh": "明瓦廊",
+          "name:zh-Latn-pinyin": "Míngwăláng"
+        },
+        "coordinates": [
+          [
+            118.7784427,
+            32.0400225
+          ],
+          [
+            118.7772579,
+            32.0372508
+          ],
+          [
+            118.7770144,
+            32.0366925
+          ],
+          [
+            118.7767354,
+            32.0360433
+          ],
+          [
+            118.7766244,
+            32.0357849
+          ],
+          [
+            118.7762426,
+            32.0348963
+          ],
+          [
+            118.7759346,
+            32.0341793
+          ],
+          [
+            118.7752738,
+            32.0327152
+          ]
+        ],
+        "nodes": [
+          "10196453952",
+          "10196453951",
+          "10196453950",
+          "4424594487",
+          "3287264807",
+          "1157142172",
+          "10196453943",
+          "1068742639"
+        ]
+      },
+      {
+        "id": 96779087,
+        "tags": {
+          "highway": "residential",
+          "name": "利济巷",
+          "name:zh": "利济巷",
+          "name:zh-Hans": "利济巷",
+          "name:zh-Hant": "利濟巷"
+        },
+        "coordinates": [
+          [
+            118.7927806,
+            32.042813
+          ],
+          [
+            118.7927056,
+            32.042422
+          ],
+          [
+            118.7925852,
+            32.0418497
+          ],
+          [
+            118.7924376,
+            32.0415828
+          ],
+          [
+            118.7920598,
+            32.0409
+          ]
+        ],
+        "nodes": [
+          "10951736049",
+          "4330284130",
+          "1120932549",
+          "4405415736",
+          "1038854212"
+        ]
+      },
+      {
+        "id": 322659428,
+        "tags": {
+          "highway": "residential",
+          "name": "文昌巷",
+          "name:zh": "文昌巷",
+          "name:zh-Hans": "文昌巷",
+          "name:zh-Hant": "文昌巷"
+        },
+        "coordinates": [
+          [
+            118.791783,
+            32.0386034
+          ],
+          [
+            118.7909581,
+            32.0388478
+          ],
+          [
+            118.7908935,
+            32.0388706
+          ],
+          [
+            118.7902274,
+            32.0391064
+          ],
+          [
+            118.7901192,
+            32.0391444
+          ],
+          [
+            118.7898735,
+            32.039218
+          ],
+          [
+            118.7884592,
+            32.0397197
+          ]
+        ],
+        "nodes": [
+          "2327840422",
+          "2327840423",
+          "1781674437",
+          "2416055031",
+          "2153973733",
+          "2515900513",
+          "1038854203"
+        ]
+      }
+    ],
+    "method": "Published modern-street range descriptions plus excavation localities; deliberately a study envelope, not measured wall alignment. No modern Ming/Qing perimeter backcast into the Six Dynasties."
+  }
+}
