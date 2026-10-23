@@ -1,0 +1,517 @@
+{
+  "type": "FeatureCollection",
+  "suzhouWuReview": true,
+  "reviewedAt": "2026-10-23",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "suzhouHistoricalDetail": true,
+        "capitalSiteKey": "ancient-site:苏州:31.29890,120.58530",
+        "capitalSiteName": "苏州",
+        "capitalSiteDisplayName": "吴都（姑苏／阖闾城）",
+        "city": "苏州",
+        "period": "周",
+        "periods": [
+          "周"
+        ],
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "sourceUrl": "./sources/suzhou-wu.html",
+        "sourceTitle": "吴都地望与木渎—胥口考古城址",
+        "dispute": "阖闾城位置存在争议",
+        "enDispute": "The location of Helü’s capital is disputed",
+        "labelMinZoom": 10,
+        "lineOpacity": 1,
+        "fillOpacity": 0.08,
+        "id": "suzhou-wu-mudu-xukou-extent",
+        "sourceId": "suzhou-wu-mudu-xukou-extent",
+        "sourceName": "吴都候选：木渎—胥口考古城址范围（示意）",
+        "enName": "Wu capital candidate: Mudu–Xukou archaeological site extent (schematic)",
+        "enSourceName": "Wu capital candidate: Mudu–Xukou archaeological site extent (schematic)",
+        "label": "木渎—胥口考古城址（约24.8 km²）\n阖闾城位置存在争议",
+        "enLabel": "Mudu–Xukou site (c.24.8 km²)\nHelü capital location disputed",
+        "referenceUrl": "https://dfzb.suzhou.gov.cn/dfzb/fzxh/201107/2670e6a6682149a0b0777b63d30eecf3.shtml",
+        "additionalSourceUrls": [
+          "https://www.szlib.com/DR/SuzhouForums/Content/357",
+          "https://yangtze.silkroadinfo.org.cn/2017/11/30/20171130110601.pdf"
+        ],
+        "status": "已确认都邑性城址 · 范围地望示意，非逐边实测墙界",
+        "enStatus": "Archaeologically confirmed urban site; schematic geographic extent, not surveyed wall boundaries",
+        "labelCoordinates": [
+          120.472,
+          31.251
+        ],
+        "reportedAreaKm2": 24.79,
+        "areaSourceUrl": "https://www.szlib.com/DR/SuzhouForums/Content/357",
+        "wuCapitalCandidate": "archaeological-site",
+        "locationPrecision": "据五峰北墙、新峰南墙、穹窿山东麓及刘庄木东路地望概括；连线为示意",
+        "note": "重点表达木渎—胥口一带经调查发掘确认的大型都邑性城址。约24.8平方公里取自苏州图书馆张学锋讲座所述24.79平方公里；其他考古介绍常概称24平方公里。现有城墙、壕沟、水门与聚落遗存为考古依据，但本范围不是考古原始GIS、法定保护范围或全圈连续城墙测绘。结合苏州地方志所载五峰北墙、新峰南墙、刘庄木东路东侧及穹窿山东麓西侧地望，以现代OSM地形地名作近似围合；未取得完整可配准的发掘总平面图。四至之间的连接是制图概括，山体可构成天然屏障，不能据闭合线认定每段均有墙体。约24.8是资料记载值，不是按此面积反推的精确墙界；本概括面面积约25.9平方公里。2017年考古学术会议报告指出，尚难与历史吴都直接对应。阖闾城位置存在争议。",
+        "enNote": "Emphasizes the archaeologically confirmed large urban site around Mudu and Xukou. The c.24.8 km² figure is the reported 24.79 km² in a Suzhou Library lecture; other archaeological summaries round it to 24 km². The displayed extent is a geographic schematic based on the Wufeng northern remains, Xinfeng southern remains, Liuzhuang/Mudong Road eastern vicinity and eastern foothills of Qionglong, with modern OSM locators. No complete registered excavation plan was obtained. Connecting edges are cartographic generalizations, not surveyed or continuous walls; hills may serve as natural barriers. This schematic polygon is about 25.9 km². Archaeological urban status does not establish identification with Helü’s historical capital; the location is disputed."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.4786,
+              31.2804
+            ],
+            [
+              120.4868,
+              31.278
+            ],
+            [
+              120.491,
+              31.267
+            ],
+            [
+              120.5,
+              31.253
+            ],
+            [
+              120.51,
+              31.244
+            ],
+            [
+              120.51,
+              31.233
+            ],
+            [
+              120.505,
+              31.2197
+            ],
+            [
+              120.498,
+              31.2195
+            ],
+            [
+              120.485,
+              31.225
+            ],
+            [
+              120.472,
+              31.23
+            ],
+            [
+              120.46,
+              31.236
+            ],
+            [
+              120.447,
+              31.241
+            ],
+            [
+              120.44,
+              31.249
+            ],
+            [
+              120.442,
+              31.255
+            ],
+            [
+              120.454,
+              31.264
+            ],
+            [
+              120.466,
+              31.272
+            ],
+            [
+              120.4786,
+              31.2804
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "suzhouHistoricalDetail": true,
+        "capitalSiteKey": "ancient-site:苏州:31.29890,120.58530",
+        "capitalSiteName": "苏州",
+        "capitalSiteDisplayName": "吴都（姑苏／阖闾城）",
+        "city": "苏州",
+        "period": "周",
+        "periods": [
+          "周"
+        ],
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "sourceUrl": "./sources/suzhou-wu.html",
+        "sourceTitle": "吴都地望与木渎—胥口考古城址",
+        "dispute": "阖闾城位置存在争议",
+        "enDispute": "The location of Helü’s capital is disputed",
+        "labelMinZoom": 10,
+        "lineOpacity": 0.8,
+        "fillOpacity": 0,
+        "id": "suzhou-wu-current-city-candidate",
+        "sourceId": "suzhou-wu-current-city-candidate",
+        "sourceName": "吴都候选：今苏州古城（虚线参照）",
+        "enName": "Wu capital candidate: present Suzhou old city (dashed reference)",
+        "enSourceName": "Wu capital candidate: present Suzhou old city (dashed reference)",
+        "label": "今苏州古城候选框\n阖闾城位置存在争议",
+        "enLabel": "Suzhou old-city candidate\nHelü capital location disputed",
+        "referenceUrl": "https://dfzb.suzhou.gov.cn/dfzb/fzxh/201107/2670e6a6682149a0b0777b63d30eecf3.shtml",
+        "status": "传统地望说 · 虚线候选框，非春秋城界",
+        "enStatus": "Traditional location hypothesis; dashed candidate outline, not Spring and Autumn walls",
+        "labelCoordinates": [
+          120.621,
+          31.281
+        ],
+        "wuCapitalCandidate": "traditional-city",
+        "note": "为比较“今苏州古城为阖闾城”的传统地望说，复用项目已有BIAM明清苏州古城外轮廓作现代古城位置参照，以空心虚线候选框表达。不是把明清城墙年代改为春秋，也不是声称已发掘同形同规模的吴国城墙。苏州地方志明确列出今苏州城、木渎及无锡—常州等不同地望观点。本轮重点比较木渎—胥口与今苏州古城两处；这不表示争议仅有两种方案。原明清城郭、元代盘门、宋元子城及全部现存遗迹保持各自分期。阖闾城位置存在争议。",
+        "enNote": "A hollow dashed comparison outline for the traditional hypothesis identifying Helü’s capital with today’s Suzhou old city. Reuses the existing BIAM Ming–Qing circuit only as a locator for the present historic core. It does not redate those walls or claim a matching excavated Spring and Autumn circuit. Other proposed locations include the Wuxi–Changzhou site; the two displayed candidates are not an exhaustive list. Existing Yuan, Song and Ming–Qing remains retain their own chronology. Helü’s capital location is disputed."
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                120.640672,
+                31.292857
+              ],
+              [
+                120.637451,
+                31.292251
+              ],
+              [
+                120.627722,
+                31.290937
+              ],
+              [
+                120.626635,
+                31.290672
+              ],
+              [
+                120.621041,
+                31.290239
+              ],
+              [
+                120.614329,
+                31.289609
+              ],
+              [
+                120.613438,
+                31.289743
+              ],
+              [
+                120.61192,
+                31.289753
+              ],
+              [
+                120.611868,
+                31.289168
+              ],
+              [
+                120.610652,
+                31.289025
+              ],
+              [
+                120.610503,
+                31.28907
+              ],
+              [
+                120.610349,
+                31.289331
+              ],
+              [
+                120.609925,
+                31.291349
+              ],
+              [
+                120.609328,
+                31.295675
+              ],
+              [
+                120.6088,
+                31.296447
+              ],
+              [
+                120.608603,
+                31.297531
+              ],
+              [
+                120.608515,
+                31.298671
+              ],
+              [
+                120.6084,
+                31.299103
+              ],
+              [
+                120.607883,
+                31.30257
+              ],
+              [
+                120.607867,
+                31.302797
+              ],
+              [
+                120.607805,
+                31.302861
+              ],
+              [
+                120.607569,
+                31.303623
+              ],
+              [
+                120.606861,
+                31.305061
+              ],
+              [
+                120.606836,
+                31.305275
+              ],
+              [
+                120.606632,
+                31.305663
+              ],
+              [
+                120.606529,
+                31.306007
+              ],
+              [
+                120.605403,
+                31.308344
+              ],
+              [
+                120.603972,
+                31.30889
+              ],
+              [
+                120.602452,
+                31.312132
+              ],
+              [
+                120.602493,
+                31.312592
+              ],
+              [
+                120.6022,
+                31.313695
+              ],
+              [
+                120.601896,
+                31.316198
+              ],
+              [
+                120.601742,
+                31.316272
+              ],
+              [
+                120.601675,
+                31.317105
+              ],
+              [
+                120.601426,
+                31.317047
+              ],
+              [
+                120.601244,
+                31.31775
+              ],
+              [
+                120.601435,
+                31.318078
+              ],
+              [
+                120.601488,
+                31.318641
+              ],
+              [
+                120.600572,
+                31.323423
+              ],
+              [
+                120.600407,
+                31.324281
+              ],
+              [
+                120.600508,
+                31.324692
+              ],
+              [
+                120.601294,
+                31.325032
+              ],
+              [
+                120.603649,
+                31.325455
+              ],
+              [
+                120.604642,
+                31.325969
+              ],
+              [
+                120.605315,
+                31.327386
+              ],
+              [
+                120.605346,
+                31.32816
+              ],
+              [
+                120.605726,
+                31.328389
+              ],
+              [
+                120.608445,
+                31.328847
+              ],
+              [
+                120.610155,
+                31.328964
+              ],
+              [
+                120.622933,
+                31.331344
+              ],
+              [
+                120.626926,
+                31.331886
+              ],
+              [
+                120.627798,
+                31.332124
+              ],
+              [
+                120.628938,
+                31.33197
+              ],
+              [
+                120.629815,
+                31.33169
+              ],
+              [
+                120.634187,
+                31.332219
+              ],
+              [
+                120.634473,
+                31.332135
+              ],
+              [
+                120.634755,
+                31.331854
+              ],
+              [
+                120.634846,
+                31.330704
+              ],
+              [
+                120.635228,
+                31.328313
+              ],
+              [
+                120.635211,
+                31.32771
+              ],
+              [
+                120.635841,
+                31.325125
+              ],
+              [
+                120.636493,
+                31.322789
+              ],
+              [
+                120.63625,
+                31.32184
+              ],
+              [
+                120.634886,
+                31.320568
+              ],
+              [
+                120.635684,
+                31.316679
+              ],
+              [
+                120.635886,
+                31.316197
+              ],
+              [
+                120.636217,
+                31.31453
+              ],
+              [
+                120.636596,
+                31.313163
+              ],
+              [
+                120.63628,
+                31.311607
+              ],
+              [
+                120.636715,
+                31.308911
+              ],
+              [
+                120.637514,
+                31.308944
+              ],
+              [
+                120.639499,
+                31.300276
+              ],
+              [
+                120.640349,
+                31.294604
+              ],
+              [
+                120.640831,
+                31.292988
+              ],
+              [
+                120.640672,
+                31.292857
+              ]
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "capitalStagesByKey": {
+    "ancient-site:苏州:31.29890,120.58530": [
+      {
+        "name": "吴都 · 姑苏／阖闾城（地望有争议）",
+        "boundaryStatus": "重点显示木渎—胥口约24.8 km²考古城址地望范围；今苏州古城另作虚线候选框",
+        "summary": "木渎—胥口是经考古确认的都邑性城址，城址性质与阖闾都城身份分别说明。今苏州古城仅作传统地望候选，不把后世城郭当作春秋墙界。阖闾城位置存在争议。",
+        "sources": [
+          {
+            "title": "苏州地方志：众说纷纭的阖闾古城",
+            "url": "https://dfzb.suzhou.gov.cn/dfzb/fzxh/201107/2670e6a6682149a0b0777b63d30eecf3.shtml"
+          },
+          {
+            "title": "苏州图书馆：吴国历史讲座，木渎城址约24.79 km²",
+            "url": "https://www.szlib.com/DR/SuzhouForums/Content/357"
+          },
+          {
+            "title": "江苏省吴文化学会、苏州博物馆：2017年学术研讨会综述",
+            "url": "https://yangtze.silkroadinfo.org.cn/2017/11/30/20171130110601.pdf"
+          }
+        ]
+      },
+      {
+        "name": "张吴 · 平江",
+        "boundaryStatus": "保留元代盘门遗构与宋元子城地望参考",
+        "summary": "元代与宋元遗存保持原有分期，不将吴都候选范围当作张吴王府城界。",
+        "sources": [
+          {
+            "title": "苏州城垣与子城分期依据",
+            "url": "https://dfzb.suzhou.gov.cn/dfzb/fzxh/201010/dac10c8400b347af8cad9ae1f9985489.shtml"
+          }
+        ]
+      }
+    ]
+  },
+  "audit": "./docs/suzhou-wu-candidates.json"
+}

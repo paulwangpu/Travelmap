@@ -1,0 +1,3335 @@
+{
+  "date": "2026-10-23",
+  "featureCount": 21,
+  "baseline": {
+    "data/ancient-capital-research-extents.geojson": "b8d8b01fe61b02e6cbb5422ce9868f7602cf2e8dba92a0efda98465aa3c53d81",
+    "data/ancient-capital-walls.geojson": "6fcbe02da579ec50ffd0f8f738904c4460e3a73d37ec644664ad913b20224da2",
+    "data/china-ancient-capitals.json": "83505a84d4828b9bea80af6198c9b278799af13059319994c23f356ef70749e9",
+    "data/classical-sites/sites.geojson": "b01790134d4c84ed86df470d7fe66c6cafb6899d65141353d98730f7c5fb9d47",
+    "data/imperial-tombs/catalog.json": "128f2abe0b96279ad59537acae52227f52a3471591ae96c8216243e82312e0f4"
+  },
+  "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-qin-great-city",
+        "sourceId": "chengdu-qin-great-city",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "周",
+        "periods": [
+          "周",
+          "秦汉",
+          "魏晋南北朝"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "秦汉大城（龟城东部）",
+        "label": "秦汉大城（龟城东部）",
+        "enName": "Qin–Han Great City (eastern Tortoise City)",
+        "enSourceName": "Qin–Han Great City (eastern Tortoise City)",
+        "enLabel": "Qin–Han Great City (eastern Tortoise City)",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://www.lsdlyj.com.cn/EN/abstract/article/2096-6822/70654",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "fillReference": true,
+        "fillOpacity": 0.045,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 12,
+        "status": "文献复原参考，非实测墙界",
+        "enStatus": "Historical reconstruction reference, not a surveyed wall boundary",
+        "note": "按伍磊《顺江山之形》图2转绘。龟城指大城在东、少城在西的组合，不另建第三个城圈。图件以石犀出土地块、协进中学、万里桥三个现代地段参照作相似配准；这些不是发掘测量控制点，拟合残差约79—126米仅说明图件与地段参照的相容性，不能当作墙界精度。保留论文斜向布局与南墙折线；绝对位置仍为百米量级研究参考。秦初筑城年代文献有前311／前310年等表述，不将其写成确定单年；同一城址在汉、蜀汉与成汉等时期沿用，不代表各期墙体完全相同。",
+        "enNote": "Digitized from Wu Lei Fig.2. Tortoise City denotes the combined eastern Great City and western Lesser City, not a third enclosure. Three modern contextual proxies support a similarity registration; their 79–126 m residuals are not boundary accuracy. The oblique layout and southern turns are retained. Absolute placement remains approximate at a scale of hundreds of metres; Qin, Han and later reuse does not imply identical surviving walls.",
+        "labelCoordinates": [
+          104.0642546,
+          30.6656109
+        ],
+        "registration": "qin-fig2"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.0626495,
+              30.6691966
+            ],
+            [
+              104.0702192,
+              30.6668336
+            ],
+            [
+              104.0661181,
+              30.6580678
+            ],
+            [
+              104.0656337,
+              30.6573397
+            ],
+            [
+              104.0651422,
+              30.6568658
+            ],
+            [
+              104.0649124,
+              30.656493
+            ],
+            [
+              104.0643597,
+              30.656347
+            ],
+            [
+              104.0637348,
+              30.6562341
+            ],
+            [
+              104.0631414,
+              30.6562415
+            ],
+            [
+              104.0626314,
+              30.6563149
+            ],
+            [
+              104.0618393,
+              30.6564619
+            ],
+            [
+              104.061036,
+              30.6565099
+            ],
+            [
+              104.0600115,
+              30.6566955
+            ],
+            [
+              104.0590275,
+              30.6569239
+            ],
+            [
+              104.05796,
+              30.6572823
+            ],
+            [
+              104.0569803,
+              30.657864
+            ],
+            [
+              104.0626495,
+              30.6691966
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-qin-lesser-city",
+        "sourceId": "chengdu-qin-lesser-city",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "周",
+        "periods": [
+          "周",
+          "秦汉",
+          "魏晋南北朝"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "秦汉少城（龟城西部）",
+        "label": "秦汉少城（龟城西部）",
+        "enName": "Qin–Han Lesser City (western Tortoise City)",
+        "enSourceName": "Qin–Han Lesser City (western Tortoise City)",
+        "enLabel": "Qin–Han Lesser City (western Tortoise City)",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://www.lsdlyj.com.cn/EN/abstract/article/2096-6822/70654",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "fillReference": true,
+        "fillOpacity": 0.045,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 12,
+        "status": "文献复原参考，非实测墙界",
+        "enStatus": "Historical reconstruction reference, not a surveyed wall boundary",
+        "note": "按伍磊《顺江山之形》图2转绘。龟城指大城在东、少城在西的组合，不另建第三个城圈。图件以石犀出土地块、协进中学、万里桥三个现代地段参照作相似配准；这些不是发掘测量控制点，拟合残差约79—126米仅说明图件与地段参照的相容性，不能当作墙界精度。保留论文斜向布局与南墙折线；绝对位置仍为百米量级研究参考。秦初筑城年代文献有前311／前310年等表述，不将其写成确定单年；同一城址在汉、蜀汉与成汉等时期沿用，不代表各期墙体完全相同。 秦少城与清代满城不是同一期城址边界。",
+        "enNote": "Digitized from Wu Lei Fig.2. Tortoise City denotes the combined eastern Great City and western Lesser City, not a third enclosure. Three modern contextual proxies support a similarity registration; their 79–126 m residuals are not boundary accuracy. The oblique layout and southern turns are retained. Absolute placement remains approximate at a scale of hundreds of metres; Qin, Han and later reuse does not imply identical surviving walls. This is not the Qing Manchu garrison enclosure.",
+        "labelCoordinates": [
+          104.0594864,
+          30.6689617
+        ],
+        "registration": "qin-fig2"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.0579596,
+              30.6707114
+            ],
+            [
+              104.0626495,
+              30.6691966
+            ],
+            [
+              104.0569803,
+              30.657864
+            ],
+            [
+              104.0526552,
+              30.6601553
+            ],
+            [
+              104.0579596,
+              30.6707114
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-tang-luocheng",
+        "sourceId": "chengdu-tang-luocheng",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "隋唐",
+        "periods": [
+          "隋唐",
+          "五代十国",
+          "宋辽金西夏",
+          "元"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "晚唐罗城",
+        "label": "晚唐罗城",
+        "enName": "Late Tang outer city (Luocheng)",
+        "enSourceName": "Late Tang outer city (Luocheng)",
+        "enLabel": "Late Tang outer city (Luocheng)",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://www.thepaper.cn/newsDetail_forward_18791185",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "fillReference": true,
+        "fillOpacity": 0.045,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 12,
+        "status": "文献复原参考，非实测墙界",
+        "enStatus": "Historical reconstruction reference, not a surveyed wall boundary",
+        "note": "按方志四川公布《唐季扩充罗城图》转绘黑色古城线，不采用图中细线清城作唐城。以图上清城四处转折和原有BIAM明清粗范围作仿射参照，参照误差约139—177米，不能作考古墙界精度；街道级局部位置仍待可靠考古总图核正。该图属于概略历史复原，现代现存墙段另保留原始OSM，绝不移动遗迹来迁就本图。 高骈于876年扩筑罗城；五代、宋元有沿用与修缮，不能把这条晚唐概略线当作每期精确现状。羊马城有文献和考古讨论，但完整走向未可靠配准，本次不补猜测圈。",
+        "enNote": "Traced from the ancient-wall line on the Sichuan local-history Late Tang plate, not its Qing outline. Four Qing-outline turns and the unchanged coarse BIAM circuit provide approximate affine context, with 139–177 m contextual residuals, not archaeological accuracy. Street-scale placement awaits an archaeological master plan; original OSM remains are retained separately and never moved to fit this diagram. Gao Pian built the circuit in 876. Later reuse and repairs do not make this an exact surveyed outline for every phase. No speculative Yangma defensive circuit is added.",
+        "labelCoordinates": [
+          104.0779918,
+          30.6736854
+        ],
+        "registration": "tang-local-history"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.0616051,
+              30.6812484
+            ],
+            [
+              104.0638064,
+              30.6808027
+            ],
+            [
+              104.0674779,
+              30.6790883
+            ],
+            [
+              104.0716583,
+              30.6775716
+            ],
+            [
+              104.0757028,
+              30.6759278
+            ],
+            [
+              104.0793495,
+              30.6743989
+            ],
+            [
+              104.0842227,
+              30.6722779
+            ],
+            [
+              104.0883666,
+              30.669892
+            ],
+            [
+              104.0902926,
+              30.6680754
+            ],
+            [
+              104.0907948,
+              30.66604
+            ],
+            [
+              104.0895763,
+              30.663717
+            ],
+            [
+              104.0875837,
+              30.6603216
+            ],
+            [
+              104.0851998,
+              30.6564211
+            ],
+            [
+              104.0835287,
+              30.6529091
+            ],
+            [
+              104.0813373,
+              30.6509978
+            ],
+            [
+              104.0783353,
+              30.6499984
+            ],
+            [
+              104.0736708,
+              30.6511318
+            ],
+            [
+              104.0694705,
+              30.6516555
+            ],
+            [
+              104.064695,
+              30.6524762
+            ],
+            [
+              104.0600818,
+              30.6509435
+            ],
+            [
+              104.0561003,
+              30.6538294
+            ],
+            [
+              104.0529261,
+              30.6546868
+            ],
+            [
+              104.0501844,
+              30.6557403
+            ],
+            [
+              104.0480031,
+              30.6571789
+            ],
+            [
+              104.0464832,
+              30.6588187
+            ],
+            [
+              104.0455152,
+              30.6609054
+            ],
+            [
+              104.0453264,
+              30.662886
+            ],
+            [
+              104.0458255,
+              30.6654406
+            ],
+            [
+              104.0475512,
+              30.6674032
+            ],
+            [
+              104.0487713,
+              30.6702845
+            ],
+            [
+              104.0498307,
+              30.6732242
+            ],
+            [
+              104.0510492,
+              30.6755472
+            ],
+            [
+              104.0529688,
+              30.6772041
+            ],
+            [
+              104.0558183,
+              30.6782
+            ],
+            [
+              104.0581523,
+              30.6796183
+            ],
+            [
+              104.0599939,
+              30.6807151
+            ],
+            [
+              104.0616051,
+              30.6812484
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-sui-tang-zicheng",
+        "sourceId": "chengdu-sui-tang-zicheng",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "隋唐",
+        "periods": [
+          "隋唐"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "隋唐子城",
+        "label": "隋唐子城",
+        "enName": "Sui–Tang inner city (Zicheng)",
+        "enSourceName": "Sui–Tang inner city (Zicheng)",
+        "enLabel": "Sui–Tang inner city (Zicheng)",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://www.thepaper.cn/newsDetail_forward_18791185",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "fillReference": true,
+        "fillOpacity": 0.045,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 12,
+        "status": "文献复原参考，非实测墙界",
+        "enStatus": "Historical reconstruction reference, not a surveyed wall boundary",
+        "note": "按方志四川公布《唐季扩充罗城图》转绘黑色古城线，不采用图中细线清城作唐城。以图上清城四处转折和原有BIAM明清粗范围作仿射参照，参照误差约139—177米，不能作考古墙界精度；街道级局部位置仍待可靠考古总图核正。该图属于概略历史复原，现代现存墙段另保留原始OSM，绝不移动遗迹来迁就本图。 本面表达晚唐图中子城的概略范围，与秦大城图为不同时期、不同研究图，不要求彼此完全重合。隋蜀王杨秀增筑西南二隅的记载，不足以将本图全部认定为隋代初筑城墙。明蜀王府为后世重建，不能反推杨秀王城。前后蜀宫城只在详情说明，未拿整个子城冒充内宫。",
+        "enNote": "Traced from the ancient-wall line on the Sichuan local-history Late Tang plate, not its Qing outline. Four Qing-outline turns and the unchanged coarse BIAM circuit provide approximate affine context, with 139–177 m contextual residuals, not archaeological accuracy. Street-scale placement awaits an archaeological master plan; original OSM remains are retained separately and never moved to fit this diagram. This is the approximate inner city shown in the Late Tang plate, not a surveyed Sui founding circuit. Yang Xiu’s southwest expansion cannot establish every wall here. Neither the later Ming palace nor the entire inner city establishes the Five Dynasties palace perimeter.",
+        "labelCoordinates": [
+          104.063925,
+          30.666787
+        ],
+        "registration": "tang-local-history"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.0685615,
+              30.6704292
+            ],
+            [
+              104.0666718,
+              30.6702617
+            ],
+            [
+              104.0641422,
+              30.6685909
+            ],
+            [
+              104.0617205,
+              30.6689694
+            ],
+            [
+              104.0602552,
+              30.6690598
+            ],
+            [
+              104.0591097,
+              30.6684752
+            ],
+            [
+              104.0592007,
+              30.6649417
+            ],
+            [
+              104.0582093,
+              30.6620656
+            ],
+            [
+              104.0583185,
+              30.6589667
+            ],
+            [
+              104.057473,
+              30.6567142
+            ],
+            [
+              104.0599593,
+              30.6552827
+            ],
+            [
+              104.0633889,
+              30.6548032
+            ],
+            [
+              104.0663395,
+              30.6556154
+            ],
+            [
+              104.0690928,
+              30.6556167
+            ],
+            [
+              104.0704173,
+              30.6565775
+            ],
+            [
+              104.0700013,
+              30.6591111
+            ],
+            [
+              104.0696517,
+              30.66115
+            ],
+            [
+              104.0709747,
+              30.6644059
+            ],
+            [
+              104.0708289,
+              30.6666356
+            ],
+            [
+              104.0700997,
+              30.669224
+            ],
+            [
+              104.0685615,
+              30.6704292
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-ming-shu-palace",
+        "sourceId": "chengdu-ming-shu-palace",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "明",
+        "periods": [
+          "明"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "明蜀王府宫城",
+        "label": "明蜀王府宫城",
+        "enName": "Ming Prince of Shu palace enclosure",
+        "enSourceName": "Ming Prince of Shu palace enclosure",
+        "enLabel": "Ming Prince of Shu palace enclosure",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://cdmuseum.com/xinwen/202011/1729.html",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "fillReference": true,
+        "fillOpacity": 0.045,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 12,
+        "status": "文献复原参考，非实测墙界",
+        "enStatus": "Historical reconstruction reference, not a surveyed wall boundary",
+        "note": "根据成都博物馆的蜀王府说明及公开四至记载，以现存西华门街、东华门街、人民东／西路、东／西御河沿街的OSM街道位置作闭合街区参照。此线表示明蜀王府宫墙的大致位置，不是已发掘墙基实测；未沿道路逐段查明墙基与路中线关系，误差可达数十米。宫墙与外萧墙分别表达。东华门现代展示区保持原几何，不拿它替代全府范围。",
+        "enNote": "The documented palace enclosure is referenced to original OSM positions of Xihuamen, Donghuamen, Renmin East/West and Yuheyan streets. This is a closed contextual perimeter, not an excavated wall survey; road-to-foundation offsets remain unresolved and may be tens of metres. The palace wall and outer Xiaoqiang are separate. The original Donghuamen display area is unchanged.",
+        "historicalBegin": 1390,
+        "labelCoordinates": [
+          104.0631,
+          30.66715
+        ],
+        "sourceIds": [
+          "way/100285953",
+          "way/115625961",
+          "way/358373080",
+          "way/589466825"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.06013,
+              30.66085
+            ],
+            [
+              104.06639,
+              30.66093
+            ],
+            [
+              104.06632,
+              30.66779
+            ],
+            [
+              104.05991,
+              30.66769
+            ],
+            [
+              104.06013,
+              30.66085
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-ming-shu-xiaoqiang",
+        "sourceId": "chengdu-ming-shu-xiaoqiang",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "明",
+        "periods": [
+          "明"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "明蜀王府萧墙",
+        "label": "明蜀王府萧墙",
+        "enName": "Ming Shu palace outer Xiaoqiang enclosure",
+        "enSourceName": "Ming Shu palace outer Xiaoqiang enclosure",
+        "enLabel": "Ming Shu palace outer Xiaoqiang enclosure",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://scdfz.sc.gov.cn/Upload/main/ContentManage/Article/File/202106161436291225.pdf",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "fillReference": true,
+        "fillOpacity": 0.045,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 12,
+        "status": "文献复原参考，非实测墙界",
+        "enStatus": "Historical reconstruction reference, not a surveyed wall boundary",
+        "note": "依四川地方志公开文献的四至：东顺城街、西东城根街、南东西御街、北羊市街与玉龙街，参照原始OSM街道位置构成闭合研究面。具体墙基相对于街道的偏移尚未逐段确定；不是完整考古实测范围，也不是成都全城城墙。与内侧宫墙分别显示，避免混淆。",
+        "enNote": "A closed contextual reference follows the documented modern street limits: Shuncheng, Dongchenggen, East/West Yu streets and Yangshi/Yulong streets. Wall-foundation offsets remain unresolved. This is neither a complete archaeological survey nor the full Chengdu city circuit; it is separate from the inner palace enclosure.",
+        "historicalBegin": 1390,
+        "labelCoordinates": [
+          104.0637,
+          30.669
+        ],
+        "sourceIds": [
+          "way/28620975",
+          "way/28620976",
+          "way/103295084",
+          "way/1369175162",
+          "way/1284359670"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.05816,
+              30.65877
+            ],
+            [
+              104.06857,
+              30.65862
+            ],
+            [
+              104.06817,
+              30.66952
+            ],
+            [
+              104.06316,
+              30.66947
+            ],
+            [
+              104.05782,
+              30.66931
+            ],
+            [
+              104.05816,
+              30.65877
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-wall-550355735",
+        "sourceId": "chengdu-wall-550355735",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "北校场城墙遗址",
+        "label": "北校场城墙遗址",
+        "enName": "Beijiaochang wall remains",
+        "enSourceName": "Beijiaochang wall remains",
+        "enLabel": "Beijiaochang wall remains",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://www.openstreetmap.org/way/550355735",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "fillReference": false,
+        "fillOpacity": 0.15,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 14,
+        "status": "现存／修缮墙段原始OSM标绘，非分期考古测绘",
+        "enStatus": "Original OSM mapping of extant/restored wall fabric; not a phase-specific archaeological survey",
+        "note": "成都老城墙遗址群OSM relation 17924600成员的原始标绘，节点与开放／闭合性质原样保留。这里只表示现存、修缮及局部复建后的墙段，分期挂接明清城垣背景；未经墙体分期发掘报告逐段证实，不倒推为秦、隋唐墙，也不宣称表面均为明代原物。OSM“北城墙残段”“东城墙”等原名保留，不据名称推断其位于全城的北面或东面。",
+        "enNote": "Original geometry from OSM relation 17924600 is retained, including open ends and closed component footprints. Surviving/restored fabric is contextualized under Ming–Qing, without asserting that all visible fabric is original Ming or that these are Qin or Tang walls. Original OSM segment names do not establish their orientation within the whole circuit.",
+        "osm": true,
+        "sourceIds": [
+          "way/550355735"
+        ],
+        "historicalBegin": 1368
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            104.0606183,
+            30.6834241
+          ],
+          [
+            104.0604708,
+            30.6835694
+          ],
+          [
+            104.0602321,
+            30.6835832
+          ],
+          [
+            104.0601677,
+            30.6830919
+          ],
+          [
+            104.0601114,
+            30.6828128
+          ],
+          [
+            104.0599719,
+            30.682333
+          ],
+          [
+            104.0598726,
+            30.6820101
+          ],
+          [
+            104.0597707,
+            30.6816618
+          ],
+          [
+            104.0596849,
+            30.6813826
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-wall-835276849",
+        "sourceId": "chengdu-wall-835276849",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "东城墙",
+        "label": "东城墙",
+        "enName": "Eastern wall segment",
+        "enSourceName": "Eastern wall segment",
+        "enLabel": "Eastern wall segment",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://www.openstreetmap.org/way/835276849",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "fillReference": false,
+        "fillOpacity": 0.15,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 14,
+        "status": "现存／修缮墙段原始OSM标绘，非分期考古测绘",
+        "enStatus": "Original OSM mapping of extant/restored wall fabric; not a phase-specific archaeological survey",
+        "note": "成都老城墙遗址群OSM relation 17924600成员的原始标绘，节点与开放／闭合性质原样保留。这里只表示现存、修缮及局部复建后的墙段，分期挂接明清城垣背景；未经墙体分期发掘报告逐段证实，不倒推为秦、隋唐墙，也不宣称表面均为明代原物。OSM“北城墙残段”“东城墙”等原名保留，不据名称推断其位于全城的北面或东面。",
+        "enNote": "Original geometry from OSM relation 17924600 is retained, including open ends and closed component footprints. Surviving/restored fabric is contextualized under Ming–Qing, without asserting that all visible fabric is original Ming or that these are Qin or Tang walls. Original OSM segment names do not establish their orientation within the whole circuit.",
+        "osm": true,
+        "sourceIds": [
+          "way/835276849"
+        ],
+        "historicalBegin": 1368
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            104.0792401,
+            30.6476636
+          ],
+          [
+            104.0794464,
+            30.6478748
+          ],
+          [
+            104.0798607,
+            30.6484153
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-wall-1306881932",
+        "sourceId": "chengdu-wall-1306881932",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "成都城墙遗存段",
+        "label": "成都城墙遗存段",
+        "enName": "Chengdu surviving wall segment",
+        "enSourceName": "Chengdu surviving wall segment",
+        "enLabel": "Chengdu surviving wall segment",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://www.openstreetmap.org/way/1306881932",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "fillReference": false,
+        "fillOpacity": 0.15,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 14,
+        "status": "现存／修缮墙段原始OSM标绘，非分期考古测绘",
+        "enStatus": "Original OSM mapping of extant/restored wall fabric; not a phase-specific archaeological survey",
+        "note": "成都老城墙遗址群OSM relation 17924600成员的原始标绘，节点与开放／闭合性质原样保留。这里只表示现存、修缮及局部复建后的墙段，分期挂接明清城垣背景；未经墙体分期发掘报告逐段证实，不倒推为秦、隋唐墙，也不宣称表面均为明代原物。OSM“北城墙残段”“东城墙”等原名保留，不据名称推断其位于全城的北面或东面。",
+        "enNote": "Original geometry from OSM relation 17924600 is retained, including open ends and closed component footprints. Surviving/restored fabric is contextualized under Ming–Qing, without asserting that all visible fabric is original Ming or that these are Qin or Tang walls. Original OSM segment names do not establish their orientation within the whole circuit.",
+        "osm": true,
+        "sourceIds": [
+          "way/1306881932"
+        ],
+        "historicalBegin": 1368
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            104.0745807,
+            30.6490533
+          ],
+          [
+            104.0747473,
+            30.6489682
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-wall-1306881933",
+        "sourceId": "chengdu-wall-1306881933",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "水东门城墙",
+        "label": "水东门城墙",
+        "enName": "Shuidongmen wall",
+        "enSourceName": "Shuidongmen wall",
+        "enLabel": "Shuidongmen wall",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://www.openstreetmap.org/way/1306881933",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "fillReference": false,
+        "fillOpacity": 0.15,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 14,
+        "status": "现存／修缮墙段原始OSM标绘，非分期考古测绘",
+        "enStatus": "Original OSM mapping of extant/restored wall fabric; not a phase-specific archaeological survey",
+        "note": "成都老城墙遗址群OSM relation 17924600成员的原始标绘，节点与开放／闭合性质原样保留。这里只表示现存、修缮及局部复建后的墙段，分期挂接明清城垣背景；未经墙体分期发掘报告逐段证实，不倒推为秦、隋唐墙，也不宣称表面均为明代原物。OSM“北城墙残段”“东城墙”等原名保留，不据名称推断其位于全城的北面或东面。",
+        "enNote": "Original geometry from OSM relation 17924600 is retained, including open ends and closed component footprints. Surviving/restored fabric is contextualized under Ming–Qing, without asserting that all visible fabric is original Ming or that these are Qin or Tang walls. Original OSM segment names do not establish their orientation within the whole circuit.",
+        "osm": true,
+        "sourceIds": [
+          "way/1306881933"
+        ],
+        "historicalBegin": 1368
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.0867838,
+              30.6598585
+            ],
+            [
+              104.0866808,
+              30.6596829
+            ],
+            [
+              104.0867348,
+              30.6596593
+            ],
+            [
+              104.0867266,
+              30.6596457
+            ],
+            [
+              104.0866721,
+              30.6596681
+            ],
+            [
+              104.0866203,
+              30.6595797
+            ],
+            [
+              104.0865788,
+              30.6595089
+            ],
+            [
+              104.0868063,
+              30.6594101
+            ],
+            [
+              104.0869083,
+              30.659584
+            ],
+            [
+              104.0870114,
+              30.6597597
+            ],
+            [
+              104.0867838,
+              30.6598585
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-wall-1306881934",
+        "sourceId": "chengdu-wall-1306881934",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "北城墙残段",
+        "label": "北城墙残段",
+        "enName": "Northern wall remnant",
+        "enSourceName": "Northern wall remnant",
+        "enLabel": "Northern wall remnant",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://www.openstreetmap.org/way/1306881934",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "fillReference": false,
+        "fillOpacity": 0.15,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 14,
+        "status": "现存／修缮墙段原始OSM标绘，非分期考古测绘",
+        "enStatus": "Original OSM mapping of extant/restored wall fabric; not a phase-specific archaeological survey",
+        "note": "成都老城墙遗址群OSM relation 17924600成员的原始标绘，节点与开放／闭合性质原样保留。这里只表示现存、修缮及局部复建后的墙段，分期挂接明清城垣背景；未经墙体分期发掘报告逐段证实，不倒推为秦、隋唐墙，也不宣称表面均为明代原物。OSM“北城墙残段”“东城墙”等原名保留，不据名称推断其位于全城的北面或东面。",
+        "enNote": "Original geometry from OSM relation 17924600 is retained, including open ends and closed component footprints. Surviving/restored fabric is contextualized under Ming–Qing, without asserting that all visible fabric is original Ming or that these are Qin or Tang walls. Original OSM segment names do not establish their orientation within the whole circuit.",
+        "osm": true,
+        "sourceIds": [
+          "way/1306881934"
+        ],
+        "historicalBegin": 1368
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            104.0911847,
+            30.6673003
+          ],
+          [
+            104.0914064,
+            30.6677472
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-wall-1306881936",
+        "sourceId": "chengdu-wall-1306881936",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "水西门城墙",
+        "label": "水西门城墙",
+        "enName": "Shuiximen wall",
+        "enSourceName": "Shuiximen wall",
+        "enLabel": "Shuiximen wall",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://www.openstreetmap.org/way/1306881936",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "fillReference": false,
+        "fillOpacity": 0.15,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 14,
+        "status": "现存／修缮墙段原始OSM标绘，非分期考古测绘",
+        "enStatus": "Original OSM mapping of extant/restored wall fabric; not a phase-specific archaeological survey",
+        "note": "成都老城墙遗址群OSM relation 17924600成员的原始标绘，节点与开放／闭合性质原样保留。这里只表示现存、修缮及局部复建后的墙段，分期挂接明清城垣背景；未经墙体分期发掘报告逐段证实，不倒推为秦、隋唐墙，也不宣称表面均为明代原物。OSM“北城墙残段”“东城墙”等原名保留，不据名称推断其位于全城的北面或东面。",
+        "enNote": "Original geometry from OSM relation 17924600 is retained, including open ends and closed component footprints. Surviving/restored fabric is contextualized under Ming–Qing, without asserting that all visible fabric is original Ming or that these are Qin or Tang walls. Original OSM segment names do not establish their orientation within the whole circuit.",
+        "osm": true,
+        "sourceIds": [
+          "way/1306881936"
+        ],
+        "historicalBegin": 1368
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            104.0481507,
+            30.6671804
+          ],
+          [
+            104.0478546,
+            30.6667633
+          ],
+          [
+            104.0476615,
+            30.6667633
+          ],
+          [
+            104.0475156,
+            30.6664311
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-wall-1306881937",
+        "sourceId": "chengdu-wall-1306881937",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "防空洞城墙段",
+        "label": "防空洞城墙段",
+        "enName": "Air-raid shelter wall segment",
+        "enSourceName": "Air-raid shelter wall segment",
+        "enLabel": "Air-raid shelter wall segment",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://www.openstreetmap.org/way/1306881937",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "fillReference": false,
+        "fillOpacity": 0.15,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 14,
+        "status": "现存／修缮墙段原始OSM标绘，非分期考古测绘",
+        "enStatus": "Original OSM mapping of extant/restored wall fabric; not a phase-specific archaeological survey",
+        "note": "成都老城墙遗址群OSM relation 17924600成员的原始标绘，节点与开放／闭合性质原样保留。这里只表示现存、修缮及局部复建后的墙段，分期挂接明清城垣背景；未经墙体分期发掘报告逐段证实，不倒推为秦、隋唐墙，也不宣称表面均为明代原物。OSM“北城墙残段”“东城墙”等原名保留，不据名称推断其位于全城的北面或东面。",
+        "enNote": "Original geometry from OSM relation 17924600 is retained, including open ends and closed component footprints. Surviving/restored fabric is contextualized under Ming–Qing, without asserting that all visible fabric is original Ming or that these are Qin or Tang walls. Original OSM segment names do not establish their orientation within the whole circuit.",
+        "osm": true,
+        "sourceIds": [
+          "way/1306881937"
+        ],
+        "historicalBegin": 1368
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            104.0489612,
+            30.66947
+          ],
+          [
+            104.048765,
+            30.668798
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-jiangnanguan-site",
+        "sourceId": "chengdu-jiangnanguan-site",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "隋唐",
+        "periods": [
+          "隋唐",
+          "宋辽金西夏"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "江南馆街唐宋街坊遗址",
+        "label": "江南馆街唐宋街坊遗址",
+        "enName": "Jiangnanguan Tang–Song neighbourhood remains",
+        "enSourceName": "Jiangnanguan Tang–Song neighbourhood remains",
+        "enLabel": "Jiangnanguan Tang–Song neighbourhood remains",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都城门、街坊与多期遗址依据",
+        "referenceUrl": "https://cdmuseum.com/xinwen/202011/1849.html",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "fillReference": false,
+        "fillOpacity": 0.045,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 14,
+        "status": "原址保护遗址位置 · 原始OSM点位，非发掘区完整边界",
+        "enStatus": "Location of in-situ remains, original OSM point; not a complete excavation boundary",
+        "note": "原始OSM node 10790027173为原址保护街坊遗址的参照点，位于IFS门前玻璃展示区地段。成都博物馆记载这里保存铺砖街道、排水沟及天井等城市遗迹。本点不是IFS商场整体范围；公开坐标不足以重建各条道路、房址和发掘边界，本次不猜画内部建筑，也不把当代江南馆街当作唐宋道路。",
+        "enNote": "Original OSM node 10790027173 locates the in-situ Tang–Song neighbourhood display near the IFS forecourt. The Chengdu Museum describes brick streets, drains and courtyards. This is not the shopping-centre perimeter. No speculative ancient roads, houses or excavation outline are drawn from the single location.",
+        "sitePoint": true,
+        "osm": true,
+        "sourceIds": [
+          "node/10790027173"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.078448,
+          30.6562163
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-donghuamen-inner-site",
+        "sourceId": "chengdu-donghuamen-inner-site",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "魏晋南北朝",
+          "隋唐",
+          "五代十国",
+          "宋辽金西夏",
+          "明",
+          "清"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "东华门遗址（内场）",
+        "label": "东华门遗址（内场）",
+        "enName": "Donghuamen remains (inner display area)",
+        "enSourceName": "Donghuamen remains (inner display area)",
+        "enLabel": "Donghuamen remains (inner display area)",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都城门、街坊与多期遗址依据",
+        "referenceUrl": "https://cdmuseum.com/xinwen/202011/1729.html",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "fillReference": false,
+        "fillOpacity": 0.065,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 14,
+        "status": "多期遗址现代标绘范围 · 非古代宫城界",
+        "enStatus": "Modern mapped area of multi-period remains; not an ancient palace perimeter",
+        "note": "保留OSM way 1315352366的全部原始节点，补入已有外场展示区北侧的内场标绘。东华门遗址包含汉六朝生活遗存、隋唐宋摩诃池相关遗迹、明蜀王府宫墙和园林等多期遗存。此面是现代遗址标绘范围，不是历代宫墙、古池岸或单一建筑基址；未经可靠发掘总图不能在范围内凭空拆出宫殿。原有外场way 1204383950保持不动。",
+        "enNote": "All original nodes of OSM way 1315352366 are retained, supplementing the already mapped outer display area. Donghuamen contains multiple archaeological phases, including Han–Six Dynasties occupation, Sui–Tang–Song pond-related remains and Ming Shu palace/garden remains. This modern site outline is not an ancient palace wall, pond shoreline or individual building footprint. The existing outer-area way 1204383950 is unchanged.",
+        "osm": true,
+        "sourceIds": [
+          "way/1315352366"
+        ],
+        "labelCoordinates": [
+          104.06515,
+          30.66605
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.06527,
+              30.6651563
+            ],
+            [
+              104.0652504,
+              30.6651342
+            ],
+            [
+              104.0651395,
+              30.6650203
+            ],
+            [
+              104.065007,
+              30.6649408
+            ],
+            [
+              104.064816,
+              30.664909
+            ],
+            [
+              104.0646095,
+              30.6649222
+            ],
+            [
+              104.0644181,
+              30.6649914
+            ],
+            [
+              104.0643199,
+              30.6650547
+            ],
+            [
+              104.064209,
+              30.6651899
+            ],
+            [
+              104.064132,
+              30.6653304
+            ],
+            [
+              104.0640796,
+              30.6655026
+            ],
+            [
+              104.0640426,
+              30.6657093
+            ],
+            [
+              104.0640426,
+              30.665916
+            ],
+            [
+              104.0640765,
+              30.6661016
+            ],
+            [
+              104.0641505,
+              30.6663003
+            ],
+            [
+              104.064209,
+              30.6664328
+            ],
+            [
+              104.064283,
+              30.6665256
+            ],
+            [
+              104.0644154,
+              30.6666157
+            ],
+            [
+              104.0645695,
+              30.666674
+            ],
+            [
+              104.0647605,
+              30.6666952
+            ],
+            [
+              104.0649361,
+              30.6666766
+            ],
+            [
+              104.0650779,
+              30.666613
+            ],
+            [
+              104.0651765,
+              30.6665441
+            ],
+            [
+              104.0652504,
+              30.666462
+            ],
+            [
+              104.0652905,
+              30.6664169
+            ],
+            [
+              104.0653367,
+              30.6663401
+            ],
+            [
+              104.0653983,
+              30.6662049
+            ],
+            [
+              104.0654445,
+              30.6660433
+            ],
+            [
+              104.0654599,
+              30.6658498
+            ],
+            [
+              104.0654507,
+              30.6656855
+            ],
+            [
+              104.0654353,
+              30.6655132
+            ],
+            [
+              104.0653829,
+              30.6653569
+            ],
+            [
+              104.0653305,
+              30.6652535
+            ],
+            [
+              104.0652905,
+              30.6651793
+            ],
+            [
+              104.06527,
+              30.6651563
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-city-gate-east",
+        "sourceId": "chengdu-city-gate-east",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "迎晖门",
+        "label": "迎晖门",
+        "enName": "Yinghui Gate",
+        "enSourceName": "Yinghui Gate",
+        "enLabel": "Yinghui Gate",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都城门、街坊与多期遗址依据",
+        "referenceUrl": "https://www.xhuqk.com/xhdxxbzskb/cn/article/pdf/preview/10.19642/j.issn.1672-8505.2010.05.007.pdf",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "fillReference": false,
+        "fillOpacity": 0.045,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 14,
+        "status": "文献记载城门旧址地段 · 非现存门基测绘",
+        "enStatus": "Documentary former-site vicinity, not a surveyed surviving gate foundation",
+        "note": "依据袁庭栋《成都的城门》（2010）对现代街道、桥头的记载，结合原始OSM定位到旧址地段，非存世门楼、非考古测得门基。现状道路改建可能改变旧路口，定位仍有数十至百米量级不确定性；不把门点拉到原有粗城圈上，也不为迁就门点移动考古墙段。 东大街下东大街段临东门桥西侧桥头；避开桥面中点。",
+        "enNote": "Yuan Tingdong’s Gates of Chengdu (2010) relates the former gate to present streets/bridge approaches. Original OSM gives a contextual former-site location, not an extant gatehouse or surveyed foundation. Modern road changes leave uncertainty at a scale of tens to hundreds of metres. The point is not snapped to a coarse historic circuit, and archaeological walls are not moved to meet it. The western approach to Dongmen Bridge on Xia Dongdajie; not the middle of the bridge.",
+        "sitePoint": true,
+        "chengduGateReference": true,
+        "historicalBegin": 1371,
+        "sourceIds": [
+          "way/99988880",
+          "way/100287926"
+        ],
+        "cityGateReferencePoint": true,
+        "gateName": "迎晖门",
+        "enGateName": "Yinghui Gate",
+        "gatePositionQualifier": "旧址地段",
+        "enGatePositionQualifier": "former-site vicinity"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.08272,
+          30.65158
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-city-gate-south",
+        "sourceId": "chengdu-city-gate-south",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "江桥门",
+        "label": "江桥门",
+        "enName": "Jiangqiao Gate",
+        "enSourceName": "Jiangqiao Gate",
+        "enLabel": "Jiangqiao Gate",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都城门、街坊与多期遗址依据",
+        "referenceUrl": "https://www.xhuqk.com/xhdxxbzskb/cn/article/pdf/preview/10.19642/j.issn.1672-8505.2010.05.007.pdf",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "fillReference": false,
+        "fillOpacity": 0.045,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 14,
+        "status": "文献记载城门旧址地段 · 非现存门基测绘",
+        "enStatus": "Documentary former-site vicinity, not a surveyed surviving gate foundation",
+        "note": "依据袁庭栋《成都的城门》（2010）对现代街道、桥头的记载，结合原始OSM定位到旧址地段，非存世门楼、非考古测得门基。现状道路改建可能改变旧路口，定位仍有数十至百米量级不确定性；不把门点拉到原有粗城圈上，也不为迁就门点移动考古墙段。 旧南门与万里桥／南门桥相邻，参照中南大街南端桥北地段。明代名中和门，清代名江桥门；不与秦城江桥门的研究点混为同一期。",
+        "enNote": "Yuan Tingdong’s Gates of Chengdu (2010) relates the former gate to present streets/bridge approaches. Original OSM gives a contextual former-site location, not an extant gatehouse or surveyed foundation. Modern road changes leave uncertainty at a scale of tens to hundreds of metres. The point is not snapped to a coarse historic circuit, and archaeological walls are not moved to meet it. The old south gate near the northern approach to Nanmen/Wanli Bridge, referenced to Zhongnan Street. Its Ming name was Zhonghe and Qing name Jiangqiao; this is separate from the Qin-city gate.",
+        "sitePoint": true,
+        "chengduGateReference": true,
+        "historicalBegin": 1371,
+        "sourceIds": [
+          "way/459085969",
+          "way/1381986708"
+        ],
+        "cityGateReferencePoint": true,
+        "gateName": "江桥门",
+        "enGateName": "Jiangqiao Gate",
+        "gatePositionQualifier": "旧址地段",
+        "enGatePositionQualifier": "former-site vicinity",
+        "gateNamePhases": [
+          {
+            "period": "明",
+            "before": 9999,
+            "name": "中和门",
+            "enName": "Zhonghe Gate"
+          }
+        ],
+        "periodNames": {
+          "明": "中和门",
+          "清": "江桥门"
+        },
+        "enPeriodNames": {
+          "明": "Zhonghe Gate",
+          "清": "Jiangqiao Gate"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.06024,
+          30.65296
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-city-gate-west",
+        "sourceId": "chengdu-city-gate-west",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "清远门",
+        "label": "清远门",
+        "enName": "Qingyuan Gate",
+        "enSourceName": "Qingyuan Gate",
+        "enLabel": "Qingyuan Gate",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都城门、街坊与多期遗址依据",
+        "referenceUrl": "https://www.xhuqk.com/xhdxxbzskb/cn/article/pdf/preview/10.19642/j.issn.1672-8505.2010.05.007.pdf",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "fillReference": false,
+        "fillOpacity": 0.045,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 14,
+        "status": "文献记载城门旧址地段 · 非现存门基测绘",
+        "enStatus": "Documentary former-site vicinity, not a surveyed surviving gate foundation",
+        "note": "依据袁庭栋《成都的城门》（2010）对现代街道、桥头的记载，结合原始OSM定位到旧址地段，非存世门楼、非考古测得门基。现状道路改建可能改变旧路口，定位仍有数十至百米量级不确定性；不把门点拉到原有粗城圈上，也不为迁就门点移动考古墙段。 依西月城街旧址地段，不能用1913年新开的通惠门或地铁通惠门站替代。",
+        "enNote": "Yuan Tingdong’s Gates of Chengdu (2010) relates the former gate to present streets/bridge approaches. Original OSM gives a contextual former-site location, not an extant gatehouse or surveyed foundation. Modern road changes leave uncertainty at a scale of tens to hundreds of metres. The point is not snapped to a coarse historic circuit, and archaeological walls are not moved to meet it. Former-site context at Xiyuecheng Street; not Tonghui Gate opened in 1913 or the present Tonghuimen metro station.",
+        "sitePoint": true,
+        "chengduGateReference": true,
+        "historicalBegin": 1371,
+        "sourceIds": [
+          "way/430222572",
+          "way/458891570"
+        ],
+        "cityGateReferencePoint": true,
+        "gateName": "清远门",
+        "enGateName": "Qingyuan Gate",
+        "gatePositionQualifier": "旧址地段",
+        "enGatePositionQualifier": "former-site vicinity"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.05035,
+          30.67757
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-city-gate-north",
+        "sourceId": "chengdu-city-gate-north",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "大安门",
+        "label": "大安门",
+        "enName": "Daan Gate",
+        "enSourceName": "Daan Gate",
+        "enLabel": "Daan Gate",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都城门、街坊与多期遗址依据",
+        "referenceUrl": "https://www.xhuqk.com/xhdxxbzskb/cn/article/pdf/preview/10.19642/j.issn.1672-8505.2010.05.007.pdf",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "fillReference": false,
+        "fillOpacity": 0.045,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 14,
+        "status": "文献记载城门旧址地段 · 非现存门基测绘",
+        "enStatus": "Documentary former-site vicinity, not a surveyed surviving gate foundation",
+        "note": "依据袁庭栋《成都的城门》（2010）对现代街道、桥头的记载，结合原始OSM定位到旧址地段，非存世门楼、非考古测得门基。现状道路改建可能改变旧路口，定位仍有数十至百米量级不确定性；不把门点拉到原有粗城圈上，也不为迁就门点移动考古墙段。 北大街北端、北门大桥南侧桥头地段；不放到河中或桥中。",
+        "enNote": "Yuan Tingdong’s Gates of Chengdu (2010) relates the former gate to present streets/bridge approaches. Original OSM gives a contextual former-site location, not an extant gatehouse or surveyed foundation. Modern road changes leave uncertainty at a scale of tens to hundreds of metres. The point is not snapped to a coarse historic circuit, and archaeological walls are not moved to meet it. Northern end of Beidajie, at the southern approach to Beimen Bridge, not in the river or at mid-bridge.",
+        "sitePoint": true,
+        "chengduGateReference": true,
+        "historicalBegin": 1371,
+        "sourceIds": [
+          "way/124867107",
+          "way/124867095"
+        ],
+        "cityGateReferencePoint": true,
+        "gateName": "大安门",
+        "enGateName": "Daan Gate",
+        "gatePositionQualifier": "旧址地段",
+        "enGatePositionQualifier": "former-site vicinity"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.07565,
+          30.67735
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-palace-gate-south",
+        "sourceId": "chengdu-palace-gate-south",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "明",
+        "periods": [
+          "明"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "端礼门",
+        "label": "端礼门",
+        "enName": "Duanli Gate",
+        "enSourceName": "Duanli Gate",
+        "enLabel": "Duanli Gate",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都城门、街坊与多期遗址依据",
+        "referenceUrl": "https://news.bjd.com.cn/2023/08/02/10517161.shtml",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "fillReference": false,
+        "fillOpacity": 0.045,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 15,
+        "status": "宫门文献方位参照 · 非考古门基定位",
+        "enStatus": "Documentary palace-gate orientation; not a located archaeological foundation",
+        "note": "明蜀王府宫城四门的文献方位参照。四门名称及南北东西关系见蜀王府历史介绍；本点放在既有宫墙街道四至参考线对应方位，南北门参考中轴；东西门具体位置待核，未增点，未掌握可靠发掘总图或实测门墩坐标。不是现存门楼或已定位考古门基，尤其不能将广智门的考古发掘记载当成本点达到实测精度的证明。需可靠总图再细化。",
+        "enNote": "Documentary orientation reference for one of the four Ming Shu palace gates. The point lies on the existing contextual palace edge: the north/south gates refer to the axis; the unlocated east/west gates are omitted. No reliable excavation master plan or measured pier coordinates are available. These are not extant gatehouses or precisely located archaeological foundations. An excavation report mentioning Guangzhi Gate does not establish the accuracy of this point.",
+        "sitePoint": true,
+        "chengduGateReference": true,
+        "chengduPalaceGateReference": true,
+        "historicalBegin": 1390,
+        "positionEvidence": "Documentary axis and contextual palace edge; not surveyed gate piers"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.06312,
+          30.660888
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-palace-gate-north",
+        "sourceId": "chengdu-palace-gate-north",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "明",
+        "periods": [
+          "明"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "广智门",
+        "label": "广智门",
+        "enName": "Guangzhi Gate",
+        "enSourceName": "Guangzhi Gate",
+        "enLabel": "Guangzhi Gate",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都城门、街坊与多期遗址依据",
+        "referenceUrl": "https://news.bjd.com.cn/2023/08/02/10517161.shtml",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "fillReference": false,
+        "fillOpacity": 0.045,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 15,
+        "status": "宫门文献方位参照 · 非考古门基定位",
+        "enStatus": "Documentary palace-gate orientation; not a located archaeological foundation",
+        "note": "明蜀王府宫城四门的文献方位参照。四门名称及南北东西关系见蜀王府历史介绍；本点放在既有宫墙街道四至参考线对应方位，南北门参考中轴；东西门具体位置待核，未增点，未掌握可靠发掘总图或实测门墩坐标。不是现存门楼或已定位考古门基，尤其不能将广智门的考古发掘记载当成本点达到实测精度的证明。需可靠总图再细化。",
+        "enNote": "Documentary orientation reference for one of the four Ming Shu palace gates. The point lies on the existing contextual palace edge: the north/south gates refer to the axis; the unlocated east/west gates are omitted. No reliable excavation master plan or measured pier coordinates are available. These are not extant gatehouses or precisely located archaeological foundations. An excavation report mentioning Guangzhi Gate does not establish the accuracy of this point.",
+        "sitePoint": true,
+        "chengduGateReference": true,
+        "chengduPalaceGateReference": true,
+        "historicalBegin": 1390,
+        "positionEvidence": "Documentary axis and contextual palace edge; not surveyed gate piers"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.06312,
+          30.667738
+        ]
+      }
+    }
+  ],
+  "registrations": {
+    "qin-fig2": {
+      "source": "https://www.lsdlyj.com.cn/EN/abstract/article/2096-6822/70654",
+      "image": "output/chengdu-qin-fig2.png",
+      "pixelReferenceWidth": 1664,
+      "originalWidth": 3000,
+      "method": "similarity; modern contextual proxies, not survey controls",
+      "controls": [
+        {
+          "name": "2012石犀出土地点所在四川大剧院地块（OSM建筑中心参照）",
+          "pixel": [
+            1003,
+            861
+          ],
+          "coordinate": [
+            104.0657433,
+            30.6615627
+          ],
+          "fitResidualMeters": 126.1
+        },
+        {
+          "name": "协进中学校园内石犀文献地段（校园中心参照）",
+          "pixel": [
+            398,
+            531
+          ],
+          "coordinate": [
+            104.0503306,
+            30.6653641
+          ],
+          "fitResidualMeters": 78.5
+        },
+        {
+          "name": "万里桥／今南门桥（现状桥中心参照）",
+          "pixel": [
+            740,
+            1342
+          ],
+          "coordinate": [
+            104.05885,
+            30.65099
+          ],
+          "fitResidualMeters": 98.7
+        }
+      ],
+      "coefficients": [
+        2.1604424406442546,
+        0.21768082096923536,
+        -1902.2419631379844,
+        1736.2310570085972
+      ],
+      "accuracy": "Not determined; residuals are NOT boundary accuracy"
+    },
+    "tang-local-history": {
+      "source": "https://www.thepaper.cn/newsDetail_forward_18791185",
+      "image": "output/chengdu-fangzhi-256.jpg",
+      "method": "coarse affine context from unchanged BIAM Qing outline; not surveyed wall controls",
+      "controls": [
+        {
+          "name": "图中清城西侧转折／原BIAM西端",
+          "pixel": [
+            78,
+            776
+          ],
+          "coordinate": [
+            104.042417,
+            30.660656
+          ],
+          "fitResidualMeters": 149.2
+        },
+        {
+          "name": "图中清城东侧转折／原BIAM东端",
+          "pixel": [
+            734,
+            684
+          ],
+          "coordinate": [
+            104.091497,
+            30.667513
+          ],
+          "fitResidualMeters": 166.3
+        },
+        {
+          "name": "图中清城北侧转折／原BIAM北端",
+          "pixel": [
+            328,
+            403
+          ],
+          "coordinate": [
+            104.061374,
+            30.683854
+          ],
+          "fitResidualMeters": 138.7
+        },
+        {
+          "name": "图中清城东南转折／原BIAM南端",
+          "pixel": [
+            499,
+            982
+          ],
+          "coordinate": [
+            104.079605,
+            30.648309
+          ],
+          "fitResidualMeters": 176.8
+        }
+      ],
+      "coefficients": [
+        [
+          7.625010515556126e-05,
+          1.7525708090620118e-06
+        ],
+        [
+          8.284550866849427e-06,
+          -6.183796579643103e-05
+        ],
+        [
+          104.03158738260741,
+          30.708347137283376
+        ]
+      ],
+      "accuracy": "Not determined; source schematic and BIAM uncertainty remain"
+    }
+  },
+  "originalWallGeometry": {
+    "550355735": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          104.0606183,
+          30.6834241
+        ],
+        [
+          104.0604708,
+          30.6835694
+        ],
+        [
+          104.0602321,
+          30.6835832
+        ],
+        [
+          104.0601677,
+          30.6830919
+        ],
+        [
+          104.0601114,
+          30.6828128
+        ],
+        [
+          104.0599719,
+          30.682333
+        ],
+        [
+          104.0598726,
+          30.6820101
+        ],
+        [
+          104.0597707,
+          30.6816618
+        ],
+        [
+          104.0596849,
+          30.6813826
+        ]
+      ]
+    },
+    "835276849": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          104.0792401,
+          30.6476636
+        ],
+        [
+          104.0794464,
+          30.6478748
+        ],
+        [
+          104.0798607,
+          30.6484153
+        ]
+      ]
+    },
+    "1306881932": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          104.0745807,
+          30.6490533
+        ],
+        [
+          104.0747473,
+          30.6489682
+        ]
+      ]
+    },
+    "1306881933": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            104.0867838,
+            30.6598585
+          ],
+          [
+            104.0866808,
+            30.6596829
+          ],
+          [
+            104.0867348,
+            30.6596593
+          ],
+          [
+            104.0867266,
+            30.6596457
+          ],
+          [
+            104.0866721,
+            30.6596681
+          ],
+          [
+            104.0866203,
+            30.6595797
+          ],
+          [
+            104.0865788,
+            30.6595089
+          ],
+          [
+            104.0868063,
+            30.6594101
+          ],
+          [
+            104.0869083,
+            30.659584
+          ],
+          [
+            104.0870114,
+            30.6597597
+          ],
+          [
+            104.0867838,
+            30.6598585
+          ]
+        ]
+      ]
+    },
+    "1306881934": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          104.0911847,
+          30.6673003
+        ],
+        [
+          104.0914064,
+          30.6677472
+        ]
+      ]
+    },
+    "1306881936": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          104.0481507,
+          30.6671804
+        ],
+        [
+          104.0478546,
+          30.6667633
+        ],
+        [
+          104.0476615,
+          30.6667633
+        ],
+        [
+          104.0475156,
+          30.6664311
+        ]
+      ]
+    },
+    "1306881937": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          104.0489612,
+          30.66947
+        ],
+        [
+          104.048765,
+          30.668798
+        ]
+      ]
+    }
+  },
+  "missing": [
+    "完整分期考古墙基总图",
+    "前后蜀宫城与宣华苑独立边界",
+    "羊马城可靠配准",
+    "古蜀开明成都城完整墙界",
+    "唐宋罗城1、2号门址精确坐标与原始构件图",
+    "秦城与晚唐诸门的可靠定位及不同命名方案对照",
+    "江南馆街各条古道、房址及水沟平面图配准",
+    "明蜀王府体仁门、遵义门沿宫墙的具体位置；仅方向已知，暂不造点"
+  ],
+  "preservedFirstReviewFeatures": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-qin-great-city",
+        "sourceId": "chengdu-qin-great-city",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "周",
+        "periods": [
+          "周",
+          "秦汉",
+          "魏晋南北朝"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "秦汉大城（龟城东部）",
+        "label": "秦汉大城（龟城东部）",
+        "enName": "Qin–Han Great City (eastern Tortoise City)",
+        "enSourceName": "Qin–Han Great City (eastern Tortoise City)",
+        "enLabel": "Qin–Han Great City (eastern Tortoise City)",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://www.lsdlyj.com.cn/EN/abstract/article/2096-6822/70654",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "fillReference": true,
+        "fillOpacity": 0.045,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 12,
+        "status": "文献复原参考，非实测墙界",
+        "enStatus": "Historical reconstruction reference, not a surveyed wall boundary",
+        "note": "按伍磊《顺江山之形》图2转绘。龟城指大城在东、少城在西的组合，不另建第三个城圈。图件以石犀出土地块、协进中学、万里桥三个现代地段参照作相似配准；这些不是发掘测量控制点，拟合残差约79—126米仅说明图件与地段参照的相容性，不能当作墙界精度。保留论文斜向布局与南墙折线；绝对位置仍为百米量级研究参考。秦初筑城年代文献有前311／前310年等表述，不将其写成确定单年；同一城址在汉、蜀汉与成汉等时期沿用，不代表各期墙体完全相同。",
+        "enNote": "Digitized from Wu Lei Fig.2. Tortoise City denotes the combined eastern Great City and western Lesser City, not a third enclosure. Three modern contextual proxies support a similarity registration; their 79–126 m residuals are not boundary accuracy. The oblique layout and southern turns are retained. Absolute placement remains approximate at a scale of hundreds of metres; Qin, Han and later reuse does not imply identical surviving walls.",
+        "labelCoordinates": [
+          104.0642546,
+          30.6656109
+        ],
+        "registration": "qin-fig2"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.0626495,
+              30.6691966
+            ],
+            [
+              104.0702192,
+              30.6668336
+            ],
+            [
+              104.0661181,
+              30.6580678
+            ],
+            [
+              104.0656337,
+              30.6573397
+            ],
+            [
+              104.0651422,
+              30.6568658
+            ],
+            [
+              104.0649124,
+              30.656493
+            ],
+            [
+              104.0643597,
+              30.656347
+            ],
+            [
+              104.0637348,
+              30.6562341
+            ],
+            [
+              104.0631414,
+              30.6562415
+            ],
+            [
+              104.0626314,
+              30.6563149
+            ],
+            [
+              104.0618393,
+              30.6564619
+            ],
+            [
+              104.061036,
+              30.6565099
+            ],
+            [
+              104.0600115,
+              30.6566955
+            ],
+            [
+              104.0590275,
+              30.6569239
+            ],
+            [
+              104.05796,
+              30.6572823
+            ],
+            [
+              104.0569803,
+              30.657864
+            ],
+            [
+              104.0626495,
+              30.6691966
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-qin-lesser-city",
+        "sourceId": "chengdu-qin-lesser-city",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "周",
+        "periods": [
+          "周",
+          "秦汉",
+          "魏晋南北朝"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "秦汉少城（龟城西部）",
+        "label": "秦汉少城（龟城西部）",
+        "enName": "Qin–Han Lesser City (western Tortoise City)",
+        "enSourceName": "Qin–Han Lesser City (western Tortoise City)",
+        "enLabel": "Qin–Han Lesser City (western Tortoise City)",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://www.lsdlyj.com.cn/EN/abstract/article/2096-6822/70654",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "fillReference": true,
+        "fillOpacity": 0.045,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 12,
+        "status": "文献复原参考，非实测墙界",
+        "enStatus": "Historical reconstruction reference, not a surveyed wall boundary",
+        "note": "按伍磊《顺江山之形》图2转绘。龟城指大城在东、少城在西的组合，不另建第三个城圈。图件以石犀出土地块、协进中学、万里桥三个现代地段参照作相似配准；这些不是发掘测量控制点，拟合残差约79—126米仅说明图件与地段参照的相容性，不能当作墙界精度。保留论文斜向布局与南墙折线；绝对位置仍为百米量级研究参考。秦初筑城年代文献有前311／前310年等表述，不将其写成确定单年；同一城址在汉、蜀汉与成汉等时期沿用，不代表各期墙体完全相同。 秦少城与清代满城不是同一期城址边界。",
+        "enNote": "Digitized from Wu Lei Fig.2. Tortoise City denotes the combined eastern Great City and western Lesser City, not a third enclosure. Three modern contextual proxies support a similarity registration; their 79–126 m residuals are not boundary accuracy. The oblique layout and southern turns are retained. Absolute placement remains approximate at a scale of hundreds of metres; Qin, Han and later reuse does not imply identical surviving walls. This is not the Qing Manchu garrison enclosure.",
+        "labelCoordinates": [
+          104.0594864,
+          30.6689617
+        ],
+        "registration": "qin-fig2"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.0579596,
+              30.6707114
+            ],
+            [
+              104.0626495,
+              30.6691966
+            ],
+            [
+              104.0569803,
+              30.657864
+            ],
+            [
+              104.0526552,
+              30.6601553
+            ],
+            [
+              104.0579596,
+              30.6707114
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-tang-luocheng",
+        "sourceId": "chengdu-tang-luocheng",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "隋唐",
+        "periods": [
+          "隋唐",
+          "五代十国",
+          "宋辽金西夏",
+          "元"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "晚唐罗城",
+        "label": "晚唐罗城",
+        "enName": "Late Tang outer city (Luocheng)",
+        "enSourceName": "Late Tang outer city (Luocheng)",
+        "enLabel": "Late Tang outer city (Luocheng)",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://www.thepaper.cn/newsDetail_forward_18791185",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "fillReference": true,
+        "fillOpacity": 0.045,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 12,
+        "status": "文献复原参考，非实测墙界",
+        "enStatus": "Historical reconstruction reference, not a surveyed wall boundary",
+        "note": "按方志四川公布《唐季扩充罗城图》转绘黑色古城线，不采用图中细线清城作唐城。以图上清城四处转折和原有BIAM明清粗范围作仿射参照，参照误差约139—177米，不能作考古墙界精度；街道级局部位置仍待可靠考古总图核正。该图属于概略历史复原，现代现存墙段另保留原始OSM，绝不移动遗迹来迁就本图。 高骈于876年扩筑罗城；五代、宋元有沿用与修缮，不能把这条晚唐概略线当作每期精确现状。羊马城有文献和考古讨论，但完整走向未可靠配准，本次不补猜测圈。",
+        "enNote": "Traced from the ancient-wall line on the Sichuan local-history Late Tang plate, not its Qing outline. Four Qing-outline turns and the unchanged coarse BIAM circuit provide approximate affine context, with 139–177 m contextual residuals, not archaeological accuracy. Street-scale placement awaits an archaeological master plan; original OSM remains are retained separately and never moved to fit this diagram. Gao Pian built the circuit in 876. Later reuse and repairs do not make this an exact surveyed outline for every phase. No speculative Yangma defensive circuit is added.",
+        "labelCoordinates": [
+          104.0779918,
+          30.6736854
+        ],
+        "registration": "tang-local-history"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.0616051,
+              30.6812484
+            ],
+            [
+              104.0638064,
+              30.6808027
+            ],
+            [
+              104.0674779,
+              30.6790883
+            ],
+            [
+              104.0716583,
+              30.6775716
+            ],
+            [
+              104.0757028,
+              30.6759278
+            ],
+            [
+              104.0793495,
+              30.6743989
+            ],
+            [
+              104.0842227,
+              30.6722779
+            ],
+            [
+              104.0883666,
+              30.669892
+            ],
+            [
+              104.0902926,
+              30.6680754
+            ],
+            [
+              104.0907948,
+              30.66604
+            ],
+            [
+              104.0895763,
+              30.663717
+            ],
+            [
+              104.0875837,
+              30.6603216
+            ],
+            [
+              104.0851998,
+              30.6564211
+            ],
+            [
+              104.0835287,
+              30.6529091
+            ],
+            [
+              104.0813373,
+              30.6509978
+            ],
+            [
+              104.0783353,
+              30.6499984
+            ],
+            [
+              104.0736708,
+              30.6511318
+            ],
+            [
+              104.0694705,
+              30.6516555
+            ],
+            [
+              104.064695,
+              30.6524762
+            ],
+            [
+              104.0600818,
+              30.6509435
+            ],
+            [
+              104.0561003,
+              30.6538294
+            ],
+            [
+              104.0529261,
+              30.6546868
+            ],
+            [
+              104.0501844,
+              30.6557403
+            ],
+            [
+              104.0480031,
+              30.6571789
+            ],
+            [
+              104.0464832,
+              30.6588187
+            ],
+            [
+              104.0455152,
+              30.6609054
+            ],
+            [
+              104.0453264,
+              30.662886
+            ],
+            [
+              104.0458255,
+              30.6654406
+            ],
+            [
+              104.0475512,
+              30.6674032
+            ],
+            [
+              104.0487713,
+              30.6702845
+            ],
+            [
+              104.0498307,
+              30.6732242
+            ],
+            [
+              104.0510492,
+              30.6755472
+            ],
+            [
+              104.0529688,
+              30.6772041
+            ],
+            [
+              104.0558183,
+              30.6782
+            ],
+            [
+              104.0581523,
+              30.6796183
+            ],
+            [
+              104.0599939,
+              30.6807151
+            ],
+            [
+              104.0616051,
+              30.6812484
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-sui-tang-zicheng",
+        "sourceId": "chengdu-sui-tang-zicheng",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "隋唐",
+        "periods": [
+          "隋唐"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "隋唐子城",
+        "label": "隋唐子城",
+        "enName": "Sui–Tang inner city (Zicheng)",
+        "enSourceName": "Sui–Tang inner city (Zicheng)",
+        "enLabel": "Sui–Tang inner city (Zicheng)",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://www.thepaper.cn/newsDetail_forward_18791185",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "fillReference": true,
+        "fillOpacity": 0.045,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 12,
+        "status": "文献复原参考，非实测墙界",
+        "enStatus": "Historical reconstruction reference, not a surveyed wall boundary",
+        "note": "按方志四川公布《唐季扩充罗城图》转绘黑色古城线，不采用图中细线清城作唐城。以图上清城四处转折和原有BIAM明清粗范围作仿射参照，参照误差约139—177米，不能作考古墙界精度；街道级局部位置仍待可靠考古总图核正。该图属于概略历史复原，现代现存墙段另保留原始OSM，绝不移动遗迹来迁就本图。 本面表达晚唐图中子城的概略范围，与秦大城图为不同时期、不同研究图，不要求彼此完全重合。隋蜀王杨秀增筑西南二隅的记载，不足以将本图全部认定为隋代初筑城墙。明蜀王府为后世重建，不能反推杨秀王城。前后蜀宫城只在详情说明，未拿整个子城冒充内宫。",
+        "enNote": "Traced from the ancient-wall line on the Sichuan local-history Late Tang plate, not its Qing outline. Four Qing-outline turns and the unchanged coarse BIAM circuit provide approximate affine context, with 139–177 m contextual residuals, not archaeological accuracy. Street-scale placement awaits an archaeological master plan; original OSM remains are retained separately and never moved to fit this diagram. This is the approximate inner city shown in the Late Tang plate, not a surveyed Sui founding circuit. Yang Xiu’s southwest expansion cannot establish every wall here. Neither the later Ming palace nor the entire inner city establishes the Five Dynasties palace perimeter.",
+        "labelCoordinates": [
+          104.063925,
+          30.666787
+        ],
+        "registration": "tang-local-history"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.0685615,
+              30.6704292
+            ],
+            [
+              104.0666718,
+              30.6702617
+            ],
+            [
+              104.0641422,
+              30.6685909
+            ],
+            [
+              104.0617205,
+              30.6689694
+            ],
+            [
+              104.0602552,
+              30.6690598
+            ],
+            [
+              104.0591097,
+              30.6684752
+            ],
+            [
+              104.0592007,
+              30.6649417
+            ],
+            [
+              104.0582093,
+              30.6620656
+            ],
+            [
+              104.0583185,
+              30.6589667
+            ],
+            [
+              104.057473,
+              30.6567142
+            ],
+            [
+              104.0599593,
+              30.6552827
+            ],
+            [
+              104.0633889,
+              30.6548032
+            ],
+            [
+              104.0663395,
+              30.6556154
+            ],
+            [
+              104.0690928,
+              30.6556167
+            ],
+            [
+              104.0704173,
+              30.6565775
+            ],
+            [
+              104.0700013,
+              30.6591111
+            ],
+            [
+              104.0696517,
+              30.66115
+            ],
+            [
+              104.0709747,
+              30.6644059
+            ],
+            [
+              104.0708289,
+              30.6666356
+            ],
+            [
+              104.0700997,
+              30.669224
+            ],
+            [
+              104.0685615,
+              30.6704292
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-ming-shu-palace",
+        "sourceId": "chengdu-ming-shu-palace",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "明",
+        "periods": [
+          "明"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "明蜀王府宫城",
+        "label": "明蜀王府宫城",
+        "enName": "Ming Prince of Shu palace enclosure",
+        "enSourceName": "Ming Prince of Shu palace enclosure",
+        "enLabel": "Ming Prince of Shu palace enclosure",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://cdmuseum.com/xinwen/202011/1729.html",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "fillReference": true,
+        "fillOpacity": 0.045,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 12,
+        "status": "文献复原参考，非实测墙界",
+        "enStatus": "Historical reconstruction reference, not a surveyed wall boundary",
+        "note": "根据成都博物馆的蜀王府说明及公开四至记载，以现存西华门街、东华门街、人民东／西路、东／西御河沿街的OSM街道位置作闭合街区参照。此线表示明蜀王府宫墙的大致位置，不是已发掘墙基实测；未沿道路逐段查明墙基与路中线关系，误差可达数十米。宫墙与外萧墙分别表达。东华门现代展示区保持原几何，不拿它替代全府范围。",
+        "enNote": "The documented palace enclosure is referenced to original OSM positions of Xihuamen, Donghuamen, Renmin East/West and Yuheyan streets. This is a closed contextual perimeter, not an excavated wall survey; road-to-foundation offsets remain unresolved and may be tens of metres. The palace wall and outer Xiaoqiang are separate. The original Donghuamen display area is unchanged.",
+        "historicalBegin": 1390,
+        "labelCoordinates": [
+          104.0631,
+          30.66715
+        ],
+        "sourceIds": [
+          "way/100285953",
+          "way/115625961",
+          "way/358373080",
+          "way/589466825"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.06013,
+              30.66085
+            ],
+            [
+              104.06639,
+              30.66093
+            ],
+            [
+              104.06632,
+              30.66779
+            ],
+            [
+              104.05991,
+              30.66769
+            ],
+            [
+              104.06013,
+              30.66085
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-ming-shu-xiaoqiang",
+        "sourceId": "chengdu-ming-shu-xiaoqiang",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "明",
+        "periods": [
+          "明"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "明蜀王府萧墙",
+        "label": "明蜀王府萧墙",
+        "enName": "Ming Shu palace outer Xiaoqiang enclosure",
+        "enSourceName": "Ming Shu palace outer Xiaoqiang enclosure",
+        "enLabel": "Ming Shu palace outer Xiaoqiang enclosure",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://scdfz.sc.gov.cn/Upload/main/ContentManage/Article/File/202106161436291225.pdf",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "fillReference": true,
+        "fillOpacity": 0.045,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 12,
+        "status": "文献复原参考，非实测墙界",
+        "enStatus": "Historical reconstruction reference, not a surveyed wall boundary",
+        "note": "依四川地方志公开文献的四至：东顺城街、西东城根街、南东西御街、北羊市街与玉龙街，参照原始OSM街道位置构成闭合研究面。具体墙基相对于街道的偏移尚未逐段确定；不是完整考古实测范围，也不是成都全城城墙。与内侧宫墙分别显示，避免混淆。",
+        "enNote": "A closed contextual reference follows the documented modern street limits: Shuncheng, Dongchenggen, East/West Yu streets and Yangshi/Yulong streets. Wall-foundation offsets remain unresolved. This is neither a complete archaeological survey nor the full Chengdu city circuit; it is separate from the inner palace enclosure.",
+        "historicalBegin": 1390,
+        "labelCoordinates": [
+          104.0637,
+          30.669
+        ],
+        "sourceIds": [
+          "way/28620975",
+          "way/28620976",
+          "way/103295084",
+          "way/1369175162",
+          "way/1284359670"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.05816,
+              30.65877
+            ],
+            [
+              104.06857,
+              30.65862
+            ],
+            [
+              104.06817,
+              30.66952
+            ],
+            [
+              104.06316,
+              30.66947
+            ],
+            [
+              104.05782,
+              30.66931
+            ],
+            [
+              104.05816,
+              30.65877
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-wall-550355735",
+        "sourceId": "chengdu-wall-550355735",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "北校场城墙遗址",
+        "label": "北校场城墙遗址",
+        "enName": "Beijiaochang wall remains",
+        "enSourceName": "Beijiaochang wall remains",
+        "enLabel": "Beijiaochang wall remains",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://www.openstreetmap.org/way/550355735",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "fillReference": false,
+        "fillOpacity": 0.15,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 14,
+        "status": "现存／修缮墙段原始OSM标绘，非分期考古测绘",
+        "enStatus": "Original OSM mapping of extant/restored wall fabric; not a phase-specific archaeological survey",
+        "note": "成都老城墙遗址群OSM relation 17924600成员的原始标绘，节点与开放／闭合性质原样保留。这里只表示现存、修缮及局部复建后的墙段，分期挂接明清城垣背景；未经墙体分期发掘报告逐段证实，不倒推为秦、隋唐墙，也不宣称表面均为明代原物。OSM“北城墙残段”“东城墙”等原名保留，不据名称推断其位于全城的北面或东面。",
+        "enNote": "Original geometry from OSM relation 17924600 is retained, including open ends and closed component footprints. Surviving/restored fabric is contextualized under Ming–Qing, without asserting that all visible fabric is original Ming or that these are Qin or Tang walls. Original OSM segment names do not establish their orientation within the whole circuit.",
+        "osm": true,
+        "sourceIds": [
+          "way/550355735"
+        ],
+        "historicalBegin": 1368
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            104.0606183,
+            30.6834241
+          ],
+          [
+            104.0604708,
+            30.6835694
+          ],
+          [
+            104.0602321,
+            30.6835832
+          ],
+          [
+            104.0601677,
+            30.6830919
+          ],
+          [
+            104.0601114,
+            30.6828128
+          ],
+          [
+            104.0599719,
+            30.682333
+          ],
+          [
+            104.0598726,
+            30.6820101
+          ],
+          [
+            104.0597707,
+            30.6816618
+          ],
+          [
+            104.0596849,
+            30.6813826
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-wall-835276849",
+        "sourceId": "chengdu-wall-835276849",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "东城墙",
+        "label": "东城墙",
+        "enName": "Eastern wall segment",
+        "enSourceName": "Eastern wall segment",
+        "enLabel": "Eastern wall segment",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://www.openstreetmap.org/way/835276849",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "fillReference": false,
+        "fillOpacity": 0.15,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 14,
+        "status": "现存／修缮墙段原始OSM标绘，非分期考古测绘",
+        "enStatus": "Original OSM mapping of extant/restored wall fabric; not a phase-specific archaeological survey",
+        "note": "成都老城墙遗址群OSM relation 17924600成员的原始标绘，节点与开放／闭合性质原样保留。这里只表示现存、修缮及局部复建后的墙段，分期挂接明清城垣背景；未经墙体分期发掘报告逐段证实，不倒推为秦、隋唐墙，也不宣称表面均为明代原物。OSM“北城墙残段”“东城墙”等原名保留，不据名称推断其位于全城的北面或东面。",
+        "enNote": "Original geometry from OSM relation 17924600 is retained, including open ends and closed component footprints. Surviving/restored fabric is contextualized under Ming–Qing, without asserting that all visible fabric is original Ming or that these are Qin or Tang walls. Original OSM segment names do not establish their orientation within the whole circuit.",
+        "osm": true,
+        "sourceIds": [
+          "way/835276849"
+        ],
+        "historicalBegin": 1368
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            104.0792401,
+            30.6476636
+          ],
+          [
+            104.0794464,
+            30.6478748
+          ],
+          [
+            104.0798607,
+            30.6484153
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-wall-1306881932",
+        "sourceId": "chengdu-wall-1306881932",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "成都城墙遗存段",
+        "label": "成都城墙遗存段",
+        "enName": "Chengdu surviving wall segment",
+        "enSourceName": "Chengdu surviving wall segment",
+        "enLabel": "Chengdu surviving wall segment",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://www.openstreetmap.org/way/1306881932",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "fillReference": false,
+        "fillOpacity": 0.15,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 14,
+        "status": "现存／修缮墙段原始OSM标绘，非分期考古测绘",
+        "enStatus": "Original OSM mapping of extant/restored wall fabric; not a phase-specific archaeological survey",
+        "note": "成都老城墙遗址群OSM relation 17924600成员的原始标绘，节点与开放／闭合性质原样保留。这里只表示现存、修缮及局部复建后的墙段，分期挂接明清城垣背景；未经墙体分期发掘报告逐段证实，不倒推为秦、隋唐墙，也不宣称表面均为明代原物。OSM“北城墙残段”“东城墙”等原名保留，不据名称推断其位于全城的北面或东面。",
+        "enNote": "Original geometry from OSM relation 17924600 is retained, including open ends and closed component footprints. Surviving/restored fabric is contextualized under Ming–Qing, without asserting that all visible fabric is original Ming or that these are Qin or Tang walls. Original OSM segment names do not establish their orientation within the whole circuit.",
+        "osm": true,
+        "sourceIds": [
+          "way/1306881932"
+        ],
+        "historicalBegin": 1368
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            104.0745807,
+            30.6490533
+          ],
+          [
+            104.0747473,
+            30.6489682
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-wall-1306881933",
+        "sourceId": "chengdu-wall-1306881933",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "水东门城墙",
+        "label": "水东门城墙",
+        "enName": "Shuidongmen wall",
+        "enSourceName": "Shuidongmen wall",
+        "enLabel": "Shuidongmen wall",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://www.openstreetmap.org/way/1306881933",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "fillReference": false,
+        "fillOpacity": 0.15,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 14,
+        "status": "现存／修缮墙段原始OSM标绘，非分期考古测绘",
+        "enStatus": "Original OSM mapping of extant/restored wall fabric; not a phase-specific archaeological survey",
+        "note": "成都老城墙遗址群OSM relation 17924600成员的原始标绘，节点与开放／闭合性质原样保留。这里只表示现存、修缮及局部复建后的墙段，分期挂接明清城垣背景；未经墙体分期发掘报告逐段证实，不倒推为秦、隋唐墙，也不宣称表面均为明代原物。OSM“北城墙残段”“东城墙”等原名保留，不据名称推断其位于全城的北面或东面。",
+        "enNote": "Original geometry from OSM relation 17924600 is retained, including open ends and closed component footprints. Surviving/restored fabric is contextualized under Ming–Qing, without asserting that all visible fabric is original Ming or that these are Qin or Tang walls. Original OSM segment names do not establish their orientation within the whole circuit.",
+        "osm": true,
+        "sourceIds": [
+          "way/1306881933"
+        ],
+        "historicalBegin": 1368
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.0867838,
+              30.6598585
+            ],
+            [
+              104.0866808,
+              30.6596829
+            ],
+            [
+              104.0867348,
+              30.6596593
+            ],
+            [
+              104.0867266,
+              30.6596457
+            ],
+            [
+              104.0866721,
+              30.6596681
+            ],
+            [
+              104.0866203,
+              30.6595797
+            ],
+            [
+              104.0865788,
+              30.6595089
+            ],
+            [
+              104.0868063,
+              30.6594101
+            ],
+            [
+              104.0869083,
+              30.659584
+            ],
+            [
+              104.0870114,
+              30.6597597
+            ],
+            [
+              104.0867838,
+              30.6598585
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-wall-1306881934",
+        "sourceId": "chengdu-wall-1306881934",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "北城墙残段",
+        "label": "北城墙残段",
+        "enName": "Northern wall remnant",
+        "enSourceName": "Northern wall remnant",
+        "enLabel": "Northern wall remnant",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://www.openstreetmap.org/way/1306881934",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "fillReference": false,
+        "fillOpacity": 0.15,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 14,
+        "status": "现存／修缮墙段原始OSM标绘，非分期考古测绘",
+        "enStatus": "Original OSM mapping of extant/restored wall fabric; not a phase-specific archaeological survey",
+        "note": "成都老城墙遗址群OSM relation 17924600成员的原始标绘，节点与开放／闭合性质原样保留。这里只表示现存、修缮及局部复建后的墙段，分期挂接明清城垣背景；未经墙体分期发掘报告逐段证实，不倒推为秦、隋唐墙，也不宣称表面均为明代原物。OSM“北城墙残段”“东城墙”等原名保留，不据名称推断其位于全城的北面或东面。",
+        "enNote": "Original geometry from OSM relation 17924600 is retained, including open ends and closed component footprints. Surviving/restored fabric is contextualized under Ming–Qing, without asserting that all visible fabric is original Ming or that these are Qin or Tang walls. Original OSM segment names do not establish their orientation within the whole circuit.",
+        "osm": true,
+        "sourceIds": [
+          "way/1306881934"
+        ],
+        "historicalBegin": 1368
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            104.0911847,
+            30.6673003
+          ],
+          [
+            104.0914064,
+            30.6677472
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-wall-1306881936",
+        "sourceId": "chengdu-wall-1306881936",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "水西门城墙",
+        "label": "水西门城墙",
+        "enName": "Shuiximen wall",
+        "enSourceName": "Shuiximen wall",
+        "enLabel": "Shuiximen wall",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://www.openstreetmap.org/way/1306881936",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "fillReference": false,
+        "fillOpacity": 0.15,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 14,
+        "status": "现存／修缮墙段原始OSM标绘，非分期考古测绘",
+        "enStatus": "Original OSM mapping of extant/restored wall fabric; not a phase-specific archaeological survey",
+        "note": "成都老城墙遗址群OSM relation 17924600成员的原始标绘，节点与开放／闭合性质原样保留。这里只表示现存、修缮及局部复建后的墙段，分期挂接明清城垣背景；未经墙体分期发掘报告逐段证实，不倒推为秦、隋唐墙，也不宣称表面均为明代原物。OSM“北城墙残段”“东城墙”等原名保留，不据名称推断其位于全城的北面或东面。",
+        "enNote": "Original geometry from OSM relation 17924600 is retained, including open ends and closed component footprints. Surviving/restored fabric is contextualized under Ming–Qing, without asserting that all visible fabric is original Ming or that these are Qin or Tang walls. Original OSM segment names do not establish their orientation within the whole circuit.",
+        "osm": true,
+        "sourceIds": [
+          "way/1306881936"
+        ],
+        "historicalBegin": 1368
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            104.0481507,
+            30.6671804
+          ],
+          [
+            104.0478546,
+            30.6667633
+          ],
+          [
+            104.0476615,
+            30.6667633
+          ],
+          [
+            104.0475156,
+            30.6664311
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chengdu-wall-1306881937",
+        "sourceId": "chengdu-wall-1306881937",
+        "research": true,
+        "chengduHistoricalDetail": true,
+        "family": "period",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "city": "成都",
+        "capitalSiteKey": "ancient-site:成都:30.57280,104.06680",
+        "capitalSiteName": "成都",
+        "sourceName": "防空洞城墙段",
+        "label": "防空洞城墙段",
+        "enName": "Air-raid shelter wall segment",
+        "enSourceName": "Air-raid shelter wall segment",
+        "enLabel": "Air-raid shelter wall segment",
+        "sourceUrl": "./sources/chengdu.html",
+        "sourceTitle": "成都分期城郭、宫城与遗址依据",
+        "referenceUrl": "https://www.openstreetmap.org/way/1306881937",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "fillReference": false,
+        "fillOpacity": 0.15,
+        "lineOpacity": 0.9,
+        "labelMinZoom": 14,
+        "status": "现存／修缮墙段原始OSM标绘，非分期考古测绘",
+        "enStatus": "Original OSM mapping of extant/restored wall fabric; not a phase-specific archaeological survey",
+        "note": "成都老城墙遗址群OSM relation 17924600成员的原始标绘，节点与开放／闭合性质原样保留。这里只表示现存、修缮及局部复建后的墙段，分期挂接明清城垣背景；未经墙体分期发掘报告逐段证实，不倒推为秦、隋唐墙，也不宣称表面均为明代原物。OSM“北城墙残段”“东城墙”等原名保留，不据名称推断其位于全城的北面或东面。",
+        "enNote": "Original geometry from OSM relation 17924600 is retained, including open ends and closed component footprints. Surviving/restored fabric is contextualized under Ming–Qing, without asserting that all visible fabric is original Ming or that these are Qin or Tang walls. Original OSM segment names do not establish their orientation within the whole circuit.",
+        "osm": true,
+        "sourceIds": [
+          "way/1306881937"
+        ],
+        "historicalBegin": 1368
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            104.0489612,
+            30.66947
+          ],
+          [
+            104.048765,
+            30.668798
+          ]
+        ]
+      }
+    }
+  ],
+  "detailExtension": {
+    "date": "2026-10-23",
+    "added": 8,
+    "originalGeometry": {
+      "node/10790027173": {
+        "type": "Point",
+        "coordinates": [
+          104.078448,
+          30.6562163
+        ]
+      },
+      "way/1315352366": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.06527,
+              30.6651563
+            ],
+            [
+              104.0652504,
+              30.6651342
+            ],
+            [
+              104.0651395,
+              30.6650203
+            ],
+            [
+              104.065007,
+              30.6649408
+            ],
+            [
+              104.064816,
+              30.664909
+            ],
+            [
+              104.0646095,
+              30.6649222
+            ],
+            [
+              104.0644181,
+              30.6649914
+            ],
+            [
+              104.0643199,
+              30.6650547
+            ],
+            [
+              104.064209,
+              30.6651899
+            ],
+            [
+              104.064132,
+              30.6653304
+            ],
+            [
+              104.0640796,
+              30.6655026
+            ],
+            [
+              104.0640426,
+              30.6657093
+            ],
+            [
+              104.0640426,
+              30.665916
+            ],
+            [
+              104.0640765,
+              30.6661016
+            ],
+            [
+              104.0641505,
+              30.6663003
+            ],
+            [
+              104.064209,
+              30.6664328
+            ],
+            [
+              104.064283,
+              30.6665256
+            ],
+            [
+              104.0644154,
+              30.6666157
+            ],
+            [
+              104.0645695,
+              30.666674
+            ],
+            [
+              104.0647605,
+              30.6666952
+            ],
+            [
+              104.0649361,
+              30.6666766
+            ],
+            [
+              104.0650779,
+              30.666613
+            ],
+            [
+              104.0651765,
+              30.6665441
+            ],
+            [
+              104.0652504,
+              30.666462
+            ],
+            [
+              104.0652905,
+              30.6664169
+            ],
+            [
+              104.0653367,
+              30.6663401
+            ],
+            [
+              104.0653983,
+              30.6662049
+            ],
+            [
+              104.0654445,
+              30.6660433
+            ],
+            [
+              104.0654599,
+              30.6658498
+            ],
+            [
+              104.0654507,
+              30.6656855
+            ],
+            [
+              104.0654353,
+              30.6655132
+            ],
+            [
+              104.0653829,
+              30.6653569
+            ],
+            [
+              104.0653305,
+              30.6652535
+            ],
+            [
+              104.0652905,
+              30.6651793
+            ],
+            [
+              104.06527,
+              30.6651563
+            ]
+          ]
+        ]
+      }
+    },
+    "gateSource": "https://www.xhuqk.com/xhdxxbzskb/cn/article/pdf/preview/10.19642/j.issn.1672-8505.2010.05.007.pdf",
+    "sourceDownload": "Downloaded original journal PDF after site certificate validation failed; no application or system security settings changed.",
+    "documentaryGateIds": [
+      "chengdu-city-gate-east",
+      "chengdu-city-gate-south",
+      "chengdu-city-gate-west",
+      "chengdu-city-gate-north",
+      "chengdu-palace-gate-south",
+      "chengdu-palace-gate-north"
+    ],
+    "audit": [
+      {
+        "name": "唐宋罗城1、2号城门遗址",
+        "status": "确认存在，精确几何待核，暂不猜画两个门点",
+        "evidence": "成都博物馆1993年论文集目录收录蒋成《论成都唐宋罗城1·2号门址》；方志四川记述1990年百花潭水闸旁发掘。",
+        "source": "https://www.cdmuseum.com/wenji/202006/1227.html",
+        "reference": "https://m.thepaper.cn/newsDetail_forward_29994970"
+      },
+      {
+        "name": "天府广场东北侧遗址",
+        "status": "确认存在；古代构件平面待核，不以现代大剧院轮廓代替",
+        "source": "https://www.cdmuseum.com/xinwen/202011/1933.html"
+      },
+      {
+        "name": "商业街古蜀船棺合葬墓",
+        "status": "皇陵目录已有shu-commercial-boat，保留独立身份，不重复建点"
+      },
+      {
+        "name": "秦城、晚唐诸门",
+        "status": "已有研究图与名称，但门名／位置存在不同方案；本次不增猜测点"
+      },
+      {
+        "name": "正府街、城守街—联升巷、正科甲巷遗址",
+        "status": "可继续补证；缺可靠古代构件原始矢量或配准总图，暂未猜画"
+      }
+    ]
+  }
+}

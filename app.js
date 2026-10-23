@@ -7464,7 +7464,7 @@ function loadUsNpsBoundaries() {
 
 function loadChinaAncientCapitals() {
   if (chinaAncientCapitalsPromise) return chinaAncientCapitalsPromise;
-  chinaAncientCapitalsPromise = fetchJson("data/china-ancient-capitals.json?v=93")
+  chinaAncientCapitalsPromise = fetchJson("data/china-ancient-capitals.json?v=94")
     .then(async (base) => {
       try {
         const supplement = await fetchJson("data/western-regions-36.json?v=8");
@@ -7475,6 +7475,7 @@ function loadChinaAncientCapitals() {
       }
     })
     .then((data) => {
+      data = reviewedAncientCapitalLocations(data);
       const items = Array.isArray(data?.items) ? data.items : [];
       if (!items.length) throw new Error("invalid ancient capitals catalog");
       chinaAncientCapitals = data;
@@ -7528,6 +7529,15 @@ function loadChinaAncientCapitals() {
       if (isMapPageActive() && state.mapOverlays?.chinaAncientCapitals) { renderMapControls(); scheduleGeoMapRender(); }
     });
   return chinaAncientCapitalsPromise;
+}
+
+function reviewedAncientCapitalLocations(data) {
+  const reviews = {
+    "ancient-site:郑州商城:34.74650,113.68300": { lng: 113.6751849, lat: 34.7550261, mapLocationReview: { sourceUrl: "./sources/zhengzhou.html", note: "内城遗址约束参考面的内部代表点；非古代宫殿中心实测坐标。" } },
+    "ancient-site:西京大同:40.07680,113.30010": { lng: 113.295267, lat: 40.0923109, mapLocationReview: { sourceUrl: "./sources/datong.html", note: "城内四牌楼一带的代表点；不认定为辽金原宫殿中心。" } },
+  };
+  const review = item => reviews[item?.siteKey] ? { ...item, ...reviews[item.siteKey] } : item;
+  return { ...data, items: data.items?.map(review), recordItems: data.recordItems?.map(review) };
 }
 
 function getMapCountries() {
@@ -11293,11 +11303,12 @@ function focusAncientCapitalRelatedPlace(name,index) {
 }
 
 function ancientCapitalResearchMaps(item) {
+ const historicalStages=typeof AncientCapitalWalls!=='undefined'?(AncientCapitalWalls.reviewCapitalStages?.(item)||item?.historicalStages||[]):item?.historicalStages||[];
  const relatedViews=item?.relatedMapViews||[];
  const classicalButton=item?.classicalSiteKey?'<p><button type="button" class="popup-action" data-classical-focus="'+escapeHtml(item.classicalSiteKey)+'">'+(item.locationStatus==='regional_unlocated'?(currentLanguage==='en'?'View location notes':'查看定位说明'):(currentLanguage==='en'?'Show palace and temple details':'查看宫殿与寺庙细节'))+'</button></p>':'';
  const relatedButtons=classicalButton+(relatedViews.length?'<p><button type="button" class="popup-action" data-capital-related-view="'+escapeHtml(item.name)+'" data-view-index="-1">'+(currentLanguage==='en'?'Show related places':'查看相关地点')+'</button> '+relatedViews.map((v,i)=>'<button type="button" class="popup-action" data-capital-related-view="'+escapeHtml(item.name)+'" data-view-index="'+i+'">'+escapeHtml(v.name)+'</button>').join(' ')+'</p>':'');
  if(item?.historicalSources?.length)return '<section class="capital-meta-line">'+relatedButtons+'<p>'+escapeHtml(currentLanguage==='en'?(item.enCoordinatePrecision||item.coordinatePrecision||''):(item.coordinatePrecision||''))+'</p>'+item.historicalSources.map(s=>'<a href="'+escapeHtml(s.url)+'" target="_blank" rel="noopener">'+escapeHtml(s.title)+' ↗</a>').join('<br>')+'</section>';
- if(item?.historicalStages?.length)return '<section class="capital-meta-line"><strong>城址与遗存资料</strong>'+relatedButtons+item.historicalStages.map(s=>'<p><b>'+escapeHtml(s.name)+'</b><br>'+escapeHtml(s.boundaryStatus)+'<br>'+escapeHtml(s.summary)+'<br>'+s.sources.map(r=>'<a href="'+escapeHtml(r.url)+'" target="_blank" rel="noopener">'+escapeHtml(r.title)+' ↗</a>').join('<br>')+'</p>').join('')+'</section>';
+ if(historicalStages.length)return '<section class="capital-meta-line"><strong>城址与遗存资料</strong>'+relatedButtons+historicalStages.map(s=>'<p><b>'+escapeHtml(s.name)+'</b><br>'+escapeHtml(s.boundaryStatus)+'<br>'+escapeHtml(s.summary)+'<br>'+s.sources.map(r=>'<a href="'+escapeHtml(r.url)+'" target="_blank" rel="noopener">'+escapeHtml(r.title)+' ↗</a>').join('<br>')+'</p>').join('')+'</section>';
  const name=ancientCapitalCurrentDisplayName(item)||item?.name||'';
  if(name.includes('汉长安城'))return '<section class="capital-meta-line"><p>汉长安城（未央宫前殿参照）。原粗略点位已更正到前殿遗址标绘范围内；此点用作城址定位，不表示全城中心，也不表示各政权时期均使用同一前殿。宫墙展示线和构件范围可在城墙范围的秦汉选项查看。</p><a href="https://www.openstreetmap.org/way/821525295" target="_blank" rel="noopener">前殿遗址标绘来源 ↗</a></section>';
  if(name.includes('丰镐'))return '<section class="capital-meta-line"><p>西周宗周由丰京、镐京共同构成：丰京在沣河西岸，镐京在东岸。此点采用丰镐遗址车马坑展示地点作参照，不是两京中心。公开考古资料记载，在已调查工作区域尚未发现城垣；已接入原图标示的1992年一般保护范围参考线，由城墙范围的周选项控制。低分辨率原图按村落参照近似配准，斗门辅助偏差约663米，非现行法定边界或古城墙；重点保护范围和考古遗存分布面尚未接入。</p><a href="https://www.cssn.cn/lsx/lsx_kgx/202210/t20221024_5552703.shtml" target="_blank" rel="noopener">丰镐遗址考古成果 ↗</a> · <a href="https://www.openstreetmap.org/node/7617487194" target="_blank" rel="noopener">参照点来源 ↗</a></section>';
@@ -17553,7 +17564,7 @@ if ("serviceWorker" in navigator && location.protocol !== "file:") {
     });
   });
   window.addEventListener("load", () => {
-navigator.serviceWorker.register("./sw.js?v=946", { updateViaCache: "none" })
+navigator.serviceWorker.register("./sw.js?v=973", { updateViaCache: "none" })
       .then((registration) => registration.update())
       .catch((error) => console.warn("Service Worker registration failed", error));
   });

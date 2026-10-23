@@ -1,0 +1,943 @@
+{
+  "reviewedAt": "2026-10-22",
+  "baseline": {
+    "researchSha256": "b8d8b01fe61b02e6cbb5422ce9868f7602cf2e8dba92a0efda98465aa3c53d81",
+    "capitalCatalogSha256": "3f2044bed7858fa21b18c1adb044fe91bd31ad39e169d5a709ac53ad3bef6324",
+    "wallsSha256": "9183b1e7c43b7fb19e20137eb5d87e636f12969f02136ee23f275aef8324d853",
+    "nanjingSha256": "f91430686376d44da798e8ccc91d8d406d50cdba569aa39af262e0c3422d1e9a",
+    "kaifengSha256": "9e30f4bab9b389d06d25eb49425214ee927ad3a20c8a13191f42053fc5435b5a"
+  },
+  "addedCount": 13,
+  "gates": [
+    {
+      "name": "武林门",
+      "sourceId": "hangzhou-gate-wulin",
+      "coordinate": [
+        120.1538117,
+        30.2729078
+      ],
+      "sourceIds": [
+        "way/4397958",
+        "way/512999930"
+      ],
+      "classification": "城门地段参照 · 非考古实测门界"
+    },
+    {
+      "name": "艮山门",
+      "sourceId": "hangzhou-gate-genshan",
+      "coordinate": [
+        120.1743554,
+        30.2772633
+      ],
+      "sourceIds": [
+        "way/338125039",
+        "way/1373129692"
+      ],
+      "classification": "城门地段参照 · 非考古实测门界"
+    },
+    {
+      "name": "庆春门",
+      "sourceId": "hangzhou-gate-qingchun",
+      "coordinate": [
+        120.183155,
+        30.26068
+      ],
+      "sourceIds": [
+        "way/1230050268"
+      ],
+      "classification": "城门地段参照 · 非考古实测门界"
+    },
+    {
+      "name": "清泰门",
+      "sourceId": "hangzhou-gate-qingtai",
+      "coordinate": [
+        120.1806039,
+        30.2500929
+      ],
+      "sourceIds": [
+        "node/5288906036"
+      ],
+      "classification": "城门地段参照 · 非考古实测门界"
+    },
+    {
+      "name": "望江门",
+      "sourceId": "hangzhou-gate-wangjiang",
+      "coordinate": [
+        120.1722424,
+        30.2389325
+      ],
+      "sourceIds": [
+        "way/331644332",
+        "way/513971947"
+      ],
+      "classification": "城门地段参照 · 非考古实测门界"
+    },
+    {
+      "name": "候潮门",
+      "sourceId": "hangzhou-gate-houchao",
+      "coordinate": [
+        120.1684292,
+        30.229366
+      ],
+      "sourceIds": [
+        "way/965139020",
+        "way/965139021"
+      ],
+      "classification": "城门地段参照 · 非考古实测门界"
+    },
+    {
+      "name": "清波门",
+      "sourceId": "hangzhou-gate-qingbo",
+      "coordinate": [
+        120.154558,
+        30.2403099
+      ],
+      "sourceIds": [
+        "way/11749402",
+        "way/474592739"
+      ],
+      "classification": "城门地段参照 · 非考古实测门界"
+    },
+    {
+      "name": "涌金门",
+      "sourceId": "hangzhou-gate-yongjin",
+      "coordinate": [
+        120.157498,
+        30.2522165
+      ],
+      "sourceIds": [
+        "way/22719403",
+        "way/536237358"
+      ],
+      "classification": "城门地段参照 · 非考古实测门界"
+    },
+    {
+      "name": "凤山门",
+      "sourceId": "hangzhou-gate-fengshan",
+      "coordinate": [
+        120.16627,
+        30.22731
+      ],
+      "sourceIds": [
+        "way/464513223"
+      ],
+      "classification": "城门地段参照 · 非考古实测门界"
+    }
+  ],
+  "reusedGate": {
+    "sourceId": "hangzhou-osm-1254131846",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        120.1532486,
+        30.2602726
+      ]
+    }
+  },
+  "rawGeometry": [
+    {
+      "id": "way/519606391",
+      "tags": {
+        "barrier": "city_wall",
+        "building": "yes",
+        "name": "凤山门"
+      },
+      "coordinates": [
+        [
+          120.1651305,
+          30.2297762
+        ],
+        [
+          120.1650936,
+          30.2296735
+        ],
+        [
+          120.1654387,
+          30.2295871
+        ],
+        [
+          120.1654698,
+          30.2296922
+        ],
+        [
+          120.1651305,
+          30.2297762
+        ]
+      ],
+      "sourceFile": "output\\hangzhou-gates-fengshan-20261022.xml"
+    },
+    {
+      "id": "way/1230050268",
+      "tags": {
+        "building": "yes",
+        "historic": "city_gate",
+        "historic:civilization": "imperial_chinese",
+        "name": "庆春门"
+      },
+      "coordinates": [
+        [
+          120.1830178,
+          30.2608923
+        ],
+        [
+          120.1830654,
+          30.2607386
+        ],
+        [
+          120.1831109,
+          30.2606653
+        ],
+        [
+          120.1830943,
+          30.2606564
+        ],
+        [
+          120.183175,
+          30.2605223
+        ],
+        [
+          120.1831937,
+          30.2605295
+        ],
+        [
+          120.1832495,
+          30.260433
+        ],
+        [
+          120.1832951,
+          30.2604544
+        ],
+        [
+          120.1832371,
+          30.2605545
+        ],
+        [
+          120.1832599,
+          30.2605634
+        ],
+        [
+          120.1831709,
+          30.2607011
+        ],
+        [
+          120.1831461,
+          30.2606939
+        ],
+        [
+          120.1831088,
+          30.2607618
+        ],
+        [
+          120.1830612,
+          30.260903
+        ],
+        [
+          120.1830178,
+          30.2608923
+        ]
+      ],
+      "sourceFile": "output\\hangzhou-gates-qingchun-20261022.xml"
+    },
+    {
+      "id": "way/61232066",
+      "tags": {
+        "barrier": "city_wall",
+        "material": "stone"
+      },
+      "coordinates": [
+        [
+          120.1648745,
+          30.2352169
+        ],
+        [
+          120.1648646,
+          30.2351485
+        ],
+        [
+          120.1648543,
+          30.2350778
+        ]
+      ],
+      "sourceFile": "output/hangzhou-palace-osm.xml"
+    }
+  ],
+  "newFeatures": [
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "杭州",
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "hangzhouHistoricalDetail": true,
+        "sourceId": "hangzhou-gate-wulin",
+        "sourceName": "武林门",
+        "label": "武林门",
+        "enSourceName": "Wulin Gate",
+        "enLabel": "Wulin Gate",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "labelMinZoom": 12,
+        "sourceUrl": "./sources/hangzhou.html",
+        "sourceTitle": "杭州城门与城墙考古：依据及定位说明",
+        "referenceUrl": "https://ori.hangzhou.com.cn/content/content_6675587_0.htm",
+        "coordinateSystem": "WGS84",
+        "status": "城门地段参照 · 非考古实测门界",
+        "enStatus": "Historical gate vicinity; not an excavated gate boundary",
+        "note": "今武林路、体育场路口万向公园一带的门址地段参照；南宋称余杭门，明代改武林门。吴越北关门原在夹城巷，不据此反推吴越城门。现代纪念碑不等于出土门基。",
+        "enNote": "Vicinity of Wulin Road and Tiyuchang Road. Called Yuhang Gate in the Southern Song and Wulin Gate in the Ming. The earlier Wuyue Beiguan Gate was elsewhere; this reference is not an excavated foundation.",
+        "inferredBoundary": true,
+        "sitePoint": true,
+        "sourceIds": [
+          "way/4397958",
+          "way/512999930"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.1538117,
+          30.2729078
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "杭州",
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "hangzhouHistoricalDetail": true,
+        "sourceId": "hangzhou-gate-genshan",
+        "sourceName": "艮山门",
+        "label": "艮山门",
+        "enSourceName": "Genshan Gate",
+        "enLabel": "Genshan Gate",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "labelMinZoom": 12,
+        "sourceUrl": "./sources/hangzhou.html",
+        "sourceTitle": "杭州城门与城墙考古：依据及定位说明",
+        "referenceUrl": "https://ori.hangzhou.com.cn/content/content_6675587_0.htm",
+        "coordinateSystem": "WGS84",
+        "status": "城门地段参照 · 非考古实测门界",
+        "enStatus": "Historical gate vicinity; not an excavated gate boundary",
+        "note": "明清门址所在的环城北路、建国北路口地段参照。宋代门址与元末东扩后的城门不能视为同一实测位置；不采用公交站或艮山门火车站坐标。",
+        "enNote": "Ming–Qing gate vicinity at Jianguo North Road and Huancheng North Road. Not an exact position for the Song gate, and not a bus or railway station.",
+        "inferredBoundary": true,
+        "sitePoint": true,
+        "sourceIds": [
+          "way/338125039",
+          "way/1373129692"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.1743554,
+          30.2772633
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "杭州",
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "hangzhouHistoricalDetail": true,
+        "sourceId": "hangzhou-gate-qingchun",
+        "sourceName": "庆春门",
+        "label": "庆春门",
+        "enSourceName": "Qingchun Gate",
+        "enLabel": "Qingchun Gate",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "labelMinZoom": 12,
+        "sourceUrl": "./sources/hangzhou.html",
+        "sourceTitle": "杭州城门与城墙考古：依据及定位说明",
+        "referenceUrl": "https://zjnews.zjol.com.cn/zjnews/hznews/201711/t20171102_5505934.shtml",
+        "coordinateSystem": "WGS84",
+        "status": "城门地段参照 · 非考古实测门界",
+        "enStatus": "Historical gate vicinity; not an excavated gate boundary",
+        "note": "元末1359年改筑后明清庆春门的现今展示地段参照。宋东青门在较西处，不将此点当作宋门址。2006—2007年复建城楼单列近现代，不能作为古代城门实测轮廓。",
+        "enNote": "Reference to the post-1359 Ming–Qing gate vicinity. The Song Dongqing Gate was farther west. The 2006–2007 reconstruction is separately classified as modern.",
+        "inferredBoundary": true,
+        "sitePoint": true,
+        "sourceIds": [
+          "way/1230050268"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.183155,
+          30.26068
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "杭州",
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "hangzhouHistoricalDetail": true,
+        "sourceId": "hangzhou-gate-qingtai",
+        "sourceName": "清泰门",
+        "label": "清泰门",
+        "enSourceName": "Qingtai Gate",
+        "enLabel": "Qingtai Gate",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "labelMinZoom": 12,
+        "sourceUrl": "./sources/hangzhou.html",
+        "sourceTitle": "杭州城门与城墙考古：依据及定位说明",
+        "referenceUrl": "https://ori.hangzhou.com.cn/content/content_6675587_0.htm",
+        "coordinateSystem": "WGS84",
+        "status": "城门地段参照 · 非考古实测门界",
+        "enStatus": "Historical gate vicinity; not an excavated gate boundary",
+        "note": "环城东路古清泰门标绘地点。原始OSM标注为清代遗址；在缺少发掘总平面时仅作门址地段参照，不宣称现代碑位就是古代门洞中心，也不直接等同宋崇新门。",
+        "enNote": "Original OSM historic-location point on Huancheng East Road, tagged Qing ruins. No excavated gate boundary or exact doorway centre is claimed.",
+        "inferredBoundary": true,
+        "sitePoint": true,
+        "sourceIds": [
+          "node/5288906036"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.1806039,
+          30.2500929
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "杭州",
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "hangzhouHistoricalDetail": true,
+        "sourceId": "hangzhou-gate-wangjiang",
+        "sourceName": "望江门",
+        "label": "望江门",
+        "enSourceName": "Wangjiang Gate",
+        "enLabel": "Wangjiang Gate",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "labelMinZoom": 12,
+        "sourceUrl": "./sources/hangzhou.html",
+        "sourceTitle": "杭州城门与城墙考古：依据及定位说明",
+        "referenceUrl": "https://www.hzarchives.org.cn/info/4717",
+        "coordinateSystem": "WGS84",
+        "status": "城门地段参照 · 非考古实测门界",
+        "enStatus": "Historical gate vicinity; not an excavated gate boundary",
+        "note": "望江路、江城路交会一带门址地段参照；档案馆记旧址在望江门直街与江城路相交处附近。宋称新门，元末改筑后称永昌门，清初改望江门。仅显示明清所在片区，不以现代路口断言宋门精确中心。",
+        "enNote": "Gate vicinity near Wangjiang Road and Jiangcheng Road, consistent with the archives location description. Called Yongchang after the late-Yuan rebuilding and Wangjiang in the Qing; the modern junction is not a surveyed Song doorway.",
+        "inferredBoundary": true,
+        "sitePoint": true,
+        "sourceIds": [
+          "way/331644332",
+          "way/513971947"
+        ],
+        "periodNames": {
+          "明": "永昌门",
+          "清": "望江门"
+        },
+        "enPeriodNames": {
+          "明": "Yongchang Gate",
+          "清": "Wangjiang Gate"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.1722424,
+          30.2389325
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "杭州",
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "hangzhouHistoricalDetail": true,
+        "sourceId": "hangzhou-gate-houchao",
+        "sourceName": "候潮门",
+        "label": "候潮门",
+        "enSourceName": "Houchao Gate",
+        "enLabel": "Houchao Gate",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "labelMinZoom": 12,
+        "sourceUrl": "./sources/hangzhou.html",
+        "sourceTitle": "杭州城门与城墙考古：依据及定位说明",
+        "referenceUrl": "https://www.hzarchives.org.cn/info/4716",
+        "coordinateSystem": "WGS84",
+        "status": "城门地段参照 · 非考古实测门界",
+        "enStatus": "Historical gate vicinity; not an excavated gate boundary",
+        "note": "候潮路、江城路一带的明清门址地段参照；档案资料记1158年在竹车门旧基重建并名候潮门，但未取得历代门基配准图，不能以现代地名断言宋元明清门洞完全重合。",
+        "enNote": "Ming–Qing gate vicinity near Houchao Road and Jiangcheng Road. Archives record the 1158 rebuilding on the earlier Zhuche Gate site; an exact alignment of all historical doorway phases remains unverified.",
+        "inferredBoundary": true,
+        "sitePoint": true,
+        "sourceIds": [
+          "way/965139020",
+          "way/965139021"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.1684292,
+          30.229366
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "杭州",
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "hangzhouHistoricalDetail": true,
+        "sourceId": "hangzhou-gate-qingbo",
+        "sourceName": "清波门",
+        "label": "清波门",
+        "enSourceName": "Qingbo Gate",
+        "enLabel": "Qingbo Gate",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "labelMinZoom": 12,
+        "sourceUrl": "./sources/hangzhou.html",
+        "sourceTitle": "杭州城门与城墙考古：依据及定位说明",
+        "referenceUrl": "https://ori.hangzhou.com.cn/content/content_6675587_0.htm",
+        "coordinateSystem": "WGS84",
+        "status": "城门地段参照 · 非考古实测门界",
+        "enStatus": "Historical gate vicinity; not an excavated gate boundary",
+        "note": "根据城门史资料所述“铁冶路口”定位到清波街、铁冶路交会地段。学士公园南山路61号的纪念碑是另一种参观参照，不强拉城墙到碑位；未取得门道发掘面。",
+        "enNote": "Gate vicinity at Qingbo Street and Tieye Road as described in the city-gate history. The memorial in Xueshi Park is a separate visitor reference, not an alignment constraint for the city wall.",
+        "inferredBoundary": true,
+        "sitePoint": true,
+        "sourceIds": [
+          "way/11749402",
+          "way/474592739"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.154558,
+          30.2403099
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "杭州",
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "hangzhouHistoricalDetail": true,
+        "sourceId": "hangzhou-gate-yongjin",
+        "sourceName": "涌金门",
+        "label": "涌金门",
+        "enSourceName": "Yongjin Gate",
+        "enLabel": "Yongjin Gate",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "labelMinZoom": 12,
+        "sourceUrl": "./sources/hangzhou.html",
+        "sourceTitle": "杭州城门与城墙考古：依据及定位说明",
+        "referenceUrl": "https://ori.hangzhou.com.cn/content/content_6675587_0.htm",
+        "coordinateSystem": "WGS84",
+        "status": "城门地段参照 · 非考古实测门界",
+        "enStatus": "Historical gate vicinity; not an excavated gate boundary",
+        "note": "柳营路、南山路附近的旧门地段参照。城门史资料特别说明旧城门位于涌金公园纪念碑以北约一两百米，因此不使用公园碑位当作原门，也不以现今涌金池边界代替古城防。此点仍是地段近似，非门基实测。",
+        "enNote": "Approximate gate vicinity near Liuying Road and Nanshan Road. The historical account places the old gate roughly 100–200 metres north of the park memorial. Neither the memorial nor the modern pond defines the ancient gate or wall.",
+        "inferredBoundary": true,
+        "sitePoint": true,
+        "sourceIds": [
+          "way/22719403",
+          "way/536237358"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.157498,
+          30.2522165
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "杭州",
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "hangzhouHistoricalDetail": true,
+        "sourceId": "hangzhou-gate-fengshan",
+        "sourceName": "凤山门",
+        "label": "凤山门",
+        "enSourceName": "Fengshan Land Gate",
+        "enLabel": "Fengshan Land Gate",
+        "period": "明",
+        "periods": [
+          "明",
+          "清"
+        ],
+        "labelMinZoom": 12,
+        "sourceUrl": "./sources/hangzhou.html",
+        "sourceTitle": "杭州城门与城墙考古：依据及定位说明",
+        "referenceUrl": "https://www.hzarchives.org.cn/info/4715",
+        "coordinateSystem": "WGS84",
+        "status": "城门地段参照 · 非考古实测门界",
+        "enStatus": "Historical gate vicinity; not an excavated gate boundary",
+        "note": "凤山门遗址小公园所在的陆门地段参照，公园范围不等于古门平面。元末1359年城垣改筑后称凤山门；与北侧中河上的凤山水门分别表示，亦不以此点代替南宋皇城和宁门。",
+        "enNote": "Reference to the land-gate vicinity at the present Fengshan Gate site park. The park is not the excavated gate plan. Distinct from the water gate to the north and from the Southern Song palace Hening Gate.",
+        "inferredBoundary": true,
+        "sitePoint": true,
+        "sourceIds": [
+          "way/464513223"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.16627,
+          30.22731
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "杭州",
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "hangzhouHistoricalDetail": true,
+        "sourceId": "hangzhou-osm-fengshan-water-gate",
+        "sourceName": "凤山水门",
+        "label": "凤山水门",
+        "enSourceName": "Fengshan Water Gate",
+        "enLabel": "Fengshan Water Gate",
+        "period": "元",
+        "periods": [
+          "元",
+          "明",
+          "清"
+        ],
+        "labelMinZoom": 12,
+        "sourceUrl": "./sources/hangzhou.html",
+        "sourceTitle": "杭州城门与城墙考古：依据及定位说明",
+        "referenceUrl": "https://z.hangzhou.com.cn/2021/syjy/content/content_8309167.html",
+        "coordinateSystem": "WGS84",
+        "status": "元末水门遗存及后世修缮 · 原始OSM闭合标绘",
+        "enStatus": "Late-Yuan water gate with later repairs; original closed OSM geometry",
+        "note": "元至正十九年（1359）改筑杭州城时修建的水门遗存，后经明清及现代修缮。原OSM简称凤山门，这里明确为水门，保留其原始闭合墙体标绘并填充；不是南宋原门、不是陆门，也不由此补画整座元代城界。",
+        "enNote": "Surviving water gate built during the 1359 rebuilding, with later repairs. Original closed OSM geometry is preserved and filled. Not a Southern Song gate, not the nearby land gate, and not evidence for a complete Yuan city enclosure.",
+        "osm": true,
+        "sourceIds": [
+          "way/519606391"
+        ],
+        "historicalFeatureId": "ancient-capital-walls:hangzhou-osm-fengshan-water-gate"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.1651305,
+              30.2297762
+            ],
+            [
+              120.1650936,
+              30.2296735
+            ],
+            [
+              120.1654387,
+              30.2295871
+            ],
+            [
+              120.1654698,
+              30.2296922
+            ],
+            [
+              120.1651305,
+              30.2297762
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "杭州",
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "hangzhouHistoricalDetail": true,
+        "sourceId": "hangzhou-osm-qingchun-reconstruction",
+        "sourceName": "庆春门复建城楼",
+        "label": "庆春门复建城楼",
+        "enSourceName": "Qingchun Gate Reconstruction",
+        "enLabel": "Qingchun Gate Reconstruction",
+        "period": "近现代",
+        "periods": [
+          "近现代"
+        ],
+        "labelMinZoom": 12,
+        "sourceUrl": "./sources/hangzhou.html",
+        "sourceTitle": "杭州城门与城墙考古：依据及定位说明",
+        "referenceUrl": "https://zjnews.zjol.com.cn/zjnews/hznews/201711/t20171102_5505934.shtml",
+        "coordinateSystem": "WGS84",
+        "status": "现代复建建筑 · 原始OSM轮廓",
+        "enStatus": "Modern reconstruction; original OSM building footprint",
+        "note": "2006—2007年复建、2008年展示开放的现状城楼墙体标绘。单列近现代，不以复建建筑轮廓作为宋东青门或明清原门的考古测绘面。",
+        "enNote": "Present-day gate building reconstructed in 2006–2007 and opened for display in 2008. This modern footprint is not an excavated Song or Ming–Qing gate plan.",
+        "osm": true,
+        "sourceIds": [
+          "way/1230050268"
+        ],
+        "historicalFeatureId": "ancient-capital-walls:hangzhou-osm-qingchun-reconstruction"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.1830178,
+              30.2608923
+            ],
+            [
+              120.1830654,
+              30.2607386
+            ],
+            [
+              120.1831109,
+              30.2606653
+            ],
+            [
+              120.1830943,
+              30.2606564
+            ],
+            [
+              120.183175,
+              30.2605223
+            ],
+            [
+              120.1831937,
+              30.2605295
+            ],
+            [
+              120.1832495,
+              30.260433
+            ],
+            [
+              120.1832951,
+              30.2604544
+            ],
+            [
+              120.1832371,
+              30.2605545
+            ],
+            [
+              120.1832599,
+              30.2605634
+            ],
+            [
+              120.1831709,
+              30.2607011
+            ],
+            [
+              120.1831461,
+              30.2606939
+            ],
+            [
+              120.1831088,
+              30.2607618
+            ],
+            [
+              120.1830612,
+              30.260903
+            ],
+            [
+              120.1830178,
+              30.2608923
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "杭州",
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "hangzhouHistoricalDetail": true,
+        "sourceId": "hangzhou-osm-taimiao-wall",
+        "sourceName": "太庙围墙标绘段",
+        "label": "太庙围墙标绘段",
+        "enSourceName": "Imperial Ancestral Temple Wall Segment",
+        "enLabel": "Imperial Ancestral Temple Wall Segment",
+        "period": "宋辽金西夏",
+        "periods": [
+          "宋辽金西夏"
+        ],
+        "labelMinZoom": 16,
+        "sourceUrl": "./sources/hangzhou.html",
+        "sourceTitle": "杭州城门与城墙考古：依据及定位说明",
+        "referenceUrl": "https://z.hangzhou.com.cn/2022/syjy/content/content_8420727.html",
+        "coordinateSystem": "WGS84",
+        "status": "太庙遗址构件现状标绘 · 开放线，非京城墙",
+        "enStatus": "Present-day temple-site wall trace; open line, not a city wall",
+        "note": "原始OSM三节点开放石墙线，位于太庙墙基点旁，按原线显示，不补接闭合。太庙1995年发掘发现东围墙、东门和夯土台基，后回填保护；本线是现状遗址构件参照，未取得可证明其与发掘墙基逐段重合的测绘资料，不能当作临安外城墙或太庙全界。",
+        "enNote": "Original open three-node OSM stone-wall trace beside the temple remains point. The 1995 excavation found the east enclosure, east gate and foundations, later reburied. This present-day trace is not a surveyed excavation plan, a city wall or a complete temple enclosure.",
+        "osm": true,
+        "sourceIds": [
+          "way/61232066"
+        ],
+        "historicalFeatureId": "ancient-capital-walls:hangzhou-osm-taimiao-wall"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.1648745,
+            30.2352169
+          ],
+          [
+            120.1648646,
+            30.2351485
+          ],
+          [
+            120.1648543,
+            30.2350778
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "杭州",
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "hangzhouHistoricalDetail": true,
+        "sourceId": "hangzhou-east-city-wall-excavations",
+        "sourceName": "南宋京城东墙遗址",
+        "label": "南宋京城东墙遗址",
+        "enSourceName": "Southern Song East City Wall Excavations",
+        "enLabel": "Southern Song East City Wall Excavations",
+        "period": "宋辽金西夏",
+        "periods": [
+          "宋辽金西夏"
+        ],
+        "labelMinZoom": 14,
+        "sourceUrl": "./sources/hangzhou.html",
+        "sourceTitle": "杭州城门与城墙考古：依据及定位说明",
+        "referenceUrl": "https://z.hangzhou.com.cn/2022/syjy/content/content_8420727.html",
+        "coordinateSystem": "WGS84",
+        "status": "2006／2025年考古地段 · 位置参照，实测墙线待核",
+        "enStatus": "2006 / 2025 excavation vicinity; surveyed wall geometry pending",
+        "note": "德寿宫东侧、直吉祥巷以东的京城墙考古地段参照，汇总2006年及2025年发掘，不重复放置两枚相邻地段点。2006年墙基宽16.65米；2025年发掘揭示墙体、内护坡及两层外护坡，墙体方向约15°，与德寿宫宫墙分立。2025报告称最晚北宋中晚期已形成，吴越始筑是讨论判断。此点按公开街巷范围与报告图一粗定位，不代表探方中心；航拍及结构图无可用地理控制，不据此生造墙线、宽带或全城范围。",
+        "enNote": "One approximate vicinity marker east of Deshou Palace and Zhijixiang Alley, covering the 2006 and 2025 city-wall excavations. The excavated city wall is distinct from the palace enclosure. The 2025 report describes a roughly 15-degree bearing and multiple slope phases; a Wuyue origin remains an interpretation. This is a public-location reference, not a surveyed trench centre. Uncontrolled excavation photographs are not converted into invented GIS wall polygons.",
+        "inferredBoundary": true,
+        "sitePoint": true,
+        "referenceUrls": [
+          "https://z.hangzhou.com.cn/2022/syjy/content/content_8420727.html",
+          "https://www.sohu.com/a/1008277621_121107011"
+        ],
+        "locationEvidence": {
+          "alleyId": "way/489075433",
+          "locationFigure": "郭贵诚等《浙江南宋临安城东城墙遗址（德寿宫段）2025年发掘收获》图一",
+          "method": "公开道路与位置示意图共同核对，仅确定地段，不配准航拍"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.17002,
+          30.2407
+        ]
+      }
+    }
+  ],
+  "missing": [
+    "南宋临安全城与皇城历次完整实测城界",
+    "和宁、丽正、东华、西华门的可靠发掘测绘坐标",
+    "2025德寿宫段京城墙可地理配准的发掘总平面",
+    "艮山、庆春等宋门与元末改筑后门址的逐期配准"
+  ],
+  "decisions": [
+    "不将明清13平方公里城郭范围套用于南宋",
+    "2006、2025京城墙与德寿宫东宫墙分开",
+    "钱塘门复用既有点，不生成重复根点或改变世界遗产打卡",
+    "太庙墙基点保留，隐藏其与相邻墙线重复标签",
+    "参考点不用于强拉或闭合城墙；凤山水门闭合体填充，太庙开放墙线保持开放"
+  ],
+  "sources": [
+    "https://ori.hangzhou.com.cn/content/content_6675587_0.htm",
+    "https://z.hangzhou.com.cn/2022/syjy/content/content_8420727.html",
+    "https://z.hangzhou.com.cn/2021/syjy/content/content_8309167.html",
+    "https://zjnews.zjol.com.cn/zjnews/hznews/201711/t20171102_5505934.shtml",
+    "https://www.hzarchives.org.cn/info/4715",
+    "https://www.hzarchives.org.cn/info/4716",
+    "https://www.hzarchives.org.cn/info/4717",
+    "https://www.sohu.com/a/1008277621_121107011"
+  ]
+}

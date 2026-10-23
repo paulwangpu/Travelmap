@@ -1,0 +1,2858 @@
+{
+  "type": "FeatureCollection",
+  "schemaVersion": 1,
+  "scope": "Imperial tomb supplementary geometry; first batch: Yin Xu royal cemetery",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "sourceId": "yin-royal-1500",
+        "tombId": "shang-m1500",
+        "name": "M1500",
+        "enName": "M1500",
+        "label": "M1500",
+        "enLabel": "M1500",
+        "period": "夏商",
+        "sourceUrl": "./sources/yinxu-royal.html",
+        "referenceUrl": "https://www.cssn.cn/kgxc/lbt/202303/t20230303_5601006.shtml",
+        "inferredBoundary": true,
+        "labelCoordinates": [
+          114.30114928975416,
+          36.1404203192691
+        ],
+        "note": "依据卫星影像逐段描绘现状墓室、墓道保护标识外缘，按考古总图核对墓号；取代此前由小比例示意图整体配准的轮廓。地表标识及影像均不等于地下遗迹实测边界，不据形制推定墓主。 两墓之间的现状长条保护标识连通，分别保留相关墓道，不由地表连通推断同期或同墓；分期端部仍待原始发掘图核实。",
+        "enNote": "The visible protective marking is traced edge by edge from satellite imagery, with the tomb number checked against archaeological plans. This replaces the globally registered diagram outline. Neither the surface marking nor imagery constitutes a surveyed buried tomb boundary or identifies its occupant. The long surface marking connects the two tombs. Related ramp traces are retained separately; surface continuity does not establish contemporaneity or a shared tomb. Phase-specific ramp ends await excavation plans.",
+        "status": "卫星影像可见保护标识轮廓 · 非地下墓室实测边线",
+        "enStatus": "Visible protective marking traced from satellite imagery; not a surveyed buried tomb boundary",
+        "labelMinZoom": 16,
+        "kind": "tomb-outline",
+        "fillOpacity": 0.035,
+        "tombOutline": true,
+        "geometryBasis": "satellite-visible-protective-marking"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.30116364955904,
+              36.14070955443317
+            ],
+            [
+              114.30123209953308,
+              36.14070192985113
+            ],
+            [
+              114.30122029781342,
+              36.14061805939963
+            ],
+            [
+              114.30126042366027,
+              36.14061043480869
+            ],
+            [
+              114.30125334262846,
+              36.14054753190513
+            ],
+            [
+              114.30123682022094,
+              36.14055134420374
+            ],
+            [
+              114.30122737884523,
+              36.140482722800215
+            ],
+            [
+              114.30145633220673,
+              36.14044841207593
+            ],
+            [
+              114.30144689083102,
+              36.14038550904247
+            ],
+            [
+              114.30122501850127,
+              36.14041791364177
+            ],
+            [
+              114.3012108564377,
+              36.14036644750722
+            ],
+            [
+              114.30114948749542,
+              36.14037216596828
+            ],
+            [
+              114.30106687545776,
+              36.13984034730645
+            ],
+            [
+              114.30103619098662,
+              36.13979650546383
+            ],
+            [
+              114.3009748220444,
+              36.13980794246859
+            ],
+            [
+              114.30100550651548,
+              36.13985940896953
+            ],
+            [
+              114.30107159614562,
+              36.14037025981464
+            ],
+            [
+              114.3010196685791,
+              36.14037788442893
+            ],
+            [
+              114.30102910995481,
+              36.140435069012455
+            ],
+            [
+              114.30080487728117,
+              36.14046937974256
+            ],
+            [
+              114.30081195831298,
+              36.140524658109506
+            ],
+            [
+              114.30104327201843,
+              36.14049034740358
+            ],
+            [
+              114.3010527133942,
+              36.140560874949486
+            ],
+            [
+              114.30111644268032,
+              36.14055325035299
+            ],
+            [
+              114.30112588405609,
+              36.14058946717977
+            ],
+            [
+              114.30110464096072,
+              36.140593279476356
+            ],
+            [
+              114.30111172199253,
+              36.140635214726544
+            ],
+            [
+              114.30114476680757,
+              36.14062949628466
+            ],
+            [
+              114.30116364955904,
+              36.14070955443317
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sourceId": "yin-royal-1003",
+        "tombId": "shang-m1003",
+        "name": "M1003",
+        "enName": "M1003",
+        "label": "M1003",
+        "enLabel": "M1003",
+        "period": "夏商",
+        "sourceUrl": "./sources/yinxu-royal.html",
+        "referenceUrl": "https://www.cssn.cn/kgxc/lbt/202303/t20230303_5601006.shtml",
+        "inferredBoundary": true,
+        "labelCoordinates": [
+          114.30150544928858,
+          36.14024915144476
+        ],
+        "note": "依据卫星影像逐段描绘现状墓室、墓道保护标识外缘，按考古总图核对墓号；取代此前由小比例示意图整体配准的轮廓。地表标识及影像均不等于地下遗迹实测边界，不据形制推定墓主。",
+        "enNote": "The visible protective marking is traced edge by edge from satellite imagery, with the tomb number checked against archaeological plans. This replaces the globally registered diagram outline. Neither the surface marking nor imagery constitutes a surveyed buried tomb boundary or identifies its occupant.",
+        "status": "卫星影像可见保护标识轮廓 · 非地下墓室实测边线",
+        "enStatus": "Visible protective marking traced from satellite imagery; not a surveyed buried tomb boundary",
+        "labelMinZoom": 16,
+        "kind": "tomb-outline",
+        "fillOpacity": 0.035,
+        "tombOutline": true,
+        "geometryBasis": "satellite-visible-protective-marking"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.30148465633391,
+              36.14047700434721
+            ],
+            [
+              114.30156490802767,
+              36.14046747359128
+            ],
+            [
+              114.3015483856201,
+              36.14035310442978
+            ],
+            [
+              114.30160031318667,
+              36.14034547981309
+            ],
+            [
+              114.30159323215486,
+              36.14028638900859
+            ],
+            [
+              114.3017749786377,
+              36.14025970282422
+            ],
+            [
+              114.30176317691803,
+              36.14019870579731
+            ],
+            [
+              114.30157907009124,
+              36.14022539200243
+            ],
+            [
+              114.30156726837157,
+              36.140177738058355
+            ],
+            [
+              114.30149645805358,
+              36.14018726884948
+            ],
+            [
+              114.30146341323854,
+              36.139983309666604
+            ],
+            [
+              114.30139496326444,
+              36.13999284048136
+            ],
+            [
+              114.30142800807954,
+              36.14019489348155
+            ],
+            [
+              114.30138316154478,
+              36.14020442427061
+            ],
+            [
+              114.30138552188873,
+              36.14025398435497
+            ],
+            [
+              114.30121793746946,
+              36.14028448285286
+            ],
+            [
+              114.30122973918918,
+              36.14034166750448
+            ],
+            [
+              114.30139496326444,
+              36.140313075183876
+            ],
+            [
+              114.30141384601592,
+              36.140362635199615
+            ],
+            [
+              114.30146577358249,
+              36.14035691673786
+            ],
+            [
+              114.30148465633391,
+              36.14047700434721
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sourceId": "yin-royal-1004",
+        "tombId": "shang-m1004",
+        "name": "M1004",
+        "enName": "M1004",
+        "label": "M1004",
+        "enLabel": "M1004",
+        "period": "夏商",
+        "sourceUrl": "./sources/yinxu-royal.html",
+        "referenceUrl": "https://www.cssn.cn/kgxc/lbt/202303/t20230303_5601006.shtml",
+        "inferredBoundary": true,
+        "labelCoordinates": [
+          114.3019755183945,
+          36.14017593319469
+        ],
+        "note": "依据卫星影像逐段描绘现状墓室、墓道保护标识外缘，按考古总图核对墓号；取代此前由小比例示意图整体配准的轮廓。地表标识及影像均不等于地下遗迹实测边界，不据形制推定墓主。",
+        "enNote": "The visible protective marking is traced edge by edge from satellite imagery, with the tomb number checked against archaeological plans. This replaces the globally registered diagram outline. Neither the surface marking nor imagery constitutes a surveyed buried tomb boundary or identifies its occupant.",
+        "status": "卫星影像可见保护标识轮廓 · 非地下墓室实测边线",
+        "enStatus": "Visible protective marking traced from satellite imagery; not a surveyed buried tomb boundary",
+        "labelMinZoom": 16,
+        "kind": "tomb-outline",
+        "fillOpacity": 0.035,
+        "tombOutline": true,
+        "geometryBasis": "satellite-visible-protective-marking"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.30202989578248,
+              36.140391227502136
+            ],
+            [
+              114.30210306644437,
+              36.14038360288916
+            ],
+            [
+              114.302081823349,
+              36.14024635972864
+            ],
+            [
+              114.30214319229128,
+              36.14023492278776
+            ],
+            [
+              114.30213847160337,
+              36.14019298732361
+            ],
+            [
+              114.30230369567869,
+              36.140168207266065
+            ],
+            [
+              114.30229425430298,
+              36.14010721016802
+            ],
+            [
+              114.3021148681641,
+              36.140133896404244
+            ],
+            [
+              114.30210070610048,
+              36.14007099311861
+            ],
+            [
+              114.30202281475067,
+              36.140082430083396
+            ],
+            [
+              114.30193548202516,
+              36.139804130133854
+            ],
+            [
+              114.30186703205106,
+              36.13982128563875
+            ],
+            [
+              114.30194020271301,
+              36.14009386704649
+            ],
+            [
+              114.30190479755402,
+              36.14009958552742
+            ],
+            [
+              114.30191187858583,
+              36.14015486415492
+            ],
+            [
+              114.30179150104522,
+              36.140179644216666
+            ],
+            [
+              114.30180094242098,
+              36.14023492278776
+            ],
+            [
+              114.30192840099335,
+              36.140212048901
+            ],
+            [
+              114.30193784236911,
+              36.14027876438542
+            ],
+            [
+              114.30200629234315,
+              36.14026542129307
+            ],
+            [
+              114.30202989578248,
+              36.140391227502136
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sourceId": "yin-royal-1001",
+        "tombId": "shang-m1001",
+        "name": "M1001",
+        "enName": "M1001",
+        "label": "M1001",
+        "enLabel": "M1001",
+        "period": "夏商",
+        "sourceUrl": "./sources/yinxu-royal.html",
+        "referenceUrl": "https://www.cssn.cn/kgxc/lbt/202303/t20230303_5601006.shtml",
+        "inferredBoundary": true,
+        "labelCoordinates": [
+          114.30215274193074,
+          36.139867683386946
+        ],
+        "note": "依据卫星影像逐段描绘现状墓室、墓道保护标识外缘，按考古总图核对墓号；取代此前由小比例示意图整体配准的轮廓。地表标识及影像均不等于地下遗迹实测边界，不据形制推定墓主。",
+        "enNote": "The visible protective marking is traced edge by edge from satellite imagery, with the tomb number checked against archaeological plans. This replaces the globally registered diagram outline. Neither the surface marking nor imagery constitutes a surveyed buried tomb boundary or identifies its occupant.",
+        "status": "卫星影像可见保护标识轮廓 · 非地下墓室实测边线",
+        "enStatus": "Visible protective marking traced from satellite imagery; not a surveyed buried tomb boundary",
+        "labelMinZoom": 16,
+        "kind": "tomb-outline",
+        "fillOpacity": 0.035,
+        "tombOutline": true,
+        "geometryBasis": "satellite-visible-protective-marking"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.30220928192136,
+              36.14010911632805
+            ],
+            [
+              114.30228245258331,
+              36.140097679367166
+            ],
+            [
+              114.30224704742432,
+              36.139964248033635
+            ],
+            [
+              114.30228245258331,
+              36.13994899872393
+            ],
+            [
+              114.30227065086365,
+              36.139897532281786
+            ],
+            [
+              114.30240519046782,
+              36.139868939799335
+            ],
+            [
+              114.30239338874816,
+              36.13981556713754
+            ],
+            [
+              114.30222108364103,
+              36.139851784304845
+            ],
+            [
+              114.30215735435485,
+              36.13979841163139
+            ],
+            [
+              114.302081823349,
+              36.139541078589126
+            ],
+            [
+              114.30200865268705,
+              36.139552515631145
+            ],
+            [
+              114.302081823349,
+              36.139788880793034
+            ],
+            [
+              114.30209598541262,
+              36.13985940896953
+            ],
+            [
+              114.30206058025357,
+              36.13986703363346
+            ],
+            [
+              114.30207002162933,
+              36.13991087543669
+            ],
+            [
+              114.30198976993563,
+              36.13992993708262
+            ],
+            [
+              114.30199921131134,
+              36.13998521582965
+            ],
+            [
+              114.30209126472471,
+              36.13996615419715
+            ],
+            [
+              114.302117228508,
+              36.140040494537736
+            ],
+            [
+              114.30217623710632,
+              36.14003096372876
+            ],
+            [
+              114.30220928192136,
+              36.14010911632805
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sourceId": "yin-royal-1002",
+        "tombId": "shang-m1002",
+        "name": "M1002",
+        "enName": "M1002",
+        "label": "M1002",
+        "enLabel": "M1002",
+        "period": "夏商",
+        "sourceUrl": "./sources/yinxu-royal.html",
+        "referenceUrl": "https://www.cssn.cn/kgxc/lbt/202303/t20230303_5601006.shtml",
+        "inferredBoundary": true,
+        "labelCoordinates": [
+          114.30179522250006,
+          36.13968520603131
+        ],
+        "note": "依据卫星影像逐段描绘现状墓室、墓道保护标识外缘，按考古总图核对墓号；取代此前由小比例示意图整体配准的轮廓。地表标识及影像均不等于地下遗迹实测边界，不据形制推定墓主。",
+        "enNote": "The visible protective marking is traced edge by edge from satellite imagery, with the tomb number checked against archaeological plans. This replaces the globally registered diagram outline. Neither the surface marking nor imagery constitutes a surveyed buried tomb boundary or identifies its occupant.",
+        "status": "卫星影像可见保护标识轮廓 · 非地下墓室实测边线",
+        "enStatus": "Visible protective marking traced from satellite imagery; not a surveyed buried tomb boundary",
+        "labelMinZoom": 16,
+        "kind": "tomb-outline",
+        "fillOpacity": 0.035,
+        "tombOutline": true,
+        "geometryBasis": "satellite-visible-protective-marking"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.30190007686616,
+              36.13992231242481
+            ],
+            [
+              114.3019661664963,
+              36.139901344611985
+            ],
+            [
+              114.30190479755402,
+              36.13979650546383
+            ],
+            [
+              114.30184814929964,
+              36.13977744378546
+            ],
+            [
+              114.30186703205106,
+              36.139729789569316
+            ],
+            [
+              114.30190951824187,
+              36.13972216489205
+            ],
+            [
+              114.3018953561783,
+              36.139680229153825
+            ],
+            [
+              114.30200157165524,
+              36.13964782424985
+            ],
+            [
+              114.30199213027953,
+              36.13959635761012
+            ],
+            [
+              114.30185050964354,
+              36.13959826378257
+            ],
+            [
+              114.30184578895569,
+              36.1395849205745
+            ],
+            [
+              114.3017820596695,
+              36.139579202056055
+            ],
+            [
+              114.3017065286636,
+              36.13938667835862
+            ],
+            [
+              114.30163335800171,
+              36.139401927777634
+            ],
+            [
+              114.30169472694399,
+              36.13960398229962
+            ],
+            [
+              114.30169000625608,
+              36.13963448105019
+            ],
+            [
+              114.3016616821289,
+              36.139664979788904
+            ],
+            [
+              114.301659321785,
+              36.139680229153825
+            ],
+            [
+              114.30149409770968,
+              36.139729789569316
+            ],
+            [
+              114.30151534080505,
+              36.1397907869608
+            ],
+            [
+              114.30168056488037,
+              36.139746945090465
+            ],
+            [
+              114.30172541141508,
+              36.13977363144924
+            ],
+            [
+              114.30173485279084,
+              36.1397907869608
+            ],
+            [
+              114.30178914070132,
+              36.139781256121495
+            ],
+            [
+              114.30182690620421,
+              36.13980794246859
+            ],
+            [
+              114.30190007686616,
+              36.13992231242481
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sourceId": "yin-royal-1217",
+        "tombId": "shang-m1217",
+        "name": "M1217",
+        "enName": "M1217",
+        "label": "M1217",
+        "enLabel": "M1217",
+        "period": "夏商",
+        "sourceUrl": "./sources/yinxu-royal.html",
+        "referenceUrl": "https://www.cssn.cn/kgxc/lbt/202303/t20230303_5601006.shtml",
+        "inferredBoundary": true,
+        "labelCoordinates": [
+          114.3009922644103,
+          36.13965447436687
+        ],
+        "note": "依据卫星影像逐段描绘现状墓室、墓道保护标识外缘，按考古总图核对墓号；取代此前由小比例示意图整体配准的轮廓。地表标识及影像均不等于地下遗迹实测边界，不据形制推定墓主。 两墓之间的现状长条保护标识连通，分别保留相关墓道，不由地表连通推断同期或同墓；分期端部仍待原始发掘图核实。",
+        "enNote": "The visible protective marking is traced edge by edge from satellite imagery, with the tomb number checked against archaeological plans. This replaces the globally registered diagram outline. Neither the surface marking nor imagery constitutes a surveyed buried tomb boundary or identifies its occupant. The long surface marking connects the two tombs. Related ramp traces are retained separately; surface continuity does not establish contemporaneity or a shared tomb. Phase-specific ramp ends await excavation plans.",
+        "status": "卫星影像可见保护标识轮廓 · 非地下墓室实测边线",
+        "enStatus": "Visible protective marking traced from satellite imagery; not a surveyed buried tomb boundary",
+        "labelMinZoom": 16,
+        "kind": "tomb-outline",
+        "fillOpacity": 0.035,
+        "tombOutline": true,
+        "geometryBasis": "satellite-visible-protective-marking"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.30107159614562,
+              36.14037025981464
+            ],
+            [
+              114.30114004611971,
+              36.14036072904574
+            ],
+            [
+              114.30104563236239,
+              36.139836534973284
+            ],
+            [
+              114.30104799270629,
+              36.1397907869608
+            ],
+            [
+              114.30108103752139,
+              36.13975838210248
+            ],
+            [
+              114.30111172199253,
+              36.13971454021403
+            ],
+            [
+              114.30114004611971,
+              36.139699290855795
+            ],
+            [
+              114.30116128921509,
+              36.139659261276314
+            ],
+            [
+              114.3013973236084,
+              36.13960970081626
+            ],
+            [
+              114.30138080120088,
+              36.13955060945759
+            ],
+            [
+              114.30114948749542,
+              36.13959826378257
+            ],
+            [
+              114.30107867717743,
+              36.13959254526509
+            ],
+            [
+              114.30107159614562,
+              36.13955442180465
+            ],
+            [
+              114.30102438926696,
+              36.139552515631145
+            ],
+            [
+              114.30091345310211,
+              36.13902069141336
+            ],
+            [
+              114.30084028244016,
+              36.139030222345035
+            ],
+            [
+              114.30093941688534,
+              36.13956585884473
+            ],
+            [
+              114.3008709669113,
+              36.13957729588314
+            ],
+            [
+              114.30088040828701,
+              36.13961732550445
+            ],
+            [
+              114.30062785148618,
+              36.139672604471734
+            ],
+            [
+              114.30064909458162,
+              36.13976219443944
+            ],
+            [
+              114.30085916519164,
+              36.13971454021403
+            ],
+            [
+              114.30089929103849,
+              36.139725977230775
+            ],
+            [
+              114.30092289447782,
+              36.13975838210248
+            ],
+            [
+              114.30096065998077,
+              36.13975456976533
+            ],
+            [
+              114.30099134445192,
+              36.13979841163139
+            ],
+            [
+              114.30099370479587,
+              36.139851784304845
+            ],
+            [
+              114.30107159614562,
+              36.14037025981464
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sourceId": "yin-royal-1550",
+        "tombId": "shang-m1550",
+        "name": "M1550",
+        "enName": "M1550",
+        "label": "M1550",
+        "enLabel": "M1550",
+        "period": "夏商",
+        "sourceUrl": "./sources/yinxu-royal.html",
+        "referenceUrl": "https://www.cssn.cn/kgxc/lbt/202303/t20230303_5601006.shtml",
+        "inferredBoundary": true,
+        "labelCoordinates": [
+          114.30229775445281,
+          36.139618454925554
+        ],
+        "note": "依据卫星影像逐段描绘现状墓室、墓道保护标识外缘，按考古总图核对墓号；取代此前由小比例示意图整体配准的轮廓。地表标识及影像均不等于地下遗迹实测边界，不据形制推定墓主。",
+        "enNote": "The visible protective marking is traced edge by edge from satellite imagery, with the tomb number checked against archaeological plans. This replaces the globally registered diagram outline. Neither the surface marking nor imagery constitutes a surveyed buried tomb boundary or identifies its occupant.",
+        "status": "卫星影像可见保护标识轮廓 · 非地下墓室实测边线",
+        "enStatus": "Visible protective marking traced from satellite imagery; not a surveyed buried tomb boundary",
+        "labelMinZoom": 16,
+        "kind": "tomb-outline",
+        "fillOpacity": 0.035,
+        "tombOutline": true,
+        "geometryBasis": "satellite-visible-protective-marking"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.30232021808627,
+              36.139809848635906
+            ],
+            [
+              114.30238630771635,
+              36.13979841163139
+            ],
+            [
+              114.30235798358916,
+              36.13970310319563
+            ],
+            [
+              114.30232965946198,
+              36.13967641681286
+            ],
+            [
+              114.30234854221345,
+              36.13964401190731
+            ],
+            [
+              114.30238394737245,
+              36.1396401995646
+            ],
+            [
+              114.3023792266846,
+              36.13961351316044
+            ],
+            [
+              114.30253264904019,
+              36.139607794644085
+            ],
+            [
+              114.30251848697662,
+              36.13953536006749
+            ],
+            [
+              114.30233674049379,
+              36.13956776501792
+            ],
+            [
+              114.30229425430298,
+              36.13946864395093
+            ],
+            [
+              114.30227065086365,
+              36.13945339454488
+            ],
+            [
+              114.30225884914398,
+              36.13932949301097
+            ],
+            [
+              114.30219275951384,
+              36.13933902390514
+            ],
+            [
+              114.30219275951384,
+              36.13947245630197
+            ],
+            [
+              114.30219039916994,
+              36.13956585884473
+            ],
+            [
+              114.30217623710632,
+              36.13960970081626
+            ],
+            [
+              114.30213375091552,
+              36.13962685636367
+            ],
+            [
+              114.30215263366699,
+              36.139685947664894
+            ],
+            [
+              114.30219275951384,
+              36.13967451064233
+            ],
+            [
+              114.30224468708036,
+              36.139693572345685
+            ],
+            [
+              114.30227773189546,
+              36.13968213532422
+            ],
+            [
+              114.30232021808627,
+              36.139809848635906
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sourceId": "yin-royal-1567",
+        "tombId": "shang-m1567",
+        "name": "M1567（未完成）",
+        "enName": "M1567 (unfinished)",
+        "label": "M1567（未完成）",
+        "enLabel": "M1567 (unfinished)",
+        "period": "夏商",
+        "sourceUrl": "./sources/yinxu-royal.html",
+        "referenceUrl": "https://www.cssn.cn/kgxc/lbt/202303/t20230303_5601006.shtml",
+        "inferredBoundary": true,
+        "labelCoordinates": [
+          114.30162613356299,
+          36.139999985207524
+        ],
+        "note": "依据卫星影像逐段描绘现状墓室、墓道保护标识外缘，按考古总图核对墓号；取代此前由小比例示意图整体配准的轮廓。地表标识及影像均不等于地下遗迹实测边界，不据形制推定墓主。 M1567为未完成王陵；保留原目录认定及图件编号差异说明。",
+        "enNote": "The visible protective marking is traced edge by edge from satellite imagery, with the tomb number checked against archaeological plans. This replaces the globally registered diagram outline. Neither the surface marking nor imagery constitutes a surveyed buried tomb boundary or identifies its occupant. M1567 remains classified as an unfinished royal tomb, with the numbering discrepancy retained in the audit.",
+        "status": "卫星影像可见保护标识轮廓 · 非地下墓室实测边线",
+        "enStatus": "Visible protective marking traced from satellite imagery; not a surveyed buried tomb boundary",
+        "labelMinZoom": 16,
+        "kind": "tomb-outline",
+        "fillOpacity": 0.035,
+        "tombOutline": true,
+        "geometryBasis": "satellite-visible-protective-marking"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.30156726837157,
+              36.140133896404244
+            ],
+            [
+              114.30185995101931,
+              36.14011292864797
+            ],
+            [
+              114.30179622173307,
+              36.13982509797266
+            ],
+            [
+              114.30150353908539,
+              36.139933749411256
+            ],
+            [
+              114.30156726837157,
+              36.140133896404244
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sourceId": "yin-royal-1400",
+        "tombId": "shang-m1400",
+        "name": "M1400",
+        "enName": "M1400",
+        "label": "M1400",
+        "enLabel": "M1400",
+        "period": "夏商",
+        "sourceUrl": "./sources/yinxu-royal.html",
+        "referenceUrl": "https://www.cssn.cn/kgxc/lbt/202303/t20230303_5601006.shtml",
+        "inferredBoundary": true,
+        "labelCoordinates": [
+          114.30447256372469,
+          36.13999939574819
+        ],
+        "note": "依据卫星影像逐段描绘现状墓室、墓道保护标识外缘，按考古总图核对墓号；取代此前由小比例示意图整体配准的轮廓。地表标识及影像均不等于地下遗迹实测边界，不据形制推定墓主。",
+        "enNote": "The visible protective marking is traced edge by edge from satellite imagery, with the tomb number checked against archaeological plans. This replaces the globally registered diagram outline. Neither the surface marking nor imagery constitutes a surveyed buried tomb boundary or identifies its occupant.",
+        "status": "卫星影像可见保护标识轮廓 · 非地下墓室实测边线",
+        "enStatus": "Visible protective marking traced from satellite imagery; not a surveyed buried tomb boundary",
+        "labelMinZoom": 16,
+        "kind": "tomb-outline",
+        "fillOpacity": 0.035,
+        "tombOutline": true,
+        "geometryBasis": "satellite-visible-protective-marking"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.30443744659425,
+              36.14030163825272
+            ],
+            [
+              114.30451769828795,
+              36.14029210747549
+            ],
+            [
+              114.30449645519258,
+              36.14009005472565
+            ],
+            [
+              114.30456490516661,
+              36.14008052392271
+            ],
+            [
+              114.30456018447876,
+              36.14003096372876
+            ],
+            [
+              114.30472304821012,
+              36.14001380826973
+            ],
+            [
+              114.30471596717831,
+              36.13994899872393
+            ],
+            [
+              114.30455074310305,
+              36.139968060360594
+            ],
+            [
+              114.30454366207124,
+              36.13989371995138
+            ],
+            [
+              114.30448937416077,
+              36.139897532281786
+            ],
+            [
+              114.30446341037748,
+              36.13954679711035
+            ],
+            [
+              114.30438551902773,
+              36.139552515631145
+            ],
+            [
+              114.30440676212311,
+              36.13989181378612
+            ],
+            [
+              114.30434067249297,
+              36.139901344611985
+            ],
+            [
+              114.30434775352478,
+              36.139958529542845
+            ],
+            [
+              114.30411643981932,
+              36.139981403503526
+            ],
+            [
+              114.30412352085114,
+              36.14004430686099
+            ],
+            [
+              114.30435483455659,
+              36.140025245242825
+            ],
+            [
+              114.30436191558834,
+              36.14009958552742
+            ],
+            [
+              114.30442564487458,
+              36.14008814856516
+            ],
+            [
+              114.30443744659425,
+              36.14030163825272
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sourceId": "yin-royal-1443",
+        "tombId": "yin-kings",
+        "name": "M1443",
+        "enName": "M1443",
+        "label": "M1443",
+        "enLabel": "M1443",
+        "period": "夏商",
+        "sourceUrl": "./sources/yinxu-royal.html",
+        "referenceUrl": "https://www.cssn.cn/kgxc/lbt/202303/t20230303_5601006.shtml",
+        "inferredBoundary": true,
+        "labelCoordinates": [
+          114.30431105535496,
+          36.140176624993714
+        ],
+        "note": "依据卫星影像逐段描绘现状墓室、墓道保护标识外缘，按考古总图核对墓号；取代此前由小比例示意图整体配准的轮廓。地表标识及影像均不等于地下遗迹实测边界，不据形制推定墓主。",
+        "enNote": "The visible protective marking is traced edge by edge from satellite imagery, with the tomb number checked against archaeological plans. This replaces the globally registered diagram outline. Neither the surface marking nor imagery constitutes a surveyed buried tomb boundary or identifies its occupant.",
+        "status": "卫星影像可见保护标识轮廓 · 非地下墓室实测边线",
+        "enStatus": "Visible protective marking traced from satellite imagery; not a surveyed buried tomb boundary",
+        "labelMinZoom": 16,
+        "kind": "tomb-outline",
+        "fillOpacity": 0.035,
+        "tombOutline": true,
+        "geometryBasis": "satellite-visible-protective-marking"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.30428874492645,
+              36.14037407212189
+            ],
+            [
+              114.30436191558834,
+              36.14036644750722
+            ],
+            [
+              114.30433831214907,
+              36.140133896404244
+            ],
+            [
+              114.30431234836578,
+              36.14001380826973
+            ],
+            [
+              114.30424625873565,
+              36.140021432918644
+            ],
+            [
+              114.30426514148712,
+              36.14016058263141
+            ],
+            [
+              114.30428874492645,
+              36.14037407212189
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sourceId": "yin-royal-1129",
+        "tombId": "yin-kings",
+        "name": "M1129",
+        "enName": "M1129",
+        "label": "M1129",
+        "enLabel": "M1129",
+        "period": "夏商",
+        "sourceUrl": "./sources/yinxu-royal.html",
+        "referenceUrl": "https://www.cssn.cn/kgxc/lbt/202303/t20230303_5601006.shtml",
+        "inferredBoundary": true,
+        "labelCoordinates": [
+          114.30414735604126,
+          36.13978409232205
+        ],
+        "note": "依据卫星影像逐段描绘现状墓室、墓道保护标识外缘，按考古总图核对墓号；取代此前由小比例示意图整体配准的轮廓。地表标识及影像均不等于地下遗迹实测边界，不据形制推定墓主。",
+        "enNote": "The visible protective marking is traced edge by edge from satellite imagery, with the tomb number checked against archaeological plans. This replaces the globally registered diagram outline. Neither the surface marking nor imagery constitutes a surveyed buried tomb boundary or identifies its occupant.",
+        "status": "卫星影像可见保护标识轮廓 · 非地下墓室实测边线",
+        "enStatus": "Visible protective marking traced from satellite imagery; not a surveyed buried tomb boundary",
+        "labelMinZoom": 16,
+        "kind": "tomb-outline",
+        "fillOpacity": 0.035,
+        "tombOutline": true,
+        "geometryBasis": "satellite-visible-protective-marking"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.30409519672395,
+              36.13985940896953
+            ],
+            [
+              114.30415892601013,
+              36.13984987813858
+            ],
+            [
+              114.30415184497832,
+              36.13980794246859
+            ],
+            [
+              114.30418961048127,
+              36.13979650546383
+            ],
+            [
+              114.30416836738584,
+              36.13970310319563
+            ],
+            [
+              114.30415184497832,
+              36.13970310319563
+            ],
+            [
+              114.30413296222684,
+              36.139560140324896
+            ],
+            [
+              114.30405979156495,
+              36.139571577364144
+            ],
+            [
+              114.30408811569214,
+              36.139712634044415
+            ],
+            [
+              114.30405271053314,
+              36.139718352553125
+            ],
+            [
+              114.30408103466033,
+              36.13981366097037
+            ],
+            [
+              114.30409519672395,
+              36.13985940896953
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sourceId": "yin-royal-WGM1",
+        "tombId": "yin-kings",
+        "name": "武官村大墓",
+        "enName": "Tomb WGM1",
+        "label": "武官村大墓",
+        "enLabel": "Tomb WGM1",
+        "period": "夏商",
+        "sourceUrl": "./sources/yinxu-royal.html",
+        "referenceUrl": "https://www.cssn.cn/kgxc/lbt/202303/t20230303_5601006.shtml",
+        "inferredBoundary": true,
+        "labelCoordinates": [
+          114.30512144291248,
+          36.14003051368909
+        ],
+        "note": "依据卫星影像逐段描绘现状墓室、墓道保护标识外缘，按考古总图核对墓号；取代此前由小比例示意图整体配准的轮廓。地表标识及影像均不等于地下遗迹实测边界，不据形制推定墓主。",
+        "enNote": "The visible protective marking is traced edge by edge from satellite imagery, with the tomb number checked against archaeological plans. This replaces the globally registered diagram outline. Neither the surface marking nor imagery constitutes a surveyed buried tomb boundary or identifies its occupant.",
+        "status": "卫星影像可见保护标识轮廓 · 非地下墓室实测边线",
+        "enStatus": "Visible protective marking traced from satellite imagery; not a surveyed buried tomb boundary",
+        "labelMinZoom": 16,
+        "kind": "tomb-outline",
+        "fillOpacity": 0.035,
+        "tombOutline": true,
+        "geometryBasis": "satellite-visible-protective-marking"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.30510542392733,
+              36.14020633042826
+            ],
+            [
+              114.30517859458922,
+              36.14019489348155
+            ],
+            [
+              114.30515735149385,
+              36.14007289927952
+            ],
+            [
+              114.30518095493318,
+              36.14006718079664
+            ],
+            [
+              114.30515735149385,
+              36.139897532281786
+            ],
+            [
+              114.3051266670227,
+              36.139899438446896
+            ],
+            [
+              114.30511014461518,
+              36.13975647593392
+            ],
+            [
+              114.30504405498505,
+              36.13976410060786
+            ],
+            [
+              114.30505113601686,
+              36.139903250777
+            ],
+            [
+              114.30502753257753,
+              36.13991468776624
+            ],
+            [
+              114.30505821704867,
+              36.14007099311861
+            ],
+            [
+              114.30507237911223,
+              36.14007289927952
+            ],
+            [
+              114.30510542392733,
+              36.14020633042826
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sourceId": "yin-royal-260",
+        "tombId": "yin-kings",
+        "name": "M260保护展厅",
+        "enName": "M260 Protective Hall",
+        "label": "M260保护展厅",
+        "enLabel": "M260 Protective Hall",
+        "period": "夏商",
+        "sourceUrl": "./sources/yinxu-royal.html",
+        "referenceUrl": "https://www.cssn.cn/kgxc/lbt/202303/t20230303_5601006.shtml",
+        "inferredBoundary": true,
+        "labelCoordinates": [
+          114.30442800521848,
+          36.13911028212547
+        ],
+        "note": "按卫星可见M260保护展厅屋面描绘现状保护建筑，不再用示意墓道覆盖展厅；屋面不等于地下墓室、墓道或祭祀坑范围。",
+        "enNote": "The visible roof of the M260 protective hall is traced as a modern protective building. It does not represent the buried chamber, ramps or sacrificial pits.",
+        "status": "现状保护建筑屋面 · 不代表地下墓葬范围",
+        "enStatus": "Modern protective roof; not the buried tomb boundary",
+        "labelMinZoom": 16,
+        "kind": "protective-building",
+        "fillOpacity": 0.035,
+        "tombOutline": false,
+        "geometryBasis": "satellite-visible-protective-roof"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.30437371730807,
+              36.13930852503971
+            ],
+            [
+              114.30452950000762,
+              36.13929708796212
+            ],
+            [
+              114.3044775724411,
+              36.13891966346633
+            ],
+            [
+              114.3043288707733,
+              36.13892919441028
+            ],
+            [
+              114.30437371730807,
+              36.13930852503971
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sourceId": "yin-royal-moat-G1",
+        "tombId": "yin-kings",
+        "name": "王陵东围沟G1",
+        "enName": "Eastern Royal Cemetery Moat G1",
+        "label": "王陵东围沟G1",
+        "enLabel": "Eastern Royal Cemetery Moat G1",
+        "period": "夏商",
+        "sourceUrl": "./sources/yinxu-royal.html",
+        "referenceUrl": "https://www.cssn.cn/kgxc/lbt/202303/t20230303_5601006.shtml",
+        "inferredBoundary": true,
+        "labelCoordinates": [
+          114.30571020681487,
+          36.13919075433229
+        ],
+        "note": "依据2022年考古成果图一逐段细描围沟双侧边线及转折，保留两个缺口和图上未绘部分。图中实线与虚线分别显示，不再用一条粗略折线替代沟体；边线来自发表图件，非卫星可见沟岸或原始RTK坐标。现代展示区边界不等于古代王陵范围。",
+        "enNote": "Both banks and bends are traced from Figure 1 of the 2022 archaeological report, preserving the two gaps and unplotted portions. Published solid and dashed sections are displayed separately. These are registered plan traces, not satellite-visible banks or original RTK coordinates. The modern display area is not the full ancient cemetery extent.",
+        "status": "考古成果图围沟双侧边线配准参考 · 非原始测绘GIS",
+        "enStatus": "Registered published moat-bank traces; not original survey GIS",
+        "labelMinZoom": 15,
+        "kind": "moat",
+        "fillOpacity": 0,
+        "waterFeature": true,
+        "lineStyle": "solid",
+        "bankEdges": true
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              114.30333565895404,
+              36.139589655630644
+            ],
+            [
+              114.30336439447535,
+              36.13968127071714
+            ],
+            [
+              114.30339731062094,
+              36.139805620559414
+            ],
+            [
+              114.30343044082429,
+              36.139985636638556
+            ],
+            [
+              114.30345539865357,
+              36.14014930020318
+            ],
+            [
+              114.30348437341593,
+              36.14030312981321
+            ],
+            [
+              114.30350098258828,
+              36.14040459800564
+            ]
+          ],
+          [
+            [
+              114.3034491278184,
+              36.13957299834556
+            ],
+            [
+              114.3034738589983,
+              36.13967772165259
+            ],
+            [
+              114.3035027078443,
+              36.13979880716657
+            ],
+            [
+              114.30352357319072,
+              36.13995265780127
+            ],
+            [
+              114.3035445392702,
+              36.140132704049186
+            ],
+            [
+              114.30356949709949,
+              36.140296367307016
+            ],
+            [
+              114.3035901483882,
+              36.140394550861686
+            ]
+          ],
+          [
+            [
+              114.30333565895404,
+              36.139589655630644
+            ],
+            [
+              114.3034491278184,
+              36.13957299834556
+            ]
+          ],
+          [
+            [
+              114.30389139298131,
+              36.1407048731651
+            ],
+            [
+              114.30408994775433,
+              36.14067163024543
+            ],
+            [
+              114.30435744515415,
+              36.14064148891234
+            ],
+            [
+              114.30451964606362,
+              36.140644356634006
+            ],
+            [
+              114.3047182763865,
+              36.14063076049935
+            ],
+            [
+              114.30490466703571,
+              36.140597548054224
+            ],
+            [
+              114.30508702816024,
+              36.14057089470505
+            ],
+            [
+              114.30528967541619,
+              36.14054746497508
+            ],
+            [
+              114.30547197358254,
+              36.140504439244076
+            ],
+            [
+              114.30560158572888,
+              36.140468094632105
+            ],
+            [
+              114.30573527776642,
+              36.140438288787
+            ]
+          ],
+          [
+            [
+              114.30388308209933,
+              36.140652502045924
+            ],
+            [
+              114.30405326650833,
+              36.14062260475304
+            ],
+            [
+              114.30434512993071,
+              36.140602225797466
+            ],
+            [
+              114.30453966777071,
+              36.14057881641418
+            ],
+            [
+              114.30477468973203,
+              36.14053893297971
+            ],
+            [
+              114.30494891625744,
+              36.14050575100173
+            ],
+            [
+              114.30514747103052,
+              36.1404725079977
+            ],
+            [
+              114.30536221945209,
+              36.14043267535256
+            ],
+            [
+              114.30556074904189,
+              36.14039288336191
+            ],
+            [
+              114.30567412976478,
+              36.14035330489345
+            ]
+          ],
+          [
+            [
+              114.30626170985136,
+              36.140260144949956
+            ],
+            [
+              114.3062695422513,
+              36.14018808594255
+            ],
+            [
+              114.3062771228187,
+              36.14005053705136
+            ],
+            [
+              114.30628855662786,
+              36.13986058576501
+            ]
+          ],
+          [
+            [
+              114.30614383371335,
+              36.14018512668583
+            ],
+            [
+              114.30614341818949,
+              36.140077068552685
+            ],
+            [
+              114.30615515419782,
+              36.139965705268786
+            ],
+            [
+              114.30616286068152,
+              36.13986090099617
+            ]
+          ],
+          [
+            [
+              114.30619853459694,
+              36.13964796667809
+            ],
+            [
+              114.30616988721704,
+              36.13957927313944
+            ],
+            [
+              114.3061532402698,
+              36.13946798033057
+            ],
+            [
+              114.30614057248067,
+              36.13933703006532
+            ],
+            [
+              114.30613603929072,
+              36.13921260829856
+            ],
+            [
+              114.30612325817691,
+              36.1390521868074
+            ]
+          ],
+          [
+            [
+              114.30607700668327,
+              36.13967774231712
+            ],
+            [
+              114.30606044787737,
+              36.13958937123169
+            ],
+            [
+              114.3060519858958,
+              36.139497705193925
+            ],
+            [
+              114.30605563767153,
+              36.13939291046495
+            ],
+            [
+              114.30604293210752,
+              36.13925213649833
+            ],
+            [
+              114.30602624738532,
+              36.139131019634156
+            ],
+            [
+              114.30600970117115,
+              36.13904592246719
+            ]
+          ],
+          [
+            [
+              114.30598305606316,
+              36.13844346687937
+            ],
+            [
+              114.30596659799039,
+              36.13838129090342
+            ],
+            [
+              114.30596622024143,
+              36.13828305398457
+            ],
+            [
+              114.30596202702554,
+              36.138247043919115
+            ],
+            [
+              114.30594164016105,
+              36.13821762365077
+            ],
+            [
+              114.30586861764317,
+              36.13820798298522
+            ],
+            [
+              114.3058077718407,
+              36.1382015863811
+            ],
+            [
+              114.30575509841225,
+              36.13821154228521
+            ],
+            [
+              114.30569023567676,
+              36.13821497955751
+            ],
+            [
+              114.30558894352788,
+              36.13823488119213
+            ],
+            [
+              114.30544304959159,
+              36.138254894680195
+            ],
+            [
+              114.30526067587545,
+              36.13827827425003
+            ],
+            [
+              114.30507426004294,
+              36.138304938547016
+            ],
+            [
+              114.30492026928243,
+              36.13832824691931
+            ]
+          ],
+          [
+            [
+              114.30584909960135,
+              36.13840450773262
+            ],
+            [
+              114.30582861200384,
+              36.13834889102154
+            ],
+            [
+              114.3058121791143,
+              36.1382932641021
+            ],
+            [
+              114.30577566155955,
+              36.138286806491244
+            ],
+            [
+              114.30562975503165,
+              36.13830354540098
+            ],
+            [
+              114.30544335179081,
+              36.13833348425334
+            ],
+            [
+              114.30526099066623,
+              36.13836013836262
+            ],
+            [
+              114.30506650319273,
+              36.13839664665407
+            ],
+            [
+              114.30493278597191,
+              36.13841990415445
+            ]
+          ],
+          [
+            [
+              114.30467718827174,
+              36.13838125006419
+            ],
+            [
+              114.30447052408277,
+              36.13841451429217
+            ],
+            [
+              114.30424762847042,
+              36.13844454462258
+            ],
+            [
+              114.30404501898943,
+              36.138477798654804
+            ],
+            [
+              114.30384240950838,
+              36.13851105267293
+            ],
+            [
+              114.303639812619,
+              36.13854758123201
+            ],
+            [
+              114.303437203138,
+              36.13858083522056
+            ],
+            [
+              114.30325081248878,
+              36.13861404851939
+            ],
+            [
+              114.30322655979086,
+              36.138633756843554
+            ],
+            [
+              114.30322263099924,
+              36.138666512519386
+            ],
+            [
+              114.30323115593899,
+              36.13877455225748
+            ],
+            [
+              114.30323557580431,
+              36.13886950385062
+            ],
+            [
+              114.30323188625368,
+              36.138964475666576
+            ],
+            [
+              114.30323228918593,
+              36.13906926079894
+            ],
+            [
+              114.30324086449218,
+              36.139190398096126
+            ],
+            [
+              114.30326988962105,
+              36.139357327672045
+            ],
+            [
+              114.3033191882896,
+              36.139524206048854
+            ]
+          ],
+          [
+            [
+              114.3033191882896,
+              36.139524206048854
+            ],
+            [
+              114.30342860244599,
+              36.13950755891868
+            ]
+          ],
+          [
+            [
+              114.30342860244599,
+              36.13950755891868
+            ],
+            [
+              114.30339566111718,
+              36.13937665956353
+            ],
+            [
+              114.30336682486279,
+              36.13925884792342
+            ],
+            [
+              114.30335024087367,
+              36.139163927307976
+            ],
+            [
+              114.30333767381762,
+              36.139059172808594
+            ],
+            [
+              114.3033370820109,
+              36.13890526957747
+            ],
+            [
+              114.30333254882095,
+              36.13878084712601
+            ],
+            [
+              114.3033323095799,
+              36.13871863074185
+            ],
+            [
+              114.30334438556235,
+              36.138695678396964
+            ],
+            [
+              114.30339702121586,
+              36.13867589890606
+            ],
+            [
+              114.30356721821653,
+              36.13864927541076
+            ],
+            [
+              114.30376170569002,
+              36.13861276723684
+            ],
+            [
+              114.3039643025794,
+              36.13857623870812
+            ],
+            [
+              114.30416689946878,
+              36.138539710162384
+            ],
+            [
+              114.30436952154145,
+              36.138509730713004
+            ],
+            [
+              114.3045316217179,
+              36.138486402056785
+            ],
+            [
+              114.30468965459477,
+              36.13845980900396
+            ]
+          ],
+          [
+            [
+              114.30468965459477,
+              36.13845980900396
+            ],
+            [
+              114.30468542360393,
+              36.13841397533862
+            ],
+            [
+              114.30467718827174,
+              36.13838125006419
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sourceId": "yin-royal-moat-G1-uncertain",
+        "tombId": "yin-kings",
+        "name": "王陵东围沟G1",
+        "enName": "Eastern Royal Cemetery Moat G1",
+        "label": "王陵东围沟G1",
+        "enLabel": "Eastern Royal Cemetery Moat G1",
+        "period": "夏商",
+        "sourceUrl": "./sources/yinxu-royal.html",
+        "referenceUrl": "https://www.cssn.cn/kgxc/lbt/202303/t20230303_5601006.shtml",
+        "inferredBoundary": true,
+        "note": "依据2022年考古成果图一逐段细描围沟双侧边线及转折，保留两个缺口和图上未绘部分。图中实线与虚线分别显示，不再用一条粗略折线替代沟体；边线来自发表图件，非卫星可见沟岸或原始RTK坐标。现代展示区边界不等于古代王陵范围。",
+        "enNote": "Both banks and bends are traced from Figure 1 of the 2022 archaeological report, preserving the two gaps and unplotted portions. Published solid and dashed sections are displayed separately. These are registered plan traces, not satellite-visible banks or original RTK coordinates. The modern display area is not the full ancient cemetery extent.",
+        "status": "考古成果图围沟双侧边线配准参考 · 非原始测绘GIS",
+        "enStatus": "Registered published moat-bank traces; not original survey GIS",
+        "labelMinZoom": 15,
+        "kind": "moat",
+        "fillOpacity": 0,
+        "waterFeature": true,
+        "lineStyle": "dashed",
+        "bankEdges": true,
+        "uncertainCourse": true
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              114.30350098258828,
+              36.14040459800564
+            ],
+            [
+              114.30352576413475,
+              36.14052241809396
+            ],
+            [
+              114.30354644060668,
+              36.14062715030237
+            ],
+            [
+              114.30355876842174,
+              36.14066968787123
+            ],
+            [
+              114.30357916787779,
+              36.14070238168526
+            ],
+            [
+              114.30361979050701,
+              36.14072192678668
+            ],
+            [
+              114.30366444266099,
+              36.1407349127875
+            ],
+            [
+              114.3037171664559,
+              36.140738055058875
+            ],
+            [
+              114.30377389459227,
+              36.140728089306705
+            ],
+            [
+              114.30384276166922,
+              36.14071154411834
+            ],
+            [
+              114.30389139298131,
+              36.1407048731651
+            ]
+          ],
+          [
+            [
+              114.3035901483882,
+              36.140394550861686
+            ],
+            [
+              114.3036149551179,
+              36.140518919910775
+            ],
+            [
+              114.3036314887405,
+              36.14060074101087
+            ],
+            [
+              114.30365606882083,
+              36.140666169357324
+            ],
+            [
+              114.30368452732625,
+              36.140685744973695
+            ],
+            [
+              114.30372915429695,
+              36.14069218204984
+            ],
+            [
+              114.30378181513368,
+              36.14067895199456
+            ],
+            [
+              114.30388308209933,
+              36.140652502045924
+            ]
+          ],
+          [
+            [
+              114.30573527776642,
+              36.140438288787
+            ],
+            [
+              114.30586482695458,
+              36.14038557175476
+            ],
+            [
+              114.30597412778633,
+              36.14033945449121
+            ],
+            [
+              114.30607128967745,
+              36.14029991667054
+            ],
+            [
+              114.30616039251925,
+              36.14027349710022
+            ],
+            [
+              114.30626170985136,
+              36.140260144949956
+            ]
+          ],
+          [
+            [
+              114.30567412976478,
+              36.14035330489345
+            ],
+            [
+              114.30577532118059,
+              36.1403072079483
+            ],
+            [
+              114.30589677354453,
+              36.140257785649034
+            ],
+            [
+              114.30601826368331,
+              36.14021818677502
+            ],
+            [
+              114.30614383371335,
+              36.14018512668583
+            ]
+          ],
+          [
+            [
+              114.30628855662786,
+              36.13986058576501
+            ],
+            [
+              114.306284224904,
+              36.139788556896875
+            ],
+            [
+              114.30626779201447,
+              36.13973293099812
+            ],
+            [
+              114.30623114854336,
+              36.139693728441195
+            ],
+            [
+              114.30619853459694,
+              36.13964796667809
+            ]
+          ],
+          [
+            [
+              114.30616286068152,
+              36.13986090099617
+            ],
+            [
+              114.30616259625725,
+              36.139792136462674
+            ],
+            [
+              114.3061462389175,
+              36.139756157596125
+            ],
+            [
+              114.30610554073849,
+              36.13971696521957
+            ],
+            [
+              114.30607700668327,
+              36.13967774231712
+            ]
+          ],
+          [
+            [
+              114.30612325817691,
+              36.1390521868074
+            ],
+            [
+              114.30610658604633,
+              36.13893434417347
+            ],
+            [
+              114.30608176672501,
+              36.13880669806846
+            ],
+            [
+              114.30605293047063,
+              36.13868888557251
+            ],
+            [
+              114.30601595961713,
+              36.13856454412924
+            ],
+            [
+              114.30598305606316,
+              36.13844346687937
+            ]
+          ],
+          [
+            [
+              114.30600970117115,
+              36.13904592246719
+            ],
+            [
+              114.30598898692426,
+              36.13893136453176
+            ],
+            [
+              114.30596421796946,
+              36.13881681659792
+            ],
+            [
+              114.30593947419794,
+              36.13870881759361
+            ],
+            [
+              114.30591063794355,
+              36.13859100495068
+            ],
+            [
+              114.30587778475609,
+              36.138483025973414
+            ],
+            [
+              114.30584909960135,
+              36.13840450773262
+            ]
+          ],
+          [
+            [
+              114.30492026928243,
+              36.13832824691931
+            ],
+            [
+              114.3048473349059,
+              36.13834152821571
+            ],
+            [
+              114.3047946614775,
+              36.13835148410209
+            ],
+            [
+              114.30479886728506,
+              36.138390768681184
+            ],
+            [
+              114.30481123287501,
+              36.13844313114116
+            ],
+            [
+              114.30487200312763,
+              36.13842988036874
+            ],
+            [
+              114.30493278597191,
+              36.13841990415445
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sourceId": "yin-royal-moat-G2",
+        "tombId": "yin-kings",
+        "name": "王陵西围沟G2",
+        "enName": "Western Royal Cemetery Moat G2",
+        "label": "王陵西围沟G2",
+        "enLabel": "Western Royal Cemetery Moat G2",
+        "period": "夏商",
+        "sourceUrl": "./sources/yinxu-royal.html",
+        "referenceUrl": "https://www.cssn.cn/kgxc/lbt/202303/t20230303_5601006.shtml",
+        "inferredBoundary": true,
+        "labelCoordinates": [
+          114.30252232495468,
+          36.13896952975512
+        ],
+        "note": "依据2022年考古成果图一逐段细描围沟双侧边线及转折，保留两个缺口和图上未绘部分。图中实线与虚线分别显示，不再用一条粗略折线替代沟体；边线来自发表图件，非卫星可见沟岸或原始RTK坐标。现代展示区边界不等于古代王陵范围。",
+        "enNote": "Both banks and bends are traced from Figure 1 of the 2022 archaeological report, preserving the two gaps and unplotted portions. Published solid and dashed sections are displayed separately. These are registered plan traces, not satellite-visible banks or original RTK coordinates. The modern display area is not the full ancient cemetery extent.",
+        "status": "考古成果图围沟双侧边线配准参考 · 非原始测绘GIS",
+        "enStatus": "Registered published moat-bank traces; not original survey GIS",
+        "labelMinZoom": 15,
+        "kind": "moat",
+        "fillOpacity": 0,
+        "waterFeature": true,
+        "lineStyle": "solid",
+        "bankEdges": true
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              114.3004699623807,
+              36.14090664866735
+            ],
+            [
+              114.30064019715627,
+              36.14088984930129
+            ],
+            [
+              114.3008144740482,
+              36.14086976530502
+            ],
+            [
+              114.3010130162296,
+              36.140833247995715
+            ],
+            [
+              114.30120348677002,
+              36.14080657438935
+            ],
+            [
+              114.30139802461008,
+              36.14078316506701
+            ],
+            [
+              114.301596617158,
+              36.140759745569085
+            ],
+            [
+              114.30179520970597,
+              36.140736326064136
+            ],
+            [
+              114.30198568024639,
+              36.14070965242484
+            ],
+            [
+              114.30218423501947,
+              36.140676409507186
+            ],
+            [
+              114.30237874767624,
+              36.140646451211566
+            ],
+            [
+              114.30255298679327,
+              36.14061654374773
+            ],
+            [
+              114.30267450211528,
+              36.14058349399507
+            ],
+            [
+              114.30277173955625,
+              36.140563603124825
+            ],
+            [
+              114.30285683805658,
+              36.14055029169858
+            ],
+            [
+              114.30292172597535,
+              36.140553403471394
+            ],
+            [
+              114.30296224787156,
+              36.14054675284202
+            ],
+            [
+              114.30299060564391,
+              36.14054013271806
+            ],
+            [
+              114.30299863951001,
+              36.1405204655474
+            ],
+            [
+              114.30299435815272,
+              36.140461535186546
+            ],
+            [
+              114.30297376982213,
+              36.140379724109955
+            ],
+            [
+              114.3029450091176,
+              36.1402815608741
+            ],
+            [
+              114.30291619804649,
+              36.14017029956756
+            ],
+            [
+              114.3028956097159,
+              36.140088488187246
+            ],
+            [
+              114.30289120244231,
+              36.13999681256388
+            ],
+            [
+              114.30290301400044,
+              36.13990509615843
+            ],
+            [
+              114.30290676650924,
+              36.13982649799075
+            ],
+            [
+              114.302894375736,
+              36.13976758744616
+            ],
+            [
+              114.30286980824735,
+              36.13970543285705
+            ]
+          ],
+          [
+            [
+              114.30046552992377,
+              36.14080842507905
+            ],
+            [
+              114.30061554152616,
+              36.14080477437924
+            ],
+            [
+              114.30074933429677,
+              36.14080116435376
+            ],
+            [
+              114.30085471892846,
+              36.140791076586105
+            ],
+            [
+              114.30098843614928,
+              36.1407678197886
+            ],
+            [
+              114.30114643125125,
+              36.140731404118185
+            ],
+            [
+              114.30130850624442,
+              36.14070152719267
+            ],
+            [
+              114.30149087996062,
+              36.14067814834491
+            ],
+            [
+              114.30168137568432,
+              36.14065802361988
+            ],
+            [
+              114.30186780410844,
+              36.14063463459052
+            ],
+            [
+              114.30205015264136,
+              36.140604706784885
+            ],
+            [
+              114.30224059799849,
+              36.140571484160084
+            ],
+            [
+              114.30241075722427,
+              36.14053503789257
+            ],
+            [
+              114.30257691210869,
+              36.140511699669865
+            ],
+            [
+              114.30273091546087,
+              36.140491666420125
+            ],
+            [
+              114.30283626231767,
+              36.140471755189274
+            ],
+            [
+              114.30286054019882,
+              36.1404585962775
+            ],
+            [
+              114.30284406953439,
+              36.14039314742059
+            ],
+            [
+              114.30281931317126,
+              36.14028187610358
+            ],
+            [
+              114.30279453162484,
+              36.14016405565401
+            ],
+            [
+              114.30277787208593,
+              36.14004948918244
+            ],
+            [
+              114.30276526725493,
+              36.13993491237483
+            ],
+            [
+              114.3027526750156,
+              36.13982360990167
+            ],
+            [
+              114.30274822996705,
+              36.13972211045155
+            ]
+          ],
+          [
+            [
+              114.30274822996705,
+              36.13972211045155
+            ],
+            [
+              114.30286980824735,
+              36.13970543285705
+            ]
+          ],
+          [
+            [
+              114.30271945667084,
+              36.1396206718828
+            ],
+            [
+              114.30269084706583,
+              36.13956180185881
+            ],
+            [
+              114.30266622921067,
+              36.13948654904463
+            ],
+            [
+              114.30264149803077,
+              36.13938182548243
+            ],
+            [
+              114.30262488885836,
+              36.13928035596725
+            ],
+            [
+              114.3025880439211,
+              36.13918876075029
+            ],
+            [
+              114.30252692110275,
+              36.1391103245665
+            ],
+            [
+              114.30246990335888,
+              36.1390449762734
+            ],
+            [
+              114.30242914222163,
+              36.13898941086062
+            ],
+            [
+              114.30240861684928,
+              36.13892397094699
+            ],
+            [
+              114.30239603720162,
+              36.13881594158352
+            ],
+            [
+              114.30237527258822,
+              36.13868828511698
+            ],
+            [
+              114.30235458352462,
+              36.13858027576685
+            ],
+            [
+              114.30234622227613,
+              36.1385148050052
+            ],
+            [
+              114.30222448030463,
+              36.13848891361788
+            ],
+            [
+              114.30207026289474,
+              36.138453279897305
+            ],
+            [
+              114.30189577194506,
+              36.138417697005245
+            ],
+            [
+              114.30172534829501,
+              36.1383853784899
+            ],
+            [
+              114.30155089512027,
+              36.138359619256114
+            ],
+            [
+              114.30138863125256,
+              36.13834037863453
+            ]
+          ],
+          [
+            [
+              114.30284100976786,
+              36.13959744524469
+            ],
+            [
+              114.30282037107077,
+              36.13950253520768
+            ],
+            [
+              114.30279158518289,
+              36.139397821835615
+            ],
+            [
+              114.30276687918627,
+              36.139299647202435
+            ],
+            [
+              114.30272184928339,
+              36.139188425178745
+            ],
+            [
+              114.30266468043988,
+              36.1390837825694
+            ],
+            [
+              114.30260359539642,
+              36.139015169887664
+            ],
+            [
+              114.30253446389526,
+              36.138962950173536
+            ],
+            [
+              114.30249783301576,
+              36.138927021771075
+            ],
+            [
+              114.3024854548342,
+              36.13887138509264
+            ],
+            [
+              114.302468770112,
+              36.13875026764071
+            ],
+            [
+              114.30244796772371,
+              36.13861278741117
+            ],
+            [
+              114.30242302248604,
+              36.13845239520041
+            ],
+            [
+              114.30228909120751,
+              36.138419985178956
+            ],
+            [
+              114.30212677697335,
+              36.138387646326684
+            ],
+            [
+              114.30194821872414,
+              36.138348799010586
+            ],
+            [
+              114.30177372777445,
+              36.13831321607114
+            ],
+            [
+              114.30160329153273,
+              36.138277622946596
+            ],
+            [
+              114.30146126342993,
+              36.13824850775839
+            ],
+            [
+              114.30139632514465,
+              36.13823229762275
+            ]
+          ],
+          [
+            [
+              114.30271945667084,
+              36.1396206718828
+            ],
+            [
+              114.30284100976786,
+              36.13959744524469
+            ]
+          ],
+          [
+            [
+              114.30138863125256,
+              36.13834037863453
+            ],
+            [
+              114.30139632514465,
+              36.13823229762275
+            ]
+          ],
+          [
+            [
+              114.30023842870628,
+              36.13974477744383
+            ],
+            [
+              114.30021775223435,
+              36.13964004405753
+            ],
+            [
+              114.30020109269543,
+              36.139525476820765
+            ],
+            [
+              114.30017634892391,
+              36.13941747879193
+            ],
+            [
+              114.30013945362015,
+              36.13931278564397
+            ],
+            [
+              114.30011871419003,
+              36.13919167904227
+            ],
+            [
+              114.3001061219507,
+              36.13908037551474
+            ],
+            [
+              114.30008540770388,
+              36.13896581762959
+            ],
+            [
+              114.30006873557329,
+              36.13884797486594
+            ],
+            [
+              114.30005610555912,
+              36.13872684720897
+            ],
+            [
+              114.30003529057916,
+              36.1385860923851
+            ],
+            [
+              114.300030832939,
+              36.138481316776385
+            ],
+            [
+              114.3000305433315,
+              36.138406001912266
+            ],
+            [
+              114.30004246821431,
+              36.13834375472403
+            ],
+            [
+              114.30006663277078,
+              36.13830112437357
+            ],
+            [
+              114.3001070791172,
+              36.13827482615761
+            ],
+            [
+              114.30015973995398,
+              36.138261595694665
+            ],
+            [
+              114.3002894150585,
+              36.13824162288413
+            ],
+            [
+              114.30041909016296,
+              36.13822165006851
+            ],
+            [
+              114.30054877785909,
+              36.13820495181714
+            ],
+            [
+              114.30075150066477,
+              36.13820116879968
+            ],
+            [
+              114.30093397511399,
+              36.13820398576574
+            ],
+            [
+              114.30112049167957,
+              36.13820351799348
+            ]
+          ],
+          [
+            [
+              114.30023413475732,
+              36.13968257199281
+            ],
+            [
+              114.30022152992643,
+              36.139567994649354
+            ],
+            [
+              114.30020082827116,
+              36.13945671199328
+            ],
+            [
+              114.30017608449964,
+              36.139348713869786
+            ],
+            [
+              114.30016350485192,
+              36.13924068509114
+            ],
+            [
+              114.30014684531301,
+              36.13912611727122
+            ],
+            [
+              114.30013017318254,
+              36.13900827474833
+            ],
+            [
+              114.30011348846028,
+              36.13888715750771
+            ],
+            [
+              114.3001008836294,
+              36.138772579002676
+            ],
+            [
+              114.30008829139007,
+              36.13866127488061
+            ],
+            [
+              114.30007574951725,
+              36.138563068819046
+            ],
+            [
+              114.30007543472641,
+              36.13848120491818
+            ],
+            [
+              114.3000793005599,
+              36.13843207636775
+            ],
+            [
+              114.30010758278246,
+              36.13840580870249
+            ],
+            [
+              114.30018051715899,
+              36.13839252741696
+            ],
+            [
+              114.30028988094887,
+              36.13836278179701
+            ],
+            [
+              114.30041951827843,
+              36.13833298532107
+            ],
+            [
+              114.30055727761555,
+              36.13830644306101
+            ],
+            [
+              114.30074381936436,
+              36.13831252441918
+            ],
+            [
+              114.30093440322952,
+              36.13831532104336
+            ],
+            [
+              114.30112091979504,
+              36.13831485327175
+            ]
+          ],
+          [
+            [
+              114.30112091979504,
+              36.13831485327175
+            ],
+            [
+              114.30112049167957,
+              36.13820351799348
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "audit": "./docs/yinxu-royal-geometry.json"
+}

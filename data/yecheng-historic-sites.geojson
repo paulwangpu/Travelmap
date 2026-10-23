@@ -1,0 +1,2904 @@
+{
+  "type": "FeatureCollection",
+  "yechengReview": true,
+  "reviewedAt": "2026-10-22",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-north-city-reference",
+        "sourceName": "邺北城",
+        "label": "邺北城",
+        "enSourceName": "Northern Ye City",
+        "enLabel": "Northern Ye City",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "南北双参照配准的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to north/south controls; not surveyed boundaries",
+        "note": "何利群2025年图一的邺北城范围，保留图示西南折转及与南城的共用墙界。曹魏、后赵、冉魏、前燕沿用；与现代三台展示区区别。 总图按邺北城西北墙角和朱明门主门道发掘区作南北双参照等比配准，保留原图城墙曲线、共用墙段和门址方位；地下墙体及未发掘城门不是卫星可见实测边界。",
+        "enNote": "Published overall archaeological plan registered by a similarity transform between the northwest northern-city wall corner and the excavated main passage of Zhuming Gate. Buried walls and other gates remain plan references, not satellite-observed boundaries.",
+        "labelMinZoom": 12,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "cityPhase": "曹魏及十六国",
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.40104339999999,
+              36.2822676
+            ],
+            [
+              114.42763070710004,
+              36.282309322127084
+            ],
+            [
+              114.4276678764221,
+              36.2669162531468
+            ],
+            [
+              114.42499888034251,
+              36.266912064000294
+            ],
+            [
+              114.4210980399186,
+              36.26690594140114
+            ],
+            [
+              114.41750496074565,
+              36.26698306873148
+            ],
+            [
+              114.41442534988465,
+              36.266978235104986
+            ],
+            [
+              114.4115508465793,
+              36.267056490209015
+            ],
+            [
+              114.4090871578905,
+              36.267052623311486
+            ],
+            [
+              114.40641796197593,
+              36.26713120058212
+            ],
+            [
+              114.40405652731238,
+              36.267293027373185
+            ],
+            [
+              114.40148918575284,
+              36.26770282926419
+            ],
+            [
+              114.39820246898552,
+              36.26844256178093
+            ],
+            [
+              114.39819587442838,
+              36.27117375822714
+            ],
+            [
+              114.40106558169214,
+              36.273081773925064
+            ],
+            [
+              114.40104339999999,
+              36.2822676
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-south-city-reference",
+        "sourceName": "邺南城",
+        "label": "邺南城",
+        "enSourceName": "Southern Ye City",
+        "enLabel": "Southern Ye City",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "南北双参照配准的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to north/south controls; not surveyed boundaries",
+        "note": "何利群2025年图一的东魏北齐邺南城内城；保留东西墙舒缓曲线及南部圆缓城角，不画成随意矩形。图一北城南墙同时是南城北界。 总图按邺北城西北墙角和朱明门主门道发掘区作南北双参照等比配准，保留原图城墙曲线、共用墙段和门址方位；地下墙体及未发掘城门不是卫星可见实测边界。",
+        "enNote": "Published overall archaeological plan registered by a similarity transform between the northwest northern-city wall corner and the excavated main passage of Zhuming Gate. Buried walls and other gates remain plan references, not satellite-observed boundaries.",
+        "labelMinZoom": 12,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "cityPhase": "东魏北齐",
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.39820246898552,
+              36.26844256178093
+            ],
+            [
+              114.40148918575284,
+              36.26770282926419
+            ],
+            [
+              114.40405652731238,
+              36.267293027373185
+            ],
+            [
+              114.40641796197593,
+              36.26713120058212
+            ],
+            [
+              114.4090871578905,
+              36.267052623311486
+            ],
+            [
+              114.4115508465793,
+              36.267056490209015
+            ],
+            [
+              114.41442534988465,
+              36.266978235104986
+            ],
+            [
+              114.41750496074565,
+              36.26698306873148
+            ],
+            [
+              114.4210980399186,
+              36.26690594140114
+            ],
+            [
+              114.42499888034251,
+              36.266912064000294
+            ],
+            [
+              114.4276678764221,
+              36.2669162531468
+            ],
+            [
+              114.42767527031947,
+              36.26385382913413
+            ],
+            [
+              114.42706274534339,
+              36.262445762409016
+            ],
+            [
+              114.42727544663148,
+              36.25938348537497
+            ],
+            [
+              114.42738509455415,
+              36.25648648261313
+            ],
+            [
+              114.42821331834438,
+              36.25359050045853
+            ],
+            [
+              114.42842462078704,
+              36.251107361855965
+            ],
+            [
+              114.4286371222401,
+              36.2481274269034
+            ],
+            [
+              114.42864491580758,
+              36.24489868660858
+            ],
+            [
+              114.42834394894874,
+              36.24200050207774
+            ],
+            [
+              114.42763116829803,
+              36.23959834017126
+            ],
+            [
+              114.42671128174106,
+              36.2379409612644
+            ],
+            [
+              114.42548243492263,
+              36.236697057812265
+            ],
+            [
+              114.42404828071346,
+              36.23545281219646
+            ],
+            [
+              114.42220051419685,
+              36.23544991085011
+            ],
+            [
+              114.4206603090962,
+              36.23561309275249
+            ],
+            [
+              114.41912050366568,
+              36.23561067496882
+            ],
+            [
+              114.4173763900198,
+              36.23519393490116
+            ],
+            [
+              114.415220462582,
+              36.235273350147374
+            ],
+            [
+              114.4139872193922,
+              36.235851014601636
+            ],
+            [
+              114.41244721412659,
+              36.23593139628993
+            ],
+            [
+              114.41090880754155,
+              36.235349380404486
+            ],
+            [
+              114.40854817221822,
+              36.23518007286613
+            ],
+            [
+              114.40628879174483,
+              36.23559052676866
+            ],
+            [
+              114.40372224952557,
+              36.235669296870185
+            ],
+            [
+              114.40156652192286,
+              36.23566591197546
+            ],
+            [
+              114.39992246411646,
+              36.2363257278391
+            ],
+            [
+              114.39879007610642,
+              36.23764872766972
+            ],
+            [
+              114.39806710386745,
+              36.23946912544803
+            ],
+            [
+              114.39765089370411,
+              36.24178672525056
+            ],
+            [
+              114.39743819241596,
+              36.244849691998574
+            ],
+            [
+              114.39732854449335,
+              36.24774712623761
+            ],
+            [
+              114.39721889657073,
+              36.25064445305471
+            ],
+            [
+              114.39731455603885,
+              36.253541994743635
+            ],
+            [
+              114.39771837642809,
+              36.2563571346682
+            ],
+            [
+              114.3980203424623,
+              36.25884091211275
+            ],
+            [
+              114.39842456252165,
+              36.26149031658194
+            ],
+            [
+              114.39831631344447,
+              36.263807746703186
+            ],
+            [
+              114.39820846403745,
+              36.26595957302421
+            ],
+            [
+              114.39820246898552,
+              36.26844256178093
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-palace-inner-reference",
+        "sourceName": "宫城第一圈宫墙",
+        "label": "宫城第一圈宫墙",
+        "enSourceName": "First Palace Enclosure",
+        "enLabel": "First Palace Enclosure",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "206号基址定位约束的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to Hall 206 and roads; not surveyed GIS",
+        "note": "按2025年图十第一圈宫墙实线、推测虚线分别追踪；该闭合面仅用于表达推测围合，不把缺口和虚线当作探明墙体。局部图方位以卫星道路实际对应为准。 本轮以206号大殿近景定位为局部参照，并用五处道路交会约束图十比例和方位；这是考古图的地理配准，非逐边卫星描绘。勘探框与推测墙线仍保留原图性质，不能以现代展示铺装替代殿基。",
+        "enNote": "Figure 10 registered locally to the identifiable Hall 206 ensemble, with five distributed road junctions constraining a similarity transform. Prospecting boxes, partial excavation and inferred walls retain their original meaning. Modern landscaped surfaces are not substituted for ancient foundations.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.015,
+        "lineOpacity": 0.55,
+        "satelliteAligned": true,
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.41074250814631,
+              36.2609037608022
+            ],
+            [
+              114.41484637901368,
+              36.26096585163432
+            ],
+            [
+              114.41506928555515,
+              36.25138634846539
+            ],
+            [
+              114.41087091766121,
+              36.25132282012027
+            ],
+            [
+              114.41074250814631,
+              36.2609037608022
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-palace-wall-traces",
+        "sourceName": "宫城已探墙段",
+        "label": "宫城已探墙段",
+        "enSourceName": "Palace Wall Traces",
+        "enLabel": "Palace Wall Traces",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "206号基址定位约束的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to Hall 206 and roads; not surveyed GIS",
+        "note": "图十图例中的实线夯土墙转绘，北部三边及西南转角分别保留开放，不用点划虚线补成已探明墙体。局部图定位方法同第一圈参考面。 本轮以206号大殿近景定位为局部参照，并用五处道路交会约束图十比例和方位；这是考古图的地理配准，非逐边卫星描绘。勘探框与推测墙线仍保留原图性质，不能以现代展示铺装替代殿基。",
+        "enNote": "Figure 10 registered locally to the identifiable Hall 206 ensemble, with five distributed road junctions constraining a similarity transform. Prospecting boxes, partial excavation and inferred walls retain their original meaning. Modern landscaped surfaces are not substituted for ancient foundations.",
+        "labelMinZoom": 15,
+        "fillOpacity": 0,
+        "lineOpacity": 0.55,
+        "satelliteAligned": true,
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              114.41089888559969,
+              36.2588263053509
+            ],
+            [
+              114.41085202456537,
+              36.26084008390442
+            ],
+            [
+              114.41476690137966,
+              36.260899315339685
+            ],
+            [
+              114.41481477562547,
+              36.25884199661489
+            ]
+          ],
+          [
+            [
+              114.41085090673306,
+              36.252182846935916
+            ],
+            [
+              114.41087091766121,
+              36.25132282012027
+            ],
+            [
+              114.41184288707717,
+              36.25133752765171
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-osm-1198899258",
+        "sourceName": "铜雀台遗址",
+        "label": "铜雀台遗址",
+        "enSourceName": "Tongque Terrace Remains",
+        "enLabel": "Tongque Terrace Remains",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://www.hbswwkg.com/2021-04/16/content_8466360.html",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "status": "现存台址标绘 · 原始OSM几何",
+        "enStatus": "Existing terrace footprint mapped in OSM",
+        "note": "原始OSM台址闭合几何，未移动顶点，非原台全范围。",
+        "enNote": "Original OSM ruins footprint, vertices unchanged; not the full original terrace.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "osm": true,
+        "sourceIds": [
+          "way/1198899258"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.3997379,
+              36.2777123
+            ],
+            [
+              114.400921,
+              36.2776992
+            ],
+            [
+              114.4009145,
+              36.2773878
+            ],
+            [
+              114.4008923,
+              36.2763218
+            ],
+            [
+              114.3997013,
+              36.2763424
+            ],
+            [
+              114.3997379,
+              36.2777123
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-osm-1198899259",
+        "sourceName": "金凤台遗址",
+        "label": "金凤台遗址",
+        "enSourceName": "Jinfeng Terrace Remains",
+        "enLabel": "Jinfeng Terrace Remains",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://www.hbswwkg.com/2021-04/16/content_8466360.html",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "status": "现存台址标绘 · 原始OSM几何",
+        "enStatus": "Existing terrace footprint mapped in OSM",
+        "note": "原始OSM台址闭合几何，未移动顶点，非原台全范围。",
+        "enNote": "Original OSM ruins footprint, vertices unchanged; not the full original terrace.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "osm": true,
+        "sourceIds": [
+          "way/1198899259"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.3998486,
+              36.2759534
+            ],
+            [
+              114.399795,
+              36.2749631
+            ],
+            [
+              114.4007714,
+              36.2749396
+            ],
+            [
+              114.4008039,
+              36.2759278
+            ],
+            [
+              114.3998486,
+              36.2759534
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-north-gate-0",
+        "sourceName": "凤阳门",
+        "label": "凤阳门",
+        "enSourceName": "Fengyang Gate",
+        "enLabel": "Fengyang Gate",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "南北双参照配准的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to north/south controls; not surveyed boundaries",
+        "note": "图一的门址方位与文献门名参照，点放在同图城界上；图中位置不是门基的原始考古坐标。 总图按邺北城西北墙角和朱明门主门道发掘区作南北双参照等比配准，保留原图城墙曲线、共用墙段和门址方位；地下墙体及未发掘城门不是卫星可见实测边界。",
+        "enNote": "Published overall archaeological plan registered by a similarity transform between the northwest northern-city wall corner and the excavated main passage of Zhuming Gate. Buried walls and other gates remain plan references, not satellite-observed boundaries.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "cityPhase": "曹魏及十六国",
+        "gateBoundaryId": "yecheng-north-city-reference",
+        "gateKind": "north city gate",
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.40405652731238,
+          36.267293027373185
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-north-gate-1",
+        "sourceName": "中阳门",
+        "label": "中阳门",
+        "enSourceName": "Zhongyang Gate",
+        "enLabel": "Zhongyang Gate",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "南北双参照配准的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to north/south controls; not surveyed boundaries",
+        "note": "图一的门址方位与文献门名参照，点放在同图城界上；图中位置不是门基的原始考古坐标。 总图按邺北城西北墙角和朱明门主门道发掘区作南北双参照等比配准，保留原图城墙曲线、共用墙段和门址方位；地下墙体及未发掘城门不是卫星可见实测边界。",
+        "enNote": "Published overall archaeological plan registered by a similarity transform between the northwest northern-city wall corner and the excavated main passage of Zhuming Gate. Buried walls and other gates remain plan references, not satellite-observed boundaries.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "cityPhase": "曹魏及十六国",
+        "gateBoundaryId": "yecheng-north-city-reference",
+        "gateKind": "north city gate",
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.41442534988465,
+          36.266978235104986
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-north-gate-2",
+        "sourceName": "广阳门",
+        "label": "广阳门",
+        "enSourceName": "Guangyang Gate",
+        "enLabel": "Guangyang Gate",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "南北双参照配准的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to north/south controls; not surveyed boundaries",
+        "note": "图一的门址方位与文献门名参照，点放在同图城界上；图中位置不是门基的原始考古坐标。 总图按邺北城西北墙角和朱明门主门道发掘区作南北双参照等比配准，保留原图城墙曲线、共用墙段和门址方位；地下墙体及未发掘城门不是卫星可见实测边界。",
+        "enNote": "Published overall archaeological plan registered by a similarity transform between the northwest northern-city wall corner and the excavated main passage of Zhuming Gate. Buried walls and other gates remain plan references, not satellite-observed boundaries.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "cityPhase": "曹魏及十六国",
+        "gateBoundaryId": "yecheng-north-city-reference",
+        "gateKind": "north city gate",
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.42499888034251,
+          36.266912064000294
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-north-gate-3",
+        "sourceName": "建春门",
+        "label": "建春门",
+        "enSourceName": "Jianchun Gate",
+        "enLabel": "Jianchun Gate",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "南北双参照配准的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to north/south controls; not surveyed boundaries",
+        "note": "图一的门址方位与文献门名参照，点放在同图城界上；图中位置不是门基的原始考古坐标。 总图按邺北城西北墙角和朱明门主门道发掘区作南北双参照等比配准，保留原图城墙曲线、共用墙段和门址方位；地下墙体及未发掘城门不是卫星可见实测边界。",
+        "enNote": "Published overall archaeological plan registered by a similarity transform between the northwest northern-city wall corner and the excavated main passage of Zhuming Gate. Buried walls and other gates remain plan references, not satellite-observed boundaries.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "cityPhase": "曹魏及十六国",
+        "gateBoundaryId": "yecheng-north-city-reference",
+        "gateKind": "north city gate",
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.42765009110133,
+          36.27428213256877
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-north-gate-4",
+        "sourceName": "金明门",
+        "label": "金明门",
+        "enSourceName": "Jinming Gate",
+        "enLabel": "Jinming Gate",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "南北双参照配准的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to north/south controls; not surveyed boundaries",
+        "note": "图一的门址方位与文献门名参照，点放在同图城界上；图中位置不是门基的原始考古坐标。 总图按邺北城西北墙角和朱明门主门道发掘区作南北双参照等比配准，保留原图城墙曲线、共用墙段和门址方位；地下墙体及未发掘城门不是卫星可见实测边界。",
+        "enNote": "Published overall archaeological plan registered by a similarity transform between the northwest northern-city wall corner and the excavated main passage of Zhuming Gate. Buried walls and other gates remain plan references, not satellite-observed boundaries.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "cityPhase": "曹魏及十六国",
+        "gateBoundaryId": "yecheng-north-city-reference",
+        "gateKind": "north city gate",
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.40106278400128,
+          36.27424040615107
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-north-gate-5",
+        "sourceName": "厩门",
+        "label": "厩门",
+        "enSourceName": "Jiu Gate",
+        "enLabel": "Jiu Gate",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "南北双参照配准的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to north/south controls; not surveyed boundaries",
+        "note": "图一的门址方位与文献门名参照，点放在同图城界上；图中位置不是门基的原始考古坐标。 总图按邺北城西北墙角和朱明门主门道发掘区作南北双参照等比配准，保留原图城墙曲线、共用墙段和门址方位；地下墙体及未发掘城门不是卫星可见实测边界。",
+        "enNote": "Published overall archaeological plan registered by a similarity transform between the northwest northern-city wall corner and the excavated main passage of Zhuming Gate. Buried walls and other gates remain plan references, not satellite-observed boundaries.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "cityPhase": "曹魏及十六国",
+        "gateBoundaryId": "yecheng-north-city-reference",
+        "gateKind": "north city gate",
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.40843446606641,
+          36.28227919843138
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-north-gate-6",
+        "sourceName": "广德门",
+        "label": "广德门",
+        "enSourceName": "Guangde Gate",
+        "enLabel": "Guangde Gate",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "南北双参照配准的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to north/south controls; not surveyed boundaries",
+        "note": "图一的门址方位与文献门名参照，点放在同图城界上；图中位置不是门基的原始考古坐标。 总图按邺北城西北墙角和朱明门主门道发掘区作南北双参照等比配准，保留原图城墙曲线、共用墙段和门址方位；地下墙体及未发掘城门不是卫星可见实测边界。",
+        "enNote": "Published overall archaeological plan registered by a similarity transform between the northwest northern-city wall corner and the excavated main passage of Zhuming Gate. Buried walls and other gates remain plan references, not satellite-observed boundaries.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "cityPhase": "曹魏及十六国",
+        "gateBoundaryId": "yecheng-north-city-reference",
+        "gateKind": "north city gate",
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.41746799125872,
+          36.282293374289615
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-south-gate-0",
+        "sourceName": "纳义门",
+        "label": "纳义门",
+        "enSourceName": "Nayi Gate",
+        "enLabel": "Nayi Gate",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "南北双参照配准的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to north/south controls; not surveyed boundaries",
+        "note": "图一的门址方位与文献门名参照，点放在同图城界上；图中位置不是门基的原始考古坐标。 总图按邺北城西北墙角和朱明门主门道发掘区作南北双参照等比配准，保留原图城墙曲线、共用墙段和门址方位；地下墙体及未发掘城门不是卫星可见实测边界。",
+        "enNote": "Published overall archaeological plan registered by a similarity transform between the northwest northern-city wall corner and the excavated main passage of Zhuming Gate. Buried walls and other gates remain plan references, not satellite-observed boundaries.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "cityPhase": "东魏北齐",
+        "gateBoundaryId": "yecheng-south-city-reference",
+        "gateKind": "south city gate",
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.3982333155995,
+          36.26546373647001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-south-gate-1",
+        "sourceName": "北乾门",
+        "label": "北乾门",
+        "enSourceName": "Beiqian Gate",
+        "enLabel": "Beiqian Gate",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "南北双参照配准的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to north/south controls; not surveyed boundaries",
+        "note": "图一的门址方位与文献门名参照，点放在同图城界上；图中位置不是门基的原始考古坐标。 总图按邺北城西北墙角和朱明门主门道发掘区作南北双参照等比配准，保留原图城墙曲线、共用墙段和门址方位；地下墙体及未发掘城门不是卫星可见实测边界。",
+        "enNote": "Published overall archaeological plan registered by a similarity transform between the northwest northern-city wall corner and the excavated main passage of Zhuming Gate. Buried walls and other gates remain plan references, not satellite-observed boundaries.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "cityPhase": "东魏北齐",
+        "gateBoundaryId": "yecheng-south-city-reference",
+        "gateKind": "south city gate",
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.3980203424623,
+          36.25884091211275
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-south-gate-2",
+        "sourceName": "西华门",
+        "label": "西华门",
+        "enSourceName": "Xihua Gate",
+        "enLabel": "Xihua Gate",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "南北双参照配准的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to north/south controls; not surveyed boundaries",
+        "note": "图一的门址方位与文献门名参照，点放在同图城界上；图中位置不是门基的原始考古坐标。 总图按邺北城西北墙角和朱明门主门道发掘区作南北双参照等比配准，保留原图城墙曲线、共用墙段和门址方位；地下墙体及未发掘城门不是卫星可见实测边界。",
+        "enNote": "Published overall archaeological plan registered by a similarity transform between the northwest northern-city wall corner and the excavated main passage of Zhuming Gate. Buried walls and other gates remain plan references, not satellite-observed boundaries.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "cityPhase": "东魏北齐",
+        "gateBoundaryId": "yecheng-south-city-reference",
+        "gateKind": "south city gate",
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.39731455603885,
+          36.253541994743635
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-south-gate-3",
+        "sourceName": "上秋门",
+        "label": "上秋门",
+        "enSourceName": "Shangqiu Gate",
+        "enLabel": "Shangqiu Gate",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "南北双参照配准的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to north/south controls; not surveyed boundaries",
+        "note": "图一的门址方位与文献门名参照，点放在同图城界上；图中位置不是门基的原始考古坐标。 总图按邺北城西北墙角和朱明门主门道发掘区作南北双参照等比配准，保留原图城墙曲线、共用墙段和门址方位；地下墙体及未发掘城门不是卫星可见实测边界。",
+        "enNote": "Published overall archaeological plan registered by a similarity transform between the northwest northern-city wall corner and the excavated main passage of Zhuming Gate. Buried walls and other gates remain plan references, not satellite-observed boundaries.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "cityPhase": "东魏北齐",
+        "gateBoundaryId": "yecheng-south-city-reference",
+        "gateKind": "south city gate",
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.39765089370411,
+          36.24178672525056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-south-gate-4",
+        "sourceName": "昭德门",
+        "label": "昭德门",
+        "enSourceName": "Zhaode Gate",
+        "enLabel": "Zhaode Gate",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "南北双参照配准的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to north/south controls; not surveyed boundaries",
+        "note": "图一的门址方位与文献门名参照，点放在同图城界上；图中位置不是门基的原始考古坐标。 总图按邺北城西北墙角和朱明门主门道发掘区作南北双参照等比配准，保留原图城墙曲线、共用墙段和门址方位；地下墙体及未发掘城门不是卫星可见实测边界。",
+        "enNote": "Published overall archaeological plan registered by a similarity transform between the northwest northern-city wall corner and the excavated main passage of Zhuming Gate. Buried walls and other gates remain plan references, not satellite-observed boundaries.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "cityPhase": "东魏北齐",
+        "gateBoundaryId": "yecheng-south-city-reference",
+        "gateKind": "south city gate",
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.42767187312336,
+          36.265260903727714
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-south-gate-5",
+        "sourceName": "上春门",
+        "label": "上春门",
+        "enSourceName": "Shangchun Gate",
+        "enLabel": "Shangchun Gate",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "南北双参照配准的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to north/south controls; not surveyed boundaries",
+        "note": "图一的门址方位与文献门名参照，点放在同图城界上；图中位置不是门基的原始考古坐标。 总图按邺北城西北墙角和朱明门主门道发掘区作南北双参照等比配准，保留原图城墙曲线、共用墙段和门址方位；地下墙体及未发掘城门不是卫星可见实测边界。",
+        "enNote": "Published overall archaeological plan registered by a similarity transform between the northwest northern-city wall corner and the excavated main passage of Zhuming Gate. Buried walls and other gates remain plan references, not satellite-observed boundaries.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "cityPhase": "东魏北齐",
+        "gateBoundaryId": "yecheng-south-city-reference",
+        "gateKind": "south city gate",
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.42727544663148,
+          36.25938348537497
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-south-gate-6",
+        "sourceName": "中阳门",
+        "label": "中阳门",
+        "enSourceName": "Zhongyang Gate",
+        "enLabel": "Zhongyang Gate",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "南北双参照配准的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to north/south controls; not surveyed boundaries",
+        "note": "图一的门址方位与文献门名参照，点放在同图城界上；图中位置不是门基的原始考古坐标。 总图按邺北城西北墙角和朱明门主门道发掘区作南北双参照等比配准，保留原图城墙曲线、共用墙段和门址方位；地下墙体及未发掘城门不是卫星可见实测边界。",
+        "enNote": "Published overall archaeological plan registered by a similarity transform between the northwest northern-city wall corner and the excavated main passage of Zhuming Gate. Buried walls and other gates remain plan references, not satellite-observed boundaries.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "cityPhase": "东魏北齐",
+        "gateBoundaryId": "yecheng-south-city-reference",
+        "gateKind": "south city gate",
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.42842462078704,
+          36.251107361855965
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-south-gate-7",
+        "sourceName": "仁寿门",
+        "label": "仁寿门",
+        "enSourceName": "Renshou Gate",
+        "enLabel": "Renshou Gate",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "南北双参照配准的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to north/south controls; not surveyed boundaries",
+        "note": "图一的门址方位与文献门名参照，点放在同图城界上；图中位置不是门基的原始考古坐标。 总图按邺北城西北墙角和朱明门主门道发掘区作南北双参照等比配准，保留原图城墙曲线、共用墙段和门址方位；地下墙体及未发掘城门不是卫星可见实测边界。",
+        "enNote": "Published overall archaeological plan registered by a similarity transform between the northwest northern-city wall corner and the excavated main passage of Zhuming Gate. Buried walls and other gates remain plan references, not satellite-observed boundaries.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "cityPhase": "东魏北齐",
+        "gateBoundaryId": "yecheng-south-city-reference",
+        "gateKind": "south city gate",
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.42763116829803,
+          36.23959834017126
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-south-gate-8",
+        "sourceName": "厚载门",
+        "label": "厚载门",
+        "enSourceName": "Houzai Gate",
+        "enLabel": "Houzai Gate",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "南北双参照配准的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to north/south controls; not surveyed boundaries",
+        "note": "图一的门址方位与文献门名参照，点放在同图城界上；图中位置不是门基的原始考古坐标。 总图按邺北城西北墙角和朱明门主门道发掘区作南北双参照等比配准，保留原图城墙曲线、共用墙段和门址方位；地下墙体及未发掘城门不是卫星可见实测边界。",
+        "enNote": "Published overall archaeological plan registered by a similarity transform between the northwest northern-city wall corner and the excavated main passage of Zhuming Gate. Buried walls and other gates remain plan references, not satellite-observed boundaries.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "cityPhase": "东魏北齐",
+        "gateBoundaryId": "yecheng-south-city-reference",
+        "gateKind": "south city gate",
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.40628879174483,
+          36.23559052676866
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-south-gate-9",
+        "sourceName": "朱明门",
+        "label": "朱明门",
+        "enSourceName": "Zhuming Gate",
+        "enLabel": "Zhuming Gate",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "南北双参照配准的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to north/south controls; not surveyed boundaries",
+        "note": "图一的门址方位与文献门名参照，点放在同图城界上；图中位置不是门基的原始考古坐标。朱明门有考古发掘依据，门址建筑外形不据点位另造。 总图按邺北城西北墙角和朱明门主门道发掘区作南北双参照等比配准，保留原图城墙曲线、共用墙段和门址方位；地下墙体及未发掘城门不是卫星可见实测边界。",
+        "enNote": "Published overall archaeological plan registered by a similarity transform between the northwest northern-city wall corner and the excavated main passage of Zhuming Gate. Buried walls and other gates remain plan references, not satellite-observed boundaries.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "cityPhase": "东魏北齐",
+        "gateBoundaryId": "yecheng-south-city-reference",
+        "gateKind": "south city gate",
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.41244721412659,
+          36.23593139628993
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-south-gate-10",
+        "sourceName": "启夏门",
+        "label": "启夏门",
+        "enSourceName": "Qixia Gate",
+        "enLabel": "Qixia Gate",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "南北双参照配准的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to north/south controls; not surveyed boundaries",
+        "note": "图一的门址方位与文献门名参照，点放在同图城界上；图中位置不是门基的原始考古坐标。 总图按邺北城西北墙角和朱明门主门道发掘区作南北双参照等比配准，保留原图城墙曲线、共用墙段和门址方位；地下墙体及未发掘城门不是卫星可见实测边界。",
+        "enNote": "Published overall archaeological plan registered by a similarity transform between the northwest northern-city wall corner and the excavated main passage of Zhuming Gate. Buried walls and other gates remain plan references, not satellite-observed boundaries.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "cityPhase": "东魏北齐",
+        "gateBoundaryId": "yecheng-south-city-reference",
+        "gateKind": "south city gate",
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.41912050366568,
+          36.23561067496882
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-north-tunnel-gate",
+        "sourceName": "邺北城潜伏城门",
+        "label": "邺北城潜伏城门",
+        "enSourceName": "Northern Ye Underground Gate",
+        "enLabel": "Northern Ye Underground Gate",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "南北双参照配准的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to north/south controls; not surveyed boundaries",
+        "note": "按2025年图一红点及考古综述标出的邺北城南墙潜伏城门地段；以位置参照表达，不猜画地下通道走向。 总图按邺北城西北墙角和朱明门主门道发掘区作南北双参照等比配准，保留原图城墙曲线、共用墙段和门址方位；地下墙体及未发掘城门不是卫星可见实测边界。",
+        "enNote": "Published overall archaeological plan registered by a similarity transform between the northwest northern-city wall corner and the excavated main passage of Zhuming Gate. Buried walls and other gates remain plan references, not satellite-observed boundaries.",
+        "labelMinZoom": 15,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.4090871578905,
+          36.267052623311486
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-palace-building-206",
+        "sourceName": "206号大殿及踏道基址",
+        "label": "206号大殿基址",
+        "enSourceName": "Hall 206 Platform and Approaches",
+        "enLabel": "Hall 206",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "专项考古图与卫星近景核对的现状转绘 · 非实测",
+        "enStatus": "Visible remains traced against the detailed archaeological plate and satellite close-up; not surveyed GIS",
+        "note": "更正旧版从图十总图符号推导的十字形。按何利群2025年图十一206号大殿专项正射考古图辨识主体、连廊及踏道位置，并按Google卫星近景中可辨认的台基、附属踏道外缘转绘现状范围；蓝色覆盖物只辅助辨认，接缝不作为墙线。此面包括附属踏道，不等于文中42.12×34.95米的纯大殿主体测绘矩形。保留原始近景像素与旧几何，未以单个台基修正整体宫城；影像时相、覆盖物遮挡和人工判读仍影响边缘，非考古实测界。",
+        "enNote": "Replaces the coarse Fig.10 symbol with a local trace of visible platform and approaches, interpreted with the dedicated orthophoto in Fig.11. Blue coverings aid identification; their seams are not wall lines. This feature includes approaches and is not the surveyed 42.12 by 34.95 m main-hall rectangle. Previous geometry and image pixels are archived. No citywide translation is inferred from this correction. Image dates, coverings and interpretation limit edge accuracy.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "satelliteAligned": true,
+        "registrationRevision": 3,
+        "directSatelliteTrace": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.41282722949984,
+              36.25950815014733
+            ],
+            [
+              114.41289482116696,
+              36.25950815014733
+            ],
+            [
+              114.41289482116696,
+              36.25947544875931
+            ],
+            [
+              114.41310360431669,
+              36.25946575945653
+            ],
+            [
+              114.41311111450193,
+              36.259201725493014
+            ],
+            [
+              114.41316068172455,
+              36.259201725493014
+            ],
+            [
+              114.41316068172455,
+              36.25909635389146
+            ],
+            [
+              114.41311411857606,
+              36.259089086879214
+            ],
+            [
+              114.4129939556122,
+              36.259089086879214
+            ],
+            [
+              114.4129939556122,
+              36.25899582682875
+            ],
+            [
+              114.41290082931522,
+              36.25899582682875
+            ],
+            [
+              114.41290082931522,
+              36.25908303103517
+            ],
+            [
+              114.4127551317215,
+              36.25908303103517
+            ],
+            [
+              114.4127551317215,
+              36.25903700660503
+            ],
+            [
+              114.4126710176468,
+              36.25903700660503
+            ],
+            [
+              114.4126710176468,
+              36.259086664541655
+            ],
+            [
+              114.41249828338624,
+              36.259086664541655
+            ],
+            [
+              114.41249828338624,
+              36.259155701132805
+            ],
+            [
+              114.4125478506088,
+              36.259155701132805
+            ],
+            [
+              114.4125478506088,
+              36.259434269214175
+            ],
+            [
+              114.41262745857239,
+              36.259434269214175
+            ],
+            [
+              114.41262745857239,
+              36.25947302643374
+            ],
+            [
+              114.41282722949984,
+              36.25947302643374
+            ],
+            [
+              114.41282722949984,
+              36.25950815014733
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-palace-building-103",
+        "sourceName": "太极殿基址",
+        "label": "太极殿基址",
+        "enSourceName": "Taiji Hall Foundation",
+        "enLabel": "Taiji Hall Foundation",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "206号基址定位约束的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to Hall 206 and roads; not surveyed GIS",
+        "note": "2025年图十建筑基址位置与图形转绘。蓝色点线框在原图图例为勘探建筑基址，不能视为已经完整发掘的殿堂外形。 本轮以206号大殿近景定位为局部参照，并用五处道路交会约束图十比例和方位；这是考古图的地理配准，非逐边卫星描绘。勘探框与推测墙线仍保留原图性质，不能以现代展示铺装替代殿基。",
+        "enNote": "Figure 10 registered locally to the identifiable Hall 206 ensemble, with five distributed road junctions constraining a similarity transform. Prospecting boxes, partial excavation and inferred walls retain their original meaning. Modern landscaped surfaces are not substituted for ancient foundations.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "satelliteAligned": true,
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.41246200520789,
+              36.25665029441406
+            ],
+            [
+              114.4132179814203,
+              36.25666173282542
+            ],
+            [
+              114.41323191307913,
+              36.256063015303475
+            ],
+            [
+              114.41247593686671,
+              36.256051576804445
+            ],
+            [
+              114.41246200520789,
+              36.25665029441406
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-palace-building-110",
+        "sourceName": "昭阳殿基址",
+        "label": "昭阳殿基址",
+        "enSourceName": "Zhaoyang Hall Foundation",
+        "enLabel": "Zhaoyang Hall Foundation",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "206号基址定位约束的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to Hall 206 and roads; not surveyed GIS",
+        "note": "2025年图十建筑基址位置与图形转绘。蓝色点线框在原图图例为勘探建筑基址，不能视为已经完整发掘的殿堂外形。 本轮以206号大殿近景定位为局部参照，并用五处道路交会约束图十比例和方位；这是考古图的地理配准，非逐边卫星描绘。勘探框与推测墙线仍保留原图性质，不能以现代展示铺装替代殿基。",
+        "enNote": "Figure 10 registered locally to the identifiable Hall 206 ensemble, with five distributed road junctions constraining a similarity transform. Prospecting boxes, partial excavation and inferred walls retain their original meaning. Modern landscaped surfaces are not substituted for ancient foundations.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "satelliteAligned": true,
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.41238883040967,
+              36.25805392859001
+            ],
+            [
+              114.41333380067516,
+              36.25806822634707
+            ],
+            [
+              114.41334266627626,
+              36.25768723167806
+            ],
+            [
+              114.41239769601071,
+              36.25767293385126
+            ],
+            [
+              114.41238883040967,
+              36.25805392859001
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-palace-building-209",
+        "sourceName": "209号大殿基址",
+        "label": "209号大殿基址",
+        "enSourceName": "Hall 209",
+        "enLabel": "Hall 209",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "206号基址定位约束的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to Hall 206 and roads; not surveyed GIS",
+        "note": "2025年图十及正文明确209号只发现东侧局部；仅描图中东侧局部开放线，不画成完整大殿。 本轮以206号大殿近景定位为局部参照，并用五处道路交会约束图十比例和方位；这是考古图的地理配准，非逐边卫星描绘。勘探框与推测墙线仍保留原图性质，不能以现代展示铺装替代殿基。 北侧蓝色覆盖物包含206号附属廊房，不据此把209号残段移到覆盖物上。",
+        "enNote": "Figure 10 registered locally to the identifiable Hall 206 ensemble, with five distributed road junctions constraining a similarity transform. Prospecting boxes, partial excavation and inferred walls retain their original meaning. Modern landscaped surfaces are not substituted for ancient foundations.",
+        "labelMinZoom": 15,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "satelliteAligned": true,
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            114.41297467629056,
+            36.26015352348155
+          ],
+          [
+            114.41306917331713,
+            36.26015495321894
+          ],
+          [
+            114.41308082524995,
+            36.25965423036055
+          ],
+          [
+            114.41298632822344,
+            36.259652800614
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-palace-gate-101",
+        "sourceName": "止车门基址",
+        "label": "止车门基址",
+        "enSourceName": "Zhiche Gate",
+        "enLabel": "Zhiche Gate",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "206号基址定位约束的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to Hall 206 and roads; not surveyed GIS",
+        "note": "2025年图十勘探建筑基址图名，宫门轴线位置参照；与外城朱明门分开，不将点框当作完整发掘门基。 本轮以206号大殿近景定位为局部参照，并用五处道路交会约束图十比例和方位；这是考古图的地理配准，非逐边卫星描绘。勘探框与推测墙线仍保留原图性质，不能以现代展示铺装替代殿基。",
+        "enNote": "Figure 10 registered locally to the identifiable Hall 206 ensemble, with five distributed road junctions constraining a similarity transform. Prospecting boxes, partial excavation and inferred walls retain their original meaning. Modern landscaped surfaces are not substituted for ancient foundations.",
+        "labelMinZoom": 15,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "satelliteAligned": true,
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.41298908445657,
+          36.251409323041294
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-palace-gate-112",
+        "sourceName": "端门基址",
+        "label": "端门基址",
+        "enSourceName": "Duan Gate",
+        "enLabel": "Duan Gate",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "206号基址定位约束的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to Hall 206 and roads; not surveyed GIS",
+        "note": "2025年图十勘探建筑基址图名，宫门轴线位置参照；与外城朱明门分开，不将点框当作完整发掘门基。 本轮以206号大殿近景定位为局部参照，并用五处道路交会约束图十比例和方位；这是考古图的地理配准，非逐边卫星描绘。勘探框与推测墙线仍保留原图性质，不能以现代展示铺装替代殿基。",
+        "enNote": "Figure 10 registered locally to the identifiable Hall 206 ensemble, with five distributed road junctions constraining a similarity transform. Prospecting boxes, partial excavation and inferred walls retain their original meaning. Modern landscaped surfaces are not substituted for ancient foundations.",
+        "labelMinZoom": 15,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "satelliteAligned": true,
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.41295742159559,
+          36.2527701190976
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-palace-gate-111",
+        "sourceName": "阊阖门基址",
+        "label": "阊阖门基址",
+        "enSourceName": "Changhe Gate",
+        "enLabel": "Changhe Gate",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "206号基址定位约束的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to Hall 206 and roads; not surveyed GIS",
+        "note": "2025年图十勘探建筑基址图名，宫门轴线位置参照；与外城朱明门分开，不将点框当作完整发掘门基。 本轮以206号大殿近景定位为局部参照，并用五处道路交会约束图十比例和方位；这是考古图的地理配准，非逐边卫星描绘。勘探框与推测墙线仍保留原图性质，不能以现代展示铺装替代殿基。",
+        "enNote": "Figure 10 registered locally to the identifiable Hall 206 ensemble, with five distributed road junctions constraining a similarity transform. Prospecting boxes, partial excavation and inferred walls retain their original meaning. Modern landscaped surfaces are not substituted for ancient foundations.",
+        "labelMinZoom": 15,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "satelliteAligned": true,
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.41293665075875,
+          36.2536627884377
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-palace-gate-114",
+        "sourceName": "朱华门基址",
+        "label": "朱华门基址",
+        "enSourceName": "Zhuhua Gate",
+        "enLabel": "Zhuhua Gate",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "206号基址定位约束的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to Hall 206 and roads; not surveyed GIS",
+        "note": "2025年图十勘探建筑基址图名，宫门轴线位置参照；与外城朱明门分开，不将点框当作完整发掘门基。 本轮以206号大殿近景定位为局部参照，并用五处道路交会约束图十比例和方位；这是考古图的地理配准，非逐边卫星描绘。勘探框与推测墙线仍保留原图性质，不能以现代展示铺装替代殿基。",
+        "enNote": "Figure 10 registered locally to the identifiable Hall 206 ensemble, with five distributed road junctions constraining a similarity transform. Prospecting boxes, partial excavation and inferred walls retain their original meaning. Modern landscaped surfaces are not substituted for ancient foundations.",
+        "labelMinZoom": 15,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "satelliteAligned": true,
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.41285736695477,
+          36.257070078861304
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-zhaopengcheng-temple",
+        "sourceName": "赵彭城北朝佛寺",
+        "label": "赵彭城北朝佛寺",
+        "enSourceName": "Zhaopengcheng Northern Dynasties Temple",
+        "enLabel": "Zhaopengcheng Northern Dynasties Temple",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "南北双参照配准的考古图转绘 · 非实测墙界",
+        "enStatus": "Archaeological plan registered to north/south controls; not surveyed boundaries",
+        "note": "按2025年图一佛寺范围转绘；位于邺南城以南的宗教区，是寺院范围，不是外郭城界。 总图按邺北城西北墙角和朱明门主门道发掘区作南北双参照等比配准，保留原图城墙曲线、共用墙段和门址方位；地下墙体及未发掘城门不是卫星可见实测边界。 寺院在现有影像中未能逐边辨认，范围仍为总图参考，不沿现代田界补画。",
+        "enNote": "Published overall archaeological plan registered by a similarity transform between the northwest northern-city wall corner and the excavated main passage of Zhuming Gate. Buried walls and other gates remain plan references, not satellite-observed boundaries.",
+        "labelMinZoom": 13,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "registrationRevision": 4,
+        "satelliteRegistered": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.41370203950345,
+              36.22641081752921
+            ],
+            [
+              114.41873207057643,
+              36.22641871655152
+            ],
+            [
+              114.41874246199978,
+              36.22211250431423
+            ],
+            [
+              114.41371243092681,
+              36.22210460485702
+            ],
+            [
+              114.41370203950345,
+              36.22641081752921
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-palace-west-gate",
+        "sourceName": "宫城西门遗址（千秋门候选）",
+        "label": "宫城西门",
+        "enSourceName": "Palace West Gate (tentatively Qianqiu Gate)",
+        "enLabel": "Palace West Gate",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://www.hbswwkg.com/2025-05/23/content_9344939.html",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "status": "发掘遗址现状标绘 · 门名暂拟",
+        "enStatus": "Visible excavated gate complex; historical name tentative",
+        "note": "2023—2024年发掘的宫城西门。依据河北省文物考古研究院公布的门址正射图，核对北母阙、西廊房、主体门址、南母阙及南部附属建筑的形制，再沿Esri影像可辨识的遗迹与保护覆盖外缘标绘。该面表达目前可见发掘组合，不是整个宫城范围；覆盖物、影像分辨率和人工读边不能等同考古测绘精度。千秋门为结合文献的初步推测名称。",
+        "enNote": "The excavated 2023–2024 western palace gate, tentatively identified as Qianqiu Gate. Registered by matching the official orthophoto layout and visible excavated/protected edges in Esri imagery. This outlines the visible excavated complex, not the whole palace or surveyed wall coordinates.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "registrationRevision": 5,
+        "satelliteRegistered": true,
+        "completenessAddition": true,
+        "directSatelliteTrace": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.41073060035706,
+              36.25875382311106
+            ],
+            [
+              114.41086113452911,
+              36.25875382311106
+            ],
+            [
+              114.41086113452911,
+              36.258667310637314
+            ],
+            [
+              114.41094160079956,
+              36.258667310637314
+            ],
+            [
+              114.41094160079956,
+              36.25859810058934
+            ],
+            [
+              114.4113028049469,
+              36.25859810058934
+            ],
+            [
+              114.4113028049469,
+              36.25828377084979
+            ],
+            [
+              114.41136360168457,
+              36.25828377084979
+            ],
+            [
+              114.41136360168457,
+              36.258110744765354
+            ],
+            [
+              114.41073060035706,
+              36.2580833489335
+            ],
+            [
+              114.41073060035706,
+              36.25823907248135
+            ],
+            [
+              114.41076636314392,
+              36.25823907248135
+            ],
+            [
+              114.41076636314392,
+              36.25847554097895
+            ],
+            [
+              114.41073060035706,
+              36.25847554097895
+            ],
+            [
+              114.41073060035706,
+              36.25875382311106
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-palace-206-galleries",
+        "sourceName": "206号大殿附属廊房（可见段）",
+        "label": "206号附属廊房",
+        "enSourceName": "Hall 206 Attached Galleries (visible segments)",
+        "enLabel": "Hall 206 Galleries",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "status": "附属廊房可见段标绘 · 非实测墙边",
+        "enStatus": "Visible gallery traces; not surveyed wall edges",
+        "note": "补充206号主体之外可在卫星近景辨认的北部复廊、东北部曲尺形转折及东侧廊房覆盖段；建筑身份依据2025年图十一和正文。东北复廊衔接206与209号东侧廊房，不将整段笼统归为209号大殿本体。开放线保留开放；这里只描可辨识段，西廊房未能逐边辨认的部分不猜画。线位表示覆盖物中的可见遗迹走向，非测绘墙边。",
+        "enNote": "Visible northern double-gallery, northeastern return and eastern gallery segments outside the main Hall 206 platform. Architectural interpretation follows Figure 11 and the text; the northeastern junction connects the eastern galleries of Halls 206 and 209. Open visible traces remain open; invisible western sections are not invented.",
+        "labelMinZoom": 16,
+        "fillOpacity": 0,
+        "lineOpacity": 0.55,
+        "registrationRevision": 5,
+        "satelliteRegistered": true,
+        "completenessAddition": true,
+        "directSatelliteTrace": true
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              114.41278517246246,
+              36.259589297977016
+            ],
+            [
+              114.41311862468717,
+              36.25958445333283
+            ],
+            [
+              114.41311862468717,
+              36.25969830239166
+            ]
+          ],
+          [
+            [
+              114.4127926826477,
+              36.25951541712059
+            ],
+            [
+              114.41286778450012,
+              36.25951541712059
+            ],
+            [
+              114.41289482116696,
+              36.25953358455079
+            ],
+            [
+              114.41318171024324,
+              36.25953358455079
+            ]
+          ],
+          [
+            [
+              114.41324028968813,
+              36.25970072471026
+            ],
+            [
+              114.41324179172517,
+              36.25958203101064
+            ]
+          ],
+          [
+            [
+              114.41318771839144,
+              36.25921625949586
+            ],
+            [
+              114.41318771839144,
+              36.25910725440855
+            ]
+          ],
+          [
+            [
+              114.41327483654021,
+              36.25921625949586
+            ],
+            [
+              114.41328084468842,
+              36.25910725440855
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-palace-prospect-204",
+        "sourceName": "204号建筑勘探范围",
+        "label": "204号建筑",
+        "enSourceName": "Building 204 Prospecting Area",
+        "enLabel": "Building 204",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "建筑勘探范围图示参考 · 非完整建筑轮廓",
+        "enStatus": "Prospecting reference area; not a complete building footprint",
+        "note": "2025年图十蓝色点线框转绘，原图图例为勘探建筑基址。补齐原图已有而此前遗漏的勘探范围；不是完整发掘的建筑外轮廓，不以现代田界或展示铺装替换。沿用本轮206号定位和五处道路约束的局部配准，地下范围仍缺原始测绘坐标。",
+        "enNote": "Digitized blue prospecting box from Figure 10, previously omitted. This is an archaeological prospecting reference area, not a fully excavated building outline or modern field boundary. Uses the local Hall 206/road registration; original survey coordinates are unavailable.",
+        "labelMinZoom": 16,
+        "fillOpacity": 0.012,
+        "lineOpacity": 0.55,
+        "registrationRevision": 5,
+        "satelliteRegistered": true,
+        "completenessAddition": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.41199601674094,
+              36.26158695051873
+            ],
+            [
+              114.41257649847552,
+              36.261595733029715
+            ],
+            [
+              114.41258409756216,
+              36.261269181031274
+            ],
+            [
+              114.41200361582759,
+              36.261260398483586
+            ],
+            [
+              114.41199601674094,
+              36.26158695051873
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-palace-prospect-203",
+        "sourceName": "203号建筑勘探范围",
+        "label": "203号建筑",
+        "enSourceName": "Building 203 Prospecting Area",
+        "enLabel": "Building 203",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "建筑勘探范围图示参考 · 非完整建筑轮廓",
+        "enStatus": "Prospecting reference area; not a complete building footprint",
+        "note": "2025年图十蓝色点线框转绘，原图图例为勘探建筑基址。补齐原图已有而此前遗漏的勘探范围；不是完整发掘的建筑外轮廓，不以现代田界或展示铺装替换。沿用本轮206号定位和五处道路约束的局部配准，地下范围仍缺原始测绘坐标。",
+        "enNote": "Digitized blue prospecting box from Figure 10, previously omitted. This is an archaeological prospecting reference area, not a fully excavated building outline or modern field boundary. Uses the local Hall 206/road registration; original survey coordinates are unavailable.",
+        "labelMinZoom": 16,
+        "fillOpacity": 0.012,
+        "lineOpacity": 0.55,
+        "registrationRevision": 5,
+        "satelliteRegistered": true,
+        "completenessAddition": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.41164437213507,
+              36.2604491786987
+            ],
+            [
+              114.41217085556877,
+              36.26045714434798
+            ],
+            [
+              114.41217642823227,
+              36.260217669525225
+            ],
+            [
+              114.41164994479863,
+              36.26020970385151
+            ],
+            [
+              114.41164437213507,
+              36.2604491786987
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-palace-prospect-202",
+        "sourceName": "202号建筑勘探范围",
+        "label": "202号建筑",
+        "enSourceName": "Building 202 Prospecting Area",
+        "enLabel": "Building 202",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "建筑勘探范围图示参考 · 非完整建筑轮廓",
+        "enStatus": "Prospecting reference area; not a complete building footprint",
+        "note": "2025年图十蓝色点线框转绘，原图图例为勘探建筑基址。补齐原图已有而此前遗漏的勘探范围；不是完整发掘的建筑外轮廓，不以现代田界或展示铺装替换。沿用本轮206号定位和五处道路约束的局部配准，地下范围仍缺原始测绘坐标。",
+        "enNote": "Digitized blue prospecting box from Figure 10, previously omitted. This is an archaeological prospecting reference area, not a fully excavated building outline or modern field boundary. Uses the local Hall 206/road registration; original survey coordinates are unavailable.",
+        "labelMinZoom": 16,
+        "fillOpacity": 0.012,
+        "lineOpacity": 0.55,
+        "registrationRevision": 5,
+        "satelliteRegistered": true,
+        "completenessAddition": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.41165551746218,
+              36.25997022827017
+            ],
+            [
+              114.41218200089583,
+              36.25997819396829
+            ],
+            [
+              114.41218959998247,
+              36.25965163520748
+            ],
+            [
+              114.41166311654882,
+              36.259643669476056
+            ],
+            [
+              114.41165551746218,
+              36.25997022827017
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-palace-prospect-106",
+        "sourceName": "106号建筑勘探范围",
+        "label": "106号建筑",
+        "enSourceName": "Building 106 Prospecting Area",
+        "enLabel": "Building 106",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "建筑勘探范围图示参考 · 非完整建筑轮廓",
+        "enStatus": "Prospecting reference area; not a complete building footprint",
+        "note": "2025年图十蓝色点线框转绘，原图图例为勘探建筑基址。补齐原图已有而此前遗漏的勘探范围；不是完整发掘的建筑外轮廓，不以现代田界或展示铺装替换。沿用本轮206号定位和五处道路约束的局部配准，地下范围仍缺原始测绘坐标。",
+        "enNote": "Digitized blue prospecting box from Figure 10, previously omitted. This is an archaeological prospecting reference area, not a fully excavated building outline or modern field boundary. Uses the local Hall 206/road registration; original survey coordinates are unavailable.",
+        "labelMinZoom": 16,
+        "fillOpacity": 0.012,
+        "lineOpacity": 0.55,
+        "registrationRevision": 5,
+        "satelliteRegistered": true,
+        "completenessAddition": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.41268285595203,
+              36.25876618311008
+            ],
+            [
+              114.41299334618213,
+              36.25877088090199
+            ],
+            [
+              114.4130034782977,
+              36.25833546218795
+            ],
+            [
+              114.41269298806753,
+              36.25833076436986
+            ],
+            [
+              114.41268285595203,
+              36.25876618311008
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-palace-prospect-taiji-west",
+        "sourceName": "太极西堂勘探范围",
+        "label": "太极西堂",
+        "enSourceName": "Taiji West Hall Prospecting Area",
+        "enLabel": "Taiji West Hall",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "建筑勘探范围图示参考 · 非完整建筑轮廓",
+        "enStatus": "Prospecting reference area; not a complete building footprint",
+        "note": "2025年图十蓝色点线框转绘，原图图例为勘探建筑基址。补齐原图已有而此前遗漏的勘探范围；不是完整发掘的建筑外轮廓，不以现代田界或展示铺装替换。沿用本轮206号定位和五处道路约束的局部配准，地下范围仍缺原始测绘坐标。",
+        "enNote": "Digitized blue prospecting box from Figure 10, previously omitted. This is an archaeological prospecting reference area, not a fully excavated building outline or modern field boundary. Uses the local Hall 206/road registration; original survey coordinates are unavailable.",
+        "labelMinZoom": 16,
+        "fillOpacity": 0.012,
+        "lineOpacity": 0.55,
+        "registrationRevision": 5,
+        "satelliteRegistered": true,
+        "completenessAddition": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.4116285777846,
+              36.25648523002119
+            ],
+            [
+              114.41231705612091,
+              36.25649564716791
+            ],
+            [
+              114.41232440190464,
+              36.25617995964796
+            ],
+            [
+              114.41163592356833,
+              36.25616954245913
+            ],
+            [
+              114.4116285777846,
+              36.25648523002119
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-palace-prospect-taiji-east",
+        "sourceName": "太极东堂勘探范围",
+        "label": "太极东堂",
+        "enSourceName": "Taiji East Hall Prospecting Area",
+        "enLabel": "Taiji East Hall",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "建筑勘探范围图示参考 · 非完整建筑轮廓",
+        "enStatus": "Prospecting reference area; not a complete building footprint",
+        "note": "2025年图十蓝色点线框转绘，原图图例为勘探建筑基址。补齐原图已有而此前遗漏的勘探范围；不是完整发掘的建筑外轮廓，不以现代田界或展示铺装替换。沿用本轮206号定位和五处道路约束的局部配准，地下范围仍缺原始测绘坐标。",
+        "enNote": "Digitized blue prospecting box from Figure 10, previously omitted. This is an archaeological prospecting reference area, not a fully excavated building outline or modern field boundary. Uses the local Hall 206/road registration; original survey coordinates are unavailable.",
+        "labelMinZoom": 16,
+        "fillOpacity": 0.012,
+        "lineOpacity": 0.55,
+        "registrationRevision": 5,
+        "satelliteRegistered": true,
+        "completenessAddition": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.41343828077294,
+              36.25647994329718
+            ],
+            [
+              114.41409975995879,
+              36.256489951929055
+            ],
+            [
+              114.41410761234835,
+              36.25615249278439
+            ],
+            [
+              114.4134461331625,
+              36.256142484109276
+            ],
+            [
+              114.41343828077294,
+              36.25647994329718
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-palace-206-gallery-west",
+        "sourceName": "206号西廊房及连廊",
+        "label": "206号西廊房及连廊",
+        "enSourceName": "Hall 206 West Gallery and Connecting Passage",
+        "enLabel": "Hall 206 West Gallery and Connecting Passage",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "考古正射图配准的廊房范围参考 · 非实测GIS",
+        "enStatus": "Gallery extent registered from archaeological orthophoto; not surveyed GIS",
+        "note": "依据2025年图十一正射考古图，分开描绘廊房主体与连廊折角；不再只显示206号主体台基和几条覆盖线。以卫星可辨认的北部与东侧廊房作局部等比定位，主体台基近景另作交叉检查；西廊房位置由同一正射图关系传递，卫星上未获逐边独立确认。此面是建筑范围参考，非覆盖物宽度或现代田界；也不是完整宫城墙界。图件转绘、读点及影像时相均有限制，不以配准残差宣称测量精度。",
+        "enNote": "The gallery body and connecting passage are digitized separately from the Figure 11 archaeological orthophoto. A local similarity registration uses the identifiable northern/eastern gallery context; the main platform is checked separately. The western gallery is transferred from the same orthophoto and is not independently visible along every edge. These are building-extent references, not covering widths, field boundaries or complete palace walls; registration residuals do not establish survey accuracy.",
+        "labelMinZoom": 16,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "satelliteAligned": true,
+        "registrationRevision": 6,
+        "satelliteRegistered": true,
+        "completenessAddition": true,
+        "orthophotoGallery": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.41233083770686,
+              36.259508709472115
+            ],
+            [
+              114.41246538717274,
+              36.25951066654521
+            ],
+            [
+              114.41247261449888,
+              36.259187596394824
+            ],
+            [
+              114.4125722807699,
+              36.25918904608457
+            ],
+            [
+              114.41257361117323,
+              36.259129575315356
+            ],
+            [
+              114.41247394490216,
+              36.259128125624514
+            ],
+            [
+              114.41247430447066,
+              36.259112052435576
+            ],
+            [
+              114.41233975500472,
+              36.25911009535248
+            ],
+            [
+              114.41233083770686,
+              36.259508709472115
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-palace-206-gallery-north",
+        "sourceName": "206号北复廊及东北廊房",
+        "label": "206号北复廊及东北廊房",
+        "enSourceName": "Hall 206 Northern Double Gallery and Northeast Gallery",
+        "enLabel": "Hall 206 Northern Double Gallery and Northeast Gallery",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "考古正射图配准的廊房范围参考 · 非实测GIS",
+        "enStatus": "Gallery extent registered from archaeological orthophoto; not surveyed GIS",
+        "note": "依据2025年图十一正射考古图，分开描绘廊房主体与连廊折角；不再只显示206号主体台基和几条覆盖线。以卫星可辨认的北部与东侧廊房作局部等比定位，主体台基近景另作交叉检查；西廊房位置由同一正射图关系传递，卫星上未获逐边独立确认。此面是建筑范围参考，非覆盖物宽度或现代田界；也不是完整宫城墙界。图件转绘、读点及影像时相均有限制，不以配准残差宣称测量精度。 东北复廊连接206、209号东侧廊房，不能视为209号大殿主体。",
+        "enNote": "The gallery body and connecting passage are digitized separately from the Figure 11 archaeological orthophoto. A local similarity registration uses the identifiable northern/eastern gallery context; the main platform is checked separately. The western gallery is transferred from the same orthophoto and is not independently visible along every edge. These are building-extent references, not covering widths, field boundaries or complete palace walls; registration residuals do not establish survey accuracy.",
+        "labelMinZoom": 16,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "satelliteAligned": true,
+        "registrationRevision": 6,
+        "satelliteRegistered": true,
+        "completenessAddition": true,
+        "orthophotoGallery": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.41274283467357,
+              36.25958705461096
+            ],
+            [
+              114.41308169999508,
+              36.25959198353077
+            ],
+            [
+              114.41307918301578,
+              36.25970449509263
+            ],
+            [
+              114.41322868242236,
+              36.25970666961284
+            ],
+            [
+              114.41323254778337,
+              36.25953388393813
+            ],
+            [
+              114.41328238091887,
+              36.259534608779795
+            ],
+            [
+              114.41328310005582,
+              36.25950246256589
+            ],
+            [
+              114.41316350053057,
+              36.25950072294517
+            ],
+            [
+              114.41316278139362,
+              36.25953286915979
+            ],
+            [
+              114.4128488326399,
+              36.25952830265711
+            ],
+            [
+              114.41285081026643,
+              36.25943990052991
+            ],
+            [
+              114.41277606056315,
+              36.25943881326609
+            ],
+            [
+              114.41277408293661,
+              36.25952721539454
+            ],
+            [
+              114.41274418305528,
+              36.2595267804895
+            ],
+            [
+              114.41274283467357,
+              36.25958705461096
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "魏晋南北朝",
+        "periods": [
+          "魏晋南北朝"
+        ],
+        "city": "临漳",
+        "capitalSiteKey": "ancient-site:邺城:36.34000,114.10000",
+        "capitalSiteName": "邺城",
+        "capitalSiteDisplayName": "邺城",
+        "yechengHistoricalDetail": true,
+        "sourceId": "yecheng-palace-206-gallery-east",
+        "sourceName": "206号东廊房及连廊",
+        "label": "206号东廊房及连廊",
+        "enSourceName": "Hall 206 East Gallery and Connecting Passage",
+        "enLabel": "Hall 206 East Gallery and Connecting Passage",
+        "sourceUrl": "./sources/yecheng.html",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "sourceTitle": "邺城考古图件、分期与定位说明",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "考古正射图配准的廊房范围参考 · 非实测GIS",
+        "enStatus": "Gallery extent registered from archaeological orthophoto; not surveyed GIS",
+        "note": "依据2025年图十一正射考古图，分开描绘廊房主体与连廊折角；不再只显示206号主体台基和几条覆盖线。以卫星可辨认的北部与东侧廊房作局部等比定位，主体台基近景另作交叉检查；西廊房位置由同一正射图关系传递，卫星上未获逐边独立确认。此面是建筑范围参考，非覆盖物宽度或现代田界；也不是完整宫城墙界。图件转绘、读点及影像时相均有限制，不以配准残差宣称测量精度。",
+        "enNote": "The gallery body and connecting passage are digitized separately from the Figure 11 archaeological orthophoto. A local similarity registration uses the identifiable northern/eastern gallery context; the main platform is checked separately. The western gallery is transferred from the same orthophoto and is not independently visible along every edge. These are building-extent references, not covering widths, field boundaries or complete palace walls; registration residuals do not establish survey accuracy.",
+        "labelMinZoom": 16,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.55,
+        "satelliteAligned": true,
+        "registrationRevision": 6,
+        "satelliteRegistered": true,
+        "completenessAddition": true,
+        "orthophotoGallery": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.41306363548608,
+              36.259196193054606
+            ],
+            [
+              114.41317027839614,
+              36.259197744222455
+            ],
+            [
+              114.41316970308662,
+              36.259223461294965
+            ],
+            [
+              114.41335906900156,
+              36.25922621570419
+            ],
+            [
+              114.4133619455493,
+              36.25909763026154
+            ],
+            [
+              114.4131725796343,
+              36.25909487584779
+            ],
+            [
+              114.41317160879942,
+              36.259138273459854
+            ],
+            [
+              114.41306496588948,
+              36.259136722290826
+            ],
+            [
+              114.41306363548608,
+              36.259196193054606
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "displayCorrections": {
+    "osm-way-1051814589": {
+      "properties": {
+        "sourceName": "邺北城西北城墙（现存标绘段）",
+        "label": "邺北城西北城墙",
+        "enSourceName": "Northwestern Wall of Northern Ye",
+        "enLabel": "Northern Ye NW Wall",
+        "yechengHistoricalDetail": true,
+        "status": "开放城墙标绘 · 原始OSM几何保留",
+        "enStatus": "Original OSM open wall geometry preserved",
+        "referenceUrl": "https://img.dpm.org.cn/Uploads/file/2025/11/26/1764139194PdiCkQtMR218985.pdf",
+        "note": "复核原始OSM名称“汉魏邺城故城城垣”、三台位于邺北城西北部及2025年总平面图后，更正旧称“邺南城城垣”；该线位于三台以北及西北，原始坐标与开放性质不改动。",
+        "enNote": "Corrected the former Southern Ye attribution using the original Han–Wei OSM name, its position north of the Three Terraces, and the published plan. Original open coordinates unchanged."
+      }
+    }
+  },
+  "audit": "./docs/yecheng-archaeology.json",
+  "registrationRevision": 4
+}

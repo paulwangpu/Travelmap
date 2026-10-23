@@ -19,7 +19,7 @@ vm.createContext(ctx);vm.runInContext(source.slice(start,end),ctx);
   assert.equal(Object.keys(ctx.chinaAncientCapitalMeta).length>0,true);
   for(const record of base.recordItems.filter(r=>r.aliases?.length))for(const alias of record.aliases){
     assert.equal(ctx.chinaAncientCapitalMeta[alias]?.siteKey,record.siteKey,'Corrected names retain old check-in identity');
-    assert.deepEqual(Array.from(ctx.chinaAncientCapitalCoordinates[alias]).slice(0,2),[record.lat,record.lng]);
+    assert.deepEqual(Array.from(ctx.chinaAncientCapitalCoordinates[alias]).slice(0,2),[ctx.reviewedAncientCapitalLocations({items:[],recordItems:[record]}).recordItems[0].lat,ctx.reviewedAncientCapitalLocations({items:[],recordItems:[record]}).recordItems[0].lng]);
   }
   const loaded=ctx.chinaAncientCapitals,names=ctx.checklistCatalog.chinaAncientCapitals.items;
   ctx.chinaAncientCapitalsPromise=null;failing=true;await ctx.loadChinaAncientCapitals();

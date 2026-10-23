@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-23",
+  "image": "sources/hangzhou-user-phase-reference.png",
+  "imageSize": [
+    1146,
+    1168
+  ],
+  "provenance": "用户提供截图；原作者、出版物和底图坐标系未确认",
+  "status": "pending calibration; do not publish trial transforms as geographic boundaries",
+  "modernRoadData": [
+    "output/hangzhou-screenshot-northwest-osm.xml",
+    "output/hangzhou-north-controls-osm.xml",
+    "output/hangzhou-palace-osm.xml",
+    "output/goguryeo-hz-city.xml",
+    "output/goguryeo-hz-palace.xml"
+  ],
+  "rejectedTrials": [
+    {
+      "path": "output/hangzhou-screenshot-trial-fit.png",
+      "reason": "Provisional stadium/square/bridge correspondences did not align the full road network. Three-point fit gives no independent accuracy estimate."
+    },
+    {
+      "path": "output/hangzhou-screenshot-modern-fit.png",
+      "reason": "Automatic dark-line matching converged to inconsistent road correspondences. Its score is not a geographic residual or accuracy."
+    }
+  ],
+  "independentConstraints": [
+    {
+      "name": "钱塘门遗址",
+      "use": "宋西城界考古约束；需要原发掘图门道位置，不能使用图中文字中心",
+      "source": "https://z.hangzhou.com.cn/2022/syjy/content/content_8420727.html"
+    },
+    {
+      "name": "皇城",
+      "use": "凤凰山、馒头山、宋城路、万松岭四至与既有考古图；不以14.1平方公里保护工程范围代替宫墙",
+      "source": "https://z.hangzhou.com.cn/2022/syjy/content/content_8420727.html"
+    },
+    {
+      "name": "望江路京城墙",
+      "use": "东侧墙段位置约束；与德寿宫宫墙分开",
+      "source": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web2208/site/attach/0/d748bf7c2bb94087b29c84a6d08ba96c.pdf"
+    },
+    {
+      "name": "凤山水门",
+      "use": "元末1359年改筑的分期约束；不能代表整个元代",
+      "source": "https://hznews.hangzhou.com.cn/wghz/content/2017-08/17/content_6629977.htm"
+    }
+  ],
+  "interpretationLimits": [
+    {
+      "period": "隋唐",
+      "limit": "大城与州县分立方案有分歧，不能仅凭截图确定完整城圈",
+      "source": "https://hznews.hangzhou.com.cn/wghz/content/2021-12/07/content_8112285_0.htm"
+    },
+    {
+      "period": "吴越",
+      "limit": "夹城、罗城需要分别考证，截图统一紫线不证明全圈为同一期墙体",
+      "source": "https://www.hzzx.gov.cn/cshz/content/2024-08/30/content_8780738.htm"
+    }
+  ],
+  "mapGeometryChanged": false,
+  "nextEvidenceNeeded": "可辨道路名的底图原图或同版地图；至少四处分布在北、中、南的确认路口，并留独立检验点。",
+  "followup": {
+    "date": "2026-10-23",
+    "result": "Screenshot remains ungeoreferenced. A separate published 2026 Luocheng reconstruction has now been approximately located and added as a schematic reference.",
+    "source": "https://www.hangchow.org/index.php/base/news_show/cid/13601",
+    "mapFeature": "hangzhou-wuyue-luocheng-2026-reference",
+    "audit": "docs/hangzhou-capital-phases.json#wuyue2026Review"
+  }
+}

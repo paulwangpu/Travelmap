@@ -1,0 +1,717 @@
+{
+  "type": "FeatureCollection",
+  "yinxuReview": true,
+  "reviewedAt": "2026-10-22",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "夏商",
+        "periods": [
+          "夏商"
+        ],
+        "city": "安阳",
+        "capitalSiteKey": "ancient-site:安阳殷墟:36.13000,114.31000",
+        "capitalSiteName": "安阳殷墟",
+        "capitalSiteDisplayName": "安阳殷墟",
+        "yinxuHistoricalDetail": true,
+        "sourceId": "yinxu-group-a-display",
+        "sourceName": "甲组基址地表展示",
+        "label": "甲组基址地表展示",
+        "enSourceName": "Group A Foundation Surface Markings",
+        "enLabel": "Group A Foundation Surface Markings",
+        "sourceUrl": "./sources/yinxu.html",
+        "referenceUrl": "https://whc.unesco.org/uploads/nominations/1114.pdf#page=203",
+        "sourceTitle": "殷墟考古基址、保护展示与定位依据",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "status": "原址保护展示现状标绘 · 非原始建筑墙界",
+        "enStatus": "Present protective/site display outline; not ancient wall edges",
+        "note": "甲组基址位于宫殿宗庙区东北部，申遗资料列有15座建筑基址，主要与王室生活建筑相关。此要素只保留影像可辨认的三组展示标识，不声称涵盖15座原建筑或逐一对应甲四、甲十一等编号。卫星影像中的地表保护展示标识轮廓，依据申遗文件图31、图35—38核对展示性质。原始建筑多在覆土下保存，标识不能视为发掘测绘原墙界，也不据此推定建筑功能已无争议。",
+        "enNote": "Visible surface protection/presentation markings checked against nomination Figures 31 and 35–38. Original foundations are largely protected below covering soil; these are not surveyed ancient walls or certain functional reconstructions. Three identifiable groups of surface markings are shown, not all fifteen Group A foundations or individually numbered original buildings.",
+        "labelMinZoom": 15,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.6
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                114.31920633316042,
+                36.12425207534425
+              ],
+              [
+                114.31931447982788,
+                36.12425207534425
+              ],
+              [
+                114.31931447982788,
+                36.12411792377691
+              ],
+              [
+                114.31920633316042,
+                36.12411792377691
+              ],
+              [
+                114.31920633316042,
+                36.12425207534425
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                114.31941103935242,
+                36.12425831494645
+              ],
+              [
+                114.31951146125795,
+                36.12425831494645
+              ],
+              [
+                114.31951146125795,
+                36.124202158508766
+              ],
+              [
+                114.3196659564972,
+                36.124202158508766
+              ],
+              [
+                114.3196659564972,
+                36.12412416338978
+              ],
+              [
+                114.31951146125795,
+                36.12412416338978
+              ],
+              [
+                114.31951146125795,
+                36.1239775323563
+              ],
+              [
+                114.31941103935242,
+                36.1239775323563
+              ],
+              [
+                114.31941103935242,
+                36.12425831494645
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                114.31900548934937,
+                36.123821541594495
+              ],
+              [
+                114.31909818649291,
+                36.123821541594495
+              ],
+              [
+                114.31909818649291,
+                36.12389953701414
+              ],
+              [
+                114.31926040649415,
+                36.12389953701414
+              ],
+              [
+                114.31927585601807,
+                36.123821541594495
+              ],
+              [
+                114.31931447982788,
+                36.123821541594495
+              ],
+              [
+                114.31931447982788,
+                36.12365931087339
+              ],
+              [
+                114.31909818649291,
+                36.12363747209688
+              ],
+              [
+                114.31900548934937,
+                36.12369050911503
+              ],
+              [
+                114.31900548934937,
+                36.123821541594495
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "夏商",
+        "periods": [
+          "夏商"
+        ],
+        "city": "安阳",
+        "capitalSiteKey": "ancient-site:安阳殷墟:36.13000,114.31000",
+        "capitalSiteName": "安阳殷墟",
+        "capitalSiteDisplayName": "安阳殷墟",
+        "yinxuHistoricalDetail": true,
+        "sourceId": "yinxu-group-b-display",
+        "sourceName": "乙组基址地表展示",
+        "label": "乙组基址地表展示",
+        "enSourceName": "Group B Foundation Surface Markings",
+        "enLabel": "Group B Foundation Surface Markings",
+        "sourceUrl": "./sources/yinxu.html",
+        "referenceUrl": "https://whc.unesco.org/uploads/nominations/1114.pdf",
+        "sourceTitle": "殷墟考古基址、保护展示与定位依据",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "status": "原址保护展示现状标绘 · 非原始建筑墙界",
+        "enStatus": "Present protective/site display outline; not ancient wall edges",
+        "note": "乙组共有21座基址，申遗资料描述分布约南北200米、东西100米，多个建筑有先后叠压关系，通常与宗庙及祭祀活动联系。此为影像可辨的地表展示组合，不是同时存在的一座T形宫殿。卫星影像中的地表保护展示标识轮廓，依据申遗文件图31、图35—38核对展示性质。原始建筑多在覆土下保存，标识不能视为发掘测绘原墙界，也不据此推定建筑功能已无争议。",
+        "enNote": "Visible surface protection/presentation markings checked against nomination Figures 31 and 35–38. Original foundations are largely protected below covering soil; these are not surveyed ancient walls or certain functional reconstructions. Group B comprises 21 foundations of different phases, often associated with ancestral rites. This visible composite marking does not represent a single contemporaneous T-shaped palace.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.6
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.31875829696656,
+              36.12307278162313
+            ],
+            [
+              114.31893210411073,
+              36.12307278162313
+            ],
+            [
+              114.31893210411073,
+              36.122763916054424
+            ],
+            [
+              114.31911363601682,
+              36.122763916054424
+            ],
+            [
+              114.31911363601682,
+              36.122695279096355
+            ],
+            [
+              114.31893210411073,
+              36.122695279096355
+            ],
+            [
+              114.31893210411073,
+              36.12227721632861
+            ],
+            [
+              114.31875057220458,
+              36.12227721632861
+            ],
+            [
+              114.31875057220458,
+              36.12250496721695
+            ],
+            [
+              114.31837205886842,
+              36.12250496721695
+            ],
+            [
+              114.31837205886842,
+              36.12272023799715
+            ],
+            [
+              114.31875057220458,
+              36.12272023799715
+            ],
+            [
+              114.31875829696656,
+              36.12307278162313
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "夏商",
+        "periods": [
+          "夏商"
+        ],
+        "city": "安阳",
+        "capitalSiteKey": "ancient-site:安阳殷墟:36.13000,114.31000",
+        "capitalSiteName": "安阳殷墟",
+        "capitalSiteDisplayName": "安阳殷墟",
+        "yinxuHistoricalDetail": true,
+        "sourceId": "yinxu-b20-protected-display",
+        "sourceName": "乙二十基址保护展示",
+        "label": "乙二十基址",
+        "enSourceName": "B20 Foundation Protective Display",
+        "enLabel": "B20 Foundation",
+        "sourceUrl": "./sources/yinxu.html",
+        "referenceUrl": "https://whc.unesco.org/uploads/nominations/1114.pdf#page=205",
+        "sourceTitle": "殷墟考古基址、保护展示与定位依据",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "status": "原址保护展示现状标绘 · 非原始建筑墙界",
+        "enStatus": "Present protective/site display outline; not ancient wall edges",
+        "note": "图37、38明确乙二十基址采用地下封存原址、地表复原展示的保护方式。这里标绘现状保护展示建筑及其屋面范围，不把屋顶当作商代殿堂原始台基。",
+        "enNote": "Nomination Figures 37–38 identify B20 as preserved below covering soil with a reconstructed surface presentation. This maps the present protective/reconstructed building, not the original Shang foundation perimeter.",
+        "labelMinZoom": 15,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.6
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.3186076641083,
+              36.12182171256986
+            ],
+            [
+              114.31923336982726,
+              36.12182171256986
+            ],
+            [
+              114.31928358078005,
+              36.12178427378722
+            ],
+            [
+              114.31928358078005,
+              36.12163451847814
+            ],
+            [
+              114.3186076641083,
+              36.12163451847814
+            ],
+            [
+              114.3186076641083,
+              36.12182171256986
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "夏商",
+        "periods": [
+          "夏商"
+        ],
+        "city": "安阳",
+        "capitalSiteKey": "ancient-site:安阳殷墟:36.13000,114.31000",
+        "capitalSiteName": "安阳殷墟",
+        "capitalSiteDisplayName": "安阳殷墟",
+        "yinxuHistoricalDetail": true,
+        "sourceId": "yinxu-group-c-reference",
+        "sourceName": "丙组基址分布参考",
+        "label": "丙组基址",
+        "enSourceName": "Group C Foundation Distribution Reference",
+        "enLabel": "Group C Foundations",
+        "sourceUrl": "./sources/yinxu.html",
+        "referenceUrl": "https://whc.unesco.org/uploads/nominations/1114.pdf",
+        "sourceTitle": "殷墟考古基址、保护展示与定位依据",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "考古保护展示图配准参考 · 非实测边界",
+        "enStatus": "Registered archaeological presentation-plan reference; not surveyed GIS",
+        "note": "按申遗图31丙组基址已展示标识的分布转绘，配准参照妇好墓和乙组地段。丙组原有17座基址，大多封存地下，功能解释包括祭坛及宗庙相关活动；这里不是全部丙组完整外界，也不是城墙。图件与标识定位均有误差，不能视为考古测绘GIS。",
+        "enNote": "Distribution of Group C presentation markings digitized from nomination Figure 31 and registered using Fu Hao Tomb and Group B. The 17 underlying foundations are mostly reburied; this is neither their full boundary nor a city wall or surveyed GIS.",
+        "labelMinZoom": 15,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.6
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.31778354259916,
+              36.12168139192402
+            ],
+            [
+              114.31792496670306,
+              36.12172722260499
+            ],
+            [
+              114.31806923183882,
+              36.12167223473569
+            ],
+            [
+              114.31809314997525,
+              36.12145652244907
+            ],
+            [
+              114.31795213173302,
+              36.12139628890533
+            ],
+            [
+              114.31784312115786,
+              36.12146633534762
+            ],
+            [
+              114.31778354259916,
+              36.12168139192402
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "夏商",
+        "periods": [
+          "夏商"
+        ],
+        "city": "安阳",
+        "capitalSiteKey": "ancient-site:安阳殷墟:36.13000,114.31000",
+        "capitalSiteName": "安阳殷墟",
+        "capitalSiteDisplayName": "安阳殷墟",
+        "yinxuHistoricalDetail": true,
+        "sourceId": "yinxu-foundation-54-reference",
+        "sourceName": "五十四号基址展示参考",
+        "label": "五十四号基址",
+        "enSourceName": "Foundation 54 Presentation Reference",
+        "enLabel": "Foundation 54",
+        "sourceUrl": "./sources/yinxu.html",
+        "referenceUrl": "https://whc.unesco.org/uploads/nominations/1114.pdf",
+        "sourceTitle": "殷墟考古基址、保护展示与定位依据",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "原址展示图配准参考 · 非完整基址测绘",
+        "enStatus": "Registered presentation marking; not a surveyed complete foundation",
+        "note": "申遗图31及基址清单记载，五十四号基址包含北、南、西三排建筑，呈开口向东的凹形组合。本要素沿图中凹形展示标识转绘，开口保留，不填成一座大矩形；现代展示范围不等同全部约5000平方米的建筑群原始边界。",
+        "enNote": "Nomination Figure 31 and the inventory describe north, south and west building rows forming an east-open complex. The concave presentation marking is retained rather than filled into a rectangle; it does not delimit the entire approximately 5,000 m² original complex.",
+        "labelMinZoom": 15,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.6
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.31890849704985,
+              36.12101038785574
+            ],
+            [
+              114.31946245117973,
+              36.12097734269536
+            ],
+            [
+              114.31946529221153,
+              36.12087652315005
+            ],
+            [
+              114.31903655542118,
+              36.12089746047048
+            ],
+            [
+              114.31904183162311,
+              36.120710223878504
+            ],
+            [
+              114.31945354992575,
+              36.120660152985415
+            ],
+            [
+              114.31945639095755,
+              36.12055933303278
+            ],
+            [
+              114.31890203096594,
+              36.12060678122133
+            ],
+            [
+              114.31890849704985,
+              36.12101038785574
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "夏商",
+        "periods": [
+          "夏商"
+        ],
+        "city": "安阳",
+        "capitalSiteKey": "ancient-site:安阳殷墟:36.13000,114.31000",
+        "capitalSiteName": "安阳殷墟",
+        "capitalSiteDisplayName": "安阳殷墟",
+        "yinxuHistoricalDetail": true,
+        "sourceId": "yinxu-palace-large-moat",
+        "sourceName": "宫殿宗庙区大壕沟",
+        "label": "宫殿区大壕沟",
+        "enSourceName": "Palace and Ancestral Shrines Great Moat",
+        "enLabel": "Palace Great Moat",
+        "sourceUrl": "./sources/yinxu.html",
+        "referenceUrl": "https://whc.unesco.org/uploads/nominations/1114.pdf",
+        "sourceTitle": "殷墟考古基址、保护展示与定位依据",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "考古图转绘的壕沟走向参考 · 非实测岸界",
+        "enStatus": "Registered archaeological moat-course reference; not surveyed banks",
+        "note": "申遗图31明确标示的商代大壕沟，沿西侧南北段及南侧折向洹河段转绘。开放线保持开放，不沿现代洹河强行闭合成宫城墙；也不代表殷墟约30平方公里都邑的全城城防。图件以原址参照作近似配准，不能当成地下壕沟的精确边线。",
+        "enNote": "The Shang great moat explicitly identified in nomination Figure 31, traced along the western and southern sections toward the Huan River. It remains open and is not closed using the modern river or represented as a city wall around the whole approximately 30 km² settlement.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0,
+        "lineOpacity": 0.6,
+        "waterFeature": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            114.31477369575248,
+            36.12593455984867
+          ],
+          [
+            114.31472307385405,
+            36.12519874955633
+          ],
+          [
+            114.31447956652676,
+            36.124344108998905
+          ],
+          [
+            114.31447840434794,
+            36.12311925973295
+          ],
+          [
+            114.31450400133741,
+            36.12157786103561
+          ],
+          [
+            114.31451379742418,
+            36.119964089415596
+          ],
+          [
+            114.31452278178762,
+            36.11837909115024
+          ],
+          [
+            114.31453701464983,
+            36.11724089753969
+          ],
+          [
+            114.31456661484987,
+            36.11682352370843
+          ],
+          [
+            114.31478707117031,
+            36.116597001006056
+          ],
+          [
+            114.3155557995571,
+            36.11653908115514
+          ],
+          [
+            114.3166791028579,
+            36.11655973652745
+          ],
+          [
+            114.31780200029698,
+            36.11659479548254
+          ],
+          [
+            114.31888883145223,
+            36.11664360227577
+          ],
+          [
+            114.31974265227774,
+            36.11673135752395
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "夏商",
+        "periods": [
+          "夏商"
+        ],
+        "city": "安阳",
+        "capitalSiteKey": "ancient-site:安阳殷墟:36.13000,114.31000",
+        "capitalSiteName": "安阳殷墟",
+        "capitalSiteDisplayName": "安阳殷墟",
+        "yinxuHistoricalDetail": true,
+        "sourceId": "yinxu-yh127-presentation",
+        "sourceName": "YH127甲骨窖穴展示位置",
+        "label": "YH127甲骨窖穴",
+        "enSourceName": "YH127 Oracle Bone Pit Presentation Location",
+        "enLabel": "YH127 Oracle Bone Pit",
+        "sourceUrl": "./sources/yinxu.html",
+        "referenceUrl": "https://whc.unesco.org/uploads/nominations/1114.pdf#page=209",
+        "sourceTitle": "殷墟考古基址、保护展示与定位依据",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "status": "甲骨窖穴展示地段 · 原始OSM位置",
+        "enStatus": "Oracle-bone pit presentation vicinity; original OSM location",
+        "note": "1936年发掘的YH127甲骨窖穴出土大量有字甲骨。图41、42区分原始窖穴、覆土保护和地表展示；本点沿用OSM甲骨窖穴展厅位置，表达参观展示地段，不宣称展厅中心就是约2米直径原坑的精确坐标。",
+        "enNote": "The YH127 oracle-bone pit was excavated in 1936. Nomination Figures 41–42 distinguish the original pit, protective covering and presentation. This retains the OSM presentation-hall location, not an exact survey point for the approximately 2 m pit.",
+        "labelMinZoom": 16,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.6,
+        "osm": true,
+        "sourceIds": [
+          "node/7579103075"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.3183866,
+          36.1221462
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "夏商",
+        "periods": [
+          "夏商"
+        ],
+        "city": "安阳",
+        "capitalSiteKey": "ancient-site:安阳殷墟:36.13000,114.31000",
+        "capitalSiteName": "安阳殷墟",
+        "capitalSiteDisplayName": "安阳殷墟",
+        "yinxuHistoricalDetail": true,
+        "sourceId": "yinxu-chariot-pits-display",
+        "sourceName": "车马坑保护展示区",
+        "label": "车马坑展示",
+        "enSourceName": "Chariot-Pit Protective Display",
+        "enLabel": "Chariot Pits",
+        "sourceUrl": "./sources/yinxu.html",
+        "referenceUrl": "https://whc.unesco.org/uploads/nominations/1114.pdf#page=190",
+        "sourceTitle": "殷墟考古基址、保护展示与定位依据",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": false,
+        "status": "原址保护展示现状标绘 · 非原始建筑墙界",
+        "enStatus": "Present protective/site display outline; not ancient wall edges",
+        "note": "保留现状车马坑展厅的可见保护覆盖范围，OSM原点为node/7579745230。殷墟车马遗迹的考古性质由申遗图22及相关遗存说明支撑；此为展示设施轮廓，不按建筑屋面推定每座原始车马坑的形状或完整分布。",
+        "enNote": "Visible protective/presentation building for chariot pits, cross-checked with OSM node/7579745230 and the nomination discussion/Figure 22. The roof footprint does not delimit the individual original pits or their full distribution.",
+        "labelMinZoom": 16,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.6
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.31944966316223,
+              36.1229760662727
+            ],
+            [
+              114.31967368125913,
+              36.1229760662727
+            ],
+            [
+              114.31968140602112,
+              36.122670320187645
+            ],
+            [
+              114.31944580078124,
+              36.122670320187645
+            ],
+            [
+              114.31944966316223,
+              36.1229760662727
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "period": "夏商",
+        "periods": [
+          "夏商"
+        ],
+        "city": "安阳",
+        "capitalSiteKey": "ancient-site:安阳殷墟:36.13000,114.31000",
+        "capitalSiteName": "安阳殷墟",
+        "capitalSiteDisplayName": "安阳殷墟",
+        "yinxuHistoricalDetail": true,
+        "sourceId": "yinxu-huanbei-palace-distribution",
+        "sourceName": "洹北宫殿基址分布区",
+        "label": "洹北宫殿基址区",
+        "enSourceName": "Huanbei Palace Foundation Distribution Area",
+        "enLabel": "Huanbei Palace Foundations",
+        "sourceUrl": "./sources/yinxu.html",
+        "referenceUrl": "https://whc.unesco.org/uploads/nominations/1114.pdf",
+        "sourceTitle": "殷墟考古基址、保护展示与定位依据",
+        "coordinateSystem": "WGS84",
+        "inferredBoundary": true,
+        "status": "宫殿基址分布图参考 · 非完整宫城墙界",
+        "enStatus": "Palace-foundation distribution reference; not a complete palace-wall circuit",
+        "note": "按申遗图29宫殿基址分布区转绘，继续沿用已有洹北商城总图配准，不另行提升精度。此为中商时期宫殿遗存的分布参考，不是已测定的完整宫城墙界，也不与晚商小屯宫殿宗庙区或文献中“相”强制对应。一、二号宫殿具体外轮廓及新发现宫墙仍需独立定位，不能把本区填充面当成它们的墙基。",
+        "enNote": "Palace-foundation distribution zone from nomination Figure 29, using the existing coarse Huanbei overall-plan registration unchanged. It is not a complete surveyed palace-wall enclosure, the later Xiaotun palace area, or a forced identification with textual Xiang. Individual F1/F2 and newly discovered walls still require independent registration.",
+        "labelMinZoom": 14,
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.6
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.33371655872321,
+              36.14058662975721
+            ],
+            [
+              114.33790527462536,
+              36.13983357784806
+            ],
+            [
+              114.33668259550731,
+              36.13449898810893
+            ],
+            [
+              114.33249669305646,
+              36.13521632224259
+            ],
+            [
+              114.33371655872321,
+              36.14058662975721
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "audit": "./docs/yinxu-archaeology.json"
+}

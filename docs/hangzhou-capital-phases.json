@@ -1,0 +1,7288 @@
+{
+  "catalogMetadataUpdate": {
+    "siteKey": "ancient-site:杭州:30.27410,120.15510",
+    "beforeSha256": "3f2044bed7858fa21b18c1adb044fe91bd31ad39e169d5a709ac53ad3bef6324",
+    "mode": "display-only override; source catalog unchanged",
+    "displayStages": [
+      {
+        "name": "吴越 · 钱塘西府",
+        "boundaryStatus": "2026年文史图罗城完整示意参考；夹城、子城分别考证，非实测墙界",
+        "summary": "采用2026年文史研究附图的罗城完整示意轮廓，核对北部突出和南部山地围合；以山峰地望等比近似定位，控制残差数百米量级。八处原有文献门址地段、既有遗迹和古都身份保持。1985年开放东段保留审计并由完整方案替代显示。闭合不代表全圈已发掘。",
+        "sources": [
+          {
+            "title": "杭州网 · 凤凰山吴越遗迹与子城",
+            "url": "https://hznews.hangzhou.com.cn/wghz/content/2019-03/19/content_7164050.htm"
+          },
+          {
+            "title": "杭州历代城界与宫门：本轮来源与配准限制",
+            "url": "./sources/hangzhou-phases.html"
+          },
+          {
+            "title": "杭州文史：子城、夹城、罗城——吴越杭城三步曲（2026）",
+            "url": "https://www.hangchow.org/index.php/base/news_show/cid/13601"
+          }
+        ]
+      },
+      {
+        "name": "南宋 · 临安府与皇城",
+        "boundaryStatus": "已接入南宋整城、大内闭合参考面及二十段考古成果图开放墙线",
+        "summary": "临安外城按完整复原图配准，钱塘门既有地点约束邻段；南部因原图为示意，分区对应皇城考古图，不能把北部拟合残差当作全城精度。皇城大内北、东、南参考边优先沿考古图墙段，缺口仅在参考面补接；二十段开放转绘墙线不强闭合。西部天然后苑及圣果寺统属边界仍待核，现有遗迹不挪动。",
+        "sources": [
+          {
+            "title": "杭州市人大 · 皇城考古与四至勘探",
+            "url": "https://z.hangzhou.com.cn/2021/rddssbchy/content/content_8082761.html"
+          },
+          {
+            "title": "临安城遗址 · 皇城与钱塘门",
+            "url": "https://z.hangzhou.com.cn/2022/syjy/content/content_8420727.html"
+          },
+          {
+            "title": "杭州历代城界与宫门：本轮来源与配准限制",
+            "url": "./sources/hangzhou-phases.html"
+          }
+        ]
+      },
+      {
+        "name": "南宋 · 德寿宫、太庙与城门",
+        "boundaryStatus": "十三处宋外城旱门分期表达；钱塘门复用既有遗址点",
+        "summary": "新增十二处整城复原图门位，加上原钱塘门共十三旱门，均与明清、吴越同名门分期区分。皇城和宁、丽正、西侧候选门与东华门分别说明图面和文献依据。德寿宫、太庙及2006／2025京城东墙考古地段保持原有几何；德寿宫墙不当作京城墙，现代展示区不当作完整宫苑。五处宋水门尚缺可靠定位图件，未补猜测点。",
+        "sources": [
+          {
+            "title": "德寿宫遗址 · 发掘遗迹",
+            "url": "https://z.hangzhou.com.cn/2021/syjy/content/content_8215918.html"
+          },
+          {
+            "title": "浙江社科 · 临安城考古与太庙",
+            "url": "https://www.zjskw.gov.cn/art/2024/8/29/art_1229515903_60324.html"
+          },
+          {
+            "title": "杭州历代城界与宫门：本轮来源与配准限制",
+            "url": "./sources/hangzhou-phases.html"
+          }
+        ]
+      }
+    ]
+  },
+  "reviewedAt": "2026-10-22",
+  "baseline": {
+    "researchSha256": "b8d8b01fe61b02e6cbb5422ce9868f7602cf2e8dba92a0efda98465aa3c53d81",
+    "capitalCatalogSha256": "3f2044bed7858fa21b18c1adb044fe91bd31ad39e169d5a709ac53ad3bef6324",
+    "originalWallsSha256": "9183b1e7c43b7fb19e20137eb5d87e636f12969f02136ee23f275aef8324d853",
+    "hangzhouGatesSha256": "52bab4a1b2a5975e301ec80ed41702331dfe65b2576ee540bc97ea7fc18000cd",
+    "kaifengSha256": "9e30f4bab9b389d06d25eb49425214ee927ad3a20c8a13191f42053fc5435b5a",
+    "nanjingSha256": "f91430686376d44da798e8ccc91d8d406d50cdba569aa39af262e0c3422d1e9a"
+  },
+  "newFeatureCount": 31,
+  "newFeatures": [
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-han-qiantang-reference",
+        "sourceName": "东汉钱塘城",
+        "label": "东汉钱塘城",
+        "enSourceName": "Eastern Han Qiantang Town",
+        "enLabel": "Eastern Han Qiantang Town",
+        "period": "秦汉",
+        "periods": [
+          "秦汉"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.dlyj.ac.cn/CN/abstract/article/1000-0585/10267",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 13,
+        "status": "1985年历史地理研究图转绘 · 图示参考，非实测墙界",
+        "enStatus": "Digitized historical-geography sketch (1985); not a surveyed wall boundary",
+        "note": "重描虞家钧《杭州沿革和城市发展》（1985）图2中带＋记号的东汉城垣线，保留西侧折转及南缘弯折，不沿清旗营点线或邻接宫城线。按原图2公里比例尺等比转换，以钱塘门地段近似平移落位；图面北向为方向假定，不作多点仿射拉伸。绝对位置、城垣复原学说及图件比例误差仍待核，不能当作考古实测范围。不新增东汉国都身份。",
+        "enNote": "Redigitized the dashed, plus-marked Eastern Han circuit in Yu Jiajun’s 1985 Fig. 2, preserving western and southern bends. Uniform scale from its 2 km scale bar; approximate translation using the Qiantang Gate vicinity and assumed map north. No affine shear. Absolute placement and the historical reconstruction remain uncertain; not an excavated boundary or evidence of national-capital status.",
+        "fillOpacity": 0.025,
+        "lineOpacity": 0.42,
+        "locationPrecision": "按原图比例尺、图面北向及钱塘门地段近似落位；无独立考古城界控制",
+        "sourceDigitizationRevision": 2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.15232413888512,
+              30.271850832922105
+            ],
+            [
+              120.15394194583615,
+              30.271850832922105
+            ],
+            [
+              120.1555597527872,
+              30.27180092674572
+            ],
+            [
+              120.15723533855791,
+              30.27175102056933
+            ],
+            [
+              120.1589687031483,
+              30.271701114392943
+            ],
+            [
+              120.16058651009934,
+              30.271601302040164
+            ],
+            [
+              120.16208875941102,
+              30.271551395863778
+            ],
+            [
+              120.16341767226365,
+              30.271451583511
+            ],
+            [
+              120.16382212400141,
+              30.27115214645267
+            ],
+            [
+              120.16393768164077,
+              30.270453459983234
+            ],
+            [
+              120.16405323928014,
+              30.269155899397134
+            ],
+            [
+              120.16422657573918,
+              30.267658714105483
+            ],
+            [
+              120.16434213337853,
+              30.266111622637442
+            ],
+            [
+              120.16451546983757,
+              30.264564531169402
+            ],
+            [
+              120.16457324865725,
+              30.26306734587775
+            ],
+            [
+              120.16463102747693,
+              30.261669972938876
+            ],
+            [
+              120.16457324865725,
+              30.261071098822214
+            ],
+            [
+              120.16428435455886,
+              30.260671849411107
+            ],
+            [
+              120.16364878754237,
+              30.26032250617639
+            ],
+            [
+              120.16289766288654,
+              30.26022269382361
+            ],
+            [
+              120.16133763475518,
+              30.2602726
+            ],
+            [
+              120.15960427016478,
+              30.26032250617639
+            ],
+            [
+              120.15787090557438,
+              30.26032250617639
+            ],
+            [
+              120.15613754098399,
+              30.260372412352776
+            ],
+            [
+              120.15486640695103,
+              30.2602726
+            ],
+            [
+              120.15388416701647,
+              30.260172787647225
+            ],
+            [
+              120.15347971527872,
+              30.261071098822214
+            ],
+            [
+              120.15307526354096,
+              30.262069222349982
+            ],
+            [
+              120.15278636944255,
+              30.26301743970136
+            ],
+            [
+              120.15255525416384,
+              30.264215187934685
+            ],
+            [
+              120.15232413888512,
+              30.265412936168005
+            ],
+            [
+              120.15203524478672,
+              30.266660590577715
+            ],
+            [
+              120.15180412950801,
+              30.26775852645826
+            ],
+            [
+              120.1515152354096,
+              30.268856462338803
+            ],
+            [
+              120.15128412013088,
+              30.26990449204296
+            ],
+            [
+              120.1509374472128,
+              30.27055327233601
+            ],
+            [
+              120.15099522603248,
+              30.271002427923506
+            ],
+            [
+              120.1515152354096,
+              30.271351771158223
+            ],
+            [
+              120.15232413888512,
+              30.271850832922105
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-song-complete-city-reference",
+        "sourceName": "南宋临安城",
+        "label": "南宋临安城",
+        "enSourceName": "Southern Song Lin’an City",
+        "enLabel": "Southern Song Lin’an",
+        "period": "宋辽金西夏",
+        "periods": [
+          "宋辽金西夏"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.sohu.com/a/215684774_713036",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 12,
+        "status": "研究图件配准参考 · 非考古实测墙界",
+        "enStatus": "Georeferenced research drawing; not a surveyed archaeological boundary",
+        "note": "按王子奇《宋代城镇考古的发现与研究（上）》图二所载整城复原图描绘完整轮廓，用钱塘门遗址及清波、新门、艮山门地段作现代对应参照。原图南北比例为示意，北部先以地望参照拟合，南部再对应皇城考古图分区配准，中间作图面过渡。约56米残差仅检验北部所选参照，不等于全城墙界精度；整城图含文献复原和未探明地段，虚线及淡填充统一提示研究性质。它不是明清城界的复制。德寿宫东侧2006／2025年考古地段仍独立保留，钱塘门沿用既有坐标并对新轮廓邻段作局部约束；既有地点不是原始考古测量点，不用来宣称每段已校准；西南山地、南部城郭及相关门址仍需发掘测绘图进一步校核。",
+        "enNote": "Complete circuit traced from Figure 2 in Wang Ziqi’s archaeological review and approximately registered using the existing Qiantang Gate location and Qingbo, Xin and Genshan gate vicinities. The source is schematic, so its southern district is separately registered against the palace diagram, with a transition between drawing regions. The roughly 56 m RMS tests only the selected northern references, not the full boundary. Dashed lines and pale fill identify a documentary reconstruction with unexcavated parts, not a copy of the Ming–Qing enclosure. The 2006 / 2025 east-wall excavation vicinity is retained separately. The existing Qiantang location is preserved and locally constrains the new outline, without implying original survey accuracy. Mountain and southern portions remain subject to archaeological checking.",
+        "fillOpacity": 0.035,
+        "lineOpacity": 0.55,
+        "completeDrawingCircuit": true,
+        "boundaryEvidence": "整城复原图完整轮廓；非全圈实测",
+        "labelCoordinates": [
+          120.158,
+          30.271
+        ],
+        "referenceUrls": [
+          "https://www.sohu.com/a/215684774_713036",
+          "https://hznews.hangzhou.com.cn/chengshi/content/2013-06/20/content_4777436_0.htm"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.1536683468986,
+              30.27336797416492
+            ],
+            [
+              120.15443203756001,
+              30.27395741865494
+            ],
+            [
+              120.15549873465076,
+              30.27450266155895
+            ],
+            [
+              120.1578203275478,
+              30.275379926300893
+            ],
+            [
+              120.1608184175516,
+              30.27587141101306
+            ],
+            [
+              120.16683203808081,
+              30.276345198307038
+            ],
+            [
+              120.17164380653026,
+              30.276698769035704
+            ],
+            [
+              120.17238352100114,
+              30.276227771369175
+            ],
+            [
+              120.17317774162865,
+              30.27240501195947
+            ],
+            [
+              120.17392618541363,
+              30.268158288056167
+            ],
+            [
+              120.17425245492507,
+              30.263914041791406
+            ],
+            [
+              120.17439488585138,
+              30.25975572106013
+            ],
+            [
+              120.1748279740309,
+              30.254153301832716
+            ],
+            [
+              120.17461144804777,
+              30.24991224110323
+            ],
+            [
+              120.17390517029656,
+              30.24588617118164
+            ],
+            [
+              120.17255218513633,
+              30.243136596069586
+            ],
+            [
+              120.17042969580746,
+              30.2399673038443
+            ],
+            [
+              120.1716003048127,
+              30.23923923747404
+            ],
+            [
+              120.17186770803711,
+              30.238474048485045
+            ],
+            [
+              120.17122689930223,
+              30.23647324908847
+            ],
+            [
+              120.16985912761884,
+              30.234203401320848
+            ],
+            [
+              120.16844721497462,
+              30.23079026534942
+            ],
+            [
+              120.16801847440047,
+              30.2262616854182
+            ],
+            [
+              120.16819656714628,
+              30.22224139558468
+            ],
+            [
+              120.1677218385163,
+              30.220791383251974
+            ],
+            [
+              120.16633716700582,
+              30.219604876920442
+            ],
+            [
+              120.16400146284391,
+              30.219047907233726
+            ],
+            [
+              120.16170836823676,
+              30.218246581159775
+            ],
+            [
+              120.15941831319726,
+              30.21768860359864
+            ],
+            [
+              120.15805415876842,
+              30.2181446997286
+            ],
+            [
+              120.1564252283081,
+              30.219336888643515
+            ],
+            [
+              120.15546355716988,
+              30.219114705493478
+            ],
+            [
+              120.15467536381836,
+              30.218158445307328
+            ],
+            [
+              120.1532412437259,
+              30.2166687612092
+            ],
+            [
+              120.15390160841316,
+              30.218358090557043
+            ],
+            [
+              120.15474988883344,
+              30.220469248304642
+            ],
+            [
+              120.15555479980705,
+              30.22276392531127
+            ],
+            [
+              120.15604320649145,
+              30.22530900595164
+            ],
+            [
+              120.1568001886669,
+              30.227422179448073
+            ],
+            [
+              120.15729446684296,
+              30.22969666080738
+            ],
+            [
+              120.1570558662733,
+              30.231842015946143
+            ],
+            [
+              120.15639605821903,
+              30.23277535855847
+            ],
+            [
+              120.15440723059537,
+              30.234184865120667
+            ],
+            [
+              120.15362009978149,
+              30.23620728988864
+            ],
+            [
+              120.15282844901499,
+              30.238034282193457
+            ],
+            [
+              120.15383991778738,
+              30.240191935176938
+            ],
+            [
+              120.15484993318297,
+              30.242392020004615
+            ],
+            [
+              120.15453602190098,
+              30.244515028007907
+            ],
+            [
+              120.15544285659715,
+              30.24620663860195
+            ],
+            [
+              120.15683798968456,
+              30.2477256902323
+            ],
+            [
+              120.15713590476845,
+              30.24959056768677
+            ],
+            [
+              120.15858698833598,
+              30.251236560901347
+            ],
+            [
+              120.15853321339442,
+              30.252806539136625
+            ],
+            [
+              120.157327723346,
+              30.254552969767598
+            ],
+            [
+              120.15579587153174,
+              30.25653259497168
+            ],
+            [
+              120.1543641923556,
+              30.258615641577734
+            ],
+            [
+              120.1532486,
+              30.2602726
+            ],
+            [
+              120.15291236851971,
+              30.26227256704265
+            ],
+            [
+              120.15317924314449,
+              30.264268994601665
+            ],
+            [
+              120.1527578923404,
+              30.266500740423968
+            ],
+            [
+              120.15233208009819,
+              30.268369865258805
+            ],
+            [
+              120.15167374567474,
+              30.26998581482192
+            ],
+            [
+              120.15241708906098,
+              30.271169305130694
+            ],
+            [
+              120.15311756235829,
+              30.271843967257475
+            ],
+            [
+              120.1536683468986,
+              30.27336797416492
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-song-palace-reference",
+        "sourceName": "南宋皇城（大内复原范围）",
+        "label": "南宋皇城（大内）",
+        "enSourceName": "Southern Song Imperial Palace: Reconstructed Enclosure",
+        "enLabel": "Imperial Palace (Danei)",
+        "period": "宋辽金西夏",
+        "periods": [
+          "宋辽金西夏"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.sohu.com/a/534706960_121124392",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 12,
+        "status": "研究图件配准参考 · 非考古实测墙界",
+        "enStatus": "Georeferenced research drawing; not a surveyed archaeological boundary",
+        "note": "整城复原图中的大内完整轮廓，按和宁、丽正与西侧门址的图示对应，局部对照皇城历年考古成果图，再以现代街巷配准。图上门名及西侧门址归属存在解释差异，三点对应能拟合不代表城界精度。显示面北、东、南三边优先沿考古成果图转绘墙段，缺口仅在参考面中补接，二十段原始转绘开放线不改；西边仍是文献图自然屏障推定。此面仅为大内范围的近似位置，不是全部皇城后苑的已确认外界；西部天然山体与圣果寺等后苑遗存的统属及完整边界仍待考古图件补核，不将现有圣果寺标绘挪入或裁掉。各考古墙段另以开放线显示。",
+        "enNote": "Complete Danei contour from the documentary reconstruction, locally related to the archaeological diagram through the northern, southern and western gate positions, then registered to modern streets. Gate identification and the western gate’s name remain interpretive. An exact three-point correspondence is not accuracy evidence. The displayed face follows the archaeology-diagram wall traces on its north, east and south, with explicit gap joins only in the inferred face. The twenty open transcriptions are unchanged. The western natural barrier remains documentary. This is the approximate extent of the palace enclosure, not an archaeologically confirmed boundary of all western hills and gardens. Existing Shengguo Temple geometry is preserved; its wider enclosure relationship remains unresolved. Archaeological drawing segments are shown separately.",
+        "referenceUrls": [
+          "https://www.sohu.com/a/215684774_713036",
+          "https://www.sohu.com/a/534706960_121124392",
+          "https://z.hangzhou.com.cn/2021/rddssbchy/content/content_8082761.html"
+        ],
+        "fillOpacity": 0.045,
+        "lineOpacity": 0.55,
+        "completeDrawingCircuit": true,
+        "boundaryEvidence": "大内文献图闭合轮廓；后苑完整外界待核"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.16085802869495,
+              30.226156093127745
+            ],
+            [
+              120.16116499313907,
+              30.226463707971092
+            ],
+            [
+              120.16144883883217,
+              30.2268410503397
+            ],
+            [
+              120.16190564234603,
+              30.227093425177326
+            ],
+            [
+              120.16233956281424,
+              30.22728155576813
+            ],
+            [
+              120.16248172136618,
+              30.227336255180354
+            ],
+            [
+              120.16269111893517,
+              30.227473274007664
+            ],
+            [
+              120.16298617250193,
+              30.227559588292838
+            ],
+            [
+              120.16315450574999,
+              30.227631415058475
+            ],
+            [
+              120.16339995296657,
+              30.22764421055898
+            ],
+            [
+              120.16357651534082,
+              30.2275982450911
+            ],
+            [
+              120.16383489345395,
+              30.22755654479006
+            ],
+            [
+              120.16408582675466,
+              30.227490812134885
+            ],
+            [
+              120.1643629347515,
+              30.22744220683313
+            ],
+            [
+              120.16459349234324,
+              30.22740693762537
+            ],
+            [
+              120.16487334338215,
+              30.227319068245777
+            ],
+            [
+              120.16509645616149,
+              30.227259766683893
+            ],
+            [
+              120.16535757731668,
+              30.22717880230501
+            ],
+            [
+              120.16556305742914,
+              30.227110700112707
+            ],
+            [
+              120.16579549655151,
+              30.22691790068617
+            ],
+            [
+              120.16592300118401,
+              30.226790563618056
+            ],
+            [
+              120.16608271520518,
+              30.22659397293211
+            ],
+            [
+              120.16616696108306,
+              30.226432855064598
+            ],
+            [
+              120.16620214921919,
+              30.226190365596846
+            ],
+            [
+              120.16624313634249,
+              30.22599546692993
+            ],
+            [
+              120.16631437412617,
+              30.225628754135375
+            ],
+            [
+              120.16634768073168,
+              30.225543794886406
+            ],
+            [
+              120.16648137856446,
+              30.22493601434638
+            ],
+            [
+              120.16650724035755,
+              30.224827022743284
+            ],
+            [
+              120.16657158193723,
+              30.224428424779028
+            ],
+            [
+              120.16650207128886,
+              30.224117425897624
+            ],
+            [
+              120.16632786185598,
+              30.223737917602563
+            ],
+            [
+              120.16623875981244,
+              30.22331555758093
+            ],
+            [
+              120.16614503319622,
+              30.223089991855918
+            ],
+            [
+              120.16603257669627,
+              30.22287133113162
+            ],
+            [
+              120.16598540048511,
+              30.222632429312604
+            ],
+            [
+              120.16592114021549,
+              30.2223768740476
+            ],
+            [
+              120.16586322754145,
+              30.22216105676786
+            ],
+            [
+              120.16579238397087,
+              30.221999735289668
+            ],
+            [
+              120.16573697863352,
+              30.221878625704168
+            ],
+            [
+              120.16551794181845,
+              30.221748985785
+            ],
+            [
+              120.16516035100496,
+              30.221643648516707
+            ],
+            [
+              120.16481130222071,
+              30.22154663797141
+            ],
+            [
+              120.16458043172592,
+              30.221455788222656
+            ],
+            [
+              120.16387300781439,
+              30.221395264996715
+            ],
+            [
+              120.16308980285655,
+              30.221244095632695
+            ],
+            [
+              120.16237297540434,
+              30.221056979542816
+            ],
+            [
+              120.16162887603917,
+              30.22086844173066
+            ],
+            [
+              120.16084951134023,
+              30.220662302657665
+            ],
+            [
+              120.16012994084595,
+              30.220514450645627
+            ],
+            [
+              120.15976850977356,
+              30.22046408308631
+            ],
+            [
+              120.15971898062104,
+              30.220650655030234
+            ],
+            [
+              120.1596468813259,
+              30.220899101683845
+            ],
+            [
+              120.15962407547791,
+              30.221094948165614
+            ],
+            [
+              120.15956302554869,
+              30.22144642923646
+            ],
+            [
+              120.15864678186016,
+              30.221721995799594
+            ],
+            [
+              120.15787986548217,
+              30.22246917520314
+            ],
+            [
+              120.15756716065253,
+              30.223023764477897
+            ],
+            [
+              120.15743933198827,
+              30.223756833639595
+            ],
+            [
+              120.15753442969265,
+              30.224059003531774
+            ],
+            [
+              120.15827545413794,
+              30.224894597335936
+            ],
+            [
+              120.15901647858324,
+              30.225730191140098
+            ],
+            [
+              120.16085802869495,
+              30.226156093127745
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-song-palace-archaeology-lines",
+        "sourceName": "南宋皇城考古探明墙段",
+        "label": "皇城考古墙段",
+        "enSourceName": "Southern Song Palace: Archaeologically Located Wall Segments",
+        "enLabel": "Palace wall segments",
+        "period": "宋辽金西夏",
+        "periods": [
+          "宋辽金西夏"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.sohu.com/a/534706960_121124392",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 17,
+        "status": "考古成果图转绘配准 · 20段开放线，非原始测绘GIS",
+        "enStatus": "Registered archaeology-diagram transcription; 20 open segments, not original survey GIS",
+        "note": "按《南宋皇城遗址历年考古调查勘探试掘地点及成果》图中红色城垣带逐段描中心线，保留全部20段图示缺口。原图是考古成果分布图，但本地图新增线是经街巷参照配准后的图面转绘，非考古单位原始GIS，也不是按已知墙宽生成实测墙体面。宫墙与城外京城墙、德寿宫墙分开；未探明的西部天然山体没有强行画成墙线。",
+        "enNote": "Twenty separate centreline traces digitized from the red wall bands in the published palace archaeology diagram. Every selected gap is retained. The underlying diagram summarizes archaeological work, but these map lines are registered drawing transcriptions, not the excavation team’s GIS or measured wall-body polygons. Unmapped natural western barriers are not drawn as excavated walls.",
+        "lineOpacity": 0.8
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              120.16085802869495,
+              30.226156093127745
+            ],
+            [
+              120.16116499313907,
+              30.226463707971092
+            ],
+            [
+              120.16144883883217,
+              30.2268410503397
+            ],
+            [
+              120.16190564234603,
+              30.227093425177326
+            ],
+            [
+              120.16233956281424,
+              30.22728155576813
+            ]
+          ],
+          [
+            [
+              120.16248172136618,
+              30.227336255180354
+            ],
+            [
+              120.16269111893517,
+              30.227473274007664
+            ],
+            [
+              120.16298617250193,
+              30.227559588292838
+            ]
+          ],
+          [
+            [
+              120.16315450574999,
+              30.227631415058475
+            ],
+            [
+              120.16339995296657,
+              30.22764421055898
+            ]
+          ],
+          [
+            [
+              120.16357651534082,
+              30.2275982450911
+            ],
+            [
+              120.16383489345395,
+              30.22755654479006
+            ]
+          ],
+          [
+            [
+              120.16408582675466,
+              30.227490812134885
+            ],
+            [
+              120.1643629347515,
+              30.22744220683313
+            ]
+          ],
+          [
+            [
+              120.16459349234324,
+              30.22740693762537
+            ],
+            [
+              120.16487334338215,
+              30.227319068245777
+            ]
+          ],
+          [
+            [
+              120.16509645616149,
+              30.227259766683893
+            ],
+            [
+              120.16535757731668,
+              30.22717880230501
+            ]
+          ],
+          [
+            [
+              120.16556305742914,
+              30.227110700112707
+            ],
+            [
+              120.16579549655151,
+              30.22691790068617
+            ]
+          ],
+          [
+            [
+              120.16592300118401,
+              30.226790563618056
+            ],
+            [
+              120.16608271520518,
+              30.22659397293211
+            ]
+          ],
+          [
+            [
+              120.16616696108306,
+              30.226432855064598
+            ],
+            [
+              120.16620214921919,
+              30.226190365596846
+            ]
+          ],
+          [
+            [
+              120.16624313634249,
+              30.22599546692993
+            ],
+            [
+              120.16631437412617,
+              30.225628754135375
+            ]
+          ],
+          [
+            [
+              120.16634768073168,
+              30.225543794886406
+            ],
+            [
+              120.16648137856446,
+              30.22493601434638
+            ]
+          ],
+          [
+            [
+              120.16650724035755,
+              30.224827022743284
+            ],
+            [
+              120.16657158193723,
+              30.224428424779028
+            ],
+            [
+              120.16650207128886,
+              30.224117425897624
+            ],
+            [
+              120.16632786185598,
+              30.223737917602563
+            ],
+            [
+              120.16623875981244,
+              30.22331555758093
+            ]
+          ],
+          [
+            [
+              120.16614503319622,
+              30.223089991855918
+            ],
+            [
+              120.16603257669627,
+              30.22287133113162
+            ]
+          ],
+          [
+            [
+              120.16598540048511,
+              30.222632429312604
+            ],
+            [
+              120.16592114021549,
+              30.2223768740476
+            ]
+          ],
+          [
+            [
+              120.16586322754145,
+              30.22216105676786
+            ],
+            [
+              120.16579238397087,
+              30.221999735289668
+            ]
+          ],
+          [
+            [
+              120.16573697863352,
+              30.221878625704168
+            ],
+            [
+              120.16551794181845,
+              30.221748985785
+            ],
+            [
+              120.16516035100496,
+              30.221643648516707
+            ],
+            [
+              120.16481130222071,
+              30.22154663797141
+            ]
+          ],
+          [
+            [
+              120.16458043172592,
+              30.221455788222656
+            ],
+            [
+              120.16387300781439,
+              30.221395264996715
+            ],
+            [
+              120.16308980285655,
+              30.221244095632695
+            ],
+            [
+              120.16237297540434,
+              30.221056979542816
+            ],
+            [
+              120.16162887603917,
+              30.22086844173066
+            ],
+            [
+              120.16084951134023,
+              30.220662302657665
+            ],
+            [
+              120.16012994084595,
+              30.220514450645627
+            ],
+            [
+              120.15976850977356,
+              30.22046408308631
+            ]
+          ],
+          [
+            [
+              120.15971898062104,
+              30.220650655030234
+            ],
+            [
+              120.1596468813259,
+              30.220899101683845
+            ]
+          ],
+          [
+            [
+              120.15962407547791,
+              30.221094948165614
+            ],
+            [
+              120.15956302554869,
+              30.22144642923646
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-song-gate-0",
+        "sourceName": "余杭门",
+        "label": "余杭门",
+        "enSourceName": "Yuhang Gate",
+        "enLabel": "Yuhang Gate",
+        "period": "宋辽金西夏",
+        "periods": [
+          "宋辽金西夏"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.sohu.com/a/215684774_713036",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 13,
+        "status": "研究图件配准参考 · 非考古实测墙界",
+        "enStatus": "Georeferenced research drawing; not a surveyed archaeological boundary",
+        "note": "南宋十三座旱门之一，按整城复原图所标方位配准到相应城界；为图示门址参照，非已发掘门洞中心。各期移门另列，不直接采用明清同名城门坐标。亦俗称北关门，非吴越旧夹城巷北关门。 为保持图面关联，按原图方位投影到相应参考城界；此位置不是门基实测。",
+        "enNote": "One of the thirteen land gates, placed from the full-city reconstruction on its corresponding drawn circuit. This is a research-drawing position, not an excavated doorway centre. Later gates are kept separate, particularly the Song Dongqing and Genshan gates from their late-Yuan successors. Projected to the matching reference circuit for map association, not a surveyed doorway.",
+        "sitePoint": true,
+        "gateKind": "南宋外城旱门",
+        "gateBoundaryId": "hangzhou-song-complete-city-reference",
+        "digitizedPixel": [
+          180,
+          130
+        ],
+        "drawingCoordinate": [
+          120.1536683468986,
+          30.27336797416492
+        ],
+        "referenceCircuitProjectionMeters": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.1536683468986,
+          30.27336797416492
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-song-gate-1",
+        "sourceName": "艮山门",
+        "label": "艮山门",
+        "enSourceName": "Genshan Gate",
+        "enLabel": "Genshan Gate",
+        "period": "宋辽金西夏",
+        "periods": [
+          "宋辽金西夏"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.sohu.com/a/215684774_713036",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 13,
+        "status": "研究图件配准参考 · 非考古实测墙界",
+        "enStatus": "Georeferenced research drawing; not a surveyed archaeological boundary",
+        "note": "南宋十三座旱门之一，按整城复原图所标方位配准到相应城界；为图示门址参照，非已发掘门洞中心。各期移门另列，不直接采用明清同名城门坐标。宋门位于菜市河西侧的坝子桥地段，与元末复建的明清门区分。 为保持图面关联，按原图方位投影到相应参考城界；此位置不是门基实测。",
+        "enNote": "One of the thirteen land gates, placed from the full-city reconstruction on its corresponding drawn circuit. This is a research-drawing position, not an excavated doorway centre. Later gates are kept separate, particularly the Song Dongqing and Genshan gates from their late-Yuan successors. Projected to the matching reference circuit for map association, not a surveyed doorway.",
+        "sitePoint": true,
+        "gateKind": "南宋外城旱门",
+        "gateBoundaryId": "hangzhou-song-complete-city-reference",
+        "digitizedPixel": [
+          488,
+          48
+        ],
+        "drawingCoordinate": [
+          120.17212483803752,
+          30.27673836929299
+        ],
+        "referenceCircuitProjectionMeters": 31
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.17193421196016,
+          30.276513859472328
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-song-gate-2",
+        "sourceName": "东青门",
+        "label": "东青门",
+        "enSourceName": "Dongqing Gate",
+        "enLabel": "Dongqing Gate",
+        "period": "宋辽金西夏",
+        "periods": [
+          "宋辽金西夏"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.sohu.com/a/215684774_713036",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 13,
+        "status": "研究图件配准参考 · 非考古实测墙界",
+        "enStatus": "Georeferenced research drawing; not a surveyed archaeological boundary",
+        "note": "南宋十三座旱门之一，按整城复原图所标方位配准到相应城界；为图示门址参照，非已发掘门洞中心。各期移门另列，不直接采用明清同名城门坐标。宋代东青门与元末东扩后的庆春门不是同一位置。 为保持图面关联，按原图方位投影到相应参考城界；此位置不是门基实测。",
+        "enNote": "One of the thirteen land gates, placed from the full-city reconstruction on its corresponding drawn circuit. This is a research-drawing position, not an excavated doorway centre. Later gates are kept separate, particularly the Song Dongqing and Genshan gates from their late-Yuan successors. Projected to the matching reference circuit for map association, not a surveyed doorway.",
+        "sitePoint": true,
+        "gateKind": "南宋外城旱门",
+        "gateBoundaryId": "hangzhou-song-complete-city-reference",
+        "digitizedPixel": [
+          516,
+          448
+        ],
+        "drawingCoordinate": [
+          120.17439488585138,
+          30.25975572106013
+        ],
+        "referenceCircuitProjectionMeters": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.17439488585138,
+          30.25975572106013
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-song-gate-3",
+        "sourceName": "崇新门",
+        "label": "崇新门",
+        "enSourceName": "Chongxin Gate",
+        "enLabel": "Chongxin Gate",
+        "period": "宋辽金西夏",
+        "periods": [
+          "宋辽金西夏"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.sohu.com/a/215684774_713036",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 13,
+        "status": "研究图件配准参考 · 非考古实测墙界",
+        "enStatus": "Georeferenced research drawing; not a surveyed archaeological boundary",
+        "note": "南宋十三座旱门之一，按整城复原图所标方位配准到相应城界；为图示门址参照，非已发掘门洞中心。各期移门另列，不直接采用明清同名城门坐标。又称荐桥门，与元末改筑后清泰门分期表示。 为保持图面关联，按原图方位投影到相应参考城界；此位置不是门基实测。",
+        "enNote": "One of the thirteen land gates, placed from the full-city reconstruction on its corresponding drawn circuit. This is a research-drawing position, not an excavated doorway centre. Later gates are kept separate, particularly the Song Dongqing and Genshan gates from their late-Yuan successors. Projected to the matching reference circuit for map association, not a surveyed doorway.",
+        "sitePoint": true,
+        "gateKind": "南宋外城旱门",
+        "gateBoundaryId": "hangzhou-song-complete-city-reference",
+        "digitizedPixel": [
+          500,
+          775
+        ],
+        "drawingCoordinate": [
+          120.17390517029656,
+          30.24588617118164
+        ],
+        "referenceCircuitProjectionMeters": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.17390517029656,
+          30.24588617118164
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-song-gate-4",
+        "sourceName": "新门",
+        "label": "新门",
+        "enSourceName": "Xin Gate",
+        "enLabel": "Xin Gate",
+        "period": "宋辽金西夏",
+        "periods": [
+          "宋辽金西夏"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.sohu.com/a/215684774_713036",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 13,
+        "status": "研究图件配准参考 · 非考古实测墙界",
+        "enStatus": "Georeferenced research drawing; not a surveyed archaeological boundary",
+        "note": "南宋十三座旱门之一，按整城复原图所标方位配准到相应城界；为图示门址参照，非已发掘门洞中心。各期移门另列，不直接采用明清同名城门坐标。又称新开门，不把望江路现代路口当作宋门精确门基。 为保持图面关联，按原图方位投影到相应参考城界；此位置不是门基实测。",
+        "enNote": "One of the thirteen land gates, placed from the full-city reconstruction on its corresponding drawn circuit. This is a research-drawing position, not an excavated doorway centre. Later gates are kept separate, particularly the Song Dongqing and Genshan gates from their late-Yuan successors. Projected to the matching reference circuit for map association, not a surveyed doorway.",
+        "sitePoint": true,
+        "gateKind": "南宋外城旱门",
+        "gateBoundaryId": "hangzhou-song-complete-city-reference",
+        "digitizedPixel": [
+          439,
+          915
+        ],
+        "drawingCoordinate": [
+          120.17042969580746,
+          30.2399673038443
+        ],
+        "referenceCircuitProjectionMeters": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.17042969580746,
+          30.2399673038443
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-song-gate-5",
+        "sourceName": "保安门",
+        "label": "保安门",
+        "enSourceName": "Baoan Gate",
+        "enLabel": "Baoan Gate",
+        "period": "宋辽金西夏",
+        "periods": [
+          "宋辽金西夏"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.sohu.com/a/215684774_713036",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 13,
+        "status": "研究图件配准参考 · 非考古实测墙界",
+        "enStatus": "Georeferenced research drawing; not a surveyed archaeological boundary",
+        "note": "南宋十三座旱门之一，按整城复原图所标方位配准到相应城界；为图示门址参照，非已发掘门洞中心。各期移门另列，不直接采用明清同名城门坐标。 为保持图面关联，按原图方位投影到相应参考城界；此位置不是门基实测。",
+        "enNote": "One of the thirteen land gates, placed from the full-city reconstruction on its corresponding drawn circuit. This is a research-drawing position, not an excavated doorway centre. Later gates are kept separate, particularly the Song Dongqing and Genshan gates from their late-Yuan successors. Projected to the matching reference circuit for map association, not a surveyed doorway.",
+        "sitePoint": true,
+        "gateKind": "南宋外城旱门",
+        "gateBoundaryId": "hangzhou-song-complete-city-reference",
+        "digitizedPixel": [
+          455,
+          1000
+        ],
+        "drawingCoordinate": [
+          120.17122689930223,
+          30.23647324908847
+        ],
+        "referenceCircuitProjectionMeters": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.17122689930223,
+          30.23647324908847
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-song-gate-6",
+        "sourceName": "候潮门",
+        "label": "候潮门",
+        "enSourceName": "Houchao Gate",
+        "enLabel": "Houchao Gate",
+        "period": "宋辽金西夏",
+        "periods": [
+          "宋辽金西夏"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.sohu.com/a/215684774_713036",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 13,
+        "status": "研究图件配准参考 · 非考古实测墙界",
+        "enStatus": "Georeferenced research drawing; not a surveyed archaeological boundary",
+        "note": "南宋十三座旱门之一，按整城复原图所标方位配准到相应城界；为图示门址参照，非已发掘门洞中心。各期移门另列，不直接采用明清同名城门坐标。 为保持图面关联，按原图方位投影到相应参考城界；此位置不是门基实测。",
+        "enNote": "One of the thirteen land gates, placed from the full-city reconstruction on its corresponding drawn circuit. This is a research-drawing position, not an excavated doorway centre. Later gates are kept separate, particularly the Song Dongqing and Genshan gates from their late-Yuan successors. Projected to the matching reference circuit for map association, not a surveyed doorway.",
+        "sitePoint": true,
+        "gateKind": "南宋外城旱门",
+        "gateBoundaryId": "hangzhou-song-complete-city-reference",
+        "digitizedPixel": [
+          425,
+          1110
+        ],
+        "drawingCoordinate": [
+          120.16844721497462,
+          30.23079026534942
+        ],
+        "referenceCircuitProjectionMeters": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.16844721497462,
+          30.23079026534942
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-song-gate-7",
+        "sourceName": "便门",
+        "label": "便门",
+        "enSourceName": "Bian Gate",
+        "enLabel": "Bian Gate",
+        "period": "宋辽金西夏",
+        "periods": [
+          "宋辽金西夏"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.sohu.com/a/215684774_713036",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 13,
+        "status": "研究图件配准参考 · 非考古实测墙界",
+        "enStatus": "Georeferenced research drawing; not a surveyed archaeological boundary",
+        "note": "南宋十三座旱门之一，按整城复原图所标方位配准到相应城界；为图示门址参照，非已发掘门洞中心。各期移门另列，不直接采用明清同名城门坐标。 为保持图面关联，按原图方位投影到相应参考城界；此位置不是门基实测。",
+        "enNote": "One of the thirteen land gates, placed from the full-city reconstruction on its corresponding drawn circuit. This is a research-drawing position, not an excavated doorway centre. Later gates are kept separate, particularly the Song Dongqing and Genshan gates from their late-Yuan successors. Projected to the matching reference circuit for map association, not a surveyed doorway.",
+        "sitePoint": true,
+        "gateKind": "南宋外城旱门",
+        "gateBoundaryId": "hangzhou-song-complete-city-reference",
+        "digitizedPixel": [
+          431,
+          1246
+        ],
+        "drawingCoordinate": [
+          120.16819656714628,
+          30.22224139558468
+        ],
+        "referenceCircuitProjectionMeters": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.16819656714628,
+          30.22224139558468
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-song-gate-8",
+        "sourceName": "嘉会门",
+        "label": "嘉会门",
+        "enSourceName": "Jiahui Gate",
+        "enLabel": "Jiahui Gate",
+        "period": "宋辽金西夏",
+        "periods": [
+          "宋辽金西夏"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.sohu.com/a/215684774_713036",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 13,
+        "status": "研究图件配准参考 · 非考古实测墙界",
+        "enStatus": "Georeferenced research drawing; not a surveyed archaeological boundary",
+        "note": "南宋十三座旱门之一，按整城复原图所标方位配准到相应城界；为图示门址参照，非已发掘门洞中心。各期移门另列，不直接采用明清同名城门坐标。南门旧址及南部扩城仍需新考古校核，不等同丽正宫门。 为保持图面关联，按原图方位投影到相应参考城界；此位置不是门基实测。",
+        "enNote": "One of the thirteen land gates, placed from the full-city reconstruction on its corresponding drawn circuit. This is a research-drawing position, not an excavated doorway centre. Later gates are kept separate, particularly the Song Dongqing and Genshan gates from their late-Yuan successors. Projected to the matching reference circuit for map association, not a surveyed doorway.",
+        "sitePoint": true,
+        "gateKind": "南宋外城旱门",
+        "gateBoundaryId": "hangzhou-song-complete-city-reference",
+        "digitizedPixel": [
+          379,
+          1295
+        ],
+        "drawingCoordinate": [
+          120.16578557807738,
+          30.21931278577244
+        ],
+        "referenceCircuitProjectionMeters": 17.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.16573812102885,
+          30.219462029013776
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-song-gate-9",
+        "sourceName": "钱湖门",
+        "label": "钱湖门",
+        "enSourceName": "Qianhu Gate",
+        "enLabel": "Qianhu Gate",
+        "period": "宋辽金西夏",
+        "periods": [
+          "宋辽金西夏"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.sohu.com/a/215684774_713036",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 13,
+        "status": "研究图件配准参考 · 非考古实测墙界",
+        "enStatus": "Georeferenced research drawing; not a surveyed archaeological boundary",
+        "note": "南宋十三座旱门之一，按整城复原图所标方位配准到相应城界；为图示门址参照，非已发掘门洞中心。各期移门另列，不直接采用明清同名城门坐标。 为保持图面关联，按原图方位投影到相应参考城界；此位置不是门基实测。",
+        "enNote": "One of the thirteen land gates, placed from the full-city reconstruction on its corresponding drawn circuit. This is a research-drawing position, not an excavated doorway centre. Later gates are kept separate, particularly the Song Dongqing and Genshan gates from their late-Yuan successors. Projected to the matching reference circuit for map association, not a surveyed doorway.",
+        "sitePoint": true,
+        "gateKind": "南宋外城旱门",
+        "gateBoundaryId": "hangzhou-song-complete-city-reference",
+        "digitizedPixel": [
+          153,
+          1054
+        ],
+        "drawingCoordinate": [
+          120.15440723059537,
+          30.234184865120667
+        ],
+        "referenceCircuitProjectionMeters": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.15440723059537,
+          30.234184865120667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-song-gate-10",
+        "sourceName": "清波门",
+        "label": "清波门",
+        "enSourceName": "Qingbo Gate",
+        "enLabel": "Qingbo Gate",
+        "period": "宋辽金西夏",
+        "periods": [
+          "宋辽金西夏"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.sohu.com/a/215684774_713036",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 13,
+        "status": "研究图件配准参考 · 非考古实测墙界",
+        "enStatus": "Georeferenced research drawing; not a surveyed archaeological boundary",
+        "note": "南宋十三座旱门之一，按整城复原图所标方位配准到相应城界；为图示门址参照，非已发掘门洞中心。各期移门另列，不直接采用明清同名城门坐标。 为保持图面关联，按原图方位投影到相应参考城界；此位置不是门基实测。",
+        "enNote": "One of the thirteen land gates, placed from the full-city reconstruction on its corresponding drawn circuit. This is a research-drawing position, not an excavated doorway centre. Later gates are kept separate, particularly the Song Dongqing and Genshan gates from their late-Yuan successors. Projected to the matching reference circuit for map association, not a surveyed doorway.",
+        "sitePoint": true,
+        "gateKind": "南宋外城旱门",
+        "gateBoundaryId": "hangzhou-song-complete-city-reference",
+        "digitizedPixel": [
+          164,
+          912
+        ],
+        "drawingCoordinate": [
+          120.15383991778738,
+          30.240191935176938
+        ],
+        "referenceCircuitProjectionMeters": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.15383991778738,
+          30.240191935176938
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-song-gate-11",
+        "sourceName": "丰豫门",
+        "label": "丰豫门",
+        "enSourceName": "Fengyu Gate",
+        "enLabel": "Fengyu Gate",
+        "period": "宋辽金西夏",
+        "periods": [
+          "宋辽金西夏"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.sohu.com/a/215684774_713036",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 13,
+        "status": "研究图件配准参考 · 非考古实测墙界",
+        "enStatus": "Georeferenced research drawing; not a surveyed archaeological boundary",
+        "note": "南宋十三座旱门之一，按整城复原图所标方位配准到相应城界；为图示门址参照，非已发掘门洞中心。各期移门另列，不直接采用明清同名城门坐标。旧称涌金门，现代公园纪念碑不可等同原门。 为保持图面关联，按原图方位投影到相应参考城界；此位置不是门基实测。",
+        "enNote": "One of the thirteen land gates, placed from the full-city reconstruction on its corresponding drawn circuit. This is a research-drawing position, not an excavated doorway centre. Later gates are kept separate, particularly the Song Dongqing and Genshan gates from their late-Yuan successors. Projected to the matching reference circuit for map association, not a surveyed doorway.",
+        "sitePoint": true,
+        "gateKind": "南宋外城旱门",
+        "gateBoundaryId": "hangzhou-song-complete-city-reference",
+        "digitizedPixel": [
+          218,
+          734
+        ],
+        "drawingCoordinate": [
+          120.15683798968456,
+          30.2477256902323
+        ],
+        "referenceCircuitProjectionMeters": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.15683798968456,
+          30.2477256902323
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-song-palace-gate-0",
+        "sourceName": "和宁门",
+        "label": "和宁门",
+        "enSourceName": "Hening Gate",
+        "enLabel": "Hening Gate",
+        "period": "宋辽金西夏",
+        "periods": [
+          "宋辽金西夏"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.sohu.com/a/534706960_121124392",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 13,
+        "status": "研究图件配准参考 · 非考古实测墙界",
+        "enStatus": "Georeferenced research drawing; not a surveyed archaeological boundary",
+        "note": "皇城考古成果图所示门址对应地段，经现代街巷配准后转绘。北门和宁门在万松岭以南，与元末凤山陆门分开。此为图面位置，不宣称已取得门基实测坐标。",
+        "enNote": "Gate-site location transcribed from the archaeological diagram and registered against modern streets. It is not an original surveyed GIS coordinate. Hening is separate from the later Fengshan Gate; Lizheng is not forced onto Hening’s meridian. Identification of the western gate as Xihua remains tentative.",
+        "sitePoint": true,
+        "gateKind": "皇城门址图面参照",
+        "digitizedPixel": [
+          690,
+          120
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.16392525122204,
+          30.22756913667989
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-song-palace-gate-1",
+        "sourceName": "丽正门",
+        "label": "丽正门",
+        "enSourceName": "Lizheng Gate",
+        "enLabel": "Lizheng Gate",
+        "period": "宋辽金西夏",
+        "periods": [
+          "宋辽金西夏"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.sohu.com/a/534706960_121124392",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 13,
+        "status": "研究图件配准参考 · 非考古实测墙界",
+        "enStatus": "Georeferenced research drawing; not a surveyed archaeological boundary",
+        "note": "皇城考古成果图所示门址对应地段，经现代街巷配准后转绘。南门丽正门与和宁门不在同一直线上；门址认定的文献解释存在讨论。此为图面位置，不宣称已取得门基实测坐标。",
+        "enNote": "Gate-site location transcribed from the archaeological diagram and registered against modern streets. It is not an original surveyed GIS coordinate. Hening is separate from the later Fengshan Gate; Lizheng is not forced onto Hening’s meridian. Identification of the western gate as Xihua remains tentative.",
+        "sitePoint": true,
+        "gateKind": "皇城门址图面参照",
+        "digitizedPixel": [
+          735,
+          900
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.16476224447894,
+          30.221465266371176
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-song-palace-gate-2",
+        "sourceName": "西侧门址（西华门候选）",
+        "label": "西侧门址（西华门候选）",
+        "enSourceName": "Western Gate Site (Xihua Candidate)",
+        "enLabel": "Western Gate Site (Xihua Candidate)",
+        "period": "宋辽金西夏",
+        "periods": [
+          "宋辽金西夏"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.sohu.com/a/534706960_121124392",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 13,
+        "status": "研究图件配准参考 · 非考古实测墙界",
+        "enStatus": "Georeferenced research drawing; not a surveyed archaeological boundary",
+        "note": "皇城考古成果图所示门址对应地段，经现代街巷配准后转绘。西侧发现门址，西华门名称归属尚有讨论，保留候选标记。此为图面位置，不宣称已取得门基实测坐标。",
+        "enNote": "Gate-site location transcribed from the archaeological diagram and registered against modern streets. It is not an original surveyed GIS coordinate. Hening is separate from the later Fengshan Gate; Lizheng is not forced onto Hening’s meridian. Identification of the western gate as Xihua remains tentative.",
+        "sitePoint": true,
+        "gateKind": "皇城门址图面参照",
+        "digitizedPixel": [
+          170,
+          929
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.15964194385018,
+          30.220969777023956
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-song-palace-donghua",
+        "sourceName": "东华门（文献图位置）",
+        "label": "东华门",
+        "enSourceName": "Donghua Gate (Documentary Drawing)",
+        "enLabel": "Donghua Gate",
+        "period": "宋辽金西夏",
+        "periods": [
+          "宋辽金西夏"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.sohu.com/a/215684774_713036",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 14,
+        "status": "研究图件配准参考 · 非考古实测墙界",
+        "enStatus": "Georeferenced research drawing; not a surveyed archaeological boundary",
+        "note": "文献整城复原图中东华门图面位置，经皇城局部配准转绘。尚未取得能独立确认该点门基位置的考古实测GIS；与图上北门和宁、南门丽正及西侧候选门址分开注明依据，不用现代凤山门碑替代。 为保持图面关联，按原图方位投影到相应参考城界；此位置不是门基实测。",
+        "enNote": "Documentary Donghua Gate position from the palace reconstruction, not an independently confirmed excavation coordinate. Its evidence differs from the transcribed archaeological gate positions; the modern Fengshan marker is not substituted. Projected to the matching reference circuit for map association, not a surveyed doorway.",
+        "sitePoint": true,
+        "drawingCoordinate": [
+          120.16687958162368,
+          30.222818158096633
+        ],
+        "referenceCircuitProjectionMeters": 77,
+        "gateBoundaryId": "hangzhou-song-palace-reference"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.16614503319622,
+          30.223089991855918
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-wuyue-gate-0",
+        "sourceName": "北关门（夹城巷地段）",
+        "label": "北关门（夹城巷地段）",
+        "enSourceName": "Beiguan Gate (Jiacheng Lane Vicinity)",
+        "enLabel": "Beiguan Gate (Jiacheng Lane Vicinity)",
+        "period": "五代十国",
+        "periods": [
+          "五代十国"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.dlyj.ac.cn/CN/abstract/article/1000-0585/10267",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 14,
+        "status": "文献地望粗参照 · 非门基实测",
+        "enStatus": "Coarse documentary vicinity, not an excavated doorway",
+        "note": "北关门在今夹城巷湖墅路口一带，非明清武林门。依据1985年研究文字中的现代地望，使用约百米量级粗参照点，非出土门洞或现场碑的精确定位；不作为闭合整圈夹城、罗城的控制点。",
+        "enNote": "Approximate hundred-metre-scale vicinity derived from modern-place references in the 1985 historical-geography study. This is not an excavated doorway or a precise monument coordinate, and it is not used to force a closed Wuyue enclosure.",
+        "sitePoint": true,
+        "coordinatePrecisionMeters": 250
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.15,
+          30.291
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-wuyue-gate-1",
+        "sourceName": "龙山门（六和塔西地段）",
+        "label": "龙山门（六和塔西地段）",
+        "enSourceName": "Longshan Gate (West of Liuhe Pagoda)",
+        "enLabel": "Longshan Gate (West of Liuhe Pagoda)",
+        "period": "五代十国",
+        "periods": [
+          "五代十国"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.dlyj.ac.cn/CN/abstract/article/1000-0585/10267",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 14,
+        "status": "文献地望粗参照 · 非门基实测",
+        "enStatus": "Coarse documentary vicinity, not an excavated doorway",
+        "note": "龙山门在今六和塔西一带，不能据孤立门址补画秦望山全城墙。依据1985年研究文字中的现代地望，使用约百米量级粗参照点，非出土门洞或现场碑的精确定位；不作为闭合整圈夹城、罗城的控制点。",
+        "enNote": "Approximate hundred-metre-scale vicinity derived from modern-place references in the 1985 historical-geography study. This is not an excavated doorway or a precise monument coordinate, and it is not used to force a closed Wuyue enclosure.",
+        "sitePoint": true,
+        "coordinatePrecisionMeters": 250
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.13,
+          30.197
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-wuyue-gate-2",
+        "sourceName": "西关门（雷峰塔地段）",
+        "label": "西关门（雷峰塔地段）",
+        "enSourceName": "Xiguan Gate (Leifeng Pagoda Vicinity)",
+        "enLabel": "Xiguan Gate (Leifeng Pagoda Vicinity)",
+        "period": "五代十国",
+        "periods": [
+          "五代十国"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.dlyj.ac.cn/CN/abstract/article/1000-0585/10267",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 14,
+        "status": "文献地望粗参照 · 非门基实测",
+        "enStatus": "Coarse documentary vicinity, not an excavated doorway",
+        "note": "西关门在雷峰塔遗址、净寺一带，塔院边界不是城门或夹城边界。依据1985年研究文字中的现代地望，使用约百米量级粗参照点，非出土门洞或现场碑的精确定位；不作为闭合整圈夹城、罗城的控制点。",
+        "enNote": "Approximate hundred-metre-scale vicinity derived from modern-place references in the 1985 historical-geography study. This is not an excavated doorway or a precise monument coordinate, and it is not used to force a closed Wuyue enclosure.",
+        "sitePoint": true,
+        "coordinatePrecisionMeters": 250
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.148,
+          30.231
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-wuyue-gate-3",
+        "sourceName": "新门（炭桥地段）",
+        "label": "新门（炭桥地段）",
+        "enSourceName": "Xin Gate (Tan Bridge Vicinity)",
+        "enLabel": "Xin Gate (Tan Bridge Vicinity)",
+        "period": "五代十国",
+        "periods": [
+          "五代十国"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.dlyj.ac.cn/CN/abstract/article/1000-0585/10267",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 14,
+        "status": "文献地望粗参照 · 非门基实测",
+        "enStatus": "Coarse documentary vicinity, not an excavated doorway",
+        "note": "图文所述炭桥东、今光复路解放路口地段，不等于南宋外城新开门。依据1985年研究文字中的现代地望，使用约百米量级粗参照点，非出土门洞或现场碑的精确定位；不作为闭合整圈夹城、罗城的控制点。",
+        "enNote": "Approximate hundred-metre-scale vicinity derived from modern-place references in the 1985 historical-geography study. This is not an excavated doorway or a precise monument coordinate, and it is not used to force a closed Wuyue enclosure.",
+        "sitePoint": true,
+        "coordinatePrecisionMeters": 250
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.169,
+          30.251
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-wuyue-gate-4",
+        "sourceName": "南土门（荐桥地段）",
+        "label": "南土门（荐桥地段）",
+        "enSourceName": "Nantu Gate (Jian Bridge Vicinity)",
+        "enLabel": "Nantu Gate (Jian Bridge Vicinity)",
+        "period": "五代十国",
+        "periods": [
+          "五代十国"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.dlyj.ac.cn/CN/abstract/article/1000-0585/10267",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 14,
+        "status": "文献地望粗参照 · 非门基实测",
+        "enStatus": "Coarse documentary vicinity, not an excavated doorway",
+        "note": "南土门在今清泰街、建国路口一带，非元末东扩后的清泰门。依据1985年研究文字中的现代地望，使用约百米量级粗参照点，非出土门洞或现场碑的精确定位；不作为闭合整圈夹城、罗城的控制点。",
+        "enNote": "Approximate hundred-metre-scale vicinity derived from modern-place references in the 1985 historical-geography study. This is not an excavated doorway or a precise monument coordinate, and it is not used to force a closed Wuyue enclosure.",
+        "sitePoint": true,
+        "coordinatePrecisionMeters": 250
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.176,
+          30.25
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-wuyue-gate-5",
+        "sourceName": "北土门（菜市地段）",
+        "label": "北土门（菜市地段）",
+        "enSourceName": "Beitu Gate (Caishi Vicinity)",
+        "enLabel": "Beitu Gate (Caishi Vicinity)",
+        "period": "五代十国",
+        "periods": [
+          "五代十国"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.dlyj.ac.cn/CN/abstract/article/1000-0585/10267",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 14,
+        "status": "文献地望粗参照 · 非门基实测",
+        "enStatus": "Coarse documentary vicinity, not an excavated doorway",
+        "note": "北土门在今庆春路、建国路口一带，非现代庆春门复建建筑。依据1985年研究文字中的现代地望，使用约百米量级粗参照点，非出土门洞或现场碑的精确定位；不作为闭合整圈夹城、罗城的控制点。",
+        "enNote": "Approximate hundred-metre-scale vicinity derived from modern-place references in the 1985 historical-geography study. This is not an excavated doorway or a precise monument coordinate, and it is not used to force a closed Wuyue enclosure.",
+        "sitePoint": true,
+        "coordinatePrecisionMeters": 250
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.177,
+          30.259
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-wuyue-gate-6",
+        "sourceName": "保德门（莫衙营地段）",
+        "label": "保德门（莫衙营地段）",
+        "enSourceName": "Baode Gate (Moyaying Vicinity)",
+        "enLabel": "Baode Gate (Moyaying Vicinity)",
+        "period": "五代十国",
+        "periods": [
+          "五代十国"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.dlyj.ac.cn/CN/abstract/article/1000-0585/10267",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 14,
+        "status": "文献地望粗参照 · 非门基实测",
+        "enStatus": "Coarse documentary vicinity, not an excavated doorway",
+        "note": "保德门文献地望为莫衙营西端一带；与后世艮山门的移建关系需分期核对。依据1985年研究文字中的现代地望，使用约百米量级粗参照点，非出土门洞或现场碑的精确定位；不作为闭合整圈夹城、罗城的控制点。",
+        "enNote": "Approximate hundred-metre-scale vicinity derived from modern-place references in the 1985 historical-geography study. This is not an excavated doorway or a precise monument coordinate, and it is not used to force a closed Wuyue enclosure.",
+        "sitePoint": true,
+        "coordinatePrecisionMeters": 250
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.171,
+          30.273
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-wuyue-gate-7",
+        "sourceName": "竹车门（望仙桥东南地段）",
+        "label": "竹车门（望仙桥东南地段）",
+        "enSourceName": "Zhuche Gate (Southeast of Wangxian Bridge)",
+        "enLabel": "Zhuche Gate (Southeast of Wangxian Bridge)",
+        "period": "五代十国",
+        "periods": [
+          "五代十国"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.dlyj.ac.cn/CN/abstract/article/1000-0585/10267",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 14,
+        "status": "文献地望粗参照 · 非门基实测",
+        "enStatus": "Coarse documentary vicinity, not an excavated doorway",
+        "note": "竹车门文献地望为望仙桥东南，不将明清候潮门纪念地段当作吴越门基。依据1985年研究文字中的现代地望，使用约百米量级粗参照点，非出土门洞或现场碑的精确定位；不作为闭合整圈夹城、罗城的控制点。",
+        "enNote": "Approximate hundred-metre-scale vicinity derived from modern-place references in the 1985 historical-geography study. This is not an excavated doorway or a precise monument coordinate, and it is not used to force a closed Wuyue enclosure.",
+        "sitePoint": true,
+        "coordinatePrecisionMeters": 250
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.17,
+          30.239
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-sui-city-wall-reference",
+        "sourceName": "隋代杭州城墙",
+        "label": "隋代杭州城墙",
+        "enSourceName": "Sui Hangzhou wall reference",
+        "enLabel": "Sui Hangzhou wall reference",
+        "period": "隋唐",
+        "periods": [
+          "隋唐"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.dlyj.ac.cn/CN/abstract/article/1000-0585/10267",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 13,
+        "status": "1985年研究图转绘 · 开放图示参照，非实测墙界",
+        "enStatus": "1985 research-map digitization; open reference, not a surveyed boundary",
+        "note": "重新辨读虞家钧1985年图2的隋代点划线，按同图原比例尺与钱塘门地段近似落位，保留可辨认的北、东及绕吴山折转段；不把吴山东侧线改成现代河道，也不复制东汉＋记号或海塘。采用该文“大城”解释；后续研究另有凤凰山州城与湖东北县城分立说，本线不代表学界定论。南部线型叠压、图注遮挡及未辨认段不补画，不闭合、不填充。只是研究图示，非考古墙基实测；不新增隋代国都身份。",
+        "enNote": "Redigitized identifiable Sui dash-dot portions in Yu Jiajun’s 1985 Fig.2, using its scale and an approximate Qiantang Gate translation. Retains northern/eastern stretches and the bend around Wushan. The study’s large-city interpretation is disputed by the separate southern prefectural city/northern county city model. Ambiguous, obscured or unidentifiable southern portions remain open, unfilled and undrawn. Not surveyed footings or national-capital status.",
+        "fillOpacity": 0,
+        "lineOpacity": 0.75,
+        "locationPrecision": "按原图比例尺、图面北向及钱塘门地段近似落位；无独立考古城界控制",
+        "id": "hangzhou-sui-city-wall-reference",
+        "enName": "Sui Hangzhou wall reference",
+        "historicalBegin": 591,
+        "labelCoordinates": [
+          120.16486214275565,
+          30.240909003561306
+        ],
+        "hangzhouEarlyWallReview": true
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.15371083055744,
+            30.27424632938875
+          ],
+          [
+            120.15631087744303,
+            30.273946892330418
+          ],
+          [
+            120.1595464913451,
+            30.273797173801253
+          ],
+          [
+            120.16260876878813,
+            30.273697361448477
+          ],
+          [
+            120.1650354792147,
+            30.273397924390146
+          ],
+          [
+            120.16595994032957,
+            30.272799050273488
+          ],
+          [
+            120.16636439206732,
+            30.271551395863778
+          ],
+          [
+            120.16659550734605,
+            30.268906368515193
+          ],
+          [
+            120.1667110649854,
+            30.2658620917555
+          ],
+          [
+            120.16682662262477,
+            30.262119128526372
+          ],
+          [
+            120.16694218026413,
+            30.258276352944463
+          ],
+          [
+            120.16694218026413,
+            30.254283858833393
+          ],
+          [
+            120.16705773790349,
+            30.250391177075098
+          ],
+          [
+            120.16717329554284,
+            30.246548401493193
+          ],
+          [
+            120.1672888531822,
+            30.243603937086277
+          ],
+          [
+            120.16694218026413,
+            30.24105872209047
+          ],
+          [
+            120.16607549796893,
+            30.2405097541502
+          ],
+          [
+            120.16694218026413,
+            30.24105872209047
+          ],
+          [
+            120.16607549796893,
+            30.2405097541502
+          ],
+          [
+            120.16486214275565,
+            30.240909003561306
+          ],
+          [
+            120.16359100872269,
+            30.2413581591488
+          ],
+          [
+            120.16226209587006,
+            30.24175740855991
+          ],
+          [
+            120.16110651947646,
+            30.241807314736295
+          ],
+          [
+            120.16023983718127,
+            30.24145797150158
+          ],
+          [
+            120.15966204898446,
+            30.240859097384917
+          ],
+          [
+            120.15937315488607,
+            30.240060598562703
+          ],
+          [
+            120.15931537606639,
+            30.239012568858545
+          ],
+          [
+            120.15948871252542,
+            30.237814820625225
+          ],
+          [
+            120.15977760662382,
+            30.23701632180301
+          ],
+          [
+            120.16041317364031,
+            30.23646735386274
+          ],
+          [
+            120.16162652885357,
+            30.23616791680441
+          ],
+          [
+            120.16289766288654,
+            30.235668855040526
+          ],
+          [
+            120.16359100872269,
+            30.234670731512757
+          ],
+          [
+            120.16457324865725,
+            30.233772420337765
+          ],
+          [
+            120.16520881567374,
+            30.232774296809996
+          ],
+          [
+            120.1655554885918,
+            30.231576548576676
+          ],
+          [
+            120.16549770977213,
+            30.230378800343356
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-wuyue-luo-east-wall-reference",
+        "sourceName": "吴越罗城东城墙",
+        "label": "吴越罗城东城墙",
+        "enSourceName": "Wuyue Luocheng eastern wall reference",
+        "enLabel": "Wuyue Luocheng eastern wall reference",
+        "period": "五代十国",
+        "periods": [
+          "五代十国"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.dlyj.ac.cn/CN/abstract/article/1000-0585/10267",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 13,
+        "status": "1985年研究图转绘 · 开放图示参照，非实测墙界",
+        "enStatus": "1985 research-map digitization; open reference, not a surveyed boundary",
+        "note": "1985年图2中吴越罗城的东侧长虚线重新转绘；与相邻带＋号的防洪大塘分开，不启用此前撤下的候选线。沿原图2公里比例尺等比落位，绝对位置仍有数百米量级图示误差，不能作为城门与墙基精确坐标。图上北端出图、南部山地与夹城连接未完整辨认，故保持开放、不填充，不用南宋城墙或现代海塘补闭合。893年始筑，吴越时期沿用；完整夹城与罗城西南山地圈待可靠图件。",
+        "enNote": "New digitization of the eastern long-dash Wuyue Luocheng line in Yu’s 1985 Fig.2, separated from the adjoining plus-marked flood dike. Previously withdrawn candidate lines remain withdrawn. Uniform original-map scale, with approximate translation and potentially several-hundred-metre placement error. The northern end is clipped and the southern mountain/Jiacheng connection remains unresolved, so no closure or fill is added. Begun in 893 and used during Wuyue; not substituted with Song walls or a modern dike.",
+        "fillOpacity": 0,
+        "lineOpacity": 0.75,
+        "locationPrecision": "按原图比例尺、图面北向及钱塘门地段近似落位；无独立考古城界控制",
+        "id": "hangzhou-wuyue-luo-east-wall-reference",
+        "enName": "Wuyue Luocheng eastern wall reference",
+        "historicalBegin": 893,
+        "labelCoordinates": [
+          120.1730089563305,
+          30.243154781498784
+        ],
+        "hangzhouEarlyWallReview": true,
+        "supersededBy": "hangzhou-wuyue-luocheng-2026-reference"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.17485787856026,
+            30.277490230853996
+          ],
+          [
+            120.17514677265866,
+            30.274745391152635
+          ],
+          [
+            120.17549344557675,
+            30.271601302040164
+          ],
+          [
+            120.1758978973145,
+            30.267858338811035
+          ],
+          [
+            120.1761867914129,
+            30.264115375581905
+          ],
+          [
+            120.17636012787194,
+            30.2602726
+          ],
+          [
+            120.17636012787194,
+            30.256429824418095
+          ],
+          [
+            120.17607123377354,
+            30.252986298247297
+          ],
+          [
+            120.17526233029803,
+            30.249642584429274
+          ],
+          [
+            120.1741645327241,
+            30.246398682964028
+          ],
+          [
+            120.1730089563305,
+            30.243154781498784
+          ],
+          [
+            120.1719111587566,
+            30.239960786209927
+          ],
+          [
+            120.17092891882204,
+            30.23671688474468
+          ],
+          [
+            120.17023557298587,
+            30.2336227018086
+          ],
+          [
+            120.16948444833004,
+            30.230428706519742
+          ],
+          [
+            120.16913777541195,
+            30.228282740935043
+          ],
+          [
+            120.169311111871,
+            30.22558780741007
+          ],
+          [
+            120.17000445770717,
+            30.222942780061484
+          ],
+          [
+            120.17081336118268,
+            30.221096251535116
+          ],
+          [
+            120.17110225528107,
+            30.2202977527129
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-wuyue-luocheng-2026-reference",
+        "sourceName": "吴越杭州罗城（研究复原）",
+        "label": "吴越杭州罗城",
+        "enSourceName": "Wuyue Hangzhou Luocheng research reconstruction",
+        "enLabel": "Wuyue Hangzhou Luocheng",
+        "period": "五代十国",
+        "periods": [
+          "五代十国"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州文史：子城、夹城、罗城——吴越杭城三步曲（2026）",
+        "referenceUrl": "https://www.hangchow.org/index.php/base/news_show/cid/13601",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 12,
+        "status": "2026年文史研究图转绘 · 图示参考，非实测墙界",
+        "enStatus": "2026 historical-study drawing; schematic reference, not surveyed walls",
+        "note": "依据杭州文史微信公众号、杭州文史网2026年1月26日《子城、夹城、罗城——吴越杭城三步曲》所附“钱镠所修罗城图”转绘完整示意轮廓。该图与用户提供截图的北部突出、南部山地城圈关系相近，用来核对范围关系，未宣称找到截图原出处。以宝石山、吴山、凤凰山、玉皇山的图示山峰和OSM峰顶作等比旋转平移；四点残差约72—316米。鼓楼独立参照相差约140米，仍不能证明城墙精度。峰顶符号、古今地名对应及原图本身均有解释误差。闭合仅表达此文的罗城复原方案，不认定全圈墙体已经发掘；夹城、子城不合并为同一期实测外界。文章龙山门的玉皇山脚解释与既有六和塔西地段说有差别，原有门址地段不据此移动。原1985年东侧开放线保留审计，显示由本方案替代，避免平行重复。图示参考，非实测墙界。",
+        "enNote": "Complete schematic circuit digitized from the Luocheng figure in the 26 January 2026 Hangzhou historical-study article. Its northern projection and southern mountain enclosure provide an independent comparison for the user screenshot; this does not establish the screenshot provenance. A uniform similarity fit uses schematic Baoshi, Wu, Fenghuang and Yuhuang mountain peaks against OSM summits, with control residuals of about 72–316 m. An independent Drum Tower reference differs by about 140 m; neither figure establishes wall accuracy. Peak symbols, historical names and source distortion add uncertainty. The closed circuit expresses this reconstruction only, not a fully excavated wall. Existing gate candidates are retained, including a competing Longshan Gate interpretation. The earlier open eastern trace remains in the audit and is superseded in display.",
+        "fillOpacity": 0.015,
+        "lineOpacity": 0.85,
+        "locationPrecision": "山峰地望等比近似落位；控制点残差约72—316米，不代表墙界精度",
+        "id": "hangzhou-wuyue-luocheng-2026-reference",
+        "enName": "Wuyue Hangzhou Luocheng research reconstruction",
+        "historicalBegin": 893,
+        "labelCoordinates": [
+          120.16401587796004,
+          30.265832752659726
+        ],
+        "hangzhouWuyue2026Reference": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.13789967099805,
+              30.28761721444108
+            ],
+            [
+              120.14820239276071,
+              30.289630470233956
+            ],
+            [
+              120.15425802297965,
+              30.274604364143862
+            ],
+            [
+              120.17609454388148,
+              30.27704743625103
+            ],
+            [
+              120.17731044682064,
+              30.270419931939188
+            ],
+            [
+              120.17825658589902,
+              30.258285408566945
+            ],
+            [
+              120.17798766478293,
+              30.247046812141896
+            ],
+            [
+              120.17702002816563,
+              30.24301787221728
+            ],
+            [
+              120.17251666170903,
+              30.236978710836457
+            ],
+            [
+              120.17078525682136,
+              30.231560908230417
+            ],
+            [
+              120.16890253144888,
+              30.226942897307882
+            ],
+            [
+              120.16836483051293,
+              30.221545851129825
+            ],
+            [
+              120.16675004221561,
+              30.21681786732495
+            ],
+            [
+              120.16416944408662,
+              30.2136779355382
+            ],
+            [
+              120.159991901628,
+              30.21073949935794
+            ],
+            [
+              120.15422275390043,
+              30.207773387940364
+            ],
+            [
+              120.14698395655496,
+              30.205240249242845
+            ],
+            [
+              120.13908999893846,
+              30.20235182293076
+            ],
+            [
+              120.13002102408265,
+              30.198640542237403
+            ],
+            [
+              120.12567797074279,
+              30.20280640221478
+            ],
+            [
+              120.13188155046767,
+              30.209906813899764
+            ],
+            [
+              120.13517519579051,
+              30.216612731383986
+            ],
+            [
+              120.13742111858578,
+              30.22272727160051
+            ],
+            [
+              120.14012100283546,
+              30.226442436766522
+            ],
+            [
+              120.14639399034925,
+              30.230563627482173
+            ],
+            [
+              120.15176256722924,
+              30.233637405512315
+            ],
+            [
+              120.15447046006996,
+              30.237008814412633
+            ],
+            [
+              120.15634250732107,
+              30.242085167022758
+            ],
+            [
+              120.15807658173908,
+              30.2473883842069
+            ],
+            [
+              120.16021389653501,
+              30.252469349356574
+            ],
+            [
+              120.15921071327853,
+              30.25566159728127
+            ],
+            [
+              120.15632129237451,
+              30.260081997069978
+            ],
+            [
+              120.15101776826366,
+              30.265606738221692
+            ],
+            [
+              120.14598218122796,
+              30.27102150649106
+            ],
+            [
+              120.1410925756164,
+              30.275865653920718
+            ],
+            [
+              120.13686613886689,
+              30.280721332699255
+            ],
+            [
+              120.13789967099805,
+              30.28761721444108
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "pendingResearch": [
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-qian-jia-reference",
+        "sourceName": "钱氏夹城北部图示线段",
+        "label": "钱氏夹城北部图示线段",
+        "enSourceName": "Qian Family Jiacheng: Northern Drawing Segment",
+        "enLabel": "Qian Family Jiacheng: Northern Drawing Segment",
+        "period": "隋唐",
+        "periods": [
+          "隋唐",
+          "五代十国"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.dlyj.ac.cn/CN/abstract/article/1000-0585/10267",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 14,
+        "status": "早期研究图示线段 · 完整夹城与墙基待核",
+        "enStatus": "Early research-drawing segment; complete enclosure and excavated alignment pending",
+        "note": "1985年城市沿革图中夹城北部参照线段的粗配准；唐大顺元年（890）筑夹城，后属吴越西府城防。只接入图中所取线段，不能代表环包家山、秦望山的五十余里完整夹城；不延长到未见图的山地，不闭合、不填充，也不当作现存墙基。图件年代、线型与现代地望仍需更高分辨率原图复核。",
+        "enNote": "Coarse placement of the northern segment selected from the 1985 evolution sketch. The Jiacheng was built in 890 and later formed part of Wuyue’s capital defences. This open drawing segment does not reconstruct its entire mountain circuit; it is neither extended nor filled. A higher-resolution original and further location checks remain necessary.",
+        "lineOpacity": 0.35
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.15679982522629,
+            30.276719349768353
+          ],
+          [
+            120.16149450375904,
+            30.277647138075775
+          ],
+          [
+            120.16764617209144,
+            30.278835935345633
+          ],
+          [
+            120.1738160565848,
+            30.279729116916997
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "family": "period",
+        "hangzhouHistoricalDetail": true,
+        "hangzhouCapitalPhase": true,
+        "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+        "capitalSiteName": "杭州",
+        "capitalSiteDisplayName": "杭州",
+        "city": "杭州",
+        "sourceId": "hangzhou-qian-luo-reference",
+        "sourceName": "钱氏罗城东部图示线段",
+        "label": "钱氏罗城东部图示线段",
+        "enSourceName": "Qian Family Luocheng: Eastern Drawing Segment",
+        "enLabel": "Qian Family Luocheng: Eastern Drawing Segment",
+        "period": "隋唐",
+        "periods": [
+          "隋唐",
+          "五代十国"
+        ],
+        "sourceUrl": "./sources/hangzhou-phases.html",
+        "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+        "referenceUrl": "https://www.dlyj.ac.cn/CN/abstract/article/1000-0585/10267",
+        "inferredBoundary": true,
+        "coordinateSystem": "WGS84",
+        "labelMinZoom": 14,
+        "status": "早期研究图示线段 · 南部缺图，保持开放",
+        "enStatus": "Early research-drawing segment; southern circuit unavailable, kept open",
+        "note": "唐景福二年（893）钱镠增筑罗城，吴越时期沿用。此为1985年沿革图可见东部研究线段，示意图粗配准，非罗城完整外周、非海塘实测线。罗城南部与夹城相接及秦望山、六和塔一带的完整走向未取得可靠图件，本轮不补画猜测闭合边。",
+        "enNote": "Open eastern drawing segment associated with the Luocheng enlargement of 893 and its Wuyue use. This coarse research trace is not the complete circuit or a surveyed seawall. The southern connection with the Jiacheng and the Qinwang Mountain / Liuhe Pagoda area remains unresolved; no invented closure is added.",
+        "lineOpacity": 0.35
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.18675008738315,
+            30.28857971199308
+          ],
+          [
+            120.1870045162419,
+            30.285221927070285
+          ],
+          [
+            120.18693015957116,
+            30.280516527866627
+          ],
+          [
+            120.18626303311565,
+            30.274634758727256
+          ],
+          [
+            120.18551229183016,
+            30.268310581516516
+          ],
+          [
+            120.18441962524987,
+            30.26213725858416
+          ],
+          [
+            120.18298443597999,
+            30.256895624786335
+          ],
+          [
+            120.18044672457577,
+            30.250524494044598
+          ],
+          [
+            120.17692594079435,
+            30.243655877889463
+          ],
+          [
+            120.17362076397055,
+            30.237144047633123
+          ],
+          [
+            120.1714419992325,
+            30.231888116626802
+          ],
+          [
+            120.16919156464017,
+            30.226252978702167
+          ],
+          [
+            120.16788149891786,
+            30.222065374439463
+          ],
+          [
+            120.16804036797092,
+            30.218201980292253
+          ],
+          [
+            120.16869525221342,
+            30.216571016568633
+          ],
+          [
+            120.16807918987205,
+            30.214487409470664
+          ]
+        ]
+      }
+    }
+  ],
+  "pendingReason": "复核旧图发现相邻海塘与多期墙线难以可靠区分，暂不显示夹城和罗城候选线，只保留文献门址与研究像素。",
+  "calibration": {
+    "early": {
+      "name": "虞家钧1985图2",
+      "method": "affine",
+      "controls": [
+        {
+          "name": "钱塘门既有遗址点",
+          "pixel": [
+            194,
+            355
+          ],
+          "coordinate": [
+            120.1532486,
+            30.2602726
+          ],
+          "kind": "既有遗址位置；示意图对应近似",
+          "fitResidualMeters": 192.6
+        },
+        {
+          "name": "武林门地段",
+          "pixel": [
+            183,
+            135
+          ],
+          "coordinate": [
+            120.1538117,
+            30.2729078
+          ],
+          "kind": "现代街巷地段，非古门精确测量",
+          "fitResidualMeters": 160.2
+        },
+        {
+          "name": "清波门地段",
+          "pixel": [
+            215,
+            600
+          ],
+          "coordinate": [
+            120.154558,
+            30.2403099
+          ],
+          "kind": "现代街巷地段，非古门精确测量",
+          "fitResidualMeters": 420.2
+        },
+        {
+          "name": "凤山陆门地段",
+          "pixel": [
+            473,
+            974
+          ],
+          "coordinate": [
+            120.1662913,
+            30.2273352
+          ],
+          "kind": "现代遗址公园地段，非宋门",
+          "fitResidualMeters": 288.9
+        },
+        {
+          "name": "明清庆春门地段",
+          "pixel": [
+            575,
+            465
+          ],
+          "coordinate": [
+            120.183155,
+            30.26068
+          ],
+          "kind": "图中明清东界与现状门址地段对照",
+          "fitResidualMeters": 189.1
+        },
+        {
+          "name": "明清清泰门地段",
+          "pixel": [
+            578,
+            570
+          ],
+          "coordinate": [
+            120.1806039,
+            30.2500929
+          ],
+          "kind": "图中明清东界与现状门址地段对照",
+          "fitResidualMeters": 302.5
+        }
+      ],
+      "matrix": [
+        [
+          7.494979371598987,
+          2.2698222323148443
+        ],
+        [
+          -1.1486547664637303,
+          -7.035552357777317
+        ],
+        [
+          -1669.811915618818,
+          4123.174155579713
+        ]
+      ],
+      "origin": [
+        120.16,
+        30.24
+      ],
+      "metersPerDegree": [
+        96162.16843935332,
+        111320
+      ],
+      "rmsResidualMeters": 273.9,
+      "precisionWarning": "残差只衡量图件与参照点的拟合，不等于城界或考古测量精度。"
+    },
+    "city": {
+      "name": "王子奇综述图二（整城复原图）",
+      "method": "affine",
+      "controls": [
+        {
+          "name": "钱塘门遗址",
+          "pixel": [
+            177,
+            436
+          ],
+          "coordinate": [
+            120.1532486,
+            30.2602726
+          ],
+          "kind": "考古展示地点，沿用原坐标",
+          "fitResidualMeters": 66.9
+        },
+        {
+          "name": "清波门地段",
+          "pixel": [
+            164,
+            912
+          ],
+          "coordinate": [
+            120.154558,
+            30.2403099
+          ],
+          "kind": "西门街巷地段近似",
+          "fitResidualMeters": 70.3
+        },
+        {
+          "name": "宋新门与东城墙地段",
+          "pixel": [
+            439,
+            915
+          ],
+          "coordinate": [
+            120.17002,
+            30.2399
+          ],
+          "kind": "根据望江路京城墙考古地段与新门地望校核，不是门基中心",
+          "fitResidualMeters": 40.1
+        },
+        {
+          "name": "艮山门西侧坝子桥地段",
+          "pixel": [
+            488,
+            48
+          ],
+          "coordinate": [
+            120.1725,
+            30.2768
+          ],
+          "kind": "宋门在菜市河西侧的地段近似，与明清门分开",
+          "fitResidualMeters": 36.7
+        }
+      ],
+      "matrix": [
+        [
+          5.799599086345328,
+          -0.03940153186011022
+        ],
+        [
+          0.13975986456270517,
+          -4.723512895974093
+        ],
+        [
+          -1670.9621099716926,
+          4335.671836250311
+        ]
+      ],
+      "origin": [
+        120.16,
+        30.24
+      ],
+      "metersPerDegree": [
+        96162.16843935332,
+        111320
+      ],
+      "rmsResidualMeters": 55.6,
+      "precisionWarning": "残差只衡量图件与参照点的拟合，不等于城界或考古测量精度。"
+    },
+    "palace": {
+      "name": "皇城考古成果图现代地形配准",
+      "method": "similarity",
+      "controls": [
+        {
+          "name": "万松岭路—凤凰山脚路",
+          "pixel": [
+            687,
+            36
+          ],
+          "coordinate": [
+            120.1638496,
+            30.2282269
+          ],
+          "kind": "现代道路形态参照，OSM way/514086541",
+          "fitResidualMeters": 0.2
+        },
+        {
+          "name": "宋城路—凤凰山脚路",
+          "pixel": [
+            735,
+            914
+          ],
+          "coordinate": [
+            120.1647972,
+            30.221364
+          ],
+          "kind": "现代道路形态参照，OSM way/514086543",
+          "fitResidualMeters": 2.8
+        },
+        {
+          "name": "梵天寺路—凤凰山脚路",
+          "pixel": [
+            750,
+            990
+          ],
+          "coordinate": [
+            120.164923,
+            30.2207574
+          ],
+          "kind": "留出邻近道路检验，OSM way/514086544",
+          "fitResidualMeters": 2.6
+        }
+      ],
+      "matrix": [
+        [
+          0.8741754290077041,
+          0.05275537467525737
+        ],
+        [
+          0.05275537467525737,
+          -0.8741754290077041
+        ],
+        [
+          -232.05102179504365,
+          -1315.3038618397227
+        ]
+      ],
+      "origin": [
+        120.16,
+        30.24
+      ],
+      "metersPerDegree": [
+        96162.16843935332,
+        111320
+      ],
+      "rmsResidualMeters": 2.2,
+      "precisionWarning": "残差只衡量图件与参照点的拟合，不等于城界或考古测量精度。"
+    },
+    "palaceDrawing": {
+      "name": "整城图皇城局部与考古图的宫门对应",
+      "method": "affine between two research diagrams",
+      "matrix": [
+        [
+          4.995614035087719,
+          0.42982456140350805
+        ],
+        [
+          -0.5491228070175439,
+          7.714035087719304
+        ],
+        [
+          -351.5438596491228,
+          -8972.701754385971
+        ]
+      ],
+      "controlPairs": [
+        {
+          "name": "和宁门",
+          "drawingPixel": [
+            336,
+            1160
+          ],
+          "surveyFigurePixel": [
+            690,
+            120
+          ]
+        },
+        {
+          "name": "丽正门",
+          "drawingPixel": [
+            356,
+            1260
+          ],
+          "surveyFigurePixel": [
+            735,
+            900
+          ]
+        },
+        {
+          "name": "西侧门址（西华门候选）",
+          "drawingPixel": [
+            244,
+            1270
+          ],
+          "surveyFigurePixel": [
+            170,
+            929
+          ]
+        }
+      ],
+      "warning": "门名及古图复原存在解释差异。完整皇城面为图示参考，非考古实测墙界；不把三点恰好拟合当作范围精度。"
+    },
+    "pixels": {
+      "han": [
+        [
+          190,
+          118
+        ],
+        [
+          260,
+          120
+        ],
+        [
+          323,
+          122
+        ],
+        [
+          386,
+          126
+        ],
+        [
+          393,
+          159
+        ],
+        [
+          399,
+          236
+        ],
+        [
+          402,
+          310
+        ],
+        [
+          398,
+          347
+        ],
+        [
+          365,
+          356
+        ],
+        [
+          298,
+          350
+        ],
+        [
+          235,
+          351
+        ],
+        [
+          215,
+          341
+        ],
+        [
+          202,
+          316
+        ],
+        [
+          196,
+          278
+        ],
+        [
+          189,
+          232
+        ],
+        [
+          180,
+          190
+        ],
+        [
+          171,
+          153
+        ],
+        [
+          177,
+          133
+        ],
+        [
+          190,
+          118
+        ]
+      ],
+      "jiaOpen": [
+        [
+          192,
+          67
+        ],
+        [
+          253,
+          72
+        ],
+        [
+          333,
+          79
+        ],
+        [
+          414,
+          91
+        ]
+      ],
+      "luoOpen": [
+        [
+          566,
+          0
+        ],
+        [
+          578,
+          57
+        ],
+        [
+          589,
+          135
+        ],
+        [
+          595,
+          230
+        ],
+        [
+          601,
+          332
+        ],
+        [
+          602,
+          430
+        ],
+        [
+          596,
+          511
+        ],
+        [
+          578,
+          606
+        ],
+        [
+          548,
+          705
+        ],
+        [
+          520,
+          799
+        ],
+        [
+          504,
+          877
+        ],
+        [
+          488,
+          961
+        ],
+        [
+          481,
+          1025
+        ],
+        [
+          493,
+          1090
+        ],
+        [
+          506,
+          1120
+        ],
+        [
+          503,
+          1152
+        ]
+      ],
+      "songCity": [
+        [
+          180,
+          130
+        ],
+        [
+          193,
+          116
+        ],
+        [
+          211,
+          103
+        ],
+        [
+          250,
+          82
+        ],
+        [
+          300,
+          70
+        ],
+        [
+          400,
+          58
+        ],
+        [
+          480,
+          49
+        ],
+        [
+          492,
+          60
+        ],
+        [
+          503,
+          150
+        ],
+        [
+          513,
+          250
+        ],
+        [
+          516,
+          350
+        ],
+        [
+          516,
+          448
+        ],
+        [
+          520,
+          580
+        ],
+        [
+          514,
+          680
+        ],
+        [
+          500,
+          775
+        ],
+        [
+          476,
+          840
+        ],
+        [
+          439,
+          915
+        ],
+        [
+          458,
+          932
+        ],
+        [
+          462,
+          950
+        ],
+        [
+          455,
+          1000
+        ],
+        [
+          440,
+          1050
+        ],
+        [
+          425,
+          1110
+        ],
+        [
+          426,
+          1180
+        ],
+        [
+          431,
+          1246
+        ],
+        [
+          421,
+          1270
+        ],
+        [
+          391,
+          1290
+        ],
+        [
+          340,
+          1300
+        ],
+        [
+          290,
+          1314
+        ],
+        [
+          240,
+          1324
+        ],
+        [
+          210,
+          1317
+        ],
+        [
+          174,
+          1298
+        ],
+        [
+          153,
+          1302
+        ],
+        [
+          136,
+          1318
+        ],
+        [
+          105,
+          1343
+        ],
+        [
+          119,
+          1315
+        ],
+        [
+          137,
+          1280
+        ],
+        [
+          154,
+          1242
+        ],
+        [
+          164,
+          1200
+        ],
+        [
+          180,
+          1165
+        ],
+        [
+          194,
+          1130
+        ],
+        [
+          195,
+          1096
+        ],
+        [
+          185,
+          1080
+        ],
+        [
+          153,
+          1054
+        ],
+        [
+          150,
+          1010
+        ],
+        [
+          146,
+          963
+        ],
+        [
+          164,
+          912
+        ],
+        [
+          182,
+          860
+        ],
+        [
+          178,
+          810
+        ],
+        [
+          194,
+          770
+        ],
+        [
+          218,
+          734
+        ],
+        [
+          224,
+          690
+        ],
+        [
+          249,
+          651
+        ],
+        [
+          249,
+          614
+        ],
+        [
+          230,
+          573
+        ],
+        [
+          208,
+          526
+        ],
+        [
+          190,
+          476
+        ],
+        [
+          177,
+          436
+        ],
+        [
+          168,
+          390
+        ],
+        [
+          169,
+          344
+        ],
+        [
+          161,
+          292
+        ],
+        [
+          155,
+          248
+        ],
+        [
+          145,
+          210
+        ],
+        [
+          158,
+          182
+        ],
+        [
+          170,
+          166
+        ],
+        [
+          180,
+          130
+        ]
+      ],
+      "palaceDrawing": [
+        [
+          336,
+          1160
+        ],
+        [
+          328,
+          1158
+        ],
+        [
+          318,
+          1155
+        ],
+        [
+          315,
+          1148
+        ],
+        [
+          309,
+          1149
+        ],
+        [
+          288,
+          1164
+        ],
+        [
+          273,
+          1173
+        ],
+        [
+          246,
+          1180
+        ],
+        [
+          229,
+          1192
+        ],
+        [
+          213,
+          1206
+        ],
+        [
+          197,
+          1220
+        ],
+        [
+          195,
+          1225
+        ],
+        [
+          198,
+          1237
+        ],
+        [
+          205,
+          1246
+        ],
+        [
+          222,
+          1258
+        ],
+        [
+          244,
+          1270
+        ],
+        [
+          257,
+          1272
+        ],
+        [
+          281,
+          1270
+        ],
+        [
+          310,
+          1267
+        ],
+        [
+          334,
+          1265
+        ],
+        [
+          356,
+          1260
+        ],
+        [
+          385,
+          1253
+        ],
+        [
+          402,
+          1237
+        ],
+        [
+          403,
+          1227
+        ],
+        [
+          400,
+          1204
+        ],
+        [
+          396,
+          1180
+        ],
+        [
+          392,
+          1170
+        ],
+        [
+          370,
+          1168
+        ],
+        [
+          336,
+          1160
+        ]
+      ],
+      "palaceSurveySegments": [
+        [
+          [
+            343,
+            279
+          ],
+          [
+            379,
+            242
+          ],
+          [
+            413,
+            196
+          ],
+          [
+            465,
+            167
+          ],
+          [
+            514,
+            146
+          ]
+        ],
+        [
+          [
+            530,
+            140
+          ],
+          [
+            554,
+            124
+          ],
+          [
+            587,
+            115
+          ]
+        ],
+        [
+          [
+            606,
+            107
+          ],
+          [
+            633,
+            107
+          ]
+        ],
+        [
+          [
+            652,
+            114
+          ],
+          [
+            680,
+            121
+          ]
+        ],
+        [
+          [
+            707,
+            131
+          ],
+          [
+            737,
+            139
+          ]
+        ],
+        [
+          [
+            762,
+            145
+          ],
+          [
+            792,
+            158
+          ]
+        ],
+        [
+          [
+            816,
+            167
+          ],
+          [
+            844,
+            179
+          ]
+        ],
+        [
+          [
+            866,
+            189
+          ],
+          [
+            890,
+            215
+          ]
+        ],
+        [
+          [
+            903,
+            232
+          ],
+          [
+            919,
+            258
+          ]
+        ],
+        [
+          [
+            927,
+            279
+          ],
+          [
+            929,
+            310
+          ]
+        ],
+        [
+          [
+            932,
+            335
+          ],
+          [
+            937,
+            382
+          ]
+        ],
+        [
+          [
+            940,
+            393
+          ],
+          [
+            950,
+            471
+          ]
+        ],
+        [
+          [
+            952,
+            485
+          ],
+          [
+            956,
+            536
+          ],
+          [
+            946,
+            575
+          ],
+          [
+            924,
+            622
+          ],
+          [
+            911,
+            675
+          ]
+        ],
+        [
+          [
+            899,
+            703
+          ],
+          [
+            885,
+            730
+          ]
+        ],
+        [
+          [
+            878,
+            760
+          ],
+          [
+            869,
+            792
+          ]
+        ],
+        [
+          [
+            861,
+            819
+          ],
+          [
+            852,
+            839
+          ]
+        ],
+        [
+          [
+            845,
+            854
+          ],
+          [
+            820,
+            869
+          ],
+          [
+            780,
+            880
+          ],
+          [
+            741,
+            890
+          ]
+        ],
+        [
+          [
+            715,
+            900
+          ],
+          [
+            637,
+            903
+          ],
+          [
+            550,
+            917
+          ],
+          [
+            470,
+            936
+          ],
+          [
+            387,
+            955
+          ],
+          [
+            300,
+            976
+          ],
+          [
+            220,
+            990
+          ],
+          [
+            180,
+            994
+          ]
+        ],
+        [
+          [
+            176,
+            970
+          ],
+          [
+            170,
+            938
+          ]
+        ],
+        [
+          [
+            169,
+            913
+          ],
+          [
+            165,
+            868
+          ]
+        ]
+      ]
+    },
+    "gates": [
+      [
+        "余杭门",
+        "Yuhang Gate",
+        [
+          180,
+          130
+        ]
+      ],
+      [
+        "艮山门",
+        "Genshan Gate",
+        [
+          488,
+          48
+        ]
+      ],
+      [
+        "东青门",
+        "Dongqing Gate",
+        [
+          516,
+          448
+        ]
+      ],
+      [
+        "崇新门",
+        "Chongxin Gate",
+        [
+          500,
+          775
+        ]
+      ],
+      [
+        "新门",
+        "Xin Gate",
+        [
+          439,
+          915
+        ]
+      ],
+      [
+        "保安门",
+        "Baoan Gate",
+        [
+          455,
+          1000
+        ]
+      ],
+      [
+        "候潮门",
+        "Houchao Gate",
+        [
+          425,
+          1110
+        ]
+      ],
+      [
+        "便门",
+        "Bian Gate",
+        [
+          431,
+          1246
+        ]
+      ],
+      [
+        "嘉会门",
+        "Jiahui Gate",
+        [
+          379,
+          1295
+        ]
+      ],
+      [
+        "钱湖门",
+        "Qianhu Gate",
+        [
+          153,
+          1054
+        ]
+      ],
+      [
+        "清波门",
+        "Qingbo Gate",
+        [
+          164,
+          912
+        ]
+      ],
+      [
+        "丰豫门",
+        "Fengyu Gate",
+        [
+          218,
+          734
+        ]
+      ]
+    ],
+    "geometries": {
+      "han": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.1560347493859,
+              30.273455310829156
+            ],
+            [
+              120.16146673220155,
+              30.274756213196625
+            ],
+            [
+              120.1663531277405,
+              30.275914385096733
+            ],
+            [
+              120.17121563332803,
+              30.27694615469074
+            ],
+            [
+              120.17136703640622,
+              30.27500324710737
+            ],
+            [
+              120.17091491951355,
+              30.270259098722942
+            ],
+            [
+              120.17026481442942,
+              30.265643383597368
+            ],
+            [
+              120.16951108616993,
+              30.263223380667373
+            ],
+            [
+              120.16683152708404,
+              30.26198169808665
+            ],
+            [
+              120.16168114728983,
+              30.260994770531685
+            ],
+            [
+              120.15675891682373,
+              30.259646995172417
+            ],
+            [
+              120.15531954579026,
+              30.259871205367634
+            ],
+            [
+              120.15460493666919,
+              30.26118616332599
+            ],
+            [
+              120.15459119950908,
+              30.263465466741387
+            ],
+            [
+              120.15459508111515,
+              30.266229989314432
+            ],
+            [
+              120.1543953007393,
+              30.26870092714174
+            ],
+            [
+              120.15413579548489,
+              30.270855859203785
+            ],
+            [
+              120.15484234123632,
+              30.272242222665422
+            ],
+            [
+              120.1560347493859,
+              30.273455310829156
+            ]
+          ]
+        ]
+      },
+      "jiaOpen": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.15679982522629,
+            30.276719349768353
+          ],
+          [
+            120.16149450375904,
+            30.277647138075775
+          ],
+          [
+            120.16764617209144,
+            30.278835935345633
+          ],
+          [
+            120.1738160565848,
+            30.279729116916997
+          ]
+        ]
+      },
+      "luoOpen": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.18675008738315,
+            30.28857971199308
+          ],
+          [
+            120.1870045162419,
+            30.285221927070285
+          ],
+          [
+            120.18693015957116,
+            30.280516527866627
+          ],
+          [
+            120.18626303311565,
+            30.274634758727256
+          ],
+          [
+            120.18551229183016,
+            30.268310581516516
+          ],
+          [
+            120.18441962524987,
+            30.26213725858416
+          ],
+          [
+            120.18298443597999,
+            30.256895624786335
+          ],
+          [
+            120.18044672457577,
+            30.250524494044598
+          ],
+          [
+            120.17692594079435,
+            30.243655877889463
+          ],
+          [
+            120.17362076397055,
+            30.237144047633123
+          ],
+          [
+            120.1714419992325,
+            30.231888116626802
+          ],
+          [
+            120.16919156464017,
+            30.226252978702167
+          ],
+          [
+            120.16788149891786,
+            30.222065374439463
+          ],
+          [
+            120.16804036797092,
+            30.218201980292253
+          ],
+          [
+            120.16869525221342,
+            30.216571016568633
+          ],
+          [
+            120.16807918987205,
+            30.214487409470664
+          ]
+        ]
+      },
+      "songCity": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.1536683468986,
+              30.27336797416492
+            ],
+            [
+              120.15443203756001,
+              30.27395741865494
+            ],
+            [
+              120.15549873465076,
+              30.27450266155895
+            ],
+            [
+              120.1578203275478,
+              30.275379926300893
+            ],
+            [
+              120.1608184175516,
+              30.27587141101306
+            ],
+            [
+              120.16683203808081,
+              30.276345198307038
+            ],
+            [
+              120.17164380653026,
+              30.276698769035704
+            ],
+            [
+              120.17238352100114,
+              30.276227771369175
+            ],
+            [
+              120.17317774162865,
+              30.27240501195947
+            ],
+            [
+              120.17392618541363,
+              30.268158288056167
+            ],
+            [
+              120.17425245492507,
+              30.263914041791406
+            ],
+            [
+              120.17439488585138,
+              30.25975572106013
+            ],
+            [
+              120.1748279740309,
+              30.254153301832716
+            ],
+            [
+              120.17461144804777,
+              30.24991224110323
+            ],
+            [
+              120.17390517029656,
+              30.24588617118164
+            ],
+            [
+              120.17255218513633,
+              30.243136596069586
+            ],
+            [
+              120.17042969580746,
+              30.2399673038443
+            ],
+            [
+              120.1716003048127,
+              30.23923923747404
+            ],
+            [
+              120.17186770803711,
+              30.238474048485045
+            ],
+            [
+              120.17122689930223,
+              30.23647324908847
+            ],
+            [
+              120.16985912761884,
+              30.234203401320848
+            ],
+            [
+              120.16844721497462,
+              30.23079026534942
+            ],
+            [
+              120.16801847440047,
+              30.2262616854182
+            ],
+            [
+              120.16819656714628,
+              30.22224139558468
+            ],
+            [
+              120.1677218385163,
+              30.220791383251974
+            ],
+            [
+              120.16633716700582,
+              30.219604876920442
+            ],
+            [
+              120.16400146284391,
+              30.219047907233726
+            ],
+            [
+              120.16170836823676,
+              30.218246581159775
+            ],
+            [
+              120.15941831319726,
+              30.21768860359864
+            ],
+            [
+              120.15805415876842,
+              30.2181446997286
+            ],
+            [
+              120.1564252283081,
+              30.219336888643515
+            ],
+            [
+              120.15546355716988,
+              30.219114705493478
+            ],
+            [
+              120.15467536381836,
+              30.218158445307328
+            ],
+            [
+              120.1532412437259,
+              30.2166687612092
+            ],
+            [
+              120.15390160841316,
+              30.218358090557043
+            ],
+            [
+              120.15474988883344,
+              30.220469248304642
+            ],
+            [
+              120.15555479980705,
+              30.22276392531127
+            ],
+            [
+              120.15604320649145,
+              30.22530900595164
+            ],
+            [
+              120.1568001886669,
+              30.227422179448073
+            ],
+            [
+              120.15729446684296,
+              30.22969666080738
+            ],
+            [
+              120.1570558662733,
+              30.231842015946143
+            ],
+            [
+              120.15639605821903,
+              30.23277535855847
+            ],
+            [
+              120.15440723059537,
+              30.234184865120667
+            ],
+            [
+              120.15362009978149,
+              30.23620728988864
+            ],
+            [
+              120.15282844901499,
+              30.238034282193457
+            ],
+            [
+              120.15383991778738,
+              30.240191935176938
+            ],
+            [
+              120.15484993318297,
+              30.242392020004615
+            ],
+            [
+              120.15453602190098,
+              30.244515028007907
+            ],
+            [
+              120.15544285659715,
+              30.24620663860195
+            ],
+            [
+              120.15683798968456,
+              30.2477256902323
+            ],
+            [
+              120.15713590476845,
+              30.24959056768677
+            ],
+            [
+              120.15858698833598,
+              30.251236560901347
+            ],
+            [
+              120.15853321339442,
+              30.252806539136625
+            ],
+            [
+              120.157327723346,
+              30.254552969767598
+            ],
+            [
+              120.15579587153174,
+              30.25653259497168
+            ],
+            [
+              120.1543641923556,
+              30.258615641577734
+            ],
+            [
+              120.1532486,
+              30.2602726
+            ],
+            [
+              120.15291236851971,
+              30.26227256704265
+            ],
+            [
+              120.15317924314449,
+              30.264268994601665
+            ],
+            [
+              120.1527578923404,
+              30.266500740423968
+            ],
+            [
+              120.15233208009819,
+              30.268369865258805
+            ],
+            [
+              120.15167374567474,
+              30.26998581482192
+            ],
+            [
+              120.15241708906098,
+              30.271169305130694
+            ],
+            [
+              120.15311756235829,
+              30.271843967257475
+            ],
+            [
+              120.1536683468986,
+              30.27336797416492
+            ]
+          ]
+        ]
+      },
+      "palaceDrawing": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.16085802869495,
+              30.226156093127745
+            ],
+            [
+              120.16116499313907,
+              30.226463707971092
+            ],
+            [
+              120.16144883883217,
+              30.2268410503397
+            ],
+            [
+              120.16190564234603,
+              30.227093425177326
+            ],
+            [
+              120.16233956281424,
+              30.22728155576813
+            ],
+            [
+              120.16248172136618,
+              30.227336255180354
+            ],
+            [
+              120.16269111893517,
+              30.227473274007664
+            ],
+            [
+              120.16298617250193,
+              30.227559588292838
+            ],
+            [
+              120.16315450574999,
+              30.227631415058475
+            ],
+            [
+              120.16339995296657,
+              30.22764421055898
+            ],
+            [
+              120.16357651534082,
+              30.2275982450911
+            ],
+            [
+              120.16383489345395,
+              30.22755654479006
+            ],
+            [
+              120.16408582675466,
+              30.227490812134885
+            ],
+            [
+              120.1643629347515,
+              30.22744220683313
+            ],
+            [
+              120.16459349234324,
+              30.22740693762537
+            ],
+            [
+              120.16487334338215,
+              30.227319068245777
+            ],
+            [
+              120.16509645616149,
+              30.227259766683893
+            ],
+            [
+              120.16535757731668,
+              30.22717880230501
+            ],
+            [
+              120.16556305742914,
+              30.227110700112707
+            ],
+            [
+              120.16579549655151,
+              30.22691790068617
+            ],
+            [
+              120.16592300118401,
+              30.226790563618056
+            ],
+            [
+              120.16608271520518,
+              30.22659397293211
+            ],
+            [
+              120.16616696108306,
+              30.226432855064598
+            ],
+            [
+              120.16620214921919,
+              30.226190365596846
+            ],
+            [
+              120.16624313634249,
+              30.22599546692993
+            ],
+            [
+              120.16631437412617,
+              30.225628754135375
+            ],
+            [
+              120.16634768073168,
+              30.225543794886406
+            ],
+            [
+              120.16648137856446,
+              30.22493601434638
+            ],
+            [
+              120.16650724035755,
+              30.224827022743284
+            ],
+            [
+              120.16657158193723,
+              30.224428424779028
+            ],
+            [
+              120.16650207128886,
+              30.224117425897624
+            ],
+            [
+              120.16632786185598,
+              30.223737917602563
+            ],
+            [
+              120.16623875981244,
+              30.22331555758093
+            ],
+            [
+              120.16614503319622,
+              30.223089991855918
+            ],
+            [
+              120.16603257669627,
+              30.22287133113162
+            ],
+            [
+              120.16598540048511,
+              30.222632429312604
+            ],
+            [
+              120.16592114021549,
+              30.2223768740476
+            ],
+            [
+              120.16586322754145,
+              30.22216105676786
+            ],
+            [
+              120.16579238397087,
+              30.221999735289668
+            ],
+            [
+              120.16573697863352,
+              30.221878625704168
+            ],
+            [
+              120.16551794181845,
+              30.221748985785
+            ],
+            [
+              120.16516035100496,
+              30.221643648516707
+            ],
+            [
+              120.16481130222071,
+              30.22154663797141
+            ],
+            [
+              120.16458043172592,
+              30.221455788222656
+            ],
+            [
+              120.16387300781439,
+              30.221395264996715
+            ],
+            [
+              120.16308980285655,
+              30.221244095632695
+            ],
+            [
+              120.16237297540434,
+              30.221056979542816
+            ],
+            [
+              120.16162887603917,
+              30.22086844173066
+            ],
+            [
+              120.16084951134023,
+              30.220662302657665
+            ],
+            [
+              120.16012994084595,
+              30.220514450645627
+            ],
+            [
+              120.15976850977356,
+              30.22046408308631
+            ],
+            [
+              120.15971898062104,
+              30.220650655030234
+            ],
+            [
+              120.1596468813259,
+              30.220899101683845
+            ],
+            [
+              120.15962407547791,
+              30.221094948165614
+            ],
+            [
+              120.15956302554869,
+              30.22144642923646
+            ],
+            [
+              120.15864678186016,
+              30.221721995799594
+            ],
+            [
+              120.15787986548217,
+              30.22246917520314
+            ],
+            [
+              120.15756716065253,
+              30.223023764477897
+            ],
+            [
+              120.15743933198827,
+              30.223756833639595
+            ],
+            [
+              120.15753442969265,
+              30.224059003531774
+            ],
+            [
+              120.15827545413794,
+              30.224894597335936
+            ],
+            [
+              120.15901647858324,
+              30.225730191140098
+            ],
+            [
+              120.16085802869495,
+              30.226156093127745
+            ]
+          ]
+        ]
+      },
+      "palaceSurveySegments": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              120.16085802869495,
+              30.226156093127745
+            ],
+            [
+              120.16116499313907,
+              30.226463707971092
+            ],
+            [
+              120.16144883883217,
+              30.2268410503397
+            ],
+            [
+              120.16190564234603,
+              30.227093425177326
+            ],
+            [
+              120.16233956281424,
+              30.22728155576813
+            ]
+          ],
+          [
+            [
+              120.16248172136618,
+              30.227336255180354
+            ],
+            [
+              120.16269111893517,
+              30.227473274007664
+            ],
+            [
+              120.16298617250193,
+              30.227559588292838
+            ]
+          ],
+          [
+            [
+              120.16315450574999,
+              30.227631415058475
+            ],
+            [
+              120.16339995296657,
+              30.22764421055898
+            ]
+          ],
+          [
+            [
+              120.16357651534082,
+              30.2275982450911
+            ],
+            [
+              120.16383489345395,
+              30.22755654479006
+            ]
+          ],
+          [
+            [
+              120.16408582675466,
+              30.227490812134885
+            ],
+            [
+              120.1643629347515,
+              30.22744220683313
+            ]
+          ],
+          [
+            [
+              120.16459349234324,
+              30.22740693762537
+            ],
+            [
+              120.16487334338215,
+              30.227319068245777
+            ]
+          ],
+          [
+            [
+              120.16509645616149,
+              30.227259766683893
+            ],
+            [
+              120.16535757731668,
+              30.22717880230501
+            ]
+          ],
+          [
+            [
+              120.16556305742914,
+              30.227110700112707
+            ],
+            [
+              120.16579549655151,
+              30.22691790068617
+            ]
+          ],
+          [
+            [
+              120.16592300118401,
+              30.226790563618056
+            ],
+            [
+              120.16608271520518,
+              30.22659397293211
+            ]
+          ],
+          [
+            [
+              120.16616696108306,
+              30.226432855064598
+            ],
+            [
+              120.16620214921919,
+              30.226190365596846
+            ]
+          ],
+          [
+            [
+              120.16624313634249,
+              30.22599546692993
+            ],
+            [
+              120.16631437412617,
+              30.225628754135375
+            ]
+          ],
+          [
+            [
+              120.16634768073168,
+              30.225543794886406
+            ],
+            [
+              120.16648137856446,
+              30.22493601434638
+            ]
+          ],
+          [
+            [
+              120.16650724035755,
+              30.224827022743284
+            ],
+            [
+              120.16657158193723,
+              30.224428424779028
+            ],
+            [
+              120.16650207128886,
+              30.224117425897624
+            ],
+            [
+              120.16632786185598,
+              30.223737917602563
+            ],
+            [
+              120.16623875981244,
+              30.22331555758093
+            ]
+          ],
+          [
+            [
+              120.16614503319622,
+              30.223089991855918
+            ],
+            [
+              120.16603257669627,
+              30.22287133113162
+            ]
+          ],
+          [
+            [
+              120.16598540048511,
+              30.222632429312604
+            ],
+            [
+              120.16592114021549,
+              30.2223768740476
+            ]
+          ],
+          [
+            [
+              120.16586322754145,
+              30.22216105676786
+            ],
+            [
+              120.16579238397087,
+              30.221999735289668
+            ]
+          ],
+          [
+            [
+              120.16573697863352,
+              30.221878625704168
+            ],
+            [
+              120.16551794181845,
+              30.221748985785
+            ],
+            [
+              120.16516035100496,
+              30.221643648516707
+            ],
+            [
+              120.16481130222071,
+              30.22154663797141
+            ]
+          ],
+          [
+            [
+              120.16458043172592,
+              30.221455788222656
+            ],
+            [
+              120.16387300781439,
+              30.221395264996715
+            ],
+            [
+              120.16308980285655,
+              30.221244095632695
+            ],
+            [
+              120.16237297540434,
+              30.221056979542816
+            ],
+            [
+              120.16162887603917,
+              30.22086844173066
+            ],
+            [
+              120.16084951134023,
+              30.220662302657665
+            ],
+            [
+              120.16012994084595,
+              30.220514450645627
+            ],
+            [
+              120.15976850977356,
+              30.22046408308631
+            ]
+          ],
+          [
+            [
+              120.15971898062104,
+              30.220650655030234
+            ],
+            [
+              120.1596468813259,
+              30.220899101683845
+            ]
+          ],
+          [
+            [
+              120.15962407547791,
+              30.221094948165614
+            ],
+            [
+              120.15956302554869,
+              30.22144642923646
+            ]
+          ]
+        ]
+      }
+    },
+    "unconstrainedPalaceDrawing": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            120.16392525122204,
+            30.22756913667989
+          ],
+          [
+            120.1635615780266,
+            30.22769887393164
+          ],
+          [
+            120.16310736647827,
+            30.22789146406043
+          ],
+          [
+            120.16297573835443,
+            30.228320347581107
+          ],
+          [
+            120.16270108372808,
+            30.228265557699412
+          ],
+          [
+            120.16173105377884,
+            30.227374166139136
+          ],
+          [
+            120.16103947791551,
+            30.226841750101574
+          ],
+          [
+            120.15980163236712,
+            30.226443102813434
+          ],
+          [
+            120.15901647858324,
+            30.225730191140098
+          ],
+          [
+            120.15827545413794,
+            30.224894597335936
+          ],
+          [
+            120.15753442969265,
+            30.224059003531774
+          ],
+          [
+            120.15743933198827,
+            30.223756833639595
+          ],
+          [
+            120.15756716065253,
+            30.223023764477897
+          ],
+          [
+            120.15787986548217,
+            30.22246917520314
+          ],
+          [
+            120.15864678186016,
+            30.221721995799594
+          ],
+          [
+            120.15964194385018,
+            30.220969777023956
+          ],
+          [
+            120.16023386265765,
+            30.220835000400115
+          ],
+          [
+            120.16133096137925,
+            30.22093248567049
+          ],
+          [
+            120.1626570656048,
+            30.22108576869698
+          ],
+          [
+            120.1637541643264,
+            30.221183253967354
+          ],
+          [
+            120.16476224447894,
+            30.221465266371176
+          ],
+          [
+            120.16609138827215,
+            30.221861897910482
+          ],
+          [
+            120.16687958162368,
+            30.222818158096633
+          ],
+          [
+            120.1669328296652,
+            30.22342552150425
+          ],
+          [
+            120.16681335981197,
+            30.224827799076184
+          ],
+          [
+            120.16664900072824,
+            30.226291921650738
+          ],
+          [
+            120.16647400315775,
+            30.226904324430446
+          ],
+          [
+            120.1654712422486,
+            30.22704817192405
+          ],
+          [
+            120.16392525122204,
+            30.22756913667989
+          ]
+        ]
+      ]
+    },
+    "palaceReferenceConstruction": {
+      "diagramPixels": [
+        [
+          343,
+          279
+        ],
+        [
+          379,
+          242
+        ],
+        [
+          413,
+          196
+        ],
+        [
+          465,
+          167
+        ],
+        [
+          514,
+          146
+        ],
+        [
+          530,
+          140
+        ],
+        [
+          554,
+          124
+        ],
+        [
+          587,
+          115
+        ],
+        [
+          606,
+          107
+        ],
+        [
+          633,
+          107
+        ],
+        [
+          652,
+          114
+        ],
+        [
+          680,
+          121
+        ],
+        [
+          707,
+          131
+        ],
+        [
+          737,
+          139
+        ],
+        [
+          762,
+          145
+        ],
+        [
+          792,
+          158
+        ],
+        [
+          816,
+          167
+        ],
+        [
+          844,
+          179
+        ],
+        [
+          866,
+          189
+        ],
+        [
+          890,
+          215
+        ],
+        [
+          903,
+          232
+        ],
+        [
+          919,
+          258
+        ],
+        [
+          927,
+          279
+        ],
+        [
+          929,
+          310
+        ],
+        [
+          932,
+          335
+        ],
+        [
+          937,
+          382
+        ],
+        [
+          940,
+          393
+        ],
+        [
+          950,
+          471
+        ],
+        [
+          952,
+          485
+        ],
+        [
+          956,
+          536
+        ],
+        [
+          946,
+          575
+        ],
+        [
+          924,
+          622
+        ],
+        [
+          911,
+          675
+        ],
+        [
+          899,
+          703
+        ],
+        [
+          885,
+          730
+        ],
+        [
+          878,
+          760
+        ],
+        [
+          869,
+          792
+        ],
+        [
+          861,
+          819
+        ],
+        [
+          852,
+          839
+        ],
+        [
+          845,
+          854
+        ],
+        [
+          820,
+          869
+        ],
+        [
+          780,
+          880
+        ],
+        [
+          741,
+          890
+        ],
+        [
+          715,
+          900
+        ],
+        [
+          637,
+          903
+        ],
+        [
+          550,
+          917
+        ],
+        [
+          470,
+          936
+        ],
+        [
+          387,
+          955
+        ],
+        [
+          300,
+          976
+        ],
+        [
+          220,
+          990
+        ],
+        [
+          180,
+          994
+        ],
+        [
+          176,
+          970
+        ],
+        [
+          170,
+          938
+        ],
+        [
+          169,
+          913
+        ],
+        [
+          165,
+          868
+        ],
+        [
+          66.68596491228078,
+          826.9754385964916
+        ],
+        [
+          -11.650000000000148,
+          727.1000000000004
+        ],
+        [
+          -41.67719298245612,
+          654.664912280703
+        ],
+        [
+          -50.07456140350888,
+          560.8070175438588
+        ],
+        [
+          -37.337719298245645,
+          523.0964912280706
+        ],
+        [
+          50.27982456140347,
+          421.9771929824565
+        ],
+        [
+          137.8973684210527,
+          320.85789473684235
+        ],
+        [
+          343,
+          279
+        ]
+      ],
+      "method": "北、东、南采用成果图墙线；仅参考面补接图示缺口。西部自然屏障仍取文献图轮廓，不是探明墙体。",
+      "openTracesPreserved": true
+    },
+    "northernFitOnlyCityRing": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            120.1536683468986,
+            30.27336797416492
+          ],
+          [
+            120.15443203756001,
+            30.27395741865494
+          ],
+          [
+            120.15549873465076,
+            30.27450266155895
+          ],
+          [
+            120.1578203275478,
+            30.275379926300893
+          ],
+          [
+            120.1608184175516,
+            30.27587141101306
+          ],
+          [
+            120.16683203808081,
+            30.276345198307038
+          ],
+          [
+            120.17164380653026,
+            30.276698769035704
+          ],
+          [
+            120.17238352100114,
+            30.276227771369175
+          ],
+          [
+            120.17317774162865,
+            30.27240501195947
+          ],
+          [
+            120.17392618541363,
+            30.268158288056167
+          ],
+          [
+            120.17425245492507,
+            30.263914041791406
+          ],
+          [
+            120.17439488585138,
+            30.25975572106013
+          ],
+          [
+            120.1748279740309,
+            30.254153301832716
+          ],
+          [
+            120.17461144804777,
+            30.24991224110323
+          ],
+          [
+            120.17390517029656,
+            30.24588617118164
+          ],
+          [
+            120.17255218513633,
+            30.243136596069586
+          ],
+          [
+            120.17042969580746,
+            30.2399673038443
+          ],
+          [
+            120.1716003048127,
+            30.23923923747404
+          ],
+          [
+            120.17186770803711,
+            30.238474048485045
+          ],
+          [
+            120.17151820260351,
+            30.23635493391376
+          ],
+          [
+            120.17068621228586,
+            30.23423865092938
+          ],
+          [
+            120.16986875573618,
+            30.231698049503038
+          ],
+          [
+            120.17003080272262,
+            30.228727466460906
+          ],
+          [
+            120.17042827864391,
+            30.22592519500211
+          ],
+          [
+            120.16986005358201,
+            30.224910370225025
+          ],
+          [
+            120.16807980280275,
+            30.224072351792007
+          ],
+          [
+            120.16501849543484,
+            30.223666084716594
+          ],
+          [
+            120.16202331218463,
+            30.223089736316034
+          ],
+          [
+            120.15902231542722,
+            30.222683115292256
+          ],
+          [
+            120.15720282347439,
+            30.222990756652546
+          ],
+          [
+            120.15500402733691,
+            30.223809703833382
+          ],
+          [
+            120.15374331802344,
+            30.223647409372237
+          ],
+          [
+            120.1527412916736,
+            30.222974516987275
+          ],
+          [
+            120.15090799716783,
+            30.221924693281636
+          ],
+          [
+            120.15171165116456,
+            30.22310782964205
+          ],
+          [
+            120.15274637396574,
+            30.224586573118383
+          ],
+          [
+            120.15371642602601,
+            30.226192966075672
+          ],
+          [
+            120.15425849030552,
+            30.227971564048296
+          ],
+          [
+            120.15517259188569,
+            30.229451015421358
+          ],
+          [
+            120.15596607224482,
+            30.230931174691147
+          ],
+          [
+            120.15597696804416,
+            30.23237350344547
+          ],
+          [
+            120.1553506079103,
+            30.233055952436256
+          ],
+          [
+            120.15338288057727,
+            30.23417050673301
+          ],
+          [
+            120.15313800016658,
+            30.23603856972276
+          ],
+          [
+            120.15282844901499,
+            30.238034282193457
+          ],
+          [
+            120.15383991778738,
+            30.240191935176938
+          ],
+          [
+            120.15484993318297,
+            30.242392020004615
+          ],
+          [
+            120.15453602190098,
+            30.244515028007907
+          ],
+          [
+            120.15544285659715,
+            30.24620663860195
+          ],
+          [
+            120.15683798968456,
+            30.2477256902323
+          ],
+          [
+            120.15713590476845,
+            30.24959056768677
+          ],
+          [
+            120.15858698833598,
+            30.251236560901347
+          ],
+          [
+            120.15853321339442,
+            30.252806539136625
+          ],
+          [
+            120.157327723346,
+            30.254552969767598
+          ],
+          [
+            120.15593258120526,
+            30.256555053308848
+          ],
+          [
+            120.15477432137617,
+            30.25868301658923
+          ],
+          [
+            120.1539321483676,
+            30.260384891685828
+          ],
+          [
+            120.15332249754027,
+            30.262339942054147
+          ],
+          [
+            120.15331595281802,
+            30.26429145293883
+          ],
+          [
+            120.1527578923404,
+            30.266500740423968
+          ],
+          [
+            120.15233208009819,
+            30.268369865258805
+          ],
+          [
+            120.15167374567474,
+            30.26998581482192
+          ],
+          [
+            120.15241708906098,
+            30.271169305130694
+          ],
+          [
+            120.15311756235829,
+            30.271843967257475
+          ],
+          [
+            120.1536683468986,
+            30.27336797416492
+          ]
+        ]
+      ]
+    },
+    "southernCityRegistration": {
+      "method": "源图为分区示意，北部用城门地望拟合；南部以同图皇城与考古图对应后定位；975—1150像素区间线性过渡。",
+      "warning": "分区图示配准，不是原图测量比例或城界精度；南部缺少独立实测整城控制。"
+    },
+    "qiantangLocalConstraint": {
+      "sourceId": "hangzhou-osm-1254131846",
+      "existingCoordinate": [
+        120.1532486,
+        30.2602726
+      ],
+      "vertex": 56,
+      "unconstrainedRing": [
+        [
+          120.1536683468986,
+          30.27336797416492
+        ],
+        [
+          120.15443203756001,
+          30.27395741865494
+        ],
+        [
+          120.15549873465076,
+          30.27450266155895
+        ],
+        [
+          120.1578203275478,
+          30.275379926300893
+        ],
+        [
+          120.1608184175516,
+          30.27587141101306
+        ],
+        [
+          120.16683203808081,
+          30.276345198307038
+        ],
+        [
+          120.17164380653026,
+          30.276698769035704
+        ],
+        [
+          120.17238352100114,
+          30.276227771369175
+        ],
+        [
+          120.17317774162865,
+          30.27240501195947
+        ],
+        [
+          120.17392618541363,
+          30.268158288056167
+        ],
+        [
+          120.17425245492507,
+          30.263914041791406
+        ],
+        [
+          120.17439488585138,
+          30.25975572106013
+        ],
+        [
+          120.1748279740309,
+          30.254153301832716
+        ],
+        [
+          120.17461144804777,
+          30.24991224110323
+        ],
+        [
+          120.17390517029656,
+          30.24588617118164
+        ],
+        [
+          120.17255218513633,
+          30.243136596069586
+        ],
+        [
+          120.17042969580746,
+          30.2399673038443
+        ],
+        [
+          120.1716003048127,
+          30.23923923747404
+        ],
+        [
+          120.17186770803711,
+          30.238474048485045
+        ],
+        [
+          120.17122689930223,
+          30.23647324908847
+        ],
+        [
+          120.16985912761884,
+          30.234203401320848
+        ],
+        [
+          120.16844721497462,
+          30.23079026534942
+        ],
+        [
+          120.16801847440047,
+          30.2262616854182
+        ],
+        [
+          120.16819656714628,
+          30.22224139558468
+        ],
+        [
+          120.1677218385163,
+          30.220791383251974
+        ],
+        [
+          120.16633716700582,
+          30.219604876920442
+        ],
+        [
+          120.16400146284391,
+          30.219047907233726
+        ],
+        [
+          120.16170836823676,
+          30.218246581159775
+        ],
+        [
+          120.15941831319726,
+          30.21768860359864
+        ],
+        [
+          120.15805415876842,
+          30.2181446997286
+        ],
+        [
+          120.1564252283081,
+          30.219336888643515
+        ],
+        [
+          120.15546355716988,
+          30.219114705493478
+        ],
+        [
+          120.15467536381836,
+          30.218158445307328
+        ],
+        [
+          120.1532412437259,
+          30.2166687612092
+        ],
+        [
+          120.15390160841316,
+          30.218358090557043
+        ],
+        [
+          120.15474988883344,
+          30.220469248304642
+        ],
+        [
+          120.15555479980705,
+          30.22276392531127
+        ],
+        [
+          120.15604320649145,
+          30.22530900595164
+        ],
+        [
+          120.1568001886669,
+          30.227422179448073
+        ],
+        [
+          120.15729446684296,
+          30.22969666080738
+        ],
+        [
+          120.1570558662733,
+          30.231842015946143
+        ],
+        [
+          120.15639605821903,
+          30.23277535855847
+        ],
+        [
+          120.15440723059537,
+          30.234184865120667
+        ],
+        [
+          120.15362009978149,
+          30.23620728988864
+        ],
+        [
+          120.15282844901499,
+          30.238034282193457
+        ],
+        [
+          120.15383991778738,
+          30.240191935176938
+        ],
+        [
+          120.15484993318297,
+          30.242392020004615
+        ],
+        [
+          120.15453602190098,
+          30.244515028007907
+        ],
+        [
+          120.15544285659715,
+          30.24620663860195
+        ],
+        [
+          120.15683798968456,
+          30.2477256902323
+        ],
+        [
+          120.15713590476845,
+          30.24959056768677
+        ],
+        [
+          120.15858698833598,
+          30.251236560901347
+        ],
+        [
+          120.15853321339442,
+          30.252806539136625
+        ],
+        [
+          120.157327723346,
+          30.254552969767598
+        ],
+        [
+          120.15593258120526,
+          30.256555053308848
+        ],
+        [
+          120.15477432137617,
+          30.25868301658923
+        ],
+        [
+          120.1539321483676,
+          30.260384891685828
+        ],
+        [
+          120.15332249754027,
+          30.262339942054147
+        ],
+        [
+          120.15331595281802,
+          30.26429145293883
+        ],
+        [
+          120.1527578923404,
+          30.266500740423968
+        ],
+        [
+          120.15233208009819,
+          30.268369865258805
+        ],
+        [
+          120.15167374567474,
+          30.26998581482192
+        ],
+        [
+          120.15241708906098,
+          30.271169305130694
+        ],
+        [
+          120.15311756235829,
+          30.271843967257475
+        ],
+        [
+          120.1536683468986,
+          30.27336797416492
+        ]
+      ],
+      "deltaDegrees": [
+        -0.0006835483676042031,
+        -0.00011229168582715943
+      ],
+      "weights": {
+        "0": 1,
+        "1": 0.6,
+        "2": 0.2,
+        "-2": 0.2,
+        "-1": 0.6
+      },
+      "warning": "沿用既有遗址地点作局部约束，非原始考古测绘点；不据此宣称整圈城界精度。"
+    },
+    "gateCoordinates": [
+      {
+        "name": "余杭门",
+        "enName": "Yuhang Gate",
+        "pixel": [
+          180,
+          130
+        ],
+        "coordinates": [
+          120.1536683468986,
+          30.27336797416492
+        ]
+      },
+      {
+        "name": "艮山门",
+        "enName": "Genshan Gate",
+        "pixel": [
+          488,
+          48
+        ],
+        "coordinates": [
+          120.17212483803752,
+          30.27673836929299
+        ]
+      },
+      {
+        "name": "东青门",
+        "enName": "Dongqing Gate",
+        "pixel": [
+          516,
+          448
+        ],
+        "coordinates": [
+          120.17439488585138,
+          30.25975572106013
+        ]
+      },
+      {
+        "name": "崇新门",
+        "enName": "Chongxin Gate",
+        "pixel": [
+          500,
+          775
+        ],
+        "coordinates": [
+          120.17390517029656,
+          30.24588617118164
+        ]
+      },
+      {
+        "name": "新门",
+        "enName": "Xin Gate",
+        "pixel": [
+          439,
+          915
+        ],
+        "coordinates": [
+          120.17042969580746,
+          30.2399673038443
+        ]
+      },
+      {
+        "name": "保安门",
+        "enName": "Baoan Gate",
+        "pixel": [
+          455,
+          1000
+        ],
+        "coordinates": [
+          120.17122689930223,
+          30.23647324908847
+        ]
+      },
+      {
+        "name": "候潮门",
+        "enName": "Houchao Gate",
+        "pixel": [
+          425,
+          1110
+        ],
+        "coordinates": [
+          120.16844721497462,
+          30.23079026534942
+        ]
+      },
+      {
+        "name": "便门",
+        "enName": "Bian Gate",
+        "pixel": [
+          431,
+          1246
+        ],
+        "coordinates": [
+          120.16819656714628,
+          30.22224139558468
+        ]
+      },
+      {
+        "name": "嘉会门",
+        "enName": "Jiahui Gate",
+        "pixel": [
+          379,
+          1295
+        ],
+        "coordinates": [
+          120.16578557807738,
+          30.21931278577244
+        ]
+      },
+      {
+        "name": "钱湖门",
+        "enName": "Qianhu Gate",
+        "pixel": [
+          153,
+          1054
+        ],
+        "coordinates": [
+          120.15440723059537,
+          30.234184865120667
+        ]
+      },
+      {
+        "name": "清波门",
+        "enName": "Qingbo Gate",
+        "pixel": [
+          164,
+          912
+        ],
+        "coordinates": [
+          120.15383991778738,
+          30.240191935176938
+        ]
+      },
+      {
+        "name": "丰豫门",
+        "enName": "Fengyu Gate",
+        "pixel": [
+          218,
+          734
+        ],
+        "coordinates": [
+          120.15683798968456,
+          30.2477256902323
+        ]
+      }
+    ],
+    "palaceGateCoordinates": [
+      {
+        "name": "和宁门",
+        "coordinates": [
+          120.16392525122204,
+          30.22756913667989
+        ],
+        "pixel": [
+          690,
+          120
+        ]
+      },
+      {
+        "name": "丽正门",
+        "coordinates": [
+          120.16476224447894,
+          30.221465266371176
+        ],
+        "pixel": [
+          735,
+          900
+        ]
+      },
+      {
+        "name": "西侧门址（西华门候选）",
+        "coordinates": [
+          120.15964194385018,
+          30.220969777023956
+        ],
+        "pixel": [
+          170,
+          929
+        ]
+      }
+    ],
+    "validation": {
+      "han": "old trace rejected; replacement uses hanRedraw, original scale and approximate translation",
+      "otherGeometries": "unchanged by this correction"
+    },
+    "hanRedraw": {
+      "source": "虞家钧1985图2",
+      "originalPdf": "output/hangzhou-city-history.pdf",
+      "workingRaster": "output/hangzhou-1985-map-work.png",
+      "pixelCoordinates": [
+        [
+          194,
+          118
+        ],
+        [
+          222,
+          118
+        ],
+        [
+          250,
+          119
+        ],
+        [
+          279,
+          120
+        ],
+        [
+          309,
+          121
+        ],
+        [
+          337,
+          123
+        ],
+        [
+          363,
+          124
+        ],
+        [
+          386,
+          126
+        ],
+        [
+          393,
+          132
+        ],
+        [
+          395,
+          146
+        ],
+        [
+          397,
+          172
+        ],
+        [
+          400,
+          202
+        ],
+        [
+          402,
+          233
+        ],
+        [
+          405,
+          264
+        ],
+        [
+          406,
+          294
+        ],
+        [
+          407,
+          322
+        ],
+        [
+          406,
+          334
+        ],
+        [
+          401,
+          342
+        ],
+        [
+          390,
+          349
+        ],
+        [
+          377,
+          351
+        ],
+        [
+          350,
+          350
+        ],
+        [
+          320,
+          349
+        ],
+        [
+          290,
+          349
+        ],
+        [
+          260,
+          348
+        ],
+        [
+          238,
+          350
+        ],
+        [
+          221,
+          352
+        ],
+        [
+          214,
+          334
+        ],
+        [
+          207,
+          314
+        ],
+        [
+          202,
+          295
+        ],
+        [
+          198,
+          271
+        ],
+        [
+          194,
+          247
+        ],
+        [
+          189,
+          222
+        ],
+        [
+          185,
+          200
+        ],
+        [
+          180,
+          178
+        ],
+        [
+          176,
+          157
+        ],
+        [
+          170,
+          144
+        ],
+        [
+          171,
+          135
+        ],
+        [
+          180,
+          128
+        ],
+        [
+          194,
+          118
+        ]
+      ],
+      "lineIdentification": "图例第一项：虚线与间隔＋记号；不追随点状清旗营或点划宫城线",
+      "scaleBar": {
+        "fromPixel": [
+          15,
+          1198
+        ],
+        "toPixel": [
+          375,
+          1198
+        ],
+        "meters": 2000
+      },
+      "method": "uniform north-up scale and translation; no shear",
+      "metersPerPixel": 5.555555555555555,
+      "anchorPixel": [
+        210,
+        350
+      ],
+      "anchorCoordinate": [
+        120.1532486,
+        30.2602726
+      ],
+      "anchorMeaning": "钱塘门地段近似参照，非原图可辨认的考古控制点",
+      "uncertainty": "无独立考古控制；方向和比例沿用原图假定，绝对落位尚待核，不计算伪精度残差",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.15232413888512,
+              30.271850832922105
+            ],
+            [
+              120.15394194583615,
+              30.271850832922105
+            ],
+            [
+              120.1555597527872,
+              30.27180092674572
+            ],
+            [
+              120.15723533855791,
+              30.27175102056933
+            ],
+            [
+              120.1589687031483,
+              30.271701114392943
+            ],
+            [
+              120.16058651009934,
+              30.271601302040164
+            ],
+            [
+              120.16208875941102,
+              30.271551395863778
+            ],
+            [
+              120.16341767226365,
+              30.271451583511
+            ],
+            [
+              120.16382212400141,
+              30.27115214645267
+            ],
+            [
+              120.16393768164077,
+              30.270453459983234
+            ],
+            [
+              120.16405323928014,
+              30.269155899397134
+            ],
+            [
+              120.16422657573918,
+              30.267658714105483
+            ],
+            [
+              120.16434213337853,
+              30.266111622637442
+            ],
+            [
+              120.16451546983757,
+              30.264564531169402
+            ],
+            [
+              120.16457324865725,
+              30.26306734587775
+            ],
+            [
+              120.16463102747693,
+              30.261669972938876
+            ],
+            [
+              120.16457324865725,
+              30.261071098822214
+            ],
+            [
+              120.16428435455886,
+              30.260671849411107
+            ],
+            [
+              120.16364878754237,
+              30.26032250617639
+            ],
+            [
+              120.16289766288654,
+              30.26022269382361
+            ],
+            [
+              120.16133763475518,
+              30.2602726
+            ],
+            [
+              120.15960427016478,
+              30.26032250617639
+            ],
+            [
+              120.15787090557438,
+              30.26032250617639
+            ],
+            [
+              120.15613754098399,
+              30.260372412352776
+            ],
+            [
+              120.15486640695103,
+              30.2602726
+            ],
+            [
+              120.15388416701647,
+              30.260172787647225
+            ],
+            [
+              120.15347971527872,
+              30.261071098822214
+            ],
+            [
+              120.15307526354096,
+              30.262069222349982
+            ],
+            [
+              120.15278636944255,
+              30.26301743970136
+            ],
+            [
+              120.15255525416384,
+              30.264215187934685
+            ],
+            [
+              120.15232413888512,
+              30.265412936168005
+            ],
+            [
+              120.15203524478672,
+              30.266660590577715
+            ],
+            [
+              120.15180412950801,
+              30.26775852645826
+            ],
+            [
+              120.1515152354096,
+              30.268856462338803
+            ],
+            [
+              120.15128412013088,
+              30.26990449204296
+            ],
+            [
+              120.1509374472128,
+              30.27055327233601
+            ],
+            [
+              120.15099522603248,
+              30.271002427923506
+            ],
+            [
+              120.1515152354096,
+              30.271351771158223
+            ],
+            [
+              120.15232413888512,
+              30.271850832922105
+            ]
+          ]
+        ]
+      }
+    }
+  },
+  "sources": [
+    "https://www.dlyj.ac.cn/CN/abstract/article/1000-0585/10267",
+    "https://www.sohu.com/a/215684774_713036",
+    "https://www.sohu.com/a/534706960_121124392",
+    "https://z.hangzhou.com.cn/2021/rddssbchy/content/content_8082761.html",
+    "https://hznews.hangzhou.com.cn/wghz/content/2021-12/07/content_8112285_2.htm",
+    "https://www.hzzx.gov.cn/hzzx/content/2010-10/26/content_5140036.htm",
+    "https://hznews.hangzhou.com.cn/chengshi/content/2013-06/20/content_4777436_0.htm",
+    "https://hznews.hangzhou.com.cn/chengshi/content/2025-06/27/content_9026285.htm",
+    "https://hzdaily.hangzhou.com.cn/hzrb/2026/06/14/article_detail_1_20260614A031.html"
+  ],
+  "limits": [
+    "完整轮廓指原复原图闭合面，不是全圈考古实测，也不是历次扩城皆适用。",
+    "皇城大内面未包含全部西部天然后苑遗存；圣果寺原几何不改动，完整皇城后苑外界待核。",
+    "吴越夹城、罗城候选线与相邻海塘难可靠辨识，暂不接入地图；候选像素和线保存在审计的pendingResearch，不强接南部秦望山地段。",
+    "东汉范围为1985年历史地理学说转绘，线型重新核对；按图面方向与原图比例尺落位，无独立考古控制，绝对位置及完整城垣学说待核。",
+    "水门已有五处文献记载，但尚无本轮可可靠配准的门址图，暂不添加猜测点。",
+    "余杭、艮山等宋外城门位置是原图定位；钱塘门沿用原点，吴越同名门及元末改筑门址分别表达。"
+  ],
+  "withdrawnFeatures": [
+    {
+      "reason": "2026-10-22复核1985年原文图2：此前北部小闭合面未忠实追踪图例中的东汉城垣，不能作为原图转绘成果；撤下其范围、填充与标签。原错误像素及几何仅留审计，不重新猜画。配准残差不能证明线型识别正确或城界精度。",
+      "feature": {
+        "type": "Feature",
+        "properties": {
+          "research": true,
+          "family": "period",
+          "hangzhouHistoricalDetail": true,
+          "hangzhouCapitalPhase": true,
+          "capitalSiteKey": "ancient-site:杭州:30.27410,120.15510",
+          "capitalSiteName": "杭州",
+          "capitalSiteDisplayName": "杭州",
+          "city": "杭州",
+          "sourceId": "hangzhou-han-qiantang-reference",
+          "sourceName": "东汉钱塘城",
+          "label": "东汉钱塘城",
+          "enSourceName": "Eastern Han Qiantang Town",
+          "enLabel": "Eastern Han Qiantang Town",
+          "period": "秦汉",
+          "periods": [
+            "秦汉"
+          ],
+          "sourceUrl": "./sources/hangzhou-phases.html",
+          "sourceTitle": "杭州历代城界：图件、配准与考古核对",
+          "referenceUrl": "https://www.dlyj.ac.cn/CN/abstract/article/1000-0585/10267",
+          "inferredBoundary": true,
+          "coordinateSystem": "WGS84",
+          "labelMinZoom": 13,
+          "status": "研究图件配准参考 · 非考古实测墙界",
+          "enStatus": "Georeferenced research drawing; not a surveyed archaeological boundary",
+          "note": "虞家钧《杭州沿革和城市发展》（1985）图2的东汉城垣研究示意，按原图闭合轮廓描绘；现代参照点拟合残差约274米，只表明本图较粗，不是墙基测量。县治迁徙和城址范围有不同考证，不能据此认定已发现完整东汉城墙。这里是杭州地区县城沿革，不新增东汉国都身份。",
+          "enNote": "Closed contour digitized from Yu Jiajun’s 1985 historical-geography sketch. The roughly 274 m fitting RMS shows its schematic nature, not archaeological accuracy. The location and extent remain debated. This county-town stage does not establish a Han national capital.",
+          "fillOpacity": 0.025,
+          "lineOpacity": 0.42,
+          "locationPrecision": "历史地理学说示意，城垣尚无完整考古确认"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                120.1560347493859,
+                30.273455310829156
+              ],
+              [
+                120.16146673220155,
+                30.274756213196625
+              ],
+              [
+                120.1663531277405,
+                30.275914385096733
+              ],
+              [
+                120.17121563332803,
+                30.27694615469074
+              ],
+              [
+                120.17136703640622,
+                30.27500324710737
+              ],
+              [
+                120.17091491951355,
+                30.270259098722942
+              ],
+              [
+                120.17026481442942,
+                30.265643383597368
+              ],
+              [
+                120.16951108616993,
+                30.263223380667373
+              ],
+              [
+                120.16683152708404,
+                30.26198169808665
+              ],
+              [
+                120.16168114728983,
+                30.260994770531685
+              ],
+              [
+                120.15675891682373,
+                30.259646995172417
+              ],
+              [
+                120.15531954579026,
+                30.259871205367634
+              ],
+              [
+                120.15460493666919,
+                30.26118616332599
+              ],
+              [
+                120.15459119950908,
+                30.263465466741387
+              ],
+              [
+                120.15459508111515,
+                30.266229989314432
+              ],
+              [
+                120.1543953007393,
+                30.26870092714174
+              ],
+              [
+                120.15413579548489,
+                30.270855859203785
+              ],
+              [
+                120.15484234123632,
+                30.272242222665422
+              ],
+              [
+                120.1560347493859,
+                30.273455310829156
+              ]
+            ]
+          ]
+        }
+      }
+    }
+  ],
+  "corrections": [
+    {
+      "date": "2026-10-22",
+      "sourceId": "hangzhou-han-qiantang-reference",
+      "action": "withdraw incorrect digitization",
+      "reason": "2026-10-22复核1985年原文图2：此前北部小闭合面未忠实追踪图例中的东汉城垣，不能作为原图转绘成果；撤下其范围、填充与标签。原错误像素及几何仅留审计，不重新猜画。配准残差不能证明线型识别正确或城界精度。"
+    },
+    {
+      "date": "2026-10-22",
+      "sourceId": "hangzhou-han-qiantang-reference",
+      "action": "replace with redigitized source trace",
+      "reason": "逐段复核＋记号线型，修正西缘和南缘；弃用原六点仿射，以原图比例尺等比近似落位。原撤下版本继续留审计。"
+    }
+  ],
+  "earlyWallReview": {
+    "date": "2026-10-23",
+    "workingRaster": "output/hangzhou-1985-map-work.png",
+    "sourcePdf": "output/hangzhou-city-history.pdf",
+    "source": "https://www.dlyj.ac.cn/CN/abstract/article/1000-0585/10267",
+    "method": "same uniform source-scale translation as reviewed Han trace; no affine shear; not archaeological registration",
+    "metersPerPixel": 5.555555555555555,
+    "anchorPixel": [
+      210,
+      350
+    ],
+    "anchorCoordinate": [
+      120.1532486,
+      30.2602726
+    ],
+    "pixelLines": {
+      "sui": [
+        [
+          218,
+          70
+        ],
+        [
+          263,
+          76
+        ],
+        [
+          319,
+          79
+        ],
+        [
+          372,
+          81
+        ],
+        [
+          414,
+          87
+        ],
+        [
+          430,
+          99
+        ],
+        [
+          437,
+          124
+        ],
+        [
+          441,
+          177
+        ],
+        [
+          443,
+          238
+        ],
+        [
+          445,
+          313
+        ],
+        [
+          447,
+          390
+        ],
+        [
+          447,
+          470
+        ],
+        [
+          449,
+          548
+        ],
+        [
+          451,
+          625
+        ],
+        [
+          453,
+          684
+        ],
+        [
+          447,
+          735
+        ],
+        [
+          432,
+          746
+        ],
+        [
+          447,
+          735
+        ],
+        [
+          432,
+          746
+        ],
+        [
+          411,
+          738
+        ],
+        [
+          389,
+          729
+        ],
+        [
+          366,
+          721
+        ],
+        [
+          346,
+          720
+        ],
+        [
+          331,
+          727
+        ],
+        [
+          321,
+          739
+        ],
+        [
+          316,
+          755
+        ],
+        [
+          315,
+          776
+        ],
+        [
+          318,
+          800
+        ],
+        [
+          323,
+          816
+        ],
+        [
+          334,
+          827
+        ],
+        [
+          355,
+          833
+        ],
+        [
+          377,
+          843
+        ],
+        [
+          389,
+          863
+        ],
+        [
+          406,
+          881
+        ],
+        [
+          417,
+          901
+        ],
+        [
+          423,
+          925
+        ],
+        [
+          422,
+          949
+        ]
+      ],
+      "wuyueLuoEast": [
+        [
+          584,
+          5
+        ],
+        [
+          589,
+          60
+        ],
+        [
+          595,
+          123
+        ],
+        [
+          602,
+          198
+        ],
+        [
+          607,
+          273
+        ],
+        [
+          610,
+          350
+        ],
+        [
+          610,
+          427
+        ],
+        [
+          605,
+          496
+        ],
+        [
+          591,
+          563
+        ],
+        [
+          572,
+          628
+        ],
+        [
+          552,
+          693
+        ],
+        [
+          533,
+          757
+        ],
+        [
+          516,
+          822
+        ],
+        [
+          504,
+          884
+        ],
+        [
+          491,
+          948
+        ],
+        [
+          485,
+          991
+        ],
+        [
+          488,
+          1045
+        ],
+        [
+          500,
+          1098
+        ],
+        [
+          514,
+          1135
+        ],
+        [
+          519,
+          1151
+        ]
+      ]
+    },
+    "withdrawnCandidatesRemainWithdrawn": true,
+    "sourcesRejectedForGeometry": [
+      "2025 illustrative animation: landmarks and outline are schematic, not georeferenceable",
+      "2026 newspaper gate illustration: generalized drawing and mixed gate-name context, not a surveyed circuit"
+    ],
+    "missing": "Complete mountain Jiacheng/Luocheng and obscured southern Sui circuit; not guessed or filled."
+  },
+  "wuyue2026Review": {
+    "date": "2026-10-23",
+    "source": "https://www.hangchow.org/index.php/base/news_show/cid/13601",
+    "figure": "钱镠所修罗城图",
+    "originalImage": "output/hangzhou-wuyue-luocheng-2026.png",
+    "pixelRing": [
+      [
+        191,
+        76
+      ],
+      [
+        269,
+        60
+      ],
+      [
+        312,
+        192
+      ],
+      [
+        477,
+        174
+      ],
+      [
+        485,
+        232
+      ],
+      [
+        490,
+        338
+      ],
+      [
+        486,
+        436
+      ],
+      [
+        478,
+        471
+      ],
+      [
+        443,
+        523
+      ],
+      [
+        429,
+        570
+      ],
+      [
+        414,
+        610
+      ],
+      [
+        409,
+        657
+      ],
+      [
+        396,
+        698
+      ],
+      [
+        376,
+        725
+      ],
+      [
+        344,
+        750
+      ],
+      [
+        300,
+        775
+      ],
+      [
+        245,
+        796
+      ],
+      [
+        185,
+        820
+      ],
+      [
+        116,
+        851
+      ],
+      [
+        84,
+        814
+      ],
+      [
+        132,
+        753
+      ],
+      [
+        158,
+        695
+      ],
+      [
+        176,
+        642
+      ],
+      [
+        197,
+        610
+      ],
+      [
+        245,
+        575
+      ],
+      [
+        286,
+        549
+      ],
+      [
+        307,
+        520
+      ],
+      [
+        322,
+        476
+      ],
+      [
+        336,
+        430
+      ],
+      [
+        353,
+        386
+      ],
+      [
+        346,
+        358
+      ],
+      [
+        325,
+        319
+      ],
+      [
+        286,
+        270
+      ],
+      [
+        249,
+        222
+      ],
+      [
+        213,
+        179
+      ],
+      [
+        182,
+        136
+      ],
+      [
+        191,
+        76
+      ]
+    ],
+    "calibration": {
+      "pixels": [
+        [
+          218.0,
+          299.0
+        ],
+        [
+          353.0,
+          490.0
+        ],
+        [
+          282.0,
+          641.0
+        ],
+        [
+          211.0,
+          696.0
+        ]
+      ],
+      "coordinates": [
+        [
+          120.141408,
+          30.2624214
+        ],
+        [
+          120.1600791,
+          30.2391123
+        ],
+        [
+          120.154656,
+          30.2238036
+        ],
+        [
+          120.1401096,
+          30.2170488
+        ]
+      ],
+      "similarity": [
+        12.755649165618998,
+        0.2567339514489504,
+        -3619.553064807342,
+        6221.141463441564
+      ],
+      "residualMeters": [
+        72.13012908139643,
+        165.1529102351056,
+        315.9269819963655,
+        207.3150597791204
+      ],
+      "metersPerDegree": [
+        96171.95480190642,
+        111320
+      ]
+    },
+    "method": "uniform similarity, no anisotropic stretching",
+    "independentCheck": {
+      "name": "鼓楼现代建筑位置；仅为朝天门地望参照，不是古门基",
+      "pixel": [
+        408,
+        485
+      ],
+      "coordinate": [
+        120.16673855714285,
+        30.24036922857143
+      ],
+      "predicted": [
+        120.16777303752158,
+        30.241252237426405
+      ],
+      "distanceMeters": 139.85733120847985
+    },
+    "priorSnapshot": "output/hangzhou-before-wuyue-2026-reference.geojson",
+    "supersededId": "hangzhou-wuyue-luo-east-wall-reference",
+    "newId": "hangzhou-wuyue-luocheng-2026-reference",
+    "screenshotGeoreferenced": false
+  }
+}
