@@ -3,13 +3,13 @@ const app=fs.readFileSync(require.resolve('../app.js'),'utf8'),catalog=require('
 const periods=require('../historical-periods.js'),tombs=require('../imperial-tombs.js');
 const capital={name:'北京',era:'明',dynasty:'明'};
 const ctx={state:{mapOverlays:{}},HistoricalPeriods:periods,ImperialTombs:tombs,ClassicalSites:{heritageKey:()=>null,siteFeatures:()=>({features:[]})},
- imperialTombMapIndex:new Map(catalog.items.map(x=>[x.name,x])),canonicalPlaceKey:x=>String(x||''),
+ imperialTombMapIndex:new Map(catalog.items.map(x=>[x.name,x])),usNpsUnitById:new Map(),canonicalPlaceKey:x=>String(x||''),
  ancientCapitalMetaForPlace:p=>p.name==='北京'?capital:null,
  visitedPlaces:()=>['北京','明孝陵','普通打卡'].map((name,i)=>({place:{id:String(i),name,lng:116+i,lat:40}})),
  ensureHistoricalCheckinCatalogs:()=>{},activeChecklistOverlayKeys:()=>[],checklistOverlayPlaces:()=>[],
  mapDisplayCoordinate:(lng,lat)=>[lng,lat],mapCheckinTitle:p=>p.name,mapCheckinSubtitle:()=>'',depthColors:['','#dc2626']};
 vm.createContext(ctx);
-for(const name of ['classicalCapitalMarkerTheme','historicalCheckinTheme','placeBelongsToActiveChecklistOverlay','mapLibrePointGeoJson']){
+for(const name of ['classicalCapitalMarkerTheme','historicalCheckinTheme','placeBelongsToActiveChecklistOverlay','isSecondaryNpsEntry','mapLibrePointGeoJson']){
  const start=app.indexOf('function '+name+'('),end=app.indexOf('\nfunction ',start+10);
  vm.runInContext(app.slice(start,end),ctx);
 }
@@ -27,4 +27,9 @@ assert.equal(second[0].properties.title,'普通打卡');
 assert.equal(ctx.mapLibrePointGeoJson({checkins:false}).features.length,0);
 let cityStateBuilds=0;ctx.ClassicalSites.siteFeatures=()=>{cityStateBuilds++;return {features:[]};};ctx.checklistOverlayPlaces=()=>Array.from({length:1200},(_,i)=>({key:'worldHeritage',item:'遗产'+i,lng:i%180,lat:20,title:'遗产'+i}));ctx.checklistMergeKeyForEntry=()=>'';ctx.checklistCatalog={worldHeritage:{label:'世界遗产'}};ctx.t=x=>x;ctx.checklistOverlayColor=()=> '#64748b';
 assert.equal(ctx.mapLibrePointGeoJson({checkins:false}).features.length,1200);assert.equal(cityStateBuilds,1,'A large heritage catalog shares a single city/check-in state computation');
+ctx.usNpsUnitById=new Map([['parks:TEST',{designation:'National Parks'}],['memorials:TEST',{designation:'National Memorials'}]]);
+ctx.checklistOverlayPlaces=()=>['parks:TEST','memorials:TEST'].map(item=>({key:'usNationalParks',item,lng:0,lat:0,title:item}));
+const ranked=ctx.mapLibrePointGeoJson({checkins:false}).features;
+assert.equal(ranked[0].properties.npsSecondary,false);assert.equal(ranked[1].properties.npsSecondary,true);
+assert(ranked[1].properties.radius<ranked[0].properties.radius,'secondary units remain smaller than national parks');
 console.log('PASS: My check-ins uses red circles; selected categories own their symbols and suppress duplicate pins');

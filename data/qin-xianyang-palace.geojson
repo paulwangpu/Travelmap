@@ -1,0 +1,1766 @@
+{
+  "type": "FeatureCollection",
+  "qinXianyangReview": true,
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "咸阳",
+        "family": "qin-xianyang-palace",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "周"
+        ],
+        "capitalSiteKey": "ancient-site:咸阳:34.32960,108.70930",
+        "capitalSiteName": "咸阳",
+        "qinXianyangHistoricalDetail": true,
+        "sourceId": "qin-xianyang-palace-core-2021",
+        "sourceName": "秦咸阳宫殿群范围（总图参考）",
+        "label": "秦咸阳宫殿群",
+        "labelCoordinates": [
+          108.863,
+          34.4183
+        ],
+        "labelMinZoom": 12,
+        "inferredBoundary": true,
+        "fillOpacity": 0,
+        "lineOpacity": 0.38,
+        "sourceUrl": "https://www.sohu.com/a/448029716_120006290",
+        "referenceUrl": "https://p2.itc.cn/images03/20210201/ed06cf8a2abc415280fa20d01e4e24e2.jpeg",
+        "sourceTitle": "中国文化报（2021）：帝国之都现“真容”",
+        "status": "2021年考古总图闭合宫区 · 图示参考，非实测墙界",
+        "note": "依2021年《中国文化报》报道所附、文博中国提供的秦咸阳城遗址总平面图，描绘图例“新确定宫区范围”的闭合外缘，经卫星底图配准。表示战国至秦宫殿区的综合考古图示范围，包含博物馆所依托的原宫殿群及六号宫殿所在区域；不表示各宫殿同时使用，也不是实测宫墙、完整秦咸阳城界或现代遗址公园规划红线。原图约每像素数十米，边线判读和配准有误差；原始遗址构件位置保持不变。",
+        "enSourceName": "Qin Xianyang palace precinct (archaeological plan reference)",
+        "enLabel": "Qin Xianyang palace precinct",
+        "enStatus": "Closed precinct from the 2021 archaeological plan; not a surveyed wall",
+        "enNote": "Digitized from the explicitly marked palace precinct in the 2021 plan supplied by Wenbo China, aligned to satellite imagery. A composite Warring States-to-Qin reference, not a synchronous building phase, surveyed enclosure, whole-city limit or modern park boundary. Original site footprints are retained.",
+        "periodNotes": {
+          "周": "战国秦国阶段共用宫区地望参考，不能据此认定秦帝国阶段的各建筑均已建成。"
+        },
+        "calibrationAudit": "docs/qin-xianyang-palace-calibration.json",
+        "referenceTitle": "原图：秦咸阳城遗址总平面图（含保护线图例）",
+        "calibrationUrl": "./sources/qin-xianyang.html"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              108.85289769,
+              34.41707892
+            ],
+            [
+              108.87074264,
+              34.42133635
+            ],
+            [
+              108.87293891,
+              34.41669174
+            ],
+            [
+              108.85411558,
+              34.41142339
+            ],
+            [
+              108.85289769,
+              34.41707892
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "咸阳",
+        "family": "qin-xianyang-palace",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "周"
+        ],
+        "capitalSiteKey": "ancient-site:咸阳:34.32960,108.70930",
+        "capitalSiteName": "咸阳",
+        "qinXianyangHistoricalDetail": true,
+        "sourceId": "qin-xianyang-eastern-protection-2021",
+        "sourceName": "秦咸阳遗址保护线（2021总图可见部分）",
+        "label": "遗址保护线·总图参考",
+        "labelCoordinates": [
+          108.877,
+          34.426
+        ],
+        "labelMinZoom": 11,
+        "inferredBoundary": true,
+        "fillOpacity": 0,
+        "lineOpacity": 0.3,
+        "sourceUrl": "https://www.sohu.com/a/448029716_120006290",
+        "referenceUrl": "https://p2.itc.cn/images03/20210201/ed06cf8a2abc415280fa20d01e4e24e2.jpeg",
+        "sourceTitle": "中国文化报（2021）：帝国之都现“真容”",
+        "status": "2021年总图保护线可见部分；非2022规划完整法定区划",
+        "note": "按同一考古总图中紫色“遗址保护范围”线提取东部可辨外缘，与既有西部OSM保护区分开显示。两部分显示不代表核定了两个独立法定保护区，也不表示与宫区边界相同。原图西北侧部分边线被绿色墓葬区图层遮盖，保留开放线，不跨遮挡处补线或强行合并。原始OSM保护区和宫殿构件几何保持不变；本线是图示配准参考，非法定保护范围坐标。",
+        "enSourceName": "Eastern protected-site perimeter (2021 plan reference)",
+        "enLabel": "Eastern protection reference",
+        "enStatus": "Visible protection perimeter from the 2021 plan; not a verified statutory boundary",
+        "enNote": "Visible purple protection perimeter traced from the same archaeological plan. Shown separately from the retained western OSM polygon; this does not establish two statutory protection zones. A western segment is obscured by the tomb overlay, so the line remains open without an invented join.",
+        "calibrationAudit": "docs/qin-xianyang-palace-calibration.json",
+        "referenceTitle": "原图：秦咸阳城遗址总平面图（含保护线图例）",
+        "calibrationUrl": "./sources/qin-xianyang.html"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            108.8238126,
+            34.41644839
+          ],
+          [
+            108.84581369,
+            34.42232547
+          ],
+          [
+            108.86928212,
+            34.42941591
+          ],
+          [
+            108.89177306,
+            34.43670755
+          ],
+          [
+            108.89323536,
+            34.43105223
+          ],
+          [
+            108.89567485,
+            34.42479166
+          ],
+          [
+            108.89762701,
+            34.42055089
+          ],
+          [
+            108.89860257,
+            34.41772343
+          ],
+          [
+            108.88833473,
+            34.41407844
+          ],
+          [
+            108.87733382,
+            34.41063484
+          ],
+          [
+            108.86413308,
+            34.40698738
+          ],
+          [
+            108.8629137,
+            34.41062271
+          ],
+          [
+            108.85069104,
+            34.40758213
+          ],
+          [
+            108.83871308,
+            34.40494579
+          ],
+          [
+            108.82869025,
+            34.40210908
+          ],
+          [
+            108.8149998,
+            34.39724909
+          ],
+          [
+            108.80375463,
+            34.39400731
+          ],
+          [
+            108.79397665,
+            34.39177687
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "咸阳",
+        "family": "qin-xianyang-palace",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "周"
+        ],
+        "capitalSiteKey": "ancient-site:咸阳:34.32960,108.70930",
+        "capitalSiteName": "咸阳",
+        "qinXianyangHistoricalDetail": true,
+        "sourceId": "qin-xianyang-southern-protection-2021",
+        "sourceName": "秦咸阳总图南侧独立保护片区（图示参考）",
+        "label": "南侧保护片区·总图参考",
+        "labelCoordinates": [
+          108.81204285,
+          34.38513575
+        ],
+        "labelMinZoom": 11,
+        "inferredBoundary": true,
+        "fillOpacity": 0,
+        "lineOpacity": 0.55,
+        "sourceUrl": "https://www.sohu.com/a/448029716_120006290",
+        "referenceUrl": "https://p2.itc.cn/images03/20210201/ed06cf8a2abc415280fa20d01e4e24e2.jpeg",
+        "sourceTitle": "中国文化报（2021）：帝国之都现“真容”",
+        "status": "2021年考古总图紫色保护线转绘；非现行法定区划",
+        "note": "补绘2021年考古总图南侧可辨识的独立紫色闭合保护轮廓。沿用总图影像配准，非实测边界；原图未为此片区单独标名，不擅自等同某一作坊或法定分区。2022年新规划已经批准，但未取得可核验的完整现行区划图。",
+        "enSourceName": "Eastern protected-site perimeter (2021 plan reference)",
+        "enLabel": "Eastern protection reference",
+        "enStatus": "Visible protection perimeter from the 2021 plan; not a verified statutory boundary",
+        "enNote": "Visible purple protection perimeter traced from the same archaeological plan. Shown separately from the retained western OSM polygon; this does not establish two statutory protection zones. A western segment is obscured by the tomb overlay, so the line remains open without an invented join.",
+        "calibrationAudit": "docs/qin-xianyang-palace-calibration.json",
+        "referenceTitle": "原图：秦咸阳城遗址总平面图（含保护线图例）",
+        "calibrationUrl": "./sources/qin-xianyang.html"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              108.80446355,
+              34.38412824
+            ],
+            [
+              108.81810993,
+              34.39089739
+            ],
+            [
+              108.81962546,
+              34.39064838
+            ],
+            [
+              108.82083564,
+              34.38739571
+            ],
+            [
+              108.82083454,
+              34.385894
+            ],
+            [
+              108.80688557,
+              34.37987545
+            ],
+            [
+              108.80537004,
+              34.38012446
+            ],
+            [
+              108.80415912,
+              34.382376
+            ],
+            [
+              108.80446355,
+              34.38412824
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "咸阳",
+        "family": "qin-xianyang-palace",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "周"
+        ],
+        "capitalSiteKey": "ancient-site:咸阳:34.32960,108.70930",
+        "capitalSiteName": "咸阳",
+        "qinXianyangHistoricalDetail": true,
+        "qinComponentDetail": false,
+        "sourceId": "qin-detail-palace-1",
+        "sourceName": "一号宫殿（已揭露西部）",
+        "label": "一号宫殿·西部",
+        "enSourceName": "Palace 1, excavated western part",
+        "enLabel": "Palace 1 (west)",
+        "sourceUrl": "https://www.thepaper.cn/newsDetail_forward_30995090",
+        "referenceUrl": "https://imgpai.thepaper.cn/newpai/image/20250617/bc945677-ed8f-4a52-8df9-e7a7e7aa313c.jpg",
+        "sourceImage": "https://imgpai.thepaper.cn/newpai/image/20250617/bc945677-ed8f-4a52-8df9-e7a7e7aa313c.jpg",
+        "sourceTitle": "文物陕西／澎湃新闻（2025）：咸阳宫遗址公园保护展示方案",
+        "status": "遗址展示图位置参考 · 不作实测墙界",
+        "enStatus": "Site positions from a display plan, not surveyed walls",
+        "note": "按2025年一、二、三、五号宫殿保护展示图转绘可辨遗址位置，以40米图示比例尺和博物馆位置定位；图中现代展示设计与秦代原始遗存不等同。 只表达展示图中西部遗址；官方资料记载整组东西179米，不将这里的小范围当作179米全殿。已发现凌阴冷藏窖，但缺乏可辨窖址坐标，不另造窖址点。",
+        "enNote": "Source-based image transcription with approximate geographic placement. Archaeological remains, surveyed-but-unexcavated areas and modern display designs are distinguished in the linked source notes; no independent survey accuracy is claimed.",
+        "inferredBoundary": true,
+        "sourceDiagramLine": false,
+        "sitePoint": false,
+        "fillOpacity": 0.04,
+        "lineOpacity": 0.85,
+        "lineWidth": 1.1,
+        "labelMinZoom": 14,
+        "labelCoordinates": [
+          108.8571328325,
+          34.41442274
+        ],
+        "calibrationAudit": "docs/qin-xianyang-palace-details.json",
+        "referenceTitle": "原始图：一、二、三、五号宫殿展示工程图",
+        "calibrationUrl": "./sources/qin-xianyang.html#details",
+        "periodNotes": {
+          "周": "作为战国秦国至秦代宫区的综合遗迹参照，不表示所有构件均已在前221年建成。"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              108.85684675,
+              34.4145338
+            ],
+            [
+              108.85737338,
+              34.41459587
+            ],
+            [
+              108.85742486,
+              34.41431168
+            ],
+            [
+              108.85688634,
+              34.41424961
+            ],
+            [
+              108.85684675,
+              34.4145338
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "咸阳",
+        "family": "qin-xianyang-palace",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "周"
+        ],
+        "capitalSiteKey": "ancient-site:咸阳:34.32960,108.70930",
+        "capitalSiteName": "咸阳",
+        "qinXianyangHistoricalDetail": true,
+        "qinComponentDetail": false,
+        "sourceId": "qin-detail-palace-2",
+        "sourceName": "二号宫殿（已揭露部分）",
+        "label": "二号宫殿",
+        "enSourceName": "Palace 2, excavated part",
+        "enLabel": "Palace 2",
+        "sourceUrl": "https://www.thepaper.cn/newsDetail_forward_30995090",
+        "referenceUrl": "https://imgpai.thepaper.cn/newpai/image/20250617/bc945677-ed8f-4a52-8df9-e7a7e7aa313c.jpg",
+        "sourceImage": "https://imgpai.thepaper.cn/newpai/image/20250617/bc945677-ed8f-4a52-8df9-e7a7e7aa313c.jpg",
+        "sourceTitle": "文物陕西／澎湃新闻（2025）：咸阳宫遗址公园保护展示方案",
+        "status": "遗址展示图位置参考 · 不作实测墙界",
+        "enStatus": "Site positions from a display plan, not surveyed walls",
+        "note": "按2025年一、二、三、五号宫殿保护展示图转绘可辨遗址位置，以40米图示比例尺和博物馆位置定位；图中现代展示设计与秦代原始遗存不等同。 位于一号西北；图示只是已揭露与展示部分，不代表文献所述整组建筑范围。",
+        "enNote": "Source-based image transcription with approximate geographic placement. Archaeological remains, surveyed-but-unexcavated areas and modern display designs are distinguished in the linked source notes; no independent survey accuracy is claimed.",
+        "inferredBoundary": true,
+        "sourceDiagramLine": false,
+        "sitePoint": false,
+        "fillOpacity": 0.04,
+        "lineOpacity": 0.85,
+        "lineWidth": 1.1,
+        "labelMinZoom": 14,
+        "labelCoordinates": [
+          108.85582812749999,
+          34.414682434999996
+        ],
+        "calibrationAudit": "docs/qin-xianyang-palace-details.json",
+        "referenceTitle": "原始图：一、二、三、五号宫殿展示工程图",
+        "calibrationUrl": "./sources/qin-xianyang.html#details",
+        "periodNotes": {
+          "周": "作为战国秦国至秦代宫区的综合遗迹参照，不表示所有构件均已在前221年建成。"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              108.85554402,
+              34.4147984
+            ],
+            [
+              108.85605878,
+              34.41486046
+            ],
+            [
+              108.85611421,
+              34.41456647
+            ],
+            [
+              108.8555955,
+              34.41450441
+            ],
+            [
+              108.85554402,
+              34.4147984
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "咸阳",
+        "family": "qin-xianyang-palace",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "周"
+        ],
+        "capitalSiteKey": "ancient-site:咸阳:34.32960,108.70930",
+        "capitalSiteName": "咸阳",
+        "qinXianyangHistoricalDetail": true,
+        "qinComponentDetail": false,
+        "sourceId": "qin-detail-palace-3",
+        "sourceName": "三号宫殿（已揭露部分）",
+        "label": "三号宫殿",
+        "enSourceName": "Palace 3, excavated part",
+        "enLabel": "Palace 3",
+        "sourceUrl": "https://www.thepaper.cn/newsDetail_forward_30995090",
+        "referenceUrl": "https://imgpai.thepaper.cn/newpai/image/20250617/bc945677-ed8f-4a52-8df9-e7a7e7aa313c.jpg",
+        "sourceImage": "https://imgpai.thepaper.cn/newpai/image/20250617/bc945677-ed8f-4a52-8df9-e7a7e7aa313c.jpg",
+        "sourceTitle": "文物陕西／澎湃新闻（2025）：咸阳宫遗址公园保护展示方案",
+        "status": "遗址展示图位置参考 · 不作实测墙界",
+        "enStatus": "Site positions from a display plan, not surveyed walls",
+        "note": "按2025年一、二、三、五号宫殿保护展示图转绘可辨遗址位置，以40米图示比例尺和博物馆位置定位；图中现代展示设计与秦代原始遗存不等同。 官方资料记载三号在一号西南近百米，建造稍晚，保存有壁画；已揭露部分与未明确的勘探部分分开理解。",
+        "enNote": "Source-based image transcription with approximate geographic placement. Archaeological remains, surveyed-but-unexcavated areas and modern display designs are distinguished in the linked source notes; no independent survey accuracy is claimed.",
+        "inferredBoundary": true,
+        "sourceDiagramLine": false,
+        "sitePoint": false,
+        "fillOpacity": 0.04,
+        "lineOpacity": 0.85,
+        "lineWidth": 1.1,
+        "labelMinZoom": 14,
+        "labelCoordinates": [
+          108.85643296357144,
+          34.41400298357143
+        ],
+        "calibrationAudit": "docs/qin-xianyang-palace-details.json",
+        "referenceTitle": "原始图：一、二、三、五号宫殿展示工程图",
+        "calibrationUrl": "./sources/qin-xianyang.html#details",
+        "periodNotes": {
+          "周": "作为战国秦国至秦代宫区的综合遗迹参照，不表示所有构件均已在前221年建成。"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              108.85599938,
+              34.41412221
+            ],
+            [
+              108.85654977,
+              34.41418428
+            ],
+            [
+              108.85654185,
+              34.41422675
+            ],
+            [
+              108.85672796,
+              34.41424961
+            ],
+            [
+              108.8567438,
+              34.41418101
+            ],
+            [
+              108.85683091,
+              34.41419408
+            ],
+            [
+              108.85689822,
+              34.41386742
+            ],
+            [
+              108.85681507,
+              34.41385435
+            ],
+            [
+              108.85682299,
+              34.41380862
+            ],
+            [
+              108.85609837,
+              34.41372369
+            ],
+            [
+              108.85608254,
+              34.41377922
+            ],
+            [
+              108.85601126,
+              34.41376616
+            ],
+            [
+              108.85593999,
+              34.41403402
+            ],
+            [
+              108.85599938,
+              34.41405035
+            ],
+            [
+              108.85599938,
+              34.41412221
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "咸阳",
+        "family": "qin-xianyang-palace",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "周"
+        ],
+        "capitalSiteKey": "ancient-site:咸阳:34.32960,108.70930",
+        "capitalSiteName": "咸阳",
+        "qinXianyangHistoricalDetail": true,
+        "qinComponentDetail": false,
+        "sourceId": "qin-detail-palace-5-survey",
+        "sourceName": "五号宫殿地望（展示方案参考）",
+        "label": "五号宫殿·地望参考",
+        "enSourceName": "Palace 5, survey reference",
+        "enLabel": "Palace 5 (survey)",
+        "sourceUrl": "https://www.thepaper.cn/newsDetail_forward_30995090",
+        "referenceUrl": "https://imgpai.thepaper.cn/newpai/image/20250617/bc945677-ed8f-4a52-8df9-e7a7e7aa313c.jpg",
+        "sourceImage": "https://imgpai.thepaper.cn/newpai/image/20250617/bc945677-ed8f-4a52-8df9-e7a7e7aa313c.jpg",
+        "sourceTitle": "文物陕西／澎湃新闻（2025）：咸阳宫遗址公园保护展示方案",
+        "status": "遗址展示图位置参考 · 不作实测墙界",
+        "enStatus": "Site positions from a display plan, not surveyed walls",
+        "note": "官方证实位于一号宫殿北侧、地表以下。展示方案着色区不能直接当作已勘探遗址边界，故撤下旧矩形范围，仅保留概略地望。",
+        "enNote": "Source-based image transcription with approximate geographic placement. Archaeological remains, surveyed-but-unexcavated areas and modern display designs are distinguished in the linked source notes; no independent survey accuracy is claimed.",
+        "inferredBoundary": true,
+        "sourceDiagramLine": false,
+        "sitePoint": false,
+        "fillOpacity": 0,
+        "lineOpacity": 0.65,
+        "lineWidth": 1.1,
+        "labelMinZoom": 14,
+        "labelCoordinates": [
+          108.85661114499999,
+          34.4150580925
+        ],
+        "calibrationAudit": "docs/qin-xianyang-palace-details.json",
+        "referenceTitle": "原始图：一、二、三、五号宫殿展示工程图",
+        "calibrationUrl": "./sources/qin-xianyang.html#details",
+        "periodNotes": {
+          "周": "作为战国秦国至秦代宫区的综合遗迹参照，不表示所有构件均已在前221年建成。"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.85661114499999,
+          34.4150580925
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "咸阳",
+        "family": "qin-xianyang-palace",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "周"
+        ],
+        "capitalSiteKey": "ancient-site:咸阳:34.32960,108.70930",
+        "capitalSiteName": "咸阳",
+        "qinXianyangHistoricalDetail": true,
+        "qinComponentDetail": true,
+        "sourceId": "qin-detail-palace-3-gallery",
+        "sourceName": "三号宫殿壁画廊位置参考",
+        "label": "壁画廊地望",
+        "enSourceName": "Palace 3 mural gallery reference",
+        "enLabel": "Mural gallery reference",
+        "sourceUrl": "https://www.thepaper.cn/newsDetail_forward_30995090",
+        "referenceUrl": "https://imgpai.thepaper.cn/newpai/image/20250617/bc945677-ed8f-4a52-8df9-e7a7e7aa313c.jpg",
+        "sourceImage": "https://imgpai.thepaper.cn/newpai/image/20250617/bc945677-ed8f-4a52-8df9-e7a7e7aa313c.jpg",
+        "sourceTitle": "文物陕西／澎湃新闻（2025）：咸阳宫遗址公园保护展示方案",
+        "status": "遗址展示图位置参考 · 不作实测墙界",
+        "enStatus": "Site positions from a display plan, not surveyed walls",
+        "note": "按2025年一、二、三、五号宫殿保护展示图转绘可辨遗址位置，以40米图示比例尺和博物馆位置定位；图中现代展示设计与秦代原始遗存不等同。 依第三号遗址出土壁画廊位于东侧的考古记载，在展示图东侧廊段标示地望；没有转绘完整壁画墙面或将展示铺装当作原墙。",
+        "enNote": "Source-based image transcription with approximate geographic placement. Archaeological remains, surveyed-but-unexcavated areas and modern display designs are distinguished in the linked source notes; no independent survey accuracy is claimed.",
+        "inferredBoundary": true,
+        "sourceDiagramLine": false,
+        "sitePoint": false,
+        "fillOpacity": 0,
+        "lineOpacity": 0.85,
+        "lineWidth": 1.1,
+        "labelMinZoom": 16.5,
+        "labelCoordinates": [
+          108.85679725,
+          34.41400951999999
+        ],
+        "calibrationAudit": "docs/qin-xianyang-palace-details.json",
+        "referenceTitle": "原始图：一、二、三、五号宫殿展示工程图",
+        "calibrationUrl": "./sources/qin-xianyang.html#details",
+        "periodNotes": {
+          "周": "作为战国秦国至秦代宫区的综合遗迹参照，不表示所有构件均已在前221年建成。"
+        }
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            108.85676755,
+            34.41413855
+          ],
+          [
+            108.85682695,
+            34.41388049
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "咸阳",
+        "family": "qin-xianyang-palace",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "周"
+        ],
+        "capitalSiteKey": "ancient-site:咸阳:34.32960,108.70930",
+        "capitalSiteName": "咸阳",
+        "qinXianyangHistoricalDetail": true,
+        "qinComponentDetail": false,
+        "sourceId": "qin-detail-six-platform",
+        "sourceName": "六号宫殿夯土台基分布",
+        "label": "六号宫殿夯土台基",
+        "enSourceName": "Palace 6 rammed-earth platform",
+        "enLabel": "Palace 6 platform",
+        "sourceUrl": "https://www.sohu.com/a/445410925_120244154",
+        "referenceUrl": "https://p9.itc.cn/images03/20210119/7fd589e6c9394f798904561b693a70c7.jpeg",
+        "sourceImage": "https://p9.itc.cn/images03/20210119/7fd589e6c9394f798904561b693a70c7.jpeg",
+        "sourceTitle": "文汇报（2021）：秦咸阳城考古发现",
+        "status": "考古航拍转绘 · 地理位置为图示参考",
+        "enStatus": "Archaeological image transcription; approximate map placement",
+        "note": "依陕西省考古研究院发掘成果报道的带北向、20米比例尺垂直航拍转绘；仅画可辨考古标线及遗迹。 边线来自航拍明确标注的夯土台基分布，不是以144×145米概括尺寸套画正方形。",
+        "enNote": "Source-based image transcription with approximate geographic placement. Archaeological remains, surveyed-but-unexcavated areas and modern display designs are distinguished in the linked source notes; no independent survey accuracy is claimed.",
+        "inferredBoundary": true,
+        "sourceDiagramLine": false,
+        "sitePoint": false,
+        "fillOpacity": 0.055,
+        "lineOpacity": 0.85,
+        "lineWidth": 1.1,
+        "labelMinZoom": 14.5,
+        "labelCoordinates": [
+          108.86335524,
+          34.415375027500005
+        ],
+        "calibrationAudit": "docs/qin-xianyang-palace-details.json",
+        "referenceTitle": "原始图：六号宫殿发掘航拍及墙基标注",
+        "calibrationUrl": "./sources/qin-xianyang.html#details",
+        "periodNotes": {
+          "周": "作为战国秦国至秦代宫区的综合遗迹参照，不表示所有构件均已在前221年建成。"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              108.86254896,
+              34.41564802
+            ],
+            [
+              108.86396787,
+              34.41591307
+            ],
+            [
+              108.86416658,
+              34.41505722
+            ],
+            [
+              108.86273755,
+              34.4148818
+            ],
+            [
+              108.86254896,
+              34.41564802
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "咸阳",
+        "family": "qin-xianyang-palace",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "周"
+        ],
+        "capitalSiteKey": "ancient-site:咸阳:34.32960,108.70930",
+        "capitalSiteName": "咸阳",
+        "qinXianyangHistoricalDetail": true,
+        "qinComponentDetail": true,
+        "sourceId": "qin-detail-six-north-wall",
+        "sourceName": "六号宫殿北墙",
+        "label": "六号宫殿北墙",
+        "enSourceName": "Palace 6 north wall",
+        "enLabel": "Palace 6 north wall",
+        "sourceUrl": "https://www.sohu.com/a/445410925_120244154",
+        "referenceUrl": "https://p9.itc.cn/images03/20210119/7fd589e6c9394f798904561b693a70c7.jpeg",
+        "sourceImage": "https://p9.itc.cn/images03/20210119/7fd589e6c9394f798904561b693a70c7.jpeg",
+        "sourceTitle": "文汇报（2021）：秦咸阳城考古发现",
+        "status": "考古航拍转绘 · 地理位置为图示参考",
+        "enStatus": "Archaeological image transcription; approximate map placement",
+        "note": "依陕西省考古研究院发掘成果报道的带北向、20米比例尺垂直航拍转绘；仅画可辨考古标线及遗迹。 照片左侧墙线出框，保持开放，不补全北墙。",
+        "enNote": "Source-based image transcription with approximate geographic placement. Archaeological remains, surveyed-but-unexcavated areas and modern display designs are distinguished in the linked source notes; no independent survey accuracy is claimed.",
+        "inferredBoundary": true,
+        "sourceDiagramLine": false,
+        "sitePoint": false,
+        "fillOpacity": 0,
+        "lineOpacity": 0.85,
+        "lineWidth": 1.1,
+        "labelMinZoom": 16,
+        "labelCoordinates": [
+          108.86356037,
+          34.41633653
+        ],
+        "calibrationAudit": "docs/qin-xianyang-palace-details.json",
+        "referenceTitle": "原始图：六号宫殿发掘航拍及墙基标注",
+        "calibrationUrl": "./sources/qin-xianyang.html#details",
+        "periodNotes": {
+          "周": "作为战国秦国至秦代宫区的综合遗迹参照，不表示所有构件均已在前221年建成。"
+        }
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              108.86197851,
+              34.41606057
+            ],
+            [
+              108.86391036,
+              34.41640924
+            ]
+          ],
+          [
+            [
+              108.86197748,
+              34.41599984
+            ],
+            [
+              108.8639208,
+              34.41633879
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "咸阳",
+        "family": "qin-xianyang-palace",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "周"
+        ],
+        "capitalSiteKey": "ancient-site:咸阳:34.32960,108.70930",
+        "capitalSiteName": "咸阳",
+        "qinXianyangHistoricalDetail": true,
+        "qinComponentDetail": true,
+        "sourceId": "qin-detail-six-cross-wall",
+        "sourceName": "六号宫殿隔墙夯土基础",
+        "label": "隔墙夯土基础",
+        "enSourceName": "Palace 6 dividing-wall foundations",
+        "enLabel": "Dividing-wall foundations",
+        "sourceUrl": "https://www.sohu.com/a/445410925_120244154",
+        "referenceUrl": "https://p9.itc.cn/images03/20210119/7fd589e6c9394f798904561b693a70c7.jpeg",
+        "sourceImage": "https://p9.itc.cn/images03/20210119/7fd589e6c9394f798904561b693a70c7.jpeg",
+        "sourceTitle": "文汇报（2021）：秦咸阳城考古发现",
+        "status": "考古航拍转绘 · 地理位置为图示参考",
+        "enStatus": "Archaeological image transcription; approximate map placement",
+        "note": "依陕西省考古研究院发掘成果报道的带北向、20米比例尺垂直航拍转绘；仅画可辨考古标线及遗迹。 五米左右的东西向分隔夯墙是南、北区分界；只取图上可辨标线。",
+        "enNote": "Source-based image transcription with approximate geographic placement. Archaeological remains, surveyed-but-unexcavated areas and modern display designs are distinguished in the linked source notes; no independent survey accuracy is claimed.",
+        "inferredBoundary": true,
+        "sourceDiagramLine": false,
+        "sitePoint": false,
+        "fillOpacity": 0,
+        "lineOpacity": 0.85,
+        "lineWidth": 1.1,
+        "labelMinZoom": 16,
+        "labelCoordinates": [
+          108.86358425,
+          34.41614445
+        ],
+        "calibrationAudit": "docs/qin-xianyang-palace-details.json",
+        "referenceTitle": "原始图：六号宫殿发掘航拍及墙基标注",
+        "calibrationUrl": "./sources/qin-xianyang.html#details",
+        "periodNotes": {
+          "周": "作为战国秦国至秦代宫区的综合遗迹参照，不表示所有构件均已在前221年建成。"
+        }
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              108.86197495,
+              34.41584962
+            ],
+            [
+              108.86393086,
+              34.41624597
+            ]
+          ],
+          [
+            [
+              108.86197387,
+              34.41578569
+            ],
+            [
+              108.86393753,
+              34.41618195
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "咸阳",
+        "family": "qin-xianyang-palace",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "周"
+        ],
+        "capitalSiteKey": "ancient-site:咸阳:34.32960,108.70930",
+        "capitalSiteName": "咸阳",
+        "qinXianyangHistoricalDetail": true,
+        "qinComponentDetail": true,
+        "sourceId": "qin-detail-six-high-platform-walls",
+        "sourceName": "六号高台已揭露墙基",
+        "label": "",
+        "enSourceName": "Exposed walls on the elevated platform",
+        "enLabel": "",
+        "sourceUrl": "https://www.sohu.com/a/445410925_120244154",
+        "referenceUrl": "https://p9.itc.cn/images03/20210119/7fd589e6c9394f798904561b693a70c7.jpeg",
+        "sourceImage": "https://p9.itc.cn/images03/20210119/7fd589e6c9394f798904561b693a70c7.jpeg",
+        "sourceTitle": "文汇报（2021）：秦咸阳城考古发现",
+        "status": "考古航拍转绘 · 地理位置为图示参考",
+        "enStatus": "Archaeological image transcription; approximate map placement",
+        "note": "依陕西省考古研究院发掘成果报道的带北向、20米比例尺垂直航拍转绘；仅画可辨考古标线及遗迹。 据航拍可辨墙基分段转绘，未清楚显示的房间和台阶不补齐。",
+        "enNote": "Source-based image transcription with approximate geographic placement. Archaeological remains, surveyed-but-unexcavated areas and modern display designs are distinguished in the linked source notes; no independent survey accuracy is claimed.",
+        "inferredBoundary": true,
+        "sourceDiagramLine": false,
+        "sitePoint": false,
+        "fillOpacity": 0,
+        "lineOpacity": 0.85,
+        "lineWidth": 1.1,
+        "labelMinZoom": 17,
+        "labelCoordinates": [
+          108.86315581800002,
+          34.415280451
+        ],
+        "calibrationAudit": "docs/qin-xianyang-palace-details.json",
+        "referenceTitle": "原始图：六号宫殿发掘航拍及墙基标注",
+        "calibrationUrl": "./sources/qin-xianyang.html#details",
+        "periodNotes": {
+          "周": "作为战国秦国至秦代宫区的综合遗迹参照，不表示所有构件均已在前221年建成。"
+        }
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              108.86300679,
+              34.41568113
+            ],
+            [
+              108.86308599,
+              34.41532217
+            ],
+            [
+              108.86340461,
+              34.41537287
+            ]
+          ],
+          [
+            [
+              108.86310149,
+              34.415322
+            ],
+            [
+              108.86317472,
+              34.4150686
+            ],
+            [
+              108.86339638,
+              34.41511401
+            ]
+          ],
+          [
+            [
+              108.86278201,
+              34.41522016
+            ],
+            [
+              108.86300748,
+              34.41526233
+            ]
+          ],
+          [
+            [
+              108.86321186,
+              34.41520244
+            ],
+            [
+              108.86338685,
+              34.4152388
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "咸阳",
+        "family": "qin-xianyang-palace",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "周"
+        ],
+        "capitalSiteKey": "ancient-site:咸阳:34.32960,108.70930",
+        "capitalSiteName": "咸阳",
+        "qinXianyangHistoricalDetail": true,
+        "qinComponentDetail": false,
+        "sourceId": "qin-detail-six-annex-court",
+        "sourceName": "六号宫殿西北附属区（地望待核）",
+        "label": "西北附属区·地望待核",
+        "enSourceName": "Palace 6 northwest annex courtyard",
+        "enLabel": "Northwest annex courtyard",
+        "sourceUrl": "https://www.sxdaily.com.cn/2021-01/17/content_8850744.html",
+        "referenceUrl": "https://p0.itc.cn/images03/20210119/945be4bdf52b4bf8a3747b4ef05119ca.jpeg",
+        "sourceImage": "https://p0.itc.cn/images03/20210119/945be4bdf52b4bf8a3747b4ef05119ca.jpeg",
+        "sourceTitle": "三秦都市报（2021）：秦咸阳城遗址北区布局渐露“真容”",
+        "status": "区域地望参考；F1—F4细部未完成地理配准",
+        "enStatus": "Archaeological image transcription; approximate map placement",
+        "note": "庭院约1000平方米有原文依据，但概括面积不能代替影像比例尺和地面控制点。F1—F4编号与墙线只在原始发掘航拍中查看；旧估算细线已撤下。该点不表示庭院实测中心。",
+        "enNote": "Source-based image transcription with approximate geographic placement. Archaeological remains, surveyed-but-unexcavated areas and modern display designs are distinguished in the linked source notes; no independent survey accuracy is claimed.",
+        "inferredBoundary": true,
+        "sourceDiagramLine": false,
+        "sitePoint": false,
+        "fillOpacity": 0,
+        "lineOpacity": 0.85,
+        "lineWidth": 1.1,
+        "labelMinZoom": 15,
+        "labelCoordinates": [
+          108.86198472,
+          34.41666721
+        ],
+        "calibrationAudit": "docs/qin-xianyang-palace-details.json",
+        "referenceTitle": "原始图：六号宫殿西北附属建筑F1—F4发掘航拍",
+        "calibrationUrl": "./sources/qin-xianyang.html#details",
+        "periodNotes": {
+          "周": "作为战国秦国至秦代宫区的综合遗迹参照，不表示所有构件均已在前221年建成。"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.86198472,
+          34.41666721
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "咸阳",
+        "family": "qin-xianyang-palace",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "周"
+        ],
+        "capitalSiteKey": "ancient-site:咸阳:34.32960,108.70930",
+        "capitalSiteName": "咸阳",
+        "qinXianyangHistoricalDetail": true,
+        "qinComponentDetail": false,
+        "sourceId": "qin-detail-six-ramp",
+        "sourceName": "六号宫殿秦代踏道地段",
+        "label": "秦代踏道地段",
+        "enSourceName": "Qin ramp/stairway segment, Palace 6",
+        "enLabel": "Qin ramp segment",
+        "sourceUrl": "https://www.thepaper.cn/newsDetail_forward_30995090",
+        "referenceUrl": "https://imgpai.thepaper.cn/newpai/image/20250617/67f4db0e-3012-4065-99c5-c9d4b9fc6bf8.jpg",
+        "sourceImage": "https://imgpai.thepaper.cn/newpai/image/20250617/67f4db0e-3012-4065-99c5-c9d4b9fc6bf8.jpg",
+        "sourceTitle": "文物陕西／澎湃新闻（2025）：咸阳宫遗址公园保护展示方案",
+        "status": "遗址展示图位置参考 · 不作实测墙界",
+        "enStatus": "Site positions from a display plan, not surveyed walls",
+        "note": "按2025年六号宫殿及殿前古道路展示方案转绘遗址所在段；不将现代展厅、广场或游客连廊作为秦代建筑。 踏道地段有考古依据，线位取展示方案。现代登临电梯、展厅与殿前广场不绘为古代建筑。",
+        "enNote": "Source-based image transcription with approximate geographic placement. Archaeological remains, surveyed-but-unexcavated areas and modern display designs are distinguished in the linked source notes; no independent survey accuracy is claimed.",
+        "inferredBoundary": true,
+        "sourceDiagramLine": false,
+        "sitePoint": false,
+        "fillOpacity": 0,
+        "lineOpacity": 0.85,
+        "lineWidth": 1.1,
+        "labelMinZoom": 15.5,
+        "labelCoordinates": [
+          108.86261936,
+          34.41475137
+        ],
+        "calibrationAudit": "docs/qin-xianyang-palace-details.json",
+        "referenceTitle": "原始图：六号宫殿展示工程图",
+        "calibrationUrl": "./sources/qin-xianyang.html#details",
+        "periodNotes": {
+          "周": "作为战国秦国至秦代宫区的综合遗迹参照，不表示所有构件均已在前221年建成。"
+        }
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              108.86252944,
+              34.41522649
+            ],
+            [
+              108.86265443,
+              34.41441216
+            ]
+          ],
+          [
+            [
+              108.86274521,
+              34.41525532
+            ],
+            [
+              108.86289009,
+              34.41442966
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "research": true,
+        "city": "咸阳",
+        "family": "qin-xianyang-palace",
+        "period": "秦汉",
+        "periods": [
+          "秦汉",
+          "周"
+        ],
+        "capitalSiteKey": "ancient-site:咸阳:34.32960,108.70930",
+        "capitalSiteName": "咸阳",
+        "qinXianyangHistoricalDetail": true,
+        "qinComponentDetail": false,
+        "sourceId": "qin-detail-six-southern-road",
+        "sourceName": "六号宫殿殿前古道路展示段",
+        "label": "殿前古道路展示段",
+        "enSourceName": "Ancient avenue display segment south of Palace 6",
+        "enLabel": "Ancient avenue display segment",
+        "sourceUrl": "https://www.thepaper.cn/newsDetail_forward_30995090",
+        "referenceUrl": "https://imgpai.thepaper.cn/newpai/image/20250617/67f4db0e-3012-4065-99c5-c9d4b9fc6bf8.jpg",
+        "sourceImage": "https://imgpai.thepaper.cn/newpai/image/20250617/67f4db0e-3012-4065-99c5-c9d4b9fc6bf8.jpg",
+        "sourceTitle": "文物陕西／澎湃新闻（2025）：咸阳宫遗址公园保护展示方案",
+        "status": "遗址展示图位置参考 · 不作实测墙界",
+        "enStatus": "Site positions from a display plan, not surveyed walls",
+        "note": "按2025年六号宫殿及殿前古道路展示方案转绘遗址所在段；不将现代展厅、广场或游客连廊作为秦代建筑。 仅画方案中明确的古道路标识展示段；与北部踏道之间标为“未明遗址区连接段”的现代连接段不画作已探明秦道路，也不包括现代入口广场。",
+        "enNote": "Source-based image transcription with approximate geographic placement. Archaeological remains, surveyed-but-unexcavated areas and modern display designs are distinguished in the linked source notes; no independent survey accuracy is claimed.",
+        "inferredBoundary": true,
+        "sourceDiagramLine": false,
+        "sitePoint": false,
+        "fillOpacity": 0,
+        "lineOpacity": 0.85,
+        "lineWidth": 1.1,
+        "labelMinZoom": 14.5,
+        "labelCoordinates": [
+          108.86332951,
+          34.41097124
+        ],
+        "calibrationAudit": "docs/qin-xianyang-palace-details.json",
+        "referenceTitle": "原始图：六号宫殿展示工程图",
+        "calibrationUrl": "./sources/qin-xianyang.html#details",
+        "periodNotes": {
+          "周": "作为战国秦国至秦代宫区的综合遗迹参照，不表示所有构件均已在前221年建成。"
+        }
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              108.86309827,
+              34.41191418
+            ],
+            [
+              108.86343471,
+              34.40995357
+            ]
+          ],
+          [
+            [
+              108.86332567,
+              34.41197302
+            ],
+            [
+              108.86368199,
+              34.41000108
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "displayCorrections": {
+    "osm-way-1263385448": {
+      "properties": {
+        "label": "旧OSM范围·待核",
+        "note": "此旧OSM多边形只覆盖遗址部分区域，不能据此认定宫区位于保护区外，也不能将它与东侧总图描线解释为两个法定保护区。2022年保护总体规划已经批准，现行完整区划仍须以正式公布的区划图核定。另有制陶作坊保护部分，未取得可靠区划坐标前不猜绘。",
+        "fillOpacity": 0,
+        "lineOpacity": 0.35,
+        "sourceName": "秦咸阳旧OSM范围（区划未核验）",
+        "status": "旧OSM概略范围；不代表现行完整法定保护区",
+        "referenceUrl": "https://www.xixianxinqu.gov.cn/xwzx/tzgg/62d26eb1f8fd1c4c2109c204.html"
+      }
+    },
+    "osm-way-1236884831": {
+      "properties": {
+        "sourceName": "六号宫殿遗址区（OSM概略标绘）",
+        "label": "",
+        "fillOpacity": 0,
+        "lineOpacity": 0.25,
+        "note": "保留原始OSM遗址区几何作概略位置参照；该多边形明显大于单座高台基址，不将它称为六号宫殿实测建筑外墙。内部另以发掘航拍与展示图分绘夯土台基、北墙、隔墙、西北附属建筑及道路。"
+      }
+    }
+  },
+  "researchInventory": [
+    {
+      "number": 1,
+      "status": "已绘已揭露西部；不冒充东西179米全殿",
+      "source": "https://www.xixianxinqu.gov.cn/xwzx/xcdt/1836229489188204546.html"
+    },
+    {
+      "number": 2,
+      "status": "已绘已揭露部分",
+      "source": "https://www.xixianxinqu.gov.cn/xwzx/xcdt/1836229489188204546.html"
+    },
+    {
+      "number": 3,
+      "status": "已绘已揭露部分与壁画廊地望",
+      "source": "https://www.xixianxinqu.gov.cn/xwzx/xcdt/1836229489188204546.html"
+    },
+    {
+      "number": 4,
+      "status": "2004年考古报告第五章第四节（第567页）确有记录；公开预览仅目录，未取得正文位置图，未落点",
+      "source": "https://www.ecsponline.com/goods.php?id=95373"
+    },
+    {
+      "number": 5,
+      "status": "仅保留北侧概略地望；撤下展示方案着色矩形冒充勘探范围的表达",
+      "source": "https://www.xixianxinqu.gov.cn/xwzx/xcdt/1836229489188204546.html"
+    },
+    {
+      "number": 6,
+      "status": "台基和墙线保留虚线参考；附属区仅保留概略地望，F1—F4细部见发掘原图，旧估算地理细线撤下",
+      "source": "https://www.sohu.com/a/445410925_120244154"
+    },
+    {
+      "name": "其他编号宫殿及刘家沟建筑",
+      "status": "官方称已发现7处宫殿；现有资料不足以逐一对应其他编号，刘家沟建筑不擅自等同七号。地方志目录线索另有一至十三号，但未取得原文核验，不生成坐标。",
+      "source": "https://www.xixianxinqu.gov.cn/xwzx/xcdt/1836229489188204546.html"
+    }
+  ],
+  "protectionReview": {
+    "checkedDate": "2026-10-23",
+    "legalPlanApproval": "https://www.xixianxinqu.gov.cn/xwzx/tzgg/62d26eb1f8fd1c4c2109c204.html",
+    "completeLegalBoundaryVerified": false,
+    "partsMeaning": "2011年两部分为城址与制陶作坊；不可解释成现有西部OSM面与东部图示线",
+    "sourceImage": "https://p4.itc.cn/images03/20210119/dc41fb60d2e3408c9d1dc5198302988c.jpeg",
+    "southernTracePixels": [
+      [
+        291,
+        234
+      ],
+      [
+        336,
+        207
+      ],
+      [
+        341,
+        208
+      ],
+      [
+        345,
+        221
+      ],
+      [
+        345,
+        227
+      ],
+      [
+        299,
+        251
+      ],
+      [
+        294,
+        250
+      ],
+      [
+        290,
+        241
+      ],
+      [
+        291,
+        234
+      ]
+    ],
+    "sourceImageSize": [
+      645,
+      293
+    ],
+    "limitations": "北西边被墓葬图层遮盖；未强闭合；旧OSM面未作为法定区划；2025公园703公顷不替代保护范围"
+  },
+  "unlocatedSourceDetails": [
+    {
+      "sourceId": "qin-detail-six-annex-walls",
+      "name": "六号宫殿附属区·附属建筑北墙、东墙及庭院分界",
+      "sourceArticle": "https://www.sxdaily.com.cn/2021-01/17/content_8850744.html",
+      "sourceImage": "https://p0.itc.cn/images03/20210119/945be4bdf52b4bf8a3747b4ef05119ca.jpeg",
+      "reason": "缺乏独立共同控制点；面积估算和展示方案原点不足以定位房间墙线。仅保留原图像素转绘，不发布旧估算地理坐标。",
+      "trace": {
+        "id": "qin-detail-six-annex-walls",
+        "source": "sixAnnex",
+        "type": "MultiLineString",
+        "pixels": [
+          [
+            [
+              63,
+              107
+            ],
+            [
+              403,
+              22
+            ]
+          ],
+          [
+            [
+              498,
+              46
+            ],
+            [
+              587,
+              520
+            ]
+          ],
+          [
+            [
+              77,
+              414
+            ],
+            [
+              418,
+              329
+            ],
+            [
+              352,
+              49
+            ]
+          ],
+          [
+            [
+              142,
+              563
+            ],
+            [
+              492,
+              477
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "sourceId": "qin-detail-six-annex-f1",
+      "name": "六号宫殿附属区·F1",
+      "sourceArticle": "https://www.sxdaily.com.cn/2021-01/17/content_8850744.html",
+      "sourceImage": "https://p0.itc.cn/images03/20210119/945be4bdf52b4bf8a3747b4ef05119ca.jpeg",
+      "reason": "缺乏独立共同控制点；面积估算和展示方案原点不足以定位房间墙线。仅保留原图像素转绘，不发布旧估算地理坐标。",
+      "trace": {
+        "id": "qin-detail-six-annex-f1",
+        "source": "sixAnnex",
+        "type": "LineString",
+        "pixels": [
+          [
+            205,
+            88
+          ],
+          [
+            237,
+            76
+          ],
+          [
+            242,
+            102
+          ]
+        ]
+      }
+    },
+    {
+      "sourceId": "qin-detail-six-annex-f2",
+      "name": "六号宫殿附属区·F2",
+      "sourceArticle": "https://www.sxdaily.com.cn/2021-01/17/content_8850744.html",
+      "sourceImage": "https://p0.itc.cn/images03/20210119/945be4bdf52b4bf8a3747b4ef05119ca.jpeg",
+      "reason": "缺乏独立共同控制点；面积估算和展示方案原点不足以定位房间墙线。仅保留原图像素转绘，不发布旧估算地理坐标。",
+      "trace": {
+        "id": "qin-detail-six-annex-f2",
+        "source": "sixAnnex",
+        "type": "LineString",
+        "pixels": [
+          [
+            241,
+            80
+          ],
+          [
+            285,
+            68
+          ],
+          [
+            291,
+            96
+          ]
+        ]
+      }
+    },
+    {
+      "sourceId": "qin-detail-six-annex-f3-1",
+      "name": "六号宫殿附属区·F3-1",
+      "sourceArticle": "https://www.sxdaily.com.cn/2021-01/17/content_8850744.html",
+      "sourceImage": "https://p0.itc.cn/images03/20210119/945be4bdf52b4bf8a3747b4ef05119ca.jpeg",
+      "reason": "缺乏独立共同控制点；面积估算和展示方案原点不足以定位房间墙线。仅保留原图像素转绘，不发布旧估算地理坐标。",
+      "trace": {
+        "id": "qin-detail-six-annex-f3-1",
+        "source": "sixAnnex",
+        "type": "LineString",
+        "pixels": [
+          [
+            279,
+            100
+          ],
+          [
+            325,
+            87
+          ],
+          [
+            336,
+            134
+          ]
+        ]
+      }
+    },
+    {
+      "sourceId": "qin-detail-six-annex-f3-2",
+      "name": "六号宫殿附属区·F3-2",
+      "sourceArticle": "https://www.sxdaily.com.cn/2021-01/17/content_8850744.html",
+      "sourceImage": "https://p0.itc.cn/images03/20210119/945be4bdf52b4bf8a3747b4ef05119ca.jpeg",
+      "reason": "缺乏独立共同控制点；面积估算和展示方案原点不足以定位房间墙线。仅保留原图像素转绘，不发布旧估算地理坐标。",
+      "trace": {
+        "id": "qin-detail-six-annex-f3-2",
+        "source": "sixAnnex",
+        "type": "LineString",
+        "pixels": [
+          [
+            293,
+            152
+          ],
+          [
+            338,
+            140
+          ],
+          [
+            347,
+            169
+          ]
+        ]
+      }
+    },
+    {
+      "sourceId": "qin-detail-six-annex-f3-3",
+      "name": "六号宫殿附属区·F3-3",
+      "sourceArticle": "https://www.sxdaily.com.cn/2021-01/17/content_8850744.html",
+      "sourceImage": "https://p0.itc.cn/images03/20210119/945be4bdf52b4bf8a3747b4ef05119ca.jpeg",
+      "reason": "缺乏独立共同控制点；面积估算和展示方案原点不足以定位房间墙线。仅保留原图像素转绘，不发布旧估算地理坐标。",
+      "trace": {
+        "id": "qin-detail-six-annex-f3-3",
+        "source": "sixAnnex",
+        "type": "LineString",
+        "pixels": [
+          [
+            302,
+            185
+          ],
+          [
+            349,
+            173
+          ],
+          [
+            358,
+            205
+          ]
+        ]
+      }
+    },
+    {
+      "sourceId": "qin-detail-six-annex-f3-4",
+      "name": "六号宫殿附属区·F3-4",
+      "sourceArticle": "https://www.sxdaily.com.cn/2021-01/17/content_8850744.html",
+      "sourceImage": "https://p0.itc.cn/images03/20210119/945be4bdf52b4bf8a3747b4ef05119ca.jpeg",
+      "reason": "缺乏独立共同控制点；面积估算和展示方案原点不足以定位房间墙线。仅保留原图像素转绘，不发布旧估算地理坐标。",
+      "trace": {
+        "id": "qin-detail-six-annex-f3-4",
+        "source": "sixAnnex",
+        "type": "LineString",
+        "pixels": [
+          [
+            312,
+            220
+          ],
+          [
+            360,
+            207
+          ],
+          [
+            371,
+            248
+          ]
+        ]
+      }
+    },
+    {
+      "sourceId": "qin-detail-six-annex-f3-5",
+      "name": "六号宫殿附属区·F3-5",
+      "sourceArticle": "https://www.sxdaily.com.cn/2021-01/17/content_8850744.html",
+      "sourceImage": "https://p0.itc.cn/images03/20210119/945be4bdf52b4bf8a3747b4ef05119ca.jpeg",
+      "reason": "缺乏独立共同控制点；面积估算和展示方案原点不足以定位房间墙线。仅保留原图像素转绘，不发布旧估算地理坐标。",
+      "trace": {
+        "id": "qin-detail-six-annex-f3-5",
+        "source": "sixAnnex",
+        "type": "LineString",
+        "pixels": [
+          [
+            324,
+            264
+          ],
+          [
+            372,
+            252
+          ],
+          [
+            383,
+            293
+          ]
+        ]
+      }
+    },
+    {
+      "sourceId": "qin-detail-six-annex-f3-6",
+      "name": "六号宫殿附属区·F3-6",
+      "sourceArticle": "https://www.sxdaily.com.cn/2021-01/17/content_8850744.html",
+      "sourceImage": "https://p0.itc.cn/images03/20210119/945be4bdf52b4bf8a3747b4ef05119ca.jpeg",
+      "reason": "缺乏独立共同控制点；面积估算和展示方案原点不足以定位房间墙线。仅保留原图像素转绘，不发布旧估算地理坐标。",
+      "trace": {
+        "id": "qin-detail-six-annex-f3-6",
+        "source": "sixAnnex",
+        "type": "LineString",
+        "pixels": [
+          [
+            326,
+            309
+          ],
+          [
+            374,
+            296
+          ],
+          [
+            385,
+            326
+          ]
+        ]
+      }
+    },
+    {
+      "sourceId": "qin-detail-six-annex-f3-7",
+      "name": "六号宫殿附属区·F3-7",
+      "sourceArticle": "https://www.sxdaily.com.cn/2021-01/17/content_8850744.html",
+      "sourceImage": "https://p0.itc.cn/images03/20210119/945be4bdf52b4bf8a3747b4ef05119ca.jpeg",
+      "reason": "缺乏独立共同控制点；面积估算和展示方案原点不足以定位房间墙线。仅保留原图像素转绘，不发布旧估算地理坐标。",
+      "trace": {
+        "id": "qin-detail-six-annex-f3-7",
+        "source": "sixAnnex",
+        "type": "LineString",
+        "pixels": [
+          [
+            287,
+            329
+          ],
+          [
+            325,
+            319
+          ],
+          [
+            333,
+            346
+          ]
+        ]
+      }
+    },
+    {
+      "sourceId": "qin-detail-six-annex-f3-8",
+      "name": "六号宫殿附属区·F3-8·密集础石区",
+      "sourceArticle": "https://www.sxdaily.com.cn/2021-01/17/content_8850744.html",
+      "sourceImage": "https://p0.itc.cn/images03/20210119/945be4bdf52b4bf8a3747b4ef05119ca.jpeg",
+      "reason": "缺乏独立共同控制点；面积估算和展示方案原点不足以定位房间墙线。仅保留原图像素转绘，不发布旧估算地理坐标。",
+      "trace": {
+        "id": "qin-detail-six-annex-f3-8",
+        "source": "sixAnnex",
+        "type": "Point",
+        "pixels": [
+          [
+            194,
+            350
+          ]
+        ]
+      }
+    },
+    {
+      "sourceId": "qin-detail-six-annex-f3-9",
+      "name": "六号宫殿附属区·F3-9",
+      "sourceArticle": "https://www.sxdaily.com.cn/2021-01/17/content_8850744.html",
+      "sourceImage": "https://p0.itc.cn/images03/20210119/945be4bdf52b4bf8a3747b4ef05119ca.jpeg",
+      "reason": "缺乏独立共同控制点；面积估算和展示方案原点不足以定位房间墙线。仅保留原图像素转绘，不发布旧估算地理坐标。",
+      "trace": {
+        "id": "qin-detail-six-annex-f3-9",
+        "source": "sixAnnex",
+        "type": "LineString",
+        "pixels": [
+          [
+            113,
+            379
+          ],
+          [
+            143,
+            369
+          ],
+          [
+            155,
+            403
+          ]
+        ]
+      }
+    },
+    {
+      "sourceId": "qin-detail-six-annex-f4",
+      "name": "六号宫殿附属区·F4·曲尺形夯土基础",
+      "sourceArticle": "https://www.sxdaily.com.cn/2021-01/17/content_8850744.html",
+      "sourceImage": "https://p0.itc.cn/images03/20210119/945be4bdf52b4bf8a3747b4ef05119ca.jpeg",
+      "reason": "缺乏独立共同控制点；面积估算和展示方案原点不足以定位房间墙线。仅保留原图像素转绘，不发布旧估算地理坐标。",
+      "trace": {
+        "id": "qin-detail-six-annex-f4",
+        "source": "sixAnnex",
+        "type": "Point",
+        "pixels": [
+          [
+            336,
+            487
+          ]
+        ]
+      }
+    },
+    {
+      "sourceId": "qin-detail-six-annex-f4-1",
+      "name": "六号宫殿附属区·F4-1",
+      "sourceArticle": "https://www.sxdaily.com.cn/2021-01/17/content_8850744.html",
+      "sourceImage": "https://p0.itc.cn/images03/20210119/945be4bdf52b4bf8a3747b4ef05119ca.jpeg",
+      "reason": "缺乏独立共同控制点；面积估算和展示方案原点不足以定位房间墙线。仅保留原图像素转绘，不发布旧估算地理坐标。",
+      "trace": {
+        "id": "qin-detail-six-annex-f4-1",
+        "source": "sixAnnex",
+        "type": "LineString",
+        "pixels": [
+          [
+            382,
+            75
+          ],
+          [
+            471,
+            51
+          ],
+          [
+            491,
+            142
+          ],
+          [
+            399,
+            166
+          ]
+        ]
+      }
+    },
+    {
+      "sourceId": "qin-detail-six-annex-f4-2",
+      "name": "六号宫殿附属区·F4-2",
+      "sourceArticle": "https://www.sxdaily.com.cn/2021-01/17/content_8850744.html",
+      "sourceImage": "https://p0.itc.cn/images03/20210119/945be4bdf52b4bf8a3747b4ef05119ca.jpeg",
+      "reason": "缺乏独立共同控制点；面积估算和展示方案原点不足以定位房间墙线。仅保留原图像素转绘，不发布旧估算地理坐标。",
+      "trace": {
+        "id": "qin-detail-six-annex-f4-2",
+        "source": "sixAnnex",
+        "type": "Point",
+        "pixels": [
+          [
+            528,
+            392
+          ]
+        ]
+      }
+    },
+    {
+      "sourceId": "qin-detail-six-annex-f4-3",
+      "name": "六号宫殿附属区·F4-3",
+      "sourceArticle": "https://www.sxdaily.com.cn/2021-01/17/content_8850744.html",
+      "sourceImage": "https://p0.itc.cn/images03/20210119/945be4bdf52b4bf8a3747b4ef05119ca.jpeg",
+      "reason": "缺乏独立共同控制点；面积估算和展示方案原点不足以定位房间墙线。仅保留原图像素转绘，不发布旧估算地理坐标。",
+      "trace": {
+        "id": "qin-detail-six-annex-f4-3",
+        "source": "sixAnnex",
+        "type": "Point",
+        "pixels": [
+          [
+            568,
+            509
+          ]
+        ]
+      }
+    },
+    {
+      "sourceId": "qin-detail-six-annex-f4-4",
+      "name": "六号宫殿附属区·F4-4",
+      "sourceArticle": "https://www.sxdaily.com.cn/2021-01/17/content_8850744.html",
+      "sourceImage": "https://p0.itc.cn/images03/20210119/945be4bdf52b4bf8a3747b4ef05119ca.jpeg",
+      "reason": "缺乏独立共同控制点；面积估算和展示方案原点不足以定位房间墙线。仅保留原图像素转绘，不发布旧估算地理坐标。",
+      "trace": {
+        "id": "qin-detail-six-annex-f4-4",
+        "source": "sixAnnex",
+        "type": "Point",
+        "pixels": [
+          [
+            487,
+            513
+          ]
+        ]
+      }
+    },
+    {
+      "sourceId": "qin-detail-six-annex-brick-drains",
+      "name": "六号宫殿附属区·附属建筑砖铺通道",
+      "sourceArticle": "https://www.sxdaily.com.cn/2021-01/17/content_8850744.html",
+      "sourceImage": "https://p0.itc.cn/images03/20210119/945be4bdf52b4bf8a3747b4ef05119ca.jpeg",
+      "reason": "缺乏独立共同控制点；面积估算和展示方案原点不足以定位房间墙线。仅保留原图像素转绘，不发布旧估算地理坐标。",
+      "trace": {
+        "id": "qin-detail-six-annex-brick-drains",
+        "source": "sixAnnex",
+        "type": "MultiLineString",
+        "pixels": [
+          [
+            [
+              378,
+              77
+            ],
+            [
+              398,
+              163
+            ]
+          ],
+          [
+            [
+              487,
+              43
+            ],
+            [
+              510,
+              141
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "sourceId": "qin-detail-six-annex-pipe",
+      "name": "六号宫殿附属区·附属建筑陶水管道",
+      "sourceArticle": "https://www.sxdaily.com.cn/2021-01/17/content_8850744.html",
+      "sourceImage": "https://p0.itc.cn/images03/20210119/945be4bdf52b4bf8a3747b4ef05119ca.jpeg",
+      "reason": "缺乏独立共同控制点；面积估算和展示方案原点不足以定位房间墙线。仅保留原图像素转绘，不发布旧估算地理坐标。",
+      "trace": {
+        "id": "qin-detail-six-annex-pipe",
+        "source": "sixAnnex",
+        "type": "Point",
+        "pixels": [
+          [
+            182,
+            410
+          ]
+        ]
+      }
+    }
+  ]
+}

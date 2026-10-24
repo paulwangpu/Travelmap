@@ -1,0 +1,946 @@
+{
+  "checkedDate": "2026-10-23",
+  "sourceURLs": {
+    "western": "https://imgpai.thepaper.cn/newpai/image/20250617/bc945677-ed8f-4a52-8df9-e7a7e7aa313c.jpg",
+    "sixProject": "https://imgpai.thepaper.cn/newpai/image/20250617/67f4db0e-3012-4065-99c5-c9d4b9fc6bf8.jpg",
+    "sixTop": "https://p9.itc.cn/images03/20210119/7fd589e6c9394f798904561b693a70c7.jpeg",
+    "sixAnnex": "https://p0.itc.cn/images03/20210119/945be4bdf52b4bf8a3747b4ef05119ca.jpeg"
+  },
+  "sourceArticles": {
+    "official": "https://www.xixianxinqu.gov.cn/xwzx/xcdt/1836229489188204546.html",
+    "archaeology": "https://www.sohu.com/a/445410925_120244154",
+    "project": "https://www.thepaper.cn/newsDetail_forward_30995090",
+    "museum": "https://www.bmy.com.cn/jingtai/ptx/public/pages/unity-talkOut.html",
+    "report": "https://www.ecsponline.com/yz/B99EEE6B7579A4D02A12B6F1EB8E5DA2D000.pdf"
+  },
+  "transforms": {
+    "western": {
+      "originPixel": [
+        262,
+        375
+      ],
+      "originCoordinate": [
+        108.85535,
+        34.41472
+      ],
+      "metresPerPixel": 0.36363636363636365,
+      "method": "展示图40米比例尺与OSM博物馆地望，北向按图；非独立实测控制"
+    },
+    "sixProject": {
+      "pixels": [
+        [
+          348,
+          171
+        ],
+        [
+          580,
+          116
+        ],
+        [
+          638,
+          399
+        ]
+      ],
+      "coordinates": [
+        [
+          108.861166,
+          34.4170604
+        ],
+        [
+          108.863555,
+          34.417489
+        ],
+        [
+          108.8640097,
+          34.4145715
+        ]
+      ],
+      "method": "展示图遗址区轮廓三个对应点，采用OSM原区域作仿射地望参照；不是古建筑实测控制"
+    },
+    "sixTop": {
+      "pixels": [
+        [
+          149,
+          179
+        ],
+        [
+          197,
+          167
+        ],
+        [
+          231,
+          269
+        ],
+        [
+          174,
+          284
+        ]
+      ],
+      "satellitePixels": [
+        [
+          1358,
+          467
+        ],
+        [
+          1381,
+          460
+        ],
+        [
+          1395,
+          514
+        ],
+        [
+          1372,
+          520
+        ]
+      ],
+      "satelliteExtent": {
+        "xmin": 12117349.211829415,
+        "ymin": 4084365.48118646,
+        "xmax": 12118907.68470052,
+        "ymax": 4085231.2994481856,
+        "width": 1800,
+        "height": 1000
+      },
+      "method": "同一地表矩形地物四角的相似变换，来源20米比例尺辅助检查；控制点集中，不能推为全区地面精度",
+      "sourceGroundScaleReference": 0.3225806451612903,
+      "satellitePixelsPerSourcePixel": 0.4981916672202699
+    },
+    "sixAnnex": {
+      "originPixel": [
+        211,
+        254
+      ],
+      "originCoordinate": [
+        108.86198472,
+        34.41666721
+      ],
+      "courtAreaReferenceM2": 1000,
+      "courtPixels": [
+        [
+          134,
+          126
+        ],
+        [
+          278,
+          100
+        ],
+        [
+          328,
+          321
+        ],
+        [
+          146,
+          368
+        ]
+      ],
+      "approximateMetresPerPixel": 0.1604039566882864,
+      "method": "约1000平方米庭院概括面积约束图像比例，工程总图约束附属区相对位置；低置信地理定位，不当作测量成果",
+      "withdrawnFromGeographicMap": true
+    }
+  },
+  "inventory": [
+    {
+      "number": 1,
+      "status": "已绘已揭露西部；不冒充东西179米全殿",
+      "source": "https://www.xixianxinqu.gov.cn/xwzx/xcdt/1836229489188204546.html"
+    },
+    {
+      "number": 2,
+      "status": "已绘已揭露部分",
+      "source": "https://www.xixianxinqu.gov.cn/xwzx/xcdt/1836229489188204546.html"
+    },
+    {
+      "number": 3,
+      "status": "已绘已揭露部分与壁画廊地望",
+      "source": "https://www.xixianxinqu.gov.cn/xwzx/xcdt/1836229489188204546.html"
+    },
+    {
+      "number": 4,
+      "status": "2004年考古报告第五章第四节（第567页）确有记录；公开预览仅目录，未取得正文位置图，未落点",
+      "source": "https://www.ecsponline.com/goods.php?id=95373"
+    },
+    {
+      "number": 5,
+      "status": "仅保留北侧概略地望；撤下展示方案着色矩形冒充勘探范围的表达",
+      "source": "https://www.xixianxinqu.gov.cn/xwzx/xcdt/1836229489188204546.html"
+    },
+    {
+      "number": 6,
+      "status": "台基和墙线保留虚线参考；附属区仅保留概略地望，F1—F4细部见发掘原图，旧估算地理细线撤下",
+      "source": "https://www.sohu.com/a/445410925_120244154"
+    },
+    {
+      "name": "其他编号宫殿及刘家沟建筑",
+      "status": "官方称已发现7处宫殿；现有资料不足以逐一对应其他编号，刘家沟建筑不擅自等同七号。地方志目录线索另有一至十三号，但未取得原文核验，不生成坐标。",
+      "source": "https://www.xixianxinqu.gov.cn/xwzx/xcdt/1836229489188204546.html"
+    }
+  ],
+  "traces": [
+    {
+      "id": "qin-detail-palace-1",
+      "source": "western",
+      "type": "Polygon",
+      "pixels": [
+        [
+          640,
+          432
+        ],
+        [
+          773,
+          413
+        ],
+        [
+          786,
+          500
+        ],
+        [
+          650,
+          519
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-palace-2",
+      "source": "western",
+      "type": "Polygon",
+      "pixels": [
+        [
+          311,
+          351
+        ],
+        [
+          441,
+          332
+        ],
+        [
+          455,
+          422
+        ],
+        [
+          324,
+          441
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-palace-3",
+      "source": "western",
+      "type": "Polygon",
+      "pixels": [
+        [
+          426,
+          558
+        ],
+        [
+          565,
+          539
+        ],
+        [
+          563,
+          526
+        ],
+        [
+          610,
+          519
+        ],
+        [
+          614,
+          540
+        ],
+        [
+          636,
+          536
+        ],
+        [
+          653,
+          636
+        ],
+        [
+          632,
+          640
+        ],
+        [
+          634,
+          654
+        ],
+        [
+          451,
+          680
+        ],
+        [
+          447,
+          663
+        ],
+        [
+          429,
+          667
+        ],
+        [
+          411,
+          585
+        ],
+        [
+          426,
+          580
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-palace-5-survey",
+      "source": "western",
+      "type": "Polygon",
+      "pixels": [
+        [
+          448,
+          201
+        ],
+        [
+          686,
+          177
+        ],
+        [
+          710,
+          340
+        ],
+        [
+          478,
+          368
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-palace-3-gallery",
+      "source": "western",
+      "type": "LineString",
+      "pixels": [
+        [
+          620,
+          553
+        ],
+        [
+          635,
+          632
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-platform",
+      "source": "sixTop",
+      "type": "Polygon",
+      "pixels": [
+        [
+          149,
+          355
+        ],
+        [
+          514,
+          267
+        ],
+        [
+          569,
+          534
+        ],
+        [
+          201,
+          594
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-north-wall",
+      "source": "sixTop",
+      "type": "MultiLineString",
+      "pixels": [
+        [
+          [
+            0,
+            228
+          ],
+          [
+            497,
+            112
+          ]
+        ],
+        [
+          [
+            0,
+            247
+          ],
+          [
+            500,
+            134
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-cross-wall",
+      "source": "sixTop",
+      "type": "MultiLineString",
+      "pixels": [
+        [
+          [
+            0,
+            294
+          ],
+          [
+            503,
+            163
+          ]
+        ],
+        [
+          [
+            0,
+            314
+          ],
+          [
+            505,
+            183
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-high-platform-walls",
+      "source": "sixTop",
+      "type": "MultiLineString",
+      "pixels": [
+        [
+          [
+            267,
+            343
+          ],
+          [
+            289,
+            455
+          ],
+          [
+            371,
+            438
+          ]
+        ],
+        [
+          [
+            293,
+            455
+          ],
+          [
+            313,
+            534
+          ],
+          [
+            370,
+            519
+          ]
+        ],
+        [
+          [
+            211,
+            488
+          ],
+          [
+            269,
+            474
+          ]
+        ],
+        [
+          [
+            322,
+            492
+          ],
+          [
+            367,
+            480
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-annex-court",
+      "source": "sixAnnex",
+      "type": "Point",
+      "pixels": [
+        [
+          211,
+          254
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-annex-walls",
+      "source": "sixAnnex",
+      "type": "MultiLineString",
+      "pixels": [
+        [
+          [
+            63,
+            107
+          ],
+          [
+            403,
+            22
+          ]
+        ],
+        [
+          [
+            498,
+            46
+          ],
+          [
+            587,
+            520
+          ]
+        ],
+        [
+          [
+            77,
+            414
+          ],
+          [
+            418,
+            329
+          ],
+          [
+            352,
+            49
+          ]
+        ],
+        [
+          [
+            142,
+            563
+          ],
+          [
+            492,
+            477
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-annex-f1",
+      "source": "sixAnnex",
+      "type": "LineString",
+      "pixels": [
+        [
+          205,
+          88
+        ],
+        [
+          237,
+          76
+        ],
+        [
+          242,
+          102
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-annex-f2",
+      "source": "sixAnnex",
+      "type": "LineString",
+      "pixels": [
+        [
+          241,
+          80
+        ],
+        [
+          285,
+          68
+        ],
+        [
+          291,
+          96
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-annex-f3-1",
+      "source": "sixAnnex",
+      "type": "LineString",
+      "pixels": [
+        [
+          279,
+          100
+        ],
+        [
+          325,
+          87
+        ],
+        [
+          336,
+          134
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-annex-f3-2",
+      "source": "sixAnnex",
+      "type": "LineString",
+      "pixels": [
+        [
+          293,
+          152
+        ],
+        [
+          338,
+          140
+        ],
+        [
+          347,
+          169
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-annex-f3-3",
+      "source": "sixAnnex",
+      "type": "LineString",
+      "pixels": [
+        [
+          302,
+          185
+        ],
+        [
+          349,
+          173
+        ],
+        [
+          358,
+          205
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-annex-f3-4",
+      "source": "sixAnnex",
+      "type": "LineString",
+      "pixels": [
+        [
+          312,
+          220
+        ],
+        [
+          360,
+          207
+        ],
+        [
+          371,
+          248
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-annex-f3-5",
+      "source": "sixAnnex",
+      "type": "LineString",
+      "pixels": [
+        [
+          324,
+          264
+        ],
+        [
+          372,
+          252
+        ],
+        [
+          383,
+          293
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-annex-f3-6",
+      "source": "sixAnnex",
+      "type": "LineString",
+      "pixels": [
+        [
+          326,
+          309
+        ],
+        [
+          374,
+          296
+        ],
+        [
+          385,
+          326
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-annex-f3-7",
+      "source": "sixAnnex",
+      "type": "LineString",
+      "pixels": [
+        [
+          287,
+          329
+        ],
+        [
+          325,
+          319
+        ],
+        [
+          333,
+          346
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-annex-f3-8",
+      "source": "sixAnnex",
+      "type": "Point",
+      "pixels": [
+        [
+          194,
+          350
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-annex-f3-9",
+      "source": "sixAnnex",
+      "type": "LineString",
+      "pixels": [
+        [
+          113,
+          379
+        ],
+        [
+          143,
+          369
+        ],
+        [
+          155,
+          403
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-annex-f4",
+      "source": "sixAnnex",
+      "type": "Point",
+      "pixels": [
+        [
+          336,
+          487
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-annex-f4-1",
+      "source": "sixAnnex",
+      "type": "LineString",
+      "pixels": [
+        [
+          382,
+          75
+        ],
+        [
+          471,
+          51
+        ],
+        [
+          491,
+          142
+        ],
+        [
+          399,
+          166
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-annex-f4-2",
+      "source": "sixAnnex",
+      "type": "Point",
+      "pixels": [
+        [
+          528,
+          392
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-annex-f4-3",
+      "source": "sixAnnex",
+      "type": "Point",
+      "pixels": [
+        [
+          568,
+          509
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-annex-f4-4",
+      "source": "sixAnnex",
+      "type": "Point",
+      "pixels": [
+        [
+          487,
+          513
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-annex-brick-drains",
+      "source": "sixAnnex",
+      "type": "MultiLineString",
+      "pixels": [
+        [
+          [
+            378,
+            77
+          ],
+          [
+            398,
+            163
+          ]
+        ],
+        [
+          [
+            487,
+            43
+          ],
+          [
+            510,
+            141
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-annex-pipe",
+      "source": "sixAnnex",
+      "type": "Point",
+      "pixels": [
+        [
+          182,
+          410
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-ramp",
+      "source": "sixProject",
+      "type": "MultiLineString",
+      "pixels": [
+        [
+          [
+            490,
+            343
+          ],
+          [
+            506,
+            422
+          ]
+        ],
+        [
+          [
+            511,
+            339
+          ],
+          [
+            529,
+            419
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "qin-detail-six-southern-road",
+      "source": "sixProject",
+      "type": "MultiLineString",
+      "pixels": [
+        [
+          [
+            561,
+            664
+          ],
+          [
+            603,
+            854
+          ]
+        ],
+        [
+          [
+            583,
+            657
+          ],
+          [
+            627,
+            848
+          ]
+        ]
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "name": "航拍蓝框汉代房址",
+      "reason": "后期遗迹，不绘为秦代宫殿房间"
+    },
+    {
+      "name": "六号踏道与古道路之间“未明遗址区连接段”",
+      "reason": "没有连续秦道路考古依据，不把现代连接线画成古道路"
+    },
+    {
+      "name": "现代展厅、电梯、停车场、入口广场",
+      "reason": "展示设计，非秦建筑"
+    },
+    {
+      "name": "规则础石网格",
+      "reason": "不以排数和列数生成假实测点"
+    },
+    {
+      "name": "待发掘区西墙、四号及其他编号坐标",
+      "reason": "位置或墙界不足，不补绘"
+    }
+  ],
+  "limitations": "所有新增几何均为图示参考；摄影、展示方案和概略地望存在不同精度，不以视觉复杂度或测试通过替代考古测绘。",
+  "satelliteReview": {
+    "checkedDate": "2026-10-23",
+    "provider": "Google Satellite",
+    "tileTemplate": "https://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}",
+    "coordinateGrid": "WGS84; no GCJ shift applied to Google satellite",
+    "scenes": [
+      "western",
+      "six",
+      "annex",
+      "road"
+    ],
+    "evidence": "output/qin-google-browser.json",
+    "result": "实际加载Google卫星并目视查看叠图，六号台基地表位置大体对应；西部已揭露范围及附属房间仍为近似定位。影像年代和可见地表覆盖不足以独立验证地下墙线，未据此声称测量级配准。"
+  },
+  "geographicReview": {
+    "checkedDate": "2026-10-23",
+    "deferredGeographicFeatures": [
+      "qin-detail-six-annex-walls",
+      "qin-detail-six-annex-f1",
+      "qin-detail-six-annex-f2",
+      "qin-detail-six-annex-f3-1",
+      "qin-detail-six-annex-f3-2",
+      "qin-detail-six-annex-f3-3",
+      "qin-detail-six-annex-f3-4",
+      "qin-detail-six-annex-f3-5",
+      "qin-detail-six-annex-f3-6",
+      "qin-detail-six-annex-f3-7",
+      "qin-detail-six-annex-f3-8",
+      "qin-detail-six-annex-f3-9",
+      "qin-detail-six-annex-f4",
+      "qin-detail-six-annex-f4-1",
+      "qin-detail-six-annex-f4-2",
+      "qin-detail-six-annex-f4-3",
+      "qin-detail-six-annex-f4-4",
+      "qin-detail-six-annex-brick-drains",
+      "qin-detail-six-annex-pipe"
+    ],
+    "reason": "庭院面积有三秦都市报原文依据，但不是影像比例尺。无独立控制点的房间地理细线撤下，原图像素转绘保留。",
+    "newPrimarySource": "https://www.sxdaily.com.cn/2021-01/17/content_8850744.html",
+    "protectionComplete": false
+  }
+}

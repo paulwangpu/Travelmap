@@ -1,0 +1,34 @@
+{
+  "checkedDate": "2026-10-23",
+  "sources": [
+    {
+      "title": "三秦都市报：秦咸阳城遗址北区布局渐露真容",
+      "url": "https://www.sxdaily.com.cn/2021-01/17/content_8850744.html",
+      "verified": "正文与院方供图；庭院约1000平方米、曲尺形高台约3000平方米，未公布地理控制点",
+      "geometryUse": "仅补充尺寸口径，不把概括面积当作可靠配准比例尺"
+    },
+    {
+      "title": "陕西政府采购：秦咸阳城六号宫殿及殿前古道路保护展示工程一期设计",
+      "url": "https://www.ccgp-shaanxi.gov.cn/gpx-bid-file/ZF_JGBM_000003/zone/2025/1/12/project/gpx-template/8a69c1f198b38f570199325613c23b9a.pdf?accessCode=8696dd2e4b464cc83c6791bbd978e5a4",
+      "verified": "公开合同设计范围2.37公顷；属现代工程用地，非古代道路实测范围",
+      "geometryUse": "不据工程范围生成古代道路或法定保护边界"
+    },
+    {
+      "title": "陕西历史博物馆：历博讲坛许卫红讲座纪要",
+      "url": "https://www.sxhm.com/info/news/detail/15941.html",
+      "verified": "有2024年官方讲座线索，未获得可用于测量的讲座原图",
+      "geometryUse": "不据文字纪要生成新坐标"
+    }
+  ],
+  "actions": [
+    "撤下19项附属区估算地理细部，保留原图像素记录",
+    "五号展示方案矩形降为地望点",
+    "其余图示细线均为虚线",
+    "未宣称Google卫星目视核对等同测绘校准"
+  ],
+  "unresolved": [
+    "附属区独立共同控制点",
+    "全区独立检核点及绝对误差",
+    "现行保护规划完整区划图"
+  ]
+}

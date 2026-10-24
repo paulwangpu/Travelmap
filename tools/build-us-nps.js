@@ -12,6 +12,8 @@ const existingTranslations = fs.existsSync(catalogPath)
     zhNameSourceUrl: unit.zhNameSourceUrl,
   }]))
   : new Map();
+const existingUnits = fs.existsSync(catalogPath)
+  ? JSON.parse(fs.readFileSync(catalogPath, "utf8")).units || [] : [];
 
 function decodeHtml(value) {
   return String(value || "")
@@ -143,7 +145,22 @@ while ((sectionMatch = sectionPattern.exec(html))) {
 }
 
 if (units.length !== 433) throw new Error(`Expected 433 NPS units, parsed ${units.length}`);
-units.forEach((unit) => { unit.id = `${unit.designationId}:${unit.code}`; });
+units.forEach((unit) => {
+  const previous = existingUnits.find((entry) => entry.code === unit.code &&
+    (entry.name === unit.name || (entry.previousNames || []).includes(unit.name)));
+  // A redesignation changes grouping, but must not invalidate saved check-ins.
+  unit.id = previous?.id || `${unit.designationId}:${unit.code}`;
+  if (previous?.mapPoint) unit.mapPoint = previous.mapPoint;
+  if (previous?.redesignated) Object.assign(unit, {
+    name: previous.name, designation: previous.designation,
+    designationId: previous.designationId, previousNames: previous.previousNames,
+    redesignated: previous.redesignated, designationSource: previous.designationSource,
+  });
+});
+groups.forEach((group) => {
+  group.items = units.filter((unit) => unit.designationId === group.id).map((unit) => unit.id);
+  group.count = group.items.length;
+});
 
 const boundaryData = JSON.parse(fs.readFileSync(boundaryPath, "utf8"));
 const catalogByCode = new Map();

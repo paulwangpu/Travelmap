@@ -7894,3 +7894,7 @@ button:hover {
   .navigation-collapsed :is(.maplibregl-ctrl-bottom-right,.leaflet-bottom.leaflet-right,.map-drawer) { bottom:env(safe-area-inset-bottom) !important; }
   .navigation-collapsed .map-drawer { max-height:min(46dvh,calc(100dvh - 178px - env(safe-area-inset-bottom))) !important; }
 }
+
+/* Secondary NPS units keep a small clickable anchor without competing with parks. */
+.maplibre-marker.checklist-marker.nps-secondary { width:4px; height:4px; box-shadow:none; }
+.maplibre-marker.checklist-marker.nps-secondary.done { width:6px; height:6px; }

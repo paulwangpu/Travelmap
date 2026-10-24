@@ -4110,6 +4110,9 @@ const checklistPlaceCoordinates = {
   东方明珠: [31.2397, 121.4998, "上海"], 上海科技馆: [31.218, 121.544, "上海"], 上海野生动物园: [31.057, 121.728, "上海"], 上海迪士尼: [31.144, 121.657, "上海"],
   古文化街: [39.143, 117.19, "天津"], 盘山: [40.085, 117.271, "天津"],
   Yellowstone: [44.6, -110.5, "Wyoming"], Yosemite: [37.8651, -119.5383, "California"], "Grand Canyon": [36.1069, -112.1129, "Arizona"], "Zion": [37.2982, -113.0263, "Utah"], "Rocky Mountain": [40.3428, -105.6836, "Colorado"], "Acadia": [44.35, -68.21, "Maine"], "Arches": [38.7331, -109.5925, "Utah"], "Bryce Canyon": [37.593, -112.1871, "Utah"], "Death Valley": [36.5054, -117.0794, "California"], "Everglades": [25.2866, -80.8987, "Florida"], "Glacier": [48.7596, -113.787, "Montana"], "Grand Teton": [43.7904, -110.6818, "Wyoming"], "Great Smoky Mountains": [35.6118, -83.4895, "Tennessee"], "Joshua Tree": [33.8734, -115.901, "California"], "Olympic": [47.8021, -123.6044, "Washington"], "Sequoia": [36.4864, -118.5658, "California"], "Mount Rainier": [46.8797, -121.7269, "Washington"], "Hawaii Volcanoes": [19.4194, -155.2885, "Hawaii"], "Denali": [63.1148, -151.1926, "Alaska"], "Mesa Verde": [37.2309, -108.4618, "Colorado"], "Carlsbad Caverns": [32.1479, -104.5567, "New Mexico"], "Saguaro": [32.2967, -111.1666, "Arizona"], "Canyonlands": [38.3269, -109.8783, "Utah"], "Capitol Reef": [38.0877, -111.1355, "Utah"], "Crater Lake": [42.9446, -122.109, "Oregon"], "Redwood": [41.2132, -124.0046, "California"],
+  // NPS published decimal navigation coordinates (visitor access, not sculpture summit):
+  // https://www.nps.gov/moru/planyourvisit/gps.htm
+  "Mount Rushmore National Memorial": [43.8789472, -103.459825, "South Dakota"],
   "National Park of American Samoa": [-14.2583, -170.6833, "American Samoa"],
   "Badlands National Park": [43.8554, -102.3397, "South Dakota"],
   "Big Bend National Park": [29.1275, -103.2425, "Texas"],
@@ -6523,7 +6526,7 @@ function markMapEventHandled(event) {
 
 function mapEventHitsPoint(event) {
   if (!mapLibreMap || !event?.point) return false;
-  const pointLayers = ["map-points-circle", "map-points-label", "map-points-label-full", "ancient-capital-point", "ancient-capital-label", "ancient-capital-label-full", "earthquake-points", "volcano-points", "imperial-tomb-point", "imperial-tomb-label", "imperial-tomb-label-full"]
+  const pointLayers = ["map-points-circle", "map-points-label", "map-points-label-full", "map-points-nps-secondary-label", "ancient-capital-point", "ancient-capital-label", "ancient-capital-label-full", "earthquake-points", "volcano-points", "imperial-tomb-point", "imperial-tomb-label", "imperial-tomb-label-full"]
     .filter((layerId) => mapLibreMap.getLayer(layerId));
   return pointLayers.length > 0 && mapLibreMap.queryRenderedFeatures(event.point, { layers: pointLayers }).length > 0;
 }
@@ -7366,7 +7369,7 @@ function loadChina5aCoordinates() {
 
 function loadUsNpsCatalog() {
   if (usNpsCatalogPromise) return usNpsCatalogPromise;
-  usNpsCatalogPromise = fetchJson("data/us-nps-units.json")
+  usNpsCatalogPromise = fetchJson("data/us-nps-units.json?v=3")
     .then((data) => {
       if (!Array.isArray(data?.units) || Number(data.total) !== usNpsUnitTotal) throw new Error("invalid NPS catalog");
       usNpsUnits = data.units;
@@ -7397,9 +7400,11 @@ function loadUsNpsCatalog() {
       usNpsUnitByMergeName = new Map();
       usNpsUnitByCanonicalPlace = new Map();
       usNpsUnits.forEach((unit) => {
-        usNpsUnitByMergeName.set(canonicalPlaceKey(unit.name), unit);
-        const canonicalKey = checklistCanonicalKey(unit.name);
-        if (canonicalKey) usNpsUnitByCanonicalPlace.set(canonicalKey, unit);
+        [unit.name, ...(unit.previousNames || [])].forEach((name) => {
+          usNpsUnitByMergeName.set(canonicalPlaceKey(name), unit);
+          const canonicalKey = checklistCanonicalKey(name);
+          if (canonicalKey) usNpsUnitByCanonicalPlace.set(canonicalKey, unit);
+        });
       });
       usNpsUnits.forEach((unit) => [unit.code, ...(unit.alternateCodes || [])].forEach((code) => {
         const normalizedCode = String(code || "").toUpperCase();
@@ -7446,7 +7451,7 @@ function loadUsNpsCatalog() {
 
 function loadUsNpsBoundaries() {
   if (usNpsBoundaryPromise) return usNpsBoundaryPromise;
-  usNpsBoundaryPromise = fetchJson("data/us-nps-boundaries.geojson?v=466")
+  usNpsBoundaryPromise = fetchJson("data/us-nps-boundaries.geojson?v=467")
     .then((data) => {
       if (data?.type !== "FeatureCollection" || !Array.isArray(data.features)) throw new Error("invalid NPS boundaries");
       usNpsBoundaries = data;
@@ -9466,7 +9471,7 @@ function showRailwayHover(event, features, vectorFeature = null) {
 }
 
 function railwayForegroundPoint(event) {
-  const layers = ["map-points-circle", "map-points-label", "map-points-label-full", "ancient-capital-point", "ancient-capital-label", "ancient-capital-label-full", "earthquake-points", "volcano-points"].filter(id => mapLibreMap.getLayer(id));
+  const layers = ["map-points-circle", "map-points-label", "map-points-label-full", "map-points-nps-secondary-label", "ancient-capital-point", "ancient-capital-label", "ancient-capital-label-full", "earthquake-points", "volcano-points"].filter(id => mapLibreMap.getLayer(id));
   return layers.length && mapLibreMap.queryRenderedFeatures(event.point, { layers }).length > 0;
 }
 
@@ -10032,7 +10037,7 @@ function bindMapLibreUsNpsHandlers() {
   const handleClick = (event) => {
     if (mapAddMode || mapPathMode) return;
     if (event.originalEvent?._travelMapHandled) return;
-    const pointLayers = ["map-points-circle", "map-points-label", "map-points-label-full", "ancient-capital-point", "ancient-capital-label", "ancient-capital-label-full"].filter((layerId) => mapLibreMap.getLayer(layerId));
+    const pointLayers = ["map-points-circle", "map-points-label", "map-points-label-full", "map-points-nps-secondary-label", "ancient-capital-point", "ancient-capital-label", "ancient-capital-label-full"].filter((layerId) => mapLibreMap.getLayer(layerId));
     if (pointLayers.length && mapLibreMap.queryRenderedFeatures(event.point, { layers: pointLayers }).length) return;
     const feature = event.features?.[0];
     const itemId = feature?.properties?.itemId;
@@ -10052,7 +10057,7 @@ function bindMapLibreUsNpsHandlers() {
     mapLibreMap.on("mouseenter", layerId, () => { mapLibreMap.getCanvas().style.cursor = mapAddMode || mapPathMode ? "crosshair" : "pointer"; });
     mapLibreMap.on("mousemove", layerId, (event) => {
       const props = event.features?.[0]?.properties;
-      const pointLayers = ["map-points-circle", "map-points-label", "map-points-label-full", "ancient-capital-point", "ancient-capital-label", "ancient-capital-label-full"].filter(id => mapLibreMap.getLayer(id));
+      const pointLayers = ["map-points-circle", "map-points-label", "map-points-label-full", "map-points-nps-secondary-label", "ancient-capital-point", "ancient-capital-label", "ancient-capital-label-full"].filter(id => mapLibreMap.getLayer(id));
       if (!props || mapAddMode || mapPathMode || (pointLayers.length && mapLibreMap.queryRenderedFeatures(event.point, { layers: pointLayers }).length)) {
         clearUsNpsHover();
         return;
@@ -10142,6 +10147,7 @@ function renderMapLibreLayers() {
   removeMapLibreLayer("map-points-circle");
   removeMapLibreLayer("map-points-label");
   removeMapLibreLayer("map-points-label-full");
+  removeMapLibreLayer("map-points-nps-secondary-label");
   ["ancient-capital-point", "ancient-capital-label", "ancient-capital-label-full"].forEach(removeMapLibreLayer);
   removeMapLibreLayer("admin-country-context-line");
   removeMapLibreLayer("admin-country-context-fill");
@@ -10469,7 +10475,7 @@ function renderMapLibreMarkers(overlays = { ...defaultMapOverlays(), ...(state.m
   }
   checklistOverlayPlaces().forEach((entry) => {
     const el = document.createElement("button");
-    el.className = `maplibre-marker checklist-marker checklist-${entry.key} ${entry.done ? "done" : ""}`;
+    el.className = `maplibre-marker checklist-marker checklist-${entry.key} ${isSecondaryNpsEntry(entry) ? "nps-secondary" : ""} ${entry.done ? "done" : ""}`;
     el.title = entry.title || entry.item;
     el.addEventListener("click", (event) => {
       event.stopPropagation();
@@ -10600,13 +10606,18 @@ function mapLibrePointGeoJson(overlays) {
         capitalLabelPriority: entry.key==='chinaAncientCapitals'&&/洛阳|南京|北京|西安|开封|杭州|安阳|大同|成都/.test(ancientCapitalOverviewLabel(entry.item))?0:10,
         capitalLabel: (entry.done ? "✓ " : "") + (classicalTheme?.name || entry.title || entry.item),
         stroke: entry.done ? "#111827" : "rgba(17, 24, 39, 0.5)",
-        radius: entry.done ? 4 : 3,
+        npsSecondary: isSecondaryNpsEntry(entry),
+        radius: isSecondaryNpsEntry(entry) ? (entry.done ? 2.8 : 1.8) : (entry.done ? 4 : 3),
         haloOpacity: entry.done ? 0.98 : 0,
-        shadowOpacity: entry.done ? 0.18 : 0.1,
+        shadowOpacity: isSecondaryNpsEntry(entry) ? 0 : (entry.done ? 0.18 : 0.1),
       },
     });
   });
   return { type: "FeatureCollection", features };
+}
+
+function isSecondaryNpsEntry(entry) {
+  return entry.key === "usNationalParks" && usNpsUnitById.get(entry.item)?.designation !== "National Parks";
 }
 
 function checklistOverlayColor(key, done = false) {
@@ -10787,9 +10798,11 @@ function addMapLibrePointLayers(sourceId) {
   }
   const filter=["all",["!=",["get","classicalCapital"],true],["!",["in",["get","checklistKey"],["literal",["chinaAncientCapitals","imperialTombs"]]]]];
   for(const spec of mapCheckinLabelLayers(sourceId,filter))if(!mapLibreMap.getLayer(spec.id))mapLibreMap.addLayer(spec);
+  if(!mapLibreMap.getLayer('map-points-nps-secondary-label'))mapLibreMap.addLayer({id:'map-points-nps-secondary-label',type:'symbol',source:sourceId,minzoom:10,filter:['==',['get','npsSecondary'],true],layout:{'text-field':['get','title'],'text-font':['Open Sans Regular','Arial Unicode MS Regular'],'text-size':10,'text-variable-anchor':['top','bottom','left','right'],'text-radial-offset':.6,'text-max-width':12,'text-padding':4,'text-allow-overlap':false,'text-ignore-placement':false},paint:{'text-color':'#315b46','text-halo-color':'#fff','text-halo-width':1}});
 }
 
 function mapCheckinLabelLayers(sourceId,filter,ids=['map-points-label','map-points-label-full']) {
+  filter=['all',filter,['!=',['get','npsSecondary'],true]];
   const base={'text-field':['get','title'],'text-font':['Open Sans Regular','Arial Unicode MS Regular'],'text-size':12,'text-max-width':12,'text-padding':1,'text-optional':true};
   const paint={'text-color':'#111827','text-halo-color':'#ffffff','text-halo-width':1.05,'text-halo-blur':.05};
   return [
@@ -10831,7 +10844,7 @@ function bindMapLibrePointHandlers() {
     clearAncientCapitalHover();
     mapLibreMap.getCanvas().style.cursor = "";
   };
-  ["map-points-circle", "map-points-label", "map-points-label-full", "ancient-capital-point", "ancient-capital-label", "ancient-capital-label-full"].forEach((layerId) => {
+  ["map-points-circle", "map-points-label", "map-points-label-full", "map-points-nps-secondary-label", "ancient-capital-point", "ancient-capital-label", "ancient-capital-label-full"].forEach((layerId) => {
     if (!mapLibreMap.getLayer(layerId)) return;
     mapLibreMap.on("click", layerId, handlePointClick);
     mapLibreMap.on("mouseenter", layerId, setPointer);
@@ -11246,6 +11259,7 @@ function renderChecklistMapDetail(key, item) {
       <div><dt>${currentLanguage === "en" ? "Boundary" : "边界"}</dt><dd>${npsUnit.hasBoundary ? (currentLanguage === "en" ? "Available" : "可显示") : (currentLanguage === "en" ? "Not available" : "暂无")}</dd></div>` : ""}
       <div><dt>${t("status")}</dt><dd>${done ? t("checked") : t("unvisited")}</dd></div>
     </dl>
+    ${npsUnit?.mapPoint ? `<p class="map-point-source">${escapeHtml(currentLanguage === "en" ? (npsUnit.mapPoint.kind === "boundary-reference" ? "Park boundary reference point; not an entrance" : "Representative location: " + npsUnit.mapPoint.label) : npsUnit.mapPoint.label)} · <a href="${escapeHtml(npsUnit.mapPoint.sourceUrl)}" target="_blank" rel="noopener">${currentLanguage === "en" ? "Coordinate source" : "点位来源"} ↗</a></p>` : ""}
     ${key === "worldHeritage" && ClassicalSites.heritageKey(item) ? `<button type="button" class="popup-action" data-classical-focus="${escapeHtml(ClassicalSites.heritageKey(item))}">${currentLanguage === "en" ? "Explore archaeological details" : "查看遗址细节"}</button>` : ""}
     <button class="detail-action" data-checklist-map="${escapeHtml(key)}" data-item="${escapeHtml(item)}" type="button">${done ? t("unvisit") : t("markVisited")}</button>`;
 }
@@ -11987,7 +12001,7 @@ function renderLeafletLayers() {
     const classicalTheme=classicalCandidate?.icon?classicalCandidate:null;
     const [displayLng, displayLat] = mapDisplayCoordinate(entry.lng, entry.lat);
     const marker = entry.key === "chinaAncientCapitals" || classicalTheme ? L.marker([displayLat, displayLng], {zIndexOffset:1000,icon: L.divIcon({className: "imperial-tomb-marker", html: (classicalTheme ? Boolean(classicalTheme.icon) : ancientCapitalIconVisible(ancientCapitalMapMeta(entry.item))) ? HistoricalPeriods.visitedSvg(classicalTheme ? classicalTheme.svg : HistoricalPeriods.capitalSvg(HistoricalPeriods.capitalTheme(ancientCapitalMapMeta(entry.item), state.mapOverlays?.ancientCapitalPeriods).color), entry.done) : "", iconSize: [18,18], iconAnchor: [9,9]})}) : L.circleMarker([displayLat, displayLng], {
-      radius: entry.done ? 4 : 3,
+      radius: isSecondaryNpsEntry(entry) ? (entry.done ? 2.8 : 1.8) : (entry.done ? 4 : 3),
       color: entry.done ? "#111827" : "rgba(17, 24, 39, 0.5)",
       weight: entry.done ? 2 : 1,
       fillColor: checklistOverlayColor(entry.key, entry.done),
@@ -12018,6 +12032,7 @@ function renderLeafletPointLabels() {
     const [lng,lat]=feature.geometry.coordinates;if(!bounds.contains([lat,lng]))continue;
     const props=feature.properties,capital=props.classicalCapital||props.checklistKey==='chinaAncientCapitals';
     if(!capital&&leafletMap.getZoom()<6)continue;
+    if(props.npsSecondary&&leafletMap.getZoom()<10)continue;
     const text=ancientCapitalPointLabel(props,leafletMap.getZoom());if(!text)continue;
     if ((props.classicalCapital || props.checklistKey === "chinaAncientCapitals") && !props.capitalIcon) continue;
     const point=leafletMap.latLngToContainerPoint([lat,lng]),width=Math.min(180,Array.from(text).reduce((n,c)=>n+(/[\u3000-\u9fff]/.test(c)?12:7),0));
@@ -14672,7 +14687,7 @@ function refreshUsNpsBoundaryState(affectedCodes = null) {
     const doneFilter = usNpsDoneFilterExpression();
     if (mapLibreMap.getLayer("us-nps-done-fill")) mapLibreMap.setFilter("us-nps-done-fill", doneFilter);
     if (mapLibreMap.getLayer("us-nps-done-line")) mapLibreMap.setFilter("us-nps-done-line", doneFilter);
-    const firstPointLayer = ["map-points-shadow", "map-points-stroke", "map-points-circle", "map-points-label", "map-points-label-full", "ancient-capital-point", "ancient-capital-label", "ancient-capital-label-full"]
+    const firstPointLayer = ["map-points-shadow", "map-points-stroke", "map-points-circle", "map-points-label", "map-points-label-full", "map-points-nps-secondary-label", "ancient-capital-point", "ancient-capital-label", "ancient-capital-label-full"]
       .find((layerId) => mapLibreMap.getLayer(layerId));
     ["us-nps-fill", "us-nps-done-fill", "us-nps-line", "us-nps-done-line", "us-nps-hit-line"].forEach((layerId) => {
       if (firstPointLayer && mapLibreMap.getLayer(layerId)) mapLibreMap.moveLayer(layerId, firstPointLayer);
@@ -15004,7 +15019,8 @@ function checklistCoordinateFor(item, group = "") {
     cleanEnglishParkName(npsUnit?.name),
     ...(canonical?.aliases || []),
   ].filter(Boolean);
-  const coords = candidates.map((name) => lookup.get(canonicalPlaceKey(name))).find(Boolean);
+  const coords = candidates.map((name) => lookup.get(canonicalPlaceKey(name))).find(Boolean)
+    || (npsUnit?.mapPoint ? [npsUnit.mapPoint.lat,npsUnit.mapPoint.lng,npsUnit.location] : null);
   if (group && checklistCatalog.china5a?.byRegion?.[group] && coords?.[2] && !sameAdminName(group, coords[2])) return null;
   return coords;
 }
