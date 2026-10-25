@@ -1,0 +1,6539 @@
+{
+  "source": "https://www.nature.com/articles/s41597-026-07086-6",
+  "note": "按原图政区名称、所属上级政区、治所位置和年代核对中文；CHGIS与Hartwell仅供地名交叉核验，不替代原研究区界。原名字段保留拼写；未注名岛礁不推定名称。",
+  "upper": {
+    "Jiaozhi Cishibu": "交趾刺史部",
+    "Jingzhou Cishibu": "荆州刺史部",
+    "Yizhou Cishibu": "益州刺史部",
+    "Yangzhou Cishibu": "扬州刺史部",
+    "Xuzhou Cishibu": "徐州刺史部",
+    "Yuzhou Cishibu": "豫州刺史部",
+    "Sili Bu": "司隶部",
+    "Yanzhou Cishibu": "兖州刺史部",
+    "Liangzhou Cishibu": "凉州刺史部",
+    "Jizhou Cishibu": "冀州刺史部",
+    "Qingzhou Cishibu": "青州刺史部",
+    "Bingzhou Cishibu": "并州刺史部",
+    "Shuofang Cishibu": "朔方刺史部",
+    "Youzhou Cishibu": "幽州刺史部",
+    "Lingnan Dao": "岭南道",
+    "Jiangnan West Dao": "江南西道",
+    "Jiangnan East Dao": "江南东道",
+    "Jiannan Dao": "剑南道",
+    "Qianzhong Dao": "黔中道",
+    "Shannan West Dao": "山南西道",
+    "Shannan East Dao": "山南东道",
+    "Huainan Dao": "淮南道",
+    "Henan Dao": "河南道",
+    "Longyou Dao": "陇右道",
+    "Duji Dao": "都畿道",
+    "Hedong Dao": "河东道",
+    "Jingji Dao": "京畿道",
+    "Guannei Dao": "关内道",
+    "Hebei Dao": "河北道",
+    "Guangnanxi Lu": "广南西路",
+    "Guangnan East Lu": "广南东路",
+    "Jinghu South Lu": "荆湖南路",
+    "Fujian Lu": "福建路",
+    "Kuizhou Lu": "夔州路",
+    "Jiangnan West Lu": "江南西路",
+    "Jinghu North Lu": "荆湖北路",
+    "Zizhou Lu": "梓州路",
+    "Chengdufu Lu": "成都府路",
+    "Liangzhe Lu": "两浙路",
+    "Jiangnan East Lu": "江南东路",
+    "Lizhou Lu": "利州路",
+    "Huainan West Lu": "淮南西路",
+    "Jingxi South Lu": "京西南路",
+    "Jingxi North Lu": "京西北路",
+    "Huainan East Lu": "淮南东路",
+    "Qinfeng Lu": "秦凤路",
+    "Yongxingjun Lu": "永兴军路",
+    "Jingdong East Lu": "京东东路",
+    "Jingdong West Lu": "京东西路",
+    "Jingji Lu": "京畿路",
+    "Hebei West Lu": "河北西路",
+    "Hedong Lu": "河东路",
+    "Hebei East Lu": "河北东路",
+    "Guangdong Prov.": "广东省",
+    "Xinjiang": "新疆（未建省）",
+    "Inner Mongolia": "内蒙古",
+    "Jilin": "吉林将军辖区",
+    "Hubei Prov.": "湖北省",
+    "Anhui Prov.": "安徽省",
+    "Gui Zhou": "贵州省",
+    "Gansu Prov.": "甘肃省",
+    "Hunan Prov.": "湖南省",
+    "Shanxi Prov.": "山西省",
+    "Zhili Prov.": "直隶省",
+    "Sichuan Prov.": "四川省",
+    "Shaanxi Prov.": "陕西省",
+    "Shandong Prov.": "山东省",
+    "Jiangsu Prov.": "江苏省",
+    "Wuliyasutai": "乌里雅苏台辖区",
+    "Henan Prov.": "河南省",
+    "Yunnan Prov.": "云南省",
+    "Zhejiang Prov.": "浙江省",
+    "Shengjing": "盛京将军辖区",
+    "Fujian Prov.": "福建省",
+    "Jiangxi Prov.": "江西省",
+    "Guangxi Prov.": "广西省",
+    "Heilongjiang": "黑龙江将军辖区",
+    "Qinghai": "青海",
+    "Tibet": "西藏",
+    "Area to be discussed according to Sino-Russia Treaty of Nerchinsk": "《尼布楚条约》所涉待议地区（原图）"
+  },
+  "prefecture": {
+    "2-0": {
+      "original": "Rinan Jun",
+      "parent": "Jiaozhi Cishibu",
+      "nameZh": "日南郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-1": {
+      "original": "Jiuzhen Jun",
+      "parent": "Jiaozhi Cishibu",
+      "nameZh": "九真郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-2": {
+      "original": "Jiaozhi Jun",
+      "parent": "Jiaozhi Cishibu",
+      "nameZh": "交趾郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-3": {
+      "original": "Hepu Jun",
+      "parent": "Jiaozhi Cishibu",
+      "nameZh": "合浦郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-4": {
+      "original": "Nanhai Jun",
+      "parent": "Jiaozhi Cishibu",
+      "nameZh": "南海郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-5": {
+      "original": "Cangwu Jun",
+      "parent": "Jiaozhi Cishibu",
+      "nameZh": "苍梧郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-6": {
+      "original": "Yulin Jun",
+      "parent": "Jiaozhi Cishibu",
+      "nameZh": "郁林郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-7": {
+      "original": "Guiyang Jun",
+      "parent": "Jingzhou Cishibu",
+      "nameZh": "桂阳郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-8": {
+      "original": "Lingling Jun",
+      "parent": "Jingzhou Cishibu",
+      "nameZh": "零陵郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-9": {
+      "original": "Zangke Jun",
+      "parent": "Yizhou Cishibu",
+      "nameZh": "牂柯郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-10": {
+      "original": "Yizhou Jun",
+      "parent": "Yizhou Cishibu",
+      "nameZh": "益州郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-11": {
+      "original": "Guiji Jun",
+      "parent": "Yangzhou Cishibu",
+      "nameZh": "会稽郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-12": {
+      "original": "Yuexi Jun",
+      "parent": "Yizhou Cishibu",
+      "nameZh": "越嶲郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-13": {
+      "original": "Changsha Guo",
+      "parent": "Jingzhou Cishibu",
+      "nameZh": "长沙国",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-14": {
+      "original": "Jianwei Jun",
+      "parent": "Yizhou Cishibu",
+      "nameZh": "犍为郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-15": {
+      "original": "Wuling Jun",
+      "parent": "Jingzhou Cishibu",
+      "nameZh": "武陵郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-16": {
+      "original": "Yuzhang Jun",
+      "parent": "Yangzhou Cishibu",
+      "nameZh": "豫章郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-17": {
+      "original": "Nan Jun",
+      "parent": "Jingzhou Cishibu",
+      "nameZh": "南郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-18": {
+      "original": "Lujiang Jun",
+      "parent": "Yangzhou Cishibu",
+      "nameZh": "庐江郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-19": {
+      "original": "Ba Jun",
+      "parent": "Yizhou Cishibu",
+      "nameZh": "巴郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-20": {
+      "original": "Jiangxia Jun",
+      "parent": "Jingzhou Cishibu",
+      "nameZh": "江夏郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-21": {
+      "original": "Shu Jun",
+      "parent": "Yizhou Cishibu",
+      "nameZh": "蜀郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-22": {
+      "original": "Danyang Jun",
+      "parent": "Yangzhou Cishibu",
+      "nameZh": "丹阳郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-23": {
+      "original": "Lu'an Guo",
+      "parent": "Yangzhou Cishibu",
+      "nameZh": "六安国",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-24": {
+      "original": "Guanghan Jun",
+      "parent": "Yizhou Cishibu",
+      "nameZh": "广汉郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-25": {
+      "original": "Jiujiang Jun",
+      "parent": "Yangzhou Cishibu",
+      "nameZh": "九江郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-26": {
+      "original": "Hanzhong Jun",
+      "parent": "Yizhou Cishibu",
+      "nameZh": "汉中郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-27": {
+      "original": "Guangling Guo",
+      "parent": "Xuzhou Cishibu",
+      "nameZh": "广陵国",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-28": {
+      "original": "Runan Jun",
+      "parent": "Yuzhou Cishibu",
+      "nameZh": "汝南郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-29": {
+      "original": "Nanyang Jun",
+      "parent": "Jingzhou Cishibu",
+      "nameZh": "南阳郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-30": {
+      "original": "Wudu Jun",
+      "parent": "Yizhou Cishibu",
+      "nameZh": "武都郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-31": {
+      "original": "Sishui Guo",
+      "parent": "Xuzhou Cishibu",
+      "nameZh": "泗水国",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-32": {
+      "original": "Jingzhao Yin",
+      "parent": "Sili Bu",
+      "nameZh": "京兆尹",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-33": {
+      "original": "Huaiyang Guo",
+      "parent": "Yanzhou Cishibu",
+      "nameZh": "淮阳国",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-34": {
+      "original": "Linhuai Jun",
+      "parent": "Xuzhou Cishibu",
+      "nameZh": "临淮郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-35": {
+      "original": "Yingchuan Jun",
+      "parent": "Yuzhou Cishibu",
+      "nameZh": "颍川郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-36": {
+      "original": "Liang Guo",
+      "parent": "Yuzhou Cishibu",
+      "nameZh": "梁国",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-37": {
+      "original": "Hongnong Jun",
+      "parent": "Sili Bu",
+      "nameZh": "弘农郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-38": {
+      "original": "Chu Guo",
+      "parent": "Xuzhou Cishibu",
+      "nameZh": "楚国",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-39": {
+      "original": "You Fufeng",
+      "parent": "Sili Bu",
+      "nameZh": "右扶风",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-40": {
+      "original": "Henan Jun",
+      "parent": "Sili Bu",
+      "nameZh": "河南郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-41": {
+      "original": "Pei Jun",
+      "parent": "Yuzhou Cishibu",
+      "nameZh": "沛郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-42": {
+      "original": "Longxi Jun",
+      "parent": "Liangzhou Cishibu",
+      "nameZh": "陇西郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-43": {
+      "original": "Chenliu Jun",
+      "parent": "Yanzhou Cishibu",
+      "nameZh": "陈留郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-44": {
+      "original": "Zuo Pingyi",
+      "parent": "Sili Bu",
+      "nameZh": "左冯翊",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-45": {
+      "original": "Donghai Jun",
+      "parent": "Xuzhou Cishibu",
+      "nameZh": "东海郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-46": {
+      "original": "Shanyang Jun",
+      "parent": "Yanzhou Cishibu",
+      "nameZh": "山阳郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-47": {
+      "original": "Jiyin Jun",
+      "parent": "Yanzhou Cishibu",
+      "nameZh": "济阴郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-48": {
+      "original": "Tianshui Jun",
+      "parent": "Liangzhou Cishibu",
+      "nameZh": "天水郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-49": {
+      "original": "Lu Guo",
+      "parent": "Xuzhou Cishibu",
+      "nameZh": "鲁国",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-50": {
+      "original": "Chengyang Guo",
+      "parent": "Yanzhou Cishibu",
+      "nameZh": "城阳国",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-51": {
+      "original": "Henei Jun",
+      "parent": "Sili Bu",
+      "nameZh": "河内郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-52": {
+      "original": "Dongping Guo",
+      "parent": "Yanzhou Cishibu",
+      "nameZh": "东平国",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-53": {
+      "original": "Hedong Jun",
+      "parent": "Sili Bu",
+      "nameZh": "河东郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-54": {
+      "original": "Dong Jun",
+      "parent": "Yanzhou Cishibu",
+      "nameZh": "东郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-55": {
+      "original": "Taishan Jun",
+      "parent": "Yanzhou Cishibu",
+      "nameZh": "泰山郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-56": {
+      "original": "Wei Jun",
+      "parent": "Jizhou Cishibu",
+      "nameZh": "魏郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-57": {
+      "original": "Gaomi Guo",
+      "parent": "Qingzhou Cishibu",
+      "nameZh": "高密国",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-58": {
+      "original": "Jincheng Jun",
+      "parent": "Liangzhou Cishibu",
+      "nameZh": "金城郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-59": {
+      "original": "Guangping Guo",
+      "parent": "Jizhou Cishibu",
+      "nameZh": "广平国",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-60": {
+      "original": "Zichuan Guo",
+      "parent": "Qingzhou Cishibu",
+      "nameZh": "淄川国",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-61": {
+      "original": "Zhao Guo",
+      "parent": "Jizhou Cishibu",
+      "nameZh": "赵国",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-62": {
+      "original": "Beihai Jun",
+      "parent": "Qingzhou Cishibu",
+      "nameZh": "北海郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-63": {
+      "original": "Jinan Jun",
+      "parent": "Qingzhou Cishibu",
+      "nameZh": "济南郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-64": {
+      "original": "Shangdang Jun",
+      "parent": "Bingzhou Cishibu",
+      "nameZh": "上党郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-65": {
+      "original": "Qinghe Jun",
+      "parent": "Jizhou Cishibu",
+      "nameZh": "清河郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-66": {
+      "original": "Qi Jun",
+      "parent": "Qingzhou Cishibu",
+      "nameZh": "齐郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-67": {
+      "original": "Jiaodong Guo",
+      "parent": "Qingzhou Cishibu",
+      "nameZh": "胶东国",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-68": {
+      "original": "Qiansheng Jun",
+      "parent": "Qingzhou Cishibu",
+      "nameZh": "千乘郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-69": {
+      "original": "Pingyuan Jun",
+      "parent": "Qingzhou Cishibu",
+      "nameZh": "平原郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-70": {
+      "original": "Zhending Guo",
+      "parent": "Jizhou Cishibu",
+      "nameZh": "真定国",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-71": {
+      "original": "Xindou Guo",
+      "parent": "Jizhou Cishibu",
+      "nameZh": "信都国",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-72": {
+      "original": "Julu Jun",
+      "parent": "Jizhou Cishibu",
+      "nameZh": "巨鹿郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-73": {
+      "original": "Anding Jun",
+      "parent": "Liangzhou Cishibu",
+      "nameZh": "安定郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-74": {
+      "original": "Hejian Guo",
+      "parent": "Jizhou Cishibu",
+      "nameZh": "河间国",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-75": {
+      "original": "Beidi Jun",
+      "parent": "Shuofang Cishibu",
+      "nameZh": "北地郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-76": {
+      "original": "Changshan Jun",
+      "parent": "Jizhou Cishibu",
+      "nameZh": "常山郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-77": {
+      "original": "Shang Jun",
+      "parent": "Shuofang Cishibu",
+      "nameZh": "上郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-78": {
+      "original": "Zhongshan Guo",
+      "parent": "Jizhou Cishibu",
+      "nameZh": "中山国",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-79": {
+      "original": "Taiyuan Jun",
+      "parent": "Bingzhou Cishibu",
+      "nameZh": "太原郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-80": {
+      "original": "Wuwei Jun",
+      "parent": "Liangzhou Cishibu",
+      "nameZh": "武威郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-81": {
+      "original": "Bohai Jun",
+      "parent": "Youzhou Cishibu",
+      "nameZh": "渤海郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-82": {
+      "original": "Zho Jun",
+      "parent": "Youzhou Cishibu",
+      "nameZh": "涿郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-83": {
+      "original": "Xihe Jun",
+      "parent": "Shuofang Cishibu",
+      "nameZh": "西河郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-84": {
+      "original": "Guangyang Guo",
+      "parent": "Youzhou Cishibu",
+      "nameZh": "广阳国",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-85": {
+      "original": "Yunzhong Jun",
+      "parent": "Bingzhou Cishibu",
+      "nameZh": "云中郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-86": {
+      "original": "Dingxiang Jun",
+      "parent": "Bingzhou Cishibu",
+      "nameZh": "定襄郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-87": {
+      "original": "Wuyuan Jun",
+      "parent": "Shuofang Cishibu",
+      "nameZh": "五原郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-88": {
+      "original": "Shuofang Jun",
+      "parent": "Shuofang Cishibu",
+      "nameZh": "朔方郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-89": {
+      "original": "Yanmen Jun",
+      "parent": "Bingzhou Cishibu",
+      "nameZh": "雁门郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-90": {
+      "original": "Dai Jun",
+      "parent": "Bingzhou Cishibu",
+      "nameZh": "代郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-91": {
+      "original": "Shanggu Jun",
+      "parent": "Youzhou Cishibu",
+      "nameZh": "上谷郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-92": {
+      "original": "Jiuquan Jun",
+      "parent": "Liangzhou Cishibu",
+      "nameZh": "酒泉郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-93": {
+      "original": "Yuyang Jun",
+      "parent": "Youzhou Cishibu",
+      "nameZh": "渔阳郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-94": {
+      "original": "Zhangye Jun",
+      "parent": "Liangzhou Cishibu",
+      "nameZh": "张掖郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-95": {
+      "original": "Dunhuang Jun",
+      "parent": "Liangzhou Cishibu",
+      "nameZh": "敦煌郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-96": {
+      "original": "Youbeiping Jun",
+      "parent": "Youzhou Cishibu",
+      "nameZh": "右北平郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-97": {
+      "original": "Xuantu Jun",
+      "parent": "Youzhou Cishibu",
+      "nameZh": "玄菟郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-98": {
+      "original": "Langxie Jun",
+      "parent": "Xuzhou Cishibu",
+      "nameZh": "琅邪郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-99": {
+      "original": "Donglai Jun",
+      "parent": "Qingzhou Cishibu",
+      "nameZh": "东莱郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-100": {
+      "original": "Lelang Jun",
+      "parent": "Youzhou Cishibu",
+      "nameZh": "乐浪郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-101": {
+      "original": "Liaodong Jun",
+      "parent": "Youzhou Cishibu",
+      "nameZh": "辽东郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "2-102": {
+      "original": "Liaoxi Jun",
+      "parent": "Youzhou Cishibu",
+      "nameZh": "辽西郡",
+      "source": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    "742-0": {
+      "original": "Ai Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "爱州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷043上"
+    },
+    "742-1": {
+      "original": "Chang Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "长州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷043上"
+    },
+    "742-2": {
+      "original": "Wu'an Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "武安州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷043上"
+    },
+    "742-3": {
+      "original": "Huan Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "驩州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷043上"
+    },
+    "742-4": {
+      "original": "Jiao Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "交州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷043上"
+    },
+    "742-5": {
+      "original": "Luofu Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "罗伏州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷043上"
+    },
+    "742-6": {
+      "original": "Tanglin Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "唐林州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷043上"
+    },
+    "742-7": {
+      "original": "Ya Zhou, Dan Zhou, Zhen Zhou, Wan'an Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "崖州、儋州、振州、万安州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷043上"
+    },
+    "742-8": {
+      "original": "Lei Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "雷州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-9": {
+      "original": "Wu'e Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "武峨州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷043上"
+    },
+    "742-10": {
+      "original": "Pan Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "潘州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-11": {
+      "original": "Luo Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "罗州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-12": {
+      "original": "Gao Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "高州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-13": {
+      "original": "Bian Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "辨州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-14": {
+      "original": "Bai Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "白州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-15": {
+      "original": "Chun Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "春州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-16": {
+      "original": "En Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "恩州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-17": {
+      "original": "Lian Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "廉州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-18": {
+      "original": "Qin Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "钦州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-19": {
+      "original": "Lao Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "牢州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-20": {
+      "original": "Dou Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "窦州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-21": {
+      "original": "Qin Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "勤州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-22": {
+      "original": "Dang Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "党州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-23": {
+      "original": "Fengzhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "峰州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷043上"
+    },
+    "742-24": {
+      "original": "Rang Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "瀼州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-25": {
+      "original": "Long Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "龙州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-26": {
+      "original": "Yu Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "禺州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-27": {
+      "original": "Lu Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "陆州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷043上"
+    },
+    "742-28": {
+      "original": "Tang Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "汤州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷043上"
+    },
+    "742-29": {
+      "original": "Shan Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "禅州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷043上"
+    },
+    "742-30": {
+      "original": "Gang Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "冈州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷043上"
+    },
+    "742-31": {
+      "original": "Pingqin Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "平琴州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷043上"
+    },
+    "742-32": {
+      "original": "Xin Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "新州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-33": {
+      "original": "Yulin Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "郁林州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-34": {
+      "original": "Heng Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "横州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-35": {
+      "original": "Rong Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "容州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-36": {
+      "original": "Yi Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "义州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-37": {
+      "original": "Long Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "泷州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-38": {
+      "original": "Gui Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "贵州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-39": {
+      "original": "Bin Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "宾州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-40": {
+      "original": "Duan Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "端州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-41": {
+      "original": "Kang Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "康州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-42": {
+      "original": "Xun Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "浔州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-43": {
+      "original": "Gong Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "龚州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-44": {
+      "original": "Cheng Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "澄州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-45": {
+      "original": "Teng Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "滕州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-46": {
+      "original": "Feng Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "封州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-47": {
+      "original": "Yan Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "严州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-48": {
+      "original": "Xiang Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "象州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-49": {
+      "original": "Zhi Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "芝州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-50": {
+      "original": "Yong Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "邕州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-51": {
+      "original": "Meng Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "蒙州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-52": {
+      "original": "Fu Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "富州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷043上"
+    },
+    "742-53": {
+      "original": "Yi Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "宜州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-54": {
+      "original": "Guang Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "广州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-55": {
+      "original": "Liu Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "柳州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-56": {
+      "original": "Xun Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "循州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-57": {
+      "original": "He Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "贺州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-58": {
+      "original": "Lian Zhou",
+      "parent": "Jiangnan West Dao",
+      "nameZh": "连州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-59": {
+      "original": "Zhao Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "昭州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-60": {
+      "original": "Chao Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "潮州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-61": {
+      "original": "Shao Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "韶州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-62": {
+      "original": "Zhang Zhou",
+      "parent": "Jiangnan East Dao",
+      "nameZh": "漳州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷041"
+    },
+    "742-63": {
+      "original": "Gui Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "桂州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-64": {
+      "original": "Quan Zhou",
+      "parent": "Jiangnan East Dao",
+      "nameZh": "泉州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-65": {
+      "original": "Yao Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "姚州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-66": {
+      "original": "Chen Zhou",
+      "parent": "Jiangnan West Dao",
+      "nameZh": "郴州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-67": {
+      "original": "Yong Zhou",
+      "parent": "Jiangnan West Dao",
+      "nameZh": "永州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-68": {
+      "original": "Ting Zhou",
+      "parent": "Jiangnan East Dao",
+      "nameZh": "汀州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷041"
+    },
+    "742-69": {
+      "original": "Qian Zhou",
+      "parent": "Jiangnan West Dao",
+      "nameZh": "虔州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-70": {
+      "original": "Heng Zhou",
+      "parent": "Jiangnan West Dao",
+      "nameZh": "衡州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-71": {
+      "original": "Bo Zhou",
+      "parent": "Qianzhong Dao",
+      "nameZh": "播州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-72": {
+      "original": "Yi Zhou",
+      "parent": "Qianzhong Dao",
+      "nameZh": "夷州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-73": {
+      "original": "Shao Zhou",
+      "parent": "Jiangnan West Dao",
+      "nameZh": "邵州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-74": {
+      "original": "Fei Zhou",
+      "parent": "Qianzhong Dao",
+      "nameZh": "费州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-75": {
+      "original": "Fu Zhou",
+      "parent": "Jiangnan East Dao",
+      "nameZh": "福州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷041"
+    },
+    "742-76": {
+      "original": "Yuan Zhou",
+      "parent": "Jiangnan West Dao",
+      "nameZh": "袁州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-77": {
+      "original": "Ji Zhou",
+      "parent": "Jiangnan West Dao",
+      "nameZh": "吉州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-78": {
+      "original": "Jin Zhou",
+      "parent": "Qianzhong Dao",
+      "nameZh": "锦州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-79": {
+      "original": "Tan Zhou",
+      "parent": "Jiangnan West Dao",
+      "nameZh": "潭州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-80": {
+      "original": "Fu Zhou",
+      "parent": "Jiangnan West Dao",
+      "nameZh": "抚州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷041"
+    },
+    "742-81": {
+      "original": "Qin Zhou",
+      "parent": "Qianzhong Dao",
+      "nameZh": "溱州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷041"
+    },
+    "742-82": {
+      "original": "Jian Zhou",
+      "parent": "Jiangnan East Dao",
+      "nameZh": "建州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-83": {
+      "original": "Chen Zhou",
+      "parent": "Qianzhong Dao",
+      "nameZh": "辰州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-84": {
+      "original": "Nan Zhou",
+      "parent": "Qianzhong Dao",
+      "nameZh": "南州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷041"
+    },
+    "742-85": {
+      "original": "Rong Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "戎州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-86": {
+      "original": "Si Zhou",
+      "parent": "Qianzhong Dao",
+      "nameZh": "思",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-87": {
+      "original": "Lu Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "泸州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-88": {
+      "original": "Lang Zhou",
+      "parent": "Jiangnan West Dao",
+      "nameZh": "郎州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-89": {
+      "original": "Wen Zhou",
+      "parent": "Jiangnan East Dao",
+      "nameZh": "温州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-90": {
+      "original": "Xi Zhou",
+      "parent": "Qianzhong Dao",
+      "nameZh": "溪州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-91": {
+      "original": "Li Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "黎州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-92": {
+      "original": "Qian Zhou",
+      "parent": "Qianzhong Dao",
+      "nameZh": "黔州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-93": {
+      "original": "Jia Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "嘉州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-94": {
+      "original": "Hong Zhou",
+      "parent": "Jiangnan West Dao",
+      "nameZh": "洪州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-95": {
+      "original": "Yue Zhou",
+      "parent": "Jiangnan West Dao",
+      "nameZh": "岳州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-96": {
+      "original": "Yu Zhou",
+      "parent": "Shannan West Dao",
+      "nameZh": "渝州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-97": {
+      "original": "Fu Zhou",
+      "parent": "Shannan West Dao",
+      "nameZh": "涪州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷040"
+    },
+    "742-98": {
+      "original": "Qu Zhou",
+      "parent": "Jiangnan East Dao",
+      "nameZh": "衢州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-99": {
+      "original": "Li Zhou",
+      "parent": "Jiangnan West Dao",
+      "nameZh": "澧州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-100": {
+      "original": "Zi Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "资州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-101": {
+      "original": "Mei Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "眉州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-102": {
+      "original": "Ling Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "陵州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-103": {
+      "original": "Pu Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "普州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-104": {
+      "original": "Rao Zhou",
+      "parent": "Jiangnan West Dao",
+      "nameZh": "饶州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-105": {
+      "original": "He Zhou",
+      "parent": "Shannan West Dao",
+      "nameZh": "合州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-106": {
+      "original": "Zhong Zhou",
+      "parent": "Shannan East Dao",
+      "nameZh": "忠州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-107": {
+      "original": "Jiang Zhou",
+      "parent": "Jiangnan West Dao",
+      "nameZh": "江州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-108": {
+      "original": "Qiong Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "邛州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-109": {
+      "original": "Tai Zhou",
+      "parent": "Jiangnan East Dao",
+      "nameZh": "台州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-110": {
+      "original": "Mu Zhou",
+      "parent": "Jiangnan East Dao",
+      "nameZh": "睦州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-111": {
+      "original": "Jian Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "简州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-112": {
+      "original": "Shu Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "蜀州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-113": {
+      "original": "Sui Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "遂州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-114": {
+      "original": "Shi Zhou",
+      "parent": "Qianzhong Dao",
+      "nameZh": "施州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-115": {
+      "original": "E Zhou",
+      "parent": "Jiangnan West Dao",
+      "nameZh": "鄂州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-116": {
+      "original": "She Zhou",
+      "parent": "Jiangnan East Dao",
+      "nameZh": "歙州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-117": {
+      "original": "Ya Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "雃州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-118": {
+      "original": "Wan Zhou",
+      "parent": "Shannan East Dao",
+      "nameZh": "万州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-119": {
+      "original": "Fu Zhou",
+      "parent": "Shannan East Dao",
+      "nameZh": "复州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷040"
+    },
+    "742-120": {
+      "original": "Qu Zhou",
+      "parent": "Shannan West Dao",
+      "nameZh": "渠州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-121": {
+      "original": "Guo Zhou",
+      "parent": "Shannan West Dao",
+      "nameZh": "果州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷040"
+    },
+    "742-122": {
+      "original": "Ming Zhou",
+      "parent": "Jiangnan East Dao",
+      "nameZh": "明州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-123": {
+      "original": "Yue Zhou",
+      "parent": "Jiangnan East Dao",
+      "nameZh": "越州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-124": {
+      "original": "Peng Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "彭州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-125": {
+      "original": "Zi Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "梓州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-126": {
+      "original": "Wu Zhou",
+      "parent": "Jiangnan East Dao",
+      "nameZh": "务州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-127": {
+      "original": "Han Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "汉州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-128": {
+      "original": "Peng Zhou",
+      "parent": "Shannan West Dao",
+      "nameZh": "蓬州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-129": {
+      "original": "Xia Zhou",
+      "parent": "Shannan East Dao",
+      "nameZh": "峡州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-130": {
+      "original": "Qi Zhou",
+      "parent": "Huainan Dao",
+      "nameZh": "蕲州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-131": {
+      "original": "Wei Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "维州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-132": {
+      "original": "Kai Zhou",
+      "parent": "Shannan West Dao",
+      "nameZh": "开州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-133": {
+      "original": "Gui Zhou",
+      "parent": "Shannan East Dao",
+      "nameZh": "归州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-134": {
+      "original": "Ying Zhou",
+      "parent": "Shannan East Dao",
+      "nameZh": "郢州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-135": {
+      "original": "Gong Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "恭州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-136": {
+      "original": "Shu Zhou",
+      "parent": "Huainan Dao",
+      "nameZh": "舒州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-137": {
+      "original": "Kui Zhou",
+      "parent": "Shannan East Dao",
+      "nameZh": "夔州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-138": {
+      "original": "Jing Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "静州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷042"
+    },
+    "742-139": {
+      "original": "Xiu Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "绣州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-140": {
+      "original": "Tian Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "田州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-141": {
+      "original": "Wu Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "梧州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-142": {
+      "original": "Rong Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "融州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-143": {
+      "original": "Ye Zhou",
+      "parent": "Qianzhong Dao",
+      "nameZh": "业州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷041"
+    },
+    "742-144": {
+      "original": "Gui Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "巂州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷042"
+    },
+    "742-145": {
+      "original": "Rong Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "荣州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-146": {
+      "original": "Kuo Zhou",
+      "parent": "Jiangnan East Dao",
+      "nameZh": "括州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷041"
+    },
+    "742-147": {
+      "original": "Yi Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "益州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷042"
+    },
+    "742-148": {
+      "original": "Jing Zhou",
+      "parent": "Shannan East Dao",
+      "nameZh": "荆州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷040"
+    },
+    "742-149": {
+      "original": "Feng Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "奉州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷042"
+    },
+    "742-150": {
+      "original": "Chun Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "淳州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷043上"
+    },
+    "742-151": {
+      "original": "Annan Zhongduhufu",
+      "parent": "Lingnan Dao",
+      "nameZh": "安南都护府",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-152": {
+      "original": "Huan Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "环州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-153": {
+      "original": "Ju Zhou",
+      "parent": "Qianzhong Dao",
+      "nameZh": "矩州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷041"
+    },
+    "742-154": {
+      "original": "Ying Zhou",
+      "parent": "Qianzhong Dao",
+      "nameZh": "应州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷041"
+    },
+    "742-155": {
+      "original": "Chong Zhou",
+      "parent": "Qianzhong Dao",
+      "nameZh": "充州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷041"
+    },
+    "742-156": {
+      "original": "Zhen Zhou",
+      "parent": "Qianzhong Dao",
+      "nameZh": "珍州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷041"
+    },
+    "742-157": {
+      "original": "Mian Zhou",
+      "parent": "Huainan Dao",
+      "nameZh": "沔州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-158": {
+      "original": "Mian Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "绵州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-159": {
+      "original": "Hu Zhou",
+      "parent": "Jiangnan East Dao",
+      "nameZh": "湖州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-160": {
+      "original": "Huang Zhou",
+      "parent": "Huainan Dao",
+      "nameZh": "黄州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-161": {
+      "original": "Lang Zhou",
+      "parent": "Shannan West Dao",
+      "nameZh": "阆州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-162": {
+      "original": "Xi Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "悉州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷042"
+    },
+    "742-163": {
+      "original": "Zhe Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "柘州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-164": {
+      "original": "Ba Zhou",
+      "parent": "Shannan West Dao",
+      "nameZh": "巴州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-165": {
+      "original": "Mao Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "茂州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-166": {
+      "original": "Tong Zhou",
+      "parent": "Shannan West Dao",
+      "nameZh": "通州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-167": {
+      "original": "Yi Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "翼州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷042"
+    },
+    "742-168": {
+      "original": "Jian Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "剑州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-169": {
+      "original": "An Zhou",
+      "parent": "Huainan Dao",
+      "nameZh": "安州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-170": {
+      "original": "Dang Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "当州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-171": {
+      "original": "Xuan Zhou",
+      "parent": "Jiangnan West Dao",
+      "nameZh": "宣州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-172": {
+      "original": "Long Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "龙州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-173": {
+      "original": "Sui Zhou",
+      "parent": "Shannan East Dao",
+      "nameZh": "随州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-174": {
+      "original": "Fang Zhou",
+      "parent": "Shannan East Dao",
+      "nameZh": "房州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-175": {
+      "original": "Ji Zhou",
+      "parent": "Shannan West Dao",
+      "nameZh": "集州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-176": {
+      "original": "Shen Zhou",
+      "parent": "Huainan Dao",
+      "nameZh": "申州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-177": {
+      "original": "Xiang Zhou",
+      "parent": "Shannan East Dao",
+      "nameZh": "襄州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷040"
+    },
+    "742-178": {
+      "original": "He Zhou",
+      "parent": "Huainan Dao",
+      "nameZh": "和州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-179": {
+      "original": "Su Zhou",
+      "parent": "Jiangnan East Dao",
+      "nameZh": "苏州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-180": {
+      "original": "Lu Zhou",
+      "parent": "Huainan Dao",
+      "nameZh": "卢州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-181": {
+      "original": "Guang Zhou",
+      "parent": "Huainan Dao",
+      "nameZh": "光州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-182": {
+      "original": "Chang Zhou",
+      "parent": "Jiangnan East Dao",
+      "nameZh": "常州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-183": {
+      "original": "Li Zhou",
+      "parent": "Shannan West Dao",
+      "nameZh": "利州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-184": {
+      "original": "Run Zhou",
+      "parent": "Jiangnan East Dao",
+      "nameZh": "润州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-185": {
+      "original": "Song Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "松州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-186": {
+      "original": "Wen Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "文州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-187": {
+      "original": "Shou Zhou",
+      "parent": "Huainan Dao",
+      "nameZh": "寿州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-188": {
+      "original": "Jun Zhou",
+      "parent": "Shannan East Dao",
+      "nameZh": "均州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷040"
+    },
+    "742-189": {
+      "original": "Chu Zhou",
+      "parent": "Huainan Dao",
+      "nameZh": "滁州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷041"
+    },
+    "742-190": {
+      "original": "Jin Zhou",
+      "parent": "Shannan East Dao",
+      "nameZh": "金州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-191": {
+      "original": "Xing Zhou",
+      "parent": "Shannan West Dao",
+      "nameZh": "兴州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-192": {
+      "original": "Fu Zhou",
+      "parent": "Jiannan Dao",
+      "nameZh": "扶州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷042"
+    },
+    "742-193": {
+      "original": "Deng Zhou",
+      "parent": "Shannan East Dao",
+      "nameZh": "邓州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-194": {
+      "original": "Yang Zhou",
+      "parent": "Shannan West Dao",
+      "nameZh": "洋州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-195": {
+      "original": "Ying Zhou",
+      "parent": "Henan Dao",
+      "nameZh": "颖州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-196": {
+      "original": "Yang Zhou",
+      "parent": "Huainan Dao",
+      "nameZh": "扬州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-197": {
+      "original": "Dang Zhou",
+      "parent": "Longyou Dao",
+      "nameZh": "宕州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-198": {
+      "original": "Feng Zhou",
+      "parent": "Shannan West Dao",
+      "nameZh": "凤州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-199": {
+      "original": "Die Zhou",
+      "parent": "Longyou Dao",
+      "nameZh": "叠州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-200": {
+      "original": "Shang Zhou",
+      "parent": "Shannan East Dao",
+      "nameZh": "商州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-201": {
+      "original": "Cheng Zhou",
+      "parent": "Longyou Dao",
+      "nameZh": "成州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷040"
+    },
+    "742-202": {
+      "original": "Ru Zhou",
+      "parent": "Duji Dao",
+      "nameZh": "汝州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-203": {
+      "original": "Xu Zhou",
+      "parent": "Henan Dao",
+      "nameZh": "徐州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-204": {
+      "original": "Guo Zhou",
+      "parent": "Hedong Dao",
+      "nameZh": "虢州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷039"
+    },
+    "742-205": {
+      "original": "Bo Zhou",
+      "parent": "Henan Dao",
+      "nameZh": "亳州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-206": {
+      "original": "Chen Zhou",
+      "parent": "Henan Dao",
+      "nameZh": "陈州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-207": {
+      "original": "Chu Zhou",
+      "parent": "Huainan Dao",
+      "nameZh": "楚州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-208": {
+      "original": "Hua Zhou",
+      "parent": "Jingji Dao",
+      "nameZh": "华州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-209": {
+      "original": "Min Zhou",
+      "parent": "Longyou Dao",
+      "nameZh": "岷州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-210": {
+      "original": "Tao Zhou",
+      "parent": "Longyou Dao",
+      "nameZh": "洮州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-211": {
+      "original": "Shan Zhou",
+      "parent": "Duji Dao",
+      "nameZh": "陜州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-212": {
+      "original": "Jingzhao Fu",
+      "parent": "Jingji Dao",
+      "nameZh": "京兆府",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-213": {
+      "original": "Bin Zhou",
+      "parent": "Jingji Dao",
+      "nameZh": "邠州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-214": {
+      "original": "Si Zhou",
+      "parent": "Henan Dao",
+      "nameZh": "泗州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-215": {
+      "original": "Song Zhou",
+      "parent": "Henan Dao",
+      "nameZh": "宋州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-216": {
+      "original": "Henan Fu",
+      "parent": "Duji Dao",
+      "nameZh": "河南府",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-217": {
+      "original": "Bian Zhou",
+      "parent": "Henan Dao",
+      "nameZh": "汴州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-218": {
+      "original": "Long Zhou",
+      "parent": "Guannei Dao",
+      "nameZh": "陇州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-219": {
+      "original": "Zheng Zhou",
+      "parent": "Duji Dao",
+      "nameZh": "郑州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-220": {
+      "original": "Huai Zhou",
+      "parent": "Duji Dao",
+      "nameZh": "怀州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-221": {
+      "original": "Wei Zhou",
+      "parent": "Longyou Dao",
+      "nameZh": "渭州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-222": {
+      "original": "Qin Zhou",
+      "parent": "Longyou Dao",
+      "nameZh": "秦州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-223": {
+      "original": "Xu Zhou",
+      "parent": "Henan Dao",
+      "nameZh": "许州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-224": {
+      "original": "Ning Zhou",
+      "parent": "Guannei Dao",
+      "nameZh": "宁州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-225": {
+      "original": "Cao Zhou",
+      "parent": "Henan Dao",
+      "nameZh": "曹州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-226": {
+      "original": "Hai Zhou",
+      "parent": "Henan Dao",
+      "nameZh": "海州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-227": {
+      "original": "Fang Zhou",
+      "parent": "Guannei Dao",
+      "nameZh": "坊州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-228": {
+      "original": "Tong Zhou",
+      "parent": "Jingji Dao",
+      "nameZh": "同州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-229": {
+      "original": "Jiang Zhou",
+      "parent": "Hedong Dao",
+      "nameZh": "绛州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-230": {
+      "original": "Hua Zhou",
+      "parent": "Henan Dao",
+      "nameZh": "滑州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-231": {
+      "original": "Wei Zhou",
+      "parent": "Hebei Dao",
+      "nameZh": "卫州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-232": {
+      "original": "He Zhou",
+      "parent": "Longyou Dao",
+      "nameZh": "河州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-233": {
+      "original": "Ze Zhou",
+      "parent": "Hedong Dao",
+      "nameZh": "泽州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-234": {
+      "original": "Kuo Zhou",
+      "parent": "Longyou Dao",
+      "nameZh": "廓州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-235": {
+      "original": "Pu Zhou",
+      "parent": "Henan Dao",
+      "nameZh": "濮州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-236": {
+      "original": "Jing Zhou",
+      "parent": "Guannei Dao",
+      "nameZh": "泾州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-237": {
+      "original": "Fu Zhou",
+      "parent": "Guannei Dao",
+      "nameZh": "鄜州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷037"
+    },
+    "742-238": {
+      "original": "Dan Zhou",
+      "parent": "Guannei Dao",
+      "nameZh": "丹州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-239": {
+      "original": "Ci Zhou",
+      "parent": "Hedong Dao",
+      "nameZh": "慈州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-240": {
+      "original": "Yun Zhou",
+      "parent": "Henan Dao",
+      "nameZh": "郓州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-241": {
+      "original": "Xiang Zhou",
+      "parent": "Hebei Dao",
+      "nameZh": "相州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-242": {
+      "original": "Jin Zhou",
+      "parent": "Hedong Dao",
+      "nameZh": "晋州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-243": {
+      "original": "Yi Zhou",
+      "parent": "Henan Dao",
+      "nameZh": "沂州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-244": {
+      "original": "Yan Zhou",
+      "parent": "Henan Dao",
+      "nameZh": "兖州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-245": {
+      "original": "Wei Zhou",
+      "parent": "Hebei Dao",
+      "nameZh": "魏州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-246": {
+      "original": "Yuan Zhou",
+      "parent": "Guannei Dao",
+      "nameZh": "原州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-247": {
+      "original": "Qin Zhou",
+      "parent": "Hedong Dao",
+      "nameZh": "沁州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-248": {
+      "original": "Lan Zhou",
+      "parent": "Longyou Dao",
+      "nameZh": "兰州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-249": {
+      "original": "Lu Zhou",
+      "parent": "Hedong Dao",
+      "nameZh": "潞州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-250": {
+      "original": "Yan Zhou",
+      "parent": "Guannei Dao",
+      "nameZh": "延州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-251": {
+      "original": "Qing Zhou",
+      "parent": "Guannei Dao",
+      "nameZh": "庆州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-252": {
+      "original": "Hui Zhou",
+      "parent": "Guannei Dao",
+      "nameZh": "会州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-253": {
+      "original": "Mi Zhou",
+      "parent": "Henan Dao",
+      "nameZh": "密州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-254": {
+      "original": "Xi Zhou",
+      "parent": "Hedong Dao",
+      "nameZh": "隰州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-255": {
+      "original": "Bo Zhou",
+      "parent": "Hebei Dao",
+      "nameZh": "博州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-256": {
+      "original": "Fen Zhou",
+      "parent": "Hedong Dao",
+      "nameZh": "汾州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-257": {
+      "original": "Qi Zhou",
+      "parent": "Henan Dao",
+      "nameZh": "齐州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-258": {
+      "original": "Xing Zhou",
+      "parent": "Hebei Dao",
+      "nameZh": "邢州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-259": {
+      "original": "Sui Zhou",
+      "parent": "Guannei Dao",
+      "nameZh": "绥州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-260": {
+      "original": "Zi Zhou",
+      "parent": "Henan Dao",
+      "nameZh": "淄州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-261": {
+      "original": "Bei Zhou",
+      "parent": "Hebei Dao",
+      "nameZh": "贝州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-262": {
+      "original": "Qing Zhou",
+      "parent": "Henan Dao",
+      "nameZh": "青州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-263": {
+      "original": "Shan Zhou",
+      "parent": "Longyou Dao",
+      "nameZh": "鄯州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-264": {
+      "original": "De Zhou",
+      "parent": "Hebei Dao",
+      "nameZh": "德州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-265": {
+      "original": "Zhao Zhou",
+      "parent": "Hebei Dao",
+      "nameZh": "赵州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-266": {
+      "original": "Lai Zhou",
+      "parent": "Henan Dao",
+      "nameZh": "莱州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-267": {
+      "original": "Di Zhou",
+      "parent": "Hebei Dao",
+      "nameZh": "棣州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-268": {
+      "original": "Shi Zhou",
+      "parent": "Hedong Dao",
+      "nameZh": "石州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-269": {
+      "original": "Ji Zhou",
+      "parent": "Hebei Dao",
+      "nameZh": "冀州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-270": {
+      "original": "Yin Zhou",
+      "parent": "Guannei Dao",
+      "nameZh": "银州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-271": {
+      "original": "Deng Zhou",
+      "parent": "Henan Dao",
+      "nameZh": "登州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-272": {
+      "original": "Taiyuan Fu",
+      "parent": "Hedong Dao",
+      "nameZh": "太原府",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-273": {
+      "original": "Shen Zhou",
+      "parent": "Hebei Dao",
+      "nameZh": "深州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-274": {
+      "original": "Xin Zhou",
+      "parent": "Hedong Dao",
+      "nameZh": "忻州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-275": {
+      "original": "Lan Zhou",
+      "parent": "Hedong Dao",
+      "nameZh": "岚州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-276": {
+      "original": "Mo Zhou",
+      "parent": "Hebei Dao",
+      "nameZh": "莫州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-277": {
+      "original": "Yin Zhou",
+      "parent": "Hebei Dao",
+      "nameZh": "瀛州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷039"
+    },
+    "742-278": {
+      "original": "Ding Zhou",
+      "parent": "Hebei Dao",
+      "nameZh": "定州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-279": {
+      "original": "Cang Zhou",
+      "parent": "Hebei Dao",
+      "nameZh": "沧州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-280": {
+      "original": "Dai Zhou",
+      "parent": "Hedong Dao",
+      "nameZh": "代州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-281": {
+      "original": "Shuo Zhou",
+      "parent": "Hedong Dao",
+      "nameZh": "朔州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-282": {
+      "original": "Liang Zhou",
+      "parent": "Longyou Dao",
+      "nameZh": "凉州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-283": {
+      "original": "Yi Zhou",
+      "parent": "Hebei Dao",
+      "nameZh": "易州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-284": {
+      "original": "You Zhou",
+      "parent": "Hebei Dao",
+      "nameZh": "幽州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-285": {
+      "original": "Yu Zhou",
+      "parent": "Hedong Dao",
+      "nameZh": "蔚州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-286": {
+      "original": "Bing Zhou",
+      "parent": "Hebei Dao",
+      "nameZh": "平州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷039"
+    },
+    "742-287": {
+      "original": "Ji Zhou",
+      "parent": "Hebei Dao",
+      "nameZh": "渔州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-288": {
+      "original": "Tanzhou",
+      "parent": "Hebei Dao",
+      "nameZh": "檀州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-289": {
+      "original": "Yun Zhou",
+      "parent": "Hedong Dao",
+      "nameZh": "云州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-290": {
+      "original": "Sha Zhou",
+      "parent": "Longyou Dao",
+      "nameZh": "沙州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-291": {
+      "original": "Gan Zhou",
+      "parent": "Longyou Dao",
+      "nameZh": "甘州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷040"
+    },
+    "742-292": {
+      "original": "Su Zhou",
+      "parent": "Longyou Dao",
+      "nameZh": "肃州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-293": {
+      "original": "Gua Zhou",
+      "parent": "Longyou Dao",
+      "nameZh": "瓜州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-294": {
+      "original": "Ying Zhou",
+      "parent": "Hebei Dao",
+      "nameZh": "营州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-295": {
+      "original": "Xi Zhou",
+      "parent": "Longyou Dao",
+      "nameZh": "西州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-296": {
+      "original": "Yi Zhou",
+      "parent": "Longyou Dao",
+      "nameZh": "伊州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-297": {
+      "original": "Hao Zhou",
+      "parent": "Huainan Dao",
+      "nameZh": "濠州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷041"
+    },
+    "742-298": {
+      "original": "Hang Zhou",
+      "parent": "Jiangnan East Dao",
+      "nameZh": "杭州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-299": {
+      "original": "Dao Zhou",
+      "parent": "Jiangnan West Dao",
+      "nameZh": "道州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-300": {
+      "original": "Fulu Zhou",
+      "parent": "Lingnan Dao",
+      "nameZh": "福禄州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷043上"
+    },
+    "742-301": {
+      "original": "Bi Zhou",
+      "parent": "Shannan West Dao",
+      "nameZh": "璧州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-302": {
+      "original": "Tang Zhou",
+      "parent": "Shannan East Dao",
+      "nameZh": "唐州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-303": {
+      "original": "Liang Zhou",
+      "parent": "Shannan West Dao",
+      "nameZh": "梁州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷040"
+    },
+    "742-304": {
+      "original": "Qi Zhou",
+      "parent": "Jingji Dao",
+      "nameZh": "岐州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷037"
+    },
+    "742-305": {
+      "original": "Pu Zhou",
+      "parent": "Hedong Dao",
+      "nameZh": "蒲州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-306": {
+      "original": "Min Zhou",
+      "parent": "Hebei Dao",
+      "nameZh": "洺州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷039"
+    },
+    "742-307": {
+      "original": "Heng Zhou",
+      "parent": "Hebei Dao",
+      "nameZh": "恒州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-308": {
+      "original": "Ting Zhou",
+      "parent": "Longyou Dao",
+      "nameZh": "庭州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷040"
+    },
+    "742-309": {
+      "original": "Wu Zhou",
+      "parent": "Qianzhong Dao",
+      "nameZh": "巫州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷041"
+    },
+    "742-310": {
+      "original": "Jie Zhou",
+      "parent": "Longyou Dao",
+      "nameZh": "阶州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷040"
+    },
+    "742-311": {
+      "original": "Cai Zhou",
+      "parent": "Henan Dao",
+      "nameZh": "蔡州",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷038"
+    },
+    "742-312": {
+      "original": "Ji Zhou",
+      "parent": "Henan Dao",
+      "nameZh": "济州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-313": {
+      "original": "Yi Zhou",
+      "parent": "Hedong Dao",
+      "nameZh": "仪州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-314": {
+      "original": "Xia Zhou, Sheng Zhou, Feng Zhou, Ling Zhou, You Zhou, Yan Zhou, Chan'yu Daduhufu, Anbei Daduhufu",
+      "parent": "Guannei Dao",
+      "nameZh": "夏州、胜州、丰州、灵州、宥州、盐州、单于大都护府、安北大都护府",
+      "source": "https://zh.wikisource.org/wiki/新唐書/卷037"
+    },
+    "742-315": {
+      "original": "Andong Duhufu",
+      "parent": "Hebei Dao",
+      "nameZh": "安东都护府都护府",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "742-316": {
+      "original": "Gui Zhou",
+      "parent": "Hebei Dao",
+      "nameZh": "妫州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-0": {
+      "original": "Qiong Zhou, Changhua Jun, Wan'an Jun, Zhuya Jun",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "琼州、昌化军、万安军、朱崖军",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷090"
+    },
+    "1102-1": {
+      "original": "Lei Zhou",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "雷州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-2": {
+      "original": "Hua Zhou",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "化州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-3": {
+      "original": "Gao Zhou",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "高州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-4": {
+      "original": "Qin Zhou",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "钦州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷090"
+    },
+    "1102-5": {
+      "original": "Lian Zhou",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "廉州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-6": {
+      "original": "Nanen Zhou",
+      "parent": "Guangnan East Lu",
+      "nameZh": "南恩州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-7": {
+      "original": "Yulin Zhou",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "郁林州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-8": {
+      "original": "Xin Zhou",
+      "parent": "Guangnan East Lu",
+      "nameZh": "新州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-9": {
+      "original": "Heng Zhou",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "横州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-10": {
+      "original": "Rong Zhou",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "容州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-11": {
+      "original": "Gui Zhou",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "贵州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-12": {
+      "original": "Kang Zhou",
+      "parent": "Guangnan East Lu",
+      "nameZh": "康州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-13": {
+      "original": "Teng Zhou",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "滕州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-14": {
+      "original": "Bin Zhou",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "宾州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-15": {
+      "original": "Feng Zhou",
+      "parent": "Guangnan East Lu",
+      "nameZh": "封州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-16": {
+      "original": "Duan Zhou",
+      "parent": "Guangnan East Lu",
+      "nameZh": "端州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-17": {
+      "original": "Xiang Zhou",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "象州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-18": {
+      "original": "Xun Zhou",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "浔州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-19": {
+      "original": "Wu Zhou",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "梧州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-20": {
+      "original": "Temodao",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "特磨道",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-21": {
+      "original": "Guang Zhou",
+      "parent": "Guangnan East Lu",
+      "nameZh": "广州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷090"
+    },
+    "1102-22": {
+      "original": "Hui Zhou",
+      "parent": "Guangnan East Lu",
+      "nameZh": "惠州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-23": {
+      "original": "Ying Zhou",
+      "parent": "Guangnan East Lu",
+      "nameZh": "英州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-24": {
+      "original": "Liu Zhou",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "柳州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-25": {
+      "original": "Xun Zhou",
+      "parent": "Guangnan East Lu",
+      "nameZh": "循州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-26": {
+      "original": "Chao Zhou",
+      "parent": "Guangnan East Lu",
+      "nameZh": "潮州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-27": {
+      "original": "He Zhou",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "贺州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-28": {
+      "original": "Lian Zhou",
+      "parent": "Guangnan East Lu",
+      "nameZh": "连州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷090"
+    },
+    "1102-29": {
+      "original": "Zhao Zhou",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "昭州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-30": {
+      "original": "Mei Zhou",
+      "parent": "Guangnan East Lu",
+      "nameZh": "梅州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-31": {
+      "original": "Yong Zhou",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "邕州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-32": {
+      "original": "Guan Zhou",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "观州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷090"
+    },
+    "1102-33": {
+      "original": "Ziqi",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "自杞",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-34": {
+      "original": "Nanxiong Zhou",
+      "parent": "Guangnan East Lu",
+      "nameZh": "南雄州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-35": {
+      "original": "Yi Zhou",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "宜州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-36": {
+      "original": "Shao Zhou",
+      "parent": "Guangnan East Lu",
+      "nameZh": "韶州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-37": {
+      "original": "Rong Zhou",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "融州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-38": {
+      "original": "Gui Zhou",
+      "parent": "Guangnanxi Lu",
+      "nameZh": "桂州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-39": {
+      "original": "Guiyang Jian",
+      "parent": "Jinghu South Lu",
+      "nameZh": "桂阳监",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷088"
+    },
+    "1102-40": {
+      "original": "Zhang Zhou",
+      "parent": "Fujian Lu",
+      "nameZh": "漳州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-41": {
+      "original": "Quan Zhou",
+      "parent": "Jinghu South Lu",
+      "nameZh": "全州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-42": {
+      "original": "Luodian",
+      "parent": "Kuizhou Lu",
+      "nameZh": "罗殿国",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-43": {
+      "original": "Dao Zhou",
+      "parent": "Jinghu South Lu",
+      "nameZh": "道州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-44": {
+      "original": "Xinghua Jun",
+      "parent": "Fujian Lu",
+      "nameZh": "兴化军",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷089"
+    },
+    "1102-45": {
+      "original": "Nan’an Jun",
+      "parent": "Jiangnan West Lu",
+      "nameZh": "南安军",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷088"
+    },
+    "1102-46": {
+      "original": "Chen Zhou",
+      "parent": "Jinghu South Lu",
+      "nameZh": "郴州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-47": {
+      "original": "Quan Zhou",
+      "parent": "Fujian Lu",
+      "nameZh": "泉州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-48": {
+      "original": "Jing Zhou",
+      "parent": "Jinghu North Lu",
+      "nameZh": "靖州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷088"
+    },
+    "1102-49": {
+      "original": "Ting Zhou",
+      "parent": "Fujian Lu",
+      "nameZh": "汀州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-50": {
+      "original": "Yong Zhou",
+      "parent": "Jinghu South Lu",
+      "nameZh": "永州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-51": {
+      "original": "Wugang Jun",
+      "parent": "Jinghu South Lu",
+      "nameZh": "武冈军",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷088"
+    },
+    "1102-52": {
+      "original": "Heng Zhou",
+      "parent": "Jinghu South Lu",
+      "nameZh": "衡州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-53": {
+      "original": "Qian Zhou",
+      "parent": "Jiangnan West Lu",
+      "nameZh": "虔州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-54": {
+      "original": "Subordianted ethnic prefectures of Qian Zhou",
+      "parent": "Kuizhou Lu",
+      "nameZh": "黔州属羁縻州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷089"
+    },
+    "1102-55": {
+      "original": "Zunyi Jun",
+      "parent": "Kuizhou Lu",
+      "nameZh": "遵义军",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷089"
+    },
+    "1102-56": {
+      "original": "Nanjian Zhou",
+      "parent": "Fujian Lu",
+      "nameZh": "南剑州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷089"
+    },
+    "1102-57": {
+      "original": "Ji Zhou",
+      "parent": "Jiangnan West Lu",
+      "nameZh": "吉州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-58": {
+      "original": "Yuan Zhou",
+      "parent": "Jinghu North Lu",
+      "nameZh": "沅州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-59": {
+      "original": "Bo Zhou",
+      "parent": "Kuizhou Lu",
+      "nameZh": "播州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷089"
+    },
+    "1102-60": {
+      "original": "Cheng Zhou",
+      "parent": "Kuizhou Lu",
+      "nameZh": "承州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷089"
+    },
+    "1102-61": {
+      "original": "Fu Zhou",
+      "parent": "Fujian Lu",
+      "nameZh": "福州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-62": {
+      "original": "Luoshi",
+      "parent": "Zizhou Lu",
+      "nameZh": "罗氏",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷089"
+    },
+    "1102-63": {
+      "original": "Jianchang Jun",
+      "parent": "Jiangnan West Lu",
+      "nameZh": "建昌军",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷088"
+    },
+    "1102-64": {
+      "original": "Shaowu Jun",
+      "parent": "Fujian Lu",
+      "nameZh": "邵武军",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷089"
+    },
+    "1102-65": {
+      "original": "Linjiang Jun",
+      "parent": "Jiangnan West Lu",
+      "nameZh": "临江军",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷088"
+    },
+    "1102-66": {
+      "original": "Xiang Zhou",
+      "parent": "Zizhou Lu",
+      "nameZh": "祥州",
+      "source": "https://zh.wikisource.org/wiki/宋會要輯稿/卷103"
+    },
+    "1102-67": {
+      "original": "Shao Zhou",
+      "parent": "Jinghu South Lu",
+      "nameZh": "邵州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-68": {
+      "original": "Chun Zhou",
+      "parent": "Zizhou Lu",
+      "nameZh": "纯州",
+      "source": "https://zh.wikisource.org/wiki/宋會要輯稿/卷103"
+    },
+    "1102-69": {
+      "original": "Zizhou",
+      "parent": "Zizhou Lu",
+      "nameZh": "滋州",
+      "source": "https://zh.wikisource.org/wiki/宋會要輯稿/卷103"
+    },
+    "1102-70": {
+      "original": "Yuan Zhou",
+      "parent": "Jiangnan West Lu",
+      "nameZh": "袁州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷088"
+    },
+    "1102-71": {
+      "original": "Xu Zhou tribes",
+      "parent": "Zizhou Lu",
+      "nameZh": "叙州诸部",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷089"
+    },
+    "1102-72": {
+      "original": "Qin Zhou",
+      "parent": "Kuizhou Lu",
+      "nameZh": "溱州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷089"
+    },
+    "1102-73": {
+      "original": "Fu Zhou",
+      "parent": "Jiangnan West Lu",
+      "nameZh": "抚州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷088"
+    },
+    "1102-74": {
+      "original": "Yun Zhou",
+      "parent": "Jiangnan West Lu",
+      "nameZh": "筠州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-75": {
+      "original": "Jian Zhou",
+      "parent": "Fujian Lu",
+      "nameZh": "建州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-76": {
+      "original": "Zhen Zhou",
+      "parent": "Kuizhou Lu",
+      "nameZh": "珍州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷089"
+    },
+    "1102-77": {
+      "original": "Rong Zhou",
+      "parent": "Zizhou Lu",
+      "nameZh": "戎州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷089"
+    },
+    "1102-78": {
+      "original": "Lu Zhou",
+      "parent": "Zizhou Lu",
+      "nameZh": "泸州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷089"
+    },
+    "1102-79": {
+      "original": "Qiong tribes",
+      "parent": "Chengdufu Lu",
+      "nameZh": "邛部",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷089"
+    },
+    "1102-80": {
+      "original": "Tan Zhou",
+      "parent": "Jinghu South Lu",
+      "nameZh": "潭州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-81": {
+      "original": "Tianshi",
+      "parent": "Kuizhou Lu",
+      "nameZh": "田氏国",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-82": {
+      "original": "Nanping Jun",
+      "parent": "Kuizhou Lu",
+      "nameZh": "隆化",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-83": {
+      "original": "Fushun Jian",
+      "parent": "Zizhou Lu",
+      "nameZh": "富顺监",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-84": {
+      "original": "Ding Zhou",
+      "parent": "Jinghu North Lu",
+      "nameZh": "鼎州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-85": {
+      "original": "Wen Zhou",
+      "parent": "Liangzhe Lu",
+      "nameZh": "温州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷088"
+    },
+    "1102-86": {
+      "original": "Xin Zhou",
+      "parent": "Jiangnan East Lu",
+      "nameZh": "信州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-87": {
+      "original": "Rong Zhou",
+      "parent": "Zizhou Lu",
+      "nameZh": "荣州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-88": {
+      "original": "Li Zhou",
+      "parent": "Chengdufu Lu",
+      "nameZh": "黎州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷089"
+    },
+    "1102-89": {
+      "original": "Chang Zhou",
+      "parent": "Zizhou Lu",
+      "nameZh": "昌州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-90": {
+      "original": "Qian Zhou",
+      "parent": "Kuizhou Lu",
+      "nameZh": "黔州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷089"
+    },
+    "1102-91": {
+      "original": "Chen Zhou",
+      "parent": "Jinghu North Lu",
+      "nameZh": "辰州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-92": {
+      "original": "Hong Zhou",
+      "parent": "Jiangnan West Lu",
+      "nameZh": "洪州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-93": {
+      "original": "Chu Zhou",
+      "parent": "Liangzhe Lu",
+      "nameZh": "处州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷088"
+    },
+    "1102-94": {
+      "original": "Jia Zhou",
+      "parent": "Chengdufu Lu",
+      "nameZh": "嘉州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-95": {
+      "original": "Yue Zhou",
+      "parent": "Jinghu North Lu",
+      "nameZh": "岳州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-96": {
+      "original": "Gong Zhou",
+      "parent": "Kuizhou Lu",
+      "nameZh": "恭州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷089"
+    },
+    "1102-97": {
+      "original": "Nankang Jun",
+      "parent": "Jiangnan East Lu",
+      "nameZh": "南康军",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷088"
+    },
+    "1102-98": {
+      "original": "Fu Zhou",
+      "parent": "Kuizhou Lu",
+      "nameZh": "涪州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-99": {
+      "original": "Qu Zhou",
+      "parent": "Liangzhe Lu",
+      "nameZh": "衢州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-100": {
+      "original": "Li Zhou",
+      "parent": "Jinghu North Lu",
+      "nameZh": "澧州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-101": {
+      "original": "Zi Zhou",
+      "parent": "Zizhou Lu",
+      "nameZh": "资州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-102": {
+      "original": "Mei Zhou",
+      "parent": "Chengdufu Lu",
+      "nameZh": "眉州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-103": {
+      "original": "Ya Zhou",
+      "parent": "Chengdufu Lu",
+      "nameZh": "雅州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷089"
+    },
+    "1102-104": {
+      "original": "Pu Zhou",
+      "parent": "Zizhou Lu",
+      "nameZh": "普州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-105": {
+      "original": "He Zhou",
+      "parent": "Zizhou Lu",
+      "nameZh": "合州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-106": {
+      "original": "Rao Zhou",
+      "parent": "Jiangnan East Lu",
+      "nameZh": "饶州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷088"
+    },
+    "1102-107": {
+      "original": "Wu Zhou",
+      "parent": "Liangzhe Lu",
+      "nameZh": "婺州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷088"
+    },
+    "1102-108": {
+      "original": "Qiong Zhou",
+      "parent": "Chengdufu Lu",
+      "nameZh": "邛州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-109": {
+      "original": "Xingguo Jun",
+      "parent": "Jiangnan West Lu",
+      "nameZh": "兴国军",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-110": {
+      "original": "Zhong Zhou",
+      "parent": "Kuizhou Lu",
+      "nameZh": "忠州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-111": {
+      "original": "Guang'an Jun",
+      "parent": "Zizhou Lu",
+      "nameZh": "广安军州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-112": {
+      "original": "Tai Zhou",
+      "parent": "Liangzhe Lu",
+      "nameZh": "台州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-113": {
+      "original": "Shu Zhou",
+      "parent": "Chengdufu Lu",
+      "nameZh": "蜀州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-114": {
+      "original": "Jiangling Fu",
+      "parent": "Jinghu North Lu",
+      "nameZh": "江陵府",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-115": {
+      "original": "Mu Zhou",
+      "parent": "Liangzhe Lu",
+      "nameZh": "睦州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-116": {
+      "original": "Liangshan Jun",
+      "parent": "Kuizhou Lu",
+      "nameZh": "梁山",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-117": {
+      "original": "Lingjing Jian",
+      "parent": "Chengdufu Lu",
+      "nameZh": "仁寿监",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-118": {
+      "original": "Huaian Jun",
+      "parent": "Zizhou Lu",
+      "nameZh": "怀安军州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-119": {
+      "original": "Suining Fu",
+      "parent": "Zizhou Lu",
+      "nameZh": "遂宁府",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷089"
+    },
+    "1102-120": {
+      "original": "Shi Zhou",
+      "parent": "Kuizhou Lu",
+      "nameZh": "施州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-121": {
+      "original": "E Zhou",
+      "parent": "Jinghu North Lu",
+      "nameZh": "鄂州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-122": {
+      "original": "She Zhou",
+      "parent": "Jiangnan East Lu",
+      "nameZh": "歙州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-123": {
+      "original": "Wan Zhou",
+      "parent": "Kuizhou Lu",
+      "nameZh": "万州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-124": {
+      "original": "XIshan & Yechuan tribes",
+      "parent": "Chengdufu Lu",
+      "nameZh": "西山野川诸部",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷089"
+    },
+    "1102-125": {
+      "original": "Hanyang Jun",
+      "parent": "Jinghu North Lu",
+      "nameZh": "汉阳军",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷088"
+    },
+    "1102-126": {
+      "original": "Fu Zhou",
+      "parent": "Jinghu North Lu",
+      "nameZh": "复州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷088"
+    },
+    "1102-127": {
+      "original": "Guo Zhou",
+      "parent": "Zizhou Lu",
+      "nameZh": "果州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-128": {
+      "original": "Ming Zhou",
+      "parent": "Liangzhe Lu",
+      "nameZh": "明州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-129": {
+      "original": "Yue Zhou",
+      "parent": "Liangzhe Lu",
+      "nameZh": "越州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-130": {
+      "original": "Qu Zhou",
+      "parent": "Zizhou Lu",
+      "nameZh": "渠州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-131": {
+      "original": "Peng Zhou",
+      "parent": "Chengdufu Lu",
+      "nameZh": "彭州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-132": {
+      "original": "Yongkang Jun",
+      "parent": "Chengdufu Lu",
+      "nameZh": "永康军",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷089"
+    },
+    "1102-133": {
+      "original": "Zi Zhou",
+      "parent": "Zizhou Lu",
+      "nameZh": "梓州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-134": {
+      "original": "Yun'an Jun",
+      "parent": "Kuizhou Lu",
+      "nameZh": "云安",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-135": {
+      "original": "Han Zhou",
+      "parent": "Chengdufu Lu",
+      "nameZh": "汉州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-136": {
+      "original": "Kui Zhou",
+      "parent": "Kuizhou Lu",
+      "nameZh": "夔州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-137": {
+      "original": "Hang Zhou",
+      "parent": "Liangzhe Lu",
+      "nameZh": "杭州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-138": {
+      "original": "Xia Zhou",
+      "parent": "Jinghu North Lu",
+      "nameZh": "峡州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-139": {
+      "original": "Peng Zhou",
+      "parent": "Lizhou Lu",
+      "nameZh": "蓬州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-140": {
+      "original": "Qi Zhou",
+      "parent": "Huainan West Lu",
+      "nameZh": "蕲州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-141": {
+      "original": "Kai Zhou",
+      "parent": "Kuizhou Lu",
+      "nameZh": "开州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-142": {
+      "original": "Gui Zhou",
+      "parent": "Jinghu North Lu",
+      "nameZh": "归州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-143": {
+      "original": "Wei Zhou",
+      "parent": "Chengdufu Lu",
+      "nameZh": "威州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-144": {
+      "original": "Jingmen Jun",
+      "parent": "Jinghu North Lu",
+      "nameZh": "荆门军",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷088"
+    },
+    "1102-145": {
+      "original": "Ying Zhou",
+      "parent": "Jingxi South Lu",
+      "nameZh": "郢州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-146": {
+      "original": "Chi Zhou",
+      "parent": "Jiangnan East Lu",
+      "nameZh": "池州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-147": {
+      "original": "Shu Zhou",
+      "parent": "Huainan West Lu",
+      "nameZh": "舒州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-148": {
+      "original": "Daningjian",
+      "parent": "Kuizhou Lu",
+      "nameZh": "大昌",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-149": {
+      "original": "Mao Zhou",
+      "parent": "Chengdufu Lu",
+      "nameZh": "茂州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-150": {
+      "original": "Huang Zhou",
+      "parent": "Huainan West Lu",
+      "nameZh": "黄州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-151": {
+      "original": "Hu Zhou",
+      "parent": "Liangzhe Lu",
+      "nameZh": "湖州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-152": {
+      "original": "Xuan Zhou",
+      "parent": "Jiangnan East Lu",
+      "nameZh": "宣州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-153": {
+      "original": "Guangde Jun",
+      "parent": "Jiangnan East Lu",
+      "nameZh": "广德军",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷088"
+    },
+    "1102-154": {
+      "original": "Lang Zhou",
+      "parent": "Lizhou Lu",
+      "nameZh": "阆州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-155": {
+      "original": "Mian Zhou",
+      "parent": "Chengdufu Lu",
+      "nameZh": "绵州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-156": {
+      "original": "Jian Zhou",
+      "parent": "Lizhou Lu",
+      "nameZh": "剑州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-157": {
+      "original": "An Zhou",
+      "parent": "Jinghu North Lu",
+      "nameZh": "安州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-158": {
+      "original": "Xiu Zhou",
+      "parent": "Liangzhe Lu",
+      "nameZh": "秀州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-159": {
+      "original": "Da Zhou",
+      "parent": "Kuizhou Lu",
+      "nameZh": "达州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-160": {
+      "original": "Taiping Zhou",
+      "parent": "Jiangnan East Lu",
+      "nameZh": "太平州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-161": {
+      "original": "Wuwei Jun",
+      "parent": "Huainan West Lu",
+      "nameZh": "无为军",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-162": {
+      "original": "Xiang Zhou",
+      "parent": "Jingxi South Lu",
+      "nameZh": "襄州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-163": {
+      "original": "Long Zhou",
+      "parent": "Lizhou Lu",
+      "nameZh": "龙州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-164": {
+      "original": "Sui Zhou",
+      "parent": "Jingxi South Lu",
+      "nameZh": "随州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-165": {
+      "original": "Fang Zhou",
+      "parent": "Jingxi South Lu",
+      "nameZh": "房州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-166": {
+      "original": "Ba Zhou",
+      "parent": "Lizhou Lu",
+      "nameZh": "巴州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-167": {
+      "original": "Xinyang Jun",
+      "parent": "Jingxi North Lu",
+      "nameZh": "信阳军",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-168": {
+      "original": "He Zhou",
+      "parent": "Huainan West Lu",
+      "nameZh": "和州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-169": {
+      "original": "Su Zhou",
+      "parent": "Liangzhe Lu",
+      "nameZh": "苏州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷088"
+    },
+    "1102-170": {
+      "original": "Lu Zhou",
+      "parent": "Huainan West Lu",
+      "nameZh": "庐州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷088"
+    },
+    "1102-171": {
+      "original": "Li Zhou",
+      "parent": "Lizhou Lu",
+      "nameZh": "利州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-172": {
+      "original": "Chang Zhou",
+      "parent": "Liangzhe Lu",
+      "nameZh": "常州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-173": {
+      "original": "Guang Zhou",
+      "parent": "Huainan West Lu",
+      "nameZh": "光州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-174": {
+      "original": "Jiangning Fu",
+      "parent": "Jiangnan East Lu",
+      "nameZh": "江宁府",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷088"
+    },
+    "1102-175": {
+      "original": "Run Zhou",
+      "parent": "Liangzhe Lu",
+      "nameZh": "润州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷088"
+    },
+    "1102-176": {
+      "original": "Sanquan",
+      "parent": "Lizhou Lu",
+      "nameZh": "三泉",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-177": {
+      "original": "Wen Zhou",
+      "parent": "Lizhou Lu",
+      "nameZh": "文州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-178": {
+      "original": "Zhen Zhou",
+      "parent": "Huainan East Lu",
+      "nameZh": "真州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-179": {
+      "original": "Jun Zhou",
+      "parent": "Jingxi South Lu",
+      "nameZh": "均州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-180": {
+      "original": "Chu Zhou",
+      "parent": "Huainan East Lu",
+      "nameZh": "滁州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-181": {
+      "original": "Jin Zhou",
+      "parent": "Jingxi South Lu",
+      "nameZh": "金州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-182": {
+      "original": "Tong Zhou",
+      "parent": "Huainan East Lu",
+      "nameZh": "通州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-183": {
+      "original": "Shou Zhou",
+      "parent": "Huainan West Lu",
+      "nameZh": "寿州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷088"
+    },
+    "1102-184": {
+      "original": "Xing Zhou",
+      "parent": "Lizhou Lu",
+      "nameZh": "兴州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-185": {
+      "original": "Tang Zhou",
+      "parent": "Jingxi South Lu",
+      "nameZh": "唐州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-186": {
+      "original": "Xingyuanfu",
+      "parent": "Lizhou Lu",
+      "nameZh": "兴元府",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-187": {
+      "original": "Yang Zhou",
+      "parent": "Huainan East Lu",
+      "nameZh": "扬州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-188": {
+      "original": "Jie Zhou",
+      "parent": "Qinfeng Lu",
+      "nameZh": "阶州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-189": {
+      "original": "Hao Zhou",
+      "parent": "Huainan West Lu",
+      "nameZh": "濠州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-190": {
+      "original": "Cai Zhou",
+      "parent": "Jingxi North Lu",
+      "nameZh": "蔡州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-191": {
+      "original": "Deng Zhou",
+      "parent": "Jingxi South Lu",
+      "nameZh": "邓州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-192": {
+      "original": "Yang Zhou",
+      "parent": "Lizhou Lu",
+      "nameZh": "洋州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-193": {
+      "original": "Gaoyou Jun",
+      "parent": "Huainan East Lu",
+      "nameZh": "高邮军",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-194": {
+      "original": "Ying Zhou",
+      "parent": "Jingxi North Lu",
+      "nameZh": "颍州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷085"
+    },
+    "1102-195": {
+      "original": "Tai Zhou",
+      "parent": "Huainan East Lu",
+      "nameZh": "泰州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-196": {
+      "original": "Cheng Zhou",
+      "parent": "Qinfeng Lu",
+      "nameZh": "成州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-197": {
+      "original": "Feng Zhou",
+      "parent": "Qinfeng Lu",
+      "nameZh": "凤州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-198": {
+      "original": "Chen Zhou",
+      "parent": "Jingxi North Lu",
+      "nameZh": "陈州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-199": {
+      "original": "Si Zhou",
+      "parent": "Huainan East Lu",
+      "nameZh": "泗州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-200": {
+      "original": "Shang Zhou",
+      "parent": "Yongxingjun Lu",
+      "nameZh": "商州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-201": {
+      "original": "Ru Zhou",
+      "parent": "Jingxi North Lu",
+      "nameZh": "汝州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-202": {
+      "original": "Yingchang Fu",
+      "parent": "Jingxi North Lu",
+      "nameZh": "颖昌府",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-203": {
+      "original": "Su Zhou",
+      "parent": "Huainan East Lu",
+      "nameZh": "宿州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-204": {
+      "original": "Guo Zhou",
+      "parent": "Yongxingjun Lu",
+      "nameZh": "虢州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-205": {
+      "original": "Bo Zhou",
+      "parent": "Huainan East Lu",
+      "nameZh": "亳州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-206": {
+      "original": "Chu Zhou",
+      "parent": "Huainan East Lu",
+      "nameZh": "楚州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-207": {
+      "original": "Min Zhou",
+      "parent": "Qinfeng Lu",
+      "nameZh": "岷州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-208": {
+      "original": "Jingzhao Fu",
+      "parent": "Yongxingjun Lu",
+      "nameZh": "京兆府",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-209": {
+      "original": "Lianshui Jun",
+      "parent": "Huainan East Lu",
+      "nameZh": "涟水军",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷088"
+    },
+    "1102-210": {
+      "original": "Fengxiang Fu",
+      "parent": "Qinfeng Lu",
+      "nameZh": "凤翔府",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-211": {
+      "original": "Long Zhou",
+      "parent": "Qinfeng Lu",
+      "nameZh": "陇州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-212": {
+      "original": "Tao Zhou",
+      "parent": "Qinfeng Lu",
+      "nameZh": "洮州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷087"
+    },
+    "1102-213": {
+      "original": "Hua Zhou",
+      "parent": "Yongxingjun Lu",
+      "nameZh": "华州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-214": {
+      "original": "Henan Fu",
+      "parent": "Jingxi North Lu",
+      "nameZh": "河南府",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-215": {
+      "original": "Huaiyang Jun",
+      "parent": "Jingdong East Lu",
+      "nameZh": "淮阳军",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷085"
+    },
+    "1102-216": {
+      "original": "Bin Zhou",
+      "parent": "Yongxingjun Lu",
+      "nameZh": "邠州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-217": {
+      "original": "Yingtian Fu",
+      "parent": "Jingdong West Lu",
+      "nameZh": "应天府",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-218": {
+      "original": "Yao Zhou",
+      "parent": "Yongxingjun Lu",
+      "nameZh": "耀州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-219": {
+      "original": "Zheng Zhou",
+      "parent": "Jingxi North Lu",
+      "nameZh": "郑州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷085"
+    },
+    "1102-220": {
+      "original": "Shan Zhou",
+      "parent": "Yongxingjun Lu",
+      "nameZh": "陜州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-221": {
+      "original": "Meng Zhou",
+      "parent": "Jingxi North Lu",
+      "nameZh": "孟州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-222": {
+      "original": "Jing Zhou",
+      "parent": "Qinfeng Lu",
+      "nameZh": "泾州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-223": {
+      "original": "Jie Zhou",
+      "parent": "Yongxingjun Lu",
+      "nameZh": "解州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-224": {
+      "original": "Kaifeng Fu",
+      "parent": "Jingji Lu",
+      "nameZh": "开封府",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-225": {
+      "original": "Gong Zhou",
+      "parent": "Qinfeng Lu",
+      "nameZh": "巩州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷087"
+    },
+    "1102-226": {
+      "original": "Shan Zhou",
+      "parent": "Jingdong West Lu",
+      "nameZh": "单州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-227": {
+      "original": "Huai Zhou",
+      "parent": "Hebei West Lu",
+      "nameZh": "怀州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-228": {
+      "original": "Wei Zhou",
+      "parent": "Qinfeng Lu",
+      "nameZh": "渭州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-229": {
+      "original": "Xi Zhou",
+      "parent": "Qinfeng Lu",
+      "nameZh": "熙州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-230": {
+      "original": "Qin Zhou",
+      "parent": "Qinfeng Lu",
+      "nameZh": "秦州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-231": {
+      "original": "Fang Zhou",
+      "parent": "Yongxingjun Lu",
+      "nameZh": "坊州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-232": {
+      "original": "Xu Zhou",
+      "parent": "Jingdong West Lu",
+      "nameZh": "徐州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-233": {
+      "original": "Ning Zhou",
+      "parent": "Yongxingjun Lu",
+      "nameZh": "宁州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-234": {
+      "original": "Hezhong Fu",
+      "parent": "Yongxingjun Lu",
+      "nameZh": "河中府",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-235": {
+      "original": "Xingren Fu",
+      "parent": "Jingdong West Lu",
+      "nameZh": "兴仁府",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷085"
+    },
+    "1102-236": {
+      "original": "He Zhou",
+      "parent": "Qinfeng Lu",
+      "nameZh": "河州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-237": {
+      "original": "Hai Zhou",
+      "parent": "Huainan East Lu",
+      "nameZh": "海州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1102-238": {
+      "original": "Tong Zhou",
+      "parent": "Yongxingjun Lu",
+      "nameZh": "同州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-239": {
+      "original": "Hua Zhou",
+      "parent": "Jingxi North Lu",
+      "nameZh": "滑州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷085"
+    },
+    "1102-240": {
+      "original": "Deshun Jun",
+      "parent": "Qinfeng Lu",
+      "nameZh": "德顺军",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-241": {
+      "original": "Wei Zhou",
+      "parent": "Hebei West Lu",
+      "nameZh": "卫州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-242": {
+      "original": "Jiang Zhou",
+      "parent": "Hedong Lu",
+      "nameZh": "绛州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-243": {
+      "original": "Anli Jun",
+      "parent": "Hebei West Lu",
+      "nameZh": "安利军",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷086"
+    },
+    "1102-244": {
+      "original": "Ji Zhou",
+      "parent": "Jingdong West Lu",
+      "nameZh": "济州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-245": {
+      "original": "Ze Zhou",
+      "parent": "Hedong Lu",
+      "nameZh": "泽州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-246": {
+      "original": "Fu Zhou",
+      "parent": "Yongxingjun Lu",
+      "nameZh": "鄜州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-247": {
+      "original": "Yuan Zhou",
+      "parent": "Qinfeng Lu",
+      "nameZh": "原州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-248": {
+      "original": "Pu Zhou",
+      "parent": "Jingdong West Lu",
+      "nameZh": "濮州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-249": {
+      "original": "Lan Zhou",
+      "parent": "Qinfeng Lu",
+      "nameZh": "兰州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷087"
+    },
+    "1102-250": {
+      "original": "Dan Zhou",
+      "parent": "Yongxingjun Lu",
+      "nameZh": "丹州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-251": {
+      "original": "Jishi Jun",
+      "parent": "Qinfeng Lu",
+      "nameZh": "积石军",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷087"
+    },
+    "1102-252": {
+      "original": "Kuo Zhou",
+      "parent": "Qinfeng Lu",
+      "nameZh": "廓州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷087"
+    },
+    "1102-253": {
+      "original": "Kaide Fu",
+      "parent": "Hebei East Lu",
+      "nameZh": "开德府",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷086"
+    },
+    "1102-254": {
+      "original": "Zhenrong Jun",
+      "parent": "Qinfeng Lu",
+      "nameZh": "镇戎军",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷087"
+    },
+    "1102-255": {
+      "original": "Xiang Zhou",
+      "parent": "Hebei West Lu",
+      "nameZh": "相州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-256": {
+      "original": "Hui Zhou",
+      "parent": "Qinfeng Lu",
+      "nameZh": "会州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷087"
+    },
+    "1102-257": {
+      "original": "Xi'an Zhou",
+      "parent": "Qinfeng Lu",
+      "nameZh": "西安州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷087"
+    },
+    "1102-258": {
+      "original": "Jin Zhou",
+      "parent": "Hedong Lu",
+      "nameZh": "晋州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-259": {
+      "original": "Yi Zhou",
+      "parent": "Jingdong East Lu",
+      "nameZh": "沂州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-260": {
+      "original": "Yun Zhou",
+      "parent": "Jingdong West Lu",
+      "nameZh": "郓州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-261": {
+      "original": "Huaide Jun",
+      "parent": "Qinfeng Lu",
+      "nameZh": "怀德军",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷087"
+    },
+    "1102-262": {
+      "original": "Xining Zhou",
+      "parent": "Qinfeng Lu",
+      "nameZh": "西宁州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷087"
+    },
+    "1102-263": {
+      "original": "Huang Zhou",
+      "parent": "Qinfeng Lu",
+      "nameZh": "湟州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷087"
+    },
+    "1102-264": {
+      "original": "Longde Fu",
+      "parent": "Hedong Lu",
+      "nameZh": "隆德府",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷086"
+    },
+    "1102-265": {
+      "original": "Huan Zhou",
+      "parent": "Yongxingjun Lu",
+      "nameZh": "环州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-266": {
+      "original": "Yan Zhou",
+      "parent": "Jingdong West Lu",
+      "nameZh": "兖州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-267": {
+      "original": "Qing Zhou",
+      "parent": "Yongxingjun Lu",
+      "nameZh": "庆州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-268": {
+      "original": "Nao'an Jun",
+      "parent": "Yongxingjun Lu",
+      "nameZh": "保安军",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷087"
+    },
+    "1102-269": {
+      "original": "Ci Zhou",
+      "parent": "Hebei West Lu",
+      "nameZh": "磁州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-270": {
+      "original": "Dingbian Jun",
+      "parent": "Yongxingjun Lu",
+      "nameZh": "定边军",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷087"
+    },
+    "1102-271": {
+      "original": "Weisheng Jun",
+      "parent": "Hedong Lu",
+      "nameZh": "威胜军",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷086#威勝軍"
+    },
+    "1102-272": {
+      "original": "Mi Zhou",
+      "parent": "Jingdong East Lu",
+      "nameZh": "密州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-273": {
+      "original": "Xi Zhou",
+      "parent": "Hedong Lu",
+      "nameZh": "隰州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-274": {
+      "original": "Bo Zhou",
+      "parent": "Hebei East Lu",
+      "nameZh": "博州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-275": {
+      "original": "Min Zhou",
+      "parent": "Hebei West Lu",
+      "nameZh": "洺州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷086"
+    },
+    "1102-276": {
+      "original": "Daming Fu",
+      "parent": "Hebei East Lu",
+      "nameZh": "大名府",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-277": {
+      "original": "Fen Zhou",
+      "parent": "Hedong Lu",
+      "nameZh": "汾州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-278": {
+      "original": "Liao Zhou",
+      "parent": "Hedong Lu",
+      "nameZh": "辽州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷086"
+    },
+    "1102-279": {
+      "original": "Qi Zhou",
+      "parent": "Jingdong East Lu",
+      "nameZh": "齐州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-280": {
+      "original": "Xing Zhou",
+      "parent": "Hebei West Lu",
+      "nameZh": "邢州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-281": {
+      "original": "Yan'an Fu",
+      "parent": "Yongxingjun Lu",
+      "nameZh": "延安府",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷087"
+    },
+    "1102-282": {
+      "original": "Weizhou",
+      "parent": "Jingdong East Lu",
+      "nameZh": "潍州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-283": {
+      "original": "Zi Zhou",
+      "parent": "Jingdong East Lu",
+      "nameZh": "淄州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-284": {
+      "original": "En Zhou",
+      "parent": "Hebei East Lu",
+      "nameZh": "恩州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-285": {
+      "original": "Suide Jun",
+      "parent": "Yongxingjun Lu",
+      "nameZh": "绥德军",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷087"
+    },
+    "1102-286": {
+      "original": "De Zhou",
+      "parent": "Hebei East Lu",
+      "nameZh": "德州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-287": {
+      "original": "Qing Zhou",
+      "parent": "Jingdong East Lu",
+      "nameZh": "青州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-288": {
+      "original": "Zhao Zhou",
+      "parent": "Hebei West Lu",
+      "nameZh": "赵州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-289": {
+      "original": "Shi Zhou",
+      "parent": "Hedong Lu",
+      "nameZh": "石州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-290": {
+      "original": "Di Zhou",
+      "parent": "Hebei East Lu",
+      "nameZh": "棣州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-291": {
+      "original": "Pingding Jun",
+      "parent": "Hedong Lu",
+      "nameZh": "平定军",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-292": {
+      "original": "Lai Zhou",
+      "parent": "Jingdong East Lu",
+      "nameZh": "莱州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-293": {
+      "original": "Bin Zhou",
+      "parent": "Hebei East Lu",
+      "nameZh": "滨州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-294": {
+      "original": "Ji Zhou",
+      "parent": "Hebei East Lu",
+      "nameZh": "冀州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-295": {
+      "original": "Yongjing Jun",
+      "parent": "Hebei East Lu",
+      "nameZh": "永静军",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-296": {
+      "original": "Jinning Jun",
+      "parent": "Hedong Lu",
+      "nameZh": "晋宁军",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷086"
+    },
+    "1102-297": {
+      "original": "Xian Zhou",
+      "parent": "Hedong Lu",
+      "nameZh": "宪州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-298": {
+      "original": "Deng Zhou",
+      "parent": "Jingdong East Lu",
+      "nameZh": "登州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-299": {
+      "original": "Taiyuan Fu",
+      "parent": "Hedong Lu",
+      "nameZh": "太原府",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-300": {
+      "original": "Shen Zhou",
+      "parent": "Hebei West Lu",
+      "nameZh": "深州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-301": {
+      "original": "Lan Zhou",
+      "parent": "Hedong Lu",
+      "nameZh": "岚州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-302": {
+      "original": "Xin Zhou",
+      "parent": "Hedong Lu",
+      "nameZh": "忻州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-303": {
+      "original": "Qi Zhou",
+      "parent": "Hebei West Lu",
+      "nameZh": "祁州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-304": {
+      "original": "Kelan Jun",
+      "parent": "Hedong Lu",
+      "nameZh": "岢岚军",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-305": {
+      "original": "Ninghua Jun",
+      "parent": "Hedong Lu",
+      "nameZh": "宁化军",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-306": {
+      "original": "Hejian Fu",
+      "parent": "Hebei East Lu",
+      "nameZh": "河间府",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷086"
+    },
+    "1102-307": {
+      "original": "Lin Zhou",
+      "parent": "Hedong Lu",
+      "nameZh": "麟州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-308": {
+      "original": "Baode Jun",
+      "parent": "Hedong Lu",
+      "nameZh": "保德军",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-309": {
+      "original": "Mo Zhou",
+      "parent": "Hebei East Lu",
+      "nameZh": "莫州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-310": {
+      "original": "Shun'an Jun",
+      "parent": "Hebei West Lu",
+      "nameZh": "顺安军",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-311": {
+      "original": "Zhending Fu",
+      "parent": "Hebei West Lu",
+      "nameZh": "真定府",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-312": {
+      "original": "Bao Zhou",
+      "parent": "Hebei West Lu",
+      "nameZh": "保州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-313": {
+      "original": "Ding Zhou",
+      "parent": "Hebei West Lu",
+      "nameZh": "定州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-314": {
+      "original": "Fu Zhou",
+      "parent": "Hedong Lu",
+      "nameZh": "府州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-315": {
+      "original": "Baoding Jun",
+      "parent": "Hebei East Lu",
+      "nameZh": "保定军",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-316": {
+      "original": "Guangxin Jun",
+      "parent": "Hebei West Lu",
+      "nameZh": "广信军",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-317": {
+      "original": "Huoshan Jun",
+      "parent": "Hedong Lu",
+      "nameZh": "火山军",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-318": {
+      "original": "Ansu Jun",
+      "parent": "Hebei West Lu",
+      "nameZh": "安肃军",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-319": {
+      "original": "Xiong Zhou",
+      "parent": "Hebei East Lu",
+      "nameZh": "雄州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-320": {
+      "original": "Ba Zhou",
+      "parent": "Hebei East Lu",
+      "nameZh": "霸州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-321": {
+      "original": "Cang Zhou",
+      "parent": "Hebei East Lu",
+      "nameZh": "沧州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-322": {
+      "original": "Qing Zhou",
+      "parent": "Hebei East Lu",
+      "nameZh": "清州",
+      "source": "https://zh.wikisource.org/wiki/宋史/卷086"
+    },
+    "1102-323": {
+      "original": "Xin'an Jun",
+      "parent": "Hebei East Lu",
+      "nameZh": "信安军",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-324": {
+      "original": "Feng Zhou",
+      "parent": "Hedong Lu",
+      "nameZh": "丰州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-325": {
+      "original": "Dai Zhou",
+      "parent": "Hedong Lu",
+      "nameZh": "代州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-326": {
+      "original": "Yongning Jun",
+      "parent": "Hebei West Lu",
+      "nameZh": "永宁军",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-327": {
+      "original": "Chengdufu",
+      "parent": "Chengdufu Lu",
+      "nameZh": "成都府",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-328": {
+      "original": "Jian Zhou",
+      "parent": "Chengdufu Lu",
+      "nameZh": "简州",
+      "source": "https://doi.org/10.7910/DVN/29302"
+    },
+    "1102-329": {
+      "original": "Jiang Zhou",
+      "parent": "Jiangnan East Lu",
+      "nameZh": "江州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-0": {
+      "original": "-",
+      "parent": "Guangdong Prov.",
+      "nameZh": "原图未注明岛礁",
+      "source": "https://www.nature.com/articles/s41597-026-07086-6"
+    },
+    "1820-1": {
+      "original": "Akesu",
+      "parent": "Xinjiang",
+      "nameZh": "阿克苏",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-2": {
+      "original": "Alashan'eluteqi",
+      "parent": "Inner Mongolia",
+      "nameZh": "阿拉善额鲁特旗",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷77"
+    },
+    "1820-3": {
+      "original": "Alechuka",
+      "parent": "Jilin",
+      "nameZh": "阿勒楚喀",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-4": {
+      "original": "Anlu Fu",
+      "parent": "Hubei Prov.",
+      "nameZh": "安陆府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-5": {
+      "original": "Anqing Fu",
+      "parent": "Anhui Prov.",
+      "nameZh": "安庆府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-6": {
+      "original": "Anshun Fu",
+      "parent": "Gui Zhou",
+      "nameZh": "安顺府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-7": {
+      "original": "Anxi Zhou",
+      "parent": "Gansu Prov.",
+      "nameZh": "安西州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-8": {
+      "original": "Balikun",
+      "parent": "Xinjiang",
+      "nameZh": "巴里坤",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-9": {
+      "original": "Baiduna",
+      "parent": "Jilin",
+      "nameZh": "伯都讷",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷56"
+    },
+    "1820-10": {
+      "original": "Baoqing Fu",
+      "parent": "Hunan Prov.",
+      "nameZh": "宝庆府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-11": {
+      "original": "Baode Zhou",
+      "parent": "Shanxi Prov.",
+      "nameZh": "保德州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-12": {
+      "original": "Baoding Fu",
+      "parent": "Zhili Prov.",
+      "nameZh": "保定府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-13": {
+      "original": "Baoning Fu",
+      "parent": "Sichuan Prov.",
+      "nameZh": "保宁府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-14": {
+      "original": "Bin Zhou",
+      "parent": "Shaanxi Prov.",
+      "nameZh": "邠州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-15": {
+      "original": "Caozhou Fu",
+      "parent": "Shandong Prov.",
+      "nameZh": "曹州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-16": {
+      "original": "Changde Fu",
+      "parent": "Hunan Prov.",
+      "nameZh": "常德府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-17": {
+      "original": "Changzhou Fu",
+      "parent": "Jiangsu Prov.",
+      "nameZh": "常州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-18": {
+      "original": "Chaozhou Fu",
+      "parent": "Guangdong Prov.",
+      "nameZh": "潮州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-19": {
+      "original": "Chechen Han Bu",
+      "parent": "Wuliyasutai",
+      "nameZh": "车臣汗部",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷78"
+    },
+    "1820-20": {
+      "original": "Chen Zhou",
+      "parent": "Hunan Prov.",
+      "nameZh": "郴州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-21": {
+      "original": "Chenzhou Fu",
+      "parent": "Hunan Prov.",
+      "nameZh": "辰州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-22": {
+      "original": "Chenzhou Fu",
+      "parent": "Henan Prov.",
+      "nameZh": "陈州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-23": {
+      "original": "Chengdufu",
+      "parent": "Sichuan Prov.",
+      "nameZh": "成都府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-24": {
+      "original": "Chengjiang Fu",
+      "parent": "Yunnan Prov.",
+      "nameZh": "澂江府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-25": {
+      "original": "Chizhou Fu",
+      "parent": "Anhui Prov.",
+      "nameZh": "池州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-26": {
+      "original": "Chu Zhou",
+      "parent": "Anhui Prov.",
+      "nameZh": "滁州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-27": {
+      "original": "Chuxiong Fu",
+      "parent": "Yunnan Prov.",
+      "nameZh": "楚雄府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-28": {
+      "original": "Chuzhou Fu",
+      "parent": "Zhejiang Prov.",
+      "nameZh": "处州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-29": {
+      "original": "Darganga Ranch",
+      "parent": "Inner Mongolia",
+      "nameZh": "达里冈崖牧场",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷77"
+    },
+    "1820-30": {
+      "original": "Dading Fu",
+      "parent": "Gui Zhou",
+      "nameZh": "大定府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-31": {
+      "original": "Dali Fu",
+      "parent": "Yunnan Prov.",
+      "nameZh": "大理府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-32": {
+      "original": "Dalinghe Ranch",
+      "parent": "Shengjing",
+      "nameZh": "大凌河牧场",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷55"
+    },
+    "1820-33": {
+      "original": "Daming Fu",
+      "parent": "Zhili Prov.",
+      "nameZh": "大名府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-34": {
+      "original": "Datong Fu",
+      "parent": "Shanxi Prov.",
+      "nameZh": "大同府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-35": {
+      "original": "Dai Zhou",
+      "parent": "Shanxi Prov.",
+      "nameZh": "代州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-36": {
+      "original": "De'an Fu",
+      "parent": "Hubei Prov.",
+      "nameZh": "德安府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-37": {
+      "original": "Dengzhou Fu",
+      "parent": "Shandong Prov.",
+      "nameZh": "登州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-38": {
+      "original": "Ding Zhou",
+      "parent": "Zhili Prov.",
+      "nameZh": "定州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-39": {
+      "original": "Dongchang Fu",
+      "parent": "Shandong Prov.",
+      "nameZh": "东昌府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-40": {
+      "original": "Dongchuan Fu",
+      "parent": "Yunnan Prov.",
+      "nameZh": "东川府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-41": {
+      "original": "Dongsha Islands",
+      "parent": "Guangdong Prov.",
+      "nameZh": "东沙群岛",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷72"
+    },
+    "1820-42": {
+      "original": "Duyun Fu",
+      "parent": "Gui Zhou",
+      "nameZh": "都匀府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-43": {
+      "original": "Ejina Turehot Tribes",
+      "parent": "Inner Mongolia",
+      "nameZh": "额济纳土尔扈特部",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷77"
+    },
+    "1820-44": {
+      "original": "Fenzhou Fu",
+      "parent": "Shanxi Prov.",
+      "nameZh": "汾州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-45": {
+      "original": "Fenghuang Ting",
+      "parent": "Hunan Prov.",
+      "nameZh": "凤凰厅",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-46": {
+      "original": "Fengxiang Fu",
+      "parent": "Shaanxi Prov.",
+      "nameZh": "凤翔府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-47": {
+      "original": "Fengyang Fu",
+      "parent": "Anhui Prov.",
+      "nameZh": "凤阳府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-48": {
+      "original": "Fengtian Fu",
+      "parent": "Shengjing",
+      "nameZh": "奉天府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-49": {
+      "original": "Fu Zhou",
+      "parent": "Shaanxi Prov.",
+      "nameZh": "鄜州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-50": {
+      "original": "Fogang Ting",
+      "parent": "Guangdong Prov.",
+      "nameZh": "佛冈厅",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷72"
+    },
+    "1820-51": {
+      "original": "Funing Fu",
+      "parent": "Fujian Prov.",
+      "nameZh": "福宁府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-52": {
+      "original": "Fuzhou Fu",
+      "parent": "Fujian Prov.",
+      "nameZh": "福州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-53": {
+      "original": "Fuzhou Fu",
+      "parent": "Jiangxi Prov.",
+      "nameZh": "抚州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-54": {
+      "original": "Ganzhou Fu",
+      "parent": "Gansu Prov.",
+      "nameZh": "甘州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-55": {
+      "original": "Ganzhou Fu",
+      "parent": "Jiangxi Prov.",
+      "nameZh": "赣州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-56": {
+      "original": "Gaozhou Fu",
+      "parent": "Guangdong Prov.",
+      "nameZh": "高州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-57": {
+      "original": "Gongchang Fu",
+      "parent": "Gansu Prov.",
+      "nameZh": "巩昌府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-58": {
+      "original": "Gucheng",
+      "parent": "Xinjiang",
+      "nameZh": "古城",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-59": {
+      "original": "Guang Zhou",
+      "parent": "Henan Prov.",
+      "nameZh": "光州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-60": {
+      "original": "Guangde Zhou",
+      "parent": "Anhui Prov.",
+      "nameZh": "广德州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-61": {
+      "original": "Guangnan Fu",
+      "parent": "Yunnan Prov.",
+      "nameZh": "广南府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-62": {
+      "original": "Guangping Fu",
+      "parent": "Zhili Prov.",
+      "nameZh": "广平府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-63": {
+      "original": "Guangxi Zhou",
+      "parent": "Yunnan Prov.",
+      "nameZh": "广西州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-64": {
+      "original": "Guangxin Fu",
+      "parent": "Jiangxi Prov.",
+      "nameZh": "广信府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-65": {
+      "original": "Guangzhou Fu",
+      "parent": "Guangdong Prov.",
+      "nameZh": "广州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-66": {
+      "original": "Guide Fu",
+      "parent": "Henan Prov.",
+      "nameZh": "归德府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-67": {
+      "original": "Guisui Liuting",
+      "parent": "Shanxi Prov.",
+      "nameZh": "归绥六厅",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷60"
+    },
+    "1820-68": {
+      "original": "Guiyang Fu",
+      "parent": "Gui Zhou",
+      "nameZh": "贵阳府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-69": {
+      "original": "Guilin Fu",
+      "parent": "Guangxi Prov.",
+      "nameZh": "桂林府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-70": {
+      "original": "Guiyang Zhou",
+      "parent": "Hunan Prov.",
+      "nameZh": "桂阳州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-71": {
+      "original": "Hami",
+      "parent": "Xinjiang",
+      "nameZh": "哈密",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-72": {
+      "original": "Haimen Ting",
+      "parent": "Jiangsu Prov.",
+      "nameZh": "海门厅",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-73": {
+      "original": "Hai Zhou",
+      "parent": "Jiangsu Prov.",
+      "nameZh": "海州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-74": {
+      "original": "Hanyang Fu",
+      "parent": "Hubei Prov.",
+      "nameZh": "汉阳府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-75": {
+      "original": "Hanzhong Fu",
+      "parent": "Shaanxi Prov.",
+      "nameZh": "汉中府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-76": {
+      "original": "Hangzhou Fu",
+      "parent": "Zhejiang Prov.",
+      "nameZh": "杭州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-77": {
+      "original": "Hetian",
+      "parent": "Xinjiang",
+      "nameZh": "和阗",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-78": {
+      "original": "He Zhou",
+      "parent": "Anhui Prov.",
+      "nameZh": "和州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-79": {
+      "original": "Hejian Fu",
+      "parent": "Zhili Prov.",
+      "nameZh": "河间府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-80": {
+      "original": "Henan Fu",
+      "parent": "Henan Prov.",
+      "nameZh": "河南府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-81": {
+      "original": "Heilongjiang",
+      "parent": "Heilongjiang",
+      "nameZh": "黑龙江",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷57"
+    },
+    "1820-82": {
+      "original": "Hengzhou Fu",
+      "parent": "Hunan Prov.",
+      "nameZh": "衡州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-83": {
+      "original": "Hulun'buir",
+      "parent": "Heilongjiang",
+      "nameZh": "呼伦贝尔",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷57"
+    },
+    "1820-84": {
+      "original": "Huzhou Fu",
+      "parent": "Zhejiang Prov.",
+      "nameZh": "湖州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-85": {
+      "original": "Huaiqing Fu",
+      "parent": "Henan Prov.",
+      "nameZh": "怀庆府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-86": {
+      "original": "Huaian Fu",
+      "parent": "Jiangsu Prov.",
+      "nameZh": "淮安府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-87": {
+      "original": "Huangzhou Fu",
+      "parent": "Hubei Prov.",
+      "nameZh": "黄州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-88": {
+      "original": "Huangzhou Ting",
+      "parent": "Hunan Prov.",
+      "nameZh": "晃州厅",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-89": {
+      "original": "Huizhou Fu",
+      "parent": "Anhui Prov.",
+      "nameZh": "徽州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-90": {
+      "original": "Huizhou Fu",
+      "parent": "Guangdong Prov.",
+      "nameZh": "惠州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-91": {
+      "original": "Huo Zhou",
+      "parent": "Shanxi Prov.",
+      "nameZh": "霍州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-92": {
+      "original": "Ji’an Fu",
+      "parent": "Jiangxi Prov.",
+      "nameZh": "吉安府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-93": {
+      "original": "Jilin",
+      "parent": "Jilin",
+      "nameZh": "吉林",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-94": {
+      "original": "Jinan Fu",
+      "parent": "Shandong Prov.",
+      "nameZh": "济南府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-95": {
+      "original": "Jining Zhou",
+      "parent": "Shandong Prov.",
+      "nameZh": "济宁州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-96": {
+      "original": "Ji Zhou",
+      "parent": "Zhili Prov.",
+      "nameZh": "冀州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-97": {
+      "original": "Jiading Fu",
+      "parent": "Sichuan Prov.",
+      "nameZh": "嘉定府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-98": {
+      "original": "Jiaxing Fu",
+      "parent": "Zhejiang Prov.",
+      "nameZh": "嘉兴府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-99": {
+      "original": "Jiaying Zhou",
+      "parent": "Guangdong Prov.",
+      "nameZh": "嘉应州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-100": {
+      "original": "Jianchang Fu",
+      "parent": "Jiangxi Prov.",
+      "nameZh": "建昌府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-101": {
+      "original": "Jianning Fu",
+      "parent": "Fujian Prov.",
+      "nameZh": "建宁府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-102": {
+      "original": "Jiangning Fu",
+      "parent": "Jiangsu Prov.",
+      "nameZh": "江宁府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-103": {
+      "original": "Jiang Zhou",
+      "parent": "Shanxi Prov.",
+      "nameZh": "绛州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-104": {
+      "original": "Jie Zhou",
+      "parent": "Gansu Prov.",
+      "nameZh": "阶州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-105": {
+      "original": "Jie Zhou",
+      "parent": "Shanxi Prov.",
+      "nameZh": "解州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-106": {
+      "original": "Jinhua Fu",
+      "parent": "Zhejiang Prov.",
+      "nameZh": "金华府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-107": {
+      "original": "Jinzhou Fu",
+      "parent": "Shengjing",
+      "nameZh": "锦州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-108": {
+      "original": "Jing Zhou",
+      "parent": "Gansu Prov.",
+      "nameZh": "泾州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-109": {
+      "original": "Jingmen Zhou",
+      "parent": "Hubei Prov.",
+      "nameZh": "荆门州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-110": {
+      "original": "Jingzhou Fu",
+      "parent": "Hubei Prov.",
+      "nameZh": "荆州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-111": {
+      "original": "Jingdong Ting",
+      "parent": "Yunnan Prov.",
+      "nameZh": "景东厅",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-112": {
+      "original": "Jing Zhou",
+      "parent": "Hunan Prov.",
+      "nameZh": "靖州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-113": {
+      "original": "Jiujiang Fu",
+      "parent": "Jiangxi Prov.",
+      "nameZh": "九江府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-114": {
+      "original": "Kalasha'er",
+      "parent": "Xinjiang",
+      "nameZh": "喀喇沙尔",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-115": {
+      "original": "Kalawusu",
+      "parent": "Xinjiang",
+      "nameZh": "喀喇乌苏",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷76"
+    },
+    "1820-116": {
+      "original": "Kashiga'er",
+      "parent": "Xinjiang",
+      "nameZh": "喀什噶尔",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-117": {
+      "original": "Kaifeng Fu",
+      "parent": "Henan Prov.",
+      "nameZh": "开封府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-118": {
+      "original": "Kaihua Fu",
+      "parent": "Yunnan Prov.",
+      "nameZh": "开化府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-119": {
+      "original": "Kebuduo",
+      "parent": "Wuliyasutai",
+      "nameZh": "科布多",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-120": {
+      "original": "Koubei Santing",
+      "parent": "Zhili Prov.",
+      "nameZh": "口北三厅",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷54"
+    },
+    "1820-121": {
+      "original": "Kuche",
+      "parent": "Xinjiang",
+      "nameZh": "库车",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-122": {
+      "original": "Kuizhou Fu",
+      "parent": "Sichuan Prov.",
+      "nameZh": "夔州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-123": {
+      "original": "Laizhou Fu",
+      "parent": "Shandong Prov.",
+      "nameZh": "莱州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-124": {
+      "original": "Lan Zhoufu",
+      "parent": "Gansu Prov.",
+      "nameZh": "兰州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-125": {
+      "original": "Leizhou Fu",
+      "parent": "Guangdong Prov.",
+      "nameZh": "雷州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-126": {
+      "original": "Liping Fu",
+      "parent": "Gui Zhou",
+      "nameZh": "黎平府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-127": {
+      "original": "Li Zhou",
+      "parent": "Hunan Prov.",
+      "nameZh": "澧州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-128": {
+      "original": "Lijiang Fu",
+      "parent": "Yunnan Prov.",
+      "nameZh": "丽江府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-129": {
+      "original": "Lianshan Ting",
+      "parent": "Guangdong Prov.",
+      "nameZh": "连山厅",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-130": {
+      "original": "Lian Zhou",
+      "parent": "Guangdong Prov.",
+      "nameZh": "连州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-131": {
+      "original": "Lianzhou Fu",
+      "parent": "Guangdong Prov.",
+      "nameZh": "廉州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-132": {
+      "original": "Liangzhou Fu",
+      "parent": "Gansu Prov.",
+      "nameZh": "凉州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-133": {
+      "original": "Liao Zhou",
+      "parent": "Shanxi Prov.",
+      "nameZh": "辽州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-134": {
+      "original": "Linan Fu",
+      "parent": "Yunnan Prov.",
+      "nameZh": "临安府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-135": {
+      "original": "Linjiang Fu",
+      "parent": "Jiangxi Prov.",
+      "nameZh": "临江府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-136": {
+      "original": "Linqing Zhou",
+      "parent": "Shandong Prov.",
+      "nameZh": "临清州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-137": {
+      "original": "Liuzhou Fu",
+      "parent": "Guangxi Prov.",
+      "nameZh": "柳州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-138": {
+      "original": "Liu'an Zhou",
+      "parent": "Anhui Prov.",
+      "nameZh": "六安州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-139": {
+      "original": "Long'an Fu",
+      "parent": "Sichuan Prov.",
+      "nameZh": "龙安府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-140": {
+      "original": "Longyan Zhou",
+      "parent": "Fujian Prov.",
+      "nameZh": "龙岩州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-141": {
+      "original": "Luzhou Fu",
+      "parent": "Anhui Prov.",
+      "nameZh": "庐州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-142": {
+      "original": "Lu Zhou",
+      "parent": "Sichuan Prov.",
+      "nameZh": "泸州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-143": {
+      "original": "Lu'an Fu",
+      "parent": "Shanxi Prov.",
+      "nameZh": "潞安府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-144": {
+      "original": "Luoding Zhou",
+      "parent": "Guangdong Prov.",
+      "nameZh": "罗定州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-145": {
+      "original": "Mao Zhou",
+      "parent": "Sichuan Prov.",
+      "nameZh": "茂州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-146": {
+      "original": "Maogong Ting",
+      "parent": "Sichuan Prov.",
+      "nameZh": "懋功厅",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-147": {
+      "original": "Mei Zhou",
+      "parent": "Sichuan Prov.",
+      "nameZh": "眉州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-148": {
+      "original": "Menghua Ting",
+      "parent": "Yunnan Prov.",
+      "nameZh": "蒙化厅",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-149": {
+      "original": "Mian Zhou",
+      "parent": "Sichuan Prov.",
+      "nameZh": "绵州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-150": {
+      "original": "Murgen",
+      "parent": "Heilongjiang",
+      "nameZh": "墨尔根",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷57"
+    },
+    "1820-151": {
+      "original": "Nan’an Fu",
+      "parent": "Jiangxi Prov.",
+      "nameZh": "南安府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-152": {
+      "original": "Nanchang Fu",
+      "parent": "Jiangxi Prov.",
+      "nameZh": "南昌府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-153": {
+      "original": "Nankang Fu",
+      "parent": "Jiangxi Prov.",
+      "nameZh": "南康府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-154": {
+      "original": "Nanning Fu",
+      "parent": "Guangxi Prov.",
+      "nameZh": "南宁府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-155": {
+      "original": "Nanxiong Zhou",
+      "parent": "Guangdong Prov.",
+      "nameZh": "南雄州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-156": {
+      "original": "Nanyang Fu",
+      "parent": "Henan Prov.",
+      "nameZh": "南阳府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-157": {
+      "original": "Ningpo Fu",
+      "parent": "Zhejiang Prov.",
+      "nameZh": "宁波府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-158": {
+      "original": "Ningdu Zhou",
+      "parent": "Jiangxi Prov.",
+      "nameZh": "宁都州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-159": {
+      "original": "Ningguta",
+      "parent": "Jilin",
+      "nameZh": "宁古塔",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-160": {
+      "original": "Ningguo Fu",
+      "parent": "Anhui Prov.",
+      "nameZh": "宁国府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-161": {
+      "original": "Ningwu Fu",
+      "parent": "Shanxi Prov.",
+      "nameZh": "宁武府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-162": {
+      "original": "Ningxia Fu",
+      "parent": "Gansu Prov.",
+      "nameZh": "宁夏府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-163": {
+      "original": "Ningyuan Fu",
+      "parent": "Sichuan Prov.",
+      "nameZh": "宁远府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-164": {
+      "original": "Pingding Zhou",
+      "parent": "Shanxi Prov.",
+      "nameZh": "平定州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-165": {
+      "original": "Pingle Fu",
+      "parent": "Guangxi Prov.",
+      "nameZh": "平乐府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-166": {
+      "original": "Pingliang Fu",
+      "parent": "Gansu Prov.",
+      "nameZh": "平凉府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-167": {
+      "original": "Pingyang Fu",
+      "parent": "Shanxi Prov.",
+      "nameZh": "平阳府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-168": {
+      "original": "Pingyue ZhiliZhou",
+      "parent": "Gui Zhou",
+      "nameZh": "平越州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-169": {
+      "original": "Puzhou Fu",
+      "parent": "Shanxi Prov.",
+      "nameZh": "蒲州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-170": {
+      "original": "Pu'an Ting",
+      "parent": "Gui Zhou",
+      "nameZh": "普安厅",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-171": {
+      "original": "Pu'er Fu",
+      "parent": "Yunnan Prov.",
+      "nameZh": "普洱府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-172": {
+      "original": "Qiqihar",
+      "parent": "Heilongjiang",
+      "nameZh": "齐齐哈尔",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷57"
+    },
+    "1820-173": {
+      "original": "South China Sea Islands",
+      "parent": "Guangdong Prov.",
+      "nameZh": "南海诸岛",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷72"
+    },
+    "1820-174": {
+      "original": "Gan Zhou",
+      "parent": "Shaanxi Prov.",
+      "nameZh": "干州",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷63"
+    },
+    "1820-175": {
+      "original": "Qianzhou Ting",
+      "parent": "Hunan Prov.",
+      "nameZh": "干州厅",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-176": {
+      "original": "Qin Zhou",
+      "parent": "Gansu Prov.",
+      "nameZh": "秦州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-177": {
+      "original": "Qin Zhou",
+      "parent": "Shanxi Prov.",
+      "nameZh": "沁州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-178": {
+      "original": "Qinghai",
+      "parent": "Qinghai",
+      "nameZh": "青海",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷79"
+    },
+    "1820-179": {
+      "original": "Qingzhou Fu",
+      "parent": "Shandong Prov.",
+      "nameZh": "青州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-180": {
+      "original": "Qingyang Fu",
+      "parent": "Gansu Prov.",
+      "nameZh": "庆阳府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-181": {
+      "original": "Qingyuan Fu",
+      "parent": "Guangxi Prov.",
+      "nameZh": "庆远府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-182": {
+      "original": "Qiong Zhou",
+      "parent": "Sichuan Prov.",
+      "nameZh": "邛州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-183": {
+      "original": "Qiongzhou Fu",
+      "parent": "Guangdong Prov.",
+      "nameZh": "琼州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-184": {
+      "original": "Qujing Fu",
+      "parent": "Yunnan Prov.",
+      "nameZh": "曲靖府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-185": {
+      "original": "Quzhou Fu",
+      "parent": "Zhejiang Prov.",
+      "nameZh": "衢州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-186": {
+      "original": "Quanzhou Fu",
+      "parent": "Fujian Prov.",
+      "nameZh": "泉州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-187": {
+      "original": "Raozhou Fu",
+      "parent": "Jiangxi Prov.",
+      "nameZh": "饶州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-188": {
+      "original": "Renhuai Ting",
+      "parent": "Gui Zhou",
+      "nameZh": "仁怀厅",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-189": {
+      "original": "Runing Fu",
+      "parent": "Henan Prov.",
+      "nameZh": "汝宁府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-190": {
+      "original": "Ru Zhou",
+      "parent": "Henan Prov.",
+      "nameZh": "汝州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-191": {
+      "original": "Ruizhou Fu",
+      "parent": "Jiangxi Prov.",
+      "nameZh": "瑞州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-192": {
+      "original": "Sanxing",
+      "parent": "Jilin",
+      "nameZh": "三姓",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-193": {
+      "original": "Sanyin'nuoyan Bu",
+      "parent": "Wuliyasutai",
+      "nameZh": "赛音诺颜部",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷78"
+    },
+    "1820-194": {
+      "original": "Shan Zhou",
+      "parent": "Henan Prov.",
+      "nameZh": "陕州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-195": {
+      "original": "Shang Zhou",
+      "parent": "Shaanxi Prov.",
+      "nameZh": "商州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-196": {
+      "original": "Shaozhou Fu",
+      "parent": "Guangdong Prov.",
+      "nameZh": "韶州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-197": {
+      "original": "Shaowu Fu",
+      "parent": "Fujian Prov.",
+      "nameZh": "邵武府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-198": {
+      "original": "Shaoxing Fu",
+      "parent": "Zhejiang Prov.",
+      "nameZh": "绍兴府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-199": {
+      "original": "Shen Zhou",
+      "parent": "Zhili Prov.",
+      "nameZh": "深州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-200": {
+      "original": "Shinan Fu",
+      "parent": "Hubei Prov.",
+      "nameZh": "施南府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-201": {
+      "original": "Shiqian Fu",
+      "parent": "Gui Zhou",
+      "nameZh": "石阡府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-202": {
+      "original": "Shizhu Ting",
+      "parent": "Sichuan Prov.",
+      "nameZh": "石砫厅",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-203": {
+      "original": "Shunde Fu",
+      "parent": "Zhili Prov.",
+      "nameZh": "顺德府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-204": {
+      "original": "Shunning Fu",
+      "parent": "Yunnan Prov.",
+      "nameZh": "顺宁府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-205": {
+      "original": "Shunqing Fu",
+      "parent": "Sichuan Prov.",
+      "nameZh": "顺庆府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-206": {
+      "original": "Suntian Fu",
+      "parent": "Zhili Prov.",
+      "nameZh": "顺天府",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷54"
+    },
+    "1820-207": {
+      "original": "Shuoping Fu",
+      "parent": "Shanxi Prov.",
+      "nameZh": "朔平府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-208": {
+      "original": "Si'en Fu",
+      "parent": "Guangxi Prov.",
+      "nameZh": "思恩府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-209": {
+      "original": "Sinan Fu",
+      "parent": "Gui Zhou",
+      "nameZh": "思南府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-210": {
+      "original": "Sizhou Fu",
+      "parent": "Gui Zhou",
+      "nameZh": "思州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-211": {
+      "original": "Cheng Fu",
+      "parent": "Guangxi Prov.",
+      "nameZh": "泗城府",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷73"
+    },
+    "1820-212": {
+      "original": "Si Zhou",
+      "parent": "Anhui Prov.",
+      "nameZh": "泗州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-213": {
+      "original": "Songjiang Fu",
+      "parent": "Jiangsu Prov.",
+      "nameZh": "松江府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-214": {
+      "original": "Songpan Ting",
+      "parent": "Sichuan Prov.",
+      "nameZh": "松潘厅",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-215": {
+      "original": "Songtao Ting",
+      "parent": "Gui Zhou",
+      "nameZh": "松桃厅",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-216": {
+      "original": "Suzhou Fu",
+      "parent": "Jiangsu Prov.",
+      "nameZh": "苏州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-217": {
+      "original": "Su Zhou",
+      "parent": "Gansu Prov.",
+      "nameZh": "肃州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-218": {
+      "original": "Suide Zhou",
+      "parent": "Shaanxi Prov.",
+      "nameZh": "绥德州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-219": {
+      "original": "Suiding Fu",
+      "parent": "Sichuan Prov.",
+      "nameZh": "绥定府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-220": {
+      "original": "Ta'erbahatai",
+      "parent": "Xinjiang",
+      "nameZh": "塔尔巴哈台",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-221": {
+      "original": "Taiwan Fu",
+      "parent": "Fujian Prov.",
+      "nameZh": "台湾府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-222": {
+      "original": "Taizhou Fu",
+      "parent": "Zhejiang Prov.",
+      "nameZh": "台州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-223": {
+      "original": "Taicang Zhou",
+      "parent": "Jiangsu Prov.",
+      "nameZh": "太仓州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-224": {
+      "original": "Taiping Ting",
+      "parent": "Sichuan Prov.",
+      "nameZh": "太平厅",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-225": {
+      "original": "Taiyuan Fu",
+      "parent": "Shanxi Prov.",
+      "nameZh": "太原府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-226": {
+      "original": "Taian Fu",
+      "parent": "Shandong Prov.",
+      "nameZh": "泰安府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-227": {
+      "original": "Tangno'uriyangqai",
+      "parent": "Wuliyasutai",
+      "nameZh": "唐努乌梁海",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷78"
+    },
+    "1820-228": {
+      "original": "Tengyue Ting",
+      "parent": "Yunnan Prov.",
+      "nameZh": "腾越厅",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-229": {
+      "original": "Tianjin Fu",
+      "parent": "Zhili Prov.",
+      "nameZh": "天津府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-230": {
+      "original": "Tingzhou Fu",
+      "parent": "Fujian Prov.",
+      "nameZh": "汀州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-231": {
+      "original": "Tong Zhou",
+      "parent": "Jiangsu Prov.",
+      "nameZh": "通州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-232": {
+      "original": "Tong Zhou Fu",
+      "parent": "Shaanxi Prov.",
+      "nameZh": "同州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-233": {
+      "original": "Tongren Fu",
+      "parent": "Gui Zhou",
+      "nameZh": "铜仁府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-234": {
+      "original": "Tongchuan Fu",
+      "parent": "Sichuan Prov.",
+      "nameZh": "潼川府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-235": {
+      "original": "Tuxietu Han Bu",
+      "parent": "Wuliyasutai",
+      "nameZh": "土谢图汗部",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷78"
+    },
+    "1820-236": {
+      "original": "Tulufan",
+      "parent": "Xinjiang",
+      "nameZh": "吐鲁番",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-237": {
+      "original": "South China Sea Islands",
+      "parent": "Guangdong Prov.",
+      "nameZh": "南海诸岛",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷72"
+    },
+    "1820-238": {
+      "original": "Weihui Fu",
+      "parent": "Henan Prov.",
+      "nameZh": "卫辉府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-239": {
+      "original": "Wenzhou Fu",
+      "parent": "Zhejiang Prov.",
+      "nameZh": "温州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-240": {
+      "original": "Wulanchabu Meng",
+      "parent": "Inner Mongolia",
+      "nameZh": "乌兰察布盟",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷77"
+    },
+    "1820-241": {
+      "original": "Wulumuqi",
+      "parent": "Xinjiang",
+      "nameZh": "乌噜木齐",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-242": {
+      "original": "Wushi",
+      "parent": "Xinjiang",
+      "nameZh": "乌什",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-243": {
+      "original": "Wuzhou Fu",
+      "parent": "Guangxi Prov.",
+      "nameZh": "梧州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-244": {
+      "original": "Wuchang Fu",
+      "parent": "Hubei Prov.",
+      "nameZh": "武昌府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-245": {
+      "original": "Wuding Fu",
+      "parent": "Shandong Prov.",
+      "nameZh": "武定府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-246": {
+      "original": "Wuding Zhou",
+      "parent": "Yunnan Prov.",
+      "nameZh": "武定州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-247": {
+      "original": "Xi'an Fu",
+      "parent": "Shaanxi Prov.",
+      "nameZh": "西安府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-248": {
+      "original": "Tibet",
+      "parent": "Tibet",
+      "nameZh": "西藏",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷80"
+    },
+    "1820-249": {
+      "original": "Xining Fu",
+      "parent": "Gansu Prov.",
+      "nameZh": "西宁府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-250": {
+      "original": "Xilinguole Meng",
+      "parent": "Inner Mongolia",
+      "nameZh": "锡林郭勒盟",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷77"
+    },
+    "1820-251": {
+      "original": "Xi Zhou",
+      "parent": "Shanxi Prov.",
+      "nameZh": "隰州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-252": {
+      "original": "Xiangyang Fu",
+      "parent": "Hubei Prov.",
+      "nameZh": "襄阳府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-253": {
+      "original": "Xin Zhou",
+      "parent": "Shanxi Prov.",
+      "nameZh": "忻州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-254": {
+      "original": "Xing'an Fu",
+      "parent": "Shaanxi Prov.",
+      "nameZh": "兴安府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-255": {
+      "original": "Xinghua Fu",
+      "parent": "Fujian Prov.",
+      "nameZh": "兴化府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-256": {
+      "original": "Xingyi Fu",
+      "parent": "Gui Zhou",
+      "nameZh": "兴义府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-257": {
+      "original": "Xuzhou Fu",
+      "parent": "Jiangsu Prov.",
+      "nameZh": "徐州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-258": {
+      "original": "Xu Zhou",
+      "parent": "Henan Prov.",
+      "nameZh": "许州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-259": {
+      "original": "Xuyong Ting",
+      "parent": "Sichuan Prov.",
+      "nameZh": "叙永厅",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-260": {
+      "original": "Xuzhou Fu",
+      "parent": "Sichuan Prov.",
+      "nameZh": "叙州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-261": {
+      "original": "Xuanhua Fu",
+      "parent": "Zhili Prov.",
+      "nameZh": "宣化府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-262": {
+      "original": "Xunzhou Fu",
+      "parent": "Guangxi Prov.",
+      "nameZh": "浔州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-263": {
+      "original": "Yazhou Fu",
+      "parent": "Sichuan Prov.",
+      "nameZh": "雅州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-264": {
+      "original": "Yan'an Fu",
+      "parent": "Shaanxi Prov.",
+      "nameZh": "延安府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-265": {
+      "original": "Yanping Fu",
+      "parent": "Fujian Prov.",
+      "nameZh": "延平府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-266": {
+      "original": "Yanzhou Fu",
+      "parent": "Zhejiang Prov.",
+      "nameZh": "严州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-267": {
+      "original": "Yanzhou Fu",
+      "parent": "Shandong Prov.",
+      "nameZh": "兖州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-268": {
+      "original": "Yangzhou Fu",
+      "parent": "Jiangsu Prov.",
+      "nameZh": "扬州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-269": {
+      "original": "Yangximu Ranch",
+      "parent": "Shengjing",
+      "nameZh": "养息牧牧场",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷55"
+    },
+    "1820-270": {
+      "original": "Ye'erqiang",
+      "parent": "Xinjiang",
+      "nameZh": "叶尔羌",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-271": {
+      "original": "Yikezhao Meng",
+      "parent": "Inner Mongolia",
+      "nameZh": "伊克昭盟",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷77"
+    },
+    "1820-272": {
+      "original": "Yili",
+      "parent": "Xinjiang",
+      "nameZh": "伊犁",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-273": {
+      "original": "Yizhou Fu",
+      "parent": "Shandong Prov.",
+      "nameZh": "沂州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-274": {
+      "original": "Yichang Fu",
+      "parent": "Hubei Prov.",
+      "nameZh": "宜昌府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-275": {
+      "original": "Yi Zhou",
+      "parent": "Zhili Prov.",
+      "nameZh": "易州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-276": {
+      "original": "Yingzhou Fu",
+      "parent": "Anhui Prov.",
+      "nameZh": "颍州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-277": {
+      "original": "Yongbei Ting",
+      "parent": "Yunnan Prov.",
+      "nameZh": "永北厅",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-278": {
+      "original": "Yongchang Fu",
+      "parent": "Yunnan Prov.",
+      "nameZh": "永昌府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-279": {
+      "original": "Yongchun Zhou",
+      "parent": "Fujian Prov.",
+      "nameZh": "永春州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-280": {
+      "original": "Yongping Fu",
+      "parent": "Zhili Prov.",
+      "nameZh": "永平府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-281": {
+      "original": "Yongshun Fu",
+      "parent": "Hunan Prov.",
+      "nameZh": "永顺府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-282": {
+      "original": "Yongsui Ting",
+      "parent": "Hunan Prov.",
+      "nameZh": "永绥厅",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-283": {
+      "original": "Yongzhou Fu",
+      "parent": "Hunan Prov.",
+      "nameZh": "永州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-284": {
+      "original": "Youyang Zhou",
+      "parent": "Sichuan Prov.",
+      "nameZh": "酉阳州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-285": {
+      "original": "Yulin Fu",
+      "parent": "Shaanxi Prov.",
+      "nameZh": "榆林府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-286": {
+      "original": "Yulin Zhou",
+      "parent": "Guangxi Prov.",
+      "nameZh": "郁林州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-287": {
+      "original": "Yuanjiang Zhou",
+      "parent": "Yunnan Prov.",
+      "nameZh": "元江州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-288": {
+      "original": "Yuanzhou Fu",
+      "parent": "Hunan Prov.",
+      "nameZh": "沅州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-289": {
+      "original": "Yuanzhou Fu",
+      "parent": "Jiangxi Prov.",
+      "nameZh": "袁州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-290": {
+      "original": "Yuezhou Fu",
+      "parent": "Hunan Prov.",
+      "nameZh": "岳州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-291": {
+      "original": "Yunnan Fu",
+      "parent": "Yunnan Prov.",
+      "nameZh": "云南府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-292": {
+      "original": "Yunyang Fu",
+      "parent": "Hubei Prov.",
+      "nameZh": "郧阳府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-293": {
+      "original": "Zagu Ting",
+      "parent": "Sichuan Prov.",
+      "nameZh": "杂谷厅",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-294": {
+      "original": "Ze Zhou",
+      "parent": "Shanxi Prov.",
+      "nameZh": "泽州府",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷60"
+    },
+    "1820-295": {
+      "original": "Zhasaketu Han Bu",
+      "parent": "Wuliyasutai",
+      "nameZh": "札萨克图汗部",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷78"
+    },
+    "1820-296": {
+      "original": "Zhangde Fu",
+      "parent": "Henan Prov.",
+      "nameZh": "彰德府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-297": {
+      "original": "Zhangzhou Fu",
+      "parent": "Fujian Prov.",
+      "nameZh": "漳州府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-298": {
+      "original": "Changsha Fu",
+      "parent": "Hunan Prov.",
+      "nameZh": "长沙府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-299": {
+      "original": "Zhaotong Fu",
+      "parent": "Yunnan Prov.",
+      "nameZh": "昭通府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-300": {
+      "original": "Zhaowuda Meng",
+      "parent": "Inner Mongolia",
+      "nameZh": "昭乌达盟",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷77"
+    },
+    "1820-301": {
+      "original": "Zhao Zhou",
+      "parent": "Zhili Prov.",
+      "nameZh": "赵州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-302": {
+      "original": "Zhaoqing Fu",
+      "parent": "Guangdong Prov.",
+      "nameZh": "肇庆府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-303": {
+      "original": "Zhelimu Meng",
+      "parent": "Inner Mongolia",
+      "nameZh": "哲里木盟",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷77"
+    },
+    "1820-304": {
+      "original": "Zhen'an Fu",
+      "parent": "Guangxi Prov.",
+      "nameZh": "镇安府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-305": {
+      "original": "Zhenjiang Fu",
+      "parent": "Jiangsu Prov.",
+      "nameZh": "镇江府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-306": {
+      "original": "Zhenyuan Zhou",
+      "parent": "Yunnan Prov.",
+      "nameZh": "镇沅州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-307": {
+      "original": "Zhenyuan Fu",
+      "parent": "Gui Zhou",
+      "nameZh": "镇远府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-308": {
+      "original": "Zhengding Fu",
+      "parent": "Zhili Prov.",
+      "nameZh": "正定府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-309": {
+      "original": "-",
+      "parent": "Area to be discussed according to Sino-Russia Treaty of Nerchinsk",
+      "nameZh": "原图待议地区",
+      "source": "https://www.nature.com/articles/s41597-026-07086-6"
+    },
+    "1820-310": {
+      "original": "Zhong Zhou",
+      "parent": "Sichuan Prov.",
+      "nameZh": "忠州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-311": {
+      "original": "Chongqing Fu",
+      "parent": "Sichuan Prov.",
+      "nameZh": "重庆府",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷69"
+    },
+    "1820-312": {
+      "original": "Zi Zhou",
+      "parent": "Sichuan Prov.",
+      "nameZh": "资州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-313": {
+      "original": "Zunhua Zhou",
+      "parent": "Zhili Prov.",
+      "nameZh": "遵化州",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-314": {
+      "original": "Zunyi Fu",
+      "parent": "Gui Zhou",
+      "nameZh": "遵义府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-315": {
+      "original": "Taipingfu (Guangxi)",
+      "parent": "Guangxi Prov.",
+      "nameZh": "太平府",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷73"
+    },
+    "1820-316": {
+      "original": "Taiping Fu",
+      "parent": "Anhui Prov.",
+      "nameZh": "太平府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-317": {
+      "original": "Tsahar",
+      "parent": "Inner Mongolia",
+      "nameZh": "察哈尔",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷81"
+    },
+    "1820-318": {
+      "original": "Chengde Fu",
+      "parent": "Zhili Prov.",
+      "nameZh": "承德府",
+      "source": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    "1820-319": {
+      "original": "Zhuosuotu Meng",
+      "parent": "Inner Mongolia",
+      "nameZh": "卓索图盟",
+      "source": "https://zh.wikisource.org/wiki/清史稿/卷77"
+    }
+  },
+  "nameSource": "https://doi.org/10.7910/DVN/29302",
+  "sources": [
+    {
+      "title": "复旦CHGIS府级治所",
+      "url": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    {
+      "title": "Hartwell GIS V5",
+      "url": "https://doi.org/10.7910/DVN/29302"
+    },
+    {
+      "title": "汉书·地理志",
+      "url": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    {
+      "title": "新唐书·地理志",
+      "url": "https://zh.wikisource.org/wiki/新唐書#志"
+    },
+    {
+      "title": "宋史·地理志",
+      "url": "https://zh.wikisource.org/wiki/宋史#志"
+    },
+    {
+      "title": "宋会要辑稿·方域",
+      "url": "https://zh.wikisource.org/wiki/宋會要輯稿/卷103"
+    },
+    {
+      "title": "清史稿·地理志",
+      "url": "https://zh.wikisource.org/wiki/清史稿#志"
+    }
+  ]
+}

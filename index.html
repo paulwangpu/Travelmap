@@ -6,7 +6,7 @@
     <title>我的全球旅行地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" />
-<link rel="stylesheet" href="styles.css?v=277" />
+<link rel="stylesheet" href="styles.css?v=281" />
   </head>
   <body>
     <div class="app-shell map-first-shell">
@@ -36,7 +36,7 @@
             <strong data-i18n="privacyTitle">本地保存</strong>
             <p data-i18n="privacyText">数据只保存在本机浏览器里，不会自动上传或公开。如需备份请导出。</p>
           </div>
-          <div class="app-version" id="appVersion">v2.3.5</div>
+          <div class="app-version" id="appVersion">v2.4.0</div>
         </div>
       </aside>
 
@@ -103,8 +103,8 @@
               <div class="map-overlay-toggles map-feature-overlays">
                 <label><input id="showChina5aOnMap" type="checkbox" /> <span data-i18n="overlay5a">5A / NPS 园区边界</span></label>
                 <div class="hazard-toggle-pair compact-toggle-pair">
-                  <label><input id="showAncientCapitalsOnMap" type="checkbox" /> <span data-i18n="overlayAncientCapitals">古都</span></label>
-                  <label><input id="showImperialTombsOnMap" type="checkbox" /> <span data-i18n="overlayImperialTombs">皇陵</span></label>
+                  <label><input id="showAncientCapitalsOnMap" type="checkbox" /> <span data-i18n="overlayAncientCapitals">都城</span></label>
+                  <label><input id="showHistoricalAdminOnMap" type="checkbox" /> <span data-i18n="overlayHistoricalAdmin">历史</span></label>
                 </div>
                 <label><input id="showWorldHeritageOnMap" type="checkbox" /> <span data-i18n="overlayHeritage">世界遗产</span></label>
                 <label><input id="showHighAltitudeOnMap" type="checkbox" /> <span data-i18n="overlayHighAltitude">高海拔挑战</span></label>
@@ -468,7 +468,8 @@
 <script src="western-regions.js?v=4"></script>
 <script src="historical-periods.js?v=9"></script>
 <script src="imperial-tomb-geometry.js?v=3"></script>
-<script src="imperial-tombs.js?v=101"></script>
+<script src="imperial-tombs.js?v=103"></script>
+<script src="historical-admin.js?v=8"></script>
 <script src="map-resolution.js?v=1"></script>
 <script src="vendor/geology/vector-tile.js?v=1"></script>
 <script src="geology-providers.js?v=12"></script>
@@ -484,6 +485,6 @@
 <script src="pompeii-sites.js?v=8"></script>
 <script src="classical-sites.js?v=93"></script>
 <script src="capital-map-layers.js?v=21"></script>
-<script src="app.js?v=1135"></script>
+<script src="app.js?v=1140"></script>
   </body>
 </html>

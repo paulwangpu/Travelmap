@@ -7473,8 +7473,8 @@ button:hover {
 .earthquake-year-precision summary { cursor: pointer; font-size: 12px; color: #176e54; padding: 3px 0 5px; font-variant-numeric: tabular-nums; }
 .earthquake-year-precision .earthquake-years { margin-bottom: 7px; }
 .compact-toggle-pair { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:2px; min-width:0; }
-.compact-toggle-pair label:has(#showImperialTombsOnMap) { font-size:9px; gap:2px; padding-left:2px; padding-right:2px; }
-.compact-toggle-pair #showImperialTombsOnMap { width:10px; height:10px; flex-shrink:0; }
+.compact-toggle-pair label:has(#showHistoricalAdminOnMap) { font-size:9px; gap:2px; padding-left:2px; padding-right:2px; }
+.compact-toggle-pair #showHistoricalAdminOnMap { width:10px; height:10px; flex-shrink:0; }
 .imperial-tombs-legend { max-width:320px; }
 .imperial-tomb-card-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:8px; padding:10px; }
 .imperial-tomb-subsection > h4 { display:flex; align-items:center; justify-content:space-between; gap:12px; margin:0; padding:10px 12px 0; color:#465b51; font-size:14px; font-weight:600; }
@@ -7898,3 +7898,30 @@ button:hover {
 /* Secondary NPS units keep a small clickable anchor without competing with parks. */
 .maplibre-marker.checklist-marker.nps-secondary { width:4px; height:4px; box-shadow:none; }
 .maplibre-marker.checklist-marker.nps-secondary.done { width:6px; height:6px; }
+
+#ancientCapitalLegend #imperialTombsLegend { margin:6px 0 0; padding:6px 0 0; border:0; border-top:1px solid #d8e2d9; background:transparent; max-width:none; }
+.tomb-layer-switch { display:flex; align-items:center; gap:5px; margin-bottom:5px; cursor:pointer; }
+.historical-admin-legend { max-width:290px; }
+.historical-admin-legend > label { display:flex; align-items:center; gap:7px; margin:5px 0; }
+.historical-admin-legend select { min-width:0; max-width:225px; font-size:11px; padding:3px; }
+.historical-admin-legend small { display:block; margin:5px 0; }
+
+#ancientCapitalLegend #imperialTombsLegend { display:contents; }
+#ancientCapitalLegend #imperialTombsLegend[hidden] { display:none; }
+#ancientCapitalLegend .capital-tomb-section { margin-top:5px; }
+
+.historical-admin-label { font: 12px/18px "Open Sans", "Arial Unicode MS", Arial, sans-serif; color: #4a493e; text-align: center; white-space: nowrap; text-shadow: -1px -1px 1.5px #fff, 1px 1px 1.5px #fff, -1px 1px 1.5px #fff, 1px -1px 1.5px #fff; pointer-events: none; }
+
+.historical-admin-opacity input[type="range"] { flex:1; width:120px; min-width:0; margin:0; cursor:pointer; }
+.historical-admin-opacity output { min-width:34px; text-align:right; font-variant-numeric:tabular-nums; }
+
+.historical-density-scale { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:2px; font-size:9px; text-align:center; white-space:nowrap; }
+.historical-density-scale i { display:block; height:9px; border:1px solid #0002; margin-bottom:2px; }
+.historical-population-legend { border-top:1px solid #d8e2d9; padding-top:5px; }
+.historical-population-scale { display:flex; justify-content:space-around; text-align:center; gap:4px; font-size:10px; }
+.historical-population-scale span { display:flex; flex-direction:column; align-items:center; }
+.historical-population-popup { font-size:12px; line-height:1.5; min-width:190px; max-width:280px; }
+.historical-population-popup dl { display:grid; grid-template-columns:1fr auto; gap:3px 10px; margin:7px 0; }
+.historical-population-popup dt { color:#66756c; }
+.historical-population-popup dd { margin:0; text-align:right; font-weight:600; }
+.historical-population-popup small { display:block; color:#66756c; margin-bottom:4px; }

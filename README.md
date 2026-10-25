@@ -1,8 +1,8 @@
 # Travel Map
 
-当前版本：**2.3.5**。个人旅行足迹、打卡、世界遗产、古都与历史城郭地图。
+当前版本：**2.4.0**。个人旅行足迹、打卡、世界遗产、古都与历史城郭地图。
 
-[2.3.5更新说明](docs/release-2.3.5.md) · [2.3.4更新说明](docs/release-2.3.4.md) · [2.3.3更新说明](docs/release-2.3.3.md) · [全球古都图层核验](docs/global-capital-layer-audit.md)
+[2.4.0更新说明](docs/release-2.4.0.md) · [2.3.5更新说明](docs/release-2.3.5.md) · [2.3.4更新说明](docs/release-2.3.4.md) · [2.3.3更新说明](docs/release-2.3.3.md) · [全球古都图层核验](docs/global-capital-layer-audit.md)
 
 ## 研究与数据接入记录
 

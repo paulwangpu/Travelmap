@@ -16,7 +16,7 @@ const navigationStorageKey = "travel-map-navigation-collapsed";
 const idbName = "travel-map-db";
 const idbStore = "archives";
 const idbStateKey = "state";
-const appVersion = "2.3.5";
+const appVersion = "2.4.0";
 const worldCountryTotal = 195;
 const china5aOfficialTotal = 359;
 const chinaAncientCapitalTotal = 761;
@@ -458,9 +458,10 @@ const translations = {
     pleistoceneVolcanoes: "更新世",
     overlay3d: "3D",
     overlay5a: "5A / 国家公园",
-    overlayAncientCapitals: "古都",
+    overlayAncientCapitals: "都城",
     overlayGreatWall: "长城",
     overlayImperialTombs: "皇陵",
+    overlayHistoricalAdmin: "历史",
     overlayHeritage: "世界遗产",
     overlayHighAltitude: "高海拔挑战",
     hideMapControls: "收起",
@@ -731,9 +732,10 @@ const translations = {
     pleistoceneVolcanoes: "Pleistocene",
     overlay3d: "3D",
     overlay5a: "5A / National Parks",
-    overlayAncientCapitals: "Ancient Capitals",
+    overlayAncientCapitals: "Capitals",
     overlayGreatWall: "Great Wall",
     overlayImperialTombs: "Imperial Tombs",
+    overlayHistoricalAdmin: "History",
     overlayHeritage: "World Heritage",
     overlayHighAltitude: "High-altitude challenge",
     hideMapControls: "Collapse",
@@ -859,7 +861,7 @@ function t(key) {
 }
 
 function defaultMapOverlays() {
-return { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, geology: false, countryBorders: false, ethnicRegionsSource: "greg", languageColorMode: "affinity", ethnicRegions: false, ethnicRegionsOpacity: 45, arcgisWater: false, arcgisWaterEsri: true, arcgisWaterHydroRivers: true, earthquakes: false, volcanoes: false, china5a: false, chinaAncientCapitals: false, imperialTombs: false, imperialTombsIncludeFeudalKings: true, imperialTombsOnlyVisitableChambers: false, imperialTombsEra: "", greatWall: false, greatWallHistory: false, worldHeritage: false, highAltitude: false };
+return { light: true, checkins: true, paths: true, flights: true, populationDensity: false, railways: false, geology: false, countryBorders: false, ethnicRegionsSource: "greg", languageColorMode: "affinity", ethnicRegions: false, ethnicRegionsOpacity: 45, arcgisWater: false, arcgisWaterEsri: true, arcgisWaterHydroRivers: true, earthquakes: false, volcanoes: false, china5a: false, chinaAncientCapitals: false, imperialTombs: true, historicalAdmin: false, historicalAdminOpacity: 13, historicalAdminMetric: "regions", historicalAdminPeriod: "1820", historicalAdminLevel: "upper", historicalLayersVersion: 1, imperialTombsIncludeFeudalKings: true, imperialTombsOnlyVisitableChambers: false, imperialTombsEra: "", greatWall: false, greatWallHistory: false, worldHeritage: false, highAltitude: false };
 }
 
 function normalizeMapOverlays(overlays = {}) {
@@ -868,7 +870,13 @@ function normalizeMapOverlays(overlays = {}) {
     ...overlays,
     populationDensity: Boolean(overlays.populationDensity),
     greatWall: Boolean(overlays.greatWall),
-    imperialTombs: Boolean(overlays.imperialTombs),
+    imperialTombs: overlays.historicalLayersVersion ? overlays.imperialTombs !== false : true,
+    historicalAdmin: Boolean(overlays.historicalAdmin),
+    historicalAdminOpacity: overlays.historicalAdminOpacity == null || !Number.isFinite(Number(overlays.historicalAdminOpacity)) ? 13 : Math.max(0, Math.min(100, Number(overlays.historicalAdminOpacity))),
+    historicalAdminMetric: ["density","population"].includes(overlays.historicalAdminMetric) ? overlays.historicalAdminMetric : "regions",
+    historicalAdminPeriod: ["2","742","1102","1820"].includes(String(overlays.historicalAdminPeriod)) ? String(overlays.historicalAdminPeriod) : "1820",
+    historicalAdminLevel: overlays.historicalAdminLevel === "prefecture" ? "prefecture" : "upper",
+    historicalLayersVersion: 1,
     imperialTombsIncludeFeudalKings: overlays.imperialTombsIncludeFeudalKings !== false,
     imperialTombsOnlyVisitableChambers: overlays.imperialTombsOnlyVisitableChambers === true,
     imperialTombsEra: typeof overlays.imperialTombsEra === "string" ? overlays.imperialTombsEra : "",
@@ -894,7 +902,7 @@ function normalizeMapOverlays(overlays = {}) {
     earthquakes: Boolean(overlays.earthquakes),
     volcanoes: Boolean(overlays.volcanoes),
     china5a: Boolean(overlays.china5a),
-    chinaAncientCapitals: Boolean(overlays.chinaAncientCapitals),
+    chinaAncientCapitals: Boolean(overlays.chinaAncientCapitals || (!overlays.historicalLayersVersion && overlays.imperialTombs)),
     ancientCapitalWalls: Boolean(overlays.ancientCapitalWalls),
     ancientCapitalWallLegendOpen: overlays.ancientCapitalWallLegendOpen !== false,
     ancientCapitalTangWalls: overlays.ancientCapitalTangWalls !== false,
@@ -9679,6 +9687,7 @@ function syncMapLibreHazardOverlays(overlays) {
   if (!mapLibreMap || !mapLibreStyleReady) return;
   GreatWall.sync(mapLibreMap);
   ImperialTombs.sync(mapLibreMap);
+  HistoricalAdmin.sync(mapLibreMap);
   refreshEarthquakeOnline();
   if (!overlays.volcanoes) volcanoHoverPopup?.remove();
   ["earthquake-points", "volcano-points"].forEach(removeMapLibreLayer);
@@ -10443,6 +10452,7 @@ function renderMapLibreMarkers(overlays = { ...defaultMapOverlays(), ...(state.m
   mapLibreMarkers = [];
   renderMapLibrePointLayers(overlays, signature);
   ImperialTombs.sync(mapLibreMap);
+  HistoricalAdmin.sync(mapLibreMap);
   logSlowStep("renderMapLibreMarkers", perfStartedAt);
   return;
   if (overlays.checkins) {
@@ -10715,7 +10725,7 @@ function historicalCheckinTheme(place, classicalFeatures) {
   const classical=state.mapOverlays?.chinaAncientCapitals?classicalCapitalMarkerTheme(place?.name, classicalFeatures):null;if(classical?.icon)return classical;
   const name=canonicalPlaceKey(place?.name);
   const tomb=imperialTombMapIndex.get(name)||(ImperialTombs.catalogItems?.()||[]).find(x=>[x.name,...(x.aliases||[])].some(alias=>canonicalPlaceKey(alias)===name));
-  if(!tomb||!state.mapOverlays?.imperialTombs)return null;
+  if(!tomb||!state.mapOverlays?.imperialTombs||state.mapOverlays?.chinaAncientCapitals===false)return null;
   if(ImperialTombs.isItemVisible?.(tomb,typeof mapLibreMap==='undefined'?10:mapLibreMap?.getZoom()??leafletMap?.getZoom()??10)===false)return null;
   const theme=ImperialTombs.dynastyTheme(tomb);
   return {...theme,key:'imperialTombs',svg:ImperialTombs.markerSvg(theme.color)};
@@ -11732,6 +11742,7 @@ function renderLeafletLayers() {
   }
   GreatWall.leaflet(leafletMap, leafletLayers);
   ImperialTombs.leaflet(leafletMap);
+  HistoricalAdmin.leaflet(leafletMap);
 
   if (overlays.populationDensity && window.pmtiles?.leafletRasterLayer) {
     if (!leafletMap.getPane("populationDensityPane")) {
@@ -16371,15 +16382,17 @@ function renderAncientCapitalLegend() {
  el.addEventListener("click",event=>{if(event.target.matches("[data-capital-all],[data-capital-walls]"))event.stopPropagation();});
  el.addEventListener("change",event=>{const input=event.target;if(input.hasAttribute('data-beijing-evolution')||input.hasAttribute('data-beijing-stage')){if(input.hasAttribute('data-beijing-evolution'))state.mapOverlays.beijingCapitalEvolution=input.checked;else state.mapOverlays.beijingCapitalStage=input.value;saveUiStateSoon();renderMapControls();renderGeoMap();return;}if(input.hasAttribute('data-luoyang-evolution')||input.hasAttribute('data-luoyang-stage')){if(input.hasAttribute('data-luoyang-evolution'))state.mapOverlays.luoyangCapitalEvolution=input.checked;else state.mapOverlays.luoyangCapitalStage=input.value;saveUiStateSoon();renderMapControls();renderGeoMap();return;}if(input.hasAttribute('data-capital-research-family')){updateCapitalWallSelection(input.dataset.capitalResearchFamily,input.checked);saveUiStateSoon();renderMapControls();renderGeoMap();return;}if(input.hasAttribute('data-capital-mingqing-walls')){updateCapitalWallSelection("ancientCapitalMingQingWalls",input.checked);saveUiStateSoon();renderMapControls();renderGeoMap();return;}if(input.hasAttribute('data-capital-tang-walls')){updateCapitalWallSelection("ancientCapitalTangWalls",input.checked);saveUiStateSoon();renderMapControls();renderGeoMap();return;}if(input.hasAttribute('data-capital-walls')||input.hasAttribute('data-capital-wall-year')){if(input.hasAttribute('data-capital-walls'))updateCapitalWallSelection("ancientCapitalWalls",input.checked);else if(input.dataset.capitalWallYear)state.mapOverlays[input.dataset.capitalWallYear]=Number(input.value);else state.mapOverlays.ancientCapitalWallYear=Number(input.value);saveUiStateSoon();renderMapControls();renderGeoMap();return;}if(!input.hasAttribute("data-capital-all")&&!input.hasAttribute("data-capital-period"))return;const selection=state.mapOverlays.ancientCapitalPeriods ||= {};if(input.hasAttribute("data-capital-all"))HistoricalPeriods.keys.forEach(key=>{selection[key]=input.checked;});else selection[input.dataset.capitalPeriod]=input.checked;mapPointRenderRevision+=1;saveUiStateSoon();renderMapControls();renderGeoMap();});}
  el.hidden=!state.mapOverlays.chinaAncientCapitals;if(el.hidden)return;
- const items=chinaAncientCapitals.items||[],keys=HistoricalPeriods.keys,available=keys.filter(key=>items.some(item=>HistoricalPeriods.capitalPeriods(item).includes(key))),selection=state.mapOverlays.ancientCapitalPeriods||{},open=el.querySelector("details")?.open!==false,wallOpen=el.querySelector(".capital-wall-section")?.open??(state.mapOverlays.ancientCapitalWallLegendOpen!==false),wallNotesOpen=el.querySelector(".capital-wall-notes")?.open===true;
+ const tombLegend=document.getElementById("imperialTombsLegend");if(tombLegend&&el.contains(tombLegend))parent.appendChild(tombLegend);
+ const items=chinaAncientCapitals.items||[],keys=HistoricalPeriods.keys,available=keys.filter(key=>items.some(item=>HistoricalPeriods.capitalPeriods(item).includes(key))),selection=state.mapOverlays.ancientCapitalPeriods||{},open=el.querySelector("details")?.open!==false,wallOpen=el.querySelector(".capital-wall-section")?.open??(Boolean(state.mapOverlays.ancientCapitalWalls)&&state.mapOverlays.ancientCapitalWallLegendOpen!==false),wallNotesOpen=el.querySelector(".capital-wall-notes")?.open===true;
  if(state.mapOverlays.ancientCapitalWallLegendOpen!==wallOpen){state.mapOverlays.ancientCapitalWallLegendOpen=wallOpen;saveUiStateSoon();}
- el.innerHTML='<strong>'+ (currentLanguage==="en"?"Ancient capitals":"古都")+'</strong><details class="great-wall-section" '+(open?'open':'')+'><summary><input type="checkbox" data-capital-all aria-label="全选古都朝代"><i class="wall-disclosure" aria-hidden="true"></i><span>朝代 · 全选</span></summary><div class="tomb-legend-options">'+keys.map(key=>'<label'+(!available.includes(key)?' title="暂无条目"':'')+'><input type="checkbox" data-capital-period="'+key+'" '+(!available.includes(key)?'disabled':selection[key]!==false?'checked':'')+'>'+HistoricalPeriods.legendIcon(HistoricalPeriods.capitalSvg('#fff'),HistoricalPeriods.colors[key])+'<span>'+(key==='传说'?(currentLanguage==='en'?'Legendary / Pre-Xia':'传说／夏以前'):key)+'</span></label>').join('')+'</div></details>';
+ el.innerHTML='<details class="great-wall-section" '+(open?'open':'')+'><summary><input type="checkbox" data-capital-all aria-label="全选古都朝代"><i class="wall-disclosure" aria-hidden="true"></i><span>都城</span></summary><div class="tomb-legend-options">'+keys.map(key=>'<label'+(!available.includes(key)?' title="暂无条目"':'')+'><input type="checkbox" data-capital-period="'+key+'" '+(!available.includes(key)?'disabled':selection[key]!==false?'checked':'')+'>'+HistoricalPeriods.legendIcon(HistoricalPeriods.capitalSvg('#fff'),HistoricalPeriods.colors[key])+'<span>'+(key==='传说'?(currentLanguage==='en'?'Legendary / Pre-Xia':'传说／夏以前'):key)+'</span></label>').join('')+'</div></details>';
  el.innerHTML+='<details class="great-wall-section capital-wall-section" '+(wallOpen?'open':'')+'><summary><input type="checkbox" data-capital-walls '+(state.mapOverlays.ancientCapitalWalls?'checked':'')+'><i class="wall-disclosure" aria-hidden="true"></i><span>'+(currentLanguage==="en"?'City wall extents':'城墙范围')+'</span></summary><div class="capital-wall-controls"><label><input type="checkbox" data-capital-research-family="ancientCapitalLegendaryWalls" '+(state.mapOverlays.ancientCapitalLegendaryWalls!==false?'checked':'')+'>'+(currentLanguage==='en'?'Legendary / Pre-Xia':'传说／夏以前')+'</label><label><input type="checkbox" data-capital-research-family="ancientCapitalShangWalls" '+(state.mapOverlays.ancientCapitalShangWalls!==false?'checked':'')+'>夏商</label><label><input type="checkbox" data-capital-research-family="ancientCapitalZhouWalls" '+(state.mapOverlays.ancientCapitalZhouWalls!==false?'checked':'')+'>周</label><label><input type="checkbox" data-capital-research-family="ancientCapitalQinHanWalls" '+(state.mapOverlays.ancientCapitalQinHanWalls!==false?'checked':'')+'>秦汉</label><label><input type="checkbox" data-capital-research-family="ancientCapitalHanWeiWalls" '+(state.mapOverlays.ancientCapitalHanWeiWalls!==false?'checked':'')+'>魏晋南北朝</label><label><input type="checkbox" data-capital-tang-walls '+(state.mapOverlays.ancientCapitalTangWalls!==false?'checked':'')+'>'+(currentLanguage==='en'?'Sui/Tang':'隋唐')+'</label><label><input type="checkbox" data-capital-research-family="ancientCapitalSouthernTangWalls" '+(state.mapOverlays.ancientCapitalSouthernTangWalls!==false?'checked':'')+'>五代十国</label><label><input type="checkbox" data-capital-research-family="ancientCapitalLiaoJinWalls" '+(state.mapOverlays.ancientCapitalLiaoJinWalls!==false?'checked':'')+'>宋辽金西夏</label><label><input type="checkbox" data-capital-research-family="ancientCapitalYuanWalls" '+(state.mapOverlays.ancientCapitalYuanWalls!==false?'checked':'')+'>元</label>'+[['明','ancientCapitalMingWalls','ancientCapitalMingWallYear',1537],['清','ancientCapitalQingWalls','ancientCapitalQingWallYear',1866]].map(([period,control,key,fallback])=>'<span class="capital-wall-year-group"><label><input type="checkbox" data-capital-research-family="'+control+'" '+(state.mapOverlays[control]!==false?'checked':'')+'>'+period+'</label><select data-capital-wall-year="'+key+'" aria-label="'+period+'代城墙年份">'+AncientCapitalWalls.years.filter(y=>period==='明'?y<1644:y>=1644).map(y=>'<option value="'+y+'" '+(y===(state.mapOverlays[key]||fallback)?'selected':'')+'>'+y+' 年</option>').join('')+'</select></span>').join('')+'<details class="capital-wall-notes" '+(wallNotesOpen?'open':'')+'><summary>'+(currentLanguage==='en'?'Notes':'说明')+'</summary><small>'+(currentLanguage==='en'?'Foreign remains use corresponding Chinese periods; Pre-Xia does not imply legendary foreign history. Mapped archaeological areas are not necessarily city walls. ':'国外遗迹按中国对应年代筛选；“传说／夏以前”不表示外国历史属于传说。遗址区不等于城墙范围。')+'明清：3356 条记录，按年份筛选。隋唐：唐幽州四至参考轮廓及现存寺院参照、长安城墙及坊里等；洛阳实测图城垣参考线、城门及保护展示构件，不受明清年份影响。秦汉：未央宫展示线、石渠阁、秦咸阳宫殿与保护区标绘，不代表完整城界。二里头：遗址标绘范围。东周王城：保护区划外缘参考线。新郑郑韩故城、洛阳汉魏、郑州商城：现存遗迹地图标绘。南京：现存明城墙、宫门采用原始OSM标绘；宫城和皇城主体为遗址约束复原参考。六朝、南唐原先错位的全域推测面已撤下，保留实际遗址展示地点，完整城界待核。开封：周选项含魏大梁地望推定；五代旧城沿革参照与宋东京里城共用一个图件轮廓，不重复叠面；宋辽金西夏含北宋外城、里城和宫城图件参考。杭州吴越海塘、南宋德寿宫与府治，安阳殷墟宫庙、王陵及洹北商城，大同北魏明堂与辽金寺院，成都金沙与东华门多期遗存也分别接入。邺城在河北临漳，与安阳殷墟分开。北京：宋辽金选项含辽南京天宁寺塔现存建筑及金中都地下文物埋藏区参考范围；元选项含元末外郭城复原轮廓及现代城垣遗址公园展示范围，点击区分资料性质。放大后点击查看资料。</small></details></div></details>';
  el.querySelector('.capital-wall-controls .capital-wall-notes').insertAdjacentHTML('beforebegin','<label><input type="checkbox" data-capital-research-family="ancientCapitalModernWalls" '+(state.mapOverlays.ancientCapitalModernWalls!==false?'checked':'')+'>'+(currentLanguage==='en'?'Modern':'近现代')+'</label>');
  const wallPeriods={ancientCapitalLegendaryWalls:'传说',ancientCapitalMingWalls:'明',ancientCapitalQingWalls:'清',ancientCapitalShangWalls:'夏商',ancientCapitalZhouWalls:'周',ancientCapitalQinHanWalls:'秦汉',ancientCapitalHanWeiWalls:'魏晋南北朝',ancientCapitalSouthernTangWalls:'五代十国',ancientCapitalLiaoJinWalls:'宋辽金西夏',ancientCapitalYuanWalls:'元',ancientCapitalModernWalls:'近现代'};
  el.querySelectorAll('.capital-wall-controls label').forEach(label=>{const input=label.querySelector('input'),period=input.hasAttribute('data-capital-tang-walls')?'隋唐':input.hasAttribute('data-capital-mingqing-walls')?((state.mapOverlays.ancientCapitalWallYear||1866)<1644?'明':'清'):wallPeriods[input.dataset.capitalResearchFamily];if(!period)return;label.style.setProperty('--wall-period-color',HistoricalPeriods.colors[period]);input.insertAdjacentHTML('afterend','<i class="capital-wall-color" aria-hidden="true"></i>');});
  const wallAll=el.querySelector('[data-capital-walls]'),wallCount=state.mapOverlays.ancientCapitalWalls?capitalWallSelectionKeys.filter(key=>state.mapOverlays[key]!==false).length:0;wallAll.checked=wallCount===capitalWallSelectionKeys.length;wallAll.indeterminate=wallCount>0&&wallCount<capitalWallSelectionKeys.length;
  const all=el.querySelector('[data-capital-all]'),count=available.filter(key=>selection[key]!==false).length;all.checked=available.length>0&&count===available.length;all.indeterminate=count>0&&count<available.length;all.disabled=!available.length;
+ if(tombLegend)el.appendChild(tombLegend);
 }
 
 function renderMapControls() {
@@ -16535,10 +16548,12 @@ function renderMapControls() {
   GreatWall.legend();
   ImperialTombs.legend();
   renderAncientCapitalLegend();
+  HistoricalAdmin.legend();
+  const historyToggle=document.getElementById("showHistoricalAdminOnMap");if(historyToggle)historyToggle.checked=Boolean(overlays.historicalAdmin);
   $("#showCountryBordersOnMap").checked = Boolean(overlays.countryBorders);
   EthnicRegions.controls();
   GallupSafety.legend(); SafetureRisk.legend();
-  if (overlayLegends) overlayLegends.hidden = !GallupSafety.active(activeMapProvider()) && !SafetureRisk.active(activeMapProvider()) && !overlays.ethnicRegions && !overlays.chinaAncientCapitals && !overlays.imperialTombs && !overlays.greatWall && !showSeafloorAgeLegend && !showSeafloorContourLegend && !overlays.populationDensity && !overlays.geology && !overlays.railways && !overlays.arcgisWater && !overlays.earthquakes && !overlays.volcanoes;
+  if (overlayLegends) overlayLegends.hidden = !GallupSafety.active(activeMapProvider()) && !SafetureRisk.active(activeMapProvider()) && !overlays.ethnicRegions && !overlays.chinaAncientCapitals && !overlays.historicalAdmin && !overlays.greatWall && !showSeafloorAgeLegend && !showSeafloorContourLegend && !overlays.populationDensity && !overlays.geology && !overlays.railways && !overlays.arcgisWater && !overlays.earthquakes && !overlays.volcanoes;
   if (show3d) show3d.checked = Boolean(state.map3d);
   if (showChina5a) showChina5a.checked = Boolean(overlays.china5a);
   if (showAncientCapitals) showAncientCapitals.checked = Boolean(overlays.chinaAncientCapitals);
@@ -16756,6 +16771,7 @@ ImperialTombs.init({ state: () => state, language: () => currentLanguage, fetch:
   popupHtml: mapPopupHtml,
   resetDetail: resetMapDetailClass, front: bringMapLibrePointLayersToFront,
   save: saveUiStateSoon, render: () => { renderMapControls(); renderGeoMap(); } });
+HistoricalAdmin.init({state:()=>state,language:()=>currentLanguage,fetch:fetchJson,save:saveUiStateSoon,render:()=>{renderMapControls();renderGeoMap();}});
 loadState();
 setLoadingDebug("读取本地快速状态", "done");
 moveMapLevelControlToToolbar();
@@ -17034,7 +17050,7 @@ function renderMapProviderControls() {
   if (ageLegend) ageLegend.hidden = !age;
   if (contourLegend) contourLegend.hidden = !contours;
   const legends = $("#mapOverlayLegends");
-  if (legends) legends.hidden = !GallupSafety.active(provider) && !SafetureRisk.active(provider) && !age && !contours && !["ethnicRegions", "chinaAncientCapitals", "imperialTombs", "greatWall", "populationDensity", "geology", "railways", "arcgisWater", "earthquakes", "volcanoes"].some(key => overlays[key]);
+  if (legends) legends.hidden = !GallupSafety.active(provider) && !SafetureRisk.active(provider) && !age && !contours && !["ethnicRegions", "chinaAncientCapitals", "historicalAdmin", "greatWall", "populationDensity", "geology", "railways", "arcgisWater", "earthquakes", "volcanoes"].some(key => overlays[key]);
   scheduleMapOverlayInsets();
 }
 

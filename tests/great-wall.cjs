@@ -19,7 +19,7 @@ assert.equal(index.covered([116.01,40.02]),false);
 for(const f of d.features){assert.ok(f.properties.category);assert.ok(f.geometry);if(f.properties.source!=='ovital')assert.equal(f.properties.approximate,true);}
 const app=fs.readFileSync(require.resolve('../app.js'),'utf8'),html=fs.readFileSync(require.resolve('../index.html'),'utf8');
 assert.match(app,/GreatWall\.sync\(mapLibreMap\)/);assert.match(app,/GreatWall\.leaflet/);assert.match(app,/GreatWall\.init/);
-assert.match(app,/overlayAncientCapitals: "古都"/);assert.match(app,/overlayAncientCapitals: "Ancient Capitals"/);
+assert.match(app,/overlayAncientCapitals: "都城"/);assert.match(app,/overlayAncientCapitals: "Capitals"/);
 assert.match(html,/compact-toggle-pair[\s\S]*?showAncientCapitalsOnMap[\s\S]*?showGreatWallOnMap/);
 const css=fs.readFileSync(require.resolve('../styles.css'),'utf8');
 assert.match(css,/\.great-wall-legend\s*\{\s*pointer-events:auto;/);

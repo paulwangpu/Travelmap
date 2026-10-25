@@ -1,0 +1,182 @@
+{
+  "sourceTitle": "Zheng & Wu (2026), County-level population dataset of ancient China in 2, 742, 1102 & 1820 AD",
+  "article": "https://www.nature.com/articles/s41597-026-07086-6",
+  "dataSource": "https://doi.org/10.6084/m9.figshare.30518417",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "sourceLayer": "ResearchArea",
+  "periods": [
+    {
+      "id": "2",
+      "year": 2,
+      "name": "西汉 · 公元2年",
+      "enName": "Western Han · AD 2",
+      "file": "data/historical-admin/china-2.geojson",
+      "prefectures": 103,
+      "upperRegions": 14,
+      "populationSummary": {
+        "population": 57671401,
+        "knownUnits": 103,
+        "missingUnits": 0,
+        "methods": {
+          "recorded": 103
+        }
+      }
+    },
+    {
+      "id": "742",
+      "year": 742,
+      "name": "唐 · 742年",
+      "enName": "Tang · AD 742",
+      "file": "data/historical-admin/china-742.geojson",
+      "prefectures": 317,
+      "upperRegions": 15,
+      "populationSummary": {
+        "population": 52457215,
+        "knownUnits": 317,
+        "missingUnits": 0,
+        "methods": {
+          "household_conversion": 21,
+          "recorded": 278,
+          "historical_estimate": 15,
+          "neighbor_estimate": 3
+        }
+      }
+    },
+    {
+      "id": "1102",
+      "year": 1102,
+      "name": "北宋 · 1102年",
+      "enName": "Northern Song · AD 1102",
+      "file": "data/historical-admin/china-1102.geojson",
+      "prefectures": 330,
+      "upperRegions": 24,
+      "populationSummary": {
+        "population": 88813910,
+        "knownUnits": 330,
+        "missingUnits": 0,
+        "methods": {
+          "household_conversion": 292,
+          "historical_estimate": 35,
+          "neighbor_estimate": 2,
+          "recorded": 1
+        }
+      }
+    },
+    {
+      "id": "1820",
+      "year": 1820,
+      "name": "清 · 1820年",
+      "enName": "Qing · AD 1820",
+      "file": "data/historical-admin/china-1820.geojson",
+      "prefectures": 320,
+      "upperRegions": 27,
+      "populationSummary": {
+        "population": 351790112,
+        "knownUnits": 316,
+        "missingUnits": 4,
+        "methods": {
+          "missing": 4,
+          "recorded": 277,
+          "historical_estimate": 38,
+          "neighbor_estimate": 1
+        }
+      }
+    }
+  ],
+  "note": "采用作者ResearchArea府级研究区划，上级分区按ProvNAM合并；中文名称经治所、上级政区和史籍交叉核对。覆盖限于研究区，不代表完整全国疆域；未采用模拟县界。原数据标称年层并非逐年严格复原，部分边区地名跨期。投影WGS84，原始简化350米；显示层删除小于100平方千米且小于主体1%的内部离散碎片、填平小于100平方千米的内部孔洞，非实测界线。",
+  "nameSource": "https://doi.org/10.7910/DVN/29302",
+  "displayCleanup": [
+    {
+      "year": 2,
+      "removedInteriorFragments": 0,
+      "filledSmallHoles": 18
+    },
+    {
+      "year": 742,
+      "removedInteriorFragments": 1,
+      "filledSmallHoles": 31
+    },
+    {
+      "year": 1102,
+      "removedInteriorFragments": 0,
+      "filledSmallHoles": 5
+    },
+    {
+      "year": 1820,
+      "removedInteriorFragments": 21,
+      "filledSmallHoles": 220
+    }
+  ],
+  "nameSources": [
+    {
+      "title": "复旦CHGIS府级治所",
+      "url": "https://yugong.fudan.edu.cn/CHGIS/sjxz.htm"
+    },
+    {
+      "title": "Hartwell GIS V5",
+      "url": "https://doi.org/10.7910/DVN/29302"
+    },
+    {
+      "title": "汉书·地理志",
+      "url": "https://zh.wikisource.org/wiki/漢書/卷028"
+    },
+    {
+      "title": "新唐书·地理志",
+      "url": "https://zh.wikisource.org/wiki/新唐書#志"
+    },
+    {
+      "title": "宋史·地理志",
+      "url": "https://zh.wikisource.org/wiki/宋史#志"
+    },
+    {
+      "title": "宋会要辑稿·方域",
+      "url": "https://zh.wikisource.org/wiki/宋會要輯稿/卷103"
+    },
+    {
+      "title": "清史稿·地理志",
+      "url": "https://zh.wikisource.org/wiki/清史稿#志"
+    }
+  ],
+  "upperDisplayCleanup": {
+    "method": "Dissolve original ResearchArea; automatically close narrow water cuts and gaps with a 1000m positive/negative buffer, then simplify at 350m. Remove secondary components and interior holes under 1000 square kilometres; always retain the largest component. Large lake holes remain.",
+    "narrowGapWidthM": 2000,
+    "minimumComponentAreaKm2": 1000,
+    "minimumHoleAreaKm2": 1000,
+    "periods": [
+      {
+        "year": 2,
+        "beforeParts": 16,
+        "afterParts": 14,
+        "beforeHoles": 5,
+        "afterHoles": 6,
+        "closedGapAreaKm2": 3247.1
+      },
+      {
+        "year": 742,
+        "beforeParts": 18,
+        "afterParts": 16,
+        "beforeHoles": 5,
+        "afterHoles": 7,
+        "closedGapAreaKm2": 2585.55
+      },
+      {
+        "year": 1102,
+        "beforeParts": 35,
+        "afterParts": 26,
+        "beforeHoles": 1,
+        "afterHoles": 1,
+        "closedGapAreaKm2": 2968.99
+      },
+      {
+        "year": 1820,
+        "beforeParts": 41,
+        "afterParts": 31,
+        "beforeHoles": 14,
+        "afterHoles": 14,
+        "closedGapAreaKm2": 20394.11
+      }
+    ]
+  },
+  "upperDisplayNote": "上级分区单独从原始ResearchArea合并，再自动闭合约2公里以内的窄缝；删除小于1000平方公里的次要独立碎片和内部孔洞，始终保留主体及较大的岛屿、湖泊。该规则仅用于上级概览显示，不修改府级图形或底图水系。",
+  "populationNote": "人口、府级密度和面积保留原ResearchArea统计值；无记录不作0人口。上级人口由所属府级相加，密度为已知人口合计除以有记录部分原始统计面积，不使用填缝后的显示面积。记录人口、户数乘5换算、史家估算、邻区推算分别标明；覆盖区合计不等同完整全国人口。"
+}

@@ -83,9 +83,9 @@ assert.equal(mappedItems({items:[{mapEligible:true,coordinates:{status:'datum_pe
 assert.equal(mappedItems({items:[{mapEligible:true,coordinates:{status:'verified_wgs84',lat:NaN,lng:109}}]}).length,0);
 const q=geojson(c).features.find(x=>x.id==='qin-first');assert(Math.abs(q.geometry.coordinates[0]-109.25389)<0.00001);assert(Math.abs(q.geometry.coordinates[1]-34.38167)<0.00001);
 const html=fs.readFileSync(require.resolve('../index.html'),'utf8');
-assert.match(html,/compact-toggle-pair[^]*?showAncientCapitalsOnMap[^]*?showImperialTombsOnMap/);
+assert.match(html,/compact-toggle-pair[^]*?showAncientCapitalsOnMap[^]*?showHistoricalAdminOnMap/);
 assert.match(html,/hazard-toggle-pair[^]*?showArcgisWaterOnMap[^]*?水系[^]*?showGreatWallOnMap/);
-for(const id of ['showImperialTombsOnMap','showGreatWallOnMap','showArcgisWaterOnMap'])assert.equal(html.split(`id="${id}"`).length,2);
+for(const id of ['showHistoricalAdminOnMap','showGreatWallOnMap','showArcgisWaterOnMap'])assert.equal(html.split(`id="${id}"`).length,2);
 const sw=fs.readFileSync(require.resolve('../sw.js'),'utf8');assert(sw.includes(html.match(/imperial-tombs\.js\?v=\d+/)[0]));assert(sw.includes(fs.readFileSync(require.resolve('../imperial-tombs.js'),'utf8').match(/data\/imperial-tombs\/catalog\.json\?v=\d+/)[0]));
 console.log(`PASS: ${low.length} overview / ${high.length} detailed points; era filtering, invalid coordinate exclusion, hierarchy, layout and offline assets`);
 

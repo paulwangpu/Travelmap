@@ -45,7 +45,7 @@
   let config,data,pending,error='',revision=0,hover,pinned,leafletGroup,selectedId;
   const bound=new WeakSet();
   const en=()=>config?.language?.()==='en';
-  const enabled=()=>Boolean(config.state().mapOverlays?.imperialTombs);
+  const enabled=()=>Boolean(config.state().mapOverlays?.imperialTombs && config.state().mapOverlays?.chinaAncientCapitals!==false);
   const era=()=>config.state().mapOverlays?.imperialTombsEra||'';
   const eraSelection=()=>{const saved=config.state().mapOverlays?.imperialTombsEras;if(saved)return {...root.HistoricalPeriods.periodSelection(saved),明:saved.明??saved['明清'],清:saved.清??saved['明清']};return era()==='明清'?{明:true,清:true,...Object.fromEntries(eraKeys().filter(k=>!['明','清'].includes(k)).map(k=>[k,false]))}:root.HistoricalPeriods.displayPeriod(era());};
   const natureSelection=()=>({});
@@ -70,19 +70,16 @@
   function geometryOptions(){return {era:eraSelection(),natures:natureSelection(),preqin:preqinSelection(),includeFeudalKings:includeFeudalKings(),onlyVisitableChambers:onlyVisitableChambers(),isVisited:x=>config.isVisited?.(x),en:en()};}
   function geometryCollection(c,g){return Geometry?Geometry.collection(c,g,geometryOptions()):{type:'FeatureCollection',features:[]};}
   function legend() {
-    const toggle=document.getElementById('showImperialTombsOnMap');if(toggle)toggle.checked=enabled();
     const el=document.getElementById('imperialTombsLegend');if(!el)return;
-    el.hidden=!enabled();if(!enabled())return;
+    el.hidden=!config.state().mapOverlays?.chinaAncientCapitals;if(el.hidden)return;
     const scopeItems=(data?.items||[]).filter(x=>(includeFeudalKings()||!isFeudalKing(x))&&(!onlyVisitableChambers()||hasVisitableChamber(x)));
     const count=scopeItems.filter(x=>x.mapEligible).length;
-    const open=Object.fromEntries(Array.from(el.querySelectorAll('details[data-tomb-section]')).map(d=>[d.dataset.tombSection,d.open]));
-    const natureEnglish={actual_burial:'Burial',posthumous:'Posthumous',cenotaph:'Cenotaph',commemorative:'Memorial',mixed:'Group / mixed',unknown:'Uncertain'};
-    const natureChinese={actual_burial:'实际墓葬',posthumous:'追尊陵',cenotaph:'衣冠冢',commemorative:'祭祀纪念陵',mixed:'陵群 / 混合',unknown:'性质未明'};
-    const section=(kind,title,keys,checked,label)=>`<details class="great-wall-section" data-tomb-section="${kind}" ${open[kind]!==false?'open':''}><summary><input type="checkbox" data-tomb-all="${kind}" aria-label="${esc((en()?'Select all ':'全选')+title)}"><i class="wall-disclosure" aria-hidden="true"></i><span>${title} · ${en()?'Select all':'全选'}</span></summary><div class="tomb-legend-options">${keys.map(k=>`<label><input type="checkbox" data-tomb-${kind}="${esc(k)}" ${checked(k)?'checked':''} ${kind==='era'&&!eraKeys().includes(k)?'disabled title="暂无条目"':''}>${kind==='era'?root.HistoricalPeriods.legendIcon(markerSvg('#fff'),dynastyTheme({era:k}).color):''}${kind==='nature'?`<i class="tomb-swatch ${['commemorative','cenotaph'].includes(k)?'memorial':''}" style="--tomb-color:${colors[k]}" aria-hidden="true"></i>`:''}<span>${esc(label(k))}</span></label>`).join('')}</div></details>`;
-    el.innerHTML=`<strong>${en()?'Imperial tombs':'皇陵'}</strong><div class="tomb-legend-scope"><label><input type="checkbox" data-tomb-feudal ${includeFeudalKings()?'checked':''}><span>${en()?'Include vassal kings':'包含诸侯王'}</span></label><label><input type="checkbox" data-tomb-chambers ${onlyVisitableChambers()?'checked':''}><span>${en()?'Only visitable burial chambers':'仅显示可参观地宫'}</span></label></div>${section('era',en()?'Dynasties':'朝代',root.HistoricalPeriods.keys,k=>eraKeys().includes(k)&&eraChecked(k),k=>k==='传说'?(en()?'Legendary / Pre-Xia':'传说／夏以前'):k)}<small role="status">${error?esc(error):data?(en()?`${count} located; ${scopeItems.length-count} pending`:`${count} 条区域点，${scopeItems.filter(x=>!x.coordinates&&x.locationReference?.coordinates).length} 条关联陵区，${scopeItems.filter(x=>!x.coordinates&&!x.locationReference?.coordinates).length} 条位置待核`):(en()?'Loading…':'正在加载…')}</small>${error?`<button type="button" data-tomb-retry>${en()?'Retry':'重试'}</button>`:''}`;
+    const layerOpen=el.querySelector('.capital-tomb-section')?.open??enabled();
+    el.innerHTML=`<details class="great-wall-section capital-tomb-section" data-tomb-section="layer" ${layerOpen?'open':''}><summary><input type="checkbox" data-tomb-visible data-tomb-all="era" ${enabled()?'checked':''} aria-label="${en()?'Tombs':'陵墓'}"><i class="wall-disclosure" aria-hidden="true"></i><span>${en()?'Tombs':'陵墓'}</span></summary><div class="tomb-legend-scope"><label><input type="checkbox" data-tomb-feudal ${includeFeudalKings()?'checked':''}><span>${en()?'Include vassal kings':'包含诸侯王'}</span></label><label><input type="checkbox" data-tomb-chambers ${onlyVisitableChambers()?'checked':''}><span>${en()?'Only visitable burial chambers':'仅显示可参观地宫'}</span></label></div><div class="tomb-legend-options">${root.HistoricalPeriods.keys.map(k=>`<label><input type="checkbox" data-tomb-era="${esc(k)}" ${eraKeys().includes(k)&&eraChecked(k)?'checked':''} ${!eraKeys().includes(k)?'disabled':''}>${root.HistoricalPeriods.legendIcon(markerSvg('#fff'),dynastyTheme({era:k}).color)}<span>${esc(k==='传说'?(en()?'Legendary / Pre-Xia':'传说／夏以前'):k)}</span></label>`).join('')}</div><small role="status">${error?esc(error):data?(en()?`${count} mapped records`:`${count} 条区域点，${scopeItems.filter(x=>!x.coordinates&&!x.locationReference?.coordinates).length} 条位置待核`):(en()?'Loading…':'加载中…')}</small></details>`;
+
     for(const [kind,keys,checked] of [['era',eraKeys(),eraChecked]]) {
       const all=el.querySelector(`[data-tomb-all="${kind}"]`),selected=keys.filter(checked).length;
-      all.checked=keys.length>0&&selected===keys.length;all.indeterminate=selected>0&&selected<keys.length;all.disabled=!data;
+      all.checked=enabled()&&(!data||keys.length>0&&selected===keys.length);all.indeterminate=enabled()&&selected>0&&selected<keys.length;all.disabled=false;
     }
   }
   function showDetail(id) {
@@ -143,13 +140,14 @@
     }catch(e){if(token===revision){legend();console.warn('Imperial tomb overlay',e);}}
   }
   function init(options){config=options;
-    document.getElementById('showImperialTombsOnMap')?.addEventListener('change',e=>{config.state().mapOverlays= config.state().mapOverlays||{};config.state().mapOverlays.imperialTombs=e.target.checked;revision++;removePopups();config.save();config.render();});
     const container=document.getElementById('mapOverlayLegends');if(container){const el=document.createElement('section');el.id='imperialTombsLegend';el.className='great-wall-legend imperial-tombs-legend';el.hidden=true;container.appendChild(el);
       el.addEventListener('change',e=>{
         const t=e.target;
+        if(t.hasAttribute("data-tomb-visible")){config.state().mapOverlays.imperialTombs=t.checked;config.state().mapOverlays.imperialTombsEras=Object.fromEntries(root.HistoricalPeriods.keys.map(k=>[k,t.checked]));config.state().mapOverlays.imperialTombsEra="";revision++;removePopups();config.save();config.render();return;}
         if(t.hasAttribute('data-tomb-chambers')){config.state().mapOverlays.imperialTombsOnlyVisitableChambers=t.checked;revision++;removePopups();config.save();config.render();return;}
         if(t.hasAttribute('data-tomb-feudal')){config.state().mapOverlays.imperialTombsIncludeFeudalKings=t.checked;revision++;removePopups();config.save();config.render();return;}
         const kind=t.dataset.tombAll||(t.hasAttribute('data-tomb-era')?'era':t.hasAttribute('data-tomb-preqin')?'preqin':t.hasAttribute('data-tomb-nature')?'nature':'');if(!kind)return;
+        if(t.checked)config.state().mapOverlays.imperialTombs=true;
         const keys=kind==='era'?eraKeys():kind==='preqin'?preqinKeys():natureKeys(),checked=kind==='era'?eraChecked:kind==='preqin'?preqinChecked:k=>natureSelection()[k]!==false;
         const selection=Object.fromEntries(keys.map(k=>[k,t.dataset.tombAll?t.checked:k===t.dataset[kind==='era'?'tombEra':kind==='preqin'?'tombPreqin':'tombNature']?t.checked:checked(k)]));
         config.state().mapOverlays[kind==='era'?'imperialTombsEras':kind==='preqin'?'imperialTombsPreqin':'imperialTombsNatures']=selection;
