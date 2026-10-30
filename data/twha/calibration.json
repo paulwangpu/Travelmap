@@ -1,0 +1,38 @@
+{
+  "sourceProjection": "Plate Carree",
+  "width": 3600,
+  "height": 1800,
+  "longitudeOrigin": -180,
+  "degreesPerPixel": 0.1,
+  "targetProjection": "EPSG:3857",
+  "latitudeLimit": 85.0511287798066,
+  "rows": [
+    {
+      "north": 85.0511287798066,
+      "south": 45,
+      "height": 1295
+    },
+    {
+      "north": 45,
+      "south": 0,
+      "height": 505
+    },
+    {
+      "north": 0,
+      "south": -45,
+      "height": 505
+    },
+    {
+      "north": -45,
+      "south": -85.0511287798066,
+      "height": 1295
+    }
+  ],
+  "comparison": "Natural Earth 1:50m coastline; modern shoreline alignment only, not historical frontier validation",
+  "samples": 5382,
+  "resolvedSamples": 4812,
+  "unmatchedWithinSearch": 570,
+  "medianMatchedPixels": 1.0,
+  "p90MatchedPixels": 4.0,
+  "tiles": 2225
+}

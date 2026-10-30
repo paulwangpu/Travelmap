@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-28",
+  "addedCities": [
+    "bagan",
+    "mandalay",
+    "amarapura",
+    "inwa",
+    "bago",
+    "anuradhapura",
+    "polonnaruwa",
+    "kandy",
+    "aksum",
+    "carthage",
+    "great-zimbabwe"
+  ],
+  "addedTombs": [
+    "next-humayun",
+    "next-akbar",
+    "next-taj",
+    "next-sikandar-lodi",
+    "next-muhammad-shah",
+    "next-ibrahim-lodi",
+    "next-cyrus",
+    "next-naqsh-group",
+    "next-darius",
+    "next-xerxes",
+    "next-artaxerxes",
+    "next-darius2",
+    "next-artaxerxes2",
+    "next-artaxerxes3",
+    "next-aksum-stelae",
+    "next-kaleb"
+  ],
+  "addedCityFeatures": [
+    "next-mandalay-way-932904169",
+    "next-amarapura-node-4785523121",
+    "next-inwa-way-466294737",
+    "next-bago-way-410092153",
+    "next-anuradhapura-node-4409259289",
+    "next-polonnaruwa-node-2288797277",
+    "next-kandy-way-191377766",
+    "next-aksum-way-262793491",
+    "next-carthage-way-28974393",
+    "next-great-zimbabwe-way-1566895497",
+    "next-bagan-way-46715099",
+    "next-bagan-way-1247084795",
+    "next-bagan-way-1247084796",
+    "next-bagan-node-6090819085",
+    "next-polonnaruwa-way-337482569",
+    "next-polonnaruwa-way-1011920999"
+  ],
+  "tombShapes": 12,
+  "pending": [
+    "曼德勒完整外郭城墙、阿摩罗补罗与阿瓦完整宫城未取得可靠闭合矢量，未使用同名行政区替代。",
+    "阿努拉德普勒与波隆纳鲁沃部分对象仍为独立定位点；未把宗教区或遗产保护区画成全城。",
+    "阿克苏姆王陵墓主传统指认保留；假门墓未取得可靠独立点，不复制整个石碑区中心。",
+    "岩墓立面附近定位不等于地下墓室平面，泰姬陵上层衣冠石棺不等于原地宫开放。"
+  ],
+  "rejected": [
+    "同名酒店与火车站",
+    "曼德勒同名行政边界",
+    "西坎德拉现代行政区",
+    "迦太基同名现代墓园",
+    "纳克什鲁斯塔姆无铭文墓被一律视为已确认墓主"
+  ]
+}

@@ -1,0 +1,1230 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -89.8140992,
+              18.1050144
+            ],
+            [
+              -89.8153373,
+              18.1096668
+            ],
+            [
+              -89.8069002,
+              18.1101785
+            ],
+            [
+              -89.8058081,
+              18.1110009
+            ],
+            [
+              -89.8045957,
+              18.112969
+            ],
+            [
+              -89.8013743,
+              18.1161095
+            ],
+            [
+              -89.7977683,
+              18.1153393
+            ],
+            [
+              -89.7994352,
+              18.1086555
+            ],
+            [
+              -89.8034341,
+              18.1044702
+            ],
+            [
+              -89.8057866,
+              18.1029449
+            ],
+            [
+              -89.8086947,
+              18.1011628
+            ],
+            [
+              -89.8119563,
+              18.1008365
+            ],
+            [
+              -89.8131573,
+              18.1026389
+            ],
+            [
+              -89.8140992,
+              18.1050144
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "maya-calakmul-way-27138148",
+        "siteKey": "calakmul",
+        "siteName": "卡拉克穆尔",
+        "siteEnName": "Calakmul",
+        "name": "卡拉克穆尔遗址区范围",
+        "enName": "Calakmul archaeological site",
+        "role": "area",
+        "period": "隋唐",
+        "wallPeriods": [
+          "隋唐"
+        ],
+        "periodLabel": "玛雅古典期／末古典期遗存；中国年代仅作对照",
+        "sourceUrl": "https://www.openstreetmap.org/way/27138148",
+        "referenceUrl": "https://whc.unesco.org/en/list/1061/",
+        "label": false,
+        "boundaryLabel": false,
+        "includeInDetails": true,
+        "lineWidth": 1.1,
+        "note": "OSM现状遗址或建筑标绘，未移动原始坐标；保留原始边界与孔洞，不表示某一期完整城墙、城邦疆界或世界遗产法定边界。建筑后期修复不单独反推建造年份。",
+        "attribution": "© OpenStreetMap contributors · ODbL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -89.8081293,
+              18.1033703
+            ],
+            [
+              -89.8082471,
+              18.1028702
+            ],
+            [
+              -89.8088242,
+              18.102993
+            ],
+            [
+              -89.8087661,
+              18.1032518
+            ],
+            [
+              -89.8087064,
+              18.1034931
+            ],
+            [
+              -89.8081293,
+              18.1033703
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "maya-calakmul-way-55607908",
+        "siteKey": "calakmul",
+        "siteName": "卡拉克穆尔",
+        "siteEnName": "Calakmul",
+        "name": "一号建筑",
+        "enName": "Structure I",
+        "role": "temple",
+        "period": "隋唐",
+        "wallPeriods": [
+          "隋唐"
+        ],
+        "periodLabel": "玛雅古典期／末古典期遗存；中国年代仅作对照",
+        "sourceUrl": "https://www.openstreetmap.org/way/55607908",
+        "referenceUrl": "https://whc.unesco.org/en/list/1061/",
+        "label": true,
+        "boundaryLabel": false,
+        "includeInDetails": true,
+        "lineWidth": 1.1,
+        "note": "OSM现状遗址或建筑标绘，未移动原始坐标；保留原始边界与孔洞，不表示某一期完整城墙、城邦疆界或世界遗产法定边界。建筑后期修复不单独反推建造年份。",
+        "attribution": "© OpenStreetMap contributors · ODbL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -89.8106877,
+              18.1055218
+            ],
+            [
+              -89.8104174,
+              18.1054699
+            ],
+            [
+              -89.8101455,
+              18.1054216
+            ],
+            [
+              -89.8103072,
+              18.1046311
+            ],
+            [
+              -89.8108494,
+              18.1047313
+            ],
+            [
+              -89.8106877,
+              18.1055218
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "maya-calakmul-way-90913058",
+        "siteKey": "calakmul",
+        "siteName": "卡拉克穆尔",
+        "siteEnName": "Calakmul",
+        "name": "二号建筑",
+        "enName": "Structure II",
+        "role": "temple",
+        "period": "隋唐",
+        "wallPeriods": [
+          "隋唐"
+        ],
+        "periodLabel": "玛雅古典期／末古典期遗存；中国年代仅作对照",
+        "sourceUrl": "https://www.openstreetmap.org/way/90913058",
+        "referenceUrl": "https://whc.unesco.org/en/list/1061/",
+        "label": true,
+        "boundaryLabel": false,
+        "includeInDetails": true,
+        "lineWidth": 1.1,
+        "note": "OSM现状遗址或建筑标绘，未移动原始坐标；保留原始边界与孔洞，不表示某一期完整城墙、城邦疆界或世界遗产法定边界。建筑后期修复不单独反推建造年份。",
+        "attribution": "© OpenStreetMap contributors · ODbL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -89.8137606,
+              18.1079747
+            ],
+            [
+              -89.8138679,
+              18.1075456
+            ],
+            [
+              -89.8140812,
+              18.1075938
+            ],
+            [
+              -89.8139739,
+              18.1080228
+            ],
+            [
+              -89.8137606,
+              18.1079747
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "maya-calakmul-way-55607915",
+        "siteKey": "calakmul",
+        "siteName": "卡拉克穆尔",
+        "siteEnName": "Calakmul",
+        "name": "大卫城（二十号建筑）",
+        "enName": "Great Acropolis (Structure XX)",
+        "role": "palace",
+        "period": "隋唐",
+        "wallPeriods": [
+          "隋唐"
+        ],
+        "periodLabel": "玛雅古典期／末古典期遗存；中国年代仅作对照",
+        "sourceUrl": "https://www.openstreetmap.org/way/55607915",
+        "referenceUrl": "https://whc.unesco.org/en/list/1061/",
+        "label": true,
+        "boundaryLabel": false,
+        "includeInDetails": true,
+        "lineWidth": 1.1,
+        "note": "OSM现状遗址或建筑标绘，未移动原始坐标；保留原始边界与孔洞，不表示某一期完整城墙、城邦疆界或世界遗产法定边界。建筑后期修复不单独反推建造年份。",
+        "attribution": "© OpenStreetMap contributors · ODbL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -89.1416379,
+              14.8330804
+            ],
+            [
+              -89.1414459,
+              14.833663
+            ],
+            [
+              -89.1414144,
+              14.8341108
+            ],
+            [
+              -89.1412334,
+              14.8350186
+            ],
+            [
+              -89.1410253,
+              14.8353412
+            ],
+            [
+              -89.1405024,
+              14.8361517
+            ],
+            [
+              -89.1398493,
+              14.8364709
+            ],
+            [
+              -89.139496,
+              14.8366138
+            ],
+            [
+              -89.1391213,
+              14.8369915
+            ],
+            [
+              -89.1395381,
+              14.8371749
+            ],
+            [
+              -89.1396597,
+              14.8380291
+            ],
+            [
+              -89.140219,
+              14.838512
+            ],
+            [
+              -89.1399152,
+              14.8392286
+            ],
+            [
+              -89.1403963,
+              14.8396744
+            ],
+            [
+              -89.1408999,
+              14.8405485
+            ],
+            [
+              -89.1411305,
+              14.8413036
+            ],
+            [
+              -89.1413883,
+              14.8417189
+            ],
+            [
+              -89.1417869,
+              14.8419069
+            ],
+            [
+              -89.1423138,
+              14.8425296
+            ],
+            [
+              -89.1432213,
+              14.8416909
+            ],
+            [
+              -89.1446418,
+              14.8407445
+            ],
+            [
+              -89.145898,
+              14.8401288
+            ],
+            [
+              -89.1475203,
+              14.8394578
+            ],
+            [
+              -89.1474285,
+              14.8391972
+            ],
+            [
+              -89.1477527,
+              14.8390844
+            ],
+            [
+              -89.1470079,
+              14.8372347
+            ],
+            [
+              -89.1460593,
+              14.8327922
+            ],
+            [
+              -89.1438141,
+              14.8327195
+            ],
+            [
+              -89.1416379,
+              14.8330804
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "maya-copan-relation-16113095",
+        "siteKey": "copan",
+        "siteName": "科潘",
+        "siteEnName": "Copán",
+        "name": "科潘遗址区范围",
+        "enName": "Copán archaeological site",
+        "role": "area",
+        "period": "魏晋南北朝",
+        "wallPeriods": [
+          "魏晋南北朝",
+          "隋唐"
+        ],
+        "periodLabel": "玛雅古典期／末古典期遗存；中国年代仅作对照",
+        "sourceUrl": "https://www.openstreetmap.org/relation/16113095",
+        "referenceUrl": "https://whc.unesco.org/en/list/129/",
+        "label": false,
+        "boundaryLabel": false,
+        "includeInDetails": true,
+        "lineWidth": 1.1,
+        "note": "OSM现状遗址或建筑标绘，未移动原始坐标；保留原始边界与孔洞，不表示某一期完整城墙、城邦疆界或世界遗产法定边界。建筑后期修复不单独反推建造年份。",
+        "attribution": "© OpenStreetMap contributors · ODbL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.1413815,
+          14.8382245
+        ]
+      },
+      "properties": {
+        "id": "maya-copan-node-3878873480",
+        "siteKey": "copan",
+        "siteName": "科潘",
+        "siteEnName": "Copán",
+        "name": "象形文字阶梯",
+        "enName": "Hieroglyphic Stairway",
+        "role": "monument",
+        "period": "魏晋南北朝",
+        "wallPeriods": [
+          "魏晋南北朝",
+          "隋唐"
+        ],
+        "periodLabel": "玛雅古典期／末古典期遗存；中国年代仅作对照",
+        "sourceUrl": "https://www.openstreetmap.org/node/3878873480",
+        "referenceUrl": "https://whc.unesco.org/en/list/129/",
+        "label": true,
+        "boundaryLabel": false,
+        "includeInDetails": true,
+        "lineWidth": 1.1,
+        "note": "OSM现状遗址或建筑标绘，未移动原始坐标；保留原始边界与孔洞，不表示某一期完整城墙、城邦疆界或世界遗产法定边界。建筑后期修复不单独反推建造年份。",
+        "attribution": "© OpenStreetMap contributors · ODbL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -89.142177,
+              14.8395792
+            ],
+            [
+              -89.1421744,
+              14.8394908
+            ],
+            [
+              -89.1421736,
+              14.8394669
+            ],
+            [
+              -89.1421711,
+              14.8393821
+            ],
+            [
+              -89.1420872,
+              14.8393845
+            ],
+            [
+              -89.1420552,
+              14.8393854
+            ],
+            [
+              -89.1419714,
+              14.8393878
+            ],
+            [
+              -89.1419739,
+              14.8394709
+            ],
+            [
+              -89.1419748,
+              14.839498
+            ],
+            [
+              -89.1419774,
+              14.8395849
+            ],
+            [
+              -89.1420593,
+              14.8395826
+            ],
+            [
+              -89.1420881,
+              14.8395817
+            ],
+            [
+              -89.142177,
+              14.8395792
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "maya-copan-way-386184309",
+        "siteKey": "copan",
+        "siteName": "科潘",
+        "siteEnName": "Copán",
+        "name": "四号建筑",
+        "enName": "Structure 4",
+        "role": "temple",
+        "period": "魏晋南北朝",
+        "wallPeriods": [
+          "魏晋南北朝",
+          "隋唐"
+        ],
+        "periodLabel": "玛雅古典期／末古典期遗存；中国年代仅作对照",
+        "sourceUrl": "https://www.openstreetmap.org/way/386184309",
+        "referenceUrl": "https://whc.unesco.org/en/list/129/",
+        "label": true,
+        "boundaryLabel": false,
+        "includeInDetails": true,
+        "lineWidth": 1.1,
+        "note": "OSM现状遗址或建筑标绘，未移动原始坐标；保留原始边界与孔洞，不表示某一期完整城墙、城邦疆界或世界遗产法定边界。建筑后期修复不单独反推建造年份。",
+        "attribution": "© OpenStreetMap contributors · ODbL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -89.7684451,
+              20.3613751
+            ],
+            [
+              -89.7722375,
+              20.362466
+            ],
+            [
+              -89.7731641,
+              20.3614903
+            ],
+            [
+              -89.7737277,
+              20.3602144
+            ],
+            [
+              -89.7737396,
+              20.3591422
+            ],
+            [
+              -89.7733158,
+              20.3575035
+            ],
+            [
+              -89.7718854,
+              20.3568698
+            ],
+            [
+              -89.7705443,
+              20.3564575
+            ],
+            [
+              -89.7695661,
+              20.3564314
+            ],
+            [
+              -89.7691281,
+              20.3570409
+            ],
+            [
+              -89.7689706,
+              20.3579955
+            ],
+            [
+              -89.7689654,
+              20.3589536
+            ],
+            [
+              -89.7686461,
+              20.3594741
+            ],
+            [
+              -89.7683064,
+              20.3599297
+            ],
+            [
+              -89.7681864,
+              20.3600906
+            ],
+            [
+              -89.7680292,
+              20.3608723
+            ],
+            [
+              -89.7682866,
+              20.3611388
+            ],
+            [
+              -89.7684451,
+              20.3613751
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "maya-uxmal-way-26645969",
+        "siteKey": "uxmal",
+        "siteName": "乌斯马尔",
+        "siteEnName": "Uxmal",
+        "name": "乌斯马尔遗址区范围",
+        "enName": "Uxmal archaeological site",
+        "role": "area",
+        "period": "隋唐",
+        "wallPeriods": [
+          "隋唐",
+          "五代十国",
+          "宋辽金西夏"
+        ],
+        "periodLabel": "玛雅古典期／末古典期遗存；中国年代仅作对照",
+        "sourceUrl": "https://www.openstreetmap.org/way/26645969",
+        "referenceUrl": "https://whc.unesco.org/en/list/791/",
+        "label": false,
+        "boundaryLabel": false,
+        "includeInDetails": true,
+        "lineWidth": 1.1,
+        "note": "OSM现状遗址或建筑标绘，未移动原始坐标；保留原始边界与孔洞，不表示某一期完整城墙、城邦疆界或世界遗产法定边界。建筑后期修复不单独反推建造年份。",
+        "attribution": "© OpenStreetMap contributors · ODbL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -89.7715318,
+              20.3583537
+            ],
+            [
+              -89.7710345,
+              20.3592539
+            ],
+            [
+              -89.7707916,
+              20.359136
+            ],
+            [
+              -89.7709642,
+              20.3588235
+            ],
+            [
+              -89.7708838,
+              20.3587845
+            ],
+            [
+              -89.7709765,
+              20.3586167
+            ],
+            [
+              -89.7710705,
+              20.3584466
+            ],
+            [
+              -89.771149,
+              20.3584848
+            ],
+            [
+              -89.7712871,
+              20.3582349
+            ],
+            [
+              -89.7715318,
+              20.3583537
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "maya-uxmal-way-161288116",
+        "siteKey": "uxmal",
+        "siteName": "乌斯马尔",
+        "siteEnName": "Uxmal",
+        "name": "总督宫",
+        "enName": "Governor’s Palace",
+        "role": "palace",
+        "period": "隋唐",
+        "wallPeriods": [
+          "隋唐",
+          "五代十国",
+          "宋辽金西夏"
+        ],
+        "periodLabel": "玛雅古典期／末古典期遗存；中国年代仅作对照",
+        "sourceUrl": "https://www.openstreetmap.org/way/161288116",
+        "referenceUrl": "https://whc.unesco.org/en/list/791/",
+        "label": true,
+        "boundaryLabel": false,
+        "includeInDetails": true,
+        "lineWidth": 1.1,
+        "note": "OSM现状遗址或建筑标绘，未移动原始坐标；保留原始边界与孔洞，不表示某一期完整城墙、城邦疆界或世界遗产法定边界。建筑后期修复不单独反推建造年份。",
+        "attribution": "© OpenStreetMap contributors · ODbL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -89.7698984,
+              20.3606048
+            ],
+            [
+              -89.7698661,
+              20.3607912
+            ],
+            [
+              -89.7699183,
+              20.3607991
+            ],
+            [
+              -89.7699018,
+              20.3608941
+            ],
+            [
+              -89.7698468,
+              20.3608857
+            ],
+            [
+              -89.7698136,
+              20.361137
+            ],
+            [
+              -89.7697283,
+              20.3611262
+            ],
+            [
+              -89.7697042,
+              20.3611426
+            ],
+            [
+              -89.7695835,
+              20.3611288
+            ],
+            [
+              -89.7695051,
+              20.3610981
+            ],
+            [
+              -89.7694667,
+              20.3610495
+            ],
+            [
+              -89.7694851,
+              20.3609104
+            ],
+            [
+              -89.7694347,
+              20.3608989
+            ],
+            [
+              -89.7694365,
+              20.3608464
+            ],
+            [
+              -89.7694493,
+              20.3607509
+            ],
+            [
+              -89.7694642,
+              20.3607011
+            ],
+            [
+              -89.7695114,
+              20.3607097
+            ],
+            [
+              -89.7695402,
+              20.3606057
+            ],
+            [
+              -89.769571,
+              20.3605583
+            ],
+            [
+              -89.769668,
+              20.3605617
+            ],
+            [
+              -89.76979,
+              20.3605793
+            ],
+            [
+              -89.7698984,
+              20.3606048
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "maya-uxmal-way-161288117",
+        "siteKey": "uxmal",
+        "siteName": "乌斯马尔",
+        "siteEnName": "Uxmal",
+        "name": "魔术师金字塔",
+        "enName": "Pyramid of the Magician",
+        "role": "temple",
+        "period": "隋唐",
+        "wallPeriods": [
+          "隋唐",
+          "五代十国",
+          "宋辽金西夏"
+        ],
+        "periodLabel": "玛雅古典期／末古典期遗存；中国年代仅作对照",
+        "sourceUrl": "https://www.openstreetmap.org/way/161288117",
+        "referenceUrl": "https://whc.unesco.org/en/list/791/",
+        "label": true,
+        "boundaryLabel": false,
+        "includeInDetails": true,
+        "lineWidth": 1.1,
+        "note": "OSM现状遗址或建筑标绘，未移动原始坐标；保留原始边界与孔洞，不表示某一期完整城墙、城邦疆界或世界遗产法定边界。建筑后期修复不单独反推建造年份。",
+        "attribution": "© OpenStreetMap contributors · ODbL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -89.7725419,
+              20.3580212
+            ],
+            [
+              -89.7718901,
+              20.3577976
+            ],
+            [
+              -89.7716503,
+              20.3584121
+            ],
+            [
+              -89.7719336,
+              20.3585093
+            ],
+            [
+              -89.7720962,
+              20.3585651
+            ],
+            [
+              -89.7723021,
+              20.3586358
+            ],
+            [
+              -89.7725419,
+              20.3580212
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "maya-uxmal-way-161288111",
+        "siteKey": "uxmal",
+        "siteName": "乌斯马尔",
+        "siteEnName": "Uxmal",
+        "name": "大金字塔",
+        "enName": "Great Pyramid",
+        "role": "temple",
+        "period": "隋唐",
+        "wallPeriods": [
+          "隋唐",
+          "五代十国",
+          "宋辽金西夏"
+        ],
+        "periodLabel": "玛雅古典期／末古典期遗存；中国年代仅作对照",
+        "sourceUrl": "https://www.openstreetmap.org/way/161288111",
+        "referenceUrl": "https://whc.unesco.org/en/list/791/",
+        "label": true,
+        "boundaryLabel": false,
+        "includeInDetails": true,
+        "lineWidth": 1.1,
+        "note": "OSM现状遗址或建筑标绘，未移动原始坐标；保留原始边界与孔洞，不表示某一期完整城墙、城邦疆界或世界遗产法定边界。建筑后期修复不单独反推建造年份。",
+        "attribution": "© OpenStreetMap contributors · ODbL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -89.771341,
+              20.3595026
+            ],
+            [
+              -89.7710913,
+              20.3594082
+            ],
+            [
+              -89.7710457,
+              20.3595141
+            ],
+            [
+              -89.7712954,
+              20.3596086
+            ],
+            [
+              -89.771341,
+              20.3595026
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "maya-uxmal-way-161288104",
+        "siteKey": "uxmal",
+        "siteName": "乌斯马尔",
+        "siteEnName": "Uxmal",
+        "name": "海龟宫",
+        "enName": "House of the Turtles",
+        "role": "palace",
+        "period": "隋唐",
+        "wallPeriods": [
+          "隋唐",
+          "五代十国",
+          "宋辽金西夏"
+        ],
+        "periodLabel": "玛雅古典期／末古典期遗存；中国年代仅作对照",
+        "sourceUrl": "https://www.openstreetmap.org/way/161288104",
+        "referenceUrl": "https://whc.unesco.org/en/list/791/",
+        "label": true,
+        "boundaryLabel": false,
+        "includeInDetails": true,
+        "lineWidth": 1.1,
+        "note": "OSM现状遗址或建筑标绘，未移动原始坐标；保留原始边界与孔洞，不表示某一期完整城墙、城邦疆界或世界遗产法定边界。建筑后期修复不单独反推建造年份。",
+        "attribution": "© OpenStreetMap contributors · ODbL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.9693139,
+              16.9016673
+            ],
+            [
+              -90.9692715,
+              16.900271
+            ],
+            [
+              -90.9673582,
+              16.8981827
+            ],
+            [
+              -90.9674029,
+              16.8955726
+            ],
+            [
+              -90.9625103,
+              16.8971323
+            ],
+            [
+              -90.9620908,
+              16.8989954
+            ],
+            [
+              -90.963809,
+              16.9000638
+            ],
+            [
+              -90.9645303,
+              16.900499
+            ],
+            [
+              -90.9663473,
+              16.9013587
+            ],
+            [
+              -90.967783,
+              16.9019869
+            ],
+            [
+              -90.9682505,
+              16.9016572
+            ],
+            [
+              -90.9693139,
+              16.9016673
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "maya-yaxchilan-way-54176813",
+        "siteKey": "yaxchilan",
+        "siteName": "亚斯奇兰",
+        "siteEnName": "Yaxchilán",
+        "name": "亚斯奇兰遗址区范围",
+        "enName": "Yaxchilán archaeological site",
+        "role": "area",
+        "period": "魏晋南北朝",
+        "wallPeriods": [
+          "魏晋南北朝",
+          "隋唐"
+        ],
+        "periodLabel": "玛雅古典期／末古典期遗存；中国年代仅作对照",
+        "sourceUrl": "https://www.openstreetmap.org/way/54176813",
+        "referenceUrl": "https://lugares.inah.gob.mx/en/node/4367",
+        "label": false,
+        "boundaryLabel": false,
+        "includeInDetails": true,
+        "lineWidth": 1.1,
+        "note": "OSM现状遗址或建筑标绘，未移动原始坐标；保留原始边界与孔洞，不表示某一期完整城墙、城邦疆界或世界遗产法定边界。建筑后期修复不单独反推建造年份。",
+        "attribution": "© OpenStreetMap contributors · ODbL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.9648188,
+              16.898758
+            ],
+            [
+              -90.9647133,
+              16.8986002
+            ],
+            [
+              -90.9647632,
+              16.8985696
+            ],
+            [
+              -90.9648688,
+              16.8987274
+            ],
+            [
+              -90.9648188,
+              16.898758
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "maya-yaxchilan-way-333075389",
+        "siteKey": "yaxchilan",
+        "siteName": "亚斯奇兰",
+        "siteEnName": "Yaxchilán",
+        "name": "三十三号建筑",
+        "enName": "Building 33",
+        "role": "temple",
+        "period": "魏晋南北朝",
+        "wallPeriods": [
+          "魏晋南北朝",
+          "隋唐"
+        ],
+        "periodLabel": "玛雅古典期／末古典期遗存；中国年代仅作对照",
+        "sourceUrl": "https://www.openstreetmap.org/way/333075389",
+        "referenceUrl": "https://lugares.inah.gob.mx/en/node/4367",
+        "label": true,
+        "boundaryLabel": false,
+        "includeInDetails": true,
+        "lineWidth": 1.1,
+        "note": "OSM现状遗址或建筑标绘，未移动原始坐标；保留原始边界与孔洞，不表示某一期完整城墙、城邦疆界或世界遗产法定边界。建筑后期修复不单独反推建造年份。",
+        "attribution": "© OpenStreetMap contributors · ODbL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.9656532,
+              16.9000087
+            ],
+            [
+              -90.9657262,
+              16.8999116
+            ],
+            [
+              -90.965782,
+              16.89995
+            ],
+            [
+              -90.965709,
+              16.9000472
+            ],
+            [
+              -90.9656532,
+              16.9000087
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "maya-yaxchilan-way-333872614",
+        "siteKey": "yaxchilan",
+        "siteName": "亚斯奇兰",
+        "siteEnName": "Yaxchilán",
+        "name": "迷宫（十九号建筑）",
+        "enName": "Labyrinth (Building 19)",
+        "role": "palace",
+        "period": "魏晋南北朝",
+        "wallPeriods": [
+          "魏晋南北朝",
+          "隋唐"
+        ],
+        "periodLabel": "玛雅古典期／末古典期遗存；中国年代仅作对照",
+        "sourceUrl": "https://www.openstreetmap.org/way/333872614",
+        "referenceUrl": "https://lugares.inah.gob.mx/en/node/4367",
+        "label": true,
+        "boundaryLabel": false,
+        "includeInDetails": true,
+        "lineWidth": 1.1,
+        "note": "OSM现状遗址或建筑标绘，未移动原始坐标；保留原始边界与孔洞，不表示某一期完整城墙、城邦疆界或世界遗产法定边界。建筑后期修复不单独反推建造年份。",
+        "attribution": "© OpenStreetMap contributors · ODbL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.9644467,
+              16.899848
+            ],
+            [
+              -90.9645216,
+              16.8998879
+            ],
+            [
+              -90.964568,
+              16.899809
+            ],
+            [
+              -90.9646765,
+              16.8998674
+            ],
+            [
+              -90.9646509,
+              16.8999109
+            ],
+            [
+              -90.9646747,
+              16.8999226
+            ],
+            [
+              -90.9646267,
+              16.9000126
+            ],
+            [
+              -90.964599,
+              16.899999
+            ],
+            [
+              -90.9645848,
+              16.9000231
+            ],
+            [
+              -90.9644764,
+              16.8999646
+            ],
+            [
+              -90.9645212,
+              16.8998885
+            ],
+            [
+              -90.9644464,
+              16.8998486
+            ],
+            [
+              -90.9644132,
+              16.8999128
+            ],
+            [
+              -90.9643384,
+              16.8998773
+            ],
+            [
+              -90.964405,
+              16.8997486
+            ],
+            [
+              -90.9644798,
+              16.899784
+            ],
+            [
+              -90.9644467,
+              16.899848
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "maya-yaxchilan-way-333077795",
+        "siteKey": "yaxchilan",
+        "siteName": "亚斯奇兰",
+        "siteEnName": "Yaxchilán",
+        "name": "球场（十四号建筑）",
+        "enName": "Ballcourt (Building 14)",
+        "role": "monument",
+        "period": "魏晋南北朝",
+        "wallPeriods": [
+          "魏晋南北朝",
+          "隋唐"
+        ],
+        "periodLabel": "玛雅古典期／末古典期遗存；中国年代仅作对照",
+        "sourceUrl": "https://www.openstreetmap.org/way/333077795",
+        "referenceUrl": "https://lugares.inah.gob.mx/en/node/4367",
+        "label": true,
+        "boundaryLabel": false,
+        "includeInDetails": true,
+        "lineWidth": 1.1,
+        "note": "OSM现状遗址或建筑标绘，未移动原始坐标；保留原始边界与孔洞，不表示某一期完整城墙、城邦疆界或世界遗产法定边界。建筑后期修复不单独反推建造年份。",
+        "attribution": "© OpenStreetMap contributors · ODbL"
+      }
+    }
+  ]
+}

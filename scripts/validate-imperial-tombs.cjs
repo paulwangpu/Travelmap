@@ -39,7 +39,7 @@ for(const x of c.items) {
   if(x.coordinates) {
     const p=x.coordinates;
     assert.equal(p.crs,'WGS84');assert(['datum_pending','verified_wgs84','estimated_wgs84'].includes(p.status));
-    if(x.country==='埃及')assert(p.lat>21&&p.lat<33&&p.lng>24&&p.lng<37,'Egypt tomb outside country envelope');else assert(p.lat>18&&p.lat<54&&p.lng>73&&p.lng<135,'existing point outside China envelope');
+    const envelopes={'苏丹':[8,23,21,39],'印度':[6,38,68,98],'伊朗':[24,40,44,64],'埃塞俄比亚':[3,16,32,48],'英国':[49,61,-9,3],'丹麦':[54,58,7,16],'波兰':[49,55,14,25],'捷克':[48,52,12,19],'法国':[41,52,-6,10],'葡萄牙':[36,43,-10,-6],'西班牙':[35,44,-10,5],'奥地利':[46,50,9,18],'俄罗斯':[41,82,19,180],'瑞典':[55,70,10,25],'塞尔维亚':[41,47,18,24],'黑山':[41,44,18,21],'埃及':[21,33,24,37],'韩国':[33,39,124,130],'日本':[24,46,122,146],'越南':[8,24,102,110],'乌兹别克斯坦':[37,46,55,74],'土库曼斯坦':[35,43,52,67],'墨西哥':[14,33,-119,-86],'危地马拉':[13,19,-93,-88]}; const box=envelopes[x.country]||[18,54,73,135];assert(p.lat>box[0]&&p.lat<box[1]&&p.lng>box[2]&&p.lng<box[3],x.id+' outside country envelope');
     assert(sources.has(p.sourceId));assert(p.original&&p.target&&p.limitation);
     assert.equal(p.precision.horizontalAccuracyMeters,null,'no invented accuracy');
   }

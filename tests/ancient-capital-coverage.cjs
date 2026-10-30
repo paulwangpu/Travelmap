@@ -25,7 +25,7 @@ assert(data.items.find(x=>x.name==='江陵').records.some(x=>x['政权/国号']=
 assert(data.items.find(x=>x.name==='建瓯').dynasties.includes('闽（王延政）'));
 for (const site of data.items.filter(x=>x.coordinatePrecision)) {
   assert(Number.isFinite(site.lat)&&Number.isFinite(site.lng));
-  assert.match(site.coordinatePrecision,/参照/);
+  assert.match(site.coordinatePrecision,/参照|参考/);
   assert(site.records.every(x=>/^https:\/\//.test(x['来源URL'])));
 }
 // Records retain their political identity while sourced coordinates and site associations evolve.

@@ -1,0 +1,171 @@
+{
+  "date": "2026-10-29",
+  "addedCities": [
+    "napata",
+    "meroe",
+    "old-nisa",
+    "new-nisa",
+    "sigiriya"
+  ],
+  "updatedSites": [
+    "golconda",
+    "hyderabad",
+    "bijapur",
+    "bidar",
+    "herat",
+    "balkh",
+    "ctesiphon",
+    "taxila-bhir",
+    "taxila-sirkap",
+    "taxila-sirsukh"
+  ],
+  "addedTombs": [
+    "expansion-kurru",
+    "expansion-nuri",
+    "expansion-meroe-pyramids",
+    "expansion-qutb",
+    "expansion-quli",
+    "expansion-jamsheed",
+    "expansion-ibrahim-quli",
+    "expansion-muhammad-quli",
+    "expansion-sultan-muhammad",
+    "expansion-abdullah",
+    "expansion-gol-gumbaz",
+    "expansion-ibrahim-rauza",
+    "expansion-bahmani",
+    "expansion-ahmad-wali",
+    "expansion-alauddin-bahmani"
+  ],
+  "addedCityFeatures": [
+    "expansion-napata-https:--whc.unesco.org-en-list-1073-maps-",
+    "expansion-meroe-way-438303994",
+    "expansion-meroe-way-804413231",
+    "expansion-old-nisa-way-102927391",
+    "expansion-new-nisa-https:--whc.unesco.org-en-list-1242-maps-",
+    "expansion-sigiriya-way-217591865",
+    "expansion-sigiriya-way-23810659",
+    "expansion-sigiriya-way-191390684",
+    "expansion-herat-way-421847649",
+    "expansion-balkh-way-1349179964",
+    "expansion-ctesiphon-way-586125675",
+    "expansion-taxila-sirkap-way-495843821"
+  ],
+  "tombShapes": 13,
+  "sources": [
+    {
+      "title": "UNESCO：巴尔卡尔山与纳帕塔地区遗址",
+      "url": "https://whc.unesco.org/en/list/1073/"
+    },
+    {
+      "title": "UNESCO：纳帕塔地区各组成部分官方坐标与地图",
+      "url": "https://whc.unesco.org/en/list/1073/maps/"
+    },
+    {
+      "title": "密歇根大学凯尔西考古博物馆：库鲁王室墓地",
+      "url": "https://lsa.umich.edu/kelsey/research/current-field-projects/el-kurru--sudan.html"
+    },
+    {
+      "title": "努里考古项目：王室墓地",
+      "url": "https://archaeology.lipscomb.edu/excavations/nuri-archaeological-expedition/nuri-necropolis"
+    },
+    {
+      "title": "UNESCO：麦罗埃王城与库施遗址",
+      "url": "https://whc.unesco.org/en/list/1336/"
+    },
+    {
+      "title": "UNESCO：麦罗埃组成部分官方坐标与地图",
+      "url": "https://whc.unesco.org/en/list/1336/maps/"
+    },
+    {
+      "title": "UNESCO：尼萨帕提亚堡垒",
+      "url": "https://whc.unesco.org/en/list/1242/"
+    },
+    {
+      "title": "UNESCO：老尼萨与新尼萨分项地图",
+      "url": "https://whc.unesco.org/en/list/1242/maps/"
+    },
+    {
+      "title": "斯里兰卡中央文化基金：锡吉里耶王宫、宫苑与城防",
+      "url": "https://ccf.gov.lk/heritage-sites/sigiriya-rock-fortress/"
+    },
+    {
+      "title": "UNESCO：锡吉里耶古城及477—495年都城阶段",
+      "url": "https://whc.unesco.org/en/list/202/"
+    },
+    {
+      "title": "UNESCO预备名单：戈尔康达与库特布沙希王陵",
+      "url": "https://whc.unesco.org/en/tentativelists/5573/"
+    },
+    {
+      "title": "印度考古调查局历史出版物：库特布沙希陵墓",
+      "url": "https://ignca.gov.in/Asi_data/1204.pdf"
+    },
+    {
+      "title": "比贾布尔地区政府：穆罕默德阿迪尔沙陵",
+      "url": "https://vijayapura.nic.in/en/tourist-place/gol-gumbaz/"
+    },
+    {
+      "title": "比贾布尔地区政府：易卜拉欣陵园",
+      "url": "https://vijayapura.nic.in/en/tourist-place/ibrahim-rouza/"
+    },
+    {
+      "title": "卡纳塔克旅游局：阿什图尔巴赫曼尼王陵",
+      "url": "https://karnatakatourism.org/en/destinations/ashtoor"
+    },
+    {
+      "title": "德干遗产基金会：艾哈迈德沙一世陵数字记录",
+      "url": "https://www.deccan-heritage-foundation.org/restoration-projects/digitally-preserving-the-ahmed-shah-wali-tomb-bahmani-tombs-bidar/"
+    },
+    {
+      "title": "比达尔地区政府：王陵与历史建筑",
+      "url": "https://bidar.nic.in/en/adventures/"
+    },
+    {
+      "title": "UNESCO预备名单：赫拉特与伊赫蒂亚鲁丁城堡",
+      "url": "https://whc.unesco.org/en/tentativelists/1927/"
+    },
+    {
+      "title": "阿迦汗文化信托：赫拉特城堡修复",
+      "url": "https://prod.the.akdn/en/where-we-work/central-asia/afghanistan/cultural-development-overview-afghanistan/restoration-in-herat-afghanistan"
+    },
+    {
+      "title": "UNESCO预备名单：巴尔赫城墙与巴拉希萨尔",
+      "url": "https://whc.unesco.org/en/tentativelists/1928/"
+    },
+    {
+      "title": "大都会艺术博物馆：泰西封宫殿发掘",
+      "url": "https://www.metmuseum.org/de/essays/the-metropolitan-museums-excavations-at-ctesiphon"
+    },
+    {
+      "title": "巴基斯坦考古博物馆局：锡尔卡普城址与城墙",
+      "url": "https://doam.gov.pk/public/sites/9756"
+    },
+    {
+      "title": "巴基斯坦考古博物馆局：锡尔苏克城址与城墙",
+      "url": "https://doam.gov.pk/public/sites/858"
+    },
+    {
+      "title": "塔克西拉博物馆：三期城址与出土文物",
+      "url": "https://taxilamuseum.punjab.gov.pk/node/81"
+    },
+    {
+      "title": "巴基斯坦考古博物馆局：鸠那罗佛塔与寺院",
+      "url": "https://doam.gov.pk/public/sites/10362"
+    }
+  ],
+  "pending": [
+    "纳帕塔为分散遗址景观，完整城界未核；库鲁、努里仍为官方陵区参考点。",
+    "新尼萨完整城垣矢量未取得，使用独立官方坐标，不套用老尼萨边界。",
+    "锡吉里耶现有核心面不覆盖全部约70公顷布局，未把岩体或护城河当作全城墙。",
+    "泰西封完整都市与塔克基斯拉宫区尚待原始测绘；未拼造闭合城界。",
+    "塔克西拉保留三期城址，完善机构记载与关键遗迹；锡尔卡普完整约5.5公里城墙、锡尔苏克消失的北西墙线未作假补。"
+  ],
+  "rejected": [
+    "尼萨同名便利店、体育场和街道",
+    "纳帕塔山峰点替代王宫或城界",
+    "库特布沙希陵园售票点替代墓地",
+    "同名阿布哈桑墓作为已确认的末代苏丹实葬",
+    "易卜拉欣陵园清真寺点代替陵墓",
+    "狮子岩岩体边界作为山顶王宫建筑轮廓"
+  ]
+}

@@ -1,0 +1,326 @@
+{
+  "date": "2026-10-28",
+  "policy": "核对图件、考古编号与陵名；没有独立定位依据时不移动遗址、不生成单陵坐标。",
+  "baseline": {
+    "data/qin-xianyang-palace.geojson": "f1f5653a2ffe4b4702d5eec203077213b7970b49b6d5759f9ea11dddc310f233",
+    "docs/qin-xianyang-palace-calibration.json": "0b73562d99eb3a57b744973a0d524a794029b5e3b1d6a03daa26838035630102",
+    "data/datong-historic-sites.geojson": "2fa534928af440071b7d9016d45b41cd7b6d3e4a6dedb66badce198d47511d1f",
+    "docs/datong-archaeology.json": "32c87e3f77e2a11d73fbf1cc0ddedc44934309ec8145224cb9fd324941403c31",
+    "data/imperial-tombs/catalog.json": "128f2abe0b96279ad59537acae52227f52a3471591ae96c8216243e82312e0f4",
+    "data/imperial-tombs/geometry.geojson": "fd4c295fc2898415c6fc42b56353d6f95fabbe601b24021e21244baa1e471728"
+  },
+  "qin": {
+    "originalGeometryHashes": {
+      "qin-xianyang-palace-core-2021": "d7c3c01575ab3e0061bcb1ee0e1c62f358b2495633aaf129098d8329c7fd012d",
+      "qin-xianyang-eastern-protection-2021": "ca11cb39d867a5e256488dbf3ff365659061cba48f414a86429a236927b5f581",
+      "qin-xianyang-southern-protection-2021": "b5b5ad4c293a98d44c9e6b8a14a62b26f58bf39d7e7acbc280f4bde9574917da",
+      "qin-detail-palace-1": "51c93660b22dfd80b32a8d78a4c8fa6cbfc910cafc49f2b5631dde9a5b7c783f",
+      "qin-detail-palace-2": "0caf2cbaf43f90a7f5fe4394ffdd0fd887596fa2ca1094fdecc8d54bd5f4fc81",
+      "qin-detail-palace-3": "7ad0ec0949d4fef5f451915b5e880df505ef4ed239cffd2f8ab5bc5ef032a17a",
+      "qin-detail-palace-5-survey": "244d9629e697b5cdf1ce6cfa6f985a8d7fff61cce666b3890105a7dd70763d7f",
+      "qin-detail-palace-3-gallery": "a7a9cbaa0ae6ec5fe950bbe7d178a01708c61be99c39f27803d58a123c0ba620",
+      "qin-detail-six-platform": "be10f34c264c9aabb3bb3a31a4ba80a7a930169d4c736d29b95ea0c33dbd4a4a",
+      "qin-detail-six-north-wall": "5a6ac4253c33fe878852b0146955be54baa76f88b8a949f89ed6235381bbf19e",
+      "qin-detail-six-cross-wall": "7719ecff54ceb74d9739c283d0fe59d73abf83d275003603f313cf11b0d6de48",
+      "qin-detail-six-high-platform-walls": "002ca9dec81dbdf792b337bdc913464afb9366f900969d8ef1dff1c566ab4b5a",
+      "qin-detail-six-annex-court": "127d4db0087b953341a38f52cd1419549a4e5d1d234155ccdbe0a9f6b670abf7",
+      "qin-detail-six-ramp": "8859bd0630b0a8463d83c4e5d71f35a55f2c6ef5fe78535d47e4a513f4e9cd07",
+      "qin-detail-six-southern-road": "550ca64563e74cb1ddd0cc2952d1decda95460a7964c4ba9187f43f9b6c89199"
+    },
+    "completeCurrentLegalBoundary": false,
+    "geometryChanged": false
+  },
+  "pingcheng": {
+    "source": "https://ygx.sxu.edu.cn/db/%E6%9C%9F%E5%88%8A/20260417/730%E8%AF%95%E8%AE%BA%E5%8C%97%E9%AD%8F%E5%B9%B3%E5%9F%8E%E7%9A%84%E7%A4%BC%E5%88%B6%E7%A9%BA%E9%97%B4.pdf",
+    "featureId": "datong-northern-wei-guo-circuit",
+    "priorGeometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            113.28177137260701,
+            40.11172761993162
+          ],
+          [
+            113.32571517619951,
+            40.111406307317765
+          ],
+          [
+            113.3252777797695,
+            40.079776504011065
+          ],
+          [
+            113.281333976177,
+            40.08009781662492
+          ],
+          [
+            113.28177137260701,
+            40.11172761993162
+          ]
+        ]
+      ]
+    },
+    "currentGeometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            113.28177137260701,
+            40.10992761993162
+          ],
+          [
+            113.3192151761995,
+            40.10960630731776
+          ],
+          [
+            113.31877777976949,
+            40.079776504011065
+          ],
+          [
+            113.281333976177,
+            40.08009781662492
+          ],
+          [
+            113.28177137260701,
+            40.10992761993162
+          ]
+        ]
+      ]
+    },
+    "manualShiftRejected": true,
+    "independentCheckMeters": 694.1484391273791,
+    "surveyBoundaryConfirmed": false,
+    "otherGeometriesUnchanged": true
+  },
+  "song": [
+    {
+      "id": "song-si",
+      "name": "宋永思陵",
+      "status": "unresolved",
+      "excavationUnit": null,
+      "reason": "一号陵园原处于“高宗陵”保护区，但原标牌不是墓主鉴定；雷长胜研究提出一号为吴皇后陵的另一解释。一号不能直接绑定宋高宗，亦不能据此认定吴后身份已定论。"
+    },
+    {
+      "id": "song-fu",
+      "name": "宋永阜陵",
+      "status": "unresolved",
+      "excavationUnit": null,
+      "reason": "历史陵名与孝宗墓主有据，尚未获得可将一、三、四等考古编号唯一对应永阜陵的最终确认资料。"
+    },
+    {
+      "id": "song-chong",
+      "name": "宋永崇陵",
+      "status": "unresolved",
+      "excavationUnit": null,
+      "reason": "位置及南片区位次有文献复原方案，但缺唯一考古对应；不得把北宋徽宗永祐陵与光宗永崇陵因名称相近或排序混同。"
+    },
+    {
+      "id": "song-mao",
+      "name": "宋永茂陵",
+      "status": "unresolved",
+      "excavationUnit": null,
+      "reason": "原“宁宗陵”保护区暂编二号陵园；二号发掘后判断为下宫，不能因此将其等同宁宗墓穴，也不按“二号”理解为第二位帝王。"
+    },
+    {
+      "id": "song-mu",
+      "name": "宋永穆陵",
+      "status": "unresolved",
+      "excavationUnit": null,
+      "reason": "理宗顶骨归葬、明代碑刻及传统地名是寻找线索，不能单独确定原南宋石藏或把后世碑位当墓室坐标。"
+    },
+    {
+      "id": "song-shao",
+      "name": "宋永绍陵",
+      "status": "unresolved",
+      "excavationUnit": null,
+      "reason": "度宗陵名有史料记录；未取得可与具体考古编号唯一对应的原位证据与WGS84定位成果。"
+    }
+  ],
+  "jin": [
+    {
+      "id": "jin-rui",
+      "name": "金太祖睿陵",
+      "status": "identity_confirmed_location_pending",
+      "reason": "北京市文物局2025年复函明确太祖睿陵经考古发掘确认。但本项目尚未取得已发掘墓穴与独立地理控制点的对应成果；“身份确认”不等于“坐标已核”。"
+    },
+    {
+      "id": "jin-guang",
+      "name": "金始祖光陵",
+      "status": "unresolved",
+      "reason": "北京市文物局2025年复函指出仅太祖睿陵经考古发掘确认。该历史陵名与现存编号陵寝的对应未获考古确认，不据旅游牌、神道构件或同一主陵区推定具体墓穴。"
+    },
+    {
+      "id": "jin-xi",
+      "name": "金德帝熙陵",
+      "status": "unresolved",
+      "reason": "北京市文物局2025年复函指出仅太祖睿陵经考古发掘确认。该历史陵名与现存编号陵寝的对应未获考古确认，不据旅游牌、神道构件或同一主陵区推定具体墓穴。"
+    },
+    {
+      "id": "jin-jian",
+      "name": "金安帝建陵",
+      "status": "unresolved",
+      "reason": "北京市文物局2025年复函指出仅太祖睿陵经考古发掘确认。该历史陵名与现存编号陵寝的对应未获考古确认，不据旅游牌、神道构件或同一主陵区推定具体墓穴。"
+    },
+    {
+      "id": "jin-hui",
+      "name": "金献祖辉陵",
+      "status": "unresolved",
+      "reason": "北京市文物局2025年复函指出仅太祖睿陵经考古发掘确认。该历史陵名与现存编号陵寝的对应未获考古确认，不据旅游牌、神道构件或同一主陵区推定具体墓穴。"
+    },
+    {
+      "id": "jin-an",
+      "name": "金昭祖安陵",
+      "status": "unresolved",
+      "reason": "北京市文物局2025年复函指出仅太祖睿陵经考古发掘确认。该历史陵名与现存编号陵寝的对应未获考古确认，不据旅游牌、神道构件或同一主陵区推定具体墓穴。"
+    },
+    {
+      "id": "jin-ding",
+      "name": "金景祖定陵",
+      "status": "unresolved",
+      "reason": "北京市文物局2025年复函指出仅太祖睿陵经考古发掘确认。该历史陵名与现存编号陵寝的对应未获考古确认，不据旅游牌、神道构件或同一主陵区推定具体墓穴。"
+    },
+    {
+      "id": "jin-yong",
+      "name": "金世祖永陵",
+      "status": "unresolved",
+      "reason": "北京市文物局2025年复函指出仅太祖睿陵经考古发掘确认。该历史陵名与现存编号陵寝的对应未获考古确认，不据旅游牌、神道构件或同一主陵区推定具体墓穴。"
+    },
+    {
+      "id": "jin-tai",
+      "name": "金肃宗泰陵",
+      "status": "unresolved",
+      "reason": "北京市文物局2025年复函指出仅太祖睿陵经考古发掘确认。该历史陵名与现存编号陵寝的对应未获考古确认，不据旅游牌、神道构件或同一主陵区推定具体墓穴。"
+    },
+    {
+      "id": "jin-xian",
+      "name": "金穆宗献陵",
+      "status": "unresolved",
+      "reason": "北京市文物局2025年复函指出仅太祖睿陵经考古发掘确认。该历史陵名与现存编号陵寝的对应未获考古确认，不据旅游牌、神道构件或同一主陵区推定具体墓穴。"
+    },
+    {
+      "id": "jin-qiao",
+      "name": "金康宗乔陵",
+      "status": "unresolved",
+      "reason": "北京市文物局2025年复函指出仅太祖睿陵经考古发掘确认。该历史陵名与现存编号陵寝的对应未获考古确认，不据旅游牌、神道构件或同一主陵区推定具体墓穴。"
+    },
+    {
+      "id": "jin-gong",
+      "name": "金太宗恭陵",
+      "status": "unresolved",
+      "reason": "北京市文物局2025年复函指出仅太祖睿陵经考古发掘确认。该历史陵名与现存编号陵寝的对应未获考古确认，不据旅游牌、神道构件或同一主陵区推定具体墓穴。"
+    },
+    {
+      "id": "jin-jing",
+      "name": "金睿宗景陵",
+      "status": "unresolved",
+      "reason": "北京市文物局2025年复函指出仅太祖睿陵经考古发掘确认。该历史陵名与现存编号陵寝的对应未获考古确认，不据旅游牌、神道构件或同一主陵区推定具体墓穴。"
+    },
+    {
+      "id": "jin-xing",
+      "name": "金世宗兴陵",
+      "status": "unresolved",
+      "reason": "北京市文物局2025年复函指出仅太祖睿陵经考古发掘确认。该历史陵名与现存编号陵寝的对应未获考古确认，不据旅游牌、神道构件或同一主陵区推定具体墓穴。"
+    },
+    {
+      "id": "jin-dao",
+      "name": "金章宗道陵",
+      "status": "unresolved",
+      "reason": "北京市文物局2025年复函指出仅太祖睿陵经考古发掘确认。该历史陵名与现存编号陵寝的对应未获考古确认，不据旅游牌、神道构件或同一主陵区推定具体墓穴。"
+    },
+    {
+      "id": "jin-yu",
+      "name": "金显宗裕陵",
+      "status": "unresolved",
+      "reason": "北京市文物局2025年复函指出仅太祖睿陵经考古发掘确认。该历史陵名与现存编号陵寝的对应未获考古确认，不据旅游牌、神道构件或同一主陵区推定具体墓穴。"
+    },
+    {
+      "id": "jin-si",
+      "name": "金熙宗思陵",
+      "status": "unresolved",
+      "reason": "北京市文物局2025年复函指出仅太祖睿陵经考古发掘确认。该历史陵名与现存编号陵寝的对应未获考古确认，不据旅游牌、神道构件或同一主陵区推定具体墓穴。"
+    },
+    {
+      "id": "jin-shun",
+      "name": "金德宗顺陵（后降为墓）",
+      "status": "unresolved",
+      "reason": "北京市文物局2025年复函指出仅太祖睿陵经考古发掘确认。该历史陵名与现存编号陵寝的对应未获考古确认，不据旅游牌、神道构件或同一主陵区推定具体墓穴。"
+    },
+    {
+      "id": "jin-weishao",
+      "name": "金卫绍王墓（康东峪线索）",
+      "status": "unresolved",
+      "reason": "北京市文物局2025年复函指出仅太祖睿陵经考古发掘确认。该历史陵名与现存编号陵寝的对应未获考古确认，不据旅游牌、神道构件或同一主陵区推定具体墓穴。"
+    }
+  ],
+  "sources": {
+    "song6-2018-report": {
+      "title": "浙江绍兴宋六陵陵园遗址2018年考古发掘简报",
+      "publisher": "浙江省文物考古研究所等，《考古与文物》2021年第1期",
+      "url": "https://yangtze.silkroadinfo.org.cn/2021/8/20210825153441258%E6%B5%99%E6%B1%9F%E7%BB%8D%E5%85%B4%E5%AE%8B%E5%85%AD%E9%99%B5%E9%99%B5%E5%9B%AD%E9%81%97%E5%9D%802018%E5%B9%B4%E8%80%83%E5%8F%A4%E5%8F%91%E6%8E%98%E7%AE%80%E6%8A%A5.pdf",
+      "note": "原高宗陵保护区暂编一号陵园；编号不是帝陵年代顺序，不能由原保护区名称认定墓主。本次原文镜像下载失败，未据其中图件新增坐标。"
+    },
+    "song6-identity-study": {
+      "title": "宋六陵一号陵园遗址性质及诸陵位置蠡测",
+      "publisher": "雷长胜，绍兴市文物考古研究所；《绍兴文博》2021，2022年出版，第146—151页",
+      "url": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3000/site/attach/0/f3ee2b8a49014b56acd2ec3f6abc49a0.pdf",
+      "note": "已读取原文。提出一号陵园为高宗吴皇后陵等推测，作者明确并非已定论的逐陵身份、绝对位置。"
+    },
+    "song6-lower-palace-review": {
+      "title": "宋六陵二号陵园考古又有新成果",
+      "publisher": "杭州亚运会官方门户，2022-01-08；考古领队李晖达说明",
+      "url": "https://www.hangzhou2022.cn/sqzc/sxsq/202201/t20220108_43261.shtml",
+      "note": "二号陵园判断为下宫，不能等同原宁宗陵标牌，也不是第二座帝陵。"
+    },
+    "song6-2023-correspondence": {
+      "title": "宋六陵考古是中国帝陵考古重大突破",
+      "publisher": "浙江党建网，2023-09-28；浙江省文物考古研究所考古领队李晖达报告",
+      "url": "https://www.zjdj.com.cn/zjcf/xcwhfamily/202309/t20230928_26278988.shtml",
+      "note": "一、三、四号为上宫，二号可能与四号合属上下宫；具体帝后身份及位次仍待明确。"
+    },
+    "jin-2025-official-attribution": {
+      "title": "北京市文物局关于金陵主陵区环境整治与展示项目设计方案核准的复函",
+      "publisher": "北京市文物局，京文物〔2025〕1624号，2025-12-15公开",
+      "url": "https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html",
+      "note": "明确仅太祖睿陵经考古发掘确认；道陵、裕陵等位置属推测，未确认陵寝宜用数字编号。法定区划以2007年公布的区划为依据。"
+    },
+    "jin-official-site-confirmation": {
+      "title": "金陵",
+      "publisher": "北京市文物局，全国重点文物保护单位介绍",
+      "url": "https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742737/523439/index.html",
+      "note": "确认房山区金陵历史陵区及已发掘太祖睿陵，不提供各陵可直接采用的实测坐标。"
+    }
+  },
+  "preservation": {
+    "capitalRootIdentifiersUnchanged": true,
+    "tombIdentifiersUnchanged": true,
+    "tombCoordinatesUnchanged": true,
+    "allTombGeometriesUnchanged": true,
+    "palaceDetailGeometriesUnchanged": true,
+    "datongOtherGeometriesUnchanged": true,
+    "tombCount": 557
+  },
+  "validation": {
+    "focusedTests": [
+      "four-sites-calibration.cjs",
+      "qin-xianyang-palace.cjs",
+      "jin-migration-sites.cjs",
+      "tomb-map-checkins.cjs",
+      "europe-remaining.cjs",
+      "tomb-site-overlaps.cjs"
+    ],
+    "focusedPassed": true,
+    "browserReport": "output/four-sites-calibration-20261028/browser.json",
+    "browserPassed": true,
+    "baselineRegressionFailures": 36,
+    "finalRegressionFailures": 41,
+    "additionalFailures": [
+      "egypt-royal-tombs.cjs",
+      "imperial-tomb-next-supplement.cjs",
+      "imperial-tomb-pdf-supplement.cjs",
+      "imperial-tombs-coverage.cjs",
+      "imperial-tombs.cjs"
+    ],
+    "additionalFailureContext": "并行新增44条皇陵后，仍有旧精确计数或派生覆盖清单未同步；不回退并行新增以消除失败。",
+    "diffCheck": "本轮涉及文件通过；全工作区另有未触及文件的空白错误。"
+  }
+}

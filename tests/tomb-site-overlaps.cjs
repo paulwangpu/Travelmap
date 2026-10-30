@@ -19,6 +19,13 @@ for(const record of original.items.filter(x=>!excluded.includes(x.id)&&x.id!=='c
   assert.equal(current.locationReference.coordinates.lng,catalog.items.find(x=>x.id==='koguryo-jian-kings').coordinates.lng);
   delete current.locationReference.coordinates;delete previous.locationReference.coordinates;
  }
+ const review=require('../docs/four-sites-calibration-20261028.json'),reviewed=new Set(['song6','jin-group',...review.song.map(x=>x.id),...review.jin.map(x=>x.id)]);
+ if(reviewed.has(record.id)){
+  assert.equal(current.locationReview.reviewedAt,review.date);
+  assert.deepEqual(current.coordinates&&[current.coordinates.lng,current.coordinates.lat],previous.coordinates&&[previous.coordinates.lng,previous.coordinates.lat],'geographic coordinates preserved');
+  for(const field of ['locationReview','archaeologicalCorrespondence','mapReason','sourceIds']){delete current[field];delete previous[field];}
+  if(record.id==='song6'){assert.equal(catalog.items.find(x=>x.id==='song6').coordinates.status,'estimated_wgs84');delete current.coordinates;delete previous.coordinates;}
+ }
  assert.deepEqual(current,previous,record.id);
 }
 const copy=JSON.parse(JSON.stringify(catalog.items));require('../scripts/clean-tomb-site-overlaps.cjs')({items:copy,dir:path.dirname(require.resolve('../data/imperial-tombs/catalog.json'))});assert.deepEqual(copy,catalog.items);

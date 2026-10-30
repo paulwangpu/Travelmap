@@ -1,0 +1,11 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert/strict');
+const c={};vm.createContext(c);vm.runInContext(fs.readFileSync('jiangshan-history.js','utf8'),c);
+c.JiangshanHistory.init({state:()=>({mapOverlays:{}}),language:()=> 'zh'});
+const catalog=JSON.parse(fs.readFileSync('data/jiangshan/catalog.json')),phase=catalog.periods.find(p=>p.from<=1354&&p.to>=1354),d=JSON.parse(fs.readFileSync(phase.file));
+const data={areas:{features:d.features.filter(f=>f.properties.level==='prefecture')},upperAreas:{features:d.features.filter(f=>f.properties.level==='province')},borders:{features:d.features.filter(f=>f.properties.level==='polity')}};
+let p=c.JiangshanHistory.resolveHover(data,[80,31],'prefecture',6);assert.equal(p.nameZh,'宣政院辖地');assert.equal(p.hoverReason,'fallback');assert(c.JiangshanHistory.hover(p).includes('宣政院辖地'));assert(!c.JiangshanHistory.hover(p).includes('暂无数据'));
+p=c.JiangshanHistory.resolveHover(data,[89,41],'prefecture',6);assert.equal(p.nameZh,'元');assert.equal(p.hoverReason,'fallback');assert(c.JiangshanHistory.hover(p).includes('元'));assert(!c.JiangshanHistory.hover(p).includes('暂无数据'));
+const f=data.areas.features.find(f=>f.properties.labelCoordinates&&c.JiangshanHistory.resolveHover(data,f.properties.labelCoordinates,'prefecture',6)?.level==='prefecture');assert(f);assert(!c.JiangshanHistory.resolveHover(data,f.properties.labelCoordinates,'prefecture',6).hoverReason,'Current level retains precedence');
+assert.equal(c.JiangshanHistory.resolveHover(data,[0,0],'prefecture',6),null);
+assert.equal(c.JiangshanHistory.resolveHover(data,[89,41],'prefecture',3).hoverReason,'fallback');assert.equal(c.JiangshanHistory.resolveHover(data,f.properties.labelCoordinates,'prefecture',3).nameZh,c.JiangshanHistory.resolveHover(data,f.properties.labelCoordinates,'prefecture',6).nameZh,'Zoom preserves selected-tier hover');
+console.log('PASS: real missing prefectures fall back to upper division / polity, with current-level priority and no invented coverage');

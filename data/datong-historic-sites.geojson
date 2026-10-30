@@ -6592,19 +6592,19 @@
         "capitalSiteKey": "ancient-site:平城遗址:40.09000,113.30000",
         "capitalSiteName": "平城遗址",
         "capitalSiteDisplayName": "平城遗址",
-        "sourceName": "北魏平城郭城",
-        "label": "北魏平城郭城",
+        "sourceName": "北魏平城郭城（研究候选）",
+        "label": "北魏平城郭城（待考）",
         "enName": "Northern Wei Pingcheng outermost enclosure",
-        "enSourceName": "Northern Wei Pingcheng outermost enclosure",
-        "enLabel": "Northern Wei outermost enclosure",
+        "enSourceName": "Pingcheng outer enclosure (research hypothesis)",
+        "enLabel": "Pingcheng outer enclosure (unconfirmed)",
         "sourceUrl": "./sources/datong.html",
         "sourceTitle": "大同城垣、宫府、遗址与分期依据",
         "referenceUrl": "https://ygx.sxu.edu.cn/db/%E6%9C%9F%E5%88%8A/20260417/730%E8%AF%95%E8%AE%BA%E5%8C%97%E9%AD%8F%E5%B9%B3%E5%9F%8E%E7%9A%84%E7%A4%BC%E5%88%B6%E7%A9%BA%E9%97%B4.pdf",
         "coordinateSystem": "WGS84",
-        "status": "学术示意图外围城圈判读 · 闭合研究参考，非实测墙界",
-        "enStatus": "Interpreted outer circuit from an academic schematic; closed reference, not a surveyed wall",
-        "note": "北魏郭城与宫城、外城独立表达。采用武彤《试论北魏平城的礼制空间》（2024）第50页图3中环绕宫城、外城的黑色虚线城圈，作为郭城候选轮廓转绘；不是图中标注“四郊礼制空间”的外围红框。图3改绘自王江2021年研究，未给出逐边原始墙基测量；初始按图内府城四角对应现状OSM内缘作等比旋转平移定位，不根据三十二里周长另造矩形。闭合仅表示这一图示方案，不断言各边都已发掘。原图为区域关系示意，明堂检验点相差约694米，说明不能宣称精确配准；城墙、转角和城门的精确位置均待考古复核。2022年讲座所述南、西候选道路地望另存研究数据，不同时绘出平行边。2008年郭城御河西侧说、2024年综述的其他四至说有差异，未混拼为同一实测城界。 北侧、东侧均参考该文第50页图3的黑色虚线郭城边线：北侧位于宫城以北，东侧位于图示御河以东；图示参考，非实测墙界。 2026-10-23复核底图相对位置：原等比转绘使北界几乎贴宫城、东界落入现状御河，故北侧约北移200米、东侧约东移550米，恢复图3所示宫城以北留有间隔、郭城东界在御河以东的关系；南、西侧保持。此次为示意位置校正，不是新增考古定位。",
-        "enNote": "The outermost enclosure is distinct from palace and outer-city circuits. Digitized the BLACK dashed city enclosure around both in Wu Tong (2024), Fig.3, p.50, as a candidate outermost-city reference. The larger RED suburban ritual-space box is excluded. The figure adapts Wang Jiang (2021), without individual surveyed wall footings. A uniform similarity fit uses four present main-city inner-edge corners as locators, preserving source proportions rather than deriving a rectangle from reported circumference. This is one schematic interpretation, not proof every edge was excavated. A Mingtang check point differs by about 694 m, demonstrating schematic distortion; precise walls, corners and gate locations remain unverified. The 2022 road-corridor candidates are retained in research data, without parallel display. Competing 2008/2024 interpretations are not combined into a purported measured circuit. The north and east sides follow the black dashed outermost enclosure in Fig.3 (p.50): north of the palace enclosure and east of the depicted Yu River. Schematic reference, not surveyed wall boundaries. On 2026-10-23 the north side was shifted about 200 m north and east side about 550 m east to restore the schematic relationships: a gap north of the palace and an eastern boundary east of the present Yu River. South and west sides are retained. This is a schematic positional correction, not new archaeological surveying.",
+        "status": "学术示意图候选范围 · 四至待考，非考古实测城墙",
+        "enStatus": "Candidate circuit from an academic schematic; limits unconfirmed, not surveyed archaeological walls",
+        "note": "复核武彤2024年第50页图3：图题为“四郊礼制空间示意图”，黑色虚线圈只能作为研究候选，不能将四郊空间和已确认郭城墙混同。恢复原相似变换转绘的闭合几何，撤销2026-10-23为贴合宫城及现状御河而人工北移约200米、东移约550米的改动；古河与现代河道不能未经证据强制重合。原图内四个府城参照点残差约32米，独立明堂点偏差约694米，说明示意图不能提供精确绝对范围。平城区政府2026年3月资料仍说明四至尚未确定，后续须取得分期考古总图与控制点。现存OSM墙体、宫城、外城及明堂点均不移动。",
+        "enNote": "Figure 3 on p.50 of Wu Tong (2024) is explicitly a schematic of suburban ritual space; its dashed enclosure is only a research hypothesis, not a confirmed archaeological circuit. Restore the original similarity-transformed outline and reject the unsupported north/east shifts made on 2026-10-23 to match the palace and present river. Modern and ancient river courses cannot be forced to coincide. About 32 m contextual residuals coexist with a 694 m independent Mingtang discrepancy, demonstrating major schematic distortion. The Pingcheng government stated in March 2026 that the city limits remain undetermined. Original OSM walls, palace/city references and the Mingtang point remain unchanged.",
         "inferredBoundary": true,
         "labelMinZoom": 13,
         "historicalBegin": 422,
@@ -6615,11 +6615,13 @@
           40.079931620445336
         ],
         "labelInsideBoundary": true,
-        "fillOpacity": 0.02,
-        "lineOpacity": 1,
+        "fillOpacity": 0.015,
+        "lineOpacity": 0.6,
         "historicalEnd": 494,
         "geometryBasis": "Early-phase attribution: Zhang Zhizhong 2008, pp.30–34; present locator geometry: original OSM. These are distinct evidence levels.",
-        "datongGuoResearchCircuit": true
+        "datongGuoResearchCircuit": true,
+        "calibrationReviewedAt": "2026-10-28",
+        "calibrationQuality": "schematic_not_independently_georeferenced"
       },
       "geometry": {
         "type": "Polygon",
@@ -6627,14 +6629,14 @@
           [
             [
               113.28177137260701,
-              40.11172761993162
+              40.10992761993162
             ],
             [
-              113.32571517619951,
-              40.111406307317765
+              113.3192151761995,
+              40.10960630731776
             ],
             [
-              113.3252777797695,
+              113.31877777976949,
               40.079776504011065
             ],
             [
@@ -6643,7 +6645,7 @@
             ],
             [
               113.28177137260701,
-              40.11172761993162
+              40.10992761993162
             ]
           ]
         ]
@@ -6654,8 +6656,8 @@
     "ancient-site:平城遗址:40.09000,113.30000": [
       {
         "name": "北魏 · 平城宫城及周边遗址",
-        "boundaryStatus": "宫城、外城、郭城分别闭合研究参考；四座宫门方位示意，逐边测绘仍待核",
-        "summary": "依据2008年考古调查研究区分北魏墙体层位与明清现状土墙；外城三面走廊及宫城北部墙段以虚线定位参照表达，不宣称地下墙基实测，不闭合缺口。2011年研究对外城尺度有不同解释；一、二、三号基址与铁牛里独立测绘仍待核，明堂展示建筑不代替原台基。 新增两个淡填充闭合研究面；南界、缺口与转角补接逐项说明。该方案与2011年外城尺度解释有差异，不作为定论。 郭城明确独立列项：422年筑郭见文献，南、西候选地望不是实测墙基。中华、云龙、神虎、中阳按文献方位表达，未将十二京城门任意落点。 郭城新增2024年学术示意图黑色虚线城圈的闭合候选范围；不用外围四郊红框，未将图件配准误差当作墙界精度。",
+        "boundaryStatus": "郭城闭合研究候选，四至待考；本轮撤销无控制点的人工平移",
+        "summary": "依据2008年考古调查研究区分北魏墙体层位与明清现状土墙；外城三面走廊及宫城北部墙段以虚线定位参照表达，不宣称地下墙基实测，不闭合缺口。2011年研究对外城尺度有不同解释；一、二、三号基址与铁牛里独立测绘仍待核，明堂展示建筑不代替原台基。 新增两个淡填充闭合研究面；南界、缺口与转角补接逐项说明。该方案与2011年外城尺度解释有差异，不作为定论。 郭城明确独立列项：422年筑郭见文献，南、西候选地望不是实测墙基。中华、云龙、神虎、中阳按文献方位表达，未将十二京城门任意落点。 郭城新增2024年学术示意图黑色虚线城圈的闭合候选范围；不用外围四郊红框，未将图件配准误差当作墙界精度。 2026-10-28复核仅恢复源图可复算转绘，保留694米独立检验偏差，不称为精确考古城界。",
         "sources": [
           {
             "title": "大同分期与原始几何说明",

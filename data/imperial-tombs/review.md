@@ -1,6 +1,6 @@
 # 待核实与覆盖缺口
 
-当前280条代表定位；未定位和坐标冲突记录保留研究查询。白名单与排除原因见coordinate-decisions.json，原始地理语句见coordinate-research.json。
+当前438条代表定位；未定位和坐标冲突记录保留研究查询。白名单与排除原因见coordinate-decisions.json，原始地理语句见coordinate-research.json。
 
 重点：霸陵只认江村大墓，采用江村大墓新遗址实体点，拒绝凤凰嘴旧点；秦始皇陵与兵马俑坑分开，后者不计帝陵；传说陵均为传统祭祀纪念认定；乾陵合葬不按墓主人数拆点；陵群与子陵按缩放互斥。隋炀帝点位对应曹庄遗址，不采用旧怀泗陵景区。明显陵采用官方陵区经纬度范围中点，基准未明明确标为估计；清永陵采用地区交叉核查后的WGS84代表点，原官方冲突点存档。
 
@@ -16,6 +16,7 @@
 - 宋辽金西夏：金太祖睿陵独立位置、南宋六陵逐陵对应及西夏墓号与墓主关系。辽显陵、乾陵已补陵前遗址估计点；其墓室归属和原保护附件坐标仍待进一步核对。
 - 元：其余元帝实际葬地及大不儿罕山与起辇谷的对应。已补传说葬地区域；实际墓室仍未确认，不以圣地参考坐标证明元帝墓址。
 - 明清：慈安定东陵独立位置、建文帝陵址线索、其他南明陵与溥仪迁葬关系。清永陵先祖已补姓名及衣冠冢说明；个人生卒继续核对，传说不能代替实际墓址。
+- 古埃及：未收录的王室附属金字塔、未定墓主陵墓、金字塔与墓室的可靠矢量边界、塔尼斯逐墓独立点及部分中王国和后期王陵。本轮为有据代表性增量，不是全埃及王陵全集；克娄巴特拉七世及亚历山大等实际墓址未定者不造点，普通官员墓与神庙不自动作为皇陵。
 
 ### legend-huangdi · 桥山黄帝陵
 
@@ -1155,9 +1156,9 @@
 - 盗掘：尚未核查
 - 任务：补测陵体、入口及误差；复核地理资料更新；补核陵区边界或代表点；单陵未知时仅显示陵群
 - 地理参考：见坐标资料
-- 地理状态：区域代表点已接入，实测精度仍待核
+- 地理状态：原社区点的分辨率约0.0104度，不能作为米级准确度；原OSM小面只是一处局部标绘，不是七帝七后完整陵区。
 - 争议：“六陵”指六位南宋皇帝，来源另提北宋徽宗陵；不能由名称推断整个陵区只有六座帝陵。
-- 来源：[宋六陵](https://wz.kq.gov.cn/art/2011/6/30/art_1605522_28782048.html)、[寻找宋六陵：新发掘简报与陵园对应问题](https://zjnews.zjol.com.cn/zjnews/202609/t20260907_31893919.shtml)、[宋六陵：地理坐标](https://www.wikidata.org/wiki/Q10907407)
+- 来源：[宋六陵](https://wz.kq.gov.cn/art/2011/6/30/art_1605522_28782048.html)、[寻找宋六陵：新发掘简报与陵园对应问题](https://zjnews.zjol.com.cn/zjnews/202609/t20260907_31893919.shtml)、[宋六陵一号陵园遗址性质及诸陵位置蠡测](https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3000/site/attach/0/f3ee2b8a49014b56acd2ec3f6abc49a0.pdf)、[宋六陵二号陵园考古又有新成果](https://www.hangzhou2022.cn/sqzc/sxsq/202201/t20220108_43261.shtml)、[宋六陵考古是中国帝陵考古重大突破](https://www.zjdj.com.cn/zjcf/xcwhfamily/202309/t20230928_26278988.shtml)、[宋六陵：地理坐标](https://www.wikidata.org/wiki/Q10907407)
 
 ### song-si · 宋永思陵
 
@@ -1169,9 +1170,9 @@
 - 盗掘：尚未核查
 - 任务：补核单陵WGS84坐标、指向对象与精度
 - 地理参考：{"parentId":"song6","status":"shared_region_estimate","target":"南宋六陵陵区参考位置；单陵位置待核","basis":"机构资料明确所属陵区；参考点只指向陵区，未确认单陵与参考点的距离，不用于单陵导航。","coordinates":{"lat":29.936155,"lng":120.696339,"crs":"WGS84","sourceId":"geo-Q10907407"}}
-- 地理状态：关联已有陵区位置，不重复生成同坐标单陵点
+- 地理状态：历史陵名已建档，考古单位与单陵坐标未唯一对应；不复制陵区点。
 - 争议：历史陵名明确，逐陵考古对应及后期迁葬情况待核；不将陵区中心复制为六个坐标。
-- 来源：[宋六陵](https://wz.kq.gov.cn/art/2011/6/30/art_1605522_28782048.html)、[宋六陵：地理坐标](https://www.wikidata.org/wiki/Q10907407)、[宋高宗：生卒日期语句](https://www.wikidata.org/wiki/Q7489)
+- 来源：[宋六陵](https://wz.kq.gov.cn/art/2011/6/30/art_1605522_28782048.html)、[宋六陵一号陵园遗址性质及诸陵位置蠡测](https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3000/site/attach/0/f3ee2b8a49014b56acd2ec3f6abc49a0.pdf)、[宋六陵二号陵园考古又有新成果](https://www.hangzhou2022.cn/sqzc/sxsq/202201/t20220108_43261.shtml)、[宋六陵考古是中国帝陵考古重大突破](https://www.zjdj.com.cn/zjcf/xcwhfamily/202309/t20230928_26278988.shtml)、[宋六陵：地理坐标](https://www.wikidata.org/wiki/Q10907407)、[宋高宗：生卒日期语句](https://www.wikidata.org/wiki/Q7489)
 
 ### song-fu · 宋永阜陵
 
@@ -1183,9 +1184,9 @@
 - 盗掘：尚未核查
 - 任务：补核单陵WGS84坐标、指向对象与精度
 - 地理参考：{"parentId":"song6","status":"shared_region_estimate","target":"南宋六陵陵区参考位置；单陵位置待核","basis":"机构资料明确所属陵区；参考点只指向陵区，未确认单陵与参考点的距离，不用于单陵导航。","coordinates":{"lat":29.936155,"lng":120.696339,"crs":"WGS84","sourceId":"geo-Q10907407"}}
-- 地理状态：关联已有陵区位置，不重复生成同坐标单陵点
+- 地理状态：历史陵名已建档，考古单位与单陵坐标未唯一对应；不复制陵区点。
 - 争议：历史陵名明确，逐陵考古对应及后期迁葬情况待核；不将陵区中心复制为六个坐标。
-- 来源：[宋六陵](https://wz.kq.gov.cn/art/2011/6/30/art_1605522_28782048.html)、[宋六陵：地理坐标](https://www.wikidata.org/wiki/Q10907407)、[宋孝宗：生卒日期语句](https://www.wikidata.org/wiki/Q7492)
+- 来源：[宋六陵](https://wz.kq.gov.cn/art/2011/6/30/art_1605522_28782048.html)、[宋六陵一号陵园遗址性质及诸陵位置蠡测](https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3000/site/attach/0/f3ee2b8a49014b56acd2ec3f6abc49a0.pdf)、[宋六陵二号陵园考古又有新成果](https://www.hangzhou2022.cn/sqzc/sxsq/202201/t20220108_43261.shtml)、[宋六陵考古是中国帝陵考古重大突破](https://www.zjdj.com.cn/zjcf/xcwhfamily/202309/t20230928_26278988.shtml)、[宋六陵：地理坐标](https://www.wikidata.org/wiki/Q10907407)、[宋孝宗：生卒日期语句](https://www.wikidata.org/wiki/Q7492)
 
 ### song-chong · 宋永崇陵
 
@@ -1197,9 +1198,9 @@
 - 盗掘：尚未核查
 - 任务：补核单陵WGS84坐标、指向对象与精度
 - 地理参考：{"parentId":"song6","status":"shared_region_estimate","target":"南宋六陵陵区参考位置；单陵位置待核","basis":"机构资料明确所属陵区；参考点只指向陵区，未确认单陵与参考点的距离，不用于单陵导航。","coordinates":{"lat":29.936155,"lng":120.696339,"crs":"WGS84","sourceId":"geo-Q10907407"}}
-- 地理状态：关联已有陵区位置，不重复生成同坐标单陵点
+- 地理状态：历史陵名已建档，考古单位与单陵坐标未唯一对应；不复制陵区点。
 - 争议：历史陵名明确，逐陵考古对应及后期迁葬情况待核；不将陵区中心复制为六个坐标。
-- 来源：[宋六陵](https://wz.kq.gov.cn/art/2011/6/30/art_1605522_28782048.html)、[宋六陵：地理坐标](https://www.wikidata.org/wiki/Q10907407)、[宋光宗：生卒日期语句](https://www.wikidata.org/wiki/Q7494)
+- 来源：[宋六陵](https://wz.kq.gov.cn/art/2011/6/30/art_1605522_28782048.html)、[宋六陵一号陵园遗址性质及诸陵位置蠡测](https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3000/site/attach/0/f3ee2b8a49014b56acd2ec3f6abc49a0.pdf)、[宋六陵二号陵园考古又有新成果](https://www.hangzhou2022.cn/sqzc/sxsq/202201/t20220108_43261.shtml)、[宋六陵考古是中国帝陵考古重大突破](https://www.zjdj.com.cn/zjcf/xcwhfamily/202309/t20230928_26278988.shtml)、[宋六陵：地理坐标](https://www.wikidata.org/wiki/Q10907407)、[宋光宗：生卒日期语句](https://www.wikidata.org/wiki/Q7494)
 
 ### song-mao · 宋永茂陵
 
@@ -1211,9 +1212,9 @@
 - 盗掘：尚未核查
 - 任务：补核单陵WGS84坐标、指向对象与精度
 - 地理参考：{"parentId":"song6","status":"shared_region_estimate","target":"南宋六陵陵区参考位置；单陵位置待核","basis":"机构资料明确所属陵区；参考点只指向陵区，未确认单陵与参考点的距离，不用于单陵导航。","coordinates":{"lat":29.936155,"lng":120.696339,"crs":"WGS84","sourceId":"geo-Q10907407"}}
-- 地理状态：关联已有陵区位置，不重复生成同坐标单陵点
+- 地理状态：历史陵名已建档，考古单位与单陵坐标未唯一对应；不复制陵区点。
 - 争议：历史陵名明确，逐陵考古对应及后期迁葬情况待核；不将陵区中心复制为六个坐标。
-- 来源：[宋六陵](https://wz.kq.gov.cn/art/2011/6/30/art_1605522_28782048.html)、[宋六陵：地理坐标](https://www.wikidata.org/wiki/Q10907407)、[宋宁宗：生卒日期语句](https://www.wikidata.org/wiki/Q7496)
+- 来源：[宋六陵](https://wz.kq.gov.cn/art/2011/6/30/art_1605522_28782048.html)、[宋六陵一号陵园遗址性质及诸陵位置蠡测](https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3000/site/attach/0/f3ee2b8a49014b56acd2ec3f6abc49a0.pdf)、[宋六陵二号陵园考古又有新成果](https://www.hangzhou2022.cn/sqzc/sxsq/202201/t20220108_43261.shtml)、[宋六陵考古是中国帝陵考古重大突破](https://www.zjdj.com.cn/zjcf/xcwhfamily/202309/t20230928_26278988.shtml)、[宋六陵：地理坐标](https://www.wikidata.org/wiki/Q10907407)、[宋宁宗：生卒日期语句](https://www.wikidata.org/wiki/Q7496)
 
 ### song-mu · 宋永穆陵
 
@@ -1225,9 +1226,9 @@
 - 盗掘：尚未核查
 - 任务：补核单陵WGS84坐标、指向对象与精度
 - 地理参考：{"parentId":"song6","status":"shared_region_estimate","target":"南宋六陵陵区参考位置；单陵位置待核","basis":"机构资料明确所属陵区；参考点只指向陵区，未确认单陵与参考点的距离，不用于单陵导航。","coordinates":{"lat":29.936155,"lng":120.696339,"crs":"WGS84","sourceId":"geo-Q10907407"}}
-- 地理状态：关联已有陵区位置，不重复生成同坐标单陵点
+- 地理状态：历史陵名已建档，考古单位与单陵坐标未唯一对应；不复制陵区点。
 - 争议：历史陵名明确，逐陵考古对应及后期迁葬情况待核；不将陵区中心复制为六个坐标。
-- 来源：[宋六陵](https://wz.kq.gov.cn/art/2011/6/30/art_1605522_28782048.html)、[宋六陵：地理坐标](https://www.wikidata.org/wiki/Q10907407)、[宋理宗：生卒日期语句](https://www.wikidata.org/wiki/Q7497)
+- 来源：[宋六陵](https://wz.kq.gov.cn/art/2011/6/30/art_1605522_28782048.html)、[宋六陵一号陵园遗址性质及诸陵位置蠡测](https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3000/site/attach/0/f3ee2b8a49014b56acd2ec3f6abc49a0.pdf)、[宋六陵二号陵园考古又有新成果](https://www.hangzhou2022.cn/sqzc/sxsq/202201/t20220108_43261.shtml)、[宋六陵考古是中国帝陵考古重大突破](https://www.zjdj.com.cn/zjcf/xcwhfamily/202309/t20230928_26278988.shtml)、[宋六陵：地理坐标](https://www.wikidata.org/wiki/Q10907407)、[宋理宗：生卒日期语句](https://www.wikidata.org/wiki/Q7497)
 
 ### song-shao · 宋永绍陵
 
@@ -1239,9 +1240,9 @@
 - 盗掘：尚未核查
 - 任务：补核单陵WGS84坐标、指向对象与精度
 - 地理参考：{"parentId":"song6","status":"shared_region_estimate","target":"南宋六陵陵区参考位置；单陵位置待核","basis":"机构资料明确所属陵区；参考点只指向陵区，未确认单陵与参考点的距离，不用于单陵导航。","coordinates":{"lat":29.936155,"lng":120.696339,"crs":"WGS84","sourceId":"geo-Q10907407"}}
-- 地理状态：关联已有陵区位置，不重复生成同坐标单陵点
+- 地理状态：历史陵名已建档，考古单位与单陵坐标未唯一对应；不复制陵区点。
 - 争议：历史陵名明确，逐陵考古对应及后期迁葬情况待核；不将陵区中心复制为六个坐标。
-- 来源：[宋六陵](https://wz.kq.gov.cn/art/2011/6/30/art_1605522_28782048.html)、[宋六陵：地理坐标](https://www.wikidata.org/wiki/Q10907407)、[宋度宗：生卒日期语句](https://www.wikidata.org/wiki/Q7498)
+- 来源：[宋六陵](https://wz.kq.gov.cn/art/2011/6/30/art_1605522_28782048.html)、[宋六陵一号陵园遗址性质及诸陵位置蠡测](https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3000/site/attach/0/f3ee2b8a49014b56acd2ec3f6abc49a0.pdf)、[宋六陵二号陵园考古又有新成果](https://www.hangzhou2022.cn/sqzc/sxsq/202201/t20220108_43261.shtml)、[宋六陵考古是中国帝陵考古重大突破](https://www.zjdj.com.cn/zjcf/xcwhfamily/202309/t20230928_26278988.shtml)、[宋六陵：地理坐标](https://www.wikidata.org/wiki/Q10907407)、[宋度宗：生卒日期语句](https://www.wikidata.org/wiki/Q7498)
 
 ### liao-zu · 辽祖陵
 
@@ -1297,7 +1298,7 @@
 - 地理参考：见坐标资料
 - 地理状态：估计位置：公开地理标注与官方主陵区所在村、山位置交叉核对；只定位遗址区域，不将陵名与单墓一一对应。参考范围：主陵区及大房山历史陵区；整个历史陵区约60平方公里，其他祖陵不可视为与代表点重合；范围描述不是测绘误差，不能视为墓室坐标。
 - 争议：历史资料称17座帝陵，包含追尊者；不是17位在位皇帝，也不是17座已确认的独立墓室。；阿骨打1123年阿城初葬陵与1135年胡凯山和陵另立记录；此处为北京迁葬陵区，不是阿城景点。
-- 来源：[金陵历史概况](https://www.bjfsh.gov.cn/zjfs/lswh/wwbh/201905/t20190515_39963135.shtml?type=computer)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[金陵遗址位置与交通](https://www.beijing.gov.cn/renwen/whrl/rdtj/202112/t20211207_2555555.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[金陵帝王与陵区考古介绍](https://news.bjd.com.cn/2025/03/11/11092729.shtml)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
+- 来源：[金陵历史概况](https://www.bjfsh.gov.cn/zjfs/lswh/wwbh/201905/t20190515_39963135.shtml?type=computer)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[金陵遗址位置与交通](https://www.beijing.gov.cn/renwen/whrl/rdtj/202112/t20211207_2555555.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[金陵帝王与陵区考古介绍](https://news.bjd.com.cn/2025/03/11/11092729.shtml)、[北京市文物局关于金陵主陵区环境整治与展示项目设计方案核准的复函](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[金陵](https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742737/523439/index.html)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
 
 ### jin-rui · 金太祖睿陵
 
@@ -1309,9 +1310,9 @@
 - 盗掘：尚未核查
 - 任务：补核单陵WGS84坐标、指向对象与精度；太祖身份已确认，独立墓室经纬度仍待核；当前仅引用陵区参考位置。
 - 地理参考：{"parentId":"jin-group","status":"shared_region_estimate","target":"大房山金陵区共享参考位置（非单陵中心）","limitation":"整片历史陵区约60平方公里；参考点在九龙山主陵区，不能证明各祖陵、思陵或裕陵同在此点。","coordinates":{"lat":39.74861111111111,"lng":115.91277777777778,"crs":"WGS84","sourceId":"geo-beijing-jin"}}
-- 地理状态：缺少经核实的WGS84点位
+- 地理状态：考古身份已确认，独立墓穴地理定位待核；保留陵区关联。
 - 争议：有迁葬历史，不能将上京初葬地点与房山陵址合并。
-- 来源：[金陵历史概况](https://www.bjfsh.gov.cn/zjfs/lswh/wwbh/201905/t20190515_39963135.shtml?type=computer)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[谒金太祖陵：初葬、两次迁葬与陵址公园复建](https://harbin.joyhua.cn/hebrb/20240903/mhtml/page_07_content_20240903008003.htm)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)、[完颜阿骨打：生卒日期语句](https://www.wikidata.org/wiki/Q5060)
+- 来源：[金陵历史概况](https://www.bjfsh.gov.cn/zjfs/lswh/wwbh/201905/t20190515_39963135.shtml?type=computer)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[谒金太祖陵：初葬、两次迁葬与陵址公园复建](https://harbin.joyhua.cn/hebrb/20240903/mhtml/page_07_content_20240903008003.htm)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[北京市文物局关于金陵主陵区环境整治与展示项目设计方案核准的复函](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[金陵](https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742737/523439/index.html)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)、[完颜阿骨打：生卒日期语句](https://www.wikidata.org/wiki/Q5060)
 
 ### xixia9 · 西夏陵
 
@@ -2868,9 +2869,9 @@
 - 盗掘：尚未核查
 - 任务：补核单陵WGS84坐标、指向对象与精度
 - 地理参考：{"parentId":"jin-group","status":"shared_region_estimate","target":"大房山金陵主陵区参考，非该墓室","limitation":"历史分区互有距离，九龙山参考点不能用于定位其他分区的独立墓室。","coordinates":{"lat":39.74861111111111,"lng":115.91277777777778,"crs":"WGS84","sourceId":"geo-beijing-jin"}}
-- 地理状态：缺少经核实的WGS84点位
+- 地理状态：历史陵名不等于已确认墓穴；考古对应及独立定位待核。
 - 争议：历史陵名建档不等于确定墓室；共享陵区点不能作为该陵的精确导航。
-- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
+- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[北京市文物局关于金陵主陵区环境整治与展示项目设计方案核准的复函](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[金陵](https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742737/523439/index.html)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
 
 ### jin-xi · 金德帝熙陵
 
@@ -2882,9 +2883,9 @@
 - 盗掘：尚未核查
 - 任务：补核单陵WGS84坐标、指向对象与精度
 - 地理参考：{"parentId":"jin-group","status":"shared_region_estimate","target":"大房山金陵主陵区参考，非该墓室","limitation":"历史分区互有距离，九龙山参考点不能用于定位其他分区的独立墓室。","coordinates":{"lat":39.74861111111111,"lng":115.91277777777778,"crs":"WGS84","sourceId":"geo-beijing-jin"}}
-- 地理状态：缺少经核实的WGS84点位
+- 地理状态：历史陵名不等于已确认墓穴；考古对应及独立定位待核。
 - 争议：历史陵名建档不等于确定墓室；共享陵区点不能作为该陵的精确导航。
-- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
+- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[北京市文物局关于金陵主陵区环境整治与展示项目设计方案核准的复函](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[金陵](https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742737/523439/index.html)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
 
 ### jin-jian · 金安帝建陵
 
@@ -2896,9 +2897,9 @@
 - 盗掘：尚未核查
 - 任务：补核单陵WGS84坐标、指向对象与精度
 - 地理参考：{"parentId":"jin-group","status":"shared_region_estimate","target":"大房山金陵主陵区参考，非该墓室","limitation":"历史分区互有距离，九龙山参考点不能用于定位其他分区的独立墓室。","coordinates":{"lat":39.74861111111111,"lng":115.91277777777778,"crs":"WGS84","sourceId":"geo-beijing-jin"}}
-- 地理状态：缺少经核实的WGS84点位
+- 地理状态：历史陵名不等于已确认墓穴；考古对应及独立定位待核。
 - 争议：历史陵名建档不等于确定墓室；共享陵区点不能作为该陵的精确导航。
-- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
+- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[北京市文物局关于金陵主陵区环境整治与展示项目设计方案核准的复函](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[金陵](https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742737/523439/index.html)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
 
 ### jin-hui · 金献祖辉陵
 
@@ -2910,9 +2911,9 @@
 - 盗掘：尚未核查
 - 任务：补核单陵WGS84坐标、指向对象与精度
 - 地理参考：{"parentId":"jin-group","status":"shared_region_estimate","target":"大房山金陵主陵区参考，非该墓室","limitation":"历史分区互有距离，九龙山参考点不能用于定位其他分区的独立墓室。","coordinates":{"lat":39.74861111111111,"lng":115.91277777777778,"crs":"WGS84","sourceId":"geo-beijing-jin"}}
-- 地理状态：缺少经核实的WGS84点位
+- 地理状态：历史陵名不等于已确认墓穴；考古对应及独立定位待核。
 - 争议：历史陵名建档不等于确定墓室；共享陵区点不能作为该陵的精确导航。
-- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
+- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[北京市文物局关于金陵主陵区环境整治与展示项目设计方案核准的复函](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[金陵](https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742737/523439/index.html)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
 
 ### jin-an · 金昭祖安陵
 
@@ -2924,9 +2925,9 @@
 - 盗掘：尚未核查
 - 任务：补核单陵WGS84坐标、指向对象与精度
 - 地理参考：{"parentId":"jin-group","status":"shared_region_estimate","target":"大房山金陵主陵区参考，非该墓室","limitation":"历史分区互有距离，九龙山参考点不能用于定位其他分区的独立墓室。","coordinates":{"lat":39.74861111111111,"lng":115.91277777777778,"crs":"WGS84","sourceId":"geo-beijing-jin"}}
-- 地理状态：缺少经核实的WGS84点位
+- 地理状态：历史陵名不等于已确认墓穴；考古对应及独立定位待核。
 - 争议：历史陵名建档不等于确定墓室；共享陵区点不能作为该陵的精确导航。
-- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
+- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[北京市文物局关于金陵主陵区环境整治与展示项目设计方案核准的复函](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[金陵](https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742737/523439/index.html)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
 
 ### jin-ding · 金景祖定陵
 
@@ -2938,9 +2939,9 @@
 - 盗掘：尚未核查
 - 任务：补核单陵WGS84坐标、指向对象与精度
 - 地理参考：{"parentId":"jin-group","status":"shared_region_estimate","target":"大房山金陵主陵区参考，非该墓室","limitation":"历史分区互有距离，九龙山参考点不能用于定位其他分区的独立墓室。","coordinates":{"lat":39.74861111111111,"lng":115.91277777777778,"crs":"WGS84","sourceId":"geo-beijing-jin"}}
-- 地理状态：缺少经核实的WGS84点位
+- 地理状态：历史陵名不等于已确认墓穴；考古对应及独立定位待核。
 - 争议：历史陵名建档不等于确定墓室；共享陵区点不能作为该陵的精确导航。
-- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
+- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[北京市文物局关于金陵主陵区环境整治与展示项目设计方案核准的复函](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[金陵](https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742737/523439/index.html)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
 
 ### jin-yong · 金世祖永陵
 
@@ -2952,9 +2953,9 @@
 - 盗掘：尚未核查
 - 任务：补核单陵WGS84坐标、指向对象与精度
 - 地理参考：{"parentId":"jin-group","status":"shared_region_estimate","target":"大房山金陵主陵区参考，非该墓室","limitation":"历史分区互有距离，九龙山参考点不能用于定位其他分区的独立墓室。","coordinates":{"lat":39.74861111111111,"lng":115.91277777777778,"crs":"WGS84","sourceId":"geo-beijing-jin"}}
-- 地理状态：缺少经核实的WGS84点位
+- 地理状态：历史陵名不等于已确认墓穴；考古对应及独立定位待核。
 - 争议：历史陵名建档不等于确定墓室；共享陵区点不能作为该陵的精确导航。
-- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
+- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[北京市文物局关于金陵主陵区环境整治与展示项目设计方案核准的复函](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[金陵](https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742737/523439/index.html)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
 
 ### jin-tai · 金肃宗泰陵
 
@@ -2966,9 +2967,9 @@
 - 盗掘：尚未核查
 - 任务：补核单陵WGS84坐标、指向对象与精度
 - 地理参考：{"parentId":"jin-group","status":"shared_region_estimate","target":"大房山金陵主陵区参考，非该墓室","limitation":"历史分区互有距离，九龙山参考点不能用于定位其他分区的独立墓室。","coordinates":{"lat":39.74861111111111,"lng":115.91277777777778,"crs":"WGS84","sourceId":"geo-beijing-jin"}}
-- 地理状态：缺少经核实的WGS84点位
+- 地理状态：历史陵名不等于已确认墓穴；考古对应及独立定位待核。
 - 争议：历史陵名建档不等于确定墓室；共享陵区点不能作为该陵的精确导航。
-- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
+- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[北京市文物局关于金陵主陵区环境整治与展示项目设计方案核准的复函](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[金陵](https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742737/523439/index.html)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
 
 ### jin-xian · 金穆宗献陵
 
@@ -2980,9 +2981,9 @@
 - 盗掘：尚未核查
 - 任务：补核单陵WGS84坐标、指向对象与精度
 - 地理参考：{"parentId":"jin-group","status":"shared_region_estimate","target":"大房山金陵主陵区参考，非该墓室","limitation":"历史分区互有距离，九龙山参考点不能用于定位其他分区的独立墓室。","coordinates":{"lat":39.74861111111111,"lng":115.91277777777778,"crs":"WGS84","sourceId":"geo-beijing-jin"}}
-- 地理状态：缺少经核实的WGS84点位
+- 地理状态：历史陵名不等于已确认墓穴；考古对应及独立定位待核。
 - 争议：历史陵名建档不等于确定墓室；共享陵区点不能作为该陵的精确导航。
-- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
+- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[北京市文物局关于金陵主陵区环境整治与展示项目设计方案核准的复函](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[金陵](https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742737/523439/index.html)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
 
 ### jin-qiao · 金康宗乔陵
 
@@ -2994,9 +2995,9 @@
 - 盗掘：尚未核查
 - 任务：补核单陵WGS84坐标、指向对象与精度
 - 地理参考：{"parentId":"jin-group","status":"shared_region_estimate","target":"大房山金陵主陵区参考，非该墓室","limitation":"历史分区互有距离，九龙山参考点不能用于定位其他分区的独立墓室。","coordinates":{"lat":39.74861111111111,"lng":115.91277777777778,"crs":"WGS84","sourceId":"geo-beijing-jin"}}
-- 地理状态：缺少经核实的WGS84点位
+- 地理状态：历史陵名不等于已确认墓穴；考古对应及独立定位待核。
 - 争议：历史陵名建档不等于确定墓室；共享陵区点不能作为该陵的精确导航。
-- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
+- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[北京市文物局关于金陵主陵区环境整治与展示项目设计方案核准的复函](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[金陵](https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742737/523439/index.html)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
 
 ### jin-gong · 金太宗恭陵
 
@@ -3008,9 +3009,9 @@
 - 盗掘：尚未核查
 - 任务：补核单陵WGS84坐标、指向对象与精度
 - 地理参考：{"parentId":"jin-group","status":"shared_region_estimate","target":"大房山金陵区共享参考位置（非单陵中心）","limitation":"整片历史陵区约60平方公里；参考点在九龙山主陵区，不能证明各祖陵、思陵或裕陵同在此点。","coordinates":{"lat":39.74861111111111,"lng":115.91277777777778,"crs":"WGS84","sourceId":"geo-beijing-jin"}}
-- 地理状态：缺少经核实的WGS84点位
+- 地理状态：历史陵名不等于已确认墓穴；考古对应及独立定位待核。
 - 争议：历史陵名建档不等于确定墓室；共享陵区点不能作为该陵的精确导航。
-- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[谒金太祖陵：初葬、两次迁葬与陵址公园复建](https://harbin.joyhua.cn/hebrb/20240903/mhtml/page_07_content_20240903008003.htm)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
+- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[谒金太祖陵：初葬、两次迁葬与陵址公园复建](https://harbin.joyhua.cn/hebrb/20240903/mhtml/page_07_content_20240903008003.htm)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[北京市文物局关于金陵主陵区环境整治与展示项目设计方案核准的复函](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[金陵](https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742737/523439/index.html)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
 
 ### jin-jing · 金睿宗景陵
 
@@ -3022,9 +3023,9 @@
 - 盗掘：尚未核查
 - 任务：补核单陵WGS84坐标、指向对象与精度
 - 地理参考：{"parentId":"jin-group","status":"shared_region_estimate","target":"大房山金陵区共享参考位置（非单陵中心）","limitation":"整片历史陵区约60平方公里；参考点在九龙山主陵区，不能证明各祖陵、思陵或裕陵同在此点。","coordinates":{"lat":39.74861111111111,"lng":115.91277777777778,"crs":"WGS84","sourceId":"geo-beijing-jin"}}
-- 地理状态：缺少经核实的WGS84点位
+- 地理状态：历史陵名不等于已确认墓穴；考古对应及独立定位待核。
 - 争议：历史陵名建档不等于确定墓室；共享陵区点不能作为该陵的精确导航。
-- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
+- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[北京市文物局关于金陵主陵区环境整治与展示项目设计方案核准的复函](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[金陵](https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742737/523439/index.html)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
 
 ### jin-xing · 金世宗兴陵
 
@@ -3036,9 +3037,9 @@
 - 盗掘：尚未核查
 - 任务：补核单陵WGS84坐标、指向对象与精度
 - 地理参考：{"parentId":"jin-group","status":"shared_region_estimate","target":"大房山金陵区共享参考位置（非单陵中心）","limitation":"整片历史陵区约60平方公里；参考点在九龙山主陵区，不能证明各祖陵、思陵或裕陵同在此点。","coordinates":{"lat":39.74861111111111,"lng":115.91277777777778,"crs":"WGS84","sourceId":"geo-beijing-jin"}}
-- 地理状态：缺少经核实的WGS84点位
+- 地理状态：历史陵名不等于已确认墓穴；考古对应及独立定位待核。
 - 争议：历史陵名建档不等于确定墓室；共享陵区点不能作为该陵的精确导航。
-- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
+- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[北京市文物局关于金陵主陵区环境整治与展示项目设计方案核准的复函](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[金陵](https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742737/523439/index.html)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
 
 ### jin-dao · 金章宗道陵
 
@@ -3050,9 +3051,9 @@
 - 盗掘：尚未核查
 - 任务：补核单陵WGS84坐标、指向对象与精度
 - 地理参考：{"parentId":"jin-group","status":"shared_region_estimate","target":"大房山金陵区共享参考位置（非单陵中心）","limitation":"整片历史陵区约60平方公里；参考点在九龙山主陵区，不能证明各祖陵、思陵或裕陵同在此点。","coordinates":{"lat":39.74861111111111,"lng":115.91277777777778,"crs":"WGS84","sourceId":"geo-beijing-jin"}}
-- 地理状态：缺少经核实的WGS84点位
+- 地理状态：历史陵名不等于已确认墓穴；考古对应及独立定位待核。
 - 争议：历史陵名建档不等于确定墓室；共享陵区点不能作为该陵的精确导航。；柳家沟道陵对应为调查推测，不能将建筑构件位置直接认作地宫。
-- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
+- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[北京市文物局关于金陵主陵区环境整治与展示项目设计方案核准的复函](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[金陵](https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742737/523439/index.html)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
 
 ### jin-yu · 金显宗裕陵
 
@@ -3064,9 +3065,9 @@
 - 盗掘：尚未核查
 - 任务：补核单陵WGS84坐标、指向对象与精度
 - 地理参考：{"parentId":"jin-group","status":"shared_region_estimate","target":"大房山金陵区共享参考位置（非单陵中心）","limitation":"整片历史陵区约60平方公里；参考点在九龙山主陵区，不能证明各祖陵、思陵或裕陵同在此点。","coordinates":{"lat":39.74861111111111,"lng":115.91277777777778,"crs":"WGS84","sourceId":"geo-beijing-jin"}}
-- 地理状态：缺少经核实的WGS84点位
+- 地理状态：历史陵名不等于已确认墓穴；考古对应及独立定位待核。
 - 争议：历史陵名建档不等于确定墓室；共享陵区点不能作为该陵的精确导航。
-- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
+- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[北京市文物局关于金陵主陵区环境整治与展示项目设计方案核准的复函](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[金陵](https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742737/523439/index.html)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
 
 ### jin-si · 金熙宗思陵
 
@@ -3078,9 +3079,9 @@
 - 盗掘：尚未核查
 - 任务：补核单陵WGS84坐标、指向对象与精度
 - 地理参考：{"parentId":"jin-group","status":"shared_region_estimate","target":"大房山金陵区共享参考位置（非单陵中心）","limitation":"整片历史陵区约60平方公里；参考点在九龙山主陵区，不能证明各祖陵、思陵或裕陵同在此点。","coordinates":{"lat":39.74861111111111,"lng":115.91277777777778,"crs":"WGS84","sourceId":"geo-beijing-jin"}}
-- 地理状态：缺少经核实的WGS84点位
+- 地理状态：历史陵名不等于已确认墓穴；考古对应及独立定位待核。
 - 争议：历史陵名建档不等于确定墓室；共享陵区点不能作为该陵的精确导航。；经历上京、蓼香甸与峨眉谷等迁葬；峨眉谷最终陵址未直接定位，不采用九龙山主陵点作为实际思陵中心。；初葬上京皇后墓、后迁蓼香甸、最终峨眉峪不是同一陵址；不将九龙山代表坐标当作思陵中心。
-- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[房山文史资料全编：金熙宗陵及金陵调查](https://zx.bjfsh.gov.cn/docs/20240705105130135809.pdf)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
+- 来源：[大房山金陵历史陵名与迁葬名单](https://www.bjfsh.gov.cn/2020/zjfs/lswh/wwbh/202002/t20200227_39992404.shtml)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[金陵展示方案核准意见](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[房山文史资料全编：金熙宗陵及金陵调查](https://zx.bjfsh.gov.cn/docs/20240705105130135809.pdf)、[北京市文物局关于金陵主陵区环境整治与展示项目设计方案核准的复函](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[金陵](https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742737/523439/index.html)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
 
 ### jin-hailing · 金海陵王墓（故址待核）
 
@@ -3659,9 +3660,9 @@
 - 盗掘：尚未核查
 - 任务：核对原始文献、独立陵址及可复核WGS84区域坐标
 - 地理参考：{"parentId":"jin-group","status":"shared_region_estimate","target":"大房山金陵主陵区参考，非该墓室","limitation":"历史分区互有距离，九龙山参考点不能用于定位其他分区的独立墓室。","coordinates":{"lat":39.74861111111111,"lng":115.91277777777778,"crs":"WGS84","sourceId":"geo-beijing-jin"}}
-- 地理状态：缺少经核实的WGS84点位
+- 地理状态：历史陵名不等于已确认墓穴；考古对应及独立定位待核。
 - 争议：不是阿骨打本人墓；合葬／同陵区关系不能用于虚构独立墓室点。
-- 来源：[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
+- 来源：[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[北京市文物局关于金陵主陵区环境整治与展示项目设计方案核准的复函](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[金陵](https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742737/523439/index.html)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
 
 ### jin-huizong-xing · 金徽宗兴陵（陵址未定）
 
@@ -3687,9 +3688,9 @@
 - 盗掘：尚未核查
 - 任务：核对原始文献、独立陵址及可复核WGS84区域坐标
 - 地理参考：{"parentId":"jin-group","status":"shared_region_estimate","target":"大房山金陵主陵区参考，非该墓室","limitation":"历史分区互有距离，九龙山参考点不能用于定位其他分区的独立墓室。","coordinates":{"lat":39.74861111111111,"lng":115.91277777777778,"crs":"WGS84","sourceId":"geo-beijing-jin"}}
-- 地理状态：缺少经核实的WGS84点位
+- 地理状态：历史陵名不等于已确认墓穴；考古对应及独立定位待核。
 - 争议：其他研究记葬所不明，康东峪不得视为无争议定论。
-- 来源：[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
+- 来源：[大房山金代帝王陵：五处陵区](https://zx.bjfsh.gov.cn/docs/20220902095355205122.pdf)、[北京金代皇陵历史沿革与墓主人考](https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10828729/2020071316554626737.pdf)、[北京市文物局关于金陵主陵区环境整治与展示项目设计方案核准的复函](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/743882940/index.html)、[金陵](https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738088/1742737/523439/index.html)、[大房山金陵主陵区地图参考点](https://wikimapia.org/21300527/Imperial-mausoleums-of-Jin-dynasty-%E9%87%91%E9%99%B5%E9%81%97%E5%9D%80)
 
 ### jin-de · 金宣宗德陵（开封，陵址未定）
 
@@ -5239,9 +5240,9 @@
 - 盗掘：尚未核查
 - 任务：补核现场实测坐标、基准及入口；区域参考不证明墓主身份
 - 地理参考：见坐标资料
-- 地理状态：集安不同墓区跨度数公里，点位仅表示太王陵，不代表其余十一陵位置；原始来源未明示基准与测量误差，不作为墓室中心或入口。
+- 地理状态：采用太王陵墓冢参照点代表陵群；其他王陵分散于不同墓区，不表示全群中心或范围。
 - 争议：保护名录认定王陵类别，并不等于十二位墓主均已确认。；地图陵群代表点选在已核地望的太王陵；不指陵群中心或全部保护区边界。
-- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[太王陵YM0541中心地理坐标与考古资料](https://contents.nahf.or.kr/id/NAHF.ku.d_0001_0040_0030_1750)
+- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[太王陵YM0541中心地理坐标与考古资料](https://contents.nahf.or.kr/id/NAHF.ku.d_0001_0040_0030_1750)、[太王陵墓冢公开矢量轮廓（OSM way 254077889）](https://www.openstreetmap.org/way/254077889)
 
 ### koguryo-ym0001 · 将军坟
 
@@ -5252,10 +5253,10 @@
 - 生卒争议：见原始人物资料
 - 盗掘：尚未核查
 - 任务：核对单陵保护界址、独立坐标及墓主研究；不借用同名墓点
-- 地理参考：{"parentId":"koguryo-jian-kings","label":"集安高句丽王陵群参考（太王陵代表点）","reason":"只表示属于该陵群，不表示单陵与太王陵同址。","coordinates":{"lat":41.142,"lng":126.21,"crs":"WGS84","sourceId":"koguryo-taewang-survey"}}
+- 地理参考：{"parentId":"koguryo-jian-kings","label":"集安高句丽王陵群参考（太王陵代表点）","reason":"只表示属于该陵群，不表示单陵与太王陵同址。","coordinates":{"lat":41.14224448333333,"lng":126.21061473333333,"crs":"WGS84","status":"estimated_wgs84","sourceId":"koguryo-taewang-osm-outline","target":"集安王陵群代表点（太王陵墓冢）","original":"OSM way 254077889 的WGS84墓冢轮廓","method":"取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测","sourceDatumExplicit":true,"precision":{"sourceUnit":"public_vector","horizontalAccuracyMeters":null},"limitation":"采用太王陵墓冢参照点代表陵群；其他王陵分散于不同墓区，不表示全群中心或范围。","estimate":{"basis":"OSM墓冢轮廓与太王陵名称、既有YM0541资料互核","extent":"太王陵墓冢公开矢量范围","confidence":"site","reviewedAt":"2026-10-09"}}}
 - 地理状态：单陵坐标待核，可参考所属集安王陵群；不生成重叠单陵点。
 - 争议：亦有好太王归属及长寿王虚宫说，不能将旅游通称当作确定墓主。；地质报告与地理索引经度冲突，本轮不采用为独立点。
-- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[将军坟地质调查报告坐标待复核](https://contents.nahf.or.kr/id/NAHF.cr.d_0005_0040_0010_0040)、[太王陵YM0541中心地理坐标与考古资料](https://contents.nahf.or.kr/id/NAHF.ku.d_0001_0040_0030_1750)
+- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[将军坟地质调查报告坐标待复核](https://contents.nahf.or.kr/id/NAHF.cr.d_0005_0040_0010_0040)、[太王陵墓冢公开矢量轮廓（OSM way 254077889）](https://www.openstreetmap.org/way/254077889)
 
 ### koguryo-ym0541 · 太王陵
 
@@ -5267,9 +5268,9 @@
 - 盗掘：尚未核查
 - 任务：补核现场实测坐标、基准及入口；区域参考不证明墓主身份
 - 地理参考：见坐标资料
-- 地理状态：太王陵及周边约500米；原始来源未明示基准与测量误差，不作为墓室中心或入口。
+- 地理状态：公开墓冢矢量内参照点，不是墓室、入口或法定保护界址；不能据此确定墓主。
 - 争议：亦有故国壤王等异说，铭文及碑墓关系的解释仍存在分歧。
-- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[太王陵YM0541中心地理坐标与考古资料](https://contents.nahf.or.kr/id/NAHF.ku.d_0001_0040_0030_1750)
+- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[太王陵YM0541中心地理坐标与考古资料](https://contents.nahf.or.kr/id/NAHF.ku.d_0001_0040_0030_1750)、[太王陵墓冢公开矢量轮廓（OSM way 254077889）](https://www.openstreetmap.org/way/254077889)
 
 ### koguryo-mm1000 · 千秋墓
 
@@ -5280,10 +5281,10 @@
 - 生卒争议：见原始人物资料
 - 盗掘：尚未核查
 - 任务：核对单陵保护界址、独立坐标及墓主研究；不借用同名墓点
-- 地理参考：{"parentId":"koguryo-jian-kings","label":"集安高句丽王陵群参考（太王陵代表点）","reason":"只表示属于该陵群，不表示单陵与太王陵同址。","coordinates":{"lat":41.142,"lng":126.21,"crs":"WGS84","sourceId":"koguryo-taewang-survey"}}
+- 地理参考：{"parentId":"koguryo-jian-kings","label":"集安高句丽王陵群参考（太王陵代表点）","reason":"只表示属于该陵群，不表示单陵与太王陵同址。","coordinates":{"lat":41.14224448333333,"lng":126.21061473333333,"crs":"WGS84","status":"estimated_wgs84","sourceId":"koguryo-taewang-osm-outline","target":"集安王陵群代表点（太王陵墓冢）","original":"OSM way 254077889 的WGS84墓冢轮廓","method":"取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测","sourceDatumExplicit":true,"precision":{"sourceUnit":"public_vector","horizontalAccuracyMeters":null},"limitation":"采用太王陵墓冢参照点代表陵群；其他王陵分散于不同墓区，不表示全群中心或范围。","estimate":{"basis":"OSM墓冢轮廓与太王陵名称、既有YM0541资料互核","extent":"太王陵墓冢公开矢量范围","confidence":"site","reviewedAt":"2026-10-09"}}}
 - 地理状态：单陵坐标待核，可参考所属集安王陵群；不生成重叠单陵点。
 - 争议：亦有故国原王、小兽林王等候选，不以任一说固定墓主。
-- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[太王陵YM0541中心地理坐标与考古资料](https://contents.nahf.or.kr/id/NAHF.ku.d_0001_0040_0030_1750)
+- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[太王陵墓冢公开矢量轮廓（OSM way 254077889）](https://www.openstreetmap.org/way/254077889)
 
 ### koguryo-mm0500 · 西大墓
 
@@ -5294,10 +5295,10 @@
 - 生卒争议：见原始人物资料
 - 盗掘：尚未核查
 - 任务：核对单陵保护界址、独立坐标及墓主研究；不借用同名墓点
-- 地理参考：{"parentId":"koguryo-jian-kings","label":"集安高句丽王陵群参考（太王陵代表点）","reason":"只表示属于该陵群，不表示单陵与太王陵同址。","coordinates":{"lat":41.142,"lng":126.21,"crs":"WGS84","sourceId":"koguryo-taewang-survey"}}
+- 地理参考：{"parentId":"koguryo-jian-kings","label":"集安高句丽王陵群参考（太王陵代表点）","reason":"只表示属于该陵群，不表示单陵与太王陵同址。","coordinates":{"lat":41.14224448333333,"lng":126.21061473333333,"crs":"WGS84","status":"estimated_wgs84","sourceId":"koguryo-taewang-osm-outline","target":"集安王陵群代表点（太王陵墓冢）","original":"OSM way 254077889 的WGS84墓冢轮廓","method":"取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测","sourceDatumExplicit":true,"precision":{"sourceUnit":"public_vector","horizontalAccuracyMeters":null},"limitation":"采用太王陵墓冢参照点代表陵群；其他王陵分散于不同墓区，不表示全群中心或范围。","estimate":{"basis":"OSM墓冢轮廓与太王陵名称、既有YM0541资料互核","extent":"太王陵墓冢公开矢量范围","confidence":"site","reviewedAt":"2026-10-09"}}}
 - 地理状态：单陵坐标待核，可参考所属集安王陵群；不生成重叠单陵点。
 - 争议：申报资料提出西川王对应，保留候选。
-- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[太王陵YM0541中心地理坐标与考古资料](https://contents.nahf.or.kr/id/NAHF.ku.d_0001_0040_0030_1750)
+- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[太王陵墓冢公开矢量轮廓（OSM way 254077889）](https://www.openstreetmap.org/way/254077889)
 
 ### koguryo-ym0043 · 临江墓
 
@@ -5308,10 +5309,10 @@
 - 生卒争议：见原始人物资料
 - 盗掘：尚未核查
 - 任务：核对单陵保护界址、独立坐标及墓主研究；不借用同名墓点
-- 地理参考：{"parentId":"koguryo-jian-kings","label":"集安高句丽王陵群参考（太王陵代表点）","reason":"只表示属于该陵群，不表示单陵与太王陵同址。","coordinates":{"lat":41.142,"lng":126.21,"crs":"WGS84","sourceId":"koguryo-taewang-survey"}}
+- 地理参考：{"parentId":"koguryo-jian-kings","label":"集安高句丽王陵群参考（太王陵代表点）","reason":"只表示属于该陵群，不表示单陵与太王陵同址。","coordinates":{"lat":41.14224448333333,"lng":126.21061473333333,"crs":"WGS84","status":"estimated_wgs84","sourceId":"koguryo-taewang-osm-outline","target":"集安王陵群代表点（太王陵墓冢）","original":"OSM way 254077889 的WGS84墓冢轮廓","method":"取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测","sourceDatumExplicit":true,"precision":{"sourceUnit":"public_vector","horizontalAccuracyMeters":null},"limitation":"采用太王陵墓冢参照点代表陵群；其他王陵分散于不同墓区，不表示全群中心或范围。","estimate":{"basis":"OSM墓冢轮廓与太王陵名称、既有YM0541资料互核","extent":"太王陵墓冢公开矢量范围","confidence":"site","reviewedAt":"2026-10-09"}}}
 - 地理状态：单陵坐标待核，可参考所属集安王陵群；不生成重叠单陵点。
 - 争议：王陵墓主尚未可靠确认。
-- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[太王陵YM0541中心地理坐标与考古资料](https://contents.nahf.or.kr/id/NAHF.ku.d_0001_0040_0030_1750)
+- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[太王陵墓冢公开矢量轮廓（OSM way 254077889）](https://www.openstreetmap.org/way/254077889)
 
 ### koguryo-ym2110 · 禹山2110号王陵
 
@@ -5322,10 +5323,10 @@
 - 生卒争议：见原始人物资料
 - 盗掘：尚未核查
 - 任务：核对单陵保护界址、独立坐标及墓主研究；不借用同名墓点
-- 地理参考：{"parentId":"koguryo-jian-kings","label":"集安高句丽王陵群参考（太王陵代表点）","reason":"只表示属于该陵群，不表示单陵与太王陵同址。","coordinates":{"lat":41.142,"lng":126.21,"crs":"WGS84","sourceId":"koguryo-taewang-survey"}}
+- 地理参考：{"parentId":"koguryo-jian-kings","label":"集安高句丽王陵群参考（太王陵代表点）","reason":"只表示属于该陵群，不表示单陵与太王陵同址。","coordinates":{"lat":41.14224448333333,"lng":126.21061473333333,"crs":"WGS84","status":"estimated_wgs84","sourceId":"koguryo-taewang-osm-outline","target":"集安王陵群代表点（太王陵墓冢）","original":"OSM way 254077889 的WGS84墓冢轮廓","method":"取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测","sourceDatumExplicit":true,"precision":{"sourceUnit":"public_vector","horizontalAccuracyMeters":null},"limitation":"采用太王陵墓冢参照点代表陵群；其他王陵分散于不同墓区，不表示全群中心或范围。","estimate":{"basis":"OSM墓冢轮廓与太王陵名称、既有YM0541资料互核","extent":"太王陵墓冢公开矢量范围","confidence":"site","reviewedAt":"2026-10-09"}}}
 - 地理状态：单陵坐标待核，可参考所属集安王陵群；不生成重叠单陵点。
 - 争议：王陵墓主尚未可靠确认。
-- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[太王陵YM0541中心地理坐标与考古资料](https://contents.nahf.or.kr/id/NAHF.ku.d_0001_0040_0030_1750)
+- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[太王陵墓冢公开矢量轮廓（OSM way 254077889）](https://www.openstreetmap.org/way/254077889)
 
 ### koguryo-ym0992 · 禹山0992号王陵
 
@@ -5336,10 +5337,10 @@
 - 生卒争议：见原始人物资料
 - 盗掘：尚未核查
 - 任务：核对单陵保护界址、独立坐标及墓主研究；不借用同名墓点
-- 地理参考：{"parentId":"koguryo-jian-kings","label":"集安高句丽王陵群参考（太王陵代表点）","reason":"只表示属于该陵群，不表示单陵与太王陵同址。","coordinates":{"lat":41.142,"lng":126.21,"crs":"WGS84","sourceId":"koguryo-taewang-survey"}}
+- 地理参考：{"parentId":"koguryo-jian-kings","label":"集安高句丽王陵群参考（太王陵代表点）","reason":"只表示属于该陵群，不表示单陵与太王陵同址。","coordinates":{"lat":41.14224448333333,"lng":126.21061473333333,"crs":"WGS84","status":"estimated_wgs84","sourceId":"koguryo-taewang-osm-outline","target":"集安王陵群代表点（太王陵墓冢）","original":"OSM way 254077889 的WGS84墓冢轮廓","method":"取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测","sourceDatumExplicit":true,"precision":{"sourceUnit":"public_vector","horizontalAccuracyMeters":null},"limitation":"采用太王陵墓冢参照点代表陵群；其他王陵分散于不同墓区，不表示全群中心或范围。","estimate":{"basis":"OSM墓冢轮廓与太王陵名称、既有YM0541资料互核","extent":"太王陵墓冢公开矢量范围","confidence":"site","reviewedAt":"2026-10-09"}}}
 - 地理状态：单陵坐标待核，可参考所属集安王陵群；不生成重叠单陵点。
 - 争议：王陵墓主尚未可靠确认。
-- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[太王陵YM0541中心地理坐标与考古资料](https://contents.nahf.or.kr/id/NAHF.ku.d_0001_0040_0030_1750)
+- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[太王陵墓冢公开矢量轮廓（OSM way 254077889）](https://www.openstreetmap.org/way/254077889)
 
 ### koguryo-mm0626 · 麻线0626号王陵
 
@@ -5350,10 +5351,10 @@
 - 生卒争议：见原始人物资料
 - 盗掘：尚未核查
 - 任务：核对单陵保护界址、独立坐标及墓主研究；不借用同名墓点
-- 地理参考：{"parentId":"koguryo-jian-kings","label":"集安高句丽王陵群参考（太王陵代表点）","reason":"只表示属于该陵群，不表示单陵与太王陵同址。","coordinates":{"lat":41.142,"lng":126.21,"crs":"WGS84","sourceId":"koguryo-taewang-survey"}}
+- 地理参考：{"parentId":"koguryo-jian-kings","label":"集安高句丽王陵群参考（太王陵代表点）","reason":"只表示属于该陵群，不表示单陵与太王陵同址。","coordinates":{"lat":41.14224448333333,"lng":126.21061473333333,"crs":"WGS84","status":"estimated_wgs84","sourceId":"koguryo-taewang-osm-outline","target":"集安王陵群代表点（太王陵墓冢）","original":"OSM way 254077889 的WGS84墓冢轮廓","method":"取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测","sourceDatumExplicit":true,"precision":{"sourceUnit":"public_vector","horizontalAccuracyMeters":null},"limitation":"采用太王陵墓冢参照点代表陵群；其他王陵分散于不同墓区，不表示全群中心或范围。","estimate":{"basis":"OSM墓冢轮廓与太王陵名称、既有YM0541资料互核","extent":"太王陵墓冢公开矢量范围","confidence":"site","reviewedAt":"2026-10-09"}}}
 - 地理状态：单陵坐标待核，可参考所属集安王陵群；不生成重叠单陵点。
 - 争议：王陵墓主尚未可靠确认。
-- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[太王陵YM0541中心地理坐标与考古资料](https://contents.nahf.or.kr/id/NAHF.ku.d_0001_0040_0030_1750)
+- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[太王陵墓冢公开矢量轮廓（OSM way 254077889）](https://www.openstreetmap.org/way/254077889)
 
 ### koguryo-mm2100 · 麻线2100号王陵
 
@@ -5364,10 +5365,10 @@
 - 生卒争议：见原始人物资料
 - 盗掘：尚未核查
 - 任务：核对单陵保护界址、独立坐标及墓主研究；不借用同名墓点
-- 地理参考：{"parentId":"koguryo-jian-kings","label":"集安高句丽王陵群参考（太王陵代表点）","reason":"只表示属于该陵群，不表示单陵与太王陵同址。","coordinates":{"lat":41.142,"lng":126.21,"crs":"WGS84","sourceId":"koguryo-taewang-survey"}}
+- 地理参考：{"parentId":"koguryo-jian-kings","label":"集安高句丽王陵群参考（太王陵代表点）","reason":"只表示属于该陵群，不表示单陵与太王陵同址。","coordinates":{"lat":41.14224448333333,"lng":126.21061473333333,"crs":"WGS84","status":"estimated_wgs84","sourceId":"koguryo-taewang-osm-outline","target":"集安王陵群代表点（太王陵墓冢）","original":"OSM way 254077889 的WGS84墓冢轮廓","method":"取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测","sourceDatumExplicit":true,"precision":{"sourceUnit":"public_vector","horizontalAccuracyMeters":null},"limitation":"采用太王陵墓冢参照点代表陵群；其他王陵分散于不同墓区，不表示全群中心或范围。","estimate":{"basis":"OSM墓冢轮廓与太王陵名称、既有YM0541资料互核","extent":"太王陵墓冢公开矢量范围","confidence":"site","reviewedAt":"2026-10-09"}}}
 - 地理状态：单陵坐标待核，可参考所属集安王陵群；不生成重叠单陵点。
 - 争议：王陵墓主尚未可靠确认。
-- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[太王陵YM0541中心地理坐标与考古资料](https://contents.nahf.or.kr/id/NAHF.ku.d_0001_0040_0030_1750)
+- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[太王陵墓冢公开矢量轮廓（OSM way 254077889）](https://www.openstreetmap.org/way/254077889)
 
 ### koguryo-mm2378 · 麻线2378号王陵
 
@@ -5378,10 +5379,10 @@
 - 生卒争议：见原始人物资料
 - 盗掘：尚未核查
 - 任务：核对单陵保护界址、独立坐标及墓主研究；不借用同名墓点
-- 地理参考：{"parentId":"koguryo-jian-kings","label":"集安高句丽王陵群参考（太王陵代表点）","reason":"只表示属于该陵群，不表示单陵与太王陵同址。","coordinates":{"lat":41.142,"lng":126.21,"crs":"WGS84","sourceId":"koguryo-taewang-survey"}}
+- 地理参考：{"parentId":"koguryo-jian-kings","label":"集安高句丽王陵群参考（太王陵代表点）","reason":"只表示属于该陵群，不表示单陵与太王陵同址。","coordinates":{"lat":41.14224448333333,"lng":126.21061473333333,"crs":"WGS84","status":"estimated_wgs84","sourceId":"koguryo-taewang-osm-outline","target":"集安王陵群代表点（太王陵墓冢）","original":"OSM way 254077889 的WGS84墓冢轮廓","method":"取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测","sourceDatumExplicit":true,"precision":{"sourceUnit":"public_vector","horizontalAccuracyMeters":null},"limitation":"采用太王陵墓冢参照点代表陵群；其他王陵分散于不同墓区，不表示全群中心或范围。","estimate":{"basis":"OSM墓冢轮廓与太王陵名称、既有YM0541资料互核","extent":"太王陵墓冢公开矢量范围","confidence":"site","reviewedAt":"2026-10-09"}}}
 - 地理状态：单陵坐标待核，可参考所属集安王陵群；不生成重叠单陵点。
 - 争议：王陵墓主尚未可靠确认。
-- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[太王陵YM0541中心地理坐标与考古资料](https://contents.nahf.or.kr/id/NAHF.ku.d_0001_0040_0030_1750)
+- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[太王陵墓冢公开矢量轮廓（OSM way 254077889）](https://www.openstreetmap.org/way/254077889)
 
 ### koguryo-qm0211 · 七星山0211号王陵
 
@@ -5392,10 +5393,10 @@
 - 生卒争议：见原始人物资料
 - 盗掘：尚未核查
 - 任务：核对单陵保护界址、独立坐标及墓主研究；不借用同名墓点
-- 地理参考：{"parentId":"koguryo-jian-kings","label":"集安高句丽王陵群参考（太王陵代表点）","reason":"只表示属于该陵群，不表示单陵与太王陵同址。","coordinates":{"lat":41.142,"lng":126.21,"crs":"WGS84","sourceId":"koguryo-taewang-survey"}}
+- 地理参考：{"parentId":"koguryo-jian-kings","label":"集安高句丽王陵群参考（太王陵代表点）","reason":"只表示属于该陵群，不表示单陵与太王陵同址。","coordinates":{"lat":41.14224448333333,"lng":126.21061473333333,"crs":"WGS84","status":"estimated_wgs84","sourceId":"koguryo-taewang-osm-outline","target":"集安王陵群代表点（太王陵墓冢）","original":"OSM way 254077889 的WGS84墓冢轮廓","method":"取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测","sourceDatumExplicit":true,"precision":{"sourceUnit":"public_vector","horizontalAccuracyMeters":null},"limitation":"采用太王陵墓冢参照点代表陵群；其他王陵分散于不同墓区，不表示全群中心或范围。","estimate":{"basis":"OSM墓冢轮廓与太王陵名称、既有YM0541资料互核","extent":"太王陵墓冢公开矢量范围","confidence":"site","reviewedAt":"2026-10-09"}}}
 - 地理状态：单陵坐标待核，可参考所属集安王陵群；不生成重叠单陵点。
 - 争议：王陵墓主尚未可靠确认。
-- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[太王陵YM0541中心地理坐标与考古资料](https://contents.nahf.or.kr/id/NAHF.ku.d_0001_0040_0030_1750)
+- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[太王陵墓冢公开矢量轮廓（OSM way 254077889）](https://www.openstreetmap.org/way/254077889)
 
 ### koguryo-qm0871 · 七星山0871号王陵
 
@@ -5406,10 +5407,10 @@
 - 生卒争议：见原始人物资料
 - 盗掘：尚未核查
 - 任务：核对单陵保护界址、独立坐标及墓主研究；不借用同名墓点
-- 地理参考：{"parentId":"koguryo-jian-kings","label":"集安高句丽王陵群参考（太王陵代表点）","reason":"只表示属于该陵群，不表示单陵与太王陵同址。","coordinates":{"lat":41.142,"lng":126.21,"crs":"WGS84","sourceId":"koguryo-taewang-survey"}}
+- 地理参考：{"parentId":"koguryo-jian-kings","label":"集安高句丽王陵群参考（太王陵代表点）","reason":"只表示属于该陵群，不表示单陵与太王陵同址。","coordinates":{"lat":41.14224448333333,"lng":126.21061473333333,"crs":"WGS84","status":"estimated_wgs84","sourceId":"koguryo-taewang-osm-outline","target":"集安王陵群代表点（太王陵墓冢）","original":"OSM way 254077889 的WGS84墓冢轮廓","method":"取闭合墓冢轮廓非重复顶点的平均位置，与古都图层同一实体对齐；非墓室或入口实测","sourceDatumExplicit":true,"precision":{"sourceUnit":"public_vector","horizontalAccuracyMeters":null},"limitation":"采用太王陵墓冢参照点代表陵群；其他王陵分散于不同墓区，不表示全群中心或范围。","estimate":{"basis":"OSM墓冢轮廓与太王陵名称、既有YM0541资料互核","extent":"太王陵墓冢公开矢量范围","confidence":"site","reviewedAt":"2026-10-09"}}}
 - 地理状态：单陵坐标待核，可参考所属集安王陵群；不生成重叠单陵点。
 - 争议：王陵墓主尚未可靠确认。
-- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[太王陵YM0541中心地理坐标与考古资料](https://contents.nahf.or.kr/id/NAHF.ku.d_0001_0040_0030_1750)
+- 来源：[高句丽王城、王陵及贵族墓葬保护管理条例：十二座王陵名录](https://www.jlrd.gov.cn/jlsjk/202311/P020231102699822228181.pdf)、[集安高句丽王陵申报档案](https://whc.unesco.org/uploads/nominations/1135.pdf)、[太王陵墓冢公开矢量轮廓（OSM way 254077889）](https://www.openstreetmap.org/way/254077889)
 
 ### koguryo-tongmyong · 东明王陵（传统指认）
 
@@ -5509,980 +5510,2508 @@
 - 争议：属于桥陵陪葬体系，但追谥皇帝陵作为独立实体记录，不以桥陵坐标替代。；与清东陵同治帝惠陵同名异陵，不能合并。
 - 来源：[第七批全国重点文物保护单位：唐惠陵](https://www.gov.cn/guoqing/2014-07/21/dqpqgzdwwbhdwmd.pdf)、[唐惠陵博物馆开馆及原地宫参观](https://www.sohu.com/a/168566269_155446)、[唐李宪墓考古发掘报告书摘](https://www.ecsponline.com/yz/B312F9F851B214C9488CF4D3EBEAD0174000.pdf)、[唐惠陵地理索引及文保名称互核](https://guobao.org/zh/china/shaanxi/)、[唐惠陵博物馆实体点B0HA1KCLP9](https://www.amap.com/place/B0HA1KCLP9)、[高德地图坐标基准说明](https://developer.amap.com/faq/advisory/others/39838)、[唐惠陵原地宫开放参观记录](https://www.sohu.com/a/168566269_155446)
 
-
-## 2026-10-15 埃及王室陵墓增量核查
-
-原有403条记录及来源逐项保持不变；新条目只添加至目录。原始OSM与来源核对留在output/egypt-tombs；机器审计见docs/egypt-royal-tombs-audit.json。
-
 ### eg-khufu · 胡夫金字塔
 
-- 当地年代：古埃及 · 古王国第四王朝；约前2589—前2566年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；胡夫王室金字塔；在位年代作为约略营建时代，不将其写成精确开工、完工或安葬年。
-- 点位：29.97937252, 31.1342199；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[胡夫大金字塔](https://egymonuments.gov.eg/monuments/the-great-pyramid/)；[胡夫金字塔原始地理对象](https://www.openstreetmap.org/way/4420397)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：胡夫王室金字塔；在位年代作为约略营建时代，不将其写成精确开工、完工或安葬年。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[胡夫大金字塔](https://egymonuments.gov.eg/monuments/the-great-pyramid/)、[胡夫金字塔原始地理对象](https://www.openstreetmap.org/way/4420397)
 
 ### eg-khafre · 哈夫拉金字塔
 
-- 当地年代：古埃及 · 古王国第四王朝；约前2600—前2500年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；吉萨第二座大金字塔；王陵与河谷庙、狮身人面像分别区分。
-- 点位：29.97599326, 31.13034529；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[哈夫拉金字塔建筑群](https://egymonuments.gov.eg/en/monuments/pyramid-complex-of-khafre-khefren)；[哈夫拉金字塔原始地理对象](https://www.openstreetmap.org/way/4420396)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：吉萨第二座大金字塔；王陵与河谷庙、狮身人面像分别区分。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[哈夫拉金字塔建筑群](https://egymonuments.gov.eg/en/monuments/pyramid-complex-of-khafre-khefren)、[哈夫拉金字塔原始地理对象](https://www.openstreetmap.org/way/4420396)
 
 ### eg-menkaure · 孟卡拉金字塔
 
-- 当地年代：古埃及 · 古王国第四王朝；约前2532—前2503年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；吉萨第三座大金字塔；王陵建筑群在国王去世后仍有续建。
-- 点位：29.97258651, 31.1284007；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[孟卡拉金字塔建筑群](https://egymonuments.gov.eg/monuments/pyramid-complex-of-menkaure/)；[孟卡拉金字塔原始地理对象](https://www.openstreetmap.org/way/4420398)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：吉萨第三座大金字塔；王陵建筑群在国王去世后仍有续建。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[孟卡拉金字塔建筑群](https://egymonuments.gov.eg/monuments/pyramid-complex-of-menkaure/)、[孟卡拉金字塔原始地理对象](https://www.openstreetmap.org/way/4420398)
 
 ### eg-djoser · 左塞尔阶梯金字塔
 
-- 当地年代：古埃及 · 古王国第三王朝；约前2700—前2600年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；采用约前27世纪，避免把不同年代体系混为精确年份；南墓是另有象征意义的组成，不另认作第二座实际安葬陵。
-- 点位：29.87139129, 31.21672927；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[左塞尔阶梯金字塔及象征南墓](https://egymonuments.gov.eg/monuments/the-step-pyramid-complex-of-djoser/)；[左塞尔阶梯金字塔原始地理对象](https://www.openstreetmap.org/way/33909574)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：采用约前27世纪，避免把不同年代体系混为精确年份；南墓是另有象征意义的组成，不另认作第二座实际安葬陵。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[左塞尔阶梯金字塔及象征南墓](https://egymonuments.gov.eg/monuments/the-step-pyramid-complex-of-djoser/)、[左塞尔阶梯金字塔原始地理对象](https://www.openstreetmap.org/way/33909574)
 
 ### eg-userkaf · 乌塞尔卡夫金字塔
 
-- 当地年代：古埃及 · 古王国第五王朝；约前2500—前2400年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；第五王朝王陵；不与阿布古拉布太阳神庙混同。
-- 点位：29.8734693, 31.21887502；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[乌塞尔卡夫及其萨卡拉陵墓](https://www.ucl.ac.uk/museums-static/digitalegypt/chronology/kinguserkaf.html)；[乌塞尔卡夫金字塔原始地理对象](https://www.openstreetmap.org/way/98441708)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：第五王朝王陵；不与阿布古拉布太阳神庙混同。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[乌塞尔卡夫及其萨卡拉陵墓](https://www.ucl.ac.uk/museums-static/digitalegypt/chronology/kinguserkaf.html)、[乌塞尔卡夫金字塔原始地理对象](https://www.openstreetmap.org/way/98441708)
 
 ### eg-unas · 乌纳斯金字塔
 
-- 当地年代：古埃及 · 古王国第五王朝；约前2375—前2345年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；现存最早刻写金字塔文的王陵之一；正文保留王朝和实际年代。
-- 点位：29.86818795, 31.21493537；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[乌纳斯金字塔与金字塔文](https://egymonuments.gov.eg/en/monuments/pyramid-of-unas)；[乌纳斯金字塔原始地理对象](https://www.openstreetmap.org/way/98441709)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：现存最早刻写金字塔文的王陵之一；正文保留王朝和实际年代。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[乌纳斯金字塔与金字塔文](https://egymonuments.gov.eg/en/monuments/pyramid-of-unas)、[乌纳斯金字塔原始地理对象](https://www.openstreetmap.org/way/98441709)
 
 ### eg-teti · 特提金字塔
 
-- 当地年代：古埃及 · 古王国第六王朝；约前2400—前2300年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；第六王朝初期的王陵；不把周围官员墓归作本陵。
-- 点位：29.87516498, 31.22175515；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[特提及其萨卡拉陵墓](https://www.ucl.ac.uk/museums-static/digitalegypt/chronology/kingteti.html)；[特提金字塔原始地理对象](https://www.openstreetmap.org/way/41765792)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：第六王朝初期的王陵；不把周围官员墓归作本陵。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[特提及其萨卡拉陵墓](https://www.ucl.ac.uk/museums-static/digitalegypt/chronology/kingteti.html)、[特提金字塔原始地理对象](https://www.openstreetmap.org/way/41765792)
 
 ### eg-djedkare · 杰德卡拉金字塔
 
-- 当地年代：古埃及 · 古王国第五王朝；约前2500—前2300年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；南萨卡拉王陵，与乌塞尔卡夫等北部陵址分别定位。
-- 点位：29.850964, 31.22094695；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[杰德卡拉及南萨卡拉金字塔](https://www.ucl.ac.uk/museums-static/digitalegypt/chronology/kingdjedkare.html)；[杰德卡拉金字塔原始地理对象](https://www.openstreetmap.org/way/58169337)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：南萨卡拉王陵，与乌塞尔卡夫等北部陵址分别定位。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[杰德卡拉及南萨卡拉金字塔](https://www.ucl.ac.uk/museums-static/digitalegypt/chronology/kingdjedkare.html)、[杰德卡拉金字塔原始地理对象](https://www.openstreetmap.org/way/58169337)
 
 ### eg-pepi-i · 佩皮一世金字塔
 
-- 当地年代：古埃及 · 古王国第六王朝；约前2350—前2181年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；第六王朝王室金字塔，采用王朝年代范围作约略分期，不假造精确建陵年份。
-- 点位：29.85448644, 31.21906544；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[萨卡拉：王陵及年代](https://egymonuments.gov.eg/archaeological-sites/saqqara/)；[佩皮一世南萨卡拉金字塔](https://www.ucl.ac.uk/museums-static/digitalegypt/chronology/kingpepyI.html)；[佩皮一世金字塔原始地理对象](https://www.openstreetmap.org/way/102555367)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：第六王朝王室金字塔，采用王朝年代范围作约略分期，不假造精确建陵年份。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[萨卡拉：王陵及年代](https://egymonuments.gov.eg/archaeological-sites/saqqara/)、[佩皮一世南萨卡拉金字塔](https://www.ucl.ac.uk/museums-static/digitalegypt/chronology/kingpepyI.html)、[佩皮一世金字塔原始地理对象](https://www.openstreetmap.org/way/102555367)
 
 ### eg-merenre-i · 梅伦拉一世金字塔
 
-- 当地年代：古埃及 · 古王国第六王朝；约前2350—前2181年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；第六王朝王室金字塔，采用王朝年代范围作约略分期，不假造精确建陵年份。
-- 点位：29.8506692, 31.21536315；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[萨卡拉：王陵及年代](https://egymonuments.gov.eg/archaeological-sites/saqqara/)；[梅伦拉金字塔文发掘研究](https://www.unige.ch/mafssaqqara/textes-des-pyramides)；[梅伦拉一世金字塔原始地理对象](https://www.openstreetmap.org/way/102555366)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：第六王朝王室金字塔，采用王朝年代范围作约略分期，不假造精确建陵年份。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[萨卡拉：王陵及年代](https://egymonuments.gov.eg/archaeological-sites/saqqara/)、[梅伦拉金字塔文发掘研究](https://www.unige.ch/mafssaqqara/textes-des-pyramides)、[梅伦拉一世金字塔原始地理对象](https://www.openstreetmap.org/way/102555366)
 
 ### eg-pepi-ii · 佩皮二世金字塔
 
-- 当地年代：古埃及 · 古王国第六王朝；约前2350—前2181年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；第六王朝王室金字塔，采用王朝年代范围作约略分期，不假造精确建陵年份。
-- 点位：29.84028897, 31.21351495；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[萨卡拉：王陵及年代](https://egymonuments.gov.eg/archaeological-sites/saqqara/)；[佩皮二世南萨卡拉金字塔](https://www.ucl.ac.uk/museums-static/digitalegypt/chronology/kingpepyII.html)；[佩皮二世金字塔原始地理对象](https://www.openstreetmap.org/way/244850247)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：第六王朝王室金字塔，采用王朝年代范围作约略分期，不假造精确建陵年份。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[萨卡拉：王陵及年代](https://egymonuments.gov.eg/archaeological-sites/saqqara/)、[佩皮二世南萨卡拉金字塔](https://www.ucl.ac.uk/museums-static/digitalegypt/chronology/kingpepyII.html)、[佩皮二世金字塔原始地理对象](https://www.openstreetmap.org/way/244850247)
 
 ### eg-shepseskaf · 谢普塞斯卡夫陵（法老石凳）
 
-- 当地年代：古埃及 · 古王国第四王朝；约前2550—前2450年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；王室马斯塔巴式陵墓，不将其称为金字塔；独立于佩皮二世陵。
-- 点位：29.83893755, 31.21527568；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[萨卡拉：王陵及年代](https://egymonuments.gov.eg/archaeological-sites/saqqara/)；[孟菲斯地区王室陵墓与金字塔分布图](https://www.ucl.ac.uk/museums-static/digitalegypt/ok/inegypt.html)；[谢普塞斯卡夫陵（法老石凳）原始地理对象](https://www.openstreetmap.org/way/244850246)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：王室马斯塔巴式陵墓，不将其称为金字塔；独立于佩皮二世陵。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[萨卡拉：王陵及年代](https://egymonuments.gov.eg/archaeological-sites/saqqara/)、[孟菲斯地区王室陵墓与金字塔分布图](https://www.ucl.ac.uk/museums-static/digitalegypt/ok/inegypt.html)、[谢普塞斯卡夫陵（法老石凳）原始地理对象](https://www.openstreetmap.org/way/244850246)
 
 ### eg-sekhemkhet · 塞赫姆赫特未完工金字塔
 
-- 当地年代：古埃及 · 古王国第三王朝；约前2700—前2600年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：性质未明；未完工王室金字塔；不以空石棺或建筑归属证明国王实际葬于此处。
-- 点位：29.86612044, 31.21374472；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[萨卡拉：王陵及年代](https://egymonuments.gov.eg/archaeological-sites/saqqara/)；[孟菲斯地区王室陵墓与金字塔分布图](https://www.ucl.ac.uk/museums-static/digitalegypt/ok/inegypt.html)；[塞赫姆赫特未完工金字塔原始地理对象](https://www.openstreetmap.org/way/102555364)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：未完工王室金字塔；不以空石棺或建筑归属证明国王实际葬于此处。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：王室陵墓建筑的存在与法老本人实际安葬得到确认是两回事。；坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[萨卡拉：王陵及年代](https://egymonuments.gov.eg/archaeological-sites/saqqara/)、[孟菲斯地区王室陵墓与金字塔分布图](https://www.ucl.ac.uk/museums-static/digitalegypt/ok/inegypt.html)、[塞赫姆赫特未完工金字塔原始地理对象](https://www.openstreetmap.org/way/102555364)
 
 ### eg-sneferu-bent · 斯尼夫鲁曲折金字塔
 
-- 当地年代：古埃及 · 古王国第四王朝；约前2650—前2550年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：性质未明；同一国王的不同陵墓建筑按城址分别建档；斯尼夫鲁实际安葬在哪座金字塔仍有争议。
-- 点位：29.7902357, 31.20946815；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[达舒尔古王国与中王国金字塔](https://egymonuments.gov.eg/archaeological-sites/dahshur/)；[斯尼夫鲁曲折金字塔原始地理对象](https://www.openstreetmap.org/way/39918834)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：同一国王的不同陵墓建筑按城址分别建档；斯尼夫鲁实际安葬在哪座金字塔仍有争议。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：王室陵墓建筑的存在与法老本人实际安葬得到确认是两回事。；坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[达舒尔古王国与中王国金字塔](https://egymonuments.gov.eg/archaeological-sites/dahshur/)、[斯尼夫鲁曲折金字塔原始地理对象](https://www.openstreetmap.org/way/39918834)
 
 ### eg-sneferu-red · 斯尼夫鲁红金字塔
 
-- 当地年代：古埃及 · 古王国第四王朝；约前2650—前2550年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：性质未明；同一国王的不同陵墓建筑按城址分别建档；斯尼夫鲁实际安葬在哪座金字塔仍有争议。
-- 点位：29.8085513, 31.20624445；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[达舒尔古王国与中王国金字塔](https://egymonuments.gov.eg/archaeological-sites/dahshur/)；[斯尼夫鲁红金字塔原始地理对象](https://www.openstreetmap.org/way/39918835)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：同一国王的不同陵墓建筑按城址分别建档；斯尼夫鲁实际安葬在哪座金字塔仍有争议。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：王室陵墓建筑的存在与法老本人实际安葬得到确认是两回事。；坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[达舒尔古王国与中王国金字塔](https://egymonuments.gov.eg/archaeological-sites/dahshur/)、[斯尼夫鲁红金字塔原始地理对象](https://www.openstreetmap.org/way/39918835)
 
 ### eg-amenemhat-ii · 阿蒙涅姆赫特二世白金字塔
 
-- 当地年代：古埃及 · 中王国第十二王朝；约前1950—前1850年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；达舒尔中王国砖石王陵；不与阿蒙涅姆赫特三世黑金字塔合并。
-- 点位：29.80572155, 31.22327657；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[达舒尔古王国与中王国金字塔](https://egymonuments.gov.eg/archaeological-sites/dahshur/)；[阿蒙涅姆赫特二世白金字塔原始地理对象](https://www.openstreetmap.org/way/73176950)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：达舒尔中王国砖石王陵；不与阿蒙涅姆赫特三世黑金字塔合并。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[达舒尔古王国与中王国金字塔](https://egymonuments.gov.eg/archaeological-sites/dahshur/)、[阿蒙涅姆赫特二世白金字塔原始地理对象](https://www.openstreetmap.org/way/73176950)
 
 ### eg-senusret-iii-dahshur · 森乌塞尔特三世金字塔（达舒尔）
 
-- 当地年代：古埃及 · 中王国第十二王朝；约前1878—前1840年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：性质未明；大都会博物馆发掘资料认为无遗体及石棺洁净可能说明此处并未实际安葬国王；另有阿拜多斯地下陵墓，分别保留。
-- 点位：29.81885145, 31.2257308；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[森乌塞尔特三世达舒尔陵墓研究及安葬争议](https://www.metmuseum.org/essays/the-pyramid-complex-of-senwosret-iii-in-the-cemeteries-of-dahshur)；[森乌塞尔特三世金字塔（达舒尔）原始地理对象](https://www.openstreetmap.org/way/73177590)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：大都会博物馆发掘资料认为无遗体及石棺洁净可能说明此处并未实际安葬国王；另有阿拜多斯地下陵墓，分别保留。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：王室陵墓建筑的存在与法老本人实际安葬得到确认是两回事。；坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[森乌塞尔特三世达舒尔陵墓研究及安葬争议](https://www.metmuseum.org/essays/the-pyramid-complex-of-senwosret-iii-in-the-cemeteries-of-dahshur)、[森乌塞尔特三世金字塔（达舒尔）原始地理对象](https://www.openstreetmap.org/way/73177590)
 
 ### eg-amenemhat-iii-black · 阿蒙涅姆赫特三世黑金字塔
 
-- 当地年代：古埃及 · 中王国第十二王朝；约前1900—前1800年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：性质未明；王室陵墓建筑，与哈瓦拉金字塔为不同实体；不能因同一墓主而合并打卡。
-- 点位：29.79173602, 31.22390492；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[达舒尔古王国与中王国金字塔](https://egymonuments.gov.eg/archaeological-sites/dahshur/)；[阿蒙涅姆赫特三世黑金字塔原始地理对象](https://www.openstreetmap.org/way/39918837)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：王室陵墓建筑，与哈瓦拉金字塔为不同实体；不能因同一墓主而合并打卡。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：王室陵墓建筑的存在与法老本人实际安葬得到确认是两回事。；坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[达舒尔古王国与中王国金字塔](https://egymonuments.gov.eg/archaeological-sites/dahshur/)、[阿蒙涅姆赫特三世黑金字塔原始地理对象](https://www.openstreetmap.org/way/39918837)
 
 ### eg-sahure · 萨胡拉金字塔
 
-- 当地年代：古埃及 · 古王国第五王朝；约前2500—前2300年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；阿布西尔第五王朝王陵；名称中的未完工形制不自动表示没有发生安葬。
-- 点位：29.8975358, 31.20339265；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[阿布西尔第五王朝王陵](https://egyptartefacts.griffith.ox.ac.uk/site/abusir/)；[萨胡拉金字塔原始地理对象](https://www.openstreetmap.org/way/48808535)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：阿布西尔第五王朝王陵；名称中的未完工形制不自动表示没有发生安葬。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[阿布西尔第五王朝王陵](https://egyptartefacts.griffith.ox.ac.uk/site/abusir/)、[萨胡拉金字塔原始地理对象](https://www.openstreetmap.org/way/48808535)
 
 ### eg-neferirkare · 内弗尔伊尔卡拉金字塔
 
-- 当地年代：古埃及 · 古王国第五王朝；约前2500—前2300年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；阿布西尔第五王朝王陵；名称中的未完工形制不自动表示没有发生安葬。
-- 点位：29.89497065, 31.2024288；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[阿布西尔第五王朝王陵](https://egyptartefacts.griffith.ox.ac.uk/site/abusir/)；[内弗尔伊尔卡拉金字塔原始地理对象](https://www.openstreetmap.org/way/48808492)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：阿布西尔第五王朝王陵；名称中的未完工形制不自动表示没有发生安葬。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[阿布西尔第五王朝王陵](https://egyptartefacts.griffith.ox.ac.uk/site/abusir/)、[内弗尔伊尔卡拉金字塔原始地理对象](https://www.openstreetmap.org/way/48808492)
 
 ### eg-nyuserre · 尼乌塞拉金字塔
 
-- 当地年代：古埃及 · 古王国第五王朝；约前2500—前2300年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；阿布西尔第五王朝王陵；名称中的未完工形制不自动表示没有发生安葬。
-- 点位：29.89554328, 31.20363117；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[阿布西尔第五王朝王陵](https://egyptartefacts.griffith.ox.ac.uk/site/abusir/)；[尼乌塞拉金字塔原始地理对象](https://www.openstreetmap.org/way/48808533)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：阿布西尔第五王朝王陵；名称中的未完工形制不自动表示没有发生安葬。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[阿布西尔第五王朝王陵](https://egyptartefacts.griffith.ox.ac.uk/site/abusir/)、[尼乌塞拉金字塔原始地理对象](https://www.openstreetmap.org/way/48808533)
 
 ### eg-neferefre · 内弗尔弗拉未完工金字塔
 
-- 当地年代：古埃及 · 古王国第五王朝；约前2500—前2300年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；阿布西尔第五王朝王陵；名称中的未完工形制不自动表示没有发生安葬。
-- 点位：29.89371075, 31.2016947；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[阿布西尔第五王朝王陵](https://egyptartefacts.griffith.ox.ac.uk/site/abusir/)；[内弗尔弗拉未完工金字塔原始地理对象](https://www.openstreetmap.org/way/98450488)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：阿布西尔第五王朝王陵；名称中的未完工形制不自动表示没有发生安葬。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[阿布西尔第五王朝王陵](https://egyptartefacts.griffith.ox.ac.uk/site/abusir/)、[内弗尔弗拉未完工金字塔原始地理对象](https://www.openstreetmap.org/way/98450488)
 
 ### eg-sneferu-meidum · 梅杜姆金字塔
 
-- 当地年代：古埃及 · 古王国第四王朝；约前2650—前2550年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：性质未明；通常与斯尼夫鲁联系，早期工程是否属于胡尼有争议；实际安葬位置未定，不标作已经确认的遗体墓。
-- 点位：29.3883705, 31.15712837；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[达舒尔古王国与中王国金字塔](https://egymonuments.gov.eg/archaeological-sites/dahshur/)；[梅杜姆金字塔及其归属争议](https://www.ucl.ac.uk/museums-static/digitalegypt/meydum/pyramid/moreinfo.html)；[梅杜姆金字塔原始地理对象](https://www.openstreetmap.org/way/89034641)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：通常与斯尼夫鲁联系，早期工程是否属于胡尼有争议；实际安葬位置未定，不标作已经确认的遗体墓。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：王室陵墓建筑的存在与法老本人实际安葬得到确认是两回事。；坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[达舒尔古王国与中王国金字塔](https://egymonuments.gov.eg/archaeological-sites/dahshur/)、[梅杜姆金字塔及其归属争议](https://www.ucl.ac.uk/museums-static/digitalegypt/meydum/pyramid/moreinfo.html)、[梅杜姆金字塔原始地理对象](https://www.openstreetmap.org/way/89034641)
 
 ### eg-djedefre · 杰德夫拉金字塔
 
-- 当地年代：古埃及 · 古王国第四王朝；约前2600—前2500年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；阿布拉瓦什王陵遗址，不与吉萨胡夫陵合并。
-- 点位：30.0321443, 31.07493812；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[杰德夫拉王陵](https://www.ucl.ac.uk/museums-static/digitalegypt/chronology/kingdjedefre.html)；[杰德夫拉金字塔原始地理对象](https://www.openstreetmap.org/way/163410612)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：阿布拉瓦什王陵遗址，不与吉萨胡夫陵合并。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[杰德夫拉王陵](https://www.ucl.ac.uk/museums-static/digitalegypt/chronology/kingdjedefre.html)、[杰德夫拉金字塔原始地理对象](https://www.openstreetmap.org/way/163410612)
 
 ### eg-amenemhat-i · 阿蒙涅姆赫特一世金字塔
 
-- 当地年代：古埃及 · 中王国第十二王朝；约前1981—前1952年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；利什特北侧王陵；与南侧森乌塞尔特一世陵分别表达。
-- 点位：29.57484123, 31.22529585；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[利什特阿蒙涅姆赫特一世金字塔考古资料](https://www.metmuseum.org/-/media/files/learn/family-map-and-guides/middle-kingdom-family-guide.pdf)；[阿蒙涅姆赫特一世金字塔原始地理对象](https://www.openstreetmap.org/way/711889183)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：利什特北侧王陵；与南侧森乌塞尔特一世陵分别表达。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[利什特阿蒙涅姆赫特一世金字塔考古资料](https://www.metmuseum.org/-/media/files/learn/family-map-and-guides/middle-kingdom-family-guide.pdf)、[阿蒙涅姆赫特一世金字塔原始地理对象](https://www.openstreetmap.org/way/711889183)
 
 ### eg-senusret-i · 森乌塞尔特一世金字塔
 
-- 当地年代：古埃及 · 中王国第十二王朝；约前2000—前1900年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；大都会博物馆发掘的利什特南侧金字塔建筑群。
-- 点位：29.56017955, 31.22115665；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[利什特森乌塞尔特一世金字塔建筑群](https://www.metmuseum.org/pt/met-publications/the-pyramid-complex-of-senwosret-i)；[森乌塞尔特一世金字塔原始地理对象](https://www.openstreetmap.org/way/83492628)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：大都会博物馆发掘的利什特南侧金字塔建筑群。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[利什特森乌塞尔特一世金字塔建筑群](https://www.metmuseum.org/pt/met-publications/the-pyramid-complex-of-senwosret-i)、[森乌塞尔特一世金字塔原始地理对象](https://www.openstreetmap.org/way/83492628)
 
 ### eg-senusret-ii · 森乌塞尔特二世金字塔（拉洪）
 
-- 当地年代：古埃及 · 中王国第十二王朝；约前1900—前1800年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；拉洪王陵，不用附近卡洪聚落或博物馆代表陵址。
-- 点位：29.23618092, 30.97073952；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[拉洪森乌塞尔特二世金字塔及考古资料](https://www.ucl.ac.uk/museums-static/digitalegypt/lahun/index.html)；[森乌塞尔特二世金字塔（拉洪）原始地理对象](https://www.openstreetmap.org/way/89036414)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：拉洪王陵，不用附近卡洪聚落或博物馆代表陵址。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[拉洪森乌塞尔特二世金字塔及考古资料](https://www.ucl.ac.uk/museums-static/digitalegypt/lahun/index.html)、[森乌塞尔特二世金字塔（拉洪）原始地理对象](https://www.openstreetmap.org/way/89036414)
 
 ### eg-amenemhat-iii-hawara · 阿蒙涅姆赫特三世金字塔（哈瓦拉）
 
-- 当地年代：古埃及 · 中王国第十二王朝；约前1900—前1800年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；哈瓦拉王陵与南侧葬祭建筑遗址分别看待；不把后期罗马墓地并作法老陵。
-- 点位：29.27435274, 30.89887789；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[哈瓦拉考古资料](https://www.ucl.ac.uk/museums-static/digitalegypt/hawara1/index.html)；[阿蒙涅姆赫特三世金字塔（哈瓦拉）原始地理对象](https://www.openstreetmap.org/way/89036022)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：哈瓦拉王陵与南侧葬祭建筑遗址分别看待；不把后期罗马墓地并作法老陵。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[哈瓦拉考古资料](https://www.ucl.ac.uk/museums-static/digitalegypt/hawara1/index.html)、[阿蒙涅姆赫特三世金字塔（哈瓦拉）原始地理对象](https://www.openstreetmap.org/way/89036022)
 
 ### eg-kv1 · 拉美西斯七世陵（KV1）
 
-- 当地年代：古埃及 · 新王国第20王朝；约前1200—前1100年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
-- 点位：25.74245585, 32.60194551；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)；[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)；[拉美西斯七世陵（KV1）原始地理对象](https://www.openstreetmap.org/way/116646291)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)、[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)、[拉美西斯七世陵（KV1）原始地理对象](https://www.openstreetmap.org/way/116646291)
 
 ### eg-kv2 · 拉美西斯四世陵（KV2）
 
-- 当地年代：古埃及 · 新王国第20王朝；约前1200—前1100年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
-- 点位：25.74151809, 32.60219232；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)；[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)；[拉美西斯四世陵（KV2）原始地理对象](https://www.openstreetmap.org/way/813722273)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)、[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)、[拉美西斯四世陵（KV2）原始地理对象](https://www.openstreetmap.org/way/813722273)
 
 ### eg-kv6 · 拉美西斯九世陵（KV6）
 
-- 当地年代：古埃及 · 新王国第20王朝；约前1200—前1100年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
-- 点位：25.74055134, 32.60184166；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)；[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)；[拉美西斯九世陵（KV6）原始地理对象](https://www.openstreetmap.org/way/813718171)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)、[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)、[拉美西斯九世陵（KV6）原始地理对象](https://www.openstreetmap.org/way/813718171)
 
 ### eg-kv7 · 拉美西斯二世陵（KV7）
 
-- 当地年代：古埃及 · 新王国第19王朝；约前1300—前1200年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
-- 点位：25.74073083, 32.60164143；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)；[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)；[拉美西斯二世陵（KV7）原始地理对象](https://www.openstreetmap.org/way/813718173)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)、[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)、[拉美西斯二世陵（KV7）原始地理对象](https://www.openstreetmap.org/way/813718173)
 
 ### eg-kv8 · 麦伦普塔陵（KV8）
 
-- 当地年代：古埃及 · 新王国第19王朝；约前1250—前1200年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
-- 点位：25.7407988, 32.60107824；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)；[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)；[麦伦普塔陵（KV8）原始地理对象](https://www.openstreetmap.org/way/813719783)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)、[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)、[麦伦普塔陵（KV8）原始地理对象](https://www.openstreetmap.org/way/813719783)
 
 ### eg-kv9 · 拉美西斯五世与六世陵（KV9）
 
-- 当地年代：古埃及 · 新王国第20王朝；约前1200—前1100年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；拉美西斯五世与六世先后使用同一墓址，按一个陵墓实体记录。
-- 点位：25.7403195, 32.60134162；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)；[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)；[拉美西斯五世与六世陵（KV9）原始地理对象](https://www.openstreetmap.org/way/813718170)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：拉美西斯五世与六世先后使用同一墓址，按一个陵墓实体记录。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)、[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)、[拉美西斯五世与六世陵（KV9）原始地理对象](https://www.openstreetmap.org/way/813718170)
 
 ### eg-kv10 · 阿蒙麦西斯陵（KV10）
 
-- 当地年代：古埃及 · 新王国第19王朝；约前1250—前1150年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
-- 点位：25.74006435, 32.60136955；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)；[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)；[阿蒙麦西斯陵（KV10）原始地理对象](https://www.openstreetmap.org/way/813722280)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)、[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)、[阿蒙麦西斯陵（KV10）原始地理对象](https://www.openstreetmap.org/way/813722280)
 
 ### eg-kv11 · 拉美西斯三世陵（KV11）
 
-- 当地年代：古埃及 · 新王国第20王朝；约前1200—前1100年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
-- 点位：25.74002413, 32.60113865；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)；[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)；[拉美西斯三世陵（KV11）原始地理对象](https://www.openstreetmap.org/way/813717255)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)、[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)、[拉美西斯三世陵（KV11）原始地理对象](https://www.openstreetmap.org/way/813717255)
 
 ### eg-kv14 · 塔沃斯蕾特与塞特纳赫特陵（KV14）
 
-- 当地年代：古埃及 · 新王国第19王朝至第二十王朝；约前1250—前1150年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；同一墓址先后被塔沃斯蕾特与塞特纳赫特使用，按一个陵墓实体记录，不重复创建两个点。
-- 点位：25.73915133, 32.59980198；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)；[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)；[塔沃斯蕾特与塞特纳赫特陵（KV14）原始地理对象](https://www.openstreetmap.org/way/813832362)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：同一墓址先后被塔沃斯蕾特与塞特纳赫特使用，按一个陵墓实体记录，不重复创建两个点。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)、[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)、[塔沃斯蕾特与塞特纳赫特陵（KV14）原始地理对象](https://www.openstreetmap.org/way/813832362)
 
 ### eg-kv15 · 塞提二世陵（KV15）
 
-- 当地年代：古埃及 · 新王国第19王朝；约前1250—前1150年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
-- 点位：25.7387972, 32.59981485；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)；[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)；[塞提二世陵（KV15）原始地理对象](https://www.openstreetmap.org/way/813832366)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)、[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)、[塞提二世陵（KV15）原始地理对象](https://www.openstreetmap.org/way/813832366)
 
 ### eg-kv16 · 拉美西斯一世陵（KV16）
 
-- 当地年代：古埃及 · 新王国第19王朝；约前1300—前1250年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
-- 点位：25.73997757, 32.60183544；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)；[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)；[拉美西斯一世陵（KV16）原始地理对象](https://www.openstreetmap.org/way/813718169)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)、[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)、[拉美西斯一世陵（KV16）原始地理对象](https://www.openstreetmap.org/way/813718169)
 
 ### eg-kv17 · 塞提一世陵（KV17）
 
-- 当地年代：古埃及 · 新王国第19王朝；约前1300—前1250年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
-- 点位：25.7399183, 32.60195605；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)；[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)；[塞提一世陵（KV17）原始地理对象](https://www.openstreetmap.org/way/813717250)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)、[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)、[塞提一世陵（KV17）原始地理对象](https://www.openstreetmap.org/way/813717250)
 
 ### eg-kv20 · 哈特谢普苏特与图特摩斯一世陵（KV20）
 
-- 当地年代：古埃及 · 新王国第18王朝；约前1500—前1400年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；此墓与国王、女王相关；不将代尔巴哈里的哈特谢普苏特葬祭庙当作此陵。
-- 点位：25.73909088, 32.60359616；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)；[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)；[哈特谢普苏特与图特摩斯一世陵（KV20）原始地理对象](https://www.openstreetmap.org/way/813950034)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：此墓与国王、女王相关；不将代尔巴哈里的哈特谢普苏特葬祭庙当作此陵。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)、[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)、[哈特谢普苏特与图特摩斯一世陵（KV20）原始地理对象](https://www.openstreetmap.org/way/813950034)
 
 ### eg-kv34 · 图特摩斯三世陵（KV34）
 
-- 当地年代：古埃及 · 新王国第18王朝；约前1500—前1400年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
-- 点位：25.7379927, 32.60071895；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)；[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)；[图特摩斯三世陵（KV34）原始地理对象](https://www.openstreetmap.org/way/813832367)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)、[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)、[图特摩斯三世陵（KV34）原始地理对象](https://www.openstreetmap.org/way/813832367)
 
 ### eg-kv35 · 阿蒙霍特普二世陵（KV35）
 
-- 当地年代：古埃及 · 新王国第18王朝；约前1450—前1350年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；原王陵后被用来存放迁移的王室木乃伊；不把所有迁入者都认作此墓的原设计墓主。
-- 点位：25.74014197, 32.60018777；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)；[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)；[阿蒙霍特普二世陵（KV35）原始地理对象](https://www.openstreetmap.org/way/813950039)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：原王陵后被用来存放迁移的王室木乃伊；不把所有迁入者都认作此墓的原设计墓主。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)、[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)、[阿蒙霍特普二世陵（KV35）原始地理对象](https://www.openstreetmap.org/way/813950039)
 
 ### eg-kv43 · 图特摩斯四世陵（KV43）
 
-- 当地年代：古埃及 · 新王国第18王朝；约前1450—前1350年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
-- 点位：25.7387167, 32.6032116；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)；[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)；[图特摩斯四世陵（KV43）原始地理对象](https://www.openstreetmap.org/way/813947193)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)、[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)、[图特摩斯四世陵（KV43）原始地理对象](https://www.openstreetmap.org/way/813947193)
 
 ### eg-kv47 · 西普塔陵（KV47）
 
-- 当地年代：古埃及 · 新王国第19王朝；约前1250—前1150年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
-- 点位：25.73919988, 32.60004712；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)；[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)；[西普塔陵（KV47）原始地理对象](https://www.openstreetmap.org/way/813717254)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)、[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)、[西普塔陵（KV47）原始地理对象](https://www.openstreetmap.org/way/813717254)
 
 ### eg-kv57 · 霍伦海布陵（KV57）
 
-- 当地年代：古埃及 · 新王国第18王朝；约前1350—前1250年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
-- 点位：25.74004377, 32.60089358；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)；[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)；[霍伦海布陵（KV57）原始地理对象](https://www.openstreetmap.org/way/813722274)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)、[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)、[霍伦海布陵（KV57）原始地理对象](https://www.openstreetmap.org/way/813722274)
 
 ### eg-kv62 · 图坦卡蒙陵（KV62）
 
-- 当地年代：古埃及 · 新王国第18王朝；约前1336—前1327年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；第十八王朝王陵；发现时相对完整不等于从未受到古代盗扰；博物馆藏品不替代陵墓实体。
-- 点位：25.74034654, 32.60146055；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[图坦卡蒙陵墓KV62](https://egymonuments.gov.eg/en/monuments/tomb-of-tutankhamun)；[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)；[图坦卡蒙陵（KV62）原始地理对象](https://www.openstreetmap.org/way/813832374)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：第十八王朝王陵；发现时相对完整不等于从未受到古代盗扰；博物馆藏品不替代陵墓实体。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[图坦卡蒙陵墓KV62](https://egymonuments.gov.eg/en/monuments/tomb-of-tutankhamun)、[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)、[图坦卡蒙陵（KV62）原始地理对象](https://www.openstreetmap.org/way/813832374)
 
 ### eg-kv23 · 阿伊陵（WV23）
 
-- 当地年代：古埃及 · 新王国第18王朝；约前1350—前1250年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
-- 点位：25.741514, 32.59206083；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)；[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)；[阿伊陵（WV23）原始地理对象](https://www.openstreetmap.org/way/814144093)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：帝王谷原始墓号对应王陵；记录的是陵墓建筑区域，不将后来迁走的木乃伊所在博物馆当作本墓。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)、[帝王谷原始测绘与墓号图](https://thebanmappingproject.com/sites/default/files/plans/Valley%20of%20the%20Kings.pdf)、[阿伊陵（WV23）原始地理对象](https://www.openstreetmap.org/way/814144093)
 
 ### eg-nefertari · 奈费尔塔里王后陵（QV66）
 
-- 当地年代：古埃及 · 新王国第十九王朝；约前1300—前1200年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；王后谷独立王室墓葬；不采用将QV墓号误写为KV或把奈费尔塔里与QV55混配的社区对象。
-- 点位：25.72795051, 32.59274109；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[QV66奈费尔塔里陵墓原始测绘](https://thebanmappingproject.com/sites/default/files/plans/QV66.pdf)；[奈费尔塔里陵墓保护项目](https://www.getty.edu/projects/tomb-nefertari/)；[奈费尔塔里王后陵（QV66）原始地理对象](https://www.openstreetmap.org/way/1239469213)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：王后谷独立王室墓葬；不采用将QV墓号误写为KV或把奈费尔塔里与QV55混配的社区对象。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[QV66奈费尔塔里陵墓原始测绘](https://thebanmappingproject.com/sites/default/files/plans/QV66.pdf)、[奈费尔塔里陵墓保护项目](https://www.getty.edu/projects/tomb-nefertari/)、[奈费尔塔里王后陵（QV66）原始地理对象](https://www.openstreetmap.org/way/1239469213)
 
 ### eg-tuya · 图雅王后陵（QV80）
 
-- 当地年代：古埃及 · 新王国第十九王朝；约前1300—前1200年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；王后谷独立王室墓葬；不采用将QV墓号误写为KV或把奈费尔塔里与QV55混配的社区对象。
-- 点位：25.72810639, 32.59251591；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[QV80王后墓原始研究资料](https://thebanmappingproject.com/tombs/qv-80-queen-tuy)；[图雅王后陵（QV80）原始地理对象](https://www.openstreetmap.org/way/1239469211)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：王后谷独立王室墓葬；不采用将QV墓号误写为KV或把奈费尔塔里与QV55混配的社区对象。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[QV80王后墓原始研究资料](https://thebanmappingproject.com/tombs/qv-80-queen-tuy)、[图雅王后陵（QV80）原始地理对象](https://www.openstreetmap.org/way/1239469211)
 
 ### eg-tyti · 提蒂王后陵（QV52）
 
-- 当地年代：古埃及 · 新王国第二十王朝；约前1200—前1100年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；王后谷独立王室墓葬；不采用将QV墓号误写为KV或把奈费尔塔里与QV55混配的社区对象。
-- 点位：25.72748525, 32.59226648；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[QV52王后墓原始研究资料](https://thebanmappingproject.com/tombs/qv-52-queen-tyti)；[提蒂王后陵（QV52）原始地理对象](https://www.openstreetmap.org/way/1240796868)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：王后谷独立王室墓葬；不采用将QV墓号误写为KV或把奈费尔塔里与QV55混配的社区对象。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[QV52王后墓原始研究资料](https://thebanmappingproject.com/tombs/qv-52-queen-tyti)、[提蒂王后陵（QV52）原始地理对象](https://www.openstreetmap.org/way/1240796868)
 
 ### eg-den · 登王陵（阿拜多斯T墓）
 
-- 当地年代：古埃及 · 早王朝第一王朝；约前3100—前2650年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。
-- 点位：26.17439725, 31.90780972；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[乌姆·卡阿布早王朝王室墓地](https://www.dainst.org/forschung/projekte/abydos-umm-el-qaab/2522)；[早王朝墓号与墓主测绘总图](https://www.dainst.org/fileadmin/Media/Publikationen__PDFs_/DAI_Kairo_Magazin_DAI_Kairo_2014_englisch.pdf)；[登王陵（阿拜多斯T墓）原始地理对象](https://www.openstreetmap.org/way/1074615331)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[乌姆·卡阿布早王朝王室墓地](https://www.dainst.org/forschung/projekte/abydos-umm-el-qaab/2522)、[早王朝墓号与墓主测绘总图](https://www.dainst.org/fileadmin/Media/Publikationen__PDFs_/DAI_Kairo_Magazin_DAI_Kairo_2014_englisch.pdf)、[登王陵（阿拜多斯T墓）原始地理对象](https://www.openstreetmap.org/way/1074615331)
 
 ### eg-djer · 哲尔王陵（阿拜多斯O墓）
 
-- 当地年代：古埃及 · 早王朝第一王朝；约前3100—前2650年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。
-- 点位：26.1752649, 31.9079027；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[乌姆·卡阿布早王朝王室墓地](https://www.dainst.org/forschung/projekte/abydos-umm-el-qaab/2522)；[早王朝墓号与墓主测绘总图](https://www.dainst.org/fileadmin/Media/Publikationen__PDFs_/DAI_Kairo_Magazin_DAI_Kairo_2014_englisch.pdf)；[哲尔王陵（阿拜多斯O墓）原始地理对象](https://www.openstreetmap.org/node/9856557976)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[乌姆·卡阿布早王朝王室墓地](https://www.dainst.org/forschung/projekte/abydos-umm-el-qaab/2522)、[早王朝墓号与墓主测绘总图](https://www.dainst.org/fileadmin/Media/Publikationen__PDFs_/DAI_Kairo_Magazin_DAI_Kairo_2014_englisch.pdf)、[哲尔王陵（阿拜多斯O墓）原始地理对象](https://www.openstreetmap.org/node/9856557976)
 
 ### eg-djet · 杰特王陵（阿拜多斯Z墓）
 
-- 当地年代：古埃及 · 早王朝第一王朝；约前3100—前2650年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。
-- 点位：26.1748076, 31.9076058；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[乌姆·卡阿布早王朝王室墓地](https://www.dainst.org/forschung/projekte/abydos-umm-el-qaab/2522)；[早王朝墓号与墓主测绘总图](https://www.dainst.org/fileadmin/Media/Publikationen__PDFs_/DAI_Kairo_Magazin_DAI_Kairo_2014_englisch.pdf)；[杰特王陵（阿拜多斯Z墓）原始地理对象](https://www.openstreetmap.org/node/9856557971)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[乌姆·卡阿布早王朝王室墓地](https://www.dainst.org/forschung/projekte/abydos-umm-el-qaab/2522)、[早王朝墓号与墓主测绘总图](https://www.dainst.org/fileadmin/Media/Publikationen__PDFs_/DAI_Kairo_Magazin_DAI_Kairo_2014_englisch.pdf)、[杰特王陵（阿拜多斯Z墓）原始地理对象](https://www.openstreetmap.org/node/9856557971)
 
 ### eg-adjib · 阿涅德吉布王陵（阿拜多斯X墓）
 
-- 当地年代：古埃及 · 早王朝第一王朝；约前3100—前2650年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。
-- 点位：26.1750269, 31.9071242；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[乌姆·卡阿布早王朝王室墓地](https://www.dainst.org/forschung/projekte/abydos-umm-el-qaab/2522)；[早王朝墓号与墓主测绘总图](https://www.dainst.org/fileadmin/Media/Publikationen__PDFs_/DAI_Kairo_Magazin_DAI_Kairo_2014_englisch.pdf)；[阿涅德吉布王陵（阿拜多斯X墓）原始地理对象](https://www.openstreetmap.org/node/9856557970)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[乌姆·卡阿布早王朝王室墓地](https://www.dainst.org/forschung/projekte/abydos-umm-el-qaab/2522)、[早王朝墓号与墓主测绘总图](https://www.dainst.org/fileadmin/Media/Publikationen__PDFs_/DAI_Kairo_Magazin_DAI_Kairo_2014_englisch.pdf)、[阿涅德吉布王陵（阿拜多斯X墓）原始地理对象](https://www.openstreetmap.org/node/9856557970)
 
 ### eg-semerkhet · 瑟莫赫特王陵（阿拜多斯U墓）
 
-- 当地年代：古埃及 · 早王朝第一王朝；约前3100—前2650年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。
-- 点位：26.174134, 31.90807165；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[乌姆·卡阿布早王朝王室墓地](https://www.dainst.org/forschung/projekte/abydos-umm-el-qaab/2522)；[早王朝墓号与墓主测绘总图](https://www.dainst.org/fileadmin/Media/Publikationen__PDFs_/DAI_Kairo_Magazin_DAI_Kairo_2014_englisch.pdf)；[瑟莫赫特王陵（阿拜多斯U墓）原始地理对象](https://www.openstreetmap.org/way/1074615332)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[乌姆·卡阿布早王朝王室墓地](https://www.dainst.org/forschung/projekte/abydos-umm-el-qaab/2522)、[早王朝墓号与墓主测绘总图](https://www.dainst.org/fileadmin/Media/Publikationen__PDFs_/DAI_Kairo_Magazin_DAI_Kairo_2014_englisch.pdf)、[瑟莫赫特王陵（阿拜多斯U墓）原始地理对象](https://www.openstreetmap.org/way/1074615332)
 
 ### eg-qaa · 卡阿王陵（阿拜多斯Q墓）
 
-- 当地年代：古埃及 · 早王朝第一王朝；约前3100—前2650年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。
-- 点位：26.17393635, 31.9079757；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[乌姆·卡阿布早王朝王室墓地](https://www.dainst.org/forschung/projekte/abydos-umm-el-qaab/2522)；[早王朝墓号与墓主测绘总图](https://www.dainst.org/fileadmin/Media/Publikationen__PDFs_/DAI_Kairo_Magazin_DAI_Kairo_2014_englisch.pdf)；[卡阿王陵（阿拜多斯Q墓）原始地理对象](https://www.openstreetmap.org/way/1074615333)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[乌姆·卡阿布早王朝王室墓地](https://www.dainst.org/forschung/projekte/abydos-umm-el-qaab/2522)、[早王朝墓号与墓主测绘总图](https://www.dainst.org/fileadmin/Media/Publikationen__PDFs_/DAI_Kairo_Magazin_DAI_Kairo_2014_englisch.pdf)、[卡阿王陵（阿拜多斯Q墓）原始地理对象](https://www.openstreetmap.org/way/1074615333)
 
 ### eg-merneith · 梅丽特奈特王陵（阿拜多斯Y墓）
 
-- 当地年代：古埃及 · 早王朝第一王朝；约前3100—前2650年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。
-- 点位：26.17462972, 31.90736187；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[乌姆·卡阿布早王朝王室墓地](https://www.dainst.org/forschung/projekte/abydos-umm-el-qaab/2522)；[早王朝墓号与墓主测绘总图](https://www.dainst.org/fileadmin/Media/Publikationen__PDFs_/DAI_Kairo_Magazin_DAI_Kairo_2014_englisch.pdf)；[梅丽特奈特王陵（阿拜多斯Y墓）原始地理对象](https://www.openstreetmap.org/way/1074615334)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[乌姆·卡阿布早王朝王室墓地](https://www.dainst.org/forschung/projekte/abydos-umm-el-qaab/2522)、[早王朝墓号与墓主测绘总图](https://www.dainst.org/fileadmin/Media/Publikationen__PDFs_/DAI_Kairo_Magazin_DAI_Kairo_2014_englisch.pdf)、[梅丽特奈特王陵（阿拜多斯Y墓）原始地理对象](https://www.openstreetmap.org/way/1074615334)
 
 ### eg-peribsen · 佩里布森王陵（阿拜多斯P墓）
 
-- 当地年代：古埃及 · 早王朝第二王朝；约前3100—前2650年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。
-- 点位：26.17547258, 31.90727485；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[乌姆·卡阿布早王朝王室墓地](https://www.dainst.org/forschung/projekte/abydos-umm-el-qaab/2522)；[早王朝墓号与墓主测绘总图](https://www.dainst.org/fileadmin/Media/Publikationen__PDFs_/DAI_Kairo_Magazin_DAI_Kairo_2014_englisch.pdf)；[佩里布森王陵（阿拜多斯P墓）原始地理对象](https://www.openstreetmap.org/way/1074615335)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[乌姆·卡阿布早王朝王室墓地](https://www.dainst.org/forschung/projekte/abydos-umm-el-qaab/2522)、[早王朝墓号与墓主测绘总图](https://www.dainst.org/fileadmin/Media/Publikationen__PDFs_/DAI_Kairo_Magazin_DAI_Kairo_2014_englisch.pdf)、[佩里布森王陵（阿拜多斯P墓）原始地理对象](https://www.openstreetmap.org/way/1074615335)
 
 ### eg-khasekhemwy · 卡塞凯姆威王陵（阿拜多斯V墓）
 
-- 当地年代：古埃及 · 早王朝第二王朝；约前3100—前2650年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。
-- 点位：26.1727167, 31.90805725；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[乌姆·卡阿布早王朝王室墓地](https://www.dainst.org/forschung/projekte/abydos-umm-el-qaab/2522)；[早王朝墓号与墓主测绘总图](https://www.dainst.org/fileadmin/Media/Publikationen__PDFs_/DAI_Kairo_Magazin_DAI_Kairo_2014_englisch.pdf)；[卡塞凯姆威王陵（阿拜多斯V墓）原始地理对象](https://www.openstreetmap.org/way/1074615330)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：乌姆·卡阿布墓号与墓主依德国考古研究院公布图核对；王陵与靠近耕地的葬祭围区分别定位。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[乌姆·卡阿布早王朝王室墓地](https://www.dainst.org/forschung/projekte/abydos-umm-el-qaab/2522)、[早王朝墓号与墓主测绘总图](https://www.dainst.org/fileadmin/Media/Publikationen__PDFs_/DAI_Kairo_Magazin_DAI_Kairo_2014_englisch.pdf)、[卡塞凯姆威王陵（阿拜多斯V墓）原始地理对象](https://www.openstreetmap.org/way/1074615330)
 
 ### eg-senusret-iii-abydos · 森乌塞尔特三世陵（阿拜多斯）
 
-- 当地年代：古埃及 · 中王国第十二王朝；约前1878—前1840年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：性质未明；阿拜多斯地下王陵，与达舒尔金字塔分别记录；实际安葬推定与已找到遗体分开表述。
-- 点位：26.17093008, 31.92487935；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[森乌塞尔特三世达舒尔陵墓研究及安葬争议](https://www.metmuseum.org/essays/the-pyramid-complex-of-senwosret-iii-in-the-cemeteries-of-dahshur)；[南阿拜多斯王陵项目](https://abydos.org/about)；[森乌塞尔特三世陵（阿拜多斯）原始地理对象](https://www.openstreetmap.org/way/628065792)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：阿拜多斯地下王陵，与达舒尔金字塔分别记录；实际安葬推定与已找到遗体分开表述。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[森乌塞尔特三世达舒尔陵墓研究及安葬争议](https://www.metmuseum.org/essays/the-pyramid-complex-of-senwosret-iii-in-the-cemeteries-of-dahshur)、[南阿拜多斯王陵项目](https://abydos.org/about)、[森乌塞尔特三世陵（阿拜多斯）原始地理对象](https://www.openstreetmap.org/way/628065792)
 
 ### eg-group-giza · 吉萨金字塔王陵群
 
-- 当地年代：古埃及 · 古王国王室陵墓；约前2600—前2500年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：陵群或混合性质；用于小比例尺汇总本轮已收录子陵，不声称是完整名录或陵区实测范围；放大后显示子陵，打卡成员仅为本目录已收录实体。
-- 点位：29.9759841, 31.13098863；已收录子陵的陵群概览参照点。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[吉萨高原金字塔及王陵](https://egymonuments.gov.eg/archaeological-sites/giza-plateau/)；[吉萨金字塔王陵群的已收录子陵空间概览](https://egymonuments.gov.eg/archaeological-sites/giza-plateau/)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：用于小比例尺汇总本轮已收录子陵，不声称是完整名录或陵区实测范围；放大后显示子陵，打卡成员仅为本目录已收录实体。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[吉萨高原金字塔及王陵](https://egymonuments.gov.eg/archaeological-sites/giza-plateau/)、[吉萨金字塔王陵群的已收录子陵空间概览](https://egymonuments.gov.eg/archaeological-sites/giza-plateau/)
 
 ### eg-group-saqqara · 萨卡拉古王国王陵群
 
-- 当地年代：古埃及 · 古王国王室陵墓；约前2700—前2181年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：陵群或混合性质；用于小比例尺汇总本轮已收录子陵，不声称是完整名录或陵区实测范围；放大后显示子陵，打卡成员仅为本目录已收录实体。
-- 点位：29.85896801, 31.21702057；已收录子陵的陵群概览参照点。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[萨卡拉：王陵及年代](https://egymonuments.gov.eg/archaeological-sites/saqqara/)；[萨卡拉古王国王陵群的已收录子陵空间概览](https://egymonuments.gov.eg/archaeological-sites/saqqara/)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：用于小比例尺汇总本轮已收录子陵，不声称是完整名录或陵区实测范围；放大后显示子陵，打卡成员仅为本目录已收录实体。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[萨卡拉：王陵及年代](https://egymonuments.gov.eg/archaeological-sites/saqqara/)、[萨卡拉古王国王陵群的已收录子陵空间概览](https://egymonuments.gov.eg/archaeological-sites/saqqara/)
 
 ### eg-group-abusir · 阿布西尔金字塔王陵群
 
-- 当地年代：古埃及 · 古王国王室陵墓；约前2500—前2300年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：陵群或混合性质；用于小比例尺汇总本轮已收录子陵，不声称是完整名录或陵区实测范围；放大后显示子陵，打卡成员仅为本目录已收录实体。
-- 点位：29.89544012, 31.20278683；已收录子陵的陵群概览参照点。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[阿布西尔第五王朝王陵](https://egyptartefacts.griffith.ox.ac.uk/site/abusir/)；[阿布西尔金字塔王陵群的已收录子陵空间概览](https://egyptartefacts.griffith.ox.ac.uk/site/abusir/)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：用于小比例尺汇总本轮已收录子陵，不声称是完整名录或陵区实测范围；放大后显示子陵，打卡成员仅为本目录已收录实体。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[阿布西尔第五王朝王陵](https://egyptartefacts.griffith.ox.ac.uk/site/abusir/)、[阿布西尔金字塔王陵群的已收录子陵空间概览](https://egyptartefacts.griffith.ox.ac.uk/site/abusir/)
 
 ### eg-group-lisht · 利什特王陵群
 
-- 当地年代：古埃及 · 中王国第十二王朝；约前2000—前1900年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：陵群或混合性质；用于小比例尺汇总本轮已收录子陵，不声称是完整名录或陵区实测范围；放大后显示子陵，打卡成员仅为本目录已收录实体。
-- 点位：29.56751039, 31.22322625；已收录子陵的陵群概览参照点。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[利什特森乌塞尔特一世金字塔建筑群](https://www.metmuseum.org/pt/met-publications/the-pyramid-complex-of-senwosret-i)；[利什特王陵群的已收录子陵空间概览](https://www.metmuseum.org/pt/met-publications/the-pyramid-complex-of-senwosret-i)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：用于小比例尺汇总本轮已收录子陵，不声称是完整名录或陵区实测范围；放大后显示子陵，打卡成员仅为本目录已收录实体。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[利什特森乌塞尔特一世金字塔建筑群](https://www.metmuseum.org/pt/met-publications/the-pyramid-complex-of-senwosret-i)、[利什特王陵群的已收录子陵空间概览](https://www.metmuseum.org/pt/met-publications/the-pyramid-complex-of-senwosret-i)
 
 ### eg-group-kings · 帝王谷王陵群
 
-- 当地年代：古埃及 · 新王国第十八至第二十王朝；约前1500—前1100年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：陵群或混合性质；用于小比例尺汇总本轮已收录子陵，不声称是完整名录或陵区实测范围；放大后显示子陵，打卡成员仅为本目录已收录实体。
-- 点位：25.74006769, 32.60090669；已收录子陵的陵群概览参照点。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)；[帝王谷王陵群的已收录子陵空间概览](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：用于小比例尺汇总本轮已收录子陵，不声称是完整名录或陵区实测范围；放大后显示子陵，打卡成员仅为本目录已收录实体。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[帝王谷王室陵墓](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)、[帝王谷王陵群的已收录子陵空间概览](https://egymonuments.gov.eg/archaeological-sites/valley-of-the-kings/)
 
 ### eg-group-queens · 王后谷王室墓群
 
-- 当地年代：古埃及 · 新王国第十九至第二十王朝；约前1300—前1100年（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：陵群或混合性质；用于小比例尺汇总本轮已收录子陵，不声称是完整名录或陵区实测范围；放大后显示子陵，打卡成员仅为本目录已收录实体。
-- 点位：25.72784738, 32.59250782；已收录子陵的陵群概览参照点。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[奈费尔塔里陵墓保护项目](https://www.getty.edu/projects/tomb-nefertari/)；[王后谷王室墓群的已收录子陵空间概览](https://www.getty.edu/projects/tomb-nefertari/)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：用于小比例尺汇总本轮已收录子陵，不声称是完整名录或陵区实测范围；放大后显示子陵，打卡成员仅为本目录已收录实体。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[奈费尔塔里陵墓保护项目](https://www.getty.edu/projects/tomb-nefertari/)、[王后谷王室墓群的已收录子陵空间概览](https://www.getty.edu/projects/tomb-nefertari/)
 
 ### eg-group-abydos · 乌姆·卡阿布早王朝王陵群
 
-- 当地年代：古埃及 · 早王朝第一至第二王朝；约前3100—前2650年（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：陵群或混合性质；用于小比例尺汇总本轮已收录子陵，不声称是完整名录或陵区实测范围；放大后显示子陵，打卡成员仅为本目录已收录实体。
-- 点位：26.17448733, 31.90768708；已收录子陵的陵群概览参照点。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[乌姆·卡阿布早王朝王室墓地](https://www.dainst.org/forschung/projekte/abydos-umm-el-qaab/2522)；[乌姆·卡阿布早王朝王陵群的已收录子陵空间概览](https://www.dainst.org/forschung/projekte/abydos-umm-el-qaab/2522)
-- 待核：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 证据：用于小比例尺汇总本轮已收录子陵，不声称是完整名录或陵区实测范围；放大后显示子陵，打卡成员仅为本目录已收录实体。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对原始测绘与入口位置；跟进墓主认定、迁葬及开放资料更新
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：坐标为建筑或陵群代表点，未核定测绘误差与当前入口。
+- 来源：[乌姆·卡阿布早王朝王室墓地](https://www.dainst.org/forschung/projekte/abydos-umm-el-qaab/2522)、[乌姆·卡阿布早王朝王陵群的已收录子陵空间概览](https://www.dainst.org/forschung/projekte/abydos-umm-el-qaab/2522)
 
 ### eg-tanis-royal · 塔尼斯王陵群
 
-- 当地年代：古埃及 · 第三中间期第二十一至第二十二王朝；约前1039—前730年（营建／使用时代，不是生卒年）
-- 中国对应时代：周
-- 性质：陵群或混合性质；王陵群位于阿蒙围区西南部；以普苏森尼斯一世时期约前1039年起作为本目录分期依据。本轮据官方地理地图接入陵群参照点，并按考古平面图补Ⅰ—Ⅶ号墓；复用、迁葬与墓主认定分别说明。
-- 点位：30.97708589, 31.88064853；官方王陵群地图初始视窗中心；不是完整陵区边界或墓室中心。地理地图与图示参照，未核定独立实测精度；墓址选点不代表完整墓室边界或当前入口。
-- 来源：[塔尼斯王陵历史、复用及近期研究](https://www.chronocarto.ens.fr/wpchrono/projet/tanis/)；[塔尼斯王陵出土文物保护项目](https://egyptianmuseumcairo.eg/conservation-restoration-and-display-of-the-entire-collection-of-antiquities-from-the-royal-tombs-of-tanis-san-el-hagar/)；[Tanis (2024)，图1王陵群部分平面图及墓主说明](https://journals.openedition.org/baefe/12411)；[塔尼斯王陵群官方地理地图：EPSG:32636及已配准正射影像](https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7)；[塔尼斯王陵群官方地理地图：EPSG:32636及已配准正射影像](https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7)
-- 待核：继续核对逐墓实测边界与入口；跟进新发掘、复用及墓主认定
+- 证据：王陵群位于阿蒙围区西南部；以普苏森尼斯一世时期约前1039年起作为本目录分期依据。本轮据官方地理地图接入陵群参照点，并按考古平面图补Ⅰ—Ⅶ号墓；复用、迁葬与墓主认定分别说明。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对逐墓实测边界与入口；跟进新发掘、复用及墓主认定
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：旧Vici候选点偏离考古位置，保持弃用；本次采用官方地理地图。；单墓点为考古图与正射影像对照选点，完整边界及入口未核；不把陵群点复制为单墓位置。
+- 来源：[塔尼斯王陵历史、复用及近期研究](https://www.chronocarto.ens.fr/wpchrono/projet/tanis/)、[塔尼斯王陵出土文物保护项目](https://egyptianmuseumcairo.eg/conservation-restoration-and-display-of-the-entire-collection-of-antiquities-from-the-royal-tombs-of-tanis-san-el-hagar/)、[Tanis (2024)，图1王陵群部分平面图及墓主说明](https://journals.openedition.org/baefe/12411)、[塔尼斯王陵群官方地理地图：EPSG:32636及已配准正射影像](https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7)
 
 ### eg-tanis-nrt-i · 奥索尔孔二世墓（NRT I）
 
-- 当地年代：第二十一至第二十二王朝；约前11—前8世纪；复用分期范围，非精确建墓年（营建／使用时代，不是生卒年）
-- 中国对应时代：周
-- 性质：陵群或混合性质；墓葬存在早期建造与后续扩建复用；最新考古队说明将舍顺克三世的最终安葬置于此墓前室，不按旧资料直接放入Ⅴ号墓。
-- 点位：30.97702497, 31.88060437；按墓号判读的建筑参照点（估计）；不是墓室中心或入口导航。地理地图与图示参照，未核定独立实测精度；墓址选点不代表完整墓室边界或当前入口。
-- 来源：[塔尼斯王陵历史、复用及近期研究](https://www.chronocarto.ens.fr/wpchrono/projet/tanis/)；[Tanis (2024)，图1王陵群部分平面图及墓主说明](https://journals.openedition.org/baefe/12411)；[塔尼斯王陵群官方地理地图：EPSG:32636及已配准正射影像](https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7)；[塔尼斯王陵群官方地理地图：EPSG:32636及已配准正射影像](https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7)
-- 待核：核对逐墓实测轮廓、墓室与入口；跟进墓主归属及迁葬研究
+- 证据：墓葬存在早期建造与后续扩建复用；最新考古队说明将舍顺克三世的最终安葬置于此墓前室，不按旧资料直接放入Ⅴ号墓。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：核对逐墓实测轮廓、墓室与入口；跟进墓主归属及迁葬研究
+- 地理参考：见坐标资料
+- 地理状态：地理地图与图示参照，未核定独立实测精度；墓址选点不代表完整墓室边界或当前入口。
+- 争议：点位为官方图件判读估计，非已核定墓室中心或入口。
+- 来源：[塔尼斯王陵历史、复用及近期研究](https://www.chronocarto.ens.fr/wpchrono/projet/tanis/)、[Tanis (2024)，图1王陵群部分平面图及墓主说明](https://journals.openedition.org/baefe/12411)、[塔尼斯王陵群官方地理地图：EPSG:32636及已配准正射影像](https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7)
 
 ### eg-tanis-nrt-ii · 塔尼斯Ⅱ号王墓（墓主未定）（NRT II）
 
-- 当地年代：第二十二王朝；约前10—前8世纪；王朝分期范围，非精确建墓年（营建／使用时代，不是生卒年）
-- 中国对应时代：周
-- 性质：性质未明；2024年考古平面图将此墓标为匿名，并对帕米一世提出问号；不采用早期塔克洛特一世的确定归属。
-- 点位：30.97699259, 31.88066278；按墓号判读的建筑参照点（估计）；不是墓室中心或入口导航。地理地图与图示参照，未核定独立实测精度；墓址选点不代表完整墓室边界或当前入口。
-- 来源：[塔尼斯王陵历史、复用及近期研究](https://www.chronocarto.ens.fr/wpchrono/projet/tanis/)；[Tanis (2024)，图1王陵群部分平面图及墓主说明](https://journals.openedition.org/baefe/12411)；[塔尼斯王陵群官方地理地图：EPSG:32636及已配准正射影像](https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7)；[塔尼斯王陵群官方地理地图：EPSG:32636及已配准正射影像](https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7)
-- 待核：核对逐墓实测轮廓、墓室与入口；跟进墓主归属及迁葬研究
+- 证据：2024年考古平面图将此墓标为匿名，并对帕米一世提出问号；不采用早期塔克洛特一世的确定归属。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：核对逐墓实测轮廓、墓室与入口；跟进墓主归属及迁葬研究
+- 地理参考：见坐标资料
+- 地理状态：地理地图与图示参照，未核定独立实测精度；墓址选点不代表完整墓室边界或当前入口。
+- 争议：点位为官方图件判读估计，非已核定墓室中心或入口。；墓主未定，推测归属不作为确定身份。
+- 来源：[塔尼斯王陵历史、复用及近期研究](https://www.chronocarto.ens.fr/wpchrono/projet/tanis/)、[Tanis (2024)，图1王陵群部分平面图及墓主说明](https://journals.openedition.org/baefe/12411)、[塔尼斯王陵群官方地理地图：EPSG:32636及已配准正射影像](https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7)
 
 ### eg-tanis-nrt-iii · 普苏森尼斯一世墓（NRT III）
 
-- 当地年代：第二十一至第二十二王朝；约前1039年起营建，后续迁葬复用（营建／使用时代，不是生卒年）
-- 中国对应时代：周
-- 性质：陵群或混合性质；包含普苏森尼斯一世及阿蒙涅莫佩的安葬，前室后来安置多位国王的遗骸；2024年图件也标有穆特诺杰梅特／阿蒙涅莫佩的复用关系。将同一实体墓作为一条记录，不按每位国王重复造点。
-- 点位：30.97711674, 31.88056665；按墓号判读的建筑参照点（估计）；不是墓室中心或入口导航。地理地图与图示参照，未核定独立实测精度；墓址选点不代表完整墓室边界或当前入口。
-- 来源：[塔尼斯王陵历史、复用及近期研究](https://www.chronocarto.ens.fr/wpchrono/projet/tanis/)；[Tanis (2024)，图1王陵群部分平面图及墓主说明](https://journals.openedition.org/baefe/12411)；[塔尼斯王陵群官方地理地图：EPSG:32636及已配准正射影像](https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7)；[塔尼斯王陵群官方地理地图：EPSG:32636及已配准正射影像](https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7)
-- 待核：核对逐墓实测轮廓、墓室与入口；跟进墓主归属及迁葬研究
+- 证据：包含普苏森尼斯一世及阿蒙涅莫佩的安葬，前室后来安置多位国王的遗骸；2024年图件也标有穆特诺杰梅特／阿蒙涅莫佩的复用关系。将同一实体墓作为一条记录，不按每位国王重复造点。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：核对逐墓实测轮廓、墓室与入口；跟进墓主归属及迁葬研究
+- 地理参考：见坐标资料
+- 地理状态：地理地图与图示参照，未核定独立实测精度；墓址选点不代表完整墓室边界或当前入口。
+- 争议：点位为官方图件判读估计，非已核定墓室中心或入口。
+- 来源：[塔尼斯王陵历史、复用及近期研究](https://www.chronocarto.ens.fr/wpchrono/projet/tanis/)、[Tanis (2024)，图1王陵群部分平面图及墓主说明](https://journals.openedition.org/baefe/12411)、[塔尼斯王陵群官方地理地图：EPSG:32636及已配准正射影像](https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7)
 
 ### eg-tanis-nrt-iv · 塔尼斯Ⅳ号王墓（墓主未定）（NRT IV）
 
-- 当地年代：第二十一王朝；约前11—前10世纪；王朝分期范围，非精确建墓年（营建／使用时代，不是生卒年）
-- 中国对应时代：周
-- 性质：性质未明；2024年考古队平面图将Ⅳ号墓标为第二十一王朝匿名墓；不据较早目录直接认定为阿蒙涅莫佩原陵。
-- 点位：30.97712877, 31.88043671；按墓号判读的建筑参照点（估计）；不是墓室中心或入口导航。地理地图与图示参照，未核定独立实测精度；墓址选点不代表完整墓室边界或当前入口。
-- 来源：[塔尼斯王陵历史、复用及近期研究](https://www.chronocarto.ens.fr/wpchrono/projet/tanis/)；[Tanis (2024)，图1王陵群部分平面图及墓主说明](https://journals.openedition.org/baefe/12411)；[塔尼斯王陵群官方地理地图：EPSG:32636及已配准正射影像](https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7)；[塔尼斯王陵群官方地理地图：EPSG:32636及已配准正射影像](https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7)
-- 待核：核对逐墓实测轮廓、墓室与入口；跟进墓主归属及迁葬研究
+- 证据：2024年考古队平面图将Ⅳ号墓标为第二十一王朝匿名墓；不据较早目录直接认定为阿蒙涅莫佩原陵。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：核对逐墓实测轮廓、墓室与入口；跟进墓主归属及迁葬研究
+- 地理参考：见坐标资料
+- 地理状态：地理地图与图示参照，未核定独立实测精度；墓址选点不代表完整墓室边界或当前入口。
+- 争议：点位为官方图件判读估计，非已核定墓室中心或入口。；墓主未定，推测归属不作为确定身份。
+- 来源：[塔尼斯王陵历史、复用及近期研究](https://www.chronocarto.ens.fr/wpchrono/projet/tanis/)、[Tanis (2024)，图1王陵群部分平面图及墓主说明](https://journals.openedition.org/baefe/12411)、[塔尼斯王陵群官方地理地图：EPSG:32636及已配准正射影像](https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7)
 
 ### eg-tanis-nrt-v · 舍顺克三世营建墓（NRT V）
 
-- 当地年代：第二十二王朝；约前9—前8世纪；营建及使用分期（营建／使用时代，不是生卒年）
-- 中国对应时代：周
-- 性质：陵群或混合性质；传统名称为舍顺克三世墓；考古队现说明其由三世准备但未供三世最终安葬，后由舍顺克四世使用。名称、营建者与实际安葬者分开表述。
-- 点位：30.97721125, 31.88031702；按墓号判读的建筑参照点（估计）；不是墓室中心或入口导航。地理地图与图示参照，未核定独立实测精度；墓址选点不代表完整墓室边界或当前入口。
-- 来源：[塔尼斯王陵历史、复用及近期研究](https://www.chronocarto.ens.fr/wpchrono/projet/tanis/)；[Tanis (2024)，图1王陵群部分平面图及墓主说明](https://journals.openedition.org/baefe/12411)；[塔尼斯王陵群官方地理地图：EPSG:32636及已配准正射影像](https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7)；[塔尼斯王陵群官方地理地图：EPSG:32636及已配准正射影像](https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7)
-- 待核：核对逐墓实测轮廓、墓室与入口；跟进墓主归属及迁葬研究
+- 证据：传统名称为舍顺克三世墓；考古队现说明其由三世准备但未供三世最终安葬，后由舍顺克四世使用。名称、营建者与实际安葬者分开表述。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：核对逐墓实测轮廓、墓室与入口；跟进墓主归属及迁葬研究
+- 地理参考：见坐标资料
+- 地理状态：地理地图与图示参照，未核定独立实测精度；墓址选点不代表完整墓室边界或当前入口。
+- 争议：点位为官方图件判读估计，非已核定墓室中心或入口。
+- 来源：[塔尼斯王陵历史、复用及近期研究](https://www.chronocarto.ens.fr/wpchrono/projet/tanis/)、[Tanis (2024)，图1王陵群部分平面图及墓主说明](https://journals.openedition.org/baefe/12411)、[塔尼斯王陵群官方地理地图：EPSG:32636及已配准正射影像](https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7)
 
 ### eg-tanis-nrt-vi · 塔尼斯Ⅵ号王墓（墓主未定）（NRT VI）
 
-- 当地年代：第二十二王朝；约前10—前8世纪；王朝分期范围，非精确建墓年（营建／使用时代，不是生卒年）
-- 中国对应时代：周
-- 性质：性质未明；2024年考古队平面图将Ⅵ号墓标为第二十二王朝匿名墓，不用推测人物姓名替代墓号。
-- 点位：30.97698938, 31.88044444；按墓号判读的建筑参照点（估计）；不是墓室中心或入口导航。地理地图与图示参照，未核定独立实测精度；墓址选点不代表完整墓室边界或当前入口。
-- 来源：[塔尼斯王陵历史、复用及近期研究](https://www.chronocarto.ens.fr/wpchrono/projet/tanis/)；[Tanis (2024)，图1王陵群部分平面图及墓主说明](https://journals.openedition.org/baefe/12411)；[塔尼斯王陵群官方地理地图：EPSG:32636及已配准正射影像](https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7)；[塔尼斯王陵群官方地理地图：EPSG:32636及已配准正射影像](https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7)
-- 待核：核对逐墓实测轮廓、墓室与入口；跟进墓主归属及迁葬研究
+- 证据：2024年考古队平面图将Ⅵ号墓标为第二十二王朝匿名墓，不用推测人物姓名替代墓号。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：核对逐墓实测轮廓、墓室与入口；跟进墓主归属及迁葬研究
+- 地理参考：见坐标资料
+- 地理状态：地理地图与图示参照，未核定独立实测精度；墓址选点不代表完整墓室边界或当前入口。
+- 争议：点位为官方图件判读估计，非已核定墓室中心或入口。；墓主未定，推测归属不作为确定身份。
+- 来源：[塔尼斯王陵历史、复用及近期研究](https://www.chronocarto.ens.fr/wpchrono/projet/tanis/)、[Tanis (2024)，图1王陵群部分平面图及墓主说明](https://journals.openedition.org/baefe/12411)、[塔尼斯王陵群官方地理地图：EPSG:32636及已配准正射影像](https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7)
 
 ### eg-tanis-nrt-vii · 塔尼斯Ⅶ号王墓（墓主未定）（NRT VII）
 
-- 当地年代：第二十一至第二十二王朝；普苏森尼斯一世之后、奥索尔孔二世之前；约前11—前9世纪的相对分期（营建／使用时代，不是生卒年）
-- 中国对应时代：周
-- 性质：性质未明；2024年图件标为匿名墓，相对年代晚于普苏森尼斯一世、早于奥索尔孔二世；不把斯门代斯等推测墓主写成定论。
-- 点位：30.97697061, 31.88055614；按墓号判读的建筑参照点（估计）；不是墓室中心或入口导航。地理地图与图示参照，未核定独立实测精度；墓址选点不代表完整墓室边界或当前入口。
-- 来源：[塔尼斯王陵历史、复用及近期研究](https://www.chronocarto.ens.fr/wpchrono/projet/tanis/)；[Tanis (2024)，图1王陵群部分平面图及墓主说明](https://journals.openedition.org/baefe/12411)；[塔尼斯王陵群官方地理地图：EPSG:32636及已配准正射影像](https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7)；[塔尼斯王陵群官方地理地图：EPSG:32636及已配准正射影像](https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7)
-- 待核：核对逐墓实测轮廓、墓室与入口；跟进墓主归属及迁葬研究
-
-
-## 2026-10-15 优先补漏核查
-
-原有479条皇陵及851项来源全部保留；定位与保留校验详见docs/egypt-priority-supplement.json。
+- 证据：2024年图件标为匿名墓，相对年代晚于普苏森尼斯一世、早于奥索尔孔二世；不把斯门代斯等推测墓主写成定论。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：核对逐墓实测轮廓、墓室与入口；跟进墓主归属及迁葬研究
+- 地理参考：见坐标资料
+- 地理状态：地理地图与图示参照，未核定独立实测精度；墓址选点不代表完整墓室边界或当前入口。
+- 争议：点位为官方图件判读估计，非已核定墓室中心或入口。；墓主未定，推测归属不作为确定身份。
+- 来源：[塔尼斯王陵历史、复用及近期研究](https://www.chronocarto.ens.fr/wpchrono/projet/tanis/)、[Tanis (2024)，图1王陵群部分平面图及墓主说明](https://journals.openedition.org/baefe/12411)、[塔尼斯王陵群官方地理地图：EPSG:32636及已配准正射影像](https://www.chronocarto.ens.fr/gcserver/vcarte?code=2fa7)
 
 ### eg-narmer · 纳尔迈王陵（B17／B18）
 
-- 当地年代：约前3150—前3050年；采用宽泛分期（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；B17与B18按同一王陵组合收录；纳尔迈归属依据早期王陵目录与墓区图，保留归属及绝对年代讨论，不拆成两个重复打卡点。
-- 定位：26.17570771, 31.9080752；estimated_wgs84；墓葬组合区域图示参照，非实测墓室中心。图示估计位置；配准残差、像素分辨率均不能当作范围或定位精度。完整墓界与入口待核。
-- 来源：[Royal tombs at Abydos: Cemetery B](https://www.ucl.ac.uk/museums-static/digitalegypt/abydos/abydoskingstombs.html)；[Umm el-Qaab archaeological plans, figures 2 and 9](https://www.persee.fr/doc/arnil_1161-0492_2008_num_18_1_955)
-- 待核：继续核对实测墓界与入口；跟进归属、复用及开放资料
+- 证据：B17与B18按同一王陵组合收录；纳尔迈归属依据早期王陵目录与墓区图，保留归属及绝对年代讨论，不拆成两个重复打卡点。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对实测墓界与入口；跟进归属、复用及开放资料
+- 地理参考：见坐标资料
+- 地理状态：图示估计位置；配准残差、像素分辨率均不能当作范围或定位精度。完整墓界与入口待核。
+- 争议：图示估计位置；配准残差、像素分辨率均不能当作范围或定位精度。完整墓界与入口待核。
+- 来源：[Royal tombs at Abydos: Cemetery B](https://www.ucl.ac.uk/museums-static/digitalegypt/abydos/abydoskingstombs.html)、[Umm el-Qaab archaeological plans, figures 2 and 9](https://www.persee.fr/doc/arnil_1161-0492_2008_num_18_1_955)
 
 ### eg-aha · 阿哈王陵（B10／B15／B19）
 
-- 当地年代：约前3100—前3000年；采用宽泛分期（营建／使用时代，不是生卒年）
-- 中国对应时代：中国史前（地图归入“传说”分组）
-- 性质：实际墓葬；B10、B15、B19作为阿哈王陵组合共用一条实体记录；点为墓区图配准参照，不表示三座墓室的精确中心或完整围界。
-- 定位：26.17564666, 31.90822648；estimated_wgs84；墓葬组合区域图示参照，非实测墓室中心。图示估计位置；配准残差、像素分辨率均不能当作范围或定位精度。完整墓界与入口待核。
-- 来源：[Royal tombs at Abydos: Cemetery B](https://www.ucl.ac.uk/museums-static/digitalegypt/abydos/abydoskingstombs.html)；[Umm el-Qaab archaeological plans, figures 2 and 9](https://www.persee.fr/doc/arnil_1161-0492_2008_num_18_1_955)
-- 待核：继续核对实测墓界与入口；跟进归属、复用及开放资料
+- 证据：B10、B15、B19作为阿哈王陵组合共用一条实体记录；点为墓区图配准参照，不表示三座墓室的精确中心或完整围界。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对实测墓界与入口；跟进归属、复用及开放资料
+- 地理参考：见坐标资料
+- 地理状态：图示估计位置；配准残差、像素分辨率均不能当作范围或定位精度。完整墓界与入口待核。
+- 争议：图示估计位置；配准残差、像素分辨率均不能当作范围或定位精度。完整墓界与入口待核。
+- 来源：[Royal tombs at Abydos: Cemetery B](https://www.ucl.ac.uk/museums-static/digitalegypt/abydos/abydoskingstombs.html)、[Umm el-Qaab archaeological plans, figures 2 and 9](https://www.persee.fr/doc/arnil_1161-0492_2008_num_18_1_955)
 
 ### eg-kv22 · 阿蒙霍特普三世陵（KV22／WV22）
 
-- 当地年代：约前14世纪；营建与安葬阶段（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；位于帝王谷西谷，KV22与WV22是同一墓。原始OSM建筑名VW22疑为字母倒置，按墓谷与考古墓号核对后规范显示；建筑标绘参照不等于墓室入口。
-- 定位：25.7433308, 32.59736265；verified_wgs84；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[Theban Mapping Project tomb plan 阿蒙霍特普三世陵（KV22／WV22）](https://thebanmappingproject.com/sites/default/files/plans/KV22_2.pdf)；[Original OSM tomb structure 823896503](https://www.openstreetmap.org/way/823896503)
-- 待核：继续核对实测墓界与入口；跟进归属、复用及开放资料
+- 证据：位于帝王谷西谷，KV22与WV22是同一墓。原始OSM建筑名VW22疑为字母倒置，按墓谷与考古墓号核对后规范显示；建筑标绘参照不等于墓室入口。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对实测墓界与入口；跟进归属、复用及开放资料
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
+- 来源：[Theban Mapping Project tomb plan 阿蒙霍特普三世陵（KV22／WV22）](https://thebanmappingproject.com/sites/default/files/plans/KV22_2.pdf)、[Original OSM tomb structure 823896503](https://www.openstreetmap.org/way/823896503)
 
 ### eg-kv18 · 拉美西斯十世营建墓（KV18）
 
-- 当地年代：约前12世纪末—前11世纪初；未完工营建阶段（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：未用于王室安葬（未完工王陵）；未完工且没有用于王室安葬；作为有据王陵营建遗迹接入，不标为实际安葬。后世设施及利用不改变其原营建性质。
-- 定位：25.7397847625, 32.6022397375；verified_wgs84；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[The Oxford Handbook of the Valley of the Kings: KV18 unused burial](https://api.pageplace.de/preview/DT0400.9780199931644_A26121117/preview-9780199931644_A26121117.pdf)；[Theban Mapping Project tomb plan 拉美西斯十世营建墓（KV18）](https://thebanmappingproject.com/sites/default/files/plans/KV18_1.pdf)；[Original OSM tomb structure 813714511](https://www.openstreetmap.org/way/813714511)
-- 待核：继续核对实测墓界与入口；跟进归属、复用及开放资料
+- 证据：未完工且没有用于王室安葬；作为有据王陵营建遗迹接入，不标为实际安葬。后世设施及利用不改变其原营建性质。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对实测墓界与入口；跟进归属、复用及开放资料
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。；未用于该国王安葬；性质分组暂列“待考”，不列实际安葬。
+- 来源：[The Oxford Handbook of the Valley of the Kings: KV18 unused burial](https://api.pageplace.de/preview/DT0400.9780199931644_A26121117/preview-9780199931644_A26121117.pdf)、[Theban Mapping Project tomb plan 拉美西斯十世营建墓（KV18）](https://thebanmappingproject.com/sites/default/files/plans/KV18_1.pdf)、[Original OSM tomb structure 813714511](https://www.openstreetmap.org/way/813714511)
 
 ### eg-kv4 · 拉美西斯十一世营建墓（KV4）
 
-- 当地年代：约前12世纪末—前11世纪；未完工，后世复用（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：未用于王室安葬（未完工王陵）；拉美西斯十一世未安葬于此。保留未完工及后续作业、复用性质，不因传统墓名认定存在其实际安葬。排除偏离原始墓体约80米的同名OSM点，采用原始墓体面参照。
-- 定位：25.740744242857144, 32.60291878571429；verified_wgs84；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[Research on the tomb of Ramesses XI, KV4](https://www.ifao.egnet.net/uploads/publications/enligne/BIGEN071_art_10.pdf)；[Theban Mapping Project tomb plan 拉美西斯十一世营建墓（KV4）](https://thebanmappingproject.com/sites/default/files/plans/KV04_0.pdf)；[Original OSM tomb structure 813717252](https://www.openstreetmap.org/way/813717252)
-- 待核：继续核对实测墓界与入口；跟进归属、复用及开放资料
+- 证据：拉美西斯十一世未安葬于此。保留未完工及后续作业、复用性质，不因传统墓名认定存在其实际安葬。排除偏离原始墓体约80米的同名OSM点，采用原始墓体面参照。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对实测墓界与入口；跟进归属、复用及开放资料
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。；未用于该国王安葬；性质分组暂列“待考”，不列实际安葬。
+- 来源：[Research on the tomb of Ramesses XI, KV4](https://www.ifao.egnet.net/uploads/publications/enligne/BIGEN071_art_10.pdf)、[Theban Mapping Project tomb plan 拉美西斯十一世营建墓（KV4）](https://thebanmappingproject.com/sites/default/files/plans/KV04_0.pdf)、[Original OSM tomb structure 813717252](https://www.openstreetmap.org/way/813717252)
 
 ### eg-amarna-ta26 · 阿肯那顿王室墓（TA26）
 
-- 当地年代：约前14世纪中后期；阿玛尔纳时期（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；位于阿玛尔纳东部王家谷，不属于卢克索帝王谷。考古队根据石棺及随葬残件讨论阿肯那顿在此安葬，梅凯塔顿墓室有据；未将提伊、娜芙蒂蒂拟用空间写成确定安葬。与阿玛尔纳古都独立打卡。
-- 定位：27.62639008888889, 30.984942555555556；verified_wgs84；王陵／金字塔建筑区域参照点；非已核定墓室中心或入口导航。公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
-- 来源：[Royal Tomb](https://www.amarnaproject.com/amarna-the-place/royal-tomb/)；[Original OSM tomb structure 556558418](https://www.openstreetmap.org/way/556558418)
-- 待核：继续核对实测墓界与入口；跟进归属、复用及开放资料
+- 证据：位于阿玛尔纳东部王家谷，不属于卢克索帝王谷。考古队根据石棺及随葬残件讨论阿肯那顿在此安葬，梅凯塔顿墓室有据；未将提伊、娜芙蒂蒂拟用空间写成确定安葬。与阿玛尔纳古都独立打卡。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对实测墓界与入口；跟进归属、复用及开放资料
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开地理参照，未提供经独立核定的实测误差；不能当作墓室中心、完整陵区或入口导航。
+- 来源：[Royal Tomb](https://www.amarnaproject.com/amarna-the-place/royal-tomb/)、[Original OSM tomb structure 556558418](https://www.openstreetmap.org/way/556558418)
 
 ### eg-senebkay · 塞内布凯王陵（CS9）
 
-- 当地年代：约前1650—前1600年；地方王朝宽泛分期（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；南阿拜多斯CS9墓，铭文及遗骸支持墓主认定。不同于乌姆卡伯早王朝陵群，也不是邻近S10墓；依据发掘图比例尺、真北及S10地理参照估计选点，未接入未经核准的墓室边界。
-- 定位：26.17141998, 31.92438285；estimated_wgs84；墓葬组合区域图示参照，非实测墓室中心。图示估计位置；配准残差、像素分辨率均不能当作范围或定位精度。完整墓界与入口待核。
-- 来源：[The Tomb of King Seneb-Kay at Abydos, figure 1.1](https://api.pageplace.de/preview/DT0400.9781949057102_A49510137/preview-9781949057102_A49510137.pdf)；[Abydos research project](https://www.penn.museum/research/project.php?pid=19)
-- 待核：继续核对实测墓界与入口；跟进归属、复用及开放资料
+- 证据：南阿拜多斯CS9墓，铭文及遗骸支持墓主认定。不同于乌姆卡伯早王朝陵群，也不是邻近S10墓；依据发掘图比例尺、真北及S10地理参照估计选点，未接入未经核准的墓室边界。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对实测墓界与入口；跟进归属、复用及开放资料
+- 地理参考：见坐标资料
+- 地理状态：图示估计位置；配准残差、像素分辨率均不能当作范围或定位精度。完整墓界与入口待核。
+- 争议：图示估计位置；配准残差、像素分辨率均不能当作范围或定位精度。完整墓界与入口待核。
+- 来源：[The Tomb of King Seneb-Kay at Abydos, figure 1.1](https://api.pageplace.de/preview/DT0400.9781949057102_A49510137/preview-9781949057102_A49510137.pdf)、[Abydos research project](https://www.penn.museum/research/project.php?pid=19)
 
 ### eg-meritamun-tt358 · 梅丽特阿蒙王后陵（TT358）
 
-- 当地年代：约前16世纪；第十八王朝初期（营建／使用时代，不是生卒年）
-- 中国对应时代：夏商
-- 性质：实际墓葬；位于代尔巴哈里哈特谢普苏特神庙北柱廊外侧山谷，不属于王后谷。墓主为第十八王朝阿赫摩斯－梅丽特阿蒙，不与拉美西斯二世同名女儿混淆。点仅按1932年原始发掘图与地理影像对照定位北柱廊外侧区域，具体入口及墓室中心待核。
-- 定位：25.7385, 32.60733333；estimated_wgs84；北柱廊外侧墓址区域图示参照，非已核定入口。图示估计位置；配准残差、像素分辨率均不能当作范围或定位精度。完整墓界与入口待核。
-- 来源：[The mummy of Queen Merit Amun](https://egymonuments.gov.eg/news/the-mummy-of-queen-merit-amun/)；[The Tomb of Queen Meryet-Amun at Thebes (1932), Plate I](https://libmma.contentdm.oclc.org/digital/collection/p15324coll10/id/168201)
-- 待核：继续核对实测墓界与入口；跟进归属、复用及开放资料
-
-## 2026-10-16 PDF查漏补充
+- 证据：位于代尔巴哈里哈特谢普苏特神庙北柱廊外侧山谷，不属于王后谷。墓主为第十八王朝阿赫摩斯－梅丽特阿蒙，不与拉美西斯二世同名女儿混淆。点仅按1932年原始发掘图与地理影像对照定位北柱廊外侧区域，具体入口及墓室中心待核。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒年未逐项核定；营建／使用年代另列
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核查
+- 任务：继续核对实测墓界与入口；跟进归属、复用及开放资料
+- 地理参考：见坐标资料
+- 地理状态：图示估计位置；配准残差、像素分辨率均不能当作范围或定位精度。完整墓界与入口待核。
+- 争议：图示估计位置；配准残差、像素分辨率均不能当作范围或定位精度。完整墓界与入口待核。
+- 来源：[The mummy of Queen Merit Amun](https://egymonuments.gov.eg/news/the-mummy-of-queen-merit-amun/)、[The Tomb of Queen Meryet-Amun at Thebes (1932), Plate I](https://libmma.contentdm.oclc.org/digital/collection/p15324coll10/id/168201)
 
 ### han-wannian-taishang · 汉太上皇万年陵
 
 - 证据：官方资料将汉太上皇陵列为富平历史资源；所附资料称万年陵。作为刘邦父亲的皇室陵墓单列，非汉高祖长陵。
-- 地理状态：原始OSM区域参考点，不代表地宫中心或入口，未提供实测误差。
-- 争议：太上皇是皇室尊号，不能直接等同生前在位皇帝；具体合葬者和姓名异文另核。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒待核
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
 - 任务：补核原址平面、坐标基准和当前保存情况
-- 来源：[富平一核两轴五区：汉太上皇陵](https://www.ndrc.gov.cn/fggz/nyncjj/zdjs/201708/t20170822_1095423.html)、用户提供《历代帝陵位置和简介》55页（本地资料线索）、[原始OSM node 14289913204](https://www.openstreetmap.org/node/14289913204)
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：太上皇是皇室尊号，不能直接等同生前在位皇帝；具体合葬者和姓名异文另核。
+- 来源：[富平一核两轴五区：汉太上皇陵](https://www.ndrc.gov.cn/fggz/nyncjj/zdjs/201708/t20170822_1095423.html)、[用户提供《历代帝陵位置和简介》55页]()、[原始OSM node 14289913204](https://www.openstreetmap.org/node/14289913204)
 
 ### tang-zuling-longyao · 隆尧唐祖陵
 
 - 证据：河北省文旅厅明确建初、启运两陵共茔及考古调查。仅采用共同陵区区域点，单陵中心不明。
-- 地理状态：原始OSM区域参考点，不代表地宫中心或入口，未提供实测误差。
-- 争议：陵园区域几何不是单陵墓室轮廓；不据现代围墙认定唐代陵园完整边界。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：见建初陵、启运陵子记录
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
 - 任务：补核原址平面、坐标基准和当前保存情况
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：陵园区域几何不是单陵墓室轮廓；不据现代围墙认定唐代陵园完整边界。
 - 来源：[隆尧唐祖陵保护提案答复](https://whly.hebei.gov.cn/c/2017-08-15/557355.html)、[原始OSM way 1560105903](https://www.openstreetmap.org/way/1560105903)
 
 ### tang-zuling-jianchu · 唐建初陵
 
 - 证据：机构资料确认两陵共茔，但本轮未取得各单陵独立地理中心；保留单陵档案，共用所属陵区浏览。
-- 地理状态：单墓位置未核，共同陵区不生成两个重复地图点。
-- 争议：不得把共同陵园点复制为本陵墓室坐标。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒待核
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
 - 任务：补核原址平面、坐标基准和当前保存情况
-- 来源：[隆尧唐祖陵保护提案答复](https://whly.hebei.gov.cn/c/2017-08-15/557355.html)
+- 地理参考：{"parentId":"tang-zuling-longyao","target":"隆尧唐祖陵共同陵区；不是单陵坐标","basis":"河北文旅厅两陵共茔说明及原始OSM共同陵园","coordinates":{"lat":37.293724133333335,"lng":114.76588121666664,"crs":"WGS84","status":"verified_wgs84","sourceId":"supp-geo-osm-way-1560105903","target":"隆尧唐祖陵共同陵园区域参考；非两座单陵墓室","original":"37.293724133333335, 114.76588121666664; original OSM WGS84","method":"原始OSM节点或陵区几何的区域代表点，结合机构文献核对实体","verificationScope":"历史实体及区域位置参考，不提供地宫、墓道或入口实测位置","sourceDatumExplicit":true,"precision":{"sourceUnit":"degree","resolutionDegrees":0.000001,"horizontalAccuracyMeters":null},"limitation":"原始OSM区域参考点，不代表地宫中心或入口，未提供实测误差。"},"limitation":"单墓位置未核，共同陵区不生成两个重复地图点。"}
+- 地理状态：所属陵区已有参考；单陵独立坐标待核
+- 争议：不得把共同陵园点复制为本陵墓室坐标。
+- 来源：[隆尧唐祖陵保护提案答复](https://whly.hebei.gov.cn/c/2017-08-15/557355.html)、[原始OSM way 1560105903](https://www.openstreetmap.org/way/1560105903)
 
 ### tang-zuling-qiyun · 唐启运陵
 
 - 证据：机构资料确认两陵共茔，但本轮未取得各单陵独立地理中心；保留单陵档案，共用所属陵区浏览。
-- 地理状态：单墓位置未核，共同陵区不生成两个重复地图点。
-- 争议：不得把共同陵园点复制为本陵墓室坐标。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒待核
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
 - 任务：补核原址平面、坐标基准和当前保存情况
-- 来源：[隆尧唐祖陵保护提案答复](https://whly.hebei.gov.cn/c/2017-08-15/557355.html)
+- 地理参考：{"parentId":"tang-zuling-longyao","target":"隆尧唐祖陵共同陵区；不是单陵坐标","basis":"河北文旅厅两陵共茔说明及原始OSM共同陵园","coordinates":{"lat":37.293724133333335,"lng":114.76588121666664,"crs":"WGS84","status":"verified_wgs84","sourceId":"supp-geo-osm-way-1560105903","target":"隆尧唐祖陵共同陵园区域参考；非两座单陵墓室","original":"37.293724133333335, 114.76588121666664; original OSM WGS84","method":"原始OSM节点或陵区几何的区域代表点，结合机构文献核对实体","verificationScope":"历史实体及区域位置参考，不提供地宫、墓道或入口实测位置","sourceDatumExplicit":true,"precision":{"sourceUnit":"degree","resolutionDegrees":0.000001,"horizontalAccuracyMeters":null},"limitation":"原始OSM区域参考点，不代表地宫中心或入口，未提供实测误差。"},"limitation":"单墓位置未核，共同陵区不生成两个重复地图点。"}
+- 地理状态：所属陵区已有参考；单陵独立坐标待核
+- 争议：不得把共同陵园点复制为本陵墓室坐标。
+- 来源：[隆尧唐祖陵保护提案答复](https://whly.hebei.gov.cn/c/2017-08-15/557355.html)、[原始OSM way 1560105903](https://www.openstreetmap.org/way/1560105903)
 
 ### tang-yongkang-ancestor · 唐永康陵
 
 - 证据：咸阳市志记永康陵为李虎坟园，在侯家堡西南。按唐追尊祖陵归类，不以人物初葬时期取代营陵制度。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒待核
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
+- 任务：补核原址平面、坐标基准和当前保存情况
+- 地理参考：见坐标资料
 - 地理状态：估计位置：公开索引非测绘点，仅作所在陵址周边约500米区域浏览；500米为核查范围，不是坐标误差，也不是保护边界。
 - 争议：采用区域估计点；未取得墓室或封土实测坐标。
-- 任务：补核原址平面、坐标基准和当前保存情况
 - 来源：[咸阳市志：永康陵与兴宁陵](https://dfz.shaanxi.gov.cn/zslm/fzzlk/xbsxsxz/xbsxz/xys_16200/201405/P020240923612271781799.pdf)、[永康陵公开地理索引](https://zh.wikipedia.org/wiki/永康陵)
 
 ### tang-xingning-ancestor · 唐兴宁陵
 
 - 证据：咸阳市志记兴宁陵为李昞坟园，位于后排村北。与刘宋刘翘兴宁陵为同名异陵。
-- 地理状态：原始OSM区域参考点，不代表地宫中心或入口，未提供实测误差。
-- 争议：见区域位置限制
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒待核
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
 - 任务：补核原址平面、坐标基准和当前保存情况
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
 - 来源：[咸阳市志：永康陵与兴宁陵](https://dfz.shaanxi.gov.cn/zslm/fzzlk/xbsxsxz/xbsxz/xys_16200/201405/P020240923612271781799.pdf)、[原始OSM node 9399120964](https://www.openstreetmap.org/node/9399120964)
 
 ### xia-mingyuzhen-rui · 明玉珍睿陵
 
 - 证据：地方志记1982年发现明玉珍墓，玄宫碑等出土材料支持墓主认定。明是墓主姓氏，大夏政权属于元末，不能分到明朝。
-- 地理状态：原始OSM区域参考点，不代表地宫中心或入口，未提供实测误差。
-- 争议：墓葬与陈列馆区域参考，不将馆内展陈等同原地宫开放。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒待核
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
 - 任务：补核原址平面、坐标基准和当前保存情况
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：墓葬与陈列馆区域参考，不将馆内展陈等同原地宫开放。
 - 来源：[重庆历史政德人物：明玉珍](https://dfz.cq.gov.cn/zqlswh/rwby_417819/202311/t20231102_12510537.html)、[原始OSM way 1379109699](https://www.openstreetmap.org/way/1379109699)
 
 ### chenhan-chenyouliang · 大汉陈友谅墓
 
 - 证据：文物资料记载蛇山陈友谅墓，现存为后世修复墓园。保留墓葬传统与修复性质，不凭墓园存在确认遗骸。
-- 地理状态：原始OSM区域参考点，不代表地宫中心或入口，未提供实测误差。
-- 争议：遗骸及原墓真实性须与现存墓园实体区分。；所附PDF位置未说明坐标基准且与原始OSM实体相距明显，本轮不采用该坐标。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒待核
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
 - 任务：补核原址平面、坐标基准和当前保存情况
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：遗骸及原墓真实性须与现存墓园实体区分。；所附PDF位置未说明坐标基准且与原始OSM实体相距明显，本轮不采用该坐标。
 - 来源：[武汉市政府公报：陈友谅墓](https://www.wuhan.gov.cn/zwgk/xxgk/zfgb/202401/P020240123605785889502.pdf)、[原始OSM node 12167226000](https://www.openstreetmap.org/node/12167226000)
 
 ### dashun-lizicheng-tongshan · 通山李自成墓（闯王陵）
 
 - 证据：咸宁官方资料确认通山李自成墓园实体。将墓园传统认定与李自成遗骸归属分开，保留争议。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒待核
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
+- 任务：补核原址平面、坐标基准和当前保存情况
+- 地理参考：见坐标资料
 - 地理状态：估计位置：公开索引非测绘点，仅作所在陵址周边约500米区域浏览；500米为核查范围，不是坐标误差，也不是保护边界。
 - 争议：通山、通城及湖南夹山等说法不能合并成一个已确认实葬点。；本点对应通山现存墓园，不表示墓主已获考古确认。
-- 任务：补核原址平面、坐标基准和当前保存情况
 - 来源：[咸宁市旅游业十三五发展规划：李自成墓](https://wlj.xianning.gov.cn/xxgk/fdzdgknr/ghjh/202111/P020250610591659936426.pdf)、[通山李自成墓公开地理索引与归属争议](https://zh.wikipedia.org/wiki/李自成墓_(通山县))
 
 ### tang-zhaozong-he · 唐昭宗和陵
 
 - 证据：史载昭宗葬和陵，原始OSM有曲家寨附近独立陵址点。与陕西唐十八陵及四川后蜀和陵分开记录。
-- 地理状态：原始OSM区域参考点，不代表地宫中心或入口，未提供实测误差。
-- 争议：本点是原址区域参考，不将地面现状描述为完整保留的原唐代陵园。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒待核
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
 - 任务：补核原址平面、坐标基准和当前保存情况
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：本点是原址区域参考，不将地面现状描述为完整保留的原唐代陵园。
 - 来源：[巫山一段云：唐昭宗生平及和陵](https://dfz.cq.gov.cn/zqlswh/ldmr/202501/t20250123_14199164.html)、[原始OSM node 10973517404](https://www.openstreetmap.org/node/10973517404)
 
 ### tang-ai-wen · 唐哀帝温陵（陵址待核）
 
 - 证据：所附资料载唐哀帝葬温陵，定陶地望与现代墓址对应仍需原始文献及考古核查。先保留陵名记录，不采纳位置不明的数值坐标。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒待核
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
+- 任务：补核原址平面、坐标基准和当前保存情况
+- 地理参考：见坐标资料
 - 地理状态：具体陵址及坐标基准待核；不采用PDF未知基准点或城市中心
 - 争议：史载陵名与现代陵址不是同一证据层级；未确认实体不得用定陶城区或其他汉墓替代。
-- 任务：补核原址平面、坐标基准和当前保存情况
-- 来源：[新唐书卷十：哀帝本纪](https://zh.wikisource.org/wiki/新唐書/卷010)、用户提供《历代帝陵位置和简介》55页（本地资料线索）
+- 来源：[新唐书卷十：哀帝本纪](https://zh.wikisource.org/wiki/新唐書/卷010)、[用户提供《历代帝陵位置和简介》55页]()
 
 ### yan-shisiming · 史思明墓（遗址待定位）
 
 - 证据：1981年清理与出土玉册等支持墓葬身份。北京市文物局2023年说明原墓已破坏殆尽，现场点位需进一步核定。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒待核
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
+- 任务：补核原址平面、坐标基准和当前保存情况
+- 地理参考：见坐标资料
 - 地理状态：具体陵址及坐标基准待核；不采用PDF未知基准点或城市中心
 - 争议：藏品所在首都博物馆不是原墓址。；不将王佐镇、林家坟村中心或所附PDF未明基准点作为墓室位置。
-- 任务：补核原址平面、坐标基准和当前保存情况
 - 来源：[史思明墓的发现与发掘](https://wwj.beijing.gov.cn/bjww/362760/362765/652806/index.html)、[2023年工单办理：史思明墓现场情况](https://wwj.beijing.gov.cn/bjww/362679/362680/482911/326050307/index.html)
 
 ### nanming-hongguang · 南明弘光陵（陵址待核）
 
 - 证据：所附资料记弘光陵位于孟津，但本轮未取得独立原墓地理依据。给定参考位置附近出现后唐明宗徽陵实体，不能挪用该墓点。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒待核
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
+- 任务：查南明葬地原始文献、孟津文物档案；排除与后唐徽陵混用
+- 地理参考：见坐标资料
 - 地理状态：具体陵址及坐标基准待核；不采用PDF未知基准点或城市中心
 - 争议：不是后唐明宗徽陵；不得复制后唐陵墓位置以补齐南明帝陵。
-- 任务：查南明葬地原始文献、孟津文物档案；排除与后唐徽陵混用
-- 来源：用户提供《历代帝陵位置和简介》55页（本地资料线索）
+- 来源：[用户提供《历代帝陵位置和简介》55页]()
 
 ### nanming-yongli-duyun · 都匀明永历皇帝陵（传统认定）
 
 - 证据：公开资料列有都匀永历皇帝陵，但实际遗骸、衣冠冢性质与营建沿革存在不同说法。未获得可核对的原始地图实体，本轮不采用所附PDF未说明基准坐标。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒待核
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
+- 任务：补核原址平面、坐标基准和当前保存情况
+- 地理参考：见坐标资料
 - 地理状态：具体陵址及坐标基准待核；不采用PDF未知基准点或城市中心
 - 争议：文保实体存在不代表永历帝遗骸归属已考古确认。；不将广西等地无实据衣冠冢线索并成同一墓，不采纳“明十四陵”概括。
-- 任务：补核原址平面、坐标基准和当前保存情况
-- 来源：[都匀文物古迹概况中的永历皇帝陵](https://www.qiannan.gov.cn/zwgk/zdlygk/sthj/sthjaqjg/202107/P020220529230801250780.pdf)、用户提供《历代帝陵位置和简介》55页（本地资料线索）
-
-## 2026-10-16第二批查漏
+- 来源：[都匀文物古迹概况中的永历皇帝陵](https://www.qiannan.gov.cn/zwgk/zdlygk/sthj/sthjaqjg/202107/P020220529230801250780.pdf)、[用户提供《历代帝陵位置和简介》55页]()
 
 ### ming-dong-zhubiao · 明东陵（朱标陵）
 
 - 证据：管理机构确认朱标陵寝及原址台基、道路和排水遗迹。按太子初葬及追尊帝陵身份记录，保留靖难后降格沿革。
-- 地理状态：原始OSM遗迹区域参考点；不是墓室、入口或完整古代陵园中心，未提供实测误差。
-- 争议：以太子享殿原始遗迹几何作区域参考，不将其轮廓当作完整陵园界或地宫。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：1355—1392年
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
 - 任务：核对原墓、石刻及现存展示区位置；完善原址测绘资料
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：以太子享殿原始遗迹几何作区域参考，不将其轮廓当作完整陵园界或地宫。
 - 来源：[走遍钟山：明东陵原址考古与朱标](https://zschina.nanjing.gov.cn/lyzx/202309/t20230904_4002039.html)、[原始OSM way 803406635](https://www.openstreetmap.org/way/803406635)
 
 ### nanhan-zhao · 南汉昭陵（原址待定位）
 
 - 证据：1954年发掘的石马村南汉墓，以纪年砖及文献推定为刘晟昭陵。原址与已迁入博物馆的石像生分开记录。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒待核
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
+- 任务：核对原墓、石刻及现存展示区位置；完善原址测绘资料
+- 地理参考：见坐标资料
 - 地理状态：原址坐标未核；不采用PDF未知基准点、村镇中心或藏品馆位置
 - 争议：原墓已不复完整保存，位置需发掘档案或旧地籍配准。；所附PDF坐标不在机构资料所述黄埔石马原址地域，本轮拒绝采用；南汉二陵博物馆也不是昭陵原址。
-- 任务：核对原墓、石刻及现存展示区位置；完善原址测绘资料
 - 来源：[广州黄埔考古：石马村南汉昭陵](https://www.hp.gov.cn/xwzx/mtxx/content/post_8967207.html)、[以南汉昭陵、德陵出土青瓷为线索](https://www.dpm.org.cn/Uploads/File/2024/07/18/u6698e32c9ab84.pdf)
 
 ### wei-cao-family-cemetery · 亳州曹氏宗族墓群
 
 - 证据：考古资料记录董园、张园、元宝坑等多个墓区。收录与曹魏追尊祖先有关的陵墓研究关系，不把整个宗族墓群都认定为帝陵。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群，见相关墓葬记录
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
+- 任务：核对原墓、石刻及现存展示区位置；完善原址测绘资料
+- 地理参考：见坐标资料
 - 地理状态：原址坐标未核；不采用PDF未知基准点、村镇中心或藏品馆位置
 - 争议：墓区分散，不以城市中心或其中一处墓替代整片墓群。；墓群含非皇家宗族成员，不能按墓葬总数统计帝陵数量。
-- 任务：核对原墓、石刻及现存展示区位置；完善原址测绘资料
 - 来源：[曹氏宗族墓群](https://www.qcdj.gov.cn/e/action/ShowInfo.php?classid=59&id=8762)、[亳县曹操宗族墓葬](https://www.wuhouci.net.cn/uploads/1/file/public/201802/20180202100357_ae824mefkc.pdf)
 
 ### wei-caosong-candidate · 曹嵩墓（候选墓址待核）
 
 - 证据：官方及考古材料支持曹氏宗族墓葬与曹嵩关联，但具体墓区、墓号和人物认定需区分。保留追尊祖先候选档案，不照搬“董园一号墓即曹嵩”的确定式说法。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒待核
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
+- 任务：核对原墓、石刻及现存展示区位置；完善原址测绘资料
+- 地理参考：见坐标资料
 - 地理状态：原址坐标未核；不采用PDF未知基准点、村镇中心或藏品馆位置
 - 争议：董园、张园以及一号、二号墓在不同转述中存在混用，不能直接复制任一墓区坐标。；与河南安阳曹操高陵是不同实体。
-- 任务：核对原墓、石刻及现存展示区位置；完善原址测绘资料
-- 来源：[曹氏宗族墓群](https://www.qcdj.gov.cn/e/action/ShowInfo.php?classid=59&id=8762)、[亳县曹操宗族墓葬](https://www.wuhouci.net.cn/uploads/1/file/public/201802/20180202100357_ae824mefkc.pdf)、用户提供《历代帝陵位置和简介》55页（本地研究线索）
+- 来源：[曹氏宗族墓群](https://www.qcdj.gov.cn/e/action/ShowInfo.php?classid=59&id=8762)、[亳县曹操宗族墓葬](https://www.wuhouci.net.cn/uploads/1/file/public/201802/20180202100357_ae824mefkc.pdf)、[用户提供《历代帝陵位置和简介》55页]()
 
 ### qi-qianai-jingan · 前艾庙石刻（景安陵传统比定）
 
 - 证据：实地调查记录前艾石刻；通常比定为萧赜景安陵。地图对应现存石兽所在地域，不把神道石刻点当作已确定墓室中心。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：440—493年
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
+- 任务：核对原墓、石刻及现存展示区位置；完善原址测绘资料
+- 地理参考：见坐标资料
 - 地理状态：估计位置：原站直接将经纬度用于高德AMap.Marker，按GCJ-02转换；遗存周边约500米仅为研究核查范围，不是实测误差或保护边界。
 - 争议：陵号归属存在研究异说；石兽的历史移动不能用于推算确定墓室位置。
-- 任务：核对原墓、石刻及现存展示区位置；完善原址测绘资料
 - 来源：[南京・丹陽南朝陵墓有角石獣調査報告（一）](https://hannan-u.repo.nii.ac.jp/record/173/files/n001941.pdf)、[加强丹阳南朝帝王陵墓保护建议](https://www.jszx.gov.cn/wylz/zxta/2020ta/202205/t20220525_55098.html)、[齐武帝萧赜景安陵石刻公开地图索引](https://www.sinorelic.com/relicPoint/1418205506769653760)
 
 ### qi-xiantangwan-xiuan · 仙塘湾南朝大墓（修安陵推定）
 
 - 证据：仙塘湾有科学发掘的南朝大型墓葬及神道石刻，通常推定为萧道生修安陵。地图采用该遗存独立索引，不复制狮子湾—赵家湾陵区点。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒待核
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
+- 任务：核对原墓、石刻及现存展示区位置；完善原址测绘资料
+- 地理参考：见坐标资料
 - 地理状态：估计位置：原站直接将经纬度用于高德AMap.Marker，按GCJ-02转换；遗存周边约500米仅为研究核查范围，不是实测误差或保护边界。
 - 争议：墓体实际存在与墓主身份推定分开；不声称铭文已确证墓主。；公开索引存在明显位置差异；未采用指向其他墓区的百科坐标。
-- 任务：核对原墓、石刻及现存展示区位置；完善原址测绘资料
 - 来源：[南京・丹陽南朝陵墓有角石獣調査報告（一）](https://hannan-u.repo.nii.ac.jp/record/173/files/n001941.pdf)、[丹阳胡桥仙塘湾大墓三维模型及南朝陵墓研究](https://www.dpm.org.cn/Uploads/File/2022/12/30/u63aeddb32c579.pdf)、[加强丹阳南朝帝王陵墓保护建议](https://www.jszx.gov.cn/wylz/zxta/2020ta/202205/t20220525_55098.html)、[齐景帝萧道生修安陵石刻公开地图索引](https://www.sinorelic.com/relicPoint/1418435226186682368)
 
 ### qi-sanchengxiang-xingan · 三城巷石刻（兴安陵传统比定）
 
 - 证据：三城巷现存石兽一般按兴安陵石刻称呼；具体墓主和相邻齐梁陵园对应有异说。保留此独立石刻实体，不将其与梁建陵合并。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：452—498年
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
+- 任务：核对原墓、石刻及现存展示区位置；完善原址测绘资料
+- 地理参考：见坐标资料
 - 地理状态：估计位置：原站直接将经纬度用于高德AMap.Marker，按GCJ-02转换；遗存周边约500米仅为研究核查范围，不是实测误差或保护边界。
 - 争议：另有梁陵等归属意见；不能仅按石刻所在区域认定萧鸾墓已获证实。；与相邻梁文帝建陵是分别记录的地理遗存，不按人物或相近地名合并。
-- 任务：核对原墓、石刻及现存展示区位置；完善原址测绘资料
 - 来源：[南京・丹陽南朝陵墓有角石獣調査報告（一）](https://hannan-u.repo.nii.ac.jp/record/173/files/n001941.pdf)、[丹阳胡桥仙塘湾大墓三维模型及南朝陵墓研究](https://www.dpm.org.cn/Uploads/File/2022/12/30/u63aeddb32c579.pdf)、[齐明帝萧鸾兴安陵石刻公开地图索引](https://www.sinorelic.com/relicPoint/1418402455590408192)
 
 ### later-tang-jianji · 后唐建极陵（李克用墓）
 
 - 证据：史籍记建极陵位于代州雁门县，现代墓葬研究采用李克用墓出土材料。保留晋王初葬与后唐追尊身份，发掘年度转述差异不强行定值。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：856—908年
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
+- 任务：核对墓室原址测绘、发掘年份及当前保存情况
+- 地理参考：见坐标资料
 - 地理状态：原址坐标未核；不采用PDF未知基准点、村镇中心或藏品馆位置
 - 争议：原址地理位置需发掘档案核对，不使用七里铺村中心或PDF未知基准坐标。
-- 任务：核对墓室原址测绘、发掘年份及当前保存情况
-- 来源：[Ancient genomic profile of the Shatuo Turkic leader Li Keyong](https://www.sciencedirect.com/science/article/pii/S1673852726001475)、[旧五代史卷四十：建极陵在代州雁门县](https://zh.wikisource.org/zh-hans/舊五代史/卷40)、用户提供《历代帝陵位置和简介》55页（本地研究线索）
+- 来源：[Ancient genomic profile of the Shatuo Turkic leader Li Keyong](https://www.sciencedirect.com/science/article/pii/S1673852726001475)、[旧五代史卷四十：建极陵在代州雁门县](https://zh.wikisource.org/zh-hans/舊五代史/卷40)、[用户提供《历代帝陵位置和简介》55页]()
 
 ### wu-yangxingmi-xing · 吴兴陵（杨行密墓，地望待核）
 
 - 证据：地方传统以吴山庙附近地望关联杨行密兴陵，旧籍和现代实体对应仍需原始资料核查；不把吴山庙或百花公主墓当作杨行密墓。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒待核
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
+- 任务：核对原墓、石刻及现存展示区位置；完善原址测绘资料
+- 地理参考：见坐标资料
 - 地理状态：原址坐标未核；不采用PDF未知基准点、村镇中心或藏品馆位置
 - 争议：庙宇、祭祀遗存、地方传统与君主实葬不同，不据吴山庙所在地生成皇陵点。
-- 任务：核对原墓、石刻及现存展示区位置；完善原址测绘资料
-- 来源：[兴陵（南吴）地望与旧志线索](https://zh.wikipedia.org/wiki/興陵_(南吳))、用户提供《历代帝陵位置和简介》55页（本地研究线索）
+- 来源：[兴陵（南吴）地望与旧志线索](https://zh.wikipedia.org/wiki/興陵_(南吳))、[用户提供《历代帝陵位置和简介》55页]()
 
 ### song-liuqiao-xingning · 刘宋兴宁陵（刘皇墓）
 
 - 证据：地方历史研究联系刘皇墓、刘翘与两位皇后兴宁陵，地望在谏壁雩山。保留同茔与不同墓穴的区别，不与陕西唐兴宁陵合并。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒待核
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
+- 任务：核对原墓、石刻及现存展示区位置；完善原址测绘资料
+- 地理参考：见坐标资料
 - 地理状态：原址坐标未核；不采用PDF未知基准点、村镇中心或藏品馆位置
 - 争议：同一陵号与同一茔域不证明三人同穴；单墓位置及具体合葬关系待核。
-- 任务：核对原墓、石刻及现存展示区位置；完善原址测绘资料
-- 来源：[南朝宋孝懿皇后萧文寿与兴宁陵](https://www.jsw.com.cn/2024/1205/1877862.shtml)、用户提供《历代帝陵位置和简介》55页（本地研究线索）
+- 来源：[南朝宋孝懿皇后萧文寿与兴宁陵](https://www.jsw.com.cn/2024/1205/1877862.shtml)、[用户提供《历代帝陵位置和简介》55页]()
 
 ### xiliang-xiaotushan-candidate · 小土山墓（西凉建世陵候选）
 
 - 证据：小土山大型墓葬有发掘研究支持，部分研究将其与李暠建世陵联系，墓主身份仍有疑问。采用遗址本名，不把候选比定表述为定论。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：生卒待核
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
+- 任务：核对原墓、石刻及现存展示区位置；完善原址测绘资料
+- 地理参考：见坐标资料
 - 地理状态：估计位置：原站直接将经纬度用于高德AMap.Marker，按GCJ-02转换；遗存周边约500米仅为研究核查范围，不是实测误差或保护边界。
 - 争议：墓葬存在得到考古支持，不等于墓主已确定为李暠。；所附PDF参考坐标与实际小土山遗存地图索引相距明显，本轮未采用PDF点。
-- 任务：核对原墓、石刻及现存展示区位置；完善原址测绘资料
 - 来源：[小土山墓与西凉画像文化研究](https://www.wrs.waseda.jp/sp-r/admin/print/number/2023Q-021)、[酒泉小土山墓遗址概况](https://meta.librarydata.cn/metainfo?metaID=292220020220001659)、[果园墓群-小土山墓葬公开地图索引](https://www.sinorelic.com/relicPoint/1708709417219919872)
 
 ### yuan-zhangshicheng-old · 张士诚墓旧址（传统认定）
 
 - 证据：园区档案记旧墓及后来的墓庙迁建，地名规划仍记录旧墓地域。此点对应原始OSM标绘的旧址，不把迁建玉皇宫位置当作原墓。
-- 地理状态：原始OSM遗迹区域参考点；不是墓室、入口或完整古代陵园中心，未提供实测误差。
-- 争议：衣冠冢、遗骸与原墓真实性另核；不因有墓碑认定遗体已确认。；迁建墓庙、玉皇宫和旧址地名是不同空间记录，不能合并为一个准确墓室位置。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：1321—1367年
+- 生卒争议：见原始人物资料
+- 盗掘：尚未核查
 - 任务：核对原墓、石刻及现存展示区位置；完善原址测绘资料
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：衣冠冢、遗骸与原墓真实性另核；不因有墓碑认定遗体已确认。；迁建墓庙、玉皇宫和旧址地名是不同空间记录，不能合并为一个准确墓室位置。
 - 来源：[张吴王墓：旧址与迁建记载](https://www.sipac.gov.cn/szdaglzx/yqfzrwls/202102/5730622c995f4724ac8066c601f8a72c.shtml)、[苏州工业园区地名规划2024—2035](https://www.sipac.gov.cn/szgyyq/ggxx/202411/619c4163312d4101a64688bc389f61f0/files/07f812c1e69e4453b3f24722e6ce4cac.pdf)、[原始OSM node 8013316235](https://www.openstreetmap.org/node/8013316235)
+
+### eu-royal-westminster · 威斯敏斯特教堂王室墓群
+
+- 证据：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群各墓主年代不同；本轮不推定生卒年
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐墓核查
+- 任务：逐墓核对墓主、迁葬及墓室位置；核对当前开放情况和入口
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。
+- 来源：[威斯敏斯特教堂王室墓群 · 官方遗产／机构资料](https://www.westminster-abbey.org/history/royalty/the-abbey-and-the-royal-family)、[威斯敏斯特教堂王室墓群 · 原始OSM建筑轮廓](https://www.openstreetmap.org/way/364313092)
+
+### eu-royal-windsor · 温莎圣乔治礼拜堂王室墓群
+
+- 证据：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群各墓主年代不同；本轮不推定生卒年
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐墓核查
+- 任务：逐墓核对墓主、迁葬及墓室位置；核对当前开放情况和入口
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。
+- 来源：[温莎圣乔治礼拜堂王室墓群 · 官方遗产／机构资料](https://www.stgeorges-windsor.org/about-st-georges/royal-connection/)、[温莎圣乔治礼拜堂王室墓群 · 原始OSM建筑轮廓](https://www.openstreetmap.org/way/1162821758)
+
+### eu-royal-roskilde · 罗斯基勒大教堂王室墓群
+
+- 证据：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群各墓主年代不同；本轮不推定生卒年
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐墓核查
+- 任务：逐墓核对墓主、迁葬及墓室位置；核对当前开放情况和入口
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。
+- 来源：[罗斯基勒大教堂王室墓群 · 官方遗产／机构资料](https://whc.unesco.org/en/list/695/)、[罗斯基勒大教堂王室墓群 · 原始OSM建筑轮廓](https://www.openstreetmap.org/way/340562665)
+
+### eu-royal-wawel · 瓦维尔大教堂王室墓群
+
+- 证据：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群各墓主年代不同；本轮不推定生卒年
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐墓核查
+- 任务：逐墓核对墓主、迁葬及墓室位置；核对当前开放情况和入口
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。
+- 来源：[瓦维尔大教堂王室墓群 · 官方遗产／机构资料](https://whc.unesco.org/en/list/29/)、[瓦维尔大教堂王室墓群 · 原始OSM建筑轮廓](https://www.openstreetmap.org/way/85151350)
+
+### eu-royal-st-vitus · 圣维特大教堂王室墓群
+
+- 证据：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群各墓主年代不同；本轮不推定生卒年
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐墓核查
+- 任务：逐墓核对墓主、迁葬及墓室位置；核对当前开放情况和入口
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。
+- 来源：[圣维特大教堂王室墓群 · 官方遗产／机构资料](https://www.hrad.cz/en/prague-castle-for-visitors/other/archaeological-research-10341)、[圣维特大教堂王室墓群 · 原始OSM建筑轮廓](https://www.openstreetmap.org/way/1568419039)
+
+### eu-royal-saint-denis · 圣但尼圣殿王室墓群
+
+- 证据：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。法国大革命期间墓葬被扰动，后有遗骸合葬与雕像复位，现雕像位置不等于原墓室。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群各墓主年代不同；本轮不推定生卒年
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐墓核查
+- 任务：逐墓核对墓主、迁葬及墓室位置；核对当前开放情况和入口
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。法国大革命期间墓葬被扰动，后有遗骸合葬与雕像复位，现雕像位置不等于原墓室。
+- 来源：[圣但尼圣殿王室墓群 · 官方遗产／机构资料](https://www.saint-denis-basilique.fr/en/)、[圣但尼圣殿王室墓群 · 原始OSM建筑轮廓](https://www.openstreetmap.org/way/63986573)
+
+### eu-royal-batalha · 巴塔利亚修道院王室墓群
+
+- 证据：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群各墓主年代不同；本轮不推定生卒年
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐墓核查
+- 任务：逐墓核对墓主、迁葬及墓室位置；核对当前开放情况和入口
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。
+- 来源：[巴塔利亚修道院王室墓群 · 官方遗产／机构资料](https://whc.unesco.org/en/list/264/)、[巴塔利亚修道院王室墓群 · 原始OSM建筑轮廓](https://www.openstreetmap.org/relation/1632942)
+
+### eu-royal-alcobaca · 阿尔科巴萨修道院王室墓群
+
+- 证据：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群各墓主年代不同；本轮不推定生卒年
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐墓核查
+- 任务：逐墓核对墓主、迁葬及墓室位置；核对当前开放情况和入口
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。
+- 来源：[阿尔科巴萨修道院王室墓群 · 官方遗产／机构资料](https://whc.unesco.org/en/list/505/)、[阿尔科巴萨修道院王室墓群 · 原始OSM建筑轮廓](https://www.openstreetmap.org/way/1120306742)
+
+### eu-royal-escorial · 埃斯科里亚尔王室墓群
+
+- 证据：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群各墓主年代不同；本轮不推定生卒年
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐墓核查
+- 任务：逐墓核对墓主、迁葬及墓室位置；核对当前开放情况和入口
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。
+- 来源：[埃斯科里亚尔王室墓群 · 官方遗产／机构资料](https://www.patrimonionacional.es/visita/real-monasterio-de-san-lorenzo-de-el-escorial)、[埃斯科里亚尔王室墓群 · 原始OSM建筑轮廓](https://www.openstreetmap.org/relation/1264135)
+
+### eu-royal-kapuziner · 维也纳皇家墓穴（嘉布遣会墓穴）
+
+- 证据：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群各墓主年代不同；本轮不推定生卒年
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐墓核查
+- 任务：逐墓核对墓主、迁葬及墓室位置；核对当前开放情况和入口
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。
+- 来源：[维也纳皇家墓穴（嘉布遣会墓穴） · 官方遗产／机构资料](https://www.habsburger.net/en/chapter/kapuzinergruft-last-residence-habsburgs)、[维也纳皇家墓穴（嘉布遣会墓穴） · 原始OSM建筑轮廓](https://www.openstreetmap.org/way/108670400)
+
+### eu-royal-peter-paul · 彼得保罗大教堂皇室墓群
+
+- 证据：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群各墓主年代不同；本轮不推定生卒年
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐墓核查
+- 任务：逐墓核对墓主、迁葬及墓室位置；核对当前开放情况和入口
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。
+- 来源：[彼得保罗大教堂皇室墓群 · 官方遗产／机构资料](https://www.spbmuseum.ru/themuseum/museum_complex/peterpaul_fortress/cathedral/)、[彼得保罗大教堂皇室墓群 · 原始OSM建筑轮廓](https://www.openstreetmap.org/relation/2594681)
+
+### eu-royal-riddarholmen · 骑士岛教堂王室墓群
+
+- 证据：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群各墓主年代不同；本轮不推定生卒年
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐墓核查
+- 任务：逐墓核对墓主、迁葬及墓室位置；核对当前开放情况和入口
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。
+- 来源：[骑士岛教堂王室墓群 · 官方遗产／机构资料](https://www.kungligaslotten.se/english/royal-palaces-and-sites/the-riddarholmen-church.html)、[骑士岛教堂王室墓群 · 原始OSM建筑轮廓](https://www.openstreetmap.org/way/23841420)
+
+### eu-royal-studenica · 斯图代尼察修道院王朝墓葬
+
+- 证据：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群各墓主年代不同；本轮不推定生卒年
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐墓核查
+- 任务：逐墓核对墓主、迁葬及墓室位置；核对当前开放情况和入口
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。
+- 来源：[斯图代尼察修道院王朝墓葬 · 官方遗产／机构资料](https://whc.unesco.org/en/list/389/)、[斯图代尼察修道院王朝墓葬 · 原始OSM建筑轮廓](https://www.openstreetmap.org/way/186205396)
+
+### eu-royal-lovcen · 洛夫琴山彼得二世陵墓
+
+- 证据：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。现陵为现代迁葬纪念建筑，不是19世纪原礼拜堂。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群各墓主年代不同；本轮不推定生卒年
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐墓核查
+- 任务：逐墓核对墓主、迁葬及墓室位置；核对当前开放情况和入口
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：王室墓地的建筑区域参照；不是每座墓、石棺或地下墓室的位置。墓葬、迁葬、衣冠冢与纪念雕像须逐项辨别，本条不将教堂全部纪念碑认定为遗体安葬。现陵为现代迁葬纪念建筑，不是19世纪原礼拜堂。
+- 来源：[洛夫琴山彼得二世陵墓 · 官方遗产／机构资料](https://en.narodnimuzej.me/)、[洛夫琴山彼得二世陵墓 · 原始OSM建筑轮廓](https://www.openstreetmap.org/way/1314651364)
+
+### five-songsan · 宋山里百济王陵群
+
+- 证据：百济熊津都城相关王陵群，包含武宁王陵；不把所有封土都赋予具体王名。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[百济历史遗迹地区：都城、王陵与城防](https://whc.unesco.org/en/list/1477/)、[宋山里百济王陵群：公开地理参考](https://www.openstreetmap.org/way/558646580)
+
+### five-muryeong · 武宁王与王妃陵
+
+- 证据：墓志等考古证据可确认墓主身份；地图定位为原墓参照，非复制墓室或博物馆。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[百济历史遗迹地区：都城、王陵与城防](https://whc.unesco.org/en/list/1477/)、[武宁王与王妃陵：公开地理参考](https://www.openstreetmap.org/node/13810148201)
+
+### five-neungsan · 陵山里百济王陵群
+
+- 证据：泗沘都城相关王陵群；具体墓主未逐墓确认，不能将每个墓号直接配给一位国王。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[百济历史遗迹地区：都城、王陵与城防](https://whc.unesco.org/en/list/1477/)、[陵山里百济王陵群：公开地理参考](https://www.openstreetmap.org/way/472265680)
+
+### five-daereungwon · 大陵苑新罗王室墓群
+
+- 证据：庆州主要大型王室与上层墓葬区，不把整个墓群所有墓葬都视作已知国王墓。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[庆州历史区](https://whc.unesco.org/en/list/976/)、[大陵苑新罗王室墓群：公开地理参考](https://www.openstreetmap.org/way/42435919)
+
+### five-cheonmachong · 天马冢（墓主未定）
+
+- 证据：发掘的大型新罗王室级墓葬，墓主姓名未定；不因天马图而指定为某位君主。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[庆州国立博物馆：新罗王陵考古](https://gyeongju.museum.go.kr/_prog/download/index.php?d_type=1&file_realname=special2_0_20150805174759.pdf&filename=20170809141739_00z8olxcxrbvuuzwrhvd0br0r0i8zl.pdf&func_gbn_cd=display_mgr&site_dvs_cd=kor)、[天马冢（墓主未定）：公开地理参考](https://www.openstreetmap.org/way/382249601)
+
+### five-hwangnam · 皇南大冢（墓主未定）
+
+- 证据：考古确认的南北双坟大型王室级墓葬；具体王名存在争议，不以传统推测作为确证。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[庆州国立博物馆：新罗王陵考古](https://gyeongju.museum.go.kr/_prog/download/index.php?d_type=1&file_realname=special2_0_20150805174759.pdf&filename=20170809141739_00z8olxcxrbvuuzwrhvd0br0r0i8zl.pdf&func_gbn_cd=display_mgr&site_dvs_cd=kor)、[皇南大冢（墓主未定）：公开地理参考](https://www.openstreetmap.org/way/382249596)
+
+### five-mozu · 百舌鸟王族古坟群
+
+- 证据：世界遗产墓群包含王族及关联上层墓葬；不是49座均已确认具体天皇墓。群点借主要古坟作区域参照，不表示全部范围。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[百舌鸟—古市古坟群：身份与年代](https://whc.unesco.org/en/list/1593/)、[百舌鸟王族古坟群：公开地理参考](https://www.openstreetmap.org/way/30908252)
+
+### five-furuichi · 古市王族古坟群
+
+- 证据：世界遗产墓群包含王族及关联上层墓葬；不是49座均已确认具体天皇墓。群点借主要古坟作区域参照，不表示全部范围。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[百舌鸟—古市古坟群：身份与年代](https://whc.unesco.org/en/list/1593/)、[古市王族古坟群：公开地理参考](https://www.openstreetmap.org/way/44774270)
+
+### five-daisen · 大仙古坟（传仁德天皇陵）
+
+- 证据：大型王族／关联上层古坟。古坟形制与年代有考古依据；传统陵名与具体墓主确认程度分开。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：具体墓主未获可公开独立核验的考古确认。；OSM外轮廓可能包含周濠及管理区域；封土、周濠尚未分别测绘，不把整个面称为封土。
+- 来源：[百舌鸟—古市古坟群：身份与年代](https://whc.unesco.org/en/list/1593/)、[大仙古坟（传仁德天皇陵）：公开地理参考](https://www.openstreetmap.org/way/30908252)
+
+### five-richu · 上石津御陵山古坟（传履中天皇陵）
+
+- 证据：大型王族／关联上层古坟。古坟形制与年代有考古依据；传统陵名与具体墓主确认程度分开。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：具体墓主未获可公开独立核验的考古确认。；OSM外轮廓可能包含周濠及管理区域；封土、周濠尚未分别测绘，不把整个面称为封土。
+- 来源：[百舌鸟—古市古坟群：身份与年代](https://whc.unesco.org/en/list/1593/)、[上石津御陵山古坟（传履中天皇陵）：公开地理参考](https://www.openstreetmap.org/way/35264963)
+
+### five-itasuke · 板须惠古坟
+
+- 证据：大型王族／关联上层古坟。古坟形制与年代有考古依据；传统陵名与具体墓主确认程度分开。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：具体墓主未获可公开独立核验的考古确认。；OSM外轮廓可能包含周濠及管理区域；封土、周濠尚未分别测绘，不把整个面称为封土。
+- 来源：[百舌鸟—古市古坟群：身份与年代](https://whc.unesco.org/en/list/1593/)、[板须惠古坟：公开地理参考](https://www.openstreetmap.org/way/43054912)
+
+### five-gobyoyama · 御庙山古坟
+
+- 证据：大型王族／关联上层古坟。古坟形制与年代有考古依据；传统陵名与具体墓主确认程度分开。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：具体墓主未获可公开独立核验的考古确认。；OSM外轮廓可能包含周濠及管理区域；封土、周濠尚未分别测绘，不把整个面称为封土。
+- 来源：[百舌鸟—古市古坟群：身份与年代](https://whc.unesco.org/en/list/1593/)、[御庙山古坟：公开地理参考](https://www.openstreetmap.org/way/41287671)
+
+### five-ojin · 誉田御庙山古坟（传应神天皇陵）
+
+- 证据：大型王族／关联上层古坟。古坟形制与年代有考古依据；传统陵名与具体墓主确认程度分开。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：具体墓主未获可公开独立核验的考古确认。；OSM外轮廓可能包含周濠及管理区域；封土、周濠尚未分别测绘，不把整个面称为封土。
+- 来源：[百舌鸟—古市古坟群：身份与年代](https://whc.unesco.org/en/list/1593/)、[誉田御庙山古坟（传应神天皇陵）：公开地理参考](https://www.openstreetmap.org/way/44774270)
+
+### five-nakatsuyama · 仲津山古坟（传仲姬命陵）
+
+- 证据：大型王族／关联上层古坟。古坟形制与年代有考古依据；传统陵名与具体墓主确认程度分开。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：具体墓主未获可公开独立核验的考古确认。；OSM外轮廓可能包含周濠及管理区域；封土、周濠尚未分别测绘，不把整个面称为封土。
+- 来源：[百舌鸟—古市古坟群：身份与年代](https://whc.unesco.org/en/list/1593/)、[仲津山古坟（传仲姬命陵）：公开地理参考](https://www.openstreetmap.org/way/99025448)
+
+### five-tsudo · 津堂城山古坟
+
+- 证据：大型王族／关联上层古坟。古坟形制与年代有考古依据；传统陵名与具体墓主确认程度分开。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：具体墓主未获可公开独立核验的考古确认。；OSM外轮廓可能包含周濠及管理区域；封土、周濠尚未分别测绘，不把整个面称为封土。
+- 来源：[百舌鸟—古市古坟群：身份与年代](https://whc.unesco.org/en/list/1593/)、[津堂城山古坟：公开地理参考](https://www.openstreetmap.org/way/699645282)
+
+### five-ingyo · 市野山古坟（传允恭天皇陵）
+
+- 证据：大型王族／关联上层古坟。古坟形制与年代有考古依据；传统陵名与具体墓主确认程度分开。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：具体墓主未获可公开独立核验的考古确认。；OSM外轮廓可能包含周濠及管理区域；封土、周濠尚未分别测绘，不把整个面称为封土。
+- 来源：[百舌鸟—古市古坟群：身份与年代](https://whc.unesco.org/en/list/1593/)、[市野山古坟（传允恭天皇陵）：公开地理参考](https://www.openstreetmap.org/way/99025437)
+
+### five-nisanzai · 尼桑扎伊古坟
+
+- 证据：世界遗产分项21的古坟实体；使用官方分项区域坐标，不用入口说明牌坐标替代封土或墓室。此项暂不绘制未经核实的边界。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：不能用于墓室或入口精确导航；形状范围见独立说明。
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[百舌鸟—古市古坟群：分项资料](https://whc.unesco.org/en/list/1593/maps/)、[尼桑扎伊古坟：公开地理参考](https://whc.unesco.org/en/list/1593/maps/)
+
+### five-nguyen · 顺化阮朝帝陵群
+
+- 证据：顺化周边七座主要帝陵分散于香河流域。群点借明命陵作区域参照，不表示七陵连片边界。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[顺化历史建筑群及阮朝帝陵](https://whc.unesco.org/en/list/678/)、[顺化阮朝帝陵群：公开地理参考](https://www.openstreetmap.org/relation/18005955)
+
+### five-hue-gialong · 嘉隆帝天授陵
+
+- 证据：顺化世界遗产分项与原始陵园标绘对应；坐标指陵园区域，非墓室。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[顺化历史建筑群及阮朝帝陵](https://whc.unesco.org/en/list/678/)、[嘉隆帝天授陵：公开地理参考](https://www.openstreetmap.org/way/486744936)
+
+### five-hue-minhmang · 明命帝孝陵
+
+- 证据：顺化世界遗产分项与原始陵园标绘对应；坐标指陵园区域，非墓室。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[顺化历史建筑群及阮朝帝陵](https://whc.unesco.org/en/list/678/)、[明命帝孝陵：公开地理参考](https://www.openstreetmap.org/relation/18005955)
+
+### five-hue-thieutri · 绍治帝昌陵
+
+- 证据：顺化世界遗产分项与原始陵园标绘对应；坐标指陵园区域，非墓室。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[顺化历史建筑群及阮朝帝陵](https://whc.unesco.org/en/list/678/)、[绍治帝昌陵：公开地理参考](https://www.openstreetmap.org/way/264285103)
+
+### five-hue-tuduc · 嗣德帝谦陵
+
+- 证据：顺化世界遗产分项与原始陵园标绘对应；坐标指陵园区域，非墓室。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：所列年份用于排序，主要取墓主去世前后，不写作精确营建年。；嗣德帝实际遗体安葬的精确位置仍有不确定性；陵园内祭祀墓不直接证明遗体位置。
+- 来源：[顺化历史建筑群及阮朝帝陵](https://whc.unesco.org/en/list/678/)、[嗣德帝谦陵：公开地理参考](https://www.openstreetmap.org/relation/18005954)
+
+### five-hue-ducduc · 育德帝安陵
+
+- 证据：顺化世界遗产分项与原始陵园标绘对应；坐标指陵园区域，非墓室。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[顺化历史建筑群及阮朝帝陵](https://whc.unesco.org/en/list/678/)、[育德帝安陵：公开地理参考](https://www.openstreetmap.org/relation/17957939)
+
+### five-hue-dongkhanh · 同庆帝思陵
+
+- 证据：顺化世界遗产分项与原始陵园标绘对应；坐标指陵园区域，非墓室。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[顺化历史建筑群及阮朝帝陵](https://whc.unesco.org/en/list/678/)、[同庆帝思陵：公开地理参考](https://www.openstreetmap.org/relation/17953191)
+
+### five-hue-khaidinh · 启定帝应陵
+
+- 证据：顺化世界遗产分项与原始陵园标绘对应；坐标指陵园区域，非墓室。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[顺化历史建筑群及阮朝帝陵](https://whc.unesco.org/en/list/678/)、[启定帝应陵：公开地理参考](https://www.openstreetmap.org/way/175035807)
+
+### five-gur-emir · 古尔埃米尔陵（帖木儿家族陵）
+
+- 证据：遗产机构与国家旅游资料所载王朝陵寝；家族合葬建筑不按人数拆点。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[乌兹别克斯坦官方旅游：古尔埃米尔陵](https://uzbekistan.travel/en/o/gur-emir/)、[古尔埃米尔陵（帖木儿家族陵）：公开地理参考](https://www.openstreetmap.org/relation/17849587)
+
+### five-samanid · 萨曼王朝陵（伊斯迈尔萨曼家族）
+
+- 证据：遗产机构与国家旅游资料所载王朝陵寝；家族合葬建筑不按人数拆点。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[乌兹别克斯坦官方旅游：萨曼王朝陵](https://uzbekistan.travel/en/o/10-amazing-facts-about-samanid-mausoleum/)、[萨曼王朝陵（伊斯迈尔萨曼家族）：公开地理参考](https://www.openstreetmap.org/way/187016871)
+
+### five-sanjar · 苏丹桑贾尔陵
+
+- 证据：遗产机构与国家旅游资料所载王朝陵寝；家族合葬建筑不按人数拆点。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[古木鹿分期城址与桑贾尔陵](https://whc.unesco.org/en/list/886/)、[苏丹桑贾尔陵：公开地理参考](https://www.openstreetmap.org/way/294258369)
+
+### five-pakal · 帕卡尔王墓（铭文神庙内）
+
+- 证据：INAH记载1952年于铭文神庙内发现帕卡尔墓。平面仅为墓葬所在神庙地上轮廓，不代表地下墓室范围。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[INAH：帕卡尔墓的考古发现](https://www.inah.gob.mx/foto-del-dia/la-tumba-de-pakal-un-hito-en-la-arqueologia-mexicana)、[帕卡尔王墓（铭文神庙内）：公开地理参考](https://www.openstreetmap.org/way/160083187)
+
+### five-tikal116 · 蒂卡尔116号王墓（一号神庙内）
+
+- 证据：蒂卡尔考古资料将116号墓归于贾索钱卡维尔一世。几何是其上方一号神庙，不是地下墓室测绘。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[危地马拉考古资料：蒂卡尔116号墓](https://www.sicultura.gob.gt/wp-content/uploads/2020/01/Nuevos-datos-para-la-historia-de-Tikal.pdf)、[蒂卡尔116号王墓（一号神庙内）：公开地理参考](https://www.openstreetmap.org/way/157387708)
+
+### next-humayun · 胡马雍陵
+
+- 证据：国家文物、遗产或地方政府资料与独立陵墓实体对应；年份为约略营建／使用阶段。园林内其他非君主墓不自动纳入。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[胡马雍陵：世界遗产资料](https://whc.unesco.org/en/list/232/)、[胡马雍陵：公开地理参考](https://www.openstreetmap.org/relation/2914318)
+
+### next-akbar · 阿克巴陵（西坎德拉）
+
+- 证据：国家文物、遗产或地方政府资料与独立陵墓实体对应；年份为约略营建／使用阶段。园林内其他非君主墓不自动纳入。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[阿格拉地方政府：阿克巴陵](https://agra.nic.in/tourist-place/akbars-tomb-sikandra/)、[阿克巴陵（西坎德拉）：公开地理参考](https://www.openstreetmap.org/way/175509938)
+
+### next-taj · 泰姬陵（沙贾汗与穆姆塔兹合葬）
+
+- 证据：国家文物、遗产或地方政府资料与独立陵墓实体对应；年份为约略营建／使用阶段。园林内其他非君主墓不自动纳入。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：泰姬陵上层衣冠石棺与下层实际墓室不同；地面参观不等于可进入实际墓室。
+- 来源：[泰姬陵：陵园、衣冠石棺与实际墓室](https://whc.unesco.org/en/list/252/)、[泰姬陵（沙贾汗与穆姆塔兹合葬）：公开地理参考](https://www.openstreetmap.org/way/375257537)
+
+### next-sikandar-lodi · 锡坎达尔洛迪陵
+
+- 证据：国家文物、遗产或地方政府资料与独立陵墓实体对应；年份为约略营建／使用阶段。园林内其他非君主墓不自动纳入。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[新德里市政委员会：洛迪与赛义德王朝陵墓](https://ndmc.gov.in/ndmc/monuments.aspx)、[锡坎达尔洛迪陵：公开地理参考](https://www.openstreetmap.org/way/359512682)
+
+### next-muhammad-shah · 穆罕默德沙赛义德陵
+
+- 证据：国家文物、遗产或地方政府资料与独立陵墓实体对应；年份为约略营建／使用阶段。园林内其他非君主墓不自动纳入。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[新德里市政委员会：洛迪与赛义德王朝陵墓](https://ndmc.gov.in/ndmc/monuments.aspx)、[穆罕默德沙赛义德陵：公开地理参考](https://www.openstreetmap.org/way/243175581)
+
+### next-ibrahim-lodi · 易卜拉欣洛迪墓
+
+- 证据：国家文物、遗产或地方政府资料与独立陵墓实体对应；年份为约略营建／使用阶段。园林内其他非君主墓不自动纳入。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。；现存高台露天墓于1867年重修；不能按1526年原貌理解现存建筑。
+- 来源：[帕尼帕特政府：易卜拉欣洛迪墓](https://panipat.gov.in/tourist-place/ibrahim-lodhis-tomb/)、[易卜拉欣洛迪墓：公开地理参考](https://www.openstreetmap.org/way/1448399394)
+
+### next-cyrus · 居鲁士二世陵
+
+- 证据：帕萨尔加德遗产资料与独立陵墓建筑对应；不把整个遗址保护区作为王陵范围。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[帕萨尔加德与居鲁士陵](https://whc.unesco.org/en/list/1106/)、[居鲁士二世陵：公开地理参考](https://www.openstreetmap.org/way/203390435)
+
+### next-naqsh-group · 纳克什鲁斯塔姆阿契美尼德王陵群
+
+- 证据：四座王室岩墓；大流士一世有铭文可确认，其余三墓的常见王名归属仍属推定。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[伊朗百科全书：纳克什鲁斯塔姆墓主认定](https://www.iranicaonline.org/articles/naqs-e-rostam/)、[纳克什鲁斯塔姆阿契美尼德王陵群：公开地理参考](https://www.openstreetmap.org/way/235636111)
+
+### next-darius · 大流士一世岩墓
+
+- 证据：大流士一世墓有DNa等铭文；其他王名依位置、样式与历史顺序推定，未同等视为铭文确认。坐标仅标岩墓立面附近，不是地下墓室平面。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[伊朗百科全书：纳克什鲁斯塔姆墓主认定](https://www.iranicaonline.org/articles/naqs-e-rostam/)、[大流士一世岩墓：公开地理参考](https://www.openstreetmap.org/node/3082440219)
+
+### next-xerxes · 东侧岩墓（推定薛西斯一世）
+
+- 证据：大流士一世墓有DNa等铭文；其他王名依位置、样式与历史顺序推定，未同等视为铭文确认。坐标仅标岩墓立面附近，不是地下墓室平面。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[伊朗百科全书：纳克什鲁斯塔姆墓主认定](https://www.iranicaonline.org/articles/naqs-e-rostam/)、[东侧岩墓（推定薛西斯一世）：公开地理参考](https://www.openstreetmap.org/node/3082440217)
+
+### next-artaxerxes · 西侧岩墓（推定阿尔塔薛西斯一世）
+
+- 证据：大流士一世墓有DNa等铭文；其他王名依位置、样式与历史顺序推定，未同等视为铭文确认。坐标仅标岩墓立面附近，不是地下墓室平面。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[伊朗百科全书：纳克什鲁斯塔姆墓主认定](https://www.iranicaonline.org/articles/naqs-e-rostam/)、[西侧岩墓（推定阿尔塔薛西斯一世）：公开地理参考](https://www.openstreetmap.org/node/3082440218)
+
+### next-darius2 · 最西岩墓（推定大流士二世）
+
+- 证据：大流士一世墓有DNa等铭文；其他王名依位置、样式与历史顺序推定，未同等视为铭文确认。坐标仅标岩墓立面附近，不是地下墓室平面。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[伊朗百科全书：纳克什鲁斯塔姆墓主认定](https://www.iranicaonline.org/articles/naqs-e-rostam/)、[最西岩墓（推定大流士二世）：公开地理参考](https://www.openstreetmap.org/node/3082440216)
+
+### next-artaxerxes2 · 波斯波利斯岩墓（推定阿尔塔薛西斯二世）
+
+- 证据：波斯波利斯附近已完成的王室岩墓，具体王名为常见考古推定；公开几何不等于墓室实测界线。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[波斯波利斯王室遗址](https://whc.unesco.org/en/list/114/)、[波斯波利斯岩墓（推定阿尔塔薛西斯二世）：公开地理参考](https://www.openstreetmap.org/way/630479661)
+
+### next-artaxerxes3 · 波斯波利斯岩墓（推定阿尔塔薛西斯三世）
+
+- 证据：波斯波利斯附近已完成的王室岩墓，具体王名为常见考古推定；公开几何不等于墓室实测界线。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[波斯波利斯王室遗址](https://whc.unesco.org/en/list/114/)、[波斯波利斯岩墓（推定阿尔塔薛西斯三世）：公开地理参考](https://www.openstreetmap.org/way/95531791)
+
+### next-aksum-stelae · 阿克苏姆北部石碑区王陵群
+
+- 证据：碑林与地下王室墓葬相联系；现状围护区域不是完整古代陵区边界，未据碑号直接配给特定君主。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[阿克苏姆王国遗址与王陵](https://whc.unesco.org/en/list/15/)、[阿克苏姆北部石碑区王陵群：公开地理参考](https://www.openstreetmap.org/way/188465638)
+
+### next-kaleb · 卡莱布与格布雷梅斯克尔双墓（传统指认）
+
+- 证据：机构考古史称“所谓卡莱布与格布雷梅斯克尔墓”；建筑为独立双墓遗存，但具体墓主传统指认与考古确认分开，未虚构两座独立实测点。
+- 初葬迁葬：无新增迁葬说明
+- 近年进展：见现有来源
+- 生卒：陵群或墓主生卒年未逐项核实；不以建陵年代代替
+- 生卒争议：见原始人物资料
+- 盗掘：尚未逐项核实
+- 任务：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 地理参考：见坐标资料
+- 地理状态：区域代表点已接入，实测精度仍待核
+- 争议：公开区域参照，不是墓室中心、入口或实测界线。
+- 来源：[法国文化部：传统称卡莱布与格布雷梅斯克尔的墓葬](https://archeologie.culture.gouv.fr/axoum/fr/la-decouverte-du-site-0)、[卡莱布与格布雷梅斯克尔双墓（传统指认）：公开地理参考](https://www.openstreetmap.org/node/580388078)
+
+<!-- heritage-five-20261029:start -->
+
+## 苏丹库施与印度德干王陵增补（2026-10-29）
+
+### expansion-kurru · 库鲁库施王陵群
+
+- 依据：机构考古资料确认的库施王室墓地；陵群不等于所有金字塔均已确认具体墓主。努里、库鲁使用官方遗产分项参考坐标。
+- 范围：官方遗产分项区域参考；非具体金字塔或墓室中心
+- 地宫：未核实原地宫可参观
+- 后续：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 来源：[密歇根大学凯尔西考古博物馆：库鲁王室墓地](https://lsa.umich.edu/kelsey/research/current-field-projects/el-kurru--sudan.html)、[库鲁库施王陵群：公开地理参考](https://whc.unesco.org/en/list/1073/maps/)
+
+### expansion-nuri · 努里库施王陵群
+
+- 依据：机构考古资料确认的库施王室墓地；陵群不等于所有金字塔均已确认具体墓主。努里、库鲁使用官方遗产分项参考坐标。
+- 范围：官方遗产分项区域参考；非具体金字塔或墓室中心
+- 地宫：未核实原地宫可参观
+- 后续：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 来源：[努里考古项目：王室墓地](https://archaeology.lipscomb.edu/excavations/nuri-archaeological-expedition/nuri-necropolis)、[努里库施王陵群：公开地理参考](https://whc.unesco.org/en/list/1073/maps/)
+
+### expansion-meroe-pyramids · 麦罗埃东部王室金字塔墓地
+
+- 依据：机构考古资料确认的库施王室墓地；陵群不等于所有金字塔均已确认具体墓主。努里、库鲁使用官方遗产分项参考坐标。
+- 范围：陵墓／陵区区域参照，非墓室中心
+- 地宫：未核实原地宫可参观
+- 后续：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 来源：[UNESCO：麦罗埃王城与库施遗址](https://whc.unesco.org/en/list/1336/)、[麦罗埃东部王室金字塔墓地：公开地理参考](https://www.openstreetmap.org/way/313649889)
+
+### expansion-qutb · 库特布沙希王陵群
+
+- 依据：王朝王室墓园；UNESCO页面为预备名单，不能当作正式世界遗产。陵园中同时有宗教、辅助建筑及其他家族成员墓。
+- 范围：陵墓／陵区区域参照，非墓室中心
+- 地宫：未核实原地宫可参观
+- 后续：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 来源：[UNESCO预备名单：戈尔康达与库特布沙希王陵](https://whc.unesco.org/en/tentativelists/5573/)、[库特布沙希王陵群：公开地理参考](https://www.openstreetmap.org/way/253509394)
+
+### expansion-quli · 苏丹库利库特布沙陵
+
+- 依据：历史考古出版物与具名陵墓实体交叉核对；未将售票处当王陵。末代阿布哈桑在道拉塔巴德去世，园内同名标绘未当作其确证实葬墓接入。
+- 范围：陵墓／陵区区域参照，非墓室中心
+- 地宫：未核实原地宫可参观
+- 后续：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 来源：[印度考古调查局历史出版物：库特布沙希陵墓](https://ignca.gov.in/Asi_data/1204.pdf)、[苏丹库利库特布沙陵：公开地理参考](https://www.openstreetmap.org/way/933350840)
+
+### expansion-jamsheed · 贾姆希德库利库特布沙陵
+
+- 依据：历史考古出版物与具名陵墓实体交叉核对；未将售票处当王陵。末代阿布哈桑在道拉塔巴德去世，园内同名标绘未当作其确证实葬墓接入。
+- 范围：陵墓／陵区区域参照，非墓室中心
+- 地宫：未核实原地宫可参观
+- 后续：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 来源：[印度考古调查局历史出版物：库特布沙希陵墓](https://ignca.gov.in/Asi_data/1204.pdf)、[贾姆希德库利库特布沙陵：公开地理参考](https://www.openstreetmap.org/way/933350842)
+
+### expansion-ibrahim-quli · 易卜拉欣库利库特布沙陵
+
+- 依据：历史考古出版物与具名陵墓实体交叉核对；未将售票处当王陵。末代阿布哈桑在道拉塔巴德去世，园内同名标绘未当作其确证实葬墓接入。
+- 范围：陵墓／陵区区域参照，非墓室中心
+- 地宫：未核实原地宫可参观
+- 后续：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 来源：[印度考古调查局历史出版物：库特布沙希陵墓](https://ignca.gov.in/Asi_data/1204.pdf)、[易卜拉欣库利库特布沙陵：公开地理参考](https://www.openstreetmap.org/way/356420864)
+
+### expansion-muhammad-quli · 穆罕默德库利库特布沙陵
+
+- 依据：历史考古出版物与具名陵墓实体交叉核对；未将售票处当王陵。末代阿布哈桑在道拉塔巴德去世，园内同名标绘未当作其确证实葬墓接入。
+- 范围：陵墓／陵区区域参照，非墓室中心
+- 地宫：未核实原地宫可参观
+- 后续：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 来源：[印度考古调查局历史出版物：库特布沙希陵墓](https://ignca.gov.in/Asi_data/1204.pdf)、[穆罕默德库利库特布沙陵：公开地理参考](https://www.openstreetmap.org/way/933350838)
+
+### expansion-sultan-muhammad · 苏丹穆罕默德库特布沙陵
+
+- 依据：历史考古出版物与具名陵墓实体交叉核对；未将售票处当王陵。末代阿布哈桑在道拉塔巴德去世，园内同名标绘未当作其确证实葬墓接入。
+- 范围：陵墓／陵区区域参照，非墓室中心
+- 地宫：未核实原地宫可参观
+- 后续：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 来源：[印度考古调查局历史出版物：库特布沙希陵墓](https://ignca.gov.in/Asi_data/1204.pdf)、[苏丹穆罕默德库特布沙陵：公开地理参考](https://www.openstreetmap.org/way/933350843)
+
+### expansion-abdullah · 阿卜杜拉库特布沙陵
+
+- 依据：历史考古出版物与具名陵墓实体交叉核对；未将售票处当王陵。末代阿布哈桑在道拉塔巴德去世，园内同名标绘未当作其确证实葬墓接入。
+- 范围：陵墓／陵区区域参照，非墓室中心
+- 地宫：未核实原地宫可参观
+- 后续：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 来源：[印度考古调查局历史出版物：库特布沙希陵墓](https://ignca.gov.in/Asi_data/1204.pdf)、[阿卜杜拉库特布沙陵：公开地理参考](https://www.openstreetmap.org/way/253509403)
+
+### expansion-gol-gumbaz · 戈尔贡巴兹（穆罕默德阿迪尔沙陵）
+
+- 依据：地方政府文化遗产资料与公开实体对应；几何表示包含附属建筑的陵园区域，不是单一墓室或主体陵墓轮廓。
+- 范围：陵墓／陵区区域参照，非墓室中心
+- 地宫：未核实原地宫可参观
+- 后续：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 来源：[比贾布尔地区政府：穆罕默德阿迪尔沙陵](https://vijayapura.nic.in/en/tourist-place/gol-gumbaz/)、[戈尔贡巴兹（穆罕默德阿迪尔沙陵）：公开地理参考](https://www.openstreetmap.org/way/55302213)
+
+### expansion-ibrahim-rauza · 易卜拉欣阿迪尔沙二世陵园
+
+- 依据：地方政府文化遗产资料与公开实体对应；几何表示包含附属建筑的陵园区域，不是单一墓室或主体陵墓轮廓。
+- 范围：陵墓／陵区区域参照，非墓室中心
+- 地宫：未核实原地宫可参观
+- 后续：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 来源：[比贾布尔地区政府：易卜拉欣陵园](https://vijayapura.nic.in/en/tourist-place/ibrahim-rouza/)、[易卜拉欣阿迪尔沙二世陵园：公开地理参考](https://www.openstreetmap.org/way/575037411)
+
+### expansion-bahmani · 阿什图尔巴赫曼尼王陵群
+
+- 依据：机构记录的巴赫曼尼统治者王陵区；约12座陵墓不等于12位已确认君主的独立坐标。
+- 范围：陵墓／陵区区域参照，非墓室中心
+- 地宫：未核实原地宫可参观
+- 后续：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 来源：[卡纳塔克旅游局：阿什图尔巴赫曼尼王陵](https://karnatakatourism.org/en/destinations/ashtoor)、[阿什图尔巴赫曼尼王陵群：公开地理参考](https://www.openstreetmap.org/way/96006936)
+
+### expansion-ahmad-wali · 艾哈迈德沙一世瓦利陵
+
+- 依据：机构具名陵墓记录与原始建筑轮廓对应；不把整个陵区复制为单墓边界。
+- 范围：陵墓／陵区区域参照，非墓室中心
+- 地宫：未核实原地宫可参观
+- 后续：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 来源：[德干遗产基金会：艾哈迈德沙一世陵数字记录](https://www.deccan-heritage-foundation.org/restoration-projects/digitally-preserving-the-ahmed-shah-wali-tomb-bahmani-tombs-bidar/)、[艾哈迈德沙一世瓦利陵：公开地理参考](https://www.openstreetmap.org/way/1359591621)
+
+### expansion-alauddin-bahmani · 阿拉丁沙二世陵
+
+- 依据：机构具名陵墓记录与原始建筑轮廓对应；不把整个陵区复制为单墓边界。
+- 范围：陵墓／陵区区域参照，非墓室中心
+- 地宫：未核实原地宫可参观
+- 后续：继续核对墓主认定、墓室开放、原始测绘与几何范围
+- 来源：[比达尔地区政府：王陵与历史建筑](https://bidar.nic.in/en/adventures/)、[阿拉丁沙二世陵：公开地理参考](https://www.openstreetmap.org/way/1359591620)
+
+
+<!-- heritage-five-20261029:end -->

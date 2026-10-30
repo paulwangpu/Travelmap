@@ -236,5 +236,15 @@
     ],
     "geometryType": "LineString",
     "limitation": "绿色墓葬区遮挡西北侧边线，只描绘可辨外缘；与原OSM西部保护区分开显示，不虚构合并边界或法定分区。"
+  },
+  "review20261028": {
+    "geometryChanged": false,
+    "legendNumbering": "数字1—15是图例索引，非宫殿编号",
+    "currentLegalBoundaryVerified": false,
+    "registrationStatus": "原影像配准保留，缺独立测绘检核，不报告地面精度",
+    "sourceYear": 2021,
+    "approvedPlanYear": 2022,
+    "modernParkAreaHectares": 703,
+    "parkIsLegalBoundary": false
   }
 }

@@ -138,8 +138,8 @@
       "北京"
     ],
     "恭王府景区": [
-      39.936636,
-      116.379862,
+      39.935255,
+      116.380112,
       "北京"
     ],
     "奥林匹克公园": [
@@ -1403,5 +1403,14 @@
       "贵州"
     ]
   },
-  "fromWikidataLabel": 13
+  "fromWikidataLabel": 13,
+  "coordinateReviews": {
+    "恭王府景区": {
+      "reviewedAt": "2026-10-29",
+      "crs": "WGS84",
+      "scope": "府邸与花园区域代表点，非入口",
+      "sourceUrl": "https://www.openstreetmap.org/way/26514871",
+      "referenceUrl": "https://www.pgm.org.cn/pgm/jtlx/201808/6a3b507cd2bc4f448070958fbad2f657.shtml"
+    }
+  }
 }

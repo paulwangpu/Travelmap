@@ -1,0 +1,2413 @@
+{
+  "name": "江山时序 · 历史行政区划",
+  "source": "https://github.com/DeanChensj/jiangshan-map",
+  "sourceReadme": "https://github.com/DeanChensj/jiangshan-map/blob/main/README_ZH.md",
+  "importedAt": "2026-10-28",
+  "crs": "EPSG:4326",
+  "minYear": -403,
+  "maxYear": 1948,
+  "yearZero": false,
+  "license": "GPL-3.0; CHGIS/Hartwell-derived data retain their academic, non-commercial terms",
+  "precision": "Historical administrative boundaries are schematic approximations, not survey-grade boundaries.",
+  "periods": [
+    {
+      "snapshot": "s_zhanguo_a",
+      "from": -403,
+      "to": -341,
+      "file": "data/jiangshan/snapshots/s_zhanguo_a.geojson",
+      "overview": "前 403 — 前 341 · 三家分晋、田氏代齐与魏霸中原：七雄并立，宋、巴、蜀、越、中山尚存",
+      "dynasty": "战国",
+      "dynastyEn": "Warring States",
+      "counts": {
+        "province": 3,
+        "prefecture": 3
+      }
+    },
+    {
+      "snapshot": "s_zhanguo_a2",
+      "from": -340,
+      "to": -317,
+      "file": "data/jiangshan/snapshots/s_zhanguo_a2.geojson",
+      "overview": "前 340 — 前 317 · 商鞅收河西、魏迁大梁与五国相王：宋、巴、蜀、越、中山、义渠尚存",
+      "dynasty": "战国",
+      "dynastyEn": "Warring States",
+      "counts": {
+        "province": 3,
+        "prefecture": 3
+      }
+    },
+    {
+      "snapshot": "s_zhanguo_b0",
+      "from": -316,
+      "to": -307,
+      "file": "data/jiangshan/snapshots/s_zhanguo_b0.geojson",
+      "overview": "前 316 — 前 307 · 秦司马错灭巴蜀、丹阳之战取汉中：宋、越、中山、义渠尚存",
+      "dynasty": "战国",
+      "dynastyEn": "Warring States",
+      "counts": {
+        "province": 6,
+        "prefecture": 6
+      }
+    },
+    {
+      "snapshot": "s_zhanguo_b1",
+      "from": -306,
+      "to": -301,
+      "file": "data/jiangshan/snapshots/s_zhanguo_b1.geojson",
+      "overview": "前 306 — 前 301 · 楚怀王灭越尽取旧吴之地：宋、中山、义渠尚存，燕尚未东辟辽东",
+      "dynasty": "战国",
+      "dynastyEn": "Warring States",
+      "counts": {
+        "province": 6,
+        "prefecture": 6
+      }
+    },
+    {
+      "snapshot": "s_zhanguo_b",
+      "from": -300,
+      "to": -297,
+      "file": "data/jiangshan/snapshots/s_zhanguo_b.geojson",
+      "overview": "前 300 — 前 297 · 燕将秦开辟燕北五郡、赵武灵王辟云中：劲宋尚存",
+      "dynasty": "战国",
+      "dynastyEn": "Warring States",
+      "counts": {
+        "province": 11,
+        "prefecture": 14
+      }
+    },
+    {
+      "snapshot": "s_zhanguo_b2",
+      "from": -296,
+      "to": -279,
+      "file": "data/jiangshan/snapshots/s_zhanguo_b2.geojson",
+      "overview": "前 296 — 前 279 · 赵灭中山、齐湣王灭宋与五国伐齐：齐楚魏三分宋地，乐毅破齐",
+      "dynasty": "战国",
+      "dynastyEn": "Warring States",
+      "counts": {
+        "province": 12,
+        "prefecture": 15
+      }
+    },
+    {
+      "snapshot": "s_zhanguo_c",
+      "from": -278,
+      "to": -250,
+      "file": "data/jiangshan/snapshots/s_zhanguo_c.geojson",
+      "overview": "前 278 — 前 250 · 白起拔郢、秦灭义渠与长平之战：秦取南郡上党北地，鲁周尚存",
+      "dynasty": "战国",
+      "dynastyEn": "Warring States",
+      "counts": {
+        "province": 17,
+        "prefecture": 20
+      }
+    },
+    {
+      "snapshot": "s_zhanguo_c2",
+      "from": -249,
+      "to": -239,
+      "file": "data/jiangshan/snapshots/s_zhanguo_c2.geojson",
+      "overview": "前 249 — 前 239 · 楚考烈王灭鲁与秦灭两周：鲁国并入楚境，秦置三川郡",
+      "dynasty": "战国",
+      "dynastyEn": "Warring States",
+      "counts": {
+        "province": 19,
+        "prefecture": 22
+      }
+    },
+    {
+      "snapshot": "s_zhanguo_d",
+      "from": -238,
+      "to": -231,
+      "file": "data/jiangshan/snapshots/s_zhanguo_d.geojson",
+      "overview": "前 238 — 前 231 · 秦王政亲政与灭六国前夕：秦增置太原、东郡，腰斩六国合纵",
+      "dynasty": "战国",
+      "dynastyEn": "Warring States",
+      "counts": {
+        "province": 20,
+        "prefecture": 23
+      }
+    },
+    {
+      "snapshot": "s_zhanguo_e1",
+      "from": -230,
+      "to": -229,
+      "file": "data/jiangshan/snapshots/s_zhanguo_e1.geojson",
+      "overview": "前 230 — 前 229 · 秦王扫六合之首灭韩国：内史腾俘韩王安，置颍川郡",
+      "dynasty": "战国",
+      "dynastyEn": "Warring States",
+      "counts": {
+        "province": 21,
+        "prefecture": 24
+      }
+    },
+    {
+      "snapshot": "s_zhanguo_e2",
+      "from": -228,
+      "to": -227,
+      "file": "data/jiangshan/snapshots/s_zhanguo_e2.geojson",
+      "overview": "前 228 — 前 227 · 秦王扫六合之攻克邯郸灭赵：王翦破赵俘赵王迁，公子嘉北奔代郡",
+      "dynasty": "战国",
+      "dynastyEn": "Warring States",
+      "counts": {
+        "province": 23,
+        "prefecture": 26
+      }
+    },
+    {
+      "snapshot": "s_zhanguo_e3",
+      "from": -226,
+      "to": -226,
+      "file": "data/jiangshan/snapshots/s_zhanguo_e3.geojson",
+      "overview": "前 226 · 秦王扫六合之易水破燕：荆轲刺秦后王翦攻拔燕都蓟城，燕王喜东退辽东",
+      "dynasty": "战国",
+      "dynastyEn": "Warring States",
+      "counts": {
+        "province": 23,
+        "prefecture": 26
+      }
+    },
+    {
+      "snapshot": "s_zhanguo_e4",
+      "from": -225,
+      "to": -224,
+      "file": "data/jiangshan/snapshots/s_zhanguo_e4.geojson",
+      "overview": "前 225 — 前 224 · 秦王扫六合之水灌大梁灭魏：王贲引河沟灌城，魏王假出降，三晋尽入秦",
+      "dynasty": "战国",
+      "dynastyEn": "Warring States",
+      "counts": {
+        "province": 24,
+        "prefecture": 27
+      }
+    },
+    {
+      "snapshot": "s_zhanguo_e5",
+      "from": -223,
+      "to": -222,
+      "file": "data/jiangshan/snapshots/s_zhanguo_e5.geojson",
+      "overview": "前 223 — 前 222 · 秦王扫六合之王翦六十万灭楚、王贲灭燕代：六国唯余齐国孤悬东海",
+      "dynasty": "战国",
+      "dynastyEn": "Warring States",
+      "counts": {
+        "province": 31,
+        "prefecture": 34
+      }
+    },
+    {
+      "snapshot": "s_qin_a",
+      "from": -221,
+      "to": -216,
+      "file": "data/jiangshan/snapshots/s_qin_a.geojson",
+      "dynasty": "秦",
+      "dynastyEn": "Qin",
+      "counts": {
+        "province": 33,
+        "prefecture": 36
+      }
+    },
+    {
+      "snapshot": "s_qin_b",
+      "from": -215,
+      "to": -215,
+      "file": "data/jiangshan/snapshots/s_qin_b.geojson",
+      "dynasty": "秦",
+      "dynastyEn": "Qin",
+      "counts": {
+        "province": 34,
+        "prefecture": 37
+      }
+    },
+    {
+      "snapshot": "s_qin",
+      "from": -214,
+      "to": -207,
+      "file": "data/jiangshan/snapshots/s_qin.geojson",
+      "dynasty": "秦",
+      "dynastyEn": "Qin",
+      "counts": {
+        "province": 38,
+        "prefecture": 41
+      }
+    },
+    {
+      "snapshot": "s_qin_chuhan",
+      "from": -206,
+      "to": -203,
+      "file": "data/jiangshan/snapshots/s_qin_chuhan.geojson",
+      "dynasty": "秦",
+      "dynastyEn": "Qin",
+      "counts": {
+        "province": 38,
+        "prefecture": 41
+      }
+    },
+    {
+      "snapshot": "s_xihan_a",
+      "from": -202,
+      "to": -128,
+      "file": "data/jiangshan/snapshots/s_xihan_a.geojson",
+      "dynasty": "西汉",
+      "dynastyEn": "Western Han",
+      "counts": {
+        "province": 12,
+        "prefecture": 51
+      }
+    },
+    {
+      "snapshot": "s_xihan_b1",
+      "from": -127,
+      "to": -122,
+      "file": "data/jiangshan/snapshots/s_xihan_b1.geojson",
+      "dynasty": "西汉",
+      "dynastyEn": "Western Han",
+      "counts": {
+        "province": 12,
+        "prefecture": 51
+      }
+    },
+    {
+      "snapshot": "s_xihan_b2",
+      "from": -121,
+      "to": -112,
+      "file": "data/jiangshan/snapshots/s_xihan_b2.geojson",
+      "dynasty": "西汉",
+      "dynastyEn": "Western Han",
+      "counts": {
+        "province": 12,
+        "prefecture": 51
+      }
+    },
+    {
+      "snapshot": "s_xihan_b3",
+      "from": -111,
+      "to": -109,
+      "file": "data/jiangshan/snapshots/s_xihan_b3.geojson",
+      "dynasty": "西汉",
+      "dynastyEn": "Western Han",
+      "counts": {
+        "province": 13,
+        "prefecture": 51
+      }
+    },
+    {
+      "snapshot": "s_xihan_b",
+      "from": -108,
+      "to": -61,
+      "file": "data/jiangshan/snapshots/s_xihan_b.geojson",
+      "dynasty": "西汉",
+      "dynastyEn": "Western Han",
+      "counts": {
+        "province": 13,
+        "prefecture": 51
+      }
+    },
+    {
+      "snapshot": "s_xihan_c",
+      "from": -60,
+      "to": 7,
+      "file": "data/jiangshan/snapshots/s_xihan_c.geojson",
+      "dynasty": "西汉",
+      "dynastyEn": "Western Han",
+      "counts": {
+        "province": 13,
+        "prefecture": 51
+      }
+    },
+    {
+      "snapshot": "s_xihan_d",
+      "from": 8,
+      "to": 22,
+      "file": "data/jiangshan/snapshots/s_xihan_d.geojson",
+      "dynasty": "西汉",
+      "dynastyEn": "Western Han",
+      "counts": {
+        "province": 13,
+        "prefecture": 51
+      }
+    },
+    {
+      "snapshot": "s_xihan_e",
+      "from": 23,
+      "to": 24,
+      "file": "data/jiangshan/snapshots/s_xihan_e.geojson",
+      "dynasty": "西汉",
+      "dynastyEn": "Western Han",
+      "counts": {
+        "province": 13,
+        "prefecture": 51
+      }
+    },
+    {
+      "snapshot": "s_donghan_a",
+      "from": 25,
+      "to": 35,
+      "file": "data/jiangshan/snapshots/s_donghan_a.geojson",
+      "dynasty": "东汉",
+      "dynastyEn": "Eastern Han",
+      "counts": {
+        "province": 13,
+        "prefecture": 49
+      }
+    },
+    {
+      "snapshot": "s_donghan_b0",
+      "from": 36,
+      "to": 42,
+      "file": "data/jiangshan/snapshots/s_donghan_b0.geojson",
+      "dynasty": "东汉",
+      "dynastyEn": "Eastern Han",
+      "counts": {
+        "province": 13,
+        "prefecture": 49
+      }
+    },
+    {
+      "snapshot": "s_donghan_b",
+      "from": 43,
+      "to": 47,
+      "file": "data/jiangshan/snapshots/s_donghan_b.geojson",
+      "dynasty": "东汉",
+      "dynastyEn": "Eastern Han",
+      "counts": {
+        "province": 13,
+        "prefecture": 49
+      }
+    },
+    {
+      "snapshot": "s_donghan_b2",
+      "from": 48,
+      "to": 72,
+      "file": "data/jiangshan/snapshots/s_donghan_b2.geojson",
+      "dynasty": "东汉",
+      "dynastyEn": "Eastern Han",
+      "counts": {
+        "province": 13,
+        "prefecture": 49
+      }
+    },
+    {
+      "snapshot": "s_donghan_c",
+      "from": 73,
+      "to": 90,
+      "file": "data/jiangshan/snapshots/s_donghan_c.geojson",
+      "dynasty": "东汉",
+      "dynastyEn": "Eastern Han",
+      "counts": {
+        "province": 13,
+        "prefecture": 49
+      }
+    },
+    {
+      "snapshot": "s_donghan",
+      "from": 91,
+      "to": 188,
+      "file": "data/jiangshan/snapshots/s_donghan.geojson",
+      "dynasty": "东汉",
+      "dynastyEn": "Eastern Han",
+      "counts": {
+        "province": 13,
+        "prefecture": 49
+      }
+    },
+    {
+      "snapshot": "s_donghan_d1",
+      "from": 189,
+      "to": 195,
+      "file": "data/jiangshan/snapshots/s_donghan_d1.geojson",
+      "dynasty": "东汉",
+      "dynastyEn": "Eastern Han",
+      "counts": {
+        "province": 13,
+        "prefecture": 49
+      }
+    },
+    {
+      "snapshot": "s_donghan_d2",
+      "from": 196,
+      "to": 199,
+      "file": "data/jiangshan/snapshots/s_donghan_d2.geojson",
+      "dynasty": "东汉",
+      "dynastyEn": "Eastern Han",
+      "counts": {
+        "province": 13,
+        "prefecture": 49
+      }
+    },
+    {
+      "snapshot": "s_donghan_d",
+      "from": 200,
+      "to": 207,
+      "file": "data/jiangshan/snapshots/s_donghan_d.geojson",
+      "dynasty": "东汉",
+      "dynastyEn": "Eastern Han",
+      "counts": {
+        "province": 13,
+        "prefecture": 49
+      }
+    },
+    {
+      "snapshot": "s_donghan_e0",
+      "from": 208,
+      "to": 210,
+      "file": "data/jiangshan/snapshots/s_donghan_e0.geojson",
+      "dynasty": "东汉",
+      "dynastyEn": "Eastern Han",
+      "counts": {
+        "province": 13,
+        "prefecture": 49
+      }
+    },
+    {
+      "snapshot": "s_donghan_e1",
+      "from": 211,
+      "to": 213,
+      "file": "data/jiangshan/snapshots/s_donghan_e1.geojson",
+      "dynasty": "东汉",
+      "dynastyEn": "Eastern Han",
+      "counts": {
+        "province": 13,
+        "prefecture": 49
+      }
+    },
+    {
+      "snapshot": "s_donghan_e",
+      "from": 214,
+      "to": 214,
+      "file": "data/jiangshan/snapshots/s_donghan_e.geojson",
+      "dynasty": "东汉",
+      "dynastyEn": "Eastern Han",
+      "counts": {
+        "province": 13,
+        "prefecture": 49
+      }
+    },
+    {
+      "snapshot": "s_donghan_e2",
+      "from": 215,
+      "to": 218,
+      "file": "data/jiangshan/snapshots/s_donghan_e2.geojson",
+      "dynasty": "东汉",
+      "dynastyEn": "Eastern Han",
+      "counts": {
+        "province": 13,
+        "prefecture": 49
+      }
+    },
+    {
+      "snapshot": "s_donghan_f",
+      "from": 219,
+      "to": 219,
+      "file": "data/jiangshan/snapshots/s_donghan_f.geojson",
+      "dynasty": "东汉",
+      "dynastyEn": "Eastern Han",
+      "counts": {
+        "province": 13,
+        "prefecture": 49
+      }
+    },
+    {
+      "snapshot": "s_sanguo_a",
+      "from": 220,
+      "to": 237,
+      "file": "data/jiangshan/snapshots/s_sanguo_a.geojson",
+      "dynasty": "三国",
+      "dynastyEn": "Three Kingdoms",
+      "counts": {
+        "province": 16,
+        "prefecture": 25
+      }
+    },
+    {
+      "snapshot": "s_sanguo",
+      "from": 238,
+      "to": 262,
+      "file": "data/jiangshan/snapshots/s_sanguo.geojson",
+      "dynasty": "三国",
+      "dynastyEn": "Three Kingdoms",
+      "counts": {
+        "province": 16,
+        "prefecture": 25
+      }
+    },
+    {
+      "snapshot": "s_sanguo_b",
+      "from": 263,
+      "to": 264,
+      "file": "data/jiangshan/snapshots/s_sanguo_b.geojson",
+      "dynasty": "三国",
+      "dynastyEn": "Three Kingdoms",
+      "counts": {
+        "province": 16,
+        "prefecture": 25
+      }
+    },
+    {
+      "snapshot": "s_sanguo_c",
+      "from": 265,
+      "to": 279,
+      "file": "data/jiangshan/snapshots/s_sanguo_c.geojson",
+      "dynasty": "三国",
+      "dynastyEn": "Three Kingdoms",
+      "counts": {
+        "province": 16,
+        "prefecture": 25
+      }
+    },
+    {
+      "snapshot": "s_xijin_a",
+      "from": 280,
+      "to": 303,
+      "file": "data/jiangshan/snapshots/s_xijin_a.geojson",
+      "dynasty": "西晋",
+      "dynastyEn": "Western Jin",
+      "counts": {
+        "province": 21,
+        "prefecture": 38
+      }
+    },
+    {
+      "snapshot": "s_xijin",
+      "from": 304,
+      "to": 305,
+      "file": "data/jiangshan/snapshots/s_xijin.geojson",
+      "dynasty": "西晋",
+      "dynastyEn": "Western Jin",
+      "counts": {
+        "province": 21,
+        "prefecture": 38
+      }
+    },
+    {
+      "snapshot": "s_xijin_a2",
+      "from": 306,
+      "to": 310,
+      "file": "data/jiangshan/snapshots/s_xijin_a2.geojson",
+      "dynasty": "西晋",
+      "dynastyEn": "Western Jin",
+      "counts": {
+        "province": 21,
+        "prefecture": 38
+      }
+    },
+    {
+      "snapshot": "s_xijin_b",
+      "from": 311,
+      "to": 316,
+      "file": "data/jiangshan/snapshots/s_xijin_b.geojson",
+      "dynasty": "西晋",
+      "dynastyEn": "Western Jin",
+      "counts": {
+        "province": 21,
+        "prefecture": 38
+      }
+    },
+    {
+      "snapshot": "s_dongjin_317",
+      "from": 317,
+      "to": 318,
+      "file": "data/jiangshan/snapshots/s_dongjin_317.geojson",
+      "dynasty": "东晋十六国",
+      "dynastyEn": "Eastern Jin & Sixteen Kingdoms",
+      "counts": {
+        "province": 34,
+        "prefecture": 101
+      }
+    },
+    {
+      "snapshot": "s_dongjin_a0",
+      "from": 319,
+      "to": 328,
+      "file": "data/jiangshan/snapshots/s_dongjin_a0.geojson",
+      "dynasty": "东晋十六国",
+      "dynastyEn": "Eastern Jin & Sixteen Kingdoms",
+      "counts": {
+        "province": 34,
+        "prefecture": 101
+      }
+    },
+    {
+      "snapshot": "s_dongjin_a",
+      "from": 329,
+      "to": 346,
+      "file": "data/jiangshan/snapshots/s_dongjin_a.geojson",
+      "dynasty": "东晋十六国",
+      "dynastyEn": "Eastern Jin & Sixteen Kingdoms",
+      "counts": {
+        "province": 34,
+        "prefecture": 101
+      }
+    },
+    {
+      "snapshot": "s_dongjin_a2",
+      "from": 347,
+      "to": 349,
+      "file": "data/jiangshan/snapshots/s_dongjin_a2.geojson",
+      "dynasty": "东晋十六国",
+      "dynastyEn": "Eastern Jin & Sixteen Kingdoms",
+      "counts": {
+        "province": 34,
+        "prefecture": 101
+      }
+    },
+    {
+      "snapshot": "s_dongjin_350",
+      "from": 350,
+      "to": 350,
+      "file": "data/jiangshan/snapshots/s_dongjin_350.geojson",
+      "dynasty": "东晋十六国",
+      "dynastyEn": "Eastern Jin & Sixteen Kingdoms",
+      "counts": {
+        "province": 34,
+        "prefecture": 101
+      }
+    },
+    {
+      "snapshot": "s_dongjin_351",
+      "from": 351,
+      "to": 351,
+      "file": "data/jiangshan/snapshots/s_dongjin_351.geojson",
+      "dynasty": "东晋十六国",
+      "dynastyEn": "Eastern Jin & Sixteen Kingdoms",
+      "counts": {
+        "province": 34,
+        "prefecture": 101
+      }
+    },
+    {
+      "snapshot": "s_dongjin_b",
+      "from": 352,
+      "to": 369,
+      "file": "data/jiangshan/snapshots/s_dongjin_b.geojson",
+      "dynasty": "东晋十六国",
+      "dynastyEn": "Eastern Jin & Sixteen Kingdoms",
+      "counts": {
+        "province": 34,
+        "prefecture": 101
+      }
+    },
+    {
+      "snapshot": "s_dongjin_b2",
+      "from": 370,
+      "to": 375,
+      "file": "data/jiangshan/snapshots/s_dongjin_b2.geojson",
+      "dynasty": "东晋十六国",
+      "dynastyEn": "Eastern Jin & Sixteen Kingdoms",
+      "counts": {
+        "province": 34,
+        "prefecture": 101
+      }
+    },
+    {
+      "snapshot": "s_dongjin_c",
+      "from": 376,
+      "to": 383,
+      "file": "data/jiangshan/snapshots/s_dongjin_c.geojson",
+      "dynasty": "东晋十六国",
+      "dynastyEn": "Eastern Jin & Sixteen Kingdoms",
+      "counts": {
+        "province": 34,
+        "prefecture": 101
+      }
+    },
+    {
+      "snapshot": "s_dongjin_384",
+      "from": 384,
+      "to": 384,
+      "file": "data/jiangshan/snapshots/s_dongjin_384.geojson",
+      "dynasty": "东晋十六国",
+      "dynastyEn": "Eastern Jin & Sixteen Kingdoms",
+      "counts": {
+        "province": 34,
+        "prefecture": 101
+      }
+    },
+    {
+      "snapshot": "s_dongjin_385",
+      "from": 385,
+      "to": 385,
+      "file": "data/jiangshan/snapshots/s_dongjin_385.geojson",
+      "dynasty": "东晋十六国",
+      "dynastyEn": "Eastern Jin & Sixteen Kingdoms",
+      "counts": {
+        "province": 34,
+        "prefecture": 101
+      }
+    },
+    {
+      "snapshot": "s_dongjin_d0",
+      "from": 386,
+      "to": 396,
+      "file": "data/jiangshan/snapshots/s_dongjin_d0.geojson",
+      "dynasty": "东晋十六国",
+      "dynastyEn": "Eastern Jin & Sixteen Kingdoms",
+      "counts": {
+        "province": 34,
+        "prefecture": 101
+      }
+    },
+    {
+      "snapshot": "s_dongjin_397",
+      "from": 397,
+      "to": 397,
+      "file": "data/jiangshan/snapshots/s_dongjin_397.geojson",
+      "dynasty": "东晋十六国",
+      "dynastyEn": "Eastern Jin & Sixteen Kingdoms",
+      "counts": {
+        "province": 34,
+        "prefecture": 101
+      }
+    },
+    {
+      "snapshot": "s_dongjin_d1",
+      "from": 398,
+      "to": 398,
+      "file": "data/jiangshan/snapshots/s_dongjin_d1.geojson",
+      "dynasty": "东晋十六国",
+      "dynastyEn": "Eastern Jin & Sixteen Kingdoms",
+      "counts": {
+        "province": 34,
+        "prefecture": 101
+      }
+    },
+    {
+      "snapshot": "s_dongjin_399",
+      "from": 399,
+      "to": 403,
+      "file": "data/jiangshan/snapshots/s_dongjin_399.geojson",
+      "dynasty": "东晋十六国",
+      "dynastyEn": "Eastern Jin & Sixteen Kingdoms",
+      "counts": {
+        "province": 34,
+        "prefecture": 101
+      }
+    },
+    {
+      "snapshot": "s_dongjin_404",
+      "from": 404,
+      "to": 406,
+      "file": "data/jiangshan/snapshots/s_dongjin_404.geojson",
+      "dynasty": "东晋十六国",
+      "dynastyEn": "Eastern Jin & Sixteen Kingdoms",
+      "counts": {
+        "province": 34,
+        "prefecture": 101
+      }
+    },
+    {
+      "snapshot": "s_dongjin_d",
+      "from": 407,
+      "to": 409,
+      "file": "data/jiangshan/snapshots/s_dongjin_d.geojson",
+      "dynasty": "东晋十六国",
+      "dynastyEn": "Eastern Jin & Sixteen Kingdoms",
+      "counts": {
+        "province": 34,
+        "prefecture": 101
+      }
+    },
+    {
+      "snapshot": "s_dongjin_410",
+      "from": 410,
+      "to": 412,
+      "file": "data/jiangshan/snapshots/s_dongjin_410.geojson",
+      "dynasty": "东晋十六国",
+      "dynastyEn": "Eastern Jin & Sixteen Kingdoms",
+      "counts": {
+        "province": 34,
+        "prefecture": 101
+      }
+    },
+    {
+      "snapshot": "s_dongjin_e",
+      "from": 413,
+      "to": 416,
+      "file": "data/jiangshan/snapshots/s_dongjin_e.geojson",
+      "dynasty": "东晋十六国",
+      "dynastyEn": "Eastern Jin & Sixteen Kingdoms",
+      "counts": {
+        "province": 34,
+        "prefecture": 101
+      }
+    },
+    {
+      "snapshot": "s_dongjin_f",
+      "from": 417,
+      "to": 419,
+      "file": "data/jiangshan/snapshots/s_dongjin_f.geojson",
+      "dynasty": "东晋十六国",
+      "dynastyEn": "Eastern Jin & Sixteen Kingdoms",
+      "counts": {
+        "province": 34,
+        "prefecture": 101
+      }
+    },
+    {
+      "snapshot": "s_nanbei_0",
+      "from": 420,
+      "to": 426,
+      "file": "data/jiangshan/snapshots/s_nanbei_0.geojson",
+      "dynasty": "南北朝",
+      "dynastyEn": "Northern & Southern Dynasties",
+      "counts": {
+        "province": 63,
+        "prefecture": 137
+      }
+    },
+    {
+      "snapshot": "s_nanbei_427",
+      "from": 427,
+      "to": 430,
+      "file": "data/jiangshan/snapshots/s_nanbei_427.geojson",
+      "dynasty": "南北朝",
+      "dynastyEn": "Northern & Southern Dynasties",
+      "counts": {
+        "province": 63,
+        "prefecture": 137
+      }
+    },
+    {
+      "snapshot": "s_nanbei_0b",
+      "from": 431,
+      "to": 435,
+      "file": "data/jiangshan/snapshots/s_nanbei_0b.geojson",
+      "dynasty": "南北朝",
+      "dynastyEn": "Northern & Southern Dynasties",
+      "counts": {
+        "province": 63,
+        "prefecture": 137
+      }
+    },
+    {
+      "snapshot": "s_nanbei_0c",
+      "from": 436,
+      "to": 438,
+      "file": "data/jiangshan/snapshots/s_nanbei_0c.geojson",
+      "dynasty": "南北朝",
+      "dynastyEn": "Northern & Southern Dynasties",
+      "counts": {
+        "province": 63,
+        "prefecture": 137
+      }
+    },
+    {
+      "snapshot": "s_nanbei_a",
+      "from": 439,
+      "to": 468,
+      "file": "data/jiangshan/snapshots/s_nanbei_a.geojson",
+      "dynasty": "南北朝",
+      "dynastyEn": "Northern & Southern Dynasties",
+      "counts": {
+        "province": 63,
+        "prefecture": 137
+      }
+    },
+    {
+      "snapshot": "s_nanbei_a2",
+      "from": 469,
+      "to": 478,
+      "file": "data/jiangshan/snapshots/s_nanbei_a2.geojson",
+      "dynasty": "南北朝",
+      "dynastyEn": "Northern & Southern Dynasties",
+      "counts": {
+        "province": 63,
+        "prefecture": 137
+      }
+    },
+    {
+      "snapshot": "s_nanbei_b",
+      "from": 479,
+      "to": 501,
+      "file": "data/jiangshan/snapshots/s_nanbei_b.geojson",
+      "dynasty": "南北朝",
+      "dynastyEn": "Northern & Southern Dynasties",
+      "counts": {
+        "province": 63,
+        "prefecture": 137
+      }
+    },
+    {
+      "snapshot": "s_nanbei_c",
+      "from": 502,
+      "to": 533,
+      "file": "data/jiangshan/snapshots/s_nanbei_c.geojson",
+      "dynasty": "南北朝",
+      "dynastyEn": "Northern & Southern Dynasties",
+      "counts": {
+        "province": 68,
+        "prefecture": 137
+      }
+    },
+    {
+      "snapshot": "s_nanbei_d",
+      "from": 534,
+      "to": 549,
+      "file": "data/jiangshan/snapshots/s_nanbei_d.geojson",
+      "dynasty": "南北朝",
+      "dynastyEn": "Northern & Southern Dynasties",
+      "counts": {
+        "province": 72,
+        "prefecture": 137
+      }
+    },
+    {
+      "snapshot": "s_nanbei_d1",
+      "from": 550,
+      "to": 552,
+      "file": "data/jiangshan/snapshots/s_nanbei_d1.geojson",
+      "dynasty": "南北朝",
+      "dynastyEn": "Northern & Southern Dynasties",
+      "counts": {
+        "province": 72,
+        "prefecture": 137
+      }
+    },
+    {
+      "snapshot": "s_nanbei_d2",
+      "from": 553,
+      "to": 553,
+      "file": "data/jiangshan/snapshots/s_nanbei_d2.geojson",
+      "dynasty": "南北朝",
+      "dynastyEn": "Northern & Southern Dynasties",
+      "counts": {
+        "province": 74,
+        "prefecture": 137
+      }
+    },
+    {
+      "snapshot": "s_nanbei_d3",
+      "from": 554,
+      "to": 556,
+      "file": "data/jiangshan/snapshots/s_nanbei_d3.geojson",
+      "dynasty": "南北朝",
+      "dynastyEn": "Northern & Southern Dynasties",
+      "counts": {
+        "province": 74,
+        "prefecture": 137
+      }
+    },
+    {
+      "snapshot": "s_nanbei_e",
+      "from": 557,
+      "to": 572,
+      "file": "data/jiangshan/snapshots/s_nanbei_e.geojson",
+      "dynasty": "南北朝",
+      "dynastyEn": "Northern & Southern Dynasties",
+      "counts": {
+        "province": 74,
+        "prefecture": 137
+      }
+    },
+    {
+      "snapshot": "s_nanbei_e2",
+      "from": 573,
+      "to": 576,
+      "file": "data/jiangshan/snapshots/s_nanbei_e2.geojson",
+      "dynasty": "南北朝",
+      "dynastyEn": "Northern & Southern Dynasties",
+      "counts": {
+        "province": 74,
+        "prefecture": 137
+      }
+    },
+    {
+      "snapshot": "s_nanbei_f",
+      "from": 577,
+      "to": 580,
+      "file": "data/jiangshan/snapshots/s_nanbei_f.geojson",
+      "dynasty": "南北朝",
+      "dynastyEn": "Northern & Southern Dynasties",
+      "counts": {
+        "province": 74,
+        "prefecture": 137
+      }
+    },
+    {
+      "snapshot": "s_sui_a",
+      "from": 581,
+      "to": 586,
+      "file": "data/jiangshan/snapshots/s_sui_a.geojson",
+      "dynasty": "隋",
+      "dynastyEn": "Sui",
+      "counts": {
+        "province": 12,
+        "prefecture": 78
+      }
+    },
+    {
+      "snapshot": "s_sui_a2",
+      "from": 587,
+      "to": 588,
+      "file": "data/jiangshan/snapshots/s_sui_a2.geojson",
+      "dynasty": "隋",
+      "dynastyEn": "Sui",
+      "counts": {
+        "province": 12,
+        "prefecture": 78
+      }
+    },
+    {
+      "snapshot": "s_sui",
+      "from": 589,
+      "to": 608,
+      "file": "data/jiangshan/snapshots/s_sui.geojson",
+      "dynasty": "隋",
+      "dynastyEn": "Sui",
+      "counts": {
+        "province": 12,
+        "prefecture": 78
+      }
+    },
+    {
+      "snapshot": "s_sui_c",
+      "from": 609,
+      "to": 613,
+      "file": "data/jiangshan/snapshots/s_sui_c.geojson",
+      "dynasty": "隋",
+      "dynastyEn": "Sui",
+      "counts": {
+        "province": 12,
+        "prefecture": 78
+      }
+    },
+    {
+      "snapshot": "s_sui_d",
+      "from": 614,
+      "to": 617,
+      "file": "data/jiangshan/snapshots/s_sui_d.geojson",
+      "dynasty": "隋",
+      "dynastyEn": "Sui",
+      "counts": {
+        "province": 12,
+        "prefecture": 78
+      }
+    },
+    {
+      "snapshot": "s_tang_0",
+      "from": 618,
+      "to": 620,
+      "file": "data/jiangshan/snapshots/s_tang_0.geojson",
+      "dynasty": "唐",
+      "dynastyEn": "Tang",
+      "counts": {
+        "province": 13,
+        "prefecture": 115
+      }
+    },
+    {
+      "snapshot": "s_tang_a0",
+      "from": 621,
+      "to": 629,
+      "file": "data/jiangshan/snapshots/s_tang_a0.geojson",
+      "dynasty": "唐",
+      "dynastyEn": "Tang",
+      "counts": {
+        "province": 13,
+        "prefecture": 115
+      }
+    },
+    {
+      "snapshot": "s_tang_a1",
+      "from": 630,
+      "to": 634,
+      "file": "data/jiangshan/snapshots/s_tang_a1.geojson",
+      "dynasty": "唐",
+      "dynastyEn": "Tang",
+      "counts": {
+        "province": 13,
+        "prefecture": 115
+      }
+    },
+    {
+      "snapshot": "s_tang_a1b",
+      "from": 635,
+      "to": 639,
+      "file": "data/jiangshan/snapshots/s_tang_a1b.geojson",
+      "dynasty": "唐",
+      "dynastyEn": "Tang",
+      "counts": {
+        "province": 13,
+        "prefecture": 115
+      }
+    },
+    {
+      "snapshot": "s_tang_a2",
+      "from": 640,
+      "to": 647,
+      "file": "data/jiangshan/snapshots/s_tang_a2.geojson",
+      "dynasty": "唐",
+      "dynastyEn": "Tang",
+      "counts": {
+        "province": 13,
+        "prefecture": 115
+      }
+    },
+    {
+      "snapshot": "s_tang_a2b",
+      "from": 648,
+      "to": 656,
+      "file": "data/jiangshan/snapshots/s_tang_a2b.geojson",
+      "dynasty": "唐",
+      "dynastyEn": "Tang",
+      "counts": {
+        "province": 13,
+        "prefecture": 115
+      }
+    },
+    {
+      "snapshot": "s_tang_a3",
+      "from": 657,
+      "to": 667,
+      "file": "data/jiangshan/snapshots/s_tang_a3.geojson",
+      "dynasty": "唐",
+      "dynastyEn": "Tang",
+      "counts": {
+        "province": 13,
+        "prefecture": 115
+      }
+    },
+    {
+      "snapshot": "s_tang_a4",
+      "from": 668,
+      "to": 675,
+      "file": "data/jiangshan/snapshots/s_tang_a4.geojson",
+      "dynasty": "唐",
+      "dynastyEn": "Tang",
+      "counts": {
+        "province": 13,
+        "prefecture": 115
+      }
+    },
+    {
+      "snapshot": "s_tang_a",
+      "from": 676,
+      "to": 701,
+      "file": "data/jiangshan/snapshots/s_tang_a.geojson",
+      "dynasty": "唐",
+      "dynastyEn": "Tang",
+      "counts": {
+        "province": 13,
+        "prefecture": 115
+      }
+    },
+    {
+      "snapshot": "s_tang_a5",
+      "from": 702,
+      "to": 754,
+      "file": "data/jiangshan/snapshots/s_tang_a5.geojson",
+      "dynasty": "唐",
+      "dynastyEn": "Tang",
+      "counts": {
+        "province": 13,
+        "prefecture": 115
+      }
+    },
+    {
+      "snapshot": "s_tang_b0a",
+      "from": 755,
+      "to": 756,
+      "file": "data/jiangshan/snapshots/s_tang_b0a.geojson",
+      "dynasty": "唐",
+      "dynastyEn": "Tang",
+      "counts": {
+        "province": 13,
+        "prefecture": 115
+      }
+    },
+    {
+      "snapshot": "s_tang_b0b",
+      "from": 757,
+      "to": 762,
+      "file": "data/jiangshan/snapshots/s_tang_b0b.geojson",
+      "dynasty": "唐",
+      "dynastyEn": "Tang",
+      "counts": {
+        "province": 13,
+        "prefecture": 115
+      }
+    },
+    {
+      "snapshot": "s_tang_b0",
+      "from": 763,
+      "to": 763,
+      "file": "data/jiangshan/snapshots/s_tang_b0.geojson",
+      "dynasty": "唐",
+      "dynastyEn": "Tang",
+      "counts": {
+        "province": 13,
+        "prefecture": 115
+      }
+    },
+    {
+      "snapshot": "s_tang_b1",
+      "from": 764,
+      "to": 789,
+      "file": "data/jiangshan/snapshots/s_tang_b1.geojson",
+      "dynasty": "唐",
+      "dynastyEn": "Tang",
+      "counts": {
+        "province": 12,
+        "prefecture": 115
+      }
+    },
+    {
+      "snapshot": "s_tang_b",
+      "from": 790,
+      "to": 847,
+      "file": "data/jiangshan/snapshots/s_tang_b.geojson",
+      "dynasty": "唐",
+      "dynastyEn": "Tang",
+      "counts": {
+        "province": 12,
+        "prefecture": 115
+      }
+    },
+    {
+      "snapshot": "s_tang_c",
+      "from": 848,
+      "to": 879,
+      "file": "data/jiangshan/snapshots/s_tang_c.geojson",
+      "dynasty": "唐",
+      "dynastyEn": "Tang",
+      "counts": {
+        "province": 13,
+        "prefecture": 115
+      }
+    },
+    {
+      "snapshot": "s_tang_d1",
+      "from": 880,
+      "to": 884,
+      "file": "data/jiangshan/snapshots/s_tang_d1.geojson",
+      "dynasty": "唐",
+      "dynastyEn": "Tang",
+      "counts": {
+        "province": 13,
+        "prefecture": 115
+      }
+    },
+    {
+      "snapshot": "s_tang_d2",
+      "from": 885,
+      "to": 906,
+      "file": "data/jiangshan/snapshots/s_tang_d2.geojson",
+      "dynasty": "唐",
+      "dynastyEn": "Tang",
+      "counts": {
+        "province": 13,
+        "prefecture": 115
+      }
+    },
+    {
+      "snapshot": "s_wudai_a",
+      "from": 907,
+      "to": 922,
+      "file": "data/jiangshan/snapshots/s_wudai_a.geojson",
+      "dynasty": "五代十国",
+      "dynastyEn": "Five Dynasties & Ten Kingdoms",
+      "counts": {
+        "province": 13,
+        "prefecture": 138
+      }
+    },
+    {
+      "snapshot": "s_wudai_b1",
+      "from": 923,
+      "to": 924,
+      "file": "data/jiangshan/snapshots/s_wudai_b1.geojson",
+      "dynasty": "五代十国",
+      "dynastyEn": "Five Dynasties & Ten Kingdoms",
+      "counts": {
+        "province": 13,
+        "prefecture": 138
+      }
+    },
+    {
+      "snapshot": "s_wudai_b",
+      "from": 925,
+      "to": 933,
+      "file": "data/jiangshan/snapshots/s_wudai_b.geojson",
+      "dynasty": "五代十国",
+      "dynastyEn": "Five Dynasties & Ten Kingdoms",
+      "counts": {
+        "province": 13,
+        "prefecture": 138
+      }
+    },
+    {
+      "snapshot": "s_wudai_b2",
+      "from": 934,
+      "to": 935,
+      "file": "data/jiangshan/snapshots/s_wudai_b2.geojson",
+      "dynasty": "五代十国",
+      "dynastyEn": "Five Dynasties & Ten Kingdoms",
+      "counts": {
+        "province": 13,
+        "prefecture": 138
+      }
+    },
+    {
+      "snapshot": "s_wudai_c0",
+      "from": 936,
+      "to": 936,
+      "file": "data/jiangshan/snapshots/s_wudai_c0.geojson",
+      "dynasty": "五代十国",
+      "dynastyEn": "Five Dynasties & Ten Kingdoms",
+      "counts": {
+        "province": 12,
+        "prefecture": 138
+      }
+    },
+    {
+      "snapshot": "s_wudai_c",
+      "from": 937,
+      "to": 944,
+      "file": "data/jiangshan/snapshots/s_wudai_c.geojson",
+      "dynasty": "五代十国",
+      "dynastyEn": "Five Dynasties & Ten Kingdoms",
+      "counts": {
+        "province": 12,
+        "prefecture": 138
+      }
+    },
+    {
+      "snapshot": "s_wudai_c2",
+      "from": 945,
+      "to": 946,
+      "file": "data/jiangshan/snapshots/s_wudai_c2.geojson",
+      "dynasty": "五代十国",
+      "dynastyEn": "Five Dynasties & Ten Kingdoms",
+      "counts": {
+        "province": 12,
+        "prefecture": 138
+      }
+    },
+    {
+      "snapshot": "s_wudai_d",
+      "from": 947,
+      "to": 950,
+      "file": "data/jiangshan/snapshots/s_wudai_d.geojson",
+      "dynasty": "五代十国",
+      "dynastyEn": "Five Dynasties & Ten Kingdoms",
+      "counts": {
+        "province": 12,
+        "prefecture": 138
+      }
+    },
+    {
+      "snapshot": "s_wudai_e",
+      "from": 951,
+      "to": 957,
+      "file": "data/jiangshan/snapshots/s_wudai_e.geojson",
+      "dynasty": "五代十国",
+      "dynastyEn": "Five Dynasties & Ten Kingdoms",
+      "counts": {
+        "province": 12,
+        "prefecture": 138
+      }
+    },
+    {
+      "snapshot": "s_wudai_e1",
+      "from": 958,
+      "to": 958,
+      "file": "data/jiangshan/snapshots/s_wudai_e1.geojson",
+      "dynasty": "五代十国",
+      "dynastyEn": "Five Dynasties & Ten Kingdoms",
+      "counts": {
+        "province": 12,
+        "prefecture": 138
+      }
+    },
+    {
+      "snapshot": "s_wudai_e2",
+      "from": 959,
+      "to": 959,
+      "file": "data/jiangshan/snapshots/s_wudai_e2.geojson",
+      "dynasty": "五代十国",
+      "dynastyEn": "Five Dynasties & Ten Kingdoms",
+      "counts": {
+        "province": 12,
+        "prefecture": 138
+      }
+    },
+    {
+      "snapshot": "s_beisong_a0",
+      "from": 960,
+      "to": 962,
+      "file": "data/jiangshan/snapshots/s_beisong_a0.geojson",
+      "overview": "960 — 963 · 陈桥兵变立宋与杯酒释兵权：十国割据尚存，北宋先取荆湖",
+      "dynasty": "北宋",
+      "dynastyEn": "Northern Song",
+      "counts": {
+        "province": 14,
+        "prefecture": 138
+      }
+    },
+    {
+      "snapshot": "s_beisong_a",
+      "from": 963,
+      "to": 964,
+      "file": "data/jiangshan/snapshots/s_beisong_a.geojson",
+      "overview": "963 — 965 · 假道灭虢平荆湖：荆南、武平入宋，继发兵伐后蜀",
+      "dynasty": "北宋",
+      "dynastyEn": "Northern Song",
+      "counts": {
+        "province": 15,
+        "prefecture": 138
+      }
+    },
+    {
+      "snapshot": "s_beisong_a2",
+      "from": 965,
+      "to": 970,
+      "file": "data/jiangshan/snapshots/s_beisong_a2.geojson",
+      "overview": "965 — 971 · 王全斌灭后蜀与潘美平南汉：巴蜀、岭南次第归宋",
+      "dynasty": "北宋",
+      "dynastyEn": "Northern Song",
+      "counts": {
+        "province": 19,
+        "prefecture": 138
+      }
+    },
+    {
+      "snapshot": "s_beisong_a3",
+      "from": 971,
+      "to": 974,
+      "file": "data/jiangshan/snapshots/s_beisong_a3.geojson",
+      "overview": "971 — 975 · 曹彬浮桥渡江攻灭南唐：江南、江西、闽北入宋",
+      "dynasty": "北宋",
+      "dynastyEn": "Northern Song",
+      "counts": {
+        "province": 21,
+        "prefecture": 138
+      }
+    },
+    {
+      "snapshot": "s_beisong_a4",
+      "from": 975,
+      "to": 977,
+      "file": "data/jiangshan/snapshots/s_beisong_a4.geojson",
+      "overview": "975 — 978 · 泉漳清源军陈洪进与吴越王钱俶纳土归宋前夕",
+      "dynasty": "北宋",
+      "dynastyEn": "Northern Song",
+      "counts": {
+        "province": 24,
+        "prefecture": 138
+      }
+    },
+    {
+      "snapshot": "s_beisong_a5",
+      "from": 978,
+      "to": 978,
+      "file": "data/jiangshan/snapshots/s_beisong_a5.geojson",
+      "overview": "978 — 979 · 吴越与清源军纳土、太宗灭北汉：中原江南复归统一",
+      "dynasty": "北宋",
+      "dynastyEn": "Northern Song",
+      "counts": {
+        "province": 25,
+        "prefecture": 138
+      }
+    },
+    {
+      "snapshot": "s_beisong_b0",
+      "from": 979,
+      "to": 1037,
+      "file": "data/jiangshan/snapshots/s_beisong_b0.geojson",
+      "overview": "979 — 1038 · 高梁河与雍熙北伐、1002 李继迁陷灵州与 1004 澶渊之盟",
+      "dynasty": "北宋",
+      "dynastyEn": "Northern Song",
+      "counts": {
+        "province": 25,
+        "prefecture": 270
+      }
+    },
+    {
+      "snapshot": "s_beisong_b",
+      "from": 1038,
+      "to": 1071,
+      "file": "data/jiangshan/snapshots/s_beisong_b.geojson",
+      "overview": "1038 — 1072 · 元昊建西夏、宋夏三川口与好水川之战及庆历和议：宋辽夏三足鼎立",
+      "dynasty": "北宋",
+      "dynastyEn": "Northern Song",
+      "counts": {
+        "province": 25,
+        "prefecture": 272
+      }
+    },
+    {
+      "snapshot": "s_beisong_b1",
+      "from": 1072,
+      "to": 1103,
+      "file": "data/jiangshan/snapshots/s_beisong_b1.geojson",
+      "overview": "1072 — 1104 · 王安石变法与王韶熙河开边：收复熙河洮岷兰，新置熙河路",
+      "dynasty": "北宋",
+      "dynastyEn": "Northern Song",
+      "counts": {
+        "province": 26,
+        "prefecture": 272
+      }
+    },
+    {
+      "snapshot": "s_beisong_b2",
+      "from": 1104,
+      "to": 1114,
+      "file": "data/jiangshan/snapshots/s_beisong_b2.geojson",
+      "overview": "1104 — 1115 · 崇宁河湟开边：王厚、童贯收复青唐吐蕃，置西宁州、廓州",
+      "dynasty": "北宋",
+      "dynastyEn": "Northern Song",
+      "counts": {
+        "province": 26,
+        "prefecture": 273
+      }
+    },
+    {
+      "snapshot": "s_beisong_c",
+      "from": 1115,
+      "to": 1124,
+      "file": "data/jiangshan/snapshots/s_beisong_c.geojson",
+      "overview": "1115 — 1125 · 阿骨打建金与海上之盟：金军席卷辽土，北宋宣和伐辽",
+      "dynasty": "北宋",
+      "dynastyEn": "Northern Song",
+      "counts": {
+        "province": 26,
+        "prefecture": 273
+      }
+    },
+    {
+      "snapshot": "s_beisong_d",
+      "from": 1125,
+      "to": 1126,
+      "file": "data/jiangshan/snapshots/s_beisong_d.geojson",
+      "overview": "1125 — 1127 · 金灭辽、耶律大石西征建西辽与靖康之变：金军两度南下围汴京",
+      "dynasty": "北宋",
+      "dynastyEn": "Northern Song",
+      "counts": {
+        "province": 26,
+        "prefecture": 273
+      }
+    },
+    {
+      "snapshot": "s_nansong_a0",
+      "from": 1127,
+      "to": 1140,
+      "file": "data/jiangshan/snapshots/s_nansong_a0.geojson",
+      "overview": "1127 — 1141 · 康王赵构南渡、岳飞收复襄阳六郡与北伐中原、吴玠和尚原抗金",
+      "dynasty": "南宋",
+      "dynastyEn": "Southern Song",
+      "counts": {
+        "province": 26,
+        "prefecture": 356
+      }
+    },
+    {
+      "snapshot": "s_nansong_a",
+      "from": 1141,
+      "to": 1205,
+      "file": "data/jiangshan/snapshots/s_nansong_a.geojson",
+      "overview": "1141 — 1206 · 绍兴和议划淮河—大散关为界、1153 金迁都中都与隆兴和议南北对峙",
+      "dynasty": "南宋",
+      "dynastyEn": "Southern Song",
+      "counts": {
+        "province": 26,
+        "prefecture": 356
+      }
+    },
+    {
+      "snapshot": "s_nansong_b0",
+      "from": 1206,
+      "to": 1214,
+      "file": "data/jiangshan/snapshots/s_nansong_b0.geojson",
+      "overview": "1206 — 1215 · 铁木真统一蒙古建大蒙古国、韩侂胄开禧北伐与嘉定和议",
+      "dynasty": "南宋",
+      "dynastyEn": "Southern Song",
+      "counts": {
+        "province": 26,
+        "prefecture": 356
+      }
+    },
+    {
+      "snapshot": "s_nansong_c",
+      "from": 1215,
+      "to": 1226,
+      "file": "data/jiangshan/snapshots/s_nansong_c.geojson",
+      "overview": "1215 — 1227 · 蒙古攻陷金中都、金宣宗南迁汴京与成吉思汗西征灭西辽",
+      "dynasty": "南宋",
+      "dynastyEn": "Southern Song",
+      "counts": {
+        "province": 27,
+        "prefecture": 356
+      }
+    },
+    {
+      "snapshot": "s_nansong_d",
+      "from": 1227,
+      "to": 1233,
+      "file": "data/jiangshan/snapshots/s_nansong_d.geojson",
+      "overview": "1227 — 1234 · 蒙古灭西夏、三峰山之战与宋蒙联军蔡州灭金：金亡于蔡州",
+      "dynasty": "南宋",
+      "dynastyEn": "Southern Song",
+      "counts": {
+        "province": 27,
+        "prefecture": 356
+      }
+    },
+    {
+      "snapshot": "s_nansong_e",
+      "from": 1234,
+      "to": 1252,
+      "file": "data/jiangshan/snapshots/s_nansong_e.geojson",
+      "overview": "1234 — 1253 · 端平入洛、1235 宋蒙全面战争爆发与 1247 凉州会盟吐蕃归附",
+      "dynasty": "南宋",
+      "dynastyEn": "Southern Song",
+      "counts": {
+        "province": 28,
+        "prefecture": 356
+      }
+    },
+    {
+      "snapshot": "s_nansong_b",
+      "from": 1253,
+      "to": 1275,
+      "file": "data/jiangshan/snapshots/s_nansong_b.geojson",
+      "overview": "1253 — 1276 · 忽必烈灭大理、1259 钓鱼城蒙哥战死、1273 襄阳陷落与伯颜入临安",
+      "dynasty": "南宋",
+      "dynastyEn": "Southern Song",
+      "counts": {
+        "province": 29,
+        "prefecture": 356
+      }
+    },
+    {
+      "snapshot": "s_nansong_g",
+      "from": 1276,
+      "to": 1278,
+      "file": "data/jiangshan/snapshots/s_nansong_g.geojson",
+      "overview": "1276 — 1279 · 文天祥陆秀夫张世杰拥二王闽粤抗元与 1279 崖山海战南宋覆亡",
+      "dynasty": "南宋",
+      "dynastyEn": "Southern Song",
+      "counts": {
+        "province": 15,
+        "prefecture": 356
+      }
+    },
+    {
+      "snapshot": "s_yuan_a",
+      "from": 1279,
+      "to": 1287,
+      "file": "data/jiangshan/snapshots/s_yuan_a.geojson",
+      "overview": "1279 — 1287 · 崖山灭宋统一全国、置北庭都护府与征东行省，设总制院辖吐蕃",
+      "dynasty": "元",
+      "dynastyEn": "Yuan",
+      "counts": {
+        "province": 14,
+        "prefecture": 246
+      }
+    },
+    {
+      "snapshot": "s_yuan",
+      "from": 1288,
+      "to": 1350,
+      "file": "data/jiangshan/snapshots/s_yuan.geojson",
+      "overview": "1288 — 1350 · 改总制院为宣政院、置和林（岭北）行省：中书省与诸行省大一统盛世",
+      "dynasty": "元",
+      "dynastyEn": "Yuan",
+      "counts": {
+        "province": 14,
+        "prefecture": 246
+      }
+    },
+    {
+      "snapshot": "s_yuan_b",
+      "from": 1351,
+      "to": 1362,
+      "file": "data/jiangshan/snapshots/s_yuan_b.geojson",
+      "overview": "1351 — 1362 · 红巾大起义与群雄并起：龙凤大宋、徐寿辉（陈友谅）、朱元璋、张士诚、方国珍、明玉珍割据",
+      "dynasty": "元",
+      "dynastyEn": "Yuan",
+      "counts": {
+        "province": 14,
+        "prefecture": 246
+      }
+    },
+    {
+      "snapshot": "s_yuan_c",
+      "from": 1363,
+      "to": 1367,
+      "file": "data/jiangshan/snapshots/s_yuan_c.geojson",
+      "overview": "1363 — 1368 · 鄱阳湖决战后群雄兼并：朱元璋灭陈友谅与张士诚、方国珍，陈友定据福建、梁王守云南",
+      "dynasty": "元",
+      "dynastyEn": "Yuan",
+      "counts": {
+        "province": 14,
+        "prefecture": 246
+      }
+    },
+    {
+      "snapshot": "s_ming_0a",
+      "from": 1368,
+      "to": 1368,
+      "file": "data/jiangshan/snapshots/s_ming_0a.geojson",
+      "dynasty": "明",
+      "dynastyEn": "Ming",
+      "counts": {
+        "province": 11,
+        "prefecture": 246
+      }
+    },
+    {
+      "snapshot": "s_ming_0b",
+      "from": 1369,
+      "to": 1370,
+      "file": "data/jiangshan/snapshots/s_ming_0b.geojson",
+      "dynasty": "明",
+      "dynastyEn": "Ming",
+      "counts": {
+        "province": 12,
+        "prefecture": 246
+      }
+    },
+    {
+      "snapshot": "s_ming_0c",
+      "from": 1371,
+      "to": 1381,
+      "file": "data/jiangshan/snapshots/s_ming_0c.geojson",
+      "dynasty": "明",
+      "dynastyEn": "Ming",
+      "counts": {
+        "province": 14,
+        "prefecture": 246
+      }
+    },
+    {
+      "snapshot": "s_ming_0d",
+      "from": 1382,
+      "to": 1387,
+      "file": "data/jiangshan/snapshots/s_ming_0d.geojson",
+      "dynasty": "明",
+      "dynastyEn": "Ming",
+      "counts": {
+        "province": 15,
+        "prefecture": 246
+      }
+    },
+    {
+      "snapshot": "s_ming_a0",
+      "from": 1388,
+      "to": 1406,
+      "file": "data/jiangshan/snapshots/s_ming_a0.geojson",
+      "dynasty": "明",
+      "dynastyEn": "Ming",
+      "counts": {
+        "province": 16,
+        "prefecture": 246
+      }
+    },
+    {
+      "snapshot": "s_ming_a",
+      "from": 1407,
+      "to": 1426,
+      "file": "data/jiangshan/snapshots/s_ming_a.geojson",
+      "dynasty": "明",
+      "dynastyEn": "Ming",
+      "counts": {
+        "province": 16,
+        "prefecture": 246
+      }
+    },
+    {
+      "snapshot": "s_ming_a2",
+      "from": 1427,
+      "to": 1448,
+      "file": "data/jiangshan/snapshots/s_ming_a2.geojson",
+      "dynasty": "明",
+      "dynastyEn": "Ming",
+      "counts": {
+        "province": 16,
+        "prefecture": 246
+      }
+    },
+    {
+      "snapshot": "s_ming_b0",
+      "from": 1449,
+      "to": 1512,
+      "file": "data/jiangshan/snapshots/s_ming_b0.geojson",
+      "dynasty": "明",
+      "dynastyEn": "Ming",
+      "counts": {
+        "province": 16,
+        "prefecture": 246
+      }
+    },
+    {
+      "snapshot": "s_ming_b",
+      "from": 1513,
+      "to": 1615,
+      "file": "data/jiangshan/snapshots/s_ming_b.geojson",
+      "dynasty": "明",
+      "dynastyEn": "Ming",
+      "counts": {
+        "province": 16,
+        "prefecture": 246
+      }
+    },
+    {
+      "snapshot": "s_ming_c0",
+      "from": 1616,
+      "to": 1635,
+      "file": "data/jiangshan/snapshots/s_ming_c0.geojson",
+      "dynasty": "明",
+      "dynastyEn": "Ming",
+      "counts": {
+        "province": 15,
+        "prefecture": 246
+      }
+    },
+    {
+      "snapshot": "s_ming_c",
+      "from": 1636,
+      "to": 1642,
+      "file": "data/jiangshan/snapshots/s_ming_c.geojson",
+      "dynasty": "明",
+      "dynastyEn": "Ming",
+      "counts": {
+        "province": 15,
+        "prefecture": 246
+      }
+    },
+    {
+      "snapshot": "s_ming_c2",
+      "from": 1643,
+      "to": 1643,
+      "file": "data/jiangshan/snapshots/s_ming_c2.geojson",
+      "dynasty": "明",
+      "dynastyEn": "Ming",
+      "counts": {
+        "province": 15,
+        "prefecture": 246
+      }
+    },
+    {
+      "snapshot": "s_qing_a00",
+      "from": 1644,
+      "to": 1644,
+      "file": "data/jiangshan/snapshots/s_qing_a00.geojson",
+      "dynasty": "清",
+      "dynastyEn": "Qing",
+      "counts": {
+        "province": 22,
+        "prefecture": 281
+      }
+    },
+    {
+      "snapshot": "s_qing_a0",
+      "from": 1645,
+      "to": 1660,
+      "file": "data/jiangshan/snapshots/s_qing_a0.geojson",
+      "dynasty": "清",
+      "dynastyEn": "Qing",
+      "counts": {
+        "province": 22,
+        "prefecture": 281
+      }
+    },
+    {
+      "snapshot": "s_qing_a0b",
+      "from": 1661,
+      "to": 1661,
+      "file": "data/jiangshan/snapshots/s_qing_a0b.geojson",
+      "dynasty": "清",
+      "dynastyEn": "Qing",
+      "counts": {
+        "province": 22,
+        "prefecture": 281
+      }
+    },
+    {
+      "snapshot": "s_qing_a1",
+      "from": 1662,
+      "to": 1672,
+      "file": "data/jiangshan/snapshots/s_qing_a1.geojson",
+      "dynasty": "清",
+      "dynastyEn": "Qing",
+      "counts": {
+        "province": 22,
+        "prefecture": 281
+      }
+    },
+    {
+      "snapshot": "s_qing_a",
+      "from": 1673,
+      "to": 1680,
+      "file": "data/jiangshan/snapshots/s_qing_a.geojson",
+      "dynasty": "清",
+      "dynastyEn": "Qing",
+      "counts": {
+        "province": 22,
+        "prefecture": 281
+      }
+    },
+    {
+      "snapshot": "s_qing_a2",
+      "from": 1681,
+      "to": 1682,
+      "file": "data/jiangshan/snapshots/s_qing_a2.geojson",
+      "dynasty": "清",
+      "dynastyEn": "Qing",
+      "counts": {
+        "province": 22,
+        "prefecture": 281
+      }
+    },
+    {
+      "snapshot": "s_qing_b1",
+      "from": 1683,
+      "to": 1690,
+      "file": "data/jiangshan/snapshots/s_qing_b1.geojson",
+      "dynasty": "清",
+      "dynastyEn": "Qing",
+      "counts": {
+        "province": 22,
+        "prefecture": 281
+      }
+    },
+    {
+      "snapshot": "s_qing_b",
+      "from": 1691,
+      "to": 1719,
+      "file": "data/jiangshan/snapshots/s_qing_b.geojson",
+      "dynasty": "清",
+      "dynastyEn": "Qing",
+      "counts": {
+        "province": 23,
+        "prefecture": 281
+      }
+    },
+    {
+      "snapshot": "s_qing_c",
+      "from": 1720,
+      "to": 1758,
+      "file": "data/jiangshan/snapshots/s_qing_c.geojson",
+      "dynasty": "清",
+      "dynastyEn": "Qing",
+      "counts": {
+        "province": 23,
+        "prefecture": 281
+      }
+    },
+    {
+      "snapshot": "s_qing_d",
+      "from": 1759,
+      "to": 1795,
+      "file": "data/jiangshan/snapshots/s_qing_d.geojson",
+      "dynasty": "清",
+      "dynastyEn": "Qing",
+      "counts": {
+        "province": 26,
+        "prefecture": 281
+      }
+    },
+    {
+      "snapshot": "s_qing_e",
+      "from": 1796,
+      "to": 1850,
+      "file": "data/jiangshan/snapshots/s_qing_e.geojson",
+      "dynasty": "清",
+      "dynastyEn": "Qing",
+      "counts": {
+        "province": 26,
+        "prefecture": 281
+      }
+    },
+    {
+      "snapshot": "s_qing_e2",
+      "from": 1851,
+      "to": 1857,
+      "file": "data/jiangshan/snapshots/s_qing_e2.geojson",
+      "dynasty": "清",
+      "dynastyEn": "Qing",
+      "counts": {
+        "province": 26,
+        "prefecture": 281
+      }
+    },
+    {
+      "snapshot": "s_qing_e3",
+      "from": 1858,
+      "to": 1859,
+      "file": "data/jiangshan/snapshots/s_qing_e3.geojson",
+      "dynasty": "清",
+      "dynastyEn": "Qing",
+      "counts": {
+        "province": 26,
+        "prefecture": 281
+      }
+    },
+    {
+      "snapshot": "s_qing_e4",
+      "from": 1860,
+      "to": 1863,
+      "file": "data/jiangshan/snapshots/s_qing_e4.geojson",
+      "dynasty": "清",
+      "dynastyEn": "Qing",
+      "counts": {
+        "province": 26,
+        "prefecture": 281
+      }
+    },
+    {
+      "snapshot": "s_qing_f0",
+      "from": 1864,
+      "to": 1880,
+      "file": "data/jiangshan/snapshots/s_qing_f0.geojson",
+      "dynasty": "清",
+      "dynastyEn": "Qing",
+      "counts": {
+        "province": 26,
+        "prefecture": 281
+      }
+    },
+    {
+      "snapshot": "s_qing_f",
+      "from": 1881,
+      "to": 1894,
+      "file": "data/jiangshan/snapshots/s_qing_f.geojson",
+      "dynasty": "清",
+      "dynastyEn": "Qing",
+      "counts": {
+        "province": 26,
+        "prefecture": 281
+      }
+    },
+    {
+      "snapshot": "s_qing_g0",
+      "from": 1895,
+      "to": 1897,
+      "file": "data/jiangshan/snapshots/s_qing_g0.geojson",
+      "dynasty": "清",
+      "dynastyEn": "Qing",
+      "counts": {
+        "province": 25,
+        "prefecture": 281
+      }
+    },
+    {
+      "snapshot": "s_qing_g",
+      "from": 1898,
+      "to": 1911,
+      "file": "data/jiangshan/snapshots/s_qing_g.geojson",
+      "dynasty": "清",
+      "dynastyEn": "Qing",
+      "counts": {
+        "province": 25,
+        "prefecture": 281
+      }
+    },
+    {
+      "snapshot": "s_roc_a0",
+      "from": 1912,
+      "to": 1915,
+      "file": "data/jiangshan/snapshots/s_roc_a0.geojson",
+      "dynasty": "中华民国",
+      "dynastyEn": "Republic of China",
+      "counts": {
+        "province": 29,
+        "prefecture": 347
+      }
+    },
+    {
+      "snapshot": "s_roc_w1",
+      "from": 1916,
+      "to": 1919,
+      "file": "data/jiangshan/snapshots/s_roc_w1.geojson",
+      "dynasty": "中华民国",
+      "dynastyEn": "Republic of China",
+      "counts": {
+        "province": 29,
+        "prefecture": 347
+      }
+    },
+    {
+      "snapshot": "s_roc_w2",
+      "from": 1920,
+      "to": 1923,
+      "file": "data/jiangshan/snapshots/s_roc_w2.geojson",
+      "dynasty": "中华民国",
+      "dynastyEn": "Republic of China",
+      "counts": {
+        "province": 29,
+        "prefecture": 347
+      }
+    },
+    {
+      "snapshot": "s_roc_w3",
+      "from": 1924,
+      "to": 1925,
+      "file": "data/jiangshan/snapshots/s_roc_w3.geojson",
+      "dynasty": "中华民国",
+      "dynastyEn": "Republic of China",
+      "counts": {
+        "province": 29,
+        "prefecture": 347
+      }
+    },
+    {
+      "snapshot": "s_roc_w4",
+      "from": 1926,
+      "to": 1927,
+      "file": "data/jiangshan/snapshots/s_roc_w4.geojson",
+      "dynasty": "中华民国",
+      "dynastyEn": "Republic of China",
+      "counts": {
+        "province": 29,
+        "prefecture": 347
+      }
+    },
+    {
+      "snapshot": "s_roc_a",
+      "from": 1928,
+      "to": 1930,
+      "file": "data/jiangshan/snapshots/s_roc_a.geojson",
+      "dynasty": "中华民国",
+      "dynastyEn": "Republic of China",
+      "counts": {
+        "province": 29,
+        "prefecture": 347
+      }
+    },
+    {
+      "snapshot": "s_roc_b0",
+      "from": 1931,
+      "to": 1931,
+      "file": "data/jiangshan/snapshots/s_roc_b0.geojson",
+      "dynasty": "中华民国",
+      "dynastyEn": "Republic of China",
+      "counts": {
+        "province": 29,
+        "prefecture": 347
+      }
+    },
+    {
+      "snapshot": "s_roc",
+      "from": 1932,
+      "to": 1944,
+      "file": "data/jiangshan/snapshots/s_roc.geojson",
+      "dynasty": "中华民国",
+      "dynastyEn": "Republic of China",
+      "counts": {
+        "province": 29,
+        "prefecture": 347
+      }
+    },
+    {
+      "snapshot": "s_roc_c",
+      "from": 1945,
+      "to": 1945,
+      "file": "data/jiangshan/snapshots/s_roc_c.geojson",
+      "dynasty": "中华民国",
+      "dynastyEn": "Republic of China",
+      "counts": {
+        "province": 30,
+        "prefecture": 347
+      }
+    },
+    {
+      "snapshot": "s_roc_d",
+      "from": 1946,
+      "to": 1948,
+      "file": "data/jiangshan/snapshots/s_roc_d.geojson",
+      "dynasty": "中华民国",
+      "dynastyEn": "Republic of China",
+      "counts": {
+        "province": 29,
+        "prefecture": 347
+      }
+    }
+  ],
+  "files": [
+    "data/jiangshan/snapshots/s_zhanguo_a.geojson",
+    "data/jiangshan/snapshots/s_zhanguo_a2.geojson",
+    "data/jiangshan/snapshots/s_zhanguo_b0.geojson",
+    "data/jiangshan/snapshots/s_zhanguo_b1.geojson",
+    "data/jiangshan/snapshots/s_zhanguo_b.geojson",
+    "data/jiangshan/snapshots/s_zhanguo_b2.geojson",
+    "data/jiangshan/snapshots/s_zhanguo_c.geojson",
+    "data/jiangshan/snapshots/s_zhanguo_c2.geojson",
+    "data/jiangshan/snapshots/s_zhanguo_d.geojson",
+    "data/jiangshan/snapshots/s_zhanguo_e1.geojson",
+    "data/jiangshan/snapshots/s_zhanguo_e2.geojson",
+    "data/jiangshan/snapshots/s_zhanguo_e3.geojson",
+    "data/jiangshan/snapshots/s_zhanguo_e4.geojson",
+    "data/jiangshan/snapshots/s_zhanguo_e5.geojson",
+    "data/jiangshan/snapshots/s_qin_a.geojson",
+    "data/jiangshan/snapshots/s_qin_b.geojson",
+    "data/jiangshan/snapshots/s_qin.geojson",
+    "data/jiangshan/snapshots/s_qin_chuhan.geojson",
+    "data/jiangshan/snapshots/s_xihan_a.geojson",
+    "data/jiangshan/snapshots/s_xihan_b1.geojson",
+    "data/jiangshan/snapshots/s_xihan_b2.geojson",
+    "data/jiangshan/snapshots/s_xihan_b3.geojson",
+    "data/jiangshan/snapshots/s_xihan_b.geojson",
+    "data/jiangshan/snapshots/s_xihan_c.geojson",
+    "data/jiangshan/snapshots/s_xihan_d.geojson",
+    "data/jiangshan/snapshots/s_xihan_e.geojson",
+    "data/jiangshan/snapshots/s_donghan_a.geojson",
+    "data/jiangshan/snapshots/s_donghan_b0.geojson",
+    "data/jiangshan/snapshots/s_donghan_b.geojson",
+    "data/jiangshan/snapshots/s_donghan_b2.geojson",
+    "data/jiangshan/snapshots/s_donghan_c.geojson",
+    "data/jiangshan/snapshots/s_donghan.geojson",
+    "data/jiangshan/snapshots/s_donghan_d1.geojson",
+    "data/jiangshan/snapshots/s_donghan_d2.geojson",
+    "data/jiangshan/snapshots/s_donghan_d.geojson",
+    "data/jiangshan/snapshots/s_donghan_e0.geojson",
+    "data/jiangshan/snapshots/s_donghan_e1.geojson",
+    "data/jiangshan/snapshots/s_donghan_e.geojson",
+    "data/jiangshan/snapshots/s_donghan_e2.geojson",
+    "data/jiangshan/snapshots/s_donghan_f.geojson",
+    "data/jiangshan/snapshots/s_sanguo_a.geojson",
+    "data/jiangshan/snapshots/s_sanguo.geojson",
+    "data/jiangshan/snapshots/s_sanguo_b.geojson",
+    "data/jiangshan/snapshots/s_sanguo_c.geojson",
+    "data/jiangshan/snapshots/s_xijin_a.geojson",
+    "data/jiangshan/snapshots/s_xijin.geojson",
+    "data/jiangshan/snapshots/s_xijin_a2.geojson",
+    "data/jiangshan/snapshots/s_xijin_b.geojson",
+    "data/jiangshan/snapshots/s_dongjin_317.geojson",
+    "data/jiangshan/snapshots/s_dongjin_a0.geojson",
+    "data/jiangshan/snapshots/s_dongjin_a.geojson",
+    "data/jiangshan/snapshots/s_dongjin_a2.geojson",
+    "data/jiangshan/snapshots/s_dongjin_350.geojson",
+    "data/jiangshan/snapshots/s_dongjin_351.geojson",
+    "data/jiangshan/snapshots/s_dongjin_b.geojson",
+    "data/jiangshan/snapshots/s_dongjin_b2.geojson",
+    "data/jiangshan/snapshots/s_dongjin_c.geojson",
+    "data/jiangshan/snapshots/s_dongjin_384.geojson",
+    "data/jiangshan/snapshots/s_dongjin_385.geojson",
+    "data/jiangshan/snapshots/s_dongjin_d0.geojson",
+    "data/jiangshan/snapshots/s_dongjin_397.geojson",
+    "data/jiangshan/snapshots/s_dongjin_d1.geojson",
+    "data/jiangshan/snapshots/s_dongjin_399.geojson",
+    "data/jiangshan/snapshots/s_dongjin_404.geojson",
+    "data/jiangshan/snapshots/s_dongjin_d.geojson",
+    "data/jiangshan/snapshots/s_dongjin_410.geojson",
+    "data/jiangshan/snapshots/s_dongjin_e.geojson",
+    "data/jiangshan/snapshots/s_dongjin_f.geojson",
+    "data/jiangshan/snapshots/s_nanbei_0.geojson",
+    "data/jiangshan/snapshots/s_nanbei_427.geojson",
+    "data/jiangshan/snapshots/s_nanbei_0b.geojson",
+    "data/jiangshan/snapshots/s_nanbei_0c.geojson",
+    "data/jiangshan/snapshots/s_nanbei_a.geojson",
+    "data/jiangshan/snapshots/s_nanbei_a2.geojson",
+    "data/jiangshan/snapshots/s_nanbei_b.geojson",
+    "data/jiangshan/snapshots/s_nanbei_c.geojson",
+    "data/jiangshan/snapshots/s_nanbei_d.geojson",
+    "data/jiangshan/snapshots/s_nanbei_d1.geojson",
+    "data/jiangshan/snapshots/s_nanbei_d2.geojson",
+    "data/jiangshan/snapshots/s_nanbei_d3.geojson",
+    "data/jiangshan/snapshots/s_nanbei_e.geojson",
+    "data/jiangshan/snapshots/s_nanbei_e2.geojson",
+    "data/jiangshan/snapshots/s_nanbei_f.geojson",
+    "data/jiangshan/snapshots/s_sui_a.geojson",
+    "data/jiangshan/snapshots/s_sui_a2.geojson",
+    "data/jiangshan/snapshots/s_sui.geojson",
+    "data/jiangshan/snapshots/s_sui_c.geojson",
+    "data/jiangshan/snapshots/s_sui_d.geojson",
+    "data/jiangshan/snapshots/s_tang_0.geojson",
+    "data/jiangshan/snapshots/s_tang_a0.geojson",
+    "data/jiangshan/snapshots/s_tang_a1.geojson",
+    "data/jiangshan/snapshots/s_tang_a1b.geojson",
+    "data/jiangshan/snapshots/s_tang_a2.geojson",
+    "data/jiangshan/snapshots/s_tang_a2b.geojson",
+    "data/jiangshan/snapshots/s_tang_a3.geojson",
+    "data/jiangshan/snapshots/s_tang_a4.geojson",
+    "data/jiangshan/snapshots/s_tang_a.geojson",
+    "data/jiangshan/snapshots/s_tang_a5.geojson",
+    "data/jiangshan/snapshots/s_tang_b0a.geojson",
+    "data/jiangshan/snapshots/s_tang_b0b.geojson",
+    "data/jiangshan/snapshots/s_tang_b0.geojson",
+    "data/jiangshan/snapshots/s_tang_b1.geojson",
+    "data/jiangshan/snapshots/s_tang_b.geojson",
+    "data/jiangshan/snapshots/s_tang_c.geojson",
+    "data/jiangshan/snapshots/s_tang_d1.geojson",
+    "data/jiangshan/snapshots/s_tang_d2.geojson",
+    "data/jiangshan/snapshots/s_wudai_a.geojson",
+    "data/jiangshan/snapshots/s_wudai_b1.geojson",
+    "data/jiangshan/snapshots/s_wudai_b.geojson",
+    "data/jiangshan/snapshots/s_wudai_b2.geojson",
+    "data/jiangshan/snapshots/s_wudai_c0.geojson",
+    "data/jiangshan/snapshots/s_wudai_c.geojson",
+    "data/jiangshan/snapshots/s_wudai_c2.geojson",
+    "data/jiangshan/snapshots/s_wudai_d.geojson",
+    "data/jiangshan/snapshots/s_wudai_e.geojson",
+    "data/jiangshan/snapshots/s_wudai_e1.geojson",
+    "data/jiangshan/snapshots/s_wudai_e2.geojson",
+    "data/jiangshan/snapshots/s_beisong_a0.geojson",
+    "data/jiangshan/snapshots/s_beisong_a.geojson",
+    "data/jiangshan/snapshots/s_beisong_a2.geojson",
+    "data/jiangshan/snapshots/s_beisong_a3.geojson",
+    "data/jiangshan/snapshots/s_beisong_a4.geojson",
+    "data/jiangshan/snapshots/s_beisong_a5.geojson",
+    "data/jiangshan/snapshots/s_beisong_b0.geojson",
+    "data/jiangshan/snapshots/s_beisong_b.geojson",
+    "data/jiangshan/snapshots/s_beisong_b1.geojson",
+    "data/jiangshan/snapshots/s_beisong_b2.geojson",
+    "data/jiangshan/snapshots/s_beisong_c.geojson",
+    "data/jiangshan/snapshots/s_beisong_d.geojson",
+    "data/jiangshan/snapshots/s_nansong_a0.geojson",
+    "data/jiangshan/snapshots/s_nansong_a.geojson",
+    "data/jiangshan/snapshots/s_nansong_b0.geojson",
+    "data/jiangshan/snapshots/s_nansong_c.geojson",
+    "data/jiangshan/snapshots/s_nansong_d.geojson",
+    "data/jiangshan/snapshots/s_nansong_e.geojson",
+    "data/jiangshan/snapshots/s_nansong_b.geojson",
+    "data/jiangshan/snapshots/s_nansong_g.geojson",
+    "data/jiangshan/snapshots/s_yuan_a.geojson",
+    "data/jiangshan/snapshots/s_yuan.geojson",
+    "data/jiangshan/snapshots/s_yuan_b.geojson",
+    "data/jiangshan/snapshots/s_yuan_c.geojson",
+    "data/jiangshan/snapshots/s_ming_0a.geojson",
+    "data/jiangshan/snapshots/s_ming_0b.geojson",
+    "data/jiangshan/snapshots/s_ming_0c.geojson",
+    "data/jiangshan/snapshots/s_ming_0d.geojson",
+    "data/jiangshan/snapshots/s_ming_a0.geojson",
+    "data/jiangshan/snapshots/s_ming_a.geojson",
+    "data/jiangshan/snapshots/s_ming_a2.geojson",
+    "data/jiangshan/snapshots/s_ming_b0.geojson",
+    "data/jiangshan/snapshots/s_ming_b.geojson",
+    "data/jiangshan/snapshots/s_ming_c0.geojson",
+    "data/jiangshan/snapshots/s_ming_c.geojson",
+    "data/jiangshan/snapshots/s_ming_c2.geojson",
+    "data/jiangshan/snapshots/s_qing_a00.geojson",
+    "data/jiangshan/snapshots/s_qing_a0.geojson",
+    "data/jiangshan/snapshots/s_qing_a0b.geojson",
+    "data/jiangshan/snapshots/s_qing_a1.geojson",
+    "data/jiangshan/snapshots/s_qing_a.geojson",
+    "data/jiangshan/snapshots/s_qing_a2.geojson",
+    "data/jiangshan/snapshots/s_qing_b1.geojson",
+    "data/jiangshan/snapshots/s_qing_b.geojson",
+    "data/jiangshan/snapshots/s_qing_c.geojson",
+    "data/jiangshan/snapshots/s_qing_d.geojson",
+    "data/jiangshan/snapshots/s_qing_e.geojson",
+    "data/jiangshan/snapshots/s_qing_e2.geojson",
+    "data/jiangshan/snapshots/s_qing_e3.geojson",
+    "data/jiangshan/snapshots/s_qing_e4.geojson",
+    "data/jiangshan/snapshots/s_qing_f0.geojson",
+    "data/jiangshan/snapshots/s_qing_f.geojson",
+    "data/jiangshan/snapshots/s_qing_g0.geojson",
+    "data/jiangshan/snapshots/s_qing_g.geojson",
+    "data/jiangshan/snapshots/s_roc_a0.geojson",
+    "data/jiangshan/snapshots/s_roc_w1.geojson",
+    "data/jiangshan/snapshots/s_roc_w2.geojson",
+    "data/jiangshan/snapshots/s_roc_w3.geojson",
+    "data/jiangshan/snapshots/s_roc_w4.geojson",
+    "data/jiangshan/snapshots/s_roc_a.geojson",
+    "data/jiangshan/snapshots/s_roc_b0.geojson",
+    "data/jiangshan/snapshots/s_roc.geojson",
+    "data/jiangshan/snapshots/s_roc_c.geojson",
+    "data/jiangshan/snapshots/s_roc_d.geojson"
+  ],
+  "sourceHashes": {
+    "map_data.js": "23d01981a92eed04f7f9cb7498f9851546aedd8b58ce0c4e15eae602d9150715",
+    "china_geo_data.js": "5c8bd5202dab8eafb6047106884ec92d839a82a8020f9953f7fb6399604ca8ef",
+    "atlas_snapshots.js": "e29d1f2266f1e1b1cb4361cd84b517053ca232c0e2641df7dc53475e8ba4b66c",
+    "i18n_dict.js": "1950f52a5df5898a741509100966414646987c90f0241ccf957d423cbf9b9b53"
+  }
+}

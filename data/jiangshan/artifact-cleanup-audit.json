@@ -1,0 +1,5699 @@
+{
+  "method": "Only holes absent from raw rings and unoccupied by peer regions; repair dust under 0.01 square degree and 0.01% of largest component; retain explicit source islands",
+  "changes": [
+    {
+      "file": "s_beisong_a.geojson",
+      "id": "s_beisong_a-2",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a.geojson",
+      "id": "s_beisong_a-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a.geojson",
+      "id": "s_beisong_a-7",
+      "holesFilled": 1,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a.geojson",
+      "id": "s_beisong_a-9",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a.geojson",
+      "id": "s_beisong_a-10",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a.geojson",
+      "id": "s_beisong_a-129",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_beisong_a.geojson",
+      "id": "s_beisong_a-polity-153",
+      "holesFilled": 0,
+      "fragmentsRemoved": 15
+    },
+    {
+      "file": "s_beisong_a.geojson",
+      "id": "s_beisong_a-polity-156",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_beisong_a.geojson",
+      "id": "s_beisong_a-polity-162",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a.geojson",
+      "id": "s_beisong_a-polity-165",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a0.geojson",
+      "id": "s_beisong_a0-2",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a0.geojson",
+      "id": "s_beisong_a0-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a0.geojson",
+      "id": "s_beisong_a0-7",
+      "holesFilled": 1,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a0.geojson",
+      "id": "s_beisong_a0-9",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a0.geojson",
+      "id": "s_beisong_a0-10",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a0.geojson",
+      "id": "s_beisong_a0-128",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_beisong_a0.geojson",
+      "id": "s_beisong_a0-polity-152",
+      "holesFilled": 0,
+      "fragmentsRemoved": 13
+    },
+    {
+      "file": "s_beisong_a0.geojson",
+      "id": "s_beisong_a0-polity-155",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_beisong_a0.geojson",
+      "id": "s_beisong_a0-polity-160",
+      "holesFilled": 18,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_beisong_a0.geojson",
+      "id": "s_beisong_a0-polity-163",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a0.geojson",
+      "id": "s_beisong_a0-polity-166",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a2.geojson",
+      "id": "s_beisong_a2-2",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a2.geojson",
+      "id": "s_beisong_a2-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a2.geojson",
+      "id": "s_beisong_a2-7",
+      "holesFilled": 1,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a2.geojson",
+      "id": "s_beisong_a2-9",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a2.geojson",
+      "id": "s_beisong_a2-10",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a2.geojson",
+      "id": "s_beisong_a2-133",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_beisong_a2.geojson",
+      "id": "s_beisong_a2-polity-157",
+      "holesFilled": 0,
+      "fragmentsRemoved": 14
+    },
+    {
+      "file": "s_beisong_a2.geojson",
+      "id": "s_beisong_a2-polity-165",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a2.geojson",
+      "id": "s_beisong_a2-polity-168",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a3.geojson",
+      "id": "s_beisong_a3-2",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a3.geojson",
+      "id": "s_beisong_a3-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a3.geojson",
+      "id": "s_beisong_a3-7",
+      "holesFilled": 1,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a3.geojson",
+      "id": "s_beisong_a3-9",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a3.geojson",
+      "id": "s_beisong_a3-10",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a3.geojson",
+      "id": "s_beisong_a3-135",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_beisong_a3.geojson",
+      "id": "s_beisong_a3-polity-159",
+      "holesFilled": 0,
+      "fragmentsRemoved": 13
+    },
+    {
+      "file": "s_beisong_a3.geojson",
+      "id": "s_beisong_a3-polity-166",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a3.geojson",
+      "id": "s_beisong_a3-polity-169",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a4.geojson",
+      "id": "s_beisong_a4-2",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a4.geojson",
+      "id": "s_beisong_a4-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a4.geojson",
+      "id": "s_beisong_a4-7",
+      "holesFilled": 1,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a4.geojson",
+      "id": "s_beisong_a4-9",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a4.geojson",
+      "id": "s_beisong_a4-10",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a4.geojson",
+      "id": "s_beisong_a4-138",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_beisong_a4.geojson",
+      "id": "s_beisong_a4-polity-162",
+      "holesFilled": 0,
+      "fragmentsRemoved": 13
+    },
+    {
+      "file": "s_beisong_a4.geojson",
+      "id": "s_beisong_a4-polity-168",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a4.geojson",
+      "id": "s_beisong_a4-polity-171",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a5.geojson",
+      "id": "s_beisong_a5-2",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a5.geojson",
+      "id": "s_beisong_a5-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a5.geojson",
+      "id": "s_beisong_a5-7",
+      "holesFilled": 1,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a5.geojson",
+      "id": "s_beisong_a5-9",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a5.geojson",
+      "id": "s_beisong_a5-10",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a5.geojson",
+      "id": "s_beisong_a5-139",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_beisong_a5.geojson",
+      "id": "s_beisong_a5-polity-163",
+      "holesFilled": 0,
+      "fragmentsRemoved": 13
+    },
+    {
+      "file": "s_beisong_a5.geojson",
+      "id": "s_beisong_a5-polity-167",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_a5.geojson",
+      "id": "s_beisong_a5-polity-170",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_b.geojson",
+      "id": "s_beisong_b-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_b.geojson",
+      "id": "s_beisong_b-7",
+      "holesFilled": 1,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_b.geojson",
+      "id": "s_beisong_b-9",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_b.geojson",
+      "id": "s_beisong_b-10",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_b.geojson",
+      "id": "s_beisong_b-150",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_beisong_b.geojson",
+      "id": "s_beisong_b-165",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_beisong_b.geojson",
+      "id": "s_beisong_b-polity-300",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_b.geojson",
+      "id": "s_beisong_b-polity-303",
+      "holesFilled": 2,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_b0.geojson",
+      "id": "s_beisong_b0-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_b0.geojson",
+      "id": "s_beisong_b0-7",
+      "holesFilled": 1,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_b0.geojson",
+      "id": "s_beisong_b0-9",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_b0.geojson",
+      "id": "s_beisong_b0-10",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_b0.geojson",
+      "id": "s_beisong_b0-150",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_beisong_b0.geojson",
+      "id": "s_beisong_b0-165",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_beisong_b0.geojson",
+      "id": "s_beisong_b0-polity-297",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_b0.geojson",
+      "id": "s_beisong_b0-polity-298",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_b0.geojson",
+      "id": "s_beisong_b0-polity-301",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_b1.geojson",
+      "id": "s_beisong_b1-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_b1.geojson",
+      "id": "s_beisong_b1-7",
+      "holesFilled": 1,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_b1.geojson",
+      "id": "s_beisong_b1-9",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_b1.geojson",
+      "id": "s_beisong_b1-10",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_b1.geojson",
+      "id": "s_beisong_b1-151",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_beisong_b1.geojson",
+      "id": "s_beisong_b1-166",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_beisong_b1.geojson",
+      "id": "s_beisong_b1-polity-301",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_b1.geojson",
+      "id": "s_beisong_b1-polity-304",
+      "holesFilled": 1,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_beisong_b2.geojson",
+      "id": "s_beisong_b2-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_b2.geojson",
+      "id": "s_beisong_b2-7",
+      "holesFilled": 1,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_b2.geojson",
+      "id": "s_beisong_b2-9",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_b2.geojson",
+      "id": "s_beisong_b2-10",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_b2.geojson",
+      "id": "s_beisong_b2-151",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_beisong_b2.geojson",
+      "id": "s_beisong_b2-166",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_beisong_b2.geojson",
+      "id": "s_beisong_b2-polity-302",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_b2.geojson",
+      "id": "s_beisong_b2-polity-305",
+      "holesFilled": 2,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_c.geojson",
+      "id": "s_beisong_c-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_c.geojson",
+      "id": "s_beisong_c-7",
+      "holesFilled": 1,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_c.geojson",
+      "id": "s_beisong_c-9",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_c.geojson",
+      "id": "s_beisong_c-10",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_c.geojson",
+      "id": "s_beisong_c-151",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_beisong_c.geojson",
+      "id": "s_beisong_c-166",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_beisong_c.geojson",
+      "id": "s_beisong_c-polity-300",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_beisong_c.geojson",
+      "id": "s_beisong_c-polity-303",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_c.geojson",
+      "id": "s_beisong_c-polity-306",
+      "holesFilled": 2,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_d.geojson",
+      "id": "s_beisong_d-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_d.geojson",
+      "id": "s_beisong_d-7",
+      "holesFilled": 1,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_d.geojson",
+      "id": "s_beisong_d-9",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_d.geojson",
+      "id": "s_beisong_d-10",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_d.geojson",
+      "id": "s_beisong_d-151",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_beisong_d.geojson",
+      "id": "s_beisong_d-166",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_beisong_d.geojson",
+      "id": "s_beisong_d-polity-302",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_beisong_d.geojson",
+      "id": "s_beisong_d-polity-305",
+      "holesFilled": 2,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan.geojson",
+      "id": "s_donghan-20",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_donghan.geojson",
+      "id": "s_donghan-37",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan.geojson",
+      "id": "s_donghan-40",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan.geojson",
+      "id": "s_donghan-55",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan.geojson",
+      "id": "s_donghan-polity-70",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_a.geojson",
+      "id": "s_donghan_a-20",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_donghan_a.geojson",
+      "id": "s_donghan_a-37",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_a.geojson",
+      "id": "s_donghan_a-40",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_a.geojson",
+      "id": "s_donghan_a-55",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_a.geojson",
+      "id": "s_donghan_a-polity-71",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_b.geojson",
+      "id": "s_donghan_b-20",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_donghan_b.geojson",
+      "id": "s_donghan_b-37",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_b.geojson",
+      "id": "s_donghan_b-40",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_b.geojson",
+      "id": "s_donghan_b-55",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_b.geojson",
+      "id": "s_donghan_b-polity-70",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_b0.geojson",
+      "id": "s_donghan_b0-20",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_donghan_b0.geojson",
+      "id": "s_donghan_b0-37",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_b0.geojson",
+      "id": "s_donghan_b0-40",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_b0.geojson",
+      "id": "s_donghan_b0-55",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_b0.geojson",
+      "id": "s_donghan_b0-polity-71",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_b2.geojson",
+      "id": "s_donghan_b2-20",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_donghan_b2.geojson",
+      "id": "s_donghan_b2-37",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_b2.geojson",
+      "id": "s_donghan_b2-40",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_b2.geojson",
+      "id": "s_donghan_b2-55",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_b2.geojson",
+      "id": "s_donghan_b2-polity-71",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_c.geojson",
+      "id": "s_donghan_c-20",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_donghan_c.geojson",
+      "id": "s_donghan_c-37",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_c.geojson",
+      "id": "s_donghan_c-40",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_c.geojson",
+      "id": "s_donghan_c-55",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_c.geojson",
+      "id": "s_donghan_c-polity-70",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_d.geojson",
+      "id": "s_donghan_d-20",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_donghan_d.geojson",
+      "id": "s_donghan_d-37",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_d.geojson",
+      "id": "s_donghan_d-40",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_d.geojson",
+      "id": "s_donghan_d-55",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_d.geojson",
+      "id": "s_donghan_d-polity-67",
+      "holesFilled": 0,
+      "fragmentsRemoved": 3
+    },
+    {
+      "file": "s_donghan_d.geojson",
+      "id": "s_donghan_d-polity-78",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_d1.geojson",
+      "id": "s_donghan_d1-20",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_donghan_d1.geojson",
+      "id": "s_donghan_d1-37",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_d1.geojson",
+      "id": "s_donghan_d1-40",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_d1.geojson",
+      "id": "s_donghan_d1-55",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_d1.geojson",
+      "id": "s_donghan_d1-polity-67",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_donghan_d1.geojson",
+      "id": "s_donghan_d1-polity-80",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_d2.geojson",
+      "id": "s_donghan_d2-20",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_donghan_d2.geojson",
+      "id": "s_donghan_d2-37",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_d2.geojson",
+      "id": "s_donghan_d2-40",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_d2.geojson",
+      "id": "s_donghan_d2-55",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_d2.geojson",
+      "id": "s_donghan_d2-polity-62",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_donghan_d2.geojson",
+      "id": "s_donghan_d2-polity-68",
+      "holesFilled": 0,
+      "fragmentsRemoved": 3
+    },
+    {
+      "file": "s_donghan_d2.geojson",
+      "id": "s_donghan_d2-polity-79",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_e.geojson",
+      "id": "s_donghan_e-20",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_donghan_e.geojson",
+      "id": "s_donghan_e-37",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_e.geojson",
+      "id": "s_donghan_e-40",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_e.geojson",
+      "id": "s_donghan_e-55",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_e.geojson",
+      "id": "s_donghan_e-polity-62",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_donghan_e.geojson",
+      "id": "s_donghan_e-polity-75",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_e0.geojson",
+      "id": "s_donghan_e0-20",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_donghan_e0.geojson",
+      "id": "s_donghan_e0-37",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_e0.geojson",
+      "id": "s_donghan_e0-40",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_e0.geojson",
+      "id": "s_donghan_e0-55",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_e0.geojson",
+      "id": "s_donghan_e0-polity-67",
+      "holesFilled": 0,
+      "fragmentsRemoved": 3
+    },
+    {
+      "file": "s_donghan_e0.geojson",
+      "id": "s_donghan_e0-polity-78",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_e1.geojson",
+      "id": "s_donghan_e1-20",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_donghan_e1.geojson",
+      "id": "s_donghan_e1-37",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_e1.geojson",
+      "id": "s_donghan_e1-40",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_e1.geojson",
+      "id": "s_donghan_e1-55",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_e1.geojson",
+      "id": "s_donghan_e1-polity-62",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_donghan_e1.geojson",
+      "id": "s_donghan_e1-polity-66",
+      "holesFilled": 0,
+      "fragmentsRemoved": 3
+    },
+    {
+      "file": "s_donghan_e1.geojson",
+      "id": "s_donghan_e1-polity-76",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_e2.geojson",
+      "id": "s_donghan_e2-20",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_donghan_e2.geojson",
+      "id": "s_donghan_e2-37",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_e2.geojson",
+      "id": "s_donghan_e2-40",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_e2.geojson",
+      "id": "s_donghan_e2-55",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_e2.geojson",
+      "id": "s_donghan_e2-polity-62",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_donghan_e2.geojson",
+      "id": "s_donghan_e2-polity-65",
+      "holesFilled": 2,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_donghan_e2.geojson",
+      "id": "s_donghan_e2-polity-74",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_f.geojson",
+      "id": "s_donghan_f-20",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_donghan_f.geojson",
+      "id": "s_donghan_f-37",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_f.geojson",
+      "id": "s_donghan_f-40",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_f.geojson",
+      "id": "s_donghan_f-55",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_donghan_f.geojson",
+      "id": "s_donghan_f-polity-62",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_donghan_f.geojson",
+      "id": "s_donghan_f-polity-65",
+      "holesFilled": 2,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_donghan_f.geojson",
+      "id": "s_donghan_f-polity-74",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_317.geojson",
+      "id": "s_dongjin_317-58",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_dongjin_317.geojson",
+      "id": "s_dongjin_317-124",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_317.geojson",
+      "id": "s_dongjin_317-133",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_317.geojson",
+      "id": "s_dongjin_317-polity-136",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_dongjin_317.geojson",
+      "id": "s_dongjin_317-polity-145",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_350.geojson",
+      "id": "s_dongjin_350-58",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_dongjin_350.geojson",
+      "id": "s_dongjin_350-124",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_350.geojson",
+      "id": "s_dongjin_350-133",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_350.geojson",
+      "id": "s_dongjin_350-polity-136",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_dongjin_350.geojson",
+      "id": "s_dongjin_350-polity-144",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_351.geojson",
+      "id": "s_dongjin_351-58",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_dongjin_351.geojson",
+      "id": "s_dongjin_351-124",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_351.geojson",
+      "id": "s_dongjin_351-133",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_351.geojson",
+      "id": "s_dongjin_351-polity-137",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_dongjin_351.geojson",
+      "id": "s_dongjin_351-polity-145",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_384.geojson",
+      "id": "s_dongjin_384-58",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_dongjin_384.geojson",
+      "id": "s_dongjin_384-124",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_384.geojson",
+      "id": "s_dongjin_384-133",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_384.geojson",
+      "id": "s_dongjin_384-polity-143",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_385.geojson",
+      "id": "s_dongjin_385-58",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_dongjin_385.geojson",
+      "id": "s_dongjin_385-124",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_385.geojson",
+      "id": "s_dongjin_385-133",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_385.geojson",
+      "id": "s_dongjin_385-polity-145",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_397.geojson",
+      "id": "s_dongjin_397-58",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_dongjin_397.geojson",
+      "id": "s_dongjin_397-124",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_397.geojson",
+      "id": "s_dongjin_397-133",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_397.geojson",
+      "id": "s_dongjin_397-polity-146",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_399.geojson",
+      "id": "s_dongjin_399-58",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_dongjin_399.geojson",
+      "id": "s_dongjin_399-124",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_399.geojson",
+      "id": "s_dongjin_399-133",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_399.geojson",
+      "id": "s_dongjin_399-polity-147",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_404.geojson",
+      "id": "s_dongjin_404-58",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_dongjin_404.geojson",
+      "id": "s_dongjin_404-124",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_404.geojson",
+      "id": "s_dongjin_404-133",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_404.geojson",
+      "id": "s_dongjin_404-polity-148",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_410.geojson",
+      "id": "s_dongjin_410-58",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_dongjin_410.geojson",
+      "id": "s_dongjin_410-124",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_410.geojson",
+      "id": "s_dongjin_410-133",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_410.geojson",
+      "id": "s_dongjin_410-polity-148",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_a.geojson",
+      "id": "s_dongjin_a-58",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_dongjin_a.geojson",
+      "id": "s_dongjin_a-124",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_a.geojson",
+      "id": "s_dongjin_a-133",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_a.geojson",
+      "id": "s_dongjin_a-polity-136",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_dongjin_a.geojson",
+      "id": "s_dongjin_a-polity-145",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_a0.geojson",
+      "id": "s_dongjin_a0-58",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_dongjin_a0.geojson",
+      "id": "s_dongjin_a0-124",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_a0.geojson",
+      "id": "s_dongjin_a0-133",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_a0.geojson",
+      "id": "s_dongjin_a0-polity-136",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_dongjin_a0.geojson",
+      "id": "s_dongjin_a0-polity-146",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_a2.geojson",
+      "id": "s_dongjin_a2-58",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_dongjin_a2.geojson",
+      "id": "s_dongjin_a2-124",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_a2.geojson",
+      "id": "s_dongjin_a2-133",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_a2.geojson",
+      "id": "s_dongjin_a2-polity-136",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_dongjin_a2.geojson",
+      "id": "s_dongjin_a2-polity-144",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_b.geojson",
+      "id": "s_dongjin_b-58",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_dongjin_b.geojson",
+      "id": "s_dongjin_b-124",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_b.geojson",
+      "id": "s_dongjin_b-133",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_b.geojson",
+      "id": "s_dongjin_b-polity-137",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_dongjin_b.geojson",
+      "id": "s_dongjin_b-polity-144",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_b2.geojson",
+      "id": "s_dongjin_b2-58",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_dongjin_b2.geojson",
+      "id": "s_dongjin_b2-124",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_b2.geojson",
+      "id": "s_dongjin_b2-133",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_b2.geojson",
+      "id": "s_dongjin_b2-polity-136",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_dongjin_b2.geojson",
+      "id": "s_dongjin_b2-polity-143",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_c.geojson",
+      "id": "s_dongjin_c-58",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_dongjin_c.geojson",
+      "id": "s_dongjin_c-124",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_c.geojson",
+      "id": "s_dongjin_c-133",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_c.geojson",
+      "id": "s_dongjin_c-polity-136",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_dongjin_c.geojson",
+      "id": "s_dongjin_c-polity-141",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_d.geojson",
+      "id": "s_dongjin_d-58",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_dongjin_d.geojson",
+      "id": "s_dongjin_d-124",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_d.geojson",
+      "id": "s_dongjin_d-133",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_d.geojson",
+      "id": "s_dongjin_d-polity-149",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_d0.geojson",
+      "id": "s_dongjin_d0-58",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_dongjin_d0.geojson",
+      "id": "s_dongjin_d0-124",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_d0.geojson",
+      "id": "s_dongjin_d0-133",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_d0.geojson",
+      "id": "s_dongjin_d0-polity-145",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_d1.geojson",
+      "id": "s_dongjin_d1-58",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_dongjin_d1.geojson",
+      "id": "s_dongjin_d1-124",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_d1.geojson",
+      "id": "s_dongjin_d1-133",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_d1.geojson",
+      "id": "s_dongjin_d1-polity-146",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_e.geojson",
+      "id": "s_dongjin_e-58",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_dongjin_e.geojson",
+      "id": "s_dongjin_e-124",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_e.geojson",
+      "id": "s_dongjin_e-133",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_e.geojson",
+      "id": "s_dongjin_e-polity-146",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_f.geojson",
+      "id": "s_dongjin_f-58",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_dongjin_f.geojson",
+      "id": "s_dongjin_f-124",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_f.geojson",
+      "id": "s_dongjin_f-133",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_dongjin_f.geojson",
+      "id": "s_dongjin_f-polity-145",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_0a.geojson",
+      "id": "s_ming_0a-237",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_0a.geojson",
+      "id": "s_ming_0a-244",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_0a.geojson",
+      "id": "s_ming_0a-polity-257",
+      "holesFilled": 62,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_0a.geojson",
+      "id": "s_ming_0a-polity-258",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_0a.geojson",
+      "id": "s_ming_0a-polity-270",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_0a.geojson",
+      "id": "s_ming_0a-polity-278",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_0b.geojson",
+      "id": "s_ming_0b-5",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_0b.geojson",
+      "id": "s_ming_0b-238",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_0b.geojson",
+      "id": "s_ming_0b-245",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_0b.geojson",
+      "id": "s_ming_0b-polity-258",
+      "holesFilled": 66,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_0b.geojson",
+      "id": "s_ming_0b-polity-259",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_0b.geojson",
+      "id": "s_ming_0b-polity-271",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_0b.geojson",
+      "id": "s_ming_0b-polity-279",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_0c.geojson",
+      "id": "s_ming_0c-5",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_0c.geojson",
+      "id": "s_ming_0c-240",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_0c.geojson",
+      "id": "s_ming_0c-247",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_0c.geojson",
+      "id": "s_ming_0c-polity-260",
+      "holesFilled": 9,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_0c.geojson",
+      "id": "s_ming_0c-polity-261",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_ming_0c.geojson",
+      "id": "s_ming_0c-polity-272",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_0c.geojson",
+      "id": "s_ming_0c-polity-280",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_0d.geojson",
+      "id": "s_ming_0d-5",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_0d.geojson",
+      "id": "s_ming_0d-241",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_0d.geojson",
+      "id": "s_ming_0d-248",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_0d.geojson",
+      "id": "s_ming_0d-polity-261",
+      "holesFilled": 9,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_0d.geojson",
+      "id": "s_ming_0d-polity-262",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_ming_0d.geojson",
+      "id": "s_ming_0d-polity-272",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_0d.geojson",
+      "id": "s_ming_0d-polity-280",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_a.geojson",
+      "id": "s_ming_a-5",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_a.geojson",
+      "id": "s_ming_a-15",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_a.geojson",
+      "id": "s_ming_a-242",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_a.geojson",
+      "id": "s_ming_a-249",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_a.geojson",
+      "id": "s_ming_a-polity-262",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_a.geojson",
+      "id": "s_ming_a-polity-271",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_a.geojson",
+      "id": "s_ming_a-polity-273",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_a.geojson",
+      "id": "s_ming_a-polity-279",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_a.geojson",
+      "id": "s_ming_a-polity-285",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_a0.geojson",
+      "id": "s_ming_a0-5",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_a0.geojson",
+      "id": "s_ming_a0-242",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_a0.geojson",
+      "id": "s_ming_a0-249",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_a0.geojson",
+      "id": "s_ming_a0-polity-272",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_a0.geojson",
+      "id": "s_ming_a0-polity-280",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_a2.geojson",
+      "id": "s_ming_a2-5",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_a2.geojson",
+      "id": "s_ming_a2-15",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_a2.geojson",
+      "id": "s_ming_a2-242",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_a2.geojson",
+      "id": "s_ming_a2-249",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_a2.geojson",
+      "id": "s_ming_a2-polity-262",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_a2.geojson",
+      "id": "s_ming_a2-polity-270",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_a2.geojson",
+      "id": "s_ming_a2-polity-272",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_a2.geojson",
+      "id": "s_ming_a2-polity-278",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_a2.geojson",
+      "id": "s_ming_a2-polity-284",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_b.geojson",
+      "id": "s_ming_b-5",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_b.geojson",
+      "id": "s_ming_b-242",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_b.geojson",
+      "id": "s_ming_b-249",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_b.geojson",
+      "id": "s_ming_b-polity-262",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_b.geojson",
+      "id": "s_ming_b-polity-272",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_b.geojson",
+      "id": "s_ming_b-polity-280",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_b0.geojson",
+      "id": "s_ming_b0-5",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_b0.geojson",
+      "id": "s_ming_b0-242",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_b0.geojson",
+      "id": "s_ming_b0-249",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_b0.geojson",
+      "id": "s_ming_b0-polity-262",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_b0.geojson",
+      "id": "s_ming_b0-polity-273",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_b0.geojson",
+      "id": "s_ming_b0-polity-281",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_c.geojson",
+      "id": "s_ming_c-5",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_c.geojson",
+      "id": "s_ming_c-241",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_c.geojson",
+      "id": "s_ming_c-248",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_c.geojson",
+      "id": "s_ming_c-polity-261",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_c.geojson",
+      "id": "s_ming_c-polity-270",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_c.geojson",
+      "id": "s_ming_c-polity-272",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_c.geojson",
+      "id": "s_ming_c-polity-278",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_c0.geojson",
+      "id": "s_ming_c0-5",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_c0.geojson",
+      "id": "s_ming_c0-241",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_c0.geojson",
+      "id": "s_ming_c0-248",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_c0.geojson",
+      "id": "s_ming_c0-polity-261",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_c0.geojson",
+      "id": "s_ming_c0-polity-270",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_c0.geojson",
+      "id": "s_ming_c0-polity-272",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_c0.geojson",
+      "id": "s_ming_c0-polity-278",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_c2.geojson",
+      "id": "s_ming_c2-5",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_c2.geojson",
+      "id": "s_ming_c2-241",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_c2.geojson",
+      "id": "s_ming_c2-248",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_ming_c2.geojson",
+      "id": "s_ming_c2-polity-261",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_c2.geojson",
+      "id": "s_ming_c2-polity-263",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_c2.geojson",
+      "id": "s_ming_c2-polity-272",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_c2.geojson",
+      "id": "s_ming_c2-polity-274",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_ming_c2.geojson",
+      "id": "s_ming_c2-polity-280",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_0.geojson",
+      "id": "s_nanbei_0-52",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_0.geojson",
+      "id": "s_nanbei_0-189",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_0.geojson",
+      "id": "s_nanbei_0-198",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_0.geojson",
+      "id": "s_nanbei_0-polity-215",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_0b.geojson",
+      "id": "s_nanbei_0b-52",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_0b.geojson",
+      "id": "s_nanbei_0b-189",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_0b.geojson",
+      "id": "s_nanbei_0b-198",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_0b.geojson",
+      "id": "s_nanbei_0b-polity-213",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_0c.geojson",
+      "id": "s_nanbei_0c-52",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_0c.geojson",
+      "id": "s_nanbei_0c-189",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_0c.geojson",
+      "id": "s_nanbei_0c-198",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_0c.geojson",
+      "id": "s_nanbei_0c-polity-212",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_427.geojson",
+      "id": "s_nanbei_427-52",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_427.geojson",
+      "id": "s_nanbei_427-189",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_427.geojson",
+      "id": "s_nanbei_427-198",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_427.geojson",
+      "id": "s_nanbei_427-polity-215",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_a.geojson",
+      "id": "s_nanbei_a-52",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_a.geojson",
+      "id": "s_nanbei_a-189",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_a.geojson",
+      "id": "s_nanbei_a-198",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_a.geojson",
+      "id": "s_nanbei_a-polity-211",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_a2.geojson",
+      "id": "s_nanbei_a2-52",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_a2.geojson",
+      "id": "s_nanbei_a2-189",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_a2.geojson",
+      "id": "s_nanbei_a2-198",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_a2.geojson",
+      "id": "s_nanbei_a2-polity-211",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_b.geojson",
+      "id": "s_nanbei_b-52",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_b.geojson",
+      "id": "s_nanbei_b-189",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_b.geojson",
+      "id": "s_nanbei_b-198",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_b.geojson",
+      "id": "s_nanbei_b-polity-211",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_c.geojson",
+      "id": "s_nanbei_c-56",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_c.geojson",
+      "id": "s_nanbei_c-194",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_c.geojson",
+      "id": "s_nanbei_c-203",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_c.geojson",
+      "id": "s_nanbei_c-polity-216",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_d.geojson",
+      "id": "s_nanbei_d-60",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_d.geojson",
+      "id": "s_nanbei_d-198",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_d.geojson",
+      "id": "s_nanbei_d-207",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_d.geojson",
+      "id": "s_nanbei_d-polity-221",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_d1.geojson",
+      "id": "s_nanbei_d1-60",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_d1.geojson",
+      "id": "s_nanbei_d1-198",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_d1.geojson",
+      "id": "s_nanbei_d1-207",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_d1.geojson",
+      "id": "s_nanbei_d1-polity-221",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_d2.geojson",
+      "id": "s_nanbei_d2-62",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_d2.geojson",
+      "id": "s_nanbei_d2-200",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_d2.geojson",
+      "id": "s_nanbei_d2-209",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_d2.geojson",
+      "id": "s_nanbei_d2-polity-223",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_d3.geojson",
+      "id": "s_nanbei_d3-62",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_d3.geojson",
+      "id": "s_nanbei_d3-200",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_d3.geojson",
+      "id": "s_nanbei_d3-209",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_d3.geojson",
+      "id": "s_nanbei_d3-polity-224",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_e.geojson",
+      "id": "s_nanbei_e-62",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_e.geojson",
+      "id": "s_nanbei_e-200",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_e.geojson",
+      "id": "s_nanbei_e-209",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_e.geojson",
+      "id": "s_nanbei_e-polity-224",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_e2.geojson",
+      "id": "s_nanbei_e2-62",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_e2.geojson",
+      "id": "s_nanbei_e2-200",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_e2.geojson",
+      "id": "s_nanbei_e2-209",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_e2.geojson",
+      "id": "s_nanbei_e2-polity-224",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_f.geojson",
+      "id": "s_nanbei_f-62",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_f.geojson",
+      "id": "s_nanbei_f-200",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_f.geojson",
+      "id": "s_nanbei_f-209",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nanbei_f.geojson",
+      "id": "s_nanbei_f-polity-223",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_a.geojson",
+      "id": "s_nansong_a-0",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_a.geojson",
+      "id": "s_nansong_a-6",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_a.geojson",
+      "id": "s_nansong_a-9",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_a.geojson",
+      "id": "s_nansong_a-153",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_a.geojson",
+      "id": "s_nansong_a-166",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_a.geojson",
+      "id": "s_nansong_a-346",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_a.geojson",
+      "id": "s_nansong_a-polity-382",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_nansong_a.geojson",
+      "id": "s_nansong_a-polity-383",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_a.geojson",
+      "id": "s_nansong_a-polity-385",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_a.geojson",
+      "id": "s_nansong_a-polity-389",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_nansong_a.geojson",
+      "id": "s_nansong_a-polity-402",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_nansong_a0.geojson",
+      "id": "s_nansong_a0-0",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_a0.geojson",
+      "id": "s_nansong_a0-6",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_a0.geojson",
+      "id": "s_nansong_a0-153",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_a0.geojson",
+      "id": "s_nansong_a0-166",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_a0.geojson",
+      "id": "s_nansong_a0-346",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_a0.geojson",
+      "id": "s_nansong_a0-polity-382",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_nansong_a0.geojson",
+      "id": "s_nansong_a0-polity-383",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_a0.geojson",
+      "id": "s_nansong_a0-polity-385",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_a0.geojson",
+      "id": "s_nansong_a0-polity-389",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_nansong_a0.geojson",
+      "id": "s_nansong_a0-polity-402",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_nansong_b.geojson",
+      "id": "s_nansong_b-13",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_b.geojson",
+      "id": "s_nansong_b-19",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_b.geojson",
+      "id": "s_nansong_b-22",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_b.geojson",
+      "id": "s_nansong_b-156",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_b.geojson",
+      "id": "s_nansong_b-169",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_b.geojson",
+      "id": "s_nansong_b-349",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_b.geojson",
+      "id": "s_nansong_b-polity-385",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_nansong_b.geojson",
+      "id": "s_nansong_b-polity-386",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_b.geojson",
+      "id": "s_nansong_b-polity-401",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_nansong_b0.geojson",
+      "id": "s_nansong_b0-0",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_b0.geojson",
+      "id": "s_nansong_b0-6",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_b0.geojson",
+      "id": "s_nansong_b0-9",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_b0.geojson",
+      "id": "s_nansong_b0-153",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_b0.geojson",
+      "id": "s_nansong_b0-166",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_b0.geojson",
+      "id": "s_nansong_b0-346",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_b0.geojson",
+      "id": "s_nansong_b0-polity-382",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_nansong_b0.geojson",
+      "id": "s_nansong_b0-polity-383",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_b0.geojson",
+      "id": "s_nansong_b0-polity-386",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_b0.geojson",
+      "id": "s_nansong_b0-polity-389",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_nansong_b0.geojson",
+      "id": "s_nansong_b0-polity-402",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_nansong_c.geojson",
+      "id": "s_nansong_c-1",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_c.geojson",
+      "id": "s_nansong_c-17",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_c.geojson",
+      "id": "s_nansong_c-23",
+      "holesFilled": 1,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_c.geojson",
+      "id": "s_nansong_c-154",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_c.geojson",
+      "id": "s_nansong_c-167",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_c.geojson",
+      "id": "s_nansong_c-347",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_c.geojson",
+      "id": "s_nansong_c-polity-383",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_nansong_c.geojson",
+      "id": "s_nansong_c-polity-384",
+      "holesFilled": 3,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_c.geojson",
+      "id": "s_nansong_c-polity-386",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_c.geojson",
+      "id": "s_nansong_c-polity-387",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_c.geojson",
+      "id": "s_nansong_c-polity-390",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_nansong_c.geojson",
+      "id": "s_nansong_c-polity-403",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_nansong_d.geojson",
+      "id": "s_nansong_d-14",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_d.geojson",
+      "id": "s_nansong_d-20",
+      "holesFilled": 1,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_d.geojson",
+      "id": "s_nansong_d-22",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_d.geojson",
+      "id": "s_nansong_d-154",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_d.geojson",
+      "id": "s_nansong_d-167",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_d.geojson",
+      "id": "s_nansong_d-347",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_d.geojson",
+      "id": "s_nansong_d-polity-383",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_nansong_d.geojson",
+      "id": "s_nansong_d-polity-385",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_d.geojson",
+      "id": "s_nansong_d-polity-386",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_d.geojson",
+      "id": "s_nansong_d-polity-389",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_nansong_d.geojson",
+      "id": "s_nansong_d-polity-402",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_nansong_e.geojson",
+      "id": "s_nansong_e-13",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_e.geojson",
+      "id": "s_nansong_e-19",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_e.geojson",
+      "id": "s_nansong_e-22",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_e.geojson",
+      "id": "s_nansong_e-155",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_e.geojson",
+      "id": "s_nansong_e-168",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_e.geojson",
+      "id": "s_nansong_e-348",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_e.geojson",
+      "id": "s_nansong_e-polity-384",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_nansong_e.geojson",
+      "id": "s_nansong_e-polity-385",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_e.geojson",
+      "id": "s_nansong_e-polity-386",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_e.geojson",
+      "id": "s_nansong_e-polity-401",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_nansong_g.geojson",
+      "id": "s_nansong_g-4",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_g.geojson",
+      "id": "s_nansong_g-8",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_nansong_g.geojson",
+      "id": "s_nansong_g-142",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_g.geojson",
+      "id": "s_nansong_g-155",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_g.geojson",
+      "id": "s_nansong_g-335",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_nansong_g.geojson",
+      "id": "s_nansong_g-polity-372",
+      "holesFilled": 0,
+      "fragmentsRemoved": 3
+    },
+    {
+      "file": "s_nansong_g.geojson",
+      "id": "s_nansong_g-polity-387",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_qin.geojson",
+      "id": "s_qin-polity-79",
+      "holesFilled": 2,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_qin.geojson",
+      "id": "s_qin-polity-86",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qin.geojson",
+      "id": "s_qin-polity-93",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_qin_a.geojson",
+      "id": "s_qin_a-polity-78",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qin_a.geojson",
+      "id": "s_qin_a-polity-85",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_qin_b.geojson",
+      "id": "s_qin_b-polity-80",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qin_b.geojson",
+      "id": "s_qin_b-polity-87",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_qin_chuhan.geojson",
+      "id": "s_qin_chuhan-polity-92",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_a.geojson",
+      "id": "s_qing_a-19",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_a.geojson",
+      "id": "s_qing_a-20",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_a.geojson",
+      "id": "s_qing_a-21",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_qing_a.geojson",
+      "id": "s_qing_a-53",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_a.geojson",
+      "id": "s_qing_a-polity-318",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_a0.geojson",
+      "id": "s_qing_a0-19",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_a0.geojson",
+      "id": "s_qing_a0-20",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_a0.geojson",
+      "id": "s_qing_a0-21",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_qing_a0.geojson",
+      "id": "s_qing_a0-53",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_a0.geojson",
+      "id": "s_qing_a0-polity-318",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_a00.geojson",
+      "id": "s_qing_a00-19",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_a00.geojson",
+      "id": "s_qing_a00-20",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_a00.geojson",
+      "id": "s_qing_a00-21",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_qing_a00.geojson",
+      "id": "s_qing_a00-53",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_a00.geojson",
+      "id": "s_qing_a00-polity-320",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_a0b.geojson",
+      "id": "s_qing_a0b-19",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_a0b.geojson",
+      "id": "s_qing_a0b-20",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_a0b.geojson",
+      "id": "s_qing_a0b-21",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_qing_a0b.geojson",
+      "id": "s_qing_a0b-53",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_a0b.geojson",
+      "id": "s_qing_a0b-polity-318",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_a1.geojson",
+      "id": "s_qing_a1-19",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_a1.geojson",
+      "id": "s_qing_a1-20",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_a1.geojson",
+      "id": "s_qing_a1-21",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_qing_a1.geojson",
+      "id": "s_qing_a1-53",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_a1.geojson",
+      "id": "s_qing_a1-polity-317",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_a2.geojson",
+      "id": "s_qing_a2-19",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_a2.geojson",
+      "id": "s_qing_a2-20",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_a2.geojson",
+      "id": "s_qing_a2-21",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_qing_a2.geojson",
+      "id": "s_qing_a2-53",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_a2.geojson",
+      "id": "s_qing_a2-polity-317",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_b.geojson",
+      "id": "s_qing_b-19",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_b.geojson",
+      "id": "s_qing_b-20",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_b.geojson",
+      "id": "s_qing_b-21",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_qing_b.geojson",
+      "id": "s_qing_b-54",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_b.geojson",
+      "id": "s_qing_b-polity-324",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_b1.geojson",
+      "id": "s_qing_b1-19",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_b1.geojson",
+      "id": "s_qing_b1-20",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_b1.geojson",
+      "id": "s_qing_b1-21",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_qing_b1.geojson",
+      "id": "s_qing_b1-53",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_b1.geojson",
+      "id": "s_qing_b1-polity-316",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_c.geojson",
+      "id": "s_qing_c-19",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_c.geojson",
+      "id": "s_qing_c-20",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_c.geojson",
+      "id": "s_qing_c-21",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_qing_c.geojson",
+      "id": "s_qing_c-54",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_c.geojson",
+      "id": "s_qing_c-polity-324",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_d.geojson",
+      "id": "s_qing_d-19",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_d.geojson",
+      "id": "s_qing_d-20",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_d.geojson",
+      "id": "s_qing_d-21",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_qing_d.geojson",
+      "id": "s_qing_d-57",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_d.geojson",
+      "id": "s_qing_d-polity-326",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_e.geojson",
+      "id": "s_qing_e-19",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_e.geojson",
+      "id": "s_qing_e-20",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_e.geojson",
+      "id": "s_qing_e-21",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_qing_e.geojson",
+      "id": "s_qing_e-57",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_e.geojson",
+      "id": "s_qing_e-polity-324",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_e2.geojson",
+      "id": "s_qing_e2-19",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_e2.geojson",
+      "id": "s_qing_e2-20",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_e2.geojson",
+      "id": "s_qing_e2-21",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_qing_e2.geojson",
+      "id": "s_qing_e2-57",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_e2.geojson",
+      "id": "s_qing_e2-polity-325",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_e3.geojson",
+      "id": "s_qing_e3-19",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_e3.geojson",
+      "id": "s_qing_e3-20",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_e3.geojson",
+      "id": "s_qing_e3-21",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_qing_e3.geojson",
+      "id": "s_qing_e3-57",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_e3.geojson",
+      "id": "s_qing_e3-polity-325",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_e4.geojson",
+      "id": "s_qing_e4-19",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_e4.geojson",
+      "id": "s_qing_e4-57",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_e4.geojson",
+      "id": "s_qing_e4-polity-325",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_f.geojson",
+      "id": "s_qing_f-19",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_f.geojson",
+      "id": "s_qing_f-23",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_qing_f.geojson",
+      "id": "s_qing_f-57",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_f.geojson",
+      "id": "s_qing_f-polity-308",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_f0.geojson",
+      "id": "s_qing_f0-19",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_f0.geojson",
+      "id": "s_qing_f0-23",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_qing_f0.geojson",
+      "id": "s_qing_f0-57",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_f0.geojson",
+      "id": "s_qing_f0-polity-309",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_g.geojson",
+      "id": "s_qing_g-18",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_g.geojson",
+      "id": "s_qing_g-22",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_qing_g.geojson",
+      "id": "s_qing_g-56",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_g.geojson",
+      "id": "s_qing_g-polity-312",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_g0.geojson",
+      "id": "s_qing_g0-18",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_g0.geojson",
+      "id": "s_qing_g0-22",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_qing_g0.geojson",
+      "id": "s_qing_g0-56",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_qing_g0.geojson",
+      "id": "s_qing_g0-polity-308",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc.geojson",
+      "id": "s_roc-16",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_roc.geojson",
+      "id": "s_roc-26",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc.geojson",
+      "id": "s_roc-27",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_roc.geojson",
+      "id": "s_roc-70",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc.geojson",
+      "id": "s_roc-polity-378",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_a.geojson",
+      "id": "s_roc_a-16",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_roc_a.geojson",
+      "id": "s_roc_a-26",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_a.geojson",
+      "id": "s_roc_a-27",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_roc_a.geojson",
+      "id": "s_roc_a-70",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_a.geojson",
+      "id": "s_roc_a-polity-377",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_a0.geojson",
+      "id": "s_roc_a0-16",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_roc_a0.geojson",
+      "id": "s_roc_a0-26",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_a0.geojson",
+      "id": "s_roc_a0-27",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_roc_a0.geojson",
+      "id": "s_roc_a0-70",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_a0.geojson",
+      "id": "s_roc_a0-polity-377",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_b0.geojson",
+      "id": "s_roc_b0-16",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_roc_b0.geojson",
+      "id": "s_roc_b0-26",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_b0.geojson",
+      "id": "s_roc_b0-27",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_roc_b0.geojson",
+      "id": "s_roc_b0-70",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_b0.geojson",
+      "id": "s_roc_b0-polity-376",
+      "holesFilled": 0,
+      "fragmentsRemoved": 3
+    },
+    {
+      "file": "s_roc_b0.geojson",
+      "id": "s_roc_b0-polity-377",
+      "holesFilled": 2,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_roc_b0.geojson",
+      "id": "s_roc_b0-polity-378",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_c.geojson",
+      "id": "s_roc_c-17",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_roc_c.geojson",
+      "id": "s_roc_c-27",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_c.geojson",
+      "id": "s_roc_c-28",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_roc_c.geojson",
+      "id": "s_roc_c-71",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_c.geojson",
+      "id": "s_roc_c-polity-378",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_d.geojson",
+      "id": "s_roc_d-16",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_roc_d.geojson",
+      "id": "s_roc_d-26",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_d.geojson",
+      "id": "s_roc_d-27",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_roc_d.geojson",
+      "id": "s_roc_d-70",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_d.geojson",
+      "id": "s_roc_d-polity-377",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_w1.geojson",
+      "id": "s_roc_w1-16",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_roc_w1.geojson",
+      "id": "s_roc_w1-26",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_w1.geojson",
+      "id": "s_roc_w1-27",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_roc_w1.geojson",
+      "id": "s_roc_w1-70",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_w1.geojson",
+      "id": "s_roc_w1-polity-380",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_roc_w1.geojson",
+      "id": "s_roc_w1-polity-382",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_roc_w1.geojson",
+      "id": "s_roc_w1-polity-383",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_w2.geojson",
+      "id": "s_roc_w2-16",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_roc_w2.geojson",
+      "id": "s_roc_w2-26",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_w2.geojson",
+      "id": "s_roc_w2-27",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_roc_w2.geojson",
+      "id": "s_roc_w2-70",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_w2.geojson",
+      "id": "s_roc_w2-polity-381",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_roc_w2.geojson",
+      "id": "s_roc_w2-polity-383",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_roc_w2.geojson",
+      "id": "s_roc_w2-polity-384",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_w3.geojson",
+      "id": "s_roc_w3-16",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_roc_w3.geojson",
+      "id": "s_roc_w3-26",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_w3.geojson",
+      "id": "s_roc_w3-27",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_roc_w3.geojson",
+      "id": "s_roc_w3-70",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_w3.geojson",
+      "id": "s_roc_w3-polity-382",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_roc_w3.geojson",
+      "id": "s_roc_w3-polity-383",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_roc_w3.geojson",
+      "id": "s_roc_w3-polity-384",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_w4.geojson",
+      "id": "s_roc_w4-16",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_roc_w4.geojson",
+      "id": "s_roc_w4-26",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_w4.geojson",
+      "id": "s_roc_w4-27",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_roc_w4.geojson",
+      "id": "s_roc_w4-70",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_roc_w4.geojson",
+      "id": "s_roc_w4-polity-376",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_roc_w4.geojson",
+      "id": "s_roc_w4-polity-378",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_roc_w4.geojson",
+      "id": "s_roc_w4-polity-379",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_sanguo.geojson",
+      "id": "s_sanguo-28",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_sanguo.geojson",
+      "id": "s_sanguo-polity-41",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_sanguo.geojson",
+      "id": "s_sanguo-polity-52",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_sanguo_a.geojson",
+      "id": "s_sanguo_a-28",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_sanguo_a.geojson",
+      "id": "s_sanguo_a-polity-41",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_sanguo_a.geojson",
+      "id": "s_sanguo_a-polity-43",
+      "holesFilled": 2,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_sanguo_a.geojson",
+      "id": "s_sanguo_a-polity-53",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_sanguo_b.geojson",
+      "id": "s_sanguo_b-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_sanguo_b.geojson",
+      "id": "s_sanguo_b-28",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_sanguo_b.geojson",
+      "id": "s_sanguo_b-polity-41",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_sanguo_b.geojson",
+      "id": "s_sanguo_b-polity-51",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_sanguo_c.geojson",
+      "id": "s_sanguo_c-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_sanguo_c.geojson",
+      "id": "s_sanguo_c-28",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_sanguo_c.geojson",
+      "id": "s_sanguo_c-polity-41",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_sanguo_c.geojson",
+      "id": "s_sanguo_c-polity-51",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_sui.geojson",
+      "id": "s_sui-1",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_sui.geojson",
+      "id": "s_sui-polity-101",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_sui.geojson",
+      "id": "s_sui-polity-102",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_sui_a.geojson",
+      "id": "s_sui_a-1",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_sui_a.geojson",
+      "id": "s_sui_a-polity-97",
+      "holesFilled": 0,
+      "fragmentsRemoved": 5
+    },
+    {
+      "file": "s_sui_a.geojson",
+      "id": "s_sui_a-polity-103",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_sui_a.geojson",
+      "id": "s_sui_a-polity-104",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_sui_a2.geojson",
+      "id": "s_sui_a2-1",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_sui_a2.geojson",
+      "id": "s_sui_a2-polity-96",
+      "holesFilled": 0,
+      "fragmentsRemoved": 5
+    },
+    {
+      "file": "s_sui_a2.geojson",
+      "id": "s_sui_a2-polity-102",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_sui_a2.geojson",
+      "id": "s_sui_a2-polity-103",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_sui_c.geojson",
+      "id": "s_sui_c-1",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_sui_c.geojson",
+      "id": "s_sui_c-polity-102",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_sui_c.geojson",
+      "id": "s_sui_c-polity-103",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_sui_d.geojson",
+      "id": "s_sui_d-1",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_sui_d.geojson",
+      "id": "s_sui_d-polity-90",
+      "holesFilled": 15,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_sui_d.geojson",
+      "id": "s_sui_d-polity-91",
+      "holesFilled": 4,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_sui_d.geojson",
+      "id": "s_sui_d-polity-92",
+      "holesFilled": 0,
+      "fragmentsRemoved": 3
+    },
+    {
+      "file": "s_sui_d.geojson",
+      "id": "s_sui_d-polity-93",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_sui_d.geojson",
+      "id": "s_sui_d-polity-94",
+      "holesFilled": 1,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_sui_d.geojson",
+      "id": "s_sui_d-polity-96",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_sui_d.geojson",
+      "id": "s_sui_d-polity-108",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_sui_d.geojson",
+      "id": "s_sui_d-polity-109",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_0.geojson",
+      "id": "s_tang_0-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_0.geojson",
+      "id": "s_tang_0-88",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_tang_0.geojson",
+      "id": "s_tang_0-polity-128",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_0.geojson",
+      "id": "s_tang_0-polity-131",
+      "holesFilled": 13,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_tang_0.geojson",
+      "id": "s_tang_0-polity-132",
+      "holesFilled": 2,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_tang_0.geojson",
+      "id": "s_tang_0-polity-148",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_0.geojson",
+      "id": "s_tang_0-polity-155",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a.geojson",
+      "id": "s_tang_a-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a.geojson",
+      "id": "s_tang_a-88",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_tang_a.geojson",
+      "id": "s_tang_a-polity-142",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a.geojson",
+      "id": "s_tang_a-polity-149",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a.geojson",
+      "id": "s_tang_a-polity-152",
+      "holesFilled": 0,
+      "fragmentsRemoved": 3
+    },
+    {
+      "file": "s_tang_a0.geojson",
+      "id": "s_tang_a0-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a0.geojson",
+      "id": "s_tang_a0-88",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_tang_a0.geojson",
+      "id": "s_tang_a0-polity-145",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a0.geojson",
+      "id": "s_tang_a0-polity-152",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a1.geojson",
+      "id": "s_tang_a1-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a1.geojson",
+      "id": "s_tang_a1-88",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_tang_a1.geojson",
+      "id": "s_tang_a1-polity-145",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a1.geojson",
+      "id": "s_tang_a1-polity-152",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a1b.geojson",
+      "id": "s_tang_a1b-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a1b.geojson",
+      "id": "s_tang_a1b-88",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_tang_a1b.geojson",
+      "id": "s_tang_a1b-polity-145",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a1b.geojson",
+      "id": "s_tang_a1b-polity-152",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a2.geojson",
+      "id": "s_tang_a2-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a2.geojson",
+      "id": "s_tang_a2-88",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_tang_a2.geojson",
+      "id": "s_tang_a2-polity-146",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a2.geojson",
+      "id": "s_tang_a2-polity-153",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a2b.geojson",
+      "id": "s_tang_a2b-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a2b.geojson",
+      "id": "s_tang_a2b-88",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_tang_a2b.geojson",
+      "id": "s_tang_a2b-polity-146",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a2b.geojson",
+      "id": "s_tang_a2b-polity-153",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a3.geojson",
+      "id": "s_tang_a3-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a3.geojson",
+      "id": "s_tang_a3-88",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_tang_a3.geojson",
+      "id": "s_tang_a3-polity-145",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a3.geojson",
+      "id": "s_tang_a3-polity-152",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a4.geojson",
+      "id": "s_tang_a4-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a4.geojson",
+      "id": "s_tang_a4-88",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_tang_a4.geojson",
+      "id": "s_tang_a4-polity-144",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a4.geojson",
+      "id": "s_tang_a4-polity-150",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a4.geojson",
+      "id": "s_tang_a4-polity-153",
+      "holesFilled": 0,
+      "fragmentsRemoved": 3
+    },
+    {
+      "file": "s_tang_a5.geojson",
+      "id": "s_tang_a5-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a5.geojson",
+      "id": "s_tang_a5-88",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_tang_a5.geojson",
+      "id": "s_tang_a5-polity-142",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a5.geojson",
+      "id": "s_tang_a5-polity-149",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_a5.geojson",
+      "id": "s_tang_a5-polity-153",
+      "holesFilled": 0,
+      "fragmentsRemoved": 3
+    },
+    {
+      "file": "s_tang_b.geojson",
+      "id": "s_tang_b-87",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_tang_b.geojson",
+      "id": "s_tang_b-polity-137",
+      "holesFilled": 0,
+      "fragmentsRemoved": 3
+    },
+    {
+      "file": "s_tang_b.geojson",
+      "id": "s_tang_b-polity-142",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_b.geojson",
+      "id": "s_tang_b-polity-149",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_tang_b0.geojson",
+      "id": "s_tang_b0-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_b0.geojson",
+      "id": "s_tang_b0-88",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_tang_b0.geojson",
+      "id": "s_tang_b0-polity-140",
+      "holesFilled": 0,
+      "fragmentsRemoved": 3
+    },
+    {
+      "file": "s_tang_b0.geojson",
+      "id": "s_tang_b0-polity-145",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_b0.geojson",
+      "id": "s_tang_b0-polity-152",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_tang_b0a.geojson",
+      "id": "s_tang_b0a-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_b0a.geojson",
+      "id": "s_tang_b0a-88",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_tang_b0a.geojson",
+      "id": "s_tang_b0a-polity-141",
+      "holesFilled": 0,
+      "fragmentsRemoved": 3
+    },
+    {
+      "file": "s_tang_b0a.geojson",
+      "id": "s_tang_b0a-polity-146",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_b0a.geojson",
+      "id": "s_tang_b0a-polity-153",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_tang_b0b.geojson",
+      "id": "s_tang_b0b-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_b0b.geojson",
+      "id": "s_tang_b0b-88",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_tang_b0b.geojson",
+      "id": "s_tang_b0b-polity-128",
+      "holesFilled": 0,
+      "fragmentsRemoved": 4
+    },
+    {
+      "file": "s_tang_b0b.geojson",
+      "id": "s_tang_b0b-polity-129",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_b0b.geojson",
+      "id": "s_tang_b0b-polity-141",
+      "holesFilled": 0,
+      "fragmentsRemoved": 3
+    },
+    {
+      "file": "s_tang_b0b.geojson",
+      "id": "s_tang_b0b-polity-146",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_b0b.geojson",
+      "id": "s_tang_b0b-polity-153",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_tang_b1.geojson",
+      "id": "s_tang_b1-87",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_tang_b1.geojson",
+      "id": "s_tang_b1-polity-139",
+      "holesFilled": 0,
+      "fragmentsRemoved": 3
+    },
+    {
+      "file": "s_tang_b1.geojson",
+      "id": "s_tang_b1-polity-144",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_b1.geojson",
+      "id": "s_tang_b1-polity-151",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_tang_c.geojson",
+      "id": "s_tang_c-6",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_tang_c.geojson",
+      "id": "s_tang_c-88",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_tang_c.geojson",
+      "id": "s_tang_c-polity-130",
+      "holesFilled": 0,
+      "fragmentsRemoved": 4
+    },
+    {
+      "file": "s_tang_c.geojson",
+      "id": "s_tang_c-polity-139",
+      "holesFilled": 0,
+      "fragmentsRemoved": 3
+    },
+    {
+      "file": "s_tang_c.geojson",
+      "id": "s_tang_c-polity-144",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_c.geojson",
+      "id": "s_tang_c-polity-151",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_tang_d1.geojson",
+      "id": "s_tang_d1-6",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_tang_d1.geojson",
+      "id": "s_tang_d1-88",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_tang_d1.geojson",
+      "id": "s_tang_d1-polity-129",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_tang_d1.geojson",
+      "id": "s_tang_d1-polity-131",
+      "holesFilled": 0,
+      "fragmentsRemoved": 4
+    },
+    {
+      "file": "s_tang_d1.geojson",
+      "id": "s_tang_d1-polity-140",
+      "holesFilled": 0,
+      "fragmentsRemoved": 3
+    },
+    {
+      "file": "s_tang_d1.geojson",
+      "id": "s_tang_d1-polity-145",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_d1.geojson",
+      "id": "s_tang_d1-polity-152",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_tang_d2.geojson",
+      "id": "s_tang_d2-6",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_tang_d2.geojson",
+      "id": "s_tang_d2-88",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_tang_d2.geojson",
+      "id": "s_tang_d2-polity-128",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_d2.geojson",
+      "id": "s_tang_d2-polity-129",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_d2.geojson",
+      "id": "s_tang_d2-polity-134",
+      "holesFilled": 17,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_tang_d2.geojson",
+      "id": "s_tang_d2-polity-138",
+      "holesFilled": 0,
+      "fragmentsRemoved": 7
+    },
+    {
+      "file": "s_tang_d2.geojson",
+      "id": "s_tang_d2-polity-139",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_d2.geojson",
+      "id": "s_tang_d2-polity-147",
+      "holesFilled": 0,
+      "fragmentsRemoved": 3
+    },
+    {
+      "file": "s_tang_d2.geojson",
+      "id": "s_tang_d2-polity-152",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_tang_d2.geojson",
+      "id": "s_tang_d2-polity-159",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_wudai_a.geojson",
+      "id": "s_wudai_a-127",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_wudai_a.geojson",
+      "id": "s_wudai_a-polity-158",
+      "holesFilled": 18,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_wudai_a.geojson",
+      "id": "s_wudai_a-polity-160",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_wudai_b.geojson",
+      "id": "s_wudai_b-11",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_wudai_b.geojson",
+      "id": "s_wudai_b-127",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_wudai_b.geojson",
+      "id": "s_wudai_b-polity-158",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_wudai_b1.geojson",
+      "id": "s_wudai_b1-127",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_wudai_b1.geojson",
+      "id": "s_wudai_b1-polity-157",
+      "holesFilled": 18,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_wudai_b1.geojson",
+      "id": "s_wudai_b1-polity-159",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_wudai_b2.geojson",
+      "id": "s_wudai_b2-127",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_wudai_b2.geojson",
+      "id": "s_wudai_b2-polity-157",
+      "holesFilled": 18,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_wudai_b2.geojson",
+      "id": "s_wudai_b2-polity-159",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_wudai_c.geojson",
+      "id": "s_wudai_c-126",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_wudai_c.geojson",
+      "id": "s_wudai_c-polity-156",
+      "holesFilled": 18,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_wudai_c.geojson",
+      "id": "s_wudai_c-polity-158",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_wudai_c.geojson",
+      "id": "s_wudai_c-polity-159",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_wudai_c0.geojson",
+      "id": "s_wudai_c0-126",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_wudai_c0.geojson",
+      "id": "s_wudai_c0-polity-156",
+      "holesFilled": 18,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_wudai_c0.geojson",
+      "id": "s_wudai_c0-polity-158",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_wudai_c0.geojson",
+      "id": "s_wudai_c0-polity-159",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_wudai_c2.geojson",
+      "id": "s_wudai_c2-126",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_wudai_c2.geojson",
+      "id": "s_wudai_c2-polity-155",
+      "holesFilled": 18,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_wudai_c2.geojson",
+      "id": "s_wudai_c2-polity-157",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_wudai_c2.geojson",
+      "id": "s_wudai_c2-polity-158",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_wudai_d.geojson",
+      "id": "s_wudai_d-126",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_wudai_d.geojson",
+      "id": "s_wudai_d-polity-155",
+      "holesFilled": 18,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_wudai_d.geojson",
+      "id": "s_wudai_d-polity-157",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_wudai_d.geojson",
+      "id": "s_wudai_d-polity-158",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_wudai_e.geojson",
+      "id": "s_wudai_e-126",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_wudai_e.geojson",
+      "id": "s_wudai_e-polity-156",
+      "holesFilled": 18,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_wudai_e.geojson",
+      "id": "s_wudai_e-polity-158",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_wudai_e.geojson",
+      "id": "s_wudai_e-polity-159",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_wudai_e1.geojson",
+      "id": "s_wudai_e1-126",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_wudai_e1.geojson",
+      "id": "s_wudai_e1-polity-156",
+      "holesFilled": 18,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_wudai_e1.geojson",
+      "id": "s_wudai_e1-polity-158",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_wudai_e1.geojson",
+      "id": "s_wudai_e1-polity-159",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_wudai_e2.geojson",
+      "id": "s_wudai_e2-126",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_wudai_e2.geojson",
+      "id": "s_wudai_e2-polity-156",
+      "holesFilled": 18,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_wudai_e2.geojson",
+      "id": "s_wudai_e2-polity-158",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_wudai_e2.geojson",
+      "id": "s_wudai_e2-polity-159",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_a.geojson",
+      "id": "s_xihan_a-19",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_xihan_a.geojson",
+      "id": "s_xihan_a-38",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_a.geojson",
+      "id": "s_xihan_a-41",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_a.geojson",
+      "id": "s_xihan_a-56",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_a.geojson",
+      "id": "s_xihan_a-polity-72",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_a.geojson",
+      "id": "s_xihan_a-polity-79",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_xihan_b.geojson",
+      "id": "s_xihan_b-20",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_xihan_b.geojson",
+      "id": "s_xihan_b-39",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_b.geojson",
+      "id": "s_xihan_b-42",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_b.geojson",
+      "id": "s_xihan_b-57",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_b.geojson",
+      "id": "s_xihan_b-polity-70",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_b1.geojson",
+      "id": "s_xihan_b1-19",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_xihan_b1.geojson",
+      "id": "s_xihan_b1-38",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_b1.geojson",
+      "id": "s_xihan_b1-41",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_b1.geojson",
+      "id": "s_xihan_b1-56",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_b1.geojson",
+      "id": "s_xihan_b1-polity-72",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_b1.geojson",
+      "id": "s_xihan_b1-polity-79",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_xihan_b2.geojson",
+      "id": "s_xihan_b2-19",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_xihan_b2.geojson",
+      "id": "s_xihan_b2-38",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_b2.geojson",
+      "id": "s_xihan_b2-41",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_b2.geojson",
+      "id": "s_xihan_b2-56",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_b2.geojson",
+      "id": "s_xihan_b2-polity-72",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_b2.geojson",
+      "id": "s_xihan_b2-polity-79",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_xihan_b3.geojson",
+      "id": "s_xihan_b3-20",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_xihan_b3.geojson",
+      "id": "s_xihan_b3-39",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_b3.geojson",
+      "id": "s_xihan_b3-42",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_b3.geojson",
+      "id": "s_xihan_b3-57",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_b3.geojson",
+      "id": "s_xihan_b3-polity-70",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_c.geojson",
+      "id": "s_xihan_c-20",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_xihan_c.geojson",
+      "id": "s_xihan_c-39",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_c.geojson",
+      "id": "s_xihan_c-42",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_c.geojson",
+      "id": "s_xihan_c-57",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_c.geojson",
+      "id": "s_xihan_c-polity-71",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_d.geojson",
+      "id": "s_xihan_d-20",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_xihan_d.geojson",
+      "id": "s_xihan_d-39",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_d.geojson",
+      "id": "s_xihan_d-42",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_d.geojson",
+      "id": "s_xihan_d-57",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_d.geojson",
+      "id": "s_xihan_d-polity-71",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_e.geojson",
+      "id": "s_xihan_e-20",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_xihan_e.geojson",
+      "id": "s_xihan_e-39",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_e.geojson",
+      "id": "s_xihan_e-42",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_e.geojson",
+      "id": "s_xihan_e-57",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xihan_e.geojson",
+      "id": "s_xihan_e-polity-66",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_xihan_e.geojson",
+      "id": "s_xihan_e-polity-75",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xijin.geojson",
+      "id": "s_xijin-2",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xijin.geojson",
+      "id": "s_xijin-46",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_xijin.geojson",
+      "id": "s_xijin-polity-68",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xijin_a.geojson",
+      "id": "s_xijin_a-2",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xijin_a.geojson",
+      "id": "s_xijin_a-46",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_xijin_a.geojson",
+      "id": "s_xijin_a-polity-66",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xijin_a2.geojson",
+      "id": "s_xijin_a2-2",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xijin_a2.geojson",
+      "id": "s_xijin_a2-46",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_xijin_a2.geojson",
+      "id": "s_xijin_a2-polity-59",
+      "holesFilled": 0,
+      "fragmentsRemoved": 3
+    },
+    {
+      "file": "s_xijin_a2.geojson",
+      "id": "s_xijin_a2-polity-68",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xijin_b.geojson",
+      "id": "s_xijin_b-2",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_xijin_b.geojson",
+      "id": "s_xijin_b-46",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_xijin_b.geojson",
+      "id": "s_xijin_b-polity-68",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_yuan.geojson",
+      "id": "s_yuan-2",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_yuan.geojson",
+      "id": "s_yuan-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_yuan.geojson",
+      "id": "s_yuan-230",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_yuan.geojson",
+      "id": "s_yuan-polity-261",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_yuan_a.geojson",
+      "id": "s_yuan_a-2",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_yuan_a.geojson",
+      "id": "s_yuan_a-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_yuan_a.geojson",
+      "id": "s_yuan_a-230",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_yuan_a.geojson",
+      "id": "s_yuan_a-polity-262",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_yuan_b.geojson",
+      "id": "s_yuan_b-2",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_yuan_b.geojson",
+      "id": "s_yuan_b-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_yuan_b.geojson",
+      "id": "s_yuan_b-230",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_yuan_b.geojson",
+      "id": "s_yuan_b-polity-260",
+      "holesFilled": 46,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_yuan_b.geojson",
+      "id": "s_yuan_b-polity-261",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_yuan_b.geojson",
+      "id": "s_yuan_b-polity-262",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_yuan_b.geojson",
+      "id": "s_yuan_b-polity-264",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_yuan_b.geojson",
+      "id": "s_yuan_b-polity-266",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_yuan_c.geojson",
+      "id": "s_yuan_c-2",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_yuan_c.geojson",
+      "id": "s_yuan_c-6",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_yuan_c.geojson",
+      "id": "s_yuan_c-230",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_yuan_c.geojson",
+      "id": "s_yuan_c-polity-260",
+      "holesFilled": 45,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_yuan_c.geojson",
+      "id": "s_yuan_c-polity-261",
+      "holesFilled": 10,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_yuan_c.geojson",
+      "id": "s_yuan_c-polity-265",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_yuan_c.geojson",
+      "id": "s_yuan_c-polity-283",
+      "holesFilled": 1,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_zhanguo_a.geojson",
+      "id": "s_zhanguo_a-polity-21",
+      "holesFilled": 2,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_zhanguo_a.geojson",
+      "id": "s_zhanguo_a-polity-29",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_zhanguo_a.geojson",
+      "id": "s_zhanguo_a-polity-36",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_zhanguo_a2.geojson",
+      "id": "s_zhanguo_a2-polity-21",
+      "holesFilled": 2,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_zhanguo_a2.geojson",
+      "id": "s_zhanguo_a2-polity-29",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_zhanguo_a2.geojson",
+      "id": "s_zhanguo_a2-polity-36",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_zhanguo_b.geojson",
+      "id": "s_zhanguo_b-polity-37",
+      "holesFilled": 2,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_zhanguo_b.geojson",
+      "id": "s_zhanguo_b-polity-45",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_zhanguo_b.geojson",
+      "id": "s_zhanguo_b-polity-52",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_zhanguo_b0.geojson",
+      "id": "s_zhanguo_b0-polity-25",
+      "holesFilled": 2,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_zhanguo_b0.geojson",
+      "id": "s_zhanguo_b0-polity-33",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_zhanguo_b0.geojson",
+      "id": "s_zhanguo_b0-polity-40",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_zhanguo_b1.geojson",
+      "id": "s_zhanguo_b1-polity-24",
+      "holesFilled": 2,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_zhanguo_b1.geojson",
+      "id": "s_zhanguo_b1-polity-32",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_zhanguo_b1.geojson",
+      "id": "s_zhanguo_b1-polity-39",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_zhanguo_b2.geojson",
+      "id": "s_zhanguo_b2-polity-37",
+      "holesFilled": 2,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_zhanguo_b2.geojson",
+      "id": "s_zhanguo_b2-polity-45",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_zhanguo_b2.geojson",
+      "id": "s_zhanguo_b2-polity-52",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_zhanguo_c.geojson",
+      "id": "s_zhanguo_c-polity-46",
+      "holesFilled": 2,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_zhanguo_c.geojson",
+      "id": "s_zhanguo_c-polity-54",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_zhanguo_c.geojson",
+      "id": "s_zhanguo_c-polity-61",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_zhanguo_c2.geojson",
+      "id": "s_zhanguo_c2-polity-48",
+      "holesFilled": 2,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_zhanguo_c2.geojson",
+      "id": "s_zhanguo_c2-polity-56",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_zhanguo_c2.geojson",
+      "id": "s_zhanguo_c2-polity-63",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_zhanguo_d.geojson",
+      "id": "s_zhanguo_d-polity-50",
+      "holesFilled": 2,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_zhanguo_d.geojson",
+      "id": "s_zhanguo_d-polity-58",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_zhanguo_d.geojson",
+      "id": "s_zhanguo_d-polity-65",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_zhanguo_e1.geojson",
+      "id": "s_zhanguo_e1-polity-51",
+      "holesFilled": 2,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_zhanguo_e1.geojson",
+      "id": "s_zhanguo_e1-polity-59",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_zhanguo_e1.geojson",
+      "id": "s_zhanguo_e1-polity-66",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_zhanguo_e2.geojson",
+      "id": "s_zhanguo_e2-polity-55",
+      "holesFilled": 2,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_zhanguo_e2.geojson",
+      "id": "s_zhanguo_e2-polity-63",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_zhanguo_e2.geojson",
+      "id": "s_zhanguo_e2-polity-70",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_zhanguo_e3.geojson",
+      "id": "s_zhanguo_e3-polity-55",
+      "holesFilled": 2,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_zhanguo_e3.geojson",
+      "id": "s_zhanguo_e3-polity-63",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_zhanguo_e3.geojson",
+      "id": "s_zhanguo_e3-polity-70",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_zhanguo_e4.geojson",
+      "id": "s_zhanguo_e4-polity-56",
+      "holesFilled": 2,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_zhanguo_e4.geojson",
+      "id": "s_zhanguo_e4-polity-64",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_zhanguo_e4.geojson",
+      "id": "s_zhanguo_e4-polity-71",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    },
+    {
+      "file": "s_zhanguo_e5.geojson",
+      "id": "s_zhanguo_e5-polity-67",
+      "holesFilled": 2,
+      "fragmentsRemoved": 0
+    },
+    {
+      "file": "s_zhanguo_e5.geojson",
+      "id": "s_zhanguo_e5-polity-75",
+      "holesFilled": 0,
+      "fragmentsRemoved": 1
+    },
+    {
+      "file": "s_zhanguo_e5.geojson",
+      "id": "s_zhanguo_e5-polity-82",
+      "holesFilled": 0,
+      "fragmentsRemoved": 2
+    }
+  ]
+}

@@ -17,8 +17,8 @@
         "capitalSiteName": "咸阳",
         "qinXianyangHistoricalDetail": true,
         "sourceId": "qin-xianyang-palace-core-2021",
-        "sourceName": "秦咸阳宫殿群范围（总图参考）",
-        "label": "秦咸阳宫殿群",
+        "sourceName": "秦咸阳宫区（2021考古总图参考）",
+        "label": "秦咸阳宫区",
         "labelCoordinates": [
           108.863,
           34.4183
@@ -30,18 +30,20 @@
         "sourceUrl": "https://www.sohu.com/a/448029716_120006290",
         "referenceUrl": "https://p2.itc.cn/images03/20210201/ed06cf8a2abc415280fa20d01e4e24e2.jpeg",
         "sourceTitle": "中国文化报（2021）：帝国之都现“真容”",
-        "status": "2021年考古总图闭合宫区 · 图示参考，非实测墙界",
-        "note": "依2021年《中国文化报》报道所附、文博中国提供的秦咸阳城遗址总平面图，描绘图例“新确定宫区范围”的闭合外缘，经卫星底图配准。表示战国至秦宫殿区的综合考古图示范围，包含博物馆所依托的原宫殿群及六号宫殿所在区域；不表示各宫殿同时使用，也不是实测宫墙、完整秦咸阳城界或现代遗址公园规划红线。原图约每像素数十米，边线判读和配准有误差；原始遗址构件位置保持不变。",
+        "status": "2021考古总图宫区参考外缘 · 非全城墙界或现行保护区",
+        "note": "依2021年《中国文化报》报道所附、文博中国提供的秦咸阳城遗址总平面图，描绘图例“新确定宫区范围”的闭合外缘，经卫星底图配准。表示战国至秦宫殿区的综合考古图示范围，包含博物馆所依托的原宫殿群及六号宫殿所在区域；不表示各宫殿同时使用，也不是实测宫墙、完整秦咸阳城界或现代遗址公园规划红线。原图约每像素数十米，边线判读和配准有误差；原始遗址构件位置保持不变。 2026-10-28复核：图中数字1—15是图例索引，不是宫殿编号。总图宫区与一、二、三、五、六号宫殿的逐建筑几何分别保留；不以703公顷现代公园规划或旧OSM保护区反推宫区。现有影像配准缺独立测量检核，本轮不作无依据平移，不能称为已完成实测校准。",
         "enSourceName": "Qin Xianyang palace precinct (archaeological plan reference)",
         "enLabel": "Qin Xianyang palace precinct",
-        "enStatus": "Closed precinct from the 2021 archaeological plan; not a surveyed wall",
-        "enNote": "Digitized from the explicitly marked palace precinct in the 2021 plan supplied by Wenbo China, aligned to satellite imagery. A composite Warring States-to-Qin reference, not a synchronous building phase, surveyed enclosure, whole-city limit or modern park boundary. Original site footprints are retained.",
+        "enStatus": "Palace-precinct reference from the 2021 archaeological synthesis; neither city walls nor current legal protection boundary",
+        "enNote": "Digitized from the explicitly marked palace precinct in the 2021 plan supplied by Wenbo China, aligned to satellite imagery. A composite Warring States-to-Qin reference, not a synchronous building phase, surveyed enclosure, whole-city limit or modern park boundary. Original site footprints are retained. Reviewed 2026-10-28: numbers 1–15 are legend indices, not palace numbers. Individual palace geometries remain separate. Neither the 703-ha modern park nor an old OSM protection outline establishes the ancient precinct. No unsupported translation is applied; independent survey validation remains unavailable.",
         "periodNotes": {
           "周": "战国秦国阶段共用宫区地望参考，不能据此认定秦帝国阶段的各建筑均已建成。"
         },
         "calibrationAudit": "docs/qin-xianyang-palace-calibration.json",
         "referenceTitle": "原图：秦咸阳城遗址总平面图（含保护线图例）",
-        "calibrationUrl": "./sources/qin-xianyang.html"
+        "calibrationUrl": "./sources/qin-xianyang.html",
+        "calibrationReviewedAt": "2026-10-28",
+        "boundaryNature": "archaeological_synthesis_reference"
       },
       "geometry": {
         "type": "Polygon",
@@ -99,15 +101,18 @@
         "sourceUrl": "https://www.sohu.com/a/448029716_120006290",
         "referenceUrl": "https://p2.itc.cn/images03/20210201/ed06cf8a2abc415280fa20d01e4e24e2.jpeg",
         "sourceTitle": "中国文化报（2021）：帝国之都现“真容”",
-        "status": "2021年总图保护线可见部分；非2022规划完整法定区划",
-        "note": "按同一考古总图中紫色“遗址保护范围”线提取东部可辨外缘，与既有西部OSM保护区分开显示。两部分显示不代表核定了两个独立法定保护区，也不表示与宫区边界相同。原图西北侧部分边线被绿色墓葬区图层遮盖，保留开放线，不跨遮挡处补线或强行合并。原始OSM保护区和宫殿构件几何保持不变；本线是图示配准参考，非法定保护范围坐标。",
+        "status": "2021旧图保护线参考 · 非2022规划现行法定区划",
+        "note": "按同一考古总图中紫色“遗址保护范围”线提取东部可辨外缘，与既有西部OSM保护区分开显示。两部分显示不代表核定了两个独立法定保护区，也不表示与宫区边界相同。原图西北侧部分边线被绿色墓葬区图层遮盖，保留开放线，不跨遮挡处补线或强行合并。原始OSM保护区和宫殿构件几何保持不变；本线是图示配准参考，非法定保护范围坐标。 本轮复核仍未取得2022年批准规划的完整公开区划图及坐标；2021紫线不能升级为现行法定界线，703公顷遗址公园规划也不能替代。",
         "enSourceName": "Eastern protected-site perimeter (2021 plan reference)",
         "enLabel": "Eastern protection reference",
-        "enStatus": "Visible protection perimeter from the 2021 plan; not a verified statutory boundary",
-        "enNote": "Visible purple protection perimeter traced from the same archaeological plan. Shown separately from the retained western OSM polygon; this does not establish two statutory protection zones. A western segment is obscured by the tomb overlay, so the line remains open without an invented join.",
+        "enStatus": "Reference protection line on a 2021 diagram, not the current legal boundary under the 2022-approved plan",
+        "enNote": "Visible purple protection perimeter traced from the same archaeological plan. Shown separately from the retained western OSM polygon; this does not establish two statutory protection zones. A western segment is obscured by the tomb overlay, so the line remains open without an invented join. The complete current zoning map/coordinates of the plan approved in 2022 remain unavailable; neither this older purple line nor the 703-ha archaeological park is substituted for that legal boundary.",
         "calibrationAudit": "docs/qin-xianyang-palace-calibration.json",
         "referenceTitle": "原图：秦咸阳城遗址总平面图（含保护线图例）",
-        "calibrationUrl": "./sources/qin-xianyang.html"
+        "calibrationUrl": "./sources/qin-xianyang.html",
+        "calibrationReviewedAt": "2026-10-28",
+        "boundaryNature": "historical_protection_diagram_reference",
+        "legalBoundaryVerified": false
       },
       "geometry": {
         "type": "LineString",
@@ -215,15 +220,18 @@
         "sourceUrl": "https://www.sohu.com/a/448029716_120006290",
         "referenceUrl": "https://p2.itc.cn/images03/20210201/ed06cf8a2abc415280fa20d01e4e24e2.jpeg",
         "sourceTitle": "中国文化报（2021）：帝国之都现“真容”",
-        "status": "2021年考古总图紫色保护线转绘；非现行法定区划",
-        "note": "补绘2021年考古总图南侧可辨识的独立紫色闭合保护轮廓。沿用总图影像配准，非实测边界；原图未为此片区单独标名，不擅自等同某一作坊或法定分区。2022年新规划已经批准，但未取得可核验的完整现行区划图。",
+        "status": "2021旧图保护线参考 · 非2022规划现行法定区划",
+        "note": "补绘2021年考古总图南侧可辨识的独立紫色闭合保护轮廓。沿用总图影像配准，非实测边界；原图未为此片区单独标名，不擅自等同某一作坊或法定分区。2022年新规划已经批准，但未取得可核验的完整现行区划图。 本轮复核仍未取得2022年批准规划的完整公开区划图及坐标；2021紫线不能升级为现行法定界线，703公顷遗址公园规划也不能替代。",
         "enSourceName": "Eastern protected-site perimeter (2021 plan reference)",
         "enLabel": "Eastern protection reference",
-        "enStatus": "Visible protection perimeter from the 2021 plan; not a verified statutory boundary",
-        "enNote": "Visible purple protection perimeter traced from the same archaeological plan. Shown separately from the retained western OSM polygon; this does not establish two statutory protection zones. A western segment is obscured by the tomb overlay, so the line remains open without an invented join.",
+        "enStatus": "Reference protection line on a 2021 diagram, not the current legal boundary under the 2022-approved plan",
+        "enNote": "Visible purple protection perimeter traced from the same archaeological plan. Shown separately from the retained western OSM polygon; this does not establish two statutory protection zones. A western segment is obscured by the tomb overlay, so the line remains open without an invented join. The complete current zoning map/coordinates of the plan approved in 2022 remain unavailable; neither this older purple line nor the 703-ha archaeological park is substituted for that legal boundary.",
         "calibrationAudit": "docs/qin-xianyang-palace-calibration.json",
         "referenceTitle": "原图：秦咸阳城遗址总平面图（含保护线图例）",
-        "calibrationUrl": "./sources/qin-xianyang.html"
+        "calibrationUrl": "./sources/qin-xianyang.html",
+        "calibrationReviewedAt": "2026-10-28",
+        "boundaryNature": "historical_protection_diagram_reference",
+        "legalBoundaryVerified": false
       },
       "geometry": {
         "type": "Polygon",
@@ -313,7 +321,8 @@
         "calibrationUrl": "./sources/qin-xianyang.html#details",
         "periodNotes": {
           "周": "作为战国秦国至秦代宫区的综合遗迹参照，不表示所有构件均已在前221年建成。"
-        }
+        },
+        "calibrationReviewedAt": "2026-10-28"
       },
       "geometry": {
         "type": "Polygon",
@@ -387,7 +396,8 @@
         "calibrationUrl": "./sources/qin-xianyang.html#details",
         "periodNotes": {
           "周": "作为战国秦国至秦代宫区的综合遗迹参照，不表示所有构件均已在前221年建成。"
-        }
+        },
+        "calibrationReviewedAt": "2026-10-28"
       },
       "geometry": {
         "type": "Polygon",
@@ -461,7 +471,8 @@
         "calibrationUrl": "./sources/qin-xianyang.html#details",
         "periodNotes": {
           "周": "作为战国秦国至秦代宫区的综合遗迹参照，不表示所有构件均已在前221年建成。"
-        }
+        },
+        "calibrationReviewedAt": "2026-10-28"
       },
       "geometry": {
         "type": "Polygon",
@@ -575,7 +586,8 @@
         "calibrationUrl": "./sources/qin-xianyang.html#details",
         "periodNotes": {
           "周": "作为战国秦国至秦代宫区的综合遗迹参照，不表示所有构件均已在前221年建成。"
-        }
+        },
+        "calibrationReviewedAt": "2026-10-28"
       },
       "geometry": {
         "type": "Point",
@@ -629,7 +641,8 @@
         "calibrationUrl": "./sources/qin-xianyang.html#details",
         "periodNotes": {
           "周": "作为战国秦国至秦代宫区的综合遗迹参照，不表示所有构件均已在前221年建成。"
-        }
+        },
+        "calibrationReviewedAt": "2026-10-28"
       },
       "geometry": {
         "type": "LineString",
@@ -689,7 +702,8 @@
         "calibrationUrl": "./sources/qin-xianyang.html#details",
         "periodNotes": {
           "周": "作为战国秦国至秦代宫区的综合遗迹参照，不表示所有构件均已在前221年建成。"
-        }
+        },
+        "calibrationReviewedAt": "2026-10-28"
       },
       "geometry": {
         "type": "Polygon",
@@ -763,7 +777,8 @@
         "calibrationUrl": "./sources/qin-xianyang.html#details",
         "periodNotes": {
           "周": "作为战国秦国至秦代宫区的综合遗迹参照，不表示所有构件均已在前221年建成。"
-        }
+        },
+        "calibrationReviewedAt": "2026-10-28"
       },
       "geometry": {
         "type": "MultiLineString",
@@ -835,7 +850,8 @@
         "calibrationUrl": "./sources/qin-xianyang.html#details",
         "periodNotes": {
           "周": "作为战国秦国至秦代宫区的综合遗迹参照，不表示所有构件均已在前221年建成。"
-        }
+        },
+        "calibrationReviewedAt": "2026-10-28"
       },
       "geometry": {
         "type": "MultiLineString",
@@ -907,7 +923,8 @@
         "calibrationUrl": "./sources/qin-xianyang.html#details",
         "periodNotes": {
           "周": "作为战国秦国至秦代宫区的综合遗迹参照，不表示所有构件均已在前221年建成。"
-        }
+        },
+        "calibrationReviewedAt": "2026-10-28"
       },
       "geometry": {
         "type": "MultiLineString",
@@ -1007,7 +1024,8 @@
         "calibrationUrl": "./sources/qin-xianyang.html#details",
         "periodNotes": {
           "周": "作为战国秦国至秦代宫区的综合遗迹参照，不表示所有构件均已在前221年建成。"
-        }
+        },
+        "calibrationReviewedAt": "2026-10-28"
       },
       "geometry": {
         "type": "Point",
@@ -1061,7 +1079,8 @@
         "calibrationUrl": "./sources/qin-xianyang.html#details",
         "periodNotes": {
           "周": "作为战国秦国至秦代宫区的综合遗迹参照，不表示所有构件均已在前221年建成。"
-        }
+        },
+        "calibrationReviewedAt": "2026-10-28"
       },
       "geometry": {
         "type": "MultiLineString",
@@ -1133,7 +1152,8 @@
         "calibrationUrl": "./sources/qin-xianyang.html#details",
         "periodNotes": {
           "周": "作为战国秦国至秦代宫区的综合遗迹参照，不表示所有构件均已在前221年建成。"
-        }
+        },
+        "calibrationReviewedAt": "2026-10-28"
       },
       "geometry": {
         "type": "MultiLineString",
@@ -1269,7 +1289,10 @@
       645,
       293
     ],
-    "limitations": "北西边被墓葬图层遮盖；未强闭合；旧OSM面未作为法定区划；2025公园703公顷不替代保护范围"
+    "limitations": "北西边被墓葬图层遮盖；未强闭合；旧OSM面未作为法定区划；2025公园703公顷不替代保护范围",
+    "reviewedAt": "2026-10-28",
+    "currentPlanApprovedIn": 2022,
+    "modernParkNotSubstituted": true
   },
   "unlocatedSourceDetails": [
     {

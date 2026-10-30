@@ -1,0 +1,139 @@
+{
+  "reviewedAt": "2026-10-27",
+  "scope": "Six major Maya centres; not all Maya city-states",
+  "sites": [
+    {
+      "key": "tikal",
+      "name": "蒂卡尔",
+      "enName": "Tikal",
+      "center": [
+        -89.6237,
+        17.2221
+      ],
+      "country": "危地马拉",
+      "countryId": "gt",
+      "start": 250,
+      "end": 900,
+      "period": "魏晋南北朝",
+      "periods": [
+        "魏晋南北朝",
+        "隋唐"
+      ],
+      "regime": "玛雅蒂卡尔王国",
+      "whc": 64,
+      "url": "https://whc.unesco.org/en/list/64/",
+      "note": "玛雅低地重要政治、经济与军事中心。250—900年为本目录采用的古典期范围，不是聚落全部存在时间；此前已有聚落。仅以遗址核心附近参照点定位；57600公顷国家公园不是古城范围。完整考古城区界线待核。"
+    },
+    {
+      "key": "calakmul",
+      "name": "卡拉克穆尔",
+      "enName": "Calakmul",
+      "center": [
+        -89.8108,
+        18.1053
+      ],
+      "country": "墨西哥",
+      "countryId": "mx",
+      "start": 600,
+      "end": 900,
+      "period": "隋唐",
+      "periods": [
+        "隋唐"
+      ],
+      "regime": "玛雅卡恩王朝（卡拉克穆尔阶段）",
+      "whc": 1061,
+      "url": "https://whc.unesco.org/en/list/1061/",
+      "note": "晚古典期卡恩（蛇）王朝的重要王都。600—900年为约略阶段，不等于该王朝全部年代或城市初建时间；卡恩王朝较早阶段不一概定位于此。接入的是OSM考古遗址现状范围，不是卡拉克穆尔生物圈保护区或扩展世界遗产的热带森林范围。"
+    },
+    {
+      "key": "copan",
+      "name": "科潘",
+      "enName": "Copán",
+      "center": [
+        -89.141,
+        14.84
+      ],
+      "country": "洪都拉斯",
+      "countryId": "hn",
+      "start": 427,
+      "end": 900,
+      "period": "魏晋南北朝",
+      "periods": [
+        "魏晋南北朝",
+        "隋唐"
+      ],
+      "regime": "玛雅科潘王国",
+      "whc": 129,
+      "url": "https://whc.unesco.org/en/list/129/",
+      "note": "科潘谷地政治与宗教中心；UNESCO记载427年开创的王朝延续16位统治者。目录末年约900表示古典期城市衰落阶段，不是最后一位君主的精确在位终年。遗址区现状边界不是完整城墙。"
+    },
+    {
+      "key": "uxmal",
+      "name": "乌斯马尔",
+      "enName": "Uxmal",
+      "center": [
+        -89.7714,
+        20.3599
+      ],
+      "country": "墨西哥",
+      "countryId": "mx",
+      "start": 700,
+      "end": 1000,
+      "period": "隋唐",
+      "periods": [
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏"
+      ],
+      "regime": "玛雅乌斯马尔地区政治中心",
+      "whc": 791,
+      "url": "https://whc.unesco.org/en/list/791/",
+      "note": "普克地区政治与行政中心。约700—1000年是主要建筑与城市发展阶段；不把后世传统中的创建日期当作精确建城年。此处不推定一个疆界固定的统一玛雅国家。现状遗址区不等于完整古城墙。"
+    },
+    {
+      "key": "caracol",
+      "name": "卡拉科尔",
+      "enName": "Caracol",
+      "center": [
+        -89.1176,
+        16.7639
+      ],
+      "country": "伯利兹",
+      "countryId": "bz",
+      "start": 331,
+      "end": 900,
+      "period": "魏晋南北朝",
+      "periods": [
+        "魏晋南北朝",
+        "隋唐"
+      ],
+      "regime": "玛雅卡拉科尔王国",
+      "url": "https://ticketing.nichbelize.org/ia-sites/caracol/",
+      "research": "https://caracol.org/wp-content/uploads/2022/07/Chase-et-al-2022.pdf",
+      "note": "伯利兹重要玛雅城邦中心，与奇琴伊察的同名“卡拉科尔”天文台分开。研究记载王朝始于331年，约900为城市衰落的阶段参考，不是精确亡国年。定位点在遗址核心附近，未获得可靠完整矢量城界；未用保护区面积、圆形缓冲区或矩形代替城区。"
+    },
+    {
+      "key": "yaxchilan",
+      "name": "亚斯奇兰",
+      "enName": "Yaxchilán",
+      "center": [
+        -90.966,
+        16.8989
+      ],
+      "country": "墨西哥",
+      "countryId": "mx",
+      "start": 350,
+      "end": 850,
+      "period": "魏晋南北朝",
+      "periods": [
+        "魏晋南北朝",
+        "隋唐"
+      ],
+      "regime": "玛雅亚斯奇兰王国",
+      "url": "https://lugares.inah.gob.mx/en/node/4367",
+      "note": "乌苏马辛塔河沿岸城邦。INAH将其王朝记述置于4—9世纪，兴盛期约600—800年；350—850仅为世纪范围的目录近似，不是精确建国或灭亡年份。早期王表含追述和合法性建构的可能，不将其全部视为同时代证据。现状考古遗址区不是城邦疆域。"
+    }
+  ],
+  "featureCount": 16,
+  "geometryNote": "Original OSM geometry for four sites. Tikal and Caracol have reference roots only. No invented bounds; bbox fields are focus windows, never rendered boundaries."
+}

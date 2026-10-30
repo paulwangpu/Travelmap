@@ -6,7 +6,7 @@
     <title>我的全球旅行地图</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" />
-<link rel="stylesheet" href="styles.css?v=281" />
+<link rel="stylesheet" href="styles.css?v=303" />
   </head>
   <body>
     <div class="app-shell map-first-shell">
@@ -36,7 +36,7 @@
             <strong data-i18n="privacyTitle">本地保存</strong>
             <p data-i18n="privacyText">数据只保存在本机浏览器里，不会自动上传或公开。如需备份请导出。</p>
           </div>
-          <div class="app-version" id="appVersion">v2.4.0</div>
+          <div class="app-version" id="appVersion">v2.4.1</div>
         </div>
       </aside>
 
@@ -232,13 +232,6 @@
                   <small data-i18n="geologyClickHint">点击地图查看此处地层与岩性</small>
                   <small id="geologyLegendStatus" role="status"></small>
                   <small class="geology-source" id="geologyCredits"><span id="geologyAttribution"><a href="https://macrostrat.org/map/" target="_blank" rel="noopener">Macrostrat</a> · <a href="https://macrostrat.org/api/v2/defs/sources" target="_blank" rel="noopener" data-i18n="geologyLegendSources">原始图源</a> · CC BY 4.0</span> <button id="retryGeologyLegend" type="button" data-i18n="geologyLegendRetry">刷新</button></small>
-                </aside>
-                <aside class="population-density-legend" id="populationDensityLegend" hidden>
-                  <strong data-i18n="populationDensityLegend">人口密度 · 2020</strong>
-                  <label class="population-density-opacity"><span data-i18n="populationDensityOpacity">透明度</span><input id="populationDensityOpacity" type="range" min="0" max="100" step="1" value="50" /><output id="populationDensityOpacityValue" for="populationDensityOpacity">50%</output></label>
-                  <div class="population-density-scale" aria-hidden="true"></div>
-                  <div class="population-density-labels"><span>20</span><span>400</span><span>2k</span><span>10k</span><span>50k</span><span>200k+</span></div>
-                  <small data-i18n="populationDensityUnit">人 / km² · GHSL</small>
                 </aside>
                 <aside class="population-density-legend" id="ethnicRegionsLegend" hidden>
                   <strong data-i18n="overlayEthnicRegions">民族聚居区</strong>
@@ -466,10 +459,16 @@
 <script src="safeture-risk.js?v=13"></script>
 <script src="great-wall.js?v=42"></script>
 <script src="western-regions.js?v=4"></script>
+<script src="historical-evidence.js?v=1"></script>
 <script src="historical-periods.js?v=9"></script>
-<script src="imperial-tomb-geometry.js?v=3"></script>
-<script src="imperial-tombs.js?v=103"></script>
-<script src="historical-admin.js?v=8"></script>
+<script src="imperial-tomb-geometry.js?v=8"></script>
+<script src="imperial-tombs.js?v=112"></script>
+<script src="historical-admin.js?v=15"></script>
+<script src="history-menu.js?v=2"></script>
+<script src="twha-history.js?v=8"></script>
+<script src="jiangshan-display.js?v=8"></script>
+<script src="jiangshan-history.js?v=18"></script>
+<script src="history-boundaries.js?v=50"></script>
 <script src="map-resolution.js?v=1"></script>
 <script src="vendor/geology/vector-tile.js?v=1"></script>
 <script src="geology-providers.js?v=12"></script>
@@ -479,12 +478,13 @@
 <script src="ethnic-kin.js?v=1"></script>
 <script src="greg-translations.js?v=3"></script>
 <script src="ethnic-regions.js?v=52"></script>
-<script src="ancient-capital-walls.js?v=217"></script>
+<script src="ancient-capital-walls.js?v=218"></script>
 <script src="luoyang-capital-evolution.js?v=23"></script>
 <script src="beijing-capital-evolution.js?v=21"></script>
 <script src="pompeii-sites.js?v=8"></script>
-<script src="classical-sites.js?v=93"></script>
+<script src="classical-sites.js?v=105"></script>
 <script src="capital-map-layers.js?v=21"></script>
-<script src="app.js?v=1140"></script>
+<script src="wenbao-heritage.js?v=7"></script>
+<script src="app.js?v=1168"></script>
   </body>
 </html>

@@ -1798,7 +1798,7 @@
       "url": "https://www.nps.gov/mapr/index.htm",
       "id": "historical-parks:MAPR",
       "hasBoundary": true,
-      "zhName": "曼哈頓計畫國家歷史公園",
+      "zhName": "曼哈顿计划国家历史公园",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -1809,7 +1809,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "MAPR",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "曼哈頓計畫國家歷史公園"
     },
     {
       "code": "MABI",
@@ -2018,7 +2019,7 @@
       "url": "https://www.nps.gov/paal/index.htm",
       "id": "historical-parks:PAAL",
       "hasBoundary": true,
-      "zhName": "帕羅阿托國家戰場歷史公園",
+      "zhName": "帕罗阿托国家战场历史公园",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -2029,7 +2030,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "PAAL",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "帕羅阿托國家戰場歷史公園"
     },
     {
       "code": "PAGR",
@@ -2128,7 +2130,7 @@
       "url": "https://www.nps.gov/reer/index.htm",
       "id": "historical-parks:REER",
       "hasBoundary": true,
-      "zhName": "重建時期國家歷史公園",
+      "zhName": "重建时期国家历史公园",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -2139,7 +2141,8 @@
         "sourceUrl": "https://www.nps.gov/subjects/gisandmapping/tools-and-data.htm",
         "sourceBoundaryCode": "REER",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "重建時期國家歷史公園"
     },
     {
       "code": "RORI",
@@ -2238,7 +2241,7 @@
       "url": "https://www.nps.gov/sajh/index.htm",
       "id": "historical-parks:SAJH",
       "hasBoundary": true,
-      "zhName": "聖胡安島國家歷史公園",
+      "zhName": "圣胡安岛国家历史公园",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -2249,7 +2252,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "SAJH",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "聖胡安島國家歷史公園"
     },
     {
       "code": "SARA",
@@ -3913,7 +3917,7 @@
       "url": "https://www.nps.gov/sair/index.htm",
       "id": "historic-sites:SAIR",
       "hasBoundary": true,
-      "zhName": "索格斯鐵工廠",
+      "zhName": "索格斯铁工厂",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -3924,7 +3928,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "SAIR",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "索格斯鐵工廠"
     },
     {
       "code": "SPAR",
@@ -3935,7 +3940,7 @@
       "url": "https://www.nps.gov/spar/index.htm",
       "id": "historic-sites:SPAR",
       "hasBoundary": true,
-      "zhName": "春田兵工廠",
+      "zhName": "春田兵工厂",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -3946,7 +3951,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "SPAR",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "春田兵工廠"
     },
     {
       "code": "STEA",
@@ -4309,7 +4315,7 @@
       "url": "https://www.nps.gov/arho/index.htm",
       "id": "memorials:ARHO",
       "hasBoundary": true,
-      "zhName": "阿靈頓邸暨羅伯特·E·李紀念地",
+      "zhName": "阿灵顿邸暨罗伯特·E·李纪念地",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -4320,7 +4326,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "ARHO",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "阿靈頓邸暨羅伯特·E·李紀念地"
     },
     {
       "code": "CHAM",
@@ -4441,7 +4448,7 @@
       "url": "https://www.nps.gov/flni/index.htm",
       "id": "memorials:FLNI",
       "hasBoundary": true,
-      "zhName": "聯合航空93號國家紀念館",
+      "zhName": "联合航空93号国家纪念馆",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -4452,7 +4459,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "FLNI",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "聯合航空93號國家紀念館"
     },
     {
       "code": "FRDE",
@@ -4507,7 +4515,7 @@
       "url": "https://www.nps.gov/hagr/index.htm",
       "id": "memorials:HAGR",
       "hasBoundary": true,
-      "zhName": "漢彌爾頓莊園國家紀念館",
+      "zhName": "汉弥尔顿庄园国家纪念馆",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -4518,7 +4526,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "HAGR",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "漢彌爾頓莊園國家紀念館"
     },
     {
       "code": "JOFL",
@@ -4850,7 +4859,7 @@
       "url": "https://www.nps.gov/wamo/index.htm",
       "id": "memorials:WAMO",
       "hasBoundary": true,
-      "zhName": "華盛頓紀念碑",
+      "zhName": "华盛顿纪念碑",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -4861,7 +4870,8 @@
         "sourceUrl": "https://www.nps.gov/subjects/gisandmapping/tools-and-data.htm",
         "sourceBoundaryCode": "WAMO",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "華盛頓紀念碑"
     },
     {
       "code": "WWIM",
@@ -4894,7 +4904,7 @@
       "url": "https://www.nps.gov/wwii/index.htm",
       "id": "memorials:WWII",
       "hasBoundary": true,
-      "zhName": "國家二戰紀念碑",
+      "zhName": "国家二战纪念碑",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -4905,7 +4915,8 @@
         "sourceUrl": "https://www.nps.gov/subjects/gisandmapping/tools-and-data.htm",
         "sourceBoundaryCode": "WWII",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "國家二戰紀念碑"
     },
     {
       "code": "WRBR",
@@ -5180,7 +5191,7 @@
       "url": "https://www.nps.gov/cabr/index.htm",
       "id": "monuments:CABR",
       "hasBoundary": true,
-      "zhName": "卡布里約國家紀念區",
+      "zhName": "卡布里约国家纪念区",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -5191,7 +5202,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "CABR",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "卡布里約國家紀念區"
     },
     {
       "code": "CANE",
@@ -5334,7 +5346,7 @@
       "url": "https://www.nps.gov/casa/index.htm",
       "id": "monuments:CASA",
       "hasBoundary": true,
-      "zhName": "聖馬科斯堡",
+      "zhName": "圣马科斯堡",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -5345,7 +5357,8 @@
         "sourceUrl": "https://www.nps.gov/subjects/gisandmapping/tools-and-data.htm",
         "sourceBoundaryCode": "CASA",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "聖馬科斯堡"
     },
     {
       "code": "CACL",
@@ -5735,7 +5748,7 @@
       "url": "https://www.nps.gov/foma/index.htm",
       "id": "monuments:FOMA",
       "hasBoundary": true,
-      "zhName": "馬坦薩斯堡國家紀念區",
+      "zhName": "马坦萨斯堡国家纪念区",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -5746,7 +5759,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "FOMA",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "馬坦薩斯堡國家紀念區"
     },
     {
       "code": "FOMC",
@@ -5757,7 +5771,7 @@
       "url": "https://www.nps.gov/fomc/index.htm",
       "id": "monuments:FOMC",
       "hasBoundary": true,
-      "zhName": "麥克亨利堡",
+      "zhName": "麦克亨利堡",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -5768,7 +5782,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "FOMC",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "麥克亨利堡"
     },
     {
       "code": "FOMR",
@@ -5779,7 +5794,7 @@
       "url": "https://www.nps.gov/fomr/index.htm",
       "id": "monuments:FOMR",
       "hasBoundary": true,
-      "zhName": "門羅堡",
+      "zhName": "门罗堡",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -5790,7 +5805,8 @@
         "sourceUrl": "https://www.nps.gov/subjects/gisandmapping/tools-and-data.htm",
         "sourceBoundaryCode": "FOMR",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "門羅堡"
     },
     {
       "code": "FOPU",
@@ -6285,7 +6301,7 @@
       "url": "https://www.nps.gov/nabr/index.htm",
       "id": "monuments:NABR",
       "hasBoundary": true,
-      "zhName": "天生橋國家名勝",
+      "zhName": "天生桥国家名胜",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -6296,7 +6312,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "NABR",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "天生橋國家名勝"
     },
     {
       "code": "NAVA",
@@ -6329,7 +6346,7 @@
       "url": "https://www.nps.gov/orca/index.htm",
       "id": "monuments:ORCA",
       "hasBoundary": true,
-      "zhName": "俄勒岡洞穴國家紀念區暨保護區",
+      "zhName": "俄勒冈洞穴国家纪念区暨保护区",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -6340,7 +6357,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "ORCA",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "俄勒岡洞穴國家紀念區暨保護區"
     },
     {
       "code": "ORPI",
@@ -6461,7 +6479,7 @@
       "url": "https://www.nps.gov/rabr/index.htm",
       "id": "monuments:RABR",
       "hasBoundary": true,
-      "zhName": "彩虹橋國家紀念地",
+      "zhName": "彩虹桥国家纪念地",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -6472,7 +6490,8 @@
         "sourceUrl": "https://www.nps.gov/subjects/gisandmapping/tools-and-data.htm",
         "sourceBoundaryCode": "RABR",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "彩虹橋國家紀念地"
     },
     {
       "code": "RUCA",
@@ -6527,7 +6546,7 @@
       "url": "https://www.nps.gov/scbl/index.htm",
       "id": "monuments:SCBL",
       "hasBoundary": true,
-      "zhName": "斯科茨布拉夫國家紀念區",
+      "zhName": "斯科茨布拉夫国家纪念区",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -6538,7 +6557,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "scbl",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "斯科茨布拉夫國家紀念區"
     },
     {
       "code": "SPRA",
@@ -6571,9 +6591,10 @@
       "url": "https://www.nps.gov/stli/index.htm",
       "id": "monuments:STLI",
       "hasBoundary": true,
-      "zhName": "自由女神像國家名勝",
+      "zhName": "自由女神像国家名胜",
       "zhNameSource": "common",
-      "zhNameSourceUrl": "https://zh.wikipedia.org/"
+      "zhNameSourceUrl": "https://zh.wikipedia.org/",
+      "zhNameOriginal": "自由女神像國家名勝"
     },
     {
       "code": "STON",
@@ -6584,7 +6605,7 @@
       "url": "https://www.nps.gov/ston/index.htm",
       "id": "monuments:STON",
       "hasBoundary": true,
-      "zhName": "石牆國家紀念地",
+      "zhName": "石墙国家纪念地",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -6595,7 +6616,8 @@
         "sourceUrl": "https://www.nps.gov/subjects/gisandmapping/tools-and-data.htm",
         "sourceBoundaryCode": "STON",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "石牆國家紀念地"
     },
     {
       "code": "SUCR",
@@ -7256,7 +7278,7 @@
       "url": "https://www.nps.gov/havo/index.htm",
       "id": "parks:HAVO",
       "hasBoundary": true,
-      "zhName": "夏威夷火山國家公園",
+      "zhName": "夏威夷火山国家公园",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -7267,7 +7289,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "HAVO",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "夏威夷火山國家公園"
     },
     {
       "code": "HOSP",
@@ -7450,9 +7473,10 @@
       "url": "https://www.nps.gov/npsa/index.htm",
       "id": "parks:NPSA",
       "hasBoundary": true,
-      "zhName": "美屬薩摩亞國家公園",
+      "zhName": "美属萨摩亚国家公园",
       "zhNameSource": "common",
-      "zhNameSourceUrl": "https://zh.wikipedia.org/"
+      "zhNameSourceUrl": "https://zh.wikipedia.org/",
+      "zhNameOriginal": "美屬薩摩亞國家公園"
     },
     {
       "code": "NERI",
@@ -7713,7 +7737,7 @@
       "url": "https://www.nps.gov/blri/index.htm",
       "id": "parkways:BLRI",
       "hasBoundary": true,
-      "zhName": "藍嶺山行車通道",
+      "zhName": "蓝岭山行车通道",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -7724,7 +7748,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "BLRI",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "藍嶺山行車通道"
     },
     {
       "code": "GWMP",
@@ -7911,7 +7936,7 @@
       "url": "https://www.nps.gov/dena/index.htm",
       "id": "preserves:DENA",
       "hasBoundary": true,
-      "zhName": "迪納利國家公園和保護區",
+      "zhName": "迪纳利国家公园和保护区",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -7922,7 +7947,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "DENA",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "迪納利國家公園和保護區"
     },
     {
       "code": "GAAR",
@@ -7955,7 +7981,7 @@
       "url": "https://www.nps.gov/glba/index.htm",
       "id": "preserves:GLBA",
       "hasBoundary": true,
-      "zhName": "冰川灣國家公園和自然保護區",
+      "zhName": "冰川湾国家公园和自然保护区",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -7966,7 +7992,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "GLBA",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "冰川灣國家公園和自然保護區"
     },
     {
       "code": "GRSA",
@@ -7999,7 +8026,7 @@
       "url": "https://www.nps.gov/katm/index.htm",
       "id": "preserves:KATM",
       "hasBoundary": true,
-      "zhName": "卡特邁國家公園和自然保護區",
+      "zhName": "卡特迈国家公园和自然保护区",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -8010,7 +8037,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "KATM",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "卡特邁國家公園和自然保護區"
     },
     {
       "code": "LACL",
@@ -8021,7 +8049,7 @@
       "url": "https://www.nps.gov/lacl/index.htm",
       "id": "preserves:LACL",
       "hasBoundary": true,
-      "zhName": "克拉克湖國家公園和自然保護區",
+      "zhName": "克拉克湖国家公园和自然保护区",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -8032,7 +8060,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "LACL",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "克拉克湖國家公園和自然保護區"
     },
     {
       "code": "LIRI",
@@ -8175,7 +8204,7 @@
       "url": "https://www.nps.gov/wrst/index.htm",
       "id": "preserves:WRST",
       "hasBoundary": true,
-      "zhName": "蘭格爾-聖埃利亞斯國家公園暨保護區",
+      "zhName": "兰格尔-圣埃利亚斯国家公园暨保护区",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -8186,7 +8215,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "WRST",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "蘭格爾-聖埃利亞斯國家公園暨保護區"
     },
     {
       "code": "YUCH",
@@ -8966,7 +8996,7 @@
       "url": "https://www.nps.gov/appa/index.htm",
       "id": "scenic-trails:APPA",
       "hasBoundary": true,
-      "zhName": "阿帕拉契小徑",
+      "zhName": "阿帕拉契小径",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -8977,7 +9007,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "APPA",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "阿帕拉契小徑"
     },
     {
       "code": "IATR",
@@ -9294,7 +9325,7 @@
       "url": "https://www.nps.gov/pore/index.htm",
       "id": "seashores:PORE",
       "hasBoundary": true,
-      "zhName": "雷斯岬國家海岸公園",
+      "zhName": "雷斯岬国家海岸公园",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -9305,7 +9336,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "PORE",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "雷斯岬國家海岸公園"
     },
     {
       "code": "CATO",
@@ -9360,7 +9392,7 @@
       "url": "https://www.nps.gov/fowa/index.htm",
       "id": "other-designations:FOWA",
       "hasBoundary": true,
-      "zhName": "華盛頓堡公園",
+      "zhName": "华盛顿堡公园",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -9371,7 +9403,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "FOWA",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "華盛頓堡公園"
     },
     {
       "code": "GREE",
@@ -9492,7 +9525,7 @@
       "url": "https://www.nps.gov/rocr/index.htm",
       "id": "other-designations:ROCR",
       "hasBoundary": true,
-      "zhName": "岩溪公園",
+      "zhName": "岩溪公园",
       "zhNameSource": "common",
       "zhNameSourceUrl": "https://zh.wikipedia.org/",
       "mapPoint": {
@@ -9503,7 +9536,8 @@
         "sourceUrl": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
         "sourceUnitCode": "ROCR",
         "checked": "2026-10-23"
-      }
+      },
+      "zhNameOriginal": "岩溪公園"
     },
     {
       "code": "WHHO",
@@ -9557,5 +9591,6 @@
     "project": 297
   },
   "updateNote": "Chiricahua redesignated October 20, 2026; existing identity and boundary retained. Other units retain their prior review dates.",
-  "mapPointsUpdated": "2026-10-23"
+  "mapPointsUpdated": "2026-10-23",
+  "chineseScript": "Simplified Chinese (OpenCC tw-to-cn); original source names retained when converted"
 }

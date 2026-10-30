@@ -1,0 +1,305 @@
+{
+  "reference": "https://www.obda.or.jp/about/history/md-transition.html",
+  "image": "https://www.obda.or.jp/wp-content/uploads/2023/07/osakajo_sogamae_1large.jpg",
+  "method": "affine fit from identifiable present moat corners and Hommachi bridge; digitized full outer circuit from comparative reconstruction map",
+  "controlPoints": [
+    {
+      "name": "western moat bend",
+      "pixel": [
+        298,
+        166
+      ],
+      "wgs84": [
+        135.5204574,
+        34.6882451
+      ],
+      "source": "https://www.openstreetmap.org/way/1550234049",
+      "fitResidualMeters": 39.9
+    },
+    {
+      "name": "northern moat apex",
+      "pixel": [
+        407,
+        79
+      ],
+      "wgs84": [
+        135.5248714,
+        34.6910336
+      ],
+      "source": "https://www.openstreetmap.org/way/1550234049",
+      "fitResidualMeters": 27.2
+    },
+    {
+      "name": "eastern moat corner",
+      "pixel": [
+        538,
+        269
+      ],
+      "wgs84": [
+        135.5308842,
+        34.6844176
+      ],
+      "source": "https://www.openstreetmap.org/way/1550234049",
+      "fitResidualMeters": 0.3
+    },
+    {
+      "name": "Hommachi bridge",
+      "pixel": [
+        75,
+        350
+      ],
+      "wgs84": [
+        135.5098806,
+        34.6835
+      ],
+      "source": "https://commons.wikimedia.org/wiki/Category:Hommachi_Bridge",
+      "fitResidualMeters": 13.0
+    }
+  ],
+  "affinePixelToWGS84": [
+    [
+      4.503138587259891e-05,
+      -3.376651493914854e-06
+    ],
+    [
+      -5.734993201444993e-07,
+      -3.161961815903447e-05
+    ],
+    [
+      135.50680943420815,
+      34.69474151918961
+    ]
+  ],
+  "fitRmsMeters": 25.0,
+  "uncertaintyNote": "Fit residual only describes control points; it is not historical boundary accuracy. Schematic reconstruction and manual identification introduce additional error. Not a measured wall or cadastral boundary.",
+  "outlinePixels": [
+    [
+      59,
+      111
+    ],
+    [
+      83,
+      105
+    ],
+    [
+      114,
+      101
+    ],
+    [
+      160,
+      101
+    ],
+    [
+      198,
+      99
+    ],
+    [
+      240,
+      97
+    ],
+    [
+      276,
+      95
+    ],
+    [
+      299,
+      88
+    ],
+    [
+      322,
+      94
+    ],
+    [
+      344,
+      98
+    ],
+    [
+      367,
+      88
+    ],
+    [
+      389,
+      81
+    ],
+    [
+      412,
+      80
+    ],
+    [
+      435,
+      87
+    ],
+    [
+      468,
+      98
+    ],
+    [
+      496,
+      102
+    ],
+    [
+      529,
+      115
+    ],
+    [
+      559,
+      125
+    ],
+    [
+      581,
+      141
+    ],
+    [
+      595,
+      165
+    ],
+    [
+      603,
+      185
+    ],
+    [
+      607,
+      205
+    ],
+    [
+      605,
+      259
+    ],
+    [
+      602,
+      304
+    ],
+    [
+      603,
+      350
+    ],
+    [
+      593,
+      397
+    ],
+    [
+      584,
+      448
+    ],
+    [
+      577,
+      488
+    ],
+    [
+      568,
+      525
+    ],
+    [
+      560,
+      545
+    ],
+    [
+      530,
+      547
+    ],
+    [
+      503,
+      554
+    ],
+    [
+      478,
+      561
+    ],
+    [
+      463,
+      566
+    ],
+    [
+      438,
+      573
+    ],
+    [
+      419,
+      578
+    ],
+    [
+      393,
+      581
+    ],
+    [
+      369,
+      584
+    ],
+    [
+      345,
+      583
+    ],
+    [
+      324,
+      577
+    ],
+    [
+      286,
+      575
+    ],
+    [
+      251,
+      573
+    ],
+    [
+      214,
+      570
+    ],
+    [
+      181,
+      565
+    ],
+    [
+      150,
+      561
+    ],
+    [
+      116,
+      559
+    ],
+    [
+      88,
+      555
+    ],
+    [
+      85,
+      511
+    ],
+    [
+      82,
+      468
+    ],
+    [
+      79,
+      422
+    ],
+    [
+      77,
+      377
+    ],
+    [
+      73,
+      331
+    ],
+    [
+      70,
+      288
+    ],
+    [
+      67,
+      243
+    ],
+    [
+      63,
+      199
+    ],
+    [
+      61,
+      155
+    ],
+    [
+      59,
+      111
+    ]
+  ]
+}

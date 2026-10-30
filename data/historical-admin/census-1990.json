@@ -1,0 +1,26 @@
+{
+  "id": "1990",
+  "year": 1990,
+  "name": "现代 · 1990年普查",
+  "enName": "Modern · 1990 census",
+  "file": "output/chgis-research/derived/census-1990.geojson",
+  "article": "https://doi.org/10.7910/DVN/T27RQO",
+  "dataSource": "https://doi.org/10.7910/DVN/T27RQO",
+  "countyLevel": true,
+  "prefectures": 346,
+  "upperRegions": 33,
+  "counties": 2438,
+  "populationSummary": {
+    "population": 1130822993,
+    "knownUnits": 2420,
+    "missingUnits": 18,
+    "methods": {
+      "census": 2420,
+      "missing": 18
+    }
+  },
+  "status": "local-only",
+  "redistributionAllowed": false,
+  "notice": "A102 = total population, not households. Zero/missing population is left unknown. Density uses county polygon area; parent totals aggregate by code.",
+  "nameScript": "Simplified Chinese; original source names retained"
+}

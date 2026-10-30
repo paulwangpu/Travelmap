@@ -7855,7 +7855,7 @@ button:hover {
 #mapOverlayLegends :is(.great-wall-section > summary,#greatWallCategorySummary,.railway-legend-details summary,#railwayVectorLegendDetails summary,.geology-age-heading,#languageFamilyLegendTitle) {font-size:12px;line-height:1.4;}
 #mapOverlayLegends :is(p,.population-density-labels,.seafloor-age-labels,.geology-age-range) {font-size:12px;line-height:1.4;}
 #mapOverlayLegends :is(.tomb-legend-options,#greatWallCategories,#greatWallHistoryEras) {grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:3px 6px;}
-#mapOverlayLegends .tomb-legend-scope {grid-template-columns:1fr;gap:3px;}
+#mapOverlayLegends .tomb-legend-scope {grid-template-columns:1fr;gap:3px;margin:8px 0 0;padding:7px 0 0 20px;border-top:1px solid #e3eae6;border-bottom:0;}
 #mapOverlayLegends .language-family-keys {grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:4px;}
 #mapOverlayLegends .language-family-key {gap:3px;}
 #mapOverlayLegends .language-family-key i {width:14px;}
@@ -7902,15 +7902,45 @@ button:hover {
 #ancientCapitalLegend #imperialTombsLegend { margin:6px 0 0; padding:6px 0 0; border:0; border-top:1px solid #d8e2d9; background:transparent; max-width:none; }
 .tomb-layer-switch { display:flex; align-items:center; gap:5px; margin-bottom:5px; cursor:pointer; }
 .historical-admin-legend { max-width:290px; }
-.historical-admin-legend > label { display:flex; align-items:center; gap:7px; margin:5px 0; }
+.historical-admin-legend > label, .historical-admin-legend [data-population-ancient] > label { display:flex; align-items:center; gap:7px; margin:5px 0; }
 .historical-admin-legend select { min-width:0; max-width:225px; font-size:11px; padding:3px; }
 .historical-admin-legend small { display:block; margin:5px 0; }
+#historyBoundariesLegend .chgis-year-control { display:grid; grid-template-columns:auto minmax(0,1fr) 76px; gap:7px; align-items:center; min-height:24px; white-space:nowrap; }
+.chgis-year-control input[type="range"] { width:100%; min-width:0; height:16px; margin:0; padding:0; accent-color:#176b52; }
+.chgis-year-control output { text-align:right; font-size:12px; font-variant-numeric:tabular-nums; }
+.chgis-detail-controls { display:grid; grid-template-columns:minmax(0,1fr); gap:6px; margin:7px 0; font-size:12px; }
+.chgis-seat-controls { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:4px; margin:8px 0; font-size:12px; }
+.chgis-seat-controls label { display:grid; grid-template-columns:13px 12px minmax(0,1fr); align-items:center; gap:3px; min-height:20px; }
+.chgis-seat-controls input { margin:0; accent-color:#176b52; }
+.chgis-seat-controls span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.chgis-seat-controls svg { display:block; width:12px; height:12px; }
+.chgis-seat-controls label:has(input:disabled) { color:#85938c; }
+.chgis-seat-marker { background:transparent; border:0; }
+.chgis-seat-marker svg { display:block; }
+.chgis-detail-controls label { display:flex; align-items:center; gap:3px; white-space:nowrap; }
+.chgis-detail-controls input { margin:0; accent-color:#176b52; }
+.chgis-detail-controls label:has(input:disabled) { color:#85938c; }
+.population-unified-legend { width:280px; max-width:calc(100vw - 32px); }
+.population-legend-heading { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:7px; }
+.population-legend-heading > span { color:#63776e; font-size:11px; }
+.population-controls { display:grid; gap:6px; }
+.population-controls > label { display:grid; grid-template-columns:42px minmax(0,1fr); align-items:center; gap:8px; margin:0; font-size:12px; }
+.population-unified-legend .population-controls select { width:100%; max-width:none; min-width:0; height:28px; padding:3px 6px; font:inherit; border:1px solid #ccd8d1; border-radius:5px; background:#fff; color:#294b3d; }
+.population-unified-legend .population-controls select:disabled { color:#63776e; background:#f1f5f2; opacity:1; }
+.population-opacity-fields { display:grid; grid-template-columns:minmax(0,1fr) 38px; align-items:center; gap:8px; }
+.population-opacity-fields input { width:100%; min-width:0; margin:0; accent-color:#176b52; }
+.population-opacity-fields output { text-align:right; font-variant-numeric:tabular-nums; }
+.population-unified-scale { border-top:1px solid #d8e2d9; margin-top:9px; padding-top:8px; }
+.population-unified-scale .historical-population-legend { border:0; padding:0; }
+.population-unified-legend .population-source-note { color:#63776e; font-size:11px; line-height:1.45; margin:7px 0; }
+.population-source-links { display:flex; gap:12px; font-size:11px; }
 
 #ancientCapitalLegend #imperialTombsLegend { display:contents; }
 #ancientCapitalLegend #imperialTombsLegend[hidden] { display:none; }
 #ancientCapitalLegend .capital-tomb-section { margin-top:5px; }
 
 .historical-admin-label { font: 12px/18px "Open Sans", "Arial Unicode MS", Arial, sans-serif; color: #4a493e; text-align: center; white-space: nowrap; text-shadow: -1px -1px 1.5px #fff, 1px 1px 1.5px #fff, -1px 1px 1.5px #fff, 1px -1px 1.5px #fff; pointer-events: none; }
+.chgis-province-area-label { color:#626660; font-size:14px; line-height:22px; font-weight:600; letter-spacing:.12em; }
 
 .historical-admin-opacity input[type="range"] { flex:1; width:120px; min-width:0; margin:0; cursor:pointer; }
 .historical-admin-opacity output { min-width:34px; text-align:right; font-variant-numeric:tabular-nums; }
@@ -7925,3 +7955,45 @@ button:hover {
 .historical-population-popup dt { color:#66756c; }
 .historical-population-popup dd { margin:0; text-align:right; font-weight:600; }
 .historical-population-popup small { display:block; color:#66756c; margin-bottom:4px; }
+
+.chgis-province-seat-label { color:#98483f; }
+
+#historyBoundariesLegend .twha-range-control { display:grid; grid-template-columns:52px minmax(0,1fr) 52px; gap:7px; align-items:center; min-height:24px; white-space:nowrap; }
+#historyBoundariesLegend .twha-range-control input[type="range"] { width:100%; min-width:0; height:16px; margin:0; padding:0; }
+#historyBoundariesLegend .twha-range-control output { min-width:0; text-align:right; font-size:12px; font-variant-numeric:tabular-nums; }
+
+#historyBoundariesLegend .twha-year-step { display:grid; grid-template-columns:52px minmax(42px,1fr) auto 28px 28px; gap:7px; align-items:center; margin:5px 0; }
+.twha-year-step input { width:100%; min-width:0; height:24px; padding:2px 4px; border:1px solid #d1dad4; border-radius:4px; font:inherit; }
+.twha-year-step button { height:24px; padding:0; border:1px solid #d1dad4; border-radius:4px; background:#fff; color:#176b52; font-size:16px; cursor:pointer; }
+.twha-year-step button:disabled { opacity:.4; cursor:default; }
+
+.history-research-hover { pointer-events: none; }
+
+.history-research-hover .maplibregl-popup-content,
+.history-research-popup .maplibregl-popup-content,
+.history-research-tooltip { padding: 6px 9px; font-size: 12px; line-height: 1.4; }
+.history-research-hover .maplibregl-popup-content div,
+.history-research-popup .maplibregl-popup-content div { margin: 0; }
+
+.scenic-category-options{display:grid;grid-template-columns:minmax(0,1fr);gap:3px;padding-top:5px}
+#mapOverlayLegends .scenic-category-options label{display:flex;align-items:center;gap:4px;min-height:var(--legend-row-height);font-size:var(--legend-compact-size);line-height:1.4;cursor:pointer}
+.scenic-category-symbol{display:inline-block;flex:none;width:5px;height:5px;border-radius:50%;background:#218a78;margin:0 2px}
+.scenic-category-symbol.primary{width:8px;height:8px;margin:0 1px}
+
+.historical-evidence{display:flex;gap:5px;flex-wrap:wrap;margin:8px 0}.historical-evidence span{font-size:11px;line-height:1.5;padding:1px 6px;border:1px solid #cbd5e1;border-radius:4px;color:#64748b;background:#f8fafc}
+
+/* History sliders share the same caption, track and value columns. */
+#historyBoundariesLegend .chgis-year-control,
+#historyBoundariesLegend .historical-admin-opacity{display:grid;grid-template-columns:44px minmax(0,1fr) 64px;gap:7px;align-items:center;min-height:24px;white-space:nowrap}
+#historyBoundariesLegend .chgis-year-control input[type="range"],
+#historyBoundariesLegend .historical-admin-opacity input[type="range"]{width:100%;min-width:0;height:16px;margin:0;padding:0}
+#historyBoundariesLegend .chgis-year-control output,
+#historyBoundariesLegend .historical-admin-opacity output{min-width:0;text-align:right;font-size:12px;font-variant-numeric:tabular-nums}
+
+#historyBoundariesLegend .history-menu-row{display:grid;grid-template-columns:44px minmax(0,1fr);gap:7px;align-items:center;min-height:24px;margin:5px 0}
+#historyBoundariesLegend .history-menu-row select{width:100%;min-width:0;height:26px;font:inherit}
+#historyBoundariesLegend .history-year-step{grid-template-columns:44px minmax(42px,1fr) auto 28px 28px;min-height:26px}
+#historyBoundariesLegend .history-year-step label{margin:0}
+
+.wenbao-leaflet-cluster{border:1px solid #fff;border-radius:50%;background:#a76b38;color:#fff;text-align:center;line-height:28px;font-size:11px}
+#heritageCategoryLegend label{display:flex;align-items:center;gap:5px;margin:5px 0}

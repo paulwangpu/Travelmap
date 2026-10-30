@@ -833,15 +833,45 @@
       "period": "明",
       "start": 1603,
       "end": 1868,
-      "referenceUrl": "https://www.kunaicho.go.jp/visit/higashigyoen/index.html",
+      "referenceUrl": "https://www.edo-chiyoda.jp/material/files/group/2/edojosotobori-01.pdf#page=15",
       "heritageId": "",
       "tentative": false,
       "capitalSiteKey": "ancient-site:world-edo",
-      "periodLabel": "日本历史宫都／幕府政治中心（年代对照）",
+      "periodLabel": "德川幕府江户城（1603—1868年）",
       "center": [
         139.75288426712328,
         35.68258775753425
-      ]
+      ],
+      "focusBounds": [
+        [
+          139.7275,
+          35.6665
+        ],
+        [
+          139.791,
+          35.7045
+        ]
+      ],
+      "focusMaxZoom": 13,
+      "referenceUrls": [
+        "https://www.city.chiyoda.lg.jp/documents/26394/guideline-4.pdf",
+        "https://www.library.metro.tokyo.lg.jp/collection/features/digital_showcase/019/01/"
+      ],
+      "boundaryAudit": {
+        "featureCount": 19,
+        "areaCount": 1,
+        "wallCount": 6,
+        "openWallCount": 6,
+        "status": "已补完整内郭与螺旋外郭防御走向；现存石垣保留原始开口，复原虚线不等同全程现存石墙。",
+        "calibration": "data/edo-castle-calibration.json"
+      },
+      "identityNote": "德川幕府政治中心。依据千代田、港、新宿三区官方保存管理计划图2-1-1补入完整内郭与螺旋式外郭防御走向；外堀体系约14公里，含石垣、土垒和河道，不表示全程连续石墙。现存石垣、主要城门与天守台保留。复原走向为细虚线，不标文字；不是只显示现代皇居园区。",
+      "historicalIdentity": "shogunal-seat",
+      "identityLabel": "德川幕府政治中心；完整内外郭防御体系",
+      "identityEnLabel": "Tokugawa shogunal seat; full inner and outer defences",
+      "identityEnNote": "Complete inner enclosure and spiral outer defence are digitized from the official conservation plan. The system includes moats, earthworks and rivers, not continuous surviving stone walls.",
+      "identitySourceUrl": "https://www.edo-chiyoda.jp/material/files/group/2/edojosotobori-01.pdf#page=15",
+      "enPeriodLabel": "Tokugawa Edo Castle (1603–1868)"
     },
     {
       "key": "fujiwara",
@@ -10057,7 +10087,24 @@
       "relatedHeritageIds": [
         "whc-231"
       ],
-      "capitalSiteKey": "ancient-site:world-shahjahanabad"
+      "capitalSiteKey": "ancient-site:world-shahjahanabad",
+      "relatedTombs": [
+        {
+          "id": "next-humayun",
+          "name": "胡马雍陵",
+          "enName": "Humayun’s Tomb"
+        },
+        {
+          "id": "next-sikandar-lodi",
+          "name": "锡坎达尔洛迪陵",
+          "enName": "Tomb of Sikandar Lodi"
+        },
+        {
+          "id": "next-muhammad-shah",
+          "name": "穆罕默德沙赛义德陵",
+          "enName": "Tomb of Muhammad Shah Sayyid"
+        }
+      ]
     },
     {
       "key": "agra",
@@ -10107,7 +10154,19 @@
         "whc-251",
         "whc-252"
       ],
-      "capitalSiteKey": "ancient-site:world-agra"
+      "capitalSiteKey": "ancient-site:world-agra",
+      "relatedTombs": [
+        {
+          "id": "next-akbar",
+          "name": "阿克巴陵（西坎德拉）",
+          "enName": "Akbar’s Tomb, Sikandra"
+        },
+        {
+          "id": "next-taj",
+          "name": "泰姬陵（沙贾汗与穆姆塔兹合葬）",
+          "enName": "Taj Mahal"
+        }
+      ]
     },
     {
       "key": "fatehpur-sikri",
@@ -10354,7 +10413,21 @@
       ],
       "focusMaxZoom": 15,
       "relatedHeritageIds": [],
-      "capitalSiteKey": "ancient-site:world-golconda"
+      "capitalSiteKey": "ancient-site:world-golconda",
+      "relatedTombs": [
+        {
+          "id": "expansion-qutb",
+          "name": "库特布沙希王陵群",
+          "enName": "Qutb Shahi royal tombs"
+        }
+      ],
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 0,
+        "wallCount": 1,
+        "palaceCount": 0,
+        "status": "逐项区分现状范围、原始开放墙段与区域定位；完整古城界未全部核定。"
+      }
     },
     {
       "key": "hyderabad",
@@ -10402,7 +10475,21 @@
       ],
       "focusMaxZoom": 15,
       "relatedHeritageIds": [],
-      "capitalSiteKey": "ancient-site:world-hyderabad"
+      "capitalSiteKey": "ancient-site:world-hyderabad",
+      "relatedTombs": [
+        {
+          "id": "expansion-qutb",
+          "name": "库特布沙希王陵群",
+          "enName": "Qutb Shahi royal tombs"
+        }
+      ],
+      "boundaryAudit": {
+        "featureCount": 3,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 3,
+        "status": "逐项区分现状范围、原始开放墙段与区域定位；完整古城界未全部核定。"
+      }
     },
     {
       "key": "bijapur",
@@ -10449,7 +10536,26 @@
       ],
       "focusMaxZoom": 15,
       "relatedHeritageIds": [],
-      "capitalSiteKey": "ancient-site:world-bijapur"
+      "capitalSiteKey": "ancient-site:world-bijapur",
+      "relatedTombs": [
+        {
+          "id": "expansion-gol-gumbaz",
+          "name": "戈尔贡巴兹（穆罕默德阿迪尔沙陵）",
+          "enName": "Gol Gumbaz, tomb of Muhammad Adil Shah"
+        },
+        {
+          "id": "expansion-ibrahim-rauza",
+          "name": "易卜拉欣阿迪尔沙二世陵园",
+          "enName": "Ibrahim Rauza"
+        }
+      ],
+      "boundaryAudit": {
+        "featureCount": 3,
+        "areaCount": 0,
+        "wallCount": 3,
+        "palaceCount": 0,
+        "status": "逐项区分现状范围、原始开放墙段与区域定位；完整古城界未全部核定。"
+      }
     },
     {
       "key": "bidar",
@@ -10495,7 +10601,21 @@
       ],
       "focusMaxZoom": 15,
       "relatedHeritageIds": [],
-      "capitalSiteKey": "ancient-site:world-bidar"
+      "capitalSiteKey": "ancient-site:world-bidar",
+      "relatedTombs": [
+        {
+          "id": "expansion-bahmani",
+          "name": "阿什图尔巴赫曼尼王陵群",
+          "enName": "Bahmani royal tombs, Ashtur"
+        }
+      ],
+      "boundaryAudit": {
+        "featureCount": 3,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 2,
+        "status": "逐项区分现状范围、原始开放墙段与区域定位；完整古城界未全部核定。"
+      }
     },
     {
       "key": "daulatabad",
@@ -10878,7 +10998,20 @@
       "relatedHeritageIds": [
         "whc-139"
       ],
-      "capitalSiteKey": "ancient-site:world-taxila-bhir"
+      "capitalSiteKey": "ancient-site:world-taxila-bhir",
+      "extentReview": {
+        "reviewedAt": "2026-10-29",
+        "note": "比尔丘为较早城址；现有面为公开考古／保护标绘区，不是完整城墙。三期城址保持独立。",
+        "sourceUrl": "https://taxilamuseum.punjab.gov.pk/node/81",
+        "completeCityBoundary": false
+      },
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "status": "逐项区分现状范围、原始开放墙段与区域定位；完整古城界未全部核定。"
+      }
     },
     {
       "key": "taxila-sirkap",
@@ -10889,8 +11022,8 @@
       "country": "巴基斯坦",
       "countryEn": "Pakistan",
       "center": [
-        72.831,
-        33.756
+        72.8293516,
+        33.7552023
       ],
       "period": "秦汉",
       "capitalPeriods": [
@@ -10926,7 +11059,20 @@
       "relatedHeritageIds": [
         "whc-139"
       ],
-      "capitalSiteKey": "ancient-site:world-taxila-sirkap"
+      "capitalSiteKey": "ancient-site:world-taxila-sirkap",
+      "extentReview": {
+        "reviewedAt": "2026-10-29",
+        "note": "机构记载城墙约5.5公里，现有面主要覆盖发掘区，不能代替整座有城墙的古城。完整墙线尚待原始测绘图校准。",
+        "sourceUrl": "https://doam.gov.pk/public/sites/9756",
+        "completeCityBoundary": false
+      },
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "status": "逐项区分现状范围、原始开放墙段与区域定位；完整古城界未全部核定。"
+      }
     },
     {
       "key": "taxila-sirsukh",
@@ -10937,8 +11083,8 @@
       "country": "巴基斯坦",
       "countryEn": "Pakistan",
       "center": [
-        72.85,
-        33.781
+        72.8480121,
+        33.7721423
       ],
       "period": "秦汉",
       "capitalPeriods": [],
@@ -10971,7 +11117,20 @@
       "focusMaxZoom": 15,
       "relatedHeritageIds": [
         "whc-139"
-      ]
+      ],
+      "extentReview": {
+        "reviewedAt": "2026-10-29",
+        "note": "机构记载城址约1372×920米，南、东城垣较清楚，北、西多已消失。现有标绘只覆盖部分遗存，未按尺寸生成推测矩形。",
+        "sourceUrl": "https://doam.gov.pk/public/sites/858",
+        "completeCityBoundary": false
+      },
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "status": "逐项区分现状范围、原始开放墙段与区域定位；完整古城界未全部核定。"
+      }
     },
     {
       "key": "rohtas",
@@ -11496,7 +11655,14 @@
       ],
       "focusMaxZoom": 15,
       "relatedHeritageIds": [],
-      "capitalSiteKey": "ancient-site:world-ctesiphon"
+      "capitalSiteKey": "ancient-site:world-ctesiphon",
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "status": "逐项区分现状范围、原始开放墙段与区域定位；完整古城界未全部核定。"
+      }
     },
     {
       "key": "samarra",
@@ -16973,7 +17139,14 @@
       ],
       "focusMaxZoom": 15,
       "relatedHeritageIds": [],
-      "capitalSiteKey": "ancient-site:world-balkh"
+      "capitalSiteKey": "ancient-site:world-balkh",
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 1,
+        "wallCount": 1,
+        "palaceCount": 0,
+        "status": "逐项区分现状范围、原始开放墙段与区域定位；完整古城界未全部核定。"
+      }
     },
     {
       "key": "kabul",
@@ -17114,7 +17287,14 @@
       ],
       "focusMaxZoom": 15,
       "relatedHeritageIds": [],
-      "capitalSiteKey": "ancient-site:world-herat"
+      "capitalSiteKey": "ancient-site:world-herat",
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "status": "逐项区分现状范围、原始开放墙段与区域定位；完整古城界未全部核定。"
+      }
     },
     {
       "key": "old-kandahar",
@@ -17993,7 +18173,14 @@
       "relatedHeritageIds": [],
       "capitalSiteKey": "ancient-site:world-pasargadae",
       "heritageId": "whc-1106",
-      "checklistItem": "帕萨尔加德"
+      "checklistItem": "帕萨尔加德",
+      "relatedTombs": [
+        {
+          "id": "next-cyrus",
+          "name": "居鲁士二世陵",
+          "enName": "Tomb of Cyrus the Great"
+        }
+      ]
     },
     {
       "key": "persepolis",
@@ -18041,7 +18228,24 @@
       "relatedHeritageIds": [],
       "capitalSiteKey": "ancient-site:world-persepolis",
       "heritageId": "whc-114",
-      "checklistItem": "波斯波利斯"
+      "checklistItem": "波斯波利斯",
+      "relatedTombs": [
+        {
+          "id": "next-naqsh-group",
+          "name": "纳克什鲁斯塔姆阿契美尼德王陵群",
+          "enName": "Achaemenid royal tombs at Naqsh-e Rostam"
+        },
+        {
+          "id": "next-artaxerxes2",
+          "name": "波斯波利斯岩墓（推定阿尔塔薛西斯二世）",
+          "enName": "Persepolis tomb attributed to Artaxerxes II"
+        },
+        {
+          "id": "next-artaxerxes3",
+          "name": "波斯波利斯岩墓（推定阿尔塔薛西斯三世）",
+          "enName": "Persepolis tomb attributed to Artaxerxes III"
+        }
+      ]
     },
     {
       "key": "anshan",
@@ -20044,6 +20248,4099 @@
         "palaceCount": 0,
         "openWallCount": 0
       }
+    },
+    {
+      "key": "osaka-castle",
+      "name": "大阪城（大坂城）",
+      "enName": "Osaka Castle",
+      "capitalName": "大阪城（大坂城）",
+      "capitalEnName": "Osaka Castle",
+      "aliases": [
+        "大阪城",
+        "大坂城",
+        "Osaka Castle",
+        "Osaka-jo"
+      ],
+      "country": "日本",
+      "countryEn": "Japan",
+      "center": [
+        135.52585,
+        34.68737
+      ],
+      "period": "明",
+      "capitalPeriods": [],
+      "urbanPeriods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "periodLabel": "丰臣氏政治据点；德川期城郭；1931年复兴天守",
+      "enPeriodLabel": "Toyotomi political stronghold; Tokugawa fortifications; main tower rebuilt in 1931",
+      "historicalIdentity": "political-centre",
+      "identityLabel": "丰臣氏政治据点与近世城郭，非日本皇室都城",
+      "identityEnLabel": "Toyotomi political stronghold and castle; not an imperial capital",
+      "identityNote": "丰臣氏政治据点与近世城郭。完整外围采用大阪产业局所载丰臣、德川外郭比较图的惣构复原轮廓，配准后数字化，和现存城郭范围分列。复原图示，非实测墙界；现代公园、水之回廊和零散现代道路铁路不作为古城界。保留天守、主要城门与橹、关键石垣和丰臣石垣馆；井户、纪念碑、零散次要遗址点不重复叠加。",
+      "identityEnNote": "The complete Toyotomi outer enclosure is digitized from the comparative reconstruction map published by OBDA, with the present castle precinct shown separately. Schematic reconstruction, not a surveyed boundary. Secondary OSM details are not duplicated.",
+      "identitySourceUrl": "https://online.bunka.go.jp/heritages/detail/191232",
+      "referenceUrl": "https://www.obda.or.jp/about/history/md-transition.html",
+      "referenceUrls": [
+        "https://www.obda.or.jp/wp-content/uploads/2023/07/osakajo_sogamae_1large.jpg",
+        "https://www.city.osaka.lg.jp/keizaisenryaku/cmsfiles/contents/0000626/626612/3syou_.pdf",
+        "https://www.osakacastle.net/toyotomi_stone_wall/column/1411.html"
+      ],
+      "focusBounds": [
+        [
+          135.5085,
+          34.674
+        ],
+        [
+          135.535,
+          34.6922
+        ]
+      ],
+      "focusMaxZoom": 14,
+      "heritageId": "",
+      "tentative": false,
+      "sharedCapitalCheckin": false,
+      "reviewedAt": "2026-10-26",
+      "boundaryAudit": {
+        "featureCount": 13,
+        "status": "完整内外范围与主要古迹并列；不重复零散次要细节",
+        "inferredReferenceCount": 1,
+        "calibration": "data/osaka-castle-calibration.json"
+      }
+    },
+    {
+      "key": "tikal",
+      "name": "蒂卡尔",
+      "enName": "Tikal",
+      "center": [
+        -89.6237,
+        17.2221
+      ],
+      "date": 250,
+      "period": "魏晋南北朝",
+      "capitalPeriods": [
+        "魏晋南北朝",
+        "隋唐"
+      ],
+      "urbanPeriods": [
+        "魏晋南北朝",
+        "隋唐"
+      ],
+      "regime": "玛雅蒂卡尔王国",
+      "start": 250,
+      "end": 900,
+      "bbox": [
+        -89.6357,
+        17.2101,
+        -89.6117,
+        17.2341
+      ],
+      "referenceUrl": "https://whc.unesco.org/en/list/64/",
+      "sourceUrl": "https://whc.unesco.org/en/list/64/",
+      "periodLabel": "玛雅蒂卡尔王国；约250—900年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-tikal",
+      "historicalIdentity": "capital",
+      "identityLabel": "玛雅城邦／地区政治中心",
+      "identityEnLabel": "Maya city-state / regional political centre",
+      "identityNote": "玛雅低地重要政治、经济与军事中心。250—900年为本目录采用的古典期范围，不是聚落全部存在时间；此前已有聚落。仅以遗址核心附近参照点定位；57600公顷国家公园不是古城范围。完整考古城区界线待核。 本轮已增加原始OSM考古区标绘；该面不是完整城区或城邦疆域。",
+      "identityEnNote": "Political centre and archaeological site. Dates are approximate phases, not exact foundation or abandonment years. Current site precincts are not complete ancient city walls or protected-area boundaries.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/64/",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0,
+        "status": "逐项说明现状遗址、城防或定位参考；完整分期城界未全部核定。"
+      },
+      "whc": 64,
+      "heritageId": "whc-64",
+      "aliases": [
+        "蒂卡尔国家公园",
+        "Tikal National Park"
+      ]
+    },
+    {
+      "key": "calakmul",
+      "name": "卡拉克穆尔",
+      "enName": "Calakmul",
+      "center": [
+        -89.8108,
+        18.1053
+      ],
+      "date": 600,
+      "period": "隋唐",
+      "capitalPeriods": [
+        "隋唐"
+      ],
+      "urbanPeriods": [
+        "隋唐"
+      ],
+      "regime": "玛雅卡恩王朝（卡拉克穆尔阶段）",
+      "start": 600,
+      "end": 900,
+      "bbox": [
+        -89.8228,
+        18.0933,
+        -89.7988,
+        18.1173
+      ],
+      "referenceUrl": "https://whc.unesco.org/en/list/1061/",
+      "sourceUrl": "https://whc.unesco.org/en/list/1061/",
+      "periodLabel": "玛雅卡恩王朝（卡拉克穆尔阶段）；约600—900年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-calakmul",
+      "historicalIdentity": "capital",
+      "identityLabel": "玛雅城邦／地区政治中心",
+      "identityEnLabel": "Maya city-state / regional political centre",
+      "identityNote": "晚古典期卡恩（蛇）王朝的重要王都。600—900年为约略阶段，不等于该王朝全部年代或城市初建时间；卡恩王朝较早阶段不一概定位于此。接入的是OSM考古遗址现状范围，不是卡拉克穆尔生物圈保护区或扩展世界遗产的热带森林范围。",
+      "identityEnNote": "Political centre and archaeological site. Dates are approximate phases, not exact foundation or abandonment years. Current site precincts are not complete ancient city walls or protected-area boundaries.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/1061/",
+      "boundaryAudit": {
+        "featureCount": 4,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0,
+        "status": "已接入现状遗址区与主要遗迹；完整分期城界待核。"
+      },
+      "whc": 1061,
+      "heritageId": "whc-1061",
+      "aliases": [
+        "卡拉克穆尔古玛雅城和热带保护林",
+        "Ancient Maya City and Protected Tropical Forests of Calakmul, Campeche"
+      ]
+    },
+    {
+      "key": "copan",
+      "name": "科潘",
+      "enName": "Copán",
+      "center": [
+        -89.141,
+        14.84
+      ],
+      "date": 427,
+      "period": "魏晋南北朝",
+      "capitalPeriods": [
+        "魏晋南北朝",
+        "隋唐"
+      ],
+      "urbanPeriods": [
+        "魏晋南北朝",
+        "隋唐"
+      ],
+      "regime": "玛雅科潘王国",
+      "start": 427,
+      "end": 900,
+      "bbox": [
+        -89.153,
+        14.828,
+        -89.129,
+        14.852
+      ],
+      "referenceUrl": "https://whc.unesco.org/en/list/129/",
+      "sourceUrl": "https://whc.unesco.org/en/list/129/",
+      "periodLabel": "玛雅科潘王国；约427—900年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-copan",
+      "historicalIdentity": "capital",
+      "identityLabel": "玛雅城邦／地区政治中心",
+      "identityEnLabel": "Maya city-state / regional political centre",
+      "identityNote": "科潘谷地政治与宗教中心；UNESCO记载427年开创的王朝延续16位统治者。目录末年约900表示古典期城市衰落阶段，不是最后一位君主的精确在位终年。遗址区现状边界不是完整城墙。",
+      "identityEnNote": "Political centre and archaeological site. Dates are approximate phases, not exact foundation or abandonment years. Current site precincts are not complete ancient city walls or protected-area boundaries.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/129/",
+      "boundaryAudit": {
+        "featureCount": 3,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0,
+        "status": "已接入现状遗址区与主要遗迹；完整分期城界待核。"
+      },
+      "whc": 129,
+      "heritageId": "whc-129",
+      "aliases": [
+        "科潘玛雅古迹遗址",
+        "Maya Site of Copan"
+      ]
+    },
+    {
+      "key": "uxmal",
+      "name": "乌斯马尔",
+      "enName": "Uxmal",
+      "center": [
+        -89.7714,
+        20.3599
+      ],
+      "date": 700,
+      "period": "隋唐",
+      "capitalPeriods": [
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏"
+      ],
+      "urbanPeriods": [
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏"
+      ],
+      "regime": "玛雅乌斯马尔地区政治中心",
+      "start": 700,
+      "end": 1000,
+      "bbox": [
+        -89.7834,
+        20.3479,
+        -89.7594,
+        20.3719
+      ],
+      "referenceUrl": "https://whc.unesco.org/en/list/791/",
+      "sourceUrl": "https://whc.unesco.org/en/list/791/",
+      "periodLabel": "玛雅乌斯马尔地区政治中心；约700—1000年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-uxmal",
+      "historicalIdentity": "capital",
+      "identityLabel": "玛雅城邦／地区政治中心",
+      "identityEnLabel": "Maya city-state / regional political centre",
+      "identityNote": "普克地区政治与行政中心。约700—1000年是主要建筑与城市发展阶段；不把后世传统中的创建日期当作精确建城年。此处不推定一个疆界固定的统一玛雅国家。现状遗址区不等于完整古城墙。",
+      "identityEnNote": "Political centre and archaeological site. Dates are approximate phases, not exact foundation or abandonment years. Current site precincts are not complete ancient city walls or protected-area boundaries.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/791/",
+      "boundaryAudit": {
+        "featureCount": 5,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 2,
+        "openWallCount": 0,
+        "status": "已接入现状遗址区与主要遗迹；完整分期城界待核。"
+      },
+      "whc": 791,
+      "heritageId": "whc-791",
+      "aliases": [
+        "乌斯马尔古镇",
+        "Pre-Hispanic Town of Uxmal"
+      ]
+    },
+    {
+      "key": "caracol",
+      "name": "卡拉科尔",
+      "enName": "Caracol",
+      "center": [
+        -89.1176,
+        16.7639
+      ],
+      "date": 331,
+      "period": "魏晋南北朝",
+      "capitalPeriods": [
+        "魏晋南北朝",
+        "隋唐"
+      ],
+      "urbanPeriods": [
+        "魏晋南北朝",
+        "隋唐"
+      ],
+      "regime": "玛雅卡拉科尔王国",
+      "start": 331,
+      "end": 900,
+      "bbox": [
+        -89.1296,
+        16.7519,
+        -89.1056,
+        16.7759
+      ],
+      "referenceUrl": "https://ticketing.nichbelize.org/ia-sites/caracol/",
+      "sourceUrl": "https://ticketing.nichbelize.org/ia-sites/caracol/",
+      "periodLabel": "玛雅卡拉科尔王国；约331—900年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-caracol",
+      "historicalIdentity": "capital",
+      "identityLabel": "玛雅城邦／地区政治中心",
+      "identityEnLabel": "Maya city-state / regional political centre",
+      "identityNote": "伯利兹重要玛雅城邦中心，与奇琴伊察的同名“卡拉科尔”天文台分开。研究记载王朝始于331年，约900为城市衰落的阶段参考，不是精确亡国年。定位点在遗址核心附近，未获得可靠完整矢量城界；未用保护区面积、圆形缓冲区或矩形代替城区。 本轮已增加原始OSM考古区标绘；该面不是完整城区或城邦疆域。",
+      "identityEnNote": "Political centre and archaeological site. Dates are approximate phases, not exact foundation or abandonment years. Current site precincts are not complete ancient city walls or protected-area boundaries.",
+      "identitySourceUrl": "https://ticketing.nichbelize.org/ia-sites/caracol/",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0,
+        "status": "逐项说明现状遗址、城防或定位参考；完整分期城界未全部核定。"
+      }
+    },
+    {
+      "key": "yaxchilan",
+      "name": "亚斯奇兰",
+      "enName": "Yaxchilán",
+      "center": [
+        -90.966,
+        16.8989
+      ],
+      "date": 350,
+      "period": "魏晋南北朝",
+      "capitalPeriods": [
+        "魏晋南北朝",
+        "隋唐"
+      ],
+      "urbanPeriods": [
+        "魏晋南北朝",
+        "隋唐"
+      ],
+      "regime": "玛雅亚斯奇兰王国",
+      "start": 350,
+      "end": 850,
+      "bbox": [
+        -90.978,
+        16.8869,
+        -90.954,
+        16.9109
+      ],
+      "referenceUrl": "https://lugares.inah.gob.mx/en/node/4367",
+      "sourceUrl": "https://lugares.inah.gob.mx/en/node/4367",
+      "periodLabel": "玛雅亚斯奇兰王国；约350—850年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-yaxchilan",
+      "historicalIdentity": "capital",
+      "identityLabel": "玛雅城邦／地区政治中心",
+      "identityEnLabel": "Maya city-state / regional political centre",
+      "identityNote": "乌苏马辛塔河沿岸城邦。INAH将其王朝记述置于4—9世纪，兴盛期约600—800年；350—850仅为世纪范围的目录近似，不是精确建国或灭亡年份。早期王表含追述和合法性建构的可能，不将其全部视为同时代证据。现状考古遗址区不是城邦疆域。",
+      "identityEnNote": "Political centre and archaeological site. Dates are approximate phases, not exact foundation or abandonment years. Current site precincts are not complete ancient city walls or protected-area boundaries.",
+      "identitySourceUrl": "https://lugares.inah.gob.mx/en/node/4367",
+      "boundaryAudit": {
+        "featureCount": 4,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0,
+        "status": "已接入现状遗址区与主要遗迹；完整分期城界待核。"
+      }
+    },
+    {
+      "key": "london",
+      "name": "伦敦",
+      "enName": "London",
+      "country": "英国",
+      "countryId": "gb",
+      "center": [
+        -0.0761,
+        51.5081
+      ],
+      "date": 1066,
+      "start": 1066,
+      "end": null,
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "regime": "英格兰王国及英国",
+      "periodLabel": "英格兰王国及英国；1066年起（沿革见详情）",
+      "referenceUrl": "https://whc.unesco.org/en/list/488/",
+      "sourceUrl": "https://whc.unesco.org/en/list/488/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "伦敦逐渐成为固定政治中心，1066年仅作诺曼王权阶段起点，不代表一日迁都。伦敦塔为独立宫堡，不是伦敦全城。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 3,
+        "areaCount": 1,
+        "wallCount": 4,
+        "palaceCount": 1,
+        "openWallCount": 3,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        -0.0911,
+        51.4961,
+        -0.0611,
+        51.5201
+      ],
+      "whc": 488,
+      "relatedHeritageIds": [
+        "whc-488"
+      ],
+      "capitalSiteKey": "ancient-site:world-london",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/488/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "winchester",
+      "name": "温彻斯特",
+      "enName": "Winchester",
+      "country": "英国",
+      "countryId": "gb",
+      "center": [
+        -1.3158,
+        51.063
+      ],
+      "date": 871,
+      "start": 871,
+      "end": 1066,
+      "period": "隋唐",
+      "capitalPeriods": [
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏"
+      ],
+      "urbanPeriods": [
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏"
+      ],
+      "regime": "盎格鲁撒克逊王国王权中心",
+      "periodLabel": "盎格鲁撒克逊王国王权中心；871—1066年",
+      "referenceUrl": "https://historicengland.org.uk/listing/the-list/list-entry/1001959",
+      "sourceUrl": "https://historicengland.org.uk/listing/the-list/list-entry/1001959",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "盎格鲁撒克逊时期重要王权中心，宫廷具有流动性。现存大厅为13世纪建筑，不是阿尔弗雷德时代原王宫。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        -1.3308,
+        51.051,
+        -1.3008000000000002,
+        51.075
+      ],
+      "capitalSiteKey": "ancient-site:world-winchester",
+      "identitySourceUrl": "https://historicengland.org.uk/listing/the-list/list-entry/1001959",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "edinburgh",
+      "name": "爱丁堡",
+      "enName": "Edinburgh",
+      "country": "英国",
+      "countryId": "gb",
+      "center": [
+        -3.2004,
+        55.9486
+      ],
+      "date": 1437,
+      "start": 1437,
+      "end": 1707,
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清"
+      ],
+      "urbanPeriods": [
+        "明",
+        "清"
+      ],
+      "regime": "苏格兰王国",
+      "periodLabel": "苏格兰王国；1437—1707年",
+      "referenceUrl": "https://whc.unesco.org/en/list/728/",
+      "sourceUrl": "https://whc.unesco.org/en/list/728/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "都城、王廷或行政中心的分期参考；年份不表示所有遗迹同年兴建，也不推定政权、驻地及城界连续不变。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 3,
+        "areaCount": 1,
+        "wallCount": 6,
+        "palaceCount": 1,
+        "openWallCount": 6,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        -3.2154000000000003,
+        55.9366,
+        -3.1854,
+        55.9606
+      ],
+      "whc": 728,
+      "relatedHeritageIds": [
+        "whc-728"
+      ],
+      "capitalSiteKey": "ancient-site:world-edinburgh",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/728/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "dublin",
+      "name": "都柏林",
+      "enName": "Dublin",
+      "country": "爱尔兰",
+      "countryId": "ie",
+      "center": [
+        -6.2675,
+        53.343
+      ],
+      "date": 1204,
+      "start": 1204,
+      "end": null,
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "regime": "爱尔兰行政中心及独立国家首都",
+      "periodLabel": "爱尔兰行政中心及独立国家首都；1204年起（沿革见详情）",
+      "referenceUrl": "https://www.dublincastle.ie/history/",
+      "sourceUrl": "https://www.dublincastle.ie/history/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "1204—1922年都柏林城堡是英格兰及英国统治爱尔兰的行政中心，不称为当时独立爱尔兰国家的王宫。1922年后的国家首都地位另列。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 0,
+        "wallCount": 2,
+        "palaceCount": 1,
+        "openWallCount": 1,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        -6.2825,
+        53.331,
+        -6.2525,
+        53.355000000000004
+      ],
+      "capitalSiteKey": "ancient-site:world-dublin",
+      "identitySourceUrl": "https://www.dublincastle.ie/history/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "lisbon",
+      "name": "里斯本",
+      "enName": "Lisbon",
+      "country": "葡萄牙",
+      "countryId": "pt",
+      "center": [
+        -9.1334,
+        38.7139
+      ],
+      "date": 1255,
+      "start": 1255,
+      "end": null,
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "regime": "葡萄牙王国及共和国",
+      "periodLabel": "葡萄牙王国及共和国；1255年起（沿革见详情）",
+      "referenceUrl": "https://castelodesaojorge.pt/en/",
+      "sourceUrl": "https://castelodesaojorge.pt/en/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "都城、王廷或行政中心的分期参考；年份不表示所有遗迹同年兴建，也不推定政权、驻地及城界连续不变。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 3,
+        "areaCount": 2,
+        "wallCount": 13,
+        "palaceCount": 0,
+        "openWallCount": 10,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        -9.1484,
+        38.7019,
+        -9.1184,
+        38.7259
+      ],
+      "capitalSiteKey": "ancient-site:world-lisbon",
+      "identitySourceUrl": "https://castelodesaojorge.pt/en/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "coimbra",
+      "name": "科英布拉",
+      "enName": "Coimbra",
+      "country": "葡萄牙",
+      "countryId": "pt",
+      "center": [
+        -8.4267,
+        40.2076
+      ],
+      "date": 1131,
+      "start": 1131,
+      "end": 1255,
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏"
+      ],
+      "urbanPeriods": [
+        "宋辽金西夏"
+      ],
+      "regime": "葡萄牙王国早期王都",
+      "periodLabel": "葡萄牙王国早期王都；1131—1255年",
+      "referenceUrl": "https://whc.unesco.org/en/list/1387/",
+      "sourceUrl": "https://whc.unesco.org/en/list/1387/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "都城、王廷或行政中心的分期参考；年份不表示所有遗迹同年兴建，也不推定政权、驻地及城界连续不变。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 0,
+        "wallCount": 10,
+        "palaceCount": 0,
+        "openWallCount": 9,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        -8.4417,
+        40.1956,
+        -8.4117,
+        40.2196
+      ],
+      "whc": 1387,
+      "relatedHeritageIds": [
+        "whc-1387"
+      ],
+      "capitalSiteKey": "ancient-site:world-coimbra",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/1387/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "guimaraes",
+      "name": "吉马良斯",
+      "enName": "Guimarães",
+      "country": "葡萄牙",
+      "countryId": "pt",
+      "center": [
+        -8.2902,
+        41.4479
+      ],
+      "date": 1096,
+      "start": 1096,
+      "end": 1128,
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏"
+      ],
+      "urbanPeriods": [
+        "宋辽金西夏"
+      ],
+      "regime": "葡萄牙伯国王廷中心",
+      "periodLabel": "葡萄牙伯国王廷中心；1096—1128年",
+      "referenceUrl": "https://whc.unesco.org/en/list/1031/",
+      "sourceUrl": "https://whc.unesco.org/en/list/1031/",
+      "tentative": false,
+      "historicalIdentity": "political-centre",
+      "identityLabel": "王权或行政中心（非确定固定王都）",
+      "identityEnLabel": "Royal or administrative centre; not a confirmed fixed capital",
+      "identityNote": "葡萄牙伯国及早期王权中心；不把“国家发源地”直接等同历代固定首都。公爵宫为15世纪建筑，后有大规模修复。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 3,
+        "areaCount": 1,
+        "wallCount": 4,
+        "palaceCount": 1,
+        "openWallCount": 0,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        -8.305200000000001,
+        41.4359,
+        -8.2752,
+        41.4599
+      ],
+      "whc": 1031,
+      "relatedHeritageIds": [
+        "whc-1031"
+      ],
+      "identitySourceUrl": "https://whc.unesco.org/en/list/1031/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "brussels",
+      "name": "布鲁塞尔",
+      "enName": "Brussels",
+      "country": "比利时",
+      "countryId": "be",
+      "center": [
+        4.3593,
+        50.8429
+      ],
+      "date": 1830,
+      "start": 1830,
+      "end": null,
+      "period": "清",
+      "capitalPeriods": [
+        "清",
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "清",
+        "近现代"
+      ],
+      "regime": "比利时王国",
+      "periodLabel": "比利时王国；1830年起（沿革见详情）",
+      "referenceUrl": "https://monarchie.be/en/heritage/royal-palace-of-brussels",
+      "sourceUrl": "https://monarchie.be/en/heritage/royal-palace-of-brussels",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "1830年后的比利时王国首都记录，不把现存王宫建筑倒推为中世纪全城。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 0,
+        "wallCount": 1,
+        "palaceCount": 1,
+        "openWallCount": 1,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        4.3443000000000005,
+        50.8309,
+        4.3743,
+        50.8549
+      ],
+      "capitalSiteKey": "ancient-site:world-brussels",
+      "identitySourceUrl": "https://monarchie.be/en/heritage/royal-palace-of-brussels",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "luxembourg",
+      "name": "卢森堡",
+      "enName": "Luxembourg",
+      "country": "卢森堡",
+      "countryId": "lu",
+      "center": [
+        6.1319,
+        49.6116
+      ],
+      "date": 963,
+      "start": 963,
+      "end": null,
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "regime": "卢森堡伯国、公国及大公国",
+      "periodLabel": "卢森堡伯国、公国及大公国；963年起（沿革见详情）",
+      "referenceUrl": "https://whc.unesco.org/en/list/699/",
+      "sourceUrl": "https://whc.unesco.org/en/list/699/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "963年是早期堡垒取得的传统起点，不是现代大公国建国或一次明确迁都。城防历经多国改筑，1867年后部分拆除。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 0,
+        "wallCount": 23,
+        "palaceCount": 1,
+        "openWallCount": 23,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        6.1169,
+        49.5996,
+        6.1469,
+        49.6236
+      ],
+      "whc": 699,
+      "relatedHeritageIds": [
+        "whc-699"
+      ],
+      "capitalSiteKey": "ancient-site:world-luxembourg",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/699/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "copenhagen",
+      "name": "哥本哈根",
+      "enName": "Copenhagen",
+      "country": "丹麦",
+      "countryId": "dk",
+      "center": [
+        12.5804,
+        55.675
+      ],
+      "date": 1443,
+      "start": 1443,
+      "end": null,
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "regime": "丹麦王国",
+      "periodLabel": "丹麦王国；1443年起（沿革见详情）",
+      "referenceUrl": "https://denkongeligesamling.dk/en/christiansborg-palace",
+      "sourceUrl": "https://denkongeligesamling.dk/en/christiansborg-palace",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "都城、王廷或行政中心的分期参考；年份不表示所有遗迹同年兴建，也不推定政权、驻地及城界连续不变。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        12.565399999999999,
+        55.663,
+        12.5954,
+        55.687
+      ],
+      "capitalSiteKey": "ancient-site:world-copenhagen",
+      "identitySourceUrl": "https://denkongeligesamling.dk/en/christiansborg-palace",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "roskilde",
+      "name": "罗斯基勒",
+      "enName": "Roskilde",
+      "country": "丹麦",
+      "countryId": "dk",
+      "center": [
+        12.0804,
+        55.6426
+      ],
+      "date": 980,
+      "start": 980,
+      "end": 1443,
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明"
+      ],
+      "urbanPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明"
+      ],
+      "regime": "丹麦早期王权及主教中心",
+      "periodLabel": "丹麦早期王权及主教中心；980—1443年",
+      "referenceUrl": "https://whc.unesco.org/en/list/695/",
+      "sourceUrl": "https://whc.unesco.org/en/list/695/",
+      "tentative": false,
+      "historicalIdentity": "political-centre",
+      "identityLabel": "王权或行政中心（非确定固定王都）",
+      "identityEnLabel": "Royal or administrative centre; not a confirmed fixed capital",
+      "identityNote": "早期王权、宗教和王室安葬中心；王廷流动，980—1443为目录宽泛阶段，不认定连续固定首都。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        12.065399999999999,
+        55.6306,
+        12.0954,
+        55.6546
+      ],
+      "whc": 695,
+      "relatedHeritageIds": [
+        "whc-695"
+      ],
+      "identitySourceUrl": "https://whc.unesco.org/en/list/695/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "oslo",
+      "name": "奥斯陆",
+      "enName": "Oslo",
+      "country": "挪威",
+      "countryId": "no",
+      "center": [
+        10.7366,
+        59.9075
+      ],
+      "date": 1300,
+      "start": 1300,
+      "end": null,
+      "period": "元",
+      "capitalPeriods": [
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "regime": "挪威王国",
+      "periodLabel": "挪威王国；1300年起（沿革见详情）",
+      "referenceUrl": "https://www.forsvarshistoriskmuseum.no/akershus-slott/en",
+      "sourceUrl": "https://www.forsvarshistoriskmuseum.no/akershus-slott/en",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "约1300年成为王权行政中心；中间经历王朝联合、迁驻及1925年恢复奥斯陆名称，不能读作1300年以来连续独立王国首都。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 3,
+        "areaCount": 1,
+        "wallCount": 23,
+        "palaceCount": 1,
+        "openWallCount": 23,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        10.721599999999999,
+        59.8955,
+        10.7516,
+        59.9195
+      ],
+      "capitalSiteKey": "ancient-site:world-oslo",
+      "identitySourceUrl": "https://www.forsvarshistoriskmuseum.no/akershus-slott/en",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "bergen",
+      "name": "卑尔根",
+      "enName": "Bergen",
+      "country": "挪威",
+      "countryId": "no",
+      "center": [
+        5.3176,
+        60.3996
+      ],
+      "date": 1217,
+      "start": 1217,
+      "end": 1299,
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏",
+        "元"
+      ],
+      "urbanPeriods": [
+        "宋辽金西夏",
+        "元"
+      ],
+      "regime": "中世纪挪威王室主要驻地",
+      "periodLabel": "中世纪挪威王室主要驻地；1217—1299年",
+      "referenceUrl": "https://bymuseet.no/museum/hakonshallen/",
+      "sourceUrl": "https://bymuseet.no/museum/hakonshallen/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "都城、王廷或行政中心的分期参考；年份不表示所有遗迹同年兴建，也不推定政权、驻地及城界连续不变。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 3,
+        "areaCount": 2,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        5.3026,
+        60.3876,
+        5.332599999999999,
+        60.4116
+      ],
+      "capitalSiteKey": "ancient-site:world-bergen",
+      "identitySourceUrl": "https://bymuseet.no/museum/hakonshallen/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "helsinki",
+      "name": "赫尔辛基",
+      "enName": "Helsinki",
+      "country": "芬兰",
+      "countryId": "fi",
+      "center": [
+        24.9525,
+        60.1698
+      ],
+      "date": 1812,
+      "start": 1812,
+      "end": null,
+      "period": "清",
+      "capitalPeriods": [
+        "清",
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "清",
+        "近现代"
+      ],
+      "regime": "芬兰大公国及共和国",
+      "periodLabel": "芬兰大公国及共和国；1812年起（沿革见详情）",
+      "referenceUrl": "https://www.presidentti.fi/en/presidency/official-residences/presidential-palace/",
+      "sourceUrl": "https://www.presidentti.fi/en/presidency/official-residences/presidential-palace/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "1812年指定为芬兰大公国首都，主要政府机构1819年迁入；芬兰1917年独立。现政府宫和总统府是19世纪建筑。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        24.9375,
+        60.1578,
+        24.9675,
+        60.1818
+      ],
+      "capitalSiteKey": "ancient-site:world-helsinki",
+      "identitySourceUrl": "https://www.presidentti.fi/en/presidency/official-residences/presidential-palace/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "reykjavik",
+      "name": "雷克雅未克",
+      "enName": "Reykjavík",
+      "country": "冰岛",
+      "countryId": "is",
+      "center": [
+        -21.9406,
+        64.1468
+      ],
+      "date": 1845,
+      "start": 1845,
+      "end": null,
+      "period": "清",
+      "capitalPeriods": [
+        "清",
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "清",
+        "近现代"
+      ],
+      "regime": "冰岛议会及国家政治中心",
+      "periodLabel": "冰岛议会及国家政治中心；1845年起（沿革见详情）",
+      "referenceUrl": "https://www.althingi.is/english/about-the-parliament/the-parliament-house/",
+      "sourceUrl": "https://www.althingi.is/english/about-the-parliament/the-parliament-house/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "1845年是恢复议会在城内开会的年份，不是共和国建立年；1918年王国成立、1944年共和国成立。现议会大厦1881年启用。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        -21.9556,
+        64.1348,
+        -21.9256,
+        64.1588
+      ],
+      "capitalSiteKey": "ancient-site:world-reykjavik",
+      "identitySourceUrl": "https://www.althingi.is/english/about-the-parliament/the-parliament-house/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "krakow",
+      "name": "克拉科夫",
+      "enName": "Kraków",
+      "country": "波兰",
+      "countryId": "pl",
+      "center": [
+        19.9354,
+        50.054
+      ],
+      "date": 1038,
+      "start": 1038,
+      "end": 1596,
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明"
+      ],
+      "urbanPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明"
+      ],
+      "regime": "波兰王国王都",
+      "periodLabel": "波兰王国王都；1038—1596年",
+      "referenceUrl": "https://whc.unesco.org/en/list/29/",
+      "sourceUrl": "https://whc.unesco.org/en/list/29/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "11世纪起主要王都；1596年为王廷迁华沙的传统标志，此后仍有加冕和王室葬仪，不等于城市政治作用立即终止。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 3,
+        "areaCount": 0,
+        "wallCount": 39,
+        "palaceCount": 1,
+        "openWallCount": 1,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        19.9204,
+        50.042,
+        19.950400000000002,
+        50.066
+      ],
+      "whc": 29,
+      "relatedHeritageIds": [
+        "whc-29"
+      ],
+      "capitalSiteKey": "ancient-site:world-krakow",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/29/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "warsaw",
+      "name": "华沙",
+      "enName": "Warsaw",
+      "country": "波兰",
+      "countryId": "pl",
+      "center": [
+        21.0152,
+        52.2477
+      ],
+      "date": 1596,
+      "start": 1596,
+      "end": null,
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "regime": "波兰王室政治中心及共和国首都",
+      "periodLabel": "波兰王室政治中心及共和国首都；1596年起（沿革见详情）",
+      "referenceUrl": "https://whc.unesco.org/en/list/30/",
+      "sourceUrl": "https://whc.unesco.org/en/list/30/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "1596年表示王廷迁驻的重要阶段，政治中心逐渐形成；首都地位存在战争和分割中断。现王宫为二战后重建，不能标作完整原存宫殿。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 3,
+        "areaCount": 0,
+        "wallCount": 5,
+        "palaceCount": 2,
+        "openWallCount": 0,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        21.0002,
+        52.2357,
+        21.0302,
+        52.2597
+      ],
+      "whc": 30,
+      "relatedHeritageIds": [
+        "whc-30"
+      ],
+      "capitalSiteKey": "ancient-site:world-warsaw",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/30/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "prague",
+      "name": "布拉格",
+      "enName": "Prague",
+      "country": "捷克",
+      "countryId": "cz",
+      "center": [
+        14.4017,
+        50.0909
+      ],
+      "date": 900,
+      "start": 900,
+      "end": null,
+      "period": "隋唐",
+      "capitalPeriods": [
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏",
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏",
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "regime": "波希米亚王国及捷克国家",
+      "periodLabel": "波希米亚王国及捷克国家；900年起（沿革见详情）",
+      "referenceUrl": "https://whc.unesco.org/en/list/616/",
+      "sourceUrl": "https://whc.unesco.org/en/list/616/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "约900年表示普热米斯尔王朝核心逐渐形成的阶段，不是一次可精确到年的迁都；包括波希米亚王权及后来的国家首都，存在政权变化。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 4,
+        "areaCount": 1,
+        "wallCount": 6,
+        "palaceCount": 1,
+        "openWallCount": 5,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        14.3867,
+        50.0789,
+        14.4167,
+        50.1029
+      ],
+      "whc": 616,
+      "relatedHeritageIds": [
+        "whc-616"
+      ],
+      "capitalSiteKey": "ancient-site:world-prague",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/616/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "bratislava",
+      "name": "布拉迪斯拉发",
+      "enName": "Bratislava",
+      "country": "斯洛伐克",
+      "countryId": "sk",
+      "center": [
+        17.1002,
+        48.1421
+      ],
+      "date": 1536,
+      "start": 1536,
+      "end": 1783,
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清"
+      ],
+      "urbanPeriods": [
+        "明",
+        "清"
+      ],
+      "regime": "匈牙利王国行政首都",
+      "periodLabel": "匈牙利王国行政首都；1536—1783年",
+      "referenceUrl": "https://www.visitbratislava.com/places/bratislava-castle/",
+      "sourceUrl": "https://www.visitbratislava.com/places/bratislava-castle/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "都城、王廷或行政中心的分期参考；年份不表示所有遗迹同年兴建，也不推定政权、驻地及城界连续不变。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 0,
+        "wallCount": 6,
+        "palaceCount": 1,
+        "openWallCount": 6,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        17.0852,
+        48.1301,
+        17.1152,
+        48.1541
+      ],
+      "capitalSiteKey": "ancient-site:world-bratislava",
+      "identitySourceUrl": "https://www.visitbratislava.com/places/bratislava-castle/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "bern",
+      "name": "伯尔尼",
+      "enName": "Bern",
+      "country": "瑞士",
+      "countryId": "ch",
+      "center": [
+        7.4442,
+        46.9467
+      ],
+      "date": 1848,
+      "start": 1848,
+      "end": null,
+      "period": "清",
+      "capitalPeriods": [
+        "清",
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "清",
+        "近现代"
+      ],
+      "regime": "瑞士联邦政府驻地",
+      "periodLabel": "瑞士联邦政府驻地；1848年起（沿革见详情）",
+      "referenceUrl": "https://whc.unesco.org/en/list/267/",
+      "sourceUrl": "https://whc.unesco.org/en/list/267/",
+      "tentative": false,
+      "historicalIdentity": "political-centre",
+      "identityLabel": "王权或行政中心（非确定固定王都）",
+      "identityEnLabel": "Royal or administrative centre; not a confirmed fixed capital",
+      "identityNote": "1848年起为联邦政府驻地（联邦城市），避免将其写成瑞士宪法规定的法定首都。城门塔与联邦议会建筑分别分期。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 4,
+        "areaCount": 0,
+        "wallCount": 3,
+        "palaceCount": 0,
+        "openWallCount": 3,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        7.429200000000001,
+        46.9347,
+        7.4592,
+        46.9587
+      ],
+      "whc": 267,
+      "relatedHeritageIds": [
+        "whc-267"
+      ],
+      "identitySourceUrl": "https://whc.unesco.org/en/list/267/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "vaduz",
+      "name": "瓦杜兹",
+      "enName": "Vaduz",
+      "country": "列支敦士登",
+      "countryId": "li",
+      "center": [
+        9.5215,
+        47.1394
+      ],
+      "date": 1719,
+      "start": 1719,
+      "end": null,
+      "period": "清",
+      "capitalPeriods": [
+        "清",
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "清",
+        "近现代"
+      ],
+      "regime": "列支敦士登侯国政治中心",
+      "periodLabel": "列支敦士登侯国政治中心；1719年起（沿革见详情）",
+      "referenceUrl": "https://tourismus.li/en/lie/place/Vaduz%20Castle/",
+      "sourceUrl": "https://tourismus.li/en/lie/place/Vaduz%20Castle/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "1719年为侯国形成的阶段，亲王常住瓦杜兹自1938年；不把侯国成立等同王室当年已迁入。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        9.506499999999999,
+        47.1274,
+        9.5365,
+        47.1514
+      ],
+      "capitalSiteKey": "ancient-site:world-vaduz",
+      "identitySourceUrl": "https://tourismus.li/en/lie/place/Vaduz%20Castle/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "monaco",
+      "name": "摩纳哥城",
+      "enName": "Monaco-Ville",
+      "country": "摩纳哥",
+      "countryId": "mc",
+      "center": [
+        7.4209,
+        43.7314
+      ],
+      "date": 1297,
+      "start": 1297,
+      "end": null,
+      "period": "元",
+      "capitalPeriods": [
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "regime": "摩纳哥亲王国",
+      "periodLabel": "摩纳哥亲王国；1297年起（沿革见详情）",
+      "referenceUrl": "https://www.palais.mc/en/",
+      "sourceUrl": "https://www.palais.mc/en/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "1297年作为格里马尔迪家族控制城堡的传统标志；控制权及政权有中断，并非从该年起持续不变。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        7.4059,
+        43.7194,
+        7.435899999999999,
+        43.7434
+      ],
+      "capitalSiteKey": "ancient-site:world-monaco",
+      "identitySourceUrl": "https://www.palais.mc/en/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "andorra-la-vella",
+      "name": "安道尔城",
+      "enName": "Andorra la Vella",
+      "country": "安道尔",
+      "countryId": "ad",
+      "center": [
+        1.5209,
+        42.5065
+      ],
+      "date": 1419,
+      "start": 1419,
+      "end": null,
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "regime": "安道尔总委员会及共同亲王国",
+      "periodLabel": "安道尔总委员会及共同亲王国；1419年起（沿革见详情）",
+      "referenceUrl": "https://museus.ad/en/museums/casa-de-la-vall",
+      "sourceUrl": "https://museus.ad/en/museums/casa-de-la-vall",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "1419年是总委员会获准形成的阶段，不是现代宪政国家成立年；山谷石屋建于16世纪，1702年后用于议会。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        1.5059,
+        42.4945,
+        1.5358999999999998,
+        42.5185
+      ],
+      "capitalSiteKey": "ancient-site:world-andorra-la-vella",
+      "identitySourceUrl": "https://museus.ad/en/museums/casa-de-la-vall",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "san-marino",
+      "name": "圣马力诺城",
+      "enName": "San Marino",
+      "country": "圣马力诺",
+      "countryId": "sm",
+      "center": [
+        12.4497,
+        43.9354
+      ],
+      "date": 1253,
+      "start": 1253,
+      "end": null,
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "regime": "圣马力诺共和国",
+      "periodLabel": "圣马力诺共和国；1253年起（沿革见详情）",
+      "referenceUrl": "https://whc.unesco.org/en/list/1245/",
+      "sourceUrl": "https://whc.unesco.org/en/list/1245/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "依据中世纪城邦制度，采用13世纪可考政治阶段，不以公元301年的传统建国故事作为连续都城的精确起点。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 3,
+        "areaCount": 1,
+        "wallCount": 7,
+        "palaceCount": 0,
+        "openWallCount": 7,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        12.4347,
+        43.9234,
+        12.4647,
+        43.9474
+      ],
+      "whc": 1245,
+      "relatedHeritageIds": [
+        "whc-1245"
+      ],
+      "capitalSiteKey": "ancient-site:world-san-marino",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/1245/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "vatican",
+      "name": "梵蒂冈城",
+      "enName": "Vatican City",
+      "country": "梵蒂冈",
+      "countryId": "va",
+      "center": [
+        12.4545,
+        41.903
+      ],
+      "date": 1929,
+      "start": 1929,
+      "end": null,
+      "period": "近现代",
+      "capitalPeriods": [
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "近现代"
+      ],
+      "regime": "梵蒂冈城国",
+      "periodLabel": "梵蒂冈城国；1929年起（沿革见详情）",
+      "referenceUrl": "https://whc.unesco.org/en/list/286/",
+      "sourceUrl": "https://whc.unesco.org/en/list/286/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "梵蒂冈城国始于1929年；现教堂、宫殿与防御墙多早于城国，不把城国范围等同古罗马城或整个教皇国都城。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 0,
+        "wallCount": 14,
+        "palaceCount": 0,
+        "openWallCount": 14,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        12.439499999999999,
+        41.891,
+        12.4695,
+        41.915
+      ],
+      "whc": 286,
+      "relatedHeritageIds": [
+        "whc-286"
+      ],
+      "capitalSiteKey": "ancient-site:world-vatican",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/286/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "valletta",
+      "name": "瓦莱塔",
+      "enName": "Valletta",
+      "country": "马耳他",
+      "countryId": "mt",
+      "center": [
+        14.5124,
+        35.8992
+      ],
+      "date": 1571,
+      "start": 1571,
+      "end": null,
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "regime": "圣约翰骑士团及马耳他",
+      "periodLabel": "圣约翰骑士团及马耳他；1571年起（沿革见详情）",
+      "referenceUrl": "https://whc.unesco.org/en/list/131/",
+      "sourceUrl": "https://whc.unesco.org/en/list/131/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "都城、王廷或行政中心的分期参考；年份不表示所有遗迹同年兴建，也不推定政权、驻地及城界连续不变。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 4,
+        "areaCount": 1,
+        "wallCount": 20,
+        "palaceCount": 1,
+        "openWallCount": 20,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        14.497399999999999,
+        35.8872,
+        14.5274,
+        35.9112
+      ],
+      "whc": 131,
+      "relatedHeritageIds": [
+        "whc-131"
+      ],
+      "capitalSiteKey": "ancient-site:world-valletta",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/131/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "mdina",
+      "name": "姆迪纳",
+      "enName": "Mdina",
+      "country": "马耳他",
+      "countryId": "mt",
+      "center": [
+        14.4031,
+        35.8862
+      ],
+      "date": 870,
+      "start": 870,
+      "end": 1530,
+      "period": "隋唐",
+      "capitalPeriods": [
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏",
+        "元",
+        "明"
+      ],
+      "urbanPeriods": [
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏",
+        "元",
+        "明"
+      ],
+      "regime": "中世纪马耳他行政中心",
+      "periodLabel": "中世纪马耳他行政中心；870—1530年",
+      "referenceUrl": "https://heritagemalta.mt/explore/mdina-dungeons/",
+      "sourceUrl": "https://heritagemalta.mt/explore/mdina-dungeons/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "中世纪马耳他行政中心；1530年骑士团采用比尔古，1571年迁瓦莱塔。现城防含18世纪大规模改建。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 4,
+        "areaCount": 1,
+        "wallCount": 8,
+        "palaceCount": 1,
+        "openWallCount": 7,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        14.3881,
+        35.8742,
+        14.4181,
+        35.8982
+      ],
+      "capitalSiteKey": "ancient-site:world-mdina",
+      "identitySourceUrl": "https://heritagemalta.mt/explore/mdina-dungeons/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "ljubljana",
+      "name": "卢布尔雅那",
+      "enName": "Ljubljana",
+      "country": "斯洛文尼亚",
+      "countryId": "si",
+      "center": [
+        14.5084,
+        46.0489
+      ],
+      "date": 1335,
+      "start": 1335,
+      "end": null,
+      "period": "元",
+      "capitalPeriods": [
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "regime": "卡尼奥拉首府及斯洛文尼亚首都",
+      "periodLabel": "卡尼奥拉首府及斯洛文尼亚首都；1335年起（沿革见详情）",
+      "referenceUrl": "https://www.ljubljanskigrad.si/en/",
+      "sourceUrl": "https://www.ljubljanskigrad.si/en/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "中世纪卡尼奥拉行政首府与1991年后的国家首都分别理解，不能将行政首府一直称作独立国家王都。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 1,
+        "wallCount": 2,
+        "palaceCount": 0,
+        "openWallCount": 2,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        14.4934,
+        46.0369,
+        14.5234,
+        46.060900000000004
+      ],
+      "capitalSiteKey": "ancient-site:world-ljubljana",
+      "identitySourceUrl": "https://www.ljubljanskigrad.si/en/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "zagreb",
+      "name": "萨格勒布",
+      "enName": "Zagreb",
+      "country": "克罗地亚",
+      "countryId": "hr",
+      "center": [
+        15.9741,
+        45.8164
+      ],
+      "date": 1557,
+      "start": 1557,
+      "end": null,
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "regime": "克罗地亚政治中心",
+      "periodLabel": "克罗地亚政治中心；1557年起（沿革见详情）",
+      "referenceUrl": "https://www.infozagreb.hr/en/about-zagreb",
+      "sourceUrl": "https://www.infozagreb.hr/en/about-zagreb",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "都城、王廷或行政中心的分期参考；年份不表示所有遗迹同年兴建，也不推定政权、驻地及城界连续不变。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 4,
+        "areaCount": 1,
+        "wallCount": 2,
+        "palaceCount": 0,
+        "openWallCount": 2,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        15.9591,
+        45.8044,
+        15.9891,
+        45.8284
+      ],
+      "capitalSiteKey": "ancient-site:world-zagreb",
+      "identitySourceUrl": "https://www.infozagreb.hr/en/about-zagreb",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "jajce",
+      "name": "亚伊采",
+      "enName": "Jajce",
+      "country": "波黑",
+      "countryId": "ba",
+      "center": [
+        17.2702,
+        44.3402
+      ],
+      "date": 1461,
+      "start": 1461,
+      "end": 1463,
+      "period": "明",
+      "capitalPeriods": [
+        "明"
+      ],
+      "urbanPeriods": [
+        "明"
+      ],
+      "regime": "波斯尼亚王国晚期王都",
+      "periodLabel": "波斯尼亚王国晚期王都；1461—1463年",
+      "referenceUrl": "https://whc.unesco.org/en/tentativelists/2098/",
+      "sourceUrl": "https://whc.unesco.org/en/tentativelists/2098/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "记录波斯尼亚王国最后阶段王都；不是把整段波斯尼亚中世纪历史都集中到亚伊采。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 1,
+        "wallCount": 9,
+        "palaceCount": 0,
+        "openWallCount": 4,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        17.2552,
+        44.3282,
+        17.2852,
+        44.3522
+      ],
+      "capitalSiteKey": "ancient-site:world-jajce",
+      "identitySourceUrl": "https://whc.unesco.org/en/tentativelists/2098/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "belgrade",
+      "name": "贝尔格莱德",
+      "enName": "Belgrade",
+      "country": "塞尔维亚",
+      "countryId": "rs",
+      "center": [
+        20.4502,
+        44.8234
+      ],
+      "date": 1405,
+      "start": 1405,
+      "end": 1427,
+      "period": "明",
+      "capitalPeriods": [
+        "明"
+      ],
+      "urbanPeriods": [
+        "明"
+      ],
+      "regime": "塞尔维亚专制国王都",
+      "periodLabel": "塞尔维亚专制国王都；1405—1427年",
+      "referenceUrl": "https://www.beogradskatvrdjava.co.rs/",
+      "sourceUrl": "https://www.beogradskatvrdjava.co.rs/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "1405—1427年为斯特凡·拉扎列维奇的都城阶段；后来塞尔维亚近现代首都另有沿革。现存要塞包括奥斯曼及哈布斯堡多期改筑。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 1,
+        "wallCount": 147,
+        "palaceCount": 0,
+        "openWallCount": 128,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        20.4352,
+        44.8114,
+        20.4652,
+        44.8354
+      ],
+      "capitalSiteKey": "ancient-site:world-belgrade",
+      "identitySourceUrl": "https://www.beogradskatvrdjava.co.rs/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "smederevo",
+      "name": "斯梅代雷沃",
+      "enName": "Smederevo",
+      "country": "塞尔维亚",
+      "countryId": "rs",
+      "center": [
+        20.9274,
+        44.669
+      ],
+      "date": 1430,
+      "start": 1430,
+      "end": 1459,
+      "period": "明",
+      "capitalPeriods": [
+        "明"
+      ],
+      "urbanPeriods": [
+        "明"
+      ],
+      "regime": "塞尔维亚专制国都城",
+      "periodLabel": "塞尔维亚专制国都城；1430—1459年",
+      "referenceUrl": "https://whc.unesco.org/en/tentativelists/5538/",
+      "sourceUrl": "https://whc.unesco.org/en/tentativelists/5538/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "都城、王廷或行政中心的分期参考；年份不表示所有遗迹同年兴建，也不推定政权、驻地及城界连续不变。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 1,
+        "wallCount": 30,
+        "palaceCount": 0,
+        "openWallCount": 27,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        20.912399999999998,
+        44.657,
+        20.9424,
+        44.681
+      ],
+      "capitalSiteKey": "ancient-site:world-smederevo",
+      "identitySourceUrl": "https://whc.unesco.org/en/tentativelists/5538/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "cetinje",
+      "name": "采蒂涅",
+      "enName": "Cetinje",
+      "country": "黑山",
+      "countryId": "me",
+      "center": [
+        18.9224,
+        42.3871
+      ],
+      "date": 1482,
+      "start": 1482,
+      "end": 1918,
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "regime": "黑山采尔诺耶维奇、主教国及王国",
+      "periodLabel": "黑山采尔诺耶维奇、主教国及王国；1482—1918年",
+      "referenceUrl": "https://www.mnmuseum.org/",
+      "sourceUrl": "https://www.mnmuseum.org/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "1482年创建政治／宗教核心，后经历王朝、主教国、公国、王国及战争中断；比利亚尔达宫不是15世纪原宫。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        18.9074,
+        42.375099999999996,
+        18.9374,
+        42.3991
+      ],
+      "capitalSiteKey": "ancient-site:world-cetinje",
+      "identitySourceUrl": "https://www.mnmuseum.org/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "kruje",
+      "name": "克鲁亚",
+      "enName": "Krujë",
+      "country": "阿尔巴尼亚",
+      "countryId": "al",
+      "center": [
+        19.7946,
+        41.5073
+      ],
+      "date": 1190,
+      "start": 1190,
+      "end": 1216,
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏"
+      ],
+      "urbanPeriods": [
+        "宋辽金西夏"
+      ],
+      "regime": "阿尔巴农公国政治中心",
+      "periodLabel": "阿尔巴农公国政治中心；1190—1216年",
+      "referenceUrl": "https://akt.gov.al/en/city/kruja/",
+      "sourceUrl": "https://akt.gov.al/en/city/kruja/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "都城、王廷或行政中心的分期参考；年份不表示所有遗迹同年兴建，也不推定政权、驻地及城界连续不变。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 1,
+        "wallCount": 2,
+        "palaceCount": 0,
+        "openWallCount": 1,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        19.7796,
+        41.4953,
+        19.8096,
+        41.5193
+      ],
+      "capitalSiteKey": "ancient-site:world-kruje",
+      "identitySourceUrl": "https://akt.gov.al/en/city/kruja/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "skopje",
+      "name": "斯科普里",
+      "enName": "Skopje",
+      "country": "北马其顿",
+      "countryId": "mk",
+      "center": [
+        21.4331,
+        42.0021
+      ],
+      "date": 1346,
+      "start": 1346,
+      "end": 1371,
+      "period": "元",
+      "capitalPeriods": [
+        "元",
+        "明"
+      ],
+      "urbanPeriods": [
+        "元",
+        "明"
+      ],
+      "regime": "塞尔维亚帝国主要王廷中心",
+      "periodLabel": "塞尔维亚帝国主要王廷中心；1346—1371年",
+      "referenceUrl": "https://haemus.org.mk/skopje-fortress/",
+      "sourceUrl": "https://haemus.org.mk/skopje-fortress/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "斯特凡·杜尚时期重要王廷和加冕地，不声称整个帝国只有一个固定首都；中世纪之后及现代首都地位是不同阶段。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 1,
+        "wallCount": 16,
+        "palaceCount": 0,
+        "openWallCount": 14,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        21.4181,
+        41.9901,
+        21.4481,
+        42.0141
+      ],
+      "capitalSiteKey": "ancient-site:world-skopje",
+      "identitySourceUrl": "https://haemus.org.mk/skopje-fortress/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "preslav",
+      "name": "普雷斯拉夫",
+      "enName": "Veliki Preslav",
+      "country": "保加利亚",
+      "countryId": "bg",
+      "center": [
+        26.8154,
+        43.14
+      ],
+      "date": 893,
+      "start": 893,
+      "end": 971,
+      "period": "隋唐",
+      "capitalPeriods": [
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏"
+      ],
+      "urbanPeriods": [
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏"
+      ],
+      "regime": "保加利亚第一帝国",
+      "periodLabel": "保加利亚第一帝国；893—971年",
+      "referenceUrl": "https://www.tourism.government.bg/en/tourist-destinations/2804/5496",
+      "sourceUrl": "https://www.tourism.government.bg/en/tourist-destinations/2804/5496",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "都城、王廷或行政中心的分期参考；年份不表示所有遗迹同年兴建，也不推定政权、驻地及城界连续不变。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 1,
+        "wallCount": 1,
+        "palaceCount": 0,
+        "openWallCount": 1,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        26.8004,
+        43.128,
+        26.8304,
+        43.152
+      ],
+      "capitalSiteKey": "ancient-site:world-preslav",
+      "identitySourceUrl": "https://www.tourism.government.bg/en/tourist-destinations/2804/5496",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "tarnovo",
+      "name": "大特尔诺沃",
+      "enName": "Veliko Tarnovo",
+      "country": "保加利亚",
+      "countryId": "bg",
+      "center": [
+        25.6518,
+        43.0833
+      ],
+      "date": 1185,
+      "start": 1185,
+      "end": 1393,
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明"
+      ],
+      "urbanPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明"
+      ],
+      "regime": "保加利亚第二帝国",
+      "periodLabel": "保加利亚第二帝国；1185—1393年",
+      "referenceUrl": "https://www.museumvt.com/en/",
+      "sourceUrl": "https://www.museumvt.com/en/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "都城、王廷或行政中心的分期参考；年份不表示所有遗迹同年兴建，也不推定政权、驻地及城界连续不变。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 3,
+        "areaCount": 1,
+        "wallCount": 13,
+        "palaceCount": 1,
+        "openWallCount": 11,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        25.6368,
+        43.0713,
+        25.666800000000002,
+        43.0953
+      ],
+      "capitalSiteKey": "ancient-site:world-tarnovo",
+      "identitySourceUrl": "https://www.museumvt.com/en/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "bucharest",
+      "name": "布加勒斯特",
+      "enName": "Bucharest",
+      "country": "罗马尼亚",
+      "countryId": "ro",
+      "center": [
+        26.1018,
+        44.4303
+      ],
+      "date": 1659,
+      "start": 1659,
+      "end": null,
+      "period": "清",
+      "capitalPeriods": [
+        "清",
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "清",
+        "近现代"
+      ],
+      "regime": "瓦拉几亚及罗马尼亚",
+      "periodLabel": "瓦拉几亚及罗马尼亚；1659年起（沿革见详情）",
+      "referenceUrl": "https://muzeulbucurestiului.ro/palatul-voievodal-curtea-veche.html",
+      "sourceUrl": "https://muzeulbucurestiului.ro/palatul-voievodal-curtea-veche.html",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "都城、王廷或行政中心的分期参考；年份不表示所有遗迹同年兴建，也不推定政权、驻地及城界连续不变。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        26.0868,
+        44.4183,
+        26.1168,
+        44.4423
+      ],
+      "capitalSiteKey": "ancient-site:world-bucharest",
+      "identitySourceUrl": "https://muzeulbucurestiului.ro/palatul-voievodal-curtea-veche.html",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "suceava",
+      "name": "苏恰瓦",
+      "enName": "Suceava",
+      "country": "罗马尼亚",
+      "countryId": "ro",
+      "center": [
+        26.2704,
+        47.6449
+      ],
+      "date": 1388,
+      "start": 1388,
+      "end": 1565,
+      "period": "明",
+      "capitalPeriods": [
+        "明"
+      ],
+      "urbanPeriods": [
+        "明"
+      ],
+      "regime": "摩尔达维亚公国",
+      "periodLabel": "摩尔达维亚公国；1388—1565年",
+      "referenceUrl": "https://muzeulbucovinei.ro/mnb/obiective-culturale/cetatea-de-scaun-a-sucevei",
+      "sourceUrl": "https://muzeulbucovinei.ro/mnb/obiective-culturale/cetatea-de-scaun-a-sucevei",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "都城、王廷或行政中心的分期参考；年份不表示所有遗迹同年兴建，也不推定政权、驻地及城界连续不变。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 1,
+        "wallCount": 5,
+        "palaceCount": 0,
+        "openWallCount": 0,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        26.255399999999998,
+        47.6329,
+        26.2854,
+        47.6569
+      ],
+      "capitalSiteKey": "ancient-site:world-suceava",
+      "identitySourceUrl": "https://muzeulbucovinei.ro/mnb/obiective-culturale/cetatea-de-scaun-a-sucevei",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "chisinau",
+      "name": "基希讷乌",
+      "enName": "Chișinău",
+      "country": "摩尔多瓦",
+      "countryId": "md",
+      "center": [
+        28.832,
+        47.0249
+      ],
+      "date": 1917,
+      "start": 1917,
+      "end": null,
+      "period": "近现代",
+      "capitalPeriods": [
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "近现代"
+      ],
+      "regime": "摩尔达维亚民主共和国及摩尔多瓦国家",
+      "periodLabel": "摩尔达维亚民主共和国及摩尔多瓦国家；1917年起（沿革见详情）",
+      "referenceUrl": "https://presedinte.md/eng",
+      "sourceUrl": "https://presedinte.md/eng",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "1917—1918年摩尔达维亚民主共和国、苏联时期行政中心及1991年后的共和国应分开；1917不是今日共和国成立年。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        28.817,
+        47.0129,
+        28.847,
+        47.0369
+      ],
+      "capitalSiteKey": "ancient-site:world-chisinau",
+      "identitySourceUrl": "https://presedinte.md/eng",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "kyiv",
+      "name": "基辅",
+      "enName": "Kyiv",
+      "country": "乌克兰",
+      "countryId": "ua",
+      "center": [
+        30.5165,
+        50.4528
+      ],
+      "date": 882,
+      "start": 882,
+      "end": 1240,
+      "period": "隋唐",
+      "capitalPeriods": [
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏"
+      ],
+      "urbanPeriods": [
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏"
+      ],
+      "regime": "基辅罗斯政治中心",
+      "periodLabel": "基辅罗斯政治中心；882—1240年",
+      "referenceUrl": "https://whc.unesco.org/en/list/527/",
+      "sourceUrl": "https://whc.unesco.org/en/list/527/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "882—1240为目录概括的罗斯政治中心阶段；882属编年传统，统治和政治中心有变迁。圣索菲亚及金门不构成已核定全城边界。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        30.5015,
+        50.4408,
+        30.5315,
+        50.464800000000004
+      ],
+      "whc": 527,
+      "relatedHeritageIds": [
+        "whc-527"
+      ],
+      "capitalSiteKey": "ancient-site:world-kyiv",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/527/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "novogrudok",
+      "name": "新格鲁多克",
+      "enName": "Novogrudok",
+      "country": "白俄罗斯",
+      "countryId": "by",
+      "center": [
+        25.8238,
+        53.5995
+      ],
+      "date": 1250,
+      "start": 1250,
+      "end": 1323,
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏",
+        "元"
+      ],
+      "urbanPeriods": [
+        "宋辽金西夏",
+        "元"
+      ],
+      "regime": "立陶宛大公国早期王权中心",
+      "periodLabel": "立陶宛大公国早期王权中心；1250—1323年",
+      "referenceUrl": "https://www.belarus.by/en/travel/belarus-life/novogrudok-castle",
+      "sourceUrl": "https://www.belarus.by/en/travel/belarus-life/novogrudok-castle",
+      "tentative": false,
+      "historicalIdentity": "political-centre",
+      "identityLabel": "王权或行政中心（非确定固定王都）",
+      "identityEnLabel": "Royal or administrative centre; not a confirmed fixed capital",
+      "identityNote": "立陶宛大公国早期重要政治中心与城堡；“第一首都”、明道加斯加冕地及墓址存在争论，按普通历史城址显示，不绘制明道加斯墓。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 3,
+        "areaCount": 2,
+        "wallCount": 6,
+        "palaceCount": 0,
+        "openWallCount": 6,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        25.808799999999998,
+        53.5875,
+        25.8388,
+        53.6115
+      ],
+      "identitySourceUrl": "https://www.belarus.by/en/travel/belarus-life/novogrudok-castle",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "vilnius",
+      "name": "维尔纽斯",
+      "enName": "Vilnius",
+      "country": "立陶宛",
+      "countryId": "lt",
+      "center": [
+        25.289,
+        54.6873
+      ],
+      "date": 1323,
+      "start": 1323,
+      "end": null,
+      "period": "元",
+      "capitalPeriods": [
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "元",
+        "明",
+        "清",
+        "近现代"
+      ],
+      "regime": "立陶宛大公国及立陶宛国家",
+      "periodLabel": "立陶宛大公国及立陶宛国家；1323年起（沿革见详情）",
+      "referenceUrl": "https://whc.unesco.org/en/list/541/",
+      "sourceUrl": "https://whc.unesco.org/en/list/541/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "1323年是文献提及及大公国都城的重要节点。现下宫为21世纪复建，格迪米纳斯塔为另一实物；不合成原存全城。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 3,
+        "areaCount": 1,
+        "wallCount": 2,
+        "palaceCount": 1,
+        "openWallCount": 2,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        25.274,
+        54.6753,
+        25.304000000000002,
+        54.6993
+      ],
+      "whc": 541,
+      "relatedHeritageIds": [
+        "whc-541"
+      ],
+      "capitalSiteKey": "ancient-site:world-vilnius",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/541/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "riga",
+      "name": "里加",
+      "enName": "Riga",
+      "country": "拉脱维亚",
+      "countryId": "lv",
+      "center": [
+        24.1003,
+        56.9508
+      ],
+      "date": 1918,
+      "start": 1918,
+      "end": null,
+      "period": "近现代",
+      "capitalPeriods": [
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "近现代"
+      ],
+      "regime": "拉脱维亚共和国",
+      "periodLabel": "拉脱维亚共和国；1918年起（沿革见详情）",
+      "referenceUrl": "https://whc.unesco.org/en/list/852/",
+      "sourceUrl": "https://whc.unesco.org/en/list/852/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "1918年起为拉脱维亚共和国首都，1940—1991年的苏联时期是另一政治制度，不能写成共和国连续存在。中世纪城防单独分期。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 0,
+        "wallCount": 4,
+        "palaceCount": 1,
+        "openWallCount": 4,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        24.0853,
+        56.9388,
+        24.1153,
+        56.9628
+      ],
+      "whc": 852,
+      "relatedHeritageIds": [
+        "whc-852"
+      ],
+      "capitalSiteKey": "ancient-site:world-riga",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/852/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "tallinn",
+      "name": "塔林",
+      "enName": "Tallinn",
+      "country": "爱沙尼亚",
+      "countryId": "ee",
+      "center": [
+        24.7371,
+        59.4357
+      ],
+      "date": 1918,
+      "start": 1918,
+      "end": null,
+      "period": "近现代",
+      "capitalPeriods": [
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "近现代"
+      ],
+      "regime": "爱沙尼亚共和国",
+      "periodLabel": "爱沙尼亚共和国；1918年起（沿革见详情）",
+      "referenceUrl": "https://whc.unesco.org/en/list/822/",
+      "sourceUrl": "https://whc.unesco.org/en/list/822/",
+      "tentative": false,
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／政治中心",
+      "identityEnLabel": "Historical capital / political centre",
+      "identityNote": "1918年起为爱沙尼亚共和国首都，存在1940—1991年中断。中世纪城墙与18世纪改建城堡不归入1918年营建。 所属国家表示现今地理位置，不倒推历史主权。",
+      "identityEnNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries.",
+      "boundaryAudit": {
+        "featureCount": 3,
+        "areaCount": 1,
+        "wallCount": 22,
+        "palaceCount": 1,
+        "openWallCount": 21,
+        "status": "已接入实际宫堡、建筑及现存城防标绘；完整分期全城范围仍待核。"
+      },
+      "bbox": [
+        24.7221,
+        59.4237,
+        24.752100000000002,
+        59.4477
+      ],
+      "whc": 822,
+      "relatedHeritageIds": [
+        "whc-822"
+      ],
+      "capitalSiteKey": "ancient-site:world-tallinn",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/822/",
+      "enNote": "Dates describe political phases, with interruptions and changing institutions; they are not exact foundation dates. Present remains are not complete historical city boundaries."
+    },
+    {
+      "key": "iksan",
+      "name": "益山（王宫里）",
+      "enName": "Iksan (Wanggung-ri)",
+      "country": "韩国",
+      "center": [
+        127.05555555555556,
+        35.975
+      ],
+      "date": 600,
+      "period": "隋唐",
+      "capitalPeriods": [
+        "隋唐"
+      ],
+      "urbanPeriods": [
+        "隋唐"
+      ],
+      "regime": "百济泗沘时期副都／王宫中心",
+      "start": 600,
+      "end": 660,
+      "bbox": [
+        127.03055555555555,
+        35.95,
+        127.08055555555556,
+        36.0
+      ],
+      "referenceUrl": "https://whc.unesco.org/en/list/1477/",
+      "sourceUrl": "https://whc.unesco.org/en/list/1477/",
+      "periodLabel": "百济泗沘时期副都／王宫中心；约600—660年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-iksan",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "UNESCO列为百济泗沘时期副都相关遗迹；约600—660仅作阶段定位，不声称已知精确迁都年。坐标为官方遗产分项参考，不以王宫里同名村庄代替遗址。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/1477/",
+      "supplementAudit": "five-regions-20261028",
+      "whc": 1477,
+      "heritageId": "whc-1477",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0,
+        "status": "逐项说明现状遗址、城防或定位参考；完整分期城界未全部核定。"
+      }
+    },
+    {
+      "key": "samarkand",
+      "name": "撒马尔罕",
+      "enName": "Samarkand",
+      "country": "乌兹别克斯坦",
+      "center": [
+        66.9758,
+        39.6548
+      ],
+      "date": 1370,
+      "period": "明",
+      "capitalPeriods": [
+        "明"
+      ],
+      "urbanPeriods": [
+        "明"
+      ],
+      "regime": "帖木儿王朝都城",
+      "start": 1370,
+      "end": 1405,
+      "bbox": [
+        66.9508,
+        39.6298,
+        67.00080000000001,
+        39.6798
+      ],
+      "referenceUrl": "https://whc.unesco.org/en/list/603/",
+      "sourceUrl": "https://whc.unesco.org/en/list/603/",
+      "periodLabel": "帖木儿王朝都城；约1370—1405年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-samarkand",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "此处年代先列帖木儿都城阶段；阿弗拉西阿卜为较早古城，遗迹详情单列，不将古城与帖木儿城混为同一城界。帖木儿之后仍为重要都城，未以1405年作为城市终结。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/603/",
+      "supplementAudit": "five-regions-20261028",
+      "whc": 603,
+      "heritageId": "whc-603",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0,
+        "status": "逐项说明现状遗址、城防或定位参考；完整分期城界未全部核定。"
+      }
+    },
+    {
+      "key": "bukhara",
+      "name": "布哈拉",
+      "enName": "Bukhara",
+      "country": "乌兹别克斯坦",
+      "center": [
+        64.4110872,
+        39.7778852
+      ],
+      "date": 892,
+      "period": "隋唐",
+      "capitalPeriods": [
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏"
+      ],
+      "urbanPeriods": [
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏"
+      ],
+      "regime": "萨曼王朝及布哈拉诸王朝都城（分期）",
+      "start": 892,
+      "end": 999,
+      "bbox": [
+        64.38608719999999,
+        39.7528852,
+        64.4360872,
+        39.8028852
+      ],
+      "referenceUrl": "https://whc.unesco.org/en/list/602/",
+      "sourceUrl": "https://whc.unesco.org/en/list/602/",
+      "periodLabel": "萨曼王朝及布哈拉诸王朝都城（分期）；约892—999年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-bukhara",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "根点在阿尔克城堡附近；约892—999为萨曼都城阶段，后来的汗国与埃米尔国都城阶段另见说明，不是城市存在期限。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/602/",
+      "supplementAudit": "five-regions-20261028",
+      "whc": 602,
+      "heritageId": "whc-602",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0,
+        "status": "逐项说明现状遗址、城防或定位参考；完整分期城界未全部核定。"
+      }
+    },
+    {
+      "key": "khiva",
+      "name": "希瓦",
+      "enName": "Khiva",
+      "country": "乌兹别克斯坦",
+      "center": [
+        60.3597939,
+        41.3781118
+      ],
+      "date": 1600,
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "urbanPeriods": [
+        "明",
+        "清",
+        "近现代"
+      ],
+      "regime": "希瓦汗国都城",
+      "start": 1600,
+      "end": 1920,
+      "bbox": [
+        60.3347939,
+        41.3531118,
+        60.3847939,
+        41.4031118
+      ],
+      "referenceUrl": "https://whc.unesco.org/en/list/543/",
+      "sourceUrl": "https://whc.unesco.org/en/list/543/",
+      "periodLabel": "希瓦汗国都城；约1600—1920年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-khiva",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "约1600—1920为汗国都城阶段参考；内城伊钦卡拉与外城迪尚卡拉不同，现阶段只接入有源内城范围，不假补外城全周。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/543/",
+      "supplementAudit": "five-regions-20261028",
+      "whc": 543,
+      "heritageId": "whc-543",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0,
+        "status": "逐项说明现状遗址、城防或定位参考；完整分期城界未全部核定。"
+      }
+    },
+    {
+      "key": "merv",
+      "name": "木鹿（梅尔夫）",
+      "enName": "Merv",
+      "country": "土库曼斯坦",
+      "center": [
+        62.1638,
+        37.6642
+      ],
+      "date": 1100,
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏"
+      ],
+      "urbanPeriods": [
+        "宋辽金西夏"
+      ],
+      "regime": "塞尔柱王朝都城／多期绿洲城",
+      "start": 1100,
+      "end": 1157,
+      "bbox": [
+        62.1388,
+        37.6392,
+        62.1888,
+        37.6892
+      ],
+      "referenceUrl": "https://whc.unesco.org/en/list/886/",
+      "sourceUrl": "https://whc.unesco.org/en/list/886/",
+      "periodLabel": "塞尔柱王朝都城／多期绿洲城；约1100—1157年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-merv",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "约1100—1157为桑贾尔时期都城阶段参考。厄尔克城、盖奥尔城、苏丹城、阿卜杜拉汗城为不同阶段的城址；遗产保护区不能整体作为古城墙。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/886/",
+      "supplementAudit": "five-regions-20261028",
+      "whc": 886,
+      "heritageId": "whc-886",
+      "boundaryAudit": {
+        "featureCount": 7,
+        "areaCount": 5,
+        "wallCount": 2,
+        "palaceCount": 0,
+        "openWallCount": 1,
+        "status": "逐项说明现状遗址、城防或定位参考；完整分期城界未全部核定。"
+      }
+    },
+    {
+      "key": "mayapan",
+      "name": "玛雅潘",
+      "enName": "Mayapán",
+      "country": "墨西哥",
+      "center": [
+        -89.4602704,
+        20.6291689
+      ],
+      "date": 1250,
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明"
+      ],
+      "urbanPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明"
+      ],
+      "regime": "玛雅潘地区政治中心",
+      "start": 1250,
+      "end": 1450,
+      "bbox": [
+        -89.4852704,
+        20.6041689,
+        -89.4352704,
+        20.6541689
+      ],
+      "referenceUrl": "https://lugares.inah.gob.mx/es/node/4439",
+      "sourceUrl": "https://lugares.inah.gob.mx/es/node/4439",
+      "periodLabel": "玛雅潘地区政治中心；约1250—1450年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-mayapan",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "INAH将主要后古典期阶段列为1250—1450。当前矢量仅为开放考古核心区，面积显著小于完整城址；不能把核心区外缘称为完整城墙。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://lugares.inah.gob.mx/es/node/4439",
+      "supplementAudit": "five-regions-20261028",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0,
+        "status": "逐项说明现状遗址、城防或定位参考；完整分期城界未全部核定。"
+      }
+    },
+    {
+      "key": "coba",
+      "name": "科巴",
+      "enName": "Cobá",
+      "country": "墨西哥",
+      "center": [
+        -87.7260038,
+        20.4887815
+      ],
+      "date": 250,
+      "period": "魏晋南北朝",
+      "capitalPeriods": [
+        "魏晋南北朝",
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏"
+      ],
+      "urbanPeriods": [
+        "魏晋南北朝",
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏"
+      ],
+      "regime": "玛雅科巴城邦",
+      "start": 250,
+      "end": 1100,
+      "bbox": [
+        -87.7510038,
+        20.463781500000003,
+        -87.7010038,
+        20.5137815
+      ],
+      "referenceUrl": "https://sic.cultura.gob.mx/ficha.php?disciplina=&table=zona_arqueologica&table_id=221",
+      "sourceUrl": "https://sic.cultura.gob.mx/ficha.php?disciplina=&table=zona_arqueologica&table_id=221",
+      "periodLabel": "玛雅科巴城邦；约250—1100年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-coba",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "阶段参考并非精确建国或亡国年。核对为金塔纳罗奥的玛雅遗址，排除土耳其Coba Hüyük、欧洲同名墓地与现代旅馆。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://sic.cultura.gob.mx/ficha.php?disciplina=&table=zona_arqueologica&table_id=221",
+      "supplementAudit": "five-regions-20261028",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0,
+        "status": "逐项说明现状遗址、城防或定位参考；完整分期城界未全部核定。"
+      }
+    },
+    {
+      "key": "naranjo",
+      "name": "纳兰霍萨阿尔",
+      "enName": "Naranjo Sa’al",
+      "country": "危地马拉",
+      "center": [
+        -89.26217,
+        17.133598
+      ],
+      "date": 250,
+      "period": "魏晋南北朝",
+      "capitalPeriods": [
+        "魏晋南北朝",
+        "隋唐"
+      ],
+      "urbanPeriods": [
+        "魏晋南北朝",
+        "隋唐"
+      ],
+      "regime": "玛雅萨阿尔王国",
+      "start": 250,
+      "end": 900,
+      "bbox": [
+        -89.28717,
+        17.108598,
+        -89.23716999999999,
+        17.158597999999998
+      ],
+      "referenceUrl": "https://culturaguate.gob.gt/plaza-de-las-estelas/",
+      "sourceUrl": "https://culturaguate.gob.gt/plaza-de-las-estelas/",
+      "periodLabel": "玛雅萨阿尔王国；约250—900年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-naranjo",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "佩滕的纳兰霍萨阿尔，与危地马拉城附近同名遗址分开。坐标取Q2662467原始P625 Earth声明，仅为遗址区域索引；完整城区与城墙尚待测绘图核定。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://culturaguate.gob.gt/plaza-de-las-estelas/",
+      "supplementAudit": "five-regions-20261028",
+      "boundaryAudit": {
+        "featureCount": 0,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0,
+        "status": "逐项说明现状遗址、城防或定位参考；完整分期城界未全部核定。"
+      }
+    },
+    {
+      "key": "dos-pilas",
+      "name": "双柱城（多斯皮拉斯）",
+      "enName": "Dos Pilas",
+      "country": "危地马拉",
+      "center": [
+        -90.295833333333,
+        16.445833333333
+      ],
+      "date": 629,
+      "period": "隋唐",
+      "capitalPeriods": [
+        "隋唐"
+      ],
+      "urbanPeriods": [
+        "隋唐"
+      ],
+      "regime": "玛雅双柱城王朝中心",
+      "start": 629,
+      "end": 761,
+      "bbox": [
+        -90.320833333333,
+        16.420833333333,
+        -90.27083333333299,
+        16.470833333332997
+      ],
+      "referenceUrl": "https://news.vanderbilt.edu/2002/09/19/newly-revealed-hieroglyphs-tell-story-of-superpower-conflict-in-the-maya-world-60195/",
+      "sourceUrl": "https://news.vanderbilt.edu/2002/09/19/newly-revealed-hieroglyphs-tell-story-of-superpower-conflict-in-the-maya-world-60195/",
+      "periodLabel": "玛雅双柱城王朝中心；约629—761年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-dos-pilas",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "629年建立的蒂卡尔军事据点后来卷入地区王朝竞争，不简单视为始终独立城邦。OSM同名点偏向邻近阿罗约德彼德拉，已拒用；采用Q909286地理索引区域参考，精度仍待原始考古图核定。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://news.vanderbilt.edu/2002/09/19/newly-revealed-hieroglyphs-tell-story-of-superpower-conflict-in-the-maya-world-60195/",
+      "supplementAudit": "five-regions-20261028",
+      "boundaryAudit": {
+        "featureCount": 0,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0,
+        "status": "逐项说明现状遗址、城防或定位参考；完整分期城界未全部核定。"
+      }
+    },
+    {
+      "key": "piedras-negras",
+      "name": "黑石城（彼德拉斯内格拉斯）",
+      "enName": "Piedras Negras",
+      "country": "危地马拉",
+      "center": [
+        -91.2618411,
+        17.1683877
+      ],
+      "date": 250,
+      "period": "魏晋南北朝",
+      "capitalPeriods": [
+        "魏晋南北朝",
+        "隋唐"
+      ],
+      "urbanPeriods": [
+        "魏晋南北朝",
+        "隋唐"
+      ],
+      "regime": "玛雅黑石城王朝中心",
+      "start": 250,
+      "end": 810,
+      "bbox": [
+        -91.2868411,
+        17.1433877,
+        -91.23684109999999,
+        17.1933877
+      ],
+      "referenceUrl": "https://culturaguate.gob.gt/plaza-de-las-estelas/",
+      "sourceUrl": "https://culturaguate.gob.gt/plaza-de-las-estelas/",
+      "periodLabel": "玛雅黑石城王朝中心；约250—810年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-piedras-negras",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "位于危地马拉佩滕乌苏马辛塔河沿岸，与墨西哥科阿韦拉州同名现代城市分开。仅有遗址参照点，未绘制城邦疆界；阶段末年为约数。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://culturaguate.gob.gt/plaza-de-las-estelas/",
+      "supplementAudit": "five-regions-20261028",
+      "boundaryAudit": {
+        "featureCount": 0,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0,
+        "status": "逐项说明现状遗址、城防或定位参考；完整分期城界未全部核定。"
+      }
+    },
+    {
+      "key": "bagan",
+      "name": "蒲甘",
+      "enName": "Bagan",
+      "country": "缅甸",
+      "center": [
+        94.861,
+        21.172
+      ],
+      "date": 1100,
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏",
+        "元"
+      ],
+      "urbanPeriods": [
+        "宋辽金西夏",
+        "元"
+      ],
+      "regime": "蒲甘王朝都城",
+      "start": 1100,
+      "end": 1280,
+      "bbox": [
+        94.836,
+        21.147000000000002,
+        94.88600000000001,
+        21.197
+      ],
+      "referenceUrl": "https://whc.unesco.org/en/list/1588/",
+      "sourceUrl": "https://whc.unesco.org/en/list/1588/",
+      "periodLabel": "蒲甘王朝都城；约1100—1280年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-bagan",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "约11—13世纪代表阶段，不把1100年写成精确建都年；寺塔景观、旧城墙与广阔遗产保护区分开。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/1588/",
+      "supplementAudit": "next-five-20261028",
+      "whc": 1588,
+      "heritageId": "whc-1588",
+      "boundaryAudit": {
+        "featureCount": 4,
+        "areaCount": 0,
+        "wallCount": 1,
+        "palaceCount": 0,
+        "openWallCount": 1,
+        "status": "范围、原始开放墙段和定位点逐项区分；完整分期城界未全部核定。"
+      }
+    },
+    {
+      "key": "mandalay",
+      "name": "曼德勒",
+      "enName": "Mandalay",
+      "country": "缅甸",
+      "center": [
+        96.095929,
+        21.9929675
+      ],
+      "date": 1859,
+      "period": "清",
+      "capitalPeriods": [
+        "清"
+      ],
+      "urbanPeriods": [
+        "清"
+      ],
+      "regime": "贡榜王朝都城",
+      "start": 1859,
+      "end": 1885,
+      "bbox": [
+        96.07092899999999,
+        21.9679675,
+        96.120929,
+        22.017967499999997
+      ],
+      "referenceUrl": "https://www.jcic-heritage.jp/wp-content/uploads/2022/12/2012Report_Myanmar_eg.pdf",
+      "sourceUrl": "https://www.jcic-heritage.jp/wp-content/uploads/2022/12/2012Report_Myanmar_eg.pdf",
+      "periodLabel": "贡榜王朝都城；约1859—1885年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-mandalay",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "建城、宫殿营建与正式迁都年份不同。现阶段只接入独立宫殿建筑区，不用同名现代行政边界冒充完整宫城。建筑含后期重建；当前受损状况未作现场核查。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://www.jcic-heritage.jp/wp-content/uploads/2022/12/2012Report_Myanmar_eg.pdf",
+      "supplementAudit": "next-five-20261028",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0,
+        "status": "范围、原始开放墙段和定位点逐项区分；完整分期城界未全部核定。"
+      }
+    },
+    {
+      "key": "amarapura",
+      "name": "阿摩罗补罗",
+      "enName": "Amarapura",
+      "country": "缅甸",
+      "center": [
+        96.068424,
+        21.9183259
+      ],
+      "date": 1783,
+      "period": "清",
+      "capitalPeriods": [
+        "清"
+      ],
+      "urbanPeriods": [
+        "清"
+      ],
+      "regime": "贡榜王朝都城（间断）",
+      "start": 1783,
+      "end": 1859,
+      "bbox": [
+        96.04342399999999,
+        21.8933259,
+        96.093424,
+        21.943325899999998
+      ],
+      "referenceUrl": "https://maas.edu.mm/Research/Admin/pdf/11.%20Dr%20Khin%20Mar%20Lwin%28121-132%29.pdf",
+      "sourceUrl": "https://maas.edu.mm/Research/Admin/pdf/11.%20Dr%20Khin%20Mar%20Lwin%28121-132%29.pdf",
+      "periodLabel": "贡榜王朝都城（间断）；约1783—1859年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-amarapura",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "1783年开始的都城阶段中多次与阿瓦往返，非连续在此建都；原王宫目前为遗址定位参照，不凭池塘或现代街区补出宫城。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://maas.edu.mm/Research/Admin/pdf/11.%20Dr%20Khin%20Mar%20Lwin%28121-132%29.pdf",
+      "supplementAudit": "next-five-20261028",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0,
+        "status": "范围、原始开放墙段和定位点逐项区分；完整分期城界未全部核定。"
+      }
+    },
+    {
+      "key": "inwa",
+      "name": "阿瓦（因瓦）",
+      "enName": "Inwa",
+      "country": "缅甸",
+      "center": [
+        96.4663302,
+        22.0002106
+      ],
+      "date": 1364,
+      "period": "元",
+      "capitalPeriods": [
+        "元",
+        "明",
+        "清"
+      ],
+      "urbanPeriods": [
+        "元",
+        "明",
+        "清"
+      ],
+      "regime": "阿瓦及缅甸诸王朝都城（间断）",
+      "start": 1364,
+      "end": 1839,
+      "bbox": [
+        96.4413302,
+        21.9752106,
+        96.49133020000001,
+        22.025210599999998
+      ],
+      "referenceUrl": "https://www.jcic-heritage.jp/wp-content/uploads/2022/12/2012Report_Myanmar_eg.pdf",
+      "sourceUrl": "https://www.jcic-heritage.jp/wp-content/uploads/2022/12/2012Report_Myanmar_eg.pdf",
+      "periodLabel": "阿瓦及缅甸诸王朝都城（间断）；约1364—1839年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-inwa",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "多次迁都与复都，所列为间断总时段；1839年地震之后的转移另见资料。南敏塔为原宫城遗存参照，不代表全城。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://www.jcic-heritage.jp/wp-content/uploads/2022/12/2012Report_Myanmar_eg.pdf",
+      "supplementAudit": "next-five-20261028",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0,
+        "status": "范围、原始开放墙段和定位点逐项区分；完整分期城界未全部核定。"
+      }
+    },
+    {
+      "key": "bago",
+      "name": "勃固（汉达瓦底）",
+      "enName": "Bago / Hanthawaddy",
+      "country": "缅甸",
+      "center": [
+        96.4927982,
+        17.3302515
+      ],
+      "date": 1553,
+      "period": "明",
+      "capitalPeriods": [
+        "明"
+      ],
+      "urbanPeriods": [
+        "明"
+      ],
+      "regime": "东吁王朝汉达瓦底都城阶段",
+      "start": 1553,
+      "end": 1599,
+      "bbox": [
+        96.46779819999999,
+        17.3052515,
+        96.5177982,
+        17.355251499999998
+      ],
+      "referenceUrl": "https://bagoregion.gov.mm/kanbawzathadi-palace/",
+      "sourceUrl": "https://bagoregion.gov.mm/kanbawzathadi-palace/",
+      "periodLabel": "东吁王朝汉达瓦底都城阶段；约1553—1599年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-bago",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "这里先列勃印曩时期都城阶段，非勃固全部历史。现存干邦扎底宫含现代复原建筑，考古柱础与复原上部须分开理解。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://bagoregion.gov.mm/kanbawzathadi-palace/",
+      "supplementAudit": "next-five-20261028",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0,
+        "status": "范围、原始开放墙段和定位点逐项区分；完整分期城界未全部核定。"
+      }
+    },
+    {
+      "key": "anuradhapura",
+      "name": "阿努拉德普勒",
+      "enName": "Anuradhapura",
+      "country": "斯里兰卡",
+      "center": [
+        80.4013921,
+        8.3594387
+      ],
+      "date": -300,
+      "period": "周",
+      "capitalPeriods": [
+        "周",
+        "秦汉",
+        "魏晋南北朝",
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏"
+      ],
+      "urbanPeriods": [
+        "周",
+        "秦汉",
+        "魏晋南北朝",
+        "隋唐",
+        "五代十国",
+        "宋辽金西夏"
+      ],
+      "regime": "阿努拉德普勒诸王朝政治中心",
+      "start": -300,
+      "end": 993,
+      "bbox": [
+        80.37639209999999,
+        8.3344387,
+        80.4263921,
+        8.3844387
+      ],
+      "referenceUrl": "https://whc.unesco.org/en/list/200/",
+      "sourceUrl": "https://whc.unesco.org/en/list/200/",
+      "periodLabel": "阿努拉德普勒诸王朝政治中心；约-300—993年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-anuradhapura",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "约前3世纪至993年的代表性政治与宗教中心阶段，不将其视为精确建城日期；宫城、寺院区与遗产范围分别核定。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/200/",
+      "supplementAudit": "next-five-20261028",
+      "whc": 200,
+      "heritageId": "whc-200",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0,
+        "status": "范围、原始开放墙段和定位点逐项区分；完整分期城界未全部核定。"
+      }
+    },
+    {
+      "key": "polonnaruwa",
+      "name": "波隆纳鲁沃",
+      "enName": "Polonnaruwa",
+      "country": "斯里兰卡",
+      "center": [
+        80.9979259,
+        7.9434781
+      ],
+      "date": 1000,
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏",
+        "元"
+      ],
+      "urbanPeriods": [
+        "宋辽金西夏",
+        "元"
+      ],
+      "regime": "朱罗及僧伽罗王朝政治中心",
+      "start": 1000,
+      "end": 1300,
+      "bbox": [
+        80.97292589999999,
+        7.9184781,
+        81.0229259,
+        7.9684781000000005
+      ],
+      "referenceUrl": "https://ccf.gov.lk/heritage-sites/polonnaruwa/",
+      "sourceUrl": "https://ccf.gov.lk/heritage-sites/polonnaruwa/",
+      "periodLabel": "朱罗及僧伽罗王朝政治中心；约1000—1300年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-polonnaruwa",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "约11—13世纪阶段。王宫建筑、宗教核心区与全城范围不同，不将世界遗产全部范围画成宫城。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://ccf.gov.lk/heritage-sites/polonnaruwa/",
+      "supplementAudit": "next-five-20261028",
+      "whc": 201,
+      "heritageId": "whc-201",
+      "boundaryAudit": {
+        "featureCount": 3,
+        "areaCount": 1,
+        "wallCount": 1,
+        "palaceCount": 1,
+        "openWallCount": 0,
+        "status": "范围、原始开放墙段和定位点逐项区分；完整分期城界未全部核定。"
+      }
+    },
+    {
+      "key": "kandy",
+      "name": "康提",
+      "enName": "Kandy",
+      "country": "斯里兰卡",
+      "center": [
+        80.6410798,
+        7.294904
+      ],
+      "date": 1500,
+      "period": "明",
+      "capitalPeriods": [
+        "明",
+        "清"
+      ],
+      "urbanPeriods": [
+        "明",
+        "清"
+      ],
+      "regime": "康提王国都城",
+      "start": 1500,
+      "end": 1815,
+      "bbox": [
+        80.6160798,
+        7.2699039999999995,
+        80.6660798,
+        7.319904
+      ],
+      "referenceUrl": "https://whc.unesco.org/en/list/450/",
+      "sourceUrl": "https://whc.unesco.org/en/list/450/",
+      "periodLabel": "康提王国都城；约1500—1815年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-kandy",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "约16世纪至1815年的都城阶段参考，非精确建城年；王宫旧建筑与佛牙寺宗教核心分开。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/450/",
+      "supplementAudit": "next-five-20261028",
+      "whc": 450,
+      "heritageId": "whc-450",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "openWallCount": 0,
+        "status": "范围、原始开放墙段和定位点逐项区分；完整分期城界未全部核定。"
+      }
+    },
+    {
+      "key": "aksum",
+      "name": "阿克苏姆",
+      "enName": "Aksum",
+      "country": "埃塞俄比亚",
+      "center": [
+        38.7065019,
+        14.1267956
+      ],
+      "date": 100,
+      "period": "秦汉",
+      "capitalPeriods": [
+        "秦汉",
+        "魏晋南北朝",
+        "隋唐"
+      ],
+      "urbanPeriods": [
+        "秦汉",
+        "魏晋南北朝",
+        "隋唐"
+      ],
+      "regime": "阿克苏姆王国政治中心",
+      "start": 100,
+      "end": 800,
+      "bbox": [
+        38.6815019,
+        14.101795599999999,
+        38.7315019,
+        14.1517956
+      ],
+      "referenceUrl": "https://whc.unesco.org/en/list/15/",
+      "sourceUrl": "https://whc.unesco.org/en/list/15/",
+      "periodLabel": "阿克苏姆王国政治中心；约100—800年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-aksum",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "约1—8世纪王国中心阶段。栋古尔建筑不能因传统传说而确认为示巴女王宫，王陵传统指认另列。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/15/",
+      "supplementAudit": "next-five-20261028",
+      "whc": 15,
+      "heritageId": "whc-15",
+      "relatedTombs": [
+        {
+          "id": "next-aksum-stelae",
+          "name": "阿克苏姆北部石碑区王陵群",
+          "enName": "Royal cemetery, Northern Stelae Field, Aksum"
+        },
+        {
+          "id": "next-kaleb",
+          "name": "卡莱布与格布雷梅斯克尔双墓（传统指认）",
+          "enName": "Tombs traditionally attributed to Kaleb and Gebre Meskel"
+        }
+      ],
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0,
+        "status": "范围、原始开放墙段和定位点逐项区分；完整分期城界未全部核定。"
+      }
+    },
+    {
+      "key": "carthage",
+      "name": "迦太基",
+      "enName": "Carthage",
+      "country": "突尼斯",
+      "center": [
+        10.323722,
+        36.8527478
+      ],
+      "date": -600,
+      "period": "周",
+      "capitalPeriods": [
+        "周",
+        "秦汉"
+      ],
+      "urbanPeriods": [
+        "周",
+        "秦汉"
+      ],
+      "regime": "布匿迦太基政治中心",
+      "start": -600,
+      "end": -146,
+      "bbox": [
+        10.298722,
+        36.827747800000004,
+        10.348722,
+        36.8777478
+      ],
+      "referenceUrl": "https://whc.unesco.org/en/list/37/",
+      "sourceUrl": "https://whc.unesco.org/en/list/37/",
+      "periodLabel": "布匿迦太基政治中心；约-600—-146年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-carthage",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "本条先列约前6世纪至前146年的布匿政治中心阶段。拜尔萨遗存包含后来的罗马层，不能将现存全部建筑断为布匿时期；不采用同名现代墓园。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/37/",
+      "supplementAudit": "next-five-20261028",
+      "whc": 37,
+      "heritageId": "whc-37",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0,
+        "status": "范围、原始开放墙段和定位点逐项区分；完整分期城界未全部核定。"
+      }
+    },
+    {
+      "key": "great-zimbabwe",
+      "name": "大津巴布韦",
+      "enName": "Great Zimbabwe",
+      "country": "津巴布韦",
+      "center": [
+        30.9342337,
+        -20.2685729
+      ],
+      "date": 1100,
+      "period": "宋辽金西夏",
+      "capitalPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明"
+      ],
+      "urbanPeriods": [
+        "宋辽金西夏",
+        "元",
+        "明"
+      ],
+      "regime": "绍纳地区王国政治中心",
+      "start": 1100,
+      "end": 1450,
+      "bbox": [
+        30.9092337,
+        -20.293572899999997,
+        30.9592337,
+        -20.2435729
+      ],
+      "referenceUrl": "https://whc.unesco.org/en/list/364/",
+      "sourceUrl": "https://whc.unesco.org/en/list/364/",
+      "periodLabel": "绍纳地区王国政治中心；约1100—1450年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-great-zimbabwe",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "约11—15世纪。按绍纳社会的考古政治中心收录，不沿用示巴女王建城传说作为历史认定；石构围墙、山丘与谷地遗址分区处理。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/364/",
+      "supplementAudit": "next-five-20261028",
+      "whc": 364,
+      "heritageId": "whc-364",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "openWallCount": 0,
+        "status": "范围、原始开放墙段和定位点逐项区分；完整分期城界未全部核定。"
+      }
+    },
+    {
+      "key": "napata",
+      "name": "纳帕塔（巴尔卡尔山）",
+      "enName": "Napata / Gebel Barkal",
+      "country": "苏丹",
+      "center": [
+        31.828027777777777,
+        18.537000000000003
+      ],
+      "date": -800,
+      "period": "周",
+      "capitalPeriods": [
+        "周",
+        "秦汉"
+      ],
+      "urbanPeriods": [
+        "周",
+        "秦汉"
+      ],
+      "regime": "库施王国纳帕塔政治与宗教中心",
+      "start": -800,
+      "end": -300,
+      "bbox": [
+        31.80302777777778,
+        18.512000000000004,
+        31.853027777777775,
+        18.562
+      ],
+      "referenceUrl": "https://whc.unesco.org/en/list/1073/",
+      "sourceUrl": "https://whc.unesco.org/en/list/1073/",
+      "periodLabel": "库施王国纳帕塔政治与宗教中心；约-800—-300年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-napata",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "约前8—前4世纪代表阶段；纳帕塔是分散的城市、祭祀与王陵景观，坐标取巴尔卡尔山遗产分项，非整座古城中心或边界。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/1073/",
+      "supplementAudit": "heritage-five-20261029",
+      "whc": 1073,
+      "heritageId": "whc-1073",
+      "relatedTombs": [
+        {
+          "id": "expansion-kurru",
+          "name": "库鲁库施王陵群",
+          "enName": "El-Kurru royal cemetery"
+        },
+        {
+          "id": "expansion-nuri",
+          "name": "努里库施王陵群",
+          "enName": "Nuri royal cemetery"
+        }
+      ],
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "status": "逐项区分现状范围、原始开放墙段与区域定位；完整古城界未全部核定。"
+      }
+    },
+    {
+      "key": "meroe",
+      "name": "麦罗埃（梅罗埃）",
+      "enName": "Meroë",
+      "country": "苏丹",
+      "center": [
+        33.709914545454545,
+        16.937476763636365
+      ],
+      "date": -300,
+      "period": "周",
+      "capitalPeriods": [
+        "周",
+        "秦汉",
+        "魏晋南北朝"
+      ],
+      "urbanPeriods": [
+        "周",
+        "秦汉",
+        "魏晋南北朝"
+      ],
+      "regime": "库施王国麦罗埃王城",
+      "start": -300,
+      "end": 350,
+      "bbox": [
+        33.684914545454546,
+        16.912476763636366,
+        33.734914545454544,
+        16.962476763636364
+      ],
+      "referenceUrl": "https://whc.unesco.org/en/list/1336/",
+      "sourceUrl": "https://whc.unesco.org/en/list/1336/",
+      "periodLabel": "库施王国麦罗埃王城；约-300—350年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-meroe",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "约前3世纪至公元4世纪代表阶段；城市更早已存在。尼罗河旁王城与东侧王室墓地分开，不以遗产保护区作为城市围墙。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/1336/",
+      "supplementAudit": "heritage-five-20261029",
+      "whc": 1336,
+      "heritageId": "whc-1336",
+      "relatedTombs": [
+        {
+          "id": "expansion-meroe-pyramids",
+          "name": "麦罗埃东部王室金字塔墓地",
+          "enName": "Meroë eastern royal pyramid cemeteries"
+        }
+      ],
+      "boundaryAudit": {
+        "featureCount": 2,
+        "areaCount": 0,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "status": "逐项区分现状范围、原始开放墙段与区域定位；完整古城界未全部核定。"
+      }
+    },
+    {
+      "key": "old-nisa",
+      "name": "老尼萨",
+      "enName": "Old Nisa",
+      "country": "土库曼斯坦",
+      "center": [
+        58.2112316,
+        37.9513315
+      ],
+      "date": -250,
+      "period": "周",
+      "capitalPeriods": [
+        "周",
+        "秦汉",
+        "魏晋南北朝"
+      ],
+      "urbanPeriods": [
+        "周",
+        "秦汉",
+        "魏晋南北朝"
+      ],
+      "regime": "帕提亚尼萨王室与城市中心",
+      "start": -250,
+      "end": 100,
+      "bbox": [
+        58.1862316,
+        37.9263315,
+        58.236231599999996,
+        37.9763315
+      ],
+      "referenceUrl": "https://whc.unesco.org/en/list/1242/",
+      "sourceUrl": "https://whc.unesco.org/en/list/1242/",
+      "periodLabel": "帕提亚尼萨王室与城市中心；约-250—100年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-old-nisa",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "约前3世纪起的帕提亚早期王室堡垒与礼仪中心代表阶段；并非整个帝国一直唯一的行政首都。原始标绘外缘不自动等于官方35.234公顷遗产边界。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/1242/",
+      "supplementAudit": "heritage-five-20261029",
+      "whc": 1242,
+      "heritageId": "whc-1242",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "status": "逐项区分现状范围、原始开放墙段与区域定位；完整古城界未全部核定。"
+      }
+    },
+    {
+      "key": "new-nisa",
+      "name": "新尼萨",
+      "enName": "New Nisa",
+      "country": "土库曼斯坦",
+      "center": [
+        58.19860833333333,
+        37.96638888888889
+      ],
+      "date": -250,
+      "period": "周",
+      "capitalPeriods": [
+        "周",
+        "秦汉",
+        "魏晋南北朝"
+      ],
+      "urbanPeriods": [
+        "周",
+        "秦汉",
+        "魏晋南北朝"
+      ],
+      "regime": "帕提亚尼萨王室与城市中心",
+      "start": -250,
+      "end": 300,
+      "bbox": [
+        58.173608333333334,
+        37.941388888888895,
+        58.22360833333333,
+        37.99138888888889
+      ],
+      "referenceUrl": "https://whc.unesco.org/en/list/1242/",
+      "sourceUrl": "https://whc.unesco.org/en/list/1242/",
+      "periodLabel": "帕提亚尼萨王室与城市中心；约-250—300年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-new-nisa",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "约前3世纪起的帕提亚城市代表阶段，和老尼萨王室堡垒分开；官方坐标只作区域定位，完整城垣轮廓尚未取得可靠矢量。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/1242/",
+      "supplementAudit": "heritage-five-20261029",
+      "whc": 1242,
+      "heritageId": "whc-1242",
+      "boundaryAudit": {
+        "featureCount": 1,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 0,
+        "status": "逐项区分现状范围、原始开放墙段与区域定位；完整古城界未全部核定。"
+      }
+    },
+    {
+      "key": "sigiriya",
+      "name": "锡吉里耶（狮子岩）",
+      "enName": "Sigiriya",
+      "country": "斯里兰卡",
+      "center": [
+        80.7572589909091,
+        7.957250327272728
+      ],
+      "date": 477,
+      "period": "魏晋南北朝",
+      "capitalPeriods": [
+        "魏晋南北朝"
+      ],
+      "urbanPeriods": [
+        "魏晋南北朝"
+      ],
+      "regime": "迦叶波一世王都",
+      "start": 477,
+      "end": 495,
+      "bbox": [
+        80.73225899090909,
+        7.932250327272728,
+        80.7822589909091,
+        7.9822503272727285
+      ],
+      "referenceUrl": "https://whc.unesco.org/en/list/202/",
+      "sourceUrl": "https://whc.unesco.org/en/list/202/",
+      "periodLabel": "迦叶波一世王都；约477—495年（阶段参考）",
+      "tentative": false,
+      "capitalSiteKey": "ancient-site:world-sigiriya",
+      "historicalIdentity": "capital",
+      "identityLabel": "历史都城／地区政治中心",
+      "identityEnLabel": "Historical capital / regional political centre",
+      "identityNote": "477—495年都城阶段，之后转为寺院等用途。公开核心区只覆盖部分宫苑，不把整片岩体当王宫建筑或以遗产保护区当完整古城。",
+      "identityEnNote": "Dates describe the documented phase, not an uninterrupted occupation or precise boundary. Archaeological sites and their modern protection areas are distinguished.",
+      "identitySourceUrl": "https://whc.unesco.org/en/list/202/",
+      "supplementAudit": "heritage-five-20261029",
+      "whc": 202,
+      "heritageId": "whc-202",
+      "boundaryAudit": {
+        "featureCount": 3,
+        "areaCount": 1,
+        "wallCount": 0,
+        "palaceCount": 1,
+        "status": "逐项区分现状范围、原始开放墙段与区域定位；完整古城界未全部核定。"
+      }
     }
   ],
   "counts": {
@@ -20124,7 +24421,7 @@
     "kaesong": 2,
     "gyeongju": 5,
     "gongju": 6,
-    "buyeo": 4,
+    "buyeo": 5,
     "seoul": 9,
     "kyoto": 35,
     "nara": 43,
@@ -20295,7 +24592,7 @@
     "peshawar": 1,
     "thatta": 0,
     "taxila-bhir": 1,
-    "taxila-sirkap": 1,
+    "taxila-sirkap": 2,
     "taxila-sirsukh": 1,
     "rohtas": 2,
     "mohenjo-daro": 2,
@@ -20307,7 +24604,7 @@
     "ur": 5,
     "uruk": 4,
     "hatra": 1,
-    "ctesiphon": 1,
+    "ctesiphon": 2,
     "samarra": 5,
     "baghdad": 3,
     "erbil": 1,
@@ -20423,10 +24720,10 @@
     "kuwait-city": 4,
     "failaka": 1,
     "jahra": 1,
-    "balkh": 1,
+    "balkh": 2,
     "kabul": 2,
     "ghazni": 2,
-    "herat": 1,
+    "herat": 2,
     "old-kandahar": 1,
     "new-kandahar": 0,
     "ai-khanoum": 1,
@@ -20487,10 +24784,88 @@
     "canada-newwestminster": 0,
     "canada-victoria": 1,
     "canada-portlajoye": 1,
-    "canada-placentia": 1
+    "canada-placentia": 1,
+    "osaka-castle": 13,
+    "tikal": 1,
+    "calakmul": 4,
+    "copan": 3,
+    "uxmal": 5,
+    "caracol": 1,
+    "yaxchilan": 4,
+    "iksan": 1,
+    "samarkand": 1,
+    "bukhara": 1,
+    "khiva": 1,
+    "merv": 7,
+    "mayapan": 1,
+    "coba": 1,
+    "naranjo": 0,
+    "dos-pilas": 0,
+    "piedras-negras": 0,
+    "london": 3,
+    "winchester": 1,
+    "edinburgh": 3,
+    "dublin": 2,
+    "lisbon": 3,
+    "coimbra": 2,
+    "guimaraes": 3,
+    "brussels": 2,
+    "luxembourg": 2,
+    "copenhagen": 1,
+    "roskilde": 1,
+    "oslo": 3,
+    "bergen": 3,
+    "helsinki": 2,
+    "reykjavik": 1,
+    "krakow": 3,
+    "warsaw": 3,
+    "prague": 4,
+    "bratislava": 2,
+    "bern": 4,
+    "vaduz": 1,
+    "monaco": 2,
+    "andorra-la-vella": 1,
+    "san-marino": 3,
+    "vatican": 2,
+    "valletta": 4,
+    "mdina": 4,
+    "ljubljana": 2,
+    "zagreb": 4,
+    "jajce": 2,
+    "belgrade": 2,
+    "smederevo": 2,
+    "cetinje": 2,
+    "kruje": 2,
+    "skopje": 2,
+    "preslav": 2,
+    "tarnovo": 3,
+    "bucharest": 1,
+    "suceava": 2,
+    "chisinau": 1,
+    "kyiv": 2,
+    "novogrudok": 3,
+    "vilnius": 3,
+    "riga": 2,
+    "tallinn": 3,
+    "bagan": 4,
+    "mandalay": 1,
+    "amarapura": 1,
+    "inwa": 1,
+    "bago": 1,
+    "anuradhapura": 1,
+    "polonnaruwa": 3,
+    "kandy": 1,
+    "aksum": 1,
+    "carthage": 1,
+    "great-zimbabwe": 1,
+    "napata": 1,
+    "meroe": 2,
+    "old-nisa": 1,
+    "new-nisa": 1,
+    "sigiriya": 3
   },
   "source": "© OpenStreetMap contributors · ODbL",
-  "reviewedAt": "2026-10-10",
+  "reviewedAt": "2026-10-29",
   "checkinAliases": {
     "萨尔茨堡市历史中心": "salzburg",
     "Historic Centre of the City of Salzburg": "salzburg",

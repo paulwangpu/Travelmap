@@ -14098,7 +14098,24 @@
       "category": "Cultural",
       "categoryShort": "C",
       "criteria": "(iii)(iv)(vi)",
-      "region": "Europe and North America"
+      "region": "Europe and North America",
+      "components": [
+        {
+          "id": "1708-011",
+          "name": "阿庇亚道：古卡普阿（Capua）",
+          "zhName": "阿庇亚道：古卡普阿（Capua）",
+          "enName": "Via Appia — Ancient Capua",
+          "country": "意大利",
+          "countryId": "it",
+          "lat": 41.08315,
+          "lng": 14.254722222222222,
+          "sourceUrl": "https://whc.unesco.org/en/list/1708/maps/",
+          "coordinateScope": "UNESCO component representative point, not an entrance or surveyed boundary",
+          "locationNote": "古代Capua，今Santa Maria Capua Vetere；非今天的Capua市中心。"
+        }
+      ],
+      "retainOverviewPoint": true,
+      "componentCoverage": "仅增补已核实的古卡普阿组成部分；其余组成部分尚未逐项展开。"
     },
     {
       "id": "whc-1730",
@@ -30188,7 +30205,8 @@
       "阿达的克里斯匹",
       "阿马尔菲海岸景观",
       "韦内雷港、五村镇以及沿海群岛",
-      "马泰拉的石窟民居和石头教堂花园"
+      "马泰拉的石窟民居和石头教堂花园",
+      "阿庇亚道：古卡普阿（Capua）"
     ],
     "所罗门群岛": [
       "东伦内尔岛"
@@ -37211,6 +37229,11 @@
       49.53389,
       21.03222,
       "乌克兰"
+    ],
+    "阿庇亚道：古卡普阿（Capua）": [
+      41.08315,
+      14.254722222222222,
+      "意大利"
     ]
   },
   "englishNames": {
@@ -38459,7 +38482,8 @@
     "Strasbourg, Grande-Île and Neustadt": "Strasbourg, Grande-Île and Neustadt",
     "Cultural Landscape of Bali Province: the Subak System as a Manifestation of the Tri Hita Karana Philosophy": "Cultural Landscape of Bali Province: the Subak System as a Manifestation of the Tri Hita Karana Philosophy",
     "Venetian Works of Defence between the 16th and 17th Centuries: Stato da Terra – Western Stato da Mar": "Venetian Works of Defence between the 16th and 17th Centuries: Stato da Terra – Western Stato da Mar",
-    "Wooden Tserkvas of the Carpathian Region in Poland and Ukraine": "Wooden Tserkvas of the Carpathian Region in Poland and Ukraine"
+    "Wooden Tserkvas of the Carpathian Region in Poland and Ukraine": "Wooden Tserkvas of the Carpathian Region in Poland and Ukraine",
+    "阿庇亚道：古卡普阿（Capua）": "Via Appia — Ancient Capua"
   },
   "countryIds": {
     "中国": "cn",

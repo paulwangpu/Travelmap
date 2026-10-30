@@ -1,0 +1,33 @@
+═══════════════════════════════════════════════════
+ 全国重点文物保护单位可视化地图系统 — 源码包
+═══════════════════════════════════════════════════
+
+【目录说明】
+  frontend/                 前端工程（Vue3 + Vite + Element Plus + OpenLayers 10）
+    ├── src/                源码（App.vue 布局与筛选、components/MapView.vue 地图、FilterPanel.vue 侧边栏）
+    ├── public/data/        地图加载数据 heritage.geojson（5058 条）
+    ├── dist/               已构建的生产版本（可直接静态部署，无需安装依赖）
+    ├── scripts/            工具脚本（Playwright 验证、shp/xlsx 数据转换）
+    ├── index.html / package.json / vite.config.js
+  data/                     数据源备份（heritage.geojson）
+  README.md                 项目说明文档
+
+【快速开始（开发模式）】
+  1. 安装 Node.js ≥ 18
+  2. cd frontend
+  3. npm install
+  4. npm run dev        → 浏览器打开 http://localhost:5173
+
+【免安装部署（使用 dist）】
+  将 frontend/dist 目录整体发布到任意静态服务器（Nginx / 宝塔 / GitHub Pages / 对象存储均可）。
+  本地预览：进入 dist 目录执行  python -m http.server 8080  →  http://localhost:8080
+
+【数据文件】
+  另有 Shapefile / Excel / CSV 格式数据包（与源码分开交付），
+  转换脚本见 frontend/scripts/gen-shp.py 与 gen-xlsx.mjs，可随时重新生成。
+
+【注意事项】
+  · 底图为天地图卫星影像+注记（src/tianditu.js），tk 为演示密钥，建议到天地图官网免费注册并替换为自己的 tk
+  · 若本地网络无法解析 t0-7.tianditu.gov.cn，开发时可先执行 npm run tileproxy（python 瓦片代理），再 npm run dev；生产部署不受影响
+  · 仅供学习研究使用，请勿转卖
+═══════════════════════════════════════════════════

@@ -5,7 +5,7 @@
  let data,pending;
  async function load(fetcher){
   if(data)return data;
-  pending||=fetcher('data/imperial-tombs/geometry.geojson?v=3').then(d=>{
+  pending||=fetcher('data/imperial-tombs/geometry.geojson?v=8').then(d=>{
    data=d?.type==='FeatureCollection'&&Array.isArray(d.features)?d:{type:'FeatureCollection',features:[]};return data;
   }).catch(e=>{console.warn('Imperial tomb geometry',e);return {type:'FeatureCollection',features:[]};}).finally(()=>{pending=null;});
   return pending;
